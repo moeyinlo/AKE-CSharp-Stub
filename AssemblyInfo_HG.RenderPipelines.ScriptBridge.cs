@@ -1,0 +1,1 @@
+// Image 123: HG.RenderPipelines.ScriptBridge.dll - Assembly: HG.RenderPipelines.ScriptBridge, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59999-60003
