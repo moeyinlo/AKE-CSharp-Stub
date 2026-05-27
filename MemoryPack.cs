@@ -3323,3 +3323,12 @@ namespace MemoryPack.Internal
 		public static bool IsAnonymous(System.Type type) => default; // 0x000000018910D5C0-0x000000018910D718
 	}
 }
+
+namespace System.Runtime.CompilerServices
+{
+	internal sealed class IsExternalInit // TypeDefIndex: 56225
+	{
+		// Constructors
+		public IsExternalInit() {} // 0x000000018350B670-0x000000018350B680
+	}
+}

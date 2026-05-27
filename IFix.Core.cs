@@ -708,3 +708,25 @@ namespace IFix.Core
 		object InitWrapperArray(int len);
 	}
 }
+
+namespace Unity.IL2CPP.CompilerServices
+{
+	internal enum Option // TypeDefIndex: 58583
+	{
+		NullChecks = 1,
+		ArrayBoundsChecks = 2,
+		DivideByZeroChecks = 3
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
+	internal class Il2CppSetOptionAttribute : Attribute // TypeDefIndex: 58584
+	{
+		// Properties
+		private Unity.IL2CPP.CompilerServices.Option Option { get; set; } // 0x00000001810410F0-0x0000000181041100
+		private object Value { get; set; } // 0x00000001822C3A90-0x00000001822C3AA0
+	
+		// Constructors
+		public Il2CppSetOptionAttribute() {} // Dummy constructor
+		internal Il2CppSetOptionAttribute(Unity.IL2CPP.CompilerServices.Option option, object value) {} // 0x0000000184270E40-0x0000000184270E50
+	}
+}

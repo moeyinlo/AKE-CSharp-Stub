@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using Unity.Collections;
+using Unity.Jobs.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Bindings;
@@ -1956,5 +1957,890 @@ namespace UnityEngine
 		internal void Internal_RemoveTransition(uint transUserNameID) {} // 0x0000000189D95DB0-0x0000000189D95DF0
 		[NativeMethod("SetSyncGroupCurve")]
 		internal void Internal_SetSyncGroupCurve(uint clipNameID, AnimationCurve curve) {} // 0x00000001833D9170-0x00000001833D91D0
+	}
+}
+
+namespace UnityEngine.Animations
+{
+	public static class AnimationPlayableBinding // TypeDefIndex: 57139
+	{
+		// Methods
+		public static PlayableBinding Create(string name, UnityEngine.Object key) => default; // 0x0000000189D8C044-0x0000000189D8C160
+		private static PlayableOutput CreateAnimationOutput(PlayableGraph graph, string name) => default; // 0x0000000189D8C004-0x0000000189D8C044
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	[RequiredByNativeCode]
+	public class DiscreteEvaluationAttribute : Attribute // TypeDefIndex: 57140
+	{
+		// Constructors
+		public DiscreteEvaluationAttribute() {} // Dummy constructor
+	}
+
+	[JobProducerType(typeof(ProcessAnimationJobStruct<T>))]
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	public interface IAnimationJob // TypeDefIndex: 57141
+	{
+		// Methods
+		void ProcessAnimation(AnimationStream stream);
+		void ProcessRootMotion(AnimationStream stream);
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	public interface IAnimationWindowPreview // TypeDefIndex: 57142
+	{
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Field)]
+	[RequiredByNativeCode]
+	public class NotKeyableAttribute : Attribute // TypeDefIndex: 57143
+	{
+		// Constructors
+		public NotKeyableAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	internal enum JobMethodIndex // TypeDefIndex: 57144
+	{
+		ProcessRootMotionMethodIndex = 0,
+		ProcessAnimationMethodIndex = 1,
+		MethodIndexCount = 2
+	}
+
+	internal struct ProcessAnimationJobStruct<T> // TypeDefIndex: 57146
+		where T : struct, IAnimationJob
+	{
+		// Fields
+		private static IntPtr jobReflectionData;
+	
+		// Nested types
+		public delegate void ExecuteJobFunction(ref ref T data, IntPtr animationStreamPtr, IntPtr unusedPtr, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 57145; 0x00000000-0x00000000
+	
+		// Methods
+		public static IntPtr GetJobReflectionData() => default;
+		public static void Execute(ref ref T data, IntPtr animationStreamPtr, IntPtr methodIndex, ref JobRanges ranges, int jobIndex) {}
+	}
+
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[NativeHeader("Modules/Animation/Director/AdvancedAnimationMixerPlayable.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AdvancedAnimationMixerPlayable.bindings.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("AdvancedAnimationMixerPlayableBindings", StaticAccessorType.DoubleColon)]
+	public struct AdvancedAnimationMixerPlayable : IPlayable, IEquatable<AdvancedAnimationMixerPlayable> // TypeDefIndex: 57147
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+		private static readonly AdvancedAnimationMixerPlayable m_NullPlayable; // 0x00
+	
+		// Constructors
+		internal AdvancedAnimationMixerPlayable(PlayableHandle handle) {
+			m_Handle = default;
+		} // 0x0000000183326A70-0x0000000183326B10
+		static AdvancedAnimationMixerPlayable() {
+			m_NullPlayable = default;
+		} // 0x0000000183326700-0x0000000183326790
+	
+		// Methods
+		public static AdvancedAnimationMixerPlayable Create(PlayableGraph graph, int inputCount = 0 /* Metadata: 0x01FD9C3D */) => default; // 0x0000000183326790-0x0000000183326840
+		private static PlayableHandle CreateHandle(PlayableGraph graph, int inputCount = 0 /* Metadata: 0x01FD9C3E */) => default; // 0x0000000183326840-0x00000001833269C0
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public bool Equals(AdvancedAnimationMixerPlayable other) => default; // 0x0000000189D89F48-0x0000000189D89FD4
+		[NativeThrows]
+		private static bool CreateHandleInternal(PlayableGraph graph, ref PlayableHandle handle) => default; // 0x00000001833269C0-0x0000000183326A20
+		private static bool CreateHandleInternal_Injected(ref PlayableGraph graph, ref PlayableHandle handle) => default; // 0x0000000183326A20-0x0000000183326A70
+	}
+
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationClipPlayable.bindings.h")]
+	[NativeHeader("Modules/Animation/Director/AnimationClipPlayable.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("AnimationClipPlayableBindings", StaticAccessorType.DoubleColon)]
+	public struct AnimationClipPlayable : IPlayable, IEquatable<AnimationClipPlayable> // TypeDefIndex: 57148
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+	
+		// Constructors
+		internal AnimationClipPlayable(PlayableHandle handle) {
+			m_Handle = default;
+		} // 0x0000000182809720-0x00000001828097C0
+	
+		// Methods
+		public static AnimationClipPlayable Create(PlayableGraph graph, AnimationClip clip) => default; // 0x0000000182809460-0x0000000182809590
+		private static PlayableHandle CreateHandle(PlayableGraph graph, AnimationClip clip) => default; // 0x0000000182809590-0x00000001828096B0
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public static implicit operator Playable(AnimationClipPlayable playable) => default; // 0x0000000183D85A00-0x0000000183D85A10
+		public static explicit operator AnimationClipPlayable(Playable playable) => default; // 0x0000000189D8A204-0x0000000189D8A27C
+		public bool Equals(AnimationClipPlayable other) => default; // 0x0000000189D89FD4-0x0000000189D8A048
+		public AnimationClip GetAnimationClip() => default; // 0x000000018426FA88-0x000000018426FA94
+		public float GetAnimationClipPlayableLengthUncheck() => default; // 0x0000000189D8A07C-0x0000000189D8A088
+		public void SetAnimationClip(AnimationClip clip) {} // 0x000000018427467C-0x0000000184274684
+		public void SetAnimationClipAsync(float length, bool isHumanoid) {} // 0x00000001842751B0-0x00000001842751B8
+		public void SetApplyFootIK(bool value) {} // 0x0000000189D8A0CC-0x0000000189D8A0D4
+		public void SetApplyPlayableIK(bool value) {} // 0x0000000189D8A118-0x0000000189D8A120
+		internal void SetRemoveStartOffset(bool value) {} // 0x0000000189D8A1FC-0x0000000189D8A204
+		internal void SetOverrideLoopTime(bool value) {} // 0x0000000189D8A1B0-0x0000000189D8A1B8
+		internal void SetLoopTime(bool value) {} // 0x0000000189D8A164-0x0000000189D8A16C
+		[NativeThrows]
+		private static bool CreateHandleInternal(PlayableGraph graph, AnimationClip clip, ref PlayableHandle handle) => default; // 0x0000000184271BAC-0x0000000184271BC0
+		[NativeThrows]
+		private static AnimationClip GetAnimationClipInternal(ref PlayableHandle handle) => default; // 0x0000000183027760-0x00000001830277F0
+		[NativeThrows]
+		private static void SetAnimationClipInternal(ref PlayableHandle handle, AnimationClip clip) {} // 0x00000001836BF110-0x00000001836BF160
+		[NativeThrows]
+		private static void SetAnimationClipAsyncInternal(ref PlayableHandle handle, float length, bool isHumanoid) {} // 0x0000000183C7B990-0x0000000183C7BBF0
+		[NativeThrows]
+		private static void SetApplyFootIKInternal(ref PlayableHandle handle, bool value) {} // 0x0000000189D8A088-0x0000000189D8A0CC
+		[NativeThrows]
+		private static void SetApplyPlayableIKInternal(ref PlayableHandle handle, bool value) {} // 0x0000000189D8A0D4-0x0000000189D8A118
+		[NativeThrows]
+		private static void SetRemoveStartOffsetInternal(ref PlayableHandle handle, bool value) {} // 0x0000000189D8A1B8-0x0000000189D8A1FC
+		[NativeThrows]
+		private static void SetOverrideLoopTimeInternal(ref PlayableHandle handle, bool value) {} // 0x0000000189D8A16C-0x0000000189D8A1B0
+		[NativeThrows]
+		private static void SetLoopTimeInternal(ref PlayableHandle handle, bool value) {} // 0x0000000189D8A120-0x0000000189D8A164
+		[NativeThrows]
+		[ThreadSafe]
+		private static float GetAnimationClipPlayableLengthInternalUncheck(ref PlayableHandle handle) => default; // 0x0000000189D8A048-0x0000000189D8A07C
+		private static bool CreateHandleInternal_Injected(ref PlayableGraph graph, AnimationClip clip, ref PlayableHandle handle) => default; // 0x000000018332D860-0x000000018332D8C0
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	[NativeHeader("Modules/Animation/Director/AnimationHumanStream.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationHumanStream.bindings.h")]
+	[RequiredByNativeCode]
+	public struct AnimationHumanStream // TypeDefIndex: 57149
+	{
+		// Fields
+		private IntPtr stream; // 0x00
+	}
+
+	[NativeHeader("Modules/Animation/Director/AnimationLayerMixerPlayable.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationLayerMixerPlayable.bindings.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("AnimationLayerMixerPlayableBindings", StaticAccessorType.DoubleColon)]
+	public struct AnimationLayerMixerPlayable : IPlayable, IEquatable<AnimationLayerMixerPlayable> // TypeDefIndex: 57150
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+		private static readonly AnimationLayerMixerPlayable m_NullPlayable; // 0x00
+	
+		// Properties
+		public static AnimationLayerMixerPlayable Null { get => default; } // 0x0000000189D8B37C-0x0000000189D8B3D4 
+	
+		// Constructors
+		internal AnimationLayerMixerPlayable(PlayableHandle handle, bool singleLayerOptimization = true /* Metadata: 0x01FD9C41 */) : this() {
+			m_Handle = default;
+		} // 0x0000000182967E20-0x0000000182967F20
+		static AnimationLayerMixerPlayable() {
+			m_NullPlayable = default;
+		} // 0x0000000182967F70-0x0000000182968000
+	
+		// Methods
+		public static AnimationLayerMixerPlayable Create(PlayableGraph graph, int inputCount = 0 /* Metadata: 0x01FD9C3F */) => default; // 0x0000000182967A80-0x0000000182967B20
+		public static AnimationLayerMixerPlayable Create(PlayableGraph graph, int inputCount, bool singleLayerOptimization) => default; // 0x0000000182967B20-0x0000000182967BF0
+		private static PlayableHandle CreateHandle(PlayableGraph graph, int inputCount = 0 /* Metadata: 0x01FD9C40 */) => default; // 0x0000000182967BF0-0x0000000182967D70
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public static implicit operator Playable(AnimationLayerMixerPlayable playable) => default; // 0x0000000189D8B450-0x0000000189D8B4A4
+		public static explicit operator AnimationLayerMixerPlayable(Playable playable) => default; // 0x0000000189D8B3D4-0x0000000189D8B450
+		public bool Equals(AnimationLayerMixerPlayable other) => default; // 0x0000000189D8ABA4-0x0000000189D8AC30
+		public void SetLayerAdditive(uint layerIndex, bool value) {} // 0x0000000189D8AC84-0x0000000189D8ADE4
+		public void SetLayerMaskFromAvatarMask(uint layerIndex, AvatarMask mask) {} // 0x0000000189D8AFE8-0x0000000189D8B1C8
+		public void SetLayerRootMotionDisable(uint layerIndex, bool value) {} // 0x0000000189D8B21C-0x0000000189D8B37C
+		public void SetLayerEnableFloatCurve(uint layerIndex, bool value) {} // 0x0000000189D8AE38-0x0000000189D8AF98
+		[NativeThrows]
+		private static bool CreateHandleInternal(PlayableGraph graph, ref PlayableHandle handle) => default; // 0x0000000182967D70-0x0000000182967DD0
+		[NativeThrows]
+		private static void SetLayerAdditiveInternal(ref PlayableHandle handle, uint layerIndex, bool value) {} // 0x0000000189D8AC30-0x0000000189D8AC84
+		[NativeThrows]
+		private static void SetSingleLayerOptimizationInternal(ref PlayableHandle handle, bool value) {} // 0x0000000182967F20-0x0000000182967F70
+		[NativeThrows]
+		private static void SetLayerMaskFromAvatarMaskInternal(ref PlayableHandle handle, uint layerIndex, AvatarMask mask) {} // 0x0000000189D8AF98-0x0000000189D8AFE8
+		[NativeThrows]
+		private static void SetLayerRootMotionDisableInternal(ref PlayableHandle handle, uint layerIndex, bool value) {} // 0x0000000189D8B1C8-0x0000000189D8B21C
+		[NativeThrows]
+		private static void SetLayerEnableFloatCurveInternal(ref PlayableHandle handle, uint layerIndex, bool value) {} // 0x0000000189D8ADE4-0x0000000189D8AE38
+		private static bool CreateHandleInternal_Injected(ref PlayableGraph graph, ref PlayableHandle handle) => default; // 0x0000000182967DD0-0x0000000182967E20
+	}
+
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[NativeHeader("Modules/Animation/Director/AnimationMixerPlayable.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationMixerPlayable.bindings.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("AnimationMixerPlayableBindings", StaticAccessorType.DoubleColon)]
+	public struct AnimationMixerPlayable : IPlayable, IEquatable<AnimationMixerPlayable> // TypeDefIndex: 57151
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+		private static readonly AnimationMixerPlayable m_NullPlayable; // 0x00
+	
+		// Constructors
+		internal AnimationMixerPlayable(PlayableHandle handle) {
+			m_Handle = default;
+		} // 0x00000001828086F0-0x0000000182808790
+		static AnimationMixerPlayable() {
+			m_NullPlayable = default;
+		} // 0x0000000183CE5560-0x0000000183CE55F0
+	
+		// Methods
+		[Obsolete("normalizeWeights is obsolete. It has no effect and will be removed.")]
+		public static AnimationMixerPlayable Create(PlayableGraph graph, int inputCount, bool normalizeWeights) => default; // 0x0000000189D8B4A4-0x0000000189D8B524
+		public static AnimationMixerPlayable Create(PlayableGraph graph, int inputCount = 0 /* Metadata: 0x01FD9C42 */) => default; // 0x0000000182808450-0x0000000182808500
+		private static PlayableHandle CreateHandle(PlayableGraph graph, int inputCount = 0 /* Metadata: 0x01FD9C43 */) => default; // 0x0000000182808500-0x00000001828086F0
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public static implicit operator Playable(AnimationMixerPlayable playable) => default; // 0x0000000189D8B5B0-0x0000000189D8B604
+		public bool Equals(AnimationMixerPlayable other) => default; // 0x0000000189D8B524-0x0000000189D8B5B0
+		[NativeThrows]
+		private static bool CreateHandleInternal(PlayableGraph graph, ref PlayableHandle handle) => default; // 0x00000001828099E0-0x0000000182809A40
+		private static bool CreateHandleInternal_Injected(ref PlayableGraph graph, ref PlayableHandle handle) => default; // 0x0000000182809A40-0x0000000182809A90
+	}
+
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationMotionXToDeltaPlayable.bindings.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("AnimationMotionXToDeltaPlayableBindings", StaticAccessorType.DoubleColon)]
+	internal struct AnimationMotionXToDeltaPlayable : IPlayable, IEquatable<AnimationMotionXToDeltaPlayable> // TypeDefIndex: 57152
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+		private static readonly AnimationMotionXToDeltaPlayable m_NullPlayable; // 0x00
+	
+		// Constructors
+		private AnimationMotionXToDeltaPlayable(PlayableHandle handle) {
+			m_Handle = default;
+		} // 0x0000000189D8B9C4-0x0000000189D8BA9C
+		static AnimationMotionXToDeltaPlayable() {
+			m_NullPlayable = default;
+		} // 0x0000000189D8B940-0x0000000189D8B9C4
+	
+		// Methods
+		public static AnimationMotionXToDeltaPlayable Create(PlayableGraph graph) => default; // 0x0000000189D8B780-0x0000000189D8B814
+		private static PlayableHandle CreateHandle(PlayableGraph graph) => default; // 0x0000000189D8B6A4-0x0000000189D8B780
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public static implicit operator Playable(AnimationMotionXToDeltaPlayable playable) => default; // 0x0000000189D8BA9C-0x0000000189D8BAF0
+		public bool Equals(AnimationMotionXToDeltaPlayable other) => default; // 0x0000000189D8B814-0x0000000189D8B8A0
+		public void SetAbsoluteMotion(bool value) {} // 0x0000000189D8B8E4-0x0000000189D8B940
+		[NativeThrows]
+		private static bool CreateHandleInternal(PlayableGraph graph, ref PlayableHandle handle) => default; // 0x0000000189D8B648-0x0000000189D8B6A4
+		[NativeThrows]
+		private static void SetAbsoluteMotionInternal(ref PlayableHandle handle, bool value) {} // 0x0000000189D8B8A0-0x0000000189D8B8E4
+		private static bool CreateHandleInternal_Injected(ref PlayableGraph graph, ref PlayableHandle handle) => default; // 0x0000000189D8B604-0x0000000189D8B648
+	}
+
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[NativeHeader("Modules/Animation/Director/AnimationOffsetPlayable.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationOffsetPlayable.bindings.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("AnimationOffsetPlayableBindings", StaticAccessorType.DoubleColon)]
+	internal struct AnimationOffsetPlayable : IPlayable, IEquatable<AnimationOffsetPlayable> // TypeDefIndex: 57153
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+		private static readonly AnimationOffsetPlayable m_NullPlayable; // 0x00
+	
+		// Constructors
+		internal AnimationOffsetPlayable(PlayableHandle handle) {
+			m_Handle = default;
+		} // 0x0000000189D8BED8-0x0000000189D8BFB0
+		static AnimationOffsetPlayable() {
+			m_NullPlayable = default;
+		} // 0x0000000189D8BE54-0x0000000189D8BED8
+	
+		// Methods
+		public static AnimationOffsetPlayable Create(PlayableGraph graph, Vector3 position, Quaternion rotation, int inputCount) => default; // 0x0000000189D8BCE4-0x0000000189D8BDC0
+		private static PlayableHandle CreateHandle(PlayableGraph graph, Vector3 position, Quaternion rotation, int inputCount) => default; // 0x0000000189D8BBC8-0x0000000189D8BCE4
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public static implicit operator Playable(AnimationOffsetPlayable playable) => default; // 0x0000000189D8BFB0-0x0000000189D8C004
+		public bool Equals(AnimationOffsetPlayable other) => default; // 0x0000000189D8BDC0-0x0000000189D8BE54
+		[NativeThrows]
+		private static bool CreateHandleInternal(PlayableGraph graph, Vector3 position, Quaternion rotation, ref PlayableHandle handle) => default; // 0x0000000189D8BB54-0x0000000189D8BBC8
+		private static bool CreateHandleInternal_Injected(ref PlayableGraph graph, ref Vector3 position, ref Quaternion rotation, ref PlayableHandle handle) => default; // 0x0000000189D8BAF0-0x0000000189D8BB54
+	}
+
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[NativeHeader("Modules/Animation/Director/AnimationPlayableExtensions.h")]
+	[NativeHeader("Modules/Animation/AnimationClip.h")]
+	public static class AnimationPlayableExtensions // TypeDefIndex: 57154
+	{
+		// Methods
+		[NativeThrows]
+		internal static void SetAnimatedPropertiesInternal(ref PlayableHandle playable, AnimationClip animatedProperties) {} // 0x0000000189D8C160-0x0000000189D8C1A4
+	
+		// Extension methods
+		public static void SetAnimatedProperties<U>(this U playable, AnimationClip clip)
+			where U : struct, IPlayable {}
+	}
+
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayableOutput.h")]
+	[NativeHeader("Modules/Animation/Animator.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationPlayableGraphExtensions.bindings.h")]
+	[StaticAccessor("AnimationPlayableGraphExtensionsBindings", StaticAccessorType.DoubleColon)]
+	internal static class AnimationPlayableGraphExtensions // TypeDefIndex: 57155
+	{
+		// Methods
+		[NativeThrows]
+		internal static bool InternalCreateAnimationOutput(ref PlayableGraph graph, string name, out PlayableOutputHandle handle) {
+			handle = default;
+			return default;
+		} // 0x0000000182966E40-0x0000000182966EA0
+	}
+
+	[NativeHeader("Modules/Animation/Director/AnimationPlayableOutput.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationPlayableOutput.bindings.h")]
+	[NativeHeader("Modules/Animation/Animator.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayableGraph.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayableOutput.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("AnimationPlayableOutputBindings", StaticAccessorType.DoubleColon)]
+	public struct AnimationPlayableOutput : IPlayableOutput // TypeDefIndex: 57156
+	{
+		// Fields
+		private PlayableOutputHandle m_Handle; // 0x00
+	
+		// Properties
+		public static AnimationPlayableOutput Null { get => default; } // 0x0000000189D8C31C-0x0000000189D8C394 
+	
+		// Constructors
+		internal AnimationPlayableOutput(PlayableOutputHandle handle) : this() {
+			m_Handle = default;
+		} // 0x0000000182966EA0-0x0000000182966F40
+	
+		// Methods
+		public static AnimationPlayableOutput Create(PlayableGraph graph, string name, Animator target) => default; // 0x0000000182966D80-0x0000000182966E40
+		public PlayableOutputHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public static implicit operator PlayableOutput(AnimationPlayableOutput output) => default; // 0x0000000183D85A00-0x0000000183D85A10
+		public static explicit operator AnimationPlayableOutput(PlayableOutput output) => default; // 0x0000000189D8C394-0x0000000189D8C40C
+		public Animator GetTarget() => default; // 0x0000000189D8C290-0x0000000189D8C29C
+		public void SetTarget(Animator value) {} // 0x0000000184272110-0x0000000184272118
+		public void SetNeedRebindOnChanged(bool value) {} // 0x0000000189D8C314-0x0000000189D8C31C
+		[NativeThrows]
+		private static Animator InternalGetTarget(ref PlayableOutputHandle handle) => default; // 0x0000000189D8C29C-0x0000000189D8C2D0
+		[NativeThrows]
+		private static void InternalSetTarget(ref PlayableOutputHandle handle, Animator target) {} // 0x0000000183540510-0x0000000183540560
+		[NativeThrows]
+		private static void InternalSetNeedRebindOnChanged(ref PlayableOutputHandle handle, bool value) {} // 0x0000000189D8C2D0-0x0000000189D8C314
+	}
+
+	[NativeHeader("Modules/Animation/Director/AnimationPosePlayable.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationPosePlayable.bindings.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("AnimationPosePlayableBindings", StaticAccessorType.DoubleColon)]
+	internal struct AnimationPosePlayable : IPlayable, IEquatable<AnimationPosePlayable> // TypeDefIndex: 57157
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+		private static readonly AnimationPosePlayable m_NullPlayable; // 0x00
+	
+		// Constructors
+		internal AnimationPosePlayable(PlayableHandle handle) {
+			m_Handle = default;
+		} // 0x0000000189D8C524-0x0000000189D8C5FC
+		static AnimationPosePlayable() {
+			m_NullPlayable = default;
+		} // 0x0000000189D8C4A0-0x0000000189D8C524
+	
+		// Methods
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public bool Equals(AnimationPosePlayable other) => default; // 0x0000000189D8C40C-0x0000000189D8C4A0
+	}
+
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[NativeHeader("Modules/Animation/Director/AnimationRemoveScalePlayable.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationRemoveScalePlayable.bindings.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("AnimationRemoveScalePlayableBindings", StaticAccessorType.DoubleColon)]
+	internal struct AnimationRemoveScalePlayable : IPlayable, IEquatable<AnimationRemoveScalePlayable> // TypeDefIndex: 57158
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+		private static readonly AnimationRemoveScalePlayable m_NullPlayable; // 0x00
+	
+		// Constructors
+		internal AnimationRemoveScalePlayable(PlayableHandle handle) {
+			m_Handle = default;
+		} // 0x0000000189D8C940-0x0000000189D8CA18
+		static AnimationRemoveScalePlayable() {
+			m_NullPlayable = default;
+		} // 0x0000000189D8C8BC-0x0000000189D8C940
+	
+		// Methods
+		public static AnimationRemoveScalePlayable Create(PlayableGraph graph, int inputCount) => default; // 0x0000000189D8C784-0x0000000189D8C828
+		private static PlayableHandle CreateHandle(PlayableGraph graph, int inputCount) => default; // 0x0000000189D8C69C-0x0000000189D8C784
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public static implicit operator Playable(AnimationRemoveScalePlayable playable) => default; // 0x0000000189D8CA18-0x0000000189D8CA6C
+		public bool Equals(AnimationRemoveScalePlayable other) => default; // 0x0000000189D8C828-0x0000000189D8C8BC
+		[NativeThrows]
+		private static bool CreateHandleInternal(PlayableGraph graph, ref PlayableHandle handle) => default; // 0x0000000189D8C640-0x0000000189D8C69C
+		private static bool CreateHandleInternal_Injected(ref PlayableGraph graph, ref PlayableHandle handle) => default; // 0x0000000189D8C5FC-0x0000000189D8C640
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	[NativeHeader("Runtime/Director/Core/HPlayableGraph.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationScriptPlayable.bindings.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("AnimationScriptPlayableBindings", StaticAccessorType.DoubleColon)]
+	public struct AnimationScriptPlayable : IPlayable, IEquatable<AnimationScriptPlayable> // TypeDefIndex: 57159
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+		private static readonly AnimationScriptPlayable m_NullPlayable; // 0x00
+	
+		// Constructors
+		internal AnimationScriptPlayable(PlayableHandle handle) {
+			m_Handle = default;
+		} // 0x0000000189D8CF34-0x0000000189D8D00C
+		static AnimationScriptPlayable() {
+			m_NullPlayable = default;
+		} // 0x0000000189D8CEB0-0x0000000189D8CF34
+	
+		// Methods
+		public static AnimationScriptPlayable Create<T>(PlayableGraph graph, T jobData, int inputCount = 0 /* Metadata: 0x01FD9C44 */)
+			where T : struct, IAnimationJob => default;
+		private static PlayableHandle CreateHandle<T>(PlayableGraph graph, int inputCount)
+			where T : struct, IAnimationJob => default;
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		private void CheckJobTypeValidity<T>() {}
+		public void SetJobData<T>(T jobData)
+			where T : struct, IAnimationJob {}
+		public static implicit operator Playable(AnimationScriptPlayable playable) => default; // 0x0000000189D8D00C-0x0000000189D8D060
+		public bool Equals(AnimationScriptPlayable other) => default; // 0x0000000189D8CC2C-0x0000000189D8CCB8
+		public void SetForceWriteRootMotionParam(bool value) {} // 0x0000000189D8CE54-0x0000000189D8CEB0
+		public void SetForceResetParam(bool value) {} // 0x0000000189D8CD58-0x0000000189D8CDB4
+		[NativeThrows]
+		private static bool CreateHandleInternal(PlayableGraph graph, ref PlayableHandle handle, IntPtr jobReflectionData) => default; // 0x0000000189D8CBC8-0x0000000189D8CC2C
+		[NativeThrows]
+		private static void SetForceWriteRootMotionParamInternal(PlayableHandle handle, bool value) {} // 0x0000000189D8CDF8-0x0000000189D8CE54
+		[NativeThrows]
+		private static void SetForceResetParamInternal(PlayableHandle handle, bool value) {} // 0x0000000189D8CCFC-0x0000000189D8CD58
+		private static bool CreateHandleInternal_Injected(ref PlayableGraph graph, ref PlayableHandle handle, IntPtr jobReflectionData) => default; // 0x0000000189D8CB74-0x0000000189D8CBC8
+		private static void SetForceWriteRootMotionParamInternal_Injected(ref PlayableHandle handle, bool value) {} // 0x0000000189D8CDB4-0x0000000189D8CDF8
+		private static void SetForceResetParamInternal_Injected(ref PlayableHandle handle, bool value) {} // 0x0000000189D8CCB8-0x0000000189D8CCFC
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationStream.bindings.h")]
+	[NativeHeader("Modules/Animation/Director/AnimationStream.h")]
+	[RequiredByNativeCode]
+	public struct AnimationStream // TypeDefIndex: 57160
+	{
+		// Fields
+		private uint m_AnimatorBindingsVersion; // 0x00
+		private IntPtr constant; // 0x08
+		private IntPtr input; // 0x10
+		private IntPtr output; // 0x18
+		private IntPtr workspace; // 0x20
+		private IntPtr inputStreamAccessor; // 0x28
+		private IntPtr animationHandleBinder; // 0x30
+	
+		// Properties
+		internal uint animatorBindingsVersion { get => default; } // 0x0000000183D85860-0x0000000183D85870 
+		public bool isValid { get => default; } // 0x0000000189D8D7F0-0x0000000189D8D818 
+		public float deltaTime { get => default; } // 0x0000000189D8D7D0-0x0000000189D8D7F0 
+	
+		// Methods
+		internal void CheckIsValid() {} // 0x0000000189D8D728-0x0000000189D8D794
+		[NativeMethod(IsThreadSafe = true)]
+		private float GetDeltaTime() => default; // 0x0000000189D8D7C8-0x0000000189D8D7D0
+		private static float GetDeltaTime_Injected(ref AnimationStream _unity_self) => default; // 0x0000000189D8D794-0x0000000189D8D7C8
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	[NativeHeader("Modules/Animation/Director/AnimationStreamHandles.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationStreamHandles.bindings.h")]
+	public struct TransformStreamHandle // TypeDefIndex: 57161
+	{
+		// Fields
+		private uint m_AnimatorBindingsVersion; // 0x00
+		private int handleIndex; // 0x04
+		private int skeletonIndex; // 0x08
+	
+		// Properties
+		private bool createdByNative { get => default; } // 0x0000000189D95D04-0x0000000189D95D10 
+		private bool hasHandleIndex { get => default; } // 0x0000000189D95D18-0x0000000189D95D24 
+		private bool hasSkeletonIndex { get => default; } // 0x0000000189D95D24-0x0000000189D95D30 
+		internal uint animatorBindingsVersion { get => default; } // 0x0000000183D85860-0x0000000183D85870 
+	
+		// Methods
+		public bool IsValid(AnimationStream stream) => default; // 0x0000000189D96D74-0x0000000189D96D88
+		private bool IsValidInternal(ref AnimationStream stream) => default; // 0x0000000189D96D44-0x0000000189D96D74
+		private bool IsSameVersionAsStream(ref AnimationStream stream) => default; // 0x0000000189D95968-0x0000000189D95974
+		public void Resolve(AnimationStream stream) {} // 0x0000000189D96DD4-0x0000000189D96DE8
+		public bool IsResolved(AnimationStream stream) => default; // 0x0000000189D96D30-0x0000000189D96D44
+		private bool IsResolvedInternal(ref AnimationStream stream) => default; // 0x0000000189D96CF4-0x0000000189D96D30
+		private void CheckIsValidAndResolve(ref AnimationStream stream) {} // 0x0000000189D965A4-0x0000000189D966CC
+		public Vector3 GetPosition(AnimationStream stream) => default; // 0x0000000189D96BB0-0x0000000189D96C14
+		public void SetPosition(AnimationStream stream, Vector3 position) {} // 0x0000000189D972B4-0x0000000189D97308
+		public Quaternion GetRotation(AnimationStream stream) => default; // 0x0000000189D96C98-0x0000000189D96CF4
+		public void SetRotation(AnimationStream stream, Quaternion rotation) {} // 0x0000000189D97370-0x0000000189D973BC
+		public Vector3 GetLocalPosition(AnimationStream stream) => default; // 0x0000000189D96820-0x0000000189D96884
+		public void SetLocalPosition(AnimationStream stream, Vector3 position) {} // 0x0000000189D96F54-0x0000000189D96FA8
+		public Quaternion GetLocalRotation(AnimationStream stream) => default; // 0x0000000189D96908-0x0000000189D96964
+		public void SetLocalRotation(AnimationStream stream, Quaternion rotation) {} // 0x0000000189D97010-0x0000000189D9705C
+		public Vector3 GetLocalScale(AnimationStream stream) => default; // 0x0000000189D969EC-0x0000000189D96A50
+		public void SetLocalScale(AnimationStream stream, Vector3 scale) {} // 0x0000000189D970C4-0x0000000189D97118
+		public void GetLocalTRS(AnimationStream stream, out Vector3 position, out Quaternion rotation, out Vector3 scale) {
+			position = default;
+			rotation = default;
+			scale = default;
+		} // 0x0000000189D96AC4-0x0000000189D96B28
+		public void SetLocalTRS(AnimationStream stream, Vector3 position, Quaternion rotation, Vector3 scale, bool useMask) {} // 0x0000000189D971A8-0x0000000189D9724C
+		public void GetGlobalTR(AnimationStream stream, out Vector3 position, out Quaternion rotation) {
+			position = default;
+			rotation = default;
+		} // 0x0000000189D96740-0x0000000189D96798
+		public void SetGlobalTR(AnimationStream stream, Vector3 position, Quaternion rotation, bool useMask) {} // 0x0000000189D96E6C-0x0000000189D96EEC
+		[NativeMethod(Name = "Resolve", IsThreadSafe = true)]
+		private void ResolveInternal(ref AnimationStream stream) {} // 0x0000000189D96DCC-0x0000000189D96DD4
+		[NativeMethod(Name = "TransformStreamHandleBindings::GetPositionInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private Vector3 GetPositionInternal(ref AnimationStream stream) => default; // 0x0000000189D96B7C-0x0000000189D96BB0
+		[NativeMethod(Name = "TransformStreamHandleBindings::SetPositionInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private void SetPositionInternal(ref AnimationStream stream, Vector3 position) {} // 0x0000000189D972A0-0x0000000189D972B4
+		[NativeMethod(Name = "TransformStreamHandleBindings::GetRotationInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private Quaternion GetRotationInternal(ref AnimationStream stream) => default; // 0x0000000189D96C68-0x0000000189D96C98
+		[NativeMethod(Name = "TransformStreamHandleBindings::SetRotationInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private void SetRotationInternal(ref AnimationStream stream, Quaternion rotation) {} // 0x0000000189D9735C-0x0000000189D97370
+		[NativeMethod(Name = "TransformStreamHandleBindings::GetLocalPositionInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private Vector3 GetLocalPositionInternal(ref AnimationStream stream) => default; // 0x0000000189D967EC-0x0000000189D96820
+		[NativeMethod(Name = "TransformStreamHandleBindings::SetLocalPositionInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private void SetLocalPositionInternal(ref AnimationStream stream, Vector3 position) {} // 0x0000000189D96F40-0x0000000189D96F54
+		[NativeMethod(Name = "TransformStreamHandleBindings::GetLocalRotationInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private Quaternion GetLocalRotationInternal(ref AnimationStream stream) => default; // 0x0000000189D968D8-0x0000000189D96908
+		[NativeMethod(Name = "TransformStreamHandleBindings::SetLocalRotationInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private void SetLocalRotationInternal(ref AnimationStream stream, Quaternion rotation) {} // 0x0000000189D96FFC-0x0000000189D97010
+		[NativeMethod(Name = "TransformStreamHandleBindings::GetLocalScaleInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private Vector3 GetLocalScaleInternal(ref AnimationStream stream) => default; // 0x0000000189D969B8-0x0000000189D969EC
+		[NativeMethod(Name = "TransformStreamHandleBindings::SetLocalScaleInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private void SetLocalScaleInternal(ref AnimationStream stream, Vector3 scale) {} // 0x0000000189D970B0-0x0000000189D970C4
+		[NativeMethod(Name = "TransformStreamHandleBindings::GetLocalTRSInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private void GetLocalTRSInternal(ref AnimationStream stream, out Vector3 position, out Quaternion rotation, out Vector3 scale) {
+			position = default;
+			rotation = default;
+			scale = default;
+		} // 0x0000000189D96AB4-0x0000000189D96AC4
+		[NativeMethod(Name = "TransformStreamHandleBindings::SetLocalTRSInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private void SetLocalTRSInternal(ref AnimationStream stream, Vector3 position, Quaternion rotation, Vector3 scale, bool useMask) {} // 0x0000000189D9717C-0x0000000189D971A8
+		[NativeMethod(Name = "TransformStreamHandleBindings::GetGlobalTRInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private void GetGlobalTRInternal(ref AnimationStream stream, out Vector3 position, out Quaternion rotation) {
+			position = default;
+			rotation = default;
+		} // 0x0000000189D96730-0x0000000189D96740
+		[NativeMethod(Name = "TransformStreamHandleBindings::SetGlobalTRInternal", IsFreeFunction = true, HasExplicitThis = true, IsThreadSafe = true)]
+		private void SetGlobalTRInternal(ref AnimationStream stream, Vector3 position, Quaternion rotation, bool useMask) {} // 0x0000000189D96E4C-0x0000000189D96E6C
+		private static void ResolveInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream) {} // 0x0000000189D96D88-0x0000000189D96DCC
+		private static void GetPositionInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, out Vector3 ret) {
+			ret = default;
+		} // 0x0000000189D96B28-0x0000000189D96B7C
+		private static void SetPositionInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, ref Vector3 position) {} // 0x0000000189D9724C-0x0000000189D972A0
+		private static void GetRotationInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, out Quaternion ret) {
+			ret = default;
+		} // 0x0000000189D96C14-0x0000000189D96C68
+		private static void SetRotationInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, ref Quaternion rotation) {} // 0x0000000189D97308-0x0000000189D9735C
+		private static void GetLocalPositionInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, out Vector3 ret) {
+			ret = default;
+		} // 0x0000000189D96798-0x0000000189D967EC
+		private static void SetLocalPositionInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, ref Vector3 position) {} // 0x0000000189D96EEC-0x0000000189D96F40
+		private static void GetLocalRotationInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, out Quaternion ret) {
+			ret = default;
+		} // 0x0000000189D96884-0x0000000189D968D8
+		private static void SetLocalRotationInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, ref Quaternion rotation) {} // 0x0000000189D96FA8-0x0000000189D96FFC
+		private static void GetLocalScaleInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, out Vector3 ret) {
+			ret = default;
+		} // 0x0000000189D96964-0x0000000189D969B8
+		private static void SetLocalScaleInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, ref Vector3 scale) {} // 0x0000000189D9705C-0x0000000189D970B0
+		private static void GetLocalTRSInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, out Vector3 position, out Quaternion rotation, out Vector3 scale) {
+			position = default;
+			rotation = default;
+			scale = default;
+		} // 0x0000000189D96A50-0x0000000189D96AB4
+		private static void SetLocalTRSInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, ref Vector3 position, ref Quaternion rotation, ref Vector3 scale, bool useMask) {} // 0x0000000189D97118-0x0000000189D9717C
+		private static void GetGlobalTRInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, out Vector3 position, out Quaternion rotation) {
+			position = default;
+			rotation = default;
+		} // 0x0000000189D966CC-0x0000000189D96730
+		private static void SetGlobalTRInternal_Injected(ref TransformStreamHandle _unity_self, ref AnimationStream stream, ref Vector3 position, ref Quaternion rotation, bool useMask) {} // 0x0000000189D96DE8-0x0000000189D96E4C
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	[NativeHeader("Modules/Animation/Director/AnimationStreamHandles.h")]
+	public struct PropertyStreamHandle // TypeDefIndex: 57162
+	{
+		// Fields
+		private uint m_AnimatorBindingsVersion; // 0x00
+		private int handleIndex; // 0x04
+		private int valueArrayIndex; // 0x08
+		private int bindType; // 0x0C
+	
+		// Properties
+		private bool createdByNative { get => default; } // 0x0000000189D95D04-0x0000000189D95D10 
+		private bool hasHandleIndex { get => default; } // 0x0000000189D95D18-0x0000000189D95D24 
+		private bool hasValueArrayIndex { get => default; } // 0x0000000189D95D24-0x0000000189D95D30 
+		private bool hasBindType { get => default; } // 0x0000000189D95D10-0x0000000189D95D18 
+		internal uint animatorBindingsVersion { get => default; } // 0x0000000183D85860-0x0000000183D85870 
+	
+		// Methods
+		public bool IsValid(AnimationStream stream) => default; // 0x0000000189D959A8-0x0000000189D959BC
+		private bool IsValidInternal(ref AnimationStream stream) => default; // 0x0000000189D95974-0x0000000189D959A8
+		private bool IsSameVersionAsStream(ref AnimationStream stream) => default; // 0x0000000189D95968-0x0000000189D95974
+		private bool IsResolvedInternal(ref AnimationStream stream) => default; // 0x0000000189D9592C-0x0000000189D95968
+		private void CheckIsValidAndResolve(ref AnimationStream stream) {} // 0x0000000189D95560-0x0000000189D95690
+		public float GetFloat(AnimationStream stream) => default; // 0x0000000189D957BC-0x0000000189D95848
+		public void SetFloat(AnimationStream stream, float value) {} // 0x0000000189D95B64-0x0000000189D95C00
+		public int GetInt(AnimationStream stream) => default; // 0x0000000189D95894-0x0000000189D9592C
+		public void SetInt(AnimationStream stream, int value) {} // 0x0000000189D95C5C-0x0000000189D95D04
+		public bool GetBool(AnimationStream stream) => default; // 0x0000000189D956DC-0x0000000189D95770
+		public void SetBool(AnimationStream stream, bool value) {} // 0x0000000189D95A64-0x0000000189D95B08
+		[NativeMethod(Name = "Resolve", IsThreadSafe = true)]
+		private void ResolveInternal(ref AnimationStream stream) {} // 0x0000000189D95A00-0x0000000189D95A08
+		[NativeMethod(Name = "GetFloat", IsThreadSafe = true)]
+		private float GetFloatInternal(ref AnimationStream stream) => default; // 0x0000000189D957B4-0x0000000189D957BC
+		[NativeMethod(Name = "SetFloat", IsThreadSafe = true)]
+		private void SetFloatInternal(ref AnimationStream stream, float value) {} // 0x0000000189D95B5C-0x0000000189D95B64
+		[NativeMethod(Name = "GetInt", IsThreadSafe = true)]
+		private int GetIntInternal(ref AnimationStream stream) => default; // 0x0000000189D9588C-0x0000000189D95894
+		[NativeMethod(Name = "SetInt", IsThreadSafe = true)]
+		private void SetIntInternal(ref AnimationStream stream, int value) {} // 0x0000000189D95C54-0x0000000189D95C5C
+		[NativeMethod(Name = "GetBool", IsThreadSafe = true)]
+		private bool GetBoolInternal(ref AnimationStream stream) => default; // 0x0000000189D956D4-0x0000000189D956DC
+		[NativeMethod(Name = "SetBool", IsThreadSafe = true)]
+		private void SetBoolInternal(ref AnimationStream stream, bool value) {} // 0x0000000189D95A5C-0x0000000189D95A64
+		private static void ResolveInternal_Injected(ref PropertyStreamHandle _unity_self, ref AnimationStream stream) {} // 0x0000000189D959BC-0x0000000189D95A00
+		private static float GetFloatInternal_Injected(ref PropertyStreamHandle _unity_self, ref AnimationStream stream) => default; // 0x0000000189D95770-0x0000000189D957B4
+		private static void SetFloatInternal_Injected(ref PropertyStreamHandle _unity_self, ref AnimationStream stream, float value) {} // 0x0000000189D95B08-0x0000000189D95B5C
+		private static int GetIntInternal_Injected(ref PropertyStreamHandle _unity_self, ref AnimationStream stream) => default; // 0x0000000189D95848-0x0000000189D9588C
+		private static void SetIntInternal_Injected(ref PropertyStreamHandle _unity_self, ref AnimationStream stream, int value) {} // 0x0000000189D95C00-0x0000000189D95C54
+		private static bool GetBoolInternal_Injected(ref PropertyStreamHandle _unity_self, ref AnimationStream stream) => default; // 0x0000000189D95690-0x0000000189D956D4
+		private static void SetBoolInternal_Injected(ref PropertyStreamHandle _unity_self, ref AnimationStream stream, bool value) {} // 0x0000000189D95A08-0x0000000189D95A5C
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	[NativeHeader("Modules/Animation/Director/AnimationSceneHandles.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationStreamHandles.bindings.h")]
+	public struct TransformSceneHandle // TypeDefIndex: 57163
+	{
+		// Fields
+		private uint valid; // 0x00
+		private int transformSceneHandleDefinitionIndex; // 0x04
+	
+		// Properties
+		private bool createdByNative { get => default; } // 0x000000018426F724-0x000000018426F72C 
+		private bool hasTransformSceneHandleDefinitionIndex { get => default; } // 0x0000000189D95D18-0x0000000189D95D24 
+	
+		// Methods
+		public bool IsValid(AnimationStream stream) => default; // 0x0000000189D9655C-0x0000000189D965A4
+		private void CheckIsValid(ref AnimationStream stream) {} // 0x0000000189D95E00-0x0000000189D95EE8
+		public Vector3 GetPosition(AnimationStream stream) => default; // 0x0000000189D963CC-0x0000000189D96430
+		public Vector3 GetLocalPosition(AnimationStream stream) => default; // 0x0000000189D9603C-0x0000000189D960A0
+		public Quaternion GetRotation(AnimationStream stream) => default; // 0x0000000189D964B4-0x0000000189D96510
+		public Quaternion GetLocalRotation(AnimationStream stream) => default; // 0x0000000189D96124-0x0000000189D96180
+		public Vector3 GetLocalScale(AnimationStream stream) => default; // 0x0000000189D96208-0x0000000189D9626C
+		public void GetLocalTRS(AnimationStream stream, out Vector3 position, out Quaternion rotation, out Vector3 scale) {
+			position = default;
+			rotation = default;
+			scale = default;
+		} // 0x0000000189D962E0-0x0000000189D96344
+		public void GetGlobalTR(AnimationStream stream, out Vector3 position, out Quaternion rotation) {
+			position = default;
+			rotation = default;
+		} // 0x0000000189D95F5C-0x0000000189D95FB4
+		[ThreadSafe]
+		private bool HasValidTransform(ref AnimationStream stream) => default; // 0x0000000189D96554-0x0000000189D9655C
+		[NativeMethod(Name = "TransformSceneHandleBindings::GetPositionInternal", IsFreeFunction = true, IsThreadSafe = true, HasExplicitThis = true)]
+		private Vector3 GetPositionInternal(ref AnimationStream stream) => default; // 0x0000000189D96398-0x0000000189D963CC
+		[NativeMethod(Name = "TransformSceneHandleBindings::GetLocalPositionInternal", IsFreeFunction = true, IsThreadSafe = true, HasExplicitThis = true)]
+		private Vector3 GetLocalPositionInternal(ref AnimationStream stream) => default; // 0x0000000189D96008-0x0000000189D9603C
+		[NativeMethod(Name = "TransformSceneHandleBindings::GetRotationInternal", IsFreeFunction = true, IsThreadSafe = true, HasExplicitThis = true)]
+		private Quaternion GetRotationInternal(ref AnimationStream stream) => default; // 0x0000000189D96484-0x0000000189D964B4
+		[NativeMethod(Name = "TransformSceneHandleBindings::GetLocalRotationInternal", IsFreeFunction = true, IsThreadSafe = true, HasExplicitThis = true)]
+		private Quaternion GetLocalRotationInternal(ref AnimationStream stream) => default; // 0x0000000189D960F4-0x0000000189D96124
+		[NativeMethod(Name = "TransformSceneHandleBindings::GetLocalScaleInternal", IsFreeFunction = true, IsThreadSafe = true, HasExplicitThis = true)]
+		private Vector3 GetLocalScaleInternal(ref AnimationStream stream) => default; // 0x0000000189D961D4-0x0000000189D96208
+		[NativeMethod(Name = "TransformSceneHandleBindings::GetLocalTRSInternal", IsFreeFunction = true, IsThreadSafe = true, HasExplicitThis = true)]
+		private void GetLocalTRSInternal(ref AnimationStream stream, out Vector3 position, out Quaternion rotation, out Vector3 scale) {
+			position = default;
+			rotation = default;
+			scale = default;
+		} // 0x0000000189D962D0-0x0000000189D962E0
+		[NativeMethod(Name = "TransformSceneHandleBindings::GetGlobalTRInternal", IsFreeFunction = true, IsThreadSafe = true, HasExplicitThis = true)]
+		private void GetGlobalTRInternal(ref AnimationStream stream, out Vector3 position, out Quaternion rotation) {
+			position = default;
+			rotation = default;
+		} // 0x0000000189D95F4C-0x0000000189D95F5C
+		private static bool HasValidTransform_Injected(ref TransformSceneHandle _unity_self, ref AnimationStream stream) => default; // 0x0000000189D96510-0x0000000189D96554
+		private static void GetPositionInternal_Injected(ref TransformSceneHandle _unity_self, ref AnimationStream stream, out Vector3 ret) {
+			ret = default;
+		} // 0x0000000189D96344-0x0000000189D96398
+		private static void GetLocalPositionInternal_Injected(ref TransformSceneHandle _unity_self, ref AnimationStream stream, out Vector3 ret) {
+			ret = default;
+		} // 0x0000000189D95FB4-0x0000000189D96008
+		private static void GetRotationInternal_Injected(ref TransformSceneHandle _unity_self, ref AnimationStream stream, out Quaternion ret) {
+			ret = default;
+		} // 0x0000000189D96430-0x0000000189D96484
+		private static void GetLocalRotationInternal_Injected(ref TransformSceneHandle _unity_self, ref AnimationStream stream, out Quaternion ret) {
+			ret = default;
+		} // 0x0000000189D960A0-0x0000000189D960F4
+		private static void GetLocalScaleInternal_Injected(ref TransformSceneHandle _unity_self, ref AnimationStream stream, out Vector3 ret) {
+			ret = default;
+		} // 0x0000000189D96180-0x0000000189D961D4
+		private static void GetLocalTRSInternal_Injected(ref TransformSceneHandle _unity_self, ref AnimationStream stream, out Vector3 position, out Quaternion rotation, out Vector3 scale) {
+			position = default;
+			rotation = default;
+			scale = default;
+		} // 0x0000000189D9626C-0x0000000189D962D0
+		private static void GetGlobalTRInternal_Injected(ref TransformSceneHandle _unity_self, ref AnimationStream stream, out Vector3 position, out Quaternion rotation) {
+			position = default;
+			rotation = default;
+		} // 0x0000000189D95EE8-0x0000000189D95F4C
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	[NativeHeader("Modules/Animation/Director/AnimationSceneHandles.h")]
+	public struct PropertySceneHandle // TypeDefIndex: 57164
+	{
+		// Fields
+		private uint valid; // 0x00
+		private int handleIndex; // 0x04
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationStreamHandles.bindings.h")]
+	public static class AnimationSceneHandleUtility // TypeDefIndex: 57165
+	{
+		// Methods
+		public static void ReadFloats(AnimationStream stream, NativeArray<PropertySceneHandle> handles, NativeArray<float> buffer) {} // 0x0000000189D8CA6C-0x0000000189D8CB10
+		internal static int ValidateAndGetArrayCount<T0, T1>(ref AnimationStream stream, NativeArray<T0> handles, NativeArray<T1> buffer)
+			where T0 : struct
+			where T1 : struct => default;
+		[NativeMethod(Name = "AnimationHandleUtilityBindings::ReadSceneFloatsInternal", IsFreeFunction = true, HasExplicitThis = false, IsThreadSafe = true)]
+		private static unsafe void ReadSceneFloatsInternal(ref AnimationStream stream, void* propertySceneHandles, void* floatBuffer, int count) {} // 0x0000000189D8CB10-0x0000000189D8CB74
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationStreamHandles.bindings.h")]
+	public static class AnimationStreamHandleUtility // TypeDefIndex: 57166
+	{
+		// Methods
+		public static void WriteFloats(AnimationStream stream, NativeArray<PropertyStreamHandle> handles, NativeArray<float> buffer, bool useMask) {} // 0x0000000189D8D60C-0x0000000189D8D6C4
+		public static void ReadFloats(AnimationStream stream, NativeArray<PropertyStreamHandle> handles, NativeArray<float> buffer) {} // 0x0000000189D8D500-0x0000000189D8D5A8
+		[NativeMethod(Name = "AnimationHandleUtilityBindings::ReadStreamFloatsInternal", IsFreeFunction = true, HasExplicitThis = false, IsThreadSafe = true)]
+		private static unsafe void ReadStreamFloatsInternal(ref AnimationStream stream, void* propertyStreamHandles, void* floatBuffer, int count) {} // 0x0000000189D8D5A8-0x0000000189D8D60C
+		[NativeMethod(Name = "AnimationHandleUtilityBindings::WriteStreamFloatsInternal", IsFreeFunction = true, HasExplicitThis = false, IsThreadSafe = true)]
+		private static unsafe void WriteStreamFloatsInternal(ref AnimationStream stream, void* propertyStreamHandles, void* floatBuffer, int count, bool useMask) {} // 0x0000000189D8D6C4-0x0000000189D8D728
+	}
+
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimatorControllerPlayable.bindings.h")]
+	[NativeHeader("Modules/Animation/RuntimeAnimatorController.h")]
+	[NativeHeader("Modules/Animation/AnimatorInfo.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/Animator.bindings.h")]
+	[NativeHeader("Modules/Animation/Director/AnimatorControllerPlayable.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("AnimatorControllerPlayableBindings", StaticAccessorType.DoubleColon)]
+	public struct AnimatorControllerPlayable : IPlayable, IEquatable<AnimatorControllerPlayable> // TypeDefIndex: 57167
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+		private static readonly AnimatorControllerPlayable m_NullPlayable; // 0x00
+	
+		// Constructors
+		internal AnimatorControllerPlayable(PlayableHandle handle) {
+			m_Handle = default;
+		} // 0x0000000189D8E758-0x0000000189D8E7E0
+		static AnimatorControllerPlayable() {
+			m_NullPlayable = default;
+		} // 0x0000000189D8E6D4-0x0000000189D8E758
+	
+		// Methods
+		public static AnimatorControllerPlayable Create(PlayableGraph graph, RuntimeAnimatorController controller) => default; // 0x0000000189D8E3C8-0x0000000189D8E46C
+		private static PlayableHandle CreateHandle(PlayableGraph graph, RuntimeAnimatorController controller) => default; // 0x0000000189D8E2F0-0x0000000189D8E3C8
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public void SetHandle(PlayableHandle handle) {} // 0x0000000189D8E590-0x0000000189D8E6D4
+		public bool Equals(AnimatorControllerPlayable other) => default; // 0x0000000189D8E46C-0x0000000189D8E4F8
+		public bool IsInTransition(int layerIndex) => default; // 0x0000000189D8E538-0x0000000189D8E590
+		[NativeThrows]
+		private static bool CreateHandleInternal(PlayableGraph graph, RuntimeAnimatorController controller, ref PlayableHandle handle) => default; // 0x0000000189D8E28C-0x0000000189D8E2F0
+		[NativeThrows]
+		private static bool IsInTransitionInternal(ref PlayableHandle handle, int layerIndex) => default; // 0x0000000189D8E4F8-0x0000000189D8E538
+		private static bool CreateHandleInternal_Injected(ref PlayableGraph graph, RuntimeAnimatorController controller, ref PlayableHandle handle) => default; // 0x0000000189D8E238-0x0000000189D8E28C
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	public enum CustomStreamPropertyType // TypeDefIndex: 57168
+	{
+		Float = 5,
+		Bool = 6,
+		Int = 10
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Animations")]
+	[NativeHeader("Modules/Animation/Animator.h")]
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimatorJobExtensions.bindings.h")]
+	[NativeHeader("Modules/Animation/Director/AnimationStreamHandles.h")]
+	[NativeHeader("Modules/Animation/Director/AnimationSceneHandles.h")]
+	[NativeHeader("Modules/Animation/Director/AnimationStream.h")]
+	[StaticAccessor("AnimatorJobExtensionsBindings", StaticAccessorType.DoubleColon)]
+	public static class AnimatorJobExtensions // TypeDefIndex: 57169
+	{
+		// Methods
+		private static void InternalBindStreamTransform([NotNull("ArgumentNullException")] Animator animator, [NotNull("ArgumentNullException")] Transform transform, out TransformStreamHandle transformStreamHandle) {
+			transformStreamHandle = default;
+		} // 0x0000000189D8EB18-0x0000000189D8EB6C
+		private static void InternalBindStreamProperty([NotNull("ArgumentNullException")] Animator animator, [NotNull("ArgumentNullException")] Transform transform, [NotNull("ArgumentNullException")] System.Type type, [NotNull("ArgumentNullException")] string property, bool isObjectReference, out PropertyStreamHandle propertyStreamHandle) {
+			propertyStreamHandle = default;
+		} // 0x0000000189D8EAB4-0x0000000189D8EB18
+		private static void InternalBindCustomStreamProperty([NotNull("ArgumentNullException")] Animator animator, [NotNull("ArgumentNullException")] string property, CustomStreamPropertyType propertyType, out PropertyStreamHandle propertyStreamHandle) {
+			propertyStreamHandle = default;
+		} // 0x0000000189D8E998-0x0000000189D8E9FC
+		private static void InternalBindSceneTransform([NotNull("ArgumentNullException")] Animator animator, [NotNull("ArgumentNullException")] Transform transform, out TransformSceneHandle transformSceneHandle) {
+			transformSceneHandle = default;
+		} // 0x0000000189D8EA60-0x0000000189D8EAB4
+		private static void InternalBindSceneProperty([NotNull("ArgumentNullException")] Animator animator, [NotNull("ArgumentNullException")] Transform transform, [NotNull("ArgumentNullException")] System.Type type, [NotNull("ArgumentNullException")] string property, bool isObjectReference, out PropertySceneHandle propertySceneHandle) {
+			propertySceneHandle = default;
+		} // 0x0000000189D8E9FC-0x0000000189D8EA60
+	
+		// Extension methods
+		public static TransformStreamHandle BindStreamTransform(this Animator animator, Transform transform) => default; // 0x0000000189D8E948-0x0000000189D8E998
+		public static PropertyStreamHandle BindStreamProperty(this Animator animator, Transform transform, System.Type type, string property) => default; // 0x0000000189D8E904-0x0000000189D8E948
+		public static PropertyStreamHandle BindCustomStreamProperty(this Animator animator, string property, CustomStreamPropertyType type) => default; // 0x0000000189D8E7E0-0x0000000189D8E828
+		public static PropertyStreamHandle BindStreamProperty(this Animator animator, Transform transform, System.Type type, string property, [UnityEngine.Internal.DefaultValue("false")] bool isObjectReference) => default; // 0x0000000189D8E89C-0x0000000189D8E904
+		public static TransformSceneHandle BindSceneTransform(this Animator animator, Transform transform) => default; // 0x0000000189D8E878-0x0000000189D8E89C
+		public static PropertySceneHandle BindSceneProperty(this Animator animator, Transform transform, System.Type type, string property) => default; // 0x0000000189D8E85C-0x0000000189D8E878
+		public static PropertySceneHandle BindSceneProperty(this Animator animator, Transform transform, System.Type type, string property, [UnityEngine.Internal.DefaultValue("false")] bool isObjectReference) => default; // 0x0000000189D8E828-0x0000000189D8E85C
+	}
+
+	[Flags]
+	[NativeType("Modules/Animation/Constraints/ConstraintEnums.h")]
+	public enum Axis // TypeDefIndex: 57170
+	{
+		None = 0,
+		X = 1,
+		Y = 2,
+		Z = 4
+	}
+}
+
+namespace UnityEngine.Experimental.Animations
+{
+	public enum AnimationStreamSource // TypeDefIndex: 57137
+	{
+		DefaultValues = 0,
+		PreviousInputs = 1
+	}
+
+	[NativeHeader("Modules/Animation/ScriptBindings/AnimationPlayableOutputExtensions.bindings.h")]
+	[NativeHeader("Modules/Animation/AnimatorDefines.h")]
+	[StaticAccessor("AnimationPlayableOutputExtensionsBindings", StaticAccessorType.DoubleColon)]
+	public static class AnimationPlayableOutputExtensions // TypeDefIndex: 57138
+	{
+		// Methods
+		[NativeThrows]
+		private static void InternalSetAnimationStreamSource(PlayableOutputHandle output, AnimationStreamSource streamSource) {} // 0x0000000189D8C1E4-0x0000000189D8C1F8
+		[NativeThrows]
+		private static void InternalSetSortingOrder(PlayableOutputHandle output, int sortingOrder) {} // 0x0000000189D8C238-0x0000000189D8C24C
+		private static void InternalSetAnimationStreamSource_Injected(ref PlayableOutputHandle output, AnimationStreamSource streamSource) {} // 0x0000000189D8C1A4-0x0000000189D8C1E4
+		private static void InternalSetSortingOrder_Injected(ref PlayableOutputHandle output, int sortingOrder) {} // 0x0000000189D8C1F8-0x0000000189D8C238
+	
+		// Extension methods
+		public static void SetAnimationStreamSource(this AnimationPlayableOutput output, AnimationStreamSource streamSource) {} // 0x0000000189D8C24C-0x0000000189D8C26C
+		public static void SetSortingOrder(this AnimationPlayableOutput output, ushort sortingOrder) {} // 0x0000000189D8C26C-0x0000000189D8C290
 	}
 }

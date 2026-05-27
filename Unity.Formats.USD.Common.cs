@@ -9,6 +9,9 @@ using System.Runtime.CompilerServices;
 using USD.NET.Unity;
 
 // Image 147: Unity.Formats.USD.Common.dll - Assembly: Unity.Formats.USD.Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60163-60172
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Unity.Formats.USD
 {
@@ -81,7 +84,7 @@ namespace Unity.Formats.USD
 			public bool ContainsMaterials; // 0x0B
 	
 			// Properties
-			public static ImportResult Default { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+			public static ImportResult Default { get => default; } // 0x0000000183D4E630-0x0000000183D4E640 
 		}
 	
 		private struct ReimportAnalyticsData // TypeDefIndex: 60169
@@ -117,14 +120,14 @@ namespace Unity.Formats.USD
 		}
 	
 		// Constructors
-		static UsdEditorAnalytics() {} // 0x0000000183D4E630-0x0000000183D4E640
+		static UsdEditorAnalytics() {} // 0x0000000189B69298-0x0000000189B693EC
 	
 		// Methods
-		private static bool RegisterAnalytics(string eventName) => default; // 0x000000018350B670-0x000000018350B680
+		private static bool RegisterAnalytics(string eventName) => default; // 0x000000018115F4C0-0x000000018115F530
 		public static void SendUsageEvent(bool success, double timeTakenMs) {} // 0x000000018350B670-0x000000018350B680
 		public static void SendImportEvent(string fileExtension, double timeTakenMs, ImportResult importResult) {} // 0x000000018350B670-0x000000018350B680
 		public static void SendReimportEvent(string fileExtension, double timeTakenMs, ImportResult importResult) {} // 0x000000018350B670-0x000000018350B680
 		public static void SendExportEvent(string fileExtension, double timeTakenMs, bool exportSucceeded, bool onlyOverrides = false /* Metadata: 0x01FDE150 */) {} // 0x000000018350B670-0x000000018350B680
-		public static void SendRecorderExportEvent(string fileExtension, double timeTakenMs, bool exportSucceeded, bool onlyOverrides = false /* Metadata: 0x01FDE151 */, int frameCount = 0 /* Metadata: 0x01FDE152 */) {} // 0x0000000189B69298-0x0000000189B693EC
+		public static void SendRecorderExportEvent(string fileExtension, double timeTakenMs, bool exportSucceeded, bool onlyOverrides = false /* Metadata: 0x01FDE151 */, int frameCount = 0 /* Metadata: 0x01FDE152 */) {} // 0x000000018350B670-0x000000018350B680
 	}
 }

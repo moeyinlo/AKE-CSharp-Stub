@@ -1430,3 +1430,43 @@ namespace UnityEngine
 		public HGParticleMeshInstanceRenderer() {} // Dummy constructor
 	}
 }
+
+namespace UnityEngine.ParticleSystemJobs
+{
+	internal struct NativeParticleData // TypeDefIndex: 58791
+	{
+		// Fields
+		internal int count; // 0x00
+		internal Array3 positions; // 0x08
+		internal Array3 velocities; // 0x20
+		internal Array3 axisOfRotations; // 0x38
+		internal Array3 rotations; // 0x50
+		internal Array3 rotationalSpeeds; // 0x68
+		internal Array3 sizes; // 0x80
+		internal unsafe void* startColors; // 0x98
+		internal unsafe void* aliveTimePercent; // 0xA0
+		internal unsafe void* inverseStartLifetimes; // 0xA8
+		internal unsafe void* randomSeeds; // 0xB0
+		internal Array4 customData1; // 0xB8
+		internal Array4 customData2; // 0xD8
+		internal unsafe void* meshIndices; // 0xF8
+	
+		// Nested types
+		internal struct Array3 // TypeDefIndex: 58789
+		{
+			// Fields
+			internal unsafe float* x; // 0x00
+			internal unsafe float* y; // 0x08
+			internal unsafe float* z; // 0x10
+		}
+	
+		internal struct Array4 // TypeDefIndex: 58790
+		{
+			// Fields
+			internal unsafe float* x; // 0x00
+			internal unsafe float* y; // 0x08
+			internal unsafe float* z; // 0x10
+			internal unsafe float* w; // 0x18
+		}
+	}
+}

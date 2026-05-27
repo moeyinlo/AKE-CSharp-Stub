@@ -26,6 +26,19 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Scripting;
 
 // Image 39: Unity.VisualScripting.Core.dll - Assembly: Unity.VisualScripting.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 55363-55622
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.Tests")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.Tests.Editor")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.SettingsProvider.Editor")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.State")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.State.Editor")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.Flow")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.Flow.Editor")]
+[assembly: InternalsVisibleTo("Unity.VisualScripting.Core.Editor")]
+[assembly: RenamedNamespace("Ludiq", "Unity.VisualScripting")]
+[assembly: RenamedNamespace("Bolt", "Unity.VisualScripting")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Unity.VisualScripting
 {
@@ -95,15 +108,15 @@ namespace Unity.VisualScripting
 	public sealed class FakeSerializationCloner : ReflectedCloner // TypeDefIndex: 55370
 	{
 		// Properties
-		public fsConfig config { get; } // 0x0000000189D4C77C-0x0000000189D4C8BC 
+		public fsConfig config { get; } // 0x0000000183D4EB40-0x0000000183D4EB50 
 	
 		// Constructors
-		public FakeSerializationCloner() {} // 0x00000001859311D0-0x00000001859311E8
+		public FakeSerializationCloner() {} // 0x000000018369C030-0x000000018369C0A0
 	
 		// Methods
-		public override void BeforeClone(System.Type type, object original) {} // 0x000000018369C030-0x000000018369C0A0
-		public override void AfterClone(System.Type type, object clone) {} // 0x0000000189D60060-0x0000000189D600C4
-		protected override IEnumerable<MemberInfo> GetMembers(System.Type type) => default; // 0x000000018350B670-0x000000018350B680
+		public override void BeforeClone(System.Type type, object original) {} // 0x0000000189D4C734-0x0000000189D4C77C
+		public override void AfterClone(System.Type type, object clone) {} // 0x0000000189D4C6EC-0x0000000189D4C734
+		protected override IEnumerable<MemberInfo> GetMembers(System.Type type) => default; // 0x0000000189D4C77C-0x0000000189D4C8BC
 	}
 
 	public sealed class FieldsCloner : ReflectedCloner // TypeDefIndex: 55371
@@ -162,30 +175,30 @@ namespace Unity.VisualScripting
 		private static readonly Dictionary<System.Type, bool> skippable; // 0x00
 	
 		// Properties
-		public static HashSet<ICloner> cloners { get; } // 0x0000000189D47454-0x0000000189D474A4 
-		public static ArrayCloner arrayCloner { get; } // 0x0000000189D474A4-0x0000000189D474F4 
-		public static DictionaryCloner dictionaryCloner { get; } // 0x0000000189D47594-0x0000000189D475E4 
-		public static EnumerableCloner enumerableCloner { get; } // 0x0000000189D47364-0x0000000189D473B4 
-		public static ListCloner listCloner { get; } // 0x0000000189D47544-0x0000000189D47594 
-		public static AnimationCurveCloner animationCurveCloner { get; } // 0x0000000189D474F4-0x0000000189D47544 
-		internal static GradientCloner gradientCloner { get; } // 0x00000001826CC300-0x00000001826CC3F0 
-		public static FakeSerializationCloner fakeSerializationCloner { get; } // 0x00000001826CC260-0x00000001826CC300 
+		public static HashSet<ICloner> cloners { get; } // 0x0000000189D47404-0x0000000189D47454 
+		public static ArrayCloner arrayCloner { get; } // 0x0000000189D473B4-0x0000000189D47404 
+		public static DictionaryCloner dictionaryCloner { get; } // 0x0000000189D47454-0x0000000189D474A4 
+		public static EnumerableCloner enumerableCloner { get; } // 0x0000000189D474A4-0x0000000189D474F4 
+		public static ListCloner listCloner { get; } // 0x0000000189D47594-0x0000000189D475E4 
+		public static AnimationCurveCloner animationCurveCloner { get; } // 0x0000000189D47364-0x0000000189D473B4 
+		internal static GradientCloner gradientCloner { get; } // 0x0000000189D47544-0x0000000189D47594 
+		public static FakeSerializationCloner fakeSerializationCloner { get; } // 0x0000000189D474F4-0x0000000189D47544 
 	
 		// Constructors
-		static Cloning() {} // 0x0000000189D473B4-0x0000000189D47404
+		static Cloning() {} // 0x000000018369B8C0-0x000000018369BF40
 	
 		// Methods
-		internal static object Clone(CloningContext context, object original) => default; // 0x00000001826CB440-0x00000001826CB580
-		internal static void CloneInto(CloningContext context, ref object clone, object original) {} // 0x00000001826CB3A0-0x00000001826CB440
+		internal static object Clone(CloningContext context, object original) => default; // 0x00000001826CC3F0-0x00000001826CC460
+		internal static void CloneInto(CloningContext context, ref object clone, object original) {} // 0x00000001826CB0F0-0x00000001826CB3A0
 		[CanBeNull]
-		public static ICloner GetCloner(object original, System.Type type) => default; // 0x00000001826CBFD0-0x00000001826CC1E0
-		private static ICloner GetCloner(object original, System.Type type, ICloner fallbackCloner) => default; // 0x000000018350B670-0x000000018350B680
-		private static bool Skippable(System.Type type) => default; // 0x0000000189D5FD80-0x0000000189D5FDA4
+		public static ICloner GetCloner(object original, System.Type type) => default; // 0x00000001826CB440-0x00000001826CB580
+		private static ICloner GetCloner(object original, System.Type type, ICloner fallbackCloner) => default; // 0x00000001826CB3A0-0x00000001826CB440
+		private static bool Skippable(System.Type type) => default; // 0x00000001826CBFD0-0x00000001826CC1E0
 	
 		// Extension methods
-		public static object Clone(this object original, ICloner fallbackCloner, bool tryPreserveInstances) => default;
-		public static object CloneViaFakeSerialization(this object original) => default; // 0x00000001826CC3F0-0x00000001826CC460
-		public static T CloneViaFakeSerialization<T>(this T original) => default; // 0x00000001826CB0F0-0x00000001826CB3A0
+		public static object Clone(this object original, ICloner fallbackCloner, bool tryPreserveInstances) => default; // 0x00000001826CC300-0x00000001826CC3F0
+		public static object CloneViaFakeSerialization(this object original) => default; // 0x00000001826CC260-0x00000001826CC300
+		public static T CloneViaFakeSerialization<T>(this T original) => default;
 	}
 
 	public sealed class CloningContext : IPoolable, IDisposable // TypeDefIndex: 55378
@@ -194,18 +207,18 @@ namespace Unity.VisualScripting
 		private bool disposed; // 0x21
 	
 		// Properties
-		public Dictionary<object, object> clonings { get; } // 0x0000000183D4EF90-0x0000000183D4EFA0 
-		public ICloner fallbackCloner { get; private set; } // 0x0000000183D4EFC0-0x0000000183D4EFD0 0x0000000183D85820-0x0000000183D85830
-		public bool tryPreserveInstances { get; private set; } // 0x0000000182EA6BD0-0x0000000182EA6C20 0x0000000183CC4530-0x0000000183CC45A0
+		public Dictionary<object, object> clonings { get; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public ICloner fallbackCloner { get; private set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		public bool tryPreserveInstances { get; private set; } // 0x0000000183D4EF90-0x0000000183D4EFA0 0x0000000183D4EFC0-0x0000000183D4EFD0
 	
 		// Constructors
-		public CloningContext() {} // 0x00000001826CC6A0-0x00000001826CC6F0
+		public CloningContext() {} // 0x00000001826CC5E0-0x00000001826CC6A0
 	
 		// Methods
-		void IPoolable.New() {} // 0x00000001826CC460-0x00000001826CC5E0
-		void IPoolable.Free() {} // 0x00000001826CC5E0-0x00000001826CC6A0
-		public void Dispose() {} // 0x0000000183D13010-0x0000000183D13070
-		public static CloningContext New(ICloner fallbackCloner, bool tryPreserveInstances) => default; // 0x000000018350B670-0x000000018350B680
+		void IPoolable.New() {} // 0x0000000183D85820-0x0000000183D85830
+		void IPoolable.Free() {} // 0x0000000182EA6BD0-0x0000000182EA6C20
+		public void Dispose() {} // 0x0000000183CC4530-0x0000000183CC45A0
+		public static CloningContext New(ICloner fallbackCloner, bool tryPreserveInstances) => default; // 0x00000001826CC460-0x00000001826CC5E0
 	}
 
 	public interface ICloner // TypeDefIndex: 55379
@@ -409,11 +422,11 @@ namespace Unity.VisualScripting
 		public static Func<float> timeBinding; // 0x08
 	
 		// Properties
-		public static int frame { get; } // 0x000000018350B670-0x000000018350B680 
-		public static float time { get; } // 0x0000000189D5F9F4-0x0000000189D5F9FC 
+		public static int frame { get; } // 0x0000000189D4B34C-0x0000000189D4B3EC 
+		public static float time { get; } // 0x0000000189D4B3EC-0x0000000189D4B48C 
 	
 		// Constructors
-		static EditorTimeBinding() {} // 0x0000000189D5F9FC-0x0000000189D5FA04
+		static EditorTimeBinding() {} // 0x0000000189D4B208-0x0000000189D4B34C
 	}
 
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = true)]
@@ -488,7 +501,7 @@ namespace Unity.VisualScripting
 	internal static class XString // TypeDefIndex: 55404
 	{
 		// Extension methods
-		internal static string Inject(this string format, params string[] formattingArgs) => default; // 0x0000000183D51810-0x0000000183D51820
+		internal static string Inject(this string format, params string[] formattingArgs) => default; // 0x0000000189D609CC-0x0000000189D60B08
 	}
 
 	public struct EmptyEventArgs // TypeDefIndex: 55405
@@ -528,17 +541,17 @@ namespace Unity.VisualScripting
 	
 		// Properties
 		[DoNotSerialize]
-		public MergedGraphElementCollection elements { get; } // 0x0000000189D4F1F4-0x0000000189D4F6DC 
-		public IEnumerable<ISerializationDependency> deserializationDependencies { get; } // 0x0000000189D4F0A8-0x0000000189D4F1F4 
+		public MergedGraphElementCollection elements { get; } // 0x0000000181041090-0x00000001810410A0 
+		public IEnumerable<ISerializationDependency> deserializationDependencies { get; } // 0x0000000189D4F794-0x0000000189D4F89C 
 	
 		// Constructors
 		protected Graph() {} // Dummy constructor
 	
 		// Methods
-		public virtual void OnBeforeSerialize() {} // 0x0000000189D5FF34-0x0000000189D5FF98
-		public void OnAfterDeserialize() {} // 0x000000018350B670-0x000000018350B680
-		public virtual void OnAfterDependenciesDeserialized() {} // 0x0000000189D5FB0C-0x0000000189D5FB28
-		public virtual void Dispose() {} // 0x0000000189D5F820-0x0000000189D5F864
+		public virtual void OnBeforeSerialize() {} // 0x0000000189D4F728-0x0000000189D4F794
+		public void OnAfterDeserialize() {} // 0x0000000189D4F6DC-0x0000000189D4F728
+		public virtual void OnAfterDependenciesDeserialized() {} // 0x0000000189D4F1F4-0x0000000189D4F6DC
+		public virtual void Dispose() {} // 0x0000000189D4F0A8-0x0000000189D4F1F4
 	}
 
 	public abstract class GraphElement<TGraph> : IGraphElement // TypeDefIndex: 55411
@@ -660,15 +673,15 @@ namespace Unity.VisualScripting
 	public sealed class GraphStack : GraphPointer, IPoolable, IDisposable // TypeDefIndex: 55418
 	{
 		// Constructors
-		private GraphStack() {} // 0x000000018350B670-0x000000018350B680
+		private GraphStack() {} // 0x0000000189D4EDF0-0x0000000189D4EDF8
 	
 		// Methods
-		internal static GraphStack New(GraphPointer model) => default; // 0x0000000189D4EFD0-0x0000000189D4F0A8
-		public void Dispose() {} // 0x0000000189D4EDF8-0x0000000189D4EE00
-		void IPoolable.New() {} // 0x0000000189D4EF84-0x0000000189D4EFD0
-		void IPoolable.Free() {} // 0x0000000189D5FED0-0x0000000189D5FF34
-		public override GraphReference AsReference() => default; // 0x000000018350B670-0x000000018350B680
-		public GraphReference ToReference() => default; // 0x0000000189D5F7D0-0x0000000189D5F820
+		internal static GraphStack New(GraphPointer model) => default; // 0x0000000189D4EE54-0x0000000189D4EF84
+		public void Dispose() {} // 0x0000000189D4EE00-0x0000000189D4EE54
+		void IPoolable.New() {} // 0x000000018350B670-0x000000018350B680
+		void IPoolable.Free() {} // 0x0000000189D4EFD0-0x0000000189D4F0A8
+		public override GraphReference AsReference() => default; // 0x0000000189D4EDF8-0x0000000189D4EE00
+		public GraphReference ToReference() => default; // 0x0000000189D4EF84-0x0000000189D4EFD0
 	}
 
 	public interface IGraph : IDisposable, ISerializationDepender // TypeDefIndex: 55419
@@ -849,36 +862,36 @@ namespace Unity.VisualScripting
 		private class AttributeCache // TypeDefIndex: 55439
 		{
 			// Properties
-			public List<Attribute> inheritedAttributes { get; } // 0x0000000189D46FB4-0x0000000189D472D8 
-			public List<Attribute> definedAttributes { get; }
+			public List<Attribute> inheritedAttributes { get; } // 0x00000001820B7B20-0x00000001820B7B30 
+			public List<Attribute> definedAttributes { get; } // 0x0000000181041090-0x00000001810410A0 
 	
 			// Constructors
 			public AttributeCache() {} // Dummy constructor
-			public AttributeCache(MemberInfo element) {}
+			public AttributeCache(MemberInfo element) {} // 0x0000000189D46ABC-0x0000000189D46FB4
 	
 			// Methods
-			private void Cache(Attribute[] attributeObjects, List<Attribute> cache) {}
-			private bool HasAttribute(System.Type attributeType, List<Attribute> cache) => default; // 0x0000000189D472D8-0x0000000189D47364
-			private Attribute GetAttribute(System.Type attributeType, List<Attribute> cache) => default; // 0x00000001820B7B20-0x00000001820B7B30
-			public bool HasAttribute(System.Type attributeType, bool inherit = true /* Metadata: 0x01FD6F7F */) => default; // 0x0000000181041090-0x00000001810410A0
-			public Attribute GetAttribute(System.Type attributeType, bool inherit = true /* Metadata: 0x01FD6F80 */) => default; // 0x0000000189D46ABC-0x0000000189D46FB4
+			private void Cache(Attribute[] attributeObjects, List<Attribute> cache) {} // 0x0000000189D468D0-0x0000000189D4694C
+			private bool HasAttribute(System.Type attributeType, List<Attribute> cache) => default; // 0x0000000189D46A28-0x0000000189D46ABC
+			private Attribute GetAttribute(System.Type attributeType, List<Attribute> cache) => default; // 0x0000000189D46968-0x0000000189D46A0C
+			public bool HasAttribute(System.Type attributeType, bool inherit = true /* Metadata: 0x01FD6F7F */) => default; // 0x0000000189D46A0C-0x0000000189D46A28
+			public Attribute GetAttribute(System.Type attributeType, bool inherit = true /* Metadata: 0x01FD6F80 */) => default; // 0x0000000189D4694C-0x0000000189D46968
 			public bool HasAttribute<TAttribute>(bool inherit = true /* Metadata: 0x01FD6F81 */)
-				where TAttribute : Attribute => default; // 0x0000000189D468D0-0x0000000189D4694C
+				where TAttribute : Attribute => default;
 			public TAttribute GetAttribute<TAttribute>(bool inherit = true /* Metadata: 0x01FD6F82 */)
-				where TAttribute : Attribute => default; // 0x0000000189D46A28-0x0000000189D46ABC
+				where TAttribute : Attribute => default;
 		}
 	
 		// Constructors
-		static AttributeUtility() {}
+		static AttributeUtility() {} // 0x0000000189D472D8-0x0000000189D47364
 	
 		// Methods
-		private static AttributeCache GetAttributeCache(MemberInfo element) => default; // 0x0000000189D46968-0x0000000189D46A0C
+		private static AttributeCache GetAttributeCache(MemberInfo element) => default; // 0x0000000189D46FB4-0x0000000189D472D8
 	
 		// Extension methods
 		internal static IEnumerable<T> GetAttributeOfEnumMember<T>(this Enum enumVal)
-			where T : Attribute => default; // 0x0000000189D46A0C-0x0000000189D46A28
+			where T : Attribute => default;
 		public static bool HasAttribute<TAttribute>(this MemberInfo element, bool inherit = true /* Metadata: 0x01FD6F7D */)
-			where TAttribute : Attribute => default; // 0x0000000189D4694C-0x0000000189D46968
+			where TAttribute : Attribute => default;
 		public static TAttribute GetAttribute<TAttribute>(this MemberInfo element, bool inherit = true /* Metadata: 0x01FD6F7E */)
 			where TAttribute : Attribute => default;
 	}
@@ -920,54 +933,54 @@ namespace Unity.VisualScripting
 			public ConversionQuery(System.Type source, System.Type destination) {
 				this.source = default;
 				this.destination = default;
-			} // 0x0000000189D492A0-0x0000000189D492F4
+			} // 0x00000001832C7BF0-0x00000001832C7C20
 	
 			// Methods
-			public bool Equals(ConversionQuery other) => default; // 0x000000018973DA98-0x000000018973DAB8
-			public override bool Equals(object obj) => default; // 0x0000000189697CCC-0x0000000189697CF0
-			public override int GetHashCode() => default; // 0x0000000189D48EF4-0x0000000189D48FD8
+			public bool Equals(ConversionQuery other) => default; // 0x0000000189D47760-0x0000000189D477D0
+			public override bool Equals(object obj) => default; // 0x0000000189D477D0-0x0000000189D47840
+			public override int GetHashCode() => default; // 0x0000000189D47840-0x0000000189D47880
 		}
 	
 		private struct ConversionQueryComparer : IEqualityComparer<ConversionQuery> // TypeDefIndex: 55443
 		{
 			// Methods
-			public bool Equals(ConversionQuery x, ConversionQuery y) => default; // 0x0000000189D48E10-0x0000000189D48EF4
-			public int GetHashCode(ConversionQuery obj) => default; // 0x0000000189D48FD8-0x0000000189D4904C
+			public bool Equals(ConversionQuery x, ConversionQuery y) => default; // 0x0000000189D47728-0x0000000189D4774C
+			public int GetHashCode(ConversionQuery obj) => default; // 0x0000000189D4774C-0x0000000189D47760
 		}
 	
 		// Constructors
-		static ConversionUtility() {} // 0x0000000189D5FCC0-0x0000000189D5FD3C
+		static ConversionUtility() {} // 0x0000000189D49698-0x0000000189D4B0A4
 	
 		// Methods
-		private static bool RespectsIdentity(System.Type source, System.Type destination) => default; // 0x0000000189D491D0-0x0000000189D49230
-		private static bool IsUpcast(System.Type source, System.Type destination) => default; // 0x0000000189D49170-0x0000000189D491D0
-		private static bool IsDowncast(System.Type source, System.Type destination) => default; // 0x0000000189D48624-0x0000000189D48750
-		public static bool HasImplicitNumericConversion(System.Type source, System.Type destination) => default; // 0x0000000189D47DB0-0x0000000189D47FF0
-		public static bool HasExplicitNumericConversion(System.Type source, System.Type destination) => default; // 0x0000000189D4855C-0x0000000189D48624
-		public static bool HasNumericConversion(System.Type source, System.Type destination) => default; // 0x0000000189D49244-0x0000000189D492A0
-		private static IEnumerable<MethodInfo> FindUserDefinedConversionMethods(ConversionQuery query) => default; // 0x0000000189D494E4-0x0000000189D49698
-		private static MethodInfo[] GetUserDefinedConversionMethods(System.Type source, System.Type destination) => default; // 0x0000000189D47FF0-0x0000000189D48128
-		private static ConversionType GetUserDefinedConversionType(System.Type source, System.Type destination) => default; // 0x0000000189D48128-0x0000000189D482B4
-		private static bool HasEnumerableToArrayConversion(System.Type source, System.Type destination) => default; // 0x0000000189D492F4-0x0000000189D494E4
-		private static bool HasEnumerableToListConversion(System.Type source, System.Type destination) => default; // 0x0000000189D479BC-0x0000000189D47DB0
-		private static bool HasUnityHierarchyConversion(System.Type source, System.Type destination) => default; // 0x0000000189D49698-0x0000000189D4B0A4
-		private static bool IsValidConversion(ConversionType conversionType, bool guaranteed) => default; // 0x00000001832C7BF0-0x00000001832C7C20
-		public static bool CanConvert(object value, System.Type type, bool guaranteed) => default; // 0x0000000189D47760-0x0000000189D477D0
-		public static bool CanConvert(System.Type source, System.Type destination, bool guaranteed) => default; // 0x0000000189D477D0-0x0000000189D47840
-		public static object Convert(object value, System.Type type) => default; // 0x0000000189D47840-0x0000000189D47880
-		public static ConversionType GetRequiredConversion(System.Type source, System.Type destination) => default; // 0x000000018350B670-0x000000018350B680
-		private static ConversionType DetermineConversionType(ConversionQuery query) => default; // 0x0000000189D5FB28-0x0000000189D5FBD0
-		public static ConversionType GetRequiredConversion(object value, System.Type type) => default; // 0x0000000189D6018C-0x0000000189D601F0
-		private static object NumericConversion(object value, System.Type type) => default; // 0x000000018350B670-0x000000018350B680
-		private static object UserDefinedConversion(ConversionType conversion, object value, System.Type type) => default; // 0x0000000189D5F6A8-0x0000000189D5F6F4
-		private static object EnumerableToArrayConversion(object value, System.Type arrayType) => default; // 0x0000000189D5F6F4-0x0000000189D5F740
-		private static object EnumerableToListConversion(object value, System.Type listType) => default; // 0x000000018350B670-0x000000018350B680
-		private static object UnityHierarchyConversion(object value, System.Type type) => default; // 0x0000000189D5FBD0-0x0000000189D5FC44
-		private static object Convert(object value, System.Type type, ConversionType conversionType) => default; // 0x0000000189D5FC44-0x0000000189D5FCC0
+		private static bool RespectsIdentity(System.Type source, System.Type destination) => default; // 0x0000000189D492A0-0x0000000189D492F4
+		private static bool IsUpcast(System.Type source, System.Type destination) => default; // 0x000000018973DA98-0x000000018973DAB8
+		private static bool IsDowncast(System.Type source, System.Type destination) => default; // 0x0000000189697CCC-0x0000000189697CF0
+		public static bool HasImplicitNumericConversion(System.Type source, System.Type destination) => default; // 0x0000000189D48EF4-0x0000000189D48FD8
+		public static bool HasExplicitNumericConversion(System.Type source, System.Type destination) => default; // 0x0000000189D48E10-0x0000000189D48EF4
+		public static bool HasNumericConversion(System.Type source, System.Type destination) => default; // 0x0000000189D48FD8-0x0000000189D4904C
+		private static IEnumerable<MethodInfo> FindUserDefinedConversionMethods(ConversionQuery query) => default; // 0x0000000189D482B4-0x0000000189D4855C
+		private static MethodInfo[] GetUserDefinedConversionMethods(System.Type source, System.Type destination) => default; // 0x0000000189D48750-0x0000000189D488D0
+		private static ConversionType GetUserDefinedConversionType(System.Type source, System.Type destination) => default; // 0x0000000189D488D0-0x0000000189D48C18
+		private static bool HasEnumerableToArrayConversion(System.Type source, System.Type destination) => default; // 0x0000000189D48C18-0x0000000189D48CFC
+		private static bool HasEnumerableToListConversion(System.Type source, System.Type destination) => default; // 0x0000000189D48CFC-0x0000000189D48E10
+		private static bool HasUnityHierarchyConversion(System.Type source, System.Type destination) => default; // 0x0000000189D4904C-0x0000000189D49170
+		private static bool IsValidConversion(ConversionType conversionType, bool guaranteed) => default; // 0x0000000189D49230-0x0000000189D49244
+		public static bool CanConvert(object value, System.Type type, bool guaranteed) => default; // 0x0000000189D478EC-0x0000000189D47958
+		public static bool CanConvert(System.Type source, System.Type destination, bool guaranteed) => default; // 0x0000000189D47880-0x0000000189D478EC
+		public static object Convert(object value, System.Type type) => default; // 0x0000000189D47958-0x0000000189D479BC
+		public static ConversionType GetRequiredConversion(System.Type source, System.Type destination) => default; // 0x0000000189D48624-0x0000000189D48750
+		private static ConversionType DetermineConversionType(ConversionQuery query) => default; // 0x0000000189D47DB0-0x0000000189D47FF0
+		public static ConversionType GetRequiredConversion(object value, System.Type type) => default; // 0x0000000189D4855C-0x0000000189D48624
+		private static object NumericConversion(object value, System.Type type) => default; // 0x0000000189D49244-0x0000000189D492A0
+		private static object UserDefinedConversion(ConversionType conversion, object value, System.Type type) => default; // 0x0000000189D494E4-0x0000000189D49698
+		private static object EnumerableToArrayConversion(object value, System.Type arrayType) => default; // 0x0000000189D47FF0-0x0000000189D48128
+		private static object EnumerableToListConversion(object value, System.Type listType) => default; // 0x0000000189D48128-0x0000000189D482B4
+		private static object UnityHierarchyConversion(object value, System.Type type) => default; // 0x0000000189D492F4-0x0000000189D494E4
+		private static object Convert(object value, System.Type type, ConversionType conversionType) => default; // 0x0000000189D479BC-0x0000000189D47DB0
 	
 		// Extension methods
-		public static bool IsConvertibleTo(this System.Type source, System.Type destination, bool guaranteed) => default; // 0x0000000189D47728-0x0000000189D4774C
-		public static bool IsConvertibleTo(this object source, System.Type type, bool guaranteed) => default; // 0x0000000189D4774C-0x0000000189D47760
+		public static bool IsConvertibleTo(this System.Type source, System.Type destination, bool guaranteed) => default; // 0x0000000189D491D0-0x0000000189D49230
+		public static bool IsConvertibleTo(this object source, System.Type type, bool guaranteed) => default; // 0x0000000189D49170-0x0000000189D491D0
 	}
 
 	public struct LooseAssemblyName // TypeDefIndex: 55448
@@ -994,14 +1007,14 @@ namespace Unity.VisualScripting
 		private static readonly Lazy<HashSet<MethodInfo>> GenericExtensionMethods; // 0x10
 	
 		// Constructors
-		static MemberUtility() {} // 0x0000000189D50C00-0x0000000189D50C38
+		static MemberUtility() {} // 0x0000000189D50EF4-0x0000000189D51188
 	
 		// Extension methods
-		public static bool IsUserDefinedConversion(this MethodInfo method) => default; // 0x0000000189D5FDA4-0x0000000189D5FE08
-		public static bool IsExtension(this MethodInfo methodInfo) => default; // 0x000000018350B670-0x000000018350B680
-		public static bool IsStatic(this PropertyInfo propertyInfo) => default; // 0x0000000189D5F8E4-0x0000000189D5F934
-		public static bool IsStatic(this MemberInfo memberInfo) => default; // 0x0000000189D5F934-0x0000000189D5F994
-		public static bool CanWrite(this System.Reflection.FieldInfo fieldInfo) => default; // 0x0000000189D5F994-0x0000000189D5F9F4
+		public static bool IsUserDefinedConversion(this MethodInfo method) => default; // 0x0000000189D50E54-0x0000000189D50EF4
+		public static bool IsExtension(this MethodInfo methodInfo) => default; // 0x0000000189D50C38-0x0000000189D50C8C
+		public static bool IsStatic(this PropertyInfo propertyInfo) => default; // 0x0000000189D50C8C-0x0000000189D50CF4
+		public static bool IsStatic(this MemberInfo memberInfo) => default; // 0x0000000189D50CF4-0x0000000189D50E54
+		public static bool CanWrite(this System.Reflection.FieldInfo fieldInfo) => default; // 0x0000000189D50C00-0x0000000189D50C38
 	}
 
 	internal class ExtensionMethodCache // TypeDefIndex: 55452
@@ -1010,7 +1023,7 @@ namespace Unity.VisualScripting
 		internal readonly MethodInfo[] Cache; // 0x10
 	
 		// Constructors
-		internal ExtensionMethodCache() {} // 0x0000000189D5FA98-0x0000000189D5FAE4
+		internal ExtensionMethodCache() {} // 0x0000000189D4C3C0-0x0000000189D4C6EC
 	}
 
 	public sealed class Namespace // TypeDefIndex: 55454
@@ -1019,39 +1032,39 @@ namespace Unity.VisualScripting
 		private static readonly Collection collection; // 0x00
 	
 		// Properties
-		public string FullName { get; } // 0x0000000189D51498-0x0000000189D5158C 
-		public static Namespace Global { get; } // 0x0000000188597150-0x0000000188597168 
+		public string FullName { get; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public static Namespace Global { get; } // 0x0000000189D517C0-0x0000000189D51810 
 	
 		// Nested types
 		private class Collection : KeyedCollection<string, Namespace>, IKeyedCollection<string, Namespace> // TypeDefIndex: 55453
 		{
 			// Properties
-			Namespace Unity.VisualScripting.IKeyedCollection<System.String,Unity.VisualScripting.Namespace>.this[string key] { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+			Namespace Unity.VisualScripting.IKeyedCollection<System.String,Unity.VisualScripting.Namespace>.this[string key] { get => default; } // 0x0000000189D476A4-0x0000000189D476EC 
 	
 			// Constructors
-			public Collection() {} // 0x0000000189D5158C-0x0000000189D515B4
+			public Collection() {} // 0x0000000189D476EC-0x0000000189D47728
 	
 			// Methods
-			protected override string GetKeyForItem(Namespace item) => default; // 0x0000000189D5167C-0x0000000189D517C0
+			protected override string GetKeyForItem(Namespace item) => default; // 0x0000000188597150-0x0000000188597168
 			public new bool TryGetValue(string key, out Namespace value) {
 				value = default;
 				return default;
-			} // 0x0000000183D4EB40-0x0000000183D4EB50
-			bool IKeyedCollection<string, Namespace>.Contains(string key) => default; // 0x0000000189D515B4-0x0000000189D5167C
+			} // 0x0000000189D475E4-0x0000000189D4765C
+			bool IKeyedCollection<string, Namespace>.Contains(string key) => default; // 0x0000000189D4765C-0x0000000189D476A4
 		}
 	
 		// Constructors
 		public Namespace() {} // Dummy constructor
-		private Namespace(string fullName) {} // 0x0000000189D517C0-0x0000000189D51810
-		static Namespace() {} // 0x00000001891C7168-0x00000001891C7190
+		private Namespace(string fullName) {} // 0x0000000189D5167C-0x0000000189D517C0
+		static Namespace() {} // 0x0000000189D515B4-0x0000000189D5167C
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x0000000189D5140C-0x0000000189D51498
-		public override string ToString() => default; // 0x0000000189D51810-0x0000000189D5185C
-		public static Namespace FromFullName(string fullName) => default; // 0x0000000189D475E4-0x0000000189D4765C
-		public override bool Equals(object obj) => default; // 0x0000000189D476EC-0x0000000189D47728
-		public static implicit operator Namespace(string fullName) => default; // 0x0000000189D476A4-0x0000000189D476EC
-		public static bool operator ==(Namespace a, Namespace b) => default; // 0x0000000189D4765C-0x0000000189D476A4
+		public override int GetHashCode() => default; // 0x0000000189D5158C-0x0000000189D515B4
+		public override string ToString() => default; // 0x0000000183D4EB40-0x0000000183D4EB50
+		public static Namespace FromFullName(string fullName) => default; // 0x0000000189D51498-0x0000000189D5158C
+		public override bool Equals(object obj) => default; // 0x0000000189D5140C-0x0000000189D51498
+		public static implicit operator Namespace(string fullName) => default; // 0x0000000189D51810-0x0000000189D5185C
+		public static bool operator ==(Namespace a, Namespace b) => default; // 0x00000001891C7168-0x00000001891C7190
 	}
 
 	public delegate void Action<T1, T2, T3, T4, T5>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5); // TypeDefIndex: 55455; 0x00000000-0x00000000
@@ -1356,33 +1369,33 @@ namespace Unity.VisualScripting
 		private static bool _useJitIfAvailable; // 0x19
 	
 		// Properties
-		internal static bool useJit { get; } // 0x0000000189D55044-0x0000000189D55098 
-		public static bool useJitIfAvailable { get; } // 0x0000000183170200-0x00000001831702D0 
-		public static bool safeMode { get; set; } // 0x0000000189D54CB8-0x0000000189D54D0C 
+		internal static bool useJit { get; } // 0x0000000189D54FBC-0x0000000189D55044 
+		public static bool useJitIfAvailable { get; } // 0x0000000189D54F6C-0x0000000189D54FBC 
+		public static bool safeMode { get; set; } // 0x0000000189D54F1C-0x0000000189D54F6C 0x0000000189D55044-0x0000000189D55098
 	
 		// Constructors
-		static OptimizedReflection() {} // 0x0000000189D54F1C-0x0000000189D54F6C
+		static OptimizedReflection() {} // 0x0000000183A34080-0x0000000183A34240
 	
 		// Methods
-		internal static void OnRuntimeMethodLoad() {} // 0x0000000189D54D0C-0x0000000189D54F1C
-		internal static void VerifyStaticTarget(System.Type targetType, object target) {} // 0x0000000189D549EC-0x0000000189D54A64
-		internal static void VerifyInstanceTarget<TTArget>(object target) {} // 0x0000000189D54820-0x0000000189D5486C
-		private static void VerifyTarget(System.Type targetType, object target, bool @static) {} // 0x0000000189D54904-0x0000000189D54978
-		private static bool SupportsOptimization(MemberInfo memberInfo) => default; // 0x0000000189D54C70-0x0000000189D54CB8
-		private static IOptimizedAccessor GetFieldAccessor(System.Reflection.FieldInfo fieldInfo) => default; // 0x0000000189D54C28-0x0000000189D54C70
-		private static IOptimizedAccessor GetPropertyAccessor(PropertyInfo propertyInfo) => default; // 0x0000000189D54A64-0x0000000189D54C28
-		private static IOptimizedInvoker GetMethodInvoker(MethodInfo methodInfo) => default; // 0x0000000189D5F8BC-0x0000000189D5F8E4
+		internal static void OnRuntimeMethodLoad() {} // 0x0000000183170200-0x00000001831702D0
+		internal static void VerifyStaticTarget(System.Type targetType, object target) {} // 0x0000000189D54CB8-0x0000000189D54D0C
+		internal static void VerifyInstanceTarget<TTArget>(object target) {}
+		private static void VerifyTarget(System.Type targetType, object target, bool @static) {} // 0x0000000189D54D0C-0x0000000189D54F1C
+		private static bool SupportsOptimization(MemberInfo memberInfo) => default; // 0x0000000189D549EC-0x0000000189D54A64
+		private static IOptimizedAccessor GetFieldAccessor(System.Reflection.FieldInfo fieldInfo) => default; // 0x0000000189D5185C-0x0000000189D51DAC
+		private static IOptimizedAccessor GetPropertyAccessor(PropertyInfo propertyInfo) => default; // 0x0000000189D54234-0x0000000189D547AC
+		private static IOptimizedInvoker GetMethodInvoker(MethodInfo methodInfo) => default; // 0x0000000189D51DAC-0x0000000189D54234
 	
 		// Extension methods
-		public static IOptimizedAccessor Prewarm(this System.Reflection.FieldInfo fieldInfo) => default; // 0x0000000189D5185C-0x0000000189D51DAC
-		public static void SetValueOptimized(this System.Reflection.FieldInfo fieldInfo, object target, object value) {} // 0x0000000189D5486C-0x0000000189D548B8
-		public static bool SupportsOptimization(this System.Reflection.FieldInfo fieldInfo) => default; // 0x0000000189D54978-0x0000000189D549EC
-		public static IOptimizedAccessor Prewarm(this PropertyInfo propertyInfo) => default; // 0x0000000189D54234-0x0000000189D547AC
-		public static void SetValueOptimized(this PropertyInfo propertyInfo, object target, object value) {} // 0x0000000189D548B8-0x0000000189D54904
-		public static bool SupportsOptimization(this PropertyInfo propertyInfo) => default; // 0x0000000189D547AC-0x0000000189D54820
-		public static IOptimizedInvoker Prewarm(this MethodInfo methodInfo) => default; // 0x0000000189D51DAC-0x0000000189D54234
-		public static object InvokeOptimized(this MethodInfo methodInfo, object target, object arg0) => default; // 0x0000000189D60128-0x0000000189D6018C
-		public static bool SupportsOptimization(this MethodInfo methodInfo) => default; // 0x000000018350B670-0x000000018350B680
+		public static IOptimizedAccessor Prewarm(this System.Reflection.FieldInfo fieldInfo) => default; // 0x0000000189D54820-0x0000000189D5486C
+		public static void SetValueOptimized(this System.Reflection.FieldInfo fieldInfo, object target, object value) {} // 0x0000000189D54904-0x0000000189D54978
+		public static bool SupportsOptimization(this System.Reflection.FieldInfo fieldInfo) => default; // 0x0000000189D54C70-0x0000000189D54CB8
+		public static IOptimizedAccessor Prewarm(this PropertyInfo propertyInfo) => default; // 0x0000000189D5486C-0x0000000189D548B8
+		public static void SetValueOptimized(this PropertyInfo propertyInfo, object target, object value) {} // 0x0000000189D54978-0x0000000189D549EC
+		public static bool SupportsOptimization(this PropertyInfo propertyInfo) => default; // 0x0000000189D54C28-0x0000000189D54C70
+		public static IOptimizedInvoker Prewarm(this MethodInfo methodInfo) => default; // 0x0000000189D548B8-0x0000000189D54904
+		public static object InvokeOptimized(this MethodInfo methodInfo, object target, object arg0) => default; // 0x0000000189D547AC-0x0000000189D54820
+		public static bool SupportsOptimization(this MethodInfo methodInfo) => default; // 0x0000000189D54A64-0x0000000189D54C28
 	}
 
 	public sealed class ReflectionFieldAccessor : IOptimizedAccessor // TypeDefIndex: 55481
@@ -1728,46 +1741,46 @@ namespace Unity.VisualScripting
 		private static readonly Dictionary<System.Type, Dictionary<string, string>> _renamedMembers; // 0x40
 	
 		// Properties
-		public static IEnumerable<System.Type> types { get; } // 0x0000000189D57CB8-0x0000000189D5818C 
-		public static IEnumerable<Assembly> assemblies { get; } // 0x0000000189D59124-0x0000000189D591C0 
-		public static Dictionary<string, string> renamedNamespaces { get; } // 0x0000000189D5EF4C-0x0000000189D5EF98 
-		public static Dictionary<string, string> renamedAssemblies { get; } // 0x0000000181041090-0x00000001810410A0 
-		public static Dictionary<string, System.Type> renamedTypes { get; } // 0x0000000189D5EEA0-0x0000000189D5EF44 
+		public static IEnumerable<System.Type> types { get; } // 0x0000000189D5925C-0x0000000189D592AC 
+		public static IEnumerable<Assembly> assemblies { get; } // 0x0000000189D59038-0x0000000189D59088 
+		public static Dictionary<string, string> renamedNamespaces { get; } // 0x0000000189D59124-0x0000000189D591C0 
+		public static Dictionary<string, string> renamedAssemblies { get; } // 0x0000000189D59088-0x0000000189D59124 
+		public static Dictionary<string, System.Type> renamedTypes { get; } // 0x0000000189D591C0-0x0000000189D5925C 
 	
 		// Constructors
-		static RuntimeCodebase() {} // 0x0000000189D59088-0x0000000189D59124
+		static RuntimeCodebase() {} // 0x0000000189D58A54-0x0000000189D59038
 	
 		// Methods
-		public static IEnumerable<Attribute> GetAssemblyAttributes(System.Type attributeType) => default; // 0x0000000189D591C0-0x0000000189D5925C
+		public static IEnumerable<Attribute> GetAssemblyAttributes(System.Type attributeType) => default; // 0x0000000189D57974-0x0000000189D579C8
 		[IteratorStateMachine(typeof(_GetAssemblyAttributes_d__15))]
-		public static IEnumerable<Attribute> GetAssemblyAttributes(System.Type attributeType, IEnumerable<Assembly> assemblies) => default; // 0x0000000189D56D50-0x0000000189D570C8
+		public static IEnumerable<Attribute> GetAssemblyAttributes(System.Type attributeType, IEnumerable<Assembly> assemblies) => default; // 0x0000000189D578EC-0x0000000189D57974
 		public static IEnumerable<TAttribute> GetAssemblyAttributes<TAttribute>()
-			where TAttribute : Attribute => default; // 0x0000000189D569D8-0x0000000189D56D50
-		public static string SerializeType(System.Type type) => default; // 0x0000000189D570C8-0x0000000189D578EC
+			where TAttribute : Attribute => default;
+		public static string SerializeType(System.Type type) => default; // 0x0000000189D579C8-0x0000000189D57A5C
 		public static bool TryDeserializeType(string typeName, out System.Type type) {
 			type = default;
 			return default;
-		} // 0x00000001825D6DC0-0x00000001825D6DE0
-		public static System.Type DeserializeType(string typeName) => default; // 0x0000000189D5EF98-0x0000000189D5F084
+		} // 0x0000000189D57ADC-0x0000000189D57CB8
+		public static System.Type DeserializeType(string typeName) => default; // 0x0000000189D568EC-0x0000000189D569D8
 		private static bool TryCachedTypeLookup(string typeName, out System.Type type) {
 			type = default;
 			return default;
-		} // 0x0000000189D5E9BC-0x0000000189D5EEA0
+		} // 0x0000000189D57A5C-0x0000000189D57ADC
 		private static bool TrySystemTypeLookup(string typeName, out System.Type type) {
 			type = default;
 			return default;
-		} // 0x0000000189D5F084-0x0000000189D5F0CC
+		} // 0x0000000189D5818C-0x0000000189D585C8
 		private static bool TrySystemTypeLookup(Unity.VisualScripting.TypeName typeName, out System.Type type) {
 			type = default;
 			return default;
-		} // 0x0000000189D5F0CC-0x0000000189D5F118
+		} // 0x0000000189D585C8-0x0000000189D58A54
 		private static bool TryRenamedTypeLookup(string previousTypeName, out System.Type type) {
 			type = default;
 			return default;
-		} // 0x0000000181041090-0x00000001810410A0
-		private static Dictionary<string, string> FetchRenamedNamespaces() => default; // 0x0000000189D5EF44-0x0000000189D5EF4C
-		private static Dictionary<string, string> FetchRenamedAssemblies() => default; // 0x000000018350B670-0x000000018350B680
-		private static Dictionary<string, System.Type> FetchRenamedTypes() => default; // 0x0000000189D5FD3C-0x0000000189D5FD80
+		} // 0x0000000189D57CB8-0x0000000189D5818C
+		private static Dictionary<string, string> FetchRenamedNamespaces() => default; // 0x0000000189D56D50-0x0000000189D570C8
+		private static Dictionary<string, string> FetchRenamedAssemblies() => default; // 0x0000000189D569D8-0x0000000189D56D50
+		private static Dictionary<string, System.Type> FetchRenamedTypes() => default; // 0x0000000189D570C8-0x0000000189D578EC
 	}
 
 	public class TypeName // TypeDefIndex: 55510
@@ -1777,14 +1790,14 @@ namespace Unity.VisualScripting
 		private readonly List<int> genericarities; // 0x48
 	
 		// Properties
-		public string AssemblyDescription { get; private set; } // 0x00000001822C3A90-0x00000001822C3AA0 0x0000000184271930-0x0000000184271940
-		public string AssemblyName { get; private set; } // 0x0000000182C92F10-0x0000000182C92F20 0x0000000184270470-0x0000000184270480
-		private string AssemblyVersion { get; set; } // 0x0000000183D4E2A0-0x0000000183D4E2B0
-		private string AssemblyCulture { get; set; } // 0x0000000183D4EAF0-0x0000000183D4EB00
-		private string AssemblyPublicKeyToken { get; set; } // 0x0000000182C926C0-0x0000000182C926D0
-		public List<TypeName> GenericParameters { get; } // 0x0000000189D5DCD0-0x0000000189D5DD1C 
-		public string Name { get; private set; } // 0x0000000189D5C418-0x0000000189D5C484 0x0000000189D5D338-0x0000000189D5DCD0
-		public bool IsArray { get => default; } // 0x0000000189D5C330-0x0000000189D5C418 
+		public string AssemblyDescription { get; private set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+		public string AssemblyName { get; private set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		private string AssemblyVersion { get; set; } // 0x0000000184271930-0x0000000184271940
+		private string AssemblyCulture { get; set; } // 0x0000000182C92F10-0x0000000182C92F20
+		private string AssemblyPublicKeyToken { get; set; } // 0x0000000184270470-0x0000000184270480
+		public List<TypeName> GenericParameters { get; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		public string Name { get; private set; } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		public bool IsArray { get => default; } // 0x0000000189D5DCD0-0x0000000189D5DD1C 
 	
 		// Nested types
 		private enum ParseState // TypeDefIndex: 55508
@@ -1797,22 +1810,22 @@ namespace Unity.VisualScripting
 	
 		// Constructors
 		public TypeName() {} // Dummy constructor
-		private TypeName(string s, ref int index) {} // 0x0000000189D5C484-0x0000000189D5C68C
+		private TypeName(string s, ref int index) {} // 0x0000000189D5D338-0x0000000189D5DCD0
 	
 		// Methods
-		public static TypeName Parse(string s) => default; // 0x0000000189D5C96C-0x0000000189D5CC58
-		private static string LookForPairThenRemove(List<string> strings, string Name) => default; // 0x0000000189D5C8E4-0x0000000189D5C96C
-		public void ReplaceNamespace(string oldNamespace, string newNamespace) {} // 0x0000000189D5C68C-0x0000000189D5C8E4
-		public void ReplaceAssembly(string oldAssembly, string newAssembly) {} // 0x0000000189D5CDC0-0x0000000189D5CE48
-		public void ReplaceName(string oldTypeName, System.Type newType) {} // 0x0000000189D5CD4C-0x0000000189D5CDC0
-		public void ReplaceName(string oldTypeName, string newTypeName, AssemblyName newAssemblyName = null) {} // 0x0000000189D5CC58-0x0000000189D5CD4C
-		private static string ToElementTypeName(string s) => default; // 0x0000000189D5D1E8-0x0000000189D5D338
-		private static string ToArrayOrType(string oldType, string newType) => default; // 0x0000000189D5CE58-0x0000000189D5D1D8
-		public void SetAssemblyName(AssemblyName newAssemblyName) {} // 0x0000000189D5D1D8-0x0000000189D5D1E8
-		private void UpdateName() {} // 0x0000000189D5CE48-0x0000000189D5CE58
-		public string ToString(TypeNameDetail specification, TypeNameDetail genericsSpecification) => default; // 0x0000000189D5FE6C-0x0000000189D5FED0
-		public override string ToString() => default; // 0x000000018350B670-0x000000018350B680
-		public string ToLooseString() => default; // 0x0000000189D5FAE4-0x0000000189D5FB0C
+		public static TypeName Parse(string s) => default; // 0x0000000189D5C418-0x0000000189D5C484
+		private static string LookForPairThenRemove(List<string> strings, string Name) => default; // 0x0000000189D5C330-0x0000000189D5C418
+		public void ReplaceNamespace(string oldNamespace, string newNamespace) {} // 0x0000000189D5C96C-0x0000000189D5CC58
+		public void ReplaceAssembly(string oldAssembly, string newAssembly) {} // 0x0000000189D5C484-0x0000000189D5C68C
+		public void ReplaceName(string oldTypeName, System.Type newType) {} // 0x0000000189D5C8E4-0x0000000189D5C96C
+		public void ReplaceName(string oldTypeName, string newTypeName, AssemblyName newAssemblyName = null) {} // 0x0000000189D5C68C-0x0000000189D5C8E4
+		private static string ToElementTypeName(string s) => default; // 0x0000000189D5CDC0-0x0000000189D5CE48
+		private static string ToArrayOrType(string oldType, string newType) => default; // 0x0000000189D5CD4C-0x0000000189D5CDC0
+		public void SetAssemblyName(AssemblyName newAssemblyName) {} // 0x0000000189D5CC58-0x0000000189D5CD4C
+		private void UpdateName() {} // 0x0000000189D5D1E8-0x0000000189D5D338
+		public string ToString(TypeNameDetail specification, TypeNameDetail genericsSpecification) => default; // 0x0000000189D5CE58-0x0000000189D5D1D8
+		public override string ToString() => default; // 0x0000000189D5D1D8-0x0000000189D5D1E8
+		public string ToLooseString() => default; // 0x0000000189D5CE48-0x0000000189D5CE58
 	}
 
 	public enum TypeNameDetail // TypeDefIndex: 55511
@@ -1831,16 +1844,16 @@ namespace Unity.VisualScripting
 		private static readonly Dictionary<System.Type, object> defaultPrimitives; // 0x18
 	
 		// Constructors
-		static TypeUtility() {} // 0x0000000189D5F654-0x0000000189D5F65C
+		static TypeUtility() {} // 0x0000000189D5E048-0x0000000189D5E9BC
 	
 		// Extension methods
-		public static bool IsBasic(this System.Type type) => default; // 0x000000018350B670-0x000000018350B680
-		public static bool IsStatic(this System.Type type) => default; // 0x0000000189D5F118-0x0000000189D5F5C0
-		public static bool IsNullable(this System.Type type) => default; // 0x0000000181041090-0x00000001810410A0
-		public static bool IsReferenceType(this System.Type type) => default; // 0x0000000189D5F65C-0x0000000189D5F6A8
-		public static bool IsAssignableFrom(this System.Type type, object value) => default; // 0x0000000181041090-0x00000001810410A0
+		public static bool IsBasic(this System.Type type) => default; // 0x0000000189D5DDFC-0x0000000189D5DF78
+		public static bool IsStatic(this System.Type type) => default; // 0x0000000189D5E010-0x0000000189D5E048
+		public static bool IsNullable(this System.Type type) => default; // 0x0000000189D5DF78-0x0000000189D5DFEC
+		public static bool IsReferenceType(this System.Type type) => default; // 0x0000000189D5DFEC-0x0000000189D5E010
+		public static bool IsAssignableFrom(this System.Type type, object value) => default; // 0x0000000189D5DD8C-0x0000000189D5DDFC
 		[IteratorStateMachine(typeof(_GetTypesSafely_d__35))]
-		public static IEnumerable<System.Type> GetTypesSafely(this Assembly assembly) => default; // 0x0000000189D5F5C0-0x0000000189D5F654
+		public static IEnumerable<System.Type> GetTypesSafely(this Assembly assembly) => default; // 0x0000000189D5DD1C-0x0000000189D5DD8C
 	}
 
 	public class LooseAssemblyNameConverter : fsDirectConverter // TypeDefIndex: 55515
@@ -2200,7 +2213,7 @@ namespace Unity.VisualScripting
 		public static event Action onSceneUnloaded;
 	
 		// Methods
-		internal static void Initialize() {} // 0x0000000183D22C10-0x0000000183D22C60
+		internal static void Initialize() {} // 0x0000000183170890-0x00000001831709B0
 	}
 
 	public class ReferenceEqualityComparer : IEqualityComparer<object> // TypeDefIndex: 55545
@@ -2302,19 +2315,19 @@ namespace Unity.VisualScripting
 		private static VariablesAsset _asset; // 0x00
 	
 		// Properties
-		public static VariablesAsset asset { get; } // 0x000000018316F800-0x000000018316F8A0 
-		public static VariableDeclarations initial { get; } // 0x0000000189D594C4-0x0000000189D59518 
-		public static VariableDeclarations saved { get; private set; } // 0x0000000189D592C4-0x0000000189D59454 0x000000018316FAE0-0x000000018316FBE0
-		public static VariableDeclarations merged { get; private set; } // 0x000000018316F000-0x000000018316F800 0x000000018316DF00-0x000000018316E140
+		public static VariablesAsset asset { get; } // 0x000000018316F8A0-0x000000018316F930 
+		public static VariableDeclarations initial { get; } // 0x000000018316F800-0x000000018316F8A0 
+		public static VariableDeclarations saved { get; private set; } // 0x0000000189D5948C-0x0000000189D594C4 0x0000000189D59518-0x0000000189D5956C
+		public static VariableDeclarations merged { get; private set; } // 0x0000000189D59454-0x0000000189D5948C 0x0000000189D594C4-0x0000000189D59518
 	
 		// Methods
-		public static void Load() {} // 0x0000000189D5948C-0x0000000189D594C4
-		internal static void OnEnterPlayMode() {} // 0x0000000189D59518-0x0000000189D5956C
-		internal static void OnExitPlayMode() {} // 0x0000000189D59454-0x0000000189D5948C
-		public static void SaveDeclarations(VariableDeclarations declarations) {} // 0x0000000183D18770-0x0000000183D187D0
-		public static void FetchSavedDeclarations() {} // 0x000000018350B670-0x000000018350B680
-		private static void MergeInitialAndSavedDeclarations() {} // 0x0000000189D5F864-0x0000000189D5F8BC
-		private static void WarnAndNullifyUnityObjectReferences(VariableDeclarations declarations) {} // 0x00000001859311D0-0x00000001859311E8
+		public static void Load() {} // 0x000000018316FA50-0x000000018316FAE0
+		internal static void OnEnterPlayMode() {} // 0x000000018316EDC0-0x000000018316EF40
+		internal static void OnExitPlayMode() {} // 0x0000000189D592AC-0x0000000189D592C4
+		public static void SaveDeclarations(VariableDeclarations declarations) {} // 0x0000000189D592C4-0x0000000189D59454
+		public static void FetchSavedDeclarations() {} // 0x000000018316FAE0-0x000000018316FBE0
+		private static void MergeInitialAndSavedDeclarations() {} // 0x000000018316F000-0x000000018316F800
+		private static void WarnAndNullifyUnityObjectReferences(VariableDeclarations declarations) {} // 0x000000018316DF00-0x000000018316E140
 	}
 
 	[SerializationVersion("A", new System.Type[0])]
@@ -2498,19 +2511,19 @@ namespace Unity.VisualScripting.FullSerializer
 	public class fsEnumConverter : fsConverter // TypeDefIndex: 55566
 	{
 		// Constructors
-		public fsEnumConverter() {} // 0x0000000183D51A20-0x0000000183D51A30
+		public fsEnumConverter() {} // 0x000000018350B670-0x000000018350B680
 	
 		// Methods
-		public override bool CanProcess(System.Type type) => default; // 0x000000018350B670-0x000000018350B680
-		public override bool RequestCycleSupport(System.Type storageType) => default; // 0x000000018350B670-0x000000018350B680
-		public override bool RequestInheritanceSupport(System.Type storageType) => default; // 0x0000000189D60F24-0x0000000189D60F94
-		public override object CreateInstance(fsData data, System.Type storageType) => default; // 0x0000000189D60F94-0x0000000189D60FF8
+		public override bool CanProcess(System.Type type) => default; // 0x0000000189D65F1C-0x0000000189D65F74
+		public override bool RequestCycleSupport(System.Type storageType) => default; // 0x000000018115F4C0-0x000000018115F530
+		public override bool RequestInheritanceSupport(System.Type storageType) => default; // 0x000000018115F4C0-0x000000018115F530
+		public override object CreateInstance(fsData data, System.Type storageType) => default; // 0x0000000189D65F74-0x0000000189D65FE8
 		public override fsResult TrySerialize(object instance, out fsData serialized, System.Type storageType) {
 			serialized = default;
 			return default;
-		} // 0x000000018350B670-0x000000018350B680
-		public override fsResult TryDeserialize(fsData data, ref object instance, System.Type storageType) => default; // 0x0000000189D60C6C-0x0000000189D60D6C
-		private static bool ArrayContains<T>(T[] values, T value) => default; // 0x0000000183D606D0-0x0000000183D606E0
+		} // 0x0000000189D66754-0x0000000189D66DFC
+		public override fsResult TryDeserialize(fsData data, ref object instance, System.Type storageType) => default; // 0x0000000189D65FE8-0x0000000189D66754
+		private static bool ArrayContains<T>(T[] values, T value) => default;
 	}
 
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Interface)]
@@ -2722,29 +2735,29 @@ namespace Unity.VisualScripting.FullSerializer
 		public fsSerializer Serializer; // 0x10
 	
 		// Constructors
-		protected fsBaseConverter() {} // 0x0000000189D60C1C-0x0000000189D60C6C
+		protected fsBaseConverter() {} // 0x000000018350B670-0x000000018350B680
 	
 		// Methods
-		public virtual object CreateInstance(fsData data, System.Type storageType) => default;
-		public virtual bool RequestCycleSupport(System.Type storageType) => default;
-		public virtual bool RequestInheritanceSupport(System.Type storageType) => default; // 0x0000000189D62310-0x0000000189D62650
-		public abstract fsResult TrySerialize(object instance, out fsData serialized, System.Type storageType); // 0x0000000189D61FA4-0x0000000189D621BC
-		public abstract fsResult TryDeserialize(fsData data, ref object instance, System.Type storageType); // 0x0000000189D61D90-0x0000000189D61DFC
-		protected fsResult FailExpectedType(fsData data, params fsDataType[] types) => default; // 0x0000000189D61DFC-0x0000000189D61FA4
-		protected fsResult CheckType(fsData data, fsDataType type) => default;
+		public virtual object CreateInstance(fsData data, System.Type storageType) => default; // 0x0000000189D621BC-0x0000000189D62310
+		public virtual bool RequestCycleSupport(System.Type storageType) => default; // 0x0000000189D62650-0x0000000189D62704
+		public virtual bool RequestInheritanceSupport(System.Type storageType) => default; // 0x0000000189D62704-0x0000000189D62754
+		public abstract fsResult TrySerialize(object instance, out fsData serialized, System.Type storageType);
+		public abstract fsResult TryDeserialize(fsData data, ref object instance, System.Type storageType);
+		protected fsResult FailExpectedType(fsData data, params fsDataType[] types) => default; // 0x0000000189D62310-0x0000000189D62650
+		protected fsResult CheckType(fsData data, fsDataType type) => default; // 0x0000000189D61FA4-0x0000000189D621BC
 		protected fsResult CheckKey(fsData data, string key, out fsData subitem) {
 			subitem = default;
 			return default;
-		}
+		} // 0x0000000189D61D90-0x0000000189D61DFC
 		protected fsResult CheckKey(Dictionary<string, fsData> data, string key, out fsData subitem) {
 			subitem = default;
 			return default;
-		} // 0x000000018350B670-0x000000018350B680
-		protected fsResult SerializeMember<T>(Dictionary<string, fsData> data, System.Type overrideConverterType, string name, T value) => default; // 0x0000000189D60FF8-0x0000000189D6105C
+		} // 0x0000000189D61DFC-0x0000000189D61FA4
+		protected fsResult SerializeMember<T>(Dictionary<string, fsData> data, System.Type overrideConverterType, string name, T value) => default;
 		protected fsResult DeserializeMember<T>(Dictionary<string, fsData> data, System.Type overrideConverterType, string name, out ref T value) {
 			value = default;
 			return default;
-		} // 0x000000018350B670-0x000000018350B680
+		}
 	}
 
 	public static class fsGlobalConfig // TypeDefIndex: 55582
@@ -2773,7 +2786,7 @@ namespace Unity.VisualScripting.FullSerializer
 		public bool SerializeEnumsAsInteger; // 0x41
 	
 		// Constructors
-		public fsConfig() {} // 0x0000000183D51810-0x0000000183D51820
+		public fsConfig() {} // 0x000000018369C200-0x000000018369C530
 	}
 
 	public sealed class fsContext // TypeDefIndex: 55585
@@ -3141,84 +3154,84 @@ namespace Unity.VisualScripting.FullSerializer
 			private HashSet<int> _references; // 0x18
 	
 			// Constructors
-			public fsLazyCycleDefinitionWriter() {} // 0x0000000189D72458-0x0000000189D726B4
+			public fsLazyCycleDefinitionWriter() {} // 0x0000000189D6C0A0-0x0000000189D6C160
 	
 			// Methods
-			public void WriteDefinition(int id, fsData data) {} // 0x0000000189D75444-0x0000000189D75E9C
-			public void WriteReference(int id, Dictionary<string, fsData> dict) {} // 0x0000000189D744F0-0x0000000189D74680
-			public void Clear() {} // 0x0000000189D74680-0x0000000189D7477C
+			public void WriteDefinition(int id, fsData data) {} // 0x0000000189D6BD3C-0x0000000189D6BE8C
+			public void WriteReference(int id, Dictionary<string, fsData> dict) {} // 0x0000000189D6BE8C-0x0000000189D6C0A0
+			public void Clear() {} // 0x0000000189D6BCD4-0x0000000189D6BD3C
 		}
 	
 		// Constructors
-		public fsSerializer() {} // 0x0000000189D70C10-0x0000000189D70E94
-		static fsSerializer() {} // 0x0000000189D741D0-0x0000000189D74268
+		public fsSerializer() {} // 0x0000000189D75444-0x0000000189D75E9C
+		static fsSerializer() {} // 0x0000000189D74EF8-0x0000000189D75444
 	
 		// Methods
-		private void RemapAbstractStorageTypeToDefaultType(ref System.Type storageType) {} // 0x0000000189D7126C-0x0000000189D7165C
-		public void SetDefaultStorageType(System.Type abstractType, System.Type defaultStorageType) {}
-		private List<fsObjectProcessor> GetProcessors(System.Type type) => default;
-		public void AddConverter(fsBaseConverter converter) {} // 0x0000000189D74EB8-0x0000000189D74EF8
-		private fsBaseConverter GetConverter(System.Type type, System.Type overrideConverterType) => default; // 0x0000000189D74B1C-0x0000000189D74EB8
+		private void RemapAbstractStorageTypeToDefaultType(ref System.Type storageType) {} // 0x0000000189D744F0-0x0000000189D74680
+		public void SetDefaultStorageType(System.Type abstractType, System.Type defaultStorageType) {} // 0x0000000189D74680-0x0000000189D7477C
+		private List<fsObjectProcessor> GetProcessors(System.Type type) => default; // 0x0000000189D72458-0x0000000189D726B4
+		public void AddConverter(fsBaseConverter converter) {} // 0x0000000189D70C10-0x0000000189D70E94
+		private fsBaseConverter GetConverter(System.Type type, System.Type overrideConverterType) => default; // 0x0000000189D7126C-0x0000000189D7165C
 		public fsResult TrySerialize<T>(T instance, out fsData data) {
 			data = default;
 			return default;
-		} // 0x0000000189D73384-0x0000000189D73740
-		public fsResult TryDeserialize<T>(fsData data, ref ref T instance) => default; // 0x0000000189D73740-0x0000000189D739D8
+		}
+		public fsResult TryDeserialize<T>(fsData data, ref ref T instance) => default;
 		public fsResult TrySerialize(System.Type storageType, object instance, out fsData data) {
 			data = default;
 			return default;
-		} // 0x0000000189D739D8-0x0000000189D73BE8
+		} // 0x0000000189D74EB8-0x0000000189D74EF8
 		public fsResult TrySerialize(System.Type storageType, System.Type overrideConverterType, object instance, out fsData data) {
 			data = default;
 			return default;
-		} // 0x0000000189D73BE8-0x0000000189D73CA0
+		} // 0x0000000189D74B1C-0x0000000189D74EB8
 		private fsResult InternalSerialize_1_ProcessCycles(System.Type storageType, System.Type overrideConverterType, object instance, out fsData data) {
 			data = default;
 			return default;
-		} // 0x0000000189D74AE0-0x0000000189D74B1C
+		} // 0x0000000189D73384-0x0000000189D73740
 		private fsResult InternalSerialize_2_Inheritance(System.Type storageType, System.Type overrideConverterType, object instance, out fsData data) {
 			data = default;
 			return default;
-		} // 0x0000000189D7477C-0x0000000189D74AE0
+		} // 0x0000000189D73740-0x0000000189D739D8
 		private fsResult InternalSerialize_3_ProcessVersioning(System.Type overrideConverterType, object instance, out fsData data) {
 			data = default;
 			return default;
-		} // 0x0000000189D726B4-0x0000000189D72868
+		} // 0x0000000189D739D8-0x0000000189D73BE8
 		private fsResult InternalSerialize_4_Converter(System.Type overrideConverterType, object instance, out fsData data) {
 			data = default;
 			return default;
-		} // 0x0000000189D72868-0x0000000189D72CDC
-		public fsResult TryDeserialize(fsData data, System.Type storageType, ref object result) => default; // 0x0000000189D72CDC-0x0000000189D73114
-		public fsResult TryDeserialize(fsData data, System.Type storageType, System.Type overrideConverterType, ref object result) => default; // 0x0000000189D73114-0x0000000189D73254
+		} // 0x0000000189D73BE8-0x0000000189D73CA0
+		public fsResult TryDeserialize(fsData data, System.Type storageType, ref object result) => default; // 0x0000000189D74AE0-0x0000000189D74B1C
+		public fsResult TryDeserialize(fsData data, System.Type storageType, System.Type overrideConverterType, ref object result) => default; // 0x0000000189D7477C-0x0000000189D74AE0
 		private fsResult InternalDeserialize_1_CycleReference(System.Type overrideConverterType, fsData data, System.Type storageType, ref object result, out List<fsObjectProcessor> processors) {
 			processors = default;
 			return default;
-		} // 0x0000000189D73254-0x0000000189D73384
+		} // 0x0000000189D726B4-0x0000000189D72868
 		private fsResult InternalDeserialize_2_Version(System.Type overrideConverterType, fsData data, System.Type storageType, ref object result, out List<fsObjectProcessor> processors) {
 			processors = default;
 			return default;
-		} // 0x0000000189D7165C-0x0000000189D72458
+		} // 0x0000000189D72868-0x0000000189D72CDC
 		private fsResult InternalDeserialize_3_Inheritance(System.Type overrideConverterType, fsData data, System.Type storageType, ref object result, out List<fsObjectProcessor> processors) {
 			processors = default;
 			return default;
-		} // 0x0000000189D711B8-0x0000000189D7126C
-		private fsResult InternalDeserialize_4_Cycles(System.Type overrideConverterType, fsData data, System.Type resultType, ref object result) => default; // 0x0000000189D74EF8-0x0000000189D75444
-		private fsResult InternalDeserialize_5_Converter(System.Type overrideConverterType, fsData data, System.Type resultType, ref object result) => default; // 0x0000000189D740C8-0x0000000189D74138
-		private static System.Type GetDataType(ref fsData data, System.Type defaultType, ref fsResult deserializeResult) => default; // 0x0000000189D74030-0x0000000189D740C8
-		private static void EnsureDictionary(fsData data) {} // 0x0000000189D73F98-0x0000000189D74030
-		public static bool IsReservedKeyword(string key) => default; // 0x0000000189D74138-0x0000000189D741D0
-		private static bool IsObjectReference(fsData data) => default; // 0x0000000189D74458-0x0000000189D744F0
-		private static bool IsObjectDefinition(fsData data) => default; // 0x0000000189D74268-0x0000000189D74458
-		private static bool IsVersioned(fsData data) => default; // 0x0000000189D70E94-0x0000000189D711B8
-		private static bool IsTypeSpecified(fsData data) => default; // 0x0000000189D73EFC-0x0000000189D73F98
-		private static bool IsWrappedData(fsData data) => default; // 0x0000000189D73D38-0x0000000189D73DE4
-		private static bool IsVisualScriptingUnit(fsData data) => default; // 0x0000000189D73E90-0x0000000189D73EFC
-		private static void ConvertLegacyData(ref fsData data) {} // 0x0000000189D73DE4-0x0000000189D73E90
-		private static void Invoke_OnBeforeSerialize(List<fsObjectProcessor> processors, System.Type storageType, object instance) {} // 0x0000000189D73CA0-0x0000000189D73D38
-		private static void Invoke_OnAfterSerialize(List<fsObjectProcessor> processors, System.Type storageType, object instance, ref fsData data) {} // 0x0000000189D6BD3C-0x0000000189D6BE8C
-		private static void Invoke_OnBeforeDeserialize(List<fsObjectProcessor> processors, System.Type storageType, ref fsData data) {} // 0x0000000189D6BE8C-0x0000000189D6C0A0
-		private static void Invoke_OnBeforeDeserializeAfterInstanceCreation(List<fsObjectProcessor> processors, System.Type storageType, object instance, ref fsData data) {} // 0x0000000189D6BCD4-0x0000000189D6BD3C
-		private static void Invoke_OnAfterDeserialize(List<fsObjectProcessor> processors, System.Type storageType, object instance) {} // 0x0000000189D6C0A0-0x0000000189D6C160
+		} // 0x0000000189D72CDC-0x0000000189D73114
+		private fsResult InternalDeserialize_4_Cycles(System.Type overrideConverterType, fsData data, System.Type resultType, ref object result) => default; // 0x0000000189D73114-0x0000000189D73254
+		private fsResult InternalDeserialize_5_Converter(System.Type overrideConverterType, fsData data, System.Type resultType, ref object result) => default; // 0x0000000189D73254-0x0000000189D73384
+		private static System.Type GetDataType(ref fsData data, System.Type defaultType, ref fsResult deserializeResult) => default; // 0x0000000189D7165C-0x0000000189D72458
+		private static void EnsureDictionary(fsData data) {} // 0x0000000189D711B8-0x0000000189D7126C
+		public static bool IsReservedKeyword(string key) => default; // 0x0000000189D740C8-0x0000000189D74138
+		private static bool IsObjectReference(fsData data) => default; // 0x0000000189D74030-0x0000000189D740C8
+		private static bool IsObjectDefinition(fsData data) => default; // 0x0000000189D73F98-0x0000000189D74030
+		private static bool IsVersioned(fsData data) => default; // 0x0000000189D741D0-0x0000000189D74268
+		private static bool IsTypeSpecified(fsData data) => default; // 0x0000000189D74138-0x0000000189D741D0
+		private static bool IsWrappedData(fsData data) => default; // 0x0000000189D74458-0x0000000189D744F0
+		private static bool IsVisualScriptingUnit(fsData data) => default; // 0x0000000189D74268-0x0000000189D74458
+		private static void ConvertLegacyData(ref fsData data) {} // 0x0000000189D70E94-0x0000000189D711B8
+		private static void Invoke_OnBeforeSerialize(List<fsObjectProcessor> processors, System.Type storageType, object instance) {} // 0x0000000189D73EFC-0x0000000189D73F98
+		private static void Invoke_OnAfterSerialize(List<fsObjectProcessor> processors, System.Type storageType, object instance, ref fsData data) {} // 0x0000000189D73D38-0x0000000189D73DE4
+		private static void Invoke_OnBeforeDeserialize(List<fsObjectProcessor> processors, System.Type storageType, ref fsData data) {} // 0x0000000189D73E90-0x0000000189D73EFC
+		private static void Invoke_OnBeforeDeserializeAfterInstanceCreation(List<fsObjectProcessor> processors, System.Type storageType, object instance, ref fsData data) {} // 0x0000000189D73DE4-0x0000000189D73E90
+		private static void Invoke_OnAfterDeserialize(List<fsObjectProcessor> processors, System.Type storageType, object instance) {} // 0x0000000189D73CA0-0x0000000189D73D38
 	}
 
 	public class fsMetaProperty // TypeDefIndex: 55606
@@ -3257,22 +3270,22 @@ namespace Unity.VisualScripting.FullSerializer
 		private static Dictionary<fsConfig, Dictionary<System.Type, fsMetaType>> _configMetaTypes; // 0x00
 	
 		// Properties
-		public fsMetaProperty[] Properties { get; private set; } // 0x0000000189D6C89C-0x0000000189D6CB70 0x0000000189D6C6BC-0x0000000189D6C89C
-		public bool HasDefaultConstructor { get => default; } // 0x0000000189D6DA44-0x0000000189D6DAD0 
+		public fsMetaProperty[] Properties { get; private set; } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+		public bool HasDefaultConstructor { get => default; } // 0x0000000189D6DBB0-0x0000000189D6DD1C 
 	
 		// Constructors
 		public fsMetaType() {} // Dummy constructor
-		private fsMetaType(fsConfig config, System.Type reflectedType) {} // 0x0000000189D6D97C-0x0000000189D6DA44
-		static fsMetaType() {} // 0x0000000189D60EBC-0x0000000189D60F10
+		private fsMetaType(fsConfig config, System.Type reflectedType) {} // 0x0000000189D6DAD0-0x0000000189D6DBB0
+		static fsMetaType() {} // 0x0000000189D6DA44-0x0000000189D6DAD0
 	
 		// Methods
-		public bool EmitAotData() => default; // 0x000000018350B670-0x000000018350B680
-		public object CreateInstance() => default; // 0x0000000189D60D6C-0x0000000189D60DC0
-		public static fsMetaType Get(fsConfig config, System.Type type) => default; // 0x0000000189D60DC0-0x0000000189D60E14
-		private static void CollectProperties(fsConfig config, List<fsMetaProperty> properties, System.Type reflectedType) {} // 0x0000000189D60E14-0x0000000189D60E68
-		private static bool IsAutoProperty(PropertyInfo property, MemberInfo[] members) => default; // 0x000000018350B670-0x000000018350B680
-		private static bool CanSerializeProperty(fsConfig config, PropertyInfo property, MemberInfo[] members, bool annotationFreeValue) => default; // 0x0000000189D60E68-0x0000000189D60EBC
-		private static bool CanSerializeField(fsConfig config, System.Reflection.FieldInfo field, bool annotationFreeValue) => default; // 0x000000018350B670-0x000000018350B680
+		public bool EmitAotData() => default; // 0x0000000189D6D504-0x0000000189D6D5DC
+		public object CreateInstance() => default; // 0x0000000189D6CFF8-0x0000000189D6D504
+		public static fsMetaType Get(fsConfig config, System.Type type) => default; // 0x0000000189D6D5DC-0x0000000189D6D97C
+		private static void CollectProperties(fsConfig config, List<fsMetaProperty> properties, System.Type reflectedType) {} // 0x0000000189D6CB70-0x0000000189D6CFF8
+		private static bool IsAutoProperty(PropertyInfo property, MemberInfo[] members) => default; // 0x0000000189D6D97C-0x0000000189D6DA44
+		private static bool CanSerializeProperty(fsConfig config, PropertyInfo property, MemberInfo[] members, bool annotationFreeValue) => default; // 0x0000000189D6C89C-0x0000000189D6CB70
+		private static bool CanSerializeField(fsConfig config, System.Reflection.FieldInfo field, bool annotationFreeValue) => default; // 0x0000000189D6C6BC-0x0000000189D6C89C
 	}
 
 	public static class fsReflectionUtility // TypeDefIndex: 55611
@@ -3299,25 +3312,25 @@ namespace Unity.VisualScripting.FullSerializer.Internal
 			public static readonly IEqualityComparer<object> Instance; // 0x00
 	
 			// Constructors
-			public ObjectReferenceEqualityComparator() {} // 0x0000000189D62D50-0x0000000189D62E58
-			static ObjectReferenceEqualityComparator() {} // 0x0000000189D62AE0-0x0000000189D62B44
+			public ObjectReferenceEqualityComparator() {} // 0x000000018350B670-0x000000018350B680
+			static ObjectReferenceEqualityComparator() {} // 0x0000000189D60BB8-0x0000000189D60C1C
 	
 			// Methods
-			bool IEqualityComparer<object>.Equals(object x, object y) => default; // 0x0000000183D69B30-0x0000000183D69B40
-			int IEqualityComparer<object>.GetHashCode(object obj) => default; // 0x0000000189D62B44-0x0000000189D62CA8
+			bool IEqualityComparer<object>.Equals(object x, object y) => default; // 0x0000000186DDEAAC-0x0000000186DDEAB4
+			int IEqualityComparer<object>.GetHashCode(object obj) => default; // 0x0000000183D6E640-0x0000000183D6E650
 		}
 	
 		// Constructors
-		public fsCyclicReferenceManager() {} // 0x0000000189D60BB8-0x0000000189D60C1C
+		public fsCyclicReferenceManager() {} // 0x0000000189D62FF8-0x0000000189D630EC
 	
 		// Methods
-		public void Enter() {} // 0x0000000189D62CA8-0x0000000189D62D50
-		public bool Exit() => default; // 0x0000000189D62E58-0x0000000189D62EC8
-		public object GetReferenceObject(int id) => default; // 0x0000000189D62EC8-0x0000000189D62FF8
-		public void AddReferenceWithId(int id, object reference) {} // 0x0000000189D62FF8-0x0000000189D630EC
-		public int GetReferenceId(object item) => default; // 0x0000000186DDEAAC-0x0000000186DDEAB4
-		public bool IsReference(object item) => default; // 0x0000000183D6E640-0x0000000183D6E650
-		public void MarkSerialized(object item) {} // 0x000000018350B670-0x000000018350B680
+		public void Enter() {} // 0x0000000183D69B30-0x0000000183D69B40
+		public bool Exit() => default; // 0x0000000189D62B44-0x0000000189D62CA8
+		public object GetReferenceObject(int id) => default; // 0x0000000189D62D50-0x0000000189D62E58
+		public void AddReferenceWithId(int id, object reference) {} // 0x0000000189D62AE0-0x0000000189D62B44
+		public int GetReferenceId(object item) => default; // 0x0000000189D62CA8-0x0000000189D62D50
+		public bool IsReference(object item) => default; // 0x0000000189D62E58-0x0000000189D62EC8
+		public void MarkSerialized(object item) {} // 0x0000000189D62EC8-0x0000000189D62FF8
 	}
 
 	public struct fsOption<T> // TypeDefIndex: 55614
@@ -3362,43 +3375,43 @@ namespace Unity.VisualScripting.FullSerializer.Internal
 		private class AttributeQueryComparator : IEqualityComparer<AttributeQuery> // TypeDefIndex: 55617
 		{
 			// Constructors
-			public AttributeQueryComparator() {} // 0x0000000189D6E000-0x0000000189D6E168
+			public AttributeQueryComparator() {} // 0x000000018350B670-0x000000018350B680
 	
 			// Methods
-			public bool Equals(AttributeQuery x, AttributeQuery y) => default; // 0x0000000189D6E6A8-0x0000000189D6E6FC
-			public int GetHashCode(AttributeQuery obj) => default; // 0x0000000184273354-0x0000000184273360
+			public bool Equals(AttributeQuery x, AttributeQuery y) => default; // 0x0000000189D60B08-0x0000000189D60B6C
+			public int GetHashCode(AttributeQuery obj) => default; // 0x0000000189D60B6C-0x0000000189D60BB8
 		}
 	
 		// Constructors
-		static fsPortableReflection() {} // 0x000000018350B670-0x000000018350B680
+		static fsPortableReflection() {} // 0x0000000189D6E6FC-0x0000000189D6E810
 	
 		// Methods
-		public static bool HasAttribute(MemberInfo element, System.Type attributeType) => default;
-		public static bool HasAttribute(MemberInfo element, System.Type attributeType, bool shouldCache) => default;
-		public static Attribute GetAttribute(MemberInfo element, System.Type attributeType, bool shouldCache) => default; // 0x0000000189D6E4F4-0x0000000189D6E5A8
+		public static bool HasAttribute(MemberInfo element, System.Type attributeType) => default; // 0x0000000189D6E6A8-0x0000000189D6E6FC
+		public static bool HasAttribute(MemberInfo element, System.Type attributeType, bool shouldCache) => default; // 0x0000000184273354-0x0000000184273360
+		public static Attribute GetAttribute(MemberInfo element, System.Type attributeType, bool shouldCache) => default; // 0x0000000189D6E000-0x0000000189D6E168
 		public static TAttribute GetAttribute<TAttribute>(MemberInfo element, bool shouldCache)
-			where TAttribute : Attribute => default; // 0x0000000189D6E388-0x0000000189D6E43C
+			where TAttribute : Attribute => default;
 		public static TAttribute GetAttribute<TAttribute>(MemberInfo element)
-			where TAttribute : Attribute => default; // 0x0000000189D6E168-0x0000000189D6E26C
+			where TAttribute : Attribute => default;
 	
 		// Extension methods
-		public static PropertyInfo GetDeclaredProperty(this System.Type type, string propertyName) => default; // 0x0000000189D6E26C-0x0000000189D6E2D0
-		public static MethodInfo GetDeclaredMethod(this System.Type type, string methodName) => default; // 0x0000000189D6E5A8-0x0000000189D6E6A8
-		public static ConstructorInfo GetDeclaredConstructor(this System.Type type, System.Type[] parameters) => default; // 0x0000000189D6E43C-0x0000000189D6E498
-		public static ConstructorInfo[] GetDeclaredConstructors(this System.Type type) => default; // 0x0000000189D6E498-0x0000000189D6E4F4
-		public static MethodInfo GetFlattenedMethod(this System.Type type, string methodName) => default; // 0x0000000189D6E2D0-0x0000000189D6E32C
-		public static MethodInfo[] GetDeclaredMethods(this System.Type type) => default; // 0x0000000189D6E32C-0x0000000189D6E388
-		public static PropertyInfo[] GetDeclaredProperties(this System.Type type) => default; // 0x000000018339AE90-0x000000018339AEA0
-		public static System.Reflection.FieldInfo[] GetDeclaredFields(this System.Type type) => default; // 0x0000000189D6E6FC-0x0000000189D6E810
-		public static MemberInfo[] GetDeclaredMembers(this System.Type type) => default; // 0x0000000189D60B08-0x0000000189D60B6C
-		public static System.Type Resolve(this System.Type type) => default; // 0x0000000189D60B6C-0x0000000189D60BB8
+		public static PropertyInfo GetDeclaredProperty(this System.Type type, string propertyName) => default; // 0x0000000189D6E4F4-0x0000000189D6E5A8
+		public static MethodInfo GetDeclaredMethod(this System.Type type, string methodName) => default; // 0x0000000189D6E388-0x0000000189D6E43C
+		public static ConstructorInfo GetDeclaredConstructor(this System.Type type, System.Type[] parameters) => default; // 0x0000000189D6E168-0x0000000189D6E26C
+		public static ConstructorInfo[] GetDeclaredConstructors(this System.Type type) => default; // 0x0000000189D6E26C-0x0000000189D6E2D0
+		public static MethodInfo GetFlattenedMethod(this System.Type type, string methodName) => default; // 0x0000000189D6E5A8-0x0000000189D6E6A8
+		public static MethodInfo[] GetDeclaredMethods(this System.Type type) => default; // 0x0000000189D6E43C-0x0000000189D6E498
+		public static PropertyInfo[] GetDeclaredProperties(this System.Type type) => default; // 0x0000000189D6E498-0x0000000189D6E4F4
+		public static System.Reflection.FieldInfo[] GetDeclaredFields(this System.Type type) => default; // 0x0000000189D6E2D0-0x0000000189D6E32C
+		public static MemberInfo[] GetDeclaredMembers(this System.Type type) => default; // 0x0000000189D6E32C-0x0000000189D6E388
+		public static System.Type Resolve(this System.Type type) => default; // 0x000000018339AE90-0x000000018339AEA0
 	}
 
 	public static class fsTypeExtensions // TypeDefIndex: 55620
 	{
 		// Extension methods
-		public static string CSharpName(this System.Type type) => default; // 0x000000018350B670-0x000000018350B680
-		public static string CSharpName(this System.Type type, bool includeNamespace) => default; // 0x0000000189D60F10-0x0000000189D60F24
+		public static string CSharpName(this System.Type type) => default; // 0x0000000189D766E4-0x0000000189D766F0
+		public static string CSharpName(this System.Type type, bool includeNamespace) => default; // 0x0000000189D76188-0x0000000189D766E4
 	}
 
 	public struct fsVersionedType // TypeDefIndex: 55621

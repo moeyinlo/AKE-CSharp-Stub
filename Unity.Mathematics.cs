@@ -11,6 +11,11 @@ using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
 
 // Image 31: Unity.Mathematics.dll - Assembly: Unity.Mathematics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 53696-53789
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("Unity.Mathematics.PerformanceTests")]
+[assembly: InternalsVisibleTo("Unity.Mathematics.Tests")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Unity.IL2CPP.CompilerServices
 {

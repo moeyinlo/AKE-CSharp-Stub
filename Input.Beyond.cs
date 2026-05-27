@@ -2103,3 +2103,99 @@ namespace IFix
 		Beyond-Input-UIEvent-RemoveAllListeners0 = 400
 	}
 }
+
+namespace UnityEngine.InputSystem.UI
+{
+	[AddComponentMenu("Input/Debug Virtual Mouse")]
+	public class DebugVirtualMouseInput : MonoBehaviour // TypeDefIndex: 55626
+	{
+		// Fields
+		[Header("Cursor")]
+		[SerializeField]
+		[Tooltip("Whether the component should set the cursor position of the hardware mouse cursor, if one is available. If so, the software cursor pointed (to by \'Cursor Graphic\') will be hidden.")]
+		private CursorMode m_CursorMode; // 0x18
+		[SerializeField]
+		[Tooltip("The graphic that represents the software cursor. This is hidden if a hardware cursor (see \'Cursor Mode\') is used.")]
+		private Graphic m_CursorGraphic; // 0x20
+		[SerializeField]
+		[Tooltip("The transform for the software cursor. Will only be set if a software cursor is used (see \'Cursor Mode\'). Moving the cursor updates the anchored position of the transform.")]
+		private RectTransform m_CursorTransform; // 0x28
+		[SerializeField]
+		private RectTransform _canvasTransform; // 0x30
+		[SerializeField]
+		private Canvas m_Canvas; // 0x38
+		[Header("Motion")]
+		[SerializeField]
+		[Tooltip("Speed in pixels per second with which to move the cursor. Scaled by the input from \'Stick Action\'.")]
+		private float m_CursorSpeed; // 0x40
+		[SerializeField]
+		[Tooltip("Scale factor to apply to \'Scroll Wheel Action\' when setting the mouse \'scrollWheel\' control.")]
+		private float m_ScrollSpeed; // 0x44
+		[SerializeField]
+		[Space(10f)]
+		[Tooltip("Vector2 action that moves the cursor left/right (X) and up/down (Y) on screen.")]
+		private InputActionProperty m_StickAction; // 0x48
+		[SerializeField]
+		[Tooltip("Button action that triggers a left-click on the mouse.")]
+		private InputActionProperty m_LeftButtonAction; // 0x60
+		[SerializeField]
+		[Tooltip("Button action that triggers a middle-click on the mouse.")]
+		private InputActionProperty m_MiddleButtonAction; // 0x78
+		[SerializeField]
+		[Tooltip("Button action that triggers a right-click on the mouse.")]
+		private InputActionProperty m_RightButtonAction; // 0x90
+		[SerializeField]
+		[Tooltip("Button action that triggers a forward button (button #4) click on the mouse.")]
+		private InputActionProperty m_ForwardButtonAction; // 0xA8
+		[SerializeField]
+		[Tooltip("Button action that triggers a back button (button #5) click on the mouse.")]
+		private InputActionProperty m_BackButtonAction; // 0xC0
+		[SerializeField]
+		[Tooltip("Vector2 action that feeds into the mouse \'scrollWheel\' action (scaled by \'Scroll Speed\').")]
+		private InputActionProperty m_ScrollWheelAction; // 0xD8
+		private UnityEngine.InputSystem.Mouse m_VirtualMouse; // 0xF0
+		private UnityEngine.InputSystem.Mouse m_SystemMouse; // 0xF8
+		private Action m_AfterInputUpdateDelegate; // 0x100
+		private Action<UnityEngine.InputSystem.InputAction.CallbackContext> m_ButtonActionTriggeredDelegate; // 0x108
+		private double m_LastTime; // 0x110
+		private Vector2 m_LastStickValue; // 0x118
+		private float m_canvasScale; // 0x120
+	
+		// Properties
+		public RectTransform cursorTransform { get => default; set {} } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+		public float cursorSpeed { get => default; set {} } // 0x0000000183D4EC70-0x0000000183D4EC80 0x0000000183D4ECF0-0x0000000183D4ED00
+		public CursorMode cursorMode { get => default; set {} } // 0x00000001820D1AC0-0x00000001820D1AD0 0x00000001888AB968-0x00000001888ABA4C
+		public Graphic cursorGraphic { get => default; set {} } // 0x0000000183D4EB40-0x0000000183D4EB50 0x00000001888AB944-0x00000001888AB968
+		public float scrollSpeed { get => default; set {} } // 0x0000000183D4EC80-0x0000000183D4EC90 0x0000000183D4ED00-0x0000000183D4ED10
+		public UnityEngine.InputSystem.Mouse virtualMouse { get => default; } // 0x0000000183D51950-0x0000000183D51960 
+		public InputActionProperty stickAction { get => default; set {} } // 0x0000000183D5D670-0x0000000183D5D690 0x00000001888ABD44-0x00000001888ABD74
+		public InputActionProperty leftButtonAction { get => default; set {} } // 0x0000000183D5D690-0x0000000183D5D6B0 0x00000001888ABB04-0x00000001888ABBAC
+		public InputActionProperty rightButtonAction { get => default; set {} } // 0x0000000183D68BE0-0x0000000183D68C00 0x00000001888ABC5C-0x00000001888ABD14
+		public InputActionProperty middleButtonAction { get => default; set {} } // 0x0000000183D6DB80-0x0000000183D6DBA0 0x00000001888ABBAC-0x00000001888ABC5C
+		public InputActionProperty forwardButtonAction { get => default; set {} } // 0x0000000183D6DB60-0x0000000183D6DB80 0x00000001888ABA4C-0x00000001888ABB04
+		public InputActionProperty backButtonAction { get => default; set {} } // 0x0000000183D6DB40-0x0000000183D6DB60 0x00000001888AB88C-0x00000001888AB944
+		public InputActionProperty scrollWheelAction { get => default; set {} } // 0x0000000183D6DBA0-0x0000000183D6DBC0 0x00000001888ABD14-0x00000001888ABD44
+	
+		// Nested types
+		public enum CursorMode // TypeDefIndex: 55625
+		{
+			SoftwareCursor = 0,
+			HardwareCursorIfAvailable = 1
+		}
+	
+		// Constructors
+		public DebugVirtualMouseInput() {} // 0x0000000183D42B50-0x0000000183D42B70
+	
+		// Methods
+		protected void OnEnable() {} // 0x00000001888AA980-0x00000001888AADA8
+		protected void OnDisable() {} // 0x00000001888AA6E4-0x00000001888AA980
+		private void _TryFindCanvas() {} // 0x00000001888AB43C-0x00000001888AB498
+		private void _TryEnableHardwareCursor() {} // 0x00000001888AB244-0x00000001888AB43C
+		private void _SyncScale() {} // 0x00000001888AB144-0x00000001888AB244
+		private void _UpdateMotion() {} // 0x00000001888AB498-0x00000001888AB88C
+		private void _OnButtonActionTriggered(UnityEngine.InputSystem.InputAction.CallbackContext context) {} // 0x00000001888AADB0-0x00000001888AAFE0
+		private static void _SetActionCallback(InputActionProperty field, Action<UnityEngine.InputSystem.InputAction.CallbackContext> callback, bool install = true /* Metadata: 0x01FD6FAB */) {} // 0x00000001888AAFE0-0x00000001888AB04C
+		private static void _SetAction(ref InputActionProperty field, InputActionProperty value) {} // 0x00000001888AB04C-0x00000001888AB144
+		private void _OnAfterInputUpdate() {} // 0x00000001888AADA8-0x00000001888AADB0
+	}
+}

@@ -275,3 +275,44 @@ namespace UnityEngine
 		internal static IntegratedSubsystem GetIntegratedSubsystemByPtr(IntPtr ptr) => default; // 0x0000000189E2946C-0x0000000189E295AC
 	}
 }
+
+namespace UnityEngine.SubsystemsImplementation
+{
+	[NativeHeader("Modules/Subsystems/SubsystemManager.h")]
+	public static class SubsystemDescriptorStore // TypeDefIndex: 60025
+	{
+		// Fields
+		private static List<IntegratedSubsystemDescriptor> s_IntegratedDescriptors; // 0x00
+		private static List<SubsystemDescriptorWithProvider> s_StandaloneDescriptors; // 0x08
+		private static List<SubsystemDescriptor> s_DeprecatedDescriptors; // 0x10
+	
+		// Constructors
+		static SubsystemDescriptorStore() {} // 0x0000000189E29134-0x0000000189E29290
+	
+		// Methods
+		[RequiredByNativeCode]
+		internal static void InitializeManagedDescriptor(IntPtr ptr, IntegratedSubsystemDescriptor desc) {} // 0x0000000189E29018-0x0000000189E2909C
+		[RequiredByNativeCode]
+		internal static void ClearManagedDescriptors() {} // 0x0000000189E28EA4-0x0000000189E29018
+		private static void ReportSingleSubsystemAnalytics(string id) {} // 0x0000000189E29100-0x0000000189E29134
+		internal static void RegisterDescriptor<TDescriptor, TBaseTypeInList>(TDescriptor descriptor, List<TBaseTypeInList> storeInList)
+			where TDescriptor : TBaseTypeInList
+			where TBaseTypeInList : ISubsystemDescriptor {}
+		internal static void RegisterDeprecatedDescriptor(SubsystemDescriptor descriptor) {} // 0x0000000189E2909C-0x0000000189E29100
+	}
+
+	public abstract class SubsystemDescriptorWithProvider : ISubsystemDescriptor // TypeDefIndex: 60026
+	{
+		// Properties
+		public string id { get; } // 0x00000001820B7B20-0x00000001820B7B30 
+	
+		// Constructors
+		protected SubsystemDescriptorWithProvider() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public abstract class SubsystemWithProvider // TypeDefIndex: 60027
+	{
+		// Constructors
+		protected SubsystemWithProvider() {} // 0x000000018350B670-0x000000018350B680
+	}
+}

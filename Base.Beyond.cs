@@ -326,3 +326,25 @@ namespace IFix
 		Beyond-Security-IOOO000iiI-FromBase64String0 = 17
 	}
 }
+
+namespace Unity.IL2CPP.CompilerServices
+{
+	public enum Option // TypeDefIndex: 59493
+	{
+		NullChecks = 1,
+		ArrayBoundsChecks = 2,
+		DivideByZeroChecks = 3
+	}
+
+	[AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Delegate, Inherited = false, AllowMultiple = true)]
+	public class Il2CppSetOptionAttribute : Attribute // TypeDefIndex: 59494
+	{
+		// Properties
+		public Option Option { get; private set; } // 0x0000000183D4E340-0x0000000183D4E350 0x00000001810410F0-0x0000000181041100
+		public object Value { get; private set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+	
+		// Constructors
+		public Il2CppSetOptionAttribute() {} // Dummy constructor
+		public Il2CppSetOptionAttribute(Option option, object value) {} // 0x0000000183A92330-0x0000000183A92340
+	}
+}

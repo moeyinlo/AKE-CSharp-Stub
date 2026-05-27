@@ -13,17 +13,30 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading;
+using JetBrains.Annotations;
+using Unity.Burst;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.IL2CPP.CompilerServices;
+using Unity.Jobs;
+using Unity.Jobs.LowLevel.Unsafe;
+using Unity.Profiling;
+using Unity.Profiling.LowLevel;
+using Unity.Profiling.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.Bindings;
 using UnityEngine.Events;
 using UnityEngine.Experimental.Rendering;
 using UnityEngine.Internal;
+using UnityEngine.Playables;
+using UnityEngine.Profiling;
+using UnityEngine.Profiling.Experimental;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.RendererUtils;
 using UnityEngine.SceneManagement;
 using UnityEngine.Scripting;
+using UnityEngine.Scripting.APIUpdating;
+using UnityEngine.Serialization;
 using UnityEngineInternal;
 
 // Image 14: UnityEngine.CoreModule.dll - Assembly: UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 46227-47164
@@ -194,6 +207,1559 @@ namespace AOT
 		// Constructors
 		public MonoPInvokeCallbackAttribute() {} // Dummy constructor
 		public MonoPInvokeCallbackAttribute(System.Type type) {} // 0x000000018350B670-0x000000018350B680
+	}
+}
+
+namespace JetBrains.Annotations
+{
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Parameter | AttributeTargets.Delegate | AttributeTargets.GenericParameter)]
+	public sealed class CanBeNullAttribute : Attribute // TypeDefIndex: 46337
+	{
+		// Constructors
+		public CanBeNullAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Parameter | AttributeTargets.Delegate | AttributeTargets.GenericParameter)]
+	public sealed class NotNullAttribute : Attribute // TypeDefIndex: 46338
+	{
+		// Constructors
+		public NotNullAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Parameter | AttributeTargets.GenericParameter)]
+	public sealed class MeansImplicitUseAttribute : Attribute // TypeDefIndex: 46339
+	{
+		// Constructors
+		public MeansImplicitUseAttribute() {} // 0x0000000183D85C70-0x0000000183D85C80
+		public MeansImplicitUseAttribute(ImplicitUseKindFlags useKindFlags, ImplicitUseTargetFlags targetFlags) {} // 0x0000000183D50CB0-0x0000000183D50CC0
+	}
+
+	[Flags]
+	public enum ImplicitUseKindFlags // TypeDefIndex: 46340
+	{
+		Access = 1,
+		Assign = 2,
+		InstantiatedWithFixedConstructorSignature = 4,
+		Default = 7,
+		InstantiatedNoFixedConstructorSignature = 8
+	}
+
+	[Flags]
+	public enum ImplicitUseTargetFlags // TypeDefIndex: 46341
+	{
+		Default = 1,
+		Itself = 1,
+		Members = 2,
+		WithMembers = 3
+	}
+
+	[AttributeUsage(AttributeTargets.Method)]
+	public sealed class PureAttribute : Attribute // TypeDefIndex: 46342
+	{
+		// Constructors
+		public PureAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Method)]
+	public sealed class MustUseReturnValueAttribute : Attribute // TypeDefIndex: 46343
+	{
+		// Constructors
+		public MustUseReturnValueAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Parameter)]
+	public sealed class NoEnumerationAttribute : Attribute // TypeDefIndex: 46344
+	{
+		// Constructors
+		public NoEnumerationAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+}
+
+namespace Unity.Burst
+{
+	[AttributeUsage(AttributeTargets.Method)]
+	public class BurstAuthorizedExternalMethodAttribute : Attribute // TypeDefIndex: 46333
+	{
+		// Constructors
+		public BurstAuthorizedExternalMethodAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property)]
+	public class BurstDiscardAttribute : Attribute // TypeDefIndex: 46334
+	{
+		// Constructors
+		public BurstDiscardAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+}
+
+namespace Unity.Burst.LowLevel
+{
+	[NativeHeader("Runtime/Burst/BurstDelegateCache.h")]
+	[NativeHeader("Runtime/Burst/Burst.h")]
+	[StaticAccessor("BurstCompilerService::Get()", StaticAccessorType.Arrow)]
+	internal static class BurstCompilerService // TypeDefIndex: 46336
+	{
+		// Nested types
+		public enum BurstLogType // TypeDefIndex: 46335
+		{
+			Info = 0,
+			Warning = 1,
+			Error = 2
+		}
+	
+		// Methods
+		[FreeFunction]
+		public static int CompileAsyncDelegateMethod(object delegateMethod, string compilerOptions) => default; // 0x00000001825E4BD0-0x00000001825E4C20
+		[FreeFunction]
+		public static unsafe void* GetAsyncCompiledAsyncDelegateMethod(int userID) => default; // 0x00000001825E4B90-0x00000001825E4BD0
+		[ThreadSafe]
+		public static unsafe void* GetOrCreateSharedMemory(ref Hash128 key, uint size_of, uint alignment) => default; // 0x000000018338D1F0-0x000000018338D250
+		[FreeFunction("DefaultBurstLogCallback", true)]
+		public static unsafe void Log(void* userData, BurstLogType logType, byte* message, byte* filename, int lineNumber) {} // 0x0000000189D9D230-0x0000000189D9D290
+	}
+}
+
+namespace Unity.Collections
+{
+	[AttributeUsage(AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue)]
+	[RequiredByNativeCode]
+	public sealed class ReadOnlyAttribute : Attribute // TypeDefIndex: 46289
+	{
+		// Constructors
+		public ReadOnlyAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue)]
+	[RequiredByNativeCode]
+	public sealed class WriteOnlyAttribute : Attribute // TypeDefIndex: 46290
+	{
+		// Constructors
+		public WriteOnlyAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	[RequiredByNativeCode]
+	public sealed class DeallocateOnJobCompletionAttribute : Attribute // TypeDefIndex: 46291
+	{
+		// Constructors
+		public DeallocateOnJobCompletionAttribute() {} // Dummy constructor
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	[RequiredByNativeCode]
+	public sealed class NativeFixedLengthAttribute : Attribute // TypeDefIndex: 46292
+	{
+		// Constructors
+		public NativeFixedLengthAttribute() {} // Dummy constructor
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	[RequiredByNativeCode]
+	public sealed class NativeMatchesParallelForLengthAttribute : Attribute // TypeDefIndex: 46293
+	{
+		// Constructors
+		public NativeMatchesParallelForLengthAttribute() {} // Dummy constructor
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	[RequiredByNativeCode]
+	public sealed class NativeDisableParallelForRestrictionAttribute : Attribute // TypeDefIndex: 46294
+	{
+		// Constructors
+		public NativeDisableParallelForRestrictionAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[UsedByNativeCode]
+	public enum Allocator // TypeDefIndex: 46295
+	{
+		Invalid = 0,
+		None = 1,
+		Temp = 2,
+		TempJob = 3,
+		Persistent = 4,
+		AudioKernel = 5
+	}
+
+	[UsedByNativeCode]
+	internal enum LeakCategory // TypeDefIndex: 46296
+	{
+		Invalid = 0,
+		Malloc = 1,
+		TempJob = 2,
+		Persistent = 3,
+		LightProbesQuery = 4,
+		NativeTest = 5,
+		MeshDataArray = 6,
+		TransformAccessArray = 7,
+		NavMeshQuery = 8
+	}
+
+	public static class NativeLeakDetection // TypeDefIndex: 46297
+	{
+		// Fields
+		private static int s_NativeLeakDetectionMode; // 0x00
+	
+		// Methods
+		[RuntimeInitializeOnLoadMethod]
+		private static void Initialize() {} // 0x0000000189DADB8C-0x0000000189DADBC8
+	}
+
+	public enum NativeArrayOptions // TypeDefIndex: 46298
+	{
+		UninitializedMemory = 0,
+		ClearMemory = 1
+	}
+
+	[DebuggerDisplay("Length = {Length}")]
+	[DebuggerTypeProxy(typeof(NativeArrayDebugView<T>))]
+	[NativeContainer]
+	[NativeContainerSupportsDeallocateOnJobCompletion]
+	[NativeContainerSupportsDeferredConvertListToArray]
+	[NativeContainerSupportsMinMaxWriteRestriction]
+	public struct NativeArray<T> : IDisposable, IEnumerable<T>, IEquatable<NativeArray<T>> // TypeDefIndex: 46302
+		where T : struct
+	{
+		// Fields
+		[NativeDisableUnsafePtrRestriction]
+		internal unsafe void* m_Buffer;
+		internal int m_Length;
+		internal Unity.Collections.Allocator m_AllocatorLabel;
+	
+		// Properties
+		public int Length { get => default; }
+		public T this[int index] { get => default; [WriteAccessRequired] set {} }
+		public bool IsCreated { get => default; }
+	
+		// Nested types
+		[ExcludeFromDocs]
+		public struct Enumerator : IEnumerator<T> // TypeDefIndex: 46299
+		{
+			// Fields
+			private NativeArray<T> m_Array;
+			private int m_Index;
+			private T value;
+	
+			// Properties
+			public T Current { get => default; }
+			object IEnumerator.Current { get => default; }
+	
+			// Constructors
+			public Enumerator(ref NativeArray<T> array) : this() {
+				m_Array = default;
+				m_Index = default;
+				value = default;
+			}
+	
+			// Methods
+			public void Dispose() {}
+			public bool MoveNext() => default;
+			public void Reset() {}
+		}
+	
+		[DebuggerDisplay("Length = {Length}")]
+		[DebuggerTypeProxy(typeof(NativeArrayReadOnlyDebugView<T>))]
+		[NativeContainer]
+		[NativeContainerIsReadOnly]
+		public struct ReadOnly : IEnumerable<T> // TypeDefIndex: 46301
+		{
+			// Fields
+			[NativeDisableUnsafePtrRestriction]
+			internal unsafe void* m_Buffer;
+			internal int m_Length;
+	
+			// Properties
+			public T this[int index] { get => default; }
+	
+			// Nested types
+			[ExcludeFromDocs]
+			public struct Enumerator : IEnumerator<T> // TypeDefIndex: 46300
+			{
+				// Fields
+				private ReadOnly<T> m_Array;
+				private int m_Index;
+				private T value;
+	
+				// Properties
+				public T Current { get => default; }
+				object IEnumerator.Current { get => default; }
+	
+				// Constructors
+				public Enumerator([IsReadOnly] in ReadOnly<T> array) : this() {
+					m_Array = default;
+					m_Index = default;
+					value = default;
+				}
+	
+				// Methods
+				public void Dispose() {}
+				public bool MoveNext() => default;
+				public void Reset() {}
+			}
+	
+			// Constructors
+			internal unsafe ReadOnly(void* buffer, int length) : this() {
+				m_Buffer = default;
+				m_Length = default;
+			}
+	
+			// Methods
+			public Enumerator GetEnumerator() => default;
+			IEnumerator<T> IEnumerable<T>.GetEnumerator() => default;
+			IEnumerator IEnumerable.GetEnumerator() => default;
+		}
+	
+		// Constructors
+		public unsafe NativeArray(int length, Unity.Collections.Allocator allocator, NativeArrayOptions options = NativeArrayOptions.ClearMemory /* Metadata: 0x01FBAC4F */) : this() {
+			m_Buffer = default;
+			m_Length = default;
+			m_AllocatorLabel = default;
+		}
+		public unsafe NativeArray(T[] array, Unity.Collections.Allocator allocator) : this() {
+			m_Buffer = default;
+			m_Length = default;
+			m_AllocatorLabel = default;
+		}
+		public unsafe NativeArray(NativeArray<T> array, Unity.Collections.Allocator allocator) : this() {
+			m_Buffer = default;
+			m_Length = default;
+			m_AllocatorLabel = default;
+		}
+	
+		// Methods
+		private static void Allocate(int length, Unity.Collections.Allocator allocator, out NativeArray<T> array) {
+			array = default;
+		}
+		[WriteAccessRequired]
+		public void Dispose() {}
+		public JobHandle Dispose(JobHandle inputDeps) => default;
+		[WriteAccessRequired]
+		public void CopyFrom(T[] array) {}
+		[WriteAccessRequired]
+		public void CopyFrom(NativeArray<T> array) {}
+		public T[] ToArray() => default;
+		public Enumerator GetEnumerator() => default;
+		IEnumerator<T> IEnumerable<T>.GetEnumerator() => default;
+		IEnumerator IEnumerable.GetEnumerator() => default;
+		public bool Equals(NativeArray<T> other) => default;
+		public override bool Equals(object obj) => default;
+		public override int GetHashCode() => default;
+		public static void Copy(NativeArray<T> src, NativeArray<T> dst) {}
+		public static void Copy(T[] src, NativeArray<T> dst) {}
+		public static void Copy(NativeArray<T> src, T[] dst) {}
+		public static void Copy(NativeArray<T> src, NativeArray<T> dst, int length) {}
+		public static void Copy(NativeArray<T> src, T[] dst, int length) {}
+		public static void Copy(NativeArray<T> src, int srcIndex, NativeArray<T> dst, int dstIndex, int length) {}
+		public static void Copy(T[] src, int srcIndex, NativeArray<T> dst, int dstIndex, int length) {}
+		public static void Copy(NativeArray<T> src, int srcIndex, T[] dst, int dstIndex, int length) {}
+		public void ReinterpretStore<U>(int destIndex, U data)
+			where U : struct {}
+		private NativeArray<U> InternalReinterpret<U>(int length)
+			where U : struct => default;
+		public NativeArray<U> Reinterpret<U>()
+			where U : struct => default;
+		public NativeArray<T> GetSubArray(int start, int length) => default;
+		public ReadOnly AsReadOnly() => default;
+	}
+
+	[NativeContainer]
+	internal struct NativeArrayDispose // TypeDefIndex: 46303
+	{
+		// Fields
+		[NativeDisableUnsafePtrRestriction]
+		internal unsafe void* m_Buffer; // 0x00
+		internal Unity.Collections.Allocator m_AllocatorLabel; // 0x08
+	
+		// Methods
+		public void Dispose() {} // 0x00000001842760D8-0x00000001842760E8
+	}
+
+	internal struct NativeArrayDisposeJob : IJob // TypeDefIndex: 46304
+	{
+		// Fields
+		internal NativeArrayDispose Data; // 0x00
+	
+		// Methods
+		public void Execute() {} // 0x000000018331A2D0-0x000000018331A310
+	}
+
+	internal sealed class NativeArrayDebugView<T> // TypeDefIndex: 46305
+		where T : struct
+	{
+		// Constructors
+		public NativeArrayDebugView() {} // Dummy constructor
+	}
+
+	internal sealed class NativeArrayReadOnlyDebugView<T> // TypeDefIndex: 46306
+		where T : struct
+	{
+		// Constructors
+		public NativeArrayReadOnlyDebugView() {} // Dummy constructor
+	}
+
+	public static class NativeSliceExtensions // TypeDefIndex: 46307
+	{
+		// Extension methods
+		public static NativeSlice<T> Slice<T>(this NativeArray<T> thisArray, int start, int length)
+			where T : struct => default;
+		public static NativeSlice<T> Slice<T>(this NativeSlice<T> thisSlice, int start, int length)
+			where T : struct => default;
+	}
+
+	[DebuggerDisplay("Length = {Length}")]
+	[DebuggerTypeProxy(typeof(NativeSliceDebugView<T>))]
+	[NativeContainer]
+	[NativeContainerSupportsMinMaxWriteRestriction]
+	public struct NativeSlice<T> : IEnumerable<T>, IEquatable<NativeSlice<T>> // TypeDefIndex: 46309
+		where T : struct
+	{
+		// Fields
+		[NativeDisableUnsafePtrRestriction]
+		internal unsafe byte* m_Buffer;
+		internal int m_Stride;
+		internal int m_Length;
+	
+		// Properties
+		public T this[int index] { get => default; [WriteAccessRequired] set {} }
+		public int Stride { get => default; }
+		public int Length { get => default; }
+	
+		// Nested types
+		[ExcludeFromDocs]
+		public struct Enumerator : IEnumerator<T> // TypeDefIndex: 46308
+		{
+			// Fields
+			private NativeSlice<T> m_Array;
+			private int m_Index;
+	
+			// Properties
+			public T Current { get => default; }
+			object IEnumerator.Current { get => default; }
+	
+			// Constructors
+			public Enumerator(ref NativeSlice<T> array) : this() {
+				m_Array = default;
+				m_Index = default;
+			}
+	
+			// Methods
+			public void Dispose() {}
+			public bool MoveNext() => default;
+			public void Reset() {}
+		}
+	
+		// Constructors
+		public unsafe NativeSlice(NativeSlice<T> slice, int start, int length) : this() {
+			m_Buffer = default;
+			m_Stride = default;
+			m_Length = default;
+		}
+		public unsafe NativeSlice(NativeArray<T> array) : this() {
+			m_Buffer = default;
+			m_Stride = default;
+			m_Length = default;
+		}
+		public unsafe NativeSlice(NativeArray<T> array, int start, int length) : this() {
+			m_Buffer = default;
+			m_Stride = default;
+			m_Length = default;
+		}
+	
+		// Methods
+		public static implicit operator NativeSlice<T>(NativeArray<T> array) => default;
+		public NativeSlice<U> SliceConvert<U>()
+			where U : struct => default;
+		[WriteAccessRequired]
+		public void CopyFrom(NativeSlice<T> slice) {}
+		[WriteAccessRequired]
+		public void CopyFrom(T[] array) {}
+		public void CopyTo(NativeArray<T> array) {}
+		public void CopyTo(T[] array) {}
+		public Enumerator GetEnumerator() => default;
+		IEnumerator<T> IEnumerable<T>.GetEnumerator() => default;
+		IEnumerator IEnumerable.GetEnumerator() => default;
+		public bool Equals(NativeSlice<T> other) => default;
+		public override bool Equals(object obj) => default;
+		public override int GetHashCode() => default;
+		public static bool operator !=(NativeSlice<T> left, NativeSlice<T> right) => default;
+	}
+
+	internal sealed class NativeSliceDebugView<T> // TypeDefIndex: 46310
+		where T : struct
+	{
+		// Constructors
+		public NativeSliceDebugView() {} // Dummy constructor
+	}
+}
+
+namespace Unity.Collections.LowLevel.Unsafe
+{
+	[NativeHeader("Runtime/Export/BurstLike/BurstLike.bindings.h")]
+	[StaticAccessor("BurstLike", StaticAccessorType.DoubleColon)]
+	internal static class BurstLike // TypeDefIndex: 46313
+	{
+		// Nested types
+		[IsReadOnly]
+		internal struct SharedStatic<T> // TypeDefIndex: 46311
+			where T : struct
+		{
+			// Fields
+			private readonly unsafe void* _buffer;
+	
+			// Properties
+			public ref T Data { get => default; }
+	
+			// Constructors
+			private unsafe SharedStatic(void* buffer) : this() {
+				_buffer = default;
+			}
+	
+			// Methods
+			public static SharedStatic<T> GetOrCreate<TContext>(uint alignment = 0 /* Metadata: 0x01FBAC50 */) => default;
+		}
+	
+		internal static class SharedStatic // TypeDefIndex: 46312
+		{
+			// Methods
+			public static unsafe void* GetOrCreateSharedStaticInternal(long getHashCode64, long getSubHashCode64, uint sizeOf, uint alignment) => default; // 0x000000018338D1B0-0x000000018338D1F0
+		}
+	}
+
+	internal static class BurstRuntime // TypeDefIndex: 46315
+	{
+		// Nested types
+		private struct HashCode64<T> // TypeDefIndex: 46314
+		{
+			// Fields
+			public static readonly long Value;
+	
+			// Constructors
+			static HashCode64() {
+				Value = default;
+			}
+		}
+	
+		// Methods
+		public static long GetHashCode64<T>() => default;
+		internal static long HashStringWithFNV1A64(string text) => default; // 0x0000000182DCD400-0x0000000182DCD480
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	[RequiredByNativeCode]
+	public sealed class NativeContainerAttribute : Attribute // TypeDefIndex: 46316
+	{
+		// Constructors
+		public NativeContainerAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	[RequiredByNativeCode]
+	public sealed class NativeContainerIsReadOnlyAttribute : Attribute // TypeDefIndex: 46317
+	{
+		// Constructors
+		public NativeContainerIsReadOnlyAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	[RequiredByNativeCode]
+	public sealed class NativeContainerIsAtomicWriteOnlyAttribute : Attribute // TypeDefIndex: 46318
+	{
+		// Constructors
+		public NativeContainerIsAtomicWriteOnlyAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	[RequiredByNativeCode]
+	public sealed class NativeContainerSupportsMinMaxWriteRestrictionAttribute : Attribute // TypeDefIndex: 46319
+	{
+		// Constructors
+		public NativeContainerSupportsMinMaxWriteRestrictionAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	[RequiredByNativeCode]
+	public sealed class NativeContainerSupportsDeallocateOnJobCompletionAttribute : Attribute // TypeDefIndex: 46320
+	{
+		// Constructors
+		public NativeContainerSupportsDeallocateOnJobCompletionAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	[RequiredByNativeCode]
+	public sealed class NativeContainerSupportsDeferredConvertListToArray : Attribute // TypeDefIndex: 46321
+	{
+		// Constructors
+		public NativeContainerSupportsDeferredConvertListToArray() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	[RequiredByNativeCode]
+	public sealed class NativeSetThreadIndexAttribute : Attribute // TypeDefIndex: 46322
+	{
+		// Constructors
+		public NativeSetThreadIndexAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	[Obsolete("Use NativeSetThreadIndexAttribute instead")]
+	[RequiredByNativeCode]
+	public sealed class NativeContainerNeedsThreadIndexAttribute : Attribute // TypeDefIndex: 46323
+	{
+		// Constructors
+		public NativeContainerNeedsThreadIndexAttribute() {} // Dummy constructor
+	}
+
+	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property)]
+	public class WriteAccessRequiredAttribute : Attribute // TypeDefIndex: 46324
+	{
+		// Constructors
+		public WriteAccessRequiredAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	[RequiredByNativeCode]
+	public sealed class NativeDisableUnsafePtrRestrictionAttribute : Attribute // TypeDefIndex: 46325
+	{
+		// Constructors
+		public NativeDisableUnsafePtrRestrictionAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	[RequiredByNativeCode]
+	public sealed class NativeDisableContainerSafetyRestrictionAttribute : Attribute // TypeDefIndex: 46326
+	{
+		// Constructors
+		public NativeDisableContainerSafetyRestrictionAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	[RequiredByNativeCode]
+	public sealed class NativeSetClassTypeToNullOnScheduleAttribute : Attribute // TypeDefIndex: 46327
+	{
+		// Constructors
+		public NativeSetClassTypeToNullOnScheduleAttribute() {} // Dummy constructor
+	}
+
+	public static class NativeArrayUnsafeUtility // TypeDefIndex: 46328
+	{
+		// Methods
+		public static unsafe NativeArray<T> ConvertExistingDataToNativeArray<T>(void* dataPointer, int length, Unity.Collections.Allocator allocator)
+			where T : struct => default;
+		public static unsafe void* GetUnsafeBufferPointerWithoutChecks<T>(NativeArray<T> nativeArray)
+			where T : struct => default;
+	
+		// Extension methods
+		public static unsafe void* GetUnsafePtr<T>(this NativeArray<T> nativeArray)
+			where T : struct => default;
+		public static unsafe void* GetUnsafeReadOnlyPtr<T>(this NativeArray<T> nativeArray)
+			where T : struct => default;
+	}
+
+	public static class NativeSliceUnsafeUtility // TypeDefIndex: 46329
+	{
+		// Methods
+		public static unsafe NativeSlice<T> ConvertExistingDataToNativeSlice<T>(void* dataPointer, int stride, int length)
+			where T : struct => default;
+	
+		// Extension methods
+		public static unsafe void* GetUnsafePtr<T>(this NativeSlice<T> nativeSlice)
+			where T : struct => default;
+		public static unsafe void* GetUnsafeReadOnlyPtr<T>(this NativeSlice<T> nativeSlice)
+			where T : struct => default;
+	}
+
+	[NativeHeader("Runtime/Export/Unsafe/UnsafeUtility.bindings.h")]
+	[StaticAccessor("UnsafeUtility", StaticAccessorType.DoubleColon)]
+	public static class UnsafeUtility // TypeDefIndex: 46332
+	{
+		// Nested types
+		internal struct IsUnmanagedCache<T> // TypeDefIndex: 46330
+		{
+			// Fields
+			internal static int value;
+		}
+	
+		private struct AlignOfHelper<T> // TypeDefIndex: 46331
+			where T : struct
+		{
+			// Fields
+			public byte dummy;
+			public T data;
+		}
+	
+		// Methods
+		[ThreadSafe]
+		private static int GetFieldOffsetInStruct(System.Reflection.FieldInfo field) => default; // 0x00000001824D9170-0x00000001824D91B0
+		[ThreadSafe]
+		private static int GetFieldOffsetInClass(System.Reflection.FieldInfo field) => default; // 0x00000001824D94B0-0x00000001824D94F0
+		public static int GetFieldOffset(System.Reflection.FieldInfo field) => default; // 0x00000001824D93D0-0x00000001824D94B0
+		public static unsafe void* PinGCObjectAndGetAddress(object target, out ulong gcHandle) {
+			gcHandle = default;
+			return default;
+		} // 0x0000000184270FF8-0x0000000184271004
+		public static unsafe void* PinGCArrayAndGetDataAddress(Array target, out ulong gcHandle) {
+			gcHandle = default;
+			return default;
+		} // 0x0000000189DB20DC-0x0000000189DB20E8
+		[ThreadSafe]
+		private static unsafe void* PinSystemArrayAndGetAddress(object target, out ulong gcHandle) {
+			gcHandle = default;
+			return default;
+		} // 0x0000000189DB20E8-0x0000000189DB212C
+		[ThreadSafe]
+		private static unsafe void* PinSystemObjectAndGetAddress(object target, out ulong gcHandle) {
+			gcHandle = default;
+			return default;
+		} // 0x0000000183213F10-0x0000000183213F60
+		[ThreadSafe]
+		public static void ReleaseGCObject(ulong gcHandle) {} // 0x00000001830CE280-0x00000001830CE2C0
+		public static bool IsBlittable<T>()
+			where T : struct => default;
+		[BurstAuthorizedExternalMethod]
+		[ThreadSafe(ThrowsException = false)]
+		internal static int LeakRecord(IntPtr handle, LeakCategory category, int callstacksToSkip) => default; // 0x000000018307F3C0-0x000000018307F420
+		[BurstAuthorizedExternalMethod]
+		[ThreadSafe(ThrowsException = false)]
+		internal static int LeakErase(IntPtr handle, LeakCategory category) => default; // 0x0000000183334C00-0x0000000183334C50
+		[ThreadSafe(ThrowsException = true)]
+		public static unsafe void* MallocTracked(long size, int alignment, Unity.Collections.Allocator allocator, int callstacksToSkip) => default; // 0x00000001826EA1B0-0x00000001826EA220
+		[ThreadSafe(ThrowsException = true)]
+		public static unsafe void FreeTracked(void* memory, Unity.Collections.Allocator allocator) {} // 0x0000000182CFE570-0x0000000182CFE5C0
+		[ThreadSafe(ThrowsException = true)]
+		public static unsafe void* Malloc(long size, int alignment, Unity.Collections.Allocator allocator) => default; // 0x0000000182419E10-0x0000000182419E70
+		[ThreadSafe(ThrowsException = true)]
+		public static unsafe void Free(void* memory, Unity.Collections.Allocator allocator) {} // 0x0000000182988B50-0x0000000182988BA0
+		[ThreadSafe(ThrowsException = true)]
+		public static unsafe void MemCpy(void* destination, void* source, long size) {} // 0x00000001823A6870-0x00000001823A68D0
+		[ThreadSafe(ThrowsException = true)]
+		public static unsafe void MemCpyStride(void* destination, int destinationStride, void* source, int sourceStride, int elementSize, int count) {} // 0x0000000182BB9FA0-0x0000000182BBA010
+		[ThreadSafe(ThrowsException = true)]
+		public static unsafe void MemMove(void* destination, void* source, long size) {} // 0x0000000189DB2088-0x0000000189DB20DC
+		[ThreadSafe(ThrowsException = true)]
+		public static unsafe void MemSet(void* destination, byte value, long size) {} // 0x0000000182514D20-0x0000000182514D80
+		public static unsafe void MemClear(void* destination, long size) {} // 0x0000000184271460-0x0000000184271470
+		[ThreadSafe(ThrowsException = true)]
+		public static unsafe int MemCmp(void* ptr1, void* ptr2, long size) => default; // 0x00000001822BB720-0x00000001822BB820
+		[ThreadSafe]
+		public static int SizeOf(System.Type type) => default; // 0x00000001824D7C60-0x00000001824D7CA0
+		[ThreadSafe]
+		public static bool IsBlittable(System.Type type) => default; // 0x0000000189DB2054-0x0000000189DB2088
+		[ThreadSafe]
+		public static bool IsUnmanaged(System.Type type) => default; // 0x00000001824D9390-0x00000001824D93D0
+		private static bool IsBlittableValueType(System.Type t) => default; // 0x0000000189DB2014-0x0000000189DB2054
+		private static string GetReasonForTypeNonBlittableImpl(System.Type t, string name) => default; // 0x0000000189DB1E4C-0x0000000189DB1FD8
+		internal static bool IsArrayBlittable(Array arr) => default; // 0x0000000189DB1FD8-0x0000000189DB2014
+		internal static bool IsGenericListBlittable<T>()
+			where T : struct => default;
+		internal static string GetReasonForArrayNonBlittable(Array arr) => default; // 0x0000000189DB1DF8-0x0000000189DB1E4C
+		internal static string GetReasonForGenericListNonBlittable<T>()
+			where T : struct => default;
+		public static bool IsUnmanaged<T>() => default;
+		public static int AlignOf<T>()
+			where T : struct => default;
+		public static unsafe void CopyPtrToStructure<T>(void* ptr, out ref T output)
+			where T : struct {
+			output = default;
+		}
+		private static unsafe void InternalCopyPtrToStructure<T>(void* ptr, out ref T output)
+			where T : struct {
+			output = default;
+		}
+		public static unsafe void CopyStructureToPtr<T>(ref ref T input, void* ptr)
+			where T : struct {}
+		private static unsafe void InternalCopyStructureToPtr<T>(ref ref T input, void* ptr)
+			where T : struct {}
+		public static unsafe T ReadArrayElement<T>(void* source, int index) => default;
+		public static unsafe T ReadArrayElementWithStride<T>(void* source, int index, int stride) => default;
+		public static unsafe void WriteArrayElement<T>(void* destination, int index, T value) {}
+		public static unsafe void WriteArrayElementWithStride<T>(void* destination, int index, int stride, T value) {}
+		public static unsafe void* AddressOf<T>(ref ref T output)
+			where T : struct => default;
+		public static int SizeOf<T>()
+			where T : struct => default;
+		public static ref ref T As<U, T>(ref ref U from) => ref _refReturnTypeForAs;
+		private ref T _refReturnTypeForAs; // Dummy field
+		public static unsafe ref ref T AsRef<T>(void* ptr)
+			where T : struct => ref _refReturnTypeForAsRef;
+		private ref T _refReturnTypeForAsRef; // Dummy field
+		public static unsafe ref ref T ArrayElementAsRef<T>(void* ptr, int index)
+			where T : struct => ref _refReturnTypeForArrayElementAsRef;
+		private ref T _refReturnTypeForArrayElementAsRef; // Dummy field
+		public static int EnumToInt<T>(T enumValue)
+			where T : struct, IConvertible => default;
+		private static void InternalEnumToInt<T>(ref ref T enumValue, ref int intValue) {}
+		public static bool EnumEquals<T>(T lhs, T rhs)
+			where T : struct, IConvertible => default;
+	}
+}
+
+namespace Unity.IL2CPP.CompilerServices
+{
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, Inherited = false, AllowMultiple = false)]
+	internal class Il2CppEagerStaticClassConstructionAttribute : Attribute // TypeDefIndex: 46277
+	{
+		// Constructors
+		public Il2CppEagerStaticClassConstructionAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+}
+
+namespace Unity.IO.LowLevel.Unsafe
+{
+	public struct ReadCommand // TypeDefIndex: 46278
+	{
+		// Fields
+		public unsafe void* Buffer; // 0x00
+		public long Offset; // 0x08
+		public long Size; // 0x10
+	}
+
+	[RequiredByNativeCode]
+	public enum FileState // TypeDefIndex: 46279
+	{
+		Absent = 0,
+		Exists = 1
+	}
+
+	public enum AssetLoadingSubsystem // TypeDefIndex: 46280
+	{
+		Other = 0,
+		Texture = 1,
+		VirtualTexture = 2,
+		Mesh = 3,
+		Audio = 4,
+		Scripts = 5,
+		EntitiesScene = 6,
+		EntitiesStreamBinaryReader = 7,
+		FileInfo = 8
+	}
+
+	public enum ReadStatus // TypeDefIndex: 46281
+	{
+		Complete = 0,
+		InProgress = 1,
+		Failed = 2,
+		Truncated = 4,
+		Canceled = 5
+	}
+
+	[RequiredByNativeCode]
+	public enum Priority // TypeDefIndex: 46282
+	{
+		PriorityLow = 0,
+		PriorityHigh = 1
+	}
+
+	public struct ReadHandle : IDisposable // TypeDefIndex: 46283
+	{
+		// Fields
+		[NativeDisableUnsafePtrRestriction]
+		internal IntPtr ptr; // 0x00
+		internal int version; // 0x08
+	
+		// Properties
+		public JobHandle JobHandle { get => default; } // 0x0000000182988BA0-0x0000000182988C40 
+		public ReadStatus Status { get => default; } // 0x0000000182988FD0-0x0000000182989060 
+	
+		// Methods
+		public bool IsValid() => default; // 0x00000001842721E0-0x0000000184272200
+		public void Dispose() {} // 0x00000001829889F0-0x0000000182988A80
+		[FreeFunction("AsyncReadManagerManaged::GetReadStatus", IsThreadSafe = true)]
+		[ThreadAndSerializationSafe]
+		private static ReadStatus GetReadStatus(ReadHandle handle) => default; // 0x00000001842721B0-0x00000001842721C0
+		[FreeFunction("AsyncReadManagerManaged::ReleaseReadHandle", IsThreadSafe = true)]
+		[ThreadAndSerializationSafe]
+		private static void ReleaseReadHandle(ReadHandle handle) {} // 0x00000001842721D0-0x00000001842721E0
+		[FreeFunction("AsyncReadManagerManaged::IsReadHandleValid", IsThreadSafe = true)]
+		[ThreadAndSerializationSafe]
+		private static bool IsReadHandleValid(ReadHandle handle) => default; // 0x00000001842721C0-0x00000001842721D0
+		[FreeFunction("AsyncReadManagerManaged::GetJobHandle", IsThreadSafe = true)]
+		[ThreadAndSerializationSafe]
+		private static JobHandle GetJobHandle(ReadHandle handle) => default; // 0x0000000182988C40-0x0000000182988CA0
+		private static ReadStatus GetReadStatus_Injected(ref ReadHandle handle) => default; // 0x000000018322EAB0-0x000000018322EAF0
+		private static void ReleaseReadHandle_Injected(ref ReadHandle handle) {} // 0x0000000183405ED0-0x0000000183405F10
+		private static bool IsReadHandleValid_Injected(ref ReadHandle handle) => default; // 0x0000000183109F80-0x0000000183109FC0
+		private static void GetJobHandle_Injected(ref ReadHandle handle, out JobHandle ret) {
+			ret = default;
+		} // 0x0000000182988CA0-0x0000000182988CF0
+	}
+
+	[NativeHeader("Runtime/File/AsyncReadManagerManagedApi.h")]
+	public static class AsyncReadManager // TypeDefIndex: 46284
+	{
+		// Methods
+		[FreeFunction("AsyncReadManagerManaged::Read", IsThreadSafe = true)]
+		[ThreadAndSerializationSafe]
+		private static unsafe ReadHandle ReadInternal(string filename, void* cmds, uint cmdCount, string assetName, ulong typeID, AssetLoadingSubsystem subsystem) => default; // 0x000000018298A090-0x000000018298A130
+		public static unsafe ReadHandle Read(string filename, ReadCommand* readCmds, uint readCmdCount, string assetName = "" /* Metadata: 0x01FBAC2C */, ulong typeID = 0 /* Metadata: 0x01FBAC2D */, AssetLoadingSubsystem subsystem = AssetLoadingSubsystem.Scripts /* Metadata: 0x01FBAC35 */) => default; // 0x0000000182989FE0-0x000000018298A090
+		private static unsafe void ReadInternal_Injected(string filename, void* cmds, uint cmdCount, string assetName, ulong typeID, AssetLoadingSubsystem subsystem, out ReadHandle ret) {
+			ret = default;
+		} // 0x000000018298A130-0x000000018298A1A0
+	}
+
+	[NativeHeader("Runtime/File/AsyncReadManagerMetrics.h")]
+	public enum ProcessingState // TypeDefIndex: 46285
+	{
+		Unknown = 0,
+		InQueue = 1,
+		Reading = 2,
+		Completed = 3,
+		Failed = 4,
+		Canceled = 5
+	}
+
+	public enum FileReadType // TypeDefIndex: 46286
+	{
+		Sync = 0,
+		Async = 1
+	}
+
+	[NativeConditional("ENABLE_PROFILER")]
+	[RequiredByNativeCode]
+	public struct AsyncReadManagerRequestMetric // TypeDefIndex: 46287
+	{
+	}
+
+	[NativeAsStruct]
+	[NativeConditional("ENABLE_PROFILER")]
+	[RequiredByNativeCode]
+	public class AsyncReadManagerMetricsFilters // TypeDefIndex: 46288
+	{
+		// Fields
+		[NativeName("typeIDs")]
+		internal ulong[] TypeIDs; // 0x10
+		[NativeName("states")]
+		internal ProcessingState[] States; // 0x18
+		[NativeName("readTypes")]
+		internal FileReadType[] ReadTypes; // 0x20
+		[NativeName("priorityLevels")]
+		internal Priority[] PriorityLevels; // 0x28
+		[NativeName("subsystems")]
+		internal AssetLoadingSubsystem[] Subsystems; // 0x30
+	
+		// Constructors
+		public AsyncReadManagerMetricsFilters() {} // Dummy constructor
+	}
+}
+
+namespace Unity.Jobs
+{
+	[JobProducerType(typeof(IJobExtensions.JobStruct<T>))]
+	public interface IJob // TypeDefIndex: 46255
+	{
+		// Methods
+		void Execute();
+	}
+
+	public static class IJobExtensions // TypeDefIndex: 46258
+	{
+		// Nested types
+		internal struct JobStruct<T> // TypeDefIndex: 46257
+			where T : struct, IJob
+		{
+			// Fields
+			internal static readonly BurstLike.SharedStatic<IntPtr> jobReflectionData;
+	
+			// Nested types
+			internal delegate void ExecuteJobFunction(ref ref T data, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 46256; 0x00000000-0x00000000
+	
+			// Constructors
+			static JobStruct() {
+				jobReflectionData = default;
+			}
+	
+			// Methods
+			[BurstDiscard]
+			internal static void Initialize() {}
+			public static void Execute(ref ref T data, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex) {}
+		}
+	
+		// Methods
+		public static void EarlyJobInit<T>()
+			where T : struct, IJob {}
+		private static IntPtr GetReflectionData<T>()
+			where T : struct, IJob => default;
+	
+		// Extension methods
+		public static JobHandle Schedule<T>(this T jobData, JobHandle dependsOn = default)
+			where T : struct, IJob => default;
+		public static void Run<T>(this T jobData)
+			where T : struct, IJob {}
+		public static JobHandle ScheduleManagedCrossFrameJob<T>(this T jobData, JobQueuePriority priority, JobHandle dependsOn = default)
+			where T : struct, IJob => default;
+	}
+
+	[JobProducerType(typeof(IJobForExtensions.ForJobStruct<T>))]
+	public interface IJobFor // TypeDefIndex: 46259
+	{
+		// Methods
+		void Execute(int index);
+	}
+
+	public static class IJobForExtensions // TypeDefIndex: 46262
+	{
+		// Nested types
+		internal struct ForJobStruct<T> // TypeDefIndex: 46261
+			where T : struct, IJobFor
+		{
+			// Fields
+			internal static readonly BurstLike.SharedStatic<IntPtr> jobReflectionData;
+	
+			// Nested types
+			public delegate void ExecuteJobFunction(ref ref T data, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 46260; 0x00000000-0x00000000
+	
+			// Constructors
+			static ForJobStruct() {
+				jobReflectionData = default;
+			}
+	
+			// Methods
+			[BurstDiscard]
+			internal static void Initialize() {}
+			public static void Execute(ref ref T jobData, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex) {}
+		}
+	
+		// Methods
+		public static void EarlyJobInit<T>()
+			where T : struct, IJobFor {}
+		private static IntPtr GetReflectionData<T>()
+			where T : struct, IJobFor => default;
+	
+		// Extension methods
+		public static JobHandle ScheduleParallel<T>(this T jobData, int arrayLength, int innerloopBatchCount, JobHandle dependency)
+			where T : struct, IJobFor => default;
+	}
+
+	[JobProducerType(typeof(IJobParallelForExtensions.ParallelForJobStruct<T>))]
+	public interface IJobParallelFor // TypeDefIndex: 46263
+	{
+		// Methods
+		void Execute(int index);
+	}
+
+	public static class IJobParallelForExtensions // TypeDefIndex: 46266
+	{
+		// Nested types
+		internal struct ParallelForJobStruct<T> // TypeDefIndex: 46265
+			where T : struct, IJobParallelFor
+		{
+			// Fields
+			public static readonly IntPtr jobReflectionData;
+	
+			// Nested types
+			public delegate void ExecuteJobFunction(ref ref T data, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 46264; 0x00000000-0x00000000
+	
+			// Constructors
+			static ParallelForJobStruct() {
+				jobReflectionData = default;
+			}
+	
+			// Methods
+			public static void Execute(ref ref T jobData, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex) {}
+		}
+	
+		// Extension methods
+		public static JobHandle Schedule<T>(this T jobData, int arrayLength, int innerloopBatchCount, JobHandle dependsOn = default)
+			where T : struct, IJobParallelFor => default;
+		public static void Run<T>(this T jobData, int arrayLength)
+			where T : struct, IJobParallelFor {}
+	}
+
+	[NativeType(Header = "Runtime/Jobs/ScriptBindings/JobsBindings.h")]
+	public struct JobHandle : IEquatable<JobHandle> // TypeDefIndex: 46267
+	{
+		// Fields
+		internal ulong jobGroup; // 0x00
+		internal int jobType; // 0x08
+	
+		// Properties
+		public bool IsCompleted { get => default; } // 0x0000000184271470-0x000000018427147C 
+	
+		// Methods
+		public void Complete() {} // 0x0000000182312970-0x00000001823129C0
+		public void CrossFrameComplete() {} // 0x00000001827B28A0-0x00000001827B28E0
+		public bool IsValid() => default; // 0x0000000182986C10-0x0000000182986C20
+		public static void CompleteAll(NativeArray<JobHandle> jobs) {} // 0x00000001823112E0-0x0000000182311320
+		[NativeMethod("ScheduleBatchedScriptingJobs", IsFreeFunction = true, IsThreadSafe = true)]
+		public static void ScheduleBatchedJobs() {} // 0x0000000182311190-0x00000001823111D0
+		[NativeMethod("ScheduleBatchedScriptingJobsAndComplete", IsFreeFunction = true, IsThreadSafe = true, ThrowsException = true)]
+		private static void ScheduleBatchedJobsAndComplete(ref JobHandle job) {} // 0x00000001823129C0-0x0000000182312A00
+		[NativeMethod("ScheduleBatchedCrossFrameJobsAndComplete", IsFreeFunction = true, IsThreadSafe = true, ThrowsException = true)]
+		private static void ScheduleBatchedCrossFrameJobsAndComplete(ref JobHandle job) {} // 0x00000001830FE4B0-0x00000001830FE4F0
+		[NativeMethod("ScheduleBatchedScriptingJobsAndIsCompleted", IsFreeFunction = true, IsThreadSafe = true, ThrowsException = true)]
+		private static bool ScheduleBatchedJobsAndIsCompleted(ref JobHandle job) => default; // 0x00000001831C12C0-0x00000001831C1300
+		[NativeMethod("ScheduleBatchedScriptingJobsAndCompleteAll", IsFreeFunction = true, IsThreadSafe = true, ThrowsException = true)]
+		private static unsafe void ScheduleBatchedJobsAndCompleteAll(void* jobs, int count) {} // 0x0000000182311320-0x0000000182311370
+		public static JobHandle CombineDependencies(JobHandle job0, JobHandle job1) => default; // 0x0000000182BC0BD0-0x0000000182BC0C50
+		public static JobHandle CombineDependencies(JobHandle job0, JobHandle job1, JobHandle job2) => default; // 0x0000000182BBEDA0-0x0000000182BBEE30
+		public static JobHandle CombineDependencies(NativeArray<JobHandle> jobs) => default; // 0x0000000182F53460-0x0000000182F534F0
+		[NativeMethod(IsFreeFunction = true, IsThreadSafe = true, ThrowsException = true)]
+		private static JobHandle CombineDependenciesInternal2(ref JobHandle job0, ref JobHandle job1) => default; // 0x0000000182BC0C50-0x0000000182BC0CC0
+		[NativeMethod(IsFreeFunction = true, IsThreadSafe = true, ThrowsException = true)]
+		private static JobHandle CombineDependenciesInternal3(ref JobHandle job0, ref JobHandle job1, ref JobHandle job2) => default; // 0x0000000182BBEE30-0x0000000182BBEEB0
+		[NativeMethod(IsFreeFunction = true, IsThreadSafe = true, ThrowsException = true)]
+		internal static unsafe JobHandle CombineDependenciesInternalPtr(void* jobs, int count) => default; // 0x0000000182F534F0-0x0000000182F53560
+		public bool Equals(JobHandle other) => default; // 0x0000000185F1D294-0x0000000185F1D2A0
+		private static void CombineDependenciesInternal2_Injected(ref JobHandle job0, ref JobHandle job1, out JobHandle ret) {
+			ret = default;
+		} // 0x0000000182BC0CC0-0x0000000182BC0D20
+		private static void CombineDependenciesInternal3_Injected(ref JobHandle job0, ref JobHandle job1, ref JobHandle job2, out JobHandle ret) {
+			ret = default;
+		} // 0x0000000182BBEEB0-0x0000000182BBEF20
+		private static unsafe void CombineDependenciesInternalPtr_Injected(void* jobs, int count, out JobHandle ret) {
+			ret = default;
+		} // 0x0000000182F53560-0x0000000182F535C0
+	}
+}
+
+namespace Unity.Jobs.LowLevel.Unsafe
+{
+	public struct BatchQueryJob<CommandT, ResultT> // TypeDefIndex: 46268
+		where CommandT : struct
+		where ResultT : struct
+	{
+		// Fields
+		[Unity.Collections.ReadOnly]
+		internal NativeArray<CommandT> commands;
+		internal NativeArray<ResultT> results;
+	
+		// Constructors
+		public BatchQueryJob(NativeArray<CommandT> commands, NativeArray<ResultT> results) {
+			this.commands = default;
+			this.results = default;
+		}
+	}
+
+	public struct BatchQueryJobStruct<T> // TypeDefIndex: 46269
+		where T : struct
+	{
+		// Fields
+		internal static IntPtr jobReflectionData;
+	
+		// Methods
+		public static IntPtr Initialize() => default;
+	}
+
+	[AttributeUsage(AttributeTargets.Interface)]
+	public sealed class JobProducerTypeAttribute : Attribute // TypeDefIndex: 46270
+	{
+		// Constructors
+		public JobProducerTypeAttribute() {} // Dummy constructor
+		public JobProducerTypeAttribute(System.Type producerType) {} // 0x000000018426FEE0-0x000000018426FEF0
+	}
+
+	public struct JobRanges // TypeDefIndex: 46271
+	{
+		// Fields
+		internal int BatchSize; // 0x00
+		internal int NumJobs; // 0x04
+		public int TotalIterationCount; // 0x08
+		internal IntPtr StartEndIndex; // 0x10
+	}
+
+	public enum ScheduleMode // TypeDefIndex: 46272
+	{
+		Run = 0,
+		Batched = 1,
+		Parallel = 1,
+		Single = 2
+	}
+
+	public enum JobQueuePriority // TypeDefIndex: 46273
+	{
+		NormalJobPriority = 0,
+		HighJobPriority = 1
+	}
+
+	[NativeHeader("Runtime/Jobs/JobSystem.h")]
+	[NativeType(Header = "Runtime/Jobs/ScriptBindings/JobsBindings.h")]
+	public static class JobsUtility // TypeDefIndex: 46276
+	{
+		// Fields
+		internal static PanicFunction_ PanicFunction; // 0x00
+	
+		// Properties
+		public static bool IsExecutingJob { [NativeMethod(IsFreeFunction = true, IsThreadSafe = true)] get; } // 0x0000000189DADB60-0x0000000189DADB8C 
+		public static bool JobCompilerEnabled { get; [FreeFunction] set; } // 0x000000018397DC90-0x000000018397DCD0
+		public static int JobWorkerMaximumCount { [FreeFunction("JobSystem::GetJobQueueMaximumThreadCount")] get; } // 0x0000000183D46F90-0x0000000183D46FD0 
+		public static int JobWorkerCount { get; } // 0x0000000184271454-0x0000000184271460 
+	
+		// Nested types
+		public struct JobScheduleParameters // TypeDefIndex: 46274
+		{
+			// Fields
+			public JobHandle Dependency; // 0x00
+			public int ScheduleMode; // 0x10
+			public IntPtr ReflectionData; // 0x18
+			public IntPtr JobDataPtr; // 0x20
+	
+			// Constructors
+			public unsafe JobScheduleParameters(void* i_jobData, IntPtr i_reflectionData, JobHandle i_dependency, ScheduleMode i_scheduleMode) {
+				Dependency = default;
+				ScheduleMode = default;
+				ReflectionData = default;
+				JobDataPtr = default;
+			} // 0x0000000183D85B90-0x0000000183D85BB0
+		}
+	
+		internal delegate void PanicFunction_(); // TypeDefIndex: 46275; 0x00000001842BE03C-0x00000001842BE04C
+	
+		// Methods
+		public static void GetJobRange(ref JobRanges ranges, int jobIndex, out int beginIndex, out int endIndex) {
+			beginIndex = default;
+			endIndex = default;
+		} // 0x0000000183D85BB0-0x0000000183D85BD0
+		[NativeMethod(IsFreeFunction = true, IsThreadSafe = true)]
+		public static bool GetWorkStealingRange(ref JobRanges ranges, int jobIndex, out int beginIndex, out int endIndex) {
+			beginIndex = default;
+			endIndex = default;
+			return default;
+		} // 0x0000000182E24BD0-0x0000000182E24C40
+		[FreeFunction("ScheduleManagedJob", ThrowsException = true, IsThreadSafe = true)]
+		public static JobHandle Schedule(ref JobScheduleParameters parameters) => default; // 0x0000000182A51550-0x0000000182A515B0
+		[FreeFunction("ScheduleManagedCrossFrameJob", ThrowsException = true, IsThreadSafe = true)]
+		public static JobHandle ScheduleCrossFrameJob(ref JobScheduleParameters parameters, JobQueuePriority priority) => default; // 0x0000000182A51480-0x0000000182A514F0
+		[FreeFunction("ScheduleManagedJobCrossFrameJobTransformReadOnly", ThrowsException = true, IsThreadSafe = true)]
+		public static JobHandle ScheduleJobCrossFrameJobTransformReadOnly(ref JobScheduleParameters parameters, IntPtr transfromAccesssArray) => default; // 0x0000000189DADB30-0x0000000189DADB60
+		[FreeFunction("ScheduleManagedJobParallelFor", ThrowsException = true, IsThreadSafe = true)]
+		public static JobHandle ScheduleParallelFor(ref JobScheduleParameters parameters, int arrayLength, int innerloopBatchCount) => default; // 0x0000000182CF6640-0x0000000182CF66C0
+		[FreeFunction("ScheduleManagedJobParallelForDeferArraySize", ThrowsException = true, IsThreadSafe = true)]
+		public static unsafe JobHandle ScheduleParallelForDeferArraySize(ref JobScheduleParameters parameters, int innerloopBatchCount, void* listData, void* listDataAtomicSafetyHandle) => default; // 0x0000000182CF6730-0x0000000182CF67B0
+		[FreeFunction("ScheduleManagedJobParallelForTransform", ThrowsException = true)]
+		public static JobHandle ScheduleParallelForTransform(ref JobScheduleParameters parameters, IntPtr transfromAccesssArray) => default; // 0x0000000182DC6440-0x0000000182DC64B0
+		[FreeFunction("ScheduleManagedJobParallelForTransformReadOnly", ThrowsException = true)]
+		public static JobHandle ScheduleParallelForTransformReadOnly(ref JobScheduleParameters parameters, IntPtr transfromAccesssArray, int innerloopBatchCount) => default; // 0x0000000182DC69B0-0x0000000182DC6A30
+		[FreeFunction(ThrowsException = true, IsThreadSafe = true)]
+		private static IntPtr CreateJobReflectionData(System.Type wrapperJobType, System.Type userJobType, object managedJobFunction0, object managedJobFunction1, object managedJobFunction2) => default; // 0x00000001830C3050-0x00000001830C30C0
+		public static IntPtr CreateJobReflectionData(System.Type type, object managedJobFunction0, object managedJobFunction1 = null, object managedJobFunction2 = null) => default; // 0x00000001830C3020-0x00000001830C3050
+		public static IntPtr CreateJobReflectionData(System.Type wrapperJobType, System.Type userJobType, object managedJobFunction0) => default; // 0x0000000189DADA74-0x0000000189DADA94
+		[FreeFunction("JobSystem::GetJobQueueWorkerThreadCount")]
+		private static int GetJobQueueWorkerThreadCount() => default; // 0x0000000182FEB3B0-0x0000000182FEB3F0
+		[RequiredByNativeCode]
+		private static void InvokePanicFunction() {} // 0x0000000189DADA94-0x0000000189DADADC
+		private static void Schedule_Injected(ref JobScheduleParameters parameters, out JobHandle ret) {
+			ret = default;
+		} // 0x0000000182A515B0-0x0000000182A51600
+		private static void ScheduleCrossFrameJob_Injected(ref JobScheduleParameters parameters, JobQueuePriority priority, out JobHandle ret) {
+			ret = default;
+		} // 0x0000000182A514F0-0x0000000182A51550
+		private static void ScheduleJobCrossFrameJobTransformReadOnly_Injected(ref JobScheduleParameters parameters, IntPtr transfromAccesssArray, out JobHandle ret) {
+			ret = default;
+		} // 0x0000000189DADADC-0x0000000189DADB30
+		private static void ScheduleParallelFor_Injected(ref JobScheduleParameters parameters, int arrayLength, int innerloopBatchCount, out JobHandle ret) {
+			ret = default;
+		} // 0x0000000182CF66C0-0x0000000182CF6730
+		private static unsafe void ScheduleParallelForDeferArraySize_Injected(ref JobScheduleParameters parameters, int innerloopBatchCount, void* listData, void* listDataAtomicSafetyHandle, out JobHandle ret) {
+			ret = default;
+		} // 0x0000000182CF67B0-0x0000000182CF6820
+		private static void ScheduleParallelForTransform_Injected(ref JobScheduleParameters parameters, IntPtr transfromAccesssArray, out JobHandle ret) {
+			ret = default;
+		} // 0x0000000182DC64B0-0x0000000182DC6510
+		private static void ScheduleParallelForTransformReadOnly_Injected(ref JobScheduleParameters parameters, IntPtr transfromAccesssArray, int innerloopBatchCount, out JobHandle ret) {
+			ret = default;
+		} // 0x0000000182DC6A30-0x0000000182DC6AA0
+	}
+}
+
+namespace Unity.Profiling
+{
+	[IsReadOnly]
+	[UsedByNativeCode]
+	public struct ProfilerCategory // TypeDefIndex: 46237
+	{
+		// Fields
+		private readonly ushort m_CategoryId; // 0x00
+	
+		// Properties
+		public string Name { get => default; } // 0x0000000189DAE19C-0x0000000189DAE1E0 
+		public static ProfilerCategory Scripts { get => default; } // 0x0000000181168950-0x0000000181168960 
+		public static ProfilerCategory Audio { get => default; } // 0x0000000183D55800-0x0000000183D55810 
+	
+		// Constructors
+		internal ProfilerCategory(ushort category) : this() {
+			m_CategoryId = default;
+		} // 0x0000000183D4F9B0-0x0000000183D4F9C0
+	
+		// Methods
+		public override string ToString() => default; // 0x0000000189DAE190-0x0000000189DAE19C
+		public static implicit operator ushort(ProfilerCategory category) => default; // 0x0000000183D85D10-0x0000000183D85D20
+	}
+
+	[UsedByNativeCode]
+	public struct ProfilerMarker // TypeDefIndex: 46239
+	{
+		// Fields
+		[NonSerialized]
+		[NativeDisableUnsafePtrRestriction]
+		internal readonly IntPtr m_Ptr; // 0x00
+	
+		// Properties
+		public IntPtr Handle { get => default; } // 0x00000001820C61B0-0x00000001820C61C0 
+	
+		// Nested types
+		[UsedByNativeCode]
+		public struct AutoScope : IDisposable // TypeDefIndex: 46238
+		{
+			// Fields
+			[NativeDisableUnsafePtrRestriction]
+			internal readonly IntPtr m_Ptr; // 0x00
+	
+			// Constructors
+			internal AutoScope(IntPtr markerPtr) {
+				m_Ptr = default;
+			} // 0x0000000189D9BD1C-0x0000000189D9BD34
+	
+			// Methods
+			public void Dispose() {} // 0x0000000189D9BD08-0x0000000189D9BD1C
+		}
+	
+		// Constructors
+		public ProfilerMarker(string name) : this() {
+			m_Ptr = default;
+		} // 0x00000001842702FC-0x000000018427032C
+		public ProfilerMarker(ProfilerCategory category, string name) : this() {
+			m_Ptr = default;
+		} // 0x0000000189DAE1E0-0x0000000189DAE208
+	
+		// Methods
+		[Pure]
+		public AutoScope Auto() => default; // 0x00000001822E3A00-0x00000001822E3A30
+	}
+
+	public enum ProfilerMarkerDataUnit : byte // TypeDefIndex: 46240
+	{
+		Undefined = 0,
+		TimeNanoseconds = 1,
+		Bytes = 2,
+		Count = 3,
+		Percent = 4,
+		FrequencyHz = 5
+	}
+
+	[Flags]
+	public enum ProfilerCounterOptions : ushort // TypeDefIndex: 46241
+	{
+		None = 0,
+		FlushOnEndOfFrame = 2,
+		ResetToZeroOnFlush = 4
+	}
+
+	[Flags]
+	public enum ProfilerRecorderOptions // TypeDefIndex: 46242
+	{
+		None = 0,
+		StartImmediately = 1,
+		KeepAliveDuringDomainReload = 2,
+		CollectOnlyOnCurrentThread = 4,
+		WrapAroundWhenCapacityReached = 8,
+		SumAllSamplesInFrame = 16,
+		Default = 24,
+		GpuRecorder = 64
+	}
+
+	[DebuggerDisplay("Value = {Value}; Count = {Count}")]
+	[UsedByNativeCode]
+	public struct ProfilerRecorderSample // TypeDefIndex: 46243
+	{
+		// Fields
+		private long value; // 0x00
+		private long count; // 0x08
+		private long refValue; // 0x10
+	
+		// Properties
+		public long Count { get => default; } // 0x0000000183D50DE0-0x0000000183D50DF0 
+	}
+
+	[DebuggerDisplay("Count = {Count}")]
+	[DebuggerTypeProxy(typeof(ProfilerRecorderDebugView))]
+	[NativeHeader("Runtime/Profiler/ScriptBindings/ProfilerRecorder.bindings.h")]
+	[UsedByNativeCode]
+	public struct ProfilerRecorder : IDisposable // TypeDefIndex: 46246
+	{
+		// Fields
+		internal ulong handle; // 0x00
+		internal const ProfilerRecorderOptions SharedRecorder = ProfilerRecorderOptions.None; // Metadata: 0x01FBABF0
+	
+		// Properties
+		public bool Valid { get => default; } // 0x00000001832B96E0-0x00000001832B9710 
+		public long LastValue { get => default; } // 0x0000000189DAE47C-0x0000000189DAE4A8 
+		public int Count { get => default; } // 0x0000000189DAE420-0x0000000189DAE450 
+		public bool IsRunning { get => default; } // 0x0000000189DAE450-0x0000000189DAE47C 
+	
+		// Nested types
+		internal enum ControlOptions // TypeDefIndex: 46244
+		{
+			Start = 0,
+			Stop = 1,
+			Reset = 2,
+			Release = 4,
+			SetFilterToCurrentThread = 5,
+			SetToCollectFromAllThreads = 6
+		}
+	
+		internal enum CountOptions // TypeDefIndex: 46245
+		{
+			Count = 0,
+			MaxCount = 1
+		}
+	
+		// Constructors
+		public ProfilerRecorder(ProfilerRecorderHandle statHandle, int capacity = 1 /* Metadata: 0x01FBABEE */, ProfilerRecorderOptions options = ProfilerRecorderOptions.None | ProfilerRecorderOptions.WrapAroundWhenCapacityReached | ProfilerRecorderOptions.SumAllSamplesInFrame | ProfilerRecorderOptions.Default /* Metadata: 0x01FBABEF */) : this() {
+			handle = default;
+		} // 0x0000000184274144-0x0000000184274170
+	
+		// Methods
+		public void Start() {} // 0x0000000189DAE3F0-0x0000000189DAE420
+		public void Stop() {} // 0x00000001832B9690-0x00000001832B96C0
+		public ProfilerRecorderSample GetSample(int index) => default; // 0x0000000189DAE38C-0x0000000189DAE3F0
+		[NativeMethod(IsThreadSafe = true, ThrowsException = true)]
+		private static ProfilerRecorder Create(ProfilerRecorderHandle statHandle, int maxSampleCount, ProfilerRecorderOptions options) => default; // 0x0000000183336BD0-0x0000000183336C40
+		[NativeMethod(IsThreadSafe = true)]
+		private static void Control(ProfilerRecorder handle, ControlOptions options) {} // 0x0000000184275FD8-0x0000000184275FF4
+		[NativeMethod(IsThreadSafe = true)]
+		private static long GetLastValue(ProfilerRecorder handle) => default; // 0x0000000189DAE298-0x0000000189DAE2B4
+		[NativeMethod(IsThreadSafe = true)]
+		private static int GetCount(ProfilerRecorder handle, CountOptions countOptions) => default; // 0x0000000189DAE248-0x0000000189DAE264
+		[NativeMethod(IsThreadSafe = true)]
+		private static bool GetValid(ProfilerRecorder handle) => default; // 0x0000000184275FF4-0x0000000184276010
+		[NativeMethod(IsThreadSafe = true)]
+		private static bool GetRunning(ProfilerRecorder handle) => default; // 0x0000000189DAE2E8-0x0000000189DAE304
+		[NativeMethod(IsThreadSafe = true, ThrowsException = true)]
+		private static ProfilerRecorderSample GetSampleInternal(ProfilerRecorder handle, int index) => default; // 0x0000000189DAE354-0x0000000189DAE38C
+		public void Dispose() {} // 0x00000001832B9600-0x00000001832B9640
+		[BurstDiscard]
+		private void CheckInitializedAndThrow() {} // 0x00000001832B96C0-0x00000001832B96E0
+		private static void Create_Injected(ref ProfilerRecorderHandle statHandle, int maxSampleCount, ProfilerRecorderOptions options, out ProfilerRecorder ret) {
+			ret = default;
+		} // 0x0000000183336C40-0x0000000183336CB0
+		private static void Control_Injected(ref ProfilerRecorder handle, ControlOptions options) {} // 0x0000000183441140-0x0000000183441190
+		private static long GetLastValue_Injected(ref ProfilerRecorder handle) => default; // 0x0000000189DAE264-0x0000000189DAE298
+		private static int GetCount_Injected(ref ProfilerRecorder handle, CountOptions countOptions) => default; // 0x0000000189DAE208-0x0000000189DAE248
+		private static bool GetValid_Injected(ref ProfilerRecorder handle) => default; // 0x00000001835D2C80-0x00000001835D2CC0
+		private static bool GetRunning_Injected(ref ProfilerRecorder handle) => default; // 0x0000000189DAE2B4-0x0000000189DAE2E8
+		private static void GetSampleInternal_Injected(ref ProfilerRecorder handle, int index, out ProfilerRecorderSample ret) {
+			ret = default;
+		} // 0x0000000189DAE304-0x0000000189DAE354
+	}
+
+	internal sealed class ProfilerRecorderDebugView // TypeDefIndex: 46247
+	{
+		// Constructors
+		public ProfilerRecorderDebugView() {} // Dummy constructor
+	}
+}
+
+namespace Unity.Profiling.LowLevel
+{
+	[Flags]
+	public enum MarkerFlags : ushort // TypeDefIndex: 46248
+	{
+		Default = 0,
+		Script = 2,
+		AvailabilityEditor = 4,
+		AvailabilityNonDevelopment = 8,
+		Warning = 16,
+		ScriptInvoke = 32,
+		ScriptDeepProfiler = 64,
+		Counter = 128,
+		SampleGPU = 256
+	}
+
+	public enum ProfilerMarkerDataType : byte // TypeDefIndex: 46249
+	{
+		Int32 = 2,
+		UInt32 = 3,
+		Int64 = 4,
+		UInt64 = 5,
+		Float = 6,
+		Double = 7,
+		String16 = 9,
+		Blob8 = 11
+	}
+}
+
+namespace Unity.Profiling.LowLevel.Unsafe
+{
+	[IsReadOnly]
+	[UsedByNativeCode]
+	public struct ProfilerRecorderDescription // TypeDefIndex: 46250
+	{
+		// Fields
+		private readonly ProfilerCategory category; // 0x00
+		private readonly MarkerFlags flags; // 0x02
+		private readonly ProfilerMarkerDataType dataType; // 0x04
+		private readonly ProfilerMarkerDataUnit unitType; // 0x05
+		private readonly int reserved0; // 0x08
+		private readonly int nameUtf8Len; // 0x0C
+		private readonly unsafe byte* nameUtf8; // 0x10
+	
+		// Properties
+		public MarkerFlags Flags { get => default; } // 0x0000000183D4FEF0-0x0000000183D4FF00 
+	}
+
+	[IsReadOnly]
+	[UsedByNativeCode]
+	public struct ProfilerRecorderHandle // TypeDefIndex: 46251
+	{
+		// Fields
+		internal readonly ulong handle; // 0x00
+	
+		// Properties
+		public bool Valid { get => default; } // 0x0000000182E13BA0-0x0000000182E13BC0 
+	
+		// Constructors
+		internal ProfilerRecorderHandle(ulong handle) : this() {
+			this.handle = default;
+		} // 0x0000000183D51730-0x0000000183D51740
+	
+		// Methods
+		public static ProfilerRecorderDescription GetDescription(ProfilerRecorderHandle handle) => default; // 0x0000000182E13AD0-0x0000000182E13B60
+		[NativeMethod(IsThreadSafe = true)]
+		private static ProfilerRecorderDescription GetDescriptionInternal(ProfilerRecorderHandle handle) => default; // 0x0000000182E13B60-0x0000000182E13BA0
+		private static void GetDescriptionInternal_Injected(ref ProfilerRecorderHandle handle, out ProfilerRecorderDescription ret) {
+			ret = default;
+		} // 0x0000000182E13BC0-0x0000000182E13C10
+	}
+
+	public struct ProfilerMarkerData // TypeDefIndex: 46252
+	{
+		// Fields
+		public byte Type; // 0x00
+		private readonly byte reserved0; // 0x01
+		private readonly ushort reserved1; // 0x02
+		public uint Size; // 0x04
+		public unsafe void* Ptr; // 0x08
+	}
+
+	[IsReadOnly]
+	public struct ProfilerCategoryDescription // TypeDefIndex: 46253
+	{
+		// Fields
+		public readonly ushort Id; // 0x00
+		public readonly ushort Flags; // 0x02
+		public readonly Color32 Color; // 0x04
+		private readonly int reserved0; // 0x08
+		public readonly int NameUtf8Len; // 0x0C
+		public readonly unsafe byte* NameUtf8; // 0x10
+	}
+
+	[NativeHeader("Runtime/Profiler/ScriptBindings/ProfilerUnsafeUtility.bindings.h")]
+	[UsedByNativeCode]
+	public static class ProfilerUnsafeUtility // TypeDefIndex: 46254
+	{
+		// Methods
+		[ThreadSafe]
+		public static ProfilerCategoryDescription GetCategoryDescription(ushort categoryId) => default; // 0x0000000189DAE5A4-0x0000000189DAE5D4
+		[ThreadSafe]
+		public static IntPtr CreateMarker(string name, ushort categoryId, MarkerFlags flags, int metadataCount) => default; // 0x0000000182E13980-0x0000000182E139F0
+		[ThreadSafe]
+		public static void BeginSample(IntPtr markerPtr) {} // 0x0000000189DAE4F8-0x0000000189DAE52C
+		[ThreadSafe]
+		public static unsafe void BeginSampleWithMetadata(IntPtr markerPtr, int metadataCount, void* metadata) {} // 0x0000000189DAE4A8-0x0000000189DAE4F8
+		[ThreadSafe]
+		public static void EndSample(IntPtr markerPtr) {} // 0x0000000189DAE52C-0x0000000189DAE560
+		internal static unsafe string Utf8ToString(byte* chars, int charsLen) => default; // 0x0000000189DAE5D4-0x0000000189DAE690
+		private static void GetCategoryDescription_Injected(ushort categoryId, out ProfilerCategoryDescription ret) {
+			ret = default;
+		} // 0x0000000189DAE560-0x0000000189DAE5A4
 	}
 }
 
@@ -10563,6 +12129,6883 @@ namespace UnityEngine
 		private void get_pivot_Injected(out Vector2 ret) {
 			ret = default;
 		} // 0x0000000189DD693C-0x0000000189DD6980
+	}
+}
+
+namespace UnityEngine._Scripting.APIUpdating
+{
+	internal class APIUpdaterRuntimeHelpers // TypeDefIndex: 46691
+	{
+		// Constructors
+		public APIUpdaterRuntimeHelpers() {} // Dummy constructor
+	
+		// Methods
+		[RequiredByNativeCode]
+		internal static bool GetMovedFromAttributeDataForType(System.Type sourceType, out string assembly, out string nsp, out string klass) {
+			assembly = default;
+			nsp = default;
+			klass = default;
+			return default;
+		} // 0x00000001834D7C20-0x00000001834D7D80
+		[RequiredByNativeCode]
+		internal static bool GetObsoleteTypeRedirection(System.Type sourceType, out string assemblyName, out string nsp, out string className) {
+			assemblyName = default;
+			nsp = default;
+			className = default;
+			return default;
+		} // 0x0000000189DCE61C-0x0000000189DCE900
+	}
+}
+
+namespace UnityEngine.Assertions
+{
+	[DebuggerStepThrough]
+	public static class Assert // TypeDefIndex: 47162
+	{
+		// Fields
+		[Obsolete("Future versions of Unity are expected to always throw exceptions and not have this field.")]
+		public static bool raiseExceptions; // 0x00
+	
+		// Constructors
+		static Assert() {} // 0x0000000183D44CE0-0x0000000183D44D20
+	
+		// Methods
+		private static void Fail(string message, string userMessage) {} // 0x0000000189DECB04-0x0000000189DECC14
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void IsTrue(bool condition) {} // 0x000000018241ED50-0x000000018241ED90
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void IsTrue(bool condition, string message) {} // 0x000000018241ED00-0x000000018241ED50
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void IsFalse(bool condition, string message) {} // 0x0000000189DECC14-0x0000000189DECC74
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void AreEqual<T>(T expected, T actual) {}
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void AreEqual<T>(T expected, T actual, string message) {}
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void AreEqual<T>(T expected, T actual, string message, IEqualityComparer<T> comparer) {}
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void AreEqual(UnityEngine.Object expected, UnityEngine.Object actual, string message) {} // 0x0000000189DECA68-0x0000000189DECB04
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void IsNull<T>(T value)
+			where T : class {}
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void IsNull<T>(T value, string message)
+			where T : class {}
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void IsNull(UnityEngine.Object value, string message) {} // 0x0000000189DECD00-0x0000000189DECD8C
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void IsNotNull<T>(T value)
+			where T : class {}
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void IsNotNull<T>(T value, string message)
+			where T : class {}
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void IsNotNull(UnityEngine.Object value, string message) {} // 0x0000000189DECC74-0x0000000189DECD00
+		[Conditional("UNITY_ASSERTIONS")]
+		public static void AreEqual(int expected, int actual) {} // 0x0000000189DECA04-0x0000000189DECA68
+	}
+
+	public class AssertionException : Exception // TypeDefIndex: 47163
+	{
+		// Fields
+		private string m_UserMessage; // 0x90
+	
+		// Properties
+		public override string Message { get => default; } // 0x0000000189DECDFC-0x0000000189DECE54 
+	
+		// Constructors
+		public AssertionException() {} // Dummy constructor
+		public AssertionException(string message, string userMessage) {} // 0x0000000189DECD8C-0x0000000189DECDFC
+	}
+
+	internal class AssertionMessageUtil // TypeDefIndex: 47164
+	{
+		// Constructors
+		public AssertionMessageUtil() {} // Dummy constructor
+	
+		// Methods
+		public static string GetMessage(string failureMessage) => default; // 0x0000000189DED19C-0x0000000189DED254
+		public static string GetMessage(string failureMessage, string expected) => default; // 0x0000000189DED08C-0x0000000189DED19C
+		public static string GetEqualityMessage(object actual, object expected, bool expectEqual) => default; // 0x0000000189DECEDC-0x0000000189DED08C
+		public static string NullFailureMessage(object value, bool expectNull) => default; // 0x0000000189DED254-0x0000000189DED398
+		public static string BooleanFailureMessage(bool expected) => default; // 0x0000000189DECE54-0x0000000189DECEDC
+	}
+}
+
+namespace UnityEngine.Device
+{
+	public static class SystemInfo // TypeDefIndex: 47129
+	{
+		// Properties
+		public static int systemMemorySize { get; } // 0x00000001842731C4-0x00000001842731D0 
+	}
+}
+
+namespace UnityEngine.Diagnostics
+{
+	public enum ForcedCrashCategory // TypeDefIndex: 47126
+	{
+		AccessViolation = 0,
+		FatalError = 1,
+		Abort = 2,
+		PureVirtualFunction = 3,
+		MonoAbort = 4
+	}
+
+	public enum AddressSanitizerCategory // TypeDefIndex: 47127
+	{
+		HeapBufferOverFlow = 0,
+		HeapUseAfterFree = 1,
+		MemcpyParamOverlap = 2,
+		DoubleFree = 3
+	}
+
+	[NativeHeader("Runtime/Export/Diagnostics/DiagnosticsUtils.bindings.h")]
+	public static class Utils // TypeDefIndex: 47128
+	{
+		// Methods
+		[FreeFunction("DiagnosticsUtils_Bindings::ForceCrash", ThrowsException = true)]
+		public static void ForceCrash(ForcedCrashCategory crashCategory) {} // 0x0000000189DF2AF8-0x0000000189DF2B2C
+		[FreeFunction("DiagnosticsUtils_Bindings::NativeAssert")]
+		public static void NativeAssert(string message) {} // 0x0000000189DF2B2C-0x0000000189DF2B60
+		[FreeFunction("DiagnosticsUtils_Bindings::NativeError")]
+		public static void NativeError(string message) {} // 0x0000000189DF2B60-0x0000000189DF2B94
+		[FreeFunction("DiagnosticsUtils_Bindings::NativeWarning")]
+		public static void NativeWarning(string message) {} // 0x0000000189DF2B94-0x0000000189DF2BC8
+		[FreeFunction("DiagnosticsUtils_Bindings::AddressSanitizer", ThrowsException = true)]
+		public static void AddressSanitizer(AddressSanitizerCategory crashCategory) {} // 0x0000000189DF2AC4-0x0000000189DF2AF8
+	}
+}
+
+namespace UnityEngine.Events
+{
+	[Serializable]
+	public enum PersistentListenerMode // TypeDefIndex: 46752
+	{
+		EventDefined = 0,
+		Void = 1,
+		Object = 2,
+		Int = 3,
+		Float = 4,
+		String = 5,
+		Bool = 6
+	}
+
+	internal class UnityEventTools // TypeDefIndex: 46753
+	{
+		// Constructors
+		public UnityEventTools() {} // Dummy constructor
+	
+		// Methods
+		internal static string TidyAssemblyTypeName(string assemblyTypeName) => default; // 0x0000000189DDA528-0x0000000189DDA6D0
+	}
+
+	[Serializable]
+	internal class ArgumentCache : ISerializationCallbackReceiver // TypeDefIndex: 46754
+	{
+		// Fields
+		[FormerlySerializedAs("objectArgument")]
+		[SerializeField]
+		private UnityEngine.Object m_ObjectArgument; // 0x10
+		[FormerlySerializedAs("objectArgumentAssemblyTypeName")]
+		[SerializeField]
+		private string m_ObjectArgumentAssemblyTypeName; // 0x18
+		[FormerlySerializedAs("intArgument")]
+		[SerializeField]
+		private int m_IntArgument; // 0x20
+		[FormerlySerializedAs("floatArgument")]
+		[SerializeField]
+		private float m_FloatArgument; // 0x24
+		[FormerlySerializedAs("stringArgument")]
+		[SerializeField]
+		private string m_StringArgument; // 0x28
+		[SerializeField]
+		private bool m_BoolArgument; // 0x30
+	
+		// Properties
+		public UnityEngine.Object unityObjectArgument { get => default; } // 0x0000000183D66B80-0x0000000183D66B90 
+		public string unityObjectArgumentAssemblyTypeName { get => default; } // 0x0000000183D61D00-0x0000000183D61D10 
+		public int intArgument { get => default; } // 0x0000000183D86CC0-0x0000000183D86CD0 
+		public float floatArgument { get => default; } // 0x0000000183D86CB0-0x0000000183D86CC0 
+		public string stringArgument { get => default; } // 0x0000000183D86CD0-0x0000000183D86CE0 
+		public bool boolArgument { get => default; } // 0x0000000183D86CA0-0x0000000183D86CB0 
+	
+		// Constructors
+		public ArgumentCache() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public void OnBeforeSerialize() {} // 0x0000000189DCE900-0x0000000189DCE928
+		public void OnAfterDeserialize() {} // 0x0000000189DCE900-0x0000000189DCE928
+	}
+
+	internal abstract class BaseInvokableCall // TypeDefIndex: 46755
+	{
+		// Constructors
+		protected BaseInvokableCall() {} // 0x000000018350B670-0x000000018350B680
+		protected BaseInvokableCall(object target, MethodInfo function) {} // 0x0000000189DCF1BC-0x0000000189DCF2E8
+	
+		// Methods
+		public abstract void Invoke(object[] args);
+		protected static void ThrowOnInvalidArg<T>(object arg) {}
+		protected static bool AllowInvoke(Delegate @delegate) => default; // 0x0000000182314CA0-0x0000000182315020
+		public abstract bool Find(object targetObj, MethodInfo method);
+	}
+
+	internal class InvokableCall : BaseInvokableCall // TypeDefIndex: 46756
+	{
+		// Events
+		private event UnityAction Delegate;
+	
+		// Constructors
+		public InvokableCall() {} // Dummy constructor
+		public InvokableCall(object target, MethodInfo theFunction) {} // 0x0000000189DD1164-0x0000000189DD1240
+		public InvokableCall(UnityAction action) {} // 0x0000000182474610-0x0000000182474620
+	
+		// Methods
+		public override void Invoke(object[] args) {} // 0x0000000189DD112C-0x0000000189DD1164
+		public void Invoke() {} // 0x00000001823149D0-0x0000000182314B10
+		public override bool Find(object targetObj, MethodInfo method) => default; // 0x00000001832952E0-0x0000000183295330
+	}
+
+	internal class InvokableCall<T1> : BaseInvokableCall // TypeDefIndex: 46757
+	{
+		// Events
+		protected event UnityAction<T1> Delegate;
+	
+		// Constructors
+		public InvokableCall() {} // Dummy constructor
+		public InvokableCall(object target, MethodInfo theFunction) {}
+		public InvokableCall(UnityAction<T1> action) {}
+	
+		// Methods
+		public override void Invoke(object[] args) {}
+		public virtual void Invoke(T1 args0) {}
+		public override bool Find(object targetObj, MethodInfo method) => default;
+	}
+
+	internal class InvokableCall<T1, T2> : BaseInvokableCall // TypeDefIndex: 46758
+	{
+		// Events
+		protected event UnityAction<T1, T2> Delegate;
+	
+		// Constructors
+		public InvokableCall() {} // Dummy constructor
+		public InvokableCall(object target, MethodInfo theFunction) {}
+		public InvokableCall(UnityAction<T1, T2> action) {}
+	
+		// Methods
+		public override void Invoke(object[] args) {}
+		public void Invoke(T1 args0, T2 args1) {}
+		public override bool Find(object targetObj, MethodInfo method) => default;
+	}
+
+	internal class InvokableCall<T1, T2, T3> : BaseInvokableCall // TypeDefIndex: 46759
+	{
+		// Events
+		protected event UnityAction<T1, T2, T3> Delegate;
+	
+		// Constructors
+		public InvokableCall() {} // Dummy constructor
+		public InvokableCall(object target, MethodInfo theFunction) {}
+		public InvokableCall(UnityAction<T1, T2, T3> action) {}
+	
+		// Methods
+		public override void Invoke(object[] args) {}
+		public void Invoke(T1 args0, T2 args1, T3 args2) {}
+		public override bool Find(object targetObj, MethodInfo method) => default;
+	}
+
+	internal class InvokableCall<T1, T2, T3, T4> : BaseInvokableCall // TypeDefIndex: 46760
+	{
+		// Constructors
+		public InvokableCall() {} // Dummy constructor
+		public InvokableCall(object target, MethodInfo theFunction) {}
+	
+		// Methods
+		public override void Invoke(object[] args) {}
+		public override bool Find(object targetObj, MethodInfo method) => default;
+	}
+
+	internal class CachedInvokableCall<T> : InvokableCall<T> // TypeDefIndex: 46761
+	{
+		// Fields
+		private readonly T m_Arg1;
+	
+		// Constructors
+		public CachedInvokableCall() {} // Dummy constructor
+		public CachedInvokableCall(UnityEngine.Object target, MethodInfo theFunction, T argument) {}
+	
+		// Methods
+		public override void Invoke(object[] args) {}
+		public override void Invoke(T arg0) {}
+	}
+
+	public enum UnityEventCallState // TypeDefIndex: 46762
+	{
+		Off = 0,
+		EditorAndRuntime = 1,
+		RuntimeOnly = 2
+	}
+
+	[Serializable]
+	internal class PersistentCall : ISerializationCallbackReceiver // TypeDefIndex: 46763
+	{
+		// Fields
+		[FormerlySerializedAs("instance")]
+		[SerializeField]
+		private UnityEngine.Object m_Target; // 0x10
+		[SerializeField]
+		private string m_TargetAssemblyTypeName; // 0x18
+		[FormerlySerializedAs("methodName")]
+		[SerializeField]
+		private string m_MethodName; // 0x20
+		[FormerlySerializedAs("mode")]
+		[SerializeField]
+		private PersistentListenerMode m_Mode; // 0x28
+		[FormerlySerializedAs("arguments")]
+		[SerializeField]
+		private ArgumentCache m_Arguments; // 0x30
+		[FormerlySerializedAs("m_Enabled")]
+		[FormerlySerializedAs("enabled")]
+		[SerializeField]
+		private UnityEventCallState m_CallState; // 0x38
+	
+		// Properties
+		public UnityEngine.Object target { get => default; } // 0x0000000183D66B80-0x0000000183D66B90 
+		public string targetAssemblyTypeName { get => default; } // 0x0000000189DD3218-0x0000000189DD32C0 
+		public string methodName { get => default; } // 0x0000000183D85A20-0x0000000183D85A30 
+		public PersistentListenerMode mode { get => default; } // 0x0000000183D86D30-0x0000000183D86D40 
+		public ArgumentCache arguments { get => default; } // 0x0000000183D86D10-0x0000000183D86D20 
+		public UnityEventCallState callState { get => default; set {} } // 0x0000000183D86D20-0x0000000183D86D30 0x0000000183D4ECB0-0x0000000183D4ECC0
+	
+		// Constructors
+		public PersistentCall() {} // 0x0000000189DD31BC-0x0000000189DD3218
+	
+		// Methods
+		public bool IsValid() => default; // 0x0000000189DD3184-0x0000000189DD31BC
+		public BaseInvokableCall GetRuntimeCall(UnityEventBase theEvent) => default; // 0x0000000189DD2E8C-0x0000000189DD3184
+		private static BaseInvokableCall GetObjectCall(UnityEngine.Object target, MethodInfo method, ArgumentCache arguments) => default; // 0x0000000189DD2B34-0x0000000189DD2E8C
+		public void OnBeforeSerialize() {} // 0x0000000189DCE900-0x0000000189DCE928
+		public void OnAfterDeserialize() {} // 0x0000000189DCE900-0x0000000189DCE928
+	}
+
+	[Serializable]
+	internal class PersistentCallGroup // TypeDefIndex: 46764
+	{
+		// Fields
+		[FormerlySerializedAs("m_Listeners")]
+		[SerializeField]
+		private List<PersistentCall> m_Calls; // 0x10
+	
+		// Properties
+		public int Count { get => default; } // 0x0000000189DD2AF4-0x0000000189DD2B34 
+	
+		// Constructors
+		public PersistentCallGroup() {} // 0x0000000182838E20-0x0000000182838F90
+	
+		// Methods
+		public PersistentCall GetListener(int index) => default; // 0x0000000189DD2AA0-0x0000000189DD2AF4
+		public void Initialize(InvokableCallList invokableList, UnityEventBase unityEventBase) {} // 0x0000000182315E30-0x0000000182315F90
+	}
+
+	internal class InvokableCallList // TypeDefIndex: 46765
+	{
+		// Fields
+		private List<BaseInvokableCall> m_PersistentCalls; // 0x10
+		private List<BaseInvokableCall> m_RuntimeCalls; // 0x18
+		private List<BaseInvokableCall> m_ExecutingCalls; // 0x20
+		private bool m_NeedsUpdate; // 0x28
+		private static List<BaseInvokableCall> s_Empty; // 0x00
+	
+		// Constructors
+		public InvokableCallList() {} // 0x0000000182838D20-0x0000000182838E20
+		static InvokableCallList() {} // 0x0000000183CE3E50-0x0000000183CE3EE0
+	
+		// Methods
+		public void AddPersistentInvokableCall(BaseInvokableCall call) {} // 0x0000000189DD1078-0x0000000189DD112C
+		public void AddListener(BaseInvokableCall call) {} // 0x0000000182474690-0x0000000182474750
+		public void RemoveListener(object targetObj, MethodInfo method) {} // 0x000000018260ABA0-0x000000018260AE30
+		public void Clear() {} // 0x0000000182C72160-0x0000000182C721F0
+		public void ClearPersistent() {} // 0x0000000182393B90-0x0000000182393C90
+		public List<BaseInvokableCall> PrepareInvoke() => default; // 0x00000001823147F0-0x0000000182314990
+	}
+
+	[Serializable]
+	[UsedByNativeCode]
+	public abstract class UnityEventBase : ISerializationCallbackReceiver // TypeDefIndex: 46766
+	{
+		// Fields
+		private InvokableCallList m_Calls; // 0x10
+		[FormerlySerializedAs("m_PersistentListeners")]
+		[SerializeField]
+		private PersistentCallGroup m_PersistentCalls; // 0x18
+		private bool m_CallsDirty; // 0x20
+	
+		// Constructors
+		protected UnityEventBase() {} // 0x0000000182838440-0x0000000182838D20
+	
+		// Methods
+		void ISerializationCallbackReceiver.OnBeforeSerialize() {} // 0x0000000182393950-0x0000000182393A70
+		void ISerializationCallbackReceiver.OnAfterDeserialize() {} // 0x0000000182393950-0x0000000182393A70
+		protected MethodInfo FindMethod_Impl(string name, object targetObj) => default; // 0x0000000189DD9CB4-0x0000000189DD9CF4
+		protected abstract MethodInfo FindMethod_Impl(string name, System.Type targetObjType);
+		internal abstract BaseInvokableCall GetDelegate(object target, MethodInfo theFunction);
+		internal MethodInfo FindMethod(PersistentCall call) => default; // 0x0000000189DD9CF4-0x0000000189DD9E80
+		internal MethodInfo FindMethod(string name, System.Type listenerType, PersistentListenerMode mode, System.Type argumentType) => default; // 0x0000000189DD9E80-0x0000000189DDA070
+		public int GetPersistentEventCount() => default; // 0x0000000189DDA070-0x0000000189DDA090
+		public UnityEngine.Object GetPersistentTarget(int index) => default; // 0x0000000189DDA214-0x0000000189DDA240
+		public string GetPersistentMethodName(int index) => default; // 0x0000000189DDA1A8-0x0000000189DDA214
+		private void DirtyPersistentCalls() {} // 0x0000000182393A70-0x0000000182393B90
+		private void RebuildPersistentCallsIfNeeded() {} // 0x0000000182314990-0x00000001823149D0
+		public void SetPersistentListenerState(int index, UnityEventCallState state) {} // 0x0000000189DDA46C-0x0000000189DDA4B0
+		public UnityEventCallState GetPersistentListenerState(int index) => default; // 0x0000000189DDA090-0x0000000189DDA1A8
+		protected void AddListener(object targetObj, MethodInfo method) {} // 0x0000000189DD9C7C-0x0000000189DD9CB4
+		internal void AddCall(BaseInvokableCall call) {} // 0x0000000182474670-0x0000000182474690
+		protected void RemoveListener(object targetObj, MethodInfo method) {} // 0x000000018260AB80-0x000000018260ABA0
+		public void RemoveAllListeners() {} // 0x0000000182C720C0-0x0000000182C72160
+		internal List<BaseInvokableCall> PrepareInvoke() => default; // 0x00000001823147A0-0x00000001823147F0
+		protected void Invoke(object[] parameters) {} // 0x0000000189DDA3D8-0x0000000189DDA46C
+		public override string ToString() => default; // 0x0000000189DDA4B0-0x0000000189DDA528
+		public static MethodInfo GetValidMethodInfo(object obj, string functionName, System.Type[] argumentTypes) => default; // 0x0000000189DDA240-0x0000000189DDA284
+		public static MethodInfo GetValidMethodInfo(System.Type objectType, string functionName, System.Type[] argumentTypes) => default; // 0x0000000189DDA284-0x0000000189DDA3D8
+	}
+
+	public delegate void UnityAction(); // TypeDefIndex: 46767; 0x00000001842BE03C-0x00000001842BE04C
+
+	[Serializable]
+	public class UnityEvent : UnityEventBase // TypeDefIndex: 46768
+	{
+		// Fields
+		private object[] m_InvokeArray; // 0x28
+	
+		// Constructors
+		[RequiredByNativeCode]
+		public UnityEvent() {} // 0x0000000182837F20-0x0000000182837F50
+	
+		// Methods
+		public void AddListener(UnityAction call) {} // 0x0000000182474560-0x00000001824745A0
+		public void RemoveListener(UnityAction call) {} // 0x000000018260AB30-0x000000018260AB80
+		protected override MethodInfo FindMethod_Impl(string name, System.Type targetObjType) => default; // 0x0000000189DDA6D0-0x0000000189DDA728
+		internal override BaseInvokableCall GetDelegate(object target, MethodInfo theFunction) => default; // 0x0000000189DDA728-0x0000000189DDA798
+		private static BaseInvokableCall GetDelegate(UnityAction action) => default; // 0x00000001824745A0-0x0000000182474610
+		public void Invoke() {} // 0x00000001823143C0-0x0000000182314610
+	}
+
+	public delegate void UnityAction<T0>(T0 arg0); // TypeDefIndex: 46769; 0x00000000-0x00000000
+
+	[Serializable]
+	public class UnityEvent<T0> : UnityEventBase // TypeDefIndex: 46770
+	{
+		// Fields
+		private object[] m_InvokeArray;
+	
+		// Constructors
+		[RequiredByNativeCode]
+		public UnityEvent() {}
+	
+		// Methods
+		public void AddListener(UnityAction<T0> call) {}
+		public void RemoveListener(UnityAction<T0> call) {}
+		protected override MethodInfo FindMethod_Impl(string name, System.Type targetObjType) => default;
+		internal override BaseInvokableCall GetDelegate(object target, MethodInfo theFunction) => default;
+		private static BaseInvokableCall GetDelegate(UnityAction<T0> action) => default;
+		public void Invoke(T0 arg0) {}
+	}
+
+	public delegate void UnityAction<T0, T1>(T0 arg0, T1 arg1); // TypeDefIndex: 46771; 0x00000000-0x00000000
+
+	[Serializable]
+	public class UnityEvent<T0, T1> : UnityEventBase // TypeDefIndex: 46772
+	{
+		// Fields
+		private object[] m_InvokeArray;
+	
+		// Constructors
+		[RequiredByNativeCode]
+		public UnityEvent() {}
+	
+		// Methods
+		public void AddListener(UnityAction<T0, T1> call) {}
+		public void RemoveListener(UnityAction<T0, T1> call) {}
+		protected override MethodInfo FindMethod_Impl(string name, System.Type targetObjType) => default;
+		internal override BaseInvokableCall GetDelegate(object target, MethodInfo theFunction) => default;
+		private static BaseInvokableCall GetDelegate(UnityAction<T0, T1> action) => default;
+		public void Invoke(T0 arg0, T1 arg1) {}
+	}
+
+	public delegate void UnityAction<T0, T1, T2>(T0 arg0, T1 arg1, T2 arg2); // TypeDefIndex: 46773; 0x00000000-0x00000000
+
+	[Serializable]
+	public class UnityEvent<T0, T1, T2> : UnityEventBase // TypeDefIndex: 46774
+	{
+		// Fields
+		private object[] m_InvokeArray;
+	
+		// Constructors
+		[RequiredByNativeCode]
+		public UnityEvent() {}
+	
+		// Methods
+		public void AddListener(UnityAction<T0, T1, T2> call) {}
+		public void RemoveListener(UnityAction<T0, T1, T2> call) {}
+		protected override MethodInfo FindMethod_Impl(string name, System.Type targetObjType) => default;
+		internal override BaseInvokableCall GetDelegate(object target, MethodInfo theFunction) => default;
+		private static BaseInvokableCall GetDelegate(UnityAction<T0, T1, T2> action) => default;
+		public void Invoke(T0 arg0, T1 arg1, T2 arg2) {}
+	}
+
+	public delegate void UnityAction<T0, T1, T2, T3>(T0 arg0, T1 arg1, T2 arg2, T3 arg3); // TypeDefIndex: 46775; 0x00000000-0x00000000
+
+	[Serializable]
+	public class UnityEvent<T0, T1, T2, T3> : UnityEventBase // TypeDefIndex: 46776
+	{
+		// Fields
+		private object[] m_InvokeArray;
+	
+		// Constructors
+		[RequiredByNativeCode]
+		public UnityEvent() {}
+	
+		// Methods
+		protected override MethodInfo FindMethod_Impl(string name, System.Type targetObjType) => default;
+		internal override BaseInvokableCall GetDelegate(object target, MethodInfo theFunction) => default;
+	}
+}
+
+namespace UnityEngine.Experimental.GlobalIllumination
+{
+	public enum LightType : byte // TypeDefIndex: 47132
+	{
+		Directional = 0,
+		Point = 1,
+		Spot = 2,
+		Rectangle = 3,
+		Disc = 4,
+		SpotPyramidShape = 5,
+		SpotBoxShape = 6
+	}
+
+	public enum LightMode : byte // TypeDefIndex: 47133
+	{
+		Realtime = 0,
+		Mixed = 1,
+		Baked = 2,
+		Unknown = 3
+	}
+
+	public enum FalloffType : byte // TypeDefIndex: 47134
+	{
+		InverseSquared = 0,
+		InverseSquaredNoRangeAttenuation = 1,
+		Linear = 2,
+		Legacy = 3,
+		Undefined = 4
+	}
+
+	public enum AngularFalloffType : byte // TypeDefIndex: 47135
+	{
+		LUT = 0,
+		AnalyticAndInnerAngle = 1
+	}
+
+	public struct LinearColor // TypeDefIndex: 47136
+	{
+		// Fields
+		private float m_red; // 0x00
+		private float m_green; // 0x04
+		private float m_blue; // 0x08
+		private float m_intensity; // 0x0C
+	
+		// Properties
+		public float red { get => default; set {} } // 0x0000000183D85AE0-0x0000000183D85AF0 0x0000000189DEEF38-0x0000000189DEEFF0
+		public float green { get => default; set {} } // 0x0000000183D85850-0x0000000183D85860 0x0000000189DEEE80-0x0000000189DEEF38
+		public float blue { get => default; set {} } // 0x0000000183D85840-0x0000000183D85850 0x0000000189DEEDC8-0x0000000189DEEE80
+	
+		// Methods
+		public static LinearColor Convert(UnityEngine.Color color, float intensity) => default; // 0x0000000189DEEB58-0x0000000189DEEDC8
+		public static LinearColor Black() => default; // 0x0000000183D87920-0x0000000183D87950
+	}
+
+	public struct DirectionalLight // TypeDefIndex: 47137
+	{
+		// Fields
+		public int instanceID; // 0x00
+		public bool shadow; // 0x04
+		public LightMode mode; // 0x05
+		public Vector3 position; // 0x08
+		public Quaternion orientation; // 0x14
+		public LinearColor color; // 0x24
+		public LinearColor indirectColor; // 0x34
+		public float penumbraWidthRadian; // 0x44
+		[Obsolete("Directional lights support cookies now. In order to position the cookie projection in the world, a position and full orientation are necessary. Use the position and orientation members instead of the direction parameter.", true)]
+		public Vector3 direction; // 0x48
+	}
+
+	public struct PointLight // TypeDefIndex: 47138
+	{
+		// Fields
+		public int instanceID; // 0x00
+		public bool shadow; // 0x04
+		public LightMode mode; // 0x05
+		public Vector3 position; // 0x08
+		public Quaternion orientation; // 0x14
+		public LinearColor color; // 0x24
+		public LinearColor indirectColor; // 0x34
+		public float range; // 0x44
+		public float sphereRadius; // 0x48
+		public FalloffType falloff; // 0x4C
+	}
+
+	public struct SpotLight // TypeDefIndex: 47139
+	{
+		// Fields
+		public int instanceID; // 0x00
+		public bool shadow; // 0x04
+		public LightMode mode; // 0x05
+		public Vector3 position; // 0x08
+		public Quaternion orientation; // 0x14
+		public LinearColor color; // 0x24
+		public LinearColor indirectColor; // 0x34
+		public float range; // 0x44
+		public float sphereRadius; // 0x48
+		public float coneAngle; // 0x4C
+		public float innerConeAngle; // 0x50
+		public FalloffType falloff; // 0x54
+		public AngularFalloffType angularFalloff; // 0x55
+	}
+
+	public struct RectangleLight // TypeDefIndex: 47140
+	{
+		// Fields
+		public int instanceID; // 0x00
+		public bool shadow; // 0x04
+		public LightMode mode; // 0x05
+		public Vector3 position; // 0x08
+		public Quaternion orientation; // 0x14
+		public LinearColor color; // 0x24
+		public LinearColor indirectColor; // 0x34
+		public float range; // 0x44
+		public float width; // 0x48
+		public float height; // 0x4C
+		public FalloffType falloff; // 0x50
+	}
+
+	public struct DiscLight // TypeDefIndex: 47141
+	{
+		// Fields
+		public int instanceID; // 0x00
+		public bool shadow; // 0x04
+		public LightMode mode; // 0x05
+		public Vector3 position; // 0x08
+		public Quaternion orientation; // 0x14
+		public LinearColor color; // 0x24
+		public LinearColor indirectColor; // 0x34
+		public float range; // 0x44
+		public float radius; // 0x48
+		public FalloffType falloff; // 0x4C
+	}
+
+	public struct Cookie // TypeDefIndex: 47142
+	{
+		// Fields
+		public int instanceID; // 0x00
+		public float scale; // 0x04
+		public Vector2 sizes; // 0x08
+	}
+
+	[UsedByNativeCode]
+	public struct LightDataGI // TypeDefIndex: 47143
+	{
+		// Fields
+		public int instanceID; // 0x00
+		public int cookieID; // 0x04
+		public float cookieScale; // 0x08
+		public LinearColor color; // 0x0C
+		public LinearColor indirectColor; // 0x1C
+		public Quaternion orientation; // 0x2C
+		public Vector3 position; // 0x3C
+		public float range; // 0x48
+		public float coneAngle; // 0x4C
+		public float innerConeAngle; // 0x50
+		public float shape0; // 0x54
+		public float shape1; // 0x58
+		public LightType type; // 0x5C
+		public LightMode mode; // 0x5D
+		public byte shadow; // 0x5E
+		public FalloffType falloff; // 0x5F
+	
+		// Methods
+		public void Init(ref DirectionalLight light, ref Cookie cookie) {} // 0x0000000189DEDCEC-0x0000000189DEDD64
+		public void Init(ref PointLight light, ref Cookie cookie) {} // 0x0000000189DEDD64-0x0000000189DEDDD8
+		public void Init(ref SpotLight light, ref Cookie cookie) {} // 0x0000000189DEDC68-0x0000000189DEDCEC
+		public void Init(ref RectangleLight light, ref Cookie cookie) {} // 0x0000000189DEDE4C-0x0000000189DEDEC0
+		public void Init(ref DiscLight light, ref Cookie cookie) {} // 0x0000000189DEDDD8-0x0000000189DEDE4C
+		public void InitNoBake(int lightInstanceID) {} // 0x0000000183D87910-0x0000000183D87920
+	}
+
+	public static class LightmapperUtils // TypeDefIndex: 47144
+	{
+		// Methods
+		public static LightMode Extract(LightmapBakeType baketype) => default; // 0x0000000189DEE574-0x0000000189DEE588
+		public static LinearColor ExtractIndirect(Light l) => default; // 0x0000000189DEDF94-0x0000000189DEE028
+		public static float ExtractInnerCone(Light l) => default; // 0x0000000189DEE028-0x0000000189DEE074
+		private static UnityEngine.Color ExtractColorTemperature(Light l) => default; // 0x0000000189DEDF18-0x0000000189DEDF94
+		private static void ApplyColorTemperature(UnityEngine.Color cct, ref LinearColor lightColor) {} // 0x0000000189DEDEC0-0x0000000189DEDF18
+		public static void Extract(Light l, ref DirectionalLight dir) {} // 0x0000000189DEE228-0x0000000189DEE3C4
+		public static void Extract(Light l, ref PointLight point) {} // 0x0000000189DEE3C4-0x0000000189DEE574
+		public static void Extract(Light l, ref SpotLight spot) {} // 0x0000000189DEE588-0x0000000189DEE760
+		public static void Extract(Light l, ref RectangleLight rect) {} // 0x0000000189DEE074-0x0000000189DEE228
+		public static void Extract(Light l, ref DiscLight disc) {} // 0x0000000189DEE3C4-0x0000000189DEE574
+		public static void Extract(Light l, out Cookie cookie) {
+			cookie = default;
+		} // 0x0000000189DEE760-0x0000000189DEE884
+	}
+
+	public static class Lightmapping // TypeDefIndex: 47147
+	{
+		// Fields
+		[RequiredByNativeCode]
+		private static readonly RequestLightsDelegate s_DefaultDelegate; // 0x00
+		[RequiredByNativeCode]
+		private static RequestLightsDelegate s_RequestLightsDelegate; // 0x08
+	
+		// Nested types
+		public delegate void RequestLightsDelegate(Light[] requests, NativeArray<LightDataGI> lightsOutput); // TypeDefIndex: 47145; 0x00000001829CE1E0-0x00000001829CE210
+	
+		// Constructors
+		static Lightmapping() {} // 0x0000000189DEEA68-0x0000000189DEEB58
+	
+		// Methods
+		[RequiredByNativeCode]
+		public static void SetDelegate(RequestLightsDelegate del) {} // 0x0000000189DEE9EC-0x0000000189DEEA68
+		[RequiredByNativeCode]
+		public static RequestLightsDelegate GetDelegate() => default; // 0x0000000189DEE884-0x0000000189DEE8D4
+		[RequiredByNativeCode]
+		public static void ResetDelegate() {} // 0x0000000189DEE990-0x0000000189DEE9EC
+		[RequiredByNativeCode]
+		internal static void RequestLights(Light[] lights, IntPtr outLightsPtr, int outLightsCount) {} // 0x0000000189DEE8D4-0x0000000189DEE990
+	}
+}
+
+namespace UnityEngine.Experimental.Playables
+{
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[NativeHeader("Runtime/Camera//Director/CameraPlayable.h")]
+	[NativeHeader("Runtime/Export/Director/CameraPlayable.bindings.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("CameraPlayableBindings", StaticAccessorType.DoubleColon)]
+	public struct CameraPlayable : IPlayable, IEquatable<CameraPlayable> // TypeDefIndex: 47148
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+	
+		// Methods
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public bool Equals(CameraPlayable other) => default; // 0x0000000189DED398-0x0000000189DED40C
+	}
+
+	[NativeHeader("Runtime/Shaders/Director/MaterialEffectPlayable.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[NativeHeader("Runtime/Export/Director/MaterialEffectPlayable.bindings.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("MaterialEffectPlayableBindings", StaticAccessorType.DoubleColon)]
+	public struct MaterialEffectPlayable : IPlayable, IEquatable<MaterialEffectPlayable> // TypeDefIndex: 47149
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+	
+		// Methods
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public bool Equals(MaterialEffectPlayable other) => default; // 0x0000000189DEF2E0-0x0000000189DEF354
+	}
+
+	[NativeHeader("Runtime/Export/Director/TextureMixerPlayable.bindings.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[NativeHeader("Runtime/Graphics/Director/TextureMixerPlayable.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("TextureMixerPlayableBindings", StaticAccessorType.DoubleColon)]
+	public struct TextureMixerPlayable : IPlayable, IEquatable<TextureMixerPlayable> // TypeDefIndex: 47150
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+	
+		// Methods
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public bool Equals(TextureMixerPlayable other) => default; // 0x0000000189DF275C-0x0000000189DF27D0
+	}
+
+	[NativeHeader("Runtime/Export/Director/TexturePlayableOutput.bindings.h")]
+	[NativeHeader("Runtime/Graphics/RenderTexture.h")]
+	[NativeHeader("Runtime/Graphics/Director/TexturePlayableOutput.h")]
+	[RequiredByNativeCode]
+	[StaticAccessor("TexturePlayableOutputBindings", StaticAccessorType.DoubleColon)]
+	public struct TexturePlayableOutput : IPlayableOutput // TypeDefIndex: 47151
+	{
+		// Fields
+		private PlayableOutputHandle m_Handle; // 0x00
+	
+		// Methods
+		public PlayableOutputHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+	}
+}
+
+namespace UnityEngine.Experimental.Rendering
+{
+	[NativeHeader("Runtime/Camera/ReflectionProbes.h")]
+	internal class BuiltinRuntimeReflectionSystem : IScriptableRuntimeReflectionSystem // TypeDefIndex: 47152
+	{
+		// Constructors
+		public BuiltinRuntimeReflectionSystem() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public bool TickRealtimeProbes() => default; // 0x0000000184274EA4-0x0000000184274EB0
+		public void Dispose() {} // 0x000000018350B670-0x000000018350B680
+		private void Dispose(bool disposing) {} // 0x000000018350B670-0x000000018350B680
+		[StaticAccessor("GetReflectionProbes()", Type = StaticAccessorType.Dot)]
+		private static bool BuiltinUpdate() => default; // 0x00000001832413C0-0x0000000183241400
+		[RequiredByNativeCode]
+		private static BuiltinRuntimeReflectionSystem Internal_BuiltinRuntimeReflectionSystem_New() => default; // 0x0000000183275D70-0x0000000183275DB0
+	}
+
+	public interface IScriptableRuntimeReflectionSystem : IDisposable // TypeDefIndex: 47153
+	{
+		// Methods
+		bool TickRealtimeProbes();
+	}
+
+	[NativeHeader("Runtime/Camera/ScriptableRuntimeReflectionSystem.h")]
+	[RequiredByNativeCode]
+	public static class ScriptableRuntimeReflectionSystemSettings // TypeDefIndex: 47154
+	{
+		// Fields
+		private static ScriptableRuntimeReflectionSystemWrapper s_Instance; // 0x00
+	
+		// Properties
+		private static IScriptableRuntimeReflectionSystem Internal_ScriptableRuntimeReflectionSystemSettings_system { get; [RequiredByNativeCode] set; } // 0x00000001830469B0-0x0000000183046A90
+		private static ScriptableRuntimeReflectionSystemWrapper Internal_ScriptableRuntimeReflectionSystemSettings_instance { [RequiredByNativeCode] get; } // 0x0000000183275DB0-0x0000000183275E00 
+	
+		// Constructors
+		static ScriptableRuntimeReflectionSystemSettings() {} // 0x0000000183CFFBD0-0x0000000183CFFC40
+	
+		// Methods
+		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+		[StaticAccessor("ScriptableRuntimeReflectionSystem", StaticAccessorType.DoubleColon)]
+		private static void ScriptingDirtyReflectionSystemInstance() {} // 0x0000000189DF2160-0x0000000189DF218C
+	}
+
+	[RequiredByNativeCode]
+	internal class ScriptableRuntimeReflectionSystemWrapper // TypeDefIndex: 47155
+	{
+		// Properties
+		internal IScriptableRuntimeReflectionSystem implementation { get; set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Constructors
+		public ScriptableRuntimeReflectionSystemWrapper() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		[RequiredByNativeCode]
+		private void Internal_ScriptableRuntimeReflectionSystemWrapper_TickRealtimeProbes(out bool result) {
+			result = default;
+		} // 0x000000018309E8D0-0x000000018309E940
+	}
+
+	[Flags]
+	public enum TextureCreationFlags // TypeDefIndex: 47156
+	{
+		None = 0,
+		MipChain = 1,
+		Crunch = 64,
+		HGDisableDefragmentation = 1024
+	}
+
+	public enum FormatUsage // TypeDefIndex: 47157
+	{
+		Sample = 0,
+		Linear = 1,
+		Sparse = 2,
+		Render = 4,
+		Blend = 5,
+		GetPixels = 6,
+		SetPixels = 7,
+		SetPixels32 = 8,
+		ReadPixels = 9,
+		LoadStore = 10,
+		MSAA2x = 11,
+		MSAA4x = 12,
+		MSAA8x = 13,
+		StencilSampling = 16
+	}
+
+	public enum DefaultFormat // TypeDefIndex: 47158
+	{
+		LDR = 0,
+		HDR = 1,
+		DepthStencil = 2,
+		Shadow = 3,
+		Video = 4
+	}
+
+	public enum GraphicsFormat // TypeDefIndex: 47159
+	{
+		None = 0,
+		R8_SRGB = 1,
+		R8G8_SRGB = 2,
+		R8G8B8_SRGB = 3,
+		R8G8B8A8_SRGB = 4,
+		R8_UNorm = 5,
+		R8G8_UNorm = 6,
+		R8G8B8_UNorm = 7,
+		R8G8B8A8_UNorm = 8,
+		R8_SNorm = 9,
+		R8G8_SNorm = 10,
+		R8G8B8_SNorm = 11,
+		R8G8B8A8_SNorm = 12,
+		R8_UInt = 13,
+		R8G8_UInt = 14,
+		R8G8B8_UInt = 15,
+		R8G8B8A8_UInt = 16,
+		R8_SInt = 17,
+		R8G8_SInt = 18,
+		R8G8B8_SInt = 19,
+		R8G8B8A8_SInt = 20,
+		R16_UNorm = 21,
+		R16G16_UNorm = 22,
+		R16G16B16_UNorm = 23,
+		R16G16B16A16_UNorm = 24,
+		R16_SNorm = 25,
+		R16G16_SNorm = 26,
+		R16G16B16_SNorm = 27,
+		R16G16B16A16_SNorm = 28,
+		R16_UInt = 29,
+		R16G16_UInt = 30,
+		R16G16B16_UInt = 31,
+		R16G16B16A16_UInt = 32,
+		R16_SInt = 33,
+		R16G16_SInt = 34,
+		R16G16B16_SInt = 35,
+		R16G16B16A16_SInt = 36,
+		R32_UInt = 37,
+		R32G32_UInt = 38,
+		R32G32B32_UInt = 39,
+		R32G32B32A32_UInt = 40,
+		R32_SInt = 41,
+		R32G32_SInt = 42,
+		R32G32B32_SInt = 43,
+		R32G32B32A32_SInt = 44,
+		R16_SFloat = 45,
+		R16G16_SFloat = 46,
+		R16G16B16_SFloat = 47,
+		R16G16B16A16_SFloat = 48,
+		R32_SFloat = 49,
+		R32G32_SFloat = 50,
+		R32G32B32_SFloat = 51,
+		R32G32B32A32_SFloat = 52,
+		B8G8R8_SRGB = 56,
+		B8G8R8A8_SRGB = 57,
+		B8G8R8_UNorm = 58,
+		B8G8R8A8_UNorm = 59,
+		B8G8R8_SNorm = 60,
+		B8G8R8A8_SNorm = 61,
+		B8G8R8_UInt = 62,
+		B8G8R8A8_UInt = 63,
+		B8G8R8_SInt = 64,
+		B8G8R8A8_SInt = 65,
+		R4G4B4A4_UNormPack16 = 66,
+		B4G4R4A4_UNormPack16 = 67,
+		R5G6B5_UNormPack16 = 68,
+		B5G6R5_UNormPack16 = 69,
+		R5G5B5A1_UNormPack16 = 70,
+		B5G5R5A1_UNormPack16 = 71,
+		A1R5G5B5_UNormPack16 = 72,
+		E5B9G9R9_UFloatPack32 = 73,
+		B10G11R11_UFloatPack32 = 74,
+		A2B10G10R10_UNormPack32 = 75,
+		A2B10G10R10_UIntPack32 = 76,
+		A2B10G10R10_SIntPack32 = 77,
+		A2R10G10B10_UNormPack32 = 78,
+		A2R10G10B10_UIntPack32 = 79,
+		A2R10G10B10_SIntPack32 = 80,
+		A2R10G10B10_XRSRGBPack32 = 81,
+		A2R10G10B10_XRUNormPack32 = 82,
+		R10G10B10_XRSRGBPack32 = 83,
+		R10G10B10_XRUNormPack32 = 84,
+		A10R10G10B10_XRSRGBPack32 = 85,
+		A10R10G10B10_XRUNormPack32 = 86,
+		D16_UNorm = 90,
+		D24_UNorm = 91,
+		D24_UNorm_S8_UInt = 92,
+		D32_SFloat = 93,
+		D32_SFloat_S8_UInt = 94,
+		S8_UInt = 95,
+		RGB_DXT1_SRGB = 96,
+		RGBA_DXT1_SRGB = 96,
+		RGB_DXT1_UNorm = 97,
+		RGBA_DXT1_UNorm = 97,
+		RGBA_DXT3_SRGB = 98,
+		RGBA_DXT3_UNorm = 99,
+		RGBA_DXT5_SRGB = 100,
+		RGBA_DXT5_UNorm = 101,
+		R_BC4_UNorm = 102,
+		R_BC4_SNorm = 103,
+		RG_BC5_UNorm = 104,
+		RG_BC5_SNorm = 105,
+		RGB_BC6H_UFloat = 106,
+		RGB_BC6H_SFloat = 107,
+		RGBA_BC7_SRGB = 108,
+		RGBA_BC7_UNorm = 109,
+		RGB_PVRTC_2Bpp_SRGB = 110,
+		RGB_PVRTC_2Bpp_UNorm = 111,
+		RGB_PVRTC_4Bpp_SRGB = 112,
+		RGB_PVRTC_4Bpp_UNorm = 113,
+		RGBA_PVRTC_2Bpp_SRGB = 114,
+		RGBA_PVRTC_2Bpp_UNorm = 115,
+		RGBA_PVRTC_4Bpp_SRGB = 116,
+		RGBA_PVRTC_4Bpp_UNorm = 117,
+		RGB_ETC_UNorm = 118,
+		RGB_ETC2_SRGB = 119,
+		RGB_ETC2_UNorm = 120,
+		RGB_A1_ETC2_SRGB = 121,
+		RGB_A1_ETC2_UNorm = 122,
+		RGBA_ETC2_SRGB = 123,
+		RGBA_ETC2_UNorm = 124,
+		R_EAC_UNorm = 125,
+		R_EAC_SNorm = 126,
+		RG_EAC_UNorm = 127,
+		RG_EAC_SNorm = 128,
+		RGBA_ASTC4X4_SRGB = 129,
+		RGBA_ASTC4X4_UNorm = 130,
+		RGBA_ASTC5X5_SRGB = 131,
+		RGBA_ASTC5X5_UNorm = 132,
+		RGBA_ASTC6X6_SRGB = 133,
+		RGBA_ASTC6X6_UNorm = 134,
+		RGBA_ASTC8X8_SRGB = 135,
+		RGBA_ASTC8X8_UNorm = 136,
+		RGBA_ASTC10X10_SRGB = 137,
+		RGBA_ASTC10X10_UNorm = 138,
+		RGBA_ASTC12X12_SRGB = 139,
+		RGBA_ASTC12X12_UNorm = 140,
+		YUV2 = 141,
+		DepthAuto = 142,
+		ShadowAuto = 143,
+		VideoAuto = 144,
+		RGBA_ASTC4X4_UFloat = 145,
+		RGBA_ASTC5X5_UFloat = 146,
+		RGBA_ASTC6X6_UFloat = 147,
+		RGBA_ASTC8X8_UFloat = 148,
+		RGBA_ASTC10X10_UFloat = 149,
+		RGBA_ASTC12X12_UFloat = 150
+	}
+
+	public enum RayTracingMode // TypeDefIndex: 47160
+	{
+		Off = 0,
+		Static = 1,
+		DynamicTransform = 2,
+		DynamicGeometry = 3
+	}
+
+	[NativeHeader("Runtime/Graphics/GraphicsFormatUtility.bindings.h")]
+	[NativeHeader("Runtime/Graphics/Format.h")]
+	[NativeHeader("Runtime/Graphics/TextureFormat.h")]
+	public class GraphicsFormatUtility // TypeDefIndex: 47161
+	{
+		// Fields
+		private static readonly GraphicsFormat[] tableNoStencil; // 0x00
+		private static readonly GraphicsFormat[] tableStencil; // 0x08
+	
+		// Constructors
+		public GraphicsFormatUtility() {} // Dummy constructor
+		static GraphicsFormatUtility() {} // 0x00000001839D4360-0x00000001839D4490
+	
+		// Methods
+		[FreeFunction("GetTextureGraphicsFormat")]
+		internal static GraphicsFormat GetFormat([UnityEngine.Bindings.NotNull("NullExceptionObject")] Texture texture) => default; // 0x0000000189DEDA60-0x0000000189DEDA94
+		public static GraphicsFormat GetGraphicsFormat(TextureFormat format, bool isSRGB) => default; // 0x0000000182527B40-0x0000000182527BA0
+		[FreeFunction(IsThreadSafe = true)]
+		private static GraphicsFormat GetGraphicsFormat_Native_TextureFormat(TextureFormat format, bool isSRGB) => default; // 0x0000000182527BA0-0x0000000182527BF0
+		public static GraphicsFormat GetGraphicsFormat(RenderTextureFormat format, bool isSRGB) => default; // 0x0000000182526840-0x00000001825268A0
+		[FreeFunction]
+		private static GraphicsFormat GetGraphicsFormat_Native_RenderTextureFormat(RenderTextureFormat format, bool isSRGB) => default; // 0x00000001825268A0-0x00000001825268F0
+		public static GraphicsFormat GetGraphicsFormat(RenderTextureFormat format, RenderTextureReadWrite readWrite) => default; // 0x0000000182526770-0x0000000182526800
+		[FreeFunction(IsThreadSafe = true)]
+		private static GraphicsFormat GetDepthStencilFormatFromBitsLegacy_Native(int minimumDepthBits) => default; // 0x00000001825270D0-0x0000000182527110
+		internal static GraphicsFormat GetDepthStencilFormat(int minimumDepthBits) => default; // 0x0000000182527080-0x00000001825270D0
+		[FreeFunction(IsThreadSafe = true)]
+		public static int GetDepthBits(GraphicsFormat format) => default; // 0x0000000182526D40-0x0000000182526D80
+		public static GraphicsFormat GetDepthStencilFormat(int minimumDepthBits, int minimumStencilBits) => default; // 0x00000001825268F0-0x0000000182526AA0
+		[FreeFunction(IsThreadSafe = true)]
+		public static bool IsSRGBFormat(GraphicsFormat format) => default; // 0x0000000182527380-0x00000001825273C0
+		[FreeFunction(IsThreadSafe = true)]
+		public static GraphicsFormat GetSRGBFormat(GraphicsFormat format) => default; // 0x0000000189DEDAFC-0x0000000189DEDB30
+		[FreeFunction(IsThreadSafe = true)]
+		public static GraphicsFormat GetLinearFormat(GraphicsFormat format) => default; // 0x0000000189DEDA94-0x0000000189DEDAC8
+		[FreeFunction(IsThreadSafe = true)]
+		public static RenderTextureFormat GetRenderTextureFormat(GraphicsFormat format) => default; // 0x0000000189DEDAC8-0x0000000189DEDAFC
+		[FreeFunction(IsThreadSafe = true)]
+		public static uint GetComponentCount(GraphicsFormat format) => default; // 0x0000000189DEDA2C-0x0000000189DEDA60
+		[FreeFunction("IsAnyCompressedTextureFormat", true)]
+		internal static bool IsCompressedTextureFormat(TextureFormat format) => default; // 0x0000000189DEDC34-0x0000000189DEDC68
+		[FreeFunction(IsThreadSafe = true)]
+		private static bool CanDecompressFormat(GraphicsFormat format, bool wholeImage) => default; // 0x0000000189DED9B8-0x0000000189DED9F8
+		internal static bool CanDecompressFormat(GraphicsFormat format) => default; // 0x0000000189DED96C-0x0000000189DED9B8
+		[FreeFunction(IsThreadSafe = true)]
+		public static bool IsAlphaOnlyFormat(GraphicsFormat format) => default; // 0x0000000189DEDC00-0x0000000189DEDC34
+		[FreeFunction(IsThreadSafe = true)]
+		public static bool IsDepthFormat(GraphicsFormat format) => default; // 0x0000000182528380-0x00000001825283C0
+		[FreeFunction(IsThreadSafe = true)]
+		public static bool IsStencilFormat(GraphicsFormat format) => default; // 0x00000001825283C0-0x0000000182528400
+		[FreeFunction(IsThreadSafe = true)]
+		public static bool IsPVRTCFormat(GraphicsFormat format) => default; // 0x0000000182527520-0x0000000182527560
+		public static bool IsCrunchFormat(TextureFormat format) => default; // 0x0000000182527BF0-0x0000000182527C10
+		[FreeFunction(IsThreadSafe = true)]
+		public static FormatSwizzle GetSwizzleR(GraphicsFormat format) => default; // 0x0000000189DEDBCC-0x0000000189DEDC00
+		[FreeFunction(IsThreadSafe = true)]
+		public static FormatSwizzle GetSwizzleG(GraphicsFormat format) => default; // 0x0000000189DEDB98-0x0000000189DEDBCC
+		[FreeFunction(IsThreadSafe = true)]
+		public static FormatSwizzle GetSwizzleB(GraphicsFormat format) => default; // 0x0000000189DEDB64-0x0000000189DEDB98
+		[FreeFunction(IsThreadSafe = true)]
+		public static FormatSwizzle GetSwizzleA(GraphicsFormat format) => default; // 0x0000000189DEDB30-0x0000000189DEDB64
+		[FreeFunction(IsThreadSafe = true)]
+		public static uint GetBlockSize(GraphicsFormat format) => default; // 0x0000000189DED9F8-0x0000000189DEDA2C
+	}
+}
+
+namespace UnityEngine.Experimental.U2D
+{
+	[NativeHeader("Runtime/2D/Renderer/SpriteRendererGroup.h")]
+	[RequiredByNativeCode]
+	internal struct SpriteIntermediateRendererInfo // TypeDefIndex: 47130
+	{
+		// Fields
+		public int SpriteID; // 0x00
+		public int TextureID; // 0x04
+		public int MaterialID; // 0x08
+		public UnityEngine.Color Color; // 0x0C
+		public Matrix4x4 Transform; // 0x1C
+		public Bounds Bounds; // 0x5C
+		public int Layer; // 0x74
+		public int SortingLayer; // 0x78
+		public int SortingOrder; // 0x7C
+		public ulong SceneCullingMask; // 0x80
+		public IntPtr IndexData; // 0x88
+		public IntPtr VertexData; // 0x90
+		public int IndexCount; // 0x98
+		public int VertexCount; // 0x9C
+		public int ShaderChannelMask; // 0xA0
+	}
+
+	[NativeHeader("Runtime/2D/Renderer/SpriteRendererGroup.h")]
+	[RequiredByNativeCode]
+	internal class SpriteRendererGroup // TypeDefIndex: 47131
+	{
+		// Constructors
+		public SpriteRendererGroup() {} // Dummy constructor
+	}
+}
+
+namespace UnityEngine.HyperGryph
+{
+	public enum ManagerContextType // TypeDefIndex: 46964
+	{
+		HGManagerContext = 0,
+		GameplayManagerContext = 1,
+		Count = 2
+	}
+
+	public abstract class HGGlobalGameManagerAssetBase : ScriptableObject // TypeDefIndex: 46965
+	{
+		// Constructors
+		protected HGGlobalGameManagerAssetBase() {} // 0x000000018286F540-0x000000018286F550
+	
+		// Methods
+		internal HGManagerContextBase InternalCreateManagerContext() => default; // 0x0000000183C97850-0x0000000183C97880
+		protected abstract HGManagerContextBase CreateManagerContext();
+		protected virtual void OnDisable() {} // 0x0000000189DE478C-0x0000000189DE47D4
+	}
+
+	[NativeHeader("Modules/HGGraphics/Public/HGGlobalGameManager.h")]
+	[StaticAccessor("GetHGGlobalGameManager()", StaticAccessorType.Dot)]
+	public static class HGGlobalGameManager // TypeDefIndex: 46966
+	{
+		// Fields
+		internal static HGGlobalGameManagerAssetBase[] currentManagerAssets; // 0x00
+		public static HGManagerContextBase[] currentManagerContexts; // 0x08
+	
+		// Constructors
+		static HGGlobalGameManager() {} // 0x0000000183CB6BC0-0x0000000183CB6C70
+	
+		// Methods
+		private static ScriptableObject GetGlobalGameManagerAsset(ManagerContextType contextType) => default; // 0x0000000182A58430-0x0000000182A58470
+		public static HGGlobalGameManagerAssetBase GetManagerAsset(ManagerContextType contextType) => default; // 0x0000000182A583C0-0x0000000182A58430
+		internal static void HandleManagerAssetChange(ManagerContextType contextType, HGGlobalGameManagerAssetBase asset) {} // 0x0000000182A58E50-0x0000000182A58F60
+		[RequiredByNativeCode]
+		internal static void CleanupManagerContext(ManagerContextType contextType) {} // 0x0000000183B0E830-0x0000000183B0E8D0
+		[RequiredByNativeCode]
+		public static bool InitializeManagerContext(ManagerContextType contextType, HGGlobalGameManagerAssetBase asset) => default; // 0x0000000182A58470-0x0000000182A585C0
+		[RequiredByNativeCode]
+		internal static void ManagerContextEarlyUpdate() {} // 0x0000000182A58A10-0x0000000182A58AB0
+		[RequiredByNativeCode]
+		internal static void ManagerContextGameplayUpdate() {} // 0x0000000182A588D0-0x0000000182A58970
+		[RequiredByNativeCode]
+		internal static void ManagerContextPipelineUpdate() {} // 0x0000000182A58970-0x0000000182A58A10
+	}
+
+	public abstract class HGManagerContextBase // TypeDefIndex: 46967
+	{
+		// Properties
+		public bool disposed { get; private set; } // 0x00000001811797F0-0x0000000181179800 0x0000000183D4E960-0x0000000183D4E970
+	
+		// Constructors
+		protected HGManagerContextBase() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		protected abstract void EarlyUpdate();
+		protected abstract void GameplayUpdate();
+		protected abstract void PipelineUpdate();
+		internal void InternalEarlyUpdate() {} // 0x0000000182A58AB0-0x0000000182A58AE0
+		internal void InternalGameplayUpdate() {} // 0x0000000182A58B10-0x0000000182A58B40
+		internal void InternalPipelineUpdate() {} // 0x0000000182A58AE0-0x0000000182A58B10
+		internal void Dispose() {} // 0x0000000189DE47D4-0x0000000189DE482C
+		protected virtual void Dispose(bool disposing) {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[UsedByNativeCode]
+	public struct LODCrossFadeConfig // TypeDefIndex: 46968
+	{
+		// Fields
+		public Vector3 cameraPosition; // 0x00
+		public Vector3 c0; // 0x0C
+		public Vector3 c1; // 0x18
+		public float fraction; // 0x24
+		public float currMaxProjFactorSquared; // 0x28
+		public float maxProjFactorSquared0; // 0x2C
+		public float maxProjFactorSquared1; // 0x30
+		public bool enableDither; // 0x34
+		public bool isOrtho; // 0x35
+		public byte lodBias; // 0x36
+	}
+
+	[UsedByNativeCode]
+	public struct HGShadowCullData // TypeDefIndex: 46969
+	{
+		// Fields
+		public bool orthographic; // 0x00
+		public float cameraNear; // 0x04
+		public float projectionNear; // 0x08
+		public float projectionFar; // 0x0C
+		public float cameraFov; // 0x10
+		public float shadowNearPlaneOffset; // 0x14
+		public float shadowDistance; // 0x18
+		public float baseFarDistance; // 0x1C
+		public Matrix4x4 cameraClipToWorld; // 0x20
+		public Matrix4x4 implicitProjection; // 0x60
+		public Matrix4x4 cameraToWorld; // 0xA0
+		public Vector3 eyePos; // 0xE0
+		public Plane cullingPlaneLeft; // 0xEC
+		public Plane cullingPlanesRight; // 0xFC
+		public Plane cullingPlanesBottom; // 0x10C
+		public Plane cullingPlanesTop; // 0x11C
+		public Plane cullingPlanesNear; // 0x12C
+		public Plane cullingPlanesFar; // 0x13C
+		public Matrix4x4 lightLocalToWorld; // 0x14C
+		public Vector3 center; // 0x18C
+		public float radius; // 0x198
+	}
+
+	public struct LightCullResult // TypeDefIndex: 46970
+	{
+		// Fields
+		public IntPtr visibleLightsPtr; // 0x00
+		public int visibleLightCount; // 0x08
+	
+		// Properties
+		public NativeArray<VisibleLight> visibleLights { get => default; } // 0x0000000189DE49E4-0x0000000189DE4A4C 
+	}
+
+	[NativeType("Modules/HGGraphics/Public/ECS/HGCullingSystem.h")]
+	public static class HGCullingSystem // TypeDefIndex: 46971
+	{
+		// Properties
+		[NativeName("ParentLODBias")]
+		[StaticAccessor("GetHGGlobalGameManager().GetCullingSystem()", StaticAccessorType.Dot)]
+		public static float parentLODBias { get; set; } // 0x00000001833673B0-0x0000000183367400
+	
+		// Methods
+		[StaticAccessor("GetHGGlobalGameManager().GetCullingSystem()", StaticAccessorType.Dot)]
+		public static void SetArtTagLODBias(uint artTag, float lodBias) {} // 0x0000000183367360-0x00000001833673B0
+		[StaticAccessor("GetHGGlobalGameManager().GetCullingSystem()", StaticAccessorType.Dot)]
+		public static uint AddCullViewByMatrix([IsReadOnly] in Matrix4x4 viewProj, int cameraInstantId, ulong sceneMask, uint cullingLayerMask, uint objectFlagsValue, uint objectFlagsMask, [IsReadOnly] in LODCrossFadeConfig config, float viewScreenSizeMinSquared, CameraType viewType = CameraType.Unknown /* Metadata: 0x01FBB31A */, uint uniqueId = 0 /* Metadata: 0x01FBB31C */, int depthBufferWidth = 0 /* Metadata: 0x01FBB31D */, int depthBufferHeight = 0 /* Metadata: 0x01FBB31E */, [IsReadOnly] in Vector3 cameraDir = null, [IsReadOnly] in Vector4 cameraProjInfo = null, float cullingRadius = 0f /* Metadata: 0x01FBB31F */, float ocScreenSizeMinSquared = 0.05f /* Metadata: 0x01FBB323 */) => default; // 0x0000000189DE42E4-0x0000000189DE4350
+		public static uint AddCullViewByPlanes(NativeArray<Plane> planes, int cameraInstantId, ulong sceneMask, uint cullingLayerMask, uint objectFlagsValue, uint objectFlagsMask, [IsReadOnly] in LODCrossFadeConfig config, float viewScreenSizeMinSquared, CameraType viewType = CameraType.Unknown /* Metadata: 0x01FBB327 */) => default; // 0x0000000189DE4350-0x0000000189DE44AC
+		[StaticAccessor("GetHGGlobalGameManager().GetCullingSystem()", StaticAccessorType.Dot)]
+		public static uint RegisterCullViewUniqueId(int instanceId) => default; // 0x0000000183CAA8B0-0x0000000183CAA8F0
+		[StaticAccessor("GetHGGlobalGameManager().GetCullingSystem()", StaticAccessorType.Dot)]
+		public static void UnregisterCullViewUniqueId(uint cullViewUniqueId) {} // 0x0000000183CFA6B0-0x0000000183CFA6F0
+		[StaticAccessor("GetHGGlobalGameManager().GetCullingSystem()", StaticAccessorType.Dot)]
+		public static uint AddCullViewByPlanes(IntPtr planes, int planeCount, int cameraInstantId, ulong sceneMask, uint cullingLayerMask, uint objectFlagsValue, uint objectFlagsMask, [IsReadOnly] in LODCrossFadeConfig config, float viewScreenSizeMinSquared, CameraType viewType = CameraType.Unknown /* Metadata: 0x01FBB329 */, uint uniqueId = 0 /* Metadata: 0x01FBB32B */, int depthBufferWidth = 0 /* Metadata: 0x01FBB32C */, int depthBufferHeight = 0 /* Metadata: 0x01FBB32D */, [IsReadOnly] in Matrix4x4 cullingMatrix = null, [IsReadOnly] in Vector3 cameraDir = null, [IsReadOnly] in Vector4 cameraProjInfo = null, float cullingRadius = 0f /* Metadata: 0x01FBB32E */, float ocScreenSizeMinSquared = 0.05f /* Metadata: 0x01FBB332 */) => default; // 0x0000000189DE44AC-0x0000000189DE4518
+		[StaticAccessor("GetHGGlobalGameManager().GetCullingSystem()", StaticAccessorType.Dot)]
+		public static void DispatchBatchCullingJobs() {} // 0x0000000189DE460C-0x0000000189DE4638
+		[StaticAccessor("GetHGGlobalGameManager().GetCullingSystem()", StaticAccessorType.Dot)]
+		public static JobHandle GetCullingViewFence(uint viewHandle) => default; // 0x0000000189DE4700-0x0000000189DE4728
+		[StaticAccessor("HyperGryph::HGCullingSystem", StaticAccessorType.DoubleColon)]
+		public static void ExtractShadowCullDataForDirLight(Camera camera, Matrix4x4 lightLocalToWorld, float shadowMaxDistance, float nearPlaneOffset, out HGShadowCullData shadowCullData) {
+			shadowCullData = default;
+		} // 0x0000000189DE469C-0x0000000189DE46C0
+		[StaticAccessor("HyperGryph::HGCullingSystem", StaticAccessorType.DoubleColon)]
+		public static void GetPSSMSplitMatrices([IsReadOnly] in HGShadowCullData shadowCullData, float splitPercentage0, float splitPercentage1, int shadowResolution, out Matrix4x4 outViewMatrix, out Matrix4x4 outProjMatrix, out Matrix4x4 outProjFlipYMatrix, out ShadowSplitData outSplitData) {
+			outViewMatrix = default;
+			outProjMatrix = default;
+			outProjFlipYMatrix = default;
+			outSplitData = default;
+		} // 0x0000000189DE4728-0x0000000189DE478C
+		public static LightCullResult CullLights(uint viewHandle, Vector3 cameraPosition, uint maxCount, int cameraInstanceId) => default; // 0x0000000189DE459C-0x0000000189DE460C
+		[NativeName("CullLightsScriptable")]
+		[StaticAccessor("GetHGGlobalGameManager().GetCullingSystem()", StaticAccessorType.Dot)]
+		private static void CullLightsInternal(uint viewHandle, Vector3 cameraPosition, uint maxCount, int cameraInstanceId, IntPtr result) {} // 0x0000000189DE4578-0x0000000189DE459C
+		private static void GetCullingViewFence_Injected(uint viewHandle, out JobHandle ret) {
+			ret = default;
+		} // 0x0000000189DE46C0-0x0000000189DE4700
+		private static void ExtractShadowCullDataForDirLight_Injected(Camera camera, ref Matrix4x4 lightLocalToWorld, float shadowMaxDistance, float nearPlaneOffset, out HGShadowCullData shadowCullData) {
+			shadowCullData = default;
+		} // 0x0000000189DE4638-0x0000000189DE469C
+		private static void CullLightsInternal_Injected(uint viewHandle, ref Vector3 cameraPosition, uint maxCount, int cameraInstanceId, IntPtr result) {} // 0x0000000189DE4518-0x0000000189DE4578
+	}
+}
+
+namespace UnityEngine.Internal
+{
+	[Serializable]
+	[AttributeUsage(AttributeTargets.Parameter | AttributeTargets.GenericParameter)]
+	public class DefaultValueAttribute : Attribute // TypeDefIndex: 46962
+	{
+		// Fields
+		private object DefaultValue; // 0x10
+	
+		// Properties
+		public object Value { get => default; } // 0x0000000183D66B80-0x0000000183D66B90 
+	
+		// Constructors
+		public DefaultValueAttribute() {} // Dummy constructor
+		public DefaultValueAttribute(string value) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Methods
+		public override bool Equals(object obj) => default; // 0x0000000189DE32CC-0x0000000189DE3344
+		public override int GetHashCode() => default; // 0x0000000189DE3344-0x0000000189DE3370
+	}
+
+	[Serializable]
+	public class ExcludeFromDocsAttribute : Attribute // TypeDefIndex: 46963
+	{
+		// Constructors
+		public ExcludeFromDocsAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+}
+
+namespace UnityEngine.Jobs
+{
+	[JobProducerType(typeof(IJobParallelForTransformExtensions.TransformParallelForLoopStruct<T>))]
+	public interface IJobParallelForTransform // TypeDefIndex: 46706
+	{
+		// Methods
+		void Execute(int index, TransformAccess transform);
+	}
+
+	[JobProducerType(typeof(IJobParallelForTransformExtensions.TransformCrossFrameStruct<T>))]
+	public interface IJobCrossFrameTransform // TypeDefIndex: 46707
+	{
+		// Methods
+		void Execute(int index, TransformAccess transform);
+	}
+
+	public static class IJobParallelForTransformExtensions // TypeDefIndex: 46714
+	{
+		// Nested types
+		internal struct TransformCrossFrameStruct<T> // TypeDefIndex: 46710
+			where T : struct, IJobCrossFrameTransform
+		{
+			// Fields
+			public static IntPtr jobReflectionData;
+	
+			// Nested types
+			private struct TransformJobData // TypeDefIndex: 46708
+			{
+				// Fields
+				public IntPtr TransformAccessArray;
+				public int IsReadOnly;
+			}
+	
+			public delegate void ExecuteJobFunction(ref ref T jobData, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 46709; 0x00000000-0x00000000
+	
+			// Methods
+			public static IntPtr Initialize() => default;
+			public static void Execute(ref ref T jobData, IntPtr jobData2, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex) {}
+		}
+	
+		internal struct TransformParallelForLoopStruct<T> // TypeDefIndex: 46713
+			where T : struct, IJobParallelForTransform
+		{
+			// Fields
+			public static IntPtr jobReflectionData;
+	
+			// Nested types
+			private struct TransformJobData // TypeDefIndex: 46711
+			{
+				// Fields
+				public IntPtr TransformAccessArray;
+				public int IsReadOnly;
+			}
+	
+			public delegate void ExecuteJobFunction(ref ref T jobData, IntPtr additionalPtr, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex); // TypeDefIndex: 46712; 0x00000000-0x00000000
+	
+			// Methods
+			public static IntPtr Initialize() => default;
+			public static void Execute(ref ref T jobData, IntPtr jobData2, IntPtr bufferRangePatchData, ref JobRanges ranges, int jobIndex) {}
+		}
+	
+		// Extension methods
+		public static JobHandle Schedule<T>(this T jobData, TransformAccessArray transforms, JobHandle dependsOn = default)
+			where T : struct, IJobParallelForTransform => default;
+		public static JobHandle ScheduleReadOnly<T>(this T jobData, TransformAccessArray transforms, int batchSize, JobHandle dependsOn = default)
+			where T : struct, IJobParallelForTransform => default;
+		public static void RunReadOnly<T>(this T jobData, TransformAccessArray transforms)
+			where T : struct, IJobParallelForTransform {}
+		public static JobHandle ScheduleCrossFrameReadOnly<T>(this T jobData, TransformAccessArray transforms, JobHandle dependsOn = default)
+			where T : struct, IJobCrossFrameTransform => default;
+	}
+
+	[NativeHeader("Runtime/Transform/ScriptBindings/TransformAccess.bindings.h")]
+	public struct TransformAccess // TypeDefIndex: 46715
+	{
+		// Fields
+		private IntPtr hierarchy; // 0x00
+		private int index; // 0x08
+	
+		// Properties
+		public Vector3 position { get => default; set {} } // 0x0000000189DD8624-0x0000000189DD866C 0x0000000189DD86E4-0x0000000189DD86F8
+		public Quaternion rotation { get => default; set {} } // 0x0000000189DD866C-0x0000000189DD86A8 0x0000000189DD86F8-0x0000000189DD870C
+		public Vector3 localPosition { get => default; set {} } // 0x0000000189DD84E8-0x0000000189DD8530 0x0000000189DD86A8-0x0000000189DD86BC
+		public Quaternion localRotation { get => default; set {} } // 0x0000000189DD8530-0x0000000189DD856C 0x0000000189DD86BC-0x0000000189DD86D0
+		public Vector3 localScale { get => default; set {} } // 0x0000000189DD856C-0x0000000189DD85B4 0x0000000189DD86D0-0x0000000189DD86E4
+		public Matrix4x4 localToWorldMatrix { get => default; } // 0x0000000189DD85B4-0x0000000189DD8624 
+		public bool isValid { get => default; } // 0x00000001822B9B50-0x00000001822B9B60 
+	
+		// Methods
+		[NativeMethod(Name = "TransformAccessBindings::GetPosition", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		private static void GetPosition(ref TransformAccess access, out Vector3 p) {
+			p = default;
+		} // 0x0000000189DD830C-0x0000000189DD8350
+		[NativeMethod(Name = "TransformAccessBindings::SetPosition", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		private static void SetPosition(ref TransformAccess access, ref Vector3 p) {} // 0x0000000189DD8460-0x0000000189DD84A4
+		[NativeMethod(Name = "TransformAccessBindings::GetRotation", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		private static void GetRotation(ref TransformAccess access, out Quaternion r) {
+			r = default;
+		} // 0x0000000189DD8350-0x0000000189DD8394
+		[NativeMethod(Name = "TransformAccessBindings::SetRotation", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		private static void SetRotation(ref TransformAccess access, ref Quaternion r) {} // 0x0000000189DD84A4-0x0000000189DD84E8
+		[NativeMethod(Name = "TransformAccessBindings::GetLocalPosition", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		private static void GetLocalPosition(ref TransformAccess access, out Vector3 p) {
+			p = default;
+		} // 0x0000000189DD81FC-0x0000000189DD8240
+		[NativeMethod(Name = "TransformAccessBindings::SetLocalPosition", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		private static void SetLocalPosition(ref TransformAccess access, ref Vector3 p) {} // 0x0000000189DD8394-0x0000000189DD83D8
+		[NativeMethod(Name = "TransformAccessBindings::GetLocalRotation", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		private static void GetLocalRotation(ref TransformAccess access, out Quaternion r) {
+			r = default;
+		} // 0x0000000189DD8240-0x0000000189DD8284
+		[NativeMethod(Name = "TransformAccessBindings::SetLocalRotation", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		private static void SetLocalRotation(ref TransformAccess access, ref Quaternion r) {} // 0x0000000189DD83D8-0x0000000189DD841C
+		[NativeMethod(Name = "TransformAccessBindings::GetLocalScale", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		private static void GetLocalScale(ref TransformAccess access, out Vector3 r) {
+			r = default;
+		} // 0x0000000189DD8284-0x0000000189DD82C8
+		[NativeMethod(Name = "TransformAccessBindings::SetLocalScale", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		private static void SetLocalScale(ref TransformAccess access, ref Vector3 r) {} // 0x0000000189DD841C-0x0000000189DD8460
+		[NativeMethod(Name = "TransformAccessBindings::GetLocalToWorldMatrix", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		private static void GetLocalToWorldMatrix(ref TransformAccess access, out Matrix4x4 m) {
+			m = default;
+		} // 0x0000000189DD82C8-0x0000000189DD830C
+	}
+
+	[NativeType(Header = "Runtime/Transform/ScriptBindings/TransformAccess.bindings.h", CodegenOptions = CodegenOptions.Custom)]
+	public struct TransformAccessArray : IDisposable // TypeDefIndex: 46716
+	{
+		// Fields
+		private IntPtr m_TransformArray; // 0x00
+	
+		// Properties
+		public bool isCreated { get => default; } // 0x0000000184274818-0x0000000184274824 
+		public Transform this[int index] { get => default; set {} } // 0x0000000184275E34-0x0000000184275E44 0x0000000184275E28-0x0000000184275E34
+		public int length { get => default; } // 0x000000018427153C-0x0000000184271548 
+	
+		// Constructors
+		public TransformAccessArray(Transform[] transforms, int desiredJobCount = -1 /* Metadata: 0x01FBB2D9 */) : this() {
+			m_TransformArray = default;
+		} // 0x0000000182FAEA50-0x0000000182FAEAA0
+		public TransformAccessArray(int capacity, int desiredJobCount = -1 /* Metadata: 0x01FBB2DA */) : this() {
+			m_TransformArray = default;
+		} // 0x0000000184274114-0x000000018427413C
+	
+		// Methods
+		public static void Allocate(int capacity, int desiredJobCount, out TransformAccessArray array) {
+			array = default;
+		} // 0x0000000184274920-0x000000018427493C
+		public void Dispose() {} // 0x00000001842747F8-0x0000000184274818
+		internal IntPtr GetTransformAccessArrayForSchedule() => default; // 0x000000018253BE20-0x000000018253BE30
+		public void Add(Transform transform) {} // 0x0000000184271548-0x0000000184271554
+		[NativeMethod(Name = "TransformAccessArrayBindings::Create", IsFreeFunction = true)]
+		private static IntPtr Create(int capacity, int desiredJobCount) => default; // 0x0000000183864080-0x00000001838640D0
+		[NativeMethod(Name = "DestroyTransformAccessArray", IsFreeFunction = true)]
+		private static void DestroyTransformAccessArray(IntPtr transformArray) {} // 0x00000001839D2740-0x00000001839D2780
+		[NativeMethod(Name = "TransformAccessArrayBindings::SetTransforms", IsFreeFunction = true)]
+		private static void SetTransforms(IntPtr transformArrayIntPtr, Transform[] transforms) {} // 0x0000000182FAEAA0-0x0000000182FAEAF0
+		[NativeMethod(Name = "TransformAccessArrayBindings::AddTransform", IsFreeFunction = true)]
+		private static void Add(IntPtr transformArrayIntPtr, Transform transform) {} // 0x0000000183493D60-0x0000000183493DB0
+		[NativeMethod(Name = "TransformAccessArrayBindings::GetSortedTransformAccess", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		internal static IntPtr GetSortedTransformAccess(IntPtr transformArrayIntPtr) => default; // 0x0000000189DD81C8-0x0000000189DD81FC
+		[NativeMethod(Name = "TransformAccessArrayBindings::GetSortedToUserIndex", IsThreadSafe = true, IsFreeFunction = true, ThrowsException = true)]
+		internal static IntPtr GetSortedToUserIndex(IntPtr transformArrayIntPtr) => default; // 0x0000000189DD8194-0x0000000189DD81C8
+		[NativeMethod(Name = "TransformAccessArrayBindings::GetLength", IsThreadSafe = true, IsFreeFunction = true)]
+		internal static int GetLength(IntPtr transformArrayIntPtr) => default; // 0x00000001836CAC60-0x00000001836CACA0
+		[NativeMethod(Name = "TransformAccessArrayBindings::GetTransform", IsFreeFunction = true, ThrowsException = true)]
+		internal static Transform GetTransform(IntPtr transformArrayIntPtr, int index) => default; // 0x0000000183D49860-0x0000000183D498B0
+		[NativeMethod(Name = "TransformAccessArrayBindings::SetTransform", IsFreeFunction = true, ThrowsException = true)]
+		internal static void SetTransform(IntPtr transformArrayIntPtr, int index, Transform transform) {} // 0x000000018361D7D0-0x000000018361D830
+	}
+}
+
+namespace UnityEngine.LowLevel
+{
+	[MovedFrom("UnityEngine.Experimental.LowLevel")]
+	[NativeType(Header = "Runtime/Misc/PlayerLoop.h")]
+	[RequiredByNativeCode]
+	internal struct PlayerLoopSystemInternal // TypeDefIndex: 46792
+	{
+		// Fields
+		public System.Type type; // 0x00
+		public PlayerLoopSystem.UpdateFunction updateDelegate; // 0x08
+		public IntPtr updateFunction; // 0x10
+		public IntPtr loopConditionFunction; // 0x18
+		public int numSubSystems; // 0x20
+	}
+
+	[MovedFrom("UnityEngine.Experimental.LowLevel")]
+	public struct PlayerLoopSystem // TypeDefIndex: 46794
+	{
+		// Fields
+		public System.Type type; // 0x00
+		public PlayerLoopSystem[] subSystemList; // 0x08
+		public UpdateFunction updateDelegate; // 0x10
+		public IntPtr updateFunction; // 0x18
+		public IntPtr loopConditionFunction; // 0x20
+	
+		// Nested types
+		public delegate void UpdateFunction(); // TypeDefIndex: 46793; 0x0000000182313770-0x0000000182313910
+	
+		// Methods
+		public override string ToString() => default; // 0x0000000189DE63D0-0x0000000189DE63F0
+	}
+
+	[MovedFrom("UnityEngine.Experimental.LowLevel")]
+	public class PlayerLoop // TypeDefIndex: 46795
+	{
+		// Constructors
+		public PlayerLoop() {} // Dummy constructor
+	
+		// Methods
+		public static PlayerLoopSystem GetCurrentPlayerLoop() => default; // 0x0000000182D94EF0-0x0000000182D94F50
+		public static void SetPlayerLoop(PlayerLoopSystem loop) {} // 0x0000000182D95560-0x0000000182D95640
+		private static int PlayerLoopSystemToInternal(PlayerLoopSystem sys, ref List<PlayerLoopSystemInternal> internalSys) => default; // 0x0000000182D958A0-0x0000000182D95D60
+		private static PlayerLoopSystem InternalToPlayerLoopSystem(PlayerLoopSystemInternal[] internalSys, ref int offset) => default; // 0x0000000182D94F90-0x0000000182D95560
+		[NativeMethod(IsFreeFunction = true)]
+		private static PlayerLoopSystemInternal[] GetCurrentPlayerLoopInternal() => default; // 0x0000000182D94F50-0x0000000182D94F90
+		[NativeMethod(IsFreeFunction = true)]
+		private static void SetPlayerLoopInternal(PlayerLoopSystemInternal[] loop) {} // 0x0000000182D95D60-0x0000000182D95DA0
+	}
+}
+
+namespace UnityEngine.Networking.PlayerConnection
+{
+	[Serializable]
+	public class MessageEventArgs // TypeDefIndex: 46949
+	{
+		// Fields
+		public int playerId; // 0x10
+		public byte[] data; // 0x18
+	
+		// Constructors
+		public MessageEventArgs() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public interface IEditorPlayerConnection // TypeDefIndex: 46950
+	{
+		// Methods
+		void Register(Guid messageId, UnityAction<MessageEventArgs> callback);
+		void RegisterConnection(UnityAction<int> callback);
+		void RegisterDisconnection(UnityAction<int> callback);
+		void Send(Guid messageId, byte[] data);
+	}
+
+	[Serializable]
+	public class PlayerConnection : ScriptableObject, IEditorPlayerConnection // TypeDefIndex: 46954
+	{
+		// Fields
+		internal static IPlayerEditorConnectionNative connectionNative; // 0x00
+		[SerializeField]
+		private PlayerEditorConnectionEvents m_PlayerEditorConnectionEvents; // 0x18
+		[SerializeField]
+		private List<int> m_connectedPlayers; // 0x20
+		private bool m_IsInitilized; // 0x28
+		private static PlayerConnection s_Instance; // 0x08
+	
+		// Properties
+		public static PlayerConnection instance { get => default; } // 0x0000000189DE5C6C-0x0000000189DE5CF0 
+		public bool isConnected { get => default; } // 0x0000000189DE5CF0-0x0000000189DE5D5C 
+	
+		// Constructors
+		public PlayerConnection() {} // 0x0000000189DE5BB4-0x0000000189DE5C6C
+	
+		// Methods
+		private static PlayerConnection CreateInstance() => default; // 0x0000000189DE4EA8-0x0000000189DE4F4C
+		public void OnEnable() {} // 0x0000000189DE51D8-0x0000000189DE5258
+		private IPlayerEditorConnectionNative GetConnectionNativeApi() => default; // 0x0000000189DE5048-0x0000000189DE50A8
+		public void Register(Guid messageId, UnityAction<MessageEventArgs> callback) {} // 0x0000000189DE542C-0x0000000189DE5698
+		public void Unregister(Guid messageId, UnityAction<MessageEventArgs> callback) {} // 0x0000000189DE5A20-0x0000000189DE5BB4
+		public void RegisterConnection(UnityAction<int> callback) {} // 0x0000000189DE5258-0x0000000189DE53CC
+		public void RegisterDisconnection(UnityAction<int> callback) {} // 0x0000000189DE53CC-0x0000000189DE542C
+		public void UnregisterConnection(UnityAction<int> callback) {} // 0x0000000189DE5960-0x0000000189DE59C0
+		public void UnregisterDisconnection(UnityAction<int> callback) {} // 0x0000000189DE59C0-0x0000000189DE5A20
+		public void Send(Guid messageId, byte[] data) {} // 0x0000000189DE5698-0x0000000189DE57FC
+		public bool TrySend(Guid messageId, byte[] data) => default; // 0x0000000189DE57FC-0x0000000189DE5960
+		public bool BlockUntilRecvMsg(Guid messageId, int timeout) => default; // 0x0000000189DE4C7C-0x0000000189DE4E1C
+		public void DisconnectAll() {} // 0x0000000189DE4F4C-0x0000000189DE4FBC
+		[RequiredByNativeCode]
+		private static void MessageCallbackInternal(IntPtr data, ulong size, ulong guid, string messageId) {} // 0x0000000189DE50A8-0x0000000189DE51D8
+		[RequiredByNativeCode]
+		private static void ConnectedCallbackInternal(int playerId) {} // 0x0000000189DE4E1C-0x0000000189DE4EA8
+		[RequiredByNativeCode]
+		private static void DisconnectedCallback(int playerId) {} // 0x0000000189DE4FBC-0x0000000189DE5048
+	}
+
+	[Serializable]
+	internal class PlayerEditorConnectionEvents // TypeDefIndex: 46961
+	{
+		// Fields
+		[SerializeField]
+		public List<MessageTypeSubscribers> messageTypeSubscribers; // 0x10
+		[SerializeField]
+		public ConnectionChangeEvent connectionEvent; // 0x18
+		[SerializeField]
+		public ConnectionChangeEvent disconnectionEvent; // 0x20
+	
+		// Nested types
+		[Serializable]
+		public class MessageEvent : UnityEvent<MessageEventArgs> // TypeDefIndex: 46955
+		{
+			// Constructors
+			public MessageEvent() {} // 0x0000000189DE4A4C-0x0000000189DE4A88
+		}
+	
+		[Serializable]
+		public class ConnectionChangeEvent : UnityEvent<int> // TypeDefIndex: 46956
+		{
+			// Constructors
+			public ConnectionChangeEvent() {} // 0x0000000189DE2F80-0x0000000189DE2FBC
+		}
+	
+		[Serializable]
+		public class MessageTypeSubscribers // TypeDefIndex: 46957
+		{
+			// Fields
+			[SerializeField]
+			private string m_messageTypeId; // 0x10
+			public int subscriberCount; // 0x18
+			public MessageEvent messageCallback; // 0x20
+	
+			// Properties
+			public Guid MessageTypeId { get => default; set {} } // 0x0000000189DE4AF0-0x0000000189DE4B28 0x0000000189DE4B28-0x0000000189DE4B54
+	
+			// Constructors
+			public MessageTypeSubscribers() {} // 0x0000000189DE4A88-0x0000000189DE4AF0
+		}
+	
+		// Constructors
+		public PlayerEditorConnectionEvents() {} // 0x0000000189DE62F8-0x0000000189DE63D0
+	
+		// Methods
+		public void InvokeMessageIdSubscribers(Guid messageId, byte[] data, int playerId) {} // 0x0000000189DE5EEC-0x0000000189DE61B8
+		public UnityEvent<MessageEventArgs> AddAndCreate(Guid messageId) => default; // 0x0000000189DE5D5C-0x0000000189DE5EEC
+		public void UnregisterManagedCallback(Guid messageId, UnityAction<MessageEventArgs> callback) {} // 0x0000000189DE61B8-0x0000000189DE62F8
+	}
+}
+
+namespace UnityEngine.Playables
+{
+	public struct FrameData // TypeDefIndex: 47100
+	{
+		// Fields
+		internal ulong m_FrameID; // 0x00
+		internal double m_DeltaTime; // 0x08
+		internal float m_Weight; // 0x10
+		internal float m_EffectiveWeight; // 0x14
+		internal double m_EffectiveParentDelay; // 0x18
+		internal float m_EffectiveParentSpeed; // 0x20
+		internal float m_EffectiveSpeed; // 0x24
+		internal Flags m_Flags; // 0x28
+		internal PlayableOutput m_Output; // 0x30
+	
+		// Properties
+		public float deltaTime { get => default; } // 0x0000000183D878F0-0x0000000183D87900 
+		public float weight { get => default; } // 0x0000000183D85830-0x0000000183D85840 
+		public float effectiveWeight { get => default; } // 0x0000000183D63000-0x0000000183D63010 
+		public float effectiveSpeed { get => default; } // 0x0000000183D86CB0-0x0000000183D86CC0 
+		public EvaluationType evaluationType { get => default; } // 0x0000000189DED430-0x0000000189DED43C 
+		public bool seekOccurred { get => default; } // 0x0000000189DED43C-0x0000000189DED444 
+		public bool timeLooped { get => default; } // 0x0000000189DED450-0x0000000189DED45C 
+		public bool timeHeld { get => default; } // 0x0000000189DED444-0x0000000189DED450 
+		public PlayableOutput output { get => default; } // 0x0000000183D87900-0x0000000183D87910 
+		public PlayState effectivePlayState { get => default; } // 0x0000000189DED418-0x0000000189DED430 
+	
+		// Nested types
+		[Flags]
+		internal enum Flags // TypeDefIndex: 47098
+		{
+			Evaluate = 1,
+			SeekOccured = 2,
+			Loop = 4,
+			Hold = 8,
+			EffectivePlayStateDelayed = 16,
+			EffectivePlayStatePlaying = 32
+		}
+	
+		public enum EvaluationType // TypeDefIndex: 47099
+		{
+			Evaluate = 0,
+			Playback = 1
+		}
+	
+		// Methods
+		private bool HasFlags(Flags flag) => default; // 0x0000000189DED40C-0x0000000189DED418
+	}
+
+	[NativeHeader("Runtime/Director/Core/FrameRate.h")]
+	[UsedByNativeCode("FrameRate")]
+	internal struct FrameRate : IEquatable<FrameRate> // TypeDefIndex: 47101
+	{
+		// Fields
+		[Ignore]
+		public static readonly FrameRate k_24Fps; // 0x00
+		[Ignore]
+		public static readonly FrameRate k_23_976Fps; // 0x04
+		[Ignore]
+		public static readonly FrameRate k_25Fps; // 0x08
+		[Ignore]
+		public static readonly FrameRate k_30Fps; // 0x0C
+		[Ignore]
+		public static readonly FrameRate k_29_97Fps; // 0x10
+		[Ignore]
+		public static readonly FrameRate k_50Fps; // 0x14
+		[Ignore]
+		public static readonly FrameRate k_60Fps; // 0x18
+		[Ignore]
+		public static readonly FrameRate k_59_94Fps; // 0x1C
+		[SerializeField]
+		private int m_Rate; // 0x00
+	
+		// Properties
+		public bool dropFrame { get => default; } // 0x0000000189284DFC-0x0000000189284E04 
+		public double rate { get => default; } // 0x0000000189DED758-0x0000000189DED7B4 
+	
+		// Constructors
+		public FrameRate(uint frameRate = 0 /* Metadata: 0x01FBB515 */, bool drop = false /* Metadata: 0x01FBB516 */) : this() {
+			m_Rate = default;
+		} // 0x0000000189DED740-0x0000000189DED758
+		static FrameRate() {
+			k_24Fps = default;
+			k_23_976Fps = default;
+			k_25Fps = default;
+			k_30Fps = default;
+			k_29_97Fps = default;
+			k_50Fps = default;
+			k_60Fps = default;
+			k_59_94Fps = default;
+		} // 0x0000000189DED674-0x0000000189DED740
+	
+		// Methods
+		public bool Equals(FrameRate other) => default; // 0x00000001822A9C10-0x00000001822A9C20
+		public override bool Equals(object obj) => default; // 0x0000000189DED45C-0x0000000189DED4CC
+		public override int GetHashCode() => default; // 0x0000000183D85860-0x0000000183D85870
+		public override string ToString() => default; // 0x0000000189DED624-0x0000000189DED674
+		public string ToString(string format, IFormatProvider formatProvider) => default; // 0x0000000189DED4CC-0x0000000189DED624
+	}
+
+	public interface INotification // TypeDefIndex: 47102
+	{
+		// Properties
+		PropertyName id { get; }
+	}
+
+	[RequiredByNativeCode]
+	public interface INotificationReceiver // TypeDefIndex: 47103
+	{
+		// Methods
+		[RequiredByNativeCode]
+		void OnNotify(Playable origin, INotification notification, object context);
+	}
+
+	public interface IPlayable // TypeDefIndex: 47104
+	{
+		// Methods
+		PlayableHandle GetHandle();
+	}
+
+	public interface IPlayableBehaviour // TypeDefIndex: 47105
+	{
+		// Methods
+		[RequiredByNativeCode]
+		void OnGraphStart(Playable playable);
+		[RequiredByNativeCode]
+		void OnGraphStop(Playable playable);
+		[RequiredByNativeCode]
+		void OnPlayableCreate(Playable playable);
+		[RequiredByNativeCode]
+		void OnPlayableDestroy(Playable playable);
+		[RequiredByNativeCode]
+		void OnBehaviourPlay(Playable playable, FrameData info);
+		[RequiredByNativeCode]
+		void OnBehaviourPause(Playable playable, FrameData info);
+		[RequiredByNativeCode]
+		void PrepareFrame(Playable playable, FrameData info);
+		[RequiredByNativeCode]
+		void ProcessFrame(Playable playable, FrameData info, object playerData);
+	}
+
+	public interface IPlayableOutput // TypeDefIndex: 47106
+	{
+		// Methods
+		PlayableOutputHandle GetHandle();
+	}
+
+	public enum DirectorWrapMode // TypeDefIndex: 47107
+	{
+		Hold = 0,
+		Loop = 1,
+		None = 2
+	}
+
+	[RequiredByNativeCode]
+	public struct Playable : IPlayable, IEquatable<Playable> // TypeDefIndex: 47108
+	{
+		// Fields
+		private PlayableHandle m_Handle; // 0x00
+		private static readonly Playable m_NullPlayable; // 0x00
+	
+		// Properties
+		public static Playable Null { get => default; } // 0x0000000182D27B00-0x0000000182D27B70 
+	
+		// Constructors
+		[VisibleToOtherModules]
+		internal Playable(PlayableHandle handle) : this() {
+			m_Handle = default;
+		} // 0x0000000183D5E620-0x0000000183D5E630
+		static Playable() {
+			m_NullPlayable = default;
+		} // 0x0000000183D05190-0x0000000183D05200
+	
+		// Methods
+		public static Playable Create(PlayableGraph graph, int inputCount = 0 /* Metadata: 0x01FBB51A */) => default; // 0x0000000189DF11C0-0x0000000189DF1260
+		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public bool IsPlayableOfType<T>()
+			where T : struct, IPlayable => default;
+		public System.Type GetPlayableType() => default; // 0x0000000189DF12EC-0x0000000189DF1358
+		public bool Equals(Playable other) => default; // 0x0000000189DF1260-0x0000000189DF12EC
+	}
+
+	public interface IPlayableAsset // TypeDefIndex: 47109
+	{
+		// Properties
+		double duration { get; }
+	
+		// Methods
+		Playable CreatePlayable(PlayableGraph graph, GameObject owner);
+	}
+
+	[Serializable]
+	[AssetFileNameExtension("playable", new string[0])]
+	[RequiredByNativeCode]
+	public abstract class PlayableAsset : ScriptableObject, IPlayableAsset // TypeDefIndex: 47110
+	{
+		// Properties
+		public virtual double duration { get; } // 0x0000000189DEF44C-0x0000000189DEF49C 
+		public virtual IEnumerable<PlayableBinding> outputs { get; } // 0x0000000189DEF49C-0x0000000189DEF4EC 
+	
+		// Constructors
+		protected PlayableAsset() {} // 0x000000018286F540-0x000000018286F550
+	
+		// Methods
+		public abstract Playable CreatePlayable(PlayableGraph graph, GameObject owner);
+		[RequiredByNativeCode]
+		internal static void Internal_CreatePlayable(PlayableAsset asset, PlayableGraph graph, GameObject go, IntPtr ptr) {} // 0x0000000189DEF354-0x0000000189DEF420
+		[RequiredByNativeCode]
+		internal static void Internal_GetPlayableAssetDuration(PlayableAsset asset, IntPtr ptrToDouble) {} // 0x0000000189DEF420-0x0000000189DEF44C
+	}
+
+	[Serializable]
+	[RequiredByNativeCode]
+	public abstract class PlayableBehaviour : IPlayableBehaviour, ICloneable // TypeDefIndex: 47111
+	{
+		// Constructors
+		public PlayableBehaviour() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public virtual void OnGraphStart(Playable playable) {} // 0x000000018350B670-0x000000018350B680
+		public virtual void OnGraphStop(Playable playable) {} // 0x000000018350B670-0x000000018350B680
+		public virtual void OnPlayableCreate(Playable playable) {} // 0x000000018350B670-0x000000018350B680
+		public virtual void OnPlayableDestroy(Playable playable) {} // 0x000000018350B670-0x000000018350B680
+		public virtual void OnBehaviourPlay(Playable playable, FrameData info) {} // 0x000000018350B670-0x000000018350B680
+		public virtual void OnBehaviourPause(Playable playable, FrameData info) {} // 0x000000018350B670-0x000000018350B680
+		public virtual void PrepareData(Playable playable, FrameData info) {} // 0x000000018350B670-0x000000018350B680
+		public virtual void PrepareFrame(Playable playable, FrameData info) {} // 0x000000018350B670-0x000000018350B680
+		public virtual void ProcessFrame(Playable playable, FrameData info, object playerData) {} // 0x000000018350B670-0x000000018350B680
+		public virtual object Clone() => default; // 0x0000000189DEF4EC-0x0000000189DEF4F4
+	}
+
+	public struct PlayableBinding // TypeDefIndex: 47113
+	{
+		// Fields
+		private string m_StreamName; // 0x00
+		private UnityEngine.Object m_SourceObject; // 0x08
+		private System.Type m_SourceBindingType; // 0x10
+		private CreateOutputMethod m_CreateOutputMethod; // 0x18
+		public static readonly PlayableBinding[] None; // 0x00
+		public static readonly double DefaultDuration; // 0x08
+	
+		// Properties
+		public UnityEngine.Object sourceObject { get => default; } // 0x0000000183D85A90-0x0000000183D85AA0 
+	
+		// Nested types
+		[VisibleToOtherModules]
+		internal delegate PlayableOutput CreateOutputMethod(PlayableGraph graph, string name); // TypeDefIndex: 47112; 0x000000018500B710-0x000000018500B750
+	
+		// Constructors
+		static PlayableBinding() {
+			None = default;
+			DefaultDuration = default;
+		} // 0x0000000189DEF61C-0x0000000189DEF69C
+	
+		// Methods
+		internal PlayableOutput CreateOutput(PlayableGraph graph) => default; // 0x0000000189DEF56C-0x0000000189DEF61C
+		[VisibleToOtherModules]
+		internal static PlayableBinding CreateInternal(string name, UnityEngine.Object sourceObject, System.Type sourceType, CreateOutputMethod createFunction) => default; // 0x0000000189DEF4F4-0x0000000189DEF56C
+	}
+
+	public enum PlayableTraversalMode // TypeDefIndex: 47114
+	{
+		Mix = 0,
+		Passthrough = 1
+	}
+
+	public static class PlayableExtensions // TypeDefIndex: 47115
+	{
+		// Extension methods
+		public static bool IsNull<U>(this U playable)
+			where U : struct, IPlayable => default;
+		public static bool IsValid<U>(this U playable)
+			where U : struct, IPlayable => default;
+		public static void Destroy<U>(this U playable)
+			where U : struct, IPlayable {}
+		public static PlayableGraph GetGraph<U>(this U playable)
+			where U : struct, IPlayable => default;
+		public static PlayState GetPlayState<U>(this U playable)
+			where U : struct, IPlayable => default;
+		public static void Play<U>(this U playable)
+			where U : struct, IPlayable {}
+		public static void Pause<U>(this U playable)
+			where U : struct, IPlayable {}
+		public static void SetSpeed<U>(this U playable, double value)
+			where U : struct, IPlayable {}
+		public static double GetSpeed<U>(this U playable)
+			where U : struct, IPlayable => default;
+		public static void SetDuration<U>(this U playable, double value)
+			where U : struct, IPlayable {}
+		public static double GetDuration<U>(this U playable)
+			where U : struct, IPlayable => default;
+		public static void SetTime<U>(this U playable, double value)
+			where U : struct, IPlayable {}
+		public static void SetTimeUncheck<U>(this U playable, double value)
+			where U : struct, IPlayable {}
+		public static double GetTime<U>(this U playable)
+			where U : struct, IPlayable => default;
+		public static double GetPreviousTime<U>(this U playable)
+			where U : struct, IPlayable => default;
+		public static bool IsDone<U>(this U playable)
+			where U : struct, IPlayable => default;
+		public static void SetPropagateSetTime<U>(this U playable, bool value)
+			where U : struct, IPlayable {}
+		public static bool CanDestroy<U>(this U playable)
+			where U : struct, IPlayable => default;
+		public static void SetInputCount<U>(this U playable, int value)
+			where U : struct, IPlayable {}
+		public static int GetInputCount<U>(this U playable)
+			where U : struct, IPlayable => default;
+		public static Playable GetInput<U>(this U playable, int inputPort)
+			where U : struct, IPlayable => default;
+		public static void SetInputWeight<U>(this U playable, int inputIndex, float weight)
+			where U : struct, IPlayable {}
+		public static void SetInputWeightUncheck<U>(this U playable, int inputIndex, float weight)
+			where U : struct, IPlayable {}
+		public static void SetInputWeight<U, V>(this U playable, V input, float weight)
+			where U : struct, IPlayable
+			where V : struct, IPlayable {}
+		public static float GetInputWeight<U>(this U playable, int inputIndex)
+			where U : struct, IPlayable => default;
+		public static void ConnectInput<U, V>(this U playable, int inputIndex, V sourcePlayable, int sourceOutputIndex)
+			where U : struct, IPlayable
+			where V : struct, IPlayable {}
+		public static void ConnectInput<U, V>(this U playable, int inputIndex, V sourcePlayable, int sourceOutputIndex, float weight)
+			where U : struct, IPlayable
+			where V : struct, IPlayable {}
+		public static void DisconnectInput<U>(this U playable, int inputPort)
+			where U : struct, IPlayable {}
+		public static int AddInput<U, V>(this U playable, V sourcePlayable, int sourceOutputIndex, float weight = 0f /* Metadata: 0x01FBB51D */)
+			where U : struct, IPlayable
+			where V : struct, IPlayable => default;
+		public static float GetLeadTime<U>(this U playable)
+			where U : struct, IPlayable => default;
+		public static void SetTraversalMode<U>(this U playable, PlayableTraversalMode mode)
+			where U : struct, IPlayable {}
+		internal static DirectorWrapMode GetTimeWrapMode<U>(this U playable)
+			where U : struct, IPlayable => default;
+		internal static void SetTimeWrapMode<U>(this U playable, DirectorWrapMode value)
+			where U : struct, IPlayable {}
+	}
+
+	public enum DirectorUpdateMode // TypeDefIndex: 47116
+	{
+		DSPClock = 0,
+		GameTime = 1,
+		UnscaledGameTime = 2,
+		Manual = 3
+	}
+
+	[NativeHeader("Runtime/Director/Core/HPlayableOutput.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayableGraph.h")]
+	[NativeHeader("Runtime/Export/Director/PlayableGraph.bindings.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[UsedByNativeCode]
+	public struct PlayableGraph // TypeDefIndex: 47117
+	{
+		// Fields
+		internal IntPtr m_Handle; // 0x00
+		internal uint m_Version; // 0x08
+	
+		// Methods
+		public Playable GetRootPlayable(int index) => default; // 0x0000000182E6B6A0-0x0000000182E6B720
+		public bool Connect<U, V>(U source, int sourceOutputPort, V destination, int destinationInputPort)
+			where U : struct, IPlayable
+			where V : struct, IPlayable => default;
+		public void Disconnect<U>(U input, int inputPort)
+			where U : struct, IPlayable {}
+		public void DestroyPlayable<U>(U playable)
+			where U : struct, IPlayable {}
+		public PlayableOutput GetOutput(int index) => default; // 0x0000000182D27B70-0x0000000182D27BF0
+		public void Evaluate() {} // 0x000000018426FA94-0x000000018426FAA0
+		public static PlayableGraph Create() => default; // 0x0000000182966B40-0x0000000182966BA0
+		public static PlayableGraph Create(string name) => default; // 0x0000000182966BA0-0x0000000182966BD0
+		[FreeFunction("PlayableGraphBindings::Destroy", HasExplicitThis = true, ThrowsException = true)]
+		public void Destroy() {} // 0x0000000184272200-0x0000000184272208
+		public bool IsValid() => default; // 0x0000000184271BA4-0x0000000184271BAC
+		[FreeFunction("PlayableGraphBindings::IsPlaying", HasExplicitThis = true, ThrowsException = true)]
+		public bool IsPlaying() => default; // 0x0000000189DEF97C-0x0000000189DEF984
+		[FreeFunction("PlayableGraphBindings::Play", HasExplicitThis = true, ThrowsException = true)]
+		public void Play() {} // 0x0000000184271B9C-0x0000000184271BA4
+		[FreeFunction("PlayableGraphBindings::Stop", HasExplicitThis = true, ThrowsException = true)]
+		public void Stop() {} // 0x0000000184271BC0-0x0000000184271BC8
+		[FreeFunction("PlayableGraphBindings::Evaluate", HasExplicitThis = true, ThrowsException = true)]
+		public void Evaluate([System.ComponentModel.DefaultValue("0")] float deltaTime) {} // 0x000000018427439C-0x00000001842743A4
+		[FreeFunction("PlayableGraphBindings::SetTimeUpdateMode", HasExplicitThis = true, ThrowsException = true)]
+		public void SetTimeUpdateMode(DirectorUpdateMode value) {} // 0x0000000184272118-0x0000000184272120
+		[FreeFunction("PlayableGraphBindings::GetResolver", HasExplicitThis = true, ThrowsException = true)]
+		public IExposedPropertyTable GetResolver() => default; // 0x0000000189DEF88C-0x0000000189DEF894
+		[FreeFunction("PlayableGraphBindings::GetPlayableCount", HasExplicitThis = true, ThrowsException = true)]
+		public int GetPlayableCount() => default; // 0x0000000189DEF850-0x0000000189DEF858
+		[FreeFunction("PlayableGraphBindings::GetRootPlayableCount", HasExplicitThis = true, ThrowsException = true)]
+		public int GetRootPlayableCount() => default; // 0x0000000189DEF8C8-0x0000000189DEF8D0
+		[FreeFunction("PlayableGraphBindings::SynchronizeEvaluation", HasExplicitThis = true, ThrowsException = true)]
+		internal void SynchronizeEvaluation(PlayableGraph playable) {} // 0x0000000189DEFA14-0x0000000189DEFA28
+		[FreeFunction("PlayableGraphBindings::GetOutputCount", HasExplicitThis = true, ThrowsException = true)]
+		public int GetOutputCount() => default; // 0x00000001842732AC-0x00000001842732B4
+		[FreeFunction("PlayableGraphBindings::SetEarlyPrepareFrame", HasExplicitThis = true, ThrowsException = true)]
+		public void SetEarlyPrepareFrame(bool enable) {} // 0x0000000189DEF9C8-0x0000000189DEF9D0
+		[FreeFunction("PlayableGraphBindings::IsEarlyPrepareFrame", HasExplicitThis = true, ThrowsException = true)]
+		public bool IsEarlyPrepareFrame() => default; // 0x0000000189DEF904-0x0000000189DEF90C
+		[FreeFunction("PlayableGraphBindings::CreatePlayableHandle", HasExplicitThis = true, ThrowsException = true)]
+		internal PlayableHandle CreatePlayableHandle() => default; // 0x0000000189DEF6E0-0x0000000189DEF70C
+		[FreeFunction("PlayableGraphBindings::CreateScriptOutputInternal", HasExplicitThis = true, ThrowsException = true)]
+		internal bool CreateScriptOutputInternal(string name, out PlayableOutputHandle handle) {
+			handle = default;
+			return default;
+		} // 0x0000000189DEF760-0x0000000189DEF768
+		[FreeFunction("PlayableGraphBindings::GetRootPlayableInternal", HasExplicitThis = true, ThrowsException = true)]
+		internal PlayableHandle GetRootPlayableInternal(int index) => default; // 0x0000000182E6B720-0x0000000182E6B750
+		[FreeFunction("PlayableGraphBindings::IsMatchFrameRateEnabled", HasExplicitThis = true, ThrowsException = true)]
+		internal bool IsMatchFrameRateEnabled() => default; // 0x0000000189DEF940-0x0000000189DEF948
+		[FreeFunction("PlayableGraphBindings::GetFrameRate", HasExplicitThis = true, ThrowsException = true)]
+		internal FrameRate GetFrameRate() => default; // 0x0000000189DEF7F8-0x0000000189DEF81C
+		[FreeFunction("PlayableGraphBindings::GetOutputInternal", HasExplicitThis = true, ThrowsException = true)]
+		private bool GetOutputInternal(int index, out PlayableOutputHandle handle) {
+			handle = default;
+			return default;
+		} // 0x00000001842732A4-0x00000001842732AC
+		[FreeFunction("PlayableGraphBindings::ConnectInternal", HasExplicitThis = true, ThrowsException = true)]
+		private bool ConnectInternal(PlayableHandle source, int sourceOutputPort, PlayableHandle destination, int destinationInputPort) => default; // 0x0000000184275A18-0x0000000184275A38
+		[FreeFunction("PlayableGraphBindings::DisconnectInternal", HasExplicitThis = true, ThrowsException = true)]
+		private void DisconnectInternal(PlayableHandle playable, int inputPort) {} // 0x0000000184276158-0x000000018427616C
+		[FreeFunction("PlayableGraphBindings::DestroyPlayableInternal", HasExplicitThis = true, ThrowsException = true)]
+		private void DestroyPlayableInternal(PlayableHandle playable) {} // 0x00000001842761CC-0x00000001842761E0
+		[FreeFunction("PlayableGraphBindings::EnableFixedFrameRate", HasExplicitThis = true, ThrowsException = true)]
+		public void EnableFixedFrameRate(float sampleRatio) {} // 0x0000000189DEF7AC-0x0000000189DEF7B4
+		private static void Create_Injected(string name, out PlayableGraph ret) {
+			ret = default;
+		} // 0x0000000182966BD0-0x0000000182966C20
+		private static void Destroy_Injected(ref PlayableGraph _unity_self) {} // 0x00000001836975A0-0x00000001836975E0
+		private static bool IsValid_Injected(ref PlayableGraph _unity_self) => default; // 0x0000000183391B80-0x0000000183391BC0
+		private static bool IsPlaying_Injected(ref PlayableGraph _unity_self) => default; // 0x0000000189DEF948-0x0000000189DEF97C
+		private static void Play_Injected(ref PlayableGraph _unity_self) {} // 0x0000000183565AB0-0x0000000183565B20
+		private static void Stop_Injected(ref PlayableGraph _unity_self) {} // 0x000000018364A770-0x000000018364A8A0
+		private static void Evaluate_Injected(ref PlayableGraph _unity_self, [System.ComponentModel.DefaultValue("0")] float deltaTime) {} // 0x00000001830AF270-0x00000001830AF2C0
+		private static void SetTimeUpdateMode_Injected(ref PlayableGraph _unity_self, DirectorUpdateMode value) {} // 0x0000000182968000-0x0000000182968050
+		private static IExposedPropertyTable GetResolver_Injected(ref PlayableGraph _unity_self) => default; // 0x0000000189DEF858-0x0000000189DEF88C
+		private static int GetPlayableCount_Injected(ref PlayableGraph _unity_self) => default; // 0x0000000189DEF81C-0x0000000189DEF850
+		private static int GetRootPlayableCount_Injected(ref PlayableGraph _unity_self) => default; // 0x0000000189DEF894-0x0000000189DEF8C8
+		private static void SynchronizeEvaluation_Injected(ref PlayableGraph _unity_self, ref PlayableGraph playable) {} // 0x0000000189DEF9D0-0x0000000189DEFA14
+		private static int GetOutputCount_Injected(ref PlayableGraph _unity_self) => default; // 0x0000000183D00EB0-0x0000000183D00EF0
+		private static void SetEarlyPrepareFrame_Injected(ref PlayableGraph _unity_self, bool enable) {} // 0x0000000189DEF984-0x0000000189DEF9C8
+		private static bool IsEarlyPrepareFrame_Injected(ref PlayableGraph _unity_self) => default; // 0x0000000189DEF8D0-0x0000000189DEF904
+		private static void CreatePlayableHandle_Injected(ref PlayableGraph _unity_self, out PlayableHandle ret) {
+			ret = default;
+		} // 0x0000000189DEF69C-0x0000000189DEF6E0
+		private static bool CreateScriptOutputInternal_Injected(ref PlayableGraph _unity_self, string name, out PlayableOutputHandle handle) {
+			handle = default;
+			return default;
+		} // 0x0000000189DEF70C-0x0000000189DEF760
+		private static void GetRootPlayableInternal_Injected(ref PlayableGraph _unity_self, int index, out PlayableHandle ret) {
+			ret = default;
+		} // 0x0000000182E6B750-0x0000000182E6B7B0
+		private static bool IsMatchFrameRateEnabled_Injected(ref PlayableGraph _unity_self) => default; // 0x0000000189DEF90C-0x0000000189DEF940
+		private static void GetFrameRate_Injected(ref PlayableGraph _unity_self, out FrameRate ret) {
+			ret = default;
+		} // 0x0000000189DEF7B4-0x0000000189DEF7F8
+		private static bool GetOutputInternal_Injected(ref PlayableGraph _unity_self, int index, out PlayableOutputHandle handle) {
+			handle = default;
+			return default;
+		} // 0x0000000183B5C790-0x0000000183B5C7F0
+		private static bool ConnectInternal_Injected(ref PlayableGraph _unity_self, ref PlayableHandle source, int sourceOutputPort, ref PlayableHandle destination, int destinationInputPort) => default; // 0x00000001831620C0-0x0000000183162130
+		private static void DisconnectInternal_Injected(ref PlayableGraph _unity_self, ref PlayableHandle playable, int inputPort) {} // 0x0000000183354AB0-0x0000000183354B10
+		private static void DestroyPlayableInternal_Injected(ref PlayableGraph _unity_self, ref PlayableHandle playable) {} // 0x00000001833916C0-0x0000000183391710
+		private static void EnableFixedFrameRate_Injected(ref PlayableGraph _unity_self, float sampleRatio) {} // 0x0000000189DEF768-0x0000000189DEF7AC
+	}
+
+	public enum PlayState // TypeDefIndex: 47118
+	{
+		Paused = 0,
+		Playing = 1,
+		Delayed = 2
+	}
+
+	[NativeHeader("Runtime/Export/Director/PlayableHandle.bindings.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayableGraph.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[UsedByNativeCode]
+	public struct PlayableHandle : IEquatable<PlayableHandle> // TypeDefIndex: 47119
+	{
+		// Fields
+		internal IntPtr m_Handle; // 0x00
+		internal uint m_Version; // 0x08
+		private static readonly PlayableHandle m_Null; // 0x00
+	
+		// Properties
+		public static PlayableHandle Null { get => default; } // 0x00000001828096B0-0x0000000182809720 
+	
+		// Constructors
+		static PlayableHandle() {
+			m_Null = default;
+		} // 0x0000000183D3D2E0-0x0000000183D3D320
+	
+		// Methods
+		internal T GetObject<T>()
+			where T : class, IPlayableBehaviour => default;
+		public object GetWrapScriptObject() => default; // 0x0000000189DF038C-0x0000000189DF03F8
+		[VisibleToOtherModules]
+		internal bool IsPlayableOfType<T>() => default;
+		internal Playable GetInput(int inputPort) => default; // 0x0000000183626280-0x0000000183626300
+		internal bool SetInputWeight(int inputIndex, float weight) => default; // 0x0000000182C9E950-0x0000000182C9EAB0
+		internal bool SetInputWeightUncheck(int inputIndex, float weight) => default; // 0x0000000189DF06E8-0x0000000189DF0774
+		internal float GetInputWeight(int inputIndex) => default; // 0x0000000189DEFF18-0x0000000189DEFF8C
+		internal void Destroy() {} // 0x0000000183269C40-0x0000000183269CD0
+		public static bool operator ==(PlayableHandle x, PlayableHandle y) => default; // 0x0000000189DF0B3C-0x0000000189DF0BA4
+		public override bool Equals(object p) => default; // 0x0000000189DEFC88-0x0000000189DEFD0C
+		public bool Equals(PlayableHandle other) => default; // 0x0000000189DEFD0C-0x0000000189DEFD80
+		public override int GetHashCode() => default; // 0x0000000183D87960-0x0000000183D87970
+		internal static bool CompareVersion(PlayableHandle lhs, PlayableHandle rhs) => default; // 0x000000018775423C-0x0000000187754254
+		internal bool CheckInputBounds(int inputIndex) => default; // 0x0000000182C9EAB0-0x0000000182C9EB10
+		internal bool CheckInputBounds(int inputIndex, bool acceptAny) => default; // 0x0000000182C9EC00-0x0000000182C9ED00
+		internal bool CheckInputBoundsUncheck(int inputIndex) => default; // 0x0000000189DEFAA8-0x0000000189DEFC88
+		[VisibleToOtherModules]
+		internal bool IsNull() => default; // 0x0000000189DF04AC-0x0000000189DF04F8
+		[VisibleToOtherModules]
+		internal bool IsValid() => default; // 0x0000000182809890-0x0000000182809910
+		[FreeFunction("PlayableHandleBindings::GetPlayableType", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal System.Type GetPlayableType() => default; // 0x000000018311C7E0-0x000000018311C860
+		[FreeFunction("PlayableHandleBindings::GetJobType", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal System.Type GetJobType() => default; // 0x0000000189DF0040-0x0000000189DF008C
+		[FreeFunction("PlayableHandleBindings::SetScriptInstance", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void SetScriptInstance(object scriptInstance) {} // 0x0000000189DF0910-0x0000000189DF096C
+		[FreeFunction("PlayableHandleBindings::CanDestroy", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal bool CanDestroy() => default; // 0x0000000189DEFA5C-0x0000000189DEFAA8
+		[FreeFunction("PlayableHandleBindings::GetPlayState", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal PlayState GetPlayState() => default; // 0x0000000189DF0140-0x0000000189DF018C
+		[FreeFunction("PlayableHandleBindings::Play", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void Play() {} // 0x0000000183469860-0x00000001834698B0
+		[FreeFunction("PlayableHandleBindings::Pause", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void Pause() {} // 0x00000001831DD0D0-0x00000001831DD150
+		[FreeFunction("PlayableHandleBindings::GetSpeed", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal double GetSpeed() => default; // 0x0000000189DF02C0-0x0000000189DF030C
+		[FreeFunction("PlayableHandleBindings::SetSpeed", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void SetSpeed(double value) {} // 0x0000000182FBB810-0x0000000182FBB8A0
+		[FreeFunction("PlayableHandleBindings::GetTime", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal double GetTime() => default; // 0x0000000182D66610-0x0000000182D66690
+		[FreeFunction("PlayableHandleBindings::SetTime", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void SetTime(double value) {} // 0x000000018303A560-0x000000018303A5F0
+		[FreeFunction("PlayableHandleBindings::IsDone", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal bool IsDone() => default; // 0x0000000189DF042C-0x0000000189DF0478
+		[FreeFunction("PlayableHandleBindings::SetDone", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void SetDone(bool value) {} // 0x0000000189DF053C-0x0000000189DF0598
+		[FreeFunction("PlayableHandleBindings::GetDuration", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal double GetDuration() => default; // 0x0000000189DEFDB4-0x0000000189DEFE00
+		[FreeFunction("PlayableHandleBindings::SetDuration", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void SetDuration(double value) {} // 0x0000000189DF05DC-0x0000000189DF0638
+		[FreeFunction("PlayableHandleBindings::SetPropagateSetTime", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void SetPropagateSetTime(bool value) {} // 0x0000000189DF0870-0x0000000189DF08CC
+		[FreeFunction("PlayableHandleBindings::GetGraph", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal PlayableGraph GetGraph() => default; // 0x0000000183269CD0-0x0000000183269D40
+		[FreeFunction("PlayableHandleBindings::GetInputCount", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal int GetInputCount() => default; // 0x0000000182C9ED00-0x0000000182C9ED80
+		[FreeFunction("PlayableHandleBindings::SetInputCount", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void SetInputCount(int value) {} // 0x0000000182809A90-0x0000000182809AF0
+		[FreeFunction("PlayableHandleBindings::SetInputWeight", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void SetInputWeight(PlayableHandle input, float weight) {} // 0x0000000189DF07C8-0x0000000189DF082C
+		[FreeFunction("PlayableHandleBindings::GetPreviousTime", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal double GetPreviousTime() => default; // 0x0000000189DF01C0-0x0000000189DF020C
+		[FreeFunction("PlayableHandleBindings::GetLeadTime", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal float GetLeadTime() => default; // 0x0000000189DF00C0-0x0000000189DF010C
+		[FreeFunction("PlayableHandleBindings::SetTraversalMode", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void SetTraversalMode(PlayableTraversalMode mode) {} // 0x0000000189DF0AE4-0x0000000189DF0B3C
+		[FreeFunction("PlayableHandleBindings::GetJobData", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal IntPtr GetJobData() => default; // 0x0000000189DEFFC0-0x0000000189DF000C
+		[FreeFunction("PlayableHandleBindings::GetTimeWrapMode", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal DirectorWrapMode GetTimeWrapMode() => default; // 0x0000000189DF0340-0x0000000189DF038C
+		[FreeFunction("PlayableHandleBindings::SetTimeWrapMode", HasExplicitThis = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void SetTimeWrapMode(DirectorWrapMode mode) {} // 0x0000000189DF0A4C-0x0000000189DF0AA4
+		[FreeFunction("PlayableHandleBindings::GetScriptInstance", HasExplicitThis = true, ThrowsException = true)]
+		private object GetScriptInstance() => default; // 0x0000000189DF0240-0x0000000189DF028C
+		[FreeFunction("PlayableHandleBindings::GetInputHandle", HasExplicitThis = true, ThrowsException = true)]
+		private PlayableHandle GetInputHandle(int index) => default; // 0x0000000183626300-0x0000000183626380
+		[FreeFunction("PlayableHandleBindings::SetInputWeightFromIndex", HasExplicitThis = true, ThrowsException = true)]
+		private void SetInputWeightFromIndex(int index, float weight) {} // 0x0000000182C9EB10-0x0000000182C9EBA0
+		[FreeFunction("PlayableHandleBindings::GetInputWeightFromIndex", HasExplicitThis = true, ThrowsException = true)]
+		private float GetInputWeightFromIndex(int index) => default; // 0x0000000189DEFEC0-0x0000000189DEFF18
+		[FreeFunction("PlayableHandleBindings::SetInputWeightFromIndex", HasExplicitThis = true, IsThreadSafe = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		private void SetInputWeightFromIndexUncheck(int index, float weight) {} // 0x0000000189DF0688-0x0000000189DF06E8
+		[FreeFunction("PlayableHandleBindings::GetInputCountUncheck", HasExplicitThis = true, IsThreadSafe = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal int GetInputCountUncheck() => default; // 0x0000000189DEFE34-0x0000000189DEFE80
+		[FreeFunction("PlayableHandleBindings::SetTimeUncheck", HasExplicitThis = true, IsThreadSafe = true, ThrowsException = true)]
+		[VisibleToOtherModules]
+		internal void SetTimeUncheck(double value) {} // 0x0000000189DF09B0-0x0000000189DF0A0C
+		private static bool IsNull_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DF0478-0x0000000189DF04AC
+		private static bool IsValid_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000182809910-0x0000000182809950
+		private static System.Type GetPlayableType_Injected(ref PlayableHandle _unity_self) => default; // 0x000000018311C860-0x000000018311C8A0
+		private static System.Type GetJobType_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DF000C-0x0000000189DF0040
+		private static void SetScriptInstance_Injected(ref PlayableHandle _unity_self, object scriptInstance) {} // 0x0000000189DF08CC-0x0000000189DF0910
+		private static bool CanDestroy_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DEFA28-0x0000000189DEFA5C
+		private static PlayState GetPlayState_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DF010C-0x0000000189DF0140
+		private static void Play_Injected(ref PlayableHandle _unity_self) {} // 0x00000001834698B0-0x00000001834698F0
+		private static void Pause_Injected(ref PlayableHandle _unity_self) {} // 0x00000001831DD150-0x00000001831DD190
+		private static double GetSpeed_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DF028C-0x0000000189DF02C0
+		private static void SetSpeed_Injected(ref PlayableHandle _unity_self, double value) {} // 0x0000000182FBB8A0-0x0000000182FBB8F0
+		private static double GetTime_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000182D66690-0x0000000182D666D0
+		private static void SetTime_Injected(ref PlayableHandle _unity_self, double value) {} // 0x000000018303A5F0-0x000000018303A640
+		private static bool IsDone_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DF03F8-0x0000000189DF042C
+		private static void SetDone_Injected(ref PlayableHandle _unity_self, bool value) {} // 0x0000000189DF04F8-0x0000000189DF053C
+		private static double GetDuration_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DEFD80-0x0000000189DEFDB4
+		private static void SetDuration_Injected(ref PlayableHandle _unity_self, double value) {} // 0x0000000189DF0598-0x0000000189DF05DC
+		private static void SetPropagateSetTime_Injected(ref PlayableHandle _unity_self, bool value) {} // 0x0000000189DF082C-0x0000000189DF0870
+		private static void GetGraph_Injected(ref PlayableHandle _unity_self, out PlayableGraph ret) {
+			ret = default;
+		} // 0x0000000183269D40-0x0000000183269D90
+		private static int GetInputCount_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000182C9ED80-0x0000000182C9EE20
+		private static void SetInputCount_Injected(ref PlayableHandle _unity_self, int value) {} // 0x0000000182809AF0-0x0000000182809B40
+		private static void SetInputWeight_Injected(ref PlayableHandle _unity_self, ref PlayableHandle input, float weight) {} // 0x0000000189DF0774-0x0000000189DF07C8
+		private static double GetPreviousTime_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DF018C-0x0000000189DF01C0
+		private static float GetLeadTime_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DF008C-0x0000000189DF00C0
+		private static void SetTraversalMode_Injected(ref PlayableHandle _unity_self, PlayableTraversalMode mode) {} // 0x0000000189DF0AA4-0x0000000189DF0AE4
+		private static IntPtr GetJobData_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DEFF8C-0x0000000189DEFFC0
+		private static DirectorWrapMode GetTimeWrapMode_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DF030C-0x0000000189DF0340
+		private static void SetTimeWrapMode_Injected(ref PlayableHandle _unity_self, DirectorWrapMode mode) {} // 0x0000000189DF0A0C-0x0000000189DF0A4C
+		private static object GetScriptInstance_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DF020C-0x0000000189DF0240
+		private static void GetInputHandle_Injected(ref PlayableHandle _unity_self, int index, out PlayableHandle ret) {
+			ret = default;
+		} // 0x0000000183626380-0x00000001836263E0
+		private static void SetInputWeightFromIndex_Injected(ref PlayableHandle _unity_self, int index, float weight) {} // 0x0000000182C9EBA0-0x0000000182C9EC00
+		private static float GetInputWeightFromIndex_Injected(ref PlayableHandle _unity_self, int index) => default; // 0x0000000189DEFE80-0x0000000189DEFEC0
+		private static void SetInputWeightFromIndexUncheck_Injected(ref PlayableHandle _unity_self, int index, float weight) {} // 0x0000000189DF0638-0x0000000189DF0688
+		private static int GetInputCountUncheck_Injected(ref PlayableHandle _unity_self) => default; // 0x0000000189DEFE00-0x0000000189DEFE34
+		private static void SetTimeUncheck_Injected(ref PlayableHandle _unity_self, double value) {} // 0x0000000189DF096C-0x0000000189DF09B0
+	}
+
+	[RequiredByNativeCode]
+	public struct PlayableOutput : IPlayableOutput, IEquatable<PlayableOutput> // TypeDefIndex: 47120
+	{
+		// Fields
+		private PlayableOutputHandle m_Handle; // 0x00
+		private static readonly PlayableOutput m_NullPlayableOutput; // 0x00
+	
+		// Properties
+		public static PlayableOutput Null { get => default; } // 0x0000000189DF1168-0x0000000189DF11C0 
+	
+		// Constructors
+		[VisibleToOtherModules]
+		internal PlayableOutput(PlayableOutputHandle handle) : this() {
+			m_Handle = default;
+		} // 0x0000000183D5E620-0x0000000183D5E630
+		static PlayableOutput() {
+			m_NullPlayableOutput = default;
+		} // 0x0000000183D087C0-0x0000000183D08830
+	
+		// Methods
+		public PlayableOutputHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public bool IsPlayableOutputOfType<T>()
+			where T : struct, IPlayableOutput => default;
+		public bool Equals(PlayableOutput other) => default; // 0x0000000189DF10DC-0x0000000189DF1168
+	}
+
+	public static class PlayableOutputExtensions // TypeDefIndex: 47121
+	{
+		// Extension methods
+		public static bool IsOutputValid<U>(this U output)
+			where U : struct, IPlayableOutput => default;
+		public static void SetReferenceObject<U>(this U output, UnityEngine.Object value)
+			where U : struct, IPlayableOutput {}
+		public static UnityEngine.Object GetUserData<U>(this U output)
+			where U : struct, IPlayableOutput => default;
+		public static Playable GetSourcePlayable<U>(this U output)
+			where U : struct, IPlayableOutput => default;
+		public static void SetSourcePlayable<U, V>(this U output, V value)
+			where U : struct, IPlayableOutput
+			where V : struct, IPlayable {}
+		public static void SetSourcePlayable<U, V>(this U output, V value, int port)
+			where U : struct, IPlayableOutput
+			where V : struct, IPlayable {}
+		public static int GetSourceOutputPort<U>(this U output)
+			where U : struct, IPlayableOutput => default;
+		public static void SetWeight<U>(this U output, float value)
+			where U : struct, IPlayableOutput {}
+		public static void PushNotification<U>(this U output, Playable origin, INotification notification, object context = null)
+			where U : struct, IPlayableOutput {}
+		public static void AddNotificationReceiver<U>(this U output, INotificationReceiver receiver)
+			where U : struct, IPlayableOutput {}
+	}
+
+	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
+	[NativeHeader("Runtime/Director/Core/HPlayableOutput.h")]
+	[NativeHeader("Runtime/Export/Director/PlayableOutputHandle.bindings.h")]
+	[UsedByNativeCode]
+	public struct PlayableOutputHandle : IEquatable<PlayableOutputHandle> // TypeDefIndex: 47122
+	{
+		// Fields
+		internal IntPtr m_Handle; // 0x00
+		internal uint m_Version; // 0x08
+		private static readonly PlayableOutputHandle m_Null; // 0x00
+	
+		// Properties
+		public static PlayableOutputHandle Null { get => default; } // 0x0000000183D08830-0x0000000183D08890 
+	
+		// Constructors
+		static PlayableOutputHandle() {
+			m_Null = default;
+		} // 0x0000000183D3D2A0-0x0000000183D3D2E0
+	
+		// Methods
+		[VisibleToOtherModules]
+		internal bool IsPlayableOutputOfType<T>() => default;
+		public override int GetHashCode() => default; // 0x0000000183D87960-0x0000000183D87970
+		public static bool operator ==(PlayableOutputHandle lhs, PlayableOutputHandle rhs) => default; // 0x0000000189DF1074-0x0000000189DF10DC
+		public override bool Equals(object p) => default; // 0x0000000189DF0C44-0x0000000189DF0CC8
+		public bool Equals(PlayableOutputHandle other) => default; // 0x0000000189DF0CC8-0x0000000189DF0D3C
+		internal static bool CompareVersion(PlayableOutputHandle lhs, PlayableOutputHandle rhs) => default; // 0x000000018775423C-0x0000000187754254
+		[VisibleToOtherModules]
+		internal bool IsValid() => default; // 0x0000000182966F40-0x0000000182966F90
+		[FreeFunction("PlayableOutputHandleBindings::GetPlayableOutputType", HasExplicitThis = true, ThrowsException = true)]
+		internal System.Type GetPlayableOutputType() => default; // 0x0000000183387BA0-0x0000000183387BF0
+		[FreeFunction("PlayableOutputHandleBindings::SetReferenceObject", HasExplicitThis = true, ThrowsException = true)]
+		internal void SetReferenceObject(UnityEngine.Object target) {} // 0x0000000189DF0F78-0x0000000189DF0FD4
+		[FreeFunction("PlayableOutputHandleBindings::GetUserData", HasExplicitThis = true, ThrowsException = true)]
+		internal UnityEngine.Object GetUserData() => default; // 0x0000000189DF0E10-0x0000000189DF0E5C
+		[FreeFunction("PlayableOutputHandleBindings::GetSourcePlayable", HasExplicitThis = true, ThrowsException = true)]
+		internal PlayableHandle GetSourcePlayable() => default; // 0x0000000189DF0D80-0x0000000189DF0DDC
+		[FreeFunction("PlayableOutputHandleBindings::SetSourcePlayable", HasExplicitThis = true, ThrowsException = true)]
+		internal void SetSourcePlayable(PlayableHandle target, int port) {} // 0x0000000183334A10-0x0000000183334A80
+		[FreeFunction("PlayableOutputHandleBindings::GetSourceOutputPort", HasExplicitThis = true, ThrowsException = true)]
+		internal int GetSourceOutputPort() => default; // 0x000000018348E5F0-0x000000018348E640
+		[FreeFunction("PlayableOutputHandleBindings::SetWeight", HasExplicitThis = true, ThrowsException = true)]
+		internal void SetWeight(float weight) {} // 0x0000000189DF1018-0x0000000189DF1074
+		[FreeFunction("PlayableOutputHandleBindings::PushNotification", HasExplicitThis = true, ThrowsException = true)]
+		internal void PushNotification(PlayableHandle origin, INotification notification, object context) {} // 0x0000000189DF0EC0-0x0000000189DF0F34
+		[FreeFunction("PlayableOutputHandleBindings::AddNotificationReceiver", HasExplicitThis = true, ThrowsException = true)]
+		internal void AddNotificationReceiver(INotificationReceiver receiver) {} // 0x0000000189DF0BE8-0x0000000189DF0C44
+		private static bool IsValid_Injected(ref PlayableOutputHandle _unity_self) => default; // 0x0000000182966F90-0x0000000182966FD0
+		private static System.Type GetPlayableOutputType_Injected(ref PlayableOutputHandle _unity_self) => default; // 0x0000000183387BF0-0x0000000183387C30
+		private static void SetReferenceObject_Injected(ref PlayableOutputHandle _unity_self, UnityEngine.Object target) {} // 0x0000000189DF0F34-0x0000000189DF0F78
+		private static UnityEngine.Object GetUserData_Injected(ref PlayableOutputHandle _unity_self) => default; // 0x0000000189DF0DDC-0x0000000189DF0E10
+		private static void GetSourcePlayable_Injected(ref PlayableOutputHandle _unity_self, out PlayableHandle ret) {
+			ret = default;
+		} // 0x0000000189DF0D3C-0x0000000189DF0D80
+		private static void SetSourcePlayable_Injected(ref PlayableOutputHandle _unity_self, ref PlayableHandle target, int port) {} // 0x0000000183334A80-0x0000000183334AE0
+		private static int GetSourceOutputPort_Injected(ref PlayableOutputHandle _unity_self) => default; // 0x000000018348E640-0x000000018348E680
+		private static void SetWeight_Injected(ref PlayableOutputHandle _unity_self, float weight) {} // 0x0000000189DF0FD4-0x0000000189DF1018
+		private static void PushNotification_Injected(ref PlayableOutputHandle _unity_self, ref PlayableHandle origin, INotification notification, object context) {} // 0x0000000189DF0E5C-0x0000000189DF0EC0
+		private static void AddNotificationReceiver_Injected(ref PlayableOutputHandle _unity_self, INotificationReceiver receiver) {} // 0x0000000189DF0BA4-0x0000000189DF0BE8
+	}
+
+	public struct ScriptPlayable<T> : IPlayable, IEquatable<ScriptPlayable<T>> // TypeDefIndex: 47123
+		where T : class, IPlayableBehaviour, new()
+	{
+		// Fields
+		private PlayableHandle m_Handle;
+		private static readonly ScriptPlayable<T> m_NullPlayable;
+	
+		// Properties
+		public static ScriptPlayable<T> Null { get => default; }
+	
+		// Constructors
+		internal ScriptPlayable(PlayableHandle handle) : this() {
+			m_Handle = default;
+		}
+		static ScriptPlayable() {
+			m_NullPlayable = default;
+		}
+	
+		// Methods
+		public static ScriptPlayable<T> Create(PlayableGraph graph, int inputCount = 0 /* Metadata: 0x01FBB528 */) => default;
+		public static ScriptPlayable<T> Create(PlayableGraph graph, T template, int inputCount = 0 /* Metadata: 0x01FBB529 */) => default;
+		private static PlayableHandle CreateHandle(PlayableGraph graph, T template, int inputCount) => default;
+		private static object CreateScriptInstance() => default;
+		private static object CloneScriptInstance(IPlayableBehaviour source) => default;
+		private static object CloneScriptInstanceFromEngineObject(UnityEngine.Object source) => default;
+		private static object CloneScriptInstanceFromIClonable(ICloneable source) => default;
+		public PlayableHandle GetHandle() => default;
+		public T GetBehaviour() => default;
+		public static implicit operator Playable(ScriptPlayable<T> playable) => default;
+		public static explicit operator ScriptPlayable<T>(Playable playable) => default;
+		public bool Equals(ScriptPlayable<T> other) => default;
+	}
+
+	public static class ScriptPlayableBinding // TypeDefIndex: 47124
+	{
+		// Methods
+		public static PlayableBinding Create(string name, UnityEngine.Object key, System.Type type) => default; // 0x0000000189DF1EAC-0x0000000189DF1F94
+		private static PlayableOutput CreateScriptOutput(PlayableGraph graph, string name) => default; // 0x0000000189DF1E70-0x0000000189DF1EAC
+	}
+
+	[RequiredByNativeCode]
+	public struct ScriptPlayableOutput : IPlayableOutput // TypeDefIndex: 47125
+	{
+		// Fields
+		private PlayableOutputHandle m_Handle; // 0x00
+	
+		// Properties
+		public static ScriptPlayableOutput Null { get => default; } // 0x0000000189DF20E8-0x0000000189DF2160 
+	
+		// Constructors
+		internal ScriptPlayableOutput(PlayableOutputHandle handle) : this() {
+			m_Handle = default;
+		} // 0x0000000189DF2010-0x0000000189DF20E8
+	
+		// Methods
+		public static ScriptPlayableOutput Create(PlayableGraph graph, string name) => default; // 0x0000000189DF1F94-0x0000000189DF2010
+		public PlayableOutputHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
+		public static implicit operator PlayableOutput(ScriptPlayableOutput output) => default; // 0x0000000183D85A00-0x0000000183D85A10
+	}
+}
+
+namespace UnityEngine.PlayerLoop
+{
+	[RequiredByNativeCode]
+	public struct TimeUpdate // TypeDefIndex: 46797
+	{
+		// Nested types
+		[RequiredByNativeCode]
+		public struct WaitForLastPresentationAndUpdateTime // TypeDefIndex: 46796
+		{
+		}
+	}
+
+	[MovedFrom("UnityEngine.Experimental.PlayerLoop")]
+	[RequiredByNativeCode]
+	public struct Initialization // TypeDefIndex: 46805
+	{
+		// Nested types
+		[RequiredByNativeCode]
+		public struct ProfilerStartFrame // TypeDefIndex: 46798
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateCameraMotionVectors // TypeDefIndex: 46799
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DirectorSampleTime // TypeDefIndex: 46800
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct AsyncUploadTimeSlicedUpdate // TypeDefIndex: 46801
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct SynchronizeState // TypeDefIndex: 46802
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct SynchronizeInputs // TypeDefIndex: 46803
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct XREarlyUpdate // TypeDefIndex: 46804
+		{
+		}
+	}
+
+	[MovedFrom("UnityEngine.Experimental.PlayerLoop")]
+	[RequiredByNativeCode]
+	public struct EarlyUpdate // TypeDefIndex: 46839
+	{
+		// Nested types
+		[RequiredByNativeCode]
+		public struct PollPlayerConnection // TypeDefIndex: 46806
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PollHtcsPlayerConnection // TypeDefIndex: 46807
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct GpuTimestamp // TypeDefIndex: 46808
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct AnalyticsCoreStatsUpdate // TypeDefIndex: 46809
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UnityWebRequestUpdate // TypeDefIndex: 46810
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateStreamingManager // TypeDefIndex: 46811
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ExecuteMainThreadJobs // TypeDefIndex: 46812
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ProcessMouseInWindow // TypeDefIndex: 46813
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ClearIntermediateRenderers // TypeDefIndex: 46814
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ClearLines // TypeDefIndex: 46815
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PresentBeforeUpdate // TypeDefIndex: 46816
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ResetFrameStatsAfterPresent // TypeDefIndex: 46817
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateAsyncReadbackManager // TypeDefIndex: 46818
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateTextureStreamingManager // TypeDefIndex: 46819
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct HGGlobalGameManagerEarlyUpdate // TypeDefIndex: 46820
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdatePreloading // TypeDefIndex: 46821
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateAsyncInstantiate // TypeDefIndex: 46822
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct RendererNotifyInvisible // TypeDefIndex: 46823
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PlayerCleanupCachedData // TypeDefIndex: 46824
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateMainGameViewRect // TypeDefIndex: 46825
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateCanvasRectTransform // TypeDefIndex: 46826
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateInputManager // TypeDefIndex: 46827
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ProcessRemoteInput // TypeDefIndex: 46828
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct XRUpdate // TypeDefIndex: 46829
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ScriptRunDelayedStartupFrame // TypeDefIndex: 46830
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateKinect // TypeDefIndex: 46831
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DeliverIosPlatformEvents // TypeDefIndex: 46832
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DispatchEventQueueEvents // TypeDefIndex: 46833
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PhysicsResetInterpolatedTransformPosition // TypeDefIndex: 46834
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct SpriteAtlasManagerUpdate // TypeDefIndex: 46835
+		{
+		}
+	
+		[Obsolete("TangoUpdate has been deprecated. Use ARCoreUpdate instead (UnityUpgradable) -> UnityEngine.PlayerLoop.EarlyUpdate/ARCoreUpdate", false)]
+		[RequiredByNativeCode]
+		public struct TangoUpdate // TypeDefIndex: 46836
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ARCoreUpdate // TypeDefIndex: 46837
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PerformanceAnalyticsUpdate // TypeDefIndex: 46838
+		{
+		}
+	}
+
+	[MovedFrom("UnityEngine.Experimental.PlayerLoop")]
+	[RequiredByNativeCode]
+	public struct FixedUpdate // TypeDefIndex: 46853
+	{
+		// Nested types
+		[RequiredByNativeCode]
+		public struct ClearLines // TypeDefIndex: 46840
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DirectorFixedSampleTime // TypeDefIndex: 46841
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct AudioFixedUpdate // TypeDefIndex: 46842
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ScriptRunBehaviourFixedUpdate // TypeDefIndex: 46843
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DirectorFixedUpdate // TypeDefIndex: 46844
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct LegacyFixedAnimationUpdate // TypeDefIndex: 46845
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct XRFixedUpdate // TypeDefIndex: 46846
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PhysicsFixedUpdate // TypeDefIndex: 46847
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct Physics2DFixedUpdate // TypeDefIndex: 46848
+		{
+		}
+	
+		[RequiredByNativeCode]
+		private struct PhysicsClothFixedUpdate // TypeDefIndex: 46849
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DirectorFixedUpdatePostPhysics // TypeDefIndex: 46850
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ScriptRunDelayedFixedFrameRate // TypeDefIndex: 46851
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct NewInputFixedUpdate // TypeDefIndex: 46852
+		{
+		}
+	}
+
+	[MovedFrom("UnityEngine.Experimental.PlayerLoop")]
+	[RequiredByNativeCode]
+	public struct PreUpdate // TypeDefIndex: 46865
+	{
+		// Nested types
+		[RequiredByNativeCode]
+		public struct PhysicsUpdate // TypeDefIndex: 46854
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct Physics2DUpdate // TypeDefIndex: 46855
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct HGGlobalGameManagerPreGameplayUpdate // TypeDefIndex: 46856
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct CheckTexFieldInput // TypeDefIndex: 46857
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct IMGUISendQueuedEvents // TypeDefIndex: 46858
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct SendMouseEvents // TypeDefIndex: 46859
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct AIUpdate // TypeDefIndex: 46860
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct WindUpdate // TypeDefIndex: 46861
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateVideo // TypeDefIndex: 46862
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct NewInputUpdate // TypeDefIndex: 46863
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DirectorPreUpdate // TypeDefIndex: 46864
+		{
+		}
+	}
+
+	[MovedFrom("UnityEngine.Experimental.PlayerLoop")]
+	[RequiredByNativeCode]
+	public struct Update // TypeDefIndex: 46871
+	{
+		// Nested types
+		[RequiredByNativeCode]
+		public struct ScriptRunBehaviourUpdate // TypeDefIndex: 46866
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct HGGlobalGameManagerGameplayUpdate // TypeDefIndex: 46867
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DirectorUpdate // TypeDefIndex: 46868
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ScriptRunDelayedDynamicFrameRate // TypeDefIndex: 46869
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ScriptRunDelayedTasks // TypeDefIndex: 46870
+		{
+		}
+	}
+
+	[MovedFrom("UnityEngine.Experimental.PlayerLoop")]
+	[RequiredByNativeCode]
+	public struct PreLateUpdate // TypeDefIndex: 46888
+	{
+		// Nested types
+		[RequiredByNativeCode]
+		public struct HGGlobalGameManagerPreLateUpdate // TypeDefIndex: 46872
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct Physics2DLateUpdate // TypeDefIndex: 46873
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct AIUpdatePostScript // TypeDefIndex: 46874
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DirectorUpdateAnimationBegin // TypeDefIndex: 46875
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct LegacyAnimationUpdate // TypeDefIndex: 46876
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DirectorUpdateAnimationEnd // TypeDefIndex: 46877
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DirectorDeferredEvaluate // TypeDefIndex: 46878
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UIElementsUpdatePanels // TypeDefIndex: 46879
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateNetworkManager // TypeDefIndex: 46880
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateMasterServerInterface // TypeDefIndex: 46881
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UNetUpdate // TypeDefIndex: 46882
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct EndGraphicsJobsAfterScriptUpdate // TypeDefIndex: 46883
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ParticleSystemBeginUpdateAll // TypeDefIndex: 46884
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ScriptRunBehaviourLateUpdate // TypeDefIndex: 46885
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UIAtlasManagerUpdate // TypeDefIndex: 46886
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ConstraintManagerUpdate // TypeDefIndex: 46887
+		{
+		}
+	}
+
+	[MovedFrom("UnityEngine.Experimental.PlayerLoop")]
+	[RequiredByNativeCode]
+	public struct PostLateUpdate // TypeDefIndex: 46943
+	{
+		// Nested types
+		[RequiredByNativeCode]
+		public struct PlayerSendFrameStarted // TypeDefIndex: 46889
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateRectTransform // TypeDefIndex: 46890
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateCanvasRectTransform // TypeDefIndex: 46891
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PlayerUpdateCanvases // TypeDefIndex: 46892
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateAudio // TypeDefIndex: 46893
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateVideo // TypeDefIndex: 46894
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DirectorLateUpdate // TypeDefIndex: 46895
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ScriptRunDelayedDynamicFrameRate // TypeDefIndex: 46896
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct VFXUpdate // TypeDefIndex: 46897
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ParticleSystemEndUpdateAll // TypeDefIndex: 46898
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct EndGraphicsJobsAfterScriptLateUpdate // TypeDefIndex: 46899
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateSubstance // TypeDefIndex: 46900
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateCustomRenderTextures // TypeDefIndex: 46901
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct XRPostLateUpdate // TypeDefIndex: 46902
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateAllRenderers // TypeDefIndex: 46903
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct HGGlobalGameManagerLateUpdate // TypeDefIndex: 46904
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct HGGlobalGameManagerPostLateUpdate // TypeDefIndex: 46905
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct HGGlobalGameManagerPipelineUpdate // TypeDefIndex: 46906
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct HGGlobalGameManagerUpdateAfterTransformSyncToEcs // TypeDefIndex: 46907
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateLightProbeProxyVolumes // TypeDefIndex: 46908
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct EnlightenRuntimeUpdate // TypeDefIndex: 46909
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateAllSkinnedMeshes // TypeDefIndex: 46910
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ProcessWebSendMessages // TypeDefIndex: 46911
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct SortingGroupsUpdate // TypeDefIndex: 46912
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateVideoTextures // TypeDefIndex: 46913
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DirectorRenderImage // TypeDefIndex: 46914
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PlayerEmitCanvasGeometry // TypeDefIndex: 46915
+		{
+		}
+	
+		[RequiredByNativeCode]
+		internal struct PlayerRenderUIEBatchModeOffscreen // TypeDefIndex: 46916
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct FinishFrameRendering // TypeDefIndex: 46917
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct BatchModeUpdate // TypeDefIndex: 46918
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PlayerSendFrameComplete // TypeDefIndex: 46919
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateCaptureScreenshot // TypeDefIndex: 46920
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PresentAfterDraw // TypeDefIndex: 46921
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ClearImmediateRenderers // TypeDefIndex: 46922
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct XRPostPresent // TypeDefIndex: 46923
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct UpdateResolution // TypeDefIndex: 46924
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct InputEndFrame // TypeDefIndex: 46925
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct GUIClearEvents // TypeDefIndex: 46926
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ShaderHandleErrors // TypeDefIndex: 46927
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ResetInputAxis // TypeDefIndex: 46928
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ThreadedLoadingDebug // TypeDefIndex: 46929
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ProfilerSynchronizeStats // TypeDefIndex: 46930
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct MemoryFrameMaintenance // TypeDefIndex: 46931
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ExecuteGameCenterCallbacks // TypeDefIndex: 46932
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct XRPreEndFrame // TypeDefIndex: 46933
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct ProfilerEndFrame // TypeDefIndex: 46934
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct GraphicsWarmupPreloadedShaders // TypeDefIndex: 46935
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PlayerSendFramePostPresent // TypeDefIndex: 46936
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PhysicsSkinnedClothBeginUpdate // TypeDefIndex: 46937
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct PhysicsSkinnedClothFinishUpdate // TypeDefIndex: 46938
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct DirectorManagerNextFrameEnd // TypeDefIndex: 46939
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct TriggerEndOfFrameCallbacks // TypeDefIndex: 46940
+		{
+		}
+	
+		[RequiredByNativeCode]
+		public struct WaitForLastPresentationAndUpdateTimeAfterFrame // TypeDefIndex: 46941
+		{
+		}
+	
+		[RequiredByNativeCode]
+		internal struct HGGlobalGameManagerPreParticleUpdate // TypeDefIndex: 46942
+		{
+		}
+	}
+}
+
+namespace UnityEngine.Pool
+{
+	public class CollectionPool<TCollection, TItem> // TypeDefIndex: 46945
+		where TCollection : class, ICollection<TItem>, new()
+	{
+		// Fields
+		internal static readonly ObjectPool<TCollection> s_Pool;
+	
+		// Constructors
+		public CollectionPool() {} // Dummy constructor
+		static CollectionPool() {}
+	
+		// Methods
+		public static TCollection Get() => default;
+		public static PooledObject<TCollection> Get(out ref TCollection value) {
+			value = default;
+			return default;
+		}
+		public static void Release(TCollection toRelease) {}
+	}
+
+	public interface IObjectPool<T> // TypeDefIndex: 46946
+		where T : class
+	{
+		// Methods
+		void Release(T element);
+	}
+
+	public class ObjectPool<T> : IDisposable, IObjectPool<T> // TypeDefIndex: 46947
+		where T : class
+	{
+		// Fields
+		internal readonly List<T> m_List;
+		private readonly Func<T> m_CreateFunc;
+		private readonly Action<T> m_ActionOnGet;
+		private readonly Action<T> m_ActionOnRelease;
+		private readonly Action<T> m_ActionOnDestroy;
+		private readonly int m_MaxSize;
+		internal bool m_CollectionCheck;
+	
+		// Properties
+		public int CountAll { get; private set; }
+		public int CountInactive { get => default; }
+	
+		// Constructors
+		public ObjectPool() {} // Dummy constructor
+		public ObjectPool(Func<T> createFunc, Action<T> actionOnGet = null, Action<T> actionOnRelease = null, Action<T> actionOnDestroy = null, bool collectionCheck = true /* Metadata: 0x01FBB311 */, int defaultCapacity = 10 /* Metadata: 0x01FBB312 */, int maxSize = 10000 /* Metadata: 0x01FBB313 */) {}
+	
+		// Methods
+		public T Get() => default;
+		public PooledObject<T> Get(out ref T v) {
+			v = default;
+			return default;
+		}
+		public void Release(T element) {}
+		public void Clear() {}
+		public void Dispose() {}
+	}
+
+	public struct PooledObject<T> : IDisposable // TypeDefIndex: 46948
+		where T : class
+	{
+		// Fields
+		private readonly T m_ToReturn;
+		private readonly IObjectPool<T> m_Pool;
+	
+		// Constructors
+		internal PooledObject(T value, IObjectPool<T> pool) {
+			m_ToReturn = default;
+			m_Pool = default;
+		}
+	
+		// Methods
+		void IDisposable.Dispose() {}
+	}
+}
+
+namespace UnityEngine.Profiling
+{
+	public enum ProfilingHGPass // TypeDefIndex: 46696
+	{
+		None = 0,
+		PreDepth = 1,
+		GBuffer = 2,
+		Shadow = 3,
+		ForwardOpaque = 4,
+		ForwardTransparent = 5,
+		Distortion = 6
+	}
+
+	[MovedFrom("UnityEngine")]
+	[NativeHeader("Runtime/Profiler/Profiler.h")]
+	[NativeHeader("Runtime/ScriptingBackend/ScriptingApi.h")]
+	[NativeHeader("Runtime/Allocator/MemoryManager.h")]
+	[NativeHeader("Runtime/Utilities/MemoryUtilities.h")]
+	[NativeHeader("Runtime/Profiler/ScriptBindings/Profiler.bindings.h")]
+	[UsedByNativeCode]
+	public sealed class Profiler // TypeDefIndex: 46697
+	{
+		// Properties
+		public static bool supported { [NativeMethod(Name = "profiler_is_available", IsFreeFunction = true)] get => default; } // 0x0000000189DD3C68-0x0000000189DD3C94 
+		public static bool enabled { [NativeConditional("ENABLE_PROFILER")] [NativeMethod(Name = "profiler_is_enabled", IsFreeFunction = true, IsThreadSafe = true)] get => default; [NativeMethod(Name = "ProfilerBindings::SetProfilerEnabled", IsFreeFunction = true)] set {} } // 0x0000000189DD3C3C-0x0000000189DD3C68 0x0000000189DD3C94-0x0000000189DD3CC8
+	
+		// Constructors
+		public Profiler() {} // Dummy constructor
+	
+		// Methods
+		[NativeMethod(Name = "ProfilerBindings::GetRuntimeMemorySizeLong", IsFreeFunction = true)]
+		public static long GetRuntimeMemorySizeLong([UnityEngine.Bindings.NotNull("ArgumentNullException")] UnityEngine.Object o) => default; // 0x0000000189DD3BC4-0x0000000189DD3BF8
+		[NativeMethod(Name = "scripting_gc_get_heap_size", IsFreeFunction = true)]
+		public static long GetMonoHeapSizeLong() => default; // 0x00000001826BD530-0x00000001826BD570
+		[NativeMethod(Name = "scripting_gc_get_used_size", IsFreeFunction = true)]
+		public static long GetMonoUsedSizeLong() => default; // 0x0000000183D2CC80-0x0000000183D2CCC0
+		[NativeConditional("ENABLE_MEMORY_MANAGER")]
+		[NativeMethod(Name = "GetTotalAllocatedMemory")]
+		[StaticAccessor("GetMemoryManager()", StaticAccessorType.Dot)]
+		public static long GetTotalAllocatedMemoryLong() => default; // 0x0000000183D2CC40-0x0000000183D2CC80
+		[NativeConditional("ENABLE_MEMORY_MANAGER")]
+		[NativeMethod(Name = "GetTotalReservedMemory")]
+		[StaticAccessor("GetMemoryManager()", StaticAccessorType.Dot)]
+		public static long GetTotalReservedMemoryLong() => default; // 0x0000000183D2CC00-0x0000000183D2CC40
+		[NativeMethod(Name = "ProfilerBindings::ReleaseMonoSnapShot", IsFreeFunction = true)]
+		[UnityEngine.Scripting.Preserve]
+		public static void ReleaseMonoSnapShot(string filePath, bool bCompress = true /* Metadata: 0x01FBB2D5 */) {} // 0x0000000189DD3BF8-0x0000000189DD3C3C
+	}
+
+	[MovedFrom("UnityEngine")]
+	[NativeHeader("Modules/Profiler/Public/HGSingleFrameProfiler.h")]
+	[NativeHeader("Runtime/Profiler/ScriptBindings/Profiler.bindings.h")]
+	[StaticAccessor("profiling::HGSingleFrameProfiler::GetPtr()", StaticAccessorType.Arrow)]
+	public sealed class HGSingleFrameProfiler // TypeDefIndex: 46699
+	{
+		// Fields
+		public static FinishFrameCallback finishFrameCallback; // 0x00
+	
+		// Nested types
+		public delegate void FinishFrameCallback(double frameTimeMS, bool overflow, IntPtr frameDataPtr, int size); // TypeDefIndex: 46698; 0x000000018806E70C-0x000000018806E720
+	
+		// Constructors
+		public HGSingleFrameProfiler() {} // Dummy constructor
+	
+		// Methods
+		[RequiredByNativeCode]
+		private static void CallFinishFrameCallback(double frameTimeMS, bool overflow, IntPtr frameDataPtr, int size) {} // 0x0000000189DD0DFC-0x0000000189DD0E84
+	}
+
+	[UsedByNativeCode]
+	public sealed class Recorder // TypeDefIndex: 46700
+	{
+		// Fields
+		private const ProfilerRecorderOptions s_RecorderDefaultOptions = ProfilerRecorderOptions.None | ProfilerRecorderOptions.StartImmediately | ProfilerRecorderOptions.WrapAroundWhenCapacityReached | ProfilerRecorderOptions.SumAllSamplesInFrame | ProfilerRecorderOptions.Default; // Metadata: 0x01FBB2D6
+		internal static Recorder s_InvalidRecorder; // 0x00
+		private ProfilerRecorder m_RecorderCPU; // 0x10
+		private ProfilerRecorder m_RecorderGPU; // 0x18
+	
+		// Properties
+		public bool enabled { get => default; set {} } // 0x0000000189DD3CF8-0x0000000189DD3D08 0x000000018427413C-0x0000000184274144
+		public long elapsedNanoseconds { get => default; } // 0x0000000189DD3CC8-0x0000000189DD3CF8 
+		public long gpuElapsedNanoseconds { get => default; } // 0x0000000189DD3D08-0x0000000189DD3D38 
+		public int sampleBlockCount { get => default; } // 0x0000000189DD3D94-0x0000000189DD3DF0 
+		public int gpuSampleBlockCount { get => default; } // 0x0000000189DD3D38-0x0000000189DD3D94 
+	
+		// Constructors
+		internal Recorder() {} // 0x000000018350B670-0x000000018350B680
+		internal Recorder(ProfilerRecorderHandle handle) {} // 0x0000000182E13A50-0x0000000182E13AD0
+		static Recorder() {} // 0x0000000183D1B1D0-0x0000000183D1B230
+	
+		// Methods
+		~Recorder() {} // 0x00000001832B9500-0x00000001832B9600
+		private void SetEnabled(bool state) {} // 0x00000001832B9640-0x00000001832B9690
+	}
+
+	[NativeHeader("Runtime/Profiler/ScriptBindings/Sampler.bindings.h")]
+	[UsedByNativeCode]
+	public class Sampler // TypeDefIndex: 46701
+	{
+		// Fields
+		internal IntPtr m_Ptr; // 0x10
+		internal static Sampler s_InvalidSampler; // 0x00
+	
+		// Properties
+		public bool isValid { get => default; } // 0x0000000189DD49F8-0x0000000189DD4A04 
+	
+		// Constructors
+		internal Sampler() {} // 0x000000018350B670-0x000000018350B680
+		static Sampler() {} // 0x0000000183D1AE10-0x0000000183D1AE70
+	
+		// Methods
+		public Recorder GetRecorder() => default; // 0x0000000182E13870-0x0000000182E138E0
+	}
+
+	[NativeHeader("Runtime/Profiler/Marker.h")]
+	[NativeHeader("Runtime/Profiler/ScriptBindings/Sampler.bindings.h")]
+	[UsedByNativeCode]
+	public sealed class CustomSampler : Sampler // TypeDefIndex: 46702
+	{
+		// Fields
+		internal static CustomSampler s_InvalidCustomSampler; // 0x00
+	
+		// Constructors
+		internal CustomSampler() {} // 0x0000000183CDD540-0x0000000183CDD5F0
+		internal CustomSampler(IntPtr ptr) {} // 0x0000000182E139F0-0x0000000182E13A50
+		static CustomSampler() {} // 0x0000000183CDD4D0-0x0000000183CDD540
+	
+		// Methods
+		public static CustomSampler Create(string name, bool collectGpuData = false /* Metadata: 0x01FBB2D8 */) => default; // 0x0000000182E138E0-0x0000000182E13980
+	}
+}
+
+namespace UnityEngine.Profiling.Experimental
+{
+	public struct DebugScreenCapture // TypeDefIndex: 46703
+	{
+		// Properties
+		public NativeArray<byte> rawImageDataReference { get; set; } // 0x0000000183D5E620-0x0000000183D5E630
+		public TextureFormat imageFormat { get; set; } // 0x00000001810410F0-0x0000000181041100
+		public int width { get; set; } // 0x0000000183D595B0-0x0000000183D595C0
+		public int height { get; set; } // 0x0000000183D4E9C0-0x0000000183D4E9D0
+	}
+}
+
+namespace UnityEngine.Profiling.Memory.Experimental
+{
+	public class MetaData // TypeDefIndex: 46704
+	{
+		// Fields
+		[NonSerialized]
+		public string content; // 0x10
+		[NonSerialized]
+		public string platform; // 0x18
+	
+		// Constructors
+		public MetaData() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[NativeHeader("Modules/Profiler/Runtime/MemorySnapshotManager.h")]
+	public sealed class MemoryProfiler // TypeDefIndex: 46705
+	{
+		// Constructors
+		public MemoryProfiler() {} // Dummy constructor
+	
+		// Methods
+		[RequiredByNativeCode]
+		private static byte[] PrepareMetadata() => default; // 0x0000000189DD1734-0x0000000189DD18B8
+		internal static int WriteIntToByteArray(byte[] array, int offset, int value) => default; // 0x0000000189DD19D0-0x0000000189DD1A44
+		internal static int WriteStringToByteArray(byte[] array, int offset, string value) => default; // 0x0000000189DD1A44-0x0000000189DD1AAC
+		[RequiredByNativeCode]
+		private static void FinalizeSnapshot(string path, bool result) {} // 0x0000000189DD16BC-0x0000000189DD1734
+		[RequiredByNativeCode]
+		private static void SaveScreenshotToDisk(string path, bool result, IntPtr pixelsPtr, int pixelsCount, TextureFormat format, int width, int height) {} // 0x0000000189DD18B8-0x0000000189DD19D0
+	}
+}
+
+namespace UnityEngine.Rendering
+{
+	[NativeHeader("Runtime/Shaders/ComputeShader.h")]
+	[NativeHeader("Runtime/Graphics/AsyncGPUReadbackManaged.h")]
+	[NativeHeader("Runtime/Graphics/Texture.h")]
+	[UsedByNativeCode]
+	public struct AsyncGPUReadbackRequest // TypeDefIndex: 46972
+	{
+		// Fields
+		internal IntPtr m_Ptr; // 0x00
+		internal int m_Version; // 0x08
+	
+		// Properties
+		public bool done { get => default; } // 0x0000000189DDB1BC-0x0000000189DDB1C8 
+		public bool hasError { get => default; } // 0x0000000189DDB1C8-0x0000000189DDB1D4 
+		public int layerCount { get => default; } // 0x0000000189DDB1D4-0x0000000189DDB1E0 
+		public int layerDataSize { get => default; } // 0x0000000189DDB1E0-0x0000000189DDB1EC 
+	
+		// Methods
+		public void WaitForCompletion() {} // 0x0000000189DDB1B4-0x0000000189DDB1BC
+		public NativeArray<T> GetData<T>(int layer = 0 /* Metadata: 0x01FBB336 */)
+			where T : struct => default;
+		private bool IsDone() => default; // 0x0000000189DDB12C-0x0000000189DDB134
+		private bool HasError() => default; // 0x0000000189DDB0F0-0x0000000189DDB0F8
+		private int GetLayerCount() => default; // 0x0000000189DDB078-0x0000000189DDB080
+		private int GetLayerDataSize() => default; // 0x0000000189DDB0B4-0x0000000189DDB0BC
+		internal void SetScriptingCallback(Action<AsyncGPUReadbackRequest> callback) {} // 0x0000000189DDB178-0x0000000189DDB180
+		private IntPtr GetDataRaw(int layer) => default; // 0x0000000189DDB03C-0x0000000189DDB044
+		private static void WaitForCompletion_Injected(ref AsyncGPUReadbackRequest _unity_self) {} // 0x0000000189DDB180-0x0000000189DDB1B4
+		private static bool IsDone_Injected(ref AsyncGPUReadbackRequest _unity_self) => default; // 0x0000000189DDB0F8-0x0000000189DDB12C
+		private static bool HasError_Injected(ref AsyncGPUReadbackRequest _unity_self) => default; // 0x0000000189DDB0BC-0x0000000189DDB0F0
+		private static int GetLayerCount_Injected(ref AsyncGPUReadbackRequest _unity_self) => default; // 0x0000000189DDB044-0x0000000189DDB078
+		private static int GetLayerDataSize_Injected(ref AsyncGPUReadbackRequest _unity_self) => default; // 0x0000000189DDB080-0x0000000189DDB0B4
+		private static void SetScriptingCallback_Injected(ref AsyncGPUReadbackRequest _unity_self, Action<AsyncGPUReadbackRequest> callback) {} // 0x0000000189DDB134-0x0000000189DDB178
+		private static IntPtr GetDataRaw_Injected(ref AsyncGPUReadbackRequest _unity_self, int layer) => default; // 0x0000000189DDAFFC-0x0000000189DDB03C
+	}
+
+	[NativeHeader("Runtime/Graphics/AsyncGPUReadbackManaged.h")]
+	[UsedByNativeCode]
+	internal struct AsyncRequestNativeArrayData // TypeDefIndex: 46973
+	{
+		// Fields
+		public unsafe void* nativeArrayBuffer; // 0x00
+		public long lengthInBytes; // 0x08
+	
+		// Methods
+		public static AsyncRequestNativeArrayData CreateAndCheckAccess<T>(NativeArray<T> array)
+			where T : struct => default;
+	}
+
+	[StaticAccessor("AsyncGPUReadbackManager::GetInstance()", StaticAccessorType.Dot)]
+	public static class AsyncGPUReadback // TypeDefIndex: 46974
+	{
+		// Methods
+		internal static void ValidateFormat(Texture src, GraphicsFormat dstformat) {} // 0x0000000189DDB4C4-0x0000000189DDB580
+		public static AsyncGPUReadbackRequest Request(ComputeBuffer src, Action<AsyncGPUReadbackRequest> callback = null) => default; // 0x0000000189DDB464-0x0000000189DDB4C4
+		public static AsyncGPUReadbackRequest Request(Texture src, int mipIndex, TextureFormat dstFormat, Action<AsyncGPUReadbackRequest> callback = null) => default; // 0x0000000189DDB3B0-0x0000000189DDB464
+		public static AsyncGPUReadbackRequest Request(Texture src, int mipIndex, GraphicsFormat dstFormat, Action<AsyncGPUReadbackRequest> callback = null) => default; // 0x0000000189DDB314-0x0000000189DDB3B0
+		public static AsyncGPUReadbackRequest RequestIntoNativeArray<T>(ref NativeArray<T> output, ComputeBuffer src, Action<AsyncGPUReadbackRequest> callback = null)
+			where T : struct => default;
+		[NativeMethod("Request")]
+		private static unsafe AsyncGPUReadbackRequest Request_Internal_ComputeBuffer_1([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeBuffer buffer, AsyncRequestNativeArrayData* data) => default; // 0x0000000189DDB240-0x0000000189DDB270
+		[NativeMethod("Request")]
+		private static unsafe AsyncGPUReadbackRequest Request_Internal_Texture_2([UnityEngine.Bindings.NotNull("ArgumentNullException")] Texture src, int mipIndex, GraphicsFormat dstFormat, AsyncRequestNativeArrayData* data) => default; // 0x0000000189DDB2D0-0x0000000189DDB314
+		private static unsafe void Request_Internal_ComputeBuffer_1_Injected(ComputeBuffer buffer, AsyncRequestNativeArrayData* data, out AsyncGPUReadbackRequest ret) {
+			ret = default;
+		} // 0x0000000189DDB1EC-0x0000000189DDB240
+		private static unsafe void Request_Internal_Texture_2_Injected(Texture src, int mipIndex, GraphicsFormat dstFormat, AsyncRequestNativeArrayData* data, out AsyncGPUReadbackRequest ret) {
+			ret = default;
+		} // 0x0000000189DDB270-0x0000000189DDB2D0
+	}
+
+	public enum SynchronisationStage // TypeDefIndex: 46975
+	{
+		VertexProcessing = 0,
+		PixelProcessing = 1
+	}
+
+	public enum IndexFormat // TypeDefIndex: 46976
+	{
+		UInt16 = 0,
+		UInt32 = 1
+	}
+
+	[Flags]
+	public enum MeshUpdateFlags // TypeDefIndex: 46977
+	{
+		Default = 0,
+		DontValidateIndices = 1,
+		DontResetBoneBounds = 2,
+		DontNotifyMeshUsers = 4,
+		DontRecalculateBounds = 8
+	}
+
+	public enum VertexAttributeFormat // TypeDefIndex: 46978
+	{
+		Float32 = 0,
+		Float16 = 1,
+		UNorm8 = 2,
+		SNorm8 = 3,
+		UNorm16 = 4,
+		SNorm16 = 5,
+		UInt8 = 6,
+		SInt8 = 7,
+		UInt16 = 8,
+		SInt16 = 9,
+		UInt32 = 10,
+		SInt32 = 11
+	}
+
+	[MovedFrom("UnityEngine.Experimental.Rendering")]
+	public enum VertexAttribute // TypeDefIndex: 46979
+	{
+		Position = 0,
+		Normal = 1,
+		Tangent = 2,
+		Color = 3,
+		TexCoord0 = 4,
+		TexCoord1 = 5,
+		TexCoord2 = 6,
+		TexCoord3 = 7,
+		TexCoord4 = 8,
+		TexCoord5 = 9,
+		TexCoord6 = 10,
+		TexCoord7 = 11,
+		BlendWeight = 12,
+		BlendIndices = 13
+	}
+
+	public enum OpaqueSortMode // TypeDefIndex: 46980
+	{
+		Default = 0,
+		FrontToBack = 1,
+		NoDistanceSort = 2
+	}
+
+	public enum RenderBufferLoadAction // TypeDefIndex: 46981
+	{
+		Load = 0,
+		Clear = 1,
+		DontCare = 2
+	}
+
+	public enum RenderBufferStoreAction // TypeDefIndex: 46982
+	{
+		Store = 0,
+		Resolve = 1,
+		StoreAndResolve = 2,
+		DontCare = 3
+	}
+
+	[Flags]
+	public enum FastMemoryFlags // TypeDefIndex: 46983
+	{
+		None = 0,
+		SpillTop = 1,
+		SpillBottom = 2
+	}
+
+	[NativeHeader("Runtime/GfxDevice/GfxDeviceTypes.h")]
+	public enum BlendMode // TypeDefIndex: 46984
+	{
+		Zero = 0,
+		One = 1,
+		DstColor = 2,
+		SrcColor = 3,
+		OneMinusDstColor = 4,
+		SrcAlpha = 5,
+		OneMinusSrcColor = 6,
+		DstAlpha = 7,
+		OneMinusDstAlpha = 8,
+		SrcAlphaSaturate = 9,
+		OneMinusSrcAlpha = 10
+	}
+
+	[NativeHeader("Runtime/GfxDevice/GfxDeviceTypes.h")]
+	public enum CompareFunction // TypeDefIndex: 46985
+	{
+		Disabled = 0,
+		Never = 1,
+		Less = 2,
+		Equal = 3,
+		LessEqual = 4,
+		Greater = 5,
+		NotEqual = 6,
+		GreaterEqual = 7,
+		Always = 8
+	}
+
+	[NativeHeader("Runtime/GfxDevice/GfxDeviceTypes.h")]
+	public enum CullMode // TypeDefIndex: 46986
+	{
+		Off = 0,
+		Front = 1,
+		Back = 2
+	}
+
+	[Flags]
+	public enum ColorWriteMask // TypeDefIndex: 46987
+	{
+		Alpha = 1,
+		Blue = 2,
+		Green = 4,
+		Red = 8,
+		All = 15
+	}
+
+	[NativeHeader("Runtime/GfxDevice/GfxDeviceTypes.h")]
+	public enum StencilOp // TypeDefIndex: 46988
+	{
+		Keep = 0,
+		Zero = 1,
+		Replace = 2,
+		IncrementSaturate = 3,
+		DecrementSaturate = 4,
+		Invert = 5,
+		IncrementWrap = 6,
+		DecrementWrap = 7
+	}
+
+	public enum AmbientMode // TypeDefIndex: 46989
+	{
+		Skybox = 0,
+		Trilight = 1,
+		Flat = 3,
+		Custom = 4
+	}
+
+	public enum DefaultReflectionMode // TypeDefIndex: 46990
+	{
+		Skybox = 0,
+		Custom = 1
+	}
+
+	public enum CameraEvent // TypeDefIndex: 46991
+	{
+		BeforeDepthTexture = 0,
+		AfterDepthTexture = 1,
+		BeforeDepthNormalsTexture = 2,
+		AfterDepthNormalsTexture = 3,
+		BeforeGBuffer = 4,
+		AfterGBuffer = 5,
+		BeforeLighting = 6,
+		AfterLighting = 7,
+		BeforeFinalPass = 8,
+		AfterFinalPass = 9,
+		BeforeForwardOpaque = 10,
+		AfterForwardOpaque = 11,
+		BeforeImageEffectsOpaque = 12,
+		AfterImageEffectsOpaque = 13,
+		BeforeSkybox = 14,
+		AfterSkybox = 15,
+		BeforeForwardAlpha = 16,
+		AfterForwardAlpha = 17,
+		BeforeImageEffects = 18,
+		AfterImageEffects = 19,
+		AfterEverything = 20,
+		BeforeReflections = 21,
+		AfterReflections = 22,
+		BeforeHaloAndLensFlares = 23,
+		AfterHaloAndLensFlares = 24
+	}
+
+	internal static class CameraEventUtils // TypeDefIndex: 46992
+	{
+		// Methods
+		public static bool IsValid(CameraEvent value) => default; // 0x0000000189DDBEDC-0x0000000189DDBEEC
+	}
+
+	public enum LightEvent // TypeDefIndex: 46993
+	{
+		BeforeShadowMap = 0,
+		AfterShadowMap = 1,
+		BeforeScreenspaceMask = 2,
+		AfterScreenspaceMask = 3,
+		BeforeShadowMapPass = 4,
+		AfterShadowMapPass = 5
+	}
+
+	[Flags]
+	public enum ShadowMapPass // TypeDefIndex: 46994
+	{
+		PointlightPositiveX = 1,
+		PointlightNegativeX = 2,
+		PointlightPositiveY = 4,
+		PointlightNegativeY = 8,
+		PointlightPositiveZ = 16,
+		PointlightNegativeZ = 32,
+		Pointlight = 63,
+		DirectionalCascade0 = 64,
+		DirectionalCascade1 = 128,
+		DirectionalCascade2 = 256,
+		DirectionalCascade3 = 512,
+		Directional = 960,
+		Spotlight = 1024,
+		All = 2047
+	}
+
+	public enum BuiltinRenderTextureType // TypeDefIndex: 46995
+	{
+		PropertyName = -4,
+		BufferPtr = -3,
+		RenderTexture = -2,
+		BindableTexture = -1,
+		None = 0,
+		CurrentActive = 1,
+		CameraTarget = 2,
+		Depth = 3,
+		DepthNormals = 4,
+		ResolvedDepth = 5,
+		PrepassNormalsSpec = 7,
+		PrepassLight = 8,
+		PrepassLightSpec = 9,
+		GBuffer0 = 10,
+		GBuffer1 = 11,
+		GBuffer2 = 12,
+		GBuffer3 = 13,
+		Reflections = 14,
+		MotionVectors = 15,
+		GBuffer4 = 16,
+		GBuffer5 = 17,
+		GBuffer6 = 18,
+		GBuffer7 = 19
+	}
+
+	public enum ShadowCastingMode // TypeDefIndex: 46996
+	{
+		Off = 0,
+		On = 1,
+		TwoSided = 2,
+		ShadowsOnly = 3,
+		ShadowsOnlyTwoSided = 4
+	}
+
+	public enum LightShadowResolution // TypeDefIndex: 46997
+	{
+		FromQualitySettings = -1,
+		Low = 0,
+		Medium = 1,
+		High = 2,
+		VeryHigh = 3
+	}
+
+	public enum SubMeshRenderMode // TypeDefIndex: 46998
+	{
+		SubMeshRenderModeDefault = 0,
+		SubMeshRenderModeLoop = 1
+	}
+
+	[UsedByNativeCode]
+	public enum GraphicsDeviceType // TypeDefIndex: 46999
+	{
+		GameCoreScarlett = -1,
+		OpenGL2 = 0,
+		Direct3D9 = 1,
+		Direct3D11 = 2,
+		PlayStation3 = 3,
+		Null = 4,
+		Xbox360 = 6,
+		OpenGLES2 = 8,
+		OpenGLES3 = 11,
+		PlayStationVita = 12,
+		PlayStation4 = 13,
+		XboxOne = 14,
+		PlayStationMobile = 15,
+		Metal = 16,
+		OpenGLCore = 17,
+		Direct3D12 = 18,
+		N3DS = 19,
+		Vulkan = 21,
+		Switch = 22,
+		XboxOneD3D12 = 23,
+		GameCoreXboxOne = 24,
+		GameCoreXboxSeries = 25,
+		PlayStation5 = 26,
+		PlayStation5NGGC = 27
+	}
+
+	public enum GraphicsTier // TypeDefIndex: 47000
+	{
+		Tier1 = 0,
+		Tier2 = 1,
+		Tier3 = 2
+	}
+
+	public struct SubMeshDescriptor // TypeDefIndex: 47001
+	{
+		// Properties
+		public Bounds bounds { [IsReadOnly] get; } // 0x0000000183D5EBC0-0x0000000183D5EBE0 
+		public MeshTopology topology { [IsReadOnly] get; } // 0x00000001820D1AC0-0x00000001820D1AD0 
+		public int indexStart { [IsReadOnly] get; } // 0x0000000183D4EBB0-0x0000000183D4EBC0 
+		public int indexCount { [IsReadOnly] get; } // 0x0000000181003B50-0x0000000181003B60 
+		public int baseVertex { [IsReadOnly] get; } // 0x0000000183D4E2E0-0x0000000183D4E2F0 
+		public int firstVertex { [IsReadOnly] get; } // 0x0000000183D4EB90-0x0000000183D4EBA0 
+		public int vertexCount { [IsReadOnly] get; } // 0x0000000183D4EDD0-0x0000000183D4EDE0 
+	
+		// Methods
+		public override string ToString() => default; // 0x0000000189DEC5AC-0x0000000189DEC7CC
+	}
+
+	[UsedByNativeCode]
+	public struct VertexAttributeDescriptor : IEquatable<VertexAttributeDescriptor> // TypeDefIndex: 47002
+	{
+		// Properties
+		public VertexAttribute attribute { [IsReadOnly] get; set; } // 0x0000000183D4E980-0x0000000183D4E990 0x0000000183D4E970-0x0000000183D4E980
+		public VertexAttributeFormat format { [IsReadOnly] get; set; } // 0x0000000183D4E990-0x0000000183D4E9A0 0x0000000183D51720-0x0000000183D51730
+		public int dimension { [IsReadOnly] get; set; } // 0x0000000183D516F0-0x0000000183D51700 0x0000000183D51710-0x0000000183D51720
+		public int stream { [IsReadOnly] get; set; } // 0x0000000183D4FBF0-0x0000000183D4FC00 0x0000000183D55690-0x0000000183D556A0
+	
+		// Constructors
+		public VertexAttributeDescriptor(VertexAttribute attribute = VertexAttribute.Position /* Metadata: 0x01FBB403 */, VertexAttributeFormat format = VertexAttributeFormat.Float32 /* Metadata: 0x01FBB404 */, int dimension = 3 /* Metadata: 0x01FBB405 */, int stream = 0 /* Metadata: 0x01FBB406 */) : this() {} // 0x0000000183D517E0-0x0000000183D51800
+	
+		// Methods
+		public override string ToString() => default; // 0x0000000189DEC890-0x0000000189DECA04
+		public override int GetHashCode() => default; // 0x0000000183D878D0-0x0000000183D878F0
+		public override bool Equals(object other) => default; // 0x0000000189DEC818-0x0000000189DEC890
+		public bool Equals(VertexAttributeDescriptor other) => default; // 0x0000000185688F1C-0x0000000185688F40
+	}
+
+	public enum FormatSwizzle // TypeDefIndex: 47003
+	{
+		FormatSwizzleR = 0,
+		FormatSwizzleG = 1,
+		FormatSwizzleB = 2,
+		FormatSwizzleA = 3,
+		FormatSwizzle0 = 4,
+		FormatSwizzle1 = 5
+	}
+
+	public struct RenderTargetIdentifier : IEquatable<RenderTargetIdentifier> // TypeDefIndex: 47004
+	{
+		// Fields
+		public const int AllDepthSlices = -1; // Metadata: 0x01FBB415
+		private BuiltinRenderTextureType m_Type; // 0x00
+		private int m_NameID; // 0x04
+		private int m_InstanceID; // 0x08
+		private IntPtr m_BufferPointer; // 0x10
+		private int m_MipLevel; // 0x18
+		private CubemapFace m_CubeFace; // 0x1C
+		private int m_DepthSlice; // 0x20
+	
+		// Constructors
+		public RenderTargetIdentifier(BuiltinRenderTextureType type) {
+			m_Type = default;
+			m_NameID = default;
+			m_InstanceID = default;
+			m_BufferPointer = default;
+			m_MipLevel = default;
+			m_CubeFace = default;
+			m_DepthSlice = default;
+		} // 0x0000000183D87010-0x0000000183D87030
+		public RenderTargetIdentifier(int nameID) {
+			m_Type = default;
+			m_NameID = default;
+			m_InstanceID = default;
+			m_BufferPointer = default;
+			m_MipLevel = default;
+			m_CubeFace = default;
+			m_DepthSlice = default;
+		} // 0x0000000183D86F90-0x0000000183D86FB0
+		public RenderTargetIdentifier(RenderTargetIdentifier renderTargetIdentifier, int mipLevel, CubemapFace cubeFace = CubemapFace.Unknown /* Metadata: 0x01FBB40D */, int depthSlice = 0 /* Metadata: 0x01FBB40E */) {
+			m_Type = default;
+			m_NameID = default;
+			m_InstanceID = default;
+			m_BufferPointer = default;
+			m_MipLevel = default;
+			m_CubeFace = default;
+			m_DepthSlice = default;
+		} // 0x0000000183D86FE0-0x0000000183D87010
+		public RenderTargetIdentifier(Texture tex) {
+			m_Type = default;
+			m_NameID = default;
+			m_InstanceID = default;
+			m_BufferPointer = default;
+			m_MipLevel = default;
+			m_CubeFace = default;
+			m_DepthSlice = default;
+		} // 0x0000000182525BF0-0x0000000182525CF0
+		public RenderTargetIdentifier(Texture tex, int mipLevel = 0 /* Metadata: 0x01FBB40F */, CubemapFace cubeFace = CubemapFace.Unknown /* Metadata: 0x01FBB410 */, int depthSlice = 0 /* Metadata: 0x01FBB411 */) {
+			m_Type = default;
+			m_NameID = default;
+			m_InstanceID = default;
+			m_BufferPointer = default;
+			m_MipLevel = default;
+			m_CubeFace = default;
+			m_DepthSlice = default;
+		} // 0x0000000189DE73C0-0x0000000189DE74AC
+		public RenderTargetIdentifier(RenderBuffer buf, int mipLevel = 0 /* Metadata: 0x01FBB412 */, CubemapFace cubeFace = CubemapFace.Unknown /* Metadata: 0x01FBB413 */, int depthSlice = 0 /* Metadata: 0x01FBB414 */) {
+			m_Type = default;
+			m_NameID = default;
+			m_InstanceID = default;
+			m_BufferPointer = default;
+			m_MipLevel = default;
+			m_CubeFace = default;
+			m_DepthSlice = default;
+		} // 0x0000000183D86FB0-0x0000000183D86FE0
+	
+		// Methods
+		public static implicit operator RenderTargetIdentifier(BuiltinRenderTextureType type) => default; // 0x0000000182E7E350-0x0000000182E7E3A0
+		public static implicit operator RenderTargetIdentifier(int nameID) => default; // 0x0000000183D87030-0x0000000183D87080
+		public static implicit operator RenderTargetIdentifier(Texture tex) => default; // 0x0000000182525B90-0x0000000182525BF0
+		public override string ToString() => default; // 0x0000000189DE719C-0x0000000189DE73C0
+		public override int GetHashCode() => default; // 0x0000000183D86F80-0x0000000183D86F90
+		public bool Equals(RenderTargetIdentifier rhs) => default; // 0x0000000189DE711C-0x0000000189DE719C
+		public override bool Equals(object obj) => default; // 0x0000000189DE7090-0x0000000189DE711C
+	}
+
+	[Flags]
+	public enum RenderTargetFlags // TypeDefIndex: 47005
+	{
+		None = 0,
+		ReadOnlyDepth = 1,
+		ReadOnlyStencil = 2,
+		ReadOnlyDepthStencil = 3
+	}
+
+	public struct RenderTargetBinding // TypeDefIndex: 47006
+	{
+		// Fields
+		private RenderTargetIdentifier[] m_ColorRenderTargets; // 0x00
+		private RenderTargetIdentifier m_DepthRenderTarget; // 0x08
+		private RenderBufferLoadAction[] m_ColorLoadActions; // 0x30
+		private RenderBufferStoreAction[] m_ColorStoreActions; // 0x38
+		private RenderBufferLoadAction m_DepthLoadAction; // 0x40
+		private RenderBufferStoreAction m_DepthStoreAction; // 0x44
+		private RenderTargetFlags m_Flags; // 0x48
+	
+		// Properties
+		public RenderTargetIdentifier[] colorRenderTargets { get => default; set {} } // 0x000000018253BE20-0x000000018253BE30 0x00000001842715A0-0x00000001842715A8
+		public RenderTargetIdentifier depthRenderTarget { get => default; set {} } // 0x0000000183D86EC0-0x0000000183D86EE0 0x0000000183D86F00-0x0000000183D86F20
+		public RenderBufferLoadAction[] colorLoadActions { get => default; set {} } // 0x0000000183D86D10-0x0000000183D86D20 0x0000000184270470-0x0000000184270480
+		public RenderBufferStoreAction[] colorStoreActions { get => default; set {} } // 0x0000000183D86EB0-0x0000000183D86EC0 0x000000018388FF30-0x000000018388FF40
+		public RenderBufferLoadAction depthLoadAction { get => default; set {} } // 0x0000000183D85940-0x0000000183D85950 0x0000000183D4EDB0-0x0000000183D4EDC0
+		public RenderBufferStoreAction depthStoreAction { get => default; set {} } // 0x0000000183D86EE0-0x0000000183D86EF0 0x0000000183D4EEA0-0x0000000183D4EEB0
+		public RenderTargetFlags flags { get => default; } // 0x0000000183D86EF0-0x0000000183D86F00 
+	
+		// Constructors
+		public RenderTargetBinding(RenderTargetIdentifier[] colorRenderTargets, RenderBufferLoadAction[] colorLoadActions, RenderBufferStoreAction[] colorStoreActions, RenderTargetIdentifier depthRenderTarget, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction) : this() {
+			m_ColorRenderTargets = default;
+			m_DepthRenderTarget = default;
+			m_ColorLoadActions = default;
+			m_ColorStoreActions = default;
+			m_DepthLoadAction = default;
+			m_DepthStoreAction = default;
+			m_Flags = default;
+		} // 0x0000000189DE6F68-0x0000000189DE6FD0
+	}
+
+	public enum ReflectionProbeUsage // TypeDefIndex: 47007
+	{
+		Off = 0,
+		BlendProbes = 1,
+		BlendProbesAndSkybox = 2,
+		Simple = 3
+	}
+
+	public enum ReflectionProbeType // TypeDefIndex: 47008
+	{
+		Cube = 0,
+		Card = 1
+	}
+
+	public enum ReflectionProbeClearFlags // TypeDefIndex: 47009
+	{
+		Skybox = 1,
+		SolidColor = 2
+	}
+
+	public enum ReflectionProbeOrientedMode // TypeDefIndex: 47010
+	{
+		None = 0,
+		Center = 1,
+		Axis = 2
+	}
+
+	public enum ReflectionProbeShapeType // TypeDefIndex: 47011
+	{
+		Box = 0,
+		Sphere = 1
+	}
+
+	public enum ReflectionProbeMode // TypeDefIndex: 47012
+	{
+		Baked = 0,
+		Realtime = 1,
+		Custom = 2
+	}
+
+	[UsedByNativeCode]
+	public struct ReflectionProbeBlendInfo // TypeDefIndex: 47013
+	{
+		// Fields
+		public ReflectionProbe probe; // 0x00
+		public float weight; // 0x08
+	}
+
+	public enum ReflectionProbeRefreshMode // TypeDefIndex: 47014
+	{
+		OnAwake = 0,
+		EveryFrame = 1,
+		ViaScripting = 2
+	}
+
+	public enum ReflectionProbeTimeSlicingMode // TypeDefIndex: 47015
+	{
+		AllFacesAtOnce = 0,
+		IndividualFaces = 1,
+		NoTimeSlicing = 2
+	}
+
+	public enum ShadowSamplingMode // TypeDefIndex: 47016
+	{
+		CompareDepths = 0,
+		RawDepth = 1,
+		None = 2
+	}
+
+	public enum LightProbeUsage // TypeDefIndex: 47017
+	{
+		Off = 0,
+		BlendProbes = 1,
+		UseProxyVolume = 2,
+		CustomProvided = 4
+	}
+
+	public enum BuiltinShaderDefine // TypeDefIndex: 47018
+	{
+		UNITY_NO_DXT5nm = 0,
+		UNITY_NO_RGBM = 1,
+		UNITY_USE_NATIVE_HDR = 2,
+		UNITY_ENABLE_REFLECTION_BUFFERS = 3,
+		UNITY_FRAMEBUFFER_FETCH_AVAILABLE = 4,
+		UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS = 5,
+		UNITY_METAL_SHADOWS_USE_POINT_FILTERING = 6,
+		UNITY_NO_CUBEMAP_ARRAY = 7,
+		UNITY_NO_SCREENSPACE_SHADOWS = 8,
+		UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS = 9,
+		UNITY_PBS_USE_BRDF1 = 10,
+		UNITY_PBS_USE_BRDF2 = 11,
+		UNITY_PBS_USE_BRDF3 = 12,
+		UNITY_NO_FULL_STANDARD_SHADER = 13,
+		UNITY_SPECCUBE_BOX_PROJECTION = 14,
+		UNITY_SPECCUBE_BLENDING = 15,
+		UNITY_ENABLE_DETAIL_NORMALMAP = 16,
+		SHADER_API_MOBILE = 17,
+		SHADER_API_DESKTOP = 18,
+		UNITY_HARDWARE_TIER1 = 19,
+		UNITY_HARDWARE_TIER2 = 20,
+		UNITY_HARDWARE_TIER3 = 21,
+		UNITY_COLORSPACE_GAMMA = 22,
+		UNITY_LIGHT_PROBE_PROXY_VOLUME = 23,
+		UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS = 24,
+		UNITY_LIGHTMAP_DLDR_ENCODING = 25,
+		UNITY_LIGHTMAP_RGBM_ENCODING = 26,
+		UNITY_LIGHTMAP_FULL_HDR = 27,
+		UNITY_VIRTUAL_TEXTURING = 28,
+		UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION = 29,
+		UNITY_ASTC_NORMALMAP_ENCODING = 30,
+		SHADER_API_GLES30 = 31,
+		UNITY_UNIFIED_SHADER_PRECISION_MODEL = 32,
+		HG_RENDER_PATH_MOBILE = 33,
+		HG_RENDER_PATH_DESKTOP = 34,
+		HG_RENDER_PATH_FORWARD = 35,
+		HG_RENDER_PATH_DEFAULT_DEFERRED = 36,
+		HG_RENDER_PATH_ONE_PASS_DEFERRED = 37,
+		HG_DEVICE_TIER_1000 = 38,
+		HG_DEVICE_TIER_2000 = 39,
+		HG_DEVICE_TIER_3000 = 40,
+		HG_DEVICE_TIER_4000 = 41,
+		HG_DEVICE_TIER_5000 = 42
+	}
+
+	public enum TextureDimension // TypeDefIndex: 47019
+	{
+		Unknown = -1,
+		None = 0,
+		Any = 1,
+		Tex2D = 2,
+		Tex3D = 3,
+		Cube = 4,
+		Tex2DArray = 5,
+		CubeArray = 6
+	}
+
+	[Flags]
+	public enum CopyTextureSupport // TypeDefIndex: 47020
+	{
+		None = 0,
+		Basic = 1,
+		Copy3D = 2,
+		DifferentTypes = 4,
+		TextureToRT = 8,
+		RTToTexture = 16
+	}
+
+	public enum ComputeQueueType // TypeDefIndex: 47021
+	{
+		Default = 0,
+		Background = 1,
+		Urgent = 2
+	}
+
+	public enum CommandBufferExecutionFlags // TypeDefIndex: 47022
+	{
+		None = 0,
+		AsyncCompute = 2
+	}
+
+	[Flags]
+	public enum RTClearFlags // TypeDefIndex: 47023
+	{
+		None = 0,
+		Color = 1,
+		Depth = 2,
+		ColorDepth = 3,
+		Stencil = 4,
+		ColorStencil = 5,
+		DepthStencil = 6,
+		All = 7
+	}
+
+	public enum RenderTextureSubElement // TypeDefIndex: 47024
+	{
+		Color = 0,
+		Depth = 1,
+		Stencil = 2,
+		Default = 3
+	}
+
+	public enum OpenGLESVersion // TypeDefIndex: 47025
+	{
+		None = 0,
+		OpenGLES20 = 1,
+		OpenGLES30 = 2,
+		OpenGLES31 = 3,
+		OpenGLES31AEP = 4,
+		OpenGLES32 = 5
+	}
+
+	public enum SynchronisationStageFlags // TypeDefIndex: 47026
+	{
+		VertexProcessing = 1,
+		PixelProcessing = 2,
+		ComputeProcessing = 4,
+		AllGPUOperations = 7
+	}
+
+	public enum GraphicsFenceType // TypeDefIndex: 47027
+	{
+		AsyncQueueSynchronisation = 0,
+		CPUSynchronisation = 1
+	}
+
+	[NativeHeader("Runtime/Graphics/GPUFence.h")]
+	[UsedByNativeCode]
+	public struct GraphicsFence // TypeDefIndex: 47028
+	{
+		// Fields
+		internal IntPtr m_Ptr; // 0x00
+		internal int m_Version; // 0x08
+		internal GraphicsFenceType m_FenceType; // 0x0C
+	
+		// Methods
+		internal static SynchronisationStageFlags TranslateSynchronizationStageToFlags(SynchronisationStage s) => default; // 0x0000000189DE421C-0x0000000189DE4228
+		internal void InitPostAllocation() {} // 0x0000000189DE416C-0x0000000189DE41F4
+		internal bool IsFencePending() => default; // 0x0000000189DE41F4-0x0000000189DE421C
+		internal void Validate() {} // 0x0000000189DE4228-0x0000000189DE42B0
+		private int GetPlatformNotSupportedVersion() => default; // 0x0000000183D86E70-0x0000000183D86E80
+		[FreeFunction("GPUFenceInternals::GetVersionNumber")]
+		[NativeThrows]
+		private static int GetVersionNumber(IntPtr fencePtr) => default; // 0x0000000189DE4138-0x0000000189DE416C
+	}
+
+	[NativeHeader("Runtime/Camera/GraphicsSettings.h")]
+	[StaticAccessor("GetGraphicsSettings()", StaticAccessorType.Dot)]
+	public sealed class GraphicsSettings : UnityEngine.Object // TypeDefIndex: 47029
+	{
+		// Properties
+		public static bool lightsUseLinearIntensity { get => default; } // 0x0000000183243760-0x00000001832437A0 
+		public static bool useScriptableRenderPipelineBatching { set {} } // 0x0000000183D1EFE0-0x0000000183D1F020
+		public static bool enableSRPBatchInstancing { set {} } // 0x0000000183D1F020-0x0000000183D1F060
+		[NativeName("CurrentRenderPipeline")]
+		private static ScriptableObject INTERNAL_currentRenderPipeline { get => default; } // 0x0000000182D19210-0x0000000182D19250 
+		public static RenderPipelineAsset currentRenderPipeline { get => default; } // 0x0000000182D191B0-0x0000000182D19210 
+		public static RenderPipelineAsset renderPipelineAsset { get => default; set {} } // 0x0000000184274440-0x000000018427444C 0x000000018427444C-0x0000000184274454
+		[NativeName("DefaultRenderPipeline")]
+		private static ScriptableObject INTERNAL_defaultRenderPipeline { get => default; set {} } // 0x0000000183CBB410-0x0000000183CBB450 0x0000000183D1F060-0x0000000183D1F0A0
+		public static RenderPipelineAsset defaultRenderPipeline { get => default; set {} } // 0x0000000183CBB3D0-0x0000000183CBB410 0x000000018427444C-0x0000000184274454
+	
+		// Constructors
+		public GraphicsSettings() {} // Dummy constructor
+	
+		// Methods
+		public static bool HasShaderDefine(GraphicsTier tier, BuiltinShaderDefine defineHash) => default; // 0x0000000182568910-0x0000000182568960
+		public static bool HasShaderDefine(BuiltinShaderDefine defineHash) => default; // 0x0000000182568810-0x00000001825688D0
+		public static void RegisterRenderPipelineSettings<T>(RenderPipelineGlobalSettings settings)
+			where T : UnityEngine.Rendering.RenderPipeline {}
+		[NativeName("RegisterRenderPipelineSettings")]
+		private static void RegisterRenderPipeline(string renderpipelineName, UnityEngine.Object settings) {} // 0x0000000183C8F2B0-0x0000000183C8F300
+		public static void UnregisterRenderPipelineSettings<T>()
+			where T : UnityEngine.Rendering.RenderPipeline {}
+		[NativeName("UnregisterRenderPipelineSettings")]
+		private static void UnregisterRenderPipeline(string renderpipelineName) {} // 0x0000000189DE42B0-0x0000000189DE42E4
+		public static RenderPipelineGlobalSettings GetSettingsForRenderPipeline<T>()
+			where T : UnityEngine.Rendering.RenderPipeline => default;
+		[NativeName("GetSettingsForRenderPipeline")]
+		private static UnityEngine.Object GetSettingsForRenderPipeline(string renderpipelineName) => default; // 0x0000000183C8AD30-0x0000000183C8AD70
+		[NativeName("AddShaderToSRPInstancingWhiteList")]
+		public static void INTERNAL_AddShaderToSRPInstancingWhiteList(string shaderName) {} // 0x00000001839C1E00-0x00000001839C1E40
+		public static void AddShaderToSRPInstancingWhiteList(string shaderName) {} // 0x0000000184276984-0x000000018427698C
+	}
+
+	[RequiredByNativeCode]
+	public class OnDemandRendering // TypeDefIndex: 47030
+	{
+		// Fields
+		private static int m_RenderFrameInterval; // 0x00
+	
+		// Properties
+		public static int renderFrameInterval { get => default; } // 0x00000001830DD580-0x00000001830DD5E0 
+	
+		// Constructors
+		public OnDemandRendering() {} // Dummy constructor
+		static OnDemandRendering() {} // 0x0000000183D43FE0-0x0000000183D44020
+	
+		// Methods
+		[RequiredByNativeCode]
+		internal static void GetRenderFrameInterval(out int frameInterval) {
+			frameInterval = default;
+		} // 0x00000001830DD530-0x00000001830DD580
+	}
+
+	[NativeHeader("Runtime/Export/Graphics/RenderingCommandBuffer.bindings.h")]
+	[NativeHeader("Runtime/Shaders/ComputeShader.h")]
+	[NativeHeader("Runtime/Shaders/RayTracingShader.h")]
+	[NativeType("Runtime/Graphics/CommandBuffer/RenderingCommandBuffer.h")]
+	[UsedByNativeCode]
+	public class CommandBuffer : IDisposable // TypeDefIndex: 47031
+	{
+		// Fields
+		internal IntPtr m_Ptr; // 0x10
+	
+		// Properties
+		public string name { set {} } // 0x000000018263CD30-0x000000018263CD80
+		public int sizeInBytes { [NativeMethod("GetBufferSize")] get => default; } // 0x0000000189DE2F4C-0x0000000189DE2F80 
+	
+		// Constructors
+		public CommandBuffer() {} // 0x000000018392CBE0-0x000000018392CC00
+	
+		// Methods
+		[NativeMethod("AddSetInvertCulling")]
+		public void SetInvertCulling(bool invertCulling) {} // 0x00000001830C57A0-0x00000001830C57F0
+		[FreeFunction("RenderingCommandBuffer_Bindings::InitBuffer")]
+		private static IntPtr InitBuffer() => default; // 0x000000018392CC00-0x000000018392CC40
+		[FreeFunction("RenderingCommandBuffer_Bindings::InitBufferTempJobAlloc")]
+		private static IntPtr InitBufferTempJobAlloc() => default; // 0x000000018259EBE0-0x000000018259EC20
+		[FreeFunction("RenderingCommandBuffer_Bindings::HGSetFragmentShadingRate", HasExplicitThis = true)]
+		public void HGSetFragmentShadingRate(uint fragmentSizeX, uint fragmentSizeY) {} // 0x0000000189DE0528-0x0000000189DE0578
+		[FreeFunction("RenderingCommandBuffer_Bindings::HGSetTransparentOffscreenBlend", HasExplicitThis = true)]
+		public void HGSetTransparentOffscreenBlend(bool offscreenBlend) {} // 0x0000000189DE0578-0x0000000189DE05BC
+		[FreeFunction("RenderingCommandBuffer_Bindings::CreateGPUFence_Internal", HasExplicitThis = true)]
+		private IntPtr CreateGPUFence_Internal(GraphicsFenceType fenceType, SynchronisationStageFlags stage) => default; // 0x0000000189DDE518-0x0000000189DDE568
+		[FreeFunction("RenderingCommandBuffer_Bindings::WaitOnGPUFence_Internal", HasExplicitThis = true)]
+		private void WaitOnGPUFence_Internal(IntPtr fencePtr, SynchronisationStageFlags stage) {} // 0x0000000189DE2EF8-0x0000000189DE2F4C
+		[FreeFunction("RenderingCommandBuffer_Bindings::ReleaseBuffer", HasExplicitThis = true, IsThreadSafe = true)]
+		private void ReleaseBuffer() {} // 0x000000018259D070-0x000000018259D0B0
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetComputeIntParam", HasExplicitThis = true)]
+		public void SetComputeIntParam([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeShader computeShader, int nameID, int val) {} // 0x0000000189DE0F00-0x0000000189DE0F64
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetComputeVectorParam", HasExplicitThis = true)]
+		public void SetComputeVectorParam([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeShader computeShader, int nameID, Vector4 val) {} // 0x00000001842703F0-0x0000000184270408
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetComputeVectorArrayParam", HasExplicitThis = true)]
+		public void SetComputeVectorArrayParam([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeShader computeShader, int nameID, [Unmarshalled] Vector4[] values) {} // 0x0000000189DE1264-0x0000000189DE12C8
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetComputeValueParam", HasExplicitThis = true)]
+		public void SetComputeValueParam([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeShader computeShader, int nameID, UIntPtr data, int byteCount) {} // 0x0000000189DE1200-0x0000000189DE1264
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetComputeMatrixParam", HasExplicitThis = true)]
+		public void SetComputeMatrixParam([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeShader computeShader, int nameID, Matrix4x4 val) {} // 0x0000000189DE10B4-0x0000000189DE10CC
+		[FreeFunction("RenderingCommandBuffer_Bindings::Internal_SetComputeTextureParam", HasExplicitThis = true)]
+		private void Internal_SetComputeTextureParam([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeShader computeShader, int kernelIndex, int nameID, ref RenderTargetIdentifier rt, int mipLevel, RenderTextureSubElement element, int slice) {} // 0x0000000182525E80-0x0000000182525EF0
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetComputeBufferParam", HasExplicitThis = true)]
+		private void Internal_SetComputeBufferParam([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeShader computeShader, int kernelIndex, int nameID, ComputeBuffer buffer, int offset, int size) {} // 0x0000000189DE0AD4-0x0000000189DE0B38
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetComputeBufferParam", HasExplicitThis = true)]
+		private void Internal_SetComputeBufferIDParam([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeShader computeShader, int kernelIndex, int nameID, uint bufferID, int offset, int size) {} // 0x0000000189DE0A70-0x0000000189DE0AD4
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetComputeConstantBufferParam", HasExplicitThis = true)]
+		private void Internal_SetComputeConstantComputeBufferParam([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeShader computeShader, int nameID, ComputeBuffer buffer, int offset, int size) {} // 0x0000000189DE0B9C-0x0000000189DE0C00
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetComputeConstantBufferParam", HasExplicitThis = true)]
+		private void Internal_SetComputeConstantBufferParam([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeShader computeShader, int nameID, uint bufferId, int offset, int size) {} // 0x0000000189DE0B38-0x0000000189DE0B9C
+		[FreeFunction("RenderingCommandBuffer_Bindings::Internal_DispatchCompute", HasExplicitThis = true, ThrowsException = true)]
+		private void Internal_DispatchCompute([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeShader computeShader, int kernelIndex, int threadGroupsX, int threadGroupsY, int threadGroupsZ) {} // 0x0000000183638AC0-0x0000000183638B30
+		[NativeMethod("ClearCommands")]
+		public void Clear() {} // 0x0000000189DDE290-0x0000000189DDE2C4
+		[FreeFunction("RenderingCommandBuffer_Bindings::Internal_DrawMesh", HasExplicitThis = true)]
+		private unsafe void Internal_DrawMesh([UnityEngine.Bindings.NotNull("ArgumentNullException")] Mesh mesh, Matrix4x4 matrix, Material material, int submeshIndex, int shaderPass, MaterialPropertyBlock properties, RenderStateBlock* overrideState = null) {} // 0x0000000189DE07B0-0x0000000189DE07F8
+		[NativeMethod("AddDrawRendererList")]
+		private void Internal_DrawRendererList(UnityEngine.Rendering.RendererUtils.RendererList rendererList) {} // 0x0000000189DE09F8-0x0000000189DE0A0C
+		[NativeMethod("AddDrawECSMeshRendererList")]
+		internal void AddDrawECSMeshRendererList(uint rendererList) {} // 0x0000000189DDDD2C-0x0000000189DDDD6C
+		[NativeMethod("AddDrawECSMeshRendererListWithSRPRendererList")]
+		internal void AddDrawECSMeshRendererListWithSRPRendererList(uint ecsList, UnityEngine.Rendering.RendererUtils.RendererList srpList) {} // 0x0000000189DDDD18-0x0000000189DDDD2C
+		[NativeMethod("AddDrawECSGrassRendererList")]
+		internal void AddDrawECSGrassRendererList(uint rendererList) {} // 0x0000000189DDDC88-0x0000000189DDDCC8
+		[NativeMethod("AddDrawECSDecalRendererList")]
+		internal void AddDrawECSDecalRendererList(uint rendererList) {} // 0x0000000189DDDC08-0x0000000189DDDC48
+		[NativeMethod("AddDrawECSFoliageOccluderRendererList")]
+		internal void AddDrawECSFoliageOccluderRendererList(uint rendererList) {} // 0x0000000189DDDC48-0x0000000189DDDC88
+		[NativeMethod("Add_GPUDriven_DrawRendererList")]
+		internal void Add_GPUDriven_DrawRendererList(uint rendererList, bool renderDepthOnly) {} // 0x0000000189DDDD6C-0x0000000189DDDDC0
+		[NativeMethod("AddDrawProcedural")]
+		private void Internal_DrawProcedural(Matrix4x4 matrix, Material material, int shaderPass, MeshTopology topology, int vertexCount, int instanceCount, MaterialPropertyBlock properties) {} // 0x0000000189DE096C-0x0000000189DE09B4
+		[FreeFunction("RenderingCommandBuffer_Bindings::Internal_DrawProceduralIndexedIndirect", HasExplicitThis = true)]
+		private void Internal_DrawProceduralIndexedIndirect(GraphicsBuffer indexBuffer, Matrix4x4 matrix, Material material, int shaderPass, MeshTopology topology, ComputeBuffer bufferWithArgs, int argsOffset, MaterialPropertyBlock properties) {} // 0x0000000189DE08B4-0x0000000189DE0908
+		[FreeFunction("RenderingCommandBuffer_Bindings::Internal_DrawMeshInstanced", HasExplicitThis = true)]
+		private unsafe void Internal_DrawMeshInstancedNativeMatrixArray(Mesh mesh, int submeshIndex, Material material, int shaderPass, IntPtr matrices, int count, MaterialPropertyBlock properties, RenderStateBlock* overrideState = null) {} // 0x0000000189DE0684-0x0000000189DE06E8
+		[FreeFunction("RenderingCommandBuffer_Bindings::Internal_HGDrawMeshInstanced", HasExplicitThis = true)]
+		private void Internal_HGDrawMeshInstanced(Mesh mesh, int submeshIndex, Material material, int shaderPass, int count, MaterialPropertyBlock properties) {} // 0x0000000189DE0A0C-0x0000000189DE0A70
+		[FreeFunction("RenderingCommandBuffer_Bindings::Internal_DrawMeshInstancedProcedural", HasExplicitThis = true)]
+		private void Internal_DrawMeshInstancedProcedural(Mesh mesh, int submeshIndex, Material material, int shaderPass, int count, MaterialPropertyBlock properties) {} // 0x0000000189DE06E8-0x0000000189DE074C
+		[FreeFunction("RenderingCommandBuffer_Bindings::Internal_DrawMeshInstancedIndirect", HasExplicitThis = true)]
+		private unsafe void Internal_DrawMeshInstancedIndirect(Mesh mesh, int submeshIndex, Material material, int shaderPass, ComputeBuffer bufferWithArgs, int argsOffset, MaterialPropertyBlock properties, RenderStateBlock* overrideState = null) {} // 0x0000000189DE0620-0x0000000189DE0684
+		[FreeFunction("RenderingCommandBuffer_Bindings::Internal_DrawOcclusionMesh", HasExplicitThis = true)]
+		private void Internal_DrawOcclusionMesh(RectInt normalizedCamViewport) {} // 0x0000000189DE083C-0x0000000189DE0850
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetRandomWriteTarget_Buffer", HasExplicitThis = true, ThrowsException = true)]
+		private void SetRandomWriteTarget_Buffer(int index, ComputeBuffer uav, bool preserveCounterValue) {} // 0x0000000189DE19CC-0x0000000189DE1A2C
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetViewport", HasExplicitThis = true, ThrowsException = true)]
+		public void SetViewport(Rect pixelRect) {} // 0x0000000189DE2D94-0x0000000189DE2DA8
+		[FreeFunction("RenderingCommandBuffer_Bindings::EnableScissorRect", HasExplicitThis = true, ThrowsException = true)]
+		public void EnableScissorRect(Rect scissor) {} // 0x0000000189DDFE54-0x0000000189DDFE68
+		[FreeFunction("RenderingCommandBuffer_Bindings::DisableScissorRect", HasExplicitThis = true, ThrowsException = true)]
+		public void DisableScissorRect() {} // 0x0000000189DDE76C-0x0000000189DDE7A0
+		[FreeFunction("RenderingCommandBuffer_Bindings::CopyTexture_Internal", HasExplicitThis = true)]
+		private void CopyTexture_Internal(ref RenderTargetIdentifier src, int srcElement, int srcMip, int srcX, int srcY, int srcWidth, int srcHeight, ref RenderTargetIdentifier dst, int dstElement, int dstMip, int dstX, int dstY, int mode) {} // 0x0000000182525FE0-0x0000000182526050
+		[FreeFunction("RenderingCommandBuffer_Bindings::Blit_Texture", HasExplicitThis = true)]
+		private void Blit_Texture(Texture source, ref RenderTargetIdentifier dest, Material mat, int pass, Vector2 scale, Vector2 offset, int sourceDepthSlice, int destDepthSlice) {} // 0x0000000189DDDF64-0x0000000189DDDFB0
+		[FreeFunction("RenderingCommandBuffer_Bindings::Blit_Identifier", HasExplicitThis = true)]
+		private void Blit_Identifier(ref RenderTargetIdentifier source, ref RenderTargetIdentifier dest, Material mat, int pass, Vector2 scale, Vector2 offset, int sourceDepthSlice, int destDepthSlice) {} // 0x0000000189DDDEB4-0x0000000189DDDF00
+		[FreeFunction("RenderingCommandBuffer_Bindings::EncodeMetalFXSpatialScaler", HasExplicitThis = true)]
+		public void EncodeMetalFXSpatialScaler(uint spatialScalerHandle, RenderTargetIdentifier colorTexture, RenderTargetIdentifier outputTexture) {} // 0x0000000189DDFF0C-0x0000000189DDFF24
+		[FreeFunction("RenderingCommandBuffer_Bindings::EncodeMetalFXTemporalScaler", HasExplicitThis = true)]
+		public void EncodeMetalFXTemporalScaler(uint temporalScalerHandle, bool resetHistory, RenderTargetIdentifier colorTexture, RenderTargetIdentifier depthTexture, RenderTargetIdentifier motionTexture, RenderTargetIdentifier outputTexture, bool reversedDepth, float jitterOffsetX, float jitterOffsetY) {} // 0x0000000189DDFF84-0x0000000189DDFFEC
+		[FreeFunction("RenderingCommandBuffer_Bindings::GetTemporaryRTWithDescriptor", HasExplicitThis = true)]
+		private void GetTemporaryRTWithDescriptor(int nameID, RenderTextureDescriptor desc, UnityEngine.FilterMode filter) {} // 0x0000000189DE00DC-0x0000000189DE00F4
+		public void GetTemporaryRT(int nameID, RenderTextureDescriptor desc, UnityEngine.FilterMode filter) {} // 0x0000000189DE0138-0x0000000189DE017C
+		public void GetTemporaryRT(int nameID, RenderTextureDescriptor desc) {} // 0x0000000189DE00F4-0x0000000189DE0138
+		[FreeFunction("RenderingCommandBuffer_Bindings::ReleaseTemporaryRT", HasExplicitThis = true)]
+		public void ReleaseTemporaryRT(int nameID) {} // 0x0000000189DE0C00-0x0000000189DE0C40
+		[FreeFunction("RenderingCommandBuffer_Bindings::ClearRenderTarget", HasExplicitThis = true)]
+		public void ClearRenderTarget(RTClearFlags clearFlags, UnityEngine.Color backgroundColor, float depth, uint stencil) {} // 0x0000000189DDE270-0x0000000189DDE290
+		public void ClearRenderTarget(bool clearDepth, bool clearColor, UnityEngine.Color backgroundColor) {} // 0x0000000189DDE1EC-0x0000000189DDE270
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetGlobalFloat", HasExplicitThis = true)]
+		public void SetGlobalFloat(int nameID, float value) {} // 0x0000000189DE1530-0x0000000189DE1580
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetGlobalInt", HasExplicitThis = true)]
+		public void SetGlobalInt(int nameID, int value) {} // 0x0000000189DE1580-0x0000000189DE15D0
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetGlobalVector", HasExplicitThis = true)]
+		public void SetGlobalVector(int nameID, Vector4 value) {} // 0x0000000189DE186C-0x0000000189DE1880
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetGlobalColor", HasExplicitThis = true)]
+		public void SetGlobalColor(int nameID, UnityEngine.Color value) {} // 0x0000000189DE1408-0x0000000189DE141C
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetGlobalMatrix", HasExplicitThis = true)]
+		public void SetGlobalMatrix(int nameID, Matrix4x4 value) {} // 0x0000000189DE1688-0x0000000189DE169C
+		[FreeFunction("RenderingCommandBuffer_Bindings::EnableShaderKeyword", HasExplicitThis = true)]
+		public void EnableShaderKeyword(string keyword) {} // 0x0000000189DDFE68-0x0000000189DDFEAC
+		[FreeFunction("RenderingCommandBuffer_Bindings::EnableShaderKeyword", HasExplicitThis = true)]
+		private void EnableGlobalKeyword(GlobalKeyword keyword) {} // 0x0000000189DDFD1C-0x0000000189DDFD30
+		[FreeFunction("RenderingCommandBuffer_Bindings::EnableMaterialKeyword", HasExplicitThis = true)]
+		private void EnableMaterialKeyword(Material material, LocalKeyword keyword) {} // 0x0000000189DDFDFC-0x0000000189DDFE10
+		[FreeFunction("RenderingCommandBuffer_Bindings::EnableComputeKeyword", HasExplicitThis = true)]
+		private void EnableComputeKeyword(ComputeShader computeShader, LocalKeyword keyword) {} // 0x0000000189DDFCC4-0x0000000189DDFCD8
+		public void EnableKeyword([IsReadOnly] in GlobalKeyword keyword) {} // 0x0000000189DDFD30-0x0000000189DDFD50
+		public void EnableKeyword(Material material, [IsReadOnly] in LocalKeyword keyword) {} // 0x0000000189DDFD7C-0x0000000189DDFDA8
+		public void EnableKeyword(ComputeShader computeShader, [IsReadOnly] in LocalKeyword keyword) {} // 0x0000000189DDFD50-0x0000000189DDFD7C
+		[FreeFunction("RenderingCommandBuffer_Bindings::DisableShaderKeyword", HasExplicitThis = true)]
+		public void DisableShaderKeyword(string keyword) {} // 0x0000000189DDE7A0-0x0000000189DDE7E4
+		[FreeFunction("RenderingCommandBuffer_Bindings::DisableShaderKeyword", HasExplicitThis = true)]
+		private void DisableGlobalKeyword(GlobalKeyword keyword) {} // 0x0000000189DDE678-0x0000000189DDE68C
+		[FreeFunction("RenderingCommandBuffer_Bindings::DisableMaterialKeyword", HasExplicitThis = true)]
+		private void DisableMaterialKeyword(Material material, LocalKeyword keyword) {} // 0x0000000189DDE758-0x0000000189DDE76C
+		[FreeFunction("RenderingCommandBuffer_Bindings::DisableComputeKeyword", HasExplicitThis = true)]
+		private void DisableComputeKeyword(ComputeShader computeShader, LocalKeyword keyword) {} // 0x0000000189DDE620-0x0000000189DDE634
+		public void DisableKeyword([IsReadOnly] in GlobalKeyword keyword) {} // 0x0000000189DDE6E4-0x0000000189DDE704
+		public void DisableKeyword(Material material, [IsReadOnly] in LocalKeyword keyword) {} // 0x0000000189DDE68C-0x0000000189DDE6B8
+		public void DisableKeyword(ComputeShader computeShader, [IsReadOnly] in LocalKeyword keyword) {} // 0x0000000189DDE6B8-0x0000000189DDE6E4
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetShaderKeyword", HasExplicitThis = true)]
+		private void SetGlobalKeyword(GlobalKeyword keyword, bool value) {} // 0x0000000189DE1624-0x0000000189DE1638
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetMaterialKeyword", HasExplicitThis = true)]
+		private void SetMaterialKeyword(Material material, LocalKeyword keyword, bool value) {} // 0x0000000189DE196C-0x0000000189DE1984
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetComputeKeyword", HasExplicitThis = true)]
+		private void SetComputeKeyword(ComputeShader computeShader, LocalKeyword keyword, bool value) {} // 0x0000000189DE0FC8-0x0000000189DE0FE0
+		public void SetKeyword([IsReadOnly] in GlobalKeyword keyword, bool value) {} // 0x0000000189DE18B4-0x0000000189DE18D4
+		public void SetKeyword(Material material, [IsReadOnly] in LocalKeyword keyword, bool value) {} // 0x0000000189DE18D4-0x0000000189DE1908
+		public void SetKeyword(ComputeShader computeShader, [IsReadOnly] in LocalKeyword keyword, bool value) {} // 0x0000000189DE1880-0x0000000189DE18B4
+		[NativeMethod("AddSetGlobalDepthBias")]
+		public void SetGlobalDepthBias(float bias, float slopeBias) {} // 0x0000000189DE14DC-0x0000000189DE1530
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetExecutionFlags", HasExplicitThis = true, ThrowsException = true)]
+		public void SetExecutionFlags(CommandBufferExecutionFlags flags) {} // 0x0000000189DE12C8-0x0000000189DE1308
+		[FreeFunction("RenderingCommandBuffer_Bindings::ValidateAgainstExecutionFlags", HasExplicitThis = true, ThrowsException = true)]
+		private bool ValidateAgainstExecutionFlags(CommandBufferExecutionFlags requiredFlags, CommandBufferExecutionFlags invalidFlags) => default; // 0x0000000189DE2DA8-0x0000000189DE2DF8
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetGlobalVectorArray", HasExplicitThis = true, ThrowsException = true)]
+		public void SetGlobalVectorArray(int nameID, [Unmarshalled] Vector4[] values) {} // 0x0000000189DE1794-0x0000000189DE17E4
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetGlobalTexture_Impl", HasExplicitThis = true)]
+		private void SetGlobalTexture_Impl(int nameID, ref RenderTargetIdentifier rt, RenderTextureSubElement element) {} // 0x0000000189DE169C-0x0000000189DE16FC
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetGlobalBuffer", HasExplicitThis = true)]
+		private void SetGlobalBufferInternal(int nameID, ComputeBuffer value) {} // 0x0000000189DE1358-0x0000000189DE13A8
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetGlobalBuffer", HasExplicitThis = true)]
+		private void SetGlobalBufferIDInternal(int nameID, uint bufferID) {} // 0x0000000189DE1308-0x0000000189DE1358
+		[FreeFunction("RenderingCommandBuffer_Bindings::BeginSample", HasExplicitThis = true)]
+		public void BeginSample(string name) {} // 0x0000000189DDDE0C-0x0000000189DDDE50
+		[FreeFunction("RenderingCommandBuffer_Bindings::EndSample", HasExplicitThis = true)]
+		public void EndSample(string name) {} // 0x0000000189DE0030-0x0000000189DE0074
+		public void BeginSample(CustomSampler sampler) {} // 0x0000000189DDDE04-0x0000000189DDDE0C
+		public void EndSample(CustomSampler sampler) {} // 0x0000000189DE0074-0x0000000189DE007C
+		[FreeFunction("RenderingCommandBuffer_Bindings::BeginSample_CustomSampler", HasExplicitThis = true)]
+		private void BeginSample_CustomSampler([UnityEngine.Bindings.NotNull("ArgumentNullException")] CustomSampler sampler) {} // 0x0000000189DDDDC0-0x0000000189DDDE04
+		[FreeFunction("RenderingCommandBuffer_Bindings::EndSample_CustomSampler", HasExplicitThis = true)]
+		private void EndSample_CustomSampler([UnityEngine.Bindings.NotNull("ArgumentNullException")] CustomSampler sampler) {} // 0x0000000189DDFFEC-0x0000000189DE0030
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetGlobalConstantBuffer", HasExplicitThis = true)]
+		private void SetGlobalConstantBufferInternal(ComputeBuffer buffer, int nameID, int offset, int size) {} // 0x0000000189DE141C-0x0000000189DE1480
+		[FreeFunction("RenderingCommandBuffer_Bindings::SetGlobalConstantBuffer", HasExplicitThis = true)]
+		private void SetGlobalConstantBufferInternal0(uint bufferId, int nameID, int offset, int size) {} // 0x0000000182DC5930-0x0000000182DC59A0
+		public void SetRenderTarget(RenderTargetIdentifier rt) {} // 0x0000000189DE2698-0x0000000189DE2704
+		public void SetRenderTarget(RenderTargetIdentifier rt, RenderBufferLoadAction loadAction, RenderBufferStoreAction storeAction) {} // 0x0000000189DE2A54-0x0000000189DE2B30
+		public void SetRenderTarget(RenderTargetIdentifier rt, RenderBufferLoadAction colorLoadAction, RenderBufferStoreAction colorStoreAction, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction) {} // 0x0000000189DE1D48-0x0000000189DE1E38
+		public void SetRenderTarget(RenderTargetIdentifier rt, int mipLevel) {} // 0x0000000189DE2704-0x0000000189DE2860
+		public void SetRenderTarget(RenderTargetIdentifier rt, int mipLevel, CubemapFace cubemapFace, int depthSlice) {} // 0x0000000189DE2860-0x0000000189DE2A54
+		public void SetRenderTarget(RenderTargetIdentifier color, RenderTargetIdentifier depth, int mipLevel, CubemapFace cubemapFace, int depthSlice) {} // 0x0000000189DE2B30-0x0000000189DE2D50
+		public void SetRenderTarget(RenderTargetIdentifier color, RenderBufferLoadAction colorLoadAction, RenderBufferStoreAction colorStoreAction, RenderTargetIdentifier depth, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction) {} // 0x0000000189DE2050-0x0000000189DE218C
+		public void SetRenderTarget(RenderTargetIdentifier[] colors, RenderTargetIdentifier depth, int mipLevel, CubemapFace cubemapFace, int depthSlice) {} // 0x0000000189DE1E38-0x0000000189DE2050
+		public void SetRenderTarget(RenderTargetBinding binding) {} // 0x0000000189DE218C-0x0000000189DE2698
+		private void SetRenderTargetSingle_Internal(RenderTargetIdentifier rt, RenderBufferLoadAction colorLoadAction, RenderBufferStoreAction colorStoreAction, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction) {} // 0x0000000189DE1D20-0x0000000189DE1D48
+		private void SetRenderTargetColorDepth_Internal(RenderTargetIdentifier color, RenderTargetIdentifier depth, RenderBufferLoadAction colorLoadAction, RenderBufferStoreAction colorStoreAction, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction, RenderTargetFlags flags) {} // 0x0000000189DE1B0C-0x0000000189DE1B50
+		private void SetRenderTargetMulti_Internal(RenderTargetIdentifier[] colors, RenderTargetIdentifier depth, RenderBufferLoadAction[] colorLoadActions, RenderBufferStoreAction[] colorStoreActions, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction, RenderTargetFlags flags) {} // 0x0000000189DE1C74-0x0000000189DE1CBC
+		private void SetRenderTargetMultiSubtarget(RenderTargetIdentifier[] colors, RenderTargetIdentifier depth, RenderBufferLoadAction[] colorLoadActions, RenderBufferStoreAction[] colorStoreActions, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction, int mipLevel, CubemapFace cubemapFace, int depthSlice) {} // 0x0000000189DE1BB4-0x0000000189DE1C10
+		public void SetBufferData(ComputeBuffer buffer, Array data) {} // 0x0000000189DE0C94-0x0000000189DE0DF4
+		[FreeFunction(Name = "RenderingCommandBuffer_Bindings::InternalSetGraphicsBufferData", HasExplicitThis = true, ThrowsException = true)]
+		private void InternalSetComputeBufferData([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeBuffer buffer, Array data, int managedBufferStartIndex, int graphicsBufferStartIndex, int count, int elemSize) {} // 0x0000000189DE05BC-0x0000000189DE0620
+		[FreeFunction(Name = "RenderingCommandBuffer_Bindings::CopyBufferToImage", HasExplicitThis = true)]
+		private void CopyBufferToImageImpl([UnityEngine.Bindings.NotNull("ArgumentNullException")] ComputeBuffer source, int bufferOffset, [UnityEngine.Bindings.NotNull("ArgumentNullException")] Texture dest, int texOffsetX, int texOffsetY, int texOffsetZ, int texExtentX, int texExtentY, int texExtentZ, int mipLevel, int layer) {} // 0x0000000189DDE2C4-0x0000000189DDE32C
+		[FreeFunction(Name = "RenderingCommandBuffer_Bindings::SetProfilingHGPass", HasExplicitThis = true)]
+		private void SetProfilingHGPassImpl(int pass) {} // 0x0000000189DE1984-0x0000000189DE19C4
+		public void SetProfilingHGPass(ProfilingHGPass pass) {} // 0x0000000189DE19C4-0x0000000189DE19CC
+		[FreeFunction(Name = "RenderingCommandBuffer_Bindings::RenderUIOverlay", HasExplicitThis = true)]
+		private void RenderUIOverlayImpl(Camera camera) {} // 0x0000000189DE0C48-0x0000000189DE0C8C
+		[FreeFunction(Name = "RenderingCommandBuffer_Bindings::HGDrawUIRendererList", HasExplicitThis = true)]
+		private void HGDrawUIRendererListImpl(uint listHandle) {} // 0x0000000189DE04E0-0x0000000189DE0520
+		public IntPtr GetNativePtr() => default; // 0x0000000183D66B80-0x0000000183D66B90
+		~CommandBuffer() {} // 0x0000000183CF1C20-0x0000000183CF1CB0
+		public void Dispose() {} // 0x0000000189DDE7E4-0x0000000189DDE834
+		private void Dispose(bool disposing) {} // 0x00000001842706BC-0x00000001842706DC
+		public void Release() {} // 0x0000000189DE0C40-0x0000000189DE0C48
+		public void InitWithTempJobAlloc() {} // 0x000000018259EB60-0x000000018259EBE0
+		public void ReleaseInternalPtr() {} // 0x000000018259EC20-0x000000018259EC70
+		public GraphicsFence CreateAsyncGraphicsFence() => default; // 0x0000000189DDE4DC-0x0000000189DDE518
+		public GraphicsFence CreateGraphicsFence(GraphicsFenceType fenceType, SynchronisationStageFlags stage) => default; // 0x0000000189DDE568-0x0000000189DDE5CC
+		public void WaitOnAsyncGraphicsFence(GraphicsFence fence) {} // 0x0000000189DE2DF8-0x0000000189DE2E1C
+		public void WaitOnAsyncGraphicsFence(GraphicsFence fence, SynchronisationStage stage) {} // 0x0000000189DE2E1C-0x0000000189DE2E4C
+		public void WaitOnAsyncGraphicsFence(GraphicsFence fence, SynchronisationStageFlags stage) {} // 0x0000000189DE2E4C-0x0000000189DE2EF8
+		public void SetComputeVectorParam(ComputeShader computeShader, string name, Vector4 val) {} // 0x0000000182525D30-0x0000000182525D90
+		public void SetComputeValueParam<T>(ComputeShader computeShader, int nameID, NativeArray<T> data)
+			where T : struct {}
+		public void SetComputeMatrixParam(ComputeShader computeShader, string name, Matrix4x4 val) {} // 0x0000000189DE1044-0x0000000189DE10B4
+		public void SetComputeTextureParam(ComputeShader computeShader, int kernelIndex, string name, RenderTargetIdentifier rt) {} // 0x0000000182525E10-0x0000000182525E80
+		public void SetComputeTextureParam(ComputeShader computeShader, int kernelIndex, int nameID, RenderTargetIdentifier rt) {} // 0x0000000189DE1144-0x0000000189DE117C
+		public void SetComputeTextureParam(ComputeShader computeShader, int kernelIndex, string name, RenderTargetIdentifier rt, int mipLevel) {} // 0x0000000182525D90-0x0000000182525E10
+		public void SetComputeTextureParam(ComputeShader computeShader, int kernelIndex, int nameID, RenderTargetIdentifier rt, int mipLevel) {} // 0x0000000189DE11C0-0x0000000189DE1200
+		public void SetComputeTextureParam(ComputeShader computeShader, int kernelIndex, string name, RenderTargetIdentifier rt, int mipLevel, RenderTextureSubElement element) {} // 0x0000000189DE10CC-0x0000000189DE1144
+		public void SetComputeTextureParam(ComputeShader computeShader, int kernelIndex, int nameID, RenderTargetIdentifier rt, int mipLevel, RenderTextureSubElement element) {} // 0x0000000189DE117C-0x0000000189DE11C0
+		public void SetComputeBufferParam(ComputeShader computeShader, int kernelIndex, int nameID, ComputeBuffer buffer, int offset = 0 /* Metadata: 0x01FBB48D */, int size = -1 /* Metadata: 0x01FBB48E */) {} // 0x0000000189DE0E70-0x0000000189DE0E80
+		public void SetComputeBufferParam(ComputeShader computeShader, int kernelIndex, string name, ComputeBuffer buffer, int offset = 0 /* Metadata: 0x01FBB48F */, int size = -1 /* Metadata: 0x01FBB490 */) {} // 0x0000000189DE0DF4-0x0000000189DE0E60
+		public void SetComputeBufferParam(ComputeShader computeShader, int kernelIndex, int nameID, uint bufferID, int offset = 0 /* Metadata: 0x01FBB491 */, int size = -1 /* Metadata: 0x01FBB492 */) {} // 0x0000000189DE0E60-0x0000000189DE0E70
+		public void SetComputeConstantBufferParam(ComputeShader computeShader, int nameID, ComputeBuffer buffer, int offset, int size) {} // 0x0000000189DE0E80-0x0000000189DE0E90
+		public void SetComputeConstantBufferParam(ComputeShader computeShader, int nameID, uint bufferId, int offset, int size) {} // 0x0000000189DE0EF0-0x0000000189DE0F00
+		public void SetComputeConstantBufferParam(ComputeShader computeShader, string name, uint bufferId, int offset, int size) {} // 0x0000000189DE0E90-0x0000000189DE0EF0
+		public void SetGlobalConstantBuffer(uint bufferId, int nameID, int offset, int size) {} // 0x0000000184273AF0-0x0000000184273B00
+		public void SetGlobalConstantBuffer(uint bufferId, string name, int offset, int size) {} // 0x0000000189DE1480-0x0000000189DE14CC
+		public void DispatchCompute(ComputeShader computeShader, int kernelIndex, int threadGroupsX, int threadGroupsY, int threadGroupsZ) {} // 0x00000001842703E0-0x00000001842703F0
+		public void DrawMesh(Mesh mesh, Matrix4x4 matrix, Material material, int submeshIndex, int shaderPass, MaterialPropertyBlock properties, [UnityEngine.Internal.DefaultValue("null")] RenderStateBlock? overrideState = default) {} // 0x0000000189DDF514-0x0000000189DDF804
+		public void DrawMesh(Mesh mesh, Matrix4x4 matrix, Material material, int submeshIndex, int shaderPass, MaterialPropertyBlock properties) {} // 0x0000000189DDF424-0x0000000189DDF514
+		public void DrawMesh(Mesh mesh, Matrix4x4 matrix, Material material, int submeshIndex, int shaderPass) {} // 0x0000000189DDF3C4-0x0000000189DDF424
+		public void DrawRendererList(UnityEngine.Rendering.RendererUtils.RendererList rendererList) {} // 0x0000000189DDFC50-0x0000000189DDFC70
+		public void DrawProcedural(Matrix4x4 matrix, Material material, int shaderPass, MeshTopology topology, int vertexCount, int instanceCount, MaterialPropertyBlock properties) {} // 0x0000000189DDFB04-0x0000000189DDFC50
+		public void DrawProceduralIndirect(GraphicsBuffer indexBuffer, Matrix4x4 matrix, Material material, int shaderPass, MeshTopology topology, ComputeBuffer bufferWithArgs, int argsOffset, MaterialPropertyBlock properties) {} // 0x0000000189DDF824-0x0000000189DDFA20
+		public void DrawProceduralIndirect(GraphicsBuffer indexBuffer, Matrix4x4 matrix, Material material, int shaderPass, MeshTopology topology, ComputeBuffer bufferWithArgs, int argsOffset) {} // 0x0000000189DDFA20-0x0000000189DDFA98
+		public void DrawProceduralIndirect(GraphicsBuffer indexBuffer, Matrix4x4 matrix, Material material, int shaderPass, MeshTopology topology, ComputeBuffer bufferWithArgs) {} // 0x0000000189DDFA98-0x0000000189DDFB04
+		public void HGDrawMeshInstanced(Mesh mesh, int submeshIndex, Material material, int shaderPass, int count, MaterialPropertyBlock properties) {} // 0x0000000189DE017C-0x0000000189DE04E0
+		public void DrawMeshInstanced(Mesh mesh, int submeshIndex, Material material, int shaderPass, NativeArray<Matrix4x4> matrices, int count, MaterialPropertyBlock properties, [UnityEngine.Internal.DefaultValue("null")] RenderStateBlock? overrideState = default) {} // 0x0000000189DDEF24-0x0000000189DDF3C4
+		public void DrawMeshInstancedProcedural(Mesh mesh, int submeshIndex, Material material, int shaderPass, int count, MaterialPropertyBlock properties = null) {} // 0x0000000189DDEC60-0x0000000189DDEF24
+		public void DrawMeshInstancedIndirect(Mesh mesh, int submeshIndex, Material material, int shaderPass, ComputeBuffer bufferWithArgs, int argsOffset, MaterialPropertyBlock properties, [UnityEngine.Internal.DefaultValue("null")] RenderStateBlock? overrideState = default) {} // 0x0000000189DDE834-0x0000000189DDEB90
+		public void DrawMeshInstancedIndirect(Mesh mesh, int submeshIndex, Material material, int shaderPass, ComputeBuffer bufferWithArgs) {} // 0x0000000189DDEB90-0x0000000189DDEC60
+		public void DrawOcclusionMesh(RectInt normalizedCamViewport) {} // 0x0000000189DDF804-0x0000000189DDF824
+		public void SetRandomWriteTarget(int index, ComputeBuffer buffer, bool preserveCounterValue) {} // 0x0000000189DE1A48-0x0000000189DE1AA8
+		public void SetRandomWriteTarget(int index, ComputeBuffer buffer) {} // 0x0000000189DE1A2C-0x0000000189DE1A48
+		public void CopyTexture(RenderTargetIdentifier src, RenderTargetIdentifier dst) {} // 0x0000000189DDE398-0x0000000189DDE404
+		public void CopyTexture(RenderTargetIdentifier src, int srcElement, RenderTargetIdentifier dst, int dstElement) {} // 0x0000000189DDE468-0x0000000189DDE4DC
+		public void CopyTexture(RenderTargetIdentifier src, int srcElement, int srcMip, RenderTargetIdentifier dst, int dstElement, int dstMip) {} // 0x0000000189DDE404-0x0000000189DDE468
+		public void CopyTexture(RenderTargetIdentifier src, int srcElement, int srcMip, int srcX, int srcY, int srcWidth, int srcHeight, RenderTargetIdentifier dst, int dstElement, int dstMip, int dstX, int dstY) {} // 0x0000000182525EF0-0x0000000182525FE0
+		public void Blit(Texture source, RenderTargetIdentifier dest) {} // 0x0000000189DDE0F0-0x0000000189DDE18C
+		public void Blit(Texture source, RenderTargetIdentifier dest, Material mat, int pass) {} // 0x0000000189DDDFB0-0x0000000189DDE05C
+		public void Blit(RenderTargetIdentifier source, RenderTargetIdentifier dest, int sourceDepthSlice, int destDepthSlice) {} // 0x0000000189DDE05C-0x0000000189DDE0F0
+		public void SetGlobalVectorArray(string propertyName, Vector4[] values) {} // 0x0000000189DE17E4-0x0000000189DE181C
+		public void SetGlobalTexture(string name, RenderTargetIdentifier value) {} // 0x0000000189DE1734-0x0000000189DE1794
+		public void SetGlobalTexture(int nameID, RenderTargetIdentifier value) {} // 0x0000000189DE1714-0x0000000189DE1734
+		public void SetGlobalTexture(int nameID, RenderTargetIdentifier value, RenderTextureSubElement element) {} // 0x0000000189DE16FC-0x0000000189DE1714
+		public void SetGlobalBuffer(int nameID, ComputeBuffer value) {} // 0x0000000189DE13B0-0x0000000189DE13B8
+		public void SetGlobalBuffer(int nameID, uint bufferID) {} // 0x0000000189DE13A8-0x0000000189DE13B0
+		public void SetGlobalConstantBuffer(ComputeBuffer buffer, int nameID, int offset, int size) {} // 0x0000000189DE14CC-0x0000000189DE14DC
+		public void CopyBufferToImage(ComputeBuffer source, int offset, Texture dest, int texOffsetX, int texOffsetY, int texOffsetZ, int texExtentX, int texExtentY, int texExtentZ, int mipLevel, int layer) {} // 0x0000000189DDE32C-0x0000000189DDE398
+		public void RenderUIOverlay(Camera camera) {} // 0x0000000189DE0C8C-0x0000000189DE0C94
+		public void HGDrawUIRendererList(uint listHandle) {} // 0x0000000189DE0520-0x0000000189DE0528
+		private void SetComputeVectorParam_Injected(ComputeShader computeShader, int nameID, ref Vector4 val) {} // 0x000000018368EA80-0x000000018368EAF0
+		private void SetComputeMatrixParam_Injected(ComputeShader computeShader, int nameID, ref Matrix4x4 val) {} // 0x0000000189DE0FE0-0x0000000189DE1044
+		private unsafe void Internal_DrawMesh_Injected(Mesh mesh, ref Matrix4x4 matrix, Material material, int submeshIndex, int shaderPass, MaterialPropertyBlock properties, RenderStateBlock* overrideState = null) {} // 0x0000000189DE074C-0x0000000189DE07B0
+		private void Internal_DrawRendererList_Injected(ref UnityEngine.Rendering.RendererUtils.RendererList rendererList) {} // 0x0000000189DE09B4-0x0000000189DE09F8
+		private void AddDrawECSMeshRendererListWithSRPRendererList_Injected(uint ecsList, ref UnityEngine.Rendering.RendererUtils.RendererList srpList) {} // 0x0000000189DDDCC8-0x0000000189DDDD18
+		private void Internal_DrawProcedural_Injected(ref Matrix4x4 matrix, Material material, int shaderPass, MeshTopology topology, int vertexCount, int instanceCount, MaterialPropertyBlock properties) {} // 0x0000000189DE0908-0x0000000189DE096C
+		private void Internal_DrawProceduralIndexedIndirect_Injected(GraphicsBuffer indexBuffer, ref Matrix4x4 matrix, Material material, int shaderPass, MeshTopology topology, ComputeBuffer bufferWithArgs, int argsOffset, MaterialPropertyBlock properties) {} // 0x0000000189DE0850-0x0000000189DE08B4
+		private void Internal_DrawOcclusionMesh_Injected(ref RectInt normalizedCamViewport) {} // 0x0000000189DE07F8-0x0000000189DE083C
+		private void SetViewport_Injected(ref Rect pixelRect) {} // 0x0000000189DE2D50-0x0000000189DE2D94
+		private void EnableScissorRect_Injected(ref Rect scissor) {} // 0x0000000189DDFE10-0x0000000189DDFE54
+		private void Blit_Texture_Injected(Texture source, ref RenderTargetIdentifier dest, Material mat, int pass, ref Vector2 scale, ref Vector2 offset, int sourceDepthSlice, int destDepthSlice) {} // 0x0000000189DDDF00-0x0000000189DDDF64
+		private void Blit_Identifier_Injected(ref RenderTargetIdentifier source, ref RenderTargetIdentifier dest, Material mat, int pass, ref Vector2 scale, ref Vector2 offset, int sourceDepthSlice, int destDepthSlice) {} // 0x0000000189DDDE50-0x0000000189DDDEB4
+		private void EncodeMetalFXSpatialScaler_Injected(uint spatialScalerHandle, ref RenderTargetIdentifier colorTexture, ref RenderTargetIdentifier outputTexture) {} // 0x0000000189DDFEAC-0x0000000189DDFF0C
+		private void EncodeMetalFXTemporalScaler_Injected(uint temporalScalerHandle, bool resetHistory, ref RenderTargetIdentifier colorTexture, ref RenderTargetIdentifier depthTexture, ref RenderTargetIdentifier motionTexture, ref RenderTargetIdentifier outputTexture, bool reversedDepth, float jitterOffsetX, float jitterOffsetY) {} // 0x0000000189DDFF24-0x0000000189DDFF84
+		private void GetTemporaryRTWithDescriptor_Injected(int nameID, ref RenderTextureDescriptor desc, UnityEngine.FilterMode filter) {} // 0x0000000189DE007C-0x0000000189DE00DC
+		private void ClearRenderTarget_Injected(RTClearFlags clearFlags, ref UnityEngine.Color backgroundColor, float depth, uint stencil) {} // 0x0000000189DDE18C-0x0000000189DDE1EC
+		private void SetGlobalVector_Injected(int nameID, ref Vector4 value) {} // 0x0000000189DE181C-0x0000000189DE186C
+		private void SetGlobalColor_Injected(int nameID, ref UnityEngine.Color value) {} // 0x0000000189DE13B8-0x0000000189DE1408
+		private void SetGlobalMatrix_Injected(int nameID, ref Matrix4x4 value) {} // 0x0000000189DE1638-0x0000000189DE1688
+		private void EnableGlobalKeyword_Injected(ref GlobalKeyword keyword) {} // 0x0000000189DDFCD8-0x0000000189DDFD1C
+		private void EnableMaterialKeyword_Injected(Material material, ref LocalKeyword keyword) {} // 0x0000000189DDFDA8-0x0000000189DDFDFC
+		private void EnableComputeKeyword_Injected(ComputeShader computeShader, ref LocalKeyword keyword) {} // 0x0000000189DDFC70-0x0000000189DDFCC4
+		private void DisableGlobalKeyword_Injected(ref GlobalKeyword keyword) {} // 0x0000000189DDE634-0x0000000189DDE678
+		private void DisableMaterialKeyword_Injected(Material material, ref LocalKeyword keyword) {} // 0x0000000189DDE704-0x0000000189DDE758
+		private void DisableComputeKeyword_Injected(ComputeShader computeShader, ref LocalKeyword keyword) {} // 0x0000000189DDE5CC-0x0000000189DDE620
+		private void SetGlobalKeyword_Injected(ref GlobalKeyword keyword, bool value) {} // 0x0000000189DE15D0-0x0000000189DE1624
+		private void SetMaterialKeyword_Injected(Material material, ref LocalKeyword keyword, bool value) {} // 0x0000000189DE1908-0x0000000189DE196C
+		private void SetComputeKeyword_Injected(ComputeShader computeShader, ref LocalKeyword keyword, bool value) {} // 0x0000000189DE0F64-0x0000000189DE0FC8
+		private void SetRenderTargetSingle_Internal_Injected(ref RenderTargetIdentifier rt, RenderBufferLoadAction colorLoadAction, RenderBufferStoreAction colorStoreAction, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction) {} // 0x0000000189DE1CBC-0x0000000189DE1D20
+		private void SetRenderTargetColorDepth_Internal_Injected(ref RenderTargetIdentifier color, ref RenderTargetIdentifier depth, RenderBufferLoadAction colorLoadAction, RenderBufferStoreAction colorStoreAction, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction, RenderTargetFlags flags) {} // 0x0000000189DE1AA8-0x0000000189DE1B0C
+		private void SetRenderTargetMulti_Internal_Injected(RenderTargetIdentifier[] colors, ref RenderTargetIdentifier depth, RenderBufferLoadAction[] colorLoadActions, RenderBufferStoreAction[] colorStoreActions, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction, RenderTargetFlags flags) {} // 0x0000000189DE1C10-0x0000000189DE1C74
+		private void SetRenderTargetMultiSubtarget_Injected(RenderTargetIdentifier[] colors, ref RenderTargetIdentifier depth, RenderBufferLoadAction[] colorLoadActions, RenderBufferStoreAction[] colorStoreActions, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction, int mipLevel, CubemapFace cubemapFace, int depthSlice) {} // 0x0000000189DE1B50-0x0000000189DE1BB4
+	}
+
+	[NativeHeader("Runtime/Export/Graphics/RenderingCommandBufferExtensions.bindings.h")]
+	[UsedByNativeCode]
+	public static class CommandBufferExtensions // TypeDefIndex: 47032
+	{
+		// Methods
+		[FreeFunction("RenderingCommandBufferExtensions_Bindings::Internal_SwitchIntoFastMemory")]
+		private static void Internal_SwitchIntoFastMemory([UnityEngine.Bindings.NotNull("NullExceptionObject")] CommandBuffer cmd, ref RenderTargetIdentifier rt, FastMemoryFlags fastMemoryFlags, float residency, bool copyContents) {} // 0x0000000189DDDB1C-0x0000000189DDDB80
+		[FreeFunction("RenderingCommandBufferExtensions_Bindings::Internal_SwitchOutOfFastMemory")]
+		private static void Internal_SwitchOutOfFastMemory([UnityEngine.Bindings.NotNull("NullExceptionObject")] CommandBuffer cmd, ref RenderTargetIdentifier rt, bool copyContents) {} // 0x0000000189DDDB80-0x0000000189DDDBD4
+	
+		// Extension methods
+		[NativeConditional("UNITY_XBOXONE || UNITY_GAMECORE_XBOXONE")]
+		public static void SwitchIntoFastMemory(this CommandBuffer cmd, RenderTargetIdentifier rid, FastMemoryFlags fastMemoryFlags, float residency, bool copyContents) {} // 0x0000000189DDDBD4-0x0000000189DDDBF4
+		[NativeConditional("UNITY_XBOXONE || UNITY_GAMECORE_XBOXONE")]
+		public static void SwitchOutOfFastMemory(this CommandBuffer cmd, RenderTargetIdentifier rid, bool copyContents) {} // 0x0000000189DDDBF4-0x0000000189DDDC08
+	}
+
+	[NativeHeader("Runtime/Graphics/DrawSplashScreenAndWatermarks.h")]
+	public class SplashScreen // TypeDefIndex: 47033
+	{
+		// Properties
+		public static bool isFinished { [FreeFunction("IsSplashScreenFinished")] get => default; } // 0x0000000189DEC454-0x0000000189DEC480 
+	
+		// Constructors
+		public SplashScreen() {} // Dummy constructor
+	}
+
+	[NativeHeader("Runtime/Export/Math/SphericalHarmonicsL2.bindings.h")]
+	[UsedByNativeCode]
+	public struct SphericalHarmonicsL2 : IEquatable<SphericalHarmonicsL2> // TypeDefIndex: 47034
+	{
+		// Fields
+		private float shr0; // 0x00
+		private float shr1; // 0x04
+		private float shr2; // 0x08
+		private float shr3; // 0x0C
+		private float shr4; // 0x10
+		private float shr5; // 0x14
+		private float shr6; // 0x18
+		private float shr7; // 0x1C
+		private float shr8; // 0x20
+		private float shg0; // 0x24
+		private float shg1; // 0x28
+		private float shg2; // 0x2C
+		private float shg3; // 0x30
+		private float shg4; // 0x34
+		private float shg5; // 0x38
+		private float shg6; // 0x3C
+		private float shg7; // 0x40
+		private float shg8; // 0x44
+		private float shb0; // 0x48
+		private float shb1; // 0x4C
+		private float shb2; // 0x50
+		private float shb3; // 0x54
+		private float shb4; // 0x58
+		private float shb5; // 0x5C
+		private float shb6; // 0x60
+		private float shb7; // 0x64
+		private float shb8; // 0x68
+	
+		// Properties
+		public float this[int rgb, int coefficient] { get => default; set {} } // 0x0000000182CE76A0-0x0000000182CE77B0 0x0000000189DEC250-0x0000000189DEC454
+	
+		// Methods
+		public override int GetHashCode() => default; // 0x0000000189DEBCC8-0x0000000189DEBE98
+		public override bool Equals(object other) => default; // 0x0000000189DEBB5C-0x0000000189DEBC20
+		public bool Equals(SphericalHarmonicsL2 other) => default; // 0x0000000189DEBC20-0x0000000189DEBCC8
+		public static SphericalHarmonicsL2 operator *(SphericalHarmonicsL2 lhs, float rhs) => default; // 0x0000000183D87510-0x0000000183D87810
+		public static SphericalHarmonicsL2 operator +(SphericalHarmonicsL2 lhs, SphericalHarmonicsL2 rhs) => default; // 0x0000000183D871D0-0x0000000183D87510
+		public static bool operator ==(SphericalHarmonicsL2 lhs, SphericalHarmonicsL2 rhs) => default; // 0x0000000189DEBE98-0x0000000189DEC250
+	}
+
+	public struct BatchVisibility // TypeDefIndex: 47035
+	{
+		// Fields
+		public readonly int offset; // 0x00
+		public readonly int instancesCount; // 0x04
+		public int visibleCount; // 0x08
+	}
+
+	[NativeHeader("Runtime/Camera/BatchRendererGroup.h")]
+	[UsedByNativeCode]
+	public struct BatchCullingContext // TypeDefIndex: 47036
+	{
+		// Fields
+		public readonly NativeArray<Plane> cullingPlanes; // 0x00
+		public NativeArray<BatchVisibility> batchVisibility; // 0x10
+		public NativeArray<int> visibleIndices; // 0x20
+		public NativeArray<int> visibleIndicesY; // 0x30
+		public readonly LODParameters lodParameters; // 0x40
+		public readonly Matrix4x4 cullingMatrix; // 0x5C
+		public readonly float nearPlane; // 0x9C
+	
+		// Constructors
+		internal BatchCullingContext(NativeArray<Plane> inCullingPlanes, NativeArray<BatchVisibility> inOutBatchVisibility, NativeArray<int> outVisibleIndices, NativeArray<int> outVisibleIndicesY, LODParameters inLodParameters, Matrix4x4 inCullingMatrix, float inNearPlane) {
+			cullingPlanes = default;
+			batchVisibility = default;
+			visibleIndices = default;
+			visibleIndicesY = default;
+			lodParameters = default;
+			cullingMatrix = default;
+			nearPlane = default;
+		} // 0x0000000183D86D80-0x0000000183D86E00
+	}
+
+	[NativeHeader("Runtime/Camera/BatchRendererGroup.h")]
+	[UsedByNativeCode]
+	internal struct BatchRendererCullingOutput // TypeDefIndex: 47037
+	{
+		// Fields
+		public JobHandle cullingJobsFence; // 0x00
+		public Matrix4x4 cullingMatrix; // 0x10
+		public unsafe Plane* cullingPlanes; // 0x50
+		public unsafe BatchVisibility* batchVisibility; // 0x58
+		public unsafe int* visibleIndices; // 0x60
+		public unsafe int* visibleIndicesY; // 0x68
+		public int cullingPlanesCount; // 0x70
+		public int batchVisibilityCount; // 0x74
+		public int visibleIndicesCount; // 0x78
+		public float nearPlane; // 0x7C
+	}
+
+	[NativeHeader("Runtime/Camera/BatchRendererGroup.h")]
+	[NativeHeader("Runtime/Math/Matrix4x4.h")]
+	[RequiredByNativeCode]
+	public class BatchRendererGroup // TypeDefIndex: 47039
+	{
+		// Fields
+		private IntPtr m_GroupHandle; // 0x10
+		private OnPerformCulling m_PerformCulling; // 0x18
+	
+		// Nested types
+		public delegate JobHandle OnPerformCulling(BatchRendererGroup rendererGroup, BatchCullingContext cullingContext); // TypeDefIndex: 47038; 0x0000000189DDAF58-0x0000000189DDAFFC
+	
+		// Constructors
+		public BatchRendererGroup() {} // Dummy constructor
+	
+		// Methods
+		[RequiredByNativeCode]
+		private static void InvokeOnPerformCulling(BatchRendererGroup group, ref BatchRendererCullingOutput context, ref LODParameters lodParameters) {} // 0x0000000189DDB8C8-0x0000000189DDBBB8
+	}
+
+	public struct AttachmentDescriptor : IEquatable<AttachmentDescriptor> // TypeDefIndex: 47040
+	{
+		// Fields
+		private RenderBufferLoadAction m_LoadAction; // 0x00
+		private RenderBufferStoreAction m_StoreAction; // 0x04
+		private GraphicsFormat m_Format; // 0x08
+		private RenderTargetIdentifier m_LoadStoreTarget; // 0x10
+		private RenderTargetIdentifier m_ResolveTarget; // 0x38
+		private UnityEngine.Color m_ClearColor; // 0x60
+		private float m_ClearDepth; // 0x70
+		private uint m_ClearStencil; // 0x74
+	
+		// Properties
+		public RenderBufferLoadAction loadAction { set {} } // 0x0000000183D4E970-0x0000000183D4E980
+		public RenderBufferStoreAction storeAction { set {} } // 0x0000000183D51720-0x0000000183D51730
+		public GraphicsFormat graphicsFormat { set {} } // 0x0000000183D51710-0x0000000183D51720
+	
+		// Methods
+		public void ConfigureTarget(RenderTargetIdentifier target, bool loadExistingContents, bool storeResults) {} // 0x0000000189DDB580-0x0000000189DDB5C4
+		public void ConfigureClear(UnityEngine.Color clearColor, float clearDepth = 1f /* Metadata: 0x01FBB493 */, uint clearStencil = 0 /* Metadata: 0x01FBB497 */) {} // 0x0000000183D86D60-0x0000000183D86D80
+		public bool Equals(AttachmentDescriptor other) => default; // 0x0000000189DDB68C-0x0000000189DDB838
+		public override bool Equals(object obj) => default; // 0x0000000189DDB5C4-0x0000000189DDB68C
+		public override int GetHashCode() => default; // 0x0000000189DDB838-0x0000000189DDB8C8
+	}
+
+	public struct BlendState : IEquatable<BlendState> // TypeDefIndex: 47041
+	{
+		// Fields
+		private RenderTargetBlendState m_BlendState0; // 0x00
+		private RenderTargetBlendState m_BlendState1; // 0x08
+		private RenderTargetBlendState m_BlendState2; // 0x10
+		private RenderTargetBlendState m_BlendState3; // 0x18
+		private RenderTargetBlendState m_BlendState4; // 0x20
+		private RenderTargetBlendState m_BlendState5; // 0x28
+		private RenderTargetBlendState m_BlendState6; // 0x30
+		private RenderTargetBlendState m_BlendState7; // 0x38
+		private byte m_SeparateMRTBlendStates; // 0x40
+		private byte m_AlphaToMask; // 0x41
+		private short m_Padding; // 0x42
+	
+		// Methods
+		public bool Equals(BlendState other) => default; // 0x0000000189DDBBB8-0x0000000189DDBD84
+		public override bool Equals(object obj) => default; // 0x0000000189DDBD84-0x0000000189DDBE20
+		public override int GetHashCode() => default; // 0x0000000189DDBE20-0x0000000189DDBEDC
+	}
+
+	[UsedByNativeCode]
+	internal struct CoreCameraValues : IEquatable<CoreCameraValues> // TypeDefIndex: 47042
+	{
+		// Fields
+		private int filterMode; // 0x00
+		private uint cullingMask; // 0x04
+		private int instanceID; // 0x08
+		private int uiInstanceID; // 0x0C
+	
+		// Methods
+		public bool Equals(CoreCameraValues other) => default; // 0x0000000185688F1C-0x0000000185688F40
+		public override bool Equals(object obj) => default; // 0x0000000189DE2FBC-0x0000000189DE3034
+		public override int GetHashCode() => default; // 0x0000000183D86E00-0x0000000183D86E20
+	}
+
+	[UsedByNativeCode]
+	public struct CameraProperties : IEquatable<CameraProperties> // TypeDefIndex: 47046
+	{
+		// Fields
+		private Rect screenRect; // 0x00
+		private Vector3 viewDir; // 0x10
+		private float projectionNear; // 0x1C
+		private float projectionFar; // 0x20
+		private float cameraNear; // 0x24
+		private float cameraFar; // 0x28
+		private float cameraAspect; // 0x2C
+		private Matrix4x4 cameraToWorld; // 0x30
+		private Matrix4x4 actualWorldToClip; // 0x70
+		private Matrix4x4 cameraClipToWorld; // 0xB0
+		private Matrix4x4 cameraWorldToClip; // 0xF0
+		private Matrix4x4 implicitProjection; // 0x130
+		private Matrix4x4 stereoWorldToClipLeft; // 0x170
+		private Matrix4x4 stereoWorldToClipRight; // 0x1B0
+		private Matrix4x4 worldToCamera; // 0x1F0
+		private Vector3 up; // 0x230
+		private Vector3 right; // 0x23C
+		private Vector3 transformDirection; // 0x248
+		private Vector3 cameraEuler; // 0x254
+		private Vector3 velocity; // 0x260
+		private float farPlaneWorldSpaceLength; // 0x26C
+		private uint rendererCount; // 0x270
+		internal unsafe fixed /* 0x00000000-0x00000000 */ byte m_ShadowCullPlanes[0]; // 0x274
+		internal unsafe fixed /* 0x00000000-0x00000000 */ byte m_CameraCullPlanes[0]; // 0x2D4
+		private float baseFarDistance; // 0x334
+		private Vector3 shadowCullCenter; // 0x338
+		internal unsafe fixed /* 0x00000000-0x00000000 */ float layerCullDistances[0]; // 0x344
+		private int layerCullSpherical; // 0x3C4
+		private CoreCameraValues coreCameraValues; // 0x3C8
+		private uint cameraType; // 0x3D8
+		private int projectionIsOblique; // 0x3DC
+		private int isImplicitProjectionMatrix; // 0x3E0
+	
+		// Methods
+		public Plane GetShadowCullingPlane(int index) => default; // 0x0000000189DDDA18-0x0000000189DDDB1C
+		public Plane GetCameraCullingPlane(int index) => default; // 0x0000000189DDD5D4-0x0000000189DDD6D8
+		public bool Equals(CameraProperties other) => default; // 0x0000000189DDBEEC-0x0000000189DDD4C8
+		public override bool Equals(object obj) => default; // 0x0000000189DDD4C8-0x0000000189DDD5D4
+		public override int GetHashCode() => default; // 0x0000000189DDD6D8-0x0000000189DDDA18
+	}
+
+	[Flags]
+	public enum CullingOptions // TypeDefIndex: 47047
+	{
+		None = 0,
+		ForceEvenIfCameraIsNotActive = 1,
+		OcclusionCull = 2,
+		NeedsLighting = 4,
+		NeedsReflectionProbes = 8,
+		Stereo = 16,
+		DisablePerObjectCulling = 32,
+		ShadowCasters = 64
+	}
+
+	[UsedByNativeCode]
+	public struct ScriptableCullingParameters : IEquatable<ScriptableCullingParameters> // TypeDefIndex: 47050
+	{
+		// Fields
+		private int m_IsOrthographic; // 0x00
+		private LODParameters m_LODParameters; // 0x04
+		public static readonly int maximumCullingPlaneCount; // 0x00
+		internal unsafe fixed /* 0x00000000-0x00000000 */ byte m_CullingPlanes[0]; // 0x20
+		private int m_CullingPlaneCount; // 0xC0
+		private uint m_CullingMask; // 0xC4
+		private ulong m_SceneMask; // 0xC8
+		public static readonly int layerCount; // 0x04
+		internal unsafe fixed /* 0x00000000-0x00000000 */ float m_LayerFarCullDistances[0]; // 0xD0
+		private int m_LayerCull; // 0x150
+		private Matrix4x4 m_CullingMatrix; // 0x154
+		private Vector3 m_Origin; // 0x194
+		private float m_ShadowDistance; // 0x1A0
+		private float m_ShadowNearPlaneOffset; // 0x1A4
+		private CullingOptions m_CullingOptions; // 0x1A8
+		private ReflectionProbeSortingCriteria m_ReflectionProbeSortingCriteria; // 0x1AC
+		private CameraProperties m_CameraProperties; // 0x1B0
+		private float m_AccurateOcclusionThreshold; // 0x594
+		private int m_MaximumPortalCullingJobs; // 0x598
+		private Matrix4x4 m_StereoViewMatrix; // 0x59C
+		private Matrix4x4 m_StereoProjectionMatrix; // 0x5DC
+		private float m_StereoSeparationDistance; // 0x61C
+		private int m_maximumVisibleLights; // 0x620
+		private bool m_ConservativeEnclosingSphere; // 0x624
+		private int m_NumIterationsEnclosingSphere; // 0x628
+		private uint m_HGCullingViewHandle; // 0x62C
+		private uint m_HGCullingViewUniqueID; // 0x630
+		private float m_LightCullScreenSpaceArea; // 0x634
+	
+		// Properties
+		public int maximumVisibleLights { set {} } // 0x0000000183D870F0-0x0000000183D87100
+		public int cullingPlaneCount { get => default; } // 0x0000000183D87090-0x0000000183D870A0 
+		public bool isOrthographic { set {} } // 0x0000000189DE8E9C-0x0000000189DE8EEC
+		public uint cullingMask { set {} } // 0x0000000183D68F40-0x0000000183D68F50
+		public Matrix4x4 cullingMatrix { set {} } // 0x0000000183D870A0-0x0000000183D870D0
+		public float shadowDistance { set {} } // 0x0000000183D585F0-0x0000000183D58600
+		public CullingOptions cullingOptions { get => default; set {} } // 0x0000000183D87080-0x0000000183D87090 0x0000000183D585B0-0x0000000183D585C0
+		public uint hgCullingViewHandle { set {} } // 0x0000000183D870D0-0x0000000183D870E0
+		public uint hgCullingViewUniqueID { set {} } // 0x0000000183D870E0-0x0000000183D870F0
+	
+		// Constructors
+		static ScriptableCullingParameters() {
+			maximumCullingPlaneCount = default;
+			layerCount = default;
+		} // 0x0000000183D2BD60-0x0000000183D2BDB0
+	
+		// Methods
+		public float GetLayerCullingDistance(int layerIndex) => default; // 0x0000000189DE8C68-0x0000000189DE8D58
+		public Plane GetCullingPlane(int index) => default; // 0x0000000189DE8928-0x0000000189DE8A80
+		public void SetCullingPlane(int index, Plane plane) {} // 0x0000000189DE8D58-0x0000000189DE8E9C
+		public bool Equals(ScriptableCullingParameters other) => default; // 0x0000000189DE8298-0x0000000189DE8890
+		public override bool Equals(object obj) => default; // 0x0000000189DE8890-0x0000000189DE8928
+		public override int GetHashCode() => default; // 0x0000000189DE8A80-0x0000000189DE8C68
+	}
+
+	[NativeHeader("Runtime/Export/RenderPipeline/ScriptableRenderPipeline.bindings.h")]
+	[NativeHeader("Runtime/Scripting/ScriptingCommonStructDefinitions.h")]
+	[NativeHeader("Runtime/Graphics/ScriptableRenderLoop/ScriptableCulling.h")]
+	public struct CullingResults : IEquatable<CullingResults> // TypeDefIndex: 47051
+	{
+		// Fields
+		public IntPtr ptr; // 0x00
+		private unsafe CullingAllocationInfo* m_AllocationInfo; // 0x08
+	
+		// Methods
+		[FreeFunction("ScriptableRenderPipeline_Bindings::GetShadowCasterBounds")]
+		private static bool GetShadowCasterBounds(IntPtr cullingResultsPtr, int lightIndex, out Bounds bounds) {
+			bounds = default;
+			return default;
+		} // 0x0000000189DE327C-0x0000000189DE32CC
+		[FreeFunction("ScriptableRenderPipeline_Bindings::ComputeDirectionalShadowMatricesAndCullingPrimitives")]
+		private static bool ComputeDirectionalShadowMatricesAndCullingPrimitives(IntPtr cullingResultsPtr, int activeLightIndex, int splitIndex, int splitCount, Vector3 splitRatio, int shadowResolution, float shadowNearPlaneOffset, out Matrix4x4 viewMatrix, out Matrix4x4 projMatrix, out ShadowSplitData shadowSplitData) {
+			viewMatrix = default;
+			projMatrix = default;
+			shadowSplitData = default;
+			return default;
+		} // 0x0000000189DE3110-0x0000000189DE3178
+		public bool GetShadowCasterBounds(int lightIndex, out Bounds outBounds) {
+			outBounds = default;
+			return default;
+		} // 0x0000000189DE326C-0x0000000189DE327C
+		public bool ComputeDirectionalShadowMatricesAndCullingPrimitives(int activeLightIndex, int splitIndex, int splitCount, Vector3 splitRatio, int shadowResolution, float shadowNearPlaneOffset, out Matrix4x4 viewMatrix, out Matrix4x4 projMatrix, out ShadowSplitData shadowSplitData) {
+			viewMatrix = default;
+			projMatrix = default;
+			shadowSplitData = default;
+			return default;
+		} // 0x0000000189DE3098-0x0000000189DE3110
+		public bool Equals(CullingResults other) => default; // 0x0000000189DE31F0-0x0000000189DE326C
+		public override bool Equals(object obj) => default; // 0x0000000189DE3178-0x0000000189DE31F0
+		public override int GetHashCode() => default; // 0x0000000183D68060-0x0000000183D68070
+		private static bool ComputeDirectionalShadowMatricesAndCullingPrimitives_Injected(IntPtr cullingResultsPtr, int activeLightIndex, int splitIndex, int splitCount, ref Vector3 splitRatio, int shadowResolution, float shadowNearPlaneOffset, out Matrix4x4 viewMatrix, out Matrix4x4 projMatrix, out ShadowSplitData shadowSplitData) {
+			viewMatrix = default;
+			projMatrix = default;
+			shadowSplitData = default;
+			return default;
+		} // 0x0000000189DE3034-0x0000000189DE3098
+	}
+
+	internal struct CullingAllocationInfo // TypeDefIndex: 47052
+	{
+		// Fields
+		public unsafe VisibleLight* visibleLightsPtr; // 0x00
+		public unsafe VisibleLight* visibleOffscreenVertexLightsPtr; // 0x08
+		public unsafe VisibleReflectionProbe* visibleReflectionProbesPtr; // 0x10
+		public int visibleLightCount; // 0x18
+		public int visibleOffscreenVertexLightCount; // 0x1C
+		public int visibleReflectionProbeCount; // 0x20
+	}
+
+	public struct DepthState : IEquatable<DepthState> // TypeDefIndex: 47053
+	{
+		// Fields
+		private byte m_WriteEnabled; // 0x00
+		private sbyte m_CompareFunction; // 0x01
+	
+		// Methods
+		public bool Equals(DepthState other) => default; // 0x0000000189C5F4B4-0x0000000189C5F4C8
+		public override bool Equals(object obj) => default; // 0x0000000189DE3370-0x0000000189DE33E0
+		public override int GetHashCode() => default; // 0x0000000183D86E20-0x0000000183D86E40
+	}
+
+	public struct DrawingSettings : IEquatable<DrawingSettings> // TypeDefIndex: 47055
+	{
+		// Fields
+		public static readonly int maxShaderPasses; // 0x00
+		private SortingSettings m_SortingSettings; // 0x00
+		internal unsafe fixed /* 0x00000000-0x00000000 */ int shaderPassNames[0]; // 0xE4
+		private PerObjectData m_PerObjectData; // 0x124
+		private DrawRendererFlags m_Flags; // 0x128
+		private int m_OverrideMaterialInstanceId; // 0x12C
+		private int m_OverrideMaterialPassIndex; // 0x130
+		private int m_fallbackMaterialInstanceId; // 0x134
+		private int m_MainLightIndex; // 0x138
+		private float m_ScreenCullingRatio; // 0x13C
+		private float m_ScreenRatioCullingDistance; // 0x140
+		private uint m_ScreenCullingLayerMask; // 0x144
+		private int m_UseSrpBatcher; // 0x148
+	
+		// Properties
+		public PerObjectData perObjectData { set {} } // 0x0000000183D742C0-0x0000000183D742D0
+		public Material overrideMaterial { set {} } // 0x0000000189DE3EB0-0x0000000189DE3EE4
+		public int overrideMaterialPassIndex { set {} } // 0x0000000183D5CE70-0x0000000183D5CE80
+		public float screenCullingRatio { set {} } // 0x0000000183D86E50-0x0000000183D86E60
+		public float screenRatioCullingDistance { set {} } // 0x0000000183D56F30-0x0000000183D56F40
+		public uint screenCullingLayerMask { set {} } // 0x0000000183D86E40-0x0000000183D86E50
+	
+		// Constructors
+		public unsafe DrawingSettings(ShaderTagId shaderPassName, SortingSettings sortingSettings) : this() {
+			m_SortingSettings = default;
+			shaderPassNames = default;
+			m_PerObjectData = default;
+			m_Flags = default;
+			m_OverrideMaterialInstanceId = default;
+			m_OverrideMaterialPassIndex = default;
+			m_fallbackMaterialInstanceId = default;
+			m_MainLightIndex = default;
+			m_ScreenCullingRatio = default;
+			m_ScreenRatioCullingDistance = default;
+			m_ScreenCullingLayerMask = default;
+			m_UseSrpBatcher = default;
+		} // 0x0000000189DE3D58-0x0000000189DE3EB0
+		static DrawingSettings() {
+			maxShaderPasses = default;
+		} // 0x0000000189DE3D1C-0x0000000189DE3D58
+	
+		// Methods
+		public ShaderTagId GetShaderPassName(int index) => default; // 0x0000000189DE3A8C-0x0000000189DE3BCC
+		public void SetShaderPassName(int index, ShaderTagId shaderPassName) {} // 0x0000000189DE3BCC-0x0000000189DE3D1C
+		public bool Equals(DrawingSettings other) => default; // 0x0000000189DE34F4-0x0000000189DE3A2C
+		public override bool Equals(object obj) => default; // 0x0000000189DE33E0-0x0000000189DE34F4
+		public override int GetHashCode() => default; // 0x0000000189DE3A2C-0x0000000189DE3A8C
+	}
+
+	[Flags]
+	internal enum DrawRendererFlags // TypeDefIndex: 47056
+	{
+		None = 0,
+		EnableDynamicBatching = 1,
+		EnableInstancing = 2
+	}
+
+	public struct FilteringSettings : IEquatable<FilteringSettings> // TypeDefIndex: 47057
+	{
+		// Fields
+		private RenderQueueRange m_RenderQueueRange; // 0x00
+		private int m_LayerMask; // 0x08
+		private uint m_RenderingLayerMask; // 0x0C
+		private int m_ExcludeMotionVectorObjects; // 0x10
+		private SortingLayerRange m_SortingLayerRange; // 0x14
+		private short m_SortingOrderMin; // 0x18
+		private short m_SortingOrderMax; // 0x1A
+		private ushort m_CharacterIndex; // 0x1C
+	
+		// Properties
+		public bool excludeMotionVectorObjects { set {} } // 0x0000000189DE412C-0x0000000189DE4138
+		public SortingLayerRange sortingLayerRange { set {} } // 0x0000000183D595B0-0x0000000183D595C0
+		public short sortingOrderMin { set {} } // 0x0000000183D73EB0-0x0000000183D73EC0
+		public short sortingOrderMax { set {} } // 0x0000000183D73EE0-0x0000000183D73EF0
+		public ushort characterIndex { set {} } // 0x0000000183D86E60-0x0000000183D86E70
+	
+		// Constructors
+		public FilteringSettings([UnityEngine.Internal.DefaultValue("RenderQueueRange.all")] RenderQueueRange? renderQueueRange = default, int layerMask = -1 /* Metadata: 0x01FBB4A4 */, uint renderingLayerMask = 4294967295 /* Metadata: 0x01FBB4A5 */, int excludeMotionVectorObjects = 0 /* Metadata: 0x01FBB4A6 */) : this() {
+			m_RenderQueueRange = default;
+			m_LayerMask = default;
+			m_RenderingLayerMask = default;
+			m_ExcludeMotionVectorObjects = default;
+			m_SortingLayerRange = default;
+			m_SortingOrderMin = default;
+			m_SortingOrderMax = default;
+			m_CharacterIndex = default;
+		} // 0x0000000189DE4050-0x0000000189DE412C
+	
+		// Methods
+		public bool Equals(FilteringSettings other) => default; // 0x0000000189DE3EE4-0x0000000189DE3F74
+		public override bool Equals(object obj) => default; // 0x0000000189DE3F74-0x0000000189DE3FF4
+		public override int GetHashCode() => default; // 0x0000000189DE3FF4-0x0000000189DE4050
+	}
+
+	public enum GizmoSubset // TypeDefIndex: 47058
+	{
+		PreImageEffects = 0,
+		PostImageEffects = 1
+	}
+
+	public struct LODParameters : IEquatable<LODParameters> // TypeDefIndex: 47059
+	{
+		// Fields
+		private int m_IsOrthographic; // 0x00
+		private Vector3 m_CameraPosition; // 0x04
+		private float m_FieldOfView; // 0x10
+		private float m_OrthoSize; // 0x14
+		private int m_CameraPixelHeight; // 0x18
+	
+		// Methods
+		public bool Equals(LODParameters other) => default; // 0x0000000189DE482C-0x0000000189DE48F0
+		public override bool Equals(object obj) => default; // 0x0000000189DE48F0-0x0000000189DE497C
+		public override int GetHashCode() => default; // 0x0000000189DE497C-0x0000000189DE49E4
+	}
+
+	[Flags]
+	public enum PerObjectData // TypeDefIndex: 47060
+	{
+		None = 0,
+		LightProbe = 1,
+		ReflectionProbes = 2,
+		LightProbeProxyVolume = 4,
+		Lightmaps = 8,
+		LightData = 16,
+		MotionVectors = 32,
+		LightIndices = 64,
+		ReflectionProbeData = 128,
+		OcclusionProbe = 256,
+		OcclusionProbeProxyVolume = 512,
+		ShadowMask = 1024,
+		CastShadow = 2048,
+		StaticShadowCaster = 4096,
+		DynamicShadowCaster = 8192,
+		CullNonRealtimeShadowCaster = 16384,
+		ParticleLightingIndex = 32768
+	}
+
+	public struct RasterState : IEquatable<RasterState> // TypeDefIndex: 47061
+	{
+		// Fields
+		public static readonly RasterState defaultValue; // 0x00
+		private CullMode m_CullingMode; // 0x00
+		private int m_OffsetUnits; // 0x04
+		private float m_OffsetFactor; // 0x08
+		private byte m_DepthClip; // 0x0C
+		private byte m_Conservative; // 0x0D
+		private byte m_Padding1; // 0x0E
+		private byte m_Padding2; // 0x0F
+	
+		// Constructors
+		public RasterState(CullMode cullingMode = CullMode.Back /* Metadata: 0x01FBB4CA */, int offsetUnits = 0 /* Metadata: 0x01FBB4CB */, float offsetFactor = 0f /* Metadata: 0x01FBB4CC */, bool depthClip = true /* Metadata: 0x01FBB4D0 */) {
+			m_CullingMode = default;
+			m_OffsetUnits = default;
+			m_OffsetFactor = default;
+			m_DepthClip = default;
+			m_Conservative = default;
+			m_Padding1 = default;
+			m_Padding2 = default;
+		} // 0x0000000189DE6584-0x0000000189DE65FC
+		static RasterState() {
+			defaultValue = default;
+		} // 0x0000000189DE6520-0x0000000189DE6584
+	
+		// Methods
+		public bool Equals(RasterState other) => default; // 0x0000000189DE63F0-0x0000000189DE6450
+		public override bool Equals(object obj) => default; // 0x0000000189DE6450-0x0000000189DE64D4
+		public override int GetHashCode() => default; // 0x0000000189DE64D4-0x0000000189DE6520
+	}
+
+	public enum ReflectionProbeSortingCriteria // TypeDefIndex: 47062
+	{
+		None = 0,
+		Importance = 1,
+		Size = 2,
+		ImportanceThenSize = 3
+	}
+
+	public abstract class RenderPipeline // TypeDefIndex: 47063
+	{
+		// Properties
+		public bool disposed { get; private set; } // 0x00000001811797F0-0x0000000181179800 0x0000000183D4E960-0x0000000183D4E970
+		public virtual RenderPipelineGlobalSettings defaultSettings { get; } // 0x0000000183D85B20-0x0000000183D85B30 
+	
+		// Constructors
+		protected RenderPipeline() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		protected abstract void Render(ScriptableRenderContext context, Camera[] cameras);
+		protected virtual void ProcessRenderRequests(ScriptableRenderContext context, Camera camera, List<Camera.RenderRequest> renderRequests) {} // 0x000000018350B670-0x000000018350B680
+		protected static void BeginContextRendering(ScriptableRenderContext context, List<Camera> cameras) {} // 0x0000000182F95A90-0x0000000182F95AF0
+		protected static void BeginCameraRendering(ScriptableRenderContext context, Camera camera) {} // 0x000000018302D4D0-0x000000018302D580
+		protected static void EndContextRendering(ScriptableRenderContext context, List<Camera> cameras) {} // 0x00000001830058D0-0x0000000183005A20
+		protected static void EndCameraRendering(ScriptableRenderContext context, Camera camera) {} // 0x000000018307A8E0-0x000000018307A980
+		protected virtual void Render(ScriptableRenderContext context, List<Camera> cameras) {} // 0x0000000189DE6990-0x0000000189DE6A14
+		internal void InternalRender(ScriptableRenderContext context, List<Camera> cameras) {} // 0x00000001825678F0-0x0000000182567950
+		internal void InternalRenderWithRequests(ScriptableRenderContext context, List<Camera> cameras, List<Camera.RenderRequest> renderRequests) {} // 0x0000000189DE68C4-0x0000000189DE6990
+		internal void Dispose() {} // 0x0000000182D15AD0-0x0000000182D15B30
+		protected virtual void Dispose(bool disposing) {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public abstract class RenderPipelineAsset : ScriptableObject // TypeDefIndex: 47064
+	{
+		// Properties
+		public virtual string[] renderingLayerMaskNames { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual string[] prefixedRenderingLayerMaskNames { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Material defaultMaterial { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Shader autodeskInteractiveShader { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Shader autodeskInteractiveTransparentShader { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Shader autodeskInteractiveMaskedShader { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Shader terrainDetailLitShader { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Shader terrainDetailGrassShader { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Shader terrainDetailGrassBillboardShader { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Material defaultParticleMaterial { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Material defaultLineMaterial { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Material defaultTerrainMaterial { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Material defaultUIMaterial { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Material defaultUIOverdrawMaterial { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Material defaultUIETC1SupportedMaterial { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Material default2DMaterial { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Material default2DMaskMaterial { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Shader defaultShader { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Shader defaultSpeedTree7Shader { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Shader defaultSpeedTree8Shader { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Mesh defaultQuadMesh { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Mesh defaultPlaneMesh { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Mesh defaultCylinderMesh { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Mesh defaultCapsuleMesh { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Mesh defaultSphereMesh { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual Mesh defaultCubeMesh { get; } // 0x0000000181002730-0x0000000181002740 
+	
+		// Constructors
+		protected RenderPipelineAsset() {} // 0x000000018286F540-0x000000018286F550
+	
+		// Methods
+		internal UnityEngine.Rendering.RenderPipeline InternalCreatePipeline() => default; // 0x0000000183B3AEB0-0x0000000183B3AEE0
+		protected abstract UnityEngine.Rendering.RenderPipeline CreatePipeline();
+		protected virtual void OnValidate() {} // 0x0000000189DE65FC-0x0000000189DE6694
+		protected virtual void OnDisable() {} // 0x0000000183D3CC60-0x0000000183D3CCA0
+	}
+
+	public abstract class RenderPipelineGlobalSettings : ScriptableObject // TypeDefIndex: 47065
+	{
+		// Constructors
+		protected RenderPipelineGlobalSettings() {} // 0x000000018286F540-0x000000018286F550
+	}
+
+	public static class RenderPipelineManager // TypeDefIndex: 47066
+	{
+		// Fields
+		internal static RenderPipelineAsset s_CurrentPipelineAsset; // 0x00
+		private static List<Camera> s_Cameras; // 0x08
+		private static string s_currentPipelineType; // 0x10
+		private static UnityEngine.Rendering.RenderPipeline s_currentPipeline; // 0x18
+	
+		// Properties
+		public static UnityEngine.Rendering.RenderPipeline currentPipeline { get; private set; } // 0x0000000189DE67AC-0x0000000189DE67FC 0x0000000182D156D0-0x0000000182D157D0
+	
+		// Events
+		public static event Action<ScriptableRenderContext, Camera> beginCameraRendering;
+		public static event Action<ScriptableRenderContext, Camera> endCameraRendering;
+		public static event Action<ScriptableRenderContext, List<Camera>> beginFrameRenderingNoAlloc;
+	
+		// Constructors
+		static RenderPipelineManager() {} // 0x0000000182E7A1E0-0x0000000182E7A2E0
+	
+		// Methods
+		internal static void BeginContextRendering(ScriptableRenderContext context, List<Camera> cameras) {} // 0x0000000182F95AF0-0x0000000182F95C00
+		internal static void BeginCameraRendering(ScriptableRenderContext context, Camera camera) {} // 0x000000018302D580-0x000000018302D600
+		internal static void EndContextRendering(ScriptableRenderContext context, List<Camera> cameras) {} // 0x0000000183005A20-0x0000000183005B10
+		internal static void EndCameraRendering(ScriptableRenderContext context, Camera camera) {} // 0x000000018307A980-0x000000018307A9F0
+		[RequiredByNativeCode]
+		internal static void OnActiveRenderPipelineTypeChanged() {} // 0x0000000189DE6694-0x0000000189DE66E4
+		[RequiredByNativeCode]
+		internal static void HandleRenderPipelineChange(RenderPipelineAsset pipelineAsset) {} // 0x0000000182567620-0x00000001825676C0
+		[RequiredByNativeCode]
+		internal static void CleanupRenderPipeline() {} // 0x0000000182D15940-0x0000000182D15AD0
+		[RequiredByNativeCode]
+		private static string GetCurrentPipelineAssetType() => default; // 0x00000001831AC0E0-0x00000001831AC140
+		[RequiredByNativeCode]
+		private static void DoRenderLoop_Internal(RenderPipelineAsset pipe, IntPtr loopPtr, List<Camera.RenderRequest> renderRequests) {} // 0x0000000182568E00-0x0000000182569290
+		internal static void PrepareRenderPipeline(RenderPipelineAsset pipelineAsset) {} // 0x00000001825674B0-0x0000000182567620
+		private static bool IsPipelineRequireCreation() => default; // 0x0000000182568960-0x0000000182568B00
+	}
+
+	public struct RenderQueueRange : IEquatable<RenderQueueRange> // TypeDefIndex: 47067
+	{
+		// Fields
+		private int m_LowerBound; // 0x00
+		private int m_UpperBound; // 0x04
+		public static readonly int minimumBound; // 0x00
+		public static readonly int maximumBound; // 0x04
+	
+		// Properties
+		public static RenderQueueRange all { get => default; } // 0x0000000183D86E90-0x0000000183D86EB0 
+		public int lowerBound { get => default; set {} } // 0x0000000183D85860-0x0000000183D85870 0x0000000189DE6AE0-0x0000000189DE6BAC
+		public int upperBound { get => default; set {} } // 0x0000000183D698C0-0x0000000183D698D0 0x0000000189DE6BAC-0x0000000189DE6C78
+	
+		// Constructors
+		static RenderQueueRange() {
+			minimumBound = default;
+			maximumBound = default;
+		} // 0x0000000189DE6A90-0x0000000189DE6AE0
+	
+		// Methods
+		public bool Equals(RenderQueueRange other) => default; // 0x00000001851404D0-0x00000001851404E4
+		public override bool Equals(object obj) => default; // 0x0000000189DE6A14-0x0000000189DE6A90
+		public override int GetHashCode() => default; // 0x0000000183D86E80-0x0000000183D86E90
+	}
+
+	public struct RenderStateBlock : IEquatable<RenderStateBlock> // TypeDefIndex: 47068
+	{
+		// Fields
+		private BlendState m_BlendState; // 0x00
+		private RasterState m_RasterState; // 0x44
+		private DepthState m_DepthState; // 0x54
+		private StencilState m_StencilState; // 0x56
+		private int m_StencilReference; // 0x64
+		private RenderStateMask m_Mask; // 0x68
+	
+		// Methods
+		public bool Equals(RenderStateBlock other) => default; // 0x0000000189DE6C78-0x0000000189DE6DEC
+		public override bool Equals(object obj) => default; // 0x0000000189DE6DEC-0x0000000189DE6EB0
+		public override int GetHashCode() => default; // 0x0000000189DE6EB0-0x0000000189DE6F68
+	}
+
+	[Flags]
+	public enum RenderStateMask // TypeDefIndex: 47069
+	{
+		Nothing = 0,
+		Blend = 1,
+		Raster = 2,
+		Depth = 4,
+		Stencil = 8,
+		Everything = 15
+	}
+
+	public struct RenderTargetBlendState : IEquatable<RenderTargetBlendState> // TypeDefIndex: 47070
+	{
+		// Fields
+		private byte m_WriteMask; // 0x00
+		private byte m_SourceColorBlendMode; // 0x01
+		private byte m_DestinationColorBlendMode; // 0x02
+		private byte m_SourceAlphaBlendMode; // 0x03
+		private byte m_DestinationAlphaBlendMode; // 0x04
+		private byte m_ColorBlendOperation; // 0x05
+		private byte m_AlphaBlendOperation; // 0x06
+		private byte m_Padding; // 0x07
+	
+		// Methods
+		public bool Equals(RenderTargetBlendState other) => default; // 0x0000000189DE6FD0-0x0000000189DE7020
+		public override bool Equals(object obj) => default; // 0x0000000189DE7020-0x0000000189DE7090
+		public override int GetHashCode() => default; // 0x0000000183D86F20-0x0000000183D86F80
+	}
+
+	[UsedByNativeCode]
+	public struct CBHandle // TypeDefIndex: 47071
+	{
+		// Fields
+		public uint bufferId; // 0x00
+		public uint offset; // 0x04
+		public uint size; // 0x08
+		public IntPtr ptr; // 0x10
+	}
+
+	[NativeHeader("Runtime/Export/RenderPipeline/ScriptableRenderContext.bindings.h")]
+	[NativeHeader("Runtime/Graphics/ScriptableRenderLoop/ScriptableDrawRenderersUtility.h")]
+	[NativeHeader("Runtime/Export/RenderPipeline/ScriptableRenderPipeline.bindings.h")]
+	[NativeHeader("Modules/UI/Canvas.h")]
+	[NativeHeader("Modules/UI/CanvasManager.h")]
+	[NativeType("Runtime/Graphics/ScriptableRenderLoop/ScriptableRenderContext.h")]
+	public struct ScriptableRenderContext : IEquatable<ScriptableRenderContext> // TypeDefIndex: 47072
+	{
+		// Fields
+		private static readonly ShaderTagId kRenderTypeTag; // 0x00
+		private IntPtr m_Ptr; // 0x00
+	
+		// Constructors
+		internal ScriptableRenderContext(IntPtr ptr) {
+			m_Ptr = default;
+		} // 0x0000000183D51730-0x0000000183D51740
+		static ScriptableRenderContext() {
+			kRenderTypeTag = default;
+		} // 0x00000001836B4480-0x00000001836B44D0
+	
+		// Methods
+		[FreeFunction("ScriptableRenderContext::BeginRenderPass")]
+		private static void BeginRenderPass_Internal(IntPtr self, int width, int height, int samples, IntPtr colors, int colorCount, int depthAttachmentIndex) {} // 0x0000000189DE8EEC-0x0000000189DE8F4C
+		[FreeFunction("ScriptableRenderContext::BeginSubPass")]
+		private static void BeginSubPass_Internal(IntPtr self, IntPtr colors, int colorCount, IntPtr inputs, int inputCount, bool isDepthReadOnly, bool isStencilReadOnly) {} // 0x0000000189DE9008-0x0000000189DE906C
+		[FreeFunction("ScriptableRenderContext::EndSubPass")]
+		private static void EndSubPass_Internal(IntPtr self) {} // 0x0000000189DE9CE0-0x0000000189DE9D14
+		[FreeFunction("ScriptableRenderContext::EndRenderPass")]
+		private static void EndRenderPass_Internal(IntPtr self) {} // 0x0000000189DE9C60-0x0000000189DE9C94
+		[FreeFunction("ScriptableRenderPipeline_Bindings::Internal_Cull")]
+		private static void Internal_Cull(ref ScriptableCullingParameters parameters, ScriptableRenderContext renderLoop, IntPtr results) {} // 0x0000000182F96E00-0x0000000182F96E90
+		[FreeFunction("InitializeSortSettings")]
+		internal static void InitializeSortSettings(Camera camera, out SortingSettings sortingSettings) {
+			sortingSettings = default;
+		} // 0x0000000189DEA1C8-0x0000000189DEA20C
+		private void Submit_Internal() {} // 0x000000018306B800-0x000000018306B880
+		private void GetCameras_Internal(System.Type listType, object resultList) {} // 0x00000001825677F0-0x0000000182567890
+		private void DrawRenderers_Internal(IntPtr cullResults, ref DrawingSettings drawingSettings, ref FilteringSettings filteringSettings, ShaderTagId tagName, bool isPassTagName, IntPtr tagValues, IntPtr stateBlocks, int stateCount) {} // 0x0000000189DE9908-0x0000000189DE99BC
+		private void DrawShadows_Internal(IntPtr shadowDrawingSettings) {} // 0x0000000189DE9B74-0x0000000189DE9BD0
+		[FreeFunction("PlayerEmitCanvasGeometryForCamera")]
+		public static void EmitGeometryForCamera(Camera camera) {} // 0x0000000189DE9C2C-0x0000000189DE9C60
+		public CBHandle AllocateConstantBuffer(int size) => default; // 0x0000000182DC5830-0x0000000182DC58D0
+		[NativeThrows]
+		private void ExecuteCommandBuffer_Internal(CommandBuffer commandBuffer) {} // 0x000000018263CED0-0x000000018263CF60
+		[NativeThrows]
+		private void ExecuteCommandBufferAsync_Internal(CommandBuffer commandBuffer, ComputeQueueType queueType) {} // 0x0000000189DEA054-0x0000000189DEA0B4
+		[NativeThrows]
+		private void ExecuteCommandBufferNoCopy_Internal(CommandBuffer commandBuffer) {} // 0x000000018264FEB0-0x000000018264FF40
+		[NativeThrows]
+		private void ExecuteCommandBufferAsyncNoCopy_Internal(CommandBuffer commandBuffer, ComputeQueueType queueType) {} // 0x0000000189DE9E8C-0x0000000189DE9EEC
+		private void SetupCameraProperties_Internal([UnityEngine.Bindings.NotNull("NullExceptionObject")] Camera camera, bool stereoSetup, int eye) {} // 0x0000000189DEA564-0x0000000189DEA5D8
+		private void DrawGizmos_Internal([UnityEngine.Bindings.NotNull("NullExceptionObject")] Camera camera, GizmoSubset gizmoSubset) {} // 0x0000000189DE97E4-0x0000000189DE9844
+		private UnityEngine.Rendering.RendererUtils.RendererList CreateRendererList_Internal(IntPtr cullResults, ref DrawingSettings drawingSettings, ref FilteringSettings filteringSettings, ShaderTagId tagName, bool isPassTagName, IntPtr tagValues, IntPtr stateBlocks, int stateCount, IntPtr drawableFeedbackPtr) => default; // 0x0000000189DE9210-0x0000000189DE92E4
+		private void PrepareRendererListsAsync_Internal(object rendererLists) {} // 0x0000000189DEA250-0x0000000189DEA2AC
+		private RendererListStatus QueryRendererListStatus_Internal(UnityEngine.Rendering.RendererUtils.RendererList handle) => default; // 0x0000000189DEA448-0x0000000189DEA4A4
+		private int QueryRendererListObjCount_Internal(UnityEngine.Rendering.RendererUtils.RendererList handle) => default; // 0x0000000189DEA34C-0x0000000189DEA3A8
+		public void BeginRenderPass(int width, int height, int samples, NativeArray<AttachmentDescriptor> attachments, int depthAttachmentIndex = -1 /* Metadata: 0x01FBB4DB */) {} // 0x0000000189DE8F4C-0x0000000189DE9008
+		public void BeginSubPass(NativeArray<int> colors, NativeArray<int> inputs, bool isDepthStencilReadOnly = false /* Metadata: 0x01FBB4DC */) {} // 0x0000000189DE906C-0x0000000189DE9118
+		public void BeginSubPass(NativeArray<int> colors, bool isDepthStencilReadOnly = false /* Metadata: 0x01FBB4DD */) {} // 0x0000000189DE9118-0x0000000189DE91A8
+		public void EndSubPass() {} // 0x0000000189DE9D14-0x0000000189DE9D60
+		public void EndRenderPass() {} // 0x0000000189DE9C94-0x0000000189DE9CE0
+		public void Submit() {} // 0x000000018306B750-0x000000018306B800
+		internal void GetCameras(List<Camera> results) {} // 0x00000001825676C0-0x00000001825677F0
+		public void DrawRenderers(CullingResults cullingResults, ref DrawingSettings drawingSettings, ref FilteringSettings filteringSettings) {} // 0x0000000189DE99BC-0x0000000189DE9A74
+		public void DrawRenderers(CullingResults cullingResults, ref DrawingSettings drawingSettings, ref FilteringSettings filteringSettings, ref RenderStateBlock stateBlock) {} // 0x0000000189DE9A74-0x0000000189DE9B30
+		public void DrawShadows(ref ShadowDrawingSettings settings) {} // 0x0000000189DE9BD0-0x0000000189DE9C2C
+		public void ExecuteCommandBuffer(CommandBuffer commandBuffer) {} // 0x000000018263CDF0-0x000000018263CED0
+		public void ExecuteCommandBufferAsync(CommandBuffer commandBuffer, ComputeQueueType queueType) {} // 0x0000000189DEA0B4-0x0000000189DEA1C8
+		public void ExecuteCommandBufferNoCopy(CommandBuffer commandBuffer) {} // 0x000000018264FDD0-0x000000018264FEB0
+		public void ExecuteCommandBufferAsyncNoCopy(CommandBuffer commandBuffer, ComputeQueueType queueType) {} // 0x0000000189DE9EEC-0x0000000189DEA000
+		public void SetupCameraProperties(Camera camera, bool stereoSetup = false /* Metadata: 0x01FBB4DE */) {} // 0x0000000189DEA64C-0x0000000189DEA6B4
+		public void SetupCameraProperties(Camera camera, bool stereoSetup, int eye) {} // 0x0000000189DEA5D8-0x0000000189DEA64C
+		public void DrawGizmos(Camera camera, GizmoSubset gizmoSubset) {} // 0x0000000189DE9844-0x0000000189DE98A4
+		public CullingResults Cull(ref ScriptableCullingParameters parameters) => default; // 0x0000000182F96D00-0x0000000182F96E00
+		public bool Equals(ScriptableRenderContext other) => default; // 0x0000000189DE9DDC-0x0000000189DE9E38
+		public override bool Equals(object obj) => default; // 0x0000000189DE9D60-0x0000000189DE9DDC
+		public override int GetHashCode() => default; // 0x0000000183D85860-0x0000000183D85870
+		public UnityEngine.Rendering.RendererUtils.RendererList CreateRendererList(UnityEngine.Rendering.RendererUtils.RendererListDesc desc) => default; // 0x0000000189DE92E4-0x0000000189DE9790
+		public void PrepareRendererListsAsync(List<UnityEngine.Rendering.RendererUtils.RendererList> rendererLists) {} // 0x0000000189DEA2AC-0x0000000189DEA308
+		public RendererListStatus QueryRendererListStatus(UnityEngine.Rendering.RendererUtils.RendererList rendererList) => default; // 0x0000000189DEA4A4-0x0000000189DEA500
+		public int QueryRendererListObjCount(UnityEngine.Rendering.RendererUtils.RendererList rendererList) => default; // 0x0000000189DEA3A8-0x0000000189DEA404
+		public IntPtr GetNativePtr() => default; // 0x000000018253BE20-0x000000018253BE30
+		private static void Internal_Cull_Injected(ref ScriptableCullingParameters parameters, ref ScriptableRenderContext renderLoop, IntPtr results) {} // 0x0000000182F96E90-0x0000000182F96EF0
+		private static void Submit_Internal_Injected(ref ScriptableRenderContext _unity_self) {} // 0x000000018306B880-0x000000018306B8C0
+		private static void GetCameras_Internal_Injected(ref ScriptableRenderContext _unity_self, System.Type listType, object resultList) {} // 0x0000000182567890-0x00000001825678F0
+		private static void DrawRenderers_Internal_Injected(ref ScriptableRenderContext _unity_self, IntPtr cullResults, ref DrawingSettings drawingSettings, ref FilteringSettings filteringSettings, ref ShaderTagId tagName, bool isPassTagName, IntPtr tagValues, IntPtr stateBlocks, int stateCount) {} // 0x0000000189DE98A4-0x0000000189DE9908
+		private static void DrawShadows_Internal_Injected(ref ScriptableRenderContext _unity_self, IntPtr shadowDrawingSettings) {} // 0x0000000189DE9B30-0x0000000189DE9B74
+		private static void AllocateConstantBuffer_Injected(ref ScriptableRenderContext _unity_self, int size, out CBHandle ret) {
+			ret = default;
+		} // 0x0000000182DC58D0-0x0000000182DC5930
+		private static void ExecuteCommandBuffer_Internal_Injected(ref ScriptableRenderContext _unity_self, CommandBuffer commandBuffer) {} // 0x000000018263CF60-0x000000018263CFB0
+		private static void ExecuteCommandBufferAsync_Internal_Injected(ref ScriptableRenderContext _unity_self, CommandBuffer commandBuffer, ComputeQueueType queueType) {} // 0x0000000189DEA000-0x0000000189DEA054
+		private static void ExecuteCommandBufferNoCopy_Internal_Injected(ref ScriptableRenderContext _unity_self, CommandBuffer commandBuffer) {} // 0x000000018264FF40-0x000000018264FF90
+		private static void ExecuteCommandBufferAsyncNoCopy_Internal_Injected(ref ScriptableRenderContext _unity_self, CommandBuffer commandBuffer, ComputeQueueType queueType) {} // 0x0000000189DE9E38-0x0000000189DE9E8C
+		private static void SetupCameraProperties_Internal_Injected(ref ScriptableRenderContext _unity_self, Camera camera, bool stereoSetup, int eye) {} // 0x0000000189DEA500-0x0000000189DEA564
+		private static void DrawGizmos_Internal_Injected(ref ScriptableRenderContext _unity_self, Camera camera, GizmoSubset gizmoSubset) {} // 0x0000000189DE9790-0x0000000189DE97E4
+		private static void CreateRendererList_Internal_Injected(ref ScriptableRenderContext _unity_self, IntPtr cullResults, ref DrawingSettings drawingSettings, ref FilteringSettings filteringSettings, ref ShaderTagId tagName, bool isPassTagName, IntPtr tagValues, IntPtr stateBlocks, int stateCount, IntPtr drawableFeedbackPtr, out UnityEngine.Rendering.RendererUtils.RendererList ret) {
+			ret = default;
+		} // 0x0000000189DE91A8-0x0000000189DE9210
+		private static void PrepareRendererListsAsync_Internal_Injected(ref ScriptableRenderContext _unity_self, object rendererLists) {} // 0x0000000189DEA20C-0x0000000189DEA250
+		private static RendererListStatus QueryRendererListStatus_Internal_Injected(ref ScriptableRenderContext _unity_self, ref UnityEngine.Rendering.RendererUtils.RendererList handle) => default; // 0x0000000189DEA404-0x0000000189DEA448
+		private static int QueryRendererListObjCount_Internal_Injected(ref ScriptableRenderContext _unity_self, ref UnityEngine.Rendering.RendererUtils.RendererList handle) => default; // 0x0000000189DEA308-0x0000000189DEA34C
+	}
+
+	public struct ShaderTagId : IEquatable<ShaderTagId> // TypeDefIndex: 47073
+	{
+		// Fields
+		public static readonly ShaderTagId none; // 0x00
+		private int m_Id; // 0x00
+	
+		// Properties
+		internal int id { get => default; set {} } // 0x0000000183D85860-0x0000000183D85870 0x0000000183D4E970-0x0000000183D4E980
+	
+		// Constructors
+		public ShaderTagId(string name) : this() {
+			m_Id = default;
+		} // 0x0000000184276958-0x0000000184276978
+	
+		// Methods
+		public override bool Equals(object obj) => default; // 0x0000000189DEA6B4-0x0000000189DEA718
+		public bool Equals(ShaderTagId other) => default; // 0x00000001822A9C10-0x00000001822A9C20
+		public override int GetHashCode() => default; // 0x0000000183D87100-0x0000000183D87110
+		public static bool operator ==(ShaderTagId tag1, ShaderTagId tag2) => default; // 0x0000000186505FF4-0x0000000186505FFC
+		public static bool operator !=(ShaderTagId tag1, ShaderTagId tag2) => default; // 0x0000000189DD4FEC-0x0000000189DD4FF4
+	}
+
+	[UsedByNativeCode]
+	public struct ShadowDrawingSettings : IEquatable<ShadowDrawingSettings> // TypeDefIndex: 47074
+	{
+		// Fields
+		private CullingResults m_CullingResults; // 0x00
+		private int m_LightIndex; // 0x10
+		private int m_UseRenderingLayerMaskTest; // 0x14
+		private ShadowSplitData m_SplitData; // 0x18
+		private ShadowObjectsFilter m_ObjectsFilter; // 0xD4
+		private bool m_CullNonRealtimeCasters; // 0xD8
+	
+		// Properties
+		public bool useRenderingLayerMaskTest { set {} } // 0x0000000189DEAD10-0x0000000189DEAD1C
+		public ShadowSplitData splitData { set {} } // 0x0000000183D87110-0x0000000183D87190
+		public ShadowObjectsFilter objectsFilter { set {} } // 0x0000000183D50F90-0x0000000183D50FA0
+		public bool cullNonRealtimeCasters { set {} } // 0x0000000183D511E0-0x0000000183D511F0
+	
+		// Constructors
+		public ShadowDrawingSettings(CullingResults cullingResults, int lightIndex) : this() {
+			m_CullingResults = default;
+			m_LightIndex = default;
+			m_UseRenderingLayerMaskTest = default;
+			m_SplitData = default;
+			m_ObjectsFilter = default;
+			m_CullNonRealtimeCasters = default;
+		} // 0x0000000189DEAC7C-0x0000000189DEAD10
+	
+		// Methods
+		public bool Equals(ShadowDrawingSettings other) => default; // 0x0000000189DEA718-0x0000000189DEAB00
+		public override bool Equals(object obj) => default; // 0x0000000189DEAB00-0x0000000189DEAC00
+		public override int GetHashCode() => default; // 0x0000000189DEAC00-0x0000000189DEAC7C
+	}
+
+	[UsedByNativeCode]
+	public struct ShadowSplitData : IEquatable<ShadowSplitData> // TypeDefIndex: 47076
+	{
+		// Fields
+		private const int k_MaximumCullingPlaneCount = 10; // Metadata: 0x01FBB4DF
+		public static readonly int maximumCullingPlaneCount; // 0x00
+		private int m_CullingPlaneCount; // 0x00
+		public unsafe fixed /* 0x00000000-0x00000000 */ byte m_CullingPlanes[0]; // 0x04
+		private Vector4 m_CullingSphere; // 0xA4
+		private float m_ShadowCascadeBlendCullingFactor; // 0xB4
+		private float m_CullingNearPlane; // 0xB8
+	
+		// Properties
+		public int cullingPlaneCount { get => default; set {} } // 0x0000000183D85860-0x0000000183D85870 0x0000000189DEB214-0x0000000189DEB310
+		public Vector4 cullingSphere { get => default; } // 0x0000000183D87190-0x0000000183D871A0 
+		public float shadowCascadeBlendCullingFactor { set {} } // 0x0000000189DEB310-0x0000000189DEB428
+	
+		// Constructors
+		static ShadowSplitData() {
+			maximumCullingPlaneCount = default;
+		} // 0x0000000189DEB1D8-0x0000000189DEB214
+	
+		// Methods
+		public Plane GetCullingPlane(int index) => default; // 0x0000000189DEB040-0x0000000189DEB1B4
+		public bool Equals(ShadowSplitData other) => default; // 0x0000000189DEAE1C-0x0000000189DEB040
+		public override bool Equals(object obj) => default; // 0x0000000189DEAD1C-0x0000000189DEAE1C
+		public override int GetHashCode() => default; // 0x0000000189DEB1B4-0x0000000189DEB1D8
+	}
+
+	[Flags]
+	public enum SortingCriteria // TypeDefIndex: 47077
+	{
+		None = 0,
+		SortingLayer = 1,
+		RenderQueue = 2,
+		BackToFront = 4,
+		QuantizedFrontToBack = 8,
+		OptimizeStateChanges = 16,
+		CommonTransparent = 23,
+		CanvasOrder = 32,
+		CommonOpaque = 59,
+		RendererPriority = 64
+	}
+
+	public struct SortingLayerRange : IEquatable<SortingLayerRange> // TypeDefIndex: 47078
+	{
+		// Fields
+		private short m_LowerBound; // 0x00
+		private short m_UpperBound; // 0x02
+	
+		// Properties
+		public static SortingLayerRange all { get => default; } // 0x0000000183D871B0-0x0000000183D871C0 
+	
+		// Constructors
+		public SortingLayerRange(short lowerBound, short upperBound) : this() {
+			m_LowerBound = default;
+			m_UpperBound = default;
+		} // 0x0000000183D6EFA0-0x0000000183D6EFB0
+	
+		// Methods
+		public bool Equals(SortingLayerRange other) => default; // 0x0000000189C71A88-0x0000000189C71A9C
+		public override bool Equals(object obj) => default; // 0x0000000189DEB428-0x0000000189DEB494
+		public override int GetHashCode() => default; // 0x0000000183D871A0-0x0000000183D871B0
+	}
+
+	public enum DistanceMetric // TypeDefIndex: 47079
+	{
+		Perspective = 0,
+		Orthographic = 1,
+		CustomAxis = 2
+	}
+
+	public struct SortingSettings : IEquatable<SortingSettings> // TypeDefIndex: 47080
+	{
+		// Fields
+		private Matrix4x4 m_WorldToCameraMatrix; // 0x00
+		private Vector3 m_CameraPosition; // 0x40
+		private Vector3 m_CustomAxis; // 0x4C
+		private SortingCriteria m_Criteria; // 0x58
+		private DistanceMetric m_DistanceMetric; // 0x5C
+		private Matrix4x4 m_PreviousVPMatrix; // 0x60
+		private Matrix4x4 m_NonJitteredVPMatrix; // 0xA0
+		private float m_FOV; // 0xE0
+	
+		// Properties
+		public SortingCriteria criteria { get => default; set {} } // 0x0000000183D871C0-0x0000000183D871D0 0x0000000183D4EF50-0x0000000183D4EF60
+	
+		// Constructors
+		public SortingSettings(Camera camera) : this() {
+			m_WorldToCameraMatrix = default;
+			m_CameraPosition = default;
+			m_CustomAxis = default;
+			m_Criteria = default;
+			m_DistanceMetric = default;
+			m_PreviousVPMatrix = default;
+			m_NonJitteredVPMatrix = default;
+			m_FOV = default;
+		} // 0x0000000189DEBB00-0x0000000189DEBB5C
+	
+		// Methods
+		public bool Equals(SortingSettings other) => default; // 0x0000000189DEB494-0x0000000189DEB974
+		public override bool Equals(object obj) => default; // 0x0000000189DEB974-0x0000000189DEBA78
+		public override int GetHashCode() => default; // 0x0000000189DEBA78-0x0000000189DEBB00
+	}
+
+	public struct StencilState : IEquatable<StencilState> // TypeDefIndex: 47081
+	{
+		// Fields
+		private byte m_Enabled; // 0x00
+		private byte m_ReadMask; // 0x01
+		private byte m_WriteMask; // 0x02
+		private byte m_Padding; // 0x03
+		private byte m_CompareFunctionFront; // 0x04
+		private byte m_PassOperationFront; // 0x05
+		private byte m_FailOperationFront; // 0x06
+		private byte m_ZFailOperationFront; // 0x07
+		private byte m_CompareFunctionBack; // 0x08
+		private byte m_PassOperationBack; // 0x09
+		private byte m_FailOperationBack; // 0x0A
+		private byte m_ZFailOperationBack; // 0x0B
+	
+		// Properties
+		public bool enabled { set {} } // 0x0000000189DEC55C-0x0000000189DEC5AC
+		public byte readMask { set {} } // 0x0000000183D5BC30-0x0000000183D5BC40
+		public byte writeMask { set {} } // 0x0000000183D5BC20-0x0000000183D5BC30
+		public CompareFunction compareFunctionFront { set {} } // 0x0000000183D5DDF0-0x0000000183D5DE00
+		public StencilOp passOperationFront { set {} } // 0x0000000183D5E160-0x0000000183D5E170
+		public StencilOp failOperationFront { set {} } // 0x0000000183D5E140-0x0000000183D5E150
+		public StencilOp zFailOperationFront { set {} } // 0x0000000183D5E150-0x0000000183D5E160
+		public CompareFunction compareFunctionBack { set {} } // 0x0000000183D557E0-0x0000000183D557F0
+		public StencilOp passOperationBack { set {} } // 0x0000000183D878B0-0x0000000183D878C0
+		public StencilOp failOperationBack { set {} } // 0x0000000183D878A0-0x0000000183D878B0
+		public StencilOp zFailOperationBack { set {} } // 0x0000000183D878C0-0x0000000183D878D0
+	
+		// Methods
+		public bool Equals(StencilState other) => default; // 0x0000000189DEC480-0x0000000189DEC4DC
+		public override bool Equals(object obj) => default; // 0x0000000189DEC4DC-0x0000000189DEC55C
+		public override int GetHashCode() => default; // 0x0000000183D87810-0x0000000183D878A0
+	}
+
+	public class SupportedRenderingFeatures // TypeDefIndex: 47084
+	{
+		// Fields
+		private static SupportedRenderingFeatures s_Active; // 0x00
+	
+		// Properties
+		public static SupportedRenderingFeatures active { get => default; set {} } // 0x00000001830392C0-0x0000000183039350 0x0000000182D17450-0x0000000182D174C0
+		public ReflectionProbeModes reflectionProbeModes { get; set; } // 0x00000001810410F0-0x0000000181041100
+		public LightmapMixedBakeModes defaultMixedLightingModes { get; set; } // 0x0000000183D50CC0-0x0000000183D50CD0 0x0000000183D595B0-0x0000000183D595C0
+		public LightmapMixedBakeModes mixedLightingModes { get; set; } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000183D4E9C0-0x0000000183D4E9D0
+		public LightmapBakeType lightmapBakeTypes { get; set; } // 0x0000000183D4EBB0-0x0000000183D4EBC0 0x0000000183D4EBC0-0x0000000183D4EBD0
+		public LightmapsMode lightmapsModes { get; set; } // 0x0000000181003B50-0x0000000181003B60 0x0000000181003B60-0x0000000181003B70
+		public bool enlightenLightmapper { get; set; } // 0x0000000183D4F090-0x0000000183D4F0A0 0x0000000183D4F0A0-0x0000000183D4F0B0
+		public bool enlighten { get; set; } // 0x0000000183D4F130-0x0000000183D4F140 0x0000000183D4F150-0x0000000183D4F160
+		public bool lightProbeProxyVolumes { get; set; } // 0x0000000183D4F160-0x0000000183D4F170
+		public bool motionVectors { get; set; } // 0x0000000183D879D0-0x0000000183D879E0
+		public bool receiveShadows { get; set; } // 0x0000000183D4ED60-0x0000000183D4ED70
+		public bool reflectionProbes { get; set; } // 0x0000000183D4F2B0-0x0000000183D4F2C0
+		public bool rendererPriority { get; set; } // 0x0000000183D4F4D0-0x0000000183D4F4E0
+		public bool rendersUIOverlay { get; set; } // 0x0000000183D4F1A0-0x0000000183D4F1B0 0x0000000183D4F1B0-0x0000000183D4F1C0
+		public bool overridesFog { get; set; } // 0x0000000183D58EF0-0x0000000183D58F00
+		public bool overridesRealtimeReflectionProbes { get; set; } // 0x0000000183D73A70-0x0000000183D73A80
+		public bool overridesOtherLightingSettings { get; set; } // 0x0000000183D4EF70-0x0000000183D4EF80
+		public bool editableMaterialRenderQueue { get; set; } // 0x0000000183D4F2D0-0x0000000183D4F2E0
+		public bool overridesLODBias { get; set; } // 0x0000000183D4F640-0x0000000183D4F650
+		public bool overridesMaximumLODLevel { get; set; } // 0x0000000183D75050-0x0000000183D75060
+		public bool autoAmbientProbeBaking { get; set; } // 0x0000000183D879A0-0x0000000183D879B0 0x0000000183D85AF0-0x0000000183D85B00
+		public bool autoDefaultReflectionProbeBaking { get; set; } // 0x0000000183D879B0-0x0000000183D879C0 0x0000000183D879C0-0x0000000183D879D0
+		public bool overridesShadowmask { get; set; } // 0x0000000183D4E280-0x0000000183D4E290
+		public string overrideShadowmaskMessage { get; set; } // 0x0000000183CB2D80-0x0000000183CB2D90
+	
+		// Nested types
+		[Flags]
+		public enum ReflectionProbeModes // TypeDefIndex: 47082
+		{
+			None = 0,
+			Rotation = 1
+		}
+	
+		[Flags]
+		public enum LightmapMixedBakeModes // TypeDefIndex: 47083
+		{
+			None = 0,
+			IndirectOnly = 1,
+			Subtractive = 2,
+			Shadowmask = 4
+		}
+	
+		// Constructors
+		public SupportedRenderingFeatures() {} // 0x0000000182D173D0-0x0000000182D17450
+		static SupportedRenderingFeatures() {} // 0x0000000183CFFA80-0x0000000183CFFAF0
+	
+		// Methods
+		[RequiredByNativeCode]
+		internal static void FallbackMixedLightingModeByRef(IntPtr fallbackModePtr) {} // 0x0000000189DF2288-0x0000000189DF23B8
+		internal static bool IsMixedLightingModeSupported(MixedLightingMode mixedMode) => default; // 0x0000000189DF270C-0x0000000189DF275C
+		[RequiredByNativeCode]
+		internal static void IsMixedLightingModeSupportedByRef(MixedLightingMode mixedMode, IntPtr isSupportedPtr) {} // 0x0000000189DF2634-0x0000000189DF270C
+		internal static bool IsLightmapBakeTypeSupported(LightmapBakeType bakeType) => default; // 0x0000000189DF251C-0x0000000189DF256C
+		[RequiredByNativeCode]
+		internal static void IsLightmapBakeTypeSupportedByRef(LightmapBakeType bakeType, IntPtr isSupportedPtr) {} // 0x0000000189DF2458-0x0000000189DF251C
+		[RequiredByNativeCode]
+		internal static void IsLightmapsModeSupportedByRef(LightmapsMode mode, IntPtr isSupportedPtr) {} // 0x0000000189DF25D4-0x0000000189DF2634
+		[RequiredByNativeCode]
+		internal static void IsLightmapperSupportedByRef(int lightmapper, IntPtr isSupportedPtr) {} // 0x0000000189DF256C-0x0000000189DF25D4
+		[RequiredByNativeCode]
+		internal static void IsUIOverlayRenderedBySRP(IntPtr isSupportedPtr) {} // 0x0000000183039260-0x00000001830392C0
+		[RequiredByNativeCode]
+		internal static void IsAutoAmbientProbeBakingSupported(IntPtr isSupportedPtr) {} // 0x0000000189DF23B8-0x0000000189DF2408
+		[RequiredByNativeCode]
+		internal static void IsAutoDefaultReflectionProbeBakingSupported(IntPtr isSupportedPtr) {} // 0x0000000189DF2408-0x0000000189DF2458
+		[RequiredByNativeCode]
+		internal static void FallbackLightmapperByRef(IntPtr lightmapperPtr) {} // 0x0000000183D87990-0x0000000183D879A0
+	}
+
+	[UsedByNativeCode]
+	public struct VisibleLight : IEquatable<VisibleLight> // TypeDefIndex: 47085
+	{
+		// Fields
+		private LightType m_LightType; // 0x00
+		private UnityEngine.Color m_FinalColor; // 0x04
+		private Rect m_ScreenRect; // 0x14
+		private Matrix4x4 m_LocalToWorldMatrix; // 0x24
+		private float m_SpecularIntensity; // 0x64
+		private float m_Range; // 0x68
+		private float m_SpotAngle; // 0x6C
+		private int m_LightPriority; // 0x70
+		private Vector3 m_WorldPosition; // 0x74
+		private int m_InstanceId; // 0x80
+		private VisibleLightFlags m_Flags; // 0x84
+		public HGSharedLightData hgSharedLightData; // 0x88
+		private float m_ScreenSpaceArea; // 0x90
+	
+		// Properties
+		public Light light { get => default; } // 0x0000000189DF3128-0x0000000189DF31A8 
+		public LightType lightType { get => default; } // 0x0000000183D85860-0x0000000183D85870 
+		public UnityEngine.Color finalColor { get => default; } // 0x0000000183D879E0-0x0000000183D879F0 
+		public Matrix4x4 localToWorldMatrix { get => default; } // 0x0000000183D87A00-0x0000000183D87A30 
+		public float range { get => default; } // 0x0000000183D87A30-0x0000000183D87A40 
+		public float spotAngle { get => default; } // 0x0000000183D87A40-0x0000000183D87A50 
+		public int lightPriority { get => default; } // 0x0000000183D879F0-0x0000000183D87A00 
+		public Vector3 worldPosition { get => default; } // 0x0000000183D87A50-0x0000000183D87A70 
+	
+		// Methods
+		public bool Equals(VisibleLight other) => default; // 0x0000000189DF2BC8-0x0000000189DF2FB8
+		public override bool Equals(object obj) => default; // 0x0000000189DF2FB8-0x0000000189DF3088
+		public override int GetHashCode() => default; // 0x0000000189DF3088-0x0000000189DF3128
+	}
+
+	[Flags]
+	internal enum VisibleLightFlags // TypeDefIndex: 47086
+	{
+		IntersectsNearPlane = 1,
+		IntersectsFarPlane = 2
+	}
+
+	[UsedByNativeCode]
+	public struct VisibleReflectionProbe : IEquatable<VisibleReflectionProbe> // TypeDefIndex: 47087
+	{
+		// Fields
+		private Bounds m_Bounds; // 0x00
+		private Matrix4x4 m_LocalToWorldMatrix; // 0x18
+		private Vector4 m_HdrData; // 0x58
+		private Vector3 m_Center; // 0x68
+		private float m_BlendDistance; // 0x74
+		private int m_Importance; // 0x78
+		private int m_BoxProjection; // 0x7C
+		private int m_InstanceId; // 0x80
+		private int m_TextureId; // 0x84
+	
+		// Methods
+		public bool Equals(VisibleReflectionProbe other) => default; // 0x0000000189DF3270-0x0000000189DF3670
+		public override bool Equals(object obj) => default; // 0x0000000189DF31A8-0x0000000189DF3270
+		public override int GetHashCode() => default; // 0x0000000189DF3670-0x0000000189DF3714
+	}
+
+	[IsReadOnly]
+	[NativeHeader("Runtime/Shaders/Keywords/KeywordSpaceScriptBindings.h")]
+	[NativeHeader("Runtime/Graphics/ShaderScriptBindings.h")]
+	[UsedByNativeCode]
+	public struct GlobalKeyword // TypeDefIndex: 47088
+	{
+		// Fields
+		internal readonly string m_Name; // 0x00
+		internal readonly uint m_Index; // 0x08
+	
+		// Properties
+		public string name { get => default; } // 0x000000018253BE20-0x000000018253BE30 
+	
+		// Constructors
+		public GlobalKeyword(string name) : this() {
+			m_Name = default;
+			m_Index = default;
+		} // 0x0000000189DED898-0x0000000189DED96C
+	
+		// Methods
+		[FreeFunction("ShaderScripting::GetGlobalKeywordCount")]
+		private static uint GetGlobalKeywordCount() => default; // 0x0000000189DED838-0x0000000189DED864
+		[FreeFunction("ShaderScripting::GetGlobalKeywordIndex")]
+		private static uint GetGlobalKeywordIndex(string keyword) => default; // 0x0000000189DED864-0x0000000189DED898
+		[FreeFunction("ShaderScripting::CreateGlobalKeyword")]
+		private static void CreateGlobalKeyword(string keyword) {} // 0x0000000189DED7B4-0x0000000189DED7E8
+		public static GlobalKeyword Create(string name) => default; // 0x0000000189DED7E8-0x0000000189DED838
+		public override string ToString() => default; // 0x000000018253BE20-0x000000018253BE30
+	}
+
+	[IsReadOnly]
+	[NativeHeader("Runtime/Graphics/ShaderScriptBindings.h")]
+	[NativeHeader("Runtime/Shaders/Keywords/KeywordSpaceScriptBindings.h")]
+	[UsedByNativeCode]
+	public struct LocalKeyword : IEquatable<LocalKeyword> // TypeDefIndex: 47089
+	{
+		// Fields
+		internal readonly LocalKeywordSpace m_SpaceInfo; // 0x00
+		internal readonly string m_Name; // 0x08
+		internal readonly uint m_Index; // 0x10
+	
+		// Constructors
+		public LocalKeyword(Shader shader, string name) {
+			m_SpaceInfo = default;
+			m_Name = default;
+			m_Index = default;
+		} // 0x0000000189DEF18C-0x0000000189DEF2E0
+		public LocalKeyword(ComputeShader shader, string name) {
+			m_SpaceInfo = default;
+			m_Name = default;
+			m_Index = default;
+		} // 0x0000000182E7B450-0x0000000182E7B560
+	
+		// Methods
+		[FreeFunction("ShaderScripting::GetKeywordCount")]
+		private static uint GetShaderKeywordCount(Shader shader) => default; // 0x0000000189DEF114-0x0000000189DEF148
+		[FreeFunction("ShaderScripting::GetKeywordIndex")]
+		private static uint GetShaderKeywordIndex(Shader shader, string keyword) => default; // 0x0000000189DEF148-0x0000000189DEF18C
+		[FreeFunction("ShaderScripting::GetKeywordCount")]
+		private static uint GetComputeShaderKeywordCount(ComputeShader shader) => default; // 0x0000000182E7B5C0-0x0000000182E7B600
+		[FreeFunction("ShaderScripting::GetKeywordIndex")]
+		private static uint GetComputeShaderKeywordIndex(ComputeShader shader, string keyword) => default; // 0x0000000182E7B600-0x0000000182E7B650
+		public override string ToString() => default; // 0x0000000183D85A90-0x0000000183D85AA0
+		public override bool Equals(object o) => default; // 0x0000000189DEF058-0x0000000189DEF0DC
+		public bool Equals(LocalKeyword rhs) => default; // 0x0000000189DEF0DC-0x0000000189DEF114
+		public override int GetHashCode() => default; // 0x0000000183D87950-0x0000000183D87960
+	}
+
+	[IsReadOnly]
+	[NativeHeader("Runtime/Shaders/Keywords/KeywordSpaceScriptBindings.h")]
+	public struct LocalKeywordSpace : IEquatable<LocalKeywordSpace> // TypeDefIndex: 47090
+	{
+		// Fields
+		private readonly IntPtr m_KeywordSpace; // 0x00
+	
+		// Methods
+		public override bool Equals(object o) => default; // 0x0000000189DEEFF0-0x0000000189DEF058
+		public bool Equals(LocalKeywordSpace rhs) => default; // 0x00000001822A9C20-0x00000001822A9C30
+		public static bool operator ==(LocalKeywordSpace lhs, LocalKeywordSpace rhs) => default; // 0x000000018232CE30-0x000000018232CE40
+		public override int GetHashCode() => default; // 0x0000000183D85860-0x0000000183D85870
+	}
+
+	[NativeHeader("Runtime/Graphics/ShaderScriptBindings.h")]
+	[NativeHeader("Runtime/Shaders/Keywords/KeywordSpaceScriptBindings.h")]
+	[UsedByNativeCode]
+	public struct ShaderKeyword // TypeDefIndex: 47091
+	{
+		// Fields
+		internal string m_Name; // 0x00
+		internal uint m_Index; // 0x08
+		internal bool m_IsLocal; // 0x0C
+		internal bool m_IsCompute; // 0x0D
+		internal bool m_IsValid; // 0x0E
+	
+		// Constructors
+		public ShaderKeyword(string keywordName) {
+			m_Name = default;
+			m_Index = default;
+			m_IsLocal = default;
+			m_IsCompute = default;
+			m_IsValid = default;
+		} // 0x0000000189DF2220-0x0000000189DF2288
+	
+		// Methods
+		[FreeFunction("ShaderScripting::GetGlobalKeywordCount")]
+		internal static uint GetGlobalKeywordCount() => default; // 0x0000000189DF21C0-0x0000000189DF21EC
+		[FreeFunction("ShaderScripting::GetGlobalKeywordIndex")]
+		internal static uint GetGlobalKeywordIndex(string keyword) => default; // 0x0000000189DF21EC-0x0000000189DF2220
+		[FreeFunction("ShaderScripting::CreateGlobalKeyword")]
+		internal static void CreateGlobalKeyword(string keyword) {} // 0x0000000189DF218C-0x0000000189DF21C0
+		public override string ToString() => default; // 0x000000018253BE20-0x000000018253BE30
+	}
+
+	public enum ShaderPropertyType // TypeDefIndex: 47092
+	{
+		Color = 0,
+		Vector = 1,
+		Float = 2,
+		Range = 3,
+		Texture = 4,
+		Int = 5
+	}
+
+	[Flags]
+	public enum ShaderPropertyFlags // TypeDefIndex: 47093
+	{
+		None = 0,
+		HideInInspector = 1,
+		PerRendererData = 2,
+		NoScaleOffset = 4,
+		Normal = 8,
+		HDR = 16,
+		Gamma = 32,
+		NonModifiableTextureData = 64,
+		MainTexture = 128,
+		MainColor = 256
+	}
+}
+
+namespace UnityEngine.Rendering.RendererUtils
+{
+	public enum RendererListStatus // TypeDefIndex: 47094
+	{
+		kRendererListInvalid = -2,
+		kRendererListProcessing = -1,
+		kRendererListEmpty = 0,
+		kRendererListPopulated = 1
+	}
+
+	[NativeHeader("Runtime/Graphics/ScriptableRenderLoop/RendererList.h")]
+	public struct RendererList // TypeDefIndex: 47095
+	{
+		// Fields
+		internal UIntPtr context; // 0x00
+		internal uint index; // 0x08
+		internal uint frame; // 0x0C
+		public static readonly RendererList nullRendererList; // 0x00
+	
+		// Properties
+		public bool isValid { get => default; } // 0x0000000189DF1E24-0x0000000189DF1E70 
+	
+		// Constructors
+		internal RendererList(UIntPtr ctx, uint indx) : this() {
+			context = default;
+			index = default;
+			frame = default;
+		} // 0x0000000183D87980-0x0000000183D87990
+		static RendererList() {
+			nullRendererList = default;
+		} // 0x0000000189DF1DA0-0x0000000189DF1DF0
+	
+		// Methods
+		private static bool get_isValid_Injected(ref RendererList _unity_self) => default; // 0x0000000189DF1DF0-0x0000000189DF1E24
+	}
+
+	public struct RendererListDesc // TypeDefIndex: 47096
+	{
+		// Fields
+		public SortingCriteria sortingCriteria; // 0x00
+		public PerObjectData rendererConfiguration; // 0x04
+		public RenderQueueRange renderQueueRange; // 0x08
+		public RenderStateBlock? stateBlock; // 0x10
+		public Material overrideMaterial; // 0x80
+		public bool excludeObjectMotionVectors; // 0x88
+		public int layerMask; // 0x8C
+		public int overrideMaterialPassIndex; // 0x90
+		public float screenCullingRatio; // 0x94
+		public float screenRatioCullingDistance; // 0x98
+		public uint screenCullingLayerMask; // 0x9C
+		public short sortingLayerMin; // 0xA0
+		public short sortingLayerMax; // 0xA2
+		public short sortingOrderMin; // 0xA4
+		public short sortingOrderMax; // 0xA6
+		public ushort characterIndex; // 0xA8
+		public IntPtr drawableFeedbackPtr; // 0xB0
+	
+		// Properties
+		internal CullingResults cullingResult { [IsReadOnly] get; private set; } // 0x0000000183D6C6F0-0x0000000183D6C700 0x0000000183D87970-0x0000000183D87980
+		internal Camera camera { [IsReadOnly] get; set; } // 0x0000000183D4E7C0-0x0000000183D4E7D0 0x00000001858B4280-0x00000001858B4294
+		internal ShaderTagId passName { [IsReadOnly] get; private set; } // 0x0000000183D50EC0-0x0000000183D50ED0 0x0000000183D50FA0-0x0000000183D50FB0
+		internal ShaderTagId[] passNames { [IsReadOnly] get; private set; } // 0x0000000183D4E7B0-0x0000000183D4E7C0 0x0000000185142FC4-0x0000000185142FD8
+	
+		// Constructors
+		public RendererListDesc(ShaderTagId passName, CullingResults cullingResult, Camera camera) : this() {
+			sortingCriteria = default;
+			rendererConfiguration = default;
+			renderQueueRange = default;
+			stateBlock = default;
+			overrideMaterial = default;
+			excludeObjectMotionVectors = default;
+			layerMask = default;
+			overrideMaterialPassIndex = default;
+			screenCullingRatio = default;
+			screenRatioCullingDistance = default;
+			screenCullingLayerMask = default;
+			sortingLayerMin = default;
+			sortingLayerMax = default;
+			sortingOrderMin = default;
+			sortingOrderMax = default;
+			characterIndex = default;
+			drawableFeedbackPtr = default;
+		} // 0x0000000189DF1410-0x0000000189DF14C0
+		public RendererListDesc(ShaderTagId[] passNames, CullingResults cullingResult, Camera camera) : this() {
+			sortingCriteria = default;
+			rendererConfiguration = default;
+			renderQueueRange = default;
+			stateBlock = default;
+			overrideMaterial = default;
+			excludeObjectMotionVectors = default;
+			layerMask = default;
+			overrideMaterialPassIndex = default;
+			screenCullingRatio = default;
+			screenRatioCullingDistance = default;
+			screenCullingLayerMask = default;
+			sortingLayerMin = default;
+			sortingLayerMax = default;
+			sortingOrderMin = default;
+			sortingOrderMax = default;
+			characterIndex = default;
+			drawableFeedbackPtr = default;
+		} // 0x0000000189DF14C0-0x0000000189DF15B8
+	
+		// Methods
+		public bool IsValid() => default; // 0x0000000189DF1358-0x0000000189DF1410
+	}
+
+	internal struct RendererListParams // TypeDefIndex: 47097
+	{
+		// Fields
+		private static readonly ShaderTagId s_EmptyName; // 0x00
+		public static readonly RendererListParams nullRendererList; // 0x08
+		internal CullingResults cullingResult; // 0x08
+		internal DrawingSettings drawSettings; // 0x18
+		internal FilteringSettings filteringSettings; // 0x164
+		internal RenderStateBlock? stateBlock; // 0x184
+	
+		// Properties
+		private bool isValid { get; set; } // 0x0000000183D4F9D0-0x0000000183D4F9E0
+	
+		// Constructors
+		static RendererListParams() {
+			s_EmptyName = default;
+			nullRendererList = default;
+		} // 0x0000000189DF1D24-0x0000000189DF1DA0
+	
+		// Methods
+		internal static RendererListParams Create([IsReadOnly] in UnityEngine.Rendering.RendererUtils.RendererListDesc desc) => default; // 0x0000000189DF15B8-0x0000000189DF1D24
+	}
+}
+
+namespace UnityEngine.SceneManagement
+{
+	[Serializable]
+	[NativeHeader("Runtime/Export/SceneManager/Scene.bindings.h")]
+	public struct Scene // TypeDefIndex: 46783
+	{
+		// Fields
+		[HideInInspector]
+		[SerializeField]
+		private int m_Handle; // 0x00
+	
+		// Properties
+		public int handle { get => default; } // 0x0000000183D85860-0x0000000183D85870 
+		internal LoadingState loadingState { get => default; } // 0x0000000189DD4FB4-0x0000000189DD4FC0 
+		internal string guid { get => default; } // 0x0000000189DD4F84-0x0000000189DD4F90 
+		public string path { get => default; } // 0x0000000189DD4FCC-0x0000000189DD4FD8 
+		public string name { get => default; set {} } // 0x0000000189DD4FC0-0x0000000189DD4FCC 0x0000000189DD5000-0x0000000189DD500C
+		public bool isLoaded { get => default; } // 0x0000000189DD4F9C-0x0000000189DD4FA8 
+		public int buildIndex { get => default; } // 0x0000000189DD4F6C-0x0000000189DD4F78 
+		public bool isDirty { get => default; } // 0x0000000189DD4F90-0x0000000189DD4F9C 
+		internal int dirtyID { get => default; } // 0x0000000189DD4F78-0x0000000189DD4F84 
+		public int rootCount { get => default; } // 0x0000000189DD4FD8-0x0000000189DD4FE4 
+		public bool isSubScene { get => default; set {} } // 0x0000000189DD4FA8-0x0000000189DD4FB4 0x0000000189DD4FF4-0x0000000189DD5000
+	
+		// Nested types
+		internal enum LoadingState // TypeDefIndex: 46782
+		{
+			NotLoaded = 0,
+			Loading = 1,
+			Loaded = 2,
+			Unloading = 3
+		}
+	
+		// Constructors
+		internal Scene(int handle) : this() {
+			m_Handle = default;
+		} // 0x0000000183D4E970-0x0000000183D4E980
+	
+		// Methods
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static bool IsValidInternal(int sceneHandle) => default; // 0x0000000182EA8600-0x0000000182EA8640
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static string GetPathInternal(int sceneHandle) => default; // 0x0000000189DD4BD4-0x0000000189DD4C08
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static string GetNameInternal(int sceneHandle) => default; // 0x0000000189DD4BA0-0x0000000189DD4BD4
+		[NativeThrows]
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static void SetNameInternal(int sceneHandle, string name) {} // 0x0000000189DD4F2C-0x0000000189DD4F6C
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static string GetGUIDInternal(int sceneHandle) => default; // 0x0000000189DD4AD0-0x0000000189DD4B04
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static bool IsSubScene(int sceneHandle) => default; // 0x0000000189DD4EB8-0x0000000189DD4EEC
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static void SetIsSubScene(int sceneHandle, bool value) {} // 0x0000000189DD4EEC-0x0000000189DD4F2C
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static bool GetIsLoadedInternal(int sceneHandle) => default; // 0x0000000189DD4B38-0x0000000189DD4B6C
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static LoadingState GetLoadingStateInternal(int sceneHandle) => default; // 0x0000000189DD4B6C-0x0000000189DD4BA0
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static bool GetIsDirtyInternal(int sceneHandle) => default; // 0x0000000189DD4B04-0x0000000189DD4B38
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static int GetDirtyID(int sceneHandle) => default; // 0x0000000189DD4A9C-0x0000000189DD4AD0
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static int GetBuildIndexInternal(int sceneHandle) => default; // 0x0000000189DD4A68-0x0000000189DD4A9C
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static int GetRootCountInternal(int sceneHandle) => default; // 0x0000000189DD4C08-0x0000000189DD4C3C
+		[StaticAccessor("SceneBindings", StaticAccessorType.DoubleColon)]
+		private static void GetRootGameObjectsInternal(int sceneHandle, object resultRootList) {} // 0x0000000189DD4C3C-0x0000000189DD4C7C
+		public bool IsValid() => default; // 0x0000000182EA85F0-0x0000000182EA8600
+		public GameObject[] GetRootGameObjects() => default; // 0x0000000189DD4E10-0x0000000189DD4EB8
+		public void GetRootGameObjects(List<GameObject> rootGameObjects) {} // 0x0000000189DD4C7C-0x0000000189DD4E10
+		public static bool operator ==(Scene lhs, Scene rhs) => default; // 0x0000000189DD4FE4-0x0000000189DD4FEC
+		public static bool operator !=(Scene lhs, Scene rhs) => default; // 0x0000000189DD4FEC-0x0000000189DD4FF4
+		public override int GetHashCode() => default; // 0x0000000183D85860-0x0000000183D85870
+		public override bool Equals(object other) => default; // 0x0000000189DD4A04-0x0000000189DD4A68
+	}
+
+	[NativeHeader("Runtime/SceneManager/SceneManager.h")]
+	[NativeHeader("Runtime/Export/SceneManager/SceneManager.bindings.h")]
+	[StaticAccessor("SceneManagerBindings", StaticAccessorType.DoubleColon)]
+	internal static class SceneManagerAPIInternal // TypeDefIndex: 46784
+	{
+		// Methods
+		public static int GetNumScenesInBuildSettings() => default; // 0x0000000189DE74AC-0x0000000189DE74D8
+		[NativeThrows]
+		public static Scene GetSceneByBuildIndex(int buildIndex) => default; // 0x0000000189DE7518-0x0000000189DE753C
+		[NativeThrows]
+		public static AsyncOperation LoadSceneAsyncNameIndexInternal(string sceneName, int sceneBuildIndex, LoadSceneParameters parameters, bool mustCompleteNextFrame) => default; // 0x0000000189DE753C-0x0000000189DE7560
+		[NativeThrows]
+		public static AsyncOperation UnloadSceneNameIndexInternal(string sceneName, int sceneBuildIndex, bool immediately, UnloadSceneOptions options, out bool outSuccess) {
+			outSuccess = default;
+			return default;
+		} // 0x0000000183D04FD0-0x0000000183D05040
+		private static void GetSceneByBuildIndex_Injected(int buildIndex, out Scene ret) {
+			ret = default;
+		} // 0x0000000189DE74D8-0x0000000189DE7518
+		private static AsyncOperation LoadSceneAsyncNameIndexInternal_Injected(string sceneName, int sceneBuildIndex, ref LoadSceneParameters parameters, bool mustCompleteNextFrame) => default; // 0x0000000183D1D420-0x0000000183D1D490
+	}
+
+	public class SceneManagerAPI // TypeDefIndex: 46785
+	{
+		// Fields
+		private static SceneManagerAPI s_DefaultAPI; // 0x00
+	
+		// Properties
+		internal static SceneManagerAPI ActiveAPI { get => default; } // 0x0000000182EA80A0-0x0000000182EA8160 
+		public static SceneManagerAPI overrideAPI { get; } // 0x0000000189DE7574-0x0000000189DE75C4 
+	
+		// Constructors
+		protected internal SceneManagerAPI() {} // 0x000000018350B670-0x000000018350B680
+		static SceneManagerAPI() {} // 0x0000000183D1ADB0-0x0000000183D1AE10
+	
+		// Methods
+		protected internal virtual int GetNumScenesInBuildSettings() => default; // 0x0000000189DE7560-0x0000000189DE7568
+		protected internal virtual Scene GetSceneByBuildIndex(int buildIndex) => default; // 0x0000000189DE7568-0x0000000189DE7574
+		protected internal virtual AsyncOperation LoadSceneAsyncByNameOrIndex(string sceneName, int sceneBuildIndex, LoadSceneParameters parameters, bool mustCompleteNextFrame) => default; // 0x00000001842743E0-0x000000018427440C
+		protected internal virtual AsyncOperation UnloadSceneAsyncByNameOrIndex(string sceneName, int sceneBuildIndex, bool immediately, UnloadSceneOptions options, out bool outSuccess) {
+			outSuccess = default;
+			return default;
+		} // 0x000000018427440C-0x0000000184274440
+		protected internal virtual AsyncOperation LoadFirstScene(bool mustLoadAsync) => default; // 0x0000000181002730-0x0000000181002740
+	}
+
+	[NativeHeader("Runtime/Export/SceneManager/SceneManager.bindings.h")]
+	[RequiredByNativeCode]
+	public class SceneManager // TypeDefIndex: 46786
+	{
+		// Fields
+		internal static bool s_AllowLoadScene; // 0x00
+	
+		// Properties
+		public static int sceneCount { [NativeHeader("Runtime/SceneManager/SceneManager.h")] [StaticAccessor("GetSceneManager()", StaticAccessorType.Dot)] [NativeMethod("GetSceneCount")] get => default; } // 0x0000000182EA8160-0x0000000182EA81A0 
+		public static int sceneCountInBuildSettings { get => default; } // 0x0000000189DE80B4-0x0000000189DE8108 
+	
+		// Events
+		public static event UnityAction<Scene, LoadSceneMode> sceneLoaded;
+		public static event UnityAction<Scene> sceneUnloaded;
+		public static event UnityAction<Scene, Scene> activeSceneChanged;
+	
+		// Constructors
+		public SceneManager() {} // 0x000000018350B670-0x000000018350B680
+		static SceneManager() {} // 0x0000000183D43CA0-0x0000000183D43CE0
+	
+		// Methods
+		[StaticAccessor("SceneManagerBindings", StaticAccessorType.DoubleColon)]
+		public static Scene GetActiveScene() => default; // 0x0000000189DE75F8-0x0000000189DE764C
+		[NativeThrows]
+		[StaticAccessor("SceneManagerBindings", StaticAccessorType.DoubleColon)]
+		public static bool SetActiveScene(Scene scene) => default; // 0x00000001839D83A0-0x00000001839D83F0
+		[StaticAccessor("SceneManagerBindings", StaticAccessorType.DoubleColon)]
+		public static Scene GetSceneByPath(string scenePath) => default; // 0x0000000182EA8520-0x0000000182EA85A0
+		[StaticAccessor("SceneManagerBindings", StaticAccessorType.DoubleColon)]
+		public static Scene GetSceneByName(string name) => default; // 0x0000000182EA81A0-0x0000000182EA8220
+		public static Scene GetSceneByBuildIndex(int buildIndex) => default; // 0x0000000189DE7700-0x0000000189DE7750
+		[NativeThrows]
+		[StaticAccessor("SceneManagerBindings", StaticAccessorType.DoubleColon)]
+		public static Scene GetSceneAt(int index) => default; // 0x0000000182EA8270-0x0000000182EA82F0
+		[NativeThrows]
+		[StaticAccessor("SceneManagerBindings", StaticAccessorType.DoubleColon)]
+		public static Scene CreateScene([UnityEngine.Bindings.NotNull("ArgumentNullException")] string sceneName, CreateSceneParameters parameters) => default; // 0x00000001839D82B0-0x00000001839D8340
+		[NativeThrows]
+		[StaticAccessor("SceneManagerBindings", StaticAccessorType.DoubleColon)]
+		private static bool UnloadSceneInternal(Scene scene, UnloadSceneOptions options) => default; // 0x0000000189DE7E78-0x0000000189DE7ECC
+		[NativeThrows]
+		[StaticAccessor("SceneManagerBindings", StaticAccessorType.DoubleColon)]
+		private static AsyncOperation UnloadSceneAsyncInternal(Scene scene, UnloadSceneOptions options) => default; // 0x0000000182EA8470-0x0000000182EA84D0
+		private static AsyncOperation LoadSceneAsyncNameIndexInternal(string sceneName, int sceneBuildIndex, LoadSceneParameters parameters, bool mustCompleteNextFrame) => default; // 0x0000000182EA7EE0-0x0000000182EA7FC0
+		private static AsyncOperation UnloadSceneNameIndexInternal(string sceneName, int sceneBuildIndex, bool immediately, UnloadSceneOptions options, out bool outSuccess) {
+			outSuccess = default;
+			return default;
+		} // 0x0000000182EA7FC0-0x0000000182EA80A0
+		[NativeThrows]
+		[StaticAccessor("SceneManagerBindings", StaticAccessorType.DoubleColon)]
+		public static void MergeScenes(Scene sourceScene, Scene destinationScene) {} // 0x0000000189DE7BA8-0x0000000189DE7BFC
+		[NativeThrows]
+		[StaticAccessor("SceneManagerBindings", StaticAccessorType.DoubleColon)]
+		public static void MoveGameObjectToScene([UnityEngine.Bindings.NotNull("ArgumentNullException")] GameObject go, Scene scene) {} // 0x0000000189DE7C40-0x0000000189DE7C94
+		[RequiredByNativeCode]
+		internal static AsyncOperation LoadFirstScene_Internal(bool async) => default; // 0x0000000189DE7750-0x0000000189DE77A0
+		[Obsolete("Use SceneManager.sceneCount and SceneManager.GetSceneAt(int index) to loop the all scenes instead.")]
+		public static Scene[] GetAllScenes() => default; // 0x0000000189DE764C-0x0000000189DE7700
+		public static Scene CreateScene(string sceneName) => default; // 0x00000001839D8260-0x00000001839D82B0
+		public static void LoadScene(string sceneName, [UnityEngine.Internal.DefaultValue("LoadSceneMode.Single")] LoadSceneMode mode) {} // 0x0000000189DE79F8-0x0000000189DE7A54
+		[ExcludeFromDocs]
+		public static void LoadScene(string sceneName) {} // 0x0000000189DE7ABC-0x0000000189DE7B0C
+		public static Scene LoadScene(string sceneName, LoadSceneParameters parameters) => default; // 0x0000000182EA7E60-0x0000000182EA7EE0
+		public static void LoadScene(int sceneBuildIndex, [UnityEngine.Internal.DefaultValue("LoadSceneMode.Single")] LoadSceneMode mode) {} // 0x0000000189DE7B0C-0x0000000189DE7B64
+		[ExcludeFromDocs]
+		public static void LoadScene(int sceneBuildIndex) {} // 0x0000000189DE79A8-0x0000000189DE79F8
+		public static Scene LoadScene(int sceneBuildIndex, LoadSceneParameters parameters) => default; // 0x0000000189DE7A54-0x0000000189DE7ABC
+		public static AsyncOperation LoadSceneAsync(int sceneBuildIndex, [UnityEngine.Internal.DefaultValue("LoadSceneMode.Single")] LoadSceneMode mode) => default; // 0x0000000189DE77A0-0x0000000189DE77F8
+		[ExcludeFromDocs]
+		public static AsyncOperation LoadSceneAsync(int sceneBuildIndex) => default; // 0x0000000189DE78FC-0x0000000189DE794C
+		public static AsyncOperation LoadSceneAsync(int sceneBuildIndex, LoadSceneParameters parameters) => default; // 0x0000000189DE7854-0x0000000189DE78AC
+		public static AsyncOperation LoadSceneAsync(string sceneName, [UnityEngine.Internal.DefaultValue("LoadSceneMode.Single")] LoadSceneMode mode) => default; // 0x0000000189DE77F8-0x0000000189DE7854
+		[ExcludeFromDocs]
+		public static AsyncOperation LoadSceneAsync(string sceneName) => default; // 0x0000000189DE78AC-0x0000000189DE78FC
+		public static AsyncOperation LoadSceneAsync(string sceneName, LoadSceneParameters parameters) => default; // 0x0000000189DE794C-0x0000000189DE79A8
+		[Obsolete("Use SceneManager.UnloadSceneAsync. This function is not safe to use during triggers and under other circumstances. See Scripting reference for more details.")]
+		public static bool UnloadScene(Scene scene) => default; // 0x0000000189DE7ECC-0x0000000189DE7F18
+		[Obsolete("Use SceneManager.UnloadSceneAsync. This function is not safe to use during triggers and under other circumstances. See Scripting reference for more details.")]
+		public static bool UnloadScene(int sceneBuildIndex) => default; // 0x0000000189DE7F7C-0x0000000189DE7FEC
+		[Obsolete("Use SceneManager.UnloadSceneAsync. This function is not safe to use during triggers and under other circumstances. See Scripting reference for more details.")]
+		public static bool UnloadScene(string sceneName) => default; // 0x0000000189DE7F18-0x0000000189DE7F7C
+		public static AsyncOperation UnloadSceneAsync(int sceneBuildIndex) => default; // 0x0000000189DE7D74-0x0000000189DE7DE0
+		public static AsyncOperation UnloadSceneAsync(string sceneName) => default; // 0x0000000182EA7DF0-0x0000000182EA7E60
+		public static AsyncOperation UnloadSceneAsync(Scene scene) => default; // 0x0000000182EA8420-0x0000000182EA8470
+		public static AsyncOperation UnloadSceneAsync(int sceneBuildIndex, UnloadSceneOptions options) => default; // 0x0000000189DE7CFC-0x0000000189DE7D74
+		public static AsyncOperation UnloadSceneAsync(string sceneName, UnloadSceneOptions options) => default; // 0x0000000189DE7C94-0x0000000189DE7CFC
+		public static AsyncOperation UnloadSceneAsync(Scene scene, UnloadSceneOptions options) => default; // 0x0000000189DE7DE0-0x0000000189DE7E38
+		[RequiredByNativeCode]
+		private static void Internal_SceneLoaded(Scene scene, LoadSceneMode mode) {} // 0x0000000183B5BF30-0x0000000183B5BFE0
+		[RequiredByNativeCode]
+		private static void Internal_SceneUnloaded(Scene scene) {} // 0x0000000183B36240-0x0000000183B362E0
+		[RequiredByNativeCode]
+		private static void Internal_ActiveSceneChanged(Scene previousActiveScene, Scene newActiveScene) {} // 0x0000000183B5C5D0-0x0000000183B5C640
+		private static void GetActiveScene_Injected(out Scene ret) {
+			ret = default;
+		} // 0x0000000189DE75C4-0x0000000189DE75F8
+		private static bool SetActiveScene_Injected(ref Scene scene) => default; // 0x00000001839D83F0-0x00000001839D8430
+		private static void GetSceneByPath_Injected(string scenePath, out Scene ret) {
+			ret = default;
+		} // 0x0000000182EA85A0-0x0000000182EA85F0
+		private static void GetSceneByName_Injected(string name, out Scene ret) {
+			ret = default;
+		} // 0x0000000182EA8220-0x0000000182EA8270
+		private static void GetSceneAt_Injected(int index, out Scene ret) {
+			ret = default;
+		} // 0x0000000182EA82F0-0x0000000182EA8340
+		private static void CreateScene_Injected(string sceneName, ref CreateSceneParameters parameters, out Scene ret) {
+			ret = default;
+		} // 0x00000001839D8340-0x00000001839D83A0
+		private static bool UnloadSceneInternal_Injected(ref Scene scene, UnloadSceneOptions options) => default; // 0x0000000189DE7E38-0x0000000189DE7E78
+		private static AsyncOperation UnloadSceneAsyncInternal_Injected(ref Scene scene, UnloadSceneOptions options) => default; // 0x0000000182EA84D0-0x0000000182EA8520
+		private static void MergeScenes_Injected(ref Scene sourceScene, ref Scene destinationScene) {} // 0x0000000189DE7B64-0x0000000189DE7BA8
+		private static void MoveGameObjectToScene_Injected(GameObject go, ref Scene scene) {} // 0x0000000189DE7BFC-0x0000000189DE7C40
+	}
+
+	public enum LoadSceneMode // TypeDefIndex: 46787
+	{
+		Single = 0,
+		Additive = 1
+	}
+
+	[Flags]
+	public enum LocalPhysicsMode // TypeDefIndex: 46788
+	{
+		None = 0,
+		Physics2D = 1,
+		Physics3D = 2
+	}
+
+	[Serializable]
+	public struct LoadSceneParameters // TypeDefIndex: 46789
+	{
+		// Fields
+		[SerializeField]
+		private LoadSceneMode m_LoadSceneMode; // 0x00
+		[SerializeField]
+		private LocalPhysicsMode m_LocalPhysicsMode; // 0x04
+	
+		// Properties
+		public LoadSceneMode loadSceneMode { set {} } // 0x0000000183D4E970-0x0000000183D4E980
+	
+		// Constructors
+		public LoadSceneParameters(LoadSceneMode mode) : this() {
+			m_LoadSceneMode = default;
+			m_LocalPhysicsMode = default;
+		} // 0x0000000183D55720-0x0000000183D55730
+	}
+
+	[Serializable]
+	public struct CreateSceneParameters // TypeDefIndex: 46790
+	{
+		// Fields
+		[SerializeField]
+		private LocalPhysicsMode m_LocalPhysicsMode; // 0x00
+	
+		// Constructors
+		public CreateSceneParameters(LocalPhysicsMode physicsMode) {
+			m_LocalPhysicsMode = default;
+		} // 0x0000000183D4E970-0x0000000183D4E980
+	}
+
+	[Flags]
+	public enum UnloadSceneOptions // TypeDefIndex: 46791
+	{
+		None = 0,
+		UnloadAllEmbeddedSceneObjects = 1
+	}
+}
+
+namespace UnityEngine.Scripting
+{
+	[AttributeUsage(AttributeTargets.Assembly)]
+	public class AlwaysLinkAssemblyAttribute : Attribute // TypeDefIndex: 46778
+	{
+		// Constructors
+		public AlwaysLinkAssemblyAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Delegate, Inherited = false)]
+	[RequiredByNativeCode]
+	public class PreserveAttribute : Attribute // TypeDefIndex: 46779
+	{
+		// Constructors
+		public PreserveAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+}
+
+namespace UnityEngine.Scripting.APIUpdating
+{
+	internal struct MovedFromAttributeData // TypeDefIndex: 46780
+	{
+		// Fields
+		public string className; // 0x00
+		public string nameSpace; // 0x08
+		public string assembly; // 0x10
+		public bool classHasChanged; // 0x18
+		public bool nameSpaceHasChanged; // 0x19
+		public bool assemblyHasChanged; // 0x1A
+		public bool autoUdpateAPI; // 0x1B
+	
+		// Methods
+		public void Set(bool autoUpdateAPI, string sourceNamespace = null, string sourceAssembly = null, string sourceClassName = null) {} // 0x000000018357F4D0-0x000000018357F540
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Interface | AttributeTargets.Delegate)]
+	public class MovedFromAttribute : Attribute // TypeDefIndex: 46781
+	{
+		// Fields
+		internal MovedFromAttributeData data; // 0x10
+	
+		// Constructors
+		public MovedFromAttribute() {} // Dummy constructor
+		public MovedFromAttribute(bool autoUpdateAPI, string sourceNamespace = null, string sourceAssembly = null, string sourceClassName = null) {} // 0x000000018357F480-0x000000018357F4A0
+		public MovedFromAttribute(string sourceNamespace) {} // 0x000000018357F4A0-0x000000018357F4D0
+	}
+}
+
+namespace UnityEngine.Serialization
+{
+	[AttributeUsage(AttributeTargets.Field, AllowMultiple = true, Inherited = false)]
+	[RequiredByNativeCode]
+	public class FormerlySerializedAsAttribute : Attribute // TypeDefIndex: 46777
+	{
+		// Fields
+		private string m_oldName; // 0x10
+	
+		// Constructors
+		public FormerlySerializedAsAttribute() {} // Dummy constructor
+		public FormerlySerializedAsAttribute(string oldName) {} // 0x000000018426FEE0-0x000000018426FEF0
+	}
+}
+
+namespace UnityEngine.Sprites
+{
+	public sealed class DataUtility // TypeDefIndex: 46692
+	{
+		// Constructors
+		public DataUtility() {} // Dummy constructor
+	
+		// Methods
+		public static Vector4 GetInnerUV(Sprite sprite) => default; // 0x00000001825A10E0-0x00000001825A1150
+		public static Vector4 GetOuterUV(Sprite sprite) => default; // 0x00000001825A11D0-0x00000001825A1240
+		public static Vector4 GetPadding(Sprite sprite) => default; // 0x00000001825C4120-0x00000001825C4190
+		public static Vector2 GetMinSize(Sprite sprite) => default; // 0x00000001825A0340-0x00000001825A0480
+	}
+}
+
+namespace UnityEngine.U2D
+{
+	[Serializable]
+	[MovedFrom("UnityEngine.Experimental.U2D")]
+	[NativeHeader("Runtime/2D/Common/SpriteDataAccess.h")]
+	[NativeHeader("Runtime/2D/Common/SpriteDataMarshalling.h")]
+	[NativeType(CodegenOptions.Custom, "ScriptingSpriteBone")]
+	[RequiredByNativeCode]
+	public struct SpriteBone // TypeDefIndex: 46693
+	{
+		// Fields
+		[NativeName("name")]
+		[SerializeField]
+		private string m_Name; // 0x00
+		[NativeName("guid")]
+		[SerializeField]
+		private string m_Guid; // 0x08
+		[NativeName("position")]
+		[SerializeField]
+		private Vector3 m_Position; // 0x10
+		[NativeName("rotation")]
+		[SerializeField]
+		private Quaternion m_Rotation; // 0x1C
+		[NativeName("length")]
+		[SerializeField]
+		private float m_Length; // 0x2C
+		[NativeName("parentId")]
+		[SerializeField]
+		private int m_ParentId; // 0x30
+		[NativeName("color")]
+		[SerializeField]
+		private Color32 m_Color; // 0x34
+	}
+
+	[NativeHeader("Runtime/2D/SpriteAtlas/SpriteAtlas.h")]
+	[NativeHeader("Runtime/2D/SpriteAtlas/SpriteAtlasManager.h")]
+	[StaticAccessor("GetSpriteAtlasManager()", StaticAccessorType.Dot)]
+	public class SpriteAtlasManager // TypeDefIndex: 46694
+	{
+		// Events
+		public static event Action<SpriteAtlas> atlasRegistered;
+	
+		// Constructors
+		public SpriteAtlasManager() {} // Dummy constructor
+	
+		// Methods
+		[RequiredByNativeCode]
+		private static bool RequestAtlas(string tag) => default; // 0x0000000189DD53C0-0x0000000189DD547C
+		[RequiredByNativeCode]
+		private static void PostRegisteredAtlas(SpriteAtlas spriteAtlas) {} // 0x0000000189DD533C-0x0000000189DD538C
+		internal static void Register(SpriteAtlas spriteAtlas) {} // 0x0000000189DD538C-0x0000000189DD53C0
+	}
+
+	[NativeHeader("Runtime/Graphics/SpriteFrame.h")]
+	[NativeType(Header = "Runtime/2D/SpriteAtlas/SpriteAtlas.h")]
+	public class SpriteAtlas : UnityEngine.Object // TypeDefIndex: 46695
+	{
+		// Constructors
+		public SpriteAtlas() {} // Dummy constructor
+	
+		// Methods
+		public bool CanBindTo([UnityEngine.Bindings.NotNull("ArgumentNullException")] Sprite sprite) => default; // 0x0000000189DD55C4-0x0000000189DD5608
+	}
+}
+
+namespace UnityEngine.Windows
+{
+	[NativeHeader("PlatformDependent/Win/Bindings/InputBindings.h")]
+	public static class Input // TypeDefIndex: 46717
+	{
+		// Methods
+		[NativeName("ForwardRawInput")]
+		[StaticAccessor("", StaticAccessorType.DoubleColon)]
+		[ThreadSafe]
+		private static unsafe void ForwardRawInputImpl(uint* rawInputHeaderIndices, uint* rawInputDataIndices, uint indicesCount, byte* rawInputData, uint rawInputDataSize) {} // 0x00000001832698B0-0x0000000183269920
+		public static unsafe void ForwardRawInput(uint* rawInputHeaderIndices, uint* rawInputDataIndices, uint indicesCount, byte* rawInputData, uint rawInputDataSize) {} // 0x0000000183269870-0x00000001832698B0
+	}
+}
+
+namespace UnityEngine.Windows.Speech
+{
+	public static class PhraseRecognitionSystem // TypeDefIndex: 46720
+	{
+		// Nested types
+		public delegate void ErrorDelegate(SpeechError errorCode); // TypeDefIndex: 46718; 0x0000000182149960-0x0000000182149970
+	
+		public delegate void StatusDelegate(SpeechSystemStatus status); // TypeDefIndex: 46719; 0x0000000182149960-0x0000000182149970
+	
+		// Methods
+		[RequiredByNativeCode]
+		private static void PhraseRecognitionSystem_InvokeErrorEvent(SpeechError errorCode) {} // 0x0000000189DD3844-0x0000000189DD3894
+		[RequiredByNativeCode]
+		private static void PhraseRecognitionSystem_InvokeStatusChangedEvent(SpeechSystemStatus status) {} // 0x0000000189DD3894-0x0000000189DD38E4
+	}
+
+	public abstract class PhraseRecognizer // TypeDefIndex: 46722
+	{
+		// Fields
+		protected IntPtr m_Recognizer; // 0x10
+	
+		// Nested types
+		public delegate void PhraseRecognizedDelegate(PhraseRecognizedEventArgs args); // TypeDefIndex: 46721; 0x00000001820ABDF0-0x00000001820ABE30
+	
+		// Constructors
+		protected PhraseRecognizer() {} // Dummy constructor
+	
+		// Methods
+		[RequiredByNativeCode]
+		private void InvokePhraseRecognizedEvent(string text, ConfidenceLevel confidence, SemanticMeaning[] semanticMeanings, long phraseStartFileTime, long phraseDurationTicks) {} // 0x0000000189DD3924-0x0000000189DD3A40
+		[RequiredByNativeCode]
+		private static SemanticMeaning[] MarshalSemanticMeaning(IntPtr keys, IntPtr values, IntPtr valueSizes, int valueCount) => default; // 0x0000000189DD3A40-0x0000000189DD3BC4
+	}
+
+	public sealed class DictationRecognizer // TypeDefIndex: 46727
+	{
+		// Fields
+		private IntPtr m_Recognizer; // 0x10
+	
+		// Nested types
+		public delegate void DictationHypothesisDelegate(string text); // TypeDefIndex: 46723; 0x0000000182149960-0x0000000182149970
+	
+		public delegate void DictationResultDelegate(string text, ConfidenceLevel confidence); // TypeDefIndex: 46724; 0x0000000182065C10-0x0000000182065C20
+	
+		public delegate void DictationCompletedDelegate(DictationCompletionCause cause); // TypeDefIndex: 46725; 0x0000000182149960-0x0000000182149970
+	
+		public delegate void DictationErrorHandler(string error, int hresult); // TypeDefIndex: 46726; 0x0000000182065C10-0x0000000182065C20
+	
+		// Constructors
+		public DictationRecognizer() {} // Dummy constructor
+	
+		// Methods
+		[RequiredByNativeCode]
+		private void DictationRecognizer_InvokeHypothesisGeneratedEvent(string keyword) {} // 0x0000000189DD0190-0x0000000189DD01A8
+		[RequiredByNativeCode]
+		private void DictationRecognizer_InvokeResultGeneratedEvent(string keyword, ConfidenceLevel minimumConfidence) {} // 0x0000000189DD01A8-0x0000000189DD01C8
+		[RequiredByNativeCode]
+		private void DictationRecognizer_InvokeCompletedEvent(DictationCompletionCause cause) {} // 0x0000000189DD0158-0x0000000189DD0170
+		[RequiredByNativeCode]
+		private void DictationRecognizer_InvokeErrorEvent(string error, int hresult) {} // 0x0000000189DD0170-0x0000000189DD0190
+	}
+
+	public enum ConfidenceLevel // TypeDefIndex: 46728
+	{
+		High = 0,
+		Medium = 1,
+		Low = 2,
+		Rejected = 3
+	}
+
+	public enum SpeechSystemStatus // TypeDefIndex: 46729
+	{
+		Stopped = 0,
+		Running = 1,
+		Failed = 2
+	}
+
+	public enum SpeechError // TypeDefIndex: 46730
+	{
+		NoError = 0,
+		TopicLanguageNotSupported = 1,
+		GrammarLanguageMismatch = 2,
+		GrammarCompilationFailure = 3,
+		AudioQualityFailure = 4,
+		PauseLimitExceeded = 5,
+		TimeoutExceeded = 6,
+		NetworkFailure = 7,
+		MicrophoneUnavailable = 8,
+		UnknownError = 9
+	}
+
+	public enum DictationCompletionCause // TypeDefIndex: 46731
+	{
+		Complete = 0,
+		AudioQualityFailure = 1,
+		Canceled = 2,
+		TimeoutExceeded = 3,
+		PauseLimitExceeded = 4,
+		NetworkFailure = 5,
+		MicrophoneUnavailable = 6,
+		UnknownError = 7
+	}
+
+	public struct SemanticMeaning // TypeDefIndex: 46732
+	{
+		// Fields
+		public string key; // 0x00
+		public string[] values; // 0x08
+	}
+
+	public struct PhraseRecognizedEventArgs // TypeDefIndex: 46733
+	{
+		// Fields
+		public readonly ConfidenceLevel confidence; // 0x00
+		public readonly SemanticMeaning[] semanticMeanings; // 0x08
+		public readonly string text; // 0x10
+		public readonly System.DateTime phraseStartTime; // 0x18
+		public readonly TimeSpan phraseDuration; // 0x20
+	
+		// Constructors
+		internal PhraseRecognizedEventArgs(string text, ConfidenceLevel confidence, SemanticMeaning[] semanticMeanings, System.DateTime phraseStartTime, TimeSpan phraseDuration) {
+			this.confidence = default;
+			this.semanticMeanings = default;
+			this.text = default;
+			this.phraseStartTime = default;
+			this.phraseDuration = default;
+		} // 0x0000000189DD38E4-0x0000000189DD3924
+	}
+}
+
+namespace UnityEngine.Windows.WebCam
+{
+	[MovedFrom("UnityEngine.XR.WSA.WebCam")]
+	[NativeHeader("PlatformDependent/Win/Webcam/PhotoCapture.h")]
+	[StaticAccessor("PhotoCapture", StaticAccessorType.DoubleColon)]
+	public class PhotoCapture : IDisposable // TypeDefIndex: 46741
+	{
+		// Fields
+		internal IntPtr m_NativePtr; // 0x10
+		private static readonly long HR_SUCCESS; // 0x00
+	
+		// Nested types
+		public enum CaptureResultType // TypeDefIndex: 46734
+		{
+			Success = 0,
+			UnknownError = 1
+		}
+	
+		public struct PhotoCaptureResult // TypeDefIndex: 46735
+		{
+			// Fields
+			public CaptureResultType resultType; // 0x00
+			public long hResult; // 0x08
+		}
+	
+		public delegate void OnCaptureResourceCreatedCallback(PhotoCapture captureObject); // TypeDefIndex: 46736; 0x0000000182149960-0x0000000182149970
+	
+		public delegate void OnPhotoModeStartedCallback(PhotoCaptureResult result); // TypeDefIndex: 46737; 0x0000000183D490A0-0x0000000183D490D0
+	
+		public delegate void OnPhotoModeStoppedCallback(PhotoCaptureResult result); // TypeDefIndex: 46738; 0x0000000183D490A0-0x0000000183D490D0
+	
+		public delegate void OnCapturedToDiskCallback(PhotoCaptureResult result); // TypeDefIndex: 46739; 0x0000000183D490A0-0x0000000183D490D0
+	
+		public delegate void OnCapturedToMemoryCallback(PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame); // TypeDefIndex: 46740; 0x000000018500BF20-0x000000018500BF44
+	
+		// Constructors
+		public PhotoCapture() {} // Dummy constructor
+		private PhotoCapture(IntPtr nativeCaptureObject) {} // 0x0000000183D517C0-0x0000000183D517D0
+	
+		// Methods
+		private static PhotoCaptureResult MakeCaptureResult(long hResult) => default; // 0x0000000189DD37D4-0x0000000189DD3844
+		[RequiredByNativeCode]
+		private static void InvokeOnCreatedResourceDelegate(OnCaptureResourceCreatedCallback callback, IntPtr nativePtr) {} // 0x0000000189DD3760-0x0000000189DD37D4
+		[RequiredByNativeCode]
+		private static void InvokeOnPhotoModeStartedDelegate(OnPhotoModeStartedCallback callback, long hResult) {} // 0x0000000189DD3670-0x0000000189DD36B0
+		[RequiredByNativeCode]
+		private static void InvokeOnPhotoModeStoppedDelegate(OnPhotoModeStoppedCallback callback, long hResult) {} // 0x0000000189DD3670-0x0000000189DD36B0
+		[RequiredByNativeCode]
+		private static void InvokeOnCapturedPhotoToDiskDelegate(OnCapturedToDiskCallback callback, long hResult) {} // 0x0000000189DD3670-0x0000000189DD36B0
+		[RequiredByNativeCode]
+		private static void InvokeOnCapturedPhotoToMemoryDelegate(OnCapturedToMemoryCallback callback, long hResult, IntPtr photoCaptureFramePtr) {} // 0x0000000189DD36B0-0x0000000189DD3760
+		public void Dispose() {} // 0x0000000189DD3594-0x0000000189DD35EC
+		[NativeConditional("(PLATFORM_WIN || PLATFORM_WINRT) && !PLATFORM_XBOXONE")]
+		[NativeName("Dispose")]
+		private void Dispose_Internal() {} // 0x0000000189DD3560-0x0000000189DD3594
+		~PhotoCapture() {} // 0x0000000189DD35EC-0x0000000189DD3670
+		[NativeConditional("(PLATFORM_WIN || PLATFORM_WINRT) && !PLATFORM_XBOXONE")]
+		[NativeName("DisposeThreaded")]
+		[ThreadAndSerializationSafe]
+		private void DisposeThreaded_Internal() {} // 0x0000000189DD352C-0x0000000189DD3560
+	}
+
+	[MovedFrom("UnityEngine.XR.WSA.WebCam")]
+	[NativeConditional("(PLATFORM_WIN || PLATFORM_WINRT) && !PLATFORM_XBOXONE")]
+	[NativeHeader("PlatformDependent/Win/Webcam/PhotoCaptureFrame.h")]
+	public sealed class PhotoCaptureFrame : IDisposable // TypeDefIndex: 46742
+	{
+		// Fields
+		private IntPtr m_NativePtr; // 0x10
+	
+		// Properties
+		public int dataLength { get; private set; } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000183D4E9C0-0x0000000183D4E9D0
+		private bool hasLocationData { get; set; } // 0x0000000183D4E9B0-0x0000000183D4E9C0
+		private CapturePixelFormat pixelFormat { get; set; } // 0x0000000181003B60-0x0000000181003B70
+	
+		// Constructors
+		public PhotoCaptureFrame() {} // Dummy constructor
+		internal PhotoCaptureFrame(IntPtr nativePtr) {} // 0x0000000189DD34B0-0x0000000189DD352C
+	
+		// Methods
+		[ThreadAndSerializationSafe]
+		private int GetDataLength() => default; // 0x0000000189DD3448-0x0000000189DD347C
+		[ThreadAndSerializationSafe]
+		private bool GetHasLocationData() => default; // 0x0000000189DD347C-0x0000000189DD34B0
+		[ThreadAndSerializationSafe]
+		private CapturePixelFormat GetCapturePixelFormat() => default; // 0x0000000189DD3414-0x0000000189DD3448
+		private void Cleanup() {} // 0x0000000189DD32C0-0x0000000189DD3324
+		[NativeConditional("(PLATFORM_WIN || PLATFORM_WINRT) && !PLATFORM_XBOXONE")]
+		[NativeName("Dispose")]
+		[ThreadAndSerializationSafe]
+		private void Dispose_Internal() {} // 0x0000000189DD3324-0x0000000189DD3358
+		public void Dispose() {} // 0x0000000189DD3358-0x0000000189DD33A4
+		~PhotoCaptureFrame() {} // 0x0000000189DD33A4-0x0000000189DD3414
+	}
+
+	[MovedFrom("UnityEngine.XR.WSA.WebCam")]
+	[NativeHeader("PlatformDependent/Win/Webcam/VideoCaptureBindings.h")]
+	[StaticAccessor("VideoCaptureBindings", StaticAccessorType.DoubleColon)]
+	public class VideoCapture : IDisposable // TypeDefIndex: 46750
+	{
+		// Fields
+		internal IntPtr m_NativePtr; // 0x10
+		private static readonly long HR_SUCCESS; // 0x00
+	
+		// Nested types
+		public enum CaptureResultType // TypeDefIndex: 46743
+		{
+			Success = 0,
+			UnknownError = 1
+		}
+	
+		public struct VideoCaptureResult // TypeDefIndex: 46744
+		{
+			// Fields
+			public CaptureResultType resultType; // 0x00
+			public long hResult; // 0x08
+		}
+	
+		public delegate void OnVideoCaptureResourceCreatedCallback(VideoCapture captureObject); // TypeDefIndex: 46745; 0x0000000182149960-0x0000000182149970
+	
+		public delegate void OnVideoModeStartedCallback(VideoCaptureResult result); // TypeDefIndex: 46746; 0x0000000183D490A0-0x0000000183D490D0
+	
+		public delegate void OnVideoModeStoppedCallback(VideoCaptureResult result); // TypeDefIndex: 46747; 0x0000000183D490A0-0x0000000183D490D0
+	
+		public delegate void OnStartedRecordingVideoCallback(VideoCaptureResult result); // TypeDefIndex: 46748; 0x0000000183D490A0-0x0000000183D490D0
+	
+		public delegate void OnStoppedRecordingVideoCallback(VideoCaptureResult result); // TypeDefIndex: 46749; 0x0000000183D490A0-0x0000000183D490D0
+	
+		// Constructors
+		public VideoCapture() {} // Dummy constructor
+		private VideoCapture(IntPtr nativeCaptureObject) {} // 0x0000000183D517C0-0x0000000183D517D0
+	
+		// Methods
+		private static VideoCaptureResult MakeCaptureResult(long hResult) => default; // 0x0000000189DDAE10-0x0000000189DDAE80
+		[RequiredByNativeCode]
+		private static void InvokeOnCreatedVideoCaptureResourceDelegate(OnVideoCaptureResourceCreatedCallback callback, IntPtr nativePtr) {} // 0x0000000189DDAD5C-0x0000000189DDADD0
+		[RequiredByNativeCode]
+		private static void InvokeOnVideoModeStartedDelegate(OnVideoModeStartedCallback callback, long hResult) {} // 0x0000000189DDADD0-0x0000000189DDAE10
+		[RequiredByNativeCode]
+		private static void InvokeOnVideoModeStoppedDelegate(OnVideoModeStoppedCallback callback, long hResult) {} // 0x0000000189DDADD0-0x0000000189DDAE10
+		[RequiredByNativeCode]
+		private static void InvokeOnStartedRecordingVideoToDiskDelegate(OnStartedRecordingVideoCallback callback, long hResult) {} // 0x0000000189DDADD0-0x0000000189DDAE10
+		[RequiredByNativeCode]
+		private static void InvokeOnStoppedRecordingVideoToDiskDelegate(OnStoppedRecordingVideoCallback callback, long hResult) {} // 0x0000000189DDADD0-0x0000000189DDAE10
+		public void Dispose() {} // 0x0000000189DDAC80-0x0000000189DDACD8
+		[NativeConditional("(PLATFORM_WIN || PLATFORM_WINRT) && !PLATFORM_XBOXONE")]
+		[NativeMethod("VideoCaptureBindings::Dispose", HasExplicitThis = true)]
+		private void Dispose_Internal() {} // 0x0000000189DDAC4C-0x0000000189DDAC80
+		~VideoCapture() {} // 0x0000000189DDACD8-0x0000000189DDAD5C
+		[NativeConditional("(PLATFORM_WIN || PLATFORM_WINRT) && !PLATFORM_XBOXONE")]
+		[NativeMethod("VideoCaptureBindings::DisposeThreaded", HasExplicitThis = true)]
+		[ThreadAndSerializationSafe]
+		private void DisposeThreaded_Internal() {} // 0x0000000189DDAC18-0x0000000189DDAC4C
+	}
+
+	[MovedFrom("UnityEngine.XR.WSA.WebCam")]
+	public enum CapturePixelFormat // TypeDefIndex: 46751
+	{
+		BGRA32 = 0,
+		NV12 = 1,
+		JPEG = 2,
+		PNG = 3
 	}
 }
 

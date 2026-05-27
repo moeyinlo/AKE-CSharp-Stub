@@ -516,3 +516,19 @@ namespace IFix
 		public static bool IsPatched(int id) => default; // 0x00000001823A8500-0x00000001823A86A0
 	}
 }
+
+namespace System.Numerics
+{
+	public static class BitOperations // TypeDefIndex: 58614
+	{
+		// Properties
+		private static ReadOnlySpan<byte> TrailingZeroCountDeBruijn { get; } // 0x00000001823DE440-0x00000001823DE4C0 
+		private static ReadOnlySpan<byte> Log2DeBruijn { get; } // 0x000000018A2BDFB4-0x000000018A2BE010 
+	
+		// Methods
+		public static int LeadingZeroCount(uint value) => default; // 0x000000018473A550-0x000000018473A574
+		private static int Log2SoftwareFallback(uint value) => default; // 0x000000018A2BDEA4-0x000000018A2BDF24
+		public static int TrailingZeroCount(uint value) => default; // 0x000000018A2BDF24-0x000000018A2BDF94
+		public static int TrailingZeroCount(ulong value) => default; // 0x000000018A2BDF94-0x000000018A2BDFB4
+	}
+}

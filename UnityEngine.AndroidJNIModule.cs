@@ -642,3 +642,15 @@ namespace UnityEngine
 		public static int GetArrayLength(IntPtr array) => default; // 0x0000000189D808BC-0x0000000189D8093C
 	}
 }
+
+namespace UnityEngine.Android
+{
+	internal static class Common // TypeDefIndex: 58837
+	{
+		// Fields
+		private static AndroidJavaObject m_Activity; // 0x00
+	
+		// Methods
+		public static AndroidJavaObject GetActivity() => default; // 0x0000000189D8580C-0x0000000189D859B4
+	}
+}

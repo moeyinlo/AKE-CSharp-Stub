@@ -8175,3 +8175,66 @@ namespace Google.Protobuf.WellKnownTypes
 		void pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ref ParseContext input) {} // 0x0000000188568090-0x000000018856810C
 	}
 }
+
+namespace System.Diagnostics.CodeAnalysis
+{
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Interface | AttributeTargets.Parameter | AttributeTargets.ReturnValue | AttributeTargets.GenericParameter, Inherited = false)]
+	internal sealed class DynamicallyAccessedMembersAttribute : Attribute // TypeDefIndex: 51904
+	{
+		// Properties
+		public DynamicallyAccessedMemberTypes MemberTypes { get; } // 0x0000000183D4E340-0x0000000183D4E350 
+	
+		// Constructors
+		public DynamicallyAccessedMembersAttribute() {} // Dummy constructor
+		public DynamicallyAccessedMembersAttribute(DynamicallyAccessedMemberTypes memberTypes) {} // 0x00000001810410F0-0x0000000181041100
+	}
+
+	[Flags]
+	internal enum DynamicallyAccessedMemberTypes // TypeDefIndex: 51905
+	{
+		All = -1,
+		None = 0,
+		PublicParameterlessConstructor = 1,
+		PublicConstructors = 3,
+		NonPublicConstructors = 4,
+		PublicMethods = 8,
+		NonPublicMethods = 16,
+		PublicFields = 32,
+		NonPublicFields = 64,
+		PublicNestedTypes = 128,
+		NonPublicNestedTypes = 256,
+		PublicProperties = 512,
+		NonPublicProperties = 1024,
+		PublicEvents = 2048,
+		NonPublicEvents = 4096,
+		Interfaces = 8192
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Constructor | AttributeTargets.Method, Inherited = false)]
+	internal sealed class RequiresUnreferencedCodeAttribute : Attribute // TypeDefIndex: 51906
+	{
+		// Properties
+		public string Message { get; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public string Url { get; set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+	
+		// Constructors
+		public RequiresUnreferencedCodeAttribute() {} // Dummy constructor
+		public RequiresUnreferencedCodeAttribute(string message) {} // 0x000000018426FEE0-0x000000018426FEF0
+	}
+
+	[AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Module | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Parameter | AttributeTargets.Delegate | AttributeTargets.ReturnValue | AttributeTargets.GenericParameter | AttributeTargets.All, Inherited = false, AllowMultiple = true)]
+	internal sealed class UnconditionalSuppressMessageAttribute : Attribute // TypeDefIndex: 51907
+	{
+		// Properties
+		public string Category { get; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public string CheckId { get; } // 0x0000000181041090-0x00000001810410A0 
+		public string Scope { get; set; } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+		public string Target { get; set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+		public string MessageId { get; set; } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
+		public string Justification { get; set; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x000000018388FF30-0x000000018388FF40
+	
+		// Constructors
+		public UnconditionalSuppressMessageAttribute() {} // Dummy constructor
+		public UnconditionalSuppressMessageAttribute(string category, string checkId) {} // 0x0000000182676770-0x00000001826767A0
+	}
+}

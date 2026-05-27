@@ -224,3 +224,42 @@ namespace UnityEngine
 		}
 	}
 }
+
+namespace UnityEngine.Analytics
+{
+	[ExcludeFromDocs]
+	[NativeHeader("Modules/UnityAnalytics/ContinuousEvent/Manager.h")]
+	[NativeHeader("Modules/UnityAnalytics/Public/UnityAnalytics.h")]
+	[RequiredByNativeCode]
+	public class ContinuousEvent // TypeDefIndex: 60067
+	{
+		// Constructors
+		public ContinuousEvent() {} // Dummy constructor
+	}
+
+	[RequiredByNativeCode]
+	public enum AnalyticsSessionState // TypeDefIndex: 60068
+	{
+		kSessionStopped = 0,
+		kSessionStarted = 1,
+		kSessionPaused = 2,
+		kSessionResumed = 3
+	}
+
+	[NativeHeader("Modules/UnityAnalytics/Public/UnityAnalytics.h")]
+	[NativeHeader("UnityAnalyticsScriptingClasses.h")]
+	[RequiredByNativeCode]
+	public static class AnalyticsSessionInfo // TypeDefIndex: 60071
+	{
+		// Nested types
+		public delegate void SessionStateChanged(AnalyticsSessionState sessionState, long sessionId, long sessionElapsedTime, bool sessionChanged); // TypeDefIndex: 60069; 0x000000018210E5F0-0x000000018210E610
+	
+		public delegate void IdentityTokenChanged(string token); // TypeDefIndex: 60070; 0x0000000182149960-0x0000000182149970
+	
+		// Methods
+		[RequiredByNativeCode]
+		internal static void CallSessionStateChanged(AnalyticsSessionState sessionState, long sessionId, long sessionElapsedTime, bool sessionChanged) {} // 0x0000000183D0C560-0x0000000183D0C5D0
+		[RequiredByNativeCode]
+		internal static void CallIdentityTokenChanged(string token) {} // 0x0000000189F841A0-0x0000000189F841F0
+	}
+}

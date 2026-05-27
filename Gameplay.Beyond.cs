@@ -103,6 +103,7 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using HG.Rendering;
 using HG.Rendering.Runtime;
+using HG.Rendering.Runtime.TerrainV2;
 using IFix.Core;
 using JetBrains.Annotations;
 using MagicaCloth;
@@ -286647,5 +286648,520 @@ namespace SPCR
 		public static AffineTransform operator *(AffineTransform lhs, AffineTransform rhs) => default; // 0x0000000185E21AF4-0x0000000185E21C08
 		public static AffineTransform operator *(Quaternion lhs, AffineTransform rhs) => default; // 0x0000000185E21C08-0x0000000185E21CA8
 		public static AffineTransform operator *(AffineTransform lhs, Quaternion rhs) => default; // 0x0000000185E21CA8-0x0000000185E21CFC
+	}
+}
+
+namespace UnityEngine.HyperGryph.Streaming
+{
+	public class HGLODStreamingSystemScript // TypeDefIndex: 103
+	{
+		// Fields
+		private LODCrossFadeConfig m_lodCrossFadeConfig; // 0x10
+	
+		// Constructors
+		public HGLODStreamingSystemScript() {} // 0x0000000183591800-0x0000000183591830
+	
+		// Methods
+		public void Dispose() {} // 0x000000018350B670-0x000000018350B680
+		public void PipelineUpdate() {} // 0x000000018279E570-0x000000018279F160
+	}
+
+	public class StreamingSceneManagerScript : IDisposable // TypeDefIndex: 104
+	{
+		// Constructors
+		public StreamingSceneManagerScript() {} // 0x0000000183591830-0x0000000183592050
+	
+		// Methods
+		public void Dispose() {} // 0x0000000185E27670-0x0000000185E27934
+		public void GameplayUpdate() {} // 0x000000018279F880-0x000000018279FBE0
+		public static void OnStreamingSettingParametersCallback(HGDeviceType deviceType, int tier) {} // 0x0000000183D1F3E0-0x0000000183D1F3F0
+		public static void BindECSEntityConvertFunc(ECSEntityType entityType, ECSEntityHasRequiredComponentsDelegate hasRequiredComponentsDelegate, ECSEntityConvertToDelegate convertToDelegate, ECSEntityConvertFromDelegate convertFromFunc) {} // 0x0000000183592300-0x00000001835923A0
+		public static void BindProxyEntityConvertFunc(ProxyEntityType entityType, ProxyEntityHasRequiredComponentsDelegate hasRequiredComponentsFunc, ProxyEntityConvertToDelegate convertToFunc, ProxyEntityConvertFromDelegate convertFromFunc) {} // 0x00000001835921B0-0x0000000183592250
+		public static void BindMonoComponentConvertFunc(StreamingComponentType componentType, MonoIsConvertorOfComponentDelegate isConvertorOfFunc, MonoComponentConvertToDelegate convertToFunc, MonoComponentConvertFromDelegate convertFromFunc, MonoComponentAddComponentToDelegate addComponentToFunc, MonoComponentGetComponentFromDelegate getComponentFromFunc) {} // 0x0000000183592050-0x0000000183592100
+	}
+
+	public static class HGECSRegionECSEntityConvertFunc // TypeDefIndex: 105
+	{
+		// Fields
+		public static readonly ECSEntityHasRequiredComponentsDelegate HAS_REQUIRED_COMPONENTS_FUNC; // 0x00
+		public static readonly ECSEntityConvertToDelegate CONVERT_TO_FUNC; // 0x08
+		public static readonly ECSEntityConvertFromDelegate CONVERT_FROM_FUNC; // 0x10
+	
+		// Constructors
+		static HGECSRegionECSEntityConvertFunc() {} // 0x00000001837E5F00-0x00000001837E5FF0
+	
+		// Methods
+		public static ECSEntityType GetEntityType() => default; // 0x0000000183D5C5E0-0x0000000183D5C5F0
+		public static bool ConvertFrom(UnityEngine.HyperGryph.ECS.Entity entity, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000185E25B9C-0x0000000185E25D0C
+	}
+
+	public static class WaterDecalECSEntityConvertFunc // TypeDefIndex: 106
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_SHARED_MESH; // 0x00
+		private static readonly PropertySerializeId PROP_ID_MATERIAL; // 0x0C
+		public static readonly ECSEntityHasRequiredComponentsDelegate HAS_REQUIRED_COMPONENTS_FUNC; // 0x18
+		public static readonly ECSEntityConvertToDelegate CONVERT_TO_FUNC; // 0x20
+		public static readonly ECSEntityConvertFromDelegate CONVERT_FROM_FUNC; // 0x28
+	
+		// Constructors
+		static WaterDecalECSEntityConvertFunc() {} // 0x00000001837E5FF0-0x00000001837E6130
+	
+		// Methods
+		public static ECSEntityType GetEntityType() => default; // 0x0000000183D5C530-0x0000000183D5C540
+		public static bool ConvertFrom(UnityEngine.HyperGryph.ECS.Entity entity, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000182FF1280-0x0000000182FF17C0
+	}
+
+	public static class WaterECSEntityConvertFunc // TypeDefIndex: 107
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_SHARED_MESH; // 0x00
+		private static readonly PropertySerializeId PROP_ID_CONFIG; // 0x0C
+		public static readonly ECSEntityHasRequiredComponentsDelegate HAS_REQUIRED_COMPONENTS_FUNC; // 0x18
+		public static readonly ECSEntityConvertToDelegate CONVERT_TO_FUNC; // 0x20
+		public static readonly ECSEntityConvertFromDelegate CONVERT_FROM_FUNC; // 0x28
+	
+		// Constructors
+		static WaterECSEntityConvertFunc() {} // 0x00000001837E6130-0x00000001837E6270
+	
+		// Methods
+		public static ECSEntityType GetEntityType() => default; // 0x000000018232EB60-0x000000018232EB70
+		public static bool ConvertFrom(UnityEngine.HyperGryph.ECS.Entity entity, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000182FF1B30-0x0000000182FF21D0
+	}
+
+	public static class HGAdditionalLightDataConvertFunc // TypeDefIndex: 108
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_DATA; // 0x00
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_TYPE; // 0x0C
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_ADVANCED_PARAM_MODE; // 0x18
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_DEFAULT_CONTRAST; // 0x24
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_DEFAULT_AUTO_LIMIT; // 0x30
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_RAMP_BIAS; // 0x3C
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_RAMP_SHADOW_DIMMER; // 0x48
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_SPEC_MAX_ROUGHNESS; // 0x54
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_SPEC_ROUGHNESS_BIAS; // 0x60
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_SPEC_METAL_ONLY; // 0x6C
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_RIM_WIDTH; // 0x78
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_RIM_ALBEDO_ALPHA; // 0x84
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_FOG_ALPHA; // 0x90
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_FOG_FALLOFF_FACTOR; // 0x9C
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_FOG_RAMP_BIAS; // 0xA8
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_FOG_DIRECTIONAL_FALLOFF; // 0xB4
+		private static readonly PropertySerializeId PROP_ID_LIGHT_CHARACTER_ONLY; // 0xC0
+		private static readonly PropertySerializeId PROP_ID_VOLUMETRIC_SCATTERING_INTENSITY; // 0xCC
+		private static readonly PropertySerializeId PROP_ID_FALLOFF_EXPONENT; // 0xD8
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_RAMP_SDF_BIAS; // 0xE4
+		private static readonly PropertySerializeId PROP_ID_LIGHT_NPR_RAMP_SDF_DRAMATIC; // 0xF0
+		public static readonly MonoIsConvertorOfComponentDelegate IS_CONVERTOR_OF_FUNC; // 0x100
+		public static readonly MonoComponentConvertToDelegate CONVERT_TO_FUNC; // 0x108
+		public static readonly MonoComponentConvertFromDelegate CONVERT_FROM_FUNC; // 0x110
+		public static readonly MonoComponentAddComponentToDelegate ADD_COMPONENT_TO_FUNC; // 0x118
+		public static readonly MonoComponentGetComponentFromDelegate GET_COMPONENT_FROM_FUNC; // 0x120
+	
+		// Constructors
+		static HGAdditionalLightDataConvertFunc() {} // 0x0000000183426370-0x00000001834269A0
+	
+		// Methods
+		public static StreamingComponentType GetComponentType() => default; // 0x0000000183D5C910-0x0000000183D5C920
+		public static bool ConvertFrom(UnityEngine.Component component, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000182FF3B80-0x0000000182FF5350
+		public static UnityEngine.Component AddComponentTo(GameObject gameObject) => default; // 0x000000018366C9C0-0x000000018366CA10
+		public static UnityEngine.Component GetComponentFrom(GameObject gameObject, int multiComponentIndex) => default; // 0x0000000183794F70-0x0000000183794FC0
+	}
+
+	public static class HGEnvironmentVolumeConvertFunc // TypeDefIndex: 109
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_VOLUME_TYPE; // 0x00
+		private static readonly PropertySerializeId PROP_ID_BLEND_MODE; // 0x0C
+		private static readonly PropertySerializeId PROP_ID_PRIORITY; // 0x18
+		private static readonly PropertySerializeId PROP_ID_BLEND_DISTANCE; // 0x24
+		private static readonly PropertySerializeId PROP_ID_FADE_IN_DURATION; // 0x30
+		private static readonly PropertySerializeId PROP_ID_FADE_OUT_DURATION; // 0x3C
+		private static readonly PropertySerializeId PROP_ID_ENV_PHASE; // 0x48
+		private static readonly PropertySerializeId PROP_ID_POLY_LINE_SHAPE; // 0x54
+		public static readonly MonoIsConvertorOfComponentDelegate IS_CONVERTOR_OF_FUNC; // 0x60
+		public static readonly MonoComponentConvertToDelegate CONVERT_TO_FUNC; // 0x68
+		public static readonly MonoComponentConvertFromDelegate CONVERT_FROM_FUNC; // 0x70
+		public static readonly MonoComponentAddComponentToDelegate ADD_COMPONENT_TO_FUNC; // 0x78
+		public static readonly MonoComponentGetComponentFromDelegate GET_COMPONENT_FROM_FUNC; // 0x80
+	
+		// Constructors
+		static HGEnvironmentVolumeConvertFunc() {} // 0x0000000183425B30-0x0000000183425E90
+	
+		// Methods
+		public static StreamingComponentType GetComponentType() => default; // 0x0000000183D568A0-0x0000000183D568B0
+		public static bool ConvertFrom(UnityEngine.Component component, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000182FF2550-0x0000000182FF3980
+		public static UnityEngine.Component AddComponentTo(GameObject gameObject) => default; // 0x0000000182E0C460-0x0000000182E0C4B0
+		public static UnityEngine.Component GetComponentFrom(GameObject gameObject, int multiComponentIndex) => default; // 0x00000001839B4360-0x00000001839B43B0
+	}
+
+	public static class HGTerrainConvertFunc // TypeDefIndex: 110
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_TERRAIN_PS; // 0x00
+		private static readonly PropertySerializeId PROP_ID_TERRAIN_CS; // 0x0C
+		private static readonly PropertySerializeId PROP_ID_SPLAT_INDEX_MAP; // 0x18
+		private static readonly PropertySerializeId PROP_ID_ATLAS_PAGE_ROOT_PATH; // 0x24
+		private static readonly PropertySerializeId PROP_ID_TERRAIN_INFO; // 0x30
+		private static readonly PropertySerializeId PROP_ID_TERRAIN_NODE_DATA_ARRAY; // 0x3C
+		private static readonly PropertySerializeId PROP_ID_SPLAT_LAYER_DATA_ARRAY; // 0x48
+		private static readonly PropertySerializeId PROP_ID_SPLAT_TEXTURE_ARRAY_LENGTH; // 0x54
+		private static readonly PropertySerializeId PROP_ID_SPLAT_DIFFUSE_TEXTURE_ARRAY; // 0x60
+		private static readonly PropertySerializeId PROP_ID_SPLAT_NORMAL_RO_TEXTURE_ARRAY; // 0x6C
+		private static readonly PropertySerializeId PROP_ID_TERRAIN_LAYER_TYPE_DATA; // 0x78
+		private static readonly PropertySerializeId PROP_ID_SPLAT_CONEMAP_TEXTURE_ARRAY; // 0x84
+		private static readonly PropertySerializeId PROP_ID_BUILD_CONEMAP_MIPS_CS; // 0x90
+		private static readonly PropertySerializeId PROP_ID_TERRAIN_RTCS; // 0x9C
+		private static readonly PropertySerializeId PROP_ID_TERRAIN_SECTOR_SPLAT_INFO_ARRAY; // 0xA8
+		public static readonly MonoIsConvertorOfComponentDelegate IS_CONVERTOR_OF_FUNC; // 0xB8
+		public static readonly MonoComponentConvertToDelegate CONVERT_TO_FUNC; // 0xC0
+		public static readonly MonoComponentConvertFromDelegate CONVERT_FROM_FUNC; // 0xC8
+		public static readonly MonoComponentAddComponentToDelegate ADD_COMPONENT_TO_FUNC; // 0xD0
+		public static readonly MonoComponentGetComponentFromDelegate GET_COMPONENT_FROM_FUNC; // 0xD8
+	
+		// Constructors
+		static HGTerrainConvertFunc() {} // 0x0000000183425E90-0x0000000183426370
+	
+		// Methods
+		public static StreamingComponentType GetComponentType() => default; // 0x0000000183D5C920-0x0000000183D5C930
+		public static bool ConvertFrom(UnityEngine.Component component, FlatBufferConvertContextV2 cContext, EntityTransition entityTransition) => default; // 0x0000000183290CA0-0x0000000183293650
+		public static UnityEngine.Component AddComponentTo(GameObject gameObject) => default; // 0x0000000182E0C530-0x0000000182E0C580
+		public static UnityEngine.Component GetComponentFrom(GameObject gameObject, int multiComponentIndex) => default; // 0x0000000183795010-0x0000000183795060
+		private static bool _TryLoadExternalAssetAsync(FlatBufferConvertContextV2 cContext, PropertySerializeId propertySerializeId, out AssetHandleIndex handle) {
+			handle = default;
+			return default;
+		} // 0x0000000183290AC0-0x0000000183290C10
+	}
+
+	public class TerrainLayerTypeDataConvertFunc // TypeDefIndex: 111
+	{
+		// Constructors
+		public TerrainLayerTypeDataConvertFunc() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public static void ConvertFrom(ref TerrainLayerTypeData layerTypeData, FlatBufferConvertContextV2 cContext, PropertySerializeId propId) {} // 0x0000000183290530-0x0000000183290930
+	}
+
+	public static class HGVolumetricCloudConvertFunc // TypeDefIndex: 112
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_MATERIAL; // 0x00
+		private static readonly PropertySerializeId PROP_ID_MS_BAKE_SIZE_X; // 0x0C
+		private static readonly PropertySerializeId PROP_ID_MS_BAKE_SIZE_Y; // 0x18
+		private static readonly PropertySerializeId PROP_ID_POLY_LINE_SHAPE; // 0x24
+		private static readonly PropertySerializeId PROP_ID_VOLUME_PRIORITY; // 0x30
+		private static readonly PropertySerializeId PROP_ID_ASSET_VOLUME_BOUNDS; // 0x3C
+		private static readonly PropertySerializeId PROP_ID_ASSET_PAYLOAD; // 0x48
+		private static readonly PropertySerializeId PROP_ID_ASSET_TEX_NUM; // 0x54
+		private static readonly PropertySerializeId PROP_ID_ASSET_TEX; // 0x60
+		private static readonly PropertySerializeId PROP_ID_ASSET_TEX_RANGE_BASE; // 0x6C
+		private static readonly PropertySerializeId PROP_ID_ASSET_TEX_RANGE_SCALE; // 0x78
+		private static readonly PropertySerializeId PROP_ID_WIND_FIELD_NUM; // 0x84
+		private static readonly PropertySerializeId PROP_ID_WIND_FIELD_POSITION; // 0x90
+		private static readonly PropertySerializeId PROP_ID_WIND_FIELD_UP; // 0x9C
+		private static readonly PropertySerializeId PROP_ID_WIND_FIELD_TYPE; // 0xA8
+		private static readonly PropertySerializeId PROP_ID_WIND_FIELD_PRIORITY; // 0xB4
+		private static readonly PropertySerializeId PROP_ID_WIND_FIELD_RADIUS; // 0xC0
+		private static readonly PropertySerializeId PROP_ID_WIND_FIELD_VELOCITY; // 0xCC
+		private static readonly PropertySerializeId PROP_ID_WIND_FIELD_ROTATE_SPEED; // 0xD8
+		private static readonly PropertySerializeId PROP_ID_WIND_FIELD_VORTEX_RING_COUNT; // 0xE4
+		private static readonly PropertySerializeId PROP_ID_WIND_FIELD_VORTEX_RING_SPEEDS; // 0xF0
+		private static readonly PropertySerializeId PROP_ID_WIND_FIELD_VORTEX_RING_BLEND; // 0xFC
+		private static readonly PropertySerializeId PROP_ID_WIND_FIELD_VORTEX_RING_SKEW; // 0x108
+		public static readonly MonoIsConvertorOfComponentDelegate IS_CONVERTOR_OF_FUNC; // 0x118
+		public static readonly MonoComponentConvertToDelegate CONVERT_TO_FUNC; // 0x120
+		public static readonly MonoComponentConvertFromDelegate CONVERT_FROM_FUNC; // 0x128
+		public static readonly MonoComponentAddComponentToDelegate ADD_COMPONENT_TO_FUNC; // 0x130
+		public static readonly MonoComponentGetComponentFromDelegate GET_COMPONENT_FROM_FUNC; // 0x138
+	
+		// Constructors
+		static HGVolumetricCloudConvertFunc() {} // 0x00000001834269A0-0x00000001834270B0
+	
+		// Methods
+		public static StreamingComponentType GetComponentType() => default; // 0x0000000183D5C930-0x0000000183D5C940
+		public static bool ConvertFrom(UnityEngine.Component component, FlatBufferConvertContextV2 cContext, EntityTransition entityTransition) => default; // 0x0000000185E25D50-0x0000000185E26F5C
+		public static UnityEngine.Component AddComponentTo(GameObject gameObject) => default; // 0x0000000185E25D0C-0x0000000185E25D50
+		public static UnityEngine.Component GetComponentFrom(GameObject gameObject, int multiComponentIndex) => default; // 0x0000000185E26F5C-0x0000000185E26FA0
+	}
+
+	public static class HGVolumetricLocalFogConvertFunc // TypeDefIndex: 113
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_MATERIAL; // 0x00
+		public static readonly MonoIsConvertorOfComponentDelegate IS_CONVERTOR_OF_FUNC; // 0x10
+		public static readonly MonoComponentConvertToDelegate CONVERT_TO_FUNC; // 0x18
+		public static readonly MonoComponentConvertFromDelegate CONVERT_FROM_FUNC; // 0x20
+		public static readonly MonoComponentAddComponentToDelegate ADD_COMPONENT_TO_FUNC; // 0x28
+		public static readonly MonoComponentGetComponentFromDelegate GET_COMPONENT_FROM_FUNC; // 0x30
+	
+		// Constructors
+		static HGVolumetricLocalFogConvertFunc() {} // 0x00000001834282F0-0x00000001834284F0
+	
+		// Methods
+		public static StreamingComponentType GetComponentType() => default; // 0x0000000183D5C940-0x0000000183D5C950
+		public static bool ConvertFrom(UnityEngine.Component component, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000185E26FE4-0x0000000185E272A4
+		public static UnityEngine.Component AddComponentTo(GameObject gameObject) => default; // 0x0000000185E26FA0-0x0000000185E26FE4
+		public static UnityEngine.Component GetComponentFrom(GameObject gameObject, int multiComponentIndex) => default; // 0x0000000185E272A4-0x0000000185E272E8
+	}
+
+	public static class HGWaterGlobalConfigConvertFunc // TypeDefIndex: 114
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_DATA; // 0x00
+		public static readonly MonoIsConvertorOfComponentDelegate IS_CONVERTOR_OF_FUNC; // 0x10
+		public static readonly MonoComponentConvertToDelegate CONVERT_TO_FUNC; // 0x18
+		public static readonly MonoComponentConvertFromDelegate CONVERT_FROM_FUNC; // 0x20
+		public static readonly MonoComponentAddComponentToDelegate ADD_COMPONENT_TO_FUNC; // 0x28
+		public static readonly MonoComponentGetComponentFromDelegate GET_COMPONENT_FROM_FUNC; // 0x30
+	
+		// Constructors
+		static HGWaterGlobalConfigConvertFunc() {} // 0x00000001834280F0-0x00000001834282F0
+	
+		// Methods
+		public static StreamingComponentType GetComponentType() => default; // 0x0000000183D5C950-0x0000000183D5C960
+		public static bool ConvertFrom(UnityEngine.Component component, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000182FF21D0-0x0000000182FF2550
+		public static UnityEngine.Component AddComponentTo(GameObject gameObject) => default; // 0x0000000183CAA770-0x0000000183CAA7C0
+		public static UnityEngine.Component GetComponentFrom(GameObject gameObject, int multiComponentIndex) => default; // 0x0000000183B29D10-0x0000000183B29D60
+	}
+
+	public static class HGWindMotorConvertFunc // TypeDefIndex: 115
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_DATA; // 0x00
+		public static readonly MonoIsConvertorOfComponentDelegate IS_CONVERTOR_OF_FUNC; // 0x10
+		public static readonly MonoComponentConvertToDelegate CONVERT_TO_FUNC; // 0x18
+		public static readonly MonoComponentConvertFromDelegate CONVERT_FROM_FUNC; // 0x20
+		public static readonly MonoComponentAddComponentToDelegate ADD_COMPONENT_TO_FUNC; // 0x28
+		public static readonly MonoComponentGetComponentFromDelegate GET_COMPONENT_FROM_FUNC; // 0x30
+	
+		// Constructors
+		static HGWindMotorConvertFunc() {} // 0x0000000183427EF0-0x00000001834280F0
+	
+		// Methods
+		public static StreamingComponentType GetComponentType() => default; // 0x0000000183D5C960-0x0000000183D5C970
+		public static bool ConvertFrom(UnityEngine.Component component, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000185E2732C-0x0000000185E274E8
+		public static UnityEngine.Component AddComponentTo(GameObject gameObject) => default; // 0x0000000185E272E8-0x0000000185E2732C
+		public static UnityEngine.Component GetComponentFrom(GameObject gameObject, int multiComponentIndex) => default; // 0x0000000185E274E8-0x0000000185E2752C
+	}
+
+	public static class LensFlareComponentSRPConvertFunc // TypeDefIndex: 116
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_LENS_FLARE_DATA; // 0x00
+		private static readonly PropertySerializeId PROP_ID_INTENSITY; // 0x0C
+		private static readonly PropertySerializeId PROP_ID_SCALE; // 0x18
+		private static readonly PropertySerializeId PROP_ID_USE_OCCLUSION; // 0x24
+		private static readonly PropertySerializeId PROP_ID_OCCLUSION_RADIUS; // 0x30
+		private static readonly PropertySerializeId PROP_ID_OCCLUSION_OFFSET; // 0x3C
+		private static readonly PropertySerializeId PROP_ID_ALLOW_OFFSCREEN; // 0x48
+		private static readonly PropertySerializeId PROP_ID_USE_CUSTOM_FORWARD; // 0x54
+		private static readonly PropertySerializeId PROP_ID_CUSTOM_FORWARD; // 0x60
+		private static readonly PropertySerializeId PROP_ID_ATTENUATION_BY_LIDHT_SHAPE; // 0x6C
+		private static readonly PropertySerializeId PROP_ID_SCREEN_ATTENUATION_CURVE_COUNT; // 0x78
+		private static readonly PropertySerializeId PROP_ID_SCREEN_ATTENUATION_CURVE_PRE; // 0x84
+		private static readonly PropertySerializeId PROP_ID_SCREEN_ATTENUATION_CURVE_POST; // 0x90
+		private static readonly PropertySerializeId PROP_ID_SCREEN_ATTENUATION_CURVE; // 0x9C
+		private static readonly PropertySerializeId PROP_ID_MAX_ATTENUATION_DISTANCE; // 0xA8
+		private static readonly PropertySerializeId PROP_ID_DISTANCE_ATTENUATION_CURVE_COUNT; // 0xB4
+		private static readonly PropertySerializeId PROP_ID_DISTANCE_ATTENUATION_CURVE_PRE; // 0xC0
+		private static readonly PropertySerializeId PROP_ID_DISTANCE_ATTENUATION_CURVE_POST; // 0xCC
+		private static readonly PropertySerializeId PROP_ID_DISTANCE_ATTENUATION_CURVE; // 0xD8
+		private static readonly PropertySerializeId PROP_ID_MAX_ATTENUATION_SCALE; // 0xE4
+		private static readonly PropertySerializeId PROP_ID_SCALE_BY_DISTANE_CURVE_COUNT; // 0xF0
+		private static readonly PropertySerializeId PROP_ID_SCALE_BY_DISTANE_CURVE_PRE; // 0xFC
+		private static readonly PropertySerializeId PROP_ID_SCALE_BY_DISTANE_CURVE_POST; // 0x108
+		private static readonly PropertySerializeId PROP_ID_SCALE_BY_DISTANE_CURVE; // 0x114
+		public static readonly MonoIsConvertorOfComponentDelegate IS_CONVERTOR_OF_FUNC; // 0x120
+		public static readonly MonoComponentConvertToDelegate CONVERT_TO_FUNC; // 0x128
+		public static readonly MonoComponentConvertFromDelegate CONVERT_FROM_FUNC; // 0x130
+		public static readonly MonoComponentAddComponentToDelegate ADD_COMPONENT_TO_FUNC; // 0x138
+		public static readonly MonoComponentGetComponentFromDelegate GET_COMPONENT_FROM_FUNC; // 0x140
+	
+		// Constructors
+		static LensFlareComponentSRPConvertFunc() {} // 0x00000001834270B0-0x0000000183427780
+	
+		// Methods
+		public static StreamingComponentType GetComponentType() => default; // 0x0000000183D5C970-0x0000000183D5C980
+		public static bool ConvertFrom(UnityEngine.Component component, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x00000001836B77F0-0x00000001836B8C60
+		public static UnityEngine.Component AddComponentTo(GameObject gameObject) => default; // 0x0000000182E0C4E0-0x0000000182E0C530
+		public static UnityEngine.Component GetComponentFrom(GameObject gameObject, int multiComponentIndex) => default; // 0x0000000183794FC0-0x0000000183795010
+	}
+
+	public static class VolumeConvertFunc // TypeDefIndex: 117
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_IS_GLOBAL; // 0x00
+		private static readonly PropertySerializeId PROP_ID_PRIORITY; // 0x0C
+		private static readonly PropertySerializeId PROP_ID_BLEND_DISTANCE; // 0x18
+		private static readonly PropertySerializeId PROP_ID_WEIGHT; // 0x24
+		private static readonly PropertySerializeId PROP_ID_SHARED_PROFILE; // 0x30
+		public static readonly MonoIsConvertorOfComponentDelegate IS_CONVERTOR_OF_FUNC; // 0x40
+		public static readonly MonoComponentConvertToDelegate CONVERT_TO_FUNC; // 0x48
+		public static readonly MonoComponentConvertFromDelegate CONVERT_FROM_FUNC; // 0x50
+		public static readonly MonoComponentAddComponentToDelegate ADD_COMPONENT_TO_FUNC; // 0x58
+		public static readonly MonoComponentGetComponentFromDelegate GET_COMPONENT_FROM_FUNC; // 0x60
+	
+		// Constructors
+		static VolumeConvertFunc() {} // 0x0000000183427800-0x0000000183427AC0
+	
+		// Methods
+		public static StreamingComponentType GetComponentType() => default; // 0x0000000183D5C980-0x0000000183D5C990
+		public static bool ConvertFrom(UnityEngine.Component component, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000182FF0C40-0x0000000182FF1280
+		public static UnityEngine.Component AddComponentTo(GameObject gameObject) => default; // 0x0000000182E0C410-0x0000000182E0C460
+		public static UnityEngine.Component GetComponentFrom(GameObject gameObject, int multiComponentIndex) => default; // 0x0000000183B29CC0-0x0000000183B29D10
+	}
+
+	public static class AudioSceneVolumeProxyEntityConvertFunc // TypeDefIndex: 119
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID; // 0x00
+		private static readonly PropertySerializeId PROP_TYPE; // 0x0C
+		private static readonly PropertySerializeId PROP_DATA; // 0x18
+		public static readonly ProxyEntityHasRequiredComponentsDelegate HAS_REQUIRED_COMPONENTS_FUNC; // 0x28
+		public static readonly ProxyEntityConvertToDelegate CONVERT_TO_FUNC; // 0x30
+		public static readonly ProxyEntityConvertFromDelegate CONVERT_FROM_FUNC; // 0x38
+	
+		// Nested types
+		private enum AudioVolumeType // TypeDefIndex: 118
+		{
+			Box = 0,
+			Segment = 1,
+			Prism = 2,
+			ScatterEmitter = 3,
+			BoxEmitter = 4,
+			PolylineEmitter = 5,
+			PrismEmitter = 6,
+			PersistentData = 99,
+			Invalid = 255
+		}
+	
+		// Constructors
+		static AudioSceneVolumeProxyEntityConvertFunc() {} // 0x0000000183427AC0-0x0000000183427C50
+	
+		// Methods
+		public static ProxyEntityType GetEntityType() => default; // 0x000000018232EB60-0x000000018232EB70
+		public static bool ConvertFrom(ref IntPtr proxyPtr, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000182FF5350-0x0000000182FF95B0
+	}
+
+	public static class AudioSceneEmitterProxyEntityConvertFunc // TypeDefIndex: 120
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ENTITY_ID; // 0x00
+		private static readonly PropertySerializeId PROP_DATA; // 0x0C
+		public static readonly ProxyEntityHasRequiredComponentsDelegate HAS_REQUIRED_COMPONENTS_FUNC; // 0x18
+		public static readonly ProxyEntityConvertToDelegate CONVERT_TO_FUNC; // 0x20
+		public static readonly ProxyEntityConvertFromDelegate CONVERT_FROM_FUNC; // 0x28
+	
+		// Constructors
+		static AudioSceneEmitterProxyEntityConvertFunc() {} // 0x0000000183427DA0-0x0000000183427EF0
+	
+		// Methods
+		public static ProxyEntityType GetEntityType() => default; // 0x0000000183D51060-0x0000000183D51070
+		public static bool ConvertFrom(ref IntPtr proxyPtr, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x00000001831AF200-0x00000001831B0560
+	}
+
+	public static class AudioRoomProxyEntityConvertFunc // TypeDefIndex: 121
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ROOM_ID; // 0x00
+		private static readonly PropertySerializeId PROP_ROOM_POS; // 0x0C
+		private static readonly PropertySerializeId PROP_ROOM_SIZE; // 0x18
+		private static readonly PropertySerializeId PROP_ROOM_ROT; // 0x24
+		private static readonly PropertySerializeId PROP_ROOM_OR_OCCLUDER; // 0x30
+		private static readonly PropertySerializeId PROP_ROOM_DATA; // 0x3C
+		private static readonly PropertySerializeId PROP_EXT_DATA; // 0x48
+		public static readonly ProxyEntityHasRequiredComponentsDelegate HAS_REQUIRED_COMPONENTS_FUNC; // 0x58
+		public static readonly ProxyEntityConvertToDelegate CONVERT_TO_FUNC; // 0x60
+		public static readonly ProxyEntityConvertFromDelegate CONVERT_FROM_FUNC; // 0x68
+	
+		// Constructors
+		static AudioRoomProxyEntityConvertFunc() {} // 0x00000001834258D0-0x0000000183425B30
+	
+		// Methods
+		public static ProxyEntityType GetEntityType() => default; // 0x0000000183D51050-0x0000000183D51060
+		public static bool ConvertFrom(ref IntPtr proxyPtr, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x00000001831B0560-0x00000001831B3000
+	}
+
+	public static class AudioRoomPortalProxyEntityConvertFunc // TypeDefIndex: 122
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_PORTAL_ID; // 0x00
+		private static readonly PropertySerializeId PROP_PORTAL_DATA; // 0x0C
+		public static readonly ProxyEntityHasRequiredComponentsDelegate HAS_REQUIRED_COMPONENTS_FUNC; // 0x18
+		public static readonly ProxyEntityConvertToDelegate CONVERT_TO_FUNC; // 0x20
+		public static readonly ProxyEntityConvertFromDelegate CONVERT_FROM_FUNC; // 0x28
+	
+		// Constructors
+		static AudioRoomPortalProxyEntityConvertFunc() {} // 0x0000000183427C50-0x0000000183427DA0
+	
+		// Methods
+		public static ProxyEntityType GetEntityType() => default; // 0x0000000183D51070-0x0000000183D51080
+		public static bool ConvertFrom(ref IntPtr proxyPtr, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000183A4CDA0-0x0000000183A4D100
+	}
+
+	public static class GpuClothGroupProxyEntityConvertFunc // TypeDefIndex: 123
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_CLOTH_GROUP_META; // 0x00
+		private static readonly PropertySerializeId PROP_ID_CLOTH_META_BYTES; // 0x0C
+		private static readonly PropertySerializeId PROP_ID_CLOTH_NODE_BYTES; // 0x18
+		private static readonly PropertySerializeId PROP_ID_CLOTH_BATCH_META_BYTES; // 0x24
+		private static readonly PropertySerializeId PROP_ID_CLOTH_BATCH_CACHE_BYTES; // 0x30
+		private static readonly PropertySerializeId PROP_ID_CLOTH_GROUP_HASH; // 0x3C
+		private static readonly PropertySerializeId PROP_ID_CLOTH_MOBILE_DATA; // 0x48
+		public static readonly ProxyEntityHasRequiredComponentsDelegate HAS_REQUIRED_COMPONENTS_FUNC; // 0x58
+		public static readonly ProxyEntityConvertToDelegate CONVERT_TO_FUNC; // 0x60
+		public static readonly ProxyEntityConvertFromDelegate CONVERT_FROM_FUNC; // 0x68
+	
+		// Constructors
+		static GpuClothGroupProxyEntityConvertFunc() {} // 0x00000001834284F0-0x0000000183428710
+	
+		// Methods
+		public static ProxyEntityType GetEntityType() => default; // 0x0000000183D5C520-0x0000000183D5C530
+		public static bool ConvertFrom(ref IntPtr proxy, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000185E255E0-0x0000000185E25B9C
+	}
+
+	public static class HGGrassGridProxyEntityConvertFunc // TypeDefIndex: 124
+	{
+		// Fields
+		public static readonly ProxyEntityHasRequiredComponentsDelegate HAS_REQUIRED_COMPONENTS_FUNC; // 0x00
+		public static readonly ProxyEntityConvertToDelegate CONVERT_TO_FUNC; // 0x08
+	
+		// Methods
+		public static ProxyEntityType GetEntityType() => default; // 0x0000000183D5C600-0x0000000183D5C610
+	}
+
+	public static class HGIrradianceVolumeProxyEntityConvertFunc // TypeDefIndex: 125
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_IV_INDEX_PATH; // 0x00
+		public static readonly ProxyEntityHasRequiredComponentsDelegate HAS_REQUIRED_COMPONENTS_FUNC; // 0x10
+		public static readonly ProxyEntityConvertToDelegate CONVERT_TO_FUNC; // 0x18
+		public static readonly ProxyEntityConvertFromDelegate CONVERT_FROM_FUNC; // 0x20
+	
+		// Constructors
+		static HGIrradianceVolumeProxyEntityConvertFunc() {} // 0x0000000183428710-0x0000000183428820
+	
+		// Methods
+		public static ProxyEntityType GetEntityType() => default; // 0x000000018115F4C0-0x000000018115F530
+		public static bool ConvertFrom(ref IntPtr proxyPtr, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x000000018328FA10-0x0000000183290450
+	}
+
+	public static class HGTerrainSurfTypeDataProxyEntityConvertFunc // TypeDefIndex: 126
+	{
+		// Fields
+		private static readonly PropertySerializeId PROP_ID_SURFACE_TYPE_DATA; // 0x00
+		private static readonly PropertySerializeId PROP_ID_COORDINATE; // 0x0C
+		public static readonly ProxyEntityHasRequiredComponentsDelegate HAS_REQUIRED_COMPONENTS_FUNC; // 0x18
+		public static readonly ProxyEntityConvertToDelegate CONVERT_TO_FUNC; // 0x20
+		public static readonly ProxyEntityConvertFromDelegate CONVERT_FROM_FUNC; // 0x28
+	
+		// Constructors
+		static HGTerrainSurfTypeDataProxyEntityConvertFunc() {} // 0x0000000183428820-0x0000000183428960
+	
+		// Methods
+		public static ProxyEntityType GetEntityType() => default; // 0x0000000183D51040-0x0000000183D51050
+		public static bool ConvertFrom(ref IntPtr proxyPtr, FlatBufferConvertContextV2 cContext, EntityTransition transition) => default; // 0x0000000183660210-0x00000001836610E0
 	}
 }

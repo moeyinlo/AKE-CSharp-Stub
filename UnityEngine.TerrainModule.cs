@@ -495,3 +495,62 @@ namespace UnityEngine
 		private void set_maskMapRemapMax_Injected(ref Vector4 value) {} // 0x0000000189E2C0F4-0x0000000189E2C138
 	}
 }
+
+namespace UnityEngine.TerrainUtils
+{
+	internal enum TerrainMapStatusCode // TypeDefIndex: 59271
+	{
+		OK = 0,
+		Overlapping = 1,
+		SizeMismatch = 4,
+		EdgeAlignmentMismatch = 8
+	}
+
+	[IsReadOnly]
+	public struct TerrainTileCoord // TypeDefIndex: 59272
+	{
+		// Fields
+		public readonly int tileX; // 0x00
+		public readonly int tileZ; // 0x04
+	
+		// Constructors
+		public TerrainTileCoord(int tileX, int tileZ) {
+			this.tileX = default;
+			this.tileZ = default;
+		} // 0x0000000183D4E4B0-0x0000000183D4E4C0
+	}
+
+	public class TerrainMap // TypeDefIndex: 59274
+	{
+		// Fields
+		private Vector3 m_patchSize; // 0x10
+		private TerrainMapStatusCode m_errorCode; // 0x1C
+		private Dictionary<TerrainTileCoord, Terrain> m_terrainTiles; // 0x20
+	
+		// Properties
+		public Dictionary<TerrainTileCoord, Terrain> terrainTiles { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+	
+		// Constructors
+		public TerrainMap() {} // 0x0000000189E2D1CC-0x0000000189E2D248
+	
+		// Methods
+		public Terrain GetTerrain(int tileX, int tileZ) => default; // 0x0000000189E2C9D4-0x0000000189E2CA50
+		public static TerrainMap CreateFromPlacement(Terrain originTerrain, Predicate<Terrain> filter = null, bool fullValidation = true /* Metadata: 0x01FDCF93 */) => default; // 0x0000000189E2C788-0x0000000189E2C9D4
+		public static TerrainMap CreateFromPlacement(Vector2 gridOrigin, Vector2 gridSize, Predicate<Terrain> filter = null, bool fullValidation = true /* Metadata: 0x01FDCF94 */) => default; // 0x0000000189E2C56C-0x0000000189E2C788
+		private void AddTerrainInternal(int x, int z, Terrain terrain) {} // 0x0000000189E2C410-0x0000000189E2C56C
+		private bool TryToAddTerrain(int tileX, int tileZ, Terrain terrain) => default; // 0x0000000189E2CA50-0x0000000189E2CB38
+		private void ValidateTerrain(int tileX, int tileZ) {} // 0x0000000189E2CB38-0x0000000189E2D078
+		private TerrainMapStatusCode Validate() => default; // 0x0000000189E2D078-0x0000000189E2D1CC
+	}
+
+	[MovedFrom("UnityEngine.Experimental.TerrainAPI")]
+	public static class TerrainUtility // TypeDefIndex: 59277
+	{
+		// Methods
+		internal static bool ValidTerrainsExist() => default; // 0x0000000189E2D864-0x0000000189E2D898
+		internal static void ClearConnectivity() {} // 0x0000000189E2D58C-0x0000000189E2D60C
+		internal static Dictionary<int, TerrainMap> CollectTerrains(bool onlyAutoConnectedTerrains = true /* Metadata: 0x01FDCF95 */) => default; // 0x0000000189E2D60C-0x0000000189E2D864
+		[RequiredByNativeCode]
+		public static void AutoConnect() {} // 0x0000000189E2D248-0x0000000189E2D58C
+	}
+}

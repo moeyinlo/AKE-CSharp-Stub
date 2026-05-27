@@ -7,7 +7,10 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using IFix.Core;
 
-// Image 152: System.Runtime.CompilerServices.Unsafe.dll - Assembly: System.Runtime.CompilerServices.Unsafe, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60211-60214
+// Image 152: System.Runtime.CompilerServices.Unsafe.dll - Assembly: System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a - Types 60211-60214
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace System.Runtime.CompilerServices
 {

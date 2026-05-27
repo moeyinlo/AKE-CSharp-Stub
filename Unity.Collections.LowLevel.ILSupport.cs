@@ -7,6 +7,13 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
 // Image 161: Unity.Collections.LowLevel.ILSupport.dll - Assembly: Unity.Collections.LowLevel.ILSupport, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60250-60253
+[assembly: CompilationRelaxations(8)]
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("Unity.Collections")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Unity.Collections.LowLevel.Unsafe
 {

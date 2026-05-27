@@ -37439,3 +37439,32 @@ namespace UnityEngine
 		public UnclampedRangeExponentialAttribute(float min, float max, float sliderExponent) {} // 0x0000000183D6BFE0-0x0000000183D6BFF0
 	}
 }
+
+namespace UnityEngine.Rendering
+{
+	internal class EncodeBC6H // TypeDefIndex: 34470
+	{
+		// Fields
+		public static EncodeBC6H DefaultInstance; // 0x00
+		private static readonly int _Source; // 0x08
+		private static readonly int _Target; // 0x0C
+		private static readonly int _MipIndex; // 0x10
+		private static readonly int[] __Tmp_RT; // 0x18
+		private readonly ComputeShader m_Shader; // 0x10
+		private readonly int m_KEncodeFastCubemapMip; // 0x18
+	
+		// Constructors
+		public EncodeBC6H() {} // Dummy constructor
+		public EncodeBC6H(ComputeShader shader) {} // 0x0000000188598B90-0x0000000188598BF8
+		static EncodeBC6H() {} // 0x0000000188598878-0x0000000188598B90
+	
+		// Methods
+		public void EncodeFastCubemap(CommandBuffer cmb, RenderTargetIdentifier source, int sourceSize, RenderTargetIdentifier target, int fromMip, int toMip, int targetArrayIndex = 0 /* Metadata: 0x01F909CC */) {} // 0x00000001885983BC-0x0000000188598878
+	}
+
+	internal static class BC6HExtensions // TypeDefIndex: 34471
+	{
+		// Extension methods
+		public static void BC6HEncodeFastCubemap(this CommandBuffer cmb, RenderTargetIdentifier source, int sourceSize, RenderTargetIdentifier target, int fromMip, int toMip, int targetArrayIndex = 0 /* Metadata: 0x01F909CD */) {} // 0x00000001885980FC-0x0000000188598204
+	}
+}

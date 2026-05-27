@@ -12,23 +12,6 @@ using IFix.Core;
 using UnityEngine;
 
 // Image 154: HG.RenderPipelines.Logger.dll - Assembly: HG.RenderPipelines.Logger, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60220-60223
-[assembly: AssemblyCompany("Mono development team")]
-[assembly: AssemblyCopyright("(c) Various Mono authors")]
-[assembly: AssemblyDefaultAlias("System.Configuration.dll")]
-[assembly: AssemblyDescription("System.Configuration.dll")]
-[assembly: AssemblyFileVersion("4.8.3761.0")]
-[assembly: AssemblyInformationalVersion("4.8.3761.0")]
-[assembly: AssemblyProduct("Mono Common Language Infrastructure")]
-[assembly: AssemblyTitle("System.Configuration.dll")]
-[assembly: CLSCompliant(true)]
-[assembly: ComCompatibleVersion(1, 0, 3300, 0)]
-[assembly: CompilationRelaxations(8)]
-[assembly: ComVisible(false)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: DefaultDllImportSearchPaths(DllImportSearchPath.System32 | DllImportSearchPath.AssemblyDirectory | DllImportSearchPath.LegacyBehavior)]
-[assembly: NeutralResourcesLanguage("en-US")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: SatelliteContractVersion("4.0.0.0")]
 
 namespace HG.Rendering
 {

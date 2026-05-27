@@ -15,6 +15,163 @@ using UnityEngine.Scripting;
 using UnityEngine.Scripting.APIUpdating;
 
 // Image 89: UnityEngine.AIModule.dll - Assembly: UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59301-59329
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
+[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
+[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
+[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
+[assembly: InternalsVisibleTo("UnityEngine")]
+[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
+[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
+[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
+[assembly: InternalsVisibleTo("UnityEngine.Networking")]
+[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
+[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
+[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
+[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
+[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
+[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
+[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
+[assembly: InternalsVisibleTo("Unity.Automation")]
+[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
+[assembly: InternalsVisibleTo("Unity.Analytics")]
+[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
+[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
+[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
+[assembly: InternalsVisibleTo("Unity.Burst")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
+[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
+[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
+[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
+[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
+[assembly: InternalsVisibleTo("Unity.Timeline")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
+[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
+[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
+[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
+[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
+[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
+[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
+[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.UIElements")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
+[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
+[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
+[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
+[assembly: InternalsVisibleTo("Unity.Services.QoS")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
+[assembly: InternalsVisibleTo("Unity.Logging")]
+[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
+[assembly: InternalsVisibleTo("Unity.Collections")]
+[assembly: InternalsVisibleTo("Unity.Runtime")]
+[assembly: InternalsVisibleTo("Unity.Core")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
+[assembly: InternalsVisibleTo("Unity.Entities")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
+[assembly: InternalsVisibleTo("UnityEngine.UI")]
+[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
+[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
+[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
+[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
+[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: UnityEngineModuleAssembly]
 
 namespace UnityEngine.AI
 {
@@ -252,160 +409,160 @@ namespace UnityEngine.AI
 		public static OnUnloadFinishDelegate onUnloadFinish; // 0x08
 	
 		// Nested types
-		public delegate void OnNavMeshPreUpdate(); // TypeDefIndex: 59316; 0x00000001842729A4-0x00000001842729BC
+		public delegate void OnNavMeshPreUpdate(); // TypeDefIndex: 59316; 0x00000001842BE03C-0x00000001842BE04C
 	
-		public delegate void OnUnloadFinishDelegate(ulong surfTileID); // TypeDefIndex: 59317; 0x00000001842704D4-0x000000018427050C
+		public delegate void OnUnloadFinishDelegate(ulong surfTileID); // TypeDefIndex: 59317; 0x0000000182149960-0x0000000182149970
 	
 		// Methods
 		[RequiredByNativeCode]
-		private static void Internal_CallOnNavMeshPreUpdate() {} // 0x0000000189D7EEDC-0x0000000189D7EEF0
+		private static void Internal_CallOnNavMeshPreUpdate() {} // 0x00000001831AC030-0x00000001831AC070
 		public static bool Raycast(Vector3 sourcePosition, Vector3 targetPosition, out NavMeshHit hit, int areaMask) {
 			hit = default;
 			return default;
-		} // 0x00000001842729BC-0x00000001842729D4
-		public static bool CalculatePath(Vector3 sourcePosition, Vector3 targetPosition, int areaMask, NavMeshPath path, bool isReserveEnd = true /* Metadata: 0x01FDCFBA */, int agentTypeID = -1 /* Metadata: 0x01FDCFBB */, float radius = -1f /* Metadata: 0x01FDCFBC */) => default; // 0x000000018384AD30-0x000000018384AD70
-		private static bool CalculatePathInternal(Vector3 sourcePosition, Vector3 targetPosition, int areaMask, NavMeshPath path, bool isReserveEnd, int agentTypeID, float radius) => default; // 0x000000018307EDA0-0x000000018307EE00
+		} // 0x00000001842729A4-0x00000001842729BC
+		public static bool CalculatePath(Vector3 sourcePosition, Vector3 targetPosition, int areaMask, NavMeshPath path, bool isReserveEnd = true /* Metadata: 0x01FDCFBA */, int agentTypeID = -1 /* Metadata: 0x01FDCFBB */, float radius = -1f /* Metadata: 0x01FDCFBC */) => default; // 0x0000000182549AD0-0x0000000182549BB0
+		private static bool CalculatePathInternal(Vector3 sourcePosition, Vector3 targetPosition, int areaMask, NavMeshPath path, bool isReserveEnd, int agentTypeID, float radius) => default; // 0x00000001842704D4-0x000000018427050C
 		public static bool FindClosestEdge(Vector3 sourcePosition, out NavMeshHit hit, int areaMask) {
 			hit = default;
 			return default;
-		} // 0x0000000182CBB080-0x0000000182CBB140
+		} // 0x0000000189D7EEDC-0x0000000189D7EEF0
 		public static bool SamplePosition(Vector3 sourcePosition, out NavMeshHit hit, float maxDistance, int areaMask) {
 			hit = default;
 			return default;
-		} // 0x0000000189D7F21C-0x0000000189D7F30C
+		} // 0x00000001842729BC-0x00000001842729D4
 		[NativeName("GetAreaFromName")]
 		[StaticAccessor("GetNavMeshProjectSettings()")]
-		public static int GetAreaFromName(string areaName) => default; // 0x0000000189D7F1A0-0x0000000189D7F1A8
-		public static NavMeshDataInstance AddNavMeshData(NavMeshData navMeshData) => default; // 0x00000001825532E0-0x0000000182553320
-		public static NavMeshDataInstance AddNavMeshData(NavMeshData navMeshData, Vector3 position, Quaternion rotation) => default; // 0x0000000189D7F074-0x0000000189D7F0A8
-		public static void UpdateSurfaceTransform(NavMeshDataInstance handle, Vector3 position, Quaternion rotation) {} // 0x0000000189D7EF38-0x0000000189D7EF78
-		public static void RemoveNavMeshData(NavMeshDataInstance handle) {} // 0x0000000189D7EEF8-0x0000000189D7EF38
+		public static int GetAreaFromName(string areaName) => default; // 0x000000018384AD30-0x000000018384AD70
+		public static NavMeshDataInstance AddNavMeshData(NavMeshData navMeshData) => default; // 0x000000018307EDA0-0x000000018307EE00
+		public static NavMeshDataInstance AddNavMeshData(NavMeshData navMeshData, Vector3 position, Quaternion rotation) => default; // 0x0000000182CBB080-0x0000000182CBB140
+		public static void UpdateSurfaceTransform(NavMeshDataInstance handle, Vector3 position, Quaternion rotation) {} // 0x0000000189D7F21C-0x0000000189D7F30C
+		public static void RemoveNavMeshData(NavMeshDataInstance handle) {} // 0x0000000189D7F1A0-0x0000000189D7F1A8
 		[NativeName("IsValidSurfaceID")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static bool IsValidNavMeshDataHandle(int handle) => default; // 0x000000018307EE00-0x000000018307EE40
+		internal static bool IsValidNavMeshDataHandle(int handle) => default; // 0x00000001825532E0-0x0000000182553320
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static bool IsValidLinkHandle(int handle) => default; // 0x00000001842730B8-0x00000001842730CC
+		internal static bool IsValidLinkHandle(int handle) => default; // 0x0000000189D7F074-0x0000000189D7F0A8
 		[NativeName("SetSurfaceUserID")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static bool InternalSetOwner(int dataID, int ownerID) => default; // 0x0000000189D7F16C-0x0000000189D7F1A0
+		internal static bool InternalSetOwner(int dataID, int ownerID) => default; // 0x0000000189D7EF38-0x0000000189D7EF78
 		[NativeName("SetLinkUserID")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static bool InternalSetLinkOwner(int linkID, int ownerID) => default; // 0x000000018300B8D0-0x000000018300B960
+		internal static bool InternalSetLinkOwner(int linkID, int ownerID) => default; // 0x0000000189D7EEF8-0x0000000189D7EF38
 		[NativeName("LoadData")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static int AddNavMeshDataInternal(NavMeshData navMeshData) => default; // 0x0000000189D7F164-0x0000000189D7F16C
+		internal static int AddNavMeshDataInternal(NavMeshData navMeshData) => default; // 0x000000018307EE00-0x000000018307EE40
 		[NativeName("LoadData")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static int AddNavMeshDataTransformedInternal(NavMeshData navMeshData, Vector3 position, Quaternion rotation) => default; // 0x00000001842749B0-0x00000001842749C4
+		internal static int AddNavMeshDataTransformedInternal(NavMeshData navMeshData, Vector3 position, Quaternion rotation) => default; // 0x00000001842730B8-0x00000001842730CC
 		[NativeName("UnloadData")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static void RemoveNavMeshDataInternal(int handle) {} // 0x0000000189D7F130-0x0000000189D7F164
-		public static NavMeshLinkInstance AddLink(NavMeshLinkData link, Vector3 position, Quaternion rotation) => default; // 0x000000018307F1C0-0x000000018307F200
-		public static void RemoveLink(NavMeshLinkInstance handle) {} // 0x00000001837BD250-0x00000001837BD290
+		internal static void RemoveNavMeshDataInternal(int handle) {} // 0x0000000189D7F16C-0x0000000189D7F1A0
+		public static NavMeshLinkInstance AddLink(NavMeshLinkData link, Vector3 position, Quaternion rotation) => default; // 0x000000018300B8D0-0x000000018300B960
+		public static void RemoveLink(NavMeshLinkInstance handle) {} // 0x0000000189D7F164-0x0000000189D7F16C
 		[NativeName("AddLink")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static int AddLinkInternal(NavMeshLinkData link, Vector3 position, Quaternion rotation) => default; // 0x0000000189D7F208-0x0000000189D7F21C
+		internal static int AddLinkInternal(NavMeshLinkData link, Vector3 position, Quaternion rotation) => default; // 0x00000001842749B0-0x00000001842749C4
 		[NativeName("RemoveLink")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static void RemoveLinkInternal(int handle) {} // 0x00000001834E3FF0-0x00000001834E4000
-		public static NavMeshBuildSettings GetSettingsByID(int agentTypeID) => default; // 0x000000018307F250-0x000000018307F260
-		public static NavMeshBuildSettings GetSettingsByIndex(int index) => default; // 0x00000001834E4000-0x00000001834E4070
+		internal static void RemoveLinkInternal(int handle) {} // 0x0000000189D7F130-0x0000000189D7F164
+		public static NavMeshBuildSettings GetSettingsByID(int agentTypeID) => default; // 0x000000018307F1C0-0x000000018307F200
+		public static NavMeshBuildSettings GetSettingsByIndex(int index) => default; // 0x00000001837BD250-0x00000001837BD290
 		[NativeName("UpdateSurfaceTransform")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static void UpdateSurfaceTransformInternal(int surfaceID, Vector3 position, Quaternion rotation) {} // 0x000000018307F420-0x000000018307F490
-		public static bool DetachFromSurface(int chunkSurfaceId, int builderSurfaceId, int indexX, int indexZ) => default; // 0x0000000189D7F0A8-0x0000000189D7F0B4
-		public static bool SetBuilderSurfaceParams(int surfID, float chunkSize, float tileSize, float centerX, float centerZ, float sizeX, float sizeZ) => default; // 0x0000000189D7F1A8-0x0000000189D7F1B0
+		internal static void UpdateSurfaceTransformInternal(int surfaceID, Vector3 position, Quaternion rotation) {} // 0x0000000189D7F208-0x0000000189D7F21C
+		public static bool DetachFromSurface(int chunkSurfaceId, int builderSurfaceId, int indexX, int indexZ) => default; // 0x00000001834E3FF0-0x00000001834E4000
+		public static bool SetBuilderSurfaceParams(int surfID, float chunkSize, float tileSize, float centerX, float centerZ, float sizeX, float sizeZ) => default; // 0x000000018307F250-0x000000018307F260
 		[NativeName("DetachFromSurface")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static bool Internal_DetachFromSurface(int chunkSurfaceId, int builderSurfaceId, int indexX, int indexZ) => default; // 0x0000000189D7EFD8-0x0000000189D7F00C
+		internal static bool Internal_DetachFromSurface(int chunkSurfaceId, int builderSurfaceId, int indexX, int indexZ) => default; // 0x00000001834E4000-0x00000001834E4070
 		[NativeName("SetBuilderSurfaceParams")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static bool Internal_SetBuilderSurfaceParams(int surfID, float chunkSize, float tileSize, float centerX, float centerZ, float sizeX, float sizeZ) => default; // 0x0000000189D7F00C-0x0000000189D7F040
-		public static int LoadDynamicBakeTile(NavMeshData navMeshData) => default; // 0x0000000189D7F120-0x0000000189D7F130
-		public static void UnloadDynamicBakeTile(int dynamicTileID) {} // 0x0000000189D7F0BC-0x0000000189D7F120
+		internal static bool Internal_SetBuilderSurfaceParams(int surfID, float chunkSize, float tileSize, float centerX, float centerZ, float sizeX, float sizeZ) => default; // 0x000000018307F420-0x000000018307F490
+		public static int LoadDynamicBakeTile(NavMeshData navMeshData) => default; // 0x0000000189D7F0A8-0x0000000189D7F0B4
+		public static void UnloadDynamicBakeTile(int dynamicTileID) {} // 0x0000000189D7F1A8-0x0000000189D7F1B0
 		[NativeName("LoadDynamicBakeTile")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static int Internal_LoadDynamicBakeTile(NavMeshData navMeshData) => default; // 0x0000000183B46B00-0x0000000183B46B10
+		internal static int Internal_LoadDynamicBakeTile(NavMeshData navMeshData) => default; // 0x0000000189D7EFD8-0x0000000189D7F00C
 		[NativeName("UnloadDynamicBakeTile")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static void Internal_UnloadDynamicBakeTile(int dynamicTileID) {} // 0x0000000183B46B10-0x0000000183B46B80
-		public static int ModifyVolumeArea(List<Vector3> center, List<Vector3> ext, List<Quaternion> rotation, int area) => default; // 0x0000000189D7F0B4-0x0000000189D7F0BC
-		private static int ModifyBoxAreaInternal(List<Vector3> center, List<Vector3> ext, List<Quaternion> rotation, int area) => default; // 0x0000000183D4BEE0-0x0000000183D4BF20
-		public static int ModifyVolumeArea(List<Vector3> verts, float hMin, float hMax, int area) => default; // 0x0000000182553320-0x00000001825533B0
-		private static int ModifyPolygonAreaInternal(List<Vector3> verts, float hMin, float hMax, int area) => default; // 0x00000001825533B0-0x0000000182553410
-		public static void LoadExtOffMeshLinks(int surfaceID) {} // 0x0000000189D7EE80-0x0000000189D7EE88
+		internal static void Internal_UnloadDynamicBakeTile(int dynamicTileID) {} // 0x0000000189D7F00C-0x0000000189D7F040
+		public static int ModifyVolumeArea(List<Vector3> center, List<Vector3> ext, List<Quaternion> rotation, int area) => default; // 0x0000000189D7F120-0x0000000189D7F130
+		private static int ModifyBoxAreaInternal(List<Vector3> center, List<Vector3> ext, List<Quaternion> rotation, int area) => default; // 0x0000000189D7F0BC-0x0000000189D7F120
+		public static int ModifyVolumeArea(List<Vector3> verts, float hMin, float hMax, int area) => default; // 0x0000000183B46B00-0x0000000183B46B10
+		private static int ModifyPolygonAreaInternal(List<Vector3> verts, float hMin, float hMax, int area) => default; // 0x0000000183B46B10-0x0000000183B46B80
+		public static void LoadExtOffMeshLinks(int surfaceID) {} // 0x0000000189D7F0B4-0x0000000189D7F0BC
 		[NativeName("LoadExtOffMeshLinks")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static void Internal_LoadExtOffMeshLinks(int surfaceID) {} // 0x0000000189D7EF78-0x0000000189D7EFAC
-		public static AsyncOperation AddNavMeshDataAsync(ref int surfaceID, NavMeshData navMeshData, ulong surfTileID) => default; // 0x0000000184276458-0x0000000184276460
-		private static AsyncOperation AddNavMeshDataAsyncInternal(ref int surfaceID, NavMeshData navMeshData, ulong surfTileID) => default; // 0x000000018399FA60-0x000000018399FAB0
-		public static void CancelAsyncAdd(ulong surfTileID) {} // 0x00000001834E4070-0x00000001834E40D0
+		internal static void Internal_LoadExtOffMeshLinks(int surfaceID) {} // 0x0000000183D4BEE0-0x0000000183D4BF20
+		public static AsyncOperation AddNavMeshDataAsync(ref int surfaceID, NavMeshData navMeshData, ulong surfTileID) => default; // 0x0000000182553320-0x00000001825533B0
+		private static AsyncOperation AddNavMeshDataAsyncInternal(ref int surfaceID, NavMeshData navMeshData, ulong surfTileID) => default; // 0x00000001825533B0-0x0000000182553410
+		public static void CancelAsyncAdd(ulong surfTileID) {} // 0x0000000189D7EE80-0x0000000189D7EE88
 		[NativeName("PurgeAsyncOperations")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static void Internal_CancelAsyncAdd(ulong surfaceID) {} // 0x0000000184270534-0x0000000184270540
-		public static void UnloadDataAsync(int surfaceID, ulong surfTileID) {} // 0x0000000183828330-0x0000000183828370
+		internal static void Internal_CancelAsyncAdd(ulong surfaceID) {} // 0x0000000189D7EF78-0x0000000189D7EFAC
+		public static void UnloadDataAsync(int surfaceID, ulong surfTileID) {} // 0x0000000184276458-0x0000000184276460
 		[NativeName("UnloadDataAsync")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static void Internal_UnloadDataAsync(int surfaceID, ulong surfTileID) {} // 0x0000000189D7EEF0-0x0000000189D7EEF8
+		internal static void Internal_UnloadDataAsync(int surfaceID, ulong surfTileID) {} // 0x000000018399FA60-0x000000018399FAB0
 		[RequiredByNativeCode]
-		private static void Internal_InvokeOnUnloadFinish(ulong surfTileID) {} // 0x0000000189D7EFAC-0x0000000189D7EFD8
-		public static bool IsSurfaceUnloading(ulong surfTileID) => default; // 0x000000018278F190-0x000000018278F270
+		private static void Internal_InvokeOnUnloadFinish(ulong surfTileID) {} // 0x00000001834E4070-0x00000001834E40D0
+		public static bool IsSurfaceUnloading(ulong surfTileID) => default; // 0x0000000184270534-0x0000000184270540
 		[NativeName("IsSurfaceUnloading")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static bool Internal_IsSurfaceUnloading(ulong surfTileID) => default; // 0x000000018427183C-0x0000000184271874
-		public static void ForceClearUnloadDataRequest() {} // 0x0000000184274DB4-0x0000000184274DBC
+		internal static bool Internal_IsSurfaceUnloading(ulong surfTileID) => default; // 0x0000000183828330-0x0000000183828370
+		public static void ForceClearUnloadDataRequest() {} // 0x0000000189D7EEF0-0x0000000189D7EEF8
 		[NativeName("ForceClearUnloadDataRequest")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static void Internal_ForceClearUnloadDataRequest() {} // 0x0000000183D3D720-0x0000000183D3D760
-		public static void CalculatePathAsync(Vector3 sourcePosition, Vector3 targetPosition, int areaMask, NavMeshPath path, bool isReserveEnd = true /* Metadata: 0x01FDCFC0 */, int agentTypeID = -1 /* Metadata: 0x01FDCFC1 */, float radius = -1f /* Metadata: 0x01FDCFC2 */) {} // 0x0000000184276598-0x00000001842765A0
-		private static void CalculatePathAsyncInternal(Vector3 sourcePosition, Vector3 targetPosition, int areaMask, NavMeshPath path, bool isReserveEnd, int agentTypeID, float radius) {} // 0x0000000183B31E70-0x0000000183B31EB0
-		public static void SetFindPathMaxIterPerFrame(int maxIterPerFrame) {} // 0x0000000184276590-0x0000000184276598
+		internal static void Internal_ForceClearUnloadDataRequest() {} // 0x0000000189D7EFAC-0x0000000189D7EFD8
+		public static void CalculatePathAsync(Vector3 sourcePosition, Vector3 targetPosition, int areaMask, NavMeshPath path, bool isReserveEnd = true /* Metadata: 0x01FDCFC0 */, int agentTypeID = -1 /* Metadata: 0x01FDCFC1 */, float radius = -1f /* Metadata: 0x01FDCFC2 */) {} // 0x000000018278F190-0x000000018278F270
+		private static void CalculatePathAsyncInternal(Vector3 sourcePosition, Vector3 targetPosition, int areaMask, NavMeshPath path, bool isReserveEnd, int agentTypeID, float radius) {} // 0x000000018427183C-0x0000000184271874
+		public static void SetFindPathMaxIterPerFrame(int maxIterPerFrame) {} // 0x0000000184274DB4-0x0000000184274DBC
 		[NativeName("SetFindPathMaxIterPerFrame")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static void Internal_SetFindPathMaxIterPerFrame(int maxIterPerFrame) {} // 0x0000000183CDDD00-0x0000000183CDDD40
-		public static void CancelAsyncCalculatePath(NavMeshPath path) {} // 0x0000000189D7F1B0-0x0000000189D7F1B8
+		internal static void Internal_SetFindPathMaxIterPerFrame(int maxIterPerFrame) {} // 0x0000000183D3D720-0x0000000183D3D760
+		public static void CancelAsyncCalculatePath(NavMeshPath path) {} // 0x0000000184276598-0x00000001842765A0
 		[NativeName("PurgeAsyncFindPath")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static void Internal_CancelAsyncCalculatePath(NavMeshPath path) {} // 0x0000000189D7F040-0x0000000189D7F074
-		public static void RegisterAutoRepath(NavMeshPath path) {} // 0x0000000184271874-0x000000018427188C
+		internal static void Internal_CancelAsyncCalculatePath(NavMeshPath path) {} // 0x0000000183B31E70-0x0000000183B31EB0
+		public static void RegisterAutoRepath(NavMeshPath path) {} // 0x0000000184276590-0x0000000184276598
 		[NativeName("RegisterAutoRepath")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static void Internal_RegisterAutoRepath(NavMeshPath path) {} // 0x000000018311BA10-0x000000018311BA80
-		public static void UnregisterAutoRepath(NavMeshPath path) {} // 0x0000000182549BB0-0x0000000182549C30
+		internal static void Internal_RegisterAutoRepath(NavMeshPath path) {} // 0x0000000183CDDD00-0x0000000183CDDD40
+		public static void UnregisterAutoRepath(NavMeshPath path) {} // 0x0000000189D7F1B0-0x0000000189D7F1B8
 		[NativeName("UnregisterAutoRepath")]
 		[StaticAccessor("GetNavMeshManager()")]
-		internal static void Internal_UnregisterAutoRepath(NavMeshPath path) {} // 0x0000000189D7EE88-0x0000000189D7EEDC
+		internal static void Internal_UnregisterAutoRepath(NavMeshPath path) {} // 0x0000000189D7F040-0x0000000189D7F074
 		public static bool RaycastNearestPoint(Vector3 sourcePosition, Vector3 targetPosition, out NavMeshHit hit, int areaMask) {
 			hit = default;
 			return default;
-		} // 0x0000000182E53550-0x0000000182E535C0
+		} // 0x0000000184271874-0x000000018427188C
 		private static bool Raycast_Injected(ref Vector3 sourcePosition, ref Vector3 targetPosition, out NavMeshHit hit, int areaMask) {
 			hit = default;
 			return default;
-		} // 0x0000000182CBADE0-0x0000000182CBAE40
-		private static bool CalculatePathInternal_Injected(ref Vector3 sourcePosition, ref Vector3 targetPosition, int areaMask, NavMeshPath path, bool isReserveEnd, int agentTypeID, float radius) => default; // 0x000000018300B980-0x000000018300B9E0
+		} // 0x000000018311BA10-0x000000018311BA80
+		private static bool CalculatePathInternal_Injected(ref Vector3 sourcePosition, ref Vector3 targetPosition, int areaMask, NavMeshPath path, bool isReserveEnd, int agentTypeID, float radius) => default; // 0x0000000182549BB0-0x0000000182549C30
 		private static bool FindClosestEdge_Injected(ref Vector3 sourcePosition, out NavMeshHit hit, int areaMask) {
 			hit = default;
 			return default;
-		} // 0x000000018307F200-0x000000018307F250
+		} // 0x0000000189D7EE88-0x0000000189D7EEDC
 		private static bool SamplePosition_Injected(ref Vector3 sourcePosition, out NavMeshHit hit, float maxDistance, int areaMask) {
 			hit = default;
 			return default;
-		} // 0x00000001837BD290-0x00000001837BD2E0
-		private static int AddNavMeshDataTransformedInternal_Injected(NavMeshData navMeshData, ref Vector3 position, ref Quaternion rotation) => default; // 0x0000000189D7F1B8-0x0000000189D7F208
-		private static int AddLinkInternal_Injected(ref NavMeshLinkData link, ref Vector3 position, ref Quaternion rotation) => default; // 0x000000018389F660-0x000000018389F6E0
+		} // 0x0000000182E53550-0x0000000182E535C0
+		private static int AddNavMeshDataTransformedInternal_Injected(NavMeshData navMeshData, ref Vector3 position, ref Quaternion rotation) => default; // 0x0000000182CBADE0-0x0000000182CBAE40
+		private static int AddLinkInternal_Injected(ref NavMeshLinkData link, ref Vector3 position, ref Quaternion rotation) => default; // 0x000000018300B980-0x000000018300B9E0
 		private static void GetSettingsByID_Injected(int agentTypeID, out NavMeshBuildSettings ret) {
 			ret = default;
-		} // 0x0000000183645130-0x00000001836451A0
+		} // 0x000000018307F200-0x000000018307F250
 		private static void GetSettingsByIndex_Injected(int index, out NavMeshBuildSettings ret) {
 			ret = default;
-		} // 0x00000001842BE04C-0x00000001842BE110
-		private static void UpdateSurfaceTransformInternal_Injected(int surfaceID, ref Vector3 position, ref Quaternion rotation) {} // 0x00000001842BE03C-0x00000001842BE04C
-		private static void CalculatePathAsyncInternal_Injected(ref Vector3 sourcePosition, ref Vector3 targetPosition, int areaMask, NavMeshPath path, bool isReserveEnd, int agentTypeID, float radius) {} // 0x00000001834E42D0-0x00000001834E4340
+		} // 0x00000001837BD290-0x00000001837BD2E0
+		private static void UpdateSurfaceTransformInternal_Injected(int surfaceID, ref Vector3 position, ref Quaternion rotation) {} // 0x0000000189D7F1B8-0x0000000189D7F208
+		private static void CalculatePathAsyncInternal_Injected(ref Vector3 sourcePosition, ref Vector3 targetPosition, int areaMask, NavMeshPath path, bool isReserveEnd, int agentTypeID, float radius) {} // 0x000000018389F660-0x000000018389F6E0
 		private static bool RaycastNearestPoint_Injected(ref Vector3 sourcePosition, ref Vector3 targetPosition, out NavMeshHit hit, int areaMask) {
 			hit = default;
 			return default;
-		} // 0x0000000182149960-0x0000000182149970
+		} // 0x0000000183645130-0x00000001836451A0
 	}
 
 	public enum NavMeshBuildSourceShape // TypeDefIndex: 59319

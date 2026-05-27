@@ -5730,3 +5730,21 @@ namespace Newtonsoft.Json.Utilities
 		public static void ArgumentNotNull([NotNull] [Nullable(2)] object value, string parameterName) {} // 0x0000000182327960-0x00000001823279A0
 	}
 }
+
+namespace System.Diagnostics.CodeAnalysis
+{
+	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue, AllowMultiple = true)]
+	internal sealed class NotNullAttribute : Attribute // TypeDefIndex: 51599
+	{
+		// Constructors
+		public NotNullAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false)]
+	internal sealed class NotNullWhenAttribute : Attribute // TypeDefIndex: 51600
+	{
+		// Constructors
+		public NotNullWhenAttribute() {} // Dummy constructor
+		public NotNullWhenAttribute(bool returnValue) {} // 0x0000000183D4E960-0x0000000183D4E970
+	}
+}

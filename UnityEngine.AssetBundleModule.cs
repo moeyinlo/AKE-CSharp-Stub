@@ -311,3 +311,16 @@ namespace UnityEngine
 		protected override UnityEngine.Object GetResult() => default; // 0x00000001828D5D80-0x00000001828D5DC0
 	}
 }
+
+namespace UnityEngine.Experimental.AssetBundlePatching
+{
+	[NativeHeader("Modules/AssetBundle/Public/AssetBundlePatching.h")]
+	public static class AssetBundleUtility // TypeDefIndex: 59869
+	{
+		// Methods
+		[StaticAccessor("CompressionExport", StaticAccessorType.DoubleColon)]
+		[ThreadSafe]
+		public static unsafe int LZ4Decompress(void* src, int srcSize, void* dst, int dstSize) => default; // 0x00000001835659F0-0x0000000183565A60
+		public static int LZ4Decompress(byte[] src, int srcOffset, int srcSize, byte[] dst, int dstOffset, int dstSize) => default; // 0x0000000183565970-0x00000001835659F0
+	}
+}

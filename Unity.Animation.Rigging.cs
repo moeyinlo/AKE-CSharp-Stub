@@ -16,6 +16,12 @@ using UnityEngine.Playables;
 using UnityEngine.Serialization;
 
 // Image 58: Unity.Animation.Rigging.dll - Assembly: Unity.Animation.Rigging, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 57793-57928
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("Unity.Animation.Rigging.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.Animation.Rigging.Editor")]
+[assembly: InternalsVisibleTo("Unity.Animation.Rigging.Tests")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace UnityEngine.Animations.Rigging
 {
@@ -690,10 +696,10 @@ namespace UnityEngine.Animations.Rigging
 			public NativeArray<TransformStreamHandle> streamHandles; // 0x10
 	
 			// Methods
-			public static TransformSyncer Create(int size) => default; // 0x000000018350B670-0x000000018350B680
-			public void Dispose() {} // 0x0000000189B58540-0x0000000189B5868C
-			public void BindAt(int index, Animator animator, Transform transform) {} // 0x0000000189B5AF94-0x0000000189B5B044
-			public void Sync(ref AnimationStream stream) {} // 0x0000000189B5B044-0x0000000189B5B0C0
+			public static TransformSyncer Create(int size) => default; // 0x0000000189B5AF94-0x0000000189B5B044
+			public void Dispose() {} // 0x0000000189B5B044-0x0000000189B5B0C0
+			public void BindAt(int index, Animator animator, Transform transform) {} // 0x0000000189B5AF18-0x0000000189B5AF94
+			public void Sync(ref AnimationStream stream) {} // 0x0000000189B5B0C0-0x0000000189B5B28C
 		}
 	
 		internal struct PropertySyncer : IDisposable // TypeDefIndex: 57842
@@ -704,16 +710,16 @@ namespace UnityEngine.Animations.Rigging
 			public NativeArray<float> buffer; // 0x20
 	
 			// Methods
-			public static PropertySyncer Create(int size) => default; // 0x0000000189B5AF18-0x0000000189B5AF94
-			public void Dispose() {} // 0x0000000189B5B0C0-0x0000000189B5B28C
-			public void BindAt(int index, Animator animator, Component component, string property) {} // 0x0000000189B5570C-0x0000000189B557FC
-			public void Sync(ref AnimationStream stream) {} // 0x0000000189B557FC-0x0000000189B558A8
-			public NativeArray<float> StreamValues(ref AnimationStream stream) => default; // 0x0000000189B55640-0x0000000189B5570C
+			public static PropertySyncer Create(int size) => default; // 0x0000000189B5570C-0x0000000189B557FC
+			public void Dispose() {} // 0x0000000189B557FC-0x0000000189B558A8
+			public void BindAt(int index, Animator animator, Component component, string property) {} // 0x0000000189B55640-0x0000000189B5570C
+			public void Sync(ref AnimationStream stream) {} // 0x0000000189B55924-0x0000000189B559EC
+			public NativeArray<float> StreamValues(ref AnimationStream stream) => default; // 0x0000000189B558A8-0x0000000189B55924
 		}
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000189B55924-0x0000000189B559EC
-		public void ProcessAnimation(AnimationStream stream) {} // 0x0000000189B558A8-0x0000000189B55924
+		public void ProcessRootMotion(AnimationStream stream) {} // 0x000000018350B670-0x000000018350B680
+		public void ProcessAnimation(AnimationStream stream) {} // 0x0000000189B58540-0x0000000189B5868C
 	}
 
 	internal struct SyncableProperties // TypeDefIndex: 57844
@@ -1775,29 +1781,29 @@ namespace UnityEngine.Animations.Rigging
 		public static OnRemoveRigBuilderCallback onRemoveRigBuilder; // 0x08
 	
 		// Properties
-		public List<RigLayer> layers { get => default; set {} } // 0x0000000182149960-0x0000000182149970 0x000000018389C3B0-0x000000018389C3E0
-		private SyncSceneToStreamLayer syncSceneToStreamLayer { get => default; set {} } // 0x00000001842BD330-0x00000001842BD450 0x000000018613B2F0-0x000000018613B414
-		public PlayableGraph graph { get; private set; } // 0x0000000182149960-0x0000000182149970 0x000000018389C3B0-0x000000018389C3E0
+		public List<RigLayer> layers { get => default; set {} } // 0x0000000189B57DC4-0x0000000189B57E48 0x00000001822C3A90-0x00000001822C3AA0
+		private SyncSceneToStreamLayer syncSceneToStreamLayer { get => default; set {} } // 0x0000000189B57E48-0x0000000189B57EA4 0x0000000182C92F10-0x0000000182C92F20
+		public PlayableGraph graph { get; private set; } // 0x0000000183D5A120-0x0000000183D5A130 0x0000000183D5C3C0-0x0000000183D5C3D0
 	
 		// Nested types
-		public delegate void OnAddRigBuilderCallback(RigBuilder rigBuilder); // TypeDefIndex: 57892; 0x0000000189B579A4-0x0000000189B57A0C
+		public delegate void OnAddRigBuilderCallback(RigBuilder rigBuilder); // TypeDefIndex: 57892; 0x0000000182149960-0x0000000182149970
 	
-		public delegate void OnRemoveRigBuilderCallback(RigBuilder rigBuilder); // TypeDefIndex: 57893; 0x0000000189B57884-0x0000000189B5799C
+		public delegate void OnRemoveRigBuilderCallback(RigBuilder rigBuilder); // TypeDefIndex: 57893; 0x0000000182149960-0x0000000182149970
 	
 		// Constructors
-		public RigBuilder() {} // 0x00000001842BD330-0x00000001842BD450
+		public RigBuilder() {} // 0x0000000189B57D44-0x0000000189B57DC4
 	
 		// Methods
-		private void OnEnable() {} // 0x0000000189B57BA4-0x0000000189B57C50
-		private void OnDisable() {} // 0x0000000189B57450-0x0000000189B5770C
-		private void OnDestroy() {} // 0x0000000189B57DC4-0x0000000189B57E48
-		private void Update() {} // 0x00000001822C3A90-0x00000001822C3AA0
-		public bool Build() => default; // 0x0000000189B57E48-0x0000000189B57EA4
-		public void Clear() {} // 0x0000000182C92F10-0x0000000182C92F20
-		public void StartPreview() {} // 0x0000000183D5A120-0x0000000183D5A130
-		public void StopPreview() {} // 0x0000000183D5C3C0-0x0000000183D5C3D0
-		public void UpdatePreviewGraph(PlayableGraph graph) {} // 0x0000000189B57D44-0x0000000189B57DC4
-		public Playable BuildPreviewGraph(PlayableGraph graph, Playable inputPlayable) => default; // 0x000000018613B2F0-0x000000018613B414
+		private void OnEnable() {} // 0x0000000189B57A0C-0x0000000189B57A70
+		private void OnDisable() {} // 0x0000000189B579A4-0x0000000189B57A0C
+		private void OnDestroy() {} // 0x0000000189B5799C-0x0000000189B579A4
+		private void Update() {} // 0x0000000189B57C50-0x0000000189B57D44
+		public bool Build() => default; // 0x0000000189B5770C-0x0000000189B57884
+		public void Clear() {} // 0x0000000189B57884-0x0000000189B5799C
+		public void StartPreview() {} // 0x0000000189B57A70-0x0000000189B57B70
+		public void StopPreview() {} // 0x0000000189B57B70-0x0000000189B57BA4
+		public void UpdatePreviewGraph(PlayableGraph graph) {} // 0x0000000189B57BA4-0x0000000189B57C50
+		public Playable BuildPreviewGraph(PlayableGraph graph, Playable inputPlayable) => default; // 0x0000000189B57450-0x0000000189B5770C
 	}
 
 	internal static class RigBuilderUtils // TypeDefIndex: 57896
@@ -1813,16 +1819,16 @@ namespace UnityEngine.Animations.Rigging
 			public Playable[] playables; // 0x08
 	
 			// Methods
-			public bool IsValid() => default; // 0x0000000189B571F0-0x0000000189B57418
+			public bool IsValid() => default; // 0x0000000189B55628-0x0000000189B55640
 		}
 	
 		// Constructors
-		static RigBuilderUtils() {} // 0x0000000189B55628-0x0000000189B55640
+		static RigBuilderUtils() {} // 0x0000000189B57418-0x0000000189B57450
 	
 		// Methods
-		public static Playable[] BuildRigPlayables(PlayableGraph graph, IRigLayer layer) => default; // 0x0000000189B56C98-0x0000000189B571F0
-		public static IEnumerable<PlayableChain> BuildPlayables(Animator animator, PlayableGraph graph, IList<IRigLayer> layers, SyncSceneToStreamLayer syncSceneToStreamLayer) => default; // 0x0000000189B56948-0x0000000189B56C98
-		public static PlayableGraph BuildPlayableGraph(Animator animator, IList<IRigLayer> layers, SyncSceneToStreamLayer syncSceneToStreamLayer) => default; // 0x0000000189B57418-0x0000000189B57450
+		public static Playable[] BuildRigPlayables(PlayableGraph graph, IRigLayer layer) => default; // 0x0000000189B571F0-0x0000000189B57418
+		public static IEnumerable<PlayableChain> BuildPlayables(Animator animator, PlayableGraph graph, IList<IRigLayer> layers, SyncSceneToStreamLayer syncSceneToStreamLayer) => default; // 0x0000000189B56C98-0x0000000189B571F0
+		public static PlayableGraph BuildPlayableGraph(Animator animator, IList<IRigLayer> layers, SyncSceneToStreamLayer syncSceneToStreamLayer) => default; // 0x0000000189B56948-0x0000000189B56C98
 	}
 
 	public class RigConstraint<TJob, TData, TBinder> : MonoBehaviour, IRigConstraint // TypeDefIndex: 57897
@@ -1906,7 +1912,7 @@ namespace UnityEngine.Animations.Rigging
 		internal static readonly Dictionary<System.Type, PropertyDescriptor> s_SupportedPropertyTypeToDescriptor; // 0x00
 	
 		// Properties
-		public static IAnimationJobBinder syncSceneToStreamBinder { get; } // 0x000000018350B670-0x000000018350B680 
+		public static IAnimationJobBinder syncSceneToStreamBinder { get; } // 0x0000000189B5A984-0x0000000189B5A9D4 
 	
 		// Nested types
 		private struct RigSyncSceneToStreamData : IAnimationJobData, IRigSyncSceneToStreamData // TypeDefIndex: 57900
@@ -1915,38 +1921,38 @@ namespace UnityEngine.Animations.Rigging
 			private readonly bool m_IsValid; // 0x18
 	
 			// Properties
-			public Transform[] syncableTransforms { [IsReadOnly] get; private set; } // 0x0000000189B59A18-0x0000000189B59DC8 0x0000000189B598D8-0x0000000189B59A18
-			public SyncableProperties[] syncableProperties { [IsReadOnly] get; private set; } // 0x0000000189B59DC8-0x0000000189B5A3D8 0x0000000189B5938C-0x0000000189B598D8
-			public bool[] rigStates { [IsReadOnly] get; set; } // 0x0000000189B588FC-0x0000000189B5938C 0x0000000189B5868C-0x0000000189B58758
+			public Transform[] syncableTransforms { [IsReadOnly] get; private set; } // 0x00000001820C61B0-0x00000001820C61C0 0x00000001842715A0-0x00000001842715A8
+			public SyncableProperties[] syncableProperties { [IsReadOnly] get; private set; } // 0x0000000183D50DE0-0x0000000183D50DF0 0x000000018558FF08-0x000000018558FF18
+			public bool[] rigStates { [IsReadOnly] get; set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
 	
 			// Constructors
 			public RigSyncSceneToStreamData(Transform[] transforms, SyncableProperties[] properties, int rigCount) : this() {
 				m_IsValid = default;
-			} // 0x0000000189B5A3D8-0x0000000189B5A50C
+			} // 0x0000000189B583B8-0x0000000189B58540
 	
 			// Methods
-			private static int[] UniqueTransformIndices(Transform[] transforms) => default; // 0x0000000189B5A50C-0x0000000189B5A5F8
-			bool IAnimationJobData.IsValid() => default; // 0x0000000189B5888C-0x0000000189B588FC
-			void IAnimationJobData.SetDefaultValues() {} // 0x0000000189B58758-0x0000000189B5888C
+			private static int[] UniqueTransformIndices(Transform[] transforms) => default; // 0x0000000189B58230-0x0000000189B58388
+			bool IAnimationJobData.IsValid() => default; // 0x0000000181002A50-0x0000000181002A60
+			void IAnimationJobData.SetDefaultValues() {} // 0x0000000189B58388-0x0000000189B583B8
 		}
 	
 		// Constructors
-		static RigUtils() {} // 0x0000000189B5C6F8-0x0000000189B5C738
+		static RigUtils() {} // 0x0000000189B5A5F8-0x0000000189B5A984
 	
 		// Methods
-		public static IRigConstraint[] GetConstraints(Rig rig) => default; // 0x0000000189B58230-0x0000000189B58388
-		private static Transform[] GetSyncableRigTransforms(Animator animator) => default; // 0x00000001820C61B0-0x00000001820C61C0
-		private static bool ExtractTransformType(Animator animator, System.Reflection.FieldInfo field, object data, List<Transform> syncableTransforms) => default; // 0x00000001842715A0-0x00000001842715A8
-		private static bool ExtractPropertyType(System.Reflection.FieldInfo field, object data, List<Property> syncableProperties, string namePrefix = "" /* Metadata: 0x01FDA6A0 */) => default; // 0x0000000183D50DE0-0x0000000183D50DF0
-		private static bool ExtractWeightedTransforms(Animator animator, System.Reflection.FieldInfo field, object data, List<Transform> syncableTransforms, List<Property> syncableProperties) => default; // 0x000000018558FF08-0x000000018558FF18
-		private static bool ExtractNestedPropertyType(Animator animator, System.Reflection.FieldInfo field, object data, List<Transform> syncableTransforms, List<Property> syncableProperties, string namePrefix = "" /* Metadata: 0x01FDA6A1 */) => default; // 0x00000001820B7B20-0x00000001820B7B30
+		public static IRigConstraint[] GetConstraints(Rig rig) => default; // 0x0000000189B5A3D8-0x0000000189B5A50C
+		private static Transform[] GetSyncableRigTransforms(Animator animator) => default; // 0x0000000189B5A50C-0x0000000189B5A5F8
+		private static bool ExtractTransformType(Animator animator, System.Reflection.FieldInfo field, object data, List<Transform> syncableTransforms) => default; // 0x0000000189B59A18-0x0000000189B59DC8
+		private static bool ExtractPropertyType(System.Reflection.FieldInfo field, object data, List<Property> syncableProperties, string namePrefix = "" /* Metadata: 0x01FDA6A0 */) => default; // 0x0000000189B598D8-0x0000000189B59A18
+		private static bool ExtractWeightedTransforms(Animator animator, System.Reflection.FieldInfo field, object data, List<Transform> syncableTransforms, List<Property> syncableProperties) => default; // 0x0000000189B59DC8-0x0000000189B5A3D8
+		private static bool ExtractNestedPropertyType(Animator animator, System.Reflection.FieldInfo field, object data, List<Transform> syncableTransforms, List<Property> syncableProperties, string namePrefix = "" /* Metadata: 0x01FDA6A1 */) => default; // 0x0000000189B5938C-0x0000000189B598D8
 		private static void ExtractAllSyncableData(Animator animator, IList<IRigLayer> layers, out List<Transform> syncableTransforms, out List<SyncableProperties> syncableProperties) {
 			syncableTransforms = default;
 			syncableProperties = default;
-		} // 0x000000018426FEE0-0x000000018426FEF0
-		public static IAnimationJob[] CreateAnimationJobs(Animator animator, IRigConstraint[] constraints) => default; // 0x0000000181002A50-0x0000000181002A60
-		public static void DestroyAnimationJobs(IRigConstraint[] constraints, IAnimationJob[] jobs) {} // 0x0000000189B58388-0x0000000189B583B8
-		internal static IAnimationJobData CreateSyncSceneToStreamData(Animator animator, IList<IRigLayer> layers) => default; // 0x0000000189B5C738-0x0000000189B5C79C
+		} // 0x0000000189B588FC-0x0000000189B5938C
+		public static IAnimationJob[] CreateAnimationJobs(Animator animator, IRigConstraint[] constraints) => default; // 0x0000000189B5868C-0x0000000189B58758
+		public static void DestroyAnimationJobs(IRigConstraint[] constraints, IAnimationJob[] jobs) {} // 0x0000000189B5888C-0x0000000189B588FC
+		internal static IAnimationJobData CreateSyncSceneToStreamData(Animator animator, IList<IRigLayer> layers) => default; // 0x0000000189B58758-0x0000000189B5888C
 	}
 
 	internal class SyncSceneToStreamLayer // TypeDefIndex: 57903
@@ -2029,13 +2035,13 @@ namespace UnityEngine.Animations.Rigging
 		private WeightedTransform m_Item7; // 0x78
 	
 		// Properties
-		object IList.this[int index] { get => default; set {} } // 0x000000018115F4C0-0x000000018115F530 0x000000018232EB60-0x000000018232EB70
-		public WeightedTransform this[int index] { get => default; set {} } // 0x0000000181002730-0x0000000181002740 0x0000000189B5F538-0x0000000189B5F574
-		public int Count { get => default; } // 0x0000000189B4FC74-0x0000000189B4FD40 
-		public bool IsReadOnly { get => default; } // 0x0000000189B4FBC8-0x0000000189B4FC1C 
-		public bool IsFixedSize { get => default; } // 0x0000000183D76380-0x0000000183D76390 
-		bool ICollection.IsSynchronized { get => default; } // 0x000000018350B670-0x000000018350B680 
-		object ICollection.SyncRoot { get => default; } // 0x0000000189B4FD40-0x0000000189B4FDB0 
+		object IList.this[int index] { get => default; set {} } // 0x0000000189B5F434-0x0000000189B5F4B0 0x0000000189B5F4B0-0x0000000189B5F538
+		public WeightedTransform this[int index] { get => default; set {} } // 0x0000000189B5F5E8-0x0000000189B5F658 0x0000000189B5F658-0x0000000189B5F6C4
+		public int Count { get => default; } // 0x0000000183D4E980-0x0000000183D4E990 
+		public bool IsReadOnly { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		public bool IsFixedSize { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		bool ICollection.IsSynchronized { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		object ICollection.SyncRoot { get => default; } // 0x0000000181002730-0x0000000181002740 
 	
 		// Nested types
 		[Serializable]
@@ -2046,19 +2052,19 @@ namespace UnityEngine.Animations.Rigging
 			private int m_Index; // 0x88
 	
 			// Properties
-			public WeightedTransform Current { get => default; } // 0x0000000189B5E114-0x0000000189B5E248 
-			object IEnumerator.Current { get => default; } // 0x0000000183D5BBD0-0x0000000183D5BBE0 
+			public WeightedTransform Current { get => default; } // 0x0000000189B4FD40-0x0000000189B4FDB0 
+			object IEnumerator.Current { get => default; } // 0x0000000189B4FC1C-0x0000000189B4FC74 
 	
 			// Constructors
 			public Enumerator(ref WeightedTransformArray array) : this() {
 				m_Array = default;
 				m_Index = default;
-			} // 0x0000000189B5F574-0x0000000189B5F5E8
+			} // 0x0000000189B4FC74-0x0000000189B4FD40
 	
 			// Methods
-			public bool MoveNext() => default; // 0x0000000189B5E610-0x0000000189B5E6D0
-			public void Reset() {} // 0x0000000189B5F108-0x0000000189B5F1C8
-			void IDisposable.Dispose() {} // 0x0000000189B5F1C8-0x0000000189B5F244
+			public bool MoveNext() => default; // 0x0000000189B4FBC8-0x0000000189B4FC1C
+			public void Reset() {} // 0x0000000183D76380-0x0000000183D76390
+			void IDisposable.Dispose() {} // 0x000000018350B670-0x000000018350B680
 		}
 	
 		// Constructors
@@ -2072,37 +2078,37 @@ namespace UnityEngine.Animations.Rigging
 			m_Item5 = default;
 			m_Item6 = default;
 			m_Item7 = default;
-		} // 0x0000000189B5F2BC-0x0000000189B5F334
+		} // 0x0000000189B5F574-0x0000000189B5F5E8
 		static WeightedTransformArray() {
 			k_MaxLength = default;
-		} // 0x0000000189B4FC1C-0x0000000189B4FC74
+		} // 0x0000000189B5F538-0x0000000189B5F574
 	
 		// Methods
-		public IEnumerator<WeightedTransform> GetEnumerator() => default; // 0x0000000189B5E840-0x0000000189B5E8DC
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189B5F244-0x0000000189B5F2BC
-		int IList.Add(object value) => default; // 0x0000000189B5E3AC-0x0000000189B5E448
-		public void Add(WeightedTransform value) {} // 0x0000000189B5EF20-0x0000000189B5F108
-		public void Clear() {} // 0x0000000189B5E448-0x0000000189B5E610
-		int IList.IndexOf(object value) => default; // 0x0000000189B5F3BC-0x0000000189B5F434
-		public int IndexOf(WeightedTransform value) => default; // 0x0000000189B5EC08-0x0000000189B5ECF4
-		bool IList.Contains(object value) => default; // 0x0000000189B5EB70-0x0000000189B5EC08
-		public bool Contains(WeightedTransform value) => default; // 0x0000000189B5F334-0x0000000189B5F3BC
-		void ICollection.CopyTo(Array array, int arrayIndex) {} // 0x0000000189B5E8DC-0x0000000189B5EAAC
-		public void CopyTo(WeightedTransform[] array, int arrayIndex) {} // 0x0000000189B5E358-0x0000000189B5E3AC
-		void IList.Remove(object value) {} // 0x0000000189B5E248-0x0000000189B5E358
-		public bool Remove(WeightedTransform value) => default; // 0x0000000189B5E784-0x0000000189B5E840
-		public void RemoveAt(int index) {} // 0x0000000189B5EE24-0x0000000189B5EF20
-		void IList.Insert(int index, object value) {} // 0x0000000189B5ED94-0x0000000189B5EE24
-		public void Insert(int index, WeightedTransform value) {} // 0x0000000189B5E728-0x0000000189B5E784
-		private static int ClampSize(int size) => default; // 0x0000000189B5ECF4-0x0000000189B5ED94
-		private void CheckOutOfRangeIndex(int index) {} // 0x0000000189B5E6D0-0x0000000189B5E728
-		private WeightedTransform Get(int index) => default; // 0x0000000189B5EAAC-0x0000000189B5EB70
-		private void Set(int index, WeightedTransform value) {} // 0x0000000189B5F434-0x0000000189B5F4B0
-		public void SetWeight(int index, float weight) {} // 0x0000000189B5F4B0-0x0000000189B5F538
-		public float GetWeight(int index) => default; // 0x0000000189B5F5E8-0x0000000189B5F658
-		public void SetTransform(int index, Transform transform) {} // 0x0000000189B5F658-0x0000000189B5F6C4
-		public Transform GetTransform(int index) => default; // 0x0000000183D4E980-0x0000000183D4E990
-		public static void OnValidate(ref WeightedTransformArray array, float min = 0f /* Metadata: 0x01FDA6A2 */, float max = 1f /* Metadata: 0x01FDA6A6 */) {} // 0x000000018115F4C0-0x000000018115F530
+		public IEnumerator<WeightedTransform> GetEnumerator() => default; // 0x0000000189B5E610-0x0000000189B5E6D0
+		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189B5F108-0x0000000189B5F1C8
+		int IList.Add(object value) => default; // 0x0000000189B5F1C8-0x0000000189B5F244
+		public void Add(WeightedTransform value) {} // 0x0000000189B5E114-0x0000000189B5E248
+		public void Clear() {} // 0x0000000183D5BBD0-0x0000000183D5BBE0
+		int IList.IndexOf(object value) => default; // 0x0000000189B5F2BC-0x0000000189B5F334
+		public int IndexOf(WeightedTransform value) => default; // 0x0000000189B5E840-0x0000000189B5E8DC
+		bool IList.Contains(object value) => default; // 0x0000000189B5F244-0x0000000189B5F2BC
+		public bool Contains(WeightedTransform value) => default; // 0x0000000189B5E3AC-0x0000000189B5E448
+		void ICollection.CopyTo(Array array, int arrayIndex) {} // 0x0000000189B5EF20-0x0000000189B5F108
+		public void CopyTo(WeightedTransform[] array, int arrayIndex) {} // 0x0000000189B5E448-0x0000000189B5E610
+		void IList.Remove(object value) {} // 0x0000000189B5F3BC-0x0000000189B5F434
+		public bool Remove(WeightedTransform value) => default; // 0x0000000189B5EC08-0x0000000189B5ECF4
+		public void RemoveAt(int index) {} // 0x0000000189B5EB70-0x0000000189B5EC08
+		void IList.Insert(int index, object value) {} // 0x0000000189B5F334-0x0000000189B5F3BC
+		public void Insert(int index, WeightedTransform value) {} // 0x0000000189B5E8DC-0x0000000189B5EAAC
+		private static int ClampSize(int size) => default; // 0x0000000189B5E358-0x0000000189B5E3AC
+		private void CheckOutOfRangeIndex(int index) {} // 0x0000000189B5E248-0x0000000189B5E358
+		private WeightedTransform Get(int index) => default; // 0x0000000189B5E784-0x0000000189B5E840
+		private void Set(int index, WeightedTransform value) {} // 0x0000000189B5EE24-0x0000000189B5EF20
+		public void SetWeight(int index, float weight) {} // 0x0000000189B5ED94-0x0000000189B5EE24
+		public float GetWeight(int index) => default; // 0x0000000189B5E728-0x0000000189B5E784
+		public void SetTransform(int index, Transform transform) {} // 0x0000000189B5ECF4-0x0000000189B5ED94
+		public Transform GetTransform(int index) => default; // 0x0000000189B5E6D0-0x0000000189B5E728
+		public static void OnValidate(ref WeightedTransformArray array, float min = 0f /* Metadata: 0x01FDA6A2 */, float max = 1f /* Metadata: 0x01FDA6A6 */) {} // 0x0000000189B5EAAC-0x0000000189B5EB70
 	}
 
 	internal sealed class ExpandChildrenAttribute : PropertyAttribute // TypeDefIndex: 57909
@@ -2311,11 +2317,11 @@ namespace UnityEngine.Animations.Rigging
 	public static class ConstraintsUtils // TypeDefIndex: 57926
 	{
 		// Methods
-		public static Transform[] ExtractChain(Transform root, Transform tip) => default; // 0x0000000189B4F0EC-0x0000000189B4F21C
-		public static float[] ExtractLengths(Transform[] chain) => default; // 0x0000000189B4ED64-0x0000000189B4EDA0
-		public static float[] ExtractSteps(Transform[] chain) => default; // 0x0000000189B4EDA0-0x0000000189B4EED0
-		public static string ConstructConstraintDataPropertyName(string property) => default; // 0x000000018350B670-0x000000018350B680
-		public static string ConstructCustomPropertyName(Component component, string property) => default; // 0x0000000183D764E0-0x0000000183D764F0
+		public static Transform[] ExtractChain(Transform root, Transform tip) => default; // 0x0000000189B4EED0-0x0000000189B4F020
+		public static float[] ExtractLengths(Transform[] chain) => default; // 0x0000000189B4F020-0x0000000189B4F0EC
+		public static float[] ExtractSteps(Transform[] chain) => default; // 0x0000000189B4F0EC-0x0000000189B4F21C
+		public static string ConstructConstraintDataPropertyName(string property) => default; // 0x0000000189B4ED64-0x0000000189B4EDA0
+		public static string ConstructCustomPropertyName(Component component, string property) => default; // 0x0000000189B4EDA0-0x0000000189B4EED0
 	}
 
 	public static class QuaternionExt // TypeDefIndex: 57927

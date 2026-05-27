@@ -111,3 +111,14 @@ namespace Microsoft.CodeAnalysis
 		public EmbeddedAttribute() {} // 0x000000018350B670-0x000000018350B680
 	}
 }
+
+namespace System.Runtime.CompilerServices
+{
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Constructor | AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 60197
+	{
+		// Constructors
+		[NonVersionable]
+		public IsUnmanagedAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+}

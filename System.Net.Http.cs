@@ -22,7 +22,24 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-// Image 63: System.Net.Http.dll - Assembly: System.Net.Http, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 58071-58154
+// Image 63: System.Net.Http.dll - Assembly: System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a - Types 58071-58154
+[assembly: AssemblyCompany("Mono development team")]
+[assembly: AssemblyCopyright("(c) Various Mono authors")]
+[assembly: AssemblyDefaultAlias("System.Net.Http.dll")]
+[assembly: AssemblyDelaySign(true)]
+[assembly: AssemblyDescription("System.Net.Http.dll")]
+[assembly: AssemblyFileVersion("4.0.50524.0")]
+[assembly: AssemblyInformationalVersion("4.0.50524.0")]
+[assembly: AssemblyProduct("Mono Common Language Infrastructure")]
+[assembly: AssemblyTitle("System.Net.Http.dll")]
+[assembly: CLSCompliant(true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: ComVisible(false)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("System.Net.Http.WebRequest, PublicKey=002400000480000094000000060200000024000052534131000400000100010007d1fa57c4aed9f0a32e84aa0faefd0de9e8fd6aec8f87fb03766c834c99921eb23be79ad9d5dcc1dd9ad236132102900b723cf980957fc4e177108fc607774f29e8320e92ea05ece4e821c0a5efe8f1645c4c0c93c1ab99285d622caa652c1dfad63d745d6f2de5f17e5eaf0fc4963d261c8a12436518206dc093344d5ad293")]
+[assembly: NeutralResourcesLanguage("en-US")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: SatelliteContractVersion("4.0.0.0")]
 
 namespace System.Net.Http
 {
@@ -33,19 +50,19 @@ namespace System.Net.Http
 		private ClientCertificateOption _clientCertificateOptions; // 0x18
 	
 		// Properties
-		public ClientCertificateOption ClientCertificateOptions { get => default; set {} } // 0x0000000189835F7C-0x0000000189835FEC 0x0000000189835EF8-0x0000000189835F7C
-		public X509CertificateCollection ClientCertificates { get => default; } // 0x0000000189836064-0x0000000189836080 
+		public ClientCertificateOption ClientCertificateOptions { get => default; set {} } // 0x00000001820D1AC0-0x00000001820D1AD0 0x00000001898361FC-0x00000001898363E4
+		public X509CertificateCollection ClientCertificates { get => default; } // 0x00000001898360CC-0x00000001898361FC 
 	
 		// Constructors
-		public HttpClientHandler() {} // 0x0000000189835FEC-0x0000000189836064
-		internal HttpClientHandler(IMonoHttpClientHandler handler) {} // 0x00000001820D1AC0-0x00000001820D1AD0
+		public HttpClientHandler() {} // 0x00000001898360A8-0x00000001898360CC
+		internal HttpClientHandler(IMonoHttpClientHandler handler) {} // 0x0000000189836080-0x00000001898360A8
 	
 		// Methods
-		private static IMonoHttpClientHandler CreateDefaultHandler() => default; // 0x0000000189835EA0-0x0000000189835EF8
-		protected override void Dispose(bool disposing) {} // 0x00000001898361FC-0x00000001898363E4
-		private void ThrowForModifiedManagedSslOptionsIfStarted() {} // 0x00000001898360CC-0x00000001898361FC
-		internal void SetWebRequestTimeout(TimeSpan timeout) {} // 0x0000000189848644-0x00000001898486A8
-		protected internal override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) => default; // 0x000000018350B670-0x000000018350B680
+		private static IMonoHttpClientHandler CreateDefaultHandler() => default; // 0x0000000189835E50-0x0000000189835EA0
+		protected override void Dispose(bool disposing) {} // 0x0000000189835EA0-0x0000000189835EF8
+		private void ThrowForModifiedManagedSslOptionsIfStarted() {} // 0x0000000189835FEC-0x0000000189836064
+		internal void SetWebRequestTimeout(TimeSpan timeout) {} // 0x0000000189835F7C-0x0000000189835FEC
+		protected internal override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) => default; // 0x0000000189835EF8-0x0000000189835F7C
 	}
 
 	internal interface IMonoHttpClientHandler : IDisposable // TypeDefIndex: 58074
@@ -88,23 +105,23 @@ namespace System.Net.Http
 		private bool disposed; // 0xB0
 	
 		// Properties
-		public CookieContainer CookieContainer { get => default; } // 0x000000018983DB58-0x000000018983E378 
-		public long MaxRequestContentBufferSize { get => default; } // 0x000000018983D9BC-0x000000018983DB58 
-		public SslClientAuthenticationOptions SslOptions { get => default; set {} } // 0x000000018983E580-0x000000018983E660 0x000000018983E660-0x000000018983E76C
+		public CookieContainer CookieContainer { get => default; } // 0x000000018983E918-0x000000018983E98C 
+		public long MaxRequestContentBufferSize { get => default; } // 0x0000000181003830-0x0000000181003840 
+		public SslClientAuthenticationOptions SslOptions { get => default; set {} } // 0x000000018983E98C-0x000000018983E9F0 0x000000018983E9F0-0x000000018983EA20
 	
 		// Constructors
-		public MonoWebRequestHandler() {} // 0x000000018983E378-0x000000018983E3E8
+		public MonoWebRequestHandler() {} // 0x000000018983E7C4-0x000000018983E918
 	
 		// Methods
-		internal void EnsureModifiability() {} // 0x000000018983E460-0x000000018983E580
-		public void Dispose() {} // 0x000000018983E76C-0x000000018983E7C4
-		protected virtual void Dispose(bool disposing) {} // 0x00000001898487D4-0x0000000189848838
-		private bool GetConnectionKeepAlive(HttpRequestHeaders headers) => default; // 0x000000018350B670-0x000000018350B680
-		internal virtual HttpWebRequest CreateWebRequest(HttpRequestMessage request) => default; // 0x0000000189848374-0x00000001898483B8
-		private HttpResponseMessage CreateResponseMessage(HttpWebResponse wr, HttpRequestMessage requestMessage, CancellationToken cancellationToken) => default; // 0x0000000189848338-0x0000000189848374
-		private static bool MethodHasBody(HttpMethod method) => default; // 0x00000001898483B8-0x0000000189848418
-		public async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) => default; // 0x0000000189844C84-0x0000000189846C98
-		void IMonoHttpClientHandler.SetWebRequestTimeout(TimeSpan timeout) {} // 0x0000000189846C98-0x0000000189846CF8
+		internal void EnsureModifiability() {} // 0x000000018983E3F4-0x000000018983E460
+		public void Dispose() {} // 0x000000018983E3E8-0x000000018983E3F4
+		protected virtual void Dispose(bool disposing) {} // 0x000000018983E378-0x000000018983E3E8
+		private bool GetConnectionKeepAlive(HttpRequestHeaders headers) => default; // 0x000000018983E460-0x000000018983E580
+		internal virtual HttpWebRequest CreateWebRequest(HttpRequestMessage request) => default; // 0x000000018983DB58-0x000000018983E378
+		private HttpResponseMessage CreateResponseMessage(HttpWebResponse wr, HttpRequestMessage requestMessage, CancellationToken cancellationToken) => default; // 0x000000018983D9BC-0x000000018983DB58
+		private static bool MethodHasBody(HttpMethod method) => default; // 0x000000018983E580-0x000000018983E660
+		public async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) => default; // 0x000000018983E660-0x000000018983E76C
+		void IMonoHttpClientHandler.SetWebRequestTimeout(TimeSpan timeout) {} // 0x000000018983E76C-0x000000018983E7C4
 	}
 
 	internal static class PlatformHelper // TypeDefIndex: 58078
@@ -152,21 +169,21 @@ namespace System.Net.Http
 		private TimeSpan timeout; // 0x48
 	
 		// Properties
-		public HttpRequestHeaders DefaultRequestHeaders { get => default; } // 0x00000001898363E4-0x0000000189836444 
-		public long MaxResponseContentBufferSize { get => default; } // 0x0000000189836444-0x0000000189836534 
+		public HttpRequestHeaders DefaultRequestHeaders { get => default; } // 0x0000000189836B94-0x0000000189836C08 
+		public long MaxResponseContentBufferSize { get => default; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
 	
 		// Constructors
-		public HttpClient() {} // 0x0000000189836B94-0x0000000189836C08
-		public HttpClient(HttpMessageHandler handler, bool disposeHandler) {} // 0x0000000183D4E2B0-0x0000000183D4E2C0
-		static HttpClient() {} // 0x0000000189846CF8-0x0000000189847428
+		public HttpClient() {} // 0x0000000189836B2C-0x0000000189836B94
+		public HttpClient(HttpMessageHandler handler, bool disposeHandler) {} // 0x0000000189836A68-0x0000000189836B2C
+		static HttpClient() {} // 0x0000000189836A08-0x0000000189836A68
 	
 		// Methods
-		protected override void Dispose(bool disposing) {} // 0x000000018983664C-0x00000001898366A8
-		public Task<HttpResponseMessage> PostAsync(string requestUri, HttpContent content) => default; // 0x00000001898369E0-0x0000000189836A00
-		public Task<HttpResponseMessage> SendAsync(HttpRequestMessage request) => default; // 0x00000001898366A8-0x00000001898369E0
-		public override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) => default; // 0x0000000189836534-0x000000018983664C
-		public Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken) => default; // 0x0000000189836A08-0x0000000189836A68
-		private async Task<HttpResponseMessage> SendAsyncWorker(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken) => default; // 0x0000000189836A00-0x0000000189836A08
+		protected override void Dispose(bool disposing) {} // 0x00000001898363E4-0x0000000189836444
+		public Task<HttpResponseMessage> PostAsync(string requestUri, HttpContent content) => default; // 0x0000000189836444-0x0000000189836534
+		public Task<HttpResponseMessage> SendAsync(HttpRequestMessage request) => default; // 0x000000018983664C-0x00000001898366A8
+		public override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) => default; // 0x00000001898369E0-0x0000000189836A00
+		public Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken) => default; // 0x00000001898366A8-0x00000001898369E0
+		private async Task<HttpResponseMessage> SendAsyncWorker(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken) => default; // 0x0000000189836534-0x000000018983664C
 	}
 
 	public enum HttpCompletionOption // TypeDefIndex: 58083
@@ -183,8 +200,8 @@ namespace System.Net.Http
 		private HttpContentHeaders headers; // 0x20
 	
 		// Properties
-		public HttpContentHeaders Headers { get; } // 0x00000001898371B8-0x0000000189837280 
-		internal long? LoadedBufferLength { get; } // 0x0000000189837290-0x0000000189837364 
+		public HttpContentHeaders Headers { get; } // 0x00000001898373D0-0x0000000189837448 
+		internal long? LoadedBufferLength { get; } // 0x0000000189837448-0x00000001898374C4 
 	
 		// Nested types
 		private sealed class FixedMemoryStream : MemoryStream // TypeDefIndex: 58084
@@ -194,31 +211,31 @@ namespace System.Net.Http
 	
 			// Constructors
 			public FixedMemoryStream() {} // Dummy constructor
-			public FixedMemoryStream(long maxSize) {} // 0x00000001898373D0-0x0000000189837448
+			public FixedMemoryStream(long maxSize) {} // 0x0000000189835BC8-0x0000000189835BF4
 	
 			// Methods
-			private void CheckOverflow(int count) {} // 0x0000000189837448-0x00000001898374C4
-			public override void WriteByte(byte value) {} // 0x0000000189836F54-0x0000000189836F60
-			public override void Write(byte[] buffer, int offset, int count) {} // 0x0000000189836F60-0x0000000189836FF0
+			private void CheckOverflow(int count) {} // 0x0000000189835A74-0x0000000189835B34
+			public override void WriteByte(byte value) {} // 0x0000000189835B34-0x0000000189835B6C
+			public override void Write(byte[] buffer, int offset, int count) {} // 0x0000000189835B6C-0x0000000189835BC8
 		}
 	
 		// Constructors
-		protected HttpContent() {} // 0x0000000189844C24-0x0000000189844C84
+		protected HttpContent() {} // 0x000000018350B670-0x000000018350B680
 	
 		// Methods
-		public System.Threading.Tasks.Task CopyToAsync(Stream stream) => default; // 0x0000000189837088-0x00000001898371B8
-		public System.Threading.Tasks.Task CopyToAsync(Stream stream, TransportContext context) => default; // 0x0000000189837374-0x00000001898373D0
-		private static FixedMemoryStream CreateFixedMemoryStream(long maxBufferSize) => default; // 0x0000000189837364-0x0000000189837374
-		public void Dispose() {}
-		protected virtual void Dispose(bool disposing) {}
-		public System.Threading.Tasks.Task LoadIntoBufferAsync() => default; // 0x000000018350B670-0x000000018350B680
-		public async System.Threading.Tasks.Task LoadIntoBufferAsync(long maxBufferSize) => default; // 0x0000000189835BC8-0x0000000189835BF4
-		public async Task<string> ReadAsStringAsync() => default; // 0x0000000189835A74-0x0000000189835B34
-		private static Encoding GetEncodingFromBuffer(byte[] buffer, int length, ref int preambleLength) => default; // 0x0000000189835B34-0x0000000189835B6C
-		private static int StartsWith(byte[] array, int length, byte[] value) => default; // 0x0000000189835B6C-0x0000000189835BC8
-		internal System.Threading.Tasks.Task SerializeToStreamAsync_internal(Stream stream, TransportContext context) => default; // 0x00000001898445EC-0x0000000189844864
-		protected abstract System.Threading.Tasks.Task SerializeToStreamAsync(Stream stream, TransportContext context); // 0x0000000189844864-0x00000001898448C0
-		protected internal abstract bool TryComputeLength(out long length); // 0x00000001898448C0-0x0000000189844C24
+		public System.Threading.Tasks.Task CopyToAsync(Stream stream) => default; // 0x0000000189836F54-0x0000000189836F60
+		public System.Threading.Tasks.Task CopyToAsync(Stream stream, TransportContext context) => default; // 0x0000000189836F60-0x0000000189836FF0
+		private static FixedMemoryStream CreateFixedMemoryStream(long maxBufferSize) => default; // 0x0000000189836FF0-0x0000000189837050
+		public void Dispose() {} // 0x0000000189837078-0x0000000189837088
+		protected virtual void Dispose(bool disposing) {} // 0x0000000189837050-0x0000000189837078
+		public System.Threading.Tasks.Task LoadIntoBufferAsync() => default; // 0x0000000189837280-0x0000000189837290
+		public async System.Threading.Tasks.Task LoadIntoBufferAsync(long maxBufferSize) => default; // 0x00000001898371B8-0x0000000189837280
+		public async Task<string> ReadAsStringAsync() => default; // 0x0000000189837290-0x0000000189837364
+		private static Encoding GetEncodingFromBuffer(byte[] buffer, int length, ref int preambleLength) => default; // 0x0000000189837088-0x00000001898371B8
+		private static int StartsWith(byte[] array, int length, byte[] value) => default; // 0x0000000189837374-0x00000001898373D0
+		internal System.Threading.Tasks.Task SerializeToStreamAsync_internal(Stream stream, TransportContext context) => default; // 0x0000000189837364-0x0000000189837374
+		protected abstract System.Threading.Tasks.Task SerializeToStreamAsync(Stream stream, TransportContext context);
+		protected internal abstract bool TryComputeLength(out long length);
 	}
 
 	public abstract class HttpMessageHandler : IDisposable // TypeDefIndex: 58088
@@ -351,20 +368,20 @@ namespace System.Net.Http
 	
 		// Constructors
 		public MultipartContent() {} // Dummy constructor
-		public MultipartContent(string subtype) {} // 0x000000018983ED48-0x000000018983EE00
-		public MultipartContent(string subtype, string boundary) {} // 0x000000018983EA20-0x000000018983EB20
+		public MultipartContent(string subtype) {} // 0x000000018983F30C-0x000000018983F3A8
+		public MultipartContent(string subtype, string boundary) {} // 0x000000018983F3A8-0x000000018983F708
 	
 		// Methods
-		private static bool IsValidRFC2049(string s) => default; // 0x000000018983EB20-0x000000018983ECC8
-		public virtual void Add(HttpContent content) {} // 0x000000018983EE00-0x000000018983EEEC
-		protected override void Dispose(bool disposing) {} // 0x000000018983EF6C-0x000000018983F30C
-		protected override async System.Threading.Tasks.Task SerializeToStreamAsync(Stream stream, TransportContext context) => default; // 0x000000018983ECC8-0x000000018983ED48
+		private static bool IsValidRFC2049(string s) => default; // 0x000000018983ED48-0x000000018983EE00
+		public virtual void Add(HttpContent content) {} // 0x000000018983EA20-0x000000018983EB20
+		protected override void Dispose(bool disposing) {} // 0x000000018983EB20-0x000000018983ECC8
+		protected override async System.Threading.Tasks.Task SerializeToStreamAsync(Stream stream, TransportContext context) => default; // 0x000000018983EE00-0x000000018983EEEC
 		protected internal override bool TryComputeLength(out long length) {
 			length = default;
 			return default;
-		} // 0x000000018983EEEC-0x000000018983EF6C
-		public IEnumerator<HttpContent> GetEnumerator() => default; // 0x0000000189847488-0x00000001898482DC
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x00000001898482DC-0x0000000189848338
+		} // 0x000000018983EF6C-0x000000018983F30C
+		public IEnumerator<HttpContent> GetEnumerator() => default; // 0x000000018983ECC8-0x000000018983ED48
+		IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018983EEEC-0x000000018983EF6C
 	}
 
 	public class MultipartFormDataContent : MultipartContent // TypeDefIndex: 58096
@@ -624,8 +641,8 @@ namespace System.Net.Http.Headers
 		public readonly string Name; // 0x18
 	
 		// Properties
-		public System.Func<object, string> CustomToString { get; private set; }
-		public virtual string Separator { get; }
+		public System.Func<object, string> CustomToString { get; private set; } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+		public virtual string Separator { get; } // 0x0000000189835D68-0x0000000189835DB4 
 	
 		// Nested types
 		private class HeaderTypeInfo<T, U> : HeaderInfo // TypeDefIndex: 58110
@@ -636,16 +653,16 @@ namespace System.Net.Http.Headers
 	
 			// Constructors
 			public HeaderTypeInfo() {} // Dummy constructor
-			public HeaderTypeInfo(string name, TryParseDelegate<T> parser, HttpHeaderKind headerKind) {} // 0x0000000189835D48-0x0000000189835D68
+			public HeaderTypeInfo(string name, TryParseDelegate<T> parser, HttpHeaderKind headerKind) {}
 	
 			// Methods
 			public override void AddToCollection(object collection, object value) {}
 			protected override object CreateCollection(HttpHeaders headers, HeaderInfo headerInfo) => default;
-			public override List<string> ToStringCollection(object collection) => default; // 0x0000000189835D08-0x0000000189835D48
+			public override List<string> ToStringCollection(object collection) => default;
 			public override bool TryParse(string value, out object result) {
 				result = default;
 				return default;
-			} // 0x0000000183D4EB40-0x0000000183D4EB50
+			}
 		}
 	
 		private class CollectionHeaderTypeInfo<T, U> : HeaderTypeInfo<T, U> // TypeDefIndex: 58111
@@ -657,11 +674,11 @@ namespace System.Net.Http.Headers
 			private readonly TryParseListDelegate<T> parser;
 	
 			// Properties
-			public override string Separator { get => default; } // 0x0000000189835D68-0x0000000189835DB4 
+			public override string Separator { get => default; }
 	
 			// Constructors
 			public CollectionHeaderTypeInfo() {} // Dummy constructor
-			public CollectionHeaderTypeInfo(string name, TryParseListDelegate<T> parser, HttpHeaderKind headerKind, int minimalCount, string separator) {} // 0x0000000184271930-0x0000000184271940
+			public CollectionHeaderTypeInfo(string name, TryParseListDelegate<T> parser, HttpHeaderKind headerKind, int minimalCount, string separator) {}
 	
 			// Methods
 			public override bool TryParse(string value, out object result) {
@@ -672,13 +689,13 @@ namespace System.Net.Http.Headers
 	
 		// Constructors
 		protected HeaderInfo() {} // Dummy constructor
-		protected HeaderInfo(string name, HttpHeaderKind headerKind) {}
+		protected HeaderInfo(string name, HttpHeaderKind headerKind) {} // 0x0000000189835D48-0x0000000189835D68
 	
 		// Methods
 		public static HeaderInfo CreateSingle<T>(string name, TryParseDelegate<T> parser, HttpHeaderKind headerKind, System.Func<object, string> toString = null) => default;
 		public static HeaderInfo CreateMulti<T>(string name, TryParseListDelegate<T> elementParser, HttpHeaderKind headerKind, int minimalCount = 1 /* Metadata: 0x01FDABB5 */, string separator = ", " /* Metadata: 0x01FDABB6 */)
 			where T : class => default;
-		public object CreateCollection(HttpHeaders headers) => default;
+		public object CreateCollection(HttpHeaders headers) => default; // 0x0000000189835D08-0x0000000189835D48
 		public abstract void AddToCollection(object collection, object value);
 		protected abstract object CreateCollection(HttpHeaders headers, HeaderInfo headerInfo);
 		public abstract List<string> ToStringCollection(object collection);
@@ -759,48 +776,48 @@ namespace System.Net.Http.Headers
 			public readonly System.Func<object, string> CustomToString; // 0x20
 	
 			// Properties
-			public bool HasStringValues { get => default; } // 0x000000018983A280-0x000000018983A324 
-			public List<string> Values { get => default; set {} } // 0x000000018983A25C-0x000000018983A280 0x00000001898374C4-0x0000000189837AAC
+			public bool HasStringValues { get => default; } // 0x0000000189835C40-0x0000000189835C84 
+			public List<string> Values { get => default; set {} } // 0x0000000189835C84-0x0000000189835D08 0x00000001822C3A90-0x00000001822C3AA0
 	
 			// Constructors
 			public HeaderBucket() {} // Dummy constructor
-			public HeaderBucket(object parsed, System.Func<object, string> converter) {} // 0x0000000189838650-0x000000018983A25C
+			public HeaderBucket(object parsed, System.Func<object, string> converter) {} // 0x0000000182CC1260-0x0000000182CC1290
 	
 			// Methods
-			public string ParsedToString() => default; // 0x00000001898384BC-0x0000000189838578
+			public string ParsedToString() => default; // 0x0000000189835BF4-0x0000000189835C40
 		}
 	
 		// Constructors
-		static HttpHeaders() {}
-		protected HttpHeaders() {}
-		internal HttpHeaders(HttpHeaderKind headerKind) {}
+		static HttpHeaders() {} // 0x0000000189838650-0x000000018983A25C
+		protected HttpHeaders() {} // 0x000000018983A280-0x000000018983A324
+		internal HttpHeaders(HttpHeaderKind headerKind) {} // 0x000000018983A25C-0x000000018983A280
 	
 		// Methods
-		private bool AddInternal(string name, IEnumerable<string> values, System.Net.Http.Headers.HeaderInfo headerInfo, bool ignoreInvalid) => default; // 0x0000000189837C14-0x0000000189837D74
-		public bool TryAddWithoutValidation(string name, IEnumerable<string> values) => default; // 0x0000000189837DD0-0x0000000189837EB8
-		private System.Net.Http.Headers.HeaderInfo CheckName(string name) => default;
+		private bool AddInternal(string name, IEnumerable<string> values, System.Net.Http.Headers.HeaderInfo headerInfo, bool ignoreInvalid) => default; // 0x00000001898374C4-0x0000000189837AAC
+		public bool TryAddWithoutValidation(string name, IEnumerable<string> values) => default; // 0x00000001898384BC-0x0000000189838578
+		private System.Net.Http.Headers.HeaderInfo CheckName(string name) => default; // 0x0000000189837AAC-0x0000000189837C14
 		private bool TryCheckName(string name, out System.Net.Http.Headers.HeaderInfo headerInfo) {
 			headerInfo = default;
 			return default;
-		}
+		} // 0x0000000189838578-0x0000000189838650
 		[IteratorStateMachine(typeof(_GetEnumerator_d__19))]
-		public IEnumerator<KeyValuePair<string, IEnumerable<string>>> GetEnumerator() => default;
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000182CC1260-0x0000000182CC1290
-		public bool Remove(string name) => default; // 0x0000000189835C40-0x0000000189835C84
-		internal static string GetSingleHeaderString(string key, IEnumerable<string> values) => default; // 0x0000000189835C84-0x0000000189835D08
-		public override string ToString() => default; // 0x00000001822C3A90-0x00000001822C3AA0
+		public IEnumerator<KeyValuePair<string, IEnumerable<string>>> GetEnumerator() => default; // 0x0000000189837D74-0x0000000189837DD0
+		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189838288-0x0000000189838290
+		public bool Remove(string name) => default; // 0x0000000189838224-0x0000000189838288
+		internal static string GetSingleHeaderString(string key, IEnumerable<string> values) => default; // 0x0000000189837EB8-0x0000000189838224
+		public override string ToString() => default; // 0x0000000189838290-0x00000001898384BC
 		internal void AddOrRemove<T>(string name, T value, System.Func<object, string> converter = null)
-			where T : class {} // 0x0000000189835BF4-0x0000000189835C40
+			where T : class {}
 		internal void AddOrRemove<T>(string name, T? value)
-			where T : struct {} // 0x00000001810410F0-0x0000000181041100
+			where T : struct {}
 		internal void AddOrRemove<T>(string name, T? value, System.Func<object, string> converter)
-			where T : struct {} // 0x0000000189844538-0x00000001898445B0
-		private List<string> GetAllHeaderValues(HeaderBucket bucket, System.Net.Http.Headers.HeaderInfo headerInfo) => default; // 0x0000000189844108-0x00000001898444A4
-		internal static HttpHeaderKind GetKnownHeaderKind(string name) => default; // 0x00000001898445B0-0x00000001898445EC
-		internal T GetValue<T>(string name) => default; // 0x0000000183D51D80-0x0000000183D51D90
+			where T : struct {}
+		private List<string> GetAllHeaderValues(HeaderBucket bucket, System.Net.Http.Headers.HeaderInfo headerInfo) => default; // 0x0000000189837C14-0x0000000189837D74
+		internal static HttpHeaderKind GetKnownHeaderKind(string name) => default; // 0x0000000189837DD0-0x0000000189837EB8
+		internal T GetValue<T>(string name) => default;
 		internal HttpHeaderValueCollection<T> GetValues<T>(string name)
-			where T : class => default; // 0x00000001898444A4-0x00000001898444F0
-		internal void SetValue<T>(string name, T value, System.Func<object, string> toStringConverter = null) {} // 0x00000001898444F0-0x0000000189844538
+			where T : class => default;
+		internal void SetValue<T>(string name, T value, System.Func<object, string> toStringConverter = null) {}
 	}
 
 	public sealed class HttpRequestHeaders : HttpHeaders // TypeDefIndex: 58120
@@ -809,19 +826,19 @@ namespace System.Net.Http.Headers
 		private bool? expectContinue; // 0x20
 	
 		// Properties
-		public AuthenticationHeaderValue Authorization { set {} } // 0x000000018983AEAC-0x000000018983AEF8
-		public HttpHeaderValueCollection<string> Connection { get => default; } // 0x000000018983B05C-0x000000018983B0A8 
-		public bool? ConnectionClose { get => default; set {} } // 0x000000018983AEF8-0x000000018983B05C 0x000000018983A97C-0x000000018983AB30
-		public bool? ExpectContinue { get => default; } // 0x00000001898486A8-0x000000018984870C 
-		public string Host { get => default; } // 0x000000018350B670-0x000000018350B680 
-		public HttpHeaderValueCollection<TransferCodingHeaderValue> TransferEncoding { get => default; } // 0x0000000189848558-0x000000018984859C 
-		public bool? TransferEncodingChunked { get => default; } // 0x000000018984859C-0x00000001898485EC 
+		public AuthenticationHeaderValue Authorization { set {} } // 0x000000018983B0A8-0x000000018983B10C
+		public HttpHeaderValueCollection<string> Connection { get => default; } // 0x000000018983ACFC-0x000000018983AD48 
+		public bool? ConnectionClose { get => default; set {} } // 0x000000018983AB84-0x000000018983ACFC 0x000000018983B10C-0x000000018983B1F0
+		public bool? ExpectContinue { get => default; } // 0x000000018983AD48-0x000000018983AEAC 
+		public string Host { get => default; } // 0x000000018983AEAC-0x000000018983AEF8 
+		public HttpHeaderValueCollection<TransferCodingHeaderValue> TransferEncoding { get => default; } // 0x000000018983B05C-0x000000018983B0A8 
+		public bool? TransferEncodingChunked { get => default; } // 0x000000018983AEF8-0x000000018983B05C 
 	
 		// Constructors
-		internal HttpRequestHeaders() {} // 0x000000018983AD48-0x000000018983AEAC
+		internal HttpRequestHeaders() {} // 0x000000018983AB30-0x000000018983AB84
 	
 		// Methods
-		internal void AddHeaders(HttpRequestHeaders headers) {} // 0x00000001898485EC-0x000000018984863C
+		internal void AddHeaders(HttpRequestHeaders headers) {} // 0x000000018983A97C-0x000000018983AB30
 	}
 
 	public sealed class HttpResponseHeaders : HttpHeaders // TypeDefIndex: 58121
@@ -932,28 +949,28 @@ namespace System.Net.Http.Headers
 		internal string media_type; // 0x18
 	
 		// Properties
-		public string CharSet { get => default; set {} } // 0x000000018983D4DC-0x000000018983D560 0x000000018983CCC8-0x000000018983CD28
-		public string MediaType { set {} } // 0x000000018983CBCC-0x000000018983CC58
-		public ICollection<NameValueHeaderValue> Parameters { get => default; } // 0x000000018983CC58-0x000000018983CCC8 
+		public string CharSet { get => default; set {} } // 0x000000018983D3B8-0x000000018983D4DC 0x000000018983D560-0x000000018983D60C
+		public string MediaType { set {} } // 0x000000018983D60C-0x000000018983D798
+		public ICollection<NameValueHeaderValue> Parameters { get => default; } // 0x000000018983D4DC-0x000000018983D560 
 	
 		// Constructors
-		public MediaTypeHeaderValue(string mediaType) {} // 0x000000018983D3B8-0x000000018983D4DC
-		protected MediaTypeHeaderValue(MediaTypeHeaderValue source) {} // 0x000000018983D560-0x000000018983D60C
-		internal MediaTypeHeaderValue() {} // 0x000000018983D60C-0x000000018983D798
+		public MediaTypeHeaderValue(string mediaType) {} // 0x000000018983D3B0-0x000000018983D3B8
+		protected MediaTypeHeaderValue(MediaTypeHeaderValue source) {} // 0x000000018983D0D4-0x000000018983D3B0
+		internal MediaTypeHeaderValue() {} // 0x000000018350B670-0x000000018350B680
 	
 		// Methods
-		object ICloneable.Clone() => default; // 0x000000018983CD28-0x000000018983CD8C
-		public override bool Equals(object obj) => default; // 0x000000018983CF58-0x000000018983D0D4
-		public override int GetHashCode() => default; // 0x000000018983CD8C-0x000000018983CF58
-		public override string ToString() => default; // 0x0000000189848770-0x00000001898487D4
+		object ICloneable.Clone() => default; // 0x000000018983CCC8-0x000000018983CD28
+		public override bool Equals(object obj) => default; // 0x000000018983CBCC-0x000000018983CC58
+		public override int GetHashCode() => default; // 0x000000018983CC58-0x000000018983CCC8
+		public override string ToString() => default; // 0x000000018983CD28-0x000000018983CD8C
 		public static bool TryParse(string input, out MediaTypeHeaderValue parsedValue) {
 			parsedValue = default;
 			return default;
-		} // 0x000000018350B670-0x000000018350B680
+		} // 0x000000018983CF58-0x000000018983D0D4
 		internal static System.Net.Http.Headers.Token? TryParseMediaType(Lexer lexer, out string media) {
 			media = default;
 			return default;
-		} // 0x0000000189848508-0x0000000189848558
+		} // 0x000000018983CD8C-0x000000018983CF58
 	}
 
 	public sealed class MediaTypeWithQualityHeaderValue : MediaTypeHeaderValue // TypeDefIndex: 58127
@@ -1053,13 +1070,13 @@ namespace System.Net.Http.Headers
 			public static readonly System.Func<object, string> ToString; // 0x00
 	
 			// Constructors
-			static DateTime() {} // 0x0000000189848418-0x00000001898484AC
+			static DateTime() {} // 0x0000000189835348-0x000000018983540C
 	
 			// Methods
 			public static bool TryParse(string input, out DateTimeOffset result) {
 				result = default;
 				return default;
-			} // 0x000000018350B670-0x000000018350B680
+			} // 0x00000001898352EC-0x0000000189835348
 		}
 	
 		public static class EmailAddress // TypeDefIndex: 58133
@@ -1104,13 +1121,13 @@ namespace System.Net.Http.Headers
 			public static readonly System.Func<object, string> ToString; // 0x00
 	
 			// Constructors
-			static MD5() {} // 0x00000001898484AC-0x0000000189848508
+			static MD5() {} // 0x000000018983CB08-0x000000018983CBCC
 	
 			// Methods
 			public static bool TryParse(string input, out byte[] result) {
 				result = default;
 				return default;
-			} // 0x000000018350B670-0x000000018350B680
+			} // 0x000000018983CA24-0x000000018983CB08
 		}
 	
 		public static class TimeSpanSeconds // TypeDefIndex: 58139

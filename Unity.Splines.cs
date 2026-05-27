@@ -14,6 +14,14 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 // Image 82: Unity.Splines.dll - Assembly: Unity.Splines, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59044-59080
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("Unity.Splines.Editor.Debug")]
+[assembly: InternalsVisibleTo("Unity.Splines.Debug")]
+[assembly: InternalsVisibleTo("Unity.Splines.Tests")]
+[assembly: InternalsVisibleTo("Unity.Splines.Editor")]
+[assembly: InternalsVisibleTo("Unity.Splines.Editor.Tests")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace UnityEngine.Splines
 {
@@ -224,32 +232,32 @@ namespace UnityEngine.Splines
 			public SplineKnotIndex[] Knots; // 0x10
 	
 			// Properties
-			public int Count { get => default; } // 0x0000000189CD3198-0x0000000189CD3254 
-			public SplineKnotIndex this[int index] { get => default; } // 0x0000000189CD304C-0x0000000189CD306C 
+			public int Count { get => default; } // 0x00000001842746EC-0x0000000184274708 
+			public SplineKnotIndex this[int index] { get => default; } // 0x0000000189CD32E4-0x0000000189CD3310 
 	
 			// Constructors
-			public KnotLink() {} // 0x0000000189CD306C-0x0000000189CD30A4
+			public KnotLink() {} // 0x000000018350B670-0x000000018350B680
 	
 			// Methods
-			public IEnumerator<SplineKnotIndex> GetEnumerator() => default; // 0x0000000189CD2F80-0x0000000189CD3018
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189CD316C-0x0000000189CD3198
+			public IEnumerator<SplineKnotIndex> GetEnumerator() => default; // 0x0000000189CD329C-0x0000000189CD32E4
+			IEnumerator IEnumerable.GetEnumerator() => default; // 0x00000001899DF280-0x00000001899DF2A0
 		}
 	
 		// Constructors
-		public KnotLinkCollection() {} // 0x000000018350B670-0x000000018350B680
+		public KnotLinkCollection() {} // 0x0000000189CD3254-0x0000000189CD329C
 	
 		// Methods
-		private KnotLink GetKnotLinksInternal(SplineKnotIndex index) => default; // 0x0000000189CD3018-0x0000000189CD303C
+		private KnotLink GetKnotLinksInternal(SplineKnotIndex index) => default; // 0x0000000189CD2F80-0x0000000189CD3018
 		public bool TryGetKnotLinks(SplineKnotIndex knotIndex, out IReadOnlyList<SplineKnotIndex> linkedKnots) {
 			linkedKnots = default;
 			return default;
-		} // 0x0000000189CD303C-0x0000000189CD304C
-		public void Unlink(SplineKnotIndex knot) {} // 0x0000000189CD30A4-0x0000000189CD316C
-		public void KnotRemoved(int splineIndex, int knotIndex) {} // 0x0000000189CD3254-0x0000000189CD329C
-		public void KnotRemoved(SplineKnotIndex index) {} // 0x0000000189CD329C-0x0000000189CD32E4
-		public void KnotInserted(int splineIndex, int knotIndex) {} // 0x00000001899DF280-0x00000001899DF2A0
-		public void KnotInserted(SplineKnotIndex index) {} // 0x00000001842746EC-0x0000000184274708
-		public void ShiftKnotIndices(SplineKnotIndex index, int offset) {} // 0x0000000189CD32E4-0x0000000189CD3310
+		} // 0x0000000189CD316C-0x0000000189CD3198
+		public void Unlink(SplineKnotIndex knot) {} // 0x0000000189CD3198-0x0000000189CD3254
+		public void KnotRemoved(int splineIndex, int knotIndex) {} // 0x0000000189CD304C-0x0000000189CD306C
+		public void KnotRemoved(SplineKnotIndex index) {} // 0x0000000189CD306C-0x0000000189CD30A4
+		public void KnotInserted(int splineIndex, int knotIndex) {} // 0x0000000189CD3018-0x0000000189CD303C
+		public void KnotInserted(SplineKnotIndex index) {} // 0x0000000189CD303C-0x0000000189CD304C
+		public void ShiftKnotIndices(SplineKnotIndex index, int offset) {} // 0x0000000189CD30A4-0x0000000189CD316C
 	}
 
 	public struct NativeSpline : ISpline, IDisposable // TypeDefIndex: 59062
@@ -265,9 +273,9 @@ namespace UnityEngine.Splines
 		private float m_Length; // 0x34
 	
 		// Properties
-		public bool Closed { get => default; } // 0x0000000189CD3514-0x0000000189CD351C 
-		public int Count { get => default; } // 0x0000000189CD3B48-0x0000000189CD3C34 
-		public BezierKnot this[int index] { get => default; } // 0x0000000183D84AD0-0x0000000183D84B00 
+		public bool Closed { get => default; } // 0x0000000183D4EF60-0x0000000183D4EF70 
+		public int Count { get => default; } // 0x0000000183D516F0-0x0000000183D51700 
+		public BezierKnot this[int index] { get => default; } // 0x0000000183D6A320-0x0000000183D6A360 
 	
 		// Nested types
 		private struct Slice<T> : IReadOnlyList<T> // TypeDefIndex: 59061
@@ -277,17 +285,17 @@ namespace UnityEngine.Splines
 			private NativeSlice<T> m_Slice;
 	
 			// Properties
-			public int Count { get => default; } // 0x0000000183D6A320-0x0000000183D6A360 
-			public T this[int index] { get => default; } // 0x0000000189CD3478-0x0000000189CD3514 
+			public int Count { get => default; }
+			public T this[int index] { get => default; }
 	
 			// Constructors
 			public Slice(NativeArray<T> array, int start, int count) : this() {
 				m_Slice = default;
-			} // 0x0000000183D4EF60-0x0000000183D4EF70
+			}
 	
 			// Methods
 			public IEnumerator<T> GetEnumerator() => default;
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000183D56CA0-0x0000000183D56CB0
+			IEnumerator IEnumerable.GetEnumerator() => default;
 		}
 	
 		// Constructors
@@ -297,23 +305,23 @@ namespace UnityEngine.Splines
 			m_SegmentLengthsLookupTable = default;
 			m_Closed = default;
 			m_Length = default;
-		} // 0x0000000189CD3384-0x0000000189CD3478
+		} // 0x0000000189CD3B48-0x0000000189CD3C34
 		public NativeSpline(IReadOnlyList<BezierKnot> knots, IReadOnlyList<int> splits, bool closed, float4x4 transform, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.Temp /* Metadata: 0x01FDCCE8 */) : this() {
 			m_Knots = default;
 			m_Curves = default;
 			m_SegmentLengthsLookupTable = default;
 			m_Closed = default;
 			m_Length = default;
-		}
+		} // 0x0000000189CD351C-0x0000000189CD3B48
 	
 		// Methods
-		public float GetLength() => default; // 0x0000000189CD351C-0x0000000189CD3B48
-		public IEnumerator<BezierKnot> GetEnumerator() => default; // 0x0000000183D84AB0-0x0000000183D84AD0
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189CD3310-0x0000000189CD3384
-		public BezierCurve GetCurve(int index) => default;
-		public float GetCurveLength(int curveIndex) => default;
-		public void Dispose() {}
-		public float GetCurveInterpolation(int curveIndex, float curveDistance) => default;
+		public float GetLength() => default; // 0x0000000183D56CA0-0x0000000183D56CB0
+		public IEnumerator<BezierKnot> GetEnumerator() => default; // 0x0000000189CD3478-0x0000000189CD3514
+		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189CD3514-0x0000000189CD351C
+		public BezierCurve GetCurve(int index) => default; // 0x0000000183D84AD0-0x0000000183D84B00
+		public float GetCurveLength(int curveIndex) => default; // 0x0000000183D84AB0-0x0000000183D84AD0
+		public void Dispose() {} // 0x0000000189CD3310-0x0000000189CD3384
+		public float GetCurveInterpolation(int curveIndex, float curveDistance) => default; // 0x0000000189CD3384-0x0000000189CD3478
 	}
 
 	[Serializable]
@@ -348,12 +356,12 @@ namespace UnityEngine.Splines
 		private ValueTuple<float, float> m_LastKnotChangeCurveLengths; // 0x60
 	
 		// Properties
-		private IEnumerable<ISplineModificationHandler> embeddedSplineData { [IteratorStateMachine(typeof(_get_embeddedSplineData_d__15))] get => default; } // 0x0000000189CD691C-0x0000000189CD6974 
-		public int Count { get => default; } // 0x0000000189CD68CC-0x0000000189CD691C 
-		public bool IsReadOnly { get => default; } // 0x0000000189CD6724-0x0000000189CD68CC 
-		public IEnumerable<BezierKnot> Knots { get => default; } // 0x0000000182E01C50-0x0000000182E01E20 
-		public bool Closed { get => default; set {} } // 0x0000000182E01930-0x0000000182E019D0 0x0000000182E01760-0x0000000182E01840
-		public BezierKnot this[int index] { get => default; set {} } // 0x0000000189CD6444-0x0000000189CD64B8 0x0000000189CD64B8-0x0000000189CD6534
+		private IEnumerable<ISplineModificationHandler> embeddedSplineData { [IteratorStateMachine(typeof(_get_embeddedSplineData_d__15))] get => default; } // 0x0000000189CD7494-0x0000000189CD7504 
+		public int Count { get => default; } // 0x0000000182E025F0-0x0000000182E02630 
+		public bool IsReadOnly { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		public IEnumerable<BezierKnot> Knots { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public bool Closed { get => default; set {} } // 0x0000000183D4EF60-0x0000000183D4EF70 0x0000000189CD75A0-0x0000000189CD75BC
+		public BezierKnot this[int index] { get => default; set {} } // 0x0000000189CD7404-0x0000000189CD7494 0x0000000189CD75BC-0x0000000189CD7608
 	
 		// Events
 		public static event Action<Spline, int, SplineModification> Changed;
@@ -370,47 +378,47 @@ namespace UnityEngine.Splines
 			private DistanceToInterpolation[] m_DistanceToInterpolation; // 0x18
 	
 			// Properties
-			public DistanceToInterpolation[] DistanceToInterpolation { get => default; } // 0x0000000189CD7494-0x0000000189CD7504 
+			public DistanceToInterpolation[] DistanceToInterpolation { get => default; } // 0x0000000182E01E20-0x0000000182E01E70 
 	
 			// Constructors
-			public MetaData() {} // 0x0000000182E025F0-0x0000000182E02630
+			public MetaData() {} // 0x0000000182E01F30-0x0000000182E01FA0
 	
 			// Methods
-			public void InvalidateCache() {} // 0x000000018115F4C0-0x000000018115F530
+			public void InvalidateCache() {} // 0x0000000182E019D0-0x0000000182E01A60
 		}
 	
 		// Constructors
-		public Spline() {} // 0x0000000189CD63BC-0x0000000189CD6444
-		public Spline(IEnumerable<BezierKnot> knots, bool closed = false /* Metadata: 0x01FDCCED */) {} // 0x0000000182E01E20-0x0000000182E01E70
+		public Spline() {} // 0x0000000189CD716C-0x0000000189CD7368
+		public Spline(IEnumerable<BezierKnot> knots, bool closed = false /* Metadata: 0x01FDCCED */) {} // 0x0000000182E02B50-0x0000000182E02DA0
 	
 		// Methods
-		internal void SetDirtyNoNotify() {} // 0x0000000189CD75BC-0x0000000189CD7608
-		internal void SetDirty(SplineModification modificationEvent, int knotIndex = -1 /* Metadata: 0x01FDCCE9 */) {} // 0x0000000189CD7038-0x0000000189CD70C4
-		protected virtual void OnSplineChanged() {} // 0x0000000189CD6EDC-0x0000000189CD7038
-		private void EnsureMetaDataValid() {} // 0x0000000189CD716C-0x0000000189CD7368
-		public TangentMode GetTangentMode(int index) => default; // 0x0000000182E02B50-0x0000000182E02DA0
-		private void ApplyTangentModeNoNotify(int index, BezierTangent main = BezierTangent.Out /* Metadata: 0x01FDCCEA */) {} // 0x0000000182E01FA0-0x0000000182E02140
-		public int IndexOf(BezierKnot item) => default; // 0x0000000182E01310-0x0000000182E013A0
-		public void Insert(int index, BezierKnot knot) {} // 0x0000000189CD6598-0x0000000189CD6640
-		public void Insert(int index, BezierKnot knot, TangentMode mode) {} // 0x0000000189CD70C4-0x0000000189CD716C
-		public void Insert(int index, BezierKnot knot, TangentMode mode, float tension) {} // 0x0000000189CD600C-0x0000000189CD6050
-		public void RemoveAt(int index) {} // 0x0000000189CD6050-0x0000000189CD60C0
-		public void SetKnot(int index, BezierKnot value, BezierTangent main = BezierTangent.Out /* Metadata: 0x01FDCCEB */) {} // 0x0000000189CD6534-0x0000000189CD6598
-		public void SetKnotNoNotify(int index, BezierKnot value, BezierTangent main = BezierTangent.Out /* Metadata: 0x01FDCCEC */) {} // 0x0000000189CD6A90-0x0000000189CD6B24
-		public BezierCurve GetCurve(int index) => default; // 0x0000000182E01F30-0x0000000182E01FA0
-		public float GetCurveLength(int index) => default; // 0x0000000182E019D0-0x0000000182E01A60
-		public float GetLength() => default; // 0x00000001825D6DC0-0x00000001825D6DE0
-		private DistanceToInterpolation[] GetCurveDistanceLut(int index) => default; // 0x0000000189CD7F8C-0x0000000189CD815C
-		public float GetCurveInterpolation(int curveIndex, float curveDistance) => default; // 0x0000000189CD7660-0x0000000189CD7EAC
-		public IEnumerator<BezierKnot> GetEnumerator() => default; // 0x0000000189CD815C-0x0000000189CD81A4
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189CD81A4-0x0000000189CD81EC
-		public void Add(BezierKnot item) {} // 0x0000000189CD81EC-0x0000000189CD8234
-		public void Add(BezierKnot item, TangentMode mode) {} // 0x0000000189CD8234-0x0000000189CD827C
-		public void Clear() {} // 0x0000000181041090-0x00000001810410A0
-		public bool Contains(BezierKnot item) => default; // 0x0000000189CD7F40-0x0000000189CD7F8C
-		public void CopyTo(BezierKnot[] array, int arrayIndex) {} // 0x0000000181041090-0x00000001810410A0
-		public bool Remove(BezierKnot item) => default; // 0x0000000189CD7EAC-0x0000000189CD7F38
-		internal void CacheKnotOperationCurves(int index) {} // 0x0000000189CD7F38-0x0000000189CD7F40
+		internal void SetDirtyNoNotify() {} // 0x0000000189CD6B24-0x0000000189CD6BC4
+		internal void SetDirty(SplineModification modificationEvent, int knotIndex = -1 /* Metadata: 0x01FDCCE9 */) {} // 0x0000000189CD6BC4-0x0000000189CD6EDC
+		protected virtual void OnSplineChanged() {} // 0x000000018350B670-0x000000018350B680
+		private void EnsureMetaDataValid() {} // 0x0000000182E01E70-0x0000000182E01F30
+		public TangentMode GetTangentMode(int index) => default; // 0x0000000189CD6640-0x0000000189CD66A8
+		private void ApplyTangentModeNoNotify(int index, BezierTangent main = BezierTangent.Out /* Metadata: 0x01FDCCEA */) {} // 0x0000000189CD60C0-0x0000000189CD63BC
+		public int IndexOf(BezierKnot item) => default; // 0x0000000189CD66A8-0x0000000189CD6724
+		public void Insert(int index, BezierKnot knot) {} // 0x0000000189CD691C-0x0000000189CD6974
+		public void Insert(int index, BezierKnot knot, TangentMode mode) {} // 0x0000000189CD68CC-0x0000000189CD691C
+		public void Insert(int index, BezierKnot knot, TangentMode mode, float tension) {} // 0x0000000189CD6724-0x0000000189CD68CC
+		public void RemoveAt(int index) {} // 0x0000000189CD6974-0x0000000189CD6A90
+		public void SetKnot(int index, BezierKnot value, BezierTangent main = BezierTangent.Out /* Metadata: 0x01FDCCEB */) {} // 0x0000000189CD7038-0x0000000189CD70C4
+		public void SetKnotNoNotify(int index, BezierKnot value, BezierTangent main = BezierTangent.Out /* Metadata: 0x01FDCCEC */) {} // 0x0000000189CD6EDC-0x0000000189CD7038
+		public BezierCurve GetCurve(int index) => default; // 0x0000000182E01FA0-0x0000000182E02140
+		public float GetCurveLength(int index) => default; // 0x0000000182E01C50-0x0000000182E01E20
+		public float GetLength() => default; // 0x0000000182E01930-0x0000000182E019D0
+		private DistanceToInterpolation[] GetCurveDistanceLut(int index) => default; // 0x0000000182E01760-0x0000000182E01840
+		public float GetCurveInterpolation(int curveIndex, float curveDistance) => default; // 0x0000000182E01310-0x0000000182E013A0
+		public IEnumerator<BezierKnot> GetEnumerator() => default; // 0x0000000189CD6598-0x0000000189CD6640
+		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189CD70C4-0x0000000189CD716C
+		public void Add(BezierKnot item) {} // 0x0000000189CD600C-0x0000000189CD6050
+		public void Add(BezierKnot item, TangentMode mode) {} // 0x0000000189CD6050-0x0000000189CD60C0
+		public void Clear() {} // 0x0000000189CD6444-0x0000000189CD64B8
+		public bool Contains(BezierKnot item) => default; // 0x0000000189CD64B8-0x0000000189CD6534
+		public void CopyTo(BezierKnot[] array, int arrayIndex) {} // 0x0000000189CD6534-0x0000000189CD6598
+		public bool Remove(BezierKnot item) => default; // 0x0000000189CD6A90-0x0000000189CD6B24
+		internal void CacheKnotOperationCurves(int index) {} // 0x0000000189CD63BC-0x0000000189CD6444
 	}
 
 	[AddComponentMenu("Splines/Spline")]
@@ -433,11 +441,11 @@ namespace UnityEngine.Splines
 		private List<int> m_AddedSplinesIndices; // 0x40
 	
 		// Properties
-		public IReadOnlyList<Spline> Splines { get => default; set {} } // 0x0000000189CD421C-0x0000000189CD42A8 0x0000000183D4EAC0-0x0000000183D4EAD0
-		public KnotLinkCollection KnotLinkCollection { get => default; } // 0x0000000189CD442C-0x0000000189CD44A4 
-		public Spline this[int index] { get => default; } // 0x0000000189CD43B4-0x0000000189CD442C 
-		private bool IsScaled { get => default; } // 0x0000000189CD4CEC-0x0000000189CD4D34 
-		public Spline Spline { get => default; set {} } // 0x0000000189CD4150-0x0000000189CD4180 0x0000000189CD4180-0x0000000189CD421C
+		public IReadOnlyList<Spline> Splines { get => default; set {} } // 0x0000000189CD4A94-0x0000000189CD4B08 0x0000000189CD4D34-0x0000000189CD541C
+		public KnotLinkCollection KnotLinkCollection { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		public Spline this[int index] { get => default; } // 0x0000000189CD4A34-0x0000000189CD4A60 
+		private bool IsScaled { get => default; } // 0x0000000189CD49A4-0x0000000189CD4A34 
+		public Spline Spline { get => default; set {} } // 0x0000000189CD4A60-0x0000000189CD4A94 0x0000000189CD4CEC-0x0000000189CD4D34
 	
 		// Events
 		public static event Action<SplineContainer, int> SplineAdded;
@@ -445,54 +453,54 @@ namespace UnityEngine.Splines
 		public static event Action<SplineContainer, int, int> SplineReordered;
 	
 		// Constructors
-		public SplineContainer() {} // 0x0000000189CD7608-0x0000000189CD7660
+		public SplineContainer() {} // 0x0000000189CD4604-0x0000000189CD47C0
 	
 		// Methods
-		private static int IndexOf(IReadOnlyList<Spline> self, Spline elementToFind) => default; // 0x0000000189CD4A34-0x0000000189CD4A60
-		private void OnEnable() {} // 0x0000000189CD4528-0x0000000189CD4604
-		private void OnDisable() {} // 0x0000000189CD44A4-0x0000000189CD4528
-		private void OnSplineChanged(Spline spline, int index, SplineModification modificationType) {} // 0x0000000189CD49A4-0x0000000189CD4A34
-		private void OnKnotModified(Spline spline, int index) {} // 0x0000000189CD4A60-0x0000000189CD4A94
+		private static int IndexOf(IReadOnlyList<Spline> self, Spline elementToFind) => default; // 0x0000000189CD421C-0x0000000189CD42A8
+		private void OnEnable() {} // 0x0000000189CD442C-0x0000000189CD44A4
+		private void OnDisable() {} // 0x0000000189CD43B4-0x0000000189CD442C
+		private void OnSplineChanged(Spline spline, int index, SplineModification modificationType) {} // 0x0000000189CD4528-0x0000000189CD4604
+		private void OnKnotModified(Spline spline, int index) {} // 0x0000000189CD44A4-0x0000000189CD4528
 		public bool Evaluate(float t, out float3 position, out float3 tangent, out float3 upVector) {
 			position = default;
 			tangent = default;
 			upVector = default;
 			return default;
-		}
+		} // 0x0000000189CD4150-0x0000000189CD4180
 		public bool Evaluate(int splineIndex, float t, out float3 position, out float3 tangent, out float3 upVector) {
 			position = default;
 			tangent = default;
 			upVector = default;
 			return default;
-		} // 0x0000000189CD3E8C-0x0000000189CD3EC8
+		} // 0x0000000189CD4180-0x0000000189CD421C
 		public bool Evaluate<T>(T spline, float t, out float3 position, out float3 tangent, out float3 upVector)
 			where T : ISpline {
 			position = default;
 			tangent = default;
 			upVector = default;
 			return default;
-		} // 0x0000000189CD3E30-0x0000000189CD3E8C
-		public float3 EvaluatePosition(float t) => default; // 0x0000000189CD3EC8-0x0000000189CD3F78
-		public Vector3 EvaluatePositionV3(float t) => default;
-		public float3 EvaluatePosition(int splineIndex, float t) => default; // 0x0000000189CD4028-0x0000000189CD4064
+		}
+		public float3 EvaluatePosition(float t) => default; // 0x0000000189CD3E8C-0x0000000189CD3EC8
+		public Vector3 EvaluatePositionV3(float t) => default; // 0x0000000189CD3E30-0x0000000189CD3E8C
+		public float3 EvaluatePosition(int splineIndex, float t) => default; // 0x0000000189CD3EC8-0x0000000189CD3F78
 		public float3 EvaluatePosition<T>(T spline, float t)
-			where T : ISpline => default; // 0x0000000189CD3F78-0x0000000189CD4028
-		public float3 EvaluateTangent(float t) => default;
-		public float3 EvaluateTangent(int splineIndex, float t) => default; // 0x0000000189CD4114-0x0000000189CD4150
+			where T : ISpline => default;
+		public float3 EvaluateTangent(float t) => default; // 0x0000000189CD4028-0x0000000189CD4064
+		public float3 EvaluateTangent(int splineIndex, float t) => default; // 0x0000000189CD3F78-0x0000000189CD4028
 		public float3 EvaluateTangent<T>(T spline, float t)
-			where T : ISpline => default; // 0x0000000189CD4064-0x0000000189CD4114
-		public float3 EvaluateUpVector(float t) => default;
-		public float3 EvaluateUpVector(int splineIndex, float t) => default; // 0x0000000189CD3DF4-0x0000000189CD3E30
+			where T : ISpline => default;
+		public float3 EvaluateUpVector(float t) => default; // 0x0000000189CD4114-0x0000000189CD4150
+		public float3 EvaluateUpVector(int splineIndex, float t) => default; // 0x0000000189CD4064-0x0000000189CD4114
 		public float3 EvaluateUpVector<T>(T spline, float t)
-			where T : ISpline => default; // 0x0000000189CD3D44-0x0000000189CD3DF4
-		public float3 EvaluateAcceleration(float t) => default;
-		public float3 EvaluateAcceleration(int splineIndex, float t) => default; // 0x0000000189CD3D38-0x0000000189CD3D44
+			where T : ISpline => default;
+		public float3 EvaluateAcceleration(float t) => default; // 0x0000000189CD3DF4-0x0000000189CD3E30
+		public float3 EvaluateAcceleration(int splineIndex, float t) => default; // 0x0000000189CD3D44-0x0000000189CD3DF4
 		public float3 EvaluateAcceleration<T>(T spline, float t)
-			where T : ISpline => default; // 0x0000000189CD3C34-0x0000000189CD3D38
-		public float CalculateLength() => default; // 0x000000018350B670-0x000000018350B680
-		public float CalculateLength(int splineIndex) => default; // 0x0000000189CD42A8-0x0000000189CD43B4
-		public void OnBeforeSerialize() {} // 0x0000000189CD4604-0x0000000189CD47C0
-		public void OnAfterDeserialize() {} // 0x000000018350B670-0x000000018350B680
+			where T : ISpline => default;
+		public float CalculateLength() => default; // 0x0000000189CD3D38-0x0000000189CD3D44
+		public float CalculateLength(int splineIndex) => default; // 0x0000000189CD3C34-0x0000000189CD3D38
+		public void OnBeforeSerialize() {} // 0x000000018350B670-0x000000018350B680
+		public void OnAfterDeserialize() {} // 0x0000000189CD42A8-0x0000000189CD43B4
 	}
 
 	public enum PathIndexUnit // TypeDefIndex: 59068
@@ -643,11 +651,11 @@ namespace UnityEngine.Splines
 			public Segment(float start, float length) {
 				this.start = default;
 				this.length = default;
-			}
+			} // 0x0000000183D50430-0x0000000183D50440
 		}
 	
 		// Methods
-		public static int GetSubdivisionCount(float length, int resolution) => default;
+		public static int GetSubdivisionCount(float length, int resolution) => default; // 0x0000000189CD5F7C-0x0000000189CD5FD4
 		private static Segment GetNearestPoint<T>(T spline, float3 point, Segment range, out float distance, out float3 nearest, out float time, int segments)
 			where T : ISpline {
 			distance = default;
@@ -661,12 +669,12 @@ namespace UnityEngine.Splines
 			t = default;
 			return default;
 		}
-		internal static int PreviousIndex(int index, int count, bool wrap) => default; // 0x0000000189CD5FD4-0x0000000189CD5FF0
-		internal static int NextIndex(int index, int count, bool wrap) => default; // 0x0000000189CD5C58-0x0000000189CD5CDC
-		internal static float3 GetExplicitLinearTangent(float3 point, float3 to) => default; // 0x0000000189CD5940-0x0000000189CD5C58
-		public static float3 GetAutoSmoothTangent(float3 previous, float3 current, float3 next, float tension = 0.33333334f /* Metadata: 0x01FDCD47 */) => default; // 0x0000000189CD56F4-0x0000000189CD5940
-		public static BezierKnot GetAutoSmoothKnot(float3 position, float3 previous, float3 next, float3 normal, float width, float tension = 0.33333334f /* Metadata: 0x01FDCD4B */) => default; // 0x0000000189CD5CDC-0x0000000189CD5F7C
-		internal static quaternion GetKnotRotation(float3 tangent, float3 normal) => default;
+		internal static int PreviousIndex(int index, int count, bool wrap) => default; // 0x0000000189CD5FF0-0x0000000189CD600C
+		internal static int NextIndex(int index, int count, bool wrap) => default; // 0x0000000189CD5FD4-0x0000000189CD5FF0
+		internal static float3 GetExplicitLinearTangent(float3 point, float3 to) => default; // 0x0000000189CD5C58-0x0000000189CD5CDC
+		public static float3 GetAutoSmoothTangent(float3 previous, float3 current, float3 next, float tension = 0.33333334f /* Metadata: 0x01FDCD47 */) => default; // 0x0000000189CD5940-0x0000000189CD5C58
+		public static BezierKnot GetAutoSmoothKnot(float3 position, float3 previous, float3 next, float3 normal, float width, float tension = 0.33333334f /* Metadata: 0x01FDCD4B */) => default; // 0x0000000189CD56F4-0x0000000189CD5940
+		internal static quaternion GetKnotRotation(float3 tangent, float3 normal) => default; // 0x0000000189CD5CDC-0x0000000189CD5F7C
 		internal static bool IsIndexValid<T>(T container, SplineKnotIndex index)
 			where T : ISplineContainer => default;
 	
@@ -703,7 +711,7 @@ namespace UnityEngine.Splines
 		public static float CalculateLength<T>(this T spline, float4x4 transform)
 			where T : ISpline => default;
 		public static int GetCurveCount<T>(this T spline)
-			where T : ISpline => default; // 0x0000000189CD5F7C-0x0000000189CD5FD4
+			where T : ISpline => default;
 		public static int PreviousIndex<T>(this T spline, int index)
 			where T : ISpline => default;
 		public static int NextIndex<T>(this T spline, int index)
@@ -711,8 +719,8 @@ namespace UnityEngine.Splines
 		public static BezierKnot Previous<T>(this T spline, int index)
 			where T : ISpline => default;
 		public static BezierKnot Next<T>(this T spline, int index)
-			where T : ISpline => default; // 0x0000000189CD5FF0-0x0000000189CD600C
+			where T : ISpline => default;
 		public static void SetLinkedKnotPosition<T>(this T container, SplineKnotIndex index)
-			where T : ISplineContainer {} // 0x0000000183D50430-0x0000000183D50440
+			where T : ISplineContainer {}
 	}
 }

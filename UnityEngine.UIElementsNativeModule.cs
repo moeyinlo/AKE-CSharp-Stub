@@ -16,6 +16,163 @@ using UnityEngine.Rendering;
 using UnityEngine.Scripting;
 
 // Image 86: UnityEngine.UIElementsNativeModule.dll - Assembly: UnityEngine.UIElementsNativeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59225-59256
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
+[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
+[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
+[assembly: InternalsVisibleTo("UnityEngine")]
+[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
+[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
+[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
+[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
+[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
+[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
+[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
+[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
+[assembly: InternalsVisibleTo("Unity.Automation")]
+[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
+[assembly: InternalsVisibleTo("Unity.Analytics")]
+[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
+[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
+[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
+[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
+[assembly: InternalsVisibleTo("Unity.Burst")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
+[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
+[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
+[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
+[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.Timeline")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
+[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
+[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
+[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
+[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
+[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
+[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
+[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
+[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.UIElements")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
+[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
+[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
+[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
+[assembly: InternalsVisibleTo("UnityEngine.UI")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
+[assembly: InternalsVisibleTo("Unity.Services.QoS")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
+[assembly: InternalsVisibleTo("Unity.Logging")]
+[assembly: InternalsVisibleTo("Unity.Entities")]
+[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
+[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
+[assembly: InternalsVisibleTo("Unity.Runtime")]
+[assembly: InternalsVisibleTo("Unity.Core")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
+[assembly: InternalsVisibleTo("Unity.Collections")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
+[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
+[assembly: InternalsVisibleTo("UnityEngine.Networking")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
+[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
+[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: UnityEngineModuleAssembly]
 
 namespace UnityEngine.UIElements
 {
@@ -144,90 +301,90 @@ namespace UnityEngine.UIElements.UIR
 			private int elemStride;
 	
 			// Properties
-			public int ElementStride { get => default; } // 0x0000000189F625E4-0x0000000189F626B8 
-			internal IntPtr BufferPointer { get => default; } // 0x0000000189F629E0-0x0000000189F62AB4 
+			public int ElementStride { get => default; }
+			internal IntPtr BufferPointer { get => default; }
 	
 			// Constructors
 			public GPUBuffer() {} // Dummy constructor
 			public GPUBuffer(int elementCount, GPUBufferType type) {}
 	
 			// Methods
-			public void Dispose() {} // 0x0000000189F6278C-0x0000000189F62850
-			public void UpdateRanges(NativeSlice<GfxUpdateBufferRange> ranges, int rangesMin, int rangesMax) {} // 0x0000000189F62B88-0x0000000189F62C4C
+			public void Dispose() {}
+			public void UpdateRanges(NativeSlice<GfxUpdateBufferRange> ranges, int rangesMin, int rangesMax) {}
 		}
 	
 		// Constructors
 		public Utility() {} // Dummy constructor
-		static Utility() {} // 0x0000000189F61E08-0x0000000189F61E3C
+		static Utility() {} // 0x0000000189F62584-0x0000000189F625E4
 	
 		// Methods
 		public static void SetVectorArray<T>(MaterialPropertyBlock props, int name, NativeSlice<T> vector4s)
-			where T : struct {} // 0x0000000189F626B8-0x0000000189F6278C
+			where T : struct {}
 		[RequiredByNativeCode]
-		internal static void RaiseGraphicsResourcesRecreate(bool recreate) {} // 0x0000000189F621D4-0x0000000189F62230
+		internal static void RaiseGraphicsResourcesRecreate(bool recreate) {} // 0x0000000189F62068-0x0000000189F620C0
 		[RequiredByNativeCode]
-		internal static void RaiseEngineUpdate() {} // 0x0000000189F62178-0x0000000189F621D4
+		internal static void RaiseEngineUpdate() {} // 0x0000000189F61FA8-0x0000000189F62018
 		[RequiredByNativeCode]
-		internal static void RaiseFlushPendingResources() {} // 0x0000000189F61BC0-0x0000000189F61C10
+		internal static void RaiseFlushPendingResources() {} // 0x0000000189F62018-0x0000000189F62068
 		[RequiredByNativeCode]
-		internal static void RaiseRegisterIntermediateRenderers(Camera camera) {} // 0x0000000189F61D54-0x0000000189F61D88
+		internal static void RaiseRegisterIntermediateRenderers(Camera camera) {} // 0x0000000189F620C0-0x0000000189F6211C
 		[RequiredByNativeCode]
-		internal static void RaiseRenderNodeAdd(IntPtr userData) {} // 0x0000000189F624EC-0x0000000189F62550
+		internal static void RaiseRenderNodeAdd(IntPtr userData) {} // 0x0000000189F6211C-0x0000000189F62178
 		[RequiredByNativeCode]
-		internal static void RaiseRenderNodeExecute(IntPtr userData) {} // 0x0000000189F62460-0x0000000189F624C0
+		internal static void RaiseRenderNodeExecute(IntPtr userData) {} // 0x0000000189F621D4-0x0000000189F62230
 		[RequiredByNativeCode]
-		internal static void RaiseRenderNodeCleanup(IntPtr userData) {} // 0x0000000189F61E90-0x0000000189F61EC4
+		internal static void RaiseRenderNodeCleanup(IntPtr userData) {} // 0x0000000189F62178-0x0000000189F621D4
 		[ThreadSafe]
-		private static IntPtr AllocateBuffer(int elementCount, int elementStride, bool vertexBuffer) => default; // 0x0000000189F62298-0x0000000189F6236C
+		private static IntPtr AllocateBuffer(int elementCount, int elementStride, bool vertexBuffer) => default; // 0x0000000189F61BC0-0x0000000189F61C10
 		[ThreadSafe]
-		private static void FreeBuffer(IntPtr buffer) {} // 0x0000000189F61CF0-0x0000000189F61D54
+		private static void FreeBuffer(IntPtr buffer) {} // 0x0000000189F61D54-0x0000000189F61D88
 		[ThreadSafe]
-		private static void UpdateBufferRanges(IntPtr buffer, IntPtr ranges, int rangeCount, int writeRangeStart, int writeRangeEnd) {} // 0x0000000189F6236C-0x0000000189F623A0
+		private static void UpdateBufferRanges(IntPtr buffer, IntPtr ranges, int rangeCount, int writeRangeStart, int writeRangeEnd) {} // 0x0000000189F624EC-0x0000000189F62550
 		[ThreadSafe]
-		private static void SetVectorArray(MaterialPropertyBlock props, int name, IntPtr vector4s, int count) {} // 0x0000000189F623D4-0x0000000189F62420
+		private static void SetVectorArray(MaterialPropertyBlock props, int name, IntPtr vector4s, int count) {} // 0x0000000189F62460-0x0000000189F624C0
 		[ThreadSafe]
-		public static IntPtr GetVertexDeclaration(VertexAttributeDescriptor[] vertexAttributes) => default; // 0x0000000189F61CC4-0x0000000189F61CF0
-		public static void RegisterIntermediateRenderer(Camera camera, Material material, Matrix4x4 transform, Bounds aabb, int renderLayer, int shadowCasting, bool receiveShadows, int sameDistanceSortPriority, ulong sceneCullingMask, int rendererCallbackFlags, IntPtr userData, int userDataSize) {} // 0x0000000189F61C78-0x0000000189F61CC4
+		public static IntPtr GetVertexDeclaration(VertexAttributeDescriptor[] vertexAttributes) => default; // 0x0000000189F61E90-0x0000000189F61EC4
+		public static void RegisterIntermediateRenderer(Camera camera, Material material, Matrix4x4 transform, Bounds aabb, int renderLayer, int shadowCasting, bool receiveShadows, int sameDistanceSortPriority, ulong sceneCullingMask, int rendererCallbackFlags, IntPtr userData, int userDataSize) {} // 0x0000000189F62298-0x0000000189F6236C
 		[ThreadSafe]
-		public static unsafe void DrawRanges(IntPtr ib, IntPtr* vertexStreams, int streamCount, IntPtr ranges, int rangeCount, IntPtr vertexDecl) {} // 0x0000000189F62420-0x0000000189F62460
+		public static unsafe void DrawRanges(IntPtr ib, IntPtr* vertexStreams, int streamCount, IntPtr ranges, int rangeCount, IntPtr vertexDecl) {} // 0x0000000189F61CF0-0x0000000189F61D54
 		[ThreadSafe]
-		public static void SetPropertyBlock(MaterialPropertyBlock props) {} // 0x0000000189F61EC4-0x0000000189F61EF0
+		public static void SetPropertyBlock(MaterialPropertyBlock props) {} // 0x0000000189F6236C-0x0000000189F623A0
 		[ThreadSafe]
-		public static void SetScissorRect(RectInt scissorRect) {} // 0x0000000189F61EF0-0x0000000189F61F1C
+		public static void SetScissorRect(RectInt scissorRect) {} // 0x0000000189F623D4-0x0000000189F62420
 		[ThreadSafe]
-		public static void DisableScissor() {} // 0x0000000189F61C10-0x0000000189F61C44
+		public static void DisableScissor() {} // 0x0000000189F61CC4-0x0000000189F61CF0
 		[ThreadSafe]
-		public static IntPtr CreateStencilState(StencilState stencilState) => default; // 0x0000000189F62550-0x0000000189F62584
+		public static IntPtr CreateStencilState(StencilState stencilState) => default; // 0x0000000189F61C78-0x0000000189F61CC4
 		[ThreadSafe]
-		public static void SetStencilState(IntPtr stencilState, int stencilRef) {} // 0x0000000189F624C0-0x0000000189F624EC
+		public static void SetStencilState(IntPtr stencilState, int stencilRef) {} // 0x0000000189F62420-0x0000000189F62460
 		[ThreadSafe]
-		public static bool HasMappedBufferRange() => default; // 0x0000000189F61DBC-0x0000000189F61E08
+		public static bool HasMappedBufferRange() => default; // 0x0000000189F61EC4-0x0000000189F61EF0
 		[ThreadSafe]
-		public static uint InsertCPUFence() => default; // 0x0000000189F61F50-0x0000000189F61F7C
+		public static uint InsertCPUFence() => default; // 0x0000000189F61EF0-0x0000000189F61F1C
 		[ThreadSafe]
-		public static bool CPUFencePassed(uint fence) => default; // 0x0000000189F61F7C-0x0000000189F61FA8
+		public static bool CPUFencePassed(uint fence) => default; // 0x0000000189F61C10-0x0000000189F61C44
 		[ThreadSafe]
-		public static void WaitForCPUFencePassed(uint fence) {} // 0x0000000189F61F1C-0x0000000189F61F50
+		public static void WaitForCPUFencePassed(uint fence) {} // 0x0000000189F62550-0x0000000189F62584
 		[ThreadSafe]
-		public static void SyncRenderThread() {} // 0x0000000189F61E3C-0x0000000189F61E90
+		public static void SyncRenderThread() {} // 0x0000000189F624C0-0x0000000189F624EC
 		[ThreadSafe]
-		public static RectInt GetActiveViewport() => default; // 0x0000000189F62584-0x0000000189F625E4
+		public static RectInt GetActiveViewport() => default; // 0x0000000189F61DBC-0x0000000189F61E08
 		[ThreadSafe]
-		public static void ProfileDrawChainBegin() {} // 0x0000000189F62230-0x0000000189F62298
+		public static void ProfileDrawChainBegin() {} // 0x0000000189F61F50-0x0000000189F61F7C
 		[ThreadSafe]
-		public static void ProfileDrawChainEnd() {} // 0x0000000189F623A0-0x0000000189F623D4
-		public static void NotifyOfUIREvents(bool subscribe) {} // 0x0000000189F61C44-0x0000000189F61C78
+		public static void ProfileDrawChainEnd() {} // 0x0000000189F61F7C-0x0000000189F61FA8
+		public static void NotifyOfUIREvents(bool subscribe) {} // 0x0000000189F61F1C-0x0000000189F61F50
 		[ThreadSafe]
-		public static Matrix4x4 GetUnityProjectionMatrix() => default; // 0x0000000189F61D88-0x0000000189F61DBC
-		private static void RegisterIntermediateRenderer_Injected(Camera camera, Material material, ref Matrix4x4 transform, ref Bounds aabb, int renderLayer, int shadowCasting, bool receiveShadows, int sameDistanceSortPriority, ulong sceneCullingMask, int rendererCallbackFlags, IntPtr userData, int userDataSize) {}
-		private static void SetScissorRect_Injected(ref RectInt scissorRect) {}
-		private static IntPtr CreateStencilState_Injected(ref StencilState stencilState) => default;
+		public static Matrix4x4 GetUnityProjectionMatrix() => default; // 0x0000000189F61E3C-0x0000000189F61E90
+		private static void RegisterIntermediateRenderer_Injected(Camera camera, Material material, ref Matrix4x4 transform, ref Bounds aabb, int renderLayer, int shadowCasting, bool receiveShadows, int sameDistanceSortPriority, ulong sceneCullingMask, int rendererCallbackFlags, IntPtr userData, int userDataSize) {} // 0x0000000189F62230-0x0000000189F62298
+		private static void SetScissorRect_Injected(ref RectInt scissorRect) {} // 0x0000000189F623A0-0x0000000189F623D4
+		private static IntPtr CreateStencilState_Injected(ref StencilState stencilState) => default; // 0x0000000189F61C44-0x0000000189F61C78
 		private static void GetActiveViewport_Injected(out RectInt ret) {
 			ret = default;
-		}
+		} // 0x0000000189F61D88-0x0000000189F61DBC
 		private static void GetUnityProjectionMatrix_Injected(out Matrix4x4 ret) {
 			ret = default;
-		}
+		} // 0x0000000189F61E08-0x0000000189F61E3C
 	}
 }
 

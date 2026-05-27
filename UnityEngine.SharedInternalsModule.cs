@@ -227,3 +227,257 @@ namespace UnityEngine
 		public static string Format(string fmt, params object[] args) => default; // 0x0000000182E3A560-0x0000000182E3A5E0
 	}
 }
+
+namespace UnityEngine.Bindings
+{
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Interface | AttributeTargets.Delegate, Inherited = false)]
+	[VisibleToOtherModules]
+	internal class VisibleToOtherModulesAttribute : Attribute // TypeDefIndex: 59907
+	{
+		// Constructors
+		public VisibleToOtherModulesAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public VisibleToOtherModulesAttribute(params string[] modules) {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Method | AttributeTargets.Property)]
+	[VisibleToOtherModules]
+	internal class NativeConditionalAttribute : Attribute // TypeDefIndex: 59908
+	{
+		// Properties
+		public string Condition { get; set; } // 0x000000018426FEE0-0x000000018426FEF0
+		public string StubReturnStatement { get; set; } // 0x00000001822C3A90-0x00000001822C3AA0
+		public bool Enabled { get; set; } // 0x0000000183D4EFC0-0x0000000183D4EFD0
+	
+		// Constructors
+		public NativeConditionalAttribute() {} // Dummy constructor
+		public NativeConditionalAttribute(string condition) {} // 0x0000000183D4C380-0x0000000183D4C3A0
+		public NativeConditionalAttribute(string condition, string stubReturnStatement) {} // 0x0000000189E28BB4-0x0000000189E28BE4
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue, AllowMultiple = true)]
+	[VisibleToOtherModules]
+	internal class NativeHeaderAttribute : Attribute // TypeDefIndex: 59909
+	{
+		// Properties
+		public string Header { get; set; } // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Constructors
+		public NativeHeaderAttribute() {} // Dummy constructor
+		public NativeHeaderAttribute(string header) {} // 0x0000000183617700-0x0000000183617770
+	}
+
+	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field)]
+	[VisibleToOtherModules]
+	internal class NativeNameAttribute : Attribute // TypeDefIndex: 59910
+	{
+		// Properties
+		public string Name { get; set; } // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Constructors
+		public NativeNameAttribute() {} // Dummy constructor
+		public NativeNameAttribute(string name) {} // 0x0000000183CF6B60-0x0000000183CF6BD0
+	}
+
+	[AttributeUsage(AttributeTargets.Method)]
+	[VisibleToOtherModules]
+	internal sealed class NativeWritableSelfAttribute : Attribute // TypeDefIndex: 59911
+	{
+		// Properties
+		public bool WritableSelf { get; set; } // 0x0000000183D4E960-0x0000000183D4E970
+	
+		// Constructors
+		public NativeWritableSelfAttribute() {} // 0x0000000181168960-0x0000000181168970
+	}
+
+	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property)]
+	[VisibleToOtherModules]
+	internal class NativeMethodAttribute : Attribute // TypeDefIndex: 59912
+	{
+		// Properties
+		public string Name { get; set; } // 0x000000018426FEE0-0x000000018426FEF0
+		public bool IsThreadSafe { get; set; } // 0x0000000181002B40-0x0000000181002B50
+		public bool IsFreeFunction { get; set; } // 0x0000000183D4EFB0-0x0000000183D4EFC0
+		public bool ThrowsException { get; set; } // 0x0000000183D4EFD0-0x0000000183D4EFE0
+		public bool HasExplicitThis { get; set; } // 0x0000000183D522A0-0x0000000183D522B0
+	
+		// Constructors
+		public NativeMethodAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public NativeMethodAttribute(string name) {} // 0x0000000189E28C20-0x0000000189E28D38
+		public NativeMethodAttribute(string name, bool isFreeFunction) {} // 0x0000000189E28D38-0x0000000189E28D60
+		public NativeMethodAttribute(string name, bool isFreeFunction, bool isThreadSafe) {} // 0x0000000189E28BE4-0x0000000189E28C20
+	}
+
+	[VisibleToOtherModules]
+	internal enum TargetType // TypeDefIndex: 59913
+	{
+		Function = 0,
+		Field = 1
+	}
+
+	[AttributeUsage(AttributeTargets.Property)]
+	[VisibleToOtherModules]
+	internal class NativePropertyAttribute : NativeMethodAttribute // TypeDefIndex: 59914
+	{
+		// Properties
+		public UnityEngine.Bindings.TargetType TargetType { get; set; } // 0x0000000181003B60-0x0000000181003B70
+	
+		// Constructors
+		public NativePropertyAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public NativePropertyAttribute(string name) {} // 0x0000000189E28D60-0x0000000189E28D68
+		public NativePropertyAttribute(string name, bool isFree, UnityEngine.Bindings.TargetType targetType) {} // 0x0000000189E28D68-0x0000000189E28DA0
+		public NativePropertyAttribute(string name, bool isFree, UnityEngine.Bindings.TargetType targetType, bool isThreadSafe) {} // 0x0000000189E28DA0-0x0000000189E28DD4
+	}
+
+	[VisibleToOtherModules]
+	internal enum CodegenOptions // TypeDefIndex: 59915
+	{
+		Auto = 0,
+		Custom = 1,
+		Force = 2
+	}
+
+	[AttributeUsage(AttributeTargets.Class)]
+	[VisibleToOtherModules]
+	internal class NativeAsStructAttribute : Attribute // TypeDefIndex: 59916
+	{
+		// Constructors
+		public NativeAsStructAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum)]
+	[VisibleToOtherModules]
+	internal class NativeTypeAttribute : Attribute // TypeDefIndex: 59917
+	{
+		// Properties
+		public string Header { get; set; } // 0x000000018426FEE0-0x000000018426FEF0
+		public string IntermediateScriptingStructName { get; set; } // 0x00000001822C3A90-0x00000001822C3AA0
+		public CodegenOptions CodegenOptions { get; set; } // 0x0000000181003B60-0x0000000181003B70
+	
+		// Constructors
+		public NativeTypeAttribute() {} // 0x0000000183D4E2C0-0x0000000183D4E2D0
+		public NativeTypeAttribute(CodegenOptions codegenOptions) {} // 0x0000000181003B60-0x0000000181003B70
+		public NativeTypeAttribute(string header) {} // 0x0000000183CF35A0-0x0000000183CF3610
+		public NativeTypeAttribute(CodegenOptions codegenOptions, string intermediateStructName) {} // 0x0000000183D4D1F0-0x0000000183D4D200
+	}
+
+	[AttributeUsage(AttributeTargets.Parameter)]
+	[VisibleToOtherModules]
+	internal class NotNullAttribute : Attribute // TypeDefIndex: 59918
+	{
+		// Properties
+		public string Exception { get; set; } // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Constructors
+		public NotNullAttribute() {} // Dummy constructor
+		public NotNullAttribute(string exception = "ArgumentNullException" /* Metadata: 0x01FDD443 */) {} // 0x000000018426FEE0-0x000000018426FEF0
+	}
+
+	[AttributeUsage(AttributeTargets.Parameter)]
+	[VisibleToOtherModules]
+	internal class UnmarshalledAttribute : Attribute // TypeDefIndex: 59919
+	{
+		// Constructors
+		public UnmarshalledAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Method)]
+	[VisibleToOtherModules]
+	internal class FreeFunctionAttribute : NativeMethodAttribute // TypeDefIndex: 59920
+	{
+		// Constructors
+		public FreeFunctionAttribute() {} // 0x0000000183D5E9B0-0x0000000183D5E9C0
+		public FreeFunctionAttribute(string name) {} // 0x0000000189E28B78-0x0000000189E28B94
+		public FreeFunctionAttribute(string name, bool isThreadSafe) {} // 0x0000000189E28B94-0x0000000189E28BB4
+	}
+
+	[AttributeUsage(AttributeTargets.Method)]
+	[VisibleToOtherModules]
+	internal class ThreadSafeAttribute : NativeMethodAttribute // TypeDefIndex: 59921
+	{
+		// Constructors
+		public ThreadSafeAttribute() {} // 0x0000000183D587A0-0x0000000183D587B0
+	}
+
+	[VisibleToOtherModules]
+	internal enum StaticAccessorType // TypeDefIndex: 59922
+	{
+		Dot = 0,
+		Arrow = 1,
+		DoubleColon = 2,
+		ArrowWithDefaultReturnIfNull = 3
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Method | AttributeTargets.Property)]
+	[VisibleToOtherModules]
+	internal class StaticAccessorAttribute : Attribute // TypeDefIndex: 59923
+	{
+		// Properties
+		public string Name { get; set; } // 0x000000018426FEE0-0x000000018426FEF0
+		public StaticAccessorType Type { get; set; } // 0x0000000183D4E9C0-0x0000000183D4E9D0
+	
+		// Constructors
+		public StaticAccessorAttribute() {} // Dummy constructor
+		[VisibleToOtherModules]
+		internal StaticAccessorAttribute(string name) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public StaticAccessorAttribute(string name, StaticAccessorType type) {} // 0x0000000182738A30-0x0000000182738A50
+	}
+
+	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property)]
+	[VisibleToOtherModules]
+	internal class NativeThrowsAttribute : Attribute // TypeDefIndex: 59924
+	{
+		// Properties
+		public bool ThrowsException { get; set; } // 0x0000000183D4E960-0x0000000183D4E970
+	
+		// Constructors
+		public NativeThrowsAttribute() {} // 0x0000000181168960-0x0000000181168970
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	[VisibleToOtherModules]
+	internal class IgnoreAttribute : Attribute // TypeDefIndex: 59925
+	{
+		// Properties
+		public bool DoesNotContributeToSize { get; set; } // 0x0000000183D4E960-0x0000000183D4E970
+	
+		// Constructors
+		public IgnoreAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+	[VisibleToOtherModules]
+	internal class PreventReadOnlyInstanceModificationAttribute : Attribute // TypeDefIndex: 59926
+	{
+		// Constructors
+		public PreventReadOnlyInstanceModificationAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+}
+
+namespace UnityEngine.Scripting
+{
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Interface, Inherited = false)]
+	[VisibleToOtherModules]
+	internal class UsedByNativeCodeAttribute : Attribute // TypeDefIndex: 59927
+	{
+		// Properties
+		public string Name { get; set; } // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Constructors
+		public UsedByNativeCodeAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public UsedByNativeCodeAttribute(string name) {} // 0x000000018426FEE0-0x000000018426FEF0
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Interface, Inherited = false)]
+	[VisibleToOtherModules]
+	internal class RequiredByNativeCodeAttribute : Attribute // TypeDefIndex: 59928
+	{
+		// Properties
+		public string Name { get; set; } // 0x000000018426FEE0-0x000000018426FEF0
+		public bool Optional { get; set; } // 0x0000000181002B40-0x0000000181002B50
+		public bool GenerateProxy { get; set; } // 0x0000000183D4EFB0-0x0000000183D4EFC0
+	
+		// Constructors
+		public RequiredByNativeCodeAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public RequiredByNativeCodeAttribute(string name) {} // 0x000000018426FEE0-0x000000018426FEF0
+	}
+}

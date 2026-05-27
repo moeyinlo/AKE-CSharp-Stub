@@ -5,15 +5,30 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
+using System.Net;
+using System.Net.Cache;
 using System.Reflection;
 using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Serialization;
 using System.Xml.XPath;
 using System.Xml.Xsl;
+using System.Xml.Xsl.Runtime;
+using Microsoft.CSharp;
+using MS.Internal.Xml.Cache;
+using MS.Internal.Xml.XPath;
 
 // Image 9: System.Xml.dll - Assembly: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e - Types 42409-43161
 [assembly: AssemblyCompany("Mono development team")]
@@ -1947,5 +1962,16148 @@ namespace System
 		// Fields
 		public static readonly bool IgnoreEmptyKeySequences; // 0x00
 		public static readonly bool DontThrowOnInvalidSurrogatePairs; // 0x01
+	}
+}
+
+namespace System.Xml
+{
+	internal static class AsyncHelper // TypeDefIndex: 42415
+	{
+		// Fields
+		public static readonly System.Threading.Tasks.Task DoneTask; // 0x00
+		public static readonly Task<bool> DoneTaskTrue; // 0x08
+		public static readonly Task<bool> DoneTaskFalse; // 0x10
+		public static readonly Task<int> DoneTaskZero; // 0x18
+	
+		// Constructors
+		static AsyncHelper() {} // 0x00000001898560B8-0x00000001898561E4
+	}
+
+	internal abstract class Base64Encoder // TypeDefIndex: 42416
+	{
+		// Fields
+		private byte[] leftOverBytes; // 0x10
+		private int leftOverBytesCount; // 0x18
+		private char[] charsLine; // 0x20
+	
+		// Constructors
+		internal Base64Encoder() {} // 0x0000000189856724-0x000000018985676C
+	
+		// Methods
+		internal abstract void WriteChars(char[] chars, int index, int count);
+		internal void Encode(byte[] buffer, int index, int count) {} // 0x0000000189856300-0x0000000189856688
+		internal void Flush() {} // 0x0000000189856688-0x0000000189856724
+	}
+
+	internal class XmlRawWriterBase64Encoder : Base64Encoder // TypeDefIndex: 42417
+	{
+		// Fields
+		private XmlRawWriter rawWriter; // 0x28
+	
+		// Constructors
+		public XmlRawWriterBase64Encoder() {} // Dummy constructor
+		internal XmlRawWriterBase64Encoder(XmlRawWriter rawWriter) {} // 0x000000018985DC48-0x000000018985DC78
+	
+		// Methods
+		internal override void WriteChars(char[] chars, int index, int count) {} // 0x000000018985DC18-0x000000018985DC48
+	}
+
+	internal class XmlTextWriterBase64Encoder : Base64Encoder // TypeDefIndex: 42418
+	{
+		// Fields
+		private XmlTextEncoder xmlTextEncoder; // 0x28
+	
+		// Constructors
+		public XmlTextWriterBase64Encoder() {} // Dummy constructor
+		internal XmlTextWriterBase64Encoder(XmlTextEncoder xmlTextEncoder) {} // 0x000000018985DC48-0x000000018985DC78
+	
+		// Methods
+		internal override void WriteChars(char[] chars, int index, int count) {} // 0x0000000189866B00-0x0000000189866E68
+	}
+
+	internal class BinHexDecoder : IncrementalReadDecoder // TypeDefIndex: 42419
+	{
+		// Fields
+		private byte[] buffer; // 0x10
+		private int curIndex; // 0x18
+		private int endIndex; // 0x1C
+		private bool hasHalfByteCached; // 0x20
+		private byte cachedHalfByte; // 0x21
+	
+		// Properties
+		internal override bool IsFull { get => default; } // 0x0000000189856D1C-0x0000000189856D28 
+	
+		// Constructors
+		public BinHexDecoder() {} // Dummy constructor
+	
+		// Methods
+		internal override int Decode(char[] chars, int startPos, int len) => default; // 0x0000000189856AF8-0x0000000189856D1C
+		public static byte[] Decode(char[] chars, bool allowOddChars) => default; // 0x000000018985676C-0x0000000189856970
+		private static unsafe void Decode(char* pChars, char* pCharsEndPos, byte* pBytes, byte* pBytesEndPos, ref bool hasHalfByteCached, ref byte cachedHalfByte, out int charsDecoded, out int bytesDecoded) {
+			charsDecoded = default;
+			bytesDecoded = default;
+		} // 0x0000000189856970-0x0000000189856AF8
+	}
+
+	internal static class BinHexEncoder // TypeDefIndex: 42420
+	{
+		// Methods
+		internal static void Encode(byte[] buffer, int index, int count, XmlWriter writer) {} // 0x0000000189856D28-0x0000000189856F68
+		internal static string Encode(byte[] inArray, int offsetIn, int count) => default; // 0x0000000189856F68-0x000000018985715C
+		private static int Encode(byte[] inArray, int offsetIn, int count, char[] outArray) => default; // 0x000000018985715C-0x000000018985728C
+	}
+
+	internal enum BinXmlToken // TypeDefIndex: 42421
+	{
+		NotImpl = -2,
+		EOF = -1,
+		Error = 0,
+		SQL_SMALLINT = 1,
+		SQL_INT = 2,
+		SQL_REAL = 3,
+		SQL_FLOAT = 4,
+		SQL_MONEY = 5,
+		SQL_BIT = 6,
+		SQL_TINYINT = 7,
+		SQL_BIGINT = 8,
+		SQL_UUID = 9,
+		SQL_DECIMAL = 10,
+		SQL_NUMERIC = 11,
+		SQL_BINARY = 12,
+		SQL_CHAR = 13,
+		SQL_NCHAR = 14,
+		SQL_VARBINARY = 15,
+		SQL_VARCHAR = 16,
+		SQL_NVARCHAR = 17,
+		SQL_DATETIME = 18,
+		SQL_SMALLDATETIME = 19,
+		SQL_SMALLMONEY = 20,
+		SQL_TEXT = 22,
+		SQL_IMAGE = 23,
+		SQL_NTEXT = 24,
+		SQL_UDT = 27,
+		XSD_KATMAI_TIMEOFFSET = 122,
+		XSD_KATMAI_DATETIMEOFFSET = 123,
+		XSD_KATMAI_DATEOFFSET = 124,
+		XSD_KATMAI_TIME = 125,
+		XSD_KATMAI_DATETIME = 126,
+		XSD_KATMAI_DATE = 127,
+		XSD_TIME = 129,
+		XSD_DATETIME = 130,
+		XSD_DATE = 131,
+		XSD_BINHEX = 132,
+		XSD_BASE64 = 133,
+		XSD_BOOLEAN = 134,
+		XSD_DECIMAL = 135,
+		XSD_BYTE = 136,
+		XSD_UNSIGNEDSHORT = 137,
+		XSD_UNSIGNEDINT = 138,
+		XSD_UNSIGNEDLONG = 139,
+		XSD_QNAME = 140,
+		NmFlush = 233,
+		Extn = 234,
+		EndNest = 235,
+		Nest = 236,
+		XmlText = 237,
+		QName = 239,
+		Name = 240,
+		EndCData = 241,
+		CData = 242,
+		Comment = 243,
+		PI = 244,
+		EndAttrs = 245,
+		Attr = 246,
+		EndElem = 247,
+		Element = 248,
+		Subset = 249,
+		Public = 250,
+		System = 251,
+		DocType = 252,
+		Encoding = 253,
+		XmlDecl = 254
+	}
+
+	internal struct BinXmlSqlDecimal // TypeDefIndex: 42422
+	{
+		// Fields
+		internal byte m_bLen; // 0x00
+		internal byte m_bPrec; // 0x01
+		internal byte m_bScale; // 0x02
+		internal byte m_bSign; // 0x03
+		internal uint m_data1; // 0x04
+		internal uint m_data2; // 0x08
+		internal uint m_data3; // 0x0C
+		internal uint m_data4; // 0x10
+		private static readonly byte NUMERIC_MAX_PRECISION; // 0x00
+		private static readonly byte MaxPrecision; // 0x01
+		private static readonly byte MaxScale; // 0x02
+		private static readonly int x_cNumeMax; // 0x04
+		private static readonly long x_lInt32Base; // 0x08
+		private static readonly ulong x_ulInt32Base; // 0x10
+		private static readonly ulong x_ulInt32BaseForMod; // 0x18
+		internal static readonly ulong x_llMax; // 0x20
+		private static readonly double DUINT_BASE; // 0x28
+		private static readonly double DUINT_BASE2; // 0x30
+		private static readonly double DUINT_BASE3; // 0x38
+		private static readonly uint[] x_rgulShiftBase; // 0x40
+		private static readonly byte[] rgCLenFromPrec; // 0x48
+	
+		// Properties
+		public bool IsPositive { get => default; } // 0x0000000189859E24-0x0000000189859E2C 
+	
+		// Constructors
+		public BinXmlSqlDecimal(byte[] data, int offset, bool trim) : this() {
+			m_bLen = default;
+			m_bPrec = default;
+			m_bScale = default;
+			m_bSign = default;
+			m_data1 = default;
+			m_data2 = default;
+			m_data3 = default;
+			m_data4 = default;
+		} // 0x0000000189859C18-0x0000000189859E24
+		static BinXmlSqlDecimal() {
+			NUMERIC_MAX_PRECISION = default;
+			MaxPrecision = default;
+			MaxScale = default;
+			x_cNumeMax = default;
+			x_lInt32Base = default;
+			x_ulInt32Base = default;
+			x_ulInt32BaseForMod = default;
+			x_llMax = default;
+			DUINT_BASE = default;
+			DUINT_BASE2 = default;
+			DUINT_BASE3 = default;
+			x_rgulShiftBase = default;
+			rgCLenFromPrec = default;
+		} // 0x0000000189859A24-0x0000000189859C18
+	
+		// Methods
+		private static uint UIntFromByteArray(byte[] data, int offset) => default; // 0x0000000189183C00-0x0000000189183C70
+		private static void MpDiv1(uint[] rgulU, ref int ciulU, uint iulD, out uint iulR) {
+			iulR = default;
+		} // 0x000000018985947C-0x0000000189859554
+		private static void MpNormalize(uint[] rgulU, ref int ciulU) {} // 0x00000001897F17A0-0x00000001897F17D8
+		private static char ChFromDigit(uint uiDigit) => default; // 0x0000000183D754F0-0x0000000183D75500
+		public decimal ToDecimal() => default; // 0x0000000189859554-0x0000000189859658
+		private void TrimTrailingZeros() {} // 0x00000001898598A8-0x0000000189859A24
+		public override string ToString() => default; // 0x0000000189859658-0x00000001898598A8
+	}
+
+	internal struct BinXmlSqlMoney // TypeDefIndex: 42423
+	{
+		// Fields
+		private long data; // 0x00
+	
+		// Constructors
+		public BinXmlSqlMoney(int v) {
+			data = default;
+		} // 0x0000000183D5CCB0-0x0000000183D5CCC0
+		public BinXmlSqlMoney(long v) {
+			data = default;
+		} // 0x0000000183D51730-0x0000000183D51740
+	
+		// Methods
+		public decimal ToDecimal() => default; // 0x0000000189859E2C-0x0000000189859E74
+		public override string ToString() => default; // 0x0000000189859E74-0x0000000189859F0C
+	}
+
+	internal abstract class BinXmlDateTime // TypeDefIndex: 42424
+	{
+		// Fields
+		internal static int[] KatmaiTimeScaleMultiplicator; // 0x00
+		private static readonly double SQLTicksPerMillisecond; // 0x08
+		public static readonly int SQLTicksPerSecond; // 0x10
+		public static readonly int SQLTicksPerMinute; // 0x14
+		public static readonly int SQLTicksPerHour; // 0x18
+		private static readonly int SQLTicksPerDay; // 0x1C
+	
+		// Constructors
+		protected BinXmlDateTime() {} // Dummy constructor
+		static BinXmlDateTime() {} // 0x000000018985937C-0x000000018985947C
+	
+		// Methods
+		private static void Write2Dig(StringBuilder sb, int val) {} // 0x0000000189237F4C-0x0000000189237FC0
+		private static void Write4DigNeg(StringBuilder sb, int val) {} // 0x0000000189858058-0x00000001898580FC
+		private static void Write3Dec(StringBuilder sb, int val) {} // 0x0000000189857F8C-0x0000000189858058
+		private static void WriteDate(StringBuilder sb, int yr, int mnth, int day) {} // 0x00000001898580FC-0x00000001898581A8
+		private static void WriteTime(StringBuilder sb, int hr, int min, int sec, int ms) {} // 0x000000018985855C-0x000000018985862C
+		private static void WriteTimeFullPrecision(StringBuilder sb, int hr, int min, int sec, int fraction) {} // 0x00000001898581A8-0x0000000189858364
+		private static void WriteTimeZone(StringBuilder sb, TimeSpan zone) {} // 0x0000000189858430-0x000000018985855C
+		private static void WriteTimeZone(StringBuilder sb, bool negTimeZone, int hr, int min) {} // 0x0000000189858364-0x0000000189858430
+		private static void BreakDownXsdDateTime(long val, out int yr, out int mnth, out int day, out int hr, out int min, out int sec, out int ms) {
+			yr = default;
+			mnth = default;
+			day = default;
+			hr = default;
+			min = default;
+			sec = default;
+			ms = default;
+		} // 0x000000018985728C-0x00000001898574B4
+		private static void BreakDownXsdDate(long val, out int yr, out int mnth, out int day, out bool negTimeZone, out int hr, out int min) {
+			yr = default;
+			mnth = default;
+			day = default;
+			negTimeZone = default;
+			hr = default;
+			min = default;
+		} // 0x00000001898574B4-0x000000018985767C
+		private static void BreakDownXsdTime(long val, out int hr, out int min, out int sec, out int ms) {
+			hr = default;
+			min = default;
+			sec = default;
+			ms = default;
+		} // 0x000000018985767C-0x00000001898577C8
+		public static string XsdDateTimeToString(long val) => default; // 0x000000018985862C-0x0000000189858764
+		public static string XsdDateToString(long val) => default; // 0x0000000189858764-0x0000000189858868
+		public static string XsdTimeToString(long val) => default; // 0x0000000189859294-0x000000018985937C
+		public static string SqlDateTimeToString(int dateticks, uint timeticks) => default; // 0x0000000189857D94-0x0000000189857E74
+		public static System.DateTime SqlDateTimeToDateTime(int dateticks, uint timeticks) => default; // 0x0000000189857CD0-0x0000000189857D94
+		public static string SqlSmallDateTimeToString(short dateticks, ushort timeticks) => default; // 0x0000000189857ED8-0x0000000189857F8C
+		public static System.DateTime SqlSmallDateTimeToDateTime(short dateticks, ushort timeticks) => default; // 0x0000000189857E74-0x0000000189857ED8
+		public static System.DateTime XsdKatmaiDateToDateTime(byte[] data, int offset) => default; // 0x0000000189858E18-0x0000000189858E80
+		public static System.DateTime XsdKatmaiDateTimeToDateTime(byte[] data, int offset) => default; // 0x0000000189858C38-0x0000000189858CBC
+		public static System.DateTime XsdKatmaiTimeToDateTime(byte[] data, int offset) => default; // 0x000000018985912C-0x0000000189859184
+		public static DateTimeOffset XsdKatmaiDateOffsetToDateTimeOffset(byte[] data, int offset) => default; // 0x0000000189858868-0x00000001898588D8
+		public static DateTimeOffset XsdKatmaiDateTimeOffsetToDateTimeOffset(byte[] data, int offset) => default; // 0x00000001898589F4-0x0000000189858AA4
+		public static DateTimeOffset XsdKatmaiTimeOffsetToDateTimeOffset(byte[] data, int offset) => default; // 0x0000000189858F78-0x0000000189858FE8
+		public static string XsdKatmaiDateToString(byte[] data, int offset) => default; // 0x0000000189858E80-0x0000000189858F78
+		public static string XsdKatmaiDateTimeToString(byte[] data, int offset) => default; // 0x0000000189858CBC-0x0000000189858E18
+		public static string XsdKatmaiTimeToString(byte[] data, int offset) => default; // 0x0000000189859184-0x0000000189859294
+		public static string XsdKatmaiDateOffsetToString(byte[] data, int offset) => default; // 0x00000001898588D8-0x00000001898589F4
+		public static string XsdKatmaiDateTimeOffsetToString(byte[] data, int offset) => default; // 0x0000000189858AA4-0x0000000189858C38
+		public static string XsdKatmaiTimeOffsetToString(byte[] data, int offset) => default; // 0x0000000189858FE8-0x000000018985912C
+		private static long GetKatmaiDateTicks(byte[] data, ref int pos) => default; // 0x00000001898579E4-0x0000000189857A4C
+		private static long GetKatmaiTimeTicks(byte[] data, ref int pos) => default; // 0x0000000189857A4C-0x0000000189857C84
+		private static long GetKatmaiTimeZoneTicks(byte[] data, int pos) => default; // 0x0000000189857C84-0x0000000189857CD0
+		private static int GetFractions(System.DateTime dt) => default; // 0x00000001898578E4-0x00000001898579E4
+		private static int GetFractions(DateTimeOffset dt) => default; // 0x00000001898577C8-0x00000001898578E4
+	}
+
+	internal sealed class XmlSqlBinaryReader : XmlReader, IXmlNamespaceResolver // TypeDefIndex: 42432
+	{
+		// Fields
+		internal static readonly System.Type TypeOfObject; // 0x00
+		internal static readonly System.Type TypeOfString; // 0x08
+		private static System.Type[] TokenTypeMap; // 0x10
+		private static byte[] XsdKatmaiTimeScaleToValueLengthMap; // 0x18
+		private static System.Xml.ReadState[] ScanState2ReadState; // 0x20
+		private Stream inStrm; // 0x10
+		private byte[] data; // 0x18
+		private int pos; // 0x20
+		private int mark; // 0x24
+		private int end; // 0x28
+		private long offset; // 0x30
+		private bool eof; // 0x38
+		private bool sniffed; // 0x39
+		private bool isEmpty; // 0x3A
+		private int docState; // 0x3C
+		private SymbolTables symbolTables; // 0x40
+		private XmlNameTable xnt; // 0x60
+		private bool xntFromSettings; // 0x68
+		private string xml; // 0x70
+		private string xmlns; // 0x78
+		private string nsxmlns; // 0x80
+		private string baseUri; // 0x88
+		private ScanState state; // 0x90
+		private XmlNodeType nodetype; // 0x94
+		private BinXmlToken token; // 0x98
+		private int attrIndex; // 0x9C
+		private QName qnameOther; // 0xA0
+		private QName qnameElement; // 0xB8
+		private XmlNodeType parentNodeType; // 0xD0
+		private ElemInfo[] elementStack; // 0xD8
+		private int elemDepth; // 0xE0
+		private AttrInfo[] attributes; // 0xE8
+		private int[] attrHashTbl; // 0xF0
+		private int attrCount; // 0xF8
+		private int posAfterAttrs; // 0xFC
+		private bool xmlspacePreserve; // 0x100
+		private int tokLen; // 0x104
+		private int tokDataPos; // 0x108
+		private bool hasTypedValue; // 0x10C
+		private System.Type valueType; // 0x110
+		private string stringValue; // 0x118
+		private Dictionary<string, NamespaceDecl> namespaces; // 0x120
+		private NestedBinXml prevNameInfo; // 0x128
+		private XmlReader textXmlReader; // 0x130
+		private bool closeInput; // 0x138
+		private bool checkCharacters; // 0x139
+		private bool ignoreWhitespace; // 0x13A
+		private bool ignorePIs; // 0x13B
+		private bool ignoreComments; // 0x13C
+		private DtdProcessing dtdProcessing; // 0x140
+		private SecureStringHasher hasher; // 0x148
+		private XmlCharType xmlCharType; // 0x150
+		private Encoding unicode; // 0x158
+		private byte version; // 0x160
+	
+		// Properties
+		public override XmlReaderSettings Settings { get => default; } // 0x0000000189866794-0x0000000189866898 
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D5B3A0-0x0000000183D5B3B0 
+		public override string LocalName { get => default; } // 0x0000000183D4EB10-0x0000000183D4EB20 
+		public override string NamespaceURI { get => default; } // 0x0000000183D4EAD0-0x0000000183D4EAE0 
+		public override string Prefix { get => default; } // 0x0000000183D4EA80-0x0000000183D4EA90 
+		public override bool HasValue { get => default; } // 0x00000001898666A4-0x0000000189866714 
+		public override string Value { get => default; } // 0x0000000189866898-0x00000001898669FC 
+		public override int Depth { get => default; } // 0x0000000189866600-0x0000000189866698 
+		public override string BaseURI { get => default; } // 0x0000000183D4EA60-0x0000000183D4EA70 
+		public override bool IsEmptyElement { get => default; } // 0x0000000189866714-0x0000000189866728 
+		public override XmlSpace XmlSpace { get => default; } // 0x0000000189866A94-0x0000000189866B00 
+		public override string XmlLang { get => default; } // 0x00000001898669FC-0x0000000189866A94 
+		public override System.Type ValueType { get => default; } // 0x0000000183D56CF0-0x0000000183D56D00 
+		public override int AttributeCount { get => default; } // 0x00000001898665AC-0x0000000189866600 
+		public override bool EOF { get => default; } // 0x0000000189866698-0x00000001898666A4 
+		public override XmlNameTable NameTable { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+		public override System.Xml.ReadState ReadState { get => default; } // 0x0000000189866728-0x0000000189866794 
+	
+		// Nested types
+		private enum ScanState // TypeDefIndex: 42425
+		{
+			Doc = 0,
+			XmlText = 1,
+			Attr = 2,
+			AttrVal = 3,
+			AttrValPseudoValue = 4,
+			Init = 5,
+			Error = 6,
+			EOF = 7,
+			Closed = 8
+		}
+	
+		internal struct QName // TypeDefIndex: 42426
+		{
+			// Fields
+			public string prefix; // 0x00
+			public string localname; // 0x08
+			public string namespaceUri; // 0x10
+	
+			// Constructors
+			public QName(string prefix, string lname, string nsUri) {
+				this.prefix = default;
+				localname = default;
+				namespaceUri = default;
+			} // 0x000000018314F010-0x000000018314F040
+	
+			// Methods
+			public void Set(string prefix, string lname, string nsUri) {} // 0x000000018314F010-0x000000018314F040
+			public void Clear() {} // 0x000000018985D7B8-0x000000018985D818
+			public bool MatchNs(string lname, string nsUri) => default; // 0x000000018985D940-0x000000018985D984
+			public bool MatchPrefix(string prefix, string lname) => default; // 0x000000018985D984-0x000000018985D9C8
+			public void CheckPrefixNS(string prefix, string namespaceUri) {} // 0x000000018985D6B4-0x000000018985D7B8
+			public override int GetHashCode() => default; // 0x000000018985D8A4-0x000000018985D8EC
+			public int GetNSHashCode(SecureStringHasher hasher) => default; // 0x000000018985D8EC-0x000000018985D940
+			public override bool Equals(object other) => default; // 0x000000018985D818-0x000000018985D8A4
+			public override string ToString() => default; // 0x000000018985D9C8-0x000000018985DA28
+			public static bool operator ==(QName a, QName b) => default; // 0x000000018985DA28-0x000000018985DAAC
+		}
+	
+		private struct ElemInfo // TypeDefIndex: 42427
+		{
+			// Fields
+			public QName name; // 0x00
+			public string xmlLang; // 0x18
+			public XmlSpace xmlSpace; // 0x20
+			public bool xmlspacePreserve; // 0x24
+			public NamespaceDecl nsdecls; // 0x28
+	
+			// Methods
+			public void Set(QName name, bool xmlspacePreserve) {} // 0x000000018985A93C-0x000000018985A97C
+			public NamespaceDecl Clear() => default; // 0x000000018985A918-0x000000018985A93C
+		}
+	
+		private struct AttrInfo // TypeDefIndex: 42428
+		{
+			// Fields
+			public QName name; // 0x00
+			public string val; // 0x18
+			public int contentPos; // 0x20
+			public int hashCode; // 0x24
+			public int prevHash; // 0x28
+	
+			// Methods
+			public void Set(QName n, string v) {} // 0x00000001898562C4-0x0000000189856300
+			public void Set(QName n, int pos) {} // 0x0000000189856288-0x00000001898562C4
+			public void GetLocalnameAndNamespaceUri(out string localname, out string namespaceUri) {
+				localname = default;
+				namespaceUri = default;
+			} // 0x0000000189856234-0x0000000189856260
+			public int GetLocalnameAndNamespaceUriAndHash(SecureStringHasher hasher, out string localname, out string namespaceUri) {
+				localname = default;
+				namespaceUri = default;
+				return default;
+			} // 0x00000001898561F0-0x0000000189856234
+			public bool MatchNS(string localname, string namespaceUri) => default; // 0x0000000189856280-0x0000000189856288
+			public bool MatchHashNS(int hash, string localname, string namespaceUri) => default; // 0x0000000189856260-0x0000000189856280
+			public void AdjustPosition(int adj) {} // 0x00000001898561E4-0x00000001898561F0
+		}
+	
+		private class NamespaceDecl // TypeDefIndex: 42429
+		{
+			// Fields
+			public string prefix; // 0x10
+			public string uri; // 0x18
+			public NamespaceDecl scopeLink; // 0x20
+			public NamespaceDecl prevLink; // 0x28
+			public int scope; // 0x30
+			public bool implied; // 0x34
+	
+			// Constructors
+			public NamespaceDecl() {} // Dummy constructor
+			public NamespaceDecl(string prefix, string nsuri, NamespaceDecl nextInScope, NamespaceDecl prevDecl, int scope, bool implied) {} // 0x000000018985D620-0x000000018985D67C
+		}
+	
+		private struct SymbolTables // TypeDefIndex: 42430
+		{
+			// Fields
+			public string[] symtable; // 0x00
+			public int symCount; // 0x08
+			public QName[] qnametable; // 0x10
+			public int qnameCount; // 0x18
+	
+			// Methods
+			public void Init() {} // 0x000000018985DB64-0x000000018985DC18
+		}
+	
+		private class NestedBinXml // TypeDefIndex: 42431
+		{
+			// Fields
+			public SymbolTables symbolTables; // 0x10
+			public int docState; // 0x30
+			public NestedBinXml next; // 0x38
+	
+			// Constructors
+			public NestedBinXml() {} // Dummy constructor
+			public NestedBinXml(SymbolTables symbolTables, int docState, NestedBinXml next) {} // 0x000000018985D67C-0x000000018985D6B4
+		}
+	
+		// Constructors
+		public XmlSqlBinaryReader() {} // Dummy constructor
+		public XmlSqlBinaryReader(Stream stream, byte[] data, int len, string baseUri, bool closeInput, XmlReaderSettings settings) {} // 0x0000000189866080-0x00000001898665AC
+		static XmlSqlBinaryReader() {} // 0x0000000189865EC0-0x0000000189866080
+	
+		// Methods
+		public override string GetAttribute(string name, string ns) => default; // 0x000000018985F570-0x000000018985F674
+		public override string GetAttribute(string name) => default; // 0x000000018985F674-0x000000018985F6D8
+		public override string GetAttribute(int i) => default; // 0x000000018985F4D0-0x000000018985F570
+		public override bool MoveToAttribute(string name) => default; // 0x0000000189861934-0x00000001898619B0
+		public override void MoveToAttribute(int i) {} // 0x0000000189861884-0x0000000189861934
+		public override bool MoveToFirstAttribute() => default; // 0x0000000189861AA8-0x0000000189861B10
+		public override bool MoveToNextAttribute() => default; // 0x0000000189861B10-0x0000000189861B98
+		public override bool MoveToElement() => default; // 0x00000001898619B0-0x0000000189861AA8
+		public override bool ReadAttributeValue() => default; // 0x0000000189862498-0x000000018986261C
+		public override void Close() {} // 0x000000018985E618-0x000000018985E6B8
+		public override string LookupNamespace(string prefix) => default; // 0x00000001898617E0-0x0000000189861884
+		public override void ResolveEntity() {} // 0x000000018986344C-0x0000000189863498
+		public override bool Read() => default; // 0x0000000189863104-0x00000001898632DC
+		IDictionary<string, string> IXmlNamespaceResolver.GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x00000001898643AC-0x00000001898646D8
+		string IXmlNamespaceResolver.LookupPrefix(string namespaceName) => default; // 0x00000001898646D8-0x00000001898647C8
+		private void VerifyVersion(int requiredVersion, BinXmlToken token) {} // 0x0000000189865CA0-0x0000000189865CE8
+		private void AddInitNamespace(string prefix, string uri) {} // 0x000000018985DC78-0x000000018985DD88
+		private void AddName() {} // 0x000000018985DD88-0x000000018985DEB4
+		private void AddQName() {} // 0x000000018985DEB4-0x000000018985E178
+		private void NameFlush() {} // 0x0000000189861B98-0x0000000189861BF0
+		private void SkipExtn() {} // 0x0000000189864328-0x00000001898643AC
+		private int ReadQNameRef() => default; // 0x0000000189862FB0-0x0000000189863048
+		private int ReadNameRef() => default; // 0x0000000189862F18-0x0000000189862FB0
+		private bool FillAllowEOF() => default; // 0x000000018985E6B8-0x000000018985E8B8
+		private void Fill_(int require) {} // 0x000000018985E8B8-0x000000018985E92C
+		private void Fill(int require) {} // 0x000000018985E92C-0x000000018985E944
+		private byte ReadByte() => default; // 0x000000018986261C-0x0000000189862660
+		private ushort ReadUShort() => default; // 0x00000001898630A4-0x0000000189863104
+		private int ParseMB32() => default; // 0x0000000189861DE4-0x0000000189861E18
+		private int ParseMB32_(byte b) => default; // 0x0000000189861D24-0x0000000189861DE4
+		private int ParseMB32(int pos) => default; // 0x0000000189861E18-0x0000000189861F28
+		private int ParseMB64() => default; // 0x0000000189861DE4-0x0000000189861E18
+		private BinXmlToken PeekToken() => default; // 0x0000000189862024-0x000000018986207C
+		private BinXmlToken ReadToken() => default; // 0x0000000189863048-0x00000001898630A4
+		private BinXmlToken NextToken2(BinXmlToken token) => default; // 0x0000000189861C58-0x0000000189861CD0
+		private BinXmlToken NextToken1() => default; // 0x0000000189861BF0-0x0000000189861C58
+		private BinXmlToken NextToken() => default; // 0x0000000189861CD0-0x0000000189861D24
+		private BinXmlToken PeekNextToken() => default; // 0x0000000189862004-0x0000000189862024
+		private BinXmlToken RescanNextToken() => default; // 0x00000001898632DC-0x000000018986344C
+		private string ParseText() => default; // 0x0000000189861F28-0x0000000189862004
+		private int ScanText(out int start) {
+			start = default;
+			return default;
+		} // 0x00000001898640D8-0x00000001898641E0
+		private string GetString(int pos, int cch) => default; // 0x000000018985FA84-0x000000018985FC08
+		private string GetStringAligned(byte[] data, int offset, int cch) => default; // 0x000000018985FA4C-0x000000018985FA84
+		private string GetAttributeText(int i) => default; // 0x000000018985F32C-0x000000018985F4D0
+		private int LocateAttribute(string name, string ns) => default; // 0x00000001898616B0-0x000000018986172C
+		private int LocateAttribute(string name) => default; // 0x000000018986172C-0x00000001898617E0
+		private void PositionOnAttribute(int i) {} // 0x0000000189862130-0x0000000189862220
+		private void GrowElements() {} // 0x000000018985FE2C-0x000000018985FEC8
+		private void GrowAttributes() {} // 0x000000018985FD98-0x000000018985FE2C
+		private void ClearAttributes() {} // 0x000000018985E604-0x000000018985E618
+		private void PushNamespace(string prefix, string ns, bool implied) {} // 0x0000000189862220-0x0000000189862478
+		private void PopNamespaces(NamespaceDecl firstInScopeChain) {} // 0x000000018986207C-0x0000000189862130
+		private void GenerateImpliedXmlnsAttrs() {} // 0x000000018985EA28-0x000000018985EB90
+		private bool ReadInit(bool skipXmlDecl) => default; // 0x0000000189862A00-0x0000000189862F18
+		private void ScanAttributes() {} // 0x0000000189863498-0x0000000189863A18
+		private void SimpleCheckForDuplicateAttributes() {} // 0x00000001898641E0-0x0000000189864328
+		private void HashCheckForDuplicateAttributes() {} // 0x000000018985FEC8-0x000000018986015C
+		private string XmlDeclValue() => default; // 0x0000000189865CE8-0x0000000189865E04
+		private string CDATAValue() => default; // 0x000000018985E178-0x000000018985E2A4
+		private void FinishCDATA() {} // 0x000000018985E944-0x000000018985E9DC
+		private void FinishEndElement() {} // 0x000000018985E9DC-0x000000018985EA28
+		private bool ReadDoc() => default; // 0x0000000189862660-0x0000000189862A00
+		private void ImplReadData(BinXmlToken tokenType) {} // 0x00000001898601D0-0x000000018986036C
+		private void ImplReadElement() {} // 0x00000001898606E8-0x0000000189860940
+		private void ImplReadEndElement() {} // 0x0000000189860940-0x0000000189860A14
+		private void ImplReadDoctype() {} // 0x000000018986036C-0x00000001898606E8
+		private void ImplReadPI() {} // 0x0000000189860B44-0x0000000189860BC4
+		private void ImplReadComment() {} // 0x000000018986019C-0x00000001898601D0
+		private void ImplReadCDATA() {} // 0x000000018986015C-0x000000018986019C
+		private void ImplReadNest() {} // 0x0000000189860A6C-0x0000000189860B44
+		private void ImplReadEndNest() {} // 0x0000000189860A14-0x0000000189860A6C
+		private void ImplReadXmlText() {} // 0x0000000189860BC4-0x00000001898616B0
+		private void UpdateFromTextReader() {} // 0x00000001898649AC-0x0000000189864A84
+		private bool UpdateFromTextReader(bool needUpdate) => default; // 0x0000000189864A84-0x0000000189864AA4
+		private void CheckAllowContent() {} // 0x000000018985E2A4-0x000000018985E300
+		private void GenerateTokenTypeMap() {} // 0x000000018985EB90-0x000000018985F32C
+		private System.Type GetValueType(BinXmlToken token) => default; // 0x000000018985FC08-0x000000018985FCD0
+		private void ReScanOverValue(BinXmlToken token) {} // 0x0000000189862478-0x0000000189862498
+		private XmlNodeType ScanOverValue(BinXmlToken token, bool attr, bool checkChars) => default; // 0x0000000189863F74-0x00000001898640D8
+		private XmlNodeType ScanOverAnyValue(BinXmlToken token, bool attr, bool checkChars) => default; // 0x0000000189863A18-0x0000000189863F74
+		private XmlNodeType CheckText(bool attr) => default; // 0x000000018985E380-0x000000018985E5AC
+		private XmlNodeType CheckTextIsWS() => default; // 0x000000018985E300-0x000000018985E380
+		private void CheckValueTokenBounds() {} // 0x000000018985E5AC-0x000000018985E604
+		private int GetXsdKatmaiTokenLength(BinXmlToken token) => default; // 0x000000018985FCD0-0x000000018985FD98
+		private int XsdKatmaiTimeScaleToValueLength(byte scale) => default; // 0x0000000189865E04-0x0000000189865EC0
+		private long ValueAsLong() => default; // 0x00000001898651D8-0x0000000189865448
+		private ulong ValueAsULong() => default; // 0x0000000189865C44-0x0000000189865CA0
+		private decimal ValueAsDecimal() => default; // 0x0000000189864D78-0x0000000189865024
+		private double ValueAsDouble() => default; // 0x0000000189865024-0x00000001898651D8
+		private string ValueAsDateTimeString() => default; // 0x0000000189864AA4-0x0000000189864D78
+		private string ValueAsString(BinXmlToken token) => default; // 0x0000000189865448-0x0000000189865C44
+		private short GetInt16(int pos) => default; // 0x000000018985F7FC-0x000000018985F844
+		private ushort GetUInt16(int pos) => default; // 0x000000018985F7FC-0x000000018985F844
+		private int GetInt32(int pos) => default; // 0x000000018985F844-0x000000018985F8BC
+		private uint GetUInt32(int pos) => default; // 0x000000018985F844-0x000000018985F8BC
+		private long GetInt64(int pos) => default; // 0x000000018985F8BC-0x000000018985F9D0
+		private ulong GetUInt64(int pos) => default; // 0x000000018985F8BC-0x000000018985F9D0
+		private float GetSingle(int offset) => default; // 0x000000018985F9D0-0x000000018985FA4C
+		private double GetDouble(int offset) => default; // 0x000000018985F6D8-0x000000018985F7FC
+		private Exception ThrowUnexpectedToken(BinXmlToken token) => default; // 0x0000000189864834-0x0000000189864870
+		private Exception ThrowXmlException(string res) => default; // 0x000000018986493C-0x00000001898649AC
+		private Exception ThrowXmlException(string res, string arg1, string arg2) => default; // 0x0000000189864870-0x000000018986493C
+		private Exception ThrowNotSupported(string res) => default; // 0x00000001898647C8-0x0000000189864834
+	}
+
+	internal class BitStack // TypeDefIndex: 42433
+	{
+		// Fields
+		private uint[] bitStack; // 0x10
+		private int stackPos; // 0x18
+		private uint curr; // 0x1C
+	
+		// Constructors
+		public BitStack() {} // 0x0000000183D75700-0x0000000183D75710
+	
+		// Methods
+		public void PushBit(bool bit) {} // 0x0000000189859F74-0x0000000189859FAC
+		public bool PopBit() => default; // 0x0000000189859F0C-0x0000000189859F34
+		public bool PeekBit() => default; // 0x000000018579B658-0x000000018579B660
+		private void PushCurr() {} // 0x0000000189859FAC-0x000000018985A088
+		private void PopCurr() {} // 0x0000000189859F34-0x0000000189859F74
+	}
+
+	internal static class Bits // TypeDefIndex: 42434
+	{
+		// Fields
+		private static readonly uint MASK_0101010101010101; // 0x00
+		private static readonly uint MASK_0011001100110011; // 0x04
+		private static readonly uint MASK_0000111100001111; // 0x08
+		private static readonly uint MASK_0000000011111111; // 0x0C
+		private static readonly uint MASK_1111111111111111; // 0x10
+	
+		// Constructors
+		static Bits() {} // 0x000000018985A174-0x000000018985A204
+	
+		// Methods
+		public static int Count(uint num) => default; // 0x000000018985A088-0x000000018985A124
+		public static int LeastPosition(uint num) => default; // 0x000000018985A124-0x000000018985A174
+	}
+
+	internal class ByteStack // TypeDefIndex: 42435
+	{
+		// Fields
+		private byte[] stack; // 0x10
+		private int growthRate; // 0x18
+		private int top; // 0x1C
+		private int size; // 0x20
+	
+		// Constructors
+		public ByteStack() {} // Dummy constructor
+		public ByteStack(int growthRate) {} // 0x000000018985A30C-0x000000018985A368
+	
+		// Methods
+		public void Push(byte data) {} // 0x000000018985A248-0x000000018985A30C
+		public byte Pop() => default; // 0x000000018985A204-0x000000018985A248
+	}
+
+	internal class CharEntityEncoderFallback : EncoderFallback // TypeDefIndex: 42436
+	{
+		// Fields
+		private CharEntityEncoderFallbackBuffer fallbackBuffer; // 0x10
+		private int[] textContentMarks; // 0x18
+		private int endMarkPos; // 0x20
+		private int curMarkPos; // 0x24
+		private int startOffset; // 0x28
+	
+		// Properties
+		public override int MaxCharCount { get => default; } // 0x0000000183D557A0-0x0000000183D557B0 
+		internal int StartOffset { set {} } // 0x0000000183D4EBA0-0x0000000183D4EBB0
+	
+		// Constructors
+		internal CharEntityEncoderFallback() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public override EncoderFallbackBuffer CreateFallbackBuffer() => default; // 0x000000018985A87C-0x000000018985A8F0
+		internal void Reset(int[] textContentMarks, int endMarkPos) {} // 0x000000018985A8F0-0x000000018985A918
+		internal bool CanReplaceAt(int index) => default; // 0x000000018985A824-0x000000018985A87C
+	}
+
+	internal class CharEntityEncoderFallbackBuffer : EncoderFallbackBuffer // TypeDefIndex: 42437
+	{
+		// Fields
+		private CharEntityEncoderFallback parent; // 0x30
+		private string charEntity; // 0x38
+		private int charEntityIndex; // 0x40
+	
+		// Properties
+		public override int Remaining { get => default; } // 0x000000018985A7FC-0x000000018985A824 
+	
+		// Constructors
+		public CharEntityEncoderFallbackBuffer() {} // Dummy constructor
+		internal CharEntityEncoderFallbackBuffer(CharEntityEncoderFallback parent) {} // 0x000000018985A794-0x000000018985A7FC
+	
+		// Methods
+		public override bool Fallback(char charUnknown, int index) => default; // 0x000000018985A368-0x000000018985A508
+		public override bool Fallback(char charUnknownHigh, char charUnknownLow, int index) => default; // 0x000000018985A508-0x000000018985A72C
+		public override char GetNextChar() => default; // 0x000000018985A72C-0x000000018985A77C
+		public override bool MovePrevious() => default; // 0x000000018985A77C-0x000000018985A794
+		public override void Reset() {} // 0x0000000183D59090-0x0000000183D590A0
+		private int SurrogateCharToUtf32(char highSurrogate, char lowSurrogate) => default; // 0x0000000183D75710-0x0000000183D75730
+	}
+
+	public enum ConformanceLevel // TypeDefIndex: 42438
+	{
+		Auto = 0,
+		Fragment = 1,
+		Document = 2
+	}
+
+	public enum DtdProcessing // TypeDefIndex: 42439
+	{
+		Prohibit = 0,
+		Ignore = 1,
+		Parse = 2
+	}
+
+	public enum EntityHandling // TypeDefIndex: 42440
+	{
+		ExpandEntities = 1,
+		ExpandCharEntities = 2
+	}
+
+	internal class HtmlEncodedRawTextWriter : XmlEncodedRawTextWriter // TypeDefIndex: 42441
+	{
+		// Fields
+		protected ByteStack elementScope; // 0xC0
+		protected ElementProperties currentElementProperties; // 0xC8
+		private AttributeProperties currentAttributeProperties; // 0xCC
+		private bool endsWithAmpersand; // 0xD0
+		private byte[] uriEscapingBuffer; // 0xD8
+		private string mediaType; // 0xE0
+		private bool doNotEscapeUriAttributes; // 0xE8
+		protected static TernaryTreeReadOnly elementPropertySearch; // 0x00
+		protected static TernaryTreeReadOnly attributePropertySearch; // 0x08
+	
+		// Constructors
+		public HtmlEncodedRawTextWriter() {} // Dummy constructor
+		public HtmlEncodedRawTextWriter(TextWriter writer, XmlWriterSettings settings) {} // 0x000000018985C27C-0x000000018985C2AC
+		public HtmlEncodedRawTextWriter(Stream stream, XmlWriterSettings settings) {} // 0x000000018985C2AC-0x000000018985C2DC
+	
+		// Methods
+		internal override void WriteXmlDeclaration(XmlStandalone standalone) {} // 0x000000018350B670-0x000000018350B680
+		internal override void WriteXmlDeclaration(string xmldecl) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x000000018985B1D4-0x000000018985B3EC
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x000000018985BD54-0x000000018985BE80
+		internal override void StartElementContent() {} // 0x000000018985B098-0x000000018985B0E8
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x000000018985B470-0x000000018985B568
+		internal override void WriteFullEndElement(string prefix, string localName, string ns) {} // 0x000000018985B5CC-0x000000018985B6C4
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x000000018985BBDC-0x000000018985BD54
+		public override void WriteEndAttribute() {} // 0x000000018985B3EC-0x000000018985B470
+		public override void WriteProcessingInstruction(string target, string text) {} // 0x000000018985BAC0-0x000000018985BBDC
+		public override void WriteString(string text) {} // 0x000000018985BE80-0x000000018985BEEC
+		public override void WriteEntityRef(string name) {} // 0x000000018985B568-0x000000018985B5CC
+		public override void WriteCharEntity(char ch) {} // 0x000000018985B0E8-0x000000018985B14C
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x000000018985BEEC-0x000000018985BF50
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x000000018985B14C-0x000000018985B1D4
+		private void Init(XmlWriterSettings settings) {} // 0x000000018985AE08-0x000000018985AFF8
+		protected void WriteMetaElement() {} // 0x000000018985B9C0-0x000000018985BAC0
+		protected unsafe void WriteHtmlElementTextBlock(char* pSrc, char* pSrcEnd) {} // 0x000000018985B998-0x000000018985B9C0
+		protected unsafe void WriteHtmlAttributeTextBlock(char* pSrc, char* pSrcEnd) {} // 0x000000018985B6C4-0x000000018985B71C
+		private unsafe void WriteHtmlAttributeText(char* pSrc, char* pSrcEnd) {} // 0x000000018985B71C-0x000000018985B998
+		private unsafe void WriteUriAttributeText(char* pSrc, char* pSrcEnd) {} // 0x000000018985BF50-0x000000018985C27C
+		private void OutputRestAmps() {} // 0x000000018985AFF8-0x000000018985B098
+	}
+
+	internal class HtmlEncodedRawTextWriterIndent : HtmlEncodedRawTextWriter // TypeDefIndex: 42442
+	{
+		// Fields
+		private int indentLevel; // 0xF0
+		private int endBlockPos; // 0xF4
+		private string indentChars; // 0xF8
+		private bool newLineOnAttributes; // 0x100
+	
+		// Constructors
+		public HtmlEncodedRawTextWriterIndent() {} // Dummy constructor
+		public HtmlEncodedRawTextWriterIndent(TextWriter writer, XmlWriterSettings settings) {} // 0x000000018985ADD8-0x000000018985AE08
+		public HtmlEncodedRawTextWriterIndent(Stream stream, XmlWriterSettings settings) {} // 0x000000018985ADA8-0x000000018985ADD8
+	
+		// Methods
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x000000018985AA58-0x000000018985AA88
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x000000018985ABE8-0x000000018985ADA8
+		internal override void StartElementContent() {} // 0x000000018985A9E4-0x000000018985AA58
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x000000018985AA88-0x000000018985AB20
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x000000018985AB6C-0x000000018985ABE8
+		protected override void FlushBuffer() {} // 0x000000018985A97C-0x000000018985A99C
+		private new void Init(XmlWriterSettings settings) {} // 0x000000018985A99C-0x000000018985A9E4
+		private void WriteIndent() {} // 0x000000018985AB20-0x000000018985AB6C
+	}
+
+	internal abstract class HtmlTernaryTree // TypeDefIndex: 42443
+	{
+		// Fields
+		internal static byte[] htmlElements; // 0x00
+		internal static byte[] htmlAttributes; // 0x08
+	
+		// Constructors
+		protected HtmlTernaryTree() {} // Dummy constructor
+		static HtmlTernaryTree() {} // 0x000000018985C2DC-0x000000018985C3C0
+	}
+
+	internal class HtmlUtf8RawTextWriter : XmlUtf8RawTextWriter // TypeDefIndex: 42444
+	{
+		// Fields
+		protected ByteStack elementScope; // 0x90
+		protected ElementProperties currentElementProperties; // 0x98
+		private AttributeProperties currentAttributeProperties; // 0x9C
+		private bool endsWithAmpersand; // 0xA0
+		private byte[] uriEscapingBuffer; // 0xA8
+		private string mediaType; // 0xB0
+		private bool doNotEscapeUriAttributes; // 0xB8
+		protected static TernaryTreeReadOnly elementPropertySearch; // 0x00
+		protected static TernaryTreeReadOnly attributePropertySearch; // 0x08
+	
+		// Constructors
+		public HtmlUtf8RawTextWriter() {} // Dummy constructor
+		public HtmlUtf8RawTextWriter(Stream stream, XmlWriterSettings settings) {} // 0x000000018985D5F0-0x000000018985D620
+	
+		// Methods
+		internal override void WriteXmlDeclaration(XmlStandalone standalone) {} // 0x000000018350B670-0x000000018350B680
+		internal override void WriteXmlDeclaration(string xmldecl) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x000000018985C74C-0x000000018985C93C
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x000000018985D174-0x000000018985D27C
+		internal override void StartElementContent() {} // 0x000000018985C648-0x000000018985C694
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x000000018985C9A0-0x000000018985CA6C
+		internal override void WriteFullEndElement(string prefix, string localName, string ns) {} // 0x000000018985CAD0-0x000000018985CB9C
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x000000018985D020-0x000000018985D174
+		public override void WriteEndAttribute() {} // 0x000000018985C93C-0x000000018985C9A0
+		public override void WriteProcessingInstruction(string target, string text) {} // 0x000000018985CF3C-0x000000018985D020
+		public override void WriteString(string text) {} // 0x000000018985D27C-0x000000018985D2BC
+		public override void WriteEntityRef(string name) {} // 0x000000018985CA6C-0x000000018985CAD0
+		public override void WriteCharEntity(char ch) {} // 0x000000018985C694-0x000000018985C6F8
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x000000018985D2BC-0x000000018985D320
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x000000018985C6F8-0x000000018985C74C
+		private void Init(XmlWriterSettings settings) {} // 0x000000018985C3C0-0x000000018985C5B0
+		protected void WriteMetaElement() {} // 0x000000018985CE3C-0x000000018985CF3C
+		protected unsafe void WriteHtmlElementTextBlock(char* pSrc, char* pSrcEnd) {} // 0x000000018985CE14-0x000000018985CE3C
+		protected unsafe void WriteHtmlAttributeTextBlock(char* pSrc, char* pSrcEnd) {} // 0x000000018985CB9C-0x000000018985CBF4
+		private unsafe void WriteHtmlAttributeText(char* pSrc, char* pSrcEnd) {} // 0x000000018985CBF4-0x000000018985CE14
+		private unsafe void WriteUriAttributeText(char* pSrc, char* pSrcEnd) {} // 0x000000018985D320-0x000000018985D5F0
+		private void OutputRestAmps() {} // 0x000000018985C5B0-0x000000018985C648
+	}
+
+	internal class HtmlUtf8RawTextWriterIndent : HtmlUtf8RawTextWriter // TypeDefIndex: 42445
+	{
+		// Fields
+		private int indentLevel; // 0xC0
+		private int endBlockPos; // 0xC4
+		private string indentChars; // 0xC8
+		private bool newLineOnAttributes; // 0xD0
+	
+		// Constructors
+		public HtmlUtf8RawTextWriterIndent() {} // Dummy constructor
+		public HtmlUtf8RawTextWriterIndent(Stream stream, XmlWriterSettings settings) {} // 0x000000018992DB04-0x000000018992DB34
+	
+		// Methods
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x000000018992D7E0-0x000000018992D810
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x000000018992D968-0x000000018992DB04
+		internal override void StartElementContent() {} // 0x000000018992D770-0x000000018992D7E0
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x000000018992D810-0x000000018992D8A8
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x000000018992D8F0-0x000000018992D968
+		protected override void FlushBuffer() {} // 0x000000018992D708-0x000000018992D728
+		private new void Init(XmlWriterSettings settings) {} // 0x000000018992D728-0x000000018992D770
+		private void WriteIndent() {} // 0x000000018992D8A8-0x000000018992D8F0
+	}
+
+	internal interface IDtdInfo // TypeDefIndex: 42446
+	{
+		// Properties
+		XmlQualifiedName Name { get; }
+		string InternalDtdSubset { get; }
+		bool HasDefaultAttributes { get; }
+		bool HasNonCDataAttributes { get; }
+	
+		// Methods
+		IDtdAttributeListInfo LookupAttributeList(string prefix, string localName);
+		IDtdEntityInfo LookupEntity(string name);
+	}
+
+	internal interface IDtdAttributeListInfo // TypeDefIndex: 42447
+	{
+		// Properties
+		bool HasNonCDataAttributes { get; }
+	
+		// Methods
+		IDtdAttributeInfo LookupAttribute(string prefix, string localName);
+		IEnumerable<IDtdDefaultAttributeInfo> LookupDefaultAttributes();
+	}
+
+	internal interface IDtdAttributeInfo // TypeDefIndex: 42448
+	{
+		// Properties
+		string Prefix { get; }
+		string LocalName { get; }
+		int LineNumber { get; }
+		int LinePosition { get; }
+		bool IsNonCDataType { get; }
+		bool IsDeclaredInExternal { get; }
+		bool IsXmlAttribute { get; }
+	}
+
+	internal interface IDtdDefaultAttributeInfo : IDtdAttributeInfo // TypeDefIndex: 42449
+	{
+		// Properties
+		string DefaultValueExpanded { get; }
+		object DefaultValueTyped { get; }
+		int ValueLineNumber { get; }
+		int ValueLinePosition { get; }
+	}
+
+	internal interface IDtdEntityInfo // TypeDefIndex: 42450
+	{
+		// Properties
+		string Name { get; }
+		bool IsExternal { get; }
+		bool IsDeclaredInExternal { get; }
+		bool IsUnparsedEntity { get; }
+		bool IsParameterEntity { get; }
+		string BaseUriString { get; }
+		string DeclaredUriString { get; }
+		string SystemId { get; }
+		string PublicId { get; }
+		string Text { get; }
+		int LineNumber { get; }
+		int LinePosition { get; }
+	}
+
+	internal interface IDtdParser // TypeDefIndex: 42451
+	{
+		// Methods
+		IDtdInfo ParseInternalDtd(IDtdParserAdapter adapter, bool saveInternalSubset);
+		IDtdInfo ParseFreeFloatingDtd(string baseUri, string docTypeName, string publicId, string systemId, string internalSubset, IDtdParserAdapter adapter);
+	}
+
+	internal interface IDtdParserAdapter // TypeDefIndex: 42452
+	{
+		// Properties
+		XmlNameTable NameTable { get; }
+		IXmlNamespaceResolver NamespaceResolver { get; }
+		System.Uri BaseUri { get; }
+		char[] ParsingBuffer { get; }
+		int ParsingBufferLength { get; }
+		int CurrentPosition { get; set; }
+		int LineNo { get; }
+		int LineStartPosition { get; }
+		bool IsEof { get; }
+		int EntityStackLength { get; }
+		bool IsEntityEolNormalized { get; }
+	
+		// Methods
+		int ReadData();
+		void OnNewLine(int pos);
+		int ParseNumericCharRef(StringBuilder internalSubsetBuilder);
+		int ParseNamedCharRef(bool expand, StringBuilder internalSubsetBuilder);
+		void ParsePI(StringBuilder sb);
+		void ParseComment(StringBuilder sb);
+		bool PushEntity(IDtdEntityInfo entity, out int entityId);
+		bool PopEntity(out IDtdEntityInfo oldEntity, out int newEntityId);
+		bool PushExternalSubset(string systemId, string publicId);
+		void PushInternalDtd(string baseUri, string internalDtd);
+		void OnSystemId(string systemId, LineInfo keywordLineInfo, LineInfo systemLiteralLineInfo);
+		void OnPublicId(string publicId, LineInfo keywordLineInfo, LineInfo publicLiteralLineInfo);
+		void Throw(Exception e);
+	}
+
+	internal interface IDtdParserAdapterWithValidation : IDtdParserAdapter // TypeDefIndex: 42453
+	{
+		// Properties
+		bool DtdValidation { get; }
+		IValidationEventHandling ValidationEventHandling { get; }
+	}
+
+	internal interface IDtdParserAdapterV1 : IDtdParserAdapterWithValidation // TypeDefIndex: 42454
+	{
+		// Properties
+		bool V1CompatibilityMode { get; }
+		bool Normalization { get; }
+		bool Namespaces { get; }
+	}
+
+	internal delegate void OnRemoveWriter(XmlRawWriter writer); // TypeDefIndex: 42455; 0x0000000182149960-0x0000000182149970
+
+	internal interface IValidationEventHandling // TypeDefIndex: 42456
+	{
+		// Properties
+		object EventHandler { get; }
+	
+		// Methods
+		void SendEvent(Exception exception, XmlSeverityType severity);
+	}
+
+	internal abstract class IncrementalReadDecoder // TypeDefIndex: 42457
+	{
+		// Properties
+		internal abstract bool IsFull { get; }
+	
+		// Constructors
+		protected IncrementalReadDecoder() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal abstract int Decode(char[] chars, int startPos, int len);
+	}
+
+	internal class IncrementalReadDummyDecoder : IncrementalReadDecoder // TypeDefIndex: 42458
+	{
+		// Properties
+		internal override bool IsFull { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+	
+		// Constructors
+		public IncrementalReadDummyDecoder() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal override int Decode(char[] chars, int startPos, int len) => default; // 0x0000000183D75970-0x0000000183D75980
+	}
+
+	[Flags]
+	public enum NamespaceHandling // TypeDefIndex: 42459
+	{
+		Default = 0,
+		OmitDuplicates = 1
+	}
+
+	public enum NewLineHandling // TypeDefIndex: 42460
+	{
+		Replace = 0,
+		Entitize = 1,
+		None = 2
+	}
+
+	internal class QueryOutputWriter : XmlRawWriter // TypeDefIndex: 42461
+	{
+		// Fields
+		private XmlRawWriter wrapped; // 0x28
+		private bool inCDataSection; // 0x30
+		private Dictionary<XmlQualifiedName, int> lookupCDataElems; // 0x38
+		private BitStack bitsCData; // 0x40
+		private XmlQualifiedName qnameCData; // 0x48
+		private bool outputDocType; // 0x50
+		private bool checkWellFormedDoc; // 0x51
+		private bool hasDocElem; // 0x52
+		private bool inAttr; // 0x53
+		private string systemId; // 0x58
+		private string publicId; // 0x60
+		private int depth; // 0x68
+	
+		// Properties
+		internal override IXmlNamespaceResolver NamespaceResolver { set {} } // 0x000000018992E810-0x000000018992E848
+		internal override bool SupportsNamespaceDeclarationInChunks { get => default; } // 0x000000018992E7EC-0x000000018992E810 
+	
+		// Constructors
+		public QueryOutputWriter() {} // Dummy constructor
+		public QueryOutputWriter(XmlRawWriter writer, XmlWriterSettings settings) {} // 0x000000018992E508-0x000000018992E7EC
+	
+		// Methods
+		internal override void WriteXmlDeclaration(XmlStandalone standalone) {} // 0x000000018992E4C0-0x000000018992E4E4
+		internal override void WriteXmlDeclaration(string xmldecl) {} // 0x000000018992E4E4-0x000000018992E508
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x000000018992DEE8-0x000000018992DF30
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x000000018992E1EC-0x000000018992E3B0
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x000000018992DF58-0x000000018992DFB4
+		internal override void WriteFullEndElement(string prefix, string localName, string ns) {} // 0x000000018992E000-0x000000018992E05C
+		internal override void StartElementContent() {} // 0x000000018992DDAC-0x000000018992DDD0
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x000000018992E1B8-0x000000018992E1EC
+		public override void WriteEndAttribute() {} // 0x000000018992DF30-0x000000018992DF58
+		internal override void WriteNamespaceDeclaration(string prefix, string ns) {} // 0x000000018992E05C-0x000000018992E088
+		internal override void WriteStartNamespaceDeclaration(string prefix) {} // 0x000000018992E3B0-0x000000018992E3D4
+		internal override void WriteEndNamespaceDeclaration() {} // 0x000000018992DFB4-0x000000018992DFD8
+		public override void WriteCData(string text) {} // 0x000000018992DDD0-0x000000018992DDF4
+		public override void WriteComment(string text) {} // 0x000000018992DEC0-0x000000018992DEE8
+		public override void WriteProcessingInstruction(string name, string text) {} // 0x000000018992E088-0x000000018992E0B8
+		public override void WriteWhitespace(string ws) {} // 0x000000018992E460-0x000000018992E4C0
+		public override void WriteString(string text) {} // 0x000000018992E3D4-0x000000018992E434
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x000000018992DE20-0x000000018992DEC0
+		public override void WriteEntityRef(string name) {} // 0x000000018992DFD8-0x000000018992E000
+		public override void WriteCharEntity(char ch) {} // 0x000000018992DDF4-0x000000018992DE20
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x000000018992E434-0x000000018992E460
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x000000018992E0B8-0x000000018992E158
+		public override void WriteRaw(string data) {} // 0x000000018992E158-0x000000018992E1B8
+		public override void Close() {} // 0x000000018992DCB4-0x000000018992DD58
+		public override void Flush() {} // 0x000000018992DD58-0x000000018992DD7C
+		private bool StartCDataSection() => default; // 0x000000018992DD7C-0x000000018992DDAC
+		private void EndCDataSection() {} // 0x0000000183D6EB50-0x0000000183D6EB60
+	}
+
+	internal class ReadContentAsBinaryHelper // TypeDefIndex: 42463
+	{
+		// Fields
+		private XmlReader reader; // 0x10
+		private State state; // 0x18
+		private int valueOffset; // 0x1C
+		private bool isEnd; // 0x20
+	
+		// Nested types
+		private enum State // TypeDefIndex: 42462
+		{
+			None = 0,
+			InReadContent = 1,
+			InReadElementContent = 2
+		}
+	
+		// Constructors
+		public ReadContentAsBinaryHelper() {} // Dummy constructor
+	
+		// Methods
+		internal void Finish() {} // 0x000000018992E848-0x000000018992E980
+		internal void Reset() {} // 0x0000000183D75990-0x0000000183D759A0
+		private bool MoveToNextContentNode(bool moveIfOnContentNode) => default; // 0x000000018992E980-0x000000018992EA6C
+	}
+
+	internal enum ElementProperties : uint // TypeDefIndex: 42464
+	{
+		DEFAULT = 0,
+		URI_PARENT = 1,
+		BOOL_PARENT = 2,
+		NAME_PARENT = 4,
+		EMPTY = 8,
+		NO_ENTITIES = 16,
+		HEAD = 32,
+		BLOCK_WS = 64,
+		HAS_NS = 128
+	}
+
+	internal enum AttributeProperties : uint // TypeDefIndex: 42465
+	{
+		DEFAULT = 0,
+		URI = 1,
+		BOOLEAN = 2,
+		NAME = 4
+	}
+
+	internal class TernaryTreeReadOnly // TypeDefIndex: 42466
+	{
+		// Fields
+		private byte[] nodeBuffer; // 0x10
+	
+		// Constructors
+		public TernaryTreeReadOnly() {} // Dummy constructor
+		public TernaryTreeReadOnly(byte[] nodeBuffer) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Methods
+		public byte FindCaseInsensitiveString(string stringToFind) => default; // 0x000000018992ED0C-0x000000018992EE28
+	}
+
+	public enum ReadState // TypeDefIndex: 42467
+	{
+		Initial = 0,
+		Interactive = 1,
+		Error = 2,
+		EndOfFile = 3,
+		Closed = 4
+	}
+
+	internal class SecureStringHasher : IEqualityComparer<string> // TypeDefIndex: 42469
+	{
+		// Fields
+		private static HashCodeOfStringDelegate hashCodeDelegate; // 0x00
+		private int hashCodeRandomizer; // 0x10
+	
+		// Nested types
+		private delegate int HashCodeOfStringDelegate(string s, int sLen, long additionalEntropy); // TypeDefIndex: 42468; 0x0000000181035ED0-0x0000000181035EF0
+	
+		// Constructors
+		public SecureStringHasher() {} // 0x000000018992ECF4-0x000000018992ED0C
+	
+		// Methods
+		public bool Equals(string x, string y) => default; // 0x000000018992EA6C-0x000000018992EA84
+		public int GetHashCode(string key) => default; // 0x000000018992EC3C-0x000000018992ECF4
+		private static int GetHashCodeOfString(string key, int sLen, long additionalEntropy) => default; // 0x000000018992EBD0-0x000000018992EC3C
+		private static HashCodeOfStringDelegate GetHashCodeDelegate() => default; // 0x000000018992EA84-0x000000018992EBD0
+	}
+
+	internal class TextEncodedRawTextWriter : XmlEncodedRawTextWriter // TypeDefIndex: 42470
+	{
+		// Properties
+		internal override bool SupportsNamespaceDeclarationInChunks { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+	
+		// Constructors
+		public TextEncodedRawTextWriter() {} // Dummy constructor
+		public TextEncodedRawTextWriter(TextWriter writer, XmlWriterSettings settings) {} // 0x000000018992EE58-0x000000018992EE60
+		public TextEncodedRawTextWriter(Stream stream, XmlWriterSettings settings) {} // 0x000000018992EE60-0x000000018992EE68
+	
+		// Methods
+		internal override void WriteXmlDeclaration(XmlStandalone standalone) {} // 0x000000018350B670-0x000000018350B680
+		internal override void WriteXmlDeclaration(string xmldecl) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x000000018350B670-0x000000018350B680
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x000000018350B670-0x000000018350B680
+		internal override void WriteFullEndElement(string prefix, string localName, string ns) {} // 0x000000018350B670-0x000000018350B680
+		internal override void StartElementContent() {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x0000000183D759B0-0x0000000183D759C0
+		public override void WriteEndAttribute() {} // 0x0000000183D759A0-0x0000000183D759B0
+		internal override void WriteNamespaceDeclaration(string prefix, string ns) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteCData(string text) {} // 0x000000018992EE28-0x000000018992EE30
+		public override void WriteComment(string text) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteProcessingInstruction(string name, string text) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteEntityRef(string name) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteCharEntity(char ch) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteWhitespace(string ws) {} // 0x000000018992EE48-0x000000018992EE58
+		public override void WriteString(string textBlock) {} // 0x000000018992EE48-0x000000018992EE58
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x000000018992EE30-0x000000018992EE48
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x000000018992EE30-0x000000018992EE48
+		public override void WriteRaw(string data) {} // 0x000000018992EE48-0x000000018992EE58
+	}
+
+	internal class TextUtf8RawTextWriter : XmlUtf8RawTextWriter // TypeDefIndex: 42471
+	{
+		// Properties
+		internal override bool SupportsNamespaceDeclarationInChunks { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+	
+		// Constructors
+		public TextUtf8RawTextWriter() {} // Dummy constructor
+		public TextUtf8RawTextWriter(Stream stream, XmlWriterSettings settings) {} // 0x000000018992EE98-0x000000018992EEA0
+	
+		// Methods
+		internal override void WriteXmlDeclaration(XmlStandalone standalone) {} // 0x000000018350B670-0x000000018350B680
+		internal override void WriteXmlDeclaration(string xmldecl) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x000000018350B670-0x000000018350B680
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x000000018350B670-0x000000018350B680
+		internal override void WriteFullEndElement(string prefix, string localName, string ns) {} // 0x000000018350B670-0x000000018350B680
+		internal override void StartElementContent() {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x0000000183D759B0-0x0000000183D759C0
+		public override void WriteEndAttribute() {} // 0x0000000183D759A0-0x0000000183D759B0
+		internal override void WriteNamespaceDeclaration(string prefix, string ns) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteCData(string text) {} // 0x000000018992EE68-0x000000018992EE70
+		public override void WriteComment(string text) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteProcessingInstruction(string name, string text) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteEntityRef(string name) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteCharEntity(char ch) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteWhitespace(string ws) {} // 0x000000018992EE88-0x000000018992EE98
+		public override void WriteString(string textBlock) {} // 0x000000018992EE88-0x000000018992EE98
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x000000018992EE70-0x000000018992EE88
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x000000018992EE70-0x000000018992EE88
+		public override void WriteRaw(string data) {} // 0x000000018992EE88-0x000000018992EE98
+	}
+
+	internal class ValidatingReaderNodeData // TypeDefIndex: 42472
+	{
+		// Fields
+		private string localName; // 0x10
+		private string namespaceUri; // 0x18
+		private string prefix; // 0x20
+		private string nameWPrefix; // 0x28
+		private string rawValue; // 0x30
+		private string originalStringValue; // 0x38
+		private int depth; // 0x40
+		private AttributePSVIInfo attributePSVIInfo; // 0x48
+		private XmlNodeType nodeType; // 0x50
+		private int lineNo; // 0x54
+		private int linePos; // 0x58
+	
+		// Properties
+		public string LocalName { get => default; set {} } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+		public string Namespace { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		public string Prefix { get => default; set {} } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+		public int Depth { get => default; set {} } // 0x0000000183D4ED80-0x0000000183D4ED90 0x0000000183D4EDB0-0x0000000183D4EDC0
+		public string RawValue { get => default; set {} } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
+		public string OriginalStringValue { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		public XmlNodeType NodeType { get => default; set {} } // 0x0000000183D4EED0-0x0000000183D4EEE0 0x0000000183D4EF20-0x0000000183D4EF30
+		public AttributePSVIInfo AttInfo { get => default; set {} } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+		public int LineNumber { get => default; } // 0x0000000183D4EEC0-0x0000000183D4EED0 
+		public int LinePosition { get => default; } // 0x0000000183D4EF00-0x0000000183D4EF10 
+	
+		// Constructors
+		public ValidatingReaderNodeData() {} // 0x000000018992F128-0x000000018992F134
+		public ValidatingReaderNodeData(XmlNodeType nodeType) {} // 0x000000018992F120-0x000000018992F128
+	
+		// Methods
+		public string GetAtomizedNameWPrefix(XmlNameTable nameTable) => default; // 0x000000018992EF7C-0x000000018992F014
+		internal void Clear(XmlNodeType nodeType) {} // 0x000000018992EEA0-0x000000018992EF7C
+		internal void SetLineInfo(int lineNo, int linePos) {} // 0x0000000183D759C0-0x0000000183D759D0
+		internal void SetLineInfo(IXmlLineInfo lineInfo) {} // 0x000000018992F0E8-0x000000018992F120
+		internal void SetItemData(string localName, string prefix, string ns, int depth) {} // 0x000000018992F014-0x000000018992F0B4
+		internal void SetItemData(string value) {} // 0x000000018992F0DC-0x000000018992F0E8
+		internal void SetItemData(string value, string originalStringValue) {} // 0x000000018992F0B4-0x000000018992F0DC
+	}
+
+	public enum ValidationType // TypeDefIndex: 42473
+	{
+		None = 0,
+		Auto = 1,
+		DTD = 2,
+		XDR = 3,
+		Schema = 4
+	}
+
+	public enum WhitespaceHandling // TypeDefIndex: 42474
+	{
+		All = 0,
+		Significant = 1,
+		None = 2
+	}
+
+	[DefaultMember("Item")]
+	internal class XmlAsyncCheckReader : XmlReader // TypeDefIndex: 42475
+	{
+		// Fields
+		private readonly XmlReader coreReader; // 0x10
+		private System.Threading.Tasks.Task lastTask; // 0x18
+	
+		// Properties
+		internal XmlReader CoreReader { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public override XmlReaderSettings Settings { get => default; } // 0x0000000189930124-0x00000001899301B4 
+		public override XmlNodeType NodeType { get => default; } // 0x0000000189930034-0x0000000189930064 
+		public override string Name { get => default; } // 0x000000018992FFA8-0x000000018992FFD8 
+		public override string LocalName { get => default; } // 0x000000018992FF48-0x000000018992FF78 
+		public override string NamespaceURI { get => default; } // 0x0000000189930004-0x0000000189930034 
+		public override string Prefix { get => default; } // 0x0000000189930064-0x0000000189930094 
+		public override bool HasValue { get => default; } // 0x000000018992FEB8-0x000000018992FEE8 
+		public override string Value { get => default; } // 0x00000001899301E4-0x0000000189930214 
+		public override int Depth { get => default; } // 0x000000018992FDF8-0x000000018992FE28 
+		public override string BaseURI { get => default; } // 0x000000018992FD68-0x000000018992FD98 
+		public override bool IsEmptyElement { get => default; } // 0x000000018992FF18-0x000000018992FF48 
+		public override bool IsDefault { get => default; } // 0x000000018992FEE8-0x000000018992FF18 
+		public override char QuoteChar { get => default; } // 0x0000000189930094-0x00000001899300C4 
+		public override XmlSpace XmlSpace { get => default; } // 0x0000000189930244-0x0000000189930274 
+		public override string XmlLang { get => default; } // 0x0000000189930214-0x0000000189930244 
+		public override IXmlSchemaInfo SchemaInfo { get => default; } // 0x00000001899300F4-0x0000000189930124 
+		public override System.Type ValueType { get => default; } // 0x00000001899301B4-0x00000001899301E4 
+		public override int AttributeCount { get => default; } // 0x000000018992FD38-0x000000018992FD68 
+		public override bool EOF { get => default; } // 0x000000018992FE58-0x000000018992FE88 
+		public override System.Xml.ReadState ReadState { get => default; } // 0x00000001899300C4-0x00000001899300F4 
+		public override XmlNameTable NameTable { get => default; } // 0x000000018992FF78-0x000000018992FFA8 
+		public override bool CanResolveEntity { get => default; } // 0x000000018992FDC8-0x000000018992FDF8 
+		public override bool CanReadValueChunk { get => default; } // 0x000000018992FD98-0x000000018992FDC8 
+		public override bool HasAttributes { get => default; } // 0x000000018992FE88-0x000000018992FEB8 
+		internal override XmlNamespaceManager NamespaceManager { get => default; } // 0x000000018992FFD8-0x0000000189930004 
+		internal override IDtdInfo DtdInfo { get => default; } // 0x000000018992FE28-0x000000018992FE58 
+	
+		// Constructors
+		public XmlAsyncCheckReader() {} // Dummy constructor
+		public XmlAsyncCheckReader(XmlReader reader) {} // 0x000000018992FCB0-0x000000018992FD38
+	
+		// Methods
+		public static XmlAsyncCheckReader CreateAsyncCheckWrapper(XmlReader reader) => default; // 0x000000018992F5A4-0x000000018992F73C
+		private void CheckAsync() {} // 0x000000018992F4F4-0x000000018992F574
+		public override string ReadContentAsString() => default; // 0x000000018992FA60-0x000000018992FA90
+		public override string GetAttribute(string name) => default; // 0x000000018992F7AC-0x000000018992F7EC
+		public override string GetAttribute(string name, string namespaceURI) => default; // 0x000000018992F7EC-0x000000018992F834
+		public override string GetAttribute(int i) => default; // 0x000000018992F770-0x000000018992F7AC
+		public override bool MoveToAttribute(string name) => default; // 0x000000018992F930-0x000000018992F970
+		public override void MoveToAttribute(int i) {} // 0x000000018992F8F4-0x000000018992F930
+		public override bool MoveToFirstAttribute() => default; // 0x000000018992F9D0-0x000000018992FA00
+		public override bool MoveToNextAttribute() => default; // 0x000000018992FA00-0x000000018992FA30
+		public override bool MoveToElement() => default; // 0x000000018992F9A0-0x000000018992F9D0
+		public override bool ReadAttributeValue() => default; // 0x000000018992FA30-0x000000018992FA60
+		public override bool Read() => default; // 0x000000018992FC20-0x000000018992FC50
+		public override void Close() {} // 0x000000018992F574-0x000000018992F5A4
+		public override void Skip() {} // 0x000000018992FC80-0x000000018992FCB0
+		public override string LookupNamespace(string prefix) => default; // 0x000000018992F8B4-0x000000018992F8F4
+		public override void ResolveEntity() {} // 0x000000018992FC50-0x000000018992FC80
+		public override int ReadValueChunk(char[] buffer, int index, int count) => default; // 0x000000018992FBC0-0x000000018992FC20
+		public override string ReadString() => default; // 0x000000018992FB90-0x000000018992FBC0
+		public override XmlNodeType MoveToContent() => default; // 0x000000018992F970-0x000000018992F9A0
+		public override void ReadStartElement() {} // 0x000000018992FB60-0x000000018992FB90
+		public override void ReadStartElement(string name) {} // 0x000000018992FB20-0x000000018992FB60
+		public override string ReadElementString() => default; // 0x000000018992FA90-0x000000018992FAC0
+		public override void ReadEndElement() {} // 0x000000018992FAC0-0x000000018992FAF0
+		public override bool IsStartElement() => default; // 0x000000018992F834-0x000000018992F864
+		public override bool IsStartElement(string localname, string ns) => default; // 0x000000018992F864-0x000000018992F8B4
+		public override string ReadInnerXml() => default; // 0x000000018992FAF0-0x000000018992FB20
+		protected override void Dispose(bool disposing) {} // 0x000000018992F73C-0x000000018992F770
+	}
+
+	internal class XmlAsyncCheckReaderWithNS : XmlAsyncCheckReader, IXmlNamespaceResolver // TypeDefIndex: 42476
+	{
+		// Fields
+		private readonly IXmlNamespaceResolver readerAsIXmlNamespaceResolver; // 0x20
+	
+		// Constructors
+		public XmlAsyncCheckReaderWithNS() {} // Dummy constructor
+		public XmlAsyncCheckReaderWithNS(XmlReader reader) {} // 0x000000018992F484-0x000000018992F4F4
+	
+		// Methods
+		IDictionary<string, string> IXmlNamespaceResolver.GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x000000018992F424-0x000000018992F444
+		string IXmlNamespaceResolver.LookupNamespace(string prefix) => default; // 0x000000018992F444-0x000000018992F464
+		string IXmlNamespaceResolver.LookupPrefix(string namespaceName) => default; // 0x000000018992F464-0x000000018992F484
+	}
+
+	internal class XmlAsyncCheckReaderWithLineInfo : XmlAsyncCheckReader, IXmlLineInfo // TypeDefIndex: 42477
+	{
+		// Fields
+		private readonly IXmlLineInfo readerAsIXmlLineInfo; // 0x20
+	
+		// Properties
+		public virtual int LineNumber { get => default; } // 0x000000018992F3E4-0x000000018992F404 
+		public virtual int LinePosition { get => default; } // 0x000000018992F404-0x000000018992F424 
+	
+		// Constructors
+		public XmlAsyncCheckReaderWithLineInfo() {} // Dummy constructor
+		public XmlAsyncCheckReaderWithLineInfo(XmlReader reader) {} // 0x000000018992F374-0x000000018992F3E4
+	
+		// Methods
+		public virtual bool HasLineInfo() => default; // 0x000000018992F354-0x000000018992F374
+	}
+
+	internal class XmlAsyncCheckReaderWithLineInfoNS : XmlAsyncCheckReaderWithLineInfo, IXmlNamespaceResolver // TypeDefIndex: 42478
+	{
+		// Fields
+		private readonly IXmlNamespaceResolver readerAsIXmlNamespaceResolver; // 0x28
+	
+		// Constructors
+		public XmlAsyncCheckReaderWithLineInfoNS() {} // Dummy constructor
+		public XmlAsyncCheckReaderWithLineInfoNS(XmlReader reader) {} // 0x000000018992F2E4-0x000000018992F354
+	
+		// Methods
+		IDictionary<string, string> IXmlNamespaceResolver.GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x000000018992F284-0x000000018992F2A4
+		string IXmlNamespaceResolver.LookupNamespace(string prefix) => default; // 0x000000018992F2A4-0x000000018992F2C4
+		string IXmlNamespaceResolver.LookupPrefix(string namespaceName) => default; // 0x000000018992F2C4-0x000000018992F2E4
+	}
+
+	internal class XmlAsyncCheckReaderWithLineInfoNSSchema : XmlAsyncCheckReaderWithLineInfoNS, IXmlSchemaInfo // TypeDefIndex: 42479
+	{
+		// Fields
+		private readonly IXmlSchemaInfo readerAsIXmlSchemaInfo; // 0x30
+	
+		// Properties
+		XmlSchemaValidity IXmlSchemaInfo.Validity { get => default; } // 0x000000018992F1F4-0x000000018992F214 
+		bool IXmlSchemaInfo.IsDefault { get => default; } // 0x000000018992F134-0x000000018992F154 
+		bool IXmlSchemaInfo.IsNil { get => default; } // 0x000000018992F154-0x000000018992F174 
+		XmlSchemaSimpleType IXmlSchemaInfo.MemberType { get => default; } // 0x000000018992F174-0x000000018992F194 
+		XmlSchemaType IXmlSchemaInfo.SchemaType { get => default; } // 0x000000018992F1D4-0x000000018992F1F4 
+		XmlSchemaElement IXmlSchemaInfo.SchemaElement { get => default; } // 0x000000018992F1B4-0x000000018992F1D4 
+		XmlSchemaAttribute IXmlSchemaInfo.SchemaAttribute { get => default; } // 0x000000018992F194-0x000000018992F1B4 
+	
+		// Constructors
+		public XmlAsyncCheckReaderWithLineInfoNSSchema() {} // Dummy constructor
+		public XmlAsyncCheckReaderWithLineInfoNSSchema(XmlReader reader) {} // 0x000000018992F214-0x000000018992F284
+	}
+
+	internal class XmlAsyncCheckWriter : XmlWriter // TypeDefIndex: 42480
+	{
+		// Fields
+		private readonly XmlWriter coreWriter; // 0x18
+		private System.Threading.Tasks.Task lastTask; // 0x20
+	
+		// Properties
+		public override WriteState WriteState { get => default; } // 0x0000000189930D54-0x0000000189930D84 
+	
+		// Constructors
+		public XmlAsyncCheckWriter() {} // Dummy constructor
+		public XmlAsyncCheckWriter(XmlWriter writer) {} // 0x0000000189930CE4-0x0000000189930D54
+	
+		// Methods
+		private void CheckAsync() {} // 0x0000000189930274-0x00000001899302F4
+		public override void WriteStartDocument() {} // 0x0000000189930944-0x0000000189930974
+		public override void WriteStartDocument(bool standalone) {} // 0x0000000189930904-0x0000000189930944
+		public override void WriteEndDocument() {} // 0x0000000189930694-0x00000001899306C4
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x00000001899305F8-0x0000000189930664
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x0000000189930974-0x00000001899309D4
+		public override void WriteEndElement() {} // 0x00000001899306C4-0x00000001899306F4
+		public override void WriteFullEndElement() {} // 0x0000000189930734-0x0000000189930764
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x00000001899308A4-0x0000000189930904
+		public override void WriteEndAttribute() {} // 0x0000000189930664-0x0000000189930694
+		public override void WriteCData(string text) {} // 0x00000001899304D8-0x0000000189930518
+		public override void WriteComment(string text) {} // 0x00000001899305B8-0x00000001899305F8
+		public override void WriteProcessingInstruction(string name, string text) {} // 0x00000001899307B4-0x0000000189930804
+		public override void WriteEntityRef(string name) {} // 0x00000001899306F4-0x0000000189930734
+		public override void WriteCharEntity(char ch) {} // 0x0000000189930518-0x0000000189930558
+		public override void WriteWhitespace(string ws) {} // 0x0000000189930CA4-0x0000000189930CE4
+		public override void WriteString(string text) {} // 0x00000001899309D4-0x0000000189930A14
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x0000000189930A14-0x0000000189930A60
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x0000000189930558-0x00000001899305B8
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x0000000189930804-0x0000000189930864
+		public override void WriteRaw(string data) {} // 0x0000000189930864-0x00000001899308A4
+		public override void WriteBase64(byte[] buffer, int index, int count) {} // 0x0000000189930418-0x0000000189930478
+		public override void WriteBinHex(byte[] buffer, int index, int count) {} // 0x0000000189930478-0x00000001899304D8
+		public override void Close() {} // 0x00000001899302F4-0x0000000189930324
+		public override void Flush() {} // 0x0000000189930358-0x0000000189930388
+		public override string LookupPrefix(string ns) => default; // 0x0000000189930388-0x00000001899303C8
+		public override void WriteValue(object value) {} // 0x0000000189930C64-0x0000000189930CA4
+		public override void WriteValue(string value) {} // 0x0000000189930BE4-0x0000000189930C24
+		public override void WriteValue(bool value) {} // 0x0000000189930AA8-0x0000000189930AE8
+		public override void WriteValue(System.DateTime value) {} // 0x0000000189930B28-0x0000000189930B68
+		public override void WriteValue(double value) {} // 0x0000000189930BA4-0x0000000189930BE4
+		public override void WriteValue(float value) {} // 0x0000000189930AE8-0x0000000189930B28
+		public override void WriteValue(decimal value) {} // 0x0000000189930A60-0x0000000189930AA8
+		public override void WriteValue(int value) {} // 0x0000000189930B68-0x0000000189930BA4
+		public override void WriteValue(long value) {} // 0x0000000189930C24-0x0000000189930C64
+		public override void WriteAttributes(XmlReader reader, bool defattr) {} // 0x00000001899303C8-0x0000000189930418
+		public override void WriteNode(XmlReader reader, bool defattr) {} // 0x0000000189930764-0x00000001899307B4
+		protected override void Dispose(bool disposing) {} // 0x0000000189930324-0x0000000189930358
+	}
+
+	internal class XmlAutoDetectWriter : XmlRawWriter // TypeDefIndex: 42481
+	{
+		// Fields
+		private XmlRawWriter wrapped; // 0x28
+		private OnRemoveWriter onRemove; // 0x30
+		private XmlWriterSettings writerSettings; // 0x38
+		private XmlEventCache eventCache; // 0x40
+		private TextWriter textWriter; // 0x48
+		private Stream strm; // 0x50
+	
+		// Properties
+		internal override IXmlNamespaceResolver NamespaceResolver { set {} } // 0x0000000189931A4C-0x0000000189931A90
+		internal override bool SupportsNamespaceDeclarationInChunks { get => default; } // 0x000000018992E7EC-0x000000018992E810 
+	
+		// Constructors
+		public XmlAutoDetectWriter() {} // Dummy constructor
+		private XmlAutoDetectWriter(XmlWriterSettings writerSettings) {} // 0x0000000189931988-0x0000000189931A4C
+		public XmlAutoDetectWriter(TextWriter textWriter, XmlWriterSettings writerSettings) {} // 0x0000000189931950-0x0000000189931988
+		public XmlAutoDetectWriter(Stream strm, XmlWriterSettings writerSettings) {} // 0x0000000189931918-0x0000000189931950
+	
+		// Methods
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x0000000189931210-0x000000018993127C
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x00000001899314A4-0x0000000189931534
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x0000000189931440-0x00000001899314A4
+		public override void WriteEndAttribute() {} // 0x000000018993127C-0x00000001899312A0
+		public override void WriteCData(string text) {} // 0x0000000189931120-0x0000000189931168
+		public override void WriteComment(string text) {} // 0x00000001899311DC-0x0000000189931210
+		public override void WriteProcessingInstruction(string name, string text) {} // 0x0000000189931390-0x00000001899313C8
+		public override void WriteWhitespace(string ws) {} // 0x0000000189931864-0x0000000189931898
+		public override void WriteString(string text) {} // 0x0000000189931574-0x00000001899315BC
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x00000001899311AC-0x00000001899311DC
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x00000001899313C8-0x00000001899313F8
+		public override void WriteRaw(string data) {} // 0x00000001899313F8-0x0000000189931440
+		public override void WriteEntityRef(string name) {} // 0x00000001899312D0-0x0000000189931310
+		public override void WriteCharEntity(char ch) {} // 0x0000000189931168-0x00000001899311AC
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x00000001899315BC-0x000000018993160C
+		public override void WriteBase64(byte[] buffer, int index, int count) {} // 0x0000000189931058-0x00000001899310BC
+		public override void WriteBinHex(byte[] buffer, int index, int count) {} // 0x00000001899310BC-0x0000000189931120
+		public override void Close() {} // 0x0000000189930D84-0x0000000189930DB8
+		public override void Flush() {} // 0x0000000189930EFC-0x0000000189930F30
+		public override void WriteValue(object value) {} // 0x00000001899317A0-0x00000001899317E0
+		public override void WriteValue(string value) {} // 0x0000000189931658-0x0000000189931698
+		public override void WriteValue(bool value) {} // 0x0000000189931718-0x000000018993175C
+		public override void WriteValue(System.DateTime value) {} // 0x00000001899316D8-0x0000000189931718
+		public override void WriteValue(double value) {} // 0x000000018993175C-0x00000001899317A0
+		public override void WriteValue(float value) {} // 0x00000001899317E0-0x0000000189931824
+		public override void WriteValue(decimal value) {} // 0x000000018993160C-0x0000000189931658
+		public override void WriteValue(int value) {} // 0x0000000189931698-0x00000001899316D8
+		public override void WriteValue(long value) {} // 0x0000000189931824-0x0000000189931864
+		internal override void WriteXmlDeclaration(XmlStandalone standalone) {} // 0x0000000189931898-0x00000001899318D8
+		internal override void WriteXmlDeclaration(string xmldecl) {} // 0x00000001899318D8-0x0000000189931918
+		internal override void StartElementContent() {} // 0x000000018992DDAC-0x000000018992DDD0
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x00000001899312A0-0x00000001899312D0
+		internal override void WriteFullEndElement(string prefix, string localName, string ns) {} // 0x0000000189931310-0x0000000189931340
+		internal override void WriteNamespaceDeclaration(string prefix, string ns) {} // 0x0000000189931340-0x0000000189931390
+		internal override void WriteStartNamespaceDeclaration(string prefix) {} // 0x0000000189931534-0x0000000189931574
+		internal override void WriteEndNamespaceDeclaration() {} // 0x000000018992DFB4-0x000000018992DFD8
+		private static bool IsHtmlTag(string tagName) => default; // 0x0000000189930F30-0x0000000189931000
+		private void EnsureWrappedWriter(XmlOutputMethod outMethod) {} // 0x0000000189930EEC-0x0000000189930EFC
+		private bool TextBlockCreatesWriter(string textBlock) => default; // 0x0000000189931000-0x0000000189931058
+		private void CreateWrappedWriter(XmlOutputMethod outMethod) {} // 0x0000000189930DB8-0x0000000189930EEC
+	}
+
+	internal class XmlEncodedRawTextWriter : XmlRawWriter // TypeDefIndex: 42482
+	{
+		// Fields
+		private readonly bool useAsync; // 0x28
+		protected byte[] bufBytes; // 0x30
+		protected Stream stream; // 0x38
+		protected Encoding encoding; // 0x40
+		protected XmlCharType xmlCharType; // 0x48
+		protected int bufPos; // 0x50
+		protected int textPos; // 0x54
+		protected int contentPos; // 0x58
+		protected int cdataPos; // 0x5C
+		protected int attrEndPos; // 0x60
+		protected int bufLen; // 0x64
+		protected bool writeToNull; // 0x68
+		protected bool hadDoubleBracket; // 0x69
+		protected bool inAttributeValue; // 0x6A
+		protected int bufBytesUsed; // 0x6C
+		protected char[] bufChars; // 0x70
+		protected System.Text.Encoder encoder; // 0x78
+		protected TextWriter writer; // 0x80
+		protected bool trackTextContent; // 0x88
+		protected bool inTextContent; // 0x89
+		private int lastMarkPos; // 0x8C
+		private int[] textContentMarks; // 0x90
+		private CharEntityEncoderFallback charEntityFallback; // 0x98
+		protected NewLineHandling newLineHandling; // 0xA0
+		protected bool closeOutput; // 0xA4
+		protected bool omitXmlDeclaration; // 0xA5
+		protected string newLineChars; // 0xA8
+		protected bool checkCharacters; // 0xB0
+		protected XmlStandalone standalone; // 0xB4
+		protected XmlOutputMethod outputMethod; // 0xB8
+		protected bool autoXmlDeclaration; // 0xBC
+		protected bool mergeCDataSections; // 0xBD
+	
+		// Properties
+		internal override bool SupportsNamespaceDeclarationInChunks { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+	
+		// Constructors
+		public XmlEncodedRawTextWriter() {} // Dummy constructor
+		protected XmlEncodedRawTextWriter(XmlWriterSettings settings) {} // 0x00000001899350EC-0x00000001899351E8
+		public XmlEncodedRawTextWriter(TextWriter writer, XmlWriterSettings settings) {} // 0x000000018993548C-0x000000018993556C
+		public XmlEncodedRawTextWriter(Stream stream, XmlWriterSettings settings) {} // 0x00000001899351E8-0x000000018993548C
+	
+		// Methods
+		internal override void WriteXmlDeclaration(XmlStandalone standalone) {} // 0x0000000189934F2C-0x000000018993508C
+		internal override void WriteXmlDeclaration(string xmldecl) {} // 0x000000018993508C-0x00000001899350EC
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x0000000189933D58-0x0000000189933F44
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x0000000189934B48-0x0000000189934C04
+		internal override void StartElementContent() {} // 0x0000000189932C84-0x0000000189932CC4
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x0000000189934224-0x0000000189934374
+		internal override void WriteFullEndElement(string prefix, string localName, string ns) {} // 0x0000000189934480-0x0000000189934580
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x0000000189934A40-0x0000000189934B48
+		public override void WriteEndAttribute() {} // 0x00000001899341C4-0x0000000189934224
+		internal override void WriteNamespaceDeclaration(string prefix, string namespaceName) {} // 0x0000000189934580-0x00000001899345C8
+		internal override void WriteStartNamespaceDeclaration(string prefix) {} // 0x0000000189934C04-0x0000000189934D10
+		internal override void WriteEndNamespaceDeclaration() {} // 0x0000000189934374-0x00000001899343D4
+		public override void WriteCData(string text) {} // 0x0000000189933570-0x00000001899337AC
+		public override void WriteComment(string text) {} // 0x0000000189933C08-0x0000000189933D58
+		public override void WriteProcessingInstruction(string name, string text) {} // 0x0000000189934634-0x0000000189934770
+		public override void WriteEntityRef(string name) {} // 0x00000001899343D4-0x0000000189934480
+		public override void WriteCharEntity(char ch) {} // 0x00000001899337AC-0x0000000189933948
+		public override void WriteWhitespace(string ws) {} // 0x0000000189934EC0-0x0000000189934F2C
+		public override void WriteString(string text) {} // 0x0000000189934D10-0x0000000189934D7C
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x0000000189934D7C-0x0000000189934EC0
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x000000018985B14C-0x000000018985B1D4
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x00000001899349C0-0x0000000189934A40
+		public override void WriteRaw(string data) {} // 0x000000018993495C-0x00000001899349C0
+		public override void Close() {} // 0x0000000189932244-0x00000001899322D8
+		public override void Flush() {} // 0x00000001899329B0-0x0000000189932A10
+		protected virtual void FlushBuffer() {} // 0x0000000189932608-0x0000000189932908
+		private void EncodeChars(int startOffset, int endOffset, bool writeAllToStream) {} // 0x0000000189932354-0x00000001899324A0
+		private void FlushEncoder() {} // 0x0000000189932908-0x00000001899329B0
+		protected unsafe void WriteAttributeTextBlock(char* pSrc, char* pSrcEnd) {} // 0x000000018993303C-0x00000001899332D8
+		protected unsafe void WriteElementTextBlock(char* pSrc, char* pSrcEnd) {} // 0x0000000189933F44-0x00000001899341C4
+		protected void RawText(string s) {} // 0x0000000189932C54-0x0000000189932C84
+		protected unsafe void RawText(char* pSrcBegin, char* pSrcEnd) {} // 0x0000000189932B14-0x0000000189932C54
+		protected unsafe void WriteRawWithCharChecking(char* pSrcBegin, char* pSrcEnd) {} // 0x0000000189934770-0x000000018993495C
+		protected void WriteCommentOrPi(string text, int stopChar) {} // 0x0000000189933948-0x0000000189933C08
+		protected void WriteCDataSection(string text) {} // 0x00000001899332D8-0x0000000189933570
+		private static unsafe char* EncodeSurrogate(char* pSrc, char* pSrcEnd, char* pDst) => default; // 0x00000001899324A0-0x0000000189932608
+		private unsafe char* InvalidXmlChar(int ch, char* pDst, bool entitize) => default; // 0x0000000189932AA0-0x0000000189932B14
+		internal unsafe void EncodeChar(ref char* pSrc, char* pSrcEnd, ref char* pDst) {} // 0x00000001899322D8-0x0000000189932354
+		protected void ChangeTextContentMark(bool value) {} // 0x0000000189932130-0x00000001899321A4
+		private void GrowTextContentMarks() {} // 0x0000000189932A10-0x0000000189932AA0
+		protected unsafe char* WriteNewLine(char* pDst) => default; // 0x00000001899345C8-0x0000000189934634
+		protected static unsafe char* LtEntity(char* pDst) => default; // 0x0000000183D75A50-0x0000000183D75A70
+		protected static unsafe char* GtEntity(char* pDst) => default; // 0x0000000183D75A10-0x0000000183D75A30
+		protected static unsafe char* AmpEntity(char* pDst) => default; // 0x0000000183D759D0-0x0000000183D759F0
+		protected static unsafe char* QuoteEntity(char* pDst) => default; // 0x0000000183D75A70-0x0000000183D75A90
+		protected static unsafe char* TabEntity(char* pDst) => default; // 0x0000000183D75AE0-0x0000000183D75B00
+		protected static unsafe char* LineFeedEntity(char* pDst) => default; // 0x0000000183D75A30-0x0000000183D75A50
+		protected static unsafe char* CarriageReturnEntity(char* pDst) => default; // 0x0000000183D759F0-0x0000000183D75A10
+		private static unsafe char* CharEntity(char* pDst, char ch) => default; // 0x00000001899321A4-0x0000000189932244
+		protected static unsafe char* RawStartCData(char* pDst) => default; // 0x0000000183D75AB0-0x0000000183D75AE0
+		protected static unsafe char* RawEndCData(char* pDst) => default; // 0x0000000183D75A90-0x0000000183D75AB0
+		protected void ValidateContentChars(string chars, string propertyName, bool allowOnlyWhitespace) {} // 0x0000000189932CC4-0x000000018993303C
+	}
+
+	internal class XmlEncodedRawTextWriterIndent : XmlEncodedRawTextWriter // TypeDefIndex: 42483
+	{
+		// Fields
+		protected int indentLevel; // 0xC0
+		protected bool newLineOnAttributes; // 0xC4
+		protected string indentChars; // 0xC8
+		protected bool mixedContent; // 0xD0
+		private BitStack mixedContentStack; // 0xD8
+		protected ConformanceLevel conformanceLevel; // 0xE0
+	
+		// Constructors
+		public XmlEncodedRawTextWriterIndent() {} // Dummy constructor
+		public XmlEncodedRawTextWriterIndent(TextWriter writer, XmlWriterSettings settings) {} // 0x00000001899320D0-0x0000000189932100
+		public XmlEncodedRawTextWriterIndent(Stream stream, XmlWriterSettings settings) {} // 0x0000000189932100-0x0000000189932130
+	
+		// Methods
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x0000000189931D50-0x0000000189931DC0
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x0000000189932014-0x00000001899320A0
+		internal override void StartElementContent() {} // 0x0000000189931C7C-0x0000000189931CC0
+		internal override void OnRootElement(ConformanceLevel currentConformanceLevel) {} // 0x0000000183D50FB0-0x0000000183D50FC0
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x0000000189931DC0-0x0000000189931E50
+		internal override void WriteFullEndElement(string prefix, string localName, string ns) {} // 0x0000000189931E60-0x0000000189931EF0
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x0000000189931FB4-0x0000000189932014
+		public override void WriteCData(string text) {} // 0x0000000189931CD8-0x0000000189931CE8
+		public override void WriteComment(string text) {} // 0x0000000189931D10-0x0000000189931D50
+		public override void WriteProcessingInstruction(string target, string text) {} // 0x0000000189931F3C-0x0000000189931F8C
+		public override void WriteEntityRef(string name) {} // 0x0000000189931E50-0x0000000189931E60
+		public override void WriteCharEntity(char ch) {} // 0x0000000189931CE8-0x0000000189931CF8
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x00000001899320B0-0x00000001899320C0
+		public override void WriteWhitespace(string ws) {} // 0x00000001899320C0-0x00000001899320D0
+		public override void WriteString(string text) {} // 0x00000001899320A0-0x00000001899320B0
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x0000000189931CF8-0x0000000189931D10
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x0000000189931F8C-0x0000000189931FA4
+		public override void WriteRaw(string data) {} // 0x0000000189931FA4-0x0000000189931FB4
+		public override void WriteBase64(byte[] buffer, int index, int count) {} // 0x0000000189931CC0-0x0000000189931CD8
+		private void Init(XmlWriterSettings settings) {} // 0x0000000189931B58-0x0000000189931C7C
+		private void WriteIndent() {} // 0x0000000189931EF0-0x0000000189931F3C
+	}
+
+	internal sealed class XmlEventCache : XmlRawWriter // TypeDefIndex: 42486
+	{
+		// Fields
+		private List<XmlEvent[]> pages; // 0x28
+		private XmlEvent[] pageCurr; // 0x30
+		private int pageSize; // 0x38
+		private bool hasRootNode; // 0x3C
+		private StringConcat singleText; // 0x40
+		private string baseUri; // 0x78
+	
+		// Nested types
+		private enum XmlEventType // TypeDefIndex: 42484
+		{
+			Unknown = 0,
+			DocType = 1,
+			StartElem = 2,
+			StartAttr = 3,
+			EndAttr = 4,
+			CData = 5,
+			Comment = 6,
+			PI = 7,
+			Whitespace = 8,
+			String = 9,
+			Raw = 10,
+			EntRef = 11,
+			CharEnt = 12,
+			SurrCharEnt = 13,
+			Base64 = 14,
+			BinHex = 15,
+			XmlDecl1 = 16,
+			XmlDecl2 = 17,
+			StartContent = 18,
+			EndElem = 19,
+			FullEndElem = 20,
+			Nmsp = 21,
+			EndBase64 = 22,
+			Close = 23,
+			Flush = 24,
+			Dispose = 25
+		}
+	
+		private struct XmlEvent // TypeDefIndex: 42485
+		{
+			// Fields
+			private XmlEventType eventType; // 0x00
+			private string s1; // 0x08
+			private string s2; // 0x10
+			private string s3; // 0x18
+			private object o; // 0x20
+	
+			// Properties
+			public XmlEventType EventType { get => default; } // 0x0000000183D4E980-0x0000000183D4E990 
+			public string String1 { get => default; } // 0x0000000183D50DE0-0x0000000183D50DF0 
+			public string String2 { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+			public string String3 { get => default; } // 0x0000000181041090-0x00000001810410A0 
+			public object Object { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+	
+			// Methods
+			public void InitEvent(XmlEventType eventType) {} // 0x0000000183D4E970-0x0000000183D4E980
+			public void InitEvent(XmlEventType eventType, string s1) {} // 0x00000001871AED58-0x00000001871AED68
+			public void InitEvent(XmlEventType eventType, string s1, string s2) {} // 0x00000001825FDC80-0x00000001825FDCB0
+			public void InitEvent(XmlEventType eventType, string s1, string s2, string s3) {} // 0x00000001899366A0-0x00000001899366DC
+			public void InitEvent(XmlEventType eventType, string s1, string s2, string s3, object o) {} // 0x0000000189936654-0x00000001899366A0
+			public void InitEvent(XmlEventType eventType, object o) {} // 0x0000000189936644-0x0000000189936654
+		}
+	
+		// Constructors
+		public XmlEventCache() {} // Dummy constructor
+		public XmlEventCache(string baseUri, bool hasRootNode) {} // 0x0000000189936620-0x0000000189936644
+	
+		// Methods
+		public void EndEvents() {} // 0x0000000189935854-0x0000000189935868
+		public void EventsToWriter(XmlWriter writer) {} // 0x0000000189935868-0x0000000189935FB0
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x00000001899362F8-0x000000018993632C
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x000000018993642C-0x0000000189936454
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x0000000189936404-0x000000018993642C
+		public override void WriteEndAttribute() {} // 0x000000018993632C-0x000000018993633C
+		public override void WriteCData(string text) {} // 0x0000000189936278-0x0000000189936288
+		public override void WriteComment(string text) {} // 0x00000001899362E8-0x00000001899362F8
+		public override void WriteProcessingInstruction(string name, string text) {} // 0x00000001899363D0-0x00000001899363F4
+		public override void WriteWhitespace(string ws) {} // 0x00000001899365A4-0x00000001899365B4
+		public override void WriteString(string text) {} // 0x0000000189936454-0x0000000189936488
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x00000001899311AC-0x00000001899311DC
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x00000001899313C8-0x00000001899313F8
+		public override void WriteRaw(string data) {} // 0x00000001899363F4-0x0000000189936404
+		public override void WriteEntityRef(string name) {} // 0x0000000189936374-0x0000000189936384
+		public override void WriteCharEntity(char ch) {} // 0x0000000189936288-0x00000001899362E8
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x0000000189936488-0x0000000189936514
+		public override void WriteBase64(byte[] buffer, int index, int count) {} // 0x0000000189936200-0x000000018993623C
+		public override void WriteBinHex(byte[] buffer, int index, int count) {} // 0x000000018993623C-0x0000000189936278
+		public override void Close() {} // 0x00000001899357A8-0x00000001899357B8
+		public override void Flush() {} // 0x0000000189935FB0-0x0000000189935FC0
+		public override void WriteValue(object value) {} // 0x0000000189936514-0x0000000189936590
+		public override void WriteValue(string value) {} // 0x0000000189936590-0x00000001899365A4
+		protected override void Dispose(bool disposing) {} // 0x00000001899357B8-0x0000000189935854
+		internal override void WriteXmlDeclaration(XmlStandalone standalone) {} // 0x00000001899365B4-0x0000000189936610
+		internal override void WriteXmlDeclaration(string xmldecl) {} // 0x0000000189936610-0x0000000189936620
+		internal override void StartElementContent() {} // 0x0000000189936148-0x0000000189936158
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x000000018993634C-0x0000000189936374
+		internal override void WriteFullEndElement(string prefix, string localName, string ns) {} // 0x0000000189936384-0x00000001899363AC
+		internal override void WriteNamespaceDeclaration(string prefix, string ns) {} // 0x00000001899363AC-0x00000001899363D0
+		internal override void WriteEndBase64() {} // 0x000000018993633C-0x000000018993634C
+		private void AddEvent(XmlEventType eventType) {} // 0x00000001899355E0-0x000000018993561C
+		private void AddEvent(XmlEventType eventType, string s1) {} // 0x00000001899356EC-0x0000000189935740
+		private void AddEvent(XmlEventType eventType, string s1, string s2) {} // 0x0000000189935740-0x00000001899357A8
+		private void AddEvent(XmlEventType eventType, string s1, string s2, string s3) {} // 0x000000018993556C-0x00000001899355E0
+		private void AddEvent(XmlEventType eventType, string s1, string s2, string s3, object o) {} // 0x0000000189935670-0x00000001899356EC
+		private void AddEvent(XmlEventType eventType, object o) {} // 0x000000018993561C-0x0000000189935670
+		private int NewEvent() => default; // 0x0000000189935FC0-0x0000000189936148
+		private static byte[] ToBytes(byte[] buffer, int index, int count) => default; // 0x0000000189936158-0x0000000189936200
+	}
+
+	public class XmlParserContext // TypeDefIndex: 42487
+	{
+		// Fields
+		private XmlNameTable _nt; // 0x10
+		private XmlNamespaceManager _nsMgr; // 0x18
+		private string _docTypeName; // 0x20
+		private string _pubId; // 0x28
+		private string _sysId; // 0x30
+		private string _internalSubset; // 0x38
+		private string _xmlLang; // 0x40
+		private XmlSpace _xmlSpace; // 0x48
+		private string _baseURI; // 0x50
+		private Encoding _encoding; // 0x58
+	
+		// Properties
+		public XmlNameTable NameTable { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public XmlNamespaceManager NamespaceManager { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public string DocTypeName { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public string PublicId { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		public string SystemId { get => default; } // 0x0000000181003830-0x0000000181003840 
+		public string BaseURI { get => default; } // 0x0000000183D4EAF0-0x0000000183D4EB00 
+		public string InternalSubset { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		public string XmlLang { get => default; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
+		public XmlSpace XmlSpace { get => default; } // 0x0000000183D4EC50-0x0000000183D4EC60 
+		public Encoding Encoding { get => default; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 
+		internal bool HasDtdInfo { get => default; } // 0x0000000189936A8C-0x0000000189936B20 
+	
+		// Constructors
+		public XmlParserContext() {} // Dummy constructor
+		public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, string xmlLang, XmlSpace xmlSpace) {} // 0x00000001899366DC-0x0000000189936780
+		public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, string docTypeName, string pubId, string sysId, string internalSubset, string baseURI, string xmlLang, XmlSpace xmlSpace) {} // 0x0000000189936780-0x00000001899367E4
+		public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, string docTypeName, string pubId, string sysId, string internalSubset, string baseURI, string xmlLang, XmlSpace xmlSpace, Encoding enc) {} // 0x00000001899367E4-0x0000000189936A8C
+	}
+
+	internal abstract class XmlRawWriter : XmlWriter // TypeDefIndex: 42488
+	{
+		// Fields
+		protected XmlRawWriterBase64Encoder base64Encoder; // 0x18
+		protected IXmlNamespaceResolver resolver; // 0x20
+	
+		// Properties
+		public override WriteState WriteState { get; } // 0x00000001899371BC-0x0000000189937220 
+		internal virtual IXmlNamespaceResolver NamespaceResolver { get; set; } // 0x0000000184271930-0x0000000184271940
+		internal virtual bool SupportsNamespaceDeclarationInChunks { get; } // 0x000000018115F4C0-0x000000018115F530 
+	
+		// Constructors
+		protected XmlRawWriter() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public override void WriteStartDocument() {} // 0x0000000189936F44-0x0000000189936FA8
+		public override void WriteStartDocument(bool standalone) {} // 0x0000000189936FA8-0x000000018993700C
+		public override void WriteEndDocument() {} // 0x0000000189936D4C-0x0000000189936DB0
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteEndElement() {} // 0x0000000189936DB0-0x0000000189936E14
+		public override void WriteFullEndElement() {} // 0x0000000189936E60-0x0000000189936EC4
+		public override void WriteBase64(byte[] buffer, int index, int count) {} // 0x0000000189936BF8-0x0000000189936CB0
+		public override string LookupPrefix(string ns) => default; // 0x0000000189936B30-0x0000000189936B94
+		public override void WriteCData(string text) {} // 0x0000000189936590-0x00000001899365A4
+		public override void WriteCharEntity(char ch) {} // 0x0000000189936CB0-0x0000000189936D2C
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x0000000189937058-0x00000001899370EC
+		public override void WriteWhitespace(string ws) {} // 0x0000000189936590-0x00000001899365A4
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x00000001899311AC-0x00000001899311DC
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x00000001899311AC-0x00000001899311DC
+		public override void WriteRaw(string data) {} // 0x0000000189936590-0x00000001899365A4
+		public override void WriteValue(object value) {} // 0x00000001899370EC-0x00000001899371BC
+		public override void WriteValue(string value) {} // 0x0000000189936590-0x00000001899365A4
+		public override void WriteAttributes(XmlReader reader, bool defattr) {} // 0x0000000189936B94-0x0000000189936BF8
+		public override void WriteNode(XmlReader reader, bool defattr) {} // 0x0000000189936EE0-0x0000000189936F44
+		internal virtual void WriteXmlDeclaration(XmlStandalone standalone) {} // 0x000000018350B670-0x000000018350B680
+		internal virtual void WriteXmlDeclaration(string xmldecl) {} // 0x000000018350B670-0x000000018350B680
+		internal abstract void StartElementContent();
+		internal virtual void OnRootElement(ConformanceLevel conformanceLevel) {} // 0x000000018350B670-0x000000018350B680
+		internal abstract void WriteEndElement(string prefix, string localName, string ns);
+		internal virtual void WriteFullEndElement(string prefix, string localName, string ns) {} // 0x0000000189936EC4-0x0000000189936EE0
+		internal abstract void WriteNamespaceDeclaration(string prefix, string ns);
+		internal virtual void WriteStartNamespaceDeclaration(string prefix) {} // 0x000000018993700C-0x0000000189937058
+		internal virtual void WriteEndNamespaceDeclaration() {} // 0x0000000189936E14-0x0000000189936E60
+		internal virtual void WriteEndBase64() {} // 0x0000000189936D2C-0x0000000189936D4C
+		internal virtual void Close(WriteState currentState) {} // 0x0000000189936B20-0x0000000189936B30
+	}
+
+	[DebuggerDisplay("{debuggerDisplayProxy}")]
+	[DebuggerDisplay("{debuggerDisplayProxy}")]
+	[DefaultMember("Item")]
+	public abstract class XmlReader : IDisposable // TypeDefIndex: 42489
+	{
+		// Fields
+		private static uint IsTextualNodeBitmap; // 0x00
+		private static uint CanReadContentAsBitmap; // 0x04
+		private static uint HasValueBitmap; // 0x08
+	
+		// Properties
+		public virtual XmlReaderSettings Settings { get; } // 0x0000000181002730-0x0000000181002740 
+		public abstract XmlNodeType NodeType { get; }
+		public virtual string Name { get; } // 0x0000000189939F88-0x000000018993A044 
+		public abstract string LocalName { get; }
+		public abstract string NamespaceURI { get; }
+		public abstract string Prefix { get; }
+		public virtual bool HasValue { get; } // 0x0000000189939EF4-0x0000000189939F44 
+		public abstract string Value { get; }
+		public abstract int Depth { get; }
+		public abstract string BaseURI { get; }
+		public abstract bool IsEmptyElement { get; }
+		public virtual bool IsDefault { get; } // 0x000000018115F4C0-0x000000018115F530 
+		public virtual char QuoteChar { get; } // 0x0000000183D55C30-0x0000000183D55C40 
+		public virtual XmlSpace XmlSpace { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual string XmlLang { get; } // 0x000000018993A0D0-0x000000018993A108 
+		public virtual IXmlSchemaInfo SchemaInfo { get; } // 0x000000018993A044-0x000000018993A080 
+		public virtual System.Type ValueType { get; } // 0x000000018993A080-0x000000018993A0D0 
+		public abstract int AttributeCount { get; }
+		public abstract bool EOF { get; }
+		public abstract System.Xml.ReadState ReadState { get; }
+		public abstract XmlNameTable NameTable { get; }
+		public virtual bool CanResolveEntity { get; } // 0x000000018115F4C0-0x000000018115F530 
+		public virtual bool CanReadValueChunk { get; } // 0x000000018115F4C0-0x000000018115F530 
+		public virtual bool HasAttributes { get; } // 0x0000000189939ED8-0x0000000189939EF4 
+		internal virtual XmlNamespaceManager NamespaceManager { get; } // 0x0000000181002730-0x0000000181002740 
+		internal bool IsDefaultInternal { get; } // 0x0000000189939F44-0x0000000189939F88 
+		internal virtual IDtdInfo DtdInfo { get; } // 0x0000000181002730-0x0000000181002740 
+	
+		// Constructors
+		protected XmlReader() {} // 0x000000018350B670-0x000000018350B680
+		static XmlReader() {} // 0x0000000189939E74-0x0000000189939ED8
+	
+		// Methods
+		public virtual string ReadContentAsString() => default; // 0x0000000189938E44-0x0000000189938E9C
+		public abstract string GetAttribute(string name);
+		public abstract string GetAttribute(string name, string namespaceURI);
+		public abstract string GetAttribute(int i);
+		public abstract bool MoveToAttribute(string name);
+		public virtual void MoveToAttribute(int i) {} // 0x0000000189938D1C-0x0000000189938DD0
+		public abstract bool MoveToFirstAttribute();
+		public abstract bool MoveToNextAttribute();
+		public abstract bool MoveToElement();
+		public abstract bool ReadAttributeValue();
+		public abstract bool Read();
+		public virtual void Close() {} // 0x000000018350B670-0x000000018350B680
+		public virtual void Skip() {} // 0x00000001899399C8-0x00000001899399F8
+		public abstract string LookupNamespace(string prefix);
+		public abstract void ResolveEntity();
+		public virtual int ReadValueChunk(char[] buffer, int index, int count) => default; // 0x000000018993982C-0x0000000189939890
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public virtual string ReadString() => default; // 0x00000001899396A0-0x000000018993982C
+		public virtual XmlNodeType MoveToContent() => default; // 0x0000000189938DD0-0x0000000189938E44
+		public virtual void ReadStartElement() {} // 0x0000000189939418-0x0000000189939510
+		public virtual void ReadStartElement(string name) {} // 0x0000000189939510-0x00000001899396A0
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public virtual string ReadElementString() => default; // 0x0000000189938E9C-0x0000000189939100
+		public virtual void ReadEndElement() {} // 0x0000000189939100-0x00000001899391F8
+		public virtual bool IsStartElement() => default; // 0x0000000189938C24-0x0000000189938C40
+		public virtual bool IsStartElement(string localname, string ns) => default; // 0x0000000189938C40-0x0000000189938CB8
+		public virtual string ReadInnerXml() => default; // 0x00000001899391F8-0x0000000189939418
+		private void WriteNode(XmlWriter xtw, bool defattr) {} // 0x0000000189939AA0-0x0000000189939E74
+		private void WriteAttributeValue(XmlWriter xtw) {} // 0x00000001899399F8-0x0000000189939AA0
+		private XmlWriter CreateWriterForInnerOuterXml(StringWriter sw) => default; // 0x00000001899387CC-0x0000000189938848
+		private void SetNamespacesFlag(XmlTextWriter xtw) {} // 0x0000000189939890-0x000000018993992C
+		public void Dispose() {} // 0x00000001899389CC-0x00000001899389DC
+		protected virtual void Dispose(bool disposing) {} // 0x00000001899389DC-0x0000000189938A10
+		internal static bool IsTextualNode(XmlNodeType nodeType) => default; // 0x0000000189938CB8-0x0000000189938D1C
+		internal static bool CanReadContentAs(XmlNodeType nodeType) => default; // 0x0000000189938244-0x00000001899382AC
+		internal static bool HasValueInternal(XmlNodeType nodeType) => default; // 0x0000000189938A10-0x0000000189938A78
+		private bool SkipSubtree() => default; // 0x000000018993992C-0x00000001899399C8
+		internal Exception CreateReadContentAsException(string methodName) => default; // 0x00000001899382FC-0x0000000189938384
+		internal bool CanReadContentAs() => default; // 0x00000001899382AC-0x00000001899382FC
+		internal static Exception CreateReadContentAsException(string methodName, XmlNodeType nodeType, IXmlLineInfo lineInfo) => default; // 0x0000000189938384-0x00000001899384BC
+		private static string AddLineInfo(string message, IXmlLineInfo lineInfo) => default; // 0x000000018993809C-0x00000001899381C8
+		internal string InternalReadContentAsString() => default; // 0x0000000189938A78-0x0000000189938C24
+		public static XmlReader Create(Stream input, XmlReaderSettings settings, string baseUri) => default; // 0x0000000189938848-0x00000001899388D8
+		public static XmlReader Create(TextReader input) => default; // 0x0000000189938960-0x00000001899389CC
+		public static XmlReader Create(TextReader input, XmlReaderSettings settings, string baseUri) => default; // 0x00000001899388D8-0x0000000189938960
+		internal static XmlReader CreateSqlReader(Stream input, XmlReaderSettings settings, XmlParserContext inputContext) => default; // 0x00000001899384BC-0x00000001899387CC
+		internal static int CalcBufferSize(Stream input) => default; // 0x00000001899381C8-0x0000000189938244
+	}
+
+	public sealed class XmlReaderSettings // TypeDefIndex: 42490
+	{
+		// Fields
+		private bool useAsync; // 0x10
+		private XmlNameTable nameTable; // 0x18
+		private XmlResolver xmlResolver; // 0x20
+		private int lineNumberOffset; // 0x28
+		private int linePositionOffset; // 0x2C
+		private ConformanceLevel conformanceLevel; // 0x30
+		private bool checkCharacters; // 0x34
+		private long maxCharactersInDocument; // 0x38
+		private long maxCharactersFromEntities; // 0x40
+		private bool ignoreWhitespace; // 0x48
+		private bool ignorePIs; // 0x49
+		private bool ignoreComments; // 0x4A
+		private DtdProcessing dtdProcessing; // 0x4C
+		private ValidationType validationType; // 0x50
+		private XmlSchemaValidationFlags validationFlags; // 0x54
+		private XmlSchemaSet schemas; // 0x58
+		private ValidationEventHandler valEventHandler; // 0x60
+		private bool closeInput; // 0x68
+		private bool isReadOnly; // 0x69
+		private static bool? s_enableLegacyXmlSettings; // 0x00
+	
+		// Properties
+		public bool Async { get => default; set {} } // 0x00000001811797F0-0x0000000181179800 0x0000000189937938-0x0000000189937988
+		public XmlNameTable NameTable { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x0000000189937E48-0x0000000189937EA0
+		internal bool IsXmlResolverSet { get; set; } // 0x0000000183D75120-0x0000000183D75130 0x0000000183D75B00-0x0000000183D75B10
+		public XmlResolver XmlResolver { set {} } // 0x0000000189938040-0x000000018993809C
+		public int LineNumberOffset { get => default; set {} } // 0x0000000183D4EB90-0x0000000183D4EBA0 0x0000000189937C60-0x0000000189937CAC
+		public int LinePositionOffset { get => default; set {} } // 0x0000000183D4EDD0-0x0000000183D4EDE0 0x0000000189937CAC-0x0000000189937CF8
+		public ConformanceLevel ConformanceLevel { get => default; set {} } // 0x0000000183D4ED20-0x0000000183D4ED30 0x0000000189937A28-0x0000000189937ACC
+		public bool CheckCharacters { get => default; set {} } // 0x0000000183D4F570-0x0000000183D4F580 0x0000000189937988-0x00000001899379D8
+		public long MaxCharactersInDocument { get => default; set {} } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x0000000189937DA0-0x0000000189937E48
+		public long MaxCharactersFromEntities { get => default; set {} } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000189937CF8-0x0000000189937DA0
+		public bool IgnoreWhitespace { get => default; set {} } // 0x0000000183D4EFE0-0x0000000183D4EFF0 0x0000000189937C10-0x0000000189937C60
+		public bool IgnoreProcessingInstructions { get => default; set {} } // 0x0000000183D4EFF0-0x0000000183D4F000 0x0000000189937BC0-0x0000000189937C10
+		public bool IgnoreComments { get => default; set {} } // 0x0000000183D4F780-0x0000000183D4F790 0x0000000189937B70-0x0000000189937BC0
+		public DtdProcessing DtdProcessing { get => default; set {} } // 0x0000000183D4EDF0-0x0000000183D4EE00 0x0000000189937ACC-0x0000000189937B70
+		public bool CloseInput { get => default; set {} } // 0x0000000183D4F3F0-0x0000000183D4F400 0x00000001899379D8-0x0000000189937A28
+		public ValidationType ValidationType { get => default; set {} } // 0x0000000183D4EED0-0x0000000183D4EEE0 0x0000000189937F9C-0x0000000189938040
+		public XmlSchemaValidationFlags ValidationFlags { get => default; set {} } // 0x0000000183D4EEC0-0x0000000183D4EED0 0x0000000189937EF8-0x0000000189937F9C
+		public XmlSchemaSet Schemas { get => default; set {} } // 0x00000001899378C8-0x0000000189937938 0x0000000189937EA0-0x0000000189937EF8
+		internal bool ReadOnly { set {} } // 0x0000000183D4F410-0x0000000183D4F420
+	
+		// Constructors
+		public XmlReaderSettings() {} // 0x00000001899378BC-0x00000001899378C8
+	
+		// Methods
+		internal XmlResolver GetXmlResolver() => default; // 0x0000000183D4EB40-0x0000000183D4EB50
+		internal XmlResolver GetXmlResolver_CheckConfig() => default; // 0x0000000183D85A20-0x0000000183D85A30
+		public XmlReaderSettings Clone() => default; // 0x00000001899373B8-0x0000000189937408
+		internal ValidationEventHandler GetEventHandler() => default; // 0x0000000183D4EB00-0x0000000183D4EB10
+		internal XmlReader CreateReader(Stream input, System.Uri baseUri, string baseUriString, XmlParserContext inputContext) => default; // 0x000000018993760C-0x00000001899377A8
+		internal XmlReader CreateReader(TextReader input, string baseUriString, XmlParserContext inputContext) => default; // 0x00000001899374D0-0x000000018993760C
+		private void CheckReadOnly(string propertyName) {} // 0x00000001899372FC-0x00000001899373B8
+		private void Initialize() {} // 0x00000001899378BC-0x00000001899378C8
+		private void Initialize(XmlResolver resolver) {} // 0x0000000189937830-0x00000001899378BC
+		private static XmlResolver CreateDefaultResolver() => default; // 0x0000000189937408-0x0000000189937444
+		internal XmlReader AddValidation(XmlReader reader) => default; // 0x0000000189937220-0x00000001899372FC
+		private XmlValidatingReaderImpl CreateDtdValidatingReader(XmlReader baseReader) => default; // 0x0000000189937444-0x00000001899374D0
+		internal static bool EnableLegacyXmlSettings() => default; // 0x00000001899377A8-0x0000000189937830
+	}
+
+	public enum XmlSpace // TypeDefIndex: 42491
+	{
+		None = 0,
+		Default = 1,
+		Preserve = 2
+	}
+
+	internal class XmlTextEncoder // TypeDefIndex: 42492
+	{
+		// Fields
+		private TextWriter textWriter; // 0x10
+		private bool inAttribute; // 0x18
+		private char quoteChar; // 0x1A
+		private StringBuilder attrValue; // 0x20
+		private bool cacheAttrValue; // 0x28
+		private XmlCharType xmlCharType; // 0x30
+	
+		// Properties
+		internal char QuoteChar { set {} } // 0x0000000183D73EE0-0x0000000183D73EF0
+		internal string AttributeValue { get => default; } // 0x000000018993B3FC-0x000000018993B45C 
+	
+		// Constructors
+		public XmlTextEncoder() {} // Dummy constructor
+		internal XmlTextEncoder(TextWriter textWriter) {} // 0x000000018993B3C4-0x000000018993B3FC
+	
+		// Methods
+		internal void StartAttribute(bool cacheAttrValue) {} // 0x000000018993A140-0x000000018993A1CC
+		internal void EndAttribute() {} // 0x000000018993A108-0x000000018993A140
+		internal void WriteSurrogateChar(char lowChar, char highChar) {} // 0x000000018993AA9C-0x000000018993AB50
+		internal void Write(char[] array, int offset, int count) {} // 0x000000018993AF30-0x000000018993B3C4
+		internal void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x000000018993A938-0x000000018993AA9C
+		internal void Write(string text) {} // 0x000000018993AB50-0x000000018993AF30
+		internal void WriteRawWithSurrogateChecking(string text) {} // 0x000000018993A4B8-0x000000018993A6B0
+		internal void WriteRaw(char[] array, int offset, int count) {} // 0x000000018993A6B0-0x000000018993A88C
+		internal void WriteCharEntity(char ch) {} // 0x000000018993A2B8-0x000000018993A3E0
+		internal void WriteEntityRef(string name) {} // 0x000000018993A444-0x000000018993A4B8
+		private void WriteStringFragment(string str, int offset, int count, char[] helperBuffer) {} // 0x000000018993A88C-0x000000018993A938
+		private void WriteCharEntityImpl(char ch) {} // 0x000000018993A1CC-0x000000018993A234
+		private void WriteCharEntityImpl(string strVal) {} // 0x000000018993A234-0x000000018993A2B8
+		private void WriteEntityRefImpl(string name) {} // 0x000000018993A3E0-0x000000018993A444
+	}
+
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public class XmlTextReader : XmlReader, IXmlLineInfo, IXmlNamespaceResolver // TypeDefIndex: 42493
+	{
+		// Fields
+		private XmlTextReaderImpl impl; // 0x10
+	
+		// Properties
+		public override XmlNodeType NodeType { get => default; } // 0x00000001897D4FB0-0x00000001897D4FD4 
+		public override string Name { get => default; } // 0x00000001897D4F8C-0x00000001897D4FB0 
+		public override string LocalName { get => default; } // 0x00000001893B57E4-0x00000001893B5808 
+		public override string NamespaceURI { get => default; } // 0x00000001892EFBE8-0x00000001892EFC0C 
+		public override string Prefix { get => default; } // 0x00000001897D4FD4-0x00000001897D4FF8 
+		public override bool HasValue { get => default; } // 0x00000001897D4EFC-0x00000001897D4F20 
+		public override string Value { get => default; } // 0x00000001897D505C-0x00000001897D5080 
+		public override int Depth { get => default; } // 0x00000001897D4EB4-0x00000001897D4ED8 
+		public override string BaseURI { get => default; } // 0x00000001897D4E48-0x00000001897D4E6C 
+		public override bool IsEmptyElement { get => default; } // 0x00000001897D4F44-0x00000001897D4F68 
+		public override bool IsDefault { get => default; } // 0x00000001897D4F20-0x00000001897D4F44 
+		public override char QuoteChar { get => default; } // 0x00000001897D4FF8-0x00000001897D501C 
+		public override XmlSpace XmlSpace { get => default; } // 0x00000001897D50A4-0x00000001897D50C8 
+		public override string XmlLang { get => default; } // 0x00000001897D5080-0x00000001897D50A4 
+		public override int AttributeCount { get => default; } // 0x00000001897D4E24-0x00000001897D4E48 
+		public override bool EOF { get => default; } // 0x00000001897D4ED8-0x00000001897D4EFC 
+		public override System.Xml.ReadState ReadState { get => default; } // 0x00000001897D501C-0x00000001897D5040 
+		public override XmlNameTable NameTable { get => default; } // 0x00000001897D4F68-0x00000001897D4F8C 
+		public override bool CanResolveEntity { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public override bool CanReadValueChunk { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		public int LineNumber { get => default; } // 0x000000018993B80C-0x000000018993B82C 
+		public int LinePosition { get => default; } // 0x000000018993B82C-0x000000018993B84C 
+		public bool Namespaces { get => default; } // 0x000000018992D2CC-0x000000018992D2EC 
+		public bool Normalization { get => default; set {} } // 0x000000018992D2EC-0x000000018992D30C 0x000000018993B888-0x000000018993B8A8
+		public WhitespaceHandling WhitespaceHandling { set {} } // 0x000000018993B8A8-0x000000018993B8C8
+		public EntityHandling EntityHandling { set {} } // 0x000000018993B868-0x000000018993B888
+		public XmlResolver XmlResolver { set {} } // 0x000000018993B8C8-0x000000018993B8E8
+		internal XmlTextReaderImpl Impl { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		internal override XmlNamespaceManager NamespaceManager { get => default; } // 0x000000018993B84C-0x000000018993B868 
+		internal bool XmlValidatingReaderCompatibilityMode { set {} } // 0x000000018993B8E8-0x000000018993B908
+		internal override IDtdInfo DtdInfo { get => default; } // 0x000000018993B7E8-0x000000018993B80C 
+	
+		// Constructors
+		public XmlTextReader() {} // Dummy constructor
+		public XmlTextReader(Stream input) {} // 0x000000018993B504-0x000000018993B5B0
+		public XmlTextReader(string url, Stream input, XmlNameTable nt) {} // 0x000000018993B718-0x000000018993B7E8
+		public XmlTextReader(TextReader input) {} // 0x000000018993B66C-0x000000018993B718
+		public XmlTextReader(TextReader input, XmlNameTable nt) {} // 0x000000018993B5B0-0x000000018993B66C
+	
+		// Methods
+		public override string GetAttribute(string name) => default; // 0x00000001897D4BF8-0x00000001897D4C1C
+		public override string GetAttribute(string localName, string namespaceURI) => default; // 0x00000001897D4BD0-0x00000001897D4BF8
+		public override string GetAttribute(int i) => default; // 0x00000001897D4C1C-0x00000001897D4C40
+		public override bool MoveToAttribute(string name) => default; // 0x00000001897D4C64-0x00000001897D4C88
+		public override void MoveToAttribute(int i) {} // 0x00000001897D4C88-0x00000001897D4CAC
+		public override bool MoveToFirstAttribute() => default; // 0x00000001897D4CD0-0x00000001897D4CF4
+		public override bool MoveToNextAttribute() => default; // 0x00000001897D4CF4-0x00000001897D4D18
+		public override bool MoveToElement() => default; // 0x00000001897D4CAC-0x00000001897D4CD0
+		public override bool ReadAttributeValue() => default; // 0x00000001897D4D18-0x00000001897D4D3C
+		public override bool Read() => default; // 0x00000001897D4D60-0x00000001897D4D84
+		public override void Close() {} // 0x00000001897D4B4C-0x00000001897D4B70
+		public override void Skip() {} // 0x00000001897D4DA8-0x00000001897D4DCC
+		public override string LookupNamespace(string prefix) => default; // 0x000000018993B45C-0x000000018993B494
+		public override void ResolveEntity() {} // 0x00000001897D4D84-0x00000001897D4DA8
+		public override string ReadString() => default; // 0x000000018993B494-0x000000018993B4C4
+		public bool HasLineInfo() => default; // 0x000000018232EB60-0x000000018232EB70
+		IDictionary<string, string> IXmlNamespaceResolver.GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x000000018993B4C4-0x000000018993B4E4
+		string IXmlNamespaceResolver.LookupNamespace(string prefix) => default; // 0x00000001897D4C40-0x00000001897D4C64
+		string IXmlNamespaceResolver.LookupPrefix(string namespaceName) => default; // 0x000000018993B4E4-0x000000018993B504
+	}
+
+	internal class XmlTextReaderImpl : XmlReader, IXmlLineInfo, IXmlNamespaceResolver // TypeDefIndex: 42508
+	{
+		// Fields
+		private readonly bool useAsync; // 0x10
+		private LaterInitParam laterInitParam; // 0x18
+		private XmlCharType xmlCharType; // 0x20
+		private ParsingState ps; // 0x28
+		private ParsingFunction parsingFunction; // 0xA0
+		private ParsingFunction nextParsingFunction; // 0xA4
+		private ParsingFunction nextNextParsingFunction; // 0xA8
+		private NodeData[] nodes; // 0xB0
+		private NodeData curNode; // 0xB8
+		private int index; // 0xC0
+		private int curAttrIndex; // 0xC4
+		private int attrCount; // 0xC8
+		private int attrHashtable; // 0xCC
+		private int attrDuplWalkCount; // 0xD0
+		private bool attrNeedNamespaceLookup; // 0xD4
+		private bool fullAttrCleanup; // 0xD5
+		private NodeData[] attrDuplSortingArray; // 0xD8
+		private XmlNameTable nameTable; // 0xE0
+		private bool nameTableFromSettings; // 0xE8
+		private XmlResolver xmlResolver; // 0xF0
+		private string url; // 0xF8
+		private bool normalize; // 0x100
+		private bool supportNamespaces; // 0x101
+		private WhitespaceHandling whitespaceHandling; // 0x104
+		private DtdProcessing dtdProcessing; // 0x108
+		private EntityHandling entityHandling; // 0x10C
+		private bool ignorePIs; // 0x110
+		private bool ignoreComments; // 0x111
+		private bool checkCharacters; // 0x112
+		private int lineNumberOffset; // 0x114
+		private int linePositionOffset; // 0x118
+		private bool closeInput; // 0x11C
+		private long maxCharactersInDocument; // 0x120
+		private long maxCharactersFromEntities; // 0x128
+		private bool v1Compat; // 0x130
+		private XmlNamespaceManager namespaceManager; // 0x138
+		private string lastPrefix; // 0x140
+		private XmlContext xmlContext; // 0x148
+		private ParsingState[] parsingStatesStack; // 0x150
+		private int parsingStatesStackTop; // 0x158
+		private string reportedBaseUri; // 0x160
+		private Encoding reportedEncoding; // 0x168
+		private IDtdInfo dtdInfo; // 0x170
+		private XmlNodeType fragmentType; // 0x178
+		private XmlParserContext fragmentParserContext; // 0x180
+		private bool fragment; // 0x188
+		private IncrementalReadDecoder incReadDecoder; // 0x190
+		private IncrementalReadState incReadState; // 0x198
+		private LineInfo incReadLineInfo; // 0x19C
+		private int incReadDepth; // 0x1A4
+		private int incReadLeftStartPos; // 0x1A8
+		private int incReadLeftEndPos; // 0x1AC
+		private int attributeValueBaseEntityId; // 0x1B0
+		private bool emptyEntityInAttributeResolved; // 0x1B4
+		private IValidationEventHandling validationEventHandling; // 0x1B8
+		private OnDefaultAttributeUseDelegate onDefaultAttributeUse; // 0x1C0
+		private bool validatingReaderCompatFlag; // 0x1C8
+		private bool addDefaultAttributesAndNormalize; // 0x1C9
+		private StringBuilder stringBuilder; // 0x1D0
+		private bool rootElementParsed; // 0x1D8
+		private bool standalone; // 0x1D9
+		private int nextEntityId; // 0x1DC
+		private ParsingMode parsingMode; // 0x1E0
+		private System.Xml.ReadState readState; // 0x1E4
+		private IDtdEntityInfo lastEntity; // 0x1E8
+		private bool afterResetState; // 0x1F0
+		private int documentStartBytePos; // 0x1F4
+		private int readValueOffset; // 0x1F8
+		private long charactersInDocument; // 0x200
+		private long charactersFromEntities; // 0x208
+		private Dictionary<IDtdEntityInfo, IDtdEntityInfo> currentEntities; // 0x210
+		private bool disableUndeclaredEntityCheck; // 0x218
+		private XmlReader outerReader; // 0x220
+		private bool xmlResolverIsSet; // 0x228
+		private string Xml; // 0x230
+		private string XmlNs; // 0x238
+		private Task<Tuple<int, int, int, bool>> parseText_dummyTask; // 0x240
+	
+		// Properties
+		public override XmlReaderSettings Settings { get => default; } // 0x000000018988126C-0x00000001898813D0 
+		public override XmlNodeType NodeType { get => default; } // 0x0000000189881200-0x0000000189881220 
+		public override string Name { get => default; } // 0x00000001898811B4-0x00000001898811E0 
+		public override string LocalName { get => default; } // 0x0000000189324B1C-0x0000000189324B3C 
+		public override string NamespaceURI { get => default; } // 0x00000001898811E0-0x0000000189881200 
+		public override string Prefix { get => default; } // 0x0000000189881220-0x0000000189881240 
+		public override string Value { get => default; } // 0x00000001898813D0-0x0000000189881420 
+		public override int Depth { get => default; } // 0x0000000189880FEC-0x000000018988100C 
+		public override string BaseURI { get => default; } // 0x0000000183D570E0-0x0000000183D570F0 
+		public override bool IsEmptyElement { get => default; } // 0x000000018988113C-0x0000000189881168 
+		public override bool IsDefault { get => default; } // 0x0000000189881110-0x000000018988113C 
+		public override char QuoteChar { get => default; } // 0x0000000189881240-0x000000018988126C 
+		public override XmlSpace XmlSpace { get => default; } // 0x0000000189881440-0x0000000189881460 
+		public override string XmlLang { get => default; } // 0x0000000189881420-0x0000000189881440 
+		public override System.Xml.ReadState ReadState { get => default; } // 0x0000000183D75790-0x0000000183D757A0 
+		public override bool EOF { get => default; } // 0x00000001898810BC-0x00000001898810C8 
+		public override XmlNameTable NameTable { get => default; } // 0x0000000183D51140-0x0000000183D51150 
+		public override bool CanResolveEntity { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public override int AttributeCount { get => default; } // 0x0000000183D51FB0-0x0000000183D51FC0 
+		internal XmlReader OuterReader { set {} } // 0x00000001858B41A4-0x00000001858B41B8
+		public override bool CanReadValueChunk { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public int LineNumber { get => default; } // 0x0000000189881174-0x0000000189881194 
+		public int LinePosition { get => default; } // 0x0000000189881194-0x00000001898811B4 
+		internal bool Namespaces { get => default; set {} } // 0x0000000183D75780-0x0000000183D75790 0x000000018988154C-0x0000000189881740
+		internal bool Normalization { get => default; set {} } // 0x0000000183D56750-0x0000000183D56760 0x0000000189881740-0x00000001898817E8
+		internal WhitespaceHandling WhitespaceHandling { set {} } // 0x00000001898817E8-0x00000001898818D0
+		internal EntityHandling EntityHandling { set {} } // 0x0000000189881460-0x00000001898814F0
+		internal bool IsResolverSet { get => default; } // 0x0000000183D57BE0-0x0000000183D57BF0 
+		internal XmlResolver XmlResolver { set {} } // 0x00000001898818D0-0x000000018988196C
+		internal XmlNameTable DtdParserProxy_NameTable { get => default; } // 0x0000000183D51140-0x0000000183D51150 
+		internal IXmlNamespaceResolver DtdParserProxy_NamespaceResolver { get => default; } // 0x0000000183D56EF0-0x0000000183D56F00 
+		internal bool DtdParserProxy_DtdValidation { get => default; } // 0x00000001898810B0-0x00000001898810BC 
+		internal bool DtdParserProxy_Normalization { get => default; } // 0x0000000183D56750-0x0000000183D56760 
+		internal bool DtdParserProxy_Namespaces { get => default; } // 0x0000000183D75780-0x0000000183D75790 
+		internal bool DtdParserProxy_V1CompatibilityMode { get => default; } // 0x0000000183D57B50-0x0000000183D57B60 
+		internal System.Uri DtdParserProxy_BaseUri { get => default; } // 0x000000018988100C-0x00000001898810B0 
+		internal bool DtdParserProxy_IsEof { get => default; } // 0x0000000183D51D50-0x0000000183D51D60 
+		internal char[] DtdParserProxy_ParsingBuffer { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		internal int DtdParserProxy_ParsingBufferLength { get => default; } // 0x0000000183D4EE00-0x0000000183D4EE10 
+		internal int DtdParserProxy_CurrentPosition { get => default; set {} } // 0x0000000183D4ED20-0x0000000183D4ED30 0x0000000183D4EE10-0x0000000183D4EE20
+		internal int DtdParserProxy_EntityStackLength { get => default; } // 0x0000000183D75770-0x0000000183D75780 
+		internal bool DtdParserProxy_IsEntityEolNormalized { get => default; } // 0x0000000183D5E1C0-0x0000000183D5E1D0 
+		internal IValidationEventHandling DtdParserProxy_ValidationEventHandling { get => default; } // 0x0000000183D57130-0x0000000183D57140 
+		internal int DtdParserProxy_LineNo { get => default; } // 0x0000000183D4F0C0-0x0000000183D4F0D0 
+		internal int DtdParserProxy_LineStartPosition { get => default; } // 0x0000000183D4F0D0-0x0000000183D4F0E0 
+		private bool IsResolverNull { get => default; } // 0x0000000189881168-0x0000000189881174 
+		private bool InAttributeValueIterator { get => default; } // 0x00000001898810C8-0x00000001898810E0 
+		private bool DtdValidation { get => default; } // 0x00000001898810B0-0x00000001898810BC 
+		private bool InEntity { get => default; } // 0x00000001898810E0-0x00000001898810EC 
+		internal override IDtdInfo DtdInfo { get => default; } // 0x0000000183D574A0-0x0000000183D574B0 
+		internal IValidationEventHandling ValidationEventHandling { set {} } // 0x0000000184275B98-0x0000000184275BAC
+		internal OnDefaultAttributeUseDelegate OnDefaultAttributeUse { set {} } // 0x0000000184275C68-0x0000000184275C7C
+		internal bool XmlValidatingReaderCompatibilityMode { set {} } // 0x000000018988196C-0x0000000189881A70
+		internal XmlNodeType FragmentType { get => default; } // 0x0000000183D6D0A0-0x0000000183D6D0B0 
+		internal object InternalSchemaType { set {} } // 0x00000001898814F0-0x000000018988151C
+		internal object InternalTypedValue { get => default; set {} } // 0x00000001898810EC-0x0000000189881110 0x000000018988151C-0x000000018988154C
+		internal bool StandAlone { get => default; } // 0x0000000183D6D180-0x0000000183D6D190 
+		internal override XmlNamespaceManager NamespaceManager { get => default; } // 0x0000000183D56EF0-0x0000000183D56F00 
+		internal bool V1Compat { get => default; } // 0x0000000183D57B50-0x0000000183D57B60 
+		internal bool DisableUndeclaredEntityCheck { set {} } // 0x0000000183D5B0B0-0x0000000183D5B0C0
+	
+		// Nested types
+		private enum ParsingFunction // TypeDefIndex: 42494
+		{
+			ElementContent = 0,
+			NoData = 1,
+			OpenUrl = 2,
+			SwitchToInteractive = 3,
+			SwitchToInteractiveXmlDecl = 4,
+			DocumentContent = 5,
+			MoveToElementContent = 6,
+			PopElementContext = 7,
+			PopEmptyElementContext = 8,
+			ResetAttributesRootLevel = 9,
+			Error = 10,
+			Eof = 11,
+			ReaderClosed = 12,
+			EntityReference = 13,
+			InIncrementalRead = 14,
+			FragmentAttribute = 15,
+			ReportEndEntity = 16,
+			AfterResolveEntityInContent = 17,
+			AfterResolveEmptyEntityInContent = 18,
+			XmlDeclarationFragment = 19,
+			GoToEof = 20,
+			PartialTextValue = 21,
+			InReadAttributeValue = 22,
+			InReadValueChunk = 23,
+			InReadContentAsBinary = 24,
+			InReadElementContentAsBinary = 25
+		}
+	
+		private enum ParsingMode // TypeDefIndex: 42495
+		{
+			Full = 0,
+			SkipNode = 1,
+			SkipContent = 2
+		}
+	
+		private enum EntityType // TypeDefIndex: 42496
+		{
+			CharacterDec = 0,
+			CharacterHex = 1,
+			CharacterNamed = 2,
+			Expanded = 3,
+			Skipped = 4,
+			FakeExpanded = 5,
+			Unexpanded = 6,
+			ExpandedInAttribute = 7
+		}
+	
+		private enum EntityExpandType // TypeDefIndex: 42497
+		{
+			All = 0,
+			OnlyGeneral = 1,
+			OnlyCharacter = 2
+		}
+	
+		private enum IncrementalReadState // TypeDefIndex: 42498
+		{
+			Text = 0,
+			StartTag = 1,
+			PI = 2,
+			CDATA = 3,
+			Comment = 4,
+			Attributes = 5,
+			AttributeValue = 6,
+			ReadData = 7,
+			EndElement = 8,
+			End = 9,
+			ReadValueChunk_OnCachedValue = 10,
+			ReadValueChunk_OnPartialValue = 11,
+			ReadContentAsBinary_OnCachedValue = 12,
+			ReadContentAsBinary_OnPartialValue = 13,
+			ReadContentAsBinary_End = 14
+		}
+	
+		private class LaterInitParam // TypeDefIndex: 42499
+		{
+			// Fields
+			public bool useAsync; // 0x10
+			public Stream inputStream; // 0x18
+			public byte[] inputBytes; // 0x20
+			public int inputByteCount; // 0x28
+			public System.Uri inputbaseUri; // 0x30
+			public string inputUriStr; // 0x38
+			public XmlResolver inputUriResolver; // 0x40
+			public XmlParserContext inputContext; // 0x48
+			public TextReader inputTextReader; // 0x50
+			public InitInputType initType; // 0x58
+	
+			// Constructors
+			public LaterInitParam() {} // 0x0000000183D56BE0-0x0000000183D56BF0
+		}
+	
+		private enum InitInputType // TypeDefIndex: 42500
+		{
+			UriString = 0,
+			Stream = 1,
+			TextReader = 2,
+			Invalid = 3
+		}
+	
+		private struct ParsingState // TypeDefIndex: 42501
+		{
+			// Fields
+			internal char[] chars; // 0x00
+			internal int charPos; // 0x08
+			internal int charsUsed; // 0x0C
+			internal Encoding encoding; // 0x10
+			internal bool appendMode; // 0x18
+			internal Stream stream; // 0x20
+			internal System.Text.Decoder decoder; // 0x28
+			internal byte[] bytes; // 0x30
+			internal int bytePos; // 0x38
+			internal int bytesUsed; // 0x3C
+			internal TextReader textReader; // 0x40
+			internal int lineNo; // 0x48
+			internal int lineStartPos; // 0x4C
+			internal string baseUriStr; // 0x50
+			internal System.Uri baseUri; // 0x58
+			internal bool isEof; // 0x60
+			internal bool isStreamEof; // 0x61
+			internal IDtdEntityInfo entity; // 0x68
+			internal int entityId; // 0x70
+			internal bool eolNormalized; // 0x74
+			internal bool entityResolvedManually; // 0x75
+	
+			// Properties
+			internal int LineNo { get => default; } // 0x0000000183D4EC50-0x0000000183D4EC60 
+			internal int LinePos { get => default; } // 0x0000000183D75980-0x0000000183D75990 
+	
+			// Methods
+			internal void Clear() {} // 0x000000018992DBA4-0x000000018992DC70
+			internal void Close(bool closeInput) {} // 0x000000018992DC70-0x000000018992DCB4
+		}
+	
+		private class XmlContext // TypeDefIndex: 42502
+		{
+			// Fields
+			internal XmlSpace xmlSpace; // 0x10
+			internal string xmlLang; // 0x18
+			internal string defaultNamespace; // 0x20
+			internal XmlContext previousContext; // 0x28
+	
+			// Constructors
+			internal XmlContext() {} // 0x0000000189931A90-0x0000000189931B08
+			internal XmlContext(XmlContext previousContext) {} // 0x0000000189931B08-0x0000000189931B58
+		}
+	
+		private class NoNamespaceManager : XmlNamespaceManager // TypeDefIndex: 42503
+		{
+			// Properties
+			public override string DefaultNamespace { get => default; } // 0x000000018992DB6C-0x000000018992DBA4 
+	
+			// Constructors
+			public NoNamespaceManager() {} // 0x000000018350B670-0x000000018350B680
+	
+			// Methods
+			public override void PushScope() {} // 0x000000018350B670-0x000000018350B680
+			public override bool PopScope() => default; // 0x000000018115F4C0-0x000000018115F530
+			public override void AddNamespace(string prefix, string uri) {} // 0x000000018350B670-0x000000018350B680
+			public override void RemoveNamespace(string prefix, string uri) {} // 0x000000018350B670-0x000000018350B680
+			public override IEnumerator GetEnumerator() => default; // 0x0000000181002730-0x0000000181002740
+			public override IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x0000000181002730-0x0000000181002740
+			public override string LookupNamespace(string prefix) => default; // 0x000000018992DB34-0x000000018992DB6C
+			public override string LookupPrefix(string uri) => default; // 0x0000000181002730-0x0000000181002740
+		}
+	
+		internal class DtdParserProxy : IDtdParserAdapterV1 // TypeDefIndex: 42504
+		{
+			// Fields
+			private XmlTextReaderImpl reader; // 0x10
+	
+			// Properties
+			XmlNameTable IDtdParserAdapter.NameTable { get => default; } // 0x000000018992D5D8-0x000000018992D5F8 
+			IXmlNamespaceResolver IDtdParserAdapter.NamespaceResolver { get => default; } // 0x000000018992D5F8-0x000000018992D618 
+			System.Uri IDtdParserAdapter.BaseUri { get => default; } // 0x000000018992D520-0x000000018992D540 
+			bool IDtdParserAdapter.IsEof { get => default; } // 0x000000018992D580-0x000000018992D5A0 
+			char[] IDtdParserAdapter.ParsingBuffer { get => default; } // 0x00000001856B1D28-0x00000001856B1D44 
+			int IDtdParserAdapter.ParsingBufferLength { get => default; } // 0x000000018992D618-0x000000018992D634 
+			int IDtdParserAdapter.CurrentPosition { get => default; set {} } // 0x0000000184274708-0x0000000184274724 0x0000000184271AB0-0x0000000184271ACC
+			int IDtdParserAdapter.EntityStackLength { get => default; } // 0x000000018992D540-0x000000018992D560 
+			bool IDtdParserAdapter.IsEntityEolNormalized { get => default; } // 0x000000018992D560-0x000000018992D580 
+			int IDtdParserAdapter.LineNo { get => default; } // 0x000000018992D5A0-0x000000018992D5BC 
+			int IDtdParserAdapter.LineStartPosition { get => default; } // 0x000000018992D5BC-0x000000018992D5D8 
+			bool IDtdParserAdapterWithValidation.DtdValidation { get => default; } // 0x000000018992D32C-0x000000018992D350 
+			IValidationEventHandling IDtdParserAdapterWithValidation.ValidationEventHandling { get => default; } // 0x000000018992D350-0x000000018992D370 
+			bool IDtdParserAdapterV1.Normalization { get => default; } // 0x000000018992D2EC-0x000000018992D30C 
+			bool IDtdParserAdapterV1.Namespaces { get => default; } // 0x000000018992D2CC-0x000000018992D2EC 
+			bool IDtdParserAdapterV1.V1CompatibilityMode { get => default; } // 0x000000018992D30C-0x000000018992D32C 
+	
+			// Constructors
+			public DtdParserProxy() {} // Dummy constructor
+			internal DtdParserProxy(XmlTextReaderImpl reader) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+			// Methods
+			void IDtdParserAdapter.OnNewLine(int pos) {} // 0x000000018992D370-0x000000018992D394
+			int IDtdParserAdapter.ReadData() => default; // 0x000000018992D4E4-0x000000018992D504
+			int IDtdParserAdapter.ParseNumericCharRef(StringBuilder internalSubsetBuilder) => default; // 0x000000018992D424-0x000000018992D444
+			int IDtdParserAdapter.ParseNamedCharRef(bool expand, StringBuilder internalSubsetBuilder) => default; // 0x000000018992D404-0x000000018992D424
+			void IDtdParserAdapter.ParsePI(StringBuilder sb) {} // 0x000000018992D444-0x000000018992D464
+			void IDtdParserAdapter.ParseComment(StringBuilder sb) {} // 0x000000018992D3E4-0x000000018992D404
+			bool IDtdParserAdapter.PushEntity(IDtdEntityInfo entity, out int entityId) {
+				entityId = default;
+				return default;
+			} // 0x000000018992D484-0x000000018992D4A4
+			bool IDtdParserAdapter.PopEntity(out IDtdEntityInfo oldEntity, out int newEntityId) {
+				oldEntity = default;
+				newEntityId = default;
+				return default;
+			} // 0x000000018992D464-0x000000018992D484
+			bool IDtdParserAdapter.PushExternalSubset(string systemId, string publicId) => default; // 0x000000018992D4A4-0x000000018992D4C4
+			void IDtdParserAdapter.PushInternalDtd(string baseUri, string internalDtd) {} // 0x000000018992D4C4-0x000000018992D4E4
+			void IDtdParserAdapter.Throw(Exception e) {} // 0x000000018992D504-0x000000018992D520
+			void IDtdParserAdapter.OnSystemId(string systemId, LineInfo keywordLineInfo, LineInfo systemLiteralLineInfo) {} // 0x000000018992D3BC-0x000000018992D3E4
+			void IDtdParserAdapter.OnPublicId(string publicId, LineInfo keywordLineInfo, LineInfo publicLiteralLineInfo) {} // 0x000000018992D394-0x000000018992D3BC
+		}
+	
+		private class NodeData : IComparable // TypeDefIndex: 42505
+		{
+			// Fields
+			private static NodeData s_None; // 0x00
+			internal XmlNodeType type; // 0x10
+			internal string localName; // 0x18
+			internal string prefix; // 0x20
+			internal string ns; // 0x28
+			internal string nameWPrefix; // 0x30
+			private string value; // 0x38
+			private char[] chars; // 0x40
+			private int valueStartPos; // 0x48
+			private int valueLength; // 0x4C
+			internal LineInfo lineInfo; // 0x50
+			internal LineInfo lineInfo2; // 0x58
+			internal char quoteChar; // 0x60
+			internal int depth; // 0x64
+			private bool isEmptyOrDefault; // 0x68
+			internal int entityId; // 0x6C
+			internal bool xmlContextPushed; // 0x70
+			internal NodeData nextAttrValueChunk; // 0x78
+			internal object schemaType; // 0x80
+			internal object typedValue; // 0x88
+	
+			// Properties
+			internal static NodeData None { get => default; } // 0x000000018993C24C-0x000000018993C2F4 
+			internal int LineNo { get => default; } // 0x0000000183D4EED0-0x0000000183D4EEE0 
+			internal int LinePos { get => default; } // 0x0000000183D4EEC0-0x0000000183D4EED0 
+			internal bool IsEmptyElement { get => default; set {} } // 0x000000018993C23C-0x000000018993C24C 0x0000000183D4F440-0x0000000183D4F450
+			internal bool IsDefaultAttribute { get => default; set {} } // 0x000000018993C22C-0x000000018993C23C 0x0000000183D4F440-0x0000000183D4F450
+			internal bool ValueBuffered { get => default; } // 0x000000018993C340-0x000000018993C34C 
+			internal string StringValue { get => default; } // 0x000000018993C2F4-0x000000018993C340 
+	
+			// Constructors
+			internal NodeData() {} // 0x000000018993C20C-0x000000018993C22C
+	
+			// Methods
+			internal void TrimSpacesInValue() {} // 0x000000018993C1C4-0x000000018993C20C
+			internal void Clear(XmlNodeType type) {} // 0x000000018993BCA8-0x000000018993BD54
+			internal void ClearName() {} // 0x000000018993BC04-0x000000018993BCA8
+			internal void SetLineInfo(int lineNo, int linePos) {} // 0x0000000183D75B20-0x0000000183D75B30
+			internal void SetLineInfo2(int lineNo, int linePos) {} // 0x0000000183D75B10-0x0000000183D75B20
+			internal void SetValueNode(XmlNodeType type, string value) {} // 0x000000018993C060-0x000000018993C09C
+			internal void SetValueNode(XmlNodeType type, char[] chars, int startPos, int len) {} // 0x000000018993C09C-0x000000018993C0F4
+			internal void SetNamedNode(XmlNodeType type, string localName) {} // 0x000000018993BF34-0x000000018993BFA0
+			internal void SetNamedNode(XmlNodeType type, string localName, string prefix, string nameWPrefix) {} // 0x000000018993BFA0-0x000000018993C060
+			internal void SetValue(string value) {} // 0x000000018993C0F4-0x000000018993C108
+			internal void SetValue(char[] chars, int startPos, int len) {} // 0x000000018993C108-0x000000018993C144
+			internal void OnBufferInvalidated() {} // 0x000000018993BEE4-0x000000018993BF34
+			internal void CopyTo(int valueOffset, StringBuilder sb) {} // 0x000000018993BDB0-0x000000018993BE34
+			internal int CopyTo(int valueOffset, char[] buffer, int offset, int length) => default; // 0x000000018993BD54-0x000000018993BDB0
+			internal string GetNameWPrefix(XmlNameTable nt) => default; // 0x000000018993BEC4-0x000000018993BEE4
+			internal string CreateNameWPrefix(XmlNameTable nt) => default; // 0x000000018993BE34-0x000000018993BEC4
+			int IComparable.CompareTo(object obj) => default; // 0x000000018993C144-0x000000018993C1C4
+		}
+	
+		private class DtdDefaultAttributeInfoToNodeDataComparer : IComparer<object> // TypeDefIndex: 42506
+		{
+			// Fields
+			private static IComparer<object> s_instance; // 0x00
+	
+			// Properties
+			internal static IComparer<object> Instance { get => default; } // 0x000000018993BB84-0x000000018993BBD4 
+	
+			// Constructors
+			public DtdDefaultAttributeInfoToNodeDataComparer() {} // 0x000000018350B670-0x000000018350B680
+			static DtdDefaultAttributeInfoToNodeDataComparer() {} // 0x000000018993BB20-0x000000018993BB84
+	
+			// Methods
+			public int Compare(object x, object y) => default; // 0x000000018993B908-0x000000018993BB20
+		}
+	
+		internal delegate void OnDefaultAttributeUseDelegate(IDtdDefaultAttributeInfo defaultAttribute, XmlTextReaderImpl coreReader); // TypeDefIndex: 42507; 0x0000000182065C10-0x0000000182065C20
+	
+		// Constructors
+		public XmlTextReaderImpl() {} // Dummy constructor
+		internal XmlTextReaderImpl(XmlNameTable nt) {} // 0x00000001898800E8-0x00000001898804E4
+		private XmlTextReaderImpl(XmlResolver resolver, XmlReaderSettings settings, XmlParserContext context) {} // 0x0000000189880620-0x0000000189880B74
+		internal XmlTextReaderImpl(Stream input) {} // 0x000000018987FED0-0x000000018987FF74
+		internal XmlTextReaderImpl(string url, Stream input, XmlNameTable nt) {} // 0x0000000189880C18-0x0000000189880D20
+		internal XmlTextReaderImpl(TextReader input) {} // 0x0000000189880B74-0x0000000189880C18
+		internal XmlTextReaderImpl(TextReader input, XmlNameTable nt) {} // 0x000000018987FF74-0x000000018987FFE0
+		internal XmlTextReaderImpl(string url, TextReader input, XmlNameTable nt) {} // 0x000000018987FFE0-0x00000001898800E8
+		internal XmlTextReaderImpl(string xmlFragment, XmlNodeType fragType, XmlParserContext context) {} // 0x000000018987FC54-0x000000018987FD94
+		internal XmlTextReaderImpl(string xmlFragment, XmlParserContext context) {} // 0x00000001898804E4-0x0000000189880620
+		internal XmlTextReaderImpl(Stream stream, byte[] bytes, int byteCount, XmlReaderSettings settings, System.Uri baseUri, string baseUriStr, XmlParserContext context, bool closeInput) {} // 0x0000000189880DE4-0x0000000189880FEC
+		internal XmlTextReaderImpl(TextReader input, XmlReaderSettings settings, string baseUriStr, XmlParserContext context) {} // 0x000000018987FD94-0x000000018987FED0
+		internal XmlTextReaderImpl(string xmlFragment, XmlParserContext context, XmlReaderSettings settings) {} // 0x0000000189880D20-0x0000000189880DE4
+	
+		// Methods
+		private void FinishInitUriString() {} // 0x0000000189871DCC-0x0000000189872124
+		private void FinishInitStream() {} // 0x0000000189871C78-0x0000000189871D40
+		private void FinishInitTextReader() {} // 0x0000000189871D40-0x0000000189871DCC
+		public override string GetAttribute(string name) => default; // 0x000000018987260C-0x0000000189872690
+		public override string GetAttribute(string localName, string namespaceURI) => default; // 0x0000000189872690-0x00000001898727B8
+		public override string GetAttribute(int i) => default; // 0x0000000189872568-0x000000018987260C
+		public override bool MoveToAttribute(string name) => default; // 0x0000000189874954-0x0000000189874A10
+		public override void MoveToAttribute(int i) {} // 0x0000000189874A10-0x0000000189874AE0
+		public override bool MoveToFirstAttribute() => default; // 0x0000000189874B60-0x0000000189874BDC
+		public override bool MoveToNextAttribute() => default; // 0x0000000189874BDC-0x0000000189874C68
+		public override bool MoveToElement() => default; // 0x0000000189874AE0-0x0000000189874B60
+		private void FinishInit() {} // 0x0000000189872124-0x0000000189872178
+		public override bool Read() => default; // 0x000000018987CE0C-0x000000018987D370
+		public override void Close() {} // 0x0000000189871120-0x0000000189871130
+		public override void Skip() {} // 0x000000018987E8B4-0x000000018987EA30
+		public override string LookupNamespace(string prefix) => default; // 0x00000001898747BC-0x00000001898747F4
+		public override bool ReadAttributeValue() => default; // 0x000000018987C17C-0x000000018987C430
+		public override void ResolveEntity() {} // 0x000000018987D6E0-0x000000018987D954
+		internal void MoveOffEntityReference() {} // 0x00000001898748A4-0x0000000189874954
+		public override string ReadString() => default; // 0x000000018987C8C4-0x000000018987C8E4
+		public override int ReadValueChunk(char[] buffer, int index, int count) => default; // 0x000000018987C8E4-0x000000018987CE0C
+		public bool HasLineInfo() => default; // 0x000000018232EB60-0x000000018232EB70
+		IDictionary<string, string> IXmlNamespaceResolver.GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x000000018987EE04-0x000000018987EE0C
+		string IXmlNamespaceResolver.LookupNamespace(string prefix) => default; // 0x000000018987EE0C-0x000000018987EE20
+		string IXmlNamespaceResolver.LookupPrefix(string namespaceName) => default; // 0x000000018987EE20-0x000000018987EE28
+		internal IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x0000000189872A50-0x0000000189872A78
+		internal string LookupPrefix(string namespaceName) => default; // 0x000000018987487C-0x00000001898748A4
+		internal void DtdParserProxy_OnNewLine(int pos) {} // 0x0000000183D75740-0x0000000183D75750
+		internal int DtdParserProxy_ReadData() => default; // 0x00000001898718EC-0x00000001898718F4
+		internal int DtdParserProxy_ParseNumericCharRef(StringBuilder internalSubsetBuilder) => default; // 0x00000001898715EC-0x0000000189871610
+		internal int DtdParserProxy_ParseNamedCharRef(bool expand, StringBuilder internalSubsetBuilder) => default; // 0x00000001898715E4-0x00000001898715EC
+		internal void DtdParserProxy_ParsePI(StringBuilder sb) {} // 0x0000000189871610-0x0000000189871658
+		internal void DtdParserProxy_ParseComment(StringBuilder sb) {} // 0x0000000189871430-0x00000001898715E4
+		private XmlResolver GetTempResolver() => default; // 0x0000000189872A90-0x0000000189872AE4
+		internal bool DtdParserProxy_PushEntity(IDtdEntityInfo entity, out int entityId) {
+			entityId = default;
+			return default;
+		} // 0x00000001898716B8-0x0000000189871730
+		internal bool DtdParserProxy_PopEntity(out IDtdEntityInfo oldEntity, out int newEntityId) {
+			oldEntity = default;
+			newEntityId = default;
+			return default;
+		} // 0x0000000189871658-0x00000001898716B8
+		internal bool DtdParserProxy_PushExternalSubset(string systemId, string publicId) => default; // 0x0000000189871730-0x0000000189871860
+		internal void DtdParserProxy_PushInternalDtd(string baseUri, string internalDtd) {} // 0x0000000189871860-0x00000001898718EC
+		internal void DtdParserProxy_Throw(Exception e) {} // 0x00000001898718F4-0x0000000189871904
+		internal void DtdParserProxy_OnSystemId(string systemId, LineInfo keywordLineInfo, LineInfo systemLiteralLineInfo) {} // 0x000000018987139C-0x0000000189871430
+		internal void DtdParserProxy_OnPublicId(string publicId, LineInfo keywordLineInfo, LineInfo publicLiteralLineInfo) {} // 0x0000000189871308-0x000000018987139C
+		private void Throw(int pos, string res, string arg) {} // 0x000000018987F86C-0x000000018987F888
+		private void Throw(int pos, string res, string[] args) {} // 0x000000018987F968-0x000000018987F984
+		private void Throw(int pos, string res) {} // 0x000000018987F6F8-0x000000018987F750
+		private void Throw(string res) {} // 0x000000018987F888-0x000000018987F8D4
+		private void Throw(string res, int lineNo, int linePos) {} // 0x000000018987F648-0x000000018987F6F8
+		private void Throw(string res, string arg) {} // 0x000000018987F750-0x000000018987F7EC
+		private void Throw(string res, string arg, int lineNo, int linePos) {} // 0x000000018987F8D4-0x000000018987F968
+		private void Throw(string res, string[] args) {} // 0x000000018987F5AC-0x000000018987F648
+		private void Throw(string res, string arg, Exception innerException) {} // 0x000000018987F524-0x000000018987F5AC
+		private void Throw(string res, string[] args, Exception innerException) {} // 0x000000018987F984-0x000000018987FA34
+		private void Throw(Exception e) {} // 0x000000018987F7EC-0x000000018987F86C
+		private void ReThrow(Exception e, int lineNo, int linePos) {} // 0x000000018987C0D8-0x000000018987C17C
+		private void ThrowWithoutLineInfo(string res) {} // 0x000000018987F488-0x000000018987F524
+		private void ThrowWithoutLineInfo(string res, string arg) {} // 0x000000018987F370-0x000000018987F3F4
+		private void ThrowWithoutLineInfo(string res, string[] args, Exception innerException) {} // 0x000000018987F3F4-0x000000018987F488
+		private void ThrowInvalidChar(char[] data, int length, int invCharPos) {} // 0x000000018987EE9C-0x000000018987EF04
+		private void SetErrorState() {} // 0x0000000183D75750-0x0000000183D75770
+		private void SendValidationEvent(XmlSeverityType severity, string code, string arg, int lineNo, int linePos) {} // 0x000000018987D974-0x000000018987DA28
+		private void SendValidationEvent(XmlSeverityType severity, XmlSchemaException exception) {} // 0x000000018987D954-0x000000018987D974
+		private void FinishAttributeValueIterator() {} // 0x0000000189871B84-0x0000000189871C04
+		private void InitStreamInput(Stream stream, Encoding encoding) {} // 0x00000001898742D8-0x0000000189874350
+		private void InitStreamInput(string baseUriStr, Stream stream, Encoding encoding) {} // 0x00000001898743C4-0x00000001898743F0
+		private void InitStreamInput(System.Uri baseUri, Stream stream, Encoding encoding) {} // 0x0000000189874350-0x00000001898743C4
+		private void InitStreamInput(System.Uri baseUri, string baseUriStr, Stream stream, Encoding encoding) {} // 0x00000001898743F0-0x000000018987441C
+		private void InitStreamInput(System.Uri baseUri, string baseUriStr, Stream stream, byte[] bytes, int byteCount, Encoding encoding) {} // 0x0000000189874068-0x00000001898742D8
+		private void InitTextReaderInput(string baseUriStr, TextReader input) {} // 0x0000000189874528-0x0000000189874548
+		private void InitTextReaderInput(string baseUriStr, System.Uri baseUri, TextReader input) {} // 0x0000000189874548-0x0000000189874634
+		private void InitStringInput(string baseUriStr, Encoding originalEncoding, string str) {} // 0x000000018987441C-0x0000000189874528
+		private void InitFragmentReader(XmlNodeType fragmentType, XmlParserContext parserContext, bool allowXmlDeclFragment) {} // 0x0000000189873DA8-0x0000000189874068
+		private void ProcessDtdFromParserContext(XmlParserContext context) {} // 0x000000018987B7A0-0x000000018987B7FC
+		private void OpenUrl() {} // 0x0000000189875438-0x00000001898755EC
+		private void OpenUrlDelegate(object xmlResolver) {} // 0x000000018987535C-0x0000000189875438
+		private Encoding DetectEncoding() => default; // 0x0000000189871130-0x0000000189871308
+		private void SetupEncoding(Encoding encoding) {} // 0x000000018987DA98-0x000000018987DBD4
+		private void SwitchEncoding(Encoding newEncoding) {} // 0x000000018987ED38-0x000000018987EE04
+		private Encoding CheckEncoding(string newEncodingName) => default; // 0x0000000189870CB8-0x0000000189871030
+		private void UnDecodeChars() {} // 0x000000018987FA34-0x000000018987FAD4
+		private void SwitchEncodingToUTF8() {} // 0x000000018987ECCC-0x000000018987ED38
+		private int ReadData() => default; // 0x000000018987C47C-0x000000018987C8C4
+		private int GetChars(int maxCharsCount) => default; // 0x00000001898727B8-0x00000001898728DC
+		private void InvalidCharRecovery(ref int bytesCount, out int charsCount) {
+			charsCount = default;
+		} // 0x0000000189874634-0x00000001898747BC
+		internal void Close(bool closeInput) {} // 0x0000000189871030-0x0000000189871120
+		private void ShiftBuffer(int sourcePos, int destPos, int count) {} // 0x000000018987DFFC-0x000000018987E024
+		private bool ParseXmlDeclaration(bool isTextDecl) => default; // 0x000000018987A954-0x000000018987B5FC
+		private bool ParseDocumentContent() => default; // 0x00000001898771D0-0x00000001898776E4
+		private bool ParseElementContent() => default; // 0x0000000189877A5C-0x0000000189877D64
+		private void ThrowUnclosedElements() {} // 0x000000018987F06C-0x000000018987F1F8
+		private void ParseElement() {} // 0x0000000189877D64-0x000000018987822C
+		private void AddDefaultAttributesAndNormalize() {} // 0x000000018986FF20-0x0000000189870550
+		private void ParseEndElement() {} // 0x000000018987822C-0x00000001898785A4
+		private void ThrowTagMismatch(NodeData startTag) {} // 0x000000018987EF04-0x000000018987F06C
+		private void ParseAttributes() {} // 0x00000001898763F0-0x00000001898769A4
+		private void ElementNamespaceLookup() {} // 0x0000000189871B24-0x0000000189871B84
+		private void AttributeNamespaceLookup() {} // 0x0000000189870BDC-0x0000000189870C88
+		private void AttributeDuplCheck() {} // 0x000000018987091C-0x0000000189870BDC
+		private void OnDefaultNamespaceDecl(NodeData attr) {} // 0x0000000189874D48-0x0000000189874E68
+		private void OnNamespaceDecl(NodeData attr) {} // 0x0000000189874F0C-0x0000000189874FC4
+		private void OnXmlReservedAttribute(NodeData attr) {} // 0x0000000189874FC4-0x000000018987519C
+		private void ParseAttributeValueSlow(int curPos, char quoteChar, NodeData attr) {} // 0x0000000189875AA4-0x00000001898763F0
+		private void AddAttributeChunkToList(NodeData attr, NodeData chunk, ref NodeData lastChunk) {} // 0x000000018986F254-0x000000018986F2A4
+		private bool ParseText() => default; // 0x0000000189879E40-0x000000018987A264
+		private bool ParseText(out int startPos, out int endPos, ref int outOrChars) {
+			startPos = default;
+			endPos = default;
+			return default;
+		} // 0x000000018987A264-0x000000018987A7E0
+		private void FinishPartialValue() {} // 0x0000000189872298-0x0000000189872394
+		private void FinishOtherValueIterator() {} // 0x0000000189872178-0x0000000189872298
+		private void SkipPartialTextValue() {} // 0x000000018987E378-0x000000018987E3C4
+		private void FinishReadValueChunk() {} // 0x00000001898724A4-0x00000001898724DC
+		private void FinishReadContentAsBinary() {} // 0x0000000189872394-0x00000001898723F0
+		private void FinishReadElementContentAsBinary() {} // 0x00000001898723F0-0x00000001898724A4
+		private bool ParseRootLevelWhitespace() => default; // 0x0000000189879C58-0x0000000189879E40
+		private void ParseEntityReference() {} // 0x00000001898786CC-0x0000000189878728
+		private EntityType HandleEntityReference(bool isInAttributeValue, EntityExpandType expandType, out int charRefEndPos) {
+			charRefEndPos = default;
+			return default;
+		} // 0x0000000189872CCC-0x0000000189872F88
+		private EntityType HandleGeneralEntityReference(string name, bool isInAttributeValue, bool pushFakeEntityIfNullResolver, int entityStartLinePos) => default; // 0x0000000189872F88-0x0000000189873354
+		private bool HandleEntityEnd(bool checkEntityNesting) => default; // 0x0000000189872B44-0x0000000189872CCC
+		private void SetupEndEntityNodeInContent() {} // 0x000000018987DC5C-0x000000018987DD50
+		private void SetupEndEntityNodeInAttribute() {} // 0x000000018987DBD4-0x000000018987DC5C
+		private bool ParsePI() => default; // 0x00000001898799E0-0x00000001898799EC
+		private bool ParsePI(StringBuilder piInDtdStringBuilder) => default; // 0x000000018987964C-0x00000001898799E0
+		private bool ParsePIValue(out int outStartPos, out int outEndPos) {
+			outStartPos = default;
+			outEndPos = default;
+			return default;
+		} // 0x0000000189879340-0x000000018987964C
+		private bool ParseComment() => default; // 0x0000000189876F28-0x0000000189876F78
+		private void ParseCData() {} // 0x0000000189876EA8-0x0000000189876EB8
+		private void ParseCDataOrComment(XmlNodeType type) {} // 0x0000000189876D24-0x0000000189876EA8
+		private bool ParseCDataOrComment(XmlNodeType type, out int outStartPos, out int outEndPos) {
+			outStartPos = default;
+			outEndPos = default;
+			return default;
+		} // 0x00000001898769A4-0x0000000189876D24
+		private bool ParseDoctypeDecl() => default; // 0x0000000189876F78-0x00000001898771D0
+		private void ParseDtd() {} // 0x0000000189877818-0x0000000189877A5C
+		private void SkipDtd() {} // 0x000000018987E024-0x000000018987E378
+		private void SkipPublicOrSystemIdLiteral() {} // 0x000000018987E3C4-0x000000018987E454
+		private void SkipUntil(char stopChar, bool recognizeLiterals) {} // 0x000000018987E454-0x000000018987E8B4
+		private int EatWhitespaces(StringBuilder sb) => default; // 0x0000000189871904-0x0000000189871B24
+		private int ParseCharRefInline(int startPos, out int charCount, out EntityType entityType) {
+			charCount = default;
+			entityType = default;
+			return default;
+		} // 0x0000000189876EB8-0x0000000189876F28
+		private int ParseNumericCharRef(bool expand, StringBuilder internalSubsetBuilder, out EntityType entityType) {
+			entityType = default;
+			return default;
+		} // 0x000000018987928C-0x0000000189879340
+		private int ParseNumericCharRefInline(int startPos, bool expand, StringBuilder internalSubsetBuilder, out int charCount, out EntityType entityType) {
+			charCount = default;
+			entityType = default;
+			return default;
+		} // 0x0000000189878B3C-0x000000018987928C
+		private int ParseNamedCharRef(bool expand, StringBuilder internalSubsetBuilder) => default; // 0x0000000189878AD0-0x0000000189878B3C
+		private int ParseNamedCharRefInline(int startPos, bool expand, StringBuilder internalSubsetBuilder) => default; // 0x00000001898787D8-0x0000000189878AD0
+		private int ParseName() => default; // 0x00000001898787B4-0x00000001898787D8
+		private int ParseQName(out int colonPos) {
+			colonPos = default;
+			return default;
+		} // 0x0000000189879C38-0x0000000189879C58
+		private int ParseQName(bool isQName, int startOffset, out int colonPos) {
+			colonPos = default;
+			return default;
+		} // 0x00000001898799EC-0x0000000189879C38
+		private bool ReadDataInName(ref int pos) => default; // 0x000000018987C430-0x000000018987C47C
+		private string ParseEntityName() => default; // 0x00000001898785A4-0x00000001898786CC
+		private NodeData AddNode(int nodeIndex, int nodeDepth) => default; // 0x0000000189870794-0x00000001898707D8
+		private NodeData AllocNode(int nodeIndex, int nodeDepth) => default; // 0x00000001898707D8-0x000000018987091C
+		private NodeData AddAttributeNoChecks(string name, int attrDepth) => default; // 0x000000018986F2A4-0x000000018986F328
+		private NodeData AddAttribute(int endNamePos, int colonPos) => default; // 0x000000018986F328-0x000000018986F4F8
+		private NodeData AddAttribute(string localName, string prefix, string nameWPrefix) => default; // 0x000000018986F4F8-0x000000018986F640
+		private void PopElementContext() {} // 0x000000018987B5FC-0x000000018987B644
+		private void OnNewLine(int pos) {} // 0x0000000183D75740-0x0000000183D75750
+		private void OnEof() {} // 0x0000000189874E68-0x0000000189874F0C
+		private string LookupNamespace(NodeData node) => default; // 0x00000001898747F4-0x000000018987487C
+		private void AddNamespace(string prefix, string uri, NodeData attr) {} // 0x0000000189870550-0x0000000189870794
+		private void ResetAttributes() {} // 0x000000018987D6A8-0x000000018987D6E0
+		private void FullAttributeCleanup() {} // 0x00000001898724DC-0x0000000189872568
+		private void PushXmlContext() {} // 0x000000018987C044-0x000000018987C0D8
+		private void PopXmlContext() {} // 0x000000018987B758-0x000000018987B7A0
+		private XmlNodeType GetWhitespaceType() => default; // 0x0000000189872B00-0x0000000189872B44
+		private XmlNodeType GetTextNodeType(int orChars) => default; // 0x0000000189872AE4-0x0000000189872B00
+		private void PushExternalEntityOrSubset(string publicId, string systemId, System.Uri baseUri, string entityName) {} // 0x000000018987B7FC-0x000000018987BB88
+		private bool OpenAndPush(System.Uri uri) => default; // 0x000000018987519C-0x000000018987535C
+		private bool PushExternalEntity(IDtdEntityInfo entity) => default; // 0x000000018987BB88-0x000000018987BD54
+		private void PushInternalEntity(IDtdEntityInfo entity) {} // 0x000000018987BD54-0x000000018987BEDC
+		private void PopEntity() {} // 0x000000018987B644-0x000000018987B698
+		private void RegisterEntity(IDtdEntityInfo entity) {} // 0x000000018987D498-0x000000018987D6A8
+		private void UnregisterEntity() {} // 0x000000018987FAD4-0x000000018987FB30
+		private void PushParsingState() {} // 0x000000018987BEDC-0x000000018987C044
+		private void PopParsingState() {} // 0x000000018987B698-0x000000018987B758
+		private int IncrementalRead() => default; // 0x0000000189873354-0x0000000189873DA8
+		private void FinishIncrementalRead() {} // 0x0000000189871C04-0x0000000189871C78
+		private bool ParseFragmentAttribute() => default; // 0x0000000189878728-0x00000001898787B4
+		private bool ParseAttributeValueChunk() => default; // 0x00000001898755EC-0x0000000189875AA4
+		private void ParseXmlDeclarationFragment() {} // 0x000000018987A8A0-0x000000018987A954
+		private void ThrowUnexpectedToken(int pos, string expectedToken) {} // 0x000000018987F224-0x000000018987F23C
+		private void ThrowUnexpectedToken(string expectedToken1) {} // 0x000000018987F214-0x000000018987F224
+		private void ThrowUnexpectedToken(int pos, string expectedToken1, string expectedToken2) {} // 0x000000018987F1F8-0x000000018987F214
+		private void ThrowUnexpectedToken(string expectedToken1, string expectedToken2) {} // 0x000000018987F23C-0x000000018987F370
+		private string ParseUnexpectedToken(int pos) => default; // 0x000000018987A7E0-0x000000018987A7EC
+		private string ParseUnexpectedToken() => default; // 0x000000018987A7EC-0x000000018987A8A0
+		private void ThrowExpectingWhitespace(int pos) {} // 0x000000018987EE28-0x000000018987EE9C
+		private int GetIndexOfAttributeWithoutPrefix(string name) => default; // 0x0000000189872998-0x0000000189872A50
+		private int GetIndexOfAttributeWithPrefix(string name) => default; // 0x00000001898728DC-0x0000000189872998
+		private bool ZeroEndingStream(int pos) => default; // 0x000000018987FBE4-0x000000018987FC54
+		private void ParseDtdFromParserContext() {} // 0x00000001898776E4-0x0000000189877818
+		private bool MoveToNextContentNode(bool moveIfOnContentNode) => default; // 0x0000000189874C68-0x0000000189874D48
+		private void SetupFromParserContext(XmlParserContext context, XmlReaderSettings settings) {} // 0x000000018987DD50-0x000000018987DFFC
+		internal void SetDtdInfo(IDtdInfo newDtdInfo) {} // 0x000000018987DA28-0x000000018987DA98
+		internal void ChangeCurrentNodeType(XmlNodeType newNodeType) {} // 0x0000000189870C98-0x0000000189870CB8
+		internal XmlResolver GetResolver() => default; // 0x0000000189872A78-0x0000000189872A90
+		private bool AddDefaultAttributeDtd(IDtdDefaultAttributeInfo defAttrInfo, bool definedInDtd, NodeData[] nameSortedNodeData) => default; // 0x000000018986F640-0x000000018986FA38
+		internal bool AddDefaultAttributeNonDtd(SchemaAttDef attrDef) => default; // 0x000000018986FCB4-0x000000018986FF20
+		private NodeData AddDefaultAttributeInternal(string localName, string ns, string prefix, string value, int lineNo, int linePos, int valueLineNo, int valueLinePos, bool isXmlAttribute) => default; // 0x000000018986FA38-0x000000018986FCB4
+		private bool UriEqual(System.Uri uri1, string uri1Str, string uri2Str, XmlResolver resolver) => default; // 0x000000018987FB30-0x000000018987FBE4
+		private void RegisterConsumedCharacters(long characters, bool inEntityReference) {} // 0x000000018987D370-0x000000018987D498
+		internal static string StripSpaces(string value) => default; // 0x000000018987EA30-0x000000018987EBF4
+		internal static void StripSpaces(char[] value, int index, ref int len) {} // 0x000000018987EBF4-0x000000018987ECCC
+		internal static void BlockCopyChars(char[] src, int srcOffset, char[] dst, int dstOffset, int count) {} // 0x0000000182462430-0x0000000182462450
+		internal static void BlockCopy(byte[] src, int srcOffset, byte[] dst, int dstOffset, int count) {} // 0x0000000189870C88-0x0000000189870C98
+	}
+
+	public enum Formatting // TypeDefIndex: 42509
+	{
+		None = 0,
+		Indented = 1
+	}
+
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public class XmlTextWriter : XmlWriter // TypeDefIndex: 42516
+	{
+		// Fields
+		private TextWriter textWriter; // 0x18
+		private XmlTextEncoder xmlEncoder; // 0x20
+		private Encoding encoding; // 0x28
+		private Formatting formatting; // 0x30
+		private bool indented; // 0x34
+		private int indentation; // 0x38
+		private char indentChar; // 0x3C
+		private TagInfo[] stack; // 0x40
+		private int top; // 0x48
+		private State[] stateTable; // 0x50
+		private State currentState; // 0x58
+		private Token lastToken; // 0x5C
+		private XmlTextWriterBase64Encoder base64Encoder; // 0x60
+		private char quoteChar; // 0x68
+		private char curQuoteChar; // 0x6A
+		private bool namespaces; // 0x6C
+		private SpecialAttr specialAttr; // 0x70
+		private string prefixForXmlNs; // 0x78
+		private bool flush; // 0x80
+		private Namespace[] nsStack; // 0x88
+		private int nsTop; // 0x90
+		private Dictionary<string, int> nsHashtable; // 0x98
+		private bool useNsHashtable; // 0xA0
+		private XmlCharType xmlCharType; // 0xA8
+		private static string[] stateName; // 0x00
+		private static string[] tokenName; // 0x08
+		private static readonly State[] stateTableDefault; // 0x10
+		private static readonly State[] stateTableDocument; // 0x18
+	
+		// Properties
+		public Stream BaseStream { get => default; } // 0x0000000189940DDC-0x0000000189940E24 
+		public bool Namespaces { set {} } // 0x0000000189940E90-0x0000000189940F08
+		public Formatting Formatting { set {} } // 0x0000000189940E80-0x0000000189940E90
+		public char QuoteChar { set {} } // 0x0000000189940F08-0x0000000189940F94
+		public override WriteState WriteState { get => default; } // 0x0000000189940E24-0x0000000189940E80 
+	
+		// Nested types
+		private enum NamespaceState // TypeDefIndex: 42510
+		{
+			Uninitialized = 0,
+			NotDeclaredButInScope = 1,
+			DeclaredButNotWrittenOut = 2,
+			DeclaredAndWrittenOut = 3
+		}
+	
+		private struct TagInfo // TypeDefIndex: 42511
+		{
+			// Fields
+			internal string name; // 0x00
+			internal string prefix; // 0x08
+			internal string defaultNs; // 0x10
+			internal NamespaceState defaultNsState; // 0x18
+			internal XmlSpace xmlSpace; // 0x1C
+			internal string xmlLang; // 0x20
+			internal int prevNsTop; // 0x28
+			internal int prefixCount; // 0x2C
+			internal bool mixed; // 0x30
+	
+			// Methods
+			internal void Init(int nsTop) {} // 0x000000018993C34C-0x000000018993C3D0
+		}
+	
+		private struct Namespace // TypeDefIndex: 42512
+		{
+			// Fields
+			internal string prefix; // 0x00
+			internal string ns; // 0x08
+			internal bool declared; // 0x10
+			internal int prevNsIndex; // 0x14
+	
+			// Methods
+			internal void Set(string prefix, string ns, bool declared) {} // 0x000000018993BBD4-0x000000018993BC04
+		}
+	
+		private enum SpecialAttr // TypeDefIndex: 42513
+		{
+			None = 0,
+			XmlSpace = 1,
+			XmlLang = 2,
+			XmlNs = 3
+		}
+	
+		private enum State // TypeDefIndex: 42514
+		{
+			Start = 0,
+			Prolog = 1,
+			PostDTD = 2,
+			Element = 3,
+			Attribute = 4,
+			Content = 5,
+			AttrOnly = 6,
+			Epilog = 7,
+			Error = 8,
+			Closed = 9
+		}
+	
+		private enum Token // TypeDefIndex: 42515
+		{
+			PI = 0,
+			Doctype = 1,
+			Comment = 2,
+			CData = 3,
+			StartElement = 4,
+			EndElement = 5,
+			LongEndElement = 6,
+			StartAttribute = 7,
+			EndAttribute = 8,
+			Content = 9,
+			Base64 = 10,
+			RawData = 11,
+			Whitespace = 12,
+			Empty = 13
+		}
+	
+		// Constructors
+		internal XmlTextWriter() {} // 0x0000000189940A54-0x0000000189940B74
+		public XmlTextWriter(Stream w, Encoding encoding) {} // 0x0000000189940CD0-0x0000000189940DDC
+		public XmlTextWriter(string filename, Encoding encoding) {} // 0x0000000189940C34-0x0000000189940CD0
+		public XmlTextWriter(TextWriter w) {} // 0x0000000189940B74-0x0000000189940C34
+		static XmlTextWriter() {} // 0x00000001899405D4-0x0000000189940A54
+	
+		// Methods
+		public override void WriteStartDocument() {} // 0x000000018993FE9C-0x000000018993FEAC
+		public override void WriteStartDocument(bool standalone) {} // 0x000000018993FE7C-0x000000018993FE9C
+		public override void WriteEndDocument() {} // 0x000000018993EED8-0x000000018993F08C
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x000000018993EA90-0x000000018993EDF0
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x000000018993FEAC-0x00000001899402C4
+		public override void WriteEndElement() {} // 0x000000018993F08C-0x000000018993F098
+		public override void WriteFullEndElement() {} // 0x000000018993F498-0x000000018993F4A4
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x000000018993F854-0x000000018993FE7C
+		public override void WriteEndAttribute() {} // 0x000000018993EE3C-0x000000018993EED8
+		public override void WriteCData(string text) {} // 0x000000018993E568-0x000000018993E710
+		public override void WriteComment(string text) {} // 0x000000018993E8BC-0x000000018993EA90
+		public override void WriteProcessingInstruction(string name, string text) {} // 0x000000018993F4A4-0x000000018993F6A8
+		public override void WriteEntityRef(string name) {} // 0x000000018993F3C4-0x000000018993F498
+		public override void WriteCharEntity(char ch) {} // 0x000000018993E710-0x000000018993E7D4
+		public override void WriteWhitespace(string ws) {} // 0x000000018994046C-0x00000001899405D4
+		public override void WriteString(string text) {} // 0x00000001899402C4-0x0000000189940394
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x0000000189940394-0x000000018994046C
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x000000018993E7D4-0x000000018993E8BC
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x000000018993F6A8-0x000000018993F790
+		public override void WriteRaw(string data) {} // 0x000000018993F790-0x000000018993F854
+		public override void WriteBase64(byte[] buffer, int index, int count) {} // 0x000000018993E32C-0x000000018993E48C
+		public override void WriteBinHex(byte[] buffer, int index, int count) {} // 0x000000018993E48C-0x000000018993E568
+		public override void Close() {} // 0x000000018993CD78-0x000000018993CE5C
+		public override void Flush() {} // 0x00000001897D52F4-0x00000001897D5318
+		public override string LookupPrefix(string ns) => default; // 0x000000018993D7B8-0x000000018993D8AC
+		private void StartDocument(int standalone) {} // 0x000000018993DCF8-0x000000018993E004
+		private void AutoComplete(Token token) {} // 0x000000018993C80C-0x000000018993CD78
+		private void AutoCompleteAll() {} // 0x000000018993C7D4-0x000000018993C80C
+		private void InternalWriteEndElement(bool longFormat) {} // 0x000000018993D2BC-0x000000018993D52C
+		private void WriteEndStartTag(bool empty) {} // 0x000000018993F098-0x000000018993F3C4
+		private void WriteEndAttributeQuote() {} // 0x000000018993EDF0-0x000000018993EE3C
+		private void Indent(bool beforeEndElement) {} // 0x000000018993D218-0x000000018993D2BC
+		private void PushNamespace(string prefix, string ns, bool declared) {} // 0x000000018993D9C0-0x000000018993DC38
+		private void AddNamespace(string prefix, string ns, bool declared) {} // 0x000000018993C550-0x000000018993C708
+		private void AddToNamespaceHashtable(int namespaceIndex) {} // 0x000000018993C708-0x000000018993C7D4
+		private void PopNamespaces(int indexFrom, int indexTo) {} // 0x000000018993D8AC-0x000000018993D9C0
+		private string GeneratePrefix() => default; // 0x000000018993CF34-0x000000018993D00C
+		private void InternalWriteProcessingInstruction(string name, string text) {} // 0x000000018993D52C-0x000000018993D610
+		private int LookupNamespace(string prefix) => default; // 0x000000018993D6FC-0x000000018993D7B8
+		private int LookupNamespaceInCurrentScope(string prefix) => default; // 0x000000018993D610-0x000000018993D6FC
+		private string FindPrefix(string ns) => default; // 0x000000018993CE5C-0x000000018993CF00
+		private void ValidateName(string name, bool isNCName) {} // 0x000000018993E004-0x000000018993E1F0
+		private void HandleSpecialAttribute() {} // 0x000000018993D00C-0x000000018993D218
+		private void VerifyPrefixXml(string prefix, string ns) {} // 0x000000018993E1F0-0x000000018993E32C
+		private void PushStack() {} // 0x000000018993DC38-0x000000018993DCF8
+		private void FlushEncoders() {} // 0x000000018993CF00-0x000000018993CF34
+	}
+
+	internal class XmlUtf8RawTextWriter : XmlRawWriter // TypeDefIndex: 42517
+	{
+		// Fields
+		private readonly bool useAsync; // 0x28
+		protected byte[] bufBytes; // 0x30
+		protected Stream stream; // 0x38
+		protected Encoding encoding; // 0x40
+		protected XmlCharType xmlCharType; // 0x48
+		protected int bufPos; // 0x50
+		protected int textPos; // 0x54
+		protected int contentPos; // 0x58
+		protected int cdataPos; // 0x5C
+		protected int attrEndPos; // 0x60
+		protected int bufLen; // 0x64
+		protected bool writeToNull; // 0x68
+		protected bool hadDoubleBracket; // 0x69
+		protected bool inAttributeValue; // 0x6A
+		protected NewLineHandling newLineHandling; // 0x6C
+		protected bool closeOutput; // 0x70
+		protected bool omitXmlDeclaration; // 0x71
+		protected string newLineChars; // 0x78
+		protected bool checkCharacters; // 0x80
+		protected XmlStandalone standalone; // 0x84
+		protected XmlOutputMethod outputMethod; // 0x88
+		protected bool autoXmlDeclaration; // 0x8C
+		protected bool mergeCDataSections; // 0x8D
+	
+		// Properties
+		internal override bool SupportsNamespaceDeclarationInChunks { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+	
+		// Constructors
+		public XmlUtf8RawTextWriter() {} // Dummy constructor
+		protected XmlUtf8RawTextWriter(XmlWriterSettings settings) {} // 0x0000000189943D8C-0x0000000189943E70
+		public XmlUtf8RawTextWriter(Stream stream, XmlWriterSettings settings) {} // 0x0000000189943C40-0x0000000189943D8C
+	
+		// Methods
+		internal override void WriteXmlDeclaration(XmlStandalone standalone) {} // 0x0000000189943AA0-0x0000000189943BE0
+		internal override void WriteXmlDeclaration(string xmldecl) {} // 0x0000000189943BE0-0x0000000189943C40
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x0000000189942C8C-0x0000000189942E4C
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x00000001899437E4-0x0000000189943874
+		internal override void StartElementContent() {} // 0x0000000189941D34-0x0000000189941D70
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x00000001899430B0-0x00000001899431D4
+		internal override void WriteFullEndElement(string prefix, string localName, string ns) {} // 0x0000000189943294-0x0000000189943364
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x000000018994370C-0x00000001899437E4
+		public override void WriteEndAttribute() {} // 0x0000000189943070-0x00000001899430B0
+		internal override void WriteNamespaceDeclaration(string prefix, string namespaceName) {} // 0x0000000189934580-0x00000001899345C8
+		internal override void WriteStartNamespaceDeclaration(string prefix) {} // 0x0000000189943874-0x0000000189943940
+		internal override void WriteEndNamespaceDeclaration() {} // 0x00000001899431D4-0x0000000189943214
+		public override void WriteCData(string text) {} // 0x000000018994257C-0x000000018994276C
+		public override void WriteComment(string text) {} // 0x0000000189942B74-0x0000000189942C8C
+		public override void WriteProcessingInstruction(string name, string text) {} // 0x00000001899433B0-0x00000001899434B0
+		public override void WriteEntityRef(string name) {} // 0x0000000189943214-0x0000000189943294
+		public override void WriteCharEntity(char ch) {} // 0x000000018994276C-0x00000001899428E0
+		public override void WriteWhitespace(string ws) {} // 0x0000000189943940-0x0000000189943980
+		public override void WriteString(string text) {} // 0x0000000189943940-0x0000000189943980
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x0000000189943980-0x0000000189943AA0
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x000000018985C6F8-0x000000018985C74C
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x0000000189943684-0x00000001899436D0
+		public override void WriteRaw(string data) {} // 0x00000001899436D0-0x000000018994370C
+		public override void Close() {} // 0x0000000189941614-0x000000018994169C
+		public override void Flush() {} // 0x0000000189941B00-0x0000000189941B38
+		protected virtual void FlushBuffer() {} // 0x0000000189941900-0x0000000189941B00
+		private void FlushEncoder() {} // 0x000000018350B670-0x000000018350B680
+		protected unsafe void WriteAttributeTextBlock(char* pSrc, char* pSrcEnd) {} // 0x00000001899420E8-0x000000018994231C
+		protected unsafe void WriteElementTextBlock(char* pSrc, char* pSrcEnd) {} // 0x0000000189942E4C-0x0000000189943070
+		protected void RawText(string s) {} // 0x0000000189941BD0-0x0000000189941C00
+		protected unsafe void RawText(char* pSrcBegin, char* pSrcEnd) {} // 0x0000000189941C00-0x0000000189941D34
+		protected unsafe void WriteRawWithCharChecking(char* pSrcBegin, char* pSrcEnd) {} // 0x00000001899434B0-0x0000000189943684
+		protected void WriteCommentOrPi(string text, int stopChar) {} // 0x00000001899428E0-0x0000000189942B74
+		protected void WriteCDataSection(string text) {} // 0x000000018994231C-0x000000018994257C
+		private static bool IsSurrogateByte(byte b) => default; // 0x0000000189941BC4-0x0000000189941BD0
+		private static unsafe byte* EncodeSurrogate(char* pSrc, char* pSrcEnd, byte* pDst) => default; // 0x000000018994175C-0x0000000189941900
+		private unsafe byte* InvalidXmlChar(int ch, byte* pDst, bool entitize) => default; // 0x0000000189941B38-0x0000000189941BC4
+		internal unsafe void EncodeChar(ref char* pSrc, char* pSrcEnd, ref byte* pDst) {} // 0x000000018994169C-0x0000000189941720
+		internal static unsafe byte* EncodeMultibyteUTF8(int ch, byte* pDst) => default; // 0x0000000189941720-0x000000018994175C
+		internal static unsafe void CharToUTF8(ref char* pSrc, char* pSrcEnd, ref byte* pDst) {} // 0x00000001899415AC-0x0000000189941614
+		protected unsafe byte* WriteNewLine(byte* pDst) => default; // 0x0000000189943364-0x00000001899433B0
+		protected static unsafe byte* LtEntity(byte* pDst) => default; // 0x0000000183D75B70-0x0000000183D75B80
+		protected static unsafe byte* GtEntity(byte* pDst) => default; // 0x0000000183D75B50-0x0000000183D75B60
+		protected static unsafe byte* AmpEntity(byte* pDst) => default; // 0x0000000183D75B30-0x0000000183D75B40
+		protected static unsafe byte* QuoteEntity(byte* pDst) => default; // 0x0000000183D75B80-0x0000000183D75BA0
+		protected static unsafe byte* TabEntity(byte* pDst) => default; // 0x0000000183D75BD0-0x0000000183D75BE0
+		protected static unsafe byte* LineFeedEntity(byte* pDst) => default; // 0x0000000183D75B60-0x0000000183D75B70
+		protected static unsafe byte* CarriageReturnEntity(byte* pDst) => default; // 0x0000000183D75B40-0x0000000183D75B50
+		private static unsafe byte* CharEntity(byte* pDst, char ch) => default; // 0x0000000189941520-0x00000001899415AC
+		protected static unsafe byte* RawStartCData(byte* pDst) => default; // 0x0000000183D75BB0-0x0000000183D75BD0
+		protected static unsafe byte* RawEndCData(byte* pDst) => default; // 0x0000000183D75BA0-0x0000000183D75BB0
+		protected void ValidateContentChars(string chars, string propertyName, bool allowOnlyWhitespace) {} // 0x0000000189941D70-0x00000001899420E8
+	}
+
+	internal class XmlUtf8RawTextWriterIndent : XmlUtf8RawTextWriter // TypeDefIndex: 42518
+	{
+		// Fields
+		protected int indentLevel; // 0x90
+		protected bool newLineOnAttributes; // 0x94
+		protected string indentChars; // 0x98
+		protected bool mixedContent; // 0xA0
+		private BitStack mixedContentStack; // 0xA8
+		protected ConformanceLevel conformanceLevel; // 0xB0
+	
+		// Constructors
+		public XmlUtf8RawTextWriterIndent() {} // Dummy constructor
+		public XmlUtf8RawTextWriterIndent(Stream stream, XmlWriterSettings settings) {} // 0x00000001899414F0-0x0000000189941520
+	
+		// Methods
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x0000000189941184-0x00000001899411F4
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x0000000189941444-0x00000001899414D0
+		internal override void StartElementContent() {} // 0x00000001899410B0-0x00000001899410F4
+		internal override void OnRootElement(ConformanceLevel currentConformanceLevel) {} // 0x0000000183D59C90-0x0000000183D59CA0
+		internal override void WriteEndElement(string prefix, string localName, string ns) {} // 0x00000001899411F4-0x0000000189941284
+		internal override void WriteFullEndElement(string prefix, string localName, string ns) {} // 0x0000000189941294-0x0000000189941324
+		public override void WriteStartAttribute(string prefix, string localName, string ns) {} // 0x00000001899413E4-0x0000000189941444
+		public override void WriteCData(string text) {} // 0x000000018994110C-0x000000018994111C
+		public override void WriteComment(string text) {} // 0x0000000189941144-0x0000000189941184
+		public override void WriteProcessingInstruction(string target, string text) {} // 0x000000018994136C-0x00000001899413BC
+		public override void WriteEntityRef(string name) {} // 0x0000000189941284-0x0000000189941294
+		public override void WriteCharEntity(char ch) {} // 0x000000018994111C-0x000000018994112C
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x00000001899414E0-0x00000001899414F0
+		public override void WriteWhitespace(string ws) {} // 0x00000001899414D0-0x00000001899414E0
+		public override void WriteString(string text) {} // 0x00000001899414D0-0x00000001899414E0
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x000000018994112C-0x0000000189941144
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x00000001899413CC-0x00000001899413E4
+		public override void WriteRaw(string data) {} // 0x00000001899413BC-0x00000001899413CC
+		public override void WriteBase64(byte[] buffer, int index, int count) {} // 0x00000001899410F4-0x000000018994110C
+		private void Init(XmlWriterSettings settings) {} // 0x0000000189940F94-0x00000001899410B0
+		private void WriteIndent() {} // 0x0000000189941324-0x000000018994136C
+	}
+
+	[Obsolete("Use XmlReader created by XmlReader.Create() method using appropriate XmlReaderSettings instead. https://go.microsoft.com/fwlink/?linkid=14202")]
+	public class XmlValidatingReader : XmlReader // TypeDefIndex: 42519
+	{
+		// Fields
+		private XmlValidatingReaderImpl impl; // 0x10
+	
+		// Properties
+		public override XmlNodeType NodeType { get => default; } // 0x00000001897D4FB0-0x00000001897D4FD4 
+		public override string LocalName { get => default; } // 0x00000001893B57E4-0x00000001893B5808 
+		public override string NamespaceURI { get => default; } // 0x00000001892EFBE8-0x00000001892EFC0C 
+		public override string Prefix { get => default; } // 0x00000001897D4FD4-0x00000001897D4FF8 
+		public override string Value { get => default; } // 0x00000001897D505C-0x00000001897D5080 
+		public override int Depth { get => default; } // 0x00000001897D4EB4-0x00000001897D4ED8 
+		public override string BaseURI { get => default; } // 0x00000001897D4E48-0x00000001897D4E6C 
+		public override bool IsEmptyElement { get => default; } // 0x00000001897D4F44-0x00000001897D4F68 
+		public override int AttributeCount { get => default; } // 0x00000001897D4E24-0x00000001897D4E48 
+		public override bool EOF { get => default; } // 0x00000001897D4ED8-0x00000001897D4EFC 
+		public override System.Xml.ReadState ReadState { get => default; } // 0x00000001897D501C-0x00000001897D5040 
+		public override XmlNameTable NameTable { get => default; } // 0x00000001897D4F68-0x00000001897D4F8C 
+		public bool Namespaces { get => default; } // 0x0000000189944DFC-0x0000000189944E1C 
+	
+		// Constructors
+		public XmlValidatingReader() {} // Dummy constructor
+	
+		// Methods
+		public override string GetAttribute(string name) => default; // 0x00000001897D4BF8-0x00000001897D4C1C
+		public override string GetAttribute(string localName, string namespaceURI) => default; // 0x00000001897D4BD0-0x00000001897D4BF8
+		public override string GetAttribute(int i) => default; // 0x00000001897D4C1C-0x00000001897D4C40
+		public override bool MoveToAttribute(string name) => default; // 0x00000001897D4C64-0x00000001897D4C88
+		public override bool MoveToFirstAttribute() => default; // 0x00000001897D4CD0-0x00000001897D4CF4
+		public override bool MoveToNextAttribute() => default; // 0x00000001897D4CF4-0x00000001897D4D18
+		public override bool MoveToElement() => default; // 0x00000001897D4CAC-0x00000001897D4CD0
+		public override bool ReadAttributeValue() => default; // 0x00000001897D4D18-0x00000001897D4D3C
+		public override bool Read() => default; // 0x00000001897D4D60-0x00000001897D4D84
+		public override string LookupNamespace(string prefix) => default; // 0x000000018993B45C-0x000000018993B494
+		public override void ResolveEntity() {} // 0x00000001897D4D84-0x00000001897D4DA8
+	}
+
+	internal sealed class XmlValidatingReaderImpl : XmlReader, IXmlLineInfo, IXmlNamespaceResolver // TypeDefIndex: 42522
+	{
+		// Fields
+		private XmlReader coreReader; // 0x10
+		private XmlTextReaderImpl coreReaderImpl; // 0x18
+		private IXmlNamespaceResolver coreReaderNSResolver; // 0x20
+		private ValidationType validationType; // 0x28
+		private BaseValidator validator; // 0x30
+		private XmlSchemaCollection schemaCollection; // 0x38
+		private bool processIdentityConstraints; // 0x40
+		private ParsingFunction parsingFunction; // 0x44
+		private ValidationEventHandling eventHandling; // 0x48
+		private XmlParserContext parserContext; // 0x50
+		private ReadContentAsBinaryHelper readBinaryHelper; // 0x58
+		private XmlReader outerReader; // 0x60
+		private static XmlResolver s_tempResolver; // 0x00
+	
+		// Properties
+		public override XmlReaderSettings Settings { get => default; } // 0x0000000189944CBC-0x0000000189944D7C 
+		public override XmlNodeType NodeType { get => default; } // 0x00000001897D4FB0-0x00000001897D4FD4 
+		public override string Name { get => default; } // 0x00000001897D4F8C-0x00000001897D4FB0 
+		public override string LocalName { get => default; } // 0x00000001893B57E4-0x00000001893B5808 
+		public override string NamespaceURI { get => default; } // 0x00000001892EFBE8-0x00000001892EFC0C 
+		public override string Prefix { get => default; } // 0x00000001897D4FD4-0x00000001897D4FF8 
+		public override bool HasValue { get => default; } // 0x00000001897D4EFC-0x00000001897D4F20 
+		public override string Value { get => default; } // 0x00000001897D505C-0x00000001897D5080 
+		public override int Depth { get => default; } // 0x00000001897D4EB4-0x00000001897D4ED8 
+		public override string BaseURI { get => default; } // 0x00000001897D4E48-0x00000001897D4E6C 
+		public override bool IsEmptyElement { get => default; } // 0x00000001897D4F44-0x00000001897D4F68 
+		public override bool IsDefault { get => default; } // 0x00000001897D4F20-0x00000001897D4F44 
+		public override char QuoteChar { get => default; } // 0x00000001897D4FF8-0x00000001897D501C 
+		public override XmlSpace XmlSpace { get => default; } // 0x00000001897D50A4-0x00000001897D50C8 
+		public override string XmlLang { get => default; } // 0x00000001897D5080-0x00000001897D50A4 
+		public override System.Xml.ReadState ReadState { get => default; } // 0x0000000189944C8C-0x0000000189944CBC 
+		public override bool EOF { get => default; } // 0x00000001897D4ED8-0x00000001897D4EFC 
+		public override XmlNameTable NameTable { get => default; } // 0x00000001897D4F68-0x00000001897D4F8C 
+		public override int AttributeCount { get => default; } // 0x00000001897D4E24-0x00000001897D4E48 
+		public override bool CanResolveEntity { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public int LineNumber { get => default; } // 0x0000000189944B88-0x0000000189944BEC 
+		public int LinePosition { get => default; } // 0x0000000189944BEC-0x0000000189944C50 
+		internal ValidationType ValidationType { get => default; } // 0x0000000183D4EB90-0x0000000183D4EBA0 
+		internal XmlSchemaCollection Schemas { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		internal bool Namespaces { get => default; } // 0x0000000189944C6C-0x0000000189944C8C 
+		internal BaseValidator Validator { get => default; set {} } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
+		internal override XmlNamespaceManager NamespaceManager { get => default; } // 0x0000000189944C50-0x0000000189944C6C 
+		internal bool StandAlone { get => default; } // 0x0000000189944D7C-0x0000000189944D9C 
+		internal object SchemaTypeObject { set {} } // 0x0000000189944DBC-0x0000000189944DDC
+		internal object TypedValueObject { get => default; set {} } // 0x0000000189944D9C-0x0000000189944DBC 0x0000000189944DDC-0x0000000189944DFC
+		internal override IDtdInfo DtdInfo { get => default; } // 0x0000000189944B64-0x0000000189944B88 
+	
+		// Nested types
+		private enum ParsingFunction // TypeDefIndex: 42520
+		{
+			Read = 0,
+			Init = 1,
+			ParseDtdFromContext = 2,
+			ResolveEntityInternally = 3,
+			InReadBinaryContent = 4,
+			ReaderClosed = 5,
+			Error = 6,
+			None = 7
+		}
+	
+		internal class ValidationEventHandling : IValidationEventHandling // TypeDefIndex: 42521
+		{
+			// Fields
+			private XmlValidatingReaderImpl reader; // 0x10
+			private ValidationEventHandler eventHandler; // 0x18
+	
+			// Properties
+			object IValidationEventHandling.EventHandler { get => default; } // 0x0000000181041090-0x00000001810410A0 
+	
+			// Constructors
+			public ValidationEventHandling() {} // Dummy constructor
+			internal ValidationEventHandling(XmlValidatingReaderImpl reader) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+			// Methods
+			void IValidationEventHandling.SendEvent(Exception exception, XmlSeverityType severity) {} // 0x000000018993C45C-0x000000018993C550
+			internal void AddHandler(ValidationEventHandler handler) {} // 0x000000018993C3D0-0x000000018993C45C
+		}
+	
+		// Constructors
+		public XmlValidatingReaderImpl() {} // Dummy constructor
+		internal XmlValidatingReaderImpl(XmlReader reader, ValidationEventHandler settingsEventHandler, bool processIdentityConstraints) {} // 0x000000018994481C-0x0000000189944B64
+	
+		// Methods
+		public override string GetAttribute(string name) => default; // 0x00000001897D4BF8-0x00000001897D4C1C
+		public override string GetAttribute(string localName, string namespaceURI) => default; // 0x00000001897D4BD0-0x00000001897D4BF8
+		public override string GetAttribute(int i) => default; // 0x00000001897D4C1C-0x00000001897D4C40
+		public override bool MoveToAttribute(string name) => default; // 0x000000018994409C-0x00000001899440D8
+		public override void MoveToAttribute(int i) {} // 0x0000000189944068-0x000000018994409C
+		public override bool MoveToFirstAttribute() => default; // 0x0000000189944114-0x0000000189944150
+		public override bool MoveToNextAttribute() => default; // 0x0000000189944150-0x000000018994418C
+		public override bool MoveToElement() => default; // 0x00000001899440D8-0x0000000189944114
+		public override bool Read() => default; // 0x00000001899443E8-0x00000001899444A4
+		public override void Close() {} // 0x0000000189943E90-0x0000000189943EC0
+		public override string LookupNamespace(string prefix) => default; // 0x0000000189943FA0-0x0000000189943FC4
+		public override bool ReadAttributeValue() => default; // 0x0000000189944378-0x00000001899443C8
+		public override void ResolveEntity() {} // 0x0000000189944518-0x0000000189944548
+		internal void MoveOffEntityReference() {} // 0x0000000189943FC4-0x0000000189944068
+		public override string ReadString() => default; // 0x00000001899443C8-0x00000001899443E8
+		public bool HasLineInfo() => default; // 0x000000018232EB60-0x000000018232EB70
+		IDictionary<string, string> IXmlNamespaceResolver.GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x00000001899446B8-0x00000001899446C0
+		string IXmlNamespaceResolver.LookupNamespace(string prefix) => default; // 0x000000018987EE0C-0x000000018987EE20
+		string IXmlNamespaceResolver.LookupPrefix(string namespaceName) => default; // 0x00000001899446C0-0x00000001899446C8
+		internal IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x000000018992F424-0x000000018992F444
+		internal string LookupPrefix(string namespaceName) => default; // 0x000000018992F464-0x000000018992F484
+		private void ParseDtdFromParserContext() {} // 0x000000018994418C-0x0000000189944294
+		private void ValidateDtd() {} // 0x00000001899447AC-0x000000018994481C
+		private void ResolveEntityInternally() {} // 0x00000001899444A4-0x0000000189944518
+		private void SetupValidation(ValidationType valType) {} // 0x0000000189944548-0x00000001899446B8
+		private XmlResolver GetResolver() => default; // 0x0000000189943EC0-0x0000000189943FA0
+		private void ProcessCoreReaderEvent() {} // 0x0000000189944294-0x0000000189944378
+		internal bool AddDefaultAttribute(SchemaAttDef attdef) => default; // 0x0000000189943E70-0x0000000189943E90
+		internal void ValidateDefaultAttributeOnUse(IDtdDefaultAttributeInfo defaultAttribute, XmlTextReaderImpl coreReader) {} // 0x00000001899446C8-0x00000001899447AC
+	}
+
+	internal class XmlWellFormedWriter : XmlWriter // TypeDefIndex: 42535
+	{
+		// Fields
+		private XmlWriter writer; // 0x18
+		private XmlRawWriter rawWriter; // 0x20
+		private IXmlNamespaceResolver predefinedNamespaces; // 0x28
+		private Namespace[] nsStack; // 0x30
+		private int nsTop; // 0x38
+		private Dictionary<string, int> nsHashtable; // 0x40
+		private bool useNsHashtable; // 0x48
+		private ElementScope[] elemScopeStack; // 0x50
+		private int elemTop; // 0x58
+		private AttrName[] attrStack; // 0x60
+		private int attrCount; // 0x68
+		private Dictionary<string, int> attrHashTable; // 0x70
+		private SpecialAttribute specAttr; // 0x78
+		private AttributeValueCache attrValueCache; // 0x80
+		private string curDeclPrefix; // 0x88
+		private State[] stateTable; // 0x90
+		private State currentState; // 0x98
+		private bool checkCharacters; // 0x9C
+		private bool omitDuplNamespaces; // 0x9D
+		private bool writeEndDocumentOnClose; // 0x9E
+		private ConformanceLevel conformanceLevel; // 0xA0
+		private bool dtdWritten; // 0xA4
+		private bool xmlDeclFollows; // 0xA5
+		private XmlCharType xmlCharType; // 0xA8
+		private SecureStringHasher hasher; // 0xB0
+		internal static readonly string[] stateName; // 0x00
+		internal static readonly string[] tokenName; // 0x08
+		private static WriteState[] state2WriteState; // 0x10
+		private static readonly State[] StateTableDocument; // 0x18
+		private static readonly State[] StateTableAuto; // 0x20
+	
+		// Properties
+		public override WriteState WriteState { get => default; } // 0x000000018994B334-0x000000018994B3B0 
+		internal XmlRawWriter RawWriter { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		private bool SaveAttrValue { get => default; } // 0x0000000189897250-0x0000000189897258 
+		private bool InBase64 { get => default; } // 0x000000018994B308-0x000000018994B328 
+		private bool IsClosedOrErrorState { get => default; } // 0x000000018994B328-0x000000018994B334 
+	
+		// Nested types
+		private enum State // TypeDefIndex: 42523
+		{
+			Start = 0,
+			TopLevel = 1,
+			Document = 2,
+			Element = 3,
+			Content = 4,
+			B64Content = 5,
+			B64Attribute = 6,
+			AfterRootEle = 7,
+			Attribute = 8,
+			SpecialAttr = 9,
+			EndDocument = 10,
+			RootLevelAttr = 11,
+			RootLevelSpecAttr = 12,
+			RootLevelB64Attr = 13,
+			AfterRootLevelAttr = 14,
+			Closed = 15,
+			Error = 16,
+			StartContent = 101,
+			StartContentEle = 102,
+			StartContentB64 = 103,
+			StartDoc = 104,
+			StartDocEle = 106,
+			EndAttrSEle = 107,
+			EndAttrEEle = 108,
+			EndAttrSCont = 109,
+			EndAttrSAttr = 111,
+			PostB64Cont = 112,
+			PostB64Attr = 113,
+			PostB64RootAttr = 114,
+			StartFragEle = 115,
+			StartFragCont = 116,
+			StartFragB64 = 117,
+			StartRootLevelAttr = 118
+		}
+	
+		private enum Token // TypeDefIndex: 42524
+		{
+			StartDocument = 0,
+			EndDocument = 1,
+			PI = 2,
+			Comment = 3,
+			Dtd = 4,
+			StartElement = 5,
+			EndElement = 6,
+			StartAttribute = 7,
+			EndAttribute = 8,
+			Text = 9,
+			CData = 10,
+			AtomicValue = 11,
+			Base64 = 12,
+			RawData = 13,
+			Whitespace = 14
+		}
+	
+		private class NamespaceResolverProxy : IXmlNamespaceResolver // TypeDefIndex: 42525
+		{
+			// Fields
+			private XmlWellFormedWriter wfWriter; // 0x10
+	
+			// Constructors
+			public NamespaceResolverProxy() {} // Dummy constructor
+			internal NamespaceResolverProxy(XmlWellFormedWriter wfWriter) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+			// Methods
+			IDictionary<string, string> IXmlNamespaceResolver.GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x00000001899500A8-0x00000001899500F4
+			string IXmlNamespaceResolver.LookupNamespace(string prefix) => default; // 0x00000001899500F4-0x0000000189950114
+			string IXmlNamespaceResolver.LookupPrefix(string namespaceName) => default; // 0x0000000189950114-0x0000000189950138
+		}
+	
+		private struct ElementScope // TypeDefIndex: 42526
+		{
+			// Fields
+			internal int prevNSTop; // 0x00
+			internal string prefix; // 0x08
+			internal string localName; // 0x10
+			internal string namespaceUri; // 0x18
+			internal XmlSpace xmlSpace; // 0x20
+			internal string xmlLang; // 0x28
+	
+			// Methods
+			internal void Set(string prefix, string localName, string namespaceUri, int prevNSTop) {} // 0x000000018994FFF8-0x0000000189950048
+			internal void WriteEndElement(XmlRawWriter rawWriter) {} // 0x0000000189950048-0x0000000189950078
+			internal void WriteFullEndElement(XmlRawWriter rawWriter) {} // 0x0000000189950078-0x00000001899500A8
+		}
+	
+		private enum NamespaceKind // TypeDefIndex: 42527
+		{
+			Written = 0,
+			NeedToWrite = 1,
+			Implied = 2,
+			Special = 3
+		}
+	
+		private struct Namespace // TypeDefIndex: 42528
+		{
+			// Fields
+			internal string prefix; // 0x00
+			internal string namespaceUri; // 0x08
+			internal NamespaceKind kind; // 0x10
+			internal int prevNsIndex; // 0x14
+	
+			// Methods
+			internal void Set(string prefix, string namespaceUri, NamespaceKind kind) {} // 0x0000000189950138-0x0000000189950168
+			internal void WriteDecl(XmlWriter writer, XmlRawWriter rawWriter) {} // 0x0000000189950168-0x0000000189950258
+		}
+	
+		private struct AttrName // TypeDefIndex: 42529
+		{
+			// Fields
+			internal string prefix; // 0x00
+			internal string namespaceUri; // 0x08
+			internal string localName; // 0x10
+			internal int prev; // 0x18
+	
+			// Methods
+			internal void Set(string prefix, string localName, string namespaceUri) {} // 0x000000018994B418-0x000000018994B454
+			internal bool IsDuplicate(string prefix, string localName, string namespaceUri) => default; // 0x000000018994B3B0-0x000000018994B418
+		}
+	
+		private enum SpecialAttribute // TypeDefIndex: 42530
+		{
+			No = 0,
+			DefaultXmlns = 1,
+			PrefixedXmlns = 2,
+			XmlSpace = 3,
+			XmlLang = 4
+		}
+	
+		private class AttributeValueCache // TypeDefIndex: 42534
+		{
+			// Fields
+			private StringBuilder stringValue; // 0x10
+			private string singleStringValue; // 0x18
+			private Item[] items; // 0x20
+			private int firstItem; // 0x28
+			private int lastItem; // 0x2C
+	
+			// Properties
+			internal string StringValue { get => default; } // 0x000000018994C400-0x000000018994C430 
+	
+			// Nested types
+			private enum ItemType // TypeDefIndex: 42531
+			{
+				EntityRef = 0,
+				CharEntity = 1,
+				SurrogateCharEntity = 2,
+				Whitespace = 3,
+				String = 4,
+				StringChars = 5,
+				Raw = 6,
+				RawChars = 7,
+				ValueString = 8
+			}
+	
+			private class Item // TypeDefIndex: 42532
+			{
+				// Fields
+				internal ItemType type; // 0x10
+				internal object data; // 0x18
+	
+				// Constructors
+				internal Item() {} // 0x000000018350B670-0x000000018350B680
+	
+				// Methods
+				internal void Set(ItemType type, object data) {} // 0x0000000184270E40-0x0000000184270E50
+			}
+	
+			private class BufferChunk // TypeDefIndex: 42533
+			{
+				// Fields
+				internal char[] buffer; // 0x10
+				internal int index; // 0x18
+				internal int count; // 0x1C
+	
+				// Constructors
+				public BufferChunk() {} // Dummy constructor
+				internal BufferChunk(char[] buffer, int index, int count) {} // 0x00000001891E3F20-0x00000001891E3F44
+			}
+	
+			// Constructors
+			public AttributeValueCache() {} // 0x000000018994C394-0x000000018994C400
+	
+			// Methods
+			internal void WriteEntityRef(string name) {} // 0x000000018994BEF8-0x000000018994C098
+			internal void WriteCharEntity(char ch) {} // 0x000000018994BDA0-0x000000018994BE2C
+			internal void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x000000018994C224-0x000000018994C2EC
+			internal void WriteWhitespace(string ws) {} // 0x000000018994C340-0x000000018994C394
+			internal void WriteString(string text) {} // 0x000000018994C1B8-0x000000018994C224
+			internal void WriteChars(char[] buffer, int index, int count) {} // 0x000000018994BE2C-0x000000018994BEF8
+			internal void WriteRaw(char[] buffer, int index, int count) {} // 0x000000018994C0EC-0x000000018994C1B8
+			internal void WriteRaw(string data) {} // 0x000000018994C098-0x000000018994C0EC
+			internal void WriteValue(string value) {} // 0x000000018994C2EC-0x000000018994C340
+			internal void Replay(XmlWriter writer) {} // 0x000000018994B6DC-0x000000018994B9B4
+			internal void Trim() {} // 0x000000018994BA00-0x000000018994BDA0
+			internal void Clear() {} // 0x000000018994B69C-0x000000018994B6DC
+			private void StartComplexValue() {} // 0x000000018994B9B4-0x000000018994BA00
+			private void AddItem(ItemType type, object data) {} // 0x000000018994B544-0x000000018994B69C
+		}
+	
+		// Constructors
+		public XmlWellFormedWriter() {} // Dummy constructor
+		internal XmlWellFormedWriter(XmlWriter writer, XmlWriterSettings settings) {} // 0x000000018994AE90-0x000000018994B308
+		static XmlWellFormedWriter() {} // 0x000000018994A8D8-0x000000018994AE90
+	
+		// Methods
+		public override void WriteStartDocument() {} // 0x000000018994997C-0x0000000189949988
+		public override void WriteStartDocument(bool standalone) {} // 0x0000000189949958-0x000000018994997C
+		public override void WriteEndDocument() {} // 0x0000000189948528-0x0000000189948688
+		public override void WriteDocType(string name, string pubid, string sysid, string subset) {} // 0x00000001899478DC-0x0000000189947DA0
+		public override void WriteStartElement(string prefix, string localName, string ns) {} // 0x0000000189949988-0x0000000189949CF8
+		public override void WriteEndElement() {} // 0x0000000189948688-0x000000018994885C
+		public override void WriteFullEndElement() {} // 0x00000001899489B8-0x0000000189948B8C
+		public override void WriteStartAttribute(string prefix, string localName, string namespaceName) {} // 0x0000000189949188-0x00000001899497A0
+		public override void WriteEndAttribute() {} // 0x0000000189947DA0-0x0000000189948528
+		public override void WriteCData(string text) {} // 0x00000001899472E0-0x00000001899473E0
+		public override void WriteComment(string text) {} // 0x00000001899477DC-0x00000001899478DC
+		public override void WriteProcessingInstruction(string name, string text) {} // 0x0000000189948B8C-0x0000000189948E18
+		public override void WriteEntityRef(string name) {} // 0x000000018994885C-0x00000001899489B8
+		public override void WriteCharEntity(char ch) {} // 0x00000001899473E0-0x0000000189947560
+		public override void WriteSurrogateCharEntity(char lowChar, char highChar) {} // 0x0000000189949DEC-0x0000000189949F68
+		public override void WriteWhitespace(string ws) {} // 0x000000018994A740-0x000000018994A8D8
+		public override void WriteString(string text) {} // 0x0000000189949CF8-0x0000000189949DEC
+		public override void WriteChars(char[] buffer, int index, int count) {} // 0x0000000189947560-0x00000001899477DC
+		public override void WriteRaw(char[] buffer, int index, int count) {} // 0x0000000189948F0C-0x0000000189949188
+		public override void WriteRaw(string data) {} // 0x0000000189948E18-0x0000000189948F0C
+		public override void WriteBase64(byte[] buffer, int index, int count) {} // 0x0000000189946F54-0x00000001899471A0
+		public override void Close() {} // 0x00000001899458BC-0x0000000189945A64
+		public override void Flush() {} // 0x0000000189945B58-0x0000000189945C00
+		public override string LookupPrefix(string ns) => default; // 0x0000000189946064-0x000000018994622C
+		public override void WriteValue(bool value) {} // 0x000000018994A0FC-0x000000018994A1C8
+		public override void WriteValue(System.DateTime value) {} // 0x000000018994A674-0x000000018994A740
+		public override void WriteValue(double value) {} // 0x000000018994A394-0x000000018994A460
+		public override void WriteValue(float value) {} // 0x0000000189949F68-0x000000018994A034
+		public override void WriteValue(decimal value) {} // 0x000000018994A460-0x000000018994A534
+		public override void WriteValue(int value) {} // 0x000000018994A034-0x000000018994A0FC
+		public override void WriteValue(long value) {} // 0x000000018994A1C8-0x000000018994A294
+		public override void WriteValue(string value) {} // 0x000000018994A294-0x000000018994A394
+		public override void WriteValue(object value) {} // 0x000000018994A534-0x000000018994A674
+		public override void WriteBinHex(byte[] buffer, int index, int count) {} // 0x00000001899471A0-0x00000001899472E0
+		private void SetSpecialAttribute(SpecialAttribute special) {} // 0x0000000189946C44-0x0000000189946CE8
+		private void WriteStartDocumentImpl(XmlStandalone standalone) {} // 0x00000001899497A0-0x0000000189949958
+		private void StartFragment() {} // 0x0000000183D75BE0-0x0000000183D75BF0
+		private void PushNamespaceImplicit(string prefix, string ns) {} // 0x0000000189946840-0x0000000189946C44
+		private bool PushNamespaceExplicit(string prefix, string ns) => default; // 0x0000000189946334-0x0000000189946840
+		private void AddNamespace(string prefix, string ns, NamespaceKind kind) {} // 0x00000001899450A8-0x000000018994521C
+		private void AddToNamespaceHashtable(int namespaceIndex) {} // 0x0000000189945324-0x00000001899453E4
+		private int LookupNamespaceIndex(string prefix) => default; // 0x0000000189945F28-0x0000000189945FD8
+		private void PopNamespaces(int indexFrom, int indexTo) {} // 0x000000018994622C-0x0000000189946334
+		private static XmlException DupAttrException(string prefix, string localName) => default; // 0x0000000189945A64-0x0000000189945B58
+		private void AdvanceState(Token token) {} // 0x00000001899453E4-0x0000000189945788
+		private void StartElementContent() {} // 0x0000000189946CE8-0x0000000189946DA0
+		private static string GetStateName(State state) => default; // 0x0000000189945D18-0x0000000189945D98
+		internal string LookupNamespace(string prefix) => default; // 0x0000000189945FD8-0x0000000189946064
+		private string LookupLocalNamespace(string prefix) => default; // 0x0000000189945EA4-0x0000000189945F28
+		private string GeneratePrefix() => default; // 0x0000000189945C00-0x0000000189945D18
+		private void CheckNCName(string ncname) {} // 0x0000000189945788-0x00000001899458BC
+		private static Exception InvalidCharsException(string name, int badCharIndex) => default; // 0x0000000189945D98-0x0000000189945EA4
+		private void ThrowInvalidStateTransition(Token token, State currentState) {} // 0x0000000189946DA0-0x0000000189946F54
+		private void AddAttribute(string prefix, string localName, string namespaceName) {} // 0x0000000189944E1C-0x00000001899450A8
+		private void AddToAttrHashTable(int attributeIndex) {} // 0x000000018994521C-0x0000000189945324
+	}
+
+	public enum WriteState // TypeDefIndex: 42536
+	{
+		Start = 0,
+		Prolog = 1,
+		Element = 2,
+		Attribute = 3,
+		Content = 4,
+		Closed = 5,
+		Error = 6
+	}
+
+	public abstract class XmlWriter : IDisposable // TypeDefIndex: 42537
+	{
+		// Fields
+		private char[] writeNodeBuffer; // 0x10
+	
+		// Properties
+		public abstract WriteState WriteState { get; }
+	
+		// Constructors
+		protected XmlWriter() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public abstract void WriteStartDocument();
+		public abstract void WriteStartDocument(bool standalone);
+		public abstract void WriteEndDocument();
+		public abstract void WriteDocType(string name, string pubid, string sysid, string subset);
+		public void WriteStartElement(string localName, string ns) {} // 0x0000000189958A4C-0x0000000189958A70
+		public abstract void WriteStartElement(string prefix, string localName, string ns);
+		public void WriteStartElement(string localName) {} // 0x0000000189958A24-0x0000000189958A4C
+		public abstract void WriteEndElement();
+		public abstract void WriteFullEndElement();
+		public void WriteAttributeString(string localName, string ns, string value) {} // 0x0000000189958290-0x00000001899582E0
+		public void WriteAttributeString(string localName, string value) {} // 0x00000001899582E0-0x0000000189958330
+		public void WriteAttributeString(string prefix, string localName, string ns, string value) {} // 0x0000000189958330-0x0000000189958378
+		public abstract void WriteStartAttribute(string prefix, string localName, string ns);
+		public abstract void WriteEndAttribute();
+		public abstract void WriteCData(string text);
+		public abstract void WriteComment(string text);
+		public abstract void WriteProcessingInstruction(string name, string text);
+		public abstract void WriteEntityRef(string name);
+		public abstract void WriteCharEntity(char ch);
+		public abstract void WriteWhitespace(string ws);
+		public abstract void WriteString(string text);
+		public abstract void WriteSurrogateCharEntity(char lowChar, char highChar);
+		public abstract void WriteChars(char[] buffer, int index, int count);
+		public abstract void WriteRaw(char[] buffer, int index, int count);
+		public abstract void WriteRaw(string data);
+		public abstract void WriteBase64(byte[] buffer, int index, int count);
+		public virtual void WriteBinHex(byte[] buffer, int index, int count) {} // 0x00000001899585C8-0x00000001899585EC
+		public virtual void Close() {} // 0x000000018350B670-0x000000018350B680
+		public abstract void Flush();
+		public abstract string LookupPrefix(string ns);
+		public virtual void WriteValue(object value) {} // 0x0000000189958C10-0x0000000189958CDC
+		public virtual void WriteValue(string value) {} // 0x0000000189958A70-0x0000000189958A8C
+		public virtual void WriteValue(bool value) {} // 0x0000000189958D9C-0x0000000189958DF8
+		public virtual void WriteValue(System.DateTime value) {} // 0x0000000189958BAC-0x0000000189958C10
+		public virtual void WriteValue(double value) {} // 0x0000000189958D3C-0x0000000189958D9C
+		public virtual void WriteValue(float value) {} // 0x0000000189958CDC-0x0000000189958D3C
+		public virtual void WriteValue(decimal value) {} // 0x0000000189958AE8-0x0000000189958B50
+		public virtual void WriteValue(int value) {} // 0x0000000189958A8C-0x0000000189958AE8
+		public virtual void WriteValue(long value) {} // 0x0000000189958B50-0x0000000189958BAC
+		public virtual void WriteAttributes(XmlReader reader, bool defattr) {} // 0x0000000189958378-0x00000001899585C8
+		public virtual void WriteNode(XmlReader reader, bool defattr) {} // 0x0000000189958638-0x0000000189958A24
+		public void WriteElementString(string localName, string ns, string value) {} // 0x00000001899585EC-0x0000000189958638
+		public void Dispose() {} // 0x0000000189958280-0x0000000189958290
+		protected virtual void Dispose(bool disposing) {} // 0x000000018995824C-0x0000000189958280
+		public static XmlWriter Create(Stream output, XmlWriterSettings settings) => default; // 0x000000018995816C-0x00000001899581DC
+		public static XmlWriter Create(TextWriter output) => default; // 0x0000000189958160-0x000000018995816C
+		public static XmlWriter Create(TextWriter output, XmlWriterSettings settings) => default; // 0x00000001899581DC-0x000000018995824C
+	}
+
+	public enum XmlOutputMethod // TypeDefIndex: 42538
+	{
+		Xml = 0,
+		Html = 1,
+		Text = 2,
+		AutoDetect = 3
+	}
+
+	internal enum TriState // TypeDefIndex: 42539
+	{
+		Unknown = -1,
+		False = 0,
+		True = 1
+	}
+
+	internal enum XmlStandalone // TypeDefIndex: 42540
+	{
+		Omit = 0,
+		Yes = 1,
+		No = 2
+	}
+
+	public sealed class XmlWriterSettings // TypeDefIndex: 42541
+	{
+		// Fields
+		private bool useAsync; // 0x10
+		private Encoding encoding; // 0x18
+		private bool omitXmlDecl; // 0x20
+		private NewLineHandling newLineHandling; // 0x24
+		private string newLineChars; // 0x28
+		private System.Xml.TriState indent; // 0x30
+		private string indentChars; // 0x38
+		private bool newLineOnAttributes; // 0x40
+		private bool closeOutput; // 0x41
+		private NamespaceHandling namespaceHandling; // 0x44
+		private ConformanceLevel conformanceLevel; // 0x48
+		private bool checkCharacters; // 0x4C
+		private bool writeEndDocumentOnClose; // 0x4D
+		private XmlOutputMethod outputMethod; // 0x50
+		private List<XmlQualifiedName> cdataSections; // 0x58
+		private bool doNotEscapeUriAttributes; // 0x60
+		private bool mergeCDataSections; // 0x61
+		private string mediaType; // 0x68
+		private string docTypeSystem; // 0x70
+		private string docTypePublic; // 0x78
+		private XmlStandalone standalone; // 0x80
+		private bool autoXmlDecl; // 0x84
+		private bool isReadOnly; // 0x85
+	
+		// Properties
+		public bool Async { get => default; } // 0x00000001811797F0-0x0000000181179800 
+		public Encoding Encoding { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public bool OmitXmlDeclaration { get => default; set {} } // 0x0000000183D4EF90-0x0000000183D4EFA0 0x0000000189958110-0x0000000189958160
+		public NewLineHandling NewLineHandling { get => default; } // 0x0000000183D4E2E0-0x0000000183D4E2F0 
+		public string NewLineChars { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		public bool Indent { get => default; set {} } // 0x00000001856B62D4-0x00000001856B62DC 0x0000000189958014-0x000000018995806C
+		public string IndentChars { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		public bool NewLineOnAttributes { get => default; } // 0x0000000183D4EE90-0x0000000183D4EEA0 
+		public bool CloseOutput { get => default; } // 0x0000000183D4F7B0-0x0000000183D4F7C0 
+		public ConformanceLevel ConformanceLevel { get => default; set {} } // 0x0000000183D4EC50-0x0000000183D4EC60 0x0000000189957F70-0x0000000189958014
+		public bool CheckCharacters { get => default; } // 0x0000000183D4F520-0x0000000183D4F530 
+		public NamespaceHandling NamespaceHandling { get => default; set {} } // 0x0000000183D4EE80-0x0000000183D4EE90 0x000000018995806C-0x0000000189958110
+		public bool WriteEndDocumentOnClose { get => default; } // 0x0000000183D5CEB0-0x0000000183D5CEC0 
+		public XmlOutputMethod OutputMethod { get => default; internal set {} } // 0x0000000183D4EED0-0x0000000183D4EEE0 0x0000000183D4EF20-0x0000000183D4EF30
+		internal List<XmlQualifiedName> CDataSectionElements { get => default; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 
+		public bool DoNotEscapeUriAttributes { get => default; } // 0x0000000183D519A0-0x0000000183D519B0 
+		internal bool MergeCDataSections { get => default; } // 0x0000000183D51F90-0x0000000183D51FA0 
+		internal string MediaType { get => default; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 
+		internal string DocTypeSystem { get => default; } // 0x0000000183D4EB30-0x0000000183D4EB40 
+		internal string DocTypePublic { get => default; } // 0x0000000183D4EB20-0x0000000183D4EB30 
+		internal XmlStandalone Standalone { get => default; } // 0x0000000183D4EC20-0x0000000183D4EC30 
+		internal bool AutoXmlDeclaration { get => default; } // 0x0000000183D51AD0-0x0000000183D51AE0 
+		internal System.Xml.TriState IndentInternal { get => default; } // 0x0000000183D4ED20-0x0000000183D4ED30 
+		internal bool IsQuerySpecific { get => default; } // 0x0000000189957F14-0x0000000189957F70 
+		internal bool ReadOnly { set {} } // 0x0000000183D71F50-0x0000000183D71F60
+	
+		// Constructors
+		public XmlWriterSettings() {} // 0x0000000189957E94-0x0000000189957F14
+	
+		// Methods
+		public XmlWriterSettings Clone() => default; // 0x00000001899575F0-0x00000001899576B4
+		internal XmlWriter CreateWriter(Stream output) => default; // 0x00000001899576B4-0x0000000189957AD8
+		internal XmlWriter CreateWriter(TextWriter output) => default; // 0x0000000189957AD8-0x0000000189957D98
+		private void CheckReadOnly(string propertyName) {} // 0x0000000189957534-0x00000001899575F0
+		private void Initialize() {} // 0x0000000189957D98-0x0000000189957E94
+	}
+
+	[DefaultMember("Item")]
+	internal class XsdCachingReader : XmlReader, IXmlLineInfo // TypeDefIndex: 42543
+	{
+		// Fields
+		private XmlReader coreReader; // 0x10
+		private XmlNameTable coreReaderNameTable; // 0x18
+		private ValidatingReaderNodeData[] contentEvents; // 0x20
+		private ValidatingReaderNodeData[] attributeEvents; // 0x28
+		private ValidatingReaderNodeData cachedNode; // 0x30
+		private CachingReaderState cacheState; // 0x38
+		private int contentIndex; // 0x3C
+		private int attributeCount; // 0x40
+		private bool returnOriginalStringValues; // 0x44
+		private CachingEventHandler cacheHandler; // 0x48
+		private int currentAttrIndex; // 0x50
+		private int currentContentIndex; // 0x54
+		private bool readAhead; // 0x58
+		private IXmlLineInfo lineInfo; // 0x60
+		private ValidatingReaderNodeData textNode; // 0x68
+	
+		// Properties
+		public override XmlReaderSettings Settings { get => default; } // 0x00000001897D5040-0x00000001897D505C 
+		public override XmlNodeType NodeType { get => default; } // 0x000000018995A28C-0x000000018995A2A8 
+		public override string Name { get => default; } // 0x000000018995A248-0x000000018995A270 
+		public override string LocalName { get => default; } // 0x0000000185F45CE0-0x0000000185F45CFC 
+		public override string NamespaceURI { get => default; } // 0x000000018995A270-0x000000018995A28C 
+		public override string Prefix { get => default; } // 0x000000018910B190-0x000000018910B1AC 
+		public override bool HasValue { get => default; } // 0x000000018995A1F4-0x000000018995A248 
+		public override string Value { get => default; } // 0x000000018995A2A8-0x000000018995A2D8 
+		public override int Depth { get => default; } // 0x0000000185F407DC-0x0000000185F407F8 
+		public override string BaseURI { get => default; } // 0x00000001897D4E48-0x00000001897D4E6C 
+		public override bool IsEmptyElement { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		public override bool IsDefault { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		public override char QuoteChar { get => default; } // 0x00000001897D4FF8-0x00000001897D501C 
+		public override XmlSpace XmlSpace { get => default; } // 0x00000001897D50A4-0x00000001897D50C8 
+		public override string XmlLang { get => default; } // 0x00000001897D5080-0x00000001897D50A4 
+		public override int AttributeCount { get => default; } // 0x0000000183D4ED80-0x0000000183D4ED90 
+		public override bool EOF { get => default; } // 0x000000018995A1C4-0x000000018995A1F4 
+		public override System.Xml.ReadState ReadState { get => default; } // 0x00000001897D501C-0x00000001897D5040 
+		public override XmlNameTable NameTable { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		int IXmlLineInfo.LineNumber { get => default; } // 0x000000018995A0D0-0x000000018995A0EC 
+		int IXmlLineInfo.LinePosition { get => default; } // 0x0000000185965D98-0x0000000185965DB4 
+	
+		// Nested types
+		private enum CachingReaderState // TypeDefIndex: 42542
+		{
+			None = 0,
+			Init = 1,
+			Record = 2,
+			Replay = 3,
+			ReaderClosed = 4,
+			Error = 5
+		}
+	
+		// Constructors
+		public XsdCachingReader() {} // Dummy constructor
+		internal XsdCachingReader(XmlReader reader, IXmlLineInfo lineInfo, CachingEventHandler handlerMethod) {} // 0x000000018995A0EC-0x000000018995A1C4
+	
+		// Methods
+		private void Init() {} // 0x0000000189959484-0x00000001899595EC
+		internal void Reset(XmlReader reader) {} // 0x0000000189959E60-0x0000000189959E84
+		public override string GetAttribute(string name) => default; // 0x0000000189959408-0x0000000189959484
+		public override string GetAttribute(string name, string namespaceURI) => default; // 0x0000000189959328-0x0000000189959408
+		public override string GetAttribute(int i) => default; // 0x0000000189959298-0x0000000189959328
+		public override bool MoveToAttribute(string name) => default; // 0x0000000189959684-0x000000018995970C
+		public override void MoveToAttribute(int i) {} // 0x00000001899595EC-0x0000000189959684
+		public override bool MoveToFirstAttribute() => default; // 0x000000018995974C-0x0000000189959790
+		public override bool MoveToNextAttribute() => default; // 0x0000000189959790-0x00000001899597E8
+		public override bool MoveToElement() => default; // 0x000000018995970C-0x000000018995974C
+		public override bool Read() => default; // 0x0000000189959858-0x0000000189959B54
+		internal ValidatingReaderNodeData RecordTextNode(string textValue, string originalStringValue, int depth, int lineNo, int linePos) => default; // 0x0000000189959DEC-0x0000000189959E60
+		internal void SwitchTextNodeAndEndElement(string textValue, string originalStringValue) {} // 0x0000000189959FE4-0x000000018995A0D0
+		internal void RecordEndElementNode() {} // 0x0000000189959CC4-0x0000000189959DEC
+		internal string ReadOriginalContentAsString() => default; // 0x0000000189959838-0x0000000189959858
+		public override void Close() {} // 0x00000001899590A0-0x00000001899590D0
+		public override void Skip() {} // 0x0000000189959EF4-0x0000000189959FE4
+		public override string LookupNamespace(string prefix) => default; // 0x00000001897D4C40-0x00000001897D4C64
+		public override void ResolveEntity() {} // 0x0000000189959E84-0x0000000189959ED0
+		public override bool ReadAttributeValue() => default; // 0x00000001899597E8-0x0000000189959838
+		bool IXmlLineInfo.HasLineInfo() => default; // 0x000000018232EB60-0x000000018232EB70
+		internal void SetToReplayMode() {} // 0x0000000189959ED0-0x0000000189959EF4
+		internal XmlReader GetCoreReader() => default; // 0x00000001820B7B20-0x00000001820B7B30
+		internal IXmlLineInfo GetLineInfo() => default; // 0x0000000183D4EB00-0x0000000183D4EB10
+		private void ClearAttributesInfo() {} // 0x0000000183D75C00-0x0000000183D75C10
+		private ValidatingReaderNodeData AddAttribute(int attIndex) => default; // 0x0000000189958DF8-0x0000000189958F40
+		private ValidatingReaderNodeData AddContent(XmlNodeType nodeType) => default; // 0x0000000189958F40-0x00000001899590A0
+		private void RecordAttributes() {} // 0x0000000189959B54-0x0000000189959CC4
+		private int GetAttributeIndexWithoutPrefix(string name) => default; // 0x0000000189959214-0x0000000189959298
+		private int GetAttributeIndexWithPrefix(string name) => default; // 0x0000000189959184-0x0000000189959214
+		private ValidatingReaderNodeData CreateDummyTextNode(string attributeValue, int depth) => default; // 0x00000001899590D0-0x0000000189959184
+	}
+
+	internal delegate void CachingEventHandler(XsdCachingReader cachingReader); // TypeDefIndex: 42544; 0x0000000182149960-0x0000000182149970
+
+	internal class AttributePSVIInfo // TypeDefIndex: 42545
+	{
+		// Fields
+		internal string localName; // 0x10
+		internal string namespaceUri; // 0x18
+		internal object typedAttributeValue; // 0x20
+		internal XmlSchemaInfo attributeSchemaInfo; // 0x28
+	
+		// Constructors
+		internal AttributePSVIInfo() {} // 0x000000018994B4E0-0x000000018994B544
+	
+		// Methods
+		internal void Reset() {} // 0x000000018994B454-0x000000018994B4E0
+	}
+
+	internal class XsdValidatingReader : XmlReader, IXmlSchemaInfo, IXmlLineInfo, IXmlNamespaceResolver // TypeDefIndex: 42547
+	{
+		// Fields
+		private XmlReader coreReader; // 0x10
+		private IXmlNamespaceResolver coreReaderNSResolver; // 0x18
+		private IXmlNamespaceResolver thisNSResolver; // 0x20
+		private XmlSchemaValidator validator; // 0x28
+		private XmlResolver xmlResolver; // 0x30
+		private ValidationEventHandler validationEvent; // 0x38
+		private ValidatingReaderState validationState; // 0x40
+		private XmlValueGetter valueGetter; // 0x48
+		private XmlNamespaceManager nsManager; // 0x50
+		private bool manageNamespaces; // 0x58
+		private bool processInlineSchema; // 0x59
+		private bool replayCache; // 0x5A
+		private ValidatingReaderNodeData cachedNode; // 0x60
+		private AttributePSVIInfo attributePSVI; // 0x68
+		private int attributeCount; // 0x70
+		private int coreReaderAttributeCount; // 0x74
+		private int currentAttrIndex; // 0x78
+		private AttributePSVIInfo[] attributePSVINodes; // 0x80
+		private ArrayList defaultAttributes; // 0x88
+		private System.Xml.Schema.Parser inlineSchemaParser; // 0x90
+		private object atomicValue; // 0x98
+		private XmlSchemaInfo xmlSchemaInfo; // 0xA0
+		private string originalAtomicValueString; // 0xA8
+		private XmlNameTable coreReaderNameTable; // 0xB0
+		private XsdCachingReader cachingReader; // 0xB8
+		private ValidatingReaderNodeData textNode; // 0xC0
+		private string NsXmlNs; // 0xC8
+		private string NsXs; // 0xD0
+		private string NsXsi; // 0xD8
+		private string XsiType; // 0xE0
+		private string XsiNil; // 0xE8
+		private string XsdSchema; // 0xF0
+		private string XsiSchemaLocation; // 0xF8
+		private string XsiNoNamespaceSchemaLocation; // 0x100
+		private XmlCharType xmlCharType; // 0x108
+		private IXmlLineInfo lineInfo; // 0x110
+		private ReadContentAsBinaryHelper readBinaryHelper; // 0x118
+		private ValidatingReaderState savedState; // 0x120
+		private static System.Type TypeOfString; // 0x00
+	
+		// Properties
+		public override XmlReaderSettings Settings { get => default; } // 0x000000018995DF58-0x000000018995E028 
+		public override XmlNodeType NodeType { get => default; } // 0x000000018995DE6C-0x000000018995DEF0 
+		public override string Name { get => default; } // 0x000000018995DD2C-0x000000018995DE34 
+		public override string LocalName { get => default; } // 0x000000018995DCF4-0x000000018995DD2C 
+		public override string NamespaceURI { get => default; } // 0x000000018995DE34-0x000000018995DE6C 
+		public override string Prefix { get => default; } // 0x000000018995DEF0-0x000000018995DF28 
+		public override bool HasValue { get => default; } // 0x000000018995DC5C-0x000000018995DC88 
+		public override string Value { get => default; } // 0x000000018995E100-0x000000018995E6EC 
+		public override int Depth { get => default; } // 0x000000018995DBF8-0x000000018995DC30 
+		public override string BaseURI { get => default; } // 0x00000001897D4E48-0x00000001897D4E6C 
+		public override bool IsEmptyElement { get => default; } // 0x00000001897D4F44-0x00000001897D4F68 
+		public override bool IsDefault { get => default; } // 0x000000018995DC88-0x000000018995DCB4 
+		public override char QuoteChar { get => default; } // 0x00000001897D4FF8-0x00000001897D501C 
+		public override XmlSpace XmlSpace { get => default; } // 0x00000001897D50A4-0x00000001897D50C8 
+		public override string XmlLang { get => default; } // 0x00000001897D5080-0x00000001897D50A4 
+		public override IXmlSchemaInfo SchemaInfo { get => default; } // 0x000000018339AE90-0x000000018339AEA0 
+		public override System.Type ValueType { get => default; } // 0x000000018995E028-0x000000018995E100 
+		public override int AttributeCount { get => default; } // 0x0000000183D4F0C0-0x0000000183D4F0D0 
+		public override bool EOF { get => default; } // 0x00000001897D4ED8-0x00000001897D4EFC 
+		public override System.Xml.ReadState ReadState { get => default; } // 0x000000018995DF28-0x000000018995DF58 
+		public override XmlNameTable NameTable { get => default; } // 0x0000000183D4EAD0-0x0000000183D4EAE0 
+		bool IXmlSchemaInfo.IsDefault { get => default; } // 0x000000018995D53C-0x000000018995D5B4 
+		bool IXmlSchemaInfo.IsNil { get => default; } // 0x000000018995D5B4-0x000000018995D5F4 
+		XmlSchemaValidity IXmlSchemaInfo.Validity { get => default; } // 0x000000018995D760-0x000000018995D7E8 
+		XmlSchemaSimpleType IXmlSchemaInfo.MemberType { get => default; } // 0x000000018995D5F4-0x000000018995D670 
+		XmlSchemaType IXmlSchemaInfo.SchemaType { get => default; } // 0x000000018995D708-0x000000018995D760 
+		XmlSchemaElement IXmlSchemaInfo.SchemaElement { get => default; } // 0x000000018995D6B8-0x000000018995D708 
+		XmlSchemaAttribute IXmlSchemaInfo.SchemaAttribute { get => default; } // 0x000000018995D670-0x000000018995D6B8 
+		public int LineNumber { get => default; } // 0x000000018995DCB4-0x000000018995DCD4 
+		public int LinePosition { get => default; } // 0x000000018995DCD4-0x000000018995DCF4 
+		private XmlSchemaType ElementXmlType { get => default; } // 0x000000018995DC30-0x000000018995DC5C 
+		private XmlSchemaType AttributeXmlType { get => default; } // 0x000000018995DBC0-0x000000018995DBF8 
+		private XmlSchemaInfo AttributeSchemaInfo { get => default; } // 0x000000018995DBA4-0x000000018995DBC0 
+	
+		// Nested types
+		private enum ValidatingReaderState // TypeDefIndex: 42546
+		{
+			OnReadAttributeValue = -2,
+			OnDefaultAttribute = -1,
+			None = 0,
+			Init = 1,
+			Read = 2,
+			OnAttribute = 3,
+			ClearAttributes = 4,
+			ParseInlineSchema = 5,
+			ReadAhead = 6,
+			OnReadBinaryContent = 7,
+			ReaderClosed = 8,
+			EOF = 9,
+			Error = 10
+		}
+	
+		// Constructors
+		public XsdValidatingReader() {} // Dummy constructor
+		internal XsdValidatingReader(XmlReader reader, XmlResolver xmlResolver, XmlReaderSettings readerSettings, XmlSchemaObject partialValidationType) {} // 0x000000018995D9AC-0x000000018995DB88
+		internal XsdValidatingReader(XmlReader reader, XmlResolver xmlResolver, XmlReaderSettings readerSettings) {} // 0x000000018995DB88-0x000000018995DBA4
+	
+		// Methods
+		private void Init() {} // 0x000000018995B0D8-0x000000018995B468
+		private void SetupValidator(XmlReaderSettings readerSettings, XmlReader reader, XmlSchemaObject partialValidationType) {} // 0x000000018995D0C8-0x000000018995D2F8
+		public override string ReadContentAsString() => default; // 0x000000018995C870-0x000000018995CBBC
+		public override string GetAttribute(string name) => default; // 0x000000018995A7E4-0x000000018995A850
+		public override string GetAttribute(string name, string namespaceURI) => default; // 0x000000018995A850-0x000000018995A954
+		public override string GetAttribute(int i) => default; // 0x000000018995A738-0x000000018995A7E4
+		public override bool MoveToAttribute(string name) => default; // 0x000000018995B700-0x000000018995B7D0
+		public override void MoveToAttribute(int i) {} // 0x000000018995B7D0-0x000000018995B964
+		public override bool MoveToFirstAttribute() => default; // 0x000000018995B9A8-0x000000018995BB00
+		public override bool MoveToNextAttribute() => default; // 0x000000018995BB00-0x000000018995BC60
+		public override bool MoveToElement() => default; // 0x000000018995B964-0x000000018995B9A8
+		public override bool Read() => default; // 0x000000018995CDF0-0x000000018995CF48
+		public override void Close() {} // 0x000000018995A4D4-0x000000018995A504
+		public override void Skip() {} // 0x000000018995D2F8-0x000000018995D418
+		public override string LookupNamespace(string prefix) => default; // 0x000000018995B6E4-0x000000018995B700
+		public override void ResolveEntity() {} // 0x000000018995CF48-0x000000018995CF94
+		public override bool ReadAttributeValue() => default; // 0x000000018995C7D0-0x000000018995C870
+		public bool HasLineInfo() => default; // 0x000000018232EB60-0x000000018232EB70
+		IDictionary<string, string> IXmlNamespaceResolver.GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x000000018995D470-0x000000018995D4B4
+		string IXmlNamespaceResolver.LookupNamespace(string prefix) => default; // 0x000000018995D4B4-0x000000018995D4F8
+		string IXmlNamespaceResolver.LookupPrefix(string namespaceName) => default; // 0x000000018995D4F8-0x000000018995D53C
+		private object GetStringValue() => default; // 0x00000001897D505C-0x00000001897D5080
+		private void ProcessReaderEvent() {} // 0x000000018995C394-0x000000018995C574
+		private void ProcessElementEvent() {} // 0x000000018995BC60-0x000000018995C148
+		private void ProcessEndElementEvent() {} // 0x000000018995C148-0x000000018995C2C4
+		private void ValidateAttributes() {} // 0x000000018995D7E8-0x000000018995D9AC
+		private void ClearAttributesInfo() {} // 0x000000018995A488-0x000000018995A4D4
+		private AttributePSVIInfo GetAttributePSVI(string name) => default; // 0x000000018995A624-0x000000018995A738
+		private AttributePSVIInfo GetAttributePSVI(string localName, string ns) => default; // 0x000000018995A5C8-0x000000018995A624
+		private ValidatingReaderNodeData GetDefaultAttribute(string name, bool updatePosition) => default; // 0x000000018995AB60-0x000000018995AC78
+		private ValidatingReaderNodeData GetDefaultAttribute(string attrLocalName, string ns, bool updatePosition) => default; // 0x000000018995AA7C-0x000000018995AB60
+		private AttributePSVIInfo AddAttributePSVI(int attIndex) => default; // 0x000000018995A2D8-0x000000018995A440
+		private bool IsXSDRoot(string localName, string ns) => default; // 0x000000018995B6CC-0x000000018995B6E4
+		private void ProcessInlineSchema() {} // 0x000000018995C2C4-0x000000018995C394
+		private object InternalReadContentAsObject() => default; // 0x000000018995B6C0-0x000000018995B6CC
+		private object InternalReadContentAsObject(bool unwrapTypedValue) => default; // 0x000000018995B468-0x000000018995B488
+		private object InternalReadContentAsObject(bool unwrapTypedValue, out string originalStringValue) {
+			originalStringValue = default;
+			return default;
+		} // 0x000000018995B488-0x000000018995B6C0
+		private object ReadTillEndElement() => default; // 0x000000018995CBBC-0x000000018995CDF0
+		private void SwitchReader() {} // 0x000000018995D418-0x000000018995D470
+		private void ReadAheadForMemberType() {} // 0x000000018995C574-0x000000018995C7D0
+		private void GetIsDefault() {} // 0x000000018995AC78-0x000000018995AF74
+		private void GetMemberType() {} // 0x000000018995AF74-0x000000018995B03C
+		private object ReturnBoxedValue(object typedValue, XmlSchemaType xmlType, bool unWrap) => default; // 0x000000018995CF94-0x000000018995D0C8
+		private XsdCachingReader GetCachingReader() => default; // 0x000000018995A954-0x000000018995AA7C
+		internal ValidatingReaderNodeData CreateDummyTextNode(string attributeValue, int depth) => default; // 0x000000018995A504-0x000000018995A5C8
+		internal void CachingCallBack(XsdCachingReader cachingReader) {} // 0x000000018995A440-0x000000018995A488
+		private string GetOriginalAtomicValueStringOfElement() => default; // 0x000000018995B03C-0x000000018995B0D8
+	}
+
+	internal sealed class DocumentXPathNavigator : XPathNavigator, IHasXmlNode // TypeDefIndex: 42548
+	{
+		// Fields
+		private XmlDocument document; // 0x10
+		private XmlNode source; // 0x18
+		private int attributeIndex; // 0x20
+		private XmlElement namespaceParent; // 0x28
+	
+		// Properties
+		public override XmlNameTable NameTable { get => default; } // 0x000000018994EC30-0x000000018994EC50 
+		public override XPathNodeType NodeType { get => default; } // 0x000000018994EDD4-0x000000018994EE04 
+		public override string LocalName { get => default; } // 0x000000018994EC0C-0x000000018994EC30 
+		public override string NamespaceURI { get => default; } // 0x000000018994ED48-0x000000018994EDD4 
+		public override string Name { get => default; } // 0x000000018994EC50-0x000000018994ED48 
+		public override string Prefix { get => default; } // 0x000000018994EE04-0x000000018994EE90 
+		public override string Value { get => default; } // 0x000000018994F054-0x000000018994F0EC 
+		private string ValueDocument { get => default; } // 0x000000018994EED0-0x000000018994EF3C 
+		private string ValueText { get => default; } // 0x000000018994EF3C-0x000000018994F054 
+		public override string BaseURI { get => default; } // 0x000000018994EBE8-0x000000018994EC0C 
+		public override string XmlLang { get => default; } // 0x000000018994F0EC-0x000000018994F110 
+		public override object UnderlyingObject { get => default; } // 0x000000018994EEB4-0x000000018994EED0 
+		public override IXmlSchemaInfo SchemaInfo { get => default; } // 0x000000018994EE90-0x000000018994EEB4 
+	
+		// Constructors
+		public DocumentXPathNavigator() {} // Dummy constructor
+		public DocumentXPathNavigator(XmlDocument document, XmlNode node) {} // 0x000000018994EAF4-0x000000018994EB60
+		public DocumentXPathNavigator(DocumentXPathNavigator other) {} // 0x000000018994EB60-0x000000018994EBE8
+	
+		// Methods
+		public override XPathNavigator Clone() => default; // 0x000000018994C508-0x000000018994C568
+		public override bool MoveToAttribute(string localName, string namespaceURI) => default; // 0x000000018994CB90-0x000000018994CCBC
+		public override bool MoveToFirstAttribute() => default; // 0x000000018994CE64-0x000000018994CF38
+		public override bool MoveToNextAttribute() => default; // 0x000000018994D8D0-0x000000018994DA10
+		public override bool MoveToNamespace(string name) => default; // 0x000000018994D70C-0x000000018994D8D0
+		public override bool MoveToFirstNamespace(XPathNamespaceScope scope) => default; // 0x000000018994D110-0x000000018994D2D0
+		private static bool MoveToFirstNamespaceLocal(XmlAttributeCollection attributes, ref int index) => default; // 0x000000018994D0A4-0x000000018994D110
+		private static bool MoveToFirstNamespaceGlobal(ref XmlAttributeCollection attributes, ref int index) => default; // 0x000000018994CFDC-0x000000018994D0A4
+		public override bool MoveToNextNamespace(XPathNamespaceScope scope) => default; // 0x000000018994DB3C-0x000000018994DE04
+		private static bool MoveToNextNamespaceLocal(XmlAttributeCollection attributes, ref int index) => default; // 0x000000018994DAD8-0x000000018994DB3C
+		private static bool MoveToNextNamespaceGlobal(ref XmlAttributeCollection attributes, ref int index) => default; // 0x000000018994DA10-0x000000018994DAD8
+		private bool PathHasDuplicateNamespace(XmlElement top, XmlElement bottom, string localName) => default; // 0x000000018994E45C-0x000000018994E50C
+		public override string LookupNamespace(string prefix) => default; // 0x000000018994CB38-0x000000018994CB90
+		public override bool MoveToNext() => default; // 0x000000018994DE04-0x000000018994DEDC
+		public override bool MoveToFirstChild() => default; // 0x000000018994CF38-0x000000018994CFDC
+		public override bool MoveToParent() => default; // 0x000000018994E09C-0x000000018994E14C
+		public override void MoveToRoot() {} // 0x000000018994E14C-0x000000018994E200
+		public override bool MoveTo(XPathNavigator other) => default; // 0x000000018994E200-0x000000018994E284
+		public override bool MoveToId(string id) => default; // 0x000000018994D6C0-0x000000018994D70C
+		public override bool MoveToChild(string localName, string namespaceUri) => default; // 0x000000018994CCBC-0x000000018994CD94
+		public override bool MoveToChild(XPathNodeType type) => default; // 0x000000018994CD94-0x000000018994CE64
+		public override bool MoveToFollowing(string localName, string namespaceUri, XPathNavigator end) => default; // 0x000000018994D2D0-0x000000018994D4CC
+		public override bool MoveToFollowing(XPathNodeType type, XPathNavigator end) => default; // 0x000000018994D4CC-0x000000018994D6C0
+		public override bool MoveToNext(string localName, string namespaceUri) => default; // 0x000000018994DEDC-0x000000018994DF8C
+		public override bool MoveToNext(XPathNodeType type) => default; // 0x000000018994DF8C-0x000000018994E09C
+		public override bool IsSamePosition(XPathNavigator other) => default; // 0x000000018994CA24-0x000000018994CA9C
+		public override bool IsDescendant(XPathNavigator other) => default; // 0x000000018994C940-0x000000018994C99C
+		private static XmlNode OwnerNode(XmlNode node) => default; // 0x000000018994E370-0x000000018994E3DC
+		private static int GetDepth(XmlNode node) => default; // 0x000000018994C910-0x000000018994C940
+		private XmlNodeOrder Compare(XmlNode node1, XmlNode node2) => default; // 0x000000018994C73C-0x000000018994C88C
+		public override XmlNodeOrder ComparePosition(XPathNavigator other) => default; // 0x000000018994C568-0x000000018994C73C
+		XmlNode IHasXmlNode.GetNode() => default; // 0x0000000181041090-0x00000001810410A0
+		public override XPathNodeIterator SelectDescendants(string localName, string namespaceURI, bool matchSelf) => default; // 0x000000018994E8DC-0x000000018994EAA0
+		public override XPathNodeIterator SelectDescendants(XPathNodeType nt, bool includeSelf) => default; // 0x000000018994E7F0-0x000000018994E8DC
+		internal void ResetPosition(XmlNode node) {} // 0x000000018994E744-0x000000018994E7F0
+		private static bool ResetAttributePosition(XmlAttribute attribute, XmlAttributeCollection attributes, out int index) {
+			index = default;
+			return default;
+		} // 0x000000018994E6D0-0x000000018994E744
+		private static bool CheckAttributePosition(XmlAttribute attribute, out XmlAttributeCollection attributes, int index) {
+			attributes = default;
+			return default;
+		} // 0x000000018994C474-0x000000018994C508
+		private void CalibrateText() {} // 0x000000018994C430-0x000000018994C474
+		private XmlNode ParentNode(XmlNode node) => default; // 0x000000018994E418-0x000000018994E45C
+		private XmlNode ParentNodeTail(XmlNode parent) => default; // 0x000000018994E3DC-0x000000018994E418
+		private XmlNode FirstChild(XmlNode node) => default; // 0x000000018994C8C8-0x000000018994C910
+		private XmlNode FirstChildTail(XmlNode child) => default; // 0x000000018994C88C-0x000000018994C8C8
+		private XmlNode NextSibling(XmlNode node) => default; // 0x000000018994E31C-0x000000018994E370
+		private XmlNode NextSiblingTail(XmlNode node, XmlNode sibling) => default; // 0x000000018994E284-0x000000018994E31C
+		private XmlNode PreviousText(XmlNode node) => default; // 0x000000018994E5DC-0x000000018994E6D0
+		private XmlNode PreviousTextTail(XmlNode node, XmlNode text) => default; // 0x000000018994E50C-0x000000018994E5DC
+		private static bool IsDescendant(XmlNode top, XmlNode bottom) => default; // 0x000000018994C99C-0x000000018994CA24
+		private static bool IsValidChild(XmlNode parent, XmlNode child) => default; // 0x000000018994CA9C-0x000000018994CB38
+		private XmlNode TextEnd(XmlNode node) => default; // 0x000000018994EAA0-0x000000018994EAF4
+	}
+
+	internal sealed class DocumentXPathNodeIterator_Empty : XPathNodeIterator // TypeDefIndex: 42549
+	{
+		// Fields
+		private XPathNavigator nav; // 0x18
+	
+		// Properties
+		public override XPathNavigator Current { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public override int CurrentPosition { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public override int Count { get => default; } // 0x0000000181002730-0x0000000181002740 
+	
+		// Constructors
+		public DocumentXPathNodeIterator_Empty() {} // Dummy constructor
+		internal DocumentXPathNodeIterator_Empty(DocumentXPathNavigator nav) {} // 0x000000018994FA60-0x000000018994FA98
+		internal DocumentXPathNodeIterator_Empty(DocumentXPathNodeIterator_Empty other) {} // 0x000000018994FA98-0x000000018994FAD8
+	
+		// Methods
+		public override XPathNodeIterator Clone() => default; // 0x000000018994FA00-0x000000018994FA60
+		public override bool MoveNext() => default; // 0x000000018115F4C0-0x000000018115F530
+	}
+
+	internal abstract class DocumentXPathNodeIterator_ElemDescendants : XPathNodeIterator // TypeDefIndex: 42550
+	{
+		// Fields
+		private DocumentXPathNavigator nav; // 0x18
+		private int level; // 0x20
+		private int position; // 0x24
+	
+		// Properties
+		public override XPathNavigator Current { get; } // 0x0000000181041090-0x00000001810410A0 
+		public override int CurrentPosition { get; } // 0x0000000183D4E2E0-0x0000000183D4E2F0 
+	
+		// Constructors
+		protected DocumentXPathNodeIterator_ElemDescendants() {} // Dummy constructor
+		internal DocumentXPathNodeIterator_ElemDescendants(DocumentXPathNavigator nav) {} // 0x000000018994F8B4-0x000000018994F954
+		internal DocumentXPathNodeIterator_ElemDescendants(DocumentXPathNodeIterator_ElemDescendants other) {} // 0x000000018994F954-0x000000018994FA00
+	
+		// Methods
+		protected abstract bool Match(XmlNode node);
+		protected void SetPosition(int pos) {} // 0x0000000183D4E2F0-0x0000000183D4E300
+		public override bool MoveNext() => default; // 0x000000018994F7BC-0x000000018994F8B4
+	}
+
+	internal class DocumentXPathNodeIterator_AllElemChildren : DocumentXPathNodeIterator_ElemDescendants // TypeDefIndex: 42551
+	{
+		// Constructors
+		public DocumentXPathNodeIterator_AllElemChildren() {} // Dummy constructor
+		internal DocumentXPathNodeIterator_AllElemChildren(DocumentXPathNavigator nav) {} // 0x000000018994F248-0x000000018994F250
+		internal DocumentXPathNodeIterator_AllElemChildren(DocumentXPathNodeIterator_AllElemChildren other) {} // 0x000000018994F250-0x000000018994F258
+	
+		// Methods
+		public override XPathNodeIterator Clone() => default; // 0x000000018994F258-0x000000018994F2B8
+		protected override bool Match(XmlNode node) => default; // 0x000000018994F2B8-0x000000018994F2DC
+	}
+
+	internal sealed class DocumentXPathNodeIterator_AllElemChildren_AndSelf : DocumentXPathNodeIterator_AllElemChildren // TypeDefIndex: 42552
+	{
+		// Constructors
+		public DocumentXPathNodeIterator_AllElemChildren_AndSelf() {} // Dummy constructor
+		internal DocumentXPathNodeIterator_AllElemChildren_AndSelf(DocumentXPathNavigator nav) {} // 0x000000018994F248-0x000000018994F250
+		internal DocumentXPathNodeIterator_AllElemChildren_AndSelf(DocumentXPathNodeIterator_AllElemChildren_AndSelf other) {} // 0x000000018994F250-0x000000018994F258
+	
+		// Methods
+		public override XPathNodeIterator Clone() => default; // 0x000000018994F110-0x000000018994F170
+		public override bool MoveNext() => default; // 0x000000018994F170-0x000000018994F248
+	}
+
+	internal class DocumentXPathNodeIterator_ElemChildren_NoLocalName : DocumentXPathNodeIterator_ElemDescendants // TypeDefIndex: 42553
+	{
+		// Fields
+		private string nsAtom; // 0x28
+	
+		// Constructors
+		public DocumentXPathNodeIterator_ElemChildren_NoLocalName() {} // Dummy constructor
+		internal DocumentXPathNodeIterator_ElemChildren_NoLocalName(DocumentXPathNavigator nav, string nsAtom) {} // 0x000000018994F6F0-0x000000018994F720
+		internal DocumentXPathNodeIterator_ElemChildren_NoLocalName(DocumentXPathNodeIterator_ElemChildren_NoLocalName other) {} // 0x000000018994F6B0-0x000000018994F6F0
+	
+		// Methods
+		public override XPathNodeIterator Clone() => default; // 0x000000018994F624-0x000000018994F684
+		protected override bool Match(XmlNode node) => default; // 0x000000018994F684-0x000000018994F6B0
+	}
+
+	internal sealed class DocumentXPathNodeIterator_ElemChildren_AndSelf_NoLocalName : DocumentXPathNodeIterator_ElemChildren_NoLocalName // TypeDefIndex: 42554
+	{
+		// Constructors
+		public DocumentXPathNodeIterator_ElemChildren_AndSelf_NoLocalName() {} // Dummy constructor
+		internal DocumentXPathNodeIterator_ElemChildren_AndSelf_NoLocalName(DocumentXPathNavigator nav, string nsAtom) {} // 0x000000018994F554-0x000000018994F55C
+		internal DocumentXPathNodeIterator_ElemChildren_AndSelf_NoLocalName(DocumentXPathNodeIterator_ElemChildren_AndSelf_NoLocalName other) {} // 0x000000018994F54C-0x000000018994F554
+	
+		// Methods
+		public override XPathNodeIterator Clone() => default; // 0x000000018994F414-0x000000018994F474
+		public override bool MoveNext() => default; // 0x000000018994F474-0x000000018994F54C
+	}
+
+	internal class DocumentXPathNodeIterator_ElemChildren : DocumentXPathNodeIterator_ElemDescendants // TypeDefIndex: 42555
+	{
+		// Fields
+		protected string localNameAtom; // 0x28
+		protected string nsAtom; // 0x30
+	
+		// Constructors
+		public DocumentXPathNodeIterator_ElemChildren() {} // Dummy constructor
+		internal DocumentXPathNodeIterator_ElemChildren(DocumentXPathNavigator nav, string localNameAtom, string nsAtom) {} // 0x000000018994F770-0x000000018994F7BC
+		internal DocumentXPathNodeIterator_ElemChildren(DocumentXPathNodeIterator_ElemChildren other) {} // 0x000000018994F720-0x000000018994F770
+	
+		// Methods
+		public override XPathNodeIterator Clone() => default; // 0x000000018994F574-0x000000018994F5D4
+		protected override bool Match(XmlNode node) => default; // 0x000000018994F5D4-0x000000018994F624
+	}
+
+	internal sealed class DocumentXPathNodeIterator_ElemChildren_AndSelf : DocumentXPathNodeIterator_ElemChildren // TypeDefIndex: 42556
+	{
+		// Constructors
+		public DocumentXPathNodeIterator_ElemChildren_AndSelf() {} // Dummy constructor
+		internal DocumentXPathNodeIterator_ElemChildren_AndSelf(DocumentXPathNavigator nav, string localNameAtom, string nsAtom) {} // 0x000000018994F55C-0x000000018994F56C
+		internal DocumentXPathNodeIterator_ElemChildren_AndSelf(DocumentXPathNodeIterator_ElemChildren_AndSelf other) {} // 0x000000018994F56C-0x000000018994F574
+	
+		// Methods
+		public override XPathNodeIterator Clone() => default; // 0x000000018994F2DC-0x000000018994F33C
+		public override bool MoveNext() => default; // 0x000000018994F33C-0x000000018994F414
+	}
+
+	internal class DomNameTable // TypeDefIndex: 42557
+	{
+		// Fields
+		private XmlName[] entries; // 0x10
+		private int count; // 0x18
+		private int mask; // 0x1C
+		private XmlDocument ownerDocument; // 0x20
+		private XmlNameTable nameTable; // 0x28
+	
+		// Constructors
+		public DomNameTable() {} // Dummy constructor
+		public DomNameTable(XmlDocument document) {} // 0x000000018994FF6C-0x000000018994FFF8
+	
+		// Methods
+		public XmlName GetName(string prefix, string localName, string ns, IXmlSchemaInfo schemaInfo) => default; // 0x000000018994FD1C-0x000000018994FE64
+		public XmlName AddName(string prefix, string localName, string ns, IXmlSchemaInfo schemaInfo) => default; // 0x000000018994FAD8-0x000000018994FD1C
+		private void Grow() {} // 0x000000018994FE64-0x000000018994FF6C
+	}
+
+	internal class XPathNodeList : XmlNodeList // TypeDefIndex: 42558
+	{
+		// Fields
+		private List<XmlNode> list; // 0x10
+		private XPathNodeIterator nodeIterator; // 0x18
+		private bool done; // 0x20
+		private static readonly object[] nullparams; // 0x00
+	
+		// Properties
+		public override int Count { get => default; } // 0x0000000189950594-0x00000001899505E8 
+	
+		// Constructors
+		public XPathNodeList() {} // Dummy constructor
+		public XPathNodeList(XPathNodeIterator nodeIterator) {} // 0x0000000189950508-0x0000000189950594
+		static XPathNodeList() {} // 0x00000001899504A4-0x0000000189950508
+	
+		// Methods
+		private XmlNode GetNode(XPathNavigator n) => default; // 0x00000001899502B8-0x000000018995034C
+		internal int ReadUntil(int index) => default; // 0x00000001899503D8-0x00000001899504A4
+		public override XmlNode Item(int index) => default; // 0x000000018995034C-0x00000001899503D8
+		public override IEnumerator GetEnumerator() => default; // 0x0000000189950258-0x00000001899502B8
+	}
+
+	internal class XmlNodeListEnumerator : IEnumerator // TypeDefIndex: 42559
+	{
+		// Fields
+		private XPathNodeList list; // 0x10
+		private int index; // 0x18
+		private bool valid; // 0x1C
+	
+		// Properties
+		public object Current { get => default; } // 0x0000000189957500-0x0000000189957534 
+	
+		// Constructors
+		public XmlNodeListEnumerator() {} // Dummy constructor
+		public XmlNodeListEnumerator(XPathNodeList list) {} // 0x00000001899574D8-0x0000000189957500
+	
+		// Methods
+		public void Reset() {} // 0x0000000183D50330-0x0000000183D50340
+		public bool MoveNext() => default; // 0x0000000189957480-0x00000001899574D8
+	}
+
+	public class XmlAttribute : XmlNode // TypeDefIndex: 42560
+	{
+		// Fields
+		private XmlName name; // 0x18
+		private XmlLinkedNode lastChild; // 0x20
+	
+		// Properties
+		internal int LocalNameHash { get => default; } // 0x0000000185F98700-0x0000000185F9871C 
+		internal XmlName XmlName { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		public override XmlNode ParentNode { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public override string Name { get => default; } // 0x0000000189951E0C-0x0000000189951E2C 
+		public override string LocalName { get => default; } // 0x0000000186179578-0x0000000186179594 
+		public override string NamespaceURI { get => default; } // 0x0000000185F986E4-0x0000000185F98700 
+		public override string Prefix { get => default; set {} } // 0x00000001892E734C-0x00000001892E7368 0x00000001899520AC-0x0000000189952154
+		public override XmlNodeType NodeType { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		public override XmlDocument OwnerDocument { get => default; } // 0x0000000185F407B4-0x0000000185F407D0 
+		public override string Value { get => default; set {} } // 0x0000000189951E68-0x0000000189951E78 0x0000000189952154-0x0000000189952168
+		public override IXmlSchemaInfo SchemaInfo { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public override string InnerText { set {} } // 0x0000000189951FD8-0x0000000189952040
+		internal override bool IsContainer { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		internal override XmlLinkedNode LastNode { get => default; set {} } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+		public virtual bool Specified { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public virtual XmlElement OwnerElement { get => default; } // 0x0000000189951E2C-0x0000000189951E68 
+		public override string InnerXml { set {} } // 0x0000000189952040-0x00000001899520AC
+		public override string BaseURI { get => default; } // 0x0000000189951D68-0x0000000189951DDC 
+		internal override XmlSpace XmlSpace { get => default; } // 0x0000000189951F94-0x0000000189951FD8 
+		internal override string XmlLang { get => default; } // 0x0000000189951F20-0x0000000189951F94 
+		internal override XPathNodeType XPNodeType { get => default; } // 0x0000000189951F04-0x0000000189951F20 
+		internal override string XPLocalName { get => default; } // 0x0000000189951E78-0x0000000189951F04 
+		internal bool IsNamespace { get => default; } // 0x0000000189951DDC-0x0000000189951E0C 
+	
+		// Constructors
+		public XmlAttribute() {} // Dummy constructor
+		internal XmlAttribute(XmlName name, XmlDocument doc) {} // 0x0000000189951C54-0x0000000189951D68
+		protected internal XmlAttribute(string prefix, string localName, string namespaceURI, XmlDocument doc) {} // 0x0000000189951C0C-0x0000000189951C54
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x0000000189951778-0x0000000189951820
+		internal bool PrepareOwnerElementInElementIdAttrMap() => default; // 0x0000000189951940-0x00000001899519D0
+		internal void ResetOwnerElementInElementIdAttrMap(string oldInnerText) {} // 0x0000000189951AC0-0x0000000189951B28
+		internal override XmlNode AppendChildForLoad(XmlNode newChild, XmlDocument doc) => default; // 0x00000001899515A4-0x0000000189951700
+		internal override bool IsValidChildType(XmlNodeType type) => default; // 0x0000000189951930-0x0000000189951940
+		public override XmlNode InsertBefore(XmlNode newChild, XmlNode refChild) => default; // 0x00000001899518A8-0x0000000189951930
+		public override XmlNode InsertAfter(XmlNode newChild, XmlNode refChild) => default; // 0x0000000189951820-0x00000001899518A8
+		public override XmlNode RemoveChild(XmlNode oldChild) => default; // 0x0000000189951A48-0x0000000189951AC0
+		public override XmlNode PrependChild(XmlNode newChild) => default; // 0x00000001899519D0-0x0000000189951A48
+		public override XmlNode AppendChild(XmlNode newChild) => default; // 0x0000000189951700-0x0000000189951778
+		public override void WriteTo(XmlWriter w) {} // 0x0000000189951B70-0x0000000189951C0C
+		public override void WriteContentTo(XmlWriter w) {} // 0x0000000189951B28-0x0000000189951B70
+		internal override void SetParent(XmlNode node) {} // 0x000000018426FEE0-0x000000018426FEF0
+	}
+
+	public sealed class XmlAttributeCollection : XmlNamedNodeMap, ICollection // TypeDefIndex: 42561
+	{
+		// Properties
+		public XmlAttribute this[int i] { get => default; } // 0x00000001899513B0-0x00000001899514BC 
+		public XmlAttribute this[string name] { get => default; } // 0x00000001899514BC-0x00000001899515A4 
+		public XmlAttribute this[string localName, string namespaceURI] { get => default; } // 0x000000018995129C-0x00000001899513B0 
+		bool ICollection.IsSynchronized { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		object ICollection.SyncRoot { get => default; } // 0x000000018339AE90-0x000000018339AEA0 
+		int ICollection.Count { get => default; } // 0x0000000189951290-0x000000018995129C 
+	
+		// Constructors
+		public XmlAttributeCollection() {} // Dummy constructor
+		internal XmlAttributeCollection(XmlNode parent) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Methods
+		internal int FindNodeOffsetNS(XmlAttribute node) => default; // 0x00000001899507C8-0x0000000189950904
+		public override XmlNode SetNamedItem(XmlNode node) => default; // 0x00000001899510D4-0x000000018995120C
+		public XmlAttribute Append(XmlAttribute node) => default; // 0x0000000189950678-0x0000000189950784
+		public XmlAttribute Remove(XmlAttribute node) => default; // 0x0000000189950FB4-0x0000000189951034
+		public XmlAttribute RemoveAt(int i) => default; // 0x0000000189950C20-0x0000000189950C8C
+		public void RemoveAll() {} // 0x0000000189950BE4-0x0000000189950C20
+		void ICollection.CopyTo(Array array, int index) {} // 0x000000018995120C-0x0000000189951290
+		internal override XmlNode AddNode(XmlNode node) => default; // 0x00000001899505E8-0x0000000189950678
+		internal override XmlNode InsertNodeAt(int i, XmlNode node) => default; // 0x0000000189950904-0x000000018995097C
+		internal override XmlNode RemoveNodeAt(int i) => default; // 0x0000000189950D4C-0x0000000189950E80
+		internal void Detach(XmlAttribute attr) {} // 0x0000000189950784-0x00000001899507C8
+		internal void InsertParentIntoElementIdAttrMap(XmlAttribute attr) {} // 0x000000018995097C-0x0000000189950AB0
+		internal void RemoveParentFromElementIdAttrMap(XmlAttribute attr) {} // 0x0000000189950E80-0x0000000189950FB4
+		internal int RemoveDuplicateAttribute(XmlAttribute attr) => default; // 0x0000000189950C8C-0x0000000189950D4C
+		internal bool PrepareParentInElementIdAttrMap(string attrPrefix, string attrLocalName) => default; // 0x0000000189950B20-0x0000000189950BE4
+		internal void ResetParentInElementIdAttrMap(string oldVal, string newVal) {} // 0x0000000189951034-0x00000001899510D4
+		internal XmlAttribute InternalAppendAttribute(XmlAttribute node) => default; // 0x0000000189950AB0-0x0000000189950B20
+	}
+
+	public class XmlCDataSection : XmlCharacterData // TypeDefIndex: 42562
+	{
+		// Properties
+		public override string Name { get => default; } // 0x00000001899521E8-0x000000018995220C 
+		public override string LocalName { get => default; } // 0x00000001899521E8-0x000000018995220C 
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D50CD0-0x0000000183D50CE0 
+		public override XmlNode ParentNode { get => default; } // 0x000000018995220C-0x000000018995227C 
+		internal override XPathNodeType XPNodeType { get => default; } // 0x0000000183D50CD0-0x0000000183D50CE0 
+		internal override bool IsText { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public override XmlNode PreviousText { get => default; } // 0x000000018995227C-0x00000001899522B0 
+	
+		// Constructors
+		public XmlCDataSection() {} // Dummy constructor
+		protected internal XmlCDataSection(string data, XmlDocument doc) {} // 0x00000001899521E0-0x00000001899521E8
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x0000000189952168-0x00000001899521B0
+		public override void WriteTo(XmlWriter w) {} // 0x00000001899521B0-0x00000001899521E0
+		public override void WriteContentTo(XmlWriter w) {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public abstract class XmlCharacterData : XmlLinkedNode // TypeDefIndex: 42563
+	{
+		// Fields
+		private string data; // 0x20
+	
+		// Properties
+		public override string Value { get; set; } // 0x0000000189952410-0x0000000189952418 0x00000001899524B0-0x00000001899524B8
+		public override string InnerText { get; set; } // 0x0000000189952400-0x0000000189952410 0x000000018885CDA8-0x000000018885CDBC
+		public virtual string Data { get; set; } // 0x00000001899523B4-0x0000000189952400 0x0000000189952418-0x00000001899524B0
+	
+		// Constructors
+		protected XmlCharacterData() {} // Dummy constructor
+		protected internal XmlCharacterData(string data, XmlDocument doc) {} // 0x000000018995237C-0x00000001899523B4
+	
+		// Methods
+		internal bool CheckOnData(string data) => default; // 0x00000001899522B0-0x00000001899522DC
+		internal bool DecideXPNodeTypeForTextNodes(XmlNode node, ref XPathNodeType xnt) => default; // 0x00000001899522DC-0x000000018995237C
+	}
+
+	internal sealed class XmlChildEnumerator : IEnumerator // TypeDefIndex: 42564
+	{
+		// Fields
+		internal XmlNode container; // 0x10
+		internal XmlNode child; // 0x18
+		internal bool isFirst; // 0x20
+	
+		// Properties
+		object IEnumerator.Current { get => default; } // 0x0000000189952560-0x0000000189952568 
+		internal XmlNode Current { get => default; } // 0x00000001899525B0-0x0000000189952630 
+	
+		// Constructors
+		public XmlChildEnumerator() {} // Dummy constructor
+		internal XmlChildEnumerator(XmlNode container) {} // 0x0000000189952568-0x00000001899525B0
+	
+		// Methods
+		bool IEnumerator.MoveNext() => default; // 0x0000000189952520-0x0000000189952528
+		internal bool MoveNext() => default; // 0x00000001899524B8-0x0000000189952520
+		void IEnumerator.Reset() {} // 0x0000000189952528-0x0000000189952560
+	}
+
+	internal class XmlChildNodes : XmlNodeList // TypeDefIndex: 42565
+	{
+		// Fields
+		private XmlNode container; // 0x10
+	
+		// Properties
+		public override int Count { get => default; } // 0x0000000189952720-0x000000018995275C 
+	
+		// Constructors
+		public XmlChildNodes() {} // Dummy constructor
+		public XmlChildNodes(XmlNode container) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Methods
+		public override XmlNode Item(int i) => default; // 0x00000001899526D4-0x0000000189952720
+		public override IEnumerator GetEnumerator() => default; // 0x0000000189952630-0x00000001899526D4
+	}
+
+	public class XmlComment : XmlCharacterData // TypeDefIndex: 42566
+	{
+		// Properties
+		public override string Name { get => default; } // 0x00000001899527D4-0x00000001899527F8 
+		public override string LocalName { get => default; } // 0x00000001899527D4-0x00000001899527F8 
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D55800-0x0000000183D55810 
+		internal override XPathNodeType XPNodeType { get => default; } // 0x0000000183D55800-0x0000000183D55810 
+	
+		// Constructors
+		public XmlComment() {} // Dummy constructor
+		protected internal XmlComment(string comment, XmlDocument doc) {} // 0x00000001899521E0-0x00000001899521E8
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x000000018995275C-0x00000001899527A4
+		public override void WriteTo(XmlWriter w) {} // 0x00000001899527A4-0x00000001899527D4
+		public override void WriteContentTo(XmlWriter w) {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public class XmlDeclaration : XmlLinkedNode // TypeDefIndex: 42567
+	{
+		// Fields
+		private string version; // 0x20
+		private string encoding; // 0x28
+		private string standalone; // 0x30
+	
+		// Properties
+		public string Version { get => default; internal set {} } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+		public string Encoding { get => default; set {} } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000189952C60-0x0000000189952CC4
+		public string Standalone { get => default; set {} } // 0x0000000181003830-0x0000000181003840 0x0000000189952EE4-0x000000018995303C
+		public override string Value { get => default; set {} } // 0x0000000189951E68-0x0000000189951E78 0x0000000189952154-0x0000000189952168
+		public override string InnerText { get => default; set {} } // 0x0000000189952AE8-0x0000000189952C34 0x0000000189952CC4-0x0000000189952EE4
+		public override string Name { get => default; } // 0x0000000189952C34-0x0000000189952C60 
+		public override string LocalName { get => default; } // 0x00000001891CF528-0x00000001891CF538 
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D55F90-0x0000000183D55FA0 
+	
+		// Constructors
+		public XmlDeclaration() {} // Dummy constructor
+		protected internal XmlDeclaration(string version, string encoding, string standalone, XmlDocument doc) {} // 0x00000001899528FC-0x0000000189952AE8
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x00000001899527F8-0x0000000189952834
+		public override void WriteTo(XmlWriter w) {} // 0x000000018995289C-0x00000001899528FC
+		public override void WriteContentTo(XmlWriter w) {} // 0x000000018350B670-0x000000018350B680
+		private bool IsValidXmlVersion(string ver) => default; // 0x0000000189952834-0x000000018995289C
+	}
+
+	public class XmlDocument : XmlNode // TypeDefIndex: 42568
+	{
+		// Fields
+		private XmlImplementation implementation; // 0x18
+		private DomNameTable domNameTable; // 0x20
+		private XmlLinkedNode lastChild; // 0x28
+		private XmlNamedNodeMap entities; // 0x30
+		private Hashtable htElementIdMap; // 0x38
+		private Hashtable htElementIDAttrDecl; // 0x40
+		private SchemaInfo schemaInfo; // 0x48
+		private XmlSchemaSet schemas; // 0x50
+		private bool reportValidity; // 0x58
+		private bool actualLoadingStatus; // 0x59
+		private XmlNodeChangedEventHandler onNodeInsertingDelegate; // 0x60
+		private XmlNodeChangedEventHandler onNodeInsertedDelegate; // 0x68
+		private XmlNodeChangedEventHandler onNodeRemovingDelegate; // 0x70
+		private XmlNodeChangedEventHandler onNodeRemovedDelegate; // 0x78
+		private XmlNodeChangedEventHandler onNodeChangingDelegate; // 0x80
+		private XmlNodeChangedEventHandler onNodeChangedDelegate; // 0x88
+		internal bool fEntRefNodesPresent; // 0x90
+		internal bool fCDataNodesPresent; // 0x91
+		private bool preserveWhitespace; // 0x92
+		private bool isLoading; // 0x93
+		internal string strDocumentName; // 0x98
+		internal string strDocumentFragmentName; // 0xA0
+		internal string strCommentName; // 0xA8
+		internal string strTextName; // 0xB0
+		internal string strCDataSectionName; // 0xB8
+		internal string strEntityName; // 0xC0
+		internal string strID; // 0xC8
+		internal string strXmlns; // 0xD0
+		internal string strXml; // 0xD8
+		internal string strSpace; // 0xE0
+		internal string strLang; // 0xE8
+		internal string strEmpty; // 0xF0
+		internal string strNonSignificantWhitespaceName; // 0xF8
+		internal string strSignificantWhitespaceName; // 0x100
+		internal string strReservedXmlns; // 0x108
+		internal string strReservedXml; // 0x110
+		internal string baseURI; // 0x118
+		private XmlResolver resolver; // 0x120
+		internal bool bSetResolver; // 0x128
+		internal object objLock; // 0x130
+		private XmlAttribute namespaceXml; // 0x138
+		internal static EmptyEnumerator EmptyEnumerator; // 0x00
+		internal static IXmlSchemaInfo NotKnownSchemaInfo; // 0x08
+		internal static IXmlSchemaInfo ValidSchemaInfo; // 0x10
+		internal static IXmlSchemaInfo InvalidSchemaInfo; // 0x18
+	
+		// Properties
+		internal SchemaInfo DtdSchemaInfo { get => default; set {} } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D55810-0x0000000183D55820 
+		public override XmlNode ParentNode { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public virtual XmlDocumentType DocumentType { get => default; } // 0x0000000189956FCC-0x0000000189957018 
+		internal virtual XmlDeclaration Declaration { get => default; } // 0x0000000189956F24-0x0000000189956F80 
+		public XmlImplementation Implementation { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public override string Name { get => default; } // 0x00000001811AC510-0x00000001811AC520 
+		public override string LocalName { get => default; } // 0x00000001811AC510-0x00000001811AC520 
+		public XmlElement DocumentElement { get => default; } // 0x0000000189956F80-0x0000000189956FCC 
+		internal override bool IsContainer { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		internal override XmlLinkedNode LastNode { get => default; set {} } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+		public override XmlDocument OwnerDocument { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public XmlSchemaSet Schemas { set {} } // 0x0000000182C926C0-0x0000000182C926D0
+		internal bool CanReportValidity { get => default; } // 0x0000000183D4F7E0-0x0000000183D4F7F0 
+		internal bool HasSetResolver { get => default; } // 0x0000000183D57CA0-0x0000000183D57CB0 
+		public virtual XmlResolver XmlResolver { set {} } // 0x00000001899572F0-0x0000000189957480
+		public XmlNameTable NameTable { get => default; } // 0x00000001892E734C-0x00000001892E7368 
+		public override bool IsReadOnly { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		internal XmlNamedNodeMap Entities { get => default; set {} } // 0x0000000189957034-0x00000001899570A8 0x0000000184270470-0x0000000184270480
+		internal bool IsLoading { get => default; set {} } // 0x0000000183D75420-0x0000000183D75430 0x0000000183D75BF0-0x0000000183D75C00
+		internal bool ActualLoadingStatus { get => default; } // 0x0000000183D589D0-0x0000000183D589E0 
+		public override string InnerText { set {} } // 0x0000000189957284-0x00000001899572E8
+		public override string InnerXml { set {} } // 0x00000001899572E8-0x00000001899572F0
+		internal string Version { get => default; } // 0x0000000189957268-0x0000000189957284 
+		internal string Encoding { get => default; } // 0x0000000189957018-0x0000000189957034 
+		internal string Standalone { get => default; } // 0x000000018995724C-0x0000000189957268 
+		public override IXmlSchemaInfo SchemaInfo { get => default; } // 0x0000000189957184-0x000000018995724C 
+		public override string BaseURI { get => default; } // 0x0000000183D571F0-0x0000000183D57200 
+		internal override XPathNodeType XPNodeType { get => default; } // 0x0000000181002730-0x0000000181002740 
+		internal bool HasEntityReferences { get => default; } // 0x0000000183D58A70-0x0000000183D58A80 
+		internal XmlAttribute NamespaceXml { get => default; } // 0x00000001899570A8-0x0000000189957184 
+	
+		// Constructors
+		public XmlDocument() {} // 0x0000000189956A24-0x0000000189956A8C
+		public XmlDocument(XmlNameTable nt) {} // 0x0000000189956A8C-0x0000000189956B04
+		protected internal XmlDocument(XmlImplementation imp) {} // 0x0000000189956B04-0x0000000189956F24
+		static XmlDocument() {} // 0x00000001899568BC-0x0000000189956A24
+	
+		// Methods
+		internal static void CheckName(string name) {} // 0x0000000189953AB0-0x0000000189953B70
+		internal XmlName AddXmlName(string prefix, string localName, string namespaceURI, IXmlSchemaInfo schemaInfo) => default; // 0x00000001899535E8-0x0000000189953610
+		internal XmlName GetXmlName(string prefix, string localName, string namespaceURI, IXmlSchemaInfo schemaInfo) => default; // 0x00000001899553F4-0x000000018995541C
+		internal XmlName AddAttrXmlName(string prefix, string localName, string namespaceURI, IXmlSchemaInfo schemaInfo) => default; // 0x000000018995303C-0x000000018995316C
+		internal bool AddIdInfo(XmlName eleName, XmlName attrName) => default; // 0x0000000189953524-0x00000001899535E8
+		private XmlName GetIDInfoByElement_(XmlName eleName) => default; // 0x0000000189955188-0x0000000189955230
+		internal XmlName GetIDInfoByElement(XmlName eleName) => default; // 0x0000000189955230-0x000000018995524C
+		private WeakReference GetElement(ArrayList elementList, XmlElement elem) => default; // 0x0000000189954A9C-0x0000000189955004
+		internal void AddElementWithId(string id, XmlElement elem) {} // 0x000000018995335C-0x0000000189953524
+		internal void RemoveElementWithId(string id, XmlElement elem) {} // 0x00000001899563DC-0x00000001899564CC
+		public override XmlNode CloneNode(bool deep) => default; // 0x0000000189953B70-0x0000000189953BEC
+		internal XmlResolver GetResolver() => default; // 0x0000000183D56D50-0x0000000183D56D60
+		internal override bool IsValidChildType(XmlNodeType type) => default; // 0x0000000189955B04-0x0000000189955CA4
+		private bool HasNodeTypeInPrevSiblings(XmlNodeType nt, XmlNode refNode) => default; // 0x0000000189955468-0x00000001899554F8
+		private bool HasNodeTypeInNextSiblings(XmlNodeType nt, XmlNode refNode) => default; // 0x000000018995541C-0x0000000189955468
+		internal override bool CanInsertBefore(XmlNode newChild, XmlNode refChild) => default; // 0x0000000189953998-0x0000000189953AB0
+		internal override bool CanInsertAfter(XmlNode newChild, XmlNode refChild) => default; // 0x00000001899538CC-0x0000000189953998
+		public XmlAttribute CreateAttribute(string name) => default; // 0x0000000189953C8C-0x0000000189953D48
+		internal void SetDefaultNamespace(string prefix, string localName, ref string namespaceURI) {} // 0x0000000189956630-0x00000001899566D4
+		public virtual XmlCDataSection CreateCDataSection(string data) => default; // 0x0000000189953DE4-0x0000000189953E5C
+		public virtual XmlComment CreateComment(string data) => default; // 0x0000000189953E5C-0x0000000189953ECC
+		public virtual XmlDocumentType CreateDocumentType(string name, string publicId, string systemId, string internalSubset) => default; // 0x0000000189953FC4-0x0000000189954064
+		public virtual XmlDocumentFragment CreateDocumentFragment() => default; // 0x0000000189953F64-0x0000000189953FC4
+		public XmlElement CreateElement(string name) => default; // 0x0000000189954100-0x000000018995419C
+		internal void AddDefaultAttributes(XmlElement elem) {} // 0x000000018995316C-0x000000018995335C
+		private SchemaElementDecl GetSchemaElementDecl(XmlElement elem) => default; // 0x0000000189955304-0x00000001899553F4
+		private XmlAttribute PrepareDefaultAttribute(SchemaAttDef attdef, string attrPrefix, string attrLocalname, string attrNamespaceURI) => default; // 0x000000018995612C-0x00000001899561F8
+		public virtual XmlEntityReference CreateEntityReference(string name) => default; // 0x0000000189954258-0x00000001899542C8
+		public virtual XmlProcessingInstruction CreateProcessingInstruction(string target, string data) => default; // 0x0000000189954434-0x00000001899544B8
+		public virtual XmlDeclaration CreateXmlDeclaration(string version, string encoding, string standalone) => default; // 0x0000000189954608-0x00000001899546A0
+		public virtual XmlText CreateTextNode(string text) => default; // 0x0000000189954528-0x0000000189954598
+		public virtual XmlSignificantWhitespace CreateSignificantWhitespace(string text) => default; // 0x00000001899544B8-0x0000000189954528
+		public override XPathNavigator CreateNavigator() => default; // 0x0000000189954428-0x0000000189954434
+		protected internal virtual XPathNavigator CreateNavigator(XmlNode node) => default; // 0x00000001899542C8-0x0000000189954428
+		internal static bool IsTextNode(XmlNodeType nt) => default; // 0x0000000189955AEC-0x0000000189955B04
+		private XmlNode NormalizeText(XmlNode n) => default; // 0x0000000189955FD0-0x000000018995612C
+		public virtual XmlWhitespace CreateWhitespace(string text) => default; // 0x0000000189954598-0x0000000189954608
+		public XmlAttribute CreateAttribute(string qualifiedName, string namespaceURI) => default; // 0x0000000189953D48-0x0000000189953DE4
+		public XmlElement CreateElement(string qualifiedName, string namespaceURI) => default; // 0x0000000189954064-0x0000000189954100
+		public virtual XmlElement GetElementById(string elementId) => default; // 0x00000001899548A0-0x0000000189954A9C
+		private XmlNode ImportNodeInternal(XmlNode node, bool deep) => default; // 0x0000000189955680-0x0000000189955AEC
+		private void ImportAttributes(XmlNode fromElem, XmlNode toElem) {} // 0x00000001899554F8-0x00000001899555F8
+		private void ImportChildren(XmlNode fromNode, XmlNode toNode, bool deep) {} // 0x00000001899555F8-0x0000000189955680
+		public virtual XmlAttribute CreateAttribute(string prefix, string localName, string namespaceURI) => default; // 0x0000000189953BEC-0x0000000189953C8C
+		protected internal virtual XmlAttribute CreateDefaultAttribute(string prefix, string localName, string namespaceURI) => default; // 0x0000000189953ECC-0x0000000189953F64
+		public virtual XmlElement CreateElement(string prefix, string localName, string namespaceURI) => default; // 0x000000018995419C-0x0000000189954258
+		public virtual XmlNode ReadNode(XmlReader reader) => default; // 0x00000001899561F8-0x00000001899563DC
+		private XmlTextReader SetupReader(XmlTextReader tr) => default; // 0x00000001899566D4-0x0000000189956734
+		public virtual void Load(XmlReader reader) {} // 0x0000000189955DE0-0x0000000189955FD0
+		public virtual void LoadXml(string xml) {} // 0x0000000189955CA4-0x0000000189955DE0
+		public virtual void Save(XmlWriter w) {} // 0x00000001899564CC-0x0000000189956630
+		public override void WriteTo(XmlWriter w) {} // 0x00000001899568A8-0x00000001899568BC
+		public override void WriteContentTo(XmlWriter xw) {} // 0x0000000189956734-0x00000001899568A8
+		internal override XmlNodeChangedEventArgs GetEventArgs(XmlNode node, XmlNode oldParent, XmlNode newParent, string oldValue, string newValue, XmlNodeChangedAction action) => default; // 0x0000000189955090-0x0000000189955188
+		internal XmlNodeChangedEventArgs GetInsertEventArgsForLoad(XmlNode node, XmlNode newParent) => default; // 0x000000018995524C-0x0000000189955304
+		internal override void BeforeEvent(XmlNodeChangedEventArgs args) {} // 0x000000018995386C-0x00000001899538CC
+		internal override void AfterEvent(XmlNodeChangedEventArgs args) {} // 0x0000000189953610-0x0000000189953670
+		internal XmlAttribute GetDefaultAttribute(XmlElement elem, string attrPrefix, string attrLocalname, string attrNamespaceURI) => default; // 0x00000001899546A0-0x00000001899548A0
+		internal XmlEntity GetEntityNode(string name) => default; // 0x0000000189955004-0x0000000189955090
+		internal void SetBaseURI(string inBaseURI) {} // 0x0000000184275D08-0x0000000184275D1C
+		internal override XmlNode AppendChildForLoad(XmlNode newChild, XmlDocument doc) => default; // 0x0000000189953670-0x000000018995386C
+	}
+
+	public class XmlDocumentFragment : XmlNode // TypeDefIndex: 42569
+	{
+		// Fields
+		private XmlLinkedNode lastChild; // 0x18
+	
+		// Properties
+		public override string Name { get => default; } // 0x00000001899686F4-0x0000000189968718 
+		public override string LocalName { get => default; } // 0x00000001899686F4-0x0000000189968718 
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D557B0-0x0000000183D557C0 
+		public override XmlNode ParentNode { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public override XmlDocument OwnerDocument { get => default; } // 0x0000000189968718-0x0000000189968754 
+		public override string InnerXml { set {} } // 0x0000000189968754-0x00000001899687CC
+		internal override bool IsContainer { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		internal override XmlLinkedNode LastNode { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		internal override XPathNodeType XPNodeType { get => default; } // 0x0000000181002730-0x0000000181002740 
+	
+		// Constructors
+		public XmlDocumentFragment() {} // Dummy constructor
+		protected internal XmlDocumentFragment(XmlDocument ownerDocument) {} // 0x0000000189968674-0x00000001899686F4
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x0000000189968400-0x0000000189968478
+		internal override bool IsValidChildType(XmlNodeType type) => default; // 0x0000000189968478-0x0000000189968500
+		internal override bool CanInsertAfter(XmlNode newChild, XmlNode refChild) => default; // 0x0000000189968360-0x00000001899683B0
+		internal override bool CanInsertBefore(XmlNode newChild, XmlNode refChild) => default; // 0x00000001899683B0-0x0000000189968400
+		public override void WriteTo(XmlWriter w) {} // 0x00000001899568A8-0x00000001899568BC
+		public override void WriteContentTo(XmlWriter w) {} // 0x0000000189968500-0x0000000189968674
+	}
+
+	public class XmlDocumentType : XmlLinkedNode // TypeDefIndex: 42570
+	{
+		// Fields
+		private string name; // 0x20
+		private string publicId; // 0x28
+		private string systemId; // 0x30
+		private string internalSubset; // 0x38
+		private bool namespaces; // 0x40
+		private XmlNamedNodeMap entities; // 0x48
+		private XmlNamedNodeMap notations; // 0x50
+		private SchemaInfo schemaInfo; // 0x58
+	
+		// Properties
+		public override string Name { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public override string LocalName { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D55730-0x0000000183D55740 
+		public override bool IsReadOnly { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public XmlNamedNodeMap Entities { get => default; } // 0x000000018996893C-0x00000001899689B0 
+		public XmlNamedNodeMap Notations { get => default; } // 0x00000001899689B0-0x0000000189968A24 
+		public string PublicId { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		public string SystemId { get => default; } // 0x0000000181003830-0x0000000181003840 
+		public string InternalSubset { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		internal bool ParseWithNamespaces { get => default; } // 0x0000000183D4EE90-0x0000000183D4EEA0 
+		internal SchemaInfo DtdSchemaInfo { get => default; set {} } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x0000000183081D30-0x0000000183081D40
+	
+		// Constructors
+		public XmlDocumentType() {} // Dummy constructor
+		protected internal XmlDocumentType(string name, string publicId, string systemId, string internalSubset, XmlDocument doc) {} // 0x000000018996884C-0x000000018996893C
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x00000001899687CC-0x0000000189968814
+		public override void WriteTo(XmlWriter w) {} // 0x0000000189968814-0x000000018996884C
+		public override void WriteContentTo(XmlWriter w) {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public class XmlElement : XmlLinkedNode // TypeDefIndex: 42571
+	{
+		// Fields
+		private XmlName name; // 0x20
+		private XmlAttributeCollection attributes; // 0x28
+		private XmlLinkedNode lastChild; // 0x30
+	
+		// Properties
+		internal XmlName XmlName { get => default; set {} } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+		public override string Name { get => default; } // 0x0000000189969BD4-0x0000000189969BF4 
+		public override string LocalName { get => default; } // 0x0000000189969BB8-0x0000000189969BD4 
+		public override string NamespaceURI { get => default; } // 0x00000001895D9854-0x00000001895D9870 
+		public override string Prefix { get => default; set {} } // 0x000000018427431C-0x0000000184274338 0x0000000189969D8C-0x0000000189969E34
+		public override XmlNodeType NodeType { get => default; } // 0x0000000181168950-0x0000000181168960 
+		public override XmlNode ParentNode { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public override XmlDocument OwnerDocument { get => default; } // 0x0000000189969C20-0x0000000189969C3C 
+		internal override bool IsContainer { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public bool IsEmpty { get => default; set {} } // 0x0000000189969BA0-0x0000000189969BA8 0x0000000189969D4C-0x0000000189969D8C
+		internal override XmlLinkedNode LastNode { get => default; set {} } // 0x0000000189969BA8-0x0000000189969BB8 0x0000000184270470-0x0000000184270480
+		public override XmlAttributeCollection Attributes { get => default; } // 0x0000000189969920-0x0000000189969B70 
+		public virtual bool HasAttributes { get => default; } // 0x0000000189969B70-0x0000000189969B98 
+		public override IXmlSchemaInfo SchemaInfo { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public override string InnerXml { set {} } // 0x0000000189969CE4-0x0000000189969D4C
+		public override string InnerText { get => default; set {} } // 0x0000000189969B98-0x0000000189969BA0 0x0000000189969C4C-0x0000000189969CE4
+		public override XmlNode NextSibling { get => default; } // 0x0000000189969BF4-0x0000000189969C20 
+		internal override XPathNodeType XPNodeType { get => default; } // 0x0000000181168950-0x0000000181168960 
+		internal override string XPLocalName { get => default; } // 0x0000000189969C3C-0x0000000189969C4C 
+	
+		// Constructors
+		public XmlElement() {} // Dummy constructor
+		internal XmlElement(XmlName name, bool empty, XmlDocument doc) {} // 0x00000001899697E8-0x0000000189969920
+		protected internal XmlElement(string prefix, string localName, string namespaceURI, XmlDocument doc) {} // 0x000000018996979C-0x00000001899697E8
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x0000000189968B88-0x0000000189968EEC
+		internal override XmlNode AppendChildForLoad(XmlNode newChild, XmlDocument doc) => default; // 0x0000000189968A24-0x0000000189968B88
+		internal override bool IsValidChildType(XmlNodeType type) => default; // 0x0000000189969094-0x00000001899690E0
+		public virtual string GetAttribute(string name) => default; // 0x0000000189968F94-0x0000000189969000
+		public virtual void SetAttribute(string name, string value) {} // 0x00000001899692D4-0x0000000189969370
+		public virtual XmlAttribute GetAttributeNode(string name) => default; // 0x0000000189968EEC-0x0000000189968F38
+		public virtual XmlAttribute SetAttributeNode(XmlAttribute newAttr) => default; // 0x0000000189969200-0x00000001899692D4
+		public virtual string GetAttribute(string localName, string namespaceURI) => default; // 0x0000000189969000-0x000000018996907C
+		public virtual string SetAttribute(string localName, string namespaceURI, string value) => default; // 0x0000000189969370-0x0000000189969458
+		public virtual XmlAttribute GetAttributeNode(string localName, string namespaceURI) => default; // 0x0000000189968F38-0x0000000189968F94
+		public virtual XmlAttribute SetAttributeNode(string localName, string namespaceURI) => default; // 0x0000000189969140-0x0000000189969200
+		public virtual bool HasAttribute(string name) => default; // 0x000000018996907C-0x0000000189969094
+		public override void WriteTo(XmlWriter w) {} // 0x00000001899696C0-0x000000018996979C
+		private static void WriteElementTo(XmlWriter writer, XmlElement e) {} // 0x0000000189969458-0x00000001899695EC
+		private void WriteStartElement(XmlWriter w) {} // 0x00000001899695EC-0x00000001899696C0
+		public override void WriteContentTo(XmlWriter w) {} // 0x0000000189951B28-0x0000000189951B70
+		public virtual void RemoveAllAttributes() {} // 0x00000001899690E0-0x0000000189969118
+		public override void RemoveAll() {} // 0x0000000189969120-0x0000000189969140
+		internal void RemoveAllChildren() {} // 0x0000000189969118-0x0000000189969120
+		internal override void SetParent(XmlNode node) {} // 0x000000018426FEE0-0x000000018426FEF0
+	}
+
+	public class XmlEntity : XmlNode // TypeDefIndex: 42572
+	{
+		// Fields
+		private string publicId; // 0x18
+		private string systemId; // 0x20
+		private string notationName; // 0x28
+		private string name; // 0x30
+		private string unparsedReplacementStr; // 0x38
+		private string baseURI; // 0x40
+		private XmlLinkedNode lastChild; // 0x48
+		private bool childrenFoliating; // 0x50
+	
+		// Properties
+		public override bool IsReadOnly { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public override string Name { get => default; } // 0x0000000181003830-0x0000000181003840 
+		public override string LocalName { get => default; } // 0x0000000181003830-0x0000000181003840 
+		public override string InnerText { get => default; set {} } // 0x0000000189969B98-0x0000000189969BA0 0x000000018996A530-0x000000018996A594
+		internal override bool IsContainer { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		internal override XmlLinkedNode LastNode { get => default; set {} } // 0x000000018996A4C8-0x000000018996A530 0x0000000182692290-0x00000001826922A0
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D51110-0x0000000183D51120 
+		public string SystemId { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public override string InnerXml { set {} } // 0x000000018996A594-0x000000018996A5F8
+		public override string BaseURI { get => default; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
+	
+		// Constructors
+		public XmlEntity() {} // Dummy constructor
+		internal XmlEntity(string name, string strdata, string publicId, string systemId, string notationName, XmlDocument doc) {} // 0x000000018996A400-0x000000018996A4C8
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x000000018996A380-0x000000018996A3E4
+		internal override bool IsValidChildType(XmlNodeType type) => default; // 0x000000018996A3E4-0x000000018996A400
+		public override void WriteTo(XmlWriter w) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteContentTo(XmlWriter w) {} // 0x000000018350B670-0x000000018350B680
+		internal void SetBaseURI(string inBaseURI) {} // 0x0000000183CB2D80-0x0000000183CB2D90
+	}
+
+	public class XmlEntityReference : XmlLinkedNode // TypeDefIndex: 42573
+	{
+		// Fields
+		private string name; // 0x20
+		private XmlLinkedNode lastChild; // 0x28
+	
+		// Properties
+		public override string Name { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public override string LocalName { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public override string Value { get => default; set {} } // 0x0000000181002730-0x0000000181002740 0x000000018996A31C-0x000000018996A380
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D51100-0x0000000183D51110 
+		public override bool IsReadOnly { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		internal override bool IsContainer { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		internal override XmlLinkedNode LastNode { get => default; set {} } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+		public override string BaseURI { get => default; } // 0x000000018996A244-0x000000018996A26C 
+		internal string ChildBaseURI { get => default; } // 0x000000018996A26C-0x000000018996A31C 
+	
+		// Constructors
+		public XmlEntityReference() {} // Dummy constructor
+		protected internal XmlEntityReference(string name, XmlDocument doc) {} // 0x000000018996A150-0x000000018996A244
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x0000000189969E34-0x0000000189969E64
+		internal override void SetParent(XmlNode node) {} // 0x0000000189969F2C-0x0000000189969FB8
+		internal override void SetParentForLoad(XmlNode node) {} // 0x0000000189969F18-0x0000000189969F2C
+		internal override bool IsValidChildType(XmlNodeType type) => default; // 0x0000000189969094-0x00000001899690E0
+		public override void WriteTo(XmlWriter w) {} // 0x000000018996A12C-0x000000018996A150
+		public override void WriteContentTo(XmlWriter w) {} // 0x0000000189969FB8-0x000000018996A12C
+		private string ConstructBaseURI(string baseURI, string systemId) => default; // 0x0000000189969E64-0x0000000189969F18
+	}
+
+	public enum XmlNodeChangedAction // TypeDefIndex: 42574
+	{
+		Insert = 0,
+		Remove = 1,
+		Change = 2
+	}
+
+	public class XmlImplementation // TypeDefIndex: 42575
+	{
+		// Fields
+		private XmlNameTable nameTable; // 0x10
+	
+		// Properties
+		internal XmlNameTable NameTable { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+	
+		// Constructors
+		public XmlImplementation() {} // 0x000000018996A658-0x000000018996A6C0
+		public XmlImplementation(XmlNameTable nt) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Methods
+		public virtual XmlDocument CreateDocument() => default; // 0x000000018996A5F8-0x000000018996A658
+	}
+
+	public abstract class XmlLinkedNode : XmlNode // TypeDefIndex: 42576
+	{
+		// Fields
+		internal XmlLinkedNode next; // 0x18
+	
+		// Properties
+		public override XmlNode PreviousSibling { get; } // 0x000000018996A730-0x000000018996A788 
+		public override XmlNode NextSibling { get; } // 0x000000018996A6E8-0x000000018996A730 
+	
+		// Constructors
+		protected XmlLinkedNode() {} // Dummy constructor
+		internal XmlLinkedNode(XmlDocument doc) {} // 0x000000018996A6C0-0x000000018996A6E8
+	}
+
+	internal class XmlLoader // TypeDefIndex: 42577
+	{
+		// Fields
+		private XmlDocument doc; // 0x10
+		private XmlReader reader; // 0x18
+		private bool preserveWhitespace; // 0x20
+	
+		// Constructors
+		public XmlLoader() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal void Load(XmlDocument doc, XmlReader reader, bool preserveWhitespace) {} // 0x000000018996E158-0x000000018996E360
+		private void LoadDocSequence(XmlDocument parentDoc) {} // 0x000000018996C674-0x000000018996C6D4
+		internal XmlNode ReadCurrentNode(XmlDocument doc, XmlReader reader) => default; // 0x000000018996EB28-0x000000018996EC88
+		private XmlNode LoadNode(bool skipOverWhitespace) => default; // 0x000000018996DBF4-0x000000018996E158
+		private XmlAttribute LoadAttributeNode() => default; // 0x000000018996BE24-0x000000018996C0D4
+		private XmlAttribute LoadDefaultAttribute() => default; // 0x000000018996C514-0x000000018996C674
+		private void LoadAttributeValue(XmlNode parent, bool direct) {} // 0x000000018996C0D4-0x000000018996C384
+		private XmlEntityReference LoadEntityReferenceNode(bool direct) => default; // 0x000000018996D4BC-0x000000018996D68C
+		private XmlDeclaration LoadDeclarationNode() => default; // 0x000000018996C384-0x000000018996C514
+		private XmlDocumentType LoadDocumentTypeNode() => default; // 0x000000018996C6D4-0x000000018996C86C
+		private XmlNode LoadNodeDirect() => default; // 0x000000018996D728-0x000000018996DBF4
+		private XmlAttribute LoadAttributeNodeDirect() => default; // 0x000000018996BCAC-0x000000018996BE24
+		internal void ParseDocumentType(XmlDocumentType dtNode) {} // 0x000000018996E5C0-0x000000018996E61C
+		private void ParseDocumentType(XmlDocumentType dtNode, bool bUseResolver, XmlResolver resolver) {} // 0x000000018996E360-0x000000018996E5C0
+		private void LoadDocumentType(IDtdInfo dtdInfo, XmlDocumentType dtNode) {} // 0x000000018996C86C-0x000000018996D4BC
+		private XmlParserContext GetContext(XmlNode node) => default; // 0x000000018996B224-0x000000018996BCAC
+		internal XmlNamespaceManager ParsePartialContent(XmlNode parentNode, string innerxmltext, XmlNodeType nt) => default; // 0x000000018996E61C-0x000000018996E838
+		internal void LoadInnerXmlElement(XmlElement node, string innerxmltext) {} // 0x000000018996D6AC-0x000000018996D728
+		internal void LoadInnerXmlAttribute(XmlAttribute node, string innerxmltext) {} // 0x000000018996D68C-0x000000018996D6AC
+		private void RemoveDuplicateNamespace(XmlElement elem, XmlNamespaceManager mgr, bool fCheckElemAttrs) {} // 0x000000018996EC88-0x000000018996EEEC
+		private string EntitizeName(string name) => default; // 0x000000018996A978-0x000000018996A9C8
+		internal void ExpandEntity(XmlEntity ent) {} // 0x000000018996B1CC-0x000000018996B224
+		internal void ExpandEntityReference(XmlEntityReference eref) {} // 0x000000018996A9C8-0x000000018996B1CC
+		private XmlReader CreateInnerXmlReader(string xmlFragment, XmlNodeType nt, XmlParserContext context, XmlDocument doc) => default; // 0x000000018996A788-0x000000018996A978
+		internal static void ParseXmlDeclarationValue(string strValue, out string version, out string encoding, out string standalone) {
+			version = default;
+			encoding = default;
+			standalone = default;
+		} // 0x000000018996E838-0x000000018996EB28
+		internal static Exception UnexpectedNodeType(XmlNodeType nodetype) => default; // 0x000000018996EEEC-0x000000018996EFCC
+	}
+
+	internal class XmlName : IXmlSchemaInfo // TypeDefIndex: 42578
+	{
+		// Fields
+		private string prefix; // 0x10
+		private string localName; // 0x18
+		private string ns; // 0x20
+		private string name; // 0x28
+		private int hashCode; // 0x30
+		internal XmlDocument ownerDoc; // 0x38
+		internal XmlName next; // 0x40
+	
+		// Properties
+		public string LocalName { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public string NamespaceURI { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public string Prefix { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public int HashCode { get => default; } // 0x0000000183D4ED20-0x0000000183D4ED30 
+		public XmlDocument OwnerDocument { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		public string Name { get => default; } // 0x000000018996F4B8-0x000000018996F758 
+		public virtual XmlSchemaValidity Validity { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public virtual bool IsDefault { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		public virtual bool IsNil { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		public virtual XmlSchemaSimpleType MemberType { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public virtual XmlSchemaType SchemaType { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public virtual XmlSchemaElement SchemaElement { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public virtual XmlSchemaAttribute SchemaAttribute { get => default; } // 0x0000000181002730-0x0000000181002740 
+	
+		// Constructors
+		public XmlName() {} // Dummy constructor
+		internal XmlName(string prefix, string localName, string ns, int hashCode, XmlDocument ownerDoc, XmlName next) {} // 0x000000018996F448-0x000000018996F4B8
+	
+		// Methods
+		public static XmlName Create(string prefix, string localName, string ns, int hashCode, XmlDocument ownerDoc, XmlName next, IXmlSchemaInfo schemaInfo) => default; // 0x000000018996F2C4-0x000000018996F3DC
+		public virtual bool Equals(IXmlSchemaInfo schemaInfo) => default; // 0x0000000189298A44-0x0000000189298A4C
+		public static int GetHashCode(string name) => default; // 0x000000018996F3DC-0x000000018996F448
+	}
+
+	internal sealed class XmlNameEx : XmlName // TypeDefIndex: 42579
+	{
+		// Fields
+		private byte flags; // 0x48
+		private XmlSchemaSimpleType memberType; // 0x50
+		private XmlSchemaType schemaType; // 0x58
+		private object decl; // 0x60
+	
+		// Properties
+		public override XmlSchemaValidity Validity { get => default; } // 0x000000018996F298-0x000000018996F2C4 
+		public override bool IsDefault { get => default; } // 0x000000018996F210-0x000000018996F218 
+		public override bool IsNil { get => default; } // 0x000000018996F218-0x000000018996F220 
+		public override XmlSchemaSimpleType MemberType { get => default; } // 0x0000000183D4EAF0-0x0000000183D4EB00 
+		public override XmlSchemaType SchemaType { get => default; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 
+		public override XmlSchemaElement SchemaElement { get => default; } // 0x000000018996F25C-0x000000018996F298 
+		public override XmlSchemaAttribute SchemaAttribute { get => default; } // 0x000000018996F220-0x000000018996F25C 
+	
+		// Constructors
+		public XmlNameEx() {} // Dummy constructor
+		internal XmlNameEx(string prefix, string localName, string ns, int hashCode, XmlDocument ownerDoc, XmlName next, IXmlSchemaInfo schemaInfo) {} // 0x000000018996F114-0x000000018996F210
+	
+		// Methods
+		public void SetValidity(XmlSchemaValidity value) {} // 0x0000000183D75C10-0x0000000183D75C20
+		public void SetIsDefault(bool value) {} // 0x000000018996F0CC-0x000000018996F0F0
+		public void SetIsNil(bool value) {} // 0x000000018996F0F0-0x000000018996F114
+		public override bool Equals(IXmlSchemaInfo schemaInfo) => default; // 0x000000018996EFCC-0x000000018996F0CC
+	}
+
+	public class XmlNamedNodeMap : IEnumerable // TypeDefIndex: 42582
+	{
+		// Fields
+		internal XmlNode parent; // 0x10
+		internal SmallXmlNodeList nodes; // 0x18
+	
+		// Properties
+		public virtual int Count { get => default; } // 0x0000000189951290-0x000000018995129C 
+	
+		// Nested types
+		internal struct SmallXmlNodeList // TypeDefIndex: 42581
+		{
+			// Fields
+			private object field; // 0x00
+	
+			// Properties
+			public int Count { get => default; } // 0x00000001899681F0-0x0000000189968250 
+			public object this[int index] { get => default; } // 0x0000000189968250-0x0000000189968360 
+	
+			// Nested types
+			private class SingleObjectEnumerator : IEnumerator // TypeDefIndex: 42580
+			{
+				// Fields
+				private object loneValue; // 0x10
+				private int position; // 0x18
+	
+				// Properties
+				public object Current { get => default; } // 0x0000000189967CFC-0x0000000189967D58 
+	
+				// Constructors
+				public SingleObjectEnumerator() {} // Dummy constructor
+				public SingleObjectEnumerator(object value) {} // 0x00000001825CE600-0x00000001825CE620
+	
+				// Methods
+				public bool MoveNext() => default; // 0x0000000189967CE0-0x0000000189967CFC
+				public void Reset() {} // 0x0000000183D50330-0x0000000183D50340
+			}
+	
+			// Methods
+			public void Add(object value) {} // 0x0000000189967D58-0x0000000189967E4C
+			public void RemoveAt(int index) {} // 0x00000001899680D8-0x00000001899681F0
+			public void Insert(int index, object value) {} // 0x0000000189967F10-0x00000001899680D8
+			public IEnumerator GetEnumerator() => default; // 0x0000000189967E4C-0x0000000189967F10
+		}
+	
+		// Constructors
+		public XmlNamedNodeMap() {} // Dummy constructor
+		internal XmlNamedNodeMap(XmlNode parent) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Methods
+		public virtual XmlNode GetNamedItem(string name) => default; // 0x000000018996FADC-0x000000018996FB48
+		public virtual XmlNode SetNamedItem(XmlNode node) => default; // 0x000000018996FDF8-0x000000018996FE74
+		public virtual IEnumerator GetEnumerator() => default; // 0x000000018996FAD0-0x000000018996FADC
+		internal int FindNodeOffset(string name) => default; // 0x000000018996F938-0x000000018996F9EC
+		internal int FindNodeOffset(string localName, string namespaceURI) => default; // 0x000000018996F9EC-0x000000018996FAD0
+		internal virtual XmlNode AddNode(XmlNode node) => default; // 0x000000018996F7FC-0x000000018996F938
+		internal virtual XmlNode AddNodeForLoad(XmlNode node, XmlDocument doc) => default; // 0x000000018996F758-0x000000018996F7FC
+		internal virtual XmlNode RemoveNodeAt(int i) => default; // 0x000000018996FC90-0x000000018996FDA0
+		internal XmlNode ReplaceNodeAt(int i, XmlNode node) => default; // 0x000000018996FDA0-0x000000018996FDF8
+		internal virtual XmlNode InsertNodeAt(int i, XmlNode node) => default; // 0x000000018996FB48-0x000000018996FC90
+	}
+
+	[DebuggerDisplay("{debuggerDisplayProxy}")]
+	[DefaultMember("Item")]
+	public abstract class XmlNode : ICloneable, IEnumerable, IXPathNavigable // TypeDefIndex: 42583
+	{
+		// Fields
+		internal XmlNode parentNode; // 0x10
+	
+		// Properties
+		public abstract string Name { get; }
+		public virtual string Value { get; set; } // 0x0000000181002730-0x0000000181002740 0x00000001899761AC-0x0000000189976280
+		public abstract XmlNodeType NodeType { get; }
+		public virtual XmlNode ParentNode { get; } // 0x0000000189975D6C-0x0000000189975E04 
+		public virtual XmlNodeList ChildNodes { get; } // 0x0000000189975ADC-0x0000000189975B3C 
+		public virtual XmlNode PreviousSibling { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual XmlNode NextSibling { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual XmlAttributeCollection Attributes { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual XmlDocument OwnerDocument { get; } // 0x0000000189975D00-0x0000000189975D6C 
+		public virtual XmlNode FirstChild { get; } // 0x0000000189975B94-0x0000000189975BB0 
+		public virtual XmlNode LastChild { get; } // 0x0000000189975CC0-0x0000000189975CC8 
+		internal virtual bool IsContainer { get; } // 0x000000018115F4C0-0x000000018115F530 
+		internal virtual XmlLinkedNode LastNode { get; set; } // 0x0000000181002730-0x0000000181002740 0x000000018350B670-0x000000018350B680
+		public virtual bool HasChildNodes { get; } // 0x0000000189975BB0-0x0000000189975BC8 
+		public virtual string NamespaceURI { get; } // 0x0000000189975CC8-0x0000000189975D00 
+		public virtual string Prefix { get; set; } // 0x0000000189975E04-0x0000000189975E3C 0x000000018350B670-0x000000018350B680
+		public abstract string LocalName { get; }
+		public virtual bool IsReadOnly { get; } // 0x0000000189975CA0-0x0000000189975CC0 
+		public virtual string InnerText { get; set; } // 0x0000000189975BC8-0x0000000189975CA0 0x00000001899760A4-0x0000000189976148
+		public virtual string InnerXml { get; set; } // 0x0000000189976148-0x00000001899761AC
+		public virtual IXmlSchemaInfo SchemaInfo { get; } // 0x0000000189975E3C-0x0000000189975E8C 
+		public virtual string BaseURI { get; } // 0x0000000189975A10-0x0000000189975ADC 
+		internal XmlDocument Document { get; } // 0x0000000189975B3C-0x0000000189975B94 
+		internal virtual XmlSpace XmlSpace { get; } // 0x0000000189975F84-0x00000001899760A4 
+		internal virtual string XmlLang { get; } // 0x0000000189975EC4-0x0000000189975F84 
+		internal virtual XPathNodeType XPNodeType { get; } // 0x0000000183D5CD90-0x0000000183D5CDA0 
+		internal virtual string XPLocalName { get; } // 0x0000000189975E8C-0x0000000189975EC4 
+		internal virtual bool IsText { get; } // 0x000000018115F4C0-0x000000018115F530 
+		public virtual XmlNode PreviousText { get; } // 0x0000000181002730-0x0000000181002740 
+	
+		// Constructors
+		internal XmlNode() {} // 0x000000018350B670-0x000000018350B680
+		internal XmlNode(XmlDocument doc) {} // 0x0000000189975990-0x0000000189975A10
+	
+		// Methods
+		public virtual XPathNavigator CreateNavigator() => default; // 0x000000018997420C-0x000000018997426C
+		public XmlNode SelectSingleNode(string xpath) => default; // 0x00000001899757C4-0x00000001899757EC
+		public XmlNodeList SelectNodes(string xpath) => default; // 0x000000018997573C-0x00000001899757C4
+		internal bool AncestorNode(XmlNode node) => default; // 0x0000000189973A48-0x0000000189973A8C
+		internal bool IsConnected() => default; // 0x0000000189975358-0x0000000189975398
+		public virtual XmlNode InsertBefore(XmlNode newChild, XmlNode refChild) => default; // 0x0000000189974D94-0x0000000189975358
+		public virtual XmlNode InsertAfter(XmlNode newChild, XmlNode refChild) => default; // 0x00000001899747C4-0x0000000189974D94
+		public virtual XmlNode RemoveChild(XmlNode oldChild) => default; // 0x0000000189975428-0x000000018997573C
+		public virtual XmlNode PrependChild(XmlNode newChild) => default; // 0x0000000189975398-0x00000001899753CC
+		public virtual XmlNode AppendChild(XmlNode newChild) => default; // 0x0000000189973CB4-0x000000018997415C
+		internal virtual XmlNode AppendChildForLoad(XmlNode newChild, XmlDocument doc) => default; // 0x0000000189973A8C-0x0000000189973BE8
+		internal virtual bool IsValidChildType(XmlNodeType type) => default; // 0x000000018115F4C0-0x000000018115F530
+		internal virtual bool CanInsertBefore(XmlNode newChild, XmlNode refChild) => default; // 0x000000018232EB60-0x000000018232EB70
+		internal virtual bool CanInsertAfter(XmlNode newChild, XmlNode refChild) => default; // 0x000000018232EB60-0x000000018232EB70
+		public abstract XmlNode CloneNode(bool deep);
+		internal virtual void CopyChildren(XmlDocument doc, XmlNode container, bool deep) {} // 0x0000000189974194-0x000000018997420C
+		internal static bool HasReadOnlyParent(XmlNode n) => default; // 0x000000018997472C-0x00000001899747C4
+		object ICloneable.Clone() => default; // 0x000000018997594C-0x0000000189975958
+		IEnumerator IEnumerable.GetEnumerator() => default; // 0x00000001899758EC-0x000000018997594C
+		public IEnumerator GetEnumerator() => default; // 0x00000001899742BC-0x000000018997431C
+		private void AppendChildText(StringBuilder builder) {} // 0x0000000189973BE8-0x0000000189973CB4
+		public abstract void WriteTo(XmlWriter w);
+		public abstract void WriteContentTo(XmlWriter w);
+		public virtual void RemoveAll() {} // 0x00000001899753CC-0x0000000189975428
+		public virtual string GetPrefixOfNamespace(string namespaceURI) => default; // 0x00000001899746D0-0x000000018997472C
+		internal string GetPrefixOfNamespaceStrict(string namespaceURI) => default; // 0x0000000189974428-0x00000001899746D0
+		internal virtual void SetParent(XmlNode node) {} // 0x00000001899757EC-0x0000000189975818
+		internal virtual void SetParentForLoad(XmlNode node) {} // 0x000000018426FEE0-0x000000018426FEF0
+		internal static void SplitName(string name, out string prefix, out string localName) {
+			prefix = default;
+			localName = default;
+		} // 0x0000000189975818-0x00000001899758EC
+		internal virtual XmlNode FindChild(XmlNodeType type) => default; // 0x000000018997426C-0x00000001899742BC
+		internal virtual XmlNodeChangedEventArgs GetEventArgs(XmlNode node, XmlNode oldParent, XmlNode newParent, string oldValue, string newValue, XmlNodeChangedAction action) => default; // 0x000000018997431C-0x0000000189974428
+		internal virtual void BeforeEvent(XmlNodeChangedEventArgs args) {} // 0x000000018997415C-0x0000000189974194
+		internal virtual void AfterEvent(XmlNodeChangedEventArgs args) {} // 0x0000000189973A10-0x0000000189973A48
+		internal static void NestTextNodes(XmlNode prevNode, XmlNode nextNode) {} // 0x000000018592CE68-0x000000018592CE88
+		internal static void UnnestTextNodes(XmlNode prevNode, XmlNode nextNode) {} // 0x0000000189975958-0x0000000189975990
+	}
+
+	public class XmlNodeChangedEventArgs : EventArgs // TypeDefIndex: 42584
+	{
+		// Fields
+		private XmlNodeChangedAction action; // 0x10
+		private XmlNode node; // 0x18
+		private XmlNode oldParent; // 0x20
+		private XmlNode newParent; // 0x28
+		private string oldValue; // 0x30
+		private string newValue; // 0x38
+	
+		// Properties
+		public XmlNodeChangedAction Action { get => default; } // 0x0000000183D4E340-0x0000000183D4E350 
+	
+		// Constructors
+		public XmlNodeChangedEventArgs() {} // Dummy constructor
+		public XmlNodeChangedEventArgs(XmlNode node, XmlNode oldParent, XmlNode newParent, string oldValue, string newValue, XmlNodeChangedAction action) {} // 0x000000018996FE74-0x000000018996FF24
+	}
+
+	public delegate void XmlNodeChangedEventHandler(object sender, XmlNodeChangedEventArgs e); // TypeDefIndex: 42585; 0x0000000182065C10-0x0000000182065C20
+
+	public abstract class XmlNodeList : IEnumerable, IDisposable // TypeDefIndex: 42586
+	{
+		// Properties
+		public abstract int Count { get; }
+		public virtual XmlNode this[int i] { get => default; } // 0x000000018996FF24-0x000000018996FF38 
+	
+		// Constructors
+		protected XmlNodeList() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public abstract XmlNode Item(int index);
+		public abstract IEnumerator GetEnumerator();
+		void IDisposable.Dispose() {} // 0x000000018350B670-0x000000018350B680
+		protected virtual void PrivateDisposeNodeList() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	internal class XmlNodeReaderNavigator // TypeDefIndex: 42588
+	{
+		// Fields
+		private XmlNode curNode; // 0x10
+		private XmlNode elemNode; // 0x18
+		private XmlNode logNode; // 0x20
+		private int attrIndex; // 0x28
+		private int logAttrIndex; // 0x2C
+		private XmlNameTable nameTable; // 0x30
+		private XmlDocument doc; // 0x38
+		private int nAttrInd; // 0x40
+		private int nDeclarationAttrCount; // 0x44
+		private int nDocTypeAttrCount; // 0x48
+		private int nLogLevel; // 0x4C
+		private int nLogAttrInd; // 0x50
+		private bool bLogOnAttrVal; // 0x54
+		private bool bCreatedOnAttribute; // 0x55
+		internal VirtualAttribute[] decNodeAttributes; // 0x58
+		internal VirtualAttribute[] docTypeNodeAttributes; // 0x60
+		private bool bOnAttrVal; // 0x68
+	
+		// Properties
+		public XmlNodeType NodeType { get => default; } // 0x0000000189972670-0x00000001899726AC 
+		public string NamespaceURI { get => default; } // 0x00000001892EFB24-0x00000001892EFB48 
+		public string Name { get => default; } // 0x00000001899725B4-0x0000000189972670 
+		public string LocalName { get => default; } // 0x0000000189972520-0x00000001899725B4 
+		internal bool CreatedOnAttribute { get => default; } // 0x0000000183D4F310-0x0000000183D4F320 
+		public string Prefix { get => default; } // 0x00000001899726AC-0x00000001899726D0 
+		public bool HasValue { get => default; } // 0x000000018997239C-0x00000001899723EC 
+		public string Value { get => default; } // 0x00000001899726F4-0x0000000189972918 
+		public string BaseURI { get => default; } // 0x00000001897D4D3C-0x00000001897D4D60 
+		public XmlSpace XmlSpace { get => default; } // 0x000000018997293C-0x0000000189972960 
+		public string XmlLang { get => default; } // 0x0000000189972918-0x000000018997293C 
+		public bool IsEmptyElement { get => default; } // 0x0000000189972470-0x00000001899724EC 
+		public bool IsDefault { get => default; } // 0x00000001899723EC-0x0000000189972470 
+		public IXmlSchemaInfo SchemaInfo { get => default; } // 0x00000001899726D0-0x00000001899726F4 
+		public XmlNameTable NameTable { get => default; } // 0x0000000181003830-0x0000000181003840 
+		public int AttributeCount { get => default; } // 0x00000001899722B0-0x000000018997239C 
+		private bool IsOnDeclOrDocType { get => default; } // 0x00000001899724EC-0x0000000189972520 
+		public XmlDocument Document { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+	
+		// Nested types
+		internal struct VirtualAttribute // TypeDefIndex: 42587
+		{
+			// Fields
+			internal string name; // 0x00
+			internal string value; // 0x08
+	
+			// Constructors
+			internal VirtualAttribute(string name, string value) {
+				this.name = default;
+				this.value = default;
+			} // 0x00000001832C7BF0-0x00000001832C7C20
+		}
+	
+		// Constructors
+		public XmlNodeReaderNavigator() {} // Dummy constructor
+		public XmlNodeReaderNavigator(XmlNode node) {} // 0x0000000189972018-0x00000001899722B0
+	
+		// Methods
+		private bool IsLocalNameEmpty(XmlNodeType nt) => default; // 0x0000000189970F30-0x0000000189970F8C
+		private void CheckIndexCondition(int attributeIndex) {} // 0x000000018996FF38-0x000000018996FFAC
+		private void InitDecAttr() {} // 0x0000000189970BCC-0x0000000189970DCC
+		public string GetDeclarationAttr(XmlDeclaration decl, string name) => default; // 0x00000001899705AC-0x0000000189970668
+		public string GetDeclarationAttr(int i) => default; // 0x0000000189970568-0x00000001899705AC
+		public int GetDecAttrInd(string name) => default; // 0x00000001899704F8-0x0000000189970568
+		private void InitDocTypeAttr() {} // 0x0000000189970DCC-0x0000000189970F30
+		public string GetDocumentTypeAttr(XmlDocumentType docType, string name) => default; // 0x000000018997071C-0x00000001899707AC
+		public string GetDocumentTypeAttr(int i) => default; // 0x00000001899706D8-0x000000018997071C
+		public int GetDocTypeAttrInd(string name) => default; // 0x0000000189970668-0x00000001899706D8
+		private string GetAttributeFromElement(XmlElement elem, string name) => default; // 0x0000000189970100-0x0000000189970140
+		public string GetAttribute(string name) => default; // 0x0000000189970140-0x000000018997023C
+		private string GetAttributeFromElement(XmlElement elem, string name, string ns) => default; // 0x00000001899700BC-0x0000000189970100
+		public string GetAttribute(string name, string ns) => default; // 0x000000018997023C-0x0000000189970370
+		public string GetAttribute(int attributeIndex) => default; // 0x0000000189970370-0x00000001899704F8
+		public void LogMove(int level) {} // 0x0000000189970F8C-0x0000000189970FCC
+		public void RollBackMove(ref int level) {} // 0x0000000189971FD8-0x0000000189972018
+		public void ResetToAttribute(ref int level) {} // 0x0000000189971F48-0x0000000189971FD8
+		public void ResetMove(ref int level, ref XmlNodeType nt) {} // 0x0000000189971D74-0x0000000189971F48
+		public bool MoveToAttribute(string name) => default; // 0x0000000189971854-0x00000001899718AC
+		private bool MoveToAttributeFromElement(XmlElement elem, string name, string ns) => default; // 0x0000000189971538-0x00000001899715E8
+		public bool MoveToAttribute(string name, string namespaceURI) => default; // 0x0000000189971760-0x0000000189971854
+		public void MoveToAttribute(int attributeIndex) {} // 0x00000001899715E8-0x0000000189971760
+		public bool MoveToNextAttribute(ref int level) => default; // 0x0000000189971960-0x0000000189971AE0
+		public bool MoveToParent() => default; // 0x0000000189971B68-0x0000000189971BB0
+		public bool MoveToFirstChild() => default; // 0x0000000189971918-0x0000000189971960
+		private bool MoveToNextSibling(XmlNode node) => default; // 0x0000000189971AE0-0x0000000189971B24
+		public bool MoveToNext() => default; // 0x0000000189971B24-0x0000000189971B68
+		public bool MoveToElement() => default; // 0x00000001899718AC-0x0000000189971918
+		public string LookupNamespace(string prefix) => default; // 0x0000000189970FCC-0x00000001899711FC
+		internal string DefaultLookupNamespace(string prefix) => default; // 0x000000018996FFAC-0x00000001899700BC
+		internal string LookupPrefix(string namespaceName) => default; // 0x00000001899711FC-0x0000000189971538
+		internal IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x00000001899707AC-0x0000000189970BCC
+		public bool ReadAttributeValue(ref int level, ref bool bResolveEntity, ref XmlNodeType nt) => default; // 0x0000000189971BB0-0x0000000189971D74
+	}
+
+	public class XmlNodeReader : XmlReader, IXmlNamespaceResolver // TypeDefIndex: 42589
+	{
+		// Fields
+		private XmlNodeReaderNavigator readerNav; // 0x10
+		private XmlNodeType nodeType; // 0x18
+		private int curDepth; // 0x1C
+		private System.Xml.ReadState readState; // 0x20
+		private bool fEOF; // 0x24
+		private bool bResolveEntity; // 0x25
+		private bool bStartFromDocument; // 0x26
+		private bool bInReadBinary; // 0x27
+		private ReadContentAsBinaryHelper readBinaryHelper; // 0x28
+	
+		// Properties
+		public override XmlNodeType NodeType { get => default; } // 0x0000000189973888-0x0000000189973898 
+		public override string Name { get => default; } // 0x00000001899737C8-0x0000000189973828 
+		public override string LocalName { get => default; } // 0x0000000189973768-0x00000001899737C8 
+		public override string NamespaceURI { get => default; } // 0x0000000189973828-0x0000000189973888 
+		public override string Prefix { get => default; } // 0x0000000189973898-0x00000001899738F8 
+		public override bool HasValue { get => default; } // 0x00000001899736E4-0x0000000189973710 
+		public override string Value { get => default; } // 0x0000000189973924-0x0000000189973984 
+		public override int Depth { get => default; } // 0x0000000183D4EBB0-0x0000000183D4EBC0 
+		public override string BaseURI { get => default; } // 0x000000018997368C-0x00000001899736AC 
+		public override bool CanResolveEntity { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public override bool IsEmptyElement { get => default; } // 0x000000018997373C-0x0000000189973768 
+		public override bool IsDefault { get => default; } // 0x0000000189973710-0x000000018997373C 
+		public override XmlSpace XmlSpace { get => default; } // 0x00000001899739E4-0x0000000189973A10 
+		public override string XmlLang { get => default; } // 0x0000000189973984-0x00000001899739E4 
+		public override IXmlSchemaInfo SchemaInfo { get => default; } // 0x00000001899738F8-0x0000000189973924 
+		public override int AttributeCount { get => default; } // 0x0000000189973658-0x000000018997368C 
+		public override bool EOF { get => default; } // 0x00000001899736D4-0x00000001899736E4 
+		public override System.Xml.ReadState ReadState { get => default; } // 0x0000000181003B50-0x0000000181003B60 
+		public override bool HasAttributes { get => default; } // 0x0000000189939ED8-0x0000000189939EF4 
+		public override XmlNameTable NameTable { get => default; } // 0x00000001856B1D0C-0x00000001856B1D28 
+		internal override IDtdInfo DtdInfo { get => default; } // 0x00000001899736AC-0x00000001899736D4 
+	
+		// Constructors
+		public XmlNodeReader() {} // Dummy constructor
+		public XmlNodeReader(XmlNode node) {} // 0x0000000189973560-0x0000000189973658
+	
+		// Methods
+		internal bool IsInReadingStates() => default; // 0x000000018278BF00-0x000000018278BF10
+		public override string GetAttribute(string name) => default; // 0x00000001899729FC-0x0000000189972A28
+		public override string GetAttribute(string name, string namespaceURI) => default; // 0x0000000189972A28-0x0000000189972AAC
+		public override string GetAttribute(int attributeIndex) => default; // 0x0000000189972984-0x00000001899729FC
+		public override bool MoveToAttribute(string name) => default; // 0x0000000189972CA8-0x0000000189972D40
+		public override void MoveToAttribute(int attributeIndex) {} // 0x0000000189972AE0-0x0000000189972CA8
+		public override bool MoveToFirstAttribute() => default; // 0x0000000189972DD8-0x0000000189972E70
+		public override bool MoveToNextAttribute() => default; // 0x0000000189972E70-0x0000000189972F10
+		public override bool MoveToElement() => default; // 0x0000000189972D40-0x0000000189972DD8
+		public override bool Read() => default; // 0x0000000189973324-0x0000000189973330
+		private bool Read(bool fSkipChildren) => default; // 0x0000000189973330-0x0000000189973434
+		private bool ReadNextNode(bool fSkipChildren) => default; // 0x00000001899730CC-0x0000000189973284
+		private void SetEndOfFile() {} // 0x0000000183D75C30-0x0000000183D75C50
+		private bool ReadAtZeroLevel(bool fSkipChildren) => default; // 0x0000000189972F3C-0x0000000189972FA0
+		private bool ReadForward(bool fSkipChildren) => default; // 0x0000000189972FEC-0x00000001899730CC
+		private void ReSetReadingMarks() {} // 0x0000000189972F10-0x0000000189972F3C
+		public override void Close() {} // 0x0000000183D75C20-0x0000000183D75C30
+		public override void Skip() {} // 0x00000001899734B0-0x00000001899734BC
+		public override string ReadString() => default; // 0x0000000189973284-0x0000000189973324
+		public override string LookupNamespace(string prefix) => default; // 0x0000000189972AAC-0x0000000189972AE0
+		public override void ResolveEntity() {} // 0x0000000189973434-0x00000001899734B0
+		public override bool ReadAttributeValue() => default; // 0x0000000189972FA0-0x0000000189972FEC
+		private void FinishReadBinary() {} // 0x0000000189972960-0x0000000189972984
+		IDictionary<string, string> IXmlNamespaceResolver.GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x00000001899734BC-0x00000001899734DC
+		string IXmlNamespaceResolver.LookupPrefix(string namespaceName) => default; // 0x0000000189973540-0x0000000189973560
+		string IXmlNamespaceResolver.LookupNamespace(string prefix) => default; // 0x00000001899734DC-0x0000000189973540
+	}
+
+	public class XmlNotation : XmlNode // TypeDefIndex: 42590
+	{
+		// Fields
+		private string publicId; // 0x18
+		private string systemId; // 0x20
+		private string name; // 0x28
+	
+		// Properties
+		public override string Name { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		public override string LocalName { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D557A0-0x0000000183D557B0 
+		public override bool IsReadOnly { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public override string InnerXml { set {} } // 0x0000000189976380-0x00000001899763E4
+	
+		// Constructors
+		public XmlNotation() {} // Dummy constructor
+		internal XmlNotation(string name, string publicId, string systemId, XmlDocument doc) {} // 0x00000001899762E4-0x0000000189976380
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x0000000189976280-0x00000001899762E4
+		public override void WriteTo(XmlWriter w) {} // 0x000000018350B670-0x000000018350B680
+		public override void WriteContentTo(XmlWriter w) {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public class XmlProcessingInstruction : XmlLinkedNode // TypeDefIndex: 42591
+	{
+		// Fields
+		private string target; // 0x20
+		private string data; // 0x28
+	
+		// Properties
+		public override string Name { get => default; } // 0x000000018997648C-0x00000001899764D8 
+		public override string LocalName { get => default; } // 0x00000001891CF528-0x00000001891CF538 
+		public override string Value { get => default; set {} } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000189976570-0x0000000189976578
+		public string Data { set {} } // 0x00000001899764D8-0x0000000189976570
+		public override string InnerText { get => default; set {} } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000189976570-0x0000000189976578
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D55AA0-0x0000000183D55AB0 
+		internal override string XPLocalName { get => default; } // 0x00000001891CF528-0x00000001891CF538 
+		internal override XPathNodeType XPNodeType { get => default; } // 0x0000000183D55AA0-0x0000000183D55AB0 
+	
+		// Constructors
+		public XmlProcessingInstruction() {} // Dummy constructor
+		protected internal XmlProcessingInstruction(string target, string data, XmlDocument doc) {} // 0x0000000189976440-0x000000018997648C
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x00000001899763E4-0x0000000189976418
+		public override void WriteTo(XmlWriter w) {} // 0x0000000189976418-0x0000000189976440
+		public override void WriteContentTo(XmlWriter w) {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public class XmlSignificantWhitespace : XmlCharacterData // TypeDefIndex: 42592
+	{
+		// Properties
+		public override string Name { get => default; } // 0x0000000189976698-0x00000001899766BC 
+		public override string LocalName { get => default; } // 0x0000000189976698-0x00000001899766BC 
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D55AC0-0x0000000183D55AD0 
+		public override XmlNode ParentNode { get => default; } // 0x00000001899766BC-0x0000000189976738 
+		public override string Value { get => default; set {} } // 0x0000000189952410-0x0000000189952418 0x0000000189976760-0x00000001899767EC
+		internal override XPathNodeType XPNodeType { get => default; } // 0x0000000189976738-0x0000000189976760 
+		internal override bool IsText { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public override XmlNode PreviousText { get => default; } // 0x000000018995227C-0x00000001899522B0 
+	
+		// Constructors
+		public XmlSignificantWhitespace() {} // Dummy constructor
+		protected internal XmlSignificantWhitespace(string strData, XmlDocument doc) {} // 0x00000001899765F0-0x0000000189976698
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x0000000189976578-0x00000001899765C0
+		public override void WriteTo(XmlWriter w) {} // 0x00000001899765C0-0x00000001899765F0
+		public override void WriteContentTo(XmlWriter w) {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public class XmlText : XmlCharacterData // TypeDefIndex: 42593
+	{
+		// Properties
+		public override string Name { get => default; } // 0x0000000189976840-0x0000000189976864 
+		public override string LocalName { get => default; } // 0x0000000189976840-0x0000000189976864 
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D555E0-0x0000000183D555F0 
+		public override XmlNode ParentNode { get => default; } // 0x000000018995220C-0x000000018995227C 
+		public override string Value { get => default; set {} } // 0x0000000189952410-0x0000000189952418 0x0000000189976864-0x00000001899768F0
+		internal override XPathNodeType XPNodeType { get => default; } // 0x0000000183D50CD0-0x0000000183D50CE0 
+		internal override bool IsText { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public override XmlNode PreviousText { get => default; } // 0x000000018995227C-0x00000001899522B0 
+	
+		// Constructors
+		public XmlText() {} // Dummy constructor
+		internal XmlText(string strData) {} // 0x0000000189976834-0x0000000189976840
+		protected internal XmlText(string strData, XmlDocument doc) {} // 0x00000001899521E0-0x00000001899521E8
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x00000001899767EC-0x0000000189976834
+		public override void WriteTo(XmlWriter w) {} // 0x00000001899765C0-0x00000001899765F0
+		public override void WriteContentTo(XmlWriter w) {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	internal class XmlUnspecifiedAttribute : XmlAttribute // TypeDefIndex: 42594
+	{
+		// Fields
+		private bool fSpecified; // 0x28
+	
+		// Properties
+		public override bool Specified { get => default; } // 0x0000000183D4ED50-0x0000000183D4ED60 
+		public override string InnerText { set {} } // 0x0000000189976A58-0x0000000189976A74
+	
+		// Constructors
+		public XmlUnspecifiedAttribute() {} // Dummy constructor
+		protected internal XmlUnspecifiedAttribute(string prefix, string localName, string namespaceURI, XmlDocument doc) {} // 0x0000000189976A48-0x0000000189976A58
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x000000018997690C-0x00000001899769E4
+		public override XmlNode InsertBefore(XmlNode newChild, XmlNode refChild) => default; // 0x0000000189976A00-0x0000000189976A1C
+		public override XmlNode InsertAfter(XmlNode newChild, XmlNode refChild) => default; // 0x00000001899769E4-0x0000000189976A00
+		public override XmlNode RemoveChild(XmlNode oldChild) => default; // 0x0000000189976A1C-0x0000000189976A38
+		public override XmlNode AppendChild(XmlNode newChild) => default; // 0x00000001899768F0-0x000000018997690C
+		public override void WriteTo(XmlWriter w) {} // 0x0000000189976A38-0x0000000189976A48
+		internal void SetSpecified(bool f) {} // 0x0000000183D4ED60-0x0000000183D4ED70
+	}
+
+	public class XmlWhitespace : XmlCharacterData // TypeDefIndex: 42595
+	{
+		// Properties
+		public override string Name { get => default; } // 0x0000000189976B94-0x0000000189976BB8 
+		public override string LocalName { get => default; } // 0x0000000189976B94-0x0000000189976BB8 
+		public override XmlNodeType NodeType { get => default; } // 0x0000000183D557F0-0x0000000183D55800 
+		public override XmlNode ParentNode { get => default; } // 0x00000001899766BC-0x0000000189976738 
+		public override string Value { get => default; set {} } // 0x0000000189952410-0x0000000189952418 0x0000000189976BE0-0x0000000189976C6C
+		internal override XPathNodeType XPNodeType { get => default; } // 0x0000000189976BB8-0x0000000189976BE0 
+		internal override bool IsText { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public override XmlNode PreviousText { get => default; } // 0x000000018995227C-0x00000001899522B0 
+	
+		// Constructors
+		public XmlWhitespace() {} // Dummy constructor
+		protected internal XmlWhitespace(string strData, XmlDocument doc) {} // 0x0000000189976AEC-0x0000000189976B94
+	
+		// Methods
+		public override XmlNode CloneNode(bool deep) => default; // 0x0000000189976A74-0x0000000189976ABC
+		public override void WriteTo(XmlWriter w) {} // 0x0000000189976ABC-0x0000000189976AEC
+		public override void WriteContentTo(XmlWriter w) {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	internal sealed class EmptyEnumerator : IEnumerator // TypeDefIndex: 42596
+	{
+		// Properties
+		object IEnumerator.Current { get => default; } // 0x000000018996700C-0x0000000189967070 
+	
+		// Constructors
+		public EmptyEnumerator() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		bool IEnumerator.MoveNext() => default; // 0x000000018115F4C0-0x000000018115F530
+		void IEnumerator.Reset() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	internal class HWStack : ICloneable // TypeDefIndex: 42597
+	{
+		// Fields
+		private object[] stack; // 0x10
+		private int growthRate; // 0x18
+		private int used; // 0x1C
+		private int size; // 0x20
+		private int limit; // 0x24
+	
+		// Properties
+		internal object this[int index] { get => default; set {} } // 0x00000001899673D8-0x0000000189967450 0x0000000189967450-0x00000001899674E4
+		internal int Length { get => default; } // 0x0000000183D4EBB0-0x0000000183D4EBC0 
+	
+		// Constructors
+		public HWStack() {} // Dummy constructor
+		internal HWStack(int GrowthRate) {} // 0x00000001899673C8-0x00000001899673D8
+		internal HWStack(int GrowthRate, int limit) {} // 0x000000018996735C-0x00000001899673C8
+		private HWStack(object[] stack, int growthRate, int used, int size) {} // 0x0000000189967330-0x000000018996735C
+	
+		// Methods
+		internal object Push() => default; // 0x0000000189967204-0x0000000189967330
+		internal object Pop() => default; // 0x00000001899671C0-0x0000000189967204
+		internal object Peek() => default; // 0x0000000189967188-0x00000001899671C0
+		internal void AddToTop(object o) {} // 0x0000000189967070-0x00000001899670C4
+		public object Clone() => default; // 0x00000001899670C4-0x0000000189967188
+	}
+
+	public interface IHasXmlNode // TypeDefIndex: 42598
+	{
+		// Methods
+		XmlNode GetNode();
+	}
+
+	public interface IXmlLineInfo // TypeDefIndex: 42599
+	{
+		// Properties
+		int LineNumber { get; }
+		int LinePosition { get; }
+	
+		// Methods
+		bool HasLineInfo();
+	}
+
+	internal class PositionInfo : IXmlLineInfo // TypeDefIndex: 42600
+	{
+		// Properties
+		public virtual int LineNumber { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public virtual int LinePosition { get => default; } // 0x0000000181002730-0x0000000181002740 
+	
+		// Constructors
+		public PositionInfo() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public virtual bool HasLineInfo() => default; // 0x000000018115F4C0-0x000000018115F530
+		public static PositionInfo GetPositionInfo(object o) => default; // 0x0000000189967BDC-0x0000000189967C80
+	}
+
+	internal class ReaderPositionInfo : PositionInfo // TypeDefIndex: 42601
+	{
+		// Fields
+		private IXmlLineInfo lineInfo; // 0x10
+	
+		// Properties
+		public override int LineNumber { get => default; } // 0x0000000189967CA0-0x0000000189967CC0 
+		public override int LinePosition { get => default; } // 0x0000000189967CC0-0x0000000189967CE0 
+	
+		// Constructors
+		public ReaderPositionInfo() {} // Dummy constructor
+		public ReaderPositionInfo(IXmlLineInfo lineInfo) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Methods
+		public override bool HasLineInfo() => default; // 0x0000000189967C80-0x0000000189967CA0
+	}
+
+	public interface IXmlNamespaceResolver // TypeDefIndex: 42602
+	{
+		// Methods
+		IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope);
+		string LookupNamespace(string prefix);
+		string LookupPrefix(string namespaceName);
+	}
+
+	internal struct LineInfo // TypeDefIndex: 42603
+	{
+		// Fields
+		internal int lineNo; // 0x00
+		internal int linePos; // 0x04
+	
+		// Constructors
+		public LineInfo(int lineNo, int linePos) {
+			this.lineNo = default;
+			this.linePos = default;
+		} // 0x0000000183D4E4B0-0x0000000183D4E4C0
+	
+		// Methods
+		public void Set(int lineNo, int linePos) {} // 0x0000000183D4E4B0-0x0000000183D4E4C0
+	}
+
+	public class NameTable : XmlNameTable // TypeDefIndex: 42605
+	{
+		// Fields
+		private Entry[] entries; // 0x10
+		private int count; // 0x18
+		private int mask; // 0x1C
+		private int hashCodeRandomizer; // 0x20
+	
+		// Nested types
+		private class Entry // TypeDefIndex: 42604
+		{
+			// Fields
+			internal string str; // 0x10
+			internal int hashCode; // 0x18
+			internal Entry next; // 0x20
+	
+			// Constructors
+			public Entry() {} // Dummy constructor
+			internal Entry(string str, int hashCode, Entry next) {} // 0x0000000183020510-0x0000000183020540
+		}
+	
+		// Constructors
+		public NameTable() {} // 0x0000000189967B84-0x0000000189967BDC
+	
+		// Methods
+		public override string Add(string key) => default; // 0x00000001899675D0-0x000000018996773C
+		public override string Add(char[] key, int start, int len) => default; // 0x000000018996773C-0x000000018996789C
+		public override string Get(string value) => default; // 0x000000018996789C-0x00000001899679F8
+		private string AddEntry(string str, int hashCode) => default; // 0x00000001899674E4-0x00000001899675D0
+		private void Grow() {} // 0x00000001899679F8-0x0000000189967B00
+		private static bool TextEquals(string str1, char[] str2, int str2Start, int str2Length) => default; // 0x0000000189967B00-0x0000000189967B84
+	}
+
+	internal static class Ref // TypeDefIndex: 42606
+	{
+		// Methods
+		public static bool Equal(string strA, string strB) => default; // 0x000000018232CE30-0x000000018232CE40
+	}
+
+	internal class DtdParser : IDtdParser // TypeDefIndex: 42612
+	{
+		// Fields
+		private IDtdParserAdapter readerAdapter; // 0x10
+		private IDtdParserAdapterWithValidation readerAdapterWithValidation; // 0x18
+		private XmlNameTable nameTable; // 0x20
+		private SchemaInfo schemaInfo; // 0x28
+		private XmlCharType xmlCharType; // 0x30
+		private string systemId; // 0x38
+		private string publicId; // 0x40
+		private bool normalize; // 0x48
+		private bool validate; // 0x49
+		private bool supportNamespaces; // 0x4A
+		private bool v1Compat; // 0x4B
+		private char[] chars; // 0x50
+		private int charsUsed; // 0x58
+		private int curPos; // 0x5C
+		private ScanningFunction scanningFunction; // 0x60
+		private ScanningFunction nextScaningFunction; // 0x64
+		private ScanningFunction savedScanningFunction; // 0x68
+		private bool whitespaceSeen; // 0x6C
+		private int tokenStartPos; // 0x70
+		private int colonPos; // 0x74
+		private StringBuilder internalSubsetValueSb; // 0x78
+		private int externalEntitiesDepth; // 0x80
+		private int currentEntityId; // 0x84
+		private bool freeFloatingDtd; // 0x88
+		private bool hasFreeFloatingInternalSubset; // 0x89
+		private StringBuilder stringBuilder; // 0x90
+		private int condSectionDepth; // 0x98
+		private LineInfo literalLineInfo; // 0x9C
+		private char literalQuoteChar; // 0xA4
+		private string documentBaseUri; // 0xA8
+		private string externalDtdBaseUri; // 0xB0
+		private Dictionary<string, UndeclaredNotation> undeclaredNotations; // 0xB8
+		private int[] condSectionEntityIds; // 0xC0
+	
+		// Properties
+		private bool ParsingInternalSubset { get => default; } // 0x0000000189966F60-0x0000000189966F6C 
+		private bool IgnoreEntityReferences { get => default; } // 0x0000000189966E74-0x0000000189966E7C 
+		private bool SaveInternalSubsetValue { get => default; } // 0x0000000189966F88-0x000000018996700C 
+		private bool ParsingTopLevelMarkup { get => default; } // 0x0000000189966F6C-0x0000000189966F88 
+		private bool SupportNamespaces { get => default; } // 0x0000000183D4F780-0x0000000183D4F790 
+		private bool Normalize { get => default; } // 0x0000000183D4EFE0-0x0000000183D4EFF0 
+		private int LineNo { get => default; } // 0x0000000189966E7C-0x0000000189966EE8 
+		private int LinePos { get => default; } // 0x0000000189966EE8-0x0000000189966F60 
+		private string BaseUriStr { get => default; } // 0x0000000189966DF0-0x0000000189966E74 
+	
+		// Nested types
+		private enum Token // TypeDefIndex: 42607
+		{
+			CDATA = 0,
+			ID = 1,
+			IDREF = 2,
+			IDREFS = 3,
+			ENTITY = 4,
+			ENTITIES = 5,
+			NMTOKEN = 6,
+			NMTOKENS = 7,
+			NOTATION = 8,
+			None = 9,
+			PERef = 10,
+			AttlistDecl = 11,
+			ElementDecl = 12,
+			EntityDecl = 13,
+			NotationDecl = 14,
+			Comment = 15,
+			PI = 16,
+			CondSectionStart = 17,
+			CondSectionEnd = 18,
+			Eof = 19,
+			REQUIRED = 20,
+			IMPLIED = 21,
+			FIXED = 22,
+			QName = 23,
+			Name = 24,
+			Nmtoken = 25,
+			Quote = 26,
+			LeftParen = 27,
+			RightParen = 28,
+			GreaterThan = 29,
+			Or = 30,
+			LeftBracket = 31,
+			RightBracket = 32,
+			PUBLIC = 33,
+			SYSTEM = 34,
+			Literal = 35,
+			DOCTYPE = 36,
+			NData = 37,
+			Percent = 38,
+			Star = 39,
+			QMark = 40,
+			Plus = 41,
+			PCDATA = 42,
+			Comma = 43,
+			ANY = 44,
+			EMPTY = 45,
+			IGNORE = 46,
+			INCLUDE = 47
+		}
+	
+		private enum ScanningFunction // TypeDefIndex: 42608
+		{
+			SubsetContent = 0,
+			Name = 1,
+			QName = 2,
+			Nmtoken = 3,
+			Doctype1 = 4,
+			Doctype2 = 5,
+			Element1 = 6,
+			Element2 = 7,
+			Element3 = 8,
+			Element4 = 9,
+			Element5 = 10,
+			Element6 = 11,
+			Element7 = 12,
+			Attlist1 = 13,
+			Attlist2 = 14,
+			Attlist3 = 15,
+			Attlist4 = 16,
+			Attlist5 = 17,
+			Attlist6 = 18,
+			Attlist7 = 19,
+			Entity1 = 20,
+			Entity2 = 21,
+			Entity3 = 22,
+			Notation1 = 23,
+			CondSection1 = 24,
+			CondSection2 = 25,
+			CondSection3 = 26,
+			Literal = 27,
+			SystemId = 28,
+			PublicId1 = 29,
+			PublicId2 = 30,
+			ClosingTag = 31,
+			ParamEntitySpace = 32,
+			None = 33
+		}
+	
+		private enum LiteralType // TypeDefIndex: 42609
+		{
+			AttributeValue = 0,
+			EntityReplText = 1,
+			SystemOrPublicID = 2
+		}
+	
+		private class UndeclaredNotation // TypeDefIndex: 42610
+		{
+			// Fields
+			internal string name; // 0x10
+			internal int lineNo; // 0x18
+			internal int linePos; // 0x1C
+			internal UndeclaredNotation next; // 0x20
+	
+			// Constructors
+			public UndeclaredNotation() {} // Dummy constructor
+			internal UndeclaredNotation(string name, int lineNo, int linePos) {} // 0x0000000189980818-0x000000018998084C
+		}
+	
+		private class ParseElementOnlyContent_LocalFrame // TypeDefIndex: 42611
+		{
+			// Fields
+			public int startParenEntityId; // 0x10
+			public Token parsingSchema; // 0x14
+	
+			// Constructors
+			public ParseElementOnlyContent_LocalFrame() {} // Dummy constructor
+			public ParseElementOnlyContent_LocalFrame(int startParentEntityIdParam) {} // 0x0000000183D75C50-0x0000000183D75C60
+		}
+	
+		// Constructors
+		private DtdParser() {} // 0x0000000189966D04-0x0000000189966DF0
+	
+		// Methods
+		internal static IDtdParser Create() => default; // 0x000000018995E894-0x000000018995E8E4
+		private void Initialize(IDtdParserAdapter readerAdapter) {} // 0x000000018995F8D4-0x000000018995FBC4
+		private void InitializeFreeFloatingDtd(string baseUri, string docTypeName, string publicId, string systemId, string internalSubset, IDtdParserAdapter adapter) {} // 0x000000018995F574-0x000000018995F8D4
+		IDtdInfo IDtdParser.ParseInternalDtd(IDtdParserAdapter adapter, bool saveInternalSubset) => default; // 0x000000018996649C-0x00000001899664D4
+		IDtdInfo IDtdParser.ParseFreeFloatingDtd(string baseUri, string docTypeName, string publicId, string systemId, string internalSubset, IDtdParserAdapter adapter) => default; // 0x000000018996644C-0x000000018996649C
+		private void Parse(bool saveInternalSubset) {} // 0x0000000189962864-0x0000000189962BA4
+		private void ParseInDocumentDtd(bool saveInternalSubset) {} // 0x0000000189961FD8-0x0000000189962148
+		private void ParseFreeFloatingDtd() {} // 0x0000000189961F1C-0x0000000189961F70
+		private void ParseInternalSubset() {} // 0x0000000189962148-0x0000000189962150
+		private void ParseExternalSubset() {} // 0x0000000189961DFC-0x0000000189961F1C
+		private void ParseSubset() {} // 0x000000018996241C-0x000000018996279C
+		private void ParseAttlistDecl() {} // 0x000000018995FCF4-0x000000018996022C
+		private void ParseAttlistType(SchemaAttDef attrDef, SchemaElementDecl elementDecl, bool ignoreErrors) {} // 0x00000001899603C0-0x0000000189960910
+		private void ParseAttlistDefault(SchemaAttDef attrDef, bool ignoreErrors) {} // 0x000000018996022C-0x00000001899603C0
+		private void ParseElementDecl() {} // 0x0000000189960CE8-0x00000001899610AC
+		private void ParseElementOnlyContent(ParticleContentValidator pcv, int startParenEntityId) {} // 0x0000000189961330-0x000000018996162C
+		private void ParseHowMany(ParticleContentValidator pcv) {} // 0x0000000189961F70-0x0000000189961FD8
+		private void ParseElementMixedContent(ParticleContentValidator pcv, int startParenEntityId) {} // 0x00000001899610AC-0x0000000189961330
+		private void ParseEntityDecl() {} // 0x000000018996162C-0x00000001899619CC
+		private void ParseNotationDecl() {} // 0x0000000189962150-0x000000018996238C
+		private void AddUndeclaredNotation(string notationName) {} // 0x000000018995E6EC-0x000000018995E894
+		private void ParseComment() {} // 0x0000000189960910-0x0000000189960A8C
+		private void ParsePI() {} // 0x000000018996238C-0x000000018996241C
+		private void ParseCondSection() {} // 0x0000000189960A8C-0x0000000189960CE8
+		private void ParseExternalId(Token idTokenType, Token declType, out string publicId, out string systemId) {
+			publicId = default;
+			systemId = default;
+		} // 0x00000001899619CC-0x0000000189961DFC
+		private Token GetToken(bool needWhiteSpace) => default; // 0x000000018995EBEC-0x000000018995F1AC
+		private Token ScanSubsetContent() => default; // 0x00000001899659A0-0x0000000189965FE0
+		private Token ScanNameExpected() => default; // 0x00000001899653B0-0x00000001899653D4
+		private Token ScanQNameExpected() => default; // 0x0000000189965748-0x0000000189965770
+		private Token ScanNmtokenExpected() => default; // 0x00000001899653E0-0x0000000189965404
+		private Token ScanDoctype1() => default; // 0x0000000189964090-0x000000018996419C
+		private Token ScanDoctype2() => default; // 0x000000018996419C-0x0000000189964228
+		private Token ScanClosingTag() => default; // 0x00000001899639C8-0x0000000189963A3C
+		private Token ScanElement1() => default; // 0x0000000189964228-0x00000001899643CC
+		private Token ScanElement2() => default; // 0x00000001899643CC-0x0000000189964534
+		private Token ScanElement3() => default; // 0x0000000189964534-0x00000001899645A0
+		private Token ScanElement4() => default; // 0x00000001899645A0-0x000000018996464C
+		private Token ScanElement5() => default; // 0x000000018996464C-0x000000018996470C
+		private Token ScanElement6() => default; // 0x000000018996470C-0x00000001899647C0
+		private Token ScanElement7() => default; // 0x00000001899647C0-0x000000018996480C
+		private Token ScanAttlist1() => default; // 0x0000000189962CF4-0x0000000189962DA4
+		private Token ScanAttlist2() => default; // 0x0000000189962DA4-0x00000001899633B4
+		private Token ScanAttlist3() => default; // 0x00000001899633B4-0x0000000189963438
+		private Token ScanAttlist4() => default; // 0x0000000189963438-0x00000001899634EC
+		private Token ScanAttlist5() => default; // 0x00000001899634EC-0x00000001899635A0
+		private Token ScanAttlist6() => default; // 0x00000001899635A0-0x0000000189963924
+		private Token ScanAttlist7() => default; // 0x0000000189963924-0x00000001899639C8
+		private Token ScanLiteral(LiteralType literalType) => default; // 0x0000000189964BDC-0x00000001899653B0
+		private XmlQualifiedName ScanEntityName() => default; // 0x0000000189964A7C-0x0000000189964BDC
+		private Token ScanNotation1() => default; // 0x0000000189965544-0x0000000189965630
+		private Token ScanSystemId() => default; // 0x0000000189965FE0-0x0000000189966088
+		private Token ScanEntity1() => default; // 0x000000018996480C-0x0000000189964874
+		private Token ScanEntity2() => default; // 0x0000000189964874-0x000000018996499C
+		private Token ScanEntity3() => default; // 0x000000018996499C-0x0000000189964A7C
+		private Token ScanPublicId1() => default; // 0x0000000189965630-0x00000001899656D8
+		private Token ScanPublicId2() => default; // 0x00000001899656D8-0x0000000189965748
+		private Token ScanCondSection1() => default; // 0x0000000189963A3C-0x0000000189963CCC
+		private Token ScanCondSection2() => default; // 0x0000000189963CCC-0x0000000189963D40
+		private Token ScanCondSection3() => default; // 0x0000000189963D40-0x0000000189964090
+		private void ScanName() {} // 0x00000001899653D4-0x00000001899653E0
+		private void ScanQName() {} // 0x0000000189965994-0x00000001899659A0
+		private void ScanQName(bool isQName) {} // 0x0000000189965770-0x0000000189965994
+		private bool ReadDataInName() => default; // 0x0000000189962BA4-0x0000000189962BE8
+		private void ScanNmtoken() {} // 0x0000000189965404-0x0000000189965544
+		private bool EatPublicKeyword() => default; // 0x000000018995E8E4-0x000000018995E99C
+		private bool EatSystemKeyword() => default; // 0x000000018995E99C-0x000000018995EA54
+		private XmlQualifiedName GetNameQualified(bool canHavePrefix) => default; // 0x000000018995EA54-0x000000018995EBB8
+		private string GetNameString() => default; // 0x000000018995EBB8-0x000000018995EBE4
+		private string GetNmtokenString() => default; // 0x000000018995EBE4-0x000000018995EBEC
+		private string GetValue() => default; // 0x000000018995F20C-0x000000018995F260
+		private string GetValueWithStrippedSpaces() => default; // 0x000000018995F1AC-0x000000018995F20C
+		private int ReadData() => default; // 0x0000000189962BE8-0x0000000189962C74
+		private void LoadParsingBuffer() {} // 0x000000018995FBD4-0x000000018995FCB4
+		private void SaveParsingBuffer() {} // 0x0000000189962CE8-0x0000000189962CF4
+		private void SaveParsingBuffer(int internalSubsetValueEndPos) {} // 0x0000000189962C74-0x0000000189962CE8
+		private bool HandleEntityReference(bool paramEntity, bool inLiteral, bool inAttribute) => default; // 0x000000018995F510-0x000000018995F574
+		private bool HandleEntityReference(XmlQualifiedName entityName, bool paramEntity, bool inLiteral, bool inAttribute) => default; // 0x000000018995F358-0x000000018995F510
+		private bool HandleEntityEnd(bool inLiteral) => default; // 0x000000018995F260-0x000000018995F358
+		private SchemaEntity VerifyEntityReference(XmlQualifiedName entityName, bool paramEntity, bool mustBeDeclared, bool inAttribute) => default; // 0x0000000189966AC4-0x0000000189966D04
+		private void SendValidationEvent(int pos, XmlSeverityType severity, string code, string arg) {} // 0x0000000189966088-0x0000000189966170
+		private void SendValidationEvent(XmlSeverityType severity, string code, string arg) {} // 0x0000000189966170-0x0000000189966244
+		private void SendValidationEvent(XmlSeverityType severity, XmlSchemaException e) {} // 0x0000000189966244-0x0000000189966288
+		private bool IsAttributeValueType(Token token) => default; // 0x000000018995FBC4-0x000000018995FBD4
+		private void OnUnexpectedError() {} // 0x000000018995FCB4-0x000000018995FCF4
+		private void Throw(int curPos, string res) {} // 0x0000000189966708-0x0000000189966770
+		private void Throw(int curPos, string res, string arg) {} // 0x0000000189966770-0x0000000189966898
+		private void Throw(int curPos, string res, string[] args) {} // 0x000000018996699C-0x0000000189966AC4
+		private void Throw(string res, string arg, int lineNo, int linePos) {} // 0x0000000189966898-0x000000018996699C
+		private void ThrowInvalidChar(int pos, string data, int invCharPos) {} // 0x0000000189966550-0x00000001899665C8
+		private void ThrowInvalidChar(char[] data, int length, int invCharPos) {} // 0x00000001899664D4-0x0000000189966550
+		private void ThrowUnexpectedToken(int pos, string expectedToken) {} // 0x00000001899665C8-0x00000001899665E4
+		private void ThrowUnexpectedToken(int pos, string expectedToken1, string expectedToken2) {} // 0x00000001899665E4-0x0000000189966708
+		private string ParseUnexpectedToken(int startPos) => default; // 0x000000018996279C-0x0000000189962864
+		internal static string StripSpaces(string value) => default; // 0x0000000189966288-0x000000018996644C
+	}
+
+	public enum XmlTokenizedType // TypeDefIndex: 42613
+	{
+		CDATA = 0,
+		ID = 1,
+		IDREF = 2,
+		IDREFS = 3,
+		ENTITY = 4,
+		ENTITIES = 5,
+		NMTOKEN = 6,
+		NMTOKENS = 7,
+		NOTATION = 8,
+		ENUMERATION = 9,
+		QName = 10,
+		NCName = 11,
+		None = 12
+	}
+
+	internal static class ValidateNames // TypeDefIndex: 42614
+	{
+		// Fields
+		private static XmlCharType xmlCharType; // 0x00
+	
+		// Constructors
+		static ValidateNames() {} // 0x000000018998139C-0x00000001899813EC
+	
+		// Methods
+		internal static int ParseNmtoken(string s, int offset) => default; // 0x0000000189980DF4-0x0000000189980E9C
+		internal static int ParseNmtokenNoNamespaces(string s, int offset) => default; // 0x0000000189980D38-0x0000000189980DF4
+		internal static int ParseNameNoNamespaces(string s, int offset) => default; // 0x0000000189980C10-0x0000000189980D38
+		internal static bool IsNameNoNamespaces(string s) => default; // 0x0000000189980A68-0x0000000189980AC8
+		internal static int ParseNCName(string s, int offset) => default; // 0x0000000189980B14-0x0000000189980C10
+		internal static int ParseNCName(string s) => default; // 0x0000000189980AC8-0x0000000189980B14
+		internal static int ParseQName(string s, int offset, out int colonOffset) {
+			colonOffset = default;
+			return default;
+		} // 0x0000000189980FA0-0x0000000189981060
+		internal static void ParseQNameThrow(string s, out string prefix, out string localName) {
+			prefix = default;
+			localName = default;
+		} // 0x0000000189980E9C-0x0000000189980FA0
+		internal static void ThrowInvalidName(string s, int offsetStartChar, int offsetBadChar) {} // 0x00000001899811C4-0x000000018998139C
+		internal static Exception GetInvalidNameException(string s, int offsetStartChar, int offsetBadChar) => default; // 0x00000001899808B8-0x0000000189980A68
+		internal static void SplitQName(string name, out string prefix, out string lname) {
+			prefix = default;
+			lname = default;
+		} // 0x0000000189981060-0x00000001899811C4
+	}
+
+	internal struct XmlCharType // TypeDefIndex: 42615
+	{
+		// Fields
+		private static object s_Lock; // 0x00
+		private static byte[] s_CharProperties; // 0x08
+		internal byte[] charProperties; // 0x00
+	
+		// Properties
+		private static object StaticLock { get => default; } // 0x0000000189984E30-0x0000000189984EB8 
+		public static XmlCharType Instance { get => default; } // 0x0000000189984DBC-0x0000000189984E30 
+	
+		// Constructors
+		private XmlCharType(byte[] charProperties) : this() {
+			this.charProperties = default;
+		} // 0x00000001842715A0-0x00000001842715A8
+	
+		// Methods
+		private static void InitInstance() {} // 0x0000000189984608-0x0000000189984878
+		private static void SetProperties(byte[] chProps, string ranges, byte value) {} // 0x0000000189984CF8-0x0000000189984D90
+		public bool IsWhiteSpace(char ch) => default; // 0x0000000189984CCC-0x0000000189984CF8
+		public bool IsNCNameSingleChar(char ch) => default; // 0x0000000189984928-0x0000000189984958
+		public bool IsStartNCNameSingleChar(char ch) => default; // 0x0000000189984C5C-0x0000000189984C8C
+		public bool IsNameSingleChar(char ch) => default; // 0x0000000189984980-0x00000001899849A8
+		public bool IsCharData(char ch) => default; // 0x0000000189984878-0x00000001899848A8
+		public bool IsPubidChar(char ch) => default; // 0x0000000189984B60-0x0000000189984BD8
+		internal bool IsTextChar(char ch) => default; // 0x0000000189984C9C-0x0000000189984CCC
+		public bool IsLetter(char ch) => default; // 0x00000001899848B8-0x00000001899848E8
+		public bool IsNCNameCharXml4e(char ch) => default; // 0x00000001899848F8-0x0000000189984928
+		public bool IsStartNCNameCharXml4e(char ch) => default; // 0x0000000189984C34-0x0000000189984C5C
+		public bool IsNameCharXml4e(char ch) => default; // 0x0000000189984958-0x0000000189984980
+		public static bool IsDigit(char ch) => default; // 0x000000018923EB8C-0x000000018923EB9C
+		internal static bool IsHighSurrogate(int ch) => default; // 0x00000001899848A8-0x00000001899848B8
+		internal static bool IsLowSurrogate(int ch) => default; // 0x00000001899848E8-0x00000001899848F8
+		internal static bool IsSurrogate(int ch) => default; // 0x0000000189984C8C-0x0000000189984C9C
+		internal static int CombineSurrogateChar(int lowChar, int highChar) => default; // 0x0000000183D75C90-0x0000000183D75CB0
+		internal static void SplitSurrogateChar(int combinedChar, out char lowChar, out char highChar) {
+			lowChar = default;
+			highChar = default;
+		} // 0x0000000189984D90-0x0000000189984DBC
+		internal bool IsOnlyWhitespace(string str) => default; // 0x0000000189984B48-0x0000000189984B60
+		internal int IsOnlyWhitespaceWithPos(string str) => default; // 0x0000000189984AD0-0x0000000189984B48
+		internal int IsOnlyCharData(string str) => default; // 0x00000001899849A8-0x0000000189984A74
+		internal static bool IsOnlyDigits(string str, int startPos, int len) => default; // 0x0000000189984A74-0x0000000189984AD0
+		internal int IsPublicId(string str) => default; // 0x0000000189984BD8-0x0000000189984C34
+		private static bool InRange(int value, int start, int end) => default; // 0x00000001899845FC-0x0000000189984608
+	}
+
+	internal static class XmlComplianceUtil // TypeDefIndex: 42616
+	{
+		// Methods
+		public static string NonCDataNormalize(string value) => default; // 0x000000018998504C-0x000000018998527C
+		public static string CDataNormalize(string value) => default; // 0x0000000189984EB8-0x000000018998504C
+	}
+
+	internal enum ExceptionType // TypeDefIndex: 42617
+	{
+		ArgumentException = 0,
+		XmlException = 1
+	}
+
+	public enum XmlDateTimeSerializationMode // TypeDefIndex: 42618
+	{
+		Local = 0,
+		Utc = 1,
+		Unspecified = 2,
+		RoundtripKind = 3
+	}
+
+	public class XmlConvert // TypeDefIndex: 42619
+	{
+		// Fields
+		private static XmlCharType xmlCharType; // 0x00
+		internal static char[] crt; // 0x08
+		private static readonly int c_EncodedCharLength; // 0x10
+		private static Regex c_EncodeCharPattern; // 0x18
+		private static Regex c_DecodeCharPattern; // 0x20
+		private static string[] s_allDateTimeFormats; // 0x28
+		internal static readonly char[] WhitespaceChars; // 0x30
+	
+		// Properties
+		private static string[] AllDateTimeFormats { get => default; } // 0x000000018998AEE8-0x000000018998AF6C 
+	
+		// Constructors
+		public XmlConvert() {} // Dummy constructor
+		static XmlConvert() {} // 0x000000018998ADBC-0x000000018998AEE8
+	
+		// Methods
+		public static string EncodeName(string name) => default; // 0x0000000189986684-0x00000001899866D4
+		public static string EncodeLocalName(string name) => default; // 0x0000000189986630-0x0000000189986684
+		public static string DecodeName(string name) => default; // 0x0000000189985FA8-0x0000000189986630
+		private static string EncodeName(string name, bool first, bool local) => default; // 0x00000001899866D4-0x0000000189986DF0
+		private static int FromHex(char digit) => default; // 0x0000000189986EB8-0x0000000189986EE0
+		internal static byte[] FromBinHexString(string s) => default; // 0x0000000189986DF0-0x0000000189986E3C
+		internal static byte[] FromBinHexString(string s, bool allowOddCount) => default; // 0x0000000189986E3C-0x0000000189986EB8
+		internal static string ToBinHexString(byte[] inArray) => default; // 0x0000000189987194-0x0000000189987208
+		public static string VerifyName(string name) => default; // 0x000000018998A9A0-0x000000018998AAFC
+		internal static Exception TryVerifyName(string name) => default; // 0x000000018998A2B8-0x000000018998A3F0
+		internal static string VerifyQName(string name, ExceptionType exceptionType) => default; // 0x000000018998AAFC-0x000000018998AC3C
+		public static string VerifyNCName(string name) => default; // 0x000000018998A7E8-0x000000018998A838
+		internal static string VerifyNCName(string name, ExceptionType exceptionType) => default; // 0x000000018998A838-0x000000018998A9A0
+		internal static Exception TryVerifyNCName(string name) => default; // 0x000000018998A128-0x000000018998A1A8
+		public static string VerifyTOKEN(string token) => default; // 0x000000018998AC3C-0x000000018998AD5C
+		internal static Exception TryVerifyTOKEN(string token) => default; // 0x000000018998A4A8-0x000000018998A5BC
+		internal static Exception TryVerifyNMTOKEN(string name) => default; // 0x000000018998A1A8-0x000000018998A2B8
+		internal static Exception TryVerifyNormalizedString(string str) => default; // 0x000000018998A3F0-0x000000018998A4A8
+		public static string ToString(bool value) => default; // 0x0000000189988218-0x0000000189988260
+		public static string ToString(char value) => default; // 0x0000000189987F0C-0x0000000189987F5C
+		public static string ToString(decimal value) => default; // 0x0000000189987EB0-0x0000000189987F0C
+		[CLSCompliant(false)]
+		public static string ToString(sbyte value) => default; // 0x00000001899882DC-0x0000000189988304
+		public static string ToString(short value) => default; // 0x0000000189987E28-0x0000000189987E50
+		public static string ToString(int value) => default; // 0x0000000189987E50-0x0000000189987E78
+		public static string ToString(long value) => default; // 0x0000000189988304-0x000000018998832C
+		public static string ToString(byte value) => default; // 0x0000000189987E88-0x0000000189987EB0
+		[CLSCompliant(false)]
+		public static string ToString(ushort value) => default; // 0x0000000189987E00-0x0000000189987E28
+		[CLSCompliant(false)]
+		public static string ToString(uint value) => default; // 0x0000000189987F5C-0x0000000189987F84
+		[CLSCompliant(false)]
+		public static string ToString(ulong value) => default; // 0x0000000189987FEC-0x0000000189988014
+		public static string ToString(float value) => default; // 0x0000000189987D28-0x0000000189987E00
+		public static string ToString(double value) => default; // 0x0000000189987C4C-0x0000000189987D28
+		public static string ToString(TimeSpan value) => default; // 0x00000001898D947C-0x00000001898D94D8
+		public static string ToString(System.DateTime value, string format) => default; // 0x0000000189988260-0x00000001899882DC
+		public static string ToString(System.DateTime value, XmlDateTimeSerializationMode dateTimeOption) => default; // 0x0000000189988014-0x0000000189988218
+		public static string ToString(DateTimeOffset value) => default; // 0x0000000189987F84-0x0000000189987FEC
+		public static string ToString(Guid value) => default; // 0x0000000189987E78-0x0000000189987E88
+		public static bool ToBoolean(string s) => default; // 0x0000000189987208-0x00000001899873C8
+		internal static Exception TryToBoolean(string s, out bool result) {
+			result = default;
+			return default;
+		} // 0x0000000189988B24-0x0000000189988CE0
+		public static char ToChar(string s) => default; // 0x00000001899873F0-0x00000001899874C0
+		internal static Exception TryToChar(string s, out char result) {
+			result = default;
+			return default;
+		} // 0x0000000189988DFC-0x0000000189988F1C
+		public static decimal ToDecimal(string s) => default; // 0x0000000189987894-0x0000000189987914
+		internal static Exception TryToDecimal(string s, out decimal result) {
+			result = default;
+			return default;
+		} // 0x0000000189988F1C-0x000000018998905C
+		internal static decimal ToInteger(string s) => default; // 0x0000000189987AA8-0x0000000189987B28
+		internal static Exception TryToInteger(string s, out decimal result) {
+			result = default;
+			return default;
+		} // 0x0000000189989774-0x00000001899898B4
+		[CLSCompliant(false)]
+		public static sbyte ToSByte(string s) => default; // 0x0000000189987B28-0x0000000189987B50
+		internal static Exception TryToSByte(string s, out sbyte result) {
+			result = default;
+			return default;
+		} // 0x00000001899898B4-0x00000001899899D0
+		public static short ToInt16(string s) => default; // 0x0000000189987A30-0x0000000189987A58
+		internal static Exception TryToInt16(string s, out short result) {
+			result = default;
+			return default;
+		} // 0x0000000189989420-0x000000018998953C
+		public static int ToInt32(string s) => default; // 0x0000000189987A58-0x0000000189987A80
+		internal static Exception TryToInt32(string s, out int result) {
+			result = default;
+			return default;
+		} // 0x000000018998953C-0x0000000189989658
+		public static long ToInt64(string s) => default; // 0x0000000189987A80-0x0000000189987AA8
+		internal static Exception TryToInt64(string s, out long result) {
+			result = default;
+			return default;
+		} // 0x0000000189989658-0x0000000189989774
+		public static byte ToByte(string s) => default; // 0x00000001899873C8-0x00000001899873F0
+		internal static Exception TryToByte(string s, out byte result) {
+			result = default;
+			return default;
+		} // 0x0000000189988CE0-0x0000000189988DFC
+		[CLSCompliant(false)]
+		public static ushort ToUInt16(string s) => default; // 0x00000001899884DC-0x0000000189988504
+		internal static Exception TryToUInt16(string s, out ushort result) {
+			result = default;
+			return default;
+		} // 0x0000000189989C40-0x0000000189989D5C
+		[CLSCompliant(false)]
+		public static uint ToUInt32(string s) => default; // 0x0000000189988504-0x000000018998852C
+		internal static Exception TryToUInt32(string s, out uint result) {
+			result = default;
+			return default;
+		} // 0x0000000189989D5C-0x0000000189989E78
+		[CLSCompliant(false)]
+		public static ulong ToUInt64(string s) => default; // 0x000000018998852C-0x0000000189988554
+		internal static Exception TryToUInt64(string s, out ulong result) {
+			result = default;
+			return default;
+		} // 0x0000000189989E78-0x0000000189989F94
+		public static float ToSingle(string s) => default; // 0x0000000189987B50-0x0000000189987C4C
+		internal static Exception TryToSingle(string s, out float result) {
+			result = default;
+			return default;
+		} // 0x00000001899899D0-0x0000000189989BA8
+		public static double ToDouble(string s) => default; // 0x0000000189987914-0x0000000189987A10
+		internal static Exception TryToDouble(string s, out double result) {
+			result = default;
+			return default;
+		} // 0x000000018998905C-0x0000000189989244
+		internal static double ToXPathDouble(object o) => default; // 0x00000001899887D0-0x0000000189988A04
+		internal static double XPathRound(double value) => default; // 0x000000018998AD5C-0x000000018998ADBC
+		public static TimeSpan ToTimeSpan(string s) => default; // 0x000000018998832C-0x00000001899884DC
+		internal static Exception TryToTimeSpan(string s, out TimeSpan result) {
+			result = default;
+			return default;
+		} // 0x0000000189989BA8-0x0000000189989C40
+		private static void CreateAllDateTimeFormats() {} // 0x000000018998527C-0x0000000189985634
+		[Obsolete("Use XmlConvert.ToDateTime() that takes in XmlDateTimeSerializationMode")]
+		public static System.DateTime ToDateTime(string s) => default; // 0x00000001899877BC-0x0000000189987808
+		public static System.DateTime ToDateTime(string s, string[] formats) => default; // 0x0000000189987808-0x0000000189987894
+		public static System.DateTime ToDateTime(string s, XmlDateTimeSerializationMode dateTimeOption) => default; // 0x00000001899875A4-0x00000001899877BC
+		public static DateTimeOffset ToDateTimeOffset(string s) => default; // 0x00000001899874C0-0x00000001899875A4
+		public static Guid ToGuid(string s) => default; // 0x0000000189987A10-0x0000000189987A30
+		internal static Exception TryToGuid(string s, out Guid result) {
+			result = default;
+			return default;
+		} // 0x0000000189989244-0x0000000189989420
+		private static System.DateTime SwitchToLocalTime(System.DateTime value) => default; // 0x000000018998703C-0x00000001899870E8
+		private static System.DateTime SwitchToUtcTime(System.DateTime value) => default; // 0x00000001899870E8-0x0000000189987194
+		internal static System.Uri ToUri(string s) => default; // 0x0000000189988554-0x00000001899887D0
+		internal static Exception TryToUri(string s, out System.Uri result) {
+			result = default;
+			return default;
+		} // 0x0000000189989F94-0x000000018998A128
+		internal static bool StrEqual(char[] chars, int strPos1, int strLen1, string str2) => default; // 0x0000000189986FA4-0x000000018998703C
+		internal static string TrimString(string value) => default; // 0x0000000189988AC4-0x0000000189988B24
+		internal static string TrimStringStart(string value) => default; // 0x0000000189988A64-0x0000000189988AC4
+		internal static string TrimStringEnd(string value) => default; // 0x0000000189988A04-0x0000000189988A64
+		internal static string[] SplitString(string value) => default; // 0x0000000189986F40-0x0000000189986FA4
+		internal static bool IsNegativeZero(double value) => default; // 0x0000000189986EE0-0x0000000189986F40
+		private static long DoubleToInt64Bits(double value) => default; // 0x0000000183D70270-0x0000000183D70280
+		internal static void VerifyCharData(string data, ExceptionType invCharExceptionType, ExceptionType invSurrogateExceptionType) {} // 0x000000018998A5BC-0x000000018998A7E8
+		internal static Exception CreateException(string res, ExceptionType exceptionType, int lineNo, int linePos) => default; // 0x0000000189985818-0x00000001899858FC
+		internal static Exception CreateException(string res, string arg, ExceptionType exceptionType, int lineNo, int linePos) => default; // 0x0000000189985634-0x0000000189985744
+		internal static Exception CreateException(string res, string[] args, ExceptionType exceptionType) => default; // 0x00000001899858FC-0x0000000189985968
+		internal static Exception CreateException(string res, string[] args, ExceptionType exceptionType, int lineNo, int linePos) => default; // 0x0000000189985744-0x0000000189985818
+		internal static Exception CreateInvalidSurrogatePairException(char low, char hi) => default; // 0x0000000189985DAC-0x0000000189985E00
+		internal static Exception CreateInvalidSurrogatePairException(char low, char hi, ExceptionType exceptionType) => default; // 0x0000000189985E00-0x0000000189985E6C
+		internal static Exception CreateInvalidSurrogatePairException(char low, char hi, ExceptionType exceptionType, int lineNo, int linePos) => default; // 0x0000000189985E6C-0x0000000189985FA8
+		internal static Exception CreateInvalidHighSurrogateCharException(char hi) => default; // 0x0000000189985BF8-0x0000000189985C44
+		internal static Exception CreateInvalidHighSurrogateCharException(char hi, ExceptionType exceptionType) => default; // 0x0000000189985AD0-0x0000000189985B28
+		internal static Exception CreateInvalidHighSurrogateCharException(char hi, ExceptionType exceptionType, int lineNo, int linePos) => default; // 0x0000000189985B28-0x0000000189985BF8
+		internal static Exception CreateInvalidCharException(string data, int invCharPos, ExceptionType exceptionType) => default; // 0x00000001899859EC-0x0000000189985A7C
+		internal static Exception CreateInvalidCharException(char invChar, char nextChar) => default; // 0x0000000189985A7C-0x0000000189985AD0
+		internal static Exception CreateInvalidCharException(char invChar, char nextChar, ExceptionType exceptionType) => default; // 0x0000000189985968-0x00000001899859EC
+		internal static Exception CreateInvalidNameCharException(string name, int index, ExceptionType exceptionType) => default; // 0x0000000189985CFC-0x0000000189985DAC
+		internal static ArgumentException CreateInvalidNameArgumentException(string name, string argumentName) => default; // 0x0000000189985C44-0x0000000189985CFC
+	}
+
+	internal class XmlDownloadManager // TypeDefIndex: 42622
+	{
+		// Fields
+		private Hashtable connections; // 0x10
+	
+		// Constructors
+		public XmlDownloadManager() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal Stream GetStream(System.Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy) => default; // 0x000000018998B86C-0x000000018998B96C
+		private Stream GetNonFileStream(System.Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy) => default; // 0x000000018998B09C-0x000000018998B714
+		internal void Remove(string host) {} // 0x000000018998B96C-0x000000018998BA84
+		internal Task<Stream> GetStreamAsync(System.Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy) => default; // 0x000000018998B714-0x000000018998B86C
+		private async Task<Stream> GetNonFileStreamAsync(System.Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy) => default; // 0x000000018998AF6C-0x000000018998B09C
+	}
+
+	internal class OpenedHost // TypeDefIndex: 42623
+	{
+		// Fields
+		internal int nonCachedConnectionsCount; // 0x10
+	
+		// Constructors
+		public OpenedHost() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	internal class XmlRegisteredNonCachedStream : Stream // TypeDefIndex: 42624
+	{
+		// Fields
+		protected Stream stream; // 0x28
+		private XmlDownloadManager downloadManager; // 0x30
+		private string host; // 0x38
+	
+		// Properties
+		public override bool CanRead { get => default; } // 0x000000018998E970-0x000000018998E994 
+		public override bool CanSeek { get => default; } // 0x000000018998E994-0x000000018998E9B8 
+		public override bool CanWrite { get => default; } // 0x000000018998E9B8-0x000000018998E9DC 
+		public override long Length { get => default; } // 0x0000000189743934-0x0000000189743958 
+		public override long Position { get => default; set {} } // 0x0000000189743A24-0x0000000189743A48 0x000000018998E9DC-0x000000018998EA00
+	
+		// Constructors
+		public XmlRegisteredNonCachedStream() {} // Dummy constructor
+		internal XmlRegisteredNonCachedStream(Stream stream, XmlDownloadManager downloadManager, string host) {} // 0x000000018998E8EC-0x000000018998E970
+	
+		// Methods
+		~XmlRegisteredNonCachedStream() {} // 0x000000018998E744-0x000000018998E814
+		protected override void Dispose(bool disposing) {} // 0x000000018998E5AC-0x000000018998E6FC
+		public override IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback callback, object state) => default; // 0x000000018998E51C-0x000000018998E564
+		public override IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback callback, object state) => default; // 0x000000018998E564-0x000000018998E5AC
+		public override int EndRead(IAsyncResult asyncResult) => default; // 0x000000018998E6FC-0x000000018998E720
+		public override void EndWrite(IAsyncResult asyncResult) {} // 0x000000018998E720-0x000000018998E744
+		public override void Flush() {} // 0x0000000189741F00-0x0000000189741F24
+		public override int Read(byte[] buffer, int offset, int count) => default; // 0x000000018998E838-0x000000018998E868
+		public override int ReadByte() => default; // 0x000000018998E814-0x000000018998E838
+		public override long Seek(long offset, SeekOrigin origin) => default; // 0x000000018998E868-0x000000018998E894
+		public override void SetLength(long value) {} // 0x0000000189743204-0x0000000189743228
+		public override void Write(byte[] buffer, int offset, int count) {} // 0x000000018998E8BC-0x000000018998E8EC
+		public override void WriteByte(byte value) {} // 0x000000018998E894-0x000000018998E8BC
+	}
+
+	internal class XmlCachedStream : MemoryStream // TypeDefIndex: 42625
+	{
+		// Fields
+		private System.Uri uri; // 0x50
+	
+		// Constructors
+		public XmlCachedStream() {} // Dummy constructor
+		internal XmlCachedStream(System.Uri uri, Stream stream) {} // 0x00000001899844E0-0x00000001899845FC
+	}
+
+	internal class UTF16Decoder : System.Text.Decoder // TypeDefIndex: 42626
+	{
+		// Fields
+		private bool bigEndian; // 0x20
+		private int lastByte; // 0x24
+	
+		// Constructors
+		public UTF16Decoder() {} // Dummy constructor
+		public UTF16Decoder(bool bigEndian) {} // 0x0000000183D75C60-0x0000000183D75C70
+	
+		// Methods
+		public override int GetCharCount(byte[] bytes, int index, int count) => default; // 0x000000018914BA48-0x000000018914BA6C
+		public override int GetCharCount(byte[] bytes, int index, int count, bool flush) => default; // 0x000000018997F108-0x000000018997F208
+		public override int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) => default; // 0x000000018997F208-0x000000018997F45C
+		public override void Convert(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex, int charCount, bool flush, out int bytesUsed, out int charsUsed, out bool completed) {
+			bytesUsed = default;
+			charsUsed = default;
+			completed = default;
+		} // 0x000000018997EE58-0x000000018997F108
+	}
+
+	internal class SafeAsciiDecoder : System.Text.Decoder // TypeDefIndex: 42627
+	{
+		// Constructors
+		public SafeAsciiDecoder() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public override int GetCharCount(byte[] bytes, int index, int count) => default; // 0x0000000183D75970-0x0000000183D75980
+		public override int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) => default; // 0x0000000189977D78-0x0000000189977DFC
+		public override void Convert(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex, int charCount, bool flush, out int bytesUsed, out int charsUsed, out bool completed) {
+			bytesUsed = default;
+			charsUsed = default;
+			completed = default;
+		} // 0x0000000189977CCC-0x0000000189977D78
+	}
+
+	internal class Ucs4Encoding : Encoding // TypeDefIndex: 42628
+	{
+		// Fields
+		internal Ucs4Decoder ucs4Decoder; // 0x38
+	
+		// Properties
+		public override string WebName { get => default; } // 0x00000001891CF528-0x00000001891CF538 
+		public override int CodePage { get => default; } // 0x0000000181002730-0x0000000181002740 
+		internal static Encoding UCS4_Littleendian { get => default; } // 0x00000001899807C8-0x0000000189980818 
+		internal static Encoding UCS4_Bigendian { get => default; } // 0x0000000189980778-0x00000001899807C8 
+		internal static Encoding UCS4_2143 { get => default; } // 0x00000001899806D8-0x0000000189980728 
+		internal static Encoding UCS4_3412 { get => default; } // 0x0000000189980728-0x0000000189980778 
+	
+		// Constructors
+		public Ucs4Encoding() {} // 0x00000001899806D0-0x00000001899806D8
+	
+		// Methods
+		public override System.Text.Decoder GetDecoder() => default; // 0x0000000183D4E2A0-0x0000000183D4E2B0
+		public override int GetByteCount(char[] chars, int index, int count) => default; // 0x00000001899805F4-0x000000018998065C
+		public override byte[] GetBytes(string s) => default; // 0x0000000181002730-0x0000000181002740
+		public override int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex) => default; // 0x0000000181002730-0x0000000181002740
+		public override int GetMaxByteCount(int charCount) => default; // 0x0000000181002730-0x0000000181002740
+		public override int GetCharCount(byte[] bytes, int index, int count) => default; // 0x000000018998065C-0x000000018998068C
+		public override int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) => default; // 0x000000018998068C-0x00000001899806D0
+		public override int GetMaxCharCount(int byteCount) => default; // 0x0000000183D75C80-0x0000000183D75C90
+		public override System.Text.Encoder GetEncoder() => default; // 0x0000000181002730-0x0000000181002740
+	}
+
+	internal class Ucs4Encoding1234 : Ucs4Encoding // TypeDefIndex: 42629
+	{
+		// Properties
+		public override string EncodingName { get => default; } // 0x00000001899802E0-0x000000018998030C 
+	
+		// Constructors
+		public Ucs4Encoding1234() {} // 0x0000000189980270-0x00000001899802E0
+	
+		// Methods
+		public override byte[] GetPreamble() => default; // 0x0000000189980214-0x0000000189980270
+	}
+
+	internal class Ucs4Encoding4321 : Ucs4Encoding // TypeDefIndex: 42630
+	{
+		// Properties
+		public override string EncodingName { get => default; } // 0x00000001899805C8-0x00000001899805F4 
+	
+		// Constructors
+		public Ucs4Encoding4321() {} // 0x0000000189980558-0x00000001899805C8
+	
+		// Methods
+		public override byte[] GetPreamble() => default; // 0x00000001899804FC-0x0000000189980558
+	}
+
+	internal class Ucs4Encoding2143 : Ucs4Encoding // TypeDefIndex: 42631
+	{
+		// Properties
+		public override string EncodingName { get => default; } // 0x00000001899803D8-0x0000000189980404 
+	
+		// Constructors
+		public Ucs4Encoding2143() {} // 0x0000000189980368-0x00000001899803D8
+	
+		// Methods
+		public override byte[] GetPreamble() => default; // 0x000000018998030C-0x0000000189980368
+	}
+
+	internal class Ucs4Encoding3412 : Ucs4Encoding // TypeDefIndex: 42632
+	{
+		// Properties
+		public override string EncodingName { get => default; } // 0x00000001899804D0-0x00000001899804FC 
+	
+		// Constructors
+		public Ucs4Encoding3412() {} // 0x0000000189980460-0x00000001899804D0
+	
+		// Methods
+		public override byte[] GetPreamble() => default; // 0x0000000189980404-0x0000000189980460
+	}
+
+	internal abstract class Ucs4Decoder : System.Text.Decoder // TypeDefIndex: 42633
+	{
+		// Fields
+		internal byte[] lastBytes; // 0x20
+		internal int lastBytesCount; // 0x28
+	
+		// Constructors
+		protected Ucs4Decoder() {} // 0x00000001899801CC-0x0000000189980214
+	
+		// Methods
+		public override int GetCharCount(byte[] bytes, int index, int count) => default; // 0x0000000183D75C70-0x0000000183D75C80
+		internal abstract int GetFullChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex);
+		public override int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) => default; // 0x000000018997FFE8-0x0000000189980164
+		public override void Convert(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex, int charCount, bool flush, out int bytesUsed, out int charsUsed, out bool completed) {
+			bytesUsed = default;
+			charsUsed = default;
+			completed = default;
+		} // 0x000000018997FDE4-0x000000018997FFE8
+		internal void Ucs4ToUTF16(uint code, char[] chars, int charIndex) {} // 0x0000000189980164-0x00000001899801CC
+	}
+
+	internal class Ucs4Decoder4321 : Ucs4Decoder // TypeDefIndex: 42634
+	{
+		// Constructors
+		public Ucs4Decoder4321() {} // 0x000000018997F6BC-0x000000018997F6C4
+	
+		// Methods
+		internal override int GetFullChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) => default; // 0x000000018997FB84-0x000000018997FDE4
+	}
+
+	internal class Ucs4Decoder1234 : Ucs4Decoder // TypeDefIndex: 42635
+	{
+		// Constructors
+		public Ucs4Decoder1234() {} // 0x000000018997F6BC-0x000000018997F6C4
+	
+		// Methods
+		internal override int GetFullChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) => default; // 0x000000018997F45C-0x000000018997F6BC
+	}
+
+	internal class Ucs4Decoder2143 : Ucs4Decoder // TypeDefIndex: 42636
+	{
+		// Constructors
+		public Ucs4Decoder2143() {} // 0x000000018997F6BC-0x000000018997F6C4
+	
+		// Methods
+		internal override int GetFullChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) => default; // 0x000000018997F6C4-0x000000018997F924
+	}
+
+	internal class Ucs4Decoder3412 : Ucs4Decoder // TypeDefIndex: 42637
+	{
+		// Constructors
+		public Ucs4Decoder3412() {} // 0x000000018997F6BC-0x000000018997F6C4
+	
+		// Methods
+		internal override int GetFullChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) => default; // 0x000000018997F924-0x000000018997FB84
+	}
+
+	[Serializable]
+	public class XmlException : SystemException // TypeDefIndex: 42638
+	{
+		// Fields
+		private string res; // 0x90
+		private string[] args; // 0x98
+		private int lineNumber; // 0xA0
+		private int linePosition; // 0xA4
+		[OptionalField]
+		private string sourceUri; // 0xA8
+		private string message; // 0xB0
+	
+		// Properties
+		public int LineNumber { get => default; } // 0x0000000183D50E50-0x0000000183D50E60 
+		public int LinePosition { get => default; } // 0x0000000183D51870-0x0000000183D51880 
+		public override string Message { get => default; } // 0x000000018998CD80-0x000000018998CDA4 
+		internal string ResString { get => default; } // 0x0000000183D4EA90-0x0000000183D4EAA0 
+	
+		// Constructors
+		protected XmlException(SerializationInfo info, StreamingContext context) {} // 0x000000018998C294-0x000000018998C684
+		public XmlException() {} // 0x000000018998C6A4-0x000000018998C6B0
+		public XmlException(string message) {} // 0x000000018998C684-0x000000018998C6A4
+		public XmlException(string message, Exception innerException) {} // 0x000000018998C278-0x000000018998C294
+		public XmlException(string message, Exception innerException, int lineNumber, int linePosition) {} // 0x000000018998C1A0-0x000000018998C1C4
+		internal XmlException(string message, Exception innerException, int lineNumber, int linePosition, string sourceUri) {} // 0x000000018998C96C-0x000000018998CA98
+		internal XmlException(string res, string[] args) {} // 0x000000018998CA98-0x000000018998CAC0
+		internal XmlException(string res, string arg) {} // 0x000000018998CC50-0x000000018998CCF4
+		internal XmlException(string res, string arg, string sourceUri) {} // 0x000000018998CBA0-0x000000018998CC50
+		internal XmlException(string res, string arg, IXmlLineInfo lineInfo) {} // 0x000000018998C890-0x000000018998C938
+		internal XmlException(string res, string arg, Exception innerException, IXmlLineInfo lineInfo) {} // 0x000000018998C7C0-0x000000018998C890
+		internal XmlException(string res, string[] args, IXmlLineInfo lineInfo) {} // 0x000000018998CB84-0x000000018998CBA0
+		internal XmlException(string res, string[] args, IXmlLineInfo lineInfo, string sourceUri) {} // 0x000000018998CCF4-0x000000018998CD80
+		internal XmlException(string res, string arg, int lineNumber, int linePosition) {} // 0x000000018998C1C4-0x000000018998C278
+		internal XmlException(string res, string arg, int lineNumber, int linePosition, string sourceUri) {} // 0x000000018998C6DC-0x000000018998C794
+		internal XmlException(string res, string[] args, int lineNumber, int linePosition) {} // 0x000000018998C794-0x000000018998C7C0
+		internal XmlException(string res, string[] args, int lineNumber, int linePosition, string sourceUri) {} // 0x000000018998C938-0x000000018998C96C
+		internal XmlException(string res, string[] args, Exception innerException, int lineNumber, int linePosition) {} // 0x000000018998C6B0-0x000000018998C6DC
+		internal XmlException(string res, string[] args, Exception innerException, int lineNumber, int linePosition, string sourceUri) {} // 0x000000018998CAC0-0x000000018998CB84
+	
+		// Methods
+		public override void GetObjectData(SerializationInfo info, StreamingContext context) {} // 0x000000018998C058-0x000000018998C1A0
+		private static string FormatUserMessage(string message, int lineNumber, int linePosition) => default; // 0x000000018998BF8C-0x000000018998C058
+		private static string CreateMessage(string res, string[] args, int lineNumber, int linePosition) => default; // 0x000000018998BDD0-0x000000018998BF8C
+		internal static string[] BuildCharExceptionArgs(string data, int invCharIndex) => default; // 0x000000018998BB18-0x000000018998BB84
+		internal static string[] BuildCharExceptionArgs(char[] data, int length, int invCharIndex) => default; // 0x000000018998BD7C-0x000000018998BDD0
+		internal static string[] BuildCharExceptionArgs(char invChar, char nextChar) => default; // 0x000000018998BB84-0x000000018998BD7C
+	}
+
+	public abstract class XmlNameTable // TypeDefIndex: 42639
+	{
+		// Constructors
+		protected XmlNameTable() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public abstract string Get(string array);
+		public abstract string Add(char[] array, int offset, int length);
+		public abstract string Add(string array);
+	}
+
+	public enum XmlNamespaceScope // TypeDefIndex: 42640
+	{
+		All = 0,
+		ExcludeXml = 1,
+		Local = 2
+	}
+
+	public class XmlNamespaceManager : IXmlNamespaceResolver, IEnumerable // TypeDefIndex: 42642
+	{
+		// Fields
+		private NamespaceDeclaration[] nsdecls; // 0x10
+		private int lastDecl; // 0x18
+		private XmlNameTable nameTable; // 0x20
+		private int scopeId; // 0x28
+		private Dictionary<string, int> hashTable; // 0x30
+		private bool useHashtable; // 0x38
+		private string xml; // 0x40
+		private string xmlNs; // 0x48
+	
+		// Properties
+		public virtual XmlNameTable NameTable { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public virtual string DefaultNamespace { get => default; } // 0x000000018998DB20-0x000000018998DB80 
+	
+		// Nested types
+		private struct NamespaceDeclaration // TypeDefIndex: 42641
+		{
+			// Fields
+			public string prefix; // 0x00
+			public string uri; // 0x08
+			public int scopeId; // 0x10
+			public int previousNsIndex; // 0x14
+	
+			// Methods
+			public void Set(string prefix, string uri, int scopeId, int previousNsIndex) {} // 0x0000000189977548-0x0000000189977578
+		}
+	
+		// Constructors
+		internal XmlNamespaceManager() {} // 0x000000018350B670-0x000000018350B680
+		public XmlNamespaceManager(XmlNameTable nameTable) {} // 0x000000018998D91C-0x000000018998DB20
+	
+		// Methods
+		public virtual void PushScope() {} // 0x0000000183D69B30-0x0000000183D69B40
+		public virtual bool PopScope() => default; // 0x000000018998D6C0-0x000000018998D78C
+		public virtual void AddNamespace(string prefix, string uri) {} // 0x000000018998CDA4-0x000000018998D1BC
+		public virtual void RemoveNamespace(string prefix, string uri) {} // 0x000000018998D78C-0x000000018998D91C
+		public virtual IEnumerator GetEnumerator() => default; // 0x000000018998D1BC-0x000000018998D320
+		public virtual IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x000000018998D320-0x000000018998D494
+		public virtual string LookupNamespace(string prefix) => default; // 0x000000018998D5E0-0x000000018998D61C
+		private int LookupNamespaceDecl(string prefix) => default; // 0x000000018998D494-0x000000018998D5E0
+		public virtual string LookupPrefix(string uri) => default; // 0x000000018998D61C-0x000000018998D6C0
+	}
+
+	public enum XmlNodeOrder // TypeDefIndex: 42643
+	{
+		Before = 0,
+		After = 1,
+		Same = 2,
+		Unknown = 3
+	}
+
+	public enum XmlNodeType // TypeDefIndex: 42644
+	{
+		None = 0,
+		Element = 1,
+		Attribute = 2,
+		Text = 3,
+		CDATA = 4,
+		EntityReference = 5,
+		Entity = 6,
+		ProcessingInstruction = 7,
+		Comment = 8,
+		Document = 9,
+		DocumentType = 10,
+		DocumentFragment = 11,
+		Notation = 12,
+		Whitespace = 13,
+		SignificantWhitespace = 14,
+		EndElement = 15,
+		EndEntity = 16,
+		XmlDeclaration = 17
+	}
+
+	[Serializable]
+	public class XmlQualifiedName // TypeDefIndex: 42646
+	{
+		// Fields
+		private static HashCodeOfStringDelegate hashCodeDelegate; // 0x00
+		private string name; // 0x10
+		private string ns; // 0x18
+		[NonSerialized]
+		private int hash; // 0x20
+		public static readonly XmlQualifiedName Empty; // 0x08
+	
+		// Properties
+		public string Namespace { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public string Name { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public bool IsEmpty { get => default; } // 0x000000018998E43C-0x000000018998E470 
+	
+		// Nested types
+		private delegate int HashCodeOfStringDelegate(string s, int sLen, long additionalEntropy); // TypeDefIndex: 42645; 0x0000000181035ED0-0x0000000181035EF0
+	
+		// Constructors
+		public XmlQualifiedName() {} // 0x000000018998E3F0-0x000000018998E43C
+		public XmlQualifiedName(string name) {} // 0x000000018998E304-0x000000018998E35C
+		public XmlQualifiedName(string name, string ns) {} // 0x000000018998E35C-0x000000018998E3F0
+		static XmlQualifiedName() {} // 0x000000018998E240-0x000000018998E304
+	
+		// Methods
+		public override int GetHashCode() => default; // 0x000000018998DEB0-0x000000018998DF8C
+		public override string ToString() => default; // 0x000000018998E108-0x000000018998E168
+		public override bool Equals(object other) => default; // 0x000000018998DCA8-0x000000018998DD4C
+		public static bool operator ==(XmlQualifiedName a, XmlQualifiedName b) => default; // 0x000000018998E470-0x000000018998E4C8
+		public static bool operator !=(XmlQualifiedName a, XmlQualifiedName b) => default; // 0x000000018998E4C8-0x000000018998E51C
+		public static string ToString(string name, string ns) => default; // 0x000000018998E168-0x000000018998E1C4
+		private static HashCodeOfStringDelegate GetHashCodeDelegate() => default; // 0x000000018998DD4C-0x000000018998DEB0
+		private static bool IsRandomizedHashingDisabled() => default; // 0x000000018115F4C0-0x000000018115F530
+		private static int GetHashCodeOfString(string s, int length, long additionalEntropy) => default; // 0x0000000183D4C200-0x0000000183D4C220
+		internal void Init(string name, string ns) {} // 0x000000018998DF8C-0x000000018998DFC0
+		internal void SetNamespace(string ns) {} // 0x00000001822C3A90-0x00000001822C3AA0
+		internal void Verify() {} // 0x000000018998E1C4-0x000000018998E240
+		internal void Atomize(XmlNameTable nameTable) {} // 0x000000018998DC04-0x000000018998DC64
+		internal static XmlQualifiedName Parse(string s, IXmlNamespaceResolver nsmgr, out string prefix) {
+			prefix = default;
+			return default;
+		} // 0x000000018998DFC0-0x000000018998E108
+		internal XmlQualifiedName Clone() => default; // 0x000000018998DC64-0x000000018998DCA8
+	}
+
+	public abstract class XmlResolver // TypeDefIndex: 42647
+	{
+		// Constructors
+		protected XmlResolver() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public abstract object GetEntity(System.Uri absoluteUri, string role, System.Type ofObjectToReturn);
+		public virtual System.Uri ResolveUri(System.Uri baseUri, string relativeUri) => default; // 0x000000018998EA4C-0x000000018998EC74
+		public virtual bool SupportsType(System.Uri absoluteUri, System.Type type) => default; // 0x000000018998EC74-0x000000018998ED70
+		public virtual Task<object> GetEntityAsync(System.Uri absoluteUri, string role, System.Type ofObjectToReturn) => default; // 0x000000018998EA00-0x000000018998EA4C
+	}
+
+	public class XmlUrlResolver : XmlResolver // TypeDefIndex: 42649
+	{
+		// Fields
+		private static object s_DownloadManager; // 0x00
+		private ICredentials _credentials; // 0x10
+		private IWebProxy _proxy; // 0x18
+		private RequestCachePolicy _cachePolicy; // 0x20
+	
+		// Properties
+		private static XmlDownloadManager DownloadManager { get => default; } // 0x000000018998F684-0x000000018998F718 
+	
+		// Constructors
+		public XmlUrlResolver() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public override object GetEntity(System.Uri absoluteUri, string role, System.Type ofObjectToReturn) => default; // 0x000000018998F51C-0x000000018998F67C
+		public override System.Uri ResolveUri(System.Uri baseUri, string relativeUri) => default; // 0x000000018998F67C-0x000000018998F684
+		public override async Task<object> GetEntityAsync(System.Uri absoluteUri, string role, System.Type ofObjectToReturn) => default; // 0x000000018998F414-0x000000018998F51C
+	}
+
+	internal static class BinaryCompatibility // TypeDefIndex: 42650
+	{
+		// Properties
+		public static bool TargetsAtLeast_Desktop_V4_5_2 { get; } // 0x000000018232EB60-0x000000018232EB70 
+	}
+
+	internal static class Res // TypeDefIndex: 42651
+	{
+		// Methods
+		public static string GetString(string name) => default; // 0x000000018339AE90-0x000000018339AEA0
+		public static string GetString(string name, params object[] args) => default; // 0x0000000189977CB0-0x0000000189977CCC
+	}
+}
+
+namespace System.Xml.Schema
+{
+	internal class AxisElement // TypeDefIndex: 42757
+	{
+		// Fields
+		internal DoubleLinkAxis curNode; // 0x10
+		internal int rootDepth; // 0x18
+		internal int curDepth; // 0x1C
+		internal bool isMatch; // 0x20
+	
+		// Properties
+		internal DoubleLinkAxis CurNode { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+	
+		// Constructors
+		public AxisElement() {} // Dummy constructor
+		internal AxisElement(DoubleLinkAxis node, int depth) {} // 0x00000001899A9DAC-0x00000001899A9DD8
+	
+		// Methods
+		internal void SetDepth(int depth) {} // 0x0000000183D75CC0-0x0000000183D75CD0
+		internal void MoveToParent(int depth, ForwardAxis parent) {} // 0x00000001899A9CD4-0x00000001899A9DAC
+		internal bool MoveToChild(string name, string URN, int depth, ForwardAxis parent) => default; // 0x00000001899A9BC0-0x00000001899A9CD4
+	}
+
+	internal class AxisStack // TypeDefIndex: 42758
+	{
+		// Fields
+		private ArrayList _stack; // 0x10
+		private ForwardAxis _subtree; // 0x18
+		private ActiveAxis _parent; // 0x20
+	
+		// Properties
+		internal ForwardAxis Subtree { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		internal int Length { get => default; } // 0x000000018920A6DC-0x000000018920A700 
+	
+		// Constructors
+		public AxisStack() {} // Dummy constructor
+		public AxisStack(ForwardAxis faxis, ActiveAxis parent) {} // 0x00000001899AA310-0x00000001899AA3C4
+	
+		// Methods
+		internal void Push(int depth) {} // 0x00000001899AA278-0x00000001899AA310
+		internal void Pop() {} // 0x00000001899AA244-0x00000001899AA278
+		internal static bool Equal(string thisname, string thisURN, string name, string URN) => default; // 0x00000001899A9DD8-0x00000001899A9E48
+		internal void MoveToParent(string name, string URN, int depth) {} // 0x00000001899AA108-0x00000001899AA244
+		internal bool MoveToChild(string name, string URN, int depth) => default; // 0x00000001899A9FB8-0x00000001899AA108
+		internal bool MoveToAttribute(string name, string URN, int depth) => default; // 0x00000001899A9E48-0x00000001899A9FB8
+	}
+
+	internal class ActiveAxis // TypeDefIndex: 42759
+	{
+		// Fields
+		private int _currentDepth; // 0x10
+		private bool _isActive; // 0x14
+		private Asttree _axisTree; // 0x18
+		private ArrayList _axisStack; // 0x20
+	
+		// Properties
+		public int CurrentDepth { get => default; } // 0x0000000183D4E340-0x0000000183D4E350 
+	
+		// Constructors
+		public ActiveAxis() {} // Dummy constructor
+		internal ActiveAxis(Asttree axisTree) {} // 0x00000001899A8B38-0x00000001899A8CA0
+	
+		// Methods
+		internal void Reactivate() {} // 0x0000000183D75CB0-0x0000000183D75CC0
+		public bool MoveToStartElement(string localname, string URN) => default; // 0x00000001899A8A2C-0x00000001899A8B38
+		public virtual bool EndElement(string localname, string URN) => default; // 0x00000001899A8834-0x00000001899A8920
+		public bool MoveToAttribute(string localname, string URN) => default; // 0x00000001899A8920-0x00000001899A8A2C
+	}
+
+	internal class DoubleLinkAxis : MS.Internal.Xml.XPath.Axis // TypeDefIndex: 42760
+	{
+		// Fields
+		internal MS.Internal.Xml.XPath.Axis next; // 0x40
+	
+		// Properties
+		internal MS.Internal.Xml.XPath.Axis Next { get => default; set {} } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
+	
+		// Constructors
+		public DoubleLinkAxis() {} // Dummy constructor
+		internal DoubleLinkAxis(MS.Internal.Xml.XPath.Axis axis, DoubleLinkAxis inputaxis) {} // 0x00000001899AF890-0x00000001899AF924
+	
+		// Methods
+		internal static DoubleLinkAxis ConvertTree(MS.Internal.Xml.XPath.Axis axis) => default; // 0x00000001899AF7F0-0x00000001899AF890
+	}
+
+	internal class ForwardAxis // TypeDefIndex: 42761
+	{
+		// Fields
+		private DoubleLinkAxis _topNode; // 0x10
+		private DoubleLinkAxis _rootNode; // 0x18
+		private bool _isAttribute; // 0x20
+		private bool _isDss; // 0x21
+		private bool _isSelfAxis; // 0x22
+	
+		// Properties
+		internal DoubleLinkAxis RootNode { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		internal DoubleLinkAxis TopNode { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		internal bool IsAttribute { get => default; } // 0x0000000183D4EF90-0x0000000183D4EFA0 
+		internal bool IsDss { get => default; } // 0x0000000183D4F070-0x0000000183D4F080 
+		internal bool IsSelfAxis { get => default; } // 0x0000000183D4F740-0x0000000183D4F750 
+	
+		// Constructors
+		public ForwardAxis() {} // Dummy constructor
+		public ForwardAxis(DoubleLinkAxis axis, bool isdesorself) {} // 0x00000001899B0074-0x00000001899B013C
+	}
+
+	internal class Asttree // TypeDefIndex: 42762
+	{
+		// Fields
+		private ArrayList _fAxisArray; // 0x10
+		private string _xpathexpr; // 0x18
+		private bool _isField; // 0x20
+		private XmlNamespaceManager _nsmgr; // 0x28
+	
+		// Properties
+		internal ArrayList SubtreeArray { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+	
+		// Constructors
+		public Asttree() {} // Dummy constructor
+		public Asttree(string xPath, bool isField, XmlNamespaceManager nsmgr) {} // 0x00000001899A96B8-0x00000001899A9700
+	
+		// Methods
+		private static bool IsNameTest(MS.Internal.Xml.XPath.Axis ast) => default; // 0x00000001899A9560-0x00000001899A9588
+		internal static bool IsAttribute(MS.Internal.Xml.XPath.Axis ast) => default; // 0x00000001899A9510-0x00000001899A9538
+		private static bool IsDescendantOrSelf(MS.Internal.Xml.XPath.Axis ast) => default; // 0x00000001899A9538-0x00000001899A9560
+		internal static bool IsSelf(MS.Internal.Xml.XPath.Axis ast) => default; // 0x00000001899A9588-0x00000001899A95B0
+		public void CompileXPath(string xPath, bool isField, XmlNamespaceManager nsmgr) {} // 0x00000001899A8CA0-0x00000001899A9510
+		private void SetURN(MS.Internal.Xml.XPath.Axis axis, XmlNamespaceManager nsmgr) {} // 0x00000001899A95B0-0x00000001899A96B8
+	}
+
+	internal class AutoValidator : BaseValidator // TypeDefIndex: 42763
+	{
+		// Properties
+		public override bool PreserveWhitespace { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+	
+		// Constructors
+		public AutoValidator() {} // Dummy constructor
+		public AutoValidator(XmlValidatingReaderImpl reader, XmlSchemaCollection schemaCollection, IValidationEventHandling eventHandling) {} // 0x00000001899A9B28-0x00000001899A9BC0
+	
+		// Methods
+		public override void Validate() {} // 0x00000001899A9A3C-0x00000001899A9B28
+		public override void CompleteValidation() {} // 0x000000018350B670-0x000000018350B680
+		public override object FindId(string name) => default; // 0x0000000181002730-0x0000000181002740
+		private ValidationType DetectValidationType() => default; // 0x00000001899A9700-0x00000001899A9A3C
+	}
+
+	internal class BaseProcessor // TypeDefIndex: 42764
+	{
+		// Fields
+		private XmlNameTable nameTable; // 0x10
+		private SchemaNames schemaNames; // 0x18
+		private ValidationEventHandler eventHandler; // 0x20
+		private XmlSchemaCompilationSettings compilationSettings; // 0x28
+		private int errorCount; // 0x30
+		private string NsXml; // 0x38
+	
+		// Properties
+		protected XmlNameTable NameTable { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		protected SchemaNames SchemaNames { get => default; } // 0x00000001899AB178-0x00000001899AB1FC 
+		protected ValidationEventHandler EventHandler { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		protected XmlSchemaCompilationSettings CompilationSettings { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		protected bool HasErrors { get => default; } // 0x00000001891654B0-0x00000001891654B8 
+	
+		// Constructors
+		public BaseProcessor() {} // Dummy constructor
+		public BaseProcessor(XmlNameTable nameTable, SchemaNames schemaNames, ValidationEventHandler eventHandler) {} // 0x00000001899AB038-0x00000001899AB0C0
+		public BaseProcessor(XmlNameTable nameTable, SchemaNames schemaNames, ValidationEventHandler eventHandler, XmlSchemaCompilationSettings compilationSettings) {} // 0x00000001899AB0C0-0x00000001899AB178
+	
+		// Methods
+		protected void AddToTable(XmlSchemaObjectTable table, XmlQualifiedName qname, XmlSchemaObject item) {} // 0x00000001899AA3C4-0x00000001899AA78C
+		private bool IsValidAttributeGroupRedefine(XmlSchemaObject existingObject, XmlSchemaObject item, XmlSchemaObjectTable table) => default; // 0x00000001899AA78C-0x00000001899AA84C
+		private bool IsValidGroupRedefine(XmlSchemaObject existingObject, XmlSchemaObject item, XmlSchemaObjectTable table) => default; // 0x00000001899AA84C-0x00000001899AA8F4
+		private bool IsValidTypeRedefine(XmlSchemaObject existingObject, XmlSchemaObject item, XmlSchemaObjectTable table) => default; // 0x00000001899AA8F4-0x00000001899AA9B4
+		protected void SendValidationEvent(string code, XmlSchemaObject source) {} // 0x00000001899AAEBC-0x00000001899AAF48
+		protected void SendValidationEvent(string code, string msg, XmlSchemaObject source) {} // 0x00000001899AAC44-0x00000001899AACE4
+		protected void SendValidationEvent(string code, string msg1, string msg2, XmlSchemaObject source) {} // 0x00000001899AAF48-0x00000001899AB02C
+		protected void SendValidationEvent(string code, string[] args, Exception innerException, XmlSchemaObject source) {} // 0x00000001899AADDC-0x00000001899AAEBC
+		protected void SendValidationEvent(string code, string msg1, string msg2, string sourceUri, int lineNumber, int linePosition) {} // 0x00000001899AACE4-0x00000001899AADDC
+		protected void SendValidationEvent(string code, XmlSchemaObject source, XmlSeverityType severity) {} // 0x00000001899AAB0C-0x00000001899AABA4
+		protected void SendValidationEvent(XmlSchemaException e) {} // 0x00000001899AB02C-0x00000001899AB038
+		protected void SendValidationEvent(string code, string msg, XmlSchemaObject source, XmlSeverityType severity) {} // 0x00000001899AABA4-0x00000001899AAC44
+		protected void SendValidationEvent(XmlSchemaException e, XmlSeverityType severity) {} // 0x00000001899AAA50-0x00000001899AAB0C
+		protected void SendValidationEventNoThrow(XmlSchemaException e, XmlSeverityType severity) {} // 0x00000001899AA9B4-0x00000001899AAA50
+	}
+
+	internal class BaseValidator // TypeDefIndex: 42765
+	{
+		// Fields
+		private XmlSchemaCollection schemaCollection; // 0x10
+		private IValidationEventHandling eventHandling; // 0x18
+		private XmlNameTable nameTable; // 0x20
+		private SchemaNames schemaNames; // 0x28
+		private PositionInfo positionInfo; // 0x30
+		private XmlResolver xmlResolver; // 0x38
+		private System.Uri baseUri; // 0x40
+		protected SchemaInfo schemaInfo; // 0x48
+		protected XmlValidatingReaderImpl reader; // 0x50
+		protected XmlQualifiedName elementName; // 0x58
+		protected ValidationState context; // 0x60
+		protected StringBuilder textValue; // 0x68
+		protected string textString; // 0x70
+		protected bool hasSibling; // 0x78
+		protected bool checkDatatype; // 0x79
+	
+		// Properties
+		public XmlValidatingReaderImpl Reader { get => default; } // 0x0000000183D4EAF0-0x0000000183D4EB00 
+		public XmlSchemaCollection SchemaCollection { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public XmlNameTable NameTable { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public SchemaNames SchemaNames { get => default; } // 0x00000001899AC1F0-0x00000001899AC294 
+		public PositionInfo PositionInfo { get => default; } // 0x0000000181003830-0x0000000181003840 
+		public XmlResolver XmlResolver { get => default; set {} } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x000000018388FF30-0x000000018388FF40
+		public System.Uri BaseUri { get => default; set {} } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
+		public ValidationEventHandler EventHandler { get => default; } // 0x00000001899AC148-0x00000001899AC1F0 
+		public SchemaInfo SchemaInfo { get => default; } // 0x0000000183D4EA70-0x0000000183D4EA80 
+		public IDtdInfo DtdInfo { set {} } // 0x00000001899AC294-0x00000001899AC358
+		public virtual bool PreserveWhitespace { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+	
+		// Constructors
+		public BaseValidator() {} // Dummy constructor
+		public BaseValidator(BaseValidator other) {} // 0x00000001899AC094-0x00000001899AC148
+		public BaseValidator(XmlValidatingReaderImpl reader, XmlSchemaCollection schemaCollection, IValidationEventHandling eventHandling) {} // 0x00000001899ABFB4-0x00000001899AC094
+	
+		// Methods
+		public virtual void Validate() {} // 0x000000018350B670-0x000000018350B680
+		public virtual void CompleteValidation() {} // 0x000000018350B670-0x000000018350B680
+		public virtual object FindId(string name) => default; // 0x0000000181002730-0x0000000181002740
+		public void ValidateText() {} // 0x00000001899ABC08-0x00000001899ABE70
+		public void ValidateWhitespace() {} // 0x00000001899ABE70-0x00000001899ABFB4
+		private void SaveTextValue(string value) {} // 0x00000001899AB710-0x00000001899AB784
+		protected void SendValidationEvent(string code) {} // 0x00000001899AB87C-0x00000001899AB8D4
+		protected void SendValidationEvent(string code, string[] args) {} // 0x00000001899ABB14-0x00000001899ABC08
+		protected void SendValidationEvent(string code, string arg) {} // 0x00000001899AB9D8-0x00000001899ABACC
+		protected void SendValidationEvent(XmlSchemaException e) {} // 0x00000001899AB9CC-0x00000001899AB9D8
+		protected void SendValidationEvent(string code, string msg, XmlSeverityType severity) {} // 0x00000001899AB8D4-0x00000001899AB9CC
+		protected void SendValidationEvent(string code, string[] args, XmlSeverityType severity) {} // 0x00000001899AB784-0x00000001899AB87C
+		protected void SendValidationEvent(XmlSchemaException e, XmlSeverityType severity) {} // 0x00000001899ABACC-0x00000001899ABB14
+		protected static void ProcessEntity(SchemaInfo sinfo, string name, object sender, ValidationEventHandler eventhandler, string baseUri, int lineNumber, int linePosition) {} // 0x00000001899AB39C-0x00000001899AB57C
+		protected static void ProcessEntity(SchemaInfo sinfo, string name, IValidationEventHandling eventHandling, string baseUriStr, int lineNumber, int linePosition) {} // 0x00000001899AB57C-0x00000001899AB710
+		public static BaseValidator CreateInstance(ValidationType valType, XmlValidatingReaderImpl reader, XmlSchemaCollection schemaCollection, IValidationEventHandling eventHandling, bool processIdentityConstraints) => default; // 0x00000001899AB1FC-0x00000001899AB39C
+	}
+
+	internal sealed class BitSet // TypeDefIndex: 42766
+	{
+		// Fields
+		private int count; // 0x10
+		private uint[] bits; // 0x18
+	
+		// Properties
+		public int Count { get => default; } // 0x0000000183D4E340-0x0000000183D4E350 
+		public bool this[int index] { get => default; } // 0x00000001899ACA24-0x00000001899ACA2C 
+		public bool IsEmpty { get => default; } // 0x00000001899AC9E0-0x00000001899ACA24 
+	
+		// Constructors
+		private BitSet() {} // 0x000000018350B670-0x000000018350B680
+		public BitSet(int count) {} // 0x00000001899AC988-0x00000001899AC9E0
+	
+		// Methods
+		public void Clear() {} // 0x00000001899AC430-0x00000001899AC478
+		public void Set(int index) {} // 0x00000001899AC930-0x00000001899AC988
+		public bool Get(int index) => default; // 0x00000001899AC704-0x00000001899AC754
+		public int NextSet(int startFrom) => default; // 0x00000001899AC814-0x00000001899AC898
+		public void And(BitSet other) {} // 0x00000001899AC358-0x00000001899AC430
+		public void Or(BitSet other) {} // 0x00000001899AC898-0x00000001899AC930
+		public override int GetHashCode() => default; // 0x00000001899AC6CC-0x00000001899AC704
+		public override bool Equals(object obj) => default; // 0x00000001899AC5A8-0x00000001899AC6CC
+		public BitSet Clone() => default; // 0x00000001899AC478-0x00000001899AC518
+		public bool Intersects(BitSet other) => default; // 0x00000001899AC754-0x00000001899AC814
+		private int Subscript(int bitIndex) => default; // 0x0000000183D75CD0-0x0000000183D75CE0
+		private void EnsureLength(int nRequiredLength) {} // 0x00000001899AC518-0x00000001899AC5A8
+	}
+
+	internal class ChameleonKey // TypeDefIndex: 42767
+	{
+		// Fields
+		internal string targetNS; // 0x10
+		internal System.Uri chameleonLocation; // 0x18
+		internal XmlSchema originalSchema; // 0x20
+		private int hashCode; // 0x28
+	
+		// Constructors
+		public ChameleonKey() {} // Dummy constructor
+		public ChameleonKey(string ns, XmlSchema originalSchema) {} // 0x00000001899ACBF0-0x00000001899ACC60
+	
+		// Methods
+		public override int GetHashCode() => default; // 0x00000001899ACB6C-0x00000001899ACBF0
+		public override bool Equals(object obj) => default; // 0x00000001899ACACC-0x00000001899ACB6C
+	}
+
+	internal class CompiledIdentityConstraint // TypeDefIndex: 42769
+	{
+		// Fields
+		internal XmlQualifiedName name; // 0x10
+		private ConstraintRole role; // 0x18
+		private Asttree selector; // 0x20
+		private Asttree[] fields; // 0x28
+		internal XmlQualifiedName refer; // 0x30
+		public static readonly CompiledIdentityConstraint Empty; // 0x00
+	
+		// Properties
+		public ConstraintRole Role { get => default; } // 0x00000001820D1AC0-0x00000001820D1AD0 
+		public Asttree Selector { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public Asttree[] Fields { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+	
+		// Nested types
+		public enum ConstraintRole // TypeDefIndex: 42768
+		{
+			Unique = 0,
+			Key = 1,
+			Keyref = 2
+		}
+	
+		// Constructors
+		private CompiledIdentityConstraint() {} // 0x00000001899AE900-0x00000001899AE974
+		public CompiledIdentityConstraint(XmlSchemaIdentityConstraint constraint, XmlNamespaceManager nsmgr) {} // 0x00000001899AE974-0x00000001899AEDB0
+		static CompiledIdentityConstraint() {} // 0x00000001899AE890-0x00000001899AE900
+	}
+
+	internal sealed class ConstraintStruct // TypeDefIndex: 42770
+	{
+		// Fields
+		internal CompiledIdentityConstraint constraint; // 0x10
+		internal SelectorActiveAxis axisSelector; // 0x18
+		internal ArrayList axisFields; // 0x20
+		internal Hashtable qualifiedTable; // 0x28
+		internal Hashtable keyrefTable; // 0x30
+		private int tableDim; // 0x38
+	
+		// Properties
+		internal int TableDim { get => default; } // 0x0000000183D4EC30-0x0000000183D4EC40 
+	
+		// Constructors
+		public ConstraintStruct() {} // Dummy constructor
+		internal ConstraintStruct(CompiledIdentityConstraint constraint) {} // 0x00000001899AEDB0-0x00000001899AEED8
+	}
+
+	internal class LocatedActiveAxis : ActiveAxis // TypeDefIndex: 42771
+	{
+		// Fields
+		private int column; // 0x28
+		internal bool isMatched; // 0x2C
+		internal KeySequence Ks; // 0x30
+	
+		// Properties
+		internal int Column { get => default; } // 0x0000000183D4EB90-0x0000000183D4EBA0 
+	
+		// Constructors
+		public LocatedActiveAxis() {} // Dummy constructor
+		internal LocatedActiveAxis(Asttree astfield, KeySequence ks, int column) {} // 0x00000001899B15DC-0x00000001899B1620
+	
+		// Methods
+		internal void Reactivate(KeySequence ks) {} // 0x00000001899B15C4-0x00000001899B15DC
+	}
+
+	internal class SelectorActiveAxis : ActiveAxis // TypeDefIndex: 42772
+	{
+		// Fields
+		private ConstraintStruct cs; // 0x28
+		private ArrayList KSs; // 0x30
+		private int KSpointer; // 0x38
+	
+		// Properties
+		public int lastDepth { get => default; } // 0x00000001899B3C8C-0x00000001899B3D0C 
+	
+		// Constructors
+		public SelectorActiveAxis() {} // Dummy constructor
+		public SelectorActiveAxis(Asttree axisTree, ConstraintStruct cs) {} // 0x00000001899B3BFC-0x00000001899B3C8C
+	
+		// Methods
+		public override bool EndElement(string localname, string URN) => default; // 0x00000001899B3890-0x00000001899B38D0
+		public int PushKS(int errline, int errcol) => default; // 0x00000001899B394C-0x00000001899B3BFC
+		public KeySequence PopKS() => default; // 0x00000001899B38D0-0x00000001899B394C
+	}
+
+	internal class KSStruct // TypeDefIndex: 42773
+	{
+		// Fields
+		public int depth; // 0x10
+		public KeySequence ks; // 0x18
+		public LocatedActiveAxis[] fields; // 0x20
+	
+		// Constructors
+		public KSStruct() {} // Dummy constructor
+		public KSStruct(KeySequence ks, int dim) {} // 0x00000001899B0318-0x00000001899B0384
+	}
+
+	internal class TypedObject // TypeDefIndex: 42775
+	{
+		// Fields
+		private DecimalStruct dstruct; // 0x10
+		private object ovalue; // 0x18
+		private string svalue; // 0x20
+		private XmlSchemaDatatype xsdtype; // 0x28
+		private int dim; // 0x30
+		private bool isList; // 0x34
+	
+		// Properties
+		public int Dim { get => default; } // 0x0000000183D4ED20-0x0000000183D4ED30 
+		public bool IsList { get => default; } // 0x0000000183D4F570-0x0000000183D4F580 
+		public bool IsDecimal { get => default; } // 0x0000000189187BEC-0x0000000189187C08 
+		public decimal[] Dvalue { get => default; } // 0x00000001856B3E18-0x00000001856B3E34 
+		public object Value { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public XmlSchemaDatatype Type { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+	
+		// Nested types
+		private class DecimalStruct // TypeDefIndex: 42774
+		{
+			// Fields
+			private bool isDecimal; // 0x10
+			private decimal[] dvalue; // 0x18
+	
+			// Properties
+			public bool IsDecimal { get => default; set {} } // 0x00000001811797F0-0x0000000181179800 0x0000000183D4E960-0x0000000183D4E970
+			public decimal[] Dvalue { get => default; } // 0x0000000181041090-0x00000001810410A0 
+	
+			// Constructors
+			public DecimalStruct() {} // 0x00000001899AF2E8-0x00000001899AF330
+			public DecimalStruct(int dim) {} // 0x00000001899AF294-0x00000001899AF2E8
+		}
+	
+		// Constructors
+		public TypedObject() {} // Dummy constructor
+		public TypedObject(object obj, string svalue, XmlSchemaDatatype xsdtype) {} // 0x00000001899B58F4-0x00000001899B5A08
+	
+		// Methods
+		public override string ToString() => default; // 0x0000000183D4EB40-0x0000000183D4EB50
+		public void SetDecimal() {} // 0x00000001899B5678-0x00000001899B58F4
+		private bool ListDValueEquals(TypedObject other) => default; // 0x00000001899B5594-0x00000001899B5678
+		public bool Equals(TypedObject other) => default; // 0x00000001899B53A4-0x00000001899B5594
+	}
+
+	internal class KeySequence // TypeDefIndex: 42776
+	{
+		// Fields
+		private TypedObject[] ks; // 0x10
+		private int dim; // 0x18
+		private int hashcode; // 0x1C
+		private int posline; // 0x20
+		private int poscol; // 0x24
+	
+		// Properties
+		public int PosLine { get => default; } // 0x0000000181003B50-0x0000000181003B60 
+		public int PosCol { get => default; } // 0x0000000183D4E2E0-0x0000000183D4E2F0 
+		public object this[int index] { get => default; set {} } // 0x000000018594E120-0x000000018594E14C 0x00000001899B0984-0x00000001899B0A20
+	
+		// Constructors
+		public KeySequence() {} // Dummy constructor
+		internal KeySequence(int dim, int line, int col) {} // 0x00000001899B0908-0x00000001899B0984
+	
+		// Methods
+		internal bool IsQualified() => default; // 0x00000001899B0794-0x00000001899B07EC
+		public override int GetHashCode() => default; // 0x00000001899B0438-0x00000001899B0794
+		public override bool Equals(object other) => default; // 0x00000001899B0384-0x00000001899B0438
+		public override string ToString() => default; // 0x00000001899B07EC-0x00000001899B0908
+	}
+
+	internal class UpaException : Exception // TypeDefIndex: 42777
+	{
+		// Fields
+		private object particle1; // 0x90
+		private object particle2; // 0x98
+	
+		// Properties
+		public object Particle1 { get => default; } // 0x0000000183D4EA90-0x0000000183D4EAA0 
+		public object Particle2 { get => default; } // 0x00000001811AC510-0x00000001811AC520 
+	
+		// Constructors
+		public UpaException() {} // Dummy constructor
+		public UpaException(object particle1, object particle2) {} // 0x00000001899B5A08-0x00000001899B5A88
+	}
+
+	internal class SymbolsDictionary // TypeDefIndex: 42778
+	{
+		// Fields
+		private int last; // 0x10
+		private Hashtable names; // 0x18
+		private Hashtable wildcards; // 0x20
+		private ArrayList particles; // 0x28
+		private object particleLast; // 0x30
+		private bool isUpaEnforced; // 0x38
+	
+		// Properties
+		public int Count { get => default; } // 0x0000000183D75D40-0x0000000183D75D50 
+		public bool IsUpaEnforced { get => default; set {} } // 0x0000000183D4F190-0x0000000183D4F1A0 0x0000000183D4E280-0x0000000183D4E290
+		public int this[XmlQualifiedName name] { get => default; } // 0x00000001899B5314-0x00000001899B53A4 
+	
+		// Constructors
+		public SymbolsDictionary() {} // 0x00000001899B5274-0x00000001899B5314
+	
+		// Methods
+		public int AddName(XmlQualifiedName name, object particle) => default; // 0x00000001899B456C-0x00000001899B466C
+		public void AddNamespaceList(NamespaceList list, object particle, bool allowLocal) {} // 0x00000001899B466C-0x00000001899B4888
+		private void AddWildcard(string wildcard, object particle) {} // 0x00000001899B4888-0x00000001899B49C8
+		public ICollection GetNamespaceListSymbols(NamespaceList list) => default; // 0x00000001899B49F4-0x00000001899B4E98
+		public bool Exists(XmlQualifiedName name) => default; // 0x00000001899B49C8-0x00000001899B49F4
+		public object GetParticle(int symbol) => default; // 0x00000001899B4E98-0x00000001899B4ECC
+		public string NameOf(int symbol) => default; // 0x00000001899B4ECC-0x00000001899B5274
+	}
+
+	internal struct Position // TypeDefIndex: 42779
+	{
+		// Fields
+		public int symbol; // 0x00
+		public object particle; // 0x08
+	
+		// Constructors
+		public Position(int symbol, object particle) {
+			this.symbol = default;
+			this.particle = default;
+		} // 0x00000001871AED58-0x00000001871AED68
+	}
+
+	internal class Positions // TypeDefIndex: 42780
+	{
+		// Fields
+		private ArrayList positions; // 0x10
+	
+		// Properties
+		public Position this[int pos] { get => default; } // 0x00000001899B37E8-0x00000001899B3864 
+		public int Count { get => default; } // 0x000000018920A6DC-0x000000018920A700 
+	
+		// Constructors
+		public Positions() {} // 0x00000001899B3784-0x00000001899B37E8
+	
+		// Methods
+		public int Add(int symbol, object particle) => default; // 0x00000001899B36EC-0x00000001899B3784
+	}
+
+	internal abstract class SyntaxTreeNode // TypeDefIndex: 42781
+	{
+		// Properties
+		public abstract bool IsNullable { get; }
+		public virtual bool IsRangeNode { get; } // 0x000000018115F4C0-0x000000018115F530 
+	
+		// Constructors
+		protected SyntaxTreeNode() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public abstract void ExpandTree(InteriorNode parent, SymbolsDictionary symbols, Positions positions);
+		public abstract void ConstructPos(BitSet firstpos, BitSet lastpos, BitSet[] followpos);
+	}
+
+	internal class LeafNode : SyntaxTreeNode // TypeDefIndex: 42782
+	{
+		// Fields
+		private int pos; // 0x10
+	
+		// Properties
+		public int Pos { get => default; set {} } // 0x0000000183D4E340-0x0000000183D4E350 0x00000001810410F0-0x0000000181041100
+		public override bool IsNullable { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+	
+		// Constructors
+		public LeafNode() {} // Dummy constructor
+		public LeafNode(int pos) {} // 0x00000001810410F0-0x0000000181041100
+	
+		// Methods
+		public override void ExpandTree(InteriorNode parent, SymbolsDictionary symbols, Positions positions) {} // 0x000000018350B670-0x000000018350B680
+		public override void ConstructPos(BitSet firstpos, BitSet lastpos, BitSet[] followpos) {} // 0x00000001899B0A20-0x00000001899B0A6C
+	}
+
+	internal class NamespaceListNode : SyntaxTreeNode // TypeDefIndex: 42783
+	{
+		// Fields
+		protected NamespaceList namespaceList; // 0x10
+		protected object particle; // 0x18
+	
+		// Properties
+		public override bool IsNullable { get => default; } // 0x00000001899B1A68-0x00000001899B1AB4 
+	
+		// Constructors
+		public NamespaceListNode() {} // Dummy constructor
+		public NamespaceListNode(NamespaceList namespaceList, object particle) {} // 0x0000000182676770-0x00000001826767A0
+	
+		// Methods
+		public virtual ICollection GetResolvedSymbols(SymbolsDictionary symbols) => default; // 0x00000001899B1A40-0x00000001899B1A68
+		public override void ExpandTree(InteriorNode parent, SymbolsDictionary symbols, Positions positions) {} // 0x00000001899B166C-0x00000001899B1A40
+		public override void ConstructPos(BitSet firstpos, BitSet lastpos, BitSet[] followpos) {} // 0x00000001899B1620-0x00000001899B166C
+	}
+
+	internal abstract class InteriorNode : SyntaxTreeNode // TypeDefIndex: 42784
+	{
+		// Fields
+		private SyntaxTreeNode leftChild; // 0x10
+		private SyntaxTreeNode rightChild; // 0x18
+	
+		// Properties
+		public SyntaxTreeNode LeftChild { get; set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+		public SyntaxTreeNode RightChild { get; set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+	
+		// Constructors
+		protected InteriorNode() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		protected void ExpandTreeNoRecursive(InteriorNode parent, SymbolsDictionary symbols, Positions positions) {} // 0x00000001899B013C-0x00000001899B02B4
+		public override void ExpandTree(InteriorNode parent, SymbolsDictionary symbols, Positions positions) {} // 0x00000001899B02B4-0x00000001899B0318
+	}
+
+	internal sealed class SequenceNode : InteriorNode // TypeDefIndex: 42786
+	{
+		// Properties
+		public override bool IsNullable { get => default; } // 0x00000001899B4130-0x00000001899B426C 
+	
+		// Nested types
+		private struct SequenceConstructPosContext // TypeDefIndex: 42785
+		{
+			// Fields
+			public SequenceNode this_; // 0x00
+			public BitSet firstpos; // 0x08
+			public BitSet lastpos; // 0x10
+			public BitSet lastposLeft; // 0x18
+			public BitSet firstposRight; // 0x20
+	
+			// Constructors
+			public SequenceConstructPosContext(SequenceNode node, BitSet firstpos, BitSet lastpos) {
+				this_ = default;
+				this.firstpos = default;
+				this.lastpos = default;
+				lastposLeft = default;
+				firstposRight = default;
+			} // 0x00000001899B3D0C-0x00000001899B3D58
+		}
+	
+		// Constructors
+		public SequenceNode() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public override void ConstructPos(BitSet firstpos, BitSet lastpos, BitSet[] followpos) {} // 0x00000001899B3D58-0x00000001899B4130
+		public override void ExpandTree(InteriorNode parent, SymbolsDictionary symbols, Positions positions) {} // 0x00000001899ACE98-0x00000001899ACEA8
+	}
+
+	internal sealed class ChoiceNode : InteriorNode // TypeDefIndex: 42787
+	{
+		// Properties
+		public override bool IsNullable { get => default; } // 0x00000001899ACEA8-0x00000001899ACF20 
+	
+		// Constructors
+		public ChoiceNode() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		private static void ConstructChildPos(SyntaxTreeNode child, BitSet firstpos, BitSet lastpos, BitSet[] followpos) {} // 0x00000001899ACC60-0x00000001899ACD5C
+		public override void ConstructPos(BitSet firstpos, BitSet lastpos, BitSet[] followpos) {} // 0x00000001899ACD5C-0x00000001899ACE98
+		public override void ExpandTree(InteriorNode parent, SymbolsDictionary symbols, Positions positions) {} // 0x00000001899ACE98-0x00000001899ACEA8
+	}
+
+	internal sealed class PlusNode : InteriorNode // TypeDefIndex: 42788
+	{
+		// Properties
+		public override bool IsNullable { get => default; } // 0x00000001899B36C8-0x00000001899B36EC 
+	
+		// Constructors
+		public PlusNode() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public override void ConstructPos(BitSet firstpos, BitSet lastpos, BitSet[] followpos) {} // 0x00000001899B3620-0x00000001899B36C8
+	}
+
+	internal sealed class QmarkNode : InteriorNode // TypeDefIndex: 42789
+	{
+		// Properties
+		public override bool IsNullable { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+	
+		// Constructors
+		public QmarkNode() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public override void ConstructPos(BitSet firstpos, BitSet lastpos, BitSet[] followpos) {} // 0x00000001899B3864-0x00000001899B3890
+	}
+
+	internal sealed class StarNode : InteriorNode // TypeDefIndex: 42790
+	{
+		// Properties
+		public override bool IsNullable { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+	
+		// Constructors
+		public StarNode() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public override void ConstructPos(BitSet firstpos, BitSet lastpos, BitSet[] followpos) {} // 0x00000001899B3620-0x00000001899B36C8
+	}
+
+	internal sealed class LeafRangeNode : LeafNode // TypeDefIndex: 42791
+	{
+		// Fields
+		private decimal min; // 0x18
+		private decimal max; // 0x28
+		private BitSet nextIteration; // 0x38
+	
+		// Properties
+		public decimal Max { get => default; } // 0x0000000183D59E20-0x0000000183D59E30 
+		public decimal Min { get => default; } // 0x0000000183D51D80-0x0000000183D51D90 
+		public BitSet NextIteration { get => default; set {} } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x000000018388FF30-0x000000018388FF40
+		public override bool IsRangeNode { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+	
+		// Constructors
+		public LeafRangeNode() {} // Dummy constructor
+		public LeafRangeNode(decimal min, decimal max) {} // 0x0000000183D75D00-0x0000000183D75D20
+		public LeafRangeNode(int pos, decimal min, decimal max) {} // 0x0000000183D75D20-0x0000000183D75D40
+	
+		// Methods
+		public override void ExpandTree(InteriorNode parent, SymbolsDictionary symbols, Positions positions) {} // 0x00000001899B0A6C-0x00000001899B0AA4
+	}
+
+	internal class ContentValidator // TypeDefIndex: 42792
+	{
+		// Fields
+		private XmlSchemaContentType contentType; // 0x10
+		private bool isOpen; // 0x14
+		private bool isEmptiable; // 0x15
+		public static readonly ContentValidator Empty; // 0x00
+		public static readonly ContentValidator TextOnly; // 0x08
+		public static readonly ContentValidator Mixed; // 0x10
+		public static readonly ContentValidator Any; // 0x18
+	
+		// Properties
+		public XmlSchemaContentType ContentType { get => default; } // 0x0000000183D4E340-0x0000000183D4E350 
+		public bool PreserveWhitespace { get => default; } // 0x00000001899AF280-0x00000001899AF294 
+		public virtual bool IsEmptiable { get => default; } // 0x0000000183D58C10-0x0000000183D58C20 
+		public bool IsOpen { get => default; set {} } // 0x00000001899AF26C-0x00000001899AF280 0x0000000183D58C20-0x0000000183D58C30
+	
+		// Constructors
+		public ContentValidator() {} // Dummy constructor
+		public ContentValidator(XmlSchemaContentType contentType) {} // 0x0000000183D75CE0-0x0000000183D75CF0
+		protected ContentValidator(XmlSchemaContentType contentType, bool isOpen, bool isEmptiable) {} // 0x0000000183D75CF0-0x0000000183D75D00
+		static ContentValidator() {} // 0x00000001899AF128-0x00000001899AF26C
+	
+		// Methods
+		public virtual void InitValidation(ValidationState context) {} // 0x000000018350B670-0x000000018350B680
+		public virtual object ValidateElement(XmlQualifiedName name, ValidationState context, out int errorCode) {
+			errorCode = default;
+			return default;
+		} // 0x00000001899AF0F8-0x00000001899AF128
+		public virtual bool CompleteValidation(ValidationState context) => default; // 0x000000018232EB60-0x000000018232EB70
+		public virtual ArrayList ExpectedElements(ValidationState context, bool isRequiredOnly) => default; // 0x0000000181002730-0x0000000181002740
+		public virtual ArrayList ExpectedParticles(ValidationState context, bool isRequiredOnly, XmlSchemaSet schemaSet) => default; // 0x0000000181002730-0x0000000181002740
+		public static void AddParticleToExpected(XmlSchemaParticle p, XmlSchemaSet schemaSet, ArrayList particles) {} // 0x00000001899AF090-0x00000001899AF0F8
+		public static void AddParticleToExpected(XmlSchemaParticle p, XmlSchemaSet schemaSet, ArrayList particles, bool global) {} // 0x00000001899AEED8-0x00000001899AF090
+	}
+
+	internal sealed class ParticleContentValidator : ContentValidator // TypeDefIndex: 42793
+	{
+		// Fields
+		private SymbolsDictionary symbols; // 0x18
+		private Positions positions; // 0x20
+		private Stack stack; // 0x28
+		private SyntaxTreeNode contentNode; // 0x30
+		private bool isPartial; // 0x38
+		private int minMaxNodesCount; // 0x3C
+		private bool enableUpaCheck; // 0x40
+	
+		// Constructors
+		public ParticleContentValidator() {} // Dummy constructor
+		public ParticleContentValidator(XmlSchemaContentType contentType) {} // 0x00000001899B35B0-0x00000001899B35BC
+		public ParticleContentValidator(XmlSchemaContentType contentType, bool enableUpaCheck) {} // 0x00000001899B35BC-0x00000001899B3620
+	
+		// Methods
+		public override void InitValidation(ValidationState context) {} // 0x00000001899B3420-0x00000001899B346C
+		public override object ValidateElement(XmlQualifiedName name, ValidationState context, out int errorCode) {
+			errorCode = default;
+			return default;
+		} // 0x00000001899B3564-0x00000001899B35B0
+		public override bool CompleteValidation(ValidationState context) => default; // 0x00000001899B2CB4-0x00000001899B2D00
+		public void Start() {} // 0x00000001899B3490-0x00000001899B3564
+		public void OpenGroup() {} // 0x00000001899B346C-0x00000001899B3490
+		public void CloseGroup() {} // 0x00000001899B2AA0-0x00000001899B2B90
+		public bool Exists(XmlQualifiedName name) => default; // 0x00000001899B2D00-0x00000001899B2D28
+		public void AddName(XmlQualifiedName name, object particle) {} // 0x00000001899B1CC0-0x00000001899B1D68
+		public void AddNamespaceList(NamespaceList namespaceList, object particle) {} // 0x00000001899B1D68-0x00000001899B1E0C
+		private void AddLeafNode(SyntaxTreeNode node) {} // 0x00000001899B1B50-0x00000001899B1BE8
+		public void AddChoice() {} // 0x00000001899B1AB4-0x00000001899B1B50
+		public void AddSequence() {} // 0x00000001899B1EAC-0x00000001899B1F48
+		public void AddStar() {} // 0x00000001899B1F48-0x00000001899B1F98
+		public void AddPlus() {} // 0x00000001899B1E0C-0x00000001899B1E5C
+		public void AddQMark() {} // 0x00000001899B1E5C-0x00000001899B1EAC
+		public void AddLeafRange(decimal min, decimal max) {} // 0x00000001899B1BE8-0x00000001899B1CC0
+		private void Closure(InteriorNode node) {} // 0x00000001899B2B90-0x00000001899B2CB4
+		public ContentValidator Finish(bool useDFA) => default; // 0x00000001899B2D28-0x00000001899B32AC
+		private BitSet[] CalculateTotalFollowposForRangeNodes(BitSet firstpos, BitSet[] followpos, out BitSet posWithRangeTerminals) {
+			posWithRangeTerminals = default;
+			return default;
+		} // 0x00000001899B2414-0x00000001899B2704
+		private void CheckCMUPAWithLeafRangeNodes(BitSet curpos) {} // 0x00000001899B2704-0x00000001899B2870
+		private BitSet GetApplicableMinMaxFollowPos(BitSet curpos, BitSet posWithRangeTerminals, BitSet[] minmaxFollowPos) => default; // 0x00000001899B32AC-0x00000001899B3420
+		private void CheckUniqueParticleAttribution(BitSet firstpos, BitSet[] followpos) {} // 0x00000001899B2A30-0x00000001899B2AA0
+		private void CheckUniqueParticleAttribution(BitSet curpos) {} // 0x00000001899B2870-0x00000001899B2A30
+		private int[][] BuildTransitionTable(BitSet firstpos, BitSet[] followpos, int endMarkerPos) => default; // 0x00000001899B1F98-0x00000001899B2414
+	}
+
+	internal sealed class DfaContentValidator : ContentValidator // TypeDefIndex: 42794
+	{
+		// Fields
+		private int[][] transitionTable; // 0x18
+		private SymbolsDictionary symbols; // 0x20
+	
+		// Constructors
+		public DfaContentValidator() {} // Dummy constructor
+		internal DfaContentValidator(int[][] transitionTable, SymbolsDictionary symbols, XmlSchemaContentType contentType, bool isOpen, bool isEmptiable) {} // 0x00000001899AF768-0x00000001899AF7F0
+	
+		// Methods
+		public override void InitValidation(ValidationState context) {} // 0x00000001899AF604-0x00000001899AF664
+		public override object ValidateElement(XmlQualifiedName name, ValidationState context, out int errorCode) {
+			errorCode = default;
+			return default;
+		} // 0x00000001899AF664-0x00000001899AF768
+		public override bool CompleteValidation(ValidationState context) => default; // 0x00000001899AF330-0x00000001899AF34C
+		public override ArrayList ExpectedElements(ValidationState context, bool isRequiredOnly) => default; // 0x00000001899AF34C-0x00000001899AF4D0
+		public override ArrayList ExpectedParticles(ValidationState context, bool isRequiredOnly, XmlSchemaSet schemaSet) => default; // 0x00000001899AF4D0-0x00000001899AF604
+	}
+
+	internal sealed class NfaContentValidator : ContentValidator // TypeDefIndex: 42795
+	{
+		// Fields
+		private BitSet firstpos; // 0x18
+		private BitSet[] followpos; // 0x20
+		private SymbolsDictionary symbols; // 0x28
+		private Positions positions; // 0x30
+		private int endMarkerPos; // 0x38
+	
+		// Constructors
+		public NfaContentValidator() {} // Dummy constructor
+		internal NfaContentValidator(BitSet firstpos, BitSet[] followpos, SymbolsDictionary symbols, Positions positions, int endMarkerPos, XmlSchemaContentType contentType, bool isOpen, bool isEmptiable) {} // 0x00000001899D4DB4-0x00000001899D4E68
+	
+		// Methods
+		public override void InitValidation(ValidationState context) {} // 0x00000001899D4B40-0x00000001899D4C0C
+		public override object ValidateElement(XmlQualifiedName name, ValidationState context, out int errorCode) {
+			errorCode = default;
+			return default;
+		} // 0x00000001899D4C0C-0x00000001899D4DB4
+		public override bool CompleteValidation(ValidationState context) => default; // 0x00000001899D4824-0x00000001899D4870
+		public override ArrayList ExpectedElements(ValidationState context, bool isRequiredOnly) => default; // 0x00000001899D4870-0x00000001899D4A0C
+		public override ArrayList ExpectedParticles(ValidationState context, bool isRequiredOnly, XmlSchemaSet schemaSet) => default; // 0x00000001899D4A0C-0x00000001899D4B40
+	}
+
+	internal struct RangePositionInfo // TypeDefIndex: 42796
+	{
+		// Fields
+		public BitSet curpos; // 0x00
+		public decimal[] rangeCounters; // 0x08
+	}
+
+	internal sealed class RangeContentValidator : ContentValidator // TypeDefIndex: 42797
+	{
+		// Fields
+		private BitSet firstpos; // 0x18
+		private BitSet[] followpos; // 0x20
+		private BitSet positionsWithRangeTerminals; // 0x28
+		private SymbolsDictionary symbols; // 0x30
+		private Positions positions; // 0x38
+		private int minMaxNodesCount; // 0x40
+		private int endMarkerPos; // 0x44
+	
+		// Constructors
+		public RangeContentValidator() {} // Dummy constructor
+		internal RangeContentValidator(BitSet firstpos, BitSet[] followpos, SymbolsDictionary symbols, Positions positions, int endMarkerPos, XmlSchemaContentType contentType, bool isEmptiable, BitSet positionsWithRangeTerminals, int minmaxNodesCount) {} // 0x00000001899D6D60-0x00000001899D6E2C
+	
+		// Methods
+		public override void InitValidation(ValidationState context) {} // 0x00000001899D6354-0x00000001899D64C0
+		public override object ValidateElement(XmlQualifiedName name, ValidationState context, out int errorCode) {
+			errorCode = default;
+			return default;
+		} // 0x00000001899D64C0-0x00000001899D6D60
+		public override bool CompleteValidation(ValidationState context) => default; // 0x00000001899D5F18-0x00000001899D5F30
+		public override ArrayList ExpectedElements(ValidationState context, bool isRequiredOnly) => default; // 0x00000001899D5F30-0x00000001899D6170
+		public override ArrayList ExpectedParticles(ValidationState context, bool isRequiredOnly, XmlSchemaSet schemaSet) => default; // 0x00000001899D6170-0x00000001899D6354
+	}
+
+	internal sealed class AllElementsContentValidator : ContentValidator // TypeDefIndex: 42798
+	{
+		// Fields
+		private Hashtable elements; // 0x18
+		private object[] particles; // 0x20
+		private BitSet isRequired; // 0x28
+		private int countRequired; // 0x30
+	
+		// Properties
+		public override bool IsEmptiable { get => default; } // 0x00000001899BDC60-0x00000001899BDC74 
+	
+		// Constructors
+		public AllElementsContentValidator() {} // Dummy constructor
+		public AllElementsContentValidator(XmlSchemaContentType contentType, int size, bool isEmptiable) {} // 0x00000001899BDB58-0x00000001899BDC60
+	
+		// Methods
+		public bool AddElement(XmlQualifiedName name, object particle, bool isEmptiable) => default; // 0x00000001899BD2E4-0x00000001899BD3F8
+		public override void InitValidation(ValidationState context) {} // 0x00000001899BD9A8-0x00000001899BDA3C
+		public override object ValidateElement(XmlQualifiedName name, ValidationState context, out int errorCode) {
+			errorCode = default;
+			return default;
+		} // 0x00000001899BDA3C-0x00000001899BDB58
+		public override bool CompleteValidation(ValidationState context) => default; // 0x00000001899BD3F8-0x00000001899BD43C
+		public override ArrayList ExpectedElements(ValidationState context, bool isRequiredOnly) => default; // 0x00000001899BD43C-0x00000001899BD6C8
+		public override ArrayList ExpectedParticles(ValidationState context, bool isRequiredOnly, XmlSchemaSet schemaSet) => default; // 0x00000001899BD6C8-0x00000001899BD9A8
+	}
+
+	public enum XmlSchemaDatatypeVariety // TypeDefIndex: 42799
+	{
+		Atomic = 0,
+		List = 1,
+		Union = 2
+	}
+
+	internal class XsdSimpleValue // TypeDefIndex: 42800
+	{
+		// Fields
+		private XmlSchemaSimpleType xmlType; // 0x10
+		private object typedValue; // 0x18
+	
+		// Properties
+		public XmlSchemaSimpleType XmlType { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public object TypedValue { get => default; } // 0x0000000181041090-0x00000001810410A0 
+	
+		// Constructors
+		public XsdSimpleValue() {} // Dummy constructor
+		public XsdSimpleValue(XmlSchemaSimpleType st, object value) {} // 0x0000000182676770-0x00000001826767A0
+	}
+
+	[Flags]
+	internal enum RestrictionFlags // TypeDefIndex: 42801
+	{
+		Length = 1,
+		MinLength = 2,
+		MaxLength = 4,
+		Pattern = 8,
+		Enumeration = 16,
+		WhiteSpace = 32,
+		MaxInclusive = 64,
+		MaxExclusive = 128,
+		MinInclusive = 256,
+		MinExclusive = 512,
+		TotalDigits = 1024,
+		FractionDigits = 2048
+	}
+
+	internal enum XmlSchemaWhiteSpace // TypeDefIndex: 42802
+	{
+		Preserve = 0,
+		Replace = 1,
+		Collapse = 2
+	}
+
+	internal class RestrictionFacets // TypeDefIndex: 42803
+	{
+		// Fields
+		internal int Length; // 0x10
+		internal int MinLength; // 0x14
+		internal int MaxLength; // 0x18
+		internal ArrayList Patterns; // 0x20
+		internal ArrayList Enumeration; // 0x28
+		internal XmlSchemaWhiteSpace WhiteSpace; // 0x30
+		internal object MaxInclusive; // 0x38
+		internal object MaxExclusive; // 0x40
+		internal object MinInclusive; // 0x48
+		internal object MinExclusive; // 0x50
+		internal int TotalDigits; // 0x58
+		internal int FractionDigits; // 0x5C
+		internal RestrictionFlags Flags; // 0x60
+		internal RestrictionFlags FixedFlags; // 0x64
+	
+		// Constructors
+		public RestrictionFacets() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	internal abstract class DatatypeImplementation : XmlSchemaDatatype // TypeDefIndex: 42805
+	{
+		// Fields
+		private XmlSchemaDatatypeVariety variety; // 0x10
+		private RestrictionFacets restriction; // 0x18
+		private DatatypeImplementation baseType; // 0x20
+		private XmlValueConverter valueConverter; // 0x28
+		private XmlSchemaType parentSchemaType; // 0x30
+		private static Hashtable builtinTypes; // 0x00
+		private static XmlSchemaSimpleType[] enumToTypeCode; // 0x08
+		private static XmlSchemaSimpleType anySimpleType; // 0x10
+		private static XmlSchemaSimpleType anyAtomicType; // 0x18
+		private static XmlSchemaSimpleType untypedAtomicType; // 0x20
+		private static XmlSchemaSimpleType yearMonthDurationType; // 0x28
+		private static XmlSchemaSimpleType dayTimeDurationType; // 0x30
+		private static XmlSchemaSimpleType normalizedStringTypeV1Compat; // 0x38
+		private static XmlSchemaSimpleType tokenTypeV1Compat; // 0x40
+		internal static XmlQualifiedName QnAnySimpleType; // 0x48
+		internal static XmlQualifiedName QnAnyType; // 0x50
+		internal static FacetsChecker stringFacetsChecker; // 0x58
+		internal static FacetsChecker miscFacetsChecker; // 0x60
+		internal static FacetsChecker numeric2FacetsChecker; // 0x68
+		internal static FacetsChecker binaryFacetsChecker; // 0x70
+		internal static FacetsChecker dateTimeFacetsChecker; // 0x78
+		internal static FacetsChecker durationFacetsChecker; // 0x80
+		internal static FacetsChecker listFacetsChecker; // 0x88
+		internal static FacetsChecker qnameFacetsChecker; // 0x90
+		internal static FacetsChecker unionFacetsChecker; // 0x98
+		private static readonly DatatypeImplementation c_anySimpleType; // 0xA0
+		private static readonly DatatypeImplementation c_anyURI; // 0xA8
+		private static readonly DatatypeImplementation c_base64Binary; // 0xB0
+		private static readonly DatatypeImplementation c_boolean; // 0xB8
+		private static readonly DatatypeImplementation c_byte; // 0xC0
+		private static readonly DatatypeImplementation c_char; // 0xC8
+		private static readonly DatatypeImplementation c_date; // 0xD0
+		private static readonly DatatypeImplementation c_dateTime; // 0xD8
+		private static readonly DatatypeImplementation c_dateTimeNoTz; // 0xE0
+		private static readonly DatatypeImplementation c_dateTimeTz; // 0xE8
+		private static readonly DatatypeImplementation c_day; // 0xF0
+		private static readonly DatatypeImplementation c_decimal; // 0xF8
+		private static readonly DatatypeImplementation c_double; // 0x100
+		private static readonly DatatypeImplementation c_doubleXdr; // 0x108
+		private static readonly DatatypeImplementation c_duration; // 0x110
+		private static readonly DatatypeImplementation c_ENTITY; // 0x118
+		private static readonly DatatypeImplementation c_ENTITIES; // 0x120
+		private static readonly DatatypeImplementation c_ENUMERATION; // 0x128
+		private static readonly DatatypeImplementation c_fixed; // 0x130
+		private static readonly DatatypeImplementation c_float; // 0x138
+		private static readonly DatatypeImplementation c_floatXdr; // 0x140
+		private static readonly DatatypeImplementation c_hexBinary; // 0x148
+		private static readonly DatatypeImplementation c_ID; // 0x150
+		private static readonly DatatypeImplementation c_IDREF; // 0x158
+		private static readonly DatatypeImplementation c_IDREFS; // 0x160
+		private static readonly DatatypeImplementation c_int; // 0x168
+		private static readonly DatatypeImplementation c_integer; // 0x170
+		private static readonly DatatypeImplementation c_language; // 0x178
+		private static readonly DatatypeImplementation c_long; // 0x180
+		private static readonly DatatypeImplementation c_month; // 0x188
+		private static readonly DatatypeImplementation c_monthDay; // 0x190
+		private static readonly DatatypeImplementation c_Name; // 0x198
+		private static readonly DatatypeImplementation c_NCName; // 0x1A0
+		private static readonly DatatypeImplementation c_negativeInteger; // 0x1A8
+		private static readonly DatatypeImplementation c_NMTOKEN; // 0x1B0
+		private static readonly DatatypeImplementation c_NMTOKENS; // 0x1B8
+		private static readonly DatatypeImplementation c_nonNegativeInteger; // 0x1C0
+		private static readonly DatatypeImplementation c_nonPositiveInteger; // 0x1C8
+		private static readonly DatatypeImplementation c_normalizedString; // 0x1D0
+		private static readonly DatatypeImplementation c_NOTATION; // 0x1D8
+		private static readonly DatatypeImplementation c_positiveInteger; // 0x1E0
+		private static readonly DatatypeImplementation c_QName; // 0x1E8
+		private static readonly DatatypeImplementation c_QNameXdr; // 0x1F0
+		private static readonly DatatypeImplementation c_short; // 0x1F8
+		private static readonly DatatypeImplementation c_string; // 0x200
+		private static readonly DatatypeImplementation c_time; // 0x208
+		private static readonly DatatypeImplementation c_timeNoTz; // 0x210
+		private static readonly DatatypeImplementation c_timeTz; // 0x218
+		private static readonly DatatypeImplementation c_token; // 0x220
+		private static readonly DatatypeImplementation c_unsignedByte; // 0x228
+		private static readonly DatatypeImplementation c_unsignedInt; // 0x230
+		private static readonly DatatypeImplementation c_unsignedLong; // 0x238
+		private static readonly DatatypeImplementation c_unsignedShort; // 0x240
+		private static readonly DatatypeImplementation c_uuid; // 0x248
+		private static readonly DatatypeImplementation c_year; // 0x250
+		private static readonly DatatypeImplementation c_yearMonth; // 0x258
+		internal static readonly DatatypeImplementation c_normalizedStringV1Compat; // 0x260
+		internal static readonly DatatypeImplementation c_tokenV1Compat; // 0x268
+		private static readonly DatatypeImplementation c_anyAtomicType; // 0x270
+		private static readonly DatatypeImplementation c_dayTimeDuration; // 0x278
+		private static readonly DatatypeImplementation c_untypedAtomicType; // 0x280
+		private static readonly DatatypeImplementation c_yearMonthDuration; // 0x288
+		private static readonly DatatypeImplementation[] c_tokenizedTypes; // 0x290
+		private static readonly DatatypeImplementation[] c_tokenizedTypesXsd; // 0x298
+		private static readonly SchemaDatatypeMap[] c_XdrTypes; // 0x2A0
+		private static readonly SchemaDatatypeMap[] c_XsdTypes; // 0x2A8
+	
+		// Properties
+		internal static XmlSchemaSimpleType AnySimpleType { get; } // 0x00000001899C41A4-0x00000001899C41F4 
+		internal static XmlSchemaSimpleType UntypedAtomicType { get; } // 0x00000001899C4284-0x00000001899C42D4 
+		internal override FacetsChecker FacetsChecker { get; } // 0x00000001899C41F4-0x00000001899C4244 
+		internal override XmlValueConverter ValueConverter { get; } // 0x00000001899C42D4-0x00000001899C4330 
+		public override XmlTokenizedType TokenizedType { get; } // 0x0000000183D557A0-0x0000000183D557B0 
+		public override System.Type ValueType { get; } // 0x00000001899C4330-0x00000001899C4380 
+		public override XmlSchemaDatatypeVariety Variety { get; } // 0x0000000183D4E340-0x0000000183D4E350 
+		public override XmlTypeCode TypeCode { get; } // 0x0000000181002730-0x0000000181002740 
+		internal override RestrictionFacets Restriction { get; } // 0x0000000181041090-0x00000001810410A0 
+		internal override bool HasLexicalFacets { get; } // 0x00000001899C4244-0x00000001899C4264 
+		internal override bool HasValueFacets { get; } // 0x00000001899C4264-0x00000001899C4284 
+		protected DatatypeImplementation Base { get; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		internal abstract System.Type ListValueType { get; }
+		internal abstract RestrictionFlags ValidRestrictionFlags { get; }
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get; } // 0x0000000181002730-0x0000000181002740 
+	
+		// Nested types
+		private class SchemaDatatypeMap : IComparable // TypeDefIndex: 42804
+		{
+			// Fields
+			private string name; // 0x10
+			private DatatypeImplementation type; // 0x18
+			private int parentIndex; // 0x20
+	
+			// Properties
+			public string Name { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+			public int ParentIndex { get => default; } // 0x0000000181003B50-0x0000000181003B60 
+	
+			// Constructors
+			public SchemaDatatypeMap() {} // Dummy constructor
+			internal SchemaDatatypeMap(string name, DatatypeImplementation type) {} // 0x0000000182676770-0x00000001826767A0
+			internal SchemaDatatypeMap(string name, DatatypeImplementation type, int parentIndex) {} // 0x0000000183864580-0x00000001838645B0
+	
+			// Methods
+			public static explicit operator DatatypeImplementation(SchemaDatatypeMap sdm) => default; // 0x00000001842C4004-0x00000001842C401C
+			public int CompareTo(object obj) => default; // 0x00000001899D6E2C-0x00000001899D6EA0
+		}
+	
+		// Constructors
+		static DatatypeImplementation() {} // 0x00000001899BFE30-0x00000001899C41A4
+		protected DatatypeImplementation() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal static new DatatypeImplementation FromXmlTokenizedType(XmlTokenizedType token) => default; // 0x00000001899BEE38-0x00000001899BEEA0
+		internal static new DatatypeImplementation FromXmlTokenizedTypeXsd(XmlTokenizedType token) => default; // 0x00000001899BEDD0-0x00000001899BEE38
+		internal static new DatatypeImplementation FromXdrName(string name) => default; // 0x00000001899BED24-0x00000001899BEDD0
+		private static DatatypeImplementation FromTypeName(string name) => default; // 0x00000001899BEC78-0x00000001899BED24
+		internal static XmlSchemaSimpleType StartBuiltinType(XmlQualifiedName qname, XmlSchemaDatatype dataType) => default; // 0x00000001899BF9E0-0x00000001899BFAC0
+		internal static void FinishBuiltinType(XmlSchemaSimpleType derivedType, XmlSchemaSimpleType baseType) {} // 0x00000001899BEA4C-0x00000001899BEC78
+		internal static void CreateBuiltinTypes() {} // 0x00000001899BDCD4-0x00000001899BE69C
+		internal static XmlSchemaSimpleType GetSimpleTypeFromTypeCode(XmlTypeCode typeCode) => default; // 0x00000001899BF148-0x00000001899BF1AC
+		internal static XmlSchemaSimpleType GetSimpleTypeFromXsdType(XmlQualifiedName qname) => default; // 0x00000001899BF1AC-0x00000001899BF228
+		internal static XmlSchemaSimpleType GetNormalizedStringTypeV1Compat() => default; // 0x00000001899BEEF0-0x00000001899BF090
+		internal static XmlSchemaSimpleType GetTokenTypeV1Compat() => default; // 0x00000001899BF228-0x00000001899BF3C8
+		internal static XmlSchemaSimpleType[] GetBuiltInTypes() => default; // 0x00000001899BEEA0-0x00000001899BEEF0
+		internal static XmlTypeCode GetPrimitiveTypeCode(XmlTypeCode typeCode) => default; // 0x00000001899BF090-0x00000001899BF148
+		internal override XmlSchemaDatatype DeriveByRestriction(XmlSchemaObjectCollection facets, XmlNameTable nameTable, XmlSchemaType schemaType) => default; // 0x00000001899BE8B0-0x00000001899BE990
+		internal override XmlSchemaDatatype DeriveByList(XmlSchemaType schemaType) => default; // 0x00000001899BE69C-0x00000001899BE6AC
+		internal XmlSchemaDatatype DeriveByList(int minSize, XmlSchemaType schemaType) => default; // 0x00000001899BE6AC-0x00000001899BE8B0
+		internal static new DatatypeImplementation DeriveByUnion(XmlSchemaSimpleType[] types, XmlSchemaType schemaType) => default; // 0x00000001899BE990-0x00000001899BEA4C
+		internal override void VerifySchemaValid(XmlSchemaObjectTable notations, XmlSchemaObject caller) {} // 0x000000018350B670-0x000000018350B680
+		public override bool IsDerivedFrom(XmlSchemaDatatype datatype) => default; // 0x00000001899BF4FC-0x00000001899BF6AC
+		internal override bool IsEqual(object o1, object o2) => default; // 0x00000001899BF6AC-0x00000001899BF6D0
+		internal override bool IsComparable(XmlSchemaDatatype dtype) => default; // 0x00000001899BF434-0x00000001899BF4FC
+		internal virtual XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x0000000181002730-0x0000000181002740
+		public override object ParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr) => default; // 0x00000001899BF828-0x00000001899BF9E0
+		internal override object ParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, bool createAtomicValue) => default; // 0x00000001899BF6D0-0x00000001899BF828
+		internal override Exception TryParseValue(object value, XmlNameTable nameTable, IXmlNamespaceResolver namespaceResolver, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899BFAC0-0x00000001899BFE30
+		internal string GetTypeName() => default; // 0x00000001899BF3C8-0x00000001899BF434
+		protected int Compare(byte[] value1, byte[] value2) => default; // 0x00000001899BDC74-0x00000001899BDCD4
+	}
+
+	internal class Datatype_List : Datatype_anySimpleType // TypeDefIndex: 42806
+	{
+		// Fields
+		private DatatypeImplementation itemType; // 0x38
+		private int minListSize; // 0x40
+	
+		// Properties
+		public override System.Type ValueType { get => default; } // 0x00000001899C5184-0x00000001899C5194 
+		public override XmlTokenizedType TokenizedType { get => default; } // 0x00000001899C513C-0x00000001899C5160 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C5118-0x00000001899C513C 
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C50C4-0x00000001899C5118 
+		public override XmlTypeCode TypeCode { get => default; } // 0x00000001899C5160-0x00000001899C5184 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D55C60-0x0000000183D55C70 
+		internal DatatypeImplementation ItemType { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+	
+		// Constructors
+		public Datatype_List() {} // Dummy constructor
+		internal Datatype_List(DatatypeImplementation type, int minListSize) {} // 0x00000001899C5058-0x00000001899C50C4
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C45A0-0x00000001899C4724
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C4388-0x00000001899C45A0
+		internal override Exception TryParseValue(object value, XmlNameTable nameTable, IXmlNamespaceResolver namespaceResolver, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C4724-0x00000001899C4C8C
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C4C8C-0x00000001899C5058
+	}
+
+	internal class Datatype_union : Datatype_anySimpleType // TypeDefIndex: 42807
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+		private XmlSchemaSimpleType[] types; // 0x38
+	
+		// Properties
+		public override System.Type ValueType { get => default; } // 0x00000001899CBE44-0x00000001899CBE94 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55730-0x0000000183D55740 
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CBDA0-0x00000001899CBDF4 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899CBDF4-0x00000001899CBE44 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D569B0-0x0000000183D569C0 
+		internal XmlSchemaSimpleType[] BaseMemberTypes { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+	
+		// Constructors
+		public Datatype_union() {} // Dummy constructor
+		internal Datatype_union(XmlSchemaSimpleType[] types) {} // 0x00000001899CBD44-0x00000001899CBDA0
+		static Datatype_union() {} // 0x00000001899CBC80-0x00000001899CBD44
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899CB510-0x00000001899CB51C
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899CB478-0x00000001899CB510
+		internal bool HasAtomicMembers() => default; // 0x00000001899CB51C-0x00000001899CB584
+		internal bool IsUnionBaseOf(DatatypeImplementation derivedType) => default; // 0x00000001899CB584-0x00000001899CB5FC
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899CB5FC-0x00000001899CB7FC
+		internal override Exception TryParseValue(object value, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899CB7FC-0x00000001899CBC80
+	}
+
+	internal class Datatype_anySimpleType : DatatypeImplementation // TypeDefIndex: 42808
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C63A0-0x00000001899C63F0 
+		public override System.Type ValueType { get => default; } // 0x00000001899C6440-0x00000001899C6490 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55730-0x0000000183D55740 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C63F0-0x00000001899C6440 
+		public override XmlTokenizedType TokenizedType { get => default; } // 0x0000000183D557A0-0x0000000183D557B0 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000181002730-0x0000000181002740 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+	
+		// Constructors
+		public Datatype_anySimpleType() {} // 0x00000001899C6360-0x00000001899C63A0
+		static Datatype_anySimpleType() {} // 0x00000001899C629C-0x00000001899C6360
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C6228-0x00000001899C6278
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C61D4-0x00000001899C6228
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C6278-0x00000001899C629C
+	}
+
+	internal class Datatype_anyAtomicType : Datatype_anySimpleType // TypeDefIndex: 42809
+	{
+		// Properties
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55730-0x0000000183D55740 
+	
+		// Constructors
+		public Datatype_anyAtomicType() {} // 0x00000001899C6188-0x00000001899C61D4
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C6138-0x00000001899C6188
+	}
+
+	internal class Datatype_untypedAtomicType : Datatype_anyAtomicType // TypeDefIndex: 42810
+	{
+		// Properties
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D557B0-0x0000000183D557C0 
+	
+		// Constructors
+		public Datatype_untypedAtomicType() {} // 0x00000001899CCFDC-0x00000001899CCFE4
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899CCF8C-0x00000001899CCFDC
+	}
+
+	internal class Datatype_string : Datatype_anySimpleType // TypeDefIndex: 42811
+	{
+		// Properties
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000181002730-0x0000000181002740 
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CB338-0x00000001899CB388 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D557A0-0x0000000183D557B0 
+		public override XmlTokenizedType TokenizedType { get => default; } // 0x0000000181002730-0x0000000181002740 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D55C60-0x0000000183D55C70 
+	
+		// Constructors
+		public Datatype_string() {} // 0x00000001899CB2EC-0x00000001899CB338
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899CB210-0x00000001899CB21C
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899CB21C-0x00000001899CB2EC
+	}
+
+	internal class Datatype_boolean : Datatype_anySimpleType // TypeDefIndex: 42812
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C6F1C-0x00000001899C6F6C 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D557F0-0x0000000183D55800 
+		public override System.Type ValueType { get => default; } // 0x00000001899C6FBC-0x00000001899C700C 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C6F6C-0x00000001899C6FBC 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D55740-0x0000000183D55750 
+	
+		// Constructors
+		public Datatype_boolean() {} // 0x00000001899C6ED0-0x00000001899C6F1C
+		static Datatype_boolean() {} // 0x00000001899C6E0C-0x00000001899C6ED0
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C6D0C-0x00000001899C6D18
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C6CA4-0x00000001899C6D0C
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C6D18-0x00000001899C6E0C
+	}
+
+	internal class Datatype_float : Datatype_anySimpleType // TypeDefIndex: 42813
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C99DC-0x00000001899C9A2C 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55AE0-0x0000000183D55AF0 
+		public override System.Type ValueType { get => default; } // 0x00000001899C9A7C-0x00000001899C9ACC 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C9A2C-0x00000001899C9A7C 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D5A5E0-0x0000000183D5A5F0 
+	
+		// Constructors
+		public Datatype_float() {} // 0x00000001899C9990-0x00000001899C99DC
+		static Datatype_float() {} // 0x00000001899C98CC-0x00000001899C9990
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C8954-0x00000001899C8960
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C9728-0x00000001899C9788
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C9788-0x00000001899C98CC
+	}
+
+	internal class Datatype_double : Datatype_anySimpleType // TypeDefIndex: 42814
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C8BB8-0x00000001899C8C08 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55B10-0x0000000183D55B20 
+		public override System.Type ValueType { get => default; } // 0x00000001899C8C58-0x00000001899C8CA8 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C8C08-0x00000001899C8C58 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D5A5E0-0x0000000183D5A5F0 
+	
+		// Constructors
+		public Datatype_double() {} // 0x00000001899C8B6C-0x00000001899C8BB8
+		static Datatype_double() {} // 0x00000001899C8AA8-0x00000001899C8B6C
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C8954-0x00000001899C8960
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C88F4-0x00000001899C8954
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C8960-0x00000001899C8AA8
+	}
+
+	internal class Datatype_decimal : Datatype_anySimpleType // TypeDefIndex: 42815
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x10
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C85C0-0x00000001899C8610 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55AC0-0x0000000183D55AD0 
+		public override System.Type ValueType { get => default; } // 0x00000001899C8660-0x00000001899C86B0 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C8610-0x00000001899C8660 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D75D60-0x0000000183D75D70 
+	
+		// Constructors
+		public Datatype_decimal() {} // 0x00000001899C8574-0x00000001899C85C0
+		static Datatype_decimal() {} // 0x00000001899C8420-0x00000001899C8574
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C82C4-0x00000001899C82D0
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C8258-0x00000001899C82C4
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C82D0-0x00000001899C8420
+	}
+
+	internal class Datatype_duration : Datatype_anySimpleType // TypeDefIndex: 42816
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C8FE8-0x00000001899C903C 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55F90-0x0000000183D55FA0 
+		public override System.Type ValueType { get => default; } // 0x00000001899C908C-0x00000001899C90DC 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C903C-0x00000001899C908C 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D5A5E0-0x0000000183D5A5F0 
+	
+		// Constructors
+		public Datatype_duration() {} // 0x00000001899C8F9C-0x00000001899C8FE8
+		static Datatype_duration() {} // 0x00000001899C8ED8-0x00000001899C8F9C
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C528C-0x00000001899C5298
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C8CA8-0x00000001899C8D14
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C8D14-0x00000001899C8ED8
+	}
+
+	internal class Datatype_yearMonthDuration : Datatype_duration // TypeDefIndex: 42817
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55C50-0x0000000183D55C60 
+	
+		// Constructors
+		public Datatype_yearMonthDuration() {} // 0x00000001899CD644-0x00000001899CD690
+	
+		// Methods
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899CD478-0x00000001899CD644
+	}
+
+	internal class Datatype_dayTimeDuration : Datatype_duration // TypeDefIndex: 42818
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D56130-0x0000000183D56140 
+	
+		// Constructors
+		public Datatype_dayTimeDuration() {} // 0x00000001899C81BC-0x00000001899C8208
+	
+		// Methods
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C7FF0-0x00000001899C81BC
+	}
+
+	internal class Datatype_dateTimeBase : Datatype_anySimpleType // TypeDefIndex: 42819
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+		private XsdDateTimeFlags dateTimeFlags; // 0x38
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C7DC0-0x00000001899C7E10 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D56100-0x0000000183D56110 
+		public override System.Type ValueType { get => default; } // 0x00000001899C7E60-0x00000001899C7EB0 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C7E10-0x00000001899C7E60 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D5A5E0-0x0000000183D5A5F0 
+	
+		// Constructors
+		public Datatype_dateTimeBase() {} // Dummy constructor
+		internal Datatype_dateTimeBase(XsdDateTimeFlags dateTimeFlags) {} // 0x00000001899C7D68-0x00000001899C7DC0
+		static Datatype_dateTimeBase() {} // 0x00000001899C7CA4-0x00000001899C7D68
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C79A0-0x00000001899C79AC
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C78B8-0x00000001899C79A0
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C79AC-0x00000001899C7CA4
+	}
+
+	internal class Datatype_dateTimeNoTimeZone : Datatype_dateTimeBase // TypeDefIndex: 42820
+	{
+		// Constructors
+		internal Datatype_dateTimeNoTimeZone() {} // 0x00000001899C7EB0-0x00000001899C7F00
+	}
+
+	internal class Datatype_dateTimeTimeZone : Datatype_dateTimeBase // TypeDefIndex: 42821
+	{
+		// Constructors
+		internal Datatype_dateTimeTimeZone() {} // 0x00000001899C7F00-0x00000001899C7F50
+	}
+
+	internal class Datatype_dateTime : Datatype_dateTimeBase // TypeDefIndex: 42822
+	{
+		// Constructors
+		internal Datatype_dateTime() {} // 0x00000001899C7F50-0x00000001899C7FA0
+	}
+
+	internal class Datatype_timeNoTimeZone : Datatype_dateTimeBase // TypeDefIndex: 42823
+	{
+		// Constructors
+		internal Datatype_timeNoTimeZone() {} // 0x00000001899CB388-0x00000001899CB3D8
+	}
+
+	internal class Datatype_timeTimeZone : Datatype_dateTimeBase // TypeDefIndex: 42824
+	{
+		// Constructors
+		internal Datatype_timeTimeZone() {} // 0x00000001899CB3D8-0x00000001899CB428
+	}
+
+	internal class Datatype_time : Datatype_dateTimeBase // TypeDefIndex: 42825
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55FE0-0x0000000183D55FF0 
+	
+		// Constructors
+		internal Datatype_time() {} // 0x00000001899CB428-0x00000001899CB478
+	}
+
+	internal class Datatype_date : Datatype_dateTimeBase // TypeDefIndex: 42826
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55750-0x0000000183D55760 
+	
+		// Constructors
+		internal Datatype_date() {} // 0x00000001899C7FA0-0x00000001899C7FF0
+	}
+
+	internal class Datatype_yearMonth : Datatype_dateTimeBase // TypeDefIndex: 42827
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D569A0-0x0000000183D569B0 
+	
+		// Constructors
+		internal Datatype_yearMonth() {} // 0x00000001899CD690-0x00000001899CD6E0
+	}
+
+	internal class Datatype_year : Datatype_dateTimeBase // TypeDefIndex: 42828
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55B20-0x0000000183D55B30 
+	
+		// Constructors
+		internal Datatype_year() {} // 0x00000001899CD6E0-0x00000001899CD730
+	}
+
+	internal class Datatype_monthDay : Datatype_dateTimeBase // TypeDefIndex: 42829
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D56A00-0x0000000183D56A10 
+	
+		// Constructors
+		internal Datatype_monthDay() {} // 0x00000001899CA854-0x00000001899CA8A4
+	}
+
+	internal class Datatype_day : Datatype_dateTimeBase // TypeDefIndex: 42830
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D569B0-0x0000000183D569C0 
+	
+		// Constructors
+		internal Datatype_day() {} // 0x00000001899C8208-0x00000001899C8258
+	}
+
+	internal class Datatype_month : Datatype_dateTimeBase // TypeDefIndex: 42831
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D51E30-0x0000000183D51E40 
+	
+		// Constructors
+		internal Datatype_month() {} // 0x00000001899CA8A4-0x00000001899CA8F4
+	}
+
+	internal class Datatype_hexBinary : Datatype_anySimpleType // TypeDefIndex: 42832
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C9DF8-0x00000001899C9E48 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55B40-0x0000000183D55B50 
+		public override System.Type ValueType { get => default; } // 0x00000001899C9E98-0x00000001899C9EE8 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C9E48-0x00000001899C9E98 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D55C60-0x0000000183D55C70 
+	
+		// Constructors
+		public Datatype_hexBinary() {} // 0x00000001899C9DAC-0x00000001899C9DF8
+		static Datatype_hexBinary() {} // 0x00000001899C9CE8-0x00000001899C9DAC
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C528C-0x00000001899C5298
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C9ACC-0x00000001899C9B44
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C9B44-0x00000001899C9CE8
+	}
+
+	internal class Datatype_base64Binary : Datatype_anySimpleType // TypeDefIndex: 42833
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C6BB4-0x00000001899C6C04 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55BC0-0x0000000183D55BD0 
+		public override System.Type ValueType { get => default; } // 0x00000001899C6C54-0x00000001899C6CA4 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C6C04-0x00000001899C6C54 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D55C60-0x0000000183D55C70 
+	
+		// Constructors
+		public Datatype_base64Binary() {} // 0x00000001899C6B68-0x00000001899C6BB4
+		static Datatype_base64Binary() {} // 0x00000001899C6AA4-0x00000001899C6B68
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C528C-0x00000001899C5298
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C688C-0x00000001899C6904
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C6904-0x00000001899C6AA4
+	}
+
+	internal class Datatype_anyURI : Datatype_anySimpleType // TypeDefIndex: 42834
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C679C-0x00000001899C67EC 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D56120-0x0000000183D56130 
+		public override System.Type ValueType { get => default; } // 0x00000001899C683C-0x00000001899C688C 
+		internal override bool HasValueFacets { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C67EC-0x00000001899C683C 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D55C60-0x0000000183D55C70 
+	
+		// Constructors
+		public Datatype_anyURI() {} // 0x00000001899C6750-0x00000001899C679C
+		static Datatype_anyURI() {} // 0x00000001899C668C-0x00000001899C6750
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C528C-0x00000001899C5298
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C6490-0x00000001899C6518
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C6518-0x00000001899C668C
+	}
+
+	internal class Datatype_QName : Datatype_anySimpleType // TypeDefIndex: 42835
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C6044-0x00000001899C6098 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D56110-0x0000000183D56120 
+		public override XmlTokenizedType TokenizedType { get => default; } // 0x0000000183D55730-0x0000000183D55740 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D55C60-0x0000000183D55C70 
+		public override System.Type ValueType { get => default; } // 0x00000001899C60E8-0x00000001899C6138 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C6098-0x00000001899C60E8 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+	
+		// Constructors
+		public Datatype_QName() {} // 0x00000001899C5FF8-0x00000001899C6044
+		static Datatype_QName() {} // 0x00000001899C5F34-0x00000001899C5FF8
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C528C-0x00000001899C5298
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C5CF0-0x00000001899C5F34
+	}
+
+	internal class Datatype_normalizedString : Datatype_string // TypeDefIndex: 42836
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55C10-0x0000000183D55C20 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000181168950-0x0000000181168960 
+		internal override bool HasValueFacets { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+	
+		// Constructors
+		public Datatype_normalizedString() {} // 0x00000001899C4380-0x00000001899C4388
+	}
+
+	internal class Datatype_normalizedStringV1Compat : Datatype_string // TypeDefIndex: 42837
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55C10-0x0000000183D55C20 
+		internal override bool HasValueFacets { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+	
+		// Constructors
+		public Datatype_normalizedStringV1Compat() {} // 0x00000001899C4380-0x00000001899C4388
+	}
+
+	internal class Datatype_token : Datatype_normalizedString // TypeDefIndex: 42838
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55B70-0x0000000183D55B80 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+	
+		// Constructors
+		public Datatype_token() {} // 0x00000001899C4380-0x00000001899C4388
+	}
+
+	internal class Datatype_tokenV1Compat : Datatype_normalizedStringV1Compat // TypeDefIndex: 42839
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55B70-0x0000000183D55B80 
+	
+		// Constructors
+		public Datatype_tokenV1Compat() {} // 0x00000001899C4380-0x00000001899C4388
+	}
+
+	internal class Datatype_language : Datatype_token // TypeDefIndex: 42840
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55BB0-0x0000000183D55BC0 
+	
+		// Constructors
+		public Datatype_language() {} // 0x00000001899C4380-0x00000001899C4388
+	}
+
+	internal class Datatype_NMTOKEN : Datatype_token // TypeDefIndex: 42841
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55C30-0x0000000183D55C40 
+		public override XmlTokenizedType TokenizedType { get => default; } // 0x0000000183D51110-0x0000000183D51120 
+	
+		// Constructors
+		public Datatype_NMTOKEN() {} // 0x00000001899C4380-0x00000001899C4388
+	}
+
+	internal class Datatype_Name : Datatype_token // TypeDefIndex: 42842
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55BD0-0x0000000183D55BE0 
+	
+		// Constructors
+		public Datatype_Name() {} // 0x00000001899C4380-0x00000001899C4388
+	}
+
+	internal class Datatype_NCName : Datatype_Name // TypeDefIndex: 42843
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55C20-0x0000000183D55C30 
+	
+		// Constructors
+		public Datatype_NCName() {} // 0x00000001899C4380-0x00000001899C4388
+	
+		// Methods
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C5194-0x00000001899C528C
+	}
+
+	internal class Datatype_ID : Datatype_NCName // TypeDefIndex: 42844
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55BF0-0x0000000183D55C00 
+		public override XmlTokenizedType TokenizedType { get => default; } // 0x0000000181168950-0x0000000181168960 
+	
+		// Constructors
+		public Datatype_ID() {} // 0x00000001899C4380-0x00000001899C4388
+	}
+
+	internal class Datatype_IDREF : Datatype_NCName // TypeDefIndex: 42845
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55B90-0x0000000183D55BA0 
+		public override XmlTokenizedType TokenizedType { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+	
+		// Constructors
+		public Datatype_IDREF() {} // 0x00000001899C4380-0x00000001899C4388
+	}
+
+	internal class Datatype_ENTITY : Datatype_NCName // TypeDefIndex: 42846
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55C40-0x0000000183D55C50 
+		public override XmlTokenizedType TokenizedType { get => default; } // 0x0000000183D50CD0-0x0000000183D50CE0 
+	
+		// Constructors
+		public Datatype_ENTITY() {} // 0x00000001899C4380-0x00000001899C4388
+	}
+
+	internal class Datatype_NOTATION : Datatype_anySimpleType // TypeDefIndex: 42847
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C57AC-0x00000001899C5800 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55770-0x0000000183D55780 
+		public override XmlTokenizedType TokenizedType { get => default; } // 0x0000000183D55800-0x0000000183D55810 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000183D55C60-0x0000000183D55C70 
+		public override System.Type ValueType { get => default; } // 0x00000001899C5850-0x00000001899C58A0 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C5800-0x00000001899C5850 
+		internal override XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+	
+		// Constructors
+		public Datatype_NOTATION() {} // 0x00000001899C5760-0x00000001899C57AC
+		static Datatype_NOTATION() {} // 0x00000001899C569C-0x00000001899C5760
+	
+		// Methods
+		internal override XmlValueConverter CreateValueConverter(XmlSchemaType schemaType) => default; // 0x00000001899C528C-0x00000001899C5298
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C5298-0x00000001899C54DC
+		internal override void VerifySchemaValid(XmlSchemaObjectTable notations, XmlSchemaObject caller) {} // 0x00000001899C54DC-0x00000001899C569C
+	}
+
+	internal class Datatype_integer : Datatype_decimal // TypeDefIndex: 42848
+	{
+		// Properties
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55740-0x0000000183D55750 
+	
+		// Constructors
+		public Datatype_integer() {} // 0x00000001899CA410-0x00000001899CA45C
+	
+		// Methods
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899CA2F8-0x00000001899CA410
+	}
+
+	internal class Datatype_nonPositiveInteger : Datatype_integer // TypeDefIndex: 42849
+	{
+		// Fields
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x00
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CAC4C-0x00000001899CAC9C 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55B50-0x0000000183D55B60 
+		internal override bool HasValueFacets { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+	
+		// Constructors
+		public Datatype_nonPositiveInteger() {} // 0x00000001899CA75C-0x00000001899CA764
+		static Datatype_nonPositiveInteger() {} // 0x00000001899CAB70-0x00000001899CAC4C
+	}
+
+	internal class Datatype_negativeInteger : Datatype_nonPositiveInteger // TypeDefIndex: 42850
+	{
+		// Fields
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x00
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CAA1C-0x00000001899CAA6C 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55A80-0x0000000183D55A90 
+	
+		// Constructors
+		public Datatype_negativeInteger() {} // 0x00000001899CA9D0-0x00000001899CAA1C
+		static Datatype_negativeInteger() {} // 0x00000001899CA8F4-0x00000001899CA9D0
+	}
+
+	internal class Datatype_long : Datatype_integer // TypeDefIndex: 42851
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x10
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CA764-0x00000001899CA7B4 
+		internal override bool HasValueFacets { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D560F0-0x0000000183D56100 
+		public override System.Type ValueType { get => default; } // 0x00000001899CA804-0x00000001899CA854 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899CA7B4-0x00000001899CA804 
+	
+		// Constructors
+		public Datatype_long() {} // 0x00000001899CA75C-0x00000001899CA764
+		static Datatype_long() {} // 0x00000001899CA5F8-0x00000001899CA75C
+	
+		// Methods
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899CA45C-0x00000001899CA4BC
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899CA4BC-0x00000001899CA5F8
+	}
+
+	internal class Datatype_int : Datatype_long // TypeDefIndex: 42852
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x10
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CA208-0x00000001899CA258 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D59180-0x0000000183D59190 
+		public override System.Type ValueType { get => default; } // 0x00000001899CA2A8-0x00000001899CA2F8 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899CA258-0x00000001899CA2A8 
+	
+		// Constructors
+		public Datatype_int() {} // 0x00000001899CA1BC-0x00000001899CA208
+		static Datatype_int() {} // 0x00000001899CA07C-0x00000001899CA1BC
+	
+		// Methods
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C9EE8-0x00000001899C9F44
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C9F44-0x00000001899CA07C
+	}
+
+	internal class Datatype_short : Datatype_int // TypeDefIndex: 42853
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x10
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CB120-0x00000001899CB170 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55B30-0x0000000183D55B40 
+		public override System.Type ValueType { get => default; } // 0x00000001899CB1C0-0x00000001899CB210 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899CB170-0x00000001899CB1C0 
+	
+		// Constructors
+		public Datatype_short() {} // 0x00000001899CB0D4-0x00000001899CB120
+		static Datatype_short() {} // 0x00000001899CAF90-0x00000001899CB0D4
+	
+		// Methods
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899CADEC-0x00000001899CAE4C
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899CAE4C-0x00000001899CAF90
+	}
+
+	internal class Datatype_byte : Datatype_short // TypeDefIndex: 42854
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x10
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899C7330-0x00000001899C7380 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D56140-0x0000000183D56150 
+		public override System.Type ValueType { get => default; } // 0x00000001899C73D0-0x00000001899C7420 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C7380-0x00000001899C73D0 
+	
+		// Constructors
+		public Datatype_byte() {} // 0x00000001899C72E4-0x00000001899C7330
+		static Datatype_byte() {} // 0x00000001899C71A0-0x00000001899C72E4
+	
+		// Methods
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C700C-0x00000001899C7068
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C7068-0x00000001899C71A0
+	}
+
+	internal class Datatype_nonNegativeInteger : Datatype_integer // TypeDefIndex: 42855
+	{
+		// Fields
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x00
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CAB20-0x00000001899CAB70 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D56180-0x0000000183D56190 
+		internal override bool HasValueFacets { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+	
+		// Constructors
+		public Datatype_nonNegativeInteger() {} // 0x00000001899CA75C-0x00000001899CA764
+		static Datatype_nonNegativeInteger() {} // 0x00000001899CAA6C-0x00000001899CAB20
+	}
+
+	internal class Datatype_unsignedLong : Datatype_nonNegativeInteger // TypeDefIndex: 42856
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x10
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CCA64-0x00000001899CCAB4 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55A90-0x0000000183D55AA0 
+		public override System.Type ValueType { get => default; } // 0x00000001899CCB04-0x00000001899CCB54 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899CCAB4-0x00000001899CCB04 
+	
+		// Constructors
+		public Datatype_unsignedLong() {} // 0x00000001899CCA18-0x00000001899CCA64
+		static Datatype_unsignedLong() {} // 0x00000001899CC8C0-0x00000001899CCA18
+	
+		// Methods
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899CC6E4-0x00000001899CC744
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899CC744-0x00000001899CC8C0
+	}
+
+	internal class Datatype_unsignedInt : Datatype_unsignedLong // TypeDefIndex: 42857
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x10
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CC5F4-0x00000001899CC644 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D56170-0x0000000183D56180 
+		public override System.Type ValueType { get => default; } // 0x00000001899CC694-0x00000001899CC6E4 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899CC644-0x00000001899CC694 
+	
+		// Constructors
+		public Datatype_unsignedInt() {} // 0x00000001899CC5A8-0x00000001899CC5F4
+		static Datatype_unsignedInt() {} // 0x00000001899CC450-0x00000001899CC5A8
+	
+		// Methods
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899CC2BC-0x00000001899CC318
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899CC318-0x00000001899CC450
+	}
+
+	internal class Datatype_unsignedShort : Datatype_unsignedInt // TypeDefIndex: 42858
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x10
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CCE9C-0x00000001899CCEEC 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D55760-0x0000000183D55770 
+		public override System.Type ValueType { get => default; } // 0x00000001899CCF3C-0x00000001899CCF8C 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899CCEEC-0x00000001899CCF3C 
+	
+		// Constructors
+		public Datatype_unsignedShort() {} // 0x00000001899CCE50-0x00000001899CCE9C
+		static Datatype_unsignedShort() {} // 0x00000001899CCCF8-0x00000001899CCE50
+	
+		// Methods
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899CCB54-0x00000001899CCBB4
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899CCBB4-0x00000001899CCCF8
+	}
+
+	internal class Datatype_unsignedByte : Datatype_unsignedShort // TypeDefIndex: 42859
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x10
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CC1CC-0x00000001899CC21C 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D56190-0x0000000183D561A0 
+		public override System.Type ValueType { get => default; } // 0x00000001899CC26C-0x00000001899CC2BC 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899CC21C-0x00000001899CC26C 
+	
+		// Constructors
+		public Datatype_unsignedByte() {} // 0x00000001899CC180-0x00000001899CC1CC
+		static Datatype_unsignedByte() {} // 0x00000001899CC028-0x00000001899CC180
+	
+		// Methods
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899CBE94-0x00000001899CBEF0
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899CBEF0-0x00000001899CC028
+	}
+
+	internal class Datatype_positiveInteger : Datatype_nonNegativeInteger // TypeDefIndex: 42860
+	{
+		// Fields
+		private static readonly FacetsChecker numeric10FacetsChecker; // 0x00
+	
+		// Properties
+		internal override FacetsChecker FacetsChecker { get => default; } // 0x00000001899CAD9C-0x00000001899CADEC 
+		public override XmlTypeCode TypeCode { get => default; } // 0x0000000183D56150-0x0000000183D56160 
+	
+		// Constructors
+		public Datatype_positiveInteger() {} // 0x00000001899CAD50-0x00000001899CAD9C
+		static Datatype_positiveInteger() {} // 0x00000001899CAC9C-0x00000001899CAD50
+	}
+
+	internal class Datatype_doubleXdr : Datatype_double // TypeDefIndex: 42861
+	{
+		// Constructors
+		public Datatype_doubleXdr() {} // 0x00000001899C88A8-0x00000001899C88F4
+	
+		// Methods
+		public override object ParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr) => default; // 0x00000001899C86B0-0x00000001899C88A8
+	}
+
+	internal class Datatype_floatXdr : Datatype_float // TypeDefIndex: 42862
+	{
+		// Constructors
+		public Datatype_floatXdr() {} // 0x00000001899C96DC-0x00000001899C9728
+	
+		// Methods
+		public override object ParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr) => default; // 0x00000001899C94E4-0x00000001899C96DC
+	}
+
+	internal class Datatype_QNameXdr : Datatype_anySimpleType // TypeDefIndex: 42863
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		public override XmlTokenizedType TokenizedType { get => default; } // 0x0000000183D55730-0x0000000183D55740 
+		public override System.Type ValueType { get => default; } // 0x00000001899C5CA0-0x00000001899C5CF0 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C5C50-0x00000001899C5CA0 
+	
+		// Constructors
+		public Datatype_QNameXdr() {} // 0x00000001899C5C04-0x00000001899C5C50
+		static Datatype_QNameXdr() {} // 0x00000001899C5B40-0x00000001899C5C04
+	
+		// Methods
+		public override object ParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr) => default; // 0x00000001899C58A0-0x00000001899C5B40
+	}
+
+	internal class Datatype_ENUMERATION : Datatype_NMTOKEN // TypeDefIndex: 42864
+	{
+		// Properties
+		public override XmlTokenizedType TokenizedType { get => default; } // 0x0000000183D55810-0x0000000183D55820 
+	
+		// Constructors
+		public Datatype_ENUMERATION() {} // 0x00000001899C4380-0x00000001899C4388
+	}
+
+	internal class Datatype_char : Datatype_anySimpleType // TypeDefIndex: 42865
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		public override System.Type ValueType { get => default; } // 0x00000001899C7868-0x00000001899C78B8 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899C7818-0x00000001899C7868 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000181002730-0x0000000181002740 
+	
+		// Constructors
+		public Datatype_char() {} // 0x00000001899C77CC-0x00000001899C7818
+		static Datatype_char() {} // 0x00000001899C7708-0x00000001899C77CC
+	
+		// Methods
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899C7420-0x00000001899C748C
+		public override object ParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr) => default; // 0x00000001899C748C-0x00000001899C765C
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C765C-0x00000001899C7708
+	}
+
+	internal class Datatype_fixed : Datatype_decimal // TypeDefIndex: 42866
+	{
+		// Constructors
+		public Datatype_fixed() {} // 0x00000001899C9498-0x00000001899C94E4
+	
+		// Methods
+		public override object ParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr) => default; // 0x00000001899C90DC-0x00000001899C9364
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899C9364-0x00000001899C9498
+	}
+
+	internal class Datatype_uuid : Datatype_anySimpleType // TypeDefIndex: 42867
+	{
+		// Fields
+		private static readonly System.Type atomicValueType; // 0x00
+		private static readonly System.Type listValueType; // 0x08
+	
+		// Properties
+		public override System.Type ValueType { get => default; } // 0x00000001899CD428-0x00000001899CD478 
+		internal override System.Type ListValueType { get => default; } // 0x00000001899CD3D8-0x00000001899CD428 
+		internal override RestrictionFlags ValidRestrictionFlags { get => default; } // 0x0000000181002730-0x0000000181002740 
+	
+		// Constructors
+		public Datatype_uuid() {} // 0x00000001899CD38C-0x00000001899CD3D8
+		static Datatype_uuid() {} // 0x00000001899CD2C8-0x00000001899CD38C
+	
+		// Methods
+		internal override int Compare(object value1, object value2) => default; // 0x00000001899CCFE4-0x00000001899CD04C
+		public override object ParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr) => default; // 0x00000001899CD04C-0x00000001899CD224
+		internal override Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue) {
+			typedValue = default;
+			return default;
+		} // 0x00000001899CD224-0x00000001899CD2C8
+	}
+
+	internal sealed class DtdValidator : BaseValidator // TypeDefIndex: 42869
+	{
+		// Fields
+		private static NamespaceManager namespaceManager; // 0x00
+		private HWStack validationStack; // 0x80
+		private Hashtable attPresence; // 0x88
+		private XmlQualifiedName name; // 0x90
+		private Hashtable IDs; // 0x98
+		private IdRefNode idRefListHead; // 0xA0
+		private bool processIdentityConstraints; // 0xA8
+	
+		// Properties
+		public override bool PreserveWhitespace { get => default; } // 0x00000001898CFEE8-0x00000001898CFF24 
+	
+		// Nested types
+		private class NamespaceManager : XmlNamespaceManager // TypeDefIndex: 42868
+		{
+			// Constructors
+			public NamespaceManager() {} // 0x000000018350B670-0x000000018350B680
+	
+			// Methods
+			public override string LookupNamespace(string prefix) => default; // 0x0000000183D51810-0x0000000183D51820
+		}
+	
+		// Constructors
+		public DtdValidator() {} // Dummy constructor
+		internal DtdValidator(XmlValidatingReaderImpl reader, IValidationEventHandling eventHandling, bool processIdentityConstraints) {} // 0x00000001899CFF6C-0x00000001899D0018
+		static DtdValidator() {} // 0x00000001899CFEFC-0x00000001899CFF6C
+	
+		// Methods
+		private void Init() {} // 0x00000001899CE884-0x00000001899CE9FC
+		public override void Validate() {} // 0x00000001899CFCC0-0x00000001899CFEFC
+		private bool MeetsStandAloneConstraint() => default; // 0x00000001899CE9FC-0x00000001899CEA88
+		private void ValidatePIComment() {} // 0x00000001899CF800-0x00000001899CF898
+		private void ValidateElement() {} // 0x00000001899CF334-0x00000001899CF448
+		private void ValidateChildElement() {} // 0x00000001899CF1E0-0x00000001899CF334
+		private void ValidateStartElement() {} // 0x00000001899CF898-0x00000001899CFCC0
+		private void ValidateEndStartElement() {} // 0x00000001899CF604-0x00000001899CF800
+		private void ProcessElement() {} // 0x00000001899CEB34-0x00000001899CEC5C
+		public override void CompleteValidation() {} // 0x00000001899CE5DC-0x00000001899CE624
+		private void ValidateEndElement() {} // 0x00000001899CF448-0x00000001899CF604
+		private void ProcessTokenizedType(XmlTokenizedType ttype, string name) {} // 0x00000001899CEC5C-0x00000001899CEE60
+		private void CheckValue(string value, SchemaAttDef attdef) {} // 0x00000001899CE148-0x00000001899CE5DC
+		internal void AddID(string name, object node) {} // 0x00000001899CDC64-0x00000001899CDD10
+		public override object FindId(string name) => default; // 0x00000001899CE624-0x00000001899CE64C
+		private bool GenEntity(XmlQualifiedName qname) => default; // 0x00000001899CE64C-0x00000001899CE7E8
+		private SchemaEntity GetEntity(XmlQualifiedName qname, bool fParameterEntity) => default; // 0x00000001899CE7E8-0x00000001899CE884
+		private void CheckForwardRefs() {} // 0x00000001899CE010-0x00000001899CE148
+		private void Push(XmlQualifiedName elementName) {} // 0x00000001899CEE60-0x00000001899CEFBC
+		private bool Pop() => default; // 0x00000001899CEA88-0x00000001899CEB34
+		public static void SetDefaultTypedValue(SchemaAttDef attdef, IDtdParserAdapter readerAdapter) {} // 0x00000001899CEFBC-0x00000001899CF1E0
+		public static void CheckDefaultValue(SchemaAttDef attdef, SchemaInfo sinfo, IValidationEventHandling eventHandling, string baseUriStr) {} // 0x00000001899CDD10-0x00000001899CE010
+	}
+
+	internal abstract class FacetsChecker // TypeDefIndex: 42872
+	{
+		// Nested types
+		private struct FacetsCompiler // TypeDefIndex: 42871
+		{
+			// Fields
+			private DatatypeImplementation datatype; // 0x00
+			private RestrictionFacets derivedRestriction; // 0x08
+			private RestrictionFlags baseFlags; // 0x10
+			private RestrictionFlags baseFixedFlags; // 0x14
+			private RestrictionFlags validRestrictionFlags; // 0x18
+			private XmlSchemaDatatype nonNegativeInt; // 0x20
+			private XmlSchemaDatatype builtInType; // 0x28
+			private XmlTypeCode builtInEnum; // 0x30
+			private bool firstPattern; // 0x34
+			private StringBuilder regStr; // 0x38
+			private XmlSchemaPatternFacet pattern_facet; // 0x40
+			private static readonly Map[] c_map; // 0x00
+	
+			// Nested types
+			private struct Map // TypeDefIndex: 42870
+			{
+				// Fields
+				internal char match; // 0x00
+				internal string replacement; // 0x08
+	
+				// Constructors
+				internal Map(char m, string r) {
+					match = default;
+					replacement = default;
+				} // 0x00000001871AEDC4-0x00000001871AEDD4
+			}
+	
+			// Constructors
+			public FacetsCompiler(DatatypeImplementation baseDatatype, RestrictionFacets restriction) {
+				datatype = default;
+				derivedRestriction = default;
+				baseFlags = default;
+				baseFixedFlags = default;
+				validRestrictionFlags = default;
+				nonNegativeInt = default;
+				builtInType = default;
+				builtInEnum = default;
+				firstPattern = default;
+				regStr = default;
+				pattern_facet = default;
+			} // 0x00000001899D465C-0x00000001899D4824
+			static FacetsCompiler() {
+				c_map = default;
+			} // 0x00000001899D4380-0x00000001899D465C
+	
+			// Methods
+			internal void CompileLengthFacet(XmlSchemaFacet facet) {} // 0x00000001899D1E04-0x00000001899D21E8
+			internal void CompileMinLengthFacet(XmlSchemaFacet facet) {} // 0x00000001899D2C94-0x00000001899D2FE8
+			internal void CompileMaxLengthFacet(XmlSchemaFacet facet) {} // 0x00000001899D2590-0x00000001899D28E4
+			internal void CompilePatternFacet(XmlSchemaPatternFacet facet) {} // 0x00000001899D2FE8-0x00000001899D3160
+			internal void CompileEnumerationFacet(XmlSchemaFacet facet, IXmlNamespaceResolver nsmgr, XmlNameTable nameTable) {} // 0x00000001899D1424-0x00000001899D1580
+			internal void CompileWhitespaceFacet(XmlSchemaFacet facet) {} // 0x00000001899D3464-0x00000001899D3840
+			internal void CompileMaxInclusiveFacet(XmlSchemaFacet facet) {} // 0x00000001899D23BC-0x00000001899D2590
+			internal void CompileMaxExclusiveFacet(XmlSchemaFacet facet) {} // 0x00000001899D21E8-0x00000001899D23BC
+			internal void CompileMinInclusiveFacet(XmlSchemaFacet facet) {} // 0x00000001899D2ABC-0x00000001899D2C94
+			internal void CompileMinExclusiveFacet(XmlSchemaFacet facet) {} // 0x00000001899D28E4-0x00000001899D2ABC
+			internal void CompileTotalDigitsFacet(XmlSchemaFacet facet) {} // 0x00000001899D3160-0x00000001899D3464
+			internal void CompileFractionDigitsFacet(XmlSchemaFacet facet) {} // 0x00000001899D1B64-0x00000001899D1E04
+			internal void FinishFacetCompile() {} // 0x00000001899D3C3C-0x00000001899D3F7C
+			private void CheckValue(object value, XmlSchemaFacet facet) {} // 0x00000001899D0D70-0x00000001899D1424
+			internal void CompileFacetCombinations() {} // 0x00000001899D1580-0x00000001899D1B64
+			private void CopyFacetsFromBaseType() {} // 0x00000001899D3840-0x00000001899D3C3C
+			private object ParseFacetValue(XmlSchemaDatatype datatype, XmlSchemaFacet facet, string code, IXmlNamespaceResolver nsmgr, XmlNameTable nameTable) => default; // 0x00000001899D3F7C-0x00000001899D40BC
+			private static string Preprocess(string pattern) => default; // 0x00000001899D40BC-0x00000001899D431C
+			private void CheckProhibitedFlag(XmlSchemaFacet facet, RestrictionFlags flag, string errorCode) {} // 0x00000001899D0CD8-0x00000001899D0D70
+			private void CheckDupFlag(XmlSchemaFacet facet, RestrictionFlags flag, string errorCode) {} // 0x00000001899D0C58-0x00000001899D0CD8
+			private void SetFlag(XmlSchemaFacet facet, RestrictionFlags flag) {} // 0x00000001899D434C-0x00000001899D4380
+			private void SetFlag(RestrictionFlags flag) {} // 0x00000001899D431C-0x00000001899D434C
+		}
+	
+		// Constructors
+		protected FacetsChecker() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal virtual Exception CheckLexicalFacets(ref string parseString, XmlSchemaDatatype datatype) => default; // 0x00000001899D04E4-0x00000001899D0538
+		internal virtual Exception CheckValueFacets(object value, XmlSchemaDatatype datatype) => default; // 0x0000000181002730-0x0000000181002740
+		internal virtual Exception CheckValueFacets(decimal value, XmlSchemaDatatype datatype) => default; // 0x0000000181002730-0x0000000181002740
+		internal virtual Exception CheckValueFacets(long value, XmlSchemaDatatype datatype) => default; // 0x0000000181002730-0x0000000181002740
+		internal virtual Exception CheckValueFacets(int value, XmlSchemaDatatype datatype) => default; // 0x0000000181002730-0x0000000181002740
+		internal virtual Exception CheckValueFacets(short value, XmlSchemaDatatype datatype) => default; // 0x0000000181002730-0x0000000181002740
+		internal virtual Exception CheckValueFacets(System.DateTime value, XmlSchemaDatatype datatype) => default; // 0x0000000181002730-0x0000000181002740
+		internal virtual Exception CheckValueFacets(double value, XmlSchemaDatatype datatype) => default; // 0x0000000181002730-0x0000000181002740
+		internal virtual Exception CheckValueFacets(float value, XmlSchemaDatatype datatype) => default; // 0x0000000181002730-0x0000000181002740
+		internal virtual Exception CheckValueFacets(string value, XmlSchemaDatatype datatype) => default; // 0x0000000181002730-0x0000000181002740
+		internal virtual Exception CheckValueFacets(byte[] value, XmlSchemaDatatype datatype) => default; // 0x0000000181002730-0x0000000181002740
+		internal virtual Exception CheckValueFacets(TimeSpan value, XmlSchemaDatatype datatype) => default; // 0x0000000181002730-0x0000000181002740
+		internal virtual Exception CheckValueFacets(XmlQualifiedName value, XmlSchemaDatatype datatype) => default; // 0x0000000181002730-0x0000000181002740
+		internal void CheckWhitespaceFacets(ref string s, XmlSchemaDatatype datatype) {} // 0x00000001899D0678-0x00000001899D0738
+		internal Exception CheckPatternFacets(RestrictionFacets restriction, string value) => default; // 0x00000001899D0538-0x00000001899D0678
+		internal virtual bool MatchEnumeration(object value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x000000018115F4C0-0x000000018115F530
+		internal virtual RestrictionFacets ConstructRestriction(DatatypeImplementation datatype, XmlSchemaObjectCollection facets, XmlNameTable nameTable) => default; // 0x00000001899D0738-0x00000001899D0B4C
+		internal static decimal Power(int x, int y) => default; // 0x00000001899D0B4C-0x00000001899D0C58
+	}
+
+	internal class Numeric10FacetsChecker : FacetsChecker // TypeDefIndex: 42873
+	{
+		// Fields
+		private static readonly char[] signs; // 0x00
+		private decimal maxValue; // 0x10
+		private decimal minValue; // 0x20
+	
+		// Constructors
+		public Numeric10FacetsChecker() {} // Dummy constructor
+		internal Numeric10FacetsChecker(decimal minVal, decimal maxVal) {} // 0x0000000183D75D70-0x0000000183D75D80
+		static Numeric10FacetsChecker() {} // 0x00000001899D5A38-0x00000001899D5ACC
+	
+		// Methods
+		internal override Exception CheckValueFacets(object value, XmlSchemaDatatype datatype) => default; // 0x00000001899D51E4-0x00000001899D5250
+		internal override Exception CheckValueFacets(decimal value, XmlSchemaDatatype datatype) => default; // 0x00000001899D5250-0x00000001899D57C0
+		internal override Exception CheckValueFacets(long value, XmlSchemaDatatype datatype) => default; // 0x00000001899D584C-0x00000001899D58C8
+		internal override Exception CheckValueFacets(int value, XmlSchemaDatatype datatype) => default; // 0x00000001899D57C0-0x00000001899D584C
+		internal override Exception CheckValueFacets(short value, XmlSchemaDatatype datatype) => default; // 0x00000001899D5148-0x00000001899D51E4
+		internal override bool MatchEnumeration(object value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x00000001899D58C8-0x00000001899D5958
+		internal bool MatchEnumeration(decimal value, ArrayList enumeration, XmlValueConverter valueConverter) => default; // 0x00000001899D5958-0x00000001899D5A38
+		internal Exception CheckTotalAndFractionDigits(decimal value, int totalDigits, int fractionDigits, bool checkTotal, bool checkFraction) => default; // 0x00000001899D4E68-0x00000001899D5148
+	}
+
+	internal class Numeric2FacetsChecker : FacetsChecker // TypeDefIndex: 42874
+	{
+		// Constructors
+		public Numeric2FacetsChecker() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal override Exception CheckValueFacets(object value, XmlSchemaDatatype datatype) => default; // 0x00000001899D5DA8-0x00000001899D5E08
+		internal override Exception CheckValueFacets(double value, XmlSchemaDatatype datatype) => default; // 0x00000001899D5ACC-0x00000001899D5D94
+		internal override Exception CheckValueFacets(float value, XmlSchemaDatatype datatype) => default; // 0x00000001899D5D94-0x00000001899D5DA8
+		internal override bool MatchEnumeration(object value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x00000001899D5E90-0x00000001899D5F18
+		private bool MatchEnumeration(double value, ArrayList enumeration, XmlValueConverter valueConverter) => default; // 0x00000001899D5E08-0x00000001899D5E90
+	}
+
+	internal class DurationFacetsChecker : FacetsChecker // TypeDefIndex: 42875
+	{
+		// Constructors
+		public DurationFacetsChecker() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal override Exception CheckValueFacets(object value, XmlSchemaDatatype datatype) => default; // 0x00000001899D02F8-0x00000001899D03CC
+		internal override Exception CheckValueFacets(TimeSpan value, XmlSchemaDatatype datatype) => default; // 0x00000001899D0018-0x00000001899D02F8
+		internal override bool MatchEnumeration(object value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x00000001899D03CC-0x00000001899D0430
+		private bool MatchEnumeration(TimeSpan value, ArrayList enumeration) => default; // 0x00000001899D0430-0x00000001899D04E4
+	}
+
+	internal class DateTimeFacetsChecker : FacetsChecker // TypeDefIndex: 42876
+	{
+		// Constructors
+		public DateTimeFacetsChecker() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal override Exception CheckValueFacets(object value, XmlSchemaDatatype datatype) => default; // 0x00000001899CDAB0-0x00000001899CDB08
+		internal override Exception CheckValueFacets(System.DateTime value, XmlSchemaDatatype datatype) => default; // 0x00000001899CD730-0x00000001899CDAB0
+		internal override bool MatchEnumeration(object value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x00000001899CDB08-0x00000001899CDB78
+		private bool MatchEnumeration(System.DateTime value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x00000001899CDB78-0x00000001899CDC64
+	}
+
+	internal class StringFacetsChecker : FacetsChecker // TypeDefIndex: 42877
+	{
+		// Fields
+		private static Regex languagePattern; // 0x00
+	
+		// Properties
+		private static Regex LanguagePattern { get => default; } // 0x00000001899D7570-0x00000001899D7670 
+	
+		// Constructors
+		public StringFacetsChecker() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal override Exception CheckValueFacets(object value, XmlSchemaDatatype datatype) => default; // 0x00000001899D70EC-0x00000001899D7154
+		internal override Exception CheckValueFacets(string value, XmlSchemaDatatype datatype) => default; // 0x00000001899D70D0-0x00000001899D70EC
+		internal Exception CheckValueFacets(string value, XmlSchemaDatatype datatype, bool verifyUri) => default; // 0x00000001899D7154-0x00000001899D7398
+		internal override bool MatchEnumeration(object value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x00000001899D74FC-0x00000001899D7570
+		private bool MatchEnumeration(string value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x00000001899D7398-0x00000001899D74FC
+		private Exception CheckBuiltInFacets(string s, XmlTypeCode typeCode, bool verifyUri) => default; // 0x00000001899D6EA0-0x00000001899D70D0
+	}
+
+	internal class QNameFacetsChecker : FacetsChecker // TypeDefIndex: 42878
+	{
+		// Constructors
+		public QNameFacetsChecker() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal override Exception CheckValueFacets(object value, XmlSchemaDatatype datatype) => default; // 0x000000018988D9E4-0x000000018988DAB8
+		internal override Exception CheckValueFacets(XmlQualifiedName value, XmlSchemaDatatype datatype) => default; // 0x000000018988D7F4-0x000000018988D9E4
+		internal override bool MatchEnumeration(object value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x000000018988DB58-0x000000018988DC34
+		private bool MatchEnumeration(XmlQualifiedName value, ArrayList enumeration) => default; // 0x000000018988DAB8-0x000000018988DB58
+	}
+
+	internal class MiscFacetsChecker : FacetsChecker // TypeDefIndex: 42879
+	{
+		// Constructors
+		public MiscFacetsChecker() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	internal class BinaryFacetsChecker : FacetsChecker // TypeDefIndex: 42880
+	{
+		// Constructors
+		public BinaryFacetsChecker() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal override Exception CheckValueFacets(object value, XmlSchemaDatatype datatype) => default; // 0x0000000189881A70-0x0000000189881AD0
+		internal override Exception CheckValueFacets(byte[] value, XmlSchemaDatatype datatype) => default; // 0x0000000189881AD0-0x0000000189881CA0
+		internal override bool MatchEnumeration(object value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x0000000189881CA0-0x0000000189881D18
+		private bool MatchEnumeration(byte[] value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x0000000189881D18-0x0000000189881DCC
+	}
+
+	internal class ListFacetsChecker : FacetsChecker // TypeDefIndex: 42881
+	{
+		// Constructors
+		public ListFacetsChecker() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal override Exception CheckValueFacets(object value, XmlSchemaDatatype datatype) => default; // 0x0000000189881DCC-0x0000000189881FD8
+		internal override bool MatchEnumeration(object value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x0000000189881FD8-0x0000000189882060
+	}
+
+	internal class UnionFacetsChecker : FacetsChecker // TypeDefIndex: 42882
+	{
+		// Constructors
+		public UnionFacetsChecker() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal override Exception CheckValueFacets(object value, XmlSchemaDatatype datatype) => default; // 0x000000018988DC34-0x000000018988DD08
+		internal override bool MatchEnumeration(object value, ArrayList enumeration, XmlSchemaDatatype datatype) => default; // 0x0000000189881FD8-0x0000000189882060
+	}
+
+	public interface IXmlSchemaInfo // TypeDefIndex: 42883
+	{
+		// Properties
+		XmlSchemaValidity Validity { get; }
+		bool IsDefault { get; }
+		bool IsNil { get; }
+		XmlSchemaSimpleType MemberType { get; }
+		XmlSchemaType SchemaType { get; }
+		XmlSchemaElement SchemaElement { get; }
+		XmlSchemaAttribute SchemaAttribute { get; }
+	}
+
+	public sealed class XmlSchemaInference // TypeDefIndex: 42885
+	{
+		// Fields
+		internal static XmlQualifiedName ST_boolean; // 0x00
+		internal static XmlQualifiedName ST_byte; // 0x08
+		internal static XmlQualifiedName ST_unsignedByte; // 0x10
+		internal static XmlQualifiedName ST_short; // 0x18
+		internal static XmlQualifiedName ST_unsignedShort; // 0x20
+		internal static XmlQualifiedName ST_int; // 0x28
+		internal static XmlQualifiedName ST_unsignedInt; // 0x30
+		internal static XmlQualifiedName ST_long; // 0x38
+		internal static XmlQualifiedName ST_unsignedLong; // 0x40
+		internal static XmlQualifiedName ST_integer; // 0x48
+		internal static XmlQualifiedName ST_decimal; // 0x50
+		internal static XmlQualifiedName ST_float; // 0x58
+		internal static XmlQualifiedName ST_double; // 0x60
+		internal static XmlQualifiedName ST_duration; // 0x68
+		internal static XmlQualifiedName ST_dateTime; // 0x70
+		internal static XmlQualifiedName ST_time; // 0x78
+		internal static XmlQualifiedName ST_date; // 0x80
+		internal static XmlQualifiedName ST_gYearMonth; // 0x88
+		internal static XmlQualifiedName ST_string; // 0x90
+		internal static XmlQualifiedName ST_anySimpleType; // 0x98
+		internal static XmlQualifiedName[] SimpleTypes; // 0xA0
+		private XmlSchema rootSchema; // 0x10
+		private XmlSchemaSet schemaSet; // 0x18
+		private XmlReader xtr; // 0x20
+		private NameTable nametable; // 0x28
+		private string TargetNamespace; // 0x30
+		private XmlNamespaceManager NamespaceManager; // 0x38
+		private ArrayList schemaList; // 0x40
+		private InferenceOption occurrence; // 0x48
+		private InferenceOption typeInference; // 0x4C
+	
+		// Properties
+		public InferenceOption Occurrence { get => default; set {} } // 0x0000000183D4EC50-0x0000000183D4EC60 0x0000000183D4ECD0-0x0000000183D4ECE0
+		public InferenceOption TypeInference { set {} } // 0x0000000183D4EE30-0x0000000183D4EE40
+	
+		// Nested types
+		public enum InferenceOption // TypeDefIndex: 42884
+		{
+			Restricted = 0,
+			Relaxed = 1
+		}
+	
+		// Constructors
+		public XmlSchemaInference() {} // 0x0000000189896E68-0x0000000189896FDC
+		static XmlSchemaInference() {} // 0x0000000189896258-0x0000000189896E68
+	
+		// Methods
+		public XmlSchemaSet InferSchema(XmlReader instanceDocument) => default; // 0x0000000189893438-0x00000001898934C0
+		internal XmlSchemaSet InferSchema1(XmlReader instanceDocument, XmlSchemaSet schemas) => default; // 0x00000001898925FC-0x0000000189893438
+		private XmlSchemaAttribute AddAttribute(string localName, string prefix, string childURI, string attrValue, bool bCreatingNewType, XmlSchema parentSchema, XmlSchemaObjectCollection addLocation, XmlSchemaObjectTable compiledAttributes) => default; // 0x000000018988DE2C-0x000000018988E614
+		private XmlSchema CreateXmlSchema(string targetNS) => default; // 0x000000018988EF3C-0x000000018988EFD4
+		private XmlSchemaElement AddElement(string localName, string prefix, string childURI, XmlSchema parentSchema, XmlSchemaObjectCollection addLocation, int positionWithinCollection) => default; // 0x000000018988E614-0x000000018988EB80
+		internal void InferElement(XmlSchemaElement xse, bool bCreatingNewType, XmlSchema parentSchema) {} // 0x0000000189891048-0x00000001898925FC
+		private XmlSchemaSimpleContentExtension CheckSimpleContentExtension(XmlSchemaComplexType ct) => default; // 0x000000018988EB80-0x000000018988ECB0
+		private XmlSchemaType GetEffectiveSchemaType(XmlSchemaElement elem, bool bCreatingNewType) => default; // 0x00000001898906D8-0x0000000189890818
+		internal XmlSchemaElement FindMatchingElement(bool bCreatingNewType, XmlReader xtr, XmlSchemaComplexType ct, ref int lastUsedSeqItem, ref bool bParticleChanged, XmlSchema parentSchema, bool setMaxoccurs) => default; // 0x000000018988F8A0-0x00000001898906D8
+		internal void ProcessAttributes(ref XmlSchemaElement xse, XmlSchemaType effectiveSchemaType, bool bCreatingNewType, XmlSchema parentSchema) {} // 0x000000018989474C-0x0000000189894E08
+		private void MoveAttributes(XmlSchemaSimpleContentExtension scExtension, XmlSchemaComplexType ct) {} // 0x0000000189894468-0x00000001898944F4
+		private void MoveAttributes(XmlSchemaComplexType ct, XmlSchemaSimpleContentExtension simpleContentExtension, bool bCreatingNewType) {} // 0x00000001898944F4-0x000000018989474C
+		internal XmlSchemaAttribute FindAttribute(ICollection attributes, string attrName) => default; // 0x000000018988F2BC-0x000000018988F468
+		internal XmlSchemaElement FindGlobalElement(string namespaceURI, string localName, out XmlSchema parentSchema) {
+			parentSchema = default;
+			return default;
+		} // 0x000000018988F674-0x000000018988F8A0
+		internal XmlSchemaElement FindElement(XmlSchemaObjectCollection elements, string elementName) => default; // 0x000000018988F584-0x000000018988F674
+		internal XmlSchemaAttribute FindAttributeRef(ICollection attributes, string attributeName, string nsURI) => default; // 0x000000018988F0C4-0x000000018988F2BC
+		internal XmlSchemaElement FindElementRef(XmlSchemaObjectCollection elements, string elementName, string nsURI) => default; // 0x000000018988F468-0x000000018988F584
+		internal void MakeExistingAttributesOptional(XmlSchemaComplexType ct, XmlSchemaObjectCollection attributesInInstance) {} // 0x00000001898943B0-0x0000000189894468
+		private void SwitchUseToOptional(XmlSchemaObjectCollection attributes, XmlSchemaObjectCollection attributesInInstance) {} // 0x0000000189896154-0x0000000189896258
+		internal XmlQualifiedName RefineSimpleType(string s, ref int iTypeFlags) => default; // 0x0000000189894E08-0x0000000189895FD4
+		internal static int InferSimpleType(string s, ref bool bNeedsRangeCheck) => default; // 0x00000001898934C0-0x00000001898943B0
+		internal static int DateTime(string s, bool bDate, bool bTime) => default; // 0x000000018988EFD4-0x000000018988F0C4
+		private XmlSchemaElement CreateNewElementforChoice(XmlSchemaElement copyElement) => default; // 0x000000018988ECB0-0x000000018988EF3C
+		private static int GetSchemaType(XmlQualifiedName qname) => default; // 0x0000000189890818-0x0000000189891048
+		internal void SetMinMaxOccurs(XmlSchemaElement el, bool setMaxOccurs) {} // 0x0000000189895FD4-0x0000000189896154
+	}
+
+	[Serializable]
+	public class XmlSchemaInferenceException : XmlSchemaException // TypeDefIndex: 42886
+	{
+		// Constructors
+		protected XmlSchemaInferenceException(SerializationInfo info, StreamingContext context) {} // 0x000000018988DE00-0x000000018988DE20
+		public XmlSchemaInferenceException() {} // 0x000000018988DE20-0x000000018988DE2C
+		internal XmlSchemaInferenceException(string res, string arg) {} // 0x000000018988DD58-0x000000018988DE00
+		internal XmlSchemaInferenceException(string res, int lineNumber, int linePosition) {} // 0x000000018988DD28-0x000000018988DD58
+	
+		// Methods
+		public override void GetObjectData(SerializationInfo info, StreamingContext context) {} // 0x000000018988DD08-0x000000018988DD28
+	}
+
+	internal class NamespaceList // TypeDefIndex: 42888
+	{
+		// Fields
+		private ListType type; // 0x10
+		private Hashtable set; // 0x18
+		private string targetNamespace; // 0x20
+	
+		// Properties
+		public ListType Type { get => default; } // 0x0000000183D4E340-0x0000000183D4E350 
+		public string Excluded { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public ICollection Enumerate { get => default; } // 0x0000000189883924-0x0000000189883998 
+	
+		// Nested types
+		public enum ListType // TypeDefIndex: 42887
+		{
+			Any = 0,
+			Other = 1,
+			Set = 2
+		}
+	
+		// Constructors
+		public NamespaceList() {} // 0x000000018350B670-0x000000018350B680
+		public NamespaceList(string namespaces, string targetNamespace) {} // 0x00000001898836D4-0x0000000189883924
+	
+		// Methods
+		public NamespaceList Clone() => default; // 0x000000018988212C-0x00000001898821DC
+		public virtual bool Allows(string ns) => default; // 0x0000000189882094-0x0000000189882104
+		public bool Allows(XmlQualifiedName qname) => default; // 0x0000000189882104-0x000000018988212C
+		public override string ToString() => default; // 0x0000000189882A6C-0x0000000189882D88
+		public static bool IsSubset(NamespaceList sub, NamespaceList super) => default; // 0x00000001898827C0-0x0000000189882A18
+		public static NamespaceList Union(NamespaceList o1, NamespaceList o2, bool v1Compat) => default; // 0x0000000189882D88-0x00000001898836D4
+		private NamespaceList CompareSetToOther(NamespaceList other) => default; // 0x00000001898821DC-0x0000000189882318
+		public static NamespaceList Intersection(NamespaceList o1, NamespaceList o2, bool v1Compat) => default; // 0x0000000189882318-0x00000001898827C0
+		private void RemoveNamespace(string tns) {} // 0x0000000189882A18-0x0000000189882A6C
+	}
+
+	internal class NamespaceListV1Compat : NamespaceList // TypeDefIndex: 42889
+	{
+		// Constructors
+		public NamespaceListV1Compat() {} // Dummy constructor
+		public NamespaceListV1Compat(string namespaces, string targetNamespace) {} // 0x000000018988208C-0x0000000189882094
+	
+		// Methods
+		public override bool Allows(string ns) => default; // 0x0000000189882060-0x000000018988208C
+	}
+
+	internal sealed class Parser // TypeDefIndex: 42890
+	{
+		// Fields
+		private SchemaType schemaType; // 0x10
+		private XmlNameTable nameTable; // 0x18
+		private SchemaNames schemaNames; // 0x20
+		private ValidationEventHandler eventHandler; // 0x28
+		private XmlNamespaceManager namespaceManager; // 0x30
+		private XmlReader reader; // 0x38
+		private PositionInfo positionInfo; // 0x40
+		private bool isProcessNamespaces; // 0x48
+		private int schemaXmlDepth; // 0x4C
+		private int markupDepth; // 0x50
+		private SchemaBuilder builder; // 0x58
+		private XmlSchema schema; // 0x60
+		private SchemaInfo xdrSchema; // 0x68
+		private XmlResolver xmlResolver; // 0x70
+		private XmlDocument dummyDocument; // 0x78
+		private bool processMarkup; // 0x80
+		private XmlNode parentNode; // 0x88
+		private XmlNamespaceManager annotationNSManager; // 0x90
+		private string xmlns; // 0x98
+		private XmlCharType xmlCharType; // 0xA0
+	
+		// Properties
+		public XmlSchema XmlSchema { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+		internal XmlResolver XmlResolver { set {} } // 0x000000018519C3C8-0x000000018519C3D8
+		public SchemaInfo XdrSchema { get => default; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 
+	
+		// Constructors
+		public Parser() {} // Dummy constructor
+		public Parser(SchemaType schemaType, XmlNameTable nameTable, SchemaNames schemaNames, ValidationEventHandler eventHandler) {} // 0x0000000189885080-0x0000000189885164
+	
+		// Methods
+		public SchemaType Parse(XmlReader reader, string targetNamespace) => default; // 0x0000000189884944-0x0000000189884994
+		public void StartParsing(XmlReader reader, string targetNamespace) {} // 0x0000000189884C58-0x0000000189885080
+		private bool CheckSchemaRoot(SchemaType rootType, out string code) {
+			code = default;
+			return default;
+		} // 0x0000000189883998-0x0000000189883A7C
+		public SchemaType FinishParsing() => default; // 0x0000000183D4E340-0x0000000183D4E350
+		public bool ParseReaderNode() => default; // 0x0000000189884258-0x0000000189884944
+		private void ProcessAppInfoDocMarkup(bool root) {} // 0x0000000189884994-0x0000000189884C58
+		private XmlElement LoadElementNode(bool root) => default; // 0x0000000189883CCC-0x0000000189884070
+		private XmlAttribute CreateXmlNsAttribute(string prefix, string value) => default; // 0x0000000189883A7C-0x0000000189883B80
+		private XmlAttribute LoadAttributeNode() => default; // 0x0000000189883B80-0x0000000189883CCC
+		private XmlEntityReference LoadEntityReferenceInAttribute() => default; // 0x0000000189884070-0x0000000189884258
+	}
+
+	internal enum Compositor // TypeDefIndex: 42891
+	{
+		Root = 0,
+		Include = 1,
+		Import = 2,
+		Redefine = 3
+	}
+
+	internal class RedefineEntry // TypeDefIndex: 42892
+	{
+		// Fields
+		internal XmlSchemaRedefine redefine; // 0x10
+		internal XmlSchema schemaToUpdate; // 0x18
+	
+		// Constructors
+		public RedefineEntry() {} // Dummy constructor
+		public RedefineEntry(XmlSchemaRedefine external, XmlSchema schema) {} // 0x0000000182676770-0x00000001826767A0
+	}
+
+	internal sealed class Preprocessor : BaseProcessor // TypeDefIndex: 42893
+	{
+		// Fields
+		private string Xmlns; // 0x40
+		private string NsXsi; // 0x48
+		private string targetNamespace; // 0x50
+		private XmlSchema rootSchema; // 0x58
+		private XmlSchema currentSchema; // 0x60
+		private XmlSchemaForm elementFormDefault; // 0x68
+		private XmlSchemaForm attributeFormDefault; // 0x6C
+		private XmlSchemaDerivationMethod blockDefault; // 0x70
+		private XmlSchemaDerivationMethod finalDefault; // 0x74
+		private Hashtable schemaLocations; // 0x78
+		private Hashtable chameleonSchemas; // 0x80
+		private Hashtable referenceNamespaces; // 0x88
+		private Hashtable processedExternals; // 0x90
+		private SortedList lockList; // 0x98
+		private XmlReaderSettings readerSettings; // 0xA0
+		private XmlSchema rootSchemaForRedefine; // 0xA8
+		private ArrayList redefinedList; // 0xB0
+		private static XmlSchema builtInSchemaForXmlNS; // 0x00
+		private XmlResolver xmlResolver; // 0xB8
+	
+		// Properties
+		internal XmlResolver XmlResolver { set {} } // 0x00000001858AAF64-0x00000001858AAF78
+		internal XmlReaderSettings ReaderSettings { set {} } // 0x0000000184270264-0x0000000184270278
+		internal Hashtable SchemaLocations { set {} } // 0x00000001851DFCA4-0x00000001851DFCB4
+		internal Hashtable ChameleonSchemas { set {} } // 0x00000001851DFC94-0x00000001851DFCA4
+		internal XmlSchema RootSchema { get => default; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 
+	
+		// Constructors
+		public Preprocessor() {} // Dummy constructor
+		public Preprocessor(XmlNameTable nameTable, SchemaNames schemaNames, ValidationEventHandler eventHandler, XmlSchemaCompilationSettings compilationSettings) {} // 0x000000018988D6D8-0x000000018988D7F4
+	
+		// Methods
+		public bool Execute(XmlSchema schema, string targetNamespace, bool loadExternals) => default; // 0x00000001898866E4-0x0000000189886D30
+		private void Cleanup(XmlSchema schema) {} // 0x0000000189885A08-0x0000000189885B00
+		private void CleanupRedefine(XmlSchemaExternal include) {} // 0x000000018988598C-0x0000000189885A08
+		private void BuildSchemaList(XmlSchema schema) {} // 0x0000000189885354-0x000000018988548C
+		private void LoadExternals(XmlSchema schema) {} // 0x0000000189887660-0x0000000189888724
+		internal static XmlSchema GetBuildInSchema() => default; // 0x0000000189886D30-0x00000001898873CC
+		private void BuildRefNamespaces(XmlSchema schema) {} // 0x0000000189885164-0x0000000189885354
+		private void ParseUri(string uri, string code, XmlSchemaObject sourceSchemaObject) {} // 0x0000000189888724-0x000000018988883C
+		private void Preprocess(XmlSchema schema, string targetNamespace, ArrayList imports) {} // 0x000000018988C070-0x000000018988CE50
+		private void CopyIncludedComponents(XmlSchema includedSchema, XmlSchema schema) {} // 0x0000000189885B00-0x0000000189886490
+		private void PreprocessRedefine(RedefineEntry redefineEntry) {} // 0x000000018988B208-0x000000018988BB10
+		private void GetIncludedSet(XmlSchema schema, ArrayList includesList) {} // 0x00000001898874F4-0x00000001898875E4
+		internal static XmlSchema GetParentSchema(XmlSchemaObject currentSchemaObject) => default; // 0x00000001898875E4-0x0000000189887630
+		private void SetSchemaDefaults(XmlSchema schema) {} // 0x000000018988CEB4-0x000000018988CFA8
+		private int CountGroupSelfReference(XmlSchemaObjectCollection items, XmlQualifiedName name, XmlSchemaGroup redefined) => default; // 0x0000000189886490-0x00000001898866E4
+		private void CheckRefinedGroup(XmlSchemaGroup group) {} // 0x00000001898857F4-0x0000000189885888
+		private void CheckRefinedAttributeGroup(XmlSchemaAttributeGroup attributeGroup) {} // 0x000000018988548C-0x00000001898855A0
+		private void CheckRefinedSimpleType(XmlSchemaSimpleType stype) {} // 0x0000000189885888-0x000000018988598C
+		private void CheckRefinedComplexType(XmlSchemaComplexType ctype) {} // 0x00000001898855A0-0x00000001898857F4
+		private void PreprocessAttribute(XmlSchemaAttribute attribute) {} // 0x0000000189888C78-0x0000000189888DF8
+		private void PreprocessLocalAttribute(XmlSchemaAttribute attribute) {} // 0x000000018988A25C-0x000000018988A410
+		private void PreprocessAttributeContent(XmlSchemaAttribute attribute) {} // 0x000000018988894C-0x0000000189888B58
+		private void PreprocessAttributeGroup(XmlSchemaAttributeGroup attributeGroup) {} // 0x0000000189888B58-0x0000000189888C78
+		private void PreprocessElement(XmlSchemaElement element) {} // 0x0000000189889AD8-0x0000000189889D44
+		private void PreprocessLocalElement(XmlSchemaElement element) {} // 0x000000018988A410-0x000000018988A79C
+		private void PreprocessElementContent(XmlSchemaElement element) {} // 0x000000018988980C-0x0000000189889AD8
+		private void PreprocessIdentityConstraint(XmlSchemaIdentityConstraint constraint) {} // 0x0000000189889F18-0x000000018988A25C
+		private void PreprocessSimpleType(XmlSchemaSimpleType simpleType, bool local) {} // 0x000000018988BB10-0x000000018988C070
+		private void PreprocessComplexType(XmlSchemaComplexType complexType, bool local) {} // 0x00000001898890BC-0x000000018988980C
+		private void PreprocessGroup(XmlSchemaGroup group) {} // 0x0000000189889D44-0x0000000189889F18
+		private void PreprocessNotation(XmlSchemaNotation notation) {} // 0x000000018988A79C-0x000000018988AA08
+		private void PreprocessParticle(XmlSchemaParticle particle) {} // 0x000000018988AA08-0x000000018988B208
+		private void PreprocessAttributes(XmlSchemaObjectCollection attributes, XmlSchemaAnyAttribute anyAttribute, XmlSchemaObject parent) {} // 0x0000000189888DF8-0x00000001898890BC
+		private void ValidateIdAttribute(XmlSchemaObject xso) {} // 0x000000018988CFA8-0x000000018988D280
+		private void ValidateNameAttribute(XmlSchemaObject xso) {} // 0x000000018988D280-0x000000018988D4B4
+		private void ValidateQNameAttribute(XmlSchemaObject xso, string attributeName, XmlQualifiedName value) {} // 0x000000018988D4B4-0x000000018988D6D8
+		private System.Uri ResolveSchemaLocationUri(XmlSchema enclosingSchema, string location) => default; // 0x000000018988CE50-0x000000018988CE94
+		private object GetSchemaEntity(System.Uri ruri) => default; // 0x0000000189887630-0x0000000189887660
+		private XmlSchema GetChameleonSchema(string targetNamespace, XmlSchema schema) => default; // 0x00000001898873CC-0x00000001898874F4
+		private void SetParent(XmlSchemaObject child, XmlSchemaObject parent) {} // 0x000000018988CE94-0x000000018988CEB4
+		private void PreprocessAnnotation(XmlSchemaObject schemaObject) {} // 0x000000018988883C-0x00000001898888E0
+		private void PreprocessAnnotation(XmlSchemaAnnotation annotation) {} // 0x00000001898888E0-0x000000018988894C
+	}
+
+	internal sealed class SchemaAttDef : SchemaDeclBase, IDtdDefaultAttributeInfo // TypeDefIndex: 42895
+	{
+		// Fields
+		private string defExpanded; // 0x60
+		private int lineNum; // 0x68
+		private int linePos; // 0x6C
+		private int valueLineNum; // 0x70
+		private int valueLinePos; // 0x74
+		private Reserve reserved; // 0x78
+		private bool defaultValueChecked; // 0x7C
+		private XmlSchemaAttribute schemaAttribute; // 0x80
+		public static readonly SchemaAttDef Empty; // 0x00
+	
+		// Properties
+		string IDtdAttributeInfo.Prefix { get => default; } // 0x0000000189897258-0x0000000189897260 
+		string IDtdAttributeInfo.LocalName { get => default; } // 0x0000000184270688-0x00000001842706A4 
+		int IDtdAttributeInfo.LineNumber { get => default; } // 0x0000000183D4EEE0-0x0000000183D4EEF0 
+		int IDtdAttributeInfo.LinePosition { get => default; } // 0x0000000183D4F400-0x0000000183D4F410 
+		bool IDtdAttributeInfo.IsNonCDataType { get => default; } // 0x0000000189897238-0x0000000189897250 
+		bool IDtdAttributeInfo.IsDeclaredInExternal { get => default; } // 0x0000000183D4EF90-0x0000000183D4EFA0 
+		bool IDtdAttributeInfo.IsXmlAttribute { get => default; } // 0x0000000189897250-0x0000000189897258 
+		string IDtdDefaultAttributeInfo.DefaultValueExpanded { get => default; } // 0x0000000189897260-0x0000000189897268 
+		object IDtdDefaultAttributeInfo.DefaultValueTyped { get => default; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
+		int IDtdDefaultAttributeInfo.ValueLineNumber { get => default; } // 0x0000000183D4F0C0-0x0000000183D4F0D0 
+		int IDtdDefaultAttributeInfo.ValueLinePosition { get => default; } // 0x0000000183D4F0D0-0x0000000183D4F0E0 
+		internal int LinePosition { get => default; set {} } // 0x0000000183D4F400-0x0000000183D4F410 0x0000000183D4F450-0x0000000183D4F460
+		internal int LineNumber { get => default; set {} } // 0x0000000183D4EEE0-0x0000000183D4EEF0 0x0000000183D4EF30-0x0000000183D4EF40
+		internal int ValueLinePosition { get => default; set {} } // 0x0000000183D4F0D0-0x0000000183D4F0E0 0x0000000183D4F100-0x0000000183D4F110
+		internal int ValueLineNumber { get => default; set {} } // 0x0000000183D4F0C0-0x0000000183D4F0D0 0x0000000183D4F0F0-0x0000000183D4F100
+		internal string DefaultValueExpanded { get => default; set {} } // 0x00000001898972F4-0x0000000189897340 0x00000001839274B0-0x00000001839274C0
+		internal XmlTokenizedType TokenizedType { get => default; set {} } // 0x0000000189897340-0x0000000189897364 0x0000000189897364-0x000000018989738C
+		internal Reserve Reserved { get => default; set {} } // 0x0000000183D4EC40-0x0000000183D4EC50 0x0000000183D4ECC0-0x0000000183D4ECD0
+		internal bool DefaultValueChecked { get => default; } // 0x0000000183D58A60-0x0000000183D58A70 
+		internal XmlSchemaAttribute SchemaAttribute { get => default; set {} } // 0x0000000183D4EAE0-0x0000000183D4EAF0 0x00000001851DFC94-0x00000001851DFCA4
+	
+		// Nested types
+		internal enum Reserve // TypeDefIndex: 42894
+		{
+			None = 0,
+			XmlSpace = 1,
+			XmlLang = 2
+		}
+	
+		// Constructors
+		public SchemaAttDef(XmlQualifiedName name, string prefix) {} // 0x00000001898972E4-0x00000001898972EC
+		public SchemaAttDef(XmlQualifiedName name) {} // 0x00000001898972D8-0x00000001898972E4
+		private SchemaAttDef() {} // 0x00000001898972EC-0x00000001898972F4
+		static SchemaAttDef() {} // 0x0000000189897268-0x00000001898972D8
+	
+		// Methods
+		internal void CheckXmlSpace(IValidationEventHandling validationEventHandling) {} // 0x0000000189896FDC-0x00000001898971E8
+		internal SchemaAttDef Clone() => default; // 0x00000001898971E8-0x0000000189897238
+	}
+
+	internal abstract class SchemaBuilder // TypeDefIndex: 42896
+	{
+		// Constructors
+		protected SchemaBuilder() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal abstract bool ProcessElement(string prefix, string name, string ns);
+		internal abstract void ProcessAttribute(string prefix, string name, string ns, string value);
+		internal abstract bool IsContentParsed();
+		internal abstract void ProcessMarkup(XmlNode[] markup);
+		internal abstract void ProcessCData(string value);
+		internal abstract void StartChildren();
+		internal abstract void EndChildren();
+	}
+
+	internal sealed class SchemaCollectionCompiler : BaseProcessor // TypeDefIndex: 42897
+	{
+		// Fields
+		private bool compileContentModel; // 0x40
+		private XmlSchemaObjectTable examplars; // 0x48
+		private Stack complexTypeStack; // 0x50
+		private XmlSchema schema; // 0x58
+	
+		// Constructors
+		public SchemaCollectionCompiler() {} // Dummy constructor
+		public SchemaCollectionCompiler(XmlNameTable nameTable, ValidationEventHandler eventHandler) {} // 0x00000001898A5A4C-0x00000001898A5B1C
+	
+		// Methods
+		public bool Execute(XmlSchema schema, SchemaInfo schemaInfo, bool compileContentModel) => default; // 0x00000001898A3764-0x00000001898A37CC
+		private void Prepare() {} // 0x00000001898A575C-0x00000001898A5A2C
+		private void Cleanup() {} // 0x0000000189899FC4-0x000000018989A724
+		internal static void Cleanup(XmlSchema schema) {} // 0x000000018989A724-0x000000018989ABE0
+		private void Compile() {} // 0x00000001898A2768-0x00000001898A3764
+		private void Output(SchemaInfo schemaInfo) {} // 0x00000001898A4DC4-0x00000001898A575C
+		private static void CleanupAttribute(XmlSchemaAttribute attribute) {} // 0x00000001898999E0-0x0000000189899A28
+		private static void CleanupAttributeGroup(XmlSchemaAttributeGroup attributeGroup) {} // 0x000000018989998C-0x00000001898999E0
+		private static void CleanupComplexType(XmlSchemaComplexType complexType) {} // 0x0000000189899AA8-0x0000000189899D20
+		private static void CleanupSimpleType(XmlSchemaSimpleType simpleType) {} // 0x0000000189899F98-0x0000000189899FC4
+		private static void CleanupElement(XmlSchemaElement element) {} // 0x0000000189899D20-0x0000000189899E5C
+		private static void CleanupAttributes(XmlSchemaObjectCollection attributes) {} // 0x0000000189899A28-0x0000000189899AA8
+		private static void CleanupGroup(XmlSchemaGroup group) {} // 0x0000000189899E5C-0x0000000189899E94
+		private static void CleanupParticle(XmlSchemaParticle particle) {} // 0x0000000189899E94-0x0000000189899F98
+		private void CompileSubstitutionGroup(XmlSchemaSubstitutionGroupV1Compat substitutionGroup) {} // 0x00000001898A2404-0x00000001898A2768
+		private void CheckSubstitutionGroup(XmlSchemaSubstitutionGroup substitutionGroup) {} // 0x000000018989971C-0x00000001898998A0
+		private void CompileGroup(XmlSchemaGroup group) {} // 0x000000018989F714-0x000000018989F7E0
+		private void CompileSimpleType(XmlSchemaSimpleType simpleType) {} // 0x00000001898A16B4-0x00000001898A2404
+		private XmlSchemaSimpleType[] CompileBaseMemberTypes(XmlSchemaSimpleType simpleType) => default; // 0x000000018989C640-0x000000018989C948
+		private void CheckUnionType(XmlSchemaSimpleType unionMember, ArrayList memberTypeDefinitions, XmlSchemaSimpleType parentType) {} // 0x00000001898998A0-0x000000018989998C
+		private void CompileComplexType(XmlSchemaComplexType complexType) {} // 0x000000018989D858-0x000000018989E1DC
+		private void CompileSimpleContentExtension(XmlSchemaComplexType complexType, XmlSchemaSimpleContentExtension simpleExtension) {} // 0x00000001898A108C-0x00000001898A12A4
+		private void CompileSimpleContentRestriction(XmlSchemaComplexType complexType, XmlSchemaSimpleContentRestriction simpleRestriction) {} // 0x00000001898A12A4-0x00000001898A16B4
+		private void CompileComplexContentExtension(XmlSchemaComplexType complexType, XmlSchemaComplexContent complexContent, XmlSchemaComplexContentExtension complexExtension) {} // 0x000000018989CA00-0x000000018989CD90
+		private void CompileComplexContentRestriction(XmlSchemaComplexType complexType, XmlSchemaComplexContent complexContent, XmlSchemaComplexContentRestriction complexRestriction) {} // 0x000000018989CD90-0x000000018989D02C
+		private void CheckParticleDerivation(XmlSchemaComplexType complexType) {} // 0x000000018989965C-0x000000018989971C
+		private XmlSchemaParticle CompileContentTypeParticle(XmlSchemaParticle particle, bool substitution) => default; // 0x000000018989E1DC-0x000000018989E32C
+		private XmlSchemaParticle CannonicalizeParticle(XmlSchemaParticle particle, bool root, bool substitution) => default; // 0x0000000189899048-0x0000000189899244
+		private XmlSchemaParticle CannonicalizeElement(XmlSchemaElement element, bool substitution) => default; // 0x0000000189898A68-0x0000000189898B88
+		private XmlSchemaParticle CannonicalizeGroupRef(XmlSchemaGroupRef groupRef, bool root, bool substitution) => default; // 0x0000000189898B88-0x0000000189899048
+		private XmlSchemaParticle CannonicalizeAll(XmlSchemaAll all, bool root, bool substitution) => default; // 0x00000001898981D4-0x00000001898985D0
+		private XmlSchemaParticle CannonicalizeChoice(XmlSchemaChoice choice, bool root, bool substitution) => default; // 0x00000001898985D0-0x0000000189898A68
+		private XmlSchemaParticle CannonicalizeSequence(XmlSchemaSequence sequence, bool root, bool substitution) => default; // 0x0000000189899244-0x000000018989965C
+		private bool IsValidRestriction(XmlSchemaParticle derivedParticle, XmlSchemaParticle baseParticle) => default; // 0x00000001898A4950-0x00000001898A4DC4
+		private bool IsElementFromElement(XmlSchemaElement derivedElement, XmlSchemaElement baseElement) => default; // 0x00000001898A3C34-0x00000001898A3D64
+		private bool IsElementFromAny(XmlSchemaElement derivedElement, XmlSchemaAny baseAny) => default; // 0x00000001898A3BD0-0x00000001898A3C34
+		private bool IsAnyFromAny(XmlSchemaAny derivedAny, XmlSchemaAny baseAny) => default; // 0x00000001898A3B80-0x00000001898A3BD0
+		private bool IsGroupBaseFromAny(XmlSchemaGroupBase derivedGroupBase, XmlSchemaAny baseAny) => default; // 0x00000001898A400C-0x00000001898A41CC
+		private bool IsElementFromGroupBase(XmlSchemaElement derivedElement, XmlSchemaGroupBase baseGroupBase, bool skipEmptableOnly) => default; // 0x00000001898A3D64-0x00000001898A400C
+		private bool IsGroupBaseFromGroupBase(XmlSchemaGroupBase derivedGroupBase, XmlSchemaGroupBase baseGroupBase, bool skipEmptableOnly) => default; // 0x00000001898A41CC-0x00000001898A4398
+		private bool IsSequenceFromAll(XmlSchemaSequence derivedSequence, XmlSchemaAll baseAll) => default; // 0x00000001898A4450-0x00000001898A468C
+		private bool IsSequenceFromChoice(XmlSchemaSequence derivedSequence, XmlSchemaChoice baseChoice) => default; // 0x00000001898A468C-0x00000001898A483C
+		private void CalculateSequenceRange(XmlSchemaSequence sequence, out decimal minOccurs, out decimal maxOccurs) {
+			minOccurs = default;
+			maxOccurs = default;
+		} // 0x0000000189897ED4-0x00000001898981D4
+		private bool IsValidOccurrenceRangeRestriction(XmlSchemaParticle derivedParticle, XmlSchemaParticle baseParticle) => default; // 0x00000001898A48EC-0x00000001898A4950
+		private bool IsValidOccurrenceRangeRestriction(decimal minOccurs, decimal maxOccurs, decimal baseMinOccurs, decimal baseMaxOccurs) => default; // 0x00000001898A483C-0x00000001898A48EC
+		private int GetMappingParticle(XmlSchemaParticle particle, XmlSchemaObjectCollection collection) => default; // 0x00000001898A396C-0x00000001898A3A14
+		private bool IsParticleEmptiable(XmlSchemaParticle particle) => default; // 0x00000001898A4398-0x00000001898A4450
+		private void CalculateEffectiveTotalRange(XmlSchemaParticle particle, out decimal minOccurs, out decimal maxOccurs) {
+			minOccurs = default;
+			maxOccurs = default;
+		} // 0x0000000189897838-0x0000000189897ED4
+		private void PushComplexType(XmlSchemaComplexType complexType) {} // 0x00000001898A5A2C-0x00000001898A5A4C
+		private XmlSchemaContentType GetSchemaContentType(XmlSchemaComplexType complexType, XmlSchemaComplexContent complexContent, XmlSchemaParticle particle) => default; // 0x00000001898A3A14-0x00000001898A3A70
+		private void CompileAttributeGroup(XmlSchemaAttributeGroup attributeGroup) {} // 0x000000018989ACF0-0x000000018989B308
+		private void CompileLocalAttributes(XmlSchemaComplexType baseType, XmlSchemaComplexType derivedType, XmlSchemaObjectCollection attributes, XmlSchemaAnyAttribute anyAttribute, XmlSchemaDerivationMethod derivedBy) {} // 0x00000001898A0064-0x00000001898A0E6C
+		private XmlSchemaAnyAttribute CompileAnyAttributeUnion(XmlSchemaAnyAttribute a, XmlSchemaAnyAttribute b) => default; // 0x000000018989AC68-0x000000018989ACF0
+		private XmlSchemaAnyAttribute CompileAnyAttributeIntersection(XmlSchemaAnyAttribute a, XmlSchemaAnyAttribute b) => default; // 0x000000018989ABE0-0x000000018989AC68
+		private void CompileAttribute(XmlSchemaAttribute xa) {} // 0x000000018989B308-0x000000018989C640
+		private void CompileIdentityConstraint(XmlSchemaIdentityConstraint xi) {} // 0x000000018989F7E0-0x00000001898A0064
+		private void CompileElement(XmlSchemaElement xe) {} // 0x000000018989E32C-0x000000018989F714
+		private ContentValidator CompileComplexContent(XmlSchemaComplexType complexType) => default; // 0x000000018989D02C-0x000000018989D858
+		private void BuildParticleContentModel(ParticleContentValidator contentValidator, XmlSchemaParticle particle) {} // 0x000000018989738C-0x0000000189897838
+		private void CompileParticleElements(XmlSchemaComplexType complexType, XmlSchemaParticle particle) {} // 0x00000001898A0E6C-0x00000001898A108C
+		private void CompileCompexTypeElements(XmlSchemaComplexType complexType) {} // 0x000000018989C948-0x000000018989CA00
+		private XmlSchemaSimpleType GetSimpleType(XmlQualifiedName name) => default; // 0x00000001898A3A70-0x00000001898A3B80
+		private XmlSchemaComplexType GetComplexType(XmlQualifiedName name) => default; // 0x00000001898A38E4-0x00000001898A396C
+		private XmlSchemaType GetAnySchemaType(XmlQualifiedName name) => default; // 0x00000001898A37CC-0x00000001898A38E4
+	}
+
+	internal sealed class SchemaCollectionPreprocessor : BaseProcessor // TypeDefIndex: 42899
+	{
+		// Fields
+		private XmlSchema schema; // 0x40
+		private string targetNamespace; // 0x48
+		private bool buildinIncluded; // 0x50
+		private XmlSchemaForm elementFormDefault; // 0x54
+		private XmlSchemaForm attributeFormDefault; // 0x58
+		private XmlSchemaDerivationMethod blockDefault; // 0x5C
+		private XmlSchemaDerivationMethod finalDefault; // 0x60
+		private Hashtable schemaLocations; // 0x68
+		private Hashtable referenceNamespaces; // 0x70
+		private string Xmlns; // 0x78
+		private XmlResolver xmlResolver; // 0x80
+	
+		// Properties
+		internal XmlResolver XmlResolver { set {} } // 0x00000001851DFC94-0x00000001851DFCA4
+	
+		// Nested types
+		private enum Compositor // TypeDefIndex: 42898
+		{
+			Root = 0,
+			Include = 1,
+			Import = 2
+		}
+	
+		// Constructors
+		public SchemaCollectionPreprocessor() {} // Dummy constructor
+		public SchemaCollectionPreprocessor(XmlNameTable nameTable, SchemaNames schemaNames, ValidationEventHandler eventHandler) {} // 0x00000001898AE120-0x00000001898AE130
+	
+		// Methods
+		public bool Execute(XmlSchema schema, string targetNamespace, bool loadExternals, XmlSchemaCollection xsc) => default; // 0x00000001898A6604-0x00000001898A67EC
+		private void Cleanup(XmlSchema schema) {} // 0x00000001898A61BC-0x00000001898A63D0
+		private void LoadExternals(XmlSchema schema, XmlSchemaCollection xsc) {} // 0x00000001898A68CC-0x00000001898A7488
+		private void BuildRefNamespaces(XmlSchema schema) {} // 0x00000001898A5B1C-0x00000001898A5CDC
+		private void Preprocess(XmlSchema schema, string targetNamespace, Compositor compositor) {} // 0x00000001898AAFD4-0x00000001898ADAE4
+		private void PreprocessRedefine(XmlSchemaRedefine redefine) {} // 0x00000001898A9D84-0x00000001898AAA60
+		private int CountGroupSelfReference(XmlSchemaObjectCollection items, XmlQualifiedName name) => default; // 0x00000001898A63D0-0x00000001898A6604
+		private void CheckRefinedGroup(XmlSchemaGroup group) {} // 0x00000001898A6038-0x00000001898A60B8
+		private void CheckRefinedAttributeGroup(XmlSchemaAttributeGroup attributeGroup) {} // 0x00000001898A5CDC-0x00000001898A5DE4
+		private void CheckRefinedSimpleType(XmlSchemaSimpleType stype) {} // 0x00000001898A60B8-0x00000001898A61BC
+		private void CheckRefinedComplexType(XmlSchemaComplexType ctype) {} // 0x00000001898A5DE4-0x00000001898A6038
+		private void PreprocessAttribute(XmlSchemaAttribute attribute) {} // 0x00000001898A788C-0x00000001898A7A0C
+		private void PreprocessLocalAttribute(XmlSchemaAttribute attribute) {} // 0x00000001898A8E30-0x00000001898A8FE4
+		private void PreprocessAttributeContent(XmlSchemaAttribute attribute) {} // 0x00000001898A7548-0x00000001898A776C
+		private void PreprocessAttributeGroup(XmlSchemaAttributeGroup attributeGroup) {} // 0x00000001898A776C-0x00000001898A788C
+		private void PreprocessElement(XmlSchemaElement element) {} // 0x00000001898A86AC-0x00000001898A8918
+		private void PreprocessLocalElement(XmlSchemaElement element) {} // 0x00000001898A8FE4-0x00000001898A9370
+		private void PreprocessElementContent(XmlSchemaElement element) {} // 0x00000001898A83C4-0x00000001898A86AC
+		private void PreprocessIdentityConstraint(XmlSchemaIdentityConstraint constraint) {} // 0x00000001898A8AEC-0x00000001898A8E30
+		private void PreprocessSimpleType(XmlSchemaSimpleType simpleType, bool local) {} // 0x00000001898AAA60-0x00000001898AAFD4
+		private void PreprocessComplexType(XmlSchemaComplexType complexType, bool local) {} // 0x00000001898A7C74-0x00000001898A83C4
+		private void PreprocessGroup(XmlSchemaGroup group) {} // 0x00000001898A8918-0x00000001898A8AEC
+		private void PreprocessNotation(XmlSchemaNotation notation) {} // 0x00000001898A9370-0x00000001898A9618
+		private void PreprocessParticle(XmlSchemaParticle particle) {} // 0x00000001898A9618-0x00000001898A9D84
+		private void PreprocessAttributes(XmlSchemaObjectCollection attributes, XmlSchemaAnyAttribute anyAttribute, XmlSchemaObject parent) {} // 0x00000001898A7A0C-0x00000001898A7C74
+		private void ValidateIdAttribute(XmlSchemaObject xso) {} // 0x00000001898ADB80-0x00000001898ADD8C
+		private void ValidateNameAttribute(XmlSchemaObject xso) {} // 0x00000001898ADD8C-0x00000001898ADFC0
+		private void ValidateQNameAttribute(XmlSchemaObject xso, string attributeName, XmlQualifiedName value) {} // 0x00000001898ADFC0-0x00000001898AE120
+		private void SetParent(XmlSchemaObject child, XmlSchemaObject parent) {} // 0x000000018988CE94-0x000000018988CEB4
+		private void PreprocessAnnotation(XmlSchemaObject schemaObject) {} // 0x00000001898A7488-0x00000001898A7548
+		private System.Uri ResolveSchemaLocationUri(XmlSchema enclosingSchema, string location) => default; // 0x00000001898ADAE4-0x00000001898ADB80
+		private Stream GetSchemaEntity(System.Uri ruri) => default; // 0x00000001898A67EC-0x00000001898A68CC
+	}
+
+	internal abstract class SchemaDeclBase // TypeDefIndex: 42901
+	{
+		// Fields
+		protected XmlQualifiedName name; // 0x10
+		protected string prefix; // 0x18
+		protected bool isDeclaredInExternal; // 0x20
+		protected Use presence; // 0x24
+		protected XmlSchemaType schemaType; // 0x28
+		protected XmlSchemaDatatype datatype; // 0x30
+		protected string defaultValueRaw; // 0x38
+		protected object defaultValueTyped; // 0x40
+		protected long maxLength; // 0x48
+		protected long minLength; // 0x50
+		protected List<string> values; // 0x58
+	
+		// Properties
+		internal XmlQualifiedName Name { get; set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+		internal string Prefix { get; set; } // 0x00000001898BEB88-0x00000001898BEBD4 0x00000001822C3A90-0x00000001822C3AA0
+		internal bool IsDeclaredInExternal { get; set; } // 0x0000000183D4EF90-0x0000000183D4EFA0 0x0000000183D4EFC0-0x0000000183D4EFD0
+		internal Use Presence { get; set; } // 0x0000000183D4E2E0-0x0000000183D4E2F0 0x0000000183D4E2F0-0x0000000183D4E300
+		internal long MaxLength { get; set; } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000183D4EDA0-0x0000000183D4EDB0
+		internal long MinLength { get; set; } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000183D4F060-0x0000000183D4F070
+		internal XmlSchemaType SchemaType { get; set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+		internal XmlSchemaDatatype Datatype { get; set; } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
+		internal List<string> Values { get; set; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x0000000183081D30-0x0000000183081D40
+		internal string DefaultValueRaw { get; set; } // 0x00000001898BEB3C-0x00000001898BEB88 0x000000018388FF30-0x000000018388FF40
+		internal object DefaultValueTyped { get; set; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
+	
+		// Nested types
+		internal enum Use // TypeDefIndex: 42900
+		{
+			Default = 0,
+			Required = 1,
+			Implied = 2,
+			Fixed = 3,
+			RequiredFixed = 4
+		}
+	
+		// Constructors
+		protected SchemaDeclBase(XmlQualifiedName name, string prefix) {} // 0x00000001898BEA4C-0x00000001898BEAE4
+		protected SchemaDeclBase() {} // 0x00000001898BEAE4-0x00000001898BEB3C
+	
+		// Methods
+		internal void AddValue(string value) {} // 0x00000001898BE8B0-0x00000001898BE960
+		internal bool CheckEnumeration(object pVal) => default; // 0x00000001898BE960-0x00000001898BEA00
+		internal bool CheckValue(object pVal) => default; // 0x00000001898BEA00-0x00000001898BEA4C
+	}
+
+	internal sealed class SchemaElementDecl : SchemaDeclBase, IDtdAttributeListInfo // TypeDefIndex: 42902
+	{
+		// Fields
+		private Dictionary<XmlQualifiedName, SchemaAttDef> attdefs; // 0x60
+		private List<IDtdDefaultAttributeInfo> defaultAttdefs; // 0x68
+		private bool isIdDeclared; // 0x70
+		private bool hasNonCDataAttribute; // 0x71
+		private bool isAbstract; // 0x72
+		private bool isNillable; // 0x73
+		private bool hasRequiredAttribute; // 0x74
+		private bool isNotationDeclared; // 0x75
+		private Dictionary<XmlQualifiedName, XmlQualifiedName> prohibitedAttributes; // 0x78
+		private ContentValidator contentValidator; // 0x80
+		private XmlSchemaAnyAttribute anyAttribute; // 0x88
+		private XmlSchemaDerivationMethod block; // 0x90
+		private CompiledIdentityConstraint[] constraints; // 0x98
+		private XmlSchemaElement schemaElement; // 0xA0
+		internal static readonly SchemaElementDecl Empty; // 0x00
+	
+		// Properties
+		bool IDtdAttributeListInfo.HasNonCDataAttributes { get => default; } // 0x0000000183D51CF0-0x0000000183D51D00 
+		internal bool IsIdDeclared { get => default; set {} } // 0x0000000183D4F260-0x0000000183D4F270 0x0000000183D4F290-0x0000000183D4F2A0
+		internal bool HasNonCDataAttribute { get => default; set {} } // 0x0000000183D51CF0-0x0000000183D51D00 0x0000000183D51D00-0x0000000183D51D10
+		internal bool IsAbstract { get => default; set {} } // 0x0000000183D5BFA0-0x0000000183D5BFB0 0x0000000183D5BFD0-0x0000000183D5BFE0
+		internal bool IsNillable { get => default; set {} } // 0x0000000183D5BFB0-0x0000000183D5BFC0 0x0000000183D5BFF0-0x0000000183D5C000
+		internal XmlSchemaDerivationMethod Block { get => default; set {} } // 0x0000000183D4FB60-0x0000000183D4FB70 0x0000000183D4FB70-0x0000000183D4FB80
+		internal bool IsNotationDeclared { get => default; set {} } // 0x0000000183D589C0-0x0000000183D589D0 0x0000000183D5C010-0x0000000183D5C020
+		internal bool HasDefaultAttribute { get => default; } // 0x00000001885839E8-0x00000001885839F4 
+		internal bool HasRequiredAttribute { get => default; } // 0x0000000183D58980-0x0000000183D58990 
+		internal ContentValidator ContentValidator { get => default; set {} } // 0x0000000183D4EAE0-0x0000000183D4EAF0 0x00000001851DFC94-0x00000001851DFCA4
+		internal XmlSchemaAnyAttribute AnyAttribute { get => default; set {} } // 0x0000000183D4EA60-0x0000000183D4EA70 0x0000000184274DA0-0x0000000184274DB4
+		internal CompiledIdentityConstraint[] Constraints { get => default; set {} } // 0x00000001811AC510-0x00000001811AC520 0x00000001851417AC-0x00000001851417C0
+		internal XmlSchemaElement SchemaElement { get => default; set {} } // 0x0000000183D4EA80-0x0000000183D4EA90 0x0000000184270264-0x0000000184270278
+		internal IList<IDtdDefaultAttributeInfo> DefaultAttDefs { get => default; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 
+		internal Dictionary<XmlQualifiedName, SchemaAttDef> AttDefs { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+		internal Dictionary<XmlQualifiedName, XmlQualifiedName> ProhibitedAttributes { get => default; } // 0x0000000183D4EB20-0x0000000183D4EB30 
+	
+		// Constructors
+		internal SchemaElementDecl() {} // 0x00000001898BF4BC-0x00000001898BF584
+		internal SchemaElementDecl(XmlSchemaDatatype dtype) {} // 0x00000001898BF2B0-0x00000001898BF3D4
+		internal SchemaElementDecl(XmlQualifiedName name, string prefix) {} // 0x00000001898BF3D4-0x00000001898BF4BC
+		static SchemaElementDecl() {} // 0x00000001898BF240-0x00000001898BF2B0
+	
+		// Methods
+		internal static SchemaElementDecl CreateAnyTypeElementDecl() => default; // 0x00000001898BF09C-0x00000001898BF120
+		IDtdAttributeInfo IDtdAttributeListInfo.LookupAttribute(string prefix, string localName) => default; // 0x00000001898BF18C-0x00000001898BF240
+		IEnumerable<IDtdDefaultAttributeInfo> IDtdAttributeListInfo.LookupDefaultAttributes() => default; // 0x0000000183D4EAB0-0x0000000183D4EAC0
+		internal SchemaElementDecl Clone() => default; // 0x00000001898BF04C-0x00000001898BF09C
+		internal void AddAttDef(SchemaAttDef attdef) {} // 0x00000001898BEBD4-0x00000001898BECD4
+		internal SchemaAttDef GetAttDef(XmlQualifiedName qname) => default; // 0x00000001898BF120-0x00000001898BF18C
+		internal void CheckAttributes(Hashtable presence, bool standalone) {} // 0x00000001898BECD4-0x00000001898BF04C
+	}
+
+	internal sealed class SchemaEntity : IDtdEntityInfo // TypeDefIndex: 42903
+	{
+		// Fields
+		private XmlQualifiedName qname; // 0x10
+		private string url; // 0x18
+		private string pubid; // 0x20
+		private string text; // 0x28
+		private XmlQualifiedName ndata; // 0x30
+		private int lineNumber; // 0x38
+		private int linePosition; // 0x3C
+		private bool isParameter; // 0x40
+		private bool isExternal; // 0x41
+		private bool parsingInProgress; // 0x42
+		private bool isDeclaredInExternal; // 0x43
+		private string baseURI; // 0x48
+		private string declaredURI; // 0x50
+	
+		// Properties
+		string IDtdEntityInfo.Name { get => default; } // 0x0000000184270688-0x00000001842706A4 
+		bool IDtdEntityInfo.IsExternal { get => default; } // 0x0000000183D4F7B0-0x0000000183D4F7C0 
+		bool IDtdEntityInfo.IsDeclaredInExternal { get => default; } // 0x0000000183D58420-0x0000000183D58430 
+		bool IDtdEntityInfo.IsUnparsedEntity { get => default; } // 0x00000001898BF660-0x00000001898BF684 
+		bool IDtdEntityInfo.IsParameterEntity { get => default; } // 0x0000000183D4EE90-0x0000000183D4EEA0 
+		string IDtdEntityInfo.BaseUriString { get => default; } // 0x00000001898BF650-0x00000001898BF658 
+		string IDtdEntityInfo.DeclaredUriString { get => default; } // 0x00000001898BF658-0x00000001898BF660 
+		string IDtdEntityInfo.SystemId { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		string IDtdEntityInfo.PublicId { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		string IDtdEntityInfo.Text { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		int IDtdEntityInfo.LineNumber { get => default; } // 0x0000000183D4EC30-0x0000000183D4EC40 
+		int IDtdEntityInfo.LinePosition { get => default; } // 0x0000000183D4ED90-0x0000000183D4EDA0 
+		internal XmlQualifiedName Name { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		internal string Url { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x00000001898BF7BC-0x00000001898BF7DC
+		internal string Pubid { get => default; set {} } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+		internal bool IsExternal { get => default; set {} } // 0x0000000183D4F7B0-0x0000000183D4F7C0 0x0000000183D4F7D0-0x0000000183D4F7E0
+		internal bool DeclaredInExternal { get => default; set {} } // 0x0000000183D58420-0x0000000183D58430 0x0000000183D757A0-0x0000000183D757B0
+		internal XmlQualifiedName NData { get => default; set {} } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
+		internal string Text { get => default; set {} } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x00000001898BF79C-0x00000001898BF7BC
+		internal int Line { get => default; set {} } // 0x0000000183D4EC30-0x0000000183D4EC40 0x0000000183D4ECB0-0x0000000183D4ECC0
+		internal int Pos { get => default; set {} } // 0x0000000183D4ED90-0x0000000183D4EDA0 0x0000000183D4EDC0-0x0000000183D4EDD0
+		internal string BaseURI { get => default; set {} } // 0x00000001898BF704-0x00000001898BF750 0x0000000182692290-0x00000001826922A0
+		internal bool ParsingInProgress { get => default; set {} } // 0x0000000183D4F7A0-0x0000000183D4F7B0 0x0000000183D4F7C0-0x0000000183D4F7D0
+		internal string DeclaredURI { get => default; set {} } // 0x00000001898BF750-0x00000001898BF79C 0x0000000182C926C0-0x0000000182C926D0
+	
+		// Constructors
+		public SchemaEntity() {} // Dummy constructor
+		internal SchemaEntity(XmlQualifiedName qname, bool isParameter) {} // 0x00000001898BF684-0x00000001898BF704
+	
+		// Methods
+		internal static bool IsPredefinedEntity(string n) => default; // 0x00000001898BF584-0x00000001898BF650
+	}
+
+	internal enum AttributeMatchState // TypeDefIndex: 42904
+	{
+		AttributeFound = 0,
+		AnyIdAttributeFound = 1,
+		UndeclaredElementAndAttribute = 2,
+		UndeclaredAttribute = 3,
+		AnyAttributeLax = 4,
+		AnyAttributeSkip = 5,
+		ProhibitedAnyAttribute = 6,
+		ProhibitedAttribute = 7,
+		AttributeNameMismatch = 8,
+		ValidateAttributeInvalidCall = 9
+	}
+
+	internal class SchemaInfo : IDtdInfo // TypeDefIndex: 42905
+	{
+		// Fields
+		private Dictionary<XmlQualifiedName, SchemaElementDecl> elementDecls; // 0x10
+		private Dictionary<XmlQualifiedName, SchemaElementDecl> undeclaredElementDecls; // 0x18
+		private Dictionary<XmlQualifiedName, SchemaEntity> generalEntities; // 0x20
+		private Dictionary<XmlQualifiedName, SchemaEntity> parameterEntities; // 0x28
+		private XmlQualifiedName docTypeName; // 0x30
+		private string internalDtdSubset; // 0x38
+		private bool hasNonCDataAttributes; // 0x40
+		private bool hasDefaultAttributes; // 0x41
+		private Dictionary<string, bool> targetNamespaces; // 0x48
+		private Dictionary<XmlQualifiedName, SchemaAttDef> attributeDecls; // 0x50
+		private int errorCount; // 0x58
+		private SchemaType schemaType; // 0x5C
+		private Dictionary<XmlQualifiedName, SchemaElementDecl> elementDeclsByType; // 0x60
+		private Dictionary<string, SchemaNotation> notations; // 0x68
+	
+		// Properties
+		public XmlQualifiedName DocTypeName { get => default; set {} } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
+		internal string InternalDtdSubset { set {} } // 0x000000018388FF30-0x000000018388FF40
+		internal Dictionary<XmlQualifiedName, SchemaElementDecl> ElementDecls { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		internal Dictionary<XmlQualifiedName, SchemaElementDecl> UndeclaredElementDecls { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		internal Dictionary<XmlQualifiedName, SchemaEntity> GeneralEntities { get => default; } // 0x00000001898C0CE4-0x00000001898C0D68 
+		internal Dictionary<XmlQualifiedName, SchemaEntity> ParameterEntities { get => default; } // 0x00000001898C0DEC-0x00000001898C0E70 
+		internal SchemaType SchemaType { get => default; set {} } // 0x0000000183D4EEF0-0x0000000183D4EF00 0x0000000183D4EF40-0x0000000183D4EF50
+		internal Dictionary<string, bool> TargetNamespaces { get => default; } // 0x0000000183D4EA70-0x0000000183D4EA80 
+		internal Dictionary<XmlQualifiedName, SchemaElementDecl> ElementDeclsByType { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+		internal Dictionary<XmlQualifiedName, SchemaAttDef> AttributeDecls { get => default; } // 0x0000000183D4EAF0-0x0000000183D4EB00 
+		internal Dictionary<string, SchemaNotation> Notations { get => default; } // 0x00000001898C0D68-0x00000001898C0DEC 
+		internal int ErrorCount { get => default; set {} } // 0x0000000183D4EF00-0x0000000183D4EF10 0x0000000183D4EF50-0x0000000183D4EF60
+		bool IDtdInfo.HasDefaultAttributes { get => default; } // 0x0000000183D4F7B0-0x0000000183D4F7C0 
+		bool IDtdInfo.HasNonCDataAttributes { get => default; } // 0x0000000183D4EE90-0x0000000183D4EEA0 
+		XmlQualifiedName IDtdInfo.Name { get => default; } // 0x0000000181003830-0x0000000181003840 
+		string IDtdInfo.InternalDtdSubset { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+	
+		// Constructors
+		internal SchemaInfo() {} // 0x00000001898C0B0C-0x00000001898C0CE4
+	
+		// Methods
+		internal SchemaElementDecl GetElementDecl(XmlQualifiedName qname) => default; // 0x00000001898C0840-0x00000001898C08AC
+		internal SchemaElementDecl GetTypeDecl(XmlQualifiedName qname) => default; // 0x00000001898C08CC-0x00000001898C0938
+		internal XmlSchemaElement GetElement(XmlQualifiedName qname) => default; // 0x00000001898C08AC-0x00000001898C08CC
+		internal bool HasSchema(string ns) => default; // 0x00000001898C0938-0x00000001898C098C
+		internal bool Contains(string ns) => default; // 0x00000001898C0104-0x00000001898C0158
+		internal SchemaAttDef GetAttributeXdr(SchemaElementDecl ed, XmlQualifiedName qname) => default; // 0x00000001898C02F8-0x00000001898C04D0
+		internal SchemaAttDef GetAttributeXsd(SchemaElementDecl ed, XmlQualifiedName qname, XmlSchemaObject partialValidationType, out AttributeMatchState attributeMatchState) {
+			attributeMatchState = default;
+			return default;
+		} // 0x00000001898C0624-0x00000001898C0840
+		internal SchemaAttDef GetAttributeXsd(SchemaElementDecl ed, XmlQualifiedName qname, ref bool skip) => default; // 0x00000001898C04D0-0x00000001898C0624
+		internal void Add(SchemaInfo sinfo, ValidationEventHandler eventhandler) {} // 0x00000001898BF7DC-0x00000001898C0104
+		internal void Finish() {} // 0x00000001898C0158-0x00000001898C02F8
+		IDtdAttributeListInfo IDtdInfo.LookupAttributeList(string prefix, string localName) => default; // 0x00000001898C098C-0x00000001898C0A5C
+		IDtdEntityInfo IDtdInfo.LookupEntity(string name) => default; // 0x00000001898C0A5C-0x00000001898C0B0C
+	}
+
+	internal sealed class SchemaNames // TypeDefIndex: 42907
+	{
+		// Fields
+		private XmlNameTable nameTable; // 0x10
+		public string NsDataType; // 0x18
+		public string NsDataTypeAlias; // 0x20
+		public string NsDataTypeOld; // 0x28
+		public string NsXml; // 0x30
+		public string NsXmlNs; // 0x38
+		public string NsXdr; // 0x40
+		public string NsXdrAlias; // 0x48
+		public string NsXs; // 0x50
+		public string NsXsi; // 0x58
+		public string XsiType; // 0x60
+		public string XsiNil; // 0x68
+		public string XsiSchemaLocation; // 0x70
+		public string XsiNoNamespaceSchemaLocation; // 0x78
+		public string XsdSchema; // 0x80
+		public string XdrSchema; // 0x88
+		public XmlQualifiedName QnPCData; // 0x90
+		public XmlQualifiedName QnXml; // 0x98
+		public XmlQualifiedName QnXmlNs; // 0xA0
+		public XmlQualifiedName QnDtDt; // 0xA8
+		public XmlQualifiedName QnXmlLang; // 0xB0
+		public XmlQualifiedName QnName; // 0xB8
+		public XmlQualifiedName QnType; // 0xC0
+		public XmlQualifiedName QnMaxOccurs; // 0xC8
+		public XmlQualifiedName QnMinOccurs; // 0xD0
+		public XmlQualifiedName QnInfinite; // 0xD8
+		public XmlQualifiedName QnModel; // 0xE0
+		public XmlQualifiedName QnOpen; // 0xE8
+		public XmlQualifiedName QnClosed; // 0xF0
+		public XmlQualifiedName QnContent; // 0xF8
+		public XmlQualifiedName QnMixed; // 0x100
+		public XmlQualifiedName QnEmpty; // 0x108
+		public XmlQualifiedName QnEltOnly; // 0x110
+		public XmlQualifiedName QnTextOnly; // 0x118
+		public XmlQualifiedName QnOrder; // 0x120
+		public XmlQualifiedName QnSeq; // 0x128
+		public XmlQualifiedName QnOne; // 0x130
+		public XmlQualifiedName QnMany; // 0x138
+		public XmlQualifiedName QnRequired; // 0x140
+		public XmlQualifiedName QnYes; // 0x148
+		public XmlQualifiedName QnNo; // 0x150
+		public XmlQualifiedName QnString; // 0x158
+		public XmlQualifiedName QnID; // 0x160
+		public XmlQualifiedName QnIDRef; // 0x168
+		public XmlQualifiedName QnIDRefs; // 0x170
+		public XmlQualifiedName QnEntity; // 0x178
+		public XmlQualifiedName QnEntities; // 0x180
+		public XmlQualifiedName QnNmToken; // 0x188
+		public XmlQualifiedName QnNmTokens; // 0x190
+		public XmlQualifiedName QnEnumeration; // 0x198
+		public XmlQualifiedName QnDefault; // 0x1A0
+		public XmlQualifiedName QnXdrSchema; // 0x1A8
+		public XmlQualifiedName QnXdrElementType; // 0x1B0
+		public XmlQualifiedName QnXdrElement; // 0x1B8
+		public XmlQualifiedName QnXdrGroup; // 0x1C0
+		public XmlQualifiedName QnXdrAttributeType; // 0x1C8
+		public XmlQualifiedName QnXdrAttribute; // 0x1D0
+		public XmlQualifiedName QnXdrDataType; // 0x1D8
+		public XmlQualifiedName QnXdrDescription; // 0x1E0
+		public XmlQualifiedName QnXdrExtends; // 0x1E8
+		public XmlQualifiedName QnXdrAliasSchema; // 0x1F0
+		public XmlQualifiedName QnDtType; // 0x1F8
+		public XmlQualifiedName QnDtValues; // 0x200
+		public XmlQualifiedName QnDtMaxLength; // 0x208
+		public XmlQualifiedName QnDtMinLength; // 0x210
+		public XmlQualifiedName QnDtMax; // 0x218
+		public XmlQualifiedName QnDtMin; // 0x220
+		public XmlQualifiedName QnDtMinExclusive; // 0x228
+		public XmlQualifiedName QnDtMaxExclusive; // 0x230
+		public XmlQualifiedName QnTargetNamespace; // 0x238
+		public XmlQualifiedName QnVersion; // 0x240
+		public XmlQualifiedName QnFinalDefault; // 0x248
+		public XmlQualifiedName QnBlockDefault; // 0x250
+		public XmlQualifiedName QnFixed; // 0x258
+		public XmlQualifiedName QnAbstract; // 0x260
+		public XmlQualifiedName QnBlock; // 0x268
+		public XmlQualifiedName QnSubstitutionGroup; // 0x270
+		public XmlQualifiedName QnFinal; // 0x278
+		public XmlQualifiedName QnNillable; // 0x280
+		public XmlQualifiedName QnRef; // 0x288
+		public XmlQualifiedName QnBase; // 0x290
+		public XmlQualifiedName QnDerivedBy; // 0x298
+		public XmlQualifiedName QnNamespace; // 0x2A0
+		public XmlQualifiedName QnProcessContents; // 0x2A8
+		public XmlQualifiedName QnRefer; // 0x2B0
+		public XmlQualifiedName QnPublic; // 0x2B8
+		public XmlQualifiedName QnSystem; // 0x2C0
+		public XmlQualifiedName QnSchemaLocation; // 0x2C8
+		public XmlQualifiedName QnValue; // 0x2D0
+		public XmlQualifiedName QnUse; // 0x2D8
+		public XmlQualifiedName QnForm; // 0x2E0
+		public XmlQualifiedName QnElementFormDefault; // 0x2E8
+		public XmlQualifiedName QnAttributeFormDefault; // 0x2F0
+		public XmlQualifiedName QnItemType; // 0x2F8
+		public XmlQualifiedName QnMemberTypes; // 0x300
+		public XmlQualifiedName QnXPath; // 0x308
+		public XmlQualifiedName QnXsdSchema; // 0x310
+		public XmlQualifiedName QnXsdAnnotation; // 0x318
+		public XmlQualifiedName QnXsdInclude; // 0x320
+		public XmlQualifiedName QnXsdImport; // 0x328
+		public XmlQualifiedName QnXsdElement; // 0x330
+		public XmlQualifiedName QnXsdAttribute; // 0x338
+		public XmlQualifiedName QnXsdAttributeGroup; // 0x340
+		public XmlQualifiedName QnXsdAnyAttribute; // 0x348
+		public XmlQualifiedName QnXsdGroup; // 0x350
+		public XmlQualifiedName QnXsdAll; // 0x358
+		public XmlQualifiedName QnXsdChoice; // 0x360
+		public XmlQualifiedName QnXsdSequence; // 0x368
+		public XmlQualifiedName QnXsdAny; // 0x370
+		public XmlQualifiedName QnXsdNotation; // 0x378
+		public XmlQualifiedName QnXsdSimpleType; // 0x380
+		public XmlQualifiedName QnXsdComplexType; // 0x388
+		public XmlQualifiedName QnXsdUnique; // 0x390
+		public XmlQualifiedName QnXsdKey; // 0x398
+		public XmlQualifiedName QnXsdKeyRef; // 0x3A0
+		public XmlQualifiedName QnXsdSelector; // 0x3A8
+		public XmlQualifiedName QnXsdField; // 0x3B0
+		public XmlQualifiedName QnXsdMinExclusive; // 0x3B8
+		public XmlQualifiedName QnXsdMinInclusive; // 0x3C0
+		public XmlQualifiedName QnXsdMaxInclusive; // 0x3C8
+		public XmlQualifiedName QnXsdMaxExclusive; // 0x3D0
+		public XmlQualifiedName QnXsdTotalDigits; // 0x3D8
+		public XmlQualifiedName QnXsdFractionDigits; // 0x3E0
+		public XmlQualifiedName QnXsdLength; // 0x3E8
+		public XmlQualifiedName QnXsdMinLength; // 0x3F0
+		public XmlQualifiedName QnXsdMaxLength; // 0x3F8
+		public XmlQualifiedName QnXsdEnumeration; // 0x400
+		public XmlQualifiedName QnXsdPattern; // 0x408
+		public XmlQualifiedName QnXsdDocumentation; // 0x410
+		public XmlQualifiedName QnXsdAppinfo; // 0x418
+		public XmlQualifiedName QnSource; // 0x420
+		public XmlQualifiedName QnXsdComplexContent; // 0x428
+		public XmlQualifiedName QnXsdSimpleContent; // 0x430
+		public XmlQualifiedName QnXsdRestriction; // 0x438
+		public XmlQualifiedName QnXsdExtension; // 0x440
+		public XmlQualifiedName QnXsdUnion; // 0x448
+		public XmlQualifiedName QnXsdList; // 0x450
+		public XmlQualifiedName QnXsdWhiteSpace; // 0x458
+		public XmlQualifiedName QnXsdRedefine; // 0x460
+		public XmlQualifiedName QnXsdAnyType; // 0x468
+		internal XmlQualifiedName[] TokenToQName; // 0x470
+	
+		// Nested types
+		public enum Token // TypeDefIndex: 42906
+		{
+			Empty = 0,
+			SchemaName = 1,
+			SchemaType = 2,
+			SchemaMaxOccurs = 3,
+			SchemaMinOccurs = 4,
+			SchemaInfinite = 5,
+			SchemaModel = 6,
+			SchemaOpen = 7,
+			SchemaClosed = 8,
+			SchemaContent = 9,
+			SchemaMixed = 10,
+			SchemaEmpty = 11,
+			SchemaElementOnly = 12,
+			SchemaTextOnly = 13,
+			SchemaOrder = 14,
+			SchemaSeq = 15,
+			SchemaOne = 16,
+			SchemaMany = 17,
+			SchemaRequired = 18,
+			SchemaYes = 19,
+			SchemaNo = 20,
+			SchemaString = 21,
+			SchemaId = 22,
+			SchemaIdref = 23,
+			SchemaIdrefs = 24,
+			SchemaEntity = 25,
+			SchemaEntities = 26,
+			SchemaNmtoken = 27,
+			SchemaNmtokens = 28,
+			SchemaEnumeration = 29,
+			SchemaDefault = 30,
+			XdrRoot = 31,
+			XdrElementType = 32,
+			XdrElement = 33,
+			XdrGroup = 34,
+			XdrAttributeType = 35,
+			XdrAttribute = 36,
+			XdrDatatype = 37,
+			XdrDescription = 38,
+			XdrExtends = 39,
+			SchemaXdrRootAlias = 40,
+			SchemaDtType = 41,
+			SchemaDtValues = 42,
+			SchemaDtMaxLength = 43,
+			SchemaDtMinLength = 44,
+			SchemaDtMax = 45,
+			SchemaDtMin = 46,
+			SchemaDtMinExclusive = 47,
+			SchemaDtMaxExclusive = 48,
+			SchemaTargetNamespace = 49,
+			SchemaVersion = 50,
+			SchemaFinalDefault = 51,
+			SchemaBlockDefault = 52,
+			SchemaFixed = 53,
+			SchemaAbstract = 54,
+			SchemaBlock = 55,
+			SchemaSubstitutionGroup = 56,
+			SchemaFinal = 57,
+			SchemaNillable = 58,
+			SchemaRef = 59,
+			SchemaBase = 60,
+			SchemaDerivedBy = 61,
+			SchemaNamespace = 62,
+			SchemaProcessContents = 63,
+			SchemaRefer = 64,
+			SchemaPublic = 65,
+			SchemaSystem = 66,
+			SchemaSchemaLocation = 67,
+			SchemaValue = 68,
+			SchemaSource = 69,
+			SchemaAttributeFormDefault = 70,
+			SchemaElementFormDefault = 71,
+			SchemaUse = 72,
+			SchemaForm = 73,
+			XsdSchema = 74,
+			XsdAnnotation = 75,
+			XsdInclude = 76,
+			XsdImport = 77,
+			XsdElement = 78,
+			XsdAttribute = 79,
+			xsdAttributeGroup = 80,
+			XsdAnyAttribute = 81,
+			XsdGroup = 82,
+			XsdAll = 83,
+			XsdChoice = 84,
+			XsdSequence = 85,
+			XsdAny = 86,
+			XsdNotation = 87,
+			XsdSimpleType = 88,
+			XsdComplexType = 89,
+			XsdUnique = 90,
+			XsdKey = 91,
+			XsdKeyref = 92,
+			XsdSelector = 93,
+			XsdField = 94,
+			XsdMinExclusive = 95,
+			XsdMinInclusive = 96,
+			XsdMaxExclusive = 97,
+			XsdMaxInclusive = 98,
+			XsdTotalDigits = 99,
+			XsdFractionDigits = 100,
+			XsdLength = 101,
+			XsdMinLength = 102,
+			XsdMaxLength = 103,
+			XsdEnumeration = 104,
+			XsdPattern = 105,
+			XsdDocumentation = 106,
+			XsdAppInfo = 107,
+			XsdComplexContent = 108,
+			XsdComplexContentExtension = 109,
+			XsdComplexContentRestriction = 110,
+			XsdSimpleContent = 111,
+			XsdSimpleContentExtension = 112,
+			XsdSimpleContentRestriction = 113,
+			XsdSimpleTypeList = 114,
+			XsdSimpleTypeRestriction = 115,
+			XsdSimpleTypeUnion = 116,
+			XsdWhitespace = 117,
+			XsdRedefine = 118,
+			SchemaItemType = 119,
+			SchemaMemberTypes = 120,
+			SchemaXPath = 121,
+			XmlLang = 122
+		}
+	
+		// Constructors
+		public SchemaNames() {} // Dummy constructor
+		public SchemaNames(XmlNameTable nameTable) {} // 0x00000001898C27C0-0x00000001898C579C
+	
+		// Methods
+		public void CreateTokenToQNameTable() {} // 0x00000001898C0E70-0x00000001898C26C8
+		public SchemaType SchemaTypeFromRoot(string localName, string ns) => default; // 0x00000001898C2758-0x00000001898C27C0
+		public bool IsXSDRoot(string localName, string ns) => default; // 0x00000001898C2710-0x00000001898C2758
+		public bool IsXDRRoot(string localName, string ns) => default; // 0x00000001898C26C8-0x00000001898C2710
+	}
+
+	internal class SchemaNamespaceManager : XmlNamespaceManager // TypeDefIndex: 42908
+	{
+		// Fields
+		private XmlSchemaObject node; // 0x50
+	
+		// Constructors
+		public SchemaNamespaceManager() {} // Dummy constructor
+		public SchemaNamespaceManager(XmlSchemaObject node) {} // 0x0000000182C926C0-0x0000000182C926D0
+	
+		// Methods
+		public override string LookupNamespace(string prefix) => default; // 0x00000001898C579C-0x00000001898C58AC
+		public override string LookupPrefix(string ns) => default; // 0x00000001898C58AC-0x00000001898C5D48
+	}
+
+	internal sealed class SchemaNotation // TypeDefIndex: 42909
+	{
+		// Fields
+		private XmlQualifiedName name; // 0x10
+		private string systemLiteral; // 0x18
+		private string pubid; // 0x20
+	
+		// Properties
+		internal XmlQualifiedName Name { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		internal string SystemLiteral { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		internal string Pubid { get => default; set {} } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+	
+		// Constructors
+		public SchemaNotation() {} // Dummy constructor
+		internal SchemaNotation(XmlQualifiedName name) {} // 0x000000018426FEE0-0x000000018426FEF0
+	}
+
+	internal sealed class Compiler : BaseProcessor // TypeDefIndex: 42910
+	{
+		// Fields
+		private string restrictionErrorMsg; // 0x40
+		private XmlSchemaObjectTable attributes; // 0x48
+		private XmlSchemaObjectTable attributeGroups; // 0x50
+		private XmlSchemaObjectTable elements; // 0x58
+		private XmlSchemaObjectTable schemaTypes; // 0x60
+		private XmlSchemaObjectTable groups; // 0x68
+		private XmlSchemaObjectTable notations; // 0x70
+		private XmlSchemaObjectTable examplars; // 0x78
+		private XmlSchemaObjectTable identityConstraints; // 0x80
+		private Stack complexTypeStack; // 0x88
+		private Hashtable schemasToCompile; // 0x90
+		private Hashtable importedSchemas; // 0x98
+		private XmlSchema schemaForSchema; // 0xA0
+	
+		// Constructors
+		public Compiler() {} // Dummy constructor
+		public Compiler(XmlNameTable nameTable, ValidationEventHandler eventHandler, XmlSchema schemaForSchema, XmlSchemaCompilationSettings compilationSettings) {} // 0x00000001898BE5E8-0x00000001898BE8B0
+	
+		// Methods
+		public bool Execute(XmlSchemaSet schemaSet, SchemaInfo schemaCompiledInfo) => default; // 0x00000001898B9FF8-0x00000001898BA0AC
+		internal void Prepare(XmlSchema schema, bool cleanup) {} // 0x00000001898BD0FC-0x00000001898BDC74
+		private void UpdateSForSSimpleTypes() {} // 0x00000001898BE4BC-0x00000001898BE5E8
+		private void Output(SchemaInfo schemaInfo) {} // 0x00000001898BC738-0x00000001898BD0FC
+		internal void ImportAllCompiledSchemas(XmlSchemaSet schemaSet) {} // 0x00000001898BA37C-0x00000001898BA424
+		internal bool Compile() => default; // 0x00000001898B8FFC-0x00000001898B9F7C
+		private void CleanupAttribute(XmlSchemaAttribute attribute) {} // 0x00000001898B0D88-0x00000001898B0DD0
+		private void CleanupAttributeGroup(XmlSchemaAttributeGroup attributeGroup) {} // 0x00000001898B0D18-0x00000001898B0D88
+		private void CleanupComplexType(XmlSchemaComplexType complexType) {} // 0x00000001898B0E60-0x00000001898B1178
+		private void CleanupSimpleType(XmlSchemaSimpleType simpleType) {} // 0x00000001898B1404-0x00000001898B1484
+		private void CleanupElement(XmlSchemaElement element) {} // 0x00000001898B1178-0x00000001898B12C4
+		private void CleanupAttributes(XmlSchemaObjectCollection attributes) {} // 0x00000001898B0DD0-0x00000001898B0E60
+		private void CleanupGroup(XmlSchemaGroup group) {} // 0x00000001898B12C4-0x00000001898B1314
+		private void CleanupParticle(XmlSchemaParticle particle) {} // 0x00000001898B1314-0x00000001898B1404
+		private void ProcessSubstitutionGroups() {} // 0x00000001898BDC74-0x00000001898BE188
+		private void CompileSubstitutionGroup(XmlSchemaSubstitutionGroup substitutionGroup) {} // 0x00000001898B8B48-0x00000001898B8FFC
+		private void RecursivelyCheckRedefinedGroups(XmlSchemaGroup redefinedGroup, XmlSchemaGroup baseGroup) {} // 0x00000001898BE230-0x00000001898BE30C
+		private void RecursivelyCheckRedefinedAttributeGroups(XmlSchemaAttributeGroup attributeGroup, XmlSchemaAttributeGroup baseAttributeGroup) {} // 0x00000001898BE1AC-0x00000001898BE230
+		private void CompileGroup(XmlSchemaGroup group) {} // 0x00000001898B5D90-0x00000001898B5E54
+		private void CompileSimpleType(XmlSchemaSimpleType simpleType) {} // 0x00000001898B7DC4-0x00000001898B8B48
+		private XmlSchemaSimpleType[] CompileBaseMemberTypes(XmlSchemaSimpleType simpleType) => default; // 0x00000001898B29A8-0x00000001898B2CB0
+		private void CheckUnionType(XmlSchemaSimpleType unionMember, ArrayList memberTypeDefinitions, XmlSchemaSimpleType parentType) {} // 0x00000001898B0C2C-0x00000001898B0D18
+		private void CompileComplexType(XmlSchemaComplexType complexType) {} // 0x00000001898B3C14-0x00000001898B4684
+		private void CompileSimpleContentExtension(XmlSchemaComplexType complexType, XmlSchemaSimpleContentExtension simpleExtension) {} // 0x00000001898B779C-0x00000001898B79B4
+		private void CompileSimpleContentRestriction(XmlSchemaComplexType complexType, XmlSchemaSimpleContentRestriction simpleRestriction) {} // 0x00000001898B79B4-0x00000001898B7DC4
+		private void CompileComplexContentExtension(XmlSchemaComplexType complexType, XmlSchemaComplexContent complexContent, XmlSchemaComplexContentExtension complexExtension) {} // 0x00000001898B2CB0-0x00000001898B2FEC
+		private void CompileComplexContentRestriction(XmlSchemaComplexType complexType, XmlSchemaComplexContent complexContent, XmlSchemaComplexContentRestriction complexRestriction) {} // 0x00000001898B2FEC-0x00000001898B3284
+		private void CheckParticleDerivation(XmlSchemaComplexType complexType) {} // 0x00000001898B07E0-0x00000001898B0B60
+		private void CheckParticleDerivation(XmlSchemaParticle derivedParticle, XmlSchemaParticle baseParticle) {} // 0x00000001898B0B60-0x00000001898B0C2C
+		private XmlSchemaParticle CompileContentTypeParticle(XmlSchemaParticle particle) => default; // 0x00000001898B4684-0x00000001898B47CC
+		private XmlSchemaParticle CannonicalizeParticle(XmlSchemaParticle particle, bool root) => default; // 0x00000001898AF98C-0x00000001898AFB38
+		private XmlSchemaParticle CannonicalizeElement(XmlSchemaElement element) => default; // 0x00000001898AF304-0x00000001898AF4D4
+		private XmlSchemaParticle CannonicalizeGroupRef(XmlSchemaGroupRef groupRef, bool root) => default; // 0x00000001898AF4D4-0x00000001898AF98C
+		private XmlSchemaParticle CannonicalizeAll(XmlSchemaAll all, bool root) => default; // 0x00000001898AEC48-0x00000001898AEE68
+		private XmlSchemaParticle CannonicalizeChoice(XmlSchemaChoice choice, bool root) => default; // 0x00000001898AEE68-0x00000001898AF304
+		private XmlSchemaParticle CannonicalizeSequence(XmlSchemaSequence sequence, bool root) => default; // 0x00000001898AFDE8-0x00000001898B01F0
+		private XmlSchemaParticle CannonicalizePointlessRoot(XmlSchemaParticle particle) => default; // 0x00000001898AFB38-0x00000001898AFDE8
+		private bool IsValidRestriction(XmlSchemaParticle derivedParticle, XmlSchemaParticle baseParticle) => default; // 0x00000001898BBEDC-0x00000001898BC738
+		private bool IsElementFromElement(XmlSchemaElement derivedElement, XmlSchemaElement baseElement) => default; // 0x00000001898BA78C-0x00000001898BA9A8
+		private bool IsElementFromAny(XmlSchemaElement derivedElement, XmlSchemaAny baseAny) => default; // 0x00000001898BA61C-0x00000001898BA78C
+		private bool IsAnyFromAny(XmlSchemaAny derivedAny, XmlSchemaAny baseAny) => default; // 0x00000001898BA424-0x00000001898BA508
+		private bool IsGroupBaseFromAny(XmlSchemaGroupBase derivedGroupBase, XmlSchemaAny baseAny) => default; // 0x00000001898BB214-0x00000001898BB548
+		private bool IsElementFromGroupBase(XmlSchemaElement derivedElement, XmlSchemaGroupBase baseGroupBase) => default; // 0x00000001898BA9A8-0x00000001898BB0EC
+		private bool IsChoiceFromChoiceSubstGroup(XmlSchemaChoice derivedChoice, XmlSchemaChoice baseChoice) => default; // 0x00000001898BA508-0x00000001898BA61C
+		private bool IsGroupBaseFromGroupBase(XmlSchemaGroupBase derivedGroupBase, XmlSchemaGroupBase baseGroupBase, bool skipEmptableOnly) => default; // 0x00000001898BB548-0x00000001898BB76C
+		private bool IsSequenceFromAll(XmlSchemaSequence derivedSequence, XmlSchemaAll baseAll) => default; // 0x00000001898BB8B0-0x00000001898BBAEC
+		private bool IsSequenceFromChoice(XmlSchemaSequence derivedSequence, XmlSchemaChoice baseChoice) => default; // 0x00000001898BBAEC-0x00000001898BBDC8
+		private bool IsValidOccurrenceRangeRestriction(XmlSchemaParticle derivedParticle, XmlSchemaParticle baseParticle) => default; // 0x00000001898BBE78-0x00000001898BBEDC
+		private bool IsValidOccurrenceRangeRestriction(decimal minOccurs, decimal maxOccurs, decimal baseMinOccurs, decimal baseMaxOccurs) => default; // 0x00000001898BBDC8-0x00000001898BBE78
+		private int GetMappingParticle(XmlSchemaParticle particle, XmlSchemaObjectCollection collection) => default; // 0x00000001898BA228-0x00000001898BA2D0
+		private bool IsParticleEmptiable(XmlSchemaParticle particle) => default; // 0x00000001898BB76C-0x00000001898BB824
+		private void CalculateEffectiveTotalRange(XmlSchemaParticle particle, out decimal minOccurs, out decimal maxOccurs) {
+			minOccurs = default;
+			maxOccurs = default;
+		} // 0x00000001898AE5EC-0x00000001898AEC48
+		private void PushComplexType(XmlSchemaComplexType complexType) {} // 0x00000001898BE188-0x00000001898BE1AC
+		private XmlSchemaContentType GetSchemaContentType(XmlSchemaComplexType complexType, XmlSchemaComplexContent complexContent, XmlSchemaParticle particle) => default; // 0x00000001898A3A14-0x00000001898A3A70
+		private void CompileAttributeGroup(XmlSchemaAttributeGroup attributeGroup) {} // 0x00000001898B1594-0x00000001898B1CB4
+		private void CompileLocalAttributes(XmlSchemaComplexType baseType, XmlSchemaComplexType derivedType, XmlSchemaObjectCollection attributes, XmlSchemaAnyAttribute anyAttribute, XmlSchemaDerivationMethod derivedBy) {} // 0x00000001898B65E4-0x00000001898B7460
+		private void CheckAtrributeGroupRestriction(XmlSchemaAttributeGroup baseAttributeGroup, XmlSchemaAttributeGroup derivedAttributeGroup) {} // 0x00000001898B01F0-0x00000001898B07E0
+		private bool IsProcessContentsRestricted(XmlSchemaComplexType baseType, XmlSchemaAnyAttribute derivedAttributeWildcard, XmlSchemaAnyAttribute baseAttributeWildcard) => default; // 0x00000001898BB824-0x00000001898BB8B0
+		private XmlSchemaAnyAttribute CompileAnyAttributeUnion(XmlSchemaAnyAttribute a, XmlSchemaAnyAttribute b) => default; // 0x00000001898B150C-0x00000001898B1594
+		private XmlSchemaAnyAttribute CompileAnyAttributeIntersection(XmlSchemaAnyAttribute a, XmlSchemaAnyAttribute b) => default; // 0x00000001898B1484-0x00000001898B150C
+		private void CompileAttribute(XmlSchemaAttribute xa) {} // 0x00000001898B1CB4-0x00000001898B29A8
+		private void SetDefaultFixed(XmlSchemaAttribute xa, SchemaAttDef decl) {} // 0x00000001898BE30C-0x00000001898BE4BC
+		private void CompileIdentityConstraint(XmlSchemaIdentityConstraint xi) {} // 0x00000001898B5E54-0x00000001898B65E4
+		private void CompileElement(XmlSchemaElement xe) {} // 0x00000001898B47CC-0x00000001898B5D90
+		private ContentValidator CompileComplexContent(XmlSchemaComplexType complexType) => default; // 0x00000001898B3284-0x00000001898B3AC0
+		private bool BuildParticleContentModel(ParticleContentValidator contentValidator, XmlSchemaParticle particle) => default; // 0x00000001898AE130-0x00000001898AE5EC
+		private void CompileParticleElements(XmlSchemaComplexType complexType, XmlSchemaParticle particle) {} // 0x00000001898B757C-0x00000001898B779C
+		private void CompileParticleElements(XmlSchemaParticle particle) {} // 0x00000001898B7460-0x00000001898B757C
+		private void CompileComplexTypeElements(XmlSchemaComplexType complexType) {} // 0x00000001898B3AC0-0x00000001898B3C14
+		private XmlSchemaSimpleType GetSimpleType(XmlQualifiedName name) => default; // 0x00000001898BA2D0-0x00000001898BA37C
+		private XmlSchemaComplexType GetComplexType(XmlQualifiedName name) => default; // 0x00000001898BA1AC-0x00000001898BA228
+		private XmlSchemaType GetAnySchemaType(XmlQualifiedName name) => default; // 0x00000001898BA0AC-0x00000001898BA1AC
+		private void CopyPosition(XmlSchemaAnnotated to, XmlSchemaAnnotated from, bool copyParent) {} // 0x00000001898B9F7C-0x00000001898B9FF8
+		private bool IsFixedEqual(SchemaDeclBase baseDecl, SchemaDeclBase derivedDecl) => default; // 0x00000001898BB0EC-0x00000001898BB214
+	}
+
+	internal enum SchemaType // TypeDefIndex: 42911
+	{
+		None = 0,
+		DTD = 1,
+		XDR = 2,
+		XSD = 3
+	}
+
+	public class ValidationEventArgs : EventArgs // TypeDefIndex: 42912
+	{
+		// Fields
+		private XmlSchemaException ex; // 0x10
+		private XmlSeverityType severity; // 0x18
+	
+		// Properties
+		public XmlSeverityType Severity { get => default; } // 0x00000001820D1AC0-0x00000001820D1AD0 
+		public XmlSchemaException Exception { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+	
+		// Constructors
+		public ValidationEventArgs() {} // Dummy constructor
+		internal ValidationEventArgs(XmlSchemaException ex) {} // 0x00000001898C5FD8-0x00000001898C6038
+		internal ValidationEventArgs(XmlSchemaException ex, XmlSeverityType severity) {} // 0x00000001898C6038-0x00000001898C6098
+	}
+
+	public delegate void ValidationEventHandler(object sender, ValidationEventArgs e); // TypeDefIndex: 42913; 0x0000000182065C10-0x0000000182065C20
+
+	internal struct StateUnion // TypeDefIndex: 42914
+	{
+		// Fields
+		public int State; // 0x00
+		public int AllElementsRequired; // 0x00
+		public int CurPosIndex; // 0x00
+		public int NumberOfRunningPos; // 0x00
+	}
+
+	internal sealed class ValidationState // TypeDefIndex: 42915
+	{
+		// Fields
+		public bool IsNill; // 0x10
+		public bool IsDefault; // 0x11
+		public bool NeedValidateChildren; // 0x12
+		public bool CheckRequiredAttribute; // 0x13
+		public bool ValidationSkipped; // 0x14
+		public XmlSchemaContentProcessing ProcessContents; // 0x18
+		public XmlSchemaValidity Validity; // 0x1C
+		public SchemaElementDecl ElementDecl; // 0x20
+		public SchemaElementDecl ElementDeclBeforeXsi; // 0x28
+		public string LocalName; // 0x30
+		public string Namespace; // 0x38
+		public ConstraintStruct[] Constr; // 0x40
+		public StateUnion CurrentState; // 0x48
+		public bool HasMatched; // 0x4C
+		public BitSet[] CurPos; // 0x50
+		public BitSet AllElementsSet; // 0x58
+		public List<RangePositionInfo> RunningPositions; // 0x60
+		public bool TooComplex; // 0x68
+	
+		// Constructors
+		public ValidationState() {} // 0x00000001898C6098-0x00000001898C60E0
+	}
+
+	internal sealed class XdrBuilder : SchemaBuilder // TypeDefIndex: 42926
+	{
+		// Fields
+		private static readonly int[] S_XDR_Root_Element; // 0x00
+		private static readonly int[] S_XDR_Root_SubElements; // 0x08
+		private static readonly int[] S_XDR_ElementType_SubElements; // 0x10
+		private static readonly int[] S_XDR_AttributeType_SubElements; // 0x18
+		private static readonly int[] S_XDR_Group_SubElements; // 0x20
+		private static readonly XdrAttributeEntry[] S_XDR_Root_Attributes; // 0x28
+		private static readonly XdrAttributeEntry[] S_XDR_ElementType_Attributes; // 0x30
+		private static readonly XdrAttributeEntry[] S_XDR_AttributeType_Attributes; // 0x38
+		private static readonly XdrAttributeEntry[] S_XDR_Element_Attributes; // 0x40
+		private static readonly XdrAttributeEntry[] S_XDR_Attribute_Attributes; // 0x48
+		private static readonly XdrAttributeEntry[] S_XDR_Group_Attributes; // 0x50
+		private static readonly XdrAttributeEntry[] S_XDR_ElementDataType_Attributes; // 0x58
+		private static readonly XdrAttributeEntry[] S_XDR_AttributeDataType_Attributes; // 0x60
+		private static readonly XdrEntry[] S_SchemaEntries; // 0x68
+		private SchemaInfo _SchemaInfo; // 0x10
+		private string _TargetNamespace; // 0x18
+		private XmlReader _reader; // 0x20
+		private PositionInfo positionInfo; // 0x28
+		private ParticleContentValidator _contentValidator; // 0x30
+		private XdrEntry _CurState; // 0x38
+		private XdrEntry _NextState; // 0x40
+		private HWStack _StateHistory; // 0x48
+		private HWStack _GroupStack; // 0x50
+		private string _XdrName; // 0x58
+		private string _XdrPrefix; // 0x60
+		private ElementContent _ElementDef; // 0x68
+		private GroupContent _GroupDef; // 0x70
+		private AttributeContent _AttributeDef; // 0x78
+		private DeclBaseInfo _UndefinedAttributeTypes; // 0x80
+		private DeclBaseInfo _BaseDecl; // 0x88
+		private XmlNameTable _NameTable; // 0x90
+		private SchemaNames _SchemaNames; // 0x98
+		private XmlNamespaceManager _CurNsMgr; // 0xA0
+		private string _Text; // 0xA8
+		private ValidationEventHandler validationEventHandler; // 0xB0
+		private Hashtable _UndeclaredElements; // 0xB8
+		private XmlResolver xmlResolver; // 0xC0
+	
+		// Properties
+		internal XmlResolver XmlResolver { set {} } // 0x00000001858B426C-0x00000001858B4280
+	
+		// Nested types
+		private sealed class DeclBaseInfo // TypeDefIndex: 42916
+		{
+			// Fields
+			internal XmlQualifiedName _Name; // 0x10
+			internal string _Prefix; // 0x18
+			internal XmlQualifiedName _TypeName; // 0x20
+			internal string _TypePrefix; // 0x28
+			internal object _Default; // 0x30
+			internal object _Revises; // 0x38
+			internal uint _MaxOccurs; // 0x40
+			internal uint _MinOccurs; // 0x44
+			internal bool _Checking; // 0x48
+			internal SchemaElementDecl _ElementDecl; // 0x50
+			internal SchemaAttDef _Attdef; // 0x58
+			internal DeclBaseInfo _Next; // 0x60
+	
+			// Constructors
+			internal DeclBaseInfo() {} // 0x00000001898C5E30-0x00000001898C5E38
+	
+			// Methods
+			internal void Reset() {} // 0x00000001898C5D48-0x00000001898C5E30
+		}
+	
+		private sealed class GroupContent // TypeDefIndex: 42917
+		{
+			// Fields
+			internal uint _MinVal; // 0x10
+			internal uint _MaxVal; // 0x14
+			internal bool _HasMaxAttr; // 0x18
+			internal bool _HasMinAttr; // 0x19
+			internal int _Order; // 0x1C
+	
+			// Constructors
+			public GroupContent() {} // 0x000000018350B670-0x000000018350B680
+	
+			// Methods
+			internal static void Copy(GroupContent from, GroupContent to) {} // 0x00000001898C5E38-0x00000001898C5E64
+			internal static GroupContent Copy(GroupContent other) => default; // 0x00000001898C5E64-0x00000001898C5EC4
+		}
+	
+		private sealed class ElementContent // TypeDefIndex: 42918
+		{
+			// Fields
+			internal SchemaElementDecl _ElementDecl; // 0x10
+			internal int _ContentAttr; // 0x18
+			internal int _OrderAttr; // 0x1C
+			internal bool _MasterGroupRequired; // 0x20
+			internal bool _ExistTerminal; // 0x21
+			internal bool _AllowDataType; // 0x22
+			internal bool _HasDataType; // 0x23
+			internal bool _HasType; // 0x24
+			internal bool _EnumerationRequired; // 0x25
+			internal uint _MinVal; // 0x28
+			internal uint _MaxVal; // 0x2C
+			internal uint _MaxLength; // 0x30
+			internal uint _MinLength; // 0x34
+			internal Hashtable _AttDefList; // 0x38
+	
+			// Constructors
+			public ElementContent() {} // 0x000000018350B670-0x000000018350B680
+		}
+	
+		private sealed class AttributeContent // TypeDefIndex: 42919
+		{
+			// Fields
+			internal SchemaAttDef _AttDef; // 0x10
+			internal XmlQualifiedName _Name; // 0x18
+			internal string _Prefix; // 0x20
+			internal bool _Required; // 0x28
+			internal uint _MinVal; // 0x2C
+			internal uint _MaxVal; // 0x30
+			internal uint _MaxLength; // 0x34
+			internal uint _MinLength; // 0x38
+			internal bool _EnumerationRequired; // 0x3C
+			internal bool _HasDataType; // 0x3D
+			internal bool _Global; // 0x3E
+			internal object _Default; // 0x40
+	
+			// Constructors
+			public AttributeContent() {} // 0x000000018350B670-0x000000018350B680
+		}
+	
+		private delegate void XdrBuildFunction(XdrBuilder builder, object obj, string prefix); // TypeDefIndex: 42920; 0x00000001811360D0-0x00000001811360F0
+	
+		private delegate void XdrInitFunction(XdrBuilder builder, object obj); // TypeDefIndex: 42921; 0x0000000182065C10-0x0000000182065C20
+	
+		private delegate void XdrBeginChildFunction(XdrBuilder builder); // TypeDefIndex: 42922; 0x0000000182149960-0x0000000182149970
+	
+		private delegate void XdrEndChildFunction(XdrBuilder builder); // TypeDefIndex: 42923; 0x0000000182149960-0x0000000182149970
+	
+		private sealed class XdrAttributeEntry // TypeDefIndex: 42924
+		{
+			// Fields
+			internal SchemaNames.Token _Attribute; // 0x10
+			internal int _SchemaFlags; // 0x14
+			internal XmlSchemaDatatype _Datatype; // 0x18
+			internal XdrBuildFunction _BuildFunc; // 0x20
+	
+			// Constructors
+			public XdrAttributeEntry() {} // Dummy constructor
+			internal XdrAttributeEntry(SchemaNames.Token a, XmlTokenizedType ttype, XdrBuildFunction build) {} // 0x00000001898C612C-0x00000001898C6174
+			internal XdrAttributeEntry(SchemaNames.Token a, XmlTokenizedType ttype, int schemaFlags, XdrBuildFunction build) {} // 0x00000001898C60E0-0x00000001898C612C
+		}
+	
+		private sealed class XdrEntry // TypeDefIndex: 42925
+		{
+			// Fields
+			internal SchemaNames.Token _Name; // 0x10
+			internal int[] _NextStates; // 0x18
+			internal XdrAttributeEntry[] _Attributes; // 0x20
+			internal XdrInitFunction _InitFunc; // 0x28
+			internal XdrBeginChildFunction _BeginChildFunc; // 0x30
+			internal XdrEndChildFunction _EndChildFunc; // 0x38
+			internal bool _AllowText; // 0x40
+	
+			// Constructors
+			public XdrEntry() {} // Dummy constructor
+			internal XdrEntry(SchemaNames.Token n, int[] states, XdrAttributeEntry[] attributes, XdrInitFunction init, XdrBeginChildFunction begin, XdrEndChildFunction end, bool fText) {} // 0x00000001898CCFDC-0x00000001898CD044
+		}
+	
+		// Constructors
+		public XdrBuilder() {} // Dummy constructor
+		internal XdrBuilder(XmlReader reader, XmlNamespaceManager curmgr, SchemaInfo sinfo, string targetNamspace, XmlNameTable nameTable, SchemaNames schemaNames, ValidationEventHandler eventhandler) {} // 0x00000001898CCD40-0x00000001898CCFDC
+		static XdrBuilder() {} // 0x00000001898CB108-0x00000001898CCD40
+	
+		// Methods
+		internal override bool ProcessElement(string prefix, string name, string ns) => default; // 0x00000001898C7D08-0x00000001898C7E44
+		internal override void ProcessAttribute(string prefix, string name, string ns, string value) {} // 0x00000001898C78E0-0x00000001898C7C90
+		private bool LoadSchema(string uri) => default; // 0x00000001898C6F38-0x00000001898C740C
+		internal static bool IsXdrSchema(string uri) => default; // 0x00000001898C6DCC-0x00000001898C6E68
+		internal override bool IsContentParsed() => default; // 0x000000018232EB60-0x000000018232EB70
+		internal override void ProcessMarkup(XmlNode[] markup) {} // 0x00000001898C7E44-0x00000001898C7EA8
+		internal override void ProcessCData(string value) {} // 0x00000001898C7C90-0x00000001898C7D08
+		internal override void StartChildren() {} // 0x00000001898C82C0-0x00000001898C82F4
+		internal override void EndChildren() {} // 0x00000001898C65C4-0x00000001898C6608
+		private void Push() {} // 0x00000001898C7F08-0x00000001898C7F5C
+		private void Pop() {} // 0x00000001898C7858-0x00000001898C78E0
+		private void PushGroupInfo() {} // 0x00000001898C7EA8-0x00000001898C7F08
+		private void PopGroupInfo() {} // 0x00000001898C77D0-0x00000001898C7858
+		private static void XDR_InitRoot(XdrBuilder builder, object obj) {} // 0x00000001898CB09C-0x00000001898CB108
+		private static void XDR_BuildRoot_Name(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C9B74-0x00000001898C9C18
+		private static void XDR_BuildRoot_ID(XdrBuilder builder, object obj, string prefix) {} // 0x000000018350B670-0x000000018350B680
+		private static void XDR_BeginRoot(XdrBuilder builder) {} // 0x00000001898C8A00-0x00000001898C8ADC
+		private static void XDR_EndRoot(XdrBuilder builder) {} // 0x00000001898CA6F4-0x00000001898CAB00
+		private static void XDR_InitElementType(XdrBuilder builder, object obj) {} // 0x00000001898CAD74-0x00000001898CAF1C
+		private static void XDR_BuildElementType_Name(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C952C-0x00000001898C96DC
+		private static void XDR_BuildElementType_Content(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C9178-0x00000001898C91F0
+		private static void XDR_BuildElementType_Model(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C94B4-0x00000001898C952C
+		private static void XDR_BuildElementType_Order(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C96DC-0x00000001898C9768
+		private static void XDR_BuildElementType_DtType(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C92D8-0x00000001898C93E0
+		private static void XDR_BuildElementType_DtValues(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C93E0-0x00000001898C94B4
+		private static void XDR_BuildElementType_DtMaxLength(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C91F0-0x00000001898C9264
+		private static void XDR_BuildElementType_DtMinLength(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C9264-0x00000001898C92D8
+		private static void XDR_BeginElementType(XdrBuilder builder) {} // 0x00000001898C86B8-0x00000001898C8A00
+		private static void XDR_EndElementType(XdrBuilder builder) {} // 0x00000001898CA118-0x00000001898CA518
+		private static void XDR_InitAttributeType(XdrBuilder builder, object obj) {} // 0x00000001898CAB58-0x00000001898CAC64
+		private static void XDR_BuildAttributeType_Name(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C8D54-0x00000001898C8FBC
+		private static void XDR_BuildAttributeType_Required(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C8FBC-0x00000001898C9030
+		private static void XDR_BuildAttributeType_Default(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C8ADC-0x00000001898C8B08
+		private static void XDR_BuildAttributeType_DtType(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C8BF0-0x00000001898C8C80
+		private static void XDR_BuildAttributeType_DtValues(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C8C80-0x00000001898C8D54
+		private static void XDR_BuildAttributeType_DtMaxLength(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C8B08-0x00000001898C8B7C
+		private static void XDR_BuildAttributeType_DtMinLength(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C8B7C-0x00000001898C8BF0
+		private static void XDR_BeginAttributeType(XdrBuilder builder) {} // 0x00000001898C82F4-0x00000001898C835C
+		private static void XDR_EndAttributeType(XdrBuilder builder) {} // 0x00000001898C9DA4-0x00000001898CA00C
+		private static void XDR_InitElement(XdrBuilder builder, object obj) {} // 0x00000001898CAF1C-0x00000001898CAFBC
+		private static void XDR_BuildElement_Type(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C9850-0x00000001898C99C0
+		private static void XDR_BuildElement_MinOccurs(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C97DC-0x00000001898C9850
+		private static void XDR_BuildElement_MaxOccurs(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C9768-0x00000001898C97DC
+		private static void XDR_EndElement(XdrBuilder builder) {} // 0x00000001898CA518-0x00000001898CA5BC
+		private static void XDR_InitAttribute(XdrBuilder builder, object obj) {} // 0x00000001898CAC64-0x00000001898CACF0
+		private static void XDR_BuildAttribute_Type(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C90D0-0x00000001898C9178
+		private static void XDR_BuildAttribute_Required(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C905C-0x00000001898C90D0
+		private static void XDR_BuildAttribute_Default(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C9030-0x00000001898C905C
+		private static void XDR_BeginAttribute(XdrBuilder builder) {} // 0x00000001898C835C-0x00000001898C86B8
+		private static void XDR_EndAttribute(XdrBuilder builder) {} // 0x00000001898CA00C-0x00000001898CA034
+		private static void XDR_InitGroup(XdrBuilder builder, object obj) {} // 0x00000001898CAFBC-0x00000001898CB09C
+		private static void XDR_BuildGroup_Order(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C9AC0-0x00000001898C9B74
+		private static void XDR_BuildGroup_MinOccurs(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C9A40-0x00000001898C9AC0
+		private static void XDR_BuildGroup_MaxOccurs(XdrBuilder builder, object obj, string prefix) {} // 0x00000001898C99C0-0x00000001898C9A40
+		private static void XDR_EndGroup(XdrBuilder builder) {} // 0x00000001898CA5BC-0x00000001898CA6F4
+		private static void XDR_InitElementDtType(XdrBuilder builder, object obj) {} // 0x00000001898CACF0-0x00000001898CAD74
+		private static void XDR_EndElementDtType(XdrBuilder builder) {} // 0x00000001898CA034-0x00000001898CA118
+		private static void XDR_InitAttributeDtType(XdrBuilder builder, object obj) {} // 0x00000001898CAB00-0x00000001898CAB58
+		private static void XDR_EndAttributeDtType(XdrBuilder builder) {} // 0x00000001898C9CE0-0x00000001898C9DA4
+		private bool GetNextState(XmlQualifiedName qname) => default; // 0x00000001898C6898-0x00000001898C6A48
+		private bool IsSkipableElement(XmlQualifiedName qname) => default; // 0x00000001898C6D08-0x00000001898C6DCC
+		private bool IsSkipableAttribute(XmlQualifiedName qname) => default; // 0x00000001898C6BDC-0x00000001898C6D08
+		private int GetOrder(XmlQualifiedName qname) => default; // 0x00000001898C6A48-0x00000001898C6B94
+		private void AddOrder() {} // 0x00000001898C6248-0x00000001898C6308
+		private static bool IsYes(object obj, XdrBuilder builder) => default; // 0x00000001898C6E68-0x00000001898C6F38
+		private static uint ParseMinOccurs(object obj, XdrBuilder builder) => default; // 0x00000001898C7710-0x00000001898C77D0
+		private static uint ParseMaxOccurs(object obj, XdrBuilder builder) => default; // 0x00000001898C7634-0x00000001898C7710
+		private static void HandleMinMax(ParticleContentValidator pContent, uint cMin, uint cMax) {} // 0x00000001898C6B94-0x00000001898C6BD0
+		private static void ParseDtMaxLength(ref uint cVal, object obj, XdrBuilder builder) {} // 0x00000001898C740C-0x00000001898C7500
+		private static void ParseDtMinLength(ref uint cVal, object obj, XdrBuilder builder) {} // 0x00000001898C7500-0x00000001898C75F4
+		private static void CompareMinMaxLength(uint cMin, uint cMax, XdrBuilder builder) {} // 0x00000001898C6554-0x00000001898C65C4
+		private static bool ParseInteger(string str, ref uint n) => default; // 0x00000001898C75F4-0x00000001898C7634
+		private void XDR_CheckAttributeDefault(DeclBaseInfo decl, SchemaAttDef pAttdef) {} // 0x00000001898C9C18-0x00000001898C9CE0
+		private void SetAttributePresence(SchemaAttDef pAttdef, bool fRequired) {} // 0x00000001898C8278-0x00000001898C82C0
+		private int GetContent(XmlQualifiedName qname) => default; // 0x00000001898C6608-0x00000001898C67B4
+		private bool GetModel(XmlQualifiedName qname) => default; // 0x00000001898C67B4-0x00000001898C6898
+		private XmlSchemaDatatype CheckDatatype(string str) => default; // 0x00000001898C6308-0x00000001898C6444
+		private void CheckDefaultAttValue(SchemaAttDef attDef) {} // 0x00000001898C6444-0x00000001898C6554
+		private bool IsGlobal(int flags) => default; // 0x00000001898C6BD0-0x00000001898C6BDC
+		private void SendValidationEvent(string code, string[] args, XmlSeverityType severity) {} // 0x00000001898C7F5C-0x00000001898C8054
+		private void SendValidationEvent(string code) {} // 0x00000001898C8220-0x00000001898C8278
+		private void SendValidationEvent(string code, string msg) {} // 0x00000001898C812C-0x00000001898C8220
+		private void SendValidationEvent(XmlSchemaException e, XmlSeverityType severity) {} // 0x00000001898C8054-0x00000001898C812C
+	}
+
+	internal sealed class XdrValidator : BaseValidator // TypeDefIndex: 42927
+	{
+		// Fields
+		private HWStack validationStack; // 0x80
+		private Hashtable attPresence; // 0x88
+		private XmlQualifiedName name; // 0x90
+		private XmlNamespaceManager nsManager; // 0x98
+		private bool isProcessContents; // 0xA0
+		private Hashtable IDs; // 0xA8
+		private IdRefNode idRefListHead; // 0xB0
+		private System.Xml.Schema.Parser inlineSchemaParser; // 0xB8
+	
+		// Properties
+		private bool IsInlineSchemaStarted { get => default; } // 0x00000001898CFEDC-0x00000001898CFEE8 
+		private bool HasSchema { get => default; } // 0x00000001898CFEBC-0x00000001898CFEDC 
+		public override bool PreserveWhitespace { get => default; } // 0x00000001898CFEE8-0x00000001898CFF24 
+	
+		// Constructors
+		public XdrValidator() {} // Dummy constructor
+		internal XdrValidator(BaseValidator validator) {} // 0x00000001898CFE3C-0x00000001898CFEBC
+		internal XdrValidator(XmlValidatingReaderImpl reader, XmlSchemaCollection schemaCollection, IValidationEventHandling eventHandling) {} // 0x00000001898CFD98-0x00000001898CFE3C
+	
+		// Methods
+		private void Init() {} // 0x00000001898CDC90-0x00000001898CDE9C
+		public override void Validate() {} // 0x00000001898CFCEC-0x00000001898CFD98
+		private void ValidateElement() {} // 0x00000001898CF24C-0x00000001898CF41C
+		private void ValidateChildElement() {} // 0x00000001898CF0F8-0x00000001898CF24C
+		private void ProcessInlineSchema() {} // 0x00000001898CE73C-0x00000001898CE9D8
+		private void ProcessElement() {} // 0x00000001898CE678-0x00000001898CE73C
+		private void ValidateEndElement() {} // 0x00000001898CF41C-0x00000001898CF5FC
+		private SchemaElementDecl ThoroughGetElementDecl() => default; // 0x00000001898CEDC4-0x00000001898CF0F8
+		private void ValidateStartElement() {} // 0x00000001898CF8F4-0x00000001898CFCEC
+		private void ValidateEndStartElement() {} // 0x00000001898CF5FC-0x00000001898CF8F4
+		private void LoadSchemaFromLocation(string uri) {} // 0x00000001898CDE9C-0x00000001898CE444
+		private void LoadSchema(string uri) {} // 0x00000001898CE444-0x00000001898CE5D0
+		private void ProcessTokenizedType(XmlTokenizedType ttype, string name) {} // 0x00000001898CE9D8-0x00000001898CEBC8
+		public override void CompleteValidation() {} // 0x00000001898CDBA4-0x00000001898CDC68
+		private void CheckValue(string value, SchemaAttDef attdef) {} // 0x00000001898CD6A4-0x00000001898CDBA4
+		public static void CheckDefaultValue(string value, SchemaAttDef attdef, SchemaInfo sinfo, XmlNamespaceManager nsManager, XmlNameTable NameTable, object sender, ValidationEventHandler eventhandler, string baseUri, int lineNo, int linePos) {} // 0x00000001898CD0F0-0x00000001898CD56C
+		internal void AddID(string name, object node) {} // 0x00000001898CD044-0x00000001898CD0F0
+		public override object FindId(string name) => default; // 0x00000001898CDC68-0x00000001898CDC90
+		private void Push(XmlQualifiedName elementName) {} // 0x00000001898CEBC8-0x00000001898CED24
+		private void Pop() {} // 0x00000001898CE5D0-0x00000001898CE678
+		private void CheckForwardRefs() {} // 0x00000001898CD56C-0x00000001898CD6A4
+		private XmlQualifiedName QualifiedName(string name, string ns) => default; // 0x00000001898CED24-0x00000001898CEDC4
+	}
+
+	public sealed class XmlAtomicValue : XPathItem, ICloneable // TypeDefIndex: 42930
+	{
+		// Fields
+		private XmlSchemaType xmlType; // 0x10
+		private object objVal; // 0x18
+		private TypeCode clrType; // 0x20
+		private Union unionVal; // 0x28
+		private NamespacePrefixForQName nsPrefix; // 0x30
+	
+		// Properties
+		public override XmlSchemaType XmlType { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public override System.Type ValueType { get => default; } // 0x00000001898D1020-0x00000001898D104C 
+		public override object TypedValue { get => default; } // 0x00000001898D0940-0x00000001898D0AB4 
+		public override bool ValueAsBoolean { get => default; } // 0x00000001898D0AB4-0x00000001898D0BB8 
+		public override System.DateTime ValueAsDateTime { get => default; } // 0x00000001898D0BB8-0x00000001898D0D00 
+		public override double ValueAsDouble { get => default; } // 0x00000001898D0D00-0x00000001898D0E04 
+		public override int ValueAsInt { get => default; } // 0x00000001898D0E04-0x00000001898D0EE4 
+		public override long ValueAsLong { get => default; } // 0x00000001898D0EE4-0x00000001898D1020 
+		public override string Value { get => default; } // 0x00000001898D104C-0x00000001898D1148 
+	
+		// Nested types
+		private struct Union // TypeDefIndex: 42928
+		{
+			// Fields
+			public bool boolVal; // 0x00
+			public double dblVal; // 0x00
+			public long i64Val; // 0x00
+			public int i32Val; // 0x00
+			public System.DateTime dtVal; // 0x00
+		}
+	
+		private class NamespacePrefixForQName : IXmlNamespaceResolver // TypeDefIndex: 42929
+		{
+			// Fields
+			public string prefix; // 0x10
+			public string ns; // 0x18
+	
+			// Constructors
+			public NamespacePrefixForQName() {} // Dummy constructor
+			public NamespacePrefixForQName(string prefix, string ns) {} // 0x00000001898C5FB0-0x00000001898C5FD8
+	
+			// Methods
+			public string LookupNamespace(string prefix) => default; // 0x00000001898C5F58-0x00000001898C5F88
+			public string LookupPrefix(string namespaceName) => default; // 0x00000001898C5F88-0x00000001898C5FB0
+			public IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x00000001898C5EC4-0x00000001898C5F58
+		}
+	
+		// Constructors
+		public XmlAtomicValue() {} // Dummy constructor
+		internal XmlAtomicValue(XmlSchemaType xmlType, bool value) {} // 0x00000001898D0170-0x00000001898D01F4
+		internal XmlAtomicValue(XmlSchemaType xmlType, System.DateTime value) {} // 0x00000001898D0838-0x00000001898D08BC
+		internal XmlAtomicValue(XmlSchemaType xmlType, double value) {} // 0x00000001898D08BC-0x00000001898D0940
+		internal XmlAtomicValue(XmlSchemaType xmlType, int value) {} // 0x00000001898D0500-0x00000001898D0584
+		internal XmlAtomicValue(XmlSchemaType xmlType, long value) {} // 0x00000001898D047C-0x00000001898D0500
+		internal XmlAtomicValue(XmlSchemaType xmlType, string value) {} // 0x00000001898D0760-0x00000001898D0838
+		internal XmlAtomicValue(XmlSchemaType xmlType, string value, IXmlNamespaceResolver nsResolver) {} // 0x00000001898D02CC-0x00000001898D047C
+		internal XmlAtomicValue(XmlSchemaType xmlType, object value) {} // 0x00000001898D01F4-0x00000001898D02CC
+		internal XmlAtomicValue(XmlSchemaType xmlType, object value, IXmlNamespaceResolver nsResolver) {} // 0x00000001898D0584-0x00000001898D0760
+	
+		// Methods
+		object ICloneable.Clone() => default; // 0x000000018339AE90-0x000000018339AEA0
+		public override object ValueAs(System.Type type, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898CFFC4-0x00000001898D0170
+		public override string ToString() => default; // 0x00000001894BD1C4-0x00000001894BD1D4
+		private string GetPrefixFromQName(string value) => default; // 0x00000001898CFF24-0x00000001898CFFC4
+	}
+
+	[XmlRoot("schema", Namespace = "http://www.w3.org/2001/XMLSchema")]
+	public class XmlSchema : XmlSchemaObject // TypeDefIndex: 42931
+	{
+		// Fields
+		private XmlSchemaForm attributeFormDefault; // 0x38
+		private XmlSchemaForm elementFormDefault; // 0x3C
+		private XmlSchemaDerivationMethod blockDefault; // 0x40
+		private XmlSchemaDerivationMethod finalDefault; // 0x44
+		private string targetNs; // 0x48
+		private string version; // 0x50
+		private XmlSchemaObjectCollection includes; // 0x58
+		private XmlSchemaObjectCollection items; // 0x60
+		private string id; // 0x68
+		private XmlAttribute[] moreAttributes; // 0x70
+		private bool isCompiled; // 0x78
+		private bool isCompiledBySet; // 0x79
+		private bool isPreprocessed; // 0x7A
+		private bool isRedefined; // 0x7B
+		private int errorCount; // 0x7C
+		private XmlSchemaObjectTable attributes; // 0x80
+		private XmlSchemaObjectTable attributeGroups; // 0x88
+		private XmlSchemaObjectTable elements; // 0x90
+		private XmlSchemaObjectTable types; // 0x98
+		private XmlSchemaObjectTable groups; // 0xA0
+		private XmlSchemaObjectTable notations; // 0xA8
+		private XmlSchemaObjectTable identityConstraints; // 0xB0
+		private static int globalIdCounter; // 0x00
+		private ArrayList importedSchemas; // 0xB8
+		private ArrayList importedNamespaces; // 0xC0
+		private int schemaId; // 0xC8
+		private System.Uri baseUri; // 0xD0
+		private bool isChameleon; // 0xD8
+		private Hashtable ids; // 0xE0
+		private XmlDocument document; // 0xE8
+	
+		// Properties
+		[DefaultValue(XmlSchemaForm.None)]
+		[XmlAttribute("attributeFormDefault")]
+		public XmlSchemaForm AttributeFormDefault { get => default; set {} } // 0x0000000183D4EC30-0x0000000183D4EC40 0x0000000183D4ECB0-0x0000000183D4ECC0
+		[DefaultValue(XmlSchemaDerivationMethod.Empty | XmlSchemaDerivationMethod.None)]
+		[XmlAttribute("blockDefault")]
+		public XmlSchemaDerivationMethod BlockDefault { get => default; set {} } // 0x0000000183D4ED80-0x0000000183D4ED90 0x0000000183D4EDB0-0x0000000183D4EDC0
+		[DefaultValue(XmlSchemaDerivationMethod.Empty | XmlSchemaDerivationMethod.None)]
+		[XmlAttribute("finalDefault")]
+		public XmlSchemaDerivationMethod FinalDefault { get => default; set {} } // 0x0000000183D4EE80-0x0000000183D4EE90 0x0000000183D4EEA0-0x0000000183D4EEB0
+		[DefaultValue(XmlSchemaForm.None)]
+		[XmlAttribute("elementFormDefault")]
+		public XmlSchemaForm ElementFormDefault { get => default; set {} } // 0x0000000183D4ED90-0x0000000183D4EDA0 0x0000000183D4EDC0-0x0000000183D4EDD0
+		[XmlAttribute("targetNamespace", DataType = "anyURI")]
+		public string TargetNamespace { get => default; set {} } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+		[XmlAttribute("version", DataType = "token")]
+		public string Version { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		[XmlElement("redefine", typeof(XmlSchemaRedefine))]
+		[XmlElement("include", typeof(XmlSchemaInclude))]
+		[XmlElement("import", typeof(XmlSchemaImport))]
+		public XmlSchemaObjectCollection Includes { get => default; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 
+		[XmlElement("group", typeof(XmlSchemaGroup))]
+		[XmlElement("element", typeof(XmlSchemaElement))]
+		[XmlElement("complexType", typeof(XmlSchemaComplexType))]
+		[XmlElement("annotation", typeof(XmlSchemaAnnotation))]
+		[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroup))]
+		[XmlElement("simpleType", typeof(XmlSchemaSimpleType))]
+		[XmlElement("notation", typeof(XmlSchemaNotation))]
+		[XmlElement("attribute", typeof(XmlSchemaAttribute))]
+		public XmlSchemaObjectCollection Items { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+		[XmlIgnore]
+		internal bool IsCompiledBySet { get => default; set {} } // 0x0000000183D51AE0-0x0000000183D51AF0 0x0000000183D51B40-0x0000000183D51B50
+		[XmlIgnore]
+		internal bool IsPreprocessed { get => default; set {} } // 0x0000000183D51AF0-0x0000000183D51B00 0x0000000183D51B50-0x0000000183D51B60
+		[XmlIgnore]
+		internal bool IsRedefined { get => default; set {} } // 0x0000000183D757C0-0x0000000183D757D0 0x0000000183D758C0-0x0000000183D758D0
+		[XmlIgnore]
+		public XmlSchemaObjectTable Attributes { get => default; } // 0x00000001898D78FC-0x00000001898D7978 
+		[XmlIgnore]
+		public XmlSchemaObjectTable AttributeGroups { get => default; } // 0x00000001898D7880-0x00000001898D78FC 
+		[XmlIgnore]
+		public XmlSchemaObjectTable SchemaTypes { get => default; } // 0x00000001898D7BD8-0x00000001898D7CA4 
+		[XmlIgnore]
+		public XmlSchemaObjectTable Elements { get => default; } // 0x00000001898D79F4-0x00000001898D7A70 
+		[XmlAttribute("id", DataType = "ID")]
+		public string Id { get => default; set {} } // 0x0000000183D4EAB0-0x0000000183D4EAC0 0x00000001838C5570-0x00000001838C5580
+		[XmlIgnore]
+		public XmlSchemaObjectTable Groups { get => default; } // 0x0000000183D4EA80-0x0000000183D4EA90 
+		[XmlIgnore]
+		public XmlSchemaObjectTable Notations { get => default; } // 0x0000000183D4EB10-0x0000000183D4EB20 
+		[XmlIgnore]
+		internal XmlSchemaObjectTable IdentityConstraints { get => default; } // 0x0000000183D4EAD0-0x0000000183D4EAE0 
+		[XmlIgnore]
+		internal System.Uri BaseUri { get => default; set {} } // 0x0000000183D50050-0x0000000183D50060 0x000000018554A7E0-0x000000018554A7F4
+		[XmlIgnore]
+		internal int SchemaId { get => default; } // 0x00000001898D7B68-0x00000001898D7BD8 
+		[XmlIgnore]
+		internal bool IsChameleon { get => default; set {} } // 0x0000000183D51180-0x0000000183D51190 0x0000000183D511E0-0x0000000183D511F0
+		[XmlIgnore]
+		internal Hashtable Ids { get => default; } // 0x0000000183D51140-0x0000000183D51150 
+		[XmlIgnore]
+		internal XmlDocument Document { get => default; } // 0x00000001898D7978-0x00000001898D79F4 
+		[XmlIgnore]
+		internal int ErrorCount { get => default; set {} } // 0x0000000183D4EC90-0x0000000183D4ECA0 0x0000000183D4ED10-0x0000000183D4ED20
+		[XmlIgnore]
+		internal override string IdAttribute { get => default; set {} } // 0x0000000183D4EAB0-0x0000000183D4EAC0 0x00000001838C5570-0x00000001838C5580
+		internal ArrayList ImportedSchemas { get => default; } // 0x00000001898D7AEC-0x00000001898D7B68 
+		internal ArrayList ImportedNamespaces { get => default; } // 0x00000001898D7A70-0x00000001898D7AEC 
+	
+		// Constructors
+		public XmlSchema() {} // 0x00000001898D7654-0x00000001898D7880
+		static XmlSchema() {} // 0x00000001898D7618-0x00000001898D7654
+	
+		// Methods
+		public static XmlSchema Read(XmlReader reader, ValidationEventHandler validationEventHandler) => default; // 0x00000001898D7460-0x00000001898D7618
+		internal bool CompileSchema(XmlSchemaCollection xsc, XmlResolver resolver, SchemaInfo schemaInfo, string ns, ValidationEventHandler validationEventHandler, XmlNameTable nameTable, bool CompileContentModel) => default; // 0x00000001898D6ED8-0x00000001898D70FC
+		internal void CompileSchemaInSet(XmlNameTable nameTable, ValidationEventHandler eventHandler, XmlSchemaCompilationSettings compilationSettings) {} // 0x00000001898D6E28-0x00000001898D6ED8
+		internal new XmlSchema Clone() => default; // 0x00000001898D6D34-0x00000001898D6E28
+		internal XmlSchema DeepClone() => default; // 0x00000001898D70FC-0x00000001898D7388
+		internal void SetIsCompiled(bool isCompiled) {} // 0x0000000183D4F810-0x0000000183D4F820
+		internal override void SetUnhandledAttributes(XmlAttribute[] moreAttributes) {} // 0x000000018519C3C8-0x000000018519C3D8
+		internal override void AddAnnotation(XmlSchemaAnnotation annotation) {} // 0x00000001898D6D14-0x00000001898D6D34
+		internal void GetExternalSchemasList(IList extList, XmlSchema schema) {} // 0x00000001898D7388-0x00000001898D7460
+	}
+
+	public class XmlSchemaAll : XmlSchemaGroupBase // TypeDefIndex: 42932
+	{
+		// Fields
+		private XmlSchemaObjectCollection items; // 0x78
+	
+		// Properties
+		[XmlElement("element", typeof(XmlSchemaElement))]
+		public override XmlSchemaObjectCollection Items { get => default; } // 0x0000000183D4EB20-0x0000000183D4EB30 
+		internal override bool IsEmpty { get => default; } // 0x00000001898D11B8-0x00000001898D11F4 
+	
+		// Constructors
+		public XmlSchemaAll() {} // 0x00000001898D1148-0x00000001898D11B8
+	
+		// Methods
+		internal override void SetItems(XmlSchemaObjectCollection newItems) {} // 0x00000001851DFCA4-0x00000001851DFCB4
+	}
+
+	public class XmlSchemaAnnotated : XmlSchemaObject // TypeDefIndex: 42933
+	{
+		// Fields
+		private string id; // 0x38
+		private XmlSchemaAnnotation annotation; // 0x40
+		private XmlAttribute[] moreAttributes; // 0x48
+	
+		// Properties
+		[XmlAttribute("id", DataType = "ID")]
+		public string Id { get => default; set {} } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x000000018388FF30-0x000000018388FF40
+		[XmlElement("annotation", typeof(XmlSchemaAnnotation))]
+		public XmlSchemaAnnotation Annotation { get => default; set {} } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
+		[XmlAnyAttribute]
+		public XmlAttribute[] UnhandledAttributes { get => default; set {} } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+		[XmlIgnore]
+		internal override string IdAttribute { get => default; set {} } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x000000018388FF30-0x000000018388FF40
+	
+		// Constructors
+		public XmlSchemaAnnotated() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal override void SetUnhandledAttributes(XmlAttribute[] moreAttributes) {} // 0x0000000182692290-0x00000001826922A0
+		internal override void AddAnnotation(XmlSchemaAnnotation annotation) {} // 0x0000000183CB2D80-0x0000000183CB2D90
+	}
+
+	public class XmlSchemaAnnotation : XmlSchemaObject // TypeDefIndex: 42934
+	{
+		// Fields
+		private string id; // 0x38
+		private XmlSchemaObjectCollection items; // 0x40
+		private XmlAttribute[] moreAttributes; // 0x48
+	
+		// Properties
+		[XmlAttribute("id", DataType = "ID")]
+		public string Id { get => default; set {} } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x000000018388FF30-0x000000018388FF40
+		[XmlElement("appinfo", typeof(XmlSchemaAppInfo))]
+		[XmlElement("documentation", typeof(XmlSchemaDocumentation))]
+		public XmlSchemaObjectCollection Items { get => default; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
+		[XmlIgnore]
+		internal override string IdAttribute { get => default; set {} } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x000000018388FF30-0x000000018388FF40
+	
+		// Constructors
+		public XmlSchemaAnnotation() {} // 0x00000001898D11F4-0x00000001898D1258
+	
+		// Methods
+		internal override void SetUnhandledAttributes(XmlAttribute[] moreAttributes) {} // 0x0000000182692290-0x00000001826922A0
+	}
+
+	public class XmlSchemaAny : XmlSchemaParticle // TypeDefIndex: 42935
+	{
+		// Fields
+		private string ns; // 0x78
+		private XmlSchemaContentProcessing processContents; // 0x80
+		private NamespaceList namespaceList; // 0x88
+	
+		// Properties
+		[XmlAttribute("namespace")]
+		public string Namespace { get => default; set {} } // 0x0000000183D4EB20-0x0000000183D4EB30 0x00000001851DFCA4-0x00000001851DFCB4
+		[DefaultValue(XmlSchemaContentProcessing.None)]
+		[XmlAttribute("processContents")]
+		public XmlSchemaContentProcessing ProcessContents { set {} } // 0x0000000183D4ECA0-0x0000000183D4ECB0
+		[XmlIgnore]
+		internal NamespaceList NamespaceList { get => default; } // 0x0000000183D4EA60-0x0000000183D4EA70 
+		[XmlIgnore]
+		internal string ResolvedNamespace { get => default; } // 0x00000001898D1A6C-0x00000001898D1AB0 
+		[XmlIgnore]
+		internal XmlSchemaContentProcessing ProcessContentsCorrect { get => default; } // 0x00000001898D1A54-0x00000001898D1A6C 
+		internal override string NameString { get => default; } // 0x00000001898D1750-0x00000001898D1A54 
+	
+		// Constructors
+		public XmlSchemaAny() {} // 0x00000001898D1704-0x00000001898D1750
+	
+		// Methods
+		internal void BuildNamespaceList(string targetNamespace) {} // 0x00000001898D165C-0x00000001898D1704
+		internal void BuildNamespaceListV1Compat(string targetNamespace) {} // 0x00000001898D15A0-0x00000001898D165C
+		internal bool Allows(XmlQualifiedName qname) => default; // 0x00000001898D1570-0x00000001898D15A0
+	}
+
+	public class XmlSchemaAnyAttribute : XmlSchemaAnnotated // TypeDefIndex: 42936
+	{
+		// Fields
+		private string ns; // 0x50
+		private XmlSchemaContentProcessing processContents; // 0x58
+		private NamespaceList namespaceList; // 0x60
+	
+		// Properties
+		[XmlAttribute("namespace")]
+		public string Namespace { set {} } // 0x0000000182C926C0-0x0000000182C926D0
+		[DefaultValue(XmlSchemaContentProcessing.None)]
+		[XmlAttribute("processContents")]
+		public XmlSchemaContentProcessing ProcessContents { get => default; set {} } // 0x0000000183D4EF00-0x0000000183D4EF10 0x0000000183D4EF50-0x0000000183D4EF60
+		[XmlIgnore]
+		internal NamespaceList NamespaceList { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+		[XmlIgnore]
+		internal XmlSchemaContentProcessing ProcessContentsCorrect { get => default; } // 0x00000001898D1560-0x00000001898D1570 
+	
+		// Constructors
+		public XmlSchemaAnyAttribute() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal void BuildNamespaceList(string targetNamespace) {} // 0x00000001898D1338-0x00000001898D13D8
+		internal void BuildNamespaceListV1Compat(string targetNamespace) {} // 0x00000001898D1288-0x00000001898D1338
+		internal bool Allows(XmlQualifiedName qname) => default; // 0x00000001898D1258-0x00000001898D1288
+		internal static bool IsSubset(XmlSchemaAnyAttribute sub, XmlSchemaAnyAttribute super) => default; // 0x00000001898D1488-0x00000001898D14B0
+		internal static XmlSchemaAnyAttribute Intersection(XmlSchemaAnyAttribute o1, XmlSchemaAnyAttribute o2, bool v1Compat) => default; // 0x00000001898D13D8-0x00000001898D1488
+		internal static XmlSchemaAnyAttribute Union(XmlSchemaAnyAttribute o1, XmlSchemaAnyAttribute o2, bool v1Compat) => default; // 0x00000001898D14B0-0x00000001898D1560
+	}
+
+	public class XmlSchemaAppInfo : XmlSchemaObject // TypeDefIndex: 42937
+	{
+		// Fields
+		private string source; // 0x38
+		private XmlNode[] markup; // 0x40
+	
+		// Properties
+		[XmlAttribute("source", DataType = "anyURI")]
+		public string Source { set {} } // 0x000000018388FF30-0x000000018388FF40
+		[XmlAnyElement]
+		[XmlText]
+		public XmlNode[] Markup { get => default; set {} } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
+	
+		// Constructors
+		public XmlSchemaAppInfo() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public class XmlSchemaAttribute : XmlSchemaAnnotated // TypeDefIndex: 42938
+	{
+		// Fields
+		private string defaultValue; // 0x50
+		private string fixedValue; // 0x58
+		private string name; // 0x60
+		private XmlSchemaForm form; // 0x68
+		private XmlSchemaUse use; // 0x6C
+		private XmlQualifiedName refName; // 0x70
+		private XmlQualifiedName typeName; // 0x78
+		private XmlQualifiedName qualifiedName; // 0x80
+		private XmlSchemaSimpleType type; // 0x88
+		private XmlSchemaSimpleType attributeType; // 0x90
+		private SchemaAttDef attDef; // 0x98
+	
+		// Properties
+		[DefaultValue(null)]
+		[XmlAttribute("default")]
+		public string DefaultValue { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		[DefaultValue(null)]
+		[XmlAttribute("fixed")]
+		public string FixedValue { get => default; set {} } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x0000000183081D30-0x0000000183081D40
+		[DefaultValue(XmlSchemaForm.None)]
+		[XmlAttribute("form")]
+		public XmlSchemaForm Form { get => default; set {} } // 0x0000000183D4EEE0-0x0000000183D4EEF0 0x0000000183D4EF30-0x0000000183D4EF40
+		[XmlAttribute("name")]
+		public string Name { get => default; set {} } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
+		[XmlAttribute("ref")]
+		public XmlQualifiedName RefName { get => default; set {} } // 0x0000000183D4EB30-0x0000000183D4EB40 0x00000001898D1EDC-0x00000001898D1F68
+		[XmlAttribute("type")]
+		public XmlQualifiedName SchemaTypeName { get => default; set {} } // 0x0000000183D4EB20-0x0000000183D4EB30 0x00000001898D1F68-0x00000001898D1FF4
+		[XmlElement("simpleType")]
+		public XmlSchemaSimpleType SchemaType { get => default; set {} } // 0x0000000183D4EA60-0x0000000183D4EA70 0x0000000184274DA0-0x0000000184274DB4
+		[DefaultValue(XmlSchemaUse.None)]
+		[XmlAttribute("use")]
+		public XmlSchemaUse Use { get => default; set {} } // 0x0000000183D4F400-0x0000000183D4F410 0x0000000183D4F450-0x0000000183D4F460
+		[XmlIgnore]
+		public XmlQualifiedName QualifiedName { get => default; } // 0x0000000183D4EAE0-0x0000000183D4EAF0 
+		[XmlIgnore]
+		public XmlSchemaSimpleType AttributeSchemaType { get => default; } // 0x0000000183D4EA90-0x0000000183D4EAA0 
+		[XmlIgnore]
+		internal XmlSchemaDatatype Datatype { get => default; } // 0x00000001898D1EC0-0x00000001898D1EDC 
+		internal SchemaAttDef AttDef { get => default; set {} } // 0x00000001811AC510-0x00000001811AC520 0x00000001851417AC-0x00000001851417C0
+		[XmlIgnore]
+		internal override string NameAttribute { get => default; set {} } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
+	
+		// Constructors
+		public XmlSchemaAttribute() {} // 0x00000001898D1E24-0x00000001898D1EC0
+	
+		// Methods
+		internal void SetQualifiedName(XmlQualifiedName value) {} // 0x00000001851DFC94-0x00000001851DFCA4
+		internal void SetAttributeType(XmlSchemaSimpleType value) {} // 0x00000001851DFCB4-0x00000001851DFCC8
+		internal override XmlSchemaObject Clone() => default; // 0x00000001898D1D68-0x00000001898D1E24
+	}
+
+	public class XmlSchemaAttributeGroup : XmlSchemaAnnotated // TypeDefIndex: 42939
+	{
+		// Fields
+		private string name; // 0x50
+		private XmlSchemaObjectCollection attributes; // 0x58
+		private XmlSchemaAnyAttribute anyAttribute; // 0x60
+		private XmlQualifiedName qname; // 0x68
+		private XmlSchemaAttributeGroup redefined; // 0x70
+		private XmlSchemaObjectTable attributeUses; // 0x78
+		private XmlSchemaAnyAttribute attributeWildcard; // 0x80
+		private int selfReferenceCount; // 0x88
+	
+		// Properties
+		[XmlAttribute("name")]
+		public string Name { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroupRef))]
+		[XmlElement("attribute", typeof(XmlSchemaAttribute))]
+		public XmlSchemaObjectCollection Attributes { get => default; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 
+		[XmlElement("anyAttribute")]
+		public XmlSchemaAnyAttribute AnyAttribute { get => default; set {} } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
+		[XmlIgnore]
+		public XmlQualifiedName QualifiedName { get => default; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 
+		[XmlIgnore]
+		internal XmlSchemaObjectTable AttributeUses { get => default; } // 0x00000001898D1CF8-0x00000001898D1D68 
+		[XmlIgnore]
+		internal XmlSchemaAnyAttribute AttributeWildcard { get => default; set {} } // 0x0000000183D4EAE0-0x0000000183D4EAF0 0x00000001851DFC94-0x00000001851DFCA4
+		[XmlIgnore]
+		public XmlSchemaAttributeGroup RedefinedAttributeGroup { get => default; } // 0x0000000183D4EB30-0x0000000183D4EB40 
+		[XmlIgnore]
+		internal XmlSchemaAttributeGroup Redefined { get => default; set {} } // 0x0000000183D4EB30-0x0000000183D4EB40 0x000000018519C3C8-0x000000018519C3D8
+		[XmlIgnore]
+		internal int SelfReferenceCount { get => default; set {} } // 0x0000000183D4F0B0-0x0000000183D4F0C0 0x0000000183D4F0E0-0x0000000183D4F0F0
+		[XmlIgnore]
+		internal override string NameAttribute { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+	
+		// Constructors
+		public XmlSchemaAttributeGroup() {} // 0x00000001898D1C5C-0x00000001898D1CF8
+	
+		// Methods
+		internal void SetQualifiedName(XmlQualifiedName value) {} // 0x00000001838C5570-0x00000001838C5580
+		internal override XmlSchemaObject Clone() => default; // 0x00000001898D1B94-0x00000001898D1C5C
+	}
+
+	public class XmlSchemaAttributeGroupRef : XmlSchemaAnnotated // TypeDefIndex: 42940
+	{
+		// Fields
+		private XmlQualifiedName refName; // 0x50
+	
+		// Properties
+		[XmlAttribute("ref")]
+		public XmlQualifiedName RefName { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x00000001898D1B08-0x00000001898D1B94
+	
+		// Constructors
+		public XmlSchemaAttributeGroupRef() {} // 0x00000001898D1AB0-0x00000001898D1B08
+	}
+
+	public class XmlSchemaChoice : XmlSchemaGroupBase // TypeDefIndex: 42941
+	{
+		// Fields
+		private XmlSchemaObjectCollection items; // 0x78
+	
+		// Properties
+		[XmlElement("element", typeof(XmlSchemaElement))]
+		[XmlElement("group", typeof(XmlSchemaGroupRef))]
+		[XmlElement("choice", typeof(XmlSchemaChoice))]
+		[XmlElement("any", typeof(XmlSchemaAny))]
+		[XmlElement("sequence", typeof(XmlSchemaSequence))]
+		public override XmlSchemaObjectCollection Items { get => default; } // 0x0000000183D4EB20-0x0000000183D4EB30 
+		internal override bool IsEmpty { get => default; } // 0x00000001898D2064-0x00000001898D206C 
+	
+		// Constructors
+		public XmlSchemaChoice() {} // 0x00000001898D1FF4-0x00000001898D2064
+	
+		// Methods
+		internal override void SetItems(XmlSchemaObjectCollection newItems) {} // 0x00000001851DFCA4-0x00000001851DFCB4
+	}
+
+	[Obsolete("Use System.Xml.Schema.XmlSchemaSet for schema compilation and validation. https://go.microsoft.com/fwlink/?linkid=14202")]
+	public sealed class XmlSchemaCollection : ICollection // TypeDefIndex: 42942
+	{
+		// Fields
+		private Hashtable collection; // 0x10
+		private XmlNameTable nameTable; // 0x18
+		private SchemaNames schemaNames; // 0x20
+		private ReaderWriterLock wLock; // 0x28
+		private int timeout; // 0x30
+		private bool isThreadSafe; // 0x34
+		private ValidationEventHandler validationEventHandler; // 0x38
+		private XmlResolver xmlResolver; // 0x40
+	
+		// Properties
+		public int Count { get => default; } // 0x00000001898D283C-0x00000001898D2860 
+		public XmlNameTable NameTable { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		internal XmlResolver XmlResolver { set {} } // 0x0000000183CB2D80-0x0000000183CB2D90
+		public XmlSchema this[string ns] { get => default; } // 0x00000001898D29F8-0x00000001898D2A90 
+		bool ICollection.IsSynchronized { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+		object ICollection.SyncRoot { get => default; } // 0x000000018339AE90-0x000000018339AEA0 
+		int ICollection.Count { get => default; } // 0x00000001898D283C-0x00000001898D2860 
+		internal ValidationEventHandler EventHandler { get => default; set {} } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x000000018388FF30-0x000000018388FF40
+	
+		// Constructors
+		public XmlSchemaCollection() {} // Dummy constructor
+		public XmlSchemaCollection(XmlNameTable nametable) {} // 0x00000001898D28C4-0x00000001898D29F8
+	
+		// Methods
+		IEnumerator IEnumerable.GetEnumerator() => default; // 0x00000001898D2860-0x00000001898D28C4
+		public XmlSchemaCollectionEnumerator GetEnumerator() => default; // 0x00000001898D2510-0x00000001898D2574
+		void ICollection.CopyTo(Array array, int index) {} // 0x00000001898D26C0-0x00000001898D283C
+		internal SchemaInfo GetSchemaInfo(string ns) => default; // 0x00000001898D2574-0x00000001898D260C
+		internal SchemaNames GetSchemaNames(XmlNameTable nt) => default; // 0x00000001898D260C-0x00000001898D26C0
+		internal XmlSchema Add(string ns, SchemaInfo schemaInfo, XmlSchema schema, bool compile) => default; // 0x00000001898D237C-0x00000001898D23A8
+		private XmlSchema Add(string ns, SchemaInfo schemaInfo, XmlSchema schema, bool compile, XmlResolver resolver) => default; // 0x00000001898D23A8-0x00000001898D2510
+		private void Add(string ns, XmlSchemaCollectionNode node) {} // 0x00000001898D2250-0x00000001898D237C
+	}
+
+	internal sealed class XmlSchemaCollectionNode // TypeDefIndex: 42943
+	{
+		// Fields
+		private string namespaceUri; // 0x10
+		private SchemaInfo schemaInfo; // 0x18
+		private XmlSchema schema; // 0x20
+	
+		// Properties
+		internal string NamespaceURI { set {} } // 0x000000018426FEE0-0x000000018426FEF0
+		internal SchemaInfo SchemaInfo { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		internal XmlSchema Schema { get => default; set {} } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+	
+		// Constructors
+		public XmlSchemaCollectionNode() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public sealed class XmlSchemaCollectionEnumerator : IEnumerator // TypeDefIndex: 42944
+	{
+		// Fields
+		private IDictionaryEnumerator enumerator; // 0x10
+	
+		// Properties
+		object IEnumerator.Current { get => default; } // 0x00000001898D2148-0x00000001898D2150 
+		public XmlSchema Current { get => default; } // 0x00000001898D21EC-0x00000001898D2250 
+		internal XmlSchemaCollectionNode CurrentNode { get => default; } // 0x00000001898D2180-0x00000001898D21EC 
+	
+		// Constructors
+		public XmlSchemaCollectionEnumerator() {} // Dummy constructor
+		internal XmlSchemaCollectionEnumerator(Hashtable collection) {} // 0x00000001898D2150-0x00000001898D2180
+	
+		// Methods
+		void IEnumerator.Reset() {} // 0x00000001898D20FC-0x00000001898D2148
+		bool IEnumerator.MoveNext() => default; // 0x00000001898D20B4-0x00000001898D20FC
+		public bool MoveNext() => default; // 0x00000001898D206C-0x00000001898D20B4
+	}
+
+	public sealed class XmlSchemaCompilationSettings // TypeDefIndex: 42945
+	{
+		// Fields
+		private bool enableUpaCheck; // 0x10
+	
+		// Properties
+		public bool EnableUpaCheck { get => default; } // 0x00000001811797F0-0x0000000181179800 
+	
+		// Constructors
+		public XmlSchemaCompilationSettings() {} // 0x0000000181168960-0x0000000181168970
+	}
+
+	public class XmlSchemaComplexContent : XmlSchemaContentModel // TypeDefIndex: 42946
+	{
+		// Fields
+		private XmlSchemaContent content; // 0x50
+		private bool isMixed; // 0x58
+		private bool hasMixedAttribute; // 0x59
+	
+		// Properties
+		[XmlAttribute("mixed")]
+		public bool IsMixed { get => default; set {} } // 0x0000000183D4F7E0-0x0000000183D4F7F0 0x0000000183D757B0-0x0000000183D757C0
+		[XmlElement("extension", typeof(XmlSchemaComplexContentExtension))]
+		[XmlElement("restriction", typeof(XmlSchemaComplexContentRestriction))]
+		public override XmlSchemaContent Content { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		[XmlIgnore]
+		internal bool HasMixedAttribute { get => default; } // 0x0000000183D589D0-0x0000000183D589E0 
+	
+		// Constructors
+		public XmlSchemaComplexContent() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public class XmlSchemaComplexContentExtension : XmlSchemaContent // TypeDefIndex: 42947
+	{
+		// Fields
+		private XmlSchemaParticle particle; // 0x50
+		private XmlSchemaObjectCollection attributes; // 0x58
+		private XmlSchemaAnyAttribute anyAttribute; // 0x60
+		private XmlQualifiedName baseTypeName; // 0x68
+	
+		// Properties
+		[XmlAttribute("base")]
+		public XmlQualifiedName BaseTypeName { get => default; set {} } // 0x0000000183D4EAB0-0x0000000183D4EAC0 0x00000001898D2B2C-0x00000001898D2BB8
+		[XmlElement("group", typeof(XmlSchemaGroupRef))]
+		[XmlElement("choice", typeof(XmlSchemaChoice))]
+		[XmlElement("all", typeof(XmlSchemaAll))]
+		[XmlElement("sequence", typeof(XmlSchemaSequence))]
+		public XmlSchemaParticle Particle { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		[XmlElement("attribute", typeof(XmlSchemaAttribute))]
+		[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroupRef))]
+		public XmlSchemaObjectCollection Attributes { get => default; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 
+		[XmlElement("anyAttribute")]
+		public XmlSchemaAnyAttribute AnyAttribute { get => default; set {} } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
+	
+		// Constructors
+		public XmlSchemaComplexContentExtension() {} // 0x00000001898D2A90-0x00000001898D2B2C
+	
+		// Methods
+		internal void SetAttributes(XmlSchemaObjectCollection newAttributes) {} // 0x0000000183081D30-0x0000000183081D40
+	}
+
+	public class XmlSchemaComplexContentRestriction : XmlSchemaContent // TypeDefIndex: 42948
+	{
+		// Fields
+		private XmlSchemaParticle particle; // 0x50
+		private XmlSchemaObjectCollection attributes; // 0x58
+		private XmlSchemaAnyAttribute anyAttribute; // 0x60
+		private XmlQualifiedName baseTypeName; // 0x68
+	
+		// Properties
+		[XmlAttribute("base")]
+		public XmlQualifiedName BaseTypeName { get => default; set {} } // 0x0000000183D4EAB0-0x0000000183D4EAC0 0x00000001898D2C54-0x00000001898D2CE0
+		[XmlElement("group", typeof(XmlSchemaGroupRef))]
+		[XmlElement("choice", typeof(XmlSchemaChoice))]
+		[XmlElement("all", typeof(XmlSchemaAll))]
+		[XmlElement("sequence", typeof(XmlSchemaSequence))]
+		public XmlSchemaParticle Particle { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		[XmlElement("attribute", typeof(XmlSchemaAttribute))]
+		[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroupRef))]
+		public XmlSchemaObjectCollection Attributes { get => default; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 
+		[XmlElement("anyAttribute")]
+		public XmlSchemaAnyAttribute AnyAttribute { get => default; set {} } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
+	
+		// Constructors
+		public XmlSchemaComplexContentRestriction() {} // 0x00000001898D2BB8-0x00000001898D2C54
+	
+		// Methods
+		internal void SetAttributes(XmlSchemaObjectCollection newAttributes) {} // 0x0000000183081D30-0x0000000183081D40
+	}
+
+	public class XmlSchemaComplexType : XmlSchemaType // TypeDefIndex: 42949
+	{
+		// Fields
+		private XmlSchemaDerivationMethod block; // 0x98
+		private XmlSchemaContentModel contentModel; // 0xA0
+		private XmlSchemaParticle particle; // 0xA8
+		private XmlSchemaObjectCollection attributes; // 0xB0
+		private XmlSchemaAnyAttribute anyAttribute; // 0xB8
+		private XmlSchemaParticle contentTypeParticle; // 0xC0
+		private XmlSchemaDerivationMethod blockResolved; // 0xC8
+		private XmlSchemaObjectTable localElements; // 0xD0
+		private XmlSchemaObjectTable attributeUses; // 0xD8
+		private XmlSchemaAnyAttribute attributeWildcard; // 0xE0
+		private static XmlSchemaComplexType anyTypeLax; // 0x00
+		private static XmlSchemaComplexType anyTypeSkip; // 0x08
+		private static XmlSchemaComplexType untypedAnyType; // 0x10
+		private byte pvFlags; // 0xE8
+	
+		// Properties
+		[XmlIgnore]
+		internal static XmlSchemaComplexType AnyType { get => default; } // 0x00000001898D4238-0x00000001898D4288 
+		[XmlIgnore]
+		internal static XmlSchemaComplexType UntypedAnyType { get => default; } // 0x00000001898D4414-0x00000001898D4464 
+		internal static ContentValidator AnyTypeContentValidator { get => default; } // 0x00000001898D41D4-0x00000001898D4238 
+		[DefaultValue(false)]
+		[XmlAttribute("abstract")]
+		public bool IsAbstract { get => default; set {} } // 0x00000001898D4380-0x00000001898D438C 0x00000001898D448C-0x00000001898D44B4
+		[DefaultValue(XmlSchemaDerivationMethod.Empty | XmlSchemaDerivationMethod.None)]
+		[XmlAttribute("block")]
+		public XmlSchemaDerivationMethod Block { get => default; set {} } // 0x0000000183D4EB50-0x0000000183D4EB60 0x0000000183D4EB80-0x0000000183D4EB90
+		[DefaultValue(false)]
+		[XmlAttribute("mixed")]
+		public override bool IsMixed { get => default; set {} } // 0x00000001898D438C-0x00000001898D4398 0x00000001898D44B4-0x00000001898D44DC
+		[XmlElement("complexContent", typeof(XmlSchemaComplexContent))]
+		[XmlElement("simpleContent", typeof(XmlSchemaSimpleContent))]
+		public XmlSchemaContentModel ContentModel { get => default; set {} } // 0x0000000183D4EA80-0x0000000183D4EA90 0x0000000184270264-0x0000000184270278
+		[XmlElement("choice", typeof(XmlSchemaChoice))]
+		[XmlElement("sequence", typeof(XmlSchemaSequence))]
+		[XmlElement("group", typeof(XmlSchemaGroupRef))]
+		[XmlElement("all", typeof(XmlSchemaAll))]
+		public XmlSchemaParticle Particle { get => default; set {} } // 0x0000000183D4EB10-0x0000000183D4EB20 0x000000018554A7F4-0x000000018554A808
+		[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroupRef))]
+		[XmlElement("attribute", typeof(XmlSchemaAttribute))]
+		public XmlSchemaObjectCollection Attributes { get => default; } // 0x00000001898D4304-0x00000001898D4380 
+		[XmlElement("anyAttribute")]
+		public XmlSchemaAnyAttribute AnyAttribute { get => default; set {} } // 0x0000000183D4E750-0x0000000183D4E760 0x00000001858AAF64-0x00000001858AAF78
+		[XmlIgnore]
+		public XmlSchemaContentType ContentType { get => default; } // 0x0000000183D4FB60-0x0000000183D4FB70 
+		[XmlIgnore]
+		public XmlSchemaParticle ContentTypeParticle { get => default; } // 0x0000000183D50E60-0x0000000183D50E70 
+		[XmlIgnore]
+		public XmlSchemaDerivationMethod BlockResolved { get => default; } // 0x0000000183D51FB0-0x0000000183D51FC0 
+		[XmlIgnore]
+		public XmlSchemaObjectTable AttributeUses { get => default; } // 0x00000001898D4288-0x00000001898D4304 
+		[XmlIgnore]
+		public XmlSchemaAnyAttribute AttributeWildcard { get => default; } // 0x0000000183D51140-0x0000000183D51150 
+		[XmlIgnore]
+		internal XmlSchemaObjectTable LocalElements { get => default; } // 0x00000001898D4398-0x00000001898D4414 
+		internal bool HasWildCard { set {} } // 0x00000001898D4464-0x00000001898D448C
+	
+		// Constructors
+		static XmlSchemaComplexType() {} // 0x00000001898D3EA8-0x00000001898D4164
+		public XmlSchemaComplexType() {} // 0x00000001898D4164-0x00000001898D41D4
+	
+		// Methods
+		private static XmlSchemaComplexType CreateAnyType(XmlSchemaContentProcessing processContents) => default; // 0x00000001898D38BC-0x00000001898D3BD0
+		internal void SetContentTypeParticle(XmlSchemaParticle value) {} // 0x00000001858B426C-0x00000001858B4280
+		internal void SetBlockResolved(XmlSchemaDerivationMethod value) {} // 0x0000000183D51FF0-0x0000000183D52000
+		internal void SetAttributeWildcard(XmlSchemaAnyAttribute value) {} // 0x000000018589D964-0x000000018589D978
+		internal void SetAttributes(XmlSchemaObjectCollection newAttributes) {} // 0x0000000182B47080-0x0000000182B470A0
+		internal bool ContainsIdAttribute(bool findAll) => default; // 0x00000001898D36B0-0x00000001898D38BC
+		internal override XmlSchemaObject Clone() => default; // 0x00000001898D36A4-0x00000001898D36B0
+		internal XmlSchemaObject Clone(XmlSchema parentSchema) => default; // 0x00000001898D31E8-0x00000001898D36A4
+		private void ClearCompiledState() {} // 0x00000001898D2CE0-0x00000001898D2D84
+		internal static XmlSchemaObjectCollection CloneAttributes(XmlSchemaObjectCollection attributes) => default; // 0x00000001898D2D84-0x00000001898D2F20
+		private static XmlSchemaObjectCollection CloneGroupBaseParticles(XmlSchemaObjectCollection groupBaseParticles, XmlSchema parentSchema) => default; // 0x00000001898D2F20-0x00000001898D3004
+		internal static XmlSchemaParticle CloneParticle(XmlSchemaParticle particle, XmlSchema parentSchema) => default; // 0x00000001898D3004-0x00000001898D31E8
+		private static XmlSchemaForm GetResolvedElementForm(XmlSchema parentSchema, XmlSchemaElement element) => default; // 0x00000001898D3BD0-0x00000001898D3C00
+		internal static bool HasParticleRef(XmlSchemaParticle particle, XmlSchema parentSchema) => default; // 0x00000001898D3CE8-0x00000001898D3EA8
+		internal static bool HasAttributeQNameRef(XmlSchemaObjectCollection attributes) => default; // 0x00000001898D3C00-0x00000001898D3CE8
+	}
+
+	public abstract class XmlSchemaContent : XmlSchemaAnnotated // TypeDefIndex: 42950
+	{
+		// Constructors
+		protected XmlSchemaContent() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public abstract class XmlSchemaContentModel : XmlSchemaAnnotated // TypeDefIndex: 42951
+	{
+		// Properties
+		[XmlIgnore]
+		public abstract XmlSchemaContent Content { get; set; }
+	
+		// Constructors
+		protected XmlSchemaContentModel() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public enum XmlSchemaContentProcessing // TypeDefIndex: 42952
+	{
+		None = 0,
+		Skip = 1,
+		Lax = 2,
+		Strict = 3
+	}
+
+	public enum XmlSchemaContentType // TypeDefIndex: 42953
+	{
+		TextOnly = 0,
+		Empty = 1,
+		ElementOnly = 2,
+		Mixed = 3
+	}
+
+	public abstract class XmlSchemaDatatype // TypeDefIndex: 42954
+	{
+		// Properties
+		public abstract System.Type ValueType { get; }
+		public abstract XmlTokenizedType TokenizedType { get; }
+		public virtual XmlSchemaDatatypeVariety Variety { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual XmlTypeCode TypeCode { get; } // 0x0000000181002730-0x0000000181002740 
+		internal abstract bool HasLexicalFacets { get; }
+		internal abstract bool HasValueFacets { get; }
+		internal abstract XmlValueConverter ValueConverter { get; }
+		internal abstract RestrictionFacets Restriction { get; }
+		internal abstract FacetsChecker FacetsChecker { get; }
+		internal abstract XmlSchemaWhiteSpace BuiltInWhitespaceFacet { get; }
+		internal string TypeCodeString { get; } // 0x00000001898D50AC-0x00000001898D51B0 
+	
+		// Constructors
+		protected XmlSchemaDatatype() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public abstract object ParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr);
+		public virtual bool IsDerivedFrom(XmlSchemaDatatype datatype) => default; // 0x000000018115F4C0-0x000000018115F530
+		internal abstract int Compare(object value1, object value2);
+		internal abstract object ParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, bool createAtomicValue);
+		internal abstract Exception TryParseValue(string s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr, out object typedValue);
+		internal abstract Exception TryParseValue(object value, XmlNameTable nameTable, IXmlNamespaceResolver namespaceResolver, out object typedValue);
+		internal abstract XmlSchemaDatatype DeriveByRestriction(XmlSchemaObjectCollection facets, XmlNameTable nameTable, XmlSchemaType schemaType);
+		internal abstract XmlSchemaDatatype DeriveByList(XmlSchemaType schemaType);
+		internal abstract void VerifySchemaValid(XmlSchemaObjectTable notations, XmlSchemaObject caller);
+		internal abstract bool IsEqual(object o1, object o2);
+		internal abstract bool IsComparable(XmlSchemaDatatype dtype);
+		internal string TypeCodeToString(XmlTypeCode typeCode) => default; // 0x00000001898D4988-0x00000001898D4F44
+		internal static string ConcatenatedToString(object value) => default; // 0x00000001898D44DC-0x00000001898D4850
+		internal static XmlSchemaDatatype FromXmlTokenizedType(XmlTokenizedType token) => default; // 0x00000001898D4940-0x00000001898D4988
+		internal static XmlSchemaDatatype FromXmlTokenizedTypeXsd(XmlTokenizedType token) => default; // 0x00000001898D48F8-0x00000001898D4940
+		internal static XmlSchemaDatatype FromXdrName(string name) => default; // 0x00000001898D48AC-0x00000001898D48F8
+		internal static XmlSchemaDatatype DeriveByUnion(XmlSchemaSimpleType[] types, XmlSchemaType schemaType) => default; // 0x00000001898D4850-0x00000001898D48AC
+		internal static string XdrCanonizeUri(string uri, XmlNameTable nameTable, SchemaNames schemaNames) => default; // 0x00000001898D4F44-0x00000001898D50AC
+	}
+
+	[Flags]
+	public enum XmlSchemaDerivationMethod // TypeDefIndex: 42955
+	{
+		Empty = 0,
+		Substitution = 1,
+		Extension = 2,
+		Restriction = 4,
+		List = 8,
+		Union = 16,
+		All = 255,
+		None = 256
+	}
+
+	public class XmlSchemaDocumentation : XmlSchemaObject // TypeDefIndex: 42956
+	{
+		// Fields
+		private string source; // 0x38
+		private string language; // 0x40
+		private XmlNode[] markup; // 0x48
+		private static XmlSchemaSimpleType languageType; // 0x00
+	
+		// Properties
+		[XmlAttribute("source", DataType = "anyURI")]
+		public string Source { set {} } // 0x000000018388FF30-0x000000018388FF40
+		[XmlAttribute("xml:lang")]
+		public string Language { set {} } // 0x00000001898D5274-0x00000001898D5340
+		[XmlAnyElement]
+		[XmlText]
+		public XmlNode[] Markup { set {} } // 0x0000000182692290-0x00000001826922A0
+	
+		// Constructors
+		public XmlSchemaDocumentation() {} // 0x000000018350B670-0x000000018350B680
+		static XmlSchemaDocumentation() {} // 0x00000001898D51B0-0x00000001898D5274
+	}
+
+	public class XmlSchemaElement : XmlSchemaParticle // TypeDefIndex: 42957
+	{
+		// Fields
+		private bool isAbstract; // 0x78
+		private bool hasAbstractAttribute; // 0x79
+		private bool isNillable; // 0x7A
+		private bool hasNillableAttribute; // 0x7B
+		private bool isLocalTypeDerivationChecked; // 0x7C
+		private XmlSchemaDerivationMethod block; // 0x80
+		private XmlSchemaDerivationMethod final; // 0x84
+		private XmlSchemaForm form; // 0x88
+		private string defaultValue; // 0x90
+		private string fixedValue; // 0x98
+		private string name; // 0xA0
+		private XmlQualifiedName refName; // 0xA8
+		private XmlQualifiedName substitutionGroup; // 0xB0
+		private XmlQualifiedName typeName; // 0xB8
+		private XmlSchemaType type; // 0xC0
+		private XmlQualifiedName qualifiedName; // 0xC8
+		private XmlSchemaType elementType; // 0xD0
+		private XmlSchemaDerivationMethod blockResolved; // 0xD8
+		private XmlSchemaDerivationMethod finalResolved; // 0xDC
+		private XmlSchemaObjectCollection constraints; // 0xE0
+		private SchemaElementDecl elementDecl; // 0xE8
+	
+		// Properties
+		[DefaultValue(false)]
+		[XmlAttribute("abstract")]
+		public bool IsAbstract { get => default; set {} } // 0x0000000183D4F800-0x0000000183D4F810 0x0000000183D757D0-0x0000000183D757E0
+		[DefaultValue(XmlSchemaDerivationMethod.Empty | XmlSchemaDerivationMethod.None)]
+		[XmlAttribute("block")]
+		public XmlSchemaDerivationMethod Block { get => default; set {} } // 0x0000000183D4EC20-0x0000000183D4EC30 0x0000000183D4ECA0-0x0000000183D4ECB0
+		[DefaultValue(null)]
+		[XmlAttribute("default")]
+		public string DefaultValue { get => default; set {} } // 0x0000000183D4EA90-0x0000000183D4EAA0 0x00000001851DFCB4-0x00000001851DFCC8
+		[DefaultValue(XmlSchemaDerivationMethod.Empty | XmlSchemaDerivationMethod.None)]
+		[XmlAttribute("final")]
+		public XmlSchemaDerivationMethod Final { get => default; set {} } // 0x0000000183D4F370-0x0000000183D4F380 0x0000000183D4F390-0x0000000183D4F3A0
+		[DefaultValue(null)]
+		[XmlAttribute("fixed")]
+		public string FixedValue { get => default; set {} } // 0x00000001811AC510-0x00000001811AC520 0x00000001851417AC-0x00000001851417C0
+		[DefaultValue(XmlSchemaForm.None)]
+		[XmlAttribute("form")]
+		public XmlSchemaForm Form { get => default; set {} } // 0x0000000183D4F0B0-0x0000000183D4F0C0 0x0000000183D4F0E0-0x0000000183D4F0F0
+		[DefaultValue("")]
+		[XmlAttribute("name")]
+		public string Name { get => default; set {} } // 0x0000000183D4EA80-0x0000000183D4EA90 0x0000000184270264-0x0000000184270278
+		[DefaultValue(false)]
+		[XmlAttribute("nillable")]
+		public bool IsNillable { get => default; set {} } // 0x0000000183D51AF0-0x0000000183D51B00 0x0000000183D757E0-0x0000000183D757F0
+		[XmlIgnore]
+		internal bool HasNillableAttribute { get => default; } // 0x0000000183D757C0-0x0000000183D757D0 
+		[XmlIgnore]
+		internal bool HasAbstractAttribute { get => default; } // 0x0000000183D51AE0-0x0000000183D51AF0 
+		[XmlAttribute("ref")]
+		public XmlQualifiedName RefName { get => default; set {} } // 0x0000000183D4EB10-0x0000000183D4EB20 0x00000001898D56D4-0x00000001898D5764
+		[XmlAttribute("substitutionGroup")]
+		public XmlQualifiedName SubstitutionGroup { get => default; set {} } // 0x0000000183D4EAD0-0x0000000183D4EAE0 0x00000001898D57F4-0x00000001898D5884
+		[XmlAttribute("type")]
+		public XmlQualifiedName SchemaTypeName { get => default; set {} } // 0x0000000183D4E750-0x0000000183D4E760 0x00000001898D5764-0x00000001898D57F4
+		[XmlElement("simpleType", typeof(XmlSchemaSimpleType))]
+		[XmlElement("complexType", typeof(XmlSchemaComplexType))]
+		public XmlSchemaType SchemaType { get => default; set {} } // 0x0000000183D50E60-0x0000000183D50E70 0x00000001858B426C-0x00000001858B4280
+		[XmlElement("key", typeof(XmlSchemaKey))]
+		[XmlElement("keyref", typeof(XmlSchemaKeyref))]
+		[XmlElement("unique", typeof(XmlSchemaUnique))]
+		public XmlSchemaObjectCollection Constraints { get => default; } // 0x00000001898D5608-0x00000001898D5684 
+		[XmlIgnore]
+		public XmlQualifiedName QualifiedName { get => default; } // 0x0000000183D4E7C0-0x0000000183D4E7D0 
+		[XmlIgnore]
+		public XmlSchemaType ElementSchemaType { get => default; } // 0x0000000183D50050-0x0000000183D50060 
+		[XmlIgnore]
+		public XmlSchemaDerivationMethod BlockResolved { get => default; } // 0x0000000183D50EE0-0x0000000183D50EF0 
+		[XmlIgnore]
+		public XmlSchemaDerivationMethod FinalResolved { get => default; } // 0x0000000183D50EF0-0x0000000183D50F00 
+		internal bool HasConstraints { get => default; } // 0x00000001898D5684-0x00000001898D56B0 
+		internal bool IsLocalTypeDerivationChecked { get => default; set {} } // 0x0000000183D58A60-0x0000000183D58A70 0x0000000183D58A90-0x0000000183D58AA0
+		internal SchemaElementDecl ElementDecl { get => default; set {} } // 0x0000000183D50EA0-0x0000000183D50EB0 0x00000001856A2B64-0x00000001856A2B78
+		[XmlIgnore]
+		internal override string NameAttribute { get => default; set {} } // 0x0000000183D4EA80-0x0000000183D4EA90 0x0000000184270264-0x0000000184270278
+		[XmlIgnore]
+		internal override string NameString { get => default; } // 0x00000001898D56B0-0x00000001898D56D4 
+	
+		// Constructors
+		public XmlSchemaElement() {} // 0x00000001898D5508-0x00000001898D5608
+	
+		// Methods
+		internal void SetQualifiedName(XmlQualifiedName value) {} // 0x00000001858B4280-0x00000001858B4294
+		internal void SetElementType(XmlSchemaType value) {} // 0x000000018554A7E0-0x000000018554A7F4
+		internal void SetBlockResolved(XmlSchemaDerivationMethod value) {} // 0x0000000183D50FD0-0x0000000183D50FE0
+		internal void SetFinalResolved(XmlSchemaDerivationMethod value) {} // 0x0000000183D50FE0-0x0000000183D50FF0
+		internal override XmlSchemaObject Clone() => default; // 0x00000001898D54FC-0x00000001898D5508
+		internal XmlSchemaObject Clone(XmlSchema parentSchema) => default; // 0x00000001898D5340-0x00000001898D54FC
+	}
+
+	[Serializable]
+	public class XmlSchemaException : SystemException // TypeDefIndex: 42958
+	{
+		// Fields
+		private string res; // 0x90
+		private string[] args; // 0x98
+		private string sourceUri; // 0xA0
+		private int lineNumber; // 0xA8
+		private int linePosition; // 0xAC
+		[NonSerialized]
+		private XmlSchemaObject sourceSchemaObject; // 0xB0
+		private string message; // 0xB8
+	
+		// Properties
+		internal string GetRes { get => default; } // 0x0000000183D4EA90-0x0000000183D4EAA0 
+		internal string[] Args { get => default; } // 0x00000001811AC510-0x00000001811AC520 
+		public string SourceUri { get => default; } // 0x0000000183D4EA80-0x0000000183D4EA90 
+		public int LineNumber { get => default; } // 0x0000000183D51860-0x0000000183D51870 
+		public int LinePosition { get => default; } // 0x0000000183D51880-0x0000000183D51890 
+		public XmlSchemaObject SourceSchemaObject { get => default; } // 0x0000000183D4EAD0-0x0000000183D4EAE0 
+		public override string Message { get => default; } // 0x00000001898D6388-0x00000001898D63AC 
+	
+		// Constructors
+		protected XmlSchemaException(SerializationInfo info, StreamingContext context) {} // 0x00000001898D5B94-0x00000001898D5F20
+		public XmlSchemaException() {} // 0x000000018988DE20-0x000000018988DE2C
+		public XmlSchemaException(string message) {} // 0x00000001898D616C-0x00000001898D618C
+		public XmlSchemaException(string message, Exception innerException) {} // 0x00000001898D5FE0-0x00000001898D5FFC
+		public XmlSchemaException(string message, Exception innerException, int lineNumber, int linePosition) {} // 0x00000001898D61D8-0x00000001898D62BC
+		internal XmlSchemaException(string res, string[] args) {} // 0x00000001898D62BC-0x00000001898D62E8
+		internal XmlSchemaException(string res, string arg) {} // 0x00000001898D5FFC-0x00000001898D60A4
+		internal XmlSchemaException(string res, string arg, string sourceUri, int lineNumber, int linePosition) {} // 0x00000001898D5F20-0x00000001898D5FE0
+		internal XmlSchemaException(string res, string sourceUri, int lineNumber, int linePosition) {} // 0x00000001898D5B3C-0x00000001898D5B74
+		internal XmlSchemaException(string res, string[] args, string sourceUri, int lineNumber, int linePosition) {} // 0x00000001898D5B04-0x00000001898D5B3C
+		internal XmlSchemaException(string res, XmlSchemaObject source) {} // 0x00000001898D5B74-0x00000001898D5B94
+		internal XmlSchemaException(string res, string arg, XmlSchemaObject source) {} // 0x00000001898D62E8-0x00000001898D6388
+		internal XmlSchemaException(string res, string[] args, XmlSchemaObject source) {} // 0x00000001898D618C-0x00000001898D61D8
+		internal XmlSchemaException(string res, string[] args, Exception innerException, string sourceUri, int lineNumber, int linePosition, XmlSchemaObject source) {} // 0x00000001898D60A4-0x00000001898D616C
+	
+		// Methods
+		public override void GetObjectData(SerializationInfo info, StreamingContext context) {} // 0x00000001898D5930-0x00000001898D5A78
+		internal static string CreateMessage(string res, string[] args) => default; // 0x00000001898D5884-0x00000001898D5930
+		internal void SetSource(string sourceUri, int lineNumber, int linePosition) {} // 0x00000001898D5A78-0x00000001898D5AA8
+		internal void SetSchemaObject(XmlSchemaObject source) {} // 0x0000000182B47080-0x0000000182B470A0
+		internal void SetSource(XmlSchemaObject source) {} // 0x00000001898D5AA8-0x00000001898D5B04
+	}
+
+	public abstract class XmlSchemaExternal : XmlSchemaObject // TypeDefIndex: 42959
+	{
+		// Fields
+		private string location; // 0x38
+		private System.Uri baseUri; // 0x40
+		private XmlSchema schema; // 0x48
+		private string id; // 0x50
+		private XmlAttribute[] moreAttributes; // 0x58
+		private System.Xml.Schema.Compositor compositor; // 0x60
+	
+		// Properties
+		[XmlAttribute("schemaLocation", DataType = "anyURI")]
+		public string SchemaLocation { get; set; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x000000018388FF30-0x000000018388FF40
+		[XmlIgnore]
+		public XmlSchema Schema { get; set; } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+		[XmlAttribute("id", DataType = "ID")]
+		public string Id { get; set; } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		[XmlIgnore]
+		internal System.Uri BaseUri { get; set; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
+		[XmlIgnore]
+		internal override string IdAttribute { get; set; } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		internal System.Xml.Schema.Compositor Compositor { get; set; } // 0x0000000183D4F050-0x0000000183D4F060 0x0000000183D4F5A0-0x0000000183D4F5B0
+	
+		// Constructors
+		protected XmlSchemaExternal() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal override void SetUnhandledAttributes(XmlAttribute[] moreAttributes) {} // 0x0000000183081D30-0x0000000183081D40
+	}
+
+	internal enum FacetType // TypeDefIndex: 42960
+	{
+		None = 0,
+		Length = 1,
+		MinLength = 2,
+		MaxLength = 3,
+		Pattern = 4,
+		Whitespace = 5,
+		Enumeration = 6,
+		MinExclusive = 7,
+		MinInclusive = 8,
+		MaxExclusive = 9,
+		MaxInclusive = 10,
+		TotalDigits = 11,
+		FractionDigits = 12
+	}
+
+	public abstract class XmlSchemaFacet : XmlSchemaAnnotated // TypeDefIndex: 42961
+	{
+		// Fields
+		private string value; // 0x50
+		private bool isFixed; // 0x58
+		private FacetType facetType; // 0x5C
+	
+		// Properties
+		[XmlAttribute("value")]
+		public string Value { get; set; } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		[DefaultValue(false)]
+		[XmlAttribute("fixed")]
+		public virtual bool IsFixed { get; set; } // 0x0000000183D4F7E0-0x0000000183D4F7F0 0x00000001898D63AC-0x00000001898D641C
+		internal FacetType FacetType { get; set; } // 0x0000000183D4EEF0-0x0000000183D4EF00 0x0000000183D4EF40-0x0000000183D4EF50
+	
+		// Constructors
+		protected XmlSchemaFacet() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public abstract class XmlSchemaNumericFacet : XmlSchemaFacet // TypeDefIndex: 42962
+	{
+		// Constructors
+		protected XmlSchemaNumericFacet() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public class XmlSchemaLengthFacet : XmlSchemaNumericFacet // TypeDefIndex: 42963
+	{
+		// Constructors
+		public XmlSchemaLengthFacet() {} // 0x0000000183D75820-0x0000000183D75830
+	}
+
+	public class XmlSchemaMinLengthFacet : XmlSchemaNumericFacet // TypeDefIndex: 42964
+	{
+		// Constructors
+		public XmlSchemaMinLengthFacet() {} // 0x0000000183D75880-0x0000000183D75890
+	}
+
+	public class XmlSchemaMaxLengthFacet : XmlSchemaNumericFacet // TypeDefIndex: 42965
+	{
+		// Constructors
+		public XmlSchemaMaxLengthFacet() {} // 0x0000000183D75850-0x0000000183D75860
+	}
+
+	public class XmlSchemaPatternFacet : XmlSchemaFacet // TypeDefIndex: 42966
+	{
+		// Constructors
+		public XmlSchemaPatternFacet() {} // 0x0000000183D75890-0x0000000183D758A0
+	}
+
+	public class XmlSchemaEnumerationFacet : XmlSchemaFacet // TypeDefIndex: 42967
+	{
+		// Constructors
+		public XmlSchemaEnumerationFacet() {} // 0x0000000183D757F0-0x0000000183D75800
+	}
+
+	public class XmlSchemaMinExclusiveFacet : XmlSchemaFacet // TypeDefIndex: 42968
+	{
+		// Constructors
+		public XmlSchemaMinExclusiveFacet() {} // 0x0000000183D75860-0x0000000183D75870
+	}
+
+	public class XmlSchemaMinInclusiveFacet : XmlSchemaFacet // TypeDefIndex: 42969
+	{
+		// Constructors
+		public XmlSchemaMinInclusiveFacet() {} // 0x0000000183D75870-0x0000000183D75880
+	}
+
+	public class XmlSchemaMaxExclusiveFacet : XmlSchemaFacet // TypeDefIndex: 42970
+	{
+		// Constructors
+		public XmlSchemaMaxExclusiveFacet() {} // 0x0000000183D75830-0x0000000183D75840
+	}
+
+	public class XmlSchemaMaxInclusiveFacet : XmlSchemaFacet // TypeDefIndex: 42971
+	{
+		// Constructors
+		public XmlSchemaMaxInclusiveFacet() {} // 0x0000000183D75840-0x0000000183D75850
+	}
+
+	public class XmlSchemaTotalDigitsFacet : XmlSchemaNumericFacet // TypeDefIndex: 42972
+	{
+		// Constructors
+		public XmlSchemaTotalDigitsFacet() {} // 0x0000000183D758A0-0x0000000183D758B0
+	}
+
+	public class XmlSchemaFractionDigitsFacet : XmlSchemaNumericFacet // TypeDefIndex: 42973
+	{
+		// Constructors
+		public XmlSchemaFractionDigitsFacet() {} // 0x0000000183D75800-0x0000000183D75810
+	}
+
+	public class XmlSchemaWhiteSpaceFacet : XmlSchemaFacet // TypeDefIndex: 42974
+	{
+		// Constructors
+		public XmlSchemaWhiteSpaceFacet() {} // 0x0000000183D758B0-0x0000000183D758C0
+	}
+
+	public enum XmlSchemaForm // TypeDefIndex: 42975
+	{
+		None = 0,
+		Qualified = 1,
+		Unqualified = 2
+	}
+
+	public class XmlSchemaGroup : XmlSchemaAnnotated // TypeDefIndex: 42976
+	{
+		// Fields
+		private string name; // 0x50
+		private XmlSchemaGroupBase particle; // 0x58
+		private XmlSchemaParticle canonicalParticle; // 0x60
+		private XmlQualifiedName qname; // 0x68
+		private XmlSchemaGroup redefined; // 0x70
+		private int selfReferenceCount; // 0x78
+	
+		// Properties
+		[XmlAttribute("name")]
+		public string Name { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		[XmlElement("choice", typeof(XmlSchemaChoice))]
+		[XmlElement("all", typeof(XmlSchemaAll))]
+		[XmlElement("sequence", typeof(XmlSchemaSequence))]
+		public XmlSchemaGroupBase Particle { get => default; set {} } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x0000000183081D30-0x0000000183081D40
+		[XmlIgnore]
+		public XmlQualifiedName QualifiedName { get => default; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 
+		[XmlIgnore]
+		internal XmlSchemaParticle CanonicalParticle { get => default; set {} } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
+		[XmlIgnore]
+		internal XmlSchemaGroup Redefined { get => default; set {} } // 0x0000000183D4EB30-0x0000000183D4EB40 0x000000018519C3C8-0x000000018519C3D8
+		[XmlIgnore]
+		internal int SelfReferenceCount { get => default; set {} } // 0x0000000183D4EC40-0x0000000183D4EC50 0x0000000183D4ECC0-0x0000000183D4ECD0
+		[XmlIgnore]
+		internal override string NameAttribute { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+	
+		// Constructors
+		public XmlSchemaGroup() {} // 0x00000001898D66AC-0x00000001898D6704
+	
+		// Methods
+		internal void SetQualifiedName(XmlQualifiedName value) {} // 0x00000001838C5570-0x00000001838C5580
+		internal override XmlSchemaObject Clone() => default; // 0x00000001898D66A0-0x00000001898D66AC
+		internal XmlSchemaObject Clone(XmlSchema parentSchema) => default; // 0x00000001898D656C-0x00000001898D66A0
+	}
+
+	public abstract class XmlSchemaGroupBase : XmlSchemaParticle // TypeDefIndex: 42977
+	{
+		// Properties
+		[XmlIgnore]
+		public abstract XmlSchemaObjectCollection Items { get; }
+	
+		// Constructors
+		protected XmlSchemaGroupBase() {} // 0x00000001898D641C-0x00000001898D6468
+	
+		// Methods
+		internal abstract void SetItems(XmlSchemaObjectCollection newItems);
+	}
+
+	public class XmlSchemaGroupRef : XmlSchemaParticle // TypeDefIndex: 42978
+	{
+		// Fields
+		private XmlQualifiedName refName; // 0x78
+		private XmlSchemaGroupBase particle; // 0x80
+		private XmlSchemaGroup refined; // 0x88
+	
+		// Properties
+		[XmlAttribute("ref")]
+		public XmlQualifiedName RefName { get => default; set {} } // 0x0000000183D4EB20-0x0000000183D4EB30 0x00000001898D64E0-0x00000001898D656C
+		[XmlIgnore]
+		public XmlSchemaGroupBase Particle { get => default; } // 0x0000000183D4EAE0-0x0000000183D4EAF0 
+		[XmlIgnore]
+		internal XmlSchemaGroup Redefined { get => default; set {} } // 0x0000000183D4EA60-0x0000000183D4EA70 0x0000000184274DA0-0x0000000184274DB4
+	
+		// Constructors
+		public XmlSchemaGroupRef() {} // 0x00000001898D6468-0x00000001898D64E0
+	
+		// Methods
+		internal void SetParticle(XmlSchemaGroupBase value) {} // 0x00000001851DFC94-0x00000001851DFCA4
+	}
+
+	public class XmlSchemaIdentityConstraint : XmlSchemaAnnotated // TypeDefIndex: 42979
+	{
+		// Fields
+		private string name; // 0x50
+		private XmlSchemaXPath selector; // 0x58
+		private XmlSchemaObjectCollection fields; // 0x60
+		private XmlQualifiedName qualifiedName; // 0x68
+		private CompiledIdentityConstraint compiledConstraint; // 0x70
+	
+		// Properties
+		[XmlAttribute("name")]
+		public string Name { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		[XmlElement("selector", typeof(XmlSchemaXPath))]
+		public XmlSchemaXPath Selector { get => default; set {} } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x0000000183081D30-0x0000000183081D40
+		[XmlElement("field", typeof(XmlSchemaXPath))]
+		public XmlSchemaObjectCollection Fields { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+		[XmlIgnore]
+		public XmlQualifiedName QualifiedName { get => default; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 
+		[XmlIgnore]
+		internal CompiledIdentityConstraint CompiledConstraint { get => default; set {} } // 0x0000000183D4EB30-0x0000000183D4EB40 0x000000018519C3C8-0x000000018519C3D8
+		[XmlIgnore]
+		internal override string NameAttribute { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+	
+		// Constructors
+		public XmlSchemaIdentityConstraint() {} // 0x00000001898D6704-0x00000001898D67A0
+	
+		// Methods
+		internal void SetQualifiedName(XmlQualifiedName value) {} // 0x00000001838C5570-0x00000001838C5580
+	}
+
+	public class XmlSchemaXPath : XmlSchemaAnnotated // TypeDefIndex: 42980
+	{
+		// Fields
+		private string xpath; // 0x50
+	
+		// Properties
+		[DefaultValue("")]
+		[XmlAttribute("xpath")]
+		public string XPath { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+	
+		// Constructors
+		public XmlSchemaXPath() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public class XmlSchemaUnique : XmlSchemaIdentityConstraint // TypeDefIndex: 42981
+	{
+		// Constructors
+		public XmlSchemaUnique() {} // 0x00000001898D6950-0x00000001898D6958
+	}
+
+	public class XmlSchemaKey : XmlSchemaIdentityConstraint // TypeDefIndex: 42982
+	{
+		// Constructors
+		public XmlSchemaKey() {} // 0x00000001898D6950-0x00000001898D6958
+	}
+
+	public class XmlSchemaKeyref : XmlSchemaIdentityConstraint // TypeDefIndex: 42983
+	{
+		// Fields
+		private XmlQualifiedName refer; // 0x78
+	
+		// Properties
+		[XmlAttribute("refer")]
+		public XmlQualifiedName Refer { get => default; set {} } // 0x0000000183D4EB20-0x0000000183D4EB30 0x00000001898D69B8-0x00000001898D6A44
+	
+		// Constructors
+		public XmlSchemaKeyref() {} // 0x00000001898D6958-0x00000001898D69B8
+	}
+
+	public class XmlSchemaImport : XmlSchemaExternal // TypeDefIndex: 42984
+	{
+		// Fields
+		private string ns; // 0x68
+		private XmlSchemaAnnotation annotation; // 0x70
+	
+		// Properties
+		[XmlAttribute("namespace", DataType = "anyURI")]
+		public string Namespace { get => default; set {} } // 0x0000000183D4EAB0-0x0000000183D4EAC0 0x00000001838C5570-0x00000001838C5580
+	
+		// Constructors
+		public XmlSchemaImport() {} // 0x0000000183D75810-0x0000000183D75820
+	
+		// Methods
+		internal override void AddAnnotation(XmlSchemaAnnotation annotation) {} // 0x000000018519C3C8-0x000000018519C3D8
+	}
+
+	public class XmlSchemaInclude : XmlSchemaExternal // TypeDefIndex: 42985
+	{
+		// Fields
+		private XmlSchemaAnnotation annotation; // 0x68
+	
+		// Constructors
+		public XmlSchemaInclude() {} // 0x0000000183D5A540-0x0000000183D5A550
+	
+		// Methods
+		internal override void AddAnnotation(XmlSchemaAnnotation annotation) {} // 0x00000001838C5570-0x00000001838C5580
+	}
+
+	public class XmlSchemaInfo : IXmlSchemaInfo // TypeDefIndex: 42986
+	{
+		// Fields
+		private bool isDefault; // 0x10
+		private bool isNil; // 0x11
+		private XmlSchemaElement schemaElement; // 0x18
+		private XmlSchemaAttribute schemaAttribute; // 0x20
+		private XmlSchemaType schemaType; // 0x28
+		private XmlSchemaSimpleType memberType; // 0x30
+		private XmlSchemaValidity validity; // 0x38
+		private XmlSchemaContentType contentType; // 0x3C
+	
+		// Properties
+		public XmlSchemaValidity Validity { get => default; set {} } // 0x0000000183D4EC30-0x0000000183D4EC40 0x0000000183D4ECB0-0x0000000183D4ECC0
+		public bool IsDefault { get => default; set {} } // 0x00000001811797F0-0x0000000181179800 0x0000000183D4E960-0x0000000183D4E970
+		public bool IsNil { get => default; set {} } // 0x0000000183D510E0-0x0000000183D510F0 0x0000000183D510F0-0x0000000183D51100
+		public XmlSchemaSimpleType MemberType { get => default; set {} } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
+		public XmlSchemaType SchemaType { get => default; set {} } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x00000001898D690C-0x00000001898D6950
+		public XmlSchemaElement SchemaElement { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x00000001898D68D4-0x00000001898D690C
+		public XmlSchemaAttribute SchemaAttribute { get => default; set {} } // 0x0000000183D4EB40-0x0000000183D4EB50 0x00000001898D689C-0x00000001898D68D4
+		public XmlSchemaContentType ContentType { get => default; } // 0x0000000183D4ED90-0x0000000183D4EDA0 
+		internal XmlSchemaType XmlType { get => default; } // 0x00000001898D6888-0x00000001898D689C 
+		internal bool HasDefaultValue { get => default; } // 0x00000001898D6820-0x00000001898D6854 
+		internal bool IsUnionType { get => default; } // 0x00000001898D6854-0x00000001898D6888 
+	
+		// Constructors
+		public XmlSchemaInfo() {} // 0x00000001898D6818-0x00000001898D6820
+		internal XmlSchemaInfo(XmlSchemaValidity validity) {} // 0x00000001898D67F4-0x00000001898D6818
+	
+		// Methods
+		internal void Clear() {} // 0x00000001898D67A0-0x00000001898D67F4
+	}
+
+	public class XmlSchemaNotation : XmlSchemaAnnotated // TypeDefIndex: 42987
+	{
+		// Fields
+		private string name; // 0x50
+		private string publicId; // 0x58
+		private string systemId; // 0x60
+		private XmlQualifiedName qname; // 0x68
+	
+		// Properties
+		[XmlAttribute("name")]
+		public string Name { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		[XmlAttribute("public")]
+		public string Public { get => default; set {} } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x0000000183081D30-0x0000000183081D40
+		[XmlAttribute("system")]
+		public string System { get => default; set {} } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
+		[XmlIgnore]
+		internal XmlQualifiedName QualifiedName { get => default; set {} } // 0x0000000183D4EAB0-0x0000000183D4EAC0 0x00000001838C5570-0x00000001838C5580
+		[XmlIgnore]
+		internal override string NameAttribute { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+	
+		// Constructors
+		public XmlSchemaNotation() {} // 0x00000001898D6A44-0x00000001898D6A9C
+	}
+
+	public abstract class XmlSchemaObject // TypeDefIndex: 42988
+	{
+		// Fields
+		private int lineNum; // 0x10
+		private int linePos; // 0x14
+		private string sourceUri; // 0x18
+		private XmlSerializerNamespaces namespaces; // 0x20
+		private XmlSchemaObject parent; // 0x28
+		private bool isProcessing; // 0x30
+	
+		// Properties
+		[XmlIgnore]
+		public int LineNumber { get; set; } // 0x0000000183D4E340-0x0000000183D4E350 0x00000001810410F0-0x0000000181041100
+		[XmlIgnore]
+		public int LinePosition { get; set; } // 0x0000000183D50CC0-0x0000000183D50CD0 0x0000000183D595B0-0x0000000183D595C0
+		[XmlIgnore]
+		public string SourceUri { get; set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		[XmlIgnore]
+		public XmlSchemaObject Parent { get; set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+		[XmlNamespaceDeclarations]
+		public XmlSerializerNamespaces Namespaces { get; set; } // 0x00000001898D6CB8-0x00000001898D6D14 0x0000000184271930-0x0000000184271940
+		[XmlIgnore]
+		internal virtual string IdAttribute { get; set; } // 0x0000000181002730-0x0000000181002740 0x000000018350B670-0x000000018350B680
+		[XmlIgnore]
+		internal virtual string NameAttribute { get; set; } // 0x0000000181002730-0x0000000181002740 0x000000018350B670-0x000000018350B680
+		[XmlIgnore]
+		internal bool IsProcessing { get; set; } // 0x0000000183D4EF60-0x0000000183D4EF70 0x0000000183D4EF70-0x0000000183D4EF80
+	
+		// Constructors
+		protected XmlSchemaObject() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal virtual void OnAdd(XmlSchemaObjectCollection container, object item) {} // 0x000000018350B670-0x000000018350B680
+		internal virtual void OnRemove(XmlSchemaObjectCollection container, object item) {} // 0x000000018350B670-0x000000018350B680
+		internal virtual void OnClear(XmlSchemaObjectCollection container) {} // 0x000000018350B670-0x000000018350B680
+		internal virtual void SetUnhandledAttributes(XmlAttribute[] moreAttributes) {} // 0x000000018350B670-0x000000018350B680
+		internal virtual void AddAnnotation(XmlSchemaAnnotation annotation) {} // 0x000000018350B670-0x000000018350B680
+		internal virtual XmlSchemaObject Clone() => default; // 0x00000001898D6C74-0x00000001898D6CB8
+	}
+
+	public class XmlSchemaObjectCollection : CollectionBase // TypeDefIndex: 42989
+	{
+		// Fields
+		private XmlSchemaObject parent; // 0x18
+	
+		// Properties
+		public virtual XmlSchemaObject this[int index] { get => default; set {} } // 0x00000001898D6BFC-0x00000001898D6C58 0x00000001898D6C58-0x00000001898D6C74
+	
+		// Constructors
+		public XmlSchemaObjectCollection() {} // 0x00000001891207C8-0x00000001891207D0
+	
+		// Methods
+		public new XmlSchemaObjectEnumerator GetEnumerator() => default; // 0x00000001898D6B4C-0x00000001898D6BC4
+		public int Add(XmlSchemaObject item) => default; // 0x00000001898D6AC4-0x00000001898D6AE0
+		public void Insert(int index, XmlSchemaObject item) {} // 0x00000001898D6BC4-0x00000001898D6BE0
+		public void Remove(XmlSchemaObject item) {} // 0x00000001898D6BE0-0x00000001898D6BFC
+		protected override void OnInsert(int index, object item) {} // 0x0000000183D4B9D0-0x0000000183D4B9E0
+		protected override void OnSet(int index, object oldValue, object newValue) {} // 0x0000000183D4B9D0-0x0000000183D4B9E0
+		protected override void OnClear() {} // 0x0000000183D4B9D0-0x0000000183D4B9E0
+		protected override void OnRemove(int index, object item) {} // 0x0000000183D4B9D0-0x0000000183D4B9E0
+		internal XmlSchemaObjectCollection Clone() => default; // 0x00000001898D6AE0-0x00000001898D6B4C
+		private void Add(XmlSchemaObjectCollection collToAdd) {} // 0x00000001898D6A9C-0x00000001898D6AC4
+	}
+
+	public class XmlSchemaObjectEnumerator : IEnumerator // TypeDefIndex: 42990
+	{
+		// Fields
+		private IEnumerator enumerator; // 0x10
+	
+		// Properties
+		public XmlSchemaObject Current { get => default; } // 0x00000001898DDF8C-0x00000001898DDFF4 
+		object IEnumerator.Current { get => default; } // 0x00000001898DDF40-0x00000001898DDF8C 
+	
+		// Constructors
+		public XmlSchemaObjectEnumerator() {} // Dummy constructor
+		internal XmlSchemaObjectEnumerator(IEnumerator enumerator) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Methods
+		public bool MoveNext() => default; // 0x00000001898DDE64-0x00000001898DDEAC
+		void IEnumerator.Reset() {} // 0x00000001898DDEF4-0x00000001898DDF40
+		bool IEnumerator.MoveNext() => default; // 0x00000001898DDEAC-0x00000001898DDEF4
+	}
+
+	public class XmlSchemaObjectTable // TypeDefIndex: 42996
+	{
+		// Fields
+		private Dictionary<XmlQualifiedName, XmlSchemaObject> table; // 0x10
+		private List<XmlSchemaObjectEntry> entries; // 0x18
+	
+		// Properties
+		public int Count { get => default; } // 0x00000001898DE63C-0x00000001898DE67C 
+		public XmlSchemaObject this[XmlQualifiedName name] { get => default; } // 0x00000001898DE67C-0x00000001898DE6E8 
+		public ICollection Values { get => default; } // 0x00000001898DE6E8-0x00000001898DE780 
+	
+		// Nested types
+		internal enum EnumeratorType // TypeDefIndex: 42991
+		{
+			Keys = 0,
+			Values = 1,
+			DictionaryEntry = 2
+		}
+	
+		internal struct XmlSchemaObjectEntry // TypeDefIndex: 42992
+		{
+			// Fields
+			internal XmlQualifiedName qname; // 0x00
+			internal XmlSchemaObject xso; // 0x08
+	
+			// Constructors
+			public XmlSchemaObjectEntry(XmlQualifiedName name, XmlSchemaObject value) {
+				qname = default;
+				xso = default;
+			} // 0x00000001832C7BF0-0x00000001832C7C20
+		}
+	
+		internal class ValuesCollection : ICollection // TypeDefIndex: 42993
+		{
+			// Fields
+			private List<XmlSchemaObjectEntry> entries; // 0x10
+			private int size; // 0x18
+	
+			// Properties
+			public int Count { get => default; } // 0x00000001820D1AC0-0x00000001820D1AD0 
+			public object SyncRoot { get => default; } // 0x000000018713026C-0x000000018713028C 
+			public bool IsSynchronized { get => default; } // 0x0000000187730288-0x00000001877302A8 
+	
+			// Constructors
+			public ValuesCollection() {} // Dummy constructor
+			internal ValuesCollection(List<XmlSchemaObjectEntry> entries, int size) {} // 0x0000000182738A30-0x0000000182738A50
+	
+			// Methods
+			public void CopyTo(Array array, int arrayIndex) {} // 0x00000001898D7D24-0x00000001898D7E68
+			public IEnumerator GetEnumerator() => default; // 0x00000001898D7E68-0x00000001898D7EE4
+		}
+	
+		internal class XSOEnumerator : IEnumerator // TypeDefIndex: 42994
+		{
+			// Fields
+			private List<XmlSchemaObjectEntry> entries; // 0x10
+			private EnumeratorType enumType; // 0x18
+			protected int currentIndex; // 0x1C
+			protected int size; // 0x20
+			protected XmlQualifiedName currentKey; // 0x28
+			protected XmlSchemaObject currentValue; // 0x30
+	
+			// Properties
+			public object Current { get => default; } // 0x00000001898D84F4-0x00000001898D8700 
+	
+			// Constructors
+			public XSOEnumerator() {} // Dummy constructor
+			internal XSOEnumerator(List<XmlSchemaObjectEntry> entries, int size, EnumeratorType enumType) {} // 0x00000001898D84C8-0x00000001898D84F4
+	
+			// Methods
+			public bool MoveNext() => default; // 0x00000001898D83D4-0x00000001898D8498
+			public void Reset() {} // 0x00000001898D8498-0x00000001898D84C8
+		}
+	
+		internal class XSODictionaryEnumerator : XSOEnumerator, IDictionaryEnumerator // TypeDefIndex: 42995
+		{
+			// Properties
+			public DictionaryEntry Entry { get => default; } // 0x00000001898D7EF4-0x00000001898D80A4 
+			public object Key { get => default; } // 0x00000001898D80A4-0x00000001898D823C 
+			public object Value { get => default; } // 0x00000001898D823C-0x00000001898D83D4 
+	
+			// Constructors
+			public XSODictionaryEnumerator() {} // Dummy constructor
+			internal XSODictionaryEnumerator(List<XmlSchemaObjectEntry> entries, int size, EnumeratorType enumType) {} // 0x00000001898D7EE4-0x00000001898D7EF4
+		}
+	
+		// Constructors
+		internal XmlSchemaObjectTable() {} // 0x00000001898DE57C-0x00000001898DE63C
+	
+		// Methods
+		internal void Add(XmlQualifiedName name, XmlSchemaObject value) {} // 0x00000001898DDFF4-0x00000001898DE0A8
+		internal void Insert(XmlQualifiedName name, XmlSchemaObject value) {} // 0x00000001898DE290-0x00000001898DE3B4
+		internal void Replace(XmlQualifiedName name, XmlSchemaObject value) {} // 0x00000001898DE470-0x00000001898DE57C
+		internal void Clear() {} // 0x00000001898DE0A8-0x00000001898DE110
+		internal void Remove(XmlQualifiedName name) {} // 0x00000001898DE3B4-0x00000001898DE470
+		private int FindIndexByValue(XmlSchemaObject xso) => default; // 0x00000001898DE164-0x00000001898DE1F0
+		public bool Contains(XmlQualifiedName name) => default; // 0x00000001898DE110-0x00000001898DE164
+		public IDictionaryEnumerator GetEnumerator() => default; // 0x00000001898DE1F0-0x00000001898DE290
+	}
+
+	public abstract class XmlSchemaParticle : XmlSchemaAnnotated // TypeDefIndex: 42999
+	{
+		// Fields
+		private decimal minOccurs; // 0x50
+		private decimal maxOccurs; // 0x60
+		private Occurs flags; // 0x70
+		internal static readonly XmlSchemaParticle Empty; // 0x00
+	
+		// Properties
+		[XmlAttribute("minOccurs")]
+		public string MinOccursString { get; set; } // 0x00000001898DEAE4-0x00000001898DEB48 0x00000001898DEF08-0x00000001898DF060
+		[XmlAttribute("maxOccurs")]
+		public string MaxOccursString { get; set; } // 0x00000001898DEA14-0x00000001898DEAE4 0x00000001898DEB80-0x00000001898DED74
+		[XmlIgnore]
+		public decimal MinOccurs { get; set; } // 0x0000000183D55950-0x0000000183D55960 0x00000001898DF060-0x00000001898DF1A4
+		[XmlIgnore]
+		public decimal MaxOccurs { get; set; } // 0x0000000183D5A130-0x0000000183D5A140 0x00000001898DED74-0x00000001898DEF08
+		internal virtual bool IsEmpty { get; } // 0x00000001898DE9A0-0x00000001898DEA14 
+		internal virtual string NameString { get; } // 0x00000001898DEB48-0x00000001898DEB80 
+	
+		// Nested types
+		[Flags]
+		private enum Occurs // TypeDefIndex: 42997
+		{
+			None = 0,
+			Min = 1,
+			Max = 2
+		}
+	
+		private class EmptyParticle : XmlSchemaParticle // TypeDefIndex: 42998
+		{
+			// Properties
+			internal override bool IsEmpty { get => default; } // 0x000000018232EB60-0x000000018232EB70 
+	
+			// Constructors
+			public EmptyParticle() {} // 0x00000001898D7CA4-0x00000001898D7CF0
+		}
+	
+		// Constructors
+		protected XmlSchemaParticle() {} // 0x00000001898DE938-0x00000001898DE9A0
+		static XmlSchemaParticle() {} // 0x00000001898DE8BC-0x00000001898DE938
+	
+		// Methods
+		internal XmlQualifiedName GetQualifiedName() => default; // 0x00000001898DE780-0x00000001898DE8BC
+	}
+
+	public class XmlSchemaRedefine : XmlSchemaExternal // TypeDefIndex: 43000
+	{
+		// Fields
+		private XmlSchemaObjectCollection items; // 0x68
+		private XmlSchemaObjectTable attributeGroups; // 0x70
+		private XmlSchemaObjectTable types; // 0x78
+		private XmlSchemaObjectTable groups; // 0x80
+	
+		// Properties
+		[XmlElement("complexType", typeof(XmlSchemaComplexType))]
+		[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroup))]
+		[XmlElement("simpleType", typeof(XmlSchemaSimpleType))]
+		[XmlElement("annotation", typeof(XmlSchemaAnnotation))]
+		[XmlElement("group", typeof(XmlSchemaGroup))]
+		public XmlSchemaObjectCollection Items { get => default; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 
+		[XmlIgnore]
+		public XmlSchemaObjectTable AttributeGroups { get => default; } // 0x0000000183D4EB30-0x0000000183D4EB40 
+		[XmlIgnore]
+		public XmlSchemaObjectTable SchemaTypes { get => default; } // 0x0000000183D4EB20-0x0000000183D4EB30 
+		[XmlIgnore]
+		public XmlSchemaObjectTable Groups { get => default; } // 0x0000000183D4EAE0-0x0000000183D4EAF0 
+	
+		// Constructors
+		public XmlSchemaRedefine() {} // 0x00000001898DF1C4-0x00000001898DF2CC
+	
+		// Methods
+		internal override void AddAnnotation(XmlSchemaAnnotation annotation) {} // 0x00000001898DF1A4-0x00000001898DF1C4
+	}
+
+	public class XmlSchemaSequence : XmlSchemaGroupBase // TypeDefIndex: 43001
+	{
+		// Fields
+		private XmlSchemaObjectCollection items; // 0x78
+	
+		// Properties
+		[XmlElement("element", typeof(XmlSchemaElement))]
+		[XmlElement("choice", typeof(XmlSchemaChoice))]
+		[XmlElement("sequence", typeof(XmlSchemaSequence))]
+		[XmlElement("any", typeof(XmlSchemaAny))]
+		[XmlElement("group", typeof(XmlSchemaGroupRef))]
+		public override XmlSchemaObjectCollection Items { get => default; } // 0x0000000183D4EB20-0x0000000183D4EB30 
+		internal override bool IsEmpty { get => default; } // 0x00000001898D11B8-0x00000001898D11F4 
+	
+		// Constructors
+		public XmlSchemaSequence() {} // 0x00000001898DF2CC-0x00000001898DF33C
+	
+		// Methods
+		internal override void SetItems(XmlSchemaObjectCollection newItems) {} // 0x00000001851DFCA4-0x00000001851DFCB4
+	}
+
+	public class XmlSchemaSet // TypeDefIndex: 43002
+	{
+		// Fields
+		private XmlNameTable nameTable; // 0x10
+		private SchemaNames schemaNames; // 0x18
+		private SortedList schemas; // 0x20
+		private ValidationEventHandler internalEventHandler; // 0x28
+		private ValidationEventHandler eventHandler; // 0x30
+		private bool isCompiled; // 0x38
+		private Hashtable schemaLocations; // 0x40
+		private Hashtable chameleonSchemas; // 0x48
+		private Hashtable targetNamespaces; // 0x50
+		private bool compileAll; // 0x58
+		private SchemaInfo cachedCompiledInfo; // 0x60
+		private XmlReaderSettings readerSettings; // 0x68
+		private XmlSchema schemaForSchema; // 0x70
+		private XmlSchemaCompilationSettings compilationSettings; // 0x78
+		internal XmlSchemaObjectTable elements; // 0x80
+		internal XmlSchemaObjectTable attributes; // 0x88
+		internal XmlSchemaObjectTable schemaTypes; // 0x90
+		internal XmlSchemaObjectTable substitutionGroups; // 0x98
+		private XmlSchemaObjectTable typeExtensions; // 0xA0
+		private object internalSyncObject; // 0xA8
+	
+		// Properties
+		internal object InternalSyncObject { get => default; } // 0x00000001898E50B0-0x00000001898E5118 
+		public bool IsCompiled { get => default; } // 0x0000000183D4F190-0x0000000183D4F1A0 
+		public XmlResolver XmlResolver { set {} } // 0x00000001898E52B4-0x00000001898E52D4
+		public XmlSchemaCompilationSettings CompilationSettings { get => default; set {} } // 0x0000000183D4EB20-0x0000000183D4EB30 0x00000001851DFCA4-0x00000001851DFCB4
+		public int Count { get => default; } // 0x00000001898E4F18-0x00000001898E4F3C 
+		public XmlSchemaObjectTable GlobalElements { get => default; } // 0x00000001898E4FB8-0x00000001898E5034 
+		public XmlSchemaObjectTable GlobalAttributes { get => default; } // 0x00000001898E4F3C-0x00000001898E4FB8 
+		public XmlSchemaObjectTable GlobalTypes { get => default; } // 0x00000001898E5034-0x00000001898E50B0 
+		internal XmlSchemaObjectTable SubstitutionGroups { get => default; } // 0x00000001898E5118-0x00000001898E5194 
+		internal Hashtable SchemaLocations { get => default; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
+		internal XmlSchemaObjectTable TypeExtensions { get => default; } // 0x00000001898E5194-0x00000001898E5210 
+		internal SchemaInfo CompiledInfo { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+		internal XmlReaderSettings ReaderSettings { get => default; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 
+		internal SortedList SortedSchemas { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+	
+		// Events
+		public event ValidationEventHandler ValidationEventHandler;
+	
+		// Constructors
+		public XmlSchemaSet() {} // 0x00000001898E4AB0-0x00000001898E4B18
+		public XmlSchemaSet(XmlNameTable nameTable) {} // 0x00000001898E4B18-0x00000001898E4E1C
+	
+		// Methods
+		public void Add(XmlSchemaSet schemas) {} // 0x00000001898DF948-0x00000001898DFFF8
+		public XmlSchema Add(XmlSchema schema) => default; // 0x00000001898E03E8-0x00000001898E05A4
+		public bool RemoveRecursive(XmlSchema schemaToRemove) => default; // 0x00000001898E2928-0x00000001898E3078
+		public bool Contains(string targetNamespace) => default; // 0x00000001898E0B84-0x00000001898E0BF4
+		public void Compile() {} // 0x00000001898E0634-0x00000001898E0B84
+		public XmlSchema Reprocess(XmlSchema schema) => default; // 0x00000001898E3DB8-0x00000001898E44F0
+		public void CopyTo(XmlSchema[] schemas, int index) {} // 0x00000001898E1B8C-0x00000001898E1C8C
+		public ICollection Schemas() => default; // 0x00000001898E48A0-0x00000001898E48C4
+		public ICollection Schemas(string targetNamespace) => default; // 0x00000001898E4778-0x00000001898E48A0
+		private XmlSchema Add(string targetNamespace, XmlSchema schema) => default; // 0x00000001898DF8F8-0x00000001898DF948
+		internal void Add(string targetNamespace, XmlReader reader, Hashtable validatedNamespaces) {} // 0x00000001898DFFF8-0x00000001898E03E8
+		internal XmlSchema FindSchemaByNSAndUrl(System.Uri schemaUri, string ns, DictionaryEntry[] locationsTable) => default; // 0x00000001898E1C8C-0x00000001898E1E78
+		private void AddSchemaToSet(XmlSchema schema) {} // 0x00000001898DF33C-0x00000001898DF65C
+		private void ProcessNewSubstitutionGroups(XmlSchemaObjectTable substitutionGroupsTable, bool resolve) {} // 0x00000001898E2654-0x00000001898E2928
+		private void ResolveSubstitutionGroup(XmlSchemaSubstitutionGroup substitutionGroup, XmlSchemaObjectTable substTable) {} // 0x00000001898E44F0-0x00000001898E4778
+		internal XmlSchema Remove(XmlSchema schema, bool forceCompile) => default; // 0x00000001898E3B08-0x00000001898E3DB8
+		private void ClearTables() {} // 0x00000001898E05A4-0x00000001898E0634
+		internal bool PreprocessSchema(ref XmlSchema schema, string targetNamespace) => default; // 0x00000001898E2510-0x00000001898E2654
+		internal XmlSchema ParseSchema(string targetNamespace, XmlReader reader) => default; // 0x00000001898E2394-0x00000001898E2510
+		internal void CopyFromCompiledSet(XmlSchemaSet otherSet) {} // 0x00000001898E0BF4-0x00000001898E1B8C
+		internal XmlResolver GetResolver() => default; // 0x00000001898E1E78-0x00000001898E1E94
+		internal ValidationEventHandler GetEventHandler() => default; // 0x0000000181003830-0x0000000181003840
+		internal SchemaNames GetSchemaNames(XmlNameTable nt) => default; // 0x00000001898E1F7C-0x00000001898E2030
+		internal bool IsSchemaLoaded(System.Uri schemaUri, string targetNamespace, out XmlSchema schema) {
+			schema = default;
+			return default;
+		} // 0x00000001898E20C0-0x00000001898E2394
+		internal bool GetSchemaByUri(System.Uri schemaUri, out XmlSchema schema) {
+			schema = default;
+			return default;
+		} // 0x00000001898E1E94-0x00000001898E1F7C
+		internal string GetTargetNamespace(XmlSchema schema) => default; // 0x00000001898E2030-0x00000001898E2084
+		private void RemoveSchemaFromCaches(XmlSchema schema) {} // 0x00000001898E3078-0x00000001898E3528
+		private void RemoveSchemaFromGlobalTables(XmlSchema schema) {} // 0x00000001898E3528-0x00000001898E3B08
+		private bool AddToTable(XmlSchemaObjectTable table, XmlQualifiedName qname, XmlSchemaObject item) => default; // 0x00000001898DF65C-0x00000001898DF8F8
+		private void VerifyTables() {} // 0x00000001898E4984-0x00000001898E4AB0
+		private void InternalValidationCallback(object sender, ValidationEventArgs e) {} // 0x00000001898E2084-0x00000001898E20C0
+		private void SendValidationEvent(XmlSchemaException e, XmlSeverityType severity) {} // 0x00000001898E48C4-0x00000001898E4984
+	}
+
+	public class XmlSchemaSimpleContent : XmlSchemaContentModel // TypeDefIndex: 43003
+	{
+		// Fields
+		private XmlSchemaContent content; // 0x50
+	
+		// Properties
+		[XmlElement("extension", typeof(XmlSchemaSimpleContentExtension))]
+		[XmlElement("restriction", typeof(XmlSchemaSimpleContentRestriction))]
+		public override XmlSchemaContent Content { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+	
+		// Constructors
+		public XmlSchemaSimpleContent() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public class XmlSchemaSimpleContentExtension : XmlSchemaContent // TypeDefIndex: 43004
+	{
+		// Fields
+		private XmlSchemaObjectCollection attributes; // 0x50
+		private XmlSchemaAnyAttribute anyAttribute; // 0x58
+		private XmlQualifiedName baseTypeName; // 0x60
+	
+		// Properties
+		[XmlAttribute("base")]
+		public XmlQualifiedName BaseTypeName { get => default; set {} } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001898E5370-0x00000001898E53FC
+		[XmlElement("attribute", typeof(XmlSchemaAttribute))]
+		[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroupRef))]
+		public XmlSchemaObjectCollection Attributes { get => default; } // 0x0000000183D4EAF0-0x0000000183D4EB00 
+		[XmlElement("anyAttribute")]
+		public XmlSchemaAnyAttribute AnyAttribute { get => default; set {} } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x0000000183081D30-0x0000000183081D40
+	
+		// Constructors
+		public XmlSchemaSimpleContentExtension() {} // 0x00000001898E52D4-0x00000001898E5370
+	
+		// Methods
+		internal void SetAttributes(XmlSchemaObjectCollection newAttributes) {} // 0x0000000182C926C0-0x0000000182C926D0
+	}
+
+	public class XmlSchemaSimpleContentRestriction : XmlSchemaContent // TypeDefIndex: 43005
+	{
+		// Fields
+		private XmlQualifiedName baseTypeName; // 0x50
+		private XmlSchemaSimpleType baseType; // 0x58
+		private XmlSchemaObjectCollection facets; // 0x60
+		private XmlSchemaObjectCollection attributes; // 0x68
+		private XmlSchemaAnyAttribute anyAttribute; // 0x70
+	
+		// Properties
+		[XmlAttribute("base")]
+		public XmlQualifiedName BaseTypeName { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x00000001898E54C4-0x00000001898E5550
+		[XmlElement("simpleType", typeof(XmlSchemaSimpleType))]
+		public XmlSchemaSimpleType BaseType { get => default; set {} } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x0000000183081D30-0x0000000183081D40
+		[XmlElement("pattern", typeof(XmlSchemaPatternFacet))]
+		[XmlElement("minLength", typeof(XmlSchemaMinLengthFacet))]
+		[XmlElement("whiteSpace", typeof(XmlSchemaWhiteSpaceFacet))]
+		[XmlElement("fractionDigits", typeof(XmlSchemaFractionDigitsFacet))]
+		[XmlElement("totalDigits", typeof(XmlSchemaTotalDigitsFacet))]
+		[XmlElement("minExclusive", typeof(XmlSchemaMinExclusiveFacet))]
+		[XmlElement("minInclusive", typeof(XmlSchemaMinInclusiveFacet))]
+		[XmlElement("maxExclusive", typeof(XmlSchemaMaxExclusiveFacet))]
+		[XmlElement("maxInclusive", typeof(XmlSchemaMaxInclusiveFacet))]
+		[XmlElement("enumeration", typeof(XmlSchemaEnumerationFacet))]
+		[XmlElement("length", typeof(XmlSchemaLengthFacet))]
+		[XmlElement("maxLength", typeof(XmlSchemaMaxLengthFacet))]
+		public XmlSchemaObjectCollection Facets { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+		[XmlElement("attribute", typeof(XmlSchemaAttribute))]
+		[XmlElement("attributeGroup", typeof(XmlSchemaAttributeGroupRef))]
+		public XmlSchemaObjectCollection Attributes { get => default; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 
+		[XmlElement("anyAttribute")]
+		public XmlSchemaAnyAttribute AnyAttribute { get => default; set {} } // 0x0000000183D4EB30-0x0000000183D4EB40 0x000000018519C3C8-0x000000018519C3D8
+	
+		// Constructors
+		public XmlSchemaSimpleContentRestriction() {} // 0x00000001898E53FC-0x00000001898E54C4
+	
+		// Methods
+		internal void SetAttributes(XmlSchemaObjectCollection newAttributes) {} // 0x00000001838C5570-0x00000001838C5580
+	}
+
+	public class XmlSchemaSimpleType : XmlSchemaType // TypeDefIndex: 43006
+	{
+		// Fields
+		private XmlSchemaSimpleTypeContent content; // 0x98
+	
+		// Properties
+		[XmlElement("restriction", typeof(XmlSchemaSimpleTypeRestriction))]
+		[XmlElement("union", typeof(XmlSchemaSimpleTypeUnion))]
+		[XmlElement("list", typeof(XmlSchemaSimpleTypeList))]
+		public XmlSchemaSimpleTypeContent Content { get => default; set {} } // 0x00000001811AC510-0x00000001811AC520 0x00000001851417AC-0x00000001851417C0
+	
+		// Constructors
+		public XmlSchemaSimpleType() {} // 0x00000001898E5A78-0x00000001898E5A80
+	
+		// Methods
+		internal override XmlSchemaObject Clone() => default; // 0x00000001898E59D8-0x00000001898E5A78
+	}
+
+	public abstract class XmlSchemaSimpleTypeContent : XmlSchemaAnnotated // TypeDefIndex: 43007
+	{
+		// Constructors
+		protected XmlSchemaSimpleTypeContent() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public class XmlSchemaSimpleTypeList : XmlSchemaSimpleTypeContent // TypeDefIndex: 43008
+	{
+		// Fields
+		private XmlQualifiedName itemTypeName; // 0x50
+		private XmlSchemaSimpleType itemType; // 0x58
+		private XmlSchemaSimpleType baseItemType; // 0x60
+	
+		// Properties
+		[XmlAttribute("itemType")]
+		public XmlQualifiedName ItemTypeName { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x00000001898E5624-0x00000001898E56B0
+		[XmlElement("simpleType", typeof(XmlSchemaSimpleType))]
+		public XmlSchemaSimpleType ItemType { get => default; set {} } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x0000000183081D30-0x0000000183081D40
+		[XmlIgnore]
+		public XmlSchemaSimpleType BaseItemType { get => default; set {} } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
+	
+		// Constructors
+		public XmlSchemaSimpleTypeList() {} // 0x00000001898E55CC-0x00000001898E5624
+	
+		// Methods
+		internal override XmlSchemaObject Clone() => default; // 0x00000001898E5550-0x00000001898E55CC
+	}
+
+	public class XmlSchemaSimpleTypeRestriction : XmlSchemaSimpleTypeContent // TypeDefIndex: 43009
+	{
+		// Fields
+		private XmlQualifiedName baseTypeName; // 0x50
+		private XmlSchemaSimpleType baseType; // 0x58
+		private XmlSchemaObjectCollection facets; // 0x60
+	
+		// Properties
+		[XmlAttribute("base")]
+		public XmlQualifiedName BaseTypeName { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x00000001898E57C8-0x00000001898E5854
+		[XmlElement("simpleType", typeof(XmlSchemaSimpleType))]
+		public XmlSchemaSimpleType BaseType { get => default; set {} } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x0000000183081D30-0x0000000183081D40
+		[XmlElement("minInclusive", typeof(XmlSchemaMinInclusiveFacet))]
+		[XmlElement("maxLength", typeof(XmlSchemaMaxLengthFacet))]
+		[XmlElement("fractionDigits", typeof(XmlSchemaFractionDigitsFacet))]
+		[XmlElement("totalDigits", typeof(XmlSchemaTotalDigitsFacet))]
+		[XmlElement("length", typeof(XmlSchemaLengthFacet))]
+		[XmlElement("maxInclusive", typeof(XmlSchemaMaxInclusiveFacet))]
+		[XmlElement("minLength", typeof(XmlSchemaMinLengthFacet))]
+		[XmlElement("maxExclusive", typeof(XmlSchemaMaxExclusiveFacet))]
+		[XmlElement("minExclusive", typeof(XmlSchemaMinExclusiveFacet))]
+		[XmlElement("enumeration", typeof(XmlSchemaEnumerationFacet))]
+		[XmlElement("pattern", typeof(XmlSchemaPatternFacet))]
+		[XmlElement("whiteSpace", typeof(XmlSchemaWhiteSpaceFacet))]
+		public XmlSchemaObjectCollection Facets { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+	
+		// Constructors
+		public XmlSchemaSimpleTypeRestriction() {} // 0x00000001898E572C-0x00000001898E57C8
+	
+		// Methods
+		internal override XmlSchemaObject Clone() => default; // 0x00000001898E56B0-0x00000001898E572C
+	}
+
+	public class XmlSchemaSimpleTypeUnion : XmlSchemaSimpleTypeContent // TypeDefIndex: 43010
+	{
+		// Fields
+		private XmlSchemaObjectCollection baseTypes; // 0x50
+		private XmlQualifiedName[] memberTypes; // 0x58
+		private XmlSchemaSimpleType[] baseMemberTypes; // 0x60
+	
+		// Properties
+		[XmlElement("simpleType", typeof(XmlSchemaSimpleType))]
+		public XmlSchemaObjectCollection BaseTypes { get => default; } // 0x0000000183D4EAF0-0x0000000183D4EB00 
+		[XmlAttribute("memberTypes")]
+		public XmlQualifiedName[] MemberTypes { get => default; set {} } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x0000000183081D30-0x0000000183081D40
+		[XmlIgnore]
+		public XmlSchemaSimpleType[] BaseMemberTypes { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+	
+		// Constructors
+		public XmlSchemaSimpleTypeUnion() {} // 0x00000001898E5974-0x00000001898E59D8
+	
+		// Methods
+		internal void SetBaseMemberTypes(XmlSchemaSimpleType[] baseMemberTypes) {} // 0x00000001839274B0-0x00000001839274C0
+		internal override XmlSchemaObject Clone() => default; // 0x00000001898E5854-0x00000001898E5974
+	}
+
+	internal class XmlSchemaSubstitutionGroup : XmlSchemaObject // TypeDefIndex: 43011
+	{
+		// Fields
+		private ArrayList membersList; // 0x38
+		private XmlQualifiedName examplar; // 0x40
+	
+		// Properties
+		[XmlIgnore]
+		internal ArrayList Members { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		[XmlIgnore]
+		internal XmlQualifiedName Examplar { get => default; set {} } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
+	
+		// Constructors
+		public XmlSchemaSubstitutionGroup() {} // 0x00000001898E5AF0-0x00000001898E5B8C
+	}
+
+	internal class XmlSchemaSubstitutionGroupV1Compat : XmlSchemaSubstitutionGroup // TypeDefIndex: 43012
+	{
+		// Fields
+		private XmlSchemaChoice choice; // 0x48
+	
+		// Properties
+		[XmlIgnore]
+		internal XmlSchemaChoice Choice { get => default; } // 0x0000000183D4EA70-0x0000000183D4EA80 
+	
+		// Constructors
+		public XmlSchemaSubstitutionGroupV1Compat() {} // 0x00000001898E5A80-0x00000001898E5AF0
+	}
+
+	public class XmlSchemaType : XmlSchemaAnnotated // TypeDefIndex: 43013
+	{
+		// Fields
+		private string name; // 0x50
+		private XmlSchemaDerivationMethod final; // 0x58
+		private XmlSchemaDerivationMethod derivedBy; // 0x5C
+		private XmlSchemaType baseSchemaType; // 0x60
+		private XmlSchemaDatatype datatype; // 0x68
+		private XmlSchemaDerivationMethod finalResolved; // 0x70
+		private SchemaElementDecl elementDecl; // 0x78
+		private XmlQualifiedName qname; // 0x80
+		private XmlSchemaType redefined; // 0x88
+		private XmlSchemaContentType contentType; // 0x90
+	
+		// Properties
+		[XmlAttribute("name")]
+		public string Name { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+		[DefaultValue(XmlSchemaDerivationMethod.Empty | XmlSchemaDerivationMethod.None)]
+		[XmlAttribute("final")]
+		public XmlSchemaDerivationMethod Final { get => default; set {} } // 0x0000000183D4EF00-0x0000000183D4EF10 0x0000000183D4EF50-0x0000000183D4EF60
+		[XmlIgnore]
+		public XmlQualifiedName QualifiedName { get => default; } // 0x0000000183D758E0-0x0000000183D758F0 
+		[XmlIgnore]
+		public XmlSchemaDerivationMethod FinalResolved { get => default; } // 0x0000000183D4F0C0-0x0000000183D4F0D0 
+		[XmlIgnore]
+		public XmlSchemaType BaseXmlSchemaType { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+		[XmlIgnore]
+		public XmlSchemaDerivationMethod DerivedBy { get => default; } // 0x0000000183D4EEF0-0x0000000183D4EF00 
+		[XmlIgnore]
+		public XmlSchemaDatatype Datatype { get => default; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 
+		[XmlIgnore]
+		public virtual bool IsMixed { get => default; set {} } // 0x000000018115F4C0-0x000000018115F530 0x000000018350B670-0x000000018350B680
+		[XmlIgnore]
+		public XmlTypeCode TypeCode { get => default; } // 0x00000001898E5FF4-0x00000001898E6058 
+		[XmlIgnore]
+		internal XmlValueConverter ValueConverter { get => default; } // 0x00000001898E6058-0x00000001898E60B8 
+		internal XmlSchemaContentType SchemaContentType { get => default; } // 0x0000000183D4FB60-0x0000000183D4FB70 
+		internal SchemaElementDecl ElementDecl { get => default; set {} } // 0x0000000183D758D0-0x0000000183D758E0 0x00000001898E60B8-0x00000001898E60D4
+		[XmlIgnore]
+		internal XmlSchemaType Redefined { get => default; set {} } // 0x0000000183D4EA60-0x0000000183D4EA70 0x0000000184274DA0-0x0000000184274DB4
+		[XmlIgnore]
+		internal override string NameAttribute { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000182C926C0-0x0000000182C926D0
+	
+		// Constructors
+		public XmlSchemaType() {} // 0x00000001898E5F8C-0x00000001898E5FF4
+	
+		// Methods
+		public static XmlSchemaSimpleType GetBuiltInSimpleType(XmlQualifiedName qualifiedName) => default; // 0x00000001898E5CCC-0x00000001898E5D8C
+		public static XmlSchemaSimpleType GetBuiltInSimpleType(XmlTypeCode typeCode) => default; // 0x00000001898E5D8C-0x00000001898E5DD4
+		public static XmlSchemaComplexType GetBuiltInComplexType(XmlQualifiedName qualifiedName) => default; // 0x00000001898E5B8C-0x00000001898E5CCC
+		internal void SetQualifiedName(XmlQualifiedName value) {} // 0x00000001898E5F6C-0x00000001898E5F8C
+		internal void SetFinalResolved(XmlSchemaDerivationMethod value) {} // 0x0000000183D4F0F0-0x0000000183D4F100
+		internal void SetBaseSchemaType(XmlSchemaType value) {} // 0x00000001839274B0-0x00000001839274C0
+		internal void SetDerivedBy(XmlSchemaDerivationMethod value) {} // 0x0000000183D4EF40-0x0000000183D4EF50
+		internal void SetDatatype(XmlSchemaDatatype value) {} // 0x00000001838C5570-0x00000001838C5580
+		internal void SetContentType(XmlSchemaContentType value) {} // 0x0000000183D4FB70-0x0000000183D4FB80
+		public static bool IsDerivedFrom(XmlSchemaType derivedType, XmlSchemaType baseType, XmlSchemaDerivationMethod except) => default; // 0x00000001898E5E48-0x00000001898E5F6C
+		internal static bool IsDerivedFromDatatype(XmlSchemaDatatype derivedDataType, XmlSchemaDatatype baseDataType, XmlSchemaDerivationMethod except) => default; // 0x00000001898E5DD4-0x00000001898E5E48
+	}
+
+	public enum XmlSchemaUse // TypeDefIndex: 43014
+	{
+		None = 0,
+		Optional = 1,
+		Prohibited = 2,
+		Required = 3
+	}
+
+	[Serializable]
+	public class XmlSchemaValidationException : XmlSchemaException // TypeDefIndex: 43015
+	{
+		// Constructors
+		protected XmlSchemaValidationException(SerializationInfo info, StreamingContext context) {} // 0x000000018988DE00-0x000000018988DE20
+		public XmlSchemaValidationException() {} // 0x000000018988DE20-0x000000018988DE2C
+		internal XmlSchemaValidationException(string res, string arg, string sourceUri, int lineNumber, int linePosition) {} // 0x00000001898E6114-0x00000001898E61D4
+		internal XmlSchemaValidationException(string res, string[] args, string sourceUri, int lineNumber, int linePosition) {} // 0x00000001898D5B04-0x00000001898D5B3C
+		internal XmlSchemaValidationException(string res, string[] args, Exception innerException, string sourceUri, int lineNumber, int linePosition) {} // 0x00000001898E60D4-0x00000001898E6114
+	
+		// Methods
+		public override void GetObjectData(SerializationInfo info, StreamingContext context) {} // 0x000000018988DD08-0x000000018988DD28
+	}
+
+	public delegate object XmlValueGetter(); // TypeDefIndex: 43016; 0x0000000186F0A8DC-0x0000000186F0A8EC
+
+	[Flags]
+	public enum XmlSchemaValidationFlags // TypeDefIndex: 43017
+	{
+		None = 0,
+		ProcessInlineSchema = 1,
+		ProcessSchemaLocation = 2,
+		ReportValidationWarnings = 4,
+		ProcessIdentityConstraints = 8,
+		AllowXmlAttributes = 16
+	}
+
+	internal enum ValidatorState // TypeDefIndex: 43018
+	{
+		None = 0,
+		Start = 1,
+		TopLevelAttribute = 2,
+		TopLevelTextOrWS = 3,
+		Element = 4,
+		Attribute = 5,
+		EndOfAttributes = 6,
+		Text = 7,
+		Whitespace = 8,
+		EndElement = 9,
+		SkipToEndElement = 10,
+		Finish = 11
+	}
+
+	internal class IdRefNode // TypeDefIndex: 43019
+	{
+		// Fields
+		internal string Id; // 0x10
+		internal int LineNo; // 0x18
+		internal int LinePos; // 0x1C
+		internal IdRefNode Next; // 0x20
+	
+		// Constructors
+		public IdRefNode() {} // Dummy constructor
+		internal IdRefNode(IdRefNode next, string id, int lineNo, int linePos) {} // 0x00000001898D7CF0-0x00000001898D7D24
+	}
+
+	public sealed class XmlSchemaValidator // TypeDefIndex: 43020
+	{
+		// Fields
+		private XmlSchemaSet schemaSet; // 0x10
+		private XmlSchemaValidationFlags validationFlags; // 0x18
+		private int startIDConstraint; // 0x1C
+		private bool isRoot; // 0x20
+		private bool rootHasSchema; // 0x21
+		private bool attrValid; // 0x22
+		private bool checkEntity; // 0x23
+		private SchemaInfo compiledSchemaInfo; // 0x28
+		private IDtdInfo dtdSchemaInfo; // 0x30
+		private Hashtable validatedNamespaces; // 0x38
+		private HWStack validationStack; // 0x40
+		private ValidationState context; // 0x48
+		private ValidatorState currentState; // 0x50
+		private Hashtable attPresence; // 0x58
+		private SchemaAttDef wildID; // 0x60
+		private Hashtable IDs; // 0x68
+		private IdRefNode idRefListHead; // 0x70
+		private XmlQualifiedName contextQName; // 0x78
+		private string NsXs; // 0x80
+		private string NsXsi; // 0x88
+		private string NsXmlNs; // 0x90
+		private string NsXml; // 0x98
+		private XmlSchemaObject partialValidationType; // 0xA0
+		private StringBuilder textValue; // 0xA8
+		private ValidationEventHandler eventHandler; // 0xB0
+		private object validationEventSender; // 0xB8
+		private XmlNameTable nameTable; // 0xC0
+		private IXmlLineInfo positionInfo; // 0xC8
+		private IXmlLineInfo dummyPositionInfo; // 0xD0
+		private XmlResolver xmlResolver; // 0xD8
+		private System.Uri sourceUri; // 0xE0
+		private string sourceUriString; // 0xE8
+		private IXmlNamespaceResolver nsResolver; // 0xF0
+		private XmlSchemaContentProcessing processContents; // 0xF8
+		private string xsiTypeString; // 0x100
+		private string xsiNilString; // 0x108
+		private string xsiSchemaLocationString; // 0x110
+		private string xsiNoNamespaceSchemaLocationString; // 0x118
+		private static readonly XmlSchemaDatatype dtQName; // 0x00
+		private static readonly XmlSchemaDatatype dtCDATA; // 0x08
+		private static readonly XmlSchemaDatatype dtStringArray; // 0x10
+		private static XmlSchemaParticle[] EmptyParticleArray; // 0x18
+		private static XmlSchemaAttribute[] EmptyAttributeArray; // 0x20
+		private XmlCharType xmlCharType; // 0x120
+		internal static bool[,] ValidStates; // 0x28
+		private static string[] MethodNames; // 0x30
+	
+		// Properties
+		public XmlResolver XmlResolver { set {} } // 0x0000000185142FC4-0x0000000185142FD8
+		public IXmlLineInfo LineInfoProvider { set {} } // 0x00000001898F0590-0x00000001898F05B0
+		public System.Uri SourceUri { set {} } // 0x00000001898F05B0-0x00000001898F0600
+		public object ValidationEventSender { set {} } // 0x00000001858AAF64-0x00000001858AAF78
+		internal XmlSchemaSet SchemaSet { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		internal XmlSchemaValidationFlags ValidationFlags { get => default; } // 0x00000001820D1AC0-0x00000001820D1AD0 
+		internal XmlSchemaContentType CurrentContentType { get => default; } // 0x00000001898F0414-0x00000001898F0450 
+		private bool StrictlyAssessed { get => default; } // 0x00000001898F04C0-0x00000001898F04FC 
+		private bool HasSchema { get => default; } // 0x00000001898F0464-0x00000001898F04AC 
+		private bool HasIdentityConstraints { get => default; } // 0x00000001898F0450-0x00000001898F0464 
+		internal bool ProcessIdentityConstraints { get => default; } // 0x0000000188571E4C-0x0000000188571E54 
+		internal bool ReportValidationWarnings { get => default; } // 0x0000000188571E5C-0x0000000188571E64 
+		internal bool ProcessSchemaHints { get => default; } // 0x00000001898F04AC-0x00000001898F04C0 
+	
+		// Events
+		public event ValidationEventHandler ValidationEventHandler;
+	
+		// Constructors
+		public XmlSchemaValidator() {} // Dummy constructor
+		public XmlSchemaValidator(XmlNameTable nameTable, XmlSchemaSet schemas, IXmlNamespaceResolver namespaceResolver, XmlSchemaValidationFlags validationFlags) {} // 0x00000001898F00C4-0x00000001898F0380
+		static XmlSchemaValidator() {} // 0x00000001898EFD28-0x00000001898F00C4
+	
+		// Methods
+		private void Init() {} // 0x00000001898EAF6C-0x00000001898EB33C
+		private void Reset() {} // 0x00000001898ED228-0x00000001898ED2AC
+		public void AddSchema(XmlSchema schema) {} // 0x00000001898E662C-0x00000001898E6A14
+		public void Initialize() {} // 0x00000001898EB33C-0x00000001898EB48C
+		public void Initialize(XmlSchemaObject partialValidationType) {} // 0x00000001898EB48C-0x00000001898EB718
+		public void ValidateElement(string localName, string namespaceUri, XmlSchemaInfo schemaInfo, string xsiType, string xsiNil, string xsiSchemaLocation, string xsiNoNamespaceSchemaLocation) {} // 0x00000001898EF224-0x00000001898EF5DC
+		public object ValidateAttribute(string localName, string namespaceUri, XmlValueGetter attributeValue, XmlSchemaInfo schemaInfo) => default; // 0x00000001898EEDD4-0x00000001898EEE54
+		private object ValidateAttribute(string lName, string ns, XmlValueGetter attributeValueGetter, string attributeStringValue, XmlSchemaInfo schemaInfo) => default; // 0x00000001898EE4EC-0x00000001898EEDD4
+		public void ValidateEndOfAttributes(XmlSchemaInfo schemaInfo) {} // 0x00000001898EF5E8-0x00000001898EF6A8
+		public void ValidateText(XmlValueGetter elementValue) {} // 0x00000001898EF704-0x00000001898EF778
+		private void ValidateText(string elementStringValue, XmlValueGetter elementValueGetter) {} // 0x00000001898EF778-0x00000001898EFADC
+		public void ValidateWhitespace(XmlValueGetter elementValue) {} // 0x00000001898EFCB4-0x00000001898EFD28
+		private void ValidateWhitespace(string elementStringValue, XmlValueGetter elementValueGetter) {} // 0x00000001898EFADC-0x00000001898EFCB4
+		public object ValidateEndElement(XmlSchemaInfo schemaInfo) => default; // 0x00000001898EF5DC-0x00000001898EF5E8
+		public void SkipToEndElement(XmlSchemaInfo schemaInfo) {} // 0x00000001898EDBF0-0x00000001898EDE1C
+		public void EndValidation() {} // 0x00000001898E9FBC-0x00000001898EA0AC
+		internal void GetUnspecifiedDefaultAttributes(ArrayList defaultAttributes, bool createNodeData) {} // 0x00000001898EAA4C-0x00000001898EAF6C
+		internal void SetDtdSchemaInfo(IDtdInfo dtdSchemaInfo) {} // 0x00000001898EDBD0-0x00000001898EDBF0
+		internal string GetConcatenatedValue() => default; // 0x00000001898EA4DC-0x00000001898EA500
+		private object InternalValidateEndElement(XmlSchemaInfo schemaInfo, object typedValue) => default; // 0x00000001898EB718-0x00000001898EBC38
+		private void ProcessSchemaLocations(string xsiSchemaLocation, string xsiNoNamespaceSchemaLocation) {} // 0x00000001898EC9F4-0x00000001898ECD34
+		private object ValidateElementContext(XmlQualifiedName elementName, out bool invalidElementInContext) {
+			invalidElementInContext = default;
+			return default;
+		} // 0x00000001898EEE54-0x00000001898EF224
+		private XmlSchemaElement GetSubstitutionGroupHead(XmlQualifiedName member) => default; // 0x00000001898EA810-0x00000001898EA9F0
+		private object ValidateAtomicValue(string stringValue, out XmlSchemaSimpleType memberType) {
+			memberType = default;
+			return default;
+		} // 0x00000001898EE28C-0x00000001898EE4EC
+		private object ValidateAtomicValue(object parsedValue, out XmlSchemaSimpleType memberType) {
+			memberType = default;
+			return default;
+		} // 0x00000001898EDF98-0x00000001898EE28C
+		private string GetTypeName(SchemaDeclBase decl) => default; // 0x00000001898EA9F0-0x00000001898EAA4C
+		private void SaveTextValue(object value) {} // 0x00000001898ED2AC-0x00000001898ED2E8
+		private void Push(XmlQualifiedName elementName) {} // 0x00000001898ECF0C-0x00000001898ED0F0
+		private void Pop() {} // 0x00000001898EC040-0x00000001898EC174
+		private SchemaElementDecl FastGetElementDecl(XmlQualifiedName elementName, object particle) => default; // 0x00000001898EA280-0x00000001898EA4BC
+		private SchemaElementDecl CheckXsiTypeAndNil(SchemaElementDecl elementDecl, string xsiType, string xsiNil, ref bool declFound) => default; // 0x00000001898E7B94-0x00000001898E80F4
+		private void ThrowDeclNotFoundWarningOrError(bool declFound) {} // 0x00000001898EDE1C-0x00000001898EDF98
+		private void CheckElementProperties() {} // 0x00000001898E70A4-0x00000001898E7148
+		private void ValidateStartElementIdentityConstraints() {} // 0x00000001898EF6A8-0x00000001898EF704
+		private SchemaAttDef CheckIsXmlAttribute(XmlQualifiedName attQName) => default; // 0x00000001898E7460-0x00000001898E7518
+		private void AddXmlNamespaceSchema() {} // 0x00000001898E6A14-0x00000001898E6AA8
+		internal object CheckMixedValueConstraint(string elementValue) => default; // 0x00000001898E7518-0x00000001898E75F8
+		private void LoadSchema(string uri, string url) {} // 0x00000001898EBC38-0x00000001898EC040
+		internal void RecompileSchemaSet() {} // 0x00000001898ED154-0x00000001898ED228
+		private void ProcessTokenizedType(XmlTokenizedType ttype, string name, bool attrValue) {} // 0x00000001898ECD34-0x00000001898ECF0C
+		private object CheckAttributeValue(object value, SchemaAttDef attdef) => default; // 0x00000001898E6E9C-0x00000001898E70A4
+		private object CheckElementValue(string stringValue) => default; // 0x00000001898E7148-0x00000001898E7344
+		private void CheckTokenizedTypes(XmlSchemaDatatype dtype, object typedValue, bool attrValue) {} // 0x00000001898E7A5C-0x00000001898E7B94
+		private object FindId(string name) => default; // 0x00000001898EA4BC-0x00000001898EA4DC
+		private void CheckForwardRefs() {} // 0x00000001898E7344-0x00000001898E7460
+		private void CheckStateTransition(ValidatorState toState, string methodName) {} // 0x00000001898E7810-0x00000001898E7A5C
+		private void ClearPSVI() {} // 0x00000001898E80F4-0x00000001898E8144
+		private void CheckRequiredAttributes(SchemaElementDecl currentElementDecl) {} // 0x00000001898E75F8-0x00000001898E7810
+		private XmlSchemaElement GetSchemaElement() => default; // 0x00000001898EA6F0-0x00000001898EA810
+		internal string GetDefaultAttributePrefix(string attributeNS) => default; // 0x00000001898EA500-0x00000001898EA6F0
+		private void AddIdentityConstraints() {} // 0x00000001898E61D4-0x00000001898E662C
+		private void ElementIdentityConstraints() {} // 0x00000001898E8544-0x00000001898E8810
+		private void AttributeIdentityConstraints(string name, string ns, object obj, string sobj, XmlSchemaDatatype datatype) {} // 0x00000001898E6AA8-0x00000001898E6D34
+		private void EndElementIdentityConstraints(object typedValue, string stringValue, XmlSchemaDatatype datatype) {} // 0x00000001898E8E04-0x00000001898E9FBC
+		internal static void ElementValidationError(XmlQualifiedName name, ValidationState context, ValidationEventHandler eventHandler, object sender, string sourceUri, int lineNo, int linePos, XmlSchemaSet schemaSet) {} // 0x00000001898E8810-0x00000001898E8E04
+		internal static void CompleteValidationError(ValidationState context, ValidationEventHandler eventHandler, object sender, string sourceUri, int lineNo, int linePos, XmlSchemaSet schemaSet) {} // 0x00000001898E8144-0x00000001898E8544
+		internal static string PrintExpectedElements(ArrayList expected, bool getParticles) => default; // 0x00000001898EC174-0x00000001898EC460
+		private static string PrintNames(ArrayList expected) => default; // 0x00000001898EC824-0x00000001898EC968
+		private static void PrintNamesWithNS(ArrayList expected, StringBuilder builder) {} // 0x00000001898EC460-0x00000001898EC824
+		private static void EnumerateAny(StringBuilder builder, string namespaces) {} // 0x00000001898EA0AC-0x00000001898EA280
+		internal static string QNameString(string localName, string ns) => default; // 0x00000001898ED0F0-0x00000001898ED154
+		internal static string BuildElementName(XmlQualifiedName qname) => default; // 0x00000001898E6E3C-0x00000001898E6E9C
+		internal static string BuildElementName(string localName, string ns) => default; // 0x00000001898E6D34-0x00000001898E6E3C
+		private void ProcessEntity(string name) {} // 0x00000001898EC968-0x00000001898EC9F4
+		private void SendValidationEvent(string code) {} // 0x00000001898ED6FC-0x00000001898ED754
+		private void SendValidationEvent(string code, string[] args) {} // 0x00000001898ED830-0x00000001898ED90C
+		private void SendValidationEvent(string code, string arg) {} // 0x00000001898ED754-0x00000001898ED830
+		private void SendValidationEvent(string code, string arg1, string arg2) {} // 0x00000001898ED3D8-0x00000001898ED4FC
+		private void SendValidationEvent(string code, string[] args, Exception innerException, XmlSeverityType severity) {} // 0x00000001898ED9E4-0x00000001898EDAE4
+		private void SendValidationEvent(string code, string[] args, Exception innerException) {} // 0x00000001898ED2F4-0x00000001898ED3D8
+		private void SendValidationEvent(XmlSchemaValidationException e) {} // 0x00000001898ED2E8-0x00000001898ED2F4
+		private void SendValidationEvent(XmlSchemaException e) {} // 0x00000001898ED90C-0x00000001898ED9E4
+		private void SendValidationEvent(string code, string msg, XmlSeverityType severity) {} // 0x00000001898EDAE4-0x00000001898EDBD0
+		private void SendValidationEvent(XmlSchemaValidationException e, XmlSeverityType severity) {} // 0x00000001898ED4FC-0x00000001898ED640
+		internal static void SendValidationEvent(ValidationEventHandler eventHandler, object sender, XmlSchemaValidationException e, XmlSeverityType severity) {} // 0x00000001898ED640-0x00000001898ED6FC
+	}
+
+	public enum XmlSchemaValidity // TypeDefIndex: 43021
+	{
+		NotKnown = 0,
+		Valid = 1,
+		Invalid = 2
+	}
+
+	public enum XmlSeverityType // TypeDefIndex: 43022
+	{
+		Error = 0,
+		Warning = 1
+	}
+
+	public enum XmlTypeCode // TypeDefIndex: 43023
+	{
+		None = 0,
+		Item = 1,
+		Node = 2,
+		Document = 3,
+		Element = 4,
+		Attribute = 5,
+		Namespace = 6,
+		ProcessingInstruction = 7,
+		Comment = 8,
+		Text = 9,
+		AnyAtomicType = 10,
+		UntypedAtomic = 11,
+		String = 12,
+		Boolean = 13,
+		Decimal = 14,
+		Float = 15,
+		Double = 16,
+		Duration = 17,
+		DateTime = 18,
+		Time = 19,
+		Date = 20,
+		GYearMonth = 21,
+		GYear = 22,
+		GMonthDay = 23,
+		GDay = 24,
+		GMonth = 25,
+		HexBinary = 26,
+		Base64Binary = 27,
+		AnyUri = 28,
+		QName = 29,
+		Notation = 30,
+		NormalizedString = 31,
+		Token = 32,
+		Language = 33,
+		NmToken = 34,
+		Name = 35,
+		NCName = 36,
+		Id = 37,
+		Idref = 38,
+		Entity = 39,
+		Integer = 40,
+		NonPositiveInteger = 41,
+		NegativeInteger = 42,
+		Long = 43,
+		Int = 44,
+		Short = 45,
+		Byte = 46,
+		NonNegativeInteger = 47,
+		UnsignedLong = 48,
+		UnsignedInt = 49,
+		UnsignedShort = 50,
+		UnsignedByte = 51,
+		PositiveInteger = 52,
+		YearMonthDuration = 53,
+		DayTimeDuration = 54
+	}
+
+	internal abstract class XmlValueConverter // TypeDefIndex: 43024
+	{
+		// Constructors
+		protected XmlValueConverter() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public abstract bool ToBoolean(long value);
+		public abstract bool ToBoolean(int value);
+		public abstract bool ToBoolean(double value);
+		public abstract bool ToBoolean(System.DateTime value);
+		public abstract bool ToBoolean(string value);
+		public abstract bool ToBoolean(object value);
+		public abstract int ToInt32(bool value);
+		public abstract int ToInt32(long value);
+		public abstract int ToInt32(double value);
+		public abstract int ToInt32(System.DateTime value);
+		public abstract int ToInt32(string value);
+		public abstract int ToInt32(object value);
+		public abstract long ToInt64(bool value);
+		public abstract long ToInt64(int value);
+		public abstract long ToInt64(double value);
+		public abstract long ToInt64(System.DateTime value);
+		public abstract long ToInt64(string value);
+		public abstract long ToInt64(object value);
+		public abstract decimal ToDecimal(string value);
+		public abstract decimal ToDecimal(object value);
+		public abstract double ToDouble(bool value);
+		public abstract double ToDouble(int value);
+		public abstract double ToDouble(long value);
+		public abstract double ToDouble(System.DateTime value);
+		public abstract double ToDouble(string value);
+		public abstract double ToDouble(object value);
+		public abstract float ToSingle(double value);
+		public abstract float ToSingle(string value);
+		public abstract float ToSingle(object value);
+		public abstract System.DateTime ToDateTime(bool value);
+		public abstract System.DateTime ToDateTime(int value);
+		public abstract System.DateTime ToDateTime(long value);
+		public abstract System.DateTime ToDateTime(double value);
+		public abstract System.DateTime ToDateTime(DateTimeOffset value);
+		public abstract System.DateTime ToDateTime(string value);
+		public abstract System.DateTime ToDateTime(object value);
+		public abstract DateTimeOffset ToDateTimeOffset(System.DateTime value);
+		public abstract DateTimeOffset ToDateTimeOffset(string value);
+		public abstract DateTimeOffset ToDateTimeOffset(object value);
+		public abstract string ToString(bool value);
+		public abstract string ToString(int value);
+		public abstract string ToString(long value);
+		public abstract string ToString(decimal value);
+		public abstract string ToString(float value);
+		public abstract string ToString(double value);
+		public abstract string ToString(System.DateTime value);
+		public abstract string ToString(DateTimeOffset value);
+		public abstract string ToString(object value);
+		public abstract string ToString(object value, IXmlNamespaceResolver nsResolver);
+		public abstract object ChangeType(bool value, System.Type destinationType);
+		public abstract object ChangeType(int value, System.Type destinationType);
+		public abstract object ChangeType(long value, System.Type destinationType);
+		public abstract object ChangeType(decimal value, System.Type destinationType);
+		public abstract object ChangeType(double value, System.Type destinationType);
+		public abstract object ChangeType(System.DateTime value, System.Type destinationType);
+		public abstract object ChangeType(string value, System.Type destinationType, IXmlNamespaceResolver nsResolver);
+		public abstract object ChangeType(object value, System.Type destinationType);
+		public abstract object ChangeType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver);
+	}
+
+	internal abstract class XmlBaseConverter : XmlValueConverter // TypeDefIndex: 43025
+	{
+		// Fields
+		private XmlSchemaType schemaType; // 0x10
+		private XmlTypeCode typeCode; // 0x18
+		private System.Type clrTypeDefault; // 0x20
+		protected static readonly System.Type ICollectionType; // 0x00
+		protected static readonly System.Type IEnumerableType; // 0x08
+		protected static readonly System.Type IListType; // 0x10
+		protected static readonly System.Type ObjectArrayType; // 0x18
+		protected static readonly System.Type StringArrayType; // 0x20
+		protected static readonly System.Type XmlAtomicValueArrayType; // 0x28
+		protected static readonly System.Type DecimalType; // 0x30
+		protected static readonly System.Type Int32Type; // 0x38
+		protected static readonly System.Type Int64Type; // 0x40
+		protected static readonly System.Type StringType; // 0x48
+		protected static readonly System.Type XmlAtomicValueType; // 0x50
+		protected static readonly System.Type ObjectType; // 0x58
+		protected static readonly System.Type ByteType; // 0x60
+		protected static readonly System.Type Int16Type; // 0x68
+		protected static readonly System.Type SByteType; // 0x70
+		protected static readonly System.Type UInt16Type; // 0x78
+		protected static readonly System.Type UInt32Type; // 0x80
+		protected static readonly System.Type UInt64Type; // 0x88
+		protected static readonly System.Type XPathItemType; // 0x90
+		protected static readonly System.Type DoubleType; // 0x98
+		protected static readonly System.Type SingleType; // 0xA0
+		protected static readonly System.Type DateTimeType; // 0xA8
+		protected static readonly System.Type DateTimeOffsetType; // 0xB0
+		protected static readonly System.Type BooleanType; // 0xB8
+		protected static readonly System.Type ByteArrayType; // 0xC0
+		protected static readonly System.Type XmlQualifiedNameType; // 0xC8
+		protected static readonly System.Type UriType; // 0xD0
+		protected static readonly System.Type TimeSpanType; // 0xD8
+		protected static readonly System.Type XPathNavigatorType; // 0xE0
+	
+		// Properties
+		protected XmlSchemaType SchemaType { get; } // 0x00000001820B7B20-0x00000001820B7B30 
+		protected XmlTypeCode TypeCode { get; } // 0x00000001820D1AC0-0x00000001820D1AD0 
+		protected string XmlTypeName { get; } // 0x00000001898DDD90-0x00000001898DDE64 
+		protected System.Type DefaultClrType { get; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+	
+		// Constructors
+		protected XmlBaseConverter() {} // Dummy constructor
+		protected XmlBaseConverter(XmlSchemaType schemaType) {} // 0x00000001898DDC64-0x00000001898DDD30
+		protected XmlBaseConverter(XmlTypeCode typeCode) {} // 0x00000001898DDBA8-0x00000001898DDC64
+		protected XmlBaseConverter(XmlBaseConverter converterAtomic) {} // 0x00000001898DDD30-0x00000001898DDD90
+		protected XmlBaseConverter(XmlBaseConverter converterAtomic, System.Type clrTypeDefault) {} // 0x00000001898DDB64-0x00000001898DDBA8
+		static XmlBaseConverter() {} // 0x00000001898DD340-0x00000001898DDB64
+	
+		// Methods
+		public override bool ToBoolean(System.DateTime value) => default; // 0x00000001898DB380-0x00000001898DB430
+		public override bool ToBoolean(double value) => default; // 0x00000001898DB2C4-0x00000001898DB380
+		public override bool ToBoolean(int value) => default; // 0x00000001898DB188-0x00000001898DB238
+		public override bool ToBoolean(long value) => default; // 0x00000001898DB4BC-0x00000001898DB56C
+		public override bool ToBoolean(string value) => default; // 0x00000001898DB238-0x00000001898DB2C4
+		public override bool ToBoolean(object value) => default; // 0x00000001898DB430-0x00000001898DB4BC
+		public override System.DateTime ToDateTime(bool value) => default; // 0x00000001898DBA20-0x00000001898DBAD0
+		public override System.DateTime ToDateTime(DateTimeOffset value) => default; // 0x00000001898DBB5C-0x00000001898DBC14
+		public override System.DateTime ToDateTime(double value) => default; // 0x00000001898DB774-0x00000001898DB830
+		public override System.DateTime ToDateTime(int value) => default; // 0x00000001898DB970-0x00000001898DBA20
+		public override System.DateTime ToDateTime(long value) => default; // 0x00000001898DB830-0x00000001898DB8E4
+		public override System.DateTime ToDateTime(string value) => default; // 0x00000001898DBAD0-0x00000001898DBB5C
+		public override System.DateTime ToDateTime(object value) => default; // 0x00000001898DB8E4-0x00000001898DB970
+		public override DateTimeOffset ToDateTimeOffset(System.DateTime value) => default; // 0x00000001898DB60C-0x00000001898DB6D4
+		public override DateTimeOffset ToDateTimeOffset(string value) => default; // 0x00000001898DB56C-0x00000001898DB60C
+		public override DateTimeOffset ToDateTimeOffset(object value) => default; // 0x00000001898DB6D4-0x00000001898DB774
+		public override decimal ToDecimal(string value) => default; // 0x00000001898DBCB4-0x00000001898DBD54
+		public override decimal ToDecimal(object value) => default; // 0x00000001898DBC14-0x00000001898DBCB4
+		public override double ToDouble(bool value) => default; // 0x00000001898DBE98-0x00000001898DBF48
+		public override double ToDouble(System.DateTime value) => default; // 0x00000001898DBDE4-0x00000001898DBE98
+		public override double ToDouble(int value) => default; // 0x00000001898DBFD8-0x00000001898DC088
+		public override double ToDouble(long value) => default; // 0x00000001898DC088-0x00000001898DC13C
+		public override double ToDouble(string value) => default; // 0x00000001898DBF48-0x00000001898DBFD8
+		public override double ToDouble(object value) => default; // 0x00000001898DBD54-0x00000001898DBDE4
+		public override int ToInt32(bool value) => default; // 0x00000001898DC464-0x00000001898DC510
+		public override int ToInt32(System.DateTime value) => default; // 0x00000001898DC1C4-0x00000001898DC274
+		public override int ToInt32(double value) => default; // 0x00000001898DC3AC-0x00000001898DC464
+		public override int ToInt32(long value) => default; // 0x00000001898DC2FC-0x00000001898DC3AC
+		public override int ToInt32(string value) => default; // 0x00000001898DC13C-0x00000001898DC1C4
+		public override int ToInt32(object value) => default; // 0x00000001898DC274-0x00000001898DC2FC
+		public override long ToInt64(bool value) => default; // 0x00000001898DC840-0x00000001898DC8EC
+		public override long ToInt64(System.DateTime value) => default; // 0x00000001898DC5BC-0x00000001898DC66C
+		public override long ToInt64(double value) => default; // 0x00000001898DC6F8-0x00000001898DC7B4
+		public override long ToInt64(int value) => default; // 0x00000001898DC510-0x00000001898DC5BC
+		public override long ToInt64(string value) => default; // 0x00000001898DC66C-0x00000001898DC6F8
+		public override long ToInt64(object value) => default; // 0x00000001898DC7B4-0x00000001898DC840
+		public override float ToSingle(double value) => default; // 0x00000001898DC97C-0x00000001898DCA3C
+		public override float ToSingle(string value) => default; // 0x00000001898DC8EC-0x00000001898DC97C
+		public override float ToSingle(object value) => default; // 0x00000001898DCA3C-0x00000001898DCACC
+		public override string ToString(bool value) => default; // 0x00000001898DD124-0x00000001898DD1EC
+		public override string ToString(System.DateTime value) => default; // 0x00000001898DCDDC-0x00000001898DCEA4
+		public override string ToString(DateTimeOffset value) => default; // 0x00000001898DCB94-0x00000001898DCC60
+		public override string ToString(decimal value) => default; // 0x00000001898DCD10-0x00000001898DCDDC
+		public override string ToString(double value) => default; // 0x00000001898DCEA4-0x00000001898DCF78
+		public override string ToString(int value) => default; // 0x00000001898DCACC-0x00000001898DCB94
+		public override string ToString(long value) => default; // 0x00000001898DD04C-0x00000001898DD114
+		public override string ToString(float value) => default; // 0x00000001898DCF78-0x00000001898DD04C
+		public override string ToString(object value, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898DCC60-0x00000001898DCD10
+		public override string ToString(object value) => default; // 0x00000001898DD114-0x00000001898DD124
+		public override object ChangeType(bool value, System.Type destinationType) => default; // 0x00000001898D88EC-0x00000001898D8960
+		public override object ChangeType(System.DateTime value, System.Type destinationType) => default; // 0x00000001898D8A48-0x00000001898D8ABC
+		public override object ChangeType(decimal value, System.Type destinationType) => default; // 0x00000001898D8800-0x00000001898D8878
+		public override object ChangeType(double value, System.Type destinationType) => default; // 0x00000001898D89D4-0x00000001898D8A48
+		public override object ChangeType(int value, System.Type destinationType) => default; // 0x00000001898D8878-0x00000001898D88EC
+		public override object ChangeType(long value, System.Type destinationType) => default; // 0x00000001898D8960-0x00000001898D89D4
+		public override object ChangeType(string value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898D87E4-0x00000001898D8800
+		public override object ChangeType(object value, System.Type destinationType) => default; // 0x00000001898D87BC-0x00000001898D87E4
+		protected static bool IsDerivedFrom(System.Type derivedType, System.Type baseType) => default; // 0x00000001898D9F1C-0x00000001898D9F90
+		protected Exception CreateInvalidClrMappingException(System.Type sourceType, System.Type destinationType) => default; // 0x00000001898D8ABC-0x00000001898D8CB0
+		protected static string QNameToString(XmlQualifiedName name) => default; // 0x00000001898D9F90-0x00000001898DA090
+		protected virtual object ChangeListType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898D8768-0x00000001898D87BC
+		protected static byte[] StringToBase64Binary(string value) => default; // 0x00000001898DA230-0x00000001898DA298
+		protected static System.DateTime StringToDate(string value) => default; // 0x00000001898DA414-0x00000001898DA480
+		protected static System.DateTime StringToDateTime(string value) => default; // 0x00000001898DA3A8-0x00000001898DA414
+		protected static TimeSpan StringToDayTimeDuration(string value) => default; // 0x00000001898DA480-0x00000001898DA4E0
+		protected static TimeSpan StringToDuration(string value) => default; // 0x00000001898DA4E0-0x00000001898DA53C
+		protected static System.DateTime StringToGDay(string value) => default; // 0x00000001898DA5C4-0x00000001898DA630
+		protected static System.DateTime StringToGMonth(string value) => default; // 0x00000001898DA7AC-0x00000001898DA818
+		protected static System.DateTime StringToGMonthDay(string value) => default; // 0x00000001898DA6B8-0x00000001898DA724
+		protected static System.DateTime StringToGYear(string value) => default; // 0x00000001898DA994-0x00000001898DAA00
+		protected static System.DateTime StringToGYearMonth(string value) => default; // 0x00000001898DA8A0-0x00000001898DA90C
+		protected static DateTimeOffset StringToDateOffset(string value) => default; // 0x00000001898DA298-0x00000001898DA320
+		protected static DateTimeOffset StringToDateTimeOffset(string value) => default; // 0x00000001898DA320-0x00000001898DA3A8
+		protected static DateTimeOffset StringToGDayOffset(string value) => default; // 0x00000001898DA53C-0x00000001898DA5C4
+		protected static DateTimeOffset StringToGMonthOffset(string value) => default; // 0x00000001898DA724-0x00000001898DA7AC
+		protected static DateTimeOffset StringToGMonthDayOffset(string value) => default; // 0x00000001898DA630-0x00000001898DA6B8
+		protected static DateTimeOffset StringToGYearOffset(string value) => default; // 0x00000001898DA90C-0x00000001898DA994
+		protected static DateTimeOffset StringToGYearMonthOffset(string value) => default; // 0x00000001898DA818-0x00000001898DA8A0
+		protected static byte[] StringToHexBinary(string value) => default; // 0x00000001898DAA00-0x00000001898DAB1C
+		protected static XmlQualifiedName StringToQName(string value, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898DAB1C-0x00000001898DAF50
+		protected static System.DateTime StringToTime(string value) => default; // 0x00000001898DAFD8-0x00000001898DB044
+		protected static DateTimeOffset StringToTimeOffset(string value) => default; // 0x00000001898DAF50-0x00000001898DAFD8
+		protected static TimeSpan StringToYearMonthDuration(string value) => default; // 0x00000001898DB044-0x00000001898DB0A4
+		protected static string AnyUriToString(System.Uri value) => default; // 0x00000001898D8700-0x00000001898D871C
+		protected static string Base64BinaryToString(byte[] value) => default; // 0x00000001898D871C-0x00000001898D8768
+		protected static string DateToString(System.DateTime value) => default; // 0x00000001898D8E58-0x00000001898D8EC4
+		protected static string DateTimeToString(System.DateTime value) => default; // 0x00000001898D8DEC-0x00000001898D8E58
+		protected static string DayTimeDurationToString(TimeSpan value) => default; // 0x00000001898D8EC4-0x00000001898D8F24
+		protected static string DurationToString(TimeSpan value) => default; // 0x00000001898D947C-0x00000001898D94D8
+		protected static string GDayToString(System.DateTime value) => default; // 0x00000001898D9550-0x00000001898D95BC
+		protected static string GMonthToString(System.DateTime value) => default; // 0x00000001898D9718-0x00000001898D9784
+		protected static string GMonthDayToString(System.DateTime value) => default; // 0x00000001898D9634-0x00000001898D96A0
+		protected static string GYearToString(System.DateTime value) => default; // 0x00000001898D98E0-0x00000001898D994C
+		protected static string GYearMonthToString(System.DateTime value) => default; // 0x00000001898D97FC-0x00000001898D9868
+		protected static string DateOffsetToString(DateTimeOffset value) => default; // 0x00000001898D8CB0-0x00000001898D8D28
+		protected static string DateTimeOffsetToString(DateTimeOffset value) => default; // 0x00000001898D8D74-0x00000001898D8DEC
+		protected static string GDayOffsetToString(DateTimeOffset value) => default; // 0x00000001898D94D8-0x00000001898D9550
+		protected static string GMonthOffsetToString(DateTimeOffset value) => default; // 0x00000001898D96A0-0x00000001898D9718
+		protected static string GMonthDayOffsetToString(DateTimeOffset value) => default; // 0x00000001898D95BC-0x00000001898D9634
+		protected static string GYearOffsetToString(DateTimeOffset value) => default; // 0x00000001898D9868-0x00000001898D98E0
+		protected static string GYearMonthOffsetToString(DateTimeOffset value) => default; // 0x00000001898D9784-0x00000001898D97FC
+		protected static string QNameToString(XmlQualifiedName qname, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898DA090-0x00000001898DA230
+		protected static string TimeToString(System.DateTime value) => default; // 0x00000001898DB11C-0x00000001898DB188
+		protected static string TimeOffsetToString(DateTimeOffset value) => default; // 0x00000001898DB0A4-0x00000001898DB11C
+		protected static string YearMonthDurationToString(TimeSpan value) => default; // 0x00000001898DD2E0-0x00000001898DD340
+		internal static System.DateTime DateTimeOffsetToDateTime(DateTimeOffset value) => default; // 0x00000001898D8D28-0x00000001898D8D74
+		internal static int DecimalToInt32(decimal value) => default; // 0x00000001898D8F24-0x00000001898D90E8
+		protected static long DecimalToInt64(decimal value) => default; // 0x00000001898D90E8-0x00000001898D92C0
+		protected static ulong DecimalToUInt64(decimal value) => default; // 0x00000001898D92C0-0x00000001898D947C
+		protected static byte Int32ToByte(int value) => default; // 0x00000001898D994C-0x00000001898D9A40
+		protected static short Int32ToInt16(int value) => default; // 0x00000001898D9A40-0x00000001898D9B38
+		protected static sbyte Int32ToSByte(int value) => default; // 0x00000001898D9B38-0x00000001898D9C30
+		protected static ushort Int32ToUInt16(int value) => default; // 0x00000001898D9C30-0x00000001898D9D24
+		protected static int Int64ToInt32(long value) => default; // 0x00000001898D9D24-0x00000001898D9E24
+		protected static uint Int64ToUInt32(long value) => default; // 0x00000001898D9E24-0x00000001898D9F1C
+		protected static System.DateTime UntypedAtomicToDateTime(string value) => default; // 0x00000001898DD274-0x00000001898DD2E0
+		protected static DateTimeOffset UntypedAtomicToDateTimeOffset(string value) => default; // 0x00000001898DD1EC-0x00000001898DD274
+	}
+
+	internal class XmlNumeric10Converter : XmlBaseConverter // TypeDefIndex: 43026
+	{
+		// Constructors
+		public XmlNumeric10Converter() {} // Dummy constructor
+		protected XmlNumeric10Converter(XmlSchemaType schemaType) {} // 0x00000001898FBC60-0x00000001898FBCBC
+	
+		// Methods
+		public static XmlValueConverter Create(XmlSchemaType schemaType) => default; // 0x00000001898FABBC-0x00000001898FAC1C
+		public override decimal ToDecimal(string value) => default; // 0x00000001898FAF40-0x00000001898FB020
+		public override decimal ToDecimal(object value) => default; // 0x00000001898FAC1C-0x00000001898FAF40
+		public override int ToInt32(long value) => default; // 0x00000001898FB020-0x00000001898FB06C
+		public override int ToInt32(string value) => default; // 0x00000001898FB06C-0x00000001898FB168
+		public override int ToInt32(object value) => default; // 0x00000001898FB168-0x00000001898FB438
+		public override long ToInt64(int value) => default; // 0x0000000183D758F0-0x0000000183D75900
+		public override long ToInt64(string value) => default; // 0x00000001898FB438-0x00000001898FB534
+		public override long ToInt64(object value) => default; // 0x00000001898FB534-0x00000001898FB7F8
+		public override string ToString(decimal value) => default; // 0x00000001898FBBAC-0x00000001898FBC60
+		public override string ToString(int value) => default; // 0x00000001898FBB64-0x00000001898FBBAC
+		public override string ToString(long value) => default; // 0x00000001898FB7F8-0x00000001898FB844
+		public override string ToString(object value, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FB844-0x00000001898FBB64
+		public override object ChangeType(decimal value, System.Type destinationType) => default; // 0x00000001898FA874-0x00000001898FABBC
+		public override object ChangeType(int value, System.Type destinationType) => default; // 0x00000001898FA528-0x00000001898FA874
+		public override object ChangeType(long value, System.Type destinationType) => default; // 0x00000001898F9E80-0x00000001898FA1C0
+		public override object ChangeType(string value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FA1C0-0x00000001898FA528
+		public override object ChangeType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F92C0-0x00000001898F9E80
+		private object ChangeTypeWildcardDestination(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F8C64-0x00000001898F8F58
+		private object ChangeTypeWildcardSource(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F8F58-0x00000001898F92C0
+	}
+
+	internal class XmlNumeric2Converter : XmlBaseConverter // TypeDefIndex: 43027
+	{
+		// Constructors
+		public XmlNumeric2Converter() {} // Dummy constructor
+		protected XmlNumeric2Converter(XmlSchemaType schemaType) {} // 0x00000001898FD2E0-0x00000001898FD33C
+	
+		// Methods
+		public static XmlValueConverter Create(XmlSchemaType schemaType) => default; // 0x00000001898FC858-0x00000001898FC8B8
+		public override double ToDouble(string value) => default; // 0x00000001898FCB24-0x00000001898FCBE8
+		public override double ToDouble(object value) => default; // 0x00000001898FC8B8-0x00000001898FCB24
+		public override float ToSingle(double value) => default; // 0x0000000183D75900-0x0000000183D75910
+		public override float ToSingle(string value) => default; // 0x00000001898FCBE8-0x00000001898FCCAC
+		public override float ToSingle(object value) => default; // 0x00000001898FCCAC-0x00000001898FCF24
+		public override string ToString(double value) => default; // 0x00000001898FCF24-0x00000001898FCFB4
+		public override string ToString(float value) => default; // 0x00000001898FD274-0x00000001898FD2E0
+		public override string ToString(object value, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FCFB4-0x00000001898FD274
+		public override object ChangeType(double value, System.Type destinationType) => default; // 0x00000001898FC59C-0x00000001898FC858
+		public override object ChangeType(string value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FBCBC-0x00000001898FBFC8
+		public override object ChangeType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FBFC8-0x00000001898FC59C
+	}
+
+	internal class XmlDateTimeConverter : XmlBaseConverter // TypeDefIndex: 43028
+	{
+		// Constructors
+		public XmlDateTimeConverter() {} // Dummy constructor
+		protected XmlDateTimeConverter(XmlSchemaType schemaType) {} // 0x00000001898F6024-0x00000001898F6080
+	
+		// Methods
+		public static XmlValueConverter Create(XmlSchemaType schemaType) => default; // 0x00000001898F512C-0x00000001898F518C
+		public override System.DateTime ToDateTime(DateTimeOffset value) => default; // 0x00000001898F5630-0x00000001898F5684
+		public override System.DateTime ToDateTime(string value) => default; // 0x00000001898F5684-0x00000001898F5808
+		public override System.DateTime ToDateTime(object value) => default; // 0x00000001898F5808-0x00000001898F5AAC
+		public override DateTimeOffset ToDateTimeOffset(System.DateTime value) => default; // 0x00000001898F543C-0x00000001898F5460
+		public override DateTimeOffset ToDateTimeOffset(string value) => default; // 0x00000001898F5460-0x00000001898F5630
+		public override DateTimeOffset ToDateTimeOffset(object value) => default; // 0x00000001898F518C-0x00000001898F543C
+		public override string ToString(System.DateTime value) => default; // 0x00000001898F5C34-0x00000001898F5D5C
+		public override string ToString(DateTimeOffset value) => default; // 0x00000001898F5AAC-0x00000001898F5C34
+		public override string ToString(object value, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F5D5C-0x00000001898F6024
+		public override object ChangeType(System.DateTime value, System.Type destinationType) => default; // 0x00000001898F4E60-0x00000001898F512C
+		public override object ChangeType(string value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F4540-0x00000001898F484C
+		public override object ChangeType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F484C-0x00000001898F4E60
+	}
+
+	internal class XmlBooleanConverter : XmlBaseConverter // TypeDefIndex: 43029
+	{
+		// Constructors
+		public XmlBooleanConverter() {} // Dummy constructor
+		protected XmlBooleanConverter(XmlSchemaType schemaType) {} // 0x00000001898F44E4-0x00000001898F4540
+	
+		// Methods
+		public static XmlValueConverter Create(XmlSchemaType schemaType) => default; // 0x00000001898F3F28-0x00000001898F3F88
+		public override bool ToBoolean(string value) => default; // 0x00000001898F41AC-0x00000001898F4248
+		public override bool ToBoolean(object value) => default; // 0x00000001898F3F88-0x00000001898F41AC
+		public override string ToString(bool value) => default; // 0x00000001898F4498-0x00000001898F44E4
+		public override string ToString(object value, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F4248-0x00000001898F4498
+		public override object ChangeType(bool value, System.Type destinationType) => default; // 0x00000001898F352C-0x00000001898F37A0
+		public override object ChangeType(string value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F3C70-0x00000001898F3F28
+		public override object ChangeType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F37A0-0x00000001898F3C70
+	}
+
+	internal class XmlMiscConverter : XmlBaseConverter // TypeDefIndex: 43030
+	{
+		// Constructors
+		public XmlMiscConverter() {} // Dummy constructor
+		protected XmlMiscConverter(XmlSchemaType schemaType) {} // 0x00000001898F8C08-0x00000001898F8C64
+	
+		// Methods
+		public static XmlValueConverter Create(XmlSchemaType schemaType) => default; // 0x00000001898F87D0-0x00000001898F8830
+		public override string ToString(object value, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F8830-0x00000001898F8C08
+		public override object ChangeType(string value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F799C-0x00000001898F7D90
+		public override object ChangeType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F7D90-0x00000001898F87D0
+		private object ChangeTypeWildcardDestination(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F779C-0x00000001898F7898
+		private object ChangeTypeWildcardSource(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F7898-0x00000001898F799C
+	}
+
+	internal class XmlStringConverter : XmlBaseConverter // TypeDefIndex: 43031
+	{
+		// Constructors
+		public XmlStringConverter() {} // Dummy constructor
+		protected XmlStringConverter(XmlSchemaType schemaType) {} // 0x00000001898FDB78-0x00000001898FDBD4
+	
+		// Methods
+		public static XmlValueConverter Create(XmlSchemaType schemaType) => default; // 0x00000001898FD93C-0x00000001898FD99C
+		public override string ToString(object value, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FD99C-0x00000001898FDB78
+		public override object ChangeType(string value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FD33C-0x00000001898FD588
+		public override object ChangeType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FD588-0x00000001898FD93C
+	}
+
+	internal class XmlUntypedConverter : XmlListConverter // TypeDefIndex: 43032
+	{
+		// Fields
+		private bool allowListToList; // 0x30
+		public static readonly XmlValueConverter Untyped; // 0x00
+		public static readonly XmlValueConverter UntypedList; // 0x08
+	
+		// Constructors
+		protected XmlUntypedConverter() {} // 0x0000000189902DEC-0x0000000189902E7C
+		protected XmlUntypedConverter(XmlUntypedConverter atomicConverter, bool allowListToList) {} // 0x0000000189902D6C-0x0000000189902DEC
+		static XmlUntypedConverter() {} // 0x0000000189902C58-0x0000000189902D6C
+	
+		// Methods
+		public override bool ToBoolean(string value) => default; // 0x00000001899010B0-0x000000018990114C
+		public override bool ToBoolean(object value) => default; // 0x0000000189900F2C-0x00000001899010B0
+		public override System.DateTime ToDateTime(string value) => default; // 0x0000000189901390-0x000000018990142C
+		public override System.DateTime ToDateTime(object value) => default; // 0x000000018990142C-0x000000018990159C
+		public override DateTimeOffset ToDateTimeOffset(string value) => default; // 0x00000001899012D8-0x0000000189901390
+		public override DateTimeOffset ToDateTimeOffset(object value) => default; // 0x000000018990114C-0x00000001899012D8
+		public override decimal ToDecimal(string value) => default; // 0x000000018990159C-0x0000000189901654
+		public override decimal ToDecimal(object value) => default; // 0x0000000189901654-0x00000001899017F8
+		public override double ToDouble(string value) => default; // 0x0000000189901980-0x0000000189901A1C
+		public override double ToDouble(object value) => default; // 0x00000001899017F8-0x0000000189901980
+		public override int ToInt32(string value) => default; // 0x0000000189901A1C-0x0000000189901AB8
+		public override int ToInt32(object value) => default; // 0x0000000189901AB8-0x0000000189901C3C
+		public override long ToInt64(string value) => default; // 0x0000000189901DC0-0x0000000189901E5C
+		public override long ToInt64(object value) => default; // 0x0000000189901C3C-0x0000000189901DC0
+		public override float ToSingle(string value) => default; // 0x0000000189901FE4-0x0000000189902080
+		public override float ToSingle(object value) => default; // 0x0000000189901E5C-0x0000000189901FE4
+		public override string ToString(bool value) => default; // 0x0000000189902A38-0x0000000189902A84
+		public override string ToString(System.DateTime value) => default; // 0x0000000189902BB8-0x0000000189902C04
+		public override string ToString(DateTimeOffset value) => default; // 0x0000000189902C04-0x0000000189902C58
+		public override string ToString(decimal value) => default; // 0x0000000189902080-0x00000001899020D4
+		public override string ToString(double value) => default; // 0x0000000189902A84-0x0000000189902AD4
+		public override string ToString(int value) => default; // 0x0000000189902B70-0x0000000189902BB8
+		public override string ToString(long value) => default; // 0x0000000189902B24-0x0000000189902B70
+		public override string ToString(float value) => default; // 0x0000000189902AD4-0x0000000189902B24
+		public override string ToString(object value, IXmlNamespaceResolver nsResolver) => default; // 0x00000001899020D4-0x0000000189902A38
+		public override object ChangeType(bool value, System.Type destinationType) => default; // 0x00000001898FEA38-0x00000001898FEBBC
+		public override object ChangeType(System.DateTime value, System.Type destinationType) => default; // 0x00000001898FF5AC-0x00000001898FF724
+		public override object ChangeType(decimal value, System.Type destinationType) => default; // 0x00000001898FF8A4-0x00000001898FFA38
+		public override object ChangeType(double value, System.Type destinationType) => default; // 0x00000001898FE8B4-0x00000001898FEA38
+		public override object ChangeType(int value, System.Type destinationType) => default; // 0x00000001898FF724-0x00000001898FF8A4
+		public override object ChangeType(long value, System.Type destinationType) => default; // 0x00000001898FE730-0x00000001898FE8B4
+		public override object ChangeType(string value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FEBBC-0x00000001898FF5AC
+		public override object ChangeType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FFA38-0x0000000189900B38
+		private object ChangeTypeWildcardDestination(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FE4FC-0x00000001898FE5F8
+		private object ChangeTypeWildcardSource(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FE5F8-0x00000001898FE730
+		protected override object ChangeListType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FE1E0-0x00000001898FE4FC
+		private bool SupportsType(System.Type clrType) => default; // 0x0000000189900B38-0x0000000189900F2C
+	}
+
+	internal class XmlAnyConverter : XmlBaseConverter // TypeDefIndex: 43033
+	{
+		// Fields
+		public static readonly XmlValueConverter Item; // 0x00
+		public static readonly XmlValueConverter AnyAtomic; // 0x08
+	
+		// Constructors
+		public XmlAnyConverter() {} // Dummy constructor
+		protected XmlAnyConverter(XmlTypeCode typeCode) {} // 0x00000001898F3180-0x00000001898F31D8
+		static XmlAnyConverter() {} // 0x00000001898F30BC-0x00000001898F3180
+	
+		// Methods
+		public override bool ToBoolean(object value) => default; // 0x00000001898F2458-0x00000001898F25CC
+		public override System.DateTime ToDateTime(object value) => default; // 0x00000001898F275C-0x00000001898F28D0
+		public override DateTimeOffset ToDateTimeOffset(object value) => default; // 0x00000001898F25CC-0x00000001898F275C
+		public override decimal ToDecimal(object value) => default; // 0x00000001898F28D0-0x00000001898F2A58
+		public override double ToDouble(object value) => default; // 0x00000001898F2A58-0x00000001898F2BCC
+		public override int ToInt32(object value) => default; // 0x00000001898F2BCC-0x00000001898F2D3C
+		public override long ToInt64(object value) => default; // 0x00000001898F2D3C-0x00000001898F2EAC
+		public override float ToSingle(object value) => default; // 0x00000001898F2F40-0x00000001898F30BC
+		public override object ChangeType(bool value, System.Type destinationType) => default; // 0x00000001898F0D50-0x00000001898F0EF4
+		public override object ChangeType(System.DateTime value, System.Type destinationType) => default; // 0x00000001898F0EF4-0x00000001898F1098
+		public override object ChangeType(decimal value, System.Type destinationType) => default; // 0x00000001898F0800-0x00000001898F09C4
+		public override object ChangeType(double value, System.Type destinationType) => default; // 0x00000001898F22B4-0x00000001898F2458
+		public override object ChangeType(int value, System.Type destinationType) => default; // 0x00000001898F1098-0x00000001898F1238
+		public override object ChangeType(long value, System.Type destinationType) => default; // 0x00000001898F09C4-0x00000001898F0B68
+		public override object ChangeType(string value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F0B68-0x00000001898F0D50
+		public override object ChangeType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F1238-0x00000001898F22B4
+		private object ChangeTypeWildcardDestination(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F0600-0x00000001898F06FC
+		private object ChangeTypeWildcardSource(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F06FC-0x00000001898F0800
+		private XPathNavigator ToNavigator(XPathNavigator nav) => default; // 0x00000001898F2EAC-0x00000001898F2F40
+	}
+
+	internal class XmlAnyListConverter : XmlListConverter // TypeDefIndex: 43034
+	{
+		// Fields
+		public static readonly XmlValueConverter ItemList; // 0x00
+		public static readonly XmlValueConverter AnyAtomicList; // 0x08
+	
+		// Constructors
+		public XmlAnyListConverter() {} // Dummy constructor
+		protected XmlAnyListConverter(XmlBaseConverter atomicConverter) {} // 0x00000001898F3524-0x00000001898F352C
+		static XmlAnyListConverter() {} // 0x00000001898F33F4-0x00000001898F3524
+	
+		// Methods
+		public override object ChangeType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F31D8-0x00000001898F33F4
+	}
+
+	internal class XmlListConverter : XmlBaseConverter // TypeDefIndex: 43035
+	{
+		// Fields
+		protected XmlValueConverter atomicConverter; // 0x28
+	
+		// Constructors
+		public XmlListConverter() {} // Dummy constructor
+		protected XmlListConverter(XmlBaseConverter atomicConverter) {} // 0x00000001898F773C-0x00000001898F779C
+		protected XmlListConverter(XmlBaseConverter atomicConverter, System.Type clrTypeDefault) {} // 0x00000001898F7670-0x00000001898F76E0
+		protected XmlListConverter(XmlSchemaType schemaType) {} // 0x00000001898F76E0-0x00000001898F773C
+	
+		// Methods
+		public static XmlValueConverter Create(XmlValueConverter atomicConverter) => default; // 0x00000001898F6E10-0x00000001898F6F58
+		public override object ChangeType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F6AF8-0x00000001898F6C1C
+		protected override object ChangeListType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F6080-0x00000001898F6AF8
+		private bool IsListType(System.Type type) => default; // 0x00000001898F6F58-0x00000001898F7070
+		private T[] ToArray<T>(object list, IXmlNamespaceResolver nsResolver) => default;
+		private IList ToList(object list, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F7314-0x00000001898F7670
+		private List<string> StringAsList(string value) => default; // 0x00000001898F7280-0x00000001898F7314
+		private string ListAsString(IEnumerable list, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898F7070-0x00000001898F7280
+		private new Exception CreateInvalidClrMappingException(System.Type sourceType, System.Type destinationType) => default; // 0x00000001898F6C1C-0x00000001898F6E10
+	}
+
+	internal class XmlUnionConverter : XmlBaseConverter // TypeDefIndex: 43036
+	{
+		// Fields
+		private XmlValueConverter[] converters; // 0x28
+		private bool hasAtomicMember; // 0x30
+		private bool hasListMember; // 0x31
+	
+		// Constructors
+		public XmlUnionConverter() {} // Dummy constructor
+		protected XmlUnionConverter(XmlSchemaType schemaType) {} // 0x00000001898FDFE8-0x00000001898FE1E0
+	
+		// Methods
+		public static XmlValueConverter Create(XmlSchemaType schemaType) => default; // 0x00000001898FDF88-0x00000001898FDFE8
+		public override object ChangeType(object value, System.Type destinationType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001898FDBD4-0x00000001898FDF88
+	}
+
+	internal sealed class XsdBuilder : SchemaBuilder // TypeDefIndex: 43044
+	{
+		// Fields
+		private static readonly State[] SchemaElement; // 0x00
+		private static readonly State[] SchemaSubelements; // 0x08
+		private static readonly State[] AttributeSubelements; // 0x10
+		private static readonly State[] ElementSubelements; // 0x18
+		private static readonly State[] ComplexTypeSubelements; // 0x20
+		private static readonly State[] SimpleContentSubelements; // 0x28
+		private static readonly State[] SimpleContentExtensionSubelements; // 0x30
+		private static readonly State[] SimpleContentRestrictionSubelements; // 0x38
+		private static readonly State[] ComplexContentSubelements; // 0x40
+		private static readonly State[] ComplexContentExtensionSubelements; // 0x48
+		private static readonly State[] ComplexContentRestrictionSubelements; // 0x50
+		private static readonly State[] SimpleTypeSubelements; // 0x58
+		private static readonly State[] SimpleTypeRestrictionSubelements; // 0x60
+		private static readonly State[] SimpleTypeListSubelements; // 0x68
+		private static readonly State[] SimpleTypeUnionSubelements; // 0x70
+		private static readonly State[] RedefineSubelements; // 0x78
+		private static readonly State[] AttributeGroupSubelements; // 0x80
+		private static readonly State[] GroupSubelements; // 0x88
+		private static readonly State[] AllSubelements; // 0x90
+		private static readonly State[] ChoiceSequenceSubelements; // 0x98
+		private static readonly State[] IdentityConstraintSubelements; // 0xA0
+		private static readonly State[] AnnotationSubelements; // 0xA8
+		private static readonly State[] AnnotatedSubelements; // 0xB0
+		private static readonly XsdAttributeEntry[] SchemaAttributes; // 0xB8
+		private static readonly XsdAttributeEntry[] AttributeAttributes; // 0xC0
+		private static readonly XsdAttributeEntry[] ElementAttributes; // 0xC8
+		private static readonly XsdAttributeEntry[] ComplexTypeAttributes; // 0xD0
+		private static readonly XsdAttributeEntry[] SimpleContentAttributes; // 0xD8
+		private static readonly XsdAttributeEntry[] SimpleContentExtensionAttributes; // 0xE0
+		private static readonly XsdAttributeEntry[] SimpleContentRestrictionAttributes; // 0xE8
+		private static readonly XsdAttributeEntry[] ComplexContentAttributes; // 0xF0
+		private static readonly XsdAttributeEntry[] ComplexContentExtensionAttributes; // 0xF8
+		private static readonly XsdAttributeEntry[] ComplexContentRestrictionAttributes; // 0x100
+		private static readonly XsdAttributeEntry[] SimpleTypeAttributes; // 0x108
+		private static readonly XsdAttributeEntry[] SimpleTypeRestrictionAttributes; // 0x110
+		private static readonly XsdAttributeEntry[] SimpleTypeUnionAttributes; // 0x118
+		private static readonly XsdAttributeEntry[] SimpleTypeListAttributes; // 0x120
+		private static readonly XsdAttributeEntry[] AttributeGroupAttributes; // 0x128
+		private static readonly XsdAttributeEntry[] AttributeGroupRefAttributes; // 0x130
+		private static readonly XsdAttributeEntry[] GroupAttributes; // 0x138
+		private static readonly XsdAttributeEntry[] GroupRefAttributes; // 0x140
+		private static readonly XsdAttributeEntry[] ParticleAttributes; // 0x148
+		private static readonly XsdAttributeEntry[] AnyAttributes; // 0x150
+		private static readonly XsdAttributeEntry[] IdentityConstraintAttributes; // 0x158
+		private static readonly XsdAttributeEntry[] SelectorAttributes; // 0x160
+		private static readonly XsdAttributeEntry[] FieldAttributes; // 0x168
+		private static readonly XsdAttributeEntry[] NotationAttributes; // 0x170
+		private static readonly XsdAttributeEntry[] IncludeAttributes; // 0x178
+		private static readonly XsdAttributeEntry[] ImportAttributes; // 0x180
+		private static readonly XsdAttributeEntry[] FacetAttributes; // 0x188
+		private static readonly XsdAttributeEntry[] AnyAttributeAttributes; // 0x190
+		private static readonly XsdAttributeEntry[] DocumentationAttributes; // 0x198
+		private static readonly XsdAttributeEntry[] AppinfoAttributes; // 0x1A0
+		private static readonly XsdAttributeEntry[] RedefineAttributes; // 0x1A8
+		private static readonly XsdAttributeEntry[] AnnotationAttributes; // 0x1B0
+		private static readonly XsdEntry[] SchemaEntries; // 0x1B8
+		private static readonly int[] DerivationMethodValues; // 0x1C0
+		private static readonly string[] DerivationMethodStrings; // 0x1C8
+		private static readonly string[] FormStringValues; // 0x1D0
+		private static readonly string[] UseStringValues; // 0x1D8
+		private static readonly string[] ProcessContentsStringValues; // 0x1E0
+		private XmlReader reader; // 0x10
+		private PositionInfo positionInfo; // 0x18
+		private XsdEntry currentEntry; // 0x20
+		private XsdEntry nextEntry; // 0x28
+		private bool hasChild; // 0x30
+		private HWStack stateHistory; // 0x38
+		private Stack containerStack; // 0x40
+		private XmlNameTable nameTable; // 0x48
+		private SchemaNames schemaNames; // 0x50
+		private XmlNamespaceManager namespaceManager; // 0x58
+		private bool canIncludeImport; // 0x60
+		private XmlSchema schema; // 0x68
+		private XmlSchemaObject xso; // 0x70
+		private XmlSchemaElement element; // 0x78
+		private XmlSchemaAny anyElement; // 0x80
+		private XmlSchemaAttribute attribute; // 0x88
+		private XmlSchemaAnyAttribute anyAttribute; // 0x90
+		private XmlSchemaComplexType complexType; // 0x98
+		private XmlSchemaSimpleType simpleType; // 0xA0
+		private XmlSchemaComplexContent complexContent; // 0xA8
+		private XmlSchemaComplexContentExtension complexContentExtension; // 0xB0
+		private XmlSchemaComplexContentRestriction complexContentRestriction; // 0xB8
+		private XmlSchemaSimpleContent simpleContent; // 0xC0
+		private XmlSchemaSimpleContentExtension simpleContentExtension; // 0xC8
+		private XmlSchemaSimpleContentRestriction simpleContentRestriction; // 0xD0
+		private XmlSchemaSimpleTypeUnion simpleTypeUnion; // 0xD8
+		private XmlSchemaSimpleTypeList simpleTypeList; // 0xE0
+		private XmlSchemaSimpleTypeRestriction simpleTypeRestriction; // 0xE8
+		private XmlSchemaGroup group; // 0xF0
+		private XmlSchemaGroupRef groupRef; // 0xF8
+		private XmlSchemaAll all; // 0x100
+		private XmlSchemaChoice choice; // 0x108
+		private XmlSchemaSequence sequence; // 0x110
+		private XmlSchemaParticle particle; // 0x118
+		private XmlSchemaAttributeGroup attributeGroup; // 0x120
+		private XmlSchemaAttributeGroupRef attributeGroupRef; // 0x128
+		private XmlSchemaNotation notation; // 0x130
+		private XmlSchemaIdentityConstraint identityConstraint; // 0x138
+		private XmlSchemaXPath xpath; // 0x140
+		private XmlSchemaInclude include; // 0x148
+		private XmlSchemaImport import; // 0x150
+		private XmlSchemaAnnotation annotation; // 0x158
+		private XmlSchemaAppInfo appInfo; // 0x160
+		private XmlSchemaDocumentation documentation; // 0x168
+		private XmlSchemaFacet facet; // 0x170
+		private XmlNode[] markup; // 0x178
+		private XmlSchemaRedefine redefine; // 0x180
+		private ValidationEventHandler validationEventHandler; // 0x188
+		private ArrayList unhandledAttributes; // 0x190
+		private Hashtable namespaces; // 0x198
+	
+		// Properties
+		private SchemaNames.Token CurrentElement { get => default; } // 0x00000001888A81F0-0x00000001888A820C 
+		private SchemaNames.Token ParentElement { get => default; } // 0x000000018990F508-0x000000018990F600 
+		private XmlSchemaObject ParentContainer { get => default; } // 0x000000018990F4B8-0x000000018990F508 
+	
+		// Nested types
+		private enum State // TypeDefIndex: 43037
+		{
+			Root = 0,
+			Schema = 1,
+			Annotation = 2,
+			Include = 3,
+			Import = 4,
+			Element = 5,
+			Attribute = 6,
+			AttributeGroup = 7,
+			AttributeGroupRef = 8,
+			AnyAttribute = 9,
+			Group = 10,
+			GroupRef = 11,
+			All = 12,
+			Choice = 13,
+			Sequence = 14,
+			Any = 15,
+			Notation = 16,
+			SimpleType = 17,
+			ComplexType = 18,
+			ComplexContent = 19,
+			ComplexContentRestriction = 20,
+			ComplexContentExtension = 21,
+			SimpleContent = 22,
+			SimpleContentExtension = 23,
+			SimpleContentRestriction = 24,
+			SimpleTypeUnion = 25,
+			SimpleTypeList = 26,
+			SimpleTypeRestriction = 27,
+			Unique = 28,
+			Key = 29,
+			KeyRef = 30,
+			Selector = 31,
+			Field = 32,
+			MinExclusive = 33,
+			MinInclusive = 34,
+			MaxExclusive = 35,
+			MaxInclusive = 36,
+			TotalDigits = 37,
+			FractionDigits = 38,
+			Length = 39,
+			MinLength = 40,
+			MaxLength = 41,
+			Enumeration = 42,
+			Pattern = 43,
+			WhiteSpace = 44,
+			AppInfo = 45,
+			Documentation = 46,
+			Redefine = 47
+		}
+	
+		private delegate void XsdBuildFunction(XsdBuilder builder, string value); // TypeDefIndex: 43038; 0x0000000182065C10-0x0000000182065C20
+	
+		private delegate void XsdInitFunction(XsdBuilder builder, string value); // TypeDefIndex: 43039; 0x0000000182065C10-0x0000000182065C20
+	
+		private delegate void XsdEndChildFunction(XsdBuilder builder); // TypeDefIndex: 43040; 0x0000000182149960-0x0000000182149970
+	
+		private sealed class XsdAttributeEntry // TypeDefIndex: 43041
+		{
+			// Fields
+			public SchemaNames.Token Attribute; // 0x10
+			public XsdBuildFunction BuildFunc; // 0x18
+	
+			// Constructors
+			public XsdAttributeEntry() {} // Dummy constructor
+			public XsdAttributeEntry(SchemaNames.Token a, XsdBuildFunction build) {} // 0x0000000184270E40-0x0000000184270E50
+		}
+	
+		private sealed class XsdEntry // TypeDefIndex: 43042
+		{
+			// Fields
+			public SchemaNames.Token Name; // 0x10
+			public State CurrentState; // 0x14
+			public State[] NextStates; // 0x18
+			public XsdAttributeEntry[] Attributes; // 0x20
+			public XsdInitFunction InitFunc; // 0x28
+			public XsdEndChildFunction EndChildFunc; // 0x30
+			public bool ParseContent; // 0x38
+	
+			// Constructors
+			public XsdEntry() {} // Dummy constructor
+			public XsdEntry(SchemaNames.Token n, State state, State[] nextStates, XsdAttributeEntry[] attributes, XsdInitFunction init, XsdEndChildFunction end, bool parseContent) {} // 0x000000018991C81C-0x000000018991C87C
+		}
+	
+		private class BuilderNamespaceManager : XmlNamespaceManager // TypeDefIndex: 43043
+		{
+			// Fields
+			private XmlNamespaceManager nsMgr; // 0x50
+			private XmlReader reader; // 0x58
+	
+			// Constructors
+			public BuilderNamespaceManager() {} // Dummy constructor
+			public BuilderNamespaceManager(XmlNamespaceManager nsMgr, XmlReader reader) {} // 0x0000000187F54894-0x0000000187F548BC
+	
+			// Methods
+			public override string LookupNamespace(string prefix) => default; // 0x00000001899103E4-0x0000000189910434
+		}
+	
+		// Constructors
+		public XsdBuilder() {} // Dummy constructor
+		internal XsdBuilder(XmlReader reader, XmlNamespaceManager curmgr, XmlSchema schema, XmlNameTable nameTable, SchemaNames schemaNames, ValidationEventHandler eventhandler) {} // 0x000000018990F268-0x000000018990F4B8
+		static XsdBuilder() {} // 0x0000000189909348-0x000000018990F268
+	
+		// Methods
+		internal override bool ProcessElement(string prefix, string name, string ns) => default; // 0x00000001899080C0-0x00000001899081D8
+		internal override void ProcessAttribute(string prefix, string name, string ns, string value) {} // 0x0000000189907BF0-0x0000000189908074
+		internal override bool IsContentParsed() => default; // 0x00000001899075B0-0x00000001899075CC
+		internal override void ProcessMarkup(XmlNode[] markup) {} // 0x0000000184275C2C-0x0000000184275C40
+		internal override void ProcessCData(string value) {} // 0x0000000189908074-0x00000001899080C0
+		internal override void StartChildren() {} // 0x00000001899091E8-0x0000000189909348
+		internal override void EndChildren() {} // 0x0000000189904E04-0x0000000189904E48
+		private void Push() {} // 0x00000001899081D8-0x0000000189908270
+		private void Pop() {} // 0x0000000189907B2C-0x0000000189907BF0
+		private XmlSchemaObject GetContainer(State state) => default; // 0x0000000189904E94-0x0000000189905118
+		private void SetContainer(State state, object container) {} // 0x0000000189908760-0x0000000189909088
+		private static void BuildAnnotated_Id(XsdBuilder builder, string value) {} // 0x00000001899033CC-0x00000001899033F8
+		private static void BuildSchema_AttributeFormDefault(XsdBuilder builder, string value) {} // 0x0000000189904728-0x00000001899047C8
+		private static void BuildSchema_ElementFormDefault(XsdBuilder builder, string value) {} // 0x0000000189904838-0x00000001899048D8
+		private static void BuildSchema_TargetNamespace(XsdBuilder builder, string value) {} // 0x0000000189904948-0x0000000189904974
+		private static void BuildSchema_Version(XsdBuilder builder, string value) {} // 0x0000000189904974-0x00000001899049A0
+		private static void BuildSchema_FinalDefault(XsdBuilder builder, string value) {} // 0x00000001899048D8-0x0000000189904948
+		private static void BuildSchema_BlockDefault(XsdBuilder builder, string value) {} // 0x00000001899047C8-0x0000000189904838
+		private static void InitSchema(XsdBuilder builder, string value) {} // 0x0000000189906B0C-0x0000000189906B34
+		private static void InitInclude(XsdBuilder builder, string value) {} // 0x00000001899068E8-0x00000001899069A0
+		private static void BuildInclude_SchemaLocation(XsdBuilder builder, string value) {} // 0x00000001899045FC-0x0000000189904628
+		private static void InitImport(XsdBuilder builder, string value) {} // 0x0000000189906830-0x00000001899068E8
+		private static void BuildImport_Namespace(XsdBuilder builder, string value) {} // 0x00000001899045A4-0x00000001899045D0
+		private static void BuildImport_SchemaLocation(XsdBuilder builder, string value) {} // 0x00000001899045D0-0x00000001899045FC
+		private static void InitRedefine(XsdBuilder builder, string value) {} // 0x0000000189906A44-0x0000000189906B0C
+		private static void BuildRedefine_SchemaLocation(XsdBuilder builder, string value) {} // 0x00000001899046FC-0x0000000189904728
+		private static void EndRedefine(XsdBuilder builder) {} // 0x0000000189904E7C-0x0000000189904E94
+		private static void InitAttribute(XsdBuilder builder, string value) {} // 0x00000001899059C4-0x0000000189905A90
+		private static void BuildAttribute_Default(XsdBuilder builder, string value) {} // 0x00000001899036A4-0x00000001899036D0
+		private static void BuildAttribute_Fixed(XsdBuilder builder, string value) {} // 0x00000001899036D0-0x00000001899036FC
+		private static void BuildAttribute_Form(XsdBuilder builder, string value) {} // 0x00000001899036FC-0x000000018990379C
+		private static void BuildAttribute_Use(XsdBuilder builder, string value) {} // 0x00000001899038C0-0x0000000189903960
+		private static void BuildAttribute_Ref(XsdBuilder builder, string value) {} // 0x00000001899037C8-0x0000000189903844
+		private static void BuildAttribute_Name(XsdBuilder builder, string value) {} // 0x000000018990379C-0x00000001899037C8
+		private static void BuildAttribute_Type(XsdBuilder builder, string value) {} // 0x0000000189903844-0x00000001899038C0
+		private static void InitElement(XsdBuilder builder, string value) {} // 0x0000000189906028-0x0000000189906118
+		private static void BuildElement_Abstract(XsdBuilder builder, string value) {} // 0x0000000189903E74-0x0000000189903EE8
+		private static void BuildElement_Block(XsdBuilder builder, string value) {} // 0x0000000189903EE8-0x0000000189903F58
+		private static void BuildElement_Default(XsdBuilder builder, string value) {} // 0x0000000189903F58-0x0000000189903F88
+		private static void BuildElement_Form(XsdBuilder builder, string value) {} // 0x0000000189904028-0x00000001899040C8
+		private static void BuildElement_SubstitutionGroup(XsdBuilder builder, string value) {} // 0x000000018990422C-0x00000001899042A4
+		private static void BuildElement_Final(XsdBuilder builder, string value) {} // 0x0000000189903F88-0x0000000189903FF8
+		private static void BuildElement_Fixed(XsdBuilder builder, string value) {} // 0x0000000189903FF8-0x0000000189904028
+		private static void BuildElement_MaxOccurs(XsdBuilder builder, string value) {} // 0x00000001899040C8-0x00000001899040EC
+		private static void BuildElement_MinOccurs(XsdBuilder builder, string value) {} // 0x00000001899040EC-0x0000000189904110
+		private static void BuildElement_Name(XsdBuilder builder, string value) {} // 0x0000000189904110-0x0000000189904140
+		private static void BuildElement_Nillable(XsdBuilder builder, string value) {} // 0x0000000189904140-0x00000001899041B4
+		private static void BuildElement_Ref(XsdBuilder builder, string value) {} // 0x00000001899041B4-0x000000018990422C
+		private static void BuildElement_Type(XsdBuilder builder, string value) {} // 0x00000001899042A4-0x000000018990431C
+		private static void InitSimpleType(XsdBuilder builder, string value) {} // 0x0000000189907234-0x00000001899075B0
+		private static void BuildSimpleType_Name(XsdBuilder builder, string value) {} // 0x0000000189904DA4-0x0000000189904DD0
+		private static void BuildSimpleType_Final(XsdBuilder builder, string value) {} // 0x0000000189904D34-0x0000000189904DA4
+		private static void InitSimpleTypeUnion(XsdBuilder builder, string value) {} // 0x0000000189907150-0x0000000189907234
+		private static void BuildSimpleTypeUnion_MemberTypes(XsdBuilder builder, string value) {} // 0x0000000189904B90-0x0000000189904D34
+		private static void InitSimpleTypeList(XsdBuilder builder, string value) {} // 0x0000000189906F88-0x000000018990706C
+		private static void BuildSimpleTypeList_ItemType(XsdBuilder builder, string value) {} // 0x0000000189904A98-0x0000000189904B14
+		private static void InitSimpleTypeRestriction(XsdBuilder builder, string value) {} // 0x000000018990706C-0x0000000189907150
+		private static void BuildSimpleTypeRestriction_Base(XsdBuilder builder, string value) {} // 0x0000000189904B14-0x0000000189904B90
+		private static void InitComplexType(XsdBuilder builder, string value) {} // 0x0000000189905DD0-0x0000000189905F6C
+		private static void BuildComplexType_Abstract(XsdBuilder builder, string value) {} // 0x0000000189903ACC-0x0000000189903B54
+		private static void BuildComplexType_Block(XsdBuilder builder, string value) {} // 0x0000000189903B54-0x0000000189903BC8
+		private static void BuildComplexType_Final(XsdBuilder builder, string value) {} // 0x0000000189903BC8-0x0000000189903C38
+		private static void BuildComplexType_Mixed(XsdBuilder builder, string value) {} // 0x0000000189903C38-0x0000000189903CB4
+		private static void BuildComplexType_Name(XsdBuilder builder, string value) {} // 0x0000000189903CB4-0x0000000189903CE0
+		private static void InitComplexContent(XsdBuilder builder, string value) {} // 0x0000000189905CAC-0x0000000189905DD0
+		private static void BuildComplexContent_Mixed(XsdBuilder builder, string value) {} // 0x0000000189903A58-0x0000000189903ACC
+		private static void InitComplexContentExtension(XsdBuilder builder, string value) {} // 0x0000000189905B34-0x0000000189905C18
+		private static void BuildComplexContentExtension_Base(XsdBuilder builder, string value) {} // 0x0000000189903960-0x00000001899039DC
+		private static void InitComplexContentRestriction(XsdBuilder builder, string value) {} // 0x0000000189905C18-0x0000000189905CAC
+		private static void BuildComplexContentRestriction_Base(XsdBuilder builder, string value) {} // 0x00000001899039DC-0x0000000189903A58
+		private static void InitSimpleContent(XsdBuilder builder, string value) {} // 0x0000000189906E64-0x0000000189906F88
+		private static void InitSimpleContentExtension(XsdBuilder builder, string value) {} // 0x0000000189906C9C-0x0000000189906D80
+		private static void BuildSimpleContentExtension_Base(XsdBuilder builder, string value) {} // 0x00000001899049A0-0x0000000189904A1C
+		private static void InitSimpleContentRestriction(XsdBuilder builder, string value) {} // 0x0000000189906D80-0x0000000189906E64
+		private static void BuildSimpleContentRestriction_Base(XsdBuilder builder, string value) {} // 0x0000000189904A1C-0x0000000189904A98
+		private static void InitAttributeGroup(XsdBuilder builder, string value) {} // 0x00000001899058F8-0x00000001899059C4
+		private static void BuildAttributeGroup_Name(XsdBuilder builder, string value) {} // 0x0000000189903678-0x00000001899036A4
+		private static void InitAttributeGroupRef(XsdBuilder builder, string value) {} // 0x0000000189905868-0x00000001899058F8
+		private static void BuildAttributeGroupRef_Ref(XsdBuilder builder, string value) {} // 0x00000001899035FC-0x0000000189903678
+		private static void InitAnyAttribute(XsdBuilder builder, string value) {} // 0x0000000189905434-0x0000000189905708
+		private static void BuildAnyAttribute_Namespace(XsdBuilder builder, string value) {} // 0x00000001899033F8-0x0000000189903424
+		private static void BuildAnyAttribute_ProcessContents(XsdBuilder builder, string value) {} // 0x0000000189903424-0x00000001899034C4
+		private static void InitGroup(XsdBuilder builder, string value) {} // 0x0000000189906614-0x00000001899066E0
+		private static void BuildGroup_Name(XsdBuilder builder, string value) {} // 0x000000018990446C-0x0000000189904498
+		private static void InitGroupRef(XsdBuilder builder, string value) {} // 0x0000000189906570-0x0000000189906614
+		private static void BuildParticle_MaxOccurs(XsdBuilder builder, string value) {} // 0x00000001899046AC-0x00000001899046D4
+		private static void BuildParticle_MinOccurs(XsdBuilder builder, string value) {} // 0x00000001899046D4-0x00000001899046FC
+		private static void BuildGroupRef_Ref(XsdBuilder builder, string value) {} // 0x00000001899043F0-0x000000018990446C
+		private static void InitAll(XsdBuilder builder, string value) {} // 0x0000000189905290-0x0000000189905334
+		private static void InitChoice(XsdBuilder builder, string value) {} // 0x0000000189905A90-0x0000000189905B34
+		private static void InitSequence(XsdBuilder builder, string value) {} // 0x0000000189906BF8-0x0000000189906C9C
+		private static void InitAny(XsdBuilder builder, string value) {} // 0x0000000189905708-0x00000001899057AC
+		private static void BuildAny_Namespace(XsdBuilder builder, string value) {} // 0x00000001899034C4-0x00000001899034F0
+		private static void BuildAny_ProcessContents(XsdBuilder builder, string value) {} // 0x00000001899034F0-0x0000000189903594
+		private static void InitNotation(XsdBuilder builder, string value) {} // 0x00000001899069A0-0x0000000189906A44
+		private static void BuildNotation_Name(XsdBuilder builder, string value) {} // 0x0000000189904628-0x0000000189904654
+		private static void BuildNotation_Public(XsdBuilder builder, string value) {} // 0x0000000189904654-0x0000000189904680
+		private static void BuildNotation_System(XsdBuilder builder, string value) {} // 0x0000000189904680-0x00000001899046AC
+		private static void InitFacet(XsdBuilder builder, string value) {} // 0x0000000189906118-0x00000001899064AC
+		private static void BuildFacet_Fixed(XsdBuilder builder, string value) {} // 0x000000018990431C-0x0000000189904398
+		private static void BuildFacet_Value(XsdBuilder builder, string value) {} // 0x0000000189904398-0x00000001899043C4
+		private static void InitIdentityConstraint(XsdBuilder builder, string value) {} // 0x00000001899066E0-0x0000000189906830
+		private static void BuildIdentityConstraint_Name(XsdBuilder builder, string value) {} // 0x0000000189904498-0x00000001899044C4
+		private static void BuildIdentityConstraint_Refer(XsdBuilder builder, string value) {} // 0x00000001899044C4-0x00000001899045A4
+		private static void InitSelector(XsdBuilder builder, string value) {} // 0x0000000189906B34-0x0000000189906BF8
+		private static void BuildSelector_XPath(XsdBuilder builder, string value) {} // 0x00000001899043C4-0x00000001899043F0
+		private static void InitField(XsdBuilder builder, string value) {} // 0x00000001899064AC-0x0000000189906570
+		private static void BuildField_XPath(XsdBuilder builder, string value) {} // 0x00000001899043C4-0x00000001899043F0
+		private static void InitAnnotation(XsdBuilder builder, string value) {} // 0x0000000189905334-0x0000000189905434
+		private static void InitAppinfo(XsdBuilder builder, string value) {} // 0x00000001899057AC-0x0000000189905868
+		private static void BuildAppinfo_Source(XsdBuilder builder, string value) {} // 0x0000000189903594-0x00000001899035FC
+		private static void EndAppinfo(XsdBuilder builder) {} // 0x0000000189904DD0-0x0000000189904E04
+		private static void InitDocumentation(XsdBuilder builder, string value) {} // 0x0000000189905F6C-0x0000000189906028
+		private static void BuildDocumentation_Source(XsdBuilder builder, string value) {} // 0x0000000189903CE0-0x0000000189903D48
+		private static void BuildDocumentation_XmlLang(XsdBuilder builder, string value) {} // 0x0000000189903D48-0x0000000189903E74
+		private static void EndDocumentation(XsdBuilder builder) {} // 0x0000000189904E48-0x0000000189904E7C
+		private void AddAttribute(XmlSchemaObject value) {} // 0x0000000189902E7C-0x00000001899030E0
+		private void AddParticle(XmlSchemaParticle particle) {} // 0x00000001899030E0-0x00000001899033CC
+		private bool GetNextState(XmlQualifiedName qname) => default; // 0x0000000189905118-0x0000000189905290
+		private bool IsSkipableElement(XmlQualifiedName qname) => default; // 0x00000001899075CC-0x00000001899075FC
+		private void SetMinOccurs(XmlSchemaParticle particle, string value) {} // 0x0000000189909138-0x00000001899091E8
+		private void SetMaxOccurs(XmlSchemaParticle particle, string value) {} // 0x0000000189909088-0x0000000189909138
+		private bool ParseBoolean(string value, string attributeName) => default; // 0x0000000189907834-0x0000000189907924
+		private int ParseEnum(string value, string attributeName, string[] values) => default; // 0x0000000189907924-0x00000001899079EC
+		private XmlQualifiedName ParseQName(string value, string attributeName) => default; // 0x00000001899079EC-0x0000000189907B2C
+		private int ParseBlockFinalEnum(string value, string attributeName) => default; // 0x00000001899075FC-0x0000000189907834
+		private static string ParseUriReference(string s) => default; // 0x000000018339AE90-0x000000018339AEA0
+		private void SendValidationEvent(string code, string arg0, string arg1, string arg2) {} // 0x0000000189908334-0x0000000189908488
+		private void SendValidationEvent(string code, string msg) {} // 0x0000000189908488-0x000000018990857C
+		private void SendValidationEvent(string code, string[] args, XmlSeverityType severity) {} // 0x0000000189908668-0x0000000189908760
+		private void SendValidationEvent(XmlSchemaException e, XmlSeverityType severity) {} // 0x000000018990857C-0x0000000189908668
+		private void SendValidationEvent(XmlSchemaException e) {} // 0x0000000189908328-0x0000000189908334
+		private void RecordPosition() {} // 0x0000000189908270-0x0000000189908328
+	}
+
+	[Flags]
+	internal enum XsdDateTimeFlags // TypeDefIndex: 43045
+	{
+		DateTime = 1,
+		Time = 2,
+		Date = 4,
+		GYearMonth = 8,
+		GYear = 16,
+		GMonthDay = 32,
+		GDay = 64,
+		GMonth = 128,
+		AllXsd = 255,
+		XdrDateTimeNoTz = 256,
+		XdrDateTime = 512,
+		XdrTimeNoTz = 1024
+	}
+
+	internal struct XsdDateTime // TypeDefIndex: 43049
+	{
+		// Fields
+		private System.DateTime dt; // 0x00
+		private uint extra; // 0x08
+		private static readonly int Lzyyyy; // 0x00
+		private static readonly int Lzyyyy_; // 0x04
+		private static readonly int Lzyyyy_MM; // 0x08
+		private static readonly int Lzyyyy_MM_; // 0x0C
+		private static readonly int Lzyyyy_MM_dd; // 0x10
+		private static readonly int Lzyyyy_MM_ddT; // 0x14
+		private static readonly int LzHH; // 0x18
+		private static readonly int LzHH_; // 0x1C
+		private static readonly int LzHH_mm; // 0x20
+		private static readonly int LzHH_mm_; // 0x24
+		private static readonly int LzHH_mm_ss; // 0x28
+		private static readonly int Lz_; // 0x2C
+		private static readonly int Lz_zz; // 0x30
+		private static readonly int Lz_zz_; // 0x34
+		private static readonly int Lz_zz_zz; // 0x38
+		private static readonly int Lz__; // 0x3C
+		private static readonly int Lz__mm; // 0x40
+		private static readonly int Lz__mm_; // 0x44
+		private static readonly int Lz__mm__; // 0x48
+		private static readonly int Lz__mm_dd; // 0x4C
+		private static readonly int Lz___; // 0x50
+		private static readonly int Lz___dd; // 0x54
+		private static readonly XmlTypeCode[] typeCodes; // 0x58
+	
+		// Properties
+		private DateTimeTypeCode InternalTypeCode { get => default; } // 0x0000000183D55A70-0x0000000183D55A80 
+		private XsdDateTimeKind InternalKind { get => default; } // 0x0000000183D55A50-0x0000000183D55A60 
+		public int Year { get => default; } // 0x000000018991A9B4-0x000000018991AA00 
+		public int Month { get => default; } // 0x000000018991A91C-0x000000018991A968 
+		public int Day { get => default; } // 0x000000018991A740-0x000000018991A78C 
+		public int Hour { get => default; } // 0x000000018991A884-0x000000018991A8D0 
+		public int Minute { get => default; } // 0x000000018991A8D0-0x000000018991A91C 
+		public int Second { get => default; } // 0x000000018991A968-0x000000018991A9B4 
+		public int Fraction { get => default; } // 0x000000018991A78C-0x000000018991A884 
+		public int ZoneHour { get => default; } // 0x0000000183D55A40-0x0000000183D55A50 
+		public int ZoneMinute { get => default; } // 0x0000000183D557D0-0x0000000183D557E0 
+	
+		// Nested types
+		private enum DateTimeTypeCode // TypeDefIndex: 43046
+		{
+			DateTime = 0,
+			Time = 1,
+			Date = 2,
+			GYearMonth = 3,
+			GYear = 4,
+			GMonthDay = 5,
+			GDay = 6,
+			GMonth = 7,
+			XdrDateTime = 8
+		}
+	
+		private enum XsdDateTimeKind // TypeDefIndex: 43047
+		{
+			Unspecified = 0,
+			Zulu = 1,
+			LocalWestOfZulu = 2,
+			LocalEastOfZulu = 3
+		}
+	
+		private struct Parser // TypeDefIndex: 43048
+		{
+			// Fields
+			public DateTimeTypeCode typeCode; // 0x00
+			public int year; // 0x04
+			public int month; // 0x08
+			public int day; // 0x0C
+			public int hour; // 0x10
+			public int minute; // 0x14
+			public int second; // 0x18
+			public int fraction; // 0x1C
+			public XsdDateTimeKind kind; // 0x20
+			public int zoneHour; // 0x24
+			public int zoneMinute; // 0x28
+			private string text; // 0x30
+			private int length; // 0x38
+			private static int[] Power10; // 0x00
+	
+			// Constructors
+			static Parser() {
+				Power10 = default;
+			} // 0x0000000189918558-0x00000001899185E4
+	
+			// Methods
+			public bool Parse(string text, XsdDateTimeFlags kinds) => default; // 0x0000000189917B44-0x0000000189918558
+			private bool ParseDate(int start) => default; // 0x00000001899173A4-0x0000000189917580
+			private bool ParseTimeAndZoneAndWhitespace(int start) => default; // 0x00000001899175E4-0x0000000189917658
+			private bool ParseTimeAndWhitespace(int start) => default; // 0x0000000189917580-0x00000001899175E4
+			private bool ParseTime(ref int start) => default; // 0x0000000189917658-0x0000000189917944
+			private bool ParseZoneAndWhitespace(int start) => default; // 0x0000000189917944-0x0000000189917B44
+			private bool Parse4Dig(int start, ref int num) => default; // 0x0000000189917280-0x000000018991736C
+			private bool Parse2Dig(int start, ref int num) => default; // 0x00000001899171F4-0x0000000189917280
+			private bool ParseChar(int start, char ch) => default; // 0x000000018991736C-0x00000001899173A4
+			private static bool Test(XsdDateTimeFlags left, XsdDateTimeFlags right) => default; // 0x0000000185D658E8-0x0000000185D658F0
+		}
+	
+		// Constructors
+		public XsdDateTime(string text, XsdDateTimeFlags kinds) : this() {
+			dt = default;
+			extra = default;
+		} // 0x000000018991A2D0-0x000000018991A4A4
+		private XsdDateTime(Parser parser) : this() {
+			dt = default;
+			extra = default;
+		} // 0x000000018991A4A4-0x000000018991A520
+		public XsdDateTime(System.DateTime dateTime, XsdDateTimeFlags kinds) : this() {
+			dt = default;
+			extra = default;
+		} // 0x000000018991A520-0x000000018991A6E0
+		public XsdDateTime(DateTimeOffset dateTimeOffset) : this() {
+			dt = default;
+			extra = default;
+		} // 0x000000018991A6E0-0x000000018991A740
+		public XsdDateTime(DateTimeOffset dateTimeOffset, XsdDateTimeFlags kinds) : this() {
+			dt = default;
+			extra = default;
+		} // 0x000000018991A110-0x000000018991A2D0
+		static XsdDateTime() {
+			Lzyyyy = default;
+			Lzyyyy_ = default;
+			Lzyyyy_MM = default;
+			Lzyyyy_MM_ = default;
+			Lzyyyy_MM_dd = default;
+			Lzyyyy_MM_ddT = default;
+			LzHH = default;
+			LzHH_ = default;
+			LzHH_mm = default;
+			LzHH_mm_ = default;
+			LzHH_mm_ss = default;
+			Lz_ = default;
+			Lz_zz = default;
+			Lz_zz_ = default;
+			Lz_zz_zz = default;
+			Lz__ = default;
+			Lz__mm = default;
+			Lz__mm_ = default;
+			Lz__mm__ = default;
+			Lz__mm_dd = default;
+			Lz___ = default;
+			Lz___dd = default;
+			typeCodes = default;
+		} // 0x0000000189919C5C-0x000000018991A110
+	
+		// Methods
+		private void InitiateXsdDateTime(Parser parser) {} // 0x0000000189918EF8-0x0000000189919008
+		internal static bool TryParse(string text, XsdDateTimeFlags kinds, out XsdDateTime result) {
+			result = default;
+			return default;
+		} // 0x0000000189919B88-0x0000000189919C5C
+		public static implicit operator System.DateTime(XsdDateTime xdt) => default; // 0x000000018991AA00-0x000000018991AE80
+		public static implicit operator DateTimeOffset(XsdDateTime xdt) => default; // 0x000000018991AE80-0x000000018991B110
+		public override string ToString() => default; // 0x0000000189919688-0x0000000189919B88
+		private void PrintDate(StringBuilder sb) {} // 0x0000000189919098-0x0000000189919220
+		private void PrintTime(StringBuilder sb) {} // 0x0000000189919220-0x0000000189919464
+		private void PrintZone(StringBuilder sb) {} // 0x0000000189919464-0x0000000189919608
+		private void IntToCharArray(char[] text, int start, int value, int digits) {} // 0x0000000189919008-0x0000000189919098
+		private void ShortToCharArray(char[] text, int start, int value) {} // 0x0000000189919608-0x0000000189919688
+	}
+
+	internal struct XsdDuration // TypeDefIndex: 43052
+	{
+		// Fields
+		private int years; // 0x00
+		private int months; // 0x04
+		private int days; // 0x08
+		private int hours; // 0x0C
+		private int minutes; // 0x10
+		private int seconds; // 0x14
+		private uint nanoseconds; // 0x18
+	
+		// Properties
+		public bool IsNegative { get => default; } // 0x000000018991C810-0x000000018991C81C 
+		public int Years { get => default; } // 0x0000000183D4E980-0x0000000183D4E990 
+		public int Months { get => default; } // 0x0000000183D4E990-0x0000000183D4E9A0 
+		public int Days { get => default; } // 0x0000000183D516F0-0x0000000183D51700 
+		public int Hours { get => default; } // 0x0000000183D4FBF0-0x0000000183D4FC00 
+		public int Minutes { get => default; } // 0x0000000183D4E340-0x0000000183D4E350 
+		public int Seconds { get => default; } // 0x0000000183D50CC0-0x0000000183D50CD0 
+		public int Nanoseconds { get => default; } // 0x0000000183D75910-0x0000000183D75920 
+	
+		// Nested types
+		private enum Parts // TypeDefIndex: 43050
+		{
+			HasNone = 0,
+			HasYears = 1,
+			HasMonths = 2,
+			HasDays = 4,
+			HasHours = 8,
+			HasMinutes = 16,
+			HasSeconds = 32
+		}
+	
+		public enum DurationType // TypeDefIndex: 43051
+		{
+			Duration = 0,
+			YearMonthDuration = 1,
+			DayTimeDuration = 2
+		}
+	
+		// Constructors
+		public XsdDuration(bool isNegative, int years, int months, int days, int hours, int minutes, int seconds, int nanoseconds) : this() {
+			this.years = default;
+			this.months = default;
+			this.days = default;
+			this.hours = default;
+			this.minutes = default;
+			this.seconds = default;
+			this.nanoseconds = default;
+		} // 0x000000018991C530-0x000000018991C804
+		public XsdDuration(TimeSpan timeSpan) : this() {
+			years = default;
+			months = default;
+			days = default;
+			hours = default;
+			minutes = default;
+			seconds = default;
+			nanoseconds = default;
+		} // 0x000000018991C2A8-0x000000018991C2B4
+		public XsdDuration(TimeSpan timeSpan, DurationType durationType) : this() {
+			years = default;
+			months = default;
+			days = default;
+			hours = default;
+			minutes = default;
+			seconds = default;
+			nanoseconds = default;
+		} // 0x000000018991C2B4-0x000000018991C488
+		public XsdDuration(string s) : this() {
+			years = default;
+			months = default;
+			days = default;
+			hours = default;
+			minutes = default;
+			seconds = default;
+			nanoseconds = default;
+		} // 0x000000018991C804-0x000000018991C810
+		public XsdDuration(string s, DurationType durationType) : this() {
+			years = default;
+			months = default;
+			days = default;
+			hours = default;
+			minutes = default;
+			seconds = default;
+			nanoseconds = default;
+		} // 0x000000018991C488-0x000000018991C530
+	
+		// Methods
+		public TimeSpan ToTimeSpan() => default; // 0x000000018991B4B0-0x000000018991B4BC
+		public TimeSpan ToTimeSpan(DurationType durationType) => default; // 0x000000018991B4BC-0x000000018991B500
+		internal Exception TryToTimeSpan(out TimeSpan result) {
+			result = default;
+			return default;
+		} // 0x000000018991BCD0-0x000000018991BCE0
+		internal Exception TryToTimeSpan(DurationType durationType, out TimeSpan result) {
+			result = default;
+			return default;
+		} // 0x000000018991BCE0-0x000000018991C2A8
+		public override string ToString() => default; // 0x000000018991B110-0x000000018991B11C
+		internal string ToString(DurationType durationType) => default; // 0x000000018991B11C-0x000000018991B4B0
+		internal static Exception TryParse(string s, out XsdDuration result) {
+			result = default;
+			return default;
+		} // 0x000000018991B63C-0x000000018991B64C
+		internal static Exception TryParse(string s, DurationType durationType, out XsdDuration result) {
+			result = default;
+			return default;
+		} // 0x000000018991B64C-0x000000018991BCD0
+		private static string TryParseDigits(string s, ref int offset, bool eatDigits, out int result, out int numDigits) {
+			result = default;
+			numDigits = default;
+			return default;
+		} // 0x000000018991B500-0x000000018991B63C
+	}
+
+	internal sealed class XsdValidator : BaseValidator // TypeDefIndex: 43053
+	{
+		// Fields
+		private int startIDConstraint; // 0x80
+		private HWStack validationStack; // 0x88
+		private Hashtable attPresence; // 0x90
+		private XmlNamespaceManager nsManager; // 0x98
+		private bool bManageNamespaces; // 0xA0
+		private Hashtable IDs; // 0xA8
+		private IdRefNode idRefListHead; // 0xB0
+		private System.Xml.Schema.Parser inlineSchemaParser; // 0xB8
+		private XmlSchemaContentProcessing processContents; // 0xC0
+		private static readonly XmlSchemaDatatype dtCDATA; // 0x00
+		private static readonly XmlSchemaDatatype dtQName; // 0x08
+		private static readonly XmlSchemaDatatype dtStringArray; // 0x10
+		private string NsXmlNs; // 0xC8
+		private string NsXs; // 0xD0
+		private string NsXsi; // 0xD8
+		private string XsiType; // 0xE0
+		private string XsiNil; // 0xE8
+		private string XsiSchemaLocation; // 0xF0
+		private string XsiNoNamespaceSchemaLocation; // 0xF8
+		private string XsdSchema; // 0x100
+	
+		// Properties
+		private bool IsInlineSchemaStarted { get => default; } // 0x00000001898CFEDC-0x00000001898CFEE8 
+		private bool HasSchema { get => default; } // 0x00000001898CFEBC-0x00000001898CFEDC 
+		public override bool PreserveWhitespace { get => default; } // 0x00000001898CFEE8-0x00000001898CFF24 
+		private bool HasIdentityConstraints { get => default; } // 0x0000000189921B2C-0x0000000189921B38 
+	
+		// Constructors
+		public XsdValidator() {} // Dummy constructor
+		internal XsdValidator(BaseValidator validator) {} // 0x0000000189921B00-0x0000000189921B2C
+		internal XsdValidator(XmlValidatingReaderImpl reader, XmlSchemaCollection schemaCollection, IValidationEventHandling eventHandling) {} // 0x0000000189921AD0-0x0000000189921B00
+		static XsdValidator() {} // 0x00000001899219FC-0x0000000189921AD0
+	
+		// Methods
+		private void Init() {} // 0x000000018991EAC8-0x000000018991EE90
+		public override void Validate() {} // 0x0000000189921950-0x00000001899219FC
+		public override void CompleteValidation() {} // 0x000000018991D560-0x000000018991D568
+		private void ProcessInlineSchema() {} // 0x000000018991F930-0x000000018991FBB8
+		private void ValidateElement() {} // 0x0000000189920BA0-0x0000000189920D38
+		private object ValidateChildElement() => default; // 0x00000001899209A0-0x0000000189920BA0
+		private void ProcessElement(object particle) {} // 0x000000018991F6D8-0x000000018991F930
+		private void ProcessXsiAttributes(out XmlQualifiedName xsiType, out string xsiNil) {
+			xsiType = default;
+			xsiNil = default;
+		} // 0x000000018991FDA8-0x0000000189920400
+		private void ValidateEndElement() {} // 0x0000000189920D38-0x0000000189920F2C
+		private SchemaElementDecl FastGetElementDecl(object particle) => default; // 0x000000018991EA28-0x000000018991EAC8
+		private SchemaElementDecl ThoroughGetElementDecl(SchemaElementDecl elementDecl, XmlQualifiedName xsiType, string xsiNil) => default; // 0x000000018992058C-0x0000000189920958
+		private void ValidateStartElement() {} // 0x0000000189921318-0x0000000189921950
+		private void ValidateEndStartElement() {} // 0x0000000189920F2C-0x00000001899212C8
+		private void LoadSchemaFromLocation(string uri, string url) {} // 0x000000018991EEA8-0x000000018991F438
+		private void LoadSchema(string uri, string url) {} // 0x000000018991F438-0x000000018991F5FC
+		private void ProcessTokenizedType(XmlTokenizedType ttype, string name) {} // 0x000000018991FBB8-0x000000018991FDA8
+		private void CheckValue(string value, SchemaAttDef attdef) {} // 0x000000018991D198-0x000000018991D560
+		internal void AddID(string name, object node) {} // 0x000000018991C87C-0x000000018991C928
+		public override object FindId(string name) => default; // 0x00000001898CDC68-0x00000001898CDC90
+		public bool IsXSDRoot(string localName, string ns) => default; // 0x000000018991EE90-0x000000018991EEA8
+		private void Push(XmlQualifiedName elementName) {} // 0x0000000189920400-0x000000018992058C
+		private void Pop() {} // 0x000000018991F5FC-0x000000018991F6D8
+		private void CheckForwardRefs() {} // 0x000000018991D060-0x000000018991D198
+		private void ValidateStartElementIdentityConstraints() {} // 0x00000001899212C8-0x0000000189921318
+		private void AddIdentityConstraints() {} // 0x000000018991C928-0x000000018991CDA8
+		private void ElementIdentityConstraints() {} // 0x000000018991D568-0x000000018991D894
+		private void AttributeIdentityConstraints(string name, string ns, object obj, string sobj, SchemaAttDef attdef) {} // 0x000000018991CDA8-0x000000018991D060
+		private object UnWrapUnion(object typedValue) => default; // 0x0000000189920958-0x00000001899209A0
+		private void EndElementIdentityConstraints() {} // 0x000000018991D894-0x000000018991EA28
+	}
+}
+
+namespace System.Xml.Serialization
+{
+	public class CodeIdentifier // TypeDefIndex: 42664
+	{
+		// Fields
+		internal static CodeDomProvider csharp; // 0x00
+	
+		// Constructors
+		public CodeIdentifier() {} // Dummy constructor
+		static CodeIdentifier() {} // 0x0000000189976FF4-0x0000000189977064
+	
+		// Methods
+		public static string MakePascal(string identifier) => default; // 0x0000000189976D60-0x0000000189976EB8
+		public static string MakeValid(string identifier) => default; // 0x0000000189976EB8-0x0000000189976FF4
+		private static bool IsValidStart(char c) => default; // 0x0000000189976C6C-0x0000000189976CB4
+		private static bool IsValid(char c) => default; // 0x0000000189976CB4-0x0000000189976D60
+	}
+
+	public class XmlSerializerNamespaces // TypeDefIndex: 42665
+	{
+		// Fields
+		private Hashtable namespaces; // 0x10
+	
+		// Properties
+		public int Count { get => default; } // 0x000000018998EF00-0x000000018998EF28 
+		internal ArrayList NamespaceList { get => default; } // 0x000000018998EF28-0x000000018998F1E0 
+		internal Hashtable Namespaces { get => default; set {} } // 0x000000018998F1E0-0x000000018998F250 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Constructors
+		public XmlSerializerNamespaces() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public void Add(string prefix, string ns) {} // 0x000000018998EDB0-0x000000018998EE48
+		internal void AddInternal(string prefix, string ns) {} // 0x000000018998ED70-0x000000018998EDB0
+		public XmlQualifiedName[] ToArray() => default; // 0x000000018998EE48-0x000000018998EF00
+	}
+
+	public delegate void XmlAttributeEventHandler(object sender, XmlAttributeEventArgs e); // TypeDefIndex: 42666; 0x0000000182065C10-0x0000000182065C20
+
+	public class XmlAttributeEventArgs : EventArgs // TypeDefIndex: 42667
+	{
+		// Fields
+		private object o; // 0x10
+		private XmlAttribute attr; // 0x18
+		private string qnames; // 0x20
+		private int lineNumber; // 0x28
+		private int linePosition; // 0x2C
+	
+		// Constructors
+		public XmlAttributeEventArgs() {} // Dummy constructor
+		internal XmlAttributeEventArgs(XmlAttribute attr, int lineNumber, int linePosition, object o, string qnames) {} // 0x000000018998444C-0x00000001899844E0
+	}
+
+	public delegate void XmlElementEventHandler(object sender, XmlElementEventArgs e); // TypeDefIndex: 42668; 0x0000000182065C10-0x0000000182065C20
+
+	public class XmlElementEventArgs : EventArgs // TypeDefIndex: 42669
+	{
+		// Fields
+		private object o; // 0x10
+		private XmlElement elem; // 0x18
+		private string qnames; // 0x20
+		private int lineNumber; // 0x28
+		private int linePosition; // 0x2C
+	
+		// Constructors
+		public XmlElementEventArgs() {} // Dummy constructor
+		internal XmlElementEventArgs(XmlElement elem, int lineNumber, int linePosition, object o, string qnames) {} // 0x000000018998BA84-0x000000018998BB18
+	}
+
+	public delegate void XmlNodeEventHandler(object sender, XmlNodeEventArgs e); // TypeDefIndex: 42670; 0x0000000182065C10-0x0000000182065C20
+
+	public class XmlNodeEventArgs : EventArgs // TypeDefIndex: 42671
+	{
+		// Fields
+		private object o; // 0x10
+		private XmlNode xmlNode; // 0x18
+		private int lineNumber; // 0x20
+		private int linePosition; // 0x24
+	
+		// Constructors
+		public XmlNodeEventArgs() {} // Dummy constructor
+		internal XmlNodeEventArgs(XmlNode xmlNode, int lineNumber, int linePosition, object o) {} // 0x000000018998DB80-0x000000018998DC04
+	}
+
+	public delegate void UnreferencedObjectEventHandler(object sender, UnreferencedObjectEventArgs e); // TypeDefIndex: 42672; 0x0000000182065C10-0x0000000182065C20
+
+	public class UnreferencedObjectEventArgs : EventArgs // TypeDefIndex: 42673
+	{
+		// Fields
+		private object o; // 0x10
+		private string id; // 0x18
+	
+		// Constructors
+		public UnreferencedObjectEventArgs() {} // Dummy constructor
+		public UnreferencedObjectEventArgs(object o, string id) {} // 0x000000018998084C-0x00000001899808B8
+	}
+
+	public interface IXmlSerializable // TypeDefIndex: 42674
+	{
+		// Methods
+		XmlSchema GetSchema();
+		void ReadXml(XmlReader reader);
+		void WriteXml(XmlWriter writer);
+	}
+
+	public interface IXmlTextParser // TypeDefIndex: 42675
+	{
+		// Properties
+		bool Normalized { get; set; }
+	}
+
+	internal class KeyHelper // TypeDefIndex: 42676
+	{
+		// Constructors
+		public KeyHelper() {} // Dummy constructor
+	
+		// Methods
+		public static void AddField(StringBuilder sb, int n, string val) {} // 0x0000000189977360-0x000000018997737C
+		public static void AddField(StringBuilder sb, int n, string val, string def) {} // 0x0000000189977460-0x000000018997752C
+		public static void AddField(StringBuilder sb, int n, bool val) {} // 0x000000018997752C-0x0000000189977548
+		public static void AddField(StringBuilder sb, int n, bool val, bool def) {} // 0x000000018997737C-0x00000001899773B8
+		public static void AddField(StringBuilder sb, int n, int val, int def) {} // 0x00000001899773B8-0x0000000189977460
+		public static void AddField(StringBuilder sb, int n, System.Type val) {} // 0x00000001899772B0-0x0000000189977360
+	}
+
+	internal class ReflectionHelper // TypeDefIndex: 42677
+	{
+		// Fields
+		private Hashtable _clrTypes; // 0x10
+		private Hashtable _schemaTypes; // 0x18
+		private static readonly ParameterModifier[] empty_modifiers; // 0x00
+	
+		// Constructors
+		public ReflectionHelper() {} // 0x0000000189977C20-0x0000000189977CB0
+		static ReflectionHelper() {} // 0x0000000189977BBC-0x0000000189977C20
+	
+		// Methods
+		public void RegisterSchemaType(XmlTypeMapping map, string xmlType, string ns) {} // 0x0000000189977B18-0x0000000189977BBC
+		public XmlTypeMapping GetRegisteredSchemaType(string xmlType, string ns) => default; // 0x000000018997797C-0x0000000189977A0C
+		public void RegisterClrType(XmlTypeMapping map, System.Type type, string ns) {} // 0x0000000189977A0C-0x0000000189977B18
+		public XmlTypeMapping GetRegisteredClrType(System.Type type, string ns) => default; // 0x0000000189977884-0x000000018997797C
+		public static void CheckSerializableType(System.Type type, bool allowPrivateConstructors) {} // 0x0000000189977578-0x0000000189977884
+	}
+
+	internal enum SchemaTypes // TypeDefIndex: 42678
+	{
+		NotSet = 0,
+		Primitive = 1,
+		Enum = 2,
+		Array = 3,
+		Class = 4,
+		XmlSerializable = 5,
+		XmlNode = 6,
+		Void = 7
+	}
+
+	internal abstract class SerializationSource // TypeDefIndex: 42679
+	{
+		// Fields
+		private System.Type[] includedTypes; // 0x10
+		private string namspace; // 0x18
+		private bool canBeGenerated; // 0x20
+	
+		// Constructors
+		protected SerializationSource() {} // Dummy constructor
+		public SerializationSource(string namspace, System.Type[] includedTypes) {} // 0x0000000189977ECC-0x0000000189977EF8
+	
+		// Methods
+		protected bool BaseEquals(SerializationSource other) => default; // 0x0000000189977DFC-0x0000000189977ECC
+	}
+
+	internal class XmlTypeSerializationSource : SerializationSource // TypeDefIndex: 42680
+	{
+		// Fields
+		private string attributeOverridesHash; // 0x28
+		private System.Type type; // 0x30
+		private string rootHash; // 0x38
+	
+		// Constructors
+		public XmlTypeSerializationSource() {} // Dummy constructor
+		public XmlTypeSerializationSource(System.Type type, XmlRootAttribute root, XmlAttributeOverrides attributeOverrides, string namspace, System.Type[] includedTypes) {} // 0x000000018998F2F8-0x000000018998F414
+	
+		// Methods
+		public override bool Equals(object o) => default; // 0x000000018998F250-0x000000018998F2F8
+		public override int GetHashCode() => default; // 0x0000000189202044-0x0000000189202068
+	}
+
+	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+	internal class XmlTypeConvertorAttribute : Attribute // TypeDefIndex: 42681
+	{
+		// Properties
+		public string Method { get; private set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Constructors
+		public XmlTypeConvertorAttribute() {} // Dummy constructor
+		public XmlTypeConvertorAttribute(string method) {} // 0x000000018426FEE0-0x000000018426FEF0
+	}
+
+	internal class TypeData // TypeDefIndex: 42682
+	{
+		// Fields
+		private System.Type type; // 0x10
+		private string elementName; // 0x18
+		private SchemaTypes sType; // 0x20
+		private System.Type listItemType; // 0x28
+		private string typeName; // 0x30
+		private string fullTypeName; // 0x38
+		private TypeData listItemTypeData; // 0x40
+		private TypeData mappedType; // 0x48
+		private XmlSchemaPatternFacet facet; // 0x50
+		private MethodInfo typeConvertor; // 0x58
+		private bool hasPublicConstructor; // 0x60
+		private bool nullableOverride; // 0x61
+		private static string[] keywords; // 0x00
+	
+		// Properties
+		public string TypeName { get => default; } // 0x0000000181003830-0x0000000181003840 
+		public string XmlType { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public System.Type Type { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public string FullTypeName { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		public SchemaTypes SchemaType { get => default; } // 0x0000000181003B50-0x0000000181003B60 
+		public bool IsListType { get => default; } // 0x0000000189979200-0x0000000189979208 
+		public bool IsComplexType { get => default; } // 0x00000001899791D4-0x0000000189979200 
+		public bool IsValueType { get => default; } // 0x00000001899792D0-0x0000000189979344 
+		public bool IsNullable { get => default; set {} } // 0x0000000189979208-0x00000001899792D0 0x0000000183D5B410-0x0000000183D5B420
+		public TypeData ListItemTypeData { get => default; } // 0x0000000189979350-0x00000001899793E0 
+		public System.Type ListItemType { get => default; } // 0x00000001899793E0-0x0000000189979AB0 
+		public bool IsXsdType { get => default; } // 0x0000000189979344-0x0000000189979350 
+		public bool HasPublicConstructor { get => default; } // 0x0000000183D519A0-0x0000000183D519B0 
+	
+		// Constructors
+		public TypeData() {} // Dummy constructor
+		public TypeData(System.Type type, string elementName, bool isPrimitive) {} // 0x00000001899791B4-0x00000001899791D4
+		public TypeData(System.Type type, string elementName, bool isPrimitive, TypeData mappedType, XmlSchemaPatternFacet facet) {} // 0x0000000189978E2C-0x00000001899791B4
+		static TypeData() {} // 0x00000001899783B4-0x0000000189978E2C
+	
+		// Methods
+		private void LookupTypeConvertor() {} // 0x0000000189978318-0x00000001899783B4
+		internal void ConvertForAssignment(ref object value) {} // 0x0000000189977EF8-0x0000000189977FB4
+		public static PropertyInfo GetIndexerProperty(System.Type collectionType) => default; // 0x0000000189978220-0x0000000189978318
+		private static InvalidOperationException CreateMissingAddMethodException(System.Type type, string inheritFrom, System.Type argumentType) => default; // 0x0000000189977FB4-0x00000001899780A8
+		internal static System.Type GetGenericListItemType(System.Type type) => default; // 0x00000001899780A8-0x0000000189978220
+	}
+
+	internal sealed class TypeMember // TypeDefIndex: 42683
+	{
+		// Fields
+		private System.Type type; // 0x10
+		private string member; // 0x18
+	
+		// Constructors
+		public TypeMember() {} // Dummy constructor
+		internal TypeMember(System.Type type, string member) {} // 0x0000000182676770-0x00000001826767A0
+	
+		// Methods
+		public override int GetHashCode() => default; // 0x0000000189979B9C-0x0000000189979BE4
+		public override bool Equals(object obj) => default; // 0x0000000189979AB0-0x0000000189979B0C
+		public static bool Equals(TypeMember tm1, TypeMember tm2) => default; // 0x0000000189979B0C-0x0000000189979B9C
+		public override string ToString() => default; // 0x0000000189979BE4-0x0000000189979C40
+	}
+
+	internal class TypeTranslator // TypeDefIndex: 42684
+	{
+		// Fields
+		private static Hashtable nameCache; // 0x00
+		private static Hashtable primitiveTypes; // 0x08
+		private static Hashtable primitiveArrayTypes; // 0x10
+		private static Hashtable nullableTypes; // 0x18
+	
+		// Constructors
+		public TypeTranslator() {} // Dummy constructor
+		static TypeTranslator() {} // 0x000000018997A97C-0x000000018997DFAC
+	
+		// Methods
+		public static System.Xml.Serialization.TypeData GetTypeData(System.Type type) => default; // 0x000000018997A7B4-0x000000018997A804
+		public static System.Xml.Serialization.TypeData GetTypeData(System.Type runtimeType, string xmlDataType, bool underlyingEnumType = false /* Metadata: 0x01FB43CC */) => default; // 0x0000000189979F90-0x000000018997A7B4
+		public static System.Xml.Serialization.TypeData GetPrimitiveTypeData(string typeName) => default; // 0x0000000189979F44-0x0000000189979F90
+		public static System.Xml.Serialization.TypeData GetPrimitiveTypeData(string typeName, bool nullable) => default; // 0x0000000189979D94-0x0000000189979F44
+		public static System.Xml.Serialization.TypeData FindPrimitiveTypeData(string typeName) => default; // 0x0000000189979C40-0x0000000189979CBC
+		public static string GetArrayName(string elemName) => default; // 0x0000000189979CBC-0x0000000189979D94
+		public static void ParseArrayType(string arrayType, out string type, out string ns, out string dimensions) {
+			type = default;
+			ns = default;
+			dimensions = default;
+		} // 0x000000018997A804-0x000000018997A97C
+	}
+
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue)]
+	public class XmlAnyAttributeAttribute : Attribute // TypeDefIndex: 42685
+	{
+		// Constructors
+		public XmlAnyAttributeAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue, AllowMultiple = true)]
+	public class XmlAnyElementAttribute : Attribute // TypeDefIndex: 42686
+	{
+		// Fields
+		private string elementName; // 0x10
+		private string ns; // 0x18
+		private int order; // 0x20
+	
+		// Properties
+		public string Name { get => default; } // 0x000000018998F998-0x000000018998F9E4 
+		public string Namespace { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public int Order { get => default; } // 0x0000000181003B50-0x0000000181003B60 
+	
+		// Constructors
+		public XmlAnyElementAttribute() {} // 0x0000000183D5C2D0-0x0000000183D5C2E0
+	
+		// Methods
+		internal void AddKeyHash(StringBuilder sb) {} // 0x000000018998F90C-0x000000018998F998
+	}
+
+	public class XmlAnyElementAttributes : CollectionBase // TypeDefIndex: 42687
+	{
+		// Properties
+		public XmlAnyElementAttribute this[int index] { get => default; } // 0x000000018998FAA0-0x000000018998FAFC 
+		internal int Order { get => default; } // 0x000000018998FAFC-0x000000018998FC50 
+	
+		// Constructors
+		public XmlAnyElementAttributes() {} // 0x00000001891207C8-0x00000001891207D0
+	
+		// Methods
+		public int Add(XmlAnyElementAttribute attribute) => default; // 0x00000001898D6AC4-0x00000001898D6AE0
+		internal void AddKeyHash(StringBuilder sb) {} // 0x000000018998F9E4-0x000000018998FAA0
+	}
+
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue, AllowMultiple = false)]
+	public class XmlArrayAttribute : Attribute // TypeDefIndex: 42688
+	{
+		// Fields
+		private string elementName; // 0x10
+		private XmlSchemaForm form; // 0x18
+		private bool isNullable; // 0x1C
+		private string ns; // 0x20
+		private int order; // 0x28
+	
+		// Properties
+		public string ElementName { get => default; } // 0x000000018998FD68-0x000000018998FDB4 
+		public XmlSchemaForm Form { get => default; } // 0x00000001820D1AC0-0x00000001820D1AD0 
+		public bool IsNullable { get => default; } // 0x0000000183D4E9A0-0x0000000183D4E9B0 
+		public string Namespace { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public int Order { get => default; } // 0x0000000183D4EB90-0x0000000183D4EBA0 
+	
+		// Constructors
+		public XmlArrayAttribute() {} // Dummy constructor
+	
+		// Methods
+		internal void AddKeyHash(StringBuilder sb) {} // 0x000000018998FC50-0x000000018998FD68
+	}
+
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue, AllowMultiple = true)]
+	public class XmlArrayItemAttribute : Attribute // TypeDefIndex: 42689
+	{
+		// Fields
+		private string dataType; // 0x10
+		private string elementName; // 0x18
+		private XmlSchemaForm form; // 0x20
+		private string ns; // 0x28
+		private bool isNullable; // 0x30
+		private bool isNullableSpecified; // 0x31
+		private int nestingLevel; // 0x34
+		private System.Type type; // 0x38
+	
+		// Properties
+		public string DataType { get => default; } // 0x000000018998FF10-0x000000018998FF5C 
+		public string ElementName { get => default; } // 0x000000018998FF5C-0x000000018998FFA8 
+		public XmlSchemaForm Form { get => default; } // 0x0000000181003B50-0x0000000181003B60 
+		public string Namespace { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		public bool IsNullable { get => default; } // 0x0000000183D4EF60-0x0000000183D4EF70 
+		internal bool IsNullableSpecified { get => default; } // 0x0000000183D4F2C0-0x0000000183D4F2D0 
+		public System.Type Type { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		public int NestingLevel { get => default; } // 0x0000000183D4EE00-0x0000000183D4EE10 
+	
+		// Constructors
+		public XmlArrayItemAttribute() {} // Dummy constructor
+	
+		// Methods
+		internal void AddKeyHash(StringBuilder sb) {} // 0x000000018998FDB4-0x000000018998FF10
+	}
+
+	public class XmlArrayItemAttributes : CollectionBase // TypeDefIndex: 42690
+	{
+		// Properties
+		public XmlArrayItemAttribute this[int index] { get => default; } // 0x0000000189990064-0x00000001899900C0 
+	
+		// Constructors
+		public XmlArrayItemAttributes() {} // 0x00000001891207C8-0x00000001891207D0
+	
+		// Methods
+		public int Add(XmlArrayItemAttribute attribute) => default; // 0x00000001898D6AC4-0x00000001898D6AE0
+		internal void AddKeyHash(StringBuilder sb) {} // 0x000000018998FFA8-0x0000000189990064
+	}
+
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue)]
+	public class XmlAttributeAttribute : Attribute // TypeDefIndex: 42691
+	{
+		// Fields
+		private string attributeName; // 0x10
+		private string dataType; // 0x18
+		private System.Type type; // 0x20
+		private XmlSchemaForm form; // 0x28
+		private string ns; // 0x30
+	
+		// Properties
+		public string AttributeName { get => default; } // 0x00000001899901EC-0x0000000189990238 
+		public string DataType { get => default; set {} } // 0x0000000189990238-0x0000000189990284 0x00000001822C3A90-0x00000001822C3AA0
+		public XmlSchemaForm Form { get => default; } // 0x0000000183D4EB90-0x0000000183D4EBA0 
+		public string Namespace { get => default; } // 0x0000000181003830-0x0000000181003840 
+	
+		// Constructors
+		public XmlAttributeAttribute() {} // Dummy constructor
+		public XmlAttributeAttribute(string attributeName) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Methods
+		internal void AddKeyHash(StringBuilder sb) {} // 0x00000001899900C0-0x00000001899901EC
+	}
+
+	public class XmlAttributeOverrides // TypeDefIndex: 42692
+	{
+		// Fields
+		private Hashtable overrides; // 0x10
+	
+		// Properties
+		public XmlAttributes this[System.Type type] { get => default; } // 0x000000018999062C-0x0000000189990684 
+		public XmlAttributes this[System.Type type, string member] { get => default; } // 0x0000000189990684-0x0000000189990710 
+	
+		// Constructors
+		public XmlAttributeOverrides() {} // 0x00000001899905C8-0x000000018999062C
+	
+		// Methods
+		private TypeMember GetKey(System.Type type, string member) => default; // 0x0000000189990558-0x00000001899905C8
+		internal void AddKeyHash(StringBuilder sb) {} // 0x0000000189990284-0x0000000189990558
+	}
+
+	public class XmlAttributes // TypeDefIndex: 42693
+	{
+		// Fields
+		private XmlAnyAttributeAttribute xmlAnyAttribute; // 0x10
+		private XmlAnyElementAttributes xmlAnyElements; // 0x18
+		private XmlArrayAttribute xmlArray; // 0x20
+		private XmlArrayItemAttributes xmlArrayItems; // 0x28
+		private XmlAttributeAttribute xmlAttribute; // 0x30
+		private XmlChoiceIdentifierAttribute xmlChoiceIdentifier; // 0x38
+		private object xmlDefaultValue; // 0x40
+		private XmlElementAttributes xmlElements; // 0x48
+		private XmlEnumAttribute xmlEnum; // 0x50
+		private bool xmlIgnore; // 0x58
+		private bool xmlns; // 0x59
+		private XmlRootAttribute xmlRoot; // 0x60
+		private XmlTextAttribute xmlText; // 0x68
+		private XmlTypeAttribute xmlType; // 0x70
+	
+		// Properties
+		public XmlAnyAttributeAttribute XmlAnyAttribute { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public XmlAnyElementAttributes XmlAnyElements { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public XmlArrayAttribute XmlArray { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public XmlArrayItemAttributes XmlArrayItems { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		public XmlAttributeAttribute XmlAttribute { get => default; } // 0x0000000181003830-0x0000000181003840 
+		public XmlChoiceIdentifierAttribute XmlChoiceIdentifier { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		public object XmlDefaultValue { get => default; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
+		public XmlElementAttributes XmlElements { get => default; } // 0x0000000183D4EA70-0x0000000183D4EA80 
+		public bool XmlIgnore { get => default; } // 0x0000000183D4F7E0-0x0000000183D4F7F0 
+		public bool Xmlns { get => default; } // 0x0000000183D589D0-0x0000000183D589E0 
+		public XmlRootAttribute XmlRoot { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+		public XmlTextAttribute XmlText { get => default; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 
+		public XmlTypeAttribute XmlType { get => default; } // 0x0000000183D4EB30-0x0000000183D4EB40 
+		internal int? Order { get => default; } // 0x00000001899910CC-0x0000000189991170 
+		internal int SortableOrder { get => default; } // 0x0000000189991170-0x00000001899911DC 
+	
+		// Constructors
+		public XmlAttributes() {} // 0x0000000189990978-0x0000000189990A84
+		public XmlAttributes(ICustomAttributeProvider provider) {} // 0x0000000189990A84-0x00000001899910CC
+	
+		// Methods
+		internal void AddKeyHash(StringBuilder sb) {} // 0x0000000189990710-0x0000000189990978
+	}
+
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue, AllowMultiple = false)]
+	public class XmlChoiceIdentifierAttribute : Attribute // TypeDefIndex: 42694
+	{
+		// Fields
+		private string memberName; // 0x10
+	
+		// Properties
+		public string MemberName { get => default; } // 0x0000000189991254-0x00000001899912A0 
+	
+		// Constructors
+		public XmlChoiceIdentifierAttribute() {} // Dummy constructor
+	
+		// Methods
+		internal void AddKeyHash(StringBuilder sb) {} // 0x00000001899911DC-0x0000000189991254
+	}
+
+	internal class XmlCustomFormatter // TypeDefIndex: 42695
+	{
+		// Fields
+		private static string[] allTimeFormats; // 0x00
+	
+		// Constructors
+		public XmlCustomFormatter() {} // Dummy constructor
+		static XmlCustomFormatter() {} // 0x0000000189992830-0x0000000189992BA8
+	
+		// Methods
+		internal static string FromEnum(long value, string[] values, long[] ids, string typeName) => default; // 0x00000001899912A0-0x0000000189991534
+		internal static string FromXmlName(string name) => default; // 0x0000000189991580-0x00000001899915CC
+		internal static string FromXmlNCName(string ncName) => default; // 0x0000000189991534-0x0000000189991580
+		internal static string ToXmlString(System.Xml.Serialization.TypeData type, object value) => default; // 0x0000000189991EB8-0x0000000189992830
+		internal static object FromXmlString(System.Xml.Serialization.TypeData type, string value) => default; // 0x00000001899915CC-0x0000000189991EB8
+	}
+
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue, AllowMultiple = true)]
+	public class XmlElementAttribute : Attribute // TypeDefIndex: 42696
+	{
+		// Fields
+		private string dataType; // 0x10
+		private string elementName; // 0x18
+		private XmlSchemaForm form; // 0x20
+		private string ns; // 0x28
+		private bool isNullable; // 0x30
+		private System.Type type; // 0x38
+		private int order; // 0x40
+	
+		// Properties
+		public string DataType { get => default; } // 0x0000000189992D28-0x0000000189992D74 
+		public string ElementName { get => default; } // 0x0000000189992D74-0x0000000189992DC0 
+		public XmlSchemaForm Form { get => default; } // 0x0000000181003B50-0x0000000181003B60 
+		public string Namespace { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		public bool IsNullable { get => default; } // 0x0000000183D4EF60-0x0000000183D4EF70 
+		public int Order { get => default; } // 0x0000000183D4ED80-0x0000000183D4ED90 
+		public System.Type Type { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+	
+		// Constructors
+		public XmlElementAttribute() {} // Dummy constructor
+		public XmlElementAttribute(string elementName) {} // 0x0000000189992D14-0x0000000189992D28
+		public XmlElementAttribute(string elementName, System.Type type) {} // 0x0000000189992CE4-0x0000000189992D14
+	
+		// Methods
+		internal void AddKeyHash(StringBuilder sb) {} // 0x0000000189992BA8-0x0000000189992CE4
+	}
+
+	public class XmlElementAttributes : CollectionBase // TypeDefIndex: 42697
+	{
+		// Properties
+		public XmlElementAttribute this[int index] { get => default; } // 0x0000000189992E7C-0x0000000189992ED8 
+		internal int Order { get => default; } // 0x0000000189992ED8-0x000000018999302C 
+	
+		// Constructors
+		public XmlElementAttributes() {} // 0x00000001891207C8-0x00000001891207D0
+	
+		// Methods
+		public int Add(XmlElementAttribute attribute) => default; // 0x00000001898D6AC4-0x00000001898D6AE0
+		internal void AddKeyHash(StringBuilder sb) {} // 0x0000000189992DC0-0x0000000189992E7C
+	}
+
+	[AttributeUsage(AttributeTargets.Field)]
+	public class XmlEnumAttribute : Attribute // TypeDefIndex: 42698
+	{
+		// Fields
+		private string name; // 0x10
+	
+		// Properties
+		public string Name { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+	
+		// Constructors
+		public XmlEnumAttribute() {} // Dummy constructor
+		public XmlEnumAttribute(string name) {} // 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Methods
+		internal void AddKeyHash(StringBuilder sb) {} // 0x000000018999302C-0x00000001899930A4
+	}
+
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue)]
+	public class XmlIgnoreAttribute : Attribute // TypeDefIndex: 42699
+	{
+		// Constructors
+		public XmlIgnoreAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Method | AttributeTargets.Interface, AllowMultiple = true)]
+	public class XmlIncludeAttribute : Attribute // TypeDefIndex: 42700
+	{
+		// Fields
+		private System.Type type; // 0x10
+	
+		// Properties
+		public System.Type Type { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+	
+		// Constructors
+		public XmlIncludeAttribute() {} // Dummy constructor
+	}
+
+	public abstract class XmlMapping // TypeDefIndex: 42701
+	{
+		// Fields
+		private ObjectMap map; // 0x10
+		private ArrayList relatedMaps; // 0x18
+		private SerializationFormat format; // 0x20
+		private SerializationSource source; // 0x28
+		internal string _elementName; // 0x30
+		internal string _namespace; // 0x38
+		private string key; // 0x40
+	
+		// Properties
+		public string ElementName { get; } // 0x0000000181003830-0x0000000181003840 
+		public string Namespace { get; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		internal ObjectMap ObjectMap { get; set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+		internal ArrayList RelatedMaps { get; set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		internal SerializationFormat Format { get; set; } // 0x0000000181003B50-0x0000000181003B60 0x0000000181003B60-0x0000000181003B70
+		internal SerializationSource Source { get; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+	
+		// Constructors
+		protected XmlMapping() {} // Dummy constructor
+		internal XmlMapping(string elementName, string ns) {} // 0x000000018992F0B4-0x000000018992F0DC
+	
+		// Methods
+		public void SetKey(string key) {} // 0x0000000183CB2D80-0x0000000183CB2D90
+	}
+
+	internal class ObjectMap // TypeDefIndex: 42702
+	{
+		// Constructors
+		public ObjectMap() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	internal enum SerializationFormat // TypeDefIndex: 42703
+	{
+		Encoded = 0,
+		Literal = 1
+	}
+
+	public class XmlMemberMapping // TypeDefIndex: 42704
+	{
+		// Constructors
+		public XmlMemberMapping() {} // Dummy constructor
+	}
+
+	[DefaultMember("Item")]
+	public class XmlMembersMapping : XmlMapping // TypeDefIndex: 42705
+	{
+		// Fields
+		private bool _hasWrapperElement; // 0x48
+		private XmlMemberMapping[] _mapping; // 0x50
+	
+		// Properties
+		public int Count { get => default; } // 0x00000001899930A4-0x00000001899930C0 
+		internal bool HasWrapperElement { get => default; } // 0x0000000183D4EFE0-0x0000000183D4EFF0 
+	
+		// Constructors
+		public XmlMembersMapping() {} // Dummy constructor
+	}
+
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue)]
+	public class XmlNamespaceDeclarationsAttribute : Attribute // TypeDefIndex: 42706
+	{
+		// Constructors
+		public XmlNamespaceDeclarationsAttribute() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public class XmlReflectionImporter // TypeDefIndex: 42708
+	{
+		// Fields
+		private string initialDefaultNamespace; // 0x10
+		private XmlAttributeOverrides attributeOverrides; // 0x18
+		private ArrayList includedTypes; // 0x20
+		private ReflectionHelper helper; // 0x28
+		private int arrayChoiceCount; // 0x30
+		private ArrayList relatedMaps; // 0x38
+		private bool allowPrivateTypes; // 0x40
+		private static readonly string errSimple; // 0x00
+		private static readonly string errSimple2; // 0x08
+	
+		// Constructors
+		public XmlReflectionImporter() {} // Dummy constructor
+		public XmlReflectionImporter(XmlAttributeOverrides attributeOverrides, string defaultNamespace) {} // 0x000000018999CD48-0x000000018999CE80
+		static XmlReflectionImporter() {} // 0x000000018999CCB0-0x000000018999CD48
+	
+		// Methods
+		public XmlTypeMapping ImportTypeMapping(System.Type type) => default; // 0x000000018999C384-0x000000018999C3A4
+		public XmlTypeMapping ImportTypeMapping(System.Type type, string defaultNamespace) => default; // 0x000000018999C3A4-0x000000018999C3C4
+		public XmlTypeMapping ImportTypeMapping(System.Type type, XmlRootAttribute root, string defaultNamespace) => default; // 0x000000018999C3C4-0x000000018999C574
+		private XmlTypeMapping ImportTypeMapping(System.Xml.Serialization.TypeData typeData, XmlRootAttribute root, string defaultNamespace) => default; // 0x000000018999BF20-0x000000018999C384
+		private XmlTypeMapping CreateTypeMapping(System.Xml.Serialization.TypeData typeData, XmlRootAttribute root, string defaultXmlType, string defaultNamespace) => default; // 0x0000000189993BBC-0x0000000189993FE4
+		private XmlTypeMapping ImportClassMapping(System.Type type, XmlRootAttribute root, string defaultNamespace, bool isBaseType = false /* Metadata: 0x01FB43CF */) => default; // 0x0000000189995510-0x0000000189995598
+		private XmlTypeMapping ImportClassMapping(System.Xml.Serialization.TypeData typeData, XmlRootAttribute root, string defaultNamespace, bool isBaseType = false /* Metadata: 0x01FB43D0 */) => default; // 0x0000000189995598-0x00000001899976BC
+		private void RegisterDerivedMap(XmlTypeMapping map, XmlTypeMapping derivedMap) {} // 0x000000018999CBB4-0x000000018999CCB0
+		private string GetTypeNamespace(System.Xml.Serialization.TypeData typeData, XmlRootAttribute root, string defaultNamespace) => default; // 0x0000000189994DE0-0x0000000189994F04
+		private XmlTypeMapping ImportListMapping(System.Type type, XmlRootAttribute root, string defaultNamespace, XmlAttributes atts, int nestingLevel) => default; // 0x000000018999985C-0x00000001899998EC
+		private XmlTypeMapping ImportListMapping(System.Xml.Serialization.TypeData typeData, XmlRootAttribute root, string defaultNamespace, XmlAttributes atts, int nestingLevel) => default; // 0x00000001899998EC-0x000000018999BB24
+		private XmlTypeMapping ImportXmlNodeMapping(System.Xml.Serialization.TypeData typeData, XmlRootAttribute root, string defaultNamespace) => default; // 0x000000018999C574-0x000000018999C724
+		private XmlTypeMapping ImportPrimitiveMapping(System.Xml.Serialization.TypeData typeData, XmlRootAttribute root, string defaultNamespace) => default; // 0x000000018999BB24-0x000000018999BBF0
+		private XmlTypeMapping ImportEnumMapping(System.Xml.Serialization.TypeData typeData, XmlRootAttribute root, string defaultNamespace) => default; // 0x00000001899992C0-0x000000018999976C
+		private XmlTypeMapping ImportXmlSerializableMapping(System.Xml.Serialization.TypeData typeData, XmlRootAttribute root, string defaultNamespace) => default; // 0x000000018999C724-0x000000018999C83C
+		private void ImportIncludedTypes(System.Type type, string defaultNamespace) {} // 0x000000018999976C-0x000000018999985C
+		private List<XmlReflectionMember> GetReflectionMembers(System.Type type) => default; // 0x000000018999418C-0x0000000189994DE0
+		private XmlTypeMapMember CreateMapMember(System.Type declaringType, XmlReflectionMember rmember, string defaultNamespace) => default; // 0x0000000189993100-0x0000000189993BBC
+		private XmlTypeMapElementInfoList ImportElementInfo(System.Type cls, string defaultName, string defaultNamespace, System.Type defaultType, XmlTypeMapMemberElement member, XmlAttributes atts) => default; // 0x00000001899976BC-0x00000001899992C0
+		private XmlTypeMapElementInfoList ImportAnyElementInfo(string defaultNamespace, XmlReflectionMember rmember, XmlTypeMapMemberElement member, XmlAttributes atts) => default; // 0x0000000189994F04-0x0000000189995510
+		private void ImportTextElementInfo(XmlTypeMapElementInfoList list, System.Type defaultType, XmlTypeMapMemberElement member, XmlAttributes atts, string defaultNamespace) {} // 0x000000018999BBF0-0x000000018999BF20
+		private bool CanBeNull(System.Xml.Serialization.TypeData type) => default; // 0x00000001899930C0-0x0000000189993100
+		public void IncludeType(System.Type type) {} // 0x000000018999C83C-0x000000018999CBB4
+		private object GetDefaultValue(System.Xml.Serialization.TypeData typeData, object defaultValue) => default; // 0x0000000189993FE4-0x000000018999418C
+	}
+
+	public class XmlReflectionMember // TypeDefIndex: 42709
+	{
+		// Fields
+		private bool isReturnValue; // 0x10
+		private string memberName; // 0x18
+		private System.Type memberType; // 0x20
+		private XmlAttributes xmlAttributes; // 0x28
+		private System.Type declaringType; // 0x30
+	
+		// Properties
+		public bool IsReturnValue { get => default; } // 0x00000001811797F0-0x0000000181179800 
+		public string MemberName { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public System.Type MemberType { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public XmlAttributes XmlAttributes { get => default; } // 0x000000018999CEB8-0x000000018999CF28 
+		internal System.Type DeclaringType { get => default; set {} } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
+	
+		// Constructors
+		public XmlReflectionMember() {} // Dummy constructor
+		internal XmlReflectionMember(string name, System.Type type, XmlAttributes attributes) {} // 0x000000018999CE80-0x000000018999CEB8
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Interface | AttributeTargets.ReturnValue)]
+	public class XmlRootAttribute : Attribute // TypeDefIndex: 42710
+	{
+		// Fields
+		private string dataType; // 0x10
+		private string elementName; // 0x18
+		private bool isNullable; // 0x20
+		private string ns; // 0x28
+	
+		// Properties
+		public string DataType { get => default; set {} } // 0x000000018999CFD8-0x000000018999D024 0x000000018426FEE0-0x000000018426FEF0
+		public string ElementName { get => default; set {} } // 0x000000018999D024-0x000000018999D070 0x00000001822C3A90-0x00000001822C3AA0
+		public bool IsNullable { get => default; set {} } // 0x0000000183D4EF90-0x0000000183D4EFA0 0x0000000183D4EFC0-0x0000000183D4EFD0
+		public string Namespace { get => default; set {} } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+	
+		// Constructors
+		public XmlRootAttribute() {} // 0x0000000183D59690-0x0000000183D596A0
+		public XmlRootAttribute(string elementName) {} // 0x00000001894B3620-0x00000001894B3634
+	
+		// Methods
+		internal void AddKeyHash(StringBuilder sb) {} // 0x000000018999CF28-0x000000018999CFD8
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Interface)]
+	public sealed class XmlSchemaProviderAttribute : Attribute // TypeDefIndex: 42711
+	{
+		// Fields
+		private string _methodName; // 0x10
+		private bool _isAny; // 0x18
+	
+		// Properties
+		public string MethodName { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public bool IsAny { get => default; set {} } // 0x0000000181002A50-0x0000000181002A60 0x0000000181002B40-0x0000000181002B50
+	
+		// Constructors
+		public XmlSchemaProviderAttribute() {} // Dummy constructor
+		public XmlSchemaProviderAttribute(string methodName) {} // 0x000000018426FEE0-0x000000018426FEF0
+	}
+
+	public delegate void XmlSerializationCollectionFixupCallback(object collection, object collectionItems); // TypeDefIndex: 42712; 0x0000000182065C10-0x0000000182065C20
+
+	public delegate void XmlSerializationFixupCallback(object fixup); // TypeDefIndex: 42713; 0x0000000182149960-0x0000000182149970
+
+	public abstract class XmlSerializationGeneratedCode // TypeDefIndex: 42714
+	{
+		// Constructors
+		protected XmlSerializationGeneratedCode() {} // 0x000000018350B670-0x000000018350B680
+	}
+
+	public delegate object XmlSerializationReadCallback(); // TypeDefIndex: 42715; 0x0000000186F0A8DC-0x0000000186F0A8EC
+
+	[MonoTODO]
+	public abstract class XmlSerializationReader : XmlSerializationGeneratedCode // TypeDefIndex: 42720
+	{
+		// Fields
+		private XmlDocument document; // 0x10
+		private XmlReader reader; // 0x18
+		private ArrayList fixups; // 0x20
+		private Hashtable collFixups; // 0x28
+		private ArrayList collItemFixups; // 0x30
+		private Hashtable typesCallbacks; // 0x38
+		private ArrayList noIDTargets; // 0x40
+		private Hashtable targets; // 0x48
+		private Hashtable delayedListFixups; // 0x50
+		private XmlSerializer eventSource; // 0x58
+		private int delayedFixupId; // 0x60
+		private Hashtable referencedObjects; // 0x68
+		private int readCount; // 0x70
+		private int whileIterationCount; // 0x74
+		private string w3SchemaNS; // 0x78
+		private string w3InstanceNS; // 0x80
+		private string w3InstanceNS2000; // 0x88
+		private string w3InstanceNS1999; // 0x90
+		private string soapNS; // 0x98
+		private string wsdlNS; // 0xA0
+		private string nullX; // 0xA8
+		private string nil; // 0xB0
+		private string typeX; // 0xB8
+		private string arrayType; // 0xC0
+		private XmlQualifiedName arrayQName; // 0xC8
+	
+		// Properties
+		protected XmlDocument Document { get; } // 0x00000001899A5C9C-0x00000001899A5D30 
+		protected XmlReader Reader { get; } // 0x0000000181041090-0x00000001810410A0 
+	
+		// Nested types
+		private class WriteCallbackInfo // TypeDefIndex: 42716
+		{
+			// Fields
+			public System.Type Type; // 0x10
+			public string TypeName; // 0x18
+			public string TypeNs; // 0x20
+			public XmlSerializationReadCallback Callback; // 0x28
+	
+			// Constructors
+			public WriteCallbackInfo() {} // 0x000000018350B670-0x000000018350B680
+		}
+	
+		protected class CollectionFixup // TypeDefIndex: 42717
+		{
+			// Fields
+			private XmlSerializationCollectionFixupCallback callback; // 0x10
+			private object collection; // 0x18
+			private object collectionItems; // 0x20
+			private string id; // 0x28
+	
+			// Properties
+			public XmlSerializationCollectionFixupCallback Callback { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+			public object Collection { get => default; } // 0x0000000181041090-0x00000001810410A0 
+			internal object Id { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+			public object CollectionItems { get => default; internal set {} } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+	
+			// Constructors
+			public CollectionFixup() {} // Dummy constructor
+			internal CollectionFixup(object collection, XmlSerializationCollectionFixupCallback callback, string id) {} // 0x000000018998F718-0x000000018998F750
+		}
+	
+		protected class Fixup // TypeDefIndex: 42718
+		{
+			// Fields
+			private object source; // 0x10
+			private string[] ids; // 0x18
+			private XmlSerializationFixupCallback callback; // 0x20
+	
+			// Properties
+			public XmlSerializationFixupCallback Callback { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+			public string[] Ids { get => default; } // 0x0000000181041090-0x00000001810410A0 
+			public object Source { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+	
+			// Constructors
+			public Fixup() {} // Dummy constructor
+			public Fixup(object o, XmlSerializationFixupCallback callback, int count) {} // 0x000000018998F788-0x000000018998F810
+		}
+	
+		private class CollectionItemFixup // TypeDefIndex: 42719
+		{
+			// Fields
+			private Array list; // 0x10
+			private int index; // 0x18
+			private string id; // 0x20
+	
+			// Properties
+			public Array Collection { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+			public int Index { get => default; } // 0x00000001820D1AC0-0x00000001820D1AD0 
+			public string Id { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+	
+			// Constructors
+			public CollectionItemFixup() {} // Dummy constructor
+			public CollectionItemFixup(Array list, int index, string id) {} // 0x0000000183020510-0x0000000183020540
+		}
+	
+		// Constructors
+		protected XmlSerializationReader() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal void Initialize(XmlReader reader, XmlSerializer eventSource) {} // 0x00000001899A25B8-0x00000001899A2944
+		private ArrayList EnsureArrayList(ArrayList list) => default; // 0x00000001899A20E0-0x00000001899A2138
+		private Hashtable EnsureHashtable(Hashtable hash) => default; // 0x00000001899A2138-0x00000001899A2190
+		protected void AddFixup(CollectionFixup fixup) {} // 0x00000001899A1930-0x00000001899A19E4
+		protected void AddFixup(Fixup fixup) {} // 0x00000001899A1A34-0x00000001899A1A84
+		private void AddFixup(CollectionItemFixup fixup) {} // 0x00000001899A19E4-0x00000001899A1A34
+		protected void AddReadCallback(string name, string ns, System.Type type, XmlSerializationReadCallback read) {} // 0x00000001899A1A84-0x00000001899A1BA0
+		protected void AddTarget(string id, object o) {} // 0x00000001899A1BA0-0x00000001899A1C50
+		private string CurrentTag() => default; // 0x00000001899A1F28-0x00000001899A2064
+		protected Exception CreateReadOnlyCollectionException(string name) => default; // 0x00000001899A1C50-0x00000001899A1CD0
+		protected Exception CreateUnknownConstantException(string value, System.Type enumType) => default; // 0x00000001899A1CD0-0x00000001899A1D58
+		protected Exception CreateUnknownNodeException() => default; // 0x00000001899A1D58-0x00000001899A1DE4
+		protected Exception CreateUnknownTypeException(XmlQualifiedName type) => default; // 0x00000001899A1DE4-0x00000001899A1F28
+		protected Array EnsureArrayIndex(Array a, int index, System.Type elementType) => default; // 0x00000001899A2064-0x00000001899A20E0
+		protected bool GetNullAttr() => default; // 0x00000001899A2248-0x00000001899A22E8
+		protected object GetTarget(string id) => default; // 0x00000001899A22E8-0x00000001899A23A4
+		private bool TargetReady(string id) => default; // 0x00000001899A56D8-0x00000001899A5700
+		protected XmlQualifiedName GetXsiType() => default; // 0x00000001899A23A4-0x00000001899A25B8
+		protected abstract void InitCallbacks();
+		protected abstract void InitIDs();
+		protected bool IsXmlnsAttribute(string name) => default; // 0x00000001899A2944-0x00000001899A2A1C
+		protected void ParseWsdlArrayType(XmlAttribute attr) {} // 0x00000001899A2C6C-0x00000001899A2DD8
+		protected XmlQualifiedName ReadElementQualifiedName() => default; // 0x00000001899A2DD8-0x00000001899A2EAC
+		protected void ReadEndElement() {} // 0x00000001899A2EAC-0x00000001899A2F20
+		protected bool ReadNull() => default; // 0x00000001899A337C-0x00000001899A3410
+		protected XmlQualifiedName ReadNullableQualifiedName() => default; // 0x00000001899A3410-0x00000001899A3438
+		protected string ReadNullableString() => default; // 0x00000001899A3438-0x00000001899A3474
+		protected object ReadReferencedElement() => default; // 0x00000001899A36D4-0x00000001899A372C
+		private WriteCallbackInfo GetCallbackInfo(XmlQualifiedName qname) => default; // 0x00000001899A2190-0x00000001899A2248
+		protected object ReadReferencedElement(string name, string ns) => default; // 0x00000001899A3474-0x00000001899A36D4
+		private bool ReadList(out object resultList) {
+			resultList = default;
+			return default;
+		} // 0x00000001899A2F20-0x00000001899A337C
+		protected void ReadReferencedElements() {} // 0x00000001899A372C-0x00000001899A3F44
+		protected object ReadReferencingElement(out string fixupReference) {
+			fixupReference = default;
+			return default;
+		} // 0x00000001899A3F64-0x00000001899A3FD4
+		protected object ReadReferencingElement(string name, string ns, out string fixupReference) {
+			fixupReference = default;
+			return default;
+		} // 0x00000001899A3F44-0x00000001899A3F64
+		protected object ReadReferencingElement(string name, string ns, bool elementCanBeType, out string fixupReference) {
+			fixupReference = default;
+			return default;
+		} // 0x00000001899A3FD4-0x00000001899A4338
+		protected IXmlSerializable ReadSerializable(IXmlSerializable serializable) => default; // 0x00000001899A4338-0x00000001899A4428
+		protected object ReadTypedPrimitive(XmlQualifiedName type) => default; // 0x00000001899A54F4-0x00000001899A5500
+		private object ReadTypedPrimitive(XmlQualifiedName qname, bool reportUnknown) => default; // 0x00000001899A4428-0x00000001899A54F4
+		protected XmlNode ReadXmlNode(bool wrapped) => default; // 0x00000001899A55FC-0x00000001899A5650
+		protected XmlDocument ReadXmlDocument(bool wrapped) => default; // 0x00000001899A5500-0x00000001899A55FC
+		protected Array ShrinkArray(Array a, int length, System.Type elementType, bool isNullable) => default; // 0x00000001899A5650-0x00000001899A56D8
+		protected XmlQualifiedName ToXmlQualifiedName(string value) => default; // 0x00000001899A5700-0x00000001899A5924
+		protected void UnknownAttribute(object o, XmlAttribute attr, string qnames) {} // 0x00000001899A5924-0x00000001899A5A70
+		protected void UnknownElement(object o, XmlElement elem, string qnames) {} // 0x00000001899A5A70-0x00000001899A5BBC
+		protected void UnknownNode(object o) {} // 0x000000018999DFE8-0x000000018999DFF4
+		protected void UnknownNode(object o, string qnames) {} // 0x00000001899A5BBC-0x00000001899A5C08
+		private void OnUnknownNode(XmlNode node, object o, string qnames) {} // 0x00000001899A2A1C-0x00000001899A2C6C
+		protected void UnreferencedObject(string id, object o) {} // 0x00000001899A5C08-0x00000001899A5C9C
+	}
+
+	internal class XmlSerializationReaderInterpreter : XmlSerializationReader // TypeDefIndex: 42723
+	{
+		// Fields
+		private XmlMapping _typeMap; // 0xD0
+		private SerializationFormat _format; // 0xD8
+		private static readonly XmlQualifiedName AnyType; // 0x00
+		private static readonly object[] empty_array; // 0x08
+	
+		// Nested types
+		private class FixupCallbackInfo // TypeDefIndex: 42721
+		{
+			// Fields
+			private XmlSerializationReaderInterpreter _sri; // 0x10
+			private ClassMap _map; // 0x18
+			private bool _isValueList; // 0x20
+	
+			// Constructors
+			public FixupCallbackInfo() {} // Dummy constructor
+			public FixupCallbackInfo(XmlSerializationReaderInterpreter sri, ClassMap map, bool isValueList) {} // 0x0000000183D01130-0x0000000183D01160
+	
+			// Methods
+			public void FixupMembers(object fixup) {} // 0x000000018998F750-0x000000018998F788
+		}
+	
+		private class ReaderCallbackInfo // TypeDefIndex: 42722
+		{
+			// Fields
+			private XmlSerializationReaderInterpreter _sri; // 0x10
+			private XmlTypeMapping _typeMap; // 0x18
+	
+			// Constructors
+			public ReaderCallbackInfo() {} // Dummy constructor
+			public ReaderCallbackInfo(XmlSerializationReaderInterpreter sri, XmlTypeMapping typeMap) {} // 0x0000000182676770-0x00000001826767A0
+	
+			// Methods
+			internal object ReadObject() => default; // 0x000000018998F810-0x000000018998F844
+		}
+	
+		// Constructors
+		public XmlSerializationReaderInterpreter() {} // Dummy constructor
+		public XmlSerializationReaderInterpreter(XmlMapping typeMap) {} // 0x00000001899A18F8-0x00000001899A1930
+		static XmlSerializationReaderInterpreter() {} // 0x00000001899A1810-0x00000001899A18F8
+	
+		// Methods
+		protected override void InitCallbacks() {} // 0x000000018999DBAC-0x000000018999DF08
+		protected override void InitIDs() {} // 0x000000018350B670-0x000000018350B680
+		public object ReadRoot() => default; // 0x00000001899A11FC-0x00000001899A12C4
+		private object ReadEncodedObject(XmlTypeMapping typeMap) => default; // 0x000000018999E6E0-0x000000018999E7E8
+		protected virtual object ReadMessage(XmlMembersMapping typeMap) => default; // 0x00000001899A0934-0x00000001899A0CCC
+		private object ReadRoot(XmlTypeMapping rootMap) => default; // 0x00000001899A1118-0x00000001899A11FC
+		protected virtual object ReadObject(XmlTypeMapping typeMap, bool isNullable, bool checkType) => default; // 0x00000001899A0E60-0x00000001899A0F68
+		protected virtual object ReadClassInstance(XmlTypeMapping typeMap, bool isNullable, bool checkType) => default; // 0x000000018999E458-0x000000018999E6E0
+		protected virtual void ReadClassInstanceMembers(XmlTypeMapping typeMap, object ob) {} // 0x000000018999E3DC-0x000000018999E458
+		private void ReadAttributeMembers(ClassMap map, object ob, bool isValueList) {} // 0x000000018999DFF4-0x000000018999E3DC
+		private void ReadMembers(ClassMap map, object ob, bool isValueList, bool readBySoapOrder) {} // 0x000000018999ED4C-0x00000001899A0934
+		private void SetListMembersDefaults(ClassMap map, object ob, bool isValueList) {} // 0x00000001899A14EC-0x00000001899A1610
+		internal void FixupMembers(ClassMap map, object obfixup, bool isValueList) {} // 0x000000018999D678-0x000000018999D8DC
+		protected virtual void ProcessUnknownAttribute(object target) {} // 0x000000018999DFE8-0x000000018999DFF4
+		protected virtual void ProcessUnknownElement(object target) {} // 0x000000018999DFE8-0x000000018999DFF4
+		private bool IsReadOnly(XmlTypeMapMember member, System.Xml.Serialization.TypeData memType, object ob, bool isValueList) => default; // 0x000000018999DF7C-0x000000018999DFE8
+		private void SetMemberValue(XmlTypeMapMember member, object ob, object value, bool isValueList) {} // 0x00000001899A16E4-0x00000001899A1810
+		private void SetMemberValueFromAttr(XmlTypeMapMember member, object ob, object value, bool isValueList) {} // 0x00000001899A1610-0x00000001899A16E4
+		private object GetMemberValue(XmlTypeMapMember member, object ob, bool isValueList) => default; // 0x000000018999DA0C-0x000000018999DAA8
+		private object ReadObjectElement(XmlTypeMapElementInfo elem) => default; // 0x00000001899A0CCC-0x00000001899A0E60
+		private object ReadPrimitiveValue(XmlTypeMapElementInfo elem) => default; // 0x00000001899A1028-0x00000001899A1118
+		private object GetValueFromXmlString(string value, System.Xml.Serialization.TypeData typeData, XmlTypeMapping typeMap) => default; // 0x000000018999DAA8-0x000000018999DBAC
+		private object ReadListElement(XmlTypeMapping typeMap, bool isNullable, object list, bool canCreateInstance) => default; // 0x000000018999E850-0x000000018999EB78
+		private object ReadListString(XmlTypeMapping typeMap, string values) => default; // 0x000000018999EB78-0x000000018999ED4C
+		private void AddListValue(System.Xml.Serialization.TypeData listType, ref object list, int index, object value, bool canCreateInstance) {} // 0x000000018999D070-0x000000018999D2D4
+		private static object CreateInstance(System.Type type, bool nonPublic) => default; // 0x00000001842763E0-0x00000001842763EC
+		private object CreateInstance(System.Type type) => default; // 0x000000018999D57C-0x000000018999D5D0
+		private object CreateList(System.Type listType) => default; // 0x000000018999D5D0-0x000000018999D664
+		private object InitializeList(System.Xml.Serialization.TypeData listType) => default; // 0x000000018999DF08-0x000000018999DF7C
+		private void FillList(object list, object items) {} // 0x000000018999D664-0x000000018999D678
+		private void CopyEnumerableList(object source, object dest) {} // 0x000000018999D2D4-0x000000018999D57C
+		private object ReadXmlNodeElement(XmlTypeMapping typeMap, bool isNullable) => default; // 0x00000001899A12C4-0x00000001899A12E8
+		private object ReadXmlNode(System.Xml.Serialization.TypeData type, bool wrapped) => default; // 0x00000001899A12E8-0x00000001899A1388
+		private object ReadPrimitiveElement(XmlTypeMapping typeMap, bool isNullable) => default; // 0x00000001899A0F68-0x00000001899A1028
+		private object ReadEnumElement(XmlTypeMapping typeMap, bool isNullable) => default; // 0x000000018999E7E8-0x000000018999E850
+		private object GetEnumValue(XmlTypeMapping typeMap, string val) => default; // 0x000000018999D8DC-0x000000018999DA0C
+		private object ReadXmlSerializableElement(XmlTypeMapping typeMap, bool isNullable) => default; // 0x00000001899A1388-0x00000001899A14EC
+	}
+
+	public delegate void XmlSerializationWriteCallback(object o); // TypeDefIndex: 42724; 0x0000000182149960-0x0000000182149970
+
+	public abstract class XmlSerializationWriter : XmlSerializationGeneratedCode // TypeDefIndex: 42726
+	{
+		// Fields
+		private ObjectIDGenerator idGenerator; // 0x10
+		private int qnameCount; // 0x18
+		private bool topLevelElement; // 0x1C
+		private ArrayList namespaces; // 0x20
+		private XmlWriter writer; // 0x28
+		private System.Collections.Queue referencedElements; // 0x30
+		private Hashtable callbacks; // 0x38
+		private Hashtable serializedObjects; // 0x40
+	
+		// Properties
+		protected XmlWriter Writer { get; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+	
+		// Nested types
+		private class WriteCallbackInfo // TypeDefIndex: 42725
+		{
+			// Fields
+			public System.Type Type; // 0x10
+			public string TypeName; // 0x18
+			public string TypeNs; // 0x20
+			public XmlSerializationWriteCallback Callback; // 0x28
+	
+			// Constructors
+			public WriteCallbackInfo() {} // 0x000000018350B670-0x000000018350B680
+		}
+	
+		// Constructors
+		protected XmlSerializationWriter() {} // 0x00000001899A8710-0x00000001899A8834
+	
+		// Methods
+		internal void Initialize(XmlWriter writer, XmlSerializerNamespaces nss) {} // 0x00000001899A6380-0x00000001899A649C
+		protected void AddWriteCallback(System.Type type, string typeName, string typeNs, XmlSerializationWriteCallback callback) {} // 0x00000001899A5D30-0x00000001899A5E3C
+		protected Exception CreateUnknownAnyElementException(string name, string ns) => default; // 0x00000001899A5EEC-0x00000001899A5F74
+		protected Exception CreateUnknownTypeException(object o) => default; // 0x00000001899A5F74-0x00000001899A5FA8
+		protected Exception CreateUnknownTypeException(System.Type type) => default; // 0x00000001899A5FA8-0x00000001899A6028
+		protected string FromXmlQualifiedName(XmlQualifiedName xmlQualifiedName) => default; // 0x00000001899A6028-0x00000001899A60CC
+		private string GetId(object o, bool addToReferencesList) => default; // 0x00000001899A60CC-0x00000001899A61CC
+		private bool AlreadyQueued(object ob) => default; // 0x00000001899A5E3C-0x00000001899A5E70
+		private string GetNamespacePrefix(string ns) => default; // 0x00000001899A61CC-0x00000001899A62C4
+		private string GetQualifiedName(string name, string ns) => default; // 0x00000001899A62C4-0x00000001899A6380
+		protected abstract void InitCallbacks();
+		protected void TopLevelElement() {} // 0x0000000183D64D20-0x0000000183D64D30
+		protected void WriteAttribute(string localName, string ns, string value) {} // 0x00000001899A6828-0x00000001899A684C
+		protected void WriteAttribute(string prefix, string localName, string ns, string value) {} // 0x00000001899A67F4-0x00000001899A6828
+		private void WriteXmlNode(XmlNode node) {} // 0x00000001899A85C0-0x00000001899A8658
+		protected void WriteElementEncoded(XmlNode node, string name, string ns, bool isNullable, bool any) {} // 0x00000001899A684C-0x00000001899A6934
+		protected void WriteElementLiteral(XmlNode node, string name, string ns, bool isNullable, bool any) {} // 0x00000001899A6934-0x00000001899A6A1C
+		protected void WriteElementQualifiedName(string localName, string ns, XmlQualifiedName value) {} // 0x00000001899A6B14-0x00000001899A6B30
+		protected void WriteElementQualifiedName(string localName, string ns, XmlQualifiedName value, XmlQualifiedName xsiType) {} // 0x00000001899A6A1C-0x00000001899A6B14
+		protected void WriteElementString(string localName, string ns, string value) {} // 0x00000001899A6B30-0x00000001899A6B4C
+		protected void WriteElementString(string localName, string ns, string value, XmlQualifiedName xsiType) {} // 0x00000001899A6B4C-0x00000001899A6C68
+		protected void WriteEndElement() {} // 0x00000001899A6CAC-0x00000001899A6CB8
+		protected void WriteEndElement(object o) {} // 0x00000001899A6C68-0x00000001899A6CAC
+		protected void WriteNamespaceDeclarations(XmlSerializerNamespaces xmlns) {} // 0x00000001899A6CB8-0x00000001899A6FB8
+		protected void WriteNullableQualifiedNameEncoded(string name, string ns, XmlQualifiedName value, XmlQualifiedName xsiType) {} // 0x00000001899A7114-0x00000001899A71B0
+		protected void WriteNullableQualifiedNameLiteral(string name, string ns, XmlQualifiedName value) {} // 0x00000001899A71B0-0x00000001899A7240
+		protected void WriteNullableStringEncoded(string name, string ns, string value, XmlQualifiedName xsiType) {} // 0x00000001899A7240-0x00000001899A7268
+		protected void WriteNullableStringLiteral(string name, string ns, string value) {} // 0x00000001899A7268-0x00000001899A7290
+		protected void WriteNullTagEncoded(string name, string ns) {} // 0x00000001899A6FB8-0x00000001899A706C
+		protected void WriteNullTagLiteral(string name, string ns) {} // 0x00000001899A706C-0x00000001899A7114
+		protected void WritePotentiallyReferencingElement(string n, string ns, object o, System.Type ambientType, bool suppressReference, bool isNullable) {} // 0x00000001899A7290-0x00000001899A7648
+		protected void WriteReferencedElements() {} // 0x00000001899A7648-0x00000001899A7818
+		private bool IsPrimitiveArray(System.Xml.Serialization.TypeData td) => default; // 0x00000001899A649C-0x00000001899A6568
+		private void WriteArray(object o, System.Xml.Serialization.TypeData td) {} // 0x00000001899A6568-0x00000001899A67F4
+		protected void WriteReferencingElement(string n, string ns, object o, bool isNullable) {} // 0x00000001899A7818-0x00000001899A793C
+		private void CheckReferenceQueue() {} // 0x00000001899A5E70-0x00000001899A5EEC
+		protected void WriteSerializable(IXmlSerializable serializable, string name, string ns, bool isNullable) {} // 0x00000001899A79C8-0x00000001899A79F0
+		protected void WriteSerializable(IXmlSerializable serializable, string name, string ns, bool isNullable, bool wrapped) {} // 0x00000001899A793C-0x00000001899A79C8
+		protected void WriteStartDocument() {} // 0x00000001899A79F0-0x00000001899A7A30
+		protected void WriteStartElement(string name, string ns) {} // 0x00000001899A7A50-0x00000001899A7A70
+		protected void WriteStartElement(string name, string ns, bool writePrefixed) {} // 0x00000001899A7A30-0x00000001899A7A50
+		protected void WriteStartElement(string name, string ns, object o) {} // 0x00000001899A8084-0x00000001899A80A0
+		protected void WriteStartElement(string name, string ns, object o, bool writePrefixed) {} // 0x00000001899A8058-0x00000001899A8084
+		private void WriteStartElement(string name, string ns, object o, bool writePrefixed, ICollection namespaces) {} // 0x00000001899A7A70-0x00000001899A8058
+		protected void WriteTypedPrimitive(string name, string ns, object o, bool xsiType) {} // 0x00000001899A80A0-0x00000001899A8358
+		protected void WriteValue(string value) {} // 0x00000001899A8358-0x00000001899A8388
+		protected void WriteXmlAttribute(XmlNode node, object container) {} // 0x00000001899A8388-0x00000001899A85C0
+		protected void WriteXsiType(string name, string ns) {} // 0x00000001899A8658-0x00000001899A8710
+	}
+
+	internal class XmlSerializationWriterInterpreter : XmlSerializationWriter // TypeDefIndex: 42728
+	{
+		// Fields
+		private XmlMapping _typeMap; // 0x48
+		private SerializationFormat _format; // 0x50
+	
+		// Nested types
+		private class CallbackInfo // TypeDefIndex: 42727
+		{
+			// Fields
+			private XmlSerializationWriterInterpreter _swi; // 0x10
+			private XmlTypeMapping _typeMap; // 0x18
+	
+			// Constructors
+			public CallbackInfo() {} // Dummy constructor
+			public CallbackInfo(XmlSerializationWriterInterpreter swi, XmlTypeMapping typeMap) {} // 0x0000000182676770-0x00000001826767A0
+	
+			// Methods
+			internal void WriteObject(object ob) {} // 0x00000001899ACA7C-0x00000001899ACACC
+			internal void WriteEnum(object ob) {} // 0x00000001899ACA2C-0x00000001899ACA7C
+		}
+	
+		// Constructors
+		public XmlSerializationWriterInterpreter() {} // Dummy constructor
+		public XmlSerializationWriterInterpreter(XmlMapping typeMap) {} // 0x00000001899B9FF0-0x00000001899BA030
+	
+		// Methods
+		protected override void InitCallbacks() {} // 0x00000001899B68D4-0x00000001899B6C8C
+		public void WriteRoot(object ob) {} // 0x00000001899B9E50-0x00000001899B9FF0
+		protected virtual void WriteObject(XmlTypeMapping typeMap, object ob, string element, string namesp, bool isNullable, bool needType, bool writeWrappingElem) {} // 0x00000001899B93A4-0x00000001899B99FC
+		protected virtual void WriteMessage(XmlMembersMapping membersMap, object[] parameters) {} // 0x00000001899B9064-0x00000001899B91F0
+		protected virtual void WriteObjectElement(XmlTypeMapping typeMap, object ob, string element, string namesp) {} // 0x00000001899B92E0-0x00000001899B93A4
+		protected virtual void WriteObjectElementAttributes(XmlTypeMapping typeMap, object ob) {} // 0x00000001899B91F0-0x00000001899B9268
+		protected virtual void WriteObjectElementElements(XmlTypeMapping typeMap, object ob) {} // 0x00000001899B9268-0x00000001899B92E0
+		private void WriteMembers(ClassMap map, object ob, bool isValueList) {} // 0x00000001899B9004-0x00000001899B9064
+		private void WriteAttributeMembers(ClassMap map, object ob, bool isValueList) {} // 0x00000001899B7294-0x00000001899B76C4
+		private void WriteElementMembers(ClassMap map, object ob, bool isValueList) {} // 0x00000001899B76C4-0x00000001899B7C18
+		private object GetMemberValue(XmlTypeMapMember member, object ob, bool isValueList) => default; // 0x00000001899B643C-0x00000001899B64D8
+		private bool MemberHasValue(XmlTypeMapMember member, object ob, bool isValueList) => default; // 0x00000001899B6C8C-0x00000001899B6E6C
+		private void WriteMemberElement(XmlTypeMapElementInfo elem, object memberValue) {} // 0x00000001899B8B48-0x00000001899B9004
+		internal static object ImplicitConvert(object obj, System.Type type) => default; // 0x00000001899B6690-0x00000001899B68D4
+		private void WritePrimitiveValueLiteral(object memberValue, string name, string ns, XmlTypeMapping mappedType, System.Xml.Serialization.TypeData typeData, bool wrapped, bool isNullable) {} // 0x00000001899B9C58-0x00000001899B9E50
+		private void WritePrimitiveValueEncoded(object memberValue, string name, string ns, XmlQualifiedName xsiType, XmlTypeMapping mappedType, System.Xml.Serialization.TypeData typeData, bool wrapped, bool isNullable) {} // 0x00000001899B9A40-0x00000001899B9C58
+		protected virtual void WriteListElement(XmlTypeMapping typeMap, object ob, string element, string namesp) {} // 0x00000001899B897C-0x00000001899B8B48
+		private void WriteListContent(object container, System.Xml.Serialization.TypeData listType, ListMap map, object ob, StringBuilder targetString) {} // 0x00000001899B7C4C-0x00000001899B897C
+		private int GetListCount(System.Xml.Serialization.TypeData listType, object ob) => default; // 0x00000001899B6358-0x00000001899B643C
+		private void WriteAnyElementContent(XmlTypeMapMemberAnyElement member, object memberValue) {} // 0x00000001899B6E6C-0x00000001899B7294
+		protected virtual void WritePrimitiveElement(XmlTypeMapping typeMap, object ob, string element, string namesp) {} // 0x00000001899B99FC-0x00000001899B9A40
+		protected virtual void WriteEnumElement(XmlTypeMapping typeMap, object ob, string element, string namesp) {} // 0x00000001899B7C18-0x00000001899B7C4C
+		private string GetStringValue(XmlTypeMapping typeMap, System.Xml.Serialization.TypeData type, object value) => default; // 0x00000001899B64D8-0x00000001899B6690
+		private string GetEnumXmlValue(XmlTypeMapping typeMap, object ob) => default; // 0x00000001899B62BC-0x00000001899B6358
+	}
+
+	public class XmlSerializer // TypeDefIndex: 42730
+	{
+		// Fields
+		private static int generationThreshold; // 0x00
+		private static bool backgroundGeneration; // 0x04
+		private static bool deleteTempFiles; // 0x05
+		private static bool generatorFallback; // 0x06
+		private bool customSerializer; // 0x10
+		private XmlMapping typeMapping; // 0x18
+		private SerializerData serializerData; // 0x20
+		private static Hashtable serializerTypes; // 0x08
+		private UnreferencedObjectEventHandler onUnreferencedObject; // 0x28
+		private XmlAttributeEventHandler onUnknownAttribute; // 0x30
+		private XmlElementEventHandler onUnknownElement; // 0x38
+		private XmlNodeEventHandler onUnknownNode; // 0x40
+	
+		// Properties
+		internal XmlMapping Mapping { get => default; } // 0x0000000181041090-0x00000001810410A0 
+	
+		// Nested types
+		internal class SerializerData // TypeDefIndex: 42729
+		{
+			// Fields
+			public MethodInfo ReaderMethod; // 0x10
+			public System.Type WriterType; // 0x18
+			public MethodInfo WriterMethod; // 0x20
+			public XmlSerializerImplementation Implementation; // 0x28
+	
+			// Constructors
+			public SerializerData() {} // Dummy constructor
+	
+			// Methods
+			public XmlSerializationWriter CreateWriter() => default; // 0x00000001899B426C-0x00000001899B42F4
+		}
+	
+		// Constructors
+		public XmlSerializer() {} // Dummy constructor
+		static XmlSerializer() {} // 0x00000001899BB100-0x00000001899BB1F8
+		public XmlSerializer(System.Type type) {} // 0x00000001899BB348-0x00000001899BB370
+		public XmlSerializer(System.Type type, XmlAttributeOverrides overrides, System.Type[] extraTypes, XmlRootAttribute root, string defaultNamespace) {} // 0x00000001899BB1F8-0x00000001899BB348
+	
+		// Methods
+		internal virtual void OnUnknownAttribute(XmlAttributeEventArgs e) {} // 0x00000001899BAB9C-0x00000001899BABBC
+		internal virtual void OnUnknownElement(XmlElementEventArgs e) {} // 0x00000001899BABBC-0x00000001899BABDC
+		internal virtual void OnUnknownNode(XmlNodeEventArgs e) {} // 0x00000001899BABDC-0x00000001899BABFC
+		internal virtual void OnUnreferencedObject(UnreferencedObjectEventArgs e) {} // 0x0000000187ABF9C8-0x0000000187ABF9E8
+		protected virtual XmlSerializationReader CreateReader() => default; // 0x00000001899BA408-0x00000001899BA454
+		protected virtual XmlSerializationWriter CreateWriter() => default; // 0x00000001899BA794-0x00000001899BA7E0
+		public object Deserialize(TextReader textReader) => default; // 0x00000001899BA84C-0x00000001899BA8E0
+		public object Deserialize(XmlReader xmlReader) => default; // 0x00000001899BA7E0-0x00000001899BA84C
+		protected virtual object Deserialize(XmlSerializationReader reader) => default; // 0x00000001899BA8E0-0x00000001899BAB9C
+		protected virtual void Serialize(object o, XmlSerializationWriter writer) {} // 0x00000001899BAC94-0x00000001899BAE78
+		public void Serialize(TextWriter textWriter, object o) {} // 0x00000001899BABFC-0x00000001899BAC94
+		public void Serialize(XmlWriter xmlWriter, object o) {} // 0x00000001899BB0E4-0x00000001899BB100
+		public void Serialize(XmlWriter xmlWriter, object o, XmlSerializerNamespaces namespaces) {} // 0x00000001899BAE78-0x00000001899BB0E4
+		private XmlSerializationWriter CreateWriter(XmlMapping typeMapping) => default; // 0x00000001899BA454-0x00000001899BA794
+		private XmlSerializationReader CreateReader(XmlMapping typeMapping) => default; // 0x00000001899BA3A8-0x00000001899BA408
+	}
+
+	public class XmlSerializerFactory // TypeDefIndex: 42731
+	{
+		// Fields
+		private static Hashtable serializersBySource; // 0x00
+	
+		// Constructors
+		public XmlSerializerFactory() {} // 0x000000018350B670-0x000000018350B680
+		static XmlSerializerFactory() {} // 0x00000001899BA2E0-0x00000001899BA35C
+	
+		// Methods
+		public XmlSerializer CreateSerializer(System.Type type) => default; // 0x00000001899BA290-0x00000001899BA2B8
+		public XmlSerializer CreateSerializer(System.Type type, XmlRootAttribute root) => default; // 0x00000001899BA2B8-0x00000001899BA2E0
+		public XmlSerializer CreateSerializer(System.Type type, XmlAttributeOverrides overrides, System.Type[] extraTypes, XmlRootAttribute root, string defaultNamespace) => default; // 0x00000001899BA030-0x00000001899BA290
+	}
+
+	public abstract class XmlSerializerImplementation // TypeDefIndex: 42732
+	{
+		// Properties
+		public virtual XmlSerializationWriter Writer { get; } // 0x00000001899BA35C-0x00000001899BA3A8 
+	
+		// Constructors
+		protected XmlSerializerImplementation() {} // Dummy constructor
+	}
+
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue)]
+	public class XmlTextAttribute : Attribute // TypeDefIndex: 42733
+	{
+		// Fields
+		private string dataType; // 0x10
+		private System.Type type; // 0x18
+	
+		// Properties
+		public string DataType { get => default; } // 0x00000001899BB3FC-0x00000001899BB448 
+		public System.Type Type { get => default; } // 0x0000000181041090-0x00000001810410A0 
+	
+		// Constructors
+		public XmlTextAttribute() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		internal void AddKeyHash(StringBuilder sb) {} // 0x00000001899BB370-0x00000001899BB3FC
+	}
+
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Interface)]
+	public class XmlTypeAttribute : Attribute // TypeDefIndex: 42734
+	{
+		// Fields
+		private bool includeInSchema; // 0x10
+		private string ns; // 0x18
+		private string typeName; // 0x20
+	
+		// Properties
+		public bool IncludeInSchema { get => default; } // 0x00000001811797F0-0x0000000181179800 
+		public string Namespace { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public string TypeName { get => default; } // 0x00000001899BB4E4-0x00000001899BB530 
+	
+		// Constructors
+		public XmlTypeAttribute() {} // Dummy constructor
+	
+		// Methods
+		internal void AddKeyHash(StringBuilder sb) {} // 0x00000001899BB448-0x00000001899BB4E4
+	}
+
+	internal class XmlTypeMapElementInfo // TypeDefIndex: 42735
+	{
+		// Fields
+		private string _elementName; // 0x10
+		private string _namespace; // 0x18
+		private XmlSchemaForm _form; // 0x20
+		private XmlTypeMapMember _member; // 0x28
+		private object _choiceValue; // 0x30
+		private bool _isNullable; // 0x38
+		private int _nestingLevel; // 0x3C
+		private XmlTypeMapping _mappedType; // 0x40
+		private System.Xml.Serialization.TypeData _type; // 0x48
+		private bool _wrappedElement; // 0x50
+		private int _explicitOrder; // 0x54
+	
+		// Properties
+		public System.Xml.Serialization.TypeData TypeData { get => default; } // 0x0000000183D4EA70-0x0000000183D4EA80 
+		public object ChoiceValue { get => default; set {} } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
+		public string ElementName { get => default; set {} } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+		public string Namespace { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		public string DataTypeNamespace { get => default; } // 0x00000001899BB708-0x00000001899BB754 
+		public string DataTypeName { get => default; } // 0x00000001899BB6D8-0x00000001899BB708 
+		public XmlSchemaForm Form { get => default; set {} } // 0x0000000181003B50-0x0000000181003B60 0x0000000181003B60-0x0000000181003B70
+		public XmlTypeMapping MappedType { get => default; set {} } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
+		public bool IsNullable { get => default; set {} } // 0x0000000183D4F190-0x0000000183D4F1A0 0x0000000183D4E280-0x0000000183D4E290
+		public XmlTypeMapMember Member { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		public int NestingLevel { set {} } // 0x0000000183D4EDC0-0x0000000183D4EDD0
+		public bool MultiReferenceType { get => default; } // 0x00000001899BB7DC-0x00000001899BB7F0 
+		public bool WrappedElement { get => default; set {} } // 0x0000000183D4F000-0x0000000183D4F010 0x0000000183D4F030-0x0000000183D4F040
+		public bool IsTextElement { get => default; set {} } // 0x00000001899BB754-0x00000001899BB794 0x00000001899BB7F0-0x00000001899BB8C0
+		public bool IsUnnamedAnyElement { get => default; set {} } // 0x00000001899BB794-0x00000001899BB7DC 0x00000001899BB8C0-0x00000001899BB98C
+		public int ExplicitOrder { get => default; set {} } // 0x0000000183D4EEC0-0x0000000183D4EED0 0x0000000183D4EF10-0x0000000183D4EF20
+	
+		// Constructors
+		public XmlTypeMapElementInfo() {} // Dummy constructor
+		public XmlTypeMapElementInfo(XmlTypeMapMember member, System.Xml.Serialization.TypeData type) {} // 0x00000001899BB630-0x00000001899BB6D8
+	
+		// Methods
+		public override bool Equals(object other) => default; // 0x00000001899BB538-0x00000001899BB630
+		public override int GetHashCode() => default; // 0x0000000183D4F970-0x0000000183D4F980
+	}
+
+	internal class XmlTypeMapElementInfoList : ArrayList // TypeDefIndex: 42736
+	{
+		// Constructors
+		public XmlTypeMapElementInfoList() {} // 0x00000001899BB530-0x00000001899BB538
+	}
+
+	internal class XmlTypeMapMember // TypeDefIndex: 42737
+	{
+		// Fields
+		private string _name; // 0x10
+		private int _index; // 0x18
+		private int _globalIndex; // 0x1C
+		private int _specifiedGlobalIndex; // 0x20
+		private System.Xml.Serialization.TypeData _typeData; // 0x28
+		private MemberInfo _member; // 0x30
+		private MemberInfo _specifiedMember; // 0x38
+		private MethodInfo _shouldSerialize; // 0x40
+		private object _defaultValue; // 0x48
+		private int _flags; // 0x50
+	
+		// Properties
+		public string Name { get => default; set {} } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+		public object DefaultValue { get => default; set {} } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+		public System.Xml.Serialization.TypeData TypeData { get => default; set {} } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+		public int Index { get => default; set {} } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000183D4E9C0-0x0000000183D4E9D0
+		public int GlobalIndex { get => default; set {} } // 0x0000000183D4EBB0-0x0000000183D4EBC0 0x0000000183D4EBC0-0x0000000183D4EBD0
+		public bool IsOptionalValueType { get => default; set {} } // 0x0000000189187244-0x000000018918724C 0x00000001899BCDD8-0x00000001899BCE04
+		public bool IsReturnValue { get => default; set {} } // 0x000000018918723C-0x0000000189187244 0x00000001899BCE04-0x00000001899BCE30
+	
+		// Constructors
+		public XmlTypeMapMember() {} // 0x00000001899BCD78-0x00000001899BCDD8
+	
+		// Methods
+		public bool IsReadOnly(System.Type type) => default; // 0x00000001899BC858-0x00000001899BC904
+		public static object GetValue(object ob, string name) => default; // 0x00000001899BC504-0x00000001899BC624
+		public object GetValue(object ob) => default; // 0x00000001899BC410-0x00000001899BC504
+		public void SetValue(object ob, object value) {} // 0x00000001899BCB0C-0x00000001899BCC3C
+		public static void SetValue(object ob, string name, object value) {} // 0x00000001899BCC3C-0x00000001899BCD78
+		private void InitMember(System.Type type) {} // 0x00000001899BC624-0x00000001899BC858
+		public void CheckOptionalValueType(System.Type type) {} // 0x00000001899BC1D8-0x00000001899BC244
+		public bool GetValueSpecified(object ob) => default; // 0x00000001899BC244-0x00000001899BC410
+		public void SetValueSpecified(object ob, bool value) {} // 0x00000001899BC904-0x00000001899BCB0C
+	}
+
+	internal class XmlTypeMapMemberAttribute : XmlTypeMapMember // TypeDefIndex: 42738
+	{
+		// Fields
+		private string _attributeName; // 0x58
+		private string _namespace; // 0x60
+		private XmlSchemaForm _form; // 0x68
+		private XmlTypeMapping _mappedType; // 0x70
+	
+		// Properties
+		public string AttributeName { get => default; set {} } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x0000000183081D30-0x0000000183081D40
+		public string Namespace { get => default; set {} } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
+		public XmlSchemaForm Form { set {} } // 0x0000000183D4EF30-0x0000000183D4EF40
+		public XmlTypeMapping MappedType { get => default; set {} } // 0x0000000183D4EB30-0x0000000183D4EB40 0x000000018519C3C8-0x000000018519C3D8
+	
+		// Constructors
+		public XmlTypeMapMemberAttribute() {} // 0x00000001899BBCEC-0x00000001899BBD34
+	}
+
+	internal class XmlTypeMapMemberElement : XmlTypeMapMember // TypeDefIndex: 42739
+	{
+		// Fields
+		private XmlTypeMapElementInfoList _elementInfo; // 0x58
+		private string _choiceMember; // 0x60
+		private bool _isTextCollector; // 0x68
+		private System.Xml.Serialization.TypeData _choiceTypeData; // 0x70
+	
+		// Properties
+		public XmlTypeMapElementInfoList ElementInfo { get => default; set {} } // 0x00000001899BC168-0x00000001899BC1D8 0x0000000183081D30-0x0000000183081D40
+		public string ChoiceMember { get => default; set {} } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
+		public System.Xml.Serialization.TypeData ChoiceTypeData { get => default; set {} } // 0x0000000183D4EB30-0x0000000183D4EB40 0x000000018519C3C8-0x000000018519C3D8
+		public bool IsXmlTextCollector { get => default; set {} } // 0x0000000183D4F3F0-0x0000000183D4F400 0x0000000183D4F440-0x0000000183D4F450
+	
+		// Constructors
+		public XmlTypeMapMemberElement() {} // 0x00000001899BB98C-0x00000001899BB994
+	
+		// Methods
+		public XmlTypeMapElementInfo FindElement(object ob, object memberValue) => default; // 0x00000001899BBD34-0x00000001899BC154
+		public void SetChoice(object ob, object choice) {} // 0x00000001899BC154-0x00000001899BC168
+	}
+
+	internal class XmlTypeMapMemberList : XmlTypeMapMemberElement // TypeDefIndex: 42740
+	{
+		// Constructors
+		public XmlTypeMapMemberList() {} // 0x00000001899BB98C-0x00000001899BB994
+	}
+
+	internal class XmlTypeMapMemberExpandable : XmlTypeMapMemberElement // TypeDefIndex: 42741
+	{
+		// Fields
+		private int _flatArrayIndex; // 0x78
+	
+		// Properties
+		public int FlatArrayIndex { get => default; set {} } // 0x0000000183D4EC40-0x0000000183D4EC50 0x0000000183D4ECC0-0x0000000183D4ECD0
+	
+		// Constructors
+		public XmlTypeMapMemberExpandable() {} // 0x00000001899BB98C-0x00000001899BB994
+	}
+
+	internal class XmlTypeMapMemberFlatList : XmlTypeMapMemberExpandable // TypeDefIndex: 42742
+	{
+		// Fields
+		private ListMap _listMap; // 0x80
+	
+		// Properties
+		public ListMap ListMap { get => default; set {} } // 0x0000000183D4EAE0-0x0000000183D4EAF0 0x00000001851DFC94-0x00000001851DFCA4
+	
+		// Constructors
+		public XmlTypeMapMemberFlatList() {} // 0x00000001899BB98C-0x00000001899BB994
+	}
+
+	internal class XmlTypeMapMemberAnyElement : XmlTypeMapMemberExpandable // TypeDefIndex: 42743
+	{
+		// Properties
+		public bool IsDefaultAny { get => default; } // 0x00000001899BBB64-0x00000001899BBCEC 
+	
+		// Constructors
+		public XmlTypeMapMemberAnyElement() {} // 0x00000001899BB98C-0x00000001899BB994
+	
+		// Methods
+		public bool IsElementDefined(string name, string ns) => default; // 0x00000001899BB994-0x00000001899BBB64
+	}
+
+	internal class XmlTypeMapMemberAnyAttribute : XmlTypeMapMember // TypeDefIndex: 42744
+	{
+		// Constructors
+		public XmlTypeMapMemberAnyAttribute() {} // 0x00000001899BB98C-0x00000001899BB994
+	}
+
+	internal class XmlTypeMapMemberNamespaces : XmlTypeMapMember // TypeDefIndex: 42745
+	{
+		// Constructors
+		public XmlTypeMapMemberNamespaces() {} // 0x00000001899BB98C-0x00000001899BB994
+	}
+
+	public class XmlTypeMapping : XmlMapping // TypeDefIndex: 42746
+	{
+		// Fields
+		private string xmlType; // 0x48
+		private string xmlTypeNamespace; // 0x50
+		private System.Xml.Serialization.TypeData type; // 0x58
+		private XmlTypeMapping baseMap; // 0x60
+		private bool multiReferenceType; // 0x68
+		private bool includeInSchema; // 0x69
+		private bool isNullable; // 0x6A
+		private bool isAny; // 0x6B
+		private ArrayList _derivedTypes; // 0x70
+	
+		// Properties
+		public string TypeFullName { get => default; } // 0x00000001899BD280-0x00000001899BD29C 
+		internal System.Xml.Serialization.TypeData TypeData { get => default; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 
+		internal string XmlType { get => default; set {} } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+		internal string XmlTypeNamespace { get => default; set {} } // 0x00000001899BD29C-0x00000001899BD2E4 0x0000000182C926C0-0x0000000182C926D0
+		internal bool HasXmlTypeNamespace { get => default; } // 0x0000000182B84230-0x0000000182B84240 
+		internal ArrayList DerivedTypes { get => default; } // 0x0000000183D4EB30-0x0000000183D4EB40 
+		internal bool MultiReferenceType { get => default; } // 0x0000000183D4F3F0-0x0000000183D4F400 
+		internal XmlTypeMapping BaseMap { get => default; set {} } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
+		internal bool IncludeInSchema { set {} } // 0x0000000183D4F410-0x0000000183D4F420
+		internal bool IsNullable { get => default; set {} } // 0x0000000183D75120-0x0000000183D75130 0x0000000183D75B00-0x0000000183D75B10
+		internal bool IsAny { get => default; set {} } // 0x0000000183D75130-0x0000000183D75140 0x0000000183D75D50-0x0000000183D75D60
+	
+		// Constructors
+		public XmlTypeMapping() {} // Dummy constructor
+		internal XmlTypeMapping(string elementName, string ns, System.Xml.Serialization.TypeData typeData, string xmlType, string xmlTypeNamespace) {} // 0x00000001899BD1AC-0x00000001899BD280
+	
+		// Methods
+		internal XmlTypeMapping GetRealTypeMap(System.Type objectType) => default; // 0x00000001899BD018-0x00000001899BD128
+		internal XmlTypeMapping GetRealElementMap(string name, string ens) => default; // 0x00000001899BCE30-0x00000001899BD018
+		internal void UpdateRoot(XmlQualifiedName qname) {} // 0x00000001899BD128-0x00000001899BD1AC
+	}
+
+	internal class XmlSerializableMapping : XmlTypeMapping // TypeDefIndex: 42747
+	{
+		// Fields
+		private XmlSchema _schema; // 0x78
+		private XmlSchemaComplexType _schemaType; // 0x80
+		private XmlQualifiedName _schemaTypeName; // 0x88
+	
+		// Constructors
+		public XmlSerializableMapping() {} // Dummy constructor
+		internal XmlSerializableMapping(XmlRootAttribute root, string elementName, string ns, System.Xml.Serialization.TypeData typeData, string xmlType, string xmlTypeNamespace) {} // 0x00000001899B5AC4-0x00000001899B62BC
+	}
+
+	internal class ClassMap : ObjectMap // TypeDefIndex: 42748
+	{
+		// Fields
+		private Hashtable _elements; // 0x10
+		private ArrayList _elementMembers; // 0x18
+		private Hashtable _attributeMembers; // 0x20
+		private XmlTypeMapMemberAttribute[] _attributeMembersArray; // 0x28
+		private ArrayList _flatLists; // 0x30
+		private ArrayList _allMembers; // 0x38
+		private ArrayList _membersWithDefault; // 0x40
+		private ArrayList _listMembers; // 0x48
+		private XmlTypeMapMemberAnyElement _defaultAnyElement; // 0x50
+		private XmlTypeMapMemberAnyAttribute _defaultAnyAttribute; // 0x58
+		private XmlTypeMapMemberNamespaces _namespaceDeclarations; // 0x60
+		private XmlTypeMapMember _xmlTextCollector; // 0x68
+		private XmlTypeMapMember _returnMember; // 0x70
+		private bool _ignoreMemberNamespace; // 0x78
+		private bool _canBeSimpleType; // 0x79
+		private bool? _isOrderDependentMap; // 0x7A
+	
+		// Properties
+		public bool IsOrderDependentMap { get => default; } // 0x00000001899AE4D0-0x00000001899AE708 
+		public XmlTypeMapMemberAnyElement DefaultAnyElementMember { get => default; } // 0x0000000183D4EAF0-0x0000000183D4EB00 
+		public XmlTypeMapMemberAnyAttribute DefaultAnyAttributeMember { get => default; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 
+		public XmlTypeMapMemberNamespaces NamespaceDeclarations { get => default; } // 0x0000000183D4EB00-0x0000000183D4EB10 
+		public ICollection AttributeMembers { get => default; } // 0x00000001899AE1F4-0x00000001899AE480 
+		public ICollection ElementMembers { get => default; } // 0x0000000181041090-0x00000001810410A0 
+		public ArrayList AllMembers { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		public ArrayList FlatLists { get => default; } // 0x0000000181003830-0x0000000181003840 
+		public ArrayList ListMembers { get => default; } // 0x0000000183D4EA70-0x0000000183D4EA80 
+		public XmlTypeMapMember XmlTextCollector { get => default; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 
+		public XmlTypeMapMember ReturnMember { get => default; } // 0x0000000183D4EB30-0x0000000183D4EB40 
+		public XmlQualifiedName SimpleContentBaseType { get => default; } // 0x00000001899AE708-0x00000001899AE890 
+		public bool HasSimpleContent { get => default; } // 0x00000001899AE480-0x00000001899AE4D0 
+	
+		// Constructors
+		public ClassMap() {} // 0x00000001899AE154-0x00000001899AE1F4
+	
+		// Methods
+		public void AddMember(XmlTypeMapMember member) {} // 0x00000001899ACF20-0x00000001899ADB6C
+		private void RegisterFlatList(XmlTypeMapMemberExpandable member) {} // 0x00000001899AE0A8-0x00000001899AE154
+		public XmlTypeMapMemberAttribute GetAttribute(string name, string ns) => default; // 0x00000001899ADC30-0x00000001899ADCC4
+		public XmlTypeMapElementInfo GetElement(string name, string ns, int minimalOrder) => default; // 0x00000001899ADCC4-0x00000001899ADEDC
+		public XmlTypeMapElementInfo GetElement(string name, string ns) => default; // 0x00000001899ADEDC-0x00000001899AE0A8
+		private string BuildKey(string name, string ns, int explicitOrder) => default; // 0x00000001899ADB6C-0x00000001899ADC30
+		public void SetCanBeSimpleType(bool can) {} // 0x0000000183D51B40-0x0000000183D51B50
+	}
+
+	internal class ListMap : ObjectMap // TypeDefIndex: 42749
+	{
+		// Fields
+		private XmlTypeMapElementInfoList _itemInfo; // 0x10
+		private string _choiceMember; // 0x18
+	
+		// Properties
+		public string ChoiceMember { set {} } // 0x00000001822C3A90-0x00000001822C3AA0
+		public XmlTypeMapElementInfoList ItemInfo { get => default; set {} } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+	
+		// Constructors
+		public ListMap() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public XmlTypeMapElementInfo FindElement(object ob, int index, object memberValue) => default; // 0x00000001899B0BA8-0x00000001899B10E8
+		public XmlTypeMapElementInfo FindElement(string elementName, string ns) => default; // 0x00000001899B10E8-0x00000001899B1290
+		public XmlTypeMapElementInfo FindTextElement() => default; // 0x00000001899B1290-0x00000001899B1400
+		public void GetArrayType(int itemCount, out string localName, out string ns) {
+			localName = default;
+			ns = default;
+		} // 0x00000001899B1400-0x00000001899B15C4
+		public override bool Equals(object other) => default; // 0x00000001899B0AA4-0x00000001899B0BA8
+		public override int GetHashCode() => default; // 0x0000000183D4F970-0x0000000183D4F980
+	}
+
+	internal class EnumMap : ObjectMap // TypeDefIndex: 42751
+	{
+		// Fields
+		private readonly EnumMapMember[] _members; // 0x10
+		private readonly bool _isFlags; // 0x18
+		private readonly string[] _enumNames; // 0x20
+		private readonly string[] _xmlNames; // 0x28
+		private readonly long[] _values; // 0x30
+	
+		// Properties
+		public bool IsFlags { get => default; } // 0x0000000181002A50-0x0000000181002A60 
+		public string[] EnumNames { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public string[] XmlNames { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		public long[] Values { get => default; } // 0x0000000181003830-0x0000000181003840 
+	
+		// Nested types
+		public class EnumMapMember // TypeDefIndex: 42750
+		{
+			// Fields
+			private readonly string _xmlName; // 0x10
+			private readonly string _enumName; // 0x18
+			private readonly long _value; // 0x20
+	
+			// Properties
+			public string XmlName { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+			public string EnumName { get => default; } // 0x0000000181041090-0x00000001810410A0 
+			public long Value { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+	
+			// Constructors
+			public EnumMapMember() {} // Dummy constructor
+			public EnumMapMember(string xmlName, string enumName, long value) {} // 0x00000001899AF924-0x00000001899AF954
+		}
+	
+		// Constructors
+		public EnumMap() {} // Dummy constructor
+		public EnumMap(EnumMapMember[] members, bool isFlags) {} // 0x00000001899AFF20-0x00000001899B0074
+	
+		// Methods
+		public string GetXmlName(string typeName, object enumValue) => default; // 0x00000001899AFBFC-0x00000001899AFF20
+		public string GetEnumName(string typeName, string xmlName) => default; // 0x00000001899AF954-0x00000001899AFBFC
+	}
+}
+
+namespace System.Xml.XmlConfiguration
+{
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public sealed class XmlReaderSection // TypeDefIndex: 42752
+	{
+		// Properties
+		internal static bool ProhibitDefaultUrlResolver { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		internal static bool CollapseWhiteSpaceIntoEmptyString { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+	
+		// Constructors
+		public XmlReaderSection() {} // Dummy constructor
+	
+		// Methods
+		internal static XmlResolver CreateDefaultResolver() => default; // 0x00000001899B5A88-0x00000001899B5AC4
+	}
+}
+
+namespace System.Xml.XPath
+{
+	public interface IXPathNavigable // TypeDefIndex: 42652
+	{
+		// Methods
+		XPathNavigator CreateNavigator();
+	}
+
+	public class XPathDocument // TypeDefIndex: 42653
+	{
+		// Fields
+		private XPathNode[] pageText; // 0x10
+		private XPathNode[] pageRoot; // 0x18
+		private XPathNode[] pageXmlNmsp; // 0x20
+		private int idxText; // 0x28
+		private int idxRoot; // 0x2C
+		private int idxXmlNmsp; // 0x30
+		private XmlNameTable nameTable; // 0x38
+		private bool hasLineInfo; // 0x40
+		private Dictionary<XPathNodeRef, XPathNodeRef> mapNmsp; // 0x48
+		private Dictionary<string, XPathNodeRef> idValueMap; // 0x50
+	
+		// Properties
+		internal XmlNameTable NameTable { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
+		internal bool HasLineInfo { get => default; } // 0x0000000183D4EE90-0x0000000183D4EEA0 
+	
+		// Constructors
+		public XPathDocument() {} // Dummy constructor
+	
+		// Methods
+		internal int GetCollapsedTextNode(out XPathNode[] pageText) {
+			pageText = default;
+			return default;
+		} // 0x00000001899813EC-0x000000018998140C
+		internal int GetRootNode(out XPathNode[] pageRoot) {
+			pageRoot = default;
+			return default;
+		} // 0x000000018998140C-0x000000018998142C
+		internal int GetXmlNamespaceNode(out XPathNode[] pageXmlNmsp) {
+			pageXmlNmsp = default;
+			return default;
+		} // 0x000000018998142C-0x000000018998144C
+		internal int LookupNamespaces(XPathNode[] pageElem, int idxElem, out XPathNode[] pageNmsp) {
+			pageNmsp = default;
+			return default;
+		} // 0x0000000189981504-0x0000000189981604
+		internal int LookupIdElement(string id, out XPathNode[] pageElem) {
+			pageElem = default;
+			return default;
+		} // 0x000000018998144C-0x0000000189981504
+	}
+
+	[Serializable]
+	public class XPathException : SystemException // TypeDefIndex: 42654
+	{
+		// Fields
+		private string res; // 0x90
+		private string[] args; // 0x98
+		private string message; // 0xA0
+	
+		// Properties
+		public override string Message { get => default; } // 0x0000000189981E54-0x0000000189981E78 
+	
+		// Constructors
+		protected XPathException(SerializationInfo info, StreamingContext context) {} // 0x0000000189981B70-0x0000000189981DD4
+		public XPathException() {} // 0x0000000189981B24-0x0000000189981B70
+		public XPathException(string message, Exception innerException) {} // 0x0000000189981A80-0x0000000189981B24
+		private XPathException(string res, string[] args) {} // 0x0000000189981A64-0x0000000189981A80
+		private XPathException(string res, string[] args, Exception inner) {} // 0x0000000189981DD4-0x0000000189981E54
+	
+		// Methods
+		public override void GetObjectData(SerializationInfo info, StreamingContext context) {} // 0x0000000189981988-0x0000000189981A64
+		internal static XPathException Create(string res) => default; // 0x000000018998170C-0x0000000189981770
+		internal static XPathException Create(string res, string arg) => default; // 0x0000000189981770-0x0000000189981814
+		internal static XPathException Create(string res, string arg, string arg2) => default; // 0x0000000189981814-0x00000001899818D4
+		internal static XPathException Create(string res, string arg, Exception innerException) => default; // 0x00000001899818D4-0x0000000189981988
+		private static string CreateMessage(string res, string[] args) => default; // 0x0000000189981604-0x000000018998170C
+	}
+
+	public enum XPathResultType // TypeDefIndex: 42655
+	{
+		Number = 0,
+		String = 1,
+		Navigator = 1,
+		Boolean = 2,
+		NodeSet = 3,
+		Any = 5,
+		Error = 6
+	}
+
+	public abstract class XPathExpression // TypeDefIndex: 42656
+	{
+		// Constructors
+		internal XPathExpression() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public abstract void SetContext(IXmlNamespaceResolver nsResolver);
+		public static XPathExpression Compile(string xpath) => default; // 0x0000000189981E78-0x0000000189981E84
+		public static XPathExpression Compile(string xpath, IXmlNamespaceResolver nsResolver) => default; // 0x0000000189981E84-0x0000000189981F54
+	}
+
+	public abstract class XPathItem // TypeDefIndex: 42657
+	{
+		// Properties
+		public abstract XmlSchemaType XmlType { get; }
+		public abstract string Value { get; }
+		public abstract object TypedValue { get; }
+		public abstract System.Type ValueType { get; }
+		public abstract bool ValueAsBoolean { get; }
+		public abstract System.DateTime ValueAsDateTime { get; }
+		public abstract double ValueAsDouble { get; }
+		public abstract int ValueAsInt { get; }
+		public abstract long ValueAsLong { get; }
+	
+		// Constructors
+		protected XPathItem() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public virtual object ValueAs(System.Type returnType) => default; // 0x0000000189981F54-0x0000000189981F6C
+		public abstract object ValueAs(System.Type returnType, IXmlNamespaceResolver nsResolver);
+	}
+
+	public enum XPathNamespaceScope // TypeDefIndex: 42658
+	{
+		All = 0,
+		ExcludeXml = 1,
+		Local = 2
+	}
+
+	[DebuggerDisplay("{debuggerDisplayProxy}")]
+	public abstract class XPathNavigator : XPathItem, ICloneable, IXPathNavigable, IXmlNamespaceResolver // TypeDefIndex: 42659
+	{
+		// Fields
+		internal static readonly XPathNavigatorKeyComparer comparer; // 0x00
+		internal static readonly char[] NodeTypeLetter; // 0x08
+		internal static readonly char[] UniqueIdTbl; // 0x10
+		internal static readonly int[] ContentKindMasks; // 0x18
+	
+		// Properties
+		public override XmlSchemaType XmlType { get; } // 0x0000000189984340-0x000000018998438C 
+		public override object TypedValue { get; } // 0x00000001899839F8-0x0000000189983B50 
+		public override System.Type ValueType { get; } // 0x00000001899841E4-0x0000000189984290 
+		public override bool ValueAsBoolean { get; } // 0x0000000189983B50-0x0000000189983CA4 
+		public override System.DateTime ValueAsDateTime { get; } // 0x0000000189983CA4-0x0000000189983DF0 
+		public override double ValueAsDouble { get; } // 0x0000000189983DF0-0x0000000189983F40 
+		public override int ValueAsInt { get; } // 0x0000000189983F40-0x0000000189984094 
+		public override long ValueAsLong { get; } // 0x0000000189984094-0x00000001899841E4 
+		public abstract XmlNameTable NameTable { get; }
+		public abstract XPathNodeType NodeType { get; }
+		public abstract string LocalName { get; }
+		public abstract string Name { get; }
+		public abstract string NamespaceURI { get; }
+		public abstract string Prefix { get; }
+		public abstract string BaseURI { get; }
+		public virtual string XmlLang { get; } // 0x0000000189984290-0x0000000189984340 
+		public virtual object UnderlyingObject { get; } // 0x0000000181002730-0x0000000181002740 
+		public virtual IXmlSchemaInfo SchemaInfo { get; } // 0x00000001899839BC-0x00000001899839F8 
+	
+		// Constructors
+		protected XPathNavigator() {} // 0x000000018350B670-0x000000018350B680
+		static XPathNavigator() {} // 0x0000000189983820-0x00000001899839BC
+	
+		// Methods
+		public override string ToString() => default; // 0x00000001894BD1C4-0x00000001894BD1D4
+		public override object ValueAs(System.Type returnType, IXmlNamespaceResolver nsResolver) => default; // 0x00000001899836A4-0x0000000189983820
+		object ICloneable.Clone() => default; // 0x0000000189927E14-0x0000000189927E24
+		public virtual XPathNavigator CreateNavigator() => default; // 0x0000000189927E14-0x0000000189927E24
+		public virtual string LookupNamespace(string prefix) => default; // 0x000000018998291C-0x0000000189982A6C
+		public virtual string LookupPrefix(string namespaceURI) => default; // 0x0000000189982A6C-0x0000000189982C10
+		public virtual IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope) => default; // 0x0000000189982704-0x00000001899828B0
+		public abstract XPathNavigator Clone();
+		public virtual bool MoveToAttribute(string localName, string namespaceURI) => default; // 0x0000000189982C10-0x0000000189982CAC
+		public abstract bool MoveToFirstAttribute();
+		public abstract bool MoveToNextAttribute();
+		public virtual bool MoveToNamespace(string name) => default; // 0x00000001899830D0-0x0000000189983148
+		public abstract bool MoveToFirstNamespace(XPathNamespaceScope namespaceScope);
+		public abstract bool MoveToNextNamespace(XPathNamespaceScope namespaceScope);
+		public bool MoveToFirstNamespace() => default; // 0x0000000189982DF0-0x0000000189982E00
+		public bool MoveToNextNamespace() => default; // 0x0000000189983148-0x0000000189983158
+		public abstract bool MoveToNext();
+		public abstract bool MoveToFirstChild();
+		public abstract bool MoveToParent();
+		public virtual void MoveToRoot() {} // 0x0000000189983378-0x0000000189983398
+		public abstract bool MoveTo(XPathNavigator other);
+		public abstract bool MoveToId(string id);
+		public virtual bool MoveToChild(string localName, string namespaceURI) => default; // 0x0000000189982CAC-0x0000000189982D58
+		public virtual bool MoveToChild(XPathNodeType type) => default; // 0x0000000189982D58-0x0000000189982DF0
+		public virtual bool MoveToFollowing(string localName, string namespaceURI, XPathNavigator end) => default; // 0x0000000189982F58-0x00000001899830D0
+		public virtual bool MoveToFollowing(XPathNodeType type, XPathNavigator end) => default; // 0x0000000189982E00-0x0000000189982F58
+		public virtual bool MoveToNext(string localName, string namespaceURI) => default; // 0x00000001899831F8-0x00000001899832AC
+		public virtual bool MoveToNext(XPathNodeType type) => default; // 0x0000000189983158-0x00000001899831F8
+		public abstract bool IsSamePosition(XPathNavigator other);
+		public virtual bool IsDescendant(XPathNavigator nav) => default; // 0x00000001899828B0-0x0000000189982910
+		public virtual XmlNodeOrder ComparePosition(XPathNavigator nav) => default; // 0x0000000189982164-0x0000000189982390
+		public virtual XPathNodeIterator Select(string xpath) => default; // 0x00000001899835E8-0x0000000189983614
+		public virtual XPathNodeIterator Select(XPathExpression expr) => default; // 0x0000000189983614-0x00000001899836A4
+		public virtual object Evaluate(XPathExpression expr) => default; // 0x00000001899824B0-0x00000001899824BC
+		public virtual object Evaluate(XPathExpression expr, XPathNodeIterator context) => default; // 0x00000001899824BC-0x000000018998263C
+		public virtual XPathNodeIterator SelectChildren(XPathNodeType type) => default; // 0x000000018998342C-0x00000001899834AC
+		public virtual XPathNodeIterator SelectChildren(string name, string namespaceURI) => default; // 0x0000000189983398-0x000000018998342C
+		public virtual XPathNodeIterator SelectDescendants(XPathNodeType type, bool matchSelf) => default; // 0x00000001899834AC-0x0000000189983540
+		public virtual XPathNodeIterator SelectDescendants(string name, string namespaceURI, bool matchSelf) => default; // 0x0000000189983540-0x00000001899835E8
+		internal bool MoveToNonDescendant() => default; // 0x00000001899832AC-0x0000000189983378
+		private static int GetDepth(XPathNavigator nav) => default; // 0x00000001899826A0-0x00000001899826E0
+		private XmlNodeOrder CompareSiblings(XPathNavigator n1, XPathNavigator n2) => default; // 0x0000000189982390-0x00000001899824B0
+		internal static int GetContentKindMask(XPathNodeType type) => default; // 0x000000018998263C-0x00000001899826A0
+		internal static int GetKindMask(XPathNodeType type) => default; // 0x00000001899826E0-0x0000000189982704
+		internal static bool IsText(XPathNodeType type) => default; // 0x0000000189982910-0x000000018998291C
+	}
+
+	internal class XPathNavigatorKeyComparer : IEqualityComparer // TypeDefIndex: 42660
+	{
+		// Constructors
+		public XPathNavigatorKeyComparer() {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		bool IEqualityComparer.Equals(object obj1, object obj2) => default; // 0x0000000189981F6C-0x0000000189981FE8
+		int IEqualityComparer.GetHashCode(object obj) => default; // 0x0000000189981FE8-0x0000000189982164
+	}
+
+	[DebuggerDisplay("Position={CurrentPosition}, Current={debuggerDisplayProxy}")]
+	public abstract class XPathNodeIterator : ICloneable, IEnumerable // TypeDefIndex: 42662
+	{
+		// Fields
+		internal int count; // 0x10
+	
+		// Properties
+		public abstract XPathNavigator Current { get; }
+		public abstract int CurrentPosition { get; }
+		public virtual int Count { get; } // 0x00000001899843F4-0x000000018998444C 
+	
+		// Nested types
+		private class Enumerator : IEnumerator // TypeDefIndex: 42661
+		{
+			// Fields
+			private XPathNodeIterator original; // 0x10
+			private XPathNodeIterator current; // 0x18
+			private bool iterationStarted; // 0x20
+	
+			// Properties
+			public virtual object Current { get => default; } // 0x00000001899770F8-0x00000001899772B0 
+	
+			// Constructors
+			public Enumerator() {} // Dummy constructor
+			public Enumerator(XPathNodeIterator original) {} // 0x00000001899770CC-0x00000001899770F8
+	
+			// Methods
+			public virtual bool MoveNext() => default; // 0x0000000189977064-0x00000001899770CC
+			public virtual void Reset() {} // 0x0000000183D5B630-0x0000000183D5B640
+		}
+	
+		// Constructors
+		protected XPathNodeIterator() {} // 0x0000000183D51990-0x0000000183D519A0
+	
+		// Methods
+		object ICloneable.Clone() => default; // 0x00000001899843EC-0x00000001899843F4
+		public abstract XPathNodeIterator Clone();
+		public abstract bool MoveNext();
+		public virtual IEnumerator GetEnumerator() => default; // 0x000000018998438C-0x00000001899843EC
+	}
+
+	public enum XPathNodeType // TypeDefIndex: 42663
+	{
+		Root = 0,
+		Element = 1,
+		Attribute = 2,
+		Namespace = 3,
+		Text = 4,
+		SignificantWhitespace = 5,
+		Whitespace = 6,
+		ProcessingInstruction = 7,
+		Comment = 8,
+		All = 9
+	}
+}
+
+namespace System.Xml.Xsl
+{
+	public interface IXsltContextFunction // TypeDefIndex: 42753
+	{
+		// Properties
+		XPathResultType ReturnType { get; }
+	
+		// Methods
+		object Invoke(XsltContext xsltContext, object[] args, XPathNavigator docContext);
+	}
+
+	public interface IXsltContextVariable // TypeDefIndex: 42754
+	{
+		// Properties
+		XPathResultType VariableType { get; }
+	
+		// Methods
+		object Evaluate(XsltContext xsltContext);
+	}
+
+	public abstract class XsltContext : XmlNamespaceManager // TypeDefIndex: 42755
+	{
+		// Properties
+		public abstract bool Whitespace { get; }
+	
+		// Constructors
+		protected XsltContext() {} // Dummy constructor
+		internal XsltContext(bool dummy) {} // 0x000000018350B670-0x000000018350B680
+	
+		// Methods
+		public abstract IXsltContextVariable ResolveVariable(string prefix, string name);
+		public abstract IXsltContextFunction ResolveFunction(string prefix, string name, XPathResultType[] ArgTypes);
+		public abstract bool PreserveWhitespace(XPathNavigator node);
+	}
+}
+
+namespace System.Xml.Xsl.Runtime
+{
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public struct StringConcat // TypeDefIndex: 42756
+	{
+		// Fields
+		private string s1; // 0x00
+		private string s2; // 0x08
+		private string s3; // 0x10
+		private string s4; // 0x18
+		private string delimiter; // 0x20
+		private List<string> strList; // 0x28
+		private int idxStr; // 0x30
+	
+		// Properties
+		internal int Count { get => default; } // 0x0000000183D4ED20-0x0000000183D4ED30 
+	
+		// Methods
+		public void Clear() {} // 0x00000001899B42F4-0x00000001899B4308
+		public string GetResult() => default; // 0x00000001899B4488-0x00000001899B456C
+		internal void ConcatNoDelimiter(string s) {} // 0x00000001899B4308-0x00000001899B4488
 	}
 }

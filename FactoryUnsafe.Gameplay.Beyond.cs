@@ -12591,3 +12591,749 @@ namespace IFix
 		Beyond-Gameplay-Factory-Unsafe-FactoryUnsafeUtil-AddressOf0 = 979
 	}
 }
+
+namespace UnityEngine.HyperGryph.ECS
+{
+	public static class ColliderComponentExtensions // TypeDefIndex: 48507
+	{
+		// Extension methods
+		public static void ToggleCollision(this Entity logicEntity, bool enable, ref EntityManager em) {} // 0x00000001826E1310-0x00000001826E1840
+		public static void Toggle(this ref ECSColliderComponent collision, bool enable) {} // 0x000000018294A510-0x000000018294A580
+		public static void UpdateCollisionTRS(this Entity logicEntity, [IsReadOnly] in EntityManager em) {} // 0x000000018294AD30-0x000000018294B260
+		public static void UpdateCollisionTRS(this ECSColliderComponent c, float3 pos, quaternion rot) {} // 0x000000018294BB80-0x000000018294BC80
+		public static void DestroyCollisionWithRenderEntity(this Entity rEntity, ref EntityManager em) {} // 0x0000000182AAC900-0x0000000182AAC9D0
+		public static void DestroyCollision(this Entity logicEntity, ref EntityManager em) {} // 0x000000018578D580-0x000000018578D8D8
+	}
+
+	public static class ECSExtensions // TypeDefIndex: 48508
+	{
+		// Methods
+		private static void _SetComponentImpl(ref EntityInstanceData entityData, ref EntityTypeInstanceData entityTypeData, int componentId, [IsReadOnly] in IntPtr component, int componentSize) {} // 0x00000001823F4F60-0x00000001823F5070
+	
+		// Extension methods
+		public static Entity GetEntity(this GroupType group, int index) => default; // 0x0000000182433940-0x0000000182433960
+		public static bool HasComponent([IsReadOnly] this in EntityManager entityManager, [IsReadOnly] in Entity entity, int componentId) => default; // 0x00000001823F4300-0x00000001823F4340
+		public static void CreateEntities([IsReadOnly] this in EntityManager em, NativeArray<ComponentType> archetypes, NativeArray<Entity> result) {} // 0x0000000182C5E9B0-0x0000000182C5EA00
+		public static Entity CreateEntity([IsReadOnly] this in EntityManager entityManager) => default; // 0x000000018241C8B0-0x000000018241C980
+		public static Entity CreateEntity([IsReadOnly] this in EntityManager entityManager, NativeArray<ComponentType> archetypes) => default; // 0x0000000182755860-0x0000000182755910
+		public static void Is<T>([IsReadOnly] this in EntityManager entityManager, Entity entity, bool flag)
+			where T : struct, IComponentECS {}
+		public static void AddComponent<T>([IsReadOnly] this in EntityManager entityManager, Entity entity)
+			where T : struct, IComponentECS {}
+		public static void AddComponent([IsReadOnly] this in EntityManager entityManager, Entity entity, int componentId, [IsReadOnly] in IntPtr component, int componentSize) {} // 0x000000018241D6F0-0x000000018241DB30
+		public static void AddOrSetComponent<T>([IsReadOnly] this in EntityManager entityManager, Entity entity, T t)
+			where T : struct, IComponentECS {}
+		public static void AddOrSetComponent<T1, T2>([IsReadOnly] this in EntityManager entityManager, Entity entity, T1 t1, T2 t2)
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS {}
+		public static void SetComponent([IsReadOnly] this in EntityManager entityManager, Entity entity, int componentId, [IsReadOnly] in IntPtr component, int componentSize) {} // 0x0000000183386BB0-0x0000000183386BE0
+		public static void SetComponents<T0, T1, T2>([IsReadOnly] this in EntityManager entityManager, [IsReadOnly] in Entity entity, [IsReadOnly] in ref T0 t0, [IsReadOnly] in ref T1 t1, [IsReadOnly] in ref T2 t2)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS {}
+		public static void SetComponents<T0, T1, T2, T3>([IsReadOnly] this in EntityManager entityManager, [IsReadOnly] in Entity entity, [IsReadOnly] in ref T0 t0, [IsReadOnly] in ref T1 t1, [IsReadOnly] in ref T2 t2, [IsReadOnly] in ref T3 t3)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS {}
+		public static void SetComponents<T0, T1, T2, T3, T4>([IsReadOnly] this in EntityManager entityManager, [IsReadOnly] in Entity entity, [IsReadOnly] in ref T0 t0, [IsReadOnly] in ref T1 t1, [IsReadOnly] in ref T2 t2, [IsReadOnly] in ref T3 t3, [IsReadOnly] in ref T4 t4)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS {}
+		public static EntityManagerRange Iterate([IsReadOnly] this in EntityManager em, [IsReadOnly] in EntityQueryBuilder queryBuilder) => default; // 0x0000000182434950-0x0000000182434AF0
+		public static EntityManagerRange Iterate<T0, T1, T2>([IsReadOnly] this in EntityManager em)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS => default;
+		public static EntityManagerRange Iterate<T0, T1, T2, T3>([IsReadOnly] this in EntityManager em)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS => default;
+		public static EntityManagerRange Iterate<T0, T1, T2, T3, T4>([IsReadOnly] this in EntityManager em)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS => default;
+		public static EntityManagerRange Iterate<T0, T1, T2, T3, T4, T5>([IsReadOnly] this in EntityManager em)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS => default;
+		public static EntityManagerRange Iterate<T0, T1, T2, T3, T4, T5, T6>([IsReadOnly] this in EntityManager em)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS
+			where T6 : struct, IComponentECS => default;
+		public static EntityManagerRange Iterate<T0, T1, T2, T3, T4, T5, T6, T7>([IsReadOnly] this in EntityManager em)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS
+			where T6 : struct, IComponentECS
+			where T7 : struct, IComponentECS => default;
+		public static EntityManagerRange Iterate<T0, T1, T2, T3, T4, T5, T6, T7, T8>([IsReadOnly] this in EntityManager em)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS
+			where T6 : struct, IComponentECS
+			where T7 : struct, IComponentECS
+			where T8 : struct, IComponentECS => default;
+		public static unsafe void GetComponent([IsReadOnly] this in EntityManager entityManager, Entity entity, int componentId, int componentSize, void* componentPtr) {} // 0x000000018578DF1C-0x000000018578E00C
+		public static bool MoveComponent<T>([IsReadOnly] this in EntityManager entityManager, Entity src, Entity des)
+			where T : struct, IComponentECS => default;
+		public static void RemoveComponent([IsReadOnly] this in EntityManager entityManager, Entity entity, int componentId) {} // 0x0000000182420E00-0x0000000182420E50
+		public static void SafeRemoveComponent<T>([IsReadOnly] this in EntityManager entityManager, Entity entity)
+			where T : struct, IComponentECS {}
+		public static void RemoveComponent<T>([IsReadOnly] this in EntityManager entityManager)
+			where T : struct, IComponentECS {}
+		public static bool GetInstance<T, TR>([IsReadOnly] this in EntityManager em, out Entity entity, out ref TR component)
+			where T : struct, IComponentECS
+			where TR : struct, IComponentECS {
+			entity = default;
+			component = default;
+			return default;
+		}
+		public static bool GetFirst<T, TR>([IsReadOnly] this in EntityManager entityManager, out Entity entity, out ref TR component)
+			where T : struct, IComponentECS
+			where TR : struct, IComponentECS {
+			entity = default;
+			component = default;
+			return default;
+		}
+		public static bool GetFirst<T1, T2, TR>([IsReadOnly] this in EntityManager entityManager, out Entity entity, out ref TR component)
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where TR : struct, IComponentECS {
+			entity = default;
+			component = default;
+			return default;
+		}
+		public static void NotifyEvent<T>([IsReadOnly] this in EntityManager em, Entity logicEntity)
+			where T : struct, INotificationComponent {}
+		public static void NotifyEvent<T>([IsReadOnly] this in EntityManager em, Entity logicEntity, T t)
+			where T : struct, INotificationComponent {}
+		public static void NotifyEvent<T1, T2>([IsReadOnly] this in EntityManager em, Entity logicEntity, T1 t1, T2 t2)
+			where T1 : struct, INotificationComponent
+			where T2 : struct, INotificationComponent {}
+		public static void DispatchEvent<T>([IsReadOnly] this in EntityManager em, Entity entity)
+			where T : struct, IReactiveComponent {}
+		public static void DispatchEvent<T>([IsReadOnly] this in EntityManager em, Entity entity, T t)
+			where T : struct, IReactiveComponent {}
+		public static void DispatchEvent<T1, T2>([IsReadOnly] this in EntityManager em, Entity entity, T1 t1, T2 t2)
+			where T1 : struct, IReactiveComponent
+			where T2 : struct, IReactiveComponent {}
+		public static void DestroyEntitiesWithArchetype([IsReadOnly] this in EntityManager entityManager, ref ComponentMask entityMask) {} // 0x000000018578DCEC-0x000000018578DF1C
+		public static void DestroyEntities<T>([IsReadOnly] this in EntityManager entityManager)
+			where T : struct, IComponentECS {}
+		public static void DestroyEntities<T1, T2>([IsReadOnly] this in EntityManager entityManager)
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS {}
+		public static bool HasEntity<T>([IsReadOnly] this in EntityManager em)
+			where T : struct, IComponentECS => default;
+		public static bool HasEntity<T1, T2>([IsReadOnly] this in EntityManager em)
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS => default;
+		public static int GetEntityCount([IsReadOnly] this in EntityManager em, int compId) => default; // 0x000000018578E00C-0x000000018578E180
+		public static int GetEntityCount([IsReadOnly] this in EntityManager em, int compId0, int compId1) => default; // 0x000000018578E180-0x000000018578E2F4
+		public static int GetEntityCount<T>([IsReadOnly] this in EntityManager em)
+			where T : struct, IComponentECS => default;
+		public static int GetEntityCount<T1, T2>([IsReadOnly] this in EntityManager em)
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS => default;
+		public static int GetEntityCount<T1, T2, T3>([IsReadOnly] this in EntityManager em)
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS => default;
+		public static int GetEntityCount<T1, T2, T3, T4>([IsReadOnly] this in EntityManager em)
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS => default;
+		public static int GetEntityCount<T1, T2, T3, T4, T5>([IsReadOnly] this in EntityManager em)
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS => default;
+		public static int GetEntityCount<T1, T2, T3, T4, T5, T6>([IsReadOnly] this in EntityManager em)
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS
+			where T6 : struct, IComponentECS => default;
+		public static void EnsureComponent<T>([IsReadOnly] this in EntityManager em, Entity entity)
+			where T : struct, IComponentECS {}
+		public static void EnsureComponent<T>([IsReadOnly] this in EntityManager em, Entity entity, out ref T comp)
+			where T : struct, IComponentECS {
+			comp = default;
+		}
+		public static ECSSpan<T> GetComponentAsSpan<T>(this GroupType groupType)
+			where T : struct, IComponentECS => default;
+		public static ECSSpan<T> GetComponentAsSpan<T>(this GroupType groupType, int componentId)
+			where T : struct, IComponentECS => default;
+		public static ComponentMask ComposeComponentMaskAll(this EntityManager em, int id0, int id1, int id2, int id3, int id4, int id5, int id6) => default; // 0x0000000182F1F010-0x0000000182F1F0F0
+		public static ComponentMask ComposeComponentMaskAll(this EntityManager em, int id0, int id1, int id2, int id3, int id4, int id5, int id6, int id7) => default; // 0x0000000182F6D7C0-0x0000000182F6D8C0
+		public static ComponentMask ComposeComponentMaskAll(this EntityManager em, int id0, int id1, int id2, int id3, int id4, int id5, int id6, int id7, int id8) => default; // 0x0000000183D55830-0x0000000183D55950
+	}
+
+	public static class HGFactoryRendererBinderExtensions // TypeDefIndex: 48509
+	{
+		// Extension methods
+		public static void RenderWithTRS(this HGFactoryRendererBinderComponent binder, [IsReadOnly] in LocalToWorld localToWorld) {} // 0x000000018578F6D4-0x000000018578F870
+		public static void RenderWithTRS(this HGFactoryRendererBinderComponent binder, float4x4 value) {} // 0x000000018578F870-0x000000018578F9F4
+		public static void EnableDither(this HGFactoryRendererBinderComponent binder, bool enable, float alphaValue, HGObjectFlags objectFlags) {} // 0x00000001826E3920-0x00000001826E3B40
+		public static void EnableDither(this HGFactoryRendererBinderComponent binder, ref EntityManager rEntityManager, bool enable, float alphaValue, HGObjectFlags objectFlags) {} // 0x00000001826E3740-0x00000001826E3920
+	}
+
+	public struct EntityCommandBuffer // TypeDefIndex: 48512
+	{
+		// Fields
+		public EntityCommandCallback onEntityCreate; // 0x00
+		public EntityCommandCallback onEntityDestroy; // 0x08
+		public EntityCommandCallback onComponentUpdate; // 0x10
+		public EntityCommandCallback onComponentAdd; // 0x18
+		public EntityCommandCallback onComponentRemove; // 0x20
+		public static uint TempIdx; // 0x00
+		public NativeQueue<EntityCommandBufferData> buffers; // 0x28
+		public NativeParallelHashMap<ulong, VirtualEntityMap> tempEntities; // 0x40
+	
+		// Properties
+		public EntityManager entityManager { [IsReadOnly] get; } // 0x0000000183D55950-0x0000000183D55960 
+	
+		// Nested types
+		public delegate void EntityCommandCallback(Entity entity, ref EntityManager entityManager, ref EntityCommandBufferData buffer); // TypeDefIndex: 48510; 0x00000001811360D0-0x00000001811360F0
+	
+		public struct VirtualEntityMap // TypeDefIndex: 48511
+		{
+			// Fields
+			public Entity virtualEntity; // 0x00
+			public Entity realEntity; // 0x08
+		}
+	
+		// Constructors
+		public EntityCommandBuffer(ref EntityManager entityManager, Unity.Collections.Allocator allocator) : this() {
+			onEntityCreate = default;
+			onEntityDestroy = default;
+			onComponentUpdate = default;
+			onComponentAdd = default;
+			onComponentRemove = default;
+			buffers = default;
+			tempEntities = default;
+		} // 0x0000000182751B20-0x0000000182751D70
+	
+		// Methods
+		public ValueTuple<bool, Entity> GetRealEntity(Entity virtualEntity) => default; // 0x0000000182420010-0x0000000182420260
+	}
+
+	public static class EntityCommand // TypeDefIndex: 48513
+	{
+		// Methods
+		private static unsafe void* _ComponentCpy<T>(T component)
+			where T : struct, IComponentECS => default;
+	
+		// Extension methods
+		public static EntityCommandBuffer CreateCommandBuffer(this EntityManager entityManager, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.Temp /* Metadata: 0x01FBB8AF */) => default; // 0x0000000182751AE0-0x0000000182751B20
+		public static Entity CreateEntity(this EntityCommandBuffer ecb) => default; // 0x00000001826037B0-0x0000000182603980
+		public static void DestroyEntity(this EntityCommandBuffer ecb, Entity entity) {} // 0x0000000182603550-0x0000000182603610
+		public static void AddComponent<T>(this EntityCommandBuffer ecb, Entity entity)
+			where T : struct, IComponentECS {}
+		public static void AddComponent<T>(this EntityCommandBuffer ecb, Entity entity, T component)
+			where T : struct, IComponentECS {}
+		public static void RemoveComponent<T>(this EntityCommandBuffer ecb, Entity entity)
+			where T : struct, IComponentECS {}
+		public static void SetComponent<T>(this EntityCommandBuffer ecb, Entity entity, T component)
+			where T : struct, IComponentECS {}
+		public static void Is<T>(this EntityCommandBuffer ecb, Entity entity, bool flag)
+			where T : struct, IComponentECS {}
+		public static void GetComponent<T>(this EntityCommandBuffer ecb, Entity entity, ref ref T component)
+			where T : struct, IComponentECS {}
+		public static void NotifyEvent<T>(this EntityCommandBuffer ecb, Entity entity)
+			where T : struct, INotificationComponent {}
+		public static void NotifyEvent<T>(this EntityCommandBuffer ecb, Entity entity, T t)
+			where T : struct, INotificationComponent {}
+		public static void DispatchEvent<T>(this EntityCommandBuffer ecb, Entity entity)
+			where T : struct, IReactiveComponent {}
+		public static void DispatchEvent<T>(this EntityCommandBuffer ecb, Entity entity, T component)
+			where T : struct, IReactiveComponent {}
+		public static void Playback(this EntityCommandBuffer ecb, bool autoDispose = true /* Metadata: 0x01FBB8B0 */) {} // 0x000000018241F5C0-0x000000018241FCA0
+		public static void Dispose(this EntityCommandBuffer ecb) {} // 0x0000000182420E50-0x0000000182420F10
+	}
+
+	public class EntityCommandOp // TypeDefIndex: 48514
+	{
+		// Fields
+		public static readonly int CREATE; // 0x00
+		public static readonly int ADD; // 0x04
+		public static readonly int REMOVE; // 0x08
+		public static readonly int MODIFY; // 0x0C
+		public static readonly int DESTROY; // 0x10
+		public static readonly int QUERY; // 0x14
+	
+		// Constructors
+		public EntityCommandOp() {} // 0x000000018350B670-0x000000018350B680
+		static EntityCommandOp() {} // 0x0000000183CF0C70-0x0000000183CF0D20
+	}
+
+	public struct EntityCommandBufferData // TypeDefIndex: 48515
+	{
+		// Fields
+		public int op; // 0x00
+		public Entity entity; // 0x04
+		public CommandBufferComponent componentData; // 0x10
+	
+		// Methods
+		public void Free() {} // 0x000000018426FD78-0x000000018426FD8C
+	}
+
+	public struct CommandBufferComponent // TypeDefIndex: 48516
+	{
+		// Fields
+		public int componentId; // 0x00
+		public int componentSize; // 0x04
+		public unsafe void* component; // 0x08
+	}
+
+	[BurstCompile]
+	public struct EntityCommandBufferV2 : INativeDisposable // TypeDefIndex: 48519
+	{
+		// Fields
+		public static int s_mapSize; // 0x00
+		[ReadOnly]
+		public NativeQueue<EntityCommandBufferData> buffers; // 0x00
+		[ReadOnly]
+		public NativeParallelHashMap<ulong, VirtualEntityMap> tempEntities; // 0x18
+	
+		// Properties
+		public bool isEmpty { get => default; } // 0x000000018578E42C-0x000000018578E468 
+	
+		// Nested types
+		public struct VirtualEntityMap // TypeDefIndex: 48517
+		{
+			// Fields
+			public Entity virtualEntity; // 0x00
+			public Entity realEntity; // 0x08
+		}
+	
+		public struct EntityCommandBufferParallelWriter // TypeDefIndex: 48518
+		{
+			// Fields
+			public long tempIdx; // 0x00
+			[NativeDisableParallelForRestriction]
+			public NativeQueue<EntityCommandBufferData> buffersWriter; // 0x08
+			[NativeDisableParallelForRestriction]
+			public NativeParallelHashMap<ulong, VirtualEntityMap> tempEntitiesWriter; // 0x20
+		}
+	
+		// Constructors
+		public EntityCommandBufferV2(Unity.Collections.Allocator allocator) : this() {
+			buffers = default;
+			tempEntities = default;
+		} // 0x0000000183C787B0-0x0000000183C788A0
+		static EntityCommandBufferV2() {
+			s_mapSize = default;
+		} // 0x0000000183D44920-0x0000000183D44960
+	
+		// Methods
+		public ValueTuple<bool, Entity> GetRealEntity(Entity virtualEntity) => default; // 0x000000018241E560-0x000000018241E7D0
+		public void Reset() {} // 0x000000018241F0A0-0x000000018241F260
+		public void Dispose() {} // 0x000000018578E3C0-0x000000018578E42C
+		public JobHandle Dispose(JobHandle dependsOn) => default; // 0x000000018578E2F4-0x000000018578E3C0
+		public EntityCommandBufferParallelWriter AsParallelWriter() => default; // 0x0000000182309D90-0x0000000182309E60
+	}
+
+	public static class EntityCommandV2 // TypeDefIndex: 48520
+	{
+		// Fields
+		private static readonly Queue<EntityCommandBufferV2> S_POOL; // 0x00
+	
+		// Constructors
+		static EntityCommandV2() {} // 0x0000000183CDEFC0-0x0000000183CDF080
+	
+		// Methods
+		public static void DisposePool() {} // 0x000000018578E7A4-0x000000018578E8A8
+		public static void Recycle(ref EntityCommandBufferV2 buffer) {} // 0x000000018241ED90-0x000000018241F0A0
+		private static unsafe T* _ComponentCpy<T>(T component)
+			where T : struct, IComponentECS => default;
+	
+		// Extension methods
+		public static EntityCommandBufferV2 CreateConcurrentCommandBufferV2(this EntityManager em) => default; // 0x00000001823081E0-0x00000001823083F0
+		public static Entity CreateEntity(this ref EntityCommandBufferV2.EntityCommandBufferParallelWriter writer) => default; // 0x000000018578E5EC-0x000000018578E704
+		public static void DestroyEntity(this ref EntityCommandBufferV2.EntityCommandBufferParallelWriter writer, Entity entity) {} // 0x000000018578E704-0x000000018578E7A4
+		public static void AddComponent<T>(this ref EntityCommandBufferV2.EntityCommandBufferParallelWriter writer, Entity entity)
+			where T : struct, IComponentECS {}
+		public static void AddComponent<T>(this ref EntityCommandBufferV2.EntityCommandBufferParallelWriter writer, Entity entity, T component)
+			where T : struct, IComponentECS {}
+		public static void RemoveComponent<T>(this ref EntityCommandBufferV2.EntityCommandBufferParallelWriter writer, Entity entity)
+			where T : struct, IComponentECS {}
+		public static void SetComponent<T>(this ref EntityCommandBufferV2.EntityCommandBufferParallelWriter writer, Entity entity, T component)
+			where T : struct, IComponentECS {}
+		public static void GetComponent<T>(this ref EntityCommandBufferV2.EntityCommandBufferParallelWriter writer, Entity entity, ref ref T component)
+			where T : struct, IComponentECS {}
+		public static void NotifyEvent<T>(this ref EntityCommandBufferV2.EntityCommandBufferParallelWriter writer, Entity entity)
+			where T : struct, INotificationComponent {}
+		public static void NotifyEvent<T>(this ref EntityCommandBufferV2.EntityCommandBufferParallelWriter writer, Entity entity, T t)
+			where T : struct, INotificationComponent {}
+		public static void DispatchEvent<T>(this ref EntityCommandBufferV2.EntityCommandBufferParallelWriter writer, Entity entity)
+			where T : struct, IReactiveComponent {}
+		public static void DispatchEvent<T>(this ref EntityCommandBufferV2.EntityCommandBufferParallelWriter writer, Entity entity, T component)
+			where T : struct, IReactiveComponent {}
+		public static void Playback(this EntityCommandBufferV2 ecb, bool autoRecycle = true /* Metadata: 0x01FBB8B1 */) {} // 0x000000018241DB30-0x000000018241E560
+	}
+
+	public struct ECSSpan<T> // TypeDefIndex: 48521
+		where T : struct, IComponentECS
+	{
+		// Fields
+		[NativeDisableUnsafePtrRestriction]
+		public unsafe void* buffer;
+		public int length;
+	
+		// Properties
+		public ref T this[int index] { get => default; }
+	}
+
+	public struct EntityPool<T0, T1, T2> // TypeDefIndex: 48522
+		where T0 : struct
+		where T1 : struct
+		where T2 : struct
+	{
+		// Fields
+		private int m_count;
+		private int m_usedCount;
+		public float4x4 customData;
+		private NativeArray<Entity> m_pool;
+		private Action<Entity, float3, float3, Matrix4x4, float4x4> m_onSpawn;
+		private Action<Entity, float4x4> m_onRecycle;
+		private Action<NativeArray<Entity>, int, float4x4> m_onAllocate;
+		private Action<NativeArray<Entity>, int, float4x4> m_onDeallocate;
+		private Unity.Collections.Allocator m_allocator;
+	
+		// Properties
+		public int defaultSize { [IsReadOnly] get; private set; }
+		public Entity this[int index] { get => default; }
+		private NativeArray<Entity> entities { get => default; }
+		public bool initialized { get => default; }
+		public int length { get => default; }
+		public int cacheSize { get => default; }
+	
+		// Methods
+		public bool DecreasePool() => default;
+		public bool NeedToResize(int count) => default;
+		public Entity Spawn(float3 pos, float3 rot, Matrix4x4 fArgs) => default;
+		public Entity Spawn(out bool resized) {
+			resized = default;
+			return default;
+		}
+		public bool Spawn(int n) => default;
+		public void Recycle(int count = 1 /* Metadata: 0x01FBB8B2 */) {}
+		public Entity Recycle(Entity entity) => default;
+		public static EntityPool<T0, T1, T2> Alloc(int count, Action<Entity, float3, float3, Matrix4x4, float4x4> onSpawn, Action<Entity, float4x4> onRecycle, Action<NativeArray<Entity>, int, float4x4> onAllocate, Action<NativeArray<Entity>, int, float4x4> onDeallocate = null, float4x4 customData = default, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.Persistent /* Metadata: 0x01FBB8B3 */, bool autoAllocate = true /* Metadata: 0x01FBB8B4 */) => default;
+		public void Free() {}
+		private void _Resize() {}
+		public static implicit operator NativeArray<Entity>(EntityPool<T0, T1, T2> pool) => default;
+		public NativeArray<Entity> AsReadOnly() => default;
+	}
+
+	public class EntityHierarchyContainer // TypeDefIndex: 48525
+	{
+		// Fields
+		public const int INVALID_INDEX = -1; // Metadata: 0x01FBB8B5
+		private HGArray<Node> m_nodes; // 0x10
+	
+		// Properties
+		public ref EntityTransformData this[int index] { get => default; } // 0x00000001827676D0-0x0000000182767720 
+		public ref EntityTransformData this[uint index] { get => default; } // 0x000000018276A0D0-0x000000018276A110 
+	
+		// Nested types
+		public struct EntityTransformData // TypeDefIndex: 48523
+		{
+			// Fields
+			public uint next; // 0x00
+			public LocalTransform localTrans; // 0x04
+			public int parentIndex; // 0x24
+			public bool dirty; // 0x28
+		}
+	
+		internal struct Node // TypeDefIndex: 48524
+		{
+			// Fields
+			public EntityTransformData value; // 0x00
+			public uint next; // 0x00
+		}
+	
+		// Constructors
+		public EntityHierarchyContainer() {} // Dummy constructor
+		public EntityHierarchyContainer(Unity.Collections.Allocator allocator) {} // 0x0000000182C34D20-0x0000000182C34DC0
+	
+		// Methods
+		public void Dispose() {} // 0x000000018578E918-0x000000018578E95C
+		public uint Size() => default; // 0x000000018578E9B4-0x000000018578E9E8
+		public Span<EntityTransformData> AsSpan() => default; // 0x000000018578E8A8-0x000000018578E918
+		public LocalTransform WorldTrans(uint handle) => default; // 0x000000018578EB34-0x000000018578EBAC
+		public LocalTransform WorldTrans(EntityTransformData transform) => default; // 0x000000018578E9E8-0x000000018578EB34
+		public static unsafe LocalTransform WorldTrans(EntityTransformData transform, EntityTransformData* hierarchyContainer) => default; // 0x00000001828B4AF0-0x00000001828B4C60
+		public uint Create(ref EntityTransformData value) => default; // 0x0000000182765500-0x0000000182765640
+		public void Destroy(uint handle) {} // 0x0000000182AADB90-0x0000000182AADBF0
+		public void Reset() {} // 0x0000000182C34840-0x0000000182C348A0
+		public void Reserve(uint newCapacity) {} // 0x000000018578E96C-0x000000018578E9B4
+		public IntPtr Data() => default; // 0x00000001826E0BE0-0x00000001826E0C20
+		public ref EntityTransformData Get(uint handle) => ref _refReturnTypeForGet; // 0x000000018578E95C-0x000000018578E964
+		private ref EntityTransformData _refReturnTypeForGet; // Dummy field
+		public ref EntityTransformData Get(int handle) => ref _refReturnTypeForGet; // 0x000000018578E964-0x000000018578E96C
+		private ref EntityTransformData _refReturnTypeForGet; // Dummy field
+	}
+
+	[IsByRefLike]
+	[Obsolete("Types with embedded references are not supported in this version of your compiler.", true)]
+	public struct EntityQueryBuilder // TypeDefIndex: 48528
+	{
+		// Fields
+		internal unsafe BuilderData* builderDataPtr; // 0x00
+	
+		// Nested types
+		internal struct BuilderData // TypeDefIndex: 48527
+		{
+			// Fields
+			internal UnsafeList<ComponentType> all; // 0x00
+			internal UnsafeList<ComponentType> none; // 0x20
+	
+			// Nested types
+			internal enum Type // TypeDefIndex: 48526
+			{
+				INCLUDE = 0,
+				EXCLUDE = 1
+			}
+	
+			// Methods
+			public ComponentMask ComponentMask([IsReadOnly] in EntityManager em, Type type) => default; // 0x0000000182434AF0-0x0000000182434D60
+		}
+	
+		// Constructors
+		public unsafe EntityQueryBuilder(int maxCount = 8 /* Metadata: 0x01FBB8B6 */) {
+			builderDataPtr = default;
+		} // 0x00000001826E8D50-0x00000001826E9100
+	
+		// Methods
+		public static EntityQueryBuilder Create(int maxCount = 8 /* Metadata: 0x01FBB8B7 */) => default; // 0x00000001826E8CD0-0x00000001826E8D00
+		public EntityQueryBuilder WithAll<T>()
+			where T : struct, IComponentECS => default;
+		public EntityQueryBuilder WithAll<T1, T2>()
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS => default;
+		public EntityQueryBuilder WithAll<T1, T2, T3>()
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS => default;
+		public EntityQueryBuilder WithAll<T1, T2, T3, T4>()
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS => default;
+		public EntityQueryBuilder WithAll<T1, T2, T3, T4, T5>()
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS => default;
+		public EntityQueryBuilder WithAll<T1, T2, T3, T4, T5, T6>()
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS
+			where T6 : struct, IComponentECS => default;
+		public EntityQueryBuilder WithAll<T1, T2, T3, T4, T5, T6, T7>()
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS
+			where T6 : struct, IComponentECS
+			where T7 : struct, IComponentECS => default;
+		public EntityQueryBuilder WithNone<T>()
+			where T : struct, IComponentECS => default;
+		public EntityQueryBuilder WithNone<T1, T2>()
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS => default;
+		public EntityQueryBuilder WithNone<T1, T2, T3>()
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS => default;
+		public EntityQueryBuilder WithNone<T1, T2, T3, T4>()
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS => default;
+		public EntityManagerRange Build(ref EntityManager em) => default; // 0x0000000184271414-0x0000000184271454
+	}
+
+	public static class EntityQueryV2 // TypeDefIndex: 48532
+	{
+		// Nested types
+		public struct BlockRange // TypeDefIndex: 48529
+		{
+			// Fields
+			public int beginGroupIdx; // 0x00
+			public int endGroupIdx; // 0x04
+			public int beginGroupElemBeginIdx; // 0x08
+			public int endGroupElemEndIdx; // 0x0C
+		}
+	
+		[NoAlias]
+		public struct QueryResultDefer : IDisposable // TypeDefIndex: 48530
+		{
+			// Fields
+			[NativeDisableUnsafePtrRestriction]
+			public unsafe UnsafeList<GroupType>* groups; // 0x00
+			[NativeDisableUnsafePtrRestriction]
+			public unsafe UnsafeList<BlockRange>* blockRanges; // 0x08
+			public int rangeCount; // 0x10
+	
+			// Properties
+			public bool valid { get => default; } // 0x000000018578FFB0-0x000000018578FFB8 
+			public unsafe int* rangeCountPtr { get => default; } // 0x0000000183D55960-0x0000000183D55970 
+	
+			// Methods
+			public void InitList(Unity.Collections.Allocator allocator = Unity.Collections.Allocator.Persistent /* Metadata: 0x01FBB8CF */, int initialCapacity = 32 /* Metadata: 0x01FBB8D0 */) {} // 0x0000000183278C30-0x0000000183278CE0
+			public void ReleaseList() {} // 0x000000018578FD74-0x000000018578FDCC
+			public void Reset() {} // 0x00000001826DFA10-0x00000001826DFA60
+			public ref BlockRange BlockRangeAt(int index) => ref _refReturnTypeForBlockRangeAt; // 0x000000018578F9F4-0x000000018578FA3C
+			private ref BlockRange _refReturnTypeForBlockRangeAt; // Dummy field
+			public ref GroupType GroupAt(int index) => ref _refReturnTypeForGroupAt; // 0x000000018578FD30-0x000000018578FD74
+			private ref GroupType _refReturnTypeForGroupAt; // Dummy field
+			public void Foreach(Func<GroupType, bool> callback) {} // 0x000000018578FC60-0x000000018578FD30
+			public int EntityCount() => default; // 0x000000018578FB94-0x000000018578FC60
+			public void Dispose() {} // 0x000000018578FA3C-0x000000018578FA60
+			public void Dispose(JobHandle jobHandle, bool inCrossFrame = false /* Metadata: 0x01FBB8D1 */) {} // 0x000000018578FA60-0x000000018578FB94
+			public override string ToString() => default; // 0x000000018578FDCC-0x000000018578FFB0
+		}
+	
+		[NoAlias]
+		public struct QueryResult : IDisposable // TypeDefIndex: 48531
+		{
+			// Fields
+			[ReadOnly]
+			public NativeList<GroupType> groups; // 0x00
+			[ReadOnly]
+			public NativeList<BlockRange> blockRanges; // 0x10
+	
+			// Properties
+			public int rangeCount { get => default; } // 0x00000001826DEED0-0x00000001826DEF20 
+			public bool isEmpty { get => default; } // 0x0000000185790658-0x0000000185790670 
+	
+			// Methods
+			public override string ToString() => default; // 0x0000000185790420-0x0000000185790658
+			public void Foreach(Func<GroupType, bool> callback) {} // 0x00000001857902A8-0x0000000185790420
+			public int EntityCount() => default; // 0x00000001826DEF90-0x00000001826DF1A0
+			public void Dispose() {} // 0x0000000185790284-0x00000001857902A8
+			public void Dispose(JobHandle jobHandle, bool inCrossFrame = false /* Metadata: 0x01FBB8D2 */) {} // 0x00000001826E6970-0x00000001826E6CD0
+		}
+	
+		// Extension methods
+		public static QueryResult Query(this EntityManager em, ref EntityQueryBuilder builder, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.TempJob /* Metadata: 0x01FBB8BA */, int jobCount = -1 /* Metadata: 0x01FBB8BB */) => default; // 0x00000001826E6FC0-0x00000001826E72D0
+		public static ref QueryResultDefer QueryDefer(this EntityManager em, ref EntityQueryBuilder builder, ref QueryResultDefer qrd, int jobCount = -1 /* Metadata: 0x01FBB8BC */) => ref _refReturnTypeForQueryDefer; // 0x000000018578EEFC-0x000000018578EFFC
+		private ref QueryResultDefer _refReturnTypeForQueryDefer; // Dummy field
+		public static QueryResult Query<T>(this EntityManager em, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.TempJob /* Metadata: 0x01FBB8BD */, int jobCount = -1 /* Metadata: 0x01FBB8BE */)
+			where T : struct, IComponentECS => default;
+		public static QueryResult Query<T0, T1>(this EntityManager em, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.TempJob /* Metadata: 0x01FBB8BF */, int jobCount = -1 /* Metadata: 0x01FBB8C0 */)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS => default;
+		public static QueryResult Query<T0, T1, T2>(this EntityManager em, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.TempJob /* Metadata: 0x01FBB8C1 */, int jobCount = -1 /* Metadata: 0x01FBB8C2 */)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS => default;
+		public static QueryResult Query<T0, T1, T2, T3>(this EntityManager em, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.TempJob /* Metadata: 0x01FBB8C3 */, int jobCount = -1 /* Metadata: 0x01FBB8C4 */)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS => default;
+		public static QueryResult Query<T0, T1, T2, T3, T4>(this EntityManager em, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.TempJob /* Metadata: 0x01FBB8C5 */, int jobCount = -1 /* Metadata: 0x01FBB8C6 */)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS => default;
+		public static QueryResult Query<T0, T1, T2, T3, T4, T5>(this EntityManager em, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.TempJob /* Metadata: 0x01FBB8C7 */, int jobCount = -1 /* Metadata: 0x01FBB8C8 */)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS => default;
+		public static QueryResult Query<T0, T1, T2, T3, T4, T5, T6>(this EntityManager em, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.TempJob /* Metadata: 0x01FBB8C9 */, int jobCount = -1 /* Metadata: 0x01FBB8CA */)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS
+			where T6 : struct, IComponentECS => default;
+		public static QueryResult Query<T0, T1, T2, T3, T4, T5, T6, T7>(this EntityManager em, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.TempJob /* Metadata: 0x01FBB8CB */, int jobCount = -1 /* Metadata: 0x01FBB8CC */)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS
+			where T6 : struct, IComponentECS
+			where T7 : struct, IComponentECS => default;
+		public static QueryResult Query<T0, T1, T2, T3, T4, T5, T6, T7, T8>(this EntityManager em, Unity.Collections.Allocator allocator = Unity.Collections.Allocator.TempJob /* Metadata: 0x01FBB8CD */, int jobCount = -1 /* Metadata: 0x01FBB8CE */)
+			where T0 : struct, IComponentECS
+			where T1 : struct, IComponentECS
+			where T2 : struct, IComponentECS
+			where T3 : struct, IComponentECS
+			where T4 : struct, IComponentECS
+			where T5 : struct, IComponentECS
+			where T6 : struct, IComponentECS
+			where T7 : struct, IComponentECS
+			where T8 : struct, IComponentECS => default;
+		public static QueryResultDefer GetBlockRangesDefer(this EntityManagerRange range, int jobCount, ref QueryResultDefer qr) => default; // 0x000000018578EBAC-0x000000018578EEFC
+		public static QueryResult GetBlockRanges(this EntityManagerRange range, Unity.Collections.Allocator allocator, int jobCount) => default; // 0x00000001826E73B0-0x00000001826E7D80
+	}
+
+	[BurstCompile]
+	public static class QueryResultWrapper // TypeDefIndex: 48535
+	{
+		// Nested types
+		public unsafe delegate void Wrapper_000000D7_PostfixBurstDelegate(EntityManagerRange* range, UnsafeList<GroupType>* groups, UnsafeList<EntityQueryV2.BlockRange>* blockRange, int workerCount); // TypeDefIndex: 48533; 0x0000000182097E50-0x0000000182097E70
+	
+		internal static class Wrapper_000000D7_BurstDirectCall // TypeDefIndex: 48534
+		{
+			// Fields
+			private static IntPtr Pointer; // 0x00
+			private static IntPtr DeferredCompilation; // 0x08
+	
+			// Constructors
+			static Wrapper_000000D7_BurstDirectCall() {} // 0x0000000183CE8EF0-0x0000000183CE8F00
+	
+			// Methods
+			[BurstDiscard]
+			private static void GetFunctionPointerDiscard(ref IntPtr param_00066543) {} // 0x00000001826E8180-0x00000001826E8330
+			private static IntPtr GetFunctionPointer() => default; // 0x00000001826E7F60-0x00000001826E80F0
+			public static void Constructor() {} // 0x0000000183CE8F00-0x0000000183CE8F90
+			public static void Initialize() {} // 0x000000018350B670-0x000000018350B680
+			public static unsafe void Invoke(EntityManagerRange* range, UnsafeList<GroupType>* groups, UnsafeList<EntityQueryV2.BlockRange>* blockRange, int workerCount) {} // 0x00000001826E7EA0-0x00000001826E7F60
+		}
+	
+		// Methods
+		[BurstCompile]
+		public static unsafe void Wrapper(EntityManagerRange* range, UnsafeList<GroupType>* groups, UnsafeList<EntityQueryV2.BlockRange>* blockRange, int workerCount) {} // 0x00000001826E7D80-0x00000001826E7EA0
+		[BurstCompile]
+		public static unsafe void Wrapper_BurstManaged(EntityManagerRange* range, UnsafeList<GroupType>* groups, UnsafeList<EntityQueryV2.BlockRange>* blockRange, int workerCount) {} // 0x000000018578FFB8-0x0000000185790284
+	}
+}

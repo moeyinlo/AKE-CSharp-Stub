@@ -21,7 +21,20 @@ using Mono.Security;
 using Mono.Security.Cryptography;
 using Mono.Security.X509;
 
-// Image 51: Mono.Security.dll - Assembly: Mono.Security, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 56920-57023
+// Image 51: Mono.Security.dll - Assembly: Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756 - Types 56920-57023
+[assembly: AssemblyCompany("MONO development team")]
+[assembly: AssemblyCopyright("(c) 2003-2004 Various Authors")]
+[assembly: AssemblyDelaySign(true)]
+[assembly: AssemblyDescription("Mono.Security.dll")]
+[assembly: AssemblyProduct("MONO CLI")]
+[assembly: AssemblyTitle("Mono.Security.dll")]
+[assembly: CLSCompliant(true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: ComVisible(false)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("System, PublicKey=00240000048000009400000006020000002400005253413100040000010001008D56C76F9E8649383049F383C44BE0EC204181822A6C31CF5EB7EF486944D032188EA1D3920763712CCB12D75FB77E9811149E6148E5D32FBAAB37611C1878DDC19E20EF135D0CB2CFF2BFEC3D115810C3D9069638FE4BE215DBF795861920E5AB6F7DB2E2CEEF136AC23D5DD2BF031700AEC232F6C6B1C785B4305C123B37AB")]
+[assembly: NeutralResourcesLanguage("en-US")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Mono.Math
 {
@@ -34,7 +47,7 @@ namespace Mono.Math
 		private static RandomNumberGenerator rng; // 0x08
 	
 		// Properties
-		private static RandomNumberGenerator Rng { get => default; } // 0x00000001891286A0-0x00000001891286E4 
+		private static RandomNumberGenerator Rng { get => default; } // 0x000000018912913C-0x00000001891291E4 
 	
 		// Nested types
 		public enum Sign // TypeDefIndex: 57004
@@ -52,15 +65,15 @@ namespace Mono.Math
 	
 			// Constructors
 			public ModulusRing() {} // Dummy constructor
-			public ModulusRing(BigInteger modulus) {} // 0x0000000189128D8C-0x0000000189128DEC
+			public ModulusRing(BigInteger modulus) {} // 0x000000018912E3E4-0x000000018912E4D8
 	
 			// Methods
-			public void BarrettReduction(BigInteger x) {} // 0x0000000189128CF4-0x0000000189128D8C
-			public BigInteger Multiply(BigInteger a, BigInteger b) => default; // 0x0000000189129088-0x000000018912913C
-			public BigInteger Difference(BigInteger a, BigInteger b) => default; // 0x0000000189128DEC-0x0000000189129014
-			public BigInteger Pow(BigInteger a, BigInteger k) => default; // 0x0000000189129014-0x0000000189129088
+			public void BarrettReduction(BigInteger x) {} // 0x000000018912DC98-0x000000018912DF54
+			public BigInteger Multiply(BigInteger a, BigInteger b) => default; // 0x000000018912E0F0-0x000000018912E24C
+			public BigInteger Difference(BigInteger a, BigInteger b) => default; // 0x000000018912DF54-0x000000018912E0F0
+			public BigInteger Pow(BigInteger a, BigInteger k) => default; // 0x000000018912E2D0-0x000000018912E3E4
 			[CLSCompliant(false)]
-			public BigInteger Pow(uint b, BigInteger exp) => default; // 0x00000001891293F4-0x0000000189129454
+			public BigInteger Pow(uint b, BigInteger exp) => default; // 0x000000018912E24C-0x000000018912E2D0
 		}
 	
 		private sealed class Kernel // TypeDefIndex: 57006
@@ -69,81 +82,81 @@ namespace Mono.Math
 			public Kernel() {} // Dummy constructor
 	
 			// Methods
-			public static BigInteger AddSameSign(BigInteger bi1, BigInteger bi2) => default; // 0x0000000189129454-0x0000000189129504
-			public static BigInteger Subtract(BigInteger big, BigInteger small) => default; // 0x00000001891291E4-0x00000001891292AC
-			public static void MinusEq(BigInteger big, BigInteger small) {} // 0x0000000189129874-0x0000000189129A40
-			public static void PlusEq(BigInteger bi1, BigInteger bi2) {} // 0x0000000189129650-0x0000000189129658
-			public static Sign Compare(BigInteger bi1, BigInteger bi2) => default; // 0x0000000189129624-0x0000000189129650
-			public static uint SingleByteDivideInPlace(BigInteger n, uint d) => default; // 0x00000001891292AC-0x00000001891292D8
-			public static uint DwordMod(BigInteger n, uint d) => default; // 0x0000000189129658-0x000000018912986C
-			public static BigInteger[] DwordDivMod(BigInteger n, uint d) => default; // 0x00000001891295F0-0x00000001891295F8
-			public static BigInteger[] multiByteDivide(BigInteger bi1, BigInteger bi2) => default; // 0x000000018912986C-0x0000000189129874
-			public static BigInteger LeftShift(BigInteger bi, int n) => default; // 0x000000018912913C-0x00000001891291E4
-			public static BigInteger RightShift(BigInteger bi, int n) => default; // 0x00000001891283DC-0x000000018912853C
-			public static void Multiply(uint[] x, uint xOffset, uint xLen, uint[] y, uint yOffset, uint yLen, uint[] d, uint dOffset) {} // 0x000000018912853C-0x0000000189128588
-			public static void MultiplyMod2p32pmod(uint[] x, int xOffset, int xLen, uint[] y, int yOffest, int yLen, uint[] d, int dOffset, int mod) {} // 0x00000001891281E8-0x0000000189128244
-			public static uint modInverse(BigInteger bi, uint modulus) => default; // 0x000000018912891C-0x00000001891289BC
-			public static BigInteger modInverse(BigInteger bi, BigInteger modulus) => default; // 0x00000001891288BC-0x00000001891288C8
+			public static BigInteger AddSameSign(BigInteger bi1, BigInteger bi2) => default; // 0x000000018912A4D4-0x000000018912A6A4
+			public static BigInteger Subtract(BigInteger big, BigInteger small) => default; // 0x000000018912B298-0x000000018912B444
+			public static void MinusEq(BigInteger big, BigInteger small) {} // 0x000000018912AB70-0x000000018912AC98
+			public static void PlusEq(BigInteger bi1, BigInteger bi2) {} // 0x000000018912AEE0-0x000000018912B078
+			public static Sign Compare(BigInteger bi1, BigInteger bi2) => default; // 0x000000018912A6A4-0x000000018912A7D8
+			public static uint SingleByteDivideInPlace(BigInteger n, uint d) => default; // 0x000000018912B22C-0x000000018912B298
+			public static uint DwordMod(BigInteger n, uint d) => default; // 0x000000018912A940-0x000000018912A998
+			public static BigInteger[] DwordDivMod(BigInteger n, uint d) => default; // 0x000000018912A7D8-0x000000018912A940
+			public static BigInteger[] multiByteDivide(BigInteger bi1, BigInteger bi2) => default; // 0x000000018912B980-0x000000018912BEFC
+			public static BigInteger LeftShift(BigInteger bi, int n) => default; // 0x000000018912A998-0x000000018912AB70
+			public static BigInteger RightShift(BigInteger bi, int n) => default; // 0x000000018912B078-0x000000018912B22C
+			public static void Multiply(uint[] x, uint xOffset, uint xLen, uint[] y, uint yOffset, uint yLen, uint[] d, uint dOffset) {} // 0x000000018912ADCC-0x000000018912AEE0
+			public static void MultiplyMod2p32pmod(uint[] x, int xOffset, int xLen, uint[] y, int yOffest, int yLen, uint[] d, int dOffset, int mod) {} // 0x000000018912AC98-0x000000018912ADCC
+			public static uint modInverse(BigInteger bi, uint modulus) => default; // 0x000000018912B444-0x000000018912B4F0
+			public static BigInteger modInverse(BigInteger bi, BigInteger modulus) => default; // 0x000000018912B4F0-0x000000018912B980
 		}
 	
 		// Constructors
 		public BigInteger() {} // Dummy constructor
 		[CLSCompliant(false)]
-		public BigInteger(Sign sign, uint len) {} // 0x00000001891288C8-0x000000018912891C
-		public BigInteger(BigInteger bi) {} // 0x000000018912876C-0x00000001891287E0
+		public BigInteger(Sign sign, uint len) {} // 0x0000000189128D8C-0x0000000189128DEC
+		public BigInteger(BigInteger bi) {} // 0x0000000189128CF4-0x0000000189128D8C
 		[CLSCompliant(false)]
-		public BigInteger(BigInteger bi, uint len) {} // 0x0000000189128588-0x00000001891286A0
-		public BigInteger(byte[] inData) {} // 0x00000001891292D8-0x0000000189129330
+		public BigInteger(BigInteger bi, uint len) {} // 0x0000000189129088-0x000000018912913C
+		public BigInteger(byte[] inData) {} // 0x0000000189128DEC-0x0000000189129014
 		[CLSCompliant(false)]
-		public BigInteger(uint ui) {} // 0x0000000189129598-0x00000001891295F0
-		static BigInteger() {} // 0x000000018912B4F0-0x000000018912B980
+		public BigInteger(uint ui) {} // 0x0000000189129014-0x0000000189129088
+		static BigInteger() {} // 0x0000000189128C68-0x0000000189128CF4
 	
 		// Methods
 		[CLSCompliant(false)]
-		public static implicit operator BigInteger(uint value) => default; // 0x0000000189129330-0x00000001891293C4
-		public static implicit operator BigInteger(int value) => default; // 0x0000000189129504-0x0000000189129598
-		public static BigInteger operator +(BigInteger bi1, BigInteger bi2) => default; // 0x00000001891293DC-0x00000001891293F4
-		public static BigInteger operator -(BigInteger bi1, BigInteger bi2) => default; // 0x0000000189129610-0x0000000189129624
+		public static implicit operator BigInteger(uint value) => default; // 0x00000001891293F4-0x0000000189129454
+		public static implicit operator BigInteger(int value) => default; // 0x0000000189129454-0x0000000189129504
+		public static BigInteger operator +(BigInteger bi1, BigInteger bi2) => default; // 0x00000001891291E4-0x00000001891292AC
+		public static BigInteger operator -(BigInteger bi1, BigInteger bi2) => default; // 0x0000000189129874-0x0000000189129A40
 		[CLSCompliant(false)]
-		public static uint operator %(BigInteger bi, uint ui) => default; // 0x00000001891293C4-0x00000001891293DC
-		public static BigInteger operator %(BigInteger bi1, BigInteger bi2) => default; // 0x00000001891295F8-0x0000000189129610
-		public static BigInteger operator /(BigInteger bi1, BigInteger bi2) => default; // 0x0000000189128C0C-0x0000000189128C58
-		public static BigInteger operator *(BigInteger bi1, BigInteger bi2) => default; // 0x00000001891289BC-0x0000000189128C0C
-		public static BigInteger operator <<(BigInteger bi1, int shiftVal) => default; // 0x0000000189128870-0x00000001891288BC
-		public static BigInteger operator >>(BigInteger bi1, int shiftVal) => default; // 0x0000000189128244-0x000000018912828C
-		public static BigInteger GenerateRandom(int bits, RandomNumberGenerator rng) => default; // 0x0000000189128C58-0x0000000189128C68
-		public static BigInteger GenerateRandom(int bits) => default; // 0x000000018912828C-0x000000018912836C
-		public int BitCount() => default; // 0x00000001891287E0-0x00000001891287E8
-		public bool TestBit(int bitNum) => default; // 0x00000001891287E8-0x0000000189128870
+		public static uint operator %(BigInteger bi, uint ui) => default; // 0x0000000189129650-0x0000000189129658
+		public static BigInteger operator %(BigInteger bi1, BigInteger bi2) => default; // 0x0000000189129624-0x0000000189129650
+		public static BigInteger operator /(BigInteger bi1, BigInteger bi2) => default; // 0x00000001891292AC-0x00000001891292D8
+		public static BigInteger operator *(BigInteger bi1, BigInteger bi2) => default; // 0x0000000189129658-0x000000018912986C
+		public static BigInteger operator <<(BigInteger bi1, int shiftVal) => default; // 0x00000001891295F0-0x00000001891295F8
+		public static BigInteger operator >>(BigInteger bi1, int shiftVal) => default; // 0x000000018912986C-0x0000000189129874
+		public static BigInteger GenerateRandom(int bits, RandomNumberGenerator rng) => default; // 0x00000001891283DC-0x000000018912853C
+		public static BigInteger GenerateRandom(int bits) => default; // 0x000000018912853C-0x0000000189128588
+		public int BitCount() => default; // 0x00000001891281E8-0x0000000189128244
+		public bool TestBit(int bitNum) => default; // 0x000000018912891C-0x00000001891289BC
 		[CLSCompliant(false)]
-		public void SetBit(uint bitNum) {} // 0x000000018912836C-0x00000001891283DC
+		public void SetBit(uint bitNum) {} // 0x00000001891288BC-0x00000001891288C8
 		[CLSCompliant(false)]
-		public void SetBit(uint bitNum, bool value) {} // 0x00000001891286E4-0x000000018912876C
-		public int LowestSetBit() => default; // 0x0000000189128C68-0x0000000189128CF4
-		public byte[] GetBytes() => default; // 0x000000018912E3E4-0x000000018912E4D8
+		public void SetBit(uint bitNum, bool value) {} // 0x00000001891288C8-0x000000018912891C
+		public int LowestSetBit() => default; // 0x000000018912876C-0x00000001891287E0
+		public byte[] GetBytes() => default; // 0x0000000189128588-0x00000001891286A0
 		[CLSCompliant(false)]
-		public static bool operator ==(BigInteger bi1, uint ui) => default; // 0x000000018912DC98-0x000000018912DF54
+		public static bool operator ==(BigInteger bi1, uint ui) => default; // 0x00000001891292D8-0x0000000189129330
 		[CLSCompliant(false)]
-		public static bool operator !=(BigInteger bi1, uint ui) => default; // 0x000000018912E0F0-0x000000018912E24C
-		public static bool operator ==(BigInteger bi1, BigInteger bi2) => default; // 0x000000018912DF54-0x000000018912E0F0
-		public static bool operator !=(BigInteger bi1, BigInteger bi2) => default; // 0x000000018912E2D0-0x000000018912E3E4
-		public static bool operator >(BigInteger bi1, BigInteger bi2) => default; // 0x000000018912E24C-0x000000018912E2D0
-		public static bool operator <(BigInteger bi1, BigInteger bi2) => default; // 0x000000018912A4D4-0x000000018912A6A4
-		public static bool operator >=(BigInteger bi1, BigInteger bi2) => default; // 0x000000018912B298-0x000000018912B444
-		public static bool operator <=(BigInteger bi1, BigInteger bi2) => default; // 0x000000018912AB70-0x000000018912AC98
+		public static bool operator !=(BigInteger bi1, uint ui) => default; // 0x0000000189129598-0x00000001891295F0
+		public static bool operator ==(BigInteger bi1, BigInteger bi2) => default; // 0x0000000189129330-0x00000001891293C4
+		public static bool operator !=(BigInteger bi1, BigInteger bi2) => default; // 0x0000000189129504-0x0000000189129598
+		public static bool operator >(BigInteger bi1, BigInteger bi2) => default; // 0x00000001891293DC-0x00000001891293F4
+		public static bool operator <(BigInteger bi1, BigInteger bi2) => default; // 0x0000000189129610-0x0000000189129624
+		public static bool operator >=(BigInteger bi1, BigInteger bi2) => default; // 0x00000001891293C4-0x00000001891293DC
+		public static bool operator <=(BigInteger bi1, BigInteger bi2) => default; // 0x00000001891295F8-0x0000000189129610
 		[CLSCompliant(false)]
-		public string ToString(uint radix) => default; // 0x000000018912AEE0-0x000000018912B078
+		public string ToString(uint radix) => default; // 0x0000000189128C0C-0x0000000189128C58
 		[CLSCompliant(false)]
-		public string ToString(uint radix, string characterSet) => default; // 0x000000018912A6A4-0x000000018912A7D8
-		private void Normalize() {} // 0x000000018912B22C-0x000000018912B298
-		public void Clear() {} // 0x000000018912A940-0x000000018912A998
-		public override int GetHashCode() => default; // 0x000000018912A7D8-0x000000018912A940
-		public override string ToString() => default; // 0x000000018912B980-0x000000018912BEFC
-		public override bool Equals(object o) => default; // 0x000000018912A998-0x000000018912AB70
-		public BigInteger ModInverse(BigInteger modulus) => default; // 0x000000018912B078-0x000000018912B22C
-		public BigInteger ModPow(BigInteger exp, BigInteger n) => default; // 0x000000018912ADCC-0x000000018912AEE0
-		public static BigInteger GeneratePseudoPrime(int bits) => default; // 0x000000018912AC98-0x000000018912ADCC
-		public void Incr2() {} // 0x000000018912B444-0x000000018912B4F0
+		public string ToString(uint radix, string characterSet) => default; // 0x00000001891289BC-0x0000000189128C0C
+		private void Normalize() {} // 0x0000000189128870-0x00000001891288BC
+		public void Clear() {} // 0x0000000189128244-0x000000018912828C
+		public override int GetHashCode() => default; // 0x00000001891286A0-0x00000001891286E4
+		public override string ToString() => default; // 0x0000000189128C58-0x0000000189128C68
+		public override bool Equals(object o) => default; // 0x000000018912828C-0x000000018912836C
+		public BigInteger ModInverse(BigInteger modulus) => default; // 0x00000001891287E0-0x00000001891287E8
+		public BigInteger ModPow(BigInteger exp, BigInteger n) => default; // 0x00000001891287E8-0x0000000189128870
+		public static BigInteger GeneratePseudoPrime(int bits) => default; // 0x000000018912836C-0x00000001891283DC
+		public void Incr2() {} // 0x00000001891286E4-0x000000018912876C
 	}
 }
 
@@ -609,26 +622,26 @@ namespace Mono.Security.Cryptography
 		private BigInteger e; // 0x60
 	
 		// Properties
-		public override int KeySize { get => default; } // 0x0000000189131210-0x0000000189131580 
-		public bool PublicOnly { get => default; } // 0x00000001891317F0-0x000000018913191C 
+		public override int KeySize { get => default; } // 0x0000000189132D50-0x0000000189132DE8 
+		public bool PublicOnly { get => default; } // 0x0000000189132DE8-0x0000000189132E68 
 	
 		// Nested types
-		public delegate void KeyGeneratedEventHandler(object sender, EventArgs e); // TypeDefIndex: 57000; 0x0000000189132C94-0x0000000189132D50
+		public delegate void KeyGeneratedEventHandler(object sender, EventArgs e); // TypeDefIndex: 57000; 0x0000000182065C10-0x0000000182065C20
 	
 		// Constructors
-		public RSAManaged() {} // 0x0000000189131CE0-0x0000000189131D58
-		public RSAManaged(int keySize) {} // 0x0000000189131D58-0x000000018913201C
+		public RSAManaged() {} // 0x0000000189132C84-0x0000000189132C94
+		public RSAManaged(int keySize) {} // 0x0000000189132C94-0x0000000189132D50
 	
 		// Methods
-		~RSAManaged() {} // 0x0000000189132D50-0x0000000189132DE8
-		private void GenerateKeyPair() {} // 0x0000000189132DE8-0x0000000189132E68
-		public override byte[] DecryptValue(byte[] rgb) => default; // 0x000000018913191C-0x0000000189131CE0
-		public override byte[] EncryptValue(byte[] rgb) => default; // 0x00000001891320C8-0x00000001891326EC
-		public override RSAParameters ExportParameters(bool includePrivateParameters) => default; // 0x0000000189131580-0x00000001891317F0
-		public override void ImportParameters(RSAParameters parameters) {} // 0x00000001891326EC-0x0000000189132C84
-		protected override void Dispose(bool disposing) {} // 0x000000018913201C-0x00000001891320C8
-		public override string ToXmlString(bool includePrivateParameters) => default; // 0x0000000186E7B27C-0x0000000186E7B3A4
-		private byte[] GetPaddedValue(BigInteger value, int length) => default; // 0x0000000182065C10-0x0000000182065C20
+		~RSAManaged() {} // 0x0000000189131CE0-0x0000000189131D58
+		private void GenerateKeyPair() {} // 0x0000000189131D58-0x000000018913201C
+		public override byte[] DecryptValue(byte[] rgb) => default; // 0x0000000189131210-0x0000000189131580
+		public override byte[] EncryptValue(byte[] rgb) => default; // 0x00000001891317F0-0x000000018913191C
+		public override RSAParameters ExportParameters(bool includePrivateParameters) => default; // 0x000000018913191C-0x0000000189131CE0
+		public override void ImportParameters(RSAParameters parameters) {} // 0x00000001891320C8-0x00000001891326EC
+		protected override void Dispose(bool disposing) {} // 0x0000000189131580-0x00000001891317F0
+		public override string ToXmlString(bool includePrivateParameters) => default; // 0x00000001891326EC-0x0000000189132C84
+		private byte[] GetPaddedValue(BigInteger value, int length) => default; // 0x000000018913201C-0x00000001891320C8
 	}
 }
 
@@ -1331,12 +1344,12 @@ namespace Mono.Security.X509
 		private static int password_max_length; // 0x00
 	
 		// Properties
-		public string Password { set {} } // 0x000000018911A3E0-0x000000018911A60C
-		public int IterationCount { get => default; set {} } // 0x000000018911654C-0x0000000189116888 0x000000018911B958-0x000000018911C1BC
-		public ArrayList Keys { get => default; } // 0x000000018911AC74-0x000000018911B958 
-		public Mono.Security.X509.X509CertificateCollection Certificates { get => default; } // 0x0000000189116888-0x00000001891172A8 
-		internal RandomNumberGenerator RNG { get => default; } // 0x000000018911AB60-0x000000018911AC74 
-		public static int MaximumPasswordLength { get => default; } // 0x0000000189115214-0x0000000189115278 
+		public string Password { set {} } // 0x000000018911D17C-0x000000018911D2D8
+		public int IterationCount { get => default; set {} } // 0x0000000183D4EE00-0x0000000183D4EE10 0x0000000183D4EE40-0x0000000183D4EE50
+		public ArrayList Keys { get => default; } // 0x000000018911CB44-0x000000018911D0F8 
+		public Mono.Security.X509.X509CertificateCollection Certificates { get => default; } // 0x000000018911C774-0x000000018911CB44 
+		internal RandomNumberGenerator RNG { get => default; } // 0x000000018911D148-0x000000018911D17C 
+		public static int MaximumPasswordLength { get => default; } // 0x000000018911D0F8-0x000000018911D148 
 	
 		// Nested types
 		public class DeriveBytes // TypeDefIndex: 56931
@@ -1351,55 +1364,55 @@ namespace Mono.Security.X509
 			private byte[] _salt; // 0x28
 	
 			// Properties
-			public string HashName { set {} } // 0x000000018911C62C-0x000000018911C668
-			public int IterationCount { set {} } // 0x000000018911C5E0-0x000000018911C62C
-			public byte[] Password { set {} } // 0x000000018911746C-0x0000000189117D5C
-			public byte[] Salt { set {} } // 0x0000000189118354-0x0000000189118428
+			public string HashName { set {} } // 0x000000018426FEE0-0x000000018426FEF0
+			public int IterationCount { set {} } // 0x0000000183D4E9C0-0x0000000183D4E9D0
+			public byte[] Password { set {} } // 0x00000001891157BC-0x0000000189115848
+			public byte[] Salt { set {} } // 0x0000000189115848-0x00000001891158C4
 	
 			// Constructors
-			public DeriveBytes() {} // 0x000000018911C668-0x000000018911C774
-			static DeriveBytes() {} // 0x000000018911D148-0x000000018911D17C
+			public DeriveBytes() {} // 0x000000018350B670-0x000000018350B680
+			static DeriveBytes() {} // 0x0000000189115678-0x00000001891157BC
 	
 			// Methods
-			private void Adjust(byte[] a, int aOff, byte[] b) {} // 0x000000018911D17C-0x000000018911D2D8
-			private byte[] Derive(byte[] diversifier, int n) => default; // 0x0000000183D4EE00-0x0000000183D4EE10
-			public byte[] DeriveKey(int size) => default; // 0x0000000183D4EE40-0x0000000183D4EE50
-			public byte[] DeriveIV(int size) => default; // 0x000000018911CB44-0x000000018911D0F8
-			public byte[] DeriveMAC(int size) => default; // 0x000000018911C774-0x000000018911CB44
+			private void Adjust(byte[] a, int aOff, byte[] b) {} // 0x000000018911508C-0x0000000189115150
+			private byte[] Derive(byte[] diversifier, int n) => default; // 0x0000000189115278-0x0000000189115678
+			public byte[] DeriveKey(int size) => default; // 0x00000001891151B4-0x0000000189115214
+			public byte[] DeriveIV(int size) => default; // 0x0000000189115150-0x00000001891151B4
+			public byte[] DeriveMAC(int size) => default; // 0x0000000189115214-0x0000000189115278
 		}
 	
 		// Constructors
-		public PKCS12() {} // 0x000000018911740C-0x000000018911746C
-		public PKCS12(byte[] data) {} // 0x000000018911A60C-0x000000018911AB60
-		public PKCS12(byte[] data, string password) {} // 0x0000000189117E30-0x0000000189117F14
-		static PKCS12() {} // 0x0000000189115678-0x00000001891157BC
+		public PKCS12() {} // 0x000000018911C668-0x000000018911C774
+		public PKCS12(byte[] data) {} // 0x000000018911C62C-0x000000018911C668
+		public PKCS12(byte[] data, string password) {} // 0x000000018911C5E0-0x000000018911C62C
+		static PKCS12() {} // 0x000000018911C5A4-0x000000018911C5E0
 	
 		// Methods
-		private void Decode(byte[] data) {} // 0x0000000189117D5C-0x0000000189117E30
-		~PKCS12() {} // 0x0000000189117F14-0x0000000189118034
-		private bool Compare(byte[] expected, byte[] actual) => default; // 0x0000000189118428-0x000000018911A3E0
-		private SymmetricAlgorithm GetSymmetricAlgorithm(string algorithmOid, byte[] salt, int iterationCount) => default; // 0x0000000189118034-0x0000000189118354
-		public byte[] Decrypt(string algorithmOid, byte[] salt, int iterationCount, byte[] encryptedData) => default; // 0x0000000189115F80-0x0000000189115F8C
-		public byte[] Decrypt(PKCS7.EncryptedData ed) => default; // 0x0000000189115F8C-0x00000001891161C4
-		public byte[] Encrypt(string algorithmOid, byte[] salt, int iterationCount, byte[] data) => default; // 0x000000018911C598-0x000000018911C5A4
+		private void Decode(byte[] data) {} // 0x000000018911746C-0x0000000189117D5C
+		~PKCS12() {} // 0x0000000189118354-0x0000000189118428
+		private bool Compare(byte[] expected, byte[] actual) => default; // 0x000000018911740C-0x000000018911746C
+		private SymmetricAlgorithm GetSymmetricAlgorithm(string algorithmOid, byte[] salt, int iterationCount) => default; // 0x000000018911A60C-0x000000018911AB60
+		public byte[] Decrypt(string algorithmOid, byte[] salt, int iterationCount, byte[] encryptedData) => default; // 0x0000000189117E30-0x0000000189117F14
+		public byte[] Decrypt(PKCS7.EncryptedData ed) => default; // 0x0000000189117D5C-0x0000000189117E30
+		public byte[] Encrypt(string algorithmOid, byte[] salt, int iterationCount, byte[] data) => default; // 0x0000000189117F14-0x0000000189118034
 		private DSAParameters GetExistingParameters(out bool found) {
 			found = default;
 			return default;
-		} // 0x000000018911C1BC-0x000000018911C598
-		private void AddPrivateKey(PKCS8.PrivateKeyInfo pki) {} // 0x0000000189117384-0x000000018911740C
-		private void ReadSafeBag(ASN1 safeBag) {} // 0x00000001891161C4-0x000000018911654C
-		private ASN1 Pkcs8ShroudedKeyBagSafeBag(AsymmetricAlgorithm aa, IDictionary attributes) => default; // 0x00000001891172A8-0x0000000189117384
-		private ASN1 CertificateSafeBag(Mono.Security.X509.X509Certificate x509, IDictionary attributes) => default; // 0x000000018911D0F8-0x000000018911D148
-		private byte[] MAC(byte[] password, byte[] salt, int iterations, byte[] data) => default; // 0x000000018911C5A4-0x000000018911C5E0
-		public byte[] GetBytes() => default; // 0x000000018350B670-0x000000018350B680
-		private PKCS7.ContentInfo EncryptedContentInfo(ASN1 safeBags, string algorithmOid) => default; // 0x000000018426FEE0-0x000000018426FEF0
-		public void AddCertificate(Mono.Security.X509.X509Certificate cert) {} // 0x0000000183D4E9C0-0x0000000183D4E9D0
-		public void AddCertificate(Mono.Security.X509.X509Certificate cert, IDictionary attributes) {} // 0x00000001891157BC-0x0000000189115848
-		public void RemoveCertificate(Mono.Security.X509.X509Certificate cert) {} // 0x0000000189115848-0x00000001891158C4
-		public void RemoveCertificate(Mono.Security.X509.X509Certificate cert, IDictionary attrs) {} // 0x000000018911508C-0x0000000189115150
-		private bool CompareAsymmetricAlgorithm(AsymmetricAlgorithm a1, AsymmetricAlgorithm a2) => default; // 0x0000000189115278-0x0000000189115678
-		public void AddPkcs8ShroudedKeyBag(AsymmetricAlgorithm aa, IDictionary attributes) {} // 0x00000001891151B4-0x0000000189115214
-		public object Clone() => default; // 0x0000000189115150-0x00000001891151B4
+		} // 0x000000018911A3E0-0x000000018911A60C
+		private void AddPrivateKey(PKCS8.PrivateKeyInfo pki) {} // 0x000000018911654C-0x0000000189116888
+		private void ReadSafeBag(ASN1 safeBag) {} // 0x000000018911B958-0x000000018911C1BC
+		private ASN1 Pkcs8ShroudedKeyBagSafeBag(AsymmetricAlgorithm aa, IDictionary attributes) => default; // 0x000000018911AC74-0x000000018911B958
+		private ASN1 CertificateSafeBag(Mono.Security.X509.X509Certificate x509, IDictionary attributes) => default; // 0x0000000189116888-0x00000001891172A8
+		private byte[] MAC(byte[] password, byte[] salt, int iterations, byte[] data) => default; // 0x000000018911AB60-0x000000018911AC74
+		public byte[] GetBytes() => default; // 0x0000000189118428-0x000000018911A3E0
+		private PKCS7.ContentInfo EncryptedContentInfo(ASN1 safeBags, string algorithmOid) => default; // 0x0000000189118034-0x0000000189118354
+		public void AddCertificate(Mono.Security.X509.X509Certificate cert) {} // 0x0000000189115F80-0x0000000189115F8C
+		public void AddCertificate(Mono.Security.X509.X509Certificate cert, IDictionary attributes) {} // 0x0000000189115F8C-0x00000001891161C4
+		public void RemoveCertificate(Mono.Security.X509.X509Certificate cert) {} // 0x000000018911C598-0x000000018911C5A4
+		public void RemoveCertificate(Mono.Security.X509.X509Certificate cert, IDictionary attrs) {} // 0x000000018911C1BC-0x000000018911C598
+		private bool CompareAsymmetricAlgorithm(AsymmetricAlgorithm a1, AsymmetricAlgorithm a2) => default; // 0x0000000189117384-0x000000018911740C
+		public void AddPkcs8ShroudedKeyBag(AsymmetricAlgorithm aa, IDictionary attributes) {} // 0x00000001891161C4-0x000000018911654C
+		public object Clone() => default; // 0x00000001891172A8-0x0000000189117384
 	}
 
 	public sealed class X501 // TypeDefIndex: 56933
@@ -1457,10 +1470,10 @@ namespace Mono.Security.X509
 		private byte[] hash_value; // 0x58
 	
 		// Properties
-		public Mono.Security.X509.X509ExtensionCollection Extensions { get => default; } // 0x00000001891205B8-0x0000000189120610 
-		public byte[] Hash { get => default; } // 0x0000000189123350-0x00000001891233D4 
-		public string IssuerName { get => default; } // 0x00000001891233D4-0x00000001891234F0 
-		public System.DateTime NextUpdate { get => default; } // 0x0000000189123D6C-0x0000000189124010 
+		public Mono.Security.X509.X509ExtensionCollection Extensions { get => default; } // 0x0000000183D4EA70-0x0000000183D4EA80 
+		public byte[] Hash { get => default; } // 0x00000001891240E4-0x000000018912428C 
+		public string IssuerName { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public System.DateTime NextUpdate { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
 	
 		// Nested types
 		public class X509CrlEntry // TypeDefIndex: 56934
@@ -1471,27 +1484,27 @@ namespace Mono.Security.X509
 			private Mono.Security.X509.X509ExtensionCollection extensions; // 0x20
 	
 			// Properties
-			public byte[] SerialNumber { get => default; } // 0x00000001891234F0-0x0000000189123B34 
-			public System.DateTime RevocationDate { get => default; } // 0x0000000183D4EA70-0x0000000183D4EA80 
-			public Mono.Security.X509.X509ExtensionCollection Extensions { get => default; } // 0x00000001891240E4-0x000000018912428C 
+			public byte[] SerialNumber { get => default; } // 0x0000000189123300-0x0000000189123350 
+			public System.DateTime RevocationDate { get => default; } // 0x0000000181041090-0x00000001810410A0 
+			public Mono.Security.X509.X509ExtensionCollection Extensions { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
 	
 			// Constructors
 			public X509CrlEntry() {} // Dummy constructor
-			internal X509CrlEntry(ASN1 entry) {} // 0x0000000189124010-0x00000001891240E4
+			internal X509CrlEntry(ASN1 entry) {} // 0x0000000189123208-0x0000000189123300
 		}
 	
 		// Constructors
 		public X509Crl() {} // Dummy constructor
-		public X509Crl(byte[] crl) {} // 0x00000001820B7B20-0x00000001820B7B30
+		public X509Crl(byte[] crl) {} // 0x0000000189124010-0x00000001891240E4
 	
 		// Methods
-		private void Parse(byte[] crl) {} // 0x0000000183D4EAC0-0x0000000183D4EAD0
-		private bool Compare(byte[] array1, byte[] array2) => default; // 0x0000000189123CAC-0x0000000189123D6C
-		public X509CrlEntry GetCrlEntry(Mono.Security.X509.X509Certificate x509) => default; // 0x0000000189123B34-0x0000000189123CAC
-		public X509CrlEntry GetCrlEntry(byte[] serialNumber) => default; // 0x0000000189123208-0x0000000189123300
-		internal bool VerifySignature(DSA dsa) => default; // 0x0000000189123300-0x0000000189123350
-		internal bool VerifySignature(RSA rsa) => default; // 0x0000000181041090-0x00000001810410A0
-		public bool VerifySignature(AsymmetricAlgorithm aa) => default; // 0x0000000183D4EB40-0x0000000183D4EB50
+		private void Parse(byte[] crl) {} // 0x00000001891234F0-0x0000000189123B34
+		private bool Compare(byte[] array1, byte[] array2) => default; // 0x00000001891205B8-0x0000000189120610
+		public X509CrlEntry GetCrlEntry(Mono.Security.X509.X509Certificate x509) => default; // 0x0000000189123350-0x00000001891233D4
+		public X509CrlEntry GetCrlEntry(byte[] serialNumber) => default; // 0x00000001891233D4-0x00000001891234F0
+		internal bool VerifySignature(DSA dsa) => default; // 0x0000000189123D6C-0x0000000189124010
+		internal bool VerifySignature(RSA rsa) => default; // 0x0000000189123CAC-0x0000000189123D6C
+		public bool VerifySignature(AsymmetricAlgorithm aa) => default; // 0x0000000189123B34-0x0000000189123CAC
 	}
 
 	public class X509Certificate : ISerializable // TypeDefIndex: 56936
@@ -1560,7 +1573,7 @@ namespace Mono.Security.X509
 	public class X509CertificateCollection : CollectionBase, IEnumerable // TypeDefIndex: 56938
 	{
 		// Properties
-		public Mono.Security.X509.X509Certificate this[int index] { get => default; } // 0x0000000186FAB9A8-0x0000000186FAB9CC 
+		public Mono.Security.X509.X509Certificate this[int index] { get => default; } // 0x00000001891207D0-0x0000000189120830 
 	
 		// Nested types
 		public class X509CertificateEnumerator : IEnumerator // TypeDefIndex: 56937
@@ -1569,31 +1582,31 @@ namespace Mono.Security.X509
 			private IEnumerator enumerator; // 0x10
 	
 			// Properties
-			public Mono.Security.X509.X509Certificate Current { get => default; } // 0x00000001891207D0-0x0000000189120830 
-			object IEnumerator.Current { get => default; } // 0x000000018912053C-0x00000001891205B8 
+			public Mono.Security.X509.X509Certificate Current { get => default; } // 0x00000001891209B8-0x0000000189120A20 
+			object IEnumerator.Current { get => default; } // 0x000000018912090C-0x0000000189120958 
 	
 			// Constructors
 			public X509CertificateEnumerator() {} // Dummy constructor
-			public X509CertificateEnumerator(X509CertificateCollection mappings) {} // 0x00000001891207C8-0x00000001891207D0
+			public X509CertificateEnumerator(X509CertificateCollection mappings) {} // 0x0000000189120958-0x00000001891209B8
 	
 			// Methods
-			bool IEnumerator.MoveNext() => default; // 0x0000000189120470-0x000000018912053C
-			void IEnumerator.Reset() {} // 0x0000000189120610-0x0000000189120628
-			public bool MoveNext() => default; // 0x0000000189120628-0x0000000189120688
+			bool IEnumerator.MoveNext() => default; // 0x0000000189120878-0x00000001891208C0
+			void IEnumerator.Reset() {} // 0x00000001891208C0-0x000000018912090C
+			public bool MoveNext() => default; // 0x0000000189120830-0x0000000189120878
 		}
 	
 		// Constructors
-		public X509CertificateCollection() {} // 0x00000001891207A4-0x00000001891207C8
+		public X509CertificateCollection() {} // 0x00000001891207C8-0x00000001891207D0
 	
 		// Methods
-		public int Add(Mono.Security.X509.X509Certificate value) => default; // 0x0000000189120688-0x00000001891207A4
-		public void AddRange(X509CertificateCollection value) {} // 0x00000001891205B8-0x0000000189120610
-		public bool Contains(Mono.Security.X509.X509Certificate value) => default; // 0x0000000189120958-0x00000001891209B8
-		public new X509CertificateEnumerator GetEnumerator() => default; // 0x00000001891209B8-0x0000000189120A20
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018912090C-0x0000000189120958
-		public override int GetHashCode() => default; // 0x0000000189120878-0x00000001891208C0
-		public int IndexOf(Mono.Security.X509.X509Certificate value) => default; // 0x00000001891208C0-0x000000018912090C
-		private bool Compare(byte[] array1, byte[] array2) => default; // 0x0000000189120830-0x0000000189120878
+		public int Add(Mono.Security.X509.X509Certificate value) => default; // 0x000000018912053C-0x00000001891205B8
+		public void AddRange(X509CertificateCollection value) {} // 0x0000000189120470-0x000000018912053C
+		public bool Contains(Mono.Security.X509.X509Certificate value) => default; // 0x0000000189120610-0x0000000189120628
+		public new X509CertificateEnumerator GetEnumerator() => default; // 0x0000000189120628-0x0000000189120688
+		IEnumerator IEnumerable.GetEnumerator() => default; // 0x00000001891207A4-0x00000001891207C8
+		public override int GetHashCode() => default; // 0x0000000186FAB9A8-0x0000000186FAB9CC
+		public int IndexOf(Mono.Security.X509.X509Certificate value) => default; // 0x0000000189120688-0x00000001891207A4
+		private bool Compare(byte[] array1, byte[] array2) => default; // 0x00000001891205B8-0x0000000189120610
 	}
 
 	public class X509Chain // TypeDefIndex: 56939

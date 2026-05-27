@@ -27,6 +27,163 @@ using UnityEngine.UIElements.UIR.Implementation;
 using UnityEngine.Yoga;
 
 // Image 10: UnityEngine.UIElementsModule.dll - Assembly: UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 43162-44030
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
+[assembly: InternalsVisibleTo("UnityEngine")]
+[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
+[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
+[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
+[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
+[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
+[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
+[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
+[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
+[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
+[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
+[assembly: InternalsVisibleTo("Unity.Analytics")]
+[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
+[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
+[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
+[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
+[assembly: InternalsVisibleTo("Unity.Automation")]
+[assembly: InternalsVisibleTo("Unity.Burst")]
+[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
+[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
+[assembly: InternalsVisibleTo("UnityEngine.UI")]
+[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
+[assembly: InternalsVisibleTo("Unity.Timeline")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
+[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
+[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
+[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
+[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
+[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
+[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
+[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.UIElements")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
+[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
+[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
+[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
+[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
+[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
+[assembly: InternalsVisibleTo("Unity.Logging")]
+[assembly: InternalsVisibleTo("Unity.Entities")]
+[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
+[assembly: InternalsVisibleTo("Unity.Collections")]
+[assembly: InternalsVisibleTo("Unity.Runtime")]
+[assembly: InternalsVisibleTo("Unity.Core")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
+[assembly: InternalsVisibleTo("UnityEngine.Networking")]
+[assembly: InternalsVisibleTo("Unity.Services.QoS")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
+[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
+[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: UnityEngineModuleAssembly]
 
 namespace UnityEngine.UIElements
 {
@@ -91,13 +248,13 @@ namespace UnityEngine.UIElements
 		private DynamicAtlasCustomFilter m_CustomFilter; // 0x50
 	
 		// Properties
-		internal bool isInitialized { get => default; } // 0x0000000189E6E8C0-0x0000000189E6E9E4 
-		public int minAtlasSize { set {} } // 0x0000000183D86EF0-0x0000000183D86F00
-		public int maxAtlasSize { set {} } // 0x0000000189E6F53C-0x0000000189E6F554
-		public static DynamicAtlasFilters defaultFilters { get => default; } // 0x0000000189E6F4DC-0x0000000189E6F524 
-		public DynamicAtlasFilters activeFilters { set {} } // 0x0000000189E6F3C4-0x0000000189E6F4B0
-		public int maxSubTextureSize { get => default; set {} } // 0x0000000189E77E20-0x0000000189E77E70 0x0000000189E77E70-0x0000000189E77EB4
-		public DynamicAtlasCustomFilter customFilter { set {} } // 0x0000000189E77FE8-0x0000000189E78010
+		internal bool isInitialized { get => default; } // 0x0000000189E6F4B0-0x0000000189E6F4C4 
+		public int minAtlasSize { set {} } // 0x0000000189E6F554-0x0000000189E6F56C
+		public int maxAtlasSize { set {} } // 0x0000000189E6F524-0x0000000189E6F53C
+		public static DynamicAtlasFilters defaultFilters { get => default; } // 0x0000000183D55C10-0x0000000183D55C20 
+		public DynamicAtlasFilters activeFilters { set {} } // 0x0000000189E6F4C4-0x0000000189E6F4DC
+		public int maxSubTextureSize { get => default; set {} } // 0x0000000183D86EF0-0x0000000183D86F00 0x0000000189E6F53C-0x0000000189E6F554
+		public DynamicAtlasCustomFilter customFilter { set {} } // 0x0000000189E6F4DC-0x0000000189E6F524
 	
 		// Nested types
 		private class TextureInfo : LinkedPoolItem<TextureInfo> // TypeDefIndex: 43169
@@ -110,45 +267,45 @@ namespace UnityEngine.UIElements
 			public static readonly LinkedPool<TextureInfo> pool; // 0x00
 	
 			// Constructors
-			public TextureInfo() {} // 0x0000000189E6ED08-0x0000000189E6ED90
-			static TextureInfo() {} // 0x0000000189E6EE00-0x0000000189E6EEA0
+			public TextureInfo() {} // 0x0000000189E77FE8-0x0000000189E78010
+			static TextureInfo() {} // 0x0000000189E77EB4-0x0000000189E77FE8
 	
 			// Methods
-			private static TextureInfo Create() => default; // 0x0000000189E6F4B0-0x0000000189E6F4C4
-			private static void Reset(TextureInfo info) {} // 0x0000000189E6EC8C-0x0000000189E6ED08
+			private static TextureInfo Create() => default; // 0x0000000189E77E20-0x0000000189E77E70
+			private static void Reset(TextureInfo info) {} // 0x0000000189E77E70-0x0000000189E77EB4
 		}
 	
 		// Constructors
-		public DynamicAtlas() {} // 0x0000000189E77EB4-0x0000000189E77FE8
+		public DynamicAtlas() {} // 0x0000000189E6F3C4-0x0000000189E6F4B0
 	
 		// Methods
-		protected override void OnAssignedToPanel(IPanel panel) {} // 0x0000000189E6E83C-0x0000000189E6E8C0
-		protected override void OnRemovedFromPanel(IPanel panel) {} // 0x0000000189E6EFD4-0x0000000189E6F3C4
-		public override void Reset() {} // 0x0000000189E6EEA0-0x0000000189E6EFD4
-		private void InitPages() {} // 0x0000000189E6ED90-0x0000000189E6EE00
-		private void DestroyPages() {} // 0x0000000189E6E9E4-0x0000000189E6EB40
+		protected override void OnAssignedToPanel(IPanel panel) {} // 0x0000000189E6EC8C-0x0000000189E6ED08
+		protected override void OnRemovedFromPanel(IPanel panel) {} // 0x0000000189E6ED08-0x0000000189E6ED90
+		public override void Reset() {} // 0x0000000189E6EE00-0x0000000189E6EEA0
+		private void InitPages() {} // 0x0000000189E6E8C0-0x0000000189E6E9E4
+		private void DestroyPages() {} // 0x0000000189E6E83C-0x0000000189E6E8C0
 		public override bool TryGetAtlas(VisualElement ve, Texture2D src, out TextureId atlas, out RectInt atlasRect) {
 			atlas = default;
 			atlasRect = default;
 			return default;
-		} // 0x0000000189E6EB40-0x0000000189E6EC8C
-		public override void ReturnAtlas(VisualElement ve, Texture2D src, TextureId atlas) {} // 0x0000000189E6F554-0x0000000189E6F56C
-		protected override void OnUpdateDynamicTextures(IPanel panel) {} // 0x0000000189E6F524-0x0000000189E6F53C
-		internal static bool IsTextureFormatSupported(TextureFormat format) => default; // 0x0000000183D55C10-0x0000000183D55C20
-		public virtual bool IsTextureValid(Texture2D texture, UnityEngine.FilterMode atlasFilterMode) => default; // 0x0000000189E6F4C4-0x0000000189E6F4DC
+		} // 0x0000000189E6EFD4-0x0000000189E6F3C4
+		public override void ReturnAtlas(VisualElement ve, Texture2D src, TextureId atlas) {} // 0x0000000189E6EEA0-0x0000000189E6EFD4
+		protected override void OnUpdateDynamicTextures(IPanel panel) {} // 0x0000000189E6ED90-0x0000000189E6EE00
+		internal static bool IsTextureFormatSupported(TextureFormat format) => default; // 0x0000000189E6E9E4-0x0000000189E6EB40
+		public virtual bool IsTextureValid(Texture2D texture, UnityEngine.FilterMode atlasFilterMode) => default; // 0x0000000189E6EB40-0x0000000189E6EC8C
 	}
 
 	public class BindableElement : VisualElement, IBindable // TypeDefIndex: 43173
 	{
 		// Properties
-		public IBinding binding { get; } // 0x0000000189E783B0-0x0000000189E783EC 
-		public string bindingPath { get; set; } // 0x0000000189E78500-0x0000000189E78590
+		public IBinding binding { get; } // 0x0000000183D57010-0x0000000183D57020 
+		public string bindingPath { get; set; } // 0x00000001858B3B50-0x00000001858B3B64
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<BindableElement, UxmlTraits> // TypeDefIndex: 43171
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000183D57010-0x0000000183D57020
+			public UxmlFactory() {} // 0x0000000189E783B0-0x0000000189E783EC
 		}
 	
 		public class UxmlTraits : VisualElement.UxmlTraits // TypeDefIndex: 43172
@@ -157,14 +314,14 @@ namespace UnityEngine.UIElements
 			private UxmlStringAttributeDescription m_PropertyPath; // 0x70
 	
 			// Constructors
-			public UxmlTraits() {} // 0x00000001858B3B50-0x00000001858B3B64
+			public UxmlTraits() {} // 0x0000000189E78500-0x0000000189E78590
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189E69538-0x0000000189E69584
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189E78428-0x0000000189E78500
 		}
 	
 		// Constructors
-		public BindableElement() {} // 0x0000000189E78428-0x0000000189E78500
+		public BindableElement() {} // 0x0000000189E69538-0x0000000189E69584
 	}
 
 	internal class ClampedDragger<T> : Clickable // TypeDefIndex: 43175
@@ -255,7 +412,7 @@ namespace UnityEngine.UIElements
 		private List<ButtonClickStatus> m_ClickStatus; // 0x10
 	
 		// Properties
-		internal static int s_DoubleClickTime { get; set; } // 0x0000000189E69ED4-0x0000000189E6A064 0x0000000189E69D3C-0x0000000189E69E98
+		internal static int s_DoubleClickTime { get; set; } // 0x0000000189E6A064-0x0000000189E6A0B4 0x0000000189E6A0B4-0x0000000189E6A108
 	
 		// Nested types
 		private class ButtonClickStatus // TypeDefIndex: 43177
@@ -267,23 +424,23 @@ namespace UnityEngine.UIElements
 			public int m_ClickCount; // 0x30
 	
 			// Constructors
-			public ButtonClickStatus() {} // 0x0000000189E6A0B4-0x0000000189E6A108
+			public ButtonClickStatus() {} // 0x000000018350B670-0x000000018350B680
 	
 			// Methods
-			public void Reset() {} // 0x0000000189E6A064-0x0000000189E6A0B4
+			public void Reset() {} // 0x0000000189E69584-0x0000000189E695C0
 		}
 	
 		// Constructors
-		public ClickDetector() {} // 0x0000000189E69AE8-0x0000000189E69D3C
-		static ClickDetector() {} // 0x000000018350B670-0x000000018350B680
+		public ClickDetector() {} // 0x0000000189E69ED4-0x0000000189E6A064
+		static ClickDetector() {} // 0x0000000189E69E98-0x0000000189E69ED4
 	
 		// Methods
-		private void StartClickTracking(EventBase evt) {} // 0x0000000189E695C0-0x0000000189E69650
-		private void SendClickEvent(EventBase evt) {} // 0x0000000189E6989C-0x0000000189E69AE8
-		private void CancelClickTracking(EventBase evt) {} // 0x0000000189E697B0-0x0000000189E6989C
-		public void ProcessEvent(EventBase evt) {} // 0x0000000189E69650-0x0000000189E697B0
-		private static bool ContainsPointer(VisualElement element, Vector2 position) => default; // 0x0000000189E69E98-0x0000000189E69ED4
-		internal void Cleanup(List<VisualElement> elements) {} // 0x0000000189E69584-0x0000000189E695C0
+		private void StartClickTracking(EventBase evt) {} // 0x0000000189E69D3C-0x0000000189E69E98
+		private void SendClickEvent(EventBase evt) {} // 0x0000000189E69AE8-0x0000000189E69D3C
+		private void CancelClickTracking(EventBase evt) {} // 0x0000000189E695C0-0x0000000189E69650
+		public void ProcessEvent(EventBase evt) {} // 0x0000000189E6989C-0x0000000189E69AE8
+		private static bool ContainsPointer(VisualElement element, Vector2 position) => default; // 0x0000000189E697B0-0x0000000189E6989C
+		internal void Cleanup(List<VisualElement> elements) {} // 0x0000000189E69650-0x0000000189E697B0
 	}
 
 	public abstract class ContextualMenuManager // TypeDefIndex: 43179
@@ -405,9 +562,9 @@ namespace UnityEngine.UIElements
 		private float m_PrevActionTime; // 0x64
 	
 		// Properties
-		private bool isAppFocused { get => default; } // 0x000000018943BB00-0x000000018943BB48 
-		internal IInput input { get => default; } // 0x0000000189E75CCC-0x0000000189E75CD4 
-		public BaseRuntimePanel focusedPanel { get => default; set {} } // 0x0000000183D503F0-0x0000000183D50400 0x0000000181002730-0x0000000181002740
+		private bool isAppFocused { get => default; } // 0x00000001842744F0-0x00000001842744F8 
+		internal IInput input { get => default; } // 0x0000000189E6DA70-0x0000000189E6DAA4 
+		public BaseRuntimePanel focusedPanel { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000189E6DAA4-0x0000000189E6DAF4
 	
 		// Nested types
 		public enum UpdateMode // TypeDefIndex: 43187
@@ -419,66 +576,66 @@ namespace UnityEngine.UIElements
 		internal interface IInput // TypeDefIndex: 43188
 		{
 			// Properties
-			int touchCount { get; } // 0x0000000189E6C7F8-0x0000000189E6C900 
-			bool mousePresent { get; } // 0x0000000183D4EAF0-0x0000000183D4EB00 
+			int touchCount { get; }
+			bool mousePresent { get; }
 	
 			// Methods
-			bool GetButtonDown(string button); // 0x00000001842744F0-0x00000001842744F8
-			float GetAxisRaw(string axis); // 0x0000000189E6DA70-0x0000000189E6DAA4
-			Touch GetTouch(int index); // 0x0000000189E6D668-0x0000000189E6D680
+			bool GetButtonDown(string button);
+			float GetAxisRaw(string axis);
+			Touch GetTouch(int index);
 		}
 	
 		private class Input : IInput // TypeDefIndex: 43189
 		{
 			// Properties
-			public int touchCount { get => default; } // 0x0000000189E6CE78-0x0000000189E6D394 
-			public bool mousePresent { get => default; }
+			public int touchCount { get => default; } // 0x00000001889CEE70-0x00000001889CEE78 
+			public bool mousePresent { get => default; } // 0x0000000189E75CCC-0x0000000189E75CD4 
 	
 			// Constructors
-			public Input() {}
+			public Input() {} // 0x000000018350B670-0x000000018350B680
 	
 			// Methods
-			public bool GetButtonDown(string button) => default; // 0x0000000189E6DAA4-0x0000000189E6DAF4
-			public float GetAxisRaw(string axis) => default; // 0x0000000189E6D85C-0x0000000189E6D8B8
-			public Touch GetTouch(int index) => default; // 0x0000000189E6D394-0x0000000189E6D668
+			public bool GetButtonDown(string button) => default; // 0x0000000189E75CC0-0x0000000189E75CCC
+			public float GetAxisRaw(string axis) => default; // 0x0000000189E75CB4-0x0000000189E75CC0
+			public Touch GetTouch(int index) => default; // 0x000000018943BB00-0x000000018943BB48
 		}
 	
 		private class NoInput : IInput // TypeDefIndex: 43190
 		{
 			// Properties
-			public int touchCount { get => default; } // 0x0000000189E6CB18-0x0000000189E6CE78 
-			public bool mousePresent { get => default; } // 0x0000000189E6D680-0x0000000189E6D7FC 
+			public int touchCount { get => default; } // 0x0000000181002730-0x0000000181002740 
+			public bool mousePresent { get => default; } // 0x000000018115F4C0-0x000000018115F530 
 	
 			// Constructors
-			public NoInput() {} // 0x0000000189E6C900-0x0000000189E6C920
+			public NoInput() {} // 0x000000018350B670-0x000000018350B680
 	
 			// Methods
-			public bool GetButtonDown(string button) => default; // 0x0000000189E6D7FC-0x0000000189E6D85C
-			public float GetAxisRaw(string axis) => default; // 0x0000000189E6CA1C-0x0000000189E6CB18
-			public Touch GetTouch(int index) => default; // 0x0000000189E6C920-0x0000000189E6CA1C
+			public bool GetButtonDown(string button) => default; // 0x000000018115F4C0-0x000000018115F530
+			public float GetAxisRaw(string axis) => default; // 0x0000000183D503F0-0x0000000183D50400
+			public Touch GetTouch(int index) => default; // 0x0000000183D88660-0x0000000183D88680
 		}
 	
 		// Constructors
-		public DefaultEventSystem() {} // 0x0000000189E78010-0x0000000189E78108
-		static DefaultEventSystem() {} // 0x000000018115F4C0-0x000000018115F530
+		public DefaultEventSystem() {} // 0x0000000189E6D97C-0x0000000189E6DA70
+		static DefaultEventSystem() {} // 0x0000000189E6D8B8-0x0000000189E6D97C
 	
 		// Methods
-		private IInput GetDefaultInput() => default; // 0x000000018350B670-0x000000018350B680
-		private bool ShouldIgnoreEventsOnAppNotFocused() => default; // 0x000000018115F4C0-0x000000018115F530
-		public void Update(UpdateMode updateMode = UpdateMode.Always /* Metadata: 0x01FB5DB0 */) {} // 0x0000000183D88660-0x0000000183D88680
-		private void SendIMGUIEvents() {} // 0x000000018115F4C0-0x000000018115F530
-		private void SendInputEvents() {} // 0x000000018350B670-0x000000018350B680
-		internal void SendFocusBasedEvent<TArg>(Func<TArg, EventBase> evtFactory, TArg arg) {} // 0x0000000189E7834C-0x0000000189E783B0
-		private void SendPositionBasedEvent<TArg>(Vector3 mousePosition, Vector3 delta, int pointerId, int? targetDisplay, Func<Vector3, Vector3, TArg, EventBase> evtFactory, TArg arg, bool deselectIfNoTarget = false /* Metadata: 0x01FB5DB1 */) {} // 0x000000018350B670-0x000000018350B680
-		private void UpdateFocusedPanel(BaseRuntimePanel runtimePanel) {} // 0x0000000189E78108-0x0000000189E78158
-		private static EventBase MakeTouchEvent(Touch touch, EventModifiers modifiers) => default; // 0x0000000189E78158-0x0000000189E781E4
-		private bool ProcessTouchEvents() => default; // 0x0000000189E781E4-0x0000000189E782B4
-		private Vector2 GetRawMoveVector() => default; // 0x0000000189E782B4-0x0000000189E782E4
-		private bool ShouldSendMoveFromInput() => default; // 0x0000000189E782E4-0x0000000189E78318
+		private IInput GetDefaultInput() => default; // 0x0000000189E6C7F8-0x0000000189E6C900
+		private bool ShouldIgnoreEventsOnAppNotFocused() => default; // 0x0000000189E6D668-0x0000000189E6D680
+		public void Update(UpdateMode updateMode = UpdateMode.Always /* Metadata: 0x01FB5DB0 */) {} // 0x0000000189E6D85C-0x0000000189E6D8B8
+		private void SendIMGUIEvents() {} // 0x0000000189E6CE78-0x0000000189E6D394
+		private void SendInputEvents() {} // 0x0000000189E6D394-0x0000000189E6D668
+		internal void SendFocusBasedEvent<TArg>(Func<TArg, EventBase> evtFactory, TArg arg) {}
+		private void SendPositionBasedEvent<TArg>(Vector3 mousePosition, Vector3 delta, int pointerId, int? targetDisplay, Func<Vector3, Vector3, TArg, EventBase> evtFactory, TArg arg, bool deselectIfNoTarget = false /* Metadata: 0x01FB5DB1 */) {}
+		private void UpdateFocusedPanel(BaseRuntimePanel runtimePanel) {} // 0x0000000189E6D7FC-0x0000000189E6D85C
+		private static EventBase MakeTouchEvent(Touch touch, EventModifiers modifiers) => default; // 0x0000000189E6CA1C-0x0000000189E6CB18
+		private bool ProcessTouchEvents() => default; // 0x0000000189E6CB18-0x0000000189E6CE78
+		private Vector2 GetRawMoveVector() => default; // 0x0000000189E6C920-0x0000000189E6CA1C
+		private bool ShouldSendMoveFromInput() => default; // 0x0000000189E6D680-0x0000000189E6D7FC
 		private static Vector2 GetLocalScreenPosition(UnityEngine.Event evt, out int? targetDisplay) {
 			targetDisplay = default;
 			return default;
-		} // 0x0000000189E78318-0x0000000189E7834C
+		} // 0x0000000189E6C900-0x0000000189E6C920
 	}
 
 	internal class DisposeHelper // TypeDefIndex: 43193
@@ -549,15 +706,15 @@ namespace UnityEngine.UIElements
 		private DropdownMenuEventInfo m_DropdownMenuEventInfo; // 0x18
 	
 		// Constructors
-		public DropdownMenu() {} // 0x0000000183D4E340-0x0000000183D4E350
+		public DropdownMenu() {} // 0x0000000189E6E744-0x0000000189E6E7BC
 	
 		// Methods
-		public List<DropdownMenuItem> MenuItems() => default; // 0x0000000189E6E0F8-0x0000000189E6E21C
-		public void AppendAction(string actionName, Action<DropdownMenuAction> action, Func<DropdownMenuAction, DropdownMenuAction.Status> actionStatusCallback, object userData = null) {} // 0x0000000189E6E2D8-0x0000000189E6E3DC
-		public void AppendAction(string actionName, Action<DropdownMenuAction> action, DropdownMenuAction.Status status = DropdownMenuAction.Status.None | DropdownMenuAction.Status.Normal /* Metadata: 0x01FB5DB9 */) {} // 0x0000000189E6E3DC-0x0000000189E6E4F4
-		public void AppendSeparator(string subMenuPath = null) {} // 0x0000000189E6E4F4-0x0000000189E6E744
-		public void InsertSeparator(string subMenuPath, int atIndex) {} // 0x0000000189E6E744-0x0000000189E6E7BC
-		public void PrepareForDisplay(EventBase e) {} // 0x000000018350B670-0x000000018350B680
+		public List<DropdownMenuItem> MenuItems() => default; // 0x0000000183D66B80-0x0000000183D66B90
+		public void AppendAction(string actionName, Action<DropdownMenuAction> action, Func<DropdownMenuAction, DropdownMenuAction.Status> actionStatusCallback, object userData = null) {} // 0x0000000189E6E21C-0x0000000189E6E2D8
+		public void AppendAction(string actionName, Action<DropdownMenuAction> action, DropdownMenuAction.Status status = DropdownMenuAction.Status.None | DropdownMenuAction.Status.Normal /* Metadata: 0x01FB5DB9 */) {} // 0x0000000189E6E0F8-0x0000000189E6E21C
+		public void AppendSeparator(string subMenuPath = null) {} // 0x0000000189E6E2D8-0x0000000189E6E3DC
+		public void InsertSeparator(string subMenuPath, int atIndex) {} // 0x0000000189E6E3DC-0x0000000189E6E4F4
+		public void PrepareForDisplay(EventBase e) {} // 0x0000000189E6E4F4-0x0000000189E6E744
 	}
 
 	internal static class DropdownUtility // TypeDefIndex: 43201
@@ -838,28 +995,28 @@ namespace UnityEngine.UIElements
 		private static UnityEngine.Event s_CurrentEvent; // 0x38
 	
 		// Properties
-		public Action onGUIHandler { get => default; set {} } // 0x0000000189E75AE8-0x0000000189E75B90 0x0000000183D88600-0x0000000183D88610
-		internal ObjectGUIState guiState { get => default; } // 0x0000000183D88630-0x0000000183D88640 
-		internal Rect lastWorldClip { get; set; } // 0x0000000183D885E0-0x0000000183D885F0 0x0000000189E75A44-0x0000000189E75AC4
-		public bool cullingEnabled { get => default; } // 0x0000000189E75BC0-0x0000000189E75BF0 
-		private GUILayoutUtility.LayoutCache cache { get => default; } // 0x0000000189E75B90-0x0000000189E75BC0 
-		private float layoutMeasuredWidth { get => default; } // 0x0000000183D885D0-0x0000000183D885E0 
-		private float layoutMeasuredHeight { get => default; } // 0x0000000183D88620-0x0000000183D88630 
-		public ContextType contextType { get; set; } // 0x0000000183D885F0-0x0000000183D88600 0x0000000189E75AC4-0x0000000189E75AE8
-		internal bool focusOnlyIfHasFocusableControls { get; } // 0x0000000189E75478-0x0000000189E75854 
-		public override bool canGrabFocus { get => default; } // 0x0000000189E75A38-0x0000000189E75A44 
+		public Action onGUIHandler { get => default; set {} } // 0x0000000183D88610-0x0000000183D88620 0x0000000189E75BF0-0x0000000189E75C50
+		internal ObjectGUIState guiState { get => default; } // 0x0000000189E75AE8-0x0000000189E75B90 
+		internal Rect lastWorldClip { get; set; } // 0x0000000183D88600-0x0000000183D88610 0x0000000183D88630-0x0000000183D88640
+		public bool cullingEnabled { get => default; } // 0x0000000183D885E0-0x0000000183D885F0 
+		private GUILayoutUtility.LayoutCache cache { get => default; } // 0x0000000189E75A44-0x0000000189E75AC4 
+		private float layoutMeasuredWidth { get => default; } // 0x0000000189E75BC0-0x0000000189E75BF0 
+		private float layoutMeasuredHeight { get => default; } // 0x0000000189E75B90-0x0000000189E75BC0 
+		public ContextType contextType { get; set; } // 0x0000000183D885D0-0x0000000183D885E0 0x0000000183D88620-0x0000000183D88630
+		internal bool focusOnlyIfHasFocusableControls { get; } // 0x0000000183D885F0-0x0000000183D88600 
+		public override bool canGrabFocus { get => default; } // 0x0000000189E75AC4-0x0000000189E75AE8 
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<IMGUIContainer, UxmlTraits> // TypeDefIndex: 43218
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000183D88610-0x0000000183D88620
+			public UxmlFactory() {} // 0x0000000189E783EC-0x0000000189E78428
 		}
 	
 		public class UxmlTraits : VisualElement.UxmlTraits // TypeDefIndex: 43219
 		{
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189E75BF0-0x0000000189E75C50
+			public UxmlTraits() {} // 0x0000000189E78590-0x0000000189E7A5E4
 		}
 	
 		private struct GUIGlobals // TypeDefIndex: 43220
@@ -875,38 +1032,38 @@ namespace UnityEngine.UIElements
 		}
 	
 		// Constructors
-		static IMGUIContainer() {} // 0x0000000189E75854-0x0000000189E75A38
-		public IMGUIContainer() {} // 0x0000000189E74BE4-0x0000000189E74CFC
-		public IMGUIContainer(Action onGUIHandler) {} // 0x0000000189E74E3C-0x0000000189E74F3C
+		static IMGUIContainer() {} // 0x0000000189E75478-0x0000000189E75854
+		public IMGUIContainer() {} // 0x0000000189E75A38-0x0000000189E75A44
+		public IMGUIContainer(Action onGUIHandler) {} // 0x0000000189E75854-0x0000000189E75A38
 	
 		// Methods
-		private void OnGenerateVisualContent(MeshGenerationContext mgc) {} // 0x0000000189E74CFC-0x0000000189E74E3C
-		private void SaveGlobals() {} // 0x0000000189E72F5C-0x0000000189E73EBC
-		private void RestoreGlobals() {} // 0x0000000189E74BD0-0x0000000189E74BE4
-		private void DoOnGUI(UnityEngine.Event evt, Matrix4x4 parentTransform, Rect clippingRect, bool isComputingLayout, Rect layoutSize, Action onGUIHandler, bool canAffectFocus = true /* Metadata: 0x01FB5DC3 */) {} // 0x0000000189E74328-0x0000000189E743A8
-		public void MarkDirtyLayout() {} // 0x0000000189E729F0-0x0000000189E72CD0
-		public override void HandleEvent(EventBase evt) {} // 0x0000000189E75014-0x0000000189E752A4
-		private void DoIMGUIRepaint() {} // 0x0000000189E74F3C-0x0000000189E75014
-		internal bool SendEventToIMGUI(EventBase evt, bool canAffectFocus = true /* Metadata: 0x01FB5DC4 */, bool verifyBounds = true /* Metadata: 0x01FB5DC5 */) => default; // 0x0000000189E753E8-0x0000000189E75478
-		private bool SendEventToIMGUIRaw(EventBase evt, bool canAffectFocus, bool verifyBounds) => default; // 0x0000000189E747CC-0x0000000189E74864
-		private bool VerifyBounds(EventBase evt) => default; // 0x0000000189E74A3C-0x0000000189E74BD0
-		private bool IsContainerCapturingTheMouse() => default; // 0x0000000189E7492C-0x0000000189E74A3C
-		private bool IsLocalEvent(EventBase evt) => default; // 0x0000000189E74864-0x0000000189E7492C
-		private bool IsEventInsideLocalWindow(EventBase evt) => default; // 0x0000000189E74490-0x0000000189E744B4
-		private static bool IsDockAreaMouseUp(EventBase evt) => default; // 0x0000000189E743A8-0x0000000189E74490
-		private bool HandleIMGUIEvent(UnityEngine.Event e, bool canAffectFocus) => default; // 0x0000000189E744B4-0x0000000189E747CC
-		internal bool HandleIMGUIEvent(UnityEngine.Event e, Action onGUIHandler, bool canAffectFocus) => default; // 0x0000000189E73EBC-0x0000000189E74120
-		private bool HandleIMGUIEvent(UnityEngine.Event e, Matrix4x4 worldTransform, Rect clippingRect, Action onGUIHandler, bool canAffectFocus) => default; // 0x0000000189E752A4-0x0000000189E753D8
-		protected override void ExecuteDefaultAction(EventBase evt) {} // 0x0000000189E72CD0-0x0000000189E72F5C
-		private void SetFoldoutDepthClass() {} // 0x0000000189E74120-0x0000000189E74198
-		protected internal override Vector2 DoMeasure(float desiredWidth, MeasureMode widthMode, float desiredHeight, MeasureMode heightMode) => default; // 0x0000000189E74198-0x0000000189E74328
-		private Rect GetCurrentClipRect() => default; // 0x0000000189E72980-0x0000000189E729D0
+		private void OnGenerateVisualContent(MeshGenerationContext mgc) {} // 0x0000000189E74BE4-0x0000000189E74CFC
+		private void SaveGlobals() {} // 0x0000000189E74E3C-0x0000000189E74F3C
+		private void RestoreGlobals() {} // 0x0000000189E74CFC-0x0000000189E74E3C
+		private void DoOnGUI(UnityEngine.Event evt, Matrix4x4 parentTransform, Rect clippingRect, bool isComputingLayout, Rect layoutSize, Action onGUIHandler, bool canAffectFocus = true /* Metadata: 0x01FB5DC3 */) {} // 0x0000000189E72F5C-0x0000000189E73EBC
+		public void MarkDirtyLayout() {} // 0x0000000189E74BD0-0x0000000189E74BE4
+		public override void HandleEvent(EventBase evt) {} // 0x0000000189E74328-0x0000000189E743A8
+		private void DoIMGUIRepaint() {} // 0x0000000189E729F0-0x0000000189E72CD0
+		internal bool SendEventToIMGUI(EventBase evt, bool canAffectFocus = true /* Metadata: 0x01FB5DC4 */, bool verifyBounds = true /* Metadata: 0x01FB5DC5 */) => default; // 0x0000000189E75014-0x0000000189E752A4
+		private bool SendEventToIMGUIRaw(EventBase evt, bool canAffectFocus, bool verifyBounds) => default; // 0x0000000189E74F3C-0x0000000189E75014
+		private bool VerifyBounds(EventBase evt) => default; // 0x0000000189E753E8-0x0000000189E75478
+		private bool IsContainerCapturingTheMouse() => default; // 0x0000000189E747CC-0x0000000189E74864
+		private bool IsLocalEvent(EventBase evt) => default; // 0x0000000189E74A3C-0x0000000189E74BD0
+		private bool IsEventInsideLocalWindow(EventBase evt) => default; // 0x0000000189E7492C-0x0000000189E74A3C
+		private static bool IsDockAreaMouseUp(EventBase evt) => default; // 0x0000000189E74864-0x0000000189E7492C
+		private bool HandleIMGUIEvent(UnityEngine.Event e, bool canAffectFocus) => default; // 0x0000000189E74490-0x0000000189E744B4
+		internal bool HandleIMGUIEvent(UnityEngine.Event e, Action onGUIHandler, bool canAffectFocus) => default; // 0x0000000189E743A8-0x0000000189E74490
+		private bool HandleIMGUIEvent(UnityEngine.Event e, Matrix4x4 worldTransform, Rect clippingRect, Action onGUIHandler, bool canAffectFocus) => default; // 0x0000000189E744B4-0x0000000189E747CC
+		protected override void ExecuteDefaultAction(EventBase evt) {} // 0x0000000189E73EBC-0x0000000189E74120
+		private void SetFoldoutDepthClass() {} // 0x0000000189E752A4-0x0000000189E753D8
+		protected internal override Vector2 DoMeasure(float desiredWidth, MeasureMode widthMode, float desiredHeight, MeasureMode heightMode) => default; // 0x0000000189E72CD0-0x0000000189E72F5C
+		private Rect GetCurrentClipRect() => default; // 0x0000000189E74120-0x0000000189E74198
 		private static void GetCurrentTransformAndClip(IMGUIContainer container, UnityEngine.Event evt, out Matrix4x4 transform, out Rect clipRect) {
 			transform = default;
 			clipRect = default;
-		} // 0x0000000189E729D0-0x0000000189E729F0
-		public void Dispose() {} // 0x0000000189E753D8-0x0000000189E753E8
-		protected virtual void Dispose(bool disposeManaged) {} // 0x0000000189E783EC-0x0000000189E78428
+		} // 0x0000000189E74198-0x0000000189E74328
+		public void Dispose() {} // 0x0000000189E72980-0x0000000189E729D0
+		protected virtual void Dispose(bool disposeManaged) {} // 0x0000000189E729D0-0x0000000189E729F0
 	}
 
 	internal class ImmediateModeException : Exception // TypeDefIndex: 43222
@@ -1320,35 +1477,35 @@ namespace UnityEngine.UIElements
 		private Func<Vector2, Vector2> m_ScreenToPanelSpace; // 0x1D0
 	
 		// Properties
-		public GameObject selectableGameObject { get; set; } // 0x0000000189E68678-0x0000000189E686F0 0x0000000189E68254-0x0000000189E682EC
-		public float sortingPriority { get; set; } // 0x0000000189E6845C-0x0000000189E684F4 0x0000000189E68140-0x0000000189E68254
-		internal override Shader standardWorldSpaceShader { get; } // 0x0000000183D5DDB0-0x0000000183D5DDC0 
-		internal bool drawToCameras { get; set; } // 0x0000000183D884E0-0x0000000183D884F0 0x0000000189E683A4-0x0000000189E6845C
-		internal int targetDisplay { get; set; } // 0x0000000189E682EC-0x0000000189E683A4 0x0000000189E67CD8-0x0000000189E67ED8
-		internal int screenRenderingWidth { get; } // 0x0000000183D57000-0x0000000183D57010 
-		internal int screenRenderingHeight { get; } // 0x0000000189E6856C-0x0000000189E685E4 
-		public Func<Vector2, Vector2> screenToPanelSpace { get; set; } // 0x0000000189E67F28-0x0000000189E68064 0x0000000189E678CC-0x0000000189E67B7C
+		public GameObject selectableGameObject { get; set; } // 0x0000000183D570A0-0x0000000183D570B0 0x0000000189E685E4-0x0000000189E68678
+		public float sortingPriority { get; set; } // 0x0000000183D58290-0x0000000183D582A0 0x0000000189E68678-0x0000000189E686F0
+		internal override Shader standardWorldSpaceShader { get; } // 0x0000000183D884D0-0x0000000183D884E0 
+		internal bool drawToCameras { get; set; } // 0x0000000183D884C0-0x0000000183D884D0 0x0000000189E684F4-0x0000000189E6856C
+		internal int targetDisplay { get; set; } // 0x0000000183D5DDB0-0x0000000183D5DDC0 0x0000000183D884E0-0x0000000183D884F0
+		internal int screenRenderingWidth { get; } // 0x0000000189E683A4-0x0000000189E6845C 
+		internal int screenRenderingHeight { get; } // 0x0000000189E682EC-0x0000000189E683A4 
+		public Func<Vector2, Vector2> screenToPanelSpace { get; set; } // 0x0000000183D57000-0x0000000183D57010 0x0000000189E6856C-0x0000000189E685E4
 	
 		// Events
 		public event Action destroyed;
 	
 		// Constructors
 		protected BaseRuntimePanel() {} // Dummy constructor
-		protected BaseRuntimePanel(ScriptableObject ownerObject, EventDispatcher dispatcher = null) {} // 0x0000000183D884C0-0x0000000183D884D0
-		static BaseRuntimePanel() {} // 0x0000000183D51810-0x0000000183D51820
+		protected BaseRuntimePanel(ScriptableObject ownerObject, EventDispatcher dispatcher = null) {} // 0x0000000189E68140-0x0000000189E68254
+		static BaseRuntimePanel() {} // 0x0000000189E68064-0x0000000189E68140
 	
 		// Methods
-		protected override void Dispose(bool disposing) {} // 0x0000000189E684F4-0x0000000189E6856C
-		public override void Repaint(UnityEngine.Event e) {} // 0x0000000189E67ED8-0x0000000189E67F28
-		internal Vector2 ScreenToPanel(Vector2 screen) => default; // 0x0000000189E67C44-0x0000000189E67CD8
+		protected override void Dispose(bool disposing) {} // 0x0000000189E67B7C-0x0000000189E67BC0
+		public override void Repaint(UnityEngine.Event e) {} // 0x0000000189E67CD8-0x0000000189E67ED8
+		internal Vector2 ScreenToPanel(Vector2 screen) => default; // 0x0000000189E67ED8-0x0000000189E67F28
 		internal bool ScreenToPanel(Vector2 screenPosition, Vector2 screenDelta, out Vector2 panelPosition, out Vector2 panelDelta, bool allowOutside = false /* Metadata: 0x01FB5E12 */) {
 			panelPosition = default;
 			panelDelta = default;
 			return default;
-		} // 0x0000000189E67BC0-0x0000000189E67C44
-		private void AssignPanelToComponents(BaseRuntimePanel panel) {} // 0x0000000189E68064-0x0000000189E68140
-		internal void PointerLeavesPanel(int pointerId, Vector2 position) {} // 0x0000000189E7E48C-0x0000000189E7E4F0
-		internal void PointerEntersPanel(int pointerId, Vector2 position) {} // 0x000000018350B670-0x000000018350B680
+		} // 0x0000000189E67F28-0x0000000189E68064
+		private void AssignPanelToComponents(BaseRuntimePanel panel) {} // 0x0000000189E678CC-0x0000000189E67B7C
+		internal void PointerLeavesPanel(int pointerId, Vector2 position) {} // 0x0000000189E67C44-0x0000000189E67CD8
+		internal void PointerEntersPanel(int pointerId, Vector2 position) {} // 0x0000000189E67BC0-0x0000000189E67C44
 	}
 
 	internal interface IRuntimePanelComponent // TypeDefIndex: 43253
@@ -1445,20 +1602,20 @@ namespace UnityEngine.UIElements
 		public static readonly Func<bool> ForeverCondition; // 0x08
 	
 		// Properties
-		public long startMs { get; set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000183D4ED70-0x0000000183D4ED80
-		public long delayMs { get; set; } // 0x0000000181003830-0x0000000181003840 0x0000000189E7D790-0x0000000189E7D7F0
-		public long intervalMs { get; set; } // 0x0000000189E7D5EC-0x0000000189E7D638 
-		public long endTimeMs { get; } // 0x000000018350B670-0x000000018350B680 
+		public long startMs { get; set; } // 0x0000000181041090-0x00000001810410A0 0x0000000183D4EC10-0x0000000183D4EC20
+		public long delayMs { get; set; } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000183D4ED30-0x0000000183D4ED40
+		public long intervalMs { get; set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000183D4ED70-0x0000000183D4ED80
+		public long endTimeMs { get; } // 0x0000000181003830-0x0000000181003840 
 	
 		// Constructors
-		public ScheduledItem() {} // 0x0000000189E7D638-0x0000000189E7D658
-		static ScheduledItem() {} // 0x000000018115F4C0-0x000000018115F530
+		public ScheduledItem() {} // 0x0000000189E7D790-0x0000000189E7D7F0
+		static ScheduledItem() {} // 0x0000000189E7D658-0x0000000189E7D790
 	
 		// Methods
-		protected void ResetStartTime() {} // 0x0000000189E7D658-0x0000000189E7D790
-		public abstract void PerformTimerUpdate(UnityEngine.UIElements.TimerState state); // 0x0000000189E7E428-0x0000000189E7E48C
+		protected void ResetStartTime() {} // 0x0000000189E7D5EC-0x0000000189E7D638
+		public abstract void PerformTimerUpdate(UnityEngine.UIElements.TimerState state);
 		internal virtual void OnItemUnscheduled() {} // 0x000000018350B670-0x000000018350B680
-		public virtual bool ShouldUnschedule() => default; // 0x000000018232EB60-0x000000018232EB70
+		public virtual bool ShouldUnschedule() => default; // 0x0000000189E7D638-0x0000000189E7D658
 	}
 
 	internal class TimerEventScheduler : IScheduler // TypeDefIndex: 43262
@@ -1705,136 +1862,136 @@ namespace UnityEngine.UIElements
 		private TypeData m_TypeData; // 0x3B8
 	
 		// Properties
-		internal bool hasRunningAnimations { get => default; } // 0x0000000189E878F0-0x0000000189E87940 
-		internal bool hasCompletedAnimations { get => default; } // 0x0000000189E867C0-0x0000000189E86A38 
-		int IStylePropertyAnimations.runningAnimationCount { get; set; } // 0x0000000189E86C6C-0x0000000189E86CE4 0x0000000189E88490-0x0000000189E88518
-		int IStylePropertyAnimations.completedAnimationCount { get; set; } // 0x0000000189E87F34-0x0000000189E87F84 0x0000000189E8810C-0x0000000189E88160
-		internal IStylePropertyAnimations styleAnimation { get => default; } // 0x00000001899BCDD8-0x00000001899BCE04 
-		internal bool isCompositeRoot { get => default; set {} } // 0x0000000189E86BA4-0x0000000189E86C6C 0x0000000183D88AA0-0x0000000183D88AB0
-		internal bool isHierarchyDisplayed { get => default; set {} } // 0x0000000183D88B10-0x0000000183D88B20 0x0000000183D86EB0-0x0000000183D86EC0
-		public string viewDataKey { get => default; set {} } // 0x0000000189E88BC8-0x0000000189E88C10 0x0000000189E87A6C-0x0000000189E87B08
-		internal bool enableViewDataPersistence { get => default; private set {} } // 0x0000000189E87C98-0x0000000189E87CBC 0x0000000189E883D0-0x0000000189E883F4
-		public object userData { get => default; set {} } // 0x0000000183D55DF0-0x0000000183D55E00 0x00000001858B3E0C-0x00000001858B3E20
-		public override bool canGrabFocus { get => default; } // 0x0000000183D88A40-0x0000000183D88A50 
-		public override FocusController focusController { get => default; } // 0x0000000189E87DA0-0x0000000189E87DAC 
-		public UsageHints usageHints { get => default; set {} } // 0x0000000189E8818C-0x0000000189E88198 0x0000000189E88D20-0x0000000189E88D50
-		internal RenderHints renderHints { get => default; set {} } // 0x0000000189E80140-0x0000000189E8017C 0x0000000189E87594-0x0000000189E87884
-		public ITransform transform { get => default; } // 0x0000000189E81C10-0x0000000189E81C3C 
-		Vector3 ITransform.position { get => default; set {} } // 0x0000000189E8477C-0x0000000189E84844 0x0000000189E81294-0x0000000189E81310
-		Vector3 ITransform.scale { get => default; } // 0x0000000189E83C68-0x0000000189E8453C 
-		internal bool isLayoutManual { get => default; private set {} } // 0x0000000189E87174-0x0000000189E872A8 0x0000000189E81C3C-0x0000000189E81E50
-		internal float scaledPixelsPerPoint { get => default; } // 0x0000000189E83710-0x0000000189E8372C 
-		public Rect layout { get => default; internal set {} } // 0x0000000189E8372C-0x0000000189E83744 0x0000000189E81EB4-0x0000000189E81ED4
-		public Rect contentRect { get => default; } // 0x0000000189E838CC-0x0000000189E83BA4 
-		protected Rect paddingRect { get => default; } // 0x0000000189E87DFC-0x0000000189E87E64 
-		internal bool isBoundingBoxDirty { get => default; set {} } // 0x0000000189E87C68-0x0000000189E87C78 0x0000000183D88A60-0x0000000183D88A70
-		internal bool isWorldBoundingBoxDirty { get => default; set {} } // 0x0000000183D88AF0-0x0000000183D88B00 0x0000000189E83BA4-0x0000000189E83BBC
-		internal Rect boundingBox { get => default; } // 0x0000000189E826F0-0x0000000189E827A8 
-		internal Rect worldBoundingBox { get => default; } // 0x0000000189E88470-0x0000000189E88490 
-		private Rect boundingBoxInParentSpace { get => default; } // 0x0000000189E88F90-0x0000000189E88FFC 
-		public Rect worldBound { get => default; } // 0x00000001858B3ED4-0x00000001858B3EE8 
-		public Rect localBound { get => default; } // 0x0000000189E81FDC-0x0000000189E8211C 
-		internal Rect rect { get => default; } // 0x0000000189E814AC-0x0000000189E8153C 
-		internal bool isWorldTransformDirty { get => default; set {} } // 0x0000000189E81438-0x0000000189E814AC 
-		internal bool isWorldTransformInverseDirty { get => default; set {} } // 0x0000000189E8239C-0x0000000189E82588 0x0000000189E836A4-0x0000000189E83710
-		public Matrix4x4 worldTransform { get => default; } // 0x0000000189E8213C-0x0000000189E821C0 
-		internal ref Matrix4x4 worldTransformRef { get => default; } // 0x0000000189E82328-0x0000000189E8234C 
-		internal ref Matrix4x4 worldTransformInverse { get => default; } // 0x000000018350B670-0x000000018350B680 
-		internal bool isWorldClipDirty { get => default; set {} } // 0x0000000189E88CBC-0x0000000189E88D20 0x0000000189E7F090-0x0000000189E7F124
-		internal Rect worldClip { get => default; } // 0x0000000189E830EC-0x0000000189E83110 
-		internal Rect worldClipMinusGroup { get => default; } // 0x0000000183D88750-0x0000000183D88770 
-		internal bool worldClipIsInfinite { get => default; } // 0x0000000189E821E0-0x0000000189E82318 
-		internal PseudoStates pseudoStates { get => default; set {} } // 0x0000000189E7EE58-0x0000000189E7EFCC 0x0000000189E82F8C-0x0000000189E83080
-		internal int containedPointerIds { get; private set; } // 0x0000000189E80B14-0x0000000189E80B38 0x0000000189E8036C-0x0000000189E80408
-		public PickingMode pickingMode { get; set; } // 0x0000000189E84714-0x0000000189E8477C 0x0000000189E81E50-0x0000000189E81EB4
-		public string name { get => default; set {} } // 0x0000000189E8527C-0x0000000189E8537C 0x0000000189E8017C-0x0000000189E802D4
-		internal List<string> classList { get => default; } // 0x0000000189E8453C-0x0000000189E84714 
-		internal string fullTypeName { get => default; } // 0x0000000189E86A38-0x0000000189E86BA4 
-		internal string typeName { get => default; } // 0x0000000183D88AD0-0x0000000183D88AE0 
-		internal YogaNode yogaNode { get; private set; } // 0x0000000183D88A50-0x0000000183D88A60 0x0000000189E813D0-0x0000000189E81438
-		internal ref ComputedStyle computedStyle { get => default; } // 0x0000000189E82E50-0x0000000189E82F28 
-		internal bool hasInlineStyle { get => default; } // 0x0000000189E866E0-0x0000000189E86754 
-		internal bool styleInitialized { get => default; set {} } // 0x0000000189E86754-0x0000000189E867C0 0x0000000189E82F28-0x0000000189E82F8C
-		private bool isParentEnabledInHierarchy { get => default; } // 0x0000000183D88A90-0x0000000183D88AA0 
-		public bool enabledInHierarchy { get => default; } // 0x0000000183D4F830-0x0000000183D4F840 
-		public bool enabledSelf { get; private set; } // 0x000000018544EF54-0x000000018544EF68 0x0000000183D88A80-0x0000000183D88A90
-		public bool visible { get => default; set {} } // 0x0000000189E7EFCC-0x0000000189E7F090 0x0000000189E81F44-0x0000000189E81FDC
-		public Action<MeshGenerationContext> generateVisualContent { get; set; } // 0x0000000189E80B08-0x0000000189E80B14 0x0000000189E87884-0x0000000189E878F0
-		internal bool requireMeasureFunction { get => default; set {} } // 0x0000000189E80928-0x0000000189E80994
-		internal RenderTargetMode subRenderTargetMode { get => default; } // 0x0000000183D84330-0x0000000183D843C0 
-		internal Material defaultMaterial { get => default; } // 0x0000000183D86CE0-0x0000000183D86CF0 
-		public IExperimentalFeatures experimental { get => default; } // 0x0000000189E832C8-0x0000000189E83364 
-		ITransitionAnimations IExperimentalFeatures.animation { get => default; } // 0x0000000189E88218-0x0000000189E88294 
-		public Hierarchy hierarchy { get; private set; } // 0x0000000189E88D50-0x0000000189E88E50 0x0000000189E88294-0x0000000189E883D0
-		internal bool isRootVisualContainer { get; set; } // 0x000000018339AE90-0x000000018339AEA0 0x0000000189E85468-0x0000000189E85494
-		internal bool disableClipping { get => default; set {} } // 0x0000000189E85494-0x0000000189E854C0 0x0000000189E854C0-0x0000000189E854E4
-		public VisualElement parent { get => default; } // 0x0000000189E85508-0x0000000189E8552C 
-		internal BaseVisualElementPanel elementPanel { get; private set; } // 0x0000000189E8552C-0x0000000189E85558 0x0000000189E85558-0x0000000189E8557C
-		public IPanel panel { get => default; } // 0x0000000189E8557C-0x0000000189E855A8 
-		public virtual VisualElement contentContainer { get => default; } // 0x0000000189E855A8-0x0000000189E855CC 
-		internal VisualTreeAsset visualTreeAssetSource { set {} } // 0x0000000189E855CC-0x0000000189E855F8
-		public VisualElement this[int key] { get => default; } // 0x0000000189E85688-0x0000000189E856B4 
-		public int childCount { get => default; } // 0x0000000189E856B4-0x0000000189E856C4 
-		private Vector3 positionWithLayout { get => default; } // 0x0000000189E8591C-0x0000000189E85940 
-		internal bool hasDefaultRotationAndScale { get => default; } // 0x0000000189E85970-0x0000000189E859A0 
-		public IVisualElementScheduler schedule { get => default; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
-		public IStyle style { get => default; } // 0x0000000189E7E798-0x0000000189E7ECBC 
-		public ICustomStyle customStyle { get => default; } // 0x0000000189E7C6C8-0x0000000189E7C6E8 
-		public VisualElementStyleSheetSet styleSheets { get => default; } // 0x00000001842715A0-0x00000001842715A8 
-		public string tooltip { get => default; set {} } // 0x0000000189E7C510-0x0000000189E7C59C 0x0000000189E7BE40-0x0000000189E7BF2C
-		private TypeData typeData { get => default; } // 0x0000000189E7BD3C-0x0000000189E7BE40 
-		public IResolvedStyle resolvedStyle { get => default; } // 0x0000000189E7C680-0x0000000189E7C6C8 
-		UnityEngine.Color IResolvedStyle.backgroundColor { get => default; } // 0x0000000189E7C620-0x0000000189E7C680 
-		UnityEngine.Color IResolvedStyle.borderBottomColor { get => default; } // 0x0000000189E7B998-0x0000000189E7B9F8 
-		float IResolvedStyle.borderBottomLeftRadius { get => default; } // 0x0000000189E7B920-0x0000000189E7B92C 
-		float IResolvedStyle.borderBottomRightRadius { get => default; } // 0x0000000189E7B524-0x0000000189E7B544 
-		float IResolvedStyle.borderBottomWidth { get => default; } // 0x0000000189E7C59C-0x0000000189E7C620 
-		UnityEngine.Color IResolvedStyle.borderLeftColor { get => default; } // 0x0000000189E7BF2C-0x0000000189E7C034 
-		float IResolvedStyle.borderLeftWidth { get => default; } // 0x0000000189E7C35C-0x0000000189E7C3D8 
-		UnityEngine.Color IResolvedStyle.borderRightColor { get => default; } // 0x0000000189E7C034-0x0000000189E7C10C 
-		float IResolvedStyle.borderRightWidth { get => default; } // 0x0000000189D7F378-0x0000000189D7F380 
-		UnityEngine.Color IResolvedStyle.borderTopColor { get => default; } // 0x0000000189E7B92C-0x0000000189E7B998 
-		float IResolvedStyle.borderTopLeftRadius { get => default; } // 0x000000018711E2B8-0x000000018711E2DC 
-		float IResolvedStyle.borderTopRightRadius { get => default; } // 0x000000018232CE30-0x000000018232CE40 
-		float IResolvedStyle.borderTopWidth { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
-		float IResolvedStyle.bottom { get => default; } // 0x000000018388FF30-0x000000018388FF40 
-		UnityEngine.Color IResolvedStyle.color { get => default; } // 0x0000000189E7A948-0x0000000189E7A964 
-		DisplayStyle IResolvedStyle.display { get => default; } // 0x0000000189E7A8A8-0x0000000189E7A948 
-		FlexDirection IResolvedStyle.flexDirection { get => default; } // 0x0000000183D886F0-0x0000000183D88700 
-		float IResolvedStyle.flexGrow { get => default; } // 0x0000000189E7A620-0x0000000189E7A6BC 
-		float IResolvedStyle.flexShrink { get => default; } // 0x0000000189E7A6F4-0x0000000189E7A724 
-		float IResolvedStyle.height { get => default; } // 0x0000000189E7A884-0x0000000189E7A8A8 
-		float IResolvedStyle.left { get => default; } // 0x0000000189E7A860-0x0000000189E7A884 
-		float IResolvedStyle.marginBottom { get => default; } // 0x0000000189E7A6BC-0x0000000189E7A6F4 
-		float IResolvedStyle.marginLeft { get => default; } // 0x0000000189E7A724-0x0000000189E7A7C8 
-		float IResolvedStyle.marginRight { get => default; } // 0x0000000189E7A7C8-0x0000000189E7A860 
-		float IResolvedStyle.marginTop { get => default; } // 0x0000000189E7A5E4-0x0000000189E7A620 
-		StyleFloat IResolvedStyle.minHeight { get => default; }
-		StyleFloat IResolvedStyle.minWidth { get => default; } // 0x0000000189E7E32C-0x0000000189E7E384 
-		float IResolvedStyle.opacity { get => default; } // 0x0000000189E7E2F4-0x0000000189E7E32C 
-		float IResolvedStyle.paddingBottom { get => default; } // 0x0000000189E7D818-0x0000000189E7D870 
-		float IResolvedStyle.paddingLeft { get => default; } // 0x0000000189E7D7F0-0x0000000189E7D818 
-		float IResolvedStyle.paddingRight { get => default; } // 0x0000000185754818-0x0000000185754838 
-		float IResolvedStyle.paddingTop { get => default; } // 0x0000000189E7B038-0x0000000189E7B0E0 
-		float IResolvedStyle.right { get => default; } // 0x0000000189E7ADC0-0x0000000189E7AE74 
-		Scale IResolvedStyle.scale { get => default; } // 0x0000000189E7AC7C-0x0000000189E7ADC0 
-		float IResolvedStyle.top { get => default; } // 0x0000000189E7AE74-0x0000000189E7AF90 
-		Vector3 IResolvedStyle.transformOrigin { get => default; } // 0x0000000189E7B1FC-0x0000000189E7B31C 
-		Vector3 IResolvedStyle.translate { get => default; } // 0x0000000189E7B0E0-0x0000000189E7B1FC 
-		UnityEngine.Color IResolvedStyle.unityBackgroundImageTintColor { get => default; } // 0x0000000189E7B31C-0x0000000189E7B3E8 
-		int IResolvedStyle.unitySliceLeft { get => default; } // 0x0000000189E7AF90-0x0000000189E7B038 
-		int IResolvedStyle.unitySliceRight { get => default; } // 0x0000000189E7ABBC-0x0000000189E7AC7C 
-		UnityEngine.Color IResolvedStyle.unityTextOutlineColor { get => default; } // 0x000000018350B670-0x000000018350B680 
-		float IResolvedStyle.unityTextOutlineWidth { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
-		Visibility IResolvedStyle.visibility { get => default; } // 0x0000000189ED0EE0-0x0000000189ED0F60 
-		WhiteSpace IResolvedStyle.whiteSpace { get => default; } // 0x0000000189ED0F60-0x0000000189ED0FA8 
-		float IResolvedStyle.width { get => default; } // 0x0000000189ED0FA8-0x0000000189ED1050 
+		internal bool hasRunningAnimations { get => default; } // 0x0000000189E87DAC-0x0000000189E87DCC 
+		internal bool hasCompletedAnimations { get => default; } // 0x0000000189E87CBC-0x0000000189E87CDC 
+		int IStylePropertyAnimations.runningAnimationCount { get; set; } // 0x0000000183D4ED20-0x0000000183D4ED30 0x0000000183D4EE10-0x0000000183D4EE20
+		int IStylePropertyAnimations.completedAnimationCount { get; set; } // 0x0000000183D4EE00-0x0000000183D4EE10 0x0000000183D4EE40-0x0000000183D4EE50
+		internal IStylePropertyAnimations styleAnimation { get => default; } // 0x000000018339AE90-0x000000018339AEA0 
+		internal bool isCompositeRoot { get => default; set {} } // 0x0000000189E87DD8-0x0000000189E87DE4 0x0000000189E88788-0x0000000189E887B4
+		internal bool isHierarchyDisplayed { get => default; set {} } // 0x0000000189E87DE4-0x0000000189E87DF0 0x0000000189E887B4-0x0000000189E887E4
+		public string viewDataKey { get => default; set {} } // 0x0000000183D87D70-0x0000000183D87D80 0x0000000189E88F3C-0x0000000189E88F90
+		internal bool enableViewDataPersistence { get => default; private set {} } // 0x0000000189E87C5C-0x0000000189E87C68 0x0000000189E8872C-0x0000000189E8875C
+		public object userData { get => default; set {} } // 0x0000000189E8840C-0x0000000189E88470 0x0000000189E88ED8-0x0000000189E88F3C
+		public override bool canGrabFocus { get => default; } // 0x0000000189E8798C-0x0000000189E87A0C 
+		public override FocusController focusController { get => default; } // 0x0000000189E87C78-0x0000000189E87C98 
+		public UsageHints usageHints { get => default; set {} } // 0x0000000189E883F4-0x0000000189E8840C 0x0000000189E88E50-0x0000000189E88ED8
+		internal RenderHints renderHints { get => default; set {} } // 0x0000000183D88AC0-0x0000000183D88AD0 0x0000000189E88C7C-0x0000000189E88CBC
+		public ITransform transform { get => default; } // 0x0000000183D86CE0-0x0000000183D86CF0 
+		Vector3 ITransform.position { get => default; set {} } // 0x0000000189E8643C-0x0000000189E8647C 0x0000000189E864BC-0x0000000189E86580
+		Vector3 ITransform.scale { get => default; } // 0x0000000189E8647C-0x0000000189E864BC 
+		internal bool isLayoutManual { get => default; private set {} } // 0x0000000189E87DF0-0x0000000189E87DFC 0x0000000189E887E4-0x0000000189E88810
+		internal float scaledPixelsPerPoint { get => default; } // 0x0000000189E8816C-0x0000000189E8818C 
+		public Rect layout { get => default; internal set {} } // 0x0000000189E87E84-0x0000000189E87F34 0x0000000189E88868-0x0000000189E88BC8
+		public Rect contentRect { get => default; } // 0x0000000189E87B08-0x0000000189E87BD0 
+		protected Rect paddingRect { get => default; } // 0x0000000189E87F84-0x0000000189E8804C 
+		internal bool isBoundingBoxDirty { get => default; set {} } // 0x0000000189E87DCC-0x0000000189E87DD8 0x0000000189E8875C-0x0000000189E88788
+		internal bool isWorldBoundingBoxDirty { get => default; set {} } // 0x0000000189E87E64-0x0000000189E87E70 0x0000000189E88810-0x0000000189E8883C
+		internal Rect boundingBox { get => default; } // 0x0000000189E87940-0x0000000189E8798C 
+		internal Rect worldBoundingBox { get => default; } // 0x0000000189E88518-0x0000000189E8856C 
+		private Rect boundingBoxInParentSpace { get => default; } // 0x0000000189E878F0-0x0000000189E87940 
+		public Rect worldBound { get => default; } // 0x0000000189E88490-0x0000000189E88518 
+		public Rect localBound { get => default; } // 0x0000000189E87F34-0x0000000189E87F84 
+		internal Rect rect { get => default; } // 0x0000000189E8810C-0x0000000189E88160 
+		internal bool isWorldTransformDirty { get => default; set {} } // 0x0000000189187244-0x000000018918724C 0x00000001899BCDD8-0x00000001899BCE04
+		internal bool isWorldTransformInverseDirty { get => default; set {} } // 0x0000000189E87E7C-0x0000000189E87E84 0x00000001899BCE04-0x00000001899BCE30
+		public Matrix4x4 worldTransform { get => default; } // 0x0000000189E88698-0x0000000189E886FC 
+		internal ref Matrix4x4 worldTransformRef { get => default; } // 0x0000000189E8866C-0x0000000189E88698 
+		internal ref Matrix4x4 worldTransformInverse { get => default; } // 0x0000000189E88640-0x0000000189E8866C 
+		internal bool isWorldClipDirty { get => default; set {} } // 0x0000000189E87E70-0x0000000189E87E7C 0x0000000189E8883C-0x0000000189E88868
+		internal Rect worldClip { get => default; } // 0x0000000189E885F4-0x0000000189E88640 
+		internal Rect worldClipMinusGroup { get => default; } // 0x0000000189E885A8-0x0000000189E885F4 
+		internal bool worldClipIsInfinite { get => default; } // 0x0000000189E8856C-0x0000000189E885A8 
+		internal PseudoStates pseudoStates { get => default; set {} } // 0x0000000183D88AB0-0x0000000183D88AC0 0x0000000189E88C10-0x0000000189E88C7C
+		internal int containedPointerIds { get; private set; } // 0x0000000183D6CBB0-0x0000000183D6CBC0 0x0000000183D88AE0-0x0000000183D88AF0
+		public PickingMode pickingMode { get; set; } // 0x0000000183D88AA0-0x0000000183D88AB0 0x0000000183D88B10-0x0000000183D88B20
+		public string name { get => default; set {} } // 0x0000000183D86EB0-0x0000000183D86EC0 0x0000000189E88BC8-0x0000000189E88C10
+		internal List<string> classList { get => default; } // 0x0000000189E87A6C-0x0000000189E87B08 
+		internal string fullTypeName { get => default; } // 0x0000000189E87C98-0x0000000189E87CBC 
+		internal string typeName { get => default; } // 0x0000000189E883D0-0x0000000189E883F4 
+		internal YogaNode yogaNode { get; private set; } // 0x0000000183D55DF0-0x0000000183D55E00 0x00000001858B3E0C-0x00000001858B3E20
+		internal ref ComputedStyle computedStyle { get => default; } // 0x0000000183D88A40-0x0000000183D88A50 
+		internal bool hasInlineStyle { get => default; } // 0x0000000189E87DA0-0x0000000189E87DAC 
+		internal bool styleInitialized { get => default; set {} } // 0x0000000189E8818C-0x0000000189E88198 0x0000000189E88D20-0x0000000189E88D50
+		private bool isParentEnabledInHierarchy { get => default; } // 0x0000000189E87DFC-0x0000000189E87E64 
+		public bool enabledInHierarchy { get => default; } // 0x0000000189E87C68-0x0000000189E87C78 
+		public bool enabledSelf { get; private set; } // 0x0000000183D88A60-0x0000000183D88A70 0x0000000183D88AF0-0x0000000183D88B00
+		public bool visible { get => default; set {} } // 0x0000000189E88470-0x0000000189E88490 0x0000000189E88F90-0x0000000189E88FFC
+		public Action<MeshGenerationContext> generateVisualContent { get; set; } // 0x0000000183D55E30-0x0000000183D55E40 0x00000001858B3ED4-0x00000001858B3EE8
+		internal bool requireMeasureFunction { get => default; set {} } // 0x0000000189E88160-0x0000000189E8816C 0x0000000189E88CBC-0x0000000189E88D20
+		internal RenderTargetMode subRenderTargetMode { get => default; } // 0x0000000183D88AD0-0x0000000183D88AE0 
+		internal Material defaultMaterial { get => default; } // 0x0000000183D88A50-0x0000000183D88A60 
+		public IExperimentalFeatures experimental { get => default; } // 0x0000000183D86CE0-0x0000000183D86CF0 
+		ITransitionAnimations IExperimentalFeatures.animation { get => default; } // 0x0000000183D86CE0-0x0000000183D86CF0 
+		public Hierarchy hierarchy { get; private set; } // 0x0000000183D55E50-0x0000000183D55E60 0x00000001858B41E0-0x00000001858B41F4
+		internal bool isRootVisualContainer { get; set; } // 0x0000000183D88A70-0x0000000183D88A80 0x0000000183D88B00-0x0000000183D88B10
+		internal bool disableClipping { get => default; set {} } // 0x0000000189E87C50-0x0000000189E87C5C 0x0000000189E886FC-0x0000000189E8872C
+		public VisualElement parent { get => default; } // 0x0000000183D88A90-0x0000000183D88AA0 
+		internal BaseVisualElementPanel elementPanel { get; private set; } // 0x0000000183D4F830-0x0000000183D4F840 0x000000018544EF54-0x000000018544EF68
+		public IPanel panel { get => default; } // 0x0000000183D88A80-0x0000000183D88A90 
+		public virtual VisualElement contentContainer { get => default; } // 0x0000000183D86CE0-0x0000000183D86CF0 
+		internal VisualTreeAsset visualTreeAssetSource { set {} } // 0x00000001858B4168-0x00000001858B417C
+		public VisualElement this[int key] { get => default; } // 0x0000000189E87884-0x0000000189E878F0 
+		public int childCount { get => default; } // 0x0000000189E87A0C-0x0000000189E87A6C 
+		private Vector3 positionWithLayout { get => default; } // 0x0000000189E8804C-0x0000000189E8810C 
+		internal bool hasDefaultRotationAndScale { get => default; } // 0x0000000189E87CDC-0x0000000189E87DA0 
+		public IVisualElementScheduler schedule { get => default; } // 0x0000000183D86CE0-0x0000000183D86CF0 
+		public IStyle style { get => default; } // 0x0000000189E88198-0x0000000189E88218 
+		public ICustomStyle customStyle { get => default; } // 0x0000000189E87BD0-0x0000000189E87C50 
+		public VisualElementStyleSheetSet styleSheets { get => default; } // 0x0000000182712100-0x0000000182712120 
+		public string tooltip { get => default; set {} } // 0x0000000189E88218-0x0000000189E88294 0x0000000189E88D50-0x0000000189E88E50
+		private TypeData typeData { get => default; } // 0x0000000189E88294-0x0000000189E883D0 
+		public IResolvedStyle resolvedStyle { get => default; } // 0x000000018339AE90-0x000000018339AEA0 
+		UnityEngine.Color IResolvedStyle.backgroundColor { get => default; } // 0x0000000189E85468-0x0000000189E85494 
+		UnityEngine.Color IResolvedStyle.borderBottomColor { get => default; } // 0x0000000189E85494-0x0000000189E854C0 
+		float IResolvedStyle.borderBottomLeftRadius { get => default; } // 0x0000000189E854C0-0x0000000189E854E4 
+		float IResolvedStyle.borderBottomRightRadius { get => default; } // 0x0000000189E854E4-0x0000000189E85508 
+		float IResolvedStyle.borderBottomWidth { get => default; } // 0x0000000189E85508-0x0000000189E8552C 
+		UnityEngine.Color IResolvedStyle.borderLeftColor { get => default; } // 0x0000000189E8552C-0x0000000189E85558 
+		float IResolvedStyle.borderLeftWidth { get => default; } // 0x0000000189E85558-0x0000000189E8557C 
+		UnityEngine.Color IResolvedStyle.borderRightColor { get => default; } // 0x0000000189E8557C-0x0000000189E855A8 
+		float IResolvedStyle.borderRightWidth { get => default; } // 0x0000000189E855A8-0x0000000189E855CC 
+		UnityEngine.Color IResolvedStyle.borderTopColor { get => default; } // 0x0000000189E855CC-0x0000000189E855F8 
+		float IResolvedStyle.borderTopLeftRadius { get => default; } // 0x0000000189E855F8-0x0000000189E8561C 
+		float IResolvedStyle.borderTopRightRadius { get => default; } // 0x0000000189E8561C-0x0000000189E85640 
+		float IResolvedStyle.borderTopWidth { get => default; } // 0x0000000189E85640-0x0000000189E85664 
+		float IResolvedStyle.bottom { get => default; } // 0x0000000189E85664-0x0000000189E85688 
+		UnityEngine.Color IResolvedStyle.color { get => default; } // 0x0000000189E85688-0x0000000189E856B4 
+		DisplayStyle IResolvedStyle.display { get => default; } // 0x0000000189E856B4-0x0000000189E856C4 
+		FlexDirection IResolvedStyle.flexDirection { get => default; } // 0x0000000189E856C4-0x0000000189E856D4 
+		float IResolvedStyle.flexGrow { get => default; } // 0x0000000189E856D4-0x0000000189E856E4 
+		float IResolvedStyle.flexShrink { get => default; } // 0x0000000189E856E4-0x0000000189E856F4 
+		float IResolvedStyle.height { get => default; } // 0x0000000189E856F4-0x0000000189E85718 
+		float IResolvedStyle.left { get => default; } // 0x0000000189E85718-0x0000000189E8573C 
+		float IResolvedStyle.marginBottom { get => default; } // 0x0000000189E8573C-0x0000000189E85760 
+		float IResolvedStyle.marginLeft { get => default; } // 0x0000000189E85760-0x0000000189E85784 
+		float IResolvedStyle.marginRight { get => default; } // 0x0000000189E85784-0x0000000189E857A8 
+		float IResolvedStyle.marginTop { get => default; } // 0x0000000189E857A8-0x0000000189E857CC 
+		StyleFloat IResolvedStyle.minHeight { get => default; } // 0x0000000189E857CC-0x0000000189E857FC 
+		StyleFloat IResolvedStyle.minWidth { get => default; } // 0x0000000189E857FC-0x0000000189E8582C 
+		float IResolvedStyle.opacity { get => default; } // 0x0000000189E8582C-0x0000000189E8583C 
+		float IResolvedStyle.paddingBottom { get => default; } // 0x0000000189E8583C-0x0000000189E85860 
+		float IResolvedStyle.paddingLeft { get => default; } // 0x0000000189E85860-0x0000000189E85884 
+		float IResolvedStyle.paddingRight { get => default; } // 0x0000000189E85884-0x0000000189E858A8 
+		float IResolvedStyle.paddingTop { get => default; } // 0x0000000189E858A8-0x0000000189E858CC 
+		float IResolvedStyle.right { get => default; } // 0x0000000189E858CC-0x0000000189E858F0 
+		Scale IResolvedStyle.scale { get => default; } // 0x0000000189E858F0-0x0000000189E8591C 
+		float IResolvedStyle.top { get => default; } // 0x0000000189E8591C-0x0000000189E85940 
+		Vector3 IResolvedStyle.transformOrigin { get => default; } // 0x0000000189E85940-0x0000000189E85970 
+		Vector3 IResolvedStyle.translate { get => default; } // 0x0000000189E85970-0x0000000189E859A0 
+		UnityEngine.Color IResolvedStyle.unityBackgroundImageTintColor { get => default; } // 0x0000000189E859A0-0x0000000189E859CC 
+		int IResolvedStyle.unitySliceLeft { get => default; } // 0x0000000189E859CC-0x0000000189E859DC 
+		int IResolvedStyle.unitySliceRight { get => default; } // 0x0000000189E859DC-0x0000000189E859EC 
+		UnityEngine.Color IResolvedStyle.unityTextOutlineColor { get => default; } // 0x0000000189E859EC-0x0000000189E85A18 
+		float IResolvedStyle.unityTextOutlineWidth { get => default; } // 0x0000000189E85A18-0x0000000189E85A28 
+		Visibility IResolvedStyle.visibility { get => default; } // 0x0000000189E85A28-0x0000000189E85A38 
+		WhiteSpace IResolvedStyle.whiteSpace { get => default; } // 0x0000000189E85A38-0x0000000189E85A48 
+		float IResolvedStyle.width { get => default; } // 0x0000000189E85A48-0x0000000189E85A6C 
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<VisualElement, UxmlTraits> // TypeDefIndex: 43280
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189E87DAC-0x0000000189E87DCC
+			public UxmlFactory() {} // 0x0000000189E7E4F0-0x0000000189E7E52C
 		}
 	
 		public class UxmlTraits : UIElements.UxmlTraits // TypeDefIndex: 43281
@@ -1851,14 +2008,14 @@ namespace UnityEngine.UIElements
 			private UxmlStringAttributeDescription m_Style; // 0x68
 	
 			// Properties
-			protected UxmlIntAttributeDescription focusIndex { get; } // 0x0000000189E87CBC-0x0000000189E87CDC 
-			protected UxmlBoolAttributeDescription focusable { get; } // 0x0000000183D4ED20-0x0000000183D4ED30 
+			protected UxmlIntAttributeDescription focusIndex { get; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
+			protected UxmlBoolAttributeDescription focusable { get; } // 0x0000000183D4EAF0-0x0000000183D4EB00 
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000183D4EE00-0x0000000183D4EE10
+			public UxmlTraits() {} // 0x0000000189E7E798-0x0000000189E7ECBC
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000183D4EE10-0x0000000183D4EE20
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189E7E52C-0x0000000189E7E798
 		}
 	
 		public enum MeasureMode // TypeDefIndex: 43282
@@ -1883,36 +2040,36 @@ namespace UnityEngine.UIElements
 			private readonly VisualElement m_Owner; // 0x00
 	
 			// Properties
-			public VisualElement parent { get => default; } // 0x0000000183D4EE40-0x0000000183D4EE50 
-			public int childCount { get => default; } // 0x0000000189E8622C-0x0000000189E862F4 
-			public VisualElement this[int key] { get => default; } // 0x0000000189E85EF0-0x0000000189E85F8C 
+			public VisualElement parent { get => default; } // 0x0000000189E7C6C8-0x0000000189E7C6E8 
+			public int childCount { get => default; } // 0x0000000189E7C680-0x0000000189E7C6C8 
+			public VisualElement this[int key] { get => default; } // 0x0000000189E7C620-0x0000000189E7C680 
 	
 			// Constructors
 			internal Hierarchy(VisualElement element) : this() {
 				m_Owner = default;
-			} // 0x0000000189E81BEC-0x0000000189E81C10
+			} // 0x00000001842715A0-0x00000001842715A8
 	
 			// Methods
-			public void Add(VisualElement child) {} // 0x000000018339AE90-0x000000018339AEA0
-			public void Insert(int index, VisualElement child) {} // 0x0000000189E85E6C-0x0000000189E85EF0
-			public void Remove(VisualElement child) {} // 0x0000000189E85C34-0x0000000189E85CB4
-			public void RemoveAt(int index) {} // 0x0000000189E85D34-0x0000000189E85DB4
-			public void Clear() {} // 0x0000000189E8603C-0x0000000189E860D8
-			internal void BringToFront(VisualElement child) {} // 0x0000000189E85C34-0x0000000189E85CB4
-			internal void SendToBack(VisualElement child) {} // 0x0000000189E862F4-0x0000000189E863A8
-			internal void PlaceBehind(VisualElement child, VisualElement over) {} // 0x0000000189E86190-0x0000000189E8622C
-			private void MoveChildElement(VisualElement child, int currentIndex, int nextIndex) {} // 0x0000000189E85CB4-0x0000000189E85D34
-			public int IndexOf(VisualElement element) => default; // 0x0000000189E860D8-0x0000000189E86190
-			public VisualElement ElementAt(int index) => default; // 0x0000000189E85DB4-0x0000000189E85E6C
-			public IEnumerable<VisualElement> Children() => default; // 0x0000000189E85F8C-0x0000000189E8603C
-			private void SetParent(VisualElement value) {} // 0x0000000189E85B04-0x0000000189E85B90
-			private void PutChildAtIndex(VisualElement child, int index) {} // 0x0000000189E85A6C-0x0000000189E85B04
-			private void RemoveChildAtIndex(int index) {} // 0x0000000189E863A8-0x0000000189E8643C
-			private void ReleaseChildList() {} // 0x0000000189E85B90-0x0000000189E85C34
-			public bool Equals(Hierarchy other) => default; // 0x0000000189E84F1C-0x0000000189E8512C
-			public override bool Equals(object obj) => default; // 0x0000000189E8512C-0x0000000189E851D4
-			public override int GetHashCode() => default; // 0x0000000189E851D4-0x0000000189E8527C
-			public static bool operator ==(Hierarchy x, Hierarchy y) => default; // 0x0000000189E81630-0x0000000189E8189C
+			public void Add(VisualElement child) {} // 0x0000000189E7B3E8-0x0000000189E7B474
+			public void Insert(int index, VisualElement child) {} // 0x0000000189E7B9F8-0x0000000189E7BD3C
+			public void Remove(VisualElement child) {} // 0x0000000189E7C3D8-0x0000000189E7C510
+			public void RemoveAt(int index) {} // 0x0000000189E7C10C-0x0000000189E7C35C
+			public void Clear() {} // 0x0000000189E7B544-0x0000000189E7B920
+			internal void BringToFront(VisualElement child) {} // 0x0000000189E7B474-0x0000000189E7B524
+			internal void SendToBack(VisualElement child) {} // 0x0000000189E7C510-0x0000000189E7C59C
+			internal void PlaceBehind(VisualElement child, VisualElement over) {} // 0x0000000189E7BE40-0x0000000189E7BF2C
+			private void MoveChildElement(VisualElement child, int currentIndex, int nextIndex) {} // 0x0000000189E7BD3C-0x0000000189E7BE40
+			public int IndexOf(VisualElement element) => default; // 0x0000000189E7B998-0x0000000189E7B9F8
+			public VisualElement ElementAt(int index) => default; // 0x0000000189E7B920-0x0000000189E7B92C
+			public IEnumerable<VisualElement> Children() => default; // 0x0000000189E7B524-0x0000000189E7B544
+			private void SetParent(VisualElement value) {} // 0x0000000189E7C59C-0x0000000189E7C620
+			private void PutChildAtIndex(VisualElement child, int index) {} // 0x0000000189E7BF2C-0x0000000189E7C034
+			private void RemoveChildAtIndex(int index) {} // 0x0000000189E7C35C-0x0000000189E7C3D8
+			private void ReleaseChildList() {} // 0x0000000189E7C034-0x0000000189E7C10C
+			public bool Equals(Hierarchy other) => default; // 0x0000000189D7F378-0x0000000189D7F380
+			public override bool Equals(object obj) => default; // 0x0000000189E7B92C-0x0000000189E7B998
+			public override int GetHashCode() => default; // 0x000000018711E2B8-0x000000018711E2DC
+			public static bool operator ==(Hierarchy x, Hierarchy y) => default; // 0x000000018232CE30-0x000000018232CE40
 		}
 	
 		private abstract class BaseVisualElementScheduledItem : ScheduledItem, IVisualElementScheduledItem, IVisualElementPanelActivatable // TypeDefIndex: 43285
@@ -1922,23 +2079,23 @@ namespace UnityEngine.UIElements
 			private VisualElementPanelActivator m_Activator; // 0x48
 	
 			// Properties
-			public VisualElement element { get; private set; } // 0x0000000189E87DD8-0x0000000189E87DE4 0x0000000189E88788-0x0000000189E887B4
-			public bool isActive { get; } // 0x0000000189E87DE4-0x0000000189E87DF0 
+			public VisualElement element { get; private set; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x000000018388FF30-0x000000018388FF40
+			public bool isActive { get; } // 0x0000000189E7A948-0x0000000189E7A964 
 	
 			// Constructors
 			protected BaseVisualElementScheduledItem() {} // Dummy constructor
-			protected BaseVisualElementScheduledItem(VisualElement handler) {} // 0x0000000189E887B4-0x0000000189E887E4
+			protected BaseVisualElementScheduledItem(VisualElement handler) {} // 0x0000000189E7A8A8-0x0000000189E7A948
 	
 			// Methods
-			public IVisualElementScheduledItem StartingIn(long delayMs) => default; // 0x0000000183D87D70-0x0000000183D87D80
-			public IVisualElementScheduledItem Every(long intervalMs) => default; // 0x0000000189E88F3C-0x0000000189E88F90
-			internal override void OnItemUnscheduled() {} // 0x0000000189E87C5C-0x0000000189E87C68
-			public void Resume() {} // 0x0000000189E8872C-0x0000000189E8875C
-			public void Pause() {} // 0x0000000189E8840C-0x0000000189E88470
-			public void ExecuteLater(long delayMs) {} // 0x0000000189E88ED8-0x0000000189E88F3C
-			public void OnPanelActivate() {} // 0x0000000189E8798C-0x0000000189E87A0C
-			public void OnPanelDeactivate() {} // 0x0000000189E87C78-0x0000000189E87C98
-			public bool CanBeActivated() => default; // 0x0000000189E883F4-0x0000000189E8840C
+			public IVisualElementScheduledItem StartingIn(long delayMs) => default; // 0x0000000183D886F0-0x0000000183D88700
+			public IVisualElementScheduledItem Every(long intervalMs) => default; // 0x0000000189E7A620-0x0000000189E7A6BC
+			internal override void OnItemUnscheduled() {} // 0x0000000189E7A6F4-0x0000000189E7A724
+			public void Resume() {} // 0x0000000189E7A884-0x0000000189E7A8A8
+			public void Pause() {} // 0x0000000189E7A860-0x0000000189E7A884
+			public void ExecuteLater(long delayMs) {} // 0x0000000189E7A6BC-0x0000000189E7A6F4
+			public void OnPanelActivate() {} // 0x0000000189E7A724-0x0000000189E7A7C8
+			public void OnPanelDeactivate() {} // 0x0000000189E7A7C8-0x0000000189E7A860
+			public bool CanBeActivated() => default; // 0x0000000189E7A5E4-0x0000000189E7A620
 		}
 	
 		private abstract class VisualElementScheduledItem<ActionType> : BaseVisualElementScheduledItem // TypeDefIndex: 43286
@@ -1948,27 +2105,27 @@ namespace UnityEngine.UIElements
 	
 			// Constructors
 			protected VisualElementScheduledItem() {} // Dummy constructor
-			public VisualElementScheduledItem(VisualElement handler, ActionType upEvent) {} // 0x0000000189E88E50-0x0000000189E88ED8
+			public VisualElementScheduledItem(VisualElement handler, ActionType upEvent) {}
 		}
 	
 		private class TimerStateScheduledItem : VisualElementScheduledItem<Action<UnityEngine.UIElements.TimerState>> // TypeDefIndex: 43287
 		{
 			// Constructors
 			public TimerStateScheduledItem() {} // Dummy constructor
-			public TimerStateScheduledItem(VisualElement handler, Action<UnityEngine.UIElements.TimerState> updateEvent) {} // 0x0000000183D88AC0-0x0000000183D88AD0
+			public TimerStateScheduledItem(VisualElement handler, Action<UnityEngine.UIElements.TimerState> updateEvent) {} // 0x0000000189E7E32C-0x0000000189E7E384
 	
 			// Methods
-			public override void PerformTimerUpdate(UnityEngine.UIElements.TimerState state) {} // 0x0000000189E88C7C-0x0000000189E88CBC
+			public override void PerformTimerUpdate(UnityEngine.UIElements.TimerState state) {} // 0x0000000189E7E2F4-0x0000000189E7E32C
 		}
 	
 		private class SimpleScheduledItem : VisualElementScheduledItem<Action> // TypeDefIndex: 43288
 		{
 			// Constructors
 			public SimpleScheduledItem() {} // Dummy constructor
-			public SimpleScheduledItem(VisualElement handler, Action updateEvent) {} // 0x0000000183D88770-0x0000000183D88780
+			public SimpleScheduledItem(VisualElement handler, Action updateEvent) {} // 0x0000000189E7D818-0x0000000189E7D870
 	
 			// Methods
-			public override void PerformTimerUpdate(UnityEngine.UIElements.TimerState state) {} // 0x0000000183D86CE0-0x0000000183D86CF0
+			public override void PerformTimerUpdate(UnityEngine.UIElements.TimerState state) {} // 0x0000000189E7D7F0-0x0000000189E7D818
 		}
 	
 		internal class CustomStyleAccess : ICustomStyle // TypeDefIndex: 43289
@@ -1978,43 +2135,43 @@ namespace UnityEngine.UIElements
 			private float m_DpiScaling; // 0x18
 	
 			// Constructors
-			public CustomStyleAccess() {} // 0x0000000189E87F84-0x0000000189E8804C
+			public CustomStyleAccess() {} // 0x000000018350B670-0x000000018350B680
 	
 			// Methods
-			public void SetContext(Dictionary<string, StylePropertyValue> customProperties, float dpiScaling) {} // 0x0000000189E8643C-0x0000000189E8647C
+			public void SetContext(Dictionary<string, StylePropertyValue> customProperties, float dpiScaling) {} // 0x0000000185754818-0x0000000185754838
 			public bool TryGetValue(CustomStyleProperty<float> property, out float value) {
 				value = default;
 				return default;
-			} // 0x0000000189E864BC-0x0000000189E86580
+			} // 0x0000000189E7B038-0x0000000189E7B0E0
 			public bool TryGetValue(CustomStyleProperty<int> property, out int value) {
 				value = default;
 				return default;
-			} // 0x0000000189E8647C-0x0000000189E864BC
+			} // 0x0000000189E7ADC0-0x0000000189E7AE74
 			public bool TryGetValue(CustomStyleProperty<UnityEngine.Color> property, out UnityEngine.Color value) {
 				value = default;
 				return default;
-			} // 0x0000000189E87DF0-0x0000000189E87DFC
+			} // 0x0000000189E7AC7C-0x0000000189E7ADC0
 			public bool TryGetValue(CustomStyleProperty<Texture2D> property, out Texture2D value) {
 				value = default;
 				return default;
-			} // 0x0000000189E887E4-0x0000000189E88810
+			} // 0x0000000189E7AE74-0x0000000189E7AF90
 			public bool TryGetValue(CustomStyleProperty<Sprite> property, out Sprite value) {
 				value = default;
 				return default;
-			} // 0x0000000189E8816C-0x0000000189E8818C
+			} // 0x0000000189E7B1FC-0x0000000189E7B31C
 			public bool TryGetValue(CustomStyleProperty<VectorImage> property, out VectorImage value) {
 				value = default;
 				return default;
-			} // 0x0000000189E87E84-0x0000000189E87F34
+			} // 0x0000000189E7B0E0-0x0000000189E7B1FC
 			public bool TryGetValue(CustomStyleProperty<string> property, out string value) {
 				value = default;
 				return default;
-			} // 0x0000000189E88868-0x0000000189E88BC8
+			} // 0x0000000189E7B31C-0x0000000189E7B3E8
 			private bool TryGetValue(string propertyName, StyleValueType valueType, out StylePropertyValue customProp) {
 				customProp = default;
 				return default;
-			} // 0x0000000189E80408-0x0000000189E80628
-			private static void LogCustomPropertyWarning(string propertyName, StyleValueType valueType, StylePropertyValue customProp) {} // 0x0000000189E87B08-0x0000000189E87BD0
+			} // 0x0000000189E7AF90-0x0000000189E7B038
+			private static void LogCustomPropertyWarning(string propertyName, StyleValueType valueType, StylePropertyValue customProp) {} // 0x0000000189E7ABBC-0x0000000189E7AC7C
 		}
 	
 		private class TypeData // TypeDefIndex: 43290
@@ -2024,165 +2181,165 @@ namespace UnityEngine.UIElements
 			private string m_TypeName; // 0x20
 	
 			// Properties
-			public System.Type type { get; } // 0x0000000189E87DCC-0x0000000189E87DD8 
-			public string fullTypeName { get => default; } // 0x0000000189E87E64-0x0000000189E87E70 
-			public string typeName { get => default; } // 0x0000000189E88810-0x0000000189E8883C 
+			public System.Type type { get; } // 0x00000001820B7B20-0x00000001820B7B30 
+			public string fullTypeName { get => default; } // 0x0000000189ED0F60-0x0000000189ED0FA8 
+			public string typeName { get => default; } // 0x0000000189ED0FA8-0x0000000189ED1050 
 	
 			// Constructors
 			public TypeData() {} // Dummy constructor
-			public TypeData(System.Type type) {} // 0x0000000189E8875C-0x0000000189E88788
+			public TypeData(System.Type type) {} // 0x0000000189ED0EE0-0x0000000189ED0F60
 		}
 	
 		// Constructors
-		public VisualElement() {} // 0x0000000189E7F124-0x0000000189E7FDEC
-		static VisualElement() {} // 0x000000018350B670-0x000000018350B680
+		public VisualElement() {} // 0x0000000189E87594-0x0000000189E87884
+		static VisualElement() {} // 0x0000000189E872A8-0x0000000189E87594
 	
 		// Methods
-		private IStylePropertyAnimationSystem GetStylePropertyAnimationSystem() => default; // 0x0000000189187244-0x000000018918724C
-		bool IStylePropertyAnimations.Start(StylePropertyId id, float from, float to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E87E7C-0x0000000189E87E84
-		bool IStylePropertyAnimations.Start(StylePropertyId id, int from, int to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x00000001899BCE04-0x00000001899BCE30
-		bool IStylePropertyAnimations.Start(StylePropertyId id, Length from, Length to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E88698-0x0000000189E886FC
-		bool IStylePropertyAnimations.Start(StylePropertyId id, UnityEngine.Color from, UnityEngine.Color to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E8866C-0x0000000189E88698
-		bool IStylePropertyAnimations.StartEnum(StylePropertyId id, int from, int to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E88640-0x0000000189E8866C
-		bool IStylePropertyAnimations.Start(StylePropertyId id, Background from, Background to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E86FD0-0x0000000189E87174
-		bool IStylePropertyAnimations.Start(StylePropertyId id, FontDefinition from, FontDefinition to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E86F64-0x0000000189E86FD0
-		bool IStylePropertyAnimations.Start(StylePropertyId id, Font from, Font to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E87E70-0x0000000189E87E7C
-		bool IStylePropertyAnimations.Start(StylePropertyId id, TextShadow from, TextShadow to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E8883C-0x0000000189E88868
-		bool IStylePropertyAnimations.Start(StylePropertyId id, Scale from, Scale to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E885F4-0x0000000189E88640
-		bool IStylePropertyAnimations.Start(StylePropertyId id, Translate from, Translate to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E885A8-0x0000000189E885F4
-		bool IStylePropertyAnimations.Start(StylePropertyId id, Rotate from, Rotate to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E8856C-0x0000000189E885A8
-		bool IStylePropertyAnimations.Start(StylePropertyId id, TransformOrigin from, TransformOrigin to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E80B38-0x0000000189E80B74
-		void IStylePropertyAnimations.CancelAnimation(StylePropertyId id) {} // 0x0000000189E86CE4-0x0000000189E86F64
-		void IStylePropertyAnimations.CancelAllAnimations() {} // 0x0000000189E80678-0x0000000189E80704
-		void IStylePropertyAnimations.UpdateAnimation(StylePropertyId id) {} // 0x0000000189E849D0-0x0000000189E84BA8
-		void IStylePropertyAnimations.GetAllAnimations(List<StylePropertyId> outPropertyIds) {} // 0x0000000189E80704-0x0000000189E808E4
-		internal bool TryConvertLengthUnits(StylePropertyId id, ref Length from, ref Length to, int subPropertyIndex = 0 /* Metadata: 0x01FB5E3B */) => default; // 0x0000000183D88AB0-0x0000000183D88AC0
-		internal bool TryConvertTransformOriginUnits(ref TransformOrigin from, ref TransformOrigin to) => default; // 0x0000000189E88C10-0x0000000189E88C7C
-		internal bool TryConvertTranslateUnits(ref Translate from, ref Translate to) => default; // 0x0000000183D6CBB0-0x0000000183D6CBC0
-		private float? GetParentSizeForLengthConversion(StylePropertyId id, int subPropertyIndex = 0 /* Metadata: 0x01FB5E3C */) => default; // 0x0000000183D88AE0-0x0000000183D88AF0
-		internal void MarkRenderHintsClean() {} // 0x0000000189E80B74-0x0000000189E80FC0
-		internal void ClearManualLayout() {} // 0x0000000189E8211C-0x0000000189E8213C
-		internal void UpdateBoundingBox() {} // 0x0000000189E821C0-0x0000000189E821D0
-		internal void UpdateWorldBoundingBox() {} // 0x0000000183D55E30-0x0000000183D55E40
-		internal void UpdateWorldTransform() {} // 0x0000000189E808E4-0x0000000189E80928
-		internal void UpdateWorldTransformInverse() {} // 0x0000000189E88160-0x0000000189E8816C
-		internal void EnsureWorldTransformAndClipUpToDate() {} // 0x0000000189E80FC0-0x0000000189E8102C
-		private void UpdateWorldClip() {} // 0x0000000189E83BBC-0x0000000189E83C68
-		private Rect CombineClipRects(Rect rect, Rect parentRect) => default; // 0x0000000189E837B0-0x0000000189E838CC
-		private Rect SubstractBorderPadding(Rect worldRect) => default; // 0x0000000189E84BA8-0x0000000189E84D04
-		internal static Rect ComputeAAAlignedBound(Rect position, Matrix4x4 mat) => default; // 0x0000000183D87CC0-0x0000000183D87CD0
-		private void UpdateHoverPseudoState() {} // 0x0000000189E81B00-0x0000000189E81B68
-		private void ChangeIMGUIContainerCount(int delta) {}
-		protected override void ExecuteDefaultAction(EventBase evt) {} // 0x0000000189E827A8-0x0000000189E82E50
-		internal virtual Rect GetTooltipRect() => default; // 0x0000000189E8538C-0x0000000189E85468
-		private void SetTooltip(TooltipEvent e) {} // 0x0000000189E84874-0x0000000189E849D0
-		public sealed override void Focus() {} // 0x0000000183D86CE0-0x0000000183D86CF0
-		internal void SetPanel(BaseVisualElementPanel p) {} // 0x0000000183D86CE0-0x0000000183D86CF0
-		private void WillChangePanel(BaseVisualElementPanel destinationPanel) {} // 0x0000000183D55E50-0x0000000183D55E60
-		private void HasChangedPanel(BaseVisualElementPanel prevPanel) {} // 0x00000001858B41E0-0x00000001858B41F4
-		public sealed override void SendEvent(EventBase e) {} // 0x0000000183D88A70-0x0000000183D88A80
-		internal sealed override void SendEvent(EventBase e, DispatchMode dispatchMode) {} // 0x0000000183D88B00-0x0000000183D88B10
-		internal void IncrementVersion(VersionChangeType changeType) {} // 0x0000000189E87C50-0x0000000189E87C5C
-		internal void InvokeHierarchyChanged(HierarchyChangeType changeType) {} // 0x0000000189E886FC-0x0000000189E8872C
-		private bool SetEnabledFromHierarchyPrivate(bool state) => default; // 0x0000000189E84844-0x0000000189E84874
-		public void SetEnabled(bool value) {} // 0x0000000183D86CE0-0x0000000183D86CF0
-		private void PropagateEnabledToChildren(bool value) {} // 0x00000001858B4168-0x00000001858B417C
-		public void MarkDirtyRepaint() {} // 0x0000000189E80628-0x0000000189E80678
-		internal void InvokeGenerateVisualContent(MeshGenerationContext mgc) {} // 0x0000000189E87A0C-0x0000000189E87A6C
-		internal void GetFullHierarchicalViewDataKey(StringBuilder key) {} // 0x0000000189E81ED4-0x0000000189E81F44
-		internal string GetFullHierarchicalViewDataKey() => default; // 0x0000000189E80994-0x0000000189E80B08
+		private IStylePropertyAnimationSystem GetStylePropertyAnimationSystem() => default; // 0x0000000189E81BEC-0x0000000189E81C10
+		bool IStylePropertyAnimations.Start(StylePropertyId id, float from, float to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E85E6C-0x0000000189E85EF0
+		bool IStylePropertyAnimations.Start(StylePropertyId id, int from, int to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E85C34-0x0000000189E85CB4
+		bool IStylePropertyAnimations.Start(StylePropertyId id, Length from, Length to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E85D34-0x0000000189E85DB4
+		bool IStylePropertyAnimations.Start(StylePropertyId id, UnityEngine.Color from, UnityEngine.Color to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E8603C-0x0000000189E860D8
+		bool IStylePropertyAnimations.StartEnum(StylePropertyId id, int from, int to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E85C34-0x0000000189E85CB4
+		bool IStylePropertyAnimations.Start(StylePropertyId id, Background from, Background to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E862F4-0x0000000189E863A8
+		bool IStylePropertyAnimations.Start(StylePropertyId id, FontDefinition from, FontDefinition to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E86190-0x0000000189E8622C
+		bool IStylePropertyAnimations.Start(StylePropertyId id, Font from, Font to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E85CB4-0x0000000189E85D34
+		bool IStylePropertyAnimations.Start(StylePropertyId id, TextShadow from, TextShadow to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E8622C-0x0000000189E862F4
+		bool IStylePropertyAnimations.Start(StylePropertyId id, Scale from, Scale to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E85EF0-0x0000000189E85F8C
+		bool IStylePropertyAnimations.Start(StylePropertyId id, Translate from, Translate to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E860D8-0x0000000189E86190
+		bool IStylePropertyAnimations.Start(StylePropertyId id, Rotate from, Rotate to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E85DB4-0x0000000189E85E6C
+		bool IStylePropertyAnimations.Start(StylePropertyId id, TransformOrigin from, TransformOrigin to, int durationMs, int delayMs, Func<float, float> easingCurve) => default; // 0x0000000189E85F8C-0x0000000189E8603C
+		void IStylePropertyAnimations.CancelAnimation(StylePropertyId id) {} // 0x0000000189E85B04-0x0000000189E85B90
+		void IStylePropertyAnimations.CancelAllAnimations() {} // 0x0000000189E85A6C-0x0000000189E85B04
+		void IStylePropertyAnimations.UpdateAnimation(StylePropertyId id) {} // 0x0000000189E863A8-0x0000000189E8643C
+		void IStylePropertyAnimations.GetAllAnimations(List<StylePropertyId> outPropertyIds) {} // 0x0000000189E85B90-0x0000000189E85C34
+		internal bool TryConvertLengthUnits(StylePropertyId id, ref Length from, ref Length to, int subPropertyIndex = 0 /* Metadata: 0x01FB5E3B */) => default; // 0x0000000189E84F1C-0x0000000189E8512C
+		internal bool TryConvertTransformOriginUnits(ref TransformOrigin from, ref TransformOrigin to) => default; // 0x0000000189E8512C-0x0000000189E851D4
+		internal bool TryConvertTranslateUnits(ref Translate from, ref Translate to) => default; // 0x0000000189E851D4-0x0000000189E8527C
+		private float? GetParentSizeForLengthConversion(StylePropertyId id, int subPropertyIndex = 0 /* Metadata: 0x01FB5E3C */) => default; // 0x0000000189E81630-0x0000000189E8189C
+		internal void MarkRenderHintsClean() {} // 0x0000000183D88770-0x0000000183D88780
+		internal void ClearManualLayout() {} // 0x0000000189E80408-0x0000000189E80628
+		internal void UpdateBoundingBox() {} // 0x0000000189E867C0-0x0000000189E86A38
+		internal void UpdateWorldBoundingBox() {} // 0x0000000189E86C6C-0x0000000189E86CE4
+		internal void UpdateWorldTransform() {} // 0x0000000189E86FD0-0x0000000189E87174
+		internal void UpdateWorldTransformInverse() {} // 0x0000000189E86F64-0x0000000189E86FD0
+		internal void EnsureWorldTransformAndClipUpToDate() {} // 0x0000000189E80B38-0x0000000189E80B74
+		private void UpdateWorldClip() {} // 0x0000000189E86CE4-0x0000000189E86F64
+		private Rect CombineClipRects(Rect rect, Rect parentRect) => default; // 0x0000000189E80678-0x0000000189E80704
+		private Rect SubstractBorderPadding(Rect worldRect) => default; // 0x0000000189E849D0-0x0000000189E84BA8
+		internal static Rect ComputeAAAlignedBound(Rect position, Matrix4x4 mat) => default; // 0x0000000189E80704-0x0000000189E808E4
+		private void UpdateHoverPseudoState() {} // 0x0000000189E86BA4-0x0000000189E86C6C
+		private void ChangeIMGUIContainerCount(int delta) {} // 0x0000000189E80140-0x0000000189E8017C
+		protected override void ExecuteDefaultAction(EventBase evt) {} // 0x0000000189E80B74-0x0000000189E80FC0
+		internal virtual Rect GetTooltipRect() => default; // 0x0000000189E81C10-0x0000000189E81C3C
+		private void SetTooltip(TooltipEvent e) {} // 0x0000000189E8477C-0x0000000189E84844
+		public sealed override void Focus() {} // 0x0000000189E81294-0x0000000189E81310
+		internal void SetPanel(BaseVisualElementPanel p) {} // 0x0000000189E83C68-0x0000000189E8453C
+		private void WillChangePanel(BaseVisualElementPanel destinationPanel) {} // 0x0000000189E87174-0x0000000189E872A8
+		private void HasChangedPanel(BaseVisualElementPanel prevPanel) {} // 0x0000000189E81C3C-0x0000000189E81E50
+		public sealed override void SendEvent(EventBase e) {} // 0x0000000189E83710-0x0000000189E8372C
+		internal sealed override void SendEvent(EventBase e, DispatchMode dispatchMode) {} // 0x0000000189E8372C-0x0000000189E83744
+		internal void IncrementVersion(VersionChangeType changeType) {} // 0x0000000189E81EB4-0x0000000189E81ED4
+		internal void InvokeHierarchyChanged(HierarchyChangeType changeType) {} // 0x0000000189E8211C-0x0000000189E8213C
+		private bool SetEnabledFromHierarchyPrivate(bool state) => default; // 0x0000000189E838CC-0x0000000189E83BA4
+		public void SetEnabled(bool value) {} // 0x0000000189E83BA4-0x0000000189E83BBC
+		private void PropagateEnabledToChildren(bool value) {} // 0x0000000189E826F0-0x0000000189E827A8
+		public void MarkDirtyRepaint() {} // 0x0000000189E821C0-0x0000000189E821D0
+		internal void InvokeGenerateVisualContent(MeshGenerationContext mgc) {} // 0x0000000189E81FDC-0x0000000189E8211C
+		internal void GetFullHierarchicalViewDataKey(StringBuilder key) {} // 0x0000000189E814AC-0x0000000189E8153C
+		internal string GetFullHierarchicalViewDataKey() => default; // 0x0000000189E81438-0x0000000189E814AC
 		internal T GetOrCreateViewData<T>(object existing, string key)
-			where T : class, new() => default; // 0x0000000189E811B0-0x0000000189E81294
-		internal void OverwriteFromViewData(object obj, string key) {} // 0x0000000189E802D4-0x0000000189E8036C
-		internal void SaveViewData() {} // 0x0000000189E7FDEC-0x0000000189E7FE58
-		internal bool IsViewDataPersitenceSupportedOnChildren(bool existingState) => default; // 0x0000000189E83744-0x0000000189E837B0
-		internal void OnViewDataReady(bool enablePersistence) {} // 0x0000000189E82588-0x0000000189E826F0
-		internal virtual void OnViewDataReady() {} // 0x0000000189E83080-0x0000000189E830EC
-		public virtual bool ContainsPoint(Vector2 localPoint) => default;
-		private void AssignMeasureFunction() {} // 0x0000000189E81310-0x0000000189E813D0
-		private void RemoveMeasureFunction() {} // 0x0000000189E8102C-0x0000000189E811B0
-		protected internal virtual Vector2 DoMeasure(float desiredWidth, MeasureMode widthMode, float desiredHeight, MeasureMode heightMode) => default; // 0x0000000189E81BA8-0x0000000189E81BEC
-		internal YogaSize Measure(YogaNode node, float width, YogaMeasureMode widthMode, float height, YogaMeasureMode heightMode) => default; // 0x0000000189E81B68-0x0000000189E81BA8
-		private void FinalizeLayout() {} // 0x0000000189E8153C-0x0000000189E81630
-		internal void SetInlineRule(StyleSheet sheet, StyleRule rule) {} // 0x0000000189E81A20-0x0000000189E81B00
-		internal void SetComputedStyle(ref ComputedStyle newStyle) {} // 0x0000000189E83630-0x0000000189E836A4
-		public override string ToString() => default; // 0x0000000189E8804C-0x0000000189E8810C
-		internal List<string> GetClassesForIteration() => default; // 0x0000000189E8189C-0x0000000189E81A20
-		public void AddToClassList(string className) {} // 0x0000000189E87CDC-0x0000000189E87DA0
-		public void RemoveFromClassList(string className) {} // 0x0000000189E82318-0x0000000189E82328
-		public void EnableInClassList(string className, bool enable) {} // 0x0000000189E821D0-0x0000000189E821E0
-		public bool ClassListContains(string cls) => default; // 0x0000000189E84D04-0x0000000189E84E1C
-		internal object GetProperty(PropertyName key) => default; // 0x0000000189E7FE58-0x0000000189E80140
-		internal void SetProperty(PropertyName key, object value) {} // 0x0000000189E84E1C-0x0000000189E84E90
-		internal bool HasProperty(PropertyName key) => default; // 0x0000000189E8234C-0x0000000189E8239C
+			where T : class, new() => default;
+		internal void OverwriteFromViewData(object obj, string key) {} // 0x0000000189E8239C-0x0000000189E82588
+		internal void SaveViewData() {} // 0x0000000189E836A4-0x0000000189E83710
+		internal bool IsViewDataPersitenceSupportedOnChildren(bool existingState) => default; // 0x0000000189E8213C-0x0000000189E821C0
+		internal void OnViewDataReady(bool enablePersistence) {} // 0x0000000189E82328-0x0000000189E8234C
+		internal virtual void OnViewDataReady() {} // 0x000000018350B670-0x000000018350B680
+		public virtual bool ContainsPoint(Vector2 localPoint) => default; // 0x0000000189E808E4-0x0000000189E80928
+		private void AssignMeasureFunction() {} // 0x0000000189E7F090-0x0000000189E7F124
+		private void RemoveMeasureFunction() {} // 0x0000000189E830EC-0x0000000189E83110
+		protected internal virtual Vector2 DoMeasure(float desiredWidth, MeasureMode widthMode, float desiredHeight, MeasureMode heightMode) => default; // 0x0000000183D88750-0x0000000183D88770
+		internal YogaSize Measure(YogaNode node, float width, YogaMeasureMode widthMode, float height, YogaMeasureMode heightMode) => default; // 0x0000000189E821E0-0x0000000189E82318
+		private void FinalizeLayout() {} // 0x0000000189E80FC0-0x0000000189E8102C
+		internal void SetInlineRule(StyleSheet sheet, StyleRule rule) {} // 0x0000000189E83BBC-0x0000000189E83C68
+		internal void SetComputedStyle(ref ComputedStyle newStyle) {} // 0x0000000189E837B0-0x0000000189E838CC
+		public override string ToString() => default; // 0x0000000189E84BA8-0x0000000189E84D04
+		internal List<string> GetClassesForIteration() => default; // 0x0000000183D87CC0-0x0000000183D87CD0
+		public void AddToClassList(string className) {} // 0x0000000189E7EE58-0x0000000189E7EFCC
+		public void RemoveFromClassList(string className) {} // 0x0000000189E82F8C-0x0000000189E83080
+		public void EnableInClassList(string className, bool enable) {} // 0x0000000189E80B14-0x0000000189E80B38
+		public bool ClassListContains(string cls) => default; // 0x0000000189E8036C-0x0000000189E80408
+		internal object GetProperty(PropertyName key) => default; // 0x0000000189E81B00-0x0000000189E81B68
+		internal void SetProperty(PropertyName key, object value) {} // 0x0000000189E84714-0x0000000189E8477C
+		internal bool HasProperty(PropertyName key) => default; // 0x0000000189E81E50-0x0000000189E81EB4
 		private bool TryGetPropertyInternal(PropertyName key, out object value) {
 			value = default;
 			return default;
-		} // 0x0000000183D889B0-0x0000000183D88A00
-		private static void CheckUserKeyArgument(PropertyName key) {} // 0x0000000183D88A00-0x0000000183D88A40
-		private void SetPropertyInternal(PropertyName key, object value) {} // 0x0000000183D88780-0x0000000183D889B0
-		private void UpdateCursorStyle(long eventType) {} // 0x0000000189E84E90-0x0000000189E84F1C
-		private VisualElementAnimationSystem GetAnimationSystem() => default; // 0x0000000189E86580-0x0000000189E86630
-		internal void RegisterAnimation(IValueAnimationUpdate anim) {} // 0x0000000189E86630-0x0000000189E866E0
-		internal void UnregisterAnimation(IValueAnimationUpdate anim) {} // 0x0000000189E88198-0x0000000189E88218
-		private void UnregisterRunningAnimations() {} // 0x0000000189E87BD0-0x0000000189E87C50
-		private void RegisterRunningAnimations() {} // 0x0000000182712100-0x0000000182712120
-		private static ValueAnimation<T> StartAnimation<T>(ValueAnimation<T> anim, Func<VisualElement, T> fromValueGetter, T to, int durationMs, Action<VisualElement, T> onValueChanged) => default; // 0x0000000189E7ECBC-0x0000000189E7EE58
-		private static void AssignStyleValues(VisualElement ve, StyleValues src) {} // 0x0000000189E83110-0x0000000189E83208
-		private StyleValues ReadCurrentValues(VisualElement ve, StyleValues targetValuesToRead) => default; // 0x0000000189E834E4-0x0000000189E83630
-		ValueAnimation<StyleValues> ITransitionAnimations.Start(StyleValues to, int durationMs) => default; // 0x0000000189E83364-0x0000000189E834E4
-		private ValueAnimation<StyleValues> Start(Func<VisualElement, StyleValues> fromValueGetter, StyleValues to, int durationMs) => default; // 0x0000000189E83208-0x0000000189E832C8
-		internal bool ShouldClip() => default; // 0x0000000189E854E4-0x0000000189E85508
-		public void Add(VisualElement child) {} // 0x0000000189E855F8-0x0000000189E8561C
-		public void Insert(int index, VisualElement element) {} // 0x0000000189E8561C-0x0000000189E85640
-		public void Clear() {} // 0x0000000189E85640-0x0000000189E85664
-		public VisualElement ElementAt(int index) => default; // 0x0000000189E85664-0x0000000189E85688
-		public int IndexOf(VisualElement element) => default; // 0x0000000189E856C4-0x0000000189E856D4
-		internal VisualElement ElementAtTreePath(List<int> childIndexes) => default; // 0x0000000189E856D4-0x0000000189E856E4
-		internal bool FindElementInTree(VisualElement element, List<int> outChildIndexes) => default; // 0x0000000189E856E4-0x0000000189E856F4
-		public IEnumerable<VisualElement> Children() => default; // 0x0000000189E856F4-0x0000000189E85718
-		public void BringToFront() {} // 0x0000000189E85718-0x0000000189E8573C
-		public void SendToBack() {} // 0x0000000189E8573C-0x0000000189E85760
-		public void PlaceBehind(VisualElement sibling) {} // 0x0000000189E85760-0x0000000189E85784
-		public void RemoveFromHierarchy() {} // 0x0000000189E85784-0x0000000189E857A8
+		} // 0x0000000189E8527C-0x0000000189E8537C
+		private static void CheckUserKeyArgument(PropertyName key) {} // 0x0000000189E8017C-0x0000000189E802D4
+		private void SetPropertyInternal(PropertyName key, object value) {} // 0x0000000189E8453C-0x0000000189E84714
+		private void UpdateCursorStyle(long eventType) {} // 0x0000000189E86A38-0x0000000189E86BA4
+		private VisualElementAnimationSystem GetAnimationSystem() => default; // 0x0000000189E813D0-0x0000000189E81438
+		internal void RegisterAnimation(IValueAnimationUpdate anim) {} // 0x0000000189E82E50-0x0000000189E82F28
+		internal void UnregisterAnimation(IValueAnimationUpdate anim) {} // 0x0000000189E866E0-0x0000000189E86754
+		private void UnregisterRunningAnimations() {} // 0x0000000189E86754-0x0000000189E867C0
+		private void RegisterRunningAnimations() {} // 0x0000000189E82F28-0x0000000189E82F8C
+		private static ValueAnimation<T> StartAnimation<T>(ValueAnimation<T> anim, Func<VisualElement, T> fromValueGetter, T to, int durationMs, Action<VisualElement, T> onValueChanged) => default;
+		private static void AssignStyleValues(VisualElement ve, StyleValues src) {} // 0x0000000189E7F124-0x0000000189E7FDEC
+		private StyleValues ReadCurrentValues(VisualElement ve, StyleValues targetValuesToRead) => default; // 0x0000000189E827A8-0x0000000189E82E50
+		ValueAnimation<StyleValues> ITransitionAnimations.Start(StyleValues to, int durationMs) => default; // 0x0000000189E8538C-0x0000000189E85468
+		private ValueAnimation<StyleValues> Start(Func<VisualElement, StyleValues> fromValueGetter, StyleValues to, int durationMs) => default; // 0x0000000189E84874-0x0000000189E849D0
+		internal bool ShouldClip() => default; // 0x0000000189E84844-0x0000000189E84874
+		public void Add(VisualElement child) {} // 0x0000000189E7EFCC-0x0000000189E7F090
+		public void Insert(int index, VisualElement element) {} // 0x0000000189E81F44-0x0000000189E81FDC
+		public void Clear() {} // 0x0000000189E80628-0x0000000189E80678
+		public VisualElement ElementAt(int index) => default; // 0x0000000189E80B08-0x0000000189E80B14
+		public int IndexOf(VisualElement element) => default; // 0x0000000189E81ED4-0x0000000189E81F44
+		internal VisualElement ElementAtTreePath(List<int> childIndexes) => default; // 0x0000000189E80994-0x0000000189E80B08
+		internal bool FindElementInTree(VisualElement element, List<int> outChildIndexes) => default; // 0x0000000189E811B0-0x0000000189E81294
+		public IEnumerable<VisualElement> Children() => default; // 0x0000000189E802D4-0x0000000189E8036C
+		public void BringToFront() {} // 0x0000000189E7FDEC-0x0000000189E7FE58
+		public void SendToBack() {} // 0x0000000189E83744-0x0000000189E837B0
+		public void PlaceBehind(VisualElement sibling) {} // 0x0000000189E82588-0x0000000189E826F0
+		public void RemoveFromHierarchy() {} // 0x0000000189E83080-0x0000000189E830EC
 		public T GetFirstOfType<T>()
-			where T : class => default; // 0x0000000189E857A8-0x0000000189E857CC
+			where T : class => default;
 		public T GetFirstAncestorOfType<T>()
-			where T : class => default; // 0x0000000189E857CC-0x0000000189E857FC
-		public bool Contains(VisualElement child) => default; // 0x0000000189E857FC-0x0000000189E8582C
-		private void GatherAllChildren(List<VisualElement> elements) {} // 0x0000000189E8582C-0x0000000189E8583C
-		public VisualElement FindCommonAncestor(VisualElement other) => default; // 0x0000000189E8583C-0x0000000189E85860
-		internal VisualElement GetRoot() => default; // 0x0000000189E85860-0x0000000189E85884
-		internal VisualElement GetRootVisualContainer() => default; // 0x0000000189E85884-0x0000000189E858A8
-		internal VisualElement GetNextElementDepthFirst() => default; // 0x0000000189E858A8-0x0000000189E858CC
-		internal VisualElement GetPreviousElementDepthFirst() => default; // 0x0000000189E858CC-0x0000000189E858F0
-		internal VisualElement RetargetElement(VisualElement retargetAgainst) => default; // 0x0000000189E858F0-0x0000000189E8591C
+			where T : class => default;
+		public bool Contains(VisualElement child) => default; // 0x0000000189E80928-0x0000000189E80994
+		private void GatherAllChildren(List<VisualElement> elements) {} // 0x0000000189E81310-0x0000000189E813D0
+		public VisualElement FindCommonAncestor(VisualElement other) => default; // 0x0000000189E8102C-0x0000000189E811B0
+		internal VisualElement GetRoot() => default; // 0x0000000189E81BA8-0x0000000189E81BEC
+		internal VisualElement GetRootVisualContainer() => default; // 0x0000000189E81B68-0x0000000189E81BA8
+		internal VisualElement GetNextElementDepthFirst() => default; // 0x0000000189E8153C-0x0000000189E81630
+		internal VisualElement GetPreviousElementDepthFirst() => default; // 0x0000000189E81A20-0x0000000189E81B00
+		internal VisualElement RetargetElement(VisualElement retargetAgainst) => default; // 0x0000000189E83630-0x0000000189E836A4
 		internal void GetPivotedMatrixWithLayout(out Matrix4x4 result) {
 			result = default;
-		} // 0x0000000189E85940-0x0000000189E85970
-		internal static float Min(float a, float b, float c, float d) => default; // 0x0000000189E859A0-0x0000000189E859CC
-		internal static float Max(float a, float b, float c, float d) => default; // 0x0000000189E859CC-0x0000000189E859DC
-		private void TransformAlignedRectToParentSpace(ref Rect rect) {} // 0x0000000189E859DC-0x0000000189E859EC
-		internal static Rect CalculateConservativeRect(ref Matrix4x4 matrix, Rect rect) => default; // 0x0000000189E859EC-0x0000000189E85A18
-		internal static void TransformAlignedRect(ref Matrix4x4 matrix, ref Rect rect) {} // 0x0000000189E85A18-0x0000000189E85A28
-		internal static void OrderMinMaxRect(ref Rect rect) {} // 0x0000000189E85A28-0x0000000189E85A38
-		internal static Vector2 MultiplyMatrix44Point2(ref Matrix4x4 lhs, Vector2 point) => default; // 0x0000000189E85A38-0x0000000189E85A48
-		internal static Vector2 MultiplyVector2(ref Matrix4x4 lhs, Vector2 vector) => default; // 0x0000000189E85A48-0x0000000189E85A6C
+		} // 0x0000000189E8189C-0x0000000189E81A20
+		internal static float Min(float a, float b, float c, float d) => default; // 0x0000000189E82318-0x0000000189E82328
+		internal static float Max(float a, float b, float c, float d) => default; // 0x0000000189E821D0-0x0000000189E821E0
+		private void TransformAlignedRectToParentSpace(ref Rect rect) {} // 0x0000000189E84D04-0x0000000189E84E1C
+		internal static Rect CalculateConservativeRect(ref Matrix4x4 matrix, Rect rect) => default; // 0x0000000189E7FE58-0x0000000189E80140
+		internal static void TransformAlignedRect(ref Matrix4x4 matrix, ref Rect rect) {} // 0x0000000189E84E1C-0x0000000189E84E90
+		internal static void OrderMinMaxRect(ref Rect rect) {} // 0x0000000189E8234C-0x0000000189E8239C
+		internal static Vector2 MultiplyMatrix44Point2(ref Matrix4x4 lhs, Vector2 point) => default; // 0x0000000183D889B0-0x0000000183D88A00
+		internal static Vector2 MultiplyVector2(ref Matrix4x4 lhs, Vector2 vector) => default; // 0x0000000183D88A00-0x0000000183D88A40
 		internal static void MultiplyMatrix34(ref Matrix4x4 lhs, ref Matrix4x4 rhs, out Matrix4x4 res) {
 			res = default;
-		} // 0x0000000189E872A8-0x0000000189E87594
+		} // 0x0000000183D88780-0x0000000183D889B0
 		private static void TranslateMatrix34(ref Matrix4x4 lhs, Vector3 rhs, out Matrix4x4 res) {
 			res = default;
-		} // 0x0000000189E8537C-0x0000000189E8538C
-		private static void TranslateMatrix34InPlace(ref Matrix4x4 lhs, Vector3 rhs) {} // 0x0000000189E7E4F0-0x0000000189E7E52C
-		IVisualElementScheduledItem IVisualElementScheduler.Execute(Action<UnityEngine.UIElements.TimerState> timerUpdateEvent) => default; // 0x0000000183D4EAF0-0x0000000183D4EB00
-		IVisualElementScheduledItem IVisualElementScheduler.Execute(Action updateEvent) => default; // 0x0000000189E7E52C-0x0000000189E7E798
-		internal void AddStyleSheetPath(string sheetPath) {} // 0x0000000189E7B3E8-0x0000000189E7B474
-		private StyleFloat ResolveLengthValue(Length length, bool isRow) => default; // 0x0000000189E7B9F8-0x0000000189E7BD3C
-		private Vector3 ResolveTranslate() => default; // 0x0000000189E7C3D8-0x0000000189E7C510
-		private Vector3 ResolveTransformOrigin() => default; // 0x0000000189E7C10C-0x0000000189E7C35C
-		private Quaternion ResolveRotation() => default; // 0x0000000189E7B544-0x0000000189E7B920
-		private Vector3 ResolveScale() => default; // 0x0000000189E7B474-0x0000000189E7B524
+		} // 0x0000000189E84E90-0x0000000189E84F1C
+		private static void TranslateMatrix34InPlace(ref Matrix4x4 lhs, Vector3 rhs) {} // 0x0000000183D84330-0x0000000183D843C0
+		IVisualElementScheduledItem IVisualElementScheduler.Execute(Action<UnityEngine.UIElements.TimerState> timerUpdateEvent) => default; // 0x0000000189E86580-0x0000000189E86630
+		IVisualElementScheduledItem IVisualElementScheduler.Execute(Action updateEvent) => default; // 0x0000000189E86630-0x0000000189E866E0
+		internal void AddStyleSheetPath(string sheetPath) {} // 0x0000000189E7ECBC-0x0000000189E7EE58
+		private StyleFloat ResolveLengthValue(Length length, bool isRow) => default; // 0x0000000189E83110-0x0000000189E83208
+		private Vector3 ResolveTranslate() => default; // 0x0000000189E834E4-0x0000000189E83630
+		private Vector3 ResolveTransformOrigin() => default; // 0x0000000189E83364-0x0000000189E834E4
+		private Quaternion ResolveRotation() => default; // 0x0000000189E83208-0x0000000189E832C8
+		private Vector3 ResolveScale() => default; // 0x0000000189E832C8-0x0000000189E83364
 	}
 
 	internal interface IStylePropertyAnimationSystem // TypeDefIndex: 43293
@@ -2253,17 +2410,17 @@ namespace UnityEngine.UIElements
 	
 			// Methods
 			private void LocalInit() {}
-			public static AnimationDataSet<TTimingData, TStyleData> Create() => default; // 0x0000000189ECF2F4-0x0000000189ECF3B8
+			public static AnimationDataSet<TTimingData, TStyleData> Create() => default;
 			public bool IndexOf(VisualElement ve, StylePropertyId prop, out int index) {
 				index = default;
 				return default;
-			} // 0x0000000189ECF028-0x0000000189ECF0E8
-			public void Add(VisualElement owner, StylePropertyId prop, TTimingData timingData, TStyleData styleData) {} // 0x0000000189ECED94-0x0000000189ECEE58
+			}
+			public void Add(VisualElement owner, StylePropertyId prop, TTimingData timingData, TStyleData styleData) {}
 			public void Remove(int cancelledIndex) {}
-			public void Replace(int index, TTimingData timingData, TStyleData styleData) {} // 0x0000000189ECEBC0-0x0000000189ECECB8
-			public void RemoveAll(VisualElement ve) {} // 0x0000000189ECECB8-0x0000000189ECED94
-			public void RemoveAll() {} // 0x0000000189ECF494-0x0000000189ECF558
-			public void GetActivePropertiesForElement(VisualElement ve, List<StylePropertyId> outProperties) {} // 0x0000000189ECF1E4-0x0000000189ECF2F4
+			public void Replace(int index, TTimingData timingData, TStyleData styleData) {}
+			public void RemoveAll(VisualElement ve) {}
+			public void RemoveAll() {}
+			public void GetActivePropertiesForElement(VisualElement ve, List<StylePropertyId> outProperties) {}
 		}
 	
 		private struct ElementPropertyPair // TypeDefIndex: 43297
@@ -2277,36 +2434,36 @@ namespace UnityEngine.UIElements
 			private class EqualityComparer : IEqualityComparer<ElementPropertyPair> // TypeDefIndex: 43296
 			{
 				// Constructors
-				public EqualityComparer() {} // 0x0000000189ECF558-0x0000000189ECF654
+				public EqualityComparer() {} // 0x000000018350B670-0x000000018350B680
 	
 				// Methods
-				public bool Equals(ElementPropertyPair x, ElementPropertyPair y) => default; // 0x0000000189ECF3B8-0x0000000189ECF494
-				public int GetHashCode(ElementPropertyPair obj) => default; // 0x0000000189ECF0E8-0x0000000189ECF1E4
+				public bool Equals(ElementPropertyPair x, ElementPropertyPair y) => default; // 0x0000000189ECDED8-0x0000000189ECDEF0
+				public int GetHashCode(ElementPropertyPair obj) => default; // 0x0000000189ECDEF0-0x0000000189ECDF20
 			}
 	
 			// Constructors
 			public ElementPropertyPair(VisualElement element, StylePropertyId property) {
 				this.element = default;
 				this.property = default;
-			} // 0x0000000189ECEF34-0x0000000189ECF028
+			} // 0x0000000184274600-0x000000018427461C
 			static ElementPropertyPair() {
 				Comparer = default;
-			} // 0x0000000189ECE75C-0x0000000189ECE86C
+			} // 0x0000000189ECDE68-0x0000000189ECDED8
 		}
 	
 		private abstract class Values // TypeDefIndex: 43298
 		{
 			// Constructors
-			protected Values() {}
+			protected Values() {} // 0x000000018350B670-0x000000018350B680
 	
 			// Methods
-			public abstract void CancelAllAnimations(); // 0x0000000189ECE86C-0x0000000189ECE9E8
-			public abstract void CancelAllAnimations(VisualElement ve); // 0x0000000189ECE9E8-0x0000000189ECEA78
-			public abstract void CancelAnimation(VisualElement ve, StylePropertyId id); // 0x0000000189ECF654-0x0000000189ECF6E4
-			public abstract void UpdateAnimation(VisualElement ve, StylePropertyId id); // 0x0000000189ECEA78-0x0000000189ECEBC0
+			public abstract void CancelAllAnimations();
+			public abstract void CancelAllAnimations(VisualElement ve);
+			public abstract void CancelAnimation(VisualElement ve, StylePropertyId id);
+			public abstract void UpdateAnimation(VisualElement ve, StylePropertyId id);
 			public abstract void GetAllAnimations(VisualElement ve, List<StylePropertyId> outPropertyIds);
-			public abstract void Update(long currentTimeMs); // 0x0000000183D66B80-0x0000000183D66B90
-			protected abstract void UpdateValues(); // 0x0000000189ECF6E4-0x0000000189ECF79C
+			public abstract void Update(long currentTimeMs);
+			protected abstract void UpdateValues();
 			protected abstract void UpdateComputedStyle();
 			protected abstract void UpdateComputedStyle(int i);
 		}
@@ -2321,7 +2478,7 @@ namespace UnityEngine.UIElements
 			public AnimationDataSet<EmptyData, T> completed;
 	
 			// Properties
-			public bool isEmpty { get; } // 0x0000000189ECDEF0-0x0000000189ECDF20 
+			public bool isEmpty { get; }
 			public abstract Func<T, T, bool> SameFunc { get; }
 	
 			// Nested types
@@ -2335,8 +2492,8 @@ namespace UnityEngine.UIElements
 				private int m_ChangesCount;
 	
 				// Constructors
-				public TransitionEventsFrameState() {} // 0x0000000184274600-0x000000018427461C
-				static TransitionEventsFrameState() {} // 0x0000000189ECDE68-0x0000000189ECDED8
+				public TransitionEventsFrameState() {}
+				static TransitionEventsFrameState() {}
 	
 				// Methods
 				public static Queue<EventBase> GetPooledQueue() => default;
@@ -2375,7 +2532,7 @@ namespace UnityEngine.UIElements
 				// Constructors
 				static EmptyData() {
 					Default = default;
-				} // 0x0000000189ECDED8-0x0000000189ECDEF0
+				}
 			}
 	
 			// Constructors
@@ -2409,221 +2566,221 @@ namespace UnityEngine.UIElements
 		private class ValuesFloat : Values<float> // TypeDefIndex: 43305
 		{
 			// Properties
-			public override Func<float, float, bool> SameFunc { get; }
+			public override Func<float, float, bool> SameFunc { get; } // 0x0000000183D4EA60-0x0000000183D4EA70 
 	
 			// Constructors
-			public ValuesFloat() {}
+			public ValuesFloat() {} // 0x0000000189ED5F54-0x0000000189ED5FF0
 	
 			// Methods
-			private static bool IsSame(float a, float b) => default;
-			private static float Lerp(float a, float b, float t) => default;
-			protected sealed override void UpdateValues() {}
-			protected sealed override void UpdateComputedStyle() {}
-			protected sealed override void UpdateComputedStyle(int i) {}
+			private static bool IsSame(float a, float b) => default; // 0x00000001896C9A34-0x00000001896C9A3C
+			private static float Lerp(float a, float b, float t) => default; // 0x0000000183D86320-0x0000000183D86340
+			protected sealed override void UpdateValues() {} // 0x0000000189ED5ED8-0x0000000189ED5F54
+			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED5D90-0x0000000189ED5E44
+			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED5E44-0x0000000189ED5ED8
 		}
 	
 		private class ValuesInt : Values<int> // TypeDefIndex: 43306
 		{
 			// Properties
-			public override Func<int, int, bool> SameFunc { get; }
+			public override Func<int, int, bool> SameFunc { get; } // 0x0000000183D4EA60-0x0000000183D4EA70 
 	
 			// Constructors
-			public ValuesInt() {}
+			public ValuesInt() {} // 0x0000000189ED64E8-0x0000000189ED6584
 	
 			// Methods
-			private static bool IsSame(int a, int b) => default;
-			private static int Lerp(int a, int b, float t) => default;
-			protected sealed override void UpdateValues() {}
-			protected sealed override void UpdateComputedStyle() {}
-			protected sealed override void UpdateComputedStyle(int i) {}
+			private static bool IsSame(int a, int b) => default; // 0x0000000186505FF4-0x0000000186505FFC
+			private static int Lerp(int a, int b, float t) => default; // 0x0000000189ED62F8-0x0000000189ED6318
+			protected sealed override void UpdateValues() {} // 0x0000000189ED6460-0x0000000189ED64E8
+			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED63AC-0x0000000189ED6460
+			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED6318-0x0000000189ED63AC
 		}
 	
 		private class ValuesLength : Values<Length> // TypeDefIndex: 43307
 		{
 			// Properties
-			public override Func<Length, Length, bool> SameFunc { get; }
+			public override Func<Length, Length, bool> SameFunc { get; } // 0x0000000183D4EA60-0x0000000183D4EA70 
 	
 			// Constructors
-			public ValuesLength() {}
+			public ValuesLength() {} // 0x0000000189ED6814-0x0000000189ED68B0
 	
 			// Methods
-			private static bool IsSame(Length a, Length b) => default;
-			protected sealed override bool ConvertUnits(VisualElement owner, StylePropertyId prop, ref Length a, ref Length b) => default;
-			internal static Length Lerp(Length a, Length b, float t) => default;
-			protected sealed override void UpdateValues() {}
-			protected sealed override void UpdateComputedStyle() {}
-			protected sealed override void UpdateComputedStyle(int i) {}
+			private static bool IsSame(Length a, Length b) => default; // 0x0000000189ED65C0-0x0000000189ED65F8
+			protected sealed override bool ConvertUnits(VisualElement owner, StylePropertyId prop, ref Length a, ref Length b) => default; // 0x0000000189ED6584-0x0000000189ED65C0
+			internal static Length Lerp(Length a, Length b, float t) => default; // 0x0000000189ED65F8-0x0000000189ED6640
+			protected sealed override void UpdateValues() {} // 0x0000000189ED6788-0x0000000189ED6814
+			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED6640-0x0000000189ED66F4
+			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED66F4-0x0000000189ED6788
 		}
 	
 		private class ValuesColor : Values<UnityEngine.Color> // TypeDefIndex: 43308
 		{
 			// Properties
-			public override Func<UnityEngine.Color, UnityEngine.Color, bool> SameFunc { get; }
+			public override Func<UnityEngine.Color, UnityEngine.Color, bool> SameFunc { get; } // 0x0000000183D4EA60-0x0000000183D4EA70 
 	
 			// Constructors
-			public ValuesColor() {} // 0x0000000189ED5E44-0x0000000189ED5ED8
+			public ValuesColor() {} // 0x0000000189ED5CF4-0x0000000189ED5D90
 	
 			// Methods
-			private static bool IsSame(UnityEngine.Color c, UnityEngine.Color d) => default; // 0x0000000183D4EA60-0x0000000183D4EA70
-			private static UnityEngine.Color Lerp(UnityEngine.Color a, UnityEngine.Color b, float t) => default; // 0x00000001896C9A34-0x00000001896C9A3C
-			protected sealed override void UpdateValues() {} // 0x0000000183D86320-0x0000000183D86340
-			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED5ED8-0x0000000189ED5F54
-			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED5D90-0x0000000189ED5E44
+			private static bool IsSame(UnityEngine.Color c, UnityEngine.Color d) => default; // 0x0000000189ED5A30-0x0000000189ED5AA4
+			private static UnityEngine.Color Lerp(UnityEngine.Color a, UnityEngine.Color b, float t) => default; // 0x0000000189ED5AA4-0x0000000189ED5AE0
+			protected sealed override void UpdateValues() {} // 0x0000000189ED5C44-0x0000000189ED5CF4
+			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED5B80-0x0000000189ED5C44
+			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED5AE0-0x0000000189ED5B80
 		}
 	
 		private abstract class ValuesDiscrete<T> : Values<T> // TypeDefIndex: 43309
 		{
 			// Properties
-			public override Func<T, T, bool> SameFunc { get; } // 0x0000000189ED5F54-0x0000000189ED5FF0 
+			public override Func<T, T, bool> SameFunc { get; }
 	
 			// Constructors
-			protected ValuesDiscrete() {} // 0x0000000189ED6460-0x0000000189ED64E8
+			protected ValuesDiscrete() {}
 	
 			// Methods
 			private static bool IsSame(T a, T b) => default;
 			private static T Lerp(T a, T b, float t) => default;
-			protected sealed override void UpdateValues() {} // 0x0000000189ED62F8-0x0000000189ED6318
+			protected sealed override void UpdateValues() {}
 		}
 	
 		private class ValuesBackground : ValuesDiscrete<Background> // TypeDefIndex: 43310
 		{
 			// Constructors
-			public ValuesBackground() {} // 0x0000000189ED64E8-0x0000000189ED6584
+			public ValuesBackground() {} // 0x0000000189ED59F4-0x0000000189ED5A30
 	
 			// Methods
-			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED63AC-0x0000000189ED6460
-			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED6318-0x0000000189ED63AC
+			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED5924-0x0000000189ED59F4
+			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED5878-0x0000000189ED5924
 		}
 	
 		private class ValuesFontDefinition : ValuesDiscrete<FontDefinition> // TypeDefIndex: 43311
 		{
 			// Constructors
-			public ValuesFontDefinition() {} // 0x0000000189ED6584-0x0000000189ED65C0
+			public ValuesFontDefinition() {} // 0x0000000189ED6154-0x0000000189ED6190
 	
 			// Methods
-			protected sealed override void UpdateComputedStyle() {} // 0x0000000183D4EA60-0x0000000183D4EA70
-			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED65C0-0x0000000189ED65F8
+			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED6090-0x0000000189ED6154
+			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED5FF0-0x0000000189ED6090
 		}
 	
 		private class ValuesFont : ValuesDiscrete<Font> // TypeDefIndex: 43312
 		{
 			// Constructors
-			public ValuesFont() {} // 0x0000000189ED6640-0x0000000189ED66F4
+			public ValuesFont() {} // 0x0000000189ED62BC-0x0000000189ED62F8
 	
 			// Methods
-			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED65F8-0x0000000189ED6640
-			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED6788-0x0000000189ED6814
+			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED6214-0x0000000189ED62BC
+			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED6190-0x0000000189ED6214
 		}
 	
 		private class ValuesTextShadow : Values<TextShadow> // TypeDefIndex: 43313
 		{
 			// Properties
-			public override Func<TextShadow, TextShadow, bool> SameFunc { get; } // 0x0000000189ED66F4-0x0000000189ED6788 
+			public override Func<TextShadow, TextShadow, bool> SameFunc { get; } // 0x0000000183D4EA60-0x0000000183D4EA70 
 	
 			// Constructors
-			public ValuesTextShadow() {} // 0x0000000189ED5B80-0x0000000189ED5C44
+			public ValuesTextShadow() {} // 0x0000000189ED732C-0x0000000189ED73C8
 	
 			// Methods
-			private static bool IsSame(TextShadow a, TextShadow b) => default; // 0x0000000189ED6814-0x0000000189ED68B0
-			private static TextShadow Lerp(TextShadow a, TextShadow b, float t) => default; // 0x0000000183D4EA60-0x0000000183D4EA70
-			protected sealed override void UpdateValues() {} // 0x0000000189ED5A30-0x0000000189ED5AA4
-			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED5AA4-0x0000000189ED5AE0
-			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED5C44-0x0000000189ED5CF4
+			private static bool IsSame(TextShadow a, TextShadow b) => default; // 0x0000000189ED6FD8-0x0000000189ED7028
+			private static TextShadow Lerp(TextShadow a, TextShadow b, float t) => default; // 0x0000000189ED7028-0x0000000189ED70A8
+			protected sealed override void UpdateValues() {} // 0x0000000189ED723C-0x0000000189ED732C
+			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED7160-0x0000000189ED723C
+			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED70A8-0x0000000189ED7160
 		}
 	
 		private class ValuesScale : Values<Scale> // TypeDefIndex: 43314
 		{
 			// Properties
-			public override Func<Scale, Scale, bool> SameFunc { get; } // 0x0000000189ED5AE0-0x0000000189ED5B80 
+			public override Func<Scale, Scale, bool> SameFunc { get; } // 0x0000000183D4EA60-0x0000000183D4EA70 
 	
 			// Constructors
-			public ValuesScale() {}
+			public ValuesScale() {} // 0x0000000189ED6F3C-0x0000000189ED6FD8
 	
 			// Methods
-			private static bool IsSame(Scale a, Scale b) => default; // 0x0000000189ED5CF4-0x0000000189ED5D90
-			protected sealed override void UpdateComputedStyle() {}
-			protected sealed override void UpdateComputedStyle(int i) {}
-			private static Scale Lerp(Scale a, Scale b, float t) => default;
-			protected sealed override void UpdateValues() {}
+			private static bool IsSame(Scale a, Scale b) => default; // 0x0000000189ED6C88-0x0000000189ED6CB4
+			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED6DC8-0x0000000189ED6E8C
+			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED6D28-0x0000000189ED6DC8
+			private static Scale Lerp(Scale a, Scale b, float t) => default; // 0x0000000189ED6CB4-0x0000000189ED6D28
+			protected sealed override void UpdateValues() {} // 0x0000000189ED6E8C-0x0000000189ED6F3C
 		}
 	
 		private class ValuesRotate : Values<Rotate> // TypeDefIndex: 43315
 		{
 			// Properties
-			public override Func<Rotate, Rotate, bool> SameFunc { get; } // 0x0000000189ED5924-0x0000000189ED59F4 
+			public override Func<Rotate, Rotate, bool> SameFunc { get; } // 0x0000000183D4EA60-0x0000000183D4EA70 
 	
 			// Constructors
-			public ValuesRotate() {} // 0x0000000189ED6214-0x0000000189ED62BC
+			public ValuesRotate() {} // 0x0000000189ED6BEC-0x0000000189ED6C88
 	
 			// Methods
-			private static bool IsSame(Rotate a, Rotate b) => default; // 0x0000000189ED5878-0x0000000189ED5924
-			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED59F4-0x0000000189ED5A30
-			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED6090-0x0000000189ED6154
-			private static Rotate Lerp(Rotate a, Rotate b, float t) => default; // 0x0000000189ED5FF0-0x0000000189ED6090
-			protected sealed override void UpdateValues() {} // 0x0000000189ED6154-0x0000000189ED6190
+			private static bool IsSame(Rotate a, Rotate b) => default; // 0x0000000189ED68B0-0x0000000189ED68F4
+			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED6A44-0x0000000189ED6B14
+			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED6998-0x0000000189ED6A44
+			private static Rotate Lerp(Rotate a, Rotate b, float t) => default; // 0x0000000189ED68F4-0x0000000189ED6998
+			protected sealed override void UpdateValues() {} // 0x0000000189ED6B14-0x0000000189ED6BEC
 		}
 	
 		private class ValuesTranslate : Values<Translate> // TypeDefIndex: 43316
 		{
 			// Properties
-			public override Func<Translate, Translate, bool> SameFunc { get; } // 0x0000000189ED6190-0x0000000189ED6214 
+			public override Func<Translate, Translate, bool> SameFunc { get; } // 0x0000000183D4EA60-0x0000000183D4EA70 
 	
 			// Constructors
-			public ValuesTranslate() {} // 0x0000000189ED70A8-0x0000000189ED7160
+			public ValuesTranslate() {} // 0x0000000189ED7AEC-0x0000000189ED7B88
 	
 			// Methods
-			private static bool IsSame(Translate a, Translate b) => default; // 0x0000000189ED62BC-0x0000000189ED62F8
-			protected sealed override bool ConvertUnits(VisualElement owner, StylePropertyId prop, ref Translate a, ref Translate b) => default; // 0x0000000183D4EA60-0x0000000183D4EA70
-			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED6FD8-0x0000000189ED7028
-			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED7028-0x0000000189ED70A8
-			private static Translate Lerp(Translate a, Translate b, float t) => default; // 0x0000000189ED723C-0x0000000189ED732C
-			protected sealed override void UpdateValues() {} // 0x0000000189ED7160-0x0000000189ED723C
+			private static bool IsSame(Translate a, Translate b) => default; // 0x0000000189ED77BC-0x0000000189ED7800
+			protected sealed override bool ConvertUnits(VisualElement owner, StylePropertyId prop, ref Translate a, ref Translate b) => default; // 0x0000000189ED7790-0x0000000189ED77BC
+			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED7944-0x0000000189ED7A14
+			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED7898-0x0000000189ED7944
+			private static Translate Lerp(Translate a, Translate b, float t) => default; // 0x0000000189ED7800-0x0000000189ED7898
+			protected sealed override void UpdateValues() {} // 0x0000000189ED7A14-0x0000000189ED7AEC
 		}
 	
 		private class ValuesTransformOrigin : Values<TransformOrigin> // TypeDefIndex: 43317
 		{
 			// Properties
-			public override Func<TransformOrigin, TransformOrigin, bool> SameFunc { get; } // 0x0000000189ED732C-0x0000000189ED73C8 
+			public override Func<TransformOrigin, TransformOrigin, bool> SameFunc { get; } // 0x0000000183D4EA60-0x0000000183D4EA70 
 	
 			// Constructors
-			public ValuesTransformOrigin() {} // 0x0000000189ED6F3C-0x0000000189ED6FD8
+			public ValuesTransformOrigin() {} // 0x0000000189ED76F4-0x0000000189ED7790
 	
 			// Methods
-			private static bool IsSame(TransformOrigin a, TransformOrigin b) => default; // 0x0000000183D4EA60-0x0000000183D4EA70
-			protected sealed override bool ConvertUnits(VisualElement owner, StylePropertyId prop, ref TransformOrigin a, ref TransformOrigin b) => default; // 0x0000000189ED6C88-0x0000000189ED6CB4
-			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED6DC8-0x0000000189ED6E8C
-			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED6D28-0x0000000189ED6DC8
-			private static TransformOrigin Lerp(TransformOrigin a, TransformOrigin b, float t) => default; // 0x0000000189ED6CB4-0x0000000189ED6D28
-			protected sealed override void UpdateValues() {} // 0x0000000189ED6E8C-0x0000000189ED6F3C
+			private static bool IsSame(TransformOrigin a, TransformOrigin b) => default; // 0x0000000189ED73F4-0x0000000189ED7430
+			protected sealed override bool ConvertUnits(VisualElement owner, StylePropertyId prop, ref TransformOrigin a, ref TransformOrigin b) => default; // 0x0000000189ED73C8-0x0000000189ED73F4
+			protected sealed override void UpdateComputedStyle() {} // 0x0000000189ED7564-0x0000000189ED7630
+			protected sealed override void UpdateComputedStyle(int i) {} // 0x0000000189ED74BC-0x0000000189ED7564
+			private static TransformOrigin Lerp(TransformOrigin a, TransformOrigin b, float t) => default; // 0x0000000189ED7430-0x0000000189ED74BC
+			protected sealed override void UpdateValues() {} // 0x0000000189ED7630-0x0000000189ED76F4
 		}
 	
 		// Constructors
-		public StylePropertyAnimationSystem() {} // 0x0000000183D4EA60-0x0000000183D4EA70
+		public StylePropertyAnimationSystem() {} // 0x0000000189ECF79C-0x0000000189ECF888
 	
 		// Methods
 		private T GetOrCreate<T>(ref ref T values)
-			where T : new() => default; // 0x0000000189ED68B0-0x0000000189ED68F4
-		private bool StartTransition<T>(VisualElement owner, StylePropertyId prop, T startValue, T endValue, int durationMs, int delayMs, Func<float, float> easingCurve, Values<T> values) => default; // 0x0000000189ED6A44-0x0000000189ED6B14
-		public bool StartTransition(VisualElement owner, StylePropertyId prop, float startValue, float endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ED6998-0x0000000189ED6A44
-		public bool StartTransition(VisualElement owner, StylePropertyId prop, int startValue, int endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ED68F4-0x0000000189ED6998
-		public bool StartTransition(VisualElement owner, StylePropertyId prop, Length startValue, Length endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ED6B14-0x0000000189ED6BEC
-		public bool StartTransition(VisualElement owner, StylePropertyId prop, UnityEngine.Color startValue, UnityEngine.Color endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ED6BEC-0x0000000189ED6C88
-		public bool StartTransition(VisualElement owner, StylePropertyId prop, Background startValue, Background endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000183D4EA60-0x0000000183D4EA70
-		public bool StartTransition(VisualElement owner, StylePropertyId prop, FontDefinition startValue, FontDefinition endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ED77BC-0x0000000189ED7800
-		public bool StartTransition(VisualElement owner, StylePropertyId prop, Font startValue, Font endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ED7790-0x0000000189ED77BC
-		public bool StartTransition(VisualElement owner, StylePropertyId prop, TextShadow startValue, TextShadow endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ED7944-0x0000000189ED7A14
-		public bool StartTransition(VisualElement owner, StylePropertyId prop, Scale startValue, Scale endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ED7898-0x0000000189ED7944
-		public bool StartTransition(VisualElement owner, StylePropertyId prop, Rotate startValue, Rotate endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ED7800-0x0000000189ED7898
-		public bool StartTransition(VisualElement owner, StylePropertyId prop, Translate startValue, Translate endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ED7A14-0x0000000189ED7AEC
-		public bool StartTransition(VisualElement owner, StylePropertyId prop, TransformOrigin startValue, TransformOrigin endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ED7AEC-0x0000000189ED7B88
-		public void CancelAllAnimations() {} // 0x0000000183D4EA60-0x0000000183D4EA70
-		public void CancelAllAnimations(VisualElement owner) {} // 0x0000000189ED73F4-0x0000000189ED7430
-		public void CancelAnimation(VisualElement owner, StylePropertyId id) {} // 0x0000000189ED73C8-0x0000000189ED73F4
-		public void UpdateAnimation(VisualElement owner, StylePropertyId id) {} // 0x0000000189ED7564-0x0000000189ED7630
-		public void GetAllAnimations(VisualElement owner, List<StylePropertyId> propertyIds) {} // 0x0000000189ED74BC-0x0000000189ED7564
-		private void UpdateTracking<T>(Values<T> values) {} // 0x0000000189ED7430-0x0000000189ED74BC
-		private long CurrentTimeMs() => default; // 0x0000000189ED7630-0x0000000189ED76F4
-		public void Update() {} // 0x0000000189ED76F4-0x0000000189ED7790
+			where T : new() => default;
+		private bool StartTransition<T>(VisualElement owner, StylePropertyId prop, T startValue, T endValue, int durationMs, int delayMs, Func<float, float> easingCurve, Values<T> values) => default;
+		public bool StartTransition(VisualElement owner, StylePropertyId prop, float startValue, float endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ECF2F4-0x0000000189ECF3B8
+		public bool StartTransition(VisualElement owner, StylePropertyId prop, int startValue, int endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ECF028-0x0000000189ECF0E8
+		public bool StartTransition(VisualElement owner, StylePropertyId prop, Length startValue, Length endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ECED94-0x0000000189ECEE58
+		public bool StartTransition(VisualElement owner, StylePropertyId prop, UnityEngine.Color startValue, UnityEngine.Color endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ECEE58-0x0000000189ECEF34
+		public bool StartTransition(VisualElement owner, StylePropertyId prop, Background startValue, Background endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ECEBC0-0x0000000189ECECB8
+		public bool StartTransition(VisualElement owner, StylePropertyId prop, FontDefinition startValue, FontDefinition endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ECECB8-0x0000000189ECED94
+		public bool StartTransition(VisualElement owner, StylePropertyId prop, Font startValue, Font endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ECF494-0x0000000189ECF558
+		public bool StartTransition(VisualElement owner, StylePropertyId prop, TextShadow startValue, TextShadow endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ECF1E4-0x0000000189ECF2F4
+		public bool StartTransition(VisualElement owner, StylePropertyId prop, Scale startValue, Scale endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ECF3B8-0x0000000189ECF494
+		public bool StartTransition(VisualElement owner, StylePropertyId prop, Rotate startValue, Rotate endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ECF0E8-0x0000000189ECF1E4
+		public bool StartTransition(VisualElement owner, StylePropertyId prop, Translate startValue, Translate endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ECF558-0x0000000189ECF654
+		public bool StartTransition(VisualElement owner, StylePropertyId prop, TransformOrigin startValue, TransformOrigin endValue, int durationMs, int delayMs, [JetBrains.Annotations.NotNull] Func<float, float> easingCurve) => default; // 0x0000000189ECEF34-0x0000000189ECF028
+		public void CancelAllAnimations() {} // 0x0000000189ECE75C-0x0000000189ECE86C
+		public void CancelAllAnimations(VisualElement owner) {} // 0x0000000189ECE86C-0x0000000189ECE9E8
+		public void CancelAnimation(VisualElement owner, StylePropertyId id) {} // 0x0000000189ECE9E8-0x0000000189ECEA78
+		public void UpdateAnimation(VisualElement owner, StylePropertyId id) {} // 0x0000000189ECF654-0x0000000189ECF6E4
+		public void GetAllAnimations(VisualElement owner, List<StylePropertyId> propertyIds) {} // 0x0000000189ECEA78-0x0000000189ECEBC0
+		private void UpdateTracking<T>(Values<T> values) {}
+		private long CurrentTimeMs() => default; // 0x0000000183D66B80-0x0000000183D66B90
+		public void Update() {} // 0x0000000189ECF6E4-0x0000000189ECF79C
 	}
 
 	public struct StylePropertyName : IEquatable<StylePropertyName> // TypeDefIndex: 43319
@@ -2654,19 +2811,19 @@ namespace UnityEngine.UIElements
 		private VisualTreeAsset m_TemplateSource; // 0x3E0
 	
 		// Properties
-		public string templateId { get; private set; } // 0x0000000183D88DF0-0x0000000183D88E00 0x00000001858B3D30-0x00000001858B3D44
-		internal VisualTreeAsset templateSource { set {} } // 0x0000000189ED5168-0x0000000189ED5194
-		public override VisualElement contentContainer { get => default; } // 0x0000000189ED5208-0x0000000189ED5548 
+		public string templateId { get; private set; } // 0x0000000183D55EC0-0x0000000183D55ED0 0x00000001858B40A0-0x00000001858B40B4
+		internal VisualTreeAsset templateSource { set {} } // 0x00000001858B4258-0x00000001858B426C
+		public override VisualElement contentContainer { get => default; } // 0x0000000183D88DF0-0x0000000183D88E00 
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<TemplateContainer, UxmlTraits> // TypeDefIndex: 43320
 		{
 			// Properties
-			public override string uxmlName { get => default; } // 0x0000000183D55EC0-0x0000000183D55ED0 
-			public override string uxmlQualifiedName { get => default; } // 0x00000001858B40A0-0x00000001858B40B4 
+			public override string uxmlName { get => default; } // 0x0000000189ED5168-0x0000000189ED5194 
+			public override string uxmlQualifiedName { get => default; } // 0x0000000189ED5194-0x0000000189ED5208 
 	
 			// Constructors
-			public UxmlFactory() {} // 0x00000001858B4258-0x00000001858B426C
+			public UxmlFactory() {} // 0x0000000189ED512C-0x0000000189ED5168
 		}
 	
 		public class UxmlTraits : BindableElement.UxmlTraits // TypeDefIndex: 43321
@@ -2675,18 +2832,18 @@ namespace UnityEngine.UIElements
 			private UxmlStringAttributeDescription m_Template; // 0x78
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189ECFAB4-0x0000000189ECFAFC
+			public UxmlTraits() {} // 0x0000000189ED57E0-0x0000000189ED5878
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189ECFAFC-0x0000000189ECFB08
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189ED5208-0x0000000189ED5548
 		}
 	
 		// Constructors
-		public TemplateContainer() {} // 0x0000000189ED5194-0x0000000189ED5208
-		public TemplateContainer(string templateId) {} // 0x0000000189ED512C-0x0000000189ED5168
+		public TemplateContainer() {} // 0x0000000189ECFAFC-0x0000000189ECFB08
+		public TemplateContainer(string templateId) {} // 0x0000000189ECFAB4-0x0000000189ECFAFC
 	
 		// Methods
-		internal void SetContentContainer(VisualElement content) {} // 0x0000000189ED57E0-0x0000000189ED5878
+		internal void SetContentContainer(VisualElement content) {} // 0x00000001858B3D30-0x00000001858B3D44
 	}
 
 	internal interface ITextElement // TypeDefIndex: 43323
@@ -2712,18 +2869,18 @@ namespace UnityEngine.UIElements
 		private int m_PreviousTextParamsHashCode; // 0x480
 	
 		// Properties
-		internal ITextHandle textHandle { get => default; set {} } // 0x0000000189ED0238-0x0000000189ED0240 0x0000000189ED09C8-0x0000000189ED0A04
-		public virtual string text { get => default; set {} } // 0x0000000189ED0A34-0x0000000189ED0A50 0x0000000183D88E00-0x0000000183D88E10
-		public bool enableRichText { get => default; set {} } // 0x0000000189ED0A04-0x0000000189ED0A34 0x0000000183D88E20-0x0000000183D88E30
-		public bool displayTooltipWhenElided { get => default; set {} } // 0x0000000183D88E40-0x0000000183D88E50 0x0000000189ED00B8-0x0000000189ED0238
-		public bool isElided { get; private set; } // 0x0000000189ECFB6C-0x0000000189ECFF3C 0x0000000189ED04D8-0x0000000189ED0534
-		string UnityEngine.UIElements.INotifyValueChanged<System.String>.value { get => default; set {} } // 0x0000000189ED0748-0x0000000189ED081C 0x0000000189ED50F0-0x0000000189ED512C
+		internal ITextHandle textHandle { get => default; set {} } // 0x0000000183D88E30-0x0000000183D88E40 0x00000001858B40A0-0x00000001858B40B4
+		public virtual string text { get => default; set {} } // 0x0000000189ED09C8-0x0000000189ED0A04 0x0000000189ED0A50-0x0000000189ED0AA0
+		public bool enableRichText { get => default; set {} } // 0x0000000183D88E10-0x0000000183D88E20 0x0000000189ED0A34-0x0000000189ED0A50
+		public bool displayTooltipWhenElided { get => default; set {} } // 0x0000000183D88E00-0x0000000183D88E10 0x0000000189ED0A04-0x0000000189ED0A34
+		public bool isElided { get; private set; } // 0x0000000183D88E20-0x0000000183D88E30 0x0000000183D88E40-0x0000000183D88E50
+		string UnityEngine.UIElements.INotifyValueChanged<System.String>.value { get => default; set {} } // 0x0000000189ED033C-0x0000000189ED0384 0x0000000189ED0384-0x0000000189ED04D8
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<TextElement, UxmlTraits> // TypeDefIndex: 43324
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189ED081C-0x0000000189ED09C8
+			public UxmlFactory() {} // 0x0000000189ED50F0-0x0000000189ED512C
 		}
 	
 		public class UxmlTraits : BindableElement.UxmlTraits // TypeDefIndex: 43325
@@ -2734,28 +2891,28 @@ namespace UnityEngine.UIElements
 			private UxmlBoolAttributeDescription m_DisplayTooltipWhenElided; // 0x88
 	
 			// Constructors
-			public UxmlTraits() {} // 0x00000001858B40A0-0x00000001858B40B4
+			public UxmlTraits() {} // 0x0000000189ED568C-0x0000000189ED57E0
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000183D88E30-0x0000000183D88E40
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189ED5548-0x0000000189ED568C
 		}
 	
 		// Constructors
-		public TextElement() {} // 0x0000000189ECFF3C-0x0000000189ED0080
-		static TextElement() {} // 0x0000000189ED568C-0x0000000189ED57E0
+		public TextElement() {} // 0x0000000189ED081C-0x0000000189ED09C8
+		static TextElement() {} // 0x0000000189ED0748-0x0000000189ED081C
 	
 		// Methods
-		public override void HandleEvent(EventBase evt) {} // 0x0000000189ED0A50-0x0000000189ED0AA0
-		private void OnGeometryChanged(GeometryChangedEvent e) {} // 0x0000000183D88E10-0x0000000183D88E20
-		private void OnGenerateVisualContent(MeshGenerationContext mgc) {} // 0x0000000189ED0534-0x0000000189ED0748
-		internal string ElideText(string drawText, string ellipsisText, float width, TextOverflowPosition textOverflowPosition) => default; // 0x0000000189ED0240-0x0000000189ED0290
-		private void UpdateTooltip() {} // 0x0000000189ED0290-0x0000000189ED02D0
-		private void UpdateVisibleText() {} // 0x0000000189ED0080-0x0000000189ED00B8
-		private bool ShouldElide() => default; // 0x0000000189ECFB08-0x0000000189ECFB6C
-		private bool TextLibraryCanElide() => default; // 0x0000000189ED033C-0x0000000189ED0384
-		public Vector2 MeasureTextSize(string textToMeasure, float width, MeasureMode widthMode, float height, MeasureMode heightMode) => default; // 0x0000000189ED0384-0x0000000189ED04D8
-		protected internal override Vector2 DoMeasure(float desiredWidth, MeasureMode widthMode, float desiredHeight, MeasureMode heightMode) => default; // 0x0000000189ED02D0-0x0000000189ED033C
-		void INotifyValueChanged<string>.SetValueWithoutNotify(string newValue) {} // 0x0000000189ED5548-0x0000000189ED568C
+		public override void HandleEvent(EventBase evt) {} // 0x0000000189ECFF3C-0x0000000189ED0080
+		private void OnGeometryChanged(GeometryChangedEvent e) {} // 0x0000000189ED0238-0x0000000189ED0240
+		private void OnGenerateVisualContent(MeshGenerationContext mgc) {} // 0x0000000189ED00B8-0x0000000189ED0238
+		internal string ElideText(string drawText, string ellipsisText, float width, TextOverflowPosition textOverflowPosition) => default; // 0x0000000189ECFB6C-0x0000000189ECFF3C
+		private void UpdateTooltip() {} // 0x0000000189ED04D8-0x0000000189ED0534
+		private void UpdateVisibleText() {} // 0x0000000189ED0534-0x0000000189ED0748
+		private bool ShouldElide() => default; // 0x0000000189ED0240-0x0000000189ED0290
+		private bool TextLibraryCanElide() => default; // 0x0000000189ED0290-0x0000000189ED02D0
+		public Vector2 MeasureTextSize(string textToMeasure, float width, MeasureMode widthMode, float height, MeasureMode heightMode) => default; // 0x0000000189ED0080-0x0000000189ED00B8
+		protected internal override Vector2 DoMeasure(float desiredWidth, MeasureMode widthMode, float desiredHeight, MeasureMode heightMode) => default; // 0x0000000189ECFB08-0x0000000189ECFB6C
+		void INotifyValueChanged<string>.SetValueWithoutNotify(string newValue) {} // 0x0000000189ED02D0-0x0000000189ED033C
 	}
 
 	public struct TextShadow : IEquatable<TextShadow> // TypeDefIndex: 43327
@@ -2798,50 +2955,50 @@ namespace UnityEngine.UIElements
 		private static List<PanelSettings> s_PotentiallyEmptyPanelSettings; // 0x48
 	
 		// Properties
-		internal static UnityEngine.Object activeEventSystem { get; private set; } // 0x0000000189ED180C-0x0000000189ED18C0 0x0000000189ED1CF8-0x0000000189ED1E98
-		internal static bool useDefaultEventSystem { get; } // 0x0000000189ED1B4C-0x0000000189ED1BEC 
-		internal static DefaultEventSystem defaultEventSystem { get; } // 0x00000001836FE8C0-0x00000001836FE960 
+		internal static UnityEngine.Object activeEventSystem { get; private set; } // 0x0000000189ED264C-0x0000000189ED269C 0x0000000189ED2874-0x0000000189ED28D4
+		internal static bool useDefaultEventSystem { get; } // 0x0000000189ED2750-0x0000000189ED27B0 
+		internal static DefaultEventSystem defaultEventSystem { get; } // 0x0000000189ED269C-0x0000000189ED2750 
 	
 		// Events
 		public static event Action<BaseRuntimePanel> onCreatePanel;
 	
 		// Nested types
-		public delegate BaseRuntimePanel CreateRuntimePanelDelegate(ScriptableObject ownerObject); // TypeDefIndex: 43329; 0x0000000189ED27B0-0x0000000189ED2874
+		public delegate BaseRuntimePanel CreateRuntimePanelDelegate(ScriptableObject ownerObject); // TypeDefIndex: 43329; 0x000000018102B410-0x000000018102B420
 	
 		// Constructors
-		static UIElementsRuntimeUtility() {} // 0x0000000189ED218C-0x0000000189ED22B8
+		static UIElementsRuntimeUtility() {} // 0x0000000182DF5C80-0x0000000182DF60F0
 	
 		// Methods
-		public static EventBase CreateEvent(UnityEngine.Event systemEvent) => default; // 0x0000000189ED14C4-0x0000000189ED1518
-		public static BaseRuntimePanel FindOrCreateRuntimePanel(ScriptableObject ownerObject, CreateRuntimePanelDelegate createDelegate) => default; // 0x0000000189ED1E98-0x0000000189ED2000
-		public static void DisposeRuntimePanel(ScriptableObject ownerObject) {} // 0x0000000189ED162C-0x0000000189ED1688
-		private static void RegisterCachedPanelInternal(int instanceID, IPanel panel) {} // 0x0000000189ED264C-0x0000000189ED269C
-		private static void RemoveCachedPanelInternal(int instanceID) {} // 0x0000000189ED2874-0x0000000189ED28D4
-		public static void RepaintOffscreenPanels() {} // 0x0000000189ED2750-0x0000000189ED27B0
-		public static void RepaintOverlayPanel(BaseRuntimePanel panel) {} // 0x00000001836FEBA0-0x00000001836FED50
-		internal static void BeginRenderOverlays(int displayIndex) {} // 0x0000000189ED23CC-0x0000000189ED2454
-		internal static void RenderOverlaysBeforePriority(int displayIndex, float maxPriority) {} // 0x0000000189ED269C-0x0000000189ED2750
-		internal static void EndRenderOverlays(int displayIndex) {} // 0x0000000189ED24AC-0x0000000189ED264C
-		public static void RegisterEventSystem(UnityEngine.Object eventSystem) {} // 0x0000000189ED2454-0x0000000189ED24AC
-		public static void UnregisterEventSystem(UnityEngine.Object eventSystem) {} // 0x0000000189ED237C-0x0000000189ED23CC
-		public static void UpdateRuntimePanels() {} // 0x00000001836FED50-0x00000001836FEF50
-		internal static void MarkPotentiallyEmpty(PanelSettings settings) {} // 0x0000000189ED18C0-0x0000000189ED1930
-		internal static void RemoveUnusedPanels() {} // 0x0000000189ED1930-0x0000000189ED1A7C
-		public static void RegisterPlayerloopCallback() {} // 0x0000000189ED22B8-0x0000000189ED237C
-		public static void UnregisterPlayerloopCallback() {} // 0x0000000183D88E50-0x0000000183D88E70
-		internal static void SetPanelOrderingDirty() {} // 0x0000000186E93748-0x0000000186E9386C
-		internal static List<UnityEngine.UIElements.Panel> GetSortedPlayerPanels() => default; // 0x000000018102B410-0x000000018102B420
-		private static void SortPanels() {} // 0x0000000183D14F90-0x0000000183D14FF0
+		public static EventBase CreateEvent(UnityEngine.Event systemEvent) => default; // 0x0000000189ED1518-0x0000000189ED157C
+		public static BaseRuntimePanel FindOrCreateRuntimePanel(ScriptableObject ownerObject, CreateRuntimePanelDelegate createDelegate) => default; // 0x0000000189ED1688-0x0000000189ED180C
+		public static void DisposeRuntimePanel(ScriptableObject ownerObject) {} // 0x0000000189ED157C-0x0000000189ED162C
+		private static void RegisterCachedPanelInternal(int instanceID, IPanel panel) {} // 0x0000000189ED1A7C-0x0000000189ED1B4C
+		private static void RemoveCachedPanelInternal(int instanceID) {} // 0x0000000189ED1BEC-0x0000000189ED1CF8
+		public static void RepaintOffscreenPanels() {} // 0x0000000189ED2000-0x0000000189ED218C
+		public static void RepaintOverlayPanel(BaseRuntimePanel panel) {} // 0x0000000189ED218C-0x0000000189ED22B8
+		internal static void BeginRenderOverlays(int displayIndex) {} // 0x0000000189ED14C4-0x0000000189ED1518
+		internal static void RenderOverlaysBeforePriority(int displayIndex, float maxPriority) {} // 0x0000000189ED1E98-0x0000000189ED2000
+		internal static void EndRenderOverlays(int displayIndex) {} // 0x0000000189ED162C-0x0000000189ED1688
+		public static void RegisterEventSystem(UnityEngine.Object eventSystem) {} // 0x00000001836FEBA0-0x00000001836FED50
+		public static void UnregisterEventSystem(UnityEngine.Object eventSystem) {} // 0x0000000189ED23CC-0x0000000189ED2454
+		public static void UpdateRuntimePanels() {} // 0x0000000189ED24AC-0x0000000189ED264C
+		internal static void MarkPotentiallyEmpty(PanelSettings settings) {} // 0x0000000189ED180C-0x0000000189ED18C0
+		internal static void RemoveUnusedPanels() {} // 0x0000000189ED1CF8-0x0000000189ED1E98
+		public static void RegisterPlayerloopCallback() {} // 0x0000000189ED1B4C-0x0000000189ED1BEC
+		public static void UnregisterPlayerloopCallback() {} // 0x0000000189ED2454-0x0000000189ED24AC
+		internal static void SetPanelOrderingDirty() {} // 0x0000000189ED237C-0x0000000189ED23CC
+		internal static List<UnityEngine.UIElements.Panel> GetSortedPlayerPanels() => default; // 0x00000001836FE8C0-0x00000001836FE960
+		private static void SortPanels() {} // 0x00000001836FED50-0x00000001836FEF50
 		internal static Vector2 MultiDisplayBottomLeftToPanelPosition(Vector2 position, out int? targetDisplay) {
 			targetDisplay = default;
 			return default;
-		} // 0x000000018350B670-0x000000018350B680
+		} // 0x0000000189ED18C0-0x0000000189ED1930
 		internal static Vector2 MultiDisplayToLocalScreenPosition(Vector2 position, out int? targetDisplay) {
 			targetDisplay = default;
 			return default;
-		} // 0x000000018350B670-0x000000018350B680
-		internal static Vector2 ScreenBottomLeftToPanelPosition(Vector2 position, int targetDisplay) => default; // 0x0000000189ED1310-0x0000000189ED1364
-		internal static Vector2 ScreenBottomLeftToPanelDelta(Vector2 delta) => default; // 0x0000000189ED1094-0x0000000189ED116C
+		} // 0x0000000189ED1930-0x0000000189ED1A7C
+		internal static Vector2 ScreenBottomLeftToPanelPosition(Vector2 position, int targetDisplay) => default; // 0x0000000189ED22B8-0x0000000189ED237C
+		internal static Vector2 ScreenBottomLeftToPanelDelta(Vector2 delta) => default; // 0x0000000183D88E50-0x0000000183D88E70
 	}
 
 	internal interface IUIElementsUtility // TypeDefIndex: 43332
@@ -2861,16 +3018,16 @@ namespace UnityEngine.UIElements
 		private static List<IUIElementsUtility> s_Utilities; // 0x00
 	
 		// Constructors
-		static UIEventRegistration() {} // 0x0000000183D1A870-0x0000000183D1A8D0
+		static UIEventRegistration() {} // 0x0000000183805060-0x0000000183805670
 	
 		// Methods
-		internal static void RegisterUIElementSystem(IUIElementsUtility utility) {} // 0x000000018350B670-0x000000018350B680
-		private static void TakeCapture() {} // 0x0000000189ED116C-0x0000000189ED11AC
-		private static void ReleaseCapture() {} // 0x0000000189ED11AC-0x0000000189ED11EC
-		private static bool EndContainerGUIFromException(Exception exception) => default; // 0x0000000189ED11EC-0x0000000189ED1244
-		private static bool ProcessEvent(int instanceID, IntPtr nativeEventPtr) => default; // 0x0000000189ED1244-0x0000000189ED1284
-		private static void CleanupRoots() {} // 0x0000000189ED1284-0x0000000189ED12D0
-		internal static void MakeCurrentIMGUIContainerDirty() {} // 0x0000000189ED12D0-0x0000000189ED1310
+		internal static void RegisterUIElementSystem(IUIElementsUtility utility) {} // 0x0000000183CAA6F0-0x0000000183CAA770
+		private static void TakeCapture() {} // 0x0000000189ED4248-0x0000000189ED43C8
+		private static void ReleaseCapture() {} // 0x0000000189ED40D4-0x0000000189ED4248
+		private static bool EndContainerGUIFromException(Exception exception) => default; // 0x0000000189ED3BC0-0x0000000189ED3D74
+		private static bool ProcessEvent(int instanceID, IntPtr nativeEventPtr) => default; // 0x0000000189ED3EF4-0x0000000189ED40D4
+		private static void CleanupRoots() {} // 0x0000000189ED3A40-0x0000000189ED3BC0
+		internal static void MakeCurrentIMGUIContainerDirty() {} // 0x0000000189ED3D74-0x0000000189ED3EF4
 	}
 
 	internal class UIElementsUtility : IUIElementsUtility // TypeDefIndex: 43335
@@ -2957,11 +3114,11 @@ namespace UnityEngine.UIElements
 			protected UQueryMatcher() {} // 0x000000018350B670-0x000000018350B680
 	
 			// Methods
-			public override void Traverse(VisualElement element) {} // 0x0000000189ED4EA8-0x0000000189ED50A0
-			protected virtual bool OnRuleMatchedElement(RuleMatcher matcher, VisualElement element) => default; // 0x0000000189ED4E7C-0x0000000189ED4EA8
-			private static void NoProcessResult(VisualElement e, MatchResultInfo i) {} // 0x0000000189ED138C-0x0000000189ED13F0
-			public override void TraverseRecursive(VisualElement element, int depth) {} // 0x000000018350B670-0x000000018350B680
-			public virtual void Run(VisualElement root, List<RuleMatcher> matchers) {} // 0x000000018350B670-0x000000018350B680
+			public override void Traverse(VisualElement element) {} // 0x0000000189ED50A0-0x0000000189ED50A8
+			protected virtual bool OnRuleMatchedElement(RuleMatcher matcher, VisualElement element) => default; // 0x0000000183D4E3A0-0x0000000183D4E3B0
+			private static void NoProcessResult(VisualElement e, MatchResultInfo i) {} // 0x000000018350B670-0x000000018350B680
+			public override void TraverseRecursive(VisualElement element, int depth) {} // 0x0000000189ED4EA8-0x0000000189ED50A0
+			public virtual void Run(VisualElement root, List<RuleMatcher> matchers) {} // 0x0000000189ED4E7C-0x0000000189ED4EA8
 		}
 	
 		internal abstract class SingleQueryMatcher : UQueryMatcher // TypeDefIndex: 43341
@@ -3331,8 +3488,8 @@ namespace UnityEngine.UIElements
 		private List<FocusRingRecord> m_FocusRing; // 0x20
 	
 		// Properties
-		private FocusController focusController { get => default; } // 0x00000001820D1AC0-0x00000001820D1AD0 
-		public DefaultFocusOrder defaultFocusOrder { get; set; } // 0x0000000183D4E9C0-0x0000000183D4E9D0 0x0000000189ED9024-0x0000000189ED945C
+		private FocusController focusController { get => default; } // 0x0000000189ED9FE4-0x0000000189EDA008 
+		public DefaultFocusOrder defaultFocusOrder { get; set; } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000183D4E9C0-0x0000000183D4E9D0
 	
 		// Nested types
 		public enum DefaultFocusOrder // TypeDefIndex: 43365
@@ -3351,25 +3508,25 @@ namespace UnityEngine.UIElements
 			public List<FocusRingRecord> m_ScopeNavigationOrder; // 0x28
 	
 			// Constructors
-			public FocusRingRecord() {} // 0x0000000189ED9F4C-0x0000000189ED9FE4
+			public FocusRingRecord() {} // 0x000000018350B670-0x000000018350B680
 		}
 	
 		// Constructors
 		public VisualElementFocusRing() {} // Dummy constructor
-		public VisualElementFocusRing(VisualElement root, DefaultFocusOrder dfo = DefaultFocusOrder.ChildOrder /* Metadata: 0x01FB5EC6 */) {} // 0x0000000189ED9FE4-0x0000000189EDA008
+		public VisualElementFocusRing(VisualElement root, DefaultFocusOrder dfo = DefaultFocusOrder.ChildOrder /* Metadata: 0x01FB5EC6 */) {} // 0x0000000189ED9F4C-0x0000000189ED9FE4
 	
 		// Methods
-		private int FocusRingAutoIndexSort(FocusRingRecord a, FocusRingRecord b) => default; // 0x0000000189ED945C-0x0000000189ED9564
-		private int FocusRingSort(FocusRingRecord a, FocusRingRecord b) => default; // 0x0000000189ED8F64-0x0000000189ED9024
-		private void DoUpdate() {} // 0x0000000189ED8D0C-0x0000000189ED8F64
-		private void BuildRingForScopeRecursive(VisualElement ve, ref int scopeIndex, List<FocusRingRecord> scopeList) {} // 0x0000000189ED9CA4-0x0000000189ED9F4C
-		private void SortAndFlattenScopeLists(List<FocusRingRecord> rootScopeList) {} // 0x0000000189ED9718-0x0000000189ED97A8
-		private int GetFocusableInternalIndex(Focusable f) => default; // 0x0000000189ED9564-0x0000000189ED9718
-		public FocusChangeDirection GetFocusChangeDirection(Focusable currentFocusable, EventBase e) => default; // 0x0000000189ED97A8-0x0000000189ED98D4
-		internal static FocusChangeDirection GetKeyDownFocusChangeDirection(EventBase e) => default; // 0x0000000189ED995C-0x0000000189ED9BE0
-		public Focusable GetNextFocusable(Focusable currentFocusable, FocusChangeDirection direction) => default; // 0x0000000189ED98D4-0x0000000189ED995C
-		internal static Focusable GetNextFocusableInTree(VisualElement currentFocusable) => default; // 0x0000000189ED9BE0-0x0000000189ED9CA4
-		internal static Focusable GetPreviousFocusableInTree(VisualElement currentFocusable) => default; // 0x000000018350B670-0x000000018350B680
+		private int FocusRingAutoIndexSort(FocusRingRecord a, FocusRingRecord b) => default; // 0x0000000189ED9024-0x0000000189ED945C
+		private int FocusRingSort(FocusRingRecord a, FocusRingRecord b) => default; // 0x0000000189ED945C-0x0000000189ED9564
+		private void DoUpdate() {} // 0x0000000189ED8F64-0x0000000189ED9024
+		private void BuildRingForScopeRecursive(VisualElement ve, ref int scopeIndex, List<FocusRingRecord> scopeList) {} // 0x0000000189ED8D0C-0x0000000189ED8F64
+		private void SortAndFlattenScopeLists(List<FocusRingRecord> rootScopeList) {} // 0x0000000189ED9CA4-0x0000000189ED9F4C
+		private int GetFocusableInternalIndex(Focusable f) => default; // 0x0000000189ED9718-0x0000000189ED97A8
+		public FocusChangeDirection GetFocusChangeDirection(Focusable currentFocusable, EventBase e) => default; // 0x0000000189ED9564-0x0000000189ED9718
+		internal static FocusChangeDirection GetKeyDownFocusChangeDirection(EventBase e) => default; // 0x0000000189ED97A8-0x0000000189ED98D4
+		public Focusable GetNextFocusable(Focusable currentFocusable, FocusChangeDirection direction) => default; // 0x0000000189ED995C-0x0000000189ED9BE0
+		internal static Focusable GetNextFocusableInTree(VisualElement currentFocusable) => default; // 0x0000000189ED98D4-0x0000000189ED995C
+		internal static Focusable GetPreviousFocusableInTree(VisualElement currentFocusable) => default; // 0x0000000189ED9BE0-0x0000000189ED9CA4
 	}
 
 	public interface IVisualElementScheduledItem // TypeDefIndex: 43368
@@ -3613,25 +3770,25 @@ namespace UnityEngine.UIElements
 		private readonly List<StylePropertyId> m_AnimatedProperties; // 0x48
 	
 		// Properties
-		private float currentPixelsPerPoint { get; set; } // 0x0000000189EDC0D0-0x0000000189EDC154 0x0000000189EDC310-0x0000000189EDC38C
+		private float currentPixelsPerPoint { get; set; } // 0x0000000183D4F5D0-0x0000000183D4F5E0 0x0000000183D4F5E0-0x0000000183D4F5F0
 	
 		// Constructors
-		public VisualTreeStyleUpdaterTraversal() {} // 0x0000000189ED1050-0x0000000189ED1094
+		public VisualTreeStyleUpdaterTraversal() {} // 0x0000000189EDD998-0x0000000189EDDBE4
 	
 		// Methods
-		public void PrepareTraversal(float pixelsPerPoint) {} // 0x0000000189EDD110-0x0000000189EDD1D0
-		public void AddChangedElement(VisualElement ve, VersionChangeType versionChangeType) {} // 0x0000000189EDD1D0-0x0000000189EDD250
-		public void Clear() {} // 0x0000000189EDC534-0x0000000189EDC568
-		private void PropagateToChildren(VisualElement ve) {} // 0x0000000189EDD2D4-0x0000000189EDD998
-		private void PropagateToParents(VisualElement ve) {} // 0x0000000189EDD03C-0x0000000189EDD110
-		private static void OnProcessMatchResult(VisualElement current, MatchResultInfo info) {} // 0x0000000189EDC38C-0x0000000189EDC534
-		public override void TraverseRecursive(VisualElement element, int depth) {} // 0x0000000189EDC154-0x0000000189EDC310
-		private void ProcessTransitions(VisualElement element, ref ComputedStyle oldStyle, ref ComputedStyle newStyle) {} // 0x0000000189EDD250-0x0000000189EDD2D4
-		private void ForceUpdateTransitions(VisualElement element) {} // 0x0000000189EDC568-0x0000000189EDCF7C
-		internal void CancelAnimationsWithNoTransitionProperty(VisualElement element, ref ComputedStyle newStyle) {} // 0x0000000189EDCF7C-0x0000000189EDD03C
-		protected bool ShouldSkipElement(VisualElement element) => default; // 0x0000000189EDD998-0x0000000189EDDBE4
-		private ComputedStyle ProcessMatchedRules(VisualElement element, List<SelectorMatchRecord> matchingSelectors) => default; // 0x0000000189ED13F0-0x0000000189ED1454
-		private void ProcessMatchedVariables(StyleSheet sheet, StyleRule rule) {} // 0x000000018350B670-0x000000018350B680
+		public void PrepareTraversal(float pixelsPerPoint) {} // 0x0000000183D4F5E0-0x0000000183D4F5F0
+		public void AddChangedElement(VisualElement ve, VersionChangeType versionChangeType) {} // 0x0000000189EDC0D0-0x0000000189EDC154
+		public void Clear() {} // 0x0000000189EDC310-0x0000000189EDC38C
+		private void PropagateToChildren(VisualElement ve) {} // 0x0000000189EDD110-0x0000000189EDD1D0
+		private void PropagateToParents(VisualElement ve) {} // 0x0000000189EDD1D0-0x0000000189EDD250
+		private static void OnProcessMatchResult(VisualElement current, MatchResultInfo info) {} // 0x0000000189EDC534-0x0000000189EDC568
+		public override void TraverseRecursive(VisualElement element, int depth) {} // 0x0000000189EDD2D4-0x0000000189EDD998
+		private void ProcessTransitions(VisualElement element, ref ComputedStyle oldStyle, ref ComputedStyle newStyle) {} // 0x0000000189EDD03C-0x0000000189EDD110
+		private void ForceUpdateTransitions(VisualElement element) {} // 0x0000000189EDC38C-0x0000000189EDC534
+		internal void CancelAnimationsWithNoTransitionProperty(VisualElement element, ref ComputedStyle newStyle) {} // 0x0000000189EDC154-0x0000000189EDC310
+		protected bool ShouldSkipElement(VisualElement element) => default; // 0x0000000189EDD250-0x0000000189EDD2D4
+		private ComputedStyle ProcessMatchedRules(VisualElement element, List<SelectorMatchRecord> matchingSelectors) => default; // 0x0000000189EDC568-0x0000000189EDCF7C
+		private void ProcessMatchedVariables(StyleSheet sheet, StyleRule rule) {} // 0x0000000189EDCF7C-0x0000000189EDD03C
 	}
 
 	internal class VisualTreeTransformClipUpdater : BaseVisualTreeUpdater // TypeDefIndex: 43383
@@ -3681,25 +3838,25 @@ namespace UnityEngine.UIElements
 			private IVisualTreeUpdater[] m_VisualTreeUpdaters; // 0x10
 	
 			// Properties
-			public IVisualTreeUpdater this[VisualTreeUpdatePhase phase] { get => default; set {} } // 0x0000000189EDE7F4-0x0000000189EDE8C0 0x0000000189EDE5FC-0x0000000189EDE66C
-			public IVisualTreeUpdater this[int index] { get => default; } // 0x0000000189EDE68C-0x0000000189EDE6F8 
+			public IVisualTreeUpdater this[VisualTreeUpdatePhase phase] { get => default; set {} } // 0x000000018594E120-0x000000018594E14C 0x000000018594E14C-0x000000018594E1A8
+			public IVisualTreeUpdater this[int index] { get => default; } // 0x000000018594E120-0x000000018594E14C 
 	
 			// Constructors
-			public UpdaterArray() {} // 0x0000000189EDE8C0-0x0000000189EDE940
+			public UpdaterArray() {} // 0x0000000189ED50A8-0x0000000189ED50F0
 		}
 	
 		// Constructors
 		public VisualTreeUpdater() {} // Dummy constructor
-		public VisualTreeUpdater(BaseVisualElementPanel panel) {}
+		public VisualTreeUpdater(BaseVisualElementPanel panel) {} // 0x0000000189EDE8C0-0x0000000189EDE940
 	
 		// Methods
-		public void Dispose() {} // 0x0000000189EDE66C-0x0000000189EDE68C
-		public void UpdateVisualTreePhase(VisualTreeUpdatePhase phase) {} // 0x0000000189EDE6F8-0x0000000189EDE7F4
-		public void OnVersionChanged(VisualElement ve, VersionChangeType versionChangeType) {} // 0x0000000189ED50A8-0x0000000189ED50F0
+		public void Dispose() {} // 0x0000000189EDE5FC-0x0000000189EDE66C
+		public void UpdateVisualTreePhase(VisualTreeUpdatePhase phase) {} // 0x0000000189EDE7F4-0x0000000189EDE8C0
+		public void OnVersionChanged(VisualElement ve, VersionChangeType versionChangeType) {} // 0x0000000189EDE68C-0x0000000189EDE6F8
 		public void SetUpdater<T>(VisualTreeUpdatePhase phase)
-			where T : IVisualTreeUpdater, new() {} // 0x000000018594E14C-0x000000018594E1A8
-		public IVisualTreeUpdater GetUpdater(VisualTreeUpdatePhase phase) => default; // 0x000000018594E120-0x000000018594E14C
-		private void SetDefaultUpdaters() {} // 0x000000018594E120-0x000000018594E14C
+			where T : IVisualTreeUpdater, new() {}
+		public IVisualTreeUpdater GetUpdater(VisualTreeUpdatePhase phase) => default; // 0x0000000189EDE66C-0x0000000189EDE68C
+		private void SetDefaultUpdaters() {} // 0x0000000189EDE6F8-0x0000000189EDE7F4
 	}
 
 	internal interface IVisualTreeUpdater : IDisposable // TypeDefIndex: 43387
@@ -3851,46 +4008,46 @@ namespace UnityEngine.UIElements
 		private static readonly ProfilerMarker k_CreateWrappers; // 0x08
 	
 		// Properties
-		protected BaseTreeView baseTreeView { get; } // 0x0000000189EE4120-0x0000000189EE417C 
-		public override IList itemsSource { get; set; } // 0x0000000189EE3B94-0x0000000189EE3E2C 0x0000000183D86EB0-0x0000000183D86EC0
+		protected BaseTreeView baseTreeView { get; } // 0x0000000189EE40E4-0x0000000189EE4120 
+		public override IList itemsSource { get; set; } // 0x0000000181041090-0x00000001810410A0 0x0000000189EE4120-0x0000000189EE417C
 	
 		// Constructors
-		protected BaseTreeViewController() {} // 0x000000018350B670-0x000000018350B680
-		static BaseTreeViewController() {} // 0x0000000189EF20E0-0x0000000189EF211C
+		protected BaseTreeViewController() {} // 0x0000000189EE3F58-0x0000000189EE40E4
+		static BaseTreeViewController() {} // 0x0000000189EE3EC0-0x0000000189EE3F58
 	
 		// Methods
-		public void RebuildTree() {}
-		public IEnumerable<int> GetRootItemIds() => default;
+		public void RebuildTree() {} // 0x0000000189EE3B94-0x0000000189EE3E2C
+		public IEnumerable<int> GetRootItemIds() => default; // 0x0000000183D86EB0-0x0000000183D86EC0
 		public abstract IEnumerable<int> GetAllItemIds(IEnumerable<int> rootIds = null);
 		public abstract int GetParentId(int id);
-		public abstract IEnumerable<int> GetChildrenIds(int id); // 0x0000000189EE3214-0x0000000189EE3290
-		public abstract void Move(int id, int newParentId, int childIndex = -1 /* Metadata: 0x01FB5ED8 */, bool rebuildTree = true /* Metadata: 0x01FB5ED9 */); // 0x0000000189EE303C-0x0000000189EE3100
-		internal override void InvokeMakeItem(ReusableCollectionItem reusableItem) {} // 0x0000000189EE3100-0x0000000189EE3214
-		internal override void InvokeBindItem(ReusableCollectionItem reusableItem, int index) {} // 0x0000000189EE3984-0x0000000189EE3B80
-		internal override void InvokeDestroyItem(ReusableCollectionItem reusableItem) {} // 0x0000000189EE33D8-0x0000000189EE387C
-		internal void PostInitRegistration(ReusableTreeViewItem treeItem) {} // 0x0000000189EE387C-0x0000000189EE3984
-		private void OnItemPointerUp(PointerUpEvent evt) {} // 0x0000000189EE2E70-0x0000000189EE2F20
-		private void OnToggleValueChanged(ChangeEvent<bool> evt) {} // 0x0000000189EE2D8C-0x0000000189EE2E00
-		public override int GetIndexForId(int id) => default; // 0x0000000189EE2FBC-0x0000000189EE303C
-		public override int GetIdForIndex(int index) => default; // 0x0000000189EE2338-0x0000000189EE238C
-		public virtual bool HasChildren(int id) => default; // 0x0000000189EE2F20-0x0000000189EE2FBC
-		internal bool Exists(int id) => default; // 0x0000000189EE2D0C-0x0000000189EE2D8C
-		public bool HasChildrenByIndex(int index) => default; // 0x0000000189EE2B24-0x0000000189EE2D0C
-		public IEnumerable<int> GetChildrenIdsByIndex(int index) => default; // 0x0000000189EE2E2C-0x0000000189EE2E70
-		public int GetChildIndexForId(int id) => default; // 0x0000000189EE2E00-0x0000000189EE2E2C
-		internal int GetIndentationDepth(int id) => default; // 0x0000000183D663A0-0x0000000183D663B0
-		internal int GetIndentationDepthByIndex(int index) => default; // 0x0000000189EE3318-0x0000000189EE337C
-		internal virtual bool CanChangeExpandedState(int id) => default; // 0x0000000189EE3290-0x0000000189EE3318
-		public bool IsExpanded(int id) => default; // 0x0000000189EE238C-0x0000000189EE29D0
-		public bool IsExpandedByIndex(int index) => default; // 0x0000000189EE29D0-0x0000000189EE2B24
-		public void ExpandItemByIndex(int index, bool expandAllChildren, bool refresh = true /* Metadata: 0x01FB5EDA */) {} // 0x0000000189EE1A9C-0x0000000189EE1DE0
-		public void ExpandItem(int id, bool expandAllChildren, bool refresh = true /* Metadata: 0x01FB5EDB */) {} // 0x0000000189EE1DE0-0x0000000189EE1F08
-		public void CollapseItemByIndex(int index, bool collapseAllChildren) {} // 0x0000000189EE3E2C-0x0000000189EE3EC0
-		public void CollapseItem(int id, bool collapseAllChildren) {} // 0x0000000189EE1F08-0x0000000189EE2338
-		internal void RegenerateWrappers() {} // 0x0000000189EE337C-0x0000000189EE33D8
-		private void CreateWrappers(IEnumerable<int> treeViewItemIds, int depth, ref List<TreeViewItemWrapper> wrappers) {} // 0x0000000189EE3B80-0x0000000189EE3B94
-		private bool IsIndexValid(int index) => default; // 0x0000000189EE3F58-0x0000000189EE40E4
-		internal void RaiseItemParentChanged(int id, int newParentId) {} // 0x0000000189EE3EC0-0x0000000189EE3F58
+		public abstract IEnumerable<int> GetChildrenIds(int id);
+		public abstract void Move(int id, int newParentId, int childIndex = -1 /* Metadata: 0x01FB5ED8 */, bool rebuildTree = true /* Metadata: 0x01FB5ED9 */);
+		internal override void InvokeMakeItem(ReusableCollectionItem reusableItem) {} // 0x0000000189EE3214-0x0000000189EE3290
+		internal override void InvokeBindItem(ReusableCollectionItem reusableItem, int index) {} // 0x0000000189EE303C-0x0000000189EE3100
+		internal override void InvokeDestroyItem(ReusableCollectionItem reusableItem) {} // 0x0000000189EE3100-0x0000000189EE3214
+		internal void PostInitRegistration(ReusableTreeViewItem treeItem) {} // 0x0000000189EE3984-0x0000000189EE3B80
+		private void OnItemPointerUp(PointerUpEvent evt) {} // 0x0000000189EE33D8-0x0000000189EE387C
+		private void OnToggleValueChanged(ChangeEvent<bool> evt) {} // 0x0000000189EE387C-0x0000000189EE3984
+		public override int GetIndexForId(int id) => default; // 0x0000000189EE2E70-0x0000000189EE2F20
+		public override int GetIdForIndex(int index) => default; // 0x0000000189EE2D8C-0x0000000189EE2E00
+		public virtual bool HasChildren(int id) => default; // 0x0000000189EE2FBC-0x0000000189EE303C
+		internal bool Exists(int id) => default; // 0x0000000189EE2338-0x0000000189EE238C
+		public bool HasChildrenByIndex(int index) => default; // 0x0000000189EE2F20-0x0000000189EE2FBC
+		public IEnumerable<int> GetChildrenIdsByIndex(int index) => default; // 0x0000000189EE2D0C-0x0000000189EE2D8C
+		public int GetChildIndexForId(int id) => default; // 0x0000000189EE2B24-0x0000000189EE2D0C
+		internal int GetIndentationDepth(int id) => default; // 0x0000000189EE2E2C-0x0000000189EE2E70
+		internal int GetIndentationDepthByIndex(int index) => default; // 0x0000000189EE2E00-0x0000000189EE2E2C
+		internal virtual bool CanChangeExpandedState(int id) => default; // 0x0000000183D663A0-0x0000000183D663B0
+		public bool IsExpanded(int id) => default; // 0x0000000189EE3318-0x0000000189EE337C
+		public bool IsExpandedByIndex(int index) => default; // 0x0000000189EE3290-0x0000000189EE3318
+		public void ExpandItemByIndex(int index, bool expandAllChildren, bool refresh = true /* Metadata: 0x01FB5EDA */) {} // 0x0000000189EE238C-0x0000000189EE29D0
+		public void ExpandItem(int id, bool expandAllChildren, bool refresh = true /* Metadata: 0x01FB5EDB */) {} // 0x0000000189EE29D0-0x0000000189EE2B24
+		public void CollapseItemByIndex(int index, bool collapseAllChildren) {} // 0x0000000189EE1A9C-0x0000000189EE1DE0
+		public void CollapseItem(int id, bool collapseAllChildren) {} // 0x0000000189EE1DE0-0x0000000189EE1F08
+		internal void RegenerateWrappers() {} // 0x0000000189EE3E2C-0x0000000189EE3EC0
+		private void CreateWrappers(IEnumerable<int> treeViewItemIds, int depth, ref List<TreeViewItemWrapper> wrappers) {} // 0x0000000189EE1F08-0x0000000189EE2338
+		private bool IsIndexValid(int index) => default; // 0x0000000189EE337C-0x0000000189EE33D8
+		internal void RaiseItemParentChanged(int id, int newParentId) {} // 0x0000000189EE3B80-0x0000000189EE3B94
 	}
 
 	public abstract class CollectionViewController : IDisposable // TypeDefIndex: 43395
@@ -4545,13 +4702,13 @@ namespace UnityEngine.UIElements
 		private static readonly string k_EmptyListStr; // 0xA0
 	
 		// Properties
-		public bool showBoundCollectionSize { get; set; } // 0x0000000183D88E90-0x0000000183D88EA0 0x0000000189EE1838-0x0000000189EE1A9C
-		public bool showFoldoutHeader { get; set; } // 0x0000000189EE0810-0x0000000189EE0B64 0x0000000189EE178C-0x0000000189EE17CC
-		public string headerTitle { get; set; } // 0x0000000189EE1818-0x0000000189EE1820
-		public bool showAddRemoveFooter { get; set; } // 0x0000000189EDF98C-0x0000000189EDFDA4 0x0000000189EDF844-0x0000000189EDF870
-		internal VisualElement footer { get; } // 0x0000000189EDF950-0x0000000189EDF98C 
-		public new BaseListViewController viewController { get; } // 0x0000000189EE05BC-0x0000000189EE0810 
-		public ListViewReorderMode reorderMode { get; set; } // 0x0000000189EDF8D0-0x0000000189EDF950 0x0000000189EDF870-0x0000000189EDF8D0
+		public bool showBoundCollectionSize { get; set; } // 0x0000000183D88E80-0x0000000183D88E90 0x0000000189EE1820-0x0000000189EE1838
+		public bool showFoldoutHeader { get; set; } // 0x0000000183D88E90-0x0000000183D88EA0 0x0000000189EE1838-0x0000000189EE1A9C
+		public string headerTitle { get; set; } // 0x0000000189EE178C-0x0000000189EE17CC
+		public bool showAddRemoveFooter { get; set; } // 0x0000000189EE16A8-0x0000000189EE16B4 0x0000000189EE1818-0x0000000189EE1820
+		internal VisualElement footer { get; } // 0x0000000183D6C880-0x0000000183D6C890 
+		public new BaseListViewController viewController { get; } // 0x0000000189EE16B4-0x0000000189EE16F4 
+		public ListViewReorderMode reorderMode { get; set; } // 0x0000000183D88E70-0x0000000183D88E80 0x0000000189EE17CC-0x0000000189EE1818
 	
 		// Events
 		internal event Action reorderModeChanged;
@@ -4567,34 +4724,34 @@ namespace UnityEngine.UIElements
 			private readonly UxmlBoolAttributeDescription m_ShowBoundCollectionSize; // 0xD0
 	
 			// Constructors
-			protected UxmlTraits() {} // 0x0000000189EE1820-0x0000000189EE1838
+			protected UxmlTraits() {} // 0x0000000189EF2E94-0x0000000189EF3124
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000183D88E80-0x0000000183D88E90
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EF27A0-0x0000000189EF2958
 		}
 	
 		// Constructors
-		public BaseListView() {} // 0x0000000189EDFDA4-0x0000000189EE00A4
-		static BaseListView() {} // 0x0000000189EF27A0-0x0000000189EF2958
+		public BaseListView() {} // 0x0000000189EE1588-0x0000000189EE1610
+		static BaseListView() {} // 0x0000000189EE0EA0-0x0000000189EE1588
 	
 		// Methods
-		internal void SetupArraySizeField() {} // 0x0000000189EE16A8-0x0000000189EE16B4
-		private void EnableFooter(bool enabled) {} // 0x0000000189EE01C0-0x0000000189EE03A8
-		private void AddItems(int itemCount) {} // 0x0000000189EE0BAC-0x0000000189EE0C6C
-		private void OnArraySizeFieldChanged(ChangeEvent<string> evt) {} // 0x0000000189EE0C6C-0x0000000189EE0EA0
-		internal void UpdateArraySizeField() {} // 0x0000000189EE00A4-0x0000000189EE01C0
-		internal void UpdateListViewLabel() {} // 0x0000000189EE044C-0x0000000189EE0590
-		private void OnAddClicked() {} // 0x0000000183D6C880-0x0000000183D6C890
-		private void OnRemoveClicked() {} // 0x0000000189EE16B4-0x0000000189EE16F4
-		private protected override void CreateVirtualizationController() {} // 0x0000000189EE03A8-0x0000000189EE03C0
-		public override void SetViewController(CollectionViewController controller) {} // 0x0000000189EE03C0-0x0000000189EE03D8
-		private void OnItemAdded(IEnumerable<int> indices) {} // 0x0000000189EE03D8-0x0000000189EE044C
-		private void OnItemsRemoved(IEnumerable<int> indices) {} // 0x0000000189EE1610-0x0000000189EE16A8
-		private void OnItemsSourceSizeChanged() {} // 0x0000000189EE16F4-0x0000000189EE178C
-		internal override ListViewDragger CreateDragger() => default; // 0x0000000189EE1588-0x0000000189EE1610
-		internal override ICollectionDragAndDropController CreateDragAndDropController() => default; // 0x0000000189EE0590-0x0000000189EE05BC
-		private protected override void PostRefresh() {} // 0x0000000189EE0EA0-0x0000000189EE1588
-		private protected override bool HandleItemNavigation(bool moveIn, bool altPressed) => default; // 0x0000000189EE0B64-0x0000000189EE0BAC
+		internal void SetupArraySizeField() {} // 0x0000000189EE0810-0x0000000189EE0B64
+		private void EnableFooter(bool enabled) {} // 0x0000000189EDF98C-0x0000000189EDFDA4
+		private void AddItems(int itemCount) {} // 0x0000000189EDF844-0x0000000189EDF870
+		private void OnArraySizeFieldChanged(ChangeEvent<string> evt) {} // 0x0000000189EE01C0-0x0000000189EE03A8
+		internal void UpdateArraySizeField() {} // 0x0000000189EE0BAC-0x0000000189EE0C6C
+		internal void UpdateListViewLabel() {} // 0x0000000189EE0C6C-0x0000000189EE0EA0
+		private void OnAddClicked() {} // 0x0000000189EE00A4-0x0000000189EE01C0
+		private void OnRemoveClicked() {} // 0x0000000189EE044C-0x0000000189EE0590
+		private protected override void CreateVirtualizationController() {} // 0x0000000189EDF950-0x0000000189EDF98C
+		public override void SetViewController(CollectionViewController controller) {} // 0x0000000189EE05BC-0x0000000189EE0810
+		private void OnItemAdded(IEnumerable<int> indices) {} // 0x0000000189EE03A8-0x0000000189EE03C0
+		private void OnItemsRemoved(IEnumerable<int> indices) {} // 0x0000000189EE03C0-0x0000000189EE03D8
+		private void OnItemsSourceSizeChanged() {} // 0x0000000189EE03D8-0x0000000189EE044C
+		internal override ListViewDragger CreateDragger() => default; // 0x0000000189EDF8D0-0x0000000189EDF950
+		internal override ICollectionDragAndDropController CreateDragAndDropController() => default; // 0x0000000189EDF870-0x0000000189EDF8D0
+		private protected override void PostRefresh() {} // 0x0000000189EE0590-0x0000000189EE05BC
+		private protected override bool HandleItemNavigation(bool moveIn, bool altPressed) => default; // 0x0000000189EDFDA4-0x0000000189EE00A4
 	}
 
 	public enum SliderDirection // TypeDefIndex: 43425
@@ -4704,10 +4861,10 @@ namespace UnityEngine.UIElements
 		private List<int> m_ExpandedItemIds; // 0x4B0
 	
 		// Properties
-		public new IList itemsSource { get; } // 0x0000000189EE42B0-0x0000000189EE42EC 
-		public new BaseTreeViewController viewController { get; } // 0x0000000189EE4A34-0x0000000189EE4B58 
-		public bool autoExpand { get; set; } // 0x0000000183D57330-0x0000000183D57340 0x00000001858B4014-0x00000001858B4028
-		internal List<int> expandedItemIds { get; set; } // 0x0000000189EE4EB0-0x0000000189EE4EC0 0x0000000189EE4D68-0x0000000189EE4EB0
+		public new IList itemsSource { get; } // 0x0000000189EE4EC0-0x0000000189EE4EE8 
+		public new BaseTreeViewController viewController { get; } // 0x0000000189EE4EE8-0x0000000189EE4F28 
+		public bool autoExpand { get; set; } // 0x0000000183D88E80-0x0000000183D88E90 0x0000000189EE4F28-0x0000000189EE4F5C
+		internal List<int> expandedItemIds { get; set; } // 0x0000000183D57330-0x0000000183D57340 0x00000001858B4014-0x00000001858B4028
 	
 		// Nested types
 		public class UxmlTraits : BaseVerticalCollectionView.UxmlTraits // TypeDefIndex: 43428
@@ -4716,35 +4873,35 @@ namespace UnityEngine.UIElements
 			private readonly UxmlBoolAttributeDescription m_AutoExpand; // 0xB0
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EE4EE8-0x0000000189EE4F28
+			public UxmlTraits() {} // 0x0000000189EF3608-0x0000000189EF36AC
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EE4EC0-0x0000000189EE4EE8
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EF2A5C-0x0000000189EF2B2C
 		}
 	
 		// Constructors
-		public BaseTreeView() {} // 0x0000000189EE488C-0x0000000189EE48DC
-		public BaseTreeView(int itemHeight) {} // 0x0000000189EE44A4-0x0000000189EE47F4
-		static BaseTreeView() {} // 0x0000000189EF2A5C-0x0000000189EF2B2C
+		public BaseTreeView() {} // 0x0000000189EE4EB0-0x0000000189EE4EC0
+		public BaseTreeView(int itemHeight) {} // 0x0000000189EE4D68-0x0000000189EE4EB0
+		static BaseTreeView() {} // 0x0000000189EE4B64-0x0000000189EE4D68
 	
 		// Methods
-		private protected override void CreateVirtualizationController() {} // 0x0000000189EE484C-0x0000000189EE4854
-		public override void SetViewController(CollectionViewController controller) {} // 0x0000000189EE4250-0x0000000189EE42B0
-		private new void OnItemIndexChanged(int srcIndex, int dstIndex) {} // 0x0000000183D88E80-0x0000000183D88E90
-		internal override ICollectionDragAndDropController CreateDragAndDropController() => default; // 0x0000000189EE4F28-0x0000000189EE4F5C
-		internal override void OnViewDataReady() {} // 0x0000000189EE48E8-0x0000000189EE495C
-		private protected override bool HandleItemNavigation(bool moveIn, bool altPressed) => default; // 0x0000000189EE48DC-0x0000000189EE48E8
-		public void SetSelectionById(int id) {} // 0x0000000189EE495C-0x0000000189EE4A34
-		public void SetSelectionById(IEnumerable<int> ids) {} // 0x0000000189EE43B8-0x0000000189EE44A4
-		internal void SetSelectionInternalById(IEnumerable<int> ids, bool sendNotification) {} // 0x0000000189EE4820-0x0000000189EE484C
-		private int GetItemIndex(int id, bool expand = false /* Metadata: 0x01FB5EFF */) => default; // 0x0000000189EE41FC-0x0000000189EE4250
-		public bool IsExpanded(int id) => default; // 0x0000000189EE4370-0x0000000189EE43B8
-		public void CollapseItem(int id, bool collapseAllChildren = false /* Metadata: 0x01FB5F00 */) {} // 0x0000000189EE4854-0x0000000189EE488C
-		public void ExpandItem(int id, bool expandAllChildren = false /* Metadata: 0x01FB5F01 */) {} // 0x0000000189EE47F4-0x0000000189EE4820
-		private void OnTreeViewPointerUp(PointerUpEvent evt) {} // 0x0000000189EE417C-0x0000000189EE41FC
-		private bool IsExpandedByIndex(int index) => default; // 0x0000000189EE42EC-0x0000000189EE4370
-		private void CollapseItemByIndex(int index, bool collapseAll) {} // 0x0000000189EE4B64-0x0000000189EE4D68
-		private void ExpandItemByIndex(int index, bool expandAll) {} // 0x0000000189EE4B58-0x0000000189EE4B64
+		private protected override void CreateVirtualizationController() {} // 0x0000000189EE42B0-0x0000000189EE42EC
+		public override void SetViewController(CollectionViewController controller) {} // 0x0000000189EE4A34-0x0000000189EE4B58
+		private new void OnItemIndexChanged(int srcIndex, int dstIndex) {} // 0x0000000189EE484C-0x0000000189EE4854
+		internal override ICollectionDragAndDropController CreateDragAndDropController() => default; // 0x0000000189EE4250-0x0000000189EE42B0
+		internal override void OnViewDataReady() {} // 0x0000000189EE488C-0x0000000189EE48DC
+		private protected override bool HandleItemNavigation(bool moveIn, bool altPressed) => default; // 0x0000000189EE44A4-0x0000000189EE47F4
+		public void SetSelectionById(int id) {} // 0x0000000189EE48E8-0x0000000189EE495C
+		public void SetSelectionById(IEnumerable<int> ids) {} // 0x0000000189EE48DC-0x0000000189EE48E8
+		internal void SetSelectionInternalById(IEnumerable<int> ids, bool sendNotification) {} // 0x0000000189EE495C-0x0000000189EE4A34
+		private int GetItemIndex(int id, bool expand = false /* Metadata: 0x01FB5EFF */) => default; // 0x0000000189EE43B8-0x0000000189EE44A4
+		public bool IsExpanded(int id) => default; // 0x0000000189EE4820-0x0000000189EE484C
+		public void CollapseItem(int id, bool collapseAllChildren = false /* Metadata: 0x01FB5F00 */) {} // 0x0000000189EE41FC-0x0000000189EE4250
+		public void ExpandItem(int id, bool expandAllChildren = false /* Metadata: 0x01FB5F01 */) {} // 0x0000000189EE4370-0x0000000189EE43B8
+		private void OnTreeViewPointerUp(PointerUpEvent evt) {} // 0x0000000189EE4854-0x0000000189EE488C
+		private bool IsExpandedByIndex(int index) => default; // 0x0000000189EE47F4-0x0000000189EE4820
+		private void CollapseItemByIndex(int index, bool collapseAll) {} // 0x0000000189EE417C-0x0000000189EE41FC
+		private void ExpandItemByIndex(int index, bool expandAll) {} // 0x0000000189EE42EC-0x0000000189EE4370
 	}
 
 	public enum AlternatingRowBackground // TypeDefIndex: 43430
@@ -4818,25 +4975,25 @@ namespace UnityEngine.UIElements
 		private Vector3 m_TouchDownPosition; // 0x498
 	
 		// Properties
-		public IList itemsSource { get; set; } // 0x0000000189EE5A8C-0x0000000189EE5AEC 0x0000000189EE64AC-0x0000000189EE659C
-		public override VisualElement contentContainer { get; }
-		public SelectionType selectionType { get; set; } // 0x0000000189EE92DC-0x0000000189EE9904 0x0000000189EE9904-0x0000000189EE999C
-		public IEnumerable<object> selectedItems { get; } // 0x0000000189EE638C-0x0000000189EE6478 
-		public int selectedIndex { get; set; } // 0x0000000189EE6484-0x0000000189EE64AC 0x0000000189EE6F90-0x0000000189EE6FBC
-		public IEnumerable<int> selectedIndices { get; } // 0x0000000189EE6FBC-0x0000000189EE6FD0 
-		internal IEnumerable<int> selectedIds { get; } // 0x0000000189EE7BEC-0x0000000189EE7D54 
-		internal IEnumerable<ReusableCollectionItem> activeItems { get; } // 0x0000000189EE7AA0-0x0000000189EE7BEC 
-		internal ScrollView scrollView { get; } // 0x0000000189EE8514-0x0000000189EE85D0 
-		internal ListViewDragger dragger { get; } // 0x0000000189EE7D54-0x0000000189EE8248 
-		internal CollectionVirtualizationController virtualizationController { get; } // 0x0000000189EE738C-0x0000000189EE7444 
-		public CollectionViewController viewController { get; } // 0x0000000189EE863C-0x0000000189EE868C 
-		public bool showBorder { get; set; } // 0x0000000189EE7238-0x0000000189EE7290
-		public bool reorderable { get; set; } // 0x0000000189EE8450-0x0000000189EE84C4 0x0000000189EE6890-0x0000000189EE6BDC
-		public bool horizontalScrollingEnabled { get; set; } // 0x0000000189EE6CDC-0x0000000189EE6F90
-		public AlternatingRowBackground showAlternatingRowBackgrounds { get; set; } // 0x0000000189EE5378-0x0000000189EE5794 0x0000000189EE5794-0x0000000189EE58DC
-		public CollectionVirtualizationMethod virtualizationMethod { get; set; } // 0x0000000183D4E3A0-0x0000000183D4E3B0 0x0000000189EE70FC-0x0000000189EE7174
-		public float fixedItemHeight { get; set; } // 0x0000000189EE7038-0x0000000189EE70FC 0x0000000189EE6FD0-0x0000000189EE7038
-		internal float lastHeight { get; } // 0x0000000189EE7174-0x0000000189EE7238 
+		public IList itemsSource { get; set; } // 0x0000000189EE9A00-0x0000000189EE9A24 0x0000000189EE9CF4-0x0000000189EE9D24
+		public override VisualElement contentContainer { get; } // 0x0000000181002730-0x0000000181002740 
+		public SelectionType selectionType { get; set; } // 0x0000000183D88EC0-0x0000000183D88ED0 0x0000000189EE9D88-0x0000000189EE9DF0
+		public IEnumerable<object> selectedItems { get; } // 0x0000000189EE9B1C-0x0000000189EE9B8C 
+		public int selectedIndex { get; set; } // 0x0000000189EE9AB4-0x0000000189EE9AFC 0x0000000189EE77FC-0x0000000189EE7804
+		public IEnumerable<int> selectedIndices { get; } // 0x0000000189EE9AFC-0x0000000189EE9B1C 
+		internal IEnumerable<int> selectedIds { get; } // 0x0000000189EE9A94-0x0000000189EE9AB4 
+		internal IEnumerable<ReusableCollectionItem> activeItems { get; } // 0x0000000189EE999C-0x0000000189EE9A00 
+		internal ScrollView scrollView { get; } // 0x0000000183D55F00-0x0000000183D55F10 
+		internal ListViewDragger dragger { get; } // 0x0000000183D57420-0x0000000183D57430 
+		internal CollectionVirtualizationController virtualizationController { get; } // 0x0000000189EE9B8C-0x0000000189EE9B94 
+		public CollectionViewController viewController { get; } // 0x0000000183D55F40-0x0000000183D55F50 
+		public bool showBorder { get; set; } // 0x0000000189EE9E08-0x0000000189EE9E7C
+		public bool reorderable { get; set; } // 0x0000000189EE9A24-0x0000000189EE9A94 0x0000000189EE9D24-0x0000000189EE9D88
+		public bool horizontalScrollingEnabled { get; set; } // 0x0000000189EE9C90-0x0000000189EE9CF4
+		public AlternatingRowBackground showAlternatingRowBackgrounds { get; set; } // 0x0000000183D88ED0-0x0000000183D88EE0 0x0000000189EE9DF0-0x0000000189EE9E08
+		public CollectionVirtualizationMethod virtualizationMethod { get; set; } // 0x0000000183D88EE0-0x0000000183D88EF0 0x0000000189EE9E7C-0x0000000189EE9EB4
+		public float fixedItemHeight { get; set; } // 0x0000000183D88EA0-0x0000000183D88EB0 0x0000000189EE9B94-0x0000000189EE9C90
+		internal float lastHeight { get; } // 0x0000000183D88EB0-0x0000000183D88EC0 
 	
 		// Nested types
 		public class UxmlTraits : BindableElement.UxmlTraits // TypeDefIndex: 43433
@@ -4851,10 +5008,10 @@ namespace UnityEngine.UIElements
 			private readonly UxmlBoolAttributeDescription m_HorizontalScrollingEnabled; // 0xA8
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EE6478-0x0000000189EE6484
+			public UxmlTraits() {} // 0x0000000189EF3124-0x0000000189EF3508
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EE7804-0x0000000189EE78A0
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EF2B2C-0x0000000189EF2D5C
 		}
 	
 		private class Selection // TypeDefIndex: 43434
@@ -4868,99 +5025,99 @@ namespace UnityEngine.UIElements
 			public readonly Dictionary<int, object> items; // 0x38
 	
 			// Properties
-			public List<int> selectedIds { get; set; } // 0x0000000189EE79B0-0x0000000189EE7AA0 0x0000000189EE7928-0x0000000189EE79B0
-			public int indexCount { get => default; } // 0x0000000189EE78A0-0x0000000189EE7928 
-			public int idCount { get => default; } // 0x0000000189EE9A00-0x0000000189EE9A24 
-			public int minIndex { get => default; } // 0x0000000189EE9CF4-0x0000000189EE9D24 
-			public int maxIndex { get => default; } // 0x0000000181002730-0x0000000181002740 
-			public int capacity { get => default; set {} } // 0x0000000183D88EC0-0x0000000183D88ED0 0x0000000189EE9D88-0x0000000189EE9DF0
+			public List<int> selectedIds { get; set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+			public int indexCount { get => default; } // 0x0000000189EF1C38-0x0000000189EF1C78 
+			public int idCount { get => default; } // 0x0000000189EF1BF8-0x0000000189EF1C38 
+			public int minIndex { get => default; } // 0x0000000189EF1CA0-0x0000000189EF1CC8 
+			public int maxIndex { get => default; } // 0x0000000189EF1C78-0x0000000189EF1CA0 
+			public int capacity { get => default; set {} } // 0x0000000189EF1BB0-0x0000000189EF1BF8 0x0000000189EF1CC8-0x0000000189EF1D58
 	
 			// Constructors
-			public Selection() {} // 0x0000000189EE9E08-0x0000000189EE9E7C
+			public Selection() {} // 0x0000000189EF1A64-0x0000000189EF1BB0
 	
 			// Methods
-			public int FirstIndex() => default; // 0x0000000189EE9B1C-0x0000000189EE9B8C
-			public bool ContainsIndex(int index) => default; // 0x0000000189EE9AB4-0x0000000189EE9AFC
-			public bool ContainsId(int id) => default; // 0x0000000189EE77FC-0x0000000189EE7804
-			public void AddId(int id) {} // 0x0000000189EE9AFC-0x0000000189EE9B1C
-			public void AddIndex(int index, object obj) {} // 0x0000000189EE9A94-0x0000000189EE9AB4
-			public bool TryRemove(int index) => default; // 0x0000000189EE999C-0x0000000189EE9A00
-			public void RemoveId(int id) {} // 0x0000000183D55F00-0x0000000183D55F10
-			public void ClearItems() {} // 0x0000000183D57420-0x0000000183D57430
-			public void ClearIds() {} // 0x0000000189EE9B8C-0x0000000189EE9B94
-			public void ClearIndices() {} // 0x0000000183D55F40-0x0000000183D55F50
-			public void Clear() {} // 0x0000000189EE84C4-0x0000000189EE8514
+			public int FirstIndex() => default; // 0x0000000189EF1894-0x0000000189EF18FC
+			public bool ContainsIndex(int index) => default; // 0x0000000189EF1840-0x0000000189EF1894
+			public bool ContainsId(int id) => default; // 0x0000000189EF17EC-0x0000000189EF1840
+			public void AddId(int id) {} // 0x0000000189EF1574-0x0000000189EF15EC
+			public void AddIndex(int index, object obj) {} // 0x0000000189EF15EC-0x0000000189EF16A8
+			public bool TryRemove(int index) => default; // 0x0000000189EF1974-0x0000000189EF1A64
+			public void RemoveId(int id) {} // 0x0000000189EF18FC-0x0000000189EF1974
+			public void ClearItems() {} // 0x0000000189EF1778-0x0000000189EF17C0
+			public void ClearIds() {} // 0x0000000189EF16A8-0x0000000189EF170C
+			public void ClearIndices() {} // 0x0000000189EF170C-0x0000000189EF1778
+			public void Clear() {} // 0x0000000189EF17C0-0x0000000189EF17EC
 		}
 	
 		// Constructors
-		public BaseVerticalCollectionView() {} // 0x0000000189EE8404-0x0000000189EE8450
-		public BaseVerticalCollectionView(IList itemsSource, float itemHeight = -1f /* Metadata: 0x01FB5F0B */) {} // 0x0000000189EE8248-0x0000000189EE8404
-		static BaseVerticalCollectionView() {} // 0x0000000189EF24D0-0x0000000189EF256C
+		public BaseVerticalCollectionView() {} // 0x0000000189EE92DC-0x0000000189EE9904
+		public BaseVerticalCollectionView(IList itemsSource, float itemHeight = -1f /* Metadata: 0x01FB5F0B */) {} // 0x0000000189EE9904-0x0000000189EE999C
+		static BaseVerticalCollectionView() {} // 0x0000000189EE8E18-0x0000000189EE92DC
 	
 		// Methods
-		internal bool HasCanStartDrag() => default; // 0x0000000189EE6354-0x0000000189EE638C
-		internal bool RaiseCanStartDrag(ReusableCollectionItem item, IEnumerable<int> ids) => default;
-		internal StartDragArgs RaiseSetupDragAndDrop(ReusableCollectionItem item, IEnumerable<int> ids, StartDragArgs args) => default; // 0x0000000189EE62E8-0x0000000189EE6354
-		internal DragVisualMode RaiseHandleDragAndDrop(Vector2 pointerPosition, DragAndDropArgs dragAndDropArgs) => default;
-		internal DragVisualMode RaiseDrop(Vector2 pointerPosition, DragAndDropArgs dragAndDropArgs) => default; // 0x0000000189EE8BDC-0x0000000189EE8CD0
-		internal float ResolveItemHeight(float height = -1f /* Metadata: 0x01FB5F07 */) => default; // 0x0000000189EE85D0-0x0000000189EE863C
-		private protected virtual void CreateVirtualizationController() {} // 0x0000000189EE7444-0x0000000189EE7594
-		internal CollectionVirtualizationController GetOrCreateVirtualizationController() => default; // 0x0000000189EE7594-0x0000000189EE77FC
+		internal bool HasCanStartDrag() => default; // 0x0000000189EE6478-0x0000000189EE6484
+		internal bool RaiseCanStartDrag(ReusableCollectionItem item, IEnumerable<int> ids) => default; // 0x0000000189EE7804-0x0000000189EE78A0
+		internal StartDragArgs RaiseSetupDragAndDrop(ReusableCollectionItem item, IEnumerable<int> ids, StartDragArgs args) => default; // 0x0000000189EE79B0-0x0000000189EE7AA0
+		internal DragVisualMode RaiseHandleDragAndDrop(Vector2 pointerPosition, DragAndDropArgs dragAndDropArgs) => default; // 0x0000000189EE7928-0x0000000189EE79B0
+		internal DragVisualMode RaiseDrop(Vector2 pointerPosition, DragAndDropArgs dragAndDropArgs) => default; // 0x0000000189EE78A0-0x0000000189EE7928
+		internal float ResolveItemHeight(float height = -1f /* Metadata: 0x01FB5F07 */) => default; // 0x0000000189EE84C4-0x0000000189EE8514
+		private protected virtual void CreateVirtualizationController() {} // 0x0000000189EE5AEC-0x0000000189EE5B28
+		internal CollectionVirtualizationController GetOrCreateVirtualizationController() => default; // 0x0000000189EE6354-0x0000000189EE638C
 		internal void CreateVirtualizationController<T>()
-			where T : ReusableCollectionItem, new() {} // 0x0000000189EE5C40-0x0000000189EE6064
-		internal CollectionViewController GetOrCreateViewController() => default; // 0x0000000189EE5B28-0x0000000189EE5C40
-		protected abstract CollectionViewController CreateViewController(); // 0x0000000189EE77FC-0x0000000189EE7804
-		public virtual void SetViewController(CollectionViewController controller) {} // 0x0000000189EE868C-0x0000000189EE8920
-		internal virtual ListViewDragger CreateDragger() => default; // 0x0000000189EE5188-0x0000000189EE51F8
-		internal void InitializeDragAndDropController(bool enableReordering) {} // 0x0000000189EE51F8-0x0000000189EE5378
-		internal abstract ICollectionDragAndDropController CreateDragAndDropController(); // 0x0000000189EE4F5C-0x0000000189EE5188
-		public VisualElement GetRootElementForId(int id) => default; // 0x0000000189EE8B58-0x0000000189EE8BDC
-		internal virtual bool HasValidDataAndBindings() => default; // 0x0000000189EE8B4C-0x0000000189EE8B58
-		private void OnItemIndexChanged(int srcIndex, int dstIndex) {} // 0x0000000189EE8B40-0x0000000189EE8B4C
-		private void OnItemsSourceChanged() {} // 0x0000000189EE8920-0x0000000189EE8B40
-		public void RefreshItems() {} // 0x0000000189EE659C-0x0000000189EE6818
-		public void Rebuild() {} // 0x0000000189EE6818-0x0000000189EE6890
-		internal void ScheduleRebuild() {} // 0x0000000189EE5A38-0x0000000189EE5A8C
-		private void RefreshSelection() {} // 0x0000000189EE58DC-0x0000000189EE5A38
-		private protected virtual void PostRefresh() {} // 0x0000000189EE734C-0x0000000189EE738C
-		public void ScrollToItem(int index) {} // 0x0000000189EE6064-0x0000000189EE62E8
-		public void ScrollToItemById(int id) {} // 0x0000000189EE7290-0x0000000189EE734C
-		private void OnScroll(Vector2 offset) {} // 0x0000000189EE6BDC-0x0000000189EE6CDC
-		private void Resize(Vector2 size) {} // 0x000000018350B670-0x000000018350B680
-		private void OnAttachToPanel(AttachToPanelEvent evt) {} // 0x0000000189EE8DDC-0x0000000189EE8E18
-		private void OnDetachFromPanel(DetachFromPanelEvent evt) {} // 0x0000000189EE8E18-0x0000000189EE92DC
-		private bool Apply(KeyboardNavigationOperation op, bool shiftKey, bool altKey) => default; // 0x0000000189EE8DC8-0x0000000189EE8DDC
-		private void Apply(KeyboardNavigationOperation op, EventBase sourceEvent) {} // 0x0000000189EE8D80-0x0000000189EE8DC8
-		private protected virtual bool HandleItemNavigation(bool moveIn, bool altKey) => default; // 0x0000000189EE8CD0-0x0000000189EE8D80
-		private void OnPointerMove(PointerMoveEvent evt) {} // 0x0000000189EF3124-0x0000000189EF3508
-		private void OnPointerDown(PointerDownEvent evt) {} // 0x0000000189EF2B2C-0x0000000189EF2D5C
-		private void OnPointerCancel(PointerCancelEvent evt) {} // 0x0000000183D4EAC0-0x0000000183D4EAD0
-		private void OnPointerUp(PointerUpEvent evt) {} // 0x0000000182C92F10-0x0000000182C92F20
-		private void ProcessPointerDown(IPointerEvent evt) {} // 0x0000000189EF1C38-0x0000000189EF1C78
-		private void ProcessPointerUp(IPointerEvent evt) {} // 0x0000000189EF1BF8-0x0000000189EF1C38
-		private void DoSelect(Vector2 localPosition, int clickCount, bool actionKey, bool shiftKey) {} // 0x0000000189EF1CA0-0x0000000189EF1CC8
-		internal void DoRangeSelection(int rangeSelectionFinalIndex) {} // 0x0000000189EF1C78-0x0000000189EF1CA0
-		private void ProcessSingleClick(int clickedIndex) {} // 0x0000000189EF1BB0-0x0000000189EF1BF8
-		internal void SelectAll() {} // 0x0000000189EF1CC8-0x0000000189EF1D58
-		public void AddToSelection(int index) {} // 0x0000000189EF1894-0x0000000189EF18FC
-		internal void AddToSelection(IList<int> indexes) {} // 0x0000000189EF1840-0x0000000189EF1894
-		private void AddToSelectionWithoutValidation(int index) {} // 0x0000000189EF17EC-0x0000000189EF1840
-		public void RemoveFromSelection(int index) {} // 0x0000000189EF1574-0x0000000189EF15EC
-		private void RemoveFromSelectionWithoutValidation(int index) {} // 0x0000000189EF15EC-0x0000000189EF16A8
-		public void SetSelection(int index) {} // 0x0000000189EF1974-0x0000000189EF1A64
-		public void SetSelection(IEnumerable<int> indices) {} // 0x0000000189EF18FC-0x0000000189EF1974
-		public void SetSelectionWithoutNotify(IEnumerable<int> indices) {} // 0x0000000189EF1778-0x0000000189EF17C0
-		internal void SetSelectionInternal(IEnumerable<int> indices, bool sendNotification) {} // 0x0000000189EF16A8-0x0000000189EF170C
-		private bool MatchesExistingSelection(IEnumerable<int> indices) => default; // 0x0000000189EF170C-0x0000000189EF1778
-		private void NotifyOfSelectionChange() {} // 0x0000000189EF17C0-0x0000000189EF17EC
-		public void ClearSelection() {} // 0x0000000189EF1A64-0x0000000189EF1BB0
-		private void ClearSelectionWithoutValidation() {} // 0x0000000187BF60A4-0x0000000187BF60D8
-		internal override void OnViewDataReady() {} // 0x0000000189EF25C0-0x0000000189EF2638
-		protected override void ExecuteDefaultAction(EventBase evt) {} // 0x0000000189EF2144-0x0000000189EF24D0
-		private void OnSizeChanged(GeometryChangedEvent evt) {} // 0x0000000189EF2638-0x0000000189EF2674
-		private void OnCustomStyleResolved(CustomStyleResolvedEvent e) {} // 0x0000000181041090-0x00000001810410A0
-		void ISerializationCallbackReceiver.OnBeforeSerialize() {} // 0x0000000189EF2574-0x0000000189EF25C0
-		void ISerializationCallbackReceiver.OnAfterDeserialize() {} // 0x0000000181041090-0x00000001810410A0
+			where T : ReusableCollectionItem, new() {}
+		internal CollectionViewController GetOrCreateViewController() => default; // 0x0000000189EE62E8-0x0000000189EE6354
+		protected abstract CollectionViewController CreateViewController();
+		public virtual void SetViewController(CollectionViewController controller) {} // 0x0000000189EE8BDC-0x0000000189EE8CD0
+		internal virtual ListViewDragger CreateDragger() => default; // 0x0000000189EE5A8C-0x0000000189EE5AEC
+		internal void InitializeDragAndDropController(bool enableReordering) {} // 0x0000000189EE64AC-0x0000000189EE659C
+		internal abstract ICollectionDragAndDropController CreateDragAndDropController();
+		public VisualElement GetRootElementForId(int id) => default; // 0x0000000189EE638C-0x0000000189EE6478
+		internal virtual bool HasValidDataAndBindings() => default; // 0x0000000189EE6484-0x0000000189EE64AC
+		private void OnItemIndexChanged(int srcIndex, int dstIndex) {} // 0x0000000189EE6F90-0x0000000189EE6FBC
+		private void OnItemsSourceChanged() {} // 0x0000000189EE6FBC-0x0000000189EE6FD0
+		public void RefreshItems() {} // 0x0000000189EE7BEC-0x0000000189EE7D54
+		public void Rebuild() {} // 0x0000000189EE7AA0-0x0000000189EE7BEC
+		internal void ScheduleRebuild() {} // 0x0000000189EE8514-0x0000000189EE85D0
+		private void RefreshSelection() {} // 0x0000000189EE7D54-0x0000000189EE8248
+		private protected virtual void PostRefresh() {} // 0x0000000189EE738C-0x0000000189EE7444
+		public void ScrollToItem(int index) {} // 0x0000000189EE863C-0x0000000189EE868C
+		public void ScrollToItemById(int id) {} // 0x0000000189EE85D0-0x0000000189EE863C
+		private void OnScroll(Vector2 offset) {} // 0x0000000189EE7238-0x0000000189EE7290
+		private void Resize(Vector2 size) {} // 0x0000000189EE8450-0x0000000189EE84C4
+		private void OnAttachToPanel(AttachToPanelEvent evt) {} // 0x0000000189EE6890-0x0000000189EE6BDC
+		private void OnDetachFromPanel(DetachFromPanelEvent evt) {} // 0x0000000189EE6CDC-0x0000000189EE6F90
+		private bool Apply(KeyboardNavigationOperation op, bool shiftKey, bool altKey) => default; // 0x0000000189EE5378-0x0000000189EE5794
+		private void Apply(KeyboardNavigationOperation op, EventBase sourceEvent) {} // 0x0000000189EE5794-0x0000000189EE58DC
+		private protected virtual bool HandleItemNavigation(bool moveIn, bool altKey) => default; // 0x0000000183D4E3A0-0x0000000183D4E3B0
+		private void OnPointerMove(PointerMoveEvent evt) {} // 0x0000000189EE70FC-0x0000000189EE7174
+		private void OnPointerDown(PointerDownEvent evt) {} // 0x0000000189EE7038-0x0000000189EE70FC
+		private void OnPointerCancel(PointerCancelEvent evt) {} // 0x0000000189EE6FD0-0x0000000189EE7038
+		private void OnPointerUp(PointerUpEvent evt) {} // 0x0000000189EE7174-0x0000000189EE7238
+		private void ProcessPointerDown(IPointerEvent evt) {} // 0x0000000189EE7444-0x0000000189EE7594
+		private void ProcessPointerUp(IPointerEvent evt) {} // 0x0000000189EE7594-0x0000000189EE77FC
+		private void DoSelect(Vector2 localPosition, int clickCount, bool actionKey, bool shiftKey) {} // 0x0000000189EE5C40-0x0000000189EE6064
+		internal void DoRangeSelection(int rangeSelectionFinalIndex) {} // 0x0000000189EE5B28-0x0000000189EE5C40
+		private void ProcessSingleClick(int clickedIndex) {} // 0x0000000189EE77FC-0x0000000189EE7804
+		internal void SelectAll() {} // 0x0000000189EE868C-0x0000000189EE8920
+		public void AddToSelection(int index) {} // 0x0000000189EE5188-0x0000000189EE51F8
+		internal void AddToSelection(IList<int> indexes) {} // 0x0000000189EE51F8-0x0000000189EE5378
+		private void AddToSelectionWithoutValidation(int index) {} // 0x0000000189EE4F5C-0x0000000189EE5188
+		public void RemoveFromSelection(int index) {} // 0x0000000189EE8404-0x0000000189EE8450
+		private void RemoveFromSelectionWithoutValidation(int index) {} // 0x0000000189EE8248-0x0000000189EE8404
+		public void SetSelection(int index) {} // 0x0000000189EE8B58-0x0000000189EE8BDC
+		public void SetSelection(IEnumerable<int> indices) {} // 0x0000000189EE8B4C-0x0000000189EE8B58
+		public void SetSelectionWithoutNotify(IEnumerable<int> indices) {} // 0x0000000189EE8B40-0x0000000189EE8B4C
+		internal void SetSelectionInternal(IEnumerable<int> indices, bool sendNotification) {} // 0x0000000189EE8920-0x0000000189EE8B40
+		private bool MatchesExistingSelection(IEnumerable<int> indices) => default; // 0x0000000189EE659C-0x0000000189EE6818
+		private void NotifyOfSelectionChange() {} // 0x0000000189EE6818-0x0000000189EE6890
+		public void ClearSelection() {} // 0x0000000189EE5A38-0x0000000189EE5A8C
+		private void ClearSelectionWithoutValidation() {} // 0x0000000189EE58DC-0x0000000189EE5A38
+		internal override void OnViewDataReady() {} // 0x0000000189EE734C-0x0000000189EE738C
+		protected override void ExecuteDefaultAction(EventBase evt) {} // 0x0000000189EE6064-0x0000000189EE62E8
+		private void OnSizeChanged(GeometryChangedEvent evt) {} // 0x0000000189EE7290-0x0000000189EE734C
+		private void OnCustomStyleResolved(CustomStyleResolvedEvent e) {} // 0x0000000189EE6BDC-0x0000000189EE6CDC
+		void ISerializationCallbackReceiver.OnBeforeSerialize() {} // 0x000000018350B670-0x000000018350B680
+		void ISerializationCallbackReceiver.OnAfterDeserialize() {} // 0x0000000189EE8DDC-0x0000000189EE8E18
 	}
 
 	public interface IBindable // TypeDefIndex: 43440
@@ -4987,12 +5144,12 @@ namespace UnityEngine.UIElements
 		public class UxmlFactory : UxmlFactory<Box> // TypeDefIndex: 43442
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189EE9F10-0x0000000189EE9F84
+			public UxmlFactory() {} // 0x0000000189EF26EC-0x0000000189EF2728
 		}
 	
 		// Constructors
-		public Box() {} // 0x0000000189EE9EB4-0x0000000189EE9F10
-		static Box() {} // 0x0000000189EF26EC-0x0000000189EF2728
+		public Box() {} // 0x0000000189EE9F10-0x0000000189EE9F84
+		static Box() {} // 0x0000000189EE9EB4-0x0000000189EE9F10
 	}
 
 	public class Button : UnityEngine.UIElements.TextElement // TypeDefIndex: 43446
@@ -5003,30 +5160,30 @@ namespace UnityEngine.UIElements
 		private static readonly string NonEmptyString; // 0x08
 	
 		// Properties
-		public Clickable clickable { get => default; set {} } // 0x0000000189EEA60C-0x0000000189EEA618 0x0000000189EEA474-0x0000000189EEA60C
+		public Clickable clickable { get => default; set {} } // 0x0000000183D88EF0-0x0000000183D88F00 0x0000000189EEA618-0x0000000189EEA688
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<Button, UxmlTraits> // TypeDefIndex: 43444
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000183D88EF0-0x0000000183D88F00
+			public UxmlFactory() {} // 0x0000000189EF2728-0x0000000189EF2764
 		}
 	
 		public class UxmlTraits : UnityEngine.UIElements.TextElement.UxmlTraits // TypeDefIndex: 43445
 		{
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EEA618-0x0000000189EEA688
+			public UxmlTraits() {} // 0x0000000189EF37F0-0x0000000189EF3838
 		}
 	
 		// Constructors
-		public Button() {} // 0x0000000189EEA3A4-0x0000000189EEA3DC
-		public Button(Action clickEvent) {} // 0x0000000189EEA30C-0x0000000189EEA3A4
-		static Button() {} // 0x0000000189EF37F0-0x0000000189EF3838
+		public Button() {} // 0x0000000189EEA60C-0x0000000189EEA618
+		public Button(Action clickEvent) {} // 0x0000000189EEA474-0x0000000189EEA60C
+		static Button() {} // 0x0000000189EEA3DC-0x0000000189EEA474
 	
 		// Methods
-		private void OnNavigationSubmit(NavigationSubmitEvent evt) {} // 0x0000000189EEA260-0x0000000189EEA30C
-		private void OnKeyDown(KeyDownEvent evt) {} // 0x0000000189EEA3DC-0x0000000189EEA474
-		protected internal override Vector2 DoMeasure(float desiredWidth, MeasureMode widthMode, float desiredHeight, MeasureMode heightMode) => default; // 0x0000000189EF2728-0x0000000189EF2764
+		private void OnNavigationSubmit(NavigationSubmitEvent evt) {} // 0x0000000189EEA3A4-0x0000000189EEA3DC
+		private void OnKeyDown(KeyDownEvent evt) {} // 0x0000000189EEA30C-0x0000000189EEA3A4
+		protected internal override Vector2 DoMeasure(float desiredWidth, MeasureMode widthMode, float desiredHeight, MeasureMode heightMode) => default; // 0x0000000189EEA260-0x0000000189EEA30C
 	}
 
 	internal class ButtonStripField : BaseField<int> // TypeDefIndex: 43449
@@ -5035,27 +5192,27 @@ namespace UnityEngine.UIElements
 		private List<UnityEngine.UIElements.Button> m_Buttons; // 0x418
 	
 		// Properties
-		private List<UnityEngine.UIElements.Button> buttons { get => default; } // 0x0000000189EEA04C-0x0000000189EEA0D0 
+		private List<UnityEngine.UIElements.Button> buttons { get => default; } // 0x0000000189EEA180-0x0000000189EEA260 
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<ButtonStripField, UxmlTraits> // TypeDefIndex: 43447
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189EEA180-0x0000000189EEA260
+			public UxmlFactory() {} // 0x0000000189EF26B0-0x0000000189EF26EC
 		}
 	
 		public class UxmlTraits : BaseField<int> // TypeDefIndex: 43448
 		{
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EEA0D0-0x0000000189EEA180
+			public UxmlTraits() {} // 0x0000000189EF37B4-0x0000000189EF37F0
 		}
 	
 		// Constructors
-		public ButtonStripField() {} // 0x0000000189EE9F84-0x0000000189EEA04C
+		public ButtonStripField() {} // 0x0000000189EEA0D0-0x0000000189EEA180
 	
 		// Methods
-		public override void SetValueWithoutNotify(int newValue) {} // 0x0000000189EF26B0-0x0000000189EF26EC
-		private void RefreshButtonsState() {} // 0x0000000189EF37B4-0x0000000189EF37F0
+		public override void SetValueWithoutNotify(int newValue) {} // 0x0000000189EEA04C-0x0000000189EEA0D0
+		private void RefreshButtonsState() {} // 0x0000000189EE9F84-0x0000000189EEA04C
 	}
 
 	public class DropdownField : BaseField<string> // TypeDefIndex: 43454
@@ -5078,16 +5235,16 @@ namespace UnityEngine.UIElements
 		internal static readonly string inputUssClassNamePopupField; // 0x38
 	
 		// Properties
-		protected UnityEngine.UIElements.TextElement textElement { get => default; } // 0x0000000189EEB030-0x0000000189EEB044 
-		public int index { set {} } // 0x0000000189EEBC54-0x0000000189EEBCD0
-		public virtual List<string> choices { set {} } // 0x0000000189EEB590-0x0000000189EEB810
-		public override string value { get => default; set {} } // 0x0000000189EF2674-0x0000000189EF26B0 0x0000000189EF2D5C-0x0000000189EF2E94
+		protected UnityEngine.UIElements.TextElement textElement { get => default; } // 0x0000000183D88F00-0x0000000183D88F10 
+		public int index { set {} } // 0x0000000189EEBBCC-0x0000000189EEBC54
+		public virtual List<string> choices { set {} } // 0x0000000189EEBB6C-0x0000000189EEBBCC
+		public override string value { get => default; set {} } // 0x0000000189EEBB30-0x0000000189EEBB6C 0x0000000189EEBC54-0x0000000189EEBCD0
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<DropdownField, UxmlTraits> // TypeDefIndex: 43450
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000183D88F00-0x0000000183D88F10
+			public UxmlFactory() {} // 0x0000000189EF2674-0x0000000189EF26B0
 		}
 	
 		public class UxmlTraits : BaseField<string> // TypeDefIndex: 43451
@@ -5097,35 +5254,35 @@ namespace UnityEngine.UIElements
 			private UxmlStringAttributeDescription m_Choices; // 0x88
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EEB194-0x0000000189EEB23C
+			public UxmlTraits() {} // 0x0000000189EF36AC-0x0000000189EF37B4
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EEB23C-0x0000000189EEB2C4
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EF2D5C-0x0000000189EF2E94
 		}
 	
 		private class PopupTextElement : UnityEngine.UIElements.TextElement // TypeDefIndex: 43452
 		{
 			// Constructors
-			public PopupTextElement() {} // 0x0000000189EEBB24-0x0000000189EEBB30
+			public PopupTextElement() {} // 0x0000000189EEF684-0x0000000189EEF6D0
 	
 			// Methods
-			protected internal override Vector2 DoMeasure(float desiredWidth, MeasureMode widthMode, float desiredHeight, MeasureMode heightMode) => default; // 0x0000000189EEBBCC-0x0000000189EEBC54
+			protected internal override Vector2 DoMeasure(float desiredWidth, MeasureMode widthMode, float desiredHeight, MeasureMode heightMode) => default; // 0x0000000189EEF5EC-0x0000000189EEF684
 		}
 	
 		// Constructors
-		public DropdownField() {} // 0x0000000189EEB2C4-0x0000000189EEB380
-		public DropdownField(string label) {} // 0x0000000189EEB044-0x0000000189EEB194
-		static DropdownField() {} // 0x0000000189EF211C-0x0000000189EF2144
+		public DropdownField() {} // 0x0000000189EEBB24-0x0000000189EEBB30
+		public DropdownField(string label) {} // 0x0000000189EEB810-0x0000000189EEBB24
+		static DropdownField() {} // 0x0000000189EEB590-0x0000000189EEB810
 	
 		// Methods
-		internal string GetValueToDisplay() => default; // 0x0000000189EEBB6C-0x0000000189EEBBCC
-		internal string GetListItemToDisplay(string value) => default; // 0x0000000189EEBB30-0x0000000189EEBB6C
-		internal void AddMenuItems(IGenericMenu menu) {} // 0x0000000189EEB380-0x0000000189EEB4D0
-		private void ChangeValueFromMenu(string menuItem) {} // 0x0000000189EEB4D0-0x0000000189EEB590
-		public override void SetValueWithoutNotify(string newValue) {} // 0x0000000189EF36AC-0x0000000189EF37B4
-		protected override void ExecuteDefaultActionAtTarget(EventBase evt) {} // 0x0000000189EEF5EC-0x0000000189EEF684
-		private void ShowMenu() {} // 0x0000000189EEF684-0x0000000189EEF6D0
-		protected override void UpdateMixedValueContent() {} // 0x000000018350B670-0x000000018350B680
+		internal string GetValueToDisplay() => default; // 0x0000000189EEB23C-0x0000000189EEB2C4
+		internal string GetListItemToDisplay(string value) => default; // 0x0000000189EEB194-0x0000000189EEB23C
+		internal void AddMenuItems(IGenericMenu menu) {} // 0x0000000189EEAC1C-0x0000000189EEB030
+		private void ChangeValueFromMenu(string menuItem) {} // 0x0000000189EEB030-0x0000000189EEB044
+		public override void SetValueWithoutNotify(string newValue) {} // 0x0000000189EEB2C4-0x0000000189EEB380
+		protected override void ExecuteDefaultActionAtTarget(EventBase evt) {} // 0x0000000189EEB044-0x0000000189EEB194
+		private void ShowMenu() {} // 0x0000000189EEB380-0x0000000189EEB4D0
+		protected override void UpdateMixedValueContent() {} // 0x0000000189EEB4D0-0x0000000189EEB590
 	}
 
 	public class Foldout : BindableElement, INotifyValueChanged<bool> // TypeDefIndex: 43457
@@ -5145,16 +5302,16 @@ namespace UnityEngine.UIElements
 		internal static readonly int ussFoldoutMaxDepth; // 0x38
 	
 		// Properties
-		internal Toggle toggle { get => default; } // 0x0000000183D88F10-0x0000000183D88F20 
-		public override VisualElement contentContainer { get => default; } // 0x0000000189EEC638-0x0000000189EEC744 
-		public string text { set {} } // 0x0000000189EEBE88-0x0000000189EEBF24
-		public bool value { get => default; set {} } // 0x0000000189EEBE50-0x0000000189EEBE88 0x0000000189EEC1E4-0x0000000189EEC53C
+		internal Toggle toggle { get => default; } // 0x0000000183D55EC0-0x0000000183D55ED0 
+		public override VisualElement contentContainer { get => default; } // 0x0000000183D55ED0-0x0000000183D55EE0 
+		public string text { set {} } // 0x0000000189EEC53C-0x0000000189EEC638
+		public bool value { get => default; set {} } // 0x0000000183D88F10-0x0000000183D88F20 0x0000000189EEC638-0x0000000189EEC744
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<Foldout, UxmlTraits> // TypeDefIndex: 43455
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000183D55EC0-0x0000000183D55ED0
+			public UxmlFactory() {} // 0x0000000189EF2764-0x0000000189EF27A0
 		}
 	
 		public class UxmlTraits : BindableElement.UxmlTraits // TypeDefIndex: 43456
@@ -5164,20 +5321,20 @@ namespace UnityEngine.UIElements
 			private UxmlBoolAttributeDescription m_Value; // 0x80
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EEC53C-0x0000000189EEC638
+			public UxmlTraits() {} // 0x0000000189EF3508-0x0000000189EF3608
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000183D55ED0-0x0000000183D55EE0
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EF2958-0x0000000189EF2A5C
 		}
 	
 		// Constructors
-		public Foldout() {} // 0x0000000189EEBF24-0x0000000189EEBF74
-		static Foldout() {} // 0x0000000189EF2958-0x0000000189EF2A5C
+		public Foldout() {} // 0x0000000189EEC1E4-0x0000000189EEC53C
+		static Foldout() {} // 0x0000000189EEBF74-0x0000000189EEC1E4
 	
 		// Methods
-		public void SetValueWithoutNotify(bool newValue) {} // 0x0000000189EEBCD0-0x0000000189EEBE50
-		internal override void OnViewDataReady() {} // 0x0000000189EEBF74-0x0000000189EEC1E4
-		private void OnAttachToPanel(AttachToPanelEvent evt) {} // 0x0000000189EF2764-0x0000000189EF27A0
+		public void SetValueWithoutNotify(bool newValue) {} // 0x0000000189EEBE88-0x0000000189EEBF24
+		internal override void OnViewDataReady() {} // 0x0000000189EEBE50-0x0000000189EEBE88
+		private void OnAttachToPanel(AttachToPanelEvent evt) {} // 0x0000000189EEBCD0-0x0000000189EEBE50
 	}
 
 	internal interface IGenericMenu // TypeDefIndex: 43458
@@ -5208,7 +5365,7 @@ namespace UnityEngine.UIElements
 		private Vector2 m_MousePosition; // 0x58
 	
 		// Properties
-		public VisualElement contentContainer { get => default; } // 0x0000000189EEE7E0-0x0000000189EEEB0C 
+		public VisualElement contentContainer { get => default; } // 0x0000000189EEEB0C-0x0000000189EEEB30 
 	
 		// Nested types
 		internal class MenuItem // TypeDefIndex: 43459
@@ -5220,34 +5377,34 @@ namespace UnityEngine.UIElements
 			public Action<object> actionUserData; // 0x28
 	
 			// Constructors
-			public MenuItem() {} // 0x0000000189EEEB0C-0x0000000189EEEB30
+			public MenuItem() {} // 0x000000018350B670-0x000000018350B680
 		}
 	
 		// Constructors
-		public GenericDropdownMenu() {} // 0x0000000189EED804-0x0000000189EEDBBC
-		static GenericDropdownMenu() {} // 0x0000000189EEE344-0x0000000189EEE3E4
+		public GenericDropdownMenu() {} // 0x0000000189EEE7E0-0x0000000189EEEB0C
+		static GenericDropdownMenu() {} // 0x0000000189EEE584-0x0000000189EEE7E0
 	
 		// Methods
-		private void OnAttachToPanel(AttachToPanelEvent evt) {} // 0x0000000189EEDBC4-0x0000000189EEDEEC
-		private void OnDetachFromPanel(DetachFromPanelEvent evt) {} // 0x0000000189EED724-0x0000000189EED804
-		private void Hide() {} // 0x0000000189EECCC4-0x0000000189EECD00
-		private void Apply(KeyboardNavigationOperation op, EventBase sourceEvent) {} // 0x0000000189EECB1C-0x0000000189EECCC4
-		private bool Apply(KeyboardNavigationOperation op) => default; // 0x0000000189EEDFC4-0x0000000189EEE0EC
-		private void OnPointerDown(PointerDownEvent evt) {} // 0x0000000189EEE0EC-0x0000000189EEE214
-		private void OnPointerMove(PointerMoveEvent evt) {} // 0x0000000189EEE214-0x0000000189EEE344
-		private void OnPointerUp(PointerUpEvent evt) {} // 0x0000000189EEDEEC-0x0000000189EEDFBC
-		private void OnFocusOut(FocusOutEvent evt) {} // 0x0000000189EEDFBC-0x0000000189EEDFC4
-		private void OnParentResized(GeometryChangedEvent evt) {} // 0x0000000189EEE474-0x0000000189EEE584
-		private void UpdateSelection(VisualElement target) {} // 0x0000000189EECD00-0x0000000189EECE1C
-		private void ChangeSelectedIndex(int newIndex, int previousIndex) {} // 0x0000000189EED69C-0x0000000189EED724
-		private int GetSelectedIndex() => default; // 0x0000000189EEC744-0x0000000189EEC77C
-		public void AddItem(string itemName, bool isChecked, Action action) {} // 0x0000000189EECA70-0x0000000189EECB1C
-		public void AddSeparator(string path) {} // 0x0000000189EEC77C-0x0000000189EECA70
-		private MenuItem AddItem(string itemName, bool isChecked, bool isEnabled, object data = null) => default; // 0x0000000189EECE1C-0x0000000189EED2C8
-		public void DropDown(Rect position, VisualElement targetElement = null, bool anchored = false /* Metadata: 0x01FB5F10 */) {} // 0x0000000189EEDFBC-0x0000000189EEDFC4
-		private void OnTargetElementDetachFromPanel(DetachFromPanelEvent evt) {} // 0x0000000189EEDBBC-0x0000000189EEDBC4
-		private void OnContainerGeometryChanged(GeometryChangedEvent evt) {} // 0x0000000189EED2C8-0x0000000189EED69C
-		private void EnsureVisibilityInParent() {} // 0x0000000189EEE584-0x0000000189EEE7E0
+		private void OnAttachToPanel(AttachToPanelEvent evt) {} // 0x0000000189EED804-0x0000000189EEDBBC
+		private void OnDetachFromPanel(DetachFromPanelEvent evt) {} // 0x0000000189EEDBC4-0x0000000189EEDEEC
+		private void Hide() {} // 0x0000000189EED724-0x0000000189EED804
+		private void Apply(KeyboardNavigationOperation op, EventBase sourceEvent) {} // 0x0000000189EECCC4-0x0000000189EECD00
+		private bool Apply(KeyboardNavigationOperation op) => default; // 0x0000000189EECB1C-0x0000000189EECCC4
+		private void OnPointerDown(PointerDownEvent evt) {} // 0x0000000189EEDFC4-0x0000000189EEE0EC
+		private void OnPointerMove(PointerMoveEvent evt) {} // 0x0000000189EEE0EC-0x0000000189EEE214
+		private void OnPointerUp(PointerUpEvent evt) {} // 0x0000000189EEE214-0x0000000189EEE344
+		private void OnFocusOut(FocusOutEvent evt) {} // 0x0000000189EEDEEC-0x0000000189EEDFBC
+		private void OnParentResized(GeometryChangedEvent evt) {} // 0x0000000189EEDFBC-0x0000000189EEDFC4
+		private void UpdateSelection(VisualElement target) {} // 0x0000000189EEE474-0x0000000189EEE584
+		private void ChangeSelectedIndex(int newIndex, int previousIndex) {} // 0x0000000189EECD00-0x0000000189EECE1C
+		private int GetSelectedIndex() => default; // 0x0000000189EED69C-0x0000000189EED724
+		public void AddItem(string itemName, bool isChecked, Action action) {} // 0x0000000189EEC744-0x0000000189EEC77C
+		public void AddSeparator(string path) {} // 0x0000000189EECA70-0x0000000189EECB1C
+		private MenuItem AddItem(string itemName, bool isChecked, bool isEnabled, object data = null) => default; // 0x0000000189EEC77C-0x0000000189EECA70
+		public void DropDown(Rect position, VisualElement targetElement = null, bool anchored = false /* Metadata: 0x01FB5F10 */) {} // 0x0000000189EECE1C-0x0000000189EED2C8
+		private void OnTargetElementDetachFromPanel(DetachFromPanelEvent evt) {} // 0x0000000189EEDFBC-0x0000000189EEDFC4
+		private void OnContainerGeometryChanged(GeometryChangedEvent evt) {} // 0x0000000189EEDBBC-0x0000000189EEDBC4
+		private void EnsureVisibilityInParent() {} // 0x0000000189EED2C8-0x0000000189EED69C
 	}
 
 	public class GroupBox : BindableElement, IGroupBox // TypeDefIndex: 43464
@@ -5258,13 +5415,13 @@ namespace UnityEngine.UIElements
 		private UnityEngine.UIElements.Label m_TitleLabel; // 0x3D0
 	
 		// Properties
-		public string text { set {} } // 0x0000000189EF409C-0x0000000189EF414C
+		public string text { set {} } // 0x0000000189EF41D0-0x0000000189EF4304
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<GroupBox, UxmlTraits> // TypeDefIndex: 43462
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189EF41D0-0x0000000189EF4304
+			public UxmlFactory() {} // 0x0000000189F01A64-0x0000000189F01AA0
 		}
 	
 		public class UxmlTraits : BindableElement.UxmlTraits // TypeDefIndex: 43463
@@ -5273,16 +5430,16 @@ namespace UnityEngine.UIElements
 			private UxmlStringAttributeDescription m_Text; // 0x78
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EF414C-0x0000000189EF41C4
+			public UxmlTraits() {} // 0x0000000189F03968-0x0000000189F039F8
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EF41C4-0x0000000189EF41D0
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F02A6C-0x0000000189F02B48
 		}
 	
 		// Constructors
-		public GroupBox() {} // 0x0000000189F01A64-0x0000000189F01AA0
-		public GroupBox(string text) {} // 0x0000000189F02A6C-0x0000000189F02B48
-		static GroupBox() {} // 0x0000000189F03968-0x0000000189F039F8
+		public GroupBox() {} // 0x0000000189EF41C4-0x0000000189EF41D0
+		public GroupBox(string text) {} // 0x0000000189EF414C-0x0000000189EF41C4
+		static GroupBox() {} // 0x0000000189EF409C-0x0000000189EF414C
 	}
 
 	public enum HelpBoxMessageType // TypeDefIndex: 43465
@@ -5308,14 +5465,14 @@ namespace UnityEngine.UIElements
 		private UnityEngine.UIElements.Label m_Label; // 0x3D8
 	
 		// Properties
-		public string text { set {} } // 0x0000000189EF46C4-0x0000000189EF484C
-		public HelpBoxMessageType messageType { set {} } // 0x0000000189EF4304-0x0000000189EF43AC
+		public string text { set {} } // 0x0000000189EF486C-0x0000000189EF4890
+		public HelpBoxMessageType messageType { set {} } // 0x0000000189EF484C-0x0000000189EF486C
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<HelpBox, UxmlTraits> // TypeDefIndex: 43466
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189EF486C-0x0000000189EF4890
+			public UxmlFactory() {} // 0x0000000189F01ADC-0x0000000189F01B18
 		}
 	
 		public class UxmlTraits : VisualElement.UxmlTraits // TypeDefIndex: 43467
@@ -5325,20 +5482,20 @@ namespace UnityEngine.UIElements
 			private UxmlEnumAttributeDescription<HelpBoxMessageType> m_MessageType; // 0x78
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EF4678-0x0000000189EF46C4
+			public UxmlTraits() {} // 0x0000000189F03CD0-0x0000000189F03DDC
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EF484C-0x0000000189EF486C
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F0296C-0x0000000189F02A6C
 		}
 	
 		// Constructors
-		public HelpBox() {} // 0x0000000189EF43AC-0x0000000189EF4470
-		public HelpBox(string text, HelpBoxMessageType messageType) {} // 0x0000000189EF4470-0x0000000189EF4678
-		static HelpBox() {} // 0x0000000189F03CD0-0x0000000189F03DDC
+		public HelpBox() {} // 0x0000000189EF4678-0x0000000189EF46C4
+		public HelpBox(string text, HelpBoxMessageType messageType) {} // 0x0000000189EF46C4-0x0000000189EF484C
+		static HelpBox() {} // 0x0000000189EF4470-0x0000000189EF4678
 	
 		// Methods
-		private string GetIconClass(HelpBoxMessageType messageType) => default; // 0x0000000189F01ADC-0x0000000189F01B18
-		private void UpdateIcon(HelpBoxMessageType messageType) {} // 0x0000000189F0296C-0x0000000189F02A6C
+		private string GetIconClass(HelpBoxMessageType messageType) => default; // 0x0000000189EF4304-0x0000000189EF43AC
+		private void UpdateIcon(HelpBoxMessageType messageType) {} // 0x0000000189EF43AC-0x0000000189EF4470
 	}
 
 	public class Image : VisualElement // TypeDefIndex: 43471
@@ -5361,39 +5518,39 @@ namespace UnityEngine.UIElements
 		private static CustomStyleProperty<UnityEngine.Color> s_TintColorProperty; // 0x28
 	
 		// Properties
-		public Texture image { get => default; set {} } // 0x0000000183D88E30-0x0000000183D88E40 0x0000000189EF5BF8-0x0000000189EF5DC4
-		public Sprite sprite { get => default; set {} } // 0x0000000183D88DF0-0x0000000183D88E00 0x0000000189EF5DC4-0x0000000189EF5FC4
-		public VectorImage vectorImage { get => default; set {} } // 0x0000000189EF59CC-0x0000000189EF59F8 0x0000000183D88F80-0x0000000183D88F90
-		public Rect sourceRect { get => default; } // 0x0000000183D88F60-0x0000000183D88F70 
-		public Rect uv { get => default; } // 0x0000000183D88F70-0x0000000183D88F80 
-		public UnityEngine.ScaleMode scaleMode { get => default; } // 0x0000000189EF5824-0x0000000189EF59CC 
-		public UnityEngine.Color tintColor { get => default; } // 0x0000000189EF4C50-0x0000000189EF4CF0 
+		public Texture image { get => default; set {} } // 0x0000000183D88F50-0x0000000183D88F60 0x0000000189EF59F8-0x0000000189EF5BF8
+		public Sprite sprite { get => default; set {} } // 0x0000000183D88E30-0x0000000183D88E40 0x0000000189EF5BF8-0x0000000189EF5DC4
+		public VectorImage vectorImage { get => default; set {} } // 0x0000000183D88DF0-0x0000000183D88E00 0x0000000189EF5DC4-0x0000000189EF5FC4
+		public Rect sourceRect { get => default; } // 0x0000000189EF59CC-0x0000000189EF59F8 
+		public Rect uv { get => default; } // 0x0000000183D88F80-0x0000000183D88F90 
+		public UnityEngine.ScaleMode scaleMode { get => default; } // 0x0000000183D88F60-0x0000000183D88F70 
+		public UnityEngine.Color tintColor { get => default; } // 0x0000000183D88F70-0x0000000183D88F80 
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<Image, UxmlTraits> // TypeDefIndex: 43469
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000183D88F50-0x0000000183D88F60
+			public UxmlFactory() {} // 0x0000000189F018C0-0x0000000189F018FC
 		}
 	
 		public class UxmlTraits : VisualElement.UxmlTraits // TypeDefIndex: 43470
 		{
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EF59F8-0x0000000189EF5BF8
+			public UxmlTraits() {} // 0x0000000189F03DDC-0x0000000189F03F3C
 		}
 	
 		// Constructors
-		public Image() {} // 0x0000000189EF4CF0-0x0000000189EF4DF0
-		static Image() {} // 0x0000000189F03DDC-0x0000000189F03F3C
+		public Image() {} // 0x0000000189EF5824-0x0000000189EF59CC
+		static Image() {} // 0x0000000189EF55F4-0x0000000189EF5824
 	
 		// Methods
-		private Vector2 GetTextureDisplaySize(Texture texture) => default; // 0x0000000189EF4890-0x0000000189EF4AC0
-		private Vector2 GetTextureDisplaySize(Sprite sprite) => default; // 0x0000000189EF51E8-0x0000000189EF55D0
-		protected internal override Vector2 DoMeasure(float desiredWidth, MeasureMode widthMode, float desiredHeight, MeasureMode heightMode) => default; // 0x0000000189EF4DF0-0x0000000189EF51E8
-		private void OnGenerateVisualContent(MeshGenerationContext mgc) {} // 0x0000000189EF55D0-0x0000000189EF55F4
-		private void OnCustomStyleResolved(CustomStyleResolvedEvent e) {} // 0x0000000189EF4AC0-0x0000000189EF4C50
-		private void SetScaleMode(UnityEngine.ScaleMode mode) {} // 0x0000000189EF55F4-0x0000000189EF5824
-		private Rect GetSourceRect() => default; // 0x0000000189F018C0-0x0000000189F018FC
+		private Vector2 GetTextureDisplaySize(Texture texture) => default; // 0x0000000189EF4C50-0x0000000189EF4CF0
+		private Vector2 GetTextureDisplaySize(Sprite sprite) => default; // 0x0000000189EF4CF0-0x0000000189EF4DF0
+		protected internal override Vector2 DoMeasure(float desiredWidth, MeasureMode widthMode, float desiredHeight, MeasureMode heightMode) => default; // 0x0000000189EF4890-0x0000000189EF4AC0
+		private void OnGenerateVisualContent(MeshGenerationContext mgc) {} // 0x0000000189EF51E8-0x0000000189EF55D0
+		private void OnCustomStyleResolved(CustomStyleResolvedEvent e) {} // 0x0000000189EF4DF0-0x0000000189EF51E8
+		private void SetScaleMode(UnityEngine.ScaleMode mode) {} // 0x0000000189EF55D0-0x0000000189EF55F4
+		private Rect GetSourceRect() => default; // 0x0000000189EF4AC0-0x0000000189EF4C50
 	}
 
 	public interface INotifyValueChanged<T> // TypeDefIndex: 43472
@@ -5456,19 +5613,19 @@ namespace UnityEngine.UIElements
 		public class UxmlFactory : UxmlFactory<Label, UxmlTraits> // TypeDefIndex: 43475
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189EF7888-0x0000000189EF78D0
+			public UxmlFactory() {} // 0x0000000189F01AA0-0x0000000189F01ADC
 		}
 	
 		public class UxmlTraits : UnityEngine.UIElements.TextElement.UxmlTraits // TypeDefIndex: 43476
 		{
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EF77F8-0x0000000189EF7888
+			public UxmlTraits() {} // 0x0000000189F031C8-0x0000000189F031D0
 		}
 	
 		// Constructors
-		public Label() {} // 0x0000000189EF779C-0x0000000189EF77F8
-		public Label(string text) {} // 0x0000000189F01AA0-0x0000000189F01ADC
-		static Label() {} // 0x0000000189F031C8-0x0000000189F031D0
+		public Label() {} // 0x0000000189EF7888-0x0000000189EF78D0
+		public Label(string text) {} // 0x0000000189EF77F8-0x0000000189EF7888
+		static Label() {} // 0x0000000189EF779C-0x0000000189EF77F8
 	}
 
 	public class ListView : BaseListView // TypeDefIndex: 43480
@@ -5478,30 +5635,30 @@ namespace UnityEngine.UIElements
 		private Action<VisualElement, int> m_BindItem; // 0x540
 	
 		// Properties
-		public Func<VisualElement> makeItem { get => default; } // 0x0000000183D6CB20-0x0000000183D6CB30 
-		public Action<VisualElement, int> bindItem { get => default; } // 0x0000000183D6CB30-0x0000000183D6CB40 
-		public Action<VisualElement, int> unbindItem { get; } // 0x0000000189EF790C-0x0000000189EF7948 
-		public Action<VisualElement> destroyItem { get; } // 0x0000000189EF78D0-0x0000000189EF790C 
+		public Func<VisualElement> makeItem { get => default; } // 0x0000000183D6CB00-0x0000000183D6CB10 
+		public Action<VisualElement, int> bindItem { get => default; } // 0x0000000183D6CB10-0x0000000183D6CB20 
+		public Action<VisualElement, int> unbindItem { get; } // 0x0000000183D6CB20-0x0000000183D6CB30 
+		public Action<VisualElement> destroyItem { get; } // 0x0000000183D6CB30-0x0000000183D6CB40 
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<ListView, UxmlTraits> // TypeDefIndex: 43478
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000183D6CB00-0x0000000183D6CB10
+			public UxmlFactory() {} // 0x0000000189F01B18-0x0000000189F01B54
 		}
 	
 		public class UxmlTraits : BaseListView.UxmlTraits // TypeDefIndex: 43479
 		{
 			// Constructors
-			public UxmlTraits() {} // 0x0000000183D6CB10-0x0000000183D6CB20
+			public UxmlTraits() {} // 0x0000000189F031D0-0x0000000189F031D8
 		}
 	
 		// Constructors
-		public ListView() {} // 0x0000000189F031D0-0x0000000189F031D8
+		public ListView() {} // 0x0000000189EF7948-0x0000000189EF79A8
 	
 		// Methods
-		internal override bool HasValidDataAndBindings() => default; // 0x0000000189EF7948-0x0000000189EF79A8
-		protected override CollectionViewController CreateViewController() => default; // 0x0000000189F01B18-0x0000000189F01B54
+		internal override bool HasValidDataAndBindings() => default; // 0x0000000189EF790C-0x0000000189EF7948
+		protected override CollectionViewController CreateViewController() => default; // 0x0000000189EF78D0-0x0000000189EF790C
 	}
 
 	public class MinMaxSlider : BaseField<Vector2> // TypeDefIndex: 43484
@@ -5523,21 +5680,21 @@ namespace UnityEngine.UIElements
 		public static readonly string maxThumbUssClassName; // 0x30
 	
 		// Properties
-		internal VisualElement dragElement { get; private set; } // 0x00000001858B4000-0x00000001858B4014 0x0000000183D55F30-0x0000000183D55F40
-		internal VisualElement dragMinThumb { get; private set; } // 0x00000001858B3EAC-0x00000001858B3EC0 0x0000000183D55F10-0x0000000183D55F20
-		internal VisualElement dragMaxThumb { get; private set; } // 0x00000001858B3E5C-0x00000001858B3E70 0x0000000189EF92DC-0x0000000189EF9300
-		internal ClampedDragger<float> clampedDragger { get; private set; } // 0x0000000189EF95B0-0x0000000189EF9620 0x0000000189EF92B8-0x0000000189EF92DC
-		public float minValue { get => default; set {} } // 0x0000000189EF9540-0x0000000189EF95B0 0x0000000189EF9300-0x0000000189EF9344
-		public float maxValue { get => default; set {} } // 0x0000000189EF9620-0x0000000189EF967C 0x0000000189EF815C-0x0000000189EF81C4
-		public override Vector2 value { get => default; set {} } // 0x0000000183D88FC0-0x0000000183D88FD0 0x0000000189EF9444-0x0000000189EF9540
-		public float lowLimit { get => default; set {} } // 0x0000000189EF9344-0x0000000189EF9444 0x0000000189EF8C88-0x0000000189EF8CC8
-		public float highLimit { get => default; set {} } // 0x0000000189EF8CC8-0x0000000189EF92B8 0x0000000189EF79A8-0x0000000189EF7A28
+		internal VisualElement dragElement { get; private set; } // 0x0000000183D57150-0x0000000183D57160 0x00000001858B3D1C-0x00000001858B3D30
+		internal VisualElement dragMinThumb { get; private set; } // 0x0000000183D57320-0x0000000183D57330 0x00000001858B4000-0x00000001858B4014
+		internal VisualElement dragMaxThumb { get; private set; } // 0x0000000183D55F30-0x0000000183D55F40 0x00000001858B3EAC-0x00000001858B3EC0
+		internal ClampedDragger<float> clampedDragger { get; private set; } // 0x0000000183D55F10-0x0000000183D55F20 0x00000001858B3E5C-0x00000001858B3E70
+		public float minValue { get => default; set {} } // 0x0000000189EF92DC-0x0000000189EF9300 0x0000000189EF95B0-0x0000000189EF9620
+		public float maxValue { get => default; set {} } // 0x0000000189EF92B8-0x0000000189EF92DC 0x0000000189EF9540-0x0000000189EF95B0
+		public override Vector2 value { get => default; set {} } // 0x0000000189EF9300-0x0000000189EF9344 0x0000000189EF9620-0x0000000189EF967C
+		public float lowLimit { get => default; set {} } // 0x0000000183D88FC0-0x0000000183D88FD0 0x0000000189EF9444-0x0000000189EF9540
+		public float highLimit { get => default; set {} } // 0x0000000183D88FB0-0x0000000183D88FC0 0x0000000189EF9344-0x0000000189EF9444
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<MinMaxSlider, UxmlTraits> // TypeDefIndex: 43481
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000183D57150-0x0000000183D57160
+			public UxmlFactory() {} // 0x0000000189F018FC-0x0000000189F01938
 		}
 	
 		public class UxmlTraits : BaseField<Vector2> // TypeDefIndex: 43482
@@ -5549,10 +5706,10 @@ namespace UnityEngine.UIElements
 			private UxmlFloatAttributeDescription m_HighLimit; // 0x98
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000183D57320-0x0000000183D57330
+			public UxmlTraits() {} // 0x0000000189F03490-0x0000000189F0365C
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x00000001858B3D1C-0x00000001858B3D30
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F01BCC-0x0000000189F01D60
 		}
 	
 		private enum DragState // TypeDefIndex: 43483
@@ -5564,24 +5721,24 @@ namespace UnityEngine.UIElements
 		}
 	
 		// Constructors
-		public MinMaxSlider() {} // 0x0000000189EF89A8-0x0000000189EF8A2C
-		public MinMaxSlider(string label, float minValue = 0f /* Metadata: 0x01FB5F15 */, float maxValue = 10f /* Metadata: 0x01FB5F19 */, float minLimit = -3.4028235E+38f /* Metadata: 0x01FB5F1D */, float maxLimit = 3.4028235E+38f /* Metadata: 0x01FB5F21 */) {} // 0x0000000189EF81D8-0x0000000189EF89A8
-		static MinMaxSlider() {} // 0x0000000189F03490-0x0000000189F0365C
+		public MinMaxSlider() {} // 0x0000000189EF8C88-0x0000000189EF8CC8
+		public MinMaxSlider(string label, float minValue = 0f /* Metadata: 0x01FB5F15 */, float maxValue = 10f /* Metadata: 0x01FB5F19 */, float minLimit = -3.4028235E+38f /* Metadata: 0x01FB5F1D */, float maxLimit = 3.4028235E+38f /* Metadata: 0x01FB5F21 */) {} // 0x0000000189EF8CC8-0x0000000189EF92B8
+		static MinMaxSlider() {} // 0x0000000189EF8A2C-0x0000000189EF8C88
 	
 		// Methods
-		public override void SetValueWithoutNotify(Vector2 newValue) {} // 0x0000000183D88FB0-0x0000000183D88FC0
-		private Vector2 ClampValues(Vector2 valueToClamp) => default; // 0x0000000183D88F90-0x0000000183D88FB0
-		private void UpdateDragElementPosition(GeometryChangedEvent evt) {} // 0x0000000189EF81C4-0x0000000189EF81D8
-		private void UpdateDragElementPosition() {} // 0x0000000189EF7C38-0x0000000189EF7D1C
-		internal float SliderLerpUnclamped(float a, float b, float interpolant) => default; // 0x0000000189EF7D1C-0x0000000189EF7DD4
-		internal float SliderNormalizeValue(float currentValue, float lowerValue, float higherValue) => default; // 0x0000000189EF80CC-0x0000000189EF815C
-		private float ComputeValueFromPosition(float positionToConvert) => default; // 0x0000000189EF7DD4-0x0000000189EF80CC
-		protected override void ExecuteDefaultAction(EventBase evt) {} // 0x0000000189EF7A28-0x0000000189EF7AC4
-		private void SetSliderValueFromDrag() {} // 0x0000000189EF7AC4-0x0000000189EF7C38
-		private void SetSliderValueFromClick() {} // 0x000000018350B670-0x000000018350B680
-		private void ComputeValueDragStateNoThumb(float lowLimitPosition, float highLimitPosition, float dragElementPos) {} // 0x0000000189EF8A2C-0x0000000189EF8C88
-		private void ComputeValueFromDraggingThumb(float dragElementStartPos, float dragElementEndPos) {} // 0x0000000189F018FC-0x0000000189F01938
-		protected override void UpdateMixedValueContent() {} // 0x0000000189F01BCC-0x0000000189F01D60
+		public override void SetValueWithoutNotify(Vector2 newValue) {} // 0x0000000189EF815C-0x0000000189EF81C4
+		private Vector2 ClampValues(Vector2 valueToClamp) => default; // 0x0000000189EF79A8-0x0000000189EF7A28
+		private void UpdateDragElementPosition(GeometryChangedEvent evt) {} // 0x0000000189EF89A8-0x0000000189EF8A2C
+		private void UpdateDragElementPosition() {} // 0x0000000189EF81D8-0x0000000189EF89A8
+		internal float SliderLerpUnclamped(float a, float b, float interpolant) => default; // 0x0000000183D88F90-0x0000000183D88FB0
+		internal float SliderNormalizeValue(float currentValue, float lowerValue, float higherValue) => default; // 0x0000000189EF81C4-0x0000000189EF81D8
+		private float ComputeValueFromPosition(float positionToConvert) => default; // 0x0000000189EF7C38-0x0000000189EF7D1C
+		protected override void ExecuteDefaultAction(EventBase evt) {} // 0x0000000189EF7D1C-0x0000000189EF7DD4
+		private void SetSliderValueFromDrag() {} // 0x0000000189EF80CC-0x0000000189EF815C
+		private void SetSliderValueFromClick() {} // 0x0000000189EF7DD4-0x0000000189EF80CC
+		private void ComputeValueDragStateNoThumb(float lowLimitPosition, float highLimitPosition, float dragElementPos) {} // 0x0000000189EF7A28-0x0000000189EF7AC4
+		private void ComputeValueFromDraggingThumb(float dragElementStartPos, float dragElementEndPos) {} // 0x0000000189EF7AC4-0x0000000189EF7C38
+		protected override void UpdateMixedValueContent() {} // 0x000000018350B670-0x000000018350B680
 	}
 
 	public class PopupWindow : UnityEngine.UIElements.TextElement // TypeDefIndex: 43487
@@ -5592,24 +5749,24 @@ namespace UnityEngine.UIElements
 		public static readonly string contentUssClassName; // 0x08
 	
 		// Properties
-		public override VisualElement contentContainer { get => default; } // 0x0000000189F01884-0x0000000189F018C0 
+		public override VisualElement contentContainer { get => default; } // 0x0000000183D88EF0-0x0000000183D88F00 
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<PopupWindow, UxmlTraits> // TypeDefIndex: 43485
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189EF972C-0x0000000189EF9858
+			public UxmlFactory() {} // 0x0000000189F01884-0x0000000189F018C0
 		}
 	
 		public class UxmlTraits : UnityEngine.UIElements.TextElement.UxmlTraits // TypeDefIndex: 43486
 		{
 			// Constructors
-			public UxmlTraits() {} // 0x0000000183D88EF0-0x0000000183D88F00
+			public UxmlTraits() {} // 0x0000000189F031C8-0x0000000189F031D0
 		}
 	
 		// Constructors
-		public PopupWindow() {} // 0x0000000189EF967C-0x0000000189EF972C
-		static PopupWindow() {} // 0x0000000189F031C8-0x0000000189F031D0
+		public PopupWindow() {} // 0x0000000189EF972C-0x0000000189EF9858
+		static PopupWindow() {} // 0x0000000189EF967C-0x0000000189EF972C
 	}
 
 	public abstract class AbstractProgressBar : BindableElement, INotifyValueChanged<float> // TypeDefIndex: 43489
@@ -5629,10 +5786,10 @@ namespace UnityEngine.UIElements
 		private float m_Value; // 0x3F0
 	
 		// Properties
-		public string title { get; set; } // 0x0000000189EF3EF4-0x0000000189EF3F0C
-		public float lowValue { get; set; } // 0x0000000183D88F20-0x0000000183D88F30 0x0000000189EF3EDC-0x0000000189EF3EF4
-		public float highValue { get; set; } // 0x0000000189EF3BA8-0x0000000189EF3EDC 0x0000000189EF38E0-0x0000000189EF38F4
-		public virtual float value { get; set; } // 0x0000000189EF3994-0x0000000189EF39A4 0x0000000189EF38F4-0x0000000189EF3994
+		public string title { get; set; } // 0x0000000189EF3F0C-0x0000000189EF3F30
+		public float lowValue { get; set; } // 0x0000000183D88F30-0x0000000183D88F40 0x0000000189EF3EF4-0x0000000189EF3F0C
+		public float highValue { get; set; } // 0x0000000183D88F20-0x0000000183D88F30 0x0000000189EF3EDC-0x0000000189EF3EF4
+		public virtual float value { get; set; } // 0x0000000183D88F40-0x0000000183D88F50 0x0000000189EF3F30-0x0000000189EF409C
 	
 		// Nested types
 		public class UxmlTraits : BindableElement.UxmlTraits // TypeDefIndex: 43488
@@ -5644,21 +5801,21 @@ namespace UnityEngine.UIElements
 			private UxmlStringAttributeDescription m_Title; // 0x90
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000183D88F30-0x0000000183D88F40
+			public UxmlTraits() {} // 0x0000000189F03AE4-0x0000000189F03CD0
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EF3F0C-0x0000000189EF3F30
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F027EC-0x0000000189F0296C
 		}
 	
 		// Constructors
-		public AbstractProgressBar() {} // 0x0000000183D88F40-0x0000000183D88F50
-		static AbstractProgressBar() {} // 0x0000000189F03AE4-0x0000000189F03CD0
+		public AbstractProgressBar() {} // 0x0000000189EF3BA8-0x0000000189EF3EDC
+		static AbstractProgressBar() {} // 0x0000000189EF39A4-0x0000000189EF3BA8
 	
 		// Methods
-		private void OnGeometryChanged(GeometryChangedEvent e) {} // 0x0000000189EF3F30-0x0000000189EF409C
-		public void SetValueWithoutNotify(float newValue) {} // 0x0000000189EF3838-0x0000000189EF38E0
-		private void SetProgress(float p) {} // 0x0000000189EF39A4-0x0000000189EF3BA8
-		private float CalculateProgressWidth(float width) => default; // 0x0000000189F027EC-0x0000000189F0296C
+		private void OnGeometryChanged(GeometryChangedEvent e) {} // 0x0000000189EF38E0-0x0000000189EF38F4
+		public void SetValueWithoutNotify(float newValue) {} // 0x0000000189EF3994-0x0000000189EF39A4
+		private void SetProgress(float p) {} // 0x0000000189EF38F4-0x0000000189EF3994
+		private float CalculateProgressWidth(float width) => default; // 0x0000000189EF3838-0x0000000189EF38E0
 	}
 
 	[MovedFrom(true, "UnityEditor.UIElements", "UnityEditor.UIElementsModule", null)]
@@ -5668,11 +5825,11 @@ namespace UnityEngine.UIElements
 		public class UxmlFactory : UxmlFactory<ProgressBar, UxmlTraits> // TypeDefIndex: 43490
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189EF9858-0x0000000189EF98A4
+			public UxmlFactory() {} // 0x0000000189F01A28-0x0000000189F01A64
 		}
 	
 		// Constructors
-		public ProgressBar() {} // 0x0000000189F01A28-0x0000000189F01A64
+		public ProgressBar() {} // 0x0000000189EF9858-0x0000000189EF98A4
 	}
 
 	public class RadioButton : BaseBoolField, IGroupBoxOption // TypeDefIndex: 43494
@@ -5687,13 +5844,13 @@ namespace UnityEngine.UIElements
 		private VisualElement m_CheckmarkBackground; // 0x438
 	
 		// Properties
-		public override bool value { get => default; set {} } // 0x0000000189EFA508-0x0000000189EFA70C 0x0000000189EFA10C-0x0000000189EFA17C
+		public override bool value { get => default; set {} } // 0x0000000189EFA70C-0x0000000189EFA748 0x0000000189EFA748-0x0000000189EFA7E8
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<RadioButton, UxmlTraits> // TypeDefIndex: 43492
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189EFA70C-0x0000000189EFA748
+			public UxmlFactory() {} // 0x0000000189F01B54-0x0000000189F01B90
 		}
 	
 		public class UxmlTraits : BaseFieldTraits<bool, UxmlBoolAttributeDescription> // TypeDefIndex: 43493
@@ -5702,24 +5859,24 @@ namespace UnityEngine.UIElements
 			private UxmlStringAttributeDescription m_Text; // 0x88
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EFA4FC-0x0000000189EFA508
+			public UxmlTraits() {} // 0x0000000189F03120-0x0000000189F031C8
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EFA748-0x0000000189EFA7E8
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F02288-0x0000000189F0236C
 		}
 	
 		// Constructors
-		public RadioButton() {} // 0x0000000189EFA1B0-0x0000000189EFA1E0
-		public RadioButton(string label) {} // 0x0000000189EFA17C-0x0000000189EFA190
-		static RadioButton() {} // 0x0000000189F03120-0x0000000189F031C8
+		public RadioButton() {} // 0x0000000189EFA4FC-0x0000000189EFA508
+		public RadioButton(string label) {} // 0x0000000189EFA508-0x0000000189EFA70C
+		static RadioButton() {} // 0x0000000189EFA2F8-0x0000000189EFA4FC
 	
 		// Methods
-		protected override void InitLabel() {} // 0x0000000189EFA190-0x0000000189EFA1B0
-		protected override void ToggleValue() {} // 0x0000000189EFA1E0-0x0000000189EFA260
-		public void SetSelected(bool selected) {} // 0x0000000189EFA260-0x0000000189EFA2F8
-		public override void SetValueWithoutNotify(bool newValue) {} // 0x0000000189EFA2F8-0x0000000189EFA4FC
-		private void UpdateCheckmark() {} // 0x0000000189F01B54-0x0000000189F01B90
-		protected override void UpdateMixedValueContent() {} // 0x0000000189F02288-0x0000000189F0236C
+		protected override void InitLabel() {} // 0x0000000189EFA10C-0x0000000189EFA17C
+		protected override void ToggleValue() {} // 0x0000000189EFA1B0-0x0000000189EFA1E0
+		public void SetSelected(bool selected) {} // 0x0000000189EFA17C-0x0000000189EFA190
+		public override void SetValueWithoutNotify(bool newValue) {} // 0x0000000189EFA190-0x0000000189EFA1B0
+		private void UpdateCheckmark() {} // 0x0000000189EFA1E0-0x0000000189EFA260
+		protected override void UpdateMixedValueContent() {} // 0x0000000189EFA260-0x0000000189EFA2F8
 	}
 
 	public class RadioButtonGroup : BaseField<int>, IGroupBox // TypeDefIndex: 43497
@@ -5731,13 +5888,13 @@ namespace UnityEngine.UIElements
 		private EventCallback<ChangeEvent<bool>> m_RadioButtonValueChangedCallback; // 0x428
 	
 		// Properties
-		public IEnumerable<string> choices { set {} } // 0x0000000189EF98A4-0x0000000189EF9960
+		public IEnumerable<string> choices { set {} } // 0x0000000189EF9D88-0x0000000189EFA10C
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<RadioButtonGroup, UxmlTraits> // TypeDefIndex: 43495
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189EF9D88-0x0000000189EFA10C
+			public UxmlFactory() {} // 0x0000000189F01974-0x0000000189F019B0
 		}
 	
 		public class UxmlTraits : BaseFieldTraits<int, UxmlIntAttributeDescription> // TypeDefIndex: 43496
@@ -5746,21 +5903,21 @@ namespace UnityEngine.UIElements
 			private UxmlStringAttributeDescription m_Choices; // 0x88
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EF9BDC-0x0000000189EF9D78
+			public UxmlTraits() {} // 0x0000000189F0365C-0x0000000189F03704
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EF9D78-0x0000000189EF9D88
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F026FC-0x0000000189F027EC
 		}
 	
 		// Constructors
-		public RadioButtonGroup() {} // 0x0000000189EF9960-0x0000000189EF99B0
-		public RadioButtonGroup(string label, List<string> radioButtonChoices = null) {} // 0x0000000189EF99B0-0x0000000189EF9B80
-		static RadioButtonGroup() {} // 0x0000000189F0365C-0x0000000189F03704
+		public RadioButtonGroup() {} // 0x0000000189EF9D78-0x0000000189EF9D88
+		public RadioButtonGroup(string label, List<string> radioButtonChoices = null) {} // 0x0000000189EF9BDC-0x0000000189EF9D78
+		static RadioButtonGroup() {} // 0x0000000189EF9B80-0x0000000189EF9BDC
 	
 		// Methods
-		private void RadioButtonValueChangedCallback(ChangeEvent<bool> evt) {} // 0x0000000189EF9B80-0x0000000189EF9BDC
-		public override void SetValueWithoutNotify(int newValue) {} // 0x0000000189F01974-0x0000000189F019B0
-		private void UpdateRadioButtons() {} // 0x0000000189F026FC-0x0000000189F027EC
+		private void RadioButtonValueChangedCallback(ChangeEvent<bool> evt) {} // 0x0000000189EF98A4-0x0000000189EF9960
+		public override void SetValueWithoutNotify(int newValue) {} // 0x0000000189EF9960-0x0000000189EF99B0
+		private void UpdateRadioButtons() {} // 0x0000000189EF99B0-0x0000000189EF9B80
 	}
 
 	public class RepeatButton : UnityEngine.UIElements.TextElement // TypeDefIndex: 43500
@@ -5773,7 +5930,7 @@ namespace UnityEngine.UIElements
 		public class UxmlFactory : UxmlFactory<RepeatButton, UxmlTraits> // TypeDefIndex: 43498
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189EFA988-0x0000000189EFA9FC
+			public UxmlFactory() {} // 0x0000000189F019EC-0x0000000189F01A28
 		}
 	
 		public class UxmlTraits : UnityEngine.UIElements.TextElement.UxmlTraits // TypeDefIndex: 43499
@@ -5783,20 +5940,20 @@ namespace UnityEngine.UIElements
 			private UxmlLongAttributeDescription m_Interval; // 0x98
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189EFA80C-0x0000000189EFA8D4
+			public UxmlTraits() {} // 0x0000000189F039F8-0x0000000189F03AE4
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EFA930-0x0000000189EFA988
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F01D60-0x0000000189F01E74
 		}
 	
 		// Constructors
-		public RepeatButton() {} // 0x0000000189EFA7E8-0x0000000189EFA80C
-		public RepeatButton(Action clickEvent, long delay, long interval) {} // 0x0000000189EFA8D4-0x0000000189EFA930
-		static RepeatButton() {} // 0x0000000189F039F8-0x0000000189F03AE4
+		public RepeatButton() {} // 0x0000000189EFA988-0x0000000189EFA9FC
+		public RepeatButton(Action clickEvent, long delay, long interval) {} // 0x0000000189EFA930-0x0000000189EFA988
+		static RepeatButton() {} // 0x0000000189EFA8D4-0x0000000189EFA930
 	
 		// Methods
-		public void SetAction(Action clickEvent, long delay, long interval) {} // 0x0000000189F019EC-0x0000000189F01A28
-		internal void AddAction(Action clickEvent) {} // 0x0000000189F01D60-0x0000000189F01E74
+		public void SetAction(Action clickEvent, long delay, long interval) {} // 0x0000000189EFA80C-0x0000000189EFA8D4
+		internal void AddAction(Action clickEvent) {} // 0x0000000189EFA7E8-0x0000000189EFA80C
 	}
 
 	public class Scroller : VisualElement // TypeDefIndex: 43503
@@ -5810,13 +5967,13 @@ namespace UnityEngine.UIElements
 		public static readonly string highButtonUssClassName; // 0x28
 	
 		// Properties
-		public Slider slider { get; private set; } // 0x00000001858B40A0-0x00000001858B40B4 0x0000000183D55ED0-0x0000000183D55EE0
-		public RepeatButton lowButton { get; private set; } // 0x00000001858B3D30-0x00000001858B3D44 0x0000000189F007F8-0x0000000189F0081C
-		public RepeatButton highButton { get; private set; } // 0x0000000189F00AA0-0x0000000189F00AC8 0x0000000189F007B0-0x0000000189F007F8
-		public float value { get => default; set {} } // 0x0000000189F00A48-0x0000000189F00AA0 0x0000000189F00768-0x0000000189F007B0
-		public float lowValue { get => default; set {} } // 0x0000000189F009F0-0x0000000189F00A48 0x0000000189F008AC-0x0000000189F009F0
-		public float highValue { get => default; set {} } // 0x0000000189F00290-0x0000000189F002B8 0x0000000189F002B8-0x0000000189F006D8
-		public SliderDirection direction { set {} } // 0x0000000189EFFDE4-0x0000000189EFFE58
+		public Slider slider { get; private set; } // 0x0000000183D56FF0-0x0000000183D57000 0x00000001858B3B50-0x00000001858B3B64
+		public RepeatButton lowButton { get; private set; } // 0x0000000183D55EC0-0x0000000183D55ED0 0x00000001858B40A0-0x00000001858B40B4
+		public RepeatButton highButton { get; private set; } // 0x0000000183D55ED0-0x0000000183D55EE0 0x00000001858B3D30-0x00000001858B3D44
+		public float value { get => default; set {} } // 0x0000000189F007F8-0x0000000189F0081C 0x0000000189F00AA0-0x0000000189F00AC8
+		public float lowValue { get => default; set {} } // 0x0000000189F007B0-0x0000000189F007F8 0x0000000189F00A48-0x0000000189F00AA0
+		public float highValue { get => default; set {} } // 0x0000000189F00768-0x0000000189F007B0 0x0000000189F009F0-0x0000000189F00A48
+		public SliderDirection direction { set {} } // 0x0000000189F008AC-0x0000000189F009F0
 	
 		// Events
 		public event Action<float> valueChanged;
@@ -5825,7 +5982,7 @@ namespace UnityEngine.UIElements
 		public class UxmlFactory : UxmlFactory<Scroller, UxmlTraits> // TypeDefIndex: 43501
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189F006D8-0x0000000189F00768
+			public UxmlFactory() {} // 0x0000000189F01B90-0x0000000189F01BCC
 		}
 	
 		public class UxmlTraits : VisualElement.UxmlTraits // TypeDefIndex: 43502
@@ -5837,24 +5994,24 @@ namespace UnityEngine.UIElements
 			private UxmlFloatAttributeDescription m_Value; // 0x88
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000183D56FF0-0x0000000183D57000
+			public UxmlTraits() {} // 0x0000000189F03704-0x0000000189F03968
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F0081C-0x0000000189F008AC
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F020CC-0x0000000189F02288
 		}
 	
 		// Constructors
-		public Scroller() {} // 0x0000000189EFFE58-0x0000000189EFFEEC
-		public Scroller(float lowValue, float highValue, Action<float> valueChanged, SliderDirection direction = SliderDirection.Vertical /* Metadata: 0x01FB5F29 */) {} // 0x0000000189F0007C-0x0000000189F0008C
-		static Scroller() {} // 0x0000000189F03704-0x0000000189F03968
+		public Scroller() {} // 0x0000000189F00290-0x0000000189F002B8
+		public Scroller(float lowValue, float highValue, Action<float> valueChanged, SliderDirection direction = SliderDirection.Vertical /* Metadata: 0x01FB5F29 */) {} // 0x0000000189F002B8-0x0000000189F006D8
+		static Scroller() {} // 0x0000000189F0008C-0x0000000189F00290
 	
 		// Methods
-		public void Adjust(float factor) {} // 0x0000000189EFFFAC-0x0000000189EFFFBC
-		private void OnSliderValueChange(ChangeEvent<float> evt) {} // 0x0000000189EFFFBC-0x0000000189F0007C
-		public void ScrollPageUp() {} // 0x0000000189EFFEEC-0x0000000189EFFFAC
-		public void ScrollPageDown() {} // 0x0000000189F0008C-0x0000000189F00290
-		public void ScrollPageUp(float factor) {} // 0x0000000189F01B90-0x0000000189F01BCC
-		public void ScrollPageDown(float factor) {} // 0x0000000189F020CC-0x0000000189F02288
+		public void Adjust(float factor) {} // 0x0000000189EFFDE4-0x0000000189EFFE58
+		private void OnSliderValueChange(ChangeEvent<float> evt) {} // 0x0000000189EFFE58-0x0000000189EFFEEC
+		public void ScrollPageUp() {} // 0x0000000189F0007C-0x0000000189F0008C
+		public void ScrollPageDown() {} // 0x0000000189EFFFAC-0x0000000189EFFFBC
+		public void ScrollPageUp(float factor) {} // 0x0000000189EFFFBC-0x0000000189F0007C
+		public void ScrollPageDown(float factor) {} // 0x0000000189EFFEEC-0x0000000189EFFFAC
 	}
 
 	public enum ScrollViewMode // TypeDefIndex: 43504
@@ -5933,39 +6090,39 @@ namespace UnityEngine.UIElements
 		internal IVisualElementScheduledItem m_PostPointerUpAnimation; // 0x4A8
 	
 		// Properties
-		public ScrollerVisibility horizontalScrollerVisibility { get => default; set {} } // 0x0000000189EFFDA0-0x0000000189EFFDE4 0x0000000189EFFC90-0x0000000189EFFCB0
-		public ScrollerVisibility verticalScrollerVisibility { get => default; set {} } // 0x0000000189EFFCB0-0x0000000189EFFCD0 0x0000000189EFF854-0x0000000189EFF894
+		public ScrollerVisibility horizontalScrollerVisibility { get => default; set {} } // 0x0000000183D89010-0x0000000183D89020 0x0000000189EFFAD8-0x0000000189EFFB1C
+		public ScrollerVisibility verticalScrollerVisibility { get => default; set {} } // 0x0000000183D89060-0x0000000183D89070 0x0000000189EFFDA0-0x0000000189EFFDE4
 		[Obsolete("showHorizontal is obsolete. Use horizontalScrollerVisibility instead")]
-		public bool showHorizontal { set {} } // 0x0000000189EFF894-0x0000000189EFF8D4
+		public bool showHorizontal { set {} } // 0x0000000189EFFC90-0x0000000189EFFCB0
 		[Obsolete("showVertical is obsolete. Use verticalScrollerVisibility instead")]
-		public bool showVertical { set {} } // 0x0000000189EFF82C-0x0000000189EFF854
-		internal bool needsHorizontal { get => default; } // 0x0000000189EFF804-0x0000000189EFF82C 
-		internal bool needsVertical { get => default; } // 0x0000000189EFF8D4-0x0000000189EFF924 
-		internal bool isVerticalScrollDisplayed { get => default; } // 0x0000000189EFFBC0-0x0000000189EFFC90 
-		internal bool isHorizontalScrollDisplayed { get => default; } // 0x0000000189EFFAC8-0x0000000189EFFAD8 
-		public Vector2 scrollOffset { get => default; set {} } // 0x0000000189EFFD90-0x0000000189EFFDA0 0x0000000183D68DF0-0x0000000183D68E00
-		public float horizontalPageSize { set {} } // 0x0000000189EFFB30-0x0000000189EFFBAC
-		public float verticalPageSize { set {} } // 0x0000000189EFF990-0x0000000189EFF9FC
-		public float mouseWheelScrollSize { get => default; set {} } // 0x0000000189EFF924-0x0000000189EFF990 0x0000000189EFF7F0-0x0000000189EFF804
-		internal float scrollableWidth { get => default; } // 0x0000000183D89040-0x0000000183D89050 
-		internal float scrollableHeight { get => default; } // 0x0000000189EFFBAC-0x0000000189EFFBC0 
-		private bool hasInertia { get => default; } // 0x0000000183D89000-0x0000000183D89010 
-		public float scrollDecelerationRate { get => default; set {} } // 0x0000000189EFFAB4-0x0000000189EFFAC8 0x0000000183D89050-0x0000000183D89060
-		public float elasticity { get => default; set {} } // 0x0000000189EFFCD0-0x0000000189EFFD90 0x0000000183D89030-0x0000000183D89040
-		public TouchScrollBehavior touchScrollBehavior { get => default; set {} } // 0x0000000183D89070-0x0000000183D89080 0x0000000189EFF9FC-0x0000000189EFFAB4
-		public NestedInteractionKind nestedInteractionKind { get => default; set {} } // 0x0000000189EFC610-0x0000000189EFC694 0x0000000189EFD210-0x0000000189EFD294
-		public long elasticAnimationIntervalMs { set {} } // 0x0000000189EFE058-0x0000000189EFE130
-		public VisualElement contentViewport { get; } // 0x0000000183D88FF0-0x0000000183D89000 
-		public Scroller horizontalScroller { get; } // 0x0000000189EFF7E4-0x0000000189EFF7F0 
-		public Scroller verticalScroller { get; } // 0x0000000189EFEA90-0x0000000189EFF7E4 
-		public override VisualElement contentContainer { get => default; } // 0x0000000183D89020-0x0000000183D89030 
-		public ScrollViewMode mode { get => default; set {} } // 0x0000000189EFBBE4-0x0000000189EFC064 0x0000000189EFC064-0x0000000189EFC4EC
+		public bool showVertical { set {} } // 0x0000000189EFFCB0-0x0000000189EFFCD0
+		internal bool needsHorizontal { get => default; } // 0x0000000189EFF854-0x0000000189EFF894 
+		internal bool needsVertical { get => default; } // 0x0000000189EFF894-0x0000000189EFF8D4 
+		internal bool isVerticalScrollDisplayed { get => default; } // 0x0000000189EFF82C-0x0000000189EFF854 
+		internal bool isHorizontalScrollDisplayed { get => default; } // 0x0000000189EFF804-0x0000000189EFF82C 
+		public Vector2 scrollOffset { get => default; set {} } // 0x0000000189EFF8D4-0x0000000189EFF924 0x0000000189EFFBC0-0x0000000189EFFC90
+		public float horizontalPageSize { set {} } // 0x0000000189EFFAC8-0x0000000189EFFAD8
+		public float verticalPageSize { set {} } // 0x0000000189EFFD90-0x0000000189EFFDA0
+		public float mouseWheelScrollSize { get => default; set {} } // 0x0000000183D68DF0-0x0000000183D68E00 0x0000000189EFFB30-0x0000000189EFFBAC
+		internal float scrollableWidth { get => default; } // 0x0000000189EFF990-0x0000000189EFF9FC 
+		internal float scrollableHeight { get => default; } // 0x0000000189EFF924-0x0000000189EFF990 
+		private bool hasInertia { get => default; } // 0x0000000189EFF7F0-0x0000000189EFF804 
+		public float scrollDecelerationRate { get => default; set {} } // 0x0000000183D89040-0x0000000183D89050 0x0000000189EFFBAC-0x0000000189EFFBC0
+		public float elasticity { get => default; set {} } // 0x0000000183D89000-0x0000000183D89010 0x0000000189EFFAB4-0x0000000189EFFAC8
+		public TouchScrollBehavior touchScrollBehavior { get => default; set {} } // 0x0000000183D89050-0x0000000183D89060 0x0000000189EFFCD0-0x0000000189EFFD90
+		public NestedInteractionKind nestedInteractionKind { get => default; set {} } // 0x0000000183D89030-0x0000000183D89040 0x0000000183D89070-0x0000000183D89080
+		public long elasticAnimationIntervalMs { set {} } // 0x0000000189EFF9FC-0x0000000189EFFAB4
+		public VisualElement contentViewport { get; } // 0x0000000183D570D0-0x0000000183D570E0 
+		public Scroller horizontalScroller { get; } // 0x0000000183D57150-0x0000000183D57160 
+		public Scroller verticalScroller { get; } // 0x0000000183D57320-0x0000000183D57330 
+		public override VisualElement contentContainer { get => default; } // 0x0000000183D88FF0-0x0000000183D89000 
+		public ScrollViewMode mode { get => default; set {} } // 0x0000000183D89020-0x0000000183D89030 0x0000000189EFFB1C-0x0000000189EFFB30
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<ScrollView, UxmlTraits> // TypeDefIndex: 43506
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000183D89010-0x0000000183D89020
+			public UxmlFactory() {} // 0x0000000189F01938-0x0000000189F01974
 		}
 	
 		public class UxmlTraits : VisualElement.UxmlTraits // TypeDefIndex: 43507
@@ -5986,10 +6143,10 @@ namespace UnityEngine.UIElements
 			private UxmlLongAttributeDescription m_ElasticAnimationIntervalMs; // 0xD0
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000183D89060-0x0000000183D89070
+			public UxmlTraits() {} // 0x0000000189F02B48-0x0000000189F03120
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189EFFAD8-0x0000000189EFFB1C
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F0236C-0x0000000189F026FC
 		}
 	
 		public enum TouchScrollBehavior // TypeDefIndex: 43508
@@ -6014,50 +6171,50 @@ namespace UnityEngine.UIElements
 		}
 	
 		// Constructors
-		public ScrollView() {} // 0x0000000189EFFB1C-0x0000000189EFFB30
-		public ScrollView(ScrollViewMode scrollViewMode) {} // 0x0000000189EFD800-0x0000000189EFDBD8
-		static ScrollView() {} // 0x0000000189F01938-0x0000000189F01974
+		public ScrollView() {} // 0x0000000189EFF7E4-0x0000000189EFF7F0
+		public ScrollView(ScrollViewMode scrollViewMode) {} // 0x0000000189EFEA90-0x0000000189EFF7E4
+		static ScrollView() {} // 0x0000000189EFE520-0x0000000189EFEA90
 	
 		// Methods
-		private void OnHorizontalScrollDragElementChanged(GeometryChangedEvent evt) {} // 0x0000000189EFE448-0x0000000189EFE520
-		private void OnVerticalScrollDragElementChanged(GeometryChangedEvent evt) {} // 0x0000000189EFDE14-0x0000000189EFDF34
-		private void UpdateHorizontalSliderPageSize() {} // 0x0000000189EFD608-0x0000000189EFD800
-		private void UpdateVerticalSliderPageSize() {} // 0x0000000189EFB7A8-0x0000000189EFB914
-		internal void UpdateContentViewTransform() {} // 0x0000000189EFB914-0x0000000189EFBA8C
-		public void ScrollTo(VisualElement child) {} // 0x0000000189EFB754-0x0000000189EFB7A8
-		private float GetXDeltaOffset(VisualElement child) => default; // 0x0000000183D570D0-0x0000000183D570E0
-		private float GetYDeltaOffset(VisualElement child) => default; // 0x0000000183D57150-0x0000000183D57160
-		private float GetDeltaDistance(float viewMin, float viewMax, float childBoundaryMin, float childBoundaryMax) => default; // 0x0000000183D57320-0x0000000183D57330
-		private void SetScrollViewMode(ScrollViewMode mode) {} // 0x0000000189EFC7B8-0x0000000189EFC8A0
-		private void OnAttachToPanel(AttachToPanelEvent evt) {} // 0x0000000189EFC6EC-0x0000000189EFC7B8
-		private void OnDetachFromPanel(DetachFromPanelEvent evt) {} // 0x0000000189EFC4EC-0x0000000189EFC610
-		private void OnPointerCapture(PointerCaptureEvent evt) {} // 0x0000000189EFD550-0x0000000189EFD608
-		private void OnPointerCaptureOut(PointerCaptureOutEvent evt) {} // 0x0000000183D88FE0-0x0000000183D88FF0
-		private void OnGeometryChanged(GeometryChangedEvent evt) {} // 0x0000000189EFB0AC-0x0000000189EFB214
-		private void ScheduleResetLayoutPass() {} // 0x0000000189EFB214-0x0000000189EFB324
-		private void ResetLayoutPass() {} // 0x0000000189EFDBD8-0x0000000189EFDD7C
-		private static float ComputeElasticOffset(float deltaPointer, float initialScrollOffset, float lowLimit, float hardLowLimit, float highLimit, float hardHighLimit) => default; // 0x0000000189EFAB60-0x0000000189EFAE94
-		private void ComputeInitialSpringBackVelocity() {} // 0x0000000189EFD294-0x0000000189EFD394
-		private void SpringBack() {} // 0x0000000189EFC8A0-0x0000000189EFCA7C
-		internal void ApplyScrollInertia() {} // 0x0000000189EFCA7C-0x0000000189EFCCD0
-		private void PostPointerUpAnimation() {} // 0x0000000189EFC694-0x0000000189EFC6EC
-		private void OnPointerDown(PointerDownEvent evt) {} // 0x0000000189EFCCD0-0x0000000189EFCD58
-		private void OnPointerMove(PointerMoveEvent evt) {} // 0x0000000189EFBA8C-0x0000000189EFBBE4
-		private void OnPointerCancel(PointerCancelEvent evt) {} // 0x0000000189EFB324-0x0000000189EFB680
-		private void OnPointerUp(PointerUpEvent evt) {} // 0x0000000189EFAE94-0x0000000189EFB0AC
-		internal void InitTouchScrolling(Vector2 position) {} // 0x0000000189EFD478-0x0000000189EFD550
-		internal TouchScrollingResult ComputeTouchScrolling(Vector2 position) => default; // 0x0000000189EFB680-0x0000000189EFB754
-		private bool ApplyTouchScrolling(Vector2 newScrollOffset) => default; // 0x0000000189EFA9FC-0x0000000189EFAB60
-		private bool ReleaseScrolling(int pointerId, IEventHandler target) => default; // 0x0000000189EFE130-0x0000000189EFE448
-		private void ExecuteElasticSpringAnimation() {} // 0x0000000189EFD0C0-0x0000000189EFD210
-		private void AdjustScrollers() {} // 0x0000000189EFCD60-0x0000000189EFD0C0
-		internal void UpdateScrollers(bool displayHorizontal, bool displayVertical) {} // 0x0000000189EFCD58-0x0000000189EFCD60
-		private void OnScrollersGeometryChanged(GeometryChangedEvent evt) {} // 0x0000000183D88FD0-0x0000000183D88FE0
-		private void OnScrollWheel(WheelEvent evt) {} // 0x0000000189EFD394-0x0000000189EFD478
-		private void OnRootCustomStyleResolved(CustomStyleResolvedEvent evt) {} // 0x0000000189EFDF34-0x0000000189EFE058
-		private void OnRootPointerUp(PointerUpEvent evt) {} // 0x0000000189EFE520-0x0000000189EFEA90
-		private void ReadSingleLineHeight() {} // 0x0000000189EFDD7C-0x0000000189EFDDC8
-		private void UpdateElasticBehaviour() {} // 0x0000000189EFDDC8-0x0000000189EFDE14
+		private void OnHorizontalScrollDragElementChanged(GeometryChangedEvent evt) {} // 0x0000000189EFC610-0x0000000189EFC694
+		private void OnVerticalScrollDragElementChanged(GeometryChangedEvent evt) {} // 0x0000000189EFD210-0x0000000189EFD294
+		private void UpdateHorizontalSliderPageSize() {} // 0x0000000189EFE058-0x0000000189EFE130
+		private void UpdateVerticalSliderPageSize() {} // 0x0000000189EFE448-0x0000000189EFE520
+		internal void UpdateContentViewTransform() {} // 0x0000000189EFDE14-0x0000000189EFDF34
+		public void ScrollTo(VisualElement child) {} // 0x0000000189EFD608-0x0000000189EFD800
+		private float GetXDeltaOffset(VisualElement child) => default; // 0x0000000189EFB7A8-0x0000000189EFB914
+		private float GetYDeltaOffset(VisualElement child) => default; // 0x0000000189EFB914-0x0000000189EFBA8C
+		private float GetDeltaDistance(float viewMin, float viewMax, float childBoundaryMin, float childBoundaryMax) => default; // 0x0000000189EFB754-0x0000000189EFB7A8
+		private void SetScrollViewMode(ScrollViewMode mode) {} // 0x0000000189EFD800-0x0000000189EFDBD8
+		private void OnAttachToPanel(AttachToPanelEvent evt) {} // 0x0000000189EFBBE4-0x0000000189EFC064
+		private void OnDetachFromPanel(DetachFromPanelEvent evt) {} // 0x0000000189EFC064-0x0000000189EFC4EC
+		private void OnPointerCapture(PointerCaptureEvent evt) {} // 0x0000000189EFC7B8-0x0000000189EFC8A0
+		private void OnPointerCaptureOut(PointerCaptureOutEvent evt) {} // 0x0000000189EFC6EC-0x0000000189EFC7B8
+		private void OnGeometryChanged(GeometryChangedEvent evt) {} // 0x0000000189EFC4EC-0x0000000189EFC610
+		private void ScheduleResetLayoutPass() {} // 0x0000000189EFD550-0x0000000189EFD608
+		private void ResetLayoutPass() {} // 0x0000000183D88FE0-0x0000000183D88FF0
+		private static float ComputeElasticOffset(float deltaPointer, float initialScrollOffset, float lowLimit, float hardLowLimit, float highLimit, float hardHighLimit) => default; // 0x0000000189EFB0AC-0x0000000189EFB214
+		private void ComputeInitialSpringBackVelocity() {} // 0x0000000189EFB214-0x0000000189EFB324
+		private void SpringBack() {} // 0x0000000189EFDBD8-0x0000000189EFDD7C
+		internal void ApplyScrollInertia() {} // 0x0000000189EFAB60-0x0000000189EFAE94
+		private void PostPointerUpAnimation() {} // 0x0000000189EFD294-0x0000000189EFD394
+		private void OnPointerDown(PointerDownEvent evt) {} // 0x0000000189EFC8A0-0x0000000189EFCA7C
+		private void OnPointerMove(PointerMoveEvent evt) {} // 0x0000000189EFCA7C-0x0000000189EFCCD0
+		private void OnPointerCancel(PointerCancelEvent evt) {} // 0x0000000189EFC694-0x0000000189EFC6EC
+		private void OnPointerUp(PointerUpEvent evt) {} // 0x0000000189EFCCD0-0x0000000189EFCD58
+		internal void InitTouchScrolling(Vector2 position) {} // 0x0000000189EFBA8C-0x0000000189EFBBE4
+		internal TouchScrollingResult ComputeTouchScrolling(Vector2 position) => default; // 0x0000000189EFB324-0x0000000189EFB680
+		private bool ApplyTouchScrolling(Vector2 newScrollOffset) => default; // 0x0000000189EFAE94-0x0000000189EFB0AC
+		private bool ReleaseScrolling(int pointerId, IEventHandler target) => default; // 0x0000000189EFD478-0x0000000189EFD550
+		private void ExecuteElasticSpringAnimation() {} // 0x0000000189EFB680-0x0000000189EFB754
+		private void AdjustScrollers() {} // 0x0000000189EFA9FC-0x0000000189EFAB60
+		internal void UpdateScrollers(bool displayHorizontal, bool displayVertical) {} // 0x0000000189EFE130-0x0000000189EFE448
+		private void OnScrollersGeometryChanged(GeometryChangedEvent evt) {} // 0x0000000189EFD0C0-0x0000000189EFD210
+		private void OnScrollWheel(WheelEvent evt) {} // 0x0000000189EFCD60-0x0000000189EFD0C0
+		private void OnRootCustomStyleResolved(CustomStyleResolvedEvent evt) {} // 0x0000000189EFCD58-0x0000000189EFCD60
+		private void OnRootPointerUp(PointerUpEvent evt) {} // 0x0000000183D88FD0-0x0000000183D88FE0
+		private void ReadSingleLineHeight() {} // 0x0000000189EFD394-0x0000000189EFD478
+		private void UpdateElasticBehaviour() {} // 0x0000000189EFDF34-0x0000000189EFE058
 	}
 
 	public class Slider : BaseSlider<float> // TypeDefIndex: 43514
@@ -6071,7 +6228,7 @@ namespace UnityEngine.UIElements
 		public class UxmlFactory : UxmlFactory<Slider, UxmlTraits> // TypeDefIndex: 43512
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189F01828-0x0000000189F01854
+			public UxmlFactory() {} // 0x0000000189F019B0-0x0000000189F019EC
 		}
 	
 		public class UxmlTraits : BaseFieldTraits<float, UxmlFloatAttributeDescription> // TypeDefIndex: 43513
@@ -6085,23 +6242,23 @@ namespace UnityEngine.UIElements
 			private UxmlBoolAttributeDescription m_Inverted; // 0xB0
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189F016E8-0x0000000189F01828
+			public UxmlTraits() {} // 0x0000000189F031D8-0x0000000189F03490
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F01854-0x0000000189F01884
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F01E74-0x0000000189F020CC
 		}
 	
 		// Constructors
-		public Slider() {} // 0x0000000189F01470-0x0000000189F015E0
-		public Slider(float start, float end, SliderDirection direction = SliderDirection.Horizontal /* Metadata: 0x01FB5F39 */, float pageSize = 0f /* Metadata: 0x01FB5F3A */) {} // 0x0000000189EF81C4-0x0000000189EF81D8
-		public Slider(string label, float start = 0f /* Metadata: 0x01FB5F3E */, float end = 10f /* Metadata: 0x01FB5F42 */, SliderDirection direction = SliderDirection.Horizontal /* Metadata: 0x01FB5F46 */, float pageSize = 0f /* Metadata: 0x01FB5F47 */) {} // 0x0000000189F013B8-0x0000000189F01470
-		static Slider() {} // 0x0000000189F031D8-0x0000000189F03490
+		public Slider() {} // 0x0000000189F01828-0x0000000189F01854
+		public Slider(float start, float end, SliderDirection direction = SliderDirection.Horizontal /* Metadata: 0x01FB5F39 */, float pageSize = 0f /* Metadata: 0x01FB5F3A */) {} // 0x0000000189F01854-0x0000000189F01884
+		public Slider(string label, float start = 0f /* Metadata: 0x01FB5F3E */, float end = 10f /* Metadata: 0x01FB5F42 */, SliderDirection direction = SliderDirection.Horizontal /* Metadata: 0x01FB5F46 */, float pageSize = 0f /* Metadata: 0x01FB5F47 */) {} // 0x0000000189F016E8-0x0000000189F01828
+		static Slider() {} // 0x0000000189F015E0-0x0000000189F016E8
 	
 		// Methods
-		internal override float SliderLerpUnclamped(float a, float b, float interpolant) => default; // 0x0000000189F01224-0x0000000189F013B8
-		internal override float SliderNormalizeValue(float currentValue, float lowerValue, float higherValue) => default; // 0x0000000189F015E0-0x0000000189F016E8
-		internal override float ParseStringToValue(string stringValue) => default; // 0x0000000189F019B0-0x0000000189F019EC
-		internal override void ComputeValueFromKey(SliderKey<float> sliderKey, bool isShift) {} // 0x0000000189F01E74-0x0000000189F020CC
+		internal override float SliderLerpUnclamped(float a, float b, float interpolant) => default; // 0x0000000189F01470-0x0000000189F015E0
+		internal override float SliderNormalizeValue(float currentValue, float lowerValue, float higherValue) => default; // 0x0000000189EF81C4-0x0000000189EF81D8
+		internal override float ParseStringToValue(string stringValue) => default; // 0x0000000189F013B8-0x0000000189F01470
+		internal override void ComputeValueFromKey(SliderKey<float> sliderKey, bool isShift) {} // 0x0000000189F01224-0x0000000189F013B8
 	}
 
 	public class SliderInt : BaseSlider<int> // TypeDefIndex: 43517
@@ -6112,13 +6269,13 @@ namespace UnityEngine.UIElements
 		public static readonly string inputUssClassName; // 0x10
 	
 		// Properties
-		public override float pageSize { get => default; set {} } // 0x0000000189F00EF4-0x0000000189F00F24 0x0000000189F00EA4-0x0000000189F00ED4
+		public override float pageSize { get => default; set {} } // 0x0000000189F01194-0x0000000189F011D4 0x0000000189F011D4-0x0000000189F01224
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<SliderInt, UxmlTraits> // TypeDefIndex: 43515
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189F0102C-0x0000000189F0105C
+			public UxmlFactory() {} // 0x0000000189F15084-0x0000000189F150C0
 		}
 	
 		public class UxmlTraits : BaseFieldTraits<int, UxmlIntAttributeDescription> // TypeDefIndex: 43516
@@ -6132,23 +6289,23 @@ namespace UnityEngine.UIElements
 			private UxmlBoolAttributeDescription m_Inverted; // 0xB0
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189F01194-0x0000000189F011D4
+			public UxmlTraits() {} // 0x0000000189F15ED0-0x0000000189F16188
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F0105C-0x0000000189F01194
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F151E0-0x0000000189F15430
 		}
 	
 		// Constructors
-		public SliderInt() {} // 0x0000000189F011D4-0x0000000189F01224
-		public SliderInt(string label, int start = 0 /* Metadata: 0x01FB5F4B */, int end = 10 /* Metadata: 0x01FB5F4C */, SliderDirection direction = SliderDirection.Horizontal /* Metadata: 0x01FB5F4D */, float pageSize = 0f /* Metadata: 0x01FB5F4E */) {} // 0x0000000189F00ED4-0x0000000189F00EF4
-		static SliderInt() {} // 0x0000000189F15ED0-0x0000000189F16188
+		public SliderInt() {} // 0x0000000189F0102C-0x0000000189F0105C
+		public SliderInt(string label, int start = 0 /* Metadata: 0x01FB5F4B */, int end = 10 /* Metadata: 0x01FB5F4C */, SliderDirection direction = SliderDirection.Horizontal /* Metadata: 0x01FB5F4D */, float pageSize = 0f /* Metadata: 0x01FB5F4E */) {} // 0x0000000189F0105C-0x0000000189F01194
+		static SliderInt() {} // 0x0000000189F00F24-0x0000000189F0102C
 	
 		// Methods
-		internal override int SliderLerpUnclamped(int a, int b, float interpolant) => default; // 0x0000000189F00AC8-0x0000000189F00CFC
-		internal override float SliderNormalizeValue(int currentValue, int lowerValue, int higherValue) => default; // 0x0000000189F00CFC-0x0000000189F00EA4
-		internal override int ParseStringToValue(string stringValue) => default; // 0x0000000189F00F24-0x0000000189F0102C
-		internal override void ComputeValueAndDirectionFromClick(float sliderLength, float dragElementLength, float dragElementPos, float dragElementLastPos) {} // 0x0000000189F15084-0x0000000189F150C0
-		internal override void ComputeValueFromKey(SliderKey<int> sliderKey, bool isShift) {} // 0x0000000189F151E0-0x0000000189F15430
+		internal override int SliderLerpUnclamped(int a, int b, float interpolant) => default; // 0x0000000189F00ED4-0x0000000189F00EF4
+		internal override float SliderNormalizeValue(int currentValue, int lowerValue, int higherValue) => default; // 0x0000000189F00EF4-0x0000000189F00F24
+		internal override int ParseStringToValue(string stringValue) => default; // 0x0000000189F00EA4-0x0000000189F00ED4
+		internal override void ComputeValueAndDirectionFromClick(float sliderLength, float dragElementLength, float dragElementPos, float dragElementLastPos) {} // 0x0000000189F00AC8-0x0000000189F00CFC
+		internal override void ComputeValueFromKey(SliderKey<int> sliderKey, bool isShift) {} // 0x0000000189F00CFC-0x0000000189F00EA4
 	}
 
 	internal class TextEditorEventHandler // TypeDefIndex: 43518
@@ -6173,21 +6330,21 @@ namespace UnityEngine.UIElements
 		private OnIndexChangeFunction m_IndexChangeFunction; // 0x98
 	
 		// Properties
-		internal override Rect localPosition { get => default; } // 0x00000001842BE04C-0x00000001842BE110 
+		internal override Rect localPosition { get => default; } // 0x0000000183D890E0-0x0000000183D89120 
 	
 		// Nested types
-		internal delegate void OnDetectFocusChangeFunction(); // TypeDefIndex: 43519; 0x0000000183D890E0-0x0000000183D89120
+		internal delegate void OnDetectFocusChangeFunction(); // TypeDefIndex: 43519; 0x00000001842BE03C-0x00000001842BE04C
 	
-		internal delegate void OnIndexChangeFunction(); // TypeDefIndex: 43520; 0x0000000189F1108C-0x0000000189F110B4
+		internal delegate void OnIndexChangeFunction(); // TypeDefIndex: 43520; 0x00000001842BE03C-0x00000001842BE04C
 	
 		// Constructors
 		public TextEditorEngine() {} // Dummy constructor
-		public TextEditorEngine(OnDetectFocusChangeFunction detectFocusChange, OnIndexChangeFunction indexChangeFunction) {} // 0x0000000189F1108C-0x0000000189F110B4
+		public TextEditorEngine(OnDetectFocusChangeFunction detectFocusChange, OnIndexChangeFunction indexChangeFunction) {} // 0x0000000189F110DC-0x0000000189F11130
 	
 		// Methods
-		internal override void OnDetectFocusChange() {} // 0x00000001842BE03C-0x00000001842BE04C
-		internal override void OnCursorIndexChange() {} // 0x00000001842BE04C-0x00000001842BE110
-		internal override void OnSelectIndexChange() {} // 0x00000001842BE03C-0x00000001842BE04C
+		internal override void OnDetectFocusChange() {} // 0x0000000189F110B4-0x0000000189F110DC
+		internal override void OnCursorIndexChange() {} // 0x0000000189F1108C-0x0000000189F110B4
+		internal override void OnSelectIndexChange() {} // 0x0000000189F1108C-0x0000000189F110B4
 	}
 
 	public class TextField : TextInputBaseField<string> // TypeDefIndex: 43525
@@ -6198,15 +6355,15 @@ namespace UnityEngine.UIElements
 		public static readonly string inputUssClassName; // 0x10
 	
 		// Properties
-		private TextInput textInput { get => default; } // 0x0000000189F120D8-0x0000000189F12118 
-		public bool multiline { set {} } // 0x0000000183D89130-0x0000000183D89140
-		public override string value { get => default; set {} } // 0x0000000183D89120-0x0000000183D89130 0x0000000189F1200C-0x0000000189F1209C
+		private TextInput textInput { get => default; } // 0x0000000189F11680-0x0000000189F116CC 
+		public bool multiline { set {} } // 0x0000000189F11708-0x0000000189F11738
+		public override string value { get => default; set {} } // 0x0000000189F116CC-0x0000000189F11708 0x0000000189F11738-0x0000000189F117B0
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<TextField, UxmlTraits> // TypeDefIndex: 43522
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189F11680-0x0000000189F116CC
+			public UxmlFactory() {} // 0x0000000189F14F94-0x0000000189F14FD0
 		}
 	
 		public class UxmlTraits : TextInputBaseField<string> // TypeDefIndex: 43523
@@ -6216,11 +6373,11 @@ namespace UnityEngine.UIElements
 			private UxmlBoolAttributeDescription m_Multiline; // 0xB8
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189F11674-0x0000000189F11680
-			static UxmlTraits() {} // 0x0000000189F11648-0x0000000189F11674
+			public UxmlTraits() {} // 0x0000000189F15A90-0x0000000189F15B38
+			static UxmlTraits() {} // 0x0000000189F15998-0x0000000189F15A90
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F11708-0x0000000189F11738
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F15578-0x0000000189F156F0
 		}
 	
 		private class TextInput : TextInputBaseField<string> // TypeDefIndex: 43524
@@ -6229,30 +6386,30 @@ namespace UnityEngine.UIElements
 			private bool m_Multiline; // 0x420
 	
 			// Properties
-			private TextField parentTextField { get => default; } // 0x0000000189F11488-0x0000000189F11648 
-			public bool multiline { get => default; set {} } // 0x0000000189F116CC-0x0000000189F11708 0x0000000189F11738-0x0000000189F117B0
-			public override bool isPasswordField { set {} } // 0x0000000189F11284-0x0000000189F11308
+			private TextField parentTextField { get => default; } // 0x0000000189F120D8-0x0000000189F12118 
+			public bool multiline { get => default; set {} } // 0x0000000183D89130-0x0000000183D89140 0x0000000189F12168-0x0000000189F12214
+			public override bool isPasswordField { set {} } // 0x0000000189F12118-0x0000000189F12168
 	
 			// Constructors
-			public TextInput() {} // 0x0000000189F15998-0x0000000189F15A90
+			public TextInput() {} // 0x0000000189F1209C-0x0000000189F120D8
 	
 			// Methods
-			private void SetTextAlign() {} // 0x0000000189F11308-0x0000000189F11380
-			protected override string StringToValue(string str) => default; // 0x0000000189F11380-0x0000000189F11488
-			internal override void SyncTextEngine() {} // 0x0000000189F14F94-0x0000000189F14FD0
-			protected override void ExecuteDefaultActionAtTarget(EventBase evt) {} // 0x0000000189F15578-0x0000000189F156F0
-			protected override void ExecuteDefaultAction(EventBase evt) {} // 0x0000000189F15A90-0x0000000189F15B38
+			private void SetTextAlign() {} // 0x0000000189F11F5C-0x0000000189F1200C
+			protected override string StringToValue(string str) => default; // 0x0000000183D89120-0x0000000183D89130
+			internal override void SyncTextEngine() {} // 0x0000000189F1200C-0x0000000189F1209C
+			protected override void ExecuteDefaultActionAtTarget(EventBase evt) {} // 0x0000000189F117B0-0x0000000189F11DF8
+			protected override void ExecuteDefaultAction(EventBase evt) {} // 0x0000000189F11DF8-0x0000000189F11F5C
 		}
 	
 		// Constructors
-		public TextField() {} // 0x0000000189F12168-0x0000000189F12214
-		public TextField(string label) {} // 0x0000000189F11F5C-0x0000000189F1200C
-		public TextField(string label, int maxLength, bool multiline, bool isPasswordField, char maskChar) {} // 0x0000000189F12118-0x0000000189F12168
-		static TextField() {} // 0x0000000189F1209C-0x0000000189F120D8
+		public TextField() {} // 0x0000000189F11674-0x0000000189F11680
+		public TextField(string label) {} // 0x0000000189F11648-0x0000000189F11674
+		public TextField(string label, int maxLength, bool multiline, bool isPasswordField, char maskChar) {} // 0x0000000189F11488-0x0000000189F11648
+		static TextField() {} // 0x0000000189F11380-0x0000000189F11488
 	
 		// Methods
-		public override void SetValueWithoutNotify(string newValue) {} // 0x0000000189F117B0-0x0000000189F11DF8
-		internal override void OnViewDataReady() {} // 0x0000000189F11DF8-0x0000000189F11F5C
+		public override void SetValueWithoutNotify(string newValue) {} // 0x0000000189F11308-0x0000000189F11380
+		internal override void OnViewDataReady() {} // 0x0000000189F11284-0x0000000189F11308
 	}
 
 	internal interface ITextInputField : IEventHandler, ITextElement // TypeDefIndex: 43526
@@ -6421,7 +6578,7 @@ namespace UnityEngine.UIElements
 		public class UxmlFactory : UxmlFactory<Toggle, UxmlTraits> // TypeDefIndex: 43530
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189F12584-0x0000000189F12590
+			public UxmlFactory() {} // 0x0000000189F14FD0-0x0000000189F1500C
 		}
 	
 		public class UxmlTraits : BaseFieldTraits<bool, UxmlBoolAttributeDescription> // TypeDefIndex: 43531
@@ -6430,19 +6587,19 @@ namespace UnityEngine.UIElements
 			private UxmlStringAttributeDescription m_Text; // 0x88
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189F12214-0x0000000189F12284
+			public UxmlTraits() {} // 0x0000000189F16190-0x0000000189F163B8
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F12488-0x0000000189F12584
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F150FC-0x0000000189F151E0
 		}
 	
 		// Constructors
-		public Toggle() {} // 0x0000000189F12284-0x0000000189F12488
-		public Toggle(string label) {} // 0x0000000189F14FD0-0x0000000189F1500C
-		static Toggle() {} // 0x0000000189F16190-0x0000000189F163B8
+		public Toggle() {} // 0x0000000189F12584-0x0000000189F12590
+		public Toggle(string label) {} // 0x0000000189F12488-0x0000000189F12584
+		static Toggle() {} // 0x0000000189F12284-0x0000000189F12488
 	
 		// Methods
-		protected override void InitLabel() {} // 0x0000000189F150FC-0x0000000189F151E0
+		protected override void InitLabel() {} // 0x0000000189F12214-0x0000000189F12284
 	}
 
 	internal class TouchScreenTextEditorEventHandler : TextEditorEventHandler // TypeDefIndex: 43533
@@ -6468,31 +6625,31 @@ namespace UnityEngine.UIElements
 		private Action<VisualElement, int> m_BindItem; // 0x4C0
 	
 		// Properties
-		public Func<VisualElement> makeItem { get => default; set {} } // 0x0000000183D572F0-0x0000000183D57300 0x0000000189F12D64-0x0000000189F12DB4
-		public Action<VisualElement, int> bindItem { get => default; set {} } // 0x0000000183D6C890-0x0000000183D6C8A0 0x0000000183D5A3B0-0x0000000183D5A3C0
-		public Action<VisualElement, int> unbindItem { get; } // 0x0000000189F12C9C-0x0000000189F12CD8 
-		public Action<VisualElement> destroyItem { get; } // 0x0000000189F12C40-0x0000000189F12C9C 
+		public Func<VisualElement> makeItem { get => default; set {} } // 0x0000000183D57340-0x0000000183D57350 0x0000000189F12DB4-0x0000000189F12E04
+		public Action<VisualElement, int> bindItem { get => default; set {} } // 0x0000000183D572F0-0x0000000183D57300 0x0000000189F12D64-0x0000000189F12DB4
+		public Action<VisualElement, int> unbindItem { get; } // 0x0000000183D6C890-0x0000000183D6C8A0 
+		public Action<VisualElement> destroyItem { get; } // 0x0000000183D5A3B0-0x0000000183D5A3C0 
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<TreeView, UxmlTraits> // TypeDefIndex: 43534
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000183D57340-0x0000000183D57350
+			public UxmlFactory() {} // 0x0000000189F14F58-0x0000000189F14F94
 		}
 	
 		public class UxmlTraits : BaseTreeView.UxmlTraits // TypeDefIndex: 43535
 		{
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189F12DB4-0x0000000189F12E04
+			public UxmlTraits() {} // 0x0000000189F16188-0x0000000189F16190
 		}
 	
 		// Constructors
-		public TreeView() {} // 0x0000000189F14F58-0x0000000189F14F94
-		public TreeView(Func<VisualElement> makeItem, Action<VisualElement, int> bindItem) {} // 0x0000000189F16188-0x0000000189F16190
+		public TreeView() {} // 0x0000000189F12CD8-0x0000000189F12CE8
+		public TreeView(Func<VisualElement> makeItem, Action<VisualElement, int> bindItem) {} // 0x0000000189F12CE8-0x0000000189F12D64
 	
 		// Methods
-		internal override bool HasValidDataAndBindings() => default; // 0x0000000189F12CD8-0x0000000189F12CE8
-		protected override CollectionViewController CreateViewController() => default; // 0x0000000189F12CE8-0x0000000189F12D64
+		internal override bool HasValidDataAndBindings() => default; // 0x0000000189F12C9C-0x0000000189F12CD8
+		protected override CollectionViewController CreateViewController() => default; // 0x0000000189F12C40-0x0000000189F12C9C
 	}
 
 	[IsReadOnly]
@@ -6608,17 +6765,17 @@ namespace UnityEngine.UIElements
 		internal TwoPaneSplitViewResizer m_Resizer; // 0x418
 	
 		// Properties
-		public VisualElement fixedPane { get => default; } // 0x0000000189F14E5C-0x0000000189F14E80 
-		public VisualElement flexedPane { get => default; } // 0x0000000189F14E80-0x0000000189F14E9C 
-		public int fixedPaneIndex { get => default; } // 0x0000000189F14BDC-0x0000000189F14E5C 
-		internal float fixedPaneDimension { get => default; set {} } // 0x0000000189F137E4-0x0000000189F13B3C 0x0000000189F13B3C-0x0000000189F13C24
-		public override VisualElement contentContainer { get => default; } // 0x0000000189F14854-0x0000000189F14914 
+		public VisualElement fixedPane { get => default; } // 0x0000000183D55EC0-0x0000000183D55ED0 
+		public VisualElement flexedPane { get => default; } // 0x0000000183D55ED0-0x0000000183D55EE0 
+		public int fixedPaneIndex { get => default; } // 0x0000000183D89150-0x0000000183D89160 
+		internal float fixedPaneDimension { get => default; set {} } // 0x0000000189F14E5C-0x0000000189F14E80 0x0000000189F14E80-0x0000000189F14E9C
+		public override VisualElement contentContainer { get => default; } // 0x0000000183D89140-0x0000000183D89150 
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<TwoPaneSplitView, UxmlTraits> // TypeDefIndex: 43541
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000183D55EC0-0x0000000183D55ED0
+			public UxmlFactory() {} // 0x0000000189F15048-0x0000000189F15084
 		}
 	
 		public class UxmlTraits : VisualElement.UxmlTraits // TypeDefIndex: 43542
@@ -6629,25 +6786,25 @@ namespace UnityEngine.UIElements
 			private UxmlEnumAttributeDescription<TwoPaneSplitViewOrientation> m_Orientation; // 0x80
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000183D89150-0x0000000183D89160
+			public UxmlTraits() {} // 0x0000000189F15B38-0x0000000189F15CB0
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000183D55ED0-0x0000000183D55EE0
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F156F0-0x0000000189F15850
 		}
 	
 		// Constructors
-		public TwoPaneSplitView() {} // 0x0000000189F13E38-0x0000000189F14794
-		static TwoPaneSplitView() {} // 0x0000000189F15B38-0x0000000189F15CB0
+		public TwoPaneSplitView() {} // 0x0000000189F14BDC-0x0000000189F14E5C
+		static TwoPaneSplitView() {} // 0x0000000189F14914-0x0000000189F14BDC
 	
 		// Methods
-		internal void Init(int fixedPaneIndex, float fixedPaneInitialDimension, TwoPaneSplitViewOrientation orientation) {} // 0x0000000189F13E00-0x0000000189F13E08
-		private void OnPostDisplaySetup(GeometryChangedEvent evt) {} // 0x0000000189F13C24-0x0000000189F13E00
-		private void PostDisplaySetup() {} // 0x0000000183D89140-0x0000000183D89150
-		private void OnSizeChange(GeometryChangedEvent evt) {} // 0x0000000189F13E08-0x0000000189F13E38
-		private void OnSizeChange() {} // 0x0000000189F14794-0x0000000189F14854
-		internal override void OnViewDataReady() {} // 0x0000000189F14914-0x0000000189F14BDC
-		private void SetDragLineOffset(float offset) {} // 0x0000000189F15048-0x0000000189F15084
-		private void SetFixedPaneDimension(float dimension) {} // 0x0000000189F156F0-0x0000000189F15850
+		internal void Init(int fixedPaneIndex, float fixedPaneInitialDimension, TwoPaneSplitViewOrientation orientation) {} // 0x0000000189F137E4-0x0000000189F13B3C
+		private void OnPostDisplaySetup(GeometryChangedEvent evt) {} // 0x0000000189F13B3C-0x0000000189F13C24
+		private void PostDisplaySetup() {} // 0x0000000189F13E38-0x0000000189F14794
+		private void OnSizeChange(GeometryChangedEvent evt) {} // 0x0000000189F13E00-0x0000000189F13E08
+		private void OnSizeChange() {} // 0x0000000189F13C24-0x0000000189F13E00
+		internal override void OnViewDataReady() {} // 0x0000000189F13E08-0x0000000189F13E38
+		private void SetDragLineOffset(float offset) {} // 0x0000000189F14794-0x0000000189F14854
+		private void SetFixedPaneDimension(float dimension) {} // 0x0000000189F14854-0x0000000189F14914
 	}
 
 	public enum TwoPaneSplitViewOrientation // TypeDefIndex: 43544
@@ -6726,30 +6883,30 @@ namespace UnityEngine.UIElements
 		private Action<VisualElement, int> m_UnbindCellItem; // 0x98
 	
 		// Properties
-		public string name { get => default; set {} } // 0x0000000183D4EE90-0x0000000183D4EEA0 0x0000000189F0830C-0x0000000189F08324
-		public string title { get => default; set {} } // 0x0000000183D890D0-0x0000000183D890E0 0x0000000189F08324-0x0000000189F08378
-		public Background icon { get => default; } // 0x0000000183D56700-0x0000000183D56710 
-		internal int index { get => default; } // 0x0000000189F081DC-0x0000000189F0821C 
-		internal int displayIndex { get => default; } // 0x0000000183D890C0-0x0000000183D890D0 
-		internal int visibleIndex { get => default; } // 0x0000000189F0819C-0x0000000189F081DC 
-		public bool visible { get => default; set {} } // 0x0000000183D56C10-0x0000000183D56C20 0x0000000189F080CC-0x0000000189F08100
-		public Length width { get => default; set {} } // 0x0000000183D51F90-0x0000000183D51FA0 0x0000000189F08294-0x0000000189F082AC
-		public Length minWidth { get => default; set {} } // 0x0000000183D519A0-0x0000000183D519B0 0x0000000189F082AC-0x0000000189F082C4
-		public Length maxWidth { get => default; set {} } // 0x0000000183D5B400-0x0000000183D5B410 0x0000000189F08264-0x0000000189F0827C
-		internal float desiredWidth { get => default; set {} } // 0x0000000183D5B3F0-0x0000000183D5B400 0x0000000189F0827C-0x0000000189F08294
-		public bool sortable { get => default; set {} } // 0x0000000183D4EAB0-0x0000000183D4EAC0 0x0000000189F08154-0x0000000189F0819C
-		public bool stretchable { get => default; set {} } // 0x0000000183D4EB30-0x0000000183D4EB40 0x0000000183D4EB20-0x0000000183D4EB30
-		public bool optional { get => default; set {} } // 0x0000000183D4EAE0-0x0000000183D4EAF0 0x0000000183D4EA60-0x0000000183D4EA70
-		public bool resizable { get => default; set {} } // 0x0000000189F08100-0x0000000189F08154 0x0000000183D4EA90-0x0000000183D4EAA0
-		public Func<VisualElement> makeHeader { get => default; set {} } // 0x00000001811AC510-0x00000001811AC520 0x0000000183D4EA80-0x0000000183D4EA90
-		public Action<VisualElement> bindHeader { get => default; } // 0x0000000183D4EB10-0x0000000183D4EB20 
-		public Action<VisualElement> unbindHeader { get => default; } // 0x000000018554A7F4-0x000000018554A808 
-		public Action<VisualElement> destroyHeader { get => default; } // 0x0000000189F07D68-0x0000000189F07DF8 
-		public Func<VisualElement> makeCell { get => default; set {} } // 0x0000000189F07FAC-0x0000000189F0803C 0x0000000189F07DF8-0x0000000189F07E88
-		public Action<VisualElement, int> bindCell { get => default; } // 0x0000000189F0803C-0x0000000189F080CC 
-		public Action<VisualElement, int> unbindCell { get => default; } // 0x0000000189F07C94-0x0000000189F07CB4 
-		public Action<VisualElement> destroyCell { get; } // 0x0000000189F07C6C-0x0000000189F07C94 
-		public Columns collection { get; internal set; } // 0x0000000189F07C1C-0x0000000189F07C44 0x0000000189F07C44-0x0000000189F07C6C
+		public string name { get => default; set {} } // 0x00000001820B7B20-0x00000001820B7B30 0x0000000189F0821C-0x0000000189F08264
+		public string title { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x0000000189F082C4-0x0000000189F0830C
+		public Background icon { get => default; } // 0x0000000183D890A0-0x0000000183D890C0 
+		internal int index { get => default; } // 0x0000000189F07F04-0x0000000189F07F30 
+		internal int displayIndex { get => default; } // 0x0000000189F07E88-0x0000000189F07F04 
+		internal int visibleIndex { get => default; } // 0x0000000189F07F30-0x0000000189F07FAC 
+		public bool visible { get => default; set {} } // 0x0000000183D4EE90-0x0000000183D4EEA0 0x0000000189F0830C-0x0000000189F08324
+		public Length width { get => default; set {} } // 0x0000000183D890D0-0x0000000183D890E0 0x0000000189F08324-0x0000000189F08378
+		public Length minWidth { get => default; set {} } // 0x0000000183D56700-0x0000000183D56710 0x0000000189F081DC-0x0000000189F0821C
+		public Length maxWidth { get => default; set {} } // 0x0000000183D890C0-0x0000000183D890D0 0x0000000189F0819C-0x0000000189F081DC
+		internal float desiredWidth { get => default; set {} } // 0x0000000183D56C10-0x0000000183D56C20 0x0000000189F080CC-0x0000000189F08100
+		public bool sortable { get => default; set {} } // 0x0000000183D51F90-0x0000000183D51FA0 0x0000000189F08294-0x0000000189F082AC
+		public bool stretchable { get => default; set {} } // 0x0000000183D519A0-0x0000000183D519B0 0x0000000189F082AC-0x0000000189F082C4
+		public bool optional { get => default; set {} } // 0x0000000183D5B400-0x0000000183D5B410 0x0000000189F08264-0x0000000189F0827C
+		public bool resizable { get => default; set {} } // 0x0000000183D5B3F0-0x0000000183D5B400 0x0000000189F0827C-0x0000000189F08294
+		public Func<VisualElement> makeHeader { get => default; set {} } // 0x0000000183D4EAB0-0x0000000183D4EAC0 0x0000000189F08154-0x0000000189F0819C
+		public Action<VisualElement> bindHeader { get => default; } // 0x0000000183D4EB30-0x0000000183D4EB40 
+		public Action<VisualElement> unbindHeader { get => default; } // 0x0000000183D4EB20-0x0000000183D4EB30 
+		public Action<VisualElement> destroyHeader { get => default; } // 0x0000000183D4EAE0-0x0000000183D4EAF0 
+		public Func<VisualElement> makeCell { get => default; set {} } // 0x0000000183D4EA60-0x0000000183D4EA70 0x0000000189F08100-0x0000000189F08154
+		public Action<VisualElement, int> bindCell { get => default; } // 0x0000000183D4EA90-0x0000000183D4EAA0 
+		public Action<VisualElement, int> unbindCell { get => default; } // 0x00000001811AC510-0x00000001811AC520 
+		public Action<VisualElement> destroyCell { get; } // 0x0000000183D4EA80-0x0000000183D4EA90 
+		public Columns collection { get; internal set; } // 0x0000000183D4EB10-0x0000000183D4EB20 0x000000018554A7F4-0x000000018554A808
 	
 		// Events
 		internal event Action<Column, ColumnDataType> changed;
@@ -6760,7 +6917,7 @@ namespace UnityEngine.UIElements
 			where T : Column, new()
 		{
 			// Constructors
-			public UxmlObjectFactory() {} // 0x00000001820B7B20-0x00000001820B7B30
+			public UxmlObjectFactory() {}
 		}
 	
 		internal class UxmlObjectTraits<T> : UIElements.UxmlObjectTraits<T> // TypeDefIndex: 43550
@@ -6781,22 +6938,22 @@ namespace UnityEngine.UIElements
 			private UxmlStringAttributeDescription m_CellTemplateId;
 	
 			// Constructors
-			public UxmlObjectTraits() {} // 0x0000000189F07F30-0x0000000189F07FAC
+			public UxmlObjectTraits() {}
 	
 			// Methods
 			private static Length ParseLength(string str, Length defaultValue) => default;
-			public override void Init(ref ref T obj, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F07E88-0x0000000189F07F04
+			public override void Init(ref ref T obj, IUxmlAttributes bag, CreationContext cc) {}
 		}
 	
 		// Constructors
-		public Column() {}
-		static Column() {}
+		public Column() {} // 0x0000000189F07D10-0x0000000189F07D68
+		static Column() {} // 0x0000000189F07CB4-0x0000000189F07D10
 	
 		// Methods
-		private void NotifyChange(ColumnDataType type) {}
-		internal float GetWidth(float layoutWidth) => default;
-		internal float GetMaxWidth(float layoutWidth) => default;
-		internal float GetMinWidth(float layoutWidth) => default;
+		private void NotifyChange(ColumnDataType type) {} // 0x0000000189F07C94-0x0000000189F07CB4
+		internal float GetWidth(float layoutWidth) => default; // 0x0000000189F07C6C-0x0000000189F07C94
+		internal float GetMaxWidth(float layoutWidth) => default; // 0x0000000189F07C1C-0x0000000189F07C44
+		internal float GetMinWidth(float layoutWidth) => default; // 0x0000000189F07C44-0x0000000189F07C6C
 	}
 
 	internal class ColumnLayout // TypeDefIndex: 43554
@@ -6825,50 +6982,50 @@ namespace UnityEngine.UIElements
 		private Dictionary<Column, float> m_PreviewDesiredWidths; // 0x80
 	
 		// Properties
-		public Columns columns { get => default; } // 0x0000000183D4EC70-0x0000000183D4EC80 
-		public float columnsWidth { get => default; } // 0x0000000189F07B40-0x0000000189F07B84 
-		public float layoutWidth { get => default; } // 0x0000000189F07AE4-0x0000000189F07B40 
-		public float minColumnsWidth { get => default; } // 0x0000000189F078E0-0x0000000189F07978 
-		public float maxColumnsWidth { get => default; } // 0x0000000189F07B84-0x0000000189F07C1C 
-		public bool hasStretchableColumns { get => default; } // 0x0000000189F075C4-0x0000000189F078E0 
-		public bool hasRelativeWidthColumns { get => default; } // 0x0000000189F04688-0x0000000189F046C0 
+		public Columns columns { get => default; } // 0x0000000181003830-0x0000000181003840 
+		public float columnsWidth { get => default; } // 0x0000000189F07978-0x0000000189F07AE4 
+		public float layoutWidth { get => default; } // 0x0000000183D51C90-0x0000000183D51CA0 
+		public float minColumnsWidth { get => default; } // 0x0000000183D4EC80-0x0000000183D4EC90 
+		public float maxColumnsWidth { get => default; } // 0x0000000183D4EC70-0x0000000183D4EC80 
+		public bool hasStretchableColumns { get => default; } // 0x0000000189F07B40-0x0000000189F07B84 
+		public bool hasRelativeWidthColumns { get => default; } // 0x0000000189F07AE4-0x0000000189F07B40 
 	
 		// Events
 		public event Action layoutRequested;
 	
 		// Constructors
 		public ColumnLayout() {} // Dummy constructor
-		public ColumnLayout(Columns columns) {} // 0x0000000189F05F8C-0x0000000189F05F94
+		public ColumnLayout(Columns columns) {} // 0x0000000189F075C4-0x0000000189F078E0
 	
 		// Methods
-		public void Dirty() {} // 0x0000000189F06B80-0x0000000189F06B98
-		private void OnColumnAdded(Column column, int index) {} // 0x0000000189F05E74-0x0000000189F05EA4
-		private void OnColumnRemoved(Column column) {} // 0x0000000183D89090-0x0000000183D890A0
-		private void OnColumnReordered(Column column, int from, int to) {} // 0x0000000189F05D7C-0x0000000189F05D8C
-		private bool RequiresLayoutUpdate(ColumnDataType type) => default; // 0x0000000189F049E4-0x0000000189F056E8
-		private void OnColumnChanged(Column column, ColumnDataType type) {} // 0x0000000189F07048-0x0000000189F07108
-		private void OnColumnResized(Column column) {} // 0x0000000189F04824-0x0000000189F049E4
-		private static bool IsClamped(float value, float min, float max) => default; // 0x0000000189F046C0-0x0000000189F04824
-		public void DoLayout(float width) {} // 0x0000000189F06294-0x0000000189F06568
-		public void StretchResizeColumns(List<Column> stretchableColumns, List<Column> fixedColumns, List<Column> relativeWidthColumns, ref float delta, bool resizeToFit, bool dragResize) {} // 0x0000000189F06704-0x0000000189F069EC
-		private void DistributeOverflow(List<Column> stretchableColumns, List<Column> fixedColumns, List<Column> relativeWidthColumns, ref float delta, bool resizeToFit, bool dragResize) {} // 0x0000000189F06180-0x0000000189F06294
-		private void DistributeExcess(List<Column> stretchableColumns, List<Column> fixedColumns, List<Column> relativeWidthColumns, ref float delta, bool resizeToFit, bool dragResize) {} // 0x0000000189F05F94-0x0000000189F06180
-		private float RecomputeToMaxWidthProportionally(List<Column> columns, float distributedDelta, bool setDesiredWidthOnly = false /* Metadata: 0x01FB5F62 */) => default; // 0x0000000189F069EC-0x0000000189F06B80
-		private float RecomputeToMinWidthProportionally(List<Column> columns, float distributedDelta, bool setDesiredWidthOnly = false /* Metadata: 0x01FB5F63 */) => default; // 0x0000000189F06568-0x0000000189F06704
-		private float RecomputeToDesiredWidth(List<Column> columns, float distributedDelta, bool setDesiredWidthOnly, bool distributeOverflow) => default; // 0x0000000189F06C88-0x0000000189F07048
-		private float RecomputeToDesiredWidth(Column column, float distributedDelta, bool setDesiredWidthOnly, bool distributeOverflow) => default; // 0x0000000189F06B98-0x0000000189F06C88
-		private float RecomputeToMinWidth(List<Column> columns, float distributedDelta, bool setDesiredWidthOnly = false /* Metadata: 0x01FB5F64 */) => default; // 0x0000000189F0435C-0x0000000189F0460C
-		private float RecomputeToMaxWidth(List<Column> columns, float distributedDelta, bool setDesiredWidthOnly = false /* Metadata: 0x01FB5F65 */) => default; // 0x0000000189F05C28-0x0000000189F05CE4
-		public void ResizeToFit(float width) {} // 0x0000000189F05CE4-0x0000000189F05D7C
-		private void ResizeColumn(Column column, float width, bool setDesiredWidthOnly = false /* Metadata: 0x01FB5F66 */) {} // 0x0000000189F056E8-0x0000000189F05A0C
-		internal void BeginDragResize(Column column, float pos, bool previewMode) {} // 0x0000000189F05A0C-0x0000000189F05C28
-		public float GetDesiredPosition(Column column) => default; // 0x0000000189F071D0-0x0000000189F07448
-		public float GetDesiredWidth(Column c) => default; // 0x0000000189F07448-0x0000000189F075C4
-		public void DragResize(Column column, float pos) {} // 0x0000000189F0460C-0x0000000189F04688
-		internal void EndDragResize(Column column, bool cancelled) {} // 0x0000000189F07108-0x0000000189F0716C
-		private void UpdateCache() {} // 0x0000000189F07108-0x0000000189F0716C
-		private void UpdateMinAndMaxColumnsWidth() {} // 0x0000000189F07108-0x0000000189F0716C
-		private void ClearCache() {} // 0x0000000189F0716C-0x0000000189F071D0
+		public void Dirty() {} // 0x0000000189F04688-0x0000000189F046C0
+		private void OnColumnAdded(Column column, int index) {} // 0x0000000189F05D8C-0x0000000189F05E74
+		private void OnColumnRemoved(Column column) {} // 0x0000000189F05EA4-0x0000000189F05F8C
+		private void OnColumnReordered(Column column, int from, int to) {} // 0x0000000189F05F8C-0x0000000189F05F94
+		private bool RequiresLayoutUpdate(ColumnDataType type) => default; // 0x0000000189F06B80-0x0000000189F06B98
+		private void OnColumnChanged(Column column, ColumnDataType type) {} // 0x0000000189F05E74-0x0000000189F05EA4
+		private void OnColumnResized(Column column) {} // 0x0000000183D89090-0x0000000183D890A0
+		private static bool IsClamped(float value, float min, float max) => default; // 0x0000000189F05D7C-0x0000000189F05D8C
+		public void DoLayout(float width) {} // 0x0000000189F049E4-0x0000000189F056E8
+		public void StretchResizeColumns(List<Column> stretchableColumns, List<Column> fixedColumns, List<Column> relativeWidthColumns, ref float delta, bool resizeToFit, bool dragResize) {} // 0x0000000189F07048-0x0000000189F07108
+		private void DistributeOverflow(List<Column> stretchableColumns, List<Column> fixedColumns, List<Column> relativeWidthColumns, ref float delta, bool resizeToFit, bool dragResize) {} // 0x0000000189F04824-0x0000000189F049E4
+		private void DistributeExcess(List<Column> stretchableColumns, List<Column> fixedColumns, List<Column> relativeWidthColumns, ref float delta, bool resizeToFit, bool dragResize) {} // 0x0000000189F046C0-0x0000000189F04824
+		private float RecomputeToMaxWidthProportionally(List<Column> columns, float distributedDelta, bool setDesiredWidthOnly = false /* Metadata: 0x01FB5F62 */) => default; // 0x0000000189F06294-0x0000000189F06568
+		private float RecomputeToMinWidthProportionally(List<Column> columns, float distributedDelta, bool setDesiredWidthOnly = false /* Metadata: 0x01FB5F63 */) => default; // 0x0000000189F06704-0x0000000189F069EC
+		private float RecomputeToDesiredWidth(List<Column> columns, float distributedDelta, bool setDesiredWidthOnly, bool distributeOverflow) => default; // 0x0000000189F06180-0x0000000189F06294
+		private float RecomputeToDesiredWidth(Column column, float distributedDelta, bool setDesiredWidthOnly, bool distributeOverflow) => default; // 0x0000000189F05F94-0x0000000189F06180
+		private float RecomputeToMinWidth(List<Column> columns, float distributedDelta, bool setDesiredWidthOnly = false /* Metadata: 0x01FB5F64 */) => default; // 0x0000000189F069EC-0x0000000189F06B80
+		private float RecomputeToMaxWidth(List<Column> columns, float distributedDelta, bool setDesiredWidthOnly = false /* Metadata: 0x01FB5F65 */) => default; // 0x0000000189F06568-0x0000000189F06704
+		public void ResizeToFit(float width) {} // 0x0000000189F06C88-0x0000000189F07048
+		private void ResizeColumn(Column column, float width, bool setDesiredWidthOnly = false /* Metadata: 0x01FB5F66 */) {} // 0x0000000189F06B98-0x0000000189F06C88
+		internal void BeginDragResize(Column column, float pos, bool previewMode) {} // 0x0000000189F0435C-0x0000000189F0460C
+		public float GetDesiredPosition(Column column) => default; // 0x0000000189F05C28-0x0000000189F05CE4
+		public float GetDesiredWidth(Column c) => default; // 0x0000000189F05CE4-0x0000000189F05D7C
+		public void DragResize(Column column, float pos) {} // 0x0000000189F056E8-0x0000000189F05A0C
+		internal void EndDragResize(Column column, bool cancelled) {} // 0x0000000189F05A0C-0x0000000189F05C28
+		private void UpdateCache() {} // 0x0000000189F071D0-0x0000000189F07448
+		private void UpdateMinAndMaxColumnsWidth() {} // 0x0000000189F07448-0x0000000189F075C4
+		private void ClearCache() {} // 0x0000000189F0460C-0x0000000189F04688
 	}
 
 	internal enum ColumnsDataType // TypeDefIndex: 43555
@@ -6894,17 +7051,17 @@ namespace UnityEngine.UIElements
 		private string m_PrimaryColumnName; // 0x38
 	
 		// Properties
-		public string primaryColumnName { get => default; set {} } // 0x0000000183D4F630-0x0000000183D4F640 0x0000000189F099B8-0x0000000189F099D0
-		public bool reorderable { get => default; set {} } // 0x0000000189F095C0-0x0000000189F095DC 0x0000000189F095DC-0x0000000189F095F8
-		public bool resizable { get => default; set {} } // 0x0000000189F09048-0x0000000189F090D4 0x0000000189F095F8-0x0000000189F09684
-		public bool resizePreview { get => default; set {} } // 0x0000000183D4EDD0-0x0000000183D4EDE0 0x0000000189F099D0-0x0000000189F099E8
-		internal IEnumerable<Column> displayList { get => default; } // 0x0000000189F090D4-0x0000000189F09160 
-		internal IEnumerable<Column> visibleList { get => default; } // 0x0000000189F09684-0x0000000189F09710 
-		public StretchMode stretchMode { get => default; set {} } // 0x0000000189F09160-0x0000000189F091EC 0x0000000189F09710-0x0000000189F0979C
-		public int Count { get => default; } // 0x0000000189F08CDC-0x0000000189F08DD0 
-		public bool IsReadOnly { get => default; } // 0x0000000189F08768-0x0000000189F087E8 
-		public Column this[int index] { get => default; } // 0x0000000189F08A94-0x0000000189F08AA8 
-		public Column this[string name] { get => default; } // 0x0000000189F08FC0-0x0000000189F09048 
+		public string primaryColumnName { get => default; set {} } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x0000000189F09940-0x0000000189F09988
+		public bool reorderable { get => default; set {} } // 0x0000000183D4EF60-0x0000000183D4EF70 0x0000000189F09988-0x0000000189F099A0
+		public bool resizable { get => default; set {} } // 0x0000000183D4F2C0-0x0000000183D4F2D0 0x0000000189F099A0-0x0000000189F099B8
+		public bool resizePreview { get => default; set {} } // 0x0000000183D4F630-0x0000000183D4F640 0x0000000189F099B8-0x0000000189F099D0
+		internal IEnumerable<Column> displayList { get => default; } // 0x0000000189F095C0-0x0000000189F095DC 
+		internal IEnumerable<Column> visibleList { get => default; } // 0x0000000189F095DC-0x0000000189F095F8 
+		public StretchMode stretchMode { get => default; set {} } // 0x0000000183D4EDD0-0x0000000183D4EDE0 0x0000000189F099D0-0x0000000189F099E8
+		public int Count { get => default; } // 0x0000000189F09390-0x0000000189F093D8 
+		public bool IsReadOnly { get => default; } // 0x0000000189F093D8-0x0000000189F09424 
+		public Column this[int index] { get => default; } // 0x0000000189F09424-0x0000000189F09478 
+		public Column this[string name] { get => default; } // 0x0000000189F09478-0x0000000189F095C0 
 	
 		// Events
 		internal event Action<ColumnsDataType> changed;
@@ -6925,7 +7082,7 @@ namespace UnityEngine.UIElements
 			where T : Columns, new()
 		{
 			// Constructors
-			public UxmlObjectFactory() {} // 0x0000000183D4E2A0-0x0000000183D4E2B0
+			public UxmlObjectFactory() {}
 		}
 	
 		internal class UxmlObjectTraits<T> : UIElements.UxmlObjectTraits<T> // TypeDefIndex: 43558
@@ -6940,34 +7097,34 @@ namespace UnityEngine.UIElements
 			private readonly UxmlObjectListAttributeDescription<Column> m_Columns;
 	
 			// Constructors
-			public UxmlObjectTraits() {} // 0x0000000183D4EF60-0x0000000183D4EF70
+			public UxmlObjectTraits() {}
 	
 			// Methods
-			public override void Init(ref ref T obj, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F09940-0x0000000189F09988
+			public override void Init(ref ref T obj, IUxmlAttributes bag, CreationContext cc) {}
 		}
 	
 		// Constructors
-		public Columns() {} // 0x0000000189F14E9C-0x0000000189F14EB4
+		public Columns() {} // 0x0000000189F08FC0-0x0000000189F09048
 	
 		// Methods
-		public bool IsPrimary(Column column) => default; // 0x0000000189F0847C-0x0000000189F085D4
-		public IEnumerator<Column> GetEnumerator() => default; // 0x0000000189F08628-0x0000000189F08688
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189F08B08-0x0000000189F08CDC
-		public void Add(Column item) {} // 0x0000000189F08AA8-0x0000000189F08AF4
-		public void Clear() {} // 0x0000000189F08AF4-0x0000000189F08B08
-		public bool Contains(Column item) => default; // 0x0000000189F09390-0x0000000189F093D8
-		public bool Contains(string name) => default; // 0x0000000189F093D8-0x0000000189F09424
-		public void CopyTo(Column[] array, int arrayIndex) {} // 0x0000000189F08718-0x0000000189F08768
-		public bool Remove(Column column) => default; // 0x0000000189F087E8-0x0000000189F08A28
-		private void OnColumnChanged(Column column, ColumnDataType type) {} // 0x0000000189F09424-0x0000000189F09478
-		private void OnColumnResized(Column column) {} // 0x0000000189F09478-0x0000000189F095C0
-		public int IndexOf(Column column) => default; // 0x0000000189F08688-0x0000000189F086D0
-		public void Insert(int index, Column column) {} // 0x0000000189F08DDC-0x0000000189F08FC0
-		public void ReorderDisplay(int from, int to) {}
-		private void InitOrderColumns() {}
-		private void DirtyVisibleColumns() {}
-		private void UpdateVisibleColumns() {} // 0x0000000189F14EF4-0x0000000189F14F58
-		private void NotifyChange(ColumnsDataType type) {} // 0x000000018350B670-0x000000018350B680
+		public bool IsPrimary(Column column) => default; // 0x0000000189F08A28-0x0000000189F08A94
+		public IEnumerator<Column> GetEnumerator() => default; // 0x0000000189F086D0-0x0000000189F08718
+		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189F08DD0-0x0000000189F08DDC
+		public void Add(Column item) {} // 0x0000000189F08378-0x0000000189F083DC
+		public void Clear() {} // 0x0000000189F083DC-0x0000000189F0847C
+		public bool Contains(Column item) => default; // 0x0000000189F085D4-0x0000000189F08628
+		public bool Contains(string name) => default; // 0x0000000189F0847C-0x0000000189F085D4
+		public void CopyTo(Column[] array, int arrayIndex) {} // 0x0000000189F08628-0x0000000189F08688
+		public bool Remove(Column column) => default; // 0x0000000189F08B08-0x0000000189F08CDC
+		private void OnColumnChanged(Column column, ColumnDataType type) {} // 0x0000000189F08AA8-0x0000000189F08AF4
+		private void OnColumnResized(Column column) {} // 0x0000000189F08AF4-0x0000000189F08B08
+		public int IndexOf(Column column) => default; // 0x0000000189F08718-0x0000000189F08768
+		public void Insert(int index, Column column) {} // 0x0000000189F087E8-0x0000000189F08A28
+		public void ReorderDisplay(int from, int to) {} // 0x0000000189F08CDC-0x0000000189F08DD0
+		private void InitOrderColumns() {} // 0x0000000189F08768-0x0000000189F087E8
+		private void DirtyVisibleColumns() {} // 0x0000000189F08688-0x0000000189F086D0
+		private void UpdateVisibleColumns() {} // 0x0000000189F08DDC-0x0000000189F08FC0
+		private void NotifyChange(ColumnsDataType type) {} // 0x0000000189F08A94-0x0000000189F08AA8
 	}
 
 	public class MultiColumnController : IDisposable // TypeDefIndex: 43561
@@ -7033,16 +7190,16 @@ namespace UnityEngine.UIElements
 		private List<SortColumnDescription> m_SortedColumns; // 0x550
 	
 		// Properties
-		public new MultiColumnListViewController viewController { get => default; } // 0x0000000183D6CB20-0x0000000183D6CB30 
-		public Columns columns { get => default; private set {} } // 0x0000000189F0FEF4-0x0000000189F0FF88 0x0000000189F0FF88-0x0000000189F0FFE8
-		public SortColumnDescriptions sortColumnDescriptions { get => default; private set {} } // 0x0000000189F0FDE4-0x0000000189F0FE4C 0x0000000189F0FC90-0x0000000189F0FDE4
-		public bool sortingEnabled { set {} } // 0x0000000189F0F958-0x0000000189F0F9EC
+		public new MultiColumnListViewController viewController { get => default; } // 0x0000000189F0FE4C-0x0000000189F0FE90 
+		public Columns columns { get => default; private set {} } // 0x0000000183D6CB00-0x0000000183D6CB10 0x0000000189F0FE90-0x0000000189F0FEF4
+		public SortColumnDescriptions sortColumnDescriptions { get => default; private set {} } // 0x0000000183D6CB20-0x0000000183D6CB30 0x0000000189F0FEF4-0x0000000189F0FF88
+		public bool sortingEnabled { set {} } // 0x0000000189F0FF88-0x0000000189F0FFE8
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<MultiColumnListView, UxmlTraits> // TypeDefIndex: 43562
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189F0FE4C-0x0000000189F0FE90
+			public UxmlFactory() {} // 0x0000000189F1500C-0x0000000189F15048
 		}
 	
 		public class UxmlTraits : BaseListView.UxmlTraits // TypeDefIndex: 43563
@@ -7053,22 +7210,22 @@ namespace UnityEngine.UIElements
 			private readonly UxmlObjectAttributeDescription<SortColumnDescriptions> m_SortColumnDescriptions; // 0xE8
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189F0FE90-0x0000000189F0FEF4
+			public UxmlTraits() {} // 0x0000000189F15CB0-0x0000000189F15DC0
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000183D6CB00-0x0000000183D6CB10
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F15430-0x0000000189F15578
 		}
 	
 		// Constructors
-		public MultiColumnListView() {} // 0x0000000189F0FA54-0x0000000189F0FC90
-		public MultiColumnListView(Columns columns) {} // 0x0000000189F0F9EC-0x0000000189F0FA28
+		public MultiColumnListView() {} // 0x0000000189F0FDE4-0x0000000189F0FE4C
+		public MultiColumnListView(Columns columns) {} // 0x0000000189F0FC90-0x0000000189F0FDE4
 	
 		// Methods
-		protected override CollectionViewController CreateViewController() => default; // 0x0000000189F0FA28-0x0000000189F0FA3C
-		public override void SetViewController(CollectionViewController controller) {} // 0x0000000189F0FA3C-0x0000000189F0FA54
-		private protected override void CreateVirtualizationController() {} // 0x0000000189F1500C-0x0000000189F15048
-		private void RaiseColumnSortingChanged() {} // 0x0000000189F15430-0x0000000189F15578
-		private void RaiseHeaderContextMenuPopulate(ContextualMenuPopulateEvent evt, Column column) {} // 0x0000000189F15CB0-0x0000000189F15DC0
+		protected override CollectionViewController CreateViewController() => default; // 0x0000000189F0F958-0x0000000189F0F9EC
+		public override void SetViewController(CollectionViewController controller) {} // 0x0000000189F0FA54-0x0000000189F0FC90
+		private protected override void CreateVirtualizationController() {} // 0x0000000189F0F9EC-0x0000000189F0FA28
+		private void RaiseColumnSortingChanged() {} // 0x0000000189F0FA28-0x0000000189F0FA3C
+		private void RaiseHeaderContextMenuPopulate(ContextualMenuPopulateEvent evt, Column column) {} // 0x0000000189F0FA3C-0x0000000189F0FA54
 	}
 
 	public class MultiColumnTreeView : BaseTreeView // TypeDefIndex: 43567
@@ -7080,16 +7237,16 @@ namespace UnityEngine.UIElements
 		private List<SortColumnDescription> m_SortedColumns; // 0x4D0
 	
 		// Properties
-		public new MultiColumnTreeViewController viewController { get => default; } // 0x0000000183D6C890-0x0000000183D6C8A0 
-		public Columns columns { get => default; private set {} } // 0x0000000189F10590-0x0000000189F10624 0x0000000189F10624-0x0000000189F10684
-		public SortColumnDescriptions sortColumnDescriptions { get => default; private set {} } // 0x0000000189F10480-0x0000000189F104E8 0x0000000189F1032C-0x0000000189F10480
-		public bool sortingEnabled { set {} } // 0x0000000189F0FFE8-0x0000000189F10088
+		public new MultiColumnTreeViewController viewController { get => default; } // 0x0000000189F104E8-0x0000000189F1052C 
+		public Columns columns { get => default; private set {} } // 0x0000000183D57340-0x0000000183D57350 0x0000000189F1052C-0x0000000189F10590
+		public SortColumnDescriptions sortColumnDescriptions { get => default; private set {} } // 0x0000000183D6C890-0x0000000183D6C8A0 0x0000000189F10590-0x0000000189F10624
+		public bool sortingEnabled { set {} } // 0x0000000189F10624-0x0000000189F10684
 	
 		// Nested types
 		public class UxmlFactory : UxmlFactory<MultiColumnTreeView, UxmlTraits> // TypeDefIndex: 43565
 		{
 			// Constructors
-			public UxmlFactory() {} // 0x0000000189F104E8-0x0000000189F1052C
+			public UxmlFactory() {} // 0x0000000189F150C0-0x0000000189F150FC
 		}
 	
 		public class UxmlTraits : BaseTreeView.UxmlTraits // TypeDefIndex: 43566
@@ -7100,22 +7257,22 @@ namespace UnityEngine.UIElements
 			private readonly UxmlObjectAttributeDescription<SortColumnDescriptions> m_SortColumnDescriptions; // 0xC8
 	
 			// Constructors
-			public UxmlTraits() {} // 0x0000000189F1052C-0x0000000189F10590
+			public UxmlTraits() {} // 0x0000000189F15DC0-0x0000000189F15ED0
 	
 			// Methods
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000183D57340-0x0000000183D57350
+			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F15850-0x0000000189F15998
 		}
 	
 		// Constructors
-		public MultiColumnTreeView() {} // 0x0000000189F100F0-0x0000000189F1032C
-		public MultiColumnTreeView(Columns columns) {} // 0x0000000189F10088-0x0000000189F100C4
+		public MultiColumnTreeView() {} // 0x0000000189F10480-0x0000000189F104E8
+		public MultiColumnTreeView(Columns columns) {} // 0x0000000189F1032C-0x0000000189F10480
 	
 		// Methods
-		protected override CollectionViewController CreateViewController() => default; // 0x0000000189F100C4-0x0000000189F100D8
-		public override void SetViewController(CollectionViewController controller) {} // 0x0000000189F100D8-0x0000000189F100F0
-		private protected override void CreateVirtualizationController() {} // 0x0000000189F150C0-0x0000000189F150FC
-		private void RaiseColumnSortingChanged() {} // 0x0000000189F15850-0x0000000189F15998
-		private void RaiseHeaderContextMenuPopulate(ContextualMenuPopulateEvent evt, Column column) {} // 0x0000000189F15DC0-0x0000000189F15ED0
+		protected override CollectionViewController CreateViewController() => default; // 0x0000000189F0FFE8-0x0000000189F10088
+		public override void SetViewController(CollectionViewController controller) {} // 0x0000000189F100F0-0x0000000189F1032C
+		private protected override void CreateVirtualizationController() {} // 0x0000000189F10088-0x0000000189F100C4
+		private void RaiseColumnSortingChanged() {} // 0x0000000189F100C4-0x0000000189F100D8
+		private void RaiseHeaderContextMenuPopulate(ContextualMenuPopulateEvent evt, Column column) {} // 0x0000000189F100D8-0x0000000189F100F0
 	}
 
 	public enum SortDirection // TypeDefIndex: 43568
@@ -7136,10 +7293,10 @@ namespace UnityEngine.UIElements
 		private SortDirection m_SortDirection; // 0x20
 	
 		// Properties
-		public string columnName { get => default; set {} } // 0x0000000189F1084C-0x0000000189F10874 0x0000000183D4EAC0-0x0000000183D4EAD0
-		public int columnIndex { get => default; set {} } // 0x0000000182C92F10-0x0000000182C92F20 0x0000000181003B50-0x0000000181003B60
-		public Column column { get; internal set; } // 0x0000000189F108C0-0x0000000189F108E8 0x0000000189F10734-0x0000000189F107C0
-		public SortDirection direction { get => default; set {} } // 0x0000000189F107C0-0x0000000189F1084C 0x0000000183D51990-0x0000000183D519A0
+		public string columnName { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x0000000189F10874-0x0000000189F108C0
+		public int columnIndex { get => default; set {} } // 0x0000000183D4E340-0x0000000183D4E350 0x0000000189F1084C-0x0000000189F10874
+		public Column column { get; internal set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+		public SortDirection direction { get => default; set {} } // 0x0000000181003B50-0x0000000181003B60 0x0000000189F108C0-0x0000000189F108E8
 	
 		// Events
 		internal event Action<SortColumnDescription> changed;
@@ -7149,7 +7306,7 @@ namespace UnityEngine.UIElements
 			where T : SortColumnDescription, new()
 		{
 			// Constructors
-			public UxmlObjectFactory() {} // 0x0000000181041090-0x00000001810410A0
+			public UxmlObjectFactory() {}
 		}
 	
 		internal class UxmlObjectTraits<T> : UIElements.UxmlObjectTraits<T> // TypeDefIndex: 43570
@@ -7161,16 +7318,16 @@ namespace UnityEngine.UIElements
 			private readonly UxmlEnumAttributeDescription<SortDirection> m_SortDescription;
 	
 			// Constructors
-			public UxmlObjectTraits() {} // 0x0000000183D4E340-0x0000000183D4E350
+			public UxmlObjectTraits() {}
 	
 			// Methods
-			public override void Init(ref ref T obj, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F10874-0x0000000189F108C0
+			public override void Init(ref ref T obj, IUxmlAttributes bag, CreationContext cc) {}
 		}
 	
 		// Constructors
-		public SortColumnDescription() {}
-		public SortColumnDescription(int columnIndex, SortDirection direction) {}
-		public SortColumnDescription(string columnName, SortDirection direction) {}
+		public SortColumnDescription() {} // 0x0000000183D51990-0x0000000183D519A0
+		public SortColumnDescription(int columnIndex, SortDirection direction) {} // 0x0000000189F106FC-0x0000000189F10734
+		public SortColumnDescription(string columnName, SortDirection direction) {} // 0x0000000189F106C4-0x0000000189F106FC
 	}
 
 	[Serializable]
@@ -7182,8 +7339,8 @@ namespace UnityEngine.UIElements
 		private readonly IList<SortColumnDescription> m_Descriptions; // 0x10
 	
 		// Properties
-		public int Count { get => default; } // 0x0000000189F10D80-0x0000000189F10DF8 
-		public bool IsReadOnly { get => default; }
+		public int Count { get => default; } // 0x0000000189F10E8C-0x0000000189F10ED4 
+		public bool IsReadOnly { get => default; } // 0x0000000189F10ED4-0x0000000189F10F20 
 	
 		// Events
 		internal event Action changed;
@@ -7193,7 +7350,7 @@ namespace UnityEngine.UIElements
 			where T : SortColumnDescriptions, new()
 		{
 			// Constructors
-			public UxmlObjectFactory() {} // 0x0000000189F10DF8-0x0000000189F10E8C
+			public UxmlObjectFactory() {}
 		}
 	
 		internal class UxmlObjectTraits<T> : UIElements.UxmlObjectTraits<T> // TypeDefIndex: 43573
@@ -7203,25 +7360,25 @@ namespace UnityEngine.UIElements
 			private readonly UxmlObjectListAttributeDescription<SortColumnDescription> m_SortColumnDescriptions;
 	
 			// Constructors
-			public UxmlObjectTraits() {} // 0x0000000189F10A78-0x0000000189F10AC0
+			public UxmlObjectTraits() {}
 	
 			// Methods
-			public override void Init(ref ref T obj, IUxmlAttributes bag, CreationContext cc) {} // 0x0000000189F10F20-0x0000000189F10FB4
+			public override void Init(ref ref T obj, IUxmlAttributes bag, CreationContext cc) {}
 		}
 	
 		// Constructors
-		public SortColumnDescriptions() {}
+		public SortColumnDescriptions() {} // 0x0000000189F10D80-0x0000000189F10DF8
 	
 		// Methods
-		public IEnumerator<SortColumnDescription> GetEnumerator() => default; // 0x0000000189F1094C-0x0000000189F109C4
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189F109C4-0x0000000189F10A18
-		public void Add(SortColumnDescription item) {} // 0x0000000189F10A18-0x0000000189F10A78
-		public void Clear() {} // 0x0000000189F10C3C-0x0000000189F10D74
-		public bool Contains(SortColumnDescription item) => default; // 0x000000018788F298-0x000000018788F2A8
-		public void CopyTo(SortColumnDescription[] array, int arrayIndex) {} // 0x0000000189F10E8C-0x0000000189F10ED4
-		public bool Remove(SortColumnDescription desc) => default; // 0x0000000189F10ED4-0x0000000189F10F20
-		private void OnDescriptionChanged(SortColumnDescription desc) {} // 0x0000000189F10AC0-0x0000000189F10C3C
-		public void Insert(int index, SortColumnDescription desc) {}
+		public IEnumerator<SortColumnDescription> GetEnumerator() => default; // 0x0000000189F10A78-0x0000000189F10AC0
+		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189F10D74-0x0000000189F10D80
+		public void Add(SortColumnDescription item) {} // 0x0000000189F108E8-0x0000000189F1094C
+		public void Clear() {} // 0x0000000189F1094C-0x0000000189F109C4
+		public bool Contains(SortColumnDescription item) => default; // 0x0000000189F109C4-0x0000000189F10A18
+		public void CopyTo(SortColumnDescription[] array, int arrayIndex) {} // 0x0000000189F10A18-0x0000000189F10A78
+		public bool Remove(SortColumnDescription desc) => default; // 0x0000000189F10C3C-0x0000000189F10D74
+		private void OnDescriptionChanged(SortColumnDescription desc) {} // 0x000000018788F298-0x000000018788F2A8
+		public void Insert(int index, SortColumnDescription desc) {} // 0x0000000189F10AC0-0x0000000189F10C3C
 	}
 
 	internal abstract class BaseReorderableDragAndDropController : ICollectionDragAndDropController // TypeDefIndex: 43575
@@ -7481,9 +7638,9 @@ namespace UnityEngine.UIElements
 		private float m_SiblingBottom; // 0x6C
 	
 		// Properties
-		protected BaseVerticalCollectionView targetView { get => default; } // 0x000000018519C3C8-0x000000018519C3D8 
-		protected ScrollView targetScrollView { get => default; } // 0x0000000189F0DA00-0x0000000189F0DA18 
-		public ICollectionDragAndDropController dragAndDropController { get; set; } // 0x0000000189F0B758-0x0000000189F0B9D4 0x0000000189F0D224-0x0000000189F0D478
+		protected BaseVerticalCollectionView targetView { get => default; } // 0x0000000189F0DA3C-0x0000000189F0DA78 
+		protected ScrollView targetScrollView { get => default; } // 0x0000000189F0DA18-0x0000000189F0DA3C 
+		public ICollectionDragAndDropController dragAndDropController { get; set; } // 0x0000000183D4EB30-0x0000000183D4EB40 0x000000018519C3C8-0x000000018519C3D8
 	
 		// Nested types
 		internal struct DragPosition : IEquatable<DragPosition> // TypeDefIndex: 43593
@@ -7496,37 +7653,37 @@ namespace UnityEngine.UIElements
 			public DragAndDropPosition dropPosition; // 0x18
 	
 			// Methods
-			public bool Equals(DragPosition other) => default; // 0x0000000189F0DA3C-0x0000000189F0DA78
-			public override bool Equals(object obj) => default; // 0x0000000189F0DA18-0x0000000189F0DA3C
-			public override int GetHashCode() => default; // 0x0000000183D4EB30-0x0000000183D4EB40
+			public bool Equals(DragPosition other) => default; // 0x0000000189F1731C-0x0000000189F17380
+			public override bool Equals(object obj) => default; // 0x0000000189F1729C-0x0000000189F1731C
+			public override int GetHashCode() => default; // 0x0000000189F17380-0x0000000189F173F0
 		}
 	
 		// Constructors
 		public ListViewDragger() {} // Dummy constructor
-		public ListViewDragger(BaseVerticalCollectionView listView) {} // 0x0000000189F0D83C-0x0000000189F0DA00
+		public ListViewDragger(BaseVerticalCollectionView listView) {} // 0x0000000189F0DA00-0x0000000189F0DA18
 	
 		// Methods
-		protected override bool CanStartDrag(Vector3 pointerPosition) => default; // 0x0000000189F0C0EC-0x0000000189F0C25C
-		protected internal override StartDragArgs StartDrag(Vector3 pointerPosition) => default; // 0x0000000189F0CC84-0x0000000189F0CE70
-		protected internal override void UpdateDrag(Vector3 pointerPosition) {} // 0x0000000189F0C2E8-0x0000000189F0C4C4
-		private DragVisualMode GetVisualMode(Vector3 pointerPosition, ref DragPosition dragPosition) => default; // 0x0000000189F0C25C-0x0000000189F0C2E8
-		protected internal override void OnDrop(Vector3 pointerPosition) {} // 0x0000000189F0B12C-0x0000000189F0B758
-		internal void HandleDragAndScroll(Vector2 pointerPosition) {} // 0x0000000189F0D478-0x0000000189F0D7B4
-		private void HandleAutoExpansion(Vector2 pointerPosition) {} // 0x0000000189F0CA5C-0x0000000189F0CB2C
-		private void ApplyDragAndDropUI(DragPosition dragPosition) {} // 0x0000000189F0C4C4-0x0000000189F0CA5C
-		protected virtual bool TryGetDragPosition(Vector2 pointerPosition, ref DragPosition dragPosition) => default; // 0x0000000189F0BD98-0x0000000189F0BF18
-		private void HandleTreePosition(Vector2 pointerPosition, ref DragPosition dragPosition) {} // 0x0000000189F0CB2C-0x0000000189F0CC84
-		private void HandleSiblingInsertionAtAvailableDepthsAndChangeTargetIfNeeded(ref DragPosition dragPosition, Vector2 pointerPosition) {} // 0x0000000189F0BCC4-0x0000000189F0BD98
+		protected override bool CanStartDrag(Vector3 pointerPosition) => default; // 0x0000000189F0B758-0x0000000189F0B9D4
+		protected internal override StartDragArgs StartDrag(Vector3 pointerPosition) => default; // 0x0000000189F0D224-0x0000000189F0D478
+		protected internal override void UpdateDrag(Vector3 pointerPosition) {} // 0x0000000189F0D83C-0x0000000189F0DA00
+		private DragVisualMode GetVisualMode(Vector3 pointerPosition, ref DragPosition dragPosition) => default; // 0x0000000189F0C0EC-0x0000000189F0C25C
+		protected internal override void OnDrop(Vector3 pointerPosition) {} // 0x0000000189F0CC84-0x0000000189F0CE70
+		internal void HandleDragAndScroll(Vector2 pointerPosition) {} // 0x0000000189F0C2E8-0x0000000189F0C4C4
+		private void HandleAutoExpansion(Vector2 pointerPosition) {} // 0x0000000189F0C25C-0x0000000189F0C2E8
+		private void ApplyDragAndDropUI(DragPosition dragPosition) {} // 0x0000000189F0B12C-0x0000000189F0B758
+		protected virtual bool TryGetDragPosition(Vector2 pointerPosition, ref DragPosition dragPosition) => default; // 0x0000000189F0D478-0x0000000189F0D7B4
+		private void HandleTreePosition(Vector2 pointerPosition, ref DragPosition dragPosition) {} // 0x0000000189F0CA5C-0x0000000189F0CB2C
+		private void HandleSiblingInsertionAtAvailableDepthsAndChangeTargetIfNeeded(ref DragPosition dragPosition, Vector2 pointerPosition) {} // 0x0000000189F0C4C4-0x0000000189F0CA5C
 		private void GetPreviousAndNextItemsIgnoringDraggedItems(int insertAtIndex, out int previousItemId, out int nextItemId) {
 			previousItemId = default;
 			nextItemId = default;
-		} // 0x0000000189F0CE70-0x0000000189F0CEA8
-		protected DragAndDropArgs MakeDragAndDropArgs(DragPosition dragPosition) => default; // 0x0000000189F0CEA8-0x0000000189F0D224
-		private float GetHoverBarTopPosition(ReusableCollectionItem item) => default; // 0x0000000189F0B9D4-0x0000000189F0BCC4
-		private void PlaceHoverBarAtElement(ReusableCollectionItem item) {} // 0x0000000189F0BF18-0x0000000189F0C0EC
-		private void PlaceHoverBarAt(float top, float indentationPadding = -1f /* Metadata: 0x01FB5F7D */, float siblingBottom = -1f /* Metadata: 0x01FB5F81 */) {} // 0x0000000189F0D7B4-0x0000000189F0D83C
-		protected override void ClearDragAndDropUI(bool dragCancelled) {} // 0x0000000189F1731C-0x0000000189F17380
-		protected ReusableCollectionItem GetRecycledItem(Vector3 pointerPosition) => default; // 0x0000000189F1729C-0x0000000189F1731C
+		} // 0x0000000189F0BD98-0x0000000189F0BF18
+		protected DragAndDropArgs MakeDragAndDropArgs(DragPosition dragPosition) => default; // 0x0000000189F0CB2C-0x0000000189F0CC84
+		private float GetHoverBarTopPosition(ReusableCollectionItem item) => default; // 0x0000000189F0BCC4-0x0000000189F0BD98
+		private void PlaceHoverBarAtElement(ReusableCollectionItem item) {} // 0x0000000189F0CE70-0x0000000189F0CEA8
+		private void PlaceHoverBarAt(float top, float indentationPadding = -1f /* Metadata: 0x01FB5F7D */, float siblingBottom = -1f /* Metadata: 0x01FB5F81 */) {} // 0x0000000189F0CEA8-0x0000000189F0D224
+		protected override void ClearDragAndDropUI(bool dragCancelled) {} // 0x0000000189F0B9D4-0x0000000189F0BCC4
+		protected ReusableCollectionItem GetRecycledItem(Vector3 pointerPosition) => default; // 0x0000000189F0BF18-0x0000000189F0C0EC
 	}
 
 	internal static class ListViewDraggerExtension // TypeDefIndex: 43595
@@ -7598,7 +7755,7 @@ namespace UnityEngine.UIElements
 			public Vector2 expandItemBeginPosition; // 0x28
 	
 			// Constructors
-			public DropData() {} // 0x0000000189F24168-0x0000000189F24230
+			public DropData() {} // 0x0000000183D5C2D0-0x0000000183D5C2E0
 		}
 	
 		private struct TreeItemState // TypeDefIndex: 43599
@@ -7611,23 +7768,23 @@ namespace UnityEngine.UIElements
 			public TreeItemState(int parentId, int childIndex) {
 				this.parentId = default;
 				this.childIndex = default;
-			} // 0x0000000189F22F04-0x0000000189F234C8
+			} // 0x0000000183D4E4B0-0x0000000183D4E4C0
 		}
 	
 		// Constructors
 		public TreeViewReorderableDragAndDropController() {} // Dummy constructor
-		public TreeViewReorderableDragAndDropController(BaseTreeView view) {} // 0x0000000189F240A0-0x0000000189F24168
+		public TreeViewReorderableDragAndDropController(BaseTreeView view) {} // 0x0000000189F24168-0x0000000189F24230
 	
 		// Methods
-		protected override int CompareId(int id1, int id2) => default; // 0x0000000189F23940-0x0000000189F23998
-		public override StartDragArgs SetupDragAndDrop(IEnumerable<int> itemIds, bool skipText = false /* Metadata: 0x01FB5F85 */) => default; // 0x0000000189F23998-0x0000000189F23EEC
-		public override DragVisualMode HandleDragAndDrop(IListDragAndDropArgs args) => default; // 0x0000000189F23534-0x0000000189F2360C
-		public override void OnDrop(IListDragAndDropArgs args) {} // 0x0000000189F23EEC-0x0000000189F240A0
-		public override void DragCleanup() {} // 0x0000000189F237B0-0x0000000189F23940
-		private void RestoreExpanded(List<int> ids) {} // 0x0000000189F234C8-0x0000000189F23534
-		public override void HandleAutoExpand(ReusableCollectionItem item, Vector2 pointerPosition) {} // 0x0000000189F2360C-0x0000000189F237B0
-		private void DelayExpandDropItem() {} // 0x0000000183D5C2D0-0x0000000183D5C2E0
-		private void ExpandDropItem() {} // 0x0000000183D4E4B0-0x0000000183D4E4C0
+		protected override int CompareId(int id1, int id2) => default; // 0x0000000189F22F04-0x0000000189F234C8
+		public override StartDragArgs SetupDragAndDrop(IEnumerable<int> itemIds, bool skipText = false /* Metadata: 0x01FB5F85 */) => default; // 0x0000000189F240A0-0x0000000189F24168
+		public override DragVisualMode HandleDragAndDrop(IListDragAndDropArgs args) => default; // 0x0000000189F23940-0x0000000189F23998
+		public override void OnDrop(IListDragAndDropArgs args) {} // 0x0000000189F23998-0x0000000189F23EEC
+		public override void DragCleanup() {} // 0x0000000189F23534-0x0000000189F2360C
+		private void RestoreExpanded(List<int> ids) {} // 0x0000000189F23EEC-0x0000000189F240A0
+		public override void HandleAutoExpand(ReusableCollectionItem item, Vector2 pointerPosition) {} // 0x0000000189F237B0-0x0000000189F23940
+		private void DelayExpandDropItem() {} // 0x0000000189F234C8-0x0000000189F23534
+		private void ExpandDropItem() {} // 0x0000000189F2360C-0x0000000189F237B0
 	}
 
 	internal interface IPointerCaptureEventInternal // TypeDefIndex: 43601
@@ -8641,31 +8798,31 @@ namespace UnityEngine.UIElements
 		private struct PointerLocation // TypeDefIndex: 43682
 		{
 			// Properties
-			internal Vector2 Position { [IsReadOnly] get; private set; } // 0x0000000189F20934-0x0000000189F20A8C 0x0000000189F20A8C-0x0000000189F20B18
-			internal IPanel Panel { [IsReadOnly] get; private set; } // 0x0000000189F20780-0x0000000189F20828 0x0000000189F2088C-0x0000000189F20934
-			internal LocationFlag Flags { [IsReadOnly] get; private set; } // 0x0000000189F20828-0x0000000189F2088C 0x0000000189F205C0-0x0000000189F2062C
+			internal Vector2 Position { [IsReadOnly] get; private set; } // 0x00000001820C61B0-0x00000001820C61C0 0x0000000183D51730-0x0000000183D51740
+			internal IPanel Panel { [IsReadOnly] get; private set; } // 0x0000000183D50DE0-0x0000000183D50DF0 0x000000018558FF08-0x000000018558FF18
+			internal LocationFlag Flags { [IsReadOnly] get; private set; } // 0x0000000183D4E340-0x0000000183D4E350 0x00000001810410F0-0x0000000181041100
 	
 			// Methods
-			internal void SetLocation(Vector2 position, IPanel panel) {} // 0x0000000189F204FC-0x0000000189F2055C
+			internal void SetLocation(Vector2 position, IPanel panel) {} // 0x0000000189F214EC-0x0000000189F21570
 		}
 	
 		// Constructors
-		static PointerDeviceState() {} // 0x0000000189F214EC-0x0000000189F21570
+		static PointerDeviceState() {} // 0x0000000189F20B9C-0x0000000189F20CC8
 	
 		// Methods
-		internal static void RemovePanelData(IPanel panel) {} // 0x00000001891AEB04-0x00000001891AEB0C
-		public static void SavePointerPosition(int pointerId, Vector2 position, IPanel panel, ContextType contextType) {} // 0x0000000189F2070C-0x0000000189F20780
-		public static void PressButton(int pointerId, int buttonId) {} // 0x0000000189F2062C-0x0000000189F20690
-		public static void ReleaseButton(int pointerId, int buttonId) {} // 0x0000000189F20690-0x0000000189F2070C
-		public static void ReleaseAllButtons(int pointerId) {} // 0x0000000189F20B18-0x0000000189F20B9C
-		public static Vector2 GetPointerPosition(int pointerId, ContextType contextType) => default; // 0x0000000189F2055C-0x0000000189F205C0
-		public static IPanel GetPanel(int pointerId, ContextType contextType) => default; // 0x0000000189F20B9C-0x0000000189F20CC8
-		private static bool HasFlagFast(LocationFlag flagSet, LocationFlag flag) => default; // 0x00000001820C61B0-0x00000001820C61C0
-		public static bool HasLocationFlag(int pointerId, ContextType contextType, LocationFlag flag) => default; // 0x0000000183D51730-0x0000000183D51740
-		public static int GetPressedButtons(int pointerId) => default; // 0x0000000183D50DE0-0x0000000183D50DF0
-		internal static bool HasAdditionalPressedButtons(int pointerId, int exceptButtonId) => default; // 0x000000018558FF08-0x000000018558FF18
-		internal static void SetPlayerPanelWithSoftPointerCapture(int pointerId, IPanel panel) {} // 0x0000000183D4E340-0x0000000183D4E350
-		internal static IPanel GetPlayerPanelWithSoftPointerCapture(int pointerId) => default; // 0x00000001810410F0-0x0000000181041100
+		internal static void RemovePanelData(IPanel panel) {} // 0x0000000189F20934-0x0000000189F20A8C
+		public static void SavePointerPosition(int pointerId, Vector2 position, IPanel panel, ContextType contextType) {} // 0x0000000189F20A8C-0x0000000189F20B18
+		public static void PressButton(int pointerId, int buttonId) {} // 0x0000000189F20780-0x0000000189F20828
+		public static void ReleaseButton(int pointerId, int buttonId) {} // 0x0000000189F2088C-0x0000000189F20934
+		public static void ReleaseAllButtons(int pointerId) {} // 0x0000000189F20828-0x0000000189F2088C
+		public static Vector2 GetPointerPosition(int pointerId, ContextType contextType) => default; // 0x0000000189F205C0-0x0000000189F2062C
+		public static IPanel GetPanel(int pointerId, ContextType contextType) => default; // 0x0000000189F204FC-0x0000000189F2055C
+		private static bool HasFlagFast(LocationFlag flagSet, LocationFlag flag) => default; // 0x00000001891AEB04-0x00000001891AEB0C
+		public static bool HasLocationFlag(int pointerId, ContextType contextType, LocationFlag flag) => default; // 0x0000000189F2070C-0x0000000189F20780
+		public static int GetPressedButtons(int pointerId) => default; // 0x0000000189F2062C-0x0000000189F20690
+		internal static bool HasAdditionalPressedButtons(int pointerId, int exceptButtonId) => default; // 0x0000000189F20690-0x0000000189F2070C
+		internal static void SetPlayerPanelWithSoftPointerCapture(int pointerId, IPanel panel) {} // 0x0000000189F20B18-0x0000000189F20B9C
+		internal static IPanel GetPlayerPanelWithSoftPointerCapture(int pointerId) => default; // 0x0000000189F2055C-0x0000000189F205C0
 	}
 
 	internal class PointerEventDispatchingStrategy : IEventDispatchingStrategy // TypeDefIndex: 43684
@@ -8960,29 +9117,29 @@ namespace UnityEngine.UIElements
 			private List<StylePropertyName> m_Enumerator; // 0x00
 	
 			// Properties
-			public StylePropertyName Current { get => default; } // 0x0000000189F22C4C-0x0000000189F22CAC 
-			object IEnumerator.Current { get => default; } // 0x0000000189F22CAC-0x0000000189F22D0C 
+			public StylePropertyName Current { get => default; } // 0x0000000189F18700-0x0000000189F18744 
+			object IEnumerator.Current { get => default; } // 0x0000000189F18694-0x0000000189F186EC 
 	
 			// Constructors
 			internal Enumerator(List<StylePropertyName> enumerator) : this() {
 				m_Enumerator = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x0000000189F186EC-0x0000000189F18700
 	
 			// Methods
-			public bool MoveNext() => default; // 0x0000000189F22BB8-0x0000000189F22C4C
-			public void Reset() {} // 0x0000000189F186EC-0x0000000189F18700
-			public void Dispose() {} // 0x0000000189F18658-0x0000000189F18694
+			public bool MoveNext() => default; // 0x0000000189F18658-0x0000000189F18694
+			public void Reset() {} // 0x000000018350B670-0x000000018350B680
+			public void Dispose() {} // 0x0000000189F18630-0x0000000189F18658
 		}
 	
 		// Constructors
 		internal StylePropertyNameCollection(List<StylePropertyName> list) {
 			propertiesList = default;
-		} // 0x0000000189F18700-0x0000000189F18744
+		} // 0x00000001842715A0-0x00000001842715A8
 	
 		// Methods
-		public Enumerator GetEnumerator() => default; // 0x0000000189F18694-0x0000000189F186EC
-		IEnumerator<StylePropertyName> IEnumerable<StylePropertyName>.GetEnumerator() => default; // 0x000000018350B670-0x000000018350B680
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189F18630-0x0000000189F18658
+		public Enumerator GetEnumerator() => default; // 0x0000000189F22BB8-0x0000000189F22C4C
+		IEnumerator<StylePropertyName> IEnumerable<StylePropertyName>.GetEnumerator() => default; // 0x0000000189F22C4C-0x0000000189F22CAC
+		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189F22CAC-0x0000000189F22D0C
 	}
 
 	public abstract class TransitionEventBase<T> : EventBase<T> // TypeDefIndex: 43706
@@ -9127,14 +9284,14 @@ namespace UnityEngine.UIElements
 		private readonly VisualElementFocusRing m_Ring; // 0x18
 	
 		// Properties
-		private FocusController focusController { get => default; } // 0x0000000189F16798-0x0000000189F167E8 
+		private FocusController focusController { get => default; } // 0x0000000189ED9FE4-0x0000000189EDA008 
 	
 		// Nested types
 		public class ChangeDirection : FocusChangeDirection // TypeDefIndex: 43718
 		{
 			// Constructors
 			public ChangeDirection() {} // Dummy constructor
-			public ChangeDirection(int i) {} // 0x0000000189ED9FE4-0x0000000189EDA008
+			public ChangeDirection(int i) {} // 0x0000000189F16798-0x0000000189F167E8
 		}
 	
 		private struct FocusableHierarchyTraversal // TypeDefIndex: 43719
@@ -9146,26 +9303,26 @@ namespace UnityEngine.UIElements
 			public ChangeDirection direction; // 0x20
 	
 			// Methods
-			private bool ValidateHierarchyTraversal(VisualElement v) => default; // 0x0000000189F1EBD4-0x0000000189F1EC5C
-			private bool ValidateElement(VisualElement v) => default; // 0x0000000189F1DF78-0x0000000189F1E2C0
-			private int Order(VisualElement a, VisualElement b) => default; // 0x0000000189F1E790-0x0000000189F1E93C
-			private int StrictOrder(VisualElement a, VisualElement b) => default; // 0x0000000189F1E2C0-0x0000000189F1E790
-			private int StrictOrder(Rect ra, Rect rb) => default; // 0x0000000189F1E93C-0x0000000189F1E97C
-			private int TieBreaker(Rect ra, Rect rb) => default; // 0x0000000189F1E97C-0x0000000189F1E9C4
-			public VisualElement GetBestOverall(VisualElement candidate, VisualElement bestSoFar = null) => default; // 0x0000000189F1E9C4-0x0000000189F1EBD4
+			private bool ValidateHierarchyTraversal(VisualElement v) => default; // 0x0000000189F1AB40-0x0000000189F1ABE0
+			private bool ValidateElement(VisualElement v) => default; // 0x0000000189F1AAA0-0x0000000189F1AB40
+			private int Order(VisualElement a, VisualElement b) => default; // 0x0000000189F1A718-0x0000000189F1A7C8
+			private int StrictOrder(VisualElement a, VisualElement b) => default; // 0x0000000189F1A7C8-0x0000000189F1A844
+			private int StrictOrder(Rect ra, Rect rb) => default; // 0x0000000189F1A844-0x0000000189F1A990
+			private int TieBreaker(Rect ra, Rect rb) => default; // 0x0000000189F1A990-0x0000000189F1AAA0
+			public VisualElement GetBestOverall(VisualElement candidate, VisualElement bestSoFar = null) => default; // 0x0000000189F1A61C-0x0000000189F1A718
 		}
 	
 		// Constructors
 		public NavigateFocusRing() {} // Dummy constructor
-		public NavigateFocusRing(VisualElement root) {} // 0x0000000189F1AB40-0x0000000189F1ABE0
-		static NavigateFocusRing() {} // 0x0000000189F1A61C-0x0000000189F1A718
+		public NavigateFocusRing(VisualElement root) {} // 0x0000000189F1EBD4-0x0000000189F1EC5C
+		static NavigateFocusRing() {} // 0x0000000189F1E9C4-0x0000000189F1EBD4
 	
 		// Methods
-		public FocusChangeDirection GetFocusChangeDirection(Focusable currentFocusable, EventBase e) => default; // 0x0000000189F1AAA0-0x0000000189F1AB40
-		public virtual Focusable GetNextFocusable(Focusable currentFocusable, FocusChangeDirection direction) => default; // 0x0000000189F1A718-0x0000000189F1A7C8
-		private Focusable GetNextFocusable2D(Focusable currentFocusable, ChangeDirection direction) => default; // 0x0000000189F1A7C8-0x0000000189F1A844
-		private static bool IsActive(VisualElement v) => default; // 0x0000000189F1A844-0x0000000189F1A990
-		private static bool IsNavigable(Focusable focusable) => default; // 0x0000000189F1A990-0x0000000189F1AAA0
+		public FocusChangeDirection GetFocusChangeDirection(Focusable currentFocusable, EventBase e) => default; // 0x0000000189F1DF78-0x0000000189F1E2C0
+		public virtual Focusable GetNextFocusable(Focusable currentFocusable, FocusChangeDirection direction) => default; // 0x0000000189F1E790-0x0000000189F1E93C
+		private Focusable GetNextFocusable2D(Focusable currentFocusable, ChangeDirection direction) => default; // 0x0000000189F1E2C0-0x0000000189F1E790
+		private static bool IsActive(VisualElement v) => default; // 0x0000000189F1E93C-0x0000000189F1E97C
+		private static bool IsNavigable(Focusable focusable) => default; // 0x0000000189F1E97C-0x0000000189F1E9C4
 	}
 
 	public enum PanelScaleMode // TypeDefIndex: 43721
@@ -9241,25 +9398,25 @@ namespace UnityEngine.UIElements
 		private Func<Vector2, Vector2> m_AssignedScreenToPanel; // 0xC8
 	
 		// Properties
-		public ThemeStyleSheet themeStyleSheet { get => default; set {} } // 0x0000000183D56CA0-0x0000000183D56CB0 0x0000000189F1FE20-0x0000000189F1FE4C
-		public RenderTexture targetTexture { get => default; set {} } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x0000000183D4EE50-0x0000000183D4EE60
-		public PanelScaleMode scaleMode { get => default; set {} } // 0x0000000183D4ED80-0x0000000183D4ED90 0x0000000183D4EDB0-0x0000000183D4EDC0
-		public float scale { get => default; set {} } // 0x0000000183D4EC80-0x0000000183D4EC90 0x0000000183D4ED00-0x0000000183D4ED10
-		public float referenceDpi { get => default; set {} } // 0x0000000183D58370-0x0000000183D58380 0x0000000189F1FE78-0x0000000189F1FE84
-		public float fallbackDpi { get => default; set {} } // 0x0000000189F1F4B8-0x0000000189F1F4D8 0x0000000183D4EDF0-0x0000000183D4EE00
-		public Vector2Int referenceResolution { get => default; set {} } // 0x0000000189F1FE84-0x0000000189F1FEA8 0x0000000183D4F000-0x0000000183D4F010
-		public PanelScreenMatchMode screenMatchMode { get => default; set {} } // 0x0000000183D4F030-0x0000000183D4F040 0x0000000183D891E0-0x0000000183D891F0
-		public float match { get => default; set {} } // 0x0000000183D518F0-0x0000000183D51900 0x0000000183D51900-0x0000000183D51910
-		public float sortingOrder { get => default; set {} } // 0x0000000183D891D0-0x0000000183D891E0 0x0000000183D891F0-0x0000000183D89200
-		public int targetDisplay { get => default; set {} } // 0x0000000189F1FDF0-0x0000000189F1FE20 0x0000000183D4EB20-0x0000000183D4EB30
-		public bool clearDepthStencil { get => default; set {} } // 0x00000001851DFCA4-0x00000001851DFCB4 0x0000000189F1FCE8-0x0000000189F1FDD0
-		public float depthClearValue { get => default; } // 0x000000018350B670-0x000000018350B680 
-		public bool clearColor { get => default; set {} } // 0x0000000189F1FABC-0x0000000189F1FB90 0x0000000189F1F768-0x0000000189F1F788
-		public UnityEngine.Color colorClearValue { get => default; set {} } // 0x0000000189F1F768-0x0000000189F1F788 0x0000000183D58470-0x0000000183D58480
-		internal BaseRuntimePanel panel { get => default; } // 0x0000000183D69550-0x0000000183D69560 
-		internal VisualElement visualTree { get => default; } // 0x0000000189F1FCC8-0x0000000189F1FCE8 
-		public DynamicAtlasSettings dynamicAtlasSettings { get => default; set {} } // 0x0000000189F1F4D8-0x0000000189F1F638 0x0000000189F1F954-0x0000000189F1FABC
-		private float ScreenDPI { get; set; } // 0x0000000189F1F6EC-0x0000000189F1F768 0x000000018426FEE0-0x000000018426FEF0
+		public ThemeStyleSheet themeStyleSheet { get => default; set {} } // 0x0000000183D61D00-0x0000000183D61D10 0x0000000189F1FED8-0x0000000189F1FF00
+		public RenderTexture targetTexture { get => default; set {} } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000189F1FEA8-0x0000000189F1FED8
+		public PanelScaleMode scaleMode { get => default; set {} } // 0x0000000183D4EB90-0x0000000183D4EBA0 0x0000000183D4EBA0-0x0000000183D4EBB0
+		public float scale { get => default; set {} } // 0x0000000183D4F3A0-0x0000000183D4F3B0 0x0000000183D4F3B0-0x0000000183D4F3C0
+		public float referenceDpi { get => default; set {} } // 0x0000000183D4F5D0-0x0000000183D4F5E0 0x0000000189F1FE4C-0x0000000189F1FE78
+		public float fallbackDpi { get => default; set {} } // 0x0000000183D56CA0-0x0000000183D56CB0 0x0000000189F1FE20-0x0000000189F1FE4C
+		public Vector2Int referenceResolution { get => default; set {} } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x0000000183D4EE50-0x0000000183D4EE60
+		public PanelScreenMatchMode screenMatchMode { get => default; set {} } // 0x0000000183D4ED80-0x0000000183D4ED90 0x0000000183D4EDB0-0x0000000183D4EDC0
+		public float match { get => default; set {} } // 0x0000000183D4EC80-0x0000000183D4EC90 0x0000000183D4ED00-0x0000000183D4ED10
+		public float sortingOrder { get => default; set {} } // 0x0000000183D58370-0x0000000183D58380 0x0000000189F1FE78-0x0000000189F1FE84
+		public int targetDisplay { get => default; set {} } // 0x0000000183D4EDF0-0x0000000183D4EE00 0x0000000189F1FE84-0x0000000189F1FEA8
+		public bool clearDepthStencil { get => default; set {} } // 0x0000000183D4F000-0x0000000183D4F010 0x0000000183D4F030-0x0000000183D4F040
+		public float depthClearValue { get => default; } // 0x0000000183D891E0-0x0000000183D891F0 
+		public bool clearColor { get => default; set {} } // 0x0000000183D518F0-0x0000000183D51900 0x0000000183D51900-0x0000000183D51910
+		public UnityEngine.Color colorClearValue { get => default; set {} } // 0x0000000183D891D0-0x0000000183D891E0 0x0000000183D891F0-0x0000000183D89200
+		internal BaseRuntimePanel panel { get => default; } // 0x0000000189F1FDD0-0x0000000189F1FDF0 
+		internal VisualElement visualTree { get => default; } // 0x0000000189F1FDF0-0x0000000189F1FE20 
+		public DynamicAtlasSettings dynamicAtlasSettings { get => default; set {} } // 0x0000000183D4EB20-0x0000000183D4EB30 0x00000001851DFCA4-0x00000001851DFCB4
+		private float ScreenDPI { get; set; } // 0x0000000183D58470-0x0000000183D58480 0x0000000183D69550-0x0000000183D69560
 	
 		// Nested types
 		private class RuntimePanelAccess // TypeDefIndex: 43723
@@ -9269,41 +9426,41 @@ namespace UnityEngine.UIElements
 			private BaseRuntimePanel m_RuntimePanel; // 0x18
 	
 			// Properties
-			internal bool isInitialized { get => default; } // 0x0000000189F1FED8-0x0000000189F1FF00 
-			internal BaseRuntimePanel panel { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+			internal bool isInitialized { get => default; } // 0x0000000182702DB0-0x0000000182702DC0 
+			internal BaseRuntimePanel panel { get => default; } // 0x0000000189F22754-0x0000000189F228D4 
 	
 			// Constructors
 			public RuntimePanelAccess() {} // Dummy constructor
-			internal RuntimePanelAccess(PanelSettings settings) {} // 0x0000000183D61D00-0x0000000183D61D10
+			internal RuntimePanelAccess(PanelSettings settings) {} // 0x000000018426FEE0-0x000000018426FEF0
 	
 			// Methods
-			internal void DisposePanel() {} // 0x0000000189F1FEA8-0x0000000189F1FED8
-			internal void SetTargetTexture() {} // 0x0000000183D4EB90-0x0000000183D4EBA0
-			internal void SetSortingPriority() {} // 0x0000000183D4EBA0-0x0000000183D4EBB0
-			internal void SetTargetDisplay() {} // 0x0000000183D4F3A0-0x0000000183D4F3B0
-			private BaseRuntimePanel CreateRelatedRuntimePanel() => default; // 0x0000000183D4F3B0-0x0000000183D4F3C0
-			private void DisposeRelatedPanel() {} // 0x0000000183D4F5D0-0x0000000183D4F5E0
-			internal void MarkPotentiallyEmpty() {} // 0x0000000189F1FE4C-0x0000000189F1FE78
+			internal void DisposePanel() {} // 0x0000000189F225E8-0x0000000189F2261C
+			internal void SetTargetTexture() {} // 0x0000000189F22718-0x0000000189F22754
+			internal void SetSortingPriority() {} // 0x0000000189F226BC-0x0000000189F226EC
+			internal void SetTargetDisplay() {} // 0x0000000189F226EC-0x0000000189F22718
+			private BaseRuntimePanel CreateRelatedRuntimePanel() => default; // 0x0000000189F22534-0x0000000189F225E8
+			private void DisposeRelatedPanel() {} // 0x0000000189F2261C-0x0000000189F2266C
+			internal void MarkPotentiallyEmpty() {} // 0x0000000189F2266C-0x0000000189F226BC
 		}
 	
 		// Constructors
-		private PanelSettings() {} // 0x0000000189F1F048-0x0000000189F1F4B8
+		private PanelSettings() {} // 0x0000000189F1FCE8-0x0000000189F1FDD0
 	
 		// Methods
-		internal void ApplySortingOrder() {} // 0x0000000189F1FDD0-0x0000000189F1FDF0
-		private void Reset() {} // 0x0000000189F1FC80-0x0000000189F1FCC8
-		private void OnEnable() {} // 0x0000000189F1FB90-0x0000000189F1FC80
-		private void OnDisable() {} // 0x0000000189F1F788-0x0000000189F1F954
-		internal void DisposePanel() {} // 0x0000000189F1F638-0x0000000189F1F6EC
-		internal void UpdateScreenDPI() {} // 0x0000000182702DB0-0x0000000182702DC0
-		private void ApplyThemeStyleSheet(VisualElement root = null) {} // 0x0000000189F22754-0x0000000189F228D4
-		private void InitializeShaders() {} // 0x0000000189F225E8-0x0000000189F2261C
-		internal void ApplyPanelSettings() {} // 0x0000000189F22718-0x0000000189F22754
-		public void SetScreenToPanelSpaceFunction(Func<Vector2, Vector2> screentoPanelSpaceFunction) {} // 0x0000000189F226BC-0x0000000189F226EC
-		internal float ResolveScale(Rect targetRect, float screenDpi) => default; // 0x0000000189F226EC-0x0000000189F22718
-		internal Rect GetDisplayRect() => default; // 0x0000000189F22534-0x0000000189F225E8
-		internal void AttachAndInsertUIDocumentToVisualTree(UIDocument uiDocument) {} // 0x0000000189F2261C-0x0000000189F2266C
-		internal void DetachUIDocument(UIDocument uiDocument) {} // 0x0000000189F2266C-0x0000000189F226BC
+		internal void ApplySortingOrder() {} // 0x0000000189F1F4B8-0x0000000189F1F4D8
+		private void Reset() {} // 0x000000018350B670-0x000000018350B680
+		private void OnEnable() {} // 0x0000000189F1FABC-0x0000000189F1FB90
+		private void OnDisable() {} // 0x0000000189F1F768-0x0000000189F1F788
+		internal void DisposePanel() {} // 0x0000000189F1F768-0x0000000189F1F788
+		internal void UpdateScreenDPI() {} // 0x0000000189F1FCC8-0x0000000189F1FCE8
+		private void ApplyThemeStyleSheet(VisualElement root = null) {} // 0x0000000189F1F4D8-0x0000000189F1F638
+		private void InitializeShaders() {} // 0x0000000189F1F954-0x0000000189F1FABC
+		internal void ApplyPanelSettings() {} // 0x0000000189F1F048-0x0000000189F1F4B8
+		public void SetScreenToPanelSpaceFunction(Func<Vector2, Vector2> screentoPanelSpaceFunction) {} // 0x0000000189F1FC80-0x0000000189F1FCC8
+		internal float ResolveScale(Rect targetRect, float screenDpi) => default; // 0x0000000189F1FB90-0x0000000189F1FC80
+		internal Rect GetDisplayRect() => default; // 0x0000000189F1F788-0x0000000189F1F954
+		internal void AttachAndInsertUIDocumentToVisualTree(UIDocument uiDocument) {} // 0x0000000189F1F638-0x0000000189F1F6EC
+		internal void DetachUIDocument(UIDocument uiDocument) {} // 0x0000000189F1F6EC-0x0000000189F1F768
 	}
 
 	internal static class RuntimeEventDispatcher // TypeDefIndex: 43725
@@ -9410,14 +9567,14 @@ namespace UnityEngine.UIElements
 		private static ProfilerMarker s_MarkerTryAllocate; // 0x00
 	
 		// Properties
-		public int maxAtlasSize { get; } // 0x0000000189F25848-0x0000000189F25B3C 
-		public int maxImageWidth { get; } // 0x0000000189F25B3C-0x0000000189F25CC8 
-		public int maxImageHeight { get; } // 0x0000000189F25664-0x0000000189F2573C 
-		public int virtualWidth { get; private set; } // 0x0000000189F25CC8-0x0000000189F25D28 0x0000000183D4E340-0x0000000183D4E350
-		public int virtualHeight { get; private set; } // 0x00000001810410F0-0x0000000181041100 0x0000000183D50CC0-0x0000000183D50CD0
-		public int physicalWidth { get; private set; } // 0x0000000183D595B0-0x0000000183D595C0 0x00000001820D1AC0-0x00000001820D1AD0
-		public int physicalHeight { get; private set; } // 0x0000000183D4E9C0-0x0000000183D4E9D0 0x0000000183D4EBC0-0x0000000183D4EBD0
-		protected bool disposed { get; private set; } // 0x0000000189F3E9C0-0x0000000189F3EA64 0x0000000189F3EA64-0x0000000189F3EAE4
+		public int maxAtlasSize { get; } // 0x0000000183D4E340-0x0000000183D4E350 
+		public int maxImageWidth { get; } // 0x0000000183D50CC0-0x0000000183D50CD0 
+		public int maxImageHeight { get; } // 0x00000001820D1AC0-0x00000001820D1AD0 
+		public int virtualWidth { get; private set; } // 0x0000000183D4EBB0-0x0000000183D4EBC0 0x0000000183D4EBC0-0x0000000183D4EBD0
+		public int virtualHeight { get; private set; } // 0x0000000181003B50-0x0000000181003B60 0x0000000181003B60-0x0000000181003B70
+		public int physicalWidth { get; private set; } // 0x0000000183D4E2E0-0x0000000183D4E2F0 0x0000000183D4E2F0-0x0000000183D4E300
+		public int physicalHeight { get; private set; } // 0x0000000183D4EB90-0x0000000183D4EBA0 0x0000000183D4EBA0-0x0000000183D4EBB0
+		protected bool disposed { get; private set; } // 0x0000000183D4EFE0-0x0000000183D4EFF0 0x0000000183D4F010-0x0000000183D4F020
 	
 		// Nested types
 		private class Row // TypeDefIndex: 43729
@@ -9427,18 +9584,18 @@ namespace UnityEngine.UIElements
 			public int Cursor; // 0x20
 	
 			// Properties
-			public int offsetX { get; private set; } // 0x0000000183D4E340-0x0000000183D4E350 0x0000000183D50CC0-0x0000000183D50CD0
-			public int offsetY { get; private set; } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000183D4EBB0-0x0000000183D4EBC0
-			public int width { get; private set; } // 0x0000000183D4EBC0-0x0000000183D4EBD0 0x0000000181003B50-0x0000000181003B60
-			private int height { get; set; } // 0x0000000181003B60-0x0000000181003B70
+			public int offsetX { get; private set; } // 0x0000000183D4E340-0x0000000183D4E350 0x00000001810410F0-0x0000000181041100
+			public int offsetY { get; private set; } // 0x0000000183D50CC0-0x0000000183D50CD0 0x0000000183D595B0-0x0000000183D595C0
+			public int width { get; private set; } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000183D4E9C0-0x0000000183D4E9D0
+			private int height { get; set; } // 0x0000000183D4EBC0-0x0000000183D4EBD0
 	
 			// Constructors
-			public Row() {} // 0x0000000183D4EB90-0x0000000183D4EBA0
-			static Row() {} // 0x0000000183D4EBA0-0x0000000183D4EBB0
+			public Row() {} // 0x000000018350B670-0x000000018350B680
+			static Row() {} // 0x0000000189F3EAE4-0x0000000189F3EB78
 	
 			// Methods
-			public static Row Acquire(int offsetX, int offsetY, int width, int height) => default; // 0x0000000183D4E2E0-0x0000000183D4E2F0
-			public void Release() {} // 0x0000000183D4E2F0-0x0000000183D4E300
+			public static Row Acquire(int offsetX, int offsetY, int width, int height) => default; // 0x0000000189F3E9C0-0x0000000189F3EA64
+			public void Release() {} // 0x0000000189F3EA64-0x0000000189F3EAE4
 		}
 	
 		private class AreaNode // TypeDefIndex: 43730
@@ -9450,31 +9607,31 @@ namespace UnityEngine.UIElements
 			public AreaNode next; // 0x28
 	
 			// Constructors
-			public AreaNode() {} // 0x0000000189F25820-0x0000000189F25848
-			static AreaNode() {} // 0x0000000189F25D28-0x0000000189F25EA4
+			public AreaNode() {} // 0x000000018350B670-0x000000018350B680
+			static AreaNode() {} // 0x0000000189F3593C-0x0000000189F359D0
 	
 			// Methods
-			public static AreaNode Acquire(RectInt rect) => default; // 0x0000000183D4EFE0-0x0000000183D4EFF0
-			public void Release() {} // 0x0000000183D4F010-0x0000000183D4F020
-			public void RemoveFromChain() {} // 0x0000000189F257D0-0x0000000189F25820
-			public void AddAfter(AreaNode previous) {} // 0x0000000189F2573C-0x0000000189F257D0
+			public static AreaNode Acquire(RectInt rect) => default; // 0x0000000189F3570C-0x0000000189F357A8
+			public void Release() {} // 0x0000000189F3586C-0x0000000189F358DC
+			public void RemoveFromChain() {} // 0x0000000189F358DC-0x0000000189F3593C
+			public void AddAfter(AreaNode previous) {} // 0x0000000189F357A8-0x0000000189F3586C
 		}
 	
 		// Constructors
 		public UIRAtlasAllocator() {} // Dummy constructor
-		public UIRAtlasAllocator(int initialAtlasSize, int maxAtlasSize, int sidePadding = 1 /* Metadata: 0x01FB605A */) {} // 0x0000000189F3586C-0x0000000189F358DC
-		static UIRAtlasAllocator() {} // 0x0000000189F3593C-0x0000000189F359D0
+		public UIRAtlasAllocator(int initialAtlasSize, int maxAtlasSize, int sidePadding = 1 /* Metadata: 0x01FB605A */) {} // 0x0000000189F25D28-0x0000000189F25EA4
+		static UIRAtlasAllocator() {} // 0x0000000189F25CC8-0x0000000189F25D28
 	
 		// Methods
-		public void Dispose() {} // 0x000000018350B670-0x000000018350B680
-		protected virtual void Dispose(bool disposing) {} // 0x0000000189F3EAE4-0x0000000189F3EB78
-		private static int GetLog2OfNextPower(int n) => default; // 0x0000000189F3570C-0x0000000189F357A8
+		public void Dispose() {} // 0x0000000189F257D0-0x0000000189F25820
+		protected virtual void Dispose(bool disposing) {} // 0x0000000189F2573C-0x0000000189F257D0
+		private static int GetLog2OfNextPower(int n) => default; // 0x0000000189F25820-0x0000000189F25848
 		public bool TryAllocate(int width, int height, out RectInt location) {
 			location = default;
 			return default;
-		} // 0x0000000189F358DC-0x0000000189F3593C
-		private bool TryPartitionArea(AreaNode areaNode, int rowIndex, int rowHeight, int minWidth) => default; // 0x0000000189F357A8-0x0000000189F3586C
-		private void BuildAreas() {} // 0x000000018350B670-0x000000018350B680
+		} // 0x0000000189F25848-0x0000000189F25B3C
+		private bool TryPartitionArea(AreaNode areaNode, int rowIndex, int rowHeight, int minWidth) => default; // 0x0000000189F25B3C-0x0000000189F25CC8
+		private void BuildAreas() {} // 0x0000000189F25664-0x0000000189F2573C
 	}
 
 	internal class DynamicAtlasPage : IDisposable // TypeDefIndex: 43732
@@ -9642,19 +9799,19 @@ namespace UnityEngine.UIElements
 			private static void AdjustUVsForScaleMode(Rect rect, Rect uv, Texture texture, UnityEngine.ScaleMode scaleMode, out Rect rectOut, out Rect uvOut) {
 				rectOut = default;
 				uvOut = default;
-			} // 0x0000000189F3C614-0x0000000189F3C6CC
+			} // 0x0000000189F3D260-0x0000000189F3D468
 			private static void AdjustSpriteUVsForScaleMode(Rect containerRect, Rect srcRect, Rect spriteGeomRect, Sprite sprite, UnityEngine.ScaleMode scaleMode, out Rect rectOut, out Rect uvOut) {
 				rectOut = default;
 				uvOut = default;
-			} // 0x0000000189F3C6CC-0x0000000189F3C808
-			private static Rect RectIntersection(Rect a, Rect b) => default; // 0x0000000189F3C458-0x0000000189F3C4B8
-			private static Rect ComputeGeomRect(Sprite sprite) => default; // 0x0000000189F3C4B8-0x0000000189F3C614
-			private static Rect ComputeUVRect(Sprite sprite) => default; // 0x0000000189F3C350-0x0000000189F3C458
-			private static Rect ApplyPackingRotation(Rect uv, SpritePackingRotation rotation) => default; // 0x0000000189F3D260-0x0000000189F3D468
-			public static RectangleParams MakeTextured(Rect rect, Rect uv, Texture texture, UnityEngine.ScaleMode scaleMode, ContextType panelContext) => default; // 0x0000000189F3CAB8-0x0000000189F3D260
-			public static RectangleParams MakeSprite(Rect containerRect, Rect subRect, Sprite sprite, UnityEngine.ScaleMode scaleMode, ContextType panelContext, bool hasRadius, ref Vector4 slices) => default; // 0x0000000189F3E434-0x0000000189F3E588
-			public static RectangleParams MakeVectorTextured(Rect rect, Rect uv, VectorImage vectorImage, UnityEngine.ScaleMode scaleMode, ContextType panelContext) => default; // 0x0000000189F3D618-0x0000000189F3D75C
-			internal bool HasRadius(float epsilon) => default; // 0x0000000189F3D75C-0x0000000189F3D8A0
+			} // 0x0000000189F3CAB8-0x0000000189F3D260
+			private static Rect RectIntersection(Rect a, Rect b) => default; // 0x0000000189F3E434-0x0000000189F3E588
+			private static Rect ComputeGeomRect(Sprite sprite) => default; // 0x0000000189F3D618-0x0000000189F3D75C
+			private static Rect ComputeUVRect(Sprite sprite) => default; // 0x0000000189F3D75C-0x0000000189F3D8A0
+			private static Rect ApplyPackingRotation(Rect uv, SpritePackingRotation rotation) => default; // 0x0000000189F3D468-0x0000000189F3D618
+			public static RectangleParams MakeTextured(Rect rect, Rect uv, Texture texture, UnityEngine.ScaleMode scaleMode, ContextType panelContext) => default; // 0x0000000189F3E0F8-0x0000000189F3E2B0
+			public static RectangleParams MakeSprite(Rect containerRect, Rect subRect, Sprite sprite, UnityEngine.ScaleMode scaleMode, ContextType panelContext, bool hasRadius, ref Vector4 slices) => default; // 0x0000000189F3D900-0x0000000189F3E0F8
+			public static RectangleParams MakeVectorTextured(Rect rect, Rect uv, VectorImage vectorImage, UnityEngine.ScaleMode scaleMode, ContextType panelContext) => default; // 0x0000000189F3E2B0-0x0000000189F3E434
+			internal bool HasRadius(float epsilon) => default; // 0x0000000189F3D8A0-0x0000000189F3D900
 		}
 	
 		public struct TextParams // TypeDefIndex: 43739
@@ -9681,24 +9838,24 @@ namespace UnityEngine.UIElements
 			public IPanel panel; // 0x90
 	
 			// Methods
-			public override int GetHashCode() => default; // 0x0000000189F3D468-0x0000000189F3D618
-			internal static TextParams MakeStyleBased(VisualElement ve, string text) => default; // 0x0000000189F3E0F8-0x0000000189F3E2B0
-			internal static TextNativeSettings GetTextNativeSettings(TextParams textParams, float scaling) => default; // 0x0000000189F3D900-0x0000000189F3E0F8
+			public override int GetHashCode() => default; // 0x0000000189F409A8-0x0000000189F40B7C
+			internal static TextParams MakeStyleBased(VisualElement ve, string text) => default; // 0x0000000189F40F74-0x0000000189F412AC
+			internal static TextNativeSettings GetTextNativeSettings(TextParams textParams, float scaling) => default; // 0x0000000189F40B7C-0x0000000189F40F74
 		}
 	
 		// Methods
-		private static Vector2 ConvertBorderRadiusPercentToPoints(Vector2 borderRectSize, Length length) => default; // 0x0000000189F409A8-0x0000000189F40B7C
+		private static Vector2 ConvertBorderRadiusPercentToPoints(Vector2 borderRectSize, Length length) => default; // 0x0000000189F3C458-0x0000000189F3C4B8
 		public static void GetVisualElementRadii(VisualElement ve, out Vector2 topLeft, out Vector2 bottomLeft, out Vector2 topRight, out Vector2 bottomRight) {
 			topLeft = default;
 			bottomLeft = default;
 			topRight = default;
 			bottomRight = default;
-		} // 0x0000000189F40F74-0x0000000189F412AC
-		public static void AdjustBackgroundSizeForBorders(VisualElement visualElement, ref RectangleParams rectParams) {} // 0x0000000189F40B7C-0x0000000189F40F74
+		} // 0x0000000189F3C4B8-0x0000000189F3C614
+		public static void AdjustBackgroundSizeForBorders(VisualElement visualElement, ref RectangleParams rectParams) {} // 0x0000000189F3C350-0x0000000189F3C458
 	
 		// Extension methods
-		public static void Rectangle(this MeshGenerationContext mgc, RectangleParams rectParams) {} // 0x0000000189F3E2B0-0x0000000189F3E434
-		public static void Text(this MeshGenerationContext mgc, TextParams textParams, ITextHandle handle, float pixelsPerPoint) {} // 0x0000000189F3D8A0-0x0000000189F3D900
+		public static void Rectangle(this MeshGenerationContext mgc, RectangleParams rectParams) {} // 0x0000000189F3C614-0x0000000189F3C6CC
+		public static void Text(this MeshGenerationContext mgc, TextParams textParams, ITextHandle handle, float pixelsPerPoint) {} // 0x0000000189F3C6CC-0x0000000189F3C808
 	}
 
 	public class MeshGenerationContext // TypeDefIndex: 43742
@@ -10068,26 +10225,26 @@ namespace UnityEngine.UIElements
 		private static List<ComputedTransitionProperty> s_ComputedTransitionsBuffer; // 0x00
 	
 		// Constructors
-		static ComputedTransitionUtils() {} // 0x0000000189F4286C-0x0000000189F42878
+		static ComputedTransitionUtils() {} // 0x0000000189F37FB0-0x0000000189F3803C
 	
 		// Methods
-		internal static void UpdateComputedTransitions(ref ComputedStyle computedStyle) {} // 0x0000000189F427A4-0x0000000189F427B8
-		private static ComputedTransitionProperty[] GetOrComputeTransitionPropertyData(ref ComputedStyle computedStyle) => default; // 0x0000000189F427B8-0x0000000189F427C4
-		private static int GetTransitionHashCode(ref ComputedStyle cs) => default; // 0x0000000189F427C4-0x0000000189F427D0
-		internal static bool SameTransitionProperty(ref ComputedStyle x, ref ComputedStyle y) => default; // 0x0000000189F427D0-0x0000000189F427DC
-		private static bool SameTransitionProperty(List<StylePropertyName> a, List<StylePropertyName> b) => default; // 0x0000000189F427DC-0x0000000189F427E8
-		private static bool SameTransitionProperty(List<TimeValue> a, List<TimeValue> b) => default; // 0x0000000189F427E8-0x0000000189F427F4
-		private static void ComputeTransitionPropertyData(ref ComputedStyle computedStyle, List<ComputedTransitionProperty> outData) {} // 0x0000000189F427F4-0x0000000189F42824
-		private static T GetWrappingTransitionData<T>(List<T> list, int i, T defaultValue) => default; // 0x0000000189F42824-0x0000000189F42830
-		private static int ConvertTransitionTime(TimeValue time) => default; // 0x0000000189F42830-0x0000000189F42860
-		private static Func<float, float> ConvertTransitionFunction(EasingMode mode) => default; // 0x0000000189F42860-0x0000000189F4286C
+		internal static void UpdateComputedTransitions(ref ComputedStyle computedStyle) {} // 0x0000000189F37F58-0x0000000189F37FB0
+		private static ComputedTransitionProperty[] GetOrComputeTransitionPropertyData(ref ComputedStyle computedStyle) => default; // 0x0000000189F3752C-0x0000000189F376A4
+		private static int GetTransitionHashCode(ref ComputedStyle cs) => default; // 0x0000000189F376A4-0x0000000189F37B28
+		internal static bool SameTransitionProperty(ref ComputedStyle x, ref ComputedStyle y) => default; // 0x0000000189F37D80-0x0000000189F37E90
+		private static bool SameTransitionProperty(List<StylePropertyName> a, List<StylePropertyName> b) => default; // 0x0000000189F37CB8-0x0000000189F37D80
+		private static bool SameTransitionProperty(List<TimeValue> a, List<TimeValue> b) => default; // 0x0000000189F37E90-0x0000000189F37F58
+		private static void ComputeTransitionPropertyData(ref ComputedStyle computedStyle, List<ComputedTransitionProperty> outData) {} // 0x0000000189F362F4-0x0000000189F3654C
+		private static T GetWrappingTransitionData<T>(List<T> list, int i, T defaultValue) => default;
+		private static int ConvertTransitionTime(TimeValue time) => default; // 0x0000000189F37500-0x0000000189F3752C
+		private static Func<float, float> ConvertTransitionFunction(EasingMode mode) => default; // 0x0000000189F3654C-0x0000000189F37500
 	
 		// Extension methods
-		internal static bool HasTransitionProperty(this ref ComputedStyle computedStyle, StylePropertyId id) => default; // 0x0000000183D89570-0x0000000183D895D0
+		internal static bool HasTransitionProperty(this ref ComputedStyle computedStyle, StylePropertyId id) => default; // 0x0000000189F37C10-0x0000000189F37CB8
 		internal static bool GetTransitionProperty(this ref ComputedStyle computedStyle, StylePropertyId id, out ComputedTransitionProperty result) {
 			result = default;
 			return default;
-		} // 0x0000000183D895D0-0x0000000183D89600
+		} // 0x0000000189F37B28-0x0000000189F37C10
 	}
 
 	public struct CustomStyleProperty<T> : IEquatable<CustomStyleProperty<T>> // TypeDefIndex: 43756
@@ -11231,10 +11388,10 @@ namespace UnityEngine.UIElements
 		private static List<StyleSelectorPart> m_HashList; // 0x08
 	
 		// Properties
-		public int specificity { get => default; } // 0x0000000183D86EB0-0x0000000183D86EC0 
-		public StyleRule rule { get; internal set; } // 0x0000000189F510AC-0x0000000189F510E0 0x000000018350B670-0x000000018350B680
-		public bool isSimple { get => default; } // 0x0000000189F50E18-0x0000000189F50E3C 
-		public StyleSelector[] selectors { get => default; internal set {} } // 0x0000000189F508B4-0x0000000189F50E18 0x0000000189F50E3C-0x0000000189F51018
+		public int specificity { get => default; } // 0x0000000183D86CC0-0x0000000183D86CD0 
+		public StyleRule rule { get; internal set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+		public bool isSimple { get => default; } // 0x0000000183D86CA0-0x0000000183D86CB0 
+		public StyleSelector[] selectors { get => default; internal set {} } // 0x0000000183D86EB0-0x0000000183D86EC0 0x0000000189F510AC-0x0000000189F510E0
 	
 		// Nested types
 		private struct PseudoStateData // TypeDefIndex: 43800
@@ -11247,18 +11404,18 @@ namespace UnityEngine.UIElements
 			public PseudoStateData(PseudoStates state, bool negate) {
 				this.state = default;
 				this.negate = default;
-			} // 0x0000000183D86CC0-0x0000000183D86CD0
+			} // 0x0000000183D58750-0x0000000183D58760
 		}
 	
 		// Constructors
 		public StyleComplexSelector() {} // 0x000000018350B670-0x000000018350B680
-		static StyleComplexSelector() {} // 0x0000000189688020-0x0000000189688040
+		static StyleComplexSelector() {} // 0x0000000189F51018-0x0000000189F510AC
 	
 		// Methods
 		public void OnBeforeSerialize() {} // 0x000000018350B670-0x000000018350B680
-		public virtual void OnAfterDeserialize() {} // 0x0000000189F51018-0x0000000189F510AC
-		internal void CachePseudoStateMasks() {} // 0x0000000183D58750-0x0000000183D58760
-		public override string ToString() => default; // 0x0000000189F571E0-0x0000000189F57244
+		public virtual void OnAfterDeserialize() {} // 0x0000000189F50E18-0x0000000189F50E3C
+		internal void CachePseudoStateMasks() {} // 0x0000000189F508B4-0x0000000189F50E18
+		public override string ToString() => default; // 0x0000000189F50E3C-0x0000000189F51018
 	}
 
 	[Serializable]
@@ -11314,14 +11471,14 @@ namespace UnityEngine.UIElements
 		internal int negatedPseudoStateMask; // 0x20
 	
 		// Properties
-		public StyleSelectorPart[] parts { get => default; internal set {} } // 0x0000000183D4E9C0-0x0000000183D4E9D0 0x0000000189F512A8-0x0000000189F51458
-		public StyleSelectorRelationship previousRelationship { get => default; internal set {} } // 0x0000000183D899B0-0x0000000183D899C0 0x0000000189F570B4-0x0000000189F57118
+		public StyleSelectorPart[] parts { get => default; internal set {} } // 0x0000000183D66B80-0x0000000183D66B90 0x000000018426FEE0-0x000000018426FEF0
+		public StyleSelectorRelationship previousRelationship { get => default; internal set {} } // 0x0000000183D68AE0-0x0000000183D68AF0 0x0000000183D4E9C0-0x0000000183D4E9D0
 	
 		// Constructors
-		public StyleSelector() {} // 0x0000000189F57018-0x0000000189F5702C
+		public StyleSelector() {} // 0x0000000183D899B0-0x0000000183D899C0
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018350B670-0x000000018350B680
+		public override string ToString() => default; // 0x0000000189F512A8-0x0000000189F51458
 	}
 
 	[Serializable]
@@ -11941,52 +12098,52 @@ namespace UnityEngine.UIElements
 	public class UxmlStringAttributeDescription : TypedUxmlAttributeDescription<string> // TypeDefIndex: 43845
 	{
 		// Constructors
-		public UxmlStringAttributeDescription() {} // 0x000000018350B670-0x000000018350B680
+		public UxmlStringAttributeDescription() {} // 0x0000000189F5ABF4-0x0000000189F5AC9C
 	
 		// Methods
-		public override string GetValueFromBag(IUxmlAttributes bag, CreationContext cc) => default; // 0x0000000183D51810-0x0000000183D51820
-		public bool TryGetValueFromBag(IUxmlAttributes bag, CreationContext cc, ref string value) => default; // 0x0000000183D51810-0x0000000183D51820
+		public override string GetValueFromBag(IUxmlAttributes bag, CreationContext cc) => default; // 0x0000000189F5A944-0x0000000189F5AA98
+		public bool TryGetValueFromBag(IUxmlAttributes bag, CreationContext cc, ref string value) => default; // 0x0000000189F5AA98-0x0000000189F5ABF4
 	}
 
 	public class UxmlFloatAttributeDescription : TypedUxmlAttributeDescription<float> // TypeDefIndex: 43847
 	{
 		// Constructors
-		public UxmlFloatAttributeDescription() {} // 0x0000000189F57050-0x0000000189F570B4
+		public UxmlFloatAttributeDescription() {} // 0x0000000189F59808-0x0000000189F59888
 	
 		// Methods
-		public override float GetValueFromBag(IUxmlAttributes bag, CreationContext cc) => default; // 0x000000018350B670-0x000000018350B680
-		private static float ConvertValueToFloat(string v, float defaultValue) => default; // 0x0000000189F57008-0x0000000189F57018
+		public override float GetValueFromBag(IUxmlAttributes bag, CreationContext cc) => default; // 0x0000000189F596B0-0x0000000189F59808
+		private static float ConvertValueToFloat(string v, float defaultValue) => default; // 0x0000000189F59630-0x0000000189F596B0
 	}
 
 	public class UxmlIntAttributeDescription : TypedUxmlAttributeDescription<int> // TypeDefIndex: 43849
 	{
 		// Constructors
-		public UxmlIntAttributeDescription() {} // 0x0000000189F57244-0x0000000189F572A8
+		public UxmlIntAttributeDescription() {} // 0x0000000189F59B64-0x0000000189F59BF0
 	
 		// Methods
-		public override int GetValueFromBag(IUxmlAttributes bag, CreationContext cc) => default; // 0x000000018350B670-0x000000018350B680
-		public bool TryGetValueFromBag(IUxmlAttributes bag, CreationContext cc, ref int value) => default; // 0x0000000189F56FD0-0x0000000189F56FE0
-		private static int ConvertValueToInt(string v, int defaultValue) => default; // 0x0000000189F56FD0-0x0000000189F56FE0
+		public override int GetValueFromBag(IUxmlAttributes bag, CreationContext cc) => default; // 0x0000000189F598B8-0x0000000189F59A0C
+		public bool TryGetValueFromBag(IUxmlAttributes bag, CreationContext cc, ref int value) => default; // 0x0000000189F59A0C-0x0000000189F59B64
+		private static int ConvertValueToInt(string v, int defaultValue) => default; // 0x0000000189F59888-0x0000000189F598B8
 	}
 
 	public class UxmlLongAttributeDescription : TypedUxmlAttributeDescription<long> // TypeDefIndex: 43851
 	{
 		// Constructors
-		public UxmlLongAttributeDescription() {} // 0x0000000189F572A8-0x0000000189F5730C
+		public UxmlLongAttributeDescription() {} // 0x0000000189F59D78-0x0000000189F59E04
 	
 		// Methods
-		public override long GetValueFromBag(IUxmlAttributes bag, CreationContext cc) => default; // 0x000000018350B670-0x000000018350B680
-		private static long ConvertValueToLong(string v, long defaultValue) => default; // 0x0000000189F56FE0-0x0000000189F56FF4
+		public override long GetValueFromBag(IUxmlAttributes bag, CreationContext cc) => default; // 0x0000000189F59C24-0x0000000189F59D78
+		private static long ConvertValueToLong(string v, long defaultValue) => default; // 0x0000000189F59BF0-0x0000000189F59C24
 	}
 
 	public class UxmlBoolAttributeDescription : TypedUxmlAttributeDescription<bool> // TypeDefIndex: 43853
 	{
 		// Constructors
-		public UxmlBoolAttributeDescription() {} // 0x0000000189F57118-0x0000000189F5717C
+		public UxmlBoolAttributeDescription() {} // 0x0000000189F593C4-0x0000000189F59450
 	
 		// Methods
-		public override bool GetValueFromBag(IUxmlAttributes bag, CreationContext cc) => default; // 0x000000018350B670-0x000000018350B680
-		private static bool ConvertValueToBool(string v, bool defaultValue) => default; // 0x0000000189F56FF4-0x0000000189F57008
+		public override bool GetValueFromBag(IUxmlAttributes bag, CreationContext cc) => default; // 0x0000000189F59270-0x0000000189F593C4
+		private static bool ConvertValueToBool(string v, bool defaultValue) => default; // 0x0000000189F59208-0x0000000189F59270
 	}
 
 	public class UxmlEnumAttributeDescription<T> : TypedUxmlAttributeDescription<T> // TypeDefIndex: 43855
@@ -12315,17 +12472,17 @@ namespace UnityEngine.UIElements
 		private int m_ContentHash; // 0x64
 	
 		// Properties
-		public bool importedWithErrors { get => default; internal set {} } // 0x0000000189F5E718-0x0000000189F5E8C8 0x0000000189F5E008-0x0000000189F5E70C
-		public bool importedWithWarnings { get => default; internal set {} } // 0x0000000189F5D6D4-0x0000000189F5DFE0 0x0000000189F5E8D4-0x0000000189F5E904
-		public IEnumerable<VisualTreeAsset> templateDependencies { get => default; } // 0x0000000189F5F938-0x0000000189F5FBA8 
-		public IEnumerable<StyleSheet> stylesheets { get => default; } // 0x0000000189F5E904-0x0000000189F5F03C 
-		internal List<VisualElementAsset> visualElementAssets { get => default; set {} } // 0x0000000189F5D4C8-0x0000000189F5D534 0x0000000189F5D534-0x0000000189F5D6D4
-		internal List<TemplateAsset> templateAssets { get => default; set {} } // 0x0000000183D89AE0-0x0000000183D89AF0 0x0000000183D50B40-0x0000000183D50B50
-		internal List<UxmlObjectEntry> uxmlObjectEntries { get => default; } // 0x000000018286F540-0x000000018286F550 
-		internal List<int> uxmlObjectIds { get => default; } // 0x0000000189F5FD84-0x0000000189F5FE4C 
-		internal List<SlotDefinition> slots { get => default; set {} } // 0x0000000189F4557C-0x0000000189F455EC 0x0000000187BF60A4-0x0000000187BF60D8
-		internal int contentContainerId { get => default; set {} } // 0x0000000189F58910-0x0000000189F58988 0x0000000189F580D0-0x0000000189F58820
-		public int contentHash { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x0000000189F57DD8-0x0000000189F57E74
+		public bool importedWithErrors { get => default; internal set {} } // 0x0000000183D899E0-0x0000000183D899F0 0x0000000181002B40-0x0000000181002B50
+		public bool importedWithWarnings { get => default; internal set {} } // 0x0000000183D899F0-0x0000000183D89A00 0x0000000183D4EFB0-0x0000000183D4EFC0
+		public IEnumerable<VisualTreeAsset> templateDependencies { get => default; } // 0x0000000189F5FEBC-0x0000000189F5FF2C 
+		public IEnumerable<StyleSheet> stylesheets { get => default; } // 0x0000000189F5FE4C-0x0000000189F5FEBC 
+		internal List<VisualElementAsset> visualElementAssets { get => default; set {} } // 0x0000000183D86D10-0x0000000183D86D20 0x0000000184270470-0x0000000184270480
+		internal List<TemplateAsset> templateAssets { get => default; set {} } // 0x0000000183D86EB0-0x0000000183D86EC0 0x000000018388FF30-0x000000018388FF40
+		internal List<UxmlObjectEntry> uxmlObjectEntries { get => default; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
+		internal List<int> uxmlObjectIds { get => default; } // 0x0000000183D4EA70-0x0000000183D4EA80 
+		internal List<SlotDefinition> slots { get => default; set {} } // 0x0000000183D87D70-0x0000000183D87D80 0x0000000183081D30-0x0000000183081D40
+		internal int contentContainerId { get => default; set {} } // 0x0000000183D88AC0-0x0000000183D88AD0 0x0000000183D4F5A0-0x0000000183D4F5B0
+		public int contentHash { get => default; set {} } // 0x0000000183D89AE0-0x0000000183D89AF0 0x0000000183D50B40-0x0000000183D50B50
 	
 		// Nested types
 		[Serializable]
@@ -12345,19 +12502,19 @@ namespace UnityEngine.UIElements
 				this.alias = default;
 				this.path = default;
 				asset = default;
-			} // 0x0000000183D899E0-0x0000000183D899F0
+			} // 0x0000000189F58A58-0x0000000189F58A8C
 			static UsingEntry() {
 				comparer = default;
-			} // 0x0000000181002B40-0x0000000181002B50
+			} // 0x0000000189F589E8-0x0000000189F58A58
 		}
 	
 		private class UsingEntryComparer : IComparer<UsingEntry> // TypeDefIndex: 43877
 		{
 			// Constructors
-			public UsingEntryComparer() {} // 0x0000000183D4EFB0-0x0000000183D4EFC0
+			public UsingEntryComparer() {} // 0x000000018350B670-0x000000018350B680
 	
 			// Methods
-			public int Compare(UsingEntry x, UsingEntry y) => default; // 0x0000000183D899F0-0x0000000183D89A00
+			public int Compare(UsingEntry x, UsingEntry y) => default; // 0x0000000189F589C4-0x0000000189F589E8
 		}
 	
 		[Serializable]
@@ -12393,7 +12550,7 @@ namespace UnityEngine.UIElements
 			public UxmlObjectEntry(int parentId, List<UxmlObjectAsset> uxmlObjectAssets) {
 				this.parentId = default;
 				this.uxmlObjectAssets = default;
-			} // 0x0000000189F5F03C-0x0000000189F5F0BC
+			} // 0x00000001871AED58-0x00000001871AED68
 		}
 	
 		[Serializable]
@@ -12409,7 +12566,7 @@ namespace UnityEngine.UIElements
 			private System.Type m_CachedType; // 0x18
 	
 			// Properties
-			public System.Type type { get => default; } // 0x0000000189F5FEBC-0x0000000189F5FF2C 
+			public System.Type type { get => default; } // 0x0000000189F455EC-0x0000000189F45674 
 	
 			// Constructors
 			public AssetEntry(string path, System.Type type, UnityEngine.Object asset) : this() {
@@ -12417,44 +12574,44 @@ namespace UnityEngine.UIElements
 				typeFullName = default;
 				this.asset = default;
 				m_CachedType = default;
-			} // 0x0000000189F5FE4C-0x0000000189F5FEBC
+			} // 0x0000000189F4557C-0x0000000189F455EC
 		}
 	
 		// Constructors
-		public VisualTreeAsset() {} // 0x0000000189F57E74-0x0000000189F57E7C
-		static VisualTreeAsset() {} // 0x000000018350B670-0x000000018350B680
+		public VisualTreeAsset() {} // 0x000000018286F540-0x000000018286F550
+		static VisualTreeAsset() {} // 0x0000000189F5FD84-0x0000000189F5FE4C
 	
 		// Methods
-		internal int GetNextChildSerialNumber() => default; // 0x0000000189F5FBA8-0x0000000189F5FC68
-		internal void RegisterUxmlObject(UxmlObjectAsset uxmlObjectAsset) {} // 0x0000000189F5FC68-0x0000000189F5FD84
+		internal int GetNextChildSerialNumber() => default; // 0x0000000189F5F03C-0x0000000189F5F0BC
+		internal void RegisterUxmlObject(UxmlObjectAsset uxmlObjectAsset) {} // 0x0000000189F5F73C-0x0000000189F5F938
 		internal List<T> GetUxmlObjects<T>(IUxmlAttributes asset, CreationContext cc)
-			where T : new() => default; // 0x0000000189F58A58-0x0000000189F58A8C
-		internal bool AssetEntryExists(string path, System.Type type) => default; // 0x0000000189F589E8-0x0000000189F58A58
-		internal void RegisterAssetEntry(string path, System.Type type, UnityEngine.Object asset) {} // 0x0000000189F589C4-0x0000000189F589E8
+			where T : new() => default;
+		internal bool AssetEntryExists(string path, System.Type type) => default; // 0x0000000189F5D344-0x0000000189F5D4C8
+		internal void RegisterAssetEntry(string path, System.Type type, UnityEngine.Object asset) {} // 0x0000000189F5F62C-0x0000000189F5F73C
 		internal T GetAsset<T>(string path)
-			where T : UnityEngine.Object => default; // 0x000000018350B670-0x000000018350B680
-		internal UxmlObjectEntry GetUxmlObjectEntry(int id) => default; // 0x00000001871AED58-0x00000001871AED68
-		private IBaseUxmlObjectFactory GetUxmlObjectFactory(UxmlObjectAsset uxmlObjectAsset) => default; // 0x0000000189F455EC-0x0000000189F45674
-		public TemplateContainer Instantiate() => default; // 0x0000000189F58988-0x0000000189F589C4
-		public TemplateContainer Instantiate(string bindingPath) => default; // 0x0000000181041090-0x00000001810410A0
-		public TemplateContainer CloneTree() => default; // 0x0000000189F588C4-0x0000000189F58910
-		public TemplateContainer CloneTree(string bindingPath) => default; // 0x0000000181041090-0x00000001810410A0
-		public void CloneTree(VisualElement target) {} // 0x0000000189F58820-0x0000000189F588BC
+			where T : UnityEngine.Object => default;
+		internal UxmlObjectEntry GetUxmlObjectEntry(int id) => default; // 0x0000000189F5F0BC-0x0000000189F5F1F0
+		private IBaseUxmlObjectFactory GetUxmlObjectFactory(UxmlObjectAsset uxmlObjectAsset) => default; // 0x0000000189F5F1F0-0x0000000189F5F4D4
+		public TemplateContainer Instantiate() => default; // 0x0000000189F5F510-0x0000000189F5F62C
+		public TemplateContainer Instantiate(string bindingPath) => default; // 0x0000000189F5F4D4-0x0000000189F5F510
+		public TemplateContainer CloneTree() => default; // 0x0000000189F5E8C8-0x0000000189F5E8D4
+		public TemplateContainer CloneTree(string bindingPath) => default; // 0x0000000189F5E70C-0x0000000189F5E718
+		public void CloneTree(VisualElement target) {} // 0x0000000189F5DFE0-0x0000000189F5E008
 		public void CloneTree(VisualElement target, out int firstElementIndex, out int elementAddedCount) {
 			firstElementIndex = default;
 			elementAddedCount = default;
-		} // 0x0000000189F588BC-0x0000000189F588C4
-		internal void CloneTree(VisualElement target, Dictionary<string, VisualElement> slotInsertionPoints, List<TemplateAsset.AttributeOverride> attributeOverrides) {} // 0x0000000187BF60A4-0x0000000187BF60D8
-		private VisualElement CloneSetupRecursively(VisualElementAsset root, Dictionary<int, List<VisualElementAsset>> idToChildren, CreationContext context) => default; // 0x0000000189F57EC8-0x0000000189F5801C
-		private static int CompareForOrder(VisualElementAsset a, VisualElementAsset b) => default; // 0x0000000189F5730C-0x0000000189F57DD8
+		} // 0x0000000189F5E718-0x0000000189F5E8C8
+		internal void CloneTree(VisualElement target, Dictionary<string, VisualElement> slotInsertionPoints, List<TemplateAsset.AttributeOverride> attributeOverrides) {} // 0x0000000189F5E008-0x0000000189F5E70C
+		private VisualElement CloneSetupRecursively(VisualElementAsset root, Dictionary<int, List<VisualElementAsset>> idToChildren, CreationContext context) => default; // 0x0000000189F5D6D4-0x0000000189F5DFE0
+		private static int CompareForOrder(VisualElementAsset a, VisualElementAsset b) => default; // 0x0000000189F5E8D4-0x0000000189F5E904
 		internal bool TryGetSlotInsertionPoint(int insertionPointId, out string slotName) {
 			slotName = default;
 			return default;
-		} // 0x0000000189F5801C-0x0000000189F58058
-		internal VisualTreeAsset ResolveTemplate(string templateName) => default; // 0x0000000189F58058-0x0000000189F58094
-		internal static VisualElement Create(VisualElementAsset asset, CreationContext ctx) => default; // 0x0000000189F58094-0x0000000189F580D0
-		private static void AssignClassListFromAssetToElement(VisualElementAsset asset, VisualElement element) {} // 0x0000000181041090-0x00000001810410A0
-		private static void AssignStyleSheetFromAssetToElement(VisualElementAsset asset, VisualElement element) {} // 0x0000000189F57E7C-0x0000000189F57EC8
+		} // 0x0000000189F5FBA8-0x0000000189F5FC68
+		internal VisualTreeAsset ResolveTemplate(string templateName) => default; // 0x0000000189F5F938-0x0000000189F5FBA8
+		internal static VisualElement Create(VisualElementAsset asset, CreationContext ctx) => default; // 0x0000000189F5E904-0x0000000189F5F03C
+		private static void AssignClassListFromAssetToElement(VisualElementAsset asset, VisualElement element) {} // 0x0000000189F5D4C8-0x0000000189F5D534
+		private static void AssignStyleSheetFromAssetToElement(VisualElementAsset asset, VisualElement element) {} // 0x0000000189F5D534-0x0000000189F5D6D4
 	}
 
 	public struct CreationContext : IEquatable<CreationContext> // TypeDefIndex: 43887
@@ -12758,15 +12915,15 @@ namespace UnityEngine.UIElements.Internal
 		private bool m_DoLayoutScheduled; // 0x3F1
 	
 		// Properties
-		internal bool isApplyingViewState { get => default; } // 0x0000000189EAF5CC-0x0000000189EAF664 
-		public Dictionary<Column, ColumnData> columnDataMap { get; } // 0x0000000189EAF414-0x0000000189EAF4A4 
-		public ColumnLayout columnLayout { get; } // 0x0000000189EAF664-0x0000000189EAF6F4 
-		public VisualElement columnContainer { get; } // 0x0000000189EAF4A4-0x0000000189EAF53C 
-		public VisualElement resizeHandleContainer { get; } // 0x0000000189EAF6F4-0x0000000189EAF78C 
-		public IEnumerable<SortColumnDescription> sortedColumns { get => default; } // 0x0000000189EAE584-0x0000000189EAF2EC 
-		public SortColumnDescriptions sortDescriptions { get => default; protected internal set {} } // 0x0000000189EAD2C0-0x0000000189EAD34C 0x0000000189EAD244-0x0000000189EAD284
-		public Columns columns { get; } // 0x0000000189EADACC-0x0000000189EAE094 
-		public bool sortingEnabled { get => default; set {} } // 0x0000000189EAD3CC-0x0000000189EAD8A8 0x0000000189EABBA0-0x0000000189EABBA8
+		internal bool isApplyingViewState { get => default; } // 0x0000000183D88BD0-0x0000000183D88BE0 
+		public Dictionary<Column, ColumnData> columnDataMap { get; } // 0x0000000183D57080-0x0000000183D57090 
+		public ColumnLayout columnLayout { get; } // 0x0000000183D57290-0x0000000183D572A0 
+		public VisualElement columnContainer { get; } // 0x0000000183D57280-0x0000000183D57290 
+		public VisualElement resizeHandleContainer { get; } // 0x0000000183D570D0-0x0000000183D570E0 
+		public IEnumerable<SortColumnDescription> sortedColumns { get => default; } // 0x0000000183D56FF0-0x0000000183D57000 
+		public SortColumnDescriptions sortDescriptions { get => default; protected internal set {} } // 0x0000000183D55EC0-0x0000000183D55ED0 0x0000000189EAF78C-0x0000000189EAF840
+		public Columns columns { get; } // 0x0000000183D57150-0x0000000183D57160 
+		public bool sortingEnabled { get => default; set {} } // 0x0000000183D88BE0-0x0000000183D88BF0 0x0000000189EAF840-0x0000000189EAF874
 	
 		// Events
 		public event Action<int, float> columnResized;
@@ -12799,21 +12956,21 @@ namespace UnityEngine.UIElements.Internal
 			}
 	
 			// Constructors
-			public ViewState() {} // 0x0000000183D57290-0x0000000183D572A0
+			public ViewState() {} // 0x0000000189EBB518-0x0000000189EBB5D8
 	
 			// Methods
-			internal void Save(MultiColumnCollectionHeader header) {} // 0x0000000183D88BD0-0x0000000183D88BE0
-			internal void Apply(MultiColumnCollectionHeader header) {} // 0x0000000183D57080-0x0000000183D57090
+			internal void Save(MultiColumnCollectionHeader header) {} // 0x0000000189EBB0EC-0x0000000189EBB518
+			internal void Apply(MultiColumnCollectionHeader header) {} // 0x0000000189EBAD30-0x0000000189EBB0EC
 		}
 	
 		internal class ColumnData // TypeDefIndex: 43975
 		{
 			// Properties
-			public MultiColumnHeaderColumn control { get; set; } // 0x0000000183D57280-0x0000000183D57290 0x0000000183D570D0-0x0000000183D570E0
-			public MultiColumnHeaderColumnResizeHandle resizeHandle { get; set; } // 0x0000000183D56FF0-0x0000000183D57000 0x0000000183D55EC0-0x0000000183D55ED0
+			public MultiColumnHeaderColumn control { get; set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+			public MultiColumnHeaderColumnResizeHandle resizeHandle { get; set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
 	
 			// Constructors
-			public ColumnData() {} // 0x0000000189EAF78C-0x0000000189EAF840
+			public ColumnData() {} // 0x000000018350B670-0x000000018350B680
 		}
 	
 		private struct SortedColumnState // TypeDefIndex: 43976
@@ -12826,40 +12983,40 @@ namespace UnityEngine.UIElements.Internal
 			public SortedColumnState(SortColumnDescription desc, SortDirection dir) {
 				columnDesc = default;
 				direction = default;
-			} // 0x0000000183D57150-0x0000000183D57160
+			} // 0x0000000184274600-0x000000018427461C
 		}
 	
 		// Constructors
 		public MultiColumnCollectionHeader() {} // Dummy constructor
-		public MultiColumnCollectionHeader(Columns columns, SortColumnDescriptions sortDescriptions, List<SortColumnDescription> sortedColumns) {} // 0x0000000189EABB4C-0x0000000189EABBA0
-		static MultiColumnCollectionHeader() {} // 0x000000018350B670-0x000000018350B680
+		public MultiColumnCollectionHeader(Columns columns, SortColumnDescriptions sortDescriptions, List<SortColumnDescription> sortedColumns) {} // 0x0000000189EAE584-0x0000000189EAF2EC
+		static MultiColumnCollectionHeader() {} // 0x0000000189EAE428-0x0000000189EAE584
 	
 		// Methods
-		private void ScheduleDoLayout() {} // 0x0000000189EAC0F0-0x0000000189EAC2A8
-		private void ResizeToFit() {} // 0x0000000189EABF50-0x0000000189EAC0F0
-		private void UpdateSortedColumns() {} // 0x0000000189EAD8A8-0x0000000189EADACC
-		private void UpdateColumnControls() {} // 0x0000000189EAD34C-0x0000000189EAD3C4
-		private void OnColumnAdded(Column column, int index) {} // 0x0000000189EAD1B8-0x0000000189EAD214
-		private void OnColumnAdded(Column column) {} // 0x0000000189EAD214-0x0000000189EAD244
-		private void OnColumnRemoved(Column column) {} // 0x0000000189EAAFAC-0x0000000189EAB4F4
-		private void OnColumnChanged(Column column, ColumnDataType type) {} // 0x0000000189EAE094-0x0000000189EAE428
-		private void OnColumnReordered(Column column, int from, int to) {} // 0x0000000189EAD060-0x0000000189EAD1B8
-		private void OnColumnResized(Column column) {} // 0x0000000189EAD284-0x0000000189EAD2C0
-		private void OnContextualMenuManipulator(ContextualMenuPopulateEvent evt) {} // 0x0000000189EAB4F4-0x0000000189EABB4C
-		private void OnMoveManipulatorActivated(ColumnMover mover) {} // 0x0000000189EAE428-0x0000000189EAE584
-		private void OnGeometryChanged(GeometryChangedEvent e) {} // 0x0000000189EAD3C4-0x0000000189EAD3CC
-		private void DoLayout() {} // 0x0000000189EBB0EC-0x0000000189EBB518
-		private void OnColumnControlGeometryChanged(GeometryChangedEvent evt) {} // 0x0000000189EBAD30-0x0000000189EBB0EC
-		private void OnColumnClicked(EventBase evt) {} // 0x0000000189EBB518-0x0000000189EBB5D8
-		private void UpdateSortColumnDescriptionsOnClick(Column column, EventModifiers modifiers) {} // 0x00000001820B7B20-0x00000001820B7B30
-		public void ScrollHorizontally(float horizontalOffset) {} // 0x000000018426FEE0-0x000000018426FEF0
-		private void RaiseColumnResized(int columnIndex) {} // 0x0000000181041090-0x00000001810410A0
-		private void RaiseColumnSortingChanged() {} // 0x00000001822C3A90-0x00000001822C3AA0
-		private void ApplyColumnSorting() {} // 0x000000018350B670-0x000000018350B680
-		private void UpdateSortingStatus() {} // 0x0000000184274600-0x000000018427461C
-		internal override void OnViewDataReady() {} // 0x000000018350B670-0x000000018350B680
-		private void SaveViewState() {} // 0x0000000189EB4B48-0x0000000189EB4B74
-		public void Dispose() {} // 0x0000000189EB4B74-0x0000000189EB4BF0
+		private void ScheduleDoLayout() {} // 0x0000000189EAD2C0-0x0000000189EAD34C
+		private void ResizeToFit() {} // 0x0000000189EAD244-0x0000000189EAD284
+		private void UpdateSortedColumns() {} // 0x0000000189EADACC-0x0000000189EAE094
+		private void UpdateColumnControls() {} // 0x0000000189EAD3CC-0x0000000189EAD8A8
+		private void OnColumnAdded(Column column, int index) {} // 0x0000000189EABBA0-0x0000000189EABBA8
+		private void OnColumnAdded(Column column) {} // 0x0000000189EABBA8-0x0000000189EABEEC
+		private void OnColumnRemoved(Column column) {} // 0x0000000189EAC2A8-0x0000000189EAC50C
+		private void OnColumnChanged(Column column, ColumnDataType type) {} // 0x0000000189EABEEC-0x0000000189EABF50
+		private void OnColumnReordered(Column column, int from, int to) {} // 0x0000000189EAC50C-0x0000000189EAC6A8
+		private void OnColumnResized(Column column) {} // 0x0000000189EAC6A8-0x0000000189EAC6B0
+		private void OnContextualMenuManipulator(ContextualMenuPopulateEvent evt) {} // 0x0000000189EAC6B0-0x0000000189EACF70
+		private void OnMoveManipulatorActivated(ColumnMover mover) {} // 0x0000000189EACFE4-0x0000000189EAD060
+		private void OnGeometryChanged(GeometryChangedEvent e) {} // 0x0000000189EACF70-0x0000000189EACFE4
+		private void DoLayout() {} // 0x0000000189EABB4C-0x0000000189EABBA0
+		private void OnColumnControlGeometryChanged(GeometryChangedEvent evt) {} // 0x0000000189EAC0F0-0x0000000189EAC2A8
+		private void OnColumnClicked(EventBase evt) {} // 0x0000000189EABF50-0x0000000189EAC0F0
+		private void UpdateSortColumnDescriptionsOnClick(Column column, EventModifiers modifiers) {} // 0x0000000189EAD8A8-0x0000000189EADACC
+		public void ScrollHorizontally(float horizontalOffset) {} // 0x0000000189EAD34C-0x0000000189EAD3C4
+		private void RaiseColumnResized(int columnIndex) {} // 0x0000000189EAD1B8-0x0000000189EAD214
+		private void RaiseColumnSortingChanged() {} // 0x0000000189EAD214-0x0000000189EAD244
+		private void ApplyColumnSorting() {} // 0x0000000189EAAFAC-0x0000000189EAB4F4
+		private void UpdateSortingStatus() {} // 0x0000000189EAE094-0x0000000189EAE428
+		internal override void OnViewDataReady() {} // 0x0000000189EAD060-0x0000000189EAD1B8
+		private void SaveViewState() {} // 0x0000000189EAD284-0x0000000189EAD2C0
+		public void Dispose() {} // 0x0000000189EAB4F4-0x0000000189EABB4C
 	}
 
 	internal class MultiColumnHeaderColumnSortIndicator : VisualElement // TypeDefIndex: 43980
@@ -13363,61 +13520,61 @@ namespace UnityEngine.UIElements.StyleSheets
 		private int m_CurrentPropertyIndex; // 0x44
 	
 		// Properties
-		public StyleProperty property { get; private set; } // 0x0000000183D4EED0-0x0000000183D4EEE0 0x0000000183D4EF20-0x0000000183D4EF30
-		public StylePropertyId propertyId { get; private set; } // 0x0000000183D4EEC0-0x0000000183D4EED0 0x0000000183D4EF10-0x0000000183D4EF20
-		public int valueCount { get; private set; } // 0x0000000183D51080-0x0000000183D51090 0x0000000183D510B0-0x0000000183D510C0
-		public float dpiScaling { get; private set; } // 0x0000000189EC48CC-0x0000000189EC49A8 0x0000000189EC4A64-0x0000000189EC4AB0
+		public StyleProperty property { get; private set; } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+		public StylePropertyId propertyId { get; private set; } // 0x0000000183D4EED0-0x0000000183D4EEE0 0x0000000183D4EF20-0x0000000183D4EF30
+		public int valueCount { get; private set; } // 0x0000000183D4EEC0-0x0000000183D4EED0 0x0000000183D4EF10-0x0000000183D4EF20
+		public float dpiScaling { get; private set; } // 0x0000000183D51080-0x0000000183D51090 0x0000000183D510B0-0x0000000183D510C0
 	
 		// Nested types
-		internal delegate int GetCursorIdFunction(StyleSheet sheet, StyleValueHandle handle); // TypeDefIndex: 43996; 0x0000000182692290-0x00000001826922A0
+		internal delegate int GetCursorIdFunction(StyleSheet sheet, StyleValueHandle handle); // TypeDefIndex: 43996; 0x0000000181165340-0x0000000181165350
 	
 		// Constructors
-		public StylePropertyReader() {} // 0x0000000181165340-0x0000000181165350
+		public StylePropertyReader() {} // 0x0000000189EC5028-0x0000000189EC5120
 	
 		// Methods
-		public void SetContext(StyleSheet sheet, StyleComplexSelector selector, StyleVariableContext varContext, float dpiScaling = 1f /* Metadata: 0x01FB628B */) {} // 0x0000000189EC24C0-0x0000000189EC24E4
-		public void SetInlineContext(StyleSheet sheet, StyleProperty[] properties, StylePropertyId[] propertyIds, float dpiScaling = 1f /* Metadata: 0x01FB628F */) {} // 0x0000000189EC2020-0x0000000189EC20A0
-		public StylePropertyId MoveNextProperty() => default; // 0x0000000189EC1FBC-0x0000000189EC2020
-		public StylePropertyValue GetValue(int index) => default; // 0x0000000189EC212C-0x0000000189EC21A0
-		public StyleValueType GetValueType(int index) => default; // 0x0000000189EC20A0-0x0000000189EC212C
-		public bool IsValueType(int index, StyleValueType type) => default; // 0x0000000189EC255C-0x0000000189EC25CC
-		public bool IsKeyword(int index, StyleValueKeyword keyword) => default; // 0x0000000189EC34F4-0x0000000189EC35B0
-		public string ReadAsString(int index) => default; // 0x0000000189EC4130-0x0000000189EC41F0
-		public Length ReadLength(int index) => default; // 0x0000000189EC459C-0x0000000189EC46EC
-		public TimeValue ReadTimeValue(int index) => default; // 0x0000000189EC42DC-0x0000000189EC4424
-		public Translate ReadTranslate(int index) => default; // 0x0000000189EC3A44-0x0000000189EC3BE0
-		public TransformOrigin ReadTransformOrigin(int index) => default; // 0x0000000189EC3D58-0x0000000189EC3E94
-		public Rotate ReadRotate(int index) => default; // 0x0000000189EC2D60-0x0000000189EC2DD4
-		public Scale ReadScale(int index) => default; // 0x0000000189EC347C-0x0000000189EC34F4
-		public float ReadFloat(int index) => default; // 0x0000000189EC2824-0x0000000189EC292C
-		public int ReadInt(int index) => default; // 0x0000000189EC2C8C-0x0000000189EC2D60
-		public UnityEngine.Color ReadColor(int index) => default; // 0x0000000189EC2DD4-0x0000000189EC31E4
-		public int ReadEnum(StyleEnumType enumType, int index) => default; // 0x0000000189EC31E4-0x0000000189EC347C
-		public FontDefinition ReadFontDefinition(int index) => default; // 0x0000000189EC25CC-0x0000000189EC2824
-		public Font ReadFont(int index) => default; // 0x0000000189EC292C-0x0000000189EC2BF4
-		public Background ReadBackground(int index) => default; // 0x0000000189EC3E94-0x0000000189EC4130
-		public UnityEngine.UIElements.Cursor ReadCursor(int index) => default; // 0x0000000189EC35B0-0x0000000189EC36FC
-		public TextShadow ReadTextShadow(int index) => default; // 0x0000000189EC3838-0x0000000189EC3988
-		public void ReadListEasingFunction(List<UnityEngine.UIElements.EasingFunction> list, int index) {} // 0x0000000189EC36FC-0x0000000189EC3838
-		public void ReadListTimeValue(List<TimeValue> list, int index) {} // 0x0000000189EC21A0-0x0000000189EC24C0
-		public void ReadListStylePropertyName(List<StylePropertyName> list, int index) {} // 0x0000000189EC49A8-0x0000000189EC4A64
-		private void LoadProperties() {} // 0x0000000189EC4424-0x0000000189EC459C
-		private void SetCurrentProperty() {} // 0x0000000189EC41F0-0x0000000189EC42DC
-		public static TransformOrigin ReadTransformOrigin(int valCount, StylePropertyValue val1, StylePropertyValue val2, StylePropertyValue zVvalue) => default; // 0x0000000189EC46EC-0x0000000189EC48CC
+		public void SetContext(StyleSheet sheet, StyleComplexSelector selector, StyleVariableContext varContext, float dpiScaling = 1f /* Metadata: 0x01FB628B */) {} // 0x0000000189EC48CC-0x0000000189EC49A8
+		public void SetInlineContext(StyleSheet sheet, StyleProperty[] properties, StylePropertyId[] propertyIds, float dpiScaling = 1f /* Metadata: 0x01FB628F */) {} // 0x0000000189EC4A64-0x0000000189EC4AB0
+		public StylePropertyId MoveNextProperty() => default; // 0x0000000189EC24C0-0x0000000189EC24E4
+		public StylePropertyValue GetValue(int index) => default; // 0x0000000189EC2020-0x0000000189EC20A0
+		public StyleValueType GetValueType(int index) => default; // 0x0000000189EC1FBC-0x0000000189EC2020
+		public bool IsValueType(int index, StyleValueType type) => default; // 0x0000000189EC212C-0x0000000189EC21A0
+		public bool IsKeyword(int index, StyleValueKeyword keyword) => default; // 0x0000000189EC20A0-0x0000000189EC212C
+		public string ReadAsString(int index) => default; // 0x0000000189EC255C-0x0000000189EC25CC
+		public Length ReadLength(int index) => default; // 0x0000000189EC34F4-0x0000000189EC35B0
+		public TimeValue ReadTimeValue(int index) => default; // 0x0000000189EC4130-0x0000000189EC41F0
+		public Translate ReadTranslate(int index) => default; // 0x0000000189EC459C-0x0000000189EC46EC
+		public TransformOrigin ReadTransformOrigin(int index) => default; // 0x0000000189EC42DC-0x0000000189EC4424
+		public Rotate ReadRotate(int index) => default; // 0x0000000189EC3A44-0x0000000189EC3BE0
+		public Scale ReadScale(int index) => default; // 0x0000000189EC3D58-0x0000000189EC3E94
+		public float ReadFloat(int index) => default; // 0x0000000189EC2D60-0x0000000189EC2DD4
+		public int ReadInt(int index) => default; // 0x0000000189EC347C-0x0000000189EC34F4
+		public UnityEngine.Color ReadColor(int index) => default; // 0x0000000189EC2824-0x0000000189EC292C
+		public int ReadEnum(StyleEnumType enumType, int index) => default; // 0x0000000189EC2C8C-0x0000000189EC2D60
+		public FontDefinition ReadFontDefinition(int index) => default; // 0x0000000189EC2DD4-0x0000000189EC31E4
+		public Font ReadFont(int index) => default; // 0x0000000189EC31E4-0x0000000189EC347C
+		public Background ReadBackground(int index) => default; // 0x0000000189EC25CC-0x0000000189EC2824
+		public UnityEngine.UIElements.Cursor ReadCursor(int index) => default; // 0x0000000189EC292C-0x0000000189EC2BF4
+		public TextShadow ReadTextShadow(int index) => default; // 0x0000000189EC3E94-0x0000000189EC4130
+		public void ReadListEasingFunction(List<UnityEngine.UIElements.EasingFunction> list, int index) {} // 0x0000000189EC35B0-0x0000000189EC36FC
+		public void ReadListTimeValue(List<TimeValue> list, int index) {} // 0x0000000189EC3838-0x0000000189EC3988
+		public void ReadListStylePropertyName(List<StylePropertyName> list, int index) {} // 0x0000000189EC36FC-0x0000000189EC3838
+		private void LoadProperties() {} // 0x0000000189EC21A0-0x0000000189EC24C0
+		private void SetCurrentProperty() {} // 0x0000000189EC49A8-0x0000000189EC4A64
+		public static TransformOrigin ReadTransformOrigin(int valCount, StylePropertyValue val1, StylePropertyValue val2, StylePropertyValue zVvalue) => default; // 0x0000000189EC4424-0x0000000189EC459C
 		private static Length ReadTransformOriginEnum(StylePropertyValue value, out bool isVertical, out bool isHorizontal) {
 			isVertical = default;
 			isHorizontal = default;
 			return default;
-		} // 0x0000000189EC3BE0-0x0000000189EC3D58
-		public static Translate ReadTranslate(int valCount, StylePropertyValue val1, StylePropertyValue val2, StylePropertyValue val3) => default; // 0x0000000189EC3988-0x0000000189EC3A44
-		public static Scale ReadScale(int valCount, StylePropertyValue val1, StylePropertyValue val2, StylePropertyValue val3) => default; // 0x0000000189EC2BF4-0x0000000189EC2C8C
-		public static Rotate ReadRotate(int valCount, StylePropertyValue val1, StylePropertyValue val2, StylePropertyValue val3, StylePropertyValue val4) => default; // 0x0000000189EC24E4-0x0000000189EC255C
-		private static int ReadEnum(StyleEnumType enumType, StylePropertyValue value) => default; // 0x0000000189EC4AB0-0x0000000189EC5028
-		public static Angle ReadAngle(StylePropertyValue value) => default; // 0x0000000189EC5028-0x0000000189EC5120
+		} // 0x0000000189EC41F0-0x0000000189EC42DC
+		public static Translate ReadTranslate(int valCount, StylePropertyValue val1, StylePropertyValue val2, StylePropertyValue val3) => default; // 0x0000000189EC46EC-0x0000000189EC48CC
+		public static Scale ReadScale(int valCount, StylePropertyValue val1, StylePropertyValue val2, StylePropertyValue val3) => default; // 0x0000000189EC3BE0-0x0000000189EC3D58
+		public static Rotate ReadRotate(int valCount, StylePropertyValue val1, StylePropertyValue val2, StylePropertyValue val3, StylePropertyValue val4) => default; // 0x0000000189EC3988-0x0000000189EC3A44
+		private static int ReadEnum(StyleEnumType enumType, StylePropertyValue value) => default; // 0x0000000189EC2BF4-0x0000000189EC2C8C
+		public static Angle ReadAngle(StylePropertyValue value) => default; // 0x0000000189EC24E4-0x0000000189EC255C
 		internal static bool TryGetImageSourceFromValue(StylePropertyValue propertyValue, float dpiScaling, out ImageSource source) {
 			source = default;
 			return default;
-		} // 0x0000000189EBC48C-0x0000000189EBC5B4
+		} // 0x0000000189EC4AB0-0x0000000189EC5028
 	}
 
 	internal struct MatchResultInfo // TypeDefIndex: 43998
@@ -13479,26 +13636,26 @@ namespace UnityEngine.UIElements.StyleSheets
 			public SheetHandleKey(StyleSheet sheet, int index) {
 				sheetInstanceID = default;
 				this.index = default;
-			} // 0x0000000189EC62DC-0x0000000189EC647C
+			} // 0x0000000189EBF734-0x0000000189EBF76C
 		}
 	
 		private class SheetHandleKeyComparer : IEqualityComparer<SheetHandleKey> // TypeDefIndex: 44002
 		{
 			// Constructors
-			public SheetHandleKeyComparer() {} // 0x0000000189EC652C-0x0000000189EC6620
+			public SheetHandleKeyComparer() {} // 0x000000018350B670-0x000000018350B680
 	
 			// Methods
-			public bool Equals(SheetHandleKey x, SheetHandleKey y) => default; // 0x0000000189EC647C-0x0000000189EC652C
-			public int GetHashCode(SheetHandleKey key) => default; // 0x0000000189EC621C-0x0000000189EC62DC
+			public bool Equals(SheetHandleKey x, SheetHandleKey y) => default; // 0x0000000186F68450-0x0000000186F68468
+			public int GetHashCode(SheetHandleKey key) => default; // 0x0000000183D66CE0-0x0000000183D66CF0
 		}
 	
 		// Constructors
-		static StyleSheetCache() {} // 0x000000018350B670-0x000000018350B680
+		static StyleSheetCache() {} // 0x0000000189EC652C-0x0000000189EC6620
 	
 		// Methods
-		internal static StylePropertyId[] GetPropertyIds(StyleSheet sheet, int ruleIndex) => default; // 0x0000000189EBF734-0x0000000189EBF76C
-		internal static StylePropertyId[] GetPropertyIds(StyleRule rule) => default; // 0x0000000186F68450-0x0000000186F68468
-		private static StylePropertyId GetPropertyId(StyleRule rule, int index) => default; // 0x0000000183D66CE0-0x0000000183D66CF0
+		internal static StylePropertyId[] GetPropertyIds(StyleSheet sheet, int ruleIndex) => default; // 0x0000000189EC62DC-0x0000000189EC647C
+		internal static StylePropertyId[] GetPropertyIds(StyleRule rule) => default; // 0x0000000189EC647C-0x0000000189EC652C
+		private static StylePropertyId GetPropertyId(StyleRule rule, int index) => default; // 0x0000000189EC621C-0x0000000189EC62DC
 	}
 
 	internal static class StyleSheetColor // TypeDefIndex: 44004
@@ -13859,7 +14016,7 @@ namespace UnityEngine.UIElements.UIR
 	
 			// Constructors
 			public Area() {} // Dummy constructor
-			public Area(RectInt rect) {} // 0x0000000189F45330-0x0000000189F454FC
+			public Area(RectInt rect) {} // 0x0000000189F454FC-0x0000000189F4557C
 		}
 	
 		public class Row : LinkedPoolItem<Row> // TypeDefIndex: 43889
@@ -13873,12 +14030,12 @@ namespace UnityEngine.UIElements.UIR
 			public static readonly LinkedPool<Row> pool; // 0x00
 	
 			// Constructors
-			public Row() {} // 0x0000000189F449F8-0x0000000189F44B9C
-			static Row() {} // 0x0000000189F44C04-0x0000000189F44CD0
+			public Row() {} // 0x0000000189F5088C-0x0000000189F508B4
+			static Row() {} // 0x0000000189F50758-0x0000000189F5088C
 	
 			// Methods
-			private static Row Create() => default; // 0x0000000189F44ED4-0x0000000189F45330
-			private static void Reset(Row row) {} // 0x0000000189F44CD0-0x0000000189F44ED4
+			private static Row Create() => default; // 0x0000000189F506B4-0x0000000189F50704
+			private static void Reset(Row row) {} // 0x0000000189F50704-0x0000000189F50758
 		}
 	
 		public struct Alloc2D // TypeDefIndex: 43890
@@ -13893,22 +14050,22 @@ namespace UnityEngine.UIElements.UIR
 				rect = default;
 				this.row = default;
 				this.alloc = default;
-			} // 0x0000000189F44B9C-0x0000000189F44C04
+			} // 0x0000000189F44958-0x0000000189F449F8
 		}
 	
 		// Constructors
 		public Allocator2D() {} // Dummy constructor
-		public Allocator2D(Vector2Int minSize, Vector2Int maxSize, int rowHeightBias) {} // 0x0000000189F454FC-0x0000000189F4557C
+		public Allocator2D(Vector2Int minSize, Vector2Int maxSize, int rowHeightBias) {} // 0x0000000189F45330-0x0000000189F454FC
 	
 		// Methods
 		public bool TryAllocate(int width, int height, out Alloc2D alloc2D) {
 			alloc2D = default;
 			return default;
-		} // 0x0000000189F506B4-0x0000000189F50704
-		public void Free(Alloc2D alloc2D) {} // 0x0000000189F50704-0x0000000189F50758
-		private static void BuildAreas(List<Area> areas, Vector2Int minSize, Vector2Int maxSize) {} // 0x0000000189F5088C-0x0000000189F508B4
-		private static Vector2Int ComputeMaxAllocSize(List<Area> areas, int rowHeightBias) => default; // 0x0000000189F50758-0x0000000189F5088C
-		private static Row[] BuildRowArray(int maxRowHeight, int rowHeightBias) => default; // 0x0000000189F44958-0x0000000189F449F8
+		} // 0x0000000189F44ED4-0x0000000189F45330
+		public void Free(Alloc2D alloc2D) {} // 0x0000000189F44CD0-0x0000000189F44ED4
+		private static void BuildAreas(List<Area> areas, Vector2Int minSize, Vector2Int maxSize) {} // 0x0000000189F449F8-0x0000000189F44B9C
+		private static Vector2Int ComputeMaxAllocSize(List<Area> areas, int rowHeightBias) => default; // 0x0000000189F44C04-0x0000000189F44CD0
+		private static Row[] BuildRowArray(int maxRowHeight, int rowHeightBias) => default; // 0x0000000189F44B9C-0x0000000189F44C04
 	}
 
 	internal class GradientSettingsAtlas : IDisposable // TypeDefIndex: 43893
@@ -13924,10 +14081,10 @@ namespace UnityEngine.UIElements.UIR
 		private static int s_TextureCounter; // 0x10
 	
 		// Properties
-		internal int length { get => default; } // 0x0000000183D4E280-0x0000000183D4E290 
-		protected bool disposed { get; private set; } // 0x0000000189F45C20-0x0000000189F45C70 0x0000000189F45C70-0x0000000189F45CD0
-		public Texture2D atlas { get => default; } // 0x0000000189F45EDC-0x0000000189F4621C 
-		public bool MustCommit { get; private set; } // 0x0000000189F45BBC-0x0000000189F45C20 0x0000000189F45CD0-0x0000000189F45E24
+		internal int length { get => default; } // 0x0000000183D85B00-0x0000000183D85B10 
+		protected bool disposed { get; private set; } // 0x0000000183D4F190-0x0000000183D4F1A0 0x0000000183D4E280-0x0000000183D4E290
+		public Texture2D atlas { get => default; } // 0x0000000183D85A20-0x0000000183D85A30 
+		public bool MustCommit { get; private set; } // 0x0000000183D4F300-0x0000000183D4F310 0x0000000183D4F330-0x0000000183D4F340
 	
 		// Nested types
 		private struct RawTexture // TypeDefIndex: 43892
@@ -13938,23 +14095,23 @@ namespace UnityEngine.UIElements.UIR
 			public int height; // 0x0C
 	
 			// Methods
-			public void WriteRawInt2Packed(int v0, int v1, int destX, int destY) {} // 0x0000000183D85B00-0x0000000183D85B10
-			public void WriteRawFloat4Packed(float f0, float f1, float f2, float f3, int destX, int destY) {} // 0x0000000183D4F190-0x0000000183D4F1A0
+			public void WriteRawInt2Packed(int v0, int v1, int destX, int destY) {} // 0x0000000189F50620-0x0000000189F506B4
+			public void WriteRawFloat4Packed(float f0, float f1, float f2, float f3, int destX, int destY) {} // 0x0000000189F50574-0x0000000189F50620
 		}
 	
 		// Constructors
 		public GradientSettingsAtlas() {} // Dummy constructor
-		public GradientSettingsAtlas(int length = 4096 /* Metadata: 0x01FB60BF */) {} // 0x0000000183D85A20-0x0000000183D85A30
-		static GradientSettingsAtlas() {} // 0x0000000189F50574-0x0000000189F50620
+		public GradientSettingsAtlas(int length = 4096 /* Metadata: 0x01FB60BF */) {} // 0x0000000189F462B4-0x0000000189F462C8
+		static GradientSettingsAtlas() {} // 0x0000000189F4621C-0x0000000189F462B4
 	
 		// Methods
-		public void Dispose() {} // 0x0000000189F462B4-0x0000000189F462C8
-		protected virtual void Dispose(bool disposing) {} // 0x0000000189F45E24-0x0000000189F45EDC
-		public void Reset() {} // 0x0000000189F45AF8-0x0000000189F45BBC
-		public Alloc Add(int count) => default; // 0x0000000183D4F300-0x0000000183D4F310
-		public void Write(Alloc alloc, GradientSettings[] settings, GradientRemap remap) {} // 0x0000000183D4F330-0x0000000183D4F340
-		public void Commit() {} // 0x0000000189F4621C-0x0000000189F462B4
-		private void PrepareAtlas() {} // 0x0000000189F50620-0x0000000189F506B4
+		public void Dispose() {} // 0x0000000189F45C20-0x0000000189F45C70
+		protected virtual void Dispose(bool disposing) {} // 0x0000000189F45C70-0x0000000189F45CD0
+		public void Reset() {} // 0x0000000189F45E24-0x0000000189F45EDC
+		public Alloc Add(int count) => default; // 0x0000000189F45AF8-0x0000000189F45BBC
+		public void Write(Alloc alloc, GradientSettings[] settings, GradientRemap remap) {} // 0x0000000189F45EDC-0x0000000189F4621C
+		public void Commit() {} // 0x0000000189F45BBC-0x0000000189F45C20
+		private void PrepareAtlas() {} // 0x0000000189F45CD0-0x0000000189F45E24
 	}
 
 	internal class LinkedPoolItem<T> // TypeDefIndex: 43894
@@ -14038,10 +14195,10 @@ namespace UnityEngine.UIElements.UIR
 			internal BMPAlloc colorAlloc; // 0x24
 	
 			// Nested types
-			internal delegate MeshWriteData Allocator(uint vertexCount, uint indexCount, ref AllocMeshData allocatorData); // TypeDefIndex: 43898; 0x0000000189F4ACA8-0x0000000189F4AE9C
+			internal delegate MeshWriteData Allocator(uint vertexCount, uint indexCount, ref AllocMeshData allocatorData); // TypeDefIndex: 43898; 0x0000000181035ED0-0x0000000181035EF0
 	
 			// Methods
-			internal MeshWriteData Allocate(uint vertexCount, uint indexCount) => default; // 0x0000000189F4B514-0x0000000189F4BD28
+			internal MeshWriteData Allocate(uint vertexCount, uint indexCount) => default; // 0x0000000189E89054-0x0000000189E89084
 		}
 	
 		private struct ClipCounts // TypeDefIndex: 43900
@@ -14065,38 +14222,38 @@ namespace UnityEngine.UIElements.UIR
 		}
 	
 		// Constructors
-		static MeshBuilder() {} // 0x0000000181035ED0-0x0000000181035EF0
+		static MeshBuilder() {} // 0x0000000189F4F8F4-0x0000000189F4FBF4
 	
 		// Methods
-		internal static void MakeBorder(MeshGenerationContextUtils.BorderParams borderParams, float posZ, AllocMeshData meshAlloc) {} // 0x0000000189F49598-0x0000000189F4974C
-		internal static void MakeSolidRect(MeshGenerationContextUtils.RectangleParams rectParams, float posZ, AllocMeshData meshAlloc) {} // 0x0000000183D898C0-0x0000000183D89980
-		internal static void MakeTexturedRect(MeshGenerationContextUtils.RectangleParams rectParams, float posZ, AllocMeshData meshAlloc, ColorPage colorPage) {} // 0x0000000189F49DE4-0x0000000189F49ED8
-		private static UnityEngine.UIElements.Vertex ConvertTextVertexToUIRVertex(UnityEngine.TextCore.Text.MeshInfo info, int index, Vector2 offset, VertexFlags flags = VertexFlags.IsText /* Metadata: 0x01FB60C5 */, bool isDynamicColor = false /* Metadata: 0x01FB60C6 */) => default; // 0x0000000189F4B1B8-0x0000000189F4B514
-		private static UnityEngine.UIElements.Vertex ConvertTextVertexToUIRVertex(UnityEngine.UIElements.TextVertex textVertex, Vector2 offset) => default; // 0x0000000189F4AE9C-0x0000000189F4B1B8
-		private static int LimitTextVertices(int vertexCount, bool logTruncation = true /* Metadata: 0x01FB60C7 */) => default; // 0x0000000189F4F48C-0x0000000189F4F6B4
-		internal static void MakeText(UnityEngine.TextCore.Text.MeshInfo meshInfo, Vector2 offset, AllocMeshData meshAlloc, VertexFlags flags = VertexFlags.IsText /* Metadata: 0x01FB60C8 */, bool isDynamicColor = false /* Metadata: 0x01FB60C9 */) {} // 0x0000000189F49FD0-0x0000000189F4A3D4
-		internal static void MakeText(NativeArray<UnityEngine.UIElements.TextVertex> uiVertices, Vector2 offset, AllocMeshData meshAlloc) {} // 0x0000000189F4A3D4-0x0000000189F4ACA8
-		internal static void UpdateText(NativeArray<UnityEngine.UIElements.TextVertex> uiVertices, Vector2 offset, Matrix4x4 transform, Color32 xformClipPages, Color32 ids, Color32 flags, Color32 opacityPageSettingIndex, NativeSlice<UnityEngine.UIElements.Vertex> vertices) {} // 0x0000000189F4CD10-0x0000000189F4D804
-		private static void MakeQuad(Rect rcPosition, Rect rcTexCoord, UnityEngine.Color color, float posZ, AllocMeshData meshAlloc, ColorPage colorPage) {} // 0x0000000189F4C524-0x0000000189F4CD10
-		internal static void MakeSlicedQuad(ref MeshGenerationContextUtils.RectangleParams rectParams, float posZ, AllocMeshData meshAlloc) {} // 0x0000000189F4EC40-0x0000000189F4F48C
+		internal static void MakeBorder(MeshGenerationContextUtils.BorderParams borderParams, float posZ, AllocMeshData meshAlloc) {} // 0x0000000189F49ED8-0x0000000189F49FD0
+		internal static void MakeSolidRect(MeshGenerationContextUtils.RectangleParams rectParams, float posZ, AllocMeshData meshAlloc) {} // 0x0000000189F4ACA8-0x0000000189F4AE9C
+		internal static void MakeTexturedRect(MeshGenerationContextUtils.RectangleParams rectParams, float posZ, AllocMeshData meshAlloc, ColorPage colorPage) {} // 0x0000000189F4B514-0x0000000189F4BD28
+		private static UnityEngine.UIElements.Vertex ConvertTextVertexToUIRVertex(UnityEngine.TextCore.Text.MeshInfo info, int index, Vector2 offset, VertexFlags flags = VertexFlags.IsText /* Metadata: 0x01FB60C5 */, bool isDynamicColor = false /* Metadata: 0x01FB60C6 */) => default; // 0x0000000189F49598-0x0000000189F4974C
+		private static UnityEngine.UIElements.Vertex ConvertTextVertexToUIRVertex(UnityEngine.UIElements.TextVertex textVertex, Vector2 offset) => default; // 0x0000000183D898C0-0x0000000183D89980
+		private static int LimitTextVertices(int vertexCount, bool logTruncation = true /* Metadata: 0x01FB60C7 */) => default; // 0x0000000189F49DE4-0x0000000189F49ED8
+		internal static void MakeText(UnityEngine.TextCore.Text.MeshInfo meshInfo, Vector2 offset, AllocMeshData meshAlloc, VertexFlags flags = VertexFlags.IsText /* Metadata: 0x01FB60C8 */, bool isDynamicColor = false /* Metadata: 0x01FB60C9 */) {} // 0x0000000189F4B1B8-0x0000000189F4B514
+		internal static void MakeText(NativeArray<UnityEngine.UIElements.TextVertex> uiVertices, Vector2 offset, AllocMeshData meshAlloc) {} // 0x0000000189F4AE9C-0x0000000189F4B1B8
+		internal static void UpdateText(NativeArray<UnityEngine.UIElements.TextVertex> uiVertices, Vector2 offset, Matrix4x4 transform, Color32 xformClipPages, Color32 ids, Color32 flags, Color32 opacityPageSettingIndex, NativeSlice<UnityEngine.UIElements.Vertex> vertices) {} // 0x0000000189F4F48C-0x0000000189F4F6B4
+		private static void MakeQuad(Rect rcPosition, Rect rcTexCoord, UnityEngine.Color color, float posZ, AllocMeshData meshAlloc, ColorPage colorPage) {} // 0x0000000189F49FD0-0x0000000189F4A3D4
+		internal static void MakeSlicedQuad(ref MeshGenerationContextUtils.RectangleParams rectParams, float posZ, AllocMeshData meshAlloc) {} // 0x0000000189F4A3D4-0x0000000189F4ACA8
 		internal static void MakeVectorGraphics(MeshGenerationContextUtils.RectangleParams rectParams, int settingIndexOffset, AllocMeshData meshAlloc, out int finalVertexCount, out int finalIndexCount) {
 			finalVertexCount = default;
 			finalIndexCount = default;
-		} // 0x0000000189F4E9CC-0x0000000189F4EC40
+		} // 0x0000000189F4CD10-0x0000000189F4D804
 		internal static void MakeVectorGraphicsStretchBackground(UnityEngine.UIElements.Vertex[] svgVertices, ushort[] svgIndices, float svgWidth, float svgHeight, Rect targetRect, Rect sourceUV, UnityEngine.ScaleMode scaleMode, UnityEngine.Color tint, int settingIndexOffset, AllocMeshData meshAlloc, out int finalVertexCount, out int finalIndexCount) {
 			finalVertexCount = default;
 			finalIndexCount = default;
-		} // 0x0000000189F4BD28-0x0000000189F4C524
-		private static unsafe void SplitTriangle(UnityEngine.UIElements.Vertex* vertices, ushort* indices, ref int vertexCount, int indexToProcess, ref int indexCount, float svgWidth, float svgHeight, Vector4 sliceLTRB, int sliceIndex) {} // 0x0000000189F4F6B4-0x0000000189F4F8F4
-		private static unsafe void ScaleSplittedTriangles(UnityEngine.UIElements.Vertex* vertices, int vertexCount, float svgWidth, float svgHeight, Rect targetRect, Vector4 sliceLTRB) {} // 0x0000000189F4E4E4-0x0000000189F4E9CC
-		internal static void MakeVectorGraphics9SliceBackground(UnityEngine.UIElements.Vertex[] svgVertices, ushort[] svgIndices, float svgWidth, float svgHeight, Rect targetRect, Vector4 sliceLTRB, bool stretch, UnityEngine.Color tint, int settingIndexOffset, AllocMeshData meshAlloc) {} // 0x0000000189F4D804-0x0000000189F4E4E4
-		private static ClipCounts UpperBoundApproximateRectClippingResults(UnityEngine.UIElements.Vertex[] vertices, ushort[] indices, Vector4 clipRectMinMax) => default; // 0x0000000189F4974C-0x0000000189F498B0
-		private static void RectClip(UnityEngine.UIElements.Vertex[] vertices, ushort[] indices, Vector4 clipRectMinMax, MeshWriteData mwd, ClipCounts cc, ref int newVertexCount) {} // 0x0000000189F49A80-0x0000000189F49CB4
-		private static unsafe void RectClipTriangle(UnityEngine.UIElements.Vertex* vt, ushort* it, Vector4 clipRectMinMax, MeshWriteData mwd, ref ushort nextNewVertex) {} // 0x0000000189F498B0-0x0000000189F49A80
-		private static unsafe Vector3 GetVertexBaryCentricCoordinates(UnityEngine.UIElements.Vertex* vt, float x, float y) => default; // 0x0000000189F49CB4-0x0000000189F49DE4
-		private static unsafe UnityEngine.UIElements.Vertex InterpolateVertexInTriangle(UnityEngine.UIElements.Vertex* vt, float x, float y, Vector3 uvw) => default; // 0x0000000189F4F8F4-0x0000000189F4FBF4
-		private static unsafe UnityEngine.UIElements.Vertex InterpolateVertexInTriangleEdge(UnityEngine.UIElements.Vertex* vt, int e0, int e1, float t) => default; // 0x0000000189E89054-0x0000000189E89084
-		private static float IntersectSegments(float ax, float ay, float bx, float by, float cx, float cy, float dx, float dy) => default; // 0x000000018823952C-0x00000001882395F4
+		} // 0x0000000189F4C524-0x0000000189F4CD10
+		private static unsafe void SplitTriangle(UnityEngine.UIElements.Vertex* vertices, ushort* indices, ref int vertexCount, int indexToProcess, ref int indexCount, float svgWidth, float svgHeight, Vector4 sliceLTRB, int sliceIndex) {} // 0x0000000189F4EC40-0x0000000189F4F48C
+		private static unsafe void ScaleSplittedTriangles(UnityEngine.UIElements.Vertex* vertices, int vertexCount, float svgWidth, float svgHeight, Rect targetRect, Vector4 sliceLTRB) {} // 0x0000000189F4E9CC-0x0000000189F4EC40
+		internal static void MakeVectorGraphics9SliceBackground(UnityEngine.UIElements.Vertex[] svgVertices, ushort[] svgIndices, float svgWidth, float svgHeight, Rect targetRect, Vector4 sliceLTRB, bool stretch, UnityEngine.Color tint, int settingIndexOffset, AllocMeshData meshAlloc) {} // 0x0000000189F4BD28-0x0000000189F4C524
+		private static ClipCounts UpperBoundApproximateRectClippingResults(UnityEngine.UIElements.Vertex[] vertices, ushort[] indices, Vector4 clipRectMinMax) => default; // 0x0000000189F4F6B4-0x0000000189F4F8F4
+		private static void RectClip(UnityEngine.UIElements.Vertex[] vertices, ushort[] indices, Vector4 clipRectMinMax, MeshWriteData mwd, ClipCounts cc, ref int newVertexCount) {} // 0x0000000189F4E4E4-0x0000000189F4E9CC
+		private static unsafe void RectClipTriangle(UnityEngine.UIElements.Vertex* vt, ushort* it, Vector4 clipRectMinMax, MeshWriteData mwd, ref ushort nextNewVertex) {} // 0x0000000189F4D804-0x0000000189F4E4E4
+		private static unsafe Vector3 GetVertexBaryCentricCoordinates(UnityEngine.UIElements.Vertex* vt, float x, float y) => default; // 0x0000000189F4974C-0x0000000189F498B0
+		private static unsafe UnityEngine.UIElements.Vertex InterpolateVertexInTriangle(UnityEngine.UIElements.Vertex* vt, float x, float y, Vector3 uvw) => default; // 0x0000000189F49A80-0x0000000189F49CB4
+		private static unsafe UnityEngine.UIElements.Vertex InterpolateVertexInTriangleEdge(UnityEngine.UIElements.Vertex* vt, int e0, int e1, float t) => default; // 0x0000000189F498B0-0x0000000189F49A80
+		private static float IntersectSegments(float ax, float ay, float bx, float by, float cx, float cy, float dx, float dy) => default; // 0x0000000189F49CB4-0x0000000189F49DE4
 	}
 
 	internal struct ChainBuilderStats // TypeDefIndex: 43903
@@ -14166,16 +14323,16 @@ namespace UnityEngine.UIElements.UIR
 		internal UIRVEShaderInfoAllocator shaderInfoAllocator; // 0x148
 	
 		// Properties
-		protected bool disposed { get; private set; } // 0x0000000189E8D5CC-0x0000000189E8D664 0x0000000189E8D6F4-0x0000000189E8D790
-		internal BaseVisualElementPanel panel { get; private set; } // 0x0000000183D88B30-0x0000000183D88B40 0x0000000183D88B50-0x0000000183D88B60
-		internal UIRenderDevice device { get; private set; } // 0x0000000189E8DFD0-0x0000000189E8E074 0x0000000189E8E074-0x0000000189E8E118
-		internal AtlasBase atlas { get; private set; } // 0x0000000189E8B758-0x0000000189E8B844 0x0000000189E8B844-0x0000000189E8B930
-		internal VectorImageManager vectorImageManager { get; private set; } // 0x0000000189E8B680-0x0000000189E8B68C 0x0000000189E8A62C-0x0000000189E8A6D4
-		internal UIRStylePainter painter { get; private set; } // 0x0000000189E8A51C-0x0000000189E8A578 0x0000000189E8B68C-0x0000000189E8B72C
-		internal bool drawStats { get; set; } // 0x0000000189E8C1E8-0x0000000189E8C268 0x0000000189E8C268-0x0000000189E8C29C
-		internal bool drawInCameras { get; private set; } // 0x0000000189E8A4A8-0x0000000189E8A51C 0x0000000189E8CB1C-0x0000000189E8CBE4
-		internal Shader defaultShader { set {} } // 0x0000000189E8B930-0x0000000189E8BA64
-		internal Shader defaultWorldSpaceShader { set {} } // 0x0000000189E8A3CC-0x0000000189E8A4A8
+		protected bool disposed { get; private set; } // 0x0000000183D57B30-0x0000000183D57B40 0x0000000183D5A200-0x0000000183D5A210
+		internal BaseVisualElementPanel panel { get; private set; } // 0x0000000183D56F00-0x0000000183D56F10 0x0000000184275CB8-0x0000000184275CCC
+		internal UIRenderDevice device { get; private set; } // 0x0000000183D56D00-0x0000000183D56D10 0x0000000184275CCC-0x0000000184275CE0
+		internal AtlasBase atlas { get; private set; } // 0x0000000183D56EF0-0x0000000183D56F00 0x0000000184275CE0-0x0000000184275CF4
+		internal VectorImageManager vectorImageManager { get; private set; } // 0x0000000183D57300-0x0000000183D57310 0x00000001858B3FD8-0x00000001858B3FEC
+		internal UIRStylePainter painter { get; private set; } // 0x0000000183D570B0-0x0000000183D570C0 0x00000001858B3C54-0x00000001858B3C68
+		internal bool drawStats { get; set; } // 0x0000000183D88B40-0x0000000183D88B50 0x0000000183D88B60-0x0000000183D88B70
+		internal bool drawInCameras { get; private set; } // 0x0000000183D88B30-0x0000000183D88B40 0x0000000183D88B50-0x0000000183D88B60
+		internal Shader defaultShader { set {} } // 0x0000000189E8DFD0-0x0000000189E8E074
+		internal Shader defaultWorldSpaceShader { set {} } // 0x0000000189E8E074-0x0000000189E8E118
 	
 		// Nested types
 		private struct DepthOrderedDirtyTracking // TypeDefIndex: 43904
@@ -14188,10 +14345,10 @@ namespace UnityEngine.UIElements.UIR
 			public uint dirtyID; // 0x20
 	
 			// Methods
-			public void EnsureFits(int maxDepth) {} // 0x0000000189E8D964-0x0000000189E8DBF8
-			public void RegisterDirty(VisualElement ve, RenderDataDirtyTypes dirtyTypes, RenderDataDirtyTypeClasses dirtyTypeClass) {} // 0x0000000189E8DBF8-0x0000000189E8DFD0
-			public void ClearDirty(VisualElement ve, RenderDataDirtyTypes dirtyTypesInverse) {} // 0x0000000189E8A6D4-0x0000000189E8AA5C
-			public void Reset() {} // 0x0000000189E8AA5C-0x0000000189E8ACA4
+			public void EnsureFits(int maxDepth) {} // 0x0000000189E89BAC-0x0000000189E89C2C
+			public void RegisterDirty(VisualElement ve, RenderDataDirtyTypes dirtyTypes, RenderDataDirtyTypeClasses dirtyTypeClass) {} // 0x0000000189E89C2C-0x0000000189E89DF0
+			public void ClearDirty(VisualElement ve, RenderDataDirtyTypes dirtyTypesInverse) {} // 0x0000000189E899B8-0x0000000189E89BAC
+			public void Reset() {} // 0x0000000189E89DF0-0x0000000189E89E48
 		}
 	
 		private struct RenderChainStaticIndexAllocator // TypeDefIndex: 43905
@@ -14202,12 +14359,12 @@ namespace UnityEngine.UIElements.UIR
 			// Constructors
 			static RenderChainStaticIndexAllocator() {
 				renderChains = default;
-			} // 0x0000000189E8ACA4-0x0000000189E8ACD0
+			} // 0x0000000189E8A278-0x0000000189E8A30C
 	
 			// Methods
-			public static int AllocateIndex(RenderChain renderChain) => default; // 0x0000000183D57B30-0x0000000183D57B40
-			public static void FreeIndex(int index) {} // 0x0000000183D5A200-0x0000000183D5A210
-			public static RenderChain AccessIndex(int index) => default; // 0x0000000189E8ACD0-0x0000000189E8AD20
+			public static int AllocateIndex(RenderChain renderChain) => default; // 0x0000000189E8A0FC-0x0000000189E8A208
+			public static void FreeIndex(int index) {} // 0x0000000189E8A208-0x0000000189E8A278
+			public static RenderChain AccessIndex(int index) => default; // 0x0000000189E8A090-0x0000000189E8A0FC
 		}
 	
 		private struct RenderNodeData // TypeDefIndex: 43906
@@ -14227,48 +14384,48 @@ namespace UnityEngine.UIElements.UIR
 	
 		// Constructors
 		public RenderChain() {} // Dummy constructor
-		static RenderChain() {} // 0x0000000189E8D43C-0x0000000189E8D5CC
-		public RenderChain(BaseVisualElementPanel panel) {} // 0x0000000189E8D348-0x0000000189E8D43C
+		static RenderChain() {} // 0x0000000189E8D964-0x0000000189E8DBF8
+		public RenderChain(BaseVisualElementPanel panel) {} // 0x0000000189E8DBF8-0x0000000189E8DFD0
 	
 		// Methods
-		private void Constructor(BaseVisualElementPanel panelObj, UIRenderDevice deviceObj, AtlasBase atlas, VectorImageManager vectorImageMan) {} // 0x0000000189E8D140-0x0000000189E8D198
-		private void Destructor() {} // 0x0000000189E8D790-0x0000000189E8D82C
-		public void Dispose() {} // 0x0000000189E8D664-0x0000000189E8D6F4
-		protected void Dispose(bool disposing) {} // 0x0000000189E8D82C-0x0000000189E8D8C8
-		public void ProcessChanges() {} // 0x0000000189E8D8C8-0x0000000189E8D964
-		public void Render() {} // 0x0000000183D56F00-0x0000000183D56F10
-		private void ProcessTextRegen(bool timeSliced) {} // 0x0000000184275CB8-0x0000000184275CCC
-		public void UIEOnChildAdded(VisualElement ve) {} // 0x0000000183D56D00-0x0000000183D56D10
-		public void UIEOnChildrenReordered(VisualElement ve) {} // 0x0000000184275CCC-0x0000000184275CE0
-		public void UIEOnChildRemoving(VisualElement ve) {} // 0x0000000183D56EF0-0x0000000183D56F00
-		public void StopTrackingGroupTransformElement(VisualElement ve) {} // 0x0000000184275CE0-0x0000000184275CF4
-		public void UIEOnRenderHintsChanged(VisualElement ve) {} // 0x0000000183D57300-0x0000000183D57310
-		public void UIEOnClippingChanged(VisualElement ve, bool hierarchical) {} // 0x00000001858B3FD8-0x00000001858B3FEC
-		public void UIEOnOpacityChanged(VisualElement ve, bool hierarchical = false /* Metadata: 0x01FB60CF */) {} // 0x0000000183D570B0-0x0000000183D570C0
-		public void UIEOnColorChanged(VisualElement ve) {} // 0x00000001858B3C54-0x00000001858B3C68
-		public void UIEOnTransformOrSizeChanged(VisualElement ve, bool transformChanged, bool clipRectSizeChanged) {} // 0x0000000183D88B40-0x0000000183D88B50
-		public void UIEOnVisualsChanged(VisualElement ve, bool hierarchical) {} // 0x0000000183D88B60-0x0000000183D88B70
-		internal Material GetStandardMaterial() => default; // 0x0000000189E8C29C-0x0000000189E8C3A0
-		internal Material GetStandardWorldSpaceMaterial() => default; // 0x0000000189E8BDE0-0x0000000189E8C1E8
-		internal void EnsureFitsDepth(int depth) {} // 0x0000000189E8BA64-0x0000000189E8BDE0
-		internal void ChildWillBeRemoved(VisualElement ve) {} // 0x0000000189E8CF58-0x0000000189E8D00C
-		internal RenderChainCommand AllocCommand() => default; // 0x0000000183D88B20-0x0000000183D88B30
-		internal void FreeCommand(RenderChainCommand cmd) {} // 0x0000000189E8A578-0x0000000189E8A62C
-		internal void OnRenderCommandAdded(RenderChainCommand command) {} // 0x0000000189E8D00C-0x0000000189E8D140
-		internal void OnRenderCommandsRemoved(RenderChainCommand firstCommand, RenderChainCommand lastCommand) {} // 0x0000000189E8AD20-0x0000000189E8B680
-		internal void AddTextElement(VisualElement ve) {} // 0x0000000189E8B72C-0x0000000189E8B758
-		internal void RemoveTextElement(VisualElement ve) {} // 0x0000000189E89BAC-0x0000000189E89C2C
-		internal void OnGroupTransformElementChangedTransform(VisualElement ve) {} // 0x0000000189E89C2C-0x0000000189E89DF0
-		private static RenderNodeData AccessRenderNodeData(IntPtr obj) => default; // 0x0000000189E899B8-0x0000000189E89BAC
-		private static void OnRenderNodeExecute(IntPtr obj) {} // 0x0000000189E89DF0-0x0000000189E89E48
-		private static void OnRegisterIntermediateRenderers(Camera camera) {} // 0x0000000189E8A0FC-0x0000000189E8A208
-		private static void OnRegisterIntermediateRendererMat(BaseRuntimePanel rtp, RenderChain renderChain, ref RenderNodeData rnd, Camera camera, int sameDistanceSortPriority) {} // 0x0000000189E8A208-0x0000000189E8A278
-		internal void RepaintTexturedElements() {} // 0x0000000189E8A090-0x0000000189E8A0FC
-		private void OnFontReset(Font font) {} // 0x0000000189E8A278-0x0000000189E8A30C
-		public void AppendTexture(VisualElement ve, Texture src, TextureId id, bool isAtlas) {} // 0x0000000189E96654-0x0000000189E966B8
-		public void ResetTextures(VisualElement ve) {} // 0x000000018350B670-0x000000018350B680
-		private void DrawStats() {} // 0x0000000189E96604-0x0000000189E96654
-		private static VisualElement GetFirstElementInPanel(VisualElement ve) => default; // 0x000000018350B670-0x000000018350B680
+		private void Constructor(BaseVisualElementPanel panelObj, UIRenderDevice deviceObj, AtlasBase atlas, VectorImageManager vectorImageMan) {} // 0x0000000189E8A6D4-0x0000000189E8AA5C
+		private void Destructor() {} // 0x0000000189E8AA5C-0x0000000189E8ACA4
+		public void Dispose() {} // 0x0000000189E8ACD0-0x0000000189E8AD20
+		protected void Dispose(bool disposing) {} // 0x0000000189E8ACA4-0x0000000189E8ACD0
+		public void ProcessChanges() {} // 0x0000000189E8C3A0-0x0000000189E8C91C
+		public void Render() {} // 0x0000000189E8CBE4-0x0000000189E8CF58
+		private void ProcessTextRegen(bool timeSliced) {} // 0x0000000189E8C91C-0x0000000189E8CB1C
+		public void UIEOnChildAdded(VisualElement ve) {} // 0x0000000189E8D198-0x0000000189E8D348
+		public void UIEOnChildrenReordered(VisualElement ve) {} // 0x0000000189E8D43C-0x0000000189E8D5CC
+		public void UIEOnChildRemoving(VisualElement ve) {} // 0x0000000189E8D348-0x0000000189E8D43C
+		public void StopTrackingGroupTransformElement(VisualElement ve) {} // 0x0000000189E8D140-0x0000000189E8D198
+		public void UIEOnRenderHintsChanged(VisualElement ve) {} // 0x0000000189E8D790-0x0000000189E8D82C
+		public void UIEOnClippingChanged(VisualElement ve, bool hierarchical) {} // 0x0000000189E8D5CC-0x0000000189E8D664
+		public void UIEOnOpacityChanged(VisualElement ve, bool hierarchical = false /* Metadata: 0x01FB60CF */) {} // 0x0000000189E8D6F4-0x0000000189E8D790
+		public void UIEOnColorChanged(VisualElement ve) {} // 0x0000000189E8D664-0x0000000189E8D6F4
+		public void UIEOnTransformOrSizeChanged(VisualElement ve, bool transformChanged, bool clipRectSizeChanged) {} // 0x0000000189E8D82C-0x0000000189E8D8C8
+		public void UIEOnVisualsChanged(VisualElement ve, bool hierarchical) {} // 0x0000000189E8D8C8-0x0000000189E8D964
+		internal Material GetStandardMaterial() => default; // 0x0000000189E8B758-0x0000000189E8B844
+		internal Material GetStandardWorldSpaceMaterial() => default; // 0x0000000189E8B844-0x0000000189E8B930
+		internal void EnsureFitsDepth(int depth) {} // 0x0000000189E8B680-0x0000000189E8B68C
+		internal void ChildWillBeRemoved(VisualElement ve) {} // 0x0000000189E8A62C-0x0000000189E8A6D4
+		internal RenderChainCommand AllocCommand() => default; // 0x0000000189E8A51C-0x0000000189E8A578
+		internal void FreeCommand(RenderChainCommand cmd) {} // 0x0000000189E8B68C-0x0000000189E8B72C
+		internal void OnRenderCommandAdded(RenderChainCommand command) {} // 0x0000000189E8C1E8-0x0000000189E8C268
+		internal void OnRenderCommandsRemoved(RenderChainCommand firstCommand, RenderChainCommand lastCommand) {} // 0x0000000189E8C268-0x0000000189E8C29C
+		internal void AddTextElement(VisualElement ve) {} // 0x0000000189E8A4A8-0x0000000189E8A51C
+		internal void RemoveTextElement(VisualElement ve) {} // 0x0000000189E8CB1C-0x0000000189E8CBE4
+		internal void OnGroupTransformElementChangedTransform(VisualElement ve) {} // 0x0000000189E8B930-0x0000000189E8BA64
+		private static RenderNodeData AccessRenderNodeData(IntPtr obj) => default; // 0x0000000189E8A3CC-0x0000000189E8A4A8
+		private static void OnRenderNodeExecute(IntPtr obj) {} // 0x0000000189E8C29C-0x0000000189E8C3A0
+		private static void OnRegisterIntermediateRenderers(Camera camera) {} // 0x0000000189E8BDE0-0x0000000189E8C1E8
+		private static void OnRegisterIntermediateRendererMat(BaseRuntimePanel rtp, RenderChain renderChain, ref RenderNodeData rnd, Camera camera, int sameDistanceSortPriority) {} // 0x0000000189E8BA64-0x0000000189E8BDE0
+		internal void RepaintTexturedElements() {} // 0x0000000189E8CF58-0x0000000189E8D00C
+		private void OnFontReset(Font font) {} // 0x0000000183D88B20-0x0000000183D88B30
+		public void AppendTexture(VisualElement ve, Texture src, TextureId id, bool isAtlas) {} // 0x0000000189E8A578-0x0000000189E8A62C
+		public void ResetTextures(VisualElement ve) {} // 0x0000000189E8D00C-0x0000000189E8D140
+		private void DrawStats() {} // 0x0000000189E8AD20-0x0000000189E8B680
+		private static VisualElement GetFirstElementInPanel(VisualElement ve) => default; // 0x0000000189E8B72C-0x0000000189E8B758
 	}
 
 	[Flags]
@@ -14430,8 +14587,8 @@ namespace UnityEngine.UIElements.UIR
 	
 		// Constructors
 		public ShaderInfoStorageRGBA32() {} // Dummy constructor
-		public ShaderInfoStorageRGBA32(int initialSize = 64 /* Metadata: 0x01FB60E7 */, int maxSize = 4096 /* Metadata: 0x01FB60E9 */) {} // 0x000000018350B670-0x000000018350B680
-		static ShaderInfoStorageRGBA32() {} // 0x0000000189E96508-0x0000000189E96524
+		public ShaderInfoStorageRGBA32(int initialSize = 64 /* Metadata: 0x01FB60E7 */, int maxSize = 4096 /* Metadata: 0x01FB60E9 */) {} // 0x0000000189E8E1DC-0x0000000189E8E268
+		static ShaderInfoStorageRGBA32() {} // 0x0000000189E8E118-0x0000000189E8E1DC
 	}
 
 	internal class ShaderInfoStorageRGBAFloat : ShaderInfoStorage<UnityEngine.Color> // TypeDefIndex: 43919
@@ -14441,8 +14598,8 @@ namespace UnityEngine.UIElements.UIR
 	
 		// Constructors
 		public ShaderInfoStorageRGBAFloat() {} // Dummy constructor
-		public ShaderInfoStorageRGBAFloat(int initialSize = 64 /* Metadata: 0x01FB60EB */, int maxSize = 4096 /* Metadata: 0x01FB60ED */) {} // 0x000000018350B670-0x000000018350B680
-		static ShaderInfoStorageRGBAFloat() {} // 0x0000000183D65E70-0x0000000183D65E80
+		public ShaderInfoStorageRGBAFloat(int initialSize = 64 /* Metadata: 0x01FB60EB */, int maxSize = 4096 /* Metadata: 0x01FB60ED */) {} // 0x0000000189E8E32C-0x0000000189E8E3B8
+		static ShaderInfoStorageRGBAFloat() {} // 0x0000000189E8E268-0x0000000189E8E32C
 	}
 
 	internal static class Shaders // TypeDefIndex: 43920
@@ -14604,7 +14761,7 @@ namespace UnityEngine.UIElements.UIR
 	internal class VectorImageRenderInfoPool : LinkedPool<VectorImageRenderInfo> // TypeDefIndex: 43928
 	{
 		// Constructors
-		public VectorImageRenderInfoPool() {} // 0x0000000189E965C4-0x0000000189E965E4
+		public VectorImageRenderInfoPool() {} // 0x0000000189E9922C-0x0000000189E993F0
 	}
 
 	internal class VectorImageRenderInfo : LinkedPoolItem<VectorImageRenderInfo> // TypeDefIndex: 43929
@@ -14624,7 +14781,7 @@ namespace UnityEngine.UIElements.UIR
 	internal class GradientRemapPool : LinkedPool<GradientRemap> // TypeDefIndex: 43931
 	{
 		// Constructors
-		public GradientRemapPool() {} // 0x0000000189E965E4-0x0000000189E96604
+		public GradientRemapPool() {} // 0x0000000189E89E48-0x0000000189E8A00C
 	}
 
 	internal class GradientRemap : LinkedPoolItem<GradientRemap> // TypeDefIndex: 43932
@@ -14888,14 +15045,14 @@ namespace UnityEngine.UIElements.UIR
 		private static Texture2D s_DefaultShaderInfoTexARGB8; // 0x68
 	
 		// Properties
-		internal uint maxVerticesPerPage { get; } // 0x0000000189EA6FCC-0x0000000189EA7534 
-		internal bool breakBatches { get; set; } // 0x0000000189EA790C-0x0000000189EA7E80 0x0000000189EA7550-0x0000000189EA790C
-		internal static Texture2D defaultShaderInfoTexFloat { get => default; } // 0x0000000189EA3E88-0x0000000189EA3FA4 
-		internal static Texture2D defaultShaderInfoTexARGB8 { get => default; } // 0x0000000182B84230-0x0000000182B84240 
-		internal static bool vertexTexturingIsAvailable { get => default; } // 0x0000000183D56770-0x0000000183D56780 
-		internal static bool shaderModelIs35 { get => default; } // 0x0000000183D88BC0-0x0000000183D88BD0 
-		private bool fullyCreated { get => default; } // 0x0000000189EA33B0-0x0000000189EA3478 
-		protected bool disposed { get; private set; } // 0x0000000189EA67C0-0x0000000189EA69BC 0x0000000189EA69BC-0x0000000189EA6B9C
+		internal uint maxVerticesPerPage { get; } // 0x0000000183D51860-0x0000000183D51870 
+		internal bool breakBatches { get; set; } // 0x0000000183D5B640-0x0000000183D5B650 0x0000000183D5B670-0x0000000183D5B680
+		internal static Texture2D defaultShaderInfoTexFloat { get => default; } // 0x0000000189EA790C-0x0000000189EA7E80 
+		internal static Texture2D defaultShaderInfoTexARGB8 { get => default; } // 0x0000000189EA7550-0x0000000189EA790C 
+		internal static bool vertexTexturingIsAvailable { get => default; } // 0x0000000189EA801C-0x0000000189EA8400 
+		internal static bool shaderModelIs35 { get => default; } // 0x0000000189EA7E80-0x0000000189EA801C 
+		private bool fullyCreated { get => default; } // 0x0000000182B84230-0x0000000182B84240 
+		protected bool disposed { get; private set; } // 0x0000000183D56770-0x0000000183D56780 0x0000000183D88BC0-0x0000000183D88BD0
 	
 		// Nested types
 		internal struct AllocToUpdate // TypeDefIndex: 43941
@@ -14925,7 +15082,7 @@ namespace UnityEngine.UIElements.UIR
 			public UnityEngine.UIElements.UIR.Page page; // 0x08
 	
 			// Methods
-			public void Dispose() {} // 0x0000000183D51860-0x0000000183D51870
+			public void Dispose() {} // 0x0000000189E9DDC8-0x0000000189E9DDFC
 		}
 	
 		private struct EvaluationState // TypeDefIndex: 43944
@@ -14957,65 +15114,65 @@ namespace UnityEngine.UIElements.UIR
 	
 		// Constructors
 		public UIRenderDevice() {} // Dummy constructor
-		static UIRenderDevice() {} // 0x0000000189EA801C-0x0000000189EA8400
-		public UIRenderDevice(uint initialVertexCapacity = 0 /* Metadata: 0x01FB60FB */, uint initialIndexCapacity = 0 /* Metadata: 0x01FB60FC */) {} // 0x0000000189EA7E80-0x0000000189EA801C
-		protected UIRenderDevice(uint initialVertexCapacity, uint initialIndexCapacity, bool mockDevice) {} // 0x0000000189EA537C-0x0000000189EA5510
+		static UIRenderDevice() {} // 0x0000000189EA6C4C-0x0000000189EA6FCC
+		public UIRenderDevice(uint initialVertexCapacity = 0 /* Metadata: 0x01FB60FB */, uint initialIndexCapacity = 0 /* Metadata: 0x01FB60FC */) {} // 0x0000000189EA7534-0x0000000189EA7550
+		protected UIRenderDevice(uint initialVertexCapacity, uint initialIndexCapacity, bool mockDevice) {} // 0x0000000189EA6FCC-0x0000000189EA7534
 	
 		// Methods
-		private void InitVertexDeclaration() {} // 0x0000000189EA40F0-0x0000000189EA4140
-		private void CompleteCreation() {} // 0x0000000189EA3FA4-0x0000000189EA40F0
-		public void Dispose() {} // 0x0000000189EA661C-0x0000000189EA6710
-		protected virtual void Dispose(bool disposing) {} // 0x0000000189EA27C0-0x0000000189EA2830
+		private void InitVertexDeclaration() {} // 0x0000000189EA537C-0x0000000189EA5510
+		private void CompleteCreation() {} // 0x0000000189EA3E88-0x0000000189EA3FA4
+		public void Dispose() {} // 0x0000000189EA40F0-0x0000000189EA4140
+		protected virtual void Dispose(bool disposing) {} // 0x0000000189EA3FA4-0x0000000189EA40F0
 		public MeshHandle Allocate(uint vertexCount, uint indexCount, out NativeSlice<UnityEngine.UIElements.Vertex> vertexData, out NativeSlice<ushort> indexData, out ushort indexOffset) {
 			vertexData = default;
 			indexData = default;
 			indexOffset = default;
 			return default;
-		} // 0x0000000189EA5E88-0x0000000189EA5FBC
+		} // 0x0000000189EA33B0-0x0000000189EA3478
 		public void Update(MeshHandle mesh, uint vertexCount, out NativeSlice<UnityEngine.UIElements.Vertex> vertexData) {
 			vertexData = default;
-		} // 0x0000000189EA3478-0x0000000189EA3B7C
+		} // 0x0000000189EA67C0-0x0000000189EA69BC
 		public void Update(MeshHandle mesh, uint vertexCount, uint indexCount, out NativeSlice<UnityEngine.UIElements.Vertex> vertexData, out NativeSlice<ushort> indexData, out ushort indexOffset) {
 			vertexData = default;
 			indexData = default;
 			indexOffset = default;
-		} // 0x0000000189EA5FBC-0x0000000189EA661C
-		private void UpdateCopyBackIndices(MeshHandle mesh, bool copyBackIndices) {} // 0x0000000189EA4CBC-0x0000000189EA52C0
-		internal List<AllocToUpdate> ActiveUpdatesForMeshHandle(MeshHandle mesh) => default; // 0x0000000189EA52C0-0x0000000189EA537C
-		private bool TryAllocFromPage(UnityEngine.UIElements.UIR.Page page, uint vertexCount, uint indexCount, ref Alloc va, ref Alloc ia, bool shortLived) => default; // 0x0000000189EA57F8-0x0000000189EA5894
+		} // 0x0000000189EA69BC-0x0000000189EA6B9C
+		private void UpdateCopyBackIndices(MeshHandle mesh, bool copyBackIndices) {} // 0x0000000189EA661C-0x0000000189EA6710
+		internal List<AllocToUpdate> ActiveUpdatesForMeshHandle(MeshHandle mesh) => default; // 0x0000000189EA27C0-0x0000000189EA2830
+		private bool TryAllocFromPage(UnityEngine.UIElements.UIR.Page page, uint vertexCount, uint indexCount, ref Alloc va, ref Alloc ia, bool shortLived) => default; // 0x0000000189EA5E88-0x0000000189EA5FBC
 		private void Allocate(MeshHandle meshHandle, uint vertexCount, uint indexCount, out NativeSlice<UnityEngine.UIElements.Vertex> vertexData, out NativeSlice<ushort> indexData, bool shortLived) {
 			vertexData = default;
 			indexData = default;
-		}
+		} // 0x0000000189EA3478-0x0000000189EA3B7C
 		private void UpdateAfterGPUUsedData(MeshHandle mesh, uint vertexCount, uint indexCount, out NativeSlice<UnityEngine.UIElements.Vertex> vertexData, out NativeSlice<ushort> indexData, out ushort indexOffset, out AllocToUpdate allocToUpdate, bool copyBackIndices) {
 			vertexData = default;
 			indexData = default;
 			indexOffset = default;
 			allocToUpdate = default;
-		} // 0x0000000189EA3CC4-0x0000000189EA3E88
-		public void Free(MeshHandle mesh) {} // 0x0000000189EA3B7C-0x0000000189EA3CC4
-		private static Vector4 GetClipSpaceParams() => default; // 0x0000000189EA4140-0x0000000189EA4C64
-		public void OnFrameRenderingBegin() {} // 0x0000000189EA6710-0x0000000189EA67C0
+		} // 0x0000000189EA5FBC-0x0000000189EA661C
+		public void Free(MeshHandle mesh) {} // 0x0000000189EA4CBC-0x0000000189EA52C0
+		private static Vector4 GetClipSpaceParams() => default; // 0x0000000189EA52C0-0x0000000189EA537C
+		public void OnFrameRenderingBegin() {} // 0x0000000189EA57F8-0x0000000189EA5894
 		private static unsafe NativeSlice<T> PtrToSlice<T>(void* p, int count)
-			where T : struct => default; // 0x0000000189EA5510-0x0000000189EA5760
-		private void ApplyDrawCommandState(RenderChainCommand cmd, int textureSlot, Material newMat, bool newMatDiffers, bool newFontDiffers, ref EvaluationState st) {}
-		private void ApplyBatchState(ref EvaluationState st, bool allowMaterialChange) {} // 0x0000000189EA6B9C-0x0000000189EA6BF8
-		public void EvaluateChain(RenderChainCommand head, Material initialMat, Material defaultMat, Texture gradientSettings, Texture shaderInfo, float pixelsPerPoint, NativeSlice<Transform3x4> transforms, NativeSlice<Vector4> clipRects, MaterialPropertyBlock stateMatProps, bool allowMaterialChange, ref Exception immediateException) {} // 0x0000000189EA2830-0x0000000189EA33B0
-		private void UpdateFenceValue() {} // 0x0000000189EA5D94-0x0000000189EA5E88
-		private unsafe void KickRanges(DrawBufferRange* ranges, ref int rangesReady, ref int rangesStart, int rangesCount, UnityEngine.UIElements.UIR.Page curPage) {} // 0x0000000189EA5894-0x0000000189EA5A1C
+			where T : struct => default;
+		private void ApplyDrawCommandState(RenderChainCommand cmd, int textureSlot, Material newMat, bool newMatDiffers, bool newFontDiffers, ref EvaluationState st) {} // 0x0000000189EA3CC4-0x0000000189EA3E88
+		private void ApplyBatchState(ref EvaluationState st, bool allowMaterialChange) {} // 0x0000000189EA3B7C-0x0000000189EA3CC4
+		public void EvaluateChain(RenderChainCommand head, Material initialMat, Material defaultMat, Texture gradientSettings, Texture shaderInfo, float pixelsPerPoint, NativeSlice<Transform3x4> transforms, NativeSlice<Vector4> clipRects, MaterialPropertyBlock stateMatProps, bool allowMaterialChange, ref Exception immediateException) {} // 0x0000000189EA4140-0x0000000189EA4C64
+		private void UpdateFenceValue() {} // 0x0000000189EA6710-0x0000000189EA67C0
+		private unsafe void KickRanges(DrawBufferRange* ranges, ref int rangesReady, ref int rangesStart, int rangesCount, UnityEngine.UIElements.UIR.Page curPage) {} // 0x0000000189EA5510-0x0000000189EA5760
 		private void DrawRanges<I, T>(Utility.GPUBuffer<I> ib, Utility.GPUBuffer<T> vb, NativeSlice<DrawBufferRange> ranges)
 			where I : struct
-			where T : struct {} // 0x0000000189EA6BF8-0x0000000189EA6C4C
-		private void WaitOnCpuFence(uint fence) {} // 0x0000000189EA4C64-0x0000000189EA4CBC
-		public void AdvanceFrame() {} // 0x0000000183D88BA0-0x0000000183D88BC0
-		private void PruneUnusedPages() {} // 0x0000000189EA5A1C-0x0000000189EA5D94
-		internal static void PrepareForGfxDeviceRecreate() {} // 0x0000000189EA5760-0x0000000189EA57A0
-		internal static void WrapUpGfxDeviceRecreate() {} // 0x0000000189EA57A0-0x0000000189EA57F8
-		internal static void FlushAllPendingDeviceDisposes() {} // 0x0000000189E9DDC8-0x0000000189E9DDFC
-		internal DrawStatistics GatherDrawStatistics() => default; // 0x0000000189EA275C-0x0000000189EA27C0
-		private static void ProcessDeviceFreeQueue() {} // 0x000000018350B670-0x000000018350B680
-		private static void OnEngineUpdateGlobal() {} // 0x0000000189EA270C-0x0000000189EA275C
-		private static void OnFlushPendingResources() {} // 0x000000018350B670-0x000000018350B680
+			where T : struct {}
+		private void WaitOnCpuFence(uint fence) {} // 0x0000000189EA6B9C-0x0000000189EA6BF8
+		public void AdvanceFrame() {} // 0x0000000189EA2830-0x0000000189EA33B0
+		private void PruneUnusedPages() {} // 0x0000000189EA5D94-0x0000000189EA5E88
+		internal static void PrepareForGfxDeviceRecreate() {} // 0x0000000189EA5894-0x0000000189EA5A1C
+		internal static void WrapUpGfxDeviceRecreate() {} // 0x0000000189EA6BF8-0x0000000189EA6C4C
+		internal static void FlushAllPendingDeviceDisposes() {} // 0x0000000189EA4C64-0x0000000189EA4CBC
+		internal DrawStatistics GatherDrawStatistics() => default; // 0x0000000183D88BA0-0x0000000183D88BC0
+		private static void ProcessDeviceFreeQueue() {} // 0x0000000189EA5A1C-0x0000000189EA5D94
+		private static void OnEngineUpdateGlobal() {} // 0x0000000189EA5760-0x0000000189EA57A0
+		private static void OnFlushPendingResources() {} // 0x0000000189EA57A0-0x0000000189EA57F8
 	}
 
 	internal struct Alloc // TypeDefIndex: 43948
@@ -15036,18 +15193,18 @@ namespace UnityEngine.UIElements.UIR
 		private uint m_HighWatermark; // 0x30
 	
 		// Properties
-		public uint totalSize { get; } // 0x0000000189E99880-0x0000000189E998BC 
-		public uint highWatermark { get => default; } // 0x0000000189E99BEC-0x0000000189E99D44 
+		public uint totalSize { get; } // 0x0000000183D4E340-0x0000000183D4E350 
+		public uint highWatermark { get => default; } // 0x0000000183D85A80-0x0000000183D85A90 
 	
 		// Nested types
 		private class BlockPool : LinkedPool<Block> // TypeDefIndex: 43949
 		{
 			// Constructors
-			public BlockPool() {} // 0x0000000183D85A80-0x0000000183D85A90
+			public BlockPool() {} // 0x0000000189E99E54-0x0000000189E99F38
 	
 			// Methods
-			private static Block CreateBlock() => default; // 0x0000000189E99D44-0x0000000189E99E04
-			private static void ResetBlock(Block block) {} // 0x0000000183D4E340-0x0000000183D4E350
+			private static Block CreateBlock() => default; // 0x0000000189E99E04-0x0000000189E99E54
+			private static void ResetBlock(Block block) {} // 0x000000018350B670-0x000000018350B680
 		}
 	
 		private class Block : LinkedPoolItem<Block> // TypeDefIndex: 43950
@@ -15062,22 +15219,22 @@ namespace UnityEngine.UIElements.UIR
 			public bool allocated; // 0x40
 	
 			// Properties
-			public uint size { get => default; } // 0x0000000189E996BC-0x0000000189E99880 
+			public uint size { get => default; } // 0x0000000183D88B90-0x0000000183D88BA0 
 	
 			// Constructors
-			public Block() {} // 0x0000000189E999EC-0x0000000189E99BEC
+			public Block() {} // 0x0000000189E99F38-0x0000000189E99F60
 		}
 	
 		// Constructors
 		public BestFitAllocator() {} // Dummy constructor
-		public BestFitAllocator(uint size) {} // 0x0000000189E998BC-0x0000000189E999EC
+		public BestFitAllocator(uint size) {} // 0x0000000189E99D44-0x0000000189E99E04
 	
 		// Methods
-		public Alloc Allocate(uint size) => default; // 0x0000000189E99E04-0x0000000189E99E54
-		public void Free(Alloc alloc) {} // 0x000000018350B670-0x000000018350B680
-		private Block CoalesceBlockWithPrevious(Block block) => default; // 0x0000000189E99E54-0x0000000189E99F38
-		private Block BestFitFindAvailableBlock(uint size) => default; // 0x0000000183D88B90-0x0000000183D88BA0
-		private void SplitBlock(Block block, uint size) {} // 0x0000000189E99F38-0x0000000189E99F60
+		public Alloc Allocate(uint size) => default; // 0x0000000189E996BC-0x0000000189E99880
+		public void Free(Alloc alloc) {} // 0x0000000189E999EC-0x0000000189E99BEC
+		private Block CoalesceBlockWithPrevious(Block block) => default; // 0x0000000189E998BC-0x0000000189E999EC
+		private Block BestFitFindAvailableBlock(uint size) => default; // 0x0000000189E99880-0x0000000189E998BC
+		private void SplitBlock(Block block, uint size) {} // 0x0000000189E99BEC-0x0000000189E99D44
 	}
 
 	internal class GPUBufferAllocator // TypeDefIndex: 43952
@@ -15108,8 +15265,8 @@ namespace UnityEngine.UIElements.UIR
 		public int framesEmpty; // 0x30
 	
 		// Properties
-		protected bool disposed { get; private set; }
-		public bool isEmpty { get => default; }
+		protected bool disposed { get; private set; } // 0x00000001811797F0-0x0000000181179800 0x0000000183D4E960-0x0000000183D4E970
+		public bool isEmpty { get => default; } // 0x0000000189E9E5FC-0x0000000189E9E658 
 	
 		// Nested types
 		public class DataSet<T> : IDisposable // TypeDefIndex: 43953
@@ -15133,12 +15290,12 @@ namespace UnityEngine.UIElements.UIR
 	
 			// Constructors
 			public DataSet() {} // Dummy constructor
-			public DataSet(Utility.GPUBufferType bufferType, uint totalCount, uint maxQueuedFrameCount, uint updateRangePoolSize, bool mockBuffer) {} // 0x0000000189E9E4B4-0x0000000189E9E5FC
+			public DataSet(Utility.GPUBufferType bufferType, uint totalCount, uint maxQueuedFrameCount, uint updateRangePoolSize, bool mockBuffer) {}
 	
 			// Methods
-			public void Dispose() {} // 0x0000000189E9E464-0x0000000189E9E4B4
+			public void Dispose() {}
 			public void Dispose(bool disposing) {}
-			public void RegisterUpdate(uint start, uint size) {} // 0x0000000189E9E5FC-0x0000000189E9E658
+			public void RegisterUpdate(uint start, uint size) {}
 			private bool HasMappedBufferRange() => default;
 			public void SendUpdates() {}
 			public void SendFullRange() {}
@@ -15148,11 +15305,11 @@ namespace UnityEngine.UIElements.UIR
 	
 		// Constructors
 		public Page() {} // Dummy constructor
-		public Page(uint vertexMaxCount, uint indexMaxCount, uint maxQueuedFrameCount, bool mockPage) {}
+		public Page(uint vertexMaxCount, uint indexMaxCount, uint maxQueuedFrameCount, bool mockPage) {} // 0x0000000189E9E4B4-0x0000000189E9E5FC
 	
 		// Methods
-		public void Dispose() {}
-		protected virtual void Dispose(bool disposing) {}
+		public void Dispose() {} // 0x0000000189E9E464-0x0000000189E9E4B4
+		protected virtual void Dispose(bool disposing) {} // 0x0000000189E9E3E0-0x0000000189E9E464
 	}
 
 	internal enum VertexFlags // TypeDefIndex: 43955
@@ -15363,14 +15520,14 @@ namespace UnityEngine.UIElements.UIR.Implementation
 		private MeshBuilder.AllocMeshData.Allocator m_AllocThroughDrawGradientsDelegate; // 0x150
 	
 		// Properties
-		public MeshGenerationContext meshGenerationContext { get; } // 0x0000000183D88C10-0x0000000183D88C50 
-		public VisualElement currentElement { get; private set; } // 0x0000000183D4FCB0-0x0000000183D4FCC0 0x0000000183D4FCC0-0x0000000183D4FCD0
-		public List<Entry> entries { get => default; } // 0x0000000183D5A800-0x0000000183D5A810 
-		public ClosingInfo closingInfo { get => default; } // 0x0000000183D5A870-0x0000000183D5A880 
-		public int totalVertices { get; private set; } // 0x0000000183D57C60-0x0000000183D57C70 0x0000000183D6DF80-0x0000000183D6DF90
-		public int totalIndices { get; private set; } // 0x0000000189EB5C04-0x0000000189EB5C54 0x0000000189EB5C54-0x0000000189EB5CD4
-		protected bool disposed { get; private set; } // 0x0000000189EB57D0-0x0000000189EB5C04 0x0000000189EB9B14-0x0000000189EB9B84
-		public VisualElement visualElement { get => default; } // 0x0000000189EB4F00-0x0000000189EB5224 
+		public MeshGenerationContext meshGenerationContext { get; } // 0x0000000183D570A0-0x0000000183D570B0 
+		public VisualElement currentElement { get; private set; } // 0x0000000183D570E0-0x0000000183D570F0 0x00000001858B3C90-0x00000001858B3CA4
+		public List<Entry> entries { get => default; } // 0x0000000183D61D00-0x0000000183D61D10 
+		public ClosingInfo closingInfo { get => default; } // 0x0000000183D88C10-0x0000000183D88C50 
+		public int totalVertices { get; private set; } // 0x0000000183D4FCB0-0x0000000183D4FCC0 0x0000000183D4FCC0-0x0000000183D4FCD0
+		public int totalIndices { get; private set; } // 0x0000000183D5A800-0x0000000183D5A810 0x0000000183D5A870-0x0000000183D5A880
+		protected bool disposed { get; private set; } // 0x0000000183D57C60-0x0000000183D57C70 0x0000000183D6DF80-0x0000000183D6DF90
+		public VisualElement visualElement { get => default; } // 0x0000000183D88C50-0x0000000183D88C60 
 	
 		// Nested types
 		internal struct Entry // TypeDefIndex: 43963
@@ -15423,47 +15580,47 @@ namespace UnityEngine.UIElements.UIR.Implementation
 				pool = default;
 				excess = default;
 				takenFromPool = default;
-			} // 0x0000000189EB99B8-0x0000000189EB9A7C
+			}
 	
 			// Methods
-			public void Dispose() {} // 0x0000000189EB5224-0x0000000189EB5304
-			internal NativeSlice<T> Alloc(uint count) => default; // 0x0000000189EB5330-0x0000000189EB535C
-			internal void SessionDone() {} // 0x0000000189EB5304-0x0000000189EB5330
+			public void Dispose() {}
+			internal NativeSlice<T> Alloc(uint count) => default;
+			internal void SessionDone() {}
 		}
 	
 		// Constructors
 		public UIRStylePainter() {} // Dummy constructor
-		public UIRStylePainter(RenderChain renderChain) {} // 0x0000000183D61D00-0x0000000183D61D10
+		public UIRStylePainter(RenderChain renderChain) {} // 0x0000000189EB9FB4-0x0000000189EBA368
 	
 		// Methods
-		private MeshWriteData GetPooledMeshWriteData() => default; // 0x0000000189EB9FB4-0x0000000189EBA368
-		private MeshWriteData AllocRawVertsIndices(uint vertexCount, uint indexCount, ref MeshBuilder.AllocMeshData allocatorData) => default; // 0x0000000183D570A0-0x0000000183D570B0
-		private MeshWriteData AllocThroughDrawMesh(uint vertexCount, uint indexCount, ref MeshBuilder.AllocMeshData allocatorData) => default; // 0x0000000183D570E0-0x0000000183D570F0
-		private MeshWriteData AllocThroughDrawGradients(uint vertexCount, uint indexCount, ref MeshBuilder.AllocMeshData allocatorData) => default; // 0x00000001858B3C90-0x00000001858B3CA4
-		public void Dispose() {} // 0x0000000189EB9A7C-0x0000000189EB9B14
-		protected void Dispose(bool disposing) {} // 0x0000000189EB4C64-0x0000000189EB4F00
-		public void Begin(VisualElement ve) {} // 0x0000000189EB5FB8-0x0000000189EB63EC
-		public void LandClipUnregisterMeshDrawCommand(RenderChainCommand cmd) {} // 0x0000000189EB7B70-0x0000000189EB7CBC
-		public void LandClipRegisterMesh(NativeSlice<UnityEngine.UIElements.Vertex> vertices, NativeSlice<ushort> indices, int indexOffset) {} // 0x0000000189EB754C-0x0000000189EB7B70
-		public MeshWriteData AddGradientsEntry(int vertexCount, int indexCount, TextureId texture, Material material, MeshGenerationContext.MeshFlags flags) => default; // 0x0000000189EB701C-0x0000000189EB754C
-		public MeshWriteData DrawMesh(int vertexCount, int indexCount, Texture texture, Material material, MeshGenerationContext.MeshFlags flags) => default; // 0x0000000189EB63EC-0x0000000189EB6AB0
-		public void DrawText(MeshGenerationContextUtils.TextParams textParams, ITextHandle handle, float pixelsPerPoint) {} // 0x0000000189EB5CD4-0x0000000189EB5E9C
-		internal void DrawTextNative(MeshGenerationContextUtils.TextParams textParams, ITextHandle handle, float pixelsPerPoint) {} // 0x0000000189EB5E9C-0x0000000189EB5FB8
-		internal void DrawTextCore(MeshGenerationContextUtils.TextParams textParams, ITextHandle handle, float pixelsPerPoint) {} // 0x0000000183D88C50-0x0000000183D88C60
-		public void DrawRectangle(MeshGenerationContextUtils.RectangleParams rectParams) {} // 0x0000000189EB81A8-0x0000000189EB8C10
-		public void DrawBorder(MeshGenerationContextUtils.BorderParams borderParams) {} // 0x0000000189EB8C10-0x0000000189EB9100
-		public void DrawImmediate(Action callback, bool cullingEnabled) {} // 0x0000000189EB55E8-0x0000000189EB57D0
-		public void DrawVisualElementBackground() {} // 0x0000000189EB6AB0-0x0000000189EB701C
-		public void DrawVisualElementBorder() {} // 0x0000000189EB535C-0x0000000189EB55E8
-		public void ApplyVisualElementClipping() {} // 0x0000000189EB7CBC-0x0000000189EB81A8
-		private ushort[] AdjustSpriteWinding(Vector2[] vertices, ushort[] indices) => default; // 0x0000000189EB9B84-0x0000000189EB9C74
-		public void DrawSprite(MeshGenerationContextUtils.RectangleParams rectParams) {} // 0x0000000189EB9C74-0x0000000189EB9FB4
-		private void ApplyInset(ref MeshGenerationContextUtils.RectangleParams rectParams, Texture tex) {} // 0x0000000189EB9100-0x0000000189EB9740
-		public void DrawVectorImage(MeshGenerationContextUtils.RectangleParams rectParams) {} // 0x0000000189EB9740-0x0000000189EB99B8
-		internal void Reset() {}
-		private void ValidateMeshWriteData() {}
-		private void GenerateStencilClipEntryForRoundedRectBackground() {}
-		private void GenerateStencilClipEntryForSVGBackground() {}
+		private MeshWriteData GetPooledMeshWriteData() => default; // 0x0000000189EB99B8-0x0000000189EB9A7C
+		private MeshWriteData AllocRawVertsIndices(uint vertexCount, uint indexCount, ref MeshBuilder.AllocMeshData allocatorData) => default; // 0x0000000189EB5224-0x0000000189EB5304
+		private MeshWriteData AllocThroughDrawMesh(uint vertexCount, uint indexCount, ref MeshBuilder.AllocMeshData allocatorData) => default; // 0x0000000189EB5330-0x0000000189EB535C
+		private MeshWriteData AllocThroughDrawGradients(uint vertexCount, uint indexCount, ref MeshBuilder.AllocMeshData allocatorData) => default; // 0x0000000189EB5304-0x0000000189EB5330
+		public void Dispose() {} // 0x0000000189EB5C04-0x0000000189EB5C54
+		protected void Dispose(bool disposing) {} // 0x0000000189EB5C54-0x0000000189EB5CD4
+		public void Begin(VisualElement ve) {} // 0x0000000189EB57D0-0x0000000189EB5C04
+		public void LandClipUnregisterMeshDrawCommand(RenderChainCommand cmd) {} // 0x0000000189EB9B14-0x0000000189EB9B84
+		public void LandClipRegisterMesh(NativeSlice<UnityEngine.UIElements.Vertex> vertices, NativeSlice<ushort> indices, int indexOffset) {} // 0x0000000189EB9A7C-0x0000000189EB9B14
+		public MeshWriteData AddGradientsEntry(int vertexCount, int indexCount, TextureId texture, Material material, MeshGenerationContext.MeshFlags flags) => default; // 0x0000000189EB4C64-0x0000000189EB4F00
+		public MeshWriteData DrawMesh(int vertexCount, int indexCount, Texture texture, Material material, MeshGenerationContext.MeshFlags flags) => default; // 0x0000000189EB5FB8-0x0000000189EB63EC
+		public void DrawText(MeshGenerationContextUtils.TextParams textParams, ITextHandle handle, float pixelsPerPoint) {} // 0x0000000189EB7B70-0x0000000189EB7CBC
+		internal void DrawTextNative(MeshGenerationContextUtils.TextParams textParams, ITextHandle handle, float pixelsPerPoint) {} // 0x0000000189EB754C-0x0000000189EB7B70
+		internal void DrawTextCore(MeshGenerationContextUtils.TextParams textParams, ITextHandle handle, float pixelsPerPoint) {} // 0x0000000189EB701C-0x0000000189EB754C
+		public void DrawRectangle(MeshGenerationContextUtils.RectangleParams rectParams) {} // 0x0000000189EB63EC-0x0000000189EB6AB0
+		public void DrawBorder(MeshGenerationContextUtils.BorderParams borderParams) {} // 0x0000000189EB5CD4-0x0000000189EB5E9C
+		public void DrawImmediate(Action callback, bool cullingEnabled) {} // 0x0000000189EB5E9C-0x0000000189EB5FB8
+		public void DrawVisualElementBackground() {} // 0x0000000189EB81A8-0x0000000189EB8C10
+		public void DrawVisualElementBorder() {} // 0x0000000189EB8C10-0x0000000189EB9100
+		public void ApplyVisualElementClipping() {} // 0x0000000189EB55E8-0x0000000189EB57D0
+		private ushort[] AdjustSpriteWinding(Vector2[] vertices, ushort[] indices) => default; // 0x0000000189EB4F00-0x0000000189EB5224
+		public void DrawSprite(MeshGenerationContextUtils.RectangleParams rectParams) {} // 0x0000000189EB6AB0-0x0000000189EB701C
+		private void ApplyInset(ref MeshGenerationContextUtils.RectangleParams rectParams, Texture tex) {} // 0x0000000189EB535C-0x0000000189EB55E8
+		public void DrawVectorImage(MeshGenerationContextUtils.RectangleParams rectParams) {} // 0x0000000189EB7CBC-0x0000000189EB81A8
+		internal void Reset() {} // 0x0000000189EB9B84-0x0000000189EB9C74
+		private void ValidateMeshWriteData() {} // 0x0000000189EB9C74-0x0000000189EB9FB4
+		private void GenerateStencilClipEntryForRoundedRectBackground() {} // 0x0000000189EB9100-0x0000000189EB9740
+		private void GenerateStencilClipEntryForSVGBackground() {} // 0x0000000189EB9740-0x0000000189EB99B8
 	}
 
 	internal class UIRTextUpdatePainter : IStylePainter, IDisposable // TypeDefIndex: 43967
