@@ -5,203 +5,63 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
-using UnityEngine.Bindings;
 using UnityEngine.Events;
 using UnityEngine.Experimental.Rendering;
 using UnityEngine.HyperGryph;
 using UnityEngine.HyperGryph.ECS;
-using UnityEngine.Internal;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.RendererUtils;
-using UnityEngine.Scripting;
 
-// Image 55: UnityEngine.HGGraphicsModule.dll - Assembly: UnityEngine.HGGraphicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 57362-57600
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
-[assembly: InternalsVisibleTo("UnityEngine")]
-[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
-[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
-[assembly: InternalsVisibleTo("Unity.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
-[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
-[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
-[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
-[assembly: InternalsVisibleTo("Unity.Automation")]
-[assembly: InternalsVisibleTo("Unity.Burst")]
-[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
-[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
-[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
-[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
-[assembly: InternalsVisibleTo("Unity.Timeline")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
-[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
-[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
-[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
-[assembly: InternalsVisibleTo("Unity.UIElements")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
-[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
-[assembly: InternalsVisibleTo("UnityEngine.UI")]
-[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
-[assembly: InternalsVisibleTo("Unity.Services.QoS")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("Unity.Collections")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.Core")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
-[assembly: InternalsVisibleTo("Unity.Logging")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
-[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
-[assembly: InternalsVisibleTo("UnityEngine.Networking")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: UnityEngineModuleAssembly]
+// Image 55: UnityEngine.HGGraphicsModule.dll - Assembly: UnityEngine.HGGraphicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 58367-58604
+
+namespace Microsoft.CodeAnalysis
+{
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 58368
+	{
+		// Constructors
+		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+}
+
+namespace System.Runtime.CompilerServices
+{
+	internal sealed class IsReadOnlyAttribute : Attribute // TypeDefIndex: 58369
+	{
+		// Constructors
+		public IsReadOnlyAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 58370
+	{
+		// Constructors
+		public IsUnmanagedAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+}
 
 namespace UnityEngine
 {
-	[NativeHeader("Modules/HGGraphics/Public/CapsuleShadow/HGCapsuleBindingComponent.h")]
-	public class HGCapsuleBindingComponent : Component // TypeDefIndex: 57366
+	public class HGCapsuleBindingComponent : Component // TypeDefIndex: 58371
 	{
 		// Properties
-		public bool enabled { set {} } // 0x0000000183228D00-0x0000000183228D50
-		public float capsuleRadius { set {} } // 0x0000000183228D50-0x0000000183228DA0
-		public float capsuleHeight { set {} } // 0x0000000183228DA0-0x0000000183228DF0
-		public Vector3 localOffset { set {} } // 0x0000000184275E98-0x0000000184275EAC
-		public Vector3 localRotation { set {} } // 0x0000000184275EAC-0x0000000184275EC0
-		public float intensityScale { set {} } // 0x0000000183228DF0-0x0000000183228E40
-		public bool forceRender { set {} } // 0x0000000183228E40-0x0000000183228E90
+		public bool enabled { set {} } // 0x0000000185188CB0-0x0000000185188D00
+		public float capsuleRadius { set {} } // 0x0000000185188D00-0x0000000185188D50
+		public float capsuleHeight { set {} } // 0x0000000185188D50-0x0000000185188DA0
+		public Vector3 localOffset { set {} } // 0x0000000186473754-0x0000000186473768
+		public Vector3 localRotation { set {} } // 0x0000000186473768-0x000000018647377C
+		public float intensityScale { set {} } // 0x0000000185188DA0-0x0000000185188DF0
+		public bool forceRender { set {} } // 0x0000000185188DF0-0x0000000185188E40
 	
 		// Constructors
 		public HGCapsuleBindingComponent() {} // Dummy constructor
 	
 		// Methods
-		private void set_localOffset_Injected(ref Vector3 value) {} // 0x0000000183228E90-0x0000000183228EE0
-		private void set_localRotation_Injected(ref Vector3 value) {} // 0x0000000183228EE0-0x0000000183228F30
+		private void set_localOffset_Injected(ref Vector3 value) {} // 0x0000000185188E40-0x0000000185188E90
+		private void set_localRotation_Injected(ref Vector3 value) {} // 0x0000000185188E90-0x0000000185188EE0
 	}
 
-	public enum HGDecalShapeType // TypeDefIndex: 57367
+	public enum HGDecalShapeType // TypeDefIndex: 58372
 	{
 		Box = 0,
 		Cylinder = 1,
@@ -210,15 +70,14 @@ namespace UnityEngine
 		Mesh = 255
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/Decal/HGDecalProjector.h")]
-	public sealed class HGDecalProjector : UnityEngine.Behaviour // TypeDefIndex: 57368
+	public sealed class HGDecalProjector : UnityEngine.Behaviour // TypeDefIndex: 58373
 	{
 		// Properties
-		public HGDecalShapeType shapeType { get => default; } // 0x0000000189DF5A18-0x0000000189DF5A4C 
-		public Material material { get => default; set {} } // 0x0000000189DF59E4-0x0000000189DF5A18 0x0000000189DF5B0C-0x0000000189DF5B50
-		public UnityEngine.Color baseColor { get => default; set {} } // 0x0000000189DF59B8-0x0000000189DF59E4 0x0000000189DF5AF8-0x0000000189DF5B0C
-		public Vector2 uvOffset { get => default; set {} } // 0x0000000189DF5A90-0x0000000189DF5AB4 0x0000000189DF5BD8-0x0000000189DF5BF4
-		public float sectorAngle { set {} } // 0x0000000189DF5B50-0x0000000189DF5B94
+		public HGDecalShapeType shapeType { get => default; } // 0x000000018BF0D7C8-0x000000018BF0D7FC 
+		public Material material { get => default; set {} } // 0x000000018BF0D794-0x000000018BF0D7C8 0x000000018BF0D8BC-0x000000018BF0D900
+		public UnityEngine.Color baseColor { get => default; set {} } // 0x000000018BF0D768-0x000000018BF0D794 0x000000018BF0D8A8-0x000000018BF0D8BC
+		public Vector2 uvOffset { get => default; set {} } // 0x000000018BF0D840-0x000000018BF0D864 0x000000018BF0D988-0x000000018BF0D9A4
+		public float sectorAngle { set {} } // 0x000000018BF0D900-0x000000018BF0D944
 	
 		// Constructors
 		public HGDecalProjector() {} // Dummy constructor
@@ -226,44 +85,39 @@ namespace UnityEngine
 		// Methods
 		private void get_baseColor_Injected(out UnityEngine.Color ret) {
 			ret = default;
-		} // 0x0000000189DF5974-0x0000000189DF59B8
-		private void set_baseColor_Injected(ref UnityEngine.Color value) {} // 0x0000000189DF5AB4-0x0000000189DF5AF8
+		} // 0x000000018BF0D724-0x000000018BF0D768
+		private void set_baseColor_Injected(ref UnityEngine.Color value) {} // 0x000000018BF0D864-0x000000018BF0D8A8
 		private void get_uvOffset_Injected(out Vector2 ret) {
 			ret = default;
-		} // 0x0000000189DF5A4C-0x0000000189DF5A90
-		private void set_uvOffset_Injected(ref Vector2 value) {} // 0x0000000189DF5B94-0x0000000189DF5BD8
+		} // 0x000000018BF0D7FC-0x000000018BF0D840
+		private void set_uvOffset_Injected(ref Vector2 value) {} // 0x000000018BF0D944-0x000000018BF0D988
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/OC/HGOccluder.h")]
-	public sealed class HGOccluder : Component // TypeDefIndex: 57369
+	public sealed class HGOccluder : Component // TypeDefIndex: 58374
 	{
 		// Properties
-		public bool enabled { get => default; set {} } // 0x0000000189DF6FEC-0x0000000189DF7020 0x0000000189DF7054-0x0000000189DF7098
-		public HGSoftwareOcclusionCullingData occluderData { get => default; set {} } // 0x0000000189DF7020-0x0000000189DF7054 0x0000000189DF7098-0x0000000189DF70DC
+		public bool enabled { get => default; set {} } // 0x000000018BF0ED9C-0x000000018BF0EDD0 0x000000018BF0EE04-0x000000018BF0EE48
+		public HGSoftwareOcclusionCullingData occluderData { get => default; set {} } // 0x000000018BF0EDD0-0x000000018BF0EE04 0x000000018BF0EE48-0x000000018BF0EE8C
 	
 		// Constructors
-		public HGOccluder() {} // 0x000000018426FE60-0x000000018426FE68
+		public HGOccluder() {} // 0x000000018646DB20-0x000000018646DB28
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/OC/HGSoftwareOcclusionCullingData.h")]
-	[NativeHeader("Modules/HGGraphics/Public/ScriptBindings/HGSoftwareOcclusionCulling.bindings.h")]
-	[UsedByNativeCode]
-	public sealed class HGSoftwareOcclusionCullingData : UnityEngine.Object // TypeDefIndex: 57370
+	public sealed class HGSoftwareOcclusionCullingData : UnityEngine.Object // TypeDefIndex: 58375
 	{
 		// Properties
-		public int quadCount { get => default; } // 0x0000000189DF7C04-0x0000000189DF7C38 
+		public int quadCount { get => default; } // 0x000000018BF0F9CC-0x000000018BF0FA00 
 	
 		// Constructors
-		public HGSoftwareOcclusionCullingData() {} // 0x0000000189DF7BB8-0x0000000189DF7C04
+		public HGSoftwareOcclusionCullingData() {} // 0x000000018BF0F980-0x000000018BF0F9CC
 	
 		// Methods
-		[FreeFunction("HGSoftwareOcclusionCulling_Bindings::CreateOcclusionCullingData")]
-		private static void Internal_Create([Writable] HGSoftwareOcclusionCullingData cullingData) {} // 0x0000000189DF7B84-0x0000000189DF7BB8
-		public void GetOccluderData(NativeArray<float> centerXs, NativeArray<float> centerYs, NativeArray<float> centerZs, NativeArray<float> extentXs, NativeArray<float> extentYs, NativeArray<float> extentZs, NativeArray<Vector3> vertexData, ref int quadCount) {} // 0x0000000189DF7A28-0x0000000189DF7B84
-		public void GetOccluderData(IntPtr centerXs, IntPtr centerYs, IntPtr centerZs, IntPtr extentXs, IntPtr extentYs, IntPtr extentZs, IntPtr vertexData, ref int quadCount) {} // 0x0000000189DF79C4-0x0000000189DF7A28
+		private static void Internal_Create(HGSoftwareOcclusionCullingData cullingData) {} // 0x000000018BF0F94C-0x000000018BF0F980
+		public void GetOccluderData(NativeArray<float> centerXs, NativeArray<float> centerYs, NativeArray<float> centerZs, NativeArray<float> extentXs, NativeArray<float> extentYs, NativeArray<float> extentZs, NativeArray<Vector3> vertexData, ref int quadCount) {} // 0x000000018BF0F7F0-0x000000018BF0F94C
+		public void GetOccluderData(IntPtr centerXs, IntPtr centerYs, IntPtr centerZs, IntPtr extentXs, IntPtr extentYs, IntPtr extentZs, IntPtr vertexData, ref int quadCount) {} // 0x000000018BF0F78C-0x000000018BF0F7F0
 	}
 
-	public enum TransformAnimatedPhasePlayMode // TypeDefIndex: 57371
+	public enum TransformAnimatedPhasePlayMode // TypeDefIndex: 58376
 	{
 		TransformAnimatedPhaseCurrent = 0,
 		TransformAnimatedPhaseSequence = 1,
@@ -271,8 +125,7 @@ namespace UnityEngine
 	}
 
 	[Serializable]
-	[UsedByNativeCode]
-	public struct TransformAnimatedCurveData // TypeDefIndex: 57372
+	public struct TransformAnimatedCurveData // TypeDefIndex: 58377
 	{
 		// Fields
 		public byte[] data; // 0x00
@@ -280,8 +133,7 @@ namespace UnityEngine
 	}
 
 	[Serializable]
-	[UsedByNativeCode]
-	public struct TransformMotionPhase // TypeDefIndex: 57373
+	public struct TransformMotionPhase // TypeDefIndex: 58378
 	{
 		// Fields
 		public Vector3 translationSpeed; // 0x00
@@ -290,7 +142,7 @@ namespace UnityEngine
 		public float duration; // 0x24
 	}
 
-	public struct HGTransformAnimatedProfile // TypeDefIndex: 57374
+	public struct HGTransformAnimatedProfile // TypeDefIndex: 58379
 	{
 		// Fields
 		public TransformMotionPhase[] motionPhaseProfiles; // 0x00
@@ -298,8 +150,7 @@ namespace UnityEngine
 		public TransformAnimatedPhasePlayMode phasePlayMode; // 0x18
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/TransformAnimated/HGTransformAnimatedBehaviour.h")]
-	public sealed class HGTransformAnimatedBehaviour : UnityEngine.Behaviour // TypeDefIndex: 57375
+	public sealed class HGTransformAnimatedBehaviour : UnityEngine.Behaviour // TypeDefIndex: 58380
 	{
 		// Fields
 		public HGTransformAnimatedProfile profileData; // 0x18
@@ -307,124 +158,97 @@ namespace UnityEngine
 		public Renderer shadowProxyRenderer; // 0x40
 	
 		// Constructors
-		public HGTransformAnimatedBehaviour() {} // 0x000000018426FE60-0x000000018426FE68
+		public HGTransformAnimatedBehaviour() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		public void SetPause() {} // 0x0000000189DF8894-0x0000000189DF88C8
-		public void Play() {} // 0x0000000189DF8820-0x0000000189DF8854
-		public float GetTimeScale() => default; // 0x0000000189DF8770-0x0000000189DF87A4
-		public void SetTimeScale(float scale) {} // 0x0000000189DF88C8-0x0000000189DF890C
-		public void SetCurrentPhaseIndex(int phase) {} // 0x0000000189DF8854-0x0000000189DF8894
-		public int GetCurrentPhaseIndex() => default; // 0x0000000189DF873C-0x0000000189DF8770
-		public Matrix4x4 GetWorldMatrix() => default; // 0x0000000189DF87E8-0x0000000189DF8820
-		public void SetUseLogicTime(bool useLogicTime) {} // 0x0000000189DF890C-0x0000000189DF8950
-		public bool UseLogicTime() => default; // 0x0000000189DF8950-0x0000000189DF8984
+		public void SetPause() {} // 0x000000018BF1065C-0x000000018BF10690
+		public void Play() {} // 0x000000018BF105E8-0x000000018BF1061C
+		public float GetTimeScale() => default; // 0x000000018BF10538-0x000000018BF1056C
+		public void SetTimeScale(float scale) {} // 0x000000018BF10690-0x000000018BF106D4
+		public void SetCurrentPhaseIndex(int phase) {} // 0x000000018BF1061C-0x000000018BF1065C
+		public int GetCurrentPhaseIndex() => default; // 0x000000018BF10504-0x000000018BF10538
+		public Matrix4x4 GetWorldMatrix() => default; // 0x000000018BF105B0-0x000000018BF105E8
+		public void SetUseLogicTime(bool useLogicTime) {} // 0x000000018BF106D4-0x000000018BF10718
+		public bool UseLogicTime() => default; // 0x000000018BF10718-0x000000018BF1074C
 		private void GetWorldMatrix_Injected(out Matrix4x4 ret) {
 			ret = default;
-		} // 0x0000000189DF87A4-0x0000000189DF87E8
+		} // 0x000000018BF1056C-0x000000018BF105B0
 	}
 
-	public static class HGTransformAnimatedSystemCPP // TypeDefIndex: 57376
+	public static class HGTransformAnimatedSystemCPP // TypeDefIndex: 58381
 	{
 		// Methods
-		[FreeFunction("HGTransformAnimatedSystemCPP_Create")]
-		[NativeHeader("Modules/HGGraphics/Public/TransformAnimated/HGTransformAnimatedSystem.h")]
-		public static long HGTransformAnimatedSystemCPP_Create() => default; // 0x0000000182EC5780-0x0000000182EC57C0
-		[FreeFunction("HGTransformAnimatedSystemCPP_UpdateAbsoluteTime")]
-		[NativeHeader("Modules/HGGraphics/Public/TransformAnimated/HGTransformAnimatedSystem.h")]
-		public static void HGTransformAnimatedSystemCPP_UpdateAbsoluteTime(long ptr, float absoluteTimeSec) {} // 0x0000000182EC5730-0x0000000182EC5780
-		[FreeFunction("HGTransformAnimatedSystemCPP_Destroy")]
-		[NativeHeader("Modules/HGGraphics/Public/TransformAnimated/HGTransformAnimatedSystem.h")]
-		public static void HGTransformAnimatedSystemCPP_Destroy(long ptr) {} // 0x0000000189DF8984-0x0000000189DF89B8
+		public static long HGTransformAnimatedSystemCPP_Create() => default; // 0x0000000184CAD6A0-0x0000000184CAD6E0
+		public static void HGTransformAnimatedSystemCPP_UpdateAbsoluteTime(long ptr, float absoluteTimeSec) {} // 0x0000000184CAD650-0x0000000184CAD6A0
+		public static void HGTransformAnimatedSystemCPP_Destroy(long ptr) {} // 0x000000018BF1074C-0x000000018BF10780
 	}
 
-	public class HGWindFoliageSyncSystemCPP // TypeDefIndex: 57377
+	public class HGWindFoliageSyncSystemCPP // TypeDefIndex: 58382
 	{
 		// Constructors
 		public HGWindFoliageSyncSystemCPP() {} // Dummy constructor
 	
 		// Methods
-		[FreeFunction("HGWindFoliageSyncSystemCPP_Create")]
-		[NativeHeader("Modules/HGGraphics/Public/TransformAnimated/HGWindFoliageSyncTransformSystem.h")]
-		public static long HGWindFoliageSyncSystemCPP_Create() => default; // 0x0000000182E79AB0-0x0000000182E79AF0
-		[FreeFunction("HGWindFoliageSyncSystemCPP_UpdateWindParam")]
-		[NativeHeader("Modules/HGGraphics/Public/TransformAnimated/HGWindFoliageSyncTransformSystem.h")]
-		public static unsafe void HGWindFoliageSyncSystemCPP_UpdateWindParam(long _ptr, Vector4 windGlobalParam, float* windMotorParam0, float* windMotorParam1, float* windMotorParam2, float* windMotorParam3, Vector4 count, float time, float lastTime) {} // 0x0000000184270C64-0x0000000184270CC0
-		[FreeFunction("HGWindFoliageSyncSystemCPP_Destroy")]
-		[NativeHeader("Modules/HGGraphics/Public/TransformAnimated/HGWindFoliageSyncTransformSystem.h")]
-		public static void HGWindFoliageSyncSystemCPP_Destroy(long _ptr) {} // 0x0000000189DF8BB8-0x0000000189DF8BEC
-		private static unsafe void HGWindFoliageSyncSystemCPP_UpdateWindParam_Injected(long _ptr, ref Vector4 windGlobalParam, float* windMotorParam0, float* windMotorParam1, float* windMotorParam2, float* windMotorParam3, ref Vector4 count, float time, float lastTime) {} // 0x0000000183059240-0x00000001830592B0
+		public static long HGWindFoliageSyncSystemCPP_Create() => default; // 0x000000018448EE50-0x000000018448EE90
+		public static unsafe void HGWindFoliageSyncSystemCPP_UpdateWindParam(long _ptr, Vector4 windGlobalParam, float* windMotorParam0, float* windMotorParam1, float* windMotorParam2, float* windMotorParam3, Vector4 count, float time, float lastTime) {} // 0x000000018646EEB0-0x000000018646EF0C
+		public static void HGWindFoliageSyncSystemCPP_Destroy(long _ptr) {} // 0x000000018BF1091C-0x000000018BF10950
+		private static unsafe void HGWindFoliageSyncSystemCPP_UpdateWindParam_Injected(long _ptr, ref Vector4 windGlobalParam, float* windMotorParam0, float* windMotorParam1, float* windMotorParam2, float* windMotorParam3, ref Vector4 count, float time, float lastTime) {} // 0x0000000184EF49B0-0x0000000184EF4A20
 	}
 }
 
 namespace UnityEngine.HyperGryph
 {
-	[NativeHeader("Modules/StreamLine/StreamlineDLSSG.h")]
-	[NativeHeader("Modules/StreamLine/StreamlineReflex.h")]
-	[NativeHeader("Modules/StreamLine/StreamlineDLSS.h")]
-	[NativeHeader("Modules/HGGraphics/Public/DLSS/HGDLSSUtil.h")]
-	[UsedByNativeCode]
-	public struct HGDLSSUtil // TypeDefIndex: 57378
+	public struct HGDLSSUtil // TypeDefIndex: 58383
 	{
 		// Methods
-		[FreeFunction("IsStreamlineDLSSSupported")]
-		[UsedByNativeCode]
-		public static bool IsStreamlineDLSSSupported() => default; // 0x0000000183D470D0-0x0000000183D47110
-		[FreeFunction("IsStreamlineDLSSGSupported")]
-		[UsedByNativeCode]
-		public static bool IsStreamlineDLSSGSupported() => default; // 0x0000000183B0DE90-0x0000000183B0DED0
-		[FreeFunction("IsLowLatencyAvailable")]
-		[UsedByNativeCode]
-		public static bool IsLowLatencyAvailable() => default; // 0x0000000189DF5948-0x0000000189DF5974
+		public static bool IsStreamlineDLSSSupported() => default; // 0x0000000184E74360-0x0000000184E743A0
+		public static bool IsStreamlineDLSSGSupported() => default; // 0x0000000184E74320-0x0000000184E74360
+		public static bool IsLowLatencyAvailable() => default; // 0x000000018BF0D6F8-0x000000018BF0D724
 	}
 
-	[NativeType("Modules/HGGraphics/Public/GPUDriven/Version1/GPUDrivenRendererV1.h")]
-	[StaticAccessor("GetGPUDrivenRendererV1()", StaticAccessorType.Dot)]
-	public static class GPUDrivenRendererV1 // TypeDefIndex: 57379
+	public static class GPUDrivenRendererV1 // TypeDefIndex: 58384
 	{
 		// Methods
-		private static void CreateRendererListWithPreZ(uint viewHandle, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, IntPtr context, bool retainCustomDS, ref uint normalList, ref uint preZPart0List, ref uint preZPart1List, ref Matrix4x4 prevViewProjection) {} // 0x0000000189DF535C-0x0000000189DF53BC
-		public static bool Valid() => default; // 0x00000001832437E0-0x0000000183243950
+		private static void CreateRendererListWithPreZ(uint viewHandle, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, IntPtr context, bool retainCustomDS, ref uint normalList, ref uint preZPart0List, ref uint preZPart1List, ref Matrix4x4 prevViewProjection) {} // 0x000000018BF0D10C-0x000000018BF0D16C
+		public static bool Valid() => default; // 0x000000018519E220-0x000000018519E390
 		public static void CreateRendererListWithPreZ(uint viewHandle, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, IntPtr context, bool retainCustomDS, out uint normalList, out uint preZPart0List, out uint preZPart1List, ref Matrix4x4 prevViewProjection) {
 			normalList = default;
 			preZPart0List = default;
 			preZPart1List = default;
-		} // 0x0000000189DF5334-0x0000000189DF535C
-		public static void DrawRendererList(CommandBuffer cmd, uint rendererList, bool renderDepthOnly) {} // 0x0000000189DF5490-0x0000000189DF54AC
-		public static void AdvanceFrame() {} // 0x0000000189DF51F8-0x0000000189DF5224
-		public static bool CullingInspectionMode() => default; // 0x0000000189DF53BC-0x0000000189DF53E8
-		public static void PopulatePerFrameData(CommandBuffer cmd, uint threadGroupSize, uint hzbWidth, uint hzbHeight, bool usePrevVP = false /* Metadata: 0x01FD9D41 */) {} // 0x0000000189DF54AC-0x0000000189DF550C
-		public static void BindFrameConstantsBuffer(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x0000000189DF52E0-0x0000000189DF5334
-		public static void BindFrameConstantsBufferGlobal(CommandBuffer cmd) {} // 0x0000000189DF52AC-0x0000000189DF52E0
-		public static void BindBuffersForCulling(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x0000000189DF5224-0x0000000189DF5278
-		public static void BindBuffersForRendering(CommandBuffer cmd) {} // 0x0000000189DF5278-0x0000000189DF52AC
-		public static void DispatchComputeMeshletInstanceCount(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x0000000189DF543C-0x0000000189DF5490
-		public static void DispatchComputeDrawBucketCount(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x0000000189DF53E8-0x0000000189DF543C
+		} // 0x000000018BF0D0E4-0x000000018BF0D10C
+		public static void DrawRendererList(CommandBuffer cmd, uint rendererList, bool renderDepthOnly) {} // 0x000000018BF0D240-0x000000018BF0D25C
+		public static void AdvanceFrame() {} // 0x000000018BF0CFA8-0x000000018BF0CFD4
+		public static bool CullingInspectionMode() => default; // 0x000000018BF0D16C-0x000000018BF0D198
+		public static void PopulatePerFrameData(CommandBuffer cmd, uint threadGroupSize, uint hzbWidth, uint hzbHeight, bool usePrevVP = false /* Metadata: 0x0207F5F5 */) {} // 0x000000018BF0D25C-0x000000018BF0D2BC
+		public static void BindFrameConstantsBuffer(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x000000018BF0D090-0x000000018BF0D0E4
+		public static void BindFrameConstantsBufferGlobal(CommandBuffer cmd) {} // 0x000000018BF0D05C-0x000000018BF0D090
+		public static void BindBuffersForCulling(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x000000018BF0CFD4-0x000000018BF0D028
+		public static void BindBuffersForRendering(CommandBuffer cmd) {} // 0x000000018BF0D028-0x000000018BF0D05C
+		public static void DispatchComputeMeshletInstanceCount(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x000000018BF0D1EC-0x000000018BF0D240
+		public static void DispatchComputeDrawBucketCount(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x000000018BF0D198-0x000000018BF0D1EC
 	}
 
-	[NativeType("Modules/HGGraphics/Public/GPUDriven/Version2/GPUDrivenRendererV2.h")]
-	[StaticAccessor("GetGPUDrivenRendererV2()", StaticAccessorType.Dot)]
-	public static class GPUDrivenRendererV2 // TypeDefIndex: 57380
+	public static class GPUDrivenRendererV2 // TypeDefIndex: 58385
 	{
 		// Methods
-		private static void CreateRendererListWithPreZ(uint viewHandle, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, IntPtr context, bool retainCustomDS, ref uint normalList, ref uint preZPart0List, ref uint preZPart1List, ref Matrix4x4 prevViewProjection) {} // 0x0000000189DF5648-0x0000000189DF56A8
-		public static bool Valid() => default; // 0x00000001832437A0-0x00000001832437E0
+		private static void CreateRendererListWithPreZ(uint viewHandle, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, IntPtr context, bool retainCustomDS, ref uint normalList, ref uint preZPart0List, ref uint preZPart1List, ref Matrix4x4 prevViewProjection) {} // 0x000000018BF0D3F8-0x000000018BF0D458
+		public static bool Valid() => default; // 0x000000018519E1E0-0x000000018519E220
 		public static void CreateRendererListWithPreZ(uint viewHandle, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, IntPtr context, bool retainCustomDS, out uint normalList, out uint preZPart0List, out uint preZPart1List, ref Matrix4x4 prevViewProjection) {
 			normalList = default;
 			preZPart0List = default;
 			preZPart1List = default;
-		} // 0x0000000189DF56A8-0x0000000189DF56D0
-		public static void DrawRendererList(CommandBuffer cmd, uint rendererList, bool renderDepthOnly) {} // 0x0000000189DF5490-0x0000000189DF54AC
-		public static void AdvanceFrame() {} // 0x0000000189DF550C-0x0000000189DF5538
-		public static void BindFrameConstantsBuffer(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x0000000189DF55F4-0x0000000189DF5648
-		public static void BindFrameConstantsBufferGlobal(CommandBuffer cmd) {} // 0x0000000189DF55C0-0x0000000189DF55F4
-		public static void BindBuffersForCulling(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x0000000189DF5538-0x0000000189DF558C
-		public static void BindBuffersForRendering(CommandBuffer cmd) {} // 0x0000000189DF558C-0x0000000189DF55C0
-		public static void DispatchComputeMeshletInstanceCount(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x0000000189DF5724-0x0000000189DF5778
-		public static void DispatchComputeDrawBucketCount(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x0000000189DF56D0-0x0000000189DF5724
+		} // 0x000000018BF0D458-0x000000018BF0D480
+		public static void DrawRendererList(CommandBuffer cmd, uint rendererList, bool renderDepthOnly) {} // 0x000000018BF0D240-0x000000018BF0D25C
+		public static void AdvanceFrame() {} // 0x000000018BF0D2BC-0x000000018BF0D2E8
+		public static void BindFrameConstantsBuffer(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x000000018BF0D3A4-0x000000018BF0D3F8
+		public static void BindFrameConstantsBufferGlobal(CommandBuffer cmd) {} // 0x000000018BF0D370-0x000000018BF0D3A4
+		public static void BindBuffersForCulling(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x000000018BF0D2E8-0x000000018BF0D33C
+		public static void BindBuffersForRendering(CommandBuffer cmd) {} // 0x000000018BF0D33C-0x000000018BF0D370
+		public static void DispatchComputeMeshletInstanceCount(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x000000018BF0D4D4-0x000000018BF0D528
+		public static void DispatchComputeDrawBucketCount(CommandBuffer cmd, ComputeShader shader, uint kernelIdx) {} // 0x000000018BF0D480-0x000000018BF0D4D4
 	}
 
-	public struct CapsuleData // TypeDefIndex: 57381
+	public struct CapsuleData // TypeDefIndex: 58386
 	{
 		// Fields
 		public Vector3 pa; // 0x00
@@ -435,27 +259,23 @@ namespace UnityEngine.HyperGryph
 		public float padding; // 0x2C
 	}
 
-	[NativeType("Modules/HGGraphics/Public/CapsuleShadow/HGCapsuleShadowManager.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetCapsuleShadowManager()", StaticAccessorType.Dot)]
-	public static class HGCapsuleShadowManager // TypeDefIndex: 57382
+	public static class HGCapsuleShadowManager // TypeDefIndex: 58387
 	{
 		// Methods
-		public static uint GetRenderCapsuleNum() => default; // 0x0000000189DF591C-0x0000000189DF5948
-		public static uint CullAndGetRenderCapsuleData(uint viewHandle, IntPtr outData, uint outDataCapacity) => default; // 0x0000000189DF58CC-0x0000000189DF591C
+		public static uint GetRenderCapsuleNum() => default; // 0x000000018BF0D6CC-0x000000018BF0D6F8
+		public static uint CullAndGetRenderCapsuleData(uint viewHandle, IntPtr outData, uint outDataCapacity) => default; // 0x000000018BF0D67C-0x000000018BF0D6CC
 	}
 
-	[NativeType("Modules/HGGraphics/Public/ECS/HGDecalRender.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetDecalRender()", StaticAccessorType.Dot)]
-	public static class HGDecalRender // TypeDefIndex: 57383
+	public static class HGDecalRender // TypeDefIndex: 58388
 	{
 		// Methods
-		public static uint CreateRendererList(uint viewHandle, HGShaderLightMode lightModeMask, IntPtr context) => default; // 0x0000000189DF5BF4-0x0000000189DF5C10
-		public static uint CreateRendererList(uint viewHandle, HGShaderLightMode lightModeMask, IntPtr context, IntPtr drawableFeedbackPtr) => default; // 0x0000000189DF5C10-0x0000000189DF5C20
-		private static unsafe uint CreateRendererList(uint viewHandle, uint lightModeMask, IntPtr context, uint* drawableFeedbackPtr) => default; // 0x0000000189DF5C20-0x0000000189DF5C80
-		public static void DrawECSRendererList(CommandBuffer cmd, uint rendererList) {} // 0x0000000189DF5C80-0x0000000189DF5C9C
+		public static uint CreateRendererList(uint viewHandle, HGShaderLightMode lightModeMask, IntPtr context) => default; // 0x000000018BF0D9A4-0x000000018BF0D9C0
+		public static uint CreateRendererList(uint viewHandle, HGShaderLightMode lightModeMask, IntPtr context, IntPtr drawableFeedbackPtr) => default; // 0x000000018BF0D9C0-0x000000018BF0D9D0
+		private static unsafe uint CreateRendererList(uint viewHandle, uint lightModeMask, IntPtr context, uint* drawableFeedbackPtr) => default; // 0x000000018BF0D9D0-0x000000018BF0DA30
+		public static void DrawECSRendererList(CommandBuffer cmd, uint rendererList) {} // 0x000000018BF0DA30-0x000000018BF0DA4C
 	}
 
-	public struct HGDrawCallDetailedStats // TypeDefIndex: 57384
+	public struct HGDrawCallDetailedStats // TypeDefIndex: 58389
 	{
 		// Fields
 		public int componentInstanceID; // 0x00
@@ -468,20 +288,16 @@ namespace UnityEngine.HyperGryph
 		public int passFragKeywordsID; // 0x1C
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/Common/HGFastString.h")]
-	public class HGFastString // TypeDefIndex: 57385
+	public class HGFastString // TypeDefIndex: 58390
 	{
 		// Constructors
 		public HGFastString() {} // Dummy constructor
 	
 		// Methods
-		[FreeFunction("HyperGryph::HGFastString::IndexToString")]
-		public static string IndexToString(int index) => default; // 0x0000000182763330-0x0000000182763370
-		[FreeFunction("HyperGryph::HGFastString::StringToIndex")]
-		public static int StringToIndex(string s) => default; // 0x00000001827D9CC0-0x00000001827D9D00
+		public static string IndexToString(int index) => default; // 0x0000000184E79F50-0x0000000184E79F90
 	}
 
-	public enum HGFactoryLODTier // TypeDefIndex: 57386
+	public enum HGFactoryLODTier // TypeDefIndex: 58391
 	{
 		Low = 0,
 		Medium = 1,
@@ -490,8 +306,7 @@ namespace UnityEngine.HyperGryph
 	}
 
 	[Serializable]
-	[UsedByNativeCode]
-	public struct HGFactoryRendererData // TypeDefIndex: 57387
+	public struct HGFactoryRendererData // TypeDefIndex: 58392
 	{
 		// Fields
 		public Mesh m_mesh; // 0x00
@@ -500,8 +315,7 @@ namespace UnityEngine.HyperGryph
 	}
 
 	[Serializable]
-	[UsedByNativeCode]
-	public struct HGFactoryInstancingLODDataV3 // TypeDefIndex: 57388
+	public struct HGFactoryInstancingLODDataV3 // TypeDefIndex: 58393
 	{
 		// Fields
 		public HGFactoryRendererData[] m_rendererDataArr; // 0x00
@@ -510,8 +324,7 @@ namespace UnityEngine.HyperGryph
 	}
 
 	[Serializable]
-	[UsedByNativeCode]
-	public struct HGFactoryEntityDesc // TypeDefIndex: 57389
+	public struct HGFactoryEntityDesc // TypeDefIndex: 58394
 	{
 		// Fields
 		public Vector3 m_initPosition; // 0x00
@@ -530,56 +343,46 @@ namespace UnityEngine.HyperGryph
 		public Entity m_logicalEntityHandle; // 0x5C
 	}
 
-	public struct HGFactoryEntityTransformData // TypeDefIndex: 57390
+	public struct HGFactoryEntityTransformData // TypeDefIndex: 58395
 	{
 		// Fields
 		public Vector4 m_positionAndScale; // 0x00
 		public Quaternion m_rotation; // 0x10
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/Factory/HGFactoryRenderManager.h")]
-	[StaticAccessor("HyperGryph::HGFactoryRenderManager::GetInstance()", StaticAccessorType.Dot)]
-	public static class HGFactoryRenderManager // TypeDefIndex: 57391
+	public static class HGFactoryRenderManager // TypeDefIndex: 58396
 	{
 		// Methods
-		public static void SetFactoryLodTier(HGFactoryLODTier lodTier) {} // 0x0000000183B2EA90-0x0000000183B2EAD0
-		public static Entity CreateRegularEntity(HGFactoryInstancingLODDataV3[] entityData, HGFactoryEntityDesc desc, string entityName, Entity gameplayEntity, Material[] additiveMaterials) => default; // 0x0000000183167F60-0x0000000183167FF0
-		public static void UpdateRegularEntity(Entity gameplayEntity, HGFactoryInstancingLODDataV3[] entityData, HGFactoryEntityDesc desc) {} // 0x0000000189DF6164-0x0000000189DF6180
-		public static void UpdateRegularEntityAdditiveMaterials(Entity gameplayEntity, Material[] additiveMaterials) {} // 0x0000000189DF6148-0x0000000189DF6164
-		public static void DestroyRegularEntity(Entity gameplayEntity) {} // 0x00000001842728D8-0x00000001842728F4
-		public static void CreateBatchedEntities(HGFactoryInstancingLODDataV3[] entityData, HGFactoryEntityDesc desc, NativeArray<Entity> entities, NativeArray<Entity> gameplayEntities, string entityName) {} // 0x00000001830872C0-0x0000000183087410
-		public static void DestroyBatchedEntities(NativeArray<Entity> gameplayEntities) {} // 0x0000000182BC10D0-0x0000000182BC1110
-		private static void CreateBatchedEntities(HGFactoryInstancingLODDataV3[] entityData, HGFactoryEntityDesc desc, IntPtr entities, IntPtr gameplayEntities, int count, string entityName) {} // 0x0000000184274E1C-0x0000000184274E48
-		private static void DestroyBatchedEntities(IntPtr gameplayEntities, int count) {} // 0x0000000182BC1110-0x0000000182BC1160
-		[NativeMethod(IsThreadSafe = true)]
-		public static void SetEntityEnabledLightModes(Entity rendererEntity, uint lightModeMask) {} // 0x0000000189DF612C-0x0000000189DF6148
+		public static void SetFactoryLodTier(HGFactoryLODTier lodTier) {} // 0x0000000185D5C860-0x0000000185D5C8A0
+		public static Entity CreateRegularEntity(HGFactoryInstancingLODDataV3[] entityData, HGFactoryEntityDesc desc, string entityName, Entity gameplayEntity, Material[] additiveMaterials) => default; // 0x00000001850CBD50-0x00000001850CBDE0
+		public static void UpdateRegularEntity(Entity gameplayEntity, HGFactoryInstancingLODDataV3[] entityData, HGFactoryEntityDesc desc) {} // 0x000000018BF0DF14-0x000000018BF0DF30
+		public static void UpdateRegularEntityAdditiveMaterials(Entity gameplayEntity, Material[] additiveMaterials) {} // 0x000000018BF0DEF8-0x000000018BF0DF14
+		public static void DestroyRegularEntity(Entity gameplayEntity) {} // 0x000000018646FF5C-0x000000018646FF78
+		public static void CreateBatchedEntities(HGFactoryInstancingLODDataV3[] entityData, HGFactoryEntityDesc desc, NativeArray<Entity> entities, NativeArray<Entity> gameplayEntities, string entityName) {} // 0x00000001840B2DA0-0x00000001840B2EF0
+		public static void DestroyBatchedEntities(NativeArray<Entity> gameplayEntities) {} // 0x00000001848ADC10-0x00000001848ADC50
+		private static void CreateBatchedEntities(HGFactoryInstancingLODDataV3[] entityData, HGFactoryEntityDesc desc, IntPtr entities, IntPtr gameplayEntities, int count, string entityName) {} // 0x000000018646DA34-0x000000018646DA60
+		private static void DestroyBatchedEntities(IntPtr gameplayEntities, int count) {} // 0x00000001848ADC50-0x00000001848ADCA0
+		public static void SetEntityEnabledLightModes(Entity rendererEntity, uint lightModeMask) {} // 0x000000018BF0DEDC-0x000000018BF0DEF8
 		public static void SetEntitySharedData<T>(uint sharedDataIndex, T data, int offset)
 			where T : struct {}
-		[NativeMethod(IsThreadSafe = true)]
-		private static void SetEntitySharedDataPartial(uint sharedDataIndex, IntPtr data, int offset, int size) {} // 0x0000000182F266E0-0x0000000182F26750
-		[NativeMethod(IsThreadSafe = true)]
-		public static byte GetEntityDirtyFlags(uint sharedDataIndex) => default; // 0x00000001824204A0-0x00000001824204E0
-		[NativeMethod(IsThreadSafe = true)]
-		public static void SetEntityDirtyFlags(uint sharedDataIndex, byte flags) {} // 0x00000001824204E0-0x0000000182420530
-		[NativeMethod(IsThreadSafe = true)]
-		public static byte GetEntityObjectFlags(uint sharedDataIndex) => default; // 0x0000000182420DC0-0x0000000182420E00
-		[NativeMethod(IsThreadSafe = true)]
-		public static uint GetEntityAdditiveVFXFlags(uint sharedDataIndex) => default; // 0x0000000182421DD0-0x0000000182421E10
-		[NativeMethod(IsThreadSafe = true)]
-		public static void SetEntityAdditiveVFXFlags(uint sharedDataIndex, uint flags) {} // 0x0000000182421E10-0x0000000182421E60
-		public static void FrameUpdateEntities() {} // 0x000000018350B670-0x000000018350B680
+		private static void SetEntitySharedDataPartial(uint sharedDataIndex, IntPtr data, int offset, int size) {} // 0x0000000184D25300-0x0000000184D25370
+		public static byte GetEntityDirtyFlags(uint sharedDataIndex) => default; // 0x00000001840FF9A0-0x00000001840FF9E0
+		public static void SetEntityDirtyFlags(uint sharedDataIndex, byte flags) {} // 0x00000001840FF9E0-0x00000001840FFA30
+		public static byte GetEntityObjectFlags(uint sharedDataIndex) => default; // 0x00000001840FF570-0x00000001840FF5B0
+		public static uint GetEntityAdditiveVFXFlags(uint sharedDataIndex) => default; // 0x00000001840FEB60-0x00000001840FEBA0
+		public static void SetEntityAdditiveVFXFlags(uint sharedDataIndex, uint flags) {} // 0x00000001840FEBA0-0x00000001840FEBF0
+		public static void FrameUpdateEntities() {} // 0x0000000185492010-0x0000000185492020
 		private static void CreateRegularEntity_Injected(HGFactoryInstancingLODDataV3[] entityData, ref HGFactoryEntityDesc desc, string entityName, ref Entity gameplayEntity, Material[] additiveMaterials, out Entity ret) {
 			ret = default;
-		} // 0x0000000183167FF0-0x0000000183168060
-		private static void UpdateRegularEntity_Injected(ref Entity gameplayEntity, HGFactoryInstancingLODDataV3[] entityData, ref HGFactoryEntityDesc desc) {} // 0x000000018349B420-0x000000018349B480
-		private static void UpdateRegularEntityAdditiveMaterials_Injected(ref Entity gameplayEntity, Material[] additiveMaterials) {} // 0x00000001834DE4D0-0x00000001834DE520
-		private static void DestroyRegularEntity_Injected(ref Entity gameplayEntity) {} // 0x0000000183891230-0x0000000183891270
-		private static void CreateBatchedEntities_Injected(HGFactoryInstancingLODDataV3[] entityData, ref HGFactoryEntityDesc desc, IntPtr entities, IntPtr gameplayEntities, int count, string entityName) {} // 0x000000018368C870-0x000000018368C8E0
-		private static void SetEntityEnabledLightModes_Injected(ref Entity rendererEntity, uint lightModeMask) {} // 0x0000000189DF60EC-0x0000000189DF612C
+		} // 0x00000001850CBDE0-0x00000001850CBE50
+		private static void UpdateRegularEntity_Injected(ref Entity gameplayEntity, HGFactoryInstancingLODDataV3[] entityData, ref HGFactoryEntityDesc desc) {} // 0x00000001854A2D40-0x00000001854A2DA0
+		private static void UpdateRegularEntityAdditiveMaterials_Injected(ref Entity gameplayEntity, Material[] additiveMaterials) {} // 0x000000018551AF40-0x000000018551AF90
+		private static void DestroyRegularEntity_Injected(ref Entity gameplayEntity) {} // 0x0000000185A17260-0x0000000185A172A0
+		private static void CreateBatchedEntities_Injected(HGFactoryInstancingLODDataV3[] entityData, ref HGFactoryEntityDesc desc, IntPtr entities, IntPtr gameplayEntities, int count, string entityName) {} // 0x0000000185765470-0x00000001857654E0
+		private static void SetEntityEnabledLightModes_Injected(ref Entity rendererEntity, uint lightModeMask) {} // 0x000000018BF0DE9C-0x000000018BF0DEDC
 	}
 
-	[UsedByNativeCode]
-	public struct HGFoliageInteractCPP // TypeDefIndex: 57392
+	public struct HGFoliageInteractCPP // TypeDefIndex: 58397
 	{
 		// Fields
 		public int compID; // 0x00
@@ -587,8 +390,7 @@ namespace UnityEngine.HyperGryph
 		public Mesh interactCollider; // 0x10
 	}
 
-	[UsedByNativeCode]
-	public struct HGFoliageInteractRaftCPP // TypeDefIndex: 57393
+	public struct HGFoliageInteractRaftCPP // TypeDefIndex: 58398
 	{
 		// Fields
 		public int compID; // 0x00
@@ -596,58 +398,50 @@ namespace UnityEngine.HyperGryph
 		public Mesh interactCollider; // 0x10
 	}
 
-	[NativeType("Modules/HGGraphics/Public/FoliageInteractive/FoliageInteractiveManager.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetFoliageInteractiveManager()", StaticAccessorType.Dot)]
-	public static class HGFoliageInteractiveManagerV2 // TypeDefIndex: 57394
+	public static class HGFoliageInteractiveManagerV2 // TypeDefIndex: 58399
 	{
 		// Methods
-		public static void SetupFoliageInteractiveManager(Mesh characterProxyMesh, bool enabled) {} // 0x0000000183D00940-0x0000000183D00990
-		public static void CleanUpFoliageInteractiveManager() {} // 0x0000000182D15570-0x0000000182D155B0
-		public static void SetEnabled(bool enabled) {} // 0x0000000182ACDD40-0x0000000182ACDD80
-		public static void SetInteractCenter(Vector3 center) {} // 0x0000000184272764-0x0000000184272774
-		public static void SetCharacterPositions(List<Vector3> positions) {} // 0x0000000182A7B830-0x0000000182A7B8B0
-		public static unsafe void SetCharacterPositions(Vector3* positions, int count) {} // 0x0000000182A7B8B0-0x0000000182A7B900
-		public static void RegisterInteract(HGFoliageInteractCPP interact) {} // 0x0000000189DF6254-0x0000000189DF6264
-		public static void UnregisterInteract(int interactInstID) {} // 0x0000000189DF6298-0x0000000189DF62CC
-		public static void RegisterInteractRaft(HGFoliageInteractRaftCPP raft) {} // 0x0000000189DF6210-0x0000000189DF6220
-		public static void UnregisterInteractRaft(int raftInstID) {} // 0x0000000189DF6264-0x0000000189DF6298
-		private static void SetInteractCenter_Injected(ref Vector3 center) {} // 0x00000001833D7BD0-0x00000001833D7C10
-		private static void RegisterInteract_Injected(ref HGFoliageInteractCPP interact) {} // 0x0000000189DF6220-0x0000000189DF6254
-		private static void RegisterInteractRaft_Injected(ref HGFoliageInteractRaftCPP raft) {} // 0x0000000189DF61DC-0x0000000189DF6210
+		public static void SetupFoliageInteractiveManager(Mesh characterProxyMesh, bool enabled) {} // 0x0000000185F5F6B0-0x0000000185F5F700
+		public static void CleanUpFoliageInteractiveManager() {} // 0x00000001852C88F0-0x00000001852C8930
+		public static void SetEnabled(bool enabled) {} // 0x00000001855470C0-0x0000000185547100
+		public static void SetInteractCenter(Vector3 center) {} // 0x000000018646ED00-0x000000018646ED10
+		public static void SetCharacterPositions(List<Vector3> positions) {} // 0x00000001846E3130-0x00000001846E31B0
+		public static unsafe void SetCharacterPositions(Vector3* positions, int count) {} // 0x00000001846E31B0-0x00000001846E3200
+		public static void RegisterInteract(HGFoliageInteractCPP interact) {} // 0x000000018BF0E004-0x000000018BF0E014
+		public static void UnregisterInteract(int interactInstID) {} // 0x000000018BF0E048-0x000000018BF0E07C
+		public static void RegisterInteractRaft(HGFoliageInteractRaftCPP raft) {} // 0x000000018BF0DFC0-0x000000018BF0DFD0
+		public static void UnregisterInteractRaft(int raftInstID) {} // 0x000000018BF0E014-0x000000018BF0E048
+		private static void SetInteractCenter_Injected(ref Vector3 center) {} // 0x00000001853B08F0-0x00000001853B0930
+		private static void RegisterInteract_Injected(ref HGFoliageInteractCPP interact) {} // 0x000000018BF0DFD0-0x000000018BF0E004
+		private static void RegisterInteractRaft_Injected(ref HGFoliageInteractRaftCPP raft) {} // 0x000000018BF0DF8C-0x000000018BF0DFC0
 	}
 
-	[NativeType("Modules/HGGraphics/Public/FoliageOccluder/FoliageOccluderManager.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetFoliageOccluderManager()", StaticAccessorType.Dot)]
-	public static class HGFoliageOccluderManagerV2 // TypeDefIndex: 57395
+	public static class HGFoliageOccluderManagerV2 // TypeDefIndex: 58400
 	{
 		// Methods
-		public static void SetCenterPosition(Vector3 center) {} // 0x0000000184272774-0x0000000184272784
-		private static void SetCenterPosition_Injected(ref Vector3 center) {} // 0x00000001833D7B90-0x00000001833D7BD0
+		public static void SetCenterPosition(Vector3 center) {} // 0x000000018646ED10-0x000000018646ED20
+		private static void SetCenterPosition_Injected(ref Vector3 center) {} // 0x00000001853B08B0-0x00000001853B08F0
 	}
 
-	[NativeType("Modules/HGGraphics/Public/ECS/HGFoliageOccluderRender.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetFoliageOccluderRender()", StaticAccessorType.Dot)]
-	public static class HGFoliageOccluderRender // TypeDefIndex: 57396
+	public static class HGFoliageOccluderRender // TypeDefIndex: 58401
 	{
 		// Methods
-		public static uint CreateRendererList(uint viewHandle, uint materialHandle, uint geometryHandle, HGShaderLightMode lightModeMask, IntPtr context) => default; // 0x0000000189DF62CC-0x0000000189DF62F0
-		private static unsafe uint CreateRendererList(uint viewHandle, uint materialHandle, uint geometryHandle, uint lightModeMask, IntPtr context, uint* drawableFeedbackPtr) => default; // 0x0000000189DF62F0-0x0000000189DF6350
-		public static void DrawECSRendererList(CommandBuffer cmd, uint rendererList) {} // 0x0000000189DF6350-0x0000000189DF636C
+		public static uint CreateRendererList(uint viewHandle, uint materialHandle, uint geometryHandle, HGShaderLightMode lightModeMask, IntPtr context) => default; // 0x000000018BF0E07C-0x000000018BF0E0A0
+		private static unsafe uint CreateRendererList(uint viewHandle, uint materialHandle, uint geometryHandle, uint lightModeMask, IntPtr context, uint* drawableFeedbackPtr) => default; // 0x000000018BF0E0A0-0x000000018BF0E100
+		public static void DrawECSRendererList(CommandBuffer cmd, uint rendererList) {} // 0x000000018BF0E100-0x000000018BF0E11C
 	}
 
-	[UsedByNativeCode]
-	public struct GpuClothClearBufferDataCPP // TypeDefIndex: 57397
+	public struct GpuClothClearBufferDataCPP // TypeDefIndex: 58402
 	{
 		// Fields
 		public bool shouldClear; // 0x00
 		public IVec4 eleNum; // 0x04
 	
 		// Methods
-		public bool IsValid() => default; // 0x0000000183D51020-0x0000000183D51030
+		public bool IsValid() => default; // 0x00000001835E3010-0x00000001835E3020
 	}
 
-	[UsedByNativeCode]
-	public struct ClothGroupUploadDataMapCPP // TypeDefIndex: 57398
+	public struct ClothGroupUploadDataMapCPP // TypeDefIndex: 58403
 	{
 		// Fields
 		private IVec4 clothNodeDataMap; // 0x00
@@ -655,8 +449,7 @@ namespace UnityEngine.HyperGryph
 		private IVec4 clothBatchCacheDataMap; // 0x20
 	}
 
-	[UsedByNativeCode]
-	public struct ClothMetaDataCPP // TypeDefIndex: 57399
+	public struct ClothMetaDataCPP // TypeDefIndex: 58404
 	{
 		// Fields
 		private uint clothNodeIdxStart; // 0x00
@@ -678,8 +471,7 @@ namespace UnityEngine.HyperGryph
 		private Vector4 worldToLocal2; // 0xA0
 	}
 
-	[UsedByNativeCode]
-	public struct ClothNodeDataCPP // TypeDefIndex: 57402
+	public struct ClothNodeDataCPP // TypeDefIndex: 58407
 	{
 		// Fields
 		private IVec2 anchorNodeCacheIdx; // 0x00
@@ -692,12 +484,24 @@ namespace UnityEngine.HyperGryph
 		private Vector4 packedPrePosition; // 0x50
 		private Vector4 packedCurPosition; // 0x60
 		private Vector4 packedCurNormal; // 0x70
-		private unsafe fixed /* 0x00000000-0x00000000 */ int neighborClothNodeCacheIdx[0]; // 0x80
-		private unsafe fixed /* 0x00000000-0x00000000 */ float neighborClothNodeDistance[0]; // 0xA0
+		private _neighborClothNodeCacheIdx_e__FixedBuffer neighborClothNodeCacheIdx; // 0x80
+		private _neighborClothNodeDistance_e__FixedBuffer neighborClothNodeDistance; // 0xA0
+	
+		// Nested types
+		public struct _neighborClothNodeCacheIdx_e__FixedBuffer // TypeDefIndex: 58405
+		{
+			// Fields
+			public int FixedElementField; // 0x00
+		}
+	
+		public struct _neighborClothNodeDistance_e__FixedBuffer // TypeDefIndex: 58406
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
 	}
 
-	[UsedByNativeCode]
-	public struct GpuClothGroupUploadDataCPP // TypeDefIndex: 57403
+	public struct GpuClothGroupUploadDataCPP // TypeDefIndex: 58408
 	{
 		// Fields
 		public bool isValid; // 0x00
@@ -713,20 +517,25 @@ namespace UnityEngine.HyperGryph
 		public IntPtr clothBatchCacheMapUploadData; // 0x48
 	
 		// Methods
-		public bool IsValid() => default; // 0x0000000183D51020-0x0000000183D51030
+		public bool IsValid() => default; // 0x00000001835E3010-0x00000001835E3020
 	}
 
-	[UsedByNativeCode]
-	public struct ClothConstDataCPP // TypeDefIndex: 57405
+	public struct ClothConstDataCPP // TypeDefIndex: 58410
 	{
 		// Fields
 		private Vector4 packedDeltaT; // 0x00
 		private Vector4 clothParam1; // 0x10
-		private unsafe fixed /* 0x00000000-0x00000000 */ float colliderInfos[0]; // 0x20
+		private _colliderInfos_e__FixedBuffer colliderInfos; // 0x20
+	
+		// Nested types
+		public struct _colliderInfos_e__FixedBuffer // TypeDefIndex: 58409
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
 	}
 
-	[UsedByNativeCode]
-	public struct GpuClothRenderDataCPP // TypeDefIndex: 57406
+	public struct GpuClothRenderDataCPP // TypeDefIndex: 58411
 	{
 		// Fields
 		public bool isValid; // 0x00
@@ -734,56 +543,51 @@ namespace UnityEngine.HyperGryph
 		public ClothConstDataCPP clothConstData; // 0x08
 	
 		// Methods
-		public bool IsValid() => default; // 0x0000000183D51020-0x0000000183D51030
+		public bool IsValid() => default; // 0x00000001835E3010-0x00000001835E3020
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/GpuCloth/GpuClothManager.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetGpuClothManager()", StaticAccessorType.Dot)]
-	public static class HGGpuClothManagerV2 // TypeDefIndex: 57407
+	public static class HGGpuClothManagerV2 // TypeDefIndex: 58412
 	{
 		// Methods
-		public static void SetupGpuClothManager(Mesh defaultCapsuleMesh) {} // 0x0000000183D1EFA0-0x0000000183D1EFE0
-		public static void SetWindDirection(Vector3 direction) {} // 0x00000001842746B8-0x00000001842746C8
-		public static void SetPlayerCenter(Vector3 playerCenter) {} // 0x00000001842746C8-0x00000001842746D8
-		public static void UpdateCharacterPositions(List<Vector3> positions) {} // 0x0000000182A7B7B0-0x0000000182A7B830
-		public static unsafe void UpdateCharacterPositions(Vector3* positionPtr, int count) {} // 0x0000000182A7B900-0x0000000182A7B950
-		public static bool IsClothSkeletonValid() => default; // 0x0000000189DF65C4-0x0000000189DF65F0
-		public static bool IsClothSkeletonFlipped() => default; // 0x0000000189DF6598-0x0000000189DF65C4
-		public static bool ShouldStep() => default; // 0x0000000189DF65F0-0x0000000189DF661C
-		public static GpuClothClearBufferDataCPP GetClearBufferData_CSharpWrapper() => default; // 0x0000000189DF63D4-0x0000000189DF63F8
-		public static GpuClothGroupUploadDataCPP GetUploadData_CSharpWrapper() => default; // 0x0000000189DF6568-0x0000000189DF6598
-		public static GpuClothRenderDataCPP GetRenderData_CSharpWrapper() => default; // 0x0000000189DF64DC-0x0000000189DF6508
-		public static uint GetSkeletonBufferID() => default; // 0x0000000189DF6508-0x0000000189DF6534
-		public static uint GetClothNodeBufferID() => default; // 0x0000000189DF647C-0x0000000189DF64A8
-		public static uint GetClothMetaDataBufferID() => default; // 0x0000000189DF6450-0x0000000189DF647C
-		public static uint GetClothBatchMetaDataBufferID() => default; // 0x0000000189DF6424-0x0000000189DF6450
-		public static uint GetClothBatchCacheMapBufferID() => default; // 0x0000000189DF63F8-0x0000000189DF6424
-		private static void SetWindDirection_Injected(ref Vector3 direction) {} // 0x0000000182F24980-0x0000000182F249C0
-		private static void SetPlayerCenter_Injected(ref Vector3 playerCenter) {} // 0x0000000182F24940-0x0000000182F24980
+		public static void SetupGpuClothManager(Mesh defaultCapsuleMesh) {} // 0x0000000185F7DE30-0x0000000185F7DE70
+		public static void SetWindDirection(Vector3 direction) {} // 0x00000001864725DC-0x00000001864725EC
+		public static void SetPlayerCenter(Vector3 playerCenter) {} // 0x00000001864725EC-0x00000001864725FC
+		public static void UpdateCharacterPositions(List<Vector3> positions) {} // 0x00000001846E30B0-0x00000001846E3130
+		public static unsafe void UpdateCharacterPositions(Vector3* positionPtr, int count) {} // 0x00000001846E3200-0x00000001846E3250
+		public static bool IsClothSkeletonValid() => default; // 0x000000018BF0E374-0x000000018BF0E3A0
+		public static bool IsClothSkeletonFlipped() => default; // 0x000000018BF0E348-0x000000018BF0E374
+		public static bool ShouldStep() => default; // 0x000000018BF0E3A0-0x000000018BF0E3CC
+		public static GpuClothClearBufferDataCPP GetClearBufferData_CSharpWrapper() => default; // 0x000000018BF0E184-0x000000018BF0E1A8
+		public static GpuClothGroupUploadDataCPP GetUploadData_CSharpWrapper() => default; // 0x000000018BF0E318-0x000000018BF0E348
+		public static GpuClothRenderDataCPP GetRenderData_CSharpWrapper() => default; // 0x000000018BF0E28C-0x000000018BF0E2B8
+		public static uint GetSkeletonBufferID() => default; // 0x000000018BF0E2B8-0x000000018BF0E2E4
+		public static uint GetClothNodeBufferID() => default; // 0x000000018BF0E22C-0x000000018BF0E258
+		public static uint GetClothMetaDataBufferID() => default; // 0x000000018BF0E200-0x000000018BF0E22C
+		public static uint GetClothBatchMetaDataBufferID() => default; // 0x000000018BF0E1D4-0x000000018BF0E200
+		public static uint GetClothBatchCacheMapBufferID() => default; // 0x000000018BF0E1A8-0x000000018BF0E1D4
+		private static void SetWindDirection_Injected(ref Vector3 direction) {} // 0x0000000184D161C0-0x0000000184D16200
+		private static void SetPlayerCenter_Injected(ref Vector3 playerCenter) {} // 0x0000000184D16180-0x0000000184D161C0
 		private static void GetClearBufferData_CSharpWrapper_Injected(out GpuClothClearBufferDataCPP ret) {
 			ret = default;
-		} // 0x0000000189DF63A0-0x0000000189DF63D4
+		} // 0x000000018BF0E150-0x000000018BF0E184
 		private static void GetUploadData_CSharpWrapper_Injected(out GpuClothGroupUploadDataCPP ret) {
 			ret = default;
-		} // 0x0000000189DF6534-0x0000000189DF6568
+		} // 0x000000018BF0E2E4-0x000000018BF0E318
 		private static void GetRenderData_CSharpWrapper_Injected(out GpuClothRenderDataCPP ret) {
 			ret = default;
-		} // 0x0000000189DF64A8-0x0000000189DF64DC
+		} // 0x000000018BF0E258-0x000000018BF0E28C
 	}
 
-	[NativeType("Modules/HGGraphics/Public/ECS/HGLODSystem.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetLODStateSystem()", StaticAccessorType.Dot)]
-	public static class HGLODStateSystem // TypeDefIndex: 57408
+	public static class HGLODStateSystem // TypeDefIndex: 58413
 	{
 		// Methods
-		public static bool IsCurrFrameTriggerTransition() => default; // 0x00000001825B2AE0-0x00000001825B2B20
-		public static float GetLODTransitionFraction() => default; // 0x000000018279F3F0-0x000000018279F430
-		public static float GetLODTransitionTime() => default; // 0x0000000183CB52B0-0x0000000183CB52F0
-		public static void SetLODTransitionTime(float lodTransitionTime) {} // 0x000000018382DC00-0x000000018382DC50
+		public static bool IsCurrFrameTriggerTransition() => default; // 0x00000001843FB260-0x00000001843FB2A0
+		public static float GetLODTransitionFraction() => default; // 0x0000000184A64C10-0x0000000184A64C50
+		public static float GetLODTransitionTime() => default; // 0x0000000185F08140-0x0000000185F08180
+		public static void SetLODTransitionTime(float lodTransitionTime) {} // 0x00000001859A3C20-0x00000001859A3C70
 	}
 
-	[Flags]
-	public enum LODStreamingStatus : byte // TypeDefIndex: 57409
+	public enum LODStreamingStatus : byte // TypeDefIndex: 58414
 	{
 		Idle = 0,
 		Loading = 1,
@@ -791,145 +595,112 @@ namespace UnityEngine.HyperGryph
 		Disabled = 4
 	}
 
-	[NativeType("Modules/HGGraphics/Public/ECS/HGLODStreamingSystem.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetLODStreamingSystem()", StaticAccessorType.Dot)]
-	public static class HGLODStreamingSystem // TypeDefIndex: 57410
+	public static class HGLODStreamingSystem // TypeDefIndex: 58415
 	{
 		// Properties
-		public static bool enableLODStreaming { [NativeName("GetEnableLODStreaming")] get; [NativeName("SetEnableLODStreaming")] set; } // 0x0000000183D3E6A0-0x0000000183D3E6E0 0x0000000183D00FB0-0x0000000183D00FF0
-		public static bool enableLODStreamingKeepLastLODResource { get; [NativeName("SetEnableLODStreamingKeepLastLODResource")] set; } // 0x000000018279F310-0x000000018279F350
-		public static LODCrossFadeConfig lodConfig { get; [NativeName("SetLODConfig")] set; } // 0x00000001842718D8-0x00000001842718E8
-		public static float lodStreamingLoadDirtyDistance { get; [NativeName("SetLODStreamingLoadDirtyDistance")] set; } // 0x000000018279F350-0x000000018279F3A0
-		public static float lodStreamingUnloadDirtyDistance { get; [NativeName("SetLODStreamingUnloadDirtyDistance")] set; } // 0x000000018279F3A0-0x000000018279F3F0
+		public static bool enableLODStreaming { get; set; } // 0x0000000185F9E4F0-0x0000000185F9E530 0x0000000185F5FC80-0x0000000185F5FCC0
+		public static bool enableLODStreamingKeepLastLODResource { get; set; } // 0x0000000184A64B30-0x0000000184A64B70
+		public static LODCrossFadeConfig lodConfig { get; set; } // 0x0000000186471820-0x0000000186471830
+		public static float lodStreamingLoadDirtyDistance { get; set; } // 0x0000000184A64B70-0x0000000184A64BC0
+		public static float lodStreamingUnloadDirtyDistance { get; set; } // 0x0000000184A64BC0-0x0000000184A64C10
 	
 		// Methods
-		public static void SetArtTagLODStreamingOffset(uint artTag, int lodStreamingOffset) {} // 0x0000000183367160-0x00000001833671B0
-		public static void SetHLODUnloadDistance(int hlodLevel, float unloadDistance) {} // 0x000000018279F160-0x000000018279F1B0
-		public static LODStreamingStatus QueryLODStreamingStatus() => default; // 0x0000000189DF6D14-0x0000000189DF6D40
-		private static void set_lodConfig_Injected(ref LODCrossFadeConfig value) {} // 0x000000018328C9C0-0x000000018328CA00
+		public static void SetArtTagLODStreamingOffset(uint artTag, int lodStreamingOffset) {} // 0x000000018531EA60-0x000000018531EAB0
+		public static void SetHLODUnloadDistance(int hlodLevel, float unloadDistance) {} // 0x0000000184A64980-0x0000000184A649D0
+		public static LODStreamingStatus QueryLODStreamingStatus() => default; // 0x000000018BF0EAC4-0x000000018BF0EAF0
+		private static void set_lodConfig_Injected(ref LODCrossFadeConfig value) {} // 0x0000000184A64C50-0x0000000184A64C90
 	}
 
-	[NativeType("Modules/HGGraphics/Public/ECS/HGShadingStateSystem.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetShadingStateSystem()", StaticAccessorType.Dot)]
-	public static class HGShadingStateSystem // TypeDefIndex: 57411
+	public static class HGShadingStateSystem // TypeDefIndex: 58416
 	{
+		// Fields
+		private static UnityAction<int, bool> shadingStateChanged; // 0x00
+	
 		// Events
 		public static event UnityAction<int, bool> shadingStateChanged;
 	
 		// Methods
-		public static uint GetMaterialHandle(int instanceId) => default; // 0x0000000182AC07C0-0x0000000182AC0800
-		public static Material GetMaterial(uint handle) => default; // 0x0000000189DF75D8-0x0000000189DF760C
-		[RequiredByNativeCode]
-		private static void Internal_OnShadingStateChanged(int instanceId, bool state) {} // 0x0000000189DF760C-0x0000000189DF766C
-		public static void FlushAllMaterialCallbacks() {} // 0x000000018388D300-0x000000018388D340
+		public static uint GetMaterialHandle(int instanceId) => default; // 0x0000000185147230-0x0000000185147270
+		public static Material GetMaterial(uint handle) => default; // 0x000000018BF0F3A0-0x000000018BF0F3D4
+		private static void Internal_OnShadingStateChanged(int instanceId, bool state) {} // 0x000000018BF0F3D4-0x000000018BF0F434
+		public static void FlushAllMaterialCallbacks() {} // 0x0000000185A114C0-0x0000000185A11500
 	}
 
-	[NativeType("Modules/HGGraphics/Public/ECS/HGGeometrySystem.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetGeometrySystem()", StaticAccessorType.Dot)]
-	public static class HGGeometrySystem // TypeDefIndex: 57412
+	public static class HGGeometrySystem // TypeDefIndex: 58417
 	{
 		// Methods
-		public static uint GetGeometryHandle(int instanceId) => default; // 0x0000000189DF636C-0x0000000189DF63A0
+		public static uint GetGeometryHandle(int instanceId) => default; // 0x000000018BF0E11C-0x000000018BF0E150
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/ECS/HGGeometrySystem.h")]
-	[StaticAccessor("HyperGryph::GetMeshBufferAllocator()", StaticAccessorType.Arrow)]
-	public static class HGMeshBufferAllocator // TypeDefIndex: 57413
-	{
-		// Methods
-		public static void GarbageCollect() {} // 0x00000001830CDF00-0x00000001830CDF40
-	}
-
-	[NativeHeader("Modules/HGGraphics/Public/ECS/HGGeometryJobRendererUtils.h")]
-	[NativeHeader("Runtime/GfxDevice/GfxDeviceSetup.h")]
-	[NativeHeader("Runtime/GfxDevice/hg/HGTempBuffer.h")]
-	[NativeHeader("Modules/HGGraphics/Public/ECS/HGRendererSystem.h")]
-	[NativeHeader("Modules/HGGraphics/Public/ECS/HGCullingSystem.h")]
-	[NativeHeader("Modules/HGGraphics/Public/HGGlobalGameManager.h")]
-	public static class HGGraphicsUtils // TypeDefIndex: 57414
+	public static class HGGraphicsUtils // TypeDefIndex: 58418
 	{
 		// Properties
-		public static bool enableRayTracing { [FreeFunction("GetEnableRayTracing")] get; [FreeFunction("SetEnableRayTracing")] set; } // 0x0000000183D2CF80-0x0000000183D2CFC0 0x0000000183A2D070-0x0000000183A2D0B0
-		public static bool enableRayTracingRender { [FreeFunction("GetEnableRayTracingRender")] get; [FreeFunction("SetEnableRayTracingRender")] set; } // 0x00000001832436E0-0x0000000183243720 0x0000000183A2D0B0-0x0000000183A2D0F0
-		public static bool enableECSRenderer { [FreeFunction("GetEnableECSRenderer")] get; } // 0x0000000189DF681C-0x0000000189DF6848 
-		public static bool enableHGNewGraphicsAPI { [FreeFunction("GetEnableHGNewGraphicsAPI")] get; } // 0x0000000189DF6848-0x0000000189DF6874 
-		public static bool enableCppRenderPath { [FreeFunction("GetEnableCppRenderPath")] get; } // 0x0000000183241380-0x00000001832413C0 
-		public static int maxAnisoLevel { [FreeFunction("GetHGMaxAnisoLevel")] get; [FreeFunction("SetHGMaxAnisoLevel")] set; } // 0x0000000189DF6874-0x0000000189DF68A0 0x0000000183CC4600-0x0000000183CC4640
-		public static bool enableRenderingCommandBufferDirectCall { get; [FreeFunction("SetEnableRenderingCommandBufferDirectCall")] set; } // 0x00000001831B4E20-0x00000001831B4E60
+		public static bool enableRayTracing { get; set; } // 0x0000000185F8C340-0x0000000185F8C380 0x0000000185C318C0-0x0000000185C31900
+		public static bool enableRayTracingRender { get; set; } // 0x000000018519E120-0x000000018519E160 0x0000000185C31900-0x0000000185C31940
+		public static bool enableECSRenderer { get; } // 0x000000018BF0E5CC-0x000000018BF0E5F8 
+		public static bool enableHGNewGraphicsAPI { get; } // 0x000000018BF0E5F8-0x000000018BF0E624 
+		public static bool enableCppRenderPath { get; } // 0x00000001851983B0-0x00000001851983F0 
+		public static int maxAnisoLevel { get; set; } // 0x000000018BF0E624-0x000000018BF0E650 0x0000000185F1D1C0-0x0000000185F1D200
+		public static bool enableRenderingCommandBufferDirectCall { get; set; } // 0x000000018512D890-0x000000018512D8D0
 	
 		// Methods
-		[FreeFunction("HGAllocateTempVertexBuffer")]
-		public static CBHandle HGAllocateTempVertexBuffer(int size) => default; // 0x0000000189DF67B8-0x0000000189DF67E8
-		[StaticAccessor("GetHGGlobalGameManager().GetRendererSystem()", StaticAccessorType.Dot)]
-		public static uint AllocateTempCompoundRendererListFromScript(ref IntPtr outPtr) => default; // 0x0000000189DF661C-0x0000000189DF6650
-		[StaticAccessor("GetHGGlobalGameManager().GetRendererSystem()", StaticAccessorType.Dot)]
-		public static bool IsCompoundRendererListDrawable(uint id) => default; // 0x0000000189DF67E8-0x0000000189DF681C
-		[StaticAccessor("HyperGryph", StaticAccessorType.DoubleColon)]
-		public static void PrepareGeometryJobRenderersForRendering() {} // 0x0000000183243720-0x0000000183243760
-		[StaticAccessor("GetHGGlobalGameManager().GetRendererSystem()", StaticAccessorType.Dot)]
-		public static uint CreateMetalFXSpatialScaler(int inputWidth, int inputWeight, int outputWidth, int outputHeight, GraphicsFormat colorTextureFormat, GraphicsFormat outputTextureFormat) => default; // 0x0000000189DF6650-0x0000000189DF66B0
-		[StaticAccessor("GetHGGlobalGameManager().GetRendererSystem()", StaticAccessorType.Dot)]
-		public static void DestroyMetalFXSpatialScaler(uint spatialScalerHandle) {} // 0x0000000189DF6710-0x0000000189DF6744
-		[StaticAccessor("GetHGGlobalGameManager().GetRendererSystem()", StaticAccessorType.Dot)]
-		public static uint CreateMetalFXTemporalScaler(int inputWidth, int inputWeight, int outputWidth, int outputHeight, GraphicsFormat colorTextureFormat, GraphicsFormat depthTextureFormat, GraphicsFormat motionTextureFormat, GraphicsFormat outputTextureFormat) => default; // 0x0000000189DF66B0-0x0000000189DF6710
-		[StaticAccessor("GetHGGlobalGameManager().GetRendererSystem()", StaticAccessorType.Dot)]
-		public static void DestroyMetalFXTemporalScaler(uint temporalScalerHandle) {} // 0x0000000189DF6744-0x0000000189DF6778
+		public static CBHandle HGAllocateTempVertexBuffer(int size) => default; // 0x000000018BF0E568-0x000000018BF0E598
+		public static uint AllocateTempCompoundRendererListFromScript(ref IntPtr outPtr) => default; // 0x000000018BF0E3CC-0x000000018BF0E400
+		public static bool IsCompoundRendererListDrawable(uint id) => default; // 0x000000018BF0E598-0x000000018BF0E5CC
+		public static void PrepareGeometryJobRenderersForRendering() {} // 0x000000018519E160-0x000000018519E1A0
+		public static uint CreateMetalFXSpatialScaler(int inputWidth, int inputWeight, int outputWidth, int outputHeight, GraphicsFormat colorTextureFormat, GraphicsFormat outputTextureFormat) => default; // 0x000000018BF0E400-0x000000018BF0E460
+		public static void DestroyMetalFXSpatialScaler(uint spatialScalerHandle) {} // 0x000000018BF0E4C0-0x000000018BF0E4F4
+		public static uint CreateMetalFXTemporalScaler(int inputWidth, int inputWeight, int outputWidth, int outputHeight, GraphicsFormat colorTextureFormat, GraphicsFormat depthTextureFormat, GraphicsFormat motionTextureFormat, GraphicsFormat outputTextureFormat) => default; // 0x000000018BF0E460-0x000000018BF0E4C0
+		public static void DestroyMetalFXTemporalScaler(uint temporalScalerHandle) {} // 0x000000018BF0E4F4-0x000000018BF0E528
 		private static void HGAllocateTempVertexBuffer_Injected(int size, out CBHandle ret) {
 			ret = default;
-		} // 0x0000000189DF6778-0x0000000189DF67B8
+		} // 0x000000018BF0E528-0x000000018BF0E568
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/HGGlobalGameManager.h")]
-	[NativeHeader("Modules/HGGraphics/Public/ECS/HGRendererSystem.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetRendererSystem()", StaticAccessorType.Dot)]
-	public static class HGRendererSystem // TypeDefIndex: 57415
+	public static class HGRendererSystem // TypeDefIndex: 58419
 	{
 		// Properties
-		public static Vector3 PerRendererLightingFallbackPosition { get; set; } // 0x0000000189DF73D0-0x0000000189DF73E0
-		public static uint MaxPerRendererLightingCount { get; } // 0x0000000189DF733C-0x0000000189DF7368 
-		public static uint CSMStopRenderCharacterCascadeLevel { get; set; } // 0x0000000189DF7368-0x0000000189DF739C
+		public static Vector3 PerRendererLightingFallbackPosition { get; set; } // 0x000000018BF0F198-0x000000018BF0F1A8
+		public static uint MaxPerRendererLightingCount { get; } // 0x000000018BF0F104-0x000000018BF0F130 
+		public static uint CSMStopRenderCharacterCascadeLevel { get; set; } // 0x000000018BF0F130-0x000000018BF0F164
 	
 		// Methods
-		private static void set_PerRendererLightingFallbackPosition_Injected(ref Vector3 value) {} // 0x0000000189DF739C-0x0000000189DF73D0
+		private static void set_PerRendererLightingFallbackPosition_Injected(ref Vector3 value) {} // 0x000000018BF0F164-0x000000018BF0F198
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/HGGlobalGameManager.h")]
-	[StaticAccessor("GetHGGlobalGameManager()", StaticAccessorType.Dot)]
-	public static class HGLogicTimeManager // TypeDefIndex: 57416
+	public static class HGLogicTimeManager // TypeDefIndex: 58420
 	{
 		// Methods
-		public static void SetLogicTickDeltaTime(float deltaTime) {} // 0x000000018303E110-0x000000018303E160
-		public static void SetHgrpDeltaTime(float deltaTime) {} // 0x0000000182634260-0x00000001826342B0
+		public static void SetLogicTickDeltaTime(float deltaTime) {} // 0x0000000184EC3920-0x0000000184EC3970
+		public static void SetHgrpDeltaTime(float deltaTime) {} // 0x00000001844B51E0-0x00000001844B5230
 	}
 
-	[NativeType("Modules/HGGraphics/Public/ECS/HGGrassRender.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetGrassRender()", StaticAccessorType.Dot)]
-	public static class HGGrassRender // TypeDefIndex: 57417
+	public static class HGGrassRender // TypeDefIndex: 58421
 	{
 		// Properties
-		public static float grassGlobalSparsity { get; set; } // 0x00000001838BA700-0x00000001838BA750
+		public static float grassGlobalSparsity { get; set; } // 0x0000000185A54710-0x0000000185A54760
 	
 		// Methods
-		public static uint CreateRendererList(uint viewHandle, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, IntPtr context, bool noAlphaTest = false /* Metadata: 0x01FD9D4A */) => default; // 0x0000000189DF68A0-0x0000000189DF68D0
-		private static unsafe uint CreateRendererList(uint viewHandle, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, IntPtr context, uint* drawableFeedbackPtr, bool noAlphaTest) => default; // 0x0000000189DF68D0-0x0000000189DF6930
-		public static uint RegisterGrassBatchGroup(uint batchGroupKey, Material material, Mesh mesh, ushort subMeshIndex) => default; // 0x0000000189DF694C-0x0000000189DF69B0
-		public static void UnregisterGrassBatchGroupWithHandle(uint batchGroupKey, uint batchGroupHandle) {} // 0x0000000189DF69B0-0x0000000189DF69F0
+		public static uint CreateRendererList(uint viewHandle, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, IntPtr context, bool noAlphaTest = false /* Metadata: 0x0207F5FE */) => default; // 0x000000018BF0E650-0x000000018BF0E680
+		private static unsafe uint CreateRendererList(uint viewHandle, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, IntPtr context, uint* drawableFeedbackPtr, bool noAlphaTest) => default; // 0x000000018BF0E680-0x000000018BF0E6E0
+		public static uint RegisterGrassBatchGroup(uint batchGroupKey, Material material, Mesh mesh, ushort subMeshIndex) => default; // 0x000000018BF0E6FC-0x000000018BF0E760
+		public static void UnregisterGrassBatchGroupWithHandle(uint batchGroupKey, uint batchGroupHandle) {} // 0x000000018BF0E760-0x000000018BF0E7A0
 		public static bool IsInGrassBoundsV2(Vector3 worldPos, out Bounds overlapBounds, out Bounds originBounds, out uint argTag) {
 			overlapBounds = default;
 			originBounds = default;
 			argTag = default;
 			return default;
-		} // 0x000000018426FAA0-0x000000018426FAB8
-		public static void DrawECSRendererList(CommandBuffer cmd, uint rendererList) {} // 0x0000000189DF6930-0x0000000189DF694C
+		} // 0x000000018646E48C-0x000000018646E4A4
+		public static void DrawECSRendererList(CommandBuffer cmd, uint rendererList) {} // 0x000000018BF0E6E0-0x000000018BF0E6FC
 		private static bool IsInGrassBoundsV2_Injected(ref Vector3 worldPos, out Bounds overlapBounds, out Bounds originBounds, out uint argTag) {
 			overlapBounds = default;
 			originBounds = default;
 			argTag = default;
 			return default;
-		} // 0x00000001830FDCB0-0x00000001830FDD20
+		} // 0x000000018502B6B0-0x000000018502B720
 	}
 
-	public enum EInteractionProxyType : uint // TypeDefIndex: 57418
+	public enum EInteractionProxyType : uint // TypeDefIndex: 58422
 	{
 		Sphere = 0,
 		Capsule = 1,
@@ -937,8 +708,7 @@ namespace UnityEngine.HyperGryph
 		Mesh = 3
 	}
 
-	[UsedByNativeCode]
-	public struct HGInteractionNodeV2 // TypeDefIndex: 57419
+	public struct HGInteractionNodeV2 // TypeDefIndex: 58423
 	{
 		// Fields
 		public int m_nodeKey; // 0x00
@@ -957,8 +727,7 @@ namespace UnityEngine.HyperGryph
 		public int m_mesh; // 0xB0
 	}
 
-	[UsedByNativeCode]
-	public struct HGDecalInteractionParametersV2 // TypeDefIndex: 57420
+	public struct HGDecalInteractionParametersV2 // TypeDefIndex: 58424
 	{
 		// Fields
 		public bool m_enableDecalInteraction; // 0x00
@@ -976,21 +745,16 @@ namespace UnityEngine.HyperGryph
 		public float m_timeFadeSpeed; // 0x38
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/Interaction/HGDecalInteraction.h")]
-	[NativeHeader("Modules/HGGraphics/Public/Interaction/HGInteractionManager.h")]
-	public static class HGInteractionManagerV2 // TypeDefIndex: 57421
+	public static class HGInteractionManagerV2 // TypeDefIndex: 58425
 	{
 		// Methods
-		public static void UpdateFromNodes(NativeArray<HGInteractionNodeV2> nodes, int nodeCount, bool bUpdateMobile) {} // 0x0000000183090790-0x0000000183090820
-		[StaticAccessor("GetHGGlobalGameManager().GetInteractionManager()", StaticAccessorType.Dot)]
-		public static void UpdateFromNodes(IntPtr nodeData, int nodeCount, bool bUpdateMobile) {} // 0x0000000183090820-0x0000000183090880
-		[StaticAccessor("GetHGGlobalGameManager().GetInteractionManager()", StaticAccessorType.Dot)]
-		public static void UpdateSettingParameters(HGDecalInteractionParametersV2 settingParameters) {} // 0x0000000189DF69F0-0x0000000189DF6A00
-		private static void UpdateSettingParameters_Injected(ref HGDecalInteractionParametersV2 settingParameters) {} // 0x00000001831B4EB0-0x00000001831B4EF0
+		public static void UpdateFromNodes(NativeArray<HGInteractionNodeV2> nodes, int nodeCount, bool bUpdateMobile) {} // 0x0000000184F27B00-0x0000000184F27B90
+		public static void UpdateFromNodes(IntPtr nodeData, int nodeCount, bool bUpdateMobile) {} // 0x0000000184F27B90-0x0000000184F27BF0
+		public static void UpdateSettingParameters(HGDecalInteractionParametersV2 settingParameters) {} // 0x000000018BF0E7A0-0x000000018BF0E7B0
+		private static void UpdateSettingParameters_Injected(ref HGDecalInteractionParametersV2 settingParameters) {} // 0x000000018512D920-0x000000018512D960
 	}
 
-	[UsedByNativeCode]
-	public struct HGIrradianceVolumeConfig // TypeDefIndex: 57433
+	public struct HGIrradianceVolumeConfig // TypeDefIndex: 58437
 	{
 		// Fields
 		public uint enableLowQualityMode; // 0x00
@@ -999,30 +763,96 @@ namespace UnityEngine.HyperGryph
 		public uint blockCountY; // 0x0C
 		public uint blockCountZ; // 0x10
 		public uint hashTableSize; // 0x14
-		public unsafe fixed /* 0x00000000-0x00000000 */ int perLOD[0]; // 0x18
-		public unsafe fixed /* 0x00000000-0x00000000 */ int perHalfChunkCounts[0]; // 0x24
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perHashTableOffsets[0]; // 0x30
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perHashTableSizes[0]; // 0x3C
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perPhysicalTextureOffsets[0]; // 0x48
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perPhysicalTextureBlockCounts[0]; // 0x54
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perFrameMaxLoadingByteCount[0]; // 0x60
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perFrameMaxUploadChunkCount[0]; // 0x6C
+		public _perLOD_e__FixedBuffer perLOD; // 0x18
+		public _perHalfChunkCounts_e__FixedBuffer perHalfChunkCounts; // 0x24
+		public _perHashTableOffsets_e__FixedBuffer perHashTableOffsets; // 0x30
+		public _perHashTableSizes_e__FixedBuffer perHashTableSizes; // 0x3C
+		public _perPhysicalTextureOffsets_e__FixedBuffer perPhysicalTextureOffsets; // 0x48
+		public _perPhysicalTextureBlockCounts_e__FixedBuffer perPhysicalTextureBlockCounts; // 0x54
+		public _perFrameMaxLoadingByteCount_e__FixedBuffer perFrameMaxLoadingByteCount; // 0x60
+		public _perFrameMaxUploadChunkCount_e__FixedBuffer perFrameMaxUploadChunkCount; // 0x6C
 		public uint perFrameMaxLoadingByteCountV3; // 0x78
 		public uint perFrameMaxUploadChunkCountV3; // 0x7C
 		public uint maxHashTableSize; // 0x80
 		public uint maxInactiveFrameCount; // 0x84
-		public unsafe fixed /* 0x00000000-0x00000000 */ int ClipmapTextureSize[0]; // 0x88
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint blockSizesV3[0]; // 0x94
-		public unsafe fixed /* 0x00000000-0x00000000 */ float cameraForwardBiasForYAxis[0]; // 0xA0
+		public _ClipmapTextureSize_e__FixedBuffer ClipmapTextureSize; // 0x88
+		public _blockSizesV3_e__FixedBuffer blockSizesV3; // 0x94
+		public _cameraForwardBiasForYAxis_e__FixedBuffer cameraForwardBiasForYAxis; // 0xA0
 		public uint maxRegionCount; // 0xAC
 		public int regionAtlasSizeX; // 0xB0
 		public int regionAtlasSizeY; // 0xB4
 		public int regionAtlasSizeZ; // 0xB8
 		public uint enableLowMemoryMode; // 0xBC
+	
+		// Nested types
+		public struct _perLOD_e__FixedBuffer // TypeDefIndex: 58426
+		{
+			// Fields
+			public int FixedElementField; // 0x00
+		}
+	
+		public struct _perHalfChunkCounts_e__FixedBuffer // TypeDefIndex: 58427
+		{
+			// Fields
+			public int FixedElementField; // 0x00
+		}
+	
+		public struct _perHashTableOffsets_e__FixedBuffer // TypeDefIndex: 58428
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perHashTableSizes_e__FixedBuffer // TypeDefIndex: 58429
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perPhysicalTextureOffsets_e__FixedBuffer // TypeDefIndex: 58430
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perPhysicalTextureBlockCounts_e__FixedBuffer // TypeDefIndex: 58431
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perFrameMaxLoadingByteCount_e__FixedBuffer // TypeDefIndex: 58432
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perFrameMaxUploadChunkCount_e__FixedBuffer // TypeDefIndex: 58433
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _ClipmapTextureSize_e__FixedBuffer // TypeDefIndex: 58434
+		{
+			// Fields
+			public int FixedElementField; // 0x00
+		}
+	
+		public struct _blockSizesV3_e__FixedBuffer // TypeDefIndex: 58435
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _cameraForwardBiasForYAxis_e__FixedBuffer // TypeDefIndex: 58436
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
 	}
 
-	[UsedByNativeCode]
-	public struct HGIrradianceVolumePipelineUpdateResult // TypeDefIndex: 57434
+	public struct HGIrradianceVolumePipelineUpdateResult // TypeDefIndex: 58438
 	{
 		// Fields
 		public Vector4 param0; // 0x00
@@ -1034,86 +864,185 @@ namespace UnityEngine.HyperGryph
 		public Texture physicalTexture1; // 0x50
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/IV/HGIrradianceVolume.h")]
-	public class HGIrradianceVolume // TypeDefIndex: 57435
+	public class HGIrradianceVolume // TypeDefIndex: 58439
 	{
 		// Constructors
 		public HGIrradianceVolume() {} // Dummy constructor
 	
 		// Methods
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
-		public static long Create([IsReadOnly] in HGIrradianceVolumeConfig config) => default; // 0x000000018263D140-0x000000018263D180
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
-		public static void Destroy(long id) {} // 0x0000000189DF6C14-0x0000000189DF6C48
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
-		public static void SetEnableV3(bool enable) {} // 0x000000018263D180-0x000000018263D1C0
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
-		public static void SetSceneStateNames(string[] stateNames, string[] activateStates) {} // 0x0000000183589350-0x00000001835893A0
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
-		public static void SetActiveSceneStateNames(string[] activateNames) {} // 0x0000000189DF6C48-0x0000000189DF6C7C
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
-		public static void SetActiveSceneStateMask(uint mask) {} // 0x0000000182F12F30-0x0000000182F12F70
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
-		public static string[] GetActiveSceneStateNames() => default; // 0x0000000183589310-0x0000000183589350
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
-		public static void SetMap(long id, string path) {} // 0x000000018263D1C0-0x000000018263D210
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
-		public static void SetMapV3(long id, string path) {} // 0x000000018263D210-0x000000018263D260
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
-		public static void StreamingInCabin(long id, string slotId, uint roomTypeId) {} // 0x0000000189DF6C7C-0x0000000189DF6CD0
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
-		public static void StreamingOutCabin(long id, string slotId) {} // 0x0000000189DF6CD0-0x0000000189DF6D14
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
-		public static void SetStreamingCenter(long id, Vector3 center) {} // 0x0000000184270CD0-0x0000000184270CE4
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolume()", StaticAccessorType.Dot)]
+		public static long Create(in HGIrradianceVolumeConfig config) => default; // 0x0000000185F7A610-0x0000000185F7A650
+		public static void Destroy(long id) {} // 0x000000018BF0E9C4-0x000000018BF0E9F8
+		public static void SetEnableV3(bool enable) {} // 0x000000018512D790-0x000000018512D7D0
+		public static void SetSceneStateNames(string[] stateNames, string[] activateStates) {} // 0x000000018535DC40-0x000000018535DC90
+		public static void SetActiveSceneStateNames(string[] activateNames) {} // 0x000000018BF0E9F8-0x000000018BF0EA2C
+		public static void SetActiveSceneStateMask(uint mask) {} // 0x00000001843BFEE0-0x00000001843BFF20
+		public static string[] GetActiveSceneStateNames() => default; // 0x000000018535DBC0-0x000000018535DC00
+		public static void SetMap(long id, string path) {} // 0x0000000185F5F5C0-0x0000000185F5F610
+		public static void SetMapV3(long id, string path) {} // 0x0000000185F5F610-0x0000000185F5F660
+		public static void StreamingInCabin(long id, string slotId, uint roomTypeId) {} // 0x000000018BF0EA2C-0x000000018BF0EA80
+		public static void StreamingOutCabin(long id, string slotId) {} // 0x000000018BF0EA80-0x000000018BF0EAC4
+		public static void SetStreamingCenter(long id, Vector3 center) {} // 0x000000018646DB28-0x000000018646DB3C
 		public static void PipelineUpdate(out HGIrradianceVolumePipelineUpdateResult result, long id, IntPtr renderContext, CommandBuffer cmd, int bakeCS, int updateIndirectionCS) {
 			result = default;
-		} // 0x000000018263CD80-0x000000018263CDF0
-		private static void SetStreamingCenter_Injected(long id, ref Vector3 center) {} // 0x000000018263D310-0x000000018263D360
+		} // 0x00000001840C3870-0x00000001840C38E0
+		private static void SetStreamingCenter_Injected(long id, ref Vector3 center) {} // 0x00000001850D1240-0x00000001850D1290
 	}
 
-	[UsedByNativeCode]
-	public struct HGIrradianceVolumeConfigV2 // TypeDefIndex: 57455
+	public struct HGIrradianceVolumeConfigV2 // TypeDefIndex: 58459
 	{
 		// Fields
 		public uint enableLowQualityMode; // 0x00
 		public int clipMapTextureSizeX; // 0x04
 		public int clipMapTextureSizeY; // 0x08
 		public int clipMapTextureSizeZ; // 0x0C
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint basisBaseGridDim[0]; // 0x10
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint basisVoxelDataDim[0]; // 0x28
+		public _basisBaseGridDim_e__FixedBuffer basisBaseGridDim; // 0x10
+		public _basisVoxelDataDim_e__FixedBuffer basisVoxelDataDim; // 0x28
 		public uint coeffBaseGridDim; // 0x40
 		public uint coeffVoxelDataDim; // 0x44
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perCoeffLodBudget[0]; // 0x48
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perBasisLodBudget[0]; // 0x54
+		public _perCoeffLodBudget_e__FixedBuffer perCoeffLodBudget; // 0x48
+		public _perBasisLodBudget_e__FixedBuffer perBasisLodBudget; // 0x54
 		public uint lod3BaseGridDim; // 0x60
 		public uint lod3VoxelDataDim; // 0x64
 		public uint lod3Budget; // 0x68
 		public uint rawDataSize; // 0x6C
 		public uint modelBufferBudget; // 0x70
-		public unsafe fixed /* 0x00000000-0x00000000 */ int perLOD[0]; // 0x74
-		public unsafe fixed /* 0x00000000-0x00000000 */ int perHalfStreamingChunkCountsX[0]; // 0x80
-		public unsafe fixed /* 0x00000000-0x00000000 */ int perHalfStreamingChunkCountsY[0]; // 0x8C
-		public unsafe fixed /* 0x00000000-0x00000000 */ int perHalfStreamingChunkCountsZ[0]; // 0x98
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perRawBufferOffsets[0]; // 0xA4
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perRawBufferCounts[0]; // 0xB0
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perBlockInfoBufferOffsets[0]; // 0xBC
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perBlockInfoSize[0]; // 0xC8
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perBasisTextureOffset[0]; // 0xD4
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perBasisTextureBlockCounts[0]; // 0xE0
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perCoeffTextureOffset[0]; // 0xEC
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perCoeffTextureBlockCounts[0]; // 0xF8
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perFrameMaxLoadingByteCount[0]; // 0x104
-		public unsafe fixed /* 0x00000000-0x00000000 */ uint perFrameMaxUploadChunkCount[0]; // 0x110
+		public _perLOD_e__FixedBuffer perLOD; // 0x74
+		public _perHalfStreamingChunkCountsX_e__FixedBuffer perHalfStreamingChunkCountsX; // 0x80
+		public _perHalfStreamingChunkCountsY_e__FixedBuffer perHalfStreamingChunkCountsY; // 0x8C
+		public _perHalfStreamingChunkCountsZ_e__FixedBuffer perHalfStreamingChunkCountsZ; // 0x98
+		public _perRawBufferOffsets_e__FixedBuffer perRawBufferOffsets; // 0xA4
+		public _perRawBufferCounts_e__FixedBuffer perRawBufferCounts; // 0xB0
+		public _perBlockInfoBufferOffsets_e__FixedBuffer perBlockInfoBufferOffsets; // 0xBC
+		public _perBlockInfoSize_e__FixedBuffer perBlockInfoSize; // 0xC8
+		public _perBasisTextureOffset_e__FixedBuffer perBasisTextureOffset; // 0xD4
+		public _perBasisTextureBlockCounts_e__FixedBuffer perBasisTextureBlockCounts; // 0xE0
+		public _perCoeffTextureOffset_e__FixedBuffer perCoeffTextureOffset; // 0xEC
+		public _perCoeffTextureBlockCounts_e__FixedBuffer perCoeffTextureBlockCounts; // 0xF8
+		public _perFrameMaxLoadingByteCount_e__FixedBuffer perFrameMaxLoadingByteCount; // 0x104
+		public _perFrameMaxUploadChunkCount_e__FixedBuffer perFrameMaxUploadChunkCount; // 0x110
 		public uint maxRegionCount; // 0x11C
 		public uint regionAtlasSizeX; // 0x120
 		public uint regionAtlasSizeY; // 0x124
 		public uint regionAtlasSizeZ; // 0x128
-		public unsafe fixed /* 0x00000000-0x00000000 */ float streamingCenterBias[0]; // 0x12C
+		public _streamingCenterBias_e__FixedBuffer streamingCenterBias; // 0x12C
+	
+		// Nested types
+		public struct _basisBaseGridDim_e__FixedBuffer // TypeDefIndex: 58440
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _basisVoxelDataDim_e__FixedBuffer // TypeDefIndex: 58441
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perCoeffLodBudget_e__FixedBuffer // TypeDefIndex: 58442
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perBasisLodBudget_e__FixedBuffer // TypeDefIndex: 58443
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perLOD_e__FixedBuffer // TypeDefIndex: 58444
+		{
+			// Fields
+			public int FixedElementField; // 0x00
+		}
+	
+		public struct _perHalfStreamingChunkCountsX_e__FixedBuffer // TypeDefIndex: 58445
+		{
+			// Fields
+			public int FixedElementField; // 0x00
+		}
+	
+		public struct _perHalfStreamingChunkCountsY_e__FixedBuffer // TypeDefIndex: 58446
+		{
+			// Fields
+			public int FixedElementField; // 0x00
+		}
+	
+		public struct _perHalfStreamingChunkCountsZ_e__FixedBuffer // TypeDefIndex: 58447
+		{
+			// Fields
+			public int FixedElementField; // 0x00
+		}
+	
+		public struct _perRawBufferOffsets_e__FixedBuffer // TypeDefIndex: 58448
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perRawBufferCounts_e__FixedBuffer // TypeDefIndex: 58449
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perBlockInfoBufferOffsets_e__FixedBuffer // TypeDefIndex: 58450
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perBlockInfoSize_e__FixedBuffer // TypeDefIndex: 58451
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perBasisTextureOffset_e__FixedBuffer // TypeDefIndex: 58452
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perBasisTextureBlockCounts_e__FixedBuffer // TypeDefIndex: 58453
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perCoeffTextureOffset_e__FixedBuffer // TypeDefIndex: 58454
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perCoeffTextureBlockCounts_e__FixedBuffer // TypeDefIndex: 58455
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perFrameMaxLoadingByteCount_e__FixedBuffer // TypeDefIndex: 58456
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _perFrameMaxUploadChunkCount_e__FixedBuffer // TypeDefIndex: 58457
+		{
+			// Fields
+			public uint FixedElementField; // 0x00
+		}
+	
+		public struct _streamingCenterBias_e__FixedBuffer // TypeDefIndex: 58458
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
 	}
 
-	[UsedByNativeCode]
-	public struct HGIrradianceVolumePipelineUpdateResultV2 // TypeDefIndex: 57456
+	public struct HGIrradianceVolumePipelineUpdateResultV2 // TypeDefIndex: 58460
 	{
 		// Fields
 		public Vector4 param0; // 0x00
@@ -1128,111 +1057,82 @@ namespace UnityEngine.HyperGryph
 		public Texture clipmapTextureBLod3; // 0x68
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/IV/HGIrradianceVolumeV2.h")]
-	public class HGIrradianceVolumeV2 // TypeDefIndex: 57457
+	public class HGIrradianceVolumeV2 // TypeDefIndex: 58461
 	{
 		// Constructors
 		public HGIrradianceVolumeV2() {} // Dummy constructor
 	
 		// Methods
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolumeV2()", StaticAccessorType.Dot)]
-		public static long Create([IsReadOnly] in HGIrradianceVolumeConfigV2 config) => default; // 0x0000000183D3E6E0-0x0000000183D3E720
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolumeV2()", StaticAccessorType.Dot)]
-		public static void Destroy(long id) {} // 0x0000000189DF6A00-0x0000000189DF6A34
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolumeV2()", StaticAccessorType.Dot)]
-		public static void SetSceneStateNames(string[] stateNames, string[] activateStates) {} // 0x0000000183589460-0x00000001835894B0
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolumeV2()", StaticAccessorType.Dot)]
-		public static void SetActiveSceneStateNames(string[] activateStates) {} // 0x0000000189DF6A98-0x0000000189DF6ACC
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolumeV2()", StaticAccessorType.Dot)]
-		public static void SetActiveSceneStateMask(uint mask) {} // 0x0000000182F12FB0-0x0000000182F12FF0
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolumeV2()", StaticAccessorType.Dot)]
-		public static string[] GetActiveSceneStateNames() => default; // 0x0000000183589420-0x0000000183589460
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolumeV2()", StaticAccessorType.Dot)]
-		public static void SetMap(long id, string path) {} // 0x0000000183D008F0-0x0000000183D00940
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolumeV2()", StaticAccessorType.Dot)]
-		public static void SetStreamingCenter(long id, Vector3 center) {} // 0x0000000189DF6B68-0x0000000189DF6B7C
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolumeV2()", StaticAccessorType.Dot)]
-		public static void SetCameraForwardDirection(long id, Vector3 cameraForwardDir) {} // 0x0000000189DF6B10-0x0000000189DF6B24
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolumeV2()", StaticAccessorType.Dot)]
+		public static long Create(in HGIrradianceVolumeConfigV2 config) => default; // 0x0000000185F9E530-0x0000000185F9E570
+		public static void Destroy(long id) {} // 0x000000018BF0E7B0-0x000000018BF0E7E4
+		public static void SetSceneStateNames(string[] stateNames, string[] activateStates) {} // 0x000000018535DC90-0x000000018535DCE0
+		public static void SetActiveSceneStateNames(string[] activateStates) {} // 0x000000018BF0E848-0x000000018BF0E87C
+		public static void SetActiveSceneStateMask(uint mask) {} // 0x00000001843BFF60-0x00000001843BFFA0
+		public static string[] GetActiveSceneStateNames() => default; // 0x000000018535DC00-0x000000018535DC40
+		public static void SetMap(long id, string path) {} // 0x0000000185F5F660-0x0000000185F5F6B0
+		public static void SetStreamingCenter(long id, Vector3 center) {} // 0x000000018BF0E918-0x000000018BF0E92C
+		public static void SetCameraForwardDirection(long id, Vector3 cameraForwardDir) {} // 0x000000018BF0E8C0-0x000000018BF0E8D4
 		public static void PipelineUpdate(out HGIrradianceVolumePipelineUpdateResultV2 result, long id, IntPtr renderContext, CommandBuffer cmd, int bakeCS, int updateClipmapCS) {
 			result = default;
-		} // 0x0000000189DF6A34-0x0000000189DF6A98
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolumeV2()", StaticAccessorType.Dot)]
-		public static void StreamingInCabin(long id, long slotId, uint roomTypeId) {} // 0x0000000189DF6B7C-0x0000000189DF6BD0
-		[StaticAccessor("GetHGGlobalGameManager().GetHGIrradianceVolumeV2()", StaticAccessorType.Dot)]
-		public static void StreamingOutCabin(long id, long slotId) {} // 0x0000000189DF6BD0-0x0000000189DF6C14
-		private static void SetStreamingCenter_Injected(long id, ref Vector3 center) {} // 0x0000000189DF6B24-0x0000000189DF6B68
-		private static void SetCameraForwardDirection_Injected(long id, ref Vector3 cameraForwardDir) {} // 0x0000000189DF6ACC-0x0000000189DF6B10
+		} // 0x000000018BF0E7E4-0x000000018BF0E848
+		public static void StreamingInCabin(long id, long slotId, uint roomTypeId) {} // 0x000000018BF0E92C-0x000000018BF0E980
+		public static void StreamingOutCabin(long id, long slotId) {} // 0x000000018BF0E980-0x000000018BF0E9C4
+		private static void SetStreamingCenter_Injected(long id, ref Vector3 center) {} // 0x000000018BF0E8D4-0x000000018BF0E918
+		private static void SetCameraForwardDirection_Injected(long id, ref Vector3 cameraForwardDir) {} // 0x000000018BF0E87C-0x000000018BF0E8C0
 	}
 
-	[NativeType("Modules/HGGraphics/Public/ECS/HGMeshRender.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetMeshRender()", StaticAccessorType.Dot)]
-	public static class HGMeshRender // TypeDefIndex: 57458
+	public static class HGMeshRender // TypeDefIndex: 58462
 	{
 		// Methods
-		private static unsafe uint CreateRendererList(uint viewHandle, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, ushort globalKeywords, IntPtr context, bool multiDraw, bool transparentSorting, uint cullingLayerMask, bool noAlphaTest, uint* drawableFeedbackPtr, bool excludeGPUDriven) => default; // 0x0000000189DF6F30-0x0000000189DF6FA4
-		private static void CreateRendererListWithPreZ(uint viewHandle, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, IntPtr context, ref uint normalList, ref uint preZPart0List, ref uint preZPart1List, bool excludeGPUDriven) {} // 0x0000000189DF6DC8-0x0000000189DF6E28
-		private static uint CreateRendererListWithCharacterIndex(uint viewHandle, ushort characterIndex, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, ushort globalHGKeywords, IntPtr context) => default; // 0x0000000189DF6D40-0x0000000189DF6DAC
-		public static uint CreateRendererList(uint viewHandle, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, HGRenderKeyword globalKeywords, IntPtr context, bool multiDraw = false /* Metadata: 0x01FD9D4F */, bool transparentSorting = false /* Metadata: 0x01FD9D50 */, uint cullingLayerMask = 4294967295 /* Metadata: 0x01FD9D51 */, bool noAlphaTest = false /* Metadata: 0x01FD9D52 */, bool excludeGPUDriven = false /* Metadata: 0x01FD9D53 */) => default; // 0x0000000189DF6E50-0x0000000189DF6EBC
-		public static uint CreateRendererList(uint viewHandle, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, HGRenderKeyword globalKeywords, IntPtr context, IntPtr drawableFeedbackPtr, bool multiDraw = false /* Metadata: 0x01FD9D54 */, bool transparentSorting = false /* Metadata: 0x01FD9D55 */, uint cullingLayerMask = 4294967295 /* Metadata: 0x01FD9D56 */, bool noAlphaTest = false /* Metadata: 0x01FD9D57 */, bool excludeGPUDriven = false /* Metadata: 0x01FD9D58 */) => default; // 0x0000000189DF6EBC-0x0000000189DF6F30
-		public static uint CreateRendererListWithCharacterIndex(uint viewHandle, ushort characterIndex, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, HGRenderKeyword globalKeywords, IntPtr context) => default; // 0x0000000189DF6DAC-0x0000000189DF6DC8
-		public static void CreateRendererListWithPreZ(uint viewHandle, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, IntPtr context, out uint normalList, out uint preZPart0List, out uint preZPart1List, bool excludeGPUDriven = false /* Metadata: 0x01FD9D59 */) {
+		private static unsafe uint CreateRendererList(uint viewHandle, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, ushort globalKeywords, IntPtr context, bool multiDraw, bool transparentSorting, uint cullingLayerMask, bool noAlphaTest, uint* drawableFeedbackPtr, bool excludeGPUDriven) => default; // 0x000000018BF0ECE0-0x000000018BF0ED54
+		private static void CreateRendererListWithPreZ(uint viewHandle, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, IntPtr context, ref uint normalList, ref uint preZPart0List, ref uint preZPart1List, bool excludeGPUDriven) {} // 0x000000018BF0EB78-0x000000018BF0EBD8
+		private static uint CreateRendererListWithCharacterIndex(uint viewHandle, ushort characterIndex, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, ushort globalHGKeywords, IntPtr context) => default; // 0x000000018BF0EAF0-0x000000018BF0EB5C
+		public static uint CreateRendererList(uint viewHandle, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, HGRenderKeyword globalKeywords, IntPtr context, bool multiDraw = false /* Metadata: 0x0207F603 */, bool transparentSorting = false /* Metadata: 0x0207F604 */, uint cullingLayerMask = 4294967295 /* Metadata: 0x0207F605 */, bool noAlphaTest = false /* Metadata: 0x0207F606 */, bool excludeGPUDriven = false /* Metadata: 0x0207F607 */) => default; // 0x000000018BF0EC00-0x000000018BF0EC6C
+		public static uint CreateRendererList(uint viewHandle, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, HGRenderKeyword globalKeywords, IntPtr context, IntPtr drawableFeedbackPtr, bool multiDraw = false /* Metadata: 0x0207F608 */, bool transparentSorting = false /* Metadata: 0x0207F609 */, uint cullingLayerMask = 4294967295 /* Metadata: 0x0207F60A */, bool noAlphaTest = false /* Metadata: 0x0207F60B */, bool excludeGPUDriven = false /* Metadata: 0x0207F60C */) => default; // 0x000000018BF0EC6C-0x000000018BF0ECE0
+		public static uint CreateRendererListWithCharacterIndex(uint viewHandle, ushort characterIndex, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, HGRenderKeyword globalKeywords, IntPtr context) => default; // 0x000000018BF0EB5C-0x000000018BF0EB78
+		public static void CreateRendererListWithPreZ(uint viewHandle, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, IntPtr context, out uint normalList, out uint preZPart0List, out uint preZPart1List, bool excludeGPUDriven = false /* Metadata: 0x0207F60D */) {
 			normalList = default;
 			preZPart0List = default;
 			preZPart1List = default;
-		} // 0x0000000189DF6E28-0x0000000189DF6E50
-		public static void DrawECSRendererList(CommandBuffer cmd, uint rendererList) {} // 0x0000000189DF6FD0-0x0000000189DF6FEC
-		public static void DrawECSMeshRendererListWithSRPRendererList(CommandBuffer cmd, uint ecsList, UnityEngine.Rendering.RendererUtils.RendererList srpList) {} // 0x0000000189DF6FA4-0x0000000189DF6FD0
+		} // 0x000000018BF0EBD8-0x000000018BF0EC00
+		public static void DrawECSRendererList(CommandBuffer cmd, uint rendererList) {} // 0x000000018BF0ED80-0x000000018BF0ED9C
+		public static void DrawECSMeshRendererListWithSRPRendererList(CommandBuffer cmd, uint ecsList, UnityEngine.Rendering.RendererUtils.RendererList srpList) {} // 0x000000018BF0ED54-0x000000018BF0ED80
 	}
 
-	[NativeType("Modules/HGGraphics/Public/RayTracing/HGRayTracingScene.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetRayTracingScene()", StaticAccessorType.Dot)]
-	public static class HGRayTracingScene // TypeDefIndex: 57459
+	public static class HGRayTracingScene // TypeDefIndex: 58463
 	{
 		// Methods
-		public static uint AddCullViewHandle(ulong sceneMask, uint cullingLayerMask, uint objectFlagsValue, uint objectFlagsMask, LODCrossFadeConfig config, float viewScreenSizeMinSquared, float cullingRadius) => default; // 0x0000000189DF713C-0x0000000189DF7178
-		public static uint PrepareTLASCreationForCullView(uint viewHandle) => default; // 0x0000000189DF7178-0x0000000189DF71AC
-		private static uint AddCullViewHandle_Injected(ulong sceneMask, uint cullingLayerMask, uint objectFlagsValue, uint objectFlagsMask, ref LODCrossFadeConfig config, float viewScreenSizeMinSquared, float cullingRadius) => default; // 0x0000000189DF70DC-0x0000000189DF713C
+		public static uint AddCullViewHandle(ulong sceneMask, uint cullingLayerMask, uint objectFlagsValue, uint objectFlagsMask, LODCrossFadeConfig config, float viewScreenSizeMinSquared, float cullingRadius) => default; // 0x000000018BF0EEEC-0x000000018BF0EF28
+		public static uint PrepareTLASCreationForCullView(uint viewHandle) => default; // 0x000000018BF0EF28-0x000000018BF0EF5C
+		private static uint AddCullViewHandle_Injected(ulong sceneMask, uint cullingLayerMask, uint objectFlagsValue, uint objectFlagsMask, ref LODCrossFadeConfig config, float viewScreenSizeMinSquared, float cullingRadius) => default; // 0x000000018BF0EE8C-0x000000018BF0EEEC
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/ECS/HGReflectionProbeSystem.h")]
-	public class HGReflectionProbe // TypeDefIndex: 57460
+	public class HGReflectionProbe // TypeDefIndex: 58464
 	{
 		// Properties
-		[StaticAccessor("GetHGGlobalGameManager().GetHGReflectionProbeSystem()")]
-		public static float cameraMovementNotFadeness { get => default; } // 0x0000000189DF7310-0x0000000189DF733C 
-		[StaticAccessor("GetHGGlobalGameManager().GetHGReflectionProbeSystem()")]
-		public static float fadeTime { get => default; } // 0x00000001832436A0-0x00000001832436E0 
+		public static float cameraMovementNotFadeness { get => default; } // 0x000000018BF0F0D8-0x000000018BF0F104 
+		public static float fadeTime { get => default; } // 0x000000018519E0E0-0x000000018519E120 
 	
 		// Constructors
 		public HGReflectionProbe() {} // Dummy constructor
 	
 		// Methods
-		[StaticAccessor("GetHGGlobalGameManager().GetHGReflectionProbeSystem()", StaticAccessorType.Dot)]
-		public static uint AddView(Camera camera) => default; // 0x0000000182E87070-0x0000000182E870B0
-		[StaticAccessor("GetHGGlobalGameManager().GetHGReflectionProbeSystem()", StaticAccessorType.Dot)]
-		public static void RemoveView(uint viewHandle) {} // 0x0000000183D1EF60-0x0000000183D1EFA0
-		[StaticAccessor("GetHGGlobalGameManager().GetHGReflectionProbeSystem()", StaticAccessorType.Dot)]
-		public static void ResetView(uint viewHandle) {} // 0x0000000182E870B0-0x0000000182E870F0
-		[StaticAccessor("GetHGGlobalGameManager().GetHGReflectionProbeSystem()", StaticAccessorType.Dot)]
-		public static void UpdateViewPhase0(uint viewHandle, Vector3 cameraPosition, Vector3 visibleBox, bool loadSync = false /* Metadata: 0x01FD9D5A */) {} // 0x00000001842743B4-0x00000001842743D0
-		[StaticAccessor("GetHGGlobalGameManager().GetHGReflectionProbeSystem()", StaticAccessorType.Dot)]
+		public static uint AddView(Camera camera) => default; // 0x0000000185F56B20-0x0000000185F56B60
+		public static void RemoveView(uint viewHandle) {} // 0x0000000185F7DDF0-0x0000000185F7DE30
+		public static void ResetView(uint viewHandle) {} // 0x0000000185F56AE0-0x0000000185F56B20
+		public static void UpdateViewPhase0(uint viewHandle, Vector3 cameraPosition, Vector3 visibleBox, bool loadSync = false /* Metadata: 0x0207F60E */) {} // 0x000000018BF0F060-0x000000018BF0F078
 		public static void UpdateViewPhase1(uint viewHandle, float dt, bool enableFadeness, IntPtr blitList, int maxBlitCount, out int blitCount) {
 			blitCount = default;
-		} // 0x0000000189DF72B0-0x0000000189DF7310
-		[StaticAccessor("GetHGGlobalGameManager().GetHGReflectionProbeSystem()", StaticAccessorType.Dot)]
-		public static void UpdateViewCBHandle(uint viewHandle, Matrix4x4 worldToCameraMatrix, Matrix4x4 unitExtents, IntPtr binningBufferPtr, IntPtr globalBufferPtr) {} // 0x0000000189DF728C-0x0000000189DF72B0
-		[StaticAccessor("GetHGGlobalGameManager().GetHGReflectionProbeSystem()", StaticAccessorType.Dot)]
-		public static Texture GetTexture(uint viewHandle, ulong hash) => default; // 0x0000000189DF71EC-0x0000000189DF722C
-		[StaticAccessor("GetHGGlobalGameManager().GetHGReflectionProbeSystem()", StaticAccessorType.Dot)]
-		public static int GetTextureIndex(uint viewHandle, ulong hash) => default; // 0x0000000189DF71AC-0x0000000189DF71EC
-		[StaticAccessor("GetHGGlobalGameManager().GetHGReflectionProbeSystem()", StaticAccessorType.Dot)]
-		public static void SetViewTextureArrayCount(uint viewHandle, int count) {} // 0x0000000182E870F0-0x0000000182E87140
-		private static void UpdateViewPhase0_Injected(uint viewHandle, ref Vector3 cameraPosition, ref Vector3 visibleBox, bool loadSync = false /* Metadata: 0x01FD9D5B */) {} // 0x0000000182E87140-0x0000000182E871B0
-		private static void UpdateViewCBHandle_Injected(uint viewHandle, ref Matrix4x4 worldToCameraMatrix, ref Matrix4x4 unitExtents, IntPtr binningBufferPtr, IntPtr globalBufferPtr) {} // 0x0000000189DF722C-0x0000000189DF728C
+		} // 0x000000018BF0F078-0x000000018BF0F0D8
+		public static void UpdateViewCBHandle(uint viewHandle, Matrix4x4 worldToCameraMatrix, Matrix4x4 unitExtents, IntPtr binningBufferPtr, IntPtr globalBufferPtr) {} // 0x000000018BF0F03C-0x000000018BF0F060
+		public static Texture GetTexture(uint viewHandle, ulong hash) => default; // 0x000000018BF0EF9C-0x000000018BF0EFDC
+		public static int GetTextureIndex(uint viewHandle, ulong hash) => default; // 0x000000018BF0EF5C-0x000000018BF0EF9C
+		public static void SetViewTextureArrayCount(uint viewHandle, int count) {} // 0x0000000185F374B0-0x0000000185F37500
+		private static void UpdateViewPhase0_Injected(uint viewHandle, ref Vector3 cameraPosition, ref Vector3 visibleBox, bool loadSync = false /* Metadata: 0x0207F60F */) {} // 0x000000018502CB30-0x000000018502CBA0
+		private static void UpdateViewCBHandle_Injected(uint viewHandle, ref Matrix4x4 worldToCameraMatrix, ref Matrix4x4 unitExtents, IntPtr binningBufferPtr, IntPtr globalBufferPtr) {} // 0x000000018BF0EFDC-0x000000018BF0F03C
 	}
 
-	public enum AssetType // TypeDefIndex: 57461
+	public enum AssetType // TypeDefIndex: 58465
 	{
 		Invalid = 0,
 		Material = 1,
@@ -1248,7 +1148,7 @@ namespace UnityEngine.HyperGryph
 		Count = 11
 	}
 
-	public enum AssetPriority : ushort // TypeDefIndex: 57462
+	public enum AssetPriority : ushort // TypeDefIndex: 58466
 	{
 		Preload = 0,
 		LODStreaming = 5,
@@ -1256,14 +1156,14 @@ namespace UnityEngine.HyperGryph
 		Streaming = 15
 	}
 
-	public enum AssetState : byte // TypeDefIndex: 57463
+	public enum AssetState : byte // TypeDefIndex: 58467
 	{
 		Loading = 0,
 		Loaded = 1,
 		Failed = 2
 	}
 
-	public struct VFSBlockFileInfo // TypeDefIndex: 57464
+	public struct VFSBlockFileInfo // TypeDefIndex: 58468
 	{
 		// Fields
 		public ulong offset; // 0x00
@@ -1271,20 +1171,20 @@ namespace UnityEngine.HyperGryph
 		public string chunkFilePath; // 0x10
 	}
 
-	public struct AssetIdentifier // TypeDefIndex: 57465
+	public struct AssetIdentifier // TypeDefIndex: 58469
 	{
 		// Fields
 		public long hash; // 0x00
 		public AssetType type; // 0x08
 	}
 
-	public struct AssetHandleIndex // TypeDefIndex: 57466
+	public struct AssetHandleIndex // TypeDefIndex: 58470
 	{
 		// Fields
 		public uint index; // 0x00
 	}
 
-	public struct AssetOperation // TypeDefIndex: 57467
+	public struct AssetOperation // TypeDefIndex: 58471
 	{
 		// Fields
 		public bool isLoadOperation; // 0x00
@@ -1293,9 +1193,7 @@ namespace UnityEngine.HyperGryph
 		public AssetIdentifier identifier; // 0x08
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/HGResourceManager.bindings.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetHGResourceManager()", StaticAccessorType.Dot)]
-	public static class HGResourceManager // TypeDefIndex: 57471
+	public static class HGResourceManager // TypeDefIndex: 58475
 	{
 		// Fields
 		public static GetFileHashMappingCallback getFileHashMappingCallback; // 0x00
@@ -1304,54 +1202,48 @@ namespace UnityEngine.HyperGryph
 		private static readonly System.Type[] kAssetTypeToUnityType; // 0x18
 	
 		// Properties
-		public static bool usingVFS { get; [NativeName("SetUsingVFS")] set; } // 0x00000001822A1910-0x00000001822A1950
-		public static IntPtr assetOperations { get; } // 0x00000001822A1A20-0x00000001822A1A60 
-		public static int assetOperationCount { get; } // 0x00000001822A1950-0x00000001822A1A20 
+		public static bool usingVFS { get; set; } // 0x000000018401ADC0-0x000000018401AE60
+		public static IntPtr assetOperations { get; } // 0x000000018BF0F2D4-0x000000018BF0F33C 
+		public static int assetOperationCount { get; } // 0x000000018BF0F33C-0x000000018BF0F3A0 
 	
 		// Nested types
-		public delegate VFSBlockFileInfo GetFileHashMappingCallback(long originNameHash); // TypeDefIndex: 57468; 0x000000018500ADA0-0x000000018500ADD8
+		public delegate VFSBlockFileInfo GetFileHashMappingCallback(long originNameHash); // TypeDefIndex: 58472; 0x0000000185216600-0x0000000185216690
 	
-		public delegate VFSBlockFileInfo GetFilePathMappingCallback(string originName); // TypeDefIndex: 57469; 0x000000018500ADA0-0x000000018500ADD8
+		public delegate VFSBlockFileInfo GetFilePathMappingCallback(string originName); // TypeDefIndex: 58473; 0x00000001853E41C0-0x00000001853E4210
 	
-		public delegate Texture2D GetTextureFromHGWaterSectorDataCallback(ScriptableObject sectorDataScriptableObject); // TypeDefIndex: 57470; 0x000000018102B410-0x000000018102B420
+		public delegate Texture2D GetTextureFromHGWaterSectorDataCallback(ScriptableObject sectorDataScriptableObject); // TypeDefIndex: 58474; 0x00000000-0x00000000
 	
 		// Constructors
-		static HGResourceManager() {} // 0x000000018389EAB0-0x000000018389ED90
+		static HGResourceManager() {} // 0x000000018448D310-0x000000018448D3A0
 	
 		// Methods
-		public static AssetHandleIndex LoadAsync(long assetHash, AssetType type, AssetPriority priority) => default; // 0x0000000183290A30-0x0000000183290AC0
-		public static void Dispose(AssetHandleIndex assetHandle) {} // 0x00000001832909A0-0x00000001832909F0
-		public static AssetState GetAssetState(AssetHandleIndex assetHandle) => default; // 0x0000000183407DA0-0x0000000183407DF0
-		private static UnityEngine.Object GetAsset(AssetHandleIndex assetHandle) => default; // 0x0000000183407D10-0x0000000183407D60
+		public static AssetHandleIndex LoadAsync(long assetHash, AssetType type, AssetPriority priority) => default; // 0x000000018401AB40-0x000000018401AB80
+		public static void Dispose(AssetHandleIndex assetHandle) {} // 0x000000018401AA70-0x000000018401AB40
+		public static AssetState GetAssetState(AssetHandleIndex assetHandle) => default; // 0x000000018401A9F0-0x000000018401AA30
+		private static UnityEngine.Object GetAsset(AssetHandleIndex assetHandle) => default; // 0x000000018448D2D0-0x000000018448D310
 		public static bool TryGetAsset<T>(AssetHandleIndex assetHandle, out ref T asset)
 			where T : UnityEngine.Object {
 			asset = default;
 			return default;
-		}
-		public static void UpdateAssetHandle(AssetHandleIndex handleIndex, AssetIdentifier identifier, AssetState state, int assetInstanceID) {} // 0x00000001822A1CA0-0x00000001822A1D40
-		public static void ClearAssetOperations() {} // 0x00000001822A18D0-0x00000001822A1910
-		public static void Reset() {} // 0x0000000182E77B90-0x0000000182E77BD0
-		[RequiredByNativeCode]
-		public static VFSBlockFileInfo GetFileHashMapping(long originNameHash) => default; // 0x0000000182E9C240-0x0000000182E9C2F0
-		[RequiredByNativeCode]
-		public static VFSBlockFileInfo GetFilePathMapping(string originName) => default; // 0x0000000189DF7474-0x0000000189DF750C
-		[RequiredByNativeCode]
-		public static Texture2D GetTextureFromHGWaterSectorData(ScriptableObject sectorDataScriptableObject) => default; // 0x0000000189DF750C-0x0000000189DF7574
-		public static NativeArray<AssetOperation> GetAssetOperationsArray() => default; // 0x0000000189DF73E0-0x0000000189DF7474
+		} // 0x0000000185103940-0x00000001851039F0
+		public static void UpdateAssetHandle(AssetHandleIndex handleIndex, AssetIdentifier identifier, AssetState state, int assetInstanceID) {} // 0x000000018BF0F23C-0x000000018BF0F2D4
+		public static void ClearAssetOperations() {} // 0x000000018BF0F1A8-0x000000018BF0F23C
+		public static void Reset() {} // 0x0000000185A29220-0x0000000185A29500
+		public static VFSBlockFileInfo GetFileHashMapping(long originNameHash) => default; // 0x0000000185216500-0x0000000185216570
+		public static VFSBlockFileInfo GetFilePathMapping(string originName) => default; // 0x00000001852165C0-0x0000000185216600
+		public static Texture2D GetTextureFromHGWaterSectorData(ScriptableObject sectorDataScriptableObject) => default; // 0x00000001853E4210-0x00000001853E4250
+		public static System.Type ToUnityType(AssetType type) => default; // 0x00000001853E4180-0x00000001853E41C0
+		public static NativeArray<AssetOperation> GetAssetOperationsArray() => default; // 0x000000018401AE60-0x000000018401AED0
 		private static void LoadAsync_Injected(long assetHash, AssetType type, AssetPriority priority, out AssetHandleIndex ret) {
 			ret = default;
-		} // 0x0000000183290930-0x00000001832909A0
-		private static void Dispose_Injected(ref AssetHandleIndex assetHandle) {} // 0x00000001832909F0-0x0000000183290A30
-		private static AssetState GetAssetState_Injected(ref AssetHandleIndex assetHandle) => default; // 0x0000000183407DF0-0x0000000183407E30
-		private static UnityEngine.Object GetAsset_Injected(ref AssetHandleIndex assetHandle) => default; // 0x0000000183407D60-0x0000000183407DA0
-		private static void UpdateAssetHandle_Injected(ref AssetHandleIndex handleIndex, ref AssetIdentifier identifier, AssetState state, int assetInstanceID) {} // 0x00000001822A1D40-0x00000001822A1DB0
-	
-		// Extension methods
-		public static System.Type ToUnityType(this AssetType type) => default; // 0x0000000189DF7574-0x0000000189DF75D8
+		} // 0x0000000183779FF0-0x000000018377A030
+		private static void Dispose_Injected(ref AssetHandleIndex assetHandle) {} // 0x000000018448D3A0-0x000000018448D430
+		private static AssetState GetAssetState_Injected(ref AssetHandleIndex assetHandle) => default; // 0x0000000183779FF0-0x000000018377A030
+		private static UnityEngine.Object GetAsset_Injected(ref AssetHandleIndex assetHandle) => default; // 0x000000018448D430-0x000000018448D4C0
+		private static void UpdateAssetHandle_Injected(ref AssetHandleIndex handleIndex, ref AssetIdentifier identifier, AssetState state, int assetInstanceID) {} // 0x00000001817C2F70-0x00000001817C2F80
 	}
 
-	[Flags]
-	public enum HGRenderFlags : uint // TypeDefIndex: 57472
+	public enum HGRenderFlags : uint // TypeDefIndex: 58476
 	{
 		None = 0,
 		PreZ = 1,
@@ -1381,16 +1273,14 @@ namespace UnityEngine.HyperGryph
 		RayTracing = 134217728
 	}
 
-	[Flags]
-	public enum HGRenderKeyword : ushort // TypeDefIndex: 57473
+	public enum HGRenderKeyword : ushort // TypeDefIndex: 58477
 	{
 		None = 0,
 		CrossFade = 1,
 		Dither = 2
 	}
 
-	[Flags]
-	public enum HGShaderLightMode : uint // TypeDefIndex: 57474
+	public enum HGShaderLightMode : uint // TypeDefIndex: 58478
 	{
 		None = 0,
 		GBuffer = 1,
@@ -1421,8 +1311,7 @@ namespace UnityEngine.HyperGryph
 		ForwardAfterUI = 33554432
 	}
 
-	[Flags]
-	public enum HGObjectFlags : uint // TypeDefIndex: 57475
+	public enum HGObjectFlags : uint // TypeDefIndex: 58479
 	{
 		None = 0,
 		Enabled = 1,
@@ -1457,8 +1346,7 @@ namespace UnityEngine.HyperGryph
 		RealtimeShadowCaster = 134217728
 	}
 
-	[Flags]
-	public enum HGFactoryDirtyFlags : byte // TypeDefIndex: 57476
+	public enum HGFactoryDirtyFlags : byte // TypeDefIndex: 58480
 	{
 		None = 0,
 		PerDrawData = 1,
@@ -1468,16 +1356,14 @@ namespace UnityEngine.HyperGryph
 		VFXVisibility = 32
 	}
 
-	[UsedByNativeCode]
-	public struct IVec2 // TypeDefIndex: 57477
+	public struct IVec2 // TypeDefIndex: 58481
 	{
 		// Fields
 		public int x; // 0x00
 		public int y; // 0x04
 	}
 
-	[UsedByNativeCode]
-	public struct IVec4 // TypeDefIndex: 57478
+	public struct IVec4 // TypeDefIndex: 58482
 	{
 		// Fields
 		public int x; // 0x00
@@ -1486,8 +1372,7 @@ namespace UnityEngine.HyperGryph
 		public int w; // 0x0C
 	}
 
-	[UsedByNativeCode]
-	public struct SludgeNodeData // TypeDefIndex: 57480
+	public struct SludgeNodeData // TypeDefIndex: 58484
 	{
 		// Fields
 		public byte allHole; // 0x00
@@ -1495,51 +1380,55 @@ namespace UnityEngine.HyperGryph
 		public ushort parent; // 0x02
 		public Vector3 aabbCenter; // 0x04
 		public Vector3 aabbExtent; // 0x10
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte patchAABBData[0]; // 0x1C
+		public _patchAABBData_e__FixedBuffer patchAABBData; // 0x1C
+	
+		// Nested types
+		public struct _patchAABBData_e__FixedBuffer // TypeDefIndex: 58483
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
 	}
 
-	[UsedByNativeCode]
-	public struct SludgeHeightmapInfo // TypeDefIndex: 57481
+	public struct SludgeHeightmapInfo // TypeDefIndex: 58485
 	{
 		// Fields
 		public Vector4 heightmapUVOffsetScale; // 0x00
 		public Texture2D heightmapAtlas; // 0x10
 	}
 
-	[NativeType("Modules/HGGraphics/Public/Sludge/HGSludgeRender.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetSludgeRender()", StaticAccessorType.Dot)]
-	public static class HGSludgeRender // TypeDefIndex: 57482
+	public static class HGSludgeRender // TypeDefIndex: 58486
 	{
 		// Methods
-		public static bool RegisterSludge(Entity entity, Texture2D bakedHeightmap, NativeArray<SludgeNodeData> nodeData) => default; // 0x0000000182AC0800-0x0000000182AC0870
-		private static bool RegisterSludge(Entity entity, Texture2D bakedHeightmap, int nodeCount, IntPtr nodeData) => default; // 0x000000018427290C-0x0000000184272930
-		public static void UnregisterAndDestroySludge(Entity entity) {} // 0x0000000189DF79A8-0x0000000189DF79C4
-		public static uint CreateRendererList(Camera camera, Vector2Int sceneRTSize, uint viewHandle, HGShaderLightMode lightModeMask, HGShaderLightMode decalLightModeMask, float lodFactor, IntPtr context, bool useMetric = true /* Metadata: 0x01FD9E6F */) => default; // 0x0000000189DF76D0-0x0000000189DF76EC
-		private static uint CreateRendererList(Camera camera, Vector2Int sceneRTSize, uint viewHandle, uint lightModeMask, uint decalLightModeMask, float loadFactor, IntPtr context, bool useMetric) => default; // 0x0000000189DF76EC-0x0000000189DF7740
-		public static void DrawECSRendererList(CommandBuffer cmd, uint rendererList, MaterialPropertyBlock customPros) {} // 0x0000000189DF77E0-0x0000000189DF7830
-		public static void DrawECSDecalRendererList(CommandBuffer cmd, uint rendererList, MaterialPropertyBlock customProps) {} // 0x0000000189DF7790-0x0000000189DF77E0
-		public static void DrawECSBlendRendererList(CommandBuffer cmd, uint rendererList, MaterialPropertyBlock customProps) {} // 0x0000000189DF7740-0x0000000189DF7790
-		public static void HitSludge(Entity entity, Vector3 worldPos, float range, float deltaHeightNormalized = 1f /* Metadata: 0x01FD9E70 */) {} // 0x0000000189DF7924-0x0000000189DF7948
-		public static SludgeHeightmapInfo GetHeightmapInfo(Entity entity) => default; // 0x000000018304C600-0x000000018304C640
-		public static uint GetDynamicThicknessMapSize() => default; // 0x0000000189DF7894-0x0000000189DF78C0
-		public static bool ShouldDrawThicknessMap() => default; // 0x0000000189DF7948-0x0000000189DF7974
-		public static void DrawThicknessMap(IntPtr context, CommandBuffer cmd, Material blitMat, int passIdx, int viewHandle) {} // 0x0000000189DF7830-0x0000000189DF7894
-		private static bool RegisterSludge_Injected(ref Entity entity, Texture2D bakedHeightmap, int nodeCount, IntPtr nodeData) => default; // 0x0000000183C8F6D0-0x0000000183C8F740
-		private static void UnregisterAndDestroySludge_Injected(ref Entity entity) {} // 0x0000000189DF7974-0x0000000189DF79A8
-		private static uint CreateRendererList_Injected(Camera camera, ref Vector2Int sceneRTSize, uint viewHandle, uint lightModeMask, uint decalLightModeMask, float loadFactor, IntPtr context, bool useMetric) => default; // 0x0000000189DF766C-0x0000000189DF76D0
-		private static void HitSludge_Injected(ref Entity entity, ref Vector3 worldPos, float range, float deltaHeightNormalized = 1f /* Metadata: 0x01FD9E74 */) {} // 0x0000000189DF78C0-0x0000000189DF7924
+		public static bool RegisterSludge(Entity entity, Texture2D bakedHeightmap, NativeArray<SludgeNodeData> nodeData) => default; // 0x0000000185147270-0x00000001851472E0
+		private static bool RegisterSludge(Entity entity, Texture2D bakedHeightmap, int nodeCount, IntPtr nodeData) => default; // 0x0000000186473684-0x00000001864736A8
+		public static void UnregisterAndDestroySludge(Entity entity) {} // 0x000000018BF0F770-0x000000018BF0F78C
+		public static uint CreateRendererList(Camera camera, Vector2Int sceneRTSize, uint viewHandle, HGShaderLightMode lightModeMask, HGShaderLightMode decalLightModeMask, float lodFactor, IntPtr context, bool useMetric = true /* Metadata: 0x0207F723 */) => default; // 0x000000018BF0F498-0x000000018BF0F4B4
+		private static uint CreateRendererList(Camera camera, Vector2Int sceneRTSize, uint viewHandle, uint lightModeMask, uint decalLightModeMask, float loadFactor, IntPtr context, bool useMetric) => default; // 0x000000018BF0F4B4-0x000000018BF0F508
+		public static void DrawECSRendererList(CommandBuffer cmd, uint rendererList, MaterialPropertyBlock customPros) {} // 0x000000018BF0F5A8-0x000000018BF0F5F8
+		public static void DrawECSDecalRendererList(CommandBuffer cmd, uint rendererList, MaterialPropertyBlock customProps) {} // 0x000000018BF0F558-0x000000018BF0F5A8
+		public static void DrawECSBlendRendererList(CommandBuffer cmd, uint rendererList, MaterialPropertyBlock customProps) {} // 0x000000018BF0F508-0x000000018BF0F558
+		public static void HitSludge(Entity entity, Vector3 worldPos, float range, float deltaHeightNormalized = 1f /* Metadata: 0x0207F724 */) {} // 0x000000018BF0F6EC-0x000000018BF0F710
+		public static SludgeHeightmapInfo GetHeightmapInfo(Entity entity) => default; // 0x00000001851473D0-0x0000000185147410
+		public static uint GetDynamicThicknessMapSize() => default; // 0x000000018BF0F65C-0x000000018BF0F688
+		public static bool ShouldDrawThicknessMap() => default; // 0x000000018BF0F710-0x000000018BF0F73C
+		public static void DrawThicknessMap(IntPtr context, CommandBuffer cmd, Material blitMat, int passIdx, int viewHandle) {} // 0x000000018BF0F5F8-0x000000018BF0F65C
+		private static bool RegisterSludge_Injected(ref Entity entity, Texture2D bakedHeightmap, int nodeCount, IntPtr nodeData) => default; // 0x0000000185EDB270-0x0000000185EDB2E0
+		private static void UnregisterAndDestroySludge_Injected(ref Entity entity) {} // 0x000000018BF0F73C-0x000000018BF0F770
+		private static uint CreateRendererList_Injected(Camera camera, ref Vector2Int sceneRTSize, uint viewHandle, uint lightModeMask, uint decalLightModeMask, float loadFactor, IntPtr context, bool useMetric) => default; // 0x000000018BF0F434-0x000000018BF0F498
+		private static void HitSludge_Injected(ref Entity entity, ref Vector3 worldPos, float range, float deltaHeightNormalized = 1f /* Metadata: 0x0207F728 */) {} // 0x000000018BF0F688-0x000000018BF0F6EC
 		private static void GetHeightmapInfo_Injected(ref Entity entity, out SludgeHeightmapInfo ret) {
 			ret = default;
-		} // 0x000000018304C720-0x000000018304C770
+		} // 0x0000000185147380-0x00000001851473D0
 	}
 
-	public enum SplineEmissionType // TypeDefIndex: 57483
+	public enum SplineEmissionType // TypeDefIndex: 58487
 	{
 		Box = 0,
 		Mesh = 1
 	}
 
-	public enum SplineEmissionMeshType // TypeDefIndex: 57484
+	public enum SplineEmissionMeshType // TypeDefIndex: 58488
 	{
 		Triangle = 0,
 		Vertex = 1,
@@ -1547,8 +1436,7 @@ namespace UnityEngine.HyperGryph
 	}
 
 	[Serializable]
-	[UsedByNativeCode]
-	public struct SplineObjectsDesc // TypeDefIndex: 57485
+	public struct SplineObjectsDesc // TypeDefIndex: 58489
 	{
 		// Fields
 		public string name; // 0x00
@@ -1586,8 +1474,7 @@ namespace UnityEngine.HyperGryph
 	}
 
 	[Serializable]
-	[UsedByNativeCode]
-	public struct SplineObjectsKnotData // TypeDefIndex: 57486
+	public struct SplineObjectsKnotData // TypeDefIndex: 58490
 	{
 		// Fields
 		public Vector3 p0; // 0x00
@@ -1597,33 +1484,26 @@ namespace UnityEngine.HyperGryph
 		public float length; // 0x30
 	}
 
-	[NativeType("Modules/HGGraphics/Public/SplineMovingObject/HGSplineMovingObjectsManager.h")]
-	[StaticAccessor("HyperGryph::HGSplineMovingObjectsManager::GetInstance()", StaticAccessorType.Dot)]
-	public static class HGSplineMovingObjectsManager // TypeDefIndex: 57487
+	public static class HGSplineMovingObjectsManager // TypeDefIndex: 58491
 	{
 		// Methods
-		public static uint CreateInstance(SplineObjectsDesc desc, NativeArray<SplineObjectsKnotData> curveData) => default; // 0x0000000189DF7C8C-0x0000000189DF7D5C
-		[NativeName("AddInstanceToDestroyQueue")]
-		public static bool DestroyInstance(uint instanceID) => default; // 0x0000000189DF7D70-0x0000000189DF7DA4
-		public static bool UpdateObjectToWorld(uint instanceID, Matrix4x4 objectToWorld) => default; // 0x0000000189DF7E18-0x0000000189DF7E2C
-		public static bool Pause(uint instanceID) => default; // 0x0000000189DF7DA4-0x0000000189DF7DD8
-		private static unsafe uint CreateInstance(SplineObjectsDesc desc, SplineObjectsKnotData* curveData, int length) => default; // 0x0000000189DF7D5C-0x0000000189DF7D70
-		private static bool UpdateObjectToWorld_Injected(uint instanceID, ref Matrix4x4 objectToWorld) => default; // 0x0000000189DF7DD8-0x0000000189DF7E18
-		private static unsafe uint CreateInstance_Injected(ref SplineObjectsDesc desc, SplineObjectsKnotData* curveData, int length) => default; // 0x0000000189DF7C38-0x0000000189DF7C8C
+		public static uint CreateInstance(SplineObjectsDesc desc, NativeArray<SplineObjectsKnotData> curveData) => default; // 0x000000018BF0FA54-0x000000018BF0FB24
+		public static bool DestroyInstance(uint instanceID) => default; // 0x000000018BF0FB38-0x000000018BF0FB6C
+		public static bool UpdateObjectToWorld(uint instanceID, Matrix4x4 objectToWorld) => default; // 0x000000018BF0FBE0-0x000000018BF0FBF4
+		public static bool Pause(uint instanceID) => default; // 0x000000018BF0FB6C-0x000000018BF0FBA0
+		private static unsafe uint CreateInstance(SplineObjectsDesc desc, SplineObjectsKnotData* curveData, int length) => default; // 0x000000018BF0FB24-0x000000018BF0FB38
+		private static bool UpdateObjectToWorld_Injected(uint instanceID, ref Matrix4x4 objectToWorld) => default; // 0x000000018BF0FBA0-0x000000018BF0FBE0
+		private static unsafe uint CreateInstance_Injected(ref SplineObjectsDesc desc, SplineObjectsKnotData* curveData, int length) => default; // 0x000000018BF0FA00-0x000000018BF0FA54
 	}
 
-	[NativeType("Modules/HGGraphics/Public/Subsurface/HGSubsurfaceProfileManager.h")]
-	public static class HGSubsurfaceProfileManager // TypeDefIndex: 57488
+	public static class HGSubsurfaceProfileManager // TypeDefIndex: 58492
 	{
 		// Methods
-		[StaticAccessor("GetHGGlobalGameManager().GetSubsurfaceProfileManager()", StaticAccessorType.Dot)]
-		public static void RegisterFromTerrain(HGSubsurfaceProfile profile) {} // 0x0000000182C510C0-0x0000000182C511B0
-		[StaticAccessor("GetHGGlobalGameManager().GetSubsurfaceProfileManager()", StaticAccessorType.Dot)]
-		public static void UnregisterFromTerrain() {} // 0x0000000189DF8004-0x0000000189DF8030
+		public static void RegisterFromTerrain(HGSubsurfaceProfile profile) {} // 0x00000001849470B0-0x00000001849471A0
+		public static void UnregisterFromTerrain() {} // 0x000000018BF0FDCC-0x000000018BF0FDF8
 	}
 
-	[UsedByNativeCode]
-	public struct TerrainNodePayload // TypeDefIndex: 57489
+	public struct TerrainNodePayload // TypeDefIndex: 58493
 	{
 		// Fields
 		public Texture2D heightmapPage; // 0x00
@@ -1633,8 +1513,7 @@ namespace UnityEngine.HyperGryph
 		public Texture2D albedoPage; // 0x20
 	}
 
-	[UsedByNativeCode]
-	public struct TerrainSplatPayload // TypeDefIndex: 57490
+	public struct TerrainSplatPayload // TypeDefIndex: 58494
 	{
 		// Fields
 		public Texture2D diffuseTex; // 0x00
@@ -1642,8 +1521,7 @@ namespace UnityEngine.HyperGryph
 		public Texture2D coneMapTex; // 0x10
 	}
 
-	[UsedByNativeCode]
-	public struct TerrainInfo // TypeDefIndex: 57491
+	public struct TerrainInfo // TypeDefIndex: 58495
 	{
 		// Fields
 		public Vector3 terrainPosition; // 0x00
@@ -1656,8 +1534,7 @@ namespace UnityEngine.HyperGryph
 		public ushort albedoTexPageSize; // 0x1C
 	}
 
-	[UsedByNativeCode]
-	public struct TerrainNodeData // TypeDefIndex: 57492
+	public struct TerrainNodeData // TypeDefIndex: 58496
 	{
 		// Fields
 		public byte allHole; // 0x00
@@ -1668,8 +1545,7 @@ namespace UnityEngine.HyperGryph
 		public float maxHeightError; // 0x0C
 	}
 
-	[UsedByNativeCode]
-	public struct SplatLayerData // TypeDefIndex: 57493
+	public struct SplatLayerData // TypeDefIndex: 58497
 	{
 		// Fields
 		public Vector4 packedSplatInfo; // 0x00
@@ -1681,187 +1557,125 @@ namespace UnityEngine.HyperGryph
 		public Vector4 pomParams; // 0x60
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/Terrain/HGTerrainManager.h")]
-	[NativeHeader("Modules/HGGraphics/Public/ScriptBindings/HGTerrain.bindings.h")]
-	public class HGTerrainManager // TypeDefIndex: 57494
+	public class HGTerrainManager // TypeDefIndex: 58498
 	{
 		// Properties
-		public static float minVerticalFieldOfView { [StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)] set {} } // 0x0000000183290450-0x00000001832904A0
+		public static float minVerticalFieldOfView { set {} } // 0x0000000185216020-0x0000000185216070
 	
 		// Constructors
 		public HGTerrainManager() {} // Dummy constructor
 	
 		// Methods
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void ReadbackVTFeedbackBuffer(int feedbackViewId, CommandBuffer cmd, IntPtr renderContext) {} // 0x0000000189DF8390-0x0000000189DF83E0
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
+		public static void ReadbackVTFeedbackBuffer(int feedbackViewId, CommandBuffer cmd, IntPtr renderContext) {} // 0x000000018BF10158-0x000000018BF101A8
 		public static unsafe void* GetTerrainNodesForCanceling(out int length) {
 			length = default;
 			return default;
-		} // 0x0000000182D1FF60-0x0000000182D1FFA0
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
+		} // 0x0000000184BCD260-0x0000000184BCD2A0
 		public static unsafe void* GetTerrainNodesForStreaming(out int length) {
 			length = default;
 			return default;
-		} // 0x0000000182D1FFA0-0x0000000182D1FFE0
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static ulong GetTerrainSplatsForCanceling() => default; // 0x0000000182D1FEE0-0x0000000182D1FF20
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static ulong GetTerrainSplatsForStreaming() => default; // 0x0000000182D1FF20-0x0000000182D1FF60
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void ResetTerrainNodesForCanceling() {} // 0x0000000182D20060-0x0000000182D200A0
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void ResetTerrainNodesForStreaming() {} // 0x0000000182D200A0-0x0000000182D200E0
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void ResetTerrainSplatsForCanceling() {} // 0x0000000182D1FFE0-0x0000000182D20020
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void ResetTerrainSplatsForStreaming() {} // 0x0000000182D20020-0x0000000182D20060
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static bool StreamingInTerrainNodePayload(uint nodeKey, [IsReadOnly] in TerrainNodePayload payload) => default; // 0x00000001826A10E0-0x00000001826A1130
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void StreamingInTerrainSplat(uint splatIdx, TerrainSplatPayload payload) {} // 0x0000000189DF8668-0x0000000189DF867C
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void ResetLoadingStatusForAllNodes() {} // 0x0000000182C51DF0-0x0000000182C51E30
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void ResetLoadingStatusForAllSplats() {} // 0x0000000182C51DB0-0x0000000182C51DF0
-		public static void SetupTerrainManager([IsReadOnly] in TerrainInfo terrainInfo, ComputeShader terrainCS, ComputeShader terrainRTCS, Shader terrainPS, Texture2D splatIndexMap, NativeArray<UnityEngine.HyperGryph.SplatLayerData> layerData, Texture2D[] splatDiffuseTextures, Texture2D[] splatNormalTextures, Texture2D[] splatConeMapTextures, int splatTier, NativeArray<UnityEngine.HyperGryph.TerrainNodeData> nodeData, NativeArray<ulong> sectorSplatInfo, bool enableHalfVTSize, bool enableHalfAtlasSize = false /* Metadata: 0x01FD9E7D */, GraphicsFormat mobileSplatCtrlAtlasFormat = GraphicsFormat.RGBA_ASTC4X4_UNorm /* Metadata: 0x01FD9E7E */, bool enableIndirectionCpuUpload = false /* Metadata: 0x01FD9E80 */) {} // 0x0000000182C4FDC0-0x0000000182C4FF20
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		private static void SetupTerrainManager([IsReadOnly] in TerrainInfo terrainInfo, ComputeShader terrainCS, ComputeShader terrainRTCS, Shader terrainPS, Texture2D splatIndexMap, int layerCount, IntPtr layerData, Texture2D[] splatDiffuseTextures, Texture2D[] splatNormalTextures, Texture2D[] splatConeMapTextures, int splatTier, int nodeCount, IntPtr nodeData, int sectorCount, IntPtr sectorSplatInfo, bool enableHalfVTSize, bool enableHalfAtlasSize, GraphicsFormat mobileSplatCtrlAtlasFormat, bool enableIndirectionCpuUpload) {} // 0x0000000182C4FF20-0x0000000182C4FFC0
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void CleanupTerrainManager() {} // 0x0000000189DF8030-0x0000000189DF805C
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static uint CullTerrainAndUpdateVTFeedbackView(Camera camera, Vector2Int sceneRTSize, Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext, uint viewHandle, int feedbackViewId, Vector3 vtUpdateCenter) => default; // 0x0000000189DF805C-0x0000000189DF80BC
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static uint CullTerrain(Camera camera, Vector2Int sceneRTSize, Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext) => default; // 0x0000000189DF8120-0x0000000189DF8154
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void PrepareDecalRendererListsForVTPages(int feedbackViewId, IntPtr renderContext) {} // 0x0000000189DF8350-0x0000000189DF8390
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void ExecuteVTUpdateCommand(int feedbackViewId, IntPtr renderContext) {} // 0x0000000189DF8154-0x0000000189DF8194
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void RenderVTPages(int feedbackViewId, IntPtr renderContext, CommandBuffer copyCmd, CommandBuffer renderCmd, int bakePassIndex, int bc3PassIndex, int astcPassIndex, int bc5PassIndex) {} // 0x0000000189DF8500-0x0000000189DF8560
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void RenderScreenSpaceTerrain(CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId, int passIndex, IntPtr features) {} // 0x0000000189DF83E0-0x0000000189DF8440
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void RenderTerrainAfterGBuffer(CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId, IntPtr features) {} // 0x0000000189DF8440-0x0000000189DF84A0
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void UpdateSubdivisionParameters(int mode, int modeV2, int subd, int primitivePixelLengthTargetLog2) {} // 0x0000000189DF86DC-0x0000000189DF873C
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void SetTerrainBlendBindings(IntPtr renderContext, CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId) {} // 0x0000000189DF85C4-0x0000000189DF8628
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void SetDecalDeformBindings(IntPtr renderContext, CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId) {} // 0x0000000189DF8560-0x0000000189DF85C4
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static Texture2D GetHeightmapAtlas() => default; // 0x0000000189DF81C0-0x0000000189DF81EC
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static Texture2D GetNormalmapAtlas() => default; // 0x0000000189DF81EC-0x0000000189DF8218
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static Texture2D GetTintColorAtlas() => default; // 0x0000000189DF8324-0x0000000189DF8350
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static Texture2D GetSplatControlAtlas() => default; // 0x0000000189DF8218-0x0000000189DF8244
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static Texture2D GetAlbedoAtlas() => default; // 0x0000000189DF8194-0x0000000189DF81C0
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static Texture2D GetSplatIndexMap() => default; // 0x0000000189DF82CC-0x0000000189DF82F8
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static Texture2DArray GetSplatDiffuseArray() => default; // 0x0000000189DF82A0-0x0000000189DF82CC
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static Texture2DArray GetSplatNormalROArray() => default; // 0x0000000189DF82F8-0x0000000189DF8324
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static CBHandle GetSplatDataUBO() => default; // 0x0000000189DF8278-0x0000000189DF82A0
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void SubdivisionTerrain(CommandBuffer cmd, uint terrainCullViewHandle, int subdivisionHandle, bool enableSubdivision, bool enableSubdivisionV2, Texture HZBTexture) {} // 0x0000000189DF867C-0x0000000189DF86DC
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void RenderTerrain(CommandBuffer cmd, uint terrainCullViewHandle, int subdivisionHandle, int passIndex, int tessellationPassIndex = -1 /* Metadata: 0x01FD9E81 */, int subdivisionPassIndex = -1 /* Metadata: 0x01FD9E82 */, bool enableSubdivisionV2 = false /* Metadata: 0x01FD9E83 */) {} // 0x0000000189DF84A0-0x0000000189DF8500
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void StreamingInChunkSurfaceTypeData(uint chunkKey, UIntPtr chunkSurfaceTypeData, int dataLength, int chunkSize) {} // 0x00000001836610E0-0x0000000183661150
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
-		public static void StreamingOutChunkSurfaceTypeData(uint chunkKey) {} // 0x0000000183661150-0x0000000183661190
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainManager()", StaticAccessorType.Dot)]
+		} // 0x0000000184BCD2A0-0x0000000184BCD2E0
+		public static ulong GetTerrainSplatsForCanceling() => default; // 0x0000000184BCD1E0-0x0000000184BCD220
+		public static ulong GetTerrainSplatsForStreaming() => default; // 0x0000000184BCD220-0x0000000184BCD260
+		public static void ResetTerrainNodesForCanceling() {} // 0x0000000184BCD360-0x0000000184BCD3A0
+		public static void ResetTerrainNodesForStreaming() {} // 0x0000000184BCD3A0-0x0000000184BCD3E0
+		public static void ResetTerrainSplatsForCanceling() {} // 0x0000000184BCD2E0-0x0000000184BCD320
+		public static void ResetTerrainSplatsForStreaming() {} // 0x0000000184BCD320-0x0000000184BCD360
+		public static bool StreamingInTerrainNodePayload(uint nodeKey, in TerrainNodePayload payload) => default; // 0x000000018441B6F0-0x000000018441B740
+		public static void StreamingInTerrainSplat(uint splatIdx, TerrainSplatPayload payload) {} // 0x000000018BF10430-0x000000018BF10444
+		public static void ResetLoadingStatusForAllNodes() {} // 0x0000000184947DE0-0x0000000184947E20
+		public static void ResetLoadingStatusForAllSplats() {} // 0x0000000184947DA0-0x0000000184947DE0
+		public static void SetupTerrainManager(in TerrainInfo terrainInfo, ComputeShader terrainCS, ComputeShader terrainRTCS, Shader terrainPS, Texture2D splatIndexMap, NativeArray<UnityEngine.HyperGryph.SplatLayerData> layerData, Texture2D[] splatDiffuseTextures, Texture2D[] splatNormalTextures, Texture2D[] splatConeMapTextures, int splatTier, NativeArray<UnityEngine.HyperGryph.TerrainNodeData> nodeData, NativeArray<ulong> sectorSplatInfo, bool enableHalfVTSize, bool enableHalfAtlasSize = false /* Metadata: 0x0207F731 */, GraphicsFormat mobileSplatCtrlAtlasFormat = GraphicsFormat.RGBA_ASTC4X4_UNorm /* Metadata: 0x0207F732 */, bool enableIndirectionCpuUpload = false /* Metadata: 0x0207F734 */) {} // 0x0000000184945DB0-0x0000000184945F10
+		private static void SetupTerrainManager(in TerrainInfo terrainInfo, ComputeShader terrainCS, ComputeShader terrainRTCS, Shader terrainPS, Texture2D splatIndexMap, int layerCount, IntPtr layerData, Texture2D[] splatDiffuseTextures, Texture2D[] splatNormalTextures, Texture2D[] splatConeMapTextures, int splatTier, int nodeCount, IntPtr nodeData, int sectorCount, IntPtr sectorSplatInfo, bool enableHalfVTSize, bool enableHalfAtlasSize, GraphicsFormat mobileSplatCtrlAtlasFormat, bool enableIndirectionCpuUpload) {} // 0x0000000184945F10-0x0000000184945FB0
+		public static void CleanupTerrainManager() {} // 0x000000018BF0FDF8-0x000000018BF0FE24
+		public static uint CullTerrainAndUpdateVTFeedbackView(Camera camera, Vector2Int sceneRTSize, Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext, uint viewHandle, int feedbackViewId, Vector3 vtUpdateCenter) => default; // 0x000000018BF0FE24-0x000000018BF0FE84
+		public static uint CullTerrain(Camera camera, Vector2Int sceneRTSize, Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext) => default; // 0x000000018BF0FEE8-0x000000018BF0FF1C
+		public static void PrepareDecalRendererListsForVTPages(int feedbackViewId, IntPtr renderContext) {} // 0x000000018BF10118-0x000000018BF10158
+		public static void ExecuteVTUpdateCommand(int feedbackViewId, IntPtr renderContext) {} // 0x000000018BF0FF1C-0x000000018BF0FF5C
+		public static void RenderVTPages(int feedbackViewId, IntPtr renderContext, CommandBuffer copyCmd, CommandBuffer renderCmd, int bakePassIndex, int bc3PassIndex, int astcPassIndex, int bc5PassIndex) {} // 0x000000018BF102C8-0x000000018BF10328
+		public static void RenderScreenSpaceTerrain(CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId, int passIndex, IntPtr features) {} // 0x000000018BF101A8-0x000000018BF10208
+		public static void RenderTerrainAfterGBuffer(CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId, IntPtr features) {} // 0x000000018BF10208-0x000000018BF10268
+		public static void UpdateSubdivisionParameters(int mode, int modeV2, int subd, int primitivePixelLengthTargetLog2) {} // 0x000000018BF104A4-0x000000018BF10504
+		public static void SetTerrainBlendBindings(IntPtr renderContext, CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId) {} // 0x000000018BF1038C-0x000000018BF103F0
+		public static void SetDecalDeformBindings(IntPtr renderContext, CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId) {} // 0x000000018BF10328-0x000000018BF1038C
+		public static Texture2D GetHeightmapAtlas() => default; // 0x000000018BF0FF88-0x000000018BF0FFB4
+		public static Texture2D GetNormalmapAtlas() => default; // 0x000000018BF0FFB4-0x000000018BF0FFE0
+		public static Texture2D GetTintColorAtlas() => default; // 0x000000018BF100EC-0x000000018BF10118
+		public static Texture2D GetSplatControlAtlas() => default; // 0x000000018BF0FFE0-0x000000018BF1000C
+		public static Texture2D GetAlbedoAtlas() => default; // 0x000000018BF0FF5C-0x000000018BF0FF88
+		public static Texture2D GetSplatIndexMap() => default; // 0x000000018BF10094-0x000000018BF100C0
+		public static Texture2DArray GetSplatDiffuseArray() => default; // 0x000000018BF10068-0x000000018BF10094
+		public static Texture2DArray GetSplatNormalROArray() => default; // 0x000000018BF100C0-0x000000018BF100EC
+		public static CBHandle GetSplatDataUBO() => default; // 0x000000018BF10040-0x000000018BF10068
+		public static void SubdivisionTerrain(CommandBuffer cmd, uint terrainCullViewHandle, int subdivisionHandle, bool enableSubdivision, bool enableSubdivisionV2, Texture HZBTexture) {} // 0x000000018BF10444-0x000000018BF104A4
+		public static void RenderTerrain(CommandBuffer cmd, uint terrainCullViewHandle, int subdivisionHandle, int passIndex, int tessellationPassIndex = -1 /* Metadata: 0x0207F735 */, int subdivisionPassIndex = -1 /* Metadata: 0x0207F736 */, bool enableSubdivisionV2 = false /* Metadata: 0x0207F737 */) {} // 0x000000018BF10268-0x000000018BF102C8
+		public static void StreamingInChunkSurfaceTypeData(uint chunkKey, UIntPtr chunkSurfaceTypeData, int dataLength, int chunkSize) {} // 0x000000018572A9C0-0x000000018572AA30
+		public static void StreamingOutChunkSurfaceTypeData(uint chunkKey) {} // 0x000000018572AA30-0x000000018572AA70
 		public static bool GetSurfaceTypeByWorldPosition(float x, float y, out int surfaceType) {
 			surfaceType = default;
 			return default;
-		} // 0x0000000182FA37B0-0x0000000182FA3810
-		private static void StreamingInTerrainSplat_Injected(uint splatIdx, ref TerrainSplatPayload payload) {} // 0x0000000189DF8628-0x0000000189DF8668
-		private static uint CullTerrainAndUpdateVTFeedbackView_Injected(Camera camera, ref Vector2Int sceneRTSize, ref Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext, uint viewHandle, int feedbackViewId, ref Vector3 vtUpdateCenter) => default; // 0x000000018306BD20-0x000000018306BDA0
-		private static uint CullTerrain_Injected(Camera camera, ref Vector2Int sceneRTSize, ref Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext) => default; // 0x0000000189DF80BC-0x0000000189DF8120
+		} // 0x00000001847F89F0-0x00000001847F8A50
+		private static void StreamingInTerrainSplat_Injected(uint splatIdx, ref TerrainSplatPayload payload) {} // 0x000000018BF103F0-0x000000018BF10430
+		private static uint CullTerrainAndUpdateVTFeedbackView_Injected(Camera camera, ref Vector2Int sceneRTSize, ref Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext, uint viewHandle, int feedbackViewId, ref Vector3 vtUpdateCenter) => default; // 0x0000000184F0EB00-0x0000000184F0EB80
+		private static uint CullTerrain_Injected(Camera camera, ref Vector2Int sceneRTSize, ref Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext) => default; // 0x000000018BF0FE84-0x000000018BF0FEE8
 		private static void GetSplatDataUBO_Injected(out CBHandle ret) {
 			ret = default;
-		} // 0x0000000189DF8244-0x0000000189DF8278
+		} // 0x000000018BF1000C-0x000000018BF10040
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/Terrain/HGEditorTerrainManager.h")]
-	public class HGEditorTerrainManager // TypeDefIndex: 57495
+	public class HGEditorTerrainManager // TypeDefIndex: 58499
 	{
 		// Constructors
 		public HGEditorTerrainManager() {} // Dummy constructor
 	
 		// Methods
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static void SetUseNewEditorTerrainRendering(bool value) {} // 0x0000000182D1E190-0x0000000182D1E1D0
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static uint CullTerrainAndUpdateVTFeedbackView(Camera camera, Vector2Int sceneRTSize, Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext, uint viewHandle, int feedbackViewId, Vector3 vtUpdateCenter) => default; // 0x0000000189DF5CE0-0x0000000189DF5D40
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static uint CullTerrain(Camera camera, Vector2Int sceneRTSize, Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext) => default; // 0x0000000189DF5DA4-0x0000000189DF5DD8
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static void SetTerrainBlendBindings(IntPtr renderContext, CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId) {} // 0x0000000189DF6088-0x0000000189DF60EC
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static void RenderTerrain(CommandBuffer cmd, uint terrainCullViewHandle, int subdivisionHandle, int passIndex, int subdivisionPassIndex = -1 /* Metadata: 0x01FD9E84 */, bool enableSubdivisionV2 = false /* Metadata: 0x01FD9E85 */) {} // 0x0000000189DF5FC8-0x0000000189DF6028
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static void RenderScreenSpaceTerrain(CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId, int passIndex, IntPtr features) {} // 0x0000000189DF5EA8-0x0000000189DF5F08
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static void RenderSeparateTerrain(CommandBuffer cmd, uint terrainCullViewHandle, int passIndex, IntPtr features) {} // 0x0000000189DF5F08-0x0000000189DF5F68
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static void RenderTerrainAfterGBuffer(CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId, IntPtr features) {} // 0x0000000189DF5F68-0x0000000189DF5FC8
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static void BakeAtlasTexture(CommandBuffer cmd, IntPtr renderContext) {} // 0x0000000189DF5C9C-0x0000000189DF5CE0
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static void PrepareDecalRendererListsForVTPages(int feedbackViewId, IntPtr renderContext) {} // 0x0000000189DF5E18-0x0000000189DF5E58
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static void ExecuteVTUpdateCommand(int feedbackViewId, IntPtr renderContext) {} // 0x0000000189DF5DD8-0x0000000189DF5E18
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static void RenderVTPages(int feedbackViewId, IntPtr renderContext, CommandBuffer copyCmd, CommandBuffer renderCmd, int bakePass, int bc3Pass, int astcPass) {} // 0x0000000189DF6028-0x0000000189DF6088
-		[StaticAccessor("GetHGGlobalGameManager().GetEditorTerrainManager()", StaticAccessorType.Dot)]
-		public static void ReadbackVTFeedbackBuffer(int feedbackViewId, CommandBuffer cmd, IntPtr renderContext) {} // 0x0000000189DF5E58-0x0000000189DF5EA8
-		private static uint CullTerrainAndUpdateVTFeedbackView_Injected(Camera camera, ref Vector2Int sceneRTSize, ref Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext, uint viewHandle, int feedbackViewId, ref Vector3 vtUpdateCenter) => default; // 0x000000018306BDA0-0x000000018306BE20
-		private static uint CullTerrain_Injected(Camera camera, ref Vector2Int sceneRTSize, ref Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext) => default; // 0x0000000189DF5D40-0x0000000189DF5DA4
+		public static void SetUseNewEditorTerrainRendering(bool value) {} // 0x0000000184BCB490-0x0000000184BCB4D0
+		public static uint CullTerrainAndUpdateVTFeedbackView(Camera camera, Vector2Int sceneRTSize, Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext, uint viewHandle, int feedbackViewId, Vector3 vtUpdateCenter) => default; // 0x000000018BF0DA90-0x000000018BF0DAF0
+		public static uint CullTerrain(Camera camera, Vector2Int sceneRTSize, Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext) => default; // 0x000000018BF0DB54-0x000000018BF0DB88
+		public static void SetTerrainBlendBindings(IntPtr renderContext, CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId) {} // 0x000000018BF0DE38-0x000000018BF0DE9C
+		public static void RenderTerrain(CommandBuffer cmd, uint terrainCullViewHandle, int subdivisionHandle, int passIndex, int subdivisionPassIndex = -1 /* Metadata: 0x0207F738 */, bool enableSubdivisionV2 = false /* Metadata: 0x0207F739 */) {} // 0x000000018BF0DD78-0x000000018BF0DDD8
+		public static void RenderScreenSpaceTerrain(CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId, int passIndex, IntPtr features) {} // 0x000000018BF0DC58-0x000000018BF0DCB8
+		public static void RenderSeparateTerrain(CommandBuffer cmd, uint terrainCullViewHandle, int passIndex, IntPtr features) {} // 0x000000018BF0DCB8-0x000000018BF0DD18
+		public static void RenderTerrainAfterGBuffer(CommandBuffer cmd, uint terrainCullViewHandle, int feedbackViewId, IntPtr features) {} // 0x000000018BF0DD18-0x000000018BF0DD78
+		public static void BakeAtlasTexture(CommandBuffer cmd, IntPtr renderContext) {} // 0x000000018BF0DA4C-0x000000018BF0DA90
+		public static void PrepareDecalRendererListsForVTPages(int feedbackViewId, IntPtr renderContext) {} // 0x000000018BF0DBC8-0x000000018BF0DC08
+		public static void ExecuteVTUpdateCommand(int feedbackViewId, IntPtr renderContext) {} // 0x000000018BF0DB88-0x000000018BF0DBC8
+		public static void RenderVTPages(int feedbackViewId, IntPtr renderContext, CommandBuffer copyCmd, CommandBuffer renderCmd, int bakePass, int bc3Pass, int astcPass) {} // 0x000000018BF0DDD8-0x000000018BF0DE38
+		public static void ReadbackVTFeedbackBuffer(int feedbackViewId, CommandBuffer cmd, IntPtr renderContext) {} // 0x000000018BF0DC08-0x000000018BF0DC58
+		private static uint CullTerrainAndUpdateVTFeedbackView_Injected(Camera camera, ref Vector2Int sceneRTSize, ref Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext, uint viewHandle, int feedbackViewId, ref Vector3 vtUpdateCenter) => default; // 0x0000000184F0EB80-0x0000000184F0EC00
+		private static uint CullTerrain_Injected(Camera camera, ref Vector2Int sceneRTSize, ref Matrix4x4 viewProj, float lodFactor, bool useMetric, IntPtr renderContext) => default; // 0x000000018BF0DAF0-0x000000018BF0DB54
 	}
 
-	[UsedByNativeCode]
-	public struct HGTerrainDeformConfigV2 // TypeDefIndex: 57496
+	public struct HGTerrainDeformConfigV2 // TypeDefIndex: 58500
 	{
 		// Fields
 		public float m_deformGlobalStrength; // 0x00
 		public float m_latency; // 0x04
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/Terrain/HGTerrainDeformManager.h")]
-	public class HGTerrainDeformManagerV2 // TypeDefIndex: 57497
+	public class HGTerrainDeformManagerV2 // TypeDefIndex: 58501
 	{
 		// Constructors
 		public HGTerrainDeformManagerV2() {} // Dummy constructor
 	
 		// Methods
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainDeformManager()", StaticAccessorType.Dot)]
-		public static void SetPlayerCenter(Vector3 position) {} // 0x0000000184272784-0x0000000184272794
-		[StaticAccessor("GetHGGlobalGameManager().GetTerrainDeformManager()", StaticAccessorType.Dot)]
-		public static void UpdateDeformConfig(HGTerrainDeformConfigV2 config) {} // 0x0000000184274A7C-0x0000000184274A98
-		private static void SetPlayerCenter_Injected(ref Vector3 position) {} // 0x00000001833D7B50-0x00000001833D7B90
-		private static void UpdateDeformConfig_Injected(ref HGTerrainDeformConfigV2 config) {} // 0x0000000183040220-0x0000000183040260
+		public static void SetPlayerCenter(Vector3 position) {} // 0x000000018646ECF0-0x000000018646ED00
+		public static void UpdateDeformConfig(HGTerrainDeformConfigV2 config) {} // 0x00000001864729D8-0x00000001864729F4
+		private static void SetPlayerCenter_Injected(ref Vector3 position) {} // 0x00000001853B0870-0x00000001853B08B0
+		private static void UpdateDeformConfig_Injected(ref HGTerrainDeformConfigV2 config) {} // 0x0000000184EC6250-0x0000000184EC6290
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/ECS/HGUIRender.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetUIRender()", StaticAccessorType.Dot)]
-	public static class HGUIRender // TypeDefIndex: 57498
+	public static class HGUIRender // TypeDefIndex: 58502
 	{
 		// Methods
-		public static uint CreateRendererList(uint cullingLayerMask, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, short sortingOrderMin, short sortingOrderMax, int cameraInstanceID, IntPtr context, bool isWorldUI, float wolrdUICullingDistance = 3.4028235E+38f /* Metadata: 0x01FD9E86 */) => default; // 0x0000000189DF89B8-0x0000000189DF89E8
-		private static uint CreateRendererList(uint cullingLayerMask, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, short sortingOrderMin, short sortingOrderMax, int cameraInstanceID, IntPtr context, bool isWorldUI, float wolrdUICullingDistance) => default; // 0x0000000189DF89E8-0x0000000189DF8A6C
+		public static uint CreateRendererList(uint cullingLayerMask, HGRenderFlags renderFlagsMask, HGRenderFlags renderFlagsValue, HGShaderLightMode lightModeMask, short sortingOrderMin, short sortingOrderMax, int cameraInstanceID, IntPtr context, bool isWorldUI, float wolrdUICullingDistance = 3.4028235E+38f /* Metadata: 0x0207F73A */) => default; // 0x000000018BF10780-0x000000018BF107B0
+		private static uint CreateRendererList(uint cullingLayerMask, uint renderFlagsMask, uint renderFlagsValue, uint lightModeMask, short sortingOrderMin, short sortingOrderMax, int cameraInstanceID, IntPtr context, bool isWorldUI, float wolrdUICullingDistance) => default; // 0x000000018BF107B0-0x000000018BF10834
 	}
 
-	[NativeType("Modules/HGGraphics/Public/ECS/HGWaterRender.h")]
-	public static class HGWaterRender // TypeDefIndex: 57502
+	public static class HGWaterRender // TypeDefIndex: 58506
 	{
 		// Nested types
-		public enum HGWaterHeightLayer // TypeDefIndex: 57499
+		public enum HGWaterHeightLayer // TypeDefIndex: 58503
 		{
 			HeightLayer0 = 0,
 			HeightLayer1 = 1,
@@ -1869,13 +1683,13 @@ namespace UnityEngine.HyperGryph
 			HeightLayer3 = 3
 		}
 	
-		public enum HGWaterRenderType // TypeDefIndex: 57500
+		public enum HGWaterRenderType // TypeDefIndex: 58504
 		{
 			Proxy = 1,
 			LOD = 2
 		}
 	
-		public enum HGWaterDecalRenderType // TypeDefIndex: 57501
+		public enum HGWaterDecalRenderType // TypeDefIndex: 58505
 		{
 			None = 0,
 			Regular = 1,
@@ -1883,46 +1697,36 @@ namespace UnityEngine.HyperGryph
 		}
 	
 		// Methods
-		[StaticAccessor("GetHGGlobalGameManager().GetWaterRender()", StaticAccessorType.Dot)]
-		public static void CullWaterProxy(uint viewHandle, Matrix4x4 viewProj, uint cullingMask, bool useOC, out uint visibleCount, out uint cullHandle, bool orderByDistance = false /* Metadata: 0x01FD9E8A */, Vector3 viewPosition = default) {
+		public static void CullWaterProxy(uint viewHandle, Matrix4x4 viewProj, uint cullingMask, bool useOC, out uint visibleCount, out uint cullHandle, bool orderByDistance = false /* Metadata: 0x0207F73E */, Vector3 viewPosition = default) {
 			visibleCount = default;
 			cullHandle = default;
-		} // 0x000000018427455C-0x00000001842745A8
-		[StaticAccessor("GetHGGlobalGameManager().GetWaterRender()", StaticAccessorType.Dot)]
-		public static void CullWaterDecals(uint viewHandle, Matrix4x4 viewProj, out uint visibleCount, out uint cullHandle, bool useAnchorSH = false /* Metadata: 0x01FD9E8B */) {
+		} // 0x0000000186472400-0x000000018647244C
+		public static void CullWaterDecals(uint viewHandle, Matrix4x4 viewProj, out uint visibleCount, out uint cullHandle, bool useAnchorSH = false /* Metadata: 0x0207F73F */) {
 			visibleCount = default;
 			cullHandle = default;
-		} // 0x000000018427453C-0x000000018427455C
-		[StaticAccessor("GetHGGlobalGameManager().GetWaterRender()", StaticAccessorType.Dot)]
-		public static bool IsHeightLayerVisible(uint cullHandle, uint renderTypeMask, int lodLayer) => default; // 0x0000000189DF8B34-0x0000000189DF8B84
-		[StaticAccessor("GetHGGlobalGameManager().GetWaterRender()", StaticAccessorType.Dot)]
-		public static void DrawWaterProxy(IntPtr renderContext, CommandBuffer cmd, uint cullHandle, Material material, MaterialPropertyBlock properties, int shaderPass, int nameID, bool clear = true /* Metadata: 0x01FD9E8C */, uint renderTypeMask = 3 /* Metadata: 0x01FD9E8D */, int lodLayer = -1 /* Metadata: 0x01FD9E8E */) {} // 0x0000000189DF8AD0-0x0000000189DF8B34
-		[StaticAccessor("GetHGGlobalGameManager().GetWaterRender()", StaticAccessorType.Dot)]
-		public static void DrawWaterDecals(IntPtr renderContext, CommandBuffer cmd, uint cullHandle, MaterialPropertyBlock properties, int nameID, bool clear = true /* Metadata: 0x01FD9E8F */, int shaderPass = 0 /* Metadata: 0x01FD9E90 */, uint renderTypeMask = 1 /* Metadata: 0x01FD9E91 */, int heightLayer = -1 /* Metadata: 0x01FD9E92 */) {} // 0x0000000189DF8A6C-0x0000000189DF8AD0
-		[StaticAccessor("GetHGGlobalGameManager().GetWaterRender()", StaticAccessorType.Dot)]
-		public static bool IsHGWaterGloablConfigValidCPP() => default; // 0x00000001832BABF0-0x00000001832BAC30
-		[StaticAccessor("GetHGGlobalGameManager().GetWaterRender()", StaticAccessorType.Dot)]
-		public static bool CheckNewHGWaterGloablConfigCPP(string scenePath) => default; // 0x0000000182564D20-0x0000000182564D60
-		[StaticAccessor("GetHGGlobalGameManager().GetWaterRender()", StaticAccessorType.Dot)]
-		public static void UpdateHGWaterGloablConfigCPP(string scenePath, int sectorNum, int sectorSize, int sectorCoordsMin, int sectorCoordsMax, long[] sectorDataGUIDs, bool[] sectorDataExists) {} // 0x0000000183CF9220-0x0000000183CF9290
-		[StaticAccessor("GetHGGlobalGameManager().GetWaterRender()", StaticAccessorType.Dot)]
-		public static void AddSectorTexture(int id, int textureID) {} // 0x00000001836893A0-0x00000001836893F0
-		[StaticAccessor("GetHGGlobalGameManager().GetWaterRender()", StaticAccessorType.Dot)]
-		public static void RemoveSectorTexture(int id) {} // 0x0000000189DF8B84-0x0000000189DF8BB8
-		private static void CullWaterProxy_Injected(uint viewHandle, ref Matrix4x4 viewProj, uint cullingMask, bool useOC, out uint visibleCount, out uint cullHandle, bool orderByDistance = false /* Metadata: 0x01FD9E93 */, ref Vector3 viewPosition = null) {
+		} // 0x00000001864723E0-0x0000000186472400
+		public static bool IsHeightLayerVisible(uint cullHandle, uint renderTypeMask, int lodLayer) => default; // 0x000000018BF10898-0x000000018BF108E8
+		public static void DrawWaterProxy(IntPtr renderContext, CommandBuffer cmd, uint cullHandle, Material material, MaterialPropertyBlock properties, int shaderPass, int nameID, bool clear = true /* Metadata: 0x0207F740 */, uint renderTypeMask = 3 /* Metadata: 0x0207F741 */, int lodLayer = -1 /* Metadata: 0x0207F742 */, bool filterByWetnessMask = false /* Metadata: 0x0207F743 */) {} // 0x0000000183F87E20-0x0000000183F87ED0
+		public static void DrawWaterDecals(IntPtr renderContext, CommandBuffer cmd, uint cullHandle, MaterialPropertyBlock properties, int nameID, bool clear = true /* Metadata: 0x0207F744 */, int shaderPass = 0 /* Metadata: 0x0207F745 */, uint renderTypeMask = 1 /* Metadata: 0x0207F746 */, int heightLayer = -1 /* Metadata: 0x0207F747 */) {} // 0x000000018BF10834-0x000000018BF10898
+		public static bool IsHGWaterGloablConfigValidCPP() => default; // 0x000000018522BD70-0x000000018522BE00
+		public static bool CheckNewHGWaterGloablConfigCPP(string scenePath) => default; // 0x0000000185212840-0x0000000185212880
+		public static void UpdateHGWaterGloablConfigCPP(string scenePath, int sectorNum, int sectorSize, int sectorCoordsMin, int sectorCoordsMax, long[] sectorDataGUIDs, bool[] sectorDataExists) {} // 0x0000000185F55640-0x0000000185F556B0
+		public static void AddSectorTexture(int id, int textureID) {} // 0x0000000185763030-0x0000000185763080
+		public static void RemoveSectorTexture(int id) {} // 0x000000018BF108E8-0x000000018BF1091C
+		private static void CullWaterProxy_Injected(uint viewHandle, ref Matrix4x4 viewProj, uint cullingMask, bool useOC, out uint visibleCount, out uint cullHandle, bool orderByDistance = false /* Metadata: 0x0207F748 */, ref Vector3 viewPosition = null) {
 			visibleCount = default;
 			cullHandle = default;
-		} // 0x0000000182EC5340-0x0000000182EC53C0
-		private static void CullWaterDecals_Injected(uint viewHandle, ref Matrix4x4 viewProj, out uint visibleCount, out uint cullHandle, bool useAnchorSH = false /* Metadata: 0x01FD9E94 */) {
+		} // 0x0000000184CAD260-0x0000000184CAD2E0
+		private static void CullWaterDecals_Injected(uint viewHandle, ref Matrix4x4 viewProj, out uint visibleCount, out uint cullHandle, bool useAnchorSH = false /* Metadata: 0x0207F749 */) {
 			visibleCount = default;
 			cullHandle = default;
-		} // 0x0000000182EC52C0-0x0000000182EC5340
+		} // 0x0000000184CAD1E0-0x0000000184CAD260
 	}
 }
 
 namespace UnityEngine.HyperGryph.ECS
 {
-	public enum ECSExplicitEntityType : uint // TypeDefIndex: 57535
+	public enum ECSExplicitEntityType : uint // TypeDefIndex: 58539
 	{
 		Unknown = 0,
 		MeshRenderer = 1,
@@ -1932,8 +1736,7 @@ namespace UnityEngine.HyperGryph.ECS
 		HGDecalProjector = 5
 	}
 
-	[UsedByNativeCode]
-	public struct EntityInstanceData // TypeDefIndex: 57536
+	public struct EntityInstanceData // TypeDefIndex: 58540
 	{
 		// Fields
 		public uint entityType; // 0x00
@@ -1942,8 +1745,7 @@ namespace UnityEngine.HyperGryph.ECS
 		public uint padding; // 0x0C
 	}
 
-	[UsedByNativeCode]
-	public struct ComponentType // TypeDefIndex: 57537
+	public struct ComponentType // TypeDefIndex: 58541
 	{
 		// Fields
 		public ulong value; // 0x00
@@ -1952,31 +1754,34 @@ namespace UnityEngine.HyperGryph.ECS
 		public int offset; // 0x04
 	}
 
-	public struct ComponentMask // TypeDefIndex: 57539
+	public struct ComponentMask // TypeDefIndex: 58543
 	{
 		// Fields
-		public unsafe fixed /* 0x00000000-0x00000000 */ ulong componentMaskWords[0]; // 0x00
+		public _componentMaskWords_e__FixedBuffer componentMaskWords; // 0x00
+	
+		// Nested types
+		public struct _componentMaskWords_e__FixedBuffer // TypeDefIndex: 58542
+		{
+			// Fields
+			public ulong FixedElementField; // 0x00
+		}
 	
 		// Constructors
-		public unsafe ComponentMask(int id) {
+		public ComponentMask(int id) {
 			componentMaskWords = default;
-		} // 0x0000000183D87AD0-0x0000000183D87AF0
+		} // 0x0000000185FE8910-0x0000000185FE8930
 	
 		// Methods
-		[IsReadOnly]
-		public bool ContainsComponentId(int id) => default; // 0x00000001823F4970-0x00000001823F4990
-		[IsReadOnly]
-		public bool ContainsComponentMask([IsReadOnly] in ComponentMask other) => default; // 0x0000000182433900-0x0000000182433920
-		[IsReadOnly]
-		public bool ExcludesComponentMask([IsReadOnly] in ComponentMask other) => default; // 0x0000000182433920-0x0000000182433940
-		public override bool Equals(object obj) => default; // 0x0000000189DF4A38-0x0000000189DF4AB4
-		public override int GetHashCode() => default; // 0x0000000183D87A80-0x0000000183D87AB0
-		public void And(ref ComponentMask other) {} // 0x0000000183D87A70-0x0000000183D87A80
-		public void Or(int id) {} // 0x0000000183D87AB0-0x0000000183D87AD0
+		public bool ContainsComponentId(int id) => default; // 0x0000000184136F50-0x0000000184136F70
+		public bool ContainsComponentMask(in ComponentMask other) => default; // 0x00000001840BFA70-0x00000001840BFA90
+		public bool ExcludesComponentMask(in ComponentMask other) => default; // 0x00000001840BFA90-0x00000001840BFAB0
+		public override bool Equals(object obj) => default; // 0x000000018BF0C7E8-0x000000018BF0C864
+		public override int GetHashCode() => default; // 0x0000000185FE88C0-0x0000000185FE88F0
+		public void And(ref ComponentMask other) {} // 0x0000000185FE88B0-0x0000000185FE88C0
+		public void Or(int id) {} // 0x0000000185FE88F0-0x0000000185FE8910
 	}
 
-	[UsedByNativeCode]
-	public struct EntityTypeInstanceData // TypeDefIndex: 57541
+	public struct EntityTypeInstanceData // TypeDefIndex: 58545
 	{
 		// Fields
 		public ulong groupComponentMask; // 0x00
@@ -1991,103 +1796,109 @@ namespace UnityEngine.HyperGryph.ECS
 		public uint fence; // 0x38
 		public ushort chunkType; // 0x3C
 		public short componentTypeCount; // 0x3E
-		public unsafe fixed /* 0x00000000-0x00000000 */ ulong componentTypes[0]; // 0x40
+		public _componentTypes_e__FixedBuffer componentTypes; // 0x40
+	
+		// Nested types
+		public struct _componentTypes_e__FixedBuffer // TypeDefIndex: 58544
+		{
+			// Fields
+			public ulong FixedElementField; // 0x00
+		}
 	}
 
-	[UsedByNativeCode]
-	public struct Entity : IEquatable<Entity> // TypeDefIndex: 57542
+	public struct Entity : IEquatable<Entity> // TypeDefIndex: 58546
 	{
 		// Fields
 		public uint globalIndex; // 0x00
 		public uint version; // 0x04
+		private static readonly Entity _invaildEntity_k__BackingField; // 0x00
 	
 		// Properties
-		public ulong id { get => default; set {} } // 0x0000000183D87BB0-0x0000000183D87BC0 0x0000000183D824F0-0x0000000183D82500
-		public static Entity invaildEntity { get; } // 0x0000000189DF5098-0x0000000189DF50E8 
+		public ulong id { get => default; set {} } // 0x0000000185FE89F0-0x0000000185FE8A00 0x0000000185FE3180-0x0000000185FE3190
+		public static Entity invaildEntity { get; } // 0x000000018BF0CE48-0x000000018BF0CE98 
 	
 		// Constructors
 		static Entity() {
-	
-		} // 0x0000000183D27320-0x0000000183D27370
+			<invaildEntity>k__BackingField = default;
+		} // 0x0000000185F86640-0x0000000185F86690
 	
 		// Methods
-		public bool Equals(Entity rhs) => default; // 0x00000001822AAB30-0x00000001822AAB50
-		public override int GetHashCode() => default; // 0x0000000183D85860-0x0000000183D85870
-		public override string ToString() => default; // 0x0000000189DF5010-0x0000000189DF5098
-		public bool Valid() => default; // 0x00000001824FE430-0x00000001824FE450
-		public static bool operator ==(Entity left, Entity right) => default; // 0x00000001827D27D0-0x00000001827D2950
-		public static bool operator !=(Entity left, Entity right) => default; // 0x00000001827D2760-0x00000001827D27D0
-		public override bool Equals(object obj) => default; // 0x0000000189DF4F94-0x0000000189DF5010
+		public bool Equals(Entity rhs) => default; // 0x0000000183FAB6D0-0x0000000183FAB6F0
+		public override int GetHashCode() => default; // 0x0000000185FE64F0-0x0000000185FE6500
+		public override string ToString() => default; // 0x000000018BF0CDC0-0x000000018BF0CE48
+		public bool Valid() => default; // 0x0000000184165F10-0x0000000184165F30
+		public static bool operator ==(Entity left, Entity right) => default; // 0x0000000184AC44E0-0x0000000184AC4560
+		public static bool operator !=(Entity left, Entity right) => default; // 0x0000000184AC4470-0x0000000184AC44E0
+		public override bool Equals(object obj) => default; // 0x000000018BF0CD44-0x000000018BF0CDC0
 	}
 
-	[UsedByNativeCode]
-	public struct EntityType // TypeDefIndex: 57543
+	public struct EntityType // TypeDefIndex: 58547
 	{
 		// Fields
 		public uint id; // 0x00
 	}
 
-	public interface IComponentECS // TypeDefIndex: 57544
+	public interface IComponentECS // TypeDefIndex: 58548
 	{
 		// Properties
 		int id { get; }
 	}
 
-	public struct BoundingCenterXComponent : IComponentECS // TypeDefIndex: 57545
+	public struct BoundingCenterXComponent : IComponentECS // TypeDefIndex: 58549
 	{
 		// Fields
 		public float x; // 0x00
 	
 		// Properties
-		public int id { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public int id { get => default; } // 0x00000001813AE580-0x00000001813AE590 
 	}
 
-	public struct BoundingCenterYComponent : IComponentECS // TypeDefIndex: 57546
+	public struct BoundingCenterYComponent : IComponentECS // TypeDefIndex: 58550
 	{
 		// Fields
 		public float y; // 0x00
 	
 		// Properties
-		public int id { get => default; } // 0x0000000181168950-0x0000000181168960 
+		public int id { get => default; } // 0x0000000181B87DE0-0x0000000181B87DF0 
 	}
 
-	public struct BoundingCenterZComponent : IComponentECS // TypeDefIndex: 57547
+	public struct BoundingCenterZComponent : IComponentECS // TypeDefIndex: 58551
 	{
 		// Fields
 		public float z; // 0x00
 	
 		// Properties
-		public int id { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		public int id { get => default; } // 0x0000000181C6A970-0x0000000181C6A980 
 	}
 
-	public struct BoundingExtentXComponent : IComponentECS // TypeDefIndex: 57548
+	public struct BoundingExtentXComponent : IComponentECS // TypeDefIndex: 58552
 	{
 		// Fields
 		public float x; // 0x00
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D555E0-0x0000000183D555F0 
+		public int id { get => default; } // 0x0000000181D1CE70-0x0000000181D1CE80 
 	}
 
-	public struct BoundingExtentYComponent : IComponentECS // TypeDefIndex: 57549
+	public struct BoundingExtentYComponent : IComponentECS // TypeDefIndex: 58553
 	{
 		// Fields
 		public float y; // 0x00
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D50CD0-0x0000000183D50CE0 
+		public int id { get => default; } // 0x0000000181C44E90-0x0000000181C44EA0 
 	}
 
-	public struct BoundingExtentZComponent : IComponentECS // TypeDefIndex: 57550
+	public struct BoundingExtentZComponent : IComponentECS // TypeDefIndex: 58554
 	{
 		// Fields
 		public float z; // 0x00
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D51100-0x0000000183D51110 
+		public int id { get => default; } // 0x0000000181D27740-0x0000000181D27750 
 	}
 
-	public struct RenderObjectLODInfoComponent : IComponentECS // TypeDefIndex: 57551
+	public struct RenderObjectLODInfoComponent : IComponentECS // TypeDefIndex: 58555
 	{
 		// Fields
 		public Vector3 lodCenter; // 0x00
@@ -2098,10 +1909,10 @@ namespace UnityEngine.HyperGryph.ECS
 		public byte padding1; // 0x13
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D51110-0x0000000183D51120 
+		public int id { get => default; } // 0x0000000181D409B0-0x0000000181D40CF0 
 	}
 
-	public struct RenderObjectInfoComponent : IComponentECS // TypeDefIndex: 57552
+	public struct RenderObjectInfoComponent : IComponentECS // TypeDefIndex: 58556
 	{
 		// Fields
 		public uint roLayerMask; // 0x00
@@ -2111,10 +1922,10 @@ namespace UnityEngine.HyperGryph.ECS
 		public float sortingFudgeSqr; // 0x14
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D55AA0-0x0000000183D55AB0 
+		public int id { get => default; } // 0x0000000181B9FE80-0x0000000181B9FE90 
 	}
 
-	public struct RendererInfo // TypeDefIndex: 57553
+	public struct RendererInfo // TypeDefIndex: 58557
 	{
 		// Fields
 		public ushort hgKeywords; // 0x00
@@ -2127,91 +1938,155 @@ namespace UnityEngine.HyperGryph.ECS
 		public uint lightModeMask; // 0x14
 	}
 
-	public struct LODInfo // TypeDefIndex: 57554
+	public struct LODInfo // TypeDefIndex: 58558
 	{
 		// Fields
 		public float lodScreenSizeMaxSquared; // 0x00
 		public float lodScreenSizeMinSquared; // 0x04
 	}
 
-	public interface IRenderObjectKComponent : IComponentECS // TypeDefIndex: 57555
+	public interface IRenderObjectKComponent : IComponentECS // TypeDefIndex: 58559
 	{
 		// Methods
 		byte* GetRenderersPtr();
 	}
 
-	public struct RenderObjectK1Component : IRenderObjectKComponent // TypeDefIndex: 57558
+	public struct RenderObjectK1Component : IRenderObjectKComponent // TypeDefIndex: 58562
 	{
 		// Fields
 		public int count; // 0x00
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte renderers[0]; // 0x04
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte lodInfos[0]; // 0x1C
+		public _renderers_e__FixedBuffer renderers; // 0x04
+		public _lodInfos_e__FixedBuffer lodInfos; // 0x1C
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D55800-0x0000000183D55810 
+		public int id { get => default; } // 0x0000000181E1B510-0x0000000181E1B520 
+	
+		// Nested types
+		public struct _renderers_e__FixedBuffer // TypeDefIndex: 58560
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
+	
+		public struct _lodInfos_e__FixedBuffer // TypeDefIndex: 58561
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
 	
 		// Methods
-		public unsafe byte* GetRenderersPtr() => default; // 0x0000000183D87B70-0x0000000183D87B80
+		public unsafe byte* GetRenderersPtr() => default; // 0x0000000185FE89B0-0x0000000185FE89C0
 	}
 
-	public struct RenderObjectK2Component : IRenderObjectKComponent // TypeDefIndex: 57561
+	public struct RenderObjectK2Component : IRenderObjectKComponent // TypeDefIndex: 58565
 	{
 		// Fields
 		public int count; // 0x00
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte renderers[0]; // 0x04
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte lodInfos[0]; // 0x34
+		public _renderers_e__FixedBuffer renderers; // 0x04
+		public _lodInfos_e__FixedBuffer lodInfos; // 0x34
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D55810-0x0000000183D55820 
+		public int id { get => default; } // 0x0000000183056920-0x0000000183056930 
+	
+		// Nested types
+		public struct _renderers_e__FixedBuffer // TypeDefIndex: 58563
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
+	
+		public struct _lodInfos_e__FixedBuffer // TypeDefIndex: 58564
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
 	
 		// Methods
-		public unsafe byte* GetRenderersPtr() => default; // 0x0000000183D87B70-0x0000000183D87B80
+		public unsafe byte* GetRenderersPtr() => default; // 0x0000000185FE89B0-0x0000000185FE89C0
 	}
 
-	public struct RenderObjectK4Component : IRenderObjectKComponent // TypeDefIndex: 57564
+	public struct RenderObjectK4Component : IRenderObjectKComponent // TypeDefIndex: 58568
 	{
 		// Fields
 		public int count; // 0x00
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte renderers[0]; // 0x04
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte lodInfos[0]; // 0x64
+		public _renderers_e__FixedBuffer renderers; // 0x04
+		public _lodInfos_e__FixedBuffer lodInfos; // 0x64
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D55730-0x0000000183D55740 
+		public int id { get => default; } // 0x0000000185FB6A00-0x0000000185FB6A10 
+	
+		// Nested types
+		public struct _renderers_e__FixedBuffer // TypeDefIndex: 58566
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
+	
+		public struct _lodInfos_e__FixedBuffer // TypeDefIndex: 58567
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
 	
 		// Methods
-		public unsafe byte* GetRenderersPtr() => default; // 0x0000000183D87B70-0x0000000183D87B80
+		public unsafe byte* GetRenderersPtr() => default; // 0x0000000185FE89B0-0x0000000185FE89C0
 	}
 
-	public struct RenderObjectK8Component : IRenderObjectKComponent // TypeDefIndex: 57567
+	public struct RenderObjectK8Component : IRenderObjectKComponent // TypeDefIndex: 58571
 	{
 		// Fields
 		public int count; // 0x00
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte renderers[0]; // 0x04
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte lodInfos[0]; // 0xC4
+		public _renderers_e__FixedBuffer renderers; // 0x04
+		public _lodInfos_e__FixedBuffer lodInfos; // 0xC4
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D557B0-0x0000000183D557C0 
+		public int id { get => default; } // 0x0000000181DDC740-0x0000000181DDC750 
+	
+		// Nested types
+		public struct _renderers_e__FixedBuffer // TypeDefIndex: 58569
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
+	
+		public struct _lodInfos_e__FixedBuffer // TypeDefIndex: 58570
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
 	
 		// Methods
-		public unsafe byte* GetRenderersPtr() => default; // 0x0000000183D87B70-0x0000000183D87B80
+		public unsafe byte* GetRenderersPtr() => default; // 0x0000000185FE89B0-0x0000000185FE89C0
 	}
 
-	public struct RenderObjectK16Component : IRenderObjectKComponent // TypeDefIndex: 57570
+	public struct RenderObjectK16Component : IRenderObjectKComponent // TypeDefIndex: 58574
 	{
 		// Fields
 		public int count; // 0x00
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte renderers[0]; // 0x04
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte lodInfos[0]; // 0x184
+		public _renderers_e__FixedBuffer renderers; // 0x04
+		public _lodInfos_e__FixedBuffer lodInfos; // 0x184
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D557A0-0x0000000183D557B0 
+		public int id { get => default; } // 0x0000000181B75290-0x0000000181B752A0 
+	
+		// Nested types
+		public struct _renderers_e__FixedBuffer // TypeDefIndex: 58572
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
+	
+		public struct _lodInfos_e__FixedBuffer // TypeDefIndex: 58573
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
 	
 		// Methods
-		public unsafe byte* GetRenderersPtr() => default; // 0x0000000183D87B70-0x0000000183D87B80
+		public unsafe byte* GetRenderersPtr() => default; // 0x0000000185FE89B0-0x0000000185FE89C0
 	}
 
-	[UsedByNativeCode]
-	public struct PerDrawBaseData // TypeDefIndex: 57571
+	public struct PerDrawBaseData // TypeDefIndex: 58575
 	{
 		// Fields
 		public Matrix4x4 objectToWorld; // 0x00
@@ -2221,37 +2096,58 @@ namespace UnityEngine.HyperGryph.ECS
 		public Vector4 motionVectorsParams; // 0xA0
 	}
 
-	public struct CommonInstanceDataComponent : IComponentECS // TypeDefIndex: 57573
+	public struct CommonInstanceDataComponent : IComponentECS // TypeDefIndex: 58577
 	{
 		// Fields
 		public PerDrawBaseData baseData; // 0x00
-		public unsafe fixed /* 0x00000000-0x00000000 */ float customData[0]; // 0xB0
+		public _customData_e__FixedBuffer customData; // 0xB0
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D56100-0x0000000183D56110 
+		public int id { get => default; } // 0x0000000185FB72C0-0x0000000185FB72D0 
+	
+		// Nested types
+		public struct _customData_e__FixedBuffer // TypeDefIndex: 58576
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
 	}
 
-	public struct FactoryInstanceDataComponent : IComponentECS // TypeDefIndex: 57575
+	public struct FactoryInstanceDataComponent : IComponentECS // TypeDefIndex: 58579
 	{
 		// Fields
 		public PerDrawBaseData baseData; // 0x00
-		public unsafe fixed /* 0x00000000-0x00000000 */ float customData[0]; // 0xB0
+		public _customData_e__FixedBuffer customData; // 0xB0
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D56100-0x0000000183D56110 
+		public int id { get => default; } // 0x0000000185FB72C0-0x0000000185FB72D0 
+	
+		// Nested types
+		public struct _customData_e__FixedBuffer // TypeDefIndex: 58578
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
 	}
 
-	public struct ECSFixedString64 // TypeDefIndex: 57577
+	public struct ECSFixedString64 // TypeDefIndex: 58581
 	{
 		// Fields
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte data[0]; // 0x00
+		public _data_e__FixedBuffer data; // 0x00
+	
+		// Nested types
+		public struct _data_e__FixedBuffer // TypeDefIndex: 58580
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
 	
 		// Methods
-		public string GetData() => default; // 0x0000000189DF4AB4-0x0000000189DF4B50
-		public override string ToString() => default; // 0x0000000189DF4B50-0x0000000189DF4B58
+		public string GetData() => default; // 0x000000018BF0C864-0x000000018BF0C900
+		public override string ToString() => default; // 0x000000018BF0C900-0x000000018BF0C908
 	}
 
-	public struct DebugContentsComponent : IComponentECS // TypeDefIndex: 57578
+	public struct DebugContentsComponent : IComponentECS // TypeDefIndex: 58582
 	{
 		// Fields
 		public ECSFixedString64 entityName; // 0x00
@@ -2259,10 +2155,10 @@ namespace UnityEngine.HyperGryph.ECS
 		public ECSFixedString64 debugStr; // 0x44
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D55750-0x0000000183D55760 
+		public int id { get => default; } // 0x0000000185FB6A20-0x0000000185FB6A30 
 	}
 
-	public struct HGFactoryRendererBinderComponent : IComponentECS // TypeDefIndex: 57579
+	public struct HGFactoryRendererBinderComponent : IComponentECS // TypeDefIndex: 58583
 	{
 		// Fields
 		public Entity rendererEntity; // 0x00
@@ -2273,22 +2169,22 @@ namespace UnityEngine.HyperGryph.ECS
 		public byte padding2; // 0x0F
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D51E30-0x0000000183D51E40 
+		public int id { get => default; } // 0x0000000185FB3170-0x0000000185FB3180 
 	
 		// Methods
-		public void SetDirtyFlag(HGFactoryDirtyFlags flag) {} // 0x0000000182420410-0x00000001824204A0
-		public void SetAdditiveMaterialBit(int bitIndex, bool enable) {} // 0x0000000182421CD0-0x0000000182421DD0
-		public void SetPosition(Vector3 position) {} // 0x000000018294D130-0x000000018294D3C0
-		public void SetUniformScale(float uniformScale) {} // 0x0000000189DF6180-0x0000000189DF61DC
-		public void SetRotation(Quaternion rotation) {} // 0x000000018294D0A0-0x000000018294D130
-		public void SetTransform(HGFactoryEntityTransformData transform) {} // 0x00000001824210B0-0x0000000182421150
+		public void SetDirtyFlag(HGFactoryDirtyFlags flag) {} // 0x00000001840FF910-0x00000001840FF9A0
+		public void SetAdditiveMaterialBit(int bitIndex, bool enable) {} // 0x00000001840FEA60-0x00000001840FEB60
+		public void SetPosition(Vector3 position) {} // 0x00000001840FDC10-0x00000001840FDCB0
+		public void SetUniformScale(float uniformScale) {} // 0x000000018BF0DF30-0x000000018BF0DF8C
+		public void SetRotation(Quaternion rotation) {} // 0x00000001840FDB80-0x00000001840FDC10
+		public void SetTransform(HGFactoryEntityTransformData transform) {} // 0x00000001840FF2C0-0x00000001840FF360
 		public void SetCustomPerDrawData<T>(T data, int offset)
 			where T : struct {}
-		public void SetEnabled(bool enabled) {} // 0x0000000182420CD0-0x0000000182420DC0
-		public void SetAdditiveEntitiesVisibility(bool visible) {} // 0x0000000182421B20-0x0000000182421BE0
+		public void SetEnabled(bool enabled) {} // 0x00000001840FF480-0x00000001840FF570
+		public void SetAdditiveEntitiesVisibility(bool visible) {} // 0x00000001840FECE0-0x00000001840FEDA0
 	}
 
-	public struct HGWaterComponent : IComponentECS // TypeDefIndex: 57580
+	public struct HGWaterComponent : IComponentECS // TypeDefIndex: 58584
 	{
 		// Fields
 		public uint renderTypeMask; // 0x00
@@ -2298,10 +2194,10 @@ namespace UnityEngine.HyperGryph.ECS
 		public Vector4 param1; // 0x58
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D55770-0x0000000183D55780 
+		public int id { get => default; } // 0x0000000185FB6A40-0x0000000185FB6A50 
 	}
 
-	public struct HGWaterDecalComponent : IComponentECS // TypeDefIndex: 57581
+	public struct HGWaterDecalComponent : IComponentECS // TypeDefIndex: 58585
 	{
 		// Fields
 		public uint renderTypeMask; // 0x00
@@ -2316,10 +2212,10 @@ namespace UnityEngine.HyperGryph.ECS
 		public Vector4 animParam3; // 0x9C
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D55C10-0x0000000183D55C20 
+		public int id { get => default; } // 0x0000000183214D00-0x0000000183214D10 
 	}
 
-	public struct GrassRendererInfo // TypeDefIndex: 57582
+	public struct GrassRendererInfo // TypeDefIndex: 58586
 	{
 		// Fields
 		public ushort hgKeywords; // 0x00
@@ -2332,57 +2228,84 @@ namespace UnityEngine.HyperGryph.ECS
 	}
 
 	[Serializable]
-	[UsedByNativeCode]
-	public struct GrassPerInstanceData // TypeDefIndex: 57583
+	public struct GrassPerInstanceData // TypeDefIndex: 58587
 	{
 		// Fields
-		public const int SIZE = 96; // Metadata: 0x01FDA03B
+		public const int SIZE = 96; // Metadata: 0x0207F8F0
 		public Matrix4x4 objectToWorld; // 0x00
 		public Vector4 param0; // 0x40
 		public Vector4 param1; // 0x50
 	}
 
-	public struct GrassClusterK4Component : IComponentECS // TypeDefIndex: 57585
+	public struct GrassClusterK4Component : IComponentECS // TypeDefIndex: 58589
 	{
 		// Fields
 		public int count; // 0x00
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte perInstanceData[0]; // 0x04
+		public _perInstanceData_e__FixedBuffer perInstanceData; // 0x04
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D55BF0-0x0000000183D55C00 
+		public int id { get => default; } // 0x0000000185FB6E00-0x0000000185FB6E10 
+	
+		// Nested types
+		public struct _perInstanceData_e__FixedBuffer // TypeDefIndex: 58588
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
 	}
 
-	public struct GrassClusterK8Component : IComponentECS // TypeDefIndex: 57587
+	public struct GrassClusterK8Component : IComponentECS // TypeDefIndex: 58591
 	{
 		// Fields
 		public int count; // 0x00
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte perInstanceData[0]; // 0x04
+		public _perInstanceData_e__FixedBuffer perInstanceData; // 0x04
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D55B90-0x0000000183D55BA0 
+		public int id { get => default; } // 0x0000000185FB6DC0-0x0000000185FB6DD0 
+	
+		// Nested types
+		public struct _perInstanceData_e__FixedBuffer // TypeDefIndex: 58590
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
 	}
 
-	public struct GrassClusterK16Component : IComponentECS // TypeDefIndex: 57589
+	public struct GrassClusterK16Component : IComponentECS // TypeDefIndex: 58593
 	{
 		// Fields
 		public int count; // 0x00
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte perInstanceData[0]; // 0x04
+		public _perInstanceData_e__FixedBuffer perInstanceData; // 0x04
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D55C40-0x0000000183D55C50 
+		public int id { get => default; } // 0x0000000181BA5810-0x0000000181BA5820 
+	
+		// Nested types
+		public struct _perInstanceData_e__FixedBuffer // TypeDefIndex: 58592
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
 	}
 
-	public struct GrassClusterK32Component : IComponentECS // TypeDefIndex: 57591
+	public struct GrassClusterK32Component : IComponentECS // TypeDefIndex: 58595
 	{
 		// Fields
 		public int count; // 0x00
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte perInstanceData[0]; // 0x04
+		public _perInstanceData_e__FixedBuffer perInstanceData; // 0x04
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D55740-0x0000000183D55750 
+		public int id { get => default; } // 0x0000000185FB6A10-0x0000000185FB6A20 
+	
+		// Nested types
+		public struct _perInstanceData_e__FixedBuffer // TypeDefIndex: 58594
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
 	}
 
-	public struct ECSColliderComponent : IComponentECS // TypeDefIndex: 57592
+	public struct ECSColliderComponent : IComponentECS // TypeDefIndex: 58596
 	{
 		// Fields
 		public IntPtr actor; // 0x00
@@ -2390,10 +2313,10 @@ namespace UnityEngine.HyperGryph.ECS
 		public uint ecsVersion; // 0x0C
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D59180-0x0000000183D59190 
+		public int id { get => default; } // 0x0000000185FBA700-0x0000000185FBA710 
 	}
 
-	public struct HGSludgeComponent : IComponentECS // TypeDefIndex: 57593
+	public struct HGSludgeComponent : IComponentECS // TypeDefIndex: 58597
 	{
 		// Fields
 		public uint materialHandle; // 0x00
@@ -2408,19 +2331,19 @@ namespace UnityEngine.HyperGryph.ECS
 		public Vector4 customPerDraw1; // 0x60
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D56190-0x0000000183D561A0 
+		public int id { get => default; } // 0x0000000185FB7340-0x0000000185FB7350 
 	}
 
-	public struct ECSClothDataComponent : IComponentECS // TypeDefIndex: 57594
+	public struct ECSClothDataComponent : IComponentECS // TypeDefIndex: 58598
 	{
 		// Fields
 		public uint clothHash; // 0x00
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D55AF0-0x0000000183D55B00 
+		public int id { get => default; } // 0x0000000185FB6D30-0x0000000185FB6D40 
 	}
 
-	public struct HGECSRegionComponent : IComponentECS // TypeDefIndex: 57595
+	public struct HGECSRegionComponent : IComponentECS // TypeDefIndex: 58599
 	{
 		// Fields
 		public bool isEnable; // 0x00
@@ -2429,139 +2352,132 @@ namespace UnityEngine.HyperGryph.ECS
 		public Quaternion rotation; // 0x1C
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D560B0-0x0000000183D560C0 
+		public int id { get => default; } // 0x0000000185FB7270-0x0000000185FB7280 
 	}
 
-	public struct HGCullingParameterComponent : IComponentECS // TypeDefIndex: 57596
+	public struct HGCullingParameterComponent : IComponentECS // TypeDefIndex: 58600
 	{
 		// Fields
 		public bool enableShadowCulling; // 0x00
 	
 		// Properties
-		public int id { get => default; } // 0x0000000183D560A0-0x0000000183D560B0 
+		public int id { get => default; } // 0x0000000185FB7260-0x0000000185FB7270 
 	}
 
-	[IsReadOnly]
-	[NativeHeader("Modules/HGGraphics/Public/ScriptBindings/HGEntityManager.bindings.h")]
-	public struct EntityManager // TypeDefIndex: 57597
+	public struct EntityManager // TypeDefIndex: 58601
 	{
 		// Fields
-		[NativeDisableUnsafePtrRestriction]
 		public readonly IntPtr m_entitiesPPtr; // 0x00
-		[NativeDisableUnsafePtrRestriction]
 		public readonly IntPtr m_entityTypesPPtr; // 0x08
 	
 		// Methods
-		public static int GetNFromKNComponentMask(ulong componentMask) => default; // 0x0000000183D87BA0-0x0000000183D87BB0
-		public static unsafe int GetCountFromKNComponent(byte* component) => default; // 0x0000000183D85860-0x0000000183D85870
-		public static unsafe void SetCountForKNComponent(byte* component, int count) {} // 0x0000000183D4E970-0x0000000183D4E980
-		public static unsafe GrassRendererInfo* GetGrassRendererInfosFromKNComponent(byte* component) => default; // 0x0000000183D87B70-0x0000000183D87B80
-		public static unsafe LODInfo* GetLODInfosFromKNComponent(byte* component, int n) => default; // 0x0000000183D87B80-0x0000000183D87BA0
-		public static unsafe int GetCountFromKNGrassCluster(byte* component) => default; // 0x0000000183D85860-0x0000000183D85870
-		public static unsafe void SetCountForKNGrassCluster(byte* component, int count) {} // 0x0000000183D4E970-0x0000000183D4E980
-		public static unsafe GrassPerInstanceData* GetPerInstanceDataFromKNGrassCluster(byte* component) => default; // 0x0000000183D87B70-0x0000000183D87B80
-		public static EntityManager GetEntityManager() => default; // 0x00000001823F6FD0-0x00000001823F7020
-		public static EntityManager GetGameplayEntityManager() => default; // 0x0000000182501030-0x0000000182501080
-		public static EntityManager GetRendererEntityManager() => default; // 0x00000001826E5150-0x00000001826E51A0
-		public bool HasEntity(Entity entity) => default; // 0x00000001824FE450-0x00000001824FE4E0
-		public Entity CreateEntity(UnityEngine.HyperGryph.ECS.EntityType entityType) => default; // 0x000000018241C980-0x000000018241C9E0
-		public void CreateEntities(UnityEngine.HyperGryph.ECS.EntityType entityType, IntPtr entities, int count) {} // 0x0000000184272F04-0x0000000184272F24
-		public void CreateEntities(UnityEngine.HyperGryph.ECS.EntityType entityType, NativeArray<Entity> entities) {} // 0x0000000182C5EA00-0x0000000182C5EA60
-		public void DestroyEntity(Entity entity) {} // 0x0000000184276334-0x0000000184276350
-		public void DestroyEntities(NativeArray<Entity> entities) {} // 0x0000000182BC2930-0x0000000182BC29B0
-		public void DestroyEntities(IntPtr entities, int entityCount) {} // 0x0000000184272C68-0x0000000184272C70
+		public static int GetNFromKNComponentMask(ulong componentMask) => default; // 0x0000000185FE89E0-0x0000000185FE89F0
+		public static unsafe int GetCountFromKNComponent(byte* component) => default; // 0x0000000185FE64F0-0x0000000185FE6500
+		public static unsafe void SetCountForKNComponent(byte* component, int count) {} // 0x00000001818AA390-0x00000001818AA3A0
+		public static unsafe GrassRendererInfo* GetGrassRendererInfosFromKNComponent(byte* component) => default; // 0x0000000185FE89B0-0x0000000185FE89C0
+		public static unsafe LODInfo* GetLODInfosFromKNComponent(byte* component, int n) => default; // 0x0000000185FE89C0-0x0000000185FE89E0
+		public static unsafe int GetCountFromKNGrassCluster(byte* component) => default; // 0x0000000185FE64F0-0x0000000185FE6500
+		public static unsafe void SetCountForKNGrassCluster(byte* component, int count) {} // 0x00000001818AA390-0x00000001818AA3A0
+		public static unsafe GrassPerInstanceData* GetPerInstanceDataFromKNGrassCluster(byte* component) => default; // 0x0000000185FE89B0-0x0000000185FE89C0
+		public static EntityManager GetEntityManager() => default; // 0x00000001847984A0-0x00000001847984F0
+		public static EntityManager GetGameplayEntityManager() => default; // 0x0000000184168B10-0x0000000184168B60
+		public static EntityManager GetRendererEntityManager() => default; // 0x00000001840C45C0-0x00000001840C4610
+		public bool HasEntity(Entity entity) => default; // 0x0000000184165F30-0x0000000184165FC0
+		public Entity CreateEntity(UnityEngine.HyperGryph.ECS.EntityType entityType) => default; // 0x00000001840BE5A0-0x00000001840BE600
+		public void CreateEntities(UnityEngine.HyperGryph.ECS.EntityType entityType, IntPtr entities, int count) {} // 0x0000000186470198-0x00000001864701B8
+		public void CreateEntities(UnityEngine.HyperGryph.ECS.EntityType entityType, NativeArray<Entity> entities) {} // 0x00000001847E7930-0x00000001847E7990
+		public void DestroyEntity(Entity entity) {} // 0x000000018646DAC0-0x000000018646DADC
+		public void DestroyEntities(NativeArray<Entity> entities) {} // 0x00000001848AF160-0x00000001848AF1E0
+		public void DestroyEntities(IntPtr entities, int entityCount) {} // 0x0000000186470CB8-0x0000000186470CC0
 		public static ComponentType GetComponentType<T>()
 			where T : struct, IComponentECS => default;
-		public void AddComponent<T>([IsReadOnly] in Entity entity, [IsReadOnly] in ref T t)
+		public void AddComponent<T>(in Entity entity, in ref T t)
 			where T : struct, IComponentECS {}
-		public void RemoveComponent<T>([IsReadOnly] in Entity entity)
+		public void RemoveComponent<T>(in Entity entity)
 			where T : struct, IComponentECS {}
-		public void RemoveComponentsWithMask([IsReadOnly] in Entity entity, ref ComponentMask needRemoveComponentMask) {} // 0x00000001823F5130-0x00000001823F52E0
-		public UnityEngine.HyperGryph.ECS.EntityType GetOrRegisterEntityType(NativeArray<ComponentType> componentTypes) => default; // 0x000000018241CA40-0x000000018241CAD0
-		public UnityEngine.HyperGryph.ECS.EntityType GetOrRegisterEntityTypeImpl(int componentTypeCount, IntPtr componentTypes) => default; // 0x000000018241CAD0-0x000000018241CB40
-		public void AddMoveEntityAndEntityTypeDataImpl([IsReadOnly] in Entity entity, [IsReadOnly] in UnityEngine.HyperGryph.ECS.EntityType newEntityType) {} // 0x000000018426FD70-0x000000018426FD78
-		public void RemoveMoveEntityAndEntityTypeDataImpl([IsReadOnly] in Entity entity, [IsReadOnly] in UnityEngine.HyperGryph.ECS.EntityType newEntityType) {} // 0x0000000189DF4DC4-0x0000000189DF4DCC
-		public static ulong NumberOfSetBits(ulong i) => default; // 0x0000000183D79190-0x0000000183D791F0
-		public static ulong NumberOfSetBits(ref ComponentMask mask) => default; // 0x00000001823F4880-0x00000001823F48C0
-		public ComponentMask ComposeComponentMaskAll(int id0, int id1) => default; // 0x00000001826E5380-0x00000001826E53E0
-		public ComponentMask ComposeComponentMaskAll(int id0, int id1, int id2) => default; // 0x00000001830209A0-0x0000000183020AF0
-		public ComponentMask ComposeComponentMaskAll(int id0, int id1, int id2, int id3) => default; // 0x0000000183017A20-0x0000000183017AC0
-		public ComponentMask ComposeComponentMaskAll(int id0, int id1, int id2, int id3, int id4) => default; // 0x0000000182EE6BD0-0x0000000182EE6C90
-		public ComponentMask ComposeComponentMaskAll(int id0, int id1, int id2, int id3, int id4, int id5) => default; // 0x0000000182EE1470-0x0000000182EE1550
-		public bool HasComponent<T>([IsReadOnly] in Entity entity)
+		public void RemoveComponentsWithMask(in Entity entity, ref ComponentMask needRemoveComponentMask) {} // 0x00000001840BACE0-0x00000001840BAE90
+		public UnityEngine.HyperGryph.ECS.EntityType GetOrRegisterEntityType(NativeArray<ComponentType> componentTypes) => default; // 0x00000001840BE660-0x00000001840BE6F0
+		public UnityEngine.HyperGryph.ECS.EntityType GetOrRegisterEntityTypeImpl(int componentTypeCount, IntPtr componentTypes) => default; // 0x00000001840BE6F0-0x00000001840BE760
+		public void AddMoveEntityAndEntityTypeDataImpl(in Entity entity, in UnityEngine.HyperGryph.ECS.EntityType newEntityType) {} // 0x000000018646DAF0-0x000000018646DAF8
+		public void RemoveMoveEntityAndEntityTypeDataImpl(in Entity entity, in UnityEngine.HyperGryph.ECS.EntityType newEntityType) {} // 0x000000018BF0CB74-0x000000018BF0CB7C
+		public static ulong NumberOfSetBits(ulong i) => default; // 0x0000000185FD9E20-0x0000000185FD9E80
+		public static ulong NumberOfSetBits(ref ComponentMask mask) => default; // 0x0000000184136E60-0x0000000184136EA0
+		public ComponentMask ComposeComponentMaskAll(int id0, int id1) => default; // 0x00000001840C3550-0x00000001840C35B0
+		public ComponentMask ComposeComponentMaskAll(int id0, int id1, int id2) => default; // 0x0000000184E70E40-0x0000000184E70F90
+		public ComponentMask ComposeComponentMaskAll(int id0, int id1, int id2, int id3) => default; // 0x0000000184E61D30-0x0000000184E61DD0
+		public ComponentMask ComposeComponentMaskAll(int id0, int id1, int id2, int id3, int id4) => default; // 0x0000000184CFE700-0x0000000184CFE7C0
+		public ComponentMask ComposeComponentMaskAll(int id0, int id1, int id2, int id3, int id4, int id5) => default; // 0x0000000184CF8760-0x0000000184CF8840
+		public bool HasComponent<T>(in Entity entity)
 			where T : struct, IComponentECS => default;
-		public void SetComponents<T0, T1>([IsReadOnly] in Entity entity, [IsReadOnly] in ref T0 t0, [IsReadOnly] in ref T1 t1)
+		public void SetComponents<T0, T1>(in Entity entity, in ref T0 t0, in ref T1 t1)
 			where T0 : struct, IComponentECS
 			where T1 : struct, IComponentECS {}
-		public static ComponentMask GetCountingMask(int id) => default; // 0x00000001823F48C0-0x00000001823F4910
-		public static void SetComponentImplWithRef<T>(ref EntityInstanceData entityData, ref EntityTypeInstanceData entityTypeData, [IsReadOnly] in ref T t)
+		public static ComponentMask GetCountingMask(int id) => default; // 0x0000000184136EA0-0x0000000184136EF0
+		public static void SetComponentImplWithRef<T>(ref EntityInstanceData entityData, ref EntityTypeInstanceData entityTypeData, in ref T t)
 			where T : struct, IComponentECS {}
-		public void SetComponent<T>([IsReadOnly] in Entity entity, [IsReadOnly] in ref T t)
+		public void SetComponent<T>(in Entity entity, in ref T t)
 			where T : struct, IComponentECS {}
-		private static unsafe byte* GetComponentPtrImpl(int entityIdx, ref EntityTypeInstanceData entityTypeData, int componentId, int componentSize) => default; // 0x0000000189DF4C48-0x0000000189DF4CDC
-		public bool TryGetWorldAABBFromRendererEntity([IsReadOnly] in Entity entity, out Bounds aabb) {
+		private static unsafe byte* GetComponentPtrImpl(int entityIdx, ref EntityTypeInstanceData entityTypeData, int componentId, int componentSize) => default; // 0x000000018BF0C9F8-0x000000018BF0CA8C
+		public bool TryGetWorldAABBFromRendererEntity(in Entity entity, out Bounds aabb) {
 			aabb = default;
 			return default;
-		} // 0x0000000189DF4DCC-0x0000000189DF4F94
-		public ulong GetComponentMaskLow([IsReadOnly] in Entity entity) => default; // 0x0000000183D87B40-0x0000000183D87B70
-		public ComponentMask GetComponentMaskAll([IsReadOnly] in Entity entity) => default; // 0x0000000183D87B10-0x0000000183D87B40
-		public unsafe byte* GetComponentPtrLowBits([IsReadOnly] in Entity entity, ulong componentMask) => default; // 0x0000000189DF4CDC-0x0000000189DF4DC4
-		public T GetComponent<T>([IsReadOnly] in Entity entity)
+		} // 0x000000018BF0CB7C-0x000000018BF0CD44
+		public ulong GetComponentMaskLow(in Entity entity) => default; // 0x0000000185FE8980-0x0000000185FE89B0
+		public ComponentMask GetComponentMaskAll(in Entity entity) => default; // 0x0000000185FE8950-0x0000000185FE8980
+		public unsafe byte* GetComponentPtrLowBits(in Entity entity, ulong componentMask) => default; // 0x000000018BF0CA8C-0x000000018BF0CB74
+		public T GetComponent<T>(in Entity entity)
 			where T : struct, IComponentECS => default;
-		public bool TryGetComponent<T>([IsReadOnly] in Entity entity, out ref T component)
+		public bool TryGetComponent<T>(in Entity entity, out ref T component)
 			where T : struct, IComponentECS {
 			component = default;
 			return default;
 		}
-		public ref ref T GetComponentRef<T>([IsReadOnly] in Entity entity)
+		public ref ref T GetComponentRef<T>(in Entity entity)
 			where T : struct, IComponentECS => ref _refReturnTypeForGetComponentRef;
 		private ref T _refReturnTypeForGetComponentRef; // Dummy field
-		public unsafe T* GetComponentPtr<T>([IsReadOnly] in Entity entity)
+		public unsafe T* GetComponentPtr<T>(in Entity entity)
 			where T : struct, IComponentECS => default;
-		public unsafe bool TryGetComponentPtr<T>([IsReadOnly] in Entity entity, out ref T* componentPtr)
+		public unsafe bool TryGetComponentPtr<T>(in Entity entity, out ref T* componentPtr)
 			where T : struct, IComponentECS {
 			componentPtr = default;
 			return default;
 		}
-		public EntityManagerRange Iterate(ref ComponentMask includeComponentMask, ref ComponentMask excludeComponentMask) => default; // 0x0000000182434D60-0x0000000182434ED0
-		public EntityManagerRange Iterate(ref ComponentMask componentMask) => default; // 0x0000000182431A60-0x0000000182431B20
+		public EntityManagerRange Iterate(ref ComponentMask includeComponentMask, ref ComponentMask excludeComponentMask) => default; // 0x00000001840C18E0-0x00000001840C1A50
+		public EntityManagerRange Iterate(ref ComponentMask componentMask) => default; // 0x00000001840C0CF0-0x00000001840C0DB0
 		public EntityManagerRange Iterate<T>()
 			where T : struct, IComponentECS => default;
 		public EntityManagerRange Iterate<T0, T1>()
 			where T0 : struct, IComponentECS
 			where T1 : struct, IComponentECS => default;
-		[NativeMethod(IsThreadSafe = true)]
-		public int GetEntityTypeCount() => default; // 0x000000018426FE38-0x000000018426FE40
-		[NativeMethod(IsThreadSafe = true)]
-		public uint GetEntityContainerSize() => default; // 0x0000000184270334-0x000000018427033C
-		public void GarbageCollect() {} // 0x0000000184274B00-0x0000000184274B08
+		public int GetEntityTypeCount() => default; // 0x000000018646DB14-0x000000018646DB20
+		public uint GetEntityContainerSize() => default; // 0x000000018646DE44-0x000000018646DE4C
+		public void GarbageCollect() {} // 0x0000000186472D30-0x0000000186472D38
 		private static void GetEntityManager_Injected(out EntityManager ret) {
 			ret = default;
-		} // 0x00000001823F7020-0x00000001823F7060
+		} // 0x00000001847984F0-0x0000000184798580
 		private static void GetGameplayEntityManager_Injected(out EntityManager ret) {
 			ret = default;
-		} // 0x0000000182501080-0x00000001825010C0
+		} // 0x0000000184168B60-0x0000000184168BA0
 		private static void GetRendererEntityManager_Injected(out EntityManager ret) {
 			ret = default;
-		} // 0x00000001826E51A0-0x00000001826E51E0
+		} // 0x00000001840C4610-0x00000001840C4650
 		private static void CreateEntity_Injected(ref EntityManager _unity_self, ref UnityEngine.HyperGryph.ECS.EntityType entityType, out Entity ret) {
 			ret = default;
-		} // 0x000000018241C9E0-0x000000018241CA40
-		private static void CreateEntities_Injected(ref EntityManager _unity_self, ref UnityEngine.HyperGryph.ECS.EntityType entityType, IntPtr entities, int count) {} // 0x00000001836E10E0-0x00000001836E1150
-		private static void DestroyEntity_Injected(ref EntityManager _unity_self, ref Entity entity) {} // 0x000000018329DC70-0x000000018329DCC0
-		private static void DestroyEntities_Injected(ref EntityManager _unity_self, IntPtr entities, int entityCount) {} // 0x0000000182BC0D80-0x0000000182BC0DE0
+		} // 0x00000001840BE600-0x00000001840BE660
+		private static void CreateEntities_Injected(ref EntityManager _unity_self, ref UnityEngine.HyperGryph.ECS.EntityType entityType, IntPtr entities, int count) {} // 0x00000001857D3BF0-0x00000001857D3C60
+		private static void DestroyEntity_Injected(ref EntityManager _unity_self, ref Entity entity) {} // 0x000000018521E680-0x000000018521E6D0
+		private static void DestroyEntities_Injected(ref EntityManager _unity_self, IntPtr entities, int entityCount) {} // 0x00000001848AD8C0-0x00000001848AD920
 		private static void GetOrRegisterEntityTypeImpl_Injected(ref EntityManager _unity_self, int componentTypeCount, IntPtr componentTypes, out UnityEngine.HyperGryph.ECS.EntityType ret) {
 			ret = default;
-		} // 0x000000018241CB40-0x000000018241CBB0
-		private static void AddMoveEntityAndEntityTypeDataImpl_Injected(ref EntityManager _unity_self, [IsReadOnly] in Entity entity, [IsReadOnly] in UnityEngine.HyperGryph.ECS.EntityType newEntityType) {} // 0x0000000182E2BFB0-0x0000000182E2C010
-		private static void RemoveMoveEntityAndEntityTypeDataImpl_Injected(ref EntityManager _unity_self, [IsReadOnly] in Entity entity, [IsReadOnly] in UnityEngine.HyperGryph.ECS.EntityType newEntityType) {} // 0x00000001835B6A60-0x00000001835B6AC0
-		private static int GetEntityTypeCount_Injected(ref EntityManager _unity_self) => default; // 0x0000000182DF8590-0x0000000182DF85D0
-		private static uint GetEntityContainerSize_Injected(ref EntityManager _unity_self) => default; // 0x0000000182AD3B00-0x0000000182AD3B40
-		private static void GarbageCollect_Injected(ref EntityManager _unity_self) {} // 0x000000018304C9E0-0x000000018304CA20
+		} // 0x00000001840BE760-0x00000001840BE7D0
+		private static void AddMoveEntityAndEntityTypeDataImpl_Injected(ref EntityManager _unity_self, in Entity entity, in UnityEngine.HyperGryph.ECS.EntityType newEntityType) {} // 0x0000000184C14560-0x0000000184C145C0
+		private static void RemoveMoveEntityAndEntityTypeDataImpl_Injected(ref EntityManager _unity_self, in Entity entity, in UnityEngine.HyperGryph.ECS.EntityType newEntityType) {} // 0x00000001856455C0-0x0000000185645620
+		private static int GetEntityTypeCount_Injected(ref EntityManager _unity_self) => default; // 0x0000000184BE87C0-0x0000000184BE8800
+		private static uint GetEntityContainerSize_Injected(ref EntityManager _unity_self) => default; // 0x00000001847B7D30-0x00000001847B7D70
+		private static void GarbageCollect_Injected(ref EntityManager _unity_self) {} // 0x0000000184F67530-0x0000000184F67570
 	}
 
-	[IsReadOnly]
-	public struct GroupType // TypeDefIndex: 57598
+	public struct GroupType // TypeDefIndex: 58602
 	{
 		// Fields
 		private readonly unsafe EntityTypeInstanceData* m_entityTypes; // 0x00
@@ -2569,35 +2485,32 @@ namespace UnityEngine.HyperGryph.ECS
 		// Constructors
 		internal unsafe GroupType(EntityTypeInstanceData* types) {
 			m_entityTypes = default;
-		} // 0x0000000183D51730-0x0000000183D51740
+		} // 0x0000000185FB2BB0-0x0000000185FB2BC0
 	
 		// Methods
-		public int Size() => default; // 0x000000018426FE68-0x000000018426FE84
+		public int Size() => default; // 0x000000018646F864-0x000000018646F880
 		public bool HasComponent<T>()
 			where T : struct, IComponentECS => default;
 		public unsafe T* GetComponent<T>()
 			where T : struct, IComponentECS => default;
-		public unsafe byte* GetComponentPtr(int componentId) => default; // 0x0000000189DF5778-0x0000000189DF58CC
+		public unsafe byte* GetComponentPtr(int componentId) => default; // 0x000000018BF0D528-0x000000018BF0D67C
 		public NativeArray<T> GetComponentAsArray<T>()
 			where T : struct, IComponentECS => default;
-		public unsafe Entity* GetEntities() => default; // 0x000000018426FE40-0x000000018426FE60
-		public ComponentMask GetComponentMaskAll() => default; // 0x0000000183629AF0-0x0000000183629B20
-		public NativeArray<Entity> GetEntitiesAsArray() => default; // 0x0000000182EDAE60-0x0000000182EDAEE0
+		public unsafe Entity* GetEntities() => default; // 0x000000018646DAF8-0x000000018646DB14
+		public ComponentMask GetComponentMaskAll() => default; // 0x00000001856E0250-0x00000001856E0280
+		public NativeArray<Entity> GetEntitiesAsArray() => default; // 0x00000001840B4850-0x00000001840B48D0
 	}
 
-	[IsReadOnly]
-	public struct EntityManagerRange : IEnumerable<GroupType> // TypeDefIndex: 57600
+	public struct EntityManagerRange : IEnumerable<GroupType> // TypeDefIndex: 58604
 	{
 		// Fields
-		[NativeDisableUnsafePtrRestriction]
 		private readonly unsafe EntityTypeInstanceData* m_entityTypes; // 0x00
 		private readonly ComponentMask m_componentMask; // 0x08
 		private readonly ComponentMask m_excludeComponentMask; // 0x18
 		private readonly int m_count; // 0x28
 	
 		// Nested types
-		[ExcludeFromDocs]
-		public struct Enumerator : IEnumerator<GroupType> // TypeDefIndex: 57599
+		public struct Enumerator : IEnumerator<GroupType> // TypeDefIndex: 58603
 		{
 			// Fields
 			private readonly unsafe EntityTypeInstanceData* m_entityTypes; // 0x00
@@ -2607,22 +2520,22 @@ namespace UnityEngine.HyperGryph.ECS
 			private int m_index; // 0x30
 	
 			// Properties
-			public GroupType Current { get => default; } // 0x0000000183D87BF0-0x0000000183D87C00 
-			object IEnumerator.Current { get => default; } // 0x0000000189DF50E8-0x0000000189DF5138 
+			public GroupType Current { get => default; } // 0x000000018BF0C980-0x000000018BF0C9F8 
+			object IEnumerator.Current { get => default; } // 0x0000000185FE8A00-0x0000000185FE8A30 
 	
 			// Constructors
-			internal unsafe Enumerator(EntityTypeInstanceData* entityTypes, int count, [IsReadOnly] in ComponentMask includeComponentMask, [IsReadOnly] in ComponentMask excludeComponentMask) : this() {
+			internal unsafe Enumerator(EntityTypeInstanceData* entityTypes, int count, in ComponentMask includeComponentMask, in ComponentMask excludeComponentMask) : this() {
 				m_entityTypes = default;
 				m_count = default;
 				m_includeComponentMask = default;
 				m_excludedComponentMask = default;
 				m_index = default;
-			} // 0x0000000183D87BC0-0x0000000183D87BF0
+			} // 0x0000000185FE8930-0x0000000185FE8950
 	
 			// Methods
-			public void Dispose() {} // 0x000000018350B670-0x000000018350B680
-			public bool MoveNext() => default; // 0x0000000182433890-0x0000000182433900
-			public void Reset() {} // 0x0000000183D5C430-0x0000000183D5C440
+			public void Dispose() {} // 0x00000001840BF230-0x00000001840BF310
+			public bool MoveNext() => default; // 0x00000001840C4570-0x00000001840C45C0
+			public void Reset() {} // 0x000000018BF0C908-0x000000018BF0C980
 		}
 	
 		// Constructors
@@ -2631,36 +2544,36 @@ namespace UnityEngine.HyperGryph.ECS
 			m_componentMask = default;
 			m_excludeComponentMask = default;
 			m_count = default;
-		} // 0x0000000183D87AF0-0x0000000183D87B10
+		} // 0x0000000185492010-0x0000000185492020
 		internal unsafe EntityManagerRange(EntityTypeInstanceData* entityTypes, int count, ref ComponentMask includeComponentMask, ref ComponentMask excludeComponentMask) {
 			m_entityTypes = default;
 			m_componentMask = default;
 			m_excludeComponentMask = default;
 			m_count = default;
-		} // 0x0000000182434870-0x0000000182434950
+		} // 0x00000001840BFA00-0x00000001840BFA70
 	
 		// Methods
-		public Enumerator GetEnumerator() => default; // 0x00000001826E5100-0x00000001826E5150
-		IEnumerator<GroupType> IEnumerable<GroupType>.GetEnumerator() => default; // 0x0000000189DF4B58-0x0000000189DF4BD0
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000189DF4BD0-0x0000000189DF4C48
+		public Enumerator GetEnumerator() => default; // 0x000000018346D190-0x000000018346D1A0
+		IEnumerator<GroupType> IEnumerable<GroupType>.GetEnumerator() => default; // 0x0000000185FE8A30-0x0000000185FE8A40
+		IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018BF0CE98-0x000000018BF0CEE8
 	}
 }
 
 namespace UnityEngine.HyperGryph.Streaming
 {
-	public struct StreamingAssetData // TypeDefIndex: 57503
+	public struct StreamingAssetData // TypeDefIndex: 58507
 	{
 		// Fields
 		public long assetHashV2; // 0x00
 		public AssetType assetType; // 0x08
 	
 		// Methods
-		public bool Equals(StreamingAssetData other) => default; // 0x000000018775423C-0x0000000187754254
-		public override bool Equals(object obj) => default; // 0x0000000189DF8C58-0x0000000189DF8CD0
-		public override int GetHashCode() => default; // 0x0000000183D85860-0x0000000183D85870
+		public bool Equals(StreamingAssetData other) => default; // 0x00000001835DAFD0-0x00000001835DAFF0
+		public override bool Equals(object obj) => default; // 0x000000018BF109BC-0x000000018BF10A34
+		public override int GetHashCode() => default; // 0x0000000185FE64F0-0x0000000185FE6500
 	}
 
-	public struct PropertySerializeId // TypeDefIndex: 57504
+	public struct PropertySerializeId // TypeDefIndex: 58508
 	{
 		// Fields
 		public uint componentIndex; // 0x00
@@ -2668,51 +2581,49 @@ namespace UnityEngine.HyperGryph.Streaming
 		public uint subPropertyIndex; // 0x08
 	
 		// Constructors
-		public PropertySerializeId(StreamingComponentType componentType, uint propertyId, uint subPropertyIndex = 0 /* Metadata: 0x01FD9E9E */) {
+		public PropertySerializeId(StreamingComponentType componentType, uint propertyId, uint subPropertyIndex = 0 /* Metadata: 0x0207F753 */) {
 			componentIndex = default;
 			this.propertyId = default;
 			this.subPropertyIndex = default;
-		} // 0x0000000183427780-0x00000001834277C0
-		public PropertySerializeId(uint componentIndex, uint propertyId, uint subPropertyIndex = 0 /* Metadata: 0x01FD9E9F */) {
+		} // 0x0000000185407480-0x00000001854074C0
+		public PropertySerializeId(uint componentIndex, uint propertyId, uint subPropertyIndex = 0 /* Metadata: 0x0207F754 */) {
 			this.componentIndex = default;
 			this.propertyId = default;
 			this.subPropertyIndex = default;
-		} // 0x0000000183D4E5D0-0x0000000183D4E5E0
-		public PropertySerializeId(uint propertyId, uint subPropertyIndex = 0 /* Metadata: 0x01FD9EA0 */) {
+		} // 0x0000000185FB0130-0x0000000185FB0140
+		public PropertySerializeId(uint propertyId, uint subPropertyIndex = 0 /* Metadata: 0x0207F755 */) {
 			componentIndex = default;
 			this.propertyId = default;
 			this.subPropertyIndex = default;
-		} // 0x0000000183D87C20-0x0000000183D87C30
+		} // 0x0000000185FE8A60-0x0000000185FE8A70
 	
 		// Methods
-		public static implicit operator PropertySerializeId(uint propertyId) => default; // 0x0000000183D87C60-0x0000000183D87C90
-		public static uint GetComponentIndexFromType(StreamingComponentType componentType) => default; // 0x00000001834277C0-0x0000000183427800
-		public override int GetHashCode() => default; // 0x0000000189DF8C50-0x0000000189DF8C58
-		public uint EncodeSerializeIdentifier() => default; // 0x0000000189DF8BEC-0x0000000189DF8C50
-		public static PropertySerializeId operator +(PropertySerializeId a, uint subIndex) => default; // 0x0000000183D87C30-0x0000000183D87C60
-		public static PropertySerializeId operator +(PropertySerializeId a, int subIndex) => default; // 0x0000000183290C50-0x0000000183290CA0
+		public static implicit operator PropertySerializeId(uint propertyId) => default; // 0x0000000185FE8AA0-0x0000000185FE8AD0
+		public static uint GetComponentIndexFromType(StreamingComponentType componentType) => default; // 0x00000001854074C0-0x0000000185407500
+		public override int GetHashCode() => default; // 0x000000018BF109B4-0x000000018BF109BC
+		public uint EncodeSerializeIdentifier() => default; // 0x000000018BF10950-0x000000018BF109B4
+		public static PropertySerializeId operator +(PropertySerializeId a, uint subIndex) => default; // 0x0000000185FE8A70-0x0000000185FE8AA0
+		public static PropertySerializeId operator +(PropertySerializeId a, int subIndex) => default; // 0x0000000185216820-0x0000000185216870
 	}
 
-	[IsReadOnly]
-	[NativeHeader("Modules/HGGraphics/Public/Streaming/FlatBufferConvertContext.bindings.h")]
-	public struct FlatBufferConvertContextV2 // TypeDefIndex: 57505
+	public struct FlatBufferConvertContextV2 // TypeDefIndex: 58509
 	{
 		// Fields
 		public readonly IntPtr ptr; // 0x00
 	
 		// Properties
-		public uint sceneScopeId { get => default; } // 0x0000000184275D3C-0x0000000184275D44 
+		public uint sceneScopeId { get => default; } // 0x0000000186472FE0-0x0000000186472FE8 
 	
 		// Methods
-		public bool TryEnqueueAssetForAsyncLoad(PropertySerializeId propertySerializeId) => default; // 0x0000000184274988-0x000000018427499C
-		public void AddExternalAssetForAsyncLoad(long assetHash, AssetType assetType, AssetHandleIndex assetHandleIndex) {} // 0x0000000184275F8C-0x0000000184275FB0
-		private UnityEngine.Object ConvertAssetFromImpl(PropertySerializeId propertySerializeId) => default; // 0x00000001842757FC-0x0000000184275810
-		private IntPtr ConvertPropertyPtrFromImpl(PropertySerializeId propertySerializeId) => default; // 0x0000000184275108-0x000000018427511C
+		public bool TryEnqueueAssetForAsyncLoad(PropertySerializeId propertySerializeId) => default; // 0x00000001864703B0-0x00000001864703C4
+		public void AddExternalAssetForAsyncLoad(long assetHash, AssetType assetType, AssetHandleIndex assetHandleIndex) {} // 0x000000018647383C-0x0000000186473860
+		private UnityEngine.Object ConvertAssetFromImpl(PropertySerializeId propertySerializeId) => default; // 0x000000018647317C-0x0000000186473190
+		private IntPtr ConvertPropertyPtrFromImpl(PropertySerializeId propertySerializeId) => default; // 0x0000000186472FA8-0x0000000186472FBC
 		private void ConvertPropertyDataFromBytesImpl(PropertySerializeId propertySerializeId, out IntPtr data, out int size) {
 			data = default;
 			size = default;
-		} // 0x0000000184275D24-0x0000000184275D3C
-		public string ConvertStringFrom(PropertySerializeId propertySerializeId) => default; // 0x0000000184275F78-0x0000000184275F8C
+		} // 0x000000018646F3D8-0x000000018646F3F0
+		public string ConvertStringFrom(PropertySerializeId propertySerializeId) => default; // 0x0000000186473828-0x000000018647383C
 		public bool TryConvertAssetFrom<T>(PropertySerializeId propertySerializeId, out ref T asset)
 			where T : UnityEngine.Object {
 			asset = default;
@@ -2722,68 +2633,65 @@ namespace UnityEngine.HyperGryph.Streaming
 			where T : struct => default;
 		public T ConvertPropertyFromBytes<T>(PropertySerializeId propertySerializeId)
 			where T : struct => default;
-		public NativeArray<byte> ConvertPropertyFromBytes(PropertySerializeId propertySerializeId) => default; // 0x0000000189DF5138-0x0000000189DF51F8
-		private static uint get_sceneScopeId_Injected(ref FlatBufferConvertContextV2 _unity_self) => default; // 0x000000018367E7E0-0x000000018367E820
-		private static bool TryEnqueueAssetForAsyncLoad_Injected(ref FlatBufferConvertContextV2 _unity_self, ref PropertySerializeId propertySerializeId) => default; // 0x00000001833BEDD0-0x00000001833BEE20
-		private static void AddExternalAssetForAsyncLoad_Injected(ref FlatBufferConvertContextV2 _unity_self, long assetHash, AssetType assetType, ref AssetHandleIndex assetHandleIndex) {} // 0x0000000183650790-0x0000000183650800
-		private static UnityEngine.Object ConvertAssetFromImpl_Injected(ref FlatBufferConvertContextV2 _unity_self, ref PropertySerializeId propertySerializeId) => default; // 0x0000000183126BE0-0x0000000183126C30
-		private static IntPtr ConvertPropertyPtrFromImpl_Injected(ref FlatBufferConvertContextV2 _unity_self, ref PropertySerializeId propertySerializeId) => default; // 0x00000001830B9170-0x00000001830B91C0
+		public NativeArray<byte> ConvertPropertyFromBytes(PropertySerializeId propertySerializeId) => default; // 0x000000018BF0CEE8-0x000000018BF0CFA8
+		private static uint get_sceneScopeId_Injected(ref FlatBufferConvertContextV2 _unity_self) => default; // 0x0000000185755060-0x00000001857550A0
+		private static bool TryEnqueueAssetForAsyncLoad_Injected(ref FlatBufferConvertContextV2 _unity_self, ref PropertySerializeId propertySerializeId) => default; // 0x0000000185392C00-0x0000000185392C50
+		private static void AddExternalAssetForAsyncLoad_Injected(ref FlatBufferConvertContextV2 _unity_self, long assetHash, AssetType assetType, ref AssetHandleIndex assetHandleIndex) {} // 0x0000000185717260-0x00000001857172D0
+		private static UnityEngine.Object ConvertAssetFromImpl_Injected(ref FlatBufferConvertContextV2 _unity_self, ref PropertySerializeId propertySerializeId) => default; // 0x0000000185076840-0x0000000185076890
+		private static IntPtr ConvertPropertyPtrFromImpl_Injected(ref FlatBufferConvertContextV2 _unity_self, ref PropertySerializeId propertySerializeId) => default; // 0x0000000184F8DF60-0x0000000184F8DFB0
 		private static void ConvertPropertyDataFromBytesImpl_Injected(ref FlatBufferConvertContextV2 _unity_self, ref PropertySerializeId propertySerializeId, out IntPtr data, out int size) {
 			data = default;
 			size = default;
-		} // 0x0000000183569850-0x00000001835698C0
-		private static string ConvertStringFrom_Injected(ref FlatBufferConvertContextV2 _unity_self, ref PropertySerializeId propertySerializeId) => default; // 0x0000000183D00990-0x0000000183D009E0
+		} // 0x00000001855DE060-0x00000001855DE0D0
+		private static string ConvertStringFrom_Injected(ref FlatBufferConvertContextV2 _unity_self, ref PropertySerializeId propertySerializeId) => default; // 0x0000000185F5F700-0x0000000185F5F750
 	}
 
-	[IsReadOnly]
-	[NativeHeader("Modules/HGGraphics/Public/Streaming/HGStreamingGameplayManager.binding.h")]
-	public struct StreamingGameplayManager // TypeDefIndex: 57506
+	public struct StreamingGameplayManager // TypeDefIndex: 58510
 	{
 		// Fields
 		public readonly IntPtr ptr; // 0x00
 	
 		// Methods
-		public void Create(StreamingSceneParameter parameter) {} // 0x0000000189DF8D64-0x0000000189DF8D78
-		public void Destroy() {} // 0x0000000189DF8DAC-0x0000000189DF8DB4
-		public uint AllocateRuntimeChunk(string initBasePath, string streamingBasePath) => default; // 0x000000018427147C-0x0000000184271484
-		public uint CreateEntityGroupAndLoad(uint chunkId, int blobIndex) => default; // 0x0000000184271484-0x000000018427148C
-		public void LoadGroup(uint groupHandle) {} // 0x0000000189DF8E78-0x0000000189DF8E80
-		public bool IsGroupReady(uint groupId) => default; // 0x0000000189DF8E30-0x0000000189DF8E38
-		public uint CreateGroupAndLoadWaitBeforeShow(uint chunkId, int blobIndex) => default; // 0x0000000189DF8D5C-0x0000000189DF8D64
-		public void StopGroupWait(uint groupId) {} // 0x0000000189DF8EC0-0x0000000189DF8EC8
-		public void UnloadGroup(uint groupId, bool imm) {} // 0x0000000184275A40-0x0000000184275A48
-		public void DestroyGroup(uint groupId) {} // 0x0000000184275A48-0x0000000184275A50
-		public bool IsGroupLoaded(uint groupId) => default; // 0x000000018427148C-0x0000000184271494
-		public bool IsGroupUnloaded(uint groupId) => default; // 0x0000000184275A38-0x0000000184275A40
-		public void Tick(int budget) {} // 0x00000001842726E0-0x00000001842726E8
-		public void TickResource() {} // 0x000000018426FCCC-0x000000018426FCD4
-		public void Clear() {} // 0x0000000189DF8D04-0x0000000189DF8D0C
-		public bool IsIdle() => default; // 0x00000001842726D8-0x00000001842726E0
-		public bool IsValid() => default; // 0x0000000184274818-0x0000000184274824
-		public void SetNeedLodTransition(bool needTransition) {} // 0x0000000184274E70-0x0000000184274E78
-		public bool GetNeedLodTransition() => default; // 0x0000000189DF8DE8-0x0000000189DF8DF0
-		private static void Create_Injected(ref StreamingGameplayManager _unity_self, ref StreamingSceneParameter parameter) {} // 0x00000001832CEFC0-0x00000001832CF010
-		private static void Destroy_Injected(ref StreamingGameplayManager _unity_self) {} // 0x0000000189DF8D78-0x0000000189DF8DAC
-		private static uint AllocateRuntimeChunk_Injected(ref StreamingGameplayManager _unity_self, string initBasePath, string streamingBasePath) => default; // 0x000000018367AAA0-0x000000018367AB00
-		private static uint CreateEntityGroupAndLoad_Injected(ref StreamingGameplayManager _unity_self, uint chunkId, int blobIndex) => default; // 0x00000001826F1A60-0x00000001826F1AC0
-		private static void LoadGroup_Injected(ref StreamingGameplayManager _unity_self, uint groupHandle) {} // 0x0000000189DF8E38-0x0000000189DF8E78
-		private static bool IsGroupReady_Injected(ref StreamingGameplayManager _unity_self, uint groupId) => default; // 0x0000000189DF8DF0-0x0000000189DF8E30
-		private static uint CreateGroupAndLoadWaitBeforeShow_Injected(ref StreamingGameplayManager _unity_self, uint chunkId, int blobIndex) => default; // 0x0000000189DF8D0C-0x0000000189DF8D5C
-		private static void StopGroupWait_Injected(ref StreamingGameplayManager _unity_self, uint groupId) {} // 0x0000000189DF8E80-0x0000000189DF8EC0
-		private static void UnloadGroup_Injected(ref StreamingGameplayManager _unity_self, uint groupId, bool imm) {} // 0x0000000183168A50-0x0000000183168AB0
-		private static void DestroyGroup_Injected(ref StreamingGameplayManager _unity_self, uint groupId) {} // 0x00000001831689B0-0x0000000183168A00
-		private static bool IsGroupLoaded_Injected(ref StreamingGameplayManager _unity_self, uint groupId) => default; // 0x00000001826F1AC0-0x00000001826F1B10
-		private static bool IsGroupUnloaded_Injected(ref StreamingGameplayManager _unity_self, uint groupId) => default; // 0x0000000183168A00-0x0000000183168A50
-		private static void Tick_Injected(ref StreamingGameplayManager _unity_self, int budget) {} // 0x0000000183274A30-0x0000000183274A80
-		private static void TickResource_Injected(ref StreamingGameplayManager _unity_self) {} // 0x0000000182D10A00-0x0000000182D10A40
-		private static void Clear_Injected(ref StreamingGameplayManager _unity_self) {} // 0x0000000189DF8CD0-0x0000000189DF8D04
-		private static bool IsIdle_Injected(ref StreamingGameplayManager _unity_self) => default; // 0x00000001834AF8D0-0x00000001834AF910
-		private static void SetNeedLodTransition_Injected(ref StreamingGameplayManager _unity_self, bool needTransition) {} // 0x000000018309BA60-0x000000018309BAB0
-		private static bool GetNeedLodTransition_Injected(ref StreamingGameplayManager _unity_self) => default; // 0x0000000189DF8DB4-0x0000000189DF8DE8
+		public void Create(StreamingSceneParameter parameter) {} // 0x000000018BF10AC8-0x000000018BF10ADC
+		public void Destroy() {} // 0x000000018BF10B10-0x000000018BF10B18
+		public uint AllocateRuntimeChunk(string initBasePath, string streamingBasePath) => default; // 0x000000018646EDF0-0x000000018646EDF8
+		public uint CreateEntityGroupAndLoad(uint chunkId, int blobIndex) => default; // 0x000000018646EDF8-0x000000018646EE00
+		public void LoadGroup(uint groupHandle) {} // 0x000000018BF10BE4-0x000000018BF10BEC
+		public bool IsGroupReady(uint groupId) => default; // 0x000000018BF10B94-0x000000018BF10B9C
+		public uint CreateGroupAndLoadWaitBeforeShow(uint chunkId, int blobIndex) => default; // 0x000000018BF10AC0-0x000000018BF10AC8
+		public void StopGroupWait(uint groupId) {} // 0x000000018BF10C2C-0x000000018BF10C34
+		public void UnloadGroup(uint groupId, bool imm) {} // 0x00000001864733A4-0x00000001864733AC
+		public void DestroyGroup(uint groupId) {} // 0x00000001864733AC-0x00000001864733B4
+		public bool IsGroupLoaded(uint groupId) => default; // 0x000000018646EE00-0x000000018646EE08
+		public bool IsGroupUnloaded(uint groupId) => default; // 0x000000018647339C-0x00000001864733A4
+		public void Tick(int budget) {} // 0x000000018646E484-0x000000018646E48C
+		public void TickResource() {} // 0x000000018646E47C-0x000000018646E484
+		public void Clear() {} // 0x000000018BF10A68-0x000000018BF10A70
+		public bool IsIdle() => default; // 0x000000018BF10B9C-0x000000018BF10BA4
+		public bool IsValid() => default; // 0x0000000186470EB8-0x0000000186470EC4
+		public void SetNeedLodTransition(bool needTransition) {} // 0x000000018646E22C-0x000000018646E234
+		public bool GetNeedLodTransition() => default; // 0x000000018BF10B4C-0x000000018BF10B54
+		private static void Create_Injected(ref StreamingGameplayManager _unity_self, ref StreamingSceneParameter parameter) {} // 0x0000000185F89930-0x0000000185F89980
+		private static void Destroy_Injected(ref StreamingGameplayManager _unity_self) {} // 0x000000018BF10ADC-0x000000018BF10B10
+		private static uint AllocateRuntimeChunk_Injected(ref StreamingGameplayManager _unity_self, string initBasePath, string streamingBasePath) => default; // 0x000000018574DC90-0x000000018574DCF0
+		private static uint CreateEntityGroupAndLoad_Injected(ref StreamingGameplayManager _unity_self, uint chunkId, int blobIndex) => default; // 0x000000018445F590-0x000000018445F5F0
+		private static void LoadGroup_Injected(ref StreamingGameplayManager _unity_self, uint groupHandle) {} // 0x000000018BF10BA4-0x000000018BF10BE4
+		private static bool IsGroupReady_Injected(ref StreamingGameplayManager _unity_self, uint groupId) => default; // 0x000000018BF10B54-0x000000018BF10B94
+		private static uint CreateGroupAndLoadWaitBeforeShow_Injected(ref StreamingGameplayManager _unity_self, uint chunkId, int blobIndex) => default; // 0x000000018BF10A70-0x000000018BF10AC0
+		private static void StopGroupWait_Injected(ref StreamingGameplayManager _unity_self, uint groupId) {} // 0x000000018BF10BEC-0x000000018BF10C2C
+		private static void UnloadGroup_Injected(ref StreamingGameplayManager _unity_self, uint groupId, bool imm) {} // 0x00000001850CC840-0x00000001850CC8A0
+		private static void DestroyGroup_Injected(ref StreamingGameplayManager _unity_self, uint groupId) {} // 0x00000001850CC7A0-0x00000001850CC7F0
+		private static bool IsGroupLoaded_Injected(ref StreamingGameplayManager _unity_self, uint groupId) => default; // 0x000000018445F5F0-0x000000018445F640
+		private static bool IsGroupUnloaded_Injected(ref StreamingGameplayManager _unity_self, uint groupId) => default; // 0x00000001850CC7F0-0x00000001850CC840
+		private static void Tick_Injected(ref StreamingGameplayManager _unity_self, int budget) {} // 0x00000001851DF2F0-0x00000001851DF340
+		private static void TickResource_Injected(ref StreamingGameplayManager _unity_self) {} // 0x0000000184A5AAD0-0x0000000184A5AB10
+		private static void Clear_Injected(ref StreamingGameplayManager _unity_self) {} // 0x000000018BF10A34-0x000000018BF10A68
+		private static bool IsIdle_Injected(ref StreamingGameplayManager _unity_self) => default; // 0x00000001854C57C0-0x00000001854C5800
+		private static void SetNeedLodTransition_Injected(ref StreamingGameplayManager _unity_self, bool needTransition) {} // 0x00000001841E9780-0x00000001841E97D0
+		private static bool GetNeedLodTransition_Injected(ref StreamingGameplayManager _unity_self) => default; // 0x000000018BF10B18-0x000000018BF10B4C
 	}
 
-	[Flags]
-	public enum StreamingComponentType : ulong // TypeDefIndex: 57507
+	public enum StreamingComponentType : ulong // TypeDefIndex: 58511
 	{
 		None = 0,
 		Transform = 1,
@@ -2830,7 +2738,7 @@ namespace UnityEngine.HyperGryph.Streaming
 		HGVolumetricCloud = 1099511627776
 	}
 
-	public enum StreamingLayer : byte // TypeDefIndex: 57508
+	public enum StreamingLayer : byte // TypeDefIndex: 58512
 	{
 		Default = 0,
 		Persistent = 1,
@@ -2845,7 +2753,7 @@ namespace UnityEngine.HyperGryph.Streaming
 		Count = 10
 	}
 
-	public enum EntityTransition : byte // TypeDefIndex: 57509
+	public enum EntityTransition : byte // TypeDefIndex: 58513
 	{
 		Initializing = 0,
 		UnloadedToLoading = 1,
@@ -2860,7 +2768,7 @@ namespace UnityEngine.HyperGryph.Streaming
 		Count = 10
 	}
 
-	public enum StreamingMode : byte // TypeDefIndex: 57510
+	public enum StreamingMode : byte // TypeDefIndex: 58514
 	{
 		Stream = 0,
 		Pause = 1,
@@ -2868,8 +2776,7 @@ namespace UnityEngine.HyperGryph.Streaming
 		Unload = 3
 	}
 
-	[Flags]
-	public enum StreamingStatus : byte // TypeDefIndex: 57511
+	public enum StreamingStatus : byte // TypeDefIndex: 58515
 	{
 		Idle = 0,
 		Loading = 1,
@@ -2877,7 +2784,7 @@ namespace UnityEngine.HyperGryph.Streaming
 		Empty = 4
 	}
 
-	public struct StreamingSceneParameter // TypeDefIndex: 57512
+	public struct StreamingSceneParameter // TypeDefIndex: 58516
 	{
 		// Fields
 		public string mapName; // 0x00
@@ -2885,7 +2792,7 @@ namespace UnityEngine.HyperGryph.Streaming
 		public string streamingDataPathRoot; // 0x10
 	}
 
-	public enum GridStatus : byte // TypeDefIndex: 57513
+	public enum GridStatus : byte // TypeDefIndex: 58517
 	{
 		Loading = 0,
 		Loaded = 1,
@@ -2894,7 +2801,7 @@ namespace UnityEngine.HyperGryph.Streaming
 		NotExist = 4
 	}
 
-	public struct GridIdentifier // TypeDefIndex: 57514
+	public struct GridIdentifier // TypeDefIndex: 58518
 	{
 		// Fields
 		public Vector2Int pos; // 0x00
@@ -2908,31 +2815,44 @@ namespace UnityEngine.HyperGryph.Streaming
 			this.sceneStateId = default;
 			this.areaId = default;
 			this.layer = default;
-		} // 0x0000000183D87C00-0x0000000183D87C20
+		} // 0x0000000185FE8A40-0x0000000185FE8A60
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x000000018258F380-0x000000018258F3A0
+		public override int GetHashCode() => default; // 0x0000000184389290-0x00000001843892B0
 	}
 
-	public struct StreamingSourceData // TypeDefIndex: 57517
+	public struct StreamingSourceData // TypeDefIndex: 58521
 	{
 		// Fields
 		public Vector2 streamingPos; // 0x00
 		public float chunkLoadRadius; // 0x08
-		public unsafe fixed /* 0x00000000-0x00000000 */ float layerLoadRadius[0]; // 0x0C
-		public unsafe fixed /* 0x00000000-0x00000000 */ byte layerEnabledInDefaultArea[0]; // 0x34
+		public _layerLoadRadius_e__FixedBuffer layerLoadRadius; // 0x0C
+		public _layerEnabledInDefaultArea_e__FixedBuffer layerEnabledInDefaultArea; // 0x34
 		public static readonly StreamingSourceData kInvalid; // 0x00
+	
+		// Nested types
+		public struct _layerLoadRadius_e__FixedBuffer // TypeDefIndex: 58519
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct _layerEnabledInDefaultArea_e__FixedBuffer // TypeDefIndex: 58520
+		{
+			// Fields
+			public byte FixedElementField; // 0x00
+		}
 	
 		// Constructors
 		static StreamingSourceData() {
 			kInvalid = default;
-		} // 0x0000000182E7A070-0x0000000182E7A180
+		} // 0x000000018448F410-0x000000018448F520
 	
 		// Methods
-		public float GetGridLoadRadius(int layerIndex) => default; // 0x0000000183D87C90-0x0000000183D87CA0
+		public float GetGridLoadRadius(int layerIndex) => default; // 0x0000000185FE8AD0-0x0000000185FE8AE0
 	}
 
-	public enum ECSEntityType : byte // TypeDefIndex: 57518
+	public enum ECSEntityType : byte // TypeDefIndex: 58522
 	{
 		Render = 0,
 		Water = 1,
@@ -2951,7 +2871,7 @@ namespace UnityEngine.HyperGryph.Streaming
 		TypeCount = 14
 	}
 
-	public enum ProxyEntityType : byte // TypeDefIndex: 57519
+	public enum ProxyEntityType : byte // TypeDefIndex: 58523
 	{
 		IrradianceVolume = 0,
 		AudioVolume = 1,
@@ -2965,101 +2885,95 @@ namespace UnityEngine.HyperGryph.Streaming
 		TypeCount = 9
 	}
 
-	[IsReadOnly]
-	[NativeHeader("Modules/HGGraphics/Public/Streaming/HGStreamingScene.bindings.h")]
-	public struct StreamingSceneV2 // TypeDefIndex: 57520
+	public struct StreamingSceneV2 // TypeDefIndex: 58524
 	{
 		// Fields
 		public readonly IntPtr ptr; // 0x00
 	
 		// Properties
-		public StreamingMode streamingMode { get => default; set {} } // 0x0000000189DF9020-0x0000000189DF9028 0x0000000189DF9044-0x0000000189DF904C
-		public StreamingSourceData primaryStreamingSourceData { get => default; set {} } // 0x000000018279F230-0x000000018279F2A0 0x0000000189DF9030-0x0000000189DF9044
-		public StreamingSourceData secondaryStreamingSourceData { set {} } // 0x0000000184276D68-0x0000000184276D7C
-		public float streamingProgress { get => default; } // 0x0000000189DF9028-0x0000000189DF9030 
+		public StreamingMode streamingMode { get => default; set {} } // 0x000000018BF10D8C-0x000000018BF10D94 0x000000018BF10DB0-0x000000018BF10DB8
+		public StreamingSourceData primaryStreamingSourceData { get => default; set {} } // 0x0000000184A64A50-0x0000000184A64AC0 0x000000018BF10D9C-0x000000018BF10DB0
+		public StreamingSourceData secondaryStreamingSourceData { set {} } // 0x0000000186473C14-0x0000000186473C28
+		public float streamingProgress { get => default; } // 0x000000018BF10D94-0x000000018BF10D9C 
 	
 		// Methods
-		public void Create(StreamingSceneParameter parameter) {} // 0x00000001842746A4-0x00000001842746B8
-		public void Destroy() {} // 0x0000000189DF8EFC-0x0000000189DF8F04
-		public void UnloadImmediately() {} // 0x0000000189DF8FE4-0x0000000189DF8FEC
-		public StreamingStatus QueryStreamingStatus() => default; // 0x0000000189DF8FA8-0x0000000189DF8FB0
-		public void SetArea(int areaId, bool enabled) {} // 0x0000000184276AD0-0x0000000184276AD8
-		public void SetSceneState(int sceneStateId, bool enabled) {} // 0x0000000184276388-0x0000000184276390
-		private GridStatus QueryGridLoadStatusImpl(StreamingLayer layer, int sceneStateId, int areaId, Vector2 queryPos) => default; // 0x00000001842718B4-0x00000001842718D8
-		private GridStatus QueryGridLoadStatusByGridIdentifierImpl(GridIdentifier gridIdentifier) => default; // 0x0000000189DF8F48-0x0000000189DF8F5C
-		public bool IsValid() => default; // 0x00000001842718AC-0x00000001842718B4
-		public GridStatus QueryGridLoadStatus(StreamingLayer layer, Vector2 queryPos) => default; // 0x0000000189DF8F84-0x0000000189DF8FA8
-		public GridStatus QueryGridLoadStatus(GridIdentifier gridIdentifier) => default; // 0x0000000189DF8F5C-0x0000000189DF8F84
-		private static void Create_Injected(ref StreamingSceneV2 _unity_self, ref StreamingSceneParameter parameter) {} // 0x0000000182F13860-0x0000000182F138B0
-		private static void Destroy_Injected(ref StreamingSceneV2 _unity_self) {} // 0x0000000189DF8EC8-0x0000000189DF8EFC
-		private static void UnloadImmediately_Injected(ref StreamingSceneV2 _unity_self) {} // 0x0000000189DF8FB0-0x0000000189DF8FE4
-		private static StreamingStatus QueryStreamingStatus_Injected(ref StreamingSceneV2 _unity_self) => default; // 0x00000001833CBE40-0x00000001833CBE80
-		private static void SetArea_Injected(ref StreamingSceneV2 _unity_self, int areaId, bool enabled) {} // 0x0000000183CF4950-0x0000000183CF49B0
-		private static void SetSceneState_Injected(ref StreamingSceneV2 _unity_self, int sceneStateId, bool enabled) {} // 0x00000001839CF7D0-0x00000001839CF830
-		private static GridStatus QueryGridLoadStatusImpl_Injected(ref StreamingSceneV2 _unity_self, StreamingLayer layer, int sceneStateId, int areaId, ref Vector2 queryPos) => default; // 0x0000000182F93AC0-0x0000000182F93B30
-		private static GridStatus QueryGridLoadStatusByGridIdentifierImpl_Injected(ref StreamingSceneV2 _unity_self, ref GridIdentifier gridIdentifier) => default; // 0x0000000189DF8F04-0x0000000189DF8F48
-		private static StreamingMode get_streamingMode_Injected(ref StreamingSceneV2 _unity_self) => default; // 0x0000000189DF8FEC-0x0000000189DF9020
-		private static void set_streamingMode_Injected(ref StreamingSceneV2 _unity_self, StreamingMode value) {} // 0x0000000183CDDAB0-0x0000000183CDDB00
+		public void Create(StreamingSceneParameter parameter) {} // 0x0000000186472908-0x000000018647291C
+		public void Destroy() {} // 0x000000018BF10C68-0x000000018BF10C70
+		public void UnloadImmediately() {} // 0x000000018BF10D50-0x000000018BF10D58
+		public StreamingStatus QueryStreamingStatus() => default; // 0x000000018BF10D14-0x000000018BF10D1C
+		public void SetArea(int areaId, bool enabled) {} // 0x0000000186470E44-0x0000000186470E4C
+		public void SetSceneState(int sceneStateId, bool enabled) {} // 0x000000018646EB40-0x000000018646EB48
+		private GridStatus QueryGridLoadStatusImpl(StreamingLayer layer, int sceneStateId, int areaId, Vector2 queryPos) => default; // 0x000000018646EDCC-0x000000018646EDF0
+		private GridStatus QueryGridLoadStatusByGridIdentifierImpl(GridIdentifier gridIdentifier) => default; // 0x000000018BF10CB4-0x000000018BF10CC8
+		public bool IsValid() => default; // 0x000000018646EDC4-0x000000018646EDCC
+		public GridStatus QueryGridLoadStatus(StreamingLayer layer, Vector2 queryPos) => default; // 0x000000018BF10CF0-0x000000018BF10D14
+		public GridStatus QueryGridLoadStatus(GridIdentifier gridIdentifier) => default; // 0x000000018BF10CC8-0x000000018BF10CF0
+		private static void Create_Injected(ref StreamingSceneV2 _unity_self, ref StreamingSceneParameter parameter) {} // 0x0000000184E98990-0x0000000184E989E0
+		private static void Destroy_Injected(ref StreamingSceneV2 _unity_self) {} // 0x000000018BF10C34-0x000000018BF10C68
+		private static void UnloadImmediately_Injected(ref StreamingSceneV2 _unity_self) {} // 0x000000018BF10D1C-0x000000018BF10D50
+		private static StreamingStatus QueryStreamingStatus_Injected(ref StreamingSceneV2 _unity_self) => default; // 0x00000001853A6D50-0x00000001853A6D90
+		private static void SetArea_Injected(ref StreamingSceneV2 _unity_self, int areaId, bool enabled) {} // 0x0000000185F50EA0-0x0000000185F50F00
+		private static void SetSceneState_Injected(ref StreamingSceneV2 _unity_self, int sceneStateId, bool enabled) {} // 0x0000000185BB7320-0x0000000185BB7380
+		private static GridStatus QueryGridLoadStatusImpl_Injected(ref StreamingSceneV2 _unity_self, StreamingLayer layer, int sceneStateId, int areaId, ref Vector2 queryPos) => default; // 0x0000000184DDEAB0-0x0000000184DDEB20
+		private static GridStatus QueryGridLoadStatusByGridIdentifierImpl_Injected(ref StreamingSceneV2 _unity_self, ref GridIdentifier gridIdentifier) => default; // 0x000000018BF10C70-0x000000018BF10CB4
+		private static StreamingMode get_streamingMode_Injected(ref StreamingSceneV2 _unity_self) => default; // 0x000000018BF10D58-0x000000018BF10D8C
+		private static void set_streamingMode_Injected(ref StreamingSceneV2 _unity_self, StreamingMode value) {} // 0x0000000185F373C0-0x0000000185F37410
 		private static void get_primaryStreamingSourceData_Injected(ref StreamingSceneV2 _unity_self, out StreamingSourceData ret) {
 			ret = default;
-		} // 0x000000018279F2A0-0x000000018279F2F0
-		private static void set_primaryStreamingSourceData_Injected(ref StreamingSceneV2 _unity_self, ref StreamingSourceData value) {} // 0x000000018322B190-0x000000018322B1E0
-		private static void set_secondaryStreamingSourceData_Injected(ref StreamingSceneV2 _unity_self, ref StreamingSourceData value) {} // 0x0000000183B10680-0x0000000183B106D0
-		private static float get_streamingProgress_Injected(ref StreamingSceneV2 _unity_self) => default; // 0x00000001833CBF30-0x00000001833CBF70
-		private static bool IsValid_Injected(ref StreamingSceneV2 _unity_self) => default; // 0x000000018303D4C0-0x000000018303D500
+		} // 0x0000000184A64AC0-0x0000000184A64B10
+		private static void set_primaryStreamingSourceData_Injected(ref StreamingSceneV2 _unity_self, ref StreamingSourceData value) {} // 0x000000018518B0F0-0x000000018518B140
+		private static void set_secondaryStreamingSourceData_Injected(ref StreamingSceneV2 _unity_self, ref StreamingSourceData value) {} // 0x0000000185F7A440-0x0000000185F7A490
+		private static float get_streamingProgress_Injected(ref StreamingSceneV2 _unity_self) => default; // 0x00000001853A6E40-0x00000001853A6E80
+		private static bool IsValid_Injected(ref StreamingSceneV2 _unity_self) => default; // 0x0000000184EC2CD0-0x0000000184EC2D10
 	}
 
-	public delegate void ECSEntityHasRequiredComponentsDelegate(); // TypeDefIndex: 57521; 0x00000001842BE03C-0x00000001842BE04C
+	public delegate void ECSEntityHasRequiredComponentsDelegate(); // TypeDefIndex: 58525; 0x00000001864BC320-0x00000001864BC330
 
-	public delegate void ECSEntityConvertToDelegate(); // TypeDefIndex: 57522; 0x00000001842BE03C-0x00000001842BE04C
+	public delegate void ECSEntityConvertToDelegate(); // TypeDefIndex: 58526; 0x00000001864BC320-0x00000001864BC330
 
-	public delegate void ProxyEntityHasRequiredComponentsDelegate(); // TypeDefIndex: 57523; 0x00000001842BE03C-0x00000001842BE04C
+	public delegate void ProxyEntityHasRequiredComponentsDelegate(); // TypeDefIndex: 58527; 0x00000001864BC320-0x00000001864BC330
 
-	public delegate void ProxyEntityConvertToDelegate(); // TypeDefIndex: 57524; 0x00000001842BE03C-0x00000001842BE04C
+	public delegate void ProxyEntityConvertToDelegate(); // TypeDefIndex: 58528; 0x00000001864BC320-0x00000001864BC330
 
-	public delegate void MonoIsConvertorOfComponentDelegate(); // TypeDefIndex: 57525; 0x00000001842BE03C-0x00000001842BE04C
+	public delegate void MonoIsConvertorOfComponentDelegate(); // TypeDefIndex: 58529; 0x00000001864BC320-0x00000001864BC330
 
-	public delegate void MonoComponentConvertToDelegate(); // TypeDefIndex: 57526; 0x00000001842BE03C-0x00000001842BE04C
+	public delegate void MonoComponentConvertToDelegate(); // TypeDefIndex: 58530; 0x00000001864BC320-0x00000001864BC330
 
-	public delegate bool ECSEntityConvertFromDelegate(Entity entity, FlatBufferConvertContextV2 cContext, EntityTransition transition); // TypeDefIndex: 57527; 0x0000000183483950-0x00000001834839A0
+	public delegate bool ECSEntityConvertFromDelegate(Entity entity, FlatBufferConvertContextV2 cContext, EntityTransition transition); // TypeDefIndex: 58531; 0x0000000185478970-0x00000001854789C0
 
-	public delegate bool ProxyEntityConvertFromDelegate(ref IntPtr proxyPtr, FlatBufferConvertContextV2 cContext, EntityTransition transition); // TypeDefIndex: 57528; 0x000000018356B4B0-0x000000018356B500
+	public delegate bool ProxyEntityConvertFromDelegate(ref IntPtr proxyPtr, FlatBufferConvertContextV2 cContext, EntityTransition transition); // TypeDefIndex: 58532; 0x00000001855DEB20-0x00000001855DEB70
 
-	public delegate bool MonoComponentConvertFromDelegate(Component component, FlatBufferConvertContextV2 cContext, EntityTransition transition); // TypeDefIndex: 57529; 0x00000001836394E0-0x0000000183639530
+	public delegate bool MonoComponentConvertFromDelegate(Component component, FlatBufferConvertContextV2 cContext, EntityTransition transition); // TypeDefIndex: 58533; 0x00000001856F4840-0x00000001856F4890
 
-	public delegate Component MonoComponentAddComponentToDelegate(GameObject gameObject); // TypeDefIndex: 57530; 0x00000001836D9FC0-0x00000001836DA0E0
+	public delegate Component MonoComponentAddComponentToDelegate(GameObject gameObject); // TypeDefIndex: 58534; 0x00000001857CCD00-0x00000001857CCE20
 
-	public delegate Component MonoComponentGetComponentFromDelegate(GameObject gameObject, int multiComponentIndex); // TypeDefIndex: 57531; 0x00000001838CB680-0x00000001838CB7A0
+	public delegate Component MonoComponentGetComponentFromDelegate(GameObject gameObject, int multiComponentIndex); // TypeDefIndex: 58535; 0x0000000185A6C720-0x0000000185A6C840
 
-	[NativeHeader("Modules/HGGraphics/Public/Streaming/HGStreamingSceneManager.h")]
-	[StaticAccessor("GetHGGlobalGameManager().GetHGStreamingSceneManager()", StaticAccessorType.Dot)]
-	public static class HGStreamingSceneManager // TypeDefIndex: 57532
+	public static class HGStreamingSceneManager // TypeDefIndex: 58536
 	{
 		// Properties
-		[StaticAccessor("HyperGryph", StaticAccessorType.DoubleColon)]
-		public static int streamingVersion { [NativeName("GetStreamingSerializeCodeVersion")] get; } // 0x0000000182F45C70-0x0000000182F45CB0 
-		[StaticAccessor("HyperGryph", StaticAccessorType.DoubleColon)]
-		public static int streamingChunkSize { [NativeName("GetStreamingChunkSize")] get; } // 0x0000000183807320-0x0000000183807360 
-		private static IntPtr streamingScenesManaged { get; } // 0x0000000189DF7FA4-0x0000000189DF7FD0 
-		private static int streamingSceneCount { get; } // 0x0000000189DF7F78-0x0000000189DF7FA4 
+		public static int streamingVersion { get; } // 0x000000018457A9C0-0x000000018457AA00 
+		public static int streamingChunkSize { get; } // 0x000000018596E010-0x000000018596E050 
+		private static IntPtr streamingScenesManaged { get; } // 0x000000018BF0FD6C-0x000000018BF0FD98 
+		private static int streamingSceneCount { get; } // 0x000000018BF0FD40-0x000000018BF0FD6C 
 	
 		// Methods
-		public static void ResetLastProcessStreamingPos() {} // 0x0000000183D1F3F0-0x0000000183D1F430
-		public static void BindECSEntityConvertFuncFromScript(ECSEntityType entityType, ECSEntityHasRequiredComponentsDelegate hasRequiredComponentsDelegate, ECSEntityConvertToDelegate convertToDelegate, ECSEntityConvertFromDelegate convertFromFunc) {} // 0x00000001835923E0-0x0000000183592450
-		public static void ResetECSEntityConvertFuncFromScript(ECSEntityType entityType) {} // 0x0000000189DF7EA8-0x0000000189DF7EDC
-		public static bool IsECSEntityConvertFuncValid(ECSEntityType entityType) => default; // 0x00000001835923A0-0x00000001835923E0
-		public static void BindProxyEntityConvertFuncFromScript(ProxyEntityType entityType, ProxyEntityHasRequiredComponentsDelegate hasRequiredComponentsFunc, ProxyEntityConvertToDelegate convertToFunc, ProxyEntityConvertFromDelegate convertFromFunc) {} // 0x0000000183592290-0x0000000183592300
-		public static void ResetProxyEntityConvertFuncFromScript(ProxyEntityType entityType) {} // 0x0000000189DF7F10-0x0000000189DF7F44
-		public static bool IsProxyEntityConvertFuncValid(ProxyEntityType entityType) => default; // 0x0000000183592250-0x0000000183592290
-		public static void BindMonoComponentConvertFuncFromScript(StreamingComponentType componentType, MonoIsConvertorOfComponentDelegate isConvertorOfFunc, MonoComponentConvertToDelegate convertToFunc, MonoComponentConvertFromDelegate convertFromFunc, MonoComponentAddComponentToDelegate addComponentToFunc, MonoComponentGetComponentFromDelegate getComponentFromFunc) {} // 0x0000000183592140-0x00000001835921B0
-		public static void ResetMonoComponentConvertFuncFromScript(StreamingComponentType componentType) {} // 0x0000000189DF7EDC-0x0000000189DF7F10
-		public static bool IsMonoComponentConvertFuncValid(StreamingComponentType componentType) => default; // 0x0000000183592100-0x0000000183592140
-		public static void BindProxyEntityConvertToFuncFromScript(ProxyEntityType entityType, ProxyEntityHasRequiredComponentsDelegate hasRequiredComponentsFunc, ProxyEntityConvertToDelegate convertToFunc) {} // 0x0000000183592450-0x00000001835924B0
-		public static void ResetProxyEntityConvertToFuncFromScript(ProxyEntityType entityType) {} // 0x0000000189DF7F44-0x0000000189DF7F78
-		public static NativeArray<StreamingSceneV2> GetStreamingScenesArray() => default; // 0x0000000189DF7E2C-0x0000000189DF7EA8
+		public static void ResetLastProcessStreamingPos() {} // 0x0000000185F7E260-0x0000000185F7E2A0
+		public static void BindECSEntityConvertFuncFromScript(ECSEntityType entityType, ECSEntityHasRequiredComponentsDelegate hasRequiredComponentsDelegate, ECSEntityConvertToDelegate convertToDelegate, ECSEntityConvertFromDelegate convertFromFunc) {} // 0x00000001854A1E20-0x00000001854A1E90
+		public static void ResetECSEntityConvertFuncFromScript(ECSEntityType entityType) {} // 0x000000018BF0FC70-0x000000018BF0FCA4
+		public static bool IsECSEntityConvertFuncValid(ECSEntityType entityType) => default; // 0x00000001854A1DE0-0x00000001854A1E20
+		public static void BindProxyEntityConvertFuncFromScript(ProxyEntityType entityType, ProxyEntityHasRequiredComponentsDelegate hasRequiredComponentsFunc, ProxyEntityConvertToDelegate convertToFunc, ProxyEntityConvertFromDelegate convertFromFunc) {} // 0x00000001854A1CD0-0x00000001854A1D40
+		public static void ResetProxyEntityConvertFuncFromScript(ProxyEntityType entityType) {} // 0x000000018BF0FCD8-0x000000018BF0FD0C
+		public static bool IsProxyEntityConvertFuncValid(ProxyEntityType entityType) => default; // 0x00000001854A1C90-0x00000001854A1CD0
+		public static void BindMonoComponentConvertFuncFromScript(StreamingComponentType componentType, MonoIsConvertorOfComponentDelegate isConvertorOfFunc, MonoComponentConvertToDelegate convertToFunc, MonoComponentConvertFromDelegate convertFromFunc, MonoComponentAddComponentToDelegate addComponentToFunc, MonoComponentGetComponentFromDelegate getComponentFromFunc) {} // 0x00000001854A1B80-0x00000001854A1BF0
+		public static void ResetMonoComponentConvertFuncFromScript(StreamingComponentType componentType) {} // 0x000000018BF0FCA4-0x000000018BF0FCD8
+		public static bool IsMonoComponentConvertFuncValid(StreamingComponentType componentType) => default; // 0x00000001854A1B40-0x00000001854A1B80
+		public static void BindProxyEntityConvertToFuncFromScript(ProxyEntityType entityType, ProxyEntityHasRequiredComponentsDelegate hasRequiredComponentsFunc, ProxyEntityConvertToDelegate convertToFunc) {} // 0x00000001854A1E90-0x00000001854A1EF0
+		public static void ResetProxyEntityConvertToFuncFromScript(ProxyEntityType entityType) {} // 0x000000018BF0FD0C-0x000000018BF0FD40
+		public static NativeArray<StreamingSceneV2> GetStreamingScenesArray() => default; // 0x000000018BF0FBF4-0x000000018BF0FC70
 	}
 
-	public struct StreamingLayerConfig // TypeDefIndex: 57533
+	public struct StreamingLayerConfig // TypeDefIndex: 58537
 	{
 		// Fields
 		public bool enabled; // 0x00
@@ -3069,19 +2983,17 @@ namespace UnityEngine.HyperGryph.Streaming
 		public int priority; // 0x08
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/Streaming/HGStreamingSettings.h")]
-	[StaticAccessor("HyperGryph::HGStreamingSettings", StaticAccessorType.DoubleColon)]
-	public static class HGStreamingSettings // TypeDefIndex: 57534
+	public static class HGStreamingSettings // TypeDefIndex: 58538
 	{
 		// Properties
-		public static float loadDirtyDistance { get; set; } // 0x000000018279F830-0x000000018279F880
-		public static float unloadDirtyDistance { get; set; } // 0x000000018279F7E0-0x000000018279F830
-		public static float loadElapsedMsPerFrame { get; set; } // 0x000000018279F790-0x000000018279F7E0
-		public static float unloadElapsedMsPerFrame { get; set; } // 0x000000018279F740-0x000000018279F790
-		public static bool sequentialUnloadBeforeLoad { get; set; } // 0x0000000189DF7FD0-0x0000000189DF8004
+		public static float loadDirtyDistance { get; set; } // 0x0000000184456CA0-0x0000000184456CF0
+		public static float unloadDirtyDistance { get; set; } // 0x0000000184456C50-0x0000000184456CA0
+		public static float loadElapsedMsPerFrame { get; set; } // 0x0000000184456C00-0x0000000184456C50
+		public static float unloadElapsedMsPerFrame { get; set; } // 0x0000000184456BB0-0x0000000184456C00
+		public static bool sequentialUnloadBeforeLoad { get; set; } // 0x000000018BF0FD98-0x000000018BF0FDCC
 	
 		// Methods
-		public static void SetLayerConfig(StreamingLayer layer, StreamingLayerConfig config) {} // 0x00000001842766B4-0x00000001842766C8
-		private static void SetLayerConfig_Injected(StreamingLayer layer, ref StreamingLayerConfig config) {} // 0x00000001835924B0-0x0000000183592500
+		public static void SetLayerConfig(StreamingLayer layer, StreamingLayerConfig config) {} // 0x0000000186473E90-0x0000000186473EA4
+		private static void SetLayerConfig_Injected(StreamingLayer layer, ref StreamingLayerConfig config) {} // 0x00000001854A1EF0-0x00000001854A1F40
 	}
 }

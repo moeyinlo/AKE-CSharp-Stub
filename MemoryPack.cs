@@ -8,8 +8,6 @@ using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.IO.Compression;
@@ -25,12 +23,9 @@ using MemoryPack;
 using MemoryPack.Internal;
 using UnityEngine;
 
-// Image 45: MemoryPack.dll - Assembly: MemoryPack, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 56219-56383
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 45: MemoryPack.dll - Assembly: MemoryPack, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 57220-57384
 
-public class MemoryPackRegister<T> // TypeDefIndex: 56224
+public class MemoryPackRegister<T> // TypeDefIndex: 57225
 {
 	// Fields
 	public static Func<bool> s_initFunc;
@@ -39,23 +34,36 @@ public class MemoryPackRegister<T> // TypeDefIndex: 56224
 	public MemoryPackRegister() {}
 }
 
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 57384
+{
+	// Fields
+	internal static readonly int AD95131BC0B799C0B1AF477FB14FCF26A6A9F76079E48BF090ACB7E8367BFD0E; // 0x00 // Static value (base64): /////w== - Metadata: 0x0207D8DC
+	internal static readonly int DF3F619804A92FDB4057192DC43DD748EA778ADC52BC498CE80524C014B81119; // 0x04 // Static value (base64): AAAAAA== - Metadata: 0x0207D8E4
+
+	// Constructors
+	public _PrivateImplementationDetails_() {} // Dummy constructor
+}
+
 namespace MemoryPack
 {
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Interface, AllowMultiple = false, Inherited = false)]
-	public sealed class MemoryPackableAttribute : Attribute // TypeDefIndex: 56226
+	public sealed class MemoryPackableAttribute : Attribute // TypeDefIndex: 57227
 	{
+		// Fields
+		private readonly GenerateType _GenerateType_k__BackingField; // 0x10
+		private readonly SerializeLayout _SerializeLayout_k__BackingField; // 0x14
+	
 		// Properties
-		public GenerateType GenerateType { get; } // 0x0000000183D4E340-0x0000000183D4E350 
-		public SerializeLayout SerializeLayout { get; } // 0x0000000183D50CC0-0x0000000183D50CD0 
+		public GenerateType GenerateType { get; } // 0x0000000181C0BBD0-0x0000000181C0BBE0 
+		public SerializeLayout SerializeLayout { get; } // 0x0000000185FB21A0-0x0000000185FB21B0 
 	
 		// Constructors
 		public MemoryPackableAttribute() {} // Dummy constructor
-		public MemoryPackableAttribute(GenerateType generateType = GenerateType.Object /* Metadata: 0x01FD7FDF */) {} // 0x000000018910B1AC-0x000000018910B1C0
-		public MemoryPackableAttribute(SerializeLayout serializeLayout) {} // 0x0000000183D6E630-0x0000000183D6E640
-		public MemoryPackableAttribute(GenerateType generateType, SerializeLayout serializeLayout) {} // 0x0000000183D50CB0-0x0000000183D50CC0
+		public MemoryPackableAttribute(GenerateType generateType = GenerateType.Object /* Metadata: 0x0207D887 */) {} // 0x000000018B23539C-0x000000018B2353B0
+		public MemoryPackableAttribute(SerializeLayout serializeLayout) {} // 0x0000000185FCF270-0x0000000185FCF280
+		public MemoryPackableAttribute(GenerateType generateType, SerializeLayout serializeLayout) {} // 0x0000000185FB2190-0x0000000185FB21A0
 	}
 
-	public enum GenerateType // TypeDefIndex: 56227
+	public enum GenerateType // TypeDefIndex: 57228
 	{
 		Object = 0,
 		VersionTolerant = 1,
@@ -64,116 +72,108 @@ namespace MemoryPack
 		NoGenerate = 4
 	}
 
-	public enum SerializeLayout // TypeDefIndex: 56228
+	public enum SerializeLayout // TypeDefIndex: 57229
 	{
 		Sequential = 0,
 		Explicit = 1
 	}
 
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = true, Inherited = false)]
-	[Nullable(0)]
-	[NullableContext(1)]
-	public sealed class MemoryPackUnionAttribute : Attribute // TypeDefIndex: 56229
+	public sealed class MemoryPackUnionAttribute : Attribute // TypeDefIndex: 57230
 	{
+		// Fields
+		private readonly ushort _Tag_k__BackingField; // 0x10
+		private readonly System.Type _Type_k__BackingField; // 0x18
+	
 		// Properties
-		public ushort Tag { get; } // 0x0000000183D61390-0x0000000183D613A0 
-		public System.Type Type { get; } // 0x0000000181041090-0x00000001810410A0 
+		public ushort Tag { get; } // 0x0000000185FC2810-0x0000000185FC2820 
+		public System.Type Type { get; } // 0x0000000181377E40-0x0000000181377E50 
 	
 		// Constructors
 		public MemoryPackUnionAttribute() {} // Dummy constructor
-		public MemoryPackUnionAttribute(ushort tag, System.Type type) {} // 0x0000000189109BA8-0x0000000189109BBC
+		public MemoryPackUnionAttribute(ushort tag, System.Type type) {} // 0x000000018B233D98-0x000000018B233DAC
 	}
 
-	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-	[Nullable(0)]
-	[NullableContext(1)]
-	public sealed class MemoryPackUnionFormatterAttribute : Attribute // TypeDefIndex: 56230
+	public sealed class MemoryPackUnionFormatterAttribute : Attribute // TypeDefIndex: 57231
 	{
+		// Fields
+		private readonly System.Type _Type_k__BackingField; // 0x10
+	
 		// Properties
-		public System.Type Type { get; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public System.Type Type { get; } // 0x000000018346D130-0x000000018346D140 
 	
 		// Constructors
 		public MemoryPackUnionFormatterAttribute() {} // Dummy constructor
-		public MemoryPackUnionFormatterAttribute(System.Type type) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public MemoryPackUnionFormatterAttribute(System.Type type) {} // 0x0000000184096E30-0x0000000184096EF0
 	}
 
-	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = false)]
-	public sealed class MemoryPackAllowSerializeAttribute : Attribute // TypeDefIndex: 56231
+	public sealed class MemoryPackAllowSerializeAttribute : Attribute // TypeDefIndex: 57232
 	{
 		// Constructors
-		public MemoryPackAllowSerializeAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public MemoryPackAllowSerializeAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = false)]
-	public sealed class MemoryPackOrderAttribute : Attribute // TypeDefIndex: 56232
+	public sealed class MemoryPackOrderAttribute : Attribute // TypeDefIndex: 57233
 	{
+		// Fields
+		private readonly int _Order_k__BackingField; // 0x10
+	
 		// Properties
-		public int Order { get; } // 0x0000000183D4E340-0x0000000183D4E350 
+		public int Order { get; } // 0x0000000181C0BBD0-0x0000000181C0BBE0 
 	
 		// Constructors
 		public MemoryPackOrderAttribute() {} // Dummy constructor
-		public MemoryPackOrderAttribute(int order) {} // 0x00000001810410F0-0x0000000181041100
+		public MemoryPackOrderAttribute(int order) {} // 0x0000000181378230-0x0000000181378240
 	}
 
-	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = false)]
-	public sealed class MemoryPackIgnoreAttribute : Attribute // TypeDefIndex: 56233
+	public sealed class MemoryPackIgnoreAttribute : Attribute // TypeDefIndex: 57234
 	{
 		// Constructors
-		public MemoryPackIgnoreAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public MemoryPackIgnoreAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = false)]
-	public sealed class MemoryPackIncludeAttribute : Attribute // TypeDefIndex: 56234
+	public sealed class MemoryPackIncludeAttribute : Attribute // TypeDefIndex: 57235
 	{
 		// Constructors
-		public MemoryPackIncludeAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public MemoryPackIncludeAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Constructor, AllowMultiple = false, Inherited = false)]
-	public sealed class MemoryPackConstructorAttribute : Attribute // TypeDefIndex: 56235
+	public sealed class MemoryPackConstructorAttribute : Attribute // TypeDefIndex: 57236
 	{
 		// Constructors
-		public MemoryPackConstructorAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public MemoryPackConstructorAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-	public sealed class MemoryPackOnSerializingAttribute : Attribute // TypeDefIndex: 56236
+	public sealed class MemoryPackOnSerializingAttribute : Attribute // TypeDefIndex: 57237
 	{
 		// Constructors
-		public MemoryPackOnSerializingAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public MemoryPackOnSerializingAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-	public sealed class MemoryPackOnSerializedAttribute : Attribute // TypeDefIndex: 56237
+	public sealed class MemoryPackOnSerializedAttribute : Attribute // TypeDefIndex: 57238
 	{
 		// Constructors
-		public MemoryPackOnSerializedAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public MemoryPackOnSerializedAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-	public sealed class MemoryPackOnDeserializingAttribute : Attribute // TypeDefIndex: 56238
+	public sealed class MemoryPackOnDeserializingAttribute : Attribute // TypeDefIndex: 57239
 	{
 		// Constructors
-		public MemoryPackOnDeserializingAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public MemoryPackOnDeserializingAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-	public sealed class MemoryPackOnDeserializedAttribute : Attribute // TypeDefIndex: 56239
+	public sealed class MemoryPackOnDeserializedAttribute : Attribute // TypeDefIndex: 57240
 	{
 		// Constructors
-		public MemoryPackOnDeserializedAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public MemoryPackOnDeserializedAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = false, Inherited = false)]
-	public sealed class GenerateTypeScriptAttribute : Attribute // TypeDefIndex: 56240
+	public sealed class GenerateTypeScriptAttribute : Attribute // TypeDefIndex: 57241
 	{
 		// Constructors
-		public GenerateTypeScriptAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public GenerateTypeScriptAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	public static class MemoryPackFormatterProvider // TypeDefIndex: 56243
+	public static class MemoryPackFormatterProvider // TypeDefIndex: 57244
 	{
 		// Fields
 		private static readonly Dictionary<System.Type, System.Type> ArrayLikeFormatters; // 0x00
@@ -186,143 +186,116 @@ namespace MemoryPack
 		private static object lockObj; // 0x38
 	
 		// Nested types
-		[NullableContext(0)]
-		private static class Check<T> // TypeDefIndex: 56241
+		private static class Check<T> // TypeDefIndex: 57242
 		{
 			// Fields
 			public static bool registered;
 		}
 	
-		[Nullable(0)]
-		public static class Cache<T> // TypeDefIndex: 56242
+		public static class Cache<T> // TypeDefIndex: 57243
 		{
 			// Fields
-			[Nullable(new byte[2] {2, 1 })]
 			private static IMemoryPackFormatter<T> _formatter;
 	
 			// Properties
-			public static IMemoryPackFormatter<T> formatter { get; set; }
+			public static IMemoryPackFormatter<T> formatter { get; set; } // 0x0000000184699820-0x0000000184699DC0 0x000000018469A830-0x000000018469B5F0
 		}
 	
 		// Constructors
-		static MemoryPackFormatterProvider() {} // 0x0000000182935BF0-0x00000001829369B0
+		static MemoryPackFormatterProvider() {}
 	
 		// Methods
-		private static void RegisterInitialFormatters() {} // 0x0000000182934B10-0x00000001829350B0
-		[NullableContext(2)]
-		public static bool IsRegistered<T>() => default;
+		private static void RegisterInitialFormatters() {}
+		public static bool IsRegistered<T>() => default; // 0x000000018B22FEC0-0x000000018B22FFD8
 		public static void Register<T>(IMemoryPackFormatter<T> formatter) {}
-		public static void RegisterGenericType(System.Type genericType, System.Type genericFormatterType) {} // 0x0000000189105CD0-0x0000000189105DE8
-		[NullableContext(0)]
+		public static void RegisterGenericType(System.Type genericType, System.Type genericFormatterType) {} // 0x000000018B22FC68-0x000000018B22FD94
 		public static void RegisterCollection<TCollection, TElement>()
 			where TCollection : ICollection<TElement>, new() {}
-		public static void RegisterCollection(System.Type genericCollectionType) {} // 0x0000000189105A78-0x0000000189105BA4
-		[NullableContext(0)]
+		public static void RegisterCollection(System.Type genericCollectionType) {} // 0x000000018B22FFD8-0x000000018B230104
 		public static void RegisterSet<TSet, TElement>()
 			where TSet : ISet<TElement>, new() {}
-		public static void RegisterSet(System.Type genericSetType) {} // 0x0000000189105DE8-0x0000000189105F14
-		[NullableContext(0)]
+		public static void RegisterSet(System.Type genericSetType) {} // 0x000000018B22FD94-0x000000018B22FEC0
 		public static void RegisterDictionary<TDictionary, TKey, TValue>()
 			where TDictionary : IDictionary<TKey, TValue>, new() {}
-		public static void RegisterDictionary(System.Type genericDictionaryType) {} // 0x0000000189105BA4-0x0000000189105CD0
-		public static IMemoryPackFormatter<T> GetFormatter<T>() => default;
-		internal static IMemoryPackFormatter GetFormatter(System.Type type) => default; // 0x0000000189105874-0x0000000189105A78
-		private static bool TryInvokeRegisterFormatter(System.Type type) => default; // 0x00000001891060E4-0x0000000189106248
-		public static void ForceRegister<T>(IMemoryPackFormatter<T> formatter) {}
-		internal static object CreateGenericFormatter(System.Type type, bool typeIsReferenceOrContainsReferences) => default; // 0x00000001891054A8-0x0000000189105874
-		private static System.Type TryCreateGenericFormatterType(System.Type type, IDictionary<System.Type, System.Type> knownTypes) => default; // 0x0000000189106034-0x00000001891060E4
-		private static System.Type TryCreateGenericCollectionFormatterType(System.Type type) => default; // 0x0000000189105F14-0x0000000189106034
-		internal static void RegisterWellKnownTypesFormatters() {} // 0x000000018340D190-0x000000018340F400
-		[NullableContext(0)]
+		public static void RegisterDictionary(System.Type genericDictionaryType) {} // 0x000000018B22FA64-0x000000018B22FC68
+		public static IMemoryPackFormatter<T> GetFormatter<T>() => default; // 0x000000018B2302D4-0x000000018B230438
+		internal static IMemoryPackFormatter GetFormatter(System.Type type) => default;
+		private static bool TryInvokeRegisterFormatter(System.Type type) => default; // 0x000000018B22F698-0x000000018B22FA64
+		public static void ForceRegister<T>(IMemoryPackFormatter<T> formatter) {} // 0x000000018B230224-0x000000018B2302D4
+		internal static object CreateGenericFormatter(System.Type type, bool typeIsReferenceOrContainsReferences) => default; // 0x000000018B230104-0x000000018B230224
+		private static System.Type TryCreateGenericFormatterType(System.Type type, IDictionary<System.Type, System.Type> knownTypes) => default; // 0x000000018540FAC0-0x0000000185411D30
+		private static System.Type TryCreateGenericCollectionFormatterType(System.Type type) => default;
+		internal static void RegisterWellKnownTypesFormatters() {}
 		private static void UnityRegister<T>()
 			where T : struct {}
 	}
 
-	public interface IMemoryPackFormatterRegister // TypeDefIndex: 56244
+	public interface IMemoryPackFormatterRegister // TypeDefIndex: 57245
 	{
 	}
 
-	public interface IMemoryPackable<T> : IMemoryPackFormatterRegister // TypeDefIndex: 56245
+	public interface IMemoryPackable<T> : IMemoryPackFormatterRegister // TypeDefIndex: 57246
 	{
 	}
 
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public interface IMemoryPackFormatter // TypeDefIndex: 56246
+	public interface IMemoryPackFormatter // TypeDefIndex: 57247
 	{
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		void Deserialize(ref MemoryPackReader reader, ref object value);
 	}
 
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public interface IMemoryPackFormatter<T> // TypeDefIndex: 56247
+	public interface IMemoryPackFormatter<T> // TypeDefIndex: 57248
 	{
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		void Deserialize(ref MemoryPackReader reader, ref ref T value);
 	}
 
-	[Nullable(0)]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public abstract class MemoryPackFormatter<T> : IMemoryPackFormatter<T>, IMemoryPackFormatter // TypeDefIndex: 56248
+	public abstract class MemoryPackFormatter<T> : IMemoryPackFormatter<T>, IMemoryPackFormatter // TypeDefIndex: 57249
 	{
 		// Constructors
 		protected MemoryPackFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public abstract void Deserialize(ref MemoryPackReader reader, ref ref T value);
-		[MemoryPack.Internal.Preserve]
 		void IMemoryPackFormatter.Deserialize(ref MemoryPackReader reader, ref object value) {}
 	}
 
-	public static class MemoryPackCode // TypeDefIndex: 56249
+	public static class MemoryPackCode // TypeDefIndex: 57250
 	{
 		// Fields
-		public const int NullCollection = -1; // Metadata: 0x01FD7FE7
-		public const byte WideTag = 250; // Metadata: 0x01FD7FE8
-		public const byte ReferenceId = 250; // Metadata: 0x01FD7FE9
-		public const byte Reserved1 = 250; // Metadata: 0x01FD7FEA
-		public const byte Reserved2 = 251; // Metadata: 0x01FD7FEB
-		public const byte Reserved3 = 252; // Metadata: 0x01FD7FEC
-		public const byte Reserved4 = 253; // Metadata: 0x01FD7FED
-		public const byte Reserved5 = 254; // Metadata: 0x01FD7FEE
-		public const byte NullObject = 255; // Metadata: 0x01FD7FEF
+		public const int NullCollection = -1; // Metadata: 0x0207D88F
+		public const byte WideTag = 250; // Metadata: 0x0207D890
+		public const byte ReferenceId = 250; // Metadata: 0x0207D891
+		public const byte Reserved1 = 250; // Metadata: 0x0207D892
+		public const byte Reserved2 = 251; // Metadata: 0x0207D893
+		public const byte Reserved3 = 252; // Metadata: 0x0207D894
+		public const byte Reserved4 = 253; // Metadata: 0x0207D895
+		public const byte Reserved5 = 254; // Metadata: 0x0207D896
+		public const byte NullObject = 255; // Metadata: 0x0207D897
 	
 		// Properties
-		internal static ReadOnlySpan<byte> NullCollectionData { get; } // 0x00000001891053F0-0x000000018910544C 
-		internal static ReadOnlySpan<byte> ZeroCollectionData { get; } // 0x000000018910544C-0x00000001891054A8 
+		internal static ReadOnlySpan<byte> NullCollectionData { get; } // 0x000000018B22F5E0-0x000000018B22F63C 
+		internal static ReadOnlySpan<byte> ZeroCollectionData { get; } // 0x000000018B22F63C-0x000000018B22F698 
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	internal sealed class ErrorMemoryPackFormatter : IMemoryPackFormatter // TypeDefIndex: 56250
+	internal sealed class ErrorMemoryPackFormatter : IMemoryPackFormatter // TypeDefIndex: 57251
 	{
 		// Fields
 		private readonly System.Type type; // 0x10
-		[Nullable(2)]
 		private readonly string message; // 0x18
 	
 		// Constructors
 		public ErrorMemoryPackFormatter() {} // Dummy constructor
-		public ErrorMemoryPackFormatter(System.Type type) {} // 0x0000000182E1A410-0x0000000182E1A440
-		public ErrorMemoryPackFormatter(System.Type type, string message) {} // 0x0000000182676770-0x00000001826767A0
+		public ErrorMemoryPackFormatter(System.Type type) {} // 0x00000001846A0F60-0x00000001846A0F90
+		public ErrorMemoryPackFormatter(System.Type type, string message) {} // 0x00000001841BC230-0x00000001841BC260
 	
 		// Methods
-		[NullableContext(2)]
-		public void Serialize(ref MemoryPackWriter writer, ref object value) {} // 0x0000000189105000-0x000000018910500C
-		[NullableContext(2)]
-		public void Deserialize(ref MemoryPackReader reader, ref object value) {} // 0x0000000189105000-0x000000018910500C
-		[DoesNotReturn]
-		private void Throw() {} // 0x000000018910500C-0x000000018910502C
+		public void Serialize(ref MemoryPackWriter writer, ref object value) {} // 0x000000018B22F1F0-0x000000018B22F1FC
+		public void Deserialize(ref MemoryPackReader reader, ref object value) {} // 0x000000018B22F1F0-0x000000018B22F1FC
+		private void Throw() {} // 0x000000018B22F1FC-0x000000018B22F21C
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	internal sealed class ErrorMemoryPackFormatter<T> : MemoryPackFormatter<T> // TypeDefIndex: 56251
+	internal sealed class ErrorMemoryPackFormatter<T> : MemoryPackFormatter<T> // TypeDefIndex: 57252
 	{
 		// Fields
 		private readonly Exception exception;
@@ -330,43 +303,34 @@ namespace MemoryPack
 	
 		// Constructors
 		public ErrorMemoryPackFormatter() {}
-		[NullableContext(1)]
 		public ErrorMemoryPackFormatter(Exception exception) {}
-		[NullableContext(1)]
 		public ErrorMemoryPackFormatter(string message) {}
 	
 		// Methods
 		public override void Deserialize(ref MemoryPackReader reader, ref ref T value) {}
-		[DoesNotReturn]
 		private void Throw() {}
 	}
 
-	[IsByRefLike]
-	[Obsolete("Types with embedded references are not supported in this version of your compiler.", true)]
-	public struct MemoryPackReader // TypeDefIndex: 56252
+	public struct MemoryPackReader // TypeDefIndex: 57253
 	{
 		// Fields
 		private ReadOnlySequence<byte> bufferSource; // 0x00
 		private readonly long totalLength; // 0x18
 		private ReadOnlySpan<byte> bufferReference; // 0x20
 		private int bufferLength; // 0x30
-		[Nullable(2)]
 		private byte[] rentBuffer; // 0x38
 		private int advancedCount; // 0x40
 		private int consumed; // 0x44
-		[Nullable(1)]
 		private readonly MemoryPackReaderOptionalState optionalState; // 0x48
 	
 		// Properties
-		public int Consumed { get => default; } // 0x0000000183D4EE80-0x0000000183D4EE90 
-		public long Remaining { get => default; } // 0x0000000183D6E620-0x0000000183D6E630 
-		[Nullable(1)]
-		public MemoryPackReaderOptionalState OptionalState { [NullableContext(1)] get => default; } // 0x0000000183D4EA70-0x0000000183D4EA80 
-		[Nullable(1)]
-		public MemoryPackSerializerOptions Options { [NullableContext(1)] get => default; } // 0x000000018910836C-0x0000000189108388 
+		public int Consumed { get => default; } // 0x0000000183908D10-0x0000000183908D20 
+		public long Remaining { get => default; } // 0x0000000185FCF260-0x0000000185FCF270 
+		public MemoryPackReaderOptionalState OptionalState { get => default; } // 0x00000001813ECF20-0x00000001813ECF30 
+		public MemoryPackSerializerOptions Options { get => default; } // 0x000000018B23255C-0x000000018B232578 
 	
 		// Constructors
-		public MemoryPackReader([IsReadOnly] in ReadOnlySequence<byte> sequence, [Nullable(1)] MemoryPackReaderOptionalState optionalState) : this() {
+		public MemoryPackReader(in ReadOnlySequence<byte> sequence, MemoryPackReaderOptionalState optionalState) : this() {
 			bufferSource = default;
 			totalLength = default;
 			bufferReference = default;
@@ -375,8 +339,8 @@ namespace MemoryPack
 			advancedCount = default;
 			consumed = default;
 			this.optionalState = default;
-		} // 0x0000000189108254-0x000000018910836C
-		public MemoryPackReader(ReadOnlySpan<byte> buffer, [Nullable(1)] MemoryPackReaderOptionalState optionalState) : this() {
+		} // 0x000000018B232444-0x000000018B23255C
+		public MemoryPackReader(ReadOnlySpan<byte> buffer, MemoryPackReaderOptionalState optionalState) : this() {
 			bufferSource = default;
 			totalLength = default;
 			bufferReference = default;
@@ -385,110 +349,92 @@ namespace MemoryPack
 			advancedCount = default;
 			consumed = default;
 			this.optionalState = default;
-		} // 0x0000000182DD2460-0x0000000182DD2510
+		} // 0x0000000184BDCAD0-0x0000000184BDCB80
 	
 		// Methods
-		public ref byte GetSpanReference(int sizeHint) => ref _refReturnTypeForGetSpanReference; // 0x0000000189106C80-0x0000000189106CE8
+		public ref byte GetSpanReference(int sizeHint) => ref _refReturnTypeForGetSpanReference; // 0x000000018B230E70-0x000000018B230ED8
 		private ref byte _refReturnTypeForGetSpanReference; // Dummy field
-		private ref byte GetNextSpan(int sizeHint) => ref _refReturnTypeForGetNextSpan; // 0x00000001891066F0-0x0000000189106A6C
+		private ref byte GetNextSpan(int sizeHint) => ref _refReturnTypeForGetNextSpan; // 0x000000018B2308E0-0x000000018B230C5C
 		private ref byte _refReturnTypeForGetNextSpan; // Dummy field
-		public void Advance(int count) {} // 0x00000001891065B0-0x0000000189106638
-		private bool TryAdvanceSequence(int count) => default; // 0x0000000189107F18-0x0000000189108034
+		public void Advance(int count) {} // 0x000000018B2307A0-0x000000018B230828
+		private bool TryAdvanceSequence(int count) => default; // 0x000000018B232108-0x000000018B232224
 		public void GetRemainingSource(out ReadOnlySpan<byte> singleSource, out ReadOnlySequence<byte> remainingSource) {
 			singleSource = default;
 			remainingSource = default;
-		} // 0x0000000189106A6C-0x0000000189106C80
-		public void Dispose() {} // 0x0000000189106638-0x00000001891066A8
-		[NullableContext(1)]
-		public IMemoryPackFormatter GetFormatter(System.Type type) => default; // 0x00000001891066A8-0x00000001891066F0
-		[NullableContext(1)]
+		} // 0x000000018B230C5C-0x000000018B230E70
+		public void Dispose() {} // 0x000000018B230828-0x000000018B230898
+		public IMemoryPackFormatter GetFormatter(System.Type type) => default; // 0x000000018B230898-0x000000018B2308E0
 		public IMemoryPackFormatter<T> GetFormatter<T>() => default;
 		public bool TryReadObjectHeader(out byte memberCount) {
 			memberCount = default;
 			return default;
-		} // 0x000000018910817C-0x00000001891081BC
+		} // 0x000000018B23236C-0x000000018B2323AC
 		public bool TryReadUnionHeader(out ushort tag) {
 			tag = default;
 			return default;
-		} // 0x00000001891081BC-0x0000000189108254
+		} // 0x000000018B2323AC-0x000000018B232444
 		public bool TryReadCollectionHeader(out int length) {
 			length = default;
 			return default;
-		} // 0x0000000189108120-0x000000018910817C
-		public bool PeekIsNull() => default; // 0x0000000189106CE8-0x0000000189106D04
+		} // 0x000000018B232310-0x000000018B23236C
+		public bool PeekIsNull() => default; // 0x000000018B230ED8-0x000000018B230EF4
 		public bool TryPeekObjectHeader(out byte memberCount) {
 			memberCount = default;
 			return default;
-		} // 0x0000000189108084-0x00000001891080A8
+		} // 0x000000018B232274-0x000000018B232298
 		public bool TryPeekUnionHeader(out ushort tag) {
 			tag = default;
 			return default;
-		} // 0x00000001891080A8-0x00000001891080FC
+		} // 0x000000018B232298-0x000000018B2322EC
 		public bool TryPeekUshort(out ushort tag) {
 			tag = default;
 			return default;
-		} // 0x00000001891080FC-0x0000000189108120
+		} // 0x000000018B2322EC-0x000000018B232310
 		public bool TryPeekCollectionHeader(out int length) {
 			length = default;
 			return default;
-		} // 0x0000000189108034-0x0000000189108084
+		} // 0x000000018B232224-0x000000018B232274
 		public bool DangerousTryReadCollectionHeader(out int length) {
 			length = default;
 			return default;
-		} // 0x0000000189101CFC-0x0000000189101D68
-		[NullableContext(2)]
-		public string ReadString() => default; // 0x0000000189106D04-0x0000000189106D68
-		[NullableContext(1)]
-		private string ReadUtf16(int length) => default; // 0x0000000189106D68-0x0000000189106E38
-		[NullableContext(1)]
-		public string ReadUtf8(int utf8Length) => default; // 0x0000000182331BA0-0x0000000182331E50
+		} // 0x000000018B22BEEC-0x000000018B22BF58
+		public string ReadString() => default; // 0x000000018B230EF4-0x000000018B230F58
+		private string ReadUtf16(int length) => default; // 0x000000018B230F58-0x000000018B231028
+		public string ReadUtf8(int utf8Length) => default; // 0x00000001840A5800-0x00000001840A5AB0
 		public T1 ReadUnmanaged<T1>()
 			where T1 : struct => default;
-		public void ReadPackable<T>([Nullable(2)] ref ref T value)
+		public void ReadPackable<T>(ref ref T value)
 			where T : IMemoryPackable<T> {}
 		public T ReadPackable<T>()
 			where T : IMemoryPackable<T> => default;
-		[NullableContext(2)]
 		public void ReadValue<T>(ref ref T value) {}
-		[NullableContext(2)]
 		public T ReadValue<T>() => default;
-		[NullableContext(1)]
-		public void ReadValue(System.Type type, [Nullable(2)] ref object value) {} // 0x0000000189106E38-0x0000000189106EA8
-		[NullableContext(1)]
-		public object ReadValue(System.Type type) => default; // 0x0000000189106EA8-0x0000000189106F1C
-		[NullableContext(1)]
-		public void ReadValueWithFormatter<TFormatter, T>(TFormatter formatter, [Nullable(2)] ref ref T value)
+		public void ReadValue(System.Type type, ref object value) {} // 0x000000018B231028-0x000000018B231098
+		public object ReadValue(System.Type type) => default; // 0x000000018B231098-0x000000018B23110C
+		public void ReadValueWithFormatter<TFormatter, T>(TFormatter formatter, ref ref T value)
 			where TFormatter : IMemoryPackFormatter<T> {}
-		[NullableContext(1)]
 		public T ReadValueWithFormatter<TFormatter, T>(TFormatter formatter)
 			where TFormatter : IMemoryPackFormatter<T> => default;
-		[NullableContext(2)]
 		public T[] ReadArray<T>() => default;
-		[NullableContext(2)]
 		public void ReadArray<T>(ref ref T[] value) {}
-		[NullableContext(2)]
-		public void ReadSpan<T>([Nullable(new byte[2] {0, 2 })] ref Span<T> value) {}
+		public void ReadSpan<T>(ref Span<T> value) {}
 		public T[] ReadPackableArray<T>()
 			where T : IMemoryPackable<T> => default;
-		public void ReadPackableArray<T>([Nullable(2)] ref ref T[] value)
+		public void ReadPackableArray<T>(ref ref T[] value)
 			where T : IMemoryPackable<T> {}
-		public void ReadPackableSpan<T>([Nullable(new byte[2] {0, 2 })] ref Span<T> value)
+		public void ReadPackableSpan<T>(ref Span<T> value)
 			where T : IMemoryPackable<T> {}
 		public T[] ReadUnmanagedArray<T>()
 			where T : struct => default;
-		public void ReadUnmanagedArray<T>([Nullable(new byte[2] {2, 0 })] ref ref T[] value)
+		public void ReadUnmanagedArray<T>(ref ref T[] value)
 			where T : struct {}
 		public void ReadUnmanagedSpan<T>(ref Span<T> value)
 			where T : struct {}
-		[NullableContext(2)]
 		public T[] DangerousReadUnmanagedArray<T>() => default;
-		[NullableContext(2)]
-		public void DangerousReadUnmanagedArray<T>([Nullable(new byte[2] {2, 1 })] ref ref T[] value) {}
-		[NullableContext(2)]
-		public void DangerousReadUnmanagedSpan<T>([Nullable(new byte[2] {0, 1 })] ref Span<T> value) {}
-		[NullableContext(2)]
-		public void ReadSpanWithoutReadLengthHeader<T>(int length, [Nullable(new byte[2] {0, 2 })] ref Span<T> value) {}
-		public void ReadPackableSpanWithoutReadLengthHeader<T>(int length, [Nullable(new byte[2] {0, 2 })] ref Span<T> value)
+		public void DangerousReadUnmanagedArray<T>(ref ref T[] value) {}
+		public void DangerousReadUnmanagedSpan<T>(ref Span<T> value) {}
+		public void ReadSpanWithoutReadLengthHeader<T>(int length, ref Span<T> value) {}
+		public void ReadPackableSpanWithoutReadLengthHeader<T>(int length, ref Span<T> value)
 			where T : IMemoryPackable<T> {}
 		public void DangerousReadUnmanagedSpanView<T>(out bool isNull, out ReadOnlySpan<byte> view) {
 			isNull = default;
@@ -764,29 +710,24 @@ namespace MemoryPack
 			value14 = default;
 			value15 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1>(out ref T1 value1) {
 			value1 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2>(out ref T1 value1, out ref T2 value2) {
 			value1 = default;
 			value2 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3>(out ref T1 value1, out ref T2 value2, out ref T3 value3) {
 			value1 = default;
 			value2 = default;
 			value3 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3, T4>(out ref T1 value1, out ref T2 value2, out ref T3 value3, out ref T4 value4) {
 			value1 = default;
 			value2 = default;
 			value3 = default;
 			value4 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3, T4, T5>(out ref T1 value1, out ref T2 value2, out ref T3 value3, out ref T4 value4, out ref T5 value5) {
 			value1 = default;
 			value2 = default;
@@ -794,7 +735,6 @@ namespace MemoryPack
 			value4 = default;
 			value5 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3, T4, T5, T6>(out ref T1 value1, out ref T2 value2, out ref T3 value3, out ref T4 value4, out ref T5 value5, out ref T6 value6) {
 			value1 = default;
 			value2 = default;
@@ -803,7 +743,6 @@ namespace MemoryPack
 			value5 = default;
 			value6 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3, T4, T5, T6, T7>(out ref T1 value1, out ref T2 value2, out ref T3 value3, out ref T4 value4, out ref T5 value5, out ref T6 value6, out ref T7 value7) {
 			value1 = default;
 			value2 = default;
@@ -813,7 +752,6 @@ namespace MemoryPack
 			value6 = default;
 			value7 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8>(out ref T1 value1, out ref T2 value2, out ref T3 value3, out ref T4 value4, out ref T5 value5, out ref T6 value6, out ref T7 value7, out ref T8 value8) {
 			value1 = default;
 			value2 = default;
@@ -824,7 +762,6 @@ namespace MemoryPack
 			value7 = default;
 			value8 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9>(out ref T1 value1, out ref T2 value2, out ref T3 value3, out ref T4 value4, out ref T5 value5, out ref T6 value6, out ref T7 value7, out ref T8 value8, out ref T9 value9) {
 			value1 = default;
 			value2 = default;
@@ -836,7 +773,6 @@ namespace MemoryPack
 			value8 = default;
 			value9 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(out ref T1 value1, out ref T2 value2, out ref T3 value3, out ref T4 value4, out ref T5 value5, out ref T6 value6, out ref T7 value7, out ref T8 value8, out ref T9 value9, out ref T10 value10) {
 			value1 = default;
 			value2 = default;
@@ -849,7 +785,6 @@ namespace MemoryPack
 			value9 = default;
 			value10 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(out ref T1 value1, out ref T2 value2, out ref T3 value3, out ref T4 value4, out ref T5 value5, out ref T6 value6, out ref T7 value7, out ref T8 value8, out ref T9 value9, out ref T10 value10, out ref T11 value11) {
 			value1 = default;
 			value2 = default;
@@ -863,7 +798,6 @@ namespace MemoryPack
 			value10 = default;
 			value11 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(out ref T1 value1, out ref T2 value2, out ref T3 value3, out ref T4 value4, out ref T5 value5, out ref T6 value6, out ref T7 value7, out ref T8 value8, out ref T9 value9, out ref T10 value10, out ref T11 value11, out ref T12 value12) {
 			value1 = default;
 			value2 = default;
@@ -878,7 +812,6 @@ namespace MemoryPack
 			value11 = default;
 			value12 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(out ref T1 value1, out ref T2 value2, out ref T3 value3, out ref T4 value4, out ref T5 value5, out ref T6 value6, out ref T7 value7, out ref T8 value8, out ref T9 value9, out ref T10 value10, out ref T11 value11, out ref T12 value12, out ref T13 value13) {
 			value1 = default;
 			value2 = default;
@@ -894,7 +827,6 @@ namespace MemoryPack
 			value12 = default;
 			value13 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(out ref T1 value1, out ref T2 value2, out ref T3 value3, out ref T4 value4, out ref T5 value5, out ref T6 value6, out ref T7 value7, out ref T8 value8, out ref T9 value9, out ref T10 value10, out ref T11 value11, out ref T12 value12, out ref T13 value13, out ref T14 value14) {
 			value1 = default;
 			value2 = default;
@@ -911,7 +843,6 @@ namespace MemoryPack
 			value13 = default;
 			value14 = default;
 		}
-		[NullableContext(1)]
 		public void DangerousReadUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(out ref T1 value1, out ref T2 value2, out ref T3 value3, out ref T4 value4, out ref T5 value5, out ref T6 value6, out ref T7 value7, out ref T8 value8, out ref T9 value9, out ref T10 value10, out ref T11 value11, out ref T12 value12, out ref T13 value13, out ref T14 value14, out ref T15 value15) {
 			value1 = default;
 			value2 = default;
@@ -929,78 +860,69 @@ namespace MemoryPack
 			value14 = default;
 			value15 = default;
 		}
-		public byte ReadVarIntByte() => default; // 0x0000000189106F1C-0x0000000189107128
-		public sbyte ReadVarIntSByte() => default; // 0x0000000189107718-0x000000018910798C
-		public ushort ReadVarIntUInt16() => default; // 0x000000018910798C-0x0000000189107B94
-		public short ReadVarIntInt16() => default; // 0x0000000189107128-0x000000018910735C
-		public uint ReadVarIntUInt32() => default; // 0x0000000189107B94-0x0000000189107D68
-		public int ReadVarIntInt32() => default; // 0x000000018910735C-0x0000000189107544
-		public ulong ReadVarIntUInt64() => default; // 0x0000000189107D68-0x0000000189107F18
-		public long ReadVarIntInt64() => default; // 0x0000000189107544-0x0000000189107718
+		public byte ReadVarIntByte() => default; // 0x000000018B23110C-0x000000018B231318
+		public sbyte ReadVarIntSByte() => default; // 0x000000018B231908-0x000000018B231B7C
+		public ushort ReadVarIntUInt16() => default; // 0x000000018B231B7C-0x000000018B231D84
+		public short ReadVarIntInt16() => default; // 0x000000018B231318-0x000000018B23154C
+		public uint ReadVarIntUInt32() => default; // 0x000000018B231D84-0x000000018B231F58
+		public int ReadVarIntInt32() => default; // 0x000000018B23154C-0x000000018B231734
+		public ulong ReadVarIntUInt64() => default; // 0x000000018B231F58-0x000000018B232108
+		public long ReadVarIntInt64() => default; // 0x000000018B231734-0x000000018B231908
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	public static class MemoryPackReaderOptionalStatePool // TypeDefIndex: 56253
+	public static class MemoryPackReaderOptionalStatePool // TypeDefIndex: 57254
 	{
 		// Fields
 		private static readonly ConcurrentQueue<MemoryPackReaderOptionalState> queue; // 0x00
 	
 		// Constructors
-		static MemoryPackReaderOptionalStatePool() {} // 0x0000000189106398-0x0000000189106424
+		static MemoryPackReaderOptionalStatePool() {} // 0x000000018B230588-0x000000018B230614
 	
 		// Methods
-		public static MemoryPackReaderOptionalState Rent([Nullable(2)] MemoryPackSerializerOptions options) => default; // 0x0000000189106248-0x000000018910631C
-		internal static void Return(MemoryPackReaderOptionalState state) {} // 0x000000018910631C-0x0000000189106398
+		public static MemoryPackReaderOptionalState Rent(MemoryPackSerializerOptions options) => default; // 0x000000018B230438-0x000000018B23050C
+		internal static void Return(MemoryPackReaderOptionalState state) {} // 0x000000018B23050C-0x000000018B230588
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	public sealed class MemoryPackReaderOptionalState : IDisposable // TypeDefIndex: 56254
+	public sealed class MemoryPackReaderOptionalState : IDisposable // TypeDefIndex: 57255
 	{
 		// Fields
 		private readonly Dictionary<uint, object> refToObject; // 0x10
+		private MemoryPackSerializerOptions _Options_k__BackingField; // 0x18
 	
 		// Properties
-		public MemoryPackSerializerOptions Options { get; private set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		public MemoryPackSerializerOptions Options { get; private set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
 	
 		// Constructors
-		internal MemoryPackReaderOptionalState() {} // 0x0000000182DD1F80-0x0000000182DD2010
+		internal MemoryPackReaderOptionalState() {} // 0x0000000184BDC550-0x0000000184BDC5E0
 	
 		// Methods
-		[NullableContext(2)]
-		internal void Init(MemoryPackSerializerOptions options) {} // 0x0000000182DD2320-0x0000000182DD23A0
-		public object GetObjectReference(uint id) => default; // 0x00000001891064C4-0x0000000189106564
-		public void AddObjectReference(uint id, object value) {} // 0x0000000189106424-0x00000001891064C4
-		public void Reset() {} // 0x0000000182DD23A0-0x0000000182DD2460
-		void IDisposable.Dispose() {} // 0x0000000189106564-0x00000001891065B0
+		internal void Init(MemoryPackSerializerOptions options) {} // 0x0000000184BDC990-0x0000000184BDCA10
+		public object GetObjectReference(uint id) => default; // 0x000000018B2306B4-0x000000018B230754
+		public void AddObjectReference(uint id, object value) {} // 0x000000018B230614-0x000000018B2306B4
+		public void Reset() {} // 0x0000000184BDCA10-0x0000000184BDCAD0
+		void IDisposable.Dispose() {} // 0x000000018B230754-0x000000018B2307A0
 	}
 
-	internal static class VarIntCodes // TypeDefIndex: 56255
+	internal static class VarIntCodes // TypeDefIndex: 57256
 	{
 		// Fields
-		public const byte MaxSingleValue = 127; // Metadata: 0x01FD7FF0
-		public const sbyte MinSingleValue = 136; // Metadata: 0x01FD7FF1
-		public const sbyte Byte = 135; // Metadata: 0x01FD7FF2
-		public const sbyte SByte = 134; // Metadata: 0x01FD7FF3
-		public const sbyte UInt16 = 133; // Metadata: 0x01FD7FF4
-		public const sbyte Int16 = 132; // Metadata: 0x01FD7FF5
-		public const sbyte UInt32 = 131; // Metadata: 0x01FD7FF6
-		public const sbyte Int32 = 130; // Metadata: 0x01FD7FF7
-		public const sbyte UInt64 = 129; // Metadata: 0x01FD7FF8
-		public const sbyte Int64 = 128; // Metadata: 0x01FD7FF9
+		public const byte MaxSingleValue = 127; // Metadata: 0x0207D898
+		public const sbyte MinSingleValue = 136; // Metadata: 0x0207D899
+		public const sbyte Byte = 135; // Metadata: 0x0207D89A
+		public const sbyte SByte = 134; // Metadata: 0x0207D89B
+		public const sbyte UInt16 = 133; // Metadata: 0x0207D89C
+		public const sbyte Int16 = 132; // Metadata: 0x0207D89D
+		public const sbyte UInt32 = 131; // Metadata: 0x0207D89E
+		public const sbyte Int32 = 130; // Metadata: 0x0207D89F
+		public const sbyte UInt64 = 129; // Metadata: 0x0207D8A0
+		public const sbyte Int64 = 128; // Metadata: 0x0207D8A1
 	}
 
-	[IsByRefLike]
-	[Nullable(0)]
-	[NullableContext(1)]
-	[Obsolete("Types with embedded references are not supported in this version of your compiler.", true)]
-	public struct MemoryPackWriter // TypeDefIndex: 56256
+	public struct MemoryPackWriter // TypeDefIndex: 57257
 	{
 		// Fields
-		private const int DepthLimit = 1000; // Metadata: 0x01FD7FFB
+		private const int DepthLimit = 1000; // Metadata: 0x0207D8A3
 		private IBufferWriter<byte> bufferWriter; // 0x00
-		[Nullable(0)]
 		private Span<byte> bufferReference; // 0x08
 		private int bufferLength; // 0x18
 		private int advancedCount; // 0x1C
@@ -1010,10 +932,10 @@ namespace MemoryPack
 		private readonly MemoryPackWriterOptionalState optionalState; // 0x30
 	
 		// Properties
-		public int WrittenCount { get => default; } // 0x0000000183D4E2E0-0x0000000183D4E2F0 
-		public int BufferLength { get => default; } // 0x00000001820D1AC0-0x00000001820D1AD0 
-		public MemoryPackWriterOptionalState OptionalState { get => default; } // 0x0000000181003830-0x0000000181003840 
-		public MemoryPackSerializerOptions Options { get => default; } // 0x000000018910B190-0x000000018910B1AC 
+		public int WrittenCount { get => default; } // 0x0000000181424480-0x0000000181424490 
+		public int BufferLength { get => default; } // 0x00000001813AE560-0x00000001813AE570 
+		public MemoryPackWriterOptionalState OptionalState { get => default; } // 0x00000001813B51D0-0x00000001813B51E0 
+		public MemoryPackSerializerOptions Options { get => default; } // 0x000000018B235380-0x000000018B23539C 
 	
 		// Constructors
 		public MemoryPackWriter(ref IBufferWriter<byte> writer, MemoryPackWriterOptionalState optionalState) : this() {
@@ -1025,7 +947,7 @@ namespace MemoryPack
 			writtenCount = default;
 			serializeStringAsUtf8 = default;
 			this.optionalState = default;
-		} // 0x000000018910B14C-0x000000018910B190
+		} // 0x000000018B23533C-0x000000018B235380
 		public MemoryPackWriter(ref IBufferWriter<byte> writer, byte[] firstBufferOfWriter, MemoryPackWriterOptionalState optionalState) : this() {
 			bufferWriter = default;
 			bufferReference = default;
@@ -1035,8 +957,8 @@ namespace MemoryPack
 			writtenCount = default;
 			serializeStringAsUtf8 = default;
 			this.optionalState = default;
-		} // 0x000000018910B004-0x000000018910B0B4
-		public MemoryPackWriter(ref IBufferWriter<byte> writer, [Nullable(0)] Span<byte> firstBufferOfWriter, MemoryPackWriterOptionalState optionalState) : this() {
+		} // 0x000000018B2351F4-0x000000018B2352A4
+		public MemoryPackWriter(ref IBufferWriter<byte> writer, Span<byte> firstBufferOfWriter, MemoryPackWriterOptionalState optionalState) : this() {
 			bufferWriter = default;
 			bufferReference = default;
 			bufferLength = default;
@@ -1045,114 +967,94 @@ namespace MemoryPack
 			writtenCount = default;
 			serializeStringAsUtf8 = default;
 			this.optionalState = default;
-		} // 0x000000018910B0B4-0x000000018910B14C
+		} // 0x000000018B2352A4-0x000000018B23533C
 	
 		// Methods
-		public void WriteVarInt(byte x) {} // 0x000000018910AE60-0x000000018910AEDC
-		public void WriteVarInt(sbyte x) {} // 0x000000018910AEDC-0x000000018910AF58
-		public void WriteVarInt(ushort x) {} // 0x000000018910AAAC-0x000000018910AB2C
-		public void WriteVarInt(short x) {} // 0x000000018910A9DC-0x000000018910AAAC
-		public void WriteVarInt(uint x) {} // 0x000000018910AF58-0x000000018910B004
-		public void WriteVarInt(int x) {} // 0x000000018910AC10-0x000000018910AD0C
-		public void WriteVarInt(ulong x) {} // 0x000000018910AB2C-0x000000018910AC10
-		public void WriteVarInt(long x) {} // 0x000000018910AD0C-0x000000018910AE60
-		public ref byte GetSpanReference(int sizeHint) => ref _refReturnTypeForGetSpanReference; // 0x000000018910A264-0x000000018910A2C8
+		public void WriteVarInt(byte x) {} // 0x000000018B235050-0x000000018B2350CC
+		public void WriteVarInt(sbyte x) {} // 0x000000018B2350CC-0x000000018B235148
+		public void WriteVarInt(ushort x) {} // 0x000000018B234C9C-0x000000018B234D1C
+		public void WriteVarInt(short x) {} // 0x000000018B234BCC-0x000000018B234C9C
+		public void WriteVarInt(uint x) {} // 0x000000018B235148-0x000000018B2351F4
+		public void WriteVarInt(int x) {} // 0x000000018B234E00-0x000000018B234EFC
+		public void WriteVarInt(ulong x) {} // 0x000000018B234D1C-0x000000018B234E00
+		public void WriteVarInt(long x) {} // 0x000000018B234EFC-0x000000018B235050
+		public ref byte GetSpanReference(int sizeHint) => ref _refReturnTypeForGetSpanReference; // 0x000000018B234454-0x000000018B2344B8
 		private ref byte _refReturnTypeForGetSpanReference; // Dummy field
-		private void RequestNewBuffer(int sizeHint) {} // 0x000000018910A380-0x000000018910A414
-		public void Advance(int count) {} // 0x000000018910A144-0x000000018910A1B8
-		public void Flush() {} // 0x000000018910A1B8-0x000000018910A21C
-		public IMemoryPackFormatter GetFormatter(System.Type type) => default; // 0x000000018910A21C-0x000000018910A264
+		private void RequestNewBuffer(int sizeHint) {} // 0x000000018B234570-0x000000018B234604
+		public void Advance(int count) {} // 0x000000018B234334-0x000000018B2343A8
+		public void Flush() {} // 0x000000018B2343A8-0x000000018B23440C
+		public IMemoryPackFormatter GetFormatter(System.Type type) => default; // 0x000000018B23440C-0x000000018B234454
 		public IMemoryPackFormatter<T> GetFormatter<T>() => default;
-		[NullableContext(2)]
-		public int GetStringWriteLength(string value) => default; // 0x000000018910A2C8-0x000000018910A380
-		[NullableContext(0)]
-		public int GetUnmanageArrayWriteLength<T>([Nullable(new byte[2] {2, 0 })] T[] value)
+		public int GetStringWriteLength(string value) => default; // 0x000000018B2344B8-0x000000018B234570
+		public int GetUnmanageArrayWriteLength<T>(T[] value)
 			where T : struct => default;
-		public void WriteObjectHeader(byte memberCount) {} // 0x000000018910A470-0x000000018910A4B4
-		public void WriteNullObjectHeader() {} // 0x000000018910A448-0x000000018910A470
-		public void WriteObjectReferenceId(uint referenceId) {} // 0x000000018910A4B4-0x000000018910A4F4
-		public void WriteUnionHeader(ushort tag) {} // 0x000000018910A514-0x000000018910A574
-		public void WriteNullUnionHeader() {} // 0x000000018910A448-0x000000018910A470
-		public void WriteCollectionHeader(int length) {} // 0x000000018910A414-0x000000018910A448
-		public void WriteNullCollectionHeader() {} // 0x0000000189101D68-0x00000001891021AC
-		[NullableContext(2)]
-		public void WriteString(string value) {} // 0x000000018910A4F4-0x000000018910A514
-		[NullableContext(2)]
-		public void WriteUtf16(string value) {} // 0x000000018910A6B0-0x000000018910A804
-		[NullableContext(0)]
-		public void WriteUtf16(ReadOnlySpan<char> value) {} // 0x000000018910A574-0x000000018910A6B0
-		[NullableContext(2)]
-		public void WriteUtf8(string value) {} // 0x000000018910A804-0x000000018910A930
-		[NullableContext(0)]
-		public void WriteUtf8(ReadOnlySpan<byte> utf8Value, int utf16Length = -1 /* Metadata: 0x01FD7FFA */) {} // 0x000000018910A930-0x000000018910A9DC
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1>([IsReadOnly] in ref T1 value1)
+		public void WriteObjectHeader(byte memberCount) {} // 0x000000018B234660-0x000000018B2346A4
+		public void WriteNullObjectHeader() {} // 0x000000018B234638-0x000000018B234660
+		public void WriteObjectReferenceId(uint referenceId) {} // 0x000000018B2346A4-0x000000018B2346E4
+		public void WriteUnionHeader(ushort tag) {} // 0x000000018B234704-0x000000018B234764
+		public void WriteNullUnionHeader() {} // 0x000000018B234638-0x000000018B234660
+		public void WriteCollectionHeader(int length) {} // 0x000000018B234604-0x000000018B234638
+		public void WriteNullCollectionHeader() {} // 0x000000018B22BF58-0x000000018B22C39C
+		public void WriteString(string value) {} // 0x000000018B2346E4-0x000000018B234704
+		public void WriteUtf16(string value) {} // 0x000000018B2348A0-0x000000018B2349F4
+		public void WriteUtf16(ReadOnlySpan<char> value) {} // 0x000000018B234764-0x000000018B2348A0
+		public void WriteUtf8(string value) {} // 0x000000018B2349F4-0x000000018B234B20
+		public void WriteUtf8(ReadOnlySpan<byte> utf8Value, int utf16Length = -1 /* Metadata: 0x0207D8A2 */) {} // 0x000000018B234B20-0x000000018B234BCC
+		public void WriteUnmanaged<T1>(in ref T1 value1)
 			where T1 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1>(byte propertyCount, [IsReadOnly] in ref T1 value1)
+		public void WriteUnmanagedWithObjectHeader<T1>(byte propertyCount, in ref T1 value1)
 			where T1 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2)
+		public void WriteUnmanaged<T1, T2>(in ref T1 value1, in ref T2 value2)
 			where T1 : struct
 			where T2 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2)
+		public void WriteUnmanagedWithObjectHeader<T1, T2>(byte propertyCount, in ref T1 value1, in ref T2 value2)
 			where T1 : struct
 			where T2 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3)
+		public void WriteUnmanaged<T1, T2, T3>(in ref T1 value1, in ref T2 value2, in ref T3 value3)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3, T4>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4)
+		public void WriteUnmanaged<T1, T2, T3, T4>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
 			where T4 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
 			where T4 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3, T4, T5>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5)
+		public void WriteUnmanaged<T1, T2, T3, T4, T5>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
 			where T4 : struct
 			where T5 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
 			where T4 : struct
 			where T5 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6)
+		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
 			where T4 : struct
 			where T5 : struct
 			where T6 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
 			where T4 : struct
 			where T5 : struct
 			where T6 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7)
+		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1160,8 +1062,7 @@ namespace MemoryPack
 			where T5 : struct
 			where T6 : struct
 			where T7 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1169,8 +1070,7 @@ namespace MemoryPack
 			where T5 : struct
 			where T6 : struct
 			where T7 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8)
+		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1179,8 +1079,7 @@ namespace MemoryPack
 			where T6 : struct
 			where T7 : struct
 			where T8 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1189,8 +1088,7 @@ namespace MemoryPack
 			where T6 : struct
 			where T7 : struct
 			where T8 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9)
+		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1200,8 +1098,7 @@ namespace MemoryPack
 			where T7 : struct
 			where T8 : struct
 			where T9 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1211,8 +1108,7 @@ namespace MemoryPack
 			where T7 : struct
 			where T8 : struct
 			where T9 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10)
+		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1223,8 +1119,7 @@ namespace MemoryPack
 			where T8 : struct
 			where T9 : struct
 			where T10 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1235,8 +1130,7 @@ namespace MemoryPack
 			where T8 : struct
 			where T9 : struct
 			where T10 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11)
+		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1248,8 +1142,7 @@ namespace MemoryPack
 			where T9 : struct
 			where T10 : struct
 			where T11 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1261,8 +1154,7 @@ namespace MemoryPack
 			where T9 : struct
 			where T10 : struct
 			where T11 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12)
+		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1275,8 +1167,7 @@ namespace MemoryPack
 			where T10 : struct
 			where T11 : struct
 			where T12 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1289,8 +1180,7 @@ namespace MemoryPack
 			where T10 : struct
 			where T11 : struct
 			where T12 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12, [IsReadOnly] in ref T13 value13)
+		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12, in ref T13 value13)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1304,8 +1194,7 @@ namespace MemoryPack
 			where T11 : struct
 			where T12 : struct
 			where T13 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12, [IsReadOnly] in ref T13 value13)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12, in ref T13 value13)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1319,8 +1208,7 @@ namespace MemoryPack
 			where T11 : struct
 			where T12 : struct
 			where T13 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12, [IsReadOnly] in ref T13 value13, [IsReadOnly] in ref T14 value14)
+		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12, in ref T13 value13, in ref T14 value14)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1335,8 +1223,7 @@ namespace MemoryPack
 			where T12 : struct
 			where T13 : struct
 			where T14 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12, [IsReadOnly] in ref T13 value13, [IsReadOnly] in ref T14 value14)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12, in ref T13 value13, in ref T14 value14)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1351,8 +1238,7 @@ namespace MemoryPack
 			where T12 : struct
 			where T13 : struct
 			where T14 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12, [IsReadOnly] in ref T13 value13, [IsReadOnly] in ref T14 value14, [IsReadOnly] in ref T15 value15)
+		public void WriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12, in ref T13 value13, in ref T14 value14, in ref T15 value15)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1368,8 +1254,7 @@ namespace MemoryPack
 			where T13 : struct
 			where T14 : struct
 			where T15 : struct {}
-		[NullableContext(0)]
-		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12, [IsReadOnly] in ref T13 value13, [IsReadOnly] in ref T14 value14, [IsReadOnly] in ref T15 value15)
+		public void WriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12, in ref T13 value13, in ref T14 value14, in ref T15 value15)
 			where T1 : struct
 			where T2 : struct
 			where T3 : struct
@@ -1385,408 +1270,394 @@ namespace MemoryPack
 			where T13 : struct
 			where T14 : struct
 			where T15 : struct {}
-		public void DangerousWriteUnmanaged<T1>([IsReadOnly] in ref T1 value1) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1>(byte propertyCount, [IsReadOnly] in ref T1 value1) {}
-		public void DangerousWriteUnmanaged<T1, T2>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3, T4>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12, [IsReadOnly] in ref T13 value13) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12, [IsReadOnly] in ref T13 value13) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12, [IsReadOnly] in ref T13 value13, [IsReadOnly] in ref T14 value14) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12, [IsReadOnly] in ref T13 value13, [IsReadOnly] in ref T14 value14) {}
-		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>([IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12, [IsReadOnly] in ref T13 value13, [IsReadOnly] in ref T14 value14, [IsReadOnly] in ref T15 value15) {}
-		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(byte propertyCount, [IsReadOnly] in ref T1 value1, [IsReadOnly] in ref T2 value2, [IsReadOnly] in ref T3 value3, [IsReadOnly] in ref T4 value4, [IsReadOnly] in ref T5 value5, [IsReadOnly] in ref T6 value6, [IsReadOnly] in ref T7 value7, [IsReadOnly] in ref T8 value8, [IsReadOnly] in ref T9 value9, [IsReadOnly] in ref T10 value10, [IsReadOnly] in ref T11 value11, [IsReadOnly] in ref T12 value12, [IsReadOnly] in ref T13 value13, [IsReadOnly] in ref T14 value14, [IsReadOnly] in ref T15 value15) {}
+		public void DangerousWriteUnmanaged<T1>(in ref T1 value1) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1>(byte propertyCount, in ref T1 value1) {}
+		public void DangerousWriteUnmanaged<T1, T2>(in ref T1 value1, in ref T2 value2) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2>(byte propertyCount, in ref T1 value1, in ref T2 value2) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3>(in ref T1 value1, in ref T2 value2, in ref T3 value3) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3, T4>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12, in ref T13 value13) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12, in ref T13 value13) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12, in ref T13 value13, in ref T14 value14) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12, in ref T13 value13, in ref T14 value14) {}
+		public void DangerousWriteUnmanaged<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12, in ref T13 value13, in ref T14 value14, in ref T15 value15) {}
+		public void DangerousWriteUnmanagedWithObjectHeader<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(byte propertyCount, in ref T1 value1, in ref T2 value2, in ref T3 value3, in ref T4 value4, in ref T5 value5, in ref T6 value6, in ref T7 value7, in ref T8 value8, in ref T9 value9, in ref T10 value10, in ref T11 value11, in ref T12 value12, in ref T13 value13, in ref T14 value14, in ref T15 value15) {}
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	public class MemoryPackSerializationException : Exception // TypeDefIndex: 56257
+	public class MemoryPackSerializationException : Exception // TypeDefIndex: 57258
 	{
 		// Constructors
 		public MemoryPackSerializationException() {} // Dummy constructor
-		public MemoryPackSerializationException(string message) {} // 0x0000000182944430-0x00000001829444A0
-		public MemoryPackSerializationException(string message, Exception innerException) {} // 0x0000000189108E48-0x0000000189108EA8
+		public MemoryPackSerializationException(string message) {} // 0x0000000184A91710-0x0000000184A91780
+		public MemoryPackSerializationException(string message, Exception innerException) {} // 0x000000018B233038-0x000000018B233098
 	
 		// Methods
-		[DoesNotReturn]
-		public static void ThrowMessage(string message) {} // 0x0000000189108A50-0x0000000189108AA8
-		[DoesNotReturn]
-		public static void ThrowInvalidPropertyCount(byte expected, byte actual) {} // 0x000000018910883C-0x00000001891088F0
-		[DoesNotReturn]
-		public static void ThrowInvalidPropertyCount(System.Type type, byte expected, byte actual) {} // 0x00000001822AD600-0x00000001822AD730
-		[DoesNotReturn]
-		public static void ThrowInvalidCollection() {} // 0x0000000189108784-0x00000001891087E0
-		[DoesNotReturn]
-		public static void ThrowInvalidRange(int expected, int actual) {} // 0x00000001891088F0-0x00000001891089A4
-		[DoesNotReturn]
-		public static void ThrowInvalidAdvance() {} // 0x0000000189108728-0x0000000189108784
-		[DoesNotReturn]
-		public static void ThrowSequenceReachedEnd() {} // 0x0000000189108D5C-0x0000000189108DB8
-		[DoesNotReturn]
-		public static void ThrowWriteInvalidMemberCount(byte memberCount) {} // 0x0000000189108DB8-0x0000000189108E48
-		[DoesNotReturn]
-		public static void ThrowInsufficientBufferUnless(int length) {} // 0x0000000189108698-0x0000000189108728
-		[DoesNotReturn]
-		public static void ThrowNotRegisteredInProvider(System.Type type) {} // 0x0000000189108BD4-0x0000000189108C58
-		[DoesNotReturn]
-		public static void ThrowRegisterInProviderFailed(System.Type type, Exception innerException) {} // 0x0000000189108CCC-0x0000000189108D5C
-		[DoesNotReturn]
-		public static void ThrowNotFoundInUnionType(System.Type actualType, System.Type baseType) {} // 0x0000000189108AA8-0x0000000189108BD4
-		[DoesNotReturn]
-		public static void ThrowInvalidTag(ushort tag, System.Type baseType) {} // 0x00000001891089A4-0x0000000189108A50
-		[DoesNotReturn]
-		public static void ThrowReachedDepthLimit(System.Type type) {} // 0x0000000189108C58-0x0000000189108CCC
-		[DoesNotReturn]
-		public static void ThrowInvalidConcurrrentCollectionOperation() {} // 0x00000001891087E0-0x000000018910883C
-		[DoesNotReturn]
-		public static void ThrowDeserializeObjectIsNull(string target) {} // 0x0000000189108584-0x0000000189108608
-		[DoesNotReturn]
-		public static void ThrowFailedEncoding(OperationStatus status) {} // 0x0000000189108608-0x0000000189108698
-		[DoesNotReturn]
-		public static void ThrowCompressionFailed(OperationStatus status) {} // 0x0000000189108440-0x00000001891084D0
-		[DoesNotReturn]
-		public static void ThrowCompressionFailed() {} // 0x00000001891083E4-0x0000000189108440
-		[DoesNotReturn]
-		public static void ThrowAlreadyDecompressed() {} // 0x0000000189108388-0x00000001891083E4
-		[DoesNotReturn]
-		public static void ThrowDecompressionSizeLimitExceeded(int limit, int size) {} // 0x00000001891084D0-0x0000000189108584
+		public static void ThrowMessage(string message) {} // 0x000000018B232C40-0x000000018B232C98
+		public static void ThrowInvalidPropertyCount(byte expected, byte actual) {} // 0x000000018B232A2C-0x000000018B232AE0
+		public static void ThrowInvalidPropertyCount(System.Type type, byte expected, byte actual) {} // 0x0000000183FAE110-0x0000000183FAE240
+		public static void ThrowInvalidCollection() {} // 0x000000018B232974-0x000000018B2329D0
+		public static void ThrowInvalidRange(int expected, int actual) {} // 0x000000018B232AE0-0x000000018B232B94
+		public static void ThrowInvalidAdvance() {} // 0x000000018B232918-0x000000018B232974
+		public static void ThrowSequenceReachedEnd() {} // 0x000000018B232F4C-0x000000018B232FA8
+		public static void ThrowWriteInvalidMemberCount(byte memberCount) {} // 0x000000018B232FA8-0x000000018B233038
+		public static void ThrowInsufficientBufferUnless(int length) {} // 0x000000018B232888-0x000000018B232918
+		public static void ThrowNotRegisteredInProvider(System.Type type) {} // 0x000000018B232DC4-0x000000018B232E48
+		public static void ThrowRegisterInProviderFailed(System.Type type, Exception innerException) {} // 0x000000018B232EBC-0x000000018B232F4C
+		public static void ThrowNotFoundInUnionType(System.Type actualType, System.Type baseType) {} // 0x000000018B232C98-0x000000018B232DC4
+		public static void ThrowInvalidTag(ushort tag, System.Type baseType) {} // 0x000000018B232B94-0x000000018B232C40
+		public static void ThrowReachedDepthLimit(System.Type type) {} // 0x000000018B232E48-0x000000018B232EBC
+		public static void ThrowInvalidConcurrrentCollectionOperation() {} // 0x000000018B2329D0-0x000000018B232A2C
+		public static void ThrowDeserializeObjectIsNull(string target) {} // 0x000000018B232774-0x000000018B2327F8
+		public static void ThrowFailedEncoding(OperationStatus status) {} // 0x000000018B2327F8-0x000000018B232888
+		public static void ThrowCompressionFailed(OperationStatus status) {} // 0x000000018B232630-0x000000018B2326C0
+		public static void ThrowCompressionFailed() {} // 0x000000018B2325D4-0x000000018B232630
+		public static void ThrowAlreadyDecompressed() {} // 0x000000018B232578-0x000000018B2325D4
+		public static void ThrowDecompressionSizeLimitExceeded(int limit, int size) {} // 0x000000018B2326C0-0x000000018B232774
 	}
 
-	[Nullable(0)]
-	[NullableContext(2)]
-	public static class MemoryPackSerializer // TypeDefIndex: 56261
+	public static class MemoryPackSerializer // TypeDefIndex: 57262
 	{
 		// Fields
-		[ThreadStatic]
 		private static MemoryPackReaderOptionalState threadStaticReaderOptionalState; // 0x80000000
-		[ThreadStatic]
 		private static SerializerWriterThreadStaticState threadStaticState; // 0x80000008
-		[ThreadStatic]
 		private static MemoryPackWriterOptionalState threadStaticWriterOptionalState; // 0x80000010
 	
 		// Nested types
-		[Nullable(0)]
-		[NullableContext(1)]
-		private sealed class SerializerWriterThreadStaticState // TypeDefIndex: 56258
+		private sealed class SerializerWriterThreadStaticState // TypeDefIndex: 57259
 		{
 			// Fields
 			public ReusableLinkedArrayBufferWriter BufferWriter; // 0x10
 			public MemoryPackWriterOptionalState OptionalState; // 0x18
 	
 			// Constructors
-			public SerializerWriterThreadStaticState() {} // 0x000000018910CC90-0x000000018910CD34
+			public SerializerWriterThreadStaticState() {}
 	
 			// Methods
-			[NullableContext(2)]
-			public void Init(MemoryPackSerializerOptions options) {} // 0x000000018910CC3C-0x000000018910CC5C
-			public void Reset() {} // 0x000000018910CC5C-0x000000018910CC90
+			public void Init(MemoryPackSerializerOptions options) {}
+			public void Reset() {}
+		}
+	
+		private struct _DeserializeAsync_d__6<T> : IAsyncStateMachine // TypeDefIndex: 57260
+		{
+			// Fields
+			public int __1__state;
+			public AsyncValueTaskMethodBuilder<T> __t__builder;
+			public Stream stream;
+			public CancellationToken cancellationToken;
+			public MemoryPackSerializerOptions options;
+			private ReusableReadOnlySequenceBuilder _builder_5__2;
+			private byte[] _buffer_5__3;
+			private int _offset_5__4;
+			private ConfiguredValueTaskAwaitable<int> __u__1;
+	
+			// Methods
+			private void MoveNext() {}
+			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x000000018B2336E4-0x000000018B23390C
+		}
+	
+		private struct _DeserializeAsync_d__11 : IAsyncStateMachine // TypeDefIndex: 57261
+		{
+			// Fields
+			public int __1__state; // 0x00
+			public AsyncValueTaskMethodBuilder<object> __t__builder; // 0x08
+			public Stream stream; // 0x30
+			public CancellationToken cancellationToken; // 0x38
+			public System.Type type; // 0x40
+			public MemoryPackSerializerOptions options; // 0x48
+			private ReusableReadOnlySequenceBuilder _builder_5__2; // 0x50
+			private byte[] _buffer_5__3; // 0x58
+			private int _offset_5__4; // 0x60
+			private ConfiguredValueTaskAwaitable<int> __u__1; // 0x68
+	
+			// Methods
+			private void MoveNext() {}
+			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x000000018B2336B0-0x000000018B2336E4
 		}
 	
 		// Methods
-		public static T Deserialize<T>([Nullable(0)] ReadOnlySpan<byte> buffer, MemoryPackSerializerOptions options = null) => default;
-		public static int Deserialize<T>([Nullable(0)] ReadOnlySpan<byte> buffer, ref ref T value, MemoryPackSerializerOptions options = null) => default;
-		public static T Deserialize<T>([Nullable(0)] [IsReadOnly] in ReadOnlySequence<byte> buffer, MemoryPackSerializerOptions options = null) => default;
-		public static int Deserialize<T>([IsReadOnly] [Nullable(0)] in ReadOnlySequence<byte> buffer, ref ref T value, MemoryPackSerializerOptions options = null) => default;
-		public static int Deserialize([IsReadOnly] [Nullable(0)] in ReadOnlySequence<byte> buffer, ref object value, [Nullable(1)] System.Type type, MemoryPackSerializerOptions options = null) => default; // 0x00000001891094F4-0x000000018910971C
-		public static async ValueTask<T> DeserializeAsync<T>([Nullable(1)] Stream stream, MemoryPackSerializerOptions options = null, CancellationToken cancellationToken = default) => default;
-		public static object Deserialize([Nullable(1)] System.Type type, [Nullable(0)] ReadOnlySpan<byte> buffer, MemoryPackSerializerOptions options = null) => default; // 0x00000001891094C0-0x00000001891094F4
-		public static int Deserialize([Nullable(1)] System.Type type, [Nullable(0)] ReadOnlySpan<byte> buffer, ref object value, MemoryPackSerializerOptions options = null) => default; // 0x0000000189109998-0x0000000189109BA8
-		public static object Deserialize([Nullable(1)] System.Type type, [IsReadOnly] [Nullable(0)] in ReadOnlySequence<byte> buffer, MemoryPackSerializerOptions options = null) => default; // 0x000000018910971C-0x0000000189109744
-		public static int Deserialize([Nullable(1)] System.Type type, [IsReadOnly] [Nullable(0)] in ReadOnlySequence<byte> buffer, ref object value, MemoryPackSerializerOptions options = null) => default; // 0x0000000189109744-0x0000000189109998
-		[NullableContext(1)]
-		public static async ValueTask<object> DeserializeAsync(System.Type type, Stream stream, [Nullable(2)] MemoryPackSerializerOptions options = null, CancellationToken cancellationToken = default) => default; // 0x0000000189109398-0x00000001891094C0
+		public static T Deserialize<T>(ReadOnlySpan<byte> buffer, MemoryPackSerializerOptions options = null) => default; // 0x000000018B233B88-0x000000018B233D98
+		public static int Deserialize<T>(ReadOnlySpan<byte> buffer, ref ref T value, MemoryPackSerializerOptions options = null) => default; // 0x000000018B23390C-0x000000018B233934
+		public static T Deserialize<T>(in ReadOnlySequence<byte> buffer, MemoryPackSerializerOptions options = null) => default; // 0x000000018B233934-0x000000018B233B88
+		public static int Deserialize<T>(in ReadOnlySequence<byte> buffer, ref ref T value, MemoryPackSerializerOptions options = null) => default; // 0x000000018B233588-0x000000018B2336B0
+		public static int Deserialize(in ReadOnlySequence<byte> buffer, ref object value, System.Type type, MemoryPackSerializerOptions options = null) => default; // 0x000000018B236E80-0x000000018B236F24
+		public static ValueTask<T> DeserializeAsync<T>(Stream stream, MemoryPackSerializerOptions options = null, CancellationToken cancellationToken = default) => default; // 0x000000018B236E2C-0x000000018B236E4C
+		public static object Deserialize(System.Type type, ReadOnlySpan<byte> buffer, MemoryPackSerializerOptions options = null) => default; // 0x000000018B236E4C-0x000000018B236E80
+		public static int Deserialize(System.Type type, ReadOnlySpan<byte> buffer, ref object value, MemoryPackSerializerOptions options = null) => default;
+		public static object Deserialize(System.Type type, in ReadOnlySequence<byte> buffer, MemoryPackSerializerOptions options = null) => default;
+		public static int Deserialize(System.Type type, in ReadOnlySequence<byte> buffer, ref object value, MemoryPackSerializerOptions options = null) => default; // 0x000000018B238758-0x000000018B239264
+		public static ValueTask<object> DeserializeAsync(System.Type type, Stream stream, MemoryPackSerializerOptions options = null, CancellationToken cancellationToken = default) => default; // 0x000000018B239264-0x000000018B2392B0
 	}
 
-	[Nullable(0)]
-	[NullableContext(2)]
-	public class MemoryPackSerializerOptions : IEquatable<MemoryPackSerializerOptions> // TypeDefIndex: 56262
+	public class MemoryPackSerializerOptions : IEquatable<MemoryPackSerializerOptions> // TypeDefIndex: 57263
 	{
 		// Fields
-		[Nullable(1)]
 		public static readonly MemoryPackSerializerOptions Default; // 0x00
-		[Nullable(1)]
 		public static readonly MemoryPackSerializerOptions Utf8; // 0x08
-		[Nullable(1)]
 		public static readonly MemoryPackSerializerOptions Utf16; // 0x10
+		private readonly StringEncoding _StringEncoding_k__BackingField; // 0x10
+		private readonly IServiceProvider _ServiceProvider_k__BackingField; // 0x18
 	
 		// Properties
-		[Nullable(1)]
-		protected virtual System.Type EqualityContract { [NullableContext(1)] get => default; } // 0x00000001891092DC-0x000000018910932C 
-		public StringEncoding StringEncoding { get; set; } // 0x00000001811797F0-0x0000000181179800 0x0000000183D4E960-0x0000000183D4E970
-		public IServiceProvider ServiceProvider { get; set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		protected virtual System.Type EqualityContract { get => default; } // 0x000000018B2334CC-0x000000018B23351C 
+		public StringEncoding StringEncoding { get; set; } // 0x0000000181C2FD60-0x0000000181C2FD70 0x000000018184FBD0-0x000000018184FBE0
+		public IServiceProvider ServiceProvider { get; set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
 	
 		// Constructors
-		protected MemoryPackSerializerOptions([Nullable(1)] MemoryPackSerializerOptions original) {} // 0x00000001839C0D10-0x00000001839C0D40
-		public MemoryPackSerializerOptions() {} // 0x000000018350B670-0x000000018350B680
-		static MemoryPackSerializerOptions() {} // 0x00000001839C0BA0-0x00000001839C0CB0
+		protected MemoryPackSerializerOptions(MemoryPackSerializerOptions original) {} // 0x0000000185BA4F80-0x0000000185BA4FB0
+		public MemoryPackSerializerOptions() {} // 0x0000000185492010-0x0000000185492020
+		static MemoryPackSerializerOptions() {} // 0x0000000185BA4E10-0x0000000185BA4F20
 	
 		// Methods
-		[NullableContext(0)]
-		public override string ToString() => default; // 0x00000001891091EC-0x00000001891092DC
-		[NullableContext(1)]
-		protected virtual bool PrintMembers(StringBuilder builder) => default; // 0x00000001891090DC-0x00000001891091EC
-		public static bool operator !=(MemoryPackSerializerOptions r1, MemoryPackSerializerOptions r2) => default; // 0x0000000189109344-0x0000000189109398
-		public static bool operator ==(MemoryPackSerializerOptions r1, MemoryPackSerializerOptions r2) => default; // 0x000000018910932C-0x0000000189109344
-		public override int GetHashCode() => default; // 0x0000000189108FE4-0x00000001891090DC
-		public override bool Equals(object obj) => default; // 0x0000000189108EA8-0x0000000189108EFC
-		public virtual bool Equals(MemoryPackSerializerOptions other) => default; // 0x0000000189108EFC-0x0000000189108FE4
-		[NullableContext(1)]
-		public virtual MemoryPackSerializerOptions _Clone__() => default; // 0x00000001839C0CB0-0x00000001839C0D10
+		public override string ToString() => default; // 0x000000018B2333DC-0x000000018B2334CC
+		protected virtual bool PrintMembers(StringBuilder builder) => default; // 0x000000018B2332CC-0x000000018B2333DC
+		public static bool operator !=(MemoryPackSerializerOptions r1, MemoryPackSerializerOptions r2) => default; // 0x000000018B233534-0x000000018B233588
+		public static bool operator ==(MemoryPackSerializerOptions r1, MemoryPackSerializerOptions r2) => default; // 0x000000018B23351C-0x000000018B233534
+		public override int GetHashCode() => default; // 0x000000018B2331D4-0x000000018B2332CC
+		public override bool Equals(object obj) => default; // 0x000000018B233098-0x000000018B2330EC
+		public virtual bool Equals(MemoryPackSerializerOptions other) => default; // 0x000000018B2330EC-0x000000018B2331D4
+		public virtual MemoryPackSerializerOptions _Clone__() => default; // 0x0000000185BA4F20-0x0000000185BA4F80
 	}
 
-	public enum StringEncoding : byte // TypeDefIndex: 56263
+	public enum StringEncoding : byte // TypeDefIndex: 57264
 	{
 		Utf16 = 0,
 		Utf8 = 1
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	public static class MemoryPackWriterOptionalStatePool // TypeDefIndex: 56264
+	public static class MemoryPackWriterOptionalStatePool // TypeDefIndex: 57265
 	{
 		// Fields
 		private static readonly ConcurrentQueue<MemoryPackWriterOptionalState> queue; // 0x00
 	
 		// Constructors
-		static MemoryPackWriterOptionalStatePool() {} // 0x0000000189109D0C-0x0000000189109D98
+		static MemoryPackWriterOptionalStatePool() {} // 0x000000018B233EFC-0x000000018B233F88
 	
 		// Methods
-		public static MemoryPackWriterOptionalState Rent([Nullable(2)] MemoryPackSerializerOptions options) => default; // 0x0000000189109BBC-0x0000000189109C90
-		internal static void Return(MemoryPackWriterOptionalState state) {} // 0x0000000189109C90-0x0000000189109D0C
+		public static MemoryPackWriterOptionalState Rent(MemoryPackSerializerOptions options) => default; // 0x000000018B233DAC-0x000000018B233E80
+		internal static void Return(MemoryPackWriterOptionalState state) {} // 0x000000018B233E80-0x000000018B233EFC
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	public sealed class MemoryPackWriterOptionalState : IDisposable // TypeDefIndex: 56266
+	public sealed class MemoryPackWriterOptionalState : IDisposable // TypeDefIndex: 57267
 	{
 		// Fields
 		internal static readonly MemoryPackWriterOptionalState NullState; // 0x00
 		private uint nextId; // 0x10
 		private readonly Dictionary<object, uint> objectToRef; // 0x18
+		private MemoryPackSerializerOptions _Options_k__BackingField; // 0x20
 	
 		// Properties
-		public MemoryPackSerializerOptions Options { get; private set; } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+		public MemoryPackSerializerOptions Options { get; private set; } // 0x000000018B2340CC-0x000000018B234124 0x000000018B233F88-0x000000018B23405C
 	
 		// Nested types
-		[Nullable(0)]
-		private sealed class ReferenceEqualityComparer : IEqualityComparer<object> // TypeDefIndex: 56265
+		private sealed class ReferenceEqualityComparer : IEqualityComparer<object> // TypeDefIndex: 57266
 		{
+			// Fields
+			private static readonly ReferenceEqualityComparer _Instance_k__BackingField; // 0x00
+	
 			// Properties
-			public static ReferenceEqualityComparer Instance { get; } // 0x000000018910B378-0x000000018910B3C8 
+			public static ReferenceEqualityComparer Instance { get; } // 0x000000018646EE40-0x000000018646EE50 
 	
 			// Constructors
-			private ReferenceEqualityComparer() {} // 0x000000018350B670-0x000000018350B680
-			static ReferenceEqualityComparer() {} // 0x000000018910B314-0x000000018910B378
+			private ReferenceEqualityComparer() {} // 0x00000001813B31A0-0x00000001813B31B0
+			static ReferenceEqualityComparer() {} // 0x000000018B23405C-0x000000018B2340CC
 	
 			// Methods
-			[NullableContext(2)]
-			public new bool Equals(object x, object y) => default; // 0x0000000186DDEAAC-0x0000000186DDEAB4
-			public int GetHashCode(object obj) => default; // 0x0000000183D6E640-0x0000000183D6E650
+			public new bool Equals(object x, object y) => default; // 0x000000018B2341E4-0x000000018B2342CC
+			public int GetHashCode(object obj) => default; // 0x000000018B2342CC-0x000000018B234334
 		}
 	
 		// Constructors
-		internal MemoryPackWriterOptionalState() {} // 0x0000000189109FF4-0x000000018910A0DC
-		private MemoryPackWriterOptionalState(bool _) {} // 0x000000018910A0DC-0x000000018910A144
-		static MemoryPackWriterOptionalState() {} // 0x0000000189109F80-0x0000000189109FF4
+		internal MemoryPackWriterOptionalState() {} // 0x000000018B234124-0x000000018B234170
+		private MemoryPackWriterOptionalState(bool _) {} // 0x000000018B234170-0x000000018B2341E4
+		static MemoryPackWriterOptionalState() {} // 0x000000018B235504-0x000000018B235568
 	
 		// Methods
-		[NullableContext(2)]
-		internal void Init(MemoryPackSerializerOptions options) {} // 0x0000000189109E6C-0x0000000189109EDC
-		public void Reset() {} // 0x0000000189109EDC-0x0000000189109F34
-		[NullableContext(0)]
-		public ValueTuple<bool, uint> GetOrAddReference([Nullable(1)] object value) => default; // 0x0000000189109D98-0x0000000189109E6C
-		void IDisposable.Dispose() {} // 0x0000000189109F34-0x0000000189109F80
+		internal void Init(MemoryPackSerializerOptions options) {} // 0x0000000185492010-0x0000000185492020
+		public void Reset() {} // 0x000000018B235568-0x000000018B2355B8
+		public ValueTuple<bool, uint> GetOrAddReference(object value) => default; // 0x0000000188F44660-0x0000000188F44668
+		void IDisposable.Dispose() {} // 0x0000000185FCF280-0x0000000185FCF290
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	internal sealed class AnimationCurveFormatter : MemoryPackFormatter<AnimationCurve> // TypeDefIndex: 56267
+	internal sealed class AnimationCurveFormatter : MemoryPackFormatter<AnimationCurve> // TypeDefIndex: 57268
 	{
 		// Constructors
-		public AnimationCurveFormatter() {} // 0x0000000182935110-0x0000000182935140
+		public AnimationCurveFormatter() {} // 0x0000000184699E20-0x0000000184699E50
 	
 		// Methods
-		private void SerializeKeyFrame(Keyframe keyframe, ref MemoryPackWriter writer) {} // 0x00000001891022D4-0x00000001891023A0
+		private void SerializeKeyFrame(Keyframe keyframe, ref MemoryPackWriter writer) {} // 0x000000018B22C4C4-0x000000018B22C590
 		private void DeserializeKeyFrame(ref MemoryPackReader reader, out Keyframe keyframe) {
 			keyframe = default;
-		} // 0x000000018291ED00-0x000000018291EE20
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref AnimationCurve value) {} // 0x000000018291E620-0x000000018291EB80
+		} // 0x0000000184714950-0x0000000184714A70
+		public override void Deserialize(ref MemoryPackReader reader, ref AnimationCurve value) {} // 0x0000000184714270-0x00000001847147D0
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	internal sealed class GradientFormatter : MemoryPackFormatter<Gradient> // TypeDefIndex: 56268
+	internal sealed class GradientFormatter : MemoryPackFormatter<Gradient> // TypeDefIndex: 57269
 	{
 		// Constructors
-		public GradientFormatter() {} // 0x00000001829350E0-0x0000000182935110
+		public GradientFormatter() {} // 0x0000000184699DF0-0x0000000184699E20
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref Gradient value) {} // 0x00000001891051B0-0x000000018910530C
+		public override void Deserialize(ref MemoryPackReader reader, ref Gradient value) {} // 0x000000018B22F3A0-0x000000018B22F4FC
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	internal sealed class RectOffsetFormatter : MemoryPackFormatter<RectOffset> // TypeDefIndex: 56269
+	internal sealed class RectOffsetFormatter : MemoryPackFormatter<RectOffset> // TypeDefIndex: 57270
 	{
 		// Constructors
-		public RectOffsetFormatter() {} // 0x00000001829350B0-0x00000001829350E0
+		public RectOffsetFormatter() {} // 0x0000000184699DC0-0x0000000184699DF0
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref RectOffset value) {} // 0x000000018910B1C0-0x000000018910B314
+		public override void Deserialize(ref MemoryPackReader reader, ref RectOffset value) {} // 0x000000018B2353B0-0x000000018B235504
 	}
 }
 
 namespace MemoryPack.Compression
 {
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class BitPackFormatter : MemoryPackFormatter<bool[]> // TypeDefIndex: 56376
+	public sealed class BitPackFormatter : MemoryPackFormatter<bool[]> // TypeDefIndex: 57377
 	{
 		// Fields
 		public static readonly BitPackFormatter Default; // 0x00
 	
 		// Constructors
-		public BitPackFormatter() {} // 0x00000001891027E0-0x0000000189102808
-		static BitPackFormatter() {} // 0x0000000189102770-0x00000001891027E0
+		public BitPackFormatter() {} // 0x000000018B22C9D0-0x000000018B22C9F8
+		static BitPackFormatter() {} // 0x000000018B22C960-0x000000018B22C9D0
 	
 		// Methods
-		[NullableContext(2)]
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref bool[] value) {} // 0x00000001891025B0-0x0000000189102734
-		public bool Get(int data, int index) => default; // 0x0000000189102734-0x000000018910274C
-		public void Set(ref int data, int index, bool value) {} // 0x000000018910274C-0x0000000189102770
+		public override void Deserialize(ref MemoryPackReader reader, ref bool[] value) {} // 0x000000018B22C7A0-0x000000018B22C924
+		public bool Get(int data, int index) => default; // 0x000000018B22C924-0x000000018B22C93C
+		public void Set(ref int data, int index, bool value) {} // 0x000000018B22C93C-0x000000018B22C960
 	}
 
-	public class BrotliCompressor : IBufferWriter<byte>, IDisposable // TypeDefIndex: 56378
+	public class BrotliCompressor : IBufferWriter<byte>, IDisposable // TypeDefIndex: 57379
 	{
 		// Fields
-		[Nullable(2)]
 		private ReusableLinkedArrayBufferWriter bufferWriter; // 0x10
 		private readonly int quality; // 0x18
 		private readonly int window; // 0x1C
 	
+		// Nested types
+		private struct _CopyToAsync_d__11 : IAsyncStateMachine // TypeDefIndex: 57378
+		{
+			// Fields
+			public int __1__state; // 0x00
+			public AsyncValueTaskMethodBuilder __t__builder; // 0x08
+			public BrotliCompressor __4__this; // 0x28
+			public int bufferSize; // 0x30
+			public Stream stream; // 0x38
+			public CancellationToken cancellationToken; // 0x40
+			private BrotliEncoder _encoder_5__2; // 0x48
+			private byte[] _buffer_5__3; // 0x58
+			private ReusableLinkedArrayBufferWriter.Enumerator __7__wrap3; // 0x60
+			private Memory<byte> _source_5__5; // 0xA0
+			private OperationStatus _lastResult_5__6; // 0xB0
+			private int _bytesConsumed_5__7; // 0xB4
+			private ConfiguredValueTaskAwaitable.ConfiguredValueTaskAwaiter __u__1; // 0xB8
+	
+			// Methods
+			private void MoveNext() {} // 0x000000018B22DB48-0x000000018B22DB74
+			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x000000018B22DAA4-0x000000018B22DADC
+		}
+	
 		// Constructors
 		public BrotliCompressor() {} // Dummy constructor
-		public BrotliCompressor(CompressionLevel compressionLevel) {} // 0x0000000189103958-0x0000000189103984
-		public BrotliCompressor(CompressionLevel compressionLevel, int window) {} // 0x00000001891038B4-0x00000001891038EC
-		public BrotliCompressor(int quality = 1 /* Metadata: 0x01FD8019 */, int window = 22 /* Metadata: 0x01FD801A */) {} // 0x00000001891038EC-0x0000000189103958
+		public BrotliCompressor(CompressionLevel compressionLevel) {} // 0x000000018B22DADC-0x000000018B22DB48
+		public BrotliCompressor(CompressionLevel compressionLevel, int window) {} // 0x000000018B22D428-0x000000018B22D470
+		public BrotliCompressor(int quality = 1 /* Metadata: 0x0207D8C1 */, int window = 22 /* Metadata: 0x0207D8C2 */) {} // 0x000000018B22D470-0x000000018B22D4AC
 	
 		// Methods
-		void IBufferWriter<byte>.Advance(int count) {} // 0x0000000189103238-0x0000000189103280
-		Memory<byte> IBufferWriter<byte>.GetMemory(int sizeHint) => default; // 0x0000000189103280-0x00000001891032BC
-		Span<byte> IBufferWriter<byte>.GetSpan(int sizeHint) => default; // 0x00000001891032BC-0x0000000189103318
-		[NullableContext(1)]
-		public byte[] ToArray() => default; // 0x0000000189103374-0x00000001891038B4
-		[NullableContext(1)]
-		public void CopyTo([IsReadOnly] in IBufferWriter<byte> destBufferWriter) {} // 0x0000000189102C30-0x0000000189102F04
-		[NullableContext(1)]
-		public async ValueTask CopyToAsync(Stream stream, int bufferSize = 65535 /* Metadata: 0x01FD801B */, CancellationToken cancellationToken = default) => default; // 0x0000000189102B3C-0x0000000189102C30
-		public void CopyTo(ref MemoryPackWriter memoryPackWriter) {} // 0x0000000189102F04-0x00000001891031CC
-		private static int CompressCore(ref BrotliEncoder encoder, ReadOnlySpan<byte> source, [Nullable(1)] ref IBufferWriter<byte> destBufferWriter, int? initialLength, bool isFinalBlock) => default; // 0x0000000189102808-0x0000000189102988
-		private static int CompressCore(ref BrotliEncoder encoder, ReadOnlySpan<byte> source, ref MemoryPackWriter destBufferWriter, int? initialLength, bool isFinalBlock) => default; // 0x0000000189102988-0x0000000189102B3C
-		public void Dispose() {} // 0x00000001891031CC-0x0000000189103238
-		private void ThrowIfDisposed() {} // 0x0000000189103318-0x0000000189103374
+		void IBufferWriter<byte>.Advance(int count) {} // 0x000000018B22D4AC-0x000000018B22D508
+		Memory<byte> IBufferWriter<byte>.GetMemory(int sizeHint) => default; // 0x000000018B22D564-0x000000018B22DAA4
+		Span<byte> IBufferWriter<byte>.GetSpan(int sizeHint) => default; // 0x000000018B22CE20-0x000000018B22D0F4
+		public byte[] ToArray() => default; // 0x000000018B22CD2C-0x000000018B22CE20
+		public void CopyTo(in IBufferWriter<byte> destBufferWriter) {} // 0x000000018B22D0F4-0x000000018B22D3BC
+		public ValueTask CopyToAsync(Stream stream, int bufferSize = 65535 /* Metadata: 0x0207D8C3 */, CancellationToken cancellationToken = default) => default; // 0x000000018B22C9F8-0x000000018B22CB78
+		public void CopyTo(ref MemoryPackWriter memoryPackWriter) {} // 0x000000018B22CB78-0x000000018B22CD2C
+		private static int CompressCore(ref BrotliEncoder encoder, ReadOnlySpan<byte> source, ref IBufferWriter<byte> destBufferWriter, int? initialLength, bool isFinalBlock) => default; // 0x000000018B22D3BC-0x000000018B22D428
+		private static int CompressCore(ref BrotliEncoder encoder, ReadOnlySpan<byte> source, ref MemoryPackWriter destBufferWriter, int? initialLength, bool isFinalBlock) => default; // 0x000000018B22D508-0x000000018B22D564
+		public void Dispose() {} // 0x000000018B237A1C-0x000000018B23874C
+		private void ThrowIfDisposed() {} // 0x000000018B23874C-0x000000018B238758
 	}
 
-	internal static class BrotliUtils // TypeDefIndex: 56379
+	internal static class BrotliUtils // TypeDefIndex: 57380
 	{
 		// Fields
-		public const int WindowBits_Min = 10; // Metadata: 0x01FD801F
-		public const int WindowBits_Default = 22; // Metadata: 0x01FD8020
-		public const int WindowBits_Max = 24; // Metadata: 0x01FD8021
-		public const int Quality_Min = 0; // Metadata: 0x01FD8022
-		public const int Quality_Default = 4; // Metadata: 0x01FD8023
-		public const int Quality_Max = 11; // Metadata: 0x01FD8024
-		public const int MaxInputSize = 2147483132; // Metadata: 0x01FD8025
+		public const int WindowBits_Min = 10; // Metadata: 0x0207D8C7
+		public const int WindowBits_Default = 22; // Metadata: 0x0207D8C8
+		public const int WindowBits_Max = 24; // Metadata: 0x0207D8C9
+		public const int Quality_Min = 0; // Metadata: 0x0207D8CA
+		public const int Quality_Default = 4; // Metadata: 0x0207D8CB
+		public const int Quality_Max = 11; // Metadata: 0x0207D8CC
+		public const int MaxInputSize = 2147483132; // Metadata: 0x0207D8CD
 	
 		// Methods
-		internal static int GetQualityFromCompressionLevel(CompressionLevel compressionLevel) => default; // 0x0000000189104AB8-0x0000000189104B30
-		internal static int BrotliEncoderMaxCompressedSize(int input_size) => default; // 0x0000000189104A98-0x0000000189104AB8
+		internal static int GetQualityFromCompressionLevel(CompressionLevel compressionLevel) => default; // 0x000000018B22ECA8-0x000000018B22ED20
+		internal static int BrotliEncoderMaxCompressedSize(int input_size) => default; // 0x000000018B22EC88-0x000000018B22ECA8
 	}
 
-	public struct BrotliDecompressor : IDisposable // TypeDefIndex: 56380
+	public struct BrotliDecompressor : IDisposable // TypeDefIndex: 57381
 	{
 		// Fields
-		[Nullable(2)]
 		private ReusableReadOnlySequenceBuilder sequenceBuilder; // 0x00
 	
 		// Methods
-		public ReadOnlySequence<byte> Decompress(ReadOnlySpan<byte> compressedSpan) => default; // 0x0000000189104004-0x000000018910404C
+		public ReadOnlySequence<byte> Decompress(ReadOnlySpan<byte> compressedSpan) => default; // 0x000000018B22E1F4-0x000000018B22E23C
 		public ReadOnlySequence<byte> Decompress(ReadOnlySpan<byte> compressedSpan, out int consumed) {
 			consumed = default;
 			return default;
-		} // 0x0000000189103E94-0x0000000189104004
-		public ReadOnlySequence<byte> Decompress(ReadOnlySequence<byte> compressedSequence) => default; // 0x000000018910404C-0x00000001891040A0
+		} // 0x000000018B22E084-0x000000018B22E1F4
+		public ReadOnlySequence<byte> Decompress(ReadOnlySequence<byte> compressedSequence) => default; // 0x000000018B22E23C-0x000000018B22E290
 		public ReadOnlySequence<byte> Decompress(ReadOnlySequence<byte> compressedSequence, out int consumed) {
 			consumed = default;
 			return default;
-		} // 0x0000000189103BF0-0x0000000189103E94
+		} // 0x000000018B22DDE0-0x000000018B22E084
 		private void DecompressCore(ref OperationStatus status, ref BrotliDecoder decoder, ReadOnlySpan<byte> source, out int consumed) {
 			consumed = default;
-		} // 0x0000000189103984-0x0000000189103BF0
-		public void Dispose() {} // 0x00000001891040A0-0x0000000189104100
-		private int GetDoubleCapacity(int length) => default; // 0x0000000189104100-0x000000018910414C
+		} // 0x000000018B22DB74-0x000000018B22DDE0
+		public void Dispose() {} // 0x000000018B22E290-0x000000018B22E2F0
+		private int GetDoubleCapacity(int length) => default; // 0x000000018B22E2F0-0x000000018B22E33C
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class BrotliFormatter : MemoryPackFormatter<byte[]> // TypeDefIndex: 56381
+	public sealed class BrotliFormatter : MemoryPackFormatter<byte[]> // TypeDefIndex: 57382
 	{
 		// Fields
-		internal const int DefaultDecompssionSizeLimit = 134217728; // Metadata: 0x01FD802A
+		internal const int DefaultDecompssionSizeLimit = 134217728; // Metadata: 0x0207D8D2
 		public static readonly BrotliFormatter Default; // 0x00
 		private readonly CompressionLevel compressionLevel; // 0x10
 		private readonly int window; // 0x14
 		private readonly int decompressionSizeLimit; // 0x18
 	
 		// Constructors
-		public BrotliFormatter() {} // 0x0000000189104418-0x000000018910442C
-		public BrotliFormatter(CompressionLevel compressionLevel) {} // 0x0000000189104488-0x0000000189104498
-		public BrotliFormatter(CompressionLevel compressionLevel, int window) {} // 0x00000001891043F8-0x0000000189104418
-		public BrotliFormatter(CompressionLevel compressionLevel, int window, int decompressionSizeLimit) {} // 0x000000018910442C-0x0000000189104488
-		static BrotliFormatter() {} // 0x0000000189104388-0x00000001891043F8
+		public BrotliFormatter() {} // 0x000000018B22E608-0x000000018B22E61C
+		public BrotliFormatter(CompressionLevel compressionLevel) {} // 0x000000018B22E678-0x000000018B22E688
+		public BrotliFormatter(CompressionLevel compressionLevel, int window) {} // 0x000000018B22E5E8-0x000000018B22E608
+		public BrotliFormatter(CompressionLevel compressionLevel, int window, int decompressionSizeLimit) {} // 0x000000018B22E61C-0x000000018B22E678
+		static BrotliFormatter() {} // 0x000000018B22E578-0x000000018B22E5E8
 	
 		// Methods
-		[NullableContext(2)]
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref byte[] value) {} // 0x000000018910414C-0x0000000189104388
+		public override void Deserialize(ref MemoryPackReader reader, ref byte[] value) {} // 0x000000018B22E33C-0x000000018B22E578
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class BrotliFormatter<T> : MemoryPackFormatter<T> // TypeDefIndex: 56382
+	public sealed class BrotliFormatter<T> : MemoryPackFormatter<T> // TypeDefIndex: 57383
 	{
 		// Fields
-		internal const int DefaultDecompssionSizeLimit = 134217728; // Metadata: 0x01FD802E
-		[Nullable(1)]
+		internal const int DefaultDecompssionSizeLimit = 134217728; // Metadata: 0x0207D8D6
 		public static readonly BrotliFormatter Default;
 		private readonly CompressionLevel compressionLevel;
 		private readonly int window;
@@ -1798,235 +1669,169 @@ namespace MemoryPack.Compression
 		static BrotliFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ref T value) {}
 	}
 }
 
 namespace MemoryPack.Formatters
 {
-	[Nullable(new byte[3] {0, 1, 0 })]
-	[MemoryPack.Internal.Preserve]
-	public sealed class UnmanagedArrayFormatter<T> : MemoryPackFormatter<T[]> // TypeDefIndex: 56287
+	public sealed class UnmanagedArrayFormatter<T> : MemoryPackFormatter<T[]> // TypeDefIndex: 57288
 		where T : struct
 	{
 		// Constructors
 		public UnmanagedArrayFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[2] {2, 0 })] ref ref T[] value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ref T[] value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class DangerousUnmanagedArrayFormatter<T> : MemoryPackFormatter<T[]> // TypeDefIndex: 56288
+	public sealed class DangerousUnmanagedArrayFormatter<T> : MemoryPackFormatter<T[]> // TypeDefIndex: 57289
 	{
 		// Constructors
 		public DangerousUnmanagedArrayFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[2] {2, 1 })] ref ref T[] value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ref T[] value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ArrayFormatter<T> : MemoryPackFormatter<T[]> // TypeDefIndex: 56289
+	public sealed class ArrayFormatter<T> : MemoryPackFormatter<T[]> // TypeDefIndex: 57290
 	{
 		// Constructors
 		public ArrayFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ref T[] value) {}
 	}
 
-	[Nullable(new byte[3] {0, 0, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ArraySegmentFormatter<T> : MemoryPackFormatter<ArraySegment<T>> // TypeDefIndex: 56290
+	public sealed class ArraySegmentFormatter<T> : MemoryPackFormatter<ArraySegment<T>> // TypeDefIndex: 57291
 	{
 		// Constructors
 		public ArraySegmentFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[2] {0, 2 })] ref ArraySegment<T> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ArraySegment<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 0, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class MemoryFormatter<T> : MemoryPackFormatter<Memory<T>> // TypeDefIndex: 56291
+	public sealed class MemoryFormatter<T> : MemoryPackFormatter<Memory<T>> // TypeDefIndex: 57292
 	{
 		// Constructors
 		public MemoryFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[2] {0, 2 })] ref Memory<T> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref Memory<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 0, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ReadOnlyMemoryFormatter<T> : MemoryPackFormatter<ReadOnlyMemory<T>> // TypeDefIndex: 56292
+	public sealed class ReadOnlyMemoryFormatter<T> : MemoryPackFormatter<ReadOnlyMemory<T>> // TypeDefIndex: 57293
 	{
 		// Constructors
 		public ReadOnlyMemoryFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[2] {0, 2 })] ref ReadOnlyMemory<T> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ReadOnlyMemory<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 0, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ReadOnlySequenceFormatter<T> : MemoryPackFormatter<ReadOnlySequence<T>> // TypeDefIndex: 56293
+	public sealed class ReadOnlySequenceFormatter<T> : MemoryPackFormatter<ReadOnlySequence<T>> // TypeDefIndex: 57294
 	{
 		// Constructors
 		public ReadOnlySequenceFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[2] {0, 2 })] ref ReadOnlySequence<T> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ReadOnlySequence<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 0, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class MemoryPoolFormatter<T> : MemoryPackFormatter<Memory<T>> // TypeDefIndex: 56294
+	public sealed class MemoryPoolFormatter<T> : MemoryPackFormatter<Memory<T>> // TypeDefIndex: 57295
 	{
 		// Constructors
 		public MemoryPoolFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[2] {0, 2 })] ref Memory<T> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref Memory<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 0, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ReadOnlyMemoryPoolFormatter<T> : MemoryPackFormatter<ReadOnlyMemory<T>> // TypeDefIndex: 56295
+	public sealed class ReadOnlyMemoryPoolFormatter<T> : MemoryPackFormatter<ReadOnlyMemory<T>> // TypeDefIndex: 57296
 	{
 		// Constructors
 		public ReadOnlyMemoryPoolFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[2] {0, 2 })] ref ReadOnlyMemory<T> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ReadOnlyMemory<T> value) {}
 	}
 
-	[MemoryPack.Internal.Preserve]
-	public sealed class BigIntegerFormatter : MemoryPackFormatter<BigInteger> // TypeDefIndex: 56296
+	public sealed class BigIntegerFormatter : MemoryPackFormatter<BigInteger> // TypeDefIndex: 57297
 	{
 		// Constructors
-		public BigIntegerFormatter() {} // 0x0000000183D4A9A0-0x0000000183D4A9D0
+		public BigIntegerFormatter() {} // 0x0000000185FAB970-0x0000000185FAB9A0
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref BigInteger value) {} // 0x00000001891023A0-0x00000001891024C4
+		public override void Deserialize(ref MemoryPackReader reader, ref BigInteger value) {} // 0x000000018B22C590-0x000000018B22C6B4
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class BitArrayFormatter : MemoryPackFormatter<BitArray> // TypeDefIndex: 56297
+	public sealed class BitArrayFormatter : MemoryPackFormatter<BitArray> // TypeDefIndex: 57298
 	{
 		// Constructors
-		public BitArrayFormatter() {} // 0x0000000183D4A970-0x0000000183D4A9A0
+		public BitArrayFormatter() {} // 0x0000000185FAB940-0x0000000185FAB970
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref BitArray value) {} // 0x00000001891024C4-0x00000001891025B0
+		public override void Deserialize(ref MemoryPackReader reader, ref BitArray value) {} // 0x000000018B22C6B4-0x000000018B22C7A0
 	}
 
-	[MemoryPack.Internal.Preserve]
-	internal class BitArrayView // TypeDefIndex: 56298
+	internal class BitArrayView // TypeDefIndex: 57299
 	{
 		// Fields
-		[Nullable(1)]
 		public int[] m_array; // 0x10
 		public int m_length; // 0x18
 		public int _version; // 0x1C
 	
 		// Constructors
-		public BitArrayView() {} // 0x000000018350B670-0x000000018350B680
+		public BitArrayView() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[MemoryPack.Internal.Preserve]
-	public static class ListFormatter // TypeDefIndex: 56299
+	public static class ListFormatter // TypeDefIndex: 57300
 	{
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public static List<T> DeserializePackable<T>(ref MemoryPackReader reader)
 			where T : IMemoryPackable<T> => default;
-		[MemoryPack.Internal.Preserve]
-		public static void DeserializePackable<T>(ref MemoryPackReader reader, [Nullable(2)] ref List<T> value)
+		public static void DeserializePackable<T>(ref MemoryPackReader reader, ref List<T> value)
 			where T : IMemoryPackable<T> {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ListFormatter<T> : MemoryPackFormatter<List<T>> // TypeDefIndex: 56300
+	public sealed class ListFormatter<T> : MemoryPackFormatter<List<T>> // TypeDefIndex: 57301
 	{
 		// Constructors
 		public ListFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref List<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class StackFormatter<T> : MemoryPackFormatter<Stack<T>> // TypeDefIndex: 56301
+	public sealed class StackFormatter<T> : MemoryPackFormatter<Stack<T>> // TypeDefIndex: 57302
 	{
 		// Constructors
 		public StackFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref Stack<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class QueueFormatter<T> : MemoryPackFormatter<Queue<T>> // TypeDefIndex: 56302
+	public sealed class QueueFormatter<T> : MemoryPackFormatter<Queue<T>> // TypeDefIndex: 57303
 	{
 		// Constructors
 		public QueueFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref Queue<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class LinkedListFormatter<T> : MemoryPackFormatter<LinkedList<T>> // TypeDefIndex: 56303
+	public sealed class LinkedListFormatter<T> : MemoryPackFormatter<LinkedList<T>> // TypeDefIndex: 57304
 	{
 		// Constructors
 		public LinkedListFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref LinkedList<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class HashSetFormatter<T> : MemoryPackFormatter<HashSet<T>> // TypeDefIndex: 56304
+	public sealed class HashSetFormatter<T> : MemoryPackFormatter<HashSet<T>> // TypeDefIndex: 57305
 	{
 		// Fields
 		private readonly IEqualityComparer<T> equalityComparer;
@@ -2036,14 +1841,10 @@ namespace MemoryPack.Formatters
 		public HashSetFormatter(IEqualityComparer<T> equalityComparer) {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref HashSet<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class SortedSetFormatter<T> : MemoryPackFormatter<SortedSet<T>> // TypeDefIndex: 56305
+	public sealed class SortedSetFormatter<T> : MemoryPackFormatter<SortedSet<T>> // TypeDefIndex: 57306
 	{
 		// Fields
 		private readonly IComparer<T> comparer;
@@ -2053,441 +1854,337 @@ namespace MemoryPack.Formatters
 		public SortedSetFormatter(IComparer<T> comparer) {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref SortedSet<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class CollectionFormatter<T> : MemoryPackFormatter<Collection<T>> // TypeDefIndex: 56306
+	public sealed class CollectionFormatter<T> : MemoryPackFormatter<Collection<T>> // TypeDefIndex: 57307
 	{
 		// Constructors
 		public CollectionFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref Collection<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ObservableCollectionFormatter<T> : MemoryPackFormatter<ObservableCollection<T>> // TypeDefIndex: 56307
+	public sealed class ObservableCollectionFormatter<T> : MemoryPackFormatter<ObservableCollection<T>> // TypeDefIndex: 57308
 	{
 		// Constructors
 		public ObservableCollectionFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ObservableCollection<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ConcurrentQueueFormatter<T> : MemoryPackFormatter<ConcurrentQueue<T>> // TypeDefIndex: 56308
+	public sealed class ConcurrentQueueFormatter<T> : MemoryPackFormatter<ConcurrentQueue<T>> // TypeDefIndex: 57309
 	{
 		// Constructors
 		public ConcurrentQueueFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ConcurrentQueue<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ConcurrentStackFormatter<T> : MemoryPackFormatter<ConcurrentStack<T>> // TypeDefIndex: 56309
+	public sealed class ConcurrentStackFormatter<T> : MemoryPackFormatter<ConcurrentStack<T>> // TypeDefIndex: 57310
 	{
 		// Constructors
 		public ConcurrentStackFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ConcurrentStack<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ConcurrentBagFormatter<T> : MemoryPackFormatter<ConcurrentBag<T>> // TypeDefIndex: 56310
+	public sealed class ConcurrentBagFormatter<T> : MemoryPackFormatter<ConcurrentBag<T>> // TypeDefIndex: 57311
 	{
 		// Constructors
 		public ConcurrentBagFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ConcurrentBag<T> value) {}
 	}
 
-	[Nullable(new byte[4] {0, 1, 1, 2 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class DictionaryFormatter<TKey, TValue> : MemoryPackFormatter<Dictionary<TKey, TValue>> // TypeDefIndex: 56311
+	public sealed class DictionaryFormatter<TKey, TValue> : MemoryPackFormatter<Dictionary<TKey, TValue>> // TypeDefIndex: 57312
 	{
 		// Fields
-		[Nullable(new byte[2] {2, 1 })]
 		private readonly IEqualityComparer<TKey> equalityComparer;
 	
 		// Constructors
 		public DictionaryFormatter() {}
-		public DictionaryFormatter([Nullable(new byte[2] {2, 1 })] IEqualityComparer<TKey> equalityComparer) {}
+		public DictionaryFormatter(IEqualityComparer<TKey> equalityComparer) {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[3] {2, 1, 2 })] ref Dictionary<TKey, TValue> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref Dictionary<TKey, TValue> value) {}
 	}
 
-	[Nullable(new byte[4] {0, 1, 1, 2 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class SortedDictionaryFormatter<TKey, TValue> : MemoryPackFormatter<SortedDictionary<TKey, TValue>> // TypeDefIndex: 56312
+	public sealed class SortedDictionaryFormatter<TKey, TValue> : MemoryPackFormatter<SortedDictionary<TKey, TValue>> // TypeDefIndex: 57313
 	{
 		// Fields
-		[Nullable(new byte[2] {2, 1 })]
 		private readonly IComparer<TKey> comparer;
 	
 		// Constructors
 		public SortedDictionaryFormatter() {}
-		public SortedDictionaryFormatter([Nullable(new byte[2] {2, 1 })] IComparer<TKey> comparer) {}
+		public SortedDictionaryFormatter(IComparer<TKey> comparer) {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[3] {2, 1, 2 })] ref SortedDictionary<TKey, TValue> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref SortedDictionary<TKey, TValue> value) {}
 	}
 
-	[Nullable(new byte[4] {0, 1, 1, 2 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class SortedListFormatter<TKey, TValue> : MemoryPackFormatter<SortedList<TKey, TValue>> // TypeDefIndex: 56313
+	public sealed class SortedListFormatter<TKey, TValue> : MemoryPackFormatter<SortedList<TKey, TValue>> // TypeDefIndex: 57314
 	{
 		// Fields
-		[Nullable(new byte[2] {2, 1 })]
 		private readonly IComparer<TKey> comparer;
 	
 		// Constructors
 		public SortedListFormatter() {}
-		public SortedListFormatter([Nullable(new byte[2] {2, 1 })] IComparer<TKey> comparer) {}
+		public SortedListFormatter(IComparer<TKey> comparer) {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[3] {2, 1, 2 })] ref SortedList<TKey, TValue> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref SortedList<TKey, TValue> value) {}
 	}
 
-	[Nullable(new byte[4] {0, 1, 1, 2 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ConcurrentDictionaryFormatter<TKey, TValue> : MemoryPackFormatter<ConcurrentDictionary<TKey, TValue>> // TypeDefIndex: 56314
+	public sealed class ConcurrentDictionaryFormatter<TKey, TValue> : MemoryPackFormatter<ConcurrentDictionary<TKey, TValue>> // TypeDefIndex: 57315
 	{
 		// Fields
-		[Nullable(new byte[2] {2, 1 })]
 		private readonly IEqualityComparer<TKey> equalityComparer;
 	
 		// Constructors
 		public ConcurrentDictionaryFormatter() {}
-		public ConcurrentDictionaryFormatter([Nullable(new byte[2] {2, 1 })] IEqualityComparer<TKey> equalityComparer) {}
+		public ConcurrentDictionaryFormatter(IEqualityComparer<TKey> equalityComparer) {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[3] {2, 1, 2 })] ref ConcurrentDictionary<TKey, TValue> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ConcurrentDictionary<TKey, TValue> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ReadOnlyCollectionFormatter<T> : MemoryPackFormatter<ReadOnlyCollection<T>> // TypeDefIndex: 56315
+	public sealed class ReadOnlyCollectionFormatter<T> : MemoryPackFormatter<ReadOnlyCollection<T>> // TypeDefIndex: 57316
 	{
 		// Constructors
 		public ReadOnlyCollectionFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ReadOnlyCollection<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ReadOnlyObservableCollectionFormatter<T> : MemoryPackFormatter<ReadOnlyObservableCollection<T>> // TypeDefIndex: 56316
+	public sealed class ReadOnlyObservableCollectionFormatter<T> : MemoryPackFormatter<ReadOnlyObservableCollection<T>> // TypeDefIndex: 57317
 	{
 		// Constructors
 		public ReadOnlyObservableCollectionFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ReadOnlyObservableCollection<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class BlockingCollectionFormatter<T> : MemoryPackFormatter<BlockingCollection<T>> // TypeDefIndex: 56317
+	public sealed class BlockingCollectionFormatter<T> : MemoryPackFormatter<BlockingCollection<T>> // TypeDefIndex: 57318
 	{
 		// Constructors
 		public BlockingCollectionFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref BlockingCollection<T> value) {}
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class CultureInfoFormatter : MemoryPackFormatter<CultureInfo> // TypeDefIndex: 56318
+	public sealed class CultureInfoFormatter : MemoryPackFormatter<CultureInfo> // TypeDefIndex: 57319
 	{
 		// Constructors
-		public CultureInfoFormatter() {} // 0x0000000183D4A7C0-0x0000000183D4A7F0
+		public CultureInfoFormatter() {} // 0x0000000185FAB790-0x0000000185FAB7C0
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref CultureInfo value) {} // 0x0000000189104D48-0x0000000189104DC0
+		public override void Deserialize(ref MemoryPackReader reader, ref CultureInfo value) {} // 0x000000018B22EF38-0x000000018B22EFB0
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(1)]
-	public sealed class DynamicUnionFormatter<T> : MemoryPackFormatter<T> // TypeDefIndex: 56320
+	public sealed class DynamicUnionFormatter<T> : MemoryPackFormatter<T> // TypeDefIndex: 57321
 		where T : class
 	{
 		// Fields
 		private readonly Dictionary<System.Type, ushort> typeToTag;
 		private readonly Dictionary<ushort, System.Type> tagToType;
 	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 57320
+		{
+			// Fields
+			public static readonly __c<T> __9;
+			public static Func<ValueTuple<ushort, System.Type>, System.Type> __9__2_0;
+			public static Func<ValueTuple<ushort, System.Type>, ushort> __9__2_1;
+			public static Func<ValueTuple<ushort, System.Type>, ushort> __9__2_2;
+			public static Func<ValueTuple<ushort, System.Type>, System.Type> __9__2_3;
+	
+			// Constructors
+			static __c() {}
+			public __c() {}
+	
+			// Methods
+			internal System.Type _.ctor_b__2_0(ValueTuple<ushort, System.Type> x) => default;
+			internal ushort _.ctor_b__2_1(ValueTuple<ushort, System.Type> x) => default;
+			internal ushort _.ctor_b__2_2(ValueTuple<ushort, System.Type> x) => default;
+			internal System.Type _.ctor_b__2_3(ValueTuple<ushort, System.Type> x) => default;
+		}
+	
 		// Constructors
 		public DynamicUnionFormatter() {} // Dummy constructor
-		public DynamicUnionFormatter([Nullable(new byte[3] {1, 0, 1 })] params [TupleElementNames(new string[2] {"Tag", "Type" })] ValueTuple<ushort, System.Type>[] memoryPackUnions) {}
+		public DynamicUnionFormatter(ValueTuple<ushort, System.Type>[] memoryPackUnions) {}
 	
 		// Methods
-		[NullableContext(2)]
 		public override void Deserialize(ref MemoryPackReader reader, ref ref T value) {}
 	}
 
-	[Nullable(new byte[2] {0, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class GenericCollectionFormatter<TCollection, TElement> : MemoryPackFormatter<TCollection> // TypeDefIndex: 56321
+	public sealed class GenericCollectionFormatter<TCollection, TElement> : MemoryPackFormatter<TCollection> // TypeDefIndex: 57322
 		where TCollection : ICollection<TElement>, new()
 	{
 		// Constructors
 		public GenericCollectionFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ref TCollection value) {}
 	}
 
-	[Nullable(new byte[2] {0, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public abstract class GenericSetFormatterBase<TSet, TElement> : MemoryPackFormatter<TSet> // TypeDefIndex: 56322
+	public abstract class GenericSetFormatterBase<TSet, TElement> : MemoryPackFormatter<TSet> // TypeDefIndex: 57323
 		where TSet : ISet<TElement>
 	{
 		// Constructors
 		protected GenericSetFormatterBase() {}
 	
 		// Methods
-		[NullableContext(1)]
-		[MemoryPack.Internal.Preserve]
 		protected abstract TSet CreateSet();
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ref TSet value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 1 })]
-	[MemoryPack.Internal.Preserve]
-	public sealed class GenericSetFormatter<TSet, TElement> : GenericSetFormatterBase<TSet, TElement> // TypeDefIndex: 56323
+	public sealed class GenericSetFormatter<TSet, TElement> : GenericSetFormatterBase<TSet, TElement> // TypeDefIndex: 57324
 		where TSet : ISet<TElement>, new()
 	{
 		// Constructors
 		public GenericSetFormatter() {}
 	
 		// Methods
-		[NullableContext(1)]
 		protected override TSet CreateSet() => default;
 	}
 
-	[Nullable(new byte[2] {0, 2 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public abstract class GenericDictionaryFormatterBase<TDictionary, TKey, TValue> : MemoryPackFormatter<TDictionary> // TypeDefIndex: 56324
+	public abstract class GenericDictionaryFormatterBase<TDictionary, TKey, TValue> : MemoryPackFormatter<TDictionary> // TypeDefIndex: 57325
 		where TDictionary : IDictionary<TKey, TValue>
 	{
 		// Constructors
 		protected GenericDictionaryFormatterBase() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		protected abstract TDictionary CreateDictionary();
-		[NullableContext(2)]
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ref TDictionary value) {}
 	}
 
-	[Nullable(new byte[4] {0, 1, 1, 1 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class GenericDictionaryFormatter<TDictionary, TKey, TValue> : GenericDictionaryFormatterBase<TDictionary, TKey, TValue> // TypeDefIndex: 56325
+	public sealed class GenericDictionaryFormatter<TDictionary, TKey, TValue> : GenericDictionaryFormatterBase<TDictionary, TKey, TValue> // TypeDefIndex: 57326
 		where TDictionary : IDictionary<TKey, TValue>, new()
 	{
 		// Constructors
 		public GenericDictionaryFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		protected override TDictionary CreateDictionary() => default;
 	}
 
-	internal static class InterfaceCollectionFormatterUtils // TypeDefIndex: 56326
+	internal static class InterfaceCollectionFormatterUtils // TypeDefIndex: 57327
 	{
 		// Methods
-		[NullableContext(2)]
 		public static List<T> ReadList<T>(ref MemoryPackReader reader) => default;
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class InterfaceEnumerableFormatter<T> : MemoryPackFormatter<IEnumerable<T>> // TypeDefIndex: 56327
+	public sealed class InterfaceEnumerableFormatter<T> : MemoryPackFormatter<IEnumerable<T>> // TypeDefIndex: 57328
 	{
 		// Constructors
 		public InterfaceEnumerableFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref IEnumerable<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class InterfaceCollectionFormatter<T> : MemoryPackFormatter<ICollection<T>> // TypeDefIndex: 56328
+	public sealed class InterfaceCollectionFormatter<T> : MemoryPackFormatter<ICollection<T>> // TypeDefIndex: 57329
 	{
 		// Constructors
 		static InterfaceCollectionFormatter() {}
 		public InterfaceCollectionFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ICollection<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class InterfaceReadOnlyCollectionFormatter<T> : MemoryPackFormatter<IReadOnlyCollection<T>> // TypeDefIndex: 56329
+	public sealed class InterfaceReadOnlyCollectionFormatter<T> : MemoryPackFormatter<IReadOnlyCollection<T>> // TypeDefIndex: 57330
 	{
 		// Constructors
 		static InterfaceReadOnlyCollectionFormatter() {}
 		public InterfaceReadOnlyCollectionFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref IReadOnlyCollection<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class InterfaceListFormatter<T> : MemoryPackFormatter<IList<T>> // TypeDefIndex: 56330
+	public sealed class InterfaceListFormatter<T> : MemoryPackFormatter<IList<T>> // TypeDefIndex: 57331
 	{
 		// Constructors
 		static InterfaceListFormatter() {}
 		public InterfaceListFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref IList<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class InterfaceReadOnlyListFormatter<T> : MemoryPackFormatter<IReadOnlyList<T>> // TypeDefIndex: 56331
+	public sealed class InterfaceReadOnlyListFormatter<T> : MemoryPackFormatter<IReadOnlyList<T>> // TypeDefIndex: 57332
 	{
 		// Constructors
 		static InterfaceReadOnlyListFormatter() {}
 		public InterfaceReadOnlyListFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref IReadOnlyList<T> value) {}
 	}
 
-	[Nullable(new byte[4] {0, 1, 1, 2 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class InterfaceDictionaryFormatter<TKey, TValue> : MemoryPackFormatter<IDictionary<TKey, TValue>> // TypeDefIndex: 56332
+	public sealed class InterfaceDictionaryFormatter<TKey, TValue> : MemoryPackFormatter<IDictionary<TKey, TValue>> // TypeDefIndex: 57333
 	{
 		// Fields
-		[Nullable(new byte[2] {2, 1 })]
 		private readonly IEqualityComparer<TKey> equalityComparer;
 	
 		// Constructors
 		public InterfaceDictionaryFormatter() {}
-		public InterfaceDictionaryFormatter([Nullable(new byte[2] {2, 1 })] IEqualityComparer<TKey> equalityComparer) {}
+		public InterfaceDictionaryFormatter(IEqualityComparer<TKey> equalityComparer) {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[3] {2, 1, 2 })] ref IDictionary<TKey, TValue> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref IDictionary<TKey, TValue> value) {}
 	}
 
-	[Nullable(new byte[4] {0, 1, 1, 2 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class InterfaceReadOnlyDictionaryFormatter<TKey, TValue> : MemoryPackFormatter<IReadOnlyDictionary<TKey, TValue>> // TypeDefIndex: 56333
+	public sealed class InterfaceReadOnlyDictionaryFormatter<TKey, TValue> : MemoryPackFormatter<IReadOnlyDictionary<TKey, TValue>> // TypeDefIndex: 57334
 	{
 		// Fields
-		[Nullable(new byte[2] {2, 1 })]
 		private readonly IEqualityComparer<TKey> equalityComparer;
 	
 		// Constructors
 		public InterfaceReadOnlyDictionaryFormatter() {}
-		public InterfaceReadOnlyDictionaryFormatter([Nullable(new byte[2] {2, 1 })] IEqualityComparer<TKey> equalityComparer) {}
+		public InterfaceReadOnlyDictionaryFormatter(IEqualityComparer<TKey> equalityComparer) {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[3] {2, 1, 2 })] ref IReadOnlyDictionary<TKey, TValue> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref IReadOnlyDictionary<TKey, TValue> value) {}
 	}
 
-	[Nullable(new byte[4] {0, 1, 1, 1 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class InterfaceLookupFormatter<TKey, TElement> : MemoryPackFormatter<ILookup<TKey, TElement>> // TypeDefIndex: 56334
+	public sealed class InterfaceLookupFormatter<TKey, TElement> : MemoryPackFormatter<ILookup<TKey, TElement>> // TypeDefIndex: 57335
 	{
 		// Fields
-		[Nullable(new byte[2] {2, 1 })]
 		private readonly IEqualityComparer<TKey> equalityComparer;
 	
 		// Constructors
 		static InterfaceLookupFormatter() {}
 		public InterfaceLookupFormatter() {}
-		public InterfaceLookupFormatter([Nullable(new byte[2] {2, 1 })] IEqualityComparer<TKey> equalityComparer) {}
+		public InterfaceLookupFormatter(IEqualityComparer<TKey> equalityComparer) {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[3] {2, 1, 1 })] ref ILookup<TKey, TElement> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ILookup<TKey, TElement> value) {}
 	}
 
-	[Nullable(new byte[4] {0, 1, 1, 1 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class InterfaceGroupingFormatter<TKey, TElement> : MemoryPackFormatter<IGrouping<TKey, TElement>> // TypeDefIndex: 56335
+	public sealed class InterfaceGroupingFormatter<TKey, TElement> : MemoryPackFormatter<IGrouping<TKey, TElement>> // TypeDefIndex: 57336
 	{
 		// Constructors
 		static InterfaceGroupingFormatter() {}
 		public InterfaceGroupingFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[3] {2, 1, 1 })] ref IGrouping<TKey, TElement> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref IGrouping<TKey, TElement> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class InterfaceSetFormatter<T> : MemoryPackFormatter<ISet<T>> // TypeDefIndex: 56336
+	public sealed class InterfaceSetFormatter<T> : MemoryPackFormatter<ISet<T>> // TypeDefIndex: 57337
 	{
 		// Fields
 		private readonly IEqualityComparer<T> equalityComparer;
@@ -2498,14 +2195,10 @@ namespace MemoryPack.Formatters
 		public InterfaceSetFormatter(IEqualityComparer<T> equalityComparer) {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ISet<T> value) {}
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	internal sealed class Grouping<TKey, TElement> : IGrouping<TKey, TElement> // TypeDefIndex: 56337
+	internal sealed class Grouping<TKey, TElement> : IGrouping<TKey, TElement> // TypeDefIndex: 57338
 	{
 		// Fields
 		private readonly TKey key;
@@ -2523,10 +2216,7 @@ namespace MemoryPack.Formatters
 		IEnumerator IEnumerable.GetEnumerator() => default;
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	internal sealed class Lookup<TKey, TElement> : ILookup<TKey, TElement> // TypeDefIndex: 56338
+	internal sealed class Lookup<TKey, TElement> : ILookup<TKey, TElement> // TypeDefIndex: 57339
 	{
 		// Fields
 		private readonly Dictionary<TKey, IGrouping<TKey, TElement>> groupings;
@@ -2545,590 +2235,455 @@ namespace MemoryPack.Formatters
 		IEnumerator IEnumerable.GetEnumerator() => default;
 	}
 
-	[MemoryPack.Internal.Preserve]
-	public static class KeyValuePairFormatter // TypeDefIndex: 56339
+	public static class KeyValuePairFormatter // TypeDefIndex: 57340
 	{
 		// Methods
-		[NullableContext(2)]
-		[MemoryPack.Internal.Preserve]
-		public static void Deserialize<TKey, TValue>([Nullable(1)] IMemoryPackFormatter<TKey> keyFormatter, [Nullable(1)] IMemoryPackFormatter<TValue> valueFormatter, ref MemoryPackReader reader, out ref TKey key, out ref TValue value) {
+		public static void Deserialize<TKey, TValue>(IMemoryPackFormatter<TKey> keyFormatter, IMemoryPackFormatter<TValue> valueFormatter, ref MemoryPackReader reader, out ref TKey key, out ref TValue value) {
 			key = default;
 			value = default;
 		}
 	}
 
-	[Nullable(new byte[4] {0, 0, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class KeyValuePairFormatter<TKey, TValue> : MemoryPackFormatter<KeyValuePair<TKey, TValue>> // TypeDefIndex: 56340
+	public sealed class KeyValuePairFormatter<TKey, TValue> : MemoryPackFormatter<KeyValuePair<TKey, TValue>> // TypeDefIndex: 57341
 	{
 		// Constructors
 		public KeyValuePairFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[3] {0, 2, 2 })] ref KeyValuePair<TKey, TValue> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref KeyValuePair<TKey, TValue> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class LazyFormatter<T> : MemoryPackFormatter<Lazy<T>> // TypeDefIndex: 56341
+	public sealed class LazyFormatter<T> : MemoryPackFormatter<Lazy<T>> // TypeDefIndex: 57342
 	{
 		// Constructors
 		public LazyFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref Lazy<T> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class TwoDimensionalArrayFormatter<T> : MemoryPackFormatter<T[,]> // TypeDefIndex: 56342
+	public sealed class TwoDimensionalArrayFormatter<T> : MemoryPackFormatter<T[,]> // TypeDefIndex: 57343
 	{
 		// Constructors
 		public TwoDimensionalArrayFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ref T[,] value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ThreeDimensionalArrayFormatter<T> : MemoryPackFormatter<T[,,]> // TypeDefIndex: 56343
+	public sealed class ThreeDimensionalArrayFormatter<T> : MemoryPackFormatter<T[,,]> // TypeDefIndex: 57344
 	{
 		// Constructors
 		public ThreeDimensionalArrayFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ref T[,,] value) {}
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class FourDimensionalArrayFormatter<T> : MemoryPackFormatter<T[,,,]> // TypeDefIndex: 56344
+	public sealed class FourDimensionalArrayFormatter<T> : MemoryPackFormatter<T[,,,]> // TypeDefIndex: 57345
 	{
 		// Constructors
 		public FourDimensionalArrayFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ref T[,,,] value) {}
 	}
 
-	[MemoryPack.Internal.Preserve]
-	public sealed class NullableFormatter<T> : MemoryPackFormatter<T?> // TypeDefIndex: 56345
+	public sealed class NullableFormatter<T> : MemoryPackFormatter<T?> // TypeDefIndex: 57346
 		where T : struct
 	{
 		// Constructors
 		public NullableFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref T? value) {}
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class StringBuilderFormatter : MemoryPackFormatter<StringBuilder> // TypeDefIndex: 56346
+	public sealed class StringBuilderFormatter : MemoryPackFormatter<StringBuilder> // TypeDefIndex: 57347
 	{
 		// Constructors
-		public StringBuilderFormatter() {} // 0x0000000183D49F20-0x0000000183D49F50
+		public StringBuilderFormatter() {} // 0x0000000185FAAEF0-0x0000000185FAAF20
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref StringBuilder value) {} // 0x000000018910CD34-0x000000018910CEDC
+		public override void Deserialize(ref MemoryPackReader reader, ref StringBuilder value) {} // 0x000000018B236F24-0x000000018B2370CC
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class StringFormatter : MemoryPackFormatter<string> // TypeDefIndex: 56347
+	public sealed class StringFormatter : MemoryPackFormatter<string> // TypeDefIndex: 57348
 	{
 		// Fields
 		public static readonly StringFormatter Default; // 0x00
 	
 		// Constructors
-		public StringFormatter() {} // 0x0000000183CDCDC0-0x0000000183CDCDF0
-		static StringFormatter() {} // 0x0000000183CDCD50-0x0000000183CDCDC0
+		public StringFormatter() {} // 0x0000000185F36810-0x0000000185F36840
+		static StringFormatter() {} // 0x0000000185F367A0-0x0000000185F36810
 	
 		// Methods
-		[NullableContext(2)]
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref string value) {} // 0x0000000182538460-0x00000001825384C0
+		public override void Deserialize(ref MemoryPackReader reader, ref string value) {} // 0x000000018413F2F0-0x000000018413F350
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class Utf8StringFormatter : MemoryPackFormatter<string> // TypeDefIndex: 56348
+	public sealed class Utf8StringFormatter : MemoryPackFormatter<string> // TypeDefIndex: 57349
 	{
 		// Fields
 		public static readonly Utf8StringFormatter Default; // 0x00
 	
 		// Constructors
-		public Utf8StringFormatter() {} // 0x000000018910FFF4-0x000000018911001C
-		static Utf8StringFormatter() {} // 0x000000018910FF84-0x000000018910FFF4
+		public Utf8StringFormatter() {} // 0x000000018B23A1E4-0x000000018B23A20C
+		static Utf8StringFormatter() {} // 0x000000018B23A174-0x000000018B23A1E4
 	
 		// Methods
-		[NullableContext(2)]
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref string value) {} // 0x0000000185583170-0x0000000185583194
+		public override void Deserialize(ref MemoryPackReader reader, ref string value) {} // 0x0000000187784C8C-0x0000000187784CB0
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class Utf16StringFormatter : MemoryPackFormatter<string> // TypeDefIndex: 56349
+	public sealed class Utf16StringFormatter : MemoryPackFormatter<string> // TypeDefIndex: 57350
 	{
 		// Fields
 		public static readonly Utf16StringFormatter Default; // 0x00
 	
 		// Constructors
-		public Utf16StringFormatter() {} // 0x000000018910FF5C-0x000000018910FF84
-		static Utf16StringFormatter() {} // 0x000000018910FEEC-0x000000018910FF5C
+		public Utf16StringFormatter() {} // 0x000000018B23A14C-0x000000018B23A174
+		static Utf16StringFormatter() {} // 0x000000018B23A0DC-0x000000018B23A14C
 	
 		// Methods
-		[NullableContext(2)]
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref string value) {} // 0x0000000185583170-0x0000000185583194
+		public override void Deserialize(ref MemoryPackReader reader, ref string value) {} // 0x0000000187784C8C-0x0000000187784CB0
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class InternStringFormatter : MemoryPackFormatter<string> // TypeDefIndex: 56350
+	public sealed class InternStringFormatter : MemoryPackFormatter<string> // TypeDefIndex: 57351
 	{
 		// Fields
 		public static readonly InternStringFormatter Default; // 0x00
 	
 		// Constructors
-		public InternStringFormatter() {} // 0x00000001891053B8-0x00000001891053E0
-		static InternStringFormatter() {} // 0x0000000189105348-0x00000001891053B8
+		public InternStringFormatter() {} // 0x000000018B22F5A8-0x000000018B22F5D0
+		static InternStringFormatter() {} // 0x000000018B22F538-0x000000018B22F5A8
 	
 		// Methods
-		[NullableContext(2)]
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref string value) {} // 0x000000018910530C-0x0000000189105348
+		public override void Deserialize(ref MemoryPackReader reader, ref string value) {} // 0x000000018B22F4FC-0x000000018B22F538
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class BrotliStringFormatter : MemoryPackFormatter<string> // TypeDefIndex: 56352
+	public sealed class BrotliStringFormatter : MemoryPackFormatter<string> // TypeDefIndex: 57353
 	{
 		// Fields
-		[ThreadStatic]
 		private static StrongBox<int> threadStaticConsumedBox; // 0x80000000
-		internal const int DefaultDecompssionSizeLimit = 134217728; // Metadata: 0x01FD8015
-		[Nullable(1)]
+		internal const int DefaultDecompssionSizeLimit = 134217728; // Metadata: 0x0207D8BD
 		public static readonly BrotliStringFormatter Default; // 0x00
 		private readonly CompressionLevel compressionLevel; // 0x10
 		private readonly int window; // 0x14
 		private readonly int decompressionSizeLimit; // 0x18
 	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 57352
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static SpanAction<char, ValueTuple<IntPtr, int, int, StrongBox<int>>> __9__10_1; // 0x08
+			public static SpanAction<char, ValueTuple<ReadOnlySequence<byte>, long, int, StrongBox<int>>> __9__10_0; // 0x10
+	
+			// Constructors
+			static __c() {} // 0x000000018B22EC1C-0x000000018B22EC2C
+			public __c() {} // 0x000000018B22EBD0-0x000000018B22EBFC
+	
+			// Methods
+			internal void _Deserialize_b__10_1(Span<char> stringSpan, ValueTuple<IntPtr, int, int, StrongBox<int>> state) {} // 0x000000018B22EBFC-0x000000018B22EC1C
+			internal void _Deserialize_b__10_0(Span<char> stringSpan, ValueTuple<ReadOnlySequence<byte>, long, int, StrongBox<int>> state) {} // 0x000000018B22EC2C-0x000000018B22EC88
+		}
+	
 		// Constructors
-		public BrotliStringFormatter() {} // 0x0000000189104A2C-0x0000000189104A3C
-		public BrotliStringFormatter(CompressionLevel compressionLevel) {} // 0x00000001891049E0-0x0000000189104A0C
-		public BrotliStringFormatter(CompressionLevel compressionLevel, int window) {} // 0x0000000189104A0C-0x0000000189104A2C
-		public BrotliStringFormatter(CompressionLevel compressionLevel, int window, int decompressionSizeLimit) {} // 0x0000000189104A3C-0x0000000189104A98
-		static BrotliStringFormatter() {} // 0x0000000189104970-0x00000001891049E0
+		public BrotliStringFormatter() {} // 0x000000018B22E688-0x000000018B22EB60
+		public BrotliStringFormatter(CompressionLevel compressionLevel) {} // 0x000000018B22EB60-0x000000018B22EBD0
+		public BrotliStringFormatter(CompressionLevel compressionLevel, int window) {} // 0x000000018B239738-0x000000018B23979C
+		public BrotliStringFormatter(CompressionLevel compressionLevel, int window, int decompressionSizeLimit) {} // 0x0000000185492010-0x0000000185492020
+		static BrotliStringFormatter() {} // 0x000000018B2392B0-0x000000018B23955C
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref string value) {} // 0x0000000189104498-0x0000000189104970
+		public override void Deserialize(ref MemoryPackReader reader, ref string value) {} // 0x000000018B23955C-0x000000018B239738
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class TimeZoneInfoFormatter : MemoryPackFormatter<TimeZoneInfo> // TypeDefIndex: 56353
+	public sealed class TimeZoneInfoFormatter : MemoryPackFormatter<TimeZoneInfo> // TypeDefIndex: 57354
 	{
 		// Constructors
-		public TimeZoneInfoFormatter() {} // 0x0000000183D49EF0-0x0000000183D49F20
+		public TimeZoneInfoFormatter() {} // 0x0000000185FAAEC0-0x0000000185FAAEF0
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref TimeZoneInfo value) {} // 0x000000018910CEDC-0x000000018910CF54
+		public override void Deserialize(ref MemoryPackReader reader, ref TimeZoneInfo value) {} // 0x000000018B2370CC-0x000000018B237144
 	}
 
-	internal static class TupleFormatterTypes // TypeDefIndex: 56354
+	internal static class TupleFormatterTypes // TypeDefIndex: 57355
 	{
 		// Fields
-		[Nullable(1)]
 		public static readonly Dictionary<System.Type, System.Type> TupleFormatters; // 0x00
 	
 		// Constructors
-		static TupleFormatterTypes() {} // 0x000000018910CF54-0x000000018910D4DC
+		static TupleFormatterTypes() {} // 0x000000018B237144-0x000000018B2376CC
 	}
 
-	[Nullable(new byte[3] {0, 1, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class TupleFormatter<T1> : MemoryPackFormatter<Tuple<T1>> // TypeDefIndex: 56355
+	public sealed class TupleFormatter<T1> : MemoryPackFormatter<Tuple<T1>> // TypeDefIndex: 57356
 	{
 		// Constructors
 		public TupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref Tuple<T1> value) {}
 	}
 
-	[Nullable(new byte[4] {0, 1, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class TupleFormatter<T1, T2> : MemoryPackFormatter<Tuple<T1, T2>> // TypeDefIndex: 56356
+	public sealed class TupleFormatter<T1, T2> : MemoryPackFormatter<Tuple<T1, T2>> // TypeDefIndex: 57357
 	{
 		// Constructors
 		public TupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref Tuple<T1, T2> value) {}
 	}
 
-	[Nullable(new byte[5] {0, 1, 2, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class TupleFormatter<T1, T2, T3> : MemoryPackFormatter<Tuple<T1, T2, T3>> // TypeDefIndex: 56357
+	public sealed class TupleFormatter<T1, T2, T3> : MemoryPackFormatter<Tuple<T1, T2, T3>> // TypeDefIndex: 57358
 	{
 		// Constructors
 		public TupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref Tuple<T1, T2, T3> value) {}
 	}
 
-	[Nullable(new byte[6] {0, 1, 2, 2, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class TupleFormatter<T1, T2, T3, T4> : MemoryPackFormatter<Tuple<T1, T2, T3, T4>> // TypeDefIndex: 56358
+	public sealed class TupleFormatter<T1, T2, T3, T4> : MemoryPackFormatter<Tuple<T1, T2, T3, T4>> // TypeDefIndex: 57359
 	{
 		// Constructors
 		public TupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref Tuple<T1, T2, T3, T4> value) {}
 	}
 
-	[Nullable(new byte[7] {0, 1, 2, 2, 2, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class TupleFormatter<T1, T2, T3, T4, T5> : MemoryPackFormatter<Tuple<T1, T2, T3, T4, T5>> // TypeDefIndex: 56359
+	public sealed class TupleFormatter<T1, T2, T3, T4, T5> : MemoryPackFormatter<Tuple<T1, T2, T3, T4, T5>> // TypeDefIndex: 57360
 	{
 		// Constructors
 		public TupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref Tuple<T1, T2, T3, T4, T5> value) {}
 	}
 
-	[Nullable(new byte[8] {0, 1, 2, 2, 2, 2, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class TupleFormatter<T1, T2, T3, T4, T5, T6> : MemoryPackFormatter<Tuple<T1, T2, T3, T4, T5, T6>> // TypeDefIndex: 56360
+	public sealed class TupleFormatter<T1, T2, T3, T4, T5, T6> : MemoryPackFormatter<Tuple<T1, T2, T3, T4, T5, T6>> // TypeDefIndex: 57361
 	{
 		// Constructors
 		public TupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref Tuple<T1, T2, T3, T4, T5, T6> value) {}
 	}
 
-	[Nullable(new byte[9] {0, 1, 2, 2, 2, 2, 2, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class TupleFormatter<T1, T2, T3, T4, T5, T6, T7> : MemoryPackFormatter<Tuple<T1, T2, T3, T4, T5, T6, T7>> // TypeDefIndex: 56361
+	public sealed class TupleFormatter<T1, T2, T3, T4, T5, T6, T7> : MemoryPackFormatter<Tuple<T1, T2, T3, T4, T5, T6, T7>> // TypeDefIndex: 57362
 	{
 		// Constructors
 		public TupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref Tuple<T1, T2, T3, T4, T5, T6, T7> value) {}
 	}
 
-	[Nullable(new byte[10] {0, 1, 2, 2, 2, 2, 2, 2, 2, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class TupleFormatter<T1, T2, T3, T4, T5, T6, T7, TRest> : MemoryPackFormatter<Tuple<T1, T2, T3, T4, T5, T6, T7, TRest>> // TypeDefIndex: 56362
+	public sealed class TupleFormatter<T1, T2, T3, T4, T5, T6, T7, TRest> : MemoryPackFormatter<Tuple<T1, T2, T3, T4, T5, T6, T7, TRest>> // TypeDefIndex: 57363
 	{
 		// Constructors
 		public TupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[9] {2, 2, 2, 2, 2, 2, 2, 2, 1 })] ref Tuple<T1, T2, T3, T4, T5, T6, T7, TRest> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref Tuple<T1, T2, T3, T4, T5, T6, T7, TRest> value) {}
 	}
 
-	[Nullable(new byte[3] {0, 0, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ValueTupleFormatter<T1> : MemoryPackFormatter<ValueTuple<T1>> // TypeDefIndex: 56363
+	public sealed class ValueTupleFormatter<T1> : MemoryPackFormatter<ValueTuple<T1>> // TypeDefIndex: 57364
 	{
 		// Constructors
 		public ValueTupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[2] {0, 2 })] ref ValueTuple<T1> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ValueTuple<T1> value) {}
 	}
 
-	[Nullable(new byte[4] {0, 0, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ValueTupleFormatter<T1, T2> : MemoryPackFormatter<ValueTuple<T1, T2>> // TypeDefIndex: 56364
+	public sealed class ValueTupleFormatter<T1, T2> : MemoryPackFormatter<ValueTuple<T1, T2>> // TypeDefIndex: 57365
 	{
 		// Constructors
 		public ValueTupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[3] {0, 2, 2 })] ref ValueTuple<T1, T2> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ValueTuple<T1, T2> value) {}
 	}
 
-	[Nullable(new byte[5] {0, 0, 2, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ValueTupleFormatter<T1, T2, T3> : MemoryPackFormatter<ValueTuple<T1, T2, T3>> // TypeDefIndex: 56365
+	public sealed class ValueTupleFormatter<T1, T2, T3> : MemoryPackFormatter<ValueTuple<T1, T2, T3>> // TypeDefIndex: 57366
 	{
 		// Constructors
 		public ValueTupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[4] {0, 2, 2, 2 })] ref ValueTuple<T1, T2, T3> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ValueTuple<T1, T2, T3> value) {}
 	}
 
-	[Nullable(new byte[6] {0, 0, 2, 2, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ValueTupleFormatter<T1, T2, T3, T4> : MemoryPackFormatter<ValueTuple<T1, T2, T3, T4>> // TypeDefIndex: 56366
+	public sealed class ValueTupleFormatter<T1, T2, T3, T4> : MemoryPackFormatter<ValueTuple<T1, T2, T3, T4>> // TypeDefIndex: 57367
 	{
 		// Constructors
 		public ValueTupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[5] {0, 2, 2, 2, 2 })] ref ValueTuple<T1, T2, T3, T4> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ValueTuple<T1, T2, T3, T4> value) {}
 	}
 
-	[Nullable(new byte[7] {0, 0, 2, 2, 2, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ValueTupleFormatter<T1, T2, T3, T4, T5> : MemoryPackFormatter<ValueTuple<T1, T2, T3, T4, T5>> // TypeDefIndex: 56367
+	public sealed class ValueTupleFormatter<T1, T2, T3, T4, T5> : MemoryPackFormatter<ValueTuple<T1, T2, T3, T4, T5>> // TypeDefIndex: 57368
 	{
 		// Constructors
 		public ValueTupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[6] {0, 2, 2, 2, 2, 2 })] ref ValueTuple<T1, T2, T3, T4, T5> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ValueTuple<T1, T2, T3, T4, T5> value) {}
 	}
 
-	[Nullable(new byte[8] {0, 0, 2, 2, 2, 2, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ValueTupleFormatter<T1, T2, T3, T4, T5, T6> : MemoryPackFormatter<ValueTuple<T1, T2, T3, T4, T5, T6>> // TypeDefIndex: 56368
+	public sealed class ValueTupleFormatter<T1, T2, T3, T4, T5, T6> : MemoryPackFormatter<ValueTuple<T1, T2, T3, T4, T5, T6>> // TypeDefIndex: 57369
 	{
 		// Constructors
 		public ValueTupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[7] {0, 2, 2, 2, 2, 2, 2 })] ref ValueTuple<T1, T2, T3, T4, T5, T6> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ValueTuple<T1, T2, T3, T4, T5, T6> value) {}
 	}
 
-	[Nullable(new byte[9] {0, 0, 2, 2, 2, 2, 2, 2, 2 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ValueTupleFormatter<T1, T2, T3, T4, T5, T6, T7> : MemoryPackFormatter<ValueTuple<T1, T2, T3, T4, T5, T6, T7>> // TypeDefIndex: 56369
+	public sealed class ValueTupleFormatter<T1, T2, T3, T4, T5, T6, T7> : MemoryPackFormatter<ValueTuple<T1, T2, T3, T4, T5, T6, T7>> // TypeDefIndex: 57370
 	{
 		// Constructors
 		public ValueTupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[8] {0, 2, 2, 2, 2, 2, 2, 2 })] ref ValueTuple<T1, T2, T3, T4, T5, T6, T7> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ValueTuple<T1, T2, T3, T4, T5, T6, T7> value) {}
 	}
 
-	[Nullable(new byte[10] {0, 0, 2, 2, 2, 2, 2, 2, 2, 0 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class ValueTupleFormatter<T1, T2, T3, T4, T5, T6, T7, TRest> : MemoryPackFormatter<ValueTuple<T1, T2, T3, T4, T5, T6, T7, TRest>> // TypeDefIndex: 56370
+	public sealed class ValueTupleFormatter<T1, T2, T3, T4, T5, T6, T7, TRest> : MemoryPackFormatter<ValueTuple<T1, T2, T3, T4, T5, T6, T7, TRest>> // TypeDefIndex: 57371
 		where TRest : struct
 	{
 		// Constructors
 		public ValueTupleFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, [Nullable(new byte[9] {0, 2, 2, 2, 2, 2, 2, 2, 0 })] ref ValueTuple<T1, T2, T3, T4, T5, T6, T7, TRest> value) {}
+		public override void Deserialize(ref MemoryPackReader reader, ref ValueTuple<T1, T2, T3, T4, T5, T6, T7, TRest> value) {}
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(1)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class TypeFormatter : MemoryPackFormatter<System.Type> // TypeDefIndex: 56371
+	public sealed class TypeFormatter : MemoryPackFormatter<System.Type> // TypeDefIndex: 57372
 	{
 		// Fields
 		private static readonly Regex _shortTypeNameRegex; // 0x00
 	
 		// Constructors
-		public TypeFormatter() {} // 0x0000000183D49E90-0x0000000183D49EC0
-		static TypeFormatter() {} // 0x0000000183CC6FE0-0x0000000183CC7080
+		public TypeFormatter() {} // 0x0000000185FAAE60-0x0000000185FAAE90
+		static TypeFormatter() {} // 0x0000000185F208B0-0x0000000185F20950
 	
 		// Methods
-		private static Regex ShortTypeNameRegex() => default; // 0x000000018910D570-0x000000018910D5C0
-		[NullableContext(2)]
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref System.Type value) {} // 0x000000018910D4DC-0x000000018910D570
+		private static Regex ShortTypeNameRegex() => default; // 0x000000018B237760-0x000000018B2377B0
+		public override void Deserialize(ref MemoryPackReader reader, ref System.Type value) {} // 0x000000018B2376CC-0x000000018B237760
 	}
 
-	[MemoryPack.Internal.Preserve]
-	public sealed class UnmanagedFormatter<T> : MemoryPackFormatter<T> // TypeDefIndex: 56372
+	public sealed class UnmanagedFormatter<T> : MemoryPackFormatter<T> // TypeDefIndex: 57373
 		where T : struct
 	{
 		// Constructors
 		public UnmanagedFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ref T value) {}
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class DangerousUnmanagedFormatter<T> : MemoryPackFormatter<T> // TypeDefIndex: 56373
+	public sealed class DangerousUnmanagedFormatter<T> : MemoryPackFormatter<T> // TypeDefIndex: 57374
 	{
 		// Constructors
 		public DangerousUnmanagedFormatter() {}
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
 		public override void Deserialize(ref MemoryPackReader reader, ref ref T value) {}
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class UriFormatter : MemoryPackFormatter<System.Uri> // TypeDefIndex: 56374
+	public sealed class UriFormatter : MemoryPackFormatter<System.Uri> // TypeDefIndex: 57375
 	{
 		// Constructors
-		public UriFormatter() {} // 0x0000000183D49E60-0x0000000183D49E90
+		public UriFormatter() {} // 0x0000000185FAAE30-0x0000000185FAAE60
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref System.Uri value) {} // 0x000000018910FE60-0x000000018910FEEC
+		public override void Deserialize(ref MemoryPackReader reader, ref System.Uri value) {} // 0x000000018B23A050-0x000000018B23A0DC
 	}
 
-	[Nullable(new byte[2] {0, 1 })]
-	[NullableContext(2)]
-	[MemoryPack.Internal.Preserve]
-	public sealed class VersionFormatter : MemoryPackFormatter<System.Version> // TypeDefIndex: 56375
+	public sealed class VersionFormatter : MemoryPackFormatter<System.Version> // TypeDefIndex: 57376
 	{
 		// Constructors
-		public VersionFormatter() {} // 0x0000000183D49E00-0x0000000183D49E30
+		public VersionFormatter() {} // 0x0000000185FAADD0-0x0000000185FAAE00
 	
 		// Methods
-		[MemoryPack.Internal.Preserve]
-		public override void Deserialize(ref MemoryPackReader reader, ref System.Version value) {} // 0x000000018911001C-0x00000001891104D8
+		public override void Deserialize(ref MemoryPackReader reader, ref System.Version value) {} // 0x000000018B23A20C-0x000000018B23A6C8
 	}
 }
 
 namespace MemoryPack.Internal
 {
-	internal static class EnumerableExtensions // TypeDefIndex: 56270
+	internal static class EnumerableExtensions // TypeDefIndex: 57271
 	{
-		// Extension methods
-		[NullableContext(1)]
-		public static bool TryGetNonEnumeratedCountEx<T>(this IEnumerable<T> value, out int count) {
+		// Methods
+		public static bool TryGetNonEnumeratedCountEx<T>(IEnumerable<T> value, out int count) {
 			count = default;
 			return default;
 		}
 	}
 
-	internal struct FixedArrayBufferWriter : IBufferWriter<byte> // TypeDefIndex: 56271
+	internal struct FixedArrayBufferWriter : IBufferWriter<byte> // TypeDefIndex: 57272
 	{
 		// Fields
-		[Nullable(1)]
 		private byte[] buffer; // 0x00
 		private int written; // 0x08
 	
 		// Constructors
-		[NullableContext(1)]
 		public FixedArrayBufferWriter(byte[] buffer) {
 			this.buffer = default;
 			written = default;
-		} // 0x0000000184271F74-0x0000000184271F90
+		} // 0x000000018646FB84-0x000000018646FBA0
 	
 		// Methods
-		public void Advance(int count) {} // 0x0000000183D6E610-0x0000000183D6E620
-		public Memory<byte> GetMemory(int sizeHint = 0 /* Metadata: 0x01FD7FFF */) => default; // 0x000000018910507C-0x000000018910511C
-		public Span<byte> GetSpan(int sizeHint = 0 /* Metadata: 0x01FD8000 */) => default; // 0x000000018910511C-0x00000001891051B0
-		[NullableContext(1)]
-		public byte[] GetFilledBuffer() => default; // 0x000000018910502C-0x000000018910507C
+		public void Advance(int count) {} // 0x0000000185FCF250-0x0000000185FCF260
+		public Memory<byte> GetMemory(int sizeHint = 0 /* Metadata: 0x0207D8A7 */) => default; // 0x000000018B22F26C-0x000000018B22F30C
+		public Span<byte> GetSpan(int sizeHint = 0 /* Metadata: 0x0207D8A8 */) => default; // 0x000000018B22F30C-0x000000018B22F3A0
+		public byte[] GetFilledBuffer() => default; // 0x000000018B22F21C-0x000000018B22F26C
 	}
 
-	internal static class MathEx // TypeDefIndex: 56272
+	internal static class MathEx // TypeDefIndex: 57273
 	{
 		// Fields
-		private const int ArrayMexLength = 2147483591; // Metadata: 0x01FD8001
+		private const int ArrayMexLength = 2147483591; // Metadata: 0x0207D8A9
 	
 		// Methods
-		public static int NewArrayCapacity(int size) => default; // 0x00000001891053E0-0x00000001891053F0
+		public static int NewArrayCapacity(int size) => default; // 0x000000018B22F5D0-0x000000018B22F5E0
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	internal static class MemoryMarshalEx // TypeDefIndex: 56273
+	internal static class MemoryMarshalEx // TypeDefIndex: 57274
 	{
 		// Methods
 		public static ref ref T GetArrayDataReference<T>(T[] array) => ref _refReturnTypeForGetArrayDataReference;
 		private ref T _refReturnTypeForGetArrayDataReference; // Dummy field
-		public static T[] AllocateUninitializedArray<T>(int length, bool pinned = false /* Metadata: 0x01FD8006 */) => default;
+		public static T[] AllocateUninitializedArray<T>(int length, bool pinned = false /* Metadata: 0x0207D8AE */) => default;
 	}
 
-	public sealed class PreserveAttribute : Attribute // TypeDefIndex: 56274
+	public sealed class PreserveAttribute : Attribute // TypeDefIndex: 57275
 	{
 		// Constructors
-		public PreserveAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public PreserveAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	public static class ReusableLinkedArrayBufferWriterPool // TypeDefIndex: 56275
+	public static class ReusableLinkedArrayBufferWriterPool // TypeDefIndex: 57276
 	{
 		// Fields
 		private static readonly ConcurrentQueue<ReusableLinkedArrayBufferWriter> queue; // 0x00
 	
 		// Constructors
-		static ReusableLinkedArrayBufferWriterPool() {} // 0x000000018910B4F8-0x000000018910B584
+		static ReusableLinkedArrayBufferWriterPool() {} // 0x000000018B2356E8-0x000000018B235774
 	
 		// Methods
-		public static ReusableLinkedArrayBufferWriter Rent() => default; // 0x000000018910B3C8-0x000000018910B47C
-		public static void Return(ReusableLinkedArrayBufferWriter writer) {} // 0x000000018910B47C-0x000000018910B4F8
+		public static ReusableLinkedArrayBufferWriter Rent() => default; // 0x000000018B2355B8-0x000000018B23566C
+		public static void Return(ReusableLinkedArrayBufferWriter writer) {} // 0x000000018B23566C-0x000000018B2356E8
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	public sealed class ReusableLinkedArrayBufferWriter : IBufferWriter<byte> // TypeDefIndex: 56279
+	public sealed class ReusableLinkedArrayBufferWriter : IBufferWriter<byte> // TypeDefIndex: 57280
 	{
 		// Fields
-		private const int InitialBufferSize = 262144; // Metadata: 0x01FD8009
+		private const int InitialBufferSize = 262144; // Metadata: 0x0207D8B1
 		private static readonly byte[] noUseFirstBufferSentinel; // 0x00
 		private List<BufferSegment> buffers; // 0x10
 		private byte[] firstBuffer; // 0x18
@@ -3138,27 +2693,24 @@ namespace MemoryPack.Internal
 		private int totalWritten; // 0x3C
 	
 		// Properties
-		public int TotalWritten { get => default; } // 0x0000000183D4ED90-0x0000000183D4EDA0 
-		private bool UseFirstBuffer { get => default; } // 0x000000018910C200-0x000000018910C250 
+		public int TotalWritten { get => default; } // 0x000000018B235F4C-0x000000018B236288 
+		private bool UseFirstBuffer { get => default; } // 0x000000018B235E68-0x000000018B235F4C 
 	
 		// Nested types
-		[NullableContext(0)]
-		public struct Enumerator : IEnumerator<Memory<byte>> // TypeDefIndex: 56277
+		public struct Enumerator : IEnumerator<Memory<byte>> // TypeDefIndex: 57278
 		{
 			// Fields
-			[Nullable(1)]
 			private ReusableLinkedArrayBufferWriter parent; // 0x00
 			private State state; // 0x08
 			private Memory<byte> current; // 0x10
 			private List<BufferSegment> buffersEnumerator; // 0x20
 	
 			// Properties
-			public Memory<byte> Current { get => default; } // 0x00000001820B7B30-0x00000001820B7B40 
-			[Nullable(1)]
-			object IEnumerator.Current { [NullableContext(1)] get => default; } // 0x0000000189104F80-0x0000000189104FCC 
+			public Memory<byte> Current { get => default; } // 0x000000018B2363F0-0x000000018B236440 
+			object IEnumerator.Current { get => default; } // 0x000000018B2362EC-0x000000018B2363F0 
 	
 			// Nested types
-			private enum State // TypeDefIndex: 56276
+			private enum State // TypeDefIndex: 57277
 			{
 				FirstBuffer = 0,
 				BuffersInit = 1,
@@ -3168,127 +2720,133 @@ namespace MemoryPack.Internal
 			}
 	
 			// Constructors
-			[NullableContext(1)]
 			public Enumerator(ReusableLinkedArrayBufferWriter parent) : this() {
 				this.parent = default;
 				state = default;
 				current = default;
 				buffersEnumerator = default;
-			} // 0x0000000189104FCC-0x0000000189105000
+			} // 0x0000000185FB0790-0x0000000185FB07A0
 	
 			// Methods
-			public void Dispose() {} // 0x000000018350B670-0x000000018350B680
-			public bool MoveNext() => default; // 0x0000000189104DC0-0x0000000189104F34
-			public void Reset() {} // 0x0000000189104F34-0x0000000189104F80
+			public void Dispose() {} // 0x0000000181377E40-0x0000000181377E50
+			public bool MoveNext() => default; // 0x000000018B2357C0-0x000000018B23580C
+			public void Reset() {} // 0x000000018B23580C-0x000000018B235950
+		}
+	
+		private struct _WriteToAndResetAsync_d__19 : IAsyncStateMachine // TypeDefIndex: 57279
+		{
+			// Fields
+			public int __1__state; // 0x00
+			public AsyncValueTaskMethodBuilder __t__builder; // 0x08
+			public ReusableLinkedArrayBufferWriter __4__this; // 0x28
+			public Stream stream; // 0x30
+			public CancellationToken cancellationToken; // 0x38
+			private ConfiguredValueTaskAwaitable.ConfiguredValueTaskAwaiter __u__1; // 0x40
+			private List<BufferSegment> __7__wrap1; // 0x50
+			private BufferSegment _item_5__3; // 0x70
+	
+			// Methods
+			private void MoveNext() {} // 0x000000018B235774-0x000000018B235794
+			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x000000018B235AFC-0x000000018B235E68
 		}
 	
 		// Constructors
 		public ReusableLinkedArrayBufferWriter() {} // Dummy constructor
-		public ReusableLinkedArrayBufferWriter(bool useFirstBuffer, bool pinned) {} // 0x000000018910C0FC-0x000000018910C200
-		static ReusableLinkedArrayBufferWriter() {} // 0x000000018910C098-0x000000018910C0FC
+		public ReusableLinkedArrayBufferWriter(bool useFirstBuffer, bool pinned) {} // 0x000000018B235794-0x000000018B2357C0
+		static ReusableLinkedArrayBufferWriter() {} // 0x000000018B23874C-0x000000018B238758
 	
 		// Methods
-		public byte[] DangerousGetFirstBuffer() => default; // 0x0000000181041090-0x00000001810410A0
-		[NullableContext(0)]
-		public Memory<byte> GetMemory(int sizeHint = 0 /* Metadata: 0x01FD8007 */) => default; // 0x000000018910B5D0-0x000000018910B61C
-		[NullableContext(0)]
-		public Span<byte> GetSpan(int sizeHint = 0 /* Metadata: 0x01FD8008 */) => default; // 0x000000018910B61C-0x000000018910B760
-		public void Advance(int count) {} // 0x000000018910B584-0x000000018910B5A4
-		public byte[] ToArrayAndReset() => default; // 0x000000018910B90C-0x000000018910BC78
-		public void WriteToAndReset(ref MemoryPackWriter writer) {} // 0x000000018910BD5C-0x000000018910C098
-		public async ValueTask WriteToAndResetAsync(Stream stream, CancellationToken cancellationToken) => default; // 0x000000018910BC78-0x000000018910BD5C
-		public Enumerator GetEnumerator() => default; // 0x000000018910B5A4-0x000000018910B5D0
-		private void ResetCore() {} // 0x000000018910B760-0x000000018910B7BC
-		public void Reset() {} // 0x000000018910B7BC-0x000000018910B90C
+		public byte[] DangerousGetFirstBuffer() => default; // 0x000000018B235950-0x000000018B2359AC
+		public Memory<byte> GetMemory(int sizeHint = 0 /* Metadata: 0x0207D8AF */) => default; // 0x000000018B2359AC-0x000000018B235AFC
+		public Span<byte> GetSpan(int sizeHint = 0 /* Metadata: 0x0207D8B0 */) => default; // 0x000000018B236288-0x000000018B2362EC
+		public void Advance(int count) {} // 0x000000018B22F1BC-0x000000018B22F1F0
+		public byte[] ToArrayAndReset() => default; // 0x00000001834A7540-0x00000001834A7550
+		public void WriteToAndReset(ref MemoryPackWriter writer) {} // 0x000000018B22F170-0x000000018B22F1BC
+		public ValueTask WriteToAndResetAsync(Stream stream, CancellationToken cancellationToken) => default; // 0x0000000185492010-0x0000000185492020
+		public Enumerator GetEnumerator() => default; // 0x000000018B22EFB0-0x000000018B22F124
+		private void ResetCore() {} // 0x000000018B22F124-0x000000018B22F170
+		public void Reset() {} // 0x000000018B23979C-0x000000018B23A050
 	}
 
-	internal struct BufferSegment // TypeDefIndex: 56280
+	internal struct BufferSegment // TypeDefIndex: 57281
 	{
 		// Fields
-		[Nullable(1)]
 		private byte[] buffer; // 0x00
 		private int written; // 0x08
 	
 		// Properties
-		public bool IsNull { get => default; } // 0x0000000182361C20-0x0000000182361C30 
-		public int WrittenCount { get => default; } // 0x0000000183D516F0-0x0000000183D51700 
-		public Span<byte> WrittenBuffer { get => default; } // 0x0000000189104C80-0x0000000189104CE4 
-		public Memory<byte> WrittenMemory { get => default; } // 0x0000000189104CE4-0x0000000189104D48 
-		public Span<byte> FreeBuffer { get => default; } // 0x0000000189104C2C-0x0000000189104C80 
+		public bool IsNull { get => default; } // 0x000000018402E460-0x000000018402E470 
+		public int WrittenCount { get => default; } // 0x0000000181B7E450-0x0000000181B7E460 
+		public Span<byte> WrittenBuffer { get => default; } // 0x000000018B22EE70-0x000000018B22EED4 
+		public Memory<byte> WrittenMemory { get => default; } // 0x000000018B22EED4-0x000000018B22EF38 
+		public Span<byte> FreeBuffer { get => default; } // 0x000000018B22EE1C-0x000000018B22EE70 
 	
 		// Constructors
 		public BufferSegment(int size) : this() {
 			buffer = default;
 			written = default;
-		} // 0x0000000189104BAC-0x0000000189104C2C
+		} // 0x000000018B22ED9C-0x000000018B22EE1C
 	
 		// Methods
-		public void Advance(int count) {} // 0x0000000183D6E610-0x0000000183D6E620
-		public void Clear() {} // 0x0000000189104B30-0x0000000189104BAC
+		public void Advance(int count) {} // 0x0000000185FCF250-0x0000000185FCF260
+		public void Clear() {} // 0x000000018B22ED20-0x000000018B22ED9C
 	}
 
-	[Nullable(0)]
-	[NullableContext(1)]
-	internal static class ReusableReadOnlySequenceBuilderPool // TypeDefIndex: 56281
+	internal static class ReusableReadOnlySequenceBuilderPool // TypeDefIndex: 57282
 	{
 		// Fields
 		private static readonly ConcurrentQueue<ReusableReadOnlySequenceBuilder> queue; // 0x00
 	
 		// Constructors
-		static ReusableReadOnlySequenceBuilderPool() {} // 0x000000018910C378-0x000000018910C404
+		static ReusableReadOnlySequenceBuilderPool() {} // 0x000000018B236568-0x000000018B2365F4
 	
 		// Methods
-		public static ReusableReadOnlySequenceBuilder Rent() => default; // 0x000000018910C250-0x000000018910C2FC
-		public static void Return(ReusableReadOnlySequenceBuilder builder) {} // 0x000000018910C2FC-0x000000018910C378
+		public static ReusableReadOnlySequenceBuilder Rent() => default; // 0x000000018B236440-0x000000018B2364EC
+		public static void Return(ReusableReadOnlySequenceBuilder builder) {} // 0x000000018B2364EC-0x000000018B236568
 	}
 
-	internal sealed class ReusableReadOnlySequenceBuilder // TypeDefIndex: 56283
+	internal sealed class ReusableReadOnlySequenceBuilder // TypeDefIndex: 57284
 	{
 		// Fields
-		[Nullable(1)]
 		private readonly Stack<Segment> segmentPool; // 0x10
-		[Nullable(1)]
 		private readonly List<Segment> list; // 0x18
 	
 		// Nested types
-		private class Segment : ReadOnlySequenceSegment<byte> // TypeDefIndex: 56282
+		private class Segment : ReadOnlySequenceSegment<byte> // TypeDefIndex: 57283
 		{
 			// Fields
 			private bool returnToPool; // 0x30
 	
 			// Constructors
-			public Segment() {} // 0x000000018910CC04-0x000000018910CC3C
+			public Segment() {} // 0x000000018B236B38-0x000000018B236BF8
 	
 			// Methods
-			public void SetBuffer(ReadOnlyMemory<byte> buffer, bool returnToPool) {} // 0x000000018910CB48-0x000000018910CBA4
-			public void Reset() {} // 0x000000018910CA08-0x000000018910CB48
-			[NullableContext(2)]
-			public void SetRunningIndexAndNext(long runningIndex, Segment nextSegment) {} // 0x000000018910CBA4-0x000000018910CC04
+			public void SetBuffer(ReadOnlyMemory<byte> buffer, bool returnToPool) {} // 0x000000018B2365F4-0x000000018B2366F0
+			public void Reset() {} // 0x000000018B236A9C-0x000000018B236B38
+			public void SetRunningIndexAndNext(long runningIndex, Segment nextSegment) {} // 0x000000018B2366F0-0x000000018B236924
 		}
 	
 		// Constructors
-		public ReusableReadOnlySequenceBuilder() {} // 0x000000018910C948-0x000000018910CA08
+		public ReusableReadOnlySequenceBuilder() {} // 0x000000018B236924-0x000000018B236A9C
 	
 		// Methods
-		public void Add(ReadOnlyMemory<byte> buffer, bool returnToPool) {} // 0x000000018910C404-0x000000018910C500
+		public void Add(ReadOnlyMemory<byte> buffer, bool returnToPool) {} // 0x000000018B236DF4-0x000000018B236E2C
 		public bool TryGetSingleMemory(out ReadOnlyMemory<byte> memory) {
 			memory = default;
 			return default;
-		} // 0x000000018910C8AC-0x000000018910C948
-		public ReadOnlySequence<byte> Build() => default; // 0x000000018910C500-0x000000018910C734
-		public void Reset() {} // 0x000000018910C734-0x000000018910C8AC
+		} // 0x000000018B236D38-0x000000018B236D94
+		public ReadOnlySequence<byte> Build() => default; // 0x000000018B236BF8-0x000000018B236D38
+		public void Reset() {} // 0x000000018B236D94-0x000000018B236DF4
 	}
 
-	internal static class TypeHelpers // TypeDefIndex: 56286
+	internal static class TypeHelpers // TypeDefIndex: 57287
 	{
 		// Fields
-		[Nullable(1)]
 		private static readonly MethodInfo isReferenceOrContainsReferences; // 0x00
-		[Nullable(1)]
 		private static readonly MethodInfo unsafeSizeOf; // 0x08
 	
 		// Nested types
-		private static class Cache<T> // TypeDefIndex: 56284
+		private static class Cache<T> // TypeDefIndex: 57285
 		{
 			// Fields
 			public static bool IsReferenceOrNullable;
@@ -3301,7 +2859,7 @@ namespace MemoryPack.Internal
 			static Cache() {}
 		}
 	
-		internal enum TypeKind : byte // TypeDefIndex: 56285
+		internal enum TypeKind : byte // TypeDefIndex: 57286
 		{
 			None = 0,
 			UnmanagedSZArray = 1,
@@ -3309,26 +2867,59 @@ namespace MemoryPack.Internal
 		}
 	
 		// Constructors
-		static TypeHelpers() {} // 0x000000018910D718-0x000000018910D82C
+		static TypeHelpers() {}
 	
 		// Methods
-		[NullableContext(2)]
 		public static bool IsReferenceOrNullable<T>() => default;
-		[NullableContext(2)]
 		public static TypeKind TryGetUnmanagedSZArrayElementSizeOrMemoryPackableFixedSize<T>(out int size) {
 			size = default;
 			return default;
-		}
-		[NullableContext(1)]
-		public static bool IsAnonymous(System.Type type) => default; // 0x000000018910D5C0-0x000000018910D718
+		} // 0x000000018B2377B0-0x000000018B237908
+		public static bool IsAnonymous(System.Type type) => default; // 0x000000018B237908-0x000000018B237A1C
+	}
+}
+
+namespace Microsoft.CodeAnalysis
+{
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 57221
+	{
+		// Constructors
+		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }
 
 namespace System.Runtime.CompilerServices
 {
-	internal sealed class IsExternalInit // TypeDefIndex: 56225
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 57222
 	{
 		// Constructors
-		public IsExternalInit() {} // 0x000000018350B670-0x000000018350B680
+		public IsUnmanagedAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+
+	internal sealed class NullableAttribute : Attribute // TypeDefIndex: 57223
+	{
+		// Fields
+		public readonly byte[] NullableFlags; // 0x10
+	
+		// Constructors
+		public NullableAttribute() {} // Dummy constructor
+		public NullableAttribute(byte param_00078b15) {} // 0x000000018509B960-0x000000018509B9D0
+		public NullableAttribute(byte[] param_00078b16) {} // 0x0000000184096E30-0x0000000184096EF0
+	}
+
+	internal sealed class NullableContextAttribute : Attribute // TypeDefIndex: 57224
+	{
+		// Fields
+		public readonly byte Flag; // 0x10
+	
+		// Constructors
+		public NullableContextAttribute() {} // Dummy constructor
+		public NullableContextAttribute(byte param_00078b17) {} // 0x000000018184FBD0-0x000000018184FBE0
+	}
+
+	internal sealed class IsExternalInit // TypeDefIndex: 57226
+	{
+		// Constructors
+		public IsExternalInit() {} // 0x0000000185492010-0x0000000185492020
 	}
 }

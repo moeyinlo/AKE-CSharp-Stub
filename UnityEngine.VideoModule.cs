@@ -3,224 +3,50 @@
  */
 
 using System;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Bindings;
 using UnityEngine.Playables;
-using UnityEngine.Scripting;
 
-// Image 108: UnityEngine.VideoModule.dll - Assembly: UnityEngine.VideoModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59780-59794
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
-[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
-[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
-[assembly: InternalsVisibleTo("VideoTesting")]
-[assembly: InternalsVisibleTo("Unity.Audio.DSPGraph")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
-[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
-[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
-[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
-[assembly: InternalsVisibleTo("Unity.Core")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
-[assembly: InternalsVisibleTo("UnityEngine")]
-[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
-[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
-[assembly: InternalsVisibleTo("Unity.Audio.DSPGraph.Tests")]
-[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.Collections")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
-[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
-[assembly: InternalsVisibleTo("Unity.Timeline")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
-[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
-[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
-[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
-[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
-[assembly: InternalsVisibleTo("Unity.UIElements")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
-[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
-[assembly: InternalsVisibleTo("UnityEngine.UI")]
-[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
-[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
-[assembly: InternalsVisibleTo("Unity.Services.QoS")]
-[assembly: InternalsVisibleTo("Unity.Logging")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
-[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Networking")]
-[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
-[assembly: InternalsVisibleTo("Unity.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
-[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
-[assembly: InternalsVisibleTo("Unity.Burst")]
-[assembly: InternalsVisibleTo("Unity.Automation")]
-[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
-[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
-[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
-[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
-[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
-[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: UnityEngineModuleAssembly]
+// Image 111: UnityEngine.VideoModule.dll - Assembly: UnityEngine.VideoModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60884-60898
 
 namespace UnityEngine.Experimental.Video
 {
-	[NativeHeader("Modules/Video/Public/Director/VideoClipPlayable.h")]
-	[NativeHeader("Runtime/Director/Core/HPlayable.h")]
-	[NativeHeader("Modules/Video/Public/VideoClip.h")]
-	[NativeHeader("Modules/Video/Public/ScriptBindings/VideoClipPlayable.bindings.h")]
-	[RequiredByNativeCode]
-	[StaticAccessor("VideoClipPlayableBindings", StaticAccessorType.DoubleColon)]
-	public struct VideoClipPlayable : IPlayable, IEquatable<VideoClipPlayable> // TypeDefIndex: 59781
+	public struct VideoClipPlayable : IPlayable, IEquatable<VideoClipPlayable> // TypeDefIndex: 60885
 	{
 		// Fields
 		private PlayableHandle m_Handle; // 0x00
 	
 		// Methods
-		public PlayableHandle GetHandle() => default; // 0x0000000183D695A0-0x0000000183D695B0
-		public bool Equals(VideoClipPlayable other) => default; // 0x0000000189F89A88-0x0000000189F89AFC
+		public PlayableHandle GetHandle() => default; // 0x0000000185FCA260-0x0000000185FCA270
+		public bool Equals(VideoClipPlayable other) => default; // 0x000000018C0A1774-0x000000018C0A17E8
 	}
 }
 
 namespace UnityEngine.Video
 {
-	[NativeHeader("Modules/Video/Public/VideoClip.h")]
-	[RequiredByNativeCode]
-	public sealed class VideoClip : UnityEngine.Object // TypeDefIndex: 59782
+	public sealed class VideoClip : UnityEngine.Object // TypeDefIndex: 60886
 	{
 		// Properties
-		public string originalPath { get => default; } // 0x0000000189F89D0C-0x0000000189F89D40 
-		public ulong frameCount { get => default; } // 0x0000000189F89C3C-0x0000000189F89C70 
-		public double frameRate { get => default; } // 0x0000000189F89C70-0x0000000189F89CA4 
-		[NativeName("Duration")]
-		public double length { get => default; } // 0x0000000189F89CD8-0x0000000189F89D0C 
-		public uint width { get => default; } // 0x0000000189F89DDC-0x0000000189F89E10 
-		public uint height { get => default; } // 0x0000000189F89CA4-0x0000000189F89CD8 
-		public uint pixelAspectRatioNumerator { get => default; } // 0x0000000189F89D74-0x0000000189F89DA8 
-		public uint pixelAspectRatioDenominator { get => default; } // 0x0000000189F89D40-0x0000000189F89D74 
-		public bool sRGB { [NativeName("IssRGB")] get => default; } // 0x0000000189F89DA8-0x0000000189F89DDC 
-		public ushort audioTrackCount { get => default; } // 0x0000000189F89C08-0x0000000189F89C3C 
+		public string originalPath { get => default; } // 0x000000018C0A19F8-0x000000018C0A1A2C 
+		public ulong frameCount { get => default; } // 0x000000018C0A1928-0x000000018C0A195C 
+		public double frameRate { get => default; } // 0x000000018C0A195C-0x000000018C0A1990 
+		public double length { get => default; } // 0x000000018C0A19C4-0x000000018C0A19F8 
+		public uint width { get => default; } // 0x000000018C0A1AC8-0x000000018C0A1AFC 
+		public uint height { get => default; } // 0x000000018C0A1990-0x000000018C0A19C4 
+		public uint pixelAspectRatioNumerator { get => default; } // 0x000000018C0A1A60-0x000000018C0A1A94 
+		public uint pixelAspectRatioDenominator { get => default; } // 0x000000018C0A1A2C-0x000000018C0A1A60 
+		public bool sRGB { get => default; } // 0x000000018C0A1A94-0x000000018C0A1AC8 
+		public ushort audioTrackCount { get => default; } // 0x000000018C0A18F4-0x000000018C0A1928 
 	
 		// Constructors
-		private VideoClip() {} // 0x0000000189F89BC8-0x0000000189F89C08
+		private VideoClip() {} // 0x000000018C0A18B4-0x000000018C0A18F4
 	
 		// Methods
-		public ushort GetAudioChannelCount(ushort audioTrackIdx) => default; // 0x0000000189F89AFC-0x0000000189F89B40
-		public uint GetAudioSampleRate(ushort audioTrackIdx) => default; // 0x0000000189F89B84-0x0000000189F89BC8
-		public string GetAudioLanguage(ushort audioTrackIdx) => default; // 0x0000000189F89B40-0x0000000189F89B84
+		public ushort GetAudioChannelCount(ushort audioTrackIdx) => default; // 0x000000018C0A17E8-0x000000018C0A182C
+		public uint GetAudioSampleRate(ushort audioTrackIdx) => default; // 0x000000018C0A1870-0x000000018C0A18B4
+		public string GetAudioLanguage(ushort audioTrackIdx) => default; // 0x000000018C0A182C-0x000000018C0A1870
 	}
 
-	[RequiredByNativeCode]
-	public enum VideoRenderMode // TypeDefIndex: 59783
+	public enum VideoRenderMode // TypeDefIndex: 60887
 	{
 		CameraFarPlane = 0,
 		CameraNearPlane = 1,
@@ -229,16 +55,14 @@ namespace UnityEngine.Video
 		APIOnly = 4
 	}
 
-	[RequiredByNativeCode]
-	public enum Video3DLayout // TypeDefIndex: 59784
+	public enum Video3DLayout // TypeDefIndex: 60888
 	{
 		No3D = 0,
 		SideBySide3D = 1,
 		OverUnder3D = 2
 	}
 
-	[RequiredByNativeCode]
-	public enum VideoAspectRatio // TypeDefIndex: 59785
+	public enum VideoAspectRatio // TypeDefIndex: 60889
 	{
 		NoScaling = 0,
 		FitVertically = 1,
@@ -248,30 +72,26 @@ namespace UnityEngine.Video
 		Stretch = 5
 	}
 
-	[RequiredByNativeCode]
-	public enum VideoTimeSource // TypeDefIndex: 59786
+	public enum VideoTimeSource // TypeDefIndex: 60890
 	{
 		AudioDSPTimeSource = 0,
 		GameTimeSource = 1
 	}
 
-	[RequiredByNativeCode]
-	public enum VideoTimeReference // TypeDefIndex: 59787
+	public enum VideoTimeReference // TypeDefIndex: 60891
 	{
 		Freerun = 0,
 		InternalTime = 1,
 		ExternalTime = 2
 	}
 
-	[RequiredByNativeCode]
-	public enum VideoSource // TypeDefIndex: 59788
+	public enum VideoSource // TypeDefIndex: 60892
 	{
 		VideoClip = 0,
 		Url = 1
 	}
 
-	[RequiredByNativeCode]
-	public enum VideoAudioOutputMode // TypeDefIndex: 59789
+	public enum VideoAudioOutputMode // TypeDefIndex: 60893
 	{
 		None = 0,
 		AudioSource = 1,
@@ -279,66 +99,63 @@ namespace UnityEngine.Video
 		APIOnly = 3
 	}
 
-	[NativeHeader("Modules/Video/Public/VideoPlayer.h")]
-	[RequireComponent(typeof(Transform))]
-	[RequiredByNativeCode]
-	public sealed class VideoPlayer : UnityEngine.Behaviour // TypeDefIndex: 59794
+	public sealed class VideoPlayer : UnityEngine.Behaviour // TypeDefIndex: 60898
 	{
+		// Fields
+		private EventHandler prepareCompleted; // 0x18
+		private EventHandler loopPointReached; // 0x20
+		private EventHandler started; // 0x28
+		private EventHandler frameDropped; // 0x30
+		private ErrorEventHandler errorReceived; // 0x38
+		private EventHandler seekCompleted; // 0x40
+		private TimeEventHandler clockResyncOccurred; // 0x48
+		private FrameReadyEventHandler frameReady; // 0x50
+	
 		// Properties
-		public VideoSource source { get => default; set {} } // 0x0000000189F8AEC0-0x0000000189F8AEF4 0x0000000189F8B9E4-0x0000000189F8BA24
-		[NativeName("VideoUrl")]
-		public string url { get => default; set {} } // 0x0000000189F8B0FC-0x0000000189F8B130 0x0000000189F8BC7C-0x0000000189F8BCC0
-		[NativeName("VideoClip")]
-		public VideoClip clip { get => default; set {} } // 0x0000000189F8AAAC-0x0000000189F8AAE0 0x0000000189F8B6B8-0x0000000189F8B6FC
-		public VideoRenderMode renderMode { get => default; set {} } // 0x0000000189F8AE24-0x0000000189F8AE58 0x0000000189F8B91C-0x0000000189F8B95C
-		[NativeHeader("Runtime/Camera/Camera.h")]
-		public Camera targetCamera { get => default; set {} } // 0x0000000189F8AF5C-0x0000000189F8AF90 0x0000000189F8BAA8-0x0000000189F8BAEC
-		[NativeHeader("Runtime/Graphics/RenderTexture.h")]
-		public RenderTexture targetTexture { get => default; set {} } // 0x0000000189F8AFF8-0x0000000189F8B02C 0x0000000189F8BB74-0x0000000189F8BBB8
-		[NativeHeader("Runtime/Graphics/Renderer.h")]
-		public Renderer targetMaterialRenderer { get => default; set {} } // 0x0000000189F8AFC4-0x0000000189F8AFF8 0x0000000189F8BB30-0x0000000189F8BB74
-		public string targetMaterialProperty { get => default; set {} } // 0x0000000189F8AF90-0x0000000189F8AFC4 0x0000000189F8BAEC-0x0000000189F8BB30
-		public VideoAspectRatio aspectRatio { get => default; set {} } // 0x0000000189F8A8D8-0x0000000189F8A90C 0x0000000189F8B638-0x0000000189F8B678
-		public float targetCameraAlpha { get => default; set {} } // 0x0000000189F8AF28-0x0000000189F8AF5C 0x0000000189F8BA64-0x0000000189F8BAA8
-		public Video3DLayout targetCamera3DLayout { get => default; set {} } // 0x0000000189F8AEF4-0x0000000189F8AF28 0x0000000189F8BA24-0x0000000189F8BA64
-		[NativeHeader("Runtime/Graphics/Texture.h")]
-		public Texture texture { get => default; } // 0x0000000189F8B02C-0x0000000189F8B060 
-		public bool isPrepared { [NativeName("IsPrepared")] get => default; } // 0x0000000189F8ACEC-0x0000000189F8AD20 
-		public bool waitForFirstFrame { get => default; set {} } // 0x0000000189F8B130-0x0000000189F8B164 0x0000000189F8BCC0-0x0000000189F8BD04
-		public bool playOnAwake { get => default; set {} } // 0x0000000189F8ADBC-0x0000000189F8ADF0 0x0000000189F8B894-0x0000000189F8B8D8
-		public bool isPlaying { [NativeName("IsPlaying")] get => default; } // 0x0000000189F8ACB8-0x0000000189F8ACEC 
-		public bool isPaused { [NativeName("IsPaused")] get => default; } // 0x0000000189F8AC84-0x0000000189F8ACB8 
-		public bool canSetTime { [NativeName("CanSetTime")] get => default; } // 0x0000000189F8AA44-0x0000000189F8AA78 
-		[NativeName("SecPosition")]
-		public double time { get => default; set {} } // 0x0000000189F8B0C8-0x0000000189F8B0FC 0x0000000189F8BC38-0x0000000189F8BC7C
-		[NativeName("FramePosition")]
-		public long frame { get => default; set {} } // 0x0000000189F8ABE8-0x0000000189F8AC1C 0x0000000189F8B80C-0x0000000189F8B850
-		public double clockTime { get => default; } // 0x0000000189F8AAE0-0x0000000189F8AB14 
-		public bool canStep { [NativeName("CanStep")] get => default; } // 0x0000000189F8AA78-0x0000000189F8AAAC 
-		public bool canSetPlaybackSpeed { [NativeName("CanSetPlaybackSpeed")] get => default; } // 0x0000000189F8A9A8-0x0000000189F8A9DC 
-		public float playbackSpeed { get => default; set {} } // 0x0000000189F8ADF0-0x0000000189F8AE24 0x0000000189F8B8D8-0x0000000189F8B91C
-		[NativeName("Loop")]
-		public bool isLooping { get => default; set {} } // 0x0000000189F8AC50-0x0000000189F8AC84 0x0000000189F8B850-0x0000000189F8B894
-		public bool canSetTimeSource { [NativeName("CanSetTimeSource")] get => default; } // 0x0000000189F8AA10-0x0000000189F8AA44 
-		public VideoTimeSource timeSource { get => default; set {} } // 0x0000000189F8B094-0x0000000189F8B0C8 0x0000000189F8BBF8-0x0000000189F8BC38
-		public VideoTimeReference timeReference { get => default; set {} } // 0x0000000189F8B060-0x0000000189F8B094 0x0000000189F8BBB8-0x0000000189F8BBF8
-		public double externalReferenceTime { get => default; set {} } // 0x0000000189F8AB4C-0x0000000189F8AB80 0x0000000189F8B7C8-0x0000000189F8B80C
-		public bool canSetSkipOnDrop { [NativeName("CanSetSkipOnDrop")] get => default; } // 0x0000000189F8A9DC-0x0000000189F8AA10 
-		public bool skipOnDrop { get => default; set {} } // 0x0000000189F8AE8C-0x0000000189F8AEC0 0x0000000189F8B9A0-0x0000000189F8B9E4
-		public ulong frameCount { get => default; } // 0x0000000189F8AB80-0x0000000189F8ABB4 
-		public float frameRate { get => default; } // 0x0000000189F8ABB4-0x0000000189F8ABE8 
-		[NativeName("Duration")]
-		public double length { get => default; } // 0x0000000189F8AD20-0x0000000189F8AD54 
-		public uint width { get => default; } // 0x0000000189F8B164-0x0000000189F8B198 
-		public uint height { get => default; } // 0x0000000189F8AC1C-0x0000000189F8AC50 
-		public uint pixelAspectRatioNumerator { get => default; } // 0x0000000189F8AD88-0x0000000189F8ADBC 
-		public uint pixelAspectRatioDenominator { get => default; } // 0x0000000189F8AD54-0x0000000189F8AD88 
-		public ushort audioTrackCount { get => default; } // 0x0000000189F8A940-0x0000000189F8A974 
-		public static ushort controlledAudioTrackMaxCount { get => default; } // 0x0000000189F8AB20-0x0000000189F8AB4C 
-		public ushort controlledAudioTrackCount { get => default; set {} } // 0x0000000189F8AB14-0x0000000189F8AB20 0x0000000189F8B6FC-0x0000000189F8B7C8
-		public VideoAudioOutputMode audioOutputMode { get => default; set {} } // 0x0000000189F8A90C-0x0000000189F8A940 0x0000000189F8B678-0x0000000189F8B6B8
-		public bool canSetDirectAudioVolume { [NativeName("CanSetDirectAudioVolume")] get => default; } // 0x0000000189F8A974-0x0000000189F8A9A8 
-		public bool sendFrameReadyEvents { [NativeName("AreFrameReadyEventsEnabled")] get => default; [NativeName("EnableFrameReadyEvents")] set {} } // 0x0000000189F8AE58-0x0000000189F8AE8C 0x0000000189F8B95C-0x0000000189F8B9A0
+		public VideoSource source { get => default; set {} } // 0x000000018C0A2C48-0x000000018C0A2C7C 0x000000018C0A3794-0x000000018C0A37D8
+		public string url { get => default; set {} } // 0x000000018C0A2CE4-0x000000018C0A2D18 0x000000018C0A3860-0x000000018C0A38A4
+		public VideoClip clip { get => default; set {} } // 0x000000018C0A2CB0-0x000000018C0A2CE4 0x000000018C0A381C-0x000000018C0A3860
+		public VideoRenderMode renderMode { get => default; set {} } // 0x000000018C0A2C7C-0x000000018C0A2CB0 0x000000018C0A37D8-0x000000018C0A381C
+		public Camera targetCamera { get => default; set {} } // 0x000000018C0A25C4-0x000000018C0A25F8 0x000000018C0A3324-0x000000018C0A3364
+		public RenderTexture targetTexture { get => default; set {} } // 0x000000018C0A2C14-0x000000018C0A2C48 0x000000018C0A3750-0x000000018C0A3794
+		public Renderer targetMaterialRenderer { get => default; set {} } // 0x000000018C0A2BE0-0x000000018C0A2C14 0x000000018C0A3710-0x000000018C0A3750
+		public string targetMaterialProperty { get => default; set {} } // 0x000000018C0A2D18-0x000000018C0A2D4C 0x000000018C0A1F48-0x000000018C0A1F7C
+		public VideoAspectRatio aspectRatio { get => default; set {} } // 0x000000018C0A29D8-0x000000018C0A2A0C 0x000000018C0A2E1C-0x000000018C0A2E50
+		public float targetCameraAlpha { get => default; set {} } // 0x000000018C0A39AC-0x000000018C0A39F0 0x000000018C0A2AA8-0x000000018C0A2ADC
+		public Video3DLayout targetCamera3DLayout { get => default; set {} } // 0x000000018C0A3580-0x000000018C0A35C4 0x000000018C0A1F14-0x000000018C0A1F48
+		public Texture texture { get => default; } // 0x000000018C0A1EE0-0x000000018C0A1F14 
+		public bool isPrepared { get => default; } // 0x000000018C0A29A4-0x000000018C0A29D8 
+		public bool waitForFirstFrame { get => default; set {} } // 0x000000018C0A2970-0x000000018C0A29A4 0x000000018C0A2730-0x000000018C0A2764
+		public bool playOnAwake { get => default; set {} } // 0x000000018C0A2DB4-0x000000018C0A2DE8 0x000000018C0A3924-0x000000018C0A3968
+		public bool isPlaying { get => default; } // 0x000000018C0A2764-0x000000018C0A2798 
+		public bool isPaused { get => default; } // 0x000000018C0A20BC-0x000000018C0A20F0 
+		public bool canSetTime { get => default; } // 0x000000018C0A2694-0x000000018C0A26C8 
+		public double time { get => default; set {} } // 0x000000018C0A2ADC-0x000000018C0A2B10 0x000000018C0A35C4-0x000000018C0A3608
+		public long frame { get => default; set {} } // 0x000000018C0A293C-0x000000018C0A2970 0x000000018C0A353C-0x000000018C0A3580
+		public double clockTime { get => default; } // 0x000000018C0A26FC-0x000000018C0A2730 
+		public bool canStep { get => default; } // 0x000000018C0A2D80-0x000000018C0A2DB4 
+		public bool canSetPlaybackSpeed { get => default; } // 0x000000018C0A2D4C-0x000000018C0A2D80 
+		public float playbackSpeed { get => default; set {} } // 0x000000018C0A38A4-0x000000018C0A38E4 0x000000018C0A2838-0x000000018C0A286C
+		public bool isLooping { get => default; set {} } // 0x000000018C0A34B4-0x000000018C0A34F8 0x000000018C0A26C8-0x000000018C0A26FC
+		public bool canSetTimeSource { get => default; } // 0x000000018C0A2B78-0x000000018C0A2BAC 
+		public VideoTimeSource timeSource { get => default; set {} } // 0x000000018C0A368C-0x000000018C0A36D0 0x000000018C0A286C-0x000000018C0A28A0
+		public VideoTimeReference timeReference { get => default; set {} } // 0x000000018C0A28A0-0x000000018C0A28D4 0x000000018C0A2A0C-0x000000018C0A2A40
+		public double externalReferenceTime { get => default; set {} } // 0x000000018C0A2E50-0x000000018C0A2E84 0x000000018C0A2908-0x000000018C0A293C
+		public bool canSetSkipOnDrop { get => default; } // 0x000000018C0A2A74-0x000000018C0A2AA8 
+		public bool skipOnDrop { get => default; set {} } // 0x000000018C0A2A40-0x000000018C0A2A74 0x000000018C0A262C-0x000000018C0A2660
+		public ulong frameCount { get => default; } // 0x000000018C0A1B94-0x000000018C0A1BD8 
+		public float frameRate { get => default; } // 0x000000018C0A1B50-0x000000018C0A1B94 
+		public double length { get => default; } // 0x000000018C0A1BD8-0x000000018C0A1C1C 
+		public uint width { get => default; } // 0x000000018C0A280C-0x000000018C0A2838 
+		public uint height { get => default; } // 0x000000018C0A2800-0x000000018C0A280C 
+		public uint pixelAspectRatioNumerator { get => default; } // 0x000000018C0A33E8-0x000000018C0A34B4 
+		public uint pixelAspectRatioDenominator { get => default; } // 0x000000018C0A1C1C-0x000000018C0A1C50 
+		public ushort audioTrackCount { get => default; } // 0x000000018C0A1F7C-0x000000018C0A1FC0 
+		public static ushort controlledAudioTrackMaxCount { get => default; } // 0x000000018C0A3364-0x000000018C0A33A4 
+		public ushort controlledAudioTrackCount { get => default; set {} } // 0x000000018C0A2660-0x000000018C0A2694 0x000000018C0A1C94-0x000000018C0A1CD8
+		public VideoAudioOutputMode audioOutputMode { get => default; set {} } // 0x000000018C0A2068-0x000000018C0A20BC 0x000000018C0A2408-0x000000018C0A249C
+		public bool canSetDirectAudioVolume { get => default; } // 0x000000018C0A3168-0x000000018C0A31FC 
+		public bool sendFrameReadyEvents { get => default; set {} } // 0x000000018C0A1D7C-0x000000018C0A1DAC 0x000000018C0A1D4C-0x000000018C0A1D7C
 	
 		// Events
 		public event EventHandler prepareCompleted;
@@ -351,52 +168,43 @@ namespace UnityEngine.Video
 		public event FrameReadyEventHandler frameReady;
 	
 		// Nested types
-		public delegate void EventHandler(VideoPlayer source); // TypeDefIndex: 59790; 0x0000000182149960-0x0000000182149970
+		public delegate void EventHandler(VideoPlayer source); // TypeDefIndex: 60894; 0x000000018C0A36D0-0x000000018C0A3710
 	
-		public delegate void ErrorEventHandler(VideoPlayer source, string message); // TypeDefIndex: 59791; 0x0000000182065C10-0x0000000182065C20
+		public delegate void ErrorEventHandler(VideoPlayer source, string message); // TypeDefIndex: 60895; 0x000000018C0A3968-0x000000018C0A39AC
 	
-		public delegate void FrameReadyEventHandler(VideoPlayer source, long frameIdx); // TypeDefIndex: 59792; 0x0000000182065C10-0x0000000182065C20
+		public delegate void FrameReadyEventHandler(VideoPlayer source, long frameIdx); // TypeDefIndex: 60896; 0x000000018C0A33A4-0x000000018C0A33E8
 	
-		public delegate void TimeEventHandler(VideoPlayer source, double seconds); // TypeDefIndex: 59793; 0x0000000182065C10-0x0000000182065C20
+		public delegate void TimeEventHandler(VideoPlayer source, double seconds); // TypeDefIndex: 60897; 0x000000018C0A3608-0x000000018C0A3648
 	
 		// Constructors
-		public VideoPlayer() {} // 0x000000018426FE60-0x000000018426FE68
+		public VideoPlayer() {} // 0x00000001831C5680-0x00000001831C5690
 	
 		// Methods
-		public void Prepare() {} // 0x0000000189F8A25C-0x0000000189F8A290
-		public void Play() {} // 0x0000000189F8A228-0x0000000189F8A25C
-		public void Pause() {} // 0x0000000189F8A1F4-0x0000000189F8A228
-		public void Stop() {} // 0x0000000189F8A404-0x0000000189F8A438
-		public void StepForward() {} // 0x0000000189F8A3D0-0x0000000189F8A404
-		public string GetAudioLanguageCode(ushort trackIndex) => default; // 0x0000000189F89EA8-0x0000000189F89EEC
-		public ushort GetAudioChannelCount(ushort trackIndex) => default; // 0x0000000189F89E64-0x0000000189F89EA8
-		public uint GetAudioSampleRate(ushort trackIndex) => default; // 0x0000000189F89EEC-0x0000000189F89F30
-		private ushort GetControlledAudioTrackCount() => default; // 0x0000000189F89F30-0x0000000189F89F64
-		private void SetControlledAudioTrackCount(ushort value) {} // 0x0000000189F8A290-0x0000000189F8A2D4
-		public void EnableAudioTrack(ushort trackIndex, bool enabled) {} // 0x0000000189F89E10-0x0000000189F89E64
-		public bool IsAudioTrackEnabled(ushort trackIndex) => default; // 0x0000000189F8A1B0-0x0000000189F8A1F4
-		public float GetDirectAudioVolume(ushort trackIndex) => default; // 0x0000000189F89FA8-0x0000000189F89FEC
-		public void SetDirectAudioVolume(ushort trackIndex, float volume) {} // 0x0000000189F8A328-0x0000000189F8A37C
-		public bool GetDirectAudioMute(ushort trackIndex) => default; // 0x0000000189F89F64-0x0000000189F89FA8
-		public void SetDirectAudioMute(ushort trackIndex, bool mute) {} // 0x0000000189F8A2D4-0x0000000189F8A328
-		[NativeHeader("Modules/Audio/Public/AudioSource.h")]
-		public AudioSource GetTargetAudioSource(ushort trackIndex) => default; // 0x0000000189F89FEC-0x0000000189F8A030
-		public void SetTargetAudioSource(ushort trackIndex, AudioSource source) {} // 0x0000000189F8A37C-0x0000000189F8A3D0
-		[RequiredByNativeCode]
-		private static void InvokePrepareCompletedCallback_Internal(VideoPlayer source) {} // 0x0000000189F8A120-0x0000000189F8A150
-		[RequiredByNativeCode]
-		private static void InvokeFrameReadyCallback_Internal(VideoPlayer source, long frameIdx) {} // 0x0000000189F8A0C0-0x0000000189F8A0F0
-		[RequiredByNativeCode]
-		private static void InvokeLoopPointReachedCallback_Internal(VideoPlayer source) {} // 0x0000000189F8A0F0-0x0000000189F8A120
-		[RequiredByNativeCode]
-		private static void InvokeStartedCallback_Internal(VideoPlayer source) {} // 0x0000000189F8A180-0x0000000189F8A1B0
-		[RequiredByNativeCode]
-		private static void InvokeFrameDroppedCallback_Internal(VideoPlayer source) {} // 0x0000000189F8A090-0x0000000189F8A0C0
-		[RequiredByNativeCode]
-		private static void InvokeErrorReceivedCallback_Internal(VideoPlayer source, string errorStr) {} // 0x0000000189F8A060-0x0000000189F8A090
-		[RequiredByNativeCode]
-		private static void InvokeSeekCompletedCallback_Internal(VideoPlayer source) {} // 0x0000000189F8A150-0x0000000189F8A180
-		[RequiredByNativeCode]
-		private static void InvokeClockResyncOccurredCallback_Internal(VideoPlayer source, double seconds) {} // 0x0000000189F8A030-0x0000000189F8A060
+		public void Prepare() {} // 0x000000018C0A20F0-0x000000018C0A2124
+		public void Play() {} // 0x000000018C0A28D4-0x000000018C0A2908
+		public void Pause() {} // 0x000000018C0A34F8-0x000000018C0A353C
+		public void Stop() {} // 0x000000018C0A27CC-0x000000018C0A2800
+		public void StepForward() {} // 0x000000018C0A38E4-0x000000018C0A3924
+		public string GetAudioLanguageCode(ushort trackIndex) => default; // 0x000000018C0A1AFC-0x000000018C0A1B50
+		public ushort GetAudioChannelCount(ushort trackIndex) => default; // 0x000000018C0A1E9C-0x000000018C0A1EE0
+		public uint GetAudioSampleRate(ushort trackIndex) => default; // 0x000000018C0A25F8-0x000000018C0A262C
+		private ushort GetControlledAudioTrackCount() => default; // 0x000000018C0A2014-0x000000018C0A2068
+		private void SetControlledAudioTrackCount(ushort value) {} // 0x000000018C0A1C50-0x000000018C0A1C94
+		public void EnableAudioTrack(ushort trackIndex, bool enabled) {} // 0x000000018C0A1FC0-0x000000018C0A2014
+		public bool IsAudioTrackEnabled(ushort trackIndex) => default; // 0x000000018C0A1CD8-0x000000018C0A1D1C
+		public float GetDirectAudioVolume(ushort trackIndex) => default; // 0x000000018C0A2374-0x000000018C0A2408
+		public void SetDirectAudioVolume(ushort trackIndex, float volume) {} // 0x000000018C0A30D4-0x000000018C0A3168
+		public bool GetDirectAudioMute(ushort trackIndex) => default; // 0x000000018C0A2530-0x000000018C0A25C4
+		public void SetDirectAudioMute(ushort trackIndex, bool mute) {} // 0x000000018C0A3290-0x000000018C0A3324
+		public AudioSource GetTargetAudioSource(ushort trackIndex) => default; // 0x000000018C0A224C-0x000000018C0A22E0
+		public void SetTargetAudioSource(ushort trackIndex, AudioSource source) {} // 0x000000018C0A2FAC-0x000000018C0A3040
+		private static void InvokePrepareCompletedCallback_Internal(VideoPlayer source) {} // 0x000000018646DB20-0x000000018646DB28
+		private static void InvokeFrameReadyCallback_Internal(VideoPlayer source, long frameIdx) {} // 0x0000000188F4DA44-0x0000000188F4DB18
+		private static void InvokeLoopPointReachedCallback_Internal(VideoPlayer source) {} // 0x00000001833EEC70-0x00000001833EEC80
+		private static void InvokeStartedCallback_Internal(VideoPlayer source) {} // 0x000000018B642154-0x000000018B642228
+		private static void InvokeFrameDroppedCallback_Internal(VideoPlayer source) {} // 0x00000001831C5680-0x00000001831C5690
+		private static void InvokeErrorReceivedCallback_Internal(VideoPlayer source, string errorStr) {} // 0x0000000189AE6B08-0x0000000189AE6BDC
+		private static void InvokeSeekCompletedCallback_Internal(VideoPlayer source) {} // 0x00000001831C5680-0x00000001831C5690
+		private static void InvokeClockResyncOccurredCallback_Internal(VideoPlayer source, double seconds) {} // 0x000000018C0A16A0-0x000000018C0A1774
 	}
 }

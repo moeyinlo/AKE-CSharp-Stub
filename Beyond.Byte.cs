@@ -3,21 +3,16 @@
  */
 
 using System;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using Beyond;
 using Beyond.Byte;
 using IFix.Core;
 
-// Image 92: Beyond.Byte.dll - Assembly: Beyond.Byte, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59425-59432
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 93: Beyond.Byte.dll - Assembly: Beyond.Byte, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60481-60488
 
 namespace Beyond.Byte
 {
 	[Serializable]
-	public struct UInt128 : IComparable<Beyond.Byte.UInt128>, IEquatable<Beyond.Byte.UInt128> // TypeDefIndex: 59426
+	public struct UInt128 : IComparable<Beyond.Byte.UInt128>, IEquatable<Beyond.Byte.UInt128> // TypeDefIndex: 60482
 	{
 		// Fields
 		public ulong high; // 0x00
@@ -27,131 +22,113 @@ namespace Beyond.Byte
 		public UInt128(ulong high, ulong low) {
 			this.high = default;
 			this.low = default;
-		} // 0x0000000183D4EA10-0x0000000183D4EA20
+		} // 0x0000000183680100-0x0000000183680110
 		public UInt128(byte[] bytes) {
 			high = default;
 			low = default;
-		} // 0x000000018515A1C4-0x000000018515A200
+		} // 0x0000000187348AF4-0x0000000187348B30
 	
 		// Methods
-		[IDTag(1)]
-		public override bool Equals(object obj) => default; // 0x0000000185159ED4-0x0000000185159F78
-		public override int GetHashCode() => default; // 0x0000000185159F78-0x000000018515A014
-		public static implicit operator UInt128(byte[] bytes) => default; // 0x000000018515A280-0x000000018515A2F4
-		public Guid ToGuid() => default; // 0x000000018515A014-0x000000018515A114
-		public int CompareTo(UInt128 other) => default; // 0x0000000185159DE0-0x0000000185159E60
-		[IDTag(0)]
-		public bool Equals(UInt128 other) => default; // 0x0000000185159E60-0x0000000185159ED4
-		public static bool operator ==(UInt128 a, UInt128 b) => default; // 0x000000018515A200-0x000000018515A280
-		public static bool operator !=(UInt128 a, UInt128 B) => default; // 0x000000018515A2F4-0x000000018515A384
-		public bool __iFixBaseProxy_Equals(object P0) => default; // 0x000000018515A114-0x000000018515A174
-		public int __iFixBaseProxy_GetHashCode() => default; // 0x000000018515A174-0x000000018515A1C4
+		public override bool Equals(object obj) => default; // 0x0000000187348804-0x00000001873488A8
+		public override int GetHashCode() => default; // 0x00000001873488A8-0x0000000187348944
+		public static implicit operator UInt128(byte[] bytes) => default; // 0x0000000187348BB0-0x0000000187348C24
+		public Guid ToGuid() => default; // 0x0000000187348944-0x0000000187348A44
+		public int CompareTo(UInt128 other) => default; // 0x0000000187348710-0x0000000187348790
+		public bool Equals(UInt128 other) => default; // 0x0000000187348790-0x0000000187348804
+		public static bool operator ==(UInt128 a, UInt128 b) => default; // 0x0000000187348B30-0x0000000187348BB0
+		public static bool operator !=(UInt128 a, UInt128 B) => default; // 0x0000000187348C24-0x0000000187348CB4
+		public bool __iFixBaseProxy_Equals(object P0) => default; // 0x0000000187348A44-0x0000000187348AA4
+		public int __iFixBaseProxy_GetHashCode() => default; // 0x0000000187348AA4-0x0000000187348AF4
 	}
 
-	public struct ByteBufStream // TypeDefIndex: 59427
+	public struct ByteBufStream // TypeDefIndex: 60483
 	{
 		// Fields
 		public int currentIdx; // 0x00
 		public byte[] datas; // 0x08
 	
 		// Methods
-		public int GetCurrentIdx() => default; // 0x0000000182431680-0x0000000182431700
-		public byte[] GetRaw() => default; // 0x0000000185154E1C-0x0000000185154E68
-		public byte[] GetDataCopy() => default; // 0x0000000185154D8C-0x0000000185154E1C
-		public uint ReadUInt() => default; // 0x0000000185154E68-0x0000000185154EC4
-		public int ReadInt() => default; // 0x000000018242F7E0-0x000000018242FA00
-		public int ReadByte() => default; // 0x000000018242FDA0-0x000000018242FEE0
-		public ulong ReadULong() => default; // 0x0000000185154EC4-0x0000000185154F20
-		public long ReadLong() => default; // 0x0000000182431160-0x0000000182431290
-		public Beyond.Byte.UInt128 ReadUInt128() => default; // 0x000000018242FF90-0x0000000182430100
-		public string ReadUTF8() => default; // 0x000000018242EE30-0x000000018242EE80
-		public void SkipReadUTF8() {} // 0x0000000182431700-0x0000000182431970
-		public void WriteByte(byte val) {} // 0x0000000185154F8C-0x0000000185154FF0
-		public void WriteUInt(uint val) {} // 0x0000000185155134-0x00000001851551A0
-		public void WriteInt(int val) {} // 0x0000000185154FF0-0x0000000185155050
-		public void WriteULong(ulong val) {} // 0x00000001851551A0-0x000000018515520C
-		public void WriteLong(long val) {} // 0x0000000185155050-0x00000001851550B0
-		public void WriteUInt128(Beyond.Byte.UInt128 val) {} // 0x00000001851550B0-0x0000000185155134
-		public void WriteUTF8(string val) {} // 0x000000018515520C-0x0000000185155284
-		public void SkipBytes(int offset) {} // 0x0000000185154F20-0x0000000185154F8C
-		public int RemainBytes() => default; // 0x000000018242DDA0-0x000000018242DDE0
-		public static ByteBufStream CreateFromByte(byte[] bs, int startIdx = 0 /* Metadata: 0x01FDD061 */) => default; // 0x000000018242EDC0-0x000000018242EE30
-		public static ByteBufStream Create(int cap) => default; // 0x0000000185154CE4-0x0000000185154D8C
+		public int GetCurrentIdx() => default; // 0x0000000184181D40-0x0000000184181DC0
+		public byte[] GetRaw() => default; // 0x0000000187343670-0x00000001873436BC
+		public byte[] GetDataCopy() => default; // 0x00000001873435E0-0x0000000187343670
+		public uint ReadUInt() => default; // 0x00000001873436BC-0x0000000187343718
+		public int ReadInt() => default; // 0x0000000184180130-0x0000000184180350
+		public int ReadByte() => default; // 0x00000001841806F0-0x0000000184180830
+		public ulong ReadULong() => default; // 0x0000000187343718-0x0000000187343774
+		public long ReadLong() => default; // 0x0000000184181820-0x0000000184181950
+		public Beyond.Byte.UInt128 ReadUInt128() => default; // 0x00000001841808E0-0x0000000184180A50
+		public string ReadUTF8() => default; // 0x000000018417F790-0x000000018417F7E0
+		public void SkipReadUTF8() {} // 0x0000000184181DC0-0x0000000184182030
+		public void WriteByte(byte val) {} // 0x00000001873437E0-0x0000000187343844
+		public void WriteUInt(uint val) {} // 0x0000000187343988-0x00000001873439F4
+		public void WriteInt(int val) {} // 0x0000000187343844-0x00000001873438A4
+		public void WriteULong(ulong val) {} // 0x00000001873439F4-0x0000000187343A60
+		public void WriteLong(long val) {} // 0x00000001873438A4-0x0000000187343904
+		public void WriteUInt128(Beyond.Byte.UInt128 val) {} // 0x0000000187343904-0x0000000187343988
+		public void WriteUTF8(string val) {} // 0x0000000187343A60-0x0000000187343AD8
+		public void SkipBytes(int offset) {} // 0x0000000187343774-0x00000001873437E0
+		public int RemainBytes() => default; // 0x000000018417E6D0-0x000000018417E710
+		public static ByteBufStream CreateFromByte(byte[] bs, int startIdx = 0 /* Metadata: 0x0208294D */) => default; // 0x000000018417F720-0x000000018417F790
+		public static ByteBufStream Create(int cap) => default; // 0x0000000187343538-0x00000001873435E0
 	}
 
-	public static class ByteHelper // TypeDefIndex: 59428
+	public static class ByteHelper // TypeDefIndex: 60484
 	{
 		// Methods
+		public static Beyond.Byte.UInt128 ReadUInt128(byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x0208294E */) => default; // 0x0000000184181A00-0x0000000184181AF0
+		public static long ReadLong(byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x0208294F */) => default; // 0x0000000184181950-0x0000000184181A00
+		public static ulong ReadULong(byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x02082950 */) => default; // 0x0000000184181AF0-0x0000000184181C90
+		public static uint ReadUInt(byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x02082951 */) => default; // 0x00000001841804F0-0x0000000184180610
+		public static int ReadInt(byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x02082952 */) => default; // 0x0000000184180350-0x00000001841804F0
+		public static ushort ReadUShort(byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x02082953 */) => default; // 0x0000000184180610-0x00000001841806F0
+		public static short ReadShort(byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x02082954 */) => default; // 0x000000018417FFC0-0x0000000184180130
+		public static byte ReadByte(byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x02082955 */) => default; // 0x0000000184180830-0x00000001841808E0
+		public static float ReadFloat(byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x02082956 */) => default; // 0x0000000187343EC8-0x0000000187343F58
+		public static string ReadUTF8(byte[] bs, int startIndex, out short len) {
+			len = default;
+			return default;
+		} // 0x000000018417F7E0-0x000000018417F890
+		public static void SkipReadUTF8(byte[] bs, int startIndex, out short len) {
+			len = default;
+		} // 0x000000018417FBA0-0x000000018417FD90
+		public static byte[] WriteByte(byte[] data, int writerIndex, byte value) => default; // 0x000000018734401C-0x0000000187344098
+		public static byte[] WriteUShort(byte[] data, int writerIndex, ushort value, bool bIsLittle = true /* Metadata: 0x02082957 */) => default; // 0x00000001843CF090-0x00000001843CF120
+		public static byte[] WriteShort(byte[] data, int writerIndex, short value, bool bIsLittle = true /* Metadata: 0x02082958 */) => default; // 0x00000001873441B0-0x0000000187344240
+		public static byte[] WriteUInt(byte[] data, int writerIndex, uint value, bool bIsLittle = true /* Metadata: 0x02082959 */) => default; // 0x00000001843CF120-0x00000001843CF380
+		public static Span<byte> WriteUInt(Span<byte> data, int writerIndex, uint value, bool bIsLittle = true /* Metadata: 0x0208295A */) => default; // 0x0000000184056EB0-0x0000000184057020
+		public static byte[] WriteInt(byte[] data, int writerIndex, int value, bool bIsLittle = true /* Metadata: 0x0208295B */) => default; // 0x00000001843CF020-0x00000001843CF090
+		public static byte[] WriteULong(byte[] data, int writerIndex, ulong value, bool bIsLittle = true /* Metadata: 0x0208295C */) => default; // 0x00000001873442F4-0x00000001873444EC
+		public static Span<byte> WriteULong(Span<byte> data, int writerIndex, ulong value, bool bIsLittle = true /* Metadata: 0x0208295D */) => default; // 0x0000000184056480-0x0000000184056660
+		public static byte[] WriteLong(byte[] data, int writerIndex, long value, bool bIsLittle = true /* Metadata: 0x0208295E */) => default; // 0x0000000187344124-0x00000001873441B0
+		public static byte[] WriteUInt128(byte[] data, int writerIndex, Beyond.Byte.UInt128 value, bool bIsLittle = true /* Metadata: 0x0208295F */) => default; // 0x0000000187344240-0x00000001873442F4
+		public static Span<byte> WriteUInt128(Span<byte> data, int writerIndex, Beyond.Byte.UInt128 value, bool bIsLittle = true /* Metadata: 0x02082960 */) => default; // 0x0000000184182120-0x0000000184182250
+		public static byte[] WriteFloat(byte[] data, int writerIndex, float value) => default; // 0x0000000187344098-0x0000000187344124
+		public static byte[] WriteUTF8(byte[] data, int writerIndex, string value, out int len) {
+			len = default;
+			return default;
+		} // 0x00000001873444EC-0x00000001873445D4
 		public static void SplitLong(long longValue, out int highInt, out int lowInt) {
 			highInt = default;
 			lowInt = default;
-		} // 0x0000000185155758-0x00000001851557C8
-		public static long MergeLong(int highInt, int lowInt) => default; // 0x0000000185155618-0x0000000185155674
-		public static int SingleToInt32Bits(float value) => default; // 0x0000000185155704-0x0000000185155758
-		public static float Int32BitsToSingle(int value) => default; // 0x00000001851555D0-0x0000000185155618
-	
-		// Extension methods
-		public static Beyond.Byte.UInt128 ReadUInt128(this byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x01FDD062 */) => default; // 0x0000000182431340-0x0000000182431430
-		public static long ReadLong(this byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x01FDD063 */) => default; // 0x0000000182431290-0x0000000182431340
-		public static ulong ReadULong(this byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x01FDD064 */) => default; // 0x0000000182431430-0x00000001824315D0
-		public static uint ReadUInt(this byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x01FDD065 */) => default; // 0x000000018242FBA0-0x000000018242FCC0
-		public static int ReadInt(this byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x01FDD066 */) => default; // 0x000000018242FA00-0x000000018242FBA0
-		public static ushort ReadUShort(this byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x01FDD067 */) => default; // 0x000000018242FCC0-0x000000018242FDA0
-		public static short ReadShort(this byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x01FDD068 */) => default; // 0x000000018242F670-0x000000018242F7E0
-		public static byte ReadByte(this byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x01FDD069 */) => default; // 0x000000018242FEE0-0x000000018242FF90
-		public static float ReadFloat(this byte[] bs, int startIndex, bool bIsLittle = true /* Metadata: 0x01FDD06A */) => default; // 0x0000000185155674-0x0000000185155704
-		public static string ReadUTF8(this byte[] bs, int startIndex, out short len) {
-			len = default;
-			return default;
-		} // 0x000000018242EE80-0x000000018242EF30
-		public static void SkipReadUTF8(this byte[] bs, int startIndex, out short len) {
-			len = default;
-		} // 0x000000018242F240-0x000000018242F430
-		public static byte[] WriteByte(this byte[] data, int writerIndex, byte value) => default; // 0x00000001851557C8-0x0000000185155844
-		public static byte[] WriteUShort(this byte[] data, int writerIndex, ushort value, bool bIsLittle = true /* Metadata: 0x01FDD06B */) => default; // 0x00000001824D2330-0x00000001824D23C0
-		public static byte[] WriteShort(this byte[] data, int writerIndex, short value, bool bIsLittle = true /* Metadata: 0x01FDD06C */) => default; // 0x000000018515595C-0x00000001851559EC
-		[IDTag(0)]
-		public static byte[] WriteUInt(this byte[] data, int writerIndex, uint value, bool bIsLittle = true /* Metadata: 0x01FDD06D */) => default; // 0x00000001824D23C0-0x00000001824D2620
-		[IDTag(1)]
-		public static Span<byte> WriteUInt(this Span<byte> data, int writerIndex, uint value, bool bIsLittle = true /* Metadata: 0x01FDD06E */) => default; // 0x00000001823A90D0-0x00000001823A9240
-		public static byte[] WriteInt(this byte[] data, int writerIndex, int value, bool bIsLittle = true /* Metadata: 0x01FDD06F */) => default; // 0x00000001824D22C0-0x00000001824D2330
-		[IDTag(0)]
-		public static byte[] WriteULong(this byte[] data, int writerIndex, ulong value, bool bIsLittle = true /* Metadata: 0x01FDD070 */) => default; // 0x0000000185155AA0-0x0000000185155C98
-		[IDTag(1)]
-		public static Span<byte> WriteULong(this Span<byte> data, int writerIndex, ulong value, bool bIsLittle = true /* Metadata: 0x01FDD071 */) => default; // 0x00000001823A86A0-0x00000001823A8880
-		public static byte[] WriteLong(this byte[] data, int writerIndex, long value, bool bIsLittle = true /* Metadata: 0x01FDD072 */) => default; // 0x00000001851558D0-0x000000018515595C
-		[IDTag(0)]
-		public static byte[] WriteUInt128(this byte[] data, int writerIndex, Beyond.Byte.UInt128 value, bool bIsLittle = true /* Metadata: 0x01FDD073 */) => default; // 0x00000001851559EC-0x0000000185155AA0
-		[IDTag(1)]
-		public static Span<byte> WriteUInt128(this Span<byte> data, int writerIndex, Beyond.Byte.UInt128 value, bool bIsLittle = true /* Metadata: 0x01FDD074 */) => default; // 0x00000001824BEF20-0x00000001824BF050
-		public static byte[] WriteFloat(this byte[] data, int writerIndex, float value) => default; // 0x0000000185155844-0x00000001851558D0
-		public static byte[] WriteUTF8(this byte[] data, int writerIndex, string value, out int len) {
-			len = default;
-			return default;
-		} // 0x0000000185155C98-0x0000000185155D80
-		[IDTag(1)]
-		public static string GetHexString(this byte[] byteArray) => default; // 0x0000000185155404-0x0000000185155460
-		[IDTag(0)]
-		public static string GetHexString(this byte[] byteArray, int startIdx, int length) => default; // 0x0000000185155460-0x00000001851555D0
-		[IDTag(3)]
-		public static string GetHexString(this Span<byte> byteArray) => default; // 0x00000001824C0770-0x00000001824C0830
-		[IDTag(2)]
-		public static string GetHexString(this Span<byte> byteArray, int startIdx, int length) => default; // 0x00000001823A78E0-0x00000001823A7D30
-		[IDTag(1)]
-		public static void AppendHexString(this UnSafeString str, Span<byte> byteArray) {} // 0x00000001824BF050-0x00000001824BF430
-		[IDTag(0)]
-		public static void AppendHexString(this UnSafeString str, Span<byte> byteArray, int startIdx, int length) {} // 0x00000001823A80F0-0x00000001823A8410
-		[IDTag(1)]
-		public static string GetHexStringUnsafeString(this Span<byte> byteArray) => default; // 0x0000000182E9CC10-0x0000000182E9CC70
-		[IDTag(0)]
-		public static string GetHexStringUnsafeString(this Span<byte> byteArray, int startIdx, int length) => default; // 0x0000000182E9CDE0-0x0000000182E9D0F0
-		public static Beyond.Byte.UInt128 ComputeMD5Bytes(this byte[] bs, int offset, int count) => default; // 0x0000000185155284-0x0000000185155404
+		} // 0x0000000187343FAC-0x000000018734401C
+		public static long MergeLong(int highInt, int lowInt) => default; // 0x0000000187343E6C-0x0000000187343EC8
+		public static int SingleToInt32Bits(float value) => default; // 0x0000000187343F58-0x0000000187343FAC
+		public static float Int32BitsToSingle(int value) => default; // 0x0000000187343E24-0x0000000187343E6C
+		public static string GetHexString(byte[] byteArray) => default; // 0x0000000187343C58-0x0000000187343CB4
+		public static string GetHexString(byte[] byteArray, int startIdx, int length) => default; // 0x0000000187343CB4-0x0000000187343E24
+		public static string GetHexString(Span<byte> byteArray) => default; // 0x0000000184183740-0x0000000184183800
+		public static string GetHexString(Span<byte> byteArray, int startIdx, int length) => default; // 0x00000001840556C0-0x0000000184055B10
+		public static void AppendHexString(UnSafeString str, Span<byte> byteArray) {} // 0x0000000184183360-0x0000000184183740
+		public static void AppendHexString(UnSafeString str, Span<byte> byteArray, int startIdx, int length) {} // 0x0000000184055ED0-0x00000001840561F0
+		public static string GetHexStringUnsafeString(Span<byte> byteArray) => default; // 0x0000000184AD6560-0x0000000184AD65C0
+		public static string GetHexStringUnsafeString(Span<byte> byteArray, int startIdx, int length) => default; // 0x0000000184AD6730-0x0000000184AD6A40
+		public static Beyond.Byte.UInt128 ComputeMD5Bytes(byte[] bs, int offset, int count) => default; // 0x0000000187343AD8-0x0000000187343C58
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 59429
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 60485
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -161,111 +138,111 @@ namespace IFix
 	
 		// Constructors
 		public ILFixDynamicMethodWrapper() {} // Dummy constructor
-		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000183020510-0x0000000183020540
-		static ILFixDynamicMethodWrapper() {} // 0x0000000183D060C0-0x0000000183D06130
+		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000184E6FCD0-0x0000000184E6FD00
+		static ILFixDynamicMethodWrapper() {} // 0x0000000185F649B0-0x0000000185F64A20
 	
 		// Methods
-		public bool __Gen_Wrap_0(ref Beyond.Byte.UInt128 P0, Beyond.Byte.UInt128 P1) => default; // 0x0000000185155D80-0x0000000185155EE8
-		public bool __Gen_Wrap_1(ref Beyond.Byte.UInt128 P0, object P1) => default; // 0x0000000185156764-0x00000001851568B4
-		public int __Gen_Wrap_2(ref Beyond.Byte.UInt128 P0) => default; // 0x00000001851573CC-0x0000000185157500
-		public Beyond.Byte.UInt128 __Gen_Wrap_3(object P0) => default; // 0x0000000185158184-0x000000018515827C
-		public Guid __Gen_Wrap_4(ref Beyond.Byte.UInt128 P0) => default; // 0x0000000185158D00-0x0000000185158E60
-		public int __Gen_Wrap_5(ref Beyond.Byte.UInt128 P0, Beyond.Byte.UInt128 P1) => default; // 0x0000000185159824-0x000000018515998C
-		public bool __Gen_Wrap_6(Beyond.Byte.UInt128 P0, Beyond.Byte.UInt128 P1) => default; // 0x000000018515998C-0x0000000185159AB4
-		public int __Gen_Wrap_7(ref ByteBufStream P0) => default; // 0x0000000185159AB4-0x0000000185159C00
-		public byte[] __Gen_Wrap_8(ref ByteBufStream P0) => default; // 0x0000000185159C00-0x0000000185159D4C
-		public uint __Gen_Wrap_9(object P0, int P1, bool P2) => default; // 0x0000000185156024-0x0000000185156128
-		public uint __Gen_Wrap_10(ref ByteBufStream P0) => default; // 0x0000000185155EE8-0x0000000185156024
-		public int __Gen_Wrap_11(object P0, int P1, bool P2) => default; // 0x0000000185156024-0x0000000185156128
-		public byte __Gen_Wrap_12(object P0, int P1, bool P2) => default; // 0x0000000185156024-0x0000000185156128
-		public ulong __Gen_Wrap_13(object P0, int P1, bool P2) => default; // 0x0000000185156128-0x000000018515622C
-		public ulong __Gen_Wrap_14(ref ByteBufStream P0) => default; // 0x000000018515622C-0x0000000185156368
-		public long __Gen_Wrap_15(object P0, int P1, bool P2) => default; // 0x0000000185156128-0x000000018515622C
-		public long __Gen_Wrap_16(ref ByteBufStream P0) => default; // 0x0000000185156368-0x00000001851564B4
-		public Beyond.Byte.UInt128 __Gen_Wrap_17(object P0, int P1, bool P2) => default; // 0x00000001851564B4-0x00000001851565EC
-		public Beyond.Byte.UInt128 __Gen_Wrap_18(ref ByteBufStream P0) => default; // 0x00000001851565EC-0x0000000185156764
-		public ushort __Gen_Wrap_19(object P0, int P1, bool P2) => default; // 0x0000000185156024-0x0000000185156128
-		public short __Gen_Wrap_20(object P0, int P1, bool P2) => default; // 0x0000000185156024-0x0000000185156128
+		public bool __Gen_Wrap_0(ref Beyond.Byte.UInt128 P0, Beyond.Byte.UInt128 P1) => default; // 0x00000001873445D4-0x000000018734473C
+		public bool __Gen_Wrap_1(ref Beyond.Byte.UInt128 P0, object P1) => default; // 0x0000000187344FB8-0x0000000187345108
+		public int __Gen_Wrap_2(ref Beyond.Byte.UInt128 P0) => default; // 0x0000000187345C34-0x0000000187345D78
+		public Beyond.Byte.UInt128 __Gen_Wrap_3(object P0) => default; // 0x00000001873469FC-0x0000000187346AF4
+		public Guid __Gen_Wrap_4(ref Beyond.Byte.UInt128 P0) => default; // 0x0000000187347630-0x0000000187347790
+		public int __Gen_Wrap_5(ref Beyond.Byte.UInt128 P0, Beyond.Byte.UInt128 P1) => default; // 0x0000000187348154-0x00000001873482BC
+		public bool __Gen_Wrap_6(Beyond.Byte.UInt128 P0, Beyond.Byte.UInt128 P1) => default; // 0x00000001873482BC-0x00000001873483E4
+		public int __Gen_Wrap_7(ref ByteBufStream P0) => default; // 0x00000001873483E4-0x0000000187348530
+		public byte[] __Gen_Wrap_8(ref ByteBufStream P0) => default; // 0x0000000187348530-0x000000018734867C
+		public uint __Gen_Wrap_9(object P0, int P1, bool P2) => default; // 0x0000000187344878-0x000000018734497C
+		public uint __Gen_Wrap_10(ref ByteBufStream P0) => default; // 0x000000018734473C-0x0000000187344878
+		public int __Gen_Wrap_11(object P0, int P1, bool P2) => default; // 0x0000000187344878-0x000000018734497C
+		public byte __Gen_Wrap_12(object P0, int P1, bool P2) => default; // 0x0000000187344878-0x000000018734497C
+		public ulong __Gen_Wrap_13(object P0, int P1, bool P2) => default; // 0x000000018734497C-0x0000000187344A80
+		public ulong __Gen_Wrap_14(ref ByteBufStream P0) => default; // 0x0000000187344A80-0x0000000187344BBC
+		public long __Gen_Wrap_15(object P0, int P1, bool P2) => default; // 0x000000018734497C-0x0000000187344A80
+		public long __Gen_Wrap_16(ref ByteBufStream P0) => default; // 0x0000000187344BBC-0x0000000187344D08
+		public Beyond.Byte.UInt128 __Gen_Wrap_17(object P0, int P1, bool P2) => default; // 0x0000000187344D08-0x0000000187344E40
+		public Beyond.Byte.UInt128 __Gen_Wrap_18(ref ByteBufStream P0) => default; // 0x0000000187344E40-0x0000000187344FB8
+		public ushort __Gen_Wrap_19(object P0, int P1, bool P2) => default; // 0x0000000187344878-0x000000018734497C
+		public short __Gen_Wrap_20(object P0, int P1, bool P2) => default; // 0x0000000187344878-0x000000018734497C
 		public string __Gen_Wrap_21(object P0, int P1, out short P2) {
 			P2 = default;
 			return default;
-		} // 0x00000001851568B4-0x0000000185156A00
-		public string __Gen_Wrap_22(ref ByteBufStream P0) => default; // 0x0000000185156A00-0x0000000185156B60
+		} // 0x0000000187345108-0x0000000187345254
+		public string __Gen_Wrap_22(ref ByteBufStream P0) => default; // 0x0000000187345254-0x00000001873453B4
 		public void __Gen_Wrap_23(object P0, int P1, out short P2) {
 			P2 = default;
-		} // 0x0000000185156B60-0x0000000185156C78
-		public void __Gen_Wrap_24(ref ByteBufStream P0) {} // 0x0000000185156C78-0x0000000185156DB4
-		public byte[] __Gen_Wrap_25(object P0, int P1, byte P2) => default; // 0x0000000185156DB4-0x0000000185156EC8
-		public void __Gen_Wrap_26(ref ByteBufStream P0, byte P1) {} // 0x0000000185156EC8-0x0000000185157010
-		public byte[] __Gen_Wrap_27(object P0, int P1, uint P2, bool P3) => default; // 0x0000000185157010-0x0000000185157144
-		public void __Gen_Wrap_28(ref ByteBufStream P0, uint P1) {} // 0x0000000185157144-0x0000000185157288
-		public void __Gen_Wrap_29(ref ByteBufStream P0, int P1) {} // 0x0000000185157288-0x00000001851573CC
-		public byte[] __Gen_Wrap_30(object P0, int P1, ulong P2, bool P3) => default; // 0x0000000185157500-0x0000000185157628
-		public void __Gen_Wrap_31(ref ByteBufStream P0, ulong P1) {} // 0x0000000185157628-0x0000000185157770
-		public void __Gen_Wrap_32(ref ByteBufStream P0, long P1) {} // 0x0000000185157770-0x00000001851578B8
-		public byte[] __Gen_Wrap_33(object P0, int P1, Beyond.Byte.UInt128 P2, bool P3) => default; // 0x00000001851578B8-0x0000000185157A00
-		public void __Gen_Wrap_34(ref ByteBufStream P0, Beyond.Byte.UInt128 P1) {} // 0x0000000185157A00-0x0000000185157B6C
-		public byte[] __Gen_Wrap_35(object P0, int P1, ushort P2, bool P3) => default; // 0x0000000185157B6C-0x0000000185157CA0
-		public byte[] __Gen_Wrap_36(object P0, int P1, short P2, bool P3) => default; // 0x0000000185157CA0-0x0000000185157DC8
+		} // 0x00000001873453B4-0x00000001873454CC
+		public void __Gen_Wrap_24(ref ByteBufStream P0) {} // 0x00000001873454CC-0x0000000187345608
+		public byte[] __Gen_Wrap_25(object P0, int P1, byte P2) => default; // 0x0000000187345608-0x000000018734571C
+		public void __Gen_Wrap_26(ref ByteBufStream P0, byte P1) {} // 0x000000018734571C-0x0000000187345864
+		public byte[] __Gen_Wrap_27(object P0, int P1, uint P2, bool P3) => default; // 0x0000000187345864-0x0000000187345998
+		public void __Gen_Wrap_28(ref ByteBufStream P0, uint P1) {} // 0x0000000187345998-0x0000000187345ADC
+		public void __Gen_Wrap_29(ref ByteBufStream P0, int P1) {} // 0x0000000187345ADC-0x0000000187345C34
+		public byte[] __Gen_Wrap_30(object P0, int P1, ulong P2, bool P3) => default; // 0x0000000187345D78-0x0000000187345EA0
+		public void __Gen_Wrap_31(ref ByteBufStream P0, ulong P1) {} // 0x0000000187345EA0-0x0000000187345FE8
+		public void __Gen_Wrap_32(ref ByteBufStream P0, long P1) {} // 0x0000000187345FE8-0x0000000187346130
+		public byte[] __Gen_Wrap_33(object P0, int P1, Beyond.Byte.UInt128 P2, bool P3) => default; // 0x0000000187346130-0x0000000187346278
+		public void __Gen_Wrap_34(ref ByteBufStream P0, Beyond.Byte.UInt128 P1) {} // 0x0000000187346278-0x00000001873463E4
+		public byte[] __Gen_Wrap_35(object P0, int P1, ushort P2, bool P3) => default; // 0x00000001873463E4-0x0000000187346518
+		public byte[] __Gen_Wrap_36(object P0, int P1, short P2, bool P3) => default; // 0x0000000187346518-0x0000000187346640
 		public byte[] __Gen_Wrap_37(object P0, int P1, object P2, out int P3) {
 			P3 = default;
 			return default;
-		} // 0x0000000185157DC8-0x0000000185157F14
-		public void __Gen_Wrap_38(ref ByteBufStream P0, object P1) {} // 0x0000000185157F14-0x000000018515805C
-		public ByteBufStream __Gen_Wrap_39(object P0, int P1) => default; // 0x000000018515805C-0x0000000185158184
-		public ByteBufStream __Gen_Wrap_40(int P0) => default; // 0x000000018515827C-0x0000000185158374
-		public float __Gen_Wrap_41(int P0) => default; // 0x00000001850F29AC-0x00000001850F2A64
-		public float __Gen_Wrap_42(object P0, int P1, bool P2) => default; // 0x0000000185158374-0x0000000185158468
-		public Span<byte> __Gen_Wrap_43(Span<byte> P0, int P1, uint P2, bool P3) => default; // 0x0000000185158468-0x00000001851585D4
-		public byte[] __Gen_Wrap_44(object P0, int P1, int P2, bool P3) => default; // 0x00000001851585D4-0x0000000185158708
-		public Span<byte> __Gen_Wrap_45(Span<byte> P0, int P1, ulong P2, bool P3) => default; // 0x0000000185158708-0x0000000185158874
-		public byte[] __Gen_Wrap_46(object P0, int P1, long P2, bool P3) => default; // 0x0000000185158874-0x000000018515899C
-		public Span<byte> __Gen_Wrap_47(Span<byte> P0, int P1, Beyond.Byte.UInt128 P2, bool P3) => default; // 0x000000018515899C-0x0000000185158B30
-		public int __Gen_Wrap_48(float P0) => default; // 0x0000000185158B30-0x0000000185158BEC
-		public byte[] __Gen_Wrap_49(object P0, int P1, float P2) => default; // 0x0000000185158BEC-0x0000000185158D00
+		} // 0x0000000187346640-0x000000018734678C
+		public void __Gen_Wrap_38(ref ByteBufStream P0, object P1) {} // 0x000000018734678C-0x00000001873468D4
+		public ByteBufStream __Gen_Wrap_39(object P0, int P1) => default; // 0x00000001873468D4-0x00000001873469FC
+		public ByteBufStream __Gen_Wrap_40(int P0) => default; // 0x0000000187346AF4-0x0000000187346BEC
+		public float __Gen_Wrap_41(int P0) => default; // 0x0000000187346BEC-0x0000000187346CA4
+		public float __Gen_Wrap_42(object P0, int P1, bool P2) => default; // 0x0000000187346CA4-0x0000000187346D98
+		public Span<byte> __Gen_Wrap_43(Span<byte> P0, int P1, uint P2, bool P3) => default; // 0x0000000187346D98-0x0000000187346F04
+		public byte[] __Gen_Wrap_44(object P0, int P1, int P2, bool P3) => default; // 0x0000000187346F04-0x0000000187347038
+		public Span<byte> __Gen_Wrap_45(Span<byte> P0, int P1, ulong P2, bool P3) => default; // 0x0000000187347038-0x00000001873471A4
+		public byte[] __Gen_Wrap_46(object P0, int P1, long P2, bool P3) => default; // 0x00000001873471A4-0x00000001873472CC
+		public Span<byte> __Gen_Wrap_47(Span<byte> P0, int P1, Beyond.Byte.UInt128 P2, bool P3) => default; // 0x00000001873472CC-0x0000000187347460
+		public int __Gen_Wrap_48(float P0) => default; // 0x0000000187347460-0x000000018734751C
+		public byte[] __Gen_Wrap_49(object P0, int P1, float P2) => default; // 0x000000018734751C-0x0000000187347630
 		public void __Gen_Wrap_50(long P0, out int P1, out int P2) {
 			P1 = default;
 			P2 = default;
-		} // 0x0000000185158E60-0x0000000185158F88
-		public long __Gen_Wrap_51(int P0, int P1) => default; // 0x0000000185158F88-0x000000018515905C
-		public string __Gen_Wrap_52(object P0, int P1, int P2) => default; // 0x000000018515905C-0x0000000185159170
-		public string __Gen_Wrap_53(object P0) => default; // 0x0000000185159170-0x000000018515924C
-		public string __Gen_Wrap_54(Span<byte> P0, int P1, int P2) => default; // 0x000000018515924C-0x0000000185159398
-		public string __Gen_Wrap_55(Span<byte> P0) => default; // 0x0000000185159398-0x00000001851594B0
-		public void __Gen_Wrap_56(object P0, Span<byte> P1, int P2, int P3) {} // 0x00000001851594B0-0x00000001851595EC
-		public void __Gen_Wrap_57(object P0, Span<byte> P1) {} // 0x00000001851595EC-0x0000000185159700
-		public Beyond.Byte.UInt128 __Gen_Wrap_58(object P0, int P1, int P2) => default; // 0x0000000185159700-0x0000000185159824
+		} // 0x0000000187347790-0x00000001873478B8
+		public long __Gen_Wrap_51(int P0, int P1) => default; // 0x00000001873478B8-0x000000018734798C
+		public string __Gen_Wrap_52(object P0, int P1, int P2) => default; // 0x000000018734798C-0x0000000187347AA0
+		public string __Gen_Wrap_53(object P0) => default; // 0x0000000187347AA0-0x0000000187347B7C
+		public string __Gen_Wrap_54(Span<byte> P0, int P1, int P2) => default; // 0x0000000187347B7C-0x0000000187347CC8
+		public string __Gen_Wrap_55(Span<byte> P0) => default; // 0x0000000187347CC8-0x0000000187347DE0
+		public void __Gen_Wrap_56(object P0, Span<byte> P1, int P2, int P3) {} // 0x0000000187347DE0-0x0000000187347F1C
+		public void __Gen_Wrap_57(object P0, Span<byte> P1) {} // 0x0000000187347F1C-0x0000000187348030
+		public Beyond.Byte.UInt128 __Gen_Wrap_58(object P0, int P1, int P2) => default; // 0x0000000187348030-0x0000000187348154
 	}
 
-	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 59430
+	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 60486
 	{
 		// Constructors
 		public ILFixInterfaceBridge() {} // Dummy constructor
-		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x0000000185159D4C-0x0000000185159DE0
+		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x000000018734867C-0x0000000187348710
 	
 		// Methods
-		public void RefAsyncBuilderStartMethod() {} // 0x000000018350B670-0x000000018350B680
+		public void RefAsyncBuilderStartMethod() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 59431
+	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 60487
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
 	
 		// Constructors
 		public WrappersManagerImpl() {} // Dummy constructor
-		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x0000000184096E30-0x0000000184096EF0
 	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x000000018515A56C-0x000000018515A5D0
-		public static bool IsPatched(int id) => default; // 0x00000001824315D0-0x0000000182431680
-		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x000000018515A428-0x000000018515A4F4
-		public object CreateWrapper(int id) => default; // 0x000000018515A4F4-0x000000018515A56C
-		public object InitWrapperArray(int len) => default; // 0x000000018515A5D0-0x000000018515A728
-		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x000000018515A384-0x000000018515A428
+		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x0000000187348E9C-0x0000000187348F00
+		public static bool IsPatched(int id) => default; // 0x0000000184181C90-0x0000000184181D40
+		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x0000000187348D58-0x0000000187348E24
+		public object CreateWrapper(int id) => default; // 0x0000000187348E24-0x0000000187348E9C
+		public object InitWrapperArray(int len) => default; // 0x0000000187348F00-0x0000000187349058
+		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x0000000187348CB4-0x0000000187348D58
 	}
 
-	public enum IDMAP0 // TypeDefIndex: 59432
+	public enum IDMAP0 // TypeDefIndex: 60488
 	{
 		Beyond-Byte-UInt128-Equals1 = 0,
 		Beyond-Byte-UInt128-Equals0 = 1,

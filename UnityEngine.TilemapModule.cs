@@ -3,177 +3,15 @@
  */
 
 using System;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using Unity.Collections;
 using UnityEngine;
-using UnityEngine.Bindings;
-using UnityEngine.Scripting;
 using UnityEngine.U2D;
 
-// Image 112: UnityEngine.TilemapModule.dll - Assembly: UnityEngine.TilemapModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59825-59836
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
-[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
-[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
-[assembly: InternalsVisibleTo("Unity.Timeline")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
-[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
-[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
-[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
-[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
-[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
-[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
-[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
-[assembly: InternalsVisibleTo("UnityEngine")]
-[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UI")]
-[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
-[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
-[assembly: InternalsVisibleTo("Unity.Services.QoS")]
-[assembly: InternalsVisibleTo("Unity.Logging")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("Unity.Collections")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.Core")]
-[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
-[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
-[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
-[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
-[assembly: InternalsVisibleTo("Unity.Burst")]
-[assembly: InternalsVisibleTo("Unity.Automation")]
-[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
-[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
-[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
-[assembly: InternalsVisibleTo("Unity.Analytics")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
-[assembly: InternalsVisibleTo("UnityEngine.Networking")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
-[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
-[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
-[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: UnityEngineModuleAssembly]
+// Image 116: UnityEngine.TilemapModule.dll - Assembly: UnityEngine.TilemapModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60946-60957
 
 namespace UnityEngine.Tilemaps
 {
-	[RequiredByNativeCode]
-	public class ITilemap // TypeDefIndex: 59826
+	public class ITilemap // TypeDefIndex: 60947
 	{
 		// Fields
 		internal static ITilemap s_Instance; // 0x00
@@ -183,47 +21,36 @@ namespace UnityEngine.Tilemaps
 		internal NativeArray<Vector3Int> m_RefreshPos; // 0x20
 	
 		// Constructors
-		internal ITilemap() {} // 0x000000018350B670-0x000000018350B680
+		internal ITilemap() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public void RefreshTile(Vector3Int position) {} // 0x0000000189E5B80C-0x0000000189E5B970
-		[RequiredByNativeCode]
-		private static ITilemap CreateInstance() => default; // 0x0000000189E5B2E4-0x0000000189E5B358
-		[RequiredByNativeCode]
-		private static void FindAllRefreshPositions(ITilemap tilemap, int count, IntPtr oldTilesIntPtr, IntPtr newTilesIntPtr, IntPtr positionsIntPtr) {} // 0x0000000189E5B358-0x0000000189E5B5F4
-		[RequiredByNativeCode]
-		private static void GetAllTileData(ITilemap tilemap, int count, IntPtr tilesIntPtr, IntPtr positionsIntPtr, IntPtr outTileDataIntPtr) {} // 0x0000000189E5B5F4-0x0000000189E5B80C
+		public void RefreshTile(Vector3Int position) {} // 0x000000018BF734F4-0x000000018BF73658
+		private static ITilemap CreateInstance() => default; // 0x000000018BF72FCC-0x000000018BF73040
+		private static void FindAllRefreshPositions(ITilemap tilemap, int count, IntPtr oldTilesIntPtr, IntPtr newTilesIntPtr, IntPtr positionsIntPtr) {} // 0x000000018BF73040-0x000000018BF732DC
+		private static void GetAllTileData(ITilemap tilemap, int count, IntPtr tilesIntPtr, IntPtr positionsIntPtr, IntPtr outTileDataIntPtr) {} // 0x000000018BF732DC-0x000000018BF734F4
 	}
 
 	[Serializable]
-	[HelpURL("https://docs.unity3d.com/Manual/Tilemap-TileAsset.html")]
-	[RequiredByNativeCode]
-	public class Tile : TileBase // TypeDefIndex: 59828
+	public class Tile : TileBase // TypeDefIndex: 60949
 	{
 		// Fields
-		[SerializeField]
 		private Sprite m_Sprite; // 0x18
-		[SerializeField]
 		private UnityEngine.Color m_Color; // 0x20
-		[SerializeField]
 		private Matrix4x4 m_Transform; // 0x30
-		[SerializeField]
 		private GameObject m_InstancedGameObject; // 0x70
-		[SerializeField]
 		private TileFlags m_Flags; // 0x78
-		[SerializeField]
 		private ColliderType m_ColliderType; // 0x7C
 	
 		// Properties
-		public Sprite sprite { get => default; set {} } // 0x0000000183D61D00-0x0000000183D61D10 0x00000001822C3A90-0x00000001822C3AA0
-		public UnityEngine.Color color { get => default; set {} } // 0x0000000183D88020-0x0000000183D88030 0x0000000183D54E10-0x0000000183D54E20
-		public Matrix4x4 transform { get => default; set {} } // 0x0000000183D883F0-0x0000000183D88420 0x0000000183D88420-0x0000000183D88440
-		public GameObject gameObject { get => default; set {} } // 0x0000000183D87E20-0x0000000183D87E30 0x000000018519C3C8-0x000000018519C3D8
-		public TileFlags flags { get => default; set {} } // 0x0000000183D87E70-0x0000000183D87E80 0x0000000183D4ECC0-0x0000000183D4ECD0
-		public ColliderType colliderType { get => default; set {} } // 0x0000000183D883E0-0x0000000183D883F0 0x0000000183D4ED10-0x0000000183D4ED20
+		public Sprite sprite { get => default; set {} } // 0x0000000185FC2A70-0x0000000185FC2A80 0x0000000184088E70-0x0000000184088E80
+		public UnityEngine.Color color { get => default; set {} } // 0x0000000185FE8E60-0x0000000185FE8E70 0x0000000185FB6130-0x0000000185FB6140
+		public Matrix4x4 transform { get => default; set {} } // 0x0000000185FE9250-0x0000000185FE9280 0x0000000185FE9280-0x0000000185FE92A0
+		public GameObject gameObject { get => default; set {} } // 0x0000000185FE8C60-0x0000000185FE8C70 0x00000001874BE90C-0x00000001874BE91C
+		public TileFlags flags { get => default; set {} } // 0x0000000185FE8CB0-0x0000000185FE8CC0 0x0000000185FB05C0-0x0000000185FB05D0
+		public ColliderType colliderType { get => default; set {} } // 0x0000000185FE9240-0x0000000185FE9250 0x0000000185FB0610-0x0000000185FB0620
 	
 		// Nested types
-		public enum ColliderType // TypeDefIndex: 59827
+		public enum ColliderType // TypeDefIndex: 60948
 		{
 			None = 0,
 			Sprite = 1,
@@ -231,90 +58,71 @@ namespace UnityEngine.Tilemaps
 		}
 	
 		// Constructors
-		public Tile() {} // 0x0000000189E5BD60-0x0000000189E5BDC0
+		public Tile() {} // 0x000000018BF73A48-0x000000018BF73AA8
 	
 		// Methods
-		public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData) {} // 0x0000000189E5BCBC-0x0000000189E5BD60
+		public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData) {} // 0x000000018BF739A4-0x000000018BF73A48
 	}
 
-	[RequiredByNativeCode]
-	public abstract class TileBase : ScriptableObject // TypeDefIndex: 59829
+	public abstract class TileBase : ScriptableObject // TypeDefIndex: 60950
 	{
 		// Constructors
-		protected TileBase() {} // 0x000000018286F540-0x000000018286F550
+		protected TileBase() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
 	
 		// Methods
-		[RequiredByNativeCode]
-		public virtual void RefreshTile(Vector3Int position, ITilemap tilemap) {} // 0x0000000189E5BA34-0x0000000189E5BA6C
-		[RequiredByNativeCode]
-		public virtual void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData) {} // 0x000000018350B670-0x000000018350B680
-		private TileData GetTileDataNoRef(Vector3Int position, ITilemap tilemap) => default; // 0x0000000189E5B970-0x0000000189E5BA34
-		[RequiredByNativeCode]
-		public virtual bool GetTileAnimationData(Vector3Int position, ITilemap tilemap, ref TileAnimationData tileAnimationData) => default; // 0x0000000183D4E3A0-0x0000000183D4E3B0
-		private TileAnimationData GetTileAnimationDataNoRef(Vector3Int position, ITilemap tilemap) => default; // 0x0000000183D86200-0x0000000183D86210
-		[RequiredByNativeCode]
-		private void GetTileAnimationDataRef(Vector3Int position, ITilemap tilemap, ref TileAnimationData tileAnimationData, ref bool hasAnimation) {} // 0x0000000183D883B0-0x0000000183D883C0
-		[RequiredByNativeCode]
-		public virtual bool StartUp(Vector3Int position, ITilemap tilemap, GameObject go) => default; // 0x0000000183D4E3A0-0x0000000183D4E3B0
-		[RequiredByNativeCode]
-		private void StartUpRef(Vector3Int position, ITilemap tilemap, GameObject go, ref bool startUpInvokedByUser) {} // 0x0000000183D883B0-0x0000000183D883C0
+		public virtual void RefreshTile(Vector3Int position, ITilemap tilemap) {} // 0x000000018BF7371C-0x000000018BF73754
+		public virtual void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData) {} // 0x0000000185492010-0x0000000185492020
+		private TileData GetTileDataNoRef(Vector3Int position, ITilemap tilemap) => default; // 0x000000018BF73658-0x000000018BF7371C
+		public virtual bool GetTileAnimationData(Vector3Int position, ITilemap tilemap, ref TileAnimationData tileAnimationData) => default; // 0x0000000185FAFEF0-0x0000000185FAFF00
+		private TileAnimationData GetTileAnimationDataNoRef(Vector3Int position, ITilemap tilemap) => default; // 0x0000000185FE6E80-0x0000000185FE6E90
+		private void GetTileAnimationDataRef(Vector3Int position, ITilemap tilemap, ref TileAnimationData tileAnimationData, ref bool hasAnimation) {} // 0x0000000185FE9210-0x0000000185FE9220
+		public virtual bool StartUp(Vector3Int position, ITilemap tilemap, GameObject go) => default; // 0x0000000185FAFEF0-0x0000000185FAFF00
+		private void StartUpRef(Vector3Int position, ITilemap tilemap, GameObject go, ref bool startUpInvokedByUser) {} // 0x0000000185FE9210-0x0000000185FE9220
 	}
 
-	[NativeHeader("Modules/Grid/Public/GridMarshalling.h")]
-	[NativeHeader("Modules/Grid/Public/Grid.h")]
-	[NativeHeader("Runtime/Graphics/SpriteFrame.h")]
-	[NativeHeader("Modules/Tilemap/Public/TilemapTile.h")]
-	[NativeHeader("Modules/Tilemap/Public/TilemapMarshalling.h")]
-	[NativeType(Header = "Modules/Tilemap/Public/Tilemap.h")]
-	[RequireComponent(typeof(Transform))]
-	public sealed class Tilemap : GridLayout // TypeDefIndex: 59830
+	public sealed class Tilemap : GridLayout // TypeDefIndex: 60951
 	{
 		// Properties
-		public UnityEngine.Grid layoutGrid { [NativeMethod(Name = "GetAttachedGrid")] get => default; } // 0x0000000189E5C318-0x0000000189E5C34C 
-		public BoundsInt cellBounds { get => default; } // 0x0000000189E5C284-0x0000000189E5C318 
-		public Vector3Int origin { get => default; } // 0x0000000189E5C40C-0x0000000189E5C438 
-		public Vector3Int size { get => default; } // 0x0000000189E5C47C-0x0000000189E5C4A8 
-		[NativeProperty(Name = "TileAnchorScripting")]
-		public Vector3 tileAnchor { get => default; } // 0x0000000189E5C4EC-0x0000000189E5C6A8 
-		public Matrix4x4 orientationMatrix { [NativeMethod(Name = "GetTileOrientationMatrix")] get => default; } // 0x0000000189E5C390-0x0000000189E5C3C8 
+		public UnityEngine.Grid layoutGrid { get => default; } // 0x000000018BF74000-0x000000018BF74034 
+		public BoundsInt cellBounds { get => default; } // 0x000000018BF73F6C-0x000000018BF74000 
+		public Vector3Int origin { get => default; } // 0x000000018BF740F4-0x000000018BF74120 
+		public Vector3Int size { get => default; } // 0x000000018BF74164-0x000000018BF74190 
+		public Vector3 tileAnchor { get => default; } // 0x000000018BF741D4-0x000000018BF74390 
+		public Matrix4x4 orientationMatrix { get => default; } // 0x000000018BF74078-0x000000018BF740B0 
 	
 		// Constructors
 		public Tilemap() {} // Dummy constructor
 	
 		// Methods
-		internal UnityEngine.Object GetTileAsset(Vector3Int position) => default; // 0x0000000189E5BF38-0x0000000189E5BF4C
+		internal UnityEngine.Object GetTileAsset(Vector3Int position) => default; // 0x000000018BF73C20-0x000000018BF73C34
 		public T GetTile<T>(Vector3Int position)
 			where T : TileBase => default;
-		internal UnityEngine.Object[] GetTileAssetsBlock(Vector3Int position, Vector3Int blockDimensions) => default; // 0x0000000189E5BFA0-0x0000000189E5BFB4
-		public TileBase[] GetTilesBlock(BoundsInt bounds) => default; // 0x0000000189E5BFB4-0x0000000189E5C0E0
-		public bool HasTile(Vector3Int position) => default; // 0x0000000189E5C120-0x0000000189E5C194
-		[NativeMethod(Name = "RefreshTileAsset")]
-		public void RefreshTile(Vector3Int position) {} // 0x0000000189E5C21C-0x0000000189E5C230
-		[FreeFunction(Name = "TilemapBindings::RefreshTileAssetsNative", HasExplicitThis = true)]
-		internal unsafe void RefreshTilesNative(void* positions, int count) {} // 0x0000000189E5C230-0x0000000189E5C284
-		public int GetUsedTilesCount() => default; // 0x0000000189E5C0E0-0x0000000189E5C114
-		public int GetUsedTilesNonAlloc(TileBase[] usedTiles) => default; // 0x0000000189E5C114-0x0000000189E5C120
-		[FreeFunction(Name = "TilemapBindings::GetUsedTilesNonAlloc", HasExplicitThis = true)]
-		internal int Internal_GetUsedTilesNonAlloc([Unmarshalled] UnityEngine.Object[] usedTiles) => default; // 0x0000000189E5C194-0x0000000189E5C1D8
+		internal UnityEngine.Object[] GetTileAssetsBlock(Vector3Int position, Vector3Int blockDimensions) => default; // 0x000000018BF73C88-0x000000018BF73C9C
+		public TileBase[] GetTilesBlock(BoundsInt bounds) => default; // 0x000000018BF73C9C-0x000000018BF73DC8
+		public bool HasTile(Vector3Int position) => default; // 0x000000018BF73E08-0x000000018BF73E7C
+		public void RefreshTile(Vector3Int position) {} // 0x000000018BF73F04-0x000000018BF73F18
+		internal unsafe void RefreshTilesNative(void* positions, int count) {} // 0x000000018BF73F18-0x000000018BF73F6C
+		public int GetUsedTilesCount() => default; // 0x000000018BF73DC8-0x000000018BF73DFC
+		public int GetUsedTilesNonAlloc(TileBase[] usedTiles) => default; // 0x000000018BF73DFC-0x000000018BF73E08
+		internal int Internal_GetUsedTilesNonAlloc(UnityEngine.Object[] usedTiles) => default; // 0x000000018BF73E7C-0x000000018BF73EC0
 		private void get_origin_Injected(out Vector3Int ret) {
 			ret = default;
-		} // 0x0000000189E5C3C8-0x0000000189E5C40C
+		} // 0x000000018BF740B0-0x000000018BF740F4
 		private void get_size_Injected(out Vector3Int ret) {
 			ret = default;
-		} // 0x0000000189E5C438-0x0000000189E5C47C
+		} // 0x000000018BF74120-0x000000018BF74164
 		private void get_tileAnchor_Injected(out Vector3 ret) {
 			ret = default;
-		} // 0x0000000189E5C4A8-0x0000000189E5C4EC
+		} // 0x000000018BF74190-0x000000018BF741D4
 		private void get_orientationMatrix_Injected(out Matrix4x4 ret) {
 			ret = default;
-		} // 0x0000000189E5C34C-0x0000000189E5C390
-		private UnityEngine.Object GetTileAsset_Injected(ref Vector3Int position) => default; // 0x0000000189E5BEF4-0x0000000189E5BF38
-		private UnityEngine.Object[] GetTileAssetsBlock_Injected(ref Vector3Int position, ref Vector3Int blockDimensions) => default; // 0x0000000189E5BF4C-0x0000000189E5BFA0
-		private void RefreshTile_Injected(ref Vector3Int position) {} // 0x0000000189E5C1D8-0x0000000189E5C21C
+		} // 0x000000018BF74034-0x000000018BF74078
+		private UnityEngine.Object GetTileAsset_Injected(ref Vector3Int position) => default; // 0x000000018BF73BDC-0x000000018BF73C20
+		private UnityEngine.Object[] GetTileAssetsBlock_Injected(ref Vector3Int position, ref Vector3Int blockDimensions) => default; // 0x000000018BF73C34-0x000000018BF73C88
+		private void RefreshTile_Injected(ref Vector3Int position) {} // 0x000000018BF73EC0-0x000000018BF73F04
 	}
 
-	[Flags]
-	public enum TileFlags // TypeDefIndex: 59831
+	public enum TileFlags // TypeDefIndex: 60952
 	{
 		None = 0,
 		LockColor = 1,
@@ -324,27 +132,18 @@ namespace UnityEngine.Tilemaps
 		KeepGameObjectRuntimeOnly = 8
 	}
 
-	[NativeHeader("Modules/Tilemap/Public/TilemapMarshalling.h")]
-	[NativeHeader("Modules/Tilemap/TilemapRendererJobs.h")]
-	[NativeHeader("Modules/Grid/Public/GridMarshalling.h")]
-	[NativeType(Header = "Modules/Tilemap/Public/TilemapRenderer.h")]
-	[RequireComponent(typeof(Tilemap))]
-	public sealed class TilemapRenderer : Renderer // TypeDefIndex: 59832
+	public sealed class TilemapRenderer : Renderer // TypeDefIndex: 60953
 	{
 		// Constructors
 		public TilemapRenderer() {} // Dummy constructor
 	
 		// Methods
-		[RequiredByNativeCode]
-		internal void RegisterSpriteAtlasRegistered() {} // 0x0000000189E5BE04-0x0000000189E5BE7C
-		[RequiredByNativeCode]
-		internal void UnregisterSpriteAtlasRegistered() {} // 0x0000000189E5BE7C-0x0000000189E5BEF4
-		internal void OnSpriteAtlasRegistered(SpriteAtlas atlas) {} // 0x0000000189E5BDC0-0x0000000189E5BE04
+		internal void RegisterSpriteAtlasRegistered() {} // 0x000000018BF73AEC-0x000000018BF73B64
+		internal void UnregisterSpriteAtlasRegistered() {} // 0x000000018BF73B64-0x000000018BF73BDC
+		internal void OnSpriteAtlasRegistered(SpriteAtlas atlas) {} // 0x000000018BF73AA8-0x000000018BF73AEC
 	}
 
-	[NativeType(Header = "Modules/Tilemap/TilemapScripting.h")]
-	[RequiredByNativeCode]
-	public struct TileData // TypeDefIndex: 59833
+	public struct TileData // TypeDefIndex: 60954
 	{
 		// Fields
 		private int m_Sprite; // 0x00
@@ -356,25 +155,23 @@ namespace UnityEngine.Tilemaps
 		internal static readonly TileData Default; // 0x00
 	
 		// Properties
-		public Sprite sprite { set {} } // 0x0000000189E5BC44-0x0000000189E5BCBC
-		public UnityEngine.Color color { set {} } // 0x0000000183D84E00-0x0000000183D84E10
-		public Matrix4x4 transform { set {} } // 0x0000000183D883C0-0x0000000183D883E0
-		public GameObject gameObject { set {} } // 0x0000000189E5BBC8-0x0000000189E5BC44
-		public TileFlags flags { set {} } // 0x0000000183D4EF50-0x0000000183D4EF60
-		public Tile.ColliderType colliderType { set {} } // 0x0000000183D4EF40-0x0000000183D4EF50
+		public Sprite sprite { set {} } // 0x000000018BF7392C-0x000000018BF739A4
+		public UnityEngine.Color color { set {} } // 0x0000000185FE5A80-0x0000000185FE5A90
+		public Matrix4x4 transform { set {} } // 0x0000000185FE9220-0x0000000185FE9240
+		public GameObject gameObject { set {} } // 0x000000018BF738B0-0x000000018BF7392C
+		public TileFlags flags { set {} } // 0x0000000183F804E0-0x0000000183F804F0
+		public Tile.ColliderType colliderType { set {} } // 0x0000000183F804F0-0x0000000183F80500
 	
 		// Constructors
 		static TileData() {
 			Default = default;
-		} // 0x0000000189E5BB54-0x0000000189E5BBC8
+		} // 0x000000018BF7383C-0x000000018BF738B0
 	
 		// Methods
-		private static TileData CreateDefault() => default; // 0x0000000189E5BA6C-0x0000000189E5BB54
+		private static TileData CreateDefault() => default; // 0x000000018BF73754-0x000000018BF7383C
 	}
 
-	[NativeType(Header = "Modules/Tilemap/TilemapScripting.h")]
-	[RequiredByNativeCode]
-	internal struct TileDataNative // TypeDefIndex: 59834
+	internal struct TileDataNative // TypeDefIndex: 60955
 	{
 		// Fields
 		private int m_Sprite; // 0x00
@@ -385,9 +182,7 @@ namespace UnityEngine.Tilemaps
 		private Tile.ColliderType m_ColliderType; // 0x5C
 	}
 
-	[NativeType(Header = "Modules/Tilemap/TilemapScripting.h")]
-	[RequiredByNativeCode]
-	public struct TileChangeData // TypeDefIndex: 59835
+	public struct TileChangeData // TypeDefIndex: 60956
 	{
 		// Fields
 		private Vector3Int m_Position; // 0x00
@@ -396,9 +191,7 @@ namespace UnityEngine.Tilemaps
 		private Matrix4x4 m_Transform; // 0x28
 	}
 
-	[NativeType(Header = "Modules/Tilemap/TilemapScripting.h")]
-	[RequiredByNativeCode]
-	public struct TileAnimationData // TypeDefIndex: 59836
+	public struct TileAnimationData // TypeDefIndex: 60957
 	{
 		// Fields
 		private Sprite[] m_AnimatedSprites; // 0x00

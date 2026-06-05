@@ -4,22 +4,17 @@
 
 using System;
 using System.Collections.Concurrent;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using Beyond;
 using Beyond.VFS;
 using IFix.Core;
 using Unity.Collections;
 using Unity.IO.LowLevel.Unsafe;
 
-// Image 138: Unsafe.VFS.dll - Assembly: Unsafe.VFS, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60099-60106
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 141: Unsafe.VFS.dll - Assembly: Unsafe.VFS, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61208-61215
 
 namespace Beyond.VFS
 {
-	public struct FVFSUntrackedLowIOReadHandle : IDisposable // TypeDefIndex: 60100
+	public struct FVFSUntrackedLowIOReadHandle : IDisposable // TypeDefIndex: 61209
 	{
 		// Fields
 		public unsafe ReadCommand* readCommand; // 0x00
@@ -31,23 +26,23 @@ namespace Beyond.VFS
 			readCommand = default;
 			readHandle = default;
 			this.isEnc = default;
-		} // 0x0000000182989E20-0x0000000182989FE0
+		} // 0x0000000184AD0EA0-0x0000000184AD1060
 		public unsafe FVFSUntrackedLowIOReadHandle(UnSafeString path, long offset, long len, bool async, bool isEnc) {
 			readCommand = default;
 			readHandle = default;
 			this.isEnc = default;
-		} // 0x0000000189FA7790-0x0000000189FA78E0
+		} // 0x000000018C0BF860-0x000000018C0BF9B0
 	
 		// Methods
-		public void Dispose() {} // 0x0000000182988A80-0x0000000182988B50
-		public bool IsValid() => default; // 0x0000000182989D30-0x0000000182989E20
-		public bool IsComplete() => default; // 0x0000000182F45680-0x0000000182F456C0
-		public ReadStatus GetStatus() => default; // 0x0000000182988F90-0x0000000182988FD0
-		public NativeArray<byte> GetData() => default; // 0x0000000182F45950-0x0000000182F459F0
-		public NativeArray<byte> GetDataThread() => default; // 0x000000018298AAD0-0x000000018298AB70
+		public void Dispose() {} // 0x00000001847C5710-0x00000001847C57E0
+		public bool IsValid() => default; // 0x0000000184AD1270-0x0000000184AD1360
+		public bool IsComplete() => default; // 0x0000000184ACFF30-0x0000000184ACFF70
+		public ReadStatus GetStatus() => default; // 0x00000001847C5C20-0x00000001847C5C60
+		public NativeArray<byte> GetData() => default; // 0x000000018457B030-0x000000018457B0D0
+		public NativeArray<byte> GetDataThread() => default; // 0x000000018457C780-0x000000018457C820
 	}
 
-	public struct FVFSPathInfo // TypeDefIndex: 60101
+	public struct FVFSPathInfo // TypeDefIndex: 61210
 	{
 		// Fields
 		public string fullPathFormat; // 0x00
@@ -56,30 +51,28 @@ namespace Beyond.VFS
 		public string param2; // 0x18
 	
 		// Methods
-		public string GetResultString() => default; // 0x00000001824C0E70-0x00000001824C1030
-		public UnSafeString GetUnsafeString() => default; // 0x00000001824BDD30-0x00000001824BDEE0
+		public string GetResultString() => default; // 0x0000000184186010-0x00000001841861D0
+		public UnSafeString GetUnsafeString() => default; // 0x0000000184256F50-0x0000000184257100
 	}
 
-	public static class ThreadUnsafeStringUtils // TypeDefIndex: 60102
+	public static class ThreadUnsafeStringUtils // TypeDefIndex: 61211
 	{
 		// Fields
 		private static ConcurrentStack<UnSafeString> s_stack; // 0x00
 	
 		// Constructors
-		static ThreadUnsafeStringUtils() {} // 0x0000000183CF64F0-0x0000000183CF6570
+		static ThreadUnsafeStringUtils() {} // 0x0000000185F527A0-0x0000000185F52820
 	
 		// Methods
-		public static UnSafeString ThreadStringAlloc() => default; // 0x0000000182681220-0x0000000182681410
-		public static void ThreadStringRelease(UnSafeString value) {} // 0x00000001826824F0-0x0000000182682750
-	
-		// Extension methods
-		public static UnSafeString AppendPathInfo(this UnSafeString str, ref FVFSPathInfo info) => default; // 0x0000000182681410-0x00000001826817A0
+		public static UnSafeString ThreadStringAlloc() => default; // 0x0000000184258750-0x0000000184258940
+		public static void ThreadStringRelease(UnSafeString value) {} // 0x000000018425B050-0x000000018425B2B0
+		public static UnSafeString AppendPathInfo(UnSafeString str, ref FVFSPathInfo info) => default; // 0x0000000184258940-0x0000000184259DC0
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 60103
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 61212
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -89,50 +82,50 @@ namespace IFix
 	
 		// Constructors
 		public ILFixDynamicMethodWrapper() {} // Dummy constructor
-		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000183020510-0x0000000183020540
-		static ILFixDynamicMethodWrapper() {} // 0x0000000183D061A0-0x0000000183D06210
+		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000184E6FCD0-0x0000000184E6FD00
+		static ILFixDynamicMethodWrapper() {} // 0x0000000185F64A90-0x0000000185F64B00
 	
 		// Methods
-		public void __Gen_Wrap_0(ref FVFSUntrackedLowIOReadHandle P0) {} // 0x0000000189FA78E0-0x0000000189FA7A24
-		public bool __Gen_Wrap_1(ref FVFSUntrackedLowIOReadHandle P0) => default; // 0x0000000189FA7A24-0x0000000189FA7B78
-		public ReadStatus __Gen_Wrap_2(ref FVFSUntrackedLowIOReadHandle P0) => default; // 0x0000000189FA7B78-0x0000000189FA7CCC
-		public NativeArray<byte> __Gen_Wrap_3(ref FVFSUntrackedLowIOReadHandle P0) => default; // 0x0000000189FA7CCC-0x0000000189FA7E4C
-		public string __Gen_Wrap_4(ref FVFSPathInfo P0) => default; // 0x0000000189FA7E4C-0x0000000189FA7FB8
-		public UnSafeString __Gen_Wrap_5(ref FVFSPathInfo P0) => default; // 0x0000000189FA7FB8-0x0000000189FA8124
-		public UnSafeString __Gen_Wrap_6() => default; // 0x0000000189FA8124-0x0000000189FA81F0
-		public void __Gen_Wrap_7(object P0) {} // 0x0000000184274234-0x00000001842742F4
-		public UnSafeString __Gen_Wrap_8(object P0, ref FVFSPathInfo P1) => default; // 0x0000000189FA81F0-0x0000000189FA8378
+		public void __Gen_Wrap_0(ref FVFSUntrackedLowIOReadHandle P0) {} // 0x000000018C0BF9B0-0x000000018C0BFAF4
+		public bool __Gen_Wrap_1(ref FVFSUntrackedLowIOReadHandle P0) => default; // 0x000000018C0BFAF4-0x000000018C0BFC48
+		public ReadStatus __Gen_Wrap_2(ref FVFSUntrackedLowIOReadHandle P0) => default; // 0x000000018C0BFC48-0x000000018C0BFD9C
+		public NativeArray<byte> __Gen_Wrap_3(ref FVFSUntrackedLowIOReadHandle P0) => default; // 0x000000018C0BFD9C-0x000000018C0BFF1C
+		public string __Gen_Wrap_4(ref FVFSPathInfo P0) => default; // 0x000000018C0BFF1C-0x000000018C0C0088
+		public UnSafeString __Gen_Wrap_5(ref FVFSPathInfo P0) => default; // 0x000000018C0C0088-0x000000018C0C01F4
+		public UnSafeString __Gen_Wrap_6() => default; // 0x000000018C0C01F4-0x000000018C0C02C0
+		public void __Gen_Wrap_7(object P0) {} // 0x000000018646FFC0-0x0000000186470080
+		public UnSafeString __Gen_Wrap_8(object P0, ref FVFSPathInfo P1) => default; // 0x000000018C0C02C0-0x000000018C0C0448
 	}
 
-	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 60104
+	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 61213
 	{
 		// Constructors
 		public ILFixInterfaceBridge() {} // Dummy constructor
-		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x0000000189FA8378-0x0000000189FA840C
+		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x000000018C0C0448-0x000000018C0C04DC
 	
 		// Methods
-		public void RefAsyncBuilderStartMethod() {} // 0x000000018350B670-0x000000018350B680
+		public void RefAsyncBuilderStartMethod() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 60105
+	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 61214
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
 	
 		// Constructors
 		public WrappersManagerImpl() {} // Dummy constructor
-		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x0000000184096E30-0x0000000184096EF0
 	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x0000000189FA85F4-0x0000000189FA8658
-		public static bool IsPatched(int id) => default; // 0x00000001824BDEE0-0x00000001824BDF90
-		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x0000000189FA84B0-0x0000000189FA857C
-		public object CreateWrapper(int id) => default; // 0x0000000189FA857C-0x0000000189FA85F4
-		public object InitWrapperArray(int len) => default; // 0x0000000189FA8658-0x0000000189FA86E4
-		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x0000000189FA840C-0x0000000189FA84B0
+		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x000000018C0C06C4-0x000000018C0C0728
+		public static bool IsPatched(int id) => default; // 0x0000000184257100-0x00000001842571B0
+		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x000000018C0C0580-0x000000018C0C064C
+		public object CreateWrapper(int id) => default; // 0x000000018C0C064C-0x000000018C0C06C4
+		public object InitWrapperArray(int len) => default; // 0x000000018C0C0728-0x000000018C0C07B4
+		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x000000018C0C04DC-0x000000018C0C0580
 	}
 
-	public enum IDMAP0 // TypeDefIndex: 60106
+	public enum IDMAP0 // TypeDefIndex: 61215
 	{
 		Beyond-VFS-FVFSUntrackedLowIOReadHandle-Dispose0 = 0,
 		Beyond-VFS-FVFSUntrackedLowIOReadHandle-IsValid0 = 1,

@@ -4,24 +4,18 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Beyond;
 using Beyond.Gameplay.Core;
 using IFix.Core;
 using Unity.Collections;
 
-// Image 101: Unsafe.SceneGrid.dll - Assembly: Unsafe.SceneGrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59566-59591
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 104: Unsafe.SceneGrid.dll - Assembly: Unsafe.SceneGrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60670-60695
 
 namespace Beyond.Gameplay.Core
 {
-	public struct FDictionary4<Tk, Tv> // TypeDefIndex: 59576
+	public struct FDictionary4<Tk, Tv> // TypeDefIndex: 60680
 		where Tk : struct, IEquatable<Tk>
 		where Tv : struct
 	{
@@ -35,14 +29,13 @@ namespace Beyond.Gameplay.Core
 		public Tv this[Tk k] { get => default; set {} }
 	
 		// Nested types
-		public struct FDictionaryEnumerator // TypeDefIndex: 59575
+		public struct FDictionaryEnumerator // TypeDefIndex: 60679
 		{
 			// Fields
 			public unsafe FDictionary4<Tk, Tv>* ptr;
 			private int m_pos;
 	
 			// Properties
-			[TupleElementNames(new string[2] {"key", "v" })]
 			public ValueTuple<Tk, Tv> Current { get => default; }
 	
 			// Constructors
@@ -77,7 +70,7 @@ namespace Beyond.Gameplay.Core
 		public bool TryRemove(Tk k) => default;
 	}
 
-	public struct FDictionary16<Tk, Tv> // TypeDefIndex: 59578
+	public struct FDictionary16<Tk, Tv> // TypeDefIndex: 60682
 		where Tk : struct, IEquatable<Tk>
 		where Tv : struct
 	{
@@ -91,14 +84,13 @@ namespace Beyond.Gameplay.Core
 		public Tv this[Tk k] { get => default; set {} }
 	
 		// Nested types
-		public struct FDictionaryEnumerator // TypeDefIndex: 59577
+		public struct FDictionaryEnumerator // TypeDefIndex: 60681
 		{
 			// Fields
 			public unsafe FDictionary16<Tk, Tv>* ptr;
 			private int m_pos;
 	
 			// Properties
-			[TupleElementNames(new string[2] {"key", "v" })]
 			public ValueTuple<Tk, Tv> Current { get => default; }
 	
 			// Constructors
@@ -133,16 +125,16 @@ namespace Beyond.Gameplay.Core
 		public bool TryRemove(Tk k) => default;
 	}
 
-	public class MemFriendSetContextManager<T> // TypeDefIndex: 59579
+	public class MemFriendSetContextManager<T> // TypeDefIndex: 60683
 		where T : struct
 	{
 		// Fields
-		private const int ARRAY_CACHE_SIZE = 32; // Metadata: 0x01FDD1D2
-		private const int SEQ_SET_MAX = 8; // Metadata: 0x01FDD1D3
-		private const int INIT_SET_CAP = 2048; // Metadata: 0x01FDD1D4
-		private const int MAX_SET_CAP = 65536; // Metadata: 0x01FDD1D6
-		private const int INIT_MIN_CAP = 2; // Metadata: 0x01FDD1DA
-		public const int MAX_CONTENT_SIZE = 2097152; // Metadata: 0x01FDD1DB
+		private const int ARRAY_CACHE_SIZE = 32; // Metadata: 0x02082ABE
+		private const int SEQ_SET_MAX = 8; // Metadata: 0x02082ABF
+		private const int INIT_SET_CAP = 2048; // Metadata: 0x02082AC0
+		private const int MAX_SET_CAP = 65536; // Metadata: 0x02082AC2
+		private const int INIT_MIN_CAP = 2; // Metadata: 0x02082AC6
+		public const int MAX_CONTENT_SIZE = 2097152; // Metadata: 0x02082AC7
 		public readonly int minCapSize;
 		public readonly int initContentSize;
 		public readonly int freeListPointerSize;
@@ -167,7 +159,7 @@ namespace Beyond.Gameplay.Core
 		public void OnRelease() {}
 	}
 
-	public struct PureEnumerator<T> // TypeDefIndex: 59580
+	public struct PureEnumerator<T> // TypeDefIndex: 60684
 		where T : struct
 	{
 		// Fields
@@ -191,7 +183,7 @@ namespace Beyond.Gameplay.Core
 		public bool MoveNext() => default;
 	}
 
-	public struct MemFriendHashSet // TypeDefIndex: 59581
+	public struct MemFriendHashSet // TypeDefIndex: 60685
 	{
 		// Fields
 		public int start; // 0x00
@@ -200,17 +192,17 @@ namespace Beyond.Gameplay.Core
 		public int bitStart; // 0x0C
 	
 		// Methods
-		public void CopyFrom(ref MemFriendHashSet other) {} // 0x0000000182A251A0-0x0000000182A251F0
-		public void Clear() {} // 0x0000000182A243A0-0x0000000182A243D0
+		public void CopyFrom(ref MemFriendHashSet other) {} // 0x00000001841E7950-0x00000001841E79A0
+		public void Clear() {} // 0x00000001841E6B50-0x00000001841E6B80
 	}
 
-	public abstract class MemFriendSetContextBase<T> : IDisposable // TypeDefIndex: 59582
+	public abstract class MemFriendSetContextBase<T> : IDisposable // TypeDefIndex: 60686
 		where T : struct
 	{
 		// Fields
 		protected NativeArray<T> m_content;
 		protected readonly int m_singleElementSize;
-		public const int INVALID_CONTENT_INDEX = -1; // Metadata: 0x01FDD1DF
+		public const int INVALID_CONTENT_INDEX = -1; // Metadata: 0x02082ACB
 		public readonly int typeSize;
 		public readonly int stride;
 		public readonly MemFriendSetContextManager<T> contextManager;
@@ -247,39 +239,39 @@ namespace Beyond.Gameplay.Core
 		public virtual void Dispose() {}
 	}
 
-	public class BitContext : IDisposable // TypeDefIndex: 59583
+	public class BitContext : IDisposable // TypeDefIndex: 60687
 	{
 		// Fields
 		public NativeArray<byte> bits; // 0x10
-		public const int ONE_SLOT_BIT_NUM = 8; // Metadata: 0x01FDD1E0
-		public const int ONE_STATE_BIT_NUM = 2; // Metadata: 0x01FDD1E1
-		public const int ONE_SLOT_ELEMENT_NUM = 4; // Metadata: 0x01FDD1E2
-		public const byte MASK = 3; // Metadata: 0x01FDD1E3
-		public const byte FREE = 0; // Metadata: 0x01FDD1E4
-		public const byte OCCUPIED = 1; // Metadata: 0x01FDD1E5
-		public const byte USED = 2; // Metadata: 0x01FDD1E6
+		public const int ONE_SLOT_BIT_NUM = 8; // Metadata: 0x02082ACC
+		public const int ONE_STATE_BIT_NUM = 2; // Metadata: 0x02082ACD
+		public const int ONE_SLOT_ELEMENT_NUM = 4; // Metadata: 0x02082ACE
+		public const byte MASK = 3; // Metadata: 0x02082ACF
+		public const byte FREE = 0; // Metadata: 0x02082AD0
+		public const byte OCCUPIED = 1; // Metadata: 0x02082AD1
+		public const byte USED = 2; // Metadata: 0x02082AD2
 		private readonly int m_elementBitSlot; // 0x20
 		private unsafe byte* m_ptr; // 0x28
 	
 		// Constructors
 		public BitContext() {} // Dummy constructor
-		public BitContext(int initSize, int singleElementSize) {} // 0x000000018370C650-0x000000018370C700
+		public BitContext(int initSize, int singleElementSize) {} // 0x00000001841E64E0-0x00000001841E6590
 	
 		// Methods
-		private int _ComputePropBitArrayLength(int contentLength) => default; // 0x000000018370C700-0x000000018370C830
-		public void EnLarge(int contentSize) {} // 0x0000000189FA5CB8-0x0000000189FA5DAC
-		public void Recycle(int bitIndex) {} // 0x0000000182514A80-0x0000000182514AD0
-		public int GetBitStartIndex(int index) => default; // 0x0000000189FA5DAC-0x0000000189FA5DB8
+		private int _ComputePropBitArrayLength(int contentLength) => default; // 0x00000001841E6590-0x00000001841E65E0
+		public void EnLarge(int contentSize) {} // 0x000000018C0BDC74-0x000000018C0BDD68
+		public void Recycle(int bitIndex) {} // 0x00000001841E7AB0-0x00000001841E7B00
+		public int GetBitStartIndex(int index) => default; // 0x000000018C0BDD68-0x000000018C0BDD74
 		private void _CalculateBitIndexAndMask(int bitStateStartIndex, int index, out int finalIndex, out int offsetInternal) {
 			finalIndex = default;
 			offsetInternal = default;
-		} // 0x0000000183D8A000-0x0000000183D8A030
-		public byte GetState(int bitStateStartIndex, int index) => default; // 0x0000000182A25060-0x0000000182A25130
-		public void SetState(int bitStateStartIndex, int index, byte state) {} // 0x0000000182A24CF0-0x0000000182A24D80
-		public void Dispose() {} // 0x0000000189FA5C2C-0x0000000189FA5CB8
+		} // 0x0000000185FEAE40-0x0000000185FEAE70
+		public byte GetState(int bitStateStartIndex, int index) => default; // 0x00000001841E7810-0x00000001841E78E0
+		public void SetState(int bitStateStartIndex, int index, byte state) {} // 0x00000001841E74A0-0x00000001841E7530
+		public void Dispose() {} // 0x000000018C0BDBE8-0x000000018C0BDC74
 	}
 
-	public class MemFriendNormalSetContext<T> : MemFriendSetContextBase<T> // TypeDefIndex: 59584
+	public class MemFriendNormalSetContext<T> : MemFriendSetContextBase<T> // TypeDefIndex: 60688
 		where T : struct
 	{
 		// Fields
@@ -301,7 +293,7 @@ namespace Beyond.Gameplay.Core
 		public override bool Contains(ref MemFriendHashSet set, T item) => default;
 	}
 
-	public class MemFriendSeqSetContext<T> : MemFriendSetContextBase<T> // TypeDefIndex: 59585
+	public class MemFriendSeqSetContext<T> : MemFriendSetContextBase<T> // TypeDefIndex: 60689
 		where T : struct
 	{
 		// Constructors
@@ -316,15 +308,15 @@ namespace Beyond.Gameplay.Core
 		public override bool Contains(ref MemFriendHashSet set, T item) => default;
 	}
 
-	public static class GameplayUnsafeUtil // TypeDefIndex: 59586
+	public static class GameplayUnsafeUtil // TypeDefIndex: 60690
 	{
 		// Methods
 		public static byte[] NativeArrayToBytes<T>(NativeArray<T> nativeArray)
 			where T : struct => default;
-		public static NativeArray<byte> GetNativeArrayFromStream(Stream stream) => default; // 0x0000000189FA5DB8-0x0000000189FA5EE8
+		public static NativeArray<byte> GetNativeArrayFromStream(Stream stream) => default; // 0x000000018C0BDD74-0x000000018C0BDEA4
 	}
 
-	public class SparseNativeArray<T> // TypeDefIndex: 59587
+	public class SparseNativeArray<T> // TypeDefIndex: 60691
 		where T : struct
 	{
 		// Fields
@@ -356,26 +348,7 @@ namespace Beyond.Gameplay.Core
 
 namespace Beyond.SourceGenerator
 {
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 59570
-	{
-		// Fields
-		public LayoutKind layoutKind; // 0x10
-		public bool isTag; // 0x14
-	
-		// Constructors
-		public ECSComponentAttribute() {} // 0x000000018350B670-0x000000018350B680
-	}
-
-	[AttributeUsage(AttributeTargets.Class)]
-	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 59571
-	{
-		// Constructors
-		public CameraControlConfigAttribute() {} // 0x000000018350B670-0x000000018350B680
-	}
-
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class DataNAttribute : Attribute // TypeDefIndex: 59572
+	internal class DataNAttribute : Attribute // TypeDefIndex: 60674
 	{
 		// Fields
 		public int capacity; // 0x10
@@ -383,10 +356,16 @@ namespace Beyond.SourceGenerator
 		public bool ring; // 0x18
 	
 		// Constructors
-		public DataNAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public DataNAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	internal static class AnimatorBlackboardUtility // TypeDefIndex: 59573
+	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 60675
+	{
+		// Constructors
+		public CameraControlConfigAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+
+	internal static class AnimatorBlackboardUtility // TypeDefIndex: 60676
 	{
 		// Fields
 		internal static bool s_enableFastPathBuffer; // 0x00
@@ -395,27 +374,35 @@ namespace Beyond.SourceGenerator
 		internal static void ClearAndEnsureDictionaryCapacity<TKey, TValue>(ref Dictionary<TKey, TValue> dict, int capacity) {}
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 59574
+	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 60677
 	{
 		// Constructors
-		public AnimatorBlackboardAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public AnimatorBlackboardAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+
+	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 60678
+	{
+		// Fields
+		public LayoutKind layoutKind; // 0x10
+		public bool isTag; // 0x14
+	
+		// Constructors
+		public ECSComponentAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }
 
 namespace HG.Rendering.Runtime
 {
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 59569
+	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 60673
 	{
 		// Constructors
-		public HGConstantBufferLayoutAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public HGConstantBufferLayoutAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 59588
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 60692
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -425,49 +412,49 @@ namespace IFix
 	
 		// Constructors
 		public ILFixDynamicMethodWrapper() {} // Dummy constructor
-		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000183020510-0x0000000183020540
-		static ILFixDynamicMethodWrapper() {} // 0x0000000183D05870-0x0000000183D058E0
+		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000184E6FCD0-0x0000000184E6FD00
+		static ILFixDynamicMethodWrapper() {} // 0x0000000185F64160-0x0000000185F641D0
 	
 		// Methods
-		public void __Gen_Wrap_0(ref MemFriendHashSet P0, ref MemFriendHashSet P1) {} // 0x0000000189FA5EE8-0x0000000189FA6080
-		public void __Gen_Wrap_1(ref MemFriendHashSet P0) {} // 0x0000000189FA6080-0x0000000189FA61B4
-		public int __Gen_Wrap_2(object P0, int P1) => default; // 0x00000001854761A8-0x0000000185476294
-		public void __Gen_Wrap_3(object P0, int P1) {} // 0x000000018549D548-0x000000018549D624
-		public byte __Gen_Wrap_4(object P0, int P1, int P2) => default; // 0x0000000185645B10-0x0000000185645C14
-		public void __Gen_Wrap_5(object P0, int P1, int P2, byte P3) {} // 0x0000000189FA61B4-0x0000000189FA62BC
-		public void __Gen_Wrap_6(object P0) {} // 0x00000001850EE850-0x00000001850EE8FC
-		public NativeArray<byte> __Gen_Wrap_7(object P0) => default; // 0x0000000189FA62BC-0x0000000189FA63B4
+		public void __Gen_Wrap_0(ref MemFriendHashSet P0, ref MemFriendHashSet P1) {} // 0x000000018C0BDEA4-0x000000018C0BE03C
+		public void __Gen_Wrap_1(ref MemFriendHashSet P0) {} // 0x000000018C0BE03C-0x000000018C0BE170
+		public int __Gen_Wrap_2(object P0, int P1) => default; // 0x0000000187677130-0x000000018767721C
+		public void __Gen_Wrap_3(object P0, int P1) {} // 0x000000018769E90C-0x000000018769E9E8
+		public byte __Gen_Wrap_4(object P0, int P1, int P2) => default; // 0x000000018C0BE170-0x000000018C0BE274
+		public void __Gen_Wrap_5(object P0, int P1, int P2, byte P3) {} // 0x000000018C0BE274-0x000000018C0BE37C
+		public void __Gen_Wrap_6(object P0) {} // 0x0000000187678964-0x0000000187678A10
+		public NativeArray<byte> __Gen_Wrap_7(object P0) => default; // 0x000000018C0BE37C-0x000000018C0BE474
 	}
 
-	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 59589
+	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 60693
 	{
 		// Constructors
 		public ILFixInterfaceBridge() {} // Dummy constructor
-		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x0000000189FA63B4-0x0000000189FA6448
+		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x000000018C0BE474-0x000000018C0BE508
 	
 		// Methods
-		public void RefAsyncBuilderStartMethod() {} // 0x000000018350B670-0x000000018350B680
+		public void RefAsyncBuilderStartMethod() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 59590
+	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 60694
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
 	
 		// Constructors
 		public WrappersManagerImpl() {} // Dummy constructor
-		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x0000000184096E30-0x0000000184096EF0
 	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x0000000189FA6630-0x0000000189FA6694
-		public static bool IsPatched(int id) => default; // 0x0000000182A25130-0x0000000182A251A0
-		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x0000000189FA64EC-0x0000000189FA65B8
-		public object CreateWrapper(int id) => default; // 0x0000000189FA65B8-0x0000000189FA6630
-		public object InitWrapperArray(int len) => default; // 0x0000000189FA6694-0x0000000189FA6720
-		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x0000000189FA6448-0x0000000189FA64EC
+		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x000000018C0BE6F0-0x000000018C0BE754
+		public static bool IsPatched(int id) => default; // 0x00000001841E78E0-0x00000001841E7950
+		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x000000018C0BE5AC-0x000000018C0BE678
+		public object CreateWrapper(int id) => default; // 0x000000018C0BE678-0x000000018C0BE6F0
+		public object InitWrapperArray(int len) => default; // 0x000000018C0BE754-0x000000018C0BE7E0
+		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x000000018C0BE508-0x000000018C0BE5AC
 	}
 
-	public enum IDMAP0 // TypeDefIndex: 59591
+	public enum IDMAP0 // TypeDefIndex: 60695
 	{
 		Beyond-Gameplay-Core-MemFriendHashSet-CopyFrom0 = 0,
 		Beyond-Gameplay-Core-MemFriendHashSet-Clear0 = 1,
@@ -478,5 +465,23 @@ namespace IFix
 		Beyond-Gameplay-Core-BitContext-SetState0 = 6,
 		Beyond-Gameplay-Core-BitContext-Dispose0 = 7,
 		Beyond-Gameplay-Core-GameplayUnsafeUtil-GetNativeArrayFromStream0 = 8
+	}
+}
+
+namespace Microsoft.CodeAnalysis
+{
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 60671
+	{
+		// Constructors
+		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+}
+
+namespace System.Runtime.CompilerServices
+{
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 60672
+	{
+		// Constructors
+		public IsUnmanagedAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }

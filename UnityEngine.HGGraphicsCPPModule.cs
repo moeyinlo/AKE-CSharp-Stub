@@ -3,214 +3,67 @@
  */
 
 using System;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Bindings;
 using UnityEngine.Experimental.Rendering;
 using UnityEngine.HyperGryph;
 using UnityEngine.Rendering;
-using UnityEngine.Scripting;
 
-// Image 66: UnityEngine.HGGraphicsCPPModule.dll - Assembly: UnityEngine.HGGraphicsCPPModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 58279-58440
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
-[assembly: InternalsVisibleTo("UnityEngine.Networking")]
-[assembly: InternalsVisibleTo("UnityEngine")]
-[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
-[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
-[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
-[assembly: InternalsVisibleTo("Unity.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
-[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
-[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
-[assembly: InternalsVisibleTo("Unity.Automation")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
-[assembly: InternalsVisibleTo("Unity.Burst")]
-[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
-[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
-[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
-[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
-[assembly: InternalsVisibleTo("Unity.Timeline")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
-[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
-[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
-[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
-[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
-[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
-[assembly: InternalsVisibleTo("UnityEngine.UI")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
-[assembly: InternalsVisibleTo("Unity.Logging")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("Unity.Collections")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.Core")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
-[assembly: InternalsVisibleTo("Unity.Services.QoS")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
-[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
-[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: UnityEngineModuleAssembly]
+// Image 67: UnityEngine.HGGraphicsCPPModule.dll - Assembly: UnityEngine.HGGraphicsCPPModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59427-59588
+
+namespace Microsoft.CodeAnalysis
+{
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 59428
+	{
+		// Constructors
+		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+}
+
+namespace System.Runtime.CompilerServices
+{
+	internal sealed class IsReadOnlyAttribute : Attribute // TypeDefIndex: 59429
+	{
+		// Constructors
+		public IsReadOnlyAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 59430
+	{
+		// Constructors
+		public IsUnmanagedAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+}
 
 namespace UnityEngine.HyperGryphEngineCode
 {
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Debug/DebugFeatures/HGDebugFeaturesManager.h")]
-	[UsedByNativeCode]
-	public struct HGDebugFeatureCPP // TypeDefIndex: 58283
+	public struct HGDebugFeatureCPP // TypeDefIndex: 59431
 	{
 		// Fields
 		public bool enabled; // 0x00
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Debug/DebugFeatures/HGDebugFeaturesManager.h")]
-	[UsedByNativeCode]
-	public struct HGDebugFeatureCPP_float // TypeDefIndex: 58284
+	public struct HGDebugFeatureCPP_float // TypeDefIndex: 59432
 	{
 		// Fields
 		public bool overriding; // 0x00
 		public float value; // 0x04
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Debug/DebugFeatures/HGDebugFeaturesManager.h")]
-	[UsedByNativeCode]
-	public struct HGDebugFeatureCPP_int // TypeDefIndex: 58285
+	public struct HGDebugFeatureCPP_int // TypeDefIndex: 59433
 	{
 		// Fields
 		public bool overriding; // 0x00
 		public int value; // 0x04
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Debug/DebugFeatures/HGDebugFeaturesManager.h")]
-	[UsedByNativeCode]
-	public struct HGDebugFeatureCPP_bool // TypeDefIndex: 58286
+	public struct HGDebugFeatureCPP_bool // TypeDefIndex: 59434
 	{
 		// Fields
 		public bool overriding; // 0x00
 		public bool value; // 0x01
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Debug/DebugFeatures/HGDebugFeaturesManager.h")]
-	[UsedByNativeCode]
-	public struct HGDebugFeaturesManagerCPP // TypeDefIndex: 58287
+	public struct HGDebugFeaturesManagerCPP // TypeDefIndex: 59435
 	{
 		// Fields
 		public HGDebugFeatureCPP cppRenderPath; // 0x00
@@ -402,9 +255,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public HGDebugFeatureCPP_float rayTracingReflectionRTQuality3; // 0x1C8
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Debug/DebugFeatures/HGDebugFeaturesManager.h")]
-	[UsedByNativeCode]
-	public struct HGDebugRenderManagerCPP // TypeDefIndex: 58290
+	public struct HGDebugRenderManagerCPP // TypeDefIndex: 59438
 	{
 		// Fields
 		public bool enableAOVOutput; // 0x00
@@ -453,16 +304,28 @@ namespace UnityEngine.HyperGryphEngineCode
 		public bool reflectionProbeDebugIncludeWater; // 0xC0
 		public int reflectionProbeShowTextureIndex; // 0xC4
 		public float reflectionProbeShowTextureMip; // 0xC8
-		public unsafe fixed /* 0x00000000-0x00000000 */ float reflectionProbeFetchedData[0]; // 0xCC
+		public _reflectionProbeFetchedData_e__FixedBuffer reflectionProbeFetchedData; // 0xCC
 		public bool enableShadowDebugger; // 0xDC
 		public int shadowDebugDataCount; // 0xE0
 		public IntPtr shadowDebugDataArray; // 0xE8
 		public Vector2 m_sceneViewSelectionPos; // 0xF0
-		public unsafe fixed /* 0x00000000-0x00000000 */ float m_fetchedData[0]; // 0xF8
+		public _m_fetchedData_e__FixedBuffer m_fetchedData; // 0xF8
+	
+		// Nested types
+		public struct _reflectionProbeFetchedData_e__FixedBuffer // TypeDefIndex: 59436
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct _m_fetchedData_e__FixedBuffer // TypeDefIndex: 59437
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
 	}
 
-	[UsedByNativeCode]
-	public enum FSR3Quality // TypeDefIndex: 58291
+	public enum FSR3Quality // TypeDefIndex: 59439
 	{
 		UltraPerformance = 0,
 		Performance = 1,
@@ -471,21 +334,14 @@ namespace UnityEngine.HyperGryphEngineCode
 		NativeAA = 4
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/FSR3/FSR3UpscaleCommon.h")]
-	[UsedByNativeCode]
-	public struct HGFSR3Util // TypeDefIndex: 58292
+	public struct HGFSR3Util // TypeDefIndex: 59440
 	{
 		// Methods
-		[FreeFunction("IsFSR3Supported")]
-		[UsedByNativeCode]
-		public static bool IsFSR3Supported() => default; // 0x0000000189DF4910-0x0000000189DF493C
-		[FreeFunction("GetFSR3RenderScale")]
-		[UsedByNativeCode]
-		public static float GetFSR3RenderScale(FSR3Quality quality) => default; // 0x0000000189DF48DC-0x0000000189DF4910
+		public static bool IsFSR3Supported() => default; // 0x000000018BF0C6C0-0x000000018BF0C6EC
+		public static float GetFSR3RenderScale(FSR3Quality quality) => default; // 0x000000018BF0C68C-0x000000018BF0C6C0
 	}
 
-	[UsedByNativeCode]
-	public struct HGVolumetricFogSettingParametersV2 // TypeDefIndex: 58293
+	public struct HGVolumetricFogSettingParametersV2 // TypeDefIndex: 59441
 	{
 		// Fields
 		public bool enableVolumetricFog; // 0x00
@@ -504,8 +360,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public bool enableScalarizeDynamicLightLoop; // 0x2B
 	}
 
-	[UsedByNativeCode]
-	public struct HGAtmosphereSettingParameters // TypeDefIndex: 58294
+	public struct HGAtmosphereSettingParameters // TypeDefIndex: 59442
 	{
 		// Fields
 		public float transmittanceLutSampleCount; // 0x00
@@ -523,8 +378,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public bool skyAtmosphereLutUseSmallFormat; // 0x30
 	}
 
-	[UsedByNativeCode]
-	public struct HGSettingParametersCpp // TypeDefIndex: 58296
+	public struct HGSettingParametersCpp // TypeDefIndex: 59444
 	{
 		// Fields
 		public float cullingViewScreenSizeMin; // 0x00
@@ -692,7 +546,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float waterDisplacementDistance; // 0x250
 		public int waterHeightTextureSize; // 0x254
 		public float artTagLODBiasAll; // 0x258
-		public unsafe fixed /* 0x00000000-0x00000000 */ float artTagLODBias[0]; // 0x25C
+		public _artTagLODBias_e__FixedBuffer artTagLODBias; // 0x25C
 		public bool shouldSplitOnePass; // 0x35C
 		public HGVolumetricFogSettingParametersV2 volumetricFogParams; // 0x360
 		public bool reflectionProbeUseRGBAHalf; // 0x38C
@@ -727,9 +581,16 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int inkSimulationResolution; // 0x3F8
 		public int inkDensityResolution; // 0x3FC
 		public bool inkSimulationEnable; // 0x400
+	
+		// Nested types
+		public struct _artTagLODBias_e__FixedBuffer // TypeDefIndex: 59443
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
 	}
 
-	public struct HGRenderPathConstants // TypeDefIndex: 58297
+	public struct HGRenderPathConstants // TypeDefIndex: 59445
 	{
 		// Fields
 		public float _RenderPathInjected; // 0x00
@@ -738,7 +599,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float _HGOrientationType; // 0x0C
 	}
 
-	public struct BasicTransformConstants // TypeDefIndex: 58298
+	public struct BasicTransformConstants // TypeDefIndex: 59446
 	{
 		// Fields
 		public Matrix4x4 _ViewMatrix; // 0x00
@@ -755,7 +616,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector4 _WorldSpaceCameraPos_Internal; // 0x2C0
 	}
 
-	public struct ShaderVariablesGlobal // TypeDefIndex: 58311
+	public struct ShaderVariablesGlobal // TypeDefIndex: 59459
 	{
 		// Fields
 		public Matrix4x4 _PrevViewProjMatrix; // 0x00
@@ -774,8 +635,8 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector4 _ProjectionParams; // 0x280
 		public Vector4 unity_OrthoParams; // 0x290
 		public Vector4 _ScreenParams; // 0x2A0
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _FrustumPlanes[0]; // 0x2B0
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _ShadowFrustumPlanes[0]; // 0x310
+		public __FrustumPlanes_e__FixedBuffer _FrustumPlanes; // 0x2B0
+		public __ShadowFrustumPlanes_e__FixedBuffer _ShadowFrustumPlanes; // 0x310
 		public Vector4 _TaaFrameInfo; // 0x370
 		public Vector4 _TaaJitterStrength; // 0x380
 		public Vector4 _Time; // 0x390
@@ -800,15 +661,15 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector4 _CharacterPositionParams2; // 0x490
 		public Vector4 _CharacterPositionParams3; // 0x4A0
 		public Vector4 _CharacterHeightParams; // 0x4B0
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _WindMotorParams0[0]; // 0x4C0
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _WindMotorParams1[0]; // 0x500
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _WindMotorParams2[0]; // 0x540
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _WindMotorParams3[0]; // 0x580
+		public __WindMotorParams0_e__FixedBuffer _WindMotorParams0; // 0x4C0
+		public __WindMotorParams1_e__FixedBuffer _WindMotorParams1; // 0x500
+		public __WindMotorParams2_e__FixedBuffer _WindMotorParams2; // 0x540
+		public __WindMotorParams3_e__FixedBuffer _WindMotorParams3; // 0x580
 		public Vector4 _WindMotorCount; // 0x5C0
 		public Vector4 _LastWindGlobalParams0; // 0x5D0
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _LastWindMotorParams0[0]; // 0x5E0
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _LastWindMotorParams1[0]; // 0x620
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _LastWindMotorParams3[0]; // 0x660
+		public __LastWindMotorParams0_e__FixedBuffer _LastWindMotorParams0; // 0x5E0
+		public __LastWindMotorParams1_e__FixedBuffer _LastWindMotorParams1; // 0x620
+		public __LastWindMotorParams3_e__FixedBuffer _LastWindMotorParams3; // 0x660
 		public Vector4 _FoliageInteractiveParams0; // 0x6A0
 		public Vector4 _PrevFoliageInteractiveParams0; // 0x6B0
 		public Vector4 _AtmosphereFogParams0; // 0x6C0
@@ -867,8 +728,8 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector4 _InkSimulationWorldToUV; // 0xA10
 		public Vector4 _TerrainDeformParams0; // 0xA20
 		public Vector4 _TerrainDeformParams1; // 0xA30
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _TerrainClipmapParams0[0]; // 0xA40
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _TerrainClipmapParams1[0]; // 0xA60
+		public __TerrainClipmapParams0_e__FixedBuffer _TerrainClipmapParams0; // 0xA40
+		public __TerrainClipmapParams1_e__FixedBuffer _TerrainClipmapParams1; // 0xA60
 		public float _G_EnableFeatureErosionBlend; // 0xA80
 		public float _G_EnableFeatureB; // 0xA84
 		public float _G_EnableFeatureC; // 0xA88
@@ -906,11 +767,83 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Matrix4x4 _FakePlanarReflectionViewProjMatrix; // 0xC70
 		public Vector4 _FakeSphericalLightSource; // 0xCB0
 		public Vector4 _VolumetricComposeParams; // 0xCC0
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _HackTempDataBeforeCPPPlugin[0]; // 0xCD0
+		public __HackTempDataBeforeCPPPlugin_e__FixedBuffer _HackTempDataBeforeCPPPlugin; // 0xCD0
+	
+		// Nested types
+		public struct __FrustumPlanes_e__FixedBuffer // TypeDefIndex: 59447
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __ShadowFrustumPlanes_e__FixedBuffer // TypeDefIndex: 59448
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __WindMotorParams0_e__FixedBuffer // TypeDefIndex: 59449
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __WindMotorParams1_e__FixedBuffer // TypeDefIndex: 59450
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __WindMotorParams2_e__FixedBuffer // TypeDefIndex: 59451
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __WindMotorParams3_e__FixedBuffer // TypeDefIndex: 59452
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __LastWindMotorParams0_e__FixedBuffer // TypeDefIndex: 59453
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __LastWindMotorParams1_e__FixedBuffer // TypeDefIndex: 59454
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __LastWindMotorParams3_e__FixedBuffer // TypeDefIndex: 59455
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __TerrainClipmapParams0_e__FixedBuffer // TypeDefIndex: 59456
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __TerrainClipmapParams1_e__FixedBuffer // TypeDefIndex: 59457
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __HackTempDataBeforeCPPPlugin_e__FixedBuffer // TypeDefIndex: 59458
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
 	}
 
-	[UsedByNativeCode]
-	public enum DLSSQuality // TypeDefIndex: 58312
+	public enum DLSSQuality // TypeDefIndex: 59460
 	{
 		UltraPerformance = 0,
 		Performance = 1,
@@ -919,26 +852,21 @@ namespace UnityEngine.HyperGryphEngineCode
 		DLAA = 4
 	}
 
-	[UsedByNativeCode]
-	public enum StreamlineReflexMode // TypeDefIndex: 58313
+	public enum StreamlineReflexMode // TypeDefIndex: 59461
 	{
 		Off = 0,
 		LowLatency = 1,
 		LowLatencyWithBoost = 2
 	}
 
-	[UsedByNativeCode]
-	public enum StreamlineDLSSFGMode // TypeDefIndex: 58314
+	public enum StreamlineDLSSFGMode // TypeDefIndex: 59462
 	{
 		Off = 0,
 		On = 1,
 		Auto = 2
 	}
 
-	[NativeHeader("Modules/HGGraphics/Public/DLSS/HGDLSSCommon.h")]
-	[NativeHeader("Modules/HGGraphics/Public/DLSS/HGDLSSUtil.h")]
-	[UsedByNativeCode]
-	public struct DLSSOptimalSettings // TypeDefIndex: 58315
+	public struct DLSSOptimalSettings // TypeDefIndex: 59463
 	{
 		// Fields
 		public uint optimalRenderWidth; // 0x00
@@ -950,43 +878,31 @@ namespace UnityEngine.HyperGryphEngineCode
 		public uint renderHeightMax; // 0x18
 	
 		// Methods
-		[FreeFunction("GetDLSSOptimalSetting")]
-		[UsedByNativeCode]
-		public static DLSSOptimalSettings GetDLSSOptimalSetting(DLSSQuality quality, Vector2Int nonScaledViewport) => default; // 0x0000000189DF46DC-0x0000000189DF4718
+		public static DLSSOptimalSettings GetDLSSOptimalSetting(DLSSQuality quality, Vector2Int nonScaledViewport) => default; // 0x000000018BF0C48C-0x000000018BF0C4C8
 		private static void GetDLSSOptimalSetting_Injected(DLSSQuality quality, ref Vector2Int nonScaledViewport, out DLSSOptimalSettings ret) {
 			ret = default;
-		} // 0x0000000189DF468C-0x0000000189DF46DC
+		} // 0x000000018BF0C43C-0x000000018BF0C48C
 	}
 
-	[NativeHeader("Modules/StreamLine/StreamlineDLSSG.h")]
-	[UsedByNativeCode]
-	public struct HGCPPDLSSUtil // TypeDefIndex: 58316
+	public struct HGCPPDLSSUtil // TypeDefIndex: 59464
 	{
 		// Methods
-		[FreeFunction("SetStreamlineDLSSGMode")]
-		[UsedByNativeCode]
-		public static void SetStreamlineDLSSGMode(StreamlineDLSSFGMode frameGenMode) {} // 0x0000000182ACE470-0x0000000182ACE4B0
-		[FreeFunction("GetStreamlineDLSSGMinMaxFrameGen")]
-		[UsedByNativeCode]
-		public static Vector2Int GetStreamlineDLSSGMinMaxFrameGen() => default; // 0x0000000189DF47B8-0x0000000189DF47DC
-		[FreeFunction("CalcStreamlineDLSSGVRAMUsage")]
-		[UsedByNativeCode]
-		public static int CalcStreamlineDLSSGVRAMUsage(Vector2Int taauSize, Vector2Int finalRTSize) => default; // 0x0000000189DF475C-0x0000000189DF4784
+		public static void SetStreamlineDLSSGMode(StreamlineDLSSFGMode frameGenMode) {} // 0x0000000185547A90-0x0000000185547AD0
+		public static Vector2Int GetStreamlineDLSSGMinMaxFrameGen() => default; // 0x000000018BF0C568-0x000000018BF0C58C
+		public static int CalcStreamlineDLSSGVRAMUsage(Vector2Int taauSize, Vector2Int finalRTSize) => default; // 0x000000018BF0C50C-0x000000018BF0C534
 		private static void GetStreamlineDLSSGMinMaxFrameGen_Injected(out Vector2Int ret) {
 			ret = default;
-		} // 0x0000000189DF4784-0x0000000189DF47B8
-		private static int CalcStreamlineDLSSGVRAMUsage_Injected(ref Vector2Int taauSize, ref Vector2Int finalRTSize) => default; // 0x0000000189DF4718-0x0000000189DF475C
+		} // 0x000000018BF0C534-0x000000018BF0C568
+		private static int CalcStreamlineDLSSGVRAMUsage_Injected(ref Vector2Int taauSize, ref Vector2Int finalRTSize) => default; // 0x000000018BF0C4C8-0x000000018BF0C50C
 	}
 
-	public enum HGLightConfigPitchYawModeCPP // TypeDefIndex: 58317
+	public enum HGLightConfigPitchYawModeCPP // TypeDefIndex: 59465
 	{
 		DirLight = 0,
 		Custom = 1
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGLightConfigCPP // TypeDefIndex: 58318
+	public struct HGLightConfigCPP // TypeDefIndex: 59466
 	{
 		// Fields
 		public float preExposure; // 0x00
@@ -1010,21 +926,19 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector2 cloudShadowPitchYaw; // 0xF0
 	}
 
-	public enum HGSkyConfigSkyMaterialTypeCPP // TypeDefIndex: 58319
+	public enum HGSkyConfigSkyMaterialTypeCPP // TypeDefIndex: 59467
 	{
 		ProceduralSky = 0,
 		Skybox = 1
 	}
 
-	public enum HGSkyConfigReflectionTypeCPP // TypeDefIndex: 58320
+	public enum HGSkyConfigReflectionTypeCPP // TypeDefIndex: 59468
 	{
 		FromSky = 0,
 		Custom = 1
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGSkyConfigCPP // TypeDefIndex: 58321
+	public struct HGSkyConfigCPP // TypeDefIndex: 59469
 	{
 		// Fields
 		public float skyDistance; // 0x00
@@ -1049,9 +963,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public IntPtr skyboxCubeMap; // 0x140
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGAtmosphereConfigCPP // TypeDefIndex: 58322
+	public struct HGAtmosphereConfigCPP // TypeDefIndex: 59470
 	{
 		// Fields
 		public float groundRadius; // 0x00
@@ -1075,9 +987,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float tentWidth; // 0x90
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGFogConfigCPP // TypeDefIndex: 58323
+	public struct HGFogConfigCPP // TypeDefIndex: 59471
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -1093,9 +1003,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public UnityEngine.Color inscatterAmbientColor; // 0x40
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGHeightFogConfigCPP // TypeDefIndex: 58324
+	public struct HGHeightFogConfigCPP // TypeDefIndex: 59472
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -1135,9 +1043,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float flowNoiseSpeed; // 0xC0
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGVolumetricFogConfigCPP // TypeDefIndex: 58325
+	public struct HGVolumetricFogConfigCPP // TypeDefIndex: 59473
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -1184,9 +1090,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float flowVLNoiseSpeed; // 0xE0
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGCloudShadowConfigCPP // TypeDefIndex: 58326
+	public struct HGCloudShadowConfigCPP // TypeDefIndex: 59474
 	{
 		// Fields
 		public IntPtr cloudShadowTexture; // 0x00
@@ -1200,22 +1104,20 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float cloudShadowScaleEndDistance; // 0x30
 	}
 
-	public enum HGCloudConfigCloudFlowTypeCPP // TypeDefIndex: 58327
+	public enum HGCloudConfigCloudFlowTypeCPP // TypeDefIndex: 59475
 	{
 		None = 0,
 		Procedural = 1,
 		FlowMap = 2
 	}
 
-	public enum HGCloudConfigCloudTextureModeCPP // TypeDefIndex: 58328
+	public enum HGCloudConfigCloudTextureModeCPP // TypeDefIndex: 59476
 	{
 		SingleChannelRG = 0,
 		ColorRGB = 1
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGCloudConfigCPP // TypeDefIndex: 58329
+	public struct HGCloudConfigCPP // TypeDefIndex: 59477
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -1243,9 +1145,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public IntPtr lightShaftCloudMaskTexture; // 0xA0
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGRingPropertyCPP // TypeDefIndex: 58330
+	public struct HGRingPropertyCPP // TypeDefIndex: 59478
 	{
 		// Fields
 		public float outerRadius; // 0x00
@@ -1254,9 +1154,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public IntPtr planetRingMap; // 0x18
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGCelestialObjectConfigCPP // TypeDefIndex: 58331
+	public struct HGCelestialObjectConfigCPP // TypeDefIndex: 59479
 	{
 		// Fields
 		public float radius; // 0x00
@@ -1269,9 +1167,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public HGRingPropertyCPP ring; // 0x20
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGCelestialObjectPropertyCPP // TypeDefIndex: 58332
+	public struct HGCelestialObjectPropertyCPP // TypeDefIndex: 59480
 	{
 		// Fields
 		public float radius; // 0x00
@@ -1280,15 +1176,13 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float selfRotationY; // 0x0C
 	}
 
-	public enum HGCelestialDrawerDrawModeCPP // TypeDefIndex: 58333
+	public enum HGCelestialDrawerDrawModeCPP // TypeDefIndex: 59481
 	{
 		Texture = 0,
 		Simulated = 1
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGCelestialDrawerCPP // TypeDefIndex: 58334
+	public struct HGCelestialDrawerCPP // TypeDefIndex: 59482
 	{
 		// Fields
 		public HGCelestialDrawerDrawModeCPP drawMode; // 0x00
@@ -1297,9 +1191,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector2 incidentLightingPitchYaw; // 0x18
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGAtmospherePropertyCPP // TypeDefIndex: 58335
+	public struct HGAtmospherePropertyCPP // TypeDefIndex: 59483
 	{
 		// Fields
 		public float bakeFaceVisibility; // 0x00
@@ -1312,9 +1204,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float atmosphereHueshift; // 0x1C
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGCelestialAtmosphereObjectConfigCPP // TypeDefIndex: 58336
+	public struct HGCelestialAtmosphereObjectConfigCPP // TypeDefIndex: 59484
 	{
 		// Fields
 		public bool drawPlanetInSkydome; // 0x00
@@ -1327,18 +1217,14 @@ namespace UnityEngine.HyperGryphEngineCode
 		public HGAtmospherePropertyCPP atmosphere; // 0x64
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGCelestialAdvancedObjectConfigCPP // TypeDefIndex: 58337
+	public struct HGCelestialAdvancedObjectConfigCPP // TypeDefIndex: 59485
 	{
 		// Fields
 		public bool drawAdvancedPlanet; // 0x00
 		public IntPtr advancedPlanetMat; // 0x08
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGCelestialConfigCPP // TypeDefIndex: 58338
+	public struct HGCelestialConfigCPP // TypeDefIndex: 59486
 	{
 		// Fields
 		public HGCelestialObjectConfigCPP moonConfig; // 0x00
@@ -1347,9 +1233,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public HGCelestialAdvancedObjectConfigCPP advancedPlanetConfig; // 0x150
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGLightShaftConfigCPP // TypeDefIndex: 58339
+	public struct HGLightShaftConfigCPP // TypeDefIndex: 59487
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -1363,9 +1247,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float occlusionMaskDarkness; // 0x2C
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGAnamorphicStreaksConfigCPP // TypeDefIndex: 58340
+	public struct HGAnamorphicStreaksConfigCPP // TypeDefIndex: 59488
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -1378,13 +1260,13 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int filterSize; // 0x28
 	}
 
-	public enum HGStarConfigStarTypeCPP // TypeDefIndex: 58341
+	public enum HGStarConfigStarTypeCPP // TypeDefIndex: 59489
 	{
 		RealTimeNoise = 0,
 		BakedMap = 1
 	}
 
-	public enum HGStarConfigDebugModeCPP // TypeDefIndex: 58342
+	public enum HGStarConfigDebugModeCPP // TypeDefIndex: 59490
 	{
 		Material = 0,
 		RChannel = 1,
@@ -1393,7 +1275,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		RGBChannel = 4
 	}
 
-	public enum HGStarConfigStarLayerViewModeCPP // TypeDefIndex: 58343
+	public enum HGStarConfigStarLayerViewModeCPP // TypeDefIndex: 59491
 	{
 		FullLayer = 0,
 		RLayer = 1,
@@ -1401,7 +1283,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		BLayer = 3
 	}
 
-	public struct HGStarConfigCPP // TypeDefIndex: 58344
+	public struct HGStarConfigCPP // TypeDefIndex: 59492
 	{
 		// Fields
 		public bool enableStars; // 0x00
@@ -1436,9 +1318,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float nebulaStarConverage; // 0xBC
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct ScreenSpaceReflectionVolumeCPP // TypeDefIndex: 58345
+	public struct ScreenSpaceReflectionVolumeCPP // TypeDefIndex: 59493
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -1450,9 +1330,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float mipThreshold; // 0x18
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGAutoExposureConfigCPP // TypeDefIndex: 58346
+	public struct HGAutoExposureConfigCPP // TypeDefIndex: 59494
 	{
 		// Fields
 		public bool active; // 0x00
@@ -1470,7 +1348,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float lerpUpSpeed; // 0x34
 	}
 
-	public enum HGToneMappingModeCPP // TypeDefIndex: 58347
+	public enum HGToneMappingModeCPP // TypeDefIndex: 59495
 	{
 		None = 0,
 		Neutral = 1,
@@ -1481,9 +1359,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		Count = 6
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGColorGradingConfigCPP // TypeDefIndex: 58348
+	public struct HGColorGradingConfigCPP // TypeDefIndex: 59496
 	{
 		// Fields
 		public bool active; // 0x00
@@ -1533,9 +1409,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector4 miscPrams; // 0x118
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGContactShadowConfigCPP // TypeDefIndex: 58349
+	public struct HGContactShadowConfigCPP // TypeDefIndex: 59497
 	{
 		// Fields
 		public bool ignoreEdgePixels; // 0x00
@@ -1546,9 +1420,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int contract; // 0x10
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGShadowConfigCPP // TypeDefIndex: 58350
+	public struct HGShadowConfigCPP // TypeDefIndex: 59498
 	{
 		// Fields
 		public float csmDepthBias; // 0x00
@@ -1574,9 +1446,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public bool disableAsm; // 0x5C
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGEnvironmentPhaseCPP // TypeDefIndex: 58351
+	public struct HGEnvironmentPhaseCPP // TypeDefIndex: 59499
 	{
 		// Fields
 		public unsafe HGLightConfigCPP* lightConfig; // 0x00
@@ -1595,40 +1465,33 @@ namespace UnityEngine.HyperGryphEngineCode
 		public unsafe HGContactShadowConfigCPP* contactShadowConfig; // 0x68
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct FishEyeEffectVolumeCPP // TypeDefIndex: 58352
+	public struct FishEyeEffectVolumeCPP // TypeDefIndex: 59500
 	{
 		// Fields
 		public bool enable; // 0x00
 		public float distortion; // 0x04
 	}
 
-	[UsedByNativeCode]
-	public enum BloomQuality // TypeDefIndex: 58353
+	public enum BloomQuality // TypeDefIndex: 59501
 	{
 		Low = 0,
 		Medium = 1,
 		High = 2
 	}
 
-	[UsedByNativeCode]
-	public enum BloomResolution // TypeDefIndex: 58354
+	public enum BloomResolution // TypeDefIndex: 59502
 	{
 		Half = 2,
 		Quarter = 4
 	}
 
-	[UsedByNativeCode]
-	public enum BloomBlendMode // TypeDefIndex: 58355
+	public enum BloomBlendMode // TypeDefIndex: 59503
 	{
 		Add = 0,
 		EnergyConservation = 2
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct BloomVolumeCPP // TypeDefIndex: 58356
+	public struct BloomVolumeCPP // TypeDefIndex: 59504
 	{
 		// Fields
 		public float intensity; // 0x00
@@ -1649,9 +1512,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public bool enableAnamorphic; // 0x47
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public enum HGSharpenMode // TypeDefIndex: 58357
+	public enum HGSharpenMode // TypeDefIndex: 59505
 	{
 		Off = 0,
 		Filter1 = 1,
@@ -1659,17 +1520,13 @@ namespace UnityEngine.HyperGryphEngineCode
 		Filter4 = 3
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public enum VignetteMode // TypeDefIndex: 58358
+	public enum VignetteMode // TypeDefIndex: 59506
 	{
 		Procedural = 0,
 		Masked = 1
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct VignetteCPP // TypeDefIndex: 58359
+	public struct VignetteCPP // TypeDefIndex: 59507
 	{
 		// Fields
 		public VignetteMode mode; // 0x00
@@ -1684,9 +1541,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float opacity; // 0x38
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGVignetteCPP // TypeDefIndex: 58360
+	public struct HGVignetteCPP // TypeDefIndex: 59508
 	{
 		// Fields
 		public UnityEngine.Color color; // 0x00
@@ -1696,18 +1551,14 @@ namespace UnityEngine.HyperGryphEngineCode
 		public bool blink; // 0x19
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGDirtyLensCPP // TypeDefIndex: 58361
+	public struct HGDirtyLensCPP // TypeDefIndex: 59509
 	{
 		// Fields
 		public IntPtr dirtyTex; // 0x00
 		public float intensity; // 0x08
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGRadialBlurCPP // TypeDefIndex: 58362
+	public struct HGRadialBlurCPP // TypeDefIndex: 59510
 	{
 		// Fields
 		public bool enabled; // 0x00
@@ -1719,9 +1570,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector3 globalCenter; // 0x18
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGChromaticAbberationCPP // TypeDefIndex: 58363
+	public struct HGChromaticAbberationCPP // TypeDefIndex: 59511
 	{
 		// Fields
 		public bool enabled; // 0x00
@@ -1732,9 +1581,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector3 globalCenter; // 0x14
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGBWFlashCPP // TypeDefIndex: 58364
+	public struct HGBWFlashCPP // TypeDefIndex: 59512
 	{
 		// Fields
 		public bool enabled; // 0x00
@@ -1758,9 +1605,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public UnityEngine.Color backGroundColor; // 0x78
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct SharpenVolumeCPP // TypeDefIndex: 58365
+	public struct SharpenVolumeCPP // TypeDefIndex: 59513
 	{
 		// Fields
 		public bool isActive; // 0x00
@@ -1770,9 +1615,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float sharpenThreshold; // 0x10
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Environment/HGEnvironmentPhase.h")]
-	[UsedByNativeCode]
-	public struct HGVolumeComponentsDataCPP // TypeDefIndex: 58366
+	public struct HGVolumeComponentsDataCPP // TypeDefIndex: 59514
 	{
 		// Fields
 		public unsafe BloomVolumeCPP* m_bloomVolume; // 0x00
@@ -1787,34 +1630,23 @@ namespace UnityEngine.HyperGryphEngineCode
 		public unsafe ScreenSpaceReflectionVolumeCPP* m_hgssrVolume; // 0x48
 	}
 
-	[UsedByNativeCode]
-	public enum FrameInterpolationAlgo // TypeDefIndex: 58367
+	public enum FrameInterpolationAlgo // TypeDefIndex: 59515
 	{
 		Vendor = 0,
 		HGFI = 1,
 		Blit = 2
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/FrameGeneration/HGFrameInterpolator.h")]
-	[UsedByNativeCode]
-	public struct HGCPPFrameInterpolatorUtil // TypeDefIndex: 58368
+	public struct HGCPPFrameInterpolatorUtil // TypeDefIndex: 59516
 	{
 		// Methods
-		[FreeFunction("SetAFMECameraFallbackThreshold")]
-		[UsedByNativeCode]
-		public static void SetAFMECameraFallbackThreshold(float rotationCos, float moveDistanceSqr) {} // 0x0000000189DF47DC-0x0000000189DF4828
-		[FreeFunction("SetMFRCGeneralallbackThreshold")]
-		[UsedByNativeCode]
-		public static void SetMFRCGeneralallbackThreshold(float vaule) {} // 0x0000000189DF4864-0x0000000189DF48A0
-		[FreeFunction("SetMFRCBrightnessDiffFallbackThreshold")]
-		[UsedByNativeCode]
-		public static void SetMFRCBrightnessDiffFallbackThreshold(float vaule) {} // 0x0000000189DF4828-0x0000000189DF4864
-		[FreeFunction("SetMFRCRepeatedPatternFallbackThreshold")]
-		[UsedByNativeCode]
-		public static void SetMFRCRepeatedPatternFallbackThreshold(float vaule) {} // 0x0000000189DF48A0-0x0000000189DF48DC
+		public static void SetAFMECameraFallbackThreshold(float rotationCos, float moveDistanceSqr) {} // 0x000000018BF0C58C-0x000000018BF0C5D8
+		public static void SetMFRCGeneralallbackThreshold(float vaule) {} // 0x000000018BF0C614-0x000000018BF0C650
+		public static void SetMFRCBrightnessDiffFallbackThreshold(float vaule) {} // 0x000000018BF0C5D8-0x000000018BF0C614
+		public static void SetMFRCRepeatedPatternFallbackThreshold(float vaule) {} // 0x000000018BF0C650-0x000000018BF0C68C
 	}
 
-	public enum HGLensFlareBlendMode // TypeDefIndex: 58369
+	public enum HGLensFlareBlendMode // TypeDefIndex: 59517
 	{
 		Additive = 0,
 		Screen = 1,
@@ -1822,21 +1654,21 @@ namespace UnityEngine.HyperGryphEngineCode
 		Lerp = 3
 	}
 
-	public enum HGLensFlareDistribution // TypeDefIndex: 58370
+	public enum HGLensFlareDistribution // TypeDefIndex: 59518
 	{
 		Uniform = 0,
 		Curve = 1,
 		Random = 2
 	}
 
-	public enum HGLensFlareType // TypeDefIndex: 58371
+	public enum HGLensFlareType // TypeDefIndex: 59519
 	{
 		Image = 0,
 		Circle = 1,
 		Polygon = 2
 	}
 
-	public struct HGLensFlareDrawData // TypeDefIndex: 58372
+	public struct HGLensFlareDrawData // TypeDefIndex: 59520
 	{
 		// Fields
 		public bool useOcclusion; // 0x00
@@ -1851,9 +1683,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public IntPtr flareTexture; // 0x38
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Debug/HGRenderPipelineDebugResources.h")]
-	[UsedByNativeCode]
-	public struct HGRenderPipelineDebugResourcesShaderResourcesCPP // TypeDefIndex: 58373
+	public struct HGRenderPipelineDebugResourcesShaderResourcesCPP // TypeDefIndex: 59521
 	{
 		// Fields
 		public int debugFullScreenClearBufferCS; // 0x00
@@ -1868,26 +1698,20 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int debugGizmosDecalPS; // 0x24
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Debug/HGRenderPipelineDebugResources.h")]
-	[UsedByNativeCode]
-	public struct HGRenderPipelineDebugResourcesMaterialResourcesCPP // TypeDefIndex: 58374
+	public struct HGRenderPipelineDebugResourcesMaterialResourcesCPP // TypeDefIndex: 59522
 	{
 		// Fields
 		public int debugGizmosMat; // 0x00
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Debug/HGRenderPipelineDebugResources.h")]
-	[UsedByNativeCode]
-	public struct HGRenderPipelineDebugResourcesTextureResourcesCPP // TypeDefIndex: 58375
+	public struct HGRenderPipelineDebugResourcesTextureResourcesCPP // TypeDefIndex: 59523
 	{
 		// Fields
 		public int debugTexelDensityTexArray; // 0x00
 		public int debugAlbedoTex; // 0x04
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/Debug/HGRenderPipelineDebugResources.h")]
-	[UsedByNativeCode]
-	public struct HGRenderPipelineDebugResourcesCPP // TypeDefIndex: 58376
+	public struct HGRenderPipelineDebugResourcesCPP // TypeDefIndex: 59524
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -1896,8 +1720,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public HGRenderPipelineDebugResourcesTextureResourcesCPP textures; // 0x30
 	}
 
-	[UsedByNativeCode]
-	public struct HGRenderPipelineRuntimeResourcesShaderResourcesCPP // TypeDefIndex: 58377
+	public struct HGRenderPipelineRuntimeResourcesShaderResourcesCPP // TypeDefIndex: 59525
 	{
 		// Fields
 		public int defaultPS; // 0x00
@@ -2070,8 +1893,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int frameInterpolationInputConvertPS; // 0x29C
 	}
 
-	[UsedByNativeCode]
-	public struct HGRenderPipelineRuntimeResourcesTextureResourcesCPP // TypeDefIndex: 58378
+	public struct HGRenderPipelineRuntimeResourcesTextureResourcesCPP // TypeDefIndex: 59526
 	{
 		// Fields
 		public int HeightFogNoise3DTex; // 0x00
@@ -2083,8 +1905,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int WindGlobalNoiseTex; // 0x18
 	}
 
-	[UsedByNativeCode]
-	public struct HGRenderPipelineRuntimeResourcesAssetResourcesCPP // TypeDefIndex: 58379
+	public struct HGRenderPipelineRuntimeResourcesAssetResourcesCPP // TypeDefIndex: 59527
 	{
 		// Fields
 		public int simpleSphereMesh; // 0x00
@@ -2094,8 +1915,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int defaultQuadMesh; // 0x10
 	}
 
-	[UsedByNativeCode]
-	public struct HGRenderPipelineRuntimeResourcesCPP // TypeDefIndex: 58380
+	public struct HGRenderPipelineRuntimeResourcesCPP // TypeDefIndex: 59528
 	{
 		// Fields
 		public HGRenderPipelineRuntimeResourcesShaderResourcesCPP shaders; // 0x00
@@ -2103,8 +1923,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public HGRenderPipelineRuntimeResourcesAssetResourcesCPP assets; // 0x2BC
 	}
 
-	[UsedByNativeCode]
-	public struct InkSimulationPassInput // TypeDefIndex: 58381
+	public struct InkSimulationPassInput // TypeDefIndex: 59529
 	{
 		// Fields
 		public IntPtr material; // 0x00
@@ -2115,17 +1934,13 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int densityResolution; // 0x20
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/TerrainDeformPass.h")]
-	[UsedByNativeCode]
-	public struct TerrainDeformPassInput // TypeDefIndex: 58382
+	public struct TerrainDeformPassInput // TypeDefIndex: 59530
 	{
 		// Fields
 		public IntPtr drawInteractionNodeMaterial; // 0x00
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/TerrainDepthPrepass.h")]
-	[UsedByNativeCode]
-	public struct TerrainDepthPrepassInput // TypeDefIndex: 58383
+	public struct TerrainDepthPrepassInput // TypeDefIndex: 59531
 	{
 		// Fields
 		public bool enableTerrainTessellation; // 0x00
@@ -2140,9 +1955,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int vtFeedbackId; // 0x1C
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/Utils.h")]
-	[UsedByNativeCode]
-	public struct HGViewConstantsCPP // TypeDefIndex: 58384
+	public struct HGViewConstantsCPP // TypeDefIndex: 59532
 	{
 		// Fields
 		public Matrix4x4 viewMatrix; // 0x00
@@ -2176,8 +1989,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float pad2; // 0x5EC
 	}
 
-	[UsedByNativeCode]
-	public struct HGRenderPathOtherData // TypeDefIndex: 58393
+	public struct HGRenderPathOtherData // TypeDefIndex: 59541
 	{
 		// Fields
 		public bool taaEnabled; // 0x00
@@ -2253,15 +2065,15 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector4 _CharacterPositionParams2; // 0x350
 		public Vector4 _CharacterPositionParams3; // 0x360
 		public Vector4 _CharacterHeightParams; // 0x370
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _WindMotorParams0[0]; // 0x380
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _WindMotorParams1[0]; // 0x3C0
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _WindMotorParams2[0]; // 0x400
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _WindMotorParams3[0]; // 0x440
+		public __WindMotorParams0_e__FixedBuffer _WindMotorParams0; // 0x380
+		public __WindMotorParams1_e__FixedBuffer _WindMotorParams1; // 0x3C0
+		public __WindMotorParams2_e__FixedBuffer _WindMotorParams2; // 0x400
+		public __WindMotorParams3_e__FixedBuffer _WindMotorParams3; // 0x440
 		public Vector4 _WindMotorCount; // 0x480
 		public Vector4 _LastWindGlobalParams0; // 0x490
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _LastWindMotorParams0[0]; // 0x4A0
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _LastWindMotorParams1[0]; // 0x4E0
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _LastWindMotorParams3[0]; // 0x520
+		public __LastWindMotorParams0_e__FixedBuffer _LastWindMotorParams0; // 0x4A0
+		public __LastWindMotorParams1_e__FixedBuffer _LastWindMotorParams1; // 0x4E0
+		public __LastWindMotorParams3_e__FixedBuffer _LastWindMotorParams3; // 0x520
 		public Vector4 _WaterInteractionParams0; // 0x560
 		public Vector4 _WaterInteractionParams1; // 0x570
 		public Vector4 _RainWetnessGlobalParam0; // 0x580
@@ -2285,12 +2097,59 @@ namespace UnityEngine.HyperGryphEngineCode
 		public bool enabledVerticalOcclusion; // 0x65C
 		public Vector4 _InteractRaftParams0; // 0x660
 		public Vector4 _InteractRaftParams1; // 0x670
-		public unsafe fixed /* 0x00000000-0x00000000 */ float _HackTempDataBeforeCPPPlugin[0]; // 0x680
+		public __HackTempDataBeforeCPPPlugin_e__FixedBuffer _HackTempDataBeforeCPPPlugin; // 0x680
+	
+		// Nested types
+		public struct __WindMotorParams0_e__FixedBuffer // TypeDefIndex: 59533
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __WindMotorParams1_e__FixedBuffer // TypeDefIndex: 59534
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __WindMotorParams2_e__FixedBuffer // TypeDefIndex: 59535
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __WindMotorParams3_e__FixedBuffer // TypeDefIndex: 59536
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __LastWindMotorParams0_e__FixedBuffer // TypeDefIndex: 59537
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __LastWindMotorParams1_e__FixedBuffer // TypeDefIndex: 59538
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __LastWindMotorParams3_e__FixedBuffer // TypeDefIndex: 59539
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
+	
+		public struct __HackTempDataBeforeCPPPlugin_e__FixedBuffer // TypeDefIndex: 59540
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/ReflectionProbeBinningPass.h")]
-	[UsedByNativeCode]
-	public struct HGReflectionProbeBinningInput // TypeDefIndex: 58394
+	public struct HGReflectionProbeBinningInput // TypeDefIndex: 59542
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -2305,9 +2164,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector4 defaultTextureSHLuminance; // 0x20
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/SkyRenderer.h")]
-	[UsedByNativeCode]
-	public struct SkyRendererInput // TypeDefIndex: 58395
+	public struct SkyRendererInput // TypeDefIndex: 59543
 	{
 		// Fields
 		public bool isSkyBoxRenderingEnabled; // 0x00
@@ -2323,18 +2180,14 @@ namespace UnityEngine.HyperGryphEngineCode
 		public IntPtr icosphereMesh; // 0xA8
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/Water/WaterSectorRenderingPass.h")]
-	[UsedByNativeCode]
-	public struct HGWaterSectorRenderingInput // TypeDefIndex: 58396
+	public struct HGWaterSectorRenderingInput // TypeDefIndex: 59544
 	{
 		// Fields
 		public bool enable; // 0x00
 		public int sectorTextureSize; // 0x04
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/Water/WaterInteractionRenderingPass.h")]
-	[UsedByNativeCode]
-	public struct HGWaterInteractionRenderingInput // TypeDefIndex: 58397
+	public struct HGWaterInteractionRenderingInput // TypeDefIndex: 59545
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -2342,9 +2195,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float deltaTime; // 0x20
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/Water/WaterRenderingPass.h")]
-	[UsedByNativeCode]
-	public struct HGWaterRenderingInput // TypeDefIndex: 58398
+	public struct HGWaterRenderingInput // TypeDefIndex: 59546
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -2352,6 +2203,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public bool enableRain; // 0x02
 		public bool enableInk; // 0x03
 		public bool shouldStoreDepth; // 0x04
+		public bool enableWaterQualityLow; // 0x05
 		public uint waterProxyCullHandle; // 0x08
 		public uint waterProxyVisibleCount; // 0x0C
 		public uint waterDecalCullHandle; // 0x10
@@ -2374,9 +2226,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public IntPtr screenSpaceMesh; // 0x1A8
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPath/HGRenderPathDefaultDeferred.h")]
-	[UsedByNativeCode]
-	public struct HGRenderPathBeforeCullingParamsCPP // TypeDefIndex: 58399
+	public struct HGRenderPathBeforeCullingParamsCPP // TypeDefIndex: 59547
 	{
 		// Fields
 		public int currentDeviceType; // 0x00
@@ -2423,9 +2273,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int visibleLightCount; // 0xF0
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/PostProcess/VFXPPScanLinePass.h")]
-	[UsedByNativeCode]
-	public struct HGRenderPathParamsCPP // TypeDefIndex: 58400
+	public struct HGRenderPathParamsCPP // TypeDefIndex: 59548
 	{
 		// Fields
 		public int currentDeviceType; // 0x00
@@ -2582,7 +2430,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public bool enableFSR3; // 0x390
 	}
 
-	public enum HGRenderPathInternalCPP // TypeDefIndex: 58401
+	public enum HGRenderPathInternalCPP // TypeDefIndex: 59549
 	{
 		Forward = 0,
 		UI = 1,
@@ -2595,9 +2443,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		Count = 8
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/GTAmbientOcclusionPass.h")]
-	[UsedByNativeCode]
-	public struct HGGTAmbientOcclusionSettingParameters // TypeDefIndex: 58402
+	public struct HGGTAmbientOcclusionSettingParameters // TypeDefIndex: 59550
 	{
 		// Fields
 		public bool enableAO; // 0x00
@@ -2612,9 +2458,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float depthMIPSamplingOffset; // 0x1C
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/MotionBlurPass.h")]
-	[UsedByNativeCode]
-	public struct HGMotionBlurParametersV2 // TypeDefIndex: 58403
+	public struct HGMotionBlurParametersV2 // TypeDefIndex: 59551
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -2623,9 +2467,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float blendFrame; // 0x0C
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/LensFlarePass.h")]
-	[UsedByNativeCode]
-	public struct LensFlareRenderingInput // TypeDefIndex: 58404
+	public struct LensFlareRenderingInput // TypeDefIndex: 59552
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -2633,9 +2475,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int drawDataCount; // 0x10
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/PostProcess/ParafinPass.h")]
-	[UsedByNativeCode]
-	public struct ParafinRenderingInput // TypeDefIndex: 58405
+	public struct ParafinRenderingInput // TypeDefIndex: 59553
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -2644,9 +2484,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public IntPtr parafinMesh; // 0x10
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/DepthOfFieldPass.h")]
-	[UsedByNativeCode]
-	public struct HGDepthOfFieldParameters // TypeDefIndex: 58406
+	public struct HGDepthOfFieldParameters // TypeDefIndex: 59554
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -2669,9 +2507,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public bool usePhysicalCamera; // 0x71
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/DistortionPass.h")]
-	[UsedByNativeCode]
-	public struct VFXScreenMaterialData // TypeDefIndex: 58407
+	public struct VFXScreenMaterialData // TypeDefIndex: 59555
 	{
 		// Fields
 		public bool enableFullScreenVFXData; // 0x00
@@ -2680,8 +2516,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public IntPtr vfxFullScreenMaterialPropertyBlock; // 0x18
 	}
 
-	[UsedByNativeCode]
-	public struct CustomDepthOnlySystemRequest // TypeDefIndex: 58408
+	public struct CustomDepthOnlySystemRequest // TypeDefIndex: 59556
 	{
 		// Fields
 		public Vector3 rootPosition; // 0x00
@@ -2695,9 +2530,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public bool includeDynamicObjects; // 0x38
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/FakePlanarReflectionPass.h")]
-	[UsedByNativeCode]
-	public struct HGFakePlanarReflectionRenderingInput // TypeDefIndex: 58409
+	public struct HGFakePlanarReflectionRenderingInput // TypeDefIndex: 59557
 	{
 		// Fields
 		public bool enable; // 0x00
@@ -2709,9 +2542,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector3 pivot; // 0x14
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/TerrainDepthPrepass.h")]
-	[UsedByNativeCode]
-	public struct HGTerrainGlintData // TypeDefIndex: 58410
+	public struct HGTerrainGlintData // TypeDefIndex: 59558
 	{
 		// Fields
 		public bool m_enableFakeGlint; // 0x00
@@ -2724,9 +2555,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public UnityEngine.Color m_glintColor; // 0x1C
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/TerrainDepthPrepass.h")]
-	[UsedByNativeCode]
-	public struct HGTerrainSubsurfaceData // TypeDefIndex: 58411
+	public struct HGTerrainSubsurfaceData // TypeDefIndex: 59559
 	{
 		// Fields
 		public bool m_useSubsurfaceProfile; // 0x00
@@ -2736,9 +2565,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int m_terrainStencil; // 0x10
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/TerrainDepthPrepass.h")]
-	[UsedByNativeCode]
-	public struct HGTerrainFakeVolumeData // TypeDefIndex: 58412
+	public struct HGTerrainFakeVolumeData // TypeDefIndex: 59560
 	{
 		// Fields
 		public bool m_enableFakeVolume; // 0x00
@@ -2766,9 +2593,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int m_fakeVolumeMask; // 0xA0
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/TerrainDepthPrepass.h")]
-	[UsedByNativeCode]
-	public struct HGTerrainFakeShadowData // TypeDefIndex: 58413
+	public struct HGTerrainFakeShadowData // TypeDefIndex: 59561
 	{
 		// Fields
 		public bool m_enableFakeShadow; // 0x00
@@ -2778,9 +2603,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float m_fakeShadowDistanceLerp; // 0x10
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/TerrainDepthPrepass.h")]
-	[UsedByNativeCode]
-	public struct HGTerrainLayerTypeData // TypeDefIndex: 58414
+	public struct HGTerrainLayerTypeData // TypeDefIndex: 59562
 	{
 		// Fields
 		public bool m_bHasLayerTypeData; // 0x00
@@ -2794,9 +2617,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public HGTerrainFakeShadowData m_fakeShadowData; // 0x17C
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/TerrainDepthPrepass.h")]
-	[UsedByNativeCode]
-	public struct HGTerrainFeatures // TypeDefIndex: 58415
+	public struct HGTerrainFeatures // TypeDefIndex: 59563
 	{
 		// Fields
 		public bool enableDeformBlend; // 0x00
@@ -2804,8 +2625,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public unsafe HGTerrainLayerTypeData* layerTypeData; // 0x08
 	}
 
-	[UsedByNativeCode]
-	public struct HGVolumetricCloudDataCB // TypeDefIndex: 58416
+	public struct HGVolumetricCloudDataCB // TypeDefIndex: 59564
 	{
 		// Fields
 		public int _MarchStepNum; // 0x00
@@ -2894,16 +2714,14 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Matrix4x4 _BoxLocalToWorld; // 0x3B0
 	}
 
-	[UsedByNativeCode]
-	public struct HGVolumetricBounds // TypeDefIndex: 58417
+	public struct HGVolumetricBounds // TypeDefIndex: 59565
 	{
 		// Fields
 		public bool enableBounds; // 0x00
 		public Bounds worldBounds; // 0x04
 	}
 
-	[UsedByNativeCode]
-	public struct HGVolumetricRenderItem // TypeDefIndex: 58418
+	public struct HGVolumetricRenderItem // TypeDefIndex: 59566
 	{
 		// Fields
 		public int id; // 0x00
@@ -2930,13 +2748,13 @@ namespace UnityEngine.HyperGryphEngineCode
 		public CBHandle cloudCBHandle; // 0xB8
 	}
 
-	public enum EFramingQuality // TypeDefIndex: 58419
+	public enum EFramingQuality // TypeDefIndex: 59567
 	{
 		Checkerboard = 0,
 		Quarter = 1
 	}
 
-	public enum EDownResFilter // TypeDefIndex: 58420
+	public enum EDownResFilter // TypeDefIndex: 59568
 	{
 		DepthFade = 0,
 		Nearest = 1,
@@ -2944,8 +2762,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		Noisy = 3
 	}
 
-	[UsedByNativeCode]
-	public struct HGDownResQualityPack // TypeDefIndex: 58421
+	public struct HGDownResQualityPack // TypeDefIndex: 59569
 	{
 		// Fields
 		public bool enableDownRes; // 0x00
@@ -2953,8 +2770,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public EDownResFilter downResFilter; // 0x08
 	}
 
-	[UsedByNativeCode]
-	public struct HGFramingQualityPack // TypeDefIndex: 58422
+	public struct HGFramingQualityPack // TypeDefIndex: 59570
 	{
 		// Fields
 		public bool enableFraming; // 0x00
@@ -2967,8 +2783,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public bool enableFramingNeighborAvg; // 0x10
 	}
 
-	[UsedByNativeCode]
-	public struct HGTAAQualityPack // TypeDefIndex: 58423
+	public struct HGTAAQualityPack // TypeDefIndex: 59571
 	{
 		// Fields
 		public bool enableTAA; // 0x00
@@ -2980,7 +2795,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float invalidDepthBlendRatio; // 0x08
 	}
 
-	public enum EFarCloudFramingQuality // TypeDefIndex: 58424
+	public enum EFarCloudFramingQuality // TypeDefIndex: 59572
 	{
 		None = 0,
 		Checkerboard = 1,
@@ -2989,8 +2804,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		Framing4x4 = 4
 	}
 
-	[UsedByNativeCode]
-	public struct HGCloudQualityPack // TypeDefIndex: 58425
+	public struct HGCloudQualityPack // TypeDefIndex: 59573
 	{
 		// Fields
 		public float marchStepScale; // 0x00
@@ -3015,11 +2829,11 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float farCloudTAABlendRatio; // 0x48
 		public bool farCloudTAACubicSample; // 0x4C
 		public float farCloudMarchStepScale; // 0x50
-		public float farCloudEmptySkipSizeScale; // 0x54
+		public float farCloudFullUpdateMarchStepScale; // 0x54
+		public float farCloudEmptySkipSizeScale; // 0x58
 	}
 
-	[UsedByNativeCode]
-	public struct HGVolumetricQualitySettings // TypeDefIndex: 58426
+	public struct HGVolumetricQualitySettings // TypeDefIndex: 59574
 	{
 		// Fields
 		public HGDownResQualityPack downResQualityPack; // 0x00
@@ -3028,14 +2842,13 @@ namespace UnityEngine.HyperGryphEngineCode
 		public HGCloudQualityPack cloudQualityPack; // 0x2C
 	}
 
-	public enum HGRainDrawCmdType // TypeDefIndex: 58427
+	public enum HGRainDrawCmdType // TypeDefIndex: 59575
 	{
 		DrawMesh = 0,
 		DrawMeshInstancedProcedural = 1
 	}
 
-	[UsedByNativeCode]
-	public struct HGRainParams // TypeDefIndex: 58428
+	public struct HGRainParams // TypeDefIndex: 59576
 	{
 		// Fields
 		public int mesh; // 0x00
@@ -3048,8 +2861,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public HGRainDrawCmdType type; // 0x5C
 	}
 
-	[UsedByNativeCode]
-	public struct ScanLineDataPack // TypeDefIndex: 58429
+	public struct ScanLineDataPack // TypeDefIndex: 59577
 	{
 		// Fields
 		public Vector4 blackBoxCenterPos; // 0x00
@@ -3079,8 +2891,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector4 boxPosition3; // 0x180
 	}
 
-	[UsedByNativeCode]
-	public struct HighlightDataPack // TypeDefIndex: 58430
+	public struct HighlightDataPack // TypeDefIndex: 59578
 	{
 		// Fields
 		public Vector4 detectDistance; // 0x00
@@ -3088,8 +2899,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public float meshHeight; // 0x1C
 	}
 
-	[UsedByNativeCode]
-	public struct VFXPPScanLinePassInput // TypeDefIndex: 58431
+	public struct VFXPPScanLinePassInput // TypeDefIndex: 59579
 	{
 		// Fields
 		public bool useScanLine; // 0x00
@@ -3104,9 +2914,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public IntPtr highlightMesh; // 0x30
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/UIImageBlurPass.h")]
-	[UsedByNativeCode]
-	public struct UIImageBlurPassInputV2 // TypeDefIndex: 58432
+	public struct UIImageBlurPassInputV2 // TypeDefIndex: 59580
 	{
 		// Fields
 		public IntPtr source; // 0x00
@@ -3119,9 +2927,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public GraphicsFormat format; // 0x30
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/VisibilitySHPass.h")]
-	[UsedByNativeCode]
-	public struct VisibilitySHRPInput // TypeDefIndex: 58433
+	public struct VisibilitySHRPInput // TypeDefIndex: 59581
 	{
 		// Fields
 		public int passIdx; // 0x00
@@ -3136,9 +2942,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public int visibilitySHMaterial; // 0x20
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/PostProcess/FrostedGlassPass.h")]
-	[UsedByNativeCode]
-	public struct FrostedGlassPassRPInput // TypeDefIndex: 58434
+	public struct FrostedGlassPassRPInput // TypeDefIndex: 59582
 	{
 		// Fields
 		public bool isEnabled; // 0x00
@@ -3150,18 +2954,14 @@ namespace UnityEngine.HyperGryphEngineCode
 		public GraphicsFormat outputFormat; // 0x28
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/PostProcess/FishEyeEffectPass.h")]
-	[UsedByNativeCode]
-	public struct FishEyeEffectInput // TypeDefIndex: 58435
+	public struct FishEyeEffectInput // TypeDefIndex: 59583
 	{
 		// Fields
 		public int colorPassIndex; // 0x00
 		public int depthPassIndex; // 0x04
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/PostProcess/CutsceneEffectPass.h")]
-	[UsedByNativeCode]
-	public struct CutsceneEffectPassRPInput // TypeDefIndex: 58436
+	public struct CutsceneEffectPassRPInput // TypeDefIndex: 59584
 	{
 		// Fields
 		public bool isEnabled; // 0x00
@@ -3171,9 +2971,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public unsafe int* cutsceneEffectMaterialIDs; // 0x10
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/VolumetricCloudPass.h")]
-	[UsedByNativeCode]
-	public struct VolumetricCloudInput // TypeDefIndex: 58437
+	public struct VolumetricCloudInput // TypeDefIndex: 59585
 	{
 		// Fields
 		public IntPtr defaultVolumetricMat; // 0x00
@@ -3183,13 +2981,11 @@ namespace UnityEngine.HyperGryphEngineCode
 		public unsafe HGVolumetricRenderItem* renderItems; // 0x50
 		public int renderItemsCount; // 0x58
 		public HGVolumetricQualitySettings qualitySetting; // 0x5C
-		public int volumetricState; // 0xE0
-		public float volumetricFadeRatio; // 0xE4
+		public int volumetricState; // 0xE4
+		public float volumetricFadeRatio; // 0xE8
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/Shadow/HGCharacterShadowmapManager.h")]
-	[UsedByNativeCode]
-	public struct HGCharacterShadowInputsCPP // TypeDefIndex: 58438
+	public struct HGCharacterShadowInputsCPP // TypeDefIndex: 59586
 	{
 		// Fields
 		public int characterCount; // 0x00
@@ -3203,9 +2999,7 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector2 characterVolume_charCustomMainLightDir; // 0x2C
 	}
 
-	[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/ParticleLightingPass.h")]
-	[UsedByNativeCode]
-	public struct ParticleLightingIVInput // TypeDefIndex: 58439
+	public struct ParticleLightingIVInput // TypeDefIndex: 59587
 	{
 		// Fields
 		public Matrix4x4 invViewMatrix; // 0x00
@@ -3217,82 +3011,39 @@ namespace UnityEngine.HyperGryphEngineCode
 		public Vector4 IVDefaultSHAb; // 0x90
 	}
 
-	public class HGRenderGraphCPP // TypeDefIndex: 58440
+	public class HGRenderGraphCPP // TypeDefIndex: 59588
 	{
 		// Constructors
 		public HGRenderGraphCPP() {} // Dummy constructor
 	
 		// Methods
-		[FreeFunction("HGRenderGraph_AllocateTempFromCSharp")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/HGRenderGraph.h")]
-		public static IntPtr AllocateTempFromCSharp(long size) => default; // 0x0000000182508BE0-0x0000000182508C20
+		public static IntPtr AllocateTempFromCSharp(long size) => default; // 0x0000000184170AA0-0x0000000184170AE0
 		public static unsafe T* AllocateTempFromCSharp<T>()
 			where T : struct => default;
-		[FreeFunction("HGRenderPath_Create")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/Utils.h")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPath/HGRenderPathDefaultDeferred.h")]
-		public static unsafe long HGRenderPath_Create(HGRenderPathInternalCPP renderPath, HGRenderPipelineRuntimeResourcesCPP* defaultResources, HGRenderPipelineDebugResourcesCPP* debugResources) => default; // 0x0000000183CAA520-0x0000000183CAA580
-		[FreeFunction("HGRenderPath_BeforeCulling")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPath/HGRenderPathDefaultDeferred.h")]
-		public static unsafe void HGRenderPath_BeforeCulling(long _ptr, HGRenderPathBeforeCullingParamsCPP* renderPathBeforeCullingParams, IntPtr camera, IntPtr uiCamera, IntPtr occlusionCamera) {} // 0x00000001825AD460-0x00000001825AD4D0
-		[FreeFunction("HGRenderPath_Render")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPath/HGRenderPathDefaultDeferred.h")]
-		public static unsafe void HGRenderPath_Render(long _ptr, HGRenderPathParamsCPP* renderPathParams, HGRenderPathBeforeCullingParamsCPP* renderPathBeforeCullingParams, IntPtr camera, IntPtr renderContext, IntPtr _cmd) {} // 0x00000001830C5730-0x00000001830C57A0
-		[FreeFunction("HGRenderPath_Destroy")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPath/HGRenderPathDefaultDeferred.h")]
-		public static void HGRenderPath_Destroy(long _ptr) {} // 0x0000000183D1EF20-0x0000000183D1EF60
-		[FreeFunction("HGRenderPathSimpleUI_Create")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPath/HGRenderPathDefaultDeferred.h")]
-		public static long HGRenderPathSimpleUI_Create() => default; // 0x000000018333D400-0x000000018333D440
-		[FreeFunction("HGRenderPathSimpleUI_Render")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPath/HGRenderPathDefaultDeferred.h")]
-		public static void HGRenderPathSimpleUI_Render(long _ptr, IntPtr camera, IntPtr renderContext, IntPtr _cmd) {} // 0x000000018333D390-0x000000018333D400
-		[FreeFunction("HGRenderPathSimpleUI_Destroy")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPath/HGRenderPathDefaultDeferred.h")]
-		public static void HGRenderPathSimpleUI_Destroy(long _ptr) {} // 0x0000000182D155F0-0x0000000182D15630
-		[FreeFunction("CustomDepthRequestManager_CreateWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/CustomDepthOnlyPass.h")]
-		public static long CustomDepthRequestManager_Create() => default; // 0x0000000182D16050-0x0000000182D16090
-		[FreeFunction("CustomDepthRequestManager_RemoveWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/CustomDepthOnlyPass.h")]
-		public static void CustomDepthRequestManager_Remove(long mgr) {} // 0x0000000182D15530-0x0000000182D15570
-		[FreeFunction("CustomDepthRequestManager_RequestSystemWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/CustomDepthOnlyPass.h")]
-		public static unsafe uint CustomDepthRequestManager_RequestSystem(long mgr, CustomDepthOnlySystemRequest* request) => default; // 0x00000001836B0A90-0x00000001836B0AE0
-		[FreeFunction("CustomDepthRequestManager_RemoveSystemWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/CustomDepthOnlyPass.h")]
-		public static void CustomDepthRequestManager_RemoveSystem(long mgr, uint idx) {} // 0x00000001836B0AE0-0x00000001836B0B30
-		[FreeFunction("CustomDepthRequestManager_UpdateSystemWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/CustomDepthOnlyPass.h")]
-		public static void CustomDepthRequestManager_UpdateSystem(long mgr, uint idx, Vector3 position) {} // 0x0000000189DF498C-0x0000000189DF49A0
-		[FreeFunction("CustomDepthRequestManager_ToggleSystemWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/CustomDepthOnlyPass.h")]
-		public static void CustomDepthRequestManager_ToggleSystem(long mgr, uint idx, bool flag) {} // 0x0000000182799E00-0x0000000182799E60
-		[FreeFunction("CustomDrawRTManager_CreateWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/CustomDrawTexturePass.h")]
-		public static long CustomDrawRTManager_Create() => default; // 0x0000000182D16010-0x0000000182D16050
-		[FreeFunction("CustomDrawRTManager_DestroyWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/CustomDrawTexturePass.h")]
-		public static void CustomDrawRTManager_Destroy(long ptr) {} // 0x0000000182D155B0-0x0000000182D155F0
-		[FreeFunction("CustomDrawRTManager_AllocateRenderTextureWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/CustomDrawTexturePass.h")]
-		private static int CustomDrawRTManager_AllocateRenderTextureImpl(long manager, int width, int height, int depth, int mipCount, GraphicsFormat colorFormat, GraphicsFormat depthStencilFormat) => default; // 0x0000000183114960-0x00000001831149D0
-		public static RenderTexture CustomDrawRTManager_AllocateRenderTexture(long manager, int width, int height, int depth, int mipCount, GraphicsFormat colorFormat, GraphicsFormat depthStencilFormat) => default; // 0x0000000183114790-0x0000000183114830
-		[FreeFunction("CustomDrawRTManager_ReleaseRenderTextureWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/CustomDrawTexturePass.h")]
-		private static void CustomDrawRTManager_ReleaseRenderTextureImpl(long manager, IntPtr rt) {} // 0x0000000183115080-0x00000001831150D0
-		public static void CustomDrawRTManager_ReleaseRenderTexture(long manager, RenderTexture rt) {} // 0x00000001831146B0-0x00000001831146D0
-		[FreeFunction("CustomDrawRTManager_DrawTextureWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/CustomDrawTexturePass.h")]
-		private static void CustomDrawRTManager_DrawTextureImpl(long manager, IntPtr rt, [IsReadOnly] in Rect rect, IntPtr texture, IntPtr material, int pass) {} // 0x0000000183114FB0-0x0000000183115020
-		public static void CustomDrawRTManager_DrawTexture(long manager, RenderTexture rt, [IsReadOnly] in Rect rect, Texture texture, Material material, int pass) {} // 0x0000000183114F60-0x0000000183114FB0
-		[FreeFunction("CustomDrawRTManager_ClearTextureWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/CustomDrawTexturePass.h")]
-		private static void CustomDrawRTManager_ClearTextureImpl(long manager, IntPtr rt, [IsReadOnly] in UnityEngine.Color color) {} // 0x0000000183115020-0x0000000183115080
-		public static void CustomDrawRTManager_ClearTexture(long manager, RenderTexture rt, [IsReadOnly] in UnityEngine.Color color) {} // 0x0000000183114B40-0x0000000183114B60
-		[FreeFunction("InkSimulationPass_DestroyCSharpWrapper")]
-		[NativeHeader("Modules/HGGraphicsCPP/Public/RenderPipeline/RenderPass/InkSimulationPass.h")]
-		public static void InkSimulationPass_Destroy(long _ptr) {} // 0x0000000189DF49A0-0x0000000189DF4A38
-		private static void CustomDepthRequestManager_UpdateSystem_Injected(long mgr, uint idx, ref Vector3 position) {} // 0x0000000189DF493C-0x0000000189DF498C
+		public static unsafe long HGRenderPath_Create(HGRenderPathInternalCPP renderPath, HGRenderPipelineRuntimeResourcesCPP* defaultResources, HGRenderPipelineDebugResourcesCPP* debugResources) => default; // 0x0000000184D9B900-0x0000000184D9B960
+		public static unsafe void HGRenderPath_BeforeCulling(long _ptr, HGRenderPathBeforeCullingParamsCPP* renderPathBeforeCullingParams, IntPtr camera, IntPtr uiCamera, IntPtr occlusionCamera) {} // 0x0000000183FDBA80-0x0000000183FDBAF0
+		public static unsafe void HGRenderPath_Render(long _ptr, HGRenderPathParamsCPP* renderPathParams, HGRenderPathBeforeCullingParamsCPP* renderPathBeforeCullingParams, IntPtr camera, IntPtr renderContext, IntPtr _cmd) {} // 0x0000000184FA3E50-0x0000000184FA3EC0
+		public static void HGRenderPath_Destroy(long _ptr) {} // 0x0000000185F7DDB0-0x0000000185F7DDF0
+		public static long HGRenderPathSimpleUI_Create() => default; // 0x00000001852C4420-0x00000001852C4460
+		public static void HGRenderPathSimpleUI_Render(long _ptr, IntPtr camera, IntPtr renderContext, IntPtr _cmd) {} // 0x00000001852C43B0-0x00000001852C4420
+		public static void HGRenderPathSimpleUI_Destroy(long _ptr) {} // 0x00000001852C8870-0x00000001852C88B0
+		public static long CustomDepthRequestManager_Create() => default; // 0x0000000185F8C300-0x0000000185F8C340
+		public static void CustomDepthRequestManager_Remove(long mgr) {} // 0x00000001852C8930-0x00000001852C8970
+		public static unsafe uint CustomDepthRequestManager_RequestSystem(long mgr, CustomDepthOnlySystemRequest* request) => default; // 0x0000000184C19010-0x0000000184C19060
+		public static void CustomDepthRequestManager_RemoveSystem(long mgr, uint idx) {} // 0x0000000184C19060-0x0000000184C190B0
+		public static void CustomDepthRequestManager_UpdateSystem(long mgr, uint idx, Vector3 position) {} // 0x000000018BF0C73C-0x000000018BF0C750
+		public static void CustomDepthRequestManager_ToggleSystem(long mgr, uint idx, bool flag) {} // 0x0000000184C18740-0x0000000184C187A0
+		public static long CustomDrawRTManager_Create() => default; // 0x0000000185F8C2C0-0x0000000185F8C300
+		public static void CustomDrawRTManager_Destroy(long ptr) {} // 0x00000001852C88B0-0x00000001852C88F0
+		private static int CustomDrawRTManager_AllocateRenderTextureImpl(long manager, int width, int height, int depth, int mipCount, GraphicsFormat colorFormat, GraphicsFormat depthStencilFormat) => default; // 0x0000000185044D40-0x0000000185044DB0
+		public static RenderTexture CustomDrawRTManager_AllocateRenderTexture(long manager, int width, int height, int depth, int mipCount, GraphicsFormat colorFormat, GraphicsFormat depthStencilFormat) => default; // 0x0000000185044B70-0x0000000185044C10
+		private static void CustomDrawRTManager_ReleaseRenderTextureImpl(long manager, IntPtr rt) {} // 0x0000000185045460-0x00000001850454B0
+		public static void CustomDrawRTManager_ReleaseRenderTexture(long manager, RenderTexture rt) {} // 0x0000000185044A90-0x0000000185044AB0
+		private static void CustomDrawRTManager_DrawTextureImpl(long manager, IntPtr rt, in Rect rect, IntPtr texture, IntPtr material, int pass) {} // 0x0000000185045390-0x0000000185045400
+		public static void CustomDrawRTManager_DrawTexture(long manager, RenderTexture rt, in Rect rect, Texture texture, Material material, int pass) {} // 0x0000000185045340-0x0000000185045390
+		private static void CustomDrawRTManager_ClearTextureImpl(long manager, IntPtr rt, in UnityEngine.Color color) {} // 0x0000000185045400-0x0000000185045460
+		public static void CustomDrawRTManager_ClearTexture(long manager, RenderTexture rt, in UnityEngine.Color color) {} // 0x0000000185044F20-0x0000000185044F40
+		public static void InkSimulationPass_Destroy(long _ptr) {} // 0x000000018BF0C750-0x000000018BF0C7E8
+		private static void CustomDepthRequestManager_UpdateSystem_Injected(long mgr, uint idx, ref Vector3 position) {} // 0x000000018BF0C6EC-0x000000018BF0C73C
 	}
 }

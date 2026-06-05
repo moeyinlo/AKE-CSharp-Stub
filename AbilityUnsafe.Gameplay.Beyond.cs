@@ -4,24 +4,15 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 using UnityEngine;
 
-// Image 122: AbilityUnsafe.Gameplay.Beyond.dll - Assembly: AbilityUnsafe.Gameplay.Beyond, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59985-59998
-[assembly: CompilationRelaxations(8)]
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 125: AbilityUnsafe.Gameplay.Beyond.dll - Assembly: AbilityUnsafe.Gameplay.Beyond, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61090-61103
 
 namespace Beyond
 {
-	public struct FPtrAnimNativeCurve // TypeDefIndex: 59989
+	public struct FPtrAnimNativeCurve // TypeDefIndex: 61094
 	{
 		// Fields
 		private unsafe Keyframe* m_values; // 0x00
@@ -33,10 +24,10 @@ namespace Beyond
 		public static readonly float3x3 CURVE_MATRIX_PRIME; // 0x44
 	
 		// Nested types
-		public struct KeyframeComparer : IComparer<Keyframe> // TypeDefIndex: 59988
+		public struct KeyframeComparer : IComparer<Keyframe> // TypeDefIndex: 61093
 		{
 			// Methods
-			public int Compare(Keyframe keyframe1, Keyframe keyframe2) => default; // 0x000000018231AF20-0x000000018231AF60
+			public int Compare(Keyframe keyframe1, Keyframe keyframe2) => default; // 0x0000000186476414-0x000000018647641C
 		}
 	
 		// Constructors
@@ -44,61 +35,60 @@ namespace Beyond
 			s_keyframeComparer = default;
 			CURVE_MATRIX = default;
 			CURVE_MATRIX_PRIME = default;
-		} // 0x00000001838A4860-0x00000001838A4A50
+		} // 0x00000001841A2F80-0x00000001841A2FC0
 	
 		// Methods
-		public bool IsValid() => default; // 0x0000000184278130-0x0000000184278138
-		public NativeArray<Keyframe> CreateCurve(AnimationCurve animationCurve, Unity.Collections.Allocator allocator) => default; // 0x0000000182CFC870-0x0000000182CFCA90
-		public NativeArray<Keyframe> CreateLine(float val, Unity.Collections.Allocator allocator) => default; // 0x0000000182CFC070-0x0000000182CFC1A0
-		public float Evaluate(float time) => default; // 0x00000001842778AC-0x00000001842779D0
-		public static unsafe int GetInsertionIndex(Keyframe* keys, int valuesLength, float time) => default; // 0x0000000184277CC0-0x0000000184277D24
-		public float WrapTime(float time) => default; // 0x00000001842782BC-0x0000000184278398
-		public float Evaluate(float time, ref Keyframe keyframe, ref Keyframe nextKeyframe) => default; // 0x00000001842779D0-0x0000000184277CC0
-		public float CubicBezier([IsReadOnly] in float4 curveMatrix, float t) => default; // 0x0000000184277810-0x0000000184277854
-		public float CubicBezier([IsReadOnly] in float3 curveMatrix, float t) => default; // 0x00000001842777C8-0x0000000184277810
-		public float DeCasteljauBezier(int degree, float4 coords, float t) => default; // 0x0000000184277854-0x00000001842778AC
-		public void GetTWithBisectionMethod(float time, [IsReadOnly] in float4 curveXCoords, ref float t, ref float tBottom, ref float tTop, ref float diff) {} // 0x0000000184277D24-0x0000000184277E8C
-		public void GetTWithNewtonMethod(float time, [IsReadOnly] in float4 xCoords, [IsReadOnly] in float4 curveXCoords, ref float t, ref float tBottom, ref float tTop, ref float diff) {} // 0x0000000184277E8C-0x0000000184278130
+		public bool IsValid() => default; // 0x000000018487B240-0x000000018487B460
+		public NativeArray<Keyframe> CreateCurve(AnimationCurve animationCurve, Unity.Collections.Allocator allocator) => default; // 0x000000018487AA40-0x000000018487AB70
+		public NativeArray<Keyframe> CreateLine(float val, Unity.Collections.Allocator allocator) => default; // 0x0000000186475B90-0x0000000186475CB4
+		public float Evaluate(float time) => default; // 0x0000000186475FA4-0x0000000186476008
+		public static unsafe int GetInsertionIndex(Keyframe* keys, int valuesLength, float time) => default; // 0x00000001864765A0-0x000000018647667C
+		public float WrapTime(float time) => default; // 0x0000000186475CB4-0x0000000186475FA4
+		public float Evaluate(float time, ref Keyframe keyframe, ref Keyframe nextKeyframe) => default; // 0x0000000186475AF4-0x0000000186475B38
+		public float CubicBezier(in float4 curveMatrix, float t) => default; // 0x0000000186475AAC-0x0000000186475AF4
+		public float CubicBezier(in float3 curveMatrix, float t) => default; // 0x0000000186475B38-0x0000000186475B90
+		public float DeCasteljauBezier(int degree, float4 coords, float t) => default; // 0x0000000186476008-0x0000000186476170
+		public void GetTWithBisectionMethod(float time, in float4 curveXCoords, ref float t, ref float tBottom, ref float tTop, ref float diff) {} // 0x0000000186476170-0x0000000186476414
+		public void GetTWithNewtonMethod(float time, in float4 xCoords, in float4 curveXCoords, ref float t, ref float tBottom, ref float tTop, ref float diff) {} // 0x0000000186476454-0x00000001864765A0
 		public float UseNewtonMethod(float4 curveCoords, float coord, float t, float3 curvePrimeCoords, float4 primePrimeCoords, out float coordAtT) {
 			coordAtT = default;
 			return default;
-		} // 0x0000000184278170-0x00000001842782BC
-		public void UpdateTLimits(float x, float time, float t, ref float tBottom, ref float tTop) {} // 0x0000000184278138-0x0000000184278170
+		} // 0x000000018647641C-0x0000000186476454
+		public void UpdateTLimits(float x, float time, float t, ref float tBottom, ref float tTop) {} // 0x0000000185A30A70-0x0000000185A30C60
 	}
 
-	public struct FPtrNativeCurve // TypeDefIndex: 59990
+	public struct FPtrNativeCurve // TypeDefIndex: 61095
 	{
 		// Fields
-		[NativeDisableUnsafePtrRestriction]
 		private unsafe float* m_values; // 0x00
 		private int m_valuesLength; // 0x08
 		private UnityEngine.WrapMode m_preWrapMode; // 0x0C
 		private UnityEngine.WrapMode m_postWrapMode; // 0x10
 	
 		// Methods
-		public bool IsValid() => default; // 0x0000000184278130-0x0000000184278138
-		public NativeArray<float> CreateCurve(AnimationCurve curve, int resolution) => default; // 0x0000000184278398-0x000000018427856C
-		public float Evaluate(float t) => default; // 0x000000018427856C-0x00000001842786BC
-		private float _Repeat(float t, float length) => default; // 0x0000000184277234-0x0000000184277280
-		private float _Pingpong(float t, float length) => default; // 0x00000001842786BC-0x00000001842786F0
+		public bool IsValid() => default; // 0x0000000186476414-0x000000018647641C
+		public NativeArray<float> CreateCurve(AnimationCurve curve, int resolution) => default; // 0x000000018647667C-0x0000000186476850
+		public float Evaluate(float t) => default; // 0x0000000186476850-0x00000001864769A0
+		private float _Repeat(float t, float length) => default; // 0x0000000186475518-0x0000000186475564
+		private float _Pingpong(float t, float length) => default; // 0x00000001864769A0-0x00000001864769D4
 	}
 }
 
 namespace Beyond.Gameplay.AbilityUnsafe
 {
-	public enum ENPCAbilityPathFollowStateType // TypeDefIndex: 59996
+	public enum ENPCAbilityPathFollowStateType // TypeDefIndex: 61101
 	{
 		Idle = 0,
 		Move = 1,
 		MoveStop = 2
 	}
 
-	public struct FNPCAbilityPathFollowFragment // TypeDefIndex: 59998
+	public struct FNPCAbilityPathFollowFragment // TypeDefIndex: 61103
 	{
 		// Fields
-		public const int TOTAL_POINT_CAPACITY = 32; // Metadata: 0x01FDD5B3
-		public const int ELEMENT_PER_POINT = 7; // Metadata: 0x01FDD5B4
-		private unsafe fixed /* 0x00000000-0x00000000 */ float m_pathPointQueue[0]; // 0x00
+		public const int TOTAL_POINT_CAPACITY = 32; // Metadata: 0x02082E9E
+		public const int ELEMENT_PER_POINT = 7; // Metadata: 0x02082E9F
+		private _m_pathPointQueue_e__FixedBuffer m_pathPointQueue; // 0x00
 		private int m_front; // 0x380
 		private int m_pointCount; // 0x384
 		public ENPCAbilityPathFollowStateType state; // 0x388
@@ -122,78 +112,103 @@ namespace Beyond.Gameplay.AbilityUnsafe
 		public float groundSlopeAngle; // 0x3DC
 	
 		// Properties
-		public int pointCount { get => default; } // 0x0000000183D4E230-0x0000000183D4E240 
-		public Vector3 aim { get => default; } // 0x0000000184270088-0x00000001842700B8 
-		public int aimStyle { get => default; } // 0x000000018427007C-0x0000000184270088 
-		public int aimExtInfo { get => default; } // 0x00000001842777BC-0x00000001842777C8 
-		public float aimDesiredSpeed { get => default; } // 0x00000001842721A4-0x00000001842721B0 
-		public Vector3 startPos { get => default; set {} } // 0x0000000183D4E240-0x0000000183D4E260 0x0000000183D4E260-0x0000000183D4E280
+		public int pointCount { get => default; } // 0x0000000185FAFDD0-0x0000000185FAFDE0 
+		public Vector3 aim { get => default; } // 0x0000000186471A00-0x0000000186471A30 
+		public int aimStyle { get => default; } // 0x0000000186471A30-0x0000000186471A68 
+		public int aimExtInfo { get => default; } // 0x0000000186475AA0-0x0000000186475AAC 
+		public float aimDesiredSpeed { get => default; } // 0x00000001864719F4-0x0000000186471A00 
+		public Vector3 startPos { get => default; set {} } // 0x0000000185FAFDE0-0x0000000185FAFE00 0x0000000185FAFE00-0x0000000185FAFE20
+	
+		// Nested types
+		public struct _m_pathPointQueue_e__FixedBuffer // TypeDefIndex: 61102
+		{
+			// Fields
+			public float FixedElementField; // 0x00
+		}
 	
 		// Methods
-		public void Init() {} // 0x0000000182983B50-0x0000000182983B80
-		public void MarkPathFollowEnd() {} // 0x0000000183D4E200-0x0000000183D4E230
-		public void MarkMoveStop(float time) {} // 0x0000000183D4E1D0-0x0000000183D4E200
-		public void SetPathIsLoop(bool bIsLoop) {} // 0x00000001842776D8-0x0000000184277704
-		public bool GetPathIsLoop() => default; // 0x00000001824A1A90-0x00000001824A1AA0
-		public bool PushPoint(Vector3 point, int styleEnum, int extPointInfo, float desiredSpeed, bool patrolActionPoint) => default; // 0x000000018254C5C0-0x000000018254C710
-		public bool PopPathPoint() => default; // 0x00000001842774BC-0x00000001842775D8
-		private bool _RefreshScope() => default; // 0x000000018427779C-0x00000001842777BC
-		public void CalGroundSlope(Vector3 curPos, Vector3 steeringPos, float speed, float smoothTime) {} // 0x0000000184277280-0x00000001842773A4
-		public static float SlopeAngleDeg(Vector3 pos, Vector3 aim) => default; // 0x0000000184277704-0x000000018427779C
-		public bool ReplaceLastPoint(Vector3 point, int styleEnum, int extPointInfo, float desiredSpeed) => default; // 0x00000001842775D8-0x00000001842776A8
-		public void ClearAllPathPoints() {} // 0x0000000183D4E1B0-0x0000000183D4E1D0
-		public Vector3 GetPathPoint(int idx) => default; // 0x00000001824A1D60-0x00000001824A1DC0
-		public int GetPathPointStyle(int idx) => default; // 0x00000001824A21E0-0x00000001824A2270
-		public int GetPathPointExtInfo(int idx) => default; // 0x0000000184277404-0x0000000184277434
-		public float GetPathPointDesiredSpeed(int idx) => default; // 0x00000001837B1860-0x00000001837B18A0
-		public void SetAimPointDesiredSpeed(float speed) {} // 0x00000001842776A8-0x00000001842776D8
-		public bool IsSubActionPoint(int idx) => default; // 0x0000000184277484-0x00000001842774BC
-		public bool IsPathFull() => default; // 0x0000000184277478-0x0000000184277484
-		public int GetPointCount() => default; // 0x00000001824A1A70-0x00000001824A1A90
-		public float GetPathLength(Vector3 currentLocation) => default; // 0x00000001824A1BD0-0x00000001824A1D60
-		public int GetEffectPointCount() => default; // 0x00000001842773F0-0x0000000184277404
-		public static int FloatToInt32Bits(float v) => default; // 0x00000001842773A4-0x00000001842773F0
-		public static float Int32BitsToFloat(int v) => default; // 0x0000000184277434-0x0000000184277478
+		public void Init() {} // 0x0000000184AB2BB0-0x0000000184AB2BE0
+		public void MarkPathFollowEnd() {} // 0x0000000185FAFDA0-0x0000000185FAFDD0
+		public void MarkMoveStop(float time) {} // 0x0000000185FAFD70-0x0000000185FAFDA0
+		public void SetPathIsLoop(bool bIsLoop) {} // 0x00000001864759BC-0x00000001864759E8
+		public bool GetPathIsLoop() => default; // 0x0000000184AB57F0-0x0000000184AB5800
+		public bool PushPoint(Vector3 point, int styleEnum, int extPointInfo, float desiredSpeed, bool patrolActionPoint) => default; // 0x0000000184AB30D0-0x0000000184AB3220
+		public bool PopPathPoint() => default; // 0x00000001864757A0-0x00000001864758BC
+		private bool _RefreshScope() => default; // 0x0000000186475A80-0x0000000186475AA0
+		public void CalGroundSlope(Vector3 curPos, Vector3 steeringPos, float speed, float smoothTime) {} // 0x0000000186475564-0x0000000186475688
+		public static float SlopeAngleDeg(Vector3 pos, Vector3 aim) => default; // 0x00000001864759E8-0x0000000186475A80
+		public bool ReplaceLastPoint(Vector3 point, int styleEnum, int extPointInfo, float desiredSpeed) => default; // 0x00000001864758BC-0x000000018647598C
+		public void ClearAllPathPoints() {} // 0x0000000185FAFD50-0x0000000185FAFD70
+		public Vector3 GetPathPoint(int idx) => default; // 0x0000000184AB4F00-0x0000000184AB4F60
+		public int GetPathPointStyle(int idx) => default; // 0x0000000184AB4CE0-0x0000000184AB4D70
+		public int GetPathPointExtInfo(int idx) => default; // 0x00000001864756E8-0x0000000186475718
+		public float GetPathPointDesiredSpeed(int idx) => default; // 0x00000001858D9630-0x00000001858D9670
+		public void SetAimPointDesiredSpeed(float speed) {} // 0x000000018647598C-0x00000001864759BC
+		public bool IsSubActionPoint(int idx) => default; // 0x0000000186475768-0x00000001864757A0
+		public bool IsPathFull() => default; // 0x000000018647575C-0x0000000186475768
+		public int GetPointCount() => default; // 0x0000000184AB57D0-0x0000000184AB57F0
+		public float GetPathLength(Vector3 currentLocation) => default; // 0x0000000184AB4D70-0x0000000184AB4F00
+		public int GetEffectPointCount() => default; // 0x00000001864756D4-0x00000001864756E8
+		public static int FloatToInt32Bits(float v) => default; // 0x0000000186475688-0x00000001864756D4
+		public static float Int32BitsToFloat(int v) => default; // 0x0000000186475718-0x000000018647575C
 	}
 }
 
 namespace Beyond.NPC.Ability
 {
-	public class NPCAbilityUnsafeUtils // TypeDefIndex: 59991
+	public class NPCAbilityUnsafeUtils // TypeDefIndex: 61096
 	{
 		// Constructors
-		public NPCAbilityUnsafeUtils() {} // 0x000000018350B670-0x000000018350B680
+		public NPCAbilityUnsafeUtils() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public struct FNPCUnionAnimationAbilityCommand // TypeDefIndex: 59995
+	public struct FNPCUnionAnimationAbilityCommand // TypeDefIndex: 61100
 	{
 		// Fields
 		public ENPCUnionAnimationAbilityCommandType cmdType; // 0x00
 		public FixedBytes4094 Payload; // 0x04
 	
 		// Nested types
-		public enum ENPCUnionAnimationAbilityCommandType // TypeDefIndex: 59992
+		public enum ENPCUnionAnimationAbilityCommandType // TypeDefIndex: 61097
 		{
 			DoAnimatorStepBegin = 0,
 			DoAnimatorStepEnd = 1
 		}
 	
-		public struct DoAnimatorStepEndParams // TypeDefIndex: 59993
+		public struct DoAnimatorStepEndParams // TypeDefIndex: 61098
 		{
 			// Fields
 			public float stepEndDegree; // 0x00
 		}
 	
-		public struct DoAnimatorUpdateStepBeginDegreeParams // TypeDefIndex: 59994
+		public struct DoAnimatorUpdateStepBeginDegreeParams // TypeDefIndex: 61099
 		{
 			// Fields
 			public float stepBeginDegree; // 0x00
 		}
 	
 		// Methods
-		public void SetData<T>([IsReadOnly] in ref T data)
+		public void SetData<T>(in ref T data)
 			where T : struct {}
 		public T GetData<T>()
 			where T : struct => default;
+	}
+}
+
+namespace Microsoft.CodeAnalysis
+{
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 61091
+	{
+		// Constructors
+		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+}
+
+namespace System.Runtime.CompilerServices
+{
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 61092
+	{
+		// Constructors
+		public IsUnmanagedAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }

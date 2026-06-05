@@ -4,9 +4,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Beyond.Gameplay.Streaming;
 using Beyond.VFS;
@@ -17,50 +14,45 @@ using UnityEngine;
 using UnityEngine.HyperGryph.ECS;
 using UnityEngine.HyperGryph.Streaming;
 
-// Image 128: Unsafe.Streaming.dll - Assembly: Unsafe.Streaming, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60038-60053
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 131: Unsafe.Streaming.dll - Assembly: Unsafe.Streaming, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61143-61158
 
 namespace Beyond.Gameplay.Streaming
 {
-	public static class StreamingUnsafeUtilsV2 // TypeDefIndex: 60047
+	public static class StreamingUnsafeUtilsV2 // TypeDefIndex: 61152
 	{
 		// Fields
 		public static int s_defaultSceneStateId; // 0x00
 		public static int s_defaultAreaId; // 0x04
 	
 		// Methods
-		public static StreamingSourceData CreateStreamingSourceData(Vector2 streamingPos, float chunkLoadRadius, float defaultLayerLoadRadius, float hlod0LayerLoadRadius, float hlod1LayerLoadRadius, float hlod2LayerLoadRadius, float colliderLayerLoadRadius, float tinyLayerLoadRadius, float waterLayerLoadRadius, float lightingLoadRadius, float audioLoadRadius, NativeArray<byte> layerEnabled) => default; // 0x000000018279F430-0x000000018279F620
+		public static StreamingSourceData CreateStreamingSourceData(Vector2 streamingPos, float chunkLoadRadius, float defaultLayerLoadRadius, float hlod0LayerLoadRadius, float hlod1LayerLoadRadius, float hlod2LayerLoadRadius, float colliderLayerLoadRadius, float tinyLayerLoadRadius, float waterLayerLoadRadius, float lightingLoadRadius, float audioLoadRadius, NativeArray<byte> layerEnabled) => default; // 0x0000000184DD7CC0-0x0000000184DD7EB0
 		public static void MemSet<T>(NativeArray<T> array, byte value, int count)
 			where T : struct {}
-		public static void MemCpyUnsafe(IntPtr destination, IntPtr source, long size) {} // 0x0000000189FA7154-0x0000000189FA71CC
-		public static IntPtr MallocUnsafe(long size, int alignment, Unity.Collections.Allocator allocator) => default; // 0x0000000189FA70E0-0x0000000189FA7154
-		public static void FreeUnsafe(IntPtr memory, Unity.Collections.Allocator allocator) {} // 0x0000000189FA7080-0x0000000189FA70E0
-		public static ref UnityEngine.HyperGryph.ECS.RendererInfo GetRendererInfo(IntPtr rendererInfos, int index) => ref _refReturnTypeForGetRendererInfo; // 0x0000000183D7ED40-0x0000000183D7ED50
-		private ref UnityEngine.HyperGryph.ECS.RendererInfo _refReturnTypeForGetRendererInfo; // Dummy field
-	
-		// Extension methods
-		public static Span<T> AsSpan<T>(this NativeArray<T> nativeArray)
+		public static Span<T> AsSpan<T>(NativeArray<T> nativeArray)
 			where T : struct => default;
-		public static ReadOnlySpan<T> AsReadOnlySpan<T>(this NativeArray<T> nativeArray)
+		public static ReadOnlySpan<T> AsReadOnlySpan<T>(NativeArray<T> nativeArray)
 			where T : struct => default;
-		public static byte[] ConvertToBytes<T>(this T val)
+		public static void MemCpyUnsafe(IntPtr destination, IntPtr source, long size) {} // 0x000000018C0BF214-0x000000018C0BF28C
+		public static IntPtr MallocUnsafe(long size, int alignment, Unity.Collections.Allocator allocator) => default; // 0x000000018C0BF1A0-0x000000018C0BF214
+		public static void FreeUnsafe(IntPtr memory, Unity.Collections.Allocator allocator) {} // 0x000000018C0BF140-0x000000018C0BF1A0
+		public static byte[] ConvertToBytes<T>(T val)
 			where T : struct => default;
-		public static IntPtr GetIntPtr<T>(this NativeArray<T> array)
+		public static IntPtr GetIntPtr<T>(NativeArray<T> array)
 			where T : struct => default;
-		public static IntPtr GetReadonlyIntPtr<T>(this NativeArray<T> array)
+		public static IntPtr GetReadonlyIntPtr<T>(NativeArray<T> array)
 			where T : struct => default;
-		public static UIntPtr GetReadonlyUIntPtr<T>(this NativeArray<T> array)
+		public static UIntPtr GetReadonlyUIntPtr<T>(NativeArray<T> array)
 			where T : struct => default;
-		public static IntPtr GetRendererInfos<T>(this ref ref T kComponent)
+		public static IntPtr GetRendererInfos<T>(ref ref T kComponent)
 			where T : struct, IRenderObjectKComponent => default;
-		public static TTo ReinterpretAs<TFrom, TTo>(this TFrom val)
+		public static ref UnityEngine.HyperGryph.ECS.RendererInfo GetRendererInfo(IntPtr rendererInfos, int index) => ref _refReturnTypeForGetRendererInfo; // 0x0000000185FDF9D0-0x0000000185FDF9E0
+		private ref UnityEngine.HyperGryph.ECS.RendererInfo _refReturnTypeForGetRendererInfo; // Dummy field
+		public static TTo ReinterpretAs<TFrom, TTo>(TFrom val)
 			where TFrom : struct
 			where TTo : struct => default;
 	}
 
-	public struct UnsafeArray<T> : IDisposable // TypeDefIndex: 60048
+	public struct UnsafeArray<T> : IDisposable // TypeDefIndex: 61153
 		where T : struct
 	{
 		// Fields
@@ -73,7 +65,7 @@ namespace Beyond.Gameplay.Streaming
 		public T this[int index] { get => default; set {} }
 	
 		// Constructors
-		public UnsafeArray(int count, Unity.Collections.Allocator allocator, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x01FDE0CC */) : this() {
+		public UnsafeArray(int count, Unity.Collections.Allocator allocator, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x020839B8 */) : this() {
 			ptr = default;
 			this.count = default;
 			this.allocator = default;
@@ -84,11 +76,11 @@ namespace Beyond.Gameplay.Streaming
 		public ref ref T GetRef(int index) => ref _refReturnTypeForGetRef;
 		private ref T _refReturnTypeForGetRef; // Dummy field
 		public void SetValue(int index, T value) {}
-		public void Resize(int newCount, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x01FDE0CD */) {}
+		public void Resize(int newCount, NativeArrayOptions options = NativeArrayOptions.UninitializedMemory /* Metadata: 0x020839B9 */) {}
 		public void Dispose() {}
 	}
 
-	public struct VFSReadOperation : IDisposable // TypeDefIndex: 60049
+	public struct VFSReadOperation : IDisposable // TypeDefIndex: 61154
 	{
 		// Fields
 		public unsafe ReadCommand* readCommand; // 0x00
@@ -98,41 +90,28 @@ namespace Beyond.Gameplay.Streaming
 		public unsafe VFSReadOperation(FVFBlockFileInfo info, bool async) {
 			readCommand = default;
 			readHandle = default;
-		} // 0x0000000189FA7360-0x0000000189FA74B8
+		} // 0x000000018C0BF420-0x000000018C0BF588
 	
 		// Methods
-		public void Dispose() {} // 0x0000000189FA71CC-0x0000000189FA7250
-		public bool IsValid() => default; // 0x0000000189FA7310-0x0000000189FA7360
-		public NativeArray<byte> GetData() => default; // 0x0000000189FA7250-0x0000000189FA7310
+		public void Dispose() {} // 0x000000018C0BF28C-0x000000018C0BF310
+		public bool IsValid() => default; // 0x000000018C0BF3D0-0x000000018C0BF420
+		public NativeArray<byte> GetData() => default; // 0x000000018C0BF310-0x000000018C0BF3D0
 	}
 }
 
 namespace Beyond.SourceGenerator
 {
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 60042
+	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 61147
 	{
 		// Fields
 		public LayoutKind layoutKind; // 0x10
 		public bool isTag; // 0x14
 	
 		// Constructors
-		public ECSComponentAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public ECSComponentAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class DataNAttribute : Attribute // TypeDefIndex: 60043
-	{
-		// Fields
-		public int capacity; // 0x10
-		public int tSize; // 0x14
-		public bool ring; // 0x18
-	
-		// Constructors
-		public DataNAttribute() {} // 0x000000018350B670-0x000000018350B680
-	}
-
-	internal static class AnimatorBlackboardUtility // TypeDefIndex: 60044
+	internal static class AnimatorBlackboardUtility // TypeDefIndex: 61148
 	{
 		// Fields
 		internal static bool s_enableFastPathBuffer; // 0x00
@@ -141,34 +120,42 @@ namespace Beyond.SourceGenerator
 		internal static void ClearAndEnsureDictionaryCapacity<TKey, TValue>(ref Dictionary<TKey, TValue> dict, int capacity) {}
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 60045
+	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 61149
 	{
 		// Constructors
-		public AnimatorBlackboardAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public AnimatorBlackboardAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 60046
+	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 61150
 	{
 		// Constructors
-		public CameraControlConfigAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public CameraControlConfigAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+
+	internal class DataNAttribute : Attribute // TypeDefIndex: 61151
+	{
+		// Fields
+		public int capacity; // 0x10
+		public int tSize; // 0x14
+		public bool ring; // 0x18
+	
+		// Constructors
+		public DataNAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }
 
 namespace HG.Rendering.Runtime
 {
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 60041
+	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 61146
 	{
 		// Constructors
-		public HGConstantBufferLayoutAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public HGConstantBufferLayoutAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 60050
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 61155
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -178,48 +165,48 @@ namespace IFix
 	
 		// Constructors
 		public ILFixDynamicMethodWrapper() {} // Dummy constructor
-		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000183020510-0x0000000183020540
-		static ILFixDynamicMethodWrapper() {} // 0x0000000183D05BF0-0x0000000183D05C60
+		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000184E6FCD0-0x0000000184E6FD00
+		static ILFixDynamicMethodWrapper() {} // 0x0000000185F644E0-0x0000000185F64550
 	
 		// Methods
-		public StreamingSourceData __Gen_Wrap_0(Vector2 P0, float P1, float P2, float P3, float P4, float P5, float P6, float P7, float P8, float P9, float P10, NativeArray<byte> P11) => default; // 0x0000000189FA6720-0x0000000189FA6968
-		public void __Gen_Wrap_1(IntPtr P0, IntPtr P1, long P2) {} // 0x0000000189FA6968-0x0000000189FA6A4C
-		public IntPtr __Gen_Wrap_2(long P0, int P1, Unity.Collections.Allocator P2) => default; // 0x0000000189FA6A4C-0x0000000189FA6B3C
-		public void __Gen_Wrap_3(IntPtr P0, Unity.Collections.Allocator P1) {} // 0x0000000189FA6B3C-0x0000000189FA6C04
-		public void __Gen_Wrap_4(ref VFSReadOperation P0) {} // 0x0000000189FA6C04-0x0000000189FA6D38
-		public bool __Gen_Wrap_5(ref VFSReadOperation P0) => default; // 0x0000000189FA6D38-0x0000000189FA6E7C
-		public NativeArray<byte> __Gen_Wrap_6(ref VFSReadOperation P0) => default; // 0x0000000189FA6E7C-0x0000000189FA6FEC
+		public StreamingSourceData __Gen_Wrap_0(Vector2 P0, float P1, float P2, float P3, float P4, float P5, float P6, float P7, float P8, float P9, float P10, NativeArray<byte> P11) => default; // 0x000000018C0BE7E0-0x000000018C0BEA28
+		public void __Gen_Wrap_1(IntPtr P0, IntPtr P1, long P2) {} // 0x000000018C0BEA28-0x000000018C0BEB0C
+		public IntPtr __Gen_Wrap_2(long P0, int P1, Unity.Collections.Allocator P2) => default; // 0x000000018C0BEB0C-0x000000018C0BEBFC
+		public void __Gen_Wrap_3(IntPtr P0, Unity.Collections.Allocator P1) {} // 0x000000018C0BEBFC-0x000000018C0BECC4
+		public void __Gen_Wrap_4(ref VFSReadOperation P0) {} // 0x000000018C0BECC4-0x000000018C0BEDF8
+		public bool __Gen_Wrap_5(ref VFSReadOperation P0) => default; // 0x000000018C0BEDF8-0x000000018C0BEF3C
+		public NativeArray<byte> __Gen_Wrap_6(ref VFSReadOperation P0) => default; // 0x000000018C0BEF3C-0x000000018C0BF0AC
 	}
 
-	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 60051
+	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 61156
 	{
 		// Constructors
 		public ILFixInterfaceBridge() {} // Dummy constructor
-		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x0000000189FA6FEC-0x0000000189FA7080
+		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x000000018C0BF0AC-0x000000018C0BF140
 	
 		// Methods
-		public void RefAsyncBuilderStartMethod() {} // 0x000000018350B670-0x000000018350B680
+		public void RefAsyncBuilderStartMethod() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 60052
+	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 61157
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
 	
 		// Constructors
 		public WrappersManagerImpl() {} // Dummy constructor
-		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x0000000184096E30-0x0000000184096EF0
 	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x0000000189FA76A0-0x0000000189FA7704
-		public static bool IsPatched(int id) => default; // 0x0000000183132F60-0x00000001831330B0
-		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x0000000189FA755C-0x0000000189FA7628
-		public object CreateWrapper(int id) => default; // 0x0000000189FA7628-0x0000000189FA76A0
-		public object InitWrapperArray(int len) => default; // 0x0000000189FA7704-0x0000000189FA7790
-		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x0000000189FA74B8-0x0000000189FA755C
+		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x000000018C0BF770-0x000000018C0BF7D4
+		public static bool IsPatched(int id) => default; // 0x0000000184DD7EB0-0x0000000184DD7F20
+		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x000000018C0BF62C-0x000000018C0BF6F8
+		public object CreateWrapper(int id) => default; // 0x000000018C0BF6F8-0x000000018C0BF770
+		public object InitWrapperArray(int len) => default; // 0x000000018C0BF7D4-0x000000018C0BF860
+		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x000000018C0BF588-0x000000018C0BF62C
 	}
 
-	public enum IDMAP0 // TypeDefIndex: 60053
+	public enum IDMAP0 // TypeDefIndex: 61158
 	{
 		Beyond-Gameplay-Streaming-StreamingUnsafeUtilsV2-CreateStreamingSourceData0 = 0,
 		Beyond-Gameplay-Streaming-StreamingUnsafeUtilsV2-MemCpyUnsafe0 = 1,
@@ -228,5 +215,23 @@ namespace IFix
 		Beyond-Gameplay-Streaming-VFSReadOperation-Dispose0 = 4,
 		Beyond-Gameplay-Streaming-VFSReadOperation-IsValid0 = 5,
 		Beyond-Gameplay-Streaming-VFSReadOperation-GetData0 = 6
+	}
+}
+
+namespace Microsoft.CodeAnalysis
+{
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 61144
+	{
+		// Constructors
+		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+}
+
+namespace System.Runtime.CompilerServices
+{
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 61145
+	{
+		// Constructors
+		public IsUnmanagedAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }

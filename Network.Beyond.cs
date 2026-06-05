@@ -6,7 +6,6 @@ using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
@@ -28,14 +27,11 @@ using Proto;
 using UnityEngine;
 using UnityEngine.Networking;
 
-// Image 44: Network.Beyond.dll - Assembly: Network.Beyond, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 56119-56218
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 44: Network.Beyond.dll - Assembly: Network.Beyond, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 57120-57219
 
 namespace Beyond.Network
 {
-	public class DoubleQueue<T> // TypeDefIndex: 56126
+	public class DoubleQueue<T> // TypeDefIndex: 57127
 	{
 		// Fields
 		private Queue<T> m_readQueue;
@@ -55,7 +51,7 @@ namespace Beyond.Network
 		public void EnqueueRange(List<T> list) {}
 	}
 
-	public class HGTcpClient : IDisposable // TypeDefIndex: 56127
+	public class HGTcpClient : IDisposable // TypeDefIndex: 57128
 	{
 		// Fields
 		private Socket m_ClientSocket; // 0x10
@@ -65,57 +61,45 @@ namespace Beyond.Network
 		private bool m_CleanedUp; // 0x2C
 	
 		// Properties
-		public Socket Client { get => default; set {} } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
-		protected bool Active { get => default; set {} } // 0x0000000181002A50-0x0000000181002A60 0x0000000181002B40-0x0000000181002B50
-		public int Available { get => default; } // 0x00000001824CB8A0-0x00000001824CB930 
-		public bool Connected { get => default; } // 0x00000001824CB510-0x00000001824CB700 
-		public bool ExclusiveAddressUse { get => default; set {} } // 0x00000001892A28D0-0x00000001892A28F0 0x00000001892A2964-0x00000001892A2984
-		public int ReceiveBufferSize { get => default; set {} } // 0x00000001892A2914-0x00000001892A2928 0x000000018293FA20-0x000000018293FA60
-		public int SendBufferSize { get => default; set {} } // 0x00000001892A293C-0x00000001892A2950 0x000000018293FA60-0x000000018293FAA0
-		public int ReceiveTimeout { get => default; set {} } // 0x00000001892A2928-0x00000001892A293C 0x00000001892A29B8-0x00000001892A29EC
-		public int SendTimeout { get => default; set {} } // 0x00000001892A2950-0x00000001892A2964 0x000000018293FAA0-0x000000018293FAE0
-		public LingerOption LingerState { get => default; set {} } // 0x000000018293E810-0x000000018293E890 0x00000001892A2984-0x00000001892A29B8
-		public bool NoDelay { get => default; set {} } // 0x00000001892A28F0-0x00000001892A2914 0x000000018293FAE0-0x000000018293FB20
+		public Socket Client { get => default; set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
+		protected bool Active { get => default; set {} } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
+		public int Available { get => default; } // 0x00000001843C7F00-0x00000001843C7F90 
+		public bool Connected { get => default; } // 0x00000001843C7B70-0x00000001843C7D60 
+		public bool ExclusiveAddressUse { get => default; set {} } // 0x000000018B3CB124-0x000000018B3CB144 0x000000018B3CB1B8-0x000000018B3CB1D8
+		public int ReceiveBufferSize { get => default; set {} } // 0x000000018B3CB168-0x000000018B3CB17C 0x0000000183FBDC30-0x0000000183FBDC70
+		public int SendBufferSize { get => default; set {} } // 0x000000018B3CB190-0x000000018B3CB1A4 0x0000000183FBDC70-0x0000000183FBDCB0
+		public int ReceiveTimeout { get => default; set {} } // 0x000000018B3CB17C-0x000000018B3CB190 0x000000018B3CB20C-0x000000018B3CB240
+		public int SendTimeout { get => default; set {} } // 0x000000018B3CB1A4-0x000000018B3CB1B8 0x0000000183FBDCB0-0x0000000183FBDCF0
+		public LingerOption LingerState { get => default; set {} } // 0x0000000183FBCA20-0x0000000183FBCAA0 0x000000018B3CB1D8-0x000000018B3CB20C
+		public bool NoDelay { get => default; set {} } // 0x000000018B3CB144-0x000000018B3CB168 0x0000000183FBDCF0-0x0000000183FBDD30
 	
 		// Constructors
-		public HGTcpClient() {} // 0x000000018293F960-0x000000018293F970
-		public HGTcpClient(string hostname, int port) {} // 0x00000001892A273C-0x00000001892A28A8
-		internal HGTcpClient(Socket acceptedSocket) {} // 0x00000001892A28A8-0x00000001892A28D0
+		public HGTcpClient() {} // 0x0000000183FBDB70-0x0000000183FBDB80
+		public HGTcpClient(string hostname, int port) {} // 0x000000018B3CAF90-0x000000018B3CB0FC
+		internal HGTcpClient(Socket acceptedSocket) {} // 0x000000018B3CB0FC-0x000000018B3CB124
 	
 		// Methods
-		[IDTag(1)]
-		public void Connect(string hostname, int port) {} // 0x000000018293F080-0x000000018293F960
-		[IDTag(2)]
-		public void Connect(IPAddress address, int port) {} // 0x00000001892A2494-0x00000001892A2620
-		[IDTag(0)]
-		public void Connect(IPEndPoint remoteEP) {} // 0x000000018293E570-0x000000018293E5D0
-		[IDTag(3)]
-		public void Connect(IPAddress[] ipAddresses, int port) {} // 0x00000001892A2414-0x00000001892A2494
-		[IDTag(0)]
-		public IAsyncResult BeginConnect(string host, int port, AsyncCallback requestCallback, object state) => default; // 0x000000018295A810-0x000000018295A890
-		[IDTag(1)]
-		public IAsyncResult BeginConnect(IPAddress address, int port, AsyncCallback requestCallback, object state) => default; // 0x00000001892A209C-0x00000001892A2144
-		[IDTag(2)]
-		public IAsyncResult BeginConnect(IPAddress[] addresses, int port, AsyncCallback requestCallback, object state) => default; // 0x00000001892A1FF4-0x00000001892A209C
-		public void EndConnect(IAsyncResult asyncResult) {} // 0x00000001838A6D30-0x00000001838A6D80
-		[IDTag(0)]
-		public System.Threading.Tasks.Task ConnectAsync(IPAddress address, int port) => default; // 0x00000001892A2144-0x00000001892A22AC
-		[IDTag(1)]
-		public System.Threading.Tasks.Task ConnectAsync(string host, int port) => default; // 0x000000018293DA80-0x000000018293DC50
-		[IDTag(2)]
-		public System.Threading.Tasks.Task ConnectAsync(IPAddress[] addresses, int port) => default; // 0x00000001892A22AC-0x00000001892A2414
-		public NetworkStream GetStream() => default; // 0x00000001824D1590-0x00000001824D1780
-		public void Close() {} // 0x0000000182944150-0x00000001829441B0
-		[IDTag(0)]
-		protected virtual void Dispose(bool disposing) {} // 0x0000000182943BC0-0x0000000182944150
-		[IDTag(1)]
-		public void Dispose() {} // 0x0000000182943B80-0x0000000182943BC0
-		~HGTcpClient() {} // 0x00000001892A2620-0x00000001892A2694
-		private void _Initialize() {} // 0x000000018293F970-0x000000018293FA20
-		private int _NumericOption(SocketOptionLevel optionLevel, SocketOptionName optionName) => default; // 0x00000001892A2694-0x00000001892A273C
+		public void Connect(string hostname, int port) {} // 0x0000000183FBD290-0x0000000183FBDB70
+		public void Connect(IPAddress address, int port) {} // 0x000000018B3CACE8-0x000000018B3CAE74
+		public void Connect(IPEndPoint remoteEP) {} // 0x0000000183FBC780-0x0000000183FBC7E0
+		public void Connect(IPAddress[] ipAddresses, int port) {} // 0x000000018B3CAC68-0x000000018B3CACE8
+		public IAsyncResult BeginConnect(string host, int port, AsyncCallback requestCallback, object state) => default; // 0x0000000184FA49E0-0x0000000184FA4A60
+		public IAsyncResult BeginConnect(IPAddress address, int port, AsyncCallback requestCallback, object state) => default; // 0x000000018B3CA8F0-0x000000018B3CA998
+		public IAsyncResult BeginConnect(IPAddress[] addresses, int port, AsyncCallback requestCallback, object state) => default; // 0x000000018B3CA848-0x000000018B3CA8F0
+		public void EndConnect(IAsyncResult asyncResult) {} // 0x0000000185A32F00-0x0000000185A32F50
+		public System.Threading.Tasks.Task ConnectAsync(IPAddress address, int port) => default; // 0x000000018B3CA998-0x000000018B3CAB00
+		public System.Threading.Tasks.Task ConnectAsync(string host, int port) => default; // 0x0000000183FBBC90-0x0000000183FBBE60
+		public System.Threading.Tasks.Task ConnectAsync(IPAddress[] addresses, int port) => default; // 0x000000018B3CAB00-0x000000018B3CAC68
+		public NetworkStream GetStream() => default; // 0x00000001843CE2F0-0x00000001843CE4E0
+		public void Close() {} // 0x0000000184A93E30-0x0000000184A93E90
+		protected virtual void Dispose(bool disposing) {} // 0x0000000184A938A0-0x0000000184A93E30
+		public void Dispose() {} // 0x0000000184A93860-0x0000000184A938A0
+		~HGTcpClient() {} // 0x000000018B3CAE74-0x000000018B3CAEE8
+		private void _Initialize() {} // 0x0000000183FBDB80-0x0000000183FBDC30
+		private int _NumericOption(SocketOptionLevel optionLevel, SocketOptionName optionName) => default; // 0x000000018B3CAEE8-0x000000018B3CAF90
 	}
 
-	public interface INetIO : IDisposable // TypeDefIndex: 56128
+	public interface INetIO : IDisposable // TypeDefIndex: 57129
 	{
 		// Methods
 		void Connect(string serverIp, int serverPort, int sendTimeout, int receiveBufferSize, int sendBufferSize);
@@ -141,31 +125,30 @@ namespace Beyond.Network
 		int Available();
 	}
 
-	[AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
-	public class NetMsgHandlerAttribute : Attribute // TypeDefIndex: 56129
+	public class NetMsgHandlerAttribute : Attribute // TypeDefIndex: 57130
 	{
 		// Fields
 		public readonly System.Type msgType; // 0x10
 	
 		// Constructors
-		public NetMsgHandlerAttribute(System.Type t) {} // 0x000000018426FEE0-0x000000018426FEF0
-		public NetMsgHandlerAttribute() {} // 0x00000001835ACAA0-0x00000001835ACAC0
+		public NetMsgHandlerAttribute(System.Type t) {} // 0x0000000184096E30-0x0000000184096EF0
+		public NetMsgHandlerAttribute() {} // 0x0000000185633D30-0x0000000185633D50
 	
 		// Methods
-		public System.Type GetMsgType(MethodInfo annotatedMethod) => default; // 0x0000000182D5B4A0-0x0000000182D5B590
+		public System.Type GetMsgType(MethodInfo annotatedMethod) => default; // 0x0000000184B05080-0x0000000184B05170
 	}
 
-	public delegate void NetResponseHandler([IsReadOnly] in NetResponse msg); // TypeDefIndex: 56130; 0x0000000182149960-0x0000000182149970
+	public delegate void NetResponseHandler(in NetResponse msg); // TypeDefIndex: 57131; 0x00000001833EEC70-0x00000001833EEC80
 
-	public delegate void NetMessageHandle<in T>(T message); // TypeDefIndex: 56131; 0x00000000-0x00000000
+	public delegate void NetMessageHandle<in T>(T message); // TypeDefIndex: 57132; 0x00000000-0x00000000
 
-	public interface INetBusResponseListener // TypeDefIndex: 56132
+	public interface INetBusResponseListener // TypeDefIndex: 57133
 	{
 		// Methods
 		void UpdateMsgTime(NetResponse resp);
 	}
 
-	public struct NetRequest // TypeDefIndex: 56133
+	public struct NetRequest // TypeDefIndex: 57134
 	{
 		// Fields
 		public ulong csSeqID; // 0x00
@@ -173,7 +156,7 @@ namespace Beyond.Network
 		public IMessage msg; // 0x10
 	}
 
-	public struct NetResponse // TypeDefIndex: 56134
+	public struct NetResponse // TypeDefIndex: 57135
 	{
 		// Fields
 		public static NetResponse EMPTY; // 0x00
@@ -183,28 +166,28 @@ namespace Beyond.Network
 		public long recvTimestamp; // 0x18
 	
 		// Properties
-		public Header logHead { get => default; set {} } // 0x0000000182944C20-0x0000000182944CC0 0x00000001842715A0-0x00000001842715A8
-		public CSHead csHead { get => default; set {} } // 0x00000001824C8040-0x00000001824C8290 0x00000001842715A0-0x00000001842715A8
-		public int msgId { get => default; } // 0x00000001824C7FC0-0x00000001824C8040 
-		public ulong csSeqId { get => default; } // 0x00000001824C7260-0x00000001824C7660 
-		public ulong scSeqId { get => default; } // 0x00000001824C71E0-0x00000001824C7260 
+		public Header logHead { get => default; set {} } // 0x00000001843C3200-0x00000001843C32A0 0x000000018646FE2C-0x000000018646FE34
+		public CSHead csHead { get => default; set {} } // 0x00000001843C4690-0x00000001843C48E0 0x000000018646FE2C-0x000000018646FE34
+		public int msgId { get => default; } // 0x00000001843C4610-0x00000001843C4690 
+		public ulong csSeqId { get => default; } // 0x00000001843C38B0-0x00000001843C3CB0 
+		public ulong scSeqId { get => default; } // 0x00000001843C3830-0x00000001843C38B0 
 	
 		// Constructors
 		static NetResponse() {
 			EMPTY = default;
-		} // 0x000000018350B670-0x000000018350B680
+		} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public abstract class MessageHandleWrapper // TypeDefIndex: 56135
+	public abstract class MessageHandleWrapper // TypeDefIndex: 57136
 	{
 		// Constructors
-		protected MessageHandleWrapper() {} // 0x000000018350B670-0x000000018350B680
+		protected MessageHandleWrapper() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
 		public abstract void HandleMessage(IMessage msg);
 	}
 
-	public class MessageHandleWrapper<T> : MessageHandleWrapper // TypeDefIndex: 56136
+	public class MessageHandleWrapper<T> : MessageHandleWrapper // TypeDefIndex: 57137
 		where T : class, IMessage
 	{
 		// Fields
@@ -218,7 +201,7 @@ namespace Beyond.Network
 		public override void HandleMessage(IMessage msg) {}
 	}
 
-	public class NetBus : ExplicitSingleton<NetBus> // TypeDefIndex: 56140
+	public class NetBus : ExplicitSingleton<NetBus> // TypeDefIndex: 57141
 	{
 		// Fields
 		private readonly Dictionary<int, NetResponseHandler> m_msgHandlers; // 0x10
@@ -226,83 +209,93 @@ namespace Beyond.Network
 		private readonly Dictionary<int, MessageHandleWrapper> m_msgHdlWrappers; // 0x20
 		private HGNetSession m_netSession; // 0x28
 		private static List<NetResponseHandler> s_handlersToCall; // 0x00
+		private readonly UIBusSender _uiSender_k__BackingField; // 0x30
+		private readonly TeleportMaskSender _teleportMaskSender_k__BackingField; // 0x38
+		private readonly DisposableBusSender _defaultSender_k__BackingField; // 0x40
+		private readonly Special2BusSender _s2Sender_k__BackingField; // 0x48
+		private readonly InteractiveBusSender _interactiveSender_k__BackingField; // 0x50
+		private readonly FrequencyControlBusSender _frequencyControlSender_k__BackingField; // 0x58
 	
 		// Properties
-		public UIBusSender uiSender { get; } // 0x0000000181003830-0x0000000181003840 
-		public TeleportMaskSender teleportMaskSender { get; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
-		public DisposableBusSender defaultSender { get; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
-		public Special2BusSender s2Sender { get; } // 0x0000000183D4EA70-0x0000000183D4EA80 
-		public InteractiveBusSender interactiveSender { get; } // 0x0000000183D4EAF0-0x0000000183D4EB00 
-		public FrequencyControlBusSender frequencyControlSender { get; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 
-		public int currentSessionID { get => default; } // 0x00000001892A3868-0x00000001892A3904 
+		public UIBusSender uiSender { get; } // 0x000000018B3CBF90-0x000000018B3CC0BC 
+		public TeleportMaskSender teleportMaskSender { get; } // 0x000000018B3CBD28-0x000000018B3CBE5C 
+		public DisposableBusSender defaultSender { get; } // 0x00000001843C1B70-0x00000001843C1E20 
+		public Special2BusSender s2Sender { get; } // 0x0000000185F3F370-0x0000000185F3F400 
+		public InteractiveBusSender interactiveSender { get; } // 0x0000000185492010-0x0000000185492020 
+		public FrequencyControlBusSender frequencyControlSender { get; } // 0x00000001813B31B0-0x00000001813B31C0 
+		public int currentSessionID { get => default; } // 0x00000001813B4840-0x00000001813B4850 
 	
 		// Nested types
-		private class HandlerEntry // TypeDefIndex: 56137
+		private class HandlerEntry // TypeDefIndex: 57138
 		{
 			// Fields
 			public NetResponseHandler handler; // 0x10
 	
 			// Constructors
-			public HandlerEntry() {} // 0x000000018350B670-0x000000018350B680
+			public HandlerEntry() {} // 0x00000001813B51D0-0x00000001813B51E0
 		}
 	
-		public class ResultHandler : IDisposable // TypeDefIndex: 56138
+		public class ResultHandler : IDisposable // TypeDefIndex: 57139
 		{
 			// Fields
 			private bool m_ignoreSeq; // 0x10
 			private ListDict<SCMessageID, object> m_responseTokens; // 0x18
 			private ListDict<SCMessageID, NetResponseHandler> m_responseHandlers; // 0x20
+			private bool _isDisposed_k__BackingField; // 0x28
+			private ulong _cachedSeqNum_k__BackingField; // 0x30
+			private int _sessionID_k__BackingField; // 0x38
 	
 			// Properties
-			public bool isDisposed { get; private set; } // 0x0000000183D4ED50-0x0000000183D4ED60 0x0000000183D4ED60-0x0000000183D4ED70
-			internal ulong cachedSeqNum { get; set; } // 0x0000000181003830-0x0000000181003840 0x0000000181003840-0x0000000181003850
-			public int sessionID { get; internal set; } // 0x0000000183D4EC30-0x0000000183D4EC40 0x0000000183D4ECB0-0x0000000183D4ECC0
+			public bool isDisposed { get; private set; } // 0x00000001813ECBC0-0x00000001813ECBD0 0x00000001813FF010-0x00000001813FF020
+			internal ulong cachedSeqNum { get; set; } // 0x00000001813ECF20-0x00000001813ECF30 0x0000000181460F60-0x0000000181460F70
+			public int sessionID { get; internal set; } // 0x00000001813F1630-0x00000001813F1640 0x000000018B3CC0BC-0x000000018B3CC158
 	
 			// Constructors
-			public ResultHandler() {} // 0x000000018350B670-0x000000018350B680
+			public ResultHandler() {} // 0x000000018B3CBCA4-0x000000018B3CBD28
 	
 			// Methods
-			public void SetIgnoreSeq(bool ignoreSeq) {} // 0x00000001892A6330-0x00000001892A6384
-			public ResultHandler OnResponse(SCMessageID msgId, NetResponseHandler handler) => default; // 0x0000000182F113B0-0x0000000182F11730
-			public void Dispose() {} // 0x0000000182F10A10-0x0000000182F113B0
-			private void _HandleMessage([IsReadOnly] in NetResponse msg) {} // 0x0000000182F106E0-0x0000000182F10830
+			public void SetIgnoreSeq(bool ignoreSeq) {} // 0x00000001852F5960-0x00000001852F5BE0
+			public ResultHandler OnResponse(SCMessageID msgId, NetResponseHandler handler) => default; // 0x000000018B3CBC5C-0x000000018B3CBCA4
+			public void Dispose() {} // 0x0000000184CBA000-0x0000000184CBA040
+			private bool _CheckSessionIDValid() => default; // 0x0000000184262330-0x0000000184262390
+			private void _HandleMessage(in NetResponse msg) {} // 0x00000001843DF6B0-0x00000001843DF790
 		}
 	
-		public abstract class Sender // TypeDefIndex: 56139
+		public abstract class Sender // TypeDefIndex: 57140
 		{
 			// Constructors
-			protected Sender() {} // 0x000000018350B670-0x000000018350B680
+			protected Sender() {} // 0x000000018B3CBE5C-0x000000018B3CBF90
 	
 			// Methods
-			public abstract ResultHandler Send(IMessage msg);
-			public abstract void OnNetShutDown();
-			protected ResultHandler DoSend(IMessage message) => default; // 0x0000000182946310-0x00000001829463A0
-			protected void DoListen(SCMessageID msgId, NetResponseHandler handler) {} // 0x00000001892A6384-0x00000001892A6424
-			protected void DoUnListen(SCMessageID msgId, NetResponseHandler handler) {} // 0x00000001892A6424-0x00000001892A64C4
+			public abstract ResultHandler Send(IMessage msg); // 0x000000018B3CB8F4-0x000000018B3CB96C
+			public abstract void OnNetShutDown(); // 0x000000018B3CB96C-0x000000018B3CBC5C
+			protected ResultHandler DoSend(IMessage message) => default; // 0x00000001842622F0-0x0000000184262330
+			protected void DoListen(SCMessageID msgId, NetResponseHandler handler) {} // 0x0000000184CB9C60-0x0000000184CB9D00
+			protected void DoUnListen(SCMessageID msgId, NetResponseHandler handler) {} // 0x0000000184262230-0x00000001842622F0
 		}
 	
 		// Constructors
-		public NetBus() {} // 0x000000018345E390-0x000000018345E610
-		static NetBus() {} // 0x0000000183CE3790-0x0000000183CE3820
+		public NetBus() {} // 0x00000001813B51D0-0x00000001813B51E0
+		static NetBus() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public bool IsBusBusy() => default; // 0x00000001892A3408-0x00000001892A3450
-		public void Setup(HGNetSession session) {} // 0x0000000182F0F3C0-0x0000000182F0F400
-		public void Send(IMessage msg) {} // 0x00000001829464A0-0x0000000182946500
-		public void RegisterMessageHandler(int msgId, MessageHandleWrapper handler) {} // 0x00000001826AD5F0-0x00000001826AD6D0
-		public void UnRegisterMessageHandler(int msgId) {} // 0x00000001892A3450-0x00000001892A34D4
-		public void HandleMessageTime(NetResponse response) {} // 0x00000001892A30A0-0x00000001892A3118
-		public void HandleMessage(NetResponse response) {} // 0x00000001892A3118-0x00000001892A3408
-		private bool _ValidateSession() => default; // 0x0000000182946460-0x00000001829464A0
-		public void OnNetClientShutDown() {} // 0x0000000182F0F090-0x0000000182F0F130
-		private ResultHandler _SendWithResult(IMessage msg) => default; // 0x00000001829463A0-0x0000000182946460
-		private void _Listen(int msgId, NetResponseHandler handler) {} // 0x00000001892A3608-0x00000001892A373C
-		private void _UnListen(int msgId, NetResponseHandler handler) {} // 0x00000001892A373C-0x00000001892A3868
-		private object _ListenWithSeqNum(int msgId, NetResponseHandler callback) => default; // 0x00000001892A34D4-0x00000001892A3608
-		private void _UnListenWithSeqNum(int msgId, object token) {} // 0x0000000182F11730-0x0000000182F11860
+		public bool IsBusBusy() => default; // 0x00000001813B51E0-0x00000001813B51F0
+		public void Setup(HGNetSession session) {} // 0x00000001813E5E30-0x00000001813E5E40
+		public void Send(IMessage msg) {} // 0x00000001813E6F50-0x00000001813E6F60
+		public void RegisterMessageHandler(int msgId, MessageHandleWrapper handler) {} // 0x000000018B3CEB80-0x000000018B3CEBD4
+		public void UnRegisterMessageHandler(int msgId) {} // 0x00000001843C17F0-0x00000001843C1B70
+		public void HandleMessageTime(NetResponse response) {} // 0x00000001843C0E50-0x00000001843C17F0
+		public void HandleMessage(NetResponse response) {} // 0x0000000183E36860-0x0000000183E374D0
+		private bool _ValidateSession() => default; // 0x00000001843C1E20-0x00000001843C2EF0
+		public void OnNetClientShutDown() {} // 0x0000000185492010-0x0000000185492020
+		private ResultHandler _SendWithResult(IMessage msg) => default;
+		private void _Listen(int msgId, NetResponseHandler handler) {}
+		private void _UnListen(int msgId, NetResponseHandler handler) {} // 0x00000001842621A0-0x0000000184262230
+		private object _ListenWithSeqNum(int msgId, NetResponseHandler callback) => default; // 0x000000018B3CEBD4-0x000000018B3CEC74
+		private void _UnListenWithSeqNum(int msgId, object token) {} // 0x000000018B3CEC74-0x000000018B3CED14
 	}
 
-	public class Special2BusSender : DisposableBusSender, INetBusResponseListener // TypeDefIndex: 56141
+	public class Special2BusSender : DisposableBusSender, INetBusResponseListener // TypeDefIndex: 57142
 	{
 		// Fields
 		public Dictionary<ulong, double> sendedMsgWithTime; // 0x20
@@ -310,127 +303,174 @@ namespace Beyond.Network
 		private float m_maxWaitTime; // 0x30
 	
 		// Properties
-		public virtual bool isBusBusy { get => default; } // 0x0000000182998950-0x0000000182998980 
+		public virtual bool isBusBusy { get => default; } // 0x00000001841CDBB0-0x00000001841CDBE0 
 	
 		// Constructors
-		public Special2BusSender() {} // 0x0000000182DF5160-0x0000000182DF5200
+		public Special2BusSender() {} // 0x00000001852F5DB0-0x00000001852F5E50
 	
 		// Methods
-		public override NetBus.ResultHandler Send(IMessage msg) => default; // 0x0000000183924E20-0x00000001839254F0
-		public void UpdateStartBlockTime() {} // 0x00000001892A6650-0x00000001892A6788
-		public override void OnNetShutDown() {} // 0x0000000182F0FC70-0x0000000182F0FCB0
-		public override void Dispose() {} // 0x00000001892A6544-0x00000001892A659C
-		private void _ClearSendTime() {} // 0x0000000182F11860-0x0000000182F118D0
-		public void UpdateMsgTime(NetResponse resp) {} // 0x00000001892A65A4-0x00000001892A6650
-		public NetBus.ResultHandler __iFixBaseProxy_Send(IMessage P0) => default; // 0x000000018929FD28-0x000000018929FD30
-		public void __iFixBaseProxy_OnNetShutDown() {} // 0x00000001892A659C-0x00000001892A65A4
-		public void __iFixBaseProxy_Dispose() {} // 0x000000018929FD20-0x000000018929FD28
+		public override NetBus.ResultHandler Send(IMessage msg) => default; // 0x0000000185AE6A00-0x0000000185AE70D0
+		public void UpdateStartBlockTime() {} // 0x000000018B3CEEA0-0x000000018B3CEFD8
+		public override void OnNetShutDown() {} // 0x00000001843C0710-0x00000001843C0750
+		public override void Dispose() {} // 0x000000018B3CED94-0x000000018B3CEDEC
+		private void _ClearSendTime() {} // 0x00000001843C06A0-0x00000001843C0710
+		public void UpdateMsgTime(NetResponse resp) {} // 0x000000018B3CEDF4-0x000000018B3CEEA0
+		public NetBus.ResultHandler __iFixBaseProxy_Send(IMessage P0) => default; // 0x000000018B3CA434-0x000000018B3CA43C
+		public void __iFixBaseProxy_OnNetShutDown() {} // 0x000000018B3CEDEC-0x000000018B3CEDF4
+		public void __iFixBaseProxy_Dispose() {} // 0x000000018B3CA42C-0x000000018B3CA434
 	}
 
-	public class InteractiveBusSender : Special2BusSender // TypeDefIndex: 56142
+	public class InteractiveBusSender : Special2BusSender // TypeDefIndex: 57143
 	{
 		// Fields
 		private float m_maxWaitTime; // 0x38
 	
 		// Properties
-		public override bool isBusBusy { get => default; } // 0x0000000182998920-0x0000000182998950 
+		public override bool isBusBusy { get => default; } // 0x00000001841CDB80-0x00000001841CDBB0 
 	
 		// Constructors
-		public InteractiveBusSender() {} // 0x0000000184276358-0x0000000184276368
+		public InteractiveBusSender() {} // 0x0000000186473AF4-0x0000000186473B04
 	}
 
-	public class DisposableBusSender : NetBus.Sender, IDisposable // TypeDefIndex: 56143
+	public class DisposableBusSender : NetBus.Sender, IDisposable // TypeDefIndex: 57144
 	{
 		// Fields
 		private readonly HashSet<NetBus.ResultHandler> m_resultHandlers; // 0x10
+		private bool _isDisposed_k__BackingField; // 0x18
 	
 		// Properties
-		public bool isDisposed { get; private set; } // 0x0000000181002A50-0x0000000181002A60 0x0000000181002B40-0x0000000181002B50
+		public bool isDisposed { get; private set; } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
 	
 		// Constructors
-		public DisposableBusSender() {} // 0x0000000182DF53B0-0x0000000182DF5430
+		public DisposableBusSender() {} // 0x00000001852F5E50-0x00000001852F5ED0
 	
 		// Methods
-		public override NetBus.ResultHandler Send(IMessage msg) => default; // 0x0000000182946270-0x0000000182946310
-		public override void OnNetShutDown() {} // 0x0000000182F10830-0x0000000182F10870
-		public virtual void Dispose() {} // 0x000000018929F5F0-0x000000018929F644
-		private void _Clear() {} // 0x0000000182F10870-0x0000000182F10A10
+		public override NetBus.ResultHandler Send(IMessage msg) => default; // 0x0000000184262100-0x00000001842621A0
+		public override void OnNetShutDown() {} // 0x00000001843C0C70-0x00000001843C0CB0
+		public virtual void Dispose() {} // 0x000000018B3C98B0-0x000000018B3C9904
+		private void _Clear() {} // 0x00000001843C0CB0-0x00000001843C0E50
 	}
 
-	public class NetworkMaskConfigHolder // TypeDefIndex: 56144
+	public class NetworkMaskConfigHolder // TypeDefIndex: 57145
 	{
 		// Fields
 		public Dictionary<CSMessageID, SCMessageID> msgs; // 0x10
 	
 		// Constructors
-		public NetworkMaskConfigHolder() {} // 0x000000018345E760-0x000000018345E7E0
+		public NetworkMaskConfigHolder() {} // 0x00000001852F5CB0-0x00000001852F5D30
 	
 		// Methods
-		public void Init() {} // 0x000000018345E7E0-0x000000018345EFD0
-		public void Dispose() {} // 0x00000001892A5A90-0x00000001892A5B08
+		public void Init() {} // 0x00000001852F4E10-0x00000001852F5600
+		public void Dispose() {} // 0x000000018B3CE2E4-0x000000018B3CE35C
 	}
 
-	public class UIBusSender : DisposableBusSender // TypeDefIndex: 56146
+	public class UIBusSender : DisposableBusSender // TypeDefIndex: 57147
 	{
 		// Fields
+		private NetworkMaskConfigHolder _config_k__BackingField; // 0x20
 		private HashSet<int> m_maskKeys; // 0x28
 	
 		// Properties
-		public NetworkMaskConfigHolder config { get; private set; } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
+		public NetworkMaskConfigHolder config { get; private set; } // 0x000000018B3CFCC8-0x000000018B3D0110 0x0000000184CBA040-0x0000000184CBA320
+	
+		// Nested types
+		private sealed class __c__DisplayClass7_0 // TypeDefIndex: 57146
+		{
+			// Fields
+			public int key; // 0x10
+			public UIBusSender __4__this; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass7_0() {} // 0x00000001813B31A0-0x00000001813B31B0
+	
+			// Methods
+			internal void _Send_b__0(in NetResponse resp) {} // 0x000000018646EE40-0x000000018646EE50
+			internal void _Send_b__1(in NetResponse resp) {} // 0x00000001852F5BE0-0x00000001852F5CB0
+			internal void _Send_b__2(in NetResponse resp) {} // 0x000000018B3CFAD4-0x000000018B3CFCC8
+		}
 	
 		// Constructors
-		public UIBusSender() {} // 0x000000018345E690-0x000000018345E760
+		public UIBusSender() {} // 0x000000018B3CA42C-0x000000018B3CA434
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001892A7284-0x00000001892A7478
-		public override NetBus.ResultHandler Send(IMessage msg) => default; // 0x00000001892A7478-0x00000001892A77C8
-		public override void OnNetShutDown() {} // 0x0000000182F0F540-0x0000000182F0F820
-		public void __iFixBaseProxy_Dispose() {} // 0x000000018929FD20-0x000000018929FD28
-		public NetBus.ResultHandler __iFixBaseProxy_Send(IMessage P0) => default; // 0x000000018929FD28-0x000000018929FD30
-		public void __iFixBaseProxy_OnNetShutDown() {} // 0x00000001892A659C-0x00000001892A65A4
+		public override void Dispose() {} // 0x000000018B3CA434-0x000000018B3CA43C
+		public override NetBus.ResultHandler Send(IMessage msg) => default; // 0x000000018B3CEDEC-0x000000018B3CEDF4
+		public override void OnNetShutDown() {} // 0x0000000185492010-0x0000000185492020
+		public void __iFixBaseProxy_Dispose() {} // 0x000000018B3CF504-0x000000018B3CF580
+		public NetBus.ResultHandler __iFixBaseProxy_Send(IMessage P0) => default; // 0x000000018B3CF5F0-0x000000018B3CF66C
+		public void __iFixBaseProxy_OnNetShutDown() {} // 0x000000018B3CF74C-0x000000018B3CF7C8
 	}
 
-	public class TeleportMaskSender : DisposableBusSender // TypeDefIndex: 56148
+	public class TeleportMaskSender : DisposableBusSender // TypeDefIndex: 57149
 	{
 		// Fields
 		private HashSet<int> m_maskKeys; // 0x20
 	
+		// Nested types
+		private sealed class __c__DisplayClass2_0 // TypeDefIndex: 57148
+		{
+			// Fields
+			public int key; // 0x10
+			public TeleportMaskSender __4__this; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass2_0() {} // 0x000000018B3CF124-0x000000018B3CF2FC
+	
+			// Methods
+			internal void _Send_b__0(in NetResponse resp) {} // 0x0000000183E374D0-0x0000000183E39040
+			internal void _Send_b__1(in NetResponse resp) {} // 0x0000000184CBA320-0x0000000184CBA600
+			internal void _Send_b__2(in NetResponse resp) {} // 0x00000001852F5D30-0x00000001852F5DB0
+			internal void _Send_b__3(in NetResponse resp) {} // 0x000000018B3CA42C-0x000000018B3CA434
+		}
+	
 		// Constructors
-		public TeleportMaskSender() {} // 0x000000018345E610-0x000000018345E690
+		public TeleportMaskSender() {} // 0x0000000184CB94D0-0x0000000184CB9550
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001892A68D4-0x00000001892A6AAC
-		public override NetBus.ResultHandler Send(IMessage msg) => default; // 0x0000000182F0FF40-0x0000000182F10250
-		public override void OnNetShutDown() {} // 0x0000000182F0F820-0x0000000182F0FB00
-		public void __iFixBaseProxy_Dispose() {} // 0x000000018929FD20-0x000000018929FD28
-		public NetBus.ResultHandler __iFixBaseProxy_Send(IMessage P0) => default; // 0x000000018929FD28-0x000000018929FD30
-		public void __iFixBaseProxy_OnNetShutDown() {} // 0x00000001892A659C-0x00000001892A65A4
+		public override void Dispose() {} // 0x000000018B3CEDEC-0x000000018B3CEDF4
+		public NetBus.ResultHandler Send(IMessage msg, float delay) => default; // 0x0000000185492010-0x0000000185492020
+		public override void OnNetShutDown() {} // 0x000000018B3CF370-0x000000018B3CF3EC
+		public void __iFixBaseProxy_Dispose() {} // 0x000000018B3CF3EC-0x000000018B3CF468
+		public void __iFixBaseProxy_OnNetShutDown() {} // 0x000000018B3CF468-0x000000018B3CF4E4
 	}
 
-	public class FrequencyControlBusSender : DisposableBusSender // TypeDefIndex: 56150
+	public class FrequencyControlBusSender : DisposableBusSender // TypeDefIndex: 57151
 	{
 		// Fields
 		private readonly Dictionary<CSMessageID, Queue<double>> m_lastSendTime; // 0x20
 		private List<IMessage> m_waitingSendMsgs; // 0x28
 		private List<Action<int>> m_onError; // 0x30
-		private int m_loopId; // 0x38
+		private TickFunction m_loopId; // 0x38
+	
+		// Nested types
+		private sealed class __c__DisplayClass7_0 // TypeDefIndex: 57150
+		{
+			// Fields
+			public Action<int> onError; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass7_0() {} // 0x00000001852F7160-0x00000001852F87B0
+	
+			// Methods
+			internal void _Send_b__0(in NetResponse errorMsg) {} // 0x0000000183E359A0-0x0000000183E36860
+			internal void _Send_b__1(in NetResponse errorMsg) {} // 0x000000018B3C9A90-0x000000018B3C9B00
+			internal void _Send_b__2(in NetResponse errorMsg) {} // 0x000000018B3C9B00-0x000000018B3CA42C
+		}
 	
 		// Constructors
-		public FrequencyControlBusSender() {} // 0x0000000183238050-0x0000000183238220
+		public FrequencyControlBusSender() {} // 0x000000018B3C99B8-0x000000018B3C9A90
 	
 		// Methods
-		private void _TrySendWaitingMsg() {} // 0x0000000183456440-0x00000001834564F0
-		[IDTag(1)]
-		public override NetBus.ResultHandler Send(IMessage msg) => default; // 0x000000018929F7B0-0x000000018929F820
-		[IDTag(0)]
-		public NetBus.ResultHandler Send(IMessage msg, bool needAddToWaitingList, Action<int> onError = null, Action onWait = null) => default; // 0x000000018929F820-0x000000018929FD20
-		public override void Dispose() {} // 0x000000018929F6F8-0x000000018929F7B0
-		public NetBus.ResultHandler __iFixBaseProxy_Send(IMessage P0) => default; // 0x000000018929FD28-0x000000018929FD30
-		public void __iFixBaseProxy_Dispose() {} // 0x000000018929FD20-0x000000018929FD28
+		private void _TrySendWaitingMsg(float deltaTime) {} // 0x000000018B3CA434-0x000000018B3CA43C
+		public override NetBus.ResultHandler Send(IMessage msg) => default; // 0x000000018B3CA42C-0x000000018B3CA434
+		public NetBus.ResultHandler Send(IMessage msg, bool needAddToWaitingList, Action<int> onError = null, Action onWait = null) => default; // 0x0000000185492010-0x0000000185492020
+		public override void Dispose() {} // 0x000000018B3CF580-0x000000018B3CF5F0
+		public NetBus.ResultHandler __iFixBaseProxy_Send(IMessage P0) => default; // 0x000000018B3CF66C-0x000000018B3CF6DC
+		public void __iFixBaseProxy_Dispose() {} // 0x000000018B3CF6DC-0x000000018B3CF74C
 	}
 
 	[Serializable]
-	public class ServerDesc // TypeDefIndex: 56151
+	public class ServerDesc // TypeDefIndex: 57152
 	{
 		// Fields
 		public string name; // 0x10
@@ -438,20 +478,20 @@ namespace Beyond.Network
 		public int port; // 0x20
 	
 		// Constructors
-		public ServerDesc() {} // 0x000000018333BE60-0x000000018333BEC0
+		public ServerDesc() {} // 0x00000001852BCEC0-0x00000001852BCF20
 	}
 
 	[Serializable]
-	public class ServerList // TypeDefIndex: 56152
+	public class ServerList // TypeDefIndex: 57153
 	{
 		// Fields
 		public List<ServerDesc> servers; // 0x10
 	
 		// Constructors
-		public ServerList() {} // 0x0000000183CFC3F0-0x0000000183CFC470
+		public ServerList() {} // 0x0000000185F584F0-0x0000000185F58570
 	}
 
-	public class ServerConfig // TypeDefIndex: 56153
+	public class ServerConfig // TypeDefIndex: 57154
 	{
 		// Fields
 		public string serverName; // 0x10
@@ -459,13 +499,13 @@ namespace Beyond.Network
 		public bool checkDev; // 0x20
 	
 		// Constructors
-		public ServerConfig() {} // 0x0000000183D21020-0x0000000183D21080
+		public ServerConfig() {} // 0x0000000185F804C0-0x0000000185F80520
 	
 		// Methods
-		public bool IsSame(ServerConfig other) => default; // 0x00000001892A64C4-0x00000001892A6544
+		public bool IsSame(ServerConfig other) => default; // 0x000000018B3CED14-0x000000018B3CED94
 	}
 
-	public class HostData // TypeDefIndex: 56154
+	public class HostData // TypeDefIndex: 57155
 	{
 		// Fields
 		public string host; // 0x10
@@ -473,37 +513,37 @@ namespace Beyond.Network
 		public double delay; // 0x20
 	
 		// Constructors
-		public HostData() {} // 0x000000018315C2B0-0x000000018315C300
+		public HostData() {} // 0x000000018504A9C0-0x000000018504AA10
 	}
 
-	public class NetConfig // TypeDefIndex: 56155
+	public class NetConfig // TypeDefIndex: 57156
 	{
 		// Fields
 		public List<HostData> hosts; // 0x10
 	
 		// Constructors
 		public NetConfig() {} // Dummy constructor
-		public NetConfig(List<HostData> hosts) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public NetConfig(List<HostData> hosts) {} // 0x0000000184096E30-0x0000000184096EF0
 	}
 
-	public static class NetConsts // TypeDefIndex: 56156
+	public static class NetConsts // TypeDefIndex: 57157
 	{
 		// Fields
 		public static readonly string NETMASK_CONFIG_PATH; // 0x00
 		public static readonly string NETMASK_PREFAB_PATH; // 0x08
 	
 		// Constructors
-		static NetConsts() {} // 0x0000000183CDF500-0x0000000183CDF5A0
+		static NetConsts() {} // 0x0000000185F3A730-0x0000000185F3A7D0
 	}
 
-	public interface INetworkSystem : ILuaCallCSharp // TypeDefIndex: 56157
+	public interface INetworkSystem : ILuaCallCSharp // TypeDefIndex: 57158
 	{
 		// Methods
 		void OnReConnect();
 		void SendMsg(IMessage msg, Action<int> onError);
 	}
 
-	public class NetUtil // TypeDefIndex: 56160
+	public static class NetUtil // TypeDefIndex: 57161
 	{
 		// Fields
 		private static bool s_isRegistedAllMessages; // 0x00
@@ -515,40 +555,67 @@ namespace Beyond.Network
 		private static Dictionary<System.Type, int> s_cs_messageType2Id; // 0x20
 		private static byte[] s_decompressedBuffer; // 0x28
 	
+		// Nested types
+		private sealed class __c__DisplayClass18_0 // TypeDefIndex: 57159
+		{
+			// Fields
+			public object target; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass18_0() {} // 0x0000000184A8BF30-0x0000000184A8C0C0
+	
+			// Methods
+			internal void _AutoRegisterMessageHandlers_b__0(System.Type msgType, MethodInfo methodInfo) {} // 0x0000000184A8BA10-0x0000000184A8BB40
+		}
+	
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 57160
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Action<System.Type, MethodInfo> __9__19_0; // 0x08
+	
+			// Constructors
+			static __c() {} // 0x00000001843DF790-0x00000001843DF840
+			public __c() {} // 0x000000018B3CC318-0x000000018B3CC3C8
+	
+			// Methods
+			internal void _AutoUnRegisterMessageHandlers_b__19_0(System.Type msgType, MethodInfo methodInfo) {} // 0x00000001843D0E80-0x00000001843D0F30
+		}
+	
 		// Constructors
-		public NetUtil() {} // 0x000000018350B670-0x000000018350B680
-		static NetUtil() {} // 0x00000001837063D0-0x00000001837065C0
+		static NetUtil() {} // 0x000000018B3CF2FC-0x000000018B3CF370
 	
 		// Methods
-		public static void RegisterSCMessage(int msgId, System.Type msgType) {} // 0x0000000182C34270-0x0000000182C34400
-		public static void RegisterCSMessage(int msgId, System.Type msgType) {} // 0x0000000182C33D50-0x0000000182C33E80
-		public static int GetSCMsgIdByType(System.Type msgType) => default; // 0x00000001826AD6D0-0x00000001826AD780
-		public static System.Type GetSCMsgTypeById(int msgId) => default; // 0x00000001892A3AC4-0x00000001892A3B74
-		public static int GetCSMsgIdByType(System.Type msgType) => default; // 0x00000001832BA2C0-0x00000001832BA370
+		public static void RegisterSCMessage(int msgId, System.Type msgType) {}
+		public static void RegisterCSMessage(int msgId, System.Type msgType) {} // 0x0000000184A8BB40-0x0000000184A8BF30
+		public static int GetSCMsgIdByType(System.Type msgType) => default; // 0x0000000184904D40-0x0000000184905F10
+		public static System.Type GetSCMsgTypeById(int msgId) => default; // 0x00000001843D0350-0x00000001843D0540
+		public static int GetCSMsgIdByType(System.Type msgType) => default; // 0x000000018B3CC3C8-0x000000018B3CC5B8
 		private static void _GenMessageName2ValuePair<T>(Dictionary<string, int> dic)
-			where T : Enum {}
-		public static void FastRegisterMessage() {} // 0x0000000182C33E80-0x0000000182C34270
+			where T : Enum {} // 0x0000000184B04E40-0x0000000184B04F40
+		public static void FastRegisterMessage() {} // 0x000000018B3CC1D8-0x000000018B3CC318
 		public static bool GetNetMessageFromDataBytes(Span<byte> headBytes, byte[] bodyBuffer, int offset, int bodyLen, byte[] packedbuffer, out NetResponse response) {
 			response = default;
 			return default;
-		} // 0x00000001829D2940-0x00000001829D3B10
-		public static int SerializeHeadMessage(IMessage msg, ulong upSeqid, int bodyLen, int crc32, byte[] buffer, int offset = 0 /* Metadata: 0x01FD7D19 */) => default; // 0x00000001824D2BE0-0x00000001824D2DD0
-		public static int SerializeBodyMessage(IMessage msg, byte[] buffer, out int crc32, int offset = 0 /* Metadata: 0x01FD7D1A */) {
+		} // 0x0000000184B04F40-0x0000000184B05080
+		public static int SerializeHeadMessage(IMessage msg, ulong upSeqid, int bodyLen, int crc32, byte[] buffer, int offset = 0 /* Metadata: 0x0207D5BD */) => default; // 0x0000000185801430-0x0000000185801620
+		public static int SerializeBodyMessage(IMessage msg, byte[] buffer, out int crc32, int offset = 0 /* Metadata: 0x0207D5BE */) {
 			crc32 = default;
 			return default;
-		} // 0x00000001892A3B74-0x00000001892A3D64
-		public static void AutoRegisterMessageHandlers(object target) {} // 0x0000000182D5B260-0x0000000182D5B360
-		public static void AutoUnRegisterMessageHandlers(object target) {} // 0x00000001892A3984-0x00000001892A3AC4
-		private static void _ForeachMessageHandlers(object target, Action<System.Type, MethodInfo> doFunc) {} // 0x0000000182D5B360-0x0000000182D5B4A0
+		} // 0x0000000185492010-0x0000000185492020
+		public static void AutoRegisterMessageHandlers(object target) {} // 0x00000001843DF990-0x00000001843DFC40
+		public static void AutoUnRegisterMessageHandlers(object target) {} // 0x000000018B3CF7C8-0x000000018B3CF82C
+		private static void _ForeachMessageHandlers(object target, Action<System.Type, MethodInfo> doFunc) {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public static class NetworkFrequencyConfig // TypeDefIndex: 56162
+	public static class NetworkFrequencyConfig // TypeDefIndex: 57163
 	{
 		// Fields
 		public static SerializeFieldDictionary<int, NetworkFrequency> msgs; // 0x00
 	
 		// Nested types
-		public class NetworkFrequency // TypeDefIndex: 56161
+		public class NetworkFrequency // TypeDefIndex: 57162
 		{
 			// Fields
 			public System.Type type; // 0x10
@@ -556,14 +623,14 @@ namespace Beyond.Network
 			public int maxCount; // 0x1C
 	
 			// Constructors
-			public NetworkFrequency() {} // 0x000000018350B670-0x000000018350B680
+			public NetworkFrequency() {} // 0x000000018B3CC5B8-0x000000018B3CE2E4
 		}
 	
 		// Constructors
-		static NetworkFrequencyConfig() {} // 0x00000001892A3D64-0x00000001892A5A90
+		static NetworkFrequencyConfig() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class NetworkMask : Singleton<NetworkMask> // TypeDefIndex: 56164
+	public class NetworkMask : Singleton<NetworkMask> // TypeDefIndex: 57165
 	{
 		// Fields
 		private TickFunction m_preTickFunction; // 0x10
@@ -572,16 +639,18 @@ namespace Beyond.Network
 		public GameObject decoObj; // 0x28
 		private FAssetProxyHandle m_handle; // 0x30
 		private Action<bool> m_onNetMaskChanged; // 0x48
+		private bool _showingMask_k__BackingField; // 0x50
+		private bool _showingDeco_k__BackingField; // 0x51
 		private bool m_isNetReconnecting; // 0x52
-		private const string DECO_NAME = "Deco"; // Metadata: 0x01FD7D27
+		private const string DECO_NAME = "Deco"; // Metadata: 0x0207D5CB
 		private List<MaskInfo> m_masks; // 0x58
 	
 		// Properties
-		public bool showingMask { get; private set; } // 0x0000000183D4F000-0x0000000183D4F010 0x0000000183D4F030-0x0000000183D4F040
-		public bool showingDeco { get; private set; } // 0x0000000183D518F0-0x0000000183D51900 0x0000000183D51900-0x0000000183D51910
+		public bool showingMask { get; private set; } // 0x00000001813AF350-0x00000001813AF360 0x000000018596F4A0-0x000000018596F540
+		public bool showingDeco { get; private set; } // 0x000000018596F540-0x000000018596F880 0x000000018B3CE41C-0x000000018B3CE4B4
 	
 		// Nested types
-		public class MaskInfo // TypeDefIndex: 56163
+		public class MaskInfo // TypeDefIndex: 57164
 		{
 			// Fields
 			public int key; // 0x10
@@ -591,70 +660,63 @@ namespace Beyond.Network
 			public float timeoutTime; // 0x28
 	
 			// Properties
-			public float endTime { get => default; } // 0x0000000183D713D0-0x0000000183D713E0 
-			public float showDecoTime { get => default; } // 0x0000000183D713E0-0x0000000183D713F0 
+			public float endTime { get => default; } // 0x00000001813ECBE0-0x00000001813ECBF0 
+			public float showDecoTime { get => default; } // 0x00000001813EE9A0-0x00000001813EE9B0 
 	
 			// Constructors
-			public MaskInfo() {} // 0x0000000183D713C0-0x0000000183D713D0
+			public MaskInfo() {} // 0x00000001813AF340-0x00000001813AF350
 		}
 	
 		// Constructors
-		private NetworkMask() {} // 0x0000000183807DC0-0x0000000183807E60
+		private NetworkMask() {} // 0x000000018B3CE4B4-0x000000018B3CE5C4
 	
 		// Methods
-		protected void OnInit() {} // 0x0000000183807E60-0x00000001838081A0
-		protected void OnUnInit() {} // 0x00000001892A5BC8-0x00000001892A5C60
-		public void Release() {} // 0x00000001892A5C60-0x00000001892A5D70
-		private void _OnSwitchLanguage() {} // 0x00000001892A5E88-0x00000001892A6160
-		private void _CreateTickFunction() {} // 0x00000001838081A0-0x0000000183808280
-		private void _ClearTickFunction() {} // 0x00000001892A5E24-0x00000001892A5E88
-		public void PreTick(float deltaTime) {} // 0x0000000183017340-0x0000000183017410
-		private int _GetKey() => default; // 0x00000001830171C0-0x00000001830171F0
-		[IDTag(1)]
-		public int AddMask(CSMessageID msgId, float timeoutTime = 10f /* Metadata: 0x01FD7D1B */) => default; // 0x00000001892A5B08-0x00000001892A5BC8
-		[IDTag(0)]
-		public int AddMask(string name, float timeoutTime = 10f /* Metadata: 0x01FD7D1F */, float delayTime = 0.5f /* Metadata: 0x01FD7D23 */) => default; // 0x00000001830170C0-0x00000001830171C0
-		public void RemoveMask(int key) {} // 0x0000000183017270-0x0000000183017340
-		public void SetIsNetReconnecting(bool isReconnecting) {} // 0x0000000183D713F0-0x0000000183D71400
-		private void _UpdateMaskState() {} // 0x0000000183017410-0x0000000183017610
-		public void ListenOnNetMaskChanged(Action<bool> action) {} // 0x0000000183A2FE20-0x0000000183A2FE90
-		public void UnListenOnNetMaskChanged(Action<bool> action) {} // 0x00000001892A5D70-0x00000001892A5E24
+		protected void OnInit() {} // 0x000000018B3CE6DC-0x000000018B3CE9B4
+		protected void OnUnInit() {} // 0x000000018596F880-0x000000018596F960
+		public void Release() {} // 0x000000018B3CE678-0x000000018B3CE6DC
+		private void _OnSwitchLanguage() {} // 0x0000000184CB9200-0x0000000184CB92D0
+		private void _CreateTickFunction() {} // 0x0000000184CB9100-0x0000000184CB9130
+		private void _ClearTickFunction() {} // 0x000000018B3CE35C-0x000000018B3CE41C
+		public void PreTick(float deltaTime) {} // 0x0000000184CB9000-0x0000000184CB9100
+		private int _GetKey() => default; // 0x0000000184CB9130-0x0000000184CB9200
+		public int AddMask(CSMessageID msgId, float timeoutTime = 10f /* Metadata: 0x0207D5BF */) => default; // 0x0000000185FD2040-0x0000000185FD2050
+		public int AddMask(string name, float timeoutTime = 10f /* Metadata: 0x0207D5C3 */, float delayTime = 0.5f /* Metadata: 0x0207D5C7 */) => default; // 0x0000000184CB92D0-0x0000000184CB94D0
+		public void RemoveMask(int key) {} // 0x0000000184CB9D00-0x0000000184CB9D70
+		public void SetIsNetReconnecting(bool isReconnecting) {} // 0x000000018B3CE5C4-0x000000018B3CE678
+		private void _UpdateMaskState() {} // 0x0000000185FD2020-0x0000000185FD2030
+		public void ListenOnNetMaskChanged(Action<bool> action) {} // 0x0000000185FD2030-0x0000000185FD2040
+		public void UnListenOnNetMaskChanged(Action<bool> action) {} // 0x0000000185FD2010-0x0000000185FD2020
 	}
 
-	[CreateAssetMenu(fileName = "NetworkMaskConfig", menuName = "Beyond/Network/NetworkMaskConfig", order = 1)]
-	public class NetworkMaskConfig : ScriptableObject // TypeDefIndex: 56166
+	public class NetworkMaskConfig : ScriptableObject // TypeDefIndex: 57167
 	{
 		// Fields
-		[SerializeField]
 		public SerializeFieldDictionary<CSMessageID, SCMessageID> msgs; // 0x18
-		[SerializeField]
 		public List<Config> configs; // 0x20
 	
 		// Nested types
 		[Serializable]
-		public class Config // TypeDefIndex: 56165
+		public class Config // TypeDefIndex: 57166
 		{
 			// Fields
-			[SerializeField]
 			public string key; // 0x10
-			[SerializeField]
 			public SerializeFieldDictionaryPaired<CSMessageID, SCMessageID> messages; // 0x18
 	
 			// Constructors
-			public Config() {} // 0x0000000183CA7600-0x0000000183CA7680
+			public Config() {} // 0x0000000185ECA150-0x0000000185ECA220
 		}
 	
 		// Constructors
-		public NetworkMaskConfig() {} // 0x0000000183C8A0F0-0x0000000183C8A1C0
+		public NetworkMaskConfig() {} // 0x0000000185EF8810-0x0000000185EF8890
 	}
 
-	public static class NetworkUrls // TypeDefIndex: 56168
+	public static class NetworkUrls // TypeDefIndex: 57169
 	{
 		// Fields
-		public const string URL_GET_SPLIT = "/"; // Metadata: 0x01FD7D2C
+		public const string URL_GET_SPLIT = "/"; // Metadata: 0x0207D5D0
 	
 		// Nested types
-		private enum EUrlType // TypeDefIndex: 56167
+		private enum EUrlType // TypeDefIndex: 57168
 		{
 			ServerList = 0,
 			GameLicense = 1,
@@ -666,17 +728,17 @@ namespace Beyond.Network
 		}
 	
 		// Methods
-		public static string RemoteConfigUrl() => default; // 0x0000000182C37520-0x0000000182C37580
-		public static string ResourceRootUrlDev(string version) => default; // 0x00000001892A6288-0x00000001892A6330
-		public static string ServerListUrl() => default; // 0x0000000182F42910-0x0000000182F42940
-		public static string AgeTipsUrl() => default; // 0x00000001892A6160-0x00000001892A61F4
-		public static string GovUrl() => default; // 0x00000001892A61F4-0x00000001892A6288
-		public static string LauncherUrl() => default; // 0x0000000182C3DFE0-0x0000000182C3E060
-		private static string _SelectUrl(string urlInConfig, EUrlType urlType) => default; // 0x0000000182C3F990-0x0000000182C3FA20
-		private static string _GetUrlFromLocal(EUrlType type) => default; // 0x0000000182F42940-0x0000000182F429F0
+		public static string RemoteConfigUrl() => default; // 0x00000001855EDBC0-0x00000001855EDC20
+		public static string ResourceRootUrlDev(string version) => default; // 0x000000018B3CEADC-0x000000018B3CEB80
+		public static string ServerListUrl() => default; // 0x00000001855ED890-0x00000001855ED8C0
+		public static string AgeTipsUrl() => default; // 0x000000018B3CE9B4-0x000000018B3CEA48
+		public static string GovUrl() => default; // 0x000000018B3CEA48-0x000000018B3CEADC
+		public static string LauncherUrl() => default; // 0x000000018425F7F0-0x000000018425F870
+		private static string _SelectUrl(string urlInConfig, EUrlType urlType) => default; // 0x000000018425F870-0x000000018425F900
+		private static string _GetUrlFromLocal(EUrlType type) => default; // 0x00000001855ED8C0-0x00000001855ED970
 	}
 
-	public class TcpIO : INetIO // TypeDefIndex: 56169
+	public class TcpIO : INetIO // TypeDefIndex: 57170
 	{
 		// Fields
 		private HGTcpClient m_tcpClient; // 0x10
@@ -690,53 +752,53 @@ namespace Beyond.Network
 		private bool m_bIsTestDropSC; // 0x49
 		private bool m_bIsTestDropCS; // 0x4A
 		private bool m_bIsTestReconnectFailed; // 0x4B
-		public const int SEND_HEAD_BUFFER_LENGTH = 256; // Metadata: 0x01FD7D35
+		public const int SEND_HEAD_BUFFER_LENGTH = 256; // Metadata: 0x0207D5D9
 		public static int s_MAX_SEND_SIZE; // 0x00
 	
 		// Constructors
-		public TcpIO() {} // 0x000000018350B670-0x000000018350B680
-		static TcpIO() {} // 0x0000000183D43AA0-0x0000000183D43AE0
+		public TcpIO() {} // 0x0000000185492010-0x0000000185492020
+		static TcpIO() {} // 0x0000000185FA3EA0-0x0000000185FA3EE0
 	
 		// Methods
-		public void Connect(string serverIp, int serverPort, int sendTimeout, int receiveBufferSize, int sendBufferSize) {} // 0x000000018293E650-0x000000018293E810
-		public System.Threading.Tasks.Task ConnectAsync(string serverIp, int serverPort, int sendTimeout, int receiveBufferSize, int sendBufferSize) => default; // 0x000000018293DC50-0x000000018293DE60
-		public bool IsAuthed() => default; // 0x00000001824CC140-0x00000001824CC200
-		public void MarkAuthed() {} // 0x0000000182944CC0-0x0000000182944CF0
-		public void EnableCryptStream(byte[] key, byte[] iv) {} // 0x00000001839B3E60-0x00000001839B40A0
-		public EndPoint GetEndPoint() => default; // 0x00000001892A6788-0x00000001892A67F8
-		public void Close() {} // 0x00000001829436C0-0x0000000182943B80
-		public void TestCloseNetIO(bool bIsTestReconnectFailed) {} // 0x00000001892A67F8-0x00000001892A6864
-		public void TestDropNetIO(bool bIsTestDropSC, bool bIsTestDropCS) {} // 0x00000001892A6864-0x00000001892A68D4
-		public bool IsConnected() => default; // 0x00000001824CB1A0-0x00000001824CB3A0
-		public void WriteData(byte[] data, int offset, int len) {} // 0x00000001824D1080-0x00000001824D1320
-		public void WriteCryptoData(byte[] data, int offset, int len) {} // 0x00000001824D3190-0x00000001824D32B0
-		public byte[] GetSendHeadBuffer() => default; // 0x00000001824D3160-0x00000001824D3190
-		public byte[] GetSendBuffer() => default; // 0x00000001824D2290-0x00000001824D22C0
-		public byte[] GetReceiveBuffer() => default; // 0x00000001824CBF80-0x00000001824CC140
-		public void ClearReceiveBufferOffset() {} // 0x0000000183199FF0-0x000000018319A020
-		public int GetReceiveBufferOffset() => default; // 0x00000001824CB3A0-0x00000001824CB460
-		public void SkipReceiveBufferOffset(int len) {} // 0x00000001831681D0-0x0000000183168210
-		public int ReadData(byte[] buffer, int offset, int len) => default; // 0x00000001824D1450-0x00000001824D1590
-		public int ReadCryptoData(byte[] buffer, int offset, int len) => default; // 0x00000001824D1320-0x00000001824D1450
-		public int Available() => default; // 0x00000001824CB700-0x00000001824CB8A0
-		public void Dispose() {} // 0x0000000182943610-0x0000000182943650
-		~TcpIO() {} // 0x0000000182943480-0x0000000182943610
+		public void Connect(string serverIp, int serverPort, int sendTimeout, int receiveBufferSize, int sendBufferSize) {} // 0x0000000183FBC860-0x0000000183FBCA20
+		public System.Threading.Tasks.Task ConnectAsync(string serverIp, int serverPort, int sendTimeout, int receiveBufferSize, int sendBufferSize) => default; // 0x0000000183FBBE60-0x0000000183FBC070
+		public bool IsAuthed() => default; // 0x00000001843C87A0-0x00000001843C8860
+		public void MarkAuthed() {} // 0x00000001843C32A0-0x00000001843C32D0
+		public void EnableCryptStream(byte[] key, byte[] iv) {} // 0x0000000185B96A40-0x0000000185B96C80
+		public EndPoint GetEndPoint() => default; // 0x000000018B3CEFD8-0x000000018B3CF048
+		public void Close() {} // 0x0000000184A933A0-0x0000000184A93860
+		public void TestCloseNetIO(bool bIsTestReconnectFailed) {} // 0x000000018B3CF048-0x000000018B3CF0B4
+		public void TestDropNetIO(bool bIsTestDropSC, bool bIsTestDropCS) {} // 0x000000018B3CF0B4-0x000000018B3CF124
+		public bool IsConnected() => default; // 0x00000001843C77F0-0x00000001843C7A00
+		public void WriteData(byte[] data, int offset, int len) {} // 0x00000001843CDDC0-0x00000001843CE060
+		public void WriteCryptoData(byte[] data, int offset, int len) {} // 0x00000001843D0980-0x00000001843D0A20
+		public byte[] GetSendHeadBuffer() => default; // 0x00000001843D08D0-0x00000001843D0980
+		public byte[] GetSendBuffer() => default; // 0x00000001843CEFF0-0x00000001843CF020
+		public byte[] GetReceiveBuffer() => default; // 0x00000001843C85E0-0x00000001843C87A0
+		public void ClearReceiveBufferOffset() {} // 0x00000001851120E0-0x0000000185112110
+		public int GetReceiveBufferOffset() => default; // 0x00000001843C7A00-0x00000001843C7AC0
+		public void SkipReceiveBufferOffset(int len) {} // 0x00000001850CBFC0-0x00000001850CC000
+		public int ReadData(byte[] buffer, int offset, int len) => default; // 0x00000001843CE190-0x00000001843CE2F0
+		public int ReadCryptoData(byte[] buffer, int offset, int len) => default; // 0x00000001843CE060-0x00000001843CE190
+		public int Available() => default; // 0x00000001843C7D60-0x00000001843C7F00
+		public void Dispose() {} // 0x0000000184A932F0-0x0000000184A93330
+		~TcpIO() {} // 0x0000000184A93160-0x0000000184A932F0
 	}
 
-	public static class HttpSender // TypeDefIndex: 56188
+	public static class HttpSender // TypeDefIndex: 57189
 	{
 		// Fields
-		public const string CONTENT_TYPE_JSON = "application/json"; // Metadata: 0x01FD7D37
-		public const string CONTENT_ENCODING_GZIP = "gzip"; // Metadata: 0x01FD7D48
-		public const int ERROR_CODE_TIMEOUT = 10000; // Metadata: 0x01FD7D4D
-		public const int ERROR_CODE_DNS_FAILED = 11000; // Metadata: 0x01FD7D51
-		public const int ERROR_CODE_DESERIALIZE = 20000; // Metadata: 0x01FD7D55
-		public const float TIMEOUT_DEFAULT = 20f; // Metadata: 0x01FD7D59
-		private const int OPT_GET = 1; // Metadata: 0x01FD7D5D
-		private const int OPT_POST = 2; // Metadata: 0x01FD7D5E
+		public const string CONTENT_TYPE_JSON = "application/json"; // Metadata: 0x0207D5DB
+		public const string CONTENT_ENCODING_GZIP = "gzip"; // Metadata: 0x0207D5EC
+		public const int ERROR_CODE_TIMEOUT = 10000; // Metadata: 0x0207D5F1
+		public const int ERROR_CODE_DNS_FAILED = 11000; // Metadata: 0x0207D5F5
+		public const int ERROR_CODE_DESERIALIZE = 20000; // Metadata: 0x0207D5F9
+		public const float TIMEOUT_DEFAULT = 20f; // Metadata: 0x0207D5FD
+		private const int OPT_GET = 1; // Metadata: 0x0207D601
+		private const int OPT_POST = 2; // Metadata: 0x0207D602
 	
 		// Nested types
-		public enum ErrorType // TypeDefIndex: 56170
+		public enum ErrorType // TypeDefIndex: 57171
 		{
 			NONE = 0,
 			TIMEOUT = 1,
@@ -745,23 +807,24 @@ namespace Beyond.Network
 			INTERNAL = 4
 		}
 	
-		public class Cancellation // TypeDefIndex: 56171
+		public class Cancellation // TypeDefIndex: 57172
 		{
 			// Fields
 			private bool m_isCancelled; // 0x10
+			private Action OnCancelInvoked; // 0x18
 	
 			// Events
 			public event Action OnCancelInvoked;
 	
 			// Constructors
-			public Cancellation() {} // 0x000000018350B670-0x000000018350B680
+			public Cancellation() {}
 	
 			// Methods
-			public void Cancel() {} // 0x000000018929F414-0x000000018929F474
-			public bool IsCanceled() => default; // 0x000000018929F474-0x000000018929F4C8
+			public void Cancel() {} // 0x00000001855ED4F0-0x00000001855ED5D0
+			public bool IsCanceled() => default; // 0x000000018B3CB4D8-0x000000018B3CB5C0
 		}
 	
-		public struct FGetOptions // TypeDefIndex: 56172
+		public struct FGetOptions // TypeDefIndex: 57173
 		{
 			// Fields
 			public static readonly FGetOptions DEFAULT; // 0x00
@@ -773,10 +836,10 @@ namespace Beyond.Network
 			// Constructors
 			static FGetOptions() {
 				DEFAULT = default;
-			} // 0x000000018350B670-0x000000018350B680
+			} // 0x0000000185BC5130-0x0000000185BC5200
 		}
 	
-		public struct FPostOptions // TypeDefIndex: 56173
+		public struct FPostOptions // TypeDefIndex: 57174
 		{
 			// Fields
 			public static readonly FPostOptions DEFAULT; // 0x00
@@ -788,10 +851,10 @@ namespace Beyond.Network
 			// Constructors
 			static FPostOptions() {
 				DEFAULT = default;
-			} // 0x000000018350B670-0x000000018350B680
+			} // 0x000000018B3CB3DC-0x000000018B3CB4D8
 		}
 	
-		private struct FSendFunc // TypeDefIndex: 56174
+		private struct FSendFunc // TypeDefIndex: 57175
 		{
 			// Fields
 			public string url; // 0x00
@@ -801,12 +864,12 @@ namespace Beyond.Network
 			public bool editorOnly; // 0x50
 	
 			// Methods
-			public UnityWebRequest Invoke() => default; // 0x0000000182C47510-0x0000000182C47590
-			public Cancellation GetCancellation() => default; // 0x0000000182C474C0-0x0000000182C47510
-			public string GetOptMethod() => default; // 0x000000018929F644-0x000000018929F6F8
+			public UnityWebRequest Invoke() => default; // 0x000000018B3CB240-0x000000018B3CB2E0
+			public Cancellation GetCancellation() => default; // 0x000000018B3CB2E0-0x000000018B3CB3DC
+			public string GetOptMethod() => default;
 		}
 	
-		public class Result // TypeDefIndex: 56175
+		public class Result // TypeDefIndex: 57176
 		{
 			// Fields
 			public int respCode; // 0x10
@@ -819,85 +882,288 @@ namespace Beyond.Network
 			public bool isServiceDone; // 0x40
 	
 			// Constructors
-			public Result() {} // 0x000000018350B670-0x000000018350B680
+			public Result() {}
 		}
 	
-		public class TypedResult : Result // TypeDefIndex: 56176
+		public class TypedResult : Result // TypeDefIndex: 57177
 		{
 			// Fields
+			private System.Type _respType_k__BackingField; // 0x48
 			public object respObject; // 0x50
 			public bool isDeserializeFailed; // 0x58
 	
 			// Properties
-			public System.Type respType { get; private set; } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+			public System.Type respType { get; private set; } // 0x00000001855ED970-0x00000001855ED9E0 0x000000018571FDE0-0x000000018571FEC0
 	
 			// Constructors
 			public TypedResult() {} // Dummy constructor
-			public TypedResult(System.Type respType) {} // 0x0000000182692290-0x00000001826922A0
+			public TypedResult(System.Type respType) {} // 0x000000018587AB50-0x000000018587AC40
 		}
 	
-		public class Result<TResp> : TypedResult // TypeDefIndex: 56177
+		public class Result<TResp> : TypedResult // TypeDefIndex: 57178
 			where TResp : class
 		{
 			// Constructors
-			public Result() {}
+			public Result() {} // 0x000000018B3CB72C-0x000000018B3CB8F4
 	
 			// Methods
 			public TResp GetRespObject() => default;
 		}
 	
+		private sealed class _YieldSendGet_d__16 : IEnumerator<object> // TypeDefIndex: 57179
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public string url; // 0x20
+			public FGetOptions options; // 0x28
+			public Misc.ObjectRef resultRef; // 0x48
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000184F38C50-0x0000000184F39350 
+			object IEnumerator.Current { get => default; } // 0x000000018571FED0-0x000000018571FF80 
+	
+			// Constructors
+			public _YieldSendGet_d__16() {} // Dummy constructor
+			public _YieldSendGet_d__16(int __1__state) {} // 0x000000018571FAA0-0x000000018571FC10
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018571F9E0-0x000000018571FA30
+			private bool MoveNext() => default; // 0x0000000184F38520-0x0000000184F38B10
+			void IEnumerator.Reset() {} // 0x0000000184F38330-0x0000000184F38440
+		}
+	
+		private sealed class _YieldSendGet_d__17<TResp> : IEnumerator<object> // TypeDefIndex: 57180
+			where TResp : class
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public string url;
+			public FGetOptions options;
+			public Misc.ObjectRef resultRef;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018B3C981C-0x000000018B3C98B0 
+			object IEnumerator.Current { get => default; } // 0x000000018B3C9734-0x000000018B3C9788 
+	
+			// Constructors
+			public _YieldSendGet_d__17() {} // Dummy constructor
+			public _YieldSendGet_d__17(int __1__state) {} // 0x000000018B3CB5C0-0x000000018B3CB658
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018B3CB658-0x000000018B3CB72C
+			private bool MoveNext() => default; // 0x000000018B3C9788-0x000000018B3C981C
+			void IEnumerator.Reset() {} // 0x000000018B3C96D4-0x000000018B3C9734
+		}
+	
+		private sealed class _YieldSendGet_d__18 : IEnumerator<object> // TypeDefIndex: 57181
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public FGetOptions options; // 0x20
+			public string url; // 0x40
+			public Misc.ObjectRef resultRef; // 0x48
+			public System.Type respType; // 0x50
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000184F38230-0x0000000184F382B0 
+			object IEnumerator.Current { get => default; } // 0x000000018B3C9904-0x000000018B3C99B8 
+	
+			// Constructors
+			public _YieldSendGet_d__18() {} // Dummy constructor
+			public _YieldSendGet_d__18(int __1__state) {} // 0x0000000185492010-0x0000000185492020
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x0000000185492010-0x0000000185492020
+			private bool MoveNext() => default; // 0x0000000185492010-0x0000000185492020
+			void IEnumerator.Reset() {} // 0x0000000184F381E0-0x0000000184F38230
+		}
+	
+		private sealed class _YieldSendPost_d__19 : IEnumerator<object> // TypeDefIndex: 57182
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public string url; // 0x20
+			public FPostOptions options; // 0x28
+			public Misc.ObjectRef resultRef; // 0x48
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018571FEC0-0x000000018571FED0 
+			object IEnumerator.Current { get => default; }
+	
+			// Constructors
+			public _YieldSendPost_d__19() {} // Dummy constructor
+			public _YieldSendPost_d__19(int __1__state) {} // 0x0000000185492010-0x0000000185492020
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x00000001813ECF20-0x00000001813ECF30
+			private bool MoveNext() => default; // 0x000000018571FEC0-0x000000018571FED0
+			void IEnumerator.Reset() {}
+		}
+	
+		private sealed class _YieldSendPost_d__20<TResp> : IEnumerator<object> // TypeDefIndex: 57183
+			where TResp : class
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public string url;
+			public FPostOptions options;
+			public Misc.ObjectRef resultRef;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000181377E40-0x0000000181377E50 
+			object IEnumerator.Current { get => default; } // 0x0000000181377E40-0x0000000181377E50 
+	
+			// Constructors
+			public _YieldSendPost_d__20() {} // Dummy constructor
+			public _YieldSendPost_d__20(int __1__state) {} // 0x0000000181378230-0x0000000181378240
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x0000000185492010-0x0000000185492020
+			private bool MoveNext() => default; // 0x00000001855ED470-0x00000001855ED4F0
+			void IEnumerator.Reset() {} // 0x000000018B3CF82C-0x000000018B3CF878
+		}
+	
+		private sealed class _YieldSendPost_d__21 : IEnumerator<object> // TypeDefIndex: 57184
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public FPostOptions options; // 0x20
+			public string url; // 0x40
+			public Misc.ObjectRef resultRef; // 0x48
+			public System.Type respType; // 0x50
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; }
+			object IEnumerator.Current { get => default; }
+	
+			// Constructors
+			public _YieldSendPost_d__21() {} // Dummy constructor
+			public _YieldSendPost_d__21(int __1__state) {}
+	
+			// Methods
+			void IDisposable.Dispose() {}
+			private bool MoveNext() => default;
+			void IEnumerator.Reset() {}
+		}
+	
+		private sealed class __YieldSendHttpRequest_d__28 : IEnumerator<object> // TypeDefIndex: 57185
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public FSendFunc sendFunc; // 0x20
+			public Result result; // 0x78
+			private Cancellation _cancelation_5__2; // 0x80
+			private bool _isCanceled_5__3; // 0x88
+			private UnityWebRequest _request_5__4; // 0x90
+			private UnityWebRequestAsyncOperation _sendOpt_5__5; // 0x98
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018B3CF878-0x000000018B3CF8C4 
+			object IEnumerator.Current { get => default; } // 0x0000000181378230-0x0000000181378240 
+	
+			// Constructors
+			public __YieldSendHttpRequest_d__28() {} // Dummy constructor
+			public __YieldSendHttpRequest_d__28(int __1__state) {} // 0x0000000181378230-0x0000000181378240
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x0000000185492010-0x0000000185492020
+			private bool MoveNext() => default; // 0x000000018587AA60-0x000000018587AB50
+			private void __m__Finally1() {} // 0x0000000181377E40-0x0000000181377E50
+			void IEnumerator.Reset() {} // 0x0000000181377E40-0x0000000181377E50
+		}
+	
+		private sealed class __YieldSendHttpRequest_d__29 : IEnumerator<object> // TypeDefIndex: 57186
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public Misc.ObjectRef resultRef; // 0x20
+			public System.Type respType; // 0x28
+			public FSendFunc sendFunc; // 0x30
+			private Result _result_5__2; // 0x88
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018B3CF92C-0x000000018B3CF978 
+			object IEnumerator.Current { get => default; }
+	
+			// Constructors
+			public __YieldSendHttpRequest_d__29() {} // Dummy constructor
+			public __YieldSendHttpRequest_d__29(int __1__state) {} // 0x0000000185492010-0x0000000185492020
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018B3CF8C4-0x000000018B3CF92C
+			private bool MoveNext() => default; // 0x0000000181377E40-0x0000000181377E50
+			void IEnumerator.Reset() {} // 0x0000000181377E40-0x0000000181377E50
+		}
+	
+		private sealed class __c__DisplayClass30_0 // TypeDefIndex: 57187
+		{
+			// Fields
+			public Result result; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass30_0() {}
+	
+			// Methods
+			internal Result __WaitForSendHttpRequest_b__0() => default;
+		}
+	
+		private sealed class __c__DisplayClass31_0<TResp> // TypeDefIndex: 57188
+			where TResp : class
+		{
+			// Fields
+			public Result<TResp> result;
+	
+			// Constructors
+			public __c__DisplayClass31_0() {}
+	
+			// Methods
+			internal Result<TResp> __WaitForSendHttpRequest_b__0() => default;
+		}
+	
 		// Methods
-		[IDTag(1)]
-		[IteratorStateMachine(typeof(_YieldSendGet_d__16))]
-		public static IEnumerator YieldSendGet(string url, FGetOptions options, Misc.ObjectRef resultRef) => default; // 0x0000000182C36C00-0x0000000182C36CB0
-		[IteratorStateMachine(typeof(_YieldSendGet_d__17<TResp>))]
+		public static IEnumerator YieldSendGet(string url, FGetOptions options, Misc.ObjectRef resultRef) => default;
 		public static IEnumerator YieldSendGet<TResp>(string url, FGetOptions options, Misc.ObjectRef resultRef)
-			where TResp : class => default;
-		[IDTag(0)]
-		[IteratorStateMachine(typeof(_YieldSendGet_d__18))]
-		public static IEnumerator YieldSendGet(string url, FGetOptions options, System.Type respType, Misc.ObjectRef resultRef) => default; // 0x0000000182F42BA0-0x0000000182F42C80
-		[IDTag(1)]
-		[IteratorStateMachine(typeof(_YieldSendPost_d__19))]
-		public static IEnumerator YieldSendPost(string url, FPostOptions options, Misc.ObjectRef resultRef) => default; // 0x00000001892A2C84-0x00000001892A2D6C
-		[IteratorStateMachine(typeof(_YieldSendPost_d__20<TResp>))]
+			where TResp : class => default; // 0x0000000181378230-0x0000000181378240
+		public static IEnumerator YieldSendGet(string url, FGetOptions options, System.Type respType, Misc.ObjectRef resultRef) => default; // 0x0000000185492010-0x0000000185492020
+		public static IEnumerator YieldSendPost(string url, FPostOptions options, Misc.ObjectRef resultRef) => default; // 0x000000018587A970-0x000000018587AA60
 		public static IEnumerator YieldSendPost<TResp>(string url, FPostOptions options, Misc.ObjectRef resultRef)
-			where TResp : class => default;
-		[IDTag(0)]
-		[IteratorStateMachine(typeof(_YieldSendPost_d__21))]
-		public static IEnumerator YieldSendPost(string url, FPostOptions options, System.Type respType, Misc.ObjectRef resultRef) => default; // 0x00000001839DC990-0x00000001839DCA60
-		public static WaitForAsyncTask<Result> WaitForSendPost(string url, FPostOptions options) => default; // 0x00000001892A2B88-0x00000001892A2C84
-		[IDTag(1)]
-		public static WaitForAsyncTask<Result> WaitForSendGet(string url) => default; // 0x00000001892A29EC-0x00000001892A2A8C
-		[IDTag(0)]
-		public static WaitForAsyncTask<Result> WaitForSendGet(string url, FGetOptions options) => default; // 0x00000001892A2A8C-0x00000001892A2B88
+			where TResp : class => default; // 0x0000000181377E40-0x0000000181377E50
+		public static IEnumerator YieldSendPost(string url, FPostOptions options, System.Type respType, Misc.ObjectRef resultRef) => default; // 0x000000018B3CF978-0x000000018B3CF9C4
+		public static WaitForAsyncTask<Result> WaitForSendPost(string url, FPostOptions options) => default; // 0x0000000181377E40-0x0000000181377E50
+		public static WaitForAsyncTask<Result> WaitForSendGet(string url) => default; // 0x0000000181378230-0x0000000181378240
+		public static WaitForAsyncTask<Result> WaitForSendGet(string url, FGetOptions options) => default; // 0x000000018B3CFA10-0x000000018B3CFA88
 		public static WaitForAsyncTask<Result<TResp>> WaitForSendPost<TResp>(string url, FPostOptions options)
-			where TResp : class => default;
+			where TResp : class => default; // 0x0000000184F37950-0x0000000184F38170
 		public static WaitForAsyncTask<Result<TResp>> WaitForSendGet<TResp>(string url, FGetOptions options)
-			where TResp : class => default;
+			where TResp : class => default; // 0x0000000184F382B0-0x0000000184F38310
 		public static int GetGeneralErrorCode(Result result, out bool hasError) {
 			hasError = default;
 			return default;
-		} // 0x0000000182F429F0-0x0000000182F42A60
-		[IDTag(0)]
-		[IteratorStateMachine(typeof(__YieldSendHttpRequest_d__28))]
-		private static IEnumerator _YieldSendHttpRequest(Result result, FSendFunc sendFunc) => default; // 0x00000001826921B0-0x0000000182692290
-		[IDTag(1)]
-		[IteratorStateMachine(typeof(__YieldSendHttpRequest_d__29))]
-		private static IEnumerator _YieldSendHttpRequest(Misc.ObjectRef resultRef, FSendFunc sendFunc, System.Type respType) => default; // 0x0000000183765670-0x0000000183765760
-		private static WaitForAsyncTask<Result> _WaitForSendHttpRequest(FSendFunc sendFunc) => default; // 0x00000001892A2ED8-0x00000001892A30A0
+		} // 0x0000000181377E40-0x0000000181377E50
+		private static IEnumerator _YieldSendHttpRequest(Result result, FSendFunc sendFunc) => default; // 0x000000018B3CF9C4-0x000000018B3CFA10
+		private static IEnumerator _YieldSendHttpRequest(Misc.ObjectRef resultRef, FSendFunc sendFunc, System.Type respType) => default; // 0x0000000181377E40-0x0000000181377E50
+		private static WaitForAsyncTask<Result> _WaitForSendHttpRequest(FSendFunc sendFunc) => default; // 0x0000000181378230-0x0000000181378240
 		private static WaitForAsyncTask<Result<TResp>> _WaitForSendHttpRequest<TResp>(FSendFunc sendFunc)
-			where TResp : class => default;
-		private static void _StartWebRequestTask(Result result, FSendFunc sendFunc) {} // 0x00000001838CEAA0-0x00000001838CEC10
-		private static void _WaitForServiceDone(Result result) {} // 0x0000000183C90670-0x0000000183C906C0
-		private static UnityWebRequest _CreateWebRequestGET(string url, FGetOptions options) => default; // 0x0000000182C47800-0x0000000182C47DF0
-		private static UnityWebRequest _CreateWebRequestPOST(string url, FPostOptions options) => default; // 0x0000000182C47F30-0x0000000182C48630
-		private static void _SetHttpResult(Result result, UnityWebRequest request) {} // 0x0000000182C47610-0x0000000182C47720
-		private static void _DeserializeTypedResult(TypedResult result) {} // 0x0000000182692ED0-0x0000000182692F80
-		private static void _DebugOnlyProfileResult(Result result, FSendFunc sendFunc) {} // 0x00000001892A2D6C-0x00000001892A2E04
-		private static void _MarkResultAsException(Result result, Exception ex) {} // 0x00000001892A2E04-0x00000001892A2ED8
+			where TResp : class => default; // 0x0000000185492010-0x0000000185492020
+		private static void _StartWebRequestTask(Result result, FSendFunc sendFunc) {} // 0x000000018571FC10-0x000000018571FDE0
+		private static void _WaitForServiceDone(Result result) {} // 0x0000000181377E40-0x0000000181377E50
+		private static UnityWebRequest _CreateWebRequestGET(string url, FGetOptions options) => default; // 0x000000018B3CFA88-0x000000018B3CFAD4
+		private static UnityWebRequest _CreateWebRequestPOST(string url, FPostOptions options) => default; // 0x0000000181377E40-0x0000000181377E50
+		private static void _SetHttpResult(Result result, UnityWebRequest request) {} // 0x0000000185492010-0x0000000185492020
+		private static void _DeserializeTypedResult(TypedResult result) {} // 0x000000018B3CF4E4-0x000000018B3CF504
+		private static void _DebugOnlyProfileResult(Result result, FSendFunc sendFunc) {}
+		private static void _MarkResultAsException(Result result, Exception ex) {}
 	}
 
-	public class CircularBuffer<T> : IReadOnlyList<T> // TypeDefIndex: 56190
+	public class CircularBuffer<T> : IReadOnlyList<T> // TypeDefIndex: 57191
 	{
 		// Fields
 		private readonly T[] m_buffer;
@@ -912,6 +1178,32 @@ namespace Beyond.Network
 		public int Count { get => default; }
 		public T this[int index] { get => default; set {} }
 	
+		// Nested types
+		private sealed class _GetEnumerator_d__18 : IEnumerator<T> // TypeDefIndex: 57190
+		{
+			// Fields
+			private int __1__state;
+			private T __2__current;
+			public CircularBuffer<T> __4__this;
+			private ArraySegment<T>[] __7__wrap1;
+			private int __7__wrap2;
+			private ArraySegment<T> _segment_5__4;
+			private int _i_5__5;
+	
+			// Properties
+			T IEnumerator<T>.Current { get => default; }
+			object IEnumerator.Current { get => default; }
+	
+			// Constructors
+			public _GetEnumerator_d__18() {} // Dummy constructor
+			public _GetEnumerator_d__18(int __1__state) {}
+	
+			// Methods
+			void IDisposable.Dispose() {}
+			private bool MoveNext() => default;
+			void IEnumerator.Reset() {}
+		}
+	
 		// Constructors
 		public CircularBuffer() {} // Dummy constructor
 		public CircularBuffer(int capacity) {}
@@ -919,7 +1211,6 @@ namespace Beyond.Network
 	
 		// Methods
 		public void Clear() {}
-		[IteratorStateMachine(typeof(_GetEnumerator_d__18))]
 		public IEnumerator<T> GetEnumerator() => default;
 		IEnumerator IEnumerable.GetEnumerator() => default;
 		public T Front() => default;
@@ -945,7 +1236,7 @@ namespace Beyond.Network
 			return default;
 		}
 		public T[] ToArray() => default;
-		private void _ThrowIfEmpty(string message = "Cannot access an empty buffer." /* Metadata: 0x01FD7D64 */) {}
+		private void _ThrowIfEmpty(string message = "Cannot access an empty buffer." /* Metadata: 0x0207D608 */) {}
 		private void _Increment(ref int index) {}
 		private void _Decrement(ref int index) {}
 		private int _InternalIndex(int index) => default;
@@ -953,7 +1244,7 @@ namespace Beyond.Network
 		private ArraySegment<T> _ArrayTwo() => default;
 	}
 
-	public abstract class HGNetBaseSession // TypeDefIndex: 56199
+	public abstract class HGNetBaseSession // TypeDefIndex: 57200
 	{
 		// Fields
 		private INetIO m_tcpIO; // 0x10
@@ -966,7 +1257,7 @@ namespace Beyond.Network
 		public int sendNumLimit; // 0x20
 		protected readonly ConcurrentQueue<NetResponse> m_recvQueue; // 0x28
 		protected readonly ConcurrentQueue<NetRequest> m_sendQueue; // 0x30
-		private const int MAX_RECYCLE_QUEUE_COUNT = 1000; // Metadata: 0x01FD7D83
+		private const int MAX_RECYCLE_QUEUE_COUNT = 1000; // Metadata: 0x0207D627
 		protected CircularBuffer<NetRequest> m_circularBuffer; // 0x38
 		private long m_csSeqId; // 0x40
 		protected long m_scSeqId; // 0x48
@@ -983,6 +1274,7 @@ namespace Beyond.Network
 		protected int m_closeNetMsgID; // 0x88
 		public static int INVALID_SESSION_ID; // 0x10
 		protected static int s_sessionIDGenerator; // 0x14
+		private int _sessionID_k__BackingField; // 0x8C
 		protected HGNetSessionConnectYield m_lastAsyncConnectHandle; // 0x90
 		protected EHGNetSessionState m_state; // 0x98
 		private EHGNetSessionReconnectState m_reconnectState; // 0x99
@@ -993,71 +1285,190 @@ namespace Beyond.Network
 		private long m_clientLastSendMsgMilliTs; // 0xB8
 	
 		// Properties
-		public int sessionID { get; protected set; } // 0x0000000183D4F3D0-0x0000000183D4F3E0 0x0000000183D4F420-0x0000000183D4F430
-		protected EHGNetSessionReconnectState reconnectState { get; set; } // 0x0000000183D6E080-0x0000000183D6E090 0x0000000182944CF0-0x0000000182944DB0
-		public bool isRunning { get; } // 0x00000001824C6600-0x00000001824C6690 
-		public bool isConnecting { get; } // 0x00000001892A0130-0x00000001892A013C 
-		public bool isRunningAndConnected { get; } // 0x00000001824C6690-0x00000001824C6D80 
-		public bool isReconnecting { get; } // 0x00000001824C6FA0-0x00000001824C6FB0 
-		public int closeErrorCode { get; } // 0x0000000183D51860-0x0000000183D51870 
-		public bool isAutoReconnect { get; } // 0x0000000183D4F800-0x0000000183D4F810 
-		public int maxRecycleQueueCount { get; } // 0x0000000183D5A950-0x0000000183D5A960 
+		public int sessionID { get; protected set; } // 0x0000000183FBC1F0-0x0000000183FBC300 0x0000000184A91510-0x0000000184A91550
+		protected EHGNetSessionReconnectState reconnectState { get; set; } // 0x000000018B3CA7C0-0x000000018B3CA83C 0x0000000184A91900-0x0000000184A93130
+		public bool isRunning { get; } // 0x0000000184263110-0x0000000184263190 
+		public bool isConnecting { get; } // 0x00000001843C9630-0x00000001843C9730 
+		public bool isRunningAndConnected { get; } // 0x00000001842630D0-0x0000000184263110 
+		public bool isReconnecting { get; } // 0x00000001850129F0-0x0000000185012A30 
+		public int closeErrorCode { get; } // 0x000000018B3CA770-0x000000018B3CA7C0 
+		public bool isAutoReconnect { get; } // 0x0000000185012990-0x00000001850129C0 
+		public int maxRecycleQueueCount { get; } // 0x0000000183FBB990-0x0000000183FBBAC0 
+	
+		// Nested types
+		private sealed class __c__DisplayClass56_0 // TypeDefIndex: 57192
+		{
+			// Fields
+			public HGNetBaseSession __4__this; // 0x10
+			public INetIO tcpIO; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass56_0() {} // 0x000000018349D720-0x000000018349D730
+	
+			// Methods
+			internal void _ConnectAsync_b__0(Task<System.Threading.Tasks.Task> task) {} // 0x00000001834A21B0-0x00000001834A21C0
+		}
+	
+		private sealed class __c__DisplayClass69_0 // TypeDefIndex: 57193
+		{
+			// Fields
+			public HGNetBaseSession __4__this; // 0x10
+			public INetIO tcp; // 0x18
+			public int nextid; // 0x20
+	
+			// Constructors
+			public __c__DisplayClass69_0() {} // 0x0000000185FCECB0-0x0000000185FCECC0
+	
+			// Methods
+			internal System.Threading.Tasks.Task _StartTCPMsgLoopThreadTask_b__0() => default; // 0x00000001843C32D0-0x00000001843C3390
+		}
+	
+		private struct __SessionThread_d__71 : IAsyncStateMachine // TypeDefIndex: 57194
+		{
+			// Fields
+			public int __1__state; // 0x00
+			public AsyncTaskMethodBuilder __t__builder; // 0x08
+			public HGNetBaseSession __4__this; // 0x20
+			public INetIO tcp; // 0x28
+			public int threadID; // 0x30
+			private TaskAwaiter __u__1; // 0x38
+	
+			// Methods
+			private void MoveNext() {} // 0x00000001840D6A50-0x00000001840D6AE0
+			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x000000018B3CA83C-0x000000018B3CA848
+		}
+	
+		private struct __ReconnectCheckerTick_d__80 : IAsyncStateMachine // TypeDefIndex: 57195
+		{
+			// Fields
+			public int __1__state; // 0x00
+			public AsyncTaskMethodBuilder __t__builder; // 0x08
+			public HGNetBaseSession __4__this; // 0x20
+			public INetIO tcpIO; // 0x28
+			private TaskAwaiter<bool> __u__1; // 0x30
+	
+			// Methods
+			private void MoveNext() {} // 0x00000001840D6AE0-0x00000001840D9520
+			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x0000000184CBA860-0x0000000184CBA870
+		}
+	
+		private sealed class __c__DisplayClass81_0 // TypeDefIndex: 57196
+		{
+			// Fields
+			public INetIO tcpIO; // 0x10
+			public string ip; // 0x18
+			public int port; // 0x20
+			public int sendTimeout; // 0x24
+			public int receiveBufferLen; // 0x28
+	
+			// Constructors
+			public __c__DisplayClass81_0() {} // 0x0000000185FB2CD0-0x0000000185FB2CE0
+	
+			// Methods
+			internal void _TryConnectWithTimeout_b__0() {} // 0x0000000185FB0DA0-0x0000000185FB0DB0
+		}
+	
+		private struct _TryConnectWithTimeout_d__81 : IAsyncStateMachine // TypeDefIndex: 57197
+		{
+			// Fields
+			public int __1__state; // 0x00
+			public AsyncTaskMethodBuilder<bool> __t__builder; // 0x08
+			public INetIO tcpIO; // 0x20
+			public string ip; // 0x28
+			public int port; // 0x30
+			public int sendTimeout; // 0x34
+			public int receiveBufferLen; // 0x38
+			public int timeoutMilliseconds; // 0x3C
+			public HGNetBaseSession __4__this; // 0x40
+			private System.Threading.Tasks.Task _connectTask_5__2; // 0x48
+			private TaskAwaiter<System.Threading.Tasks.Task> __u__1; // 0x50
+	
+			// Methods
+			private void MoveNext() {} // 0x0000000185FBBF90-0x0000000185FBBFA0
+			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x0000000183FC0D70-0x0000000183FC0F20
+		}
+	
+		private sealed class __c__DisplayClass82_0 // TypeDefIndex: 57198
+		{
+			// Fields
+			public INetIO tcpIO; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass82_0() {} // 0x000000018B3CA43C-0x000000018B3CA770
+	
+			// Methods
+			internal void _TryCloseTcpIOWithTimeout_b__0() {} // 0x0000000183FBB3C0-0x0000000183FBB830
+		}
+	
+		private struct _TryCloseTcpIOWithTimeout_d__82 : IAsyncStateMachine // TypeDefIndex: 57199
+		{
+			// Fields
+			public int __1__state; // 0x00
+			public AsyncTaskMethodBuilder<bool> __t__builder; // 0x08
+			public INetIO tcpIO; // 0x20
+			public int timeoutMilliseconds; // 0x28
+			public HGNetBaseSession __4__this; // 0x30
+			private System.Threading.Tasks.Task _closeTask_5__2; // 0x38
+			private TaskAwaiter<System.Threading.Tasks.Task> __u__1; // 0x40
+	
+			// Methods
+			private void MoveNext() {} // 0x0000000184F677A0-0x0000000184F678F0
+			private void SetStateMachine(IAsyncStateMachine stateMachine) {}
+		}
 	
 		// Constructors
-		protected HGNetBaseSession() {} // 0x0000000182F0EDC0-0x0000000182F0EF20
-		static HGNetBaseSession() {} // 0x0000000183CC52F0-0x0000000183CC53A0
+		protected HGNetBaseSession() {} // 0x0000000183FBAC00-0x0000000183FBAF10
+		static HGNetBaseSession() {} // 0x0000000185A17640-0x0000000185A176B0
 	
 		// Methods
-		public virtual void Start() {} // 0x00000001829430F0-0x00000001829432A0
-		public virtual bool Connect(string serverIp, int serverPort, bool forceReconnect) => default; // 0x000000018929FD30-0x00000001892A0064
+		public virtual void Start() {} // 0x0000000184A91840-0x0000000184A918A0
+		public virtual bool Connect(string serverIp, int serverPort, bool forceReconnect) => default; // 0x0000000185B3E930-0x0000000185B3EA60
 		public virtual bool ConnectAsync(string serverIp, int serverPort, bool forceReconnect, out HGNetSessionConnectYield yieldHandle) {
 			yieldHandle = default;
 			return default;
-		} // 0x000000018293D1B0-0x000000018293D620
-		public void OnConnectAsyncEnd(System.Threading.Tasks.Task completedTask, INetIO tcpIO) {} // 0x00000001838A22D0-0x00000001838A2420
+		} // 0x00000001843C8860-0x00000001843C8D80
+		public void OnConnectAsyncEnd(System.Threading.Tasks.Task completedTask, INetIO tcpIO) {} // 0x00000001843C48E0-0x00000001843C53A0
 		protected abstract void OnConnectedSucceed(INetIO tcpIO);
-		private void _DNSCheck(string serverIp) {} // 0x000000018293DFE0-0x000000018293E0F0
-		public virtual void Close(ENetCloseReason netCloseReason) {} // 0x000000018267B3E0-0x000000018267B420
-		[IDTag(1)]
-		protected void InternalClose(INetIO tcpIO, ENetCloseReason netCloseReason) {} // 0x00000001892A00B4-0x00000001892A0130
-		[IDTag(0)]
-		protected void InternalClose(INetIO tcpIO, int netCloseReason) {} // 0x00000001829432A0-0x0000000182943450
-		protected void EnqueueSendMsg(NetRequest msg) {} // 0x0000000182947280-0x0000000182947300
-		public int GetSendQueueMsgCount() => default; // 0x00000001824CCFD0-0x00000001824CD0D0
-		protected long IncrementCSSeqID() => default; // 0x0000000182947240-0x0000000182947280
-		protected void SetCSSeqID(long id) {} // 0x0000000182F0D690-0x0000000182F0D6D0
-		protected long GetCSSeqID() => default; // 0x00000001892A0064-0x00000001892A00B4
-		protected INetIO GetIO() => default; // 0x0000000182F0D630-0x0000000182F0D660
-		protected void StartTCPMsgLoopThreadTask() {} // 0x000000018293D780-0x000000018293D8B0
-		protected void CloseTCPMsgThreadTask() {} // 0x00000001829441B0-0x0000000182944210
-		private async System.Threading.Tasks.Task _SessionThread(INetIO tcp, int threadID) => default; // 0x000000018397CF20-0x000000018397D050
-		private bool _SendAndCheckMessage(INetIO tcp, int threadID) => default; // 0x00000001824CC200-0x00000001824CC720
-		private bool _ReadAndCheckMessageInSessionThread(INetIO tcp, int threadID) => default; // 0x00000001824C8290-0x00000001824C8D50
-		protected abstract bool ReadMessageInSessionThread(INetIO netIO, out NetResponse resp);
-		protected abstract void CheckAndDealRespMessages(INetIO netIO, ref NetResponse m);
+		private void _DNSCheck(string serverIp) {}
+		public virtual void Close(ENetCloseReason netCloseReason) {}
+		protected void InternalClose(INetIO tcpIO, ENetCloseReason netCloseReason) {} // 0x00000001843C7380-0x00000001843C7520
+		protected void InternalClose(INetIO tcpIO, int netCloseReason) {} // 0x0000000185750870-0x00000001857508A0
+		protected void EnqueueSendMsg(NetRequest msg) {} // 0x0000000184A93130-0x0000000184A93160
+		public int GetSendQueueMsgCount() => default; // 0x00000001843C55F0-0x00000001843C5890
+		protected long IncrementCSSeqID() => default; // 0x0000000185091320-0x0000000185091490
+		protected void SetCSSeqID(long id) {} // 0x0000000185091490-0x00000001850915F0
+		protected long GetCSSeqID() => default;
+		protected INetIO GetIO() => default;
+		protected void StartTCPMsgLoopThreadTask() {}
+		protected void CloseTCPMsgThreadTask() {}
+		private System.Threading.Tasks.Task _SessionThread(INetIO tcp, int threadID) => default;
+		private bool _SendAndCheckMessage(INetIO tcp, int threadID) => default;
+		private bool _ReadAndCheckMessageInSessionThread(INetIO tcp, int threadID) => default;
+		protected abstract bool ReadMessageInSessionThread(INetIO netIO, out NetResponse resp); // 0x00000001843C53A0-0x00000001843C54F0
+		protected abstract void CheckAndDealRespMessages(INetIO netIO, ref NetResponse m); // 0x00000001843C8D80-0x00000001843C8FF0
 		protected abstract void CheckAndWriteReqMsg(INetIO netIO, ref NetRequest m);
-		protected void SessionCheckSignalAndSleep(int threadID) {} // 0x00000001824CAD30-0x00000001824CAED0
-		protected void OpenAutoReconnect() {} // 0x0000000182D75B70-0x0000000182D75BA0
-		protected void RemoveAutoReconnect() {} // 0x0000000182943450-0x0000000182943480
-		private async System.Threading.Tasks.Task _ReconnectCheckerTick(INetIO tcpIO) => default; // 0x00000001824C8FA0-0x00000001824C9240
-		protected async Task<bool> TryConnectWithTimeout(INetIO tcpIO, string ip, int port, int sendTimeout, int receiveBufferLen, int timeoutMilliseconds) => default; // 0x00000001832F8460-0x00000001832F85D0
-		protected async Task<bool> TryCloseTcpIOWithTimeout(INetIO tcpIO, int timeoutMilliseconds) => default; // 0x00000001832F85D0-0x00000001832F8730
-		protected abstract void OnReconnectTimesOver(INetIO tcpIO);
-		protected abstract bool NeedKeepConnect();
-		protected abstract void DoReconnectLogin(INetIO netIO);
-		protected abstract void InitClientRSAKey();
-		protected abstract void ClearRSAKey();
-		public abstract void ClearRecvQueue();
-		public abstract void ClearSendQueue();
-		protected void NetStatusChecker_Receive(INetIO netIO, long scSeqId, int receiveCount) {} // 0x00000001824C8D50-0x00000001824C8EA0
-		protected void NetStatusChecker_Sender(INetIO netIO, long csSeqId, int sendCount) {} // 0x00000001824CC720-0x00000001824CC990
-		protected abstract void SessionConnectTimeoutCheckerTick(INetIO netIO, long clientLastReceiveMsgMilliTs, long clientLastSendMsgMilliTs);
-		protected abstract void ClearPingWDG();
-		protected abstract bool IsPingOut();
-		protected abstract void PingSenderTick(INetIO netIO, long upSeqId);
+		protected void SessionCheckSignalAndSleep(int threadID) {}
+		protected void OpenAutoReconnect() {}
+		protected void RemoveAutoReconnect() {}
+		private System.Threading.Tasks.Task _ReconnectCheckerTick(INetIO tcpIO) => default; // 0x0000000184F307D0-0x0000000184F30930
+		protected Task<bool> TryConnectWithTimeout(INetIO tcpIO, string ip, int port, int sendTimeout, int receiveBufferLen, int timeoutMilliseconds) => default; // 0x0000000185F1E9A0-0x0000000185F1EA60
+		protected Task<bool> TryCloseTcpIOWithTimeout(INetIO tcpIO, int timeoutMilliseconds) => default; // 0x0000000185492010-0x0000000185492020
+		protected abstract void OnReconnectTimesOver(INetIO tcpIO); // 0x0000000184F67770-0x0000000184F677A0
+		protected abstract bool NeedKeepConnect(); // 0x0000000185492010-0x0000000185492020
+		protected abstract void DoReconnectLogin(INetIO netIO); // 0x0000000185B3E900-0x0000000185B3E930
+		protected abstract void InitClientRSAKey(); // 0x00000001843C58F0-0x00000001843C6CA0
+		protected abstract void ClearRSAKey(); // 0x00000001857B8CE0-0x00000001857B8D40
+		public abstract void ClearRecvQueue(); // 0x000000018469E8D0-0x000000018469F980
+		public abstract void ClearSendQueue(); // 0x00000001857B8D40-0x00000001857B8DA0
+		protected void NetStatusChecker_Receive(INetIO netIO, long scSeqId, int receiveCount) {} // 0x0000000185492010-0x0000000185492020
+		protected void NetStatusChecker_Sender(INetIO netIO, long csSeqId, int sendCount) {} // 0x0000000183FBC6B0-0x0000000183FBC780
+		protected abstract void SessionConnectTimeoutCheckerTick(INetIO netIO, long clientLastReceiveMsgMilliTs, long clientLastSendMsgMilliTs); // 0x0000000183FBAF10-0x0000000183FBB240
+		protected abstract void ClearPingWDG(); // 0x0000000185A176B0-0x0000000185A17720
+		protected abstract bool IsPingOut(); // 0x0000000185492010-0x0000000185492020
+		protected abstract void PingSenderTick(INetIO netIO, long upSeqId); // 0x0000000184A93330-0x0000000184A933A0
 	}
 
-	public class HGNetSession : HGNetBaseSession // TypeDefIndex: 56200
+	public class HGNetSession : HGNetBaseSession // TypeDefIndex: 57201
 	{
 		// Fields
 		private string m_uid; // 0xC0
@@ -1083,7 +1494,7 @@ namespace Beyond.Network
 		public static long s_maxPackedMessageNum; // 0x20
 		protected readonly Queue<NetResponse> m_callbackQueue; // 0x120
 		private HGNetSessionLoginYield m_currLoginHandle; // 0x128
-		private const int SEND_PING_DELTA_TICK_TIME_MS = 2000; // Metadata: 0x01FD7D87
+		private const int SEND_PING_DELTA_TICK_TIME_MS = 2000; // Metadata: 0x0207D62B
 		private static int s_pingWdgOutTimes; // 0x28
 		private static int s_pingSyncFullEndBeforeTimes; // 0x2C
 		private long m_needSendPingTimer; // 0x130
@@ -1102,68 +1513,69 @@ namespace Beyond.Network
 		private StringBuilder m_sbCache; // 0x160
 	
 		// Constructors
-		public HGNetSession() {} // 0x0000000182F0EB50-0x0000000182F0EDC0
-		static HGNetSession() {} // 0x0000000183A27930-0x0000000183A27B40
+		public HGNetSession() {} // 0x0000000184F30560-0x0000000184F307D0
+		static HGNetSession() {} // 0x0000000185C2B770-0x0000000185C2B980
 	
 		// Methods
-		public void SetAutoReconnectToken(string uid, string token, int channel) {} // 0x000000018229B650-0x000000018229B6D0
-		protected override void SessionConnectTimeoutCheckerTick(INetIO netIO, long clientLastReceiveMsgMilliTs, long clientLastSendMsgMilliTs) {} // 0x0000000182FCABF0-0x0000000182FCACE0
-		protected override void DoReconnectLogin(INetIO netIO) {} // 0x00000001892A0204-0x00000001892A08E8
-		public override void Start() {} // 0x0000000183A614C0-0x0000000183A61630
-		public void OnApplicationPause(bool pause) {} // 0x00000001892A0938-0x00000001892A0A20
-		public ulong SendMessage(IMessage msg) => default; // 0x0000000182946500-0x0000000182946870
-		protected void PackMessageToSendQueue() {} // 0x00000001892A0A8C-0x00000001892A1190
-		public void UpdateInGameThread() {} // 0x00000001892A1204-0x00000001892A1268
-		public void TailLateUpdateInGameThread() {} // 0x00000001892A11E4-0x00000001892A11FC
-		private float _GetMessageTimeLimit() => default; // 0x00000001892A1268-0x00000001892A12E8
-		private void _ProcessReceivedMessagesInGameThread(bool flushAll) {} // 0x00000001892A1C64-0x00000001892A1FF4
-		public HGNetSessionLoginYield LoginAsync(string uid, string token, int channel) => default; // 0x000000018229CE50-0x000000018229D260
-		private static void _CSLoginHelper_UpdateAppInfo(MSG_A1 msg) {} // 0x0000000182F42E90-0x0000000182F42F40
-		private static string _GetOnlineResVersion() => default; // 0x0000000182F432D0-0x0000000182F43380
-		private static ENV_TYPE _GetSDKEnv() => default; // 0x0000000182F42650-0x0000000182F42710
-		private static CLIENT_PLATFORM_TYPE _GetPlatformID() => default; // 0x0000000182F42AF0-0x0000000182F42B20
-		private static int _GetPayPlatform() => default; // 0x0000000182F42A60-0x0000000182F42AC0
-		private void _SessionLoginThreadTask(object handle) {} // 0x0000000182F0D2B0-0x0000000182F0D630
-		public void StartMsgLoop() {} // 0x0000000182D75AC0-0x0000000182D75B10
-		protected override void OnConnectedSucceed(INetIO tcpIO) {} // 0x0000000183D48E60-0x0000000183D48E90
-		protected override void OnReconnectTimesOver(INetIO tcpIO) {} // 0x00000001892A0A20-0x00000001892A0A8C
-		protected override bool NeedKeepConnect() => default; // 0x0000000182FCACE0-0x0000000182FCADA0
-		protected override void CheckAndWriteReqMsg(INetIO netIO, ref NetRequest req) {} // 0x00000001832BA150-0x00000001832BA2C0
-		private void _WriteMessageInSessionThread(INetIO netIO, ref NetRequest request, bool useSRSA = false /* Metadata: 0x01FD7D85 */) {} // 0x00000001824D2DD0-0x00000001824D3160
+		public void SetAutoReconnectToken(string uid, string token, int channel) {} // 0x0000000184CB9BE0-0x0000000184CB9C60
+		protected override void SessionConnectTimeoutCheckerTick(INetIO netIO, long clientLastReceiveMsgMilliTs, long clientLastSendMsgMilliTs) {} // 0x0000000184E12FA0-0x0000000184E13090
+		protected override void DoReconnectLogin(INetIO netIO) {} // 0x000000018B3D2988-0x000000018B3D306C
+		public override void Start() {} // 0x0000000185C6D6B0-0x0000000185C6D820
+		public void OnApplicationPause(bool pause) {} // 0x000000018B3D30BC-0x000000018B3D31A4
+		public ulong SendMessage(IMessage msg) => default; // 0x0000000184262390-0x0000000184262700
+		protected void PackMessageToSendQueue() {} // 0x000000018B3D3210-0x000000018B3D38C0
+		private void _FlushMergeQueueToSendQueue() {} // 0x0000000183E39040-0x0000000183E39EB0
+		public void UpdateInGameThread() {} // 0x000000018B3D392C-0x000000018B3D3990
+		public void TailLateUpdateInGameThread() {} // 0x000000018B3D3914-0x000000018B3D392C
+		private float _GetMessageTimeLimit() => default; // 0x000000018B3D3990-0x000000018B3D3A10
+		private void _ProcessReceivedMessagesInGameThread(bool flushAll) {} // 0x000000018B3D43D4-0x000000018B3D4764
+		public HGNetSessionLoginYield LoginAsync(string uid, string token, int channel) => default; // 0x0000000184260490-0x00000001842608A0
+		private static void _CSLoginHelper_UpdateAppInfo(MSG_A1 msg) {} // 0x00000001855ECF00-0x00000001855ECFB0
+		private static string _GetOnlineResVersion() => default; // 0x00000001855ED080-0x00000001855ED130
+		private static ENV_TYPE _GetSDKEnv() => default; // 0x00000001855ECB80-0x00000001855ECC40
+		private static CLIENT_PLATFORM_TYPE _GetPlatformID() => default; // 0x00000001855ED5D0-0x00000001855ED600
+		private static int _GetPayPlatform() => default; // 0x00000001855ED600-0x00000001855ED660
+		private void _SessionLoginThreadTask(object handle) {} // 0x0000000185011260-0x0000000185012990
+		public void StartMsgLoop() {} // 0x00000001857507C0-0x0000000185750810
+		protected override void OnConnectedSucceed(INetIO tcpIO) {} // 0x0000000185FA9210-0x0000000185FA9240
+		protected override void OnReconnectTimesOver(INetIO tcpIO) {} // 0x000000018B3D31A4-0x000000018B3D3210
+		protected override bool NeedKeepConnect() => default; // 0x0000000184E13090-0x0000000184E13150
+		protected override void CheckAndWriteReqMsg(INetIO netIO, ref NetRequest req) {} // 0x00000001843D0D10-0x00000001843D0E80
+		private void _WriteMessageInSessionThread(INetIO netIO, ref NetRequest request, bool useSRSA = false /* Metadata: 0x0207D629 */) {} // 0x00000001843D0540-0x00000001843D08D0
 		protected override bool ReadMessageInSessionThread(INetIO netIO, out NetResponse resp) {
 			resp = default;
 			return default;
-		} // 0x00000001824CD2A0-0x00000001824CD3A0
-		private bool _ReadMessageInSessionThread(INetIO netIO, out NetResponse resp, bool useSRSA = false /* Metadata: 0x01FD7D86 */) {
+		} // 0x00000001843C9900-0x00000001843C9A00
+		private bool _ReadMessageInSessionThread(INetIO netIO, out NetResponse resp, bool useSRSA = false /* Metadata: 0x0207D62A */) {
 			resp = default;
 			return default;
-		} // 0x00000001824CA720-0x00000001824CAD30
-		public override void ClearRecvQueue() {} // 0x00000001824C6FB0-0x00000001824C71E0
-		public override void ClearSendQueue() {} // 0x0000000183D00680-0x0000000183D006E0
-		public static void SetBurstMode(bool val) {} // 0x00000001892A1190-0x00000001892A11E4
-		~HGNetSession() {} // 0x0000000183CFA670-0x0000000183CFA6B0
-		public int GetPing() => default; // 0x00000001824C64F0-0x00000001824C6600
-		public bool IsPingInProgress() => default; // 0x00000001892A08E8-0x00000001892A0938
-		public long GetPingPassedTime() => default; // 0x0000000183559D50-0x0000000183559DF0
-		protected override void ClearPingWDG() {} // 0x00000001834564F0-0x0000000183456580
-		private void _ApproximateLoginServerTime(long serverTimeMS, int serverZone) {} // 0x0000000182F0D6D0-0x0000000182F0D750
-		private bool _HandleSpecialMessagePing(NetResponse m) => default; // 0x00000001831DA430-0x00000001831DA620
-		protected override bool IsPingOut() => default; // 0x00000001824CCE60-0x00000001824CCFD0
-		protected override void PingSenderTick(INetIO netIO, long upSeqId) {} // 0x00000001824CD3A0-0x00000001824CD8A0
-		public static byte[] GetClientPublicKey() => default; // 0x000000018229D780-0x000000018229D820
-		protected override void InitClientRSAKey() {} // 0x00000001831854A0-0x00000001831855B0
-		private byte[] _RSADecrypt(byte[] data) => default; // 0x0000000183187930-0x0000000183187A30
-		protected override void ClearRSAKey() {} // 0x00000001892A013C-0x00000001892A0204
-		protected override void CheckAndDealRespMessages(INetIO netIO, ref NetResponse msg) {} // 0x00000001824C7660-0x00000001824C7FC0
-		private bool _HandleSpecialMessageReconnectIncr(INetIO netIO, NetResponse m) => default; // 0x00000001892A1570-0x00000001892A1AC8
-		private bool _HandleSpecialMessageReconnectFull(INetIO netIO, NetResponse m) => default; // 0x00000001892A13C8-0x00000001892A1570
-		private bool _HandleSpecialMessageErrorCode(INetIO netIO, NetResponse m) => default; // 0x00000001892A12E8-0x00000001892A13C8
-		private bool _HandleSpecialMessageReconnectLogin(INetIO netIO, NetResponse m) => default; // 0x00000001892A1AC8-0x00000001892A1C64
-		private void _HandleLoginEncryp(INetIO netIO, MSG_B1 msg) {} // 0x0000000183187610-0x0000000183187700
-		public void __iFixBaseProxy_Start() {} // 0x00000001892A11FC-0x00000001892A1204
+		} // 0x00000001843C6D70-0x00000001843C7380
+		public override void ClearRecvQueue() {} // 0x0000000185099E90-0x0000000185099F00
+		public override void ClearSendQueue() {} // 0x0000000185F5F1E0-0x0000000185F5F240
+		public static void SetBurstMode(bool val) {} // 0x000000018B3D38C0-0x000000018B3D3914
+		~HGNetSession() {} // 0x0000000185F56B60-0x0000000185F56BA0
+		public int GetPing() => default; // 0x00000001840D6940-0x00000001840D6A50
+		public bool IsPingInProgress() => default; // 0x000000018B3D306C-0x000000018B3D30BC
+		public long GetPingPassedTime() => default; // 0x00000001855C17D0-0x00000001855C1870
+		protected override void ClearPingWDG() {} // 0x000000018543A330-0x000000018543A3C0
+		private void _ApproximateLoginServerTime(long serverTimeMS, int serverZone) {} // 0x0000000185012A30-0x0000000185012AB0
+		private bool _HandleSpecialMessagePing(NetResponse m) => default; // 0x00000001843C3390-0x00000001843C3580
+		protected override bool IsPingOut() => default; // 0x00000001843C94C0-0x00000001843C9630
+		protected override void PingSenderTick(INetIO netIO, long upSeqId) {} // 0x00000001843C9A00-0x00000001843C9F00
+		public static byte[] GetClientPublicKey() => default; // 0x0000000185F4B2F0-0x0000000185F4B390
+		protected override void InitClientRSAKey() {} // 0x000000018418D1F0-0x000000018418D300
+		private byte[] _RSADecrypt(byte[] data) => default; // 0x0000000184F782E0-0x0000000184F783E0
+		protected override void ClearRSAKey() {} // 0x000000018B3D28C0-0x000000018B3D2988
+		protected override void CheckAndDealRespMessages(INetIO netIO, ref NetResponse msg) {} // 0x00000001843C3CB0-0x00000001843C4610
+		private bool _HandleSpecialMessageReconnectIncr(INetIO netIO, NetResponse m) => default; // 0x000000018B3D3C98-0x000000018B3D41F0
+		private bool _HandleSpecialMessageReconnectFull(INetIO netIO, NetResponse m) => default; // 0x000000018B3D3AF0-0x000000018B3D3C98
+		private bool _HandleSpecialMessageErrorCode(INetIO netIO, NetResponse m) => default; // 0x000000018B3D3A10-0x000000018B3D3AF0
+		private bool _HandleSpecialMessageReconnectLogin(INetIO netIO, NetResponse m) => default; // 0x000000018B3D41F0-0x000000018B3D43D4
+		private bool _HandleLoginEncryp(INetIO netIO, MSG_B1 msg) => default; // 0x0000000183E39EB0-0x0000000183E3B440
+		public void __iFixBaseProxy_Start() {} // 0x000000018B3D2384-0x000000018B3D238C
 	}
 
-	public enum EHGNetSessionState : byte // TypeDefIndex: 56201
+	public enum EHGNetSessionState : byte // TypeDefIndex: 57202
 	{
 		Closed = 0,
 		Opened = 1,
@@ -1171,7 +1583,7 @@ namespace Beyond.Network
 		SessionRunning = 3
 	}
 
-	public enum EHGNetSessionReconnectState : byte // TypeDefIndex: 56202
+	public enum EHGNetSessionReconnectState : byte // TypeDefIndex: 57203
 	{
 		None = 0,
 		ReconnectingTcp = 1,
@@ -1179,7 +1591,7 @@ namespace Beyond.Network
 		ResendPack = 3
 	}
 
-	public enum ENetCloseReason // TypeDefIndex: 56203
+	public enum ENetCloseReason // TypeDefIndex: 57204
 	{
 		Invalid = -1,
 		None = 0,
@@ -1193,21 +1605,21 @@ namespace Beyond.Network
 		ClientReconnectTooMuchTimes = 700013
 	}
 
-	public static class HGNetSessionUtils // TypeDefIndex: 56204
+	public static class HGNetSessionUtils // TypeDefIndex: 57205
 	{
 		// Methods
-		public static bool CheckErrorNeedsDisconnect(CODE errorCode) => default; // 0x00000001892A9F08-0x00000001892A9F70
+		public static bool CheckErrorNeedsDisconnect(CODE errorCode) => default; // 0x000000018B3D2858-0x000000018B3D28C0
 	}
 
-	public static class HGNetSessionConstant // TypeDefIndex: 56205
+	public static class HGNetSessionConstant // TypeDefIndex: 57206
 	{
 		// Fields
-		public const int CODE_SUC = 0; // Metadata: 0x01FD7DB3
-		public const int CODE_CONN_FAILED = 1; // Metadata: 0x01FD7DB4
-		public const int CODE_CONN_WAIT = -1; // Metadata: 0x01FD7DB5
+		public const int CODE_SUC = 0; // Metadata: 0x0207D657
+		public const int CODE_CONN_FAILED = 1; // Metadata: 0x0207D658
+		public const int CODE_CONN_WAIT = -1; // Metadata: 0x0207D659
 	}
 
-	public enum ENetConnectErrorCode // TypeDefIndex: 56206
+	public enum ENetConnectErrorCode // TypeDefIndex: 57207
 	{
 		Invalid = -1,
 		None = 0,
@@ -1216,7 +1628,7 @@ namespace Beyond.Network
 		TimeOut = 800002
 	}
 
-	public class HGNetSessionLoginYield : CustomYieldInstruction // TypeDefIndex: 56208
+	public class HGNetSessionLoginYield : CustomYieldInstruction // TypeDefIndex: 57209
 	{
 		// Fields
 		internal LoginErrorInfo m_loginErrorInfo; // 0x10
@@ -1226,65 +1638,69 @@ namespace Beyond.Network
 		private object m_locker; // 0x30
 	
 		// Properties
-		public bool isSucceed { get => default; } // 0x000000018229C1D0-0x000000018229C200 
-		public override bool keepWaiting { get => default; } // 0x0000000183D032E0-0x0000000183D032F0 
+		public bool isSucceed { get => default; } // 0x000000018B3D5500-0x000000018B3D5578 
+		public override bool keepWaiting { get => default; } // 0x0000000184F309E0-0x0000000184F30A30 
 	
 		// Nested types
-		internal class LoginErrorInfo // TypeDefIndex: 56207
+		internal class LoginErrorInfo // TypeDefIndex: 57208
 		{
+			// Fields
+			private int _code_k__BackingField; // 0x10
+			private string _details_k__BackingField; // 0x18
+	
 			// Properties
-			internal int code { get; private set; } // 0x0000000183D4E340-0x0000000183D4E350 0x00000001810410F0-0x0000000181041100
-			internal string details { get; private set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+			internal int code { get; private set; } // 0x0000000184F30930-0x0000000184F309E0 0x0000000184F2FD50-0x0000000184F2FE10
+			internal string details { get; private set; } // 0x00000001850129C0-0x00000001850129F0 0x0000000184CB9890-0x0000000184CB98C0
 	
 			// Constructors
-			public LoginErrorInfo() {} // 0x0000000182F0EFD0-0x0000000182F0F020
+			public LoginErrorInfo() {} // 0x000000018B3D2760-0x000000018B3D2858
 	
 			// Methods
-			public void SetErrorInvaild() {} // 0x0000000182F0F020-0x0000000182F0F090
-			public void SetErrorConnectError() {} // 0x00000001892AF990-0x00000001892AFA1C
-			public void SetErrorConnectTimeOut() {} // 0x00000001892AFA1C-0x00000001892AFAA8
-			public void Clear() {} // 0x0000000182F0EAE0-0x0000000182F0EB50
-			public void Set(int code, string details) {} // 0x00000001892AFAA8-0x00000001892AFB20
+			public void SetErrorInvaild() {} // 0x000000018B3D2490-0x000000018B3D24E8
+			public void SetErrorConnectError() {} // 0x000000018B3D24E8-0x000000018B3D2540
+			public void SetErrorConnectTimeOut() {} // 0x0000000184F2F930-0x0000000184F2FB20
+			public void Clear() {} // 0x000000018B3D2638-0x000000018B3D2760
+			public void Set(int code, string details) {} // 0x000000018B3D2540-0x000000018B3D2638
 		}
 	
 		// Constructors
-		public HGNetSessionLoginYield() {} // 0x0000000182F0EF20-0x0000000182F0EFD0
-		public HGNetSessionLoginYield(MSG_A1 req) {} // 0x0000000182F0E970-0x0000000182F0EA30
+		public HGNetSessionLoginYield() {} // 0x0000000184CB9B40-0x0000000184CB9B70
+		public HGNetSessionLoginYield(MSG_A1 req) {} // 0x0000000185F61D60-0x0000000185F61D70
 	
 		// Methods
-		public MSG_A1 GetRequest() => default; // 0x0000000182F0D660-0x0000000182F0D690
-		public MSG_B1 GetResponse() => default; // 0x000000018229C5A0-0x000000018229C5D0
-		public int GetErrorCode() => default; // 0x00000001892A9B40-0x00000001892A9B98
-		public string GetErrorDetails() => default; // 0x00000001892A9B98-0x00000001892A9BF0
-		public void SetSucceed(MSG_B1 sc) {} // 0x0000000182F0E780-0x0000000182F0E970
-		public void SetNtfError(int ntfErrorCode, string ntfErrorDetails) {} // 0x00000001892A9CE8-0x00000001892A9E10
-		public void SetConnectErrorError() {} // 0x00000001892A9BF0-0x00000001892A9CE8
-		public void SetTimeOutError() {} // 0x00000001892A9E10-0x00000001892A9F08
+		public MSG_A1 GetRequest() => default; // 0x0000000181C0BBD0-0x0000000181C0BBE0
+		public MSG_B1 GetResponse() => default; // 0x0000000181378230-0x0000000181378240
+		public int GetErrorCode() => default; // 0x0000000181377E40-0x0000000181377E50
+		public string GetErrorDetails() => default; // 0x0000000184088E70-0x0000000184088E80
+		public void SetSucceed(MSG_B1 sc) {} // 0x0000000184F30A30-0x0000000184F30AA0
+		public void SetNtfError(int ntfErrorCode, string ntfErrorDetails) {} // 0x000000018B3D53E8-0x000000018B3D5474
+		public void SetConnectErrorError() {} // 0x000000018B3D5474-0x000000018B3D5500
+		public void SetTimeOutError() {} // 0x0000000184F304F0-0x0000000184F30560
 	}
 
-	public class HGNetSessionConnectYield : CustomYieldInstruction // TypeDefIndex: 56209
+	public class HGNetSessionConnectYield : CustomYieldInstruction // TypeDefIndex: 57210
 	{
 		// Fields
 		internal System.Threading.Tasks.Task m_connectTask; // 0x10
 		internal ENetConnectErrorCode connectErrorCode; // 0x18
 	
 		// Properties
-		public bool isSucceed { get => default; } // 0x000000018229C590-0x000000018229C5A0 
-		public override bool keepWaiting { get => default; } // 0x0000000183CB5470-0x0000000183CB54C0 
+		public bool isSucceed { get => default; } // 0x0000000184CB9880-0x0000000184CB9890 
+		public override bool keepWaiting { get => default; } // 0x0000000185F081E0-0x0000000185F08230 
 	
 		// Constructors
-		public HGNetSessionConnectYield() {} // 0x0000000183D50330-0x0000000183D50340
-		public HGNetSessionConnectYield(System.Threading.Tasks.Task connectTask) {} // 0x00000001830840F0-0x0000000183084120
+		public HGNetSessionConnectYield() {} // 0x0000000185FB1880-0x0000000185FB1890
+		public HGNetSessionConnectYield(System.Threading.Tasks.Task connectTask) {} // 0x000000018504FE80-0x000000018504FEB0
 	
 		// Methods
-		public int GetCode() => default; // 0x00000001892A9AF4-0x00000001892A9B40
-		public void SetFinish(ENetConnectErrorCode code) {} // 0x00000001838A2420-0x00000001838A2460
+		public int GetCode() => default; // 0x000000018B3D2444-0x000000018B3D2490
+		public void SetFinish(ENetConnectErrorCode code) {} // 0x0000000184F678F0-0x0000000184F67930
 	}
 }
 
 namespace Beyond.Network.HGNetLogger
 {
-	public abstract class HGNetLogBaseSession // TypeDefIndex: 56210
+	public abstract class HGNetLogBaseSession // TypeDefIndex: 57211
 	{
 		// Fields
 		private readonly INetIO m_tcpIO; // 0x10
@@ -1297,7 +1713,7 @@ namespace Beyond.Network.HGNetLogger
 		protected int m_sendNumLimit; // 0x18
 		protected readonly ConcurrentQueue<NetResponse> m_recvQueue; // 0x20
 		private readonly ConcurrentQueue<NetRequest> m_sendQueue; // 0x28
-		private const int MAX_RECYCLE_QUEUE_COUNT = 1000; // Metadata: 0x01FD7DC4
+		private const int MAX_RECYCLE_QUEUE_COUNT = 1000; // Metadata: 0x0207D668
 		protected CircularBuffer<NetRequest> m_circularBuffer; // 0x30
 		private long m_csSeqId; // 0x38
 		protected long m_scSeqId; // 0x40
@@ -1318,60 +1734,58 @@ namespace Beyond.Network.HGNetLogger
 		private long m_clientLastSendMsgMilliTs; // 0x90
 	
 		// Properties
-		public bool isRunning { get; } // 0x00000001892A9584-0x00000001892A9590 
-		public bool isConnecting { get; } // 0x00000001892A956C-0x00000001892A9578 
-		public bool isRunningAndConnected { get; } // 0x00000001892A9578-0x00000001892A9584 
-		public int closeErrorCode { get; } // 0x0000000183D4F370-0x0000000183D4F380 
-		public bool isAutoReconnect { get; } // 0x0000000183D4F260-0x0000000183D4F270 
+		public bool isRunning { get; } // 0x000000018B3D1ECC-0x000000018B3D1ED8 
+		public bool isConnecting { get; } // 0x000000018B3D1EB4-0x000000018B3D1EC0 
+		public bool isRunningAndConnected { get; } // 0x000000018B3D1EC0-0x000000018B3D1ECC 
+		public int closeErrorCode { get; } // 0x0000000182FB0000-0x0000000182FB0010 
+		public bool isAutoReconnect { get; } // 0x0000000185FB0950-0x0000000185FB0960 
 	
 		// Constructors
-		protected HGNetLogBaseSession() {} // 0x00000001892A9424-0x00000001892A956C
-		static HGNetLogBaseSession() {} // 0x00000001892A9370-0x00000001892A9424
+		protected HGNetLogBaseSession() {} // 0x000000018B3D1D6C-0x000000018B3D1EB4
+		static HGNetLogBaseSession() {} // 0x000000018B3D1CB8-0x000000018B3D1D6C
 	
 		// Methods
-		public virtual void Start() {} // 0x00000001892A89EC-0x00000001892A8B30
-		public virtual bool Connect(string serverIp, int serverPort, bool forceReconnect) => default; // 0x00000001892A7EA4-0x00000001892A8188
+		public virtual void Start() {} // 0x000000018B3D1334-0x000000018B3D1478
+		public virtual bool Connect(string serverIp, int serverPort, bool forceReconnect) => default; // 0x000000018B3D07EC-0x000000018B3D0AD0
 		public virtual bool ConnectAsync(string serverIp, int serverPort, bool forceReconnect, out HGNetSessionConnectYield yieldHandle) {
 			yieldHandle = default;
 			return default;
-		} // 0x00000001892A7B0C-0x00000001892A7EA4
-		public void OnConnectAsyncEnd(System.Threading.Tasks.Task continuationAction) {} // 0x00000001892A8530-0x00000001892A8668
+		} // 0x000000018B3D0454-0x000000018B3D07EC
+		public void OnConnectAsyncEnd(System.Threading.Tasks.Task continuationAction) {} // 0x000000018B3D0E78-0x000000018B3D0FB0
 		protected abstract void OnConnectedSucceed(INetIO tcpIO);
-		private void _DNSCheck(string serverIp) {} // 0x00000001892A8B30-0x00000001892A8CEC
-		[IDTag(1)]
-		public virtual void Close(ENetCloseReason netCloseReason) {} // 0x00000001892A78A8-0x00000001892A790C
-		[IDTag(0)]
-		public virtual void Close(int netCloseReason) {} // 0x00000001892A790C-0x00000001892A7B0C
-		protected void EnqueueSendMsg(NetRequest msg) {} // 0x00000001892A8188-0x00000001892A823C
-		public int GetSendQueueMsgCount() => default; // 0x00000001892A82DC-0x00000001892A8358
-		protected long IncrementCSSeqID() => default; // 0x00000001892A8358-0x00000001892A83B0
-		protected void SetCSSeqID(long id) {} // 0x00000001892A87CC-0x00000001892A8828
-		protected long GetCSSeqID() => default; // 0x00000001892A823C-0x00000001892A828C
-		protected INetIO GetIO() => default; // 0x00000001892A828C-0x00000001892A82DC
-		protected void StartTCPMsgLoopThreadTask() {} // 0x00000001892A8828-0x00000001892A89EC
-		protected void CloseTCPMsgThreadTask() {} // 0x00000001892A77C8-0x00000001892A78A8
-		private void _SessionThread() {} // 0x00000001892A8FB0-0x00000001892A9370
+		private void _DNSCheck(string serverIp) {} // 0x000000018B3D1478-0x000000018B3D1634
+		public virtual void Close(ENetCloseReason netCloseReason) {} // 0x000000018B3D01F0-0x000000018B3D0254
+		public virtual void Close(int netCloseReason) {} // 0x000000018B3D0254-0x000000018B3D0454
+		protected void EnqueueSendMsg(NetRequest msg) {} // 0x000000018B3D0AD0-0x000000018B3D0B84
+		public int GetSendQueueMsgCount() => default; // 0x000000018B3D0C24-0x000000018B3D0CA0
+		protected long IncrementCSSeqID() => default; // 0x000000018B3D0CA0-0x000000018B3D0CF8
+		protected void SetCSSeqID(long id) {} // 0x000000018B3D1114-0x000000018B3D1170
+		protected long GetCSSeqID() => default; // 0x000000018B3D0B84-0x000000018B3D0BD4
+		protected INetIO GetIO() => default; // 0x000000018B3D0BD4-0x000000018B3D0C24
+		protected void StartTCPMsgLoopThreadTask() {} // 0x000000018B3D1170-0x000000018B3D1334
+		protected void CloseTCPMsgThreadTask() {} // 0x000000018B3D0110-0x000000018B3D01F0
+		private void _SessionThread() {} // 0x000000018B3D18F8-0x000000018B3D1CB8
 		protected abstract bool ReadMessageInSessionThread(INetIO netIO, out NetResponse resp);
 		protected abstract void CheckAndDealRespMessages(INetIO netIO, ref NetResponse m);
 		protected abstract void CheckAndWriteReqMsg(INetIO netIO, ref NetRequest m);
-		protected void SessionCheckSignalAndSleep() {} // 0x00000001892A8704-0x00000001892A87CC
-		protected void OpenAutoReconnect() {} // 0x00000001892A8668-0x00000001892A86B8
-		protected void RemoveAutoReconnect() {} // 0x00000001892A86B8-0x00000001892A8704
-		private void _ReconnectCheckerTick() {} // 0x00000001892A8CEC-0x00000001892A8FB0
+		protected void SessionCheckSignalAndSleep() {} // 0x000000018B3D104C-0x000000018B3D1114
+		protected void OpenAutoReconnect() {} // 0x000000018B3D0FB0-0x000000018B3D1000
+		protected void RemoveAutoReconnect() {} // 0x000000018B3D1000-0x000000018B3D104C
+		private void _ReconnectCheckerTick() {} // 0x000000018B3D1634-0x000000018B3D18F8
 		protected abstract void OnReconnectTimesOver();
 		protected abstract bool NeedKeepConnect();
 		protected abstract void DoReconnectLogin(INetIO netIO);
 		protected abstract void InitClientRSAKey();
 		protected abstract void ClearRSAKey();
-		protected void NetStatusChecker_Receive(INetIO netIO, long scSeqId, int receiveCount) {} // 0x00000001892A83B0-0x00000001892A8464
-		protected void NetStatusChecker_Sender(INetIO netIO, long csSeqId, int sendCount) {} // 0x00000001892A8464-0x00000001892A8530
+		protected void NetStatusChecker_Receive(INetIO netIO, long scSeqId, int receiveCount) {} // 0x000000018B3D0CF8-0x000000018B3D0DAC
+		protected void NetStatusChecker_Sender(INetIO netIO, long csSeqId, int sendCount) {} // 0x000000018B3D0DAC-0x000000018B3D0E78
 		protected abstract void SessionConnectTimeoutCheckerTick(INetIO netIO, long clientLastReceiveMsgMilliTs, long clientLastSendMsgMilliTs);
 		protected abstract void ClearPingWDG();
 		protected abstract bool IsPingOut();
 		protected abstract void PingSenderTick(INetIO netIO, long upSeqId);
 	}
 
-	public class HGNetLogger : Beyond.Log.ILogger // TypeDefIndex: 56211
+	public class HGNetLogger : Beyond.Log.ILogger // TypeDefIndex: 57212
 	{
 		// Fields
 		private BitArray256 m_enabledLogChannel; // 0x10
@@ -1381,54 +1795,54 @@ namespace Beyond.Network.HGNetLogger
 		public static int s_maxRepeatedMsgCount; // 0x08
 	
 		// Constructors
-		public HGNetLogger() {} // 0x0000000183B2C9E0-0x0000000183B2CA70
-		static HGNetLogger() {} // 0x0000000183D20A30-0x0000000183D20AA0
+		public HGNetLogger() {} // 0x0000000184F30F10-0x0000000184F30FA0
+		static HGNetLogger() {} // 0x0000000185F7FED0-0x0000000185F7FF40
 	
 		// Methods
-		public void Log(ref FLogMessage msg) {} // 0x000000018261BA80-0x000000018261CE70
-		[IDTag(0)]
-		public static LogLevel ConvertFromDLogger(ELogLevel level) => default; // 0x00000001832F5020-0x00000001832F5080
-		public static NativeLogLevel ConvertFromDLoggerV2(ELogLevel level) => default; // 0x00000001832F5080-0x00000001832F50E0
-		public bool CheckLog(ref FLogMessage msg) => default; // 0x0000000183283950-0x00000001832839B0
-		public void Clear() {} // 0x000000018388DD60-0x000000018388DDC0
-		public void SetLogChannel(ulong channel1, ulong channel2, ulong channel3, ulong channel4) {} // 0x00000001892A9A3C-0x00000001892A9AF4
-		[IDTag(1)]
-		public static int ConvertFromDLogger(ELogChannel channel) => default; // 0x000000018335D9A0-0x000000018335D9D0
+		public void Log(ref FLogMessage msg) {} // 0x00000001841534A0-0x0000000184154890
+		public static LogLevel ConvertFromDLogger(ELogLevel level) => default; // 0x0000000185251A70-0x0000000185251AD0
+		public static NativeLogLevel ConvertFromDLoggerV2(ELogLevel level) => default; // 0x0000000185251AD0-0x0000000185251B30
+		public bool CheckLog(ref FLogMessage msg) => default; // 0x00000001851E81D0-0x00000001851E8230
+		public void Clear() {} // 0x0000000185A12DF0-0x0000000185A12E50
+		public void SetLogChannel(ulong channel1, ulong channel2, ulong channel3, ulong channel4) {} // 0x000000018B3D238C-0x000000018B3D2444
+		public static int ConvertFromDLogger(ELogChannel channel) => default; // 0x000000018531B320-0x000000018531B350
 	}
 
-	public class HGNetLoggerClient // TypeDefIndex: 56212
+	public class HGNetLoggerClient // TypeDefIndex: 57213
 	{
 		// Fields
 		private static HGNetLoggerClient s_instance; // 0x00
+		private static long _s_roleID_k__BackingField; // 0x08
 		public HGNetLoggerSession m_logsession; // 0x10
 		private HGNetLogger m_netLogger; // 0x18
 		public static readonly int MAX_LOG_SEND_QUEUE_SIZE; // 0x10
-		private const int MAX_LOCAL_LOG_QUEUE_SIZE = 200; // Metadata: 0x01FD7DC7
+		private const int MAX_LOCAL_LOG_QUEUE_SIZE = 200; // Metadata: 0x0207D66B
 		private readonly Queue<FLogMessage> m_localLogQueue; // 0x20
 		private readonly object m_queueLock; // 0x28
 		public static Beyond.Network.HGNetLogger.Version s_usedVersion; // 0x14
 	
 		// Properties
-		public static HGNetLoggerClient instance { get => default; } // 0x00000001829456A0-0x0000000182945820 
-		public static long s_roleID { get; private set; } // 0x00000001892A9658-0x00000001892A96A8 0x00000001892A96A8-0x00000001892A9700
+		public static HGNetLoggerClient instance { get => default; } // 0x0000000184261530-0x00000001842616B0 
+		public static long s_roleID { get; private set; } // 0x000000018B3D1FA0-0x000000018B3D1FF0 0x000000018B3D1FF0-0x000000018B3D2048
 	
 		// Constructors
-		protected HGNetLoggerClient() {} // 0x0000000183CABDF0-0x0000000183CABEC0
-		static HGNetLoggerClient() {} // 0x0000000183D2C2B0-0x0000000183D2C300
+		protected HGNetLoggerClient() {} // 0x0000000185EFEFE0-0x0000000185EFF0B0
+		static HGNetLoggerClient() {} // 0x0000000185F8B5A0-0x0000000185F8B5F0
 	
 		// Methods
-		public void Init(string uid, string token, string env, string roleId = "" /* Metadata: 0x01FD7DC6 */) {} // 0x0000000182C3FB70-0x0000000182C40040
-		public void AddLog(string message, string stacktrace, UnityEngine.LogType type) {} // 0x000000018367C070-0x000000018367C650
-		private void _FlushLocalLogQueue() {} // 0x000000018367C840-0x000000018367CF20
-		public static void OnApplicationPause(bool pauseStatus) {} // 0x00000001892A9590-0x00000001892A9658
-		public void ShutDown() {} // 0x0000000182C35120-0x0000000182C35160
-		private void _CloseAndClear(ENetCloseReason reason) {} // 0x000000018267B150-0x000000018267B3E0
-		public void WriteNetLog(ref LogMessage log) {} // 0x0000000182946870-0x00000001829469C0
-		public static void SetRoleID(ulong roleID) {} // 0x00000001837601E0-0x0000000183760280
-		public void SetNetLogMaskFromServer(RepeatedField<ulong> masks) {} // 0x0000000183D48E90-0x0000000183D48EC0
+		public void Init(string uid, string token, string env, string roleId = "" /* Metadata: 0x0207D66A */) {} // 0x0000000184F310B0-0x0000000184F31580
+		public void AddLog(string message, string stacktrace, UnityEngine.LogType type) {} // 0x0000000184F2F090-0x0000000184F2F670
+		private void _FlushLocalLogQueue() {} // 0x0000000184F2FE10-0x0000000184F304F0
+		public static void OnApplicationPause(bool pauseStatus) {} // 0x000000018B3D1ED8-0x000000018B3D1FA0
+		public void ShutDown() {} // 0x00000001852D3180-0x00000001852D31C0
+		private void _CloseAndClear(ENetCloseReason reason) {} // 0x0000000184A90CE0-0x0000000184A90F70
+		public void WriteNetLog(ref LogMessage log) {} // 0x0000000184262700-0x0000000184262850
+		public static void SetRoleID(ulong roleID) {} // 0x00000001855A75A0-0x00000001855A7640
+		public void SetNetLogMaskFromServer(RepeatedField<ulong> masks) {} // 0x0000000185FA9240-0x0000000185FA9270
+		private void _Init_b__15_0() {} // 0x0000000185A12DD0-0x0000000185A12DF0
 	}
 
-	public class HGNetLoggerCloudSettings // TypeDefIndex: 56213
+	public class HGNetLoggerCloudSettings // TypeDefIndex: 57214
 	{
 		// Fields
 		public static readonly HGNetLoggerCloudSettings instance; // 0x00
@@ -1439,20 +1853,18 @@ namespace Beyond.Network.HGNetLogger
 		private static List<NativeLogLevel> s_allLevels; // 0x08
 	
 		// Constructors
-		public HGNetLoggerCloudSettings() {} // 0x00000001839C0490-0x00000001839C0540
-		static HGNetLoggerCloudSettings() {} // 0x00000001839C0330-0x00000001839C0490
+		public HGNetLoggerCloudSettings() {} // 0x0000000185BA4700-0x0000000185BA47B0
+		static HGNetLoggerCloudSettings() {} // 0x0000000185BA45A0-0x0000000185BA4700
 	
 		// Methods
-		public static void SetCloudLogControl(AuthResponse control, HGNetBaseSession session) {} // 0x00000001829474D0-0x0000000182948900
-		[IDTag(1)]
-		public static bool IsNetLogLevelEnabled(ELogLevel elevel, ELogChannel channel) => default; // 0x000000018367CF20-0x000000018367CFA0
-		[IDTag(0)]
-		public static bool IsNetLogLevelEnabled(NativeLogLevel level, int channel) => default; // 0x0000000182947300-0x00000001829474D0
-		public static bool IsLocalLogLevelEnabled(ELogLevel elevel, ELogChannel channel) => default; // 0x00000001892A9700-0x00000001892A983C
-		public static NativeLogLevel ConvertFromDLogger(ELogLevel level) => default; // 0x000000018367CFA0-0x000000018367D1F0
+		public static void SetCloudLogControl(AuthResponse control, HGNetBaseSession session) {} // 0x0000000184263360-0x0000000184264790
+		public static bool IsNetLogLevelEnabled(ELogLevel elevel, ELogChannel channel) => default; // 0x0000000184F2F860-0x0000000184F2F8E0
+		public static bool IsNetLogLevelEnabled(NativeLogLevel level, int channel) => default; // 0x0000000184263190-0x0000000184263360
+		public static bool IsLocalLogLevelEnabled(ELogLevel elevel, ELogChannel channel) => default; // 0x000000018B3D2048-0x000000018B3D2184
+		public static NativeLogLevel ConvertFromDLogger(ELogLevel level) => default; // 0x0000000184F2F8E0-0x0000000184F2F930
 	}
 
-	public class HGNetLoggerSession : HGNetBaseSession // TypeDefIndex: 56214
+	public class HGNetLoggerSession : HGNetBaseSession // TypeDefIndex: 57215
 	{
 		// Fields
 		private byte[] m_keyBytes; // 0xC0
@@ -1466,63 +1878,63 @@ namespace Beyond.Network.HGNetLogger
 		private static Dictionary<Beyond.Network.HGNetLogger.MessageType, System.Type> s_m_messageId2Type; // 0x08
 	
 		// Properties
-		public string uid { get => default; } // 0x0000000183D4E7B0-0x0000000183D4E7C0 
-		public string roleId { get => default; } // 0x0000000183D51140-0x0000000183D51150 
-		private static Dictionary<System.Type, Beyond.Network.HGNetLogger.MessageType> s_messageType2Id { get => default; } // 0x00000001824D26A0-0x00000001824D28E0 
-		private static Dictionary<Beyond.Network.HGNetLogger.MessageType, System.Type> s_messageId2Type { get => default; } // 0x0000000183828370-0x00000001838285C0 
+		public string uid { get => default; } // 0x0000000185FB02F0-0x0000000185FB0300 
+		public string roleId { get => default; } // 0x0000000185FB25D0-0x0000000185FB25E0 
+		private static Dictionary<System.Type, Beyond.Network.HGNetLogger.MessageType> s_messageType2Id { get => default; } // 0x00000001843CF400-0x00000001843CF640 
+		private static Dictionary<Beyond.Network.HGNetLogger.MessageType, System.Type> s_messageId2Type { get => default; } // 0x000000018599B560-0x000000018599B7B0 
 	
 		// Constructors
-		public HGNetLoggerSession() {} // 0x0000000182F0EA30-0x0000000182F0EAE0
+		public HGNetLoggerSession() {} // 0x0000000184F30CF0-0x0000000184F30DA0
 	
 		// Methods
 		public static bool TryGetMsgTypeByID(System.Type msgType, out Beyond.Network.HGNetLogger.MessageType type) {
 			type = default;
 			return default;
-		} // 0x00000001824D2620-0x00000001824D26A0
-		public override void Start() {} // 0x0000000183CFE560-0x0000000183CFE5B0
-		public void SetReconnectSuccessCallback(Action onReconnectSuccess) {} // 0x0000000183D1C320-0x0000000183D1C370
-		public void OnApplicationPause(bool pause) {} // 0x00000001892A9880-0x00000001892A9980
-		protected override void OnConnectedSucceed(INetIO tcpIO) {} // 0x0000000182D75B10-0x0000000182D75B70
+		} // 0x00000001843CF380-0x00000001843CF400
+		public override void Start() {} // 0x0000000183FC0F60-0x0000000183FC0FB0
+		public void SetReconnectSuccessCallback(Action onReconnectSuccess) {} // 0x0000000184F31000-0x0000000184F31050
+		public void OnApplicationPause(bool pause) {} // 0x000000018B3D21C8-0x000000018B3D22C8
+		protected override void OnConnectedSucceed(INetIO tcpIO) {} // 0x0000000185750810-0x0000000185750870
 		protected override bool ReadMessageInSessionThread(INetIO netIO, out NetResponse resp) {
 			resp = default;
 			return default;
-		} // 0x00000001824CC990-0x00000001824CCE60
-		protected override void CheckAndDealRespMessages(INetIO netIO, ref NetResponse resp) {} // 0x0000000182944A00-0x0000000182944C20
-		protected override void CheckAndWriteReqMsg(INetIO netIO, ref NetRequest m) {} // 0x00000001824D28E0-0x00000001824D2950
-		private void _WriteMessageInSessionThread(INetIO netIO, NetRequest request) {} // 0x00000001824D1AD0-0x00000001824D1E10
-		public ulong SendMessage(IMessage msg) => default; // 0x00000001829469C0-0x0000000182947240
-		public void SetAutoReconnectToken(string uid, string token, string env, string roleId) {} // 0x0000000183CA8270-0x0000000183CA8310
-		protected override bool NeedKeepConnect() => default; // 0x00000001824CD0D0-0x00000001824CD2A0
-		protected override void DoReconnectLogin(INetIO netIO) {} // 0x0000000182944910-0x0000000182944A00
-		private int _GetConnectTimeoutTime() => default; // 0x00000001824CDC10-0x00000001824CDE90
-		protected override void SessionConnectTimeoutCheckerTick(INetIO netIO, long clientLastReceiveMsgMilliTs, long clientLastSendMsgMilliTs) {} // 0x00000001824CD980-0x00000001824CDC10
-		protected override void ClearPingWDG() {} // 0x0000000183B6CCC0-0x0000000183B6CCF0
-		public void SendLogin(INetIO netIO) {} // 0x0000000182945E40-0x0000000182946270
-		protected override bool IsPingOut() => default; // 0x00000001834A9C90-0x00000001834A9CC0
-		protected override void PingSenderTick(INetIO netIO, long upSeqId) {} // 0x0000000183091F30-0x0000000183092010
-		protected override void InitClientRSAKey() {} // 0x0000000183D45040-0x0000000183D45070
-		protected override void ClearRSAKey() {} // 0x00000001892A983C-0x00000001892A9880
-		public override void ClearRecvQueue() {} // 0x0000000183D450A0-0x0000000183D450D0
-		public override void ClearSendQueue() {} // 0x0000000183D45070-0x0000000183D450A0
-		protected override void OnReconnectTimesOver(INetIO tcpIO) {} // 0x00000001892A9980-0x00000001892A9A3C
-		public void __iFixBaseProxy_Start() {} // 0x00000001892A11FC-0x00000001892A1204
+		} // 0x00000001843C8FF0-0x00000001843C94C0
+		protected override void CheckAndDealRespMessages(INetIO netIO, ref NetResponse resp) {} // 0x00000001843C2FE0-0x00000001843C3200
+		protected override void CheckAndWriteReqMsg(INetIO netIO, ref NetRequest m) {} // 0x00000001843CF640-0x00000001843CF6B0
+		private void _WriteMessageInSessionThread(INetIO netIO, NetRequest request) {} // 0x00000001843CE830-0x00000001843CEB70
+		public ulong SendMessage(IMessage msg) => default; // 0x0000000184262850-0x00000001842630D0
+		public void SetAutoReconnectToken(string uid, string token, string env, string roleId) {} // 0x0000000184F30DA0-0x0000000184F30E40
+		protected override bool NeedKeepConnect() => default; // 0x00000001843C9730-0x00000001843C9900
+		protected override void DoReconnectLogin(INetIO netIO) {} // 0x00000001843C2EF0-0x00000001843C2FE0
+		private int _GetConnectTimeoutTime() => default; // 0x00000001843CA270-0x00000001843CA4F0
+		protected override void SessionConnectTimeoutCheckerTick(INetIO netIO, long clientLastReceiveMsgMilliTs, long clientLastSendMsgMilliTs) {} // 0x00000001843C9FE0-0x00000001843CA270
+		protected override void ClearPingWDG() {} // 0x0000000185DA9C00-0x0000000185DA9C30
+		public void SendLogin(INetIO netIO) {} // 0x0000000184261CD0-0x0000000184262100
+		protected override bool IsPingOut() => default; // 0x00000001854BFDD0-0x00000001854BFE00
+		protected override void PingSenderTick(INetIO netIO, long upSeqId) {} // 0x0000000184F3AC10-0x0000000184F3ACF0
+		protected override void InitClientRSAKey() {} // 0x0000000185FA5490-0x0000000185FA54C0
+		protected override void ClearRSAKey() {} // 0x000000018B3D2184-0x000000018B3D21C8
+		public override void ClearRecvQueue() {} // 0x0000000185FA54F0-0x0000000185FA5520
+		public override void ClearSendQueue() {} // 0x0000000185FA54C0-0x0000000185FA54F0
+		protected override void OnReconnectTimesOver(INetIO tcpIO) {} // 0x000000018B3D22C8-0x000000018B3D2384
+		public void __iFixBaseProxy_Start() {} // 0x000000018B3D2384-0x000000018B3D238C
 	}
 }
 
 namespace Beyond.SourceGenerator
 {
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 56121
+	internal class DataNAttribute : Attribute // TypeDefIndex: 57122
 	{
 		// Fields
-		public LayoutKind layoutKind; // 0x10
-		public bool isTag; // 0x14
+		public int capacity; // 0x10
+		public int tSize; // 0x14
+		public bool ring; // 0x18
 	
 		// Constructors
-		public ECSComponentAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public DataNAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	internal static class AnimatorBlackboardUtility // TypeDefIndex: 56122
+	internal static class AnimatorBlackboardUtility // TypeDefIndex: 57123
 	{
 		// Fields
 		internal static bool s_enableFastPathBuffer; // 0x00
@@ -1531,46 +1943,41 @@ namespace Beyond.SourceGenerator
 		internal static void ClearAndEnsureDictionaryCapacity<TKey, TValue>(ref Dictionary<TKey, TValue> dict, int capacity) {}
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 56123
+	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 57124
 	{
 		// Constructors
-		public AnimatorBlackboardAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public AnimatorBlackboardAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class DataNAttribute : Attribute // TypeDefIndex: 56124
+	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 57125
+	{
+		// Constructors
+		public CameraControlConfigAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+
+	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 57126
 	{
 		// Fields
-		public int capacity; // 0x10
-		public int tSize; // 0x14
-		public bool ring; // 0x18
+		public LayoutKind layoutKind; // 0x10
+		public bool isTag; // 0x14
 	
 		// Constructors
-		public DataNAttribute() {} // 0x000000018350B670-0x000000018350B680
-	}
-
-	[AttributeUsage(AttributeTargets.Class)]
-	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 56125
-	{
-		// Constructors
-		public CameraControlConfigAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public ECSComponentAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }
 
 namespace HG.Rendering.Runtime
 {
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 56120
+	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 57121
 	{
 		// Constructors
-		public HGConstantBufferLayoutAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public HGConstantBufferLayoutAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 56215
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 57216
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -1580,146 +1987,148 @@ namespace IFix
 	
 		// Constructors
 		public ILFixDynamicMethodWrapper() {} // Dummy constructor
-		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000183020510-0x0000000183020540
-		static ILFixDynamicMethodWrapper() {} // 0x0000000183D05C60-0x0000000183D05CD0
+		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000184E6FCD0-0x0000000184E6FD00
+		static ILFixDynamicMethodWrapper() {} // 0x0000000185F64550-0x0000000185F645C0
 	
 		// Methods
-		public void __Gen_Wrap_0(object P0, object P1) {} // 0x0000000185163BA0-0x0000000185163C7C
-		public void __Gen_Wrap_1(object P0, object P1, int P2) {} // 0x00000001854A1028-0x00000001854A1120
-		public IAsyncResult __Gen_Wrap_2(object P0, object P1, int P2, object P3, object P4) => default; // 0x00000001892AB3E4-0x00000001892AB528
-		public System.Threading.Tasks.Task __Gen_Wrap_3(object P0, object P1, int P2) => default; // 0x00000001892ABC30-0x00000001892ABD54
-		public NetworkStream __Gen_Wrap_4(object P0) => default; // 0x00000001892AC94C-0x00000001892ACA3C
-		public void __Gen_Wrap_5(object P0) {} // 0x0000000184274234-0x00000001842742F4
-		public void __Gen_Wrap_6(object P0, bool P1) {} // 0x0000000185477860-0x000000018547793C
-		public LingerOption __Gen_Wrap_7(object P0) => default; // 0x00000001892AE2D4-0x00000001892AE3C4
-		public int __Gen_Wrap_8(object P0, SocketOptionLevel P1, SocketOptionName P2) => default; // 0x000000018561B0C4-0x000000018561B1B4
-		public int __Gen_Wrap_9(object P0) => default; // 0x00000001850EF614-0x00000001850EF6E4
-		public bool __Gen_Wrap_10(object P0) => default; // 0x000000018514EF5C-0x000000018514F02C
-		public long __Gen_Wrap_11(object P0) => default; // 0x000000018516CA20-0x000000018516CAF0
-		public ulong __Gen_Wrap_12(object P0, object P1) => default; // 0x00000001892AA6A0-0x00000001892AA78C
-		public System.Type __Gen_Wrap_13(int P0) => default; // 0x00000001892AA78C-0x00000001892AA878
-		public void __Gen_Wrap_14(object P0, int P1, object P2) {} // 0x000000018514F720-0x000000018514F818
-		public void __Gen_Wrap_15(object P0, int P1) {} // 0x000000018549D548-0x000000018549D624
-		public NetBus.ResultHandler __Gen_Wrap_16(object P0, object P1) => default; // 0x00000001892AA878-0x00000001892AA984
-		public void __Gen_Wrap_17(object P0, in NetResponse P1) {} // 0x00000001892AA984-0x00000001892AAAB0
-		public NetBus.ResultHandler __Gen_Wrap_18(object P0, SCMessageID P1, object P2) => default; // 0x00000001892AAAB0-0x00000001892AABD4
-		public void __Gen_Wrap_19(object P0, SCMessageID P1, object P2) {} // 0x000000018560138C-0x0000000185601470
-		public int __Gen_Wrap_20(object P0, object P1, float P2, float P3) => default; // 0x00000001892AABD4-0x00000001892AACEC
-		public int __Gen_Wrap_21(object P0, CSMessageID P1, float P2) => default; // 0x00000001892AACEC-0x00000001892AADE0
-		public void __Gen_Wrap_22(in NetResponse P0) {} // 0x00000001892AADE0-0x00000001892AAEDC
-		public NetBus.ResultHandler __Gen_Wrap_23(object P0, object P1, bool P2, object P3, object P4) => default; // 0x00000001892AAEDC-0x00000001892AB024
-		public bool __Gen_Wrap_24(object P0, object P1) => default; // 0x00000001892AB024-0x00000001892AB0FC
-		public void __Gen_Wrap_25(int P0, object P1) {} // 0x0000000185161B54-0x0000000185161C30
-		public void __Gen_Wrap_26() {} // 0x00000001850F3444-0x00000001850F34E0
-		public bool __Gen_Wrap_27(Span<byte> P0, object P1, int P2, int P3, object P4, out NetResponse P5) {
+		public void __Gen_Wrap_0(object P0, object P1) {} // 0x00000001873527E8-0x00000001873528C4
+		public void __Gen_Wrap_1(object P0, object P1, int P2) {} // 0x00000001876A23EC-0x00000001876A24E4
+		public IAsyncResult __Gen_Wrap_2(object P0, object P1, int P2, object P3, object P4) => default; // 0x000000018B3D4FA0-0x000000018B3D50E4
+		public System.Threading.Tasks.Task __Gen_Wrap_3(object P0, object P1, int P2) => default; // 0x000000018B3D50E4-0x000000018B3D5208
+		public NetworkStream __Gen_Wrap_4(object P0) => default; // 0x000000018B3D5208-0x000000018B3D52F8
+		public void __Gen_Wrap_5(object P0) {} // 0x000000018646FFC0-0x0000000186470080
+		public void __Gen_Wrap_6(object P0, bool P1) {} // 0x0000000187678A10-0x0000000187678AEC
+		public LingerOption __Gen_Wrap_7(object P0) => default; // 0x000000018B3D52F8-0x000000018B3D53E8
+		public int __Gen_Wrap_8(object P0, SocketOptionLevel P1, SocketOptionName P2) => default; // 0x000000018A816DC0-0x000000018A816EB0
+		public int __Gen_Wrap_9(object P0) => default; // 0x00000001873408C8-0x0000000187340998
+		public bool __Gen_Wrap_10(object P0) => default; // 0x000000018735B960-0x000000018735BA30
+		public long __Gen_Wrap_11(object P0) => default; // 0x000000018735B890-0x000000018735B960
+		public ulong __Gen_Wrap_12(object P0, object P1) => default; // 0x000000018B3D4764-0x000000018B3D4850
+		public System.Type __Gen_Wrap_13(int P0) => default; // 0x000000018B3D4850-0x000000018B3D493C
+		public void __Gen_Wrap_14(object P0, int P1, object P2) {} // 0x00000001876A5764-0x00000001876A585C
+		public void __Gen_Wrap_15(object P0, int P1) {} // 0x000000018769E90C-0x000000018769E9E8
+		public NetBus.ResultHandler __Gen_Wrap_16(object P0, object P1) => default; // 0x000000018B3D493C-0x000000018B3D4A48
+		public void __Gen_Wrap_17(object P0, in NetResponse P1) {} // 0x000000018B3D4A48-0x000000018B3D4B74
+		public NetBus.ResultHandler __Gen_Wrap_18(object P0, SCMessageID P1, object P2) => default; // 0x000000018B3D4B74-0x000000018B3D4C98
+		public void __Gen_Wrap_19(object P0, SCMessageID P1, object P2) {} // 0x000000018A81C9C4-0x000000018A81CAA8
+		public int __Gen_Wrap_20(object P0, object P1, float P2, float P3) => default; // 0x000000018B3D4C98-0x000000018B3D4DB0
+		public int __Gen_Wrap_21(object P0, CSMessageID P1, float P2) => default; // 0x000000018B3D4DB0-0x000000018B3D4EA4
+		public void __Gen_Wrap_22(in NetResponse P0) {} // 0x000000018B3D4EA4-0x000000018B3D4FA0
+		public NetBus.ResultHandler __Gen_Wrap_23(object P0, object P1, float P2) => default; // 0x0000000183E3EF70-0x0000000183E3F9C0
+		public NetBus.ResultHandler __Gen_Wrap_24(object P0, object P1, bool P2, object P3, object P4) => default; // 0x0000000183E3F9C0-0x0000000183E40580
+		public void __Gen_Wrap_25(object P0, float P1) {} // 0x0000000181362020-0x0000000181362300
+		public bool __Gen_Wrap_26(object P0, object P1) => default; // 0x0000000183E40580-0x0000000183E40920
+		public void __Gen_Wrap_27(int P0, object P1) {} // 0x0000000181563F30-0x0000000181564220
+		public void __Gen_Wrap_28() {} // 0x000000018136DA00-0x000000018136DBB0
+		public bool __Gen_Wrap_29(Span<byte> P0, object P1, int P2, int P3, object P4, out NetResponse P5) {
 			P5 = default;
 			return default;
-		} // 0x00000001892AB0FC-0x00000001892AB2B0
-		public int __Gen_Wrap_28(object P0, ulong P1, int P2, int P3, object P4, int P5) => default; // 0x00000001892AB2B0-0x00000001892AB3E4
-		public void __Gen_Wrap_29(System.Type P0, MethodInfo P1) {} // 0x00000001850EF54C-0x00000001850EF614
-		public void __Gen_Wrap_30(object P0, float P1) {} // 0x00000001850F0008-0x00000001850F00E8
-		public string __Gen_Wrap_31() => default; // 0x00000001892AB528-0x00000001892AB5F4
-		public string __Gen_Wrap_32(object P0) => default; // 0x00000001892AB5F4-0x00000001892AB6E4
-		public string __Gen_Wrap_33(NetworkUrls.EUrlType P0) => default; // 0x00000001892AB6E4-0x00000001892AB7D0
-		public string __Gen_Wrap_34(object P0, NetworkUrls.EUrlType P1) => default; // 0x00000001892AB7D0-0x00000001892AB8DC
-		public void __Gen_Wrap_35(object P0, object P1, int P2, int P3, int P4, int P5) {} // 0x00000001892AB8DC-0x00000001892ABA00
-		public System.Threading.Tasks.Task __Gen_Wrap_36(object P0, object P1, int P2, int P3, int P4, int P5) => default; // 0x00000001892ABA00-0x00000001892ABB54
-		public void __Gen_Wrap_37(object P0, object P1, object P2) {} // 0x0000000185150B1C-0x0000000185150C14
-		public EndPoint __Gen_Wrap_38(object P0) => default; // 0x00000001892ABB54-0x00000001892ABC30
-		public void __Gen_Wrap_39(object P0, bool P1, bool P2) {} // 0x0000000185646F78-0x000000018564705C
-		public void __Gen_Wrap_40(object P0, object P1, int P2, int P3) {} // 0x00000001892ABD54-0x00000001892ABE5C
-		public byte[] __Gen_Wrap_41(object P0) => default; // 0x00000001892ABE5C-0x00000001892ABF4C
-		public int __Gen_Wrap_42(object P0, object P1, int P2, int P3) => default; // 0x00000001856275C8-0x00000001856276DC
-		public HttpSender.Cancellation __Gen_Wrap_43(ref HttpSender.FSendFunc P0) => default; // 0x00000001892ABF4C-0x00000001892AC0FC
-		public UnityWebRequest __Gen_Wrap_44(object P0, HttpSender.FGetOptions P1) => default; // 0x00000001892AC0FC-0x00000001892AC234
-		public UnityWebRequest __Gen_Wrap_45(object P0, HttpSender.FPostOptions P1) => default; // 0x00000001892AC234-0x00000001892AC36C
-		public UnityWebRequest __Gen_Wrap_46(ref HttpSender.FSendFunc P0) => default; // 0x00000001892AC36C-0x00000001892AC51C
-		public IEnumerator __Gen_Wrap_47(object P0, HttpSender.FSendFunc P1) => default; // 0x00000001892AC51C-0x00000001892AC678
-		public IEnumerator __Gen_Wrap_48(object P0, HttpSender.FSendFunc P1, object P2) => default; // 0x00000001892AC678-0x00000001892AC7EC
-		public IEnumerator __Gen_Wrap_49(object P0, HttpSender.FGetOptions P1, object P2, object P3) => default; // 0x00000001892AC7EC-0x00000001892AC94C
-		public IEnumerator __Gen_Wrap_50(object P0, HttpSender.FGetOptions P1, object P2) => default; // 0x00000001892ACA3C-0x00000001892ACB8C
-		public IEnumerator __Gen_Wrap_51(object P0, HttpSender.FPostOptions P1, object P2, object P3) => default; // 0x00000001892ACB8C-0x00000001892ACCEC
-		public IEnumerator __Gen_Wrap_52(object P0, HttpSender.FPostOptions P1, object P2) => default; // 0x00000001892ACCEC-0x00000001892ACE2C
-		public void __Gen_Wrap_53(object P0, HttpSender.FSendFunc P1) {} // 0x00000001892ACE2C-0x00000001892ACF68
-		public HttpSender.Result __Gen_Wrap_54() => default; // 0x00000001892ACF68-0x00000001892AD020
-		public WaitForAsyncTask<HttpSender.Result> __Gen_Wrap_55(HttpSender.FSendFunc P0) => default; // 0x00000001892AD020-0x00000001892AD150
-		public WaitForAsyncTask<HttpSender.Result> __Gen_Wrap_56(object P0, HttpSender.FPostOptions P1) => default; // 0x00000001892AD150-0x00000001892AD278
-		public WaitForAsyncTask<HttpSender.Result> __Gen_Wrap_57(object P0, HttpSender.FGetOptions P1) => default; // 0x00000001892AD278-0x00000001892AD3A0
-		public WaitForAsyncTask<HttpSender.Result> __Gen_Wrap_58(object P0) => default; // 0x00000001892AD3A0-0x00000001892AD47C
-		public int __Gen_Wrap_59(object P0, out bool P1) {
+		} // 0x0000000183E40920-0x0000000183E415D0
+		public int __Gen_Wrap_30(object P0, ulong P1, int P2, int P3, object P4, int P5) => default; // 0x0000000183E415D0-0x0000000183E41A20
+		public void __Gen_Wrap_31(System.Type P0, MethodInfo P1) {} // 0x000000018135AD00-0x000000018135B080
+		public string __Gen_Wrap_32() => default; // 0x0000000183E41A20-0x0000000183E42260
+		public string __Gen_Wrap_33(object P0) => default; // 0x0000000183E42260-0x0000000183E42BA0
+		public string __Gen_Wrap_34(NetworkUrls.EUrlType P0) => default; // 0x0000000183E42BA0-0x0000000183E43420
+		public string __Gen_Wrap_35(object P0, NetworkUrls.EUrlType P1) => default; // 0x0000000183E43420-0x0000000183E43D80
+		public void __Gen_Wrap_36(object P0, object P1, int P2, int P3, int P4, int P5) {} // 0x0000000183E43D80-0x0000000183E441B0
+		public System.Threading.Tasks.Task __Gen_Wrap_37(object P0, object P1, int P2, int P3, int P4, int P5) => default; // 0x0000000183E441B0-0x0000000183E44C80
+		public void __Gen_Wrap_38(object P0, object P1, object P2) {} // 0x00000001816167B0-0x0000000181616C40
+		public EndPoint __Gen_Wrap_39(object P0) => default; // 0x0000000183E44C80-0x0000000183E455B0
+		public void __Gen_Wrap_40(object P0, bool P1, bool P2) {} // 0x0000000181545370-0x0000000181545670
+		public void __Gen_Wrap_41(object P0, object P1, int P2, int P3) {} // 0x000000018218D760-0x000000018218DB40
+		public byte[] __Gen_Wrap_42(object P0) => default; // 0x0000000183E455B0-0x0000000183E45EF0
+		public int __Gen_Wrap_43(object P0, object P1, int P2, int P3) => default; // 0x000000018169F230-0x000000018169F620
+		public HttpSender.Cancellation __Gen_Wrap_44(ref HttpSender.FSendFunc P0) => default; // 0x0000000183E45EF0-0x0000000183E46E70
+		public UnityWebRequest __Gen_Wrap_45(object P0, HttpSender.FGetOptions P1) => default; // 0x0000000183E46E70-0x0000000183E47B60
+		public UnityWebRequest __Gen_Wrap_46(object P0, HttpSender.FPostOptions P1) => default; // 0x0000000183E47B60-0x0000000183E48850
+		public UnityWebRequest __Gen_Wrap_47(ref HttpSender.FSendFunc P0) => default; // 0x0000000183E48850-0x0000000183E497D0
+		public IEnumerator __Gen_Wrap_48(object P0, HttpSender.FSendFunc P1) => default; // 0x0000000183E497D0-0x0000000183E4A4F0
+		public IEnumerator __Gen_Wrap_49(object P0, HttpSender.FSendFunc P1, object P2) => default; // 0x0000000183E4A4F0-0x0000000183E4B300
+		public IEnumerator __Gen_Wrap_50(object P0, HttpSender.FGetOptions P1, object P2, object P3) => default; // 0x0000000183E4B300-0x0000000183E4C1C0
+		public IEnumerator __Gen_Wrap_51(object P0, HttpSender.FGetOptions P1, object P2) => default; // 0x0000000183E4C1C0-0x0000000183E4CF90
+		public IEnumerator __Gen_Wrap_52(object P0, HttpSender.FPostOptions P1, object P2, object P3) => default; // 0x0000000183E4CF90-0x0000000183E4DE50
+		public IEnumerator __Gen_Wrap_53(object P0, HttpSender.FPostOptions P1, object P2) => default; // 0x0000000183E4DE50-0x0000000183E4EBD0
+		public void __Gen_Wrap_54(object P0, HttpSender.FSendFunc P1) {} // 0x0000000183E4EBD0-0x0000000183E4F2A0
+		public HttpSender.Result __Gen_Wrap_55() => default; // 0x0000000183E4F2A0-0x0000000183E4FAE0
+		public WaitForAsyncTask<HttpSender.Result> __Gen_Wrap_56(HttpSender.FSendFunc P0) => default; // 0x0000000183E4FAE0-0x0000000183E50720
+		public WaitForAsyncTask<HttpSender.Result> __Gen_Wrap_57(object P0, HttpSender.FPostOptions P1) => default; // 0x0000000183E50720-0x0000000183E51400
+		public WaitForAsyncTask<HttpSender.Result> __Gen_Wrap_58(object P0, HttpSender.FGetOptions P1) => default; // 0x0000000183E51400-0x0000000183E520E0
+		public WaitForAsyncTask<HttpSender.Result> __Gen_Wrap_59(object P0) => default; // 0x0000000183E520E0-0x0000000183E52A10
+		public int __Gen_Wrap_60(object P0, out bool P1) {
 			P1 = default;
 			return default;
-		} // 0x00000001892AD47C-0x00000001892AD588
-		public string __Gen_Wrap_60(ref HttpSender.FSendFunc P0) => default; // 0x00000001892AD588-0x00000001892AD728
-		public void __Gen_Wrap_61(object P0, EHGNetSessionReconnectState P1) {} // 0x000000018563E0E0-0x000000018563E1BC
-		public void __Gen_Wrap_62(object P0, object P1, ENetCloseReason P2) {} // 0x00000001854A1028-0x00000001854A1120
-		public bool __Gen_Wrap_63(object P0, object P1, int P2, bool P3) => default; // 0x00000001892AD728-0x00000001892AD830
-		public void __Gen_Wrap_64(object P0, ENetConnectErrorCode P1) {} // 0x000000018549D548-0x000000018549D624
-		public void __Gen_Wrap_65(object P0, ENetCloseReason P1) {} // 0x000000018549D548-0x000000018549D624
-		public void __Gen_Wrap_66(Task<System.Threading.Tasks.Task> P0) {} // 0x00000001850EE850-0x00000001850EE8FC
-		public bool __Gen_Wrap_67(object P0, object P1, int P2, bool P3, out HGNetSessionConnectYield P4) {
+		} // 0x0000000183E52A10-0x0000000183E52D30
+		public string __Gen_Wrap_61(ref HttpSender.FSendFunc P0) => default; // 0x0000000183E52D30-0x0000000183E53C90
+		public void __Gen_Wrap_62(object P0, EHGNetSessionReconnectState P1) {} // 0x0000000181570FE0-0x00000001815712C0
+		public void __Gen_Wrap_63(object P0, object P1, ENetCloseReason P2) {} // 0x0000000181570120-0x00000001815704E0
+		public bool __Gen_Wrap_64(object P0, object P1, int P2, bool P3) => default; // 0x00000001825AA5E0-0x00000001825AA9B0
+		public void __Gen_Wrap_65(object P0, ENetConnectErrorCode P1) {} // 0x0000000181566ED0-0x00000001815671B0
+		public void __Gen_Wrap_66(object P0, ENetCloseReason P1) {} // 0x0000000181566ED0-0x00000001815671B0
+		public void __Gen_Wrap_67(Task<System.Threading.Tasks.Task> P0) {} // 0x0000000181354D40-0x0000000181355000
+		public bool __Gen_Wrap_68(object P0, object P1, int P2, bool P3, out HGNetSessionConnectYield P4) {
 			P4 = default;
 			return default;
-		} // 0x00000001892AD830-0x00000001892AD9A0
-		public void __Gen_Wrap_68(object P0, NetRequest P1) {} // 0x00000001892AD9A0-0x00000001892ADABC
-		public void __Gen_Wrap_69(object P0, long P1) {} // 0x0000000185606CE4-0x0000000185606DC0
-		public INetIO __Gen_Wrap_70(object P0) => default; // 0x00000001892ADABC-0x00000001892ADBAC
-		public Task<bool> __Gen_Wrap_71(object P0, object P1, int P2) => default; // 0x00000001892ADBAC-0x00000001892ADCD0
-		public Task<bool> __Gen_Wrap_72(object P0, object P1, object P2, int P3, int P4, int P5, int P6) => default; // 0x00000001892ADCD0-0x00000001892ADE34
-		public System.Threading.Tasks.Task __Gen_Wrap_73(object P0, object P1) => default; // 0x00000001892ADE34-0x00000001892ADF40
-		public void __Gen_Wrap_74(object P0, object P1, long P2, int P3) {} // 0x00000001892ADF40-0x00000001892AE048
-		public bool __Gen_Wrap_75(object P0, object P1, int P2) => default; // 0x0000000185E685F4-0x0000000185E686F8
-		public System.Threading.Tasks.Task __Gen_Wrap_76() => default; // 0x00000001892AE048-0x00000001892AE100
-		public void __Gen_Wrap_77(object P0, object P1, object P2, int P3) {} // 0x0000000185E3E6A8-0x0000000185E3E7B0
-		public void __Gen_Wrap_78(object P0, object P1, long P2, long P3) {} // 0x00000001892AE100-0x00000001892AE208
-		public byte[] __Gen_Wrap_79() => default; // 0x00000001892AE208-0x00000001892AE2D4
-		public CLIENT_PLATFORM_TYPE __Gen_Wrap_80() => default; // 0x00000001850EF068-0x00000001850EF114
-		public ENV_TYPE __Gen_Wrap_81() => default; // 0x00000001850EF068-0x00000001850EF114
-		public int __Gen_Wrap_82() => default; // 0x00000001850EF068-0x00000001850EF114
-		public void __Gen_Wrap_83(object P0, object P1, ref NetRequest P2, bool P3) {} // 0x00000001892AE3C4-0x00000001892AE558
-		public bool __Gen_Wrap_84(object P0, object P1, out NetResponse P2, bool P3) {
+		} // 0x0000000183E53C90-0x0000000183E54800
+		public void __Gen_Wrap_69(object P0, NetRequest P1) {} // 0x0000000183E54800-0x0000000183E54E90
+		public void __Gen_Wrap_70(object P0, long P1) {} // 0x00000001815A4720-0x00000001815A4A00
+		public INetIO __Gen_Wrap_71(object P0) => default; // 0x0000000183E54E90-0x0000000183E557D0
+		public Task<bool> __Gen_Wrap_72(object P0, object P1, int P2) => default; // 0x0000000183E557D0-0x0000000183E56230
+		public Task<bool> __Gen_Wrap_73(object P0, object P1, object P2, int P3, int P4, int P5, int P6) => default; // 0x0000000183E56230-0x0000000183E56DF0
+		public System.Threading.Tasks.Task __Gen_Wrap_74(object P0, object P1) => default; // 0x0000000183E56DF0-0x0000000183E57820
+		public void __Gen_Wrap_75(object P0, object P1, long P2, int P3) {} // 0x00000001823C75D0-0x00000001823C79B0
+		public bool __Gen_Wrap_76(object P0, object P1, int P2) => default; // 0x0000000181F508D0-0x0000000181F50CA0
+		public System.Threading.Tasks.Task __Gen_Wrap_77() => default; // 0x0000000183E57820-0x0000000183E58060
+		public void __Gen_Wrap_78(object P0, object P1, object P2, int P3) {} // 0x0000000181FDB6A0-0x0000000181FDBB50
+		public void __Gen_Wrap_79(object P0, object P1, long P2, long P3) {} // 0x00000001821EF040-0x00000001821EF430
+		public byte[] __Gen_Wrap_80() => default; // 0x0000000183E58060-0x0000000183E588A0
+		public CLIENT_PLATFORM_TYPE __Gen_Wrap_81() => default; // 0x0000000181361E60-0x0000000181362020
+		public ENV_TYPE __Gen_Wrap_82() => default; // 0x0000000181361E60-0x0000000181362020
+		public int __Gen_Wrap_83() => default; // 0x0000000181361E60-0x0000000181362020
+		public void __Gen_Wrap_84(object P0, object P1, ref NetRequest P2, bool P3) {} // 0x0000000183E588A0-0x0000000183E596B0
+		public bool __Gen_Wrap_85(object P0, object P1, out NetResponse P2, bool P3) {
 			P2 = default;
 			return default;
-		} // 0x00000001892AE558-0x00000001892AE6C8
-		public void __Gen_Wrap_85(object P0, long P1, int P2) {} // 0x00000001892AE6C8-0x00000001892AE7C0
-		public byte[] __Gen_Wrap_86(object P0, object P1) => default; // 0x00000001892AE7C0-0x00000001892AE8CC
-		public MSG_A1 __Gen_Wrap_87(object P0) => default; // 0x00000001892AE8CC-0x00000001892AE9BC
-		public HGNetSessionLoginYield __Gen_Wrap_88(object P0, object P1, object P2, int P3) => default; // 0x00000001892AE9BC-0x00000001892AEAF0
-		public void __Gen_Wrap_89(object P0, object P1, ref NetRequest P2) {} // 0x00000001892AEAF0-0x00000001892AEC74
-		public bool __Gen_Wrap_90(object P0, object P1, out NetResponse P2) {
+		} // 0x0000000183E596B0-0x0000000183E5A1B0
+		public void __Gen_Wrap_86(object P0, long P1, int P2) {} // 0x00000001821E13E0-0x00000001821E16E0
+		public byte[] __Gen_Wrap_87(object P0, object P1) => default; // 0x0000000183E5A1B0-0x0000000183E5ABE0
+		public bool __Gen_Wrap_88(object P0, object P1, object P2) => default; // 0x00000001816ADC00-0x00000001816AE0A0
+		public MSG_A1 __Gen_Wrap_89(object P0) => default; // 0x0000000183E5ABE0-0x0000000183E5B520
+		public HGNetSessionLoginYield __Gen_Wrap_90(object P0, object P1, object P2, int P3) => default; // 0x0000000183E5B520-0x0000000183E5C070
+		public void __Gen_Wrap_91(object P0, object P1, ref NetRequest P2) {} // 0x0000000183E5C070-0x0000000183E5CE60
+		public bool __Gen_Wrap_92(object P0, object P1, out NetResponse P2) {
 			P2 = default;
 			return default;
-		} // 0x00000001892AEC74-0x00000001892AEDD8
-		public bool __Gen_Wrap_91(object P0, NetResponse P1) => default; // 0x00000001892AEDD8-0x00000001892AEF00
-		public void __Gen_Wrap_92(object P0, object P1, long P2) {} // 0x0000000188706E14-0x0000000188706F0C
-		public bool __Gen_Wrap_93(CODE P0) => default; // 0x000000018514DE88-0x000000018514DF54
-		public bool __Gen_Wrap_94(object P0, object P1, NetResponse P2) => default; // 0x00000001892AEF00-0x00000001892AF040
-		public void __Gen_Wrap_95(object P0, object P1, ref NetResponse P2) {} // 0x00000001892AF040-0x00000001892AF1C0
-		public MSG_B1 __Gen_Wrap_96(object P0) => default; // 0x00000001892AF1C0-0x00000001892AF2B0
-		public bool __Gen_Wrap_97(object P0, ref FLogMessage P1) => default; // 0x00000001892AF2B0-0x00000001892AF434
-		public LogLevel __Gen_Wrap_98(ELogLevel P0) => default; // 0x000000018562802C-0x00000001856280E8
-		public NativeLogLevel __Gen_Wrap_99(ELogLevel P0) => default; // 0x00000001856280E8-0x00000001856281B8
-		public int __Gen_Wrap_100(ELogChannel P0) => default; // 0x000000018562802C-0x00000001856280E8
-		public bool __Gen_Wrap_101(NativeLogLevel P0, int P1) => default; // 0x000000018560DC74-0x000000018560DD5C
-		public bool __Gen_Wrap_102(ELogLevel P0, ELogChannel P1) => default; // 0x0000000185164540-0x000000018516462C
-		public void __Gen_Wrap_103(object P0, object P1, object P2, UnityEngine.LogType P3) {} // 0x00000001856479C0-0x0000000185647AB8
-		public HGNetLoggerClient __Gen_Wrap_104() => default; // 0x00000001892A9F70-0x00000001892AA03C
-		public void __Gen_Wrap_105(object P0, ref LogMessage P1) {} // 0x00000001892AA03C-0x00000001892AA150
-		public void __Gen_Wrap_106(object P0, ref FLogMessage P1) {} // 0x00000001892AA150-0x00000001892AA2C4
-		public void __Gen_Wrap_107(object P0, ulong P1, ulong P2, ulong P3, ulong P4) {} // 0x00000001892AA2C4-0x00000001892AA3D4
-		public void __Gen_Wrap_108(object P0, object P1, object P2, object P3, object P4) {} // 0x0000000185476DB4-0x0000000185476ECC
-		public void __Gen_Wrap_109(bool P0) {} // 0x00000001850F0C14-0x00000001850F0CC0
-		public void __Gen_Wrap_110(ulong P0) {} // 0x000000018514E6A4-0x000000018514E764
-		public Dictionary<System.Type, Beyond.Network.HGNetLogger.MessageType> __Gen_Wrap_111() => default; // 0x00000001892AA3D4-0x00000001892AA4A0
-		public Dictionary<Beyond.Network.HGNetLogger.MessageType, System.Type> __Gen_Wrap_112() => default; // 0x00000001892AA4A0-0x00000001892AA56C
-		public bool __Gen_Wrap_113(object P0, out Beyond.Network.HGNetLogger.MessageType P1) {
+		} // 0x0000000183E5CE60-0x0000000183E5D940
+		public bool __Gen_Wrap_93(object P0, NetResponse P1) => default; // 0x0000000183E5D940-0x0000000183E5DFE0
+		public void __Gen_Wrap_94(object P0, object P1, long P2) {} // 0x0000000182240E60-0x0000000182241220
+		public bool __Gen_Wrap_95(CODE P0) => default; // 0x0000000181388120-0x0000000181388320
+		public bool __Gen_Wrap_96(object P0, object P1, NetResponse P2) => default; // 0x0000000183E5DFE0-0x0000000183E5E770
+		public void __Gen_Wrap_97(object P0, object P1, ref NetResponse P2) {} // 0x0000000183E5E770-0x0000000183E5F570
+		public MSG_B1 __Gen_Wrap_98(object P0) => default; // 0x0000000183E5F570-0x0000000183E5FEB0
+		public bool __Gen_Wrap_99(object P0, ref FLogMessage P1) => default; // 0x0000000183E5FEB0-0x0000000183E60BE0
+		public LogLevel __Gen_Wrap_100(ELogLevel P0) => default; // 0x00000001816A2820-0x00000001816A2A20
+		public NativeLogLevel __Gen_Wrap_101(ELogLevel P0) => default; // 0x00000001816A2A20-0x00000001816A2C20
+		public int __Gen_Wrap_102(ELogChannel P0) => default; // 0x00000001816A2820-0x00000001816A2A20
+		public bool __Gen_Wrap_103(NativeLogLevel P0, int P1) => default; // 0x000000018156F210-0x000000018156F430
+		public bool __Gen_Wrap_104(ELogLevel P0, ELogChannel P1) => default; // 0x0000000181678660-0x0000000181678890
+		public void __Gen_Wrap_105(object P0, object P1, object P2, UnityEngine.LogType P3) {} // 0x0000000181549A10-0x0000000181549E70
+		public HGNetLoggerClient __Gen_Wrap_106() => default; // 0x0000000183E3B440-0x0000000183E3BC80
+		public void __Gen_Wrap_107(object P0, ref LogMessage P1) {} // 0x0000000183E3BC80-0x0000000183E3C720
+		public void __Gen_Wrap_108(object P0, ref FLogMessage P1) {} // 0x0000000183E3C720-0x0000000183E3D440
+		public void __Gen_Wrap_109(object P0, ulong P1, ulong P2, ulong P3, ulong P4) {} // 0x0000000183E3D440-0x0000000183E3D770
+		public void __Gen_Wrap_110(object P0, object P1, object P2, object P3, object P4) {} // 0x000000018213E910-0x000000018213EF70
+		public void __Gen_Wrap_111(bool P0) {} // 0x00000001813641A0-0x0000000181364390
+		public void __Gen_Wrap_112(ulong P0) {} // 0x000000018138ABD0-0x000000018138ADC0
+		public Dictionary<System.Type, Beyond.Network.HGNetLogger.MessageType> __Gen_Wrap_113() => default; // 0x0000000183E3D770-0x0000000183E3DFB0
+		public Dictionary<Beyond.Network.HGNetLogger.MessageType, System.Type> __Gen_Wrap_114() => default; // 0x0000000183E3DFB0-0x0000000183E3E7F0
+		public bool __Gen_Wrap_115(object P0, out Beyond.Network.HGNetLogger.MessageType P1) {
 			P1 = default;
 			return default;
-		} // 0x0000000185786028-0x0000000185786134
-		public void __Gen_Wrap_114(object P0, object P1, NetRequest P2) {} // 0x00000001892AA56C-0x00000001892AA6A0
+		} // 0x0000000181897FA0-0x00000001818982C0
+		public void __Gen_Wrap_116(object P0, object P1, NetRequest P2) {} // 0x0000000183E3E7F0-0x0000000183E3EF70
 	}
 
-	public class ILFixInterfaceBridge : AnonymousStorey, IEnumerator<object>, IAsyncStateMachine // TypeDefIndex: 56216
+	public class ILFixInterfaceBridge : AnonymousStorey, IEnumerator<object>, IAsyncStateMachine // TypeDefIndex: 57217
 	{
 		// Fields
 		private int methodId_0; // 0x40
@@ -1731,47 +2140,42 @@ namespace IFix
 		private int methodId_6; // 0x58
 	
 		// Properties
-		object IEnumerator<System.Object>.Current { [IDTag(2)] get => default; } // 0x00000001892AF744-0x00000001892AF7F0 
-		object IEnumerator.Current { [IDTag(4)] get => default; } // 0x00000001892AF7F0-0x00000001892AF89C 
+		object IEnumerator<System.Object>.Current { get => default; } // 0x000000018B3D5888-0x000000018B3D5934 
+		object IEnumerator.Current { get => default; } // 0x000000018B3D5934-0x000000018B3D59E0 
 	
 		// Constructors
 		public ILFixInterfaceBridge() {} // Dummy constructor
-		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x00000001892AF89C-0x00000001892AF990
+		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x000000018B3D59E0-0x000000018B3D5AD4
 	
 		// Methods
-		[IDTag(0)]
-		void IDisposable.Dispose() {} // 0x0000000185152EA8-0x0000000185152F24
-		[IDTag(1)]
-		private bool MoveNext() => default; // 0x0000000185152C48-0x0000000185152CD4
-		[IDTag(3)]
-		void IEnumerator.Reset() {} // 0x0000000185152D80-0x0000000185152DFC
-		[IDTag(5)]
-		private void MoveNext() {} // 0x00000001892AF434-0x00000001892AF4C4
-		[IDTag(6)]
-		private void SetStateMachine(IAsyncStateMachine P0) {} // 0x00000001892AF694-0x00000001892AF744
-		public void RefAwaitUnsafeOnCompleteMethod() {} // 0x00000001892AF558-0x00000001892AF694
-		public void RefAsyncBuilderStartMethod() {} // 0x00000001892AF4C4-0x00000001892AF558
+		void IDisposable.Dispose() {} // 0x00000001873416FC-0x0000000187341778
+		private bool MoveNext() => default; // 0x0000000187341518-0x00000001873415A4
+		void IEnumerator.Reset() {} // 0x00000001872E7280-0x00000001872E72FC
+		private void MoveNext() {} // 0x000000018B3D5578-0x000000018B3D5608
+		private void SetStateMachine(IAsyncStateMachine P0) {} // 0x000000018B3D57D8-0x000000018B3D5888
+		public void RefAwaitUnsafeOnCompleteMethod() {} // 0x000000018B3D569C-0x000000018B3D57D8
+		public void RefAsyncBuilderStartMethod() {} // 0x000000018B3D5608-0x000000018B3D569C
 	}
 
-	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 56217
+	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 57218
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
 	
 		// Constructors
 		public WrappersManagerImpl() {} // Dummy constructor
-		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x0000000184096E30-0x0000000184096EF0
 	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x00000001892AFD08-0x00000001892AFD6C
-		public static bool IsPatched(int id) => default; // 0x00000001824CB460-0x00000001824CB510
-		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x00000001892AFBC4-0x00000001892AFC90
-		public object CreateWrapper(int id) => default; // 0x00000001892AFC90-0x00000001892AFD08
-		public object InitWrapperArray(int len) => default; // 0x00000001892AFD6C-0x00000001892AFDF8
-		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x00000001892AFB20-0x00000001892AFBC4
+		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x000000018B3D5CBC-0x000000018B3D5D20
+		public static bool IsPatched(int id) => default; // 0x00000001843C7AC0-0x00000001843C7B70
+		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x000000018B3D5B78-0x000000018B3D5C44
+		public object CreateWrapper(int id) => default; // 0x000000018B3D5C44-0x000000018B3D5CBC
+		public object InitWrapperArray(int len) => default; // 0x000000018B3D5D20-0x000000018B3D5DAC
+		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x000000018B3D5AD4-0x000000018B3D5B78
 	}
 
-	public enum IDMAP0 // TypeDefIndex: 56218
+	public enum IDMAP0 // TypeDefIndex: 57219
 	{
 		Beyond-Network-HGTcpClient-Connect1 = 0,
 		Beyond-Network-HGTcpClient-Connect0 = 1,
@@ -1808,262 +2212,264 @@ namespace IFix
 		Beyond-Network-NetBus-ResultHandler-SetIgnoreSeq0 = 40,
 		Beyond-Network-NetBus-ResultHandler-OnResponse0 = 41,
 		Beyond-Network-NetBus-ResultHandler-_HandleMessage0 = 42,
-		Beyond-Network-NetBus-ResultHandler-Dispose0 = 44,
-		Beyond-Network-NetBus-Sender-DoSend0 = 47,
-		Beyond-Network-NetBus-Sender-DoListen0 = 48,
-		Beyond-Network-NetBus-Sender-DoUnListen0 = 49,
-		Beyond-Network-Special2BusSender-Send0 = 50,
-		Beyond-Network-DisposableBusSender-Send0 = 51,
-		Beyond-Network-Special2BusSender-OnNetShutDown0 = 53,
-		Beyond-Network-DisposableBusSender-OnNetShutDown0 = 54,
-		Beyond-Network-DisposableBusSender-_Clear0 = 55,
-		Beyond-Network-Special2BusSender-_ClearSendTime0 = 56,
-		Beyond-Network-Special2BusSender-Dispose0 = 57,
-		Beyond-Network-DisposableBusSender-Dispose0 = 58,
-		Beyond-Network-NetworkMaskConfigHolder-Init0 = 60,
-		Beyond-Network-NetworkMaskConfigHolder-Dispose0 = 61,
-		Beyond-Network-UIBusSender-Dispose0 = 62,
-		Beyond-Network-NetworkMask-RemoveMask0 = 64,
-		Beyond-Network-NetworkMask-_UpdateMaskState0 = 65,
-		Beyond-Network-UIBusSender-Send0 = 70,
-		Beyond-Network-NetUtil-GetCSMsgIdByType0 = 75,
-		Beyond-Network-NetworkMask-AddMask1 = 76,
-		Beyond-Network-NetworkMask-AddMask0 = 77,
-		Beyond-Network-NetworkMask-_GetKey0 = 78,
-		Beyond-Network-UIBusSender-OnNetShutDown0 = 79,
-		Beyond-Network-TeleportMaskSender-Dispose0 = 80,
-		Beyond-Network-TeleportMaskSender-Send0 = 81,
-		Beyond-Network-TeleportMaskSender-OnNetShutDown0 = 87,
-		Beyond-Network-FrequencyControlBusSender-_TrySendWaitingMsg0 = 88,
-		Beyond-Network-FrequencyControlBusSender-Send0 = 89,
-		Beyond-Network-FrequencyControlBusSender-Send1 = 94,
-		Beyond-Network-FrequencyControlBusSender-Dispose0 = 95,
-		Beyond-Network-ServerConfig-IsSame0 = 96,
-		Beyond-Network-NetUtil-RegisterSCMessage0 = 97,
-		Beyond-Network-NetUtil-RegisterCSMessage0 = 98,
-		Beyond-Network-NetUtil-GetSCMsgIdByType0 = 99,
-		Beyond-Network-NetUtil-FastRegisterMessage0 = 100,
-		Beyond-Network-NetUtil-GetNetMessageFromDataBytes0 = 101,
-		Beyond-Network-NetUtil-SerializeHeadMessage0 = 102,
-		Beyond-Network-NetUtil-AutoRegisterMessageHandlers0 = 103,
-		Beyond-Network-NetUtil-AutoUnRegisterMessageHandlers0 = 104,
-		Beyond-Network-NetUtil-_ForeachMessageHandlers0 = 108,
-		Beyond-Network-NetworkMask-OnInit0 = 109,
-		Beyond-Network-NetworkMask-_CreateTickFunction0 = 110,
-		Beyond-Network-NetworkMask-PreTick0 = 111,
-		Beyond-Network-NetworkMask-_OnSwitchLanguage0 = 112,
-		Beyond-Network-NetworkMask-OnUnInit0 = 113,
-		Beyond-Network-NetworkMask-_ClearTickFunction0 = 114,
-		Beyond-Network-NetworkMask-Release0 = 115,
-		Beyond-Network-NetworkMask-ListenOnNetMaskChanged0 = 116,
-		Beyond-Network-NetworkMask-UnListenOnNetMaskChanged0 = 117,
-		Beyond-Network-NetworkUrls-RemoteConfigUrl0 = 118,
-		Beyond-Network-NetworkUrls-ResourceRootUrlDev0 = 119,
-		Beyond-Network-NetworkUrls-ServerListUrl0 = 120,
-		Beyond-Network-NetworkUrls-_GetUrlFromLocal0 = 121,
-		Beyond-Network-NetworkUrls-AgeTipsUrl0 = 122,
-		Beyond-Network-NetworkUrls-_SelectUrl0 = 123,
-		Beyond-Network-NetworkUrls-GovUrl0 = 124,
-		Beyond-Network-NetworkUrls-LauncherUrl0 = 125,
-		Beyond-Network-TcpIO-Connect0 = 126,
-		Beyond-Network-TcpIO-IsConnected0 = 127,
-		Beyond-Network-TcpIO-Close0 = 128,
-		Beyond-Network-TcpIO-ConnectAsync0 = 129,
-		Beyond-Network-TcpIO-IsAuthed0 = 130,
-		Beyond-Network-TcpIO-MarkAuthed0 = 131,
-		Beyond-Network-TcpIO-EnableCryptStream0 = 132,
-		Beyond-Network-TcpIO-GetEndPoint0 = 133,
-		Beyond-Network-TcpIO-TestCloseNetIO0 = 134,
-		Beyond-Network-TcpIO-TestDropNetIO0 = 135,
-		Beyond-Network-TcpIO-WriteData0 = 136,
-		Beyond-Network-TcpIO-WriteCryptoData0 = 137,
-		Beyond-Network-TcpIO-GetSendHeadBuffer0 = 138,
-		Beyond-Network-TcpIO-GetSendBuffer0 = 139,
-		Beyond-Network-TcpIO-GetReceiveBuffer0 = 140,
-		Beyond-Network-TcpIO-ClearReceiveBufferOffset0 = 141,
-		Beyond-Network-TcpIO-GetReceiveBufferOffset0 = 142,
-		Beyond-Network-TcpIO-SkipReceiveBufferOffset0 = 143,
-		Beyond-Network-TcpIO-ReadData0 = 144,
-		Beyond-Network-TcpIO-ReadCryptoData0 = 145,
-		Beyond-Network-TcpIO-Available0 = 146,
-		Beyond-Network-TcpIO-Dispose0 = 147,
-		Beyond-Network-HttpSender-YieldSendGet1 = 148,
-		Beyond-Network-HttpSender-YieldSendGet0 = 152,
-		Beyond-Network-HttpSender-_YieldSendHttpRequest1 = 156,
-		Beyond-Network-HttpSender-_YieldSendHttpRequest0 = 160,
-		Beyond-Network-HttpSender-FSendFunc-GetCancellation0 = 165,
-		Beyond-Network-HttpSender-FSendFunc-Invoke0 = 166,
-		Beyond-Network-HttpSender-_CreateWebRequestGET0 = 167,
-		Beyond-Network-HttpSender-_CreateWebRequestPOST0 = 168,
-		Beyond-Network-HttpSender-Cancellation-IsCanceled0 = 169,
-		Beyond-Network-HttpSender-_SetHttpResult0 = 170,
-		Beyond-Network-HttpSender-_MarkResultAsException0 = 171,
-		Beyond-Network-HttpSender-_DeserializeTypedResult0 = 175,
-		Beyond-Network-HttpSender-YieldSendPost1 = 186,
-		Beyond-Network-HttpSender-YieldSendPost0 = 190,
-		Beyond-Network-HttpSender-WaitForSendPost0 = 200,
-		Beyond-Network-HttpSender-_WaitForSendHttpRequest0 = 201,
-		Beyond-Network-HttpSender-_WaitForServiceDone0 = 204,
-		Beyond-Network-HttpSender-_StartWebRequestTask0 = 205,
-		Beyond-Network-HttpSender-WaitForSendGet1 = 206,
-		Beyond-Network-HttpSender-WaitForSendGet0 = 207,
-		Beyond-Network-HttpSender-GetGeneralErrorCode0 = 208,
-		Beyond-Network-HttpSender-_DebugOnlyProfileResult0 = 209,
-		Beyond-Network-HttpSender-Cancellation-Cancel0 = 210,
-		Beyond-Network-HttpSender-FSendFunc-GetOptMethod0 = 211,
-		Beyond-Network-HGNetBaseSession-set_reconnectState0 = 212,
-		Beyond-Network-HGNetBaseSession-Start0 = 213,
-		Beyond-Network-HGNetBaseSession-Connect0 = 215,
-		Beyond-Network-HGNetBaseSession-_DNSCheck0 = 216,
-		Beyond-Network-HGNetBaseSession-InternalClose1 = 217,
-		Beyond-Network-HGNetBaseSession-InternalClose0 = 218,
-		Beyond-Network-HGNetBaseSession-RemoveAutoReconnect0 = 219,
-		Beyond-Network-HGNetBaseSession-CloseTCPMsgThreadTask0 = 220,
-		Beyond-Network-HGNetBaseSession-ConnectAsync0 = 221,
-		Beyond-Network-HGNetBaseSession-OnConnectAsyncEnd0 = 224,
-		Beyond-Network-HGNetSessionConnectYield-SetFinish0 = 225,
-		Beyond-Network-HGNetBaseSession-Close0 = 226,
-		Beyond-Network-HGNetBaseSession-EnqueueSendMsg0 = 227,
-		Beyond-Network-HGNetBaseSession-GetSendQueueMsgCount0 = 228,
-		Beyond-Network-HGNetBaseSession-SetCSSeqID0 = 229,
-		Beyond-Network-HGNetBaseSession-GetCSSeqID0 = 230,
-		Beyond-Network-HGNetBaseSession-GetIO0 = 231,
-		Beyond-Network-HGNetBaseSession-StartTCPMsgLoopThreadTask0 = 232,
-		Beyond-Network-HGNetBaseSession-_SessionThread0 = 235,
-		Beyond-Network-HGNetBaseSession-_ReconnectCheckerTick0 = 237,
-		Beyond-Network-HGNetBaseSession-TryCloseTcpIOWithTimeout0 = 239,
-		Beyond-Network-HGNetBaseSession-TryConnectWithTimeout0 = 244,
-		Beyond-Network-HGNetBaseSession-SessionCheckSignalAndSleep0 = 250,
-		Beyond-Network-HGNetBaseSession-_ReadAndCheckMessageInSessionThread0 = 251,
-		Beyond-Network-HGNetBaseSession-NetStatusChecker_Receive0 = 252,
-		Beyond-Network-HGNetBaseSession-_SendAndCheckMessage0 = 253,
-		Beyond-Network-HGNetBaseSession-NetStatusChecker_Sender0 = 254,
-		Beyond-Network-HGNetBaseSession-OpenAutoReconnect0 = 256,
-		Beyond-Network-HGNetSession-SetAutoReconnectToken0 = 257,
-		Beyond-Network-HGNetSession-SessionConnectTimeoutCheckerTick0 = 258,
-		Beyond-Network-HGNetSession-DoReconnectLogin0 = 259,
-		Beyond-Network-HGNetSession-GetClientPublicKey0 = 260,
-		Beyond-Network-HGNetSession-_CSLoginHelper_UpdateAppInfo0 = 261,
-		Beyond-Network-HGNetSession-_GetOnlineResVersion0 = 262,
-		Beyond-Network-HGNetSession-_GetPlatformID0 = 263,
-		Beyond-Network-HGNetSession-_GetSDKEnv0 = 264,
-		Beyond-Network-HGNetSession-_GetPayPlatform0 = 265,
-		Beyond-Network-HGNetSession-_WriteMessageInSessionThread0 = 266,
-		Beyond-Network-HGNetSession-_ReadMessageInSessionThread0 = 267,
-		Beyond-Network-HGNetSession-_ApproximateLoginServerTime0 = 268,
-		Beyond-Network-HGNetSession-_HandleLoginEncryp0 = 269,
-		Beyond-Network-HGNetSession-_RSADecrypt0 = 270,
-		Beyond-Network-HGNetSession-Start0 = 271,
-		Beyond-Network-HGNetSession-OnApplicationPause0 = 272,
-		Beyond-Network-HGNetSession-LoginAsync0 = 273,
-		Beyond-Network-HGNetSession-_SessionLoginThreadTask0 = 274,
-		Beyond-Network-HGNetSessionLoginYield-GetRequest0 = 275,
-		Beyond-Network-HGNetSessionLoginYield-SetSucceed0 = 276,
-		Beyond-Network-HGNetSessionLoginYield-LoginErrorInfo-Clear0 = 277,
-		Beyond-Network-HGNetSessionLoginYield-SetNtfError0 = 280,
-		Beyond-Network-HGNetSessionLoginYield-LoginErrorInfo-Set0 = 281,
-		Beyond-Network-HGNetSessionLoginYield-SetConnectErrorError0 = 282,
-		Beyond-Network-HGNetSessionLoginYield-LoginErrorInfo-SetErrorConnectError0 = 283,
-		Beyond-Network-HGNetSessionLoginYield-SetTimeOutError0 = 284,
-		Beyond-Network-HGNetSessionLoginYield-LoginErrorInfo-SetErrorConnectTimeOut0 = 285,
-		Beyond-Network-HGNetSession-StartMsgLoop0 = 286,
-		Beyond-Network-HGNetSession-OnConnectedSucceed0 = 287,
-		Beyond-Network-HGNetSession-OnReconnectTimesOver0 = 288,
-		Beyond-Network-HGNetSession-NeedKeepConnect0 = 289,
-		Beyond-Network-HGNetSession-CheckAndWriteReqMsg0 = 290,
-		Beyond-Network-HGNetSession-ReadMessageInSessionThread0 = 291,
-		Beyond-Network-HGNetSession-ClearRecvQueue0 = 292,
-		Beyond-Network-HGNetSession-ClearSendQueue0 = 293,
-		Beyond-Network-HGNetSession-GetPing0 = 294,
-		Beyond-Network-HGNetSession-GetPingPassedTime0 = 295,
-		Beyond-Network-HGNetSession-IsPingInProgress0 = 296,
-		Beyond-Network-HGNetSession-ClearPingWDG0 = 297,
-		Beyond-Network-HGNetSession-_HandleSpecialMessagePing0 = 298,
-		Beyond-Network-HGNetSession-IsPingOut0 = 299,
-		Beyond-Network-HGNetSession-PingSenderTick0 = 300,
-		Beyond-Network-HGNetSession-InitClientRSAKey0 = 301,
-		Beyond-Network-HGNetSession-ClearRSAKey0 = 302,
-		Beyond-Network-HGNetSession-CheckAndDealRespMessages0 = 303,
-		Beyond-Network-HGNetSession-_HandleSpecialMessageErrorCode0 = 304,
-		Beyond-Network-HGNetSessionUtils-CheckErrorNeedsDisconnect0 = 305,
-		Beyond-Network-HGNetSession-_HandleSpecialMessageReconnectIncr0 = 306,
-		Beyond-Network-HGNetSession-_HandleSpecialMessageReconnectFull0 = 307,
-		Beyond-Network-HGNetSession-_HandleSpecialMessageReconnectLogin0 = 308,
-		Beyond-Network-HGNetSessionLoginYield-GetResponse0 = 309,
-		Beyond-Network-HGNetSessionLoginYield-GetErrorCode0 = 310,
-		Beyond-Network-HGNetSessionLoginYield-GetErrorDetails0 = 312,
-		Beyond-Network-HGNetSessionLoginYield-LoginErrorInfo-SetErrorInvaild0 = 314,
-		Beyond-Network-HGNetSessionConnectYield-GetCode0 = 315,
-		Beyond-Network-HGNetSessionConnectYield-get_keepWaiting0 = 316,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-Start0 = 317,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-Connect0 = 318,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-_DNSCheck0 = 319,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-Close1 = 320,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-Close0 = 321,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-RemoveAutoReconnect0 = 322,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-CloseTCPMsgThreadTask0 = 323,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-ConnectAsync0 = 324,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-OnConnectAsyncEnd0 = 325,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-EnqueueSendMsg0 = 326,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-GetSendQueueMsgCount0 = 327,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-IncrementCSSeqID0 = 328,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-SetCSSeqID0 = 329,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-GetCSSeqID0 = 330,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-GetIO0 = 331,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-StartTCPMsgLoopThreadTask0 = 332,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-_SessionThread0 = 333,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-_ReconnectCheckerTick0 = 334,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-SessionCheckSignalAndSleep0 = 335,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-NetStatusChecker_Receive0 = 336,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-NetStatusChecker_Sender0 = 337,
-		Beyond-Network-HGNetLogger-HGNetLogBaseSession-OpenAutoReconnect0 = 338,
-		Beyond-Network-HGNetLogger-HGNetLogger-Log0 = 339,
-		Beyond-Network-HGNetLogger-HGNetLogger-CheckLog0 = 340,
-		Beyond-Network-HGNetLogger-HGNetLogger-ConvertFromDLogger0 = 341,
-		Beyond-Network-HGNetLogger-HGNetLogger-ConvertFromDLoggerV20 = 342,
-		Beyond-Network-HGNetLogger-HGNetLogger-ConvertFromDLogger1 = 343,
-		Beyond-Network-HGNetLogger-HGNetLoggerClient-get_instance0 = 344,
-		Beyond-Network-HGNetLogger-HGNetLoggerClient-ShutDown0 = 345,
-		Beyond-Network-HGNetLogger-HGNetLoggerClient-_CloseAndClear0 = 346,
-		Beyond-Network-HGNetLogger-HGNetLoggerClient-AddLog0 = 347,
-		Beyond-Network-HGNetLogger-HGNetLoggerClient-_FlushLocalLogQueue0 = 348,
-		Beyond-Network-HGNetLogger-HGNetLoggerCloudSettings-IsNetLogLevelEnabled1 = 349,
-		Beyond-Network-HGNetLogger-HGNetLoggerCloudSettings-ConvertFromDLogger0 = 350,
-		Beyond-Network-HGNetLogger-HGNetLoggerCloudSettings-IsNetLogLevelEnabled0 = 351,
-		Beyond-Network-HGNetLogger-HGNetLoggerClient-WriteNetLog0 = 352,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-SendMessage0 = 353,
-		Beyond-Network-HGNetLogger-HGNetLogger-Clear0 = 354,
-		Beyond-Network-HGNetLogger-HGNetLogger-SetLogChannel0 = 355,
-		Beyond-Network-HGNetLogger-HGNetLoggerClient-Init0 = 356,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-SetAutoReconnectToken0 = 357,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-SetReconnectSuccessCallback0 = 359,
-		Beyond-Network-HGNetLogger-HGNetLoggerClient-OnApplicationPause0 = 360,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-OnApplicationPause0 = 361,
-		Beyond-Network-HGNetLogger-HGNetLoggerClient-SetRoleID0 = 362,
-		Beyond-Network-HGNetLogger-HGNetLoggerClient-SetNetLogMaskFromServer0 = 364,
-		Beyond-Network-HGNetLogger-HGNetLoggerCloudSettings-SetCloudLogControl0 = 365,
-		Beyond-Network-HGNetLogger-HGNetLoggerCloudSettings-IsLocalLogLevelEnabled0 = 366,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-get_s_messageType2Id0 = 367,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-get_s_messageId2Type0 = 368,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-TryGetMsgTypeByID0 = 369,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-Start0 = 370,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-OnConnectedSucceed0 = 371,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-SendLogin0 = 372,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-_WriteMessageInSessionThread0 = 374,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-ReadMessageInSessionThread0 = 375,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-CheckAndDealRespMessages0 = 376,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-CheckAndWriteReqMsg0 = 377,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-NeedKeepConnect0 = 378,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-DoReconnectLogin0 = 379,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-_GetConnectTimeoutTime0 = 380,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-SessionConnectTimeoutCheckerTick0 = 381,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-ClearPingWDG0 = 382,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-IsPingOut0 = 383,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-PingSenderTick0 = 384,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-InitClientRSAKey0 = 385,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-ClearRSAKey0 = 386,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-ClearRecvQueue0 = 387,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-ClearSendQueue0 = 388,
-		Beyond-Network-HGNetLogger-HGNetLoggerSession-OnReconnectTimesOver0 = 389
+		Beyond-Network-NetBus-ResultHandler-_CheckSessionIDValid0 = 43,
+		Beyond-Network-NetBus-ResultHandler-Dispose0 = 45,
+		Beyond-Network-NetBus-Sender-DoSend0 = 49,
+		Beyond-Network-NetBus-Sender-DoListen0 = 50,
+		Beyond-Network-NetBus-Sender-DoUnListen0 = 51,
+		Beyond-Network-Special2BusSender-Send0 = 52,
+		Beyond-Network-DisposableBusSender-Send0 = 53,
+		Beyond-Network-Special2BusSender-OnNetShutDown0 = 55,
+		Beyond-Network-DisposableBusSender-OnNetShutDown0 = 56,
+		Beyond-Network-DisposableBusSender-_Clear0 = 57,
+		Beyond-Network-Special2BusSender-_ClearSendTime0 = 58,
+		Beyond-Network-Special2BusSender-Dispose0 = 59,
+		Beyond-Network-DisposableBusSender-Dispose0 = 60,
+		Beyond-Network-NetworkMaskConfigHolder-Init0 = 62,
+		Beyond-Network-NetworkMaskConfigHolder-Dispose0 = 63,
+		Beyond-Network-UIBusSender-Dispose0 = 64,
+		Beyond-Network-NetworkMask-RemoveMask0 = 66,
+		Beyond-Network-NetworkMask-_UpdateMaskState0 = 67,
+		Beyond-Network-UIBusSender-Send0 = 72,
+		Beyond-Network-NetUtil-GetCSMsgIdByType0 = 77,
+		Beyond-Network-NetworkMask-AddMask1 = 78,
+		Beyond-Network-NetworkMask-AddMask0 = 79,
+		Beyond-Network-NetworkMask-_GetKey0 = 80,
+		Beyond-Network-UIBusSender-OnNetShutDown0 = 81,
+		Beyond-Network-TeleportMaskSender-Dispose0 = 82,
+		Beyond-Network-TeleportMaskSender-Send0 = 83,
+		Beyond-Network-TeleportMaskSender-OnNetShutDown0 = 89,
+		Beyond-Network-FrequencyControlBusSender-_TrySendWaitingMsg0 = 90,
+		Beyond-Network-FrequencyControlBusSender-Send0 = 91,
+		Beyond-Network-FrequencyControlBusSender-Send1 = 96,
+		Beyond-Network-FrequencyControlBusSender-Dispose0 = 97,
+		Beyond-Network-ServerConfig-IsSame0 = 98,
+		Beyond-Network-NetUtil-RegisterSCMessage0 = 99,
+		Beyond-Network-NetUtil-RegisterCSMessage0 = 100,
+		Beyond-Network-NetUtil-GetSCMsgIdByType0 = 101,
+		Beyond-Network-NetUtil-FastRegisterMessage0 = 102,
+		Beyond-Network-NetUtil-GetNetMessageFromDataBytes0 = 103,
+		Beyond-Network-NetUtil-SerializeHeadMessage0 = 104,
+		Beyond-Network-NetUtil-AutoRegisterMessageHandlers0 = 105,
+		Beyond-Network-NetUtil-AutoUnRegisterMessageHandlers0 = 106,
+		Beyond-Network-NetUtil-_ForeachMessageHandlers0 = 110,
+		Beyond-Network-NetworkMask-OnInit0 = 111,
+		Beyond-Network-NetworkMask-_CreateTickFunction0 = 112,
+		Beyond-Network-NetworkMask-PreTick0 = 113,
+		Beyond-Network-NetworkMask-_OnSwitchLanguage0 = 114,
+		Beyond-Network-NetworkMask-OnUnInit0 = 115,
+		Beyond-Network-NetworkMask-_ClearTickFunction0 = 116,
+		Beyond-Network-NetworkMask-Release0 = 117,
+		Beyond-Network-NetworkMask-ListenOnNetMaskChanged0 = 118,
+		Beyond-Network-NetworkMask-UnListenOnNetMaskChanged0 = 119,
+		Beyond-Network-NetworkUrls-RemoteConfigUrl0 = 120,
+		Beyond-Network-NetworkUrls-ResourceRootUrlDev0 = 121,
+		Beyond-Network-NetworkUrls-ServerListUrl0 = 122,
+		Beyond-Network-NetworkUrls-_GetUrlFromLocal0 = 123,
+		Beyond-Network-NetworkUrls-AgeTipsUrl0 = 124,
+		Beyond-Network-NetworkUrls-_SelectUrl0 = 125,
+		Beyond-Network-NetworkUrls-GovUrl0 = 126,
+		Beyond-Network-NetworkUrls-LauncherUrl0 = 127,
+		Beyond-Network-TcpIO-Connect0 = 128,
+		Beyond-Network-TcpIO-IsConnected0 = 129,
+		Beyond-Network-TcpIO-Close0 = 130,
+		Beyond-Network-TcpIO-ConnectAsync0 = 131,
+		Beyond-Network-TcpIO-IsAuthed0 = 132,
+		Beyond-Network-TcpIO-MarkAuthed0 = 133,
+		Beyond-Network-TcpIO-EnableCryptStream0 = 134,
+		Beyond-Network-TcpIO-GetEndPoint0 = 135,
+		Beyond-Network-TcpIO-TestCloseNetIO0 = 136,
+		Beyond-Network-TcpIO-TestDropNetIO0 = 137,
+		Beyond-Network-TcpIO-WriteData0 = 138,
+		Beyond-Network-TcpIO-WriteCryptoData0 = 139,
+		Beyond-Network-TcpIO-GetSendHeadBuffer0 = 140,
+		Beyond-Network-TcpIO-GetSendBuffer0 = 141,
+		Beyond-Network-TcpIO-GetReceiveBuffer0 = 142,
+		Beyond-Network-TcpIO-ClearReceiveBufferOffset0 = 143,
+		Beyond-Network-TcpIO-GetReceiveBufferOffset0 = 144,
+		Beyond-Network-TcpIO-SkipReceiveBufferOffset0 = 145,
+		Beyond-Network-TcpIO-ReadData0 = 146,
+		Beyond-Network-TcpIO-ReadCryptoData0 = 147,
+		Beyond-Network-TcpIO-Available0 = 148,
+		Beyond-Network-TcpIO-Dispose0 = 149,
+		Beyond-Network-HttpSender-YieldSendGet1 = 150,
+		Beyond-Network-HttpSender-YieldSendGet0 = 154,
+		Beyond-Network-HttpSender-_YieldSendHttpRequest1 = 158,
+		Beyond-Network-HttpSender-_YieldSendHttpRequest0 = 162,
+		Beyond-Network-HttpSender-FSendFunc-GetCancellation0 = 167,
+		Beyond-Network-HttpSender-FSendFunc-Invoke0 = 168,
+		Beyond-Network-HttpSender-_CreateWebRequestGET0 = 169,
+		Beyond-Network-HttpSender-_CreateWebRequestPOST0 = 170,
+		Beyond-Network-HttpSender-Cancellation-IsCanceled0 = 171,
+		Beyond-Network-HttpSender-_SetHttpResult0 = 172,
+		Beyond-Network-HttpSender-_MarkResultAsException0 = 173,
+		Beyond-Network-HttpSender-_DeserializeTypedResult0 = 177,
+		Beyond-Network-HttpSender-YieldSendPost1 = 188,
+		Beyond-Network-HttpSender-YieldSendPost0 = 192,
+		Beyond-Network-HttpSender-WaitForSendPost0 = 202,
+		Beyond-Network-HttpSender-_WaitForSendHttpRequest0 = 203,
+		Beyond-Network-HttpSender-_WaitForServiceDone0 = 206,
+		Beyond-Network-HttpSender-_StartWebRequestTask0 = 207,
+		Beyond-Network-HttpSender-WaitForSendGet1 = 208,
+		Beyond-Network-HttpSender-WaitForSendGet0 = 209,
+		Beyond-Network-HttpSender-GetGeneralErrorCode0 = 210,
+		Beyond-Network-HttpSender-_DebugOnlyProfileResult0 = 211,
+		Beyond-Network-HttpSender-Cancellation-Cancel0 = 212,
+		Beyond-Network-HttpSender-FSendFunc-GetOptMethod0 = 213,
+		Beyond-Network-HGNetBaseSession-set_reconnectState0 = 214,
+		Beyond-Network-HGNetBaseSession-Start0 = 215,
+		Beyond-Network-HGNetBaseSession-Connect0 = 217,
+		Beyond-Network-HGNetBaseSession-_DNSCheck0 = 218,
+		Beyond-Network-HGNetBaseSession-InternalClose1 = 219,
+		Beyond-Network-HGNetBaseSession-InternalClose0 = 220,
+		Beyond-Network-HGNetBaseSession-RemoveAutoReconnect0 = 221,
+		Beyond-Network-HGNetBaseSession-CloseTCPMsgThreadTask0 = 222,
+		Beyond-Network-HGNetBaseSession-ConnectAsync0 = 223,
+		Beyond-Network-HGNetBaseSession-OnConnectAsyncEnd0 = 226,
+		Beyond-Network-HGNetSessionConnectYield-SetFinish0 = 227,
+		Beyond-Network-HGNetBaseSession-Close0 = 228,
+		Beyond-Network-HGNetBaseSession-EnqueueSendMsg0 = 229,
+		Beyond-Network-HGNetBaseSession-GetSendQueueMsgCount0 = 230,
+		Beyond-Network-HGNetBaseSession-SetCSSeqID0 = 231,
+		Beyond-Network-HGNetBaseSession-GetCSSeqID0 = 232,
+		Beyond-Network-HGNetBaseSession-GetIO0 = 233,
+		Beyond-Network-HGNetBaseSession-StartTCPMsgLoopThreadTask0 = 234,
+		Beyond-Network-HGNetBaseSession-_SessionThread0 = 237,
+		Beyond-Network-HGNetBaseSession-_ReconnectCheckerTick0 = 239,
+		Beyond-Network-HGNetBaseSession-TryCloseTcpIOWithTimeout0 = 241,
+		Beyond-Network-HGNetBaseSession-TryConnectWithTimeout0 = 246,
+		Beyond-Network-HGNetBaseSession-SessionCheckSignalAndSleep0 = 252,
+		Beyond-Network-HGNetBaseSession-_ReadAndCheckMessageInSessionThread0 = 253,
+		Beyond-Network-HGNetBaseSession-NetStatusChecker_Receive0 = 254,
+		Beyond-Network-HGNetBaseSession-_SendAndCheckMessage0 = 255,
+		Beyond-Network-HGNetBaseSession-NetStatusChecker_Sender0 = 256,
+		Beyond-Network-HGNetBaseSession-OpenAutoReconnect0 = 258,
+		Beyond-Network-HGNetSession-SetAutoReconnectToken0 = 259,
+		Beyond-Network-HGNetSession-SessionConnectTimeoutCheckerTick0 = 260,
+		Beyond-Network-HGNetSession-DoReconnectLogin0 = 261,
+		Beyond-Network-HGNetSession-GetClientPublicKey0 = 262,
+		Beyond-Network-HGNetSession-_CSLoginHelper_UpdateAppInfo0 = 263,
+		Beyond-Network-HGNetSession-_GetOnlineResVersion0 = 264,
+		Beyond-Network-HGNetSession-_GetPlatformID0 = 265,
+		Beyond-Network-HGNetSession-_GetSDKEnv0 = 266,
+		Beyond-Network-HGNetSession-_GetPayPlatform0 = 267,
+		Beyond-Network-HGNetSession-_WriteMessageInSessionThread0 = 268,
+		Beyond-Network-HGNetSession-_ReadMessageInSessionThread0 = 269,
+		Beyond-Network-HGNetSession-_ApproximateLoginServerTime0 = 270,
+		Beyond-Network-HGNetSession-_HandleLoginEncryp0 = 271,
+		Beyond-Network-HGNetSession-_RSADecrypt0 = 272,
+		Beyond-Network-HGNetSession-Start0 = 273,
+		Beyond-Network-HGNetSession-OnApplicationPause0 = 274,
+		Beyond-Network-HGNetSession-_FlushMergeQueueToSendQueue0 = 275,
+		Beyond-Network-HGNetSession-LoginAsync0 = 276,
+		Beyond-Network-HGNetSession-_SessionLoginThreadTask0 = 277,
+		Beyond-Network-HGNetSessionLoginYield-GetRequest0 = 278,
+		Beyond-Network-HGNetSessionLoginYield-SetConnectErrorError0 = 279,
+		Beyond-Network-HGNetSessionLoginYield-LoginErrorInfo-SetErrorConnectError0 = 280,
+		Beyond-Network-HGNetSessionLoginYield-SetSucceed0 = 283,
+		Beyond-Network-HGNetSessionLoginYield-LoginErrorInfo-Clear0 = 284,
+		Beyond-Network-HGNetSessionLoginYield-SetNtfError0 = 285,
+		Beyond-Network-HGNetSessionLoginYield-LoginErrorInfo-Set0 = 286,
+		Beyond-Network-HGNetSessionLoginYield-SetTimeOutError0 = 287,
+		Beyond-Network-HGNetSessionLoginYield-LoginErrorInfo-SetErrorConnectTimeOut0 = 288,
+		Beyond-Network-HGNetSession-StartMsgLoop0 = 289,
+		Beyond-Network-HGNetSession-OnConnectedSucceed0 = 290,
+		Beyond-Network-HGNetSession-OnReconnectTimesOver0 = 291,
+		Beyond-Network-HGNetSession-NeedKeepConnect0 = 292,
+		Beyond-Network-HGNetSession-CheckAndWriteReqMsg0 = 293,
+		Beyond-Network-HGNetSession-ReadMessageInSessionThread0 = 294,
+		Beyond-Network-HGNetSession-ClearRecvQueue0 = 295,
+		Beyond-Network-HGNetSession-ClearSendQueue0 = 296,
+		Beyond-Network-HGNetSession-GetPing0 = 297,
+		Beyond-Network-HGNetSession-GetPingPassedTime0 = 298,
+		Beyond-Network-HGNetSession-IsPingInProgress0 = 299,
+		Beyond-Network-HGNetSession-ClearPingWDG0 = 300,
+		Beyond-Network-HGNetSession-_HandleSpecialMessagePing0 = 301,
+		Beyond-Network-HGNetSession-IsPingOut0 = 302,
+		Beyond-Network-HGNetSession-PingSenderTick0 = 303,
+		Beyond-Network-HGNetSession-InitClientRSAKey0 = 304,
+		Beyond-Network-HGNetSession-ClearRSAKey0 = 305,
+		Beyond-Network-HGNetSession-CheckAndDealRespMessages0 = 306,
+		Beyond-Network-HGNetSession-_HandleSpecialMessageErrorCode0 = 307,
+		Beyond-Network-HGNetSessionUtils-CheckErrorNeedsDisconnect0 = 308,
+		Beyond-Network-HGNetSession-_HandleSpecialMessageReconnectIncr0 = 309,
+		Beyond-Network-HGNetSession-_HandleSpecialMessageReconnectFull0 = 310,
+		Beyond-Network-HGNetSession-_HandleSpecialMessageReconnectLogin0 = 311,
+		Beyond-Network-HGNetSessionLoginYield-GetResponse0 = 312,
+		Beyond-Network-HGNetSessionLoginYield-GetErrorCode0 = 313,
+		Beyond-Network-HGNetSessionLoginYield-GetErrorDetails0 = 315,
+		Beyond-Network-HGNetSessionLoginYield-LoginErrorInfo-SetErrorInvaild0 = 317,
+		Beyond-Network-HGNetSessionConnectYield-GetCode0 = 318,
+		Beyond-Network-HGNetSessionConnectYield-get_keepWaiting0 = 319,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-Start0 = 320,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-Connect0 = 321,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-_DNSCheck0 = 322,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-Close1 = 323,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-Close0 = 324,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-RemoveAutoReconnect0 = 325,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-CloseTCPMsgThreadTask0 = 326,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-ConnectAsync0 = 327,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-OnConnectAsyncEnd0 = 328,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-EnqueueSendMsg0 = 329,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-GetSendQueueMsgCount0 = 330,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-IncrementCSSeqID0 = 331,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-SetCSSeqID0 = 332,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-GetCSSeqID0 = 333,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-GetIO0 = 334,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-StartTCPMsgLoopThreadTask0 = 335,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-_SessionThread0 = 336,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-_ReconnectCheckerTick0 = 337,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-SessionCheckSignalAndSleep0 = 338,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-NetStatusChecker_Receive0 = 339,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-NetStatusChecker_Sender0 = 340,
+		Beyond-Network-HGNetLogger-HGNetLogBaseSession-OpenAutoReconnect0 = 341,
+		Beyond-Network-HGNetLogger-HGNetLogger-Log0 = 342,
+		Beyond-Network-HGNetLogger-HGNetLogger-CheckLog0 = 343,
+		Beyond-Network-HGNetLogger-HGNetLogger-ConvertFromDLogger0 = 344,
+		Beyond-Network-HGNetLogger-HGNetLogger-ConvertFromDLoggerV20 = 345,
+		Beyond-Network-HGNetLogger-HGNetLogger-ConvertFromDLogger1 = 346,
+		Beyond-Network-HGNetLogger-HGNetLoggerClient-get_instance0 = 347,
+		Beyond-Network-HGNetLogger-HGNetLoggerClient-ShutDown0 = 348,
+		Beyond-Network-HGNetLogger-HGNetLoggerClient-_CloseAndClear0 = 349,
+		Beyond-Network-HGNetLogger-HGNetLoggerClient-AddLog0 = 350,
+		Beyond-Network-HGNetLogger-HGNetLoggerClient-_FlushLocalLogQueue0 = 351,
+		Beyond-Network-HGNetLogger-HGNetLoggerCloudSettings-IsNetLogLevelEnabled1 = 352,
+		Beyond-Network-HGNetLogger-HGNetLoggerCloudSettings-ConvertFromDLogger0 = 353,
+		Beyond-Network-HGNetLogger-HGNetLoggerCloudSettings-IsNetLogLevelEnabled0 = 354,
+		Beyond-Network-HGNetLogger-HGNetLoggerClient-WriteNetLog0 = 355,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-SendMessage0 = 356,
+		Beyond-Network-HGNetLogger-HGNetLogger-Clear0 = 357,
+		Beyond-Network-HGNetLogger-HGNetLogger-SetLogChannel0 = 358,
+		Beyond-Network-HGNetLogger-HGNetLoggerClient-Init0 = 359,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-SetAutoReconnectToken0 = 360,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-SetReconnectSuccessCallback0 = 362,
+		Beyond-Network-HGNetLogger-HGNetLoggerClient-OnApplicationPause0 = 363,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-OnApplicationPause0 = 364,
+		Beyond-Network-HGNetLogger-HGNetLoggerClient-SetRoleID0 = 365,
+		Beyond-Network-HGNetLogger-HGNetLoggerClient-SetNetLogMaskFromServer0 = 367,
+		Beyond-Network-HGNetLogger-HGNetLoggerCloudSettings-SetCloudLogControl0 = 368,
+		Beyond-Network-HGNetLogger-HGNetLoggerCloudSettings-IsLocalLogLevelEnabled0 = 369,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-get_s_messageType2Id0 = 370,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-get_s_messageId2Type0 = 371,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-TryGetMsgTypeByID0 = 372,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-Start0 = 373,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-OnConnectedSucceed0 = 374,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-SendLogin0 = 375,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-_WriteMessageInSessionThread0 = 377,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-ReadMessageInSessionThread0 = 378,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-CheckAndDealRespMessages0 = 379,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-CheckAndWriteReqMsg0 = 380,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-NeedKeepConnect0 = 381,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-DoReconnectLogin0 = 382,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-_GetConnectTimeoutTime0 = 383,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-SessionConnectTimeoutCheckerTick0 = 384,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-ClearPingWDG0 = 385,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-IsPingOut0 = 386,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-PingSenderTick0 = 387,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-InitClientRSAKey0 = 388,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-ClearRSAKey0 = 389,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-ClearRecvQueue0 = 390,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-ClearSendQueue0 = 391,
+		Beyond-Network-HGNetLogger-HGNetLoggerSession-OnReconnectTimesOver0 = 392
 	}
 }

@@ -2,9 +2,9 @@
  * Generated code file by Il2CppInspector - http://www.djkaty.com - https://github.com/djkaty
  */
 
-// Image 164: __Generated - Assembly: __Generated, Version=0.0.-1.-1, Culture=neutral, PublicKeyToken=null - Types 60258-60260
+// Image 165: __Generated - Assembly: __Generated, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61335-61337
 
-internal interface IActivationFactory // TypeDefIndex: 60258
+internal interface IActivationFactory // TypeDefIndex: 61335
 {
 	// Methods
 	object ActivateInstance() => default;
@@ -12,21 +12,21 @@ internal interface IActivationFactory // TypeDefIndex: 60258
 
 namespace System
 {
-	internal class __Il2CppComObject // TypeDefIndex: 60259
+	internal class __Il2CppComObject // TypeDefIndex: 61336
 	{
 		// Constructors
 		public __Il2CppComObject() {} // Dummy constructor
 	
 		// Methods
-		~__Il2CppComObject() {} // 0x000000018A2C10A4-0x000000018A2C10A4
+		~__Il2CppComObject() {} // 0x000000018C3D918C-0x000000018C3D918C
 	}
 
-	internal sealed class __Il2CppComDelegate : __Il2CppComObject // TypeDefIndex: 60260
+	internal sealed class __Il2CppComDelegate : __Il2CppComObject // TypeDefIndex: 61337
 	{
 		// Constructors
 		public __Il2CppComDelegate() {} // Dummy constructor
 	
 		// Methods
-		~__Il2CppComDelegate() {} // 0x000000018A2C109C-0x000000018A2C10A4
+		~__Il2CppComDelegate() {} // 0x000000018C3D9184-0x000000018C3D918C
 	}
 }

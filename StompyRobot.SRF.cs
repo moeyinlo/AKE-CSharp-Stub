@@ -7,73 +7,57 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Text;
-using JetBrains.Annotations;
 using SRF;
 using SRF.Components;
 using SRF.UI;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 using UnityEngine.Scripting;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-// Image 64: StompyRobot.SRF.dll - Assembly: StompyRobot.SRF, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 58155-58244
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 65: StompyRobot.SRF.dll - Assembly: StompyRobot.SRF, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59303-59392
 
-public static class SRDebugUtil // TypeDefIndex: 58156
+public static class SRDebugUtil // TypeDefIndex: 59304
 {
 	// Fields
-	public const int LineBufferCount = 512; // Metadata: 0x01FDAC4F
+	public const int LineBufferCount = 512; // Metadata: 0x020805E3
+	private static bool _IsFixedUpdate_k__BackingField; // 0x00
 
 	// Properties
-	public static bool IsFixedUpdate { get; set; } // 0x00000001896C99B4-0x00000001896C99EC 0x00000001896C99EC-0x00000001896C9A28
+	public static bool IsFixedUpdate { get; set; } // 0x000000018B7EFAF0-0x000000018B7EFB28 0x000000018B7EFB28-0x000000018B7EFB64
 
 	// Methods
-	[DebuggerNonUserCode]
-	[DebuggerStepThrough]
-	public static void AssertNotNull(object value, string message = null, MonoBehaviour instance = null) {} // 0x00000001896C9728-0x00000001896C98AC
-	[DebuggerNonUserCode]
-	[DebuggerStepThrough]
-	public static void Assert(bool condition, string message = null, MonoBehaviour instance = null) {} // 0x00000001896C98AC-0x00000001896C99A4
-	[Conditional("UNITY_EDITOR")]
-	[DebuggerNonUserCode]
-	[DebuggerStepThrough]
-	public static void EditorAssertNotNull(object value, string message = null, MonoBehaviour instance = null) {} // 0x00000001896C99A4-0x00000001896C99AC
-	[Conditional("UNITY_EDITOR")]
-	[DebuggerNonUserCode]
-	[DebuggerStepThrough]
-	public static void EditorAssert(bool condition, string message = null, MonoBehaviour instance = null) {} // 0x00000001896C99AC-0x00000001896C99B4
+	public static void AssertNotNull(object value, string message = null, MonoBehaviour instance = null) {} // 0x000000018B7EF864-0x000000018B7EF9E8
+	public static void Assert(bool condition, string message = null, MonoBehaviour instance = null) {} // 0x000000018B7EF9E8-0x000000018B7EFAE0
+	public static void EditorAssertNotNull(object value, string message = null, MonoBehaviour instance = null) {} // 0x000000018B7EFAE0-0x000000018B7EFAE8
+	public static void EditorAssert(bool condition, string message = null, MonoBehaviour instance = null) {} // 0x000000018B7EFAE8-0x000000018B7EFAF0
 }
 
-public static class SRFileUtil // TypeDefIndex: 58157
+public static class SRFileUtil // TypeDefIndex: 59305
 {
 	// Methods
-	public static void DeleteDirectory(string path) {} // 0x00000001896CA008-0x00000001896CA09C
-	public static string GetBytesReadable(long i) => default; // 0x000000018315D010-0x000000018315D160
+	public static void DeleteDirectory(string path) {} // 0x000000018B7F0144-0x000000018B7F01D8
+	public static string GetBytesReadable(long i) => default; // 0x0000000183FC5110-0x0000000183FC5260
 }
 
-public static class SRInstantiate // TypeDefIndex: 58158
+public static class SRInstantiate // TypeDefIndex: 59306
 {
 	// Methods
 	public static T Instantiate<T>(T prefab)
 		where T : UnityEngine.Component => default;
-	public static GameObject Instantiate(GameObject prefab) => default; // 0x00000001896CA09C-0x00000001896CA0F0
+	public static GameObject Instantiate(GameObject prefab) => default; // 0x000000018B7F01D8-0x000000018B7F022C
 	public static T Instantiate<T>(T prefab, Vector3 position, Quaternion rotation)
 		where T : UnityEngine.Component => default;
 }
 
-public static class SRMath // TypeDefIndex: 58161
+public static class SRMath // TypeDefIndex: 59309
 {
 	// Nested types
-	public enum EaseType // TypeDefIndex: 58159
+	public enum EaseType // TypeDefIndex: 59307
 	{
 		Linear = 0,
 		QuadEaseOut = 1,
@@ -118,89 +102,89 @@ public static class SRMath // TypeDefIndex: 58161
 		BackEaseOutIn = 40
 	}
 
-	private static class TweenFunctions // TypeDefIndex: 58160
+	private static class TweenFunctions // TypeDefIndex: 59308
 	{
 		// Methods
-		public static float Linear(float t, float b, float c, float d) => default; // 0x00000001896CE8CC-0x00000001896CE8DC
-		public static float ExpoEaseOut(float t, float b, float c, float d) => default; // 0x00000001896CE864-0x00000001896CE8CC
-		public static float ExpoEaseIn(float t, float b, float c, float d) => default; // 0x00000001896CE7A4-0x00000001896CE804
-		public static float ExpoEaseInOut(float t, float b, float c, float d) => default; // 0x00000001896CE6F4-0x00000001896CE7A4
-		public static float ExpoEaseOutIn(float t, float b, float c, float d) => default; // 0x00000001896CE804-0x00000001896CE864
-		public static float CircEaseOut(float t, float b, float c, float d) => default; // 0x00000001896CE254-0x00000001896CE2A0
-		public static float CircEaseIn(float t, float b, float c, float d) => default; // 0x00000001896CE15C-0x00000001896CE1B8
-		public static float CircEaseInOut(float t, float b, float c, float d) => default; // 0x00000001896CE0C8-0x00000001896CE15C
-		public static float CircEaseOutIn(float t, float b, float c, float d) => default; // 0x00000001896CE1B8-0x00000001896CE254
-		public static float QuadEaseOut(float t, float b, float c, float d) => default; // 0x00000001896CE9D0-0x00000001896CE9F4
-		public static float QuadEaseIn(float t, float b, float c, float d) => default; // 0x00000001896CE93C-0x00000001896CE954
-		public static float QuadEaseInOut(float t, float b, float c, float d) => default; // 0x00000001896CE8DC-0x00000001896CE93C
-		public static float QuadEaseOutIn(float t, float b, float c, float d) => default; // 0x00000001896CE954-0x00000001896CE9D0
-		public static float SineEaseOut(float t, float b, float c, float d) => default; // 0x00000001896CEE70-0x00000001896CEEAC
-		public static float SineEaseIn(float t, float b, float c, float d) => default; // 0x00000001896CED78-0x00000001896CEDC4
-		public static float SineEaseInOut(float t, float b, float c, float d) => default; // 0x00000001896CECE4-0x00000001896CED78
-		public static float SineEaseOutIn(float t, float b, float c, float d) => default; // 0x00000001896CEDC4-0x00000001896CEE70
-		public static float CubicEaseOut(float t, float b, float c, float d) => default; // 0x00000001896CE3BC-0x00000001896CE3E8
-		public static float CubicEaseIn(float t, float b, float c, float d) => default; // 0x00000001896CE310-0x00000001896CE32C
-		public static float CubicEaseInOut(float t, float b, float c, float d) => default; // 0x00000001896CE2A0-0x00000001896CE310
-		public static float CubicEaseOutIn(float t, float b, float c, float d) => default; // 0x00000001896CE32C-0x00000001896CE3BC
-		public static float QuartEaseOut(float t, float b, float c, float d) => default; // 0x00000001896CEB34-0x00000001896CEB6C
-		public static float QuartEaseIn(float t, float b, float c, float d) => default; // 0x00000001896CEA74-0x00000001896CEA94
-		public static float QuartEaseInOut(float t, float b, float c, float d) => default; // 0x00000001896CE9F4-0x00000001896CEA74
-		public static float QuartEaseOutIn(float t, float b, float c, float d) => default; // 0x00000001896CEA94-0x00000001896CEB34
-		public static float QuintEaseOut(float t, float b, float c, float d) => default; // 0x00000001896CECB0-0x00000001896CECE4
-		public static float QuintEaseIn(float t, float b, float c, float d) => default; // 0x00000001896CEBEC-0x00000001896CEC10
-		public static float QuintEaseInOut(float t, float b, float c, float d) => default; // 0x00000001896CEB6C-0x00000001896CEBEC
-		public static float QuintEaseOutIn(float t, float b, float c, float d) => default; // 0x00000001896CEC10-0x00000001896CECB0
-		public static float ElasticEaseOut(float t, float b, float c, float d) => default; // 0x00000001896CE634-0x00000001896CE6F4
-		public static float ElasticEaseIn(float t, float b, float c, float d) => default; // 0x00000001896CE508-0x00000001896CE5D4
-		public static float ElasticEaseInOut(float t, float b, float c, float d) => default; // 0x00000001896CE3E8-0x00000001896CE508
-		public static float ElasticEaseOutIn(float t, float b, float c, float d) => default; // 0x00000001896CE5D4-0x00000001896CE634
-		public static float BounceEaseOut(float t, float b, float c, float d) => default; // 0x00000001896CE008-0x00000001896CE0C8
-		public static float BounceEaseIn(float t, float b, float c, float d) => default; // 0x00000001896CDF2C-0x00000001896CDF78
-		public static float BounceEaseInOut(float t, float b, float c, float d) => default; // 0x00000001896CDE94-0x00000001896CDF2C
-		public static float BounceEaseOutIn(float t, float b, float c, float d) => default; // 0x00000001896CDF78-0x00000001896CE008
-		public static float BackEaseOut(float t, float b, float c, float d) => default; // 0x00000001896CDE58-0x00000001896CDE94
-		public static float BackEaseIn(float t, float b, float c, float d) => default; // 0x00000001896CDD7C-0x00000001896CDDA8
-		public static float BackEaseInOut(float t, float b, float c, float d) => default; // 0x00000001896CDCF4-0x00000001896CDD7C
-		public static float BackEaseOutIn(float t, float b, float c, float d) => default; // 0x00000001896CDDA8-0x00000001896CDE58
+		public static float Linear(float t, float b, float c, float d) => default; // 0x0000000185FD5EA0-0x0000000185FD5EC0
+		public static float ExpoEaseOut(float t, float b, float c, float d) => default; // 0x0000000185FD5E40-0x0000000185FD5EA0
+		public static float ExpoEaseIn(float t, float b, float c, float d) => default; // 0x000000018B7F097C-0x000000018B7F09EC
+		public static float ExpoEaseInOut(float t, float b, float c, float d) => default; // 0x000000018B7F0D04-0x000000018B7F0D2C
+		public static float ExpoEaseOutIn(float t, float b, float c, float d) => default; // 0x000000018B7F09EC-0x000000018B7F0A5C
+		public static float CircEaseOut(float t, float b, float c, float d) => default; // 0x000000018B7F0D2C-0x000000018B7F0DC0
+		public static float CircEaseIn(float t, float b, float c, float d) => default; // 0x000000018B7F0DC0-0x000000018B7F0DE4
+		public static float CircEaseInOut(float t, float b, float c, float d) => default; // 0x0000000185FD5E30-0x0000000185FD5E40
+		public static float CircEaseOutIn(float t, float b, float c, float d) => default; // 0x000000018B7F022C-0x000000018B7F02F0
+		public static float QuadEaseOut(float t, float b, float c, float d) => default; // 0x000000018B7F02F0-0x000000018B7F097C
+		public static float QuadEaseIn(float t, float b, float c, float d) => default; // 0x000000018B7F0C3C-0x000000018B7F0C8C
+		public static float QuadEaseInOut(float t, float b, float c, float d) => default; // 0x000000018B7F0BFC-0x000000018B7F0C3C
+		public static float QuadEaseOutIn(float t, float b, float c, float d) => default; // 0x000000018B7F0B74-0x000000018B7F0BFC
+		public static float SineEaseOut(float t, float b, float c, float d) => default; // 0x000000018B7F0C8C-0x000000018B7F0D04
+		public static float SineEaseIn(float t, float b, float c, float d) => default; // 0x000000018B7F0A5C-0x000000018B7F0B74
+		public static float SineEaseInOut(float t, float b, float c, float d) => default; // 0x000000018B7F4A08-0x000000018B7F4A18
+		public static float SineEaseOutIn(float t, float b, float c, float d) => default; // 0x000000018B7F49A0-0x000000018B7F4A08
+		public static float CubicEaseOut(float t, float b, float c, float d) => default; // 0x000000018B7F48E0-0x000000018B7F4940
+		public static float CubicEaseIn(float t, float b, float c, float d) => default; // 0x000000018B7F4830-0x000000018B7F48E0
+		public static float CubicEaseInOut(float t, float b, float c, float d) => default; // 0x000000018B7F4940-0x000000018B7F49A0
+		public static float CubicEaseOutIn(float t, float b, float c, float d) => default; // 0x000000018B7F4390-0x000000018B7F43DC
+		public static float QuartEaseOut(float t, float b, float c, float d) => default; // 0x000000018B7F4298-0x000000018B7F42F4
+		public static float QuartEaseIn(float t, float b, float c, float d) => default; // 0x000000018B7F4204-0x000000018B7F4298
+		public static float QuartEaseInOut(float t, float b, float c, float d) => default; // 0x000000018B7F42F4-0x000000018B7F4390
+		public static float QuartEaseOutIn(float t, float b, float c, float d) => default; // 0x000000018B7F4B0C-0x000000018B7F4B30
+		public static float QuintEaseOut(float t, float b, float c, float d) => default; // 0x000000018B7F4A78-0x000000018B7F4A90
+		public static float QuintEaseIn(float t, float b, float c, float d) => default; // 0x000000018B7F4A18-0x000000018B7F4A78
+		public static float QuintEaseInOut(float t, float b, float c, float d) => default; // 0x000000018B7F4A90-0x000000018B7F4B0C
+		public static float QuintEaseOutIn(float t, float b, float c, float d) => default; // 0x000000018B7F4FAC-0x000000018B7F4FE8
+		public static float ElasticEaseOut(float t, float b, float c, float d) => default; // 0x000000018B7F4EB4-0x000000018B7F4F00
+		public static float ElasticEaseIn(float t, float b, float c, float d) => default; // 0x000000018B7F4E20-0x000000018B7F4EB4
+		public static float ElasticEaseInOut(float t, float b, float c, float d) => default; // 0x000000018B7F4F00-0x000000018B7F4FAC
+		public static float ElasticEaseOutIn(float t, float b, float c, float d) => default; // 0x000000018B7F44F8-0x000000018B7F4524
+		public static float BounceEaseOut(float t, float b, float c, float d) => default; // 0x000000018B7F444C-0x000000018B7F4468
+		public static float BounceEaseIn(float t, float b, float c, float d) => default; // 0x000000018B7F43DC-0x000000018B7F444C
+		public static float BounceEaseInOut(float t, float b, float c, float d) => default; // 0x000000018B7F4468-0x000000018B7F44F8
+		public static float BounceEaseOutIn(float t, float b, float c, float d) => default; // 0x000000018B7F4C70-0x000000018B7F4CA8
+		public static float BackEaseOut(float t, float b, float c, float d) => default; // 0x000000018B7F4BB0-0x000000018B7F4BD0
+		public static float BackEaseIn(float t, float b, float c, float d) => default; // 0x000000018B7F4B30-0x000000018B7F4BB0
+		public static float BackEaseInOut(float t, float b, float c, float d) => default; // 0x000000018B7F4BD0-0x000000018B7F4C70
+		public static float BackEaseOutIn(float t, float b, float c, float d) => default; // 0x000000018B7F4DEC-0x000000018B7F4E20
 	}
 
 	// Methods
-	public static float LerpUnclamped(float from, float to, float t) => default; // 0x0000000183D75240-0x0000000183D75260
-	public static Vector3 LerpUnclamped(Vector3 from, Vector3 to, float t) => default; // 0x0000000183D751E0-0x0000000183D75240
-	public static float FacingNormalized(Vector3 dir1, Vector3 dir2) => default; // 0x00000001896CA840-0x00000001896CA8B0
-	public static float WrapAngle(float angle) => default; // 0x00000001896CABC8-0x00000001896CABF0
-	public static float NearestAngle(float to, float angle1, float angle2) => default; // 0x00000001896CA8B0-0x00000001896CA920
-	public static int Wrap(int max, int value) => default; // 0x00000001896CABF0-0x00000001896CAC84
-	public static float Wrap(float max, float value) => default; // 0x00000001896CAC84-0x00000001896CACA8
-	public static float Average(float v1, float v2) => default; // 0x0000000183D751D0-0x0000000183D751E0
-	public static float Angle(Vector2 direction) => default; // 0x00000001896CA0F0-0x00000001896CA1B4
-	public static float Ease(float from, float to, float t, EaseType type) => default; // 0x00000001896CA1B4-0x00000001896CA840
-	public static float SpringLerp(float strength, float deltaTime) => default; // 0x00000001896CAB00-0x00000001896CAB50
-	public static float SpringLerp(float from, float to, float strength, float deltaTime) => default; // 0x00000001896CAAC0-0x00000001896CAB00
-	public static Vector3 SpringLerp(Vector3 from, Vector3 to, float strength, float deltaTime) => default; // 0x00000001896CAA38-0x00000001896CAAC0
-	public static Quaternion SpringLerp(Quaternion from, Quaternion to, float strength, float deltaTime) => default; // 0x00000001896CAB50-0x00000001896CABC8
-	public static float SmoothClamp(float value, float min, float max, float scrollMax, EaseType easeType = EaseType.ExpoEaseOut /* Metadata: 0x01FDAC51 */) => default; // 0x00000001896CA920-0x00000001896CAA38
+	public static float LerpUnclamped(float from, float to, float t) => default; // 0x000000018B7F4D28-0x000000018B7F4D4C
+	public static Vector3 LerpUnclamped(Vector3 from, Vector3 to, float t) => default; // 0x000000018B7F4CA8-0x000000018B7F4D28
+	public static float FacingNormalized(Vector3 dir1, Vector3 dir2) => default; // 0x000000018B7F4D4C-0x000000018B7F4DEC
+	public static float WrapAngle(float angle) => default; // 0x000000018B7F4770-0x000000018B7F4830
+	public static float NearestAngle(float to, float angle1, float angle2) => default; // 0x000000018B7F4644-0x000000018B7F4710
+	public static int Wrap(int max, int value) => default; // 0x000000018B7F4524-0x000000018B7F4644
+	public static float Wrap(float max, float value) => default; // 0x000000018B7F4710-0x000000018B7F4770
+	public static float Average(float v1, float v2) => default; // 0x000000018B7F4144-0x000000018B7F4204
+	public static float Angle(Vector2 direction) => default; // 0x000000018B7F4068-0x000000018B7F40B4
+	public static float Ease(float from, float to, float t, EaseType type) => default; // 0x000000018B7F3FD0-0x000000018B7F4068
+	public static float SpringLerp(float strength, float deltaTime) => default; // 0x000000018B7F40B4-0x000000018B7F4144
+	public static float SpringLerp(float from, float to, float strength, float deltaTime) => default; // 0x000000018B7F3F94-0x000000018B7F3FD0
+	public static Vector3 SpringLerp(Vector3 from, Vector3 to, float strength, float deltaTime) => default; // 0x000000018B7F3EB8-0x000000018B7F3EE4
+	public static Quaternion SpringLerp(Quaternion from, Quaternion to, float strength, float deltaTime) => default; // 0x000000018B7F3E30-0x000000018B7F3EB8
+	public static float SmoothClamp(float value, float min, float max, float scrollMax, EaseType easeType = EaseType.ExpoEaseOut /* Metadata: 0x020805E5 */) => default; // 0x000000018B7F3EE4-0x000000018B7F3F94
 }
 
 namespace SRF
 {
-	public static class Json // TypeDefIndex: 58165
+	public static class Json // TypeDefIndex: 59313
 	{
 		// Nested types
-		private sealed class Parser : IDisposable // TypeDefIndex: 58163
+		private sealed class Parser : IDisposable // TypeDefIndex: 59311
 		{
 			// Fields
-			private const string WORD_BREAK = "{}[],:\""; // Metadata: 0x01FDAC7B
+			private const string WORD_BREAK = "{}[],:\""; // Metadata: 0x0208060F
 			private StringReader json; // 0x10
 	
 			// Properties
-			private char PeekChar { get => default; } // 0x00000001896C8974-0x00000001896C89D0 
-			private char NextChar { get => default; } // 0x00000001896C8644-0x00000001896C86A0 
-			private string NextWord { get => default; } // 0x00000001896C88C4-0x00000001896C8974 
-			private TOKEN NextToken { get => default; } // 0x00000001896C86A0-0x00000001896C88C4 
+			private char PeekChar { get => default; } // 0x000000018B7EDC24-0x000000018B7EDC2C 
+			private char NextChar { get => default; } // 0x000000018B7EE708-0x000000018B7EE780 
+			private string NextWord { get => default; } // 0x000000018B7EEAB0-0x000000018B7EEB0C 
+			private TOKEN NextToken { get => default; } // 0x000000018B7EE780-0x000000018B7EE7DC 
 	
 			// Nested types
-			private enum TOKEN // TypeDefIndex: 58162
+			private enum TOKEN // TypeDefIndex: 59310
 			{
 				NONE = 0,
 				CURLY_OPEN = 1,
@@ -218,50 +202,48 @@ namespace SRF
 	
 			// Constructors
 			public Parser() {} // Dummy constructor
-			private Parser(string jsonString) {} // 0x00000001896C85CC-0x00000001896C8644
+			private Parser(string jsonString) {} // 0x000000018B7EDC08-0x000000018B7EDC24
 	
 			// Methods
-			public void Dispose() {} // 0x00000001887C8320-0x00000001887C8358
-			public static bool IsWordBreak(char c) => default; // 0x00000001896C7EC0-0x00000001896C7F38
-			public static object Parse(string jsonString) => default; // 0x00000001896C84D4-0x00000001896C85CC
-			private Dictionary<string, object> ParseObject() => default; // 0x00000001896C8178-0x00000001896C8284
-			private List<object> ParseArray() => default; // 0x00000001896C7F38-0x00000001896C8000
-			private object ParseValue() => default; // 0x00000001896C84B0-0x00000001896C84D4
-			private object ParseByToken(TOKEN token) => default; // 0x00000001896C8000-0x00000001896C80B4
-			private string ParseString() => default; // 0x00000001896C8284-0x00000001896C84B0
-			private object ParseNumber() => default; // 0x00000001896C80B4-0x00000001896C8178
-			private void EatWhitespace() {} // 0x00000001896C7E30-0x00000001896C7EC0
+			public void Dispose() {} // 0x000000018B7EEA00-0x000000018B7EEAB0
+			public static bool IsWordBreak(char c) => default; // 0x000000018B7EE7DC-0x000000018B7EEA00
+			public static object Parse(string jsonString) => default; // 0x000000018A8DC720-0x000000018A8DC758
+			private Dictionary<string, object> ParseObject() => default; // 0x000000018B7EDFFC-0x000000018B7EE074
+			private List<object> ParseArray() => default; // 0x000000018B7EE610-0x000000018B7EE708
+			private object ParseValue() => default; // 0x000000018B7EE2B4-0x000000018B7EE3C0
+			private object ParseByToken(TOKEN token) => default; // 0x000000018B7EE074-0x000000018B7EE13C
+			private string ParseString() => default; // 0x000000018B7EE5EC-0x000000018B7EE610
+			private object ParseNumber() => default; // 0x000000018B7EE13C-0x000000018B7EE1F0
+			private void EatWhitespace() {} // 0x000000018B7EE3C0-0x000000018B7EE5EC
 		}
 	
-		private sealed class Serializer // TypeDefIndex: 58164
+		private sealed class Serializer // TypeDefIndex: 59312
 		{
 			// Fields
 			private StringBuilder builder; // 0x10
 	
 			// Constructors
-			private Serializer() {} // 0x00000001896CCFE8-0x00000001896CD04C
+			private Serializer() {} // 0x000000018B7EE1F0-0x000000018B7EE2B4
 	
 			// Methods
-			public static string Serialize(object obj) => default; // 0x00000001896CCF70-0x00000001896CCFE8
-			private void SerializeValue(object value) {} // 0x00000001896CCDEC-0x00000001896CCF70
-			private void SerializeObject(IDictionary obj) {} // 0x00000001896CC50C-0x00000001896CC914
-			private void SerializeArray(IList anArray) {} // 0x00000001896CC188-0x00000001896CC50C
-			private void SerializeString(string str) {} // 0x00000001896CCB74-0x00000001896CCDEC
-			private void SerializeOther(object value) {} // 0x00000001896CC914-0x00000001896CCB74
+			public static string Serialize(object obj) => default; // 0x000000018B7EDF6C-0x000000018B7EDFFC
+			private void SerializeValue(object value) {} // 0x000000018B7F3124-0x000000018B7F3188
+			private void SerializeObject(IDictionary obj) {} // 0x000000018B7F30AC-0x000000018B7F3124
+			private void SerializeArray(IList anArray) {} // 0x000000018B7F2F28-0x000000018B7F30AC
+			private void SerializeString(string str) {} // 0x000000018B7F2648-0x000000018B7F2A50
+			private void SerializeOther(object value) {} // 0x000000018B7F22C4-0x000000018B7F2648
 		}
 	
 		// Methods
-		public static object Deserialize(string json) => default; // 0x00000001896C7ACC-0x00000001896C7AE8
-		public static string Serialize(object obj) => default; // 0x00000001896C7AE8-0x00000001896C7AF0
+		public static object Deserialize(string json) => default; // 0x000000018B7F2CB0-0x000000018B7F2F28
+		public static string Serialize(object obj) => default; // 0x000000018B7F2A50-0x000000018B7F2CB0
 	}
 
 	[Serializable]
-	public class SRList<T> : IList<T>, ISerializationCallbackReceiver // TypeDefIndex: 58167
+	public class SRList<T> : IList<T>, ISerializationCallbackReceiver // TypeDefIndex: 59315
 	{
 		// Fields
-		[SerializeField]
 		private T[] _buffer;
-		[SerializeField]
 		private int _count;
 		private EqualityComparer<T> _equalityComparer;
 		private ReadOnlyCollection<T> _readOnlyWrapper;
@@ -273,13 +255,35 @@ namespace SRF
 		public bool IsReadOnly { get => default; }
 		public T this[int index] { get => default; set {} }
 	
+		// Nested types
+		private sealed class _GetEnumerator_d__15 : IEnumerator<T> // TypeDefIndex: 59314
+		{
+			// Fields
+			private int __1__state;
+			private T __2__current;
+			public SRList<T> __4__this;
+			private int _i_5__2;
+	
+			// Properties
+			T IEnumerator<T>.Current { get => default; }
+			object IEnumerator.Current { get => default; }
+	
+			// Constructors
+			public _GetEnumerator_d__15() {} // Dummy constructor
+			public _GetEnumerator_d__15(int __1__state) {}
+	
+			// Methods
+			void IDisposable.Dispose() {}
+			private bool MoveNext() => default;
+			void IEnumerator.Reset() {}
+		}
+	
 		// Constructors
 		public SRList() {}
 		public SRList(int capacity) {}
 		public SRList(IEnumerable<T> source) {}
 	
 		// Methods
-		[IteratorStateMachine(typeof(_GetEnumerator_d__15))]
 		public IEnumerator<T> GetEnumerator() => default;
 		IEnumerator IEnumerable.GetEnumerator() => default;
 		public void Add(T item) {}
@@ -301,7 +305,7 @@ namespace SRF
 		public void Sort(Comparison<T> comparer) {}
 	}
 
-	public abstract class SRMonoBehaviour : MonoBehaviour // TypeDefIndex: 58168
+	public abstract class SRMonoBehaviour : MonoBehaviour // TypeDefIndex: 59316
 	{
 		// Fields
 		private Collider _collider; // 0x18
@@ -312,36 +316,25 @@ namespace SRF
 		private Collider2D _collider2D; // 0x40
 	
 		// Properties
-		public Transform CachedTransform { [DebuggerNonUserCode] [DebuggerStepThrough] get; } // 0x000000018268DF90-0x000000018268E010 
-		public Collider CachedCollider { [DebuggerNonUserCode] [DebuggerStepThrough] get; } // 0x00000001896CAD60-0x00000001896CADE4 
-		public Collider2D CachedCollider2D { [DebuggerNonUserCode] [DebuggerStepThrough] get; } // 0x00000001896CACDC-0x00000001896CAD60 
-		public Rigidbody CachedRigidBody { [DebuggerNonUserCode] [DebuggerStepThrough] get; } // 0x00000001896CAE68-0x00000001896CAEEC 
-		public Rigidbody2D CachedRigidBody2D { [DebuggerStepThrough] [DebuggerNonUserCode] get; } // 0x00000001896CADE4-0x00000001896CAE68 
-		public GameObject CachedGameObject { [DebuggerStepThrough] [DebuggerNonUserCode] get; } // 0x000000018268DF10-0x000000018268DF90 
-		public new Transform transform { get; } // 0x00000001896CAEEC-0x00000001896CAEF4 
+		public Transform CachedTransform { get; } // 0x0000000184A82E00-0x0000000184A82E80 
+		public Collider CachedCollider { get; } // 0x000000018B7F0E9C-0x000000018B7F0F20 
+		public Collider2D CachedCollider2D { get; } // 0x000000018B7F0E18-0x000000018B7F0E9C 
+		public Rigidbody CachedRigidBody { get; } // 0x000000018B7F0FA4-0x000000018B7F1028 
+		public Rigidbody2D CachedRigidBody2D { get; } // 0x000000018B7F0F20-0x000000018B7F0FA4 
+		public GameObject CachedGameObject { get; } // 0x0000000184A82D80-0x0000000184A82E00 
+		public new Transform transform { get; } // 0x000000018B7F1028-0x000000018B7F1030 
 	
 		// Constructors
-		protected SRMonoBehaviour() {} // 0x000000018426FE60-0x000000018426FE68
+		protected SRMonoBehaviour() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		[DebuggerNonUserCode]
-		[DebuggerStepThrough]
-		protected void AssertNotNull(object value, string fieldName = null) {} // 0x00000001896CACA8-0x00000001896CACC0
-		[DebuggerNonUserCode]
-		[DebuggerStepThrough]
-		protected void Assert(bool condition, string message = null) {} // 0x00000001896CACC0-0x00000001896CACDC
-		[Conditional("UNITY_EDITOR")]
-		[DebuggerNonUserCode]
-		[DebuggerStepThrough]
-		protected void EditorAssertNotNull(object value, string fieldName = null) {} // 0x00000001896CACA8-0x00000001896CACC0
-		[Conditional("UNITY_EDITOR")]
-		[DebuggerNonUserCode]
-		[DebuggerStepThrough]
-		protected void EditorAssert(bool condition, string message = null) {} // 0x00000001896CACC0-0x00000001896CACDC
+		protected void AssertNotNull(object value, string fieldName = null) {} // 0x000000018B7F0DE4-0x000000018B7F0DFC
+		protected void Assert(bool condition, string message = null) {} // 0x000000018B7F0DFC-0x000000018B7F0E18
+		protected void EditorAssertNotNull(object value, string fieldName = null) {} // 0x000000018B7F0DE4-0x000000018B7F0DFC
+		protected void EditorAssert(bool condition, string message = null) {} // 0x000000018B7F0DFC-0x000000018B7F0E18
 	}
 
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Field)]
-	public sealed class RequiredFieldAttribute : Attribute // TypeDefIndex: 58169
+	public sealed class RequiredFieldAttribute : Attribute // TypeDefIndex: 59317
 	{
 		// Fields
 		private bool _autoCreate; // 0x10
@@ -349,34 +342,32 @@ namespace SRF
 		private bool _editorOnly; // 0x12
 	
 		// Properties
-		public bool AutoSearch { get => default; set {} } // 0x0000000183D510E0-0x0000000183D510F0 0x0000000183D510F0-0x0000000183D51100
-		public bool AutoCreate { get => default; set {} } // 0x00000001811797F0-0x0000000181179800 0x0000000183D4E960-0x0000000183D4E970
-		[Obsolete]
-		public bool EditorOnly { get => default; set {} } // 0x0000000183D519E0-0x0000000183D519F0 0x0000000183D6B770-0x0000000183D6B780
+		public bool AutoSearch { get => default; set {} } // 0x0000000185FB22C0-0x0000000185FB22D0 0x0000000185FB2560-0x0000000185FB2570
+		public bool AutoCreate { get => default; set {} } // 0x0000000181C2FD60-0x0000000181C2FD70 0x000000018184FBD0-0x000000018184FBE0
+		public bool EditorOnly { get => default; set {} } // 0x0000000185FB22D0-0x0000000185FB22E0 0x0000000183B7E590-0x0000000183B7E5A0
 	
 		// Constructors
-		public RequiredFieldAttribute(bool autoSearch) {} // 0x0000000183D751C0-0x0000000183D751D0
-		public RequiredFieldAttribute() {} // 0x0000000183D64CD0-0x0000000183D64CE0
+		public RequiredFieldAttribute(bool autoSearch) {} // 0x0000000185FD5E20-0x0000000185FD5E30
+		public RequiredFieldAttribute() {} // 0x0000000185FC5B90-0x0000000185FC5BA0
 	}
 
-	[AttributeUsage(AttributeTargets.Field)]
-	public class ImportAttribute : Attribute // TypeDefIndex: 58170
+	public class ImportAttribute : Attribute // TypeDefIndex: 59318
 	{
 		// Fields
 		public readonly System.Type Service; // 0x10
 	
 		// Constructors
-		public ImportAttribute() {} // 0x000000018350B670-0x000000018350B680
-		public ImportAttribute(System.Type serviceType) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public ImportAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public ImportAttribute(System.Type serviceType) {} // 0x0000000184096E30-0x0000000184096EF0
 	}
 
-	public abstract class SRMonoBehaviourEx : SRMonoBehaviour // TypeDefIndex: 58172
+	public abstract class SRMonoBehaviourEx : SRMonoBehaviour // TypeDefIndex: 59320
 	{
 		// Fields
 		private static Dictionary<System.Type, IList<FieldInfo>> _checkedFields; // 0x00
 	
 		// Nested types
-		private struct FieldInfo // TypeDefIndex: 58171
+		private struct FieldInfo // TypeDefIndex: 59319
 		{
 			// Fields
 			public bool AutoCreate; // 0x00
@@ -387,114 +378,158 @@ namespace SRF
 		}
 	
 		// Constructors
-		protected SRMonoBehaviourEx() {} // 0x000000018426FE60-0x000000018426FE68
+		protected SRMonoBehaviourEx() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		private static void CheckFields(SRMonoBehaviourEx instance, bool justSet = false /* Metadata: 0x01FDAC8F */) {} // 0x0000000182A6C2A0-0x0000000182A6C440
-		private static void PopulateObject(IList<FieldInfo> cache, SRMonoBehaviourEx instance, bool justSet) {} // 0x0000000182A6C1B0-0x0000000182A6C2A0
-		private static List<FieldInfo> ScanType(System.Type t) => default; // 0x0000000182A6D440-0x0000000182A6D5D0
-		protected virtual void Awake() {} // 0x0000000184276F4C-0x0000000184276F58
-		protected virtual void Start() {} // 0x000000018350B670-0x000000018350B680
-		protected virtual void Update() {} // 0x000000018350B670-0x000000018350B680
-		protected virtual void FixedUpdate() {} // 0x000000018350B670-0x000000018350B680
-		protected virtual void OnEnable() {} // 0x000000018350B670-0x000000018350B680
-		protected virtual void OnDisable() {} // 0x000000018350B670-0x000000018350B680
-		protected virtual void OnDestroy() {} // 0x000000018350B670-0x000000018350B680
+		private static void CheckFields(SRMonoBehaviourEx instance, bool justSet = false /* Metadata: 0x02080623 */) {} // 0x00000001844B73A0-0x00000001844B7540
+		private static void PopulateObject(IList<FieldInfo> cache, SRMonoBehaviourEx instance, bool justSet) {} // 0x00000001844B7540-0x00000001844B7630
+		private static List<FieldInfo> ScanType(System.Type t) => default; // 0x00000001844B5A10-0x00000001844B5BA0
+		protected virtual void Awake() {} // 0x0000000186475278-0x0000000186475284
+		protected virtual void Start() {} // 0x0000000185492010-0x0000000185492020
+		protected virtual void Update() {} // 0x0000000185492010-0x0000000185492020
+		protected virtual void FixedUpdate() {} // 0x0000000185492010-0x0000000185492020
+		protected virtual void OnEnable() {} // 0x0000000185492010-0x0000000185492020
+		protected virtual void OnDisable() {} // 0x0000000185492010-0x0000000185492020
+		protected virtual void OnDestroy() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public static class Coroutines // TypeDefIndex: 58174
+	public static class Coroutines // TypeDefIndex: 59322
 	{
-		// Methods
-		[IteratorStateMachine(typeof(_WaitForSecondsRealTime_d__0))]
-		public static IEnumerator WaitForSecondsRealTime(float time) => default; // 0x00000001896C65A4-0x00000001896C65F8
-	}
-
-	public static class SRFFloatExtensions // TypeDefIndex: 58175
-	{
-		// Extension methods
-		public static float Sqr(this float f) => default; // 0x0000000183D51490-0x0000000183D514A0
-		public static float SqrRt(this float f) => default; // 0x0000000183D51630-0x0000000183D51650
-		public static bool ApproxZero(this float f) => default; // 0x00000001896C9A28-0x00000001896C9A34
-		public static bool Approx(this float f, float f2) => default; // 0x00000001896C9A34-0x00000001896C9A3C
-	}
-
-	public static class SRFGameObjectExtensions // TypeDefIndex: 58176
-	{
-		// Methods
-		private static void SetLayerInternal(Transform t, int layer) {} // 0x00000001896C9A3C-0x00000001896C9BD4
+		// Nested types
+		private sealed class _WaitForSecondsRealTime_d__0 : IEnumerator<object> // TypeDefIndex: 59321
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public float time; // 0x20
+			private float _endTime_5__2; // 0x24
 	
-		// Extension methods
-		public static T GetIComponent<T>(this GameObject t)
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018B7F533C-0x000000018B7F53A0 
+			object IEnumerator.Current { get => default; } // 0x000000018B7F53A0-0x000000018B7F53EC 
+	
+			// Constructors
+			public _WaitForSecondsRealTime_d__0() {} // Dummy constructor
+			public _WaitForSecondsRealTime_d__0(int __1__state) {} // 0x000000018B7EC6E0-0x000000018B7EC734
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x0000000181378230-0x0000000181378240
+			private bool MoveNext() => default; // 0x0000000185492010-0x0000000185492020
+			void IEnumerator.Reset() {} // 0x0000000181377E40-0x0000000181377E50
+		}
+	
+		// Methods
+		public static IEnumerator WaitForSecondsRealTime(float time) => default; // 0x0000000181377E40-0x0000000181377E50
+	}
+
+	public static class SRFFloatExtensions // TypeDefIndex: 59323
+	{
+		// Methods
+		public static float Sqr(float f) => default; // 0x0000000185FB2920-0x0000000185FB2930
+		public static float SqrRt(float f) => default; // 0x0000000185FB2AC0-0x0000000185FB2AE0
+		public static bool ApproxZero(float f) => default; // 0x000000018B7EFB64-0x000000018B7EFB70
+		public static bool Approx(float f, float f2) => default; // 0x000000018B7EFB70-0x000000018B7EFB78
+	}
+
+	public static class SRFGameObjectExtensions // TypeDefIndex: 59324
+	{
+		// Methods
+		public static T GetIComponent<T>(GameObject t)
 			where T : class => default;
-		public static T GetComponentOrAdd<T>(this GameObject obj)
+		public static T GetComponentOrAdd<T>(GameObject obj)
 			where T : UnityEngine.Component => default;
-		public static void RemoveComponentIfExists<T>(this GameObject obj)
+		public static void RemoveComponentIfExists<T>(GameObject obj)
 			where T : UnityEngine.Component {}
-		public static void RemoveComponentsIfExists<T>(this GameObject obj)
+		public static void RemoveComponentsIfExists<T>(GameObject obj)
 			where T : UnityEngine.Component {}
-		public static bool EnableComponentIfExists<T>(this GameObject obj, bool enable = true /* Metadata: 0x01FDAC90 */)
+		public static bool EnableComponentIfExists<T>(GameObject obj, bool enable = true /* Metadata: 0x02080624 */)
 			where T : MonoBehaviour => default;
-		public static void SetLayerRecursive(this GameObject o, int layer) {} // 0x00000001896C9BD4-0x00000001896C9C00
+		public static void SetLayerRecursive(GameObject o, int layer) {} // 0x000000018B7EFD10-0x000000018B7EFD3C
+		private static void SetLayerInternal(Transform t, int layer) {} // 0x000000018B7EFB78-0x000000018B7EFD10
 	}
 
-	public static class SRFIListExtensions // TypeDefIndex: 58177
+	public static class SRFIListExtensions // TypeDefIndex: 59325
 	{
-		// Extension methods
-		public static T Random<T>(this IList<T> list) => default;
-		public static T RandomOrDefault<T>(this IList<T> list) => default;
-		public static T PopLast<T>(this IList<T> list) => default;
+		// Methods
+		public static T Random<T>(IList<T> list) => default;
+		public static T RandomOrDefault<T>(IList<T> list) => default;
+		public static T PopLast<T>(IList<T> list) => default;
 	}
 
-	public static class SRFStringExtensions // TypeDefIndex: 58178
+	public static class SRFStringExtensions // TypeDefIndex: 59326
 	{
-		// Extension methods
-		public static string Fmt(this string formatString, params object[] args) => default; // 0x0000000184275A04-0x0000000184275A0C
+		// Methods
+		public static string Fmt(string formatString, object[] args) => default; // 0x000000018646D4D8-0x000000018646D4E0
 	}
 
-	public static class SRFTransformExtensions // TypeDefIndex: 58180
+	public static class SRFTransformExtensions // TypeDefIndex: 59328
 	{
-		// Extension methods
-		[IteratorStateMachine(typeof(_GetChildren_d__0))]
-		public static IEnumerable<Transform> GetChildren(this Transform t) => default; // 0x00000001896C9E5C-0x00000001896C9ECC
-		public static void ResetLocal(this Transform t) {} // 0x00000001896C9F54-0x00000001896C9FE8
-		public static GameObject CreateChild(this Transform t, string name) => default; // 0x00000001896C9C00-0x00000001896C9CC8
-		public static void SetParentMaintainLocals(this Transform t, Transform parent) {} // 0x00000001896C9FE8-0x00000001896CA008
-		public static void SetLocals(this Transform t, Transform from) {} // 0x000000018969BAA8-0x000000018969BB64
-		public static void Match(this Transform t, Transform from) {} // 0x00000001896C9ECC-0x00000001896C9F54
-		public static void DestroyChildren(this Transform t) {} // 0x00000001896C9CC8-0x00000001896C9E5C
+		// Nested types
+		private sealed class _GetChildren_d__0 : IEnumerable<Transform>, IEnumerator<Transform> // TypeDefIndex: 59327
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private Transform __2__current; // 0x18
+			private int __l__initialThreadId; // 0x20
+			private Transform t; // 0x28
+			public Transform __3__t; // 0x30
+			private int _i_5__2; // 0x38
+	
+			// Properties
+			Transform IEnumerator<UnityEngine.Transform>.Current { get => default; } // 0x000000018B7F0124-0x000000018B7F0144 
+			object IEnumerator.Current { get => default; } // 0x000000018B7F0008-0x000000018B7F0090 
+	
+			// Constructors
+			public _GetChildren_d__0() {} // Dummy constructor
+			public _GetChildren_d__0(int __1__state) {} // 0x000000018B7EFF98-0x000000018B7F0008
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018B7F0090-0x000000018B7F0124
+			private bool MoveNext() => default; // 0x000000018B7EFD3C-0x000000018B7EFE04
+			void IEnumerator.Reset() {} // 0x000000018B7C1BB4-0x000000018B7C1C70
+			IEnumerator<Transform> IEnumerable<Transform>.GetEnumerator() => default; // 0x000000018B7EFE04-0x000000018B7EFF98
+			IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000184775050-0x0000000184775070
+		}
+	
+		// Methods
+		public static IEnumerable<Transform> GetChildren(Transform t) => default; // 0x0000000185492010-0x0000000185492020
+		public static void ResetLocal(Transform t) {} // 0x000000018B7F4FE8-0x000000018B7F5064
+		public static GameObject CreateChild(Transform t, string name) => default; // 0x0000000181377E40-0x0000000181377E50
+		public static void SetParentMaintainLocals(Transform t, Transform parent) {} // 0x000000018B7F5100-0x000000018B7F514C
+		public static void SetLocals(Transform t, Transform from) {} // 0x0000000181377E40-0x0000000181377E50
+		public static void Match(Transform t, Transform from) {} // 0x000000018B7F5064-0x000000018B7F50F8
+		public static void DestroyChildren(Transform t) {} // 0x000000018B7F50F8-0x000000018B7F5100
 	}
 
-	public class Hierarchy // TypeDefIndex: 58181
+	public class Hierarchy // TypeDefIndex: 59329
 	{
 		// Fields
 		private static readonly char[] Seperator; // 0x00
 		private static readonly Dictionary<string, Transform> Cache; // 0x08
 	
 		// Properties
-		[Obsolete("Use static Get() instead")]
-		public Transform this[string key] { get => default; } // 0x00000001896C7944-0x00000001896C7990 
+		public Transform this[string key] { get => default; } // 0x000000018B7EDA80-0x000000018B7EDACC 
 	
 		// Constructors
-		public Hierarchy() {} // 0x000000018350B670-0x000000018350B680
-		static Hierarchy() {} // 0x0000000183C7CBB0-0x0000000183C7CCA0
+		public Hierarchy() {} // 0x0000000185492010-0x0000000185492020
+		static Hierarchy() {} // 0x0000000185EBABE0-0x0000000185EBACD0
 	
 		// Methods
-		public static Transform Get(string key) => default; // 0x000000018268EDD0-0x000000018268EFD0
-		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-		public static void RuntimeInitialize() {} // 0x0000000183D01E20-0x0000000183D01EA0
+		public static Transform Get(string key) => default; // 0x0000000184A83C40-0x0000000184A83E40
+		public static void RuntimeInitialize() {} // 0x0000000185F608E0-0x0000000185F60960
 	}
 }
 
 namespace SRF.Components
 {
-	public abstract class SRAutoSingleton<T> : SRMonoBehaviour // TypeDefIndex: 58242
+	public abstract class SRAutoSingleton<T> : SRMonoBehaviour // TypeDefIndex: 59390
 		where T : SRAutoSingleton<T>
 	{
 		// Fields
 		private static T _instance;
 	
 		// Properties
-		public static T Instance { [DebuggerStepThrough] get; }
+		public static T Instance { get; }
 		public static bool HasInstance { get; }
 	
 		// Constructors
@@ -506,15 +541,15 @@ namespace SRF.Components
 		private void OnApplicationQuit() {}
 	}
 
-	public abstract class SRSingleton<T> : SRMonoBehaviour // TypeDefIndex: 58243
+	public abstract class SRSingleton<T> : SRMonoBehaviour // TypeDefIndex: 59391
 		where T : SRSingleton<T>
 	{
 		// Fields
 		private static T _instance;
 	
 		// Properties
-		public static T Instance { [DebuggerStepThrough] get; }
-		public static bool HasInstance { [DebuggerStepThrough] get; }
+		public static T Instance { get; }
+		public static bool HasInstance { get; }
 	
 		// Constructors
 		protected SRSingleton() {}
@@ -529,72 +564,138 @@ namespace SRF.Components
 
 namespace SRF.Helpers
 {
-	public static class AssetUtil // TypeDefIndex: 58232
+	public static class AssetUtil // TypeDefIndex: 59380
 	{
 	}
 
-	public sealed class MethodReference // TypeDefIndex: 58235
+	public sealed class MethodReference // TypeDefIndex: 59383
 	{
 		// Fields
 		private readonly Func<object[], object> _method; // 0x10
 	
+		// Nested types
+		private sealed class __c__DisplayClass1_0 // TypeDefIndex: 59381
+		{
+			// Fields
+			public MethodInfo method; // 0x10
+			public object target; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass1_0() {} // 0x000000018B7EDDBC-0x000000018B7EDE9C
+	
+			// Methods
+			internal object _.ctor_b__0(object[] o) => default; // 0x0000000184096E30-0x0000000184096EF0
+		}
+	
+		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 59382
+		{
+			// Fields
+			public Action action; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass4_0() {} // 0x000000018A6B7AE4-0x000000018A6B7B04
+	
+			// Methods
+			internal object _op_Implicit_b__0(object[] args) => default; // 0x000000018B7EDE9C-0x000000018B7EDF6C
+		}
+	
 		// Constructors
 		public MethodReference() {} // Dummy constructor
-		public MethodReference(object target, MethodInfo method) {} // 0x00000001896C7C80-0x00000001896C7D60
-		public MethodReference(Func<object[], object> method) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public MethodReference(object target, MethodInfo method) {} // 0x0000000185492010-0x0000000185492020
+		public MethodReference(Func<object[], object> method) {} // 0x000000018B7F51F8-0x000000018B7F5224
 	
 		// Methods
-		public object Invoke(object[] parameters) => default; // 0x000000018858E0D8-0x000000018858E0F8
-		public static implicit operator MethodReference(Action action) => default; // 0x00000001896C7D60-0x00000001896C7E30
+		public object Invoke(object[] parameters) => default; // 0x0000000185492010-0x0000000185492020
+		public static implicit operator MethodReference(Action action) => default; // 0x000000018B7F52B8-0x000000018B7F52D8
 	}
 
-	public delegate void PropertyValueChangedHandler(PropertyReference property); // TypeDefIndex: 58236; 0x0000000182149960-0x0000000182149970
+	public delegate void PropertyValueChangedHandler(PropertyReference property); // TypeDefIndex: 59384; 0x00000001833EEC70-0x00000001833EEC80
 
-	public sealed class PropertyReference // TypeDefIndex: 58240
+	public sealed class PropertyReference // TypeDefIndex: 59388
 	{
 		// Fields
-		[CanBeNull]
 		private readonly PropertyInfo _property; // 0x10
-		[CanBeNull]
 		private readonly object _target; // 0x18
-		[CanBeNull]
 		private readonly Attribute[] _attributes; // 0x20
-		[CanBeNull]
 		private readonly Func<object> _getter; // 0x28
-		[CanBeNull]
 		private readonly Action<object> _setter; // 0x30
-		[CanBeNull]
 		private List<PropertyValueChangedHandler> _valueChangedListeners; // 0x38
+		private System.Type _PropertyType_k__BackingField; // 0x40
 	
 		// Properties
-		public System.Type PropertyType { get; private set; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
-		public bool CanRead { get => default; } // 0x0000000185693D38-0x0000000185693D44 
-		public bool CanWrite { get => default; } // 0x00000001885839D0-0x00000001885839DC 
+		public System.Type PropertyType { get; private set; } // 0x000000018B7EED28-0x000000018B7EEE44 
+		public bool CanRead { get => default; }
+		public bool CanWrite { get => default; }
 	
 		// Events
 		public event PropertyValueChangedHandler ValueChanged;
 	
+		// Nested types
+		private sealed class __c__DisplayClass9_0<T> // TypeDefIndex: 59385
+		{
+			// Fields
+			public Action<T> setter;
+			public Func<T> getter;
+	
+			// Constructors
+			public __c__DisplayClass9_0() {} // 0x000000018B7EF098-0x000000018B7EF204
+	
+			// Methods
+			internal void _FromLambda_b__0(object o) {} // 0x000000018B7EF204-0x000000018B7EF324
+			internal object _FromLambda_b__1() => default;
+		}
+	
+		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 59386
+		{
+			// Fields
+			public object target; // 0x10
+			public PropertyInfo property; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass10_0() {} // 0x000000018B7EEE44-0x000000018B7EF018
+	
+			// Methods
+			internal object _.ctor_b__0() => default; // 0x000000018B7EF018-0x000000018B7EF098
+			internal void _.ctor_b__1(object v) {} // 0x00000001813FF010-0x00000001813FF020
+		}
+	
+		[Serializable]
+		private sealed class __c__23<T> // TypeDefIndex: 59387
+			where T : Attribute
+		{
+			// Fields
+			public static readonly __c__23<T> __9;
+			public static Func<Attribute, bool> __9__23_0;
+	
+			// Constructors
+			static __c__23() {} // 0x0000000185F05C80-0x0000000185F05C90
+			public __c__23() {}
+	
+			// Methods
+			internal bool _GetAttribute_b__23_0(Attribute p) => default; // 0x000000018A6AD3DC-0x000000018A6AD3E8
+		}
+	
 		// Constructors
 		public PropertyReference() {} // Dummy constructor
-		public PropertyReference(object target, PropertyInfo property) {} // 0x00000001896C8D08-0x00000001896C8EDC
-		public PropertyReference(System.Type type, Func<object> getter = null, Action<object> setter = null, Attribute[] attributes = null) {} // 0x00000001896C8EDC-0x00000001896C8F5C
+		public PropertyReference(object target, PropertyInfo property) {}
+		public PropertyReference(System.Type type, Func<object> getter = null, Action<object> setter = null, Attribute[] attributes = null) {} // 0x000000018B7EEC34-0x000000018B7EECB0
 	
 		// Methods
-		public static PropertyReference FromLambda<T>(Func<T> getter, Action<T> setter = null, params Attribute[] attributes) => default;
-		public void NotifyValueChanged() {} // 0x00000001896C89E8-0x00000001896C8AF8
-		public object GetValue() => default; // 0x00000001896C89D0-0x00000001896C89E8
-		public void SetValue(object value) {} // 0x00000001896C8B74-0x00000001896C8BEC
+		public static PropertyReference FromLambda<T>(Func<T> getter, Action<T> setter = null, Attribute[] attributes) => default; // 0x000000018B7EECB0-0x000000018B7EED28
+		public void NotifyValueChanged() {} // 0x0000000185492010-0x0000000185492020
+		public object GetValue() => default; // 0x000000018B7F51D4-0x000000018B7F51E4
+		public void SetValue(object value) {} // 0x000000018B7F51E4-0x000000018B7F51F8
 		public T GetAttribute<T>()
 			where T : Attribute => default;
-		private void OnTargetPropertyChanged(object sender, PropertyChangedEventArgs e) {} // 0x00000001896C8AF8-0x00000001896C8B74
-		public override string ToString() => default; // 0x00000001896C8BEC-0x00000001896C8D08
+		private void OnTargetPropertyChanged(object sender, PropertyChangedEventArgs e) {}
+		public override string ToString() => default;
 	}
 
-	public static class SRReflection // TypeDefIndex: 58241
+	public static class SRReflection // TypeDefIndex: 59389
 	{
 		// Methods
-		public static void SetPropertyValue(object obj, PropertyInfo p, object value) {} // 0x00000001896CB6CC-0x00000001896CB778
-		public static object GetPropertyValue(object obj, PropertyInfo p) => default; // 0x00000001896CB690-0x00000001896CB6CC
+		public static void SetPropertyValue(object obj, PropertyInfo p, object value) {} // 0x000000018B7F1808-0x000000018B7F18B4
+		public static object GetPropertyValue(object obj, PropertyInfo p) => default; // 0x000000018B7F17CC-0x000000018B7F1808
 		public static T GetAttribute<T>(MemberInfo t)
 			where T : Attribute => default;
 	}
@@ -602,103 +703,109 @@ namespace SRF.Helpers
 
 namespace SRF.Internal
 {
-	internal static class ComponentMenuPaths // TypeDefIndex: 58244
+	internal static class ComponentMenuPaths // TypeDefIndex: 59392
 	{
 		// Fields
-		public const string PathRoot = "SRF"; // Metadata: 0x01FDAC9F
-		public const string SRServiceManager = "SRF/Service/Service Manager"; // Metadata: 0x01FDACA3
-		public const string BehavioursRoot = "SRF/Behaviours"; // Metadata: 0x01FDACBF
-		public const string DestroyOnDisable = "SRF/Behaviours/Destroy On Disable"; // Metadata: 0x01FDACCE
-		public const string DontDestroyOnLoad = "SRF/Behaviours/Don\'t Destroy On Load"; // Metadata: 0x01FDACF0
-		public const string MatchTransform = "SRF/Behaviours/Match Transform"; // Metadata: 0x01FDAD15
-		public const string LookAt = "SRF/Behaviours/LookAt"; // Metadata: 0x01FDAD34
-		public const string MatchForwardDirection = "SRF/Behaviours/Match Forward Direction"; // Metadata: 0x01FDAD4A
-		public const string MatchMainCameraForwardDirection = "SRF/Behaviours/Match Forward Direction (Main Camera)"; // Metadata: 0x01FDAD71
-		public const string RuntimePosition = "SRF/Behaviours/Runtime Position"; // Metadata: 0x01FDADA6
-		public const string ScrollTexture = "SRF/Behaviours/Scroll Texture"; // Metadata: 0x01FDADC6
-		public const string SmoothFloatBehaviour = "SRF/Behaviours/Smooth Float"; // Metadata: 0x01FDADE4
-		public const string SmoothFollow2D = "SRF/Behaviours/Smooth Follow (2D)"; // Metadata: 0x01FDAE00
-		public const string SpringFollow = "SRF/Behaviours/Spring Follow"; // Metadata: 0x01FDAE22
-		public const string SmoothMatchTransform = "SRF/Behaviours/Match Transform (Smooth)"; // Metadata: 0x01FDAE3F
-		public const string SpawnPrefab = "SRF/Behaviours/Spawn Prefab"; // Metadata: 0x01FDAE67
-		public const string Velocity = "SRF/Behaviours/Velocity"; // Metadata: 0x01FDAE83
-		public const string SmoothOscillate = "SRF/Behaviours/Smooth Oscillate"; // Metadata: 0x01FDAE9B
-		public const string SRDebugCamera = "SRF/Behaviours/Camera/SRDebugCamera"; // Metadata: 0x01FDAEBB
-		public const string ComponentsRoot = "SRF/Components"; // Metadata: 0x01FDAEDF
-		public const string SRLineRenderer = "SRF/Components/SRLineRenderer"; // Metadata: 0x01FDAEEE
-		public const string SelectionRoot = "SRF/Components/Selection Root"; // Metadata: 0x01FDAF0C
-		public const string SRSpriteFadeRenderer = "SRF/Components/Fade Renderer (Sprite)"; // Metadata: 0x01FDAF2A
-		public const string SRMaterialFadeRenderer = "SRF/Components/Fade Renderer (Material)"; // Metadata: 0x01FDAF50
-		public const string SRCompositeFadeRenderer = "SRF/Components/Fade Renderer (Composite)"; // Metadata: 0x01FDAF78
-		public const string UIRoot = "SRF/UI"; // Metadata: 0x01FDAFA1
-		public const string TiltOnTouch = "SRF/UI/Tilt On Touch"; // Metadata: 0x01FDAFA8
-		public const string ScaleOnTouch = "SRF/UI/Scale On Touch"; // Metadata: 0x01FDAFBD
-		public const string InheritColour = "SRF/UI/Inherit Colour"; // Metadata: 0x01FDAFD3
-		public const string FlashGraphic = "SRF/UI/Flash Graphic"; // Metadata: 0x01FDAFE9
-		public const string CopyPreferredSize = "SRF/UI/Copy Preferred Size"; // Metadata: 0x01FDAFFE
-		public const string CopyPreferredSizes = "SRF/UI/Copy Preferred Size (Multiple)"; // Metadata: 0x01FDB019
-		public const string CopyLayoutElement = "SRF/UI/Copy Layout Element"; // Metadata: 0x01FDB03F
-		public const string CopySizeIntoLayoutElement = "SRF/UI/Copy Size Into Layout Element"; // Metadata: 0x01FDB05A
-		public const string SRText = "SRF/UI/SRText"; // Metadata: 0x01FDB07F
-		public const string Unselectable = "SRF/UI/Unselectable"; // Metadata: 0x01FDB08D
-		public const string LongPressButton = "SRF/UI/Long Press Button"; // Metadata: 0x01FDB0A1
-		public const string ScrollToBottom = "SRF/UI/Scroll To Bottom Behaviour"; // Metadata: 0x01FDB0BA
-		public const string FlowLayoutGroup = "SRF/UI/Layout/Flow Layout Group"; // Metadata: 0x01FDB0DC
-		public const string VirtualVerticalLayoutGroup = "SRF/UI/Layout/VerticalLayoutGroup (Virtualizing)"; // Metadata: 0x01FDB0FC
-		public const string StyleRoot = "SRF/UI/Style Root"; // Metadata: 0x01FDB12D
-		public const string StyleComponent = "SRF/UI/Style Component"; // Metadata: 0x01FDB13F
-		public const string ResponsiveEnable = "SRF/UI/Responsive (Enable)"; // Metadata: 0x01FDB156
-		public const string ResponsiveResize = "SRF/UI/Responsive (Resize)"; // Metadata: 0x01FDB171
-		public const string RetinaScaler = "SRF/UI/Retina Scaler"; // Metadata: 0x01FDB18C
-		public const string NumberButton = "SRF/UI/SRNumberButton"; // Metadata: 0x01FDB1A1
-		public const string NumberSpinner = "SRF/UI/SRNumberSpinner"; // Metadata: 0x01FDB1B7
-		public const string SRSpinner = "SRF/UI/Spinner"; // Metadata: 0x01FDB1CE
-		public const string ContentFitText = "SRF/UI/Content Fit Text"; // Metadata: 0x01FDB1DD
+		public const string PathRoot = "SRF"; // Metadata: 0x02080633
+		public const string SRServiceManager = "SRF/Service/Service Manager"; // Metadata: 0x02080637
+		public const string BehavioursRoot = "SRF/Behaviours"; // Metadata: 0x02080653
+		public const string DestroyOnDisable = "SRF/Behaviours/Destroy On Disable"; // Metadata: 0x02080662
+		public const string DontDestroyOnLoad = "SRF/Behaviours/Don\'t Destroy On Load"; // Metadata: 0x02080684
+		public const string MatchTransform = "SRF/Behaviours/Match Transform"; // Metadata: 0x020806A9
+		public const string LookAt = "SRF/Behaviours/LookAt"; // Metadata: 0x020806C8
+		public const string MatchForwardDirection = "SRF/Behaviours/Match Forward Direction"; // Metadata: 0x020806DE
+		public const string MatchMainCameraForwardDirection = "SRF/Behaviours/Match Forward Direction (Main Camera)"; // Metadata: 0x02080705
+		public const string RuntimePosition = "SRF/Behaviours/Runtime Position"; // Metadata: 0x0208073A
+		public const string ScrollTexture = "SRF/Behaviours/Scroll Texture"; // Metadata: 0x0208075A
+		public const string SmoothFloatBehaviour = "SRF/Behaviours/Smooth Float"; // Metadata: 0x02080778
+		public const string SmoothFollow2D = "SRF/Behaviours/Smooth Follow (2D)"; // Metadata: 0x02080794
+		public const string SpringFollow = "SRF/Behaviours/Spring Follow"; // Metadata: 0x020807B6
+		public const string SmoothMatchTransform = "SRF/Behaviours/Match Transform (Smooth)"; // Metadata: 0x020807D3
+		public const string SpawnPrefab = "SRF/Behaviours/Spawn Prefab"; // Metadata: 0x020807FB
+		public const string Velocity = "SRF/Behaviours/Velocity"; // Metadata: 0x02080817
+		public const string SmoothOscillate = "SRF/Behaviours/Smooth Oscillate"; // Metadata: 0x0208082F
+		public const string SRDebugCamera = "SRF/Behaviours/Camera/SRDebugCamera"; // Metadata: 0x0208084F
+		public const string ComponentsRoot = "SRF/Components"; // Metadata: 0x02080873
+		public const string SRLineRenderer = "SRF/Components/SRLineRenderer"; // Metadata: 0x02080882
+		public const string SelectionRoot = "SRF/Components/Selection Root"; // Metadata: 0x020808A0
+		public const string SRSpriteFadeRenderer = "SRF/Components/Fade Renderer (Sprite)"; // Metadata: 0x020808BE
+		public const string SRMaterialFadeRenderer = "SRF/Components/Fade Renderer (Material)"; // Metadata: 0x020808E4
+		public const string SRCompositeFadeRenderer = "SRF/Components/Fade Renderer (Composite)"; // Metadata: 0x0208090C
+		public const string UIRoot = "SRF/UI"; // Metadata: 0x02080935
+		public const string TiltOnTouch = "SRF/UI/Tilt On Touch"; // Metadata: 0x0208093C
+		public const string ScaleOnTouch = "SRF/UI/Scale On Touch"; // Metadata: 0x02080951
+		public const string InheritColour = "SRF/UI/Inherit Colour"; // Metadata: 0x02080967
+		public const string FlashGraphic = "SRF/UI/Flash Graphic"; // Metadata: 0x0208097D
+		public const string CopyPreferredSize = "SRF/UI/Copy Preferred Size"; // Metadata: 0x02080992
+		public const string CopyPreferredSizes = "SRF/UI/Copy Preferred Size (Multiple)"; // Metadata: 0x020809AD
+		public const string CopyLayoutElement = "SRF/UI/Copy Layout Element"; // Metadata: 0x020809D3
+		public const string CopySizeIntoLayoutElement = "SRF/UI/Copy Size Into Layout Element"; // Metadata: 0x020809EE
+		public const string SRText = "SRF/UI/SRText"; // Metadata: 0x02080A13
+		public const string Unselectable = "SRF/UI/Unselectable"; // Metadata: 0x02080A21
+		public const string LongPressButton = "SRF/UI/Long Press Button"; // Metadata: 0x02080A35
+		public const string ScrollToBottom = "SRF/UI/Scroll To Bottom Behaviour"; // Metadata: 0x02080A4E
+		public const string FlowLayoutGroup = "SRF/UI/Layout/Flow Layout Group"; // Metadata: 0x02080A70
+		public const string VirtualVerticalLayoutGroup = "SRF/UI/Layout/VerticalLayoutGroup (Virtualizing)"; // Metadata: 0x02080A90
+		public const string StyleRoot = "SRF/UI/Style Root"; // Metadata: 0x02080AC1
+		public const string StyleComponent = "SRF/UI/Style Component"; // Metadata: 0x02080AD3
+		public const string ResponsiveEnable = "SRF/UI/Responsive (Enable)"; // Metadata: 0x02080AEA
+		public const string ResponsiveResize = "SRF/UI/Responsive (Resize)"; // Metadata: 0x02080B05
+		public const string RetinaScaler = "SRF/UI/Retina Scaler"; // Metadata: 0x02080B20
+		public const string NumberButton = "SRF/UI/SRNumberButton"; // Metadata: 0x02080B35
+		public const string NumberSpinner = "SRF/UI/SRNumberSpinner"; // Metadata: 0x02080B4B
+		public const string SRSpinner = "SRF/UI/Spinner"; // Metadata: 0x02080B62
+		public const string ContentFitText = "SRF/UI/Content Fit Text"; // Metadata: 0x02080B71
 	}
 }
 
 namespace SRF.Service
 {
-	[AttributeUsage(AttributeTargets.Class)]
-	public sealed class ServiceAttribute : UnityEngine.Scripting.PreserveAttribute // TypeDefIndex: 58217
+	public sealed class ServiceAttribute : UnityEngine.Scripting.PreserveAttribute // TypeDefIndex: 59365
 	{
+		// Fields
+		private System.Type _ServiceType_k__BackingField; // 0x10
+	
 		// Properties
-		public System.Type ServiceType { get; private set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+		public System.Type ServiceType { get; private set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
 	
 		// Constructors
 		public ServiceAttribute() {} // Dummy constructor
-		public ServiceAttribute(System.Type serviceType) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public ServiceAttribute(System.Type serviceType) {} // 0x0000000184096E30-0x0000000184096EF0
 	}
 
-	[AttributeUsage(AttributeTargets.Method)]
-	public sealed class ServiceSelectorAttribute : UnityEngine.Scripting.PreserveAttribute // TypeDefIndex: 58218
+	public sealed class ServiceSelectorAttribute : UnityEngine.Scripting.PreserveAttribute // TypeDefIndex: 59366
 	{
+		// Fields
+		private System.Type _ServiceType_k__BackingField; // 0x10
+	
 		// Properties
-		public System.Type ServiceType { get; private set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+		public System.Type ServiceType { get; private set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
 	
 		// Constructors
 		public ServiceSelectorAttribute() {} // Dummy constructor
-		public ServiceSelectorAttribute(System.Type serviceType) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public ServiceSelectorAttribute(System.Type serviceType) {} // 0x0000000184096E30-0x0000000184096EF0
 	}
 
-	[AttributeUsage(AttributeTargets.Method)]
-	public sealed class ServiceConstructorAttribute : UnityEngine.Scripting.PreserveAttribute // TypeDefIndex: 58219
+	public sealed class ServiceConstructorAttribute : UnityEngine.Scripting.PreserveAttribute // TypeDefIndex: 59367
 	{
+		// Fields
+		private System.Type _ServiceType_k__BackingField; // 0x10
+	
 		// Properties
-		public System.Type ServiceType { get; private set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+		public System.Type ServiceType { get; private set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
 	
 		// Constructors
 		public ServiceConstructorAttribute() {} // Dummy constructor
-		public ServiceConstructorAttribute(System.Type serviceType) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public ServiceConstructorAttribute(System.Type serviceType) {} // 0x0000000184096E30-0x0000000184096EF0
 	}
 
-	public interface IAsyncService // TypeDefIndex: 58220
+	public interface IAsyncService // TypeDefIndex: 59368
 	{
 		// Properties
 		bool IsLoaded { get; }
 	}
 
-	public abstract class SRDependencyServiceBase<T> : SRServiceBase<T>, IAsyncService // TypeDefIndex: 58222
+	public abstract class SRDependencyServiceBase<T> : SRServiceBase<T>, IAsyncService // TypeDefIndex: 59370
 		where T : class
 	{
 		// Fields
@@ -708,19 +815,42 @@ namespace SRF.Service
 		protected abstract System.Type[] Dependencies { get; }
 		public bool IsLoaded { get; }
 	
+		// Nested types
+		private sealed class _LoadDependencies_d__8 : IEnumerator<object> // TypeDefIndex: 59369
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public SRDependencyServiceBase<T> __4__this;
+			private System.Type[] __7__wrap1;
+			private int __7__wrap2;
+			private IAsyncService _a_5__4;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; }
+			object IEnumerator.Current { get => default; }
+	
+			// Constructors
+			public _LoadDependencies_d__8() {} // Dummy constructor
+			public _LoadDependencies_d__8(int __1__state) {}
+	
+			// Methods
+			void IDisposable.Dispose() {}
+			private bool MoveNext() => default;
+			void IEnumerator.Reset() {}
+		}
+	
 		// Constructors
 		protected SRDependencyServiceBase() {}
 	
 		// Methods
-		[Conditional("ENABLE_LOGGING")]
 		private void Log(string msg, UnityEngine.Object target) {}
 		protected override void Start() {}
 		protected virtual void OnLoaded() {}
-		[IteratorStateMachine(typeof(_LoadDependencies_d__8))]
 		private IEnumerator LoadDependencies() => default;
 	}
 
-	public abstract class SRSceneServiceBase<T, TImpl> : SRServiceBase<T>, IAsyncService // TypeDefIndex: 58224
+	public abstract class SRSceneServiceBase<T, TImpl> : SRServiceBase<T>, IAsyncService // TypeDefIndex: 59372
 		where T : class
 		where TImpl : UnityEngine.Component
 	{
@@ -732,20 +862,40 @@ namespace SRF.Service
 		protected TImpl RootObject { get; }
 		public bool IsLoaded { get; }
 	
+		// Nested types
+		private sealed class _LoadCoroutine_d__11 : IEnumerator<object> // TypeDefIndex: 59371
+		{
+			// Fields
+			private int __1__state;
+			private object __2__current;
+			public SRSceneServiceBase<T, TImpl> __4__this;
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; }
+			object IEnumerator.Current { get => default; }
+	
+			// Constructors
+			public _LoadCoroutine_d__11() {} // Dummy constructor
+			public _LoadCoroutine_d__11(int __1__state) {}
+	
+			// Methods
+			void IDisposable.Dispose() {}
+			private bool MoveNext() => default;
+			void IEnumerator.Reset() {}
+		}
+	
 		// Constructors
 		protected SRSceneServiceBase() {}
 	
 		// Methods
-		[Conditional("ENABLE_LOGGING")]
 		private void Log(string msg, UnityEngine.Object target) {}
 		protected override void Start() {}
 		protected override void OnDestroy() {}
 		protected virtual void OnLoaded() {}
-		[IteratorStateMachine(typeof(_LoadCoroutine_d__11))]
 		private IEnumerator LoadCoroutine() => default;
 	}
 
-	public abstract class SRServiceBase<T> : SRMonoBehaviourEx // TypeDefIndex: 58225
+	public abstract class SRServiceBase<T> : SRMonoBehaviourEx // TypeDefIndex: 59373
 		where T : class
 	{
 		// Constructors
@@ -756,11 +906,10 @@ namespace SRF.Service
 		protected override void OnDestroy() {}
 	}
 
-	[AddComponentMenu("SRF/Service/Service Manager")]
-	public class SRServiceManager : SRAutoSingleton<SRServiceManager> // TypeDefIndex: 58231
+	public class SRServiceManager : SRAutoSingleton<SRServiceManager> // TypeDefIndex: 59379
 	{
 		// Fields
-		public const bool EnableLogging = false; // Metadata: 0x01FDAC9E
+		public const bool EnableLogging = false; // Metadata: 0x02080632
 		public static int LoadingCount; // 0x00
 		private static readonly List<Assembly> _assemblies; // 0x08
 		private readonly SRList<Service> _services; // 0x48
@@ -768,20 +917,20 @@ namespace SRF.Service
 		private static bool _hasQuit; // 0x10
 	
 		// Properties
-		public static bool IsLoading { get => default; } // 0x00000001896CBAA0-0x00000001896CBAE8 
+		public static bool IsLoading { get => default; } // 0x000000018480ECF0-0x000000018480FE10 
 	
 		// Nested types
-		private class Service // TypeDefIndex: 58226
+		private class Service // TypeDefIndex: 59374
 		{
 			// Fields
 			public object Object; // 0x10
 			public System.Type Type; // 0x18
 	
 			// Constructors
-			public Service() {} // 0x000000018350B670-0x000000018350B680
+			public Service() {}
 		}
 	
-		private class ServiceStub // TypeDefIndex: 58227
+		private class ServiceStub // TypeDefIndex: 59375
 		{
 			// Fields
 			public Func<object> Constructor; // 0x10
@@ -790,82 +939,117 @@ namespace SRF.Service
 			public System.Type Type; // 0x28
 	
 			// Constructors
-			public ServiceStub() {} // 0x000000018350B670-0x000000018350B680
+			public ServiceStub() {}
 	
 			// Methods
-			public override string ToString() => default; // 0x00000001896CD04C-0x00000001896CD18C
+			public override string ToString() => default; // 0x000000018B7F1BDC-0x000000018B7F1C24
+		}
+	
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 59376
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<ServiceStub, string> __9__21_0; // 0x08
+	
+			// Constructors
+			static __c() {} // 0x000000018B7F19E4-0x000000018B7F1B64
+			public __c() {} // 0x0000000184A12970-0x0000000184A12AD0
+	
+			// Methods
+			internal string _UpdateStubs_b__21_0(ServiceStub p) => default;
+		}
+	
+		private sealed class __c__DisplayClass26_0 // TypeDefIndex: 59377
+		{
+			// Fields
+			public ServiceSelectorAttribute attrib; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass26_0() {} // 0x0000000184A12AD0-0x0000000184A12C00
+	
+			// Methods
+			internal bool _ScanTypeForSelectors_b__0(ServiceStub p) => default;
+		}
+	
+		private sealed class __c__DisplayClass27_0 // TypeDefIndex: 59378
+		{
+			// Fields
+			public ServiceConstructorAttribute attrib; // 0x10
+			public MethodInfo m; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass27_0() {} // 0x0000000184A126B0-0x0000000184A12830
+	
+			// Methods
+			internal bool _ScanTypeForConstructors_b__0(ServiceStub p) => default;
+			internal object _ScanTypeForConstructors_b__1() => default; // 0x0000000184A134D0-0x0000000184A135C0
 		}
 	
 		// Constructors
-		public SRServiceManager() {} // 0x0000000183C973E0-0x0000000183C97450
-		static SRServiceManager() {} // 0x0000000183CB6850-0x0000000183CB6900
+		public SRServiceManager() {} // 0x000000018B7F5224-0x000000018B7F5294
+		static SRServiceManager() {} // 0x000000018B7F5294-0x000000018B7F52B8
 	
 		// Methods
-		public static void RegisterAssembly<TType>() {}
+		public static void RegisterAssembly<TType>() {} // 0x0000000184A82CA0-0x0000000184A82D80
 		public static T GetService<T>()
-			where T : class => default;
-		public static object GetService(System.Type t) => default; // 0x00000001896CB8A8-0x00000001896CBA28
-		private static object GetServiceInternal(System.Type t) => default; // 0x0000000182CD72B0-0x0000000182CD7410
+			where T : class => default; // 0x0000000184A12C00-0x0000000184A13320
+		public static object GetService(System.Type t) => default; // 0x000000018B7F1B64-0x000000018B7F1BDC
+		private static object GetServiceInternal(System.Type t) => default; // 0x0000000184A13320-0x0000000184A134D0
 		public static bool HasService<T>()
-			where T : class => default;
-		public static bool HasService(System.Type t) => default; // 0x0000000182CD7410-0x0000000182CD7540
+			where T : class => default; // 0x000000018480FE10-0x000000018480FF40
+		public static bool HasService(System.Type t) => default; // 0x000000018480FF40-0x00000001848102A0
 		public static void RegisterService<T>(object service)
-			where T : class {}
-		private static void RegisterService(System.Type t, object service) {} // 0x0000000182CD6FF0-0x0000000182CD7170
+			where T : class {} // 0x00000001848102A0-0x0000000184810460
+		private static void RegisterService(System.Type t, object service) {} // 0x0000000184810460-0x0000000184810490
 		public static void UnRegisterService<T>()
-			where T : class {}
-		private static void UnRegisterService(System.Type t) {} // 0x0000000182CD7E10-0x0000000182CD7F00
-		protected override void Awake() {} // 0x000000018268DE30-0x000000018268DF10
-		protected void UpdateStubs() {} // 0x0000000182840F80-0x00000001828420A0
-		protected object AutoCreateService(System.Type t) => default; // 0x0000000182CD7540-0x0000000182CD7C60
-		protected new void OnApplicationQuit() {} // 0x00000001896CBA28-0x00000001896CBAA0
-		private static object DefaultServiceConstructor(System.Type serviceIntType, System.Type implType) => default; // 0x0000000182CD7C60-0x0000000182CD7E10
-		private void ScanType(System.Type type) {} // 0x00000001828420A0-0x00000001828421D0
-		private static void ScanTypeForSelectors(System.Type t, List<ServiceStub> stubs) {} // 0x00000001828421D0-0x0000000182842530
-		private static void ScanTypeForConstructors(System.Type t, List<ServiceStub> stubs) {} // 0x0000000182842530-0x00000001828426F0
-		private static MethodInfo[] GetStaticMethods(System.Type t) => default; // 0x00000001828426F0-0x0000000182842720
+			where T : class {} // 0x0000000185EE5D00-0x0000000185EE5D70
+		private static void UnRegisterService(System.Type t) {} // 0x0000000185F09590-0x0000000185F09640
+		protected override void Awake() {} // 0x0000000185492010-0x0000000185492020
+		protected void UpdateStubs() {} // 0x000000018B7F3188-0x000000018B7F32C8
+		protected object AutoCreateService(System.Type t) => default; // 0x0000000185492010-0x0000000185492020
+		protected new void OnApplicationQuit() {} // 0x000000018B7F52D8-0x000000018B7F533C
+		private static object DefaultServiceConstructor(System.Type serviceIntType, System.Type implType) => default; // 0x0000000185492010-0x0000000185492020
+		private void ScanType(System.Type type) {} // 0x000000018B7F514C-0x000000018B7F51D4
+		private static void ScanTypeForSelectors(System.Type t, List<ServiceStub> stubs) {} // 0x0000000185492010-0x0000000185492020
+		private static void ScanTypeForConstructors(System.Type t, List<ServiceStub> stubs) {} // 0x0000000185EE57D0-0x0000000185EE5850
+		private static MethodInfo[] GetStaticMethods(System.Type t) => default; // 0x0000000185492010-0x0000000185492020
 	}
 }
 
 namespace SRF.UI
 {
-	[AddComponentMenu("SRF/UI/Content Fit Text")]
-	[ExecuteInEditMode]
-	[RequireComponent(typeof(RectTransform))]
-	public class ContentFitText : UIBehaviour, ILayoutElement // TypeDefIndex: 58182
+	public class ContentFitText : UIBehaviour, ILayoutElement // TypeDefIndex: 59330
 	{
 		// Fields
 		public SRText CopySource; // 0x18
 		public Vector2 Padding; // 0x20
 	
 		// Properties
-		public float minWidth { get => default; } // 0x00000001896C5B78-0x00000001896C5BFC 
-		public float preferredWidth { get => default; } // 0x00000001896C5C80-0x00000001896C5D04 
-		public float flexibleWidth { get => default; } // 0x00000001896C5A74-0x00000001896C5AF4 
-		public float minHeight { get => default; } // 0x00000001896C5AF4-0x00000001896C5B78 
-		public float preferredHeight { get => default; } // 0x00000001896C5BFC-0x00000001896C5C80 
-		public float flexibleHeight { get => default; } // 0x00000001896C59F4-0x00000001896C5A74 
-		public int layoutPriority { get => default; } // 0x0000000181002730-0x0000000181002740 
+		public float minWidth { get => default; } // 0x000000018B7EBCB4-0x000000018B7EBD38 
+		public float preferredWidth { get => default; } // 0x000000018B7EBDBC-0x000000018B7EBE40 
+		public float flexibleWidth { get => default; } // 0x000000018B7EBBB0-0x000000018B7EBC30 
+		public float minHeight { get => default; } // 0x000000018B7EBC30-0x000000018B7EBCB4 
+		public float preferredHeight { get => default; } // 0x000000018B7EBD38-0x000000018B7EBDBC 
+		public float flexibleHeight { get => default; } // 0x000000018B7EBB30-0x000000018B7EBBB0 
+		public int layoutPriority { get => default; } // 0x00000001813AE580-0x00000001813AE590 
 	
 		// Constructors
-		public ContentFitText() {} // 0x000000018426FE60-0x000000018426FE68
+		public ContentFitText() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		public void CalculateLayoutInputHorizontal() {} // 0x00000001896C5814-0x00000001896C582C
-		public void CalculateLayoutInputVertical() {} // 0x00000001896C5814-0x00000001896C582C
-		protected override void OnEnable() {} // 0x00000001896C58D0-0x00000001896C596C
-		private void CopySourceOnLayoutDirty(SRText srText) {} // 0x00000001896C582C-0x00000001896C5834
-		protected override void OnTransformParentChanged() {} // 0x00000001896C582C-0x00000001896C5834
-		protected override void OnDisable() {} // 0x00000001896C5834-0x00000001896C58D0
-		protected override void OnDidApplyAnimationProperties() {} // 0x00000001896C582C-0x00000001896C5834
-		protected override void OnBeforeTransformParentChanged() {} // 0x00000001896C582C-0x00000001896C5834
-		protected void SetDirty() {} // 0x00000001896C596C-0x00000001896C59F4
+		public void CalculateLayoutInputHorizontal() {} // 0x000000018B7EB950-0x000000018B7EB968
+		public void CalculateLayoutInputVertical() {} // 0x000000018B7EB950-0x000000018B7EB968
+		protected override void OnEnable() {} // 0x000000018B7EBA0C-0x000000018B7EBAA8
+		private void CopySourceOnLayoutDirty(SRText srText) {} // 0x000000018B7EB968-0x000000018B7EB970
+		protected override void OnTransformParentChanged() {} // 0x000000018B7EB968-0x000000018B7EB970
+		protected override void OnDisable() {} // 0x000000018B7EB970-0x000000018B7EBA0C
+		protected override void OnDidApplyAnimationProperties() {} // 0x000000018B7EB968-0x000000018B7EB970
+		protected override void OnBeforeTransformParentChanged() {} // 0x000000018B7EB968-0x000000018B7EB970
+		protected void SetDirty() {} // 0x000000018B7EBAA8-0x000000018B7EBB30
 	}
 
-	[AddComponentMenu("SRF/UI/Copy Layout Element")]
-	[ExecuteInEditMode]
-	[RequireComponent(typeof(RectTransform))]
-	public class CopyLayoutElement : UIBehaviour, ILayoutElement // TypeDefIndex: 58183
+	public class CopyLayoutElement : UIBehaviour, ILayoutElement // TypeDefIndex: 59331
 	{
 		// Fields
 		public bool CopyMinHeight; // 0x18
@@ -879,26 +1063,23 @@ namespace SRF.UI
 		public float PaddingPreferredWidth; // 0x34
 	
 		// Properties
-		public float preferredWidth { get => default; } // 0x00000001896C5E9C-0x00000001896C5F24 
-		public float preferredHeight { get => default; } // 0x00000001896C5E14-0x00000001896C5E9C 
-		public float minWidth { get => default; } // 0x00000001896C5D8C-0x00000001896C5E14 
-		public float minHeight { get => default; } // 0x00000001896C5D04-0x00000001896C5D8C 
-		public int layoutPriority { get => default; } // 0x0000000182102C70-0x0000000182102C80 
-		public float flexibleHeight { get => default; } // 0x0000000183D751A0-0x0000000183D751B0 
-		public float flexibleWidth { get => default; } // 0x0000000183D751A0-0x0000000183D751B0 
+		public float preferredWidth { get => default; } // 0x000000018B7EBFD8-0x000000018B7EC060 
+		public float preferredHeight { get => default; } // 0x000000018B7EBF50-0x000000018B7EBFD8 
+		public float minWidth { get => default; } // 0x000000018B7EBEC8-0x000000018B7EBF50 
+		public float minHeight { get => default; } // 0x000000018B7EBE40-0x000000018B7EBEC8 
+		public int layoutPriority { get => default; } // 0x0000000181C6A970-0x0000000181C6A980 
+		public float flexibleHeight { get => default; } // 0x0000000185FD5E00-0x0000000185FD5E10 
+		public float flexibleWidth { get => default; } // 0x0000000185FD5E00-0x0000000185FD5E10 
 	
 		// Constructors
-		public CopyLayoutElement() {} // 0x000000018426FE60-0x000000018426FE68
+		public CopyLayoutElement() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		public void CalculateLayoutInputHorizontal() {} // 0x000000018350B670-0x000000018350B680
-		public void CalculateLayoutInputVertical() {} // 0x000000018350B670-0x000000018350B680
+		public void CalculateLayoutInputHorizontal() {} // 0x0000000185492010-0x0000000185492020
+		public void CalculateLayoutInputVertical() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AddComponentMenu("SRF/UI/Copy Preferred Size")]
-	[ExecuteInEditMode]
-	[RequireComponent(typeof(RectTransform))]
-	public class CopyPreferredSize : LayoutElement // TypeDefIndex: 58184
+	public class CopyPreferredSize : LayoutElement // TypeDefIndex: 59332
 	{
 		// Fields
 		public RectTransform CopySource; // 0x38
@@ -906,37 +1087,34 @@ namespace SRF.UI
 		public float PaddingWidth; // 0x44
 	
 		// Properties
-		public override float preferredWidth { get => default; } // 0x00000001896C5FA4-0x00000001896C6024 
-		public override float preferredHeight { get => default; } // 0x00000001896C5F24-0x00000001896C5FA4 
-		public override int layoutPriority { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		public override float preferredWidth { get => default; } // 0x000000018B7EC0E0-0x000000018B7EC160 
+		public override float preferredHeight { get => default; } // 0x000000018B7EC060-0x000000018B7EC0E0 
+		public override int layoutPriority { get => default; } // 0x0000000181C6A970-0x0000000181C6A980 
 	
 		// Constructors
-		public CopyPreferredSize() {} // 0x00000001831659B0-0x00000001831659C0
+		public CopyPreferredSize() {} // 0x0000000185FA2B00-0x0000000185FA2B10
 	}
 
-	[AddComponentMenu("SRF/UI/Copy Preferred Size (Multiple)")]
-	[ExecuteInEditMode]
-	[RequireComponent(typeof(RectTransform))]
-	public class CopyPreferredSizes : LayoutElement // TypeDefIndex: 58187
+	public class CopyPreferredSizes : LayoutElement // TypeDefIndex: 59335
 	{
 		// Fields
 		public CopySource[] CopySources; // 0x38
 		public Operations Operation; // 0x40
 	
 		// Properties
-		public override float preferredWidth { get => default; } // 0x00000001896C61AC-0x00000001896C6334 
-		public override float preferredHeight { get => default; } // 0x00000001896C6024-0x00000001896C61AC 
-		public override int layoutPriority { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		public override float preferredWidth { get => default; } // 0x000000018B7EC160-0x000000018B7EC2E8 
+		public override float preferredHeight { get => default; } // 0x0000000181C6A970-0x0000000181C6A980 
+		public override int layoutPriority { get => default; } // 0x0000000185FA2B00-0x0000000185FA2B10 
 	
 		// Nested types
-		public enum Operations // TypeDefIndex: 58185
+		public enum Operations // TypeDefIndex: 59333
 		{
 			Max = 0,
 			Min = 1
 		}
 	
 		[Serializable]
-		public class CopySource // TypeDefIndex: 58186
+		public class CopySource // TypeDefIndex: 59334
 		{
 			// Fields
 			public RectTransform Rect; // 0x10
@@ -944,17 +1122,14 @@ namespace SRF.UI
 			public float PaddingWidth; // 0x1C
 	
 			// Constructors
-			public CopySource() {} // 0x000000018350B670-0x000000018350B680
+			public CopySource() {} // 0x000000018B7EC2E8-0x000000018B7EC470
 		}
 	
 		// Constructors
-		public CopyPreferredSizes() {} // 0x00000001831659B0-0x00000001831659C0
+		public CopyPreferredSizes() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AddComponentMenu("SRF/UI/Copy Size Into Layout Element")]
-	[ExecuteInEditMode]
-	[RequireComponent(typeof(RectTransform))]
-	public class CopySizeIntoLayoutElement : LayoutElement // TypeDefIndex: 58188
+	public class CopySizeIntoLayoutElement : LayoutElement // TypeDefIndex: 59336
 	{
 		// Fields
 		public RectTransform CopySource; // 0x38
@@ -964,17 +1139,17 @@ namespace SRF.UI
 		public bool SetMinimumSize; // 0x49
 	
 		// Properties
-		public override float preferredWidth { get => default; } // 0x00000001896C6508-0x00000001896C65A4 
-		public override float preferredHeight { get => default; } // 0x00000001896C646C-0x00000001896C6508 
-		public override float minWidth { get => default; } // 0x00000001896C63D0-0x00000001896C646C 
-		public override float minHeight { get => default; } // 0x00000001896C6334-0x00000001896C63D0 
-		public override int layoutPriority { get => default; } // 0x0000000182102C70-0x0000000182102C80 
+		public override float preferredWidth { get => default; } // 0x000000018B7EC644-0x000000018B7EC6E0 
+		public override float preferredHeight { get => default; } // 0x000000018B7EC5A8-0x000000018B7EC644 
+		public override float minWidth { get => default; } // 0x000000018B7EC50C-0x000000018B7EC5A8 
+		public override float minHeight { get => default; } // 0x000000018B7EC470-0x000000018B7EC50C 
+		public override int layoutPriority { get => default; } // 0x0000000181C6A970-0x0000000181C6A980 
 	
 		// Constructors
-		public CopySizeIntoLayoutElement() {} // 0x00000001831659B0-0x00000001831659C0
+		public CopySizeIntoLayoutElement() {} // 0x0000000185FA2B00-0x0000000185FA2B10
 	}
 
-	public class DragHandle : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler // TypeDefIndex: 58189
+	public class DragHandle : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler // TypeDefIndex: 59337
 	{
 		// Fields
 		private CanvasScaler _canvasScaler; // 0x18
@@ -987,27 +1162,25 @@ namespace SRF.UI
 		public RectTransform TargetRectTransform; // 0x40
 	
 		// Properties
-		private float Mult { get => default; } // 0x00000001896C6CD8-0x00000001896C6CF4 
+		private float Mult { get => default; } // 0x000000018B7ECE14-0x000000018B7ECE30 
 	
 		// Constructors
-		public DragHandle() {} // 0x00000001896C6CC8-0x00000001896C6CD8
+		public DragHandle() {} // 0x000000018B7ECE04-0x000000018B7ECE14
 	
 		// Methods
-		public void OnBeginDrag(PointerEventData eventData) {} // 0x00000001896C68BC-0x00000001896C68EC
-		public void OnDrag(PointerEventData eventData) {} // 0x00000001896C68EC-0x00000001896C6A1C
-		public void OnEndDrag(PointerEventData eventData) {} // 0x00000001896C6A1C-0x00000001896C6A74
-		private void Start() {} // 0x00000001896C6BBC-0x00000001896C6C0C
-		private bool Verify() => default; // 0x00000001896C6C0C-0x00000001896C6CC8
-		private float GetCurrentValue() => default; // 0x00000001896C66F8-0x00000001896C6818
-		private void SetCurrentValue(float value) {} // 0x00000001896C6A74-0x00000001896C6BBC
-		private void CommitCurrentValue() {} // 0x00000001896C65F8-0x00000001896C66F8
-		private float GetMinSize() => default; // 0x00000001896C6834-0x00000001896C68BC
-		private float GetMaxSize() => default; // 0x00000001896C6818-0x00000001896C6834
+		public void OnBeginDrag(PointerEventData eventData) {} // 0x000000018B7EC9F8-0x000000018B7ECA28
+		public void OnDrag(PointerEventData eventData) {} // 0x000000018B7ECA28-0x000000018B7ECB58
+		public void OnEndDrag(PointerEventData eventData) {} // 0x000000018B7ECB58-0x000000018B7ECBB0
+		private void Start() {} // 0x000000018B7ECCF8-0x000000018B7ECD48
+		private bool Verify() => default; // 0x000000018B7ECD48-0x000000018B7ECE04
+		private float GetCurrentValue() => default; // 0x000000018B7EC834-0x000000018B7EC954
+		private void SetCurrentValue(float value) {} // 0x000000018B7ECBB0-0x000000018B7ECCF8
+		private void CommitCurrentValue() {} // 0x000000018B7EC734-0x000000018B7EC834
+		private float GetMinSize() => default; // 0x000000018B7EC970-0x000000018B7EC9F8
+		private float GetMaxSize() => default; // 0x000000018B7EC954-0x000000018B7EC970
 	}
 
-	[AddComponentMenu("SRF/UI/Flash Graphic")]
-	[ExecuteInEditMode]
-	public class FlashGraphic : UIBehaviour, IPointerDownHandler, IPointerUpHandler // TypeDefIndex: 58190
+	public class FlashGraphic : UIBehaviour, IPointerDownHandler, IPointerUpHandler // TypeDefIndex: 59338
 	{
 		// Fields
 		public float DecayTime; // 0x18
@@ -1017,101 +1190,90 @@ namespace SRF.UI
 		private bool _isHoldingUntilNextPress; // 0x48
 	
 		// Constructors
-		public FlashGraphic() {} // 0x00000001896C6E8C-0x00000001896C6EC8
+		public FlashGraphic() {} // 0x000000018B7ECFC8-0x000000018B7ED004
 	
 		// Methods
-		public void OnPointerDown(PointerEventData eventData) {} // 0x00000001896C6DF8-0x00000001896C6E40
-		public void OnPointerUp(PointerEventData eventData) {} // 0x00000001896C6E40-0x00000001896C6E8C
-		protected override void OnEnable() {} // 0x00000001896C6DB4-0x00000001896C6DF8
-		public void Flash() {} // 0x00000001896C6D3C-0x00000001896C6DB4
-		public void FlashAndHoldUntilNextPress() {} // 0x00000001896C6CF4-0x00000001896C6D3C
+		public void OnPointerDown(PointerEventData eventData) {} // 0x000000018B7ECF34-0x000000018B7ECF7C
+		public void OnPointerUp(PointerEventData eventData) {} // 0x000000018B7ECF7C-0x000000018B7ECFC8
+		protected override void OnEnable() {} // 0x000000018B7ECEF0-0x000000018B7ECF34
+		public void Flash() {} // 0x000000018B7ECE78-0x000000018B7ECEF0
+		public void FlashAndHoldUntilNextPress() {} // 0x000000018B7ECE30-0x000000018B7ECE78
 	}
 
-	[AddComponentMenu("SRF/UI/Inherit Colour")]
-	[ExecuteInEditMode]
-	[RequireComponent(typeof(Graphic))]
-	public class InheritColour : SRMonoBehaviour // TypeDefIndex: 58191
+	public class InheritColour : SRMonoBehaviour // TypeDefIndex: 59339
 	{
 		// Fields
 		private Graphic _graphic; // 0x48
 		public Graphic From; // 0x50
 	
 		// Properties
-		private Graphic Graphic { get => default; } // 0x00000001896C7A48-0x00000001896C7ACC 
+		private Graphic Graphic { get => default; } // 0x000000018B7EDB84-0x000000018B7EDC08 
 	
 		// Constructors
-		public InheritColour() {} // 0x000000018426FE60-0x000000018426FE68
+		public InheritColour() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		private void Refresh() {} // 0x00000001896C7990-0x00000001896C7A40
-		private void Update() {} // 0x00000001896C7A40-0x00000001896C7A48
-		private void Start() {} // 0x00000001896C7A40-0x00000001896C7A48
+		private void Refresh() {} // 0x000000018B7EDACC-0x000000018B7EDB7C
+		private void Update() {} // 0x000000018B7EDB7C-0x000000018B7EDB84
+		private void Start() {} // 0x000000018B7EDB7C-0x000000018B7EDB84
 	}
 
-	[AddComponentMenu("SRF/UI/Long Press Button")]
-	public class LongPressButton : UnityEngine.UI.Button // TypeDefIndex: 58192
+	public class LongPressButton : UnityEngine.UI.Button // TypeDefIndex: 59340
 	{
 		// Fields
 		private bool _handled; // 0x188
-		[SerializeField]
 		private ButtonClickedEvent _onLongPress; // 0x190
 		private bool _pressed; // 0x198
 		private float _pressedTime; // 0x19C
 		public float LongPressDuration; // 0x1A0
 	
 		// Properties
-		public ButtonClickedEvent onLongPress { get => default; set {} } // 0x0000000183D56B70-0x0000000183D56B80 0x0000000184275BAC-0x0000000184275BC0
+		public ButtonClickedEvent onLongPress { get => default; set {} } // 0x0000000181B44930-0x0000000181B44940 0x0000000186473498-0x00000001864734AC
 	
 		// Constructors
-		public LongPressButton() {} // 0x00000001896C7C00-0x00000001896C7C80
+		public LongPressButton() {} // 0x000000018B7EDD3C-0x000000018B7EDDBC
 	
 		// Methods
-		public override void OnPointerExit(PointerEventData eventData) {} // 0x00000001896C7B58-0x00000001896C7B78
-		public override void OnPointerDown(PointerEventData eventData) {} // 0x00000001896C7B04-0x00000001896C7B58
-		public override void OnPointerUp(PointerEventData eventData) {} // 0x00000001896C7B78-0x00000001896C7BA8
-		public override void OnPointerClick(PointerEventData eventData) {} // 0x00000001896C7AF0-0x00000001896C7B04
-		private void Update() {} // 0x00000001896C7BA8-0x00000001896C7C00
+		public override void OnPointerExit(PointerEventData eventData) {} // 0x000000018B7EDC94-0x000000018B7EDCB4
+		public override void OnPointerDown(PointerEventData eventData) {} // 0x000000018B7EDC40-0x000000018B7EDC94
+		public override void OnPointerUp(PointerEventData eventData) {} // 0x000000018B7EDCB4-0x000000018B7EDCE4
+		public override void OnPointerClick(PointerEventData eventData) {} // 0x000000018B7EDC2C-0x000000018B7EDC40
+		private void Update() {} // 0x000000018B7EDCE4-0x000000018B7EDD3C
 	}
 
-	[ExecuteInEditMode]
-	[RequireComponent(typeof(RectTransform))]
-	public abstract class ResponsiveBase : SRMonoBehaviour // TypeDefIndex: 58193
+	public abstract class ResponsiveBase : SRMonoBehaviour // TypeDefIndex: 59341
 	{
 		// Fields
 		private bool _queueRefresh; // 0x48
 	
 		// Properties
-		protected RectTransform RectTransform { get; } // 0x00000001896C9210-0x00000001896C9260 
+		protected RectTransform RectTransform { get; } // 0x000000018B7EF34C-0x000000018B7EF39C 
 	
 		// Constructors
-		protected ResponsiveBase() {} // 0x000000018426FE60-0x000000018426FE68
+		protected ResponsiveBase() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		protected void OnEnable() {} // 0x0000000183D73A50-0x0000000183D73A60
-		protected void OnRectTransformDimensionsChange() {} // 0x0000000183D73A50-0x0000000183D73A60
-		protected void Update() {} // 0x00000001896C91E8-0x00000001896C9210
+		protected void OnEnable() {} // 0x0000000185FD46B0-0x0000000185FD46C0
+		protected void OnRectTransformDimensionsChange() {} // 0x0000000185FD46B0-0x0000000185FD46C0
+		protected void Update() {} // 0x000000018B7EF324-0x000000018B7EF34C
 		protected abstract void Refresh();
-		[ContextMenu("Refresh")]
-		private void DoRefresh() {} // 0x00000001895F8FC0-0x00000001895F8FD0
+		private void DoRefresh() {} // 0x000000018B71F004-0x000000018B71F014
 	}
 
-	[AddComponentMenu("SRF/UI/Responsive (Enable)")]
-	[ExecuteInEditMode]
-	[RequireComponent(typeof(RectTransform))]
-	public class ResponsiveEnable : ResponsiveBase // TypeDefIndex: 58196
+	public class ResponsiveEnable : ResponsiveBase // TypeDefIndex: 59344
 	{
 		// Fields
 		public Entry[] Entries; // 0x50
 	
 		// Nested types
-		public enum Modes // TypeDefIndex: 58194
+		public enum Modes // TypeDefIndex: 59342
 		{
 			EnableAbove = 0,
 			EnableBelow = 1
 		}
 	
 		[Serializable]
-		public struct Entry // TypeDefIndex: 58195
+		public struct Entry // TypeDefIndex: 59343
 		{
 			// Fields
 			public UnityEngine.Behaviour[] Components; // 0x00
@@ -1122,23 +1284,20 @@ namespace SRF.UI
 		}
 	
 		// Constructors
-		public ResponsiveEnable() {} // 0x00000001896C94DC-0x00000001896C952C
+		public ResponsiveEnable() {} // 0x000000018B7EF618-0x000000018B7EF668
 	
 		// Methods
-		protected override void Refresh() {} // 0x00000001896C9260-0x00000001896C94DC
+		protected override void Refresh() {} // 0x000000018B7EF39C-0x000000018B7EF618
 	}
 
-	[AddComponentMenu("SRF/UI/Responsive (Resize)")]
-	[ExecuteInEditMode]
-	[RequireComponent(typeof(RectTransform))]
-	public class ResponsiveResize : ResponsiveBase // TypeDefIndex: 58199
+	public class ResponsiveResize : ResponsiveBase // TypeDefIndex: 59347
 	{
 		// Fields
 		public Element[] Elements; // 0x50
 	
 		// Nested types
 		[Serializable]
-		public struct Element // TypeDefIndex: 58198
+		public struct Element // TypeDefIndex: 59346
 		{
 			// Fields
 			public SizeDefinition[] SizeDefinitions; // 0x00
@@ -1146,54 +1305,45 @@ namespace SRF.UI
 	
 			// Nested types
 			[Serializable]
-			public struct SizeDefinition // TypeDefIndex: 58197
+			public struct SizeDefinition // TypeDefIndex: 59345
 			{
 				// Fields
-				[Tooltip("Width to apply when over the threshold width")]
 				public float ElementWidth; // 0x00
-				[Tooltip("Threshold over which this width will take effect")]
 				public float ThresholdWidth; // 0x04
 			}
 		}
 	
 		// Constructors
-		public ResponsiveResize() {} // 0x00000001896C96D8-0x00000001896C9728
+		public ResponsiveResize() {} // 0x000000018B7EF814-0x000000018B7EF864
 	
 		// Methods
-		protected override void Refresh() {} // 0x00000001896C952C-0x00000001896C96D8
+		protected override void Refresh() {} // 0x000000018B7EF668-0x000000018B7EF814
 	}
 
-	[AddComponentMenu("SRF/UI/Scroll To Bottom Behaviour")]
-	[ExecuteInEditMode]
-	[RequireComponent(typeof(RectTransform))]
-	public class ScrollToBottomBehaviour : MonoBehaviour // TypeDefIndex: 58200
+	public class ScrollToBottomBehaviour : MonoBehaviour // TypeDefIndex: 59348
 	{
 		// Fields
-		[SerializeField]
 		private ScrollRect _scrollRect; // 0x18
-		[SerializeField]
 		private CanvasGroup _canvasGroup; // 0x20
-		[SerializeField]
 		private bool _scrollToTop; // 0x28
 	
 		// Constructors
-		public ScrollToBottomBehaviour() {} // 0x000000018426FE60-0x000000018426FE68
+		public ScrollToBottomBehaviour() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		public void Start() {} // 0x00000001896CBFB0-0x00000001896CC10C
-		private void OnEnable() {} // 0x00000001896CBE78-0x00000001896CBE80
-		public void Trigger() {} // 0x00000001896CC10C-0x00000001896CC14C
-		private void OnScrollRectValueChanged(Vector2 position) {} // 0x00000001896CBE78-0x00000001896CBE80
-		private void Refresh() {} // 0x00000001896CBE80-0x00000001896CBF24
-		private void SetVisible(bool truth) {} // 0x00000001896CBF24-0x00000001896CBFB0
+		public void Start() {} // 0x000000018B7F20EC-0x000000018B7F2248
+		private void OnEnable() {} // 0x000000018B7F1FB4-0x000000018B7F1FBC
+		public void Trigger() {} // 0x000000018B7F2248-0x000000018B7F2288
+		private void OnScrollRectValueChanged(Vector2 position) {} // 0x000000018B7F1FB4-0x000000018B7F1FBC
+		private void Refresh() {} // 0x000000018B7F1FBC-0x000000018B7F2060
+		private void SetVisible(bool truth) {} // 0x000000018B7F2060-0x000000018B7F20EC
 	}
 
-	[AddComponentMenu("SRF/UI/SRNumberButton")]
-	public class SRNumberButton : UnityEngine.UI.Button, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler // TypeDefIndex: 58201
+	public class SRNumberButton : UnityEngine.UI.Button, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler // TypeDefIndex: 59349
 	{
 		// Fields
-		private const float ExtraThreshold = 3f; // Metadata: 0x01FDAC95
-		public const float Delay = 0.4f; // Metadata: 0x01FDAC99
+		private const float ExtraThreshold = 3f; // Metadata: 0x02080629
+		public const float Delay = 0.4f; // Metadata: 0x0208062D
 		private float _delayTime; // 0x188
 		private float _downTime; // 0x18C
 		private bool _isDown; // 0x190
@@ -1201,17 +1351,16 @@ namespace SRF.UI
 		public SRNumberSpinner TargetField; // 0x1A0
 	
 		// Constructors
-		public SRNumberButton() {} // 0x00000001896CB0F0-0x00000001896CB108
+		public SRNumberButton() {} // 0x000000018B7F122C-0x000000018B7F1244
 	
 		// Methods
-		public override void OnPointerDown(PointerEventData eventData) {} // 0x00000001896CAFF4-0x00000001896CB044
-		public override void OnPointerUp(PointerEventData eventData) {} // 0x00000001896CB044-0x00000001896CB064
-		protected virtual void Update() {} // 0x00000001896CB064-0x00000001896CB0F0
-		private void Apply() {} // 0x00000001896CAEF4-0x00000001896CAFF4
+		public override void OnPointerDown(PointerEventData eventData) {} // 0x000000018B7F1130-0x000000018B7F1180
+		public override void OnPointerUp(PointerEventData eventData) {} // 0x000000018B7F1180-0x000000018B7F11A0
+		protected virtual void Update() {} // 0x000000018B7F11A0-0x000000018B7F122C
+		private void Apply() {} // 0x000000018B7F1030-0x000000018B7F1130
 	}
 
-	[AddComponentMenu("SRF/UI/SRNumberSpinner")]
-	public class SRNumberSpinner : InputField // TypeDefIndex: 58202
+	public class SRNumberSpinner : InputField // TypeDefIndex: 59350
 	{
 		// Fields
 		private double _currentValue; // 0x2A0
@@ -1222,87 +1371,80 @@ namespace SRF.UI
 		public double MinValue; // 0x2C8
 	
 		// Constructors
-		public SRNumberSpinner() {} // 0x00000001896CB624-0x00000001896CB690
+		public SRNumberSpinner() {} // 0x000000018B7F1760-0x000000018B7F17CC
 	
 		// Methods
-		protected override void Awake() {} // 0x00000001896CB108-0x00000001896CB184
-		public override void OnPointerClick(PointerEventData eventData) {} // 0x00000001896CB53C-0x00000001896CB624
-		public override void OnPointerDown(PointerEventData eventData) {} // 0x000000018350B670-0x000000018350B680
-		public override void OnPointerUp(PointerEventData eventData) {} // 0x000000018350B670-0x000000018350B680
-		public override void OnBeginDrag(PointerEventData eventData) {} // 0x00000001896CB184-0x00000001896CB388
-		public override void OnDrag(PointerEventData eventData) {} // 0x00000001896CB388-0x00000001896CB4F0
-		public override void OnEndDrag(PointerEventData eventData) {} // 0x00000001896CB4F0-0x00000001896CB53C
+		protected override void Awake() {} // 0x000000018B7F1244-0x000000018B7F12C0
+		public override void OnPointerClick(PointerEventData eventData) {} // 0x000000018B7F1678-0x000000018B7F1760
+		public override void OnPointerDown(PointerEventData eventData) {} // 0x0000000185492010-0x0000000185492020
+		public override void OnPointerUp(PointerEventData eventData) {} // 0x0000000185492010-0x0000000185492020
+		public override void OnBeginDrag(PointerEventData eventData) {} // 0x000000018B7F12C0-0x000000018B7F14C4
+		public override void OnDrag(PointerEventData eventData) {} // 0x000000018B7F14C4-0x000000018B7F162C
+		public override void OnEndDrag(PointerEventData eventData) {} // 0x000000018B7F162C-0x000000018B7F1678
 	}
 
-	[AddComponentMenu("SRF/UI/Retina Scaler")]
-	[RequireComponent(typeof(CanvasScaler))]
-	public class SRRetinaScaler : SRMonoBehaviour // TypeDefIndex: 58203
+	public class SRRetinaScaler : SRMonoBehaviour // TypeDefIndex: 59351
 	{
 		// Fields
-		[SerializeField]
 		private bool _disablePixelPerfect; // 0x48
-		[SerializeField]
 		private int _designDpi; // 0x4C
 		private float _lastDpi; // 0x50
 	
 		// Constructors
-		public SRRetinaScaler() {} // 0x00000001896CB898-0x00000001896CB8A8
+		public SRRetinaScaler() {} // 0x000000018B7F19D4-0x000000018B7F19E4
 	
 		// Methods
-		private void Start() {} // 0x00000001896CB860-0x00000001896CB868
-		private void ApplyScaling() {} // 0x00000001896CB778-0x00000001896CB860
-		private void Update() {} // 0x00000001896CB868-0x00000001896CB898
+		private void Start() {} // 0x000000018B7F199C-0x000000018B7F19A4
+		private void ApplyScaling() {} // 0x000000018B7F18B4-0x000000018B7F199C
+		private void Update() {} // 0x000000018B7F19A4-0x000000018B7F19D4
 	}
 
-	[AddComponentMenu("SRF/UI/Spinner")]
-	public class SRSpinner : Selectable, IDragHandler, IBeginDragHandler // TypeDefIndex: 58205
+	public class SRSpinner : Selectable, IDragHandler, IBeginDragHandler // TypeDefIndex: 59353
 	{
 		// Fields
 		private float _dragDelta; // 0x180
-		[SerializeField]
 		private SpinEvent _onSpinDecrement; // 0x188
-		[SerializeField]
 		private SpinEvent _onSpinIncrement; // 0x190
 		public float DragThreshold; // 0x198
 	
 		// Properties
-		public SpinEvent OnSpinIncrement { get => default; set {} } // 0x0000000183D56B70-0x0000000183D56B80 0x0000000184275BAC-0x0000000184275BC0
-		public SpinEvent OnSpinDecrement { get => default; set {} } // 0x0000000183D56AF0-0x0000000183D56B00 0x0000000184275C54-0x0000000184275C68
+		public SpinEvent OnSpinIncrement { get => default; set {} } // 0x0000000186473498-0x00000001864734AC 0x0000000185FB8360-0x0000000185FB8370
+		public SpinEvent OnSpinDecrement { get => default; set {} } // 0x0000000186473540-0x0000000186473554 0x0000000185FD5EC0-0x0000000185FD5ED0
 	
 		// Nested types
 		[Serializable]
-		public class SpinEvent : UnityEvent // TypeDefIndex: 58204
+		public class SpinEvent : UnityEvent // TypeDefIndex: 59352
 		{
 			// Constructors
-			public SpinEvent() {} // 0x0000000184271C98-0x0000000184271CA0
+			public SpinEvent() {} // 0x0000000181B44930-0x0000000181B44940
 		}
 	
 		// Constructors
-		public SRSpinner() {} // 0x00000001896CBC50-0x00000001896CBD18
+		public SRSpinner() {} // 0x0000000186470378-0x0000000186470380
 	
 		// Methods
-		public void OnBeginDrag(PointerEventData eventData) {} // 0x0000000183D75260-0x0000000183D75270
-		public void OnDrag(PointerEventData eventData) {} // 0x00000001896CBB34-0x00000001896CBC04
-		private void OnIncrement(int amount) {} // 0x00000001896CBC04-0x00000001896CBC50
-		private void OnDecrement(int amount) {} // 0x00000001896CBAE8-0x00000001896CBB34
+		public void OnBeginDrag(PointerEventData eventData) {} // 0x000000018B7F1C70-0x000000018B7F1D40
+		public void OnDrag(PointerEventData eventData) {} // 0x000000018B7F1D40-0x000000018B7F1D8C
+		private void OnIncrement(int amount) {} // 0x000000018B7F1C24-0x000000018B7F1C70
+		private void OnDecrement(int amount) {} // 0x000000018B7F1D8C-0x000000018B7F1E54
 	}
 
-	[AddComponentMenu("SRF/UI/SRText")]
-	public class SRText : UnityEngine.UI.Text // TypeDefIndex: 58206
+	public class SRText : UnityEngine.UI.Text // TypeDefIndex: 59354
 	{
+		// Fields
+		private Action<SRText> LayoutDirty; // 0x118
+	
 		// Events
 		public event Action<SRText> LayoutDirty;
 	
 		// Constructors
-		public SRText() {} // 0x00000001896CBD50-0x00000001896CBD58
+		public SRText() {} // 0x000000018B7F1E8C-0x000000018B7F1E94
 	
 		// Methods
-		public override void SetLayoutDirty() {} // 0x00000001896CBD18-0x00000001896CBD50
+		public override void SetLayoutDirty() {} // 0x000000018B7F1E54-0x000000018B7F1E8C
 	}
 
-	[AddComponentMenu("SRF/UI/Style Component")]
-	[ExecuteInEditMode]
-	public class StyleComponent : SRMonoBehaviour // TypeDefIndex: 58207
+	public class StyleComponent : SRMonoBehaviour // TypeDefIndex: 59355
 	{
 		// Fields
 		private SRF.UI.Style _activeStyle; // 0x48
@@ -1311,49 +1453,44 @@ namespace SRF.UI
 		private bool _hasStarted; // 0x60
 		private Image _image; // 0x68
 		private Selectable _selectable; // 0x70
-		[FormerlySerializedAs("StyleKey")]
-		[HideInInspector]
-		[SerializeField]
 		private string _styleKey; // 0x78
 		public bool IgnoreImage; // 0x80
 	
 		// Properties
-		public string StyleKey { get => default; set {} } // 0x0000000183D4EB20-0x0000000183D4EB30 0x00000001896CD814-0x00000001896CD83C
+		public string StyleKey { get => default; set {} } // 0x0000000183060C50-0x0000000183060C60 0x000000018B7F3950-0x000000018B7F3978
 	
 		// Constructors
-		public StyleComponent() {} // 0x000000018426FE60-0x000000018426FE68
+		public StyleComponent() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		private void Start() {} // 0x00000001896CD7F4-0x00000001896CD814
-		private void OnEnable() {} // 0x00000001896CD5C8-0x00000001896CD5DC
-		public void Refresh(bool invalidateCache) {} // 0x00000001896CD5DC-0x00000001896CD7A4
-		private StyleRoot GetStyleRoot() => default; // 0x00000001896CD478-0x00000001896CD5C8
-		private void ApplyStyle() {} // 0x00000001896CD18C-0x00000001896CD478
-		private void SRStyleDirty() {} // 0x00000001896CD7A4-0x00000001896CD7F4
+		private void Start() {} // 0x000000018B7F3930-0x000000018B7F3950
+		private void OnEnable() {} // 0x000000018B7F3704-0x000000018B7F3718
+		public void Refresh(bool invalidateCache) {} // 0x000000018B7F3718-0x000000018B7F38E0
+		private StyleRoot GetStyleRoot() => default; // 0x000000018B7F35B4-0x000000018B7F3704
+		private void ApplyStyle() {} // 0x000000018B7F32C8-0x000000018B7F35B4
+		private void SRStyleDirty() {} // 0x000000018B7F38E0-0x000000018B7F3930
 	}
 
-	[AddComponentMenu("SRF/UI/Style Root")]
-	[ExecuteInEditMode]
-	public sealed class StyleRoot : SRMonoBehaviour // TypeDefIndex: 58208
+	public sealed class StyleRoot : SRMonoBehaviour // TypeDefIndex: 59356
 	{
 		// Fields
 		private StyleSheet _activeStyleSheet; // 0x48
 		public StyleSheet StyleSheet; // 0x50
 	
 		// Constructors
-		public StyleRoot() {} // 0x000000018426FE60-0x000000018426FE68
+		public StyleRoot() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		public SRF.UI.Style GetStyle(string key) => default; // 0x00000001896CD83C-0x00000001896CD8F8
-		private void OnEnable() {} // 0x00000001896CD900-0x00000001896CD970
-		private void OnDisable() {} // 0x00000001896CD8F8-0x00000001896CD900
-		private void Update() {} // 0x00000001896CD9C4-0x00000001896CDA34
-		private void OnStyleSheetChanged() {} // 0x00000001896CD970-0x00000001896CD9C4
-		public void SetDirty() {} // 0x0000000185D6CFCC-0x0000000185D6CFE0
+		public SRF.UI.Style GetStyle(string key) => default; // 0x000000018B7F3978-0x000000018B7F3A34
+		private void OnEnable() {} // 0x000000018B7F3A3C-0x000000018B7F3AAC
+		private void OnDisable() {} // 0x000000018B7F3A34-0x000000018B7F3A3C
+		private void Update() {} // 0x000000018B7F3B00-0x000000018B7F3B70
+		private void OnStyleSheetChanged() {} // 0x000000018B7F3AAC-0x000000018B7F3B00
+		public void SetDirty() {} // 0x0000000187F3B9F4-0x0000000187F3BA08
 	}
 
 	[Serializable]
-	public class Style // TypeDefIndex: 58209
+	public class Style // TypeDefIndex: 59357
 	{
 		// Fields
 		public UnityEngine.Color ActiveColor; // 0x10
@@ -1363,50 +1500,45 @@ namespace SRF.UI
 		public UnityEngine.Color NormalColor; // 0x48
 	
 		// Constructors
-		public Style() {} // 0x00000001896CDC9C-0x00000001896CDCF4
+		public Style() {} // 0x000000018B7F3DD8-0x000000018B7F3E30
 	
 		// Methods
-		public Style Copy() => default; // 0x00000001896CDC30-0x00000001896CDC9C
-		public void CopyFrom(Style style) {} // 0x00000001896CDBD4-0x00000001896CDC30
+		public Style Copy() => default; // 0x000000018B7F3D6C-0x000000018B7F3DD8
+		public void CopyFrom(Style style) {} // 0x000000018B7F3D10-0x000000018B7F3D6C
 	}
 
 	[Serializable]
-	public class StyleSheet : ScriptableObject // TypeDefIndex: 58210
+	public class StyleSheet : ScriptableObject // TypeDefIndex: 59358
 	{
 		// Fields
-		[SerializeField]
 		private List<string> _keys; // 0x18
-		[SerializeField]
 		private List<SRF.UI.Style> _styles; // 0x20
-		[SerializeField]
 		public StyleSheet Parent; // 0x28
 	
 		// Constructors
-		public StyleSheet() {} // 0x00000001896CDB0C-0x00000001896CDBD4
+		public StyleSheet() {} // 0x000000018B7F3C48-0x000000018B7F3D10
 	
 		// Methods
-		public SRF.UI.Style GetStyle(string key, bool searchParent = true /* Metadata: 0x01FDAC9D */) => default; // 0x00000001896CDA34-0x00000001896CDB0C
+		public SRF.UI.Style GetStyle(string key, bool searchParent = true /* Metadata: 0x02080631 */) => default; // 0x000000018B7F3B70-0x000000018B7F3C48
 	}
 
-	[AddComponentMenu("SRF/UI/Unselectable")]
-	public sealed class Unselectable : SRMonoBehaviour, ISelectHandler // TypeDefIndex: 58211
+	public sealed class Unselectable : SRMonoBehaviour, ISelectHandler // TypeDefIndex: 59359
 	{
 		// Fields
 		private bool _suspectedSelected; // 0x48
 	
 		// Constructors
-		public Unselectable() {} // 0x000000018426FE60-0x000000018426FE68
+		public Unselectable() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		public void OnSelect(BaseEventData eventData) {} // 0x0000000183D73A50-0x0000000183D73A60
-		private void Update() {} // 0x00000001896CF2B0-0x00000001896CF378
+		public void OnSelect(BaseEventData eventData) {} // 0x0000000185FD46B0-0x0000000185FD46C0
+		private void Update() {} // 0x000000018B7F53EC-0x000000018B7F54B4
 	}
 }
 
 namespace SRF.UI.Layout
 {
-	[AddComponentMenu("SRF/UI/Layout/Flow Layout Group")]
-	public class FlowLayoutGroup : LayoutGroup // TypeDefIndex: 58212
+	public class FlowLayoutGroup : LayoutGroup // TypeDefIndex: 59360
 	{
 		// Fields
 		private readonly IList<RectTransform> _rowList; // 0x58
@@ -1416,33 +1548,32 @@ namespace SRF.UI.Layout
 		public float Spacing; // 0x68
 	
 		// Properties
-		protected bool IsCenterAlign { get => default; } // 0x00000001896C78E4-0x00000001896C78FC 
-		protected bool IsRightAlign { get => default; } // 0x00000001896C792C-0x00000001896C7944 
-		protected bool IsMiddleAlign { get => default; } // 0x00000001896C7914-0x00000001896C792C 
-		protected bool IsLowerAlign { get => default; } // 0x00000001896C78FC-0x00000001896C7914 
+		protected bool IsCenterAlign { get => default; } // 0x000000018B7EDA20-0x000000018B7EDA38 
+		protected bool IsRightAlign { get => default; } // 0x000000018B7EDA68-0x000000018B7EDA80 
+		protected bool IsMiddleAlign { get => default; } // 0x000000018B7EDA50-0x000000018B7EDA68 
+		protected bool IsLowerAlign { get => default; } // 0x000000018B7EDA38-0x000000018B7EDA50 
 	
 		// Constructors
-		public FlowLayoutGroup() {} // 0x00000001896C7864-0x00000001896C78E4
+		public FlowLayoutGroup() {} // 0x000000018B7ED9A0-0x000000018B7EDA20
 	
 		// Methods
-		public override void CalculateLayoutInputHorizontal() {} // 0x00000001896C6EC8-0x00000001896C6F4C
-		public override void SetLayoutHorizontal() {} // 0x00000001896C7384-0x00000001896C73D0
-		public override void SetLayoutVertical() {} // 0x00000001896C73D0-0x00000001896C741C
-		public override void CalculateLayoutInputVertical() {} // 0x00000001896C6F4C-0x00000001896C6FA0
-		public float SetLayout(float width, int axis, bool layoutInput) => default; // 0x00000001896C741C-0x00000001896C7864
-		private float CalculateRowVerticalOffset(float groupHeight, float yOffset, float currentRowHeight) => default; // 0x00000001896C6FA0-0x00000001896C7024
-		protected void LayoutRow(IList<RectTransform> contents, float rowWidth, float rowHeight, float maxWidth, float xOffset, float yOffset, int axis) {} // 0x00000001896C70B4-0x00000001896C7384
-		public float GetGreatestMinimumChildWidth() => default; // 0x00000001896C7024-0x00000001896C70B4
+		public override void CalculateLayoutInputHorizontal() {} // 0x000000018B7ED004-0x000000018B7ED088
+		public override void SetLayoutHorizontal() {} // 0x000000018B7ED4C0-0x000000018B7ED50C
+		public override void SetLayoutVertical() {} // 0x000000018B7ED50C-0x000000018B7ED558
+		public override void CalculateLayoutInputVertical() {} // 0x000000018B7ED088-0x000000018B7ED0DC
+		public float SetLayout(float width, int axis, bool layoutInput) => default; // 0x000000018B7ED558-0x000000018B7ED9A0
+		private float CalculateRowVerticalOffset(float groupHeight, float yOffset, float currentRowHeight) => default; // 0x000000018B7ED0DC-0x000000018B7ED160
+		protected void LayoutRow(IList<RectTransform> contents, float rowWidth, float rowHeight, float maxWidth, float xOffset, float yOffset, int axis) {} // 0x000000018B7ED1F0-0x000000018B7ED4C0
+		public float GetGreatestMinimumChildWidth() => default; // 0x000000018B7ED160-0x000000018B7ED1F0
 	}
 
-	public interface IVirtualView // TypeDefIndex: 58213
+	public interface IVirtualView // TypeDefIndex: 59361
 	{
 		// Methods
 		void SetDataContext(object data);
 	}
 
-	[AddComponentMenu("SRF/UI/Layout/VerticalLayoutGroup (Virtualizing)")]
-	public class VirtualVerticalLayoutGroup : LayoutGroup, IPointerClickHandler // TypeDefIndex: 58216
+	public class VirtualVerticalLayoutGroup : LayoutGroup, IPointerClickHandler // TypeDefIndex: 59364
 	{
 		// Fields
 		private readonly SRList<object> _itemList; // 0x58
@@ -1452,7 +1583,6 @@ namespace SRF.UI.Layout
 		private ScrollRect _scrollRect; // 0x78
 		private int _selectedIndex; // 0x80
 		private object _selectedItem; // 0x88
-		[SerializeField]
 		private SelectedItemChangedEvent _selectedItemChanged; // 0x90
 		private int _visibleItemCount; // 0x98
 		private SRList<Row> _visibleRows; // 0xA0
@@ -1467,24 +1597,24 @@ namespace SRF.UI.Layout
 		private float _itemHeight; // 0xE0
 	
 		// Properties
-		public SelectedItemChangedEvent SelectedItemChanged { get => default; set {} } // 0x0000000183D4EA90-0x0000000183D4EAA0 0x00000001851DFCB4-0x00000001851DFCC8
-		public object SelectedItem { get => default; set {} } // 0x0000000183D4EA60-0x0000000183D4EA70 0x00000001896D0C7C-0x00000001896D0DE0
-		public override float minHeight { get => default; } // 0x00000001896D0BB0-0x00000001896D0C7C 
-		private ScrollRect ScrollRect { get => default; } // 0x00000001896D0B2C-0x00000001896D0BB0 
-		private bool AlignBottom { get => default; } // 0x00000001896D09A0-0x00000001896D09B8 
-		private bool AlignTop { get => default; } // 0x00000001896D09B8-0x00000001896D09D0 
-		private float ItemHeight { get => default; } // 0x00000001896D09D0-0x00000001896D0B2C 
+		public SelectedItemChangedEvent SelectedItemChanged { get => default; set {} } // 0x0000000185FB0510-0x0000000185FB0520 0x000000018B7F6DB8-0x000000018B7F6F1C
+		public object SelectedItem { get => default; set {} } // 0x000000018B7F6CEC-0x000000018B7F6DB8 0x000000018B7F5CDC-0x000000018B7F5E4C
+		public override float minHeight { get => default; } // 0x000000018B7F5574-0x000000018B7F56DC 
+		private ScrollRect ScrollRect { get => default; } // 0x000000018B7F6AF4-0x000000018B7F6B0C 
+		private bool AlignBottom { get => default; } // 0x000000018B7F6B0C-0x000000018B7F6C68 
+		private bool AlignTop { get => default; } // 0x000000018B7F59D8-0x000000018B7F5B94 
+		private float ItemHeight { get => default; } // 0x000000018B7F6094-0x000000018B7F60E8 
 	
 		// Nested types
 		[Serializable]
-		public class SelectedItemChangedEvent : UnityEvent<object> // TypeDefIndex: 58214
+		public class SelectedItemChangedEvent : UnityEvent<object> // TypeDefIndex: 59362
 		{
 			// Constructors
-			public SelectedItemChangedEvent() {} // 0x00000001896CC14C-0x00000001896CC188
+			public SelectedItemChangedEvent() {} // 0x0000000181B5FFD0-0x0000000181B5FFE0
 		}
 	
 		[Serializable]
-		private class Row // TypeDefIndex: 58215
+		private class Row // TypeDefIndex: 59363
 		{
 			// Fields
 			public object Data; // 0x10
@@ -1494,32 +1624,32 @@ namespace SRF.UI.Layout
 			public IVirtualView View; // 0x30
 	
 			// Constructors
-			public Row() {} // 0x000000018350B670-0x000000018350B680
+			public Row() {} // 0x00000001873CBEA8-0x00000001873CBEBC
 		}
 	
 		// Constructors
-		public VirtualVerticalLayoutGroup() {} // 0x00000001896D0880-0x00000001896D09A0
+		public VirtualVerticalLayoutGroup() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public void OnPointerClick(PointerEventData eventData) {} // 0x00000001896CFBA0-0x00000001896CFD10
-		protected override void Awake() {} // 0x00000001896CF438-0x00000001896CF5A0
-		private void OnScrollRectValueChanged(Vector2 d) {} // 0x00000001896CFD10-0x00000001896CFD68
-		protected override void Start() {} // 0x00000001896D079C-0x00000001896D07A4
-		protected override void OnEnable() {} // 0x00000001896CFB80-0x00000001896CFBA0
-		protected void Update() {} // 0x00000001896D07A4-0x00000001896D0880
-		protected void InvalidateItem(int itemIndex) {} // 0x00000001896CFA58-0x00000001896CFB80
-		protected void RefreshIndexCache() {} // 0x00000001896CFFAC-0x00000001896D0080
-		protected void ScrollUpdate() {} // 0x00000001896D0130-0x00000001896D0480
-		public override void CalculateLayoutInputVertical() {} // 0x00000001896CF5A0-0x00000001896CF5E8
-		public override void SetLayoutHorizontal() {} // 0x00000001896D04AC-0x00000001896D0658
-		public override void SetLayoutVertical() {} // 0x00000001896D0658-0x00000001896D079C
-		private new void SetDirty() {} // 0x00000001896D0480-0x00000001896D04AC
-		public void AddItem(object item) {} // 0x00000001896CF378-0x00000001896CF438
-		public void RemoveItem(object item) {} // 0x00000001896D0080-0x00000001896D0130
-		public void ClearItems() {} // 0x00000001896CF5E8-0x00000001896CF69C
-		private Row GetRow(int forIndex) => default; // 0x00000001896CF89C-0x00000001896CFA58
-		private void RecycleRow(Row row) {} // 0x00000001896CFF58-0x00000001896CFFAC
-		private void PopulateRow(int index, Row row) {} // 0x00000001896CFD68-0x00000001896CFF58
-		private Row CreateRow() => default; // 0x00000001896CF69C-0x00000001896CF89C
+		public void OnPointerClick(PointerEventData eventData) {} // 0x000000018B7F5E4C-0x000000018B7F5EA4
+		protected override void Awake() {} // 0x000000018B7F68D8-0x000000018B7F68E0
+		private void OnScrollRectValueChanged(Vector2 d) {} // 0x000000018B7F5CBC-0x000000018B7F5CDC
+		protected override void Start() {} // 0x000000018B7F68E0-0x000000018B7F69BC
+		protected override void OnEnable() {} // 0x000000018B7F5B94-0x000000018B7F5CBC
+		protected void Update() {} // 0x000000018B7F60E8-0x000000018B7F61BC
+		protected void InvalidateItem(int itemIndex) {} // 0x000000018B7F626C-0x000000018B7F65BC
+		protected void RefreshIndexCache() {} // 0x000000018B7F56DC-0x000000018B7F5724
+		protected void ScrollUpdate() {} // 0x000000018B7F65E8-0x000000018B7F6794
+		public override void CalculateLayoutInputVertical() {} // 0x000000018B7F6794-0x000000018B7F68D8
+		public override void SetLayoutHorizontal() {} // 0x000000018B7F65BC-0x000000018B7F65E8
+		public override void SetLayoutVertical() {} // 0x000000018B7F54B4-0x000000018B7F5574
+		private new void SetDirty() {} // 0x000000018B7F61BC-0x000000018B7F626C
+		public void AddItem(object item) {} // 0x000000018B7F5724-0x000000018B7F57D8
+		public void RemoveItem(object item) {} // 0x000000018B7F6C68-0x000000018B7F6CEC
+		public void ClearItems() {} // 0x000000018B7F6ADC-0x000000018B7F6AF4
+		private Row GetRow(int forIndex) => default; // 0x000000018B7F5EA4-0x000000018B7F6094
+		private void RecycleRow(Row row) {} // 0x000000018B7F57D8-0x000000018B7F59D8
+		private void PopulateRow(int index, Row row) {} // 0x000000018B7F69BC-0x000000018B7F6ADC
+		private Row CreateRow() => default; // 0x000000018B7F2288-0x000000018B7F22C4
 	}
 }

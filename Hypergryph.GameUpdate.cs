@@ -3,39 +3,62 @@
  */
 
 using System;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using System.Threading;
 using UnityEngine;
 
-// Image 145: Hypergryph.GameUpdate.dll - Assembly: Hypergryph.GameUpdate, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60148-60156
+// Image 147: Hypergryph.GameUpdate.dll - Assembly: Hypergryph.GameUpdate, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61233-61241
 
 namespace Hypergryph.SDK
 {
-	public class HGGameUpdateCallback : MonoBehaviour // TypeDefIndex: 60151
+	public class HGGameUpdateCallback : MonoBehaviour // TypeDefIndex: 61236
 	{
 		// Fields
 		private static IHGGameUpdateSDKCallback m_callback; // 0x00
-		private const string gameObjectName = "(hggameupdate_callback)"; // Metadata: 0x01FDE123
+		private const string gameObjectName = "(hggameupdate_callback)"; // Metadata: 0x02083A28
 		private static SynchronizationContext mainThreadContext; // 0x08
 		public static HGGameUpdateCallback s_instance; // 0x10
 	
+		// Nested types
+		private sealed class __c__DisplayClass6_0 // TypeDefIndex: 61234
+		{
+			// Fields
+			public string data; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass6_0() {} // 0x000000018A980EB4-0x000000018A980F18
+	
+			// Methods
+			internal void _onLatestGame_b__0() {} // 0x000000018A980CF8-0x000000018A980EB4
+		}
+	
+		private sealed class __c__DisplayClass7_0 // TypeDefIndex: 61235
+		{
+			// Fields
+			public Action action; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass7_0() {} // 0x000000018A980F18-0x000000018A980FD0
+	
+			// Methods
+			internal void _runInMainTread_b__0(object p) {} // 0x000000018A980FD0-0x000000018A9810C8
+		}
+	
 		// Constructors
-		public HGGameUpdateCallback() {} // 0x000000018886D504-0x000000018886D568
+		public HGGameUpdateCallback() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public static void Init(IHGGameUpdateSDKCallback callback) {} // 0x000000018886D348-0x000000018886D504
-		public void onLatestGame(string data) {} // 0x000000018886D568-0x000000018886D620
-		private void runInMainTread(Action action) {} // 0x000000018886D620-0x000000018886D718
+		public static void Init(IHGGameUpdateSDKCallback callback) {} // 0x000000018A981EF4-0x000000018A981F44
+		public void onLatestGame(string data) {} // 0x0000000185492010-0x0000000185492020
+		private void runInMainTread(Action action) {} // 0x0000000188052F20-0x0000000188052F3C
 	}
 
-	public interface IHGGameUpdateSDKCallback // TypeDefIndex: 60152
+	public interface IHGGameUpdateSDKCallback // TypeDefIndex: 61237
 	{
 		// Methods
 		void onLatestGame(string data);
 	}
 
-	public interface IHGGameUpdateSDK // TypeDefIndex: 60153
+	public interface IHGGameUpdateSDK // TypeDefIndex: 61238
 	{
 		// Methods
 		int Init(string config);
@@ -54,7 +77,7 @@ namespace Hypergryph.SDK
 		int SetNotificationTitle(string titleConfig);
 	}
 
-	public static class HGGameUpdateSDK // TypeDefIndex: 60155
+	public static class HGGameUpdateSDK // TypeDefIndex: 61240
 	{
 		// Fields
 		private static IHGGameUpdateSDK s_gu; // 0x00
@@ -62,44 +85,60 @@ namespace Hypergryph.SDK
 		private static SynchronizationContext mainThreadContext; // 0x10
 	
 		// Properties
-		private static IHGGameUpdateSDK gameUpdateSDK { get; } // 0x000000018886E414-0x000000018886E4A8 
+		private static IHGGameUpdateSDK gameUpdateSDK { get; } // 0x000000018A981D30-0x000000018A981DC4 
+	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 61239
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Action<string> __9__6_0; // 0x08
+	
+			// Constructors
+			static __c() {} // 0x000000018A981DC4-0x000000018A981E58
+			public __c() {} // 0x000000018A981AB0-0x000000018A981BB0
+	
+			// Methods
+			internal void _GetLatestGame_b__6_0(string result) {} // 0x000000018A981870-0x000000018A9819B0
+		}
 	
 		// Methods
-		public static int Init(string config, IHGGameUpdateSDKCallback callback) => default; // 0x000000018886E100-0x000000018886E200
-		public static void GetLatestGame() {} // 0x000000018886DEC0-0x000000018886E000
-		public static long Update(int updateType, bool useMobileData) => default; // 0x000000018886E380-0x000000018886E414
-		public static int EnableMobileData(long taskId) => default; // 0x000000018886DCC0-0x000000018886DD40
-		public static int GetTaskState(long taskId) => default; // 0x000000018886E000-0x000000018886E080
-		public static int Resume(long taskId) => default; // 0x000000018886E280-0x000000018886E300
-		public static int CancelAndClear(long taskId) => default; // 0x000000018886DBC0-0x000000018886DC40
-		public static int Cancel(long taskId) => default; // 0x000000018886DC40-0x000000018886DCC0
-		public static int Install(long taskId) => default; // 0x000000018886E200-0x000000018886E280
-		public static long GetDownloadSpeed(long taskId) => default; // 0x000000018886DD40-0x000000018886DDC0
-		public static long GetDownloadedSize(long taskId) => default; // 0x000000018886DDC0-0x000000018886DE40
-		public static long GetTotalDownloadSize(long taskId) => default; // 0x000000018886E080-0x000000018886E100
-		public static long GetEstimatedDownloadSize(int updateType) => default; // 0x000000018886DE40-0x000000018886DEC0
-		public static int SetNotificationTitle(string titleConfig) => default; // 0x000000018886E300-0x000000018886E380
+		public static int Init(string config, IHGGameUpdateSDKCallback callback) => default; // 0x000000018A981670-0x000000018A9816F0
+		public static void GetLatestGame() {} // 0x000000018A9819B0-0x000000018A981A30
+		public static long Update(int updateType, bool useMobileData) => default; // 0x000000018A981C30-0x000000018A981CB0
+		public static int EnableMobileData(long taskId) => default; // 0x000000018A981570-0x000000018A9815F0
+		public static int GetTaskState(long taskId) => default; // 0x000000018A9815F0-0x000000018A981670
+		public static int Resume(long taskId) => default; // 0x000000018A981BB0-0x000000018A981C30
+		public static int CancelAndClear(long taskId) => default; // 0x000000018A9816F0-0x000000018A981770
+		public static int Cancel(long taskId) => default; // 0x000000018A981770-0x000000018A9817F0
+		public static int Install(long taskId) => default; // 0x000000018A981A30-0x000000018A981AB0
+		public static long GetDownloadSpeed(long taskId) => default; // 0x000000018A9817F0-0x000000018A981870
+		public static long GetDownloadedSize(long taskId) => default; // 0x000000018A981CB0-0x000000018A981D30
+		public static long GetTotalDownloadSize(long taskId) => default; // 0x000000018A981F44-0x000000018A981FF8
+		public static long GetEstimatedDownloadSize(int updateType) => default; // 0x0000000185492010-0x0000000185492020
+		public static int SetNotificationTitle(string titleConfig) => default; // 0x000000018A981E58-0x000000018A981EF4
 	}
 
-	public class HGGameUpdateSDKPluginDefault : IHGGameUpdateSDK // TypeDefIndex: 60156
+	public class HGGameUpdateSDKPluginDefault : IHGGameUpdateSDK // TypeDefIndex: 61241
 	{
 		// Constructors
-		public HGGameUpdateSDKPluginDefault() {} // 0x000000018350B670-0x000000018350B680
+		public HGGameUpdateSDKPluginDefault() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public int Init(string config) => default; // 0x000000018886DA28-0x000000018886DA78
-		public void GetLatestGame(Action<string> onResult) {} // 0x000000018886D8F8-0x000000018886D988
-		public long Update(int updateType, bool useMobileData) => default; // 0x000000018886DB68-0x000000018886DBC0
-		public int EnableMobileData(long taskId) => default; // 0x000000018886D7B8-0x000000018886D808
-		public int GetTaskState(long taskId) => default; // 0x000000018886D988-0x000000018886D9D8
-		public int Resume(long taskId) => default; // 0x000000018886DAC8-0x000000018886DB18
-		public int CancelAndClear(long taskId) => default; // 0x000000018886D718-0x000000018886D768
-		public int Cancel(long taskId) => default; // 0x000000018886D768-0x000000018886D7B8
-		public int Install(long taskId) => default; // 0x000000018886DA78-0x000000018886DAC8
-		public long GetDownloadSpeed(long taskId) => default; // 0x000000018886D808-0x000000018886D858
-		public long GetDownloadedSize(long taskId) => default; // 0x000000018886D858-0x000000018886D8A8
-		public long GetTotalDownloadSize(long taskId) => default; // 0x000000018886D9D8-0x000000018886DA28
-		public long GetEstimatedDownloadSize(int updateType) => default; // 0x000000018886D8A8-0x000000018886D8F8
-		public int SetNotificationTitle(string titleConfig) => default; // 0x000000018886DB18-0x000000018886DB68
+		public int Init(string config) => default; // 0x000000018A9813D8-0x000000018A981428
+		public void GetLatestGame(Action<string> onResult) {} // 0x000000018A9812A8-0x000000018A981338
+		public long Update(int updateType, bool useMobileData) => default; // 0x000000018A981518-0x000000018A981570
+		public int EnableMobileData(long taskId) => default; // 0x000000018A981168-0x000000018A9811B8
+		public int GetTaskState(long taskId) => default; // 0x000000018A981338-0x000000018A981388
+		public int Resume(long taskId) => default; // 0x000000018A981478-0x000000018A9814C8
+		public int CancelAndClear(long taskId) => default; // 0x000000018A9810C8-0x000000018A981118
+		public int Cancel(long taskId) => default; // 0x000000018A981118-0x000000018A981168
+		public int Install(long taskId) => default; // 0x000000018A981428-0x000000018A981478
+		public long GetDownloadSpeed(long taskId) => default; // 0x000000018A9811B8-0x000000018A981208
+		public long GetDownloadedSize(long taskId) => default; // 0x000000018A981208-0x000000018A981258
+		public long GetTotalDownloadSize(long taskId) => default; // 0x000000018A981388-0x000000018A9813D8
+		public long GetEstimatedDownloadSize(int updateType) => default; // 0x000000018A981258-0x000000018A9812A8
+		public int SetNotificationTitle(string titleConfig) => default; // 0x000000018A9814C8-0x000000018A981518
 	}
 }

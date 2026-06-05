@@ -4,10 +4,7 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using DG.Tweening;
 using DG.Tweening.Core;
 using DG.Tweening.Core.Enums;
@@ -17,26 +14,11 @@ using DG.Tweening.Plugins.Options;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Image 120: DOTweenPro.dll - Assembly: DOTweenPro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59961-59973
-[assembly: AssemblyCompany("Demigiant")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCopyright("Copyright \u00A9 Daniele Giardini, 2014")]
-[assembly: AssemblyDescription("Additional DOTween shorcuts that require Unity 4.3 or later")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: AssemblyProduct("DOTweenPro")]
-[assembly: AssemblyTitle("DOTweenPro")]
-[assembly: AssemblyTrademark("")]
-[assembly: CompilationRelaxations(8)]
-[assembly: ComVisible(false)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: Guid("807e068c-2a0e-4c81-a303-4b4fd3924511")]
-[assembly: InternalsVisibleTo("DOTweenProEditor")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 123: DOTweenPro.dll - Assembly: DOTweenPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61066-61078
 
 namespace DG.Tweening
 {
-	[AddComponentMenu("")]
-	public class DOTweenVisualManager : MonoBehaviour // TypeDefIndex: 59962
+	public class DOTweenVisualManager : MonoBehaviour // TypeDefIndex: 61067
 	{
 		// Fields
 		public VisualManagerPreset preset; // 0x18
@@ -46,28 +28,28 @@ namespace DG.Tweening
 		private ABSAnimationComponent _animComponent; // 0x28
 	
 		// Constructors
-		public DOTweenVisualManager() {} // 0x000000018426FE60-0x000000018426FE68
+		public DOTweenVisualManager() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		private void Awake() {} // 0x0000000185756338-0x0000000185756380
-		private void Update() {} // 0x00000001857565E0-0x000000018575665C
-		private void OnEnable() {} // 0x0000000185756528-0x00000001857565E0
-		private void OnDisable() {} // 0x0000000185756380-0x0000000185756528
+		private void Awake() {} // 0x0000000187908DD0-0x0000000187908E18
+		private void Update() {} // 0x0000000187909078-0x00000001879090F4
+		private void OnEnable() {} // 0x0000000187908FC0-0x0000000187909078
+		private void OnDisable() {} // 0x0000000187908E18-0x0000000187908FC0
 	}
 
-	public enum HandlesDrawMode // TypeDefIndex: 59963
+	public enum HandlesDrawMode // TypeDefIndex: 61068
 	{
 		Orthographic = 0,
 		Perspective = 1
 	}
 
-	public enum HandlesType // TypeDefIndex: 59964
+	public enum HandlesType // TypeDefIndex: 61069
 	{
 		Free = 0,
 		Full = 1
 	}
 
-	public enum DOTweenInspectorMode // TypeDefIndex: 59965
+	public enum DOTweenInspectorMode // TypeDefIndex: 61070
 	{
 		Default = 0,
 		InfoAndWaypointsOnly = 1,
@@ -75,10 +57,10 @@ namespace DG.Tweening
 		OnlyPath = 3
 	}
 
-	[AddComponentMenu("DOTween/DOTween Path")]
-	public class DOTweenPath : ABSAnimationComponent // TypeDefIndex: 59966
+	public class DOTweenPath : ABSAnimationComponent // TypeDefIndex: 61071
 	{
 		// Fields
+		private static Action<DOTweenPath> OnReset; // 0x00
 		public float delay; // 0x68
 		public float duration; // 0x6C
 		public Ease easeType; // 0x70
@@ -124,33 +106,34 @@ namespace DG.Tweening
 		public static event Action<DOTweenPath> OnReset;
 	
 		// Constructors
-		public DOTweenPath() {} // 0x0000000185755F84-0x0000000185756200
+		public DOTweenPath() {} // 0x0000000187908A1C-0x0000000187908C98
 	
 		// Methods
-		private static void Dispatch_OnReset(DOTweenPath path) {} // 0x00000001857558A8-0x00000001857558F8
-		private void Awake() {} // 0x0000000185754930-0x0000000185755670
-		private void Reset() {} // 0x0000000185755E58-0x0000000185755F70
-		private void OnDestroy() {} // 0x0000000185755B40-0x0000000185755B80
-		public override void DOPlay() {} // 0x00000001857557DC-0x0000000185755818
-		public void DOPlayById(string id) {} // 0x0000000185755770-0x00000001857557D0
-		public void DOPlayAllById(string id) {} // 0x0000000185755718-0x0000000185755764
-		public override void DOPlayBackwards() {} // 0x0000000185755764-0x0000000185755770
-		public override void DOPlayForward() {} // 0x00000001857557D0-0x00000001857557DC
-		public override void DOPause() {} // 0x00000001857556DC-0x0000000185755718
-		public override void DOTogglePause() {} // 0x000000018575589C-0x00000001857558A8
-		public override void DORewind() {} // 0x000000018575588C-0x000000018575589C
-		public override void DORestart() {} // 0x0000000185755818-0x0000000185755828
-		public override void DORestart(bool fromHere) {} // 0x0000000185755828-0x000000018575588C
-		public override void DOComplete() {} // 0x0000000185755670-0x0000000185755680
-		public override void DOKill() {} // 0x00000001857556CC-0x00000001857556DC
-		public void DOKillAllById(string id) {} // 0x0000000185755680-0x00000001857556CC
-		public DG.Tweening.Tween GetTween() => default; // 0x0000000185755AF8-0x0000000185755B40
-		public Vector3[] GetDrawPoints() => default; // 0x00000001857558F8-0x0000000185755974
-		internal Vector3[] GetFullWps() => default; // 0x0000000185755974-0x0000000185755AF8
-		private void ReEvaluateRelativeTween() {} // 0x0000000185755B80-0x0000000185755E58
+		private static void Dispatch_OnReset(DOTweenPath path) {} // 0x0000000187908340-0x0000000187908390
+		private void Awake() {} // 0x00000001879073C8-0x0000000187908108
+		private void Reset() {} // 0x00000001879088F0-0x0000000187908A08
+		private void OnDestroy() {} // 0x00000001879085D8-0x0000000187908618
+		public override void DOPlay() {} // 0x0000000187908274-0x00000001879082B0
+		public void DOPlayById(string id) {} // 0x0000000187908208-0x0000000187908268
+		public void DOPlayAllById(string id) {} // 0x00000001879081B0-0x00000001879081FC
+		public override void DOPlayBackwards() {} // 0x00000001879081FC-0x0000000187908208
+		public override void DOPlayForward() {} // 0x0000000187908268-0x0000000187908274
+		public override void DOPause() {} // 0x0000000187908174-0x00000001879081B0
+		public override void DOTogglePause() {} // 0x0000000187908334-0x0000000187908340
+		public override void DORewind() {} // 0x0000000187908324-0x0000000187908334
+		public override void DORestart() {} // 0x00000001879082B0-0x00000001879082C0
+		public override void DORestart(bool fromHere) {} // 0x00000001879082C0-0x0000000187908324
+		public override void DOComplete() {} // 0x0000000187908108-0x0000000187908118
+		public override void DOKill() {} // 0x0000000187908164-0x0000000187908174
+		public void DOKillAllById(string id) {} // 0x0000000187908118-0x0000000187908164
+		public DG.Tweening.Tween GetTween() => default; // 0x0000000187908590-0x00000001879085D8
+		public Vector3[] GetDrawPoints() => default; // 0x0000000187908390-0x000000018790840C
+		internal Vector3[] GetFullWps() => default; // 0x000000018790840C-0x0000000187908590
+		private void ReEvaluateRelativeTween() {} // 0x0000000187908618-0x00000001879088F0
+		private void _Awake_b__44_0() {} // 0x0000000187908A08-0x0000000187908A1C
 	}
 
-	public enum SpiralMode // TypeDefIndex: 59967
+	public enum SpiralMode // TypeDefIndex: 61072
 	{
 		Expand = 0,
 		ExpandThenContract = 1
@@ -159,8 +142,7 @@ namespace DG.Tweening
 
 namespace DG.Tweening.Core
 {
-	[AddComponentMenu("")]
-	public abstract class ABSAnimationComponent : MonoBehaviour // TypeDefIndex: 59970
+	public abstract class ABSAnimationComponent : MonoBehaviour // TypeDefIndex: 61075
 	{
 		// Fields
 		public DG.Tweening.UpdateType updateType; // 0x18
@@ -183,7 +165,7 @@ namespace DG.Tweening.Core
 		public DG.Tweening.Tween tween; // 0x60
 	
 		// Constructors
-		protected ABSAnimationComponent() {} // 0x000000018426FE60-0x000000018426FE68
+		protected ABSAnimationComponent() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
 		public abstract void DOPlay();
@@ -198,7 +180,7 @@ namespace DG.Tweening.Core
 		public abstract void DOKill();
 	}
 
-	public enum OnDisableBehaviour // TypeDefIndex: 59971
+	public enum OnDisableBehaviour // TypeDefIndex: 61076
 	{
 		None = 0,
 		Pause = 1,
@@ -208,7 +190,7 @@ namespace DG.Tweening.Core
 		DestroyGameObject = 5
 	}
 
-	public enum OnEnableBehaviour // TypeDefIndex: 59972
+	public enum OnEnableBehaviour // TypeDefIndex: 61077
 	{
 		None = 0,
 		Play = 1,
@@ -216,7 +198,7 @@ namespace DG.Tweening.Core
 		RestartFromSpawnPoint = 3
 	}
 
-	public enum VisualManagerPreset // TypeDefIndex: 59973
+	public enum VisualManagerPreset // TypeDefIndex: 61078
 	{
 		Custom = 0,
 		PoolingSystem = 1
@@ -225,7 +207,7 @@ namespace DG.Tweening.Core
 
 namespace DG.Tweening.Plugins
 {
-	public struct SpiralOptions : IPlugOptions // TypeDefIndex: 59968
+	public struct SpiralOptions : IPlugOptions // TypeDefIndex: 61073
 	{
 		// Fields
 		public float depth; // 0x00
@@ -237,27 +219,27 @@ namespace DG.Tweening.Plugins
 		internal Quaternion axisQ; // 0x18
 	
 		// Methods
-		public void Reset() {} // 0x0000000183D55590-0x0000000183D555A0
+		public void Reset() {} // 0x0000000185FB6870-0x0000000185FB6880
 	}
 
-	public class SpiralPlugin : ABSTweenPlugin<Vector3, Vector3, SpiralOptions> // TypeDefIndex: 59969
+	public class SpiralPlugin : ABSTweenPlugin<Vector3, Vector3, SpiralOptions> // TypeDefIndex: 61074
 	{
 		// Fields
 		public static readonly Vector3 DefaultDirection; // 0x00
 	
 		// Constructors
-		public SpiralPlugin() {} // 0x0000000185756AB4-0x0000000185756ADC
-		static SpiralPlugin() {} // 0x0000000185756A64-0x0000000185756AB4
+		public SpiralPlugin() {} // 0x000000018790954C-0x0000000187909574
+		static SpiralPlugin() {} // 0x00000001879094FC-0x000000018790954C
 	
 		// Methods
-		public override void Reset(TweenerCore<Vector3, Vector3, SpiralOptions> t) {} // 0x000000018350B670-0x000000018350B680
-		public override void SetFrom(TweenerCore<Vector3, Vector3, SpiralOptions> t, bool isRelative) {} // 0x000000018350B670-0x000000018350B680
-		public override void SetFrom(TweenerCore<Vector3, Vector3, SpiralOptions> t, Vector3 fromValue, bool setImmediately, bool isRelative) {} // 0x000000018350B670-0x000000018350B680
-		public static ABSTweenPlugin<Vector3, Vector3, SpiralOptions> Get() => default; // 0x00000001857569A4-0x00000001857569D4
-		public override Vector3 ConvertToStartValue(TweenerCore<Vector3, Vector3, SpiralOptions> t, Vector3 value) => default; // 0x0000000183D555A0-0x0000000183D555C0
-		public override void SetRelativeEndValue(TweenerCore<Vector3, Vector3, SpiralOptions> t) {} // 0x000000018350B670-0x000000018350B680
-		public override void SetChangeValue(TweenerCore<Vector3, Vector3, SpiralOptions> t) {} // 0x00000001857569D4-0x0000000185756A64
-		public override float GetSpeedBasedDuration(SpiralOptions options, float unitsXSecond, Vector3 changeValue) => default; // 0x0000000183D555C0-0x0000000183D555D0
-		public override void EvaluateAndApply(SpiralOptions options, DG.Tweening.Tween t, bool isRelative, DOGetter<Vector3> getter, DOSetter<Vector3> setter, float elapsed, Vector3 startValue, Vector3 changeValue, float duration, bool usingInversePosition, int newCompletedSteps, UpdateNotice updateNotice) {} // 0x000000018575665C-0x00000001857569A4
+		public override void Reset(TweenerCore<Vector3, Vector3, SpiralOptions> t) {} // 0x0000000185492010-0x0000000185492020
+		public override void SetFrom(TweenerCore<Vector3, Vector3, SpiralOptions> t, bool isRelative) {} // 0x0000000185492010-0x0000000185492020
+		public override void SetFrom(TweenerCore<Vector3, Vector3, SpiralOptions> t, Vector3 fromValue, bool setImmediately, bool isRelative) {} // 0x0000000185492010-0x0000000185492020
+		public static ABSTweenPlugin<Vector3, Vector3, SpiralOptions> Get() => default; // 0x000000018790943C-0x000000018790946C
+		public override Vector3 ConvertToStartValue(TweenerCore<Vector3, Vector3, SpiralOptions> t, Vector3 value) => default; // 0x0000000185FB6880-0x0000000185FB68A0
+		public override void SetRelativeEndValue(TweenerCore<Vector3, Vector3, SpiralOptions> t) {} // 0x0000000185492010-0x0000000185492020
+		public override void SetChangeValue(TweenerCore<Vector3, Vector3, SpiralOptions> t) {} // 0x000000018790946C-0x00000001879094FC
+		public override float GetSpeedBasedDuration(SpiralOptions options, float unitsXSecond, Vector3 changeValue) => default; // 0x0000000185FB68A0-0x0000000185FB68B0
+		public override void EvaluateAndApply(SpiralOptions options, DG.Tweening.Tween t, bool isRelative, DOGetter<Vector3> getter, DOSetter<Vector3> setter, float elapsed, Vector3 startValue, Vector3 changeValue, float duration, bool usingInversePosition, int newCompletedSteps, UpdateNotice updateNotice) {} // 0x00000001879090F4-0x000000018790943C
 	}
 }

@@ -4,38 +4,18 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using JetBrains.Annotations;
 
-// Image 72: Sirenix.OdinInspector.Attributes.dll - Assembly: Sirenix.OdinInspector.Attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null - Types 58714-58726
-[assembly: AssemblyCompany("Sirenix ApS")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCopyright("Copyright \u00A9 2022")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: AssemblyProduct("Sirenix.OdinInspector.Attributes")]
-[assembly: AssemblyTitle("Sirenix.OdinInspector.Attributes")]
-[assembly: AssemblyTrademark("")]
-[assembly: CLSCompliant(false)]
-[assembly: CompilationRelaxations(8)]
-[assembly: ComVisible(false)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: Guid("981796DA-69ED-42C4-A027-06D576786973")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 72: Sirenix.OdinInspector.Attributes.dll - Assembly: Sirenix.OdinInspector.Attributes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59739-59751
 
 namespace Sirenix.OdinInspector
 {
-	[AttributeUsage(AttributeTargets.Class)]
-	public sealed class DontApplyToListElementsAttribute : Attribute // TypeDefIndex: 58715
+	public sealed class DontApplyToListElementsAttribute : Attribute // TypeDefIndex: 59740
 	{
 		// Constructors
-		public DontApplyToListElementsAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public DontApplyToListElementsAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public sealed class RequiredListLengthAttribute : Attribute // TypeDefIndex: 58716
+	public sealed class RequiredListLengthAttribute : Attribute // TypeDefIndex: 59741
 	{
 		// Fields
 		private int minLength; // 0x10
@@ -45,25 +25,22 @@ namespace Sirenix.OdinInspector
 		public string MinLengthGetter; // 0x20
 	
 		// Properties
-		public int MinLength { set {} } // 0x0000000183D74EB0-0x0000000183D74EC0
-		public int MaxLength { set {} } // 0x0000000183D74EA0-0x0000000183D74EB0
+		public int MinLength { set {} } // 0x0000000185FD5B10-0x0000000185FD5B20
+		public int MaxLength { set {} } // 0x0000000185FD5B00-0x0000000185FD5B10
 	
 		// Constructors
 		public RequiredListLengthAttribute() {} // Dummy constructor
-		public RequiredListLengthAttribute(int minLength, int maxLength) {} // 0x0000000183D74E90-0x0000000183D74EA0
-		public RequiredListLengthAttribute(string minLengthGetter, int maxLength) {} // 0x0000000189667104-0x000000018966712C
+		public RequiredListLengthAttribute(int minLength, int maxLength) {} // 0x0000000185FD5AF0-0x0000000185FD5B00
+		public RequiredListLengthAttribute(string minLengthGetter, int maxLength) {} // 0x000000018B78D220-0x000000018B78D248
 	}
 
-	[AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Module | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Parameter | AttributeTargets.Delegate | AttributeTargets.ReturnValue | AttributeTargets.GenericParameter | AttributeTargets.All, AllowMultiple = false, Inherited = false)]
-	[Conditional("UNITY_EDITOR")]
-	[MeansImplicitUse]
-	public class ShowInInspectorAttribute : Attribute // TypeDefIndex: 58717
+	public class ShowInInspectorAttribute : Attribute // TypeDefIndex: 59742
 	{
 		// Constructors
-		public ShowInInspectorAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public ShowInInspectorAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class UnitAttribute : Attribute // TypeDefIndex: 58718
+	public class UnitAttribute : Attribute // TypeDefIndex: 59743
 	{
 		// Fields
 		public Units Base; // 0x10
@@ -71,11 +48,11 @@ namespace Sirenix.OdinInspector
 	
 		// Constructors
 		public UnitAttribute() {} // Dummy constructor
-		public UnitAttribute(Units unit) {} // 0x00000001833DA310-0x00000001833DA320
-		public UnitAttribute(Units @base, Units display) {} // 0x0000000183D50CB0-0x0000000183D50CC0
+		public UnitAttribute(Units unit) {} // 0x000000018515F1F0-0x000000018515F200
+		public UnitAttribute(Units @base, Units display) {} // 0x0000000185FB2190-0x0000000185FB21A0
 	}
 
-	public enum Units // TypeDefIndex: 58719
+	public enum Units // TypeDefIndex: 59744
 	{
 		Unset = -1,
 		Nanometer = 0,
@@ -308,7 +285,7 @@ namespace Sirenix.OdinInspector
 		Permyriad = 227
 	}
 
-	public class ValueDropdownList<T> : List<Sirenix.OdinInspector.ValueDropdownItem<T>> // TypeDefIndex: 58720
+	public class ValueDropdownList<T> : List<Sirenix.OdinInspector.ValueDropdownItem<T>> // TypeDefIndex: 59745
 	{
 		// Constructors
 		public ValueDropdownList() {}
@@ -318,17 +295,17 @@ namespace Sirenix.OdinInspector
 		public void Add(T value) {}
 	}
 
-	public struct ValueDropdownItem // TypeDefIndex: 58721
+	public struct ValueDropdownItem // TypeDefIndex: 59746
 	{
 		// Fields
 		public string Text; // 0x00
 		public object Value; // 0x08
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018966712C-0x000000018966717C
+		public override string ToString() => default; // 0x000000018B78D248-0x000000018B78D298
 	}
 
-	public struct ValueDropdownItem<T> // TypeDefIndex: 58722
+	public struct ValueDropdownItem<T> // TypeDefIndex: 59747
 	{
 		// Fields
 		public string Text;
@@ -344,7 +321,7 @@ namespace Sirenix.OdinInspector
 		public override string ToString() => default;
 	}
 
-	public enum IconAlignment // TypeDefIndex: 58723
+	public enum IconAlignment // TypeDefIndex: 59748
 	{
 		LeftOfText = 0,
 		RightOfText = 1,
@@ -352,18 +329,17 @@ namespace Sirenix.OdinInspector
 		RightEdge = 3
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	public class IncludeMyAttributesAttribute : Attribute // TypeDefIndex: 58724
+	public class IncludeMyAttributesAttribute : Attribute // TypeDefIndex: 59749
 	{
 		// Constructors
-		public IncludeMyAttributesAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public IncludeMyAttributesAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public interface ISearchFilterable // TypeDefIndex: 58725
+	public interface ISearchFilterable // TypeDefIndex: 59750
 	{
 	}
 
-	public enum SdfIconType // TypeDefIndex: 58726
+	public enum SdfIconType // TypeDefIndex: 59751
 	{
 		None = 0,
 		AlarmFill = 1,

@@ -4,19 +4,13 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using USD.NET.Unity;
 
-// Image 147: Unity.Formats.USD.Common.dll - Assembly: Unity.Formats.USD.Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60163-60172
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 149: Unity.Formats.USD.Common.dll - Assembly: Unity.Formats.USD.Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61248-61257
 
 namespace Unity.Formats.USD
 {
-	[AttributeUsage(AttributeTargets.Struct)]
-	public static class InitUsd // TypeDefIndex: 60164
+	public static class InitUsd // TypeDefIndex: 61249
 	{
 		// Fields
 		private static bool m_usdInitialized; // 0x00
@@ -24,11 +18,11 @@ namespace Unity.Formats.USD
 		private static DiagnosticHandler m_handler; // 0x08
 	
 		// Methods
-		public static bool Initialize() => default; // 0x0000000189B68EC0-0x0000000189B69160
-		private static void SetupUsdPath(string sourceFilePath = "" /* Metadata: 0x01FDE14B */) {} // 0x0000000189B69160-0x0000000189B69298
+		public static bool Initialize() => default; // 0x000000018BC82734-0x000000018BC829D4
+		private static void SetupUsdPath(string sourceFilePath = "" /* Metadata: 0x02083A50 */) {} // 0x000000018BC829D4-0x000000018BC82B0C
 	}
 
-	public enum ImportType // TypeDefIndex: 60165
+	public enum ImportType // TypeDefIndex: 61250
 	{
 		Initial = 0,
 		ForceRebuild = 1,
@@ -36,31 +30,28 @@ namespace Unity.Formats.USD
 		Streaming = 3
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	public static class UsdEditorAnalytics // TypeDefIndex: 60172
+	public static class UsdEditorAnalytics // TypeDefIndex: 61257
 	{
 		// Fields
-		private const int k_MaxEventsPerHour = 1000; // Metadata: 0x01FDE153
-		private const int k_MaxNumberOfElements = 100; // Metadata: 0x01FDE155
-		private const string k_VendorKey = "unity.formats.usd"; // Metadata: 0x01FDE157
-		private const string k_UsageEventName = "USDPackageUsage"; // Metadata: 0x01FDE169
-		private const string k_ImportEventName = "USDFileImport"; // Metadata: 0x01FDE179
-		private const string k_ReimportEventName = "USDFileReimport"; // Metadata: 0x01FDE187
-		private const string k_ExportEventName = "USDFileExport"; // Metadata: 0x01FDE197
-		private const string k_RecorderExportEventName = "USDFileRecorderExport"; // Metadata: 0x01FDE1A5
+		private const int k_MaxEventsPerHour = 1000; // Metadata: 0x02083A58
+		private const int k_MaxNumberOfElements = 100; // Metadata: 0x02083A5A
+		private const string k_VendorKey = "unity.formats.usd"; // Metadata: 0x02083A5C
+		private const string k_UsageEventName = "USDPackageUsage"; // Metadata: 0x02083A6E
+		private const string k_ImportEventName = "USDFileImport"; // Metadata: 0x02083A7E
+		private const string k_ReimportEventName = "USDFileReimport"; // Metadata: 0x02083A8C
+		private const string k_ExportEventName = "USDFileExport"; // Metadata: 0x02083A9C
+		private const string k_RecorderExportEventName = "USDFileRecorderExport"; // Metadata: 0x02083AAA
 		public static Dictionary<string, bool> sUsdEditorAnalyticsEvents; // 0x00
 	
 		// Nested types
-		[AttributeUsage(AttributeTargets.Struct)]
-		private struct UsageAnalyticsData // TypeDefIndex: 60166
+		private struct UsageAnalyticsData // TypeDefIndex: 61251
 		{
 			// Fields
 			public bool InitSucceeded; // 0x00
 			public double TimeTakenMs; // 0x08
 		}
 	
-		[AttributeUsage(AttributeTargets.Class)]
-		private struct ImportAnalyticsData // TypeDefIndex: 60167
+		private struct ImportAnalyticsData // TypeDefIndex: 61252
 		{
 			// Fields
 			public string FileExtension; // 0x00
@@ -72,8 +63,7 @@ namespace Unity.Formats.USD
 			public bool IncludesSkel; // 0x14
 		}
 	
-		[AttributeUsage(AttributeTargets.Struct)]
-		public struct ImportResult // TypeDefIndex: 60168
+		public struct ImportResult // TypeDefIndex: 61253
 		{
 			// Fields
 			public bool Success; // 0x00
@@ -84,10 +74,10 @@ namespace Unity.Formats.USD
 			public bool ContainsMaterials; // 0x0B
 	
 			// Properties
-			public static ImportResult Default { get => default; } // 0x0000000183D4E630-0x0000000183D4E640 
+			public static ImportResult Default { get => default; } // 0x00000001814A81B0-0x00000001814A81C0 
 		}
 	
-		private struct ReimportAnalyticsData // TypeDefIndex: 60169
+		private struct ReimportAnalyticsData // TypeDefIndex: 61254
 		{
 			// Fields
 			public string FileExtension; // 0x00
@@ -100,7 +90,7 @@ namespace Unity.Formats.USD
 			public bool IncludesSkel; // 0x15
 		}
 	
-		private struct ExportAnalyticsData // TypeDefIndex: 60170
+		private struct ExportAnalyticsData // TypeDefIndex: 61255
 		{
 			// Fields
 			public string FileExtension; // 0x00
@@ -109,7 +99,7 @@ namespace Unity.Formats.USD
 			public bool OnlyOverrides; // 0x11
 		}
 	
-		private struct RecorderExportAnalyticsData // TypeDefIndex: 60171
+		private struct RecorderExportAnalyticsData // TypeDefIndex: 61256
 		{
 			// Fields
 			public string FileExtension; // 0x00
@@ -120,14 +110,14 @@ namespace Unity.Formats.USD
 		}
 	
 		// Constructors
-		static UsdEditorAnalytics() {} // 0x0000000189B69298-0x0000000189B693EC
+		static UsdEditorAnalytics() {} // 0x0000000185FB0190-0x0000000185FB01A0
 	
 		// Methods
-		private static bool RegisterAnalytics(string eventName) => default; // 0x000000018115F4C0-0x000000018115F530
-		public static void SendUsageEvent(bool success, double timeTakenMs) {} // 0x000000018350B670-0x000000018350B680
-		public static void SendImportEvent(string fileExtension, double timeTakenMs, ImportResult importResult) {} // 0x000000018350B670-0x000000018350B680
-		public static void SendReimportEvent(string fileExtension, double timeTakenMs, ImportResult importResult) {} // 0x000000018350B670-0x000000018350B680
-		public static void SendExportEvent(string fileExtension, double timeTakenMs, bool exportSucceeded, bool onlyOverrides = false /* Metadata: 0x01FDE150 */) {} // 0x000000018350B670-0x000000018350B680
-		public static void SendRecorderExportEvent(string fileExtension, double timeTakenMs, bool exportSucceeded, bool onlyOverrides = false /* Metadata: 0x01FDE151 */, int frameCount = 0 /* Metadata: 0x01FDE152 */) {} // 0x000000018350B670-0x000000018350B680
+		private static bool RegisterAnalytics(string eventName) => default; // 0x0000000185492010-0x0000000185492020
+		public static void SendUsageEvent(bool success, double timeTakenMs) {} // 0x0000000185492010-0x0000000185492020
+		public static void SendImportEvent(string fileExtension, double timeTakenMs, ImportResult importResult) {} // 0x0000000185492010-0x0000000185492020
+		public static void SendReimportEvent(string fileExtension, double timeTakenMs, ImportResult importResult) {} // 0x0000000185492010-0x0000000185492020
+		public static void SendExportEvent(string fileExtension, double timeTakenMs, bool exportSucceeded, bool onlyOverrides = false /* Metadata: 0x02083A55 */) {} // 0x0000000185492010-0x0000000185492020
+		public static void SendRecorderExportEvent(string fileExtension, double timeTakenMs, bool exportSucceeded, bool onlyOverrides = false /* Metadata: 0x02083A56 */, int frameCount = 0 /* Metadata: 0x02083A57 */) {} // 0x000000018BC82B0C-0x000000018BC82C60
 	}
 }

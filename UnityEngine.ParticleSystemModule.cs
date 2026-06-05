@@ -4,413 +4,221 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using Unity.Collections;
 using Unity.Jobs;
 using Unity.Jobs.LowLevel.Unsafe;
-using UnityEngine;
-using UnityEngine.Bindings;
 using UnityEngine.ParticleSystemJobs;
-using UnityEngine.Scripting;
 
-// Image 73: UnityEngine.ParticleSystemModule.dll - Assembly: UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 58727-58791
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
-[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
-[assembly: InternalsVisibleTo("UnityEngine")]
-[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
-[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
-[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
-[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Networking")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
-[assembly: InternalsVisibleTo("Unity.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
-[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
-[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
-[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
-[assembly: InternalsVisibleTo("Unity.Automation")]
-[assembly: InternalsVisibleTo("Unity.Burst")]
-[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
-[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
-[assembly: InternalsVisibleTo("UnityEngine.UI")]
-[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
-[assembly: InternalsVisibleTo("Unity.Timeline")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
-[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
-[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
-[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
-[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
-[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
-[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
-[assembly: InternalsVisibleTo("Unity.Logging")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("Unity.Collections")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.Core")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
-[assembly: InternalsVisibleTo("Unity.Services.QoS")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
-[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: UnityEngineModuleAssembly]
+// Image 73: UnityEngine.ParticleSystemModule.dll - Assembly: UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59752-59816
 
 namespace UnityEngine
 {
-	[NativeHeader("Modules/ParticleSystem/ParticleSystem.h")]
-	[NativeHeader("ParticleSystemScriptingClasses.h")]
-	[NativeHeader("Modules/ParticleSystem/ScriptBindings/ParticleSystemModulesScriptBindings.h")]
-	[NativeHeader("ParticleSystemScriptingClasses.h")]
-	[NativeHeader("Modules/ParticleSystem/ParticleSystem.h")]
-	[NativeHeader("Modules/ParticleSystem/ScriptBindings/ParticleSystemScriptBindings.h")]
-	[NativeHeader("Modules/ParticleSystem/ScriptBindings/ParticleSystemScriptBindings.h")]
-	[NativeHeader("Modules/ParticleSystem/ParticleSystemGeometryJob.h")]
-	[RequireComponent(typeof(Transform))]
-	[UsedByNativeCode]
-	public sealed class ParticleSystem : Component // TypeDefIndex: 58767
+	public sealed class ParticleSystem : Component // TypeDefIndex: 59792
 	{
 		// Properties
-		[Obsolete("startDelay property is deprecated. Use main.startDelay or main.startDelayMultiplier instead.", false)]
-		public float startDelay { get => default; set {} } // 0x0000000189E18FE0-0x0000000189E19010 0x0000000189E194A0-0x0000000189E194D0
-		[Obsolete("loop property is deprecated. Use main.loop instead.", false)]
-		public bool loop { get => default; set {} } // 0x0000000189E18DBC-0x0000000189E18DEC 0x0000000189E1929C-0x0000000189E192D4
-		[Obsolete("playOnAwake property is deprecated. Use main.playOnAwake instead.", false)]
-		public bool playOnAwake { get => default; set {} } // 0x0000000189E18E50-0x0000000189E18E80 0x0000000189E1930C-0x0000000189E19344
-		[Obsolete("duration property is deprecated. Use main.duration instead.", false)]
-		public float duration { get => default; } // 0x0000000189E18C2C-0x0000000189E18C5C 
-		[Obsolete("playbackSpeed property is deprecated. Use main.simulationSpeed instead.", false)]
-		public float playbackSpeed { get => default; set {} } // 0x0000000189E18E80-0x0000000189E18EB0 0x0000000189E19344-0x0000000189E19374
-		[Obsolete("enableEmission property is deprecated. Use emission.enabled instead.", false)]
-		public bool enableEmission { get => default; set {} } // 0x0000000189E18C8C-0x0000000189E18CBC 0x0000000189E19234-0x0000000189E1926C
-		[Obsolete("emissionRate property is deprecated. Use emission.rateOverTime, emission.rateOverDistance, emission.rateOverTimeMultiplier or emission.rateOverDistanceMultiplier instead.", false)]
-		public float emissionRate { get => default; set {} } // 0x0000000189E18C5C-0x0000000189E18C8C 0x0000000189E191D8-0x0000000189E19234
-		[Obsolete("startSpeed property is deprecated. Use main.startSpeed or main.startSpeedMultiplier instead.", false)]
-		public float startSpeed { get => default; set {} } // 0x0000000189E19140-0x0000000189E19170 0x0000000189E195B0-0x0000000189E195E0
-		[Obsolete("startSize property is deprecated. Use main.startSize or main.startSizeMultiplier instead.", false)]
-		public float startSize { get => default; set {} } // 0x0000000189E19110-0x0000000189E19140 0x0000000189E19580-0x0000000189E195B0
-		[Obsolete("startColor property is deprecated. Use main.startColor instead.", false)]
-		public UnityEngine.Color startColor { get => default; set {} } // 0x0000000189E18F78-0x0000000189E18FE0 0x0000000189E19424-0x0000000189E194A0
-		[Obsolete("startRotation property is deprecated. Use main.startRotation or main.startRotationMultiplier instead.", false)]
-		public float startRotation { get => default; set {} } // 0x0000000189E190E0-0x0000000189E19110 0x0000000189E19550-0x0000000189E19580
-		[Obsolete("startRotation3D property is deprecated. Use main.startRotationX, main.startRotationY and main.startRotationZ instead. (Or main.startRotationXMultiplier, main.startRotationYMultiplier and main.startRotationZMultiplier).", false)]
-		public Vector3 startRotation3D { get => default; set {} } // 0x0000000189E19040-0x0000000189E190E0 0x0000000189E19500-0x0000000189E19550
-		[Obsolete("startLifetime property is deprecated. Use main.startLifetime or main.startLifetimeMultiplier instead.", false)]
-		public float startLifetime { get => default; set {} } // 0x0000000189E19010-0x0000000189E19040 0x0000000189E194D0-0x0000000189E19500
-		[Obsolete("gravityModifier property is deprecated. Use main.gravityModifier or main.gravityModifierMultiplier instead.", false)]
-		public float gravityModifier { get => default; set {} } // 0x0000000189E18CBC-0x0000000189E18CEC 0x0000000189E1926C-0x0000000189E1929C
-		[Obsolete("maxParticles property is deprecated. Use main.maxParticles instead.", false)]
-		public int maxParticles { get => default; set {} } // 0x0000000189E18DEC-0x0000000189E18E1C 0x0000000189E192D4-0x0000000189E1930C
-		[Obsolete("simulationSpace property is deprecated. Use main.simulationSpace instead.", false)]
-		public ParticleSystemSimulationSpace simulationSpace { get => default; set {} } // 0x0000000189E18F48-0x0000000189E18F78 0x0000000189E193EC-0x0000000189E19424
-		[Obsolete("scalingMode property is deprecated. Use main.scalingMode instead.", false)]
-		public ParticleSystemScalingMode scalingMode { get => default; set {} } // 0x0000000189E18F18-0x0000000189E18F48 0x0000000189E193B4-0x0000000189E193EC
-		[Obsolete("automaticCullingEnabled property is deprecated. Use proceduralSimulationSupported instead (UnityUpgradable) -> proceduralSimulationSupported", true)]
-		public bool automaticCullingEnabled { get => default; } // 0x0000000189E18C20-0x0000000189E18C2C 
-		public bool isPlaying { [NativeName("SyncJobs(false)->IsPlaying")] get => default; } // 0x0000000189E18D54-0x0000000189E18D88 
-		public bool isEmitting { [NativeName("SyncJobs(false)->IsEmitting")] get => default; } // 0x0000000189E18CEC-0x0000000189E18D20 
-		public bool isStopped { [NativeName("SyncJobs(false)->IsStopped")] get => default; } // 0x0000000189E18D88-0x0000000189E18DBC 
-		public bool isPaused { [NativeName("SyncJobs(false)->IsPaused")] get => default; } // 0x0000000189E18D20-0x0000000189E18D54 
-		public int particleCount { [NativeName("SyncJobs(false)->GetParticleCount")] get => default; } // 0x0000000189E18E1C-0x0000000189E18E50 
-		public float time { [NativeName("SyncJobs(false)->GetSecPosition")] get => default; [NativeName("SyncJobs(false)->SetSecPosition")] set {} } // 0x0000000189E19170-0x0000000189E191A4 0x0000000189E195E0-0x0000000189E19624
-		public uint randomSeed { [NativeName("GetRandomSeed")] get => default; [NativeName("SyncJobs(false)->SetRandomSeed")] set {} } // 0x0000000189E18EE4-0x0000000189E18F18 0x0000000189E19374-0x0000000189E193B4
-		public bool useAutoRandomSeed { [NativeName("GetAutoRandomSeed")] get => default; [NativeName("SyncJobs(false)->SetAutoRandomSeed")] set {} } // 0x0000000189E191A4-0x0000000189E191D8 0x0000000189E19624-0x0000000189E19668
-		public bool proceduralSimulationSupported { get => default; } // 0x0000000189E18EB0-0x0000000189E18EE4 
-		public MainModule main { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public EmissionModule emission { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public ShapeModule shape { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public VelocityOverLifetimeModule velocityOverLifetime { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public LimitVelocityOverLifetimeModule limitVelocityOverLifetime { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public InheritVelocityModule inheritVelocity { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public LifetimeByEmitterSpeedModule lifetimeByEmitterSpeed { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public ForceOverLifetimeModule forceOverLifetime { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public ColorOverLifetimeModule colorOverLifetime { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public ColorBySpeedModule colorBySpeed { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public SizeOverLifetimeModule sizeOverLifetime { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public SizeBySpeedModule sizeBySpeed { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public RotationOverLifetimeModule rotationOverLifetime { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public RotationBySpeedModule rotationBySpeed { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public ExternalForcesModule externalForces { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public NoiseModule noise { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public CollisionModule collision { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public TriggerModule trigger { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public SubEmittersModule subEmitters { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public TextureSheetAnimationModule textureSheetAnimation { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public LightsModule lights { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public TrailModule trails { get => default; } // 0x0000000182712100-0x0000000182712120 
-		public CustomDataModule customData { get => default; } // 0x0000000182712100-0x0000000182712120 
+		public float startDelay { get => default; set {} } // 0x000000018BF2D398-0x000000018BF2D3A0 0x000000018BF2CF74-0x000000018BF2CF7C
+		public bool loop { get => default; set {} } // 0x000000018BF2D3E4-0x000000018BF2D3EC 0x000000018BF2CFB0-0x000000018BF2CFB8
+		public bool playOnAwake { get => default; set {} } // 0x000000018BF2D430-0x000000018BF2D438 0x000000018BF2CFEC-0x000000018BF2CFF4
+		public float duration { get => default; } // 0x000000018BF2D47C-0x000000018BF2D484 
+		public float playbackSpeed { get => default; set {} } // 0x000000018BF2CDE0-0x000000018BF2CE18 0x000000018BF2D250-0x000000018BF2D264
+		public bool enableEmission { get => default; set {} } // 0x000000018BF2CCA4-0x000000018BF2CCAC 0x000000018BF2D124-0x000000018BF2D12C
+		public float emissionRate { get => default; set {} } // 0x000000018BF2CD94-0x000000018BF2CD9C 0x000000018BF2D204-0x000000018BF2D20C
+		public float startSpeed { get => default; set {} } // 0x000000018646FE34-0x000000018646FE3C 0x000000018646FE18-0x000000018646FE20
+		public float startSize { get => default; set {} } // 0x000000018BF2CD58-0x000000018BF2CD60 0x000000018646FE4C-0x000000018646FE54
+		public Color startColor { get => default; set {} } // 0x000000018BF2CD1C-0x000000018BF2CD24 0x000000018BF2D1BC-0x000000018BF2D1C4
+		public float startRotation { get => default; set {} } // 0x000000018646FE44-0x000000018646FE4C 0x000000018646FE54-0x000000018646FE5C
+		public Vector3 startRotation3D { get => default; set {} } // 0x0000000185F569E0-0x0000000185F56A20 0x0000000185F37410-0x0000000185F37460
+		public float startLifetime { get => default; set {} } // 0x000000018BF2CCAC-0x000000018BF2CCE0 0x000000018BF2D12C-0x000000018BF2D170
+		public float gravityModifier { get => default; set {} } // 0x000000018BF2CE18-0x000000018BF2CE4C 0x000000018BF2D264-0x000000018BF2D2A8
+		public int maxParticles { get => default; set {} } // 0x000000018BF2CE90-0x000000018BF2CED4 0x000000018BF2D2FC-0x000000018BF2D340
+		public ParticleSystemSimulationSpace simulationSpace { get => default; set {} } // 0x000000018BF2CE54-0x000000018BF2CE88 0x000000018BF2D2B0-0x000000018BF2D2F4
+		public ParticleSystemScalingMode scalingMode { get => default; set {} } // 0x000000018BF2D06C-0x000000018BF2D0B0 0x000000018BF2D030-0x000000018BF2D064
+		public bool automaticCullingEnabled { get => default; } // 0x000000018BF2D4D0-0x000000018BF2D514 
+		public bool isPlaying { get => default; } // 0x000000018BF2CFF4-0x000000018BF2D028 
+		public bool isEmitting { get => default; } // 0x000000018BF2D484-0x000000018BF2D4C8 
+		public bool isStopped { get => default; } // 0x000000018BF2CF04-0x000000018BF2CF38 
+		public bool isPaused { get => default; } // 0x000000018BF2D354-0x000000018BF2D398 
+		public int particleCount { get => default; } // 0x000000018BF2CF40-0x000000018BF2CF74 
+		public float time { get => default; set {} } // 0x000000018BF2D3A0-0x000000018BF2D3E4 0x000000018BF2CF7C-0x000000018BF2CFB0
+		public uint randomSeed { get => default; set {} } // 0x000000018BF2D3EC-0x000000018BF2D430 0x000000018BF2CFB8-0x000000018BF2CFEC
+		public bool useAutoRandomSeed { get => default; set {} } // 0x000000018BF2D438-0x000000018BF2D47C 0x000000018BF2CD9C-0x000000018BF2CDE0
+		public bool proceduralSimulationSupported { get => default; } // 0x000000018BF2D20C-0x000000018BF2D250 
+		public MainModule main { get => default; } // 0x000000018BF3139C-0x000000018BF313EC 
+		public EmissionModule emission { get => default; } // 0x0000000185149440-0x0000000185149480 
+		public ShapeModule shape { get => default; } // 0x0000000185FE64F0-0x0000000185FE6500 
+		public VelocityOverLifetimeModule velocityOverLifetime { get => default; } // 0x0000000185FC7990-0x0000000185FC79A0 
+		public LimitVelocityOverLifetimeModule limitVelocityOverLifetime { get => default; } // 0x0000000185FE6720-0x0000000185FE6730 
+		public InheritVelocityModule inheritVelocity { get => default; } // 0x0000000185FE8CF0-0x0000000185FE8D00 
+		public LifetimeByEmitterSpeedModule lifetimeByEmitterSpeed { get => default; } // 0x0000000185FE68F0-0x0000000185FE6900 
+		public ForceOverLifetimeModule forceOverLifetime { get => default; } // 0x0000000185FE8CF0-0x0000000185FE8D00 
+		public ColorOverLifetimeModule colorOverLifetime { get => default; } // 0x0000000183B7E5A0-0x0000000183B7E5B0 
+		public ColorBySpeedModule colorBySpeed { get => default; } // 0x0000000185FC7990-0x0000000185FC79A0 
+		public SizeOverLifetimeModule sizeOverLifetime { get => default; } // 0x00000001851493D0-0x0000000185149440 
+		public SizeBySpeedModule sizeBySpeed { get => default; } // 0x000000018BF2D51C-0x000000018BF2D56C 
+		public RotationOverLifetimeModule rotationOverLifetime { get => default; } // 0x0000000185FBB620-0x0000000185FBB630 
+		public RotationBySpeedModule rotationBySpeed { get => default; } // 0x0000000185FB30E0-0x0000000185FB30F0 
+		public ExternalForcesModule externalForces { get => default; } // 0x0000000185FE8B20-0x0000000185FE8B30 
+		public NoiseModule noise { get => default; } // 0x0000000185FBB620-0x0000000185FBB630 
+		public CollisionModule collision { get => default; } // 0x000000018BF2D56C-0x000000018BF2D5E8 
+		public TriggerModule trigger { get => default; } // 0x000000018BF3171C-0x000000018BF31858 
+		public SubEmittersModule subEmitters { get => default; } // 0x000000018646FE2C-0x000000018646FE34 
+		public TextureSheetAnimationModule textureSheetAnimation { get => default; } // 0x000000018646FE2C-0x000000018646FE34 
+		public LightsModule lights { get => default; } // 0x000000018646FE2C-0x000000018646FE34 
+		public TrailModule trails { get => default; } // 0x000000018646FE2C-0x000000018646FE34 
+		public CustomDataModule customData { get => default; } // 0x000000018646FE2C-0x000000018646FE34 
 	
 		// Nested types
-		public struct MainModule // TypeDefIndex: 58728
+		public struct MainModule // TypeDefIndex: 59753
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
 	
 			// Properties
-			public float duration { get => default; [NativeThrows] set {} } // 0x0000000184274AF0-0x0000000184274AF8 0x0000000184274AF8-0x0000000184274B00
-			public bool loop { get => default; [NativeThrows] set {} } // 0x0000000189E14FA4-0x0000000189E14FAC 0x0000000189E1543C-0x0000000189E15444
-			public float startDelayMultiplier { get => default; [NativeThrows] set {} } // 0x0000000189E15118-0x0000000189E15120 0x0000000189E15574-0x0000000189E1557C
-			public MinMaxCurve startLifetime { get => default; [NativeThrows] set {} } // 0x0000000189E151A0-0x0000000189E151D0 0x0000000189E1560C-0x0000000189E15620
-			public float startLifetimeMultiplier { get => default; [NativeThrows] set {} } // 0x0000000189E15154-0x0000000189E1515C 0x0000000189E155C0-0x0000000189E155C8
-			public MinMaxCurve startSpeed { get => default; } // 0x0000000189E1537C-0x0000000189E153AC 
-			public float startSpeedMultiplier { get => default; [NativeThrows] set {} } // 0x0000000189E15330-0x0000000189E15338 0x0000000189E157E0-0x0000000189E157E8
-			[NativeName("StartSizeXMultiplier")]
-			public float startSizeMultiplier { get => default; [NativeThrows] set {} } // 0x0000000189E152F4-0x0000000189E152FC 0x0000000189E15794-0x0000000189E1579C
-			[NativeName("StartRotationZMultiplier")]
-			public float startRotationMultiplier { get => default; [NativeThrows] set {} } // 0x0000000189E15204-0x0000000189E1520C 0x0000000189E15664-0x0000000189E1566C
-			public float startRotationXMultiplier { get => default; [NativeThrows] set {} } // 0x0000000189E15240-0x0000000189E15248 0x0000000189E156B0-0x0000000189E156B8
-			public float startRotationYMultiplier { get => default; [NativeThrows] set {} } // 0x0000000189E1527C-0x0000000189E15284 0x0000000189E156FC-0x0000000189E15704
-			public float startRotationZMultiplier { get => default; [NativeThrows] set {} } // 0x0000000189E152B8-0x0000000189E152C0 0x0000000189E15748-0x0000000189E15750
-			public MinMaxGradient startColor { get => default; [NativeThrows] set {} } // 0x0000000189E150AC-0x0000000189E150E4 0x0000000189E1551C-0x0000000189E15530
-			public float gravityModifierMultiplier { get => default; [NativeThrows] set {} } // 0x0000000189E14F68-0x0000000189E14F70 0x0000000189E153F0-0x0000000189E153F8
-			public ParticleSystemSimulationSpace simulationSpace { get => default; [NativeThrows] set {} } // 0x0000000189E15058-0x0000000189E15060 0x0000000189E154D0-0x0000000189E154D8
-			public float simulationSpeed { get => default; [NativeThrows] set {} } // 0x0000000189E15060-0x0000000189E15068 0x0000000184271598-0x00000001842715A0
-			public ParticleSystemScalingMode scalingMode { get => default; [NativeThrows] set {} } // 0x0000000189E1501C-0x0000000189E15024 0x0000000184274AB8-0x0000000184274AC0
-			public bool playOnAwake { get => default; [NativeThrows] set {} } // 0x0000000189E14FE0-0x0000000189E14FE8 0x0000000189E15488-0x0000000189E15490
-			public int maxParticles { get => default; [NativeThrows] set {} } // 0x0000000184274AB0-0x0000000184274AB8 0x0000000184274AC0-0x0000000184274AC8
+			public float duration { get => default; set {} } // 0x000000018BF2FCC4-0x000000018BF2FCD8 0x000000018BF30D14-0x000000018BF30D44
+			public bool loop { get => default; set {} } // 0x000000018BF311D4-0x000000018BF31204 0x000000018BF30AF0-0x000000018BF30B20
+			public float startDelayMultiplier { get => default; set {} } // 0x000000018BF30FD0-0x000000018BF31008 0x000000018BF30B84-0x000000018BF30BB4
+			public MinMaxCurve startLifetime { get => default; set {} } // 0x000000018BF31040-0x000000018BF31078 0x000000018BF30960-0x000000018BF30990
+			public float startLifetimeMultiplier { get => default; set {} } // 0x000000018BF30BB4-0x000000018BF30BE4 0x000000018BF31078-0x000000018BF310A8
+			public MinMaxCurve startSpeed { get => default; } // 0x000000018BF309C0-0x000000018BF309F0 
+			public float startSpeedMultiplier { get => default; set {} } // 0x000000018BF30F68-0x000000018BF30FA0 0x000000018BF30990-0x000000018BF309C0
+			public float startSizeMultiplier { get => default; set {} } // 0x000000018BF30F0C-0x000000018BF30F68 0x000000018BF30E74-0x000000018BF30EA4
+			public float startRotationMultiplier { get => default; set {} } // 0x000000018BF312E4-0x000000018BF31314 0x000000018BF30E44-0x000000018BF30E74
+			public float startRotationXMultiplier { get => default; set {} } // 0x000000018BF312B4-0x000000018BF312E4 0x000000018BF30CAC-0x000000018BF30D14
+			public float startRotationYMultiplier { get => default; set {} } // 0x000000018BF31158-0x000000018BF311D4 0x000000018BF30E14-0x000000018BF30E44
+			public float startRotationZMultiplier { get => default; set {} } // 0x000000018BF31284-0x000000018BF312B4 0x000000018BF30D74-0x000000018BF30E14
+			public MinMaxGradient startColor { get => default; set {} } // 0x000000018BF31234-0x000000018BF31284 0x000000018BF30D44-0x000000018BF30D74
+			public float gravityModifierMultiplier { get => default; set {} } // 0x000000018BF31204-0x000000018BF31234 0x000000018BF309F0-0x000000018BF30A20
+			public ParticleSystemSimulationSpace simulationSpace { get => default; set {} } // 0x000000018BF30FA0-0x000000018BF30FD0 0x000000018BF30B20-0x000000018BF30B50
+			public float simulationSpeed { get => default; set {} } // 0x000000018BF31008-0x000000018BF31040 0x000000018BF30C7C-0x000000018BF30CAC
+			public ParticleSystemScalingMode scalingMode { get => default; set {} } // 0x000000018BF31120-0x000000018BF31158 0x000000018BF30C4C-0x000000018BF30C7C
+			public bool playOnAwake { get => default; set {} } // 0x000000018BF310E8-0x000000018BF31120 0x000000018BF30954-0x000000018BF30960
+			public int maxParticles { get => default; set {} } // 0x000000018BF30A88-0x000000018BF30ABC 0x000000018BF30A20-0x000000018BF30A54
 	
 			// Constructors
 			internal MainModule(ParticleSystem particleSystem) : this() {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2FBBC-0x000000018BF2FCC4
 	
 			// Methods
-			private static float get_duration_Injected(ref MainModule _unity_self) => default; // 0x0000000183CFA570-0x0000000183CFA5B0
-			private static void set_duration_Injected(ref MainModule _unity_self, float value) {} // 0x0000000183CDDB50-0x0000000183CDDBA0
-			private static bool get_loop_Injected(ref MainModule _unity_self) => default; // 0x0000000189E14F70-0x0000000189E14FA4
-			private static void set_loop_Injected(ref MainModule _unity_self, bool value) {} // 0x0000000189E153F8-0x0000000189E1543C
-			private static float get_startDelayMultiplier_Injected(ref MainModule _unity_self) => default; // 0x0000000189E150E4-0x0000000189E15118
-			private static void set_startDelayMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x0000000189E15530-0x0000000189E15574
+			private static float get_duration_Injected(ref MainModule _unity_self) => default; // 0x000000018BF30ABC-0x000000018BF30AF0
+			private static void set_duration_Injected(ref MainModule _unity_self, float value) {} // 0x000000018BF30A54-0x000000018BF30A88
+			private static bool get_loop_Injected(ref MainModule _unity_self) => default; // 0x000000018BF30B50-0x000000018BF30B84
+			private static void set_loop_Injected(ref MainModule _unity_self, bool value) {} // 0x000000018BF30EA4-0x000000018BF30ED8
+			private static float get_startDelayMultiplier_Injected(ref MainModule _unity_self) => default; // 0x000000018BF31314-0x000000018BF31358
+			private static void set_startDelayMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x000000018BF30C18-0x000000018BF30C4C
 			private static void get_startLifetime_Injected(ref MainModule _unity_self, out MinMaxCurve ret) {
 				ret = default;
-			} // 0x0000000189E1515C-0x0000000189E151A0
-			private static void set_startLifetime_Injected(ref MainModule _unity_self, ref MinMaxCurve value) {} // 0x0000000189E155C8-0x0000000189E1560C
-			private static float get_startLifetimeMultiplier_Injected(ref MainModule _unity_self) => default; // 0x0000000189E15120-0x0000000189E15154
-			private static void set_startLifetimeMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x0000000189E1557C-0x0000000189E155C0
+			} // 0x000000018BF310A8-0x000000018BF310E8
+			private static void set_startLifetime_Injected(ref MainModule _unity_self, ref MinMaxCurve value) {} // 0x000000018BF30ED8-0x000000018BF30F0C
+			private static float get_startLifetimeMultiplier_Injected(ref MainModule _unity_self) => default; // 0x000000018BF31358-0x000000018BF3139C
+			private static void set_startLifetimeMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x000000018BF30BE4-0x000000018BF30C18
 			private static void get_startSpeed_Injected(ref MainModule _unity_self, out MinMaxCurve ret) {
 				ret = default;
-			} // 0x0000000189E15338-0x0000000189E1537C
-			private static float get_startSpeedMultiplier_Injected(ref MainModule _unity_self) => default; // 0x0000000189E152FC-0x0000000189E15330
-			private static void set_startSpeedMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x0000000189E1579C-0x0000000189E157E0
-			private static float get_startSizeMultiplier_Injected(ref MainModule _unity_self) => default; // 0x0000000189E152C0-0x0000000189E152F4
-			private static void set_startSizeMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x0000000189E15750-0x0000000189E15794
-			private static float get_startRotationMultiplier_Injected(ref MainModule _unity_self) => default; // 0x0000000189E151D0-0x0000000189E15204
-			private static void set_startRotationMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x0000000189E15620-0x0000000189E15664
-			private static float get_startRotationXMultiplier_Injected(ref MainModule _unity_self) => default; // 0x0000000189E1520C-0x0000000189E15240
-			private static void set_startRotationXMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x0000000189E1566C-0x0000000189E156B0
-			private static float get_startRotationYMultiplier_Injected(ref MainModule _unity_self) => default; // 0x0000000189E15248-0x0000000189E1527C
-			private static void set_startRotationYMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x0000000189E156B8-0x0000000189E156FC
-			private static float get_startRotationZMultiplier_Injected(ref MainModule _unity_self) => default; // 0x0000000189E15284-0x0000000189E152B8
-			private static void set_startRotationZMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x0000000189E15704-0x0000000189E15748
+			} // 0x000000018BF2FEEC-0x000000018BF2FF30
+			private static float get_startSpeedMultiplier_Injected(ref MainModule _unity_self) => default; // 0x000000018BF2FEB8-0x000000018BF2FEEC
+			private static void set_startSpeedMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x000000018BF2FE40-0x000000018BF2FE64
+			private static float get_startSizeMultiplier_Injected(ref MainModule _unity_self) => default; // 0x000000018BF2FF30-0x000000018BF2FF74
+			private static void set_startSizeMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x000000018BF305D8-0x000000018BF3063C
+			private static float get_startRotationMultiplier_Injected(ref MainModule _unity_self) => default; // 0x000000018BF305BC-0x000000018BF305D8
+			private static void set_startRotationMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x000000018BF30560-0x000000018BF30570
+			private static float get_startRotationXMultiplier_Injected(ref MainModule _unity_self) => default; // 0x000000018BF304FC-0x000000018BF30560
+			private static void set_startRotationXMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x000000018BF3063C-0x000000018BF306AC
+			private static float get_startRotationYMultiplier_Injected(ref MainModule _unity_self) => default; // 0x000000018BF30594-0x000000018BF305BC
+			private static void set_startRotationYMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x000000018BF30570-0x000000018BF30594
+			private static float get_startRotationZMultiplier_Injected(ref MainModule _unity_self) => default; // 0x000000018BF300A4-0x000000018BF30108
+			private static void set_startRotationZMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x000000018BF30108-0x000000018BF30124
 			private static void get_startColor_Injected(ref MainModule _unity_self, out MinMaxGradient ret) {
 				ret = default;
-			} // 0x0000000189E15068-0x0000000189E150AC
-			private static void set_startColor_Injected(ref MainModule _unity_self, ref MinMaxGradient value) {} // 0x0000000189E154D8-0x0000000189E1551C
-			private static float get_gravityModifierMultiplier_Injected(ref MainModule _unity_self) => default; // 0x0000000189E14F34-0x0000000189E14F68
-			private static void set_gravityModifierMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x0000000189E153AC-0x0000000189E153F0
-			private static ParticleSystemSimulationSpace get_simulationSpace_Injected(ref MainModule _unity_self) => default; // 0x0000000189E15024-0x0000000189E15058
-			private static void set_simulationSpace_Injected(ref MainModule _unity_self, ParticleSystemSimulationSpace value) {} // 0x0000000189E15490-0x0000000189E154D0
-			private static float get_simulationSpeed_Injected(ref MainModule _unity_self) => default; // 0x0000000183288220-0x0000000183288260
-			private static void set_simulationSpeed_Injected(ref MainModule _unity_self, float value) {} // 0x0000000183294C20-0x0000000183294C70
-			private static ParticleSystemScalingMode get_scalingMode_Injected(ref MainModule _unity_self) => default; // 0x0000000189E14FE8-0x0000000189E1501C
-			private static void set_scalingMode_Injected(ref MainModule _unity_self, ParticleSystemScalingMode value) {} // 0x000000018304C6D0-0x000000018304C720
-			private static bool get_playOnAwake_Injected(ref MainModule _unity_self) => default; // 0x0000000189E14FAC-0x0000000189E14FE0
-			private static void set_playOnAwake_Injected(ref MainModule _unity_self, bool value) {} // 0x0000000189E15444-0x0000000189E15488
-			private static int get_maxParticles_Injected(ref MainModule _unity_self) => default; // 0x000000018304C640-0x000000018304C680
-			private static void set_maxParticles_Injected(ref MainModule _unity_self, int value) {} // 0x000000018304C680-0x000000018304C6D0
+			} // 0x000000018BF2FFD8-0x000000018BF2FFE8
+			private static void set_startColor_Injected(ref MainModule _unity_self, ref MinMaxGradient value) {} // 0x000000018BF2FF74-0x000000018BF2FFD8
+			private static float get_gravityModifierMultiplier_Injected(ref MainModule _unity_self) => default; // 0x000000018BF30034-0x000000018BF300A4
+			private static void set_gravityModifierMultiplier_Injected(ref MainModule _unity_self, float value) {} // 0x000000018BF3000C-0x000000018BF30034
+			private static ParticleSystemSimulationSpace get_simulationSpace_Injected(ref MainModule _unity_self) => default; // 0x000000018BF2FFE8-0x000000018BF3000C
+			private static void set_simulationSpace_Injected(ref MainModule _unity_self, ParticleSystemSimulationSpace value) {} // 0x000000018BF30410-0x000000018BF30464
+			private static float get_simulationSpeed_Injected(ref MainModule _unity_self) => default; // 0x000000018BF2FCF4-0x000000018BF2FD48
+			private static void set_simulationSpeed_Injected(ref MainModule _unity_self, float value) {} // 0x000000018BF30168-0x000000018BF301A4
+			private static ParticleSystemScalingMode get_scalingMode_Injected(ref MainModule _unity_self) => default; // 0x000000018BF306F0-0x000000018BF30704
+			private static void set_scalingMode_Injected(ref MainModule _unity_self, ParticleSystemScalingMode value) {} // 0x000000018BF301A4-0x000000018BF301E8
+			private static bool get_playOnAwake_Injected(ref MainModule _unity_self) => default; // 0x000000018BF301E8-0x000000018BF30260
+			private static void set_playOnAwake_Injected(ref MainModule _unity_self, bool value) {} // 0x000000018BF30260-0x000000018BF302C0
+			private static int get_maxParticles_Injected(ref MainModule _unity_self) => default; // 0x000000018BF30748-0x000000018BF3075C
+			private static void set_maxParticles_Injected(ref MainModule _unity_self, int value) {} // 0x000000018BF3075C-0x000000018BF307C0
 		}
 	
-		public struct EmissionModule // TypeDefIndex: 58729
+		public struct EmissionModule // TypeDefIndex: 59754
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
 	
 			// Properties
-			public bool enabled { get => default; [NativeThrows] set {} } // 0x0000000189E14EA4-0x0000000189E14EAC 0x0000000189E14F2C-0x0000000189E14F34
-			public MinMaxCurve rateOverTime { get => default; [NativeThrows] set {} } // 0x000000018304BFF0-0x000000018304C050 0x0000000184274AC8-0x0000000184274ADC
-			public float rateOverTimeMultiplier { get => default; } // 0x0000000189E14EE0-0x0000000189E14EE8 
+			public bool enabled { get => default; set {} } // 0x000000018BF307CC-0x000000018BF307E8 0x000000018BF307C0-0x000000018BF307CC
+			public MinMaxCurve rateOverTime { get => default; set {} } // 0x0000000185628CE0-0x0000000185628D30 0x00000001864736BC-0x00000001864736C8
+			public float rateOverTimeMultiplier { get => default; } // 0x000000018BF3031C-0x000000018BF30360 
 	
 			// Constructors
 			internal EmissionModule(ParticleSystem particleSystem) : this() {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF307E8-0x000000018BF30804
 	
 			// Methods
-			private static bool get_enabled_Injected(ref EmissionModule _unity_self) => default; // 0x0000000189E14E70-0x0000000189E14EA4
-			private static void set_enabled_Injected(ref EmissionModule _unity_self, bool value) {} // 0x0000000189E14EE8-0x0000000189E14F2C
+			private static bool get_enabled_Injected(ref EmissionModule _unity_self) => default; // 0x000000018BF30310-0x000000018BF3031C
+			private static void set_enabled_Injected(ref EmissionModule _unity_self, bool value) {} // 0x000000018519C870-0x000000018519C8D0
 			private static void get_rateOverTime_Injected(ref EmissionModule _unity_self, out MinMaxCurve ret) {
 				ret = default;
-			} // 0x000000018304C050-0x000000018304C0A0
-			private static void set_rateOverTime_Injected(ref EmissionModule _unity_self, ref MinMaxCurve value) {} // 0x000000018304C770-0x000000018304C7C0
-			private static float get_rateOverTimeMultiplier_Injected(ref EmissionModule _unity_self) => default; // 0x0000000189E14EAC-0x0000000189E14EE0
+			} // 0x000000018BF30804-0x000000018BF30814
+			private static void set_rateOverTime_Injected(ref EmissionModule _unity_self, ref MinMaxCurve value) {} // 0x0000000186471914-0x0000000186471928
+			private static float get_rateOverTimeMultiplier_Injected(ref EmissionModule _unity_self) => default; // 0x000000018521D300-0x000000018521D350
 		}
 	
-		public struct ShapeModule // TypeDefIndex: 58730
+		public struct ShapeModule // TypeDefIndex: 59755
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
 	
 			// Properties
-			public bool enabled { [NativeThrows] set {} } // 0x0000000189E1974C-0x0000000189E19754
-			public ParticleSystemShapeType shapeType { [NativeThrows] set {} } // 0x0000000189E19878-0x0000000189E19880
-			public float radius { [NativeThrows] set {} } // 0x0000000189E19830-0x0000000189E19838
-			public Mesh mesh { [NativeThrows] set {} } // 0x0000000189E197E4-0x0000000189E197EC
-			public MeshRenderer meshRenderer { [NativeThrows] set {} } // 0x0000000189E19798-0x0000000189E197A0
-			public SkinnedMeshRenderer skinnedMeshRenderer { [NativeThrows] set {} } // 0x0000000189E198C4-0x0000000189E198CC
-			public float textureClipThreshold { [NativeThrows] set {} } // 0x0000000189E1995C-0x0000000189E19964
-			public float textureClipThresholdUpper { [NativeThrows] set {} } // 0x0000000189E19910-0x0000000189E19918
+			public bool enabled { set {} } // 0x000000018BF302C0-0x000000018BF30304
+			public ParticleSystemShapeType shapeType { set {} } // 0x000000018BF30304-0x000000018BF30310
+			public float radius { set {} } // 0x000000018BF2FCD8-0x000000018BF2FCE0
+			public Mesh mesh { set {} } // 0x000000018BF2FB7C-0x000000018BF2FBBC
+			public MeshRenderer meshRenderer { set {} } // 0x000000018BF2FCE0-0x000000018BF2FCF4
+			public SkinnedMeshRenderer skinnedMeshRenderer { set {} } // 0x000000018BF2FAE4-0x000000018BF2FB28
+			public float textureClipThreshold { set {} } // 0x000000018BF30878-0x000000018BF30884
+			public float textureClipThresholdUpper { set {} } // 0x000000018BF308D4-0x000000018BF30954
 	
 			// Constructors
 			internal ShapeModule(ParticleSystem particleSystem) : this() {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x0000000186471908-0x0000000186471914
 	
 			// Methods
-			private static void set_enabled_Injected(ref ShapeModule _unity_self, bool value) {} // 0x0000000189E19708-0x0000000189E1974C
-			private static void set_shapeType_Injected(ref ShapeModule _unity_self, ParticleSystemShapeType value) {} // 0x0000000189E19838-0x0000000189E19878
-			private static void set_radius_Injected(ref ShapeModule _unity_self, float value) {} // 0x0000000189E197EC-0x0000000189E19830
-			private static void set_mesh_Injected(ref ShapeModule _unity_self, Mesh value) {} // 0x0000000189E197A0-0x0000000189E197E4
-			private static void set_meshRenderer_Injected(ref ShapeModule _unity_self, MeshRenderer value) {} // 0x0000000189E19754-0x0000000189E19798
-			private static void set_skinnedMeshRenderer_Injected(ref ShapeModule _unity_self, SkinnedMeshRenderer value) {} // 0x0000000189E19880-0x0000000189E198C4
-			private static void set_textureClipThreshold_Injected(ref ShapeModule _unity_self, float value) {} // 0x0000000189E19918-0x0000000189E1995C
-			private static void set_textureClipThresholdUpper_Injected(ref ShapeModule _unity_self, float value) {} // 0x0000000189E198CC-0x0000000189E19910
+			private static void set_enabled_Injected(ref ShapeModule _unity_self, bool value) {} // 0x000000018BF30864-0x000000018BF30878
+			private static void set_shapeType_Injected(ref ShapeModule _unity_self, ParticleSystemShapeType value) {} // 0x000000018BF30884-0x000000018BF308D4
+			private static void set_radius_Injected(ref ShapeModule _unity_self, float value) {} // 0x000000018BF30360-0x000000018BF3038C
+			private static void set_mesh_Injected(ref ShapeModule _unity_self, Mesh value) {} // 0x000000018BF304BC-0x000000018BF304FC
+			private static void set_meshRenderer_Injected(ref ShapeModule _unity_self, MeshRenderer value) {} // 0x000000018BF2F9F8-0x000000018BF2FA2C
+			private static void set_skinnedMeshRenderer_Injected(ref ShapeModule _unity_self, SkinnedMeshRenderer value) {} // 0x000000018BF2FA6C-0x000000018BF2FAA0
+			private static void set_textureClipThreshold_Injected(ref ShapeModule _unity_self, float value) {} // 0x000000018BF2FA2C-0x000000018BF2FA6C
+			private static void set_textureClipThresholdUpper_Injected(ref ShapeModule _unity_self, float value) {} // 0x000000018BF2FD48-0x000000018BF2FD7C
 		}
 	
-		public struct CollisionModule // TypeDefIndex: 58731
+		public struct CollisionModule // TypeDefIndex: 59756
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
 	
 			// Properties
-			public bool enabled { get => default; } // 0x0000000189E14E68-0x0000000189E14E70 
+			public bool enabled { get => default; } // 0x000000018BF304A8-0x000000018BF304BC 
 	
 			// Constructors
 			internal CollisionModule(ParticleSystem particleSystem) : this() {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2FDC0-0x000000018BF2FDEC
 	
 			// Methods
-			private static bool get_enabled_Injected(ref CollisionModule _unity_self) => default; // 0x0000000189E14E34-0x0000000189E14E68
+			private static bool get_enabled_Injected(ref CollisionModule _unity_self) => default; // 0x000000018BF303E0-0x000000018BF30410
 		}
 	
-		public struct TriggerModule // TypeDefIndex: 58732
+		public struct TriggerModule // TypeDefIndex: 59757
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -418,30 +226,29 @@ namespace UnityEngine
 			// Constructors
 			internal TriggerModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2FAA0-0x000000018BF2FAE4
 		}
 	
-		public struct SubEmittersModule // TypeDefIndex: 58733
+		public struct SubEmittersModule // TypeDefIndex: 59758
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
 	
 			// Properties
-			public int subEmittersCount { get => default; } // 0x0000000189E199E0-0x0000000189E199E8 
+			public int subEmittersCount { get => default; } // 0x0000000184759830-0x0000000184759850 
 	
 			// Constructors
 			internal SubEmittersModule(ParticleSystem particleSystem) : this() {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x0000000184759830-0x0000000184759850
 	
 			// Methods
-			[NativeThrows]
-			public ParticleSystem GetSubEmitterSystem(int index) => default; // 0x0000000189E199A4-0x0000000189E199AC
-			private static int get_subEmittersCount_Injected(ref SubEmittersModule _unity_self) => default; // 0x0000000189E199AC-0x0000000189E199E0
-			private static ParticleSystem GetSubEmitterSystem_Injected(ref SubEmittersModule _unity_self, int index) => default; // 0x0000000189E19964-0x0000000189E199A4
+			public ParticleSystem GetSubEmitterSystem(int index) => default; // 0x0000000184759830-0x0000000184759850
+			private static int get_subEmittersCount_Injected(ref SubEmittersModule _unity_self) => default; // 0x0000000184759830-0x0000000184759850
+			private static ParticleSystem GetSubEmitterSystem_Injected(ref SubEmittersModule _unity_self, int index) => default; // 0x0000000184759830-0x0000000184759850
 		}
 	
-		public struct TextureSheetAnimationModule // TypeDefIndex: 58734
+		public struct TextureSheetAnimationModule // TypeDefIndex: 59759
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -449,11 +256,10 @@ namespace UnityEngine
 			// Constructors
 			internal TextureSheetAnimationModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x0000000184759830-0x0000000184759850
 		}
 	
-		[RequiredByNativeCode("particleSystemParticle", Optional = true)]
-		public struct Particle // TypeDefIndex: 58735
+		public struct Particle // TypeDefIndex: 59760
 		{
 			// Fields
 			private Vector3 m_Position; // 0x00
@@ -475,45 +281,37 @@ namespace UnityEngine
 			private uint m_Flags; // 0x80
 	
 			// Properties
-			[Obsolete("Please use Particle.remainingLifetime instead. (UnityUpgradable) -> UnityEngine.ParticleSystem/Particle.remainingLifetime", false)]
-			public float lifetime { set {} } // 0x0000000183D5B680-0x0000000183D5B690
-			public Vector3 position { set {} } // 0x0000000183D56570-0x0000000183D56580
-			public Vector3 velocity { set {} } // 0x0000000183D56580-0x0000000183D56590
-			public float remainingLifetime { set {} } // 0x0000000183D5B680-0x0000000183D5B690
-			public float startLifetime { set {} } // 0x0000000183D5BD20-0x0000000183D5BD30
-			public Color32 startColor { set {} } // 0x0000000183D4F5A0-0x0000000183D4F5B0
-			public uint randomSeed { set {} } // 0x0000000183D50B40-0x0000000183D50B50
-			public float startSize { set {} } // 0x0000000183D87F30-0x0000000183D87F50
-			public Vector3 rotation3D { set {} } // 0x0000000189E196B8-0x0000000189E19708
-			public Vector3 angularVelocity3D { set {} } // 0x0000000189E19668-0x0000000189E196B8
+			public float lifetime { set {} } // 0x0000000184759830-0x0000000184759850
+			public Vector3 position { set {} } // 0x0000000184759830-0x0000000184759850
+			public Vector3 velocity { set {} } // 0x0000000184759830-0x0000000184759850
+			public float remainingLifetime { set {} } // 0x0000000184759830-0x0000000184759850
+			public float startLifetime { set {} } // 0x0000000184759830-0x0000000184759850
+			public Color32 startColor { set {} } // 0x0000000184759830-0x0000000184759850
+			public uint randomSeed { set {} } // 0x0000000184759830-0x0000000184759850
+			public float startSize { set {} } // 0x0000000184759830-0x0000000184759850
+			public Vector3 rotation3D { set {} } // 0x0000000184759830-0x0000000184759850
+			public Vector3 angularVelocity3D { set {} } // 0x0000000184759830-0x0000000184759850
 		}
 	
 		[Serializable]
-		[NativeType(CodegenOptions.Custom, "MonoMinMaxCurve", Header = "Runtime/Scripting/ScriptingCommonStructDefinitions.h")]
-		public struct MinMaxCurve // TypeDefIndex: 58736
+		public struct MinMaxCurve // TypeDefIndex: 59761
 		{
 			// Fields
-			[SerializeField]
 			private ParticleSystemCurveMode m_Mode; // 0x00
-			[SerializeField]
 			private float m_CurveMultiplier; // 0x04
-			[SerializeField]
 			private AnimationCurve m_CurveMin; // 0x08
-			[SerializeField]
 			private AnimationCurve m_CurveMax; // 0x10
-			[SerializeField]
 			private float m_ConstantMin; // 0x18
-			[SerializeField]
 			private float m_ConstantMax; // 0x1C
 	
 			// Properties
-			public ParticleSystemCurveMode mode { get => default; } // 0x0000000183D85860-0x0000000183D85870 
-			public AnimationCurve curveMax { get => default; } // 0x0000000183D66B80-0x0000000183D66B90 
-			public AnimationCurve curveMin { get => default; } // 0x0000000183D85A90-0x0000000183D85AA0 
-			public float constantMax { get => default; } // 0x0000000183D87EB0-0x0000000183D87EC0 
-			public float constantMin { get => default; } // 0x0000000183D85C60-0x0000000183D85C70 
-			public float constant { get => default; set {} } // 0x0000000183D87EB0-0x0000000183D87EC0 0x0000000183D4F120-0x0000000183D4F130
-			public AnimationCurve curve { get => default; } // 0x0000000183D66B80-0x0000000183D66B90 
+			public ParticleSystemCurveMode mode { get => default; } // 0x0000000184759830-0x0000000184759850 
+			public AnimationCurve curveMax { get => default; } // 0x0000000184759830-0x0000000184759850 
+			public AnimationCurve curveMin { get => default; } // 0x0000000184759830-0x0000000184759850 
+			public float constantMax { get => default; } // 0x0000000184759830-0x0000000184759850 
+			public float constantMin { get => default; } // 0x0000000184759830-0x0000000184759850 
+			public float constant { get => default; set {} } // 0x0000000184759830-0x0000000184759850 0x000000018646DB20-0x000000018646DB28
+			public AnimationCurve curve { get => default; } // 0x000000018BF2FE64-0x000000018BF2FEB8 
 	
 			// Constructors
 			public MinMaxCurve(float constant) : this() {
@@ -523,76 +321,58 @@ namespace UnityEngine
 				m_CurveMax = default;
 				m_ConstantMin = default;
 				m_ConstantMax = default;
-			} // 0x000000018304C110-0x000000018304C150
+			} // 0x0000000184759830-0x0000000184759850
 	
 			// Methods
-			public static implicit operator MinMaxCurve(float constant) => default; // 0x000000018304C0A0-0x000000018304C110
+			public static implicit operator MinMaxCurve(float constant) => default; // 0x000000018BF2FDEC-0x000000018BF2FE40
 		}
 	
 		[Serializable]
-		[NativeType(CodegenOptions.Custom, "MonoMinMaxGradient", Header = "Runtime/Scripting/ScriptingCommonStructDefinitions.h")]
-		public struct MinMaxGradient // TypeDefIndex: 58737
+		public struct MinMaxGradient // TypeDefIndex: 59762
 		{
 			// Fields
-			[SerializeField]
 			private ParticleSystemGradientMode m_Mode; // 0x00
-			[SerializeField]
 			private Gradient m_GradientMin; // 0x08
-			[SerializeField]
 			private Gradient m_GradientMax; // 0x10
-			[SerializeField]
-			private UnityEngine.Color m_ColorMin; // 0x18
-			[SerializeField]
-			private UnityEngine.Color m_ColorMax; // 0x28
+			private Color m_ColorMin; // 0x18
+			private Color m_ColorMax; // 0x28
 	
 			// Properties
-			public UnityEngine.Color colorMax { set {} } // 0x0000000183D59E30-0x0000000183D59E40
-			public UnityEngine.Color colorMin { set {} } // 0x0000000183D51D90-0x0000000183D51DA0
-			public UnityEngine.Color color { get => default; set {} } // 0x0000000183D87CE0-0x0000000183D87CF0 0x0000000183D59E30-0x0000000183D59E40
+			public Color colorMax { set {} } // 0x000000018BF306AC-0x000000018BF306F0
+			public Color colorMin { set {} } // 0x000000018BF30704-0x000000018BF30748
+			public Color color { get => default; set {} } // 0x000000018BF2FB28-0x000000018BF2FB7C 0x000000018BF30814-0x000000018BF30864
 	
 			// Constructors
-			public MinMaxGradient(UnityEngine.Color color) : this() {
+			public MinMaxGradient(Color color) : this() {
 				m_Mode = default;
 				m_GradientMin = default;
 				m_GradientMax = default;
 				m_ColorMin = default;
 				m_ColorMax = default;
-			} // 0x0000000189E157E8-0x0000000189E15838
+			} // 0x000000018BF30124-0x000000018BF30168
 	
 			// Methods
-			public static implicit operator MinMaxGradient(UnityEngine.Color color) => default; // 0x0000000189E15838-0x0000000189E158B4
+			public static implicit operator MinMaxGradient(Color color) => default; // 0x000000018BF2FD7C-0x000000018BF2FDC0
 		}
 	
-		public struct EmitParams // TypeDefIndex: 58738
+		public struct EmitParams // TypeDefIndex: 59763
 		{
 			// Fields
-			[NativeName("particle")]
 			private Particle m_Particle; // 0x00
-			[NativeName("positionSet")]
 			private bool m_PositionSet; // 0x84
-			[NativeName("velocitySet")]
 			private bool m_VelocitySet; // 0x85
-			[NativeName("axisOfRotationSet")]
 			private bool m_AxisOfRotationSet; // 0x86
-			[NativeName("rotationSet")]
 			private bool m_RotationSet; // 0x87
-			[NativeName("rotationalSpeedSet")]
 			private bool m_AngularVelocitySet; // 0x88
-			[NativeName("startSizeSet")]
 			private bool m_StartSizeSet; // 0x89
-			[NativeName("startColorSet")]
 			private bool m_StartColorSet; // 0x8A
-			[NativeName("randomSeedSet")]
 			private bool m_RandomSeedSet; // 0x8B
-			[NativeName("startLifetimeSet")]
 			private bool m_StartLifetimeSet; // 0x8C
-			[NativeName("meshIndexSet")]
 			private bool m_MeshIndexSet; // 0x8D
-			[NativeName("applyShapeToPosition")]
 			private bool m_ApplyShapeToPosition; // 0x8E
 		}
 	
-		public struct PlaybackState // TypeDefIndex: 58749
+		public struct PlaybackState // TypeDefIndex: 59774
 		{
 			// Fields
 			internal float m_AccumulatedDt; // 0x00
@@ -609,7 +389,7 @@ namespace UnityEngine
 			internal Trail m_Trail; // 0x15C
 	
 			// Nested types
-			internal struct Seed // TypeDefIndex: 58739
+			internal struct Seed // TypeDefIndex: 59764
 			{
 				// Fields
 				public uint x; // 0x00
@@ -618,7 +398,7 @@ namespace UnityEngine
 				public uint w; // 0x0C
 			}
 	
-			internal struct Seed4 // TypeDefIndex: 58740
+			internal struct Seed4 // TypeDefIndex: 59765
 			{
 				// Fields
 				public Seed x; // 0x00
@@ -627,7 +407,7 @@ namespace UnityEngine
 				public Seed w; // 0x30
 			}
 	
-			internal struct Emission // TypeDefIndex: 58741
+			internal struct Emission // TypeDefIndex: 59766
 			{
 				// Fields
 				public float m_ParticleSpacing; // 0x00
@@ -635,13 +415,13 @@ namespace UnityEngine
 				public Seed m_Random; // 0x08
 			}
 	
-			internal struct Initial // TypeDefIndex: 58742
+			internal struct Initial // TypeDefIndex: 59767
 			{
 				// Fields
 				public Seed4 m_Random; // 0x00
 			}
 	
-			internal struct Shape // TypeDefIndex: 58743
+			internal struct Shape // TypeDefIndex: 59768
 			{
 				// Fields
 				public Seed4 m_Random; // 0x00
@@ -654,40 +434,39 @@ namespace UnityEngine
 				public int m_OrderedMeshVertexIndex; // 0x58
 			}
 	
-			internal struct Force // TypeDefIndex: 58744
+			internal struct Force // TypeDefIndex: 59769
 			{
 				// Fields
 				public Seed4 m_Random; // 0x00
 			}
 	
-			internal struct Collision // TypeDefIndex: 58745
+			internal struct Collision // TypeDefIndex: 59770
 			{
 				// Fields
 				public Seed4 m_Random; // 0x00
 			}
 	
-			internal struct Noise // TypeDefIndex: 58746
+			internal struct Noise // TypeDefIndex: 59771
 			{
 				// Fields
 				public float m_ScrollOffset; // 0x00
 			}
 	
-			internal struct Lights // TypeDefIndex: 58747
+			internal struct Lights // TypeDefIndex: 59772
 			{
 				// Fields
 				public Seed m_Random; // 0x00
 				public float m_ParticleEmissionCounter; // 0x10
 			}
 	
-			internal struct Trail // TypeDefIndex: 58748
+			internal struct Trail // TypeDefIndex: 59773
 			{
 				// Fields
 				public float m_Timer; // 0x00
 			}
 		}
 	
-		[NativeType(CodegenOptions.Custom, "MonoParticleTrails")]
-		public struct Trails // TypeDefIndex: 58750
+		public struct Trails // TypeDefIndex: 59775
 		{
 			// Fields
 			internal List<Vector4> positions; // 0x00
@@ -698,10 +477,10 @@ namespace UnityEngine
 			internal int maxPositionsPerTrailCount; // 0x24
 	
 			// Methods
-			internal void Allocate() {} // 0x0000000189E199E8-0x0000000189E19B24
+			internal void Allocate() {} // 0x000000018BF30464-0x000000018BF304A8
 		}
 	
-		public struct VelocityOverLifetimeModule // TypeDefIndex: 58751
+		public struct VelocityOverLifetimeModule // TypeDefIndex: 59776
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -709,10 +488,10 @@ namespace UnityEngine
 			// Constructors
 			internal VelocityOverLifetimeModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF3038C-0x000000018BF303E0
 		}
 	
-		public struct LimitVelocityOverLifetimeModule // TypeDefIndex: 58752
+		public struct LimitVelocityOverLifetimeModule // TypeDefIndex: 59777
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -720,10 +499,10 @@ namespace UnityEngine
 			// Constructors
 			internal LimitVelocityOverLifetimeModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018646FE2C-0x000000018646FE34
 		}
 	
-		public struct InheritVelocityModule // TypeDefIndex: 58753
+		public struct InheritVelocityModule // TypeDefIndex: 59778
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -731,10 +510,10 @@ namespace UnityEngine
 			// Constructors
 			internal InheritVelocityModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x00000001864736C8-0x00000001864736D0
 		}
 	
-		public struct LifetimeByEmitterSpeedModule // TypeDefIndex: 58754
+		public struct LifetimeByEmitterSpeedModule // TypeDefIndex: 59779
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -742,10 +521,10 @@ namespace UnityEngine
 			// Constructors
 			internal LifetimeByEmitterSpeedModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x00000001864736D0-0x00000001864736D8
 		}
 	
-		public struct ForceOverLifetimeModule // TypeDefIndex: 58755
+		public struct ForceOverLifetimeModule // TypeDefIndex: 59780
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -753,10 +532,10 @@ namespace UnityEngine
 			// Constructors
 			internal ForceOverLifetimeModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2CCE0-0x000000018BF2CCE8
 		}
 	
-		public struct ColorOverLifetimeModule // TypeDefIndex: 58756
+		public struct ColorOverLifetimeModule // TypeDefIndex: 59781
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -764,10 +543,10 @@ namespace UnityEngine
 			// Constructors
 			internal ColorOverLifetimeModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2D170-0x000000018BF2D178
 		}
 	
-		public struct ColorBySpeedModule // TypeDefIndex: 58757
+		public struct ColorBySpeedModule // TypeDefIndex: 59782
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -775,10 +554,10 @@ namespace UnityEngine
 			// Constructors
 			internal ColorBySpeedModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2CE4C-0x000000018BF2CE54
 		}
 	
-		public struct SizeOverLifetimeModule // TypeDefIndex: 58758
+		public struct SizeOverLifetimeModule // TypeDefIndex: 59783
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -786,10 +565,10 @@ namespace UnityEngine
 			// Constructors
 			internal SizeOverLifetimeModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2D2A8-0x000000018BF2D2B0
 		}
 	
-		public struct SizeBySpeedModule // TypeDefIndex: 58759
+		public struct SizeBySpeedModule // TypeDefIndex: 59784
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -797,10 +576,10 @@ namespace UnityEngine
 			// Constructors
 			internal SizeBySpeedModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2CED4-0x000000018BF2CF04
 		}
 	
-		public struct RotationOverLifetimeModule // TypeDefIndex: 58760
+		public struct RotationOverLifetimeModule // TypeDefIndex: 59785
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -808,10 +587,10 @@ namespace UnityEngine
 			// Constructors
 			internal RotationOverLifetimeModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2D340-0x000000018BF2D354
 		}
 	
-		public struct RotationBySpeedModule // TypeDefIndex: 58761
+		public struct RotationBySpeedModule // TypeDefIndex: 59786
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -819,10 +598,10 @@ namespace UnityEngine
 			// Constructors
 			internal RotationBySpeedModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2CE88-0x000000018BF2CE90
 		}
 	
-		public struct ExternalForcesModule // TypeDefIndex: 58762
+		public struct ExternalForcesModule // TypeDefIndex: 59787
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -830,10 +609,10 @@ namespace UnityEngine
 			// Constructors
 			internal ExternalForcesModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2D2F4-0x000000018BF2D2FC
 		}
 	
-		public struct NoiseModule // TypeDefIndex: 58763
+		public struct NoiseModule // TypeDefIndex: 59788
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -841,10 +620,10 @@ namespace UnityEngine
 			// Constructors
 			internal NoiseModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2D0B0-0x000000018BF2D0E0
 		}
 	
-		public struct LightsModule // TypeDefIndex: 58764
+		public struct LightsModule // TypeDefIndex: 59789
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -852,10 +631,10 @@ namespace UnityEngine
 			// Constructors
 			internal LightsModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2D064-0x000000018BF2D06C
 		}
 	
-		public struct TrailModule // TypeDefIndex: 58765
+		public struct TrailModule // TypeDefIndex: 59790
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -863,10 +642,10 @@ namespace UnityEngine
 			// Constructors
 			internal TrailModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2D514-0x000000018BF2D51C
 		}
 	
-		public struct CustomDataModule // TypeDefIndex: 58766
+		public struct CustomDataModule // TypeDefIndex: 59791
 		{
 			// Fields
 			internal ParticleSystem m_ParticleSystem; // 0x00
@@ -874,169 +653,136 @@ namespace UnityEngine
 			// Constructors
 			internal CustomDataModule(ParticleSystem particleSystem) {
 				m_ParticleSystem = default;
-			} // 0x00000001842715A0-0x00000001842715A8
+			} // 0x000000018BF2D028-0x000000018BF2D030
 		}
 	
 		// Constructors
-		public ParticleSystem() {} // 0x000000018426FE60-0x000000018426FE68
+		public ParticleSystem() {} // 0x000000018646FE2C-0x000000018646FE34
 	
 		// Methods
-		[Obsolete("Emit with specific parameters is deprecated. Pass a ParticleSystem.EmitParams parameter instead, which allows you to override some/all of the emission properties", false)]
-		public void Emit(Vector3 position, Vector3 velocity, float size, float lifetime, Color32 color) {} // 0x0000000189E17E88-0x0000000189E17F90
-		[Obsolete("Emit with a single particle structure is deprecated. Pass a ParticleSystem.EmitParams parameter instead, which allows you to override some/all of the emission properties", false)]
-		public void Emit(Particle particle) {} // 0x0000000189E17F90-0x0000000189E17FA4
-		[FreeFunction(Name = "ParticleSystemScriptBindings::GetParticleCurrentSize", HasExplicitThis = true)]
-		internal float GetParticleCurrentSize(ref Particle particle) => default; // 0x0000000189E181B8-0x0000000189E181FC
-		[FreeFunction(Name = "ParticleSystemScriptBindings::GetParticleCurrentSize3D", HasExplicitThis = true)]
-		internal Vector3 GetParticleCurrentSize3D(ref Particle particle) => default; // 0x0000000189E18184-0x0000000189E181B8
-		[FreeFunction(Name = "ParticleSystemScriptBindings::GetParticleCurrentColor", HasExplicitThis = true)]
-		internal Color32 GetParticleCurrentColor(ref Particle particle) => default; // 0x0000000189E1810C-0x0000000189E18130
-		[FreeFunction(Name = "ParticleSystemScriptBindings::GetParticleMeshIndex", HasExplicitThis = true)]
-		internal int GetParticleMeshIndex(ref Particle particle) => default; // 0x0000000189E181FC-0x0000000189E18240
-		[FreeFunction(Name = "ParticleSystemScriptBindings::SetParticles", HasExplicitThis = true, ThrowsException = true)]
+		public void Emit(Vector3 position, Vector3 velocity, float size, float lifetime, Color32 color) {} // 0x000000018BF2D4C8-0x000000018BF2D4D0
+		public void Emit(Particle particle) {} // 0x000000018BF2CF38-0x000000018BF2CF40
+		internal float GetParticleCurrentSize(ref Particle particle) => default; // 0x000000018BF2CC70-0x000000018BF2CCA4
+		internal Vector3 GetParticleCurrentSize3D(ref Particle particle) => default; // 0x000000018BF2D0E0-0x000000018BF2D124
+		internal Color32 GetParticleCurrentColor(ref Particle particle) => default; // 0x000000018BF2CD60-0x000000018BF2CD94
+		internal int GetParticleMeshIndex(ref Particle particle) => default; // 0x000000018BF2D1C4-0x000000018BF2D204
 		public void SetParticles(out Particle[] particles, int size, int offset) {
 			particles = default;
-		} // 0x0000000189E188A4-0x0000000189E18908
+		} // 0x00000001851EA100-0x00000001851EA140
 		public void SetParticles(out Particle[] particles, int size) {
 			particles = default;
-		} // 0x0000000189E18888-0x0000000189E188A4
+		} // 0x000000018521A2C0-0x000000018521A310
 		public void SetParticles(out Particle[] particles) {
 			particles = default;
-		} // 0x0000000189E1882C-0x0000000189E1883C
-		[FreeFunction(Name = "ParticleSystemScriptBindings::SetParticlesWithNativeArray", HasExplicitThis = true, ThrowsException = true)]
-		private void SetParticlesWithNativeArray(IntPtr particles, int particlesLength, int size, int offset) {} // 0x0000000189E187C8-0x0000000189E1882C
+		} // 0x000000018BF2CD24-0x000000018BF2CD58
+		private void SetParticlesWithNativeArray(IntPtr particles, int particlesLength, int size, int offset) {} // 0x00000001855D45D0-0x00000001855D4620
 		public void SetParticles(out NativeArray<Particle> particles, int size, int offset) {
 			particles = default;
-		} // 0x0000000189E18908-0x0000000189E18978
+		} // 0x000000018BF2CCE8-0x000000018BF2CD1C
 		public void SetParticles(out NativeArray<Particle> particles, int size) {
 			particles = default;
-		} // 0x0000000189E18860-0x0000000189E18888
+		} // 0x000000018BF2D178-0x000000018BF2D1BC
 		public void SetParticles(out NativeArray<Particle> particles) {
 			particles = default;
-		} // 0x0000000189E1883C-0x0000000189E18860
-		[FreeFunction(Name = "ParticleSystemScriptBindings::GetParticles", HasExplicitThis = true, ThrowsException = true)]
-		public int GetParticles([NotNull("ArgumentNullException")] out Particle[] particles, int size, int offset) {
+		} // 0x00000001856434A0-0x00000001856434E0
+		public int GetParticles(out Particle[] particles, int size, int offset) {
 			particles = default;
 			return default;
-		} // 0x0000000189E18370-0x0000000189E183D4
+		} // 0x00000001855D4620-0x00000001855D4750
 		public int GetParticles(out Particle[] particles, int size) {
 			particles = default;
 			return default;
-		} // 0x0000000189E183D4-0x0000000189E183F0
+		} // 0x000000018646FE2C-0x000000018646FE34
 		public int GetParticles(out Particle[] particles) {
 			particles = default;
 			return default;
-		} // 0x0000000189E182A4-0x0000000189E182B4
-		[FreeFunction(Name = "ParticleSystemScriptBindings::GetParticlesWithNativeArray", HasExplicitThis = true, ThrowsException = true)]
-		private int GetParticlesWithNativeArray(IntPtr particles, int particlesLength, int size, int offset) => default; // 0x0000000189E18240-0x0000000189E182A4
+		} // 0x000000018BF2CBE0-0x000000018BF2CBE8
+		private int GetParticlesWithNativeArray(IntPtr particles, int particlesLength, int size, int offset) => default; // 0x000000018BF2CC68-0x000000018BF2CC70
 		public int GetParticles(out NativeArray<Particle> particles, int size, int offset) {
 			particles = default;
 			return default;
-		} // 0x0000000189E18300-0x0000000189E18370
+		} // 0x0000000184759850-0x00000001847598B0
 		public int GetParticles(out NativeArray<Particle> particles, int size) {
 			particles = default;
 			return default;
-		} // 0x0000000189E182D8-0x0000000189E18300
+		} // 0x000000018646FE5C-0x000000018646FE70
 		public int GetParticles(out NativeArray<Particle> particles) {
 			particles = default;
 			return default;
-		} // 0x0000000189E182B4-0x0000000189E182D8
-		[FreeFunction(Name = "ParticleSystemScriptBindings::SetCustomParticleData", HasExplicitThis = true, ThrowsException = true)]
-		public void SetCustomParticleData([NotNull("ArgumentNullException")] List<Vector4> customData, ParticleSystemCustomData streamIndex) {} // 0x0000000189E186DC-0x0000000189E18730
-		[FreeFunction(Name = "ParticleSystemScriptBindings::GetCustomParticleData", HasExplicitThis = true, ThrowsException = true)]
-		public int GetCustomParticleData([NotNull("ArgumentNullException")] List<Vector4> customData, ParticleSystemCustomData streamIndex) => default; // 0x0000000189E17FC0-0x0000000189E18014
-		public PlaybackState GetPlaybackState() => default; // 0x0000000189E18434-0x0000000189E18470
-		public void SetPlaybackState(PlaybackState playbackState) {} // 0x0000000189E189BC-0x0000000189E189D0
-		[FreeFunction(Name = "ParticleSystemScriptBindings::GetTrailData", HasExplicitThis = true)]
-		private void GetTrailDataInternal(ref Trails trailData) {} // 0x0000000189E18470-0x0000000189E184B4
-		public Trails GetTrails() => default; // 0x0000000189E184B4-0x0000000189E1852C
-		public int GetTrails(ref Trails trailData) => default; // 0x0000000189E1852C-0x0000000189E1858C
-		[FreeFunction(Name = "ParticleSystemScriptBindings::SetTrailData", HasExplicitThis = true)]
-		public void SetTrails(Trails trailData) {} // 0x0000000189E18A14-0x0000000189E18A28
-		[FreeFunction(Name = "ParticleSystemScriptBindings::Simulate", HasExplicitThis = true)]
-		public void Simulate(float t, [DefaultValue("true")] bool withChildren, [DefaultValue("true")] bool restart, [DefaultValue("true")] bool fixedTimeStep) {} // 0x0000000189E18A28-0x0000000189E18A8C
-		public void Simulate(float t, [DefaultValue("true")] bool withChildren, [DefaultValue("true")] bool restart) {} // 0x0000000189E18AB4-0x0000000189E18AD0
-		public void Simulate(float t, [DefaultValue("true")] bool withChildren) {} // 0x0000000189E18A98-0x0000000189E18AB4
-		public void Simulate(float t) {} // 0x0000000189E18A8C-0x0000000189E18A98
-		[FreeFunction(Name = "ParticleSystemScriptBindings::Play", HasExplicitThis = true)]
-		public void Play([DefaultValue("true")] bool withChildren) {} // 0x00000001835A5250-0x00000001835A52A0
-		public void Play() {} // 0x0000000184274AA4-0x0000000184274AB0
-		[FreeFunction(Name = "ParticleSystemScriptBindings::Pause", HasExplicitThis = true)]
-		public void Pause([DefaultValue("true")] bool withChildren) {} // 0x0000000189E185E8-0x0000000189E1862C
-		public void Pause() {} // 0x0000000189E185DC-0x0000000189E185E8
-		[FreeFunction(Name = "ParticleSystemScriptBindings::Stop", HasExplicitThis = true)]
-		public void Stop([DefaultValue("true")] bool withChildren, [DefaultValue("ParticleSystemStopBehavior.StopEmitting")] ParticleSystemStopBehavior stopBehavior) {} // 0x0000000183242240-0x00000001832422A0
-		public void Stop([DefaultValue("true")] bool withChildren) {} // 0x0000000189E18AD0-0x0000000189E18AE0
-		public void Stop() {} // 0x0000000184271578-0x000000018427158C
-		[FreeFunction(Name = "ParticleSystemScriptBindings::Clear", HasExplicitThis = true)]
-		public void Clear([DefaultValue("true")] bool withChildren) {} // 0x000000018329C870-0x000000018329C8C0
-		public void Clear() {} // 0x000000018427158C-0x0000000184271598
-		[FreeFunction(Name = "ParticleSystemScriptBindings::IsAlive", HasExplicitThis = true)]
-		public bool IsAlive([DefaultValue("true")] bool withChildren) => default; // 0x0000000189E1858C-0x0000000189E185D0
-		public bool IsAlive() => default; // 0x0000000189E185D0-0x0000000189E185DC
-		[RequiredByNativeCode]
-		public void Emit(int count) {} // 0x0000000189E17FA4-0x0000000189E17FAC
-		[NativeName("SyncJobs()->Emit")]
-		private void Emit_Internal(int count) {} // 0x0000000189E17E48-0x0000000189E17E88
-		[NativeName("SyncJobs()->EmitParticlesExternal")]
-		public void Emit(EmitParams emitParams, int count) {} // 0x0000000189E17FAC-0x0000000189E17FC0
-		[NativeName("SyncJobs()->EmitParticleExternal")]
-		private void EmitOld_Internal(ref Particle particle) {} // 0x0000000189E17DB0-0x0000000189E17DF4
-		public void TriggerSubEmitter(int subEmitterIndex) {} // 0x0000000189E18B44-0x0000000189E18B50
-		public void TriggerSubEmitter(int subEmitterIndex, ref Particle particle) {} // 0x0000000189E18BA0-0x0000000189E18C20
-		[FreeFunction(Name = "ParticleSystemScriptBindings::TriggerSubEmitterForParticle", HasExplicitThis = true)]
-		internal void TriggerSubEmitterForParticle(int subEmitterIndex, Particle particle) {} // 0x0000000189E18B30-0x0000000189E18B44
-		[FreeFunction(Name = "ParticleSystemScriptBindings::TriggerSubEmitter", HasExplicitThis = true)]
-		public void TriggerSubEmitter(int subEmitterIndex, List<Particle> particles) {} // 0x0000000189E18B50-0x0000000189E18BA0
-		[FreeFunction(Name = "ParticleSystemGeometryJob::ResetPreMappedBufferMemory")]
-		public static void ResetPreMappedBufferMemory() {} // 0x0000000189E1862C-0x0000000189E18658
-		[FreeFunction(Name = "ParticleSystemGeometryJob::SetMaximumPreMappedBufferCounts")]
-		public static void SetMaximumPreMappedBufferCounts(int vertexBuffersCount, int indexBuffersCount) {} // 0x0000000189E18788-0x0000000189E187C8
-		[NativeName("SetUsesAxisOfRotation")]
-		public void AllocateAxisOfRotationAttribute() {} // 0x0000000189E17CC4-0x0000000189E17CF8
-		[NativeName("SetUsesMeshIndex")]
-		public void AllocateMeshIndexAttribute() {} // 0x0000000189E17D38-0x0000000189E17D6C
-		[NativeName("SetUsesCustomData")]
-		public void AllocateCustomDataAttribute(ParticleSystemCustomData stream) {} // 0x0000000189E17CF8-0x0000000189E17D38
-		internal unsafe void* GetManagedJobData() => default; // 0x0000000189E18014-0x0000000189E18048
-		internal JobHandle GetManagedJobHandle() => default; // 0x0000000189E1808C-0x0000000189E180B8
-		internal void SetManagedJobHandle(JobHandle handle) {} // 0x0000000189E18774-0x0000000189E18788
-		[FreeFunction("ScheduleManagedJob", ThrowsException = true)]
-		internal static unsafe JobHandle ScheduleManagedJob(ref JobsUtility.JobScheduleParameters parameters, void* additionalData) => default; // 0x0000000189E186AC-0x0000000189E186DC
-		[ThreadSafe]
+		} // 0x000000018BF2CC1C-0x000000018BF2CC24
+		public void SetCustomParticleData(List<Vector4> customData, ParticleSystemCustomData streamIndex) {} // 0x000000018BF2CBAC-0x000000018BF2CBE0
+		public int GetCustomParticleData(List<Vector4> customData, ParticleSystemCustomData streamIndex) => default; // 0x000000018BF2CC24-0x000000018BF2CC68
+		public PlaybackState GetPlaybackState() => default; // 0x00000001847598B0-0x0000000184759900
+		public void SetPlaybackState(PlaybackState playbackState) {} // 0x00000001855CAA80-0x00000001855CAAD0
+		private void GetTrailDataInternal(ref Trails trailData) {} // 0x000000018BF2CBE8-0x000000018BF2CC1C
+		public Trails GetTrails() => default; // 0x000000018646FE2C-0x000000018646FE34
+		public int GetTrails(ref Trails trailData) => default; // 0x000000018BF31480-0x000000018BF31488
+		public void SetTrails(Trails trailData) {} // 0x000000018BF315AC-0x000000018BF315B4
+		public void Simulate(float t, bool withChildren, bool restart, bool fixedTimeStep) {} // 0x000000018BF31564-0x000000018BF3156C
+		public void Simulate(float t, bool withChildren, bool restart) {} // 0x000000018BF31518-0x000000018BF31520
+		public void Simulate(float t, bool withChildren) {} // 0x000000018BF314CC-0x000000018BF314D4
+		public void Simulate(float t) {} // 0x000000018BF315F8-0x000000018BF31600
+		public void Play(bool withChildren) {} // 0x000000018BF31690-0x000000018BF31698
+		public void Play() {} // 0x000000018BF31644-0x000000018BF3164C
+		public void Pause(bool withChildren) {} // 0x000000018BF3143C-0x000000018BF31480
+		public void Pause() {} // 0x000000018BF3156C-0x000000018BF315AC
+		public void Stop(bool withChildren, ParticleSystemStopBehavior stopBehavior) {} // 0x000000018BF31520-0x000000018BF31564
+		public void Stop(bool withChildren) {} // 0x000000018BF314D4-0x000000018BF31518
+		public void Stop() {} // 0x000000018BF31488-0x000000018BF314CC
+		public void Clear(bool withChildren) {} // 0x000000018BF315B4-0x000000018BF315F8
+		public void Clear() {} // 0x000000018BF3164C-0x000000018BF31690
+		public bool IsAlive(bool withChildren) => default; // 0x000000018BF31600-0x000000018BF31644
+		public bool IsAlive() => default; // 0x000000018646FE2C-0x000000018646FE34
+		public void Emit(int count) {} // 0x000000018BF2CBA4-0x000000018BF2CBAC
+		private void Emit_Internal(int count) {} // 0x000000018BF2CB70-0x000000018BF2CBA4
+		public void Emit(EmitParams emitParams, int count) {} // 0x000000018646FE2C-0x000000018646FE34
+		private void EmitOld_Internal(ref Particle particle) {} // 0x000000018646FE2C-0x000000018646FE34
+		public void TriggerSubEmitter(int subEmitterIndex) {} // 0x000000018BF31714-0x000000018BF3171C
+		public void TriggerSubEmitter(int subEmitterIndex, ref Particle particle) {} // 0x000000018BF316D8-0x000000018BF316E0
+		internal void TriggerSubEmitterForParticle(int subEmitterIndex, Particle particle) {} // 0x000000018BF316E0-0x000000018BF31714
+		public void TriggerSubEmitter(int subEmitterIndex, List<Particle> particles) {} // 0x000000018BF31698-0x000000018BF316D8
+		public static void ResetPreMappedBufferMemory() {} // 0x000000018646FE2C-0x000000018646FE34
+		public static void SetMaximumPreMappedBufferCounts(int vertexBuffersCount, int indexBuffersCount) {} // 0x0000000185FBCAD0-0x0000000185FBCAE0
+		public void AllocateAxisOfRotationAttribute() {} // 0x0000000185FB7BD0-0x0000000185FB7BE0
+		public void AllocateMeshIndexAttribute() {} // 0x0000000185FB7BE0-0x0000000185FB7BF0
+		public void AllocateCustomDataAttribute(ParticleSystemCustomData stream) {} // 0x0000000185FBCAD0-0x0000000185FBCAE0
+		internal unsafe void* GetManagedJobData() => default; // 0x0000000185FBD310-0x0000000185FBD320
+		internal JobHandle GetManagedJobHandle() => default; // 0x000000018143E3C0-0x000000018143E3D0
+		internal void SetManagedJobHandle(JobHandle handle) {} // 0x0000000185FB2030-0x0000000185FB2040
+		internal static unsafe JobHandle ScheduleManagedJob(ref JobsUtility.JobScheduleParameters parameters, void* additionalData) => default; // 0x0000000185FE8D70-0x0000000185FE8D90
 		internal static unsafe void CopyManagedJobData(void* systemPtr, out NativeParticleData particleData) {
 			particleData = default;
-		} // 0x0000000189E17D6C-0x0000000189E17DB0
+		} // 0x000000018BF313EC-0x000000018BF3143C
 		private void GetParticleCurrentSize3D_Injected(ref Particle particle, out Vector3 ret) {
 			ret = default;
-		} // 0x0000000189E18130-0x0000000189E18184
+		} // 0x000000018646FE2C-0x000000018646FE34
 		private void GetParticleCurrentColor_Injected(ref Particle particle, out Color32 ret) {
 			ret = default;
-		} // 0x0000000189E180B8-0x0000000189E1810C
+		} // 0x000000018646FE2C-0x000000018646FE34
 		private void GetPlaybackState_Injected(out PlaybackState ret) {
 			ret = default;
-		} // 0x0000000189E183F0-0x0000000189E18434
-		private void SetPlaybackState_Injected(ref PlaybackState playbackState) {} // 0x0000000189E18978-0x0000000189E189BC
-		private void SetTrails_Injected(ref Trails trailData) {} // 0x0000000189E189D0-0x0000000189E18A14
-		private void Emit_Injected(ref EmitParams emitParams, int count) {} // 0x0000000189E17DF4-0x0000000189E17E48
-		private void TriggerSubEmitterForParticle_Injected(int subEmitterIndex, ref Particle particle) {} // 0x0000000189E18AE0-0x0000000189E18B30
+		} // 0x000000018646FE2C-0x000000018646FE34
+		private void SetPlaybackState_Injected(ref PlaybackState playbackState) {} // 0x000000018646FE2C-0x000000018646FE34
+		private void SetTrails_Injected(ref Trails trailData) {} // 0x000000018646FE2C-0x000000018646FE34
+		private void Emit_Injected(ref EmitParams emitParams, int count) {} // 0x000000018646FE2C-0x000000018646FE34
+		private void TriggerSubEmitterForParticle_Injected(int subEmitterIndex, ref Particle particle) {} // 0x000000018646FE2C-0x000000018646FE34
 		private void GetManagedJobHandle_Injected(out JobHandle ret) {
 			ret = default;
-		} // 0x0000000189E18048-0x0000000189E1808C
-		private void SetManagedJobHandle_Injected(ref JobHandle handle) {} // 0x0000000189E18730-0x0000000189E18774
+		} // 0x000000018646FE2C-0x000000018646FE34
+		private void SetManagedJobHandle_Injected(ref JobHandle handle) {} // 0x000000018646FE2C-0x000000018646FE34
 		private static unsafe void ScheduleManagedJob_Injected(ref JobsUtility.JobScheduleParameters parameters, void* additionalData, out JobHandle ret) {
 			ret = default;
-		} // 0x0000000189E18658-0x0000000189E186AC
+		} // 0x000000018646FE2C-0x000000018646FE34
 	}
 
-	public static class ParticlePhysicsExtensions // TypeDefIndex: 58768
+	public static class ParticlePhysicsExtensions // TypeDefIndex: 59793
 	{
-		// Extension methods
-		public static int GetSafeCollisionEventSize(this ParticleSystem ps) => default; // 0x0000000189E15900-0x0000000189E1590C
-		public static int GetCollisionEvents(this ParticleSystem ps, GameObject go, List<ParticleCollisionEvent> collisionEvents) => default; // 0x0000000189E158F4-0x0000000189E15900
+		// Methods
+		public static int GetSafeCollisionEventSize(ParticleSystem ps) => default; // 0x000000018BF2D634-0x000000018BF2D640
+		public static int GetCollisionEvents(ParticleSystem ps, GameObject go, List<ParticleCollisionEvent> collisionEvents) => default; // 0x000000018BF2D628-0x000000018BF2D634
 	}
 
-	public enum ParticleSystemRenderMode // TypeDefIndex: 58769
+	public enum ParticleSystemRenderMode // TypeDefIndex: 59794
 	{
 		Billboard = 0,
 		Stretch = 1,
@@ -1046,13 +792,13 @@ namespace UnityEngine
 		None = 5
 	}
 
-	public enum ParticleSystemMeshDistribution // TypeDefIndex: 58770
+	public enum ParticleSystemMeshDistribution // TypeDefIndex: 59795
 	{
 		UniformRandom = 0,
 		NonUniformRandom = 1
 	}
 
-	public enum ParticleSystemSortMode // TypeDefIndex: 58771
+	public enum ParticleSystemSortMode // TypeDefIndex: 59796
 	{
 		None = 0,
 		Distance = 1,
@@ -1061,7 +807,7 @@ namespace UnityEngine
 		Depth = 4
 	}
 
-	public enum ParticleSystemRenderSpace // TypeDefIndex: 58772
+	public enum ParticleSystemRenderSpace // TypeDefIndex: 59797
 	{
 		View = 0,
 		World = 1,
@@ -1070,7 +816,7 @@ namespace UnityEngine
 		Velocity = 4
 	}
 
-	public enum ParticleSystemCurveMode // TypeDefIndex: 58773
+	public enum ParticleSystemCurveMode // TypeDefIndex: 59798
 	{
 		Constant = 0,
 		Curve = 1,
@@ -1078,7 +824,7 @@ namespace UnityEngine
 		TwoConstants = 3
 	}
 
-	public enum ParticleSystemGradientMode // TypeDefIndex: 58774
+	public enum ParticleSystemGradientMode // TypeDefIndex: 59799
 	{
 		Color = 0,
 		Gradient = 1,
@@ -1087,7 +833,7 @@ namespace UnityEngine
 		RandomColor = 4
 	}
 
-	public enum ParticleSystemShapeType // TypeDefIndex: 58775
+	public enum ParticleSystemShapeType // TypeDefIndex: 59800
 	{
 		Sphere = 0,
 		SphereShell = 1,
@@ -1112,28 +858,27 @@ namespace UnityEngine
 		SpriteRenderer = 20
 	}
 
-	public enum ParticleSystemSimulationSpace // TypeDefIndex: 58776
+	public enum ParticleSystemSimulationSpace // TypeDefIndex: 59801
 	{
 		Local = 0,
 		World = 1,
 		Custom = 2
 	}
 
-	public enum ParticleSystemStopBehavior // TypeDefIndex: 58777
+	public enum ParticleSystemStopBehavior // TypeDefIndex: 59802
 	{
 		StopEmittingAndClear = 0,
 		StopEmitting = 1
 	}
 
-	public enum ParticleSystemScalingMode // TypeDefIndex: 58778
+	public enum ParticleSystemScalingMode // TypeDefIndex: 59803
 	{
 		Hierarchy = 0,
 		Local = 1,
 		Shape = 2
 	}
 
-	[UsedByNativeCode]
-	public enum ParticleSystemVertexStream // TypeDefIndex: 58779
+	public enum ParticleSystemVertexStream // TypeDefIndex: 59804
 	{
 		Position = 0,
 		Normal = 1,
@@ -1183,13 +928,13 @@ namespace UnityEngine
 		MeshIndex = 45
 	}
 
-	public enum ParticleSystemCustomData // TypeDefIndex: 58780
+	public enum ParticleSystemCustomData // TypeDefIndex: 59805
 	{
 		Custom1 = 0,
 		Custom2 = 1
 	}
 
-	public enum ParticleSystemTrailTextureMode // TypeDefIndex: 58781
+	public enum ParticleSystemTrailTextureMode // TypeDefIndex: 59806
 	{
 		Stretch = 0,
 		Tile = 1,
@@ -1197,7 +942,7 @@ namespace UnityEngine
 		RepeatPerSegment = 3
 	}
 
-	public enum ParticleSystemForceFieldShape // TypeDefIndex: 58782
+	public enum ParticleSystemForceFieldShape // TypeDefIndex: 59807
 	{
 		Sphere = 0,
 		Hemisphere = 1,
@@ -1205,9 +950,7 @@ namespace UnityEngine
 		Box = 3
 	}
 
-	[Flags]
-	[Obsolete("ParticleSystemVertexStreams is deprecated. Please use ParticleSystemVertexStream instead.", false)]
-	public enum ParticleSystemVertexStreams // TypeDefIndex: 58783
+	public enum ParticleSystemVertexStreams // TypeDefIndex: 59808
 	{
 		None = 0,
 		Position = 1,
@@ -1227,95 +970,76 @@ namespace UnityEngine
 		All = 2147483647
 	}
 
-	[NativeHeader("Modules/ParticleSystem/ParticleSystemRenderer.h")]
-	[NativeHeader("Modules/ParticleSystem/ScriptBindings/ParticleSystemRendererScriptBindings.h")]
-	[NativeHeader("ParticleSystemScriptingClasses.h")]
-	[RequireComponent(typeof(Transform))]
-	public sealed class ParticleSystemRenderer : Renderer // TypeDefIndex: 58784
+	public sealed class ParticleSystemRenderer : Renderer // TypeDefIndex: 59809
 	{
 		// Properties
-		[NativeName("RenderAlignment")]
-		public ParticleSystemRenderSpace alignment { get => default; set {} } // 0x0000000189E171E8-0x0000000189E1721C 0x0000000189E176D8-0x0000000189E17718
-		public ParticleSystemRenderMode renderMode { get => default; set {} } // 0x0000000189E175A0-0x0000000189E175D4 0x0000000189E17B34-0x0000000189E17B74
-		public ParticleSystemMeshDistribution meshDistribution { get => default; set {} } // 0x0000000189E17460-0x0000000189E17494 0x0000000189E1798C-0x0000000189E179CC
-		public ParticleSystemSortMode sortMode { get => default; set {} } // 0x0000000189E1763C-0x0000000189E17670 0x0000000189E17BFC-0x0000000189E17C3C
-		public float lengthScale { get => default; set {} } // 0x0000000189E17390-0x0000000189E173C4 0x0000000189E178C4-0x0000000189E17908
-		public float velocityScale { get => default; set {} } // 0x0000000189E176A4-0x0000000189E176D8 0x0000000189E17C80-0x0000000189E17CC4
-		public float cameraVelocityScale { get => default; set {} } // 0x0000000189E17250-0x0000000189E17284 0x0000000189E1775C-0x0000000189E177A0
-		public float normalDirection { get => default; set {} } // 0x0000000189E174FC-0x0000000189E17530 0x0000000189E17A54-0x0000000189E17A98
-		public float shadowBias { get => default; set {} } // 0x0000000189E17608-0x0000000189E1763C 0x0000000189E17BB8-0x0000000189E17BFC
-		public float minParticleSize { get => default; set {} } // 0x0000000189E174C8-0x0000000189E174FC 0x0000000189E17A10-0x0000000189E17A54
-		public float maxParticleSize { get => default; set {} } // 0x0000000189E173F8-0x0000000189E1742C 0x0000000189E17948-0x0000000189E1798C
-		public Vector3 pivot { get => default; set {} } // 0x0000000189E17574-0x0000000189E175A0 0x0000000189E17B20-0x0000000189E17B34
-		public Vector3 flip { get => default; set {} } // 0x0000000189E17330-0x0000000189E1735C 0x0000000189E1786C-0x0000000189E17880
-		public SpriteMaskInteraction maskInteraction { get => default; set {} } // 0x0000000189E173C4-0x0000000189E173F8 0x0000000189E17908-0x0000000189E17948
-		public Material trailMaterial { get => default; set {} } // 0x0000000189E17670-0x0000000189E176A4 0x0000000189E17C3C-0x0000000189E17C80
-		internal Material oldTrailMaterial { set {} } // 0x0000000189E17A98-0x0000000189E17ADC
-		public bool enableGPUInstancing { get => default; set {} } // 0x0000000189E17284-0x0000000189E172B8 0x0000000189E177A0-0x0000000189E177E4
-		public bool allowRoll { get => default; set {} } // 0x0000000189E1721C-0x0000000189E17250 0x0000000189E17718-0x0000000189E1775C
-		public bool freeformStretching { get => default; set {} } // 0x0000000189E1735C-0x0000000189E17390 0x0000000189E17880-0x0000000189E178C4
-		public bool rotateWithStretchDirection { get => default; set {} } // 0x0000000189E175D4-0x0000000189E17608 0x0000000189E17B74-0x0000000189E17BB8
-		public bool enableHGGPUInstancing { get => default; set {} } // 0x0000000189E172B8-0x0000000189E172EC 0x0000000189E177E4-0x0000000189E17828
-		public Mesh mesh { [FreeFunction(Name = "ParticleSystemRendererScriptBindings::GetMesh", HasExplicitThis = true)] get => default; [FreeFunction(Name = "ParticleSystemRendererScriptBindings::SetMesh", HasExplicitThis = true)] set {} } // 0x0000000189E17494-0x0000000189E174C8 0x0000000189E179CC-0x0000000189E17A10
-		public int meshCount { get => default; } // 0x0000000189E1742C-0x0000000189E17460 
-		public int activeVertexStreamsCount { get => default; } // 0x0000000189E171B4-0x0000000189E171E8 
-		public bool DisableCutOutAnimation { get => default; } // 0x0000000189E17180-0x0000000189E171B4 
-		public int CutOutMode { get => default; } // 0x0000000189E1714C-0x0000000189E17180 
-		public int CutOutDataSize { get => default; } // 0x0000000189E17118-0x0000000189E1714C 
+		public ParticleSystemRenderSpace alignment { get => default; set {} } // 0x000000018BF2EF1C-0x000000018BF2EF50 0x000000018BF2F40C-0x000000018BF2F44C
+		public ParticleSystemRenderMode renderMode { get => default; set {} } // 0x000000018BF2F2D4-0x000000018BF2F308 0x000000018BF2F868-0x000000018BF2F8A8
+		public ParticleSystemMeshDistribution meshDistribution { get => default; set {} } // 0x000000018BF2F194-0x000000018BF2F1C8 0x000000018BF2F6C0-0x000000018BF2F700
+		public ParticleSystemSortMode sortMode { get => default; set {} } // 0x000000018BF2F370-0x000000018BF2F3A4 0x000000018BF2F930-0x000000018BF2F970
+		public float lengthScale { get => default; set {} } // 0x000000018BF2F0C4-0x000000018BF2F0F8 0x000000018BF2F5F8-0x000000018BF2F63C
+		public float velocityScale { get => default; set {} } // 0x000000018BF2F3D8-0x000000018BF2F40C 0x000000018BF2F9B4-0x000000018BF2F9F8
+		public float cameraVelocityScale { get => default; set {} } // 0x000000018BF2EF84-0x000000018BF2EFB8 0x000000018BF2F490-0x000000018BF2F4D4
+		public float normalDirection { get => default; set {} } // 0x000000018BF2F230-0x000000018BF2F264 0x000000018BF2F788-0x000000018BF2F7CC
+		public float shadowBias { get => default; set {} } // 0x000000018BF2F33C-0x000000018BF2F370 0x000000018BF2F8EC-0x000000018BF2F930
+		public float minParticleSize { get => default; set {} } // 0x000000018BF2F1FC-0x000000018BF2F230 0x000000018BF2F744-0x000000018BF2F788
+		public float maxParticleSize { get => default; set {} } // 0x000000018BF2F12C-0x000000018BF2F160 0x000000018BF2F67C-0x000000018BF2F6C0
+		public Vector3 pivot { get => default; set {} } // 0x000000018BF2F2A8-0x000000018BF2F2D4 0x000000018BF2F854-0x000000018BF2F868
+		public Vector3 flip { get => default; set {} } // 0x000000018BF2F064-0x000000018BF2F090 0x000000018BF2F5A0-0x000000018BF2F5B4
+		public SpriteMaskInteraction maskInteraction { get => default; set {} } // 0x000000018BF2F0F8-0x000000018BF2F12C 0x000000018BF2F63C-0x000000018BF2F67C
+		public Material trailMaterial { get => default; set {} } // 0x000000018BF2F3A4-0x000000018BF2F3D8 0x000000018BF2F970-0x000000018BF2F9B4
+		internal Material oldTrailMaterial { set {} } // 0x000000018BF2F7CC-0x000000018BF2F810
+		public bool enableGPUInstancing { get => default; set {} } // 0x000000018BF2EFB8-0x000000018BF2EFEC 0x000000018BF2F4D4-0x000000018BF2F518
+		public bool allowRoll { get => default; set {} } // 0x000000018BF2EF50-0x000000018BF2EF84 0x000000018BF2F44C-0x000000018BF2F490
+		public bool freeformStretching { get => default; set {} } // 0x000000018BF2F090-0x000000018BF2F0C4 0x000000018BF2F5B4-0x000000018BF2F5F8
+		public bool rotateWithStretchDirection { get => default; set {} } // 0x000000018BF2F308-0x000000018BF2F33C 0x000000018BF2F8A8-0x000000018BF2F8EC
+		public bool enableHGGPUInstancing { get => default; set {} } // 0x000000018BF2EFEC-0x000000018BF2F020 0x000000018BF2F518-0x000000018BF2F55C
+		public Mesh mesh { get => default; set {} } // 0x000000018BF2F1C8-0x000000018BF2F1FC 0x000000018BF2F700-0x000000018BF2F744
+		public int meshCount { get => default; } // 0x000000018BF2F160-0x000000018BF2F194 
+		public int activeVertexStreamsCount { get => default; } // 0x000000018BF2EEE8-0x000000018BF2EF1C 
+		public bool DisableCutOutAnimation { get => default; } // 0x000000018BF2EEB4-0x000000018BF2EEE8 
+		public int CutOutMode { get => default; } // 0x000000018BF2EE80-0x000000018BF2EEB4 
+		public int CutOutDataSize { get => default; } // 0x000000018BF2EE4C-0x000000018BF2EE80 
 	
 		// Constructors
-		public ParticleSystemRenderer() {} // 0x000000018426FE60-0x000000018426FE68
+		public ParticleSystemRenderer() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		[Obsolete("EnableVertexStreams is deprecated.Use SetActiveVertexStreams instead.", false)]
-		public void EnableVertexStreams(ParticleSystemVertexStreams streams) {} // 0x0000000189E166CC-0x0000000189E166D8
-		[Obsolete("DisableVertexStreams is deprecated.Use SetActiveVertexStreams instead.", false)]
-		public void DisableVertexStreams(ParticleSystemVertexStreams streams) {} // 0x0000000189E166C0-0x0000000189E166CC
-		[Obsolete("AreVertexStreamsEnabled is deprecated.Use GetActiveVertexStreams instead.", false)]
-		public bool AreVertexStreamsEnabled(ParticleSystemVertexStreams streams) => default; // 0x0000000189E16544-0x0000000189E16560
-		[Obsolete("GetEnabledVertexStreams is deprecated.Use GetActiveVertexStreams instead.", false)]
-		public ParticleSystemVertexStreams GetEnabledVertexStreams(ParticleSystemVertexStreams streams) => default; // 0x0000000189E1671C-0x0000000189E16728
-		[Obsolete("Internal_SetVertexStreams is deprecated.Use SetActiveVertexStreams instead.", false)]
-		internal void Internal_SetVertexStreams(ParticleSystemVertexStreams streams, bool enabled) {} // 0x0000000189E16A08-0x0000000189E16FEC
-		[Obsolete("Internal_GetVertexStreams is deprecated.Use GetActiveVertexStreams instead.", false)]
-		internal ParticleSystemVertexStreams Internal_GetEnabledVertexStreams(ParticleSystemVertexStreams streams) => default; // 0x0000000189E167B0-0x0000000189E16A08
-		[FreeFunction(Name = "ParticleSystemRendererScriptBindings::GetMeshes", HasExplicitThis = true)]
-		[RequiredByNativeCode]
-		public int GetMeshes([NotNull("ArgumentNullException")] out Mesh[] meshes) {
+		public void EnableVertexStreams(ParticleSystemVertexStreams streams) {} // 0x000000018BF2E400-0x000000018BF2E40C
+		public void DisableVertexStreams(ParticleSystemVertexStreams streams) {} // 0x000000018BF2E3F4-0x000000018BF2E400
+		public bool AreVertexStreamsEnabled(ParticleSystemVertexStreams streams) => default; // 0x000000018BF2E278-0x000000018BF2E294
+		public ParticleSystemVertexStreams GetEnabledVertexStreams(ParticleSystemVertexStreams streams) => default; // 0x000000018BF2E450-0x000000018BF2E45C
+		internal void Internal_SetVertexStreams(ParticleSystemVertexStreams streams, bool enabled) {} // 0x000000018BF2E73C-0x000000018BF2ED20
+		internal ParticleSystemVertexStreams Internal_GetEnabledVertexStreams(ParticleSystemVertexStreams streams) => default; // 0x000000018BF2E4E4-0x000000018BF2E73C
+		public int GetMeshes(out Mesh[] meshes) {
 			meshes = default;
 			return default;
-		} // 0x0000000189E1676C-0x0000000189E167B0
-		[FreeFunction(Name = "ParticleSystemRendererScriptBindings::SetMeshes", HasExplicitThis = true)]
-		public void SetMeshes([NotNull("ArgumentNullException")] Mesh[] meshes, int size) {} // 0x0000000189E170A4-0x0000000189E170F8
-		public void SetMeshes(Mesh[] meshes) {} // 0x0000000189E170F8-0x0000000189E17118
-		[FreeFunction(Name = "ParticleSystemRendererScriptBindings::GetMeshWeightings", HasExplicitThis = true)]
-		public int GetMeshWeightings([NotNull("ArgumentNullException")] out float[] weightings) {
+		} // 0x000000018BF2E4A0-0x000000018BF2E4E4
+		public void SetMeshes(Mesh[] meshes, int size) {} // 0x000000018BF2EDD8-0x000000018BF2EE2C
+		public void SetMeshes(Mesh[] meshes) {} // 0x000000018BF2EE2C-0x000000018BF2EE4C
+		public int GetMeshWeightings(out float[] weightings) {
 			weightings = default;
 			return default;
-		} // 0x0000000189E16728-0x0000000189E1676C
-		[FreeFunction(Name = "ParticleSystemRendererScriptBindings::SetMeshWeightings", HasExplicitThis = true)]
-		public void SetMeshWeightings([NotNull("ArgumentNullException")] float[] weightings, int size) {} // 0x0000000189E17030-0x0000000189E17084
-		public void SetMeshWeightings(float[] weightings) {} // 0x0000000189E17084-0x0000000189E170A4
-		public void BakeMesh(Mesh mesh, bool useTransform = false /* Metadata: 0x01FDC690 */) {} // 0x0000000189E165C4-0x0000000189E16610
-		public void BakeMesh([NotNull("ArgumentNullException")] Mesh mesh, [NotNull("ArgumentNullException")] Camera camera, bool useTransform = false /* Metadata: 0x01FDC691 */) {} // 0x0000000189E16560-0x0000000189E165C4
-		public void BakeTrailsMesh(Mesh mesh, bool useTransform = false /* Metadata: 0x01FDC692 */) {} // 0x0000000189E16610-0x0000000189E1665C
-		public void BakeTrailsMesh([NotNull("ArgumentNullException")] Mesh mesh, [NotNull("ArgumentNullException")] Camera camera, bool useTransform = false /* Metadata: 0x01FDC693 */) {} // 0x0000000189E1665C-0x0000000189E166C0
-		[FreeFunction(Name = "ParticleSystemRendererScriptBindings::SetActiveVertexStreams", HasExplicitThis = true)]
-		public void SetActiveVertexStreams([NotNull("ArgumentNullException")] List<ParticleSystemVertexStream> streams) {} // 0x0000000189E16FEC-0x0000000189E17030
-		[FreeFunction(Name = "ParticleSystemRendererScriptBindings::GetActiveVertexStreams", HasExplicitThis = true)]
-		public void GetActiveVertexStreams([NotNull("ArgumentNullException")] List<ParticleSystemVertexStream> streams) {} // 0x0000000189E166D8-0x0000000189E1671C
+		} // 0x000000018BF2E45C-0x000000018BF2E4A0
+		public void SetMeshWeightings(float[] weightings, int size) {} // 0x000000018BF2ED64-0x000000018BF2EDB8
+		public void SetMeshWeightings(float[] weightings) {} // 0x000000018BF2EDB8-0x000000018BF2EDD8
+		public void BakeMesh(Mesh mesh, bool useTransform = false /* Metadata: 0x02081F74 */) {} // 0x000000018BF2E2F8-0x000000018BF2E344
+		public void BakeMesh(Mesh mesh, Camera camera, bool useTransform = false /* Metadata: 0x02081F75 */) {} // 0x000000018BF2E294-0x000000018BF2E2F8
+		public void BakeTrailsMesh(Mesh mesh, bool useTransform = false /* Metadata: 0x02081F76 */) {} // 0x000000018BF2E344-0x000000018BF2E390
+		public void BakeTrailsMesh(Mesh mesh, Camera camera, bool useTransform = false /* Metadata: 0x02081F77 */) {} // 0x000000018BF2E390-0x000000018BF2E3F4
+		public void SetActiveVertexStreams(List<ParticleSystemVertexStream> streams) {} // 0x000000018BF2ED20-0x000000018BF2ED64
+		public void GetActiveVertexStreams(List<ParticleSystemVertexStream> streams) {} // 0x000000018BF2E40C-0x000000018BF2E450
 		private void get_pivot_Injected(out Vector3 ret) {
 			ret = default;
-		} // 0x0000000189E17530-0x0000000189E17574
-		private void set_pivot_Injected(ref Vector3 value) {} // 0x0000000189E17ADC-0x0000000189E17B20
+		} // 0x000000018BF2F264-0x000000018BF2F2A8
+		private void set_pivot_Injected(ref Vector3 value) {} // 0x000000018BF2F810-0x000000018BF2F854
 		private void get_flip_Injected(out Vector3 ret) {
 			ret = default;
-		} // 0x0000000189E172EC-0x0000000189E17330
-		private void set_flip_Injected(ref Vector3 value) {} // 0x0000000189E17828-0x0000000189E1786C
+		} // 0x000000018BF2F020-0x000000018BF2F064
+		private void set_flip_Injected(ref Vector3 value) {} // 0x000000018BF2F55C-0x000000018BF2F5A0
 	}
 
-	[RequiredByNativeCode(Optional = true)]
-	public struct ParticleCollisionEvent // TypeDefIndex: 58785
+	public struct ParticleCollisionEvent // TypeDefIndex: 59810
 	{
 		// Fields
 		internal Vector3 m_Intersection; // 0x00
@@ -1324,107 +1048,94 @@ namespace UnityEngine
 		internal int m_ColliderInstanceID; // 0x24
 	
 		// Properties
-		public Vector3 intersection { get => default; } // 0x0000000183D85920-0x0000000183D85940 
-		public Vector3 normal { get => default; } // 0x0000000183D85900-0x0000000183D85920 
-		public Vector3 velocity { get => default; } // 0x0000000183D85CF0-0x0000000183D85D10 
-		public Component colliderComponent { get => default; } // 0x0000000189E158E8-0x0000000189E158F4 
+		public Vector3 intersection { get => default; } // 0x0000000185FE65B0-0x0000000185FE65D0 
+		public Vector3 normal { get => default; } // 0x0000000185FE6590-0x0000000185FE65B0 
+		public Vector3 velocity { get => default; } // 0x0000000185FE6980-0x0000000185FE69A0 
+		public Component colliderComponent { get => default; } // 0x000000018BF2D61C-0x000000018BF2D628 
 	
 		// Methods
-		[FreeFunction(Name = "ParticleSystemScriptBindings::InstanceIDToColliderComponent")]
-		private static Component InstanceIDToColliderComponent(int instanceID) => default; // 0x0000000189E158B4-0x0000000189E158E8
+		private static Component InstanceIDToColliderComponent(int instanceID) => default; // 0x000000018BF2D5E8-0x000000018BF2D61C
 	}
 
-	internal class ParticleSystemExtensionsImpl // TypeDefIndex: 58786
+	internal class ParticleSystemExtensionsImpl // TypeDefIndex: 59811
 	{
 		// Constructors
 		public ParticleSystemExtensionsImpl() {} // Dummy constructor
 	
 		// Methods
-		[FreeFunction(Name = "ParticleSystemScriptBindings::GetSafeCollisionEventSize")]
-		internal static int GetSafeCollisionEventSize([NotNull("ArgumentNullException")] ParticleSystem ps) => default; // 0x0000000189E15960-0x0000000189E15994
-		[FreeFunction(Name = "ParticleSystemScriptBindings::GetCollisionEvents")]
-		internal static int GetCollisionEvents([NotNull("ArgumentNullException")] ParticleSystem ps, [NotNull("ArgumentNullException")] GameObject go, [NotNull("ArgumentNullException")] List<ParticleCollisionEvent> collisionEvents) => default; // 0x0000000189E1590C-0x0000000189E15960
+		internal static int GetSafeCollisionEventSize(ParticleSystem ps) => default; // 0x000000018BF2D694-0x000000018BF2D6C8
+		internal static int GetCollisionEvents(ParticleSystem ps, GameObject go, List<ParticleCollisionEvent> collisionEvents) => default; // 0x000000018BF2D640-0x000000018BF2D694
 	}
 
-	[NativeHeader("Modules/ParticleSystem/ParticleSystem.h")]
-	[NativeHeader("ParticleSystemScriptingClasses.h")]
-	[NativeHeader("Modules/ParticleSystem/ParticleSystemForceField.h")]
-	[NativeHeader("Modules/ParticleSystem/ScriptBindings/ParticleSystemScriptBindings.h")]
-	[NativeHeader("Modules/ParticleSystem/ParticleSystemForceFieldManager.h")]
-	[RequireComponent(typeof(Transform))]
-	public class ParticleSystemForceField : UnityEngine.Behaviour // TypeDefIndex: 58787
+	public class ParticleSystemForceField : Behaviour // TypeDefIndex: 59812
 	{
 		// Properties
-		[NativeName("ForceShape")]
-		public ParticleSystemForceFieldShape shape { get => default; set {} } // 0x0000000189E15E2C-0x0000000189E15E60 0x0000000189E163CC-0x0000000189E1640C
-		public float startRange { get => default; set {} } // 0x0000000189E15E60-0x0000000189E15E94 0x0000000189E1640C-0x0000000189E16450
-		public float endRange { get => default; set {} } // 0x0000000189E15B64-0x0000000189E15B98 0x0000000189E16110-0x0000000189E16154
-		public float length { get => default; set {} } // 0x0000000189E15C40-0x0000000189E15C74 0x0000000189E161F0-0x0000000189E16234
-		public float gravityFocus { get => default; set {} } // 0x0000000189E15B98-0x0000000189E15BCC 0x0000000189E16154-0x0000000189E16198
-		public Vector2 rotationRandomness { get => default; set {} } // 0x0000000189E15D94-0x0000000189E15DB8 0x0000000189E16358-0x0000000189E16374
-		public bool multiplyDragByParticleSize { get => default; set {} } // 0x0000000189E15C74-0x0000000189E15CA8 0x0000000189E16234-0x0000000189E16278
-		public bool multiplyDragByParticleVelocity { get => default; set {} } // 0x0000000189E15CA8-0x0000000189E15CDC 0x0000000189E16278-0x0000000189E162BC
-		public Texture3D vectorField { get => default; set {} } // 0x0000000189E15F7C-0x0000000189E15FB0 0x0000000189E16500-0x0000000189E16544
-		public ParticleSystem.MinMaxCurve directionX { get => default; set {} } // 0x0000000189E159D8-0x0000000189E15A08 0x0000000189E15FF4-0x0000000189E16008
-		public ParticleSystem.MinMaxCurve directionY { get => default; set {} } // 0x0000000189E15A4C-0x0000000189E15A7C 0x0000000189E1604C-0x0000000189E16060
-		public ParticleSystem.MinMaxCurve directionZ { get => default; set {} } // 0x0000000189E15AC0-0x0000000189E15AF0 0x0000000189E160A4-0x0000000189E160B8
-		public ParticleSystem.MinMaxCurve gravity { get => default; set {} } // 0x0000000189E15C10-0x0000000189E15C40 0x0000000189E161DC-0x0000000189E161F0
-		public ParticleSystem.MinMaxCurve rotationSpeed { get => default; set {} } // 0x0000000189E15DFC-0x0000000189E15E2C 0x0000000189E163B8-0x0000000189E163CC
-		public ParticleSystem.MinMaxCurve rotationAttraction { get => default; set {} } // 0x0000000189E15D20-0x0000000189E15D50 0x0000000189E16300-0x0000000189E16314
-		public ParticleSystem.MinMaxCurve drag { get => default; set {} } // 0x0000000189E15B34-0x0000000189E15B64 0x0000000189E160FC-0x0000000189E16110
-		public ParticleSystem.MinMaxCurve vectorFieldSpeed { get => default; set {} } // 0x0000000189E15F4C-0x0000000189E15F7C 0x0000000189E164EC-0x0000000189E16500
-		public ParticleSystem.MinMaxCurve vectorFieldAttraction { get => default; set {} } // 0x0000000189E15ED8-0x0000000189E15F08 0x0000000189E16494-0x0000000189E164A8
+		public ParticleSystemForceFieldShape shape { get => default; set {} } // 0x000000018BF2DB60-0x000000018BF2DB94 0x000000018BF2E100-0x000000018BF2E140
+		public float startRange { get => default; set {} } // 0x000000018BF2DB94-0x000000018BF2DBC8 0x000000018BF2E140-0x000000018BF2E184
+		public float endRange { get => default; set {} } // 0x000000018BF2D898-0x000000018BF2D8CC 0x000000018BF2DE44-0x000000018BF2DE88
+		public float length { get => default; set {} } // 0x000000018BF2D974-0x000000018BF2D9A8 0x000000018BF2DF24-0x000000018BF2DF68
+		public float gravityFocus { get => default; set {} } // 0x000000018BF2D8CC-0x000000018BF2D900 0x000000018BF2DE88-0x000000018BF2DECC
+		public Vector2 rotationRandomness { get => default; set {} } // 0x000000018BF2DAC8-0x000000018BF2DAEC 0x000000018BF2E08C-0x000000018BF2E0A8
+		public bool multiplyDragByParticleSize { get => default; set {} } // 0x000000018BF2D9A8-0x000000018BF2D9DC 0x000000018BF2DF68-0x000000018BF2DFAC
+		public bool multiplyDragByParticleVelocity { get => default; set {} } // 0x000000018BF2D9DC-0x000000018BF2DA10 0x000000018BF2DFAC-0x000000018BF2DFF0
+		public Texture3D vectorField { get => default; set {} } // 0x000000018BF2DCB0-0x000000018BF2DCE4 0x000000018BF2E234-0x000000018BF2E278
+		public ParticleSystem.MinMaxCurve directionX { get => default; set {} } // 0x000000018BF2D70C-0x000000018BF2D73C 0x000000018BF2DD28-0x000000018BF2DD3C
+		public ParticleSystem.MinMaxCurve directionY { get => default; set {} } // 0x000000018BF2D780-0x000000018BF2D7B0 0x000000018BF2DD80-0x000000018BF2DD94
+		public ParticleSystem.MinMaxCurve directionZ { get => default; set {} } // 0x000000018BF2D7F4-0x000000018BF2D824 0x000000018BF2DDD8-0x000000018BF2DDEC
+		public ParticleSystem.MinMaxCurve gravity { get => default; set {} } // 0x000000018BF2D944-0x000000018BF2D974 0x000000018BF2DF10-0x000000018BF2DF24
+		public ParticleSystem.MinMaxCurve rotationSpeed { get => default; set {} } // 0x000000018BF2DB30-0x000000018BF2DB60 0x000000018BF2E0EC-0x000000018BF2E100
+		public ParticleSystem.MinMaxCurve rotationAttraction { get => default; set {} } // 0x000000018BF2DA54-0x000000018BF2DA84 0x000000018BF2E034-0x000000018BF2E048
+		public ParticleSystem.MinMaxCurve drag { get => default; set {} } // 0x000000018BF2D868-0x000000018BF2D898 0x000000018BF2DE30-0x000000018BF2DE44
+		public ParticleSystem.MinMaxCurve vectorFieldSpeed { get => default; set {} } // 0x000000018BF2DC80-0x000000018BF2DCB0 0x000000018BF2E220-0x000000018BF2E234
+		public ParticleSystem.MinMaxCurve vectorFieldAttraction { get => default; set {} } // 0x000000018BF2DC0C-0x000000018BF2DC3C 0x000000018BF2E1C8-0x000000018BF2E1DC
 	
 		// Constructors
-		public ParticleSystemForceField() {} // 0x000000018426FE60-0x000000018426FE68
+		public ParticleSystemForceField() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
 		private void get_rotationRandomness_Injected(out Vector2 ret) {
 			ret = default;
-		} // 0x0000000189E15D50-0x0000000189E15D94
-		private void set_rotationRandomness_Injected(ref Vector2 value) {} // 0x0000000189E16314-0x0000000189E16358
+		} // 0x000000018BF2DA84-0x000000018BF2DAC8
+		private void set_rotationRandomness_Injected(ref Vector2 value) {} // 0x000000018BF2E048-0x000000018BF2E08C
 		private void get_directionX_Injected(out ParticleSystem.MinMaxCurve ret) {
 			ret = default;
-		} // 0x0000000189E15994-0x0000000189E159D8
-		private void set_directionX_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x0000000189E15FB0-0x0000000189E15FF4
+		} // 0x000000018BF2D6C8-0x000000018BF2D70C
+		private void set_directionX_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x000000018BF2DCE4-0x000000018BF2DD28
 		private void get_directionY_Injected(out ParticleSystem.MinMaxCurve ret) {
 			ret = default;
-		} // 0x0000000189E15A08-0x0000000189E15A4C
-		private void set_directionY_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x0000000189E16008-0x0000000189E1604C
+		} // 0x000000018BF2D73C-0x000000018BF2D780
+		private void set_directionY_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x000000018BF2DD3C-0x000000018BF2DD80
 		private void get_directionZ_Injected(out ParticleSystem.MinMaxCurve ret) {
 			ret = default;
-		} // 0x0000000189E15A7C-0x0000000189E15AC0
-		private void set_directionZ_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x0000000189E16060-0x0000000189E160A4
+		} // 0x000000018BF2D7B0-0x000000018BF2D7F4
+		private void set_directionZ_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x000000018BF2DD94-0x000000018BF2DDD8
 		private void get_gravity_Injected(out ParticleSystem.MinMaxCurve ret) {
 			ret = default;
-		} // 0x0000000189E15BCC-0x0000000189E15C10
-		private void set_gravity_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x0000000189E16198-0x0000000189E161DC
+		} // 0x000000018BF2D900-0x000000018BF2D944
+		private void set_gravity_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x000000018BF2DECC-0x000000018BF2DF10
 		private void get_rotationSpeed_Injected(out ParticleSystem.MinMaxCurve ret) {
 			ret = default;
-		} // 0x0000000189E15DB8-0x0000000189E15DFC
-		private void set_rotationSpeed_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x0000000189E16374-0x0000000189E163B8
+		} // 0x000000018BF2DAEC-0x000000018BF2DB30
+		private void set_rotationSpeed_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x000000018BF2E0A8-0x000000018BF2E0EC
 		private void get_rotationAttraction_Injected(out ParticleSystem.MinMaxCurve ret) {
 			ret = default;
-		} // 0x0000000189E15CDC-0x0000000189E15D20
-		private void set_rotationAttraction_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x0000000189E162BC-0x0000000189E16300
+		} // 0x000000018BF2DA10-0x000000018BF2DA54
+		private void set_rotationAttraction_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x000000018BF2DFF0-0x000000018BF2E034
 		private void get_drag_Injected(out ParticleSystem.MinMaxCurve ret) {
 			ret = default;
-		} // 0x0000000189E15AF0-0x0000000189E15B34
-		private void set_drag_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x0000000189E160B8-0x0000000189E160FC
+		} // 0x000000018BF2D824-0x000000018BF2D868
+		private void set_drag_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x000000018BF2DDEC-0x000000018BF2DE30
 		private void get_vectorFieldSpeed_Injected(out ParticleSystem.MinMaxCurve ret) {
 			ret = default;
-		} // 0x0000000189E15F08-0x0000000189E15F4C
-		private void set_vectorFieldSpeed_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x0000000189E164A8-0x0000000189E164EC
+		} // 0x000000018BF2DC3C-0x000000018BF2DC80
+		private void set_vectorFieldSpeed_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x000000018BF2E1DC-0x000000018BF2E220
 		private void get_vectorFieldAttraction_Injected(out ParticleSystem.MinMaxCurve ret) {
 			ret = default;
-		} // 0x0000000189E15E94-0x0000000189E15ED8
-		private void set_vectorFieldAttraction_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x0000000189E16450-0x0000000189E16494
+		} // 0x000000018BF2DBC8-0x000000018BF2DC0C
+		private void set_vectorFieldAttraction_Injected(ref ParticleSystem.MinMaxCurve value) {} // 0x000000018BF2E184-0x000000018BF2E1C8
 	}
 
-	[NativeHeader("Modules/ParticleSystem/HGParticle/HGParticleMeshInstanceRenderer.h")]
-	[RequireComponent(typeof(ParticleSystemRenderer))]
-	[RequiredByNativeCode]
-	internal sealed class HGParticleMeshInstanceRenderer : Renderer // TypeDefIndex: 58788
+	internal sealed class HGParticleMeshInstanceRenderer : Renderer // TypeDefIndex: 59813
 	{
 		// Constructors
 		public HGParticleMeshInstanceRenderer() {} // Dummy constructor
@@ -1433,7 +1144,7 @@ namespace UnityEngine
 
 namespace UnityEngine.ParticleSystemJobs
 {
-	internal struct NativeParticleData // TypeDefIndex: 58791
+	internal struct NativeParticleData // TypeDefIndex: 59816
 	{
 		// Fields
 		internal int count; // 0x00
@@ -1452,7 +1163,7 @@ namespace UnityEngine.ParticleSystemJobs
 		internal unsafe void* meshIndices; // 0xF8
 	
 		// Nested types
-		internal struct Array3 // TypeDefIndex: 58789
+		internal struct Array3 // TypeDefIndex: 59814
 		{
 			// Fields
 			internal unsafe float* x; // 0x00
@@ -1460,7 +1171,7 @@ namespace UnityEngine.ParticleSystemJobs
 			internal unsafe float* z; // 0x10
 		}
 	
-		internal struct Array4 // TypeDefIndex: 58790
+		internal struct Array4 // TypeDefIndex: 59815
 		{
 			// Fields
 			internal unsafe float* x; // 0x00

@@ -4,25 +4,15 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
 
-// Image 109: NavMeshComponents.dll - Assembly: NavMeshComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59795-59803
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 112: NavMeshComponents.dll - Assembly: NavMeshComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60899-60907
 
-[DefaultExecutionOrder(-102)]
-[ExecuteInEditMode]
-public class NavMeshPrefabInstance : MonoBehaviour // TypeDefIndex: 59796
+public class NavMeshPrefabInstance : MonoBehaviour // TypeDefIndex: 60900
 {
 	// Fields
-	[SerializeField]
 	private NavMeshData m_NavMesh; // 0x18
-	[SerializeField]
 	private bool m_FollowTransform; // 0x20
 	private NavMeshDataInstance m_Instance; // 0x24
 	private static readonly List<NavMeshPrefabInstance> s_TrackedInstances; // 0x00
@@ -30,54 +20,40 @@ public class NavMeshPrefabInstance : MonoBehaviour // TypeDefIndex: 59796
 	private Quaternion m_Rotation; // 0x34
 
 	// Properties
-	public NavMeshData navMeshData { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
-	public bool followTransform { get => default; set {} } // 0x0000000183D4EF90-0x0000000183D4EFA0 0x000000018929C3A0-0x000000018929C3A8
-	public static List<NavMeshPrefabInstance> trackedInstances { get => default; } // 0x000000018929C350-0x000000018929C3A0 
+	public NavMeshData navMeshData { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
+	public bool followTransform { get => default; set {} } // 0x00000001813ECBF0-0x00000001813ECC00 0x000000018B3C6758-0x000000018B3C6760
+	public static List<NavMeshPrefabInstance> trackedInstances { get => default; } // 0x000000018B3C6708-0x000000018B3C6758 
 
 	// Constructors
-	public NavMeshPrefabInstance() {} // 0x000000018426FE60-0x000000018426FE68
-	static NavMeshPrefabInstance() {} // 0x000000018929C2C4-0x000000018929C350
+	public NavMeshPrefabInstance() {} // 0x000000018646DB20-0x000000018646DB28
+	static NavMeshPrefabInstance() {} // 0x000000018B3C667C-0x000000018B3C6708
 
 	// Methods
-	private void OnEnable() {} // 0x000000018929BF6C-0x000000018929BFA8
-	private void OnDisable() {} // 0x000000018929BF48-0x000000018929BF6C
-	public void UpdateInstance() {} // 0x000000018929C150-0x000000018929C174
-	private void AddInstance() {} // 0x000000018929BB80-0x000000018929BCC0
-	private void AddTracking() {} // 0x000000018929BCC0-0x000000018929BE54
-	private void RemoveTracking() {} // 0x000000018929BFA8-0x000000018929C124
-	private void SetFollowTransform(bool value) {} // 0x000000018929C124-0x000000018929C150
-	private bool HasMoved() => default; // 0x000000018929BE54-0x000000018929BF48
-	private static void UpdateTrackedInstances() {} // 0x000000018929C174-0x000000018929C2C4
+	private void OnEnable() {} // 0x000000018B3C6324-0x000000018B3C6360
+	private void OnDisable() {} // 0x000000018B3C6300-0x000000018B3C6324
+	public void UpdateInstance() {} // 0x000000018B3C6508-0x000000018B3C652C
+	private void AddInstance() {} // 0x000000018B3C5F38-0x000000018B3C6078
+	private void AddTracking() {} // 0x000000018B3C6078-0x000000018B3C620C
+	private void RemoveTracking() {} // 0x000000018B3C6360-0x000000018B3C64DC
+	private void SetFollowTransform(bool value) {} // 0x000000018B3C64DC-0x000000018B3C6508
+	private bool HasMoved() => default; // 0x000000018B3C620C-0x000000018B3C6300
+	private static void UpdateTrackedInstances() {} // 0x000000018B3C652C-0x000000018B3C667C
 }
 
 namespace UnityEngine.AI
 {
-	[AddComponentMenu("Navigation/NavMeshLink", 33)]
-	[DefaultExecutionOrder(-101)]
-	[ExecuteInEditMode]
-	[HelpURL("https://github.com/Unity-Technologies/NavMeshComponents#documentation-draft")]
-	public class NavMeshLink : MonoBehaviour // TypeDefIndex: 59797
+	public class NavMeshLink : MonoBehaviour // TypeDefIndex: 60901
 	{
 		// Fields
-		[SerializeField]
 		private int m_AgentTypeID; // 0x18
-		[SerializeField]
 		private Vector3 m_StartRight; // 0x1C
-		[SerializeField]
 		private Vector3 m_StartLeft; // 0x28
-		[SerializeField]
 		private Vector3 m_EndRight; // 0x34
-		[SerializeField]
 		private Vector3 m_EndLeft; // 0x40
-		[SerializeField]
 		private bool m_IsExt; // 0x4C
-		[SerializeField]
 		private float m_CostModifier; // 0x50
-		[SerializeField]
 		private bool m_Bidirectional; // 0x54
-		[SerializeField]
 		private bool m_AutoUpdatePosition; // 0x55
-		[SerializeField]
 		private int m_Area; // 0x58
 		public bool autoSnapExtent; // 0x5C
 		public Vector3 snapExtent; // 0x60
@@ -87,166 +63,125 @@ namespace UnityEngine.AI
 		private static readonly List<NavMeshLink> s_Tracked; // 0x00
 	
 		// Properties
-		public int agentTypeID { get => default; set {} } // 0x00000001820D1AC0-0x00000001820D1AD0 0x000000018929B244-0x000000018929B254
-		public Vector3 startRight { get => default; set {} } // 0x0000000183D568F0-0x0000000183D56910 0x000000018929B414-0x000000018929B488
-		public Vector3 startLeft { get => default; set {} } // 0x0000000183D50E80-0x0000000183D50EA0 0x000000018929B3A0-0x000000018929B414
-		public Vector3 startMid { get => default; } // 0x000000018929B1C4-0x000000018929B244 
-		public Vector3 endRight { get => default; set {} } // 0x0000000183D522E0-0x0000000183D52300 0x000000018929B31C-0x000000018929B390
-		public Vector3 endLeft { get => default; set {} } // 0x0000000183D52300-0x0000000183D52320 0x000000018929B2A8-0x000000018929B31C
-		public Vector3 endMid { get => default; } // 0x000000018929B144-0x000000018929B1C4 
-		public bool isExt { get => default; set {} } // 0x0000000183D4F520-0x0000000183D4F530 0x000000018929B390-0x000000018929B3A0
-		public float costModifier { get => default; set {} } // 0x0000000183D51C90-0x0000000183D51CA0 0x000000018929B27C-0x000000018929B2A8
-		public bool bidirectional { get => default; set {} } // 0x0000000183D4F320-0x0000000183D4F330 0x000000018929B26C-0x000000018929B27C
-		public bool autoUpdate { get => default; set {} } // 0x0000000183D4F310-0x0000000183D4F320 0x000000018929B264-0x000000018929B26C
-		public int area { get => default; set {} } // 0x0000000183D4EF00-0x0000000183D4EF10 0x000000018929B254-0x000000018929B264
+		public int agentTypeID { get => default; set {} } // 0x00000001813AE560-0x00000001813AE570 0x000000018B3C55FC-0x000000018B3C560C
+		public Vector3 startRight { get => default; set {} } // 0x0000000185FBE120-0x0000000185FBE140 0x000000018B3C57CC-0x000000018B3C5840
+		public Vector3 startLeft { get => default; set {} } // 0x0000000185FB2340-0x0000000185FB2360 0x000000018B3C5758-0x000000018B3C57CC
+		public Vector3 startMid { get => default; } // 0x000000018B3C557C-0x000000018B3C55FC 
+		public Vector3 endRight { get => default; set {} } // 0x0000000185FB3600-0x0000000185FB3620 0x000000018B3C56D4-0x000000018B3C5748
+		public Vector3 endLeft { get => default; set {} } // 0x0000000185FB3620-0x0000000185FB3640 0x000000018B3C5660-0x000000018B3C56D4
+		public Vector3 endMid { get => default; } // 0x000000018B3C54FC-0x000000018B3C557C 
+		public bool isExt { get => default; set {} } // 0x0000000185FB0B40-0x0000000185FB0B50 0x000000018B3C5748-0x000000018B3C5758
+		public float costModifier { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x000000018B3C5634-0x000000018B3C5660
+		public bool bidirectional { get => default; set {} } // 0x0000000185FB0A80-0x0000000185FB0A90 0x000000018B3C5624-0x000000018B3C5634
+		public bool autoUpdate { get => default; set {} } // 0x0000000185FB0A70-0x0000000185FB0A80 0x000000018B3C561C-0x000000018B3C5624
+		public int area { get => default; set {} } // 0x0000000183F80450-0x0000000183F80460 0x000000018B3C560C-0x000000018B3C561C
 	
 		// Constructors
-		public NavMeshLink() {} // 0x000000018929B080-0x000000018929B144
-		static NavMeshLink() {} // 0x000000018929AFF4-0x000000018929B080
+		public NavMeshLink() {} // 0x000000018B3C5438-0x000000018B3C54FC
+		static NavMeshLink() {} // 0x000000018B3C53AC-0x000000018B3C5438
 	
 		// Methods
-		private void OnEnable() {} // 0x000000018929ABDC-0x000000018929AC3C
-		private void OnDisable() {} // 0x000000018929AB90-0x000000018929ABDC
-		public void UpdateLink() {} // 0x000000018929AE80-0x000000018929AEA4
-		private static void AddTracking(NavMeshLink link) {} // 0x000000018929A900-0x000000018929AA94
-		private static void RemoveTracking(NavMeshLink link) {} // 0x000000018929AC3C-0x000000018929ADB8
-		private void SetAutoUpdate(bool value) {} // 0x000000018929ADB8-0x000000018929AE1C
-		private void AddLink() {} // 0x000000018929A73C-0x000000018929A900
-		public void SetByLinkData(NavMeshLinkData data) {} // 0x000000018929AE1C-0x000000018929AE80
-		private bool HasTransformChanged() => default; // 0x000000018929AA94-0x000000018929AB88
-		private void OnDidApplyAnimationProperties() {} // 0x000000018929AB88-0x000000018929AB90
-		private static void UpdateTrackedInstances() {} // 0x000000018929AEA4-0x000000018929AFF4
+		private void OnEnable() {} // 0x000000018B3C4F94-0x000000018B3C4FF4
+		private void OnDisable() {} // 0x000000018B3C4F48-0x000000018B3C4F94
+		public void UpdateLink() {} // 0x000000018B3C5238-0x000000018B3C525C
+		private static void AddTracking(NavMeshLink link) {} // 0x000000018B3C4CB8-0x000000018B3C4E4C
+		private static void RemoveTracking(NavMeshLink link) {} // 0x000000018B3C4FF4-0x000000018B3C5170
+		private void SetAutoUpdate(bool value) {} // 0x000000018B3C5170-0x000000018B3C51D4
+		private void AddLink() {} // 0x000000018B3C4AF4-0x000000018B3C4CB8
+		public void SetByLinkData(NavMeshLinkData data) {} // 0x000000018B3C51D4-0x000000018B3C5238
+		private bool HasTransformChanged() => default; // 0x000000018B3C4E4C-0x000000018B3C4F40
+		private void OnDidApplyAnimationProperties() {} // 0x000000018B3C4F40-0x000000018B3C4F48
+		private static void UpdateTrackedInstances() {} // 0x000000018B3C525C-0x000000018B3C53AC
 	}
 
-	[AddComponentMenu("Navigation/NavMeshModifier", 32)]
-	[ExecuteInEditMode]
-	[HelpURL("https://github.com/Unity-Technologies/NavMeshComponents#documentation-draft")]
-	public class NavMeshModifier : MonoBehaviour // TypeDefIndex: 59798
+	public class NavMeshModifier : MonoBehaviour // TypeDefIndex: 60902
 	{
 		// Fields
-		[SerializeField]
 		private bool m_OverrideArea; // 0x18
-		[SerializeField]
 		private int m_Area; // 0x1C
-		[SerializeField]
 		private bool m_IgnoreFromBuild; // 0x20
-		[SerializeField]
 		private List<int> m_AffectedAgents; // 0x28
 		private static readonly List<NavMeshModifier> s_NavMeshModifiers; // 0x00
 	
 		// Properties
-		public bool overrideArea { get => default; set {} } // 0x0000000181002A50-0x0000000181002A60 0x0000000181002B40-0x0000000181002B50
-		public int area { get => default; set {} } // 0x0000000183D4EBB0-0x0000000183D4EBC0 0x0000000183D4EBC0-0x0000000183D4EBD0
-		public bool ignoreFromBuild { get => default; set {} } // 0x0000000183D4EF90-0x0000000183D4EFA0 0x0000000183D4EFC0-0x0000000183D4EFD0
-		public static List<NavMeshModifier> activeModifiers { get => default; } // 0x000000018929BB30-0x000000018929BB80 
+		public bool overrideArea { get => default; set {} } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
+		public int area { get => default; set {} } // 0x00000001813AE570-0x00000001813AE580 0x00000001813AE9D0-0x00000001813AE9E0
+		public bool ignoreFromBuild { get => default; set {} } // 0x00000001813ECBF0-0x00000001813ECC00 0x00000001813EE9B0-0x00000001813EE9C0
+		public static List<NavMeshModifier> activeModifiers { get => default; } // 0x000000018B3C5EE8-0x000000018B3C5F38 
 	
 		// Constructors
-		public NavMeshModifier() {} // 0x000000018929BA6C-0x000000018929BB30
-		static NavMeshModifier() {} // 0x000000018929B9E0-0x000000018929BA6C
+		public NavMeshModifier() {} // 0x000000018B3C5E24-0x000000018B3C5EE8
+		static NavMeshModifier() {} // 0x000000018B3C5D98-0x000000018B3C5E24
 	
 		// Methods
-		private void OnEnable() {} // 0x000000018929B930-0x000000018929B9E0
-		private void OnDisable() {} // 0x000000018929B8C0-0x000000018929B930
-		public bool AffectsAgentType(int agentTypeID) => default; // 0x000000018929B820-0x000000018929B8C0
+		private void OnEnable() {} // 0x000000018B3C5CE8-0x000000018B3C5D98
+		private void OnDisable() {} // 0x000000018B3C5C78-0x000000018B3C5CE8
+		public bool AffectsAgentType(int agentTypeID) => default; // 0x000000018B3C5BD8-0x000000018B3C5C78
 	}
 
-	[AddComponentMenu("Navigation/NavMeshModifierVolume", 31)]
-	[ExecuteInEditMode]
-	[HelpURL("https://github.com/Unity-Technologies/NavMeshComponents#documentation-draft")]
-	public class NavMeshModifierVolume : MonoBehaviour // TypeDefIndex: 59799
+	public class NavMeshModifierVolume : MonoBehaviour // TypeDefIndex: 60903
 	{
 		// Fields
-		[SerializeField]
 		private Vector3 m_Size; // 0x18
-		[SerializeField]
 		private Vector3 m_Center; // 0x24
-		[SerializeField]
 		private int m_Area; // 0x30
-		[SerializeField]
 		private List<int> m_AffectedAgents; // 0x38
 		private static readonly List<NavMeshModifierVolume> s_NavMeshModifiers; // 0x00
 	
 		// Properties
-		public Vector3 size { get => default; set {} } // 0x0000000183D52510-0x0000000183D52530 0x0000000183D52530-0x0000000183D52540
-		public Vector3 center { get => default; set {} } // 0x0000000183D59780-0x0000000183D597A0 0x0000000183D5A9E0-0x0000000183D5A9F0
-		public int area { get => default; set {} } // 0x0000000183D4ED20-0x0000000183D4ED30 0x0000000183D4EE10-0x0000000183D4EE20
-		public static List<NavMeshModifierVolume> activeModifiers { get => default; } // 0x000000018929B7D0-0x000000018929B820 
+		public Vector3 size { get => default; set {} } // 0x0000000185FB3830-0x0000000185FB3850 0x0000000185FB3850-0x0000000185FB3860
+		public Vector3 center { get => default; set {} } // 0x0000000185FB8980-0x0000000185FB89A0 0x0000000185FBC070-0x0000000185FBC080
+		public int area { get => default; set {} } // 0x00000001813CFF60-0x00000001813CFF70 0x00000001813D0A90-0x00000001813D0AA0
+		public static List<NavMeshModifierVolume> activeModifiers { get => default; } // 0x000000018B3C5B88-0x000000018B3C5BD8 
 	
 		// Constructors
-		public NavMeshModifierVolume() {} // 0x000000018929B6D4-0x000000018929B7D0
-		static NavMeshModifierVolume() {} // 0x000000018929B648-0x000000018929B6D4
+		public NavMeshModifierVolume() {} // 0x000000018B3C5A8C-0x000000018B3C5B88
+		static NavMeshModifierVolume() {} // 0x000000018B3C5A00-0x000000018B3C5A8C
 	
 		// Methods
-		private void OnEnable() {} // 0x000000018929B598-0x000000018929B648
-		private void OnDisable() {} // 0x000000018929B528-0x000000018929B598
-		public bool AffectsAgentType(int agentTypeID) => default; // 0x000000018929B488-0x000000018929B528
+		private void OnEnable() {} // 0x000000018B3C5950-0x000000018B3C5A00
+		private void OnDisable() {} // 0x000000018B3C58E0-0x000000018B3C5950
+		public bool AffectsAgentType(int agentTypeID) => default; // 0x000000018B3C5840-0x000000018B3C58E0
 	}
 
-	public enum CollectObjects // TypeDefIndex: 59800
+	public enum CollectObjects // TypeDefIndex: 60904
 	{
 		All = 0,
 		Volume = 1,
 		Children = 2
 	}
 
-	public enum PartitioningMethod // TypeDefIndex: 59801
+	public enum PartitioningMethod // TypeDefIndex: 60905
 	{
 		Layers = 0,
 		Monotone = 1,
 		Watershed = 2
 	}
 
-	[AddComponentMenu("Navigation/NavMeshSurface", 30)]
-	[DefaultExecutionOrder(-102)]
-	[ExecuteAlways]
-	[HelpURL("https://github.com/Unity-Technologies/NavMeshComponents#documentation-draft")]
-	public class NavMeshSurface : MonoBehaviour // TypeDefIndex: 59803
+	public class NavMeshSurface : MonoBehaviour // TypeDefIndex: 60907
 	{
 		// Fields
-		[SerializeField]
 		private int m_AgentTypeID; // 0x18
-		[SerializeField]
 		private CollectObjects m_CollectObjects; // 0x1C
-		[SerializeField]
 		private Vector3 m_Size; // 0x20
-		[SerializeField]
 		private Vector3 m_Center; // 0x2C
-		[SerializeField]
 		private LayerMask m_LayerMask; // 0x38
-		[SerializeField]
 		private string m_BlockTag; // 0x40
-		[SerializeField]
 		private PartitioningMethod m_PartitioningMethod; // 0x48
-		[SerializeField]
 		private bool m_FilterLowHangingObstacles; // 0x4C
-		[SerializeField]
 		private bool m_FilterLedgeSpans; // 0x4D
-		[SerializeField]
 		private bool m_FilterWalkableLowHeightSpans; // 0x4E
-		[SerializeField]
 		private bool m_OverrideMinRegionArea; // 0x4F
-		[SerializeField]
 		private float m_MinRegionArea; // 0x50
-		[SerializeField]
 		private NavMeshCollectGeometry m_UseGeometry; // 0x54
-		[SerializeField]
 		private int m_DefaultArea; // 0x58
-		[SerializeField]
 		private bool m_IgnoreNavMeshAgent; // 0x5C
-		[SerializeField]
 		private bool m_IgnoreNavMeshObstacle; // 0x5D
-		[SerializeField]
 		private bool m_OverrideTileSize; // 0x5E
-		[SerializeField]
 		private int m_TileSize; // 0x60
-		[SerializeField]
 		private bool m_OverrideVoxelSize; // 0x64
-		[SerializeField]
 		private float m_VoxelSize; // 0x68
-		[SerializeField]
 		private bool m_BuildHeightMesh; // 0x6C
-		[FormerlySerializedAs("m_BakedNavMeshData")]
-		[SerializeField]
 		private NavMeshData m_NavMeshData; // 0x70
 		private NavMeshDataInstance m_NavMeshDataInstance; // 0x78
 		private Vector3 m_LastPosition; // 0x7C
@@ -254,52 +189,74 @@ namespace UnityEngine.AI
 		private static readonly List<NavMeshSurface> s_NavMeshSurfaces; // 0x00
 	
 		// Properties
-		public int agentTypeID { get => default; set {} } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000183D4E9C0-0x0000000183D4E9D0
-		public CollectObjects collectObjects { get => default; set {} } // 0x0000000183D4EBB0-0x0000000183D4EBC0 0x0000000183D4EBC0-0x0000000183D4EBD0
-		public Vector3 size { get => default; set {} } // 0x0000000183D59660-0x0000000183D59680 0x0000000183D5AE00-0x0000000183D5AE10
-		public Vector3 center { get => default; set {} } // 0x0000000183D59800-0x0000000183D59820 0x0000000183D5BF30-0x0000000183D5BF40
-		public LayerMask layerMask { get => default; set {} } // 0x0000000183D4EC30-0x0000000183D4EC40 0x0000000183D4ECB0-0x0000000183D4ECC0
-		public string BlockTag { get => default; set {} } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
-		public PartitioningMethod partitioningMethod { get => default; set {} } // 0x0000000183D4EC50-0x0000000183D4EC60 0x0000000183D4ECD0-0x0000000183D4ECE0
-		public bool filterLowHangingObstacles { get => default; set {} } // 0x0000000183D4F520-0x0000000183D4F530 0x0000000183D4F550-0x0000000183D4F560
-		public bool filterLedgeSpans { get => default; set {} } // 0x0000000183D5CEB0-0x0000000183D5CEC0 0x0000000183D5CEC0-0x0000000183D5CED0
-		public bool filterWalkableLowHeightSpans { get => default; set {} } // 0x0000000183D71340-0x0000000183D71350 0x0000000183D71380-0x0000000183D71390
-		public bool overrideMinRegionArea { get => default; set {} } // 0x0000000183D71360-0x0000000183D71370 0x0000000183D713A0-0x0000000183D713B0
-		public float minRegionArea { get => default; set {} } // 0x0000000183D51C90-0x0000000183D51CA0 0x0000000183D51CA0-0x0000000183D51CB0
-		public NavMeshCollectGeometry useGeometry { get => default; set {} } // 0x0000000183D4EEC0-0x0000000183D4EED0 0x0000000183D4EF10-0x0000000183D4EF20
-		public int defaultArea { get => default; set {} } // 0x0000000183D4EF00-0x0000000183D4EF10 0x0000000183D4EF50-0x0000000183D4EF60
-		public bool ignoreNavMeshAgent { get => default; set {} } // 0x0000000183D4F600-0x0000000183D4F610 0x0000000183D4F620-0x0000000183D4F630
-		public bool ignoreNavMeshObstacle { get => default; set {} } // 0x0000000183D71350-0x0000000183D71360 0x0000000183D71390-0x0000000183D713A0
-		public bool overrideTileSize { get => default; set {} } // 0x0000000183D71370-0x0000000183D71380 0x0000000183D713B0-0x0000000183D713C0
-		public int tileSize { get => default; set {} } // 0x0000000183D4F050-0x0000000183D4F060 0x0000000183D4F5A0-0x0000000183D4F5B0
-		public bool overrideVoxelSize { get => default; set {} } // 0x0000000183D590F0-0x0000000183D59100 0x0000000183D59100-0x0000000183D59110
-		public float voxelSize { get => default; set {} } // 0x0000000183D56A40-0x0000000183D56A50 0x0000000183D59110-0x0000000183D59120
-		public bool buildHeightMesh { get => default; set {} } // 0x0000000183D590E0-0x0000000183D590F0 0x0000000183D50950-0x0000000183D50960
-		public NavMeshData navMeshData { get => default; set {} } // 0x0000000183D4EB30-0x0000000183D4EB40 0x000000018519C3C8-0x000000018519C3D8
-		public static List<NavMeshSurface> activeSurfaces { get => default; } // 0x000000018929F0CC-0x000000018929F11C 
+		public int agentTypeID { get => default; set {} } // 0x0000000185FBAA80-0x0000000185FBAAA0 0x0000000185FBCE10-0x0000000185FBCE20
+		public CollectObjects collectObjects { get => default; set {} } // 0x00000001813E5E30-0x00000001813E5E40 0x00000001813E6F50-0x00000001813E6F60
+		public Vector3 size { get => default; set {} } // 0x00000001813FF010-0x00000001813FF020 0x0000000185F05C80-0x0000000185F05C90
+		public Vector3 center { get => default; set {} } // 0x0000000185FB0570-0x0000000185FB0580 0x0000000185FB05D0-0x0000000185FB05E0
+		public LayerMask layerMask { get => default; set {} } // 0x0000000185FB0B40-0x0000000185FB0B50 0x0000000185FB0B70-0x0000000185FB0B80
+		public string BlockTag { get => default; set {} } // 0x0000000185FBE3E0-0x0000000185FBE3F0 0x0000000185FBE3F0-0x0000000185FBE400
+		public PartitioningMethod partitioningMethod { get => default; set {} } // 0x0000000185FD1F90-0x0000000185FD1FA0 0x0000000185FD1FD0-0x0000000185FD1FE0
+		public bool filterLowHangingObstacles { get => default; set {} } // 0x0000000185FD1FB0-0x0000000185FD1FC0 0x0000000185FD1FF0-0x0000000185FD2000
+		public bool filterLedgeSpans { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
+		public bool filterWalkableLowHeightSpans { get => default; set {} } // 0x0000000185FB0670-0x0000000185FB0680 0x0000000185FB06A0-0x0000000185FB06B0
+		public bool overrideMinRegionArea { get => default; set {} } // 0x0000000183F80450-0x0000000183F80460 0x0000000183F804E0-0x0000000183F804F0
+		public float minRegionArea { get => default; set {} } // 0x0000000185FB0C10-0x0000000185FB0C20 0x0000000185FB0C30-0x0000000185FB0C40
+		public NavMeshCollectGeometry useGeometry { get => default; set {} } // 0x0000000185FD1FA0-0x0000000185FD1FB0 0x0000000185FD1FE0-0x0000000185FD1FF0
+		public int defaultArea { get => default; set {} } // 0x0000000185FD1FC0-0x0000000185FD1FD0 0x0000000185FD2000-0x0000000185FD2010
+		public bool ignoreNavMeshAgent { get => default; set {} } // 0x000000018143E3B0-0x000000018143E3C0 0x000000018143E3C0-0x000000018143E3D0
+		public bool ignoreNavMeshObstacle { get => default; set {} } // 0x0000000185FBA670-0x0000000185FBA680 0x0000000185FBA680-0x0000000185FBA690
+		public bool overrideTileSize { get => default; set {} } // 0x0000000185FB8230-0x0000000185FB8240 0x0000000185FBA690-0x0000000185FBA6A0
+		public int tileSize { get => default; set {} } // 0x0000000185FBA660-0x0000000185FBA670 0x0000000185FB1E80-0x0000000185FB1E90
+		public bool overrideVoxelSize { get => default; set {} } // 0x0000000181460F70-0x0000000181460F80 0x00000001874BE90C-0x00000001874BE91C
+		public float voxelSize { get => default; set {} } // 0x000000018B3C9484-0x000000018B3C94D4 0x000000018B3C8B34-0x000000018B3C8B80
+		public bool buildHeightMesh { get => default; set {} } // 0x000000018B3C8AE8-0x000000018B3C8B34 0x000000018B3C6760-0x000000018B3C68D0
+		public NavMeshData navMeshData { get => default; set {} } // 0x000000018B3C8D54-0x000000018B3C8D74 0x000000018B3C85B0-0x000000018B3C8710
+		public static List<NavMeshSurface> activeSurfaces { get => default; } // 0x000000018B3C6E84-0x000000018B3C717C 
+	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 60906
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Predicate<NavMeshModifierVolume> __9__105_0; // 0x08
+			public static Predicate<NavMeshModifier> __9__106_0; // 0x10
+			public static Predicate<NavMeshBuildSource> __9__106_1; // 0x18
+			public static Predicate<NavMeshBuildSource> __9__106_2; // 0x20
+	
+			// Constructors
+			static __c() {} // 0x00000001813AE560-0x00000001813AE570
+			public __c() {} // 0x00000001813AE9C0-0x00000001813AE9D0
+	
+			// Methods
+			internal bool _AppendModifierVolumes_b__105_0(NavMeshModifierVolume x) => default; // 0x00000001813AE570-0x00000001813AE580
+			internal bool _CollectSources_b__106_0(NavMeshModifier x) => default; // 0x00000001813AE9D0-0x00000001813AE9E0
+			internal bool _CollectSources_b__106_1(NavMeshBuildSource x) => default; // 0x0000000185FBAAA0-0x0000000185FBAAC0
+			internal bool _CollectSources_b__106_2(NavMeshBuildSource x) => default; // 0x0000000185FBC570-0x0000000185FBC580
+		}
 	
 		// Constructors
-		public NavMeshSurface() {} // 0x000000018929F004-0x000000018929F0CC
-		static NavMeshSurface() {} // 0x000000018929EF78-0x000000018929F004
+		public NavMeshSurface() {} // 0x000000018B3C94F8-0x000000018B3C95B4
+		static NavMeshSurface() {} // 0x000000018B3C95B4-0x000000018B3C9670
 	
 		// Methods
-		private void OnEnable() {} // 0x000000018929E77C-0x000000018929E7C8
-		private void OnDisable() {} // 0x000000018929E730-0x000000018929E77C
-		public void AddData() {} // 0x000000018929C3A8-0x000000018929C518
-		public void RemoveData() {} // 0x000000018929E99C-0x000000018929E9BC
-		public NavMeshBuildSettings GetBuildSettings() => default; // 0x000000018929E1F8-0x000000018929E358
-		public void BuildNavMesh() {} // 0x000000018929CACC-0x000000018929CDC4
-		public AsyncOperation UpdateNavMesh(NavMeshData data) => default; // 0x000000018929EDC8-0x000000018929EF78
-		public bool UpdateNavMeshSync(NavMeshData data) => default; // 0x000000018929EC18-0x000000018929EDC8
-		private static void Register(NavMeshSurface surface) {} // 0x000000018929E7C8-0x000000018929E99C
-		private static void Unregister(NavMeshSurface surface) {} // 0x000000018929E9BC-0x000000018929EB38
-		private static void UpdateActive() {} // 0x000000018929EB38-0x000000018929EBE4
-		private void AppendModifierVolumes(ref List<NavMeshBuildSource> sources) {} // 0x000000018929C518-0x000000018929CACC
-		private List<NavMeshBuildSource> CollectSources() => default; // 0x000000018929D694-0x000000018929E1F8
-		private static Vector3 Abs(Vector3 v) => default; // 0x0000000183D5DA60-0x0000000183D5DAA0
-		private static Bounds GetWorldBounds(Matrix4x4 mat, Bounds bounds) => default; // 0x000000018929E358-0x000000018929E634
-		private Bounds CalculateWorldBounds(List<NavMeshBuildSource> sources) => default; // 0x000000018929CDC4-0x000000018929D694
-		private bool HasTransformChanged() => default; // 0x000000018929E634-0x000000018929E730
-		private void UpdateDataIfTransformChanged() {} // 0x000000018929EBE4-0x000000018929EC18
+		private void OnEnable() {} // 0x000000018B3C9180-0x000000018B3C9330
+		private void OnDisable() {} // 0x000000018B3C8FD0-0x000000018B3C9180
+		public void AddData() {} // 0x000000018B3C8B80-0x000000018B3C8D54
+		public void RemoveData() {} // 0x000000018B3C8D74-0x000000018B3C8EF0
+		public NavMeshBuildSettings GetBuildSettings() => default; // 0x000000018B3C8EF0-0x000000018B3C8F9C
+		public void BuildNavMesh() {} // 0x000000018B3C68D0-0x000000018B3C6E84
+		public AsyncOperation UpdateNavMesh(NavMeshData data) => default; // 0x000000018B3C7A4C-0x000000018B3C85B0
+		public bool UpdateNavMeshSync(NavMeshData data) => default; // 0x0000000185FBEF80-0x0000000185FBEFC0
+		private static void Register(NavMeshSurface surface) {} // 0x000000018B3C8710-0x000000018B3C89EC
+		private static void Unregister(NavMeshSurface surface) {} // 0x000000018B3C717C-0x000000018B3C7A4C
+		private static void UpdateActive() {} // 0x000000018B3C89EC-0x000000018B3C8AE8
+		private void AppendModifierVolumes(ref List<NavMeshBuildSource> sources) {} // 0x000000018B3C8F9C-0x000000018B3C8FD0
+		private List<NavMeshBuildSource> CollectSources() => default; // 0x000000018B3C93BC-0x000000018B3C9484
+		private static Vector3 Abs(Vector3 v) => default; // 0x000000018B3C9330-0x000000018B3C93BC
+		private static Bounds GetWorldBounds(Matrix4x4 mat, Bounds bounds) => default; // 0x000000018B3C9670-0x000000018B3C96D4
+		private Bounds CalculateWorldBounds(List<NavMeshBuildSource> sources) => default; // 0x0000000185492010-0x0000000185492020
+		private bool HasTransformChanged() => default; // 0x000000018B3C94D4-0x000000018B3C94F8
+		private void UpdateDataIfTransformChanged() {} // 0x000000018B3C94D4-0x000000018B3C94F8
 	}
 }

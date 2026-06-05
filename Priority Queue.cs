@@ -5,17 +5,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 
-// Image 102: Priority Queue.dll - Assembly: PriorityQueue, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59592-59606
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 105: Priority Queue.dll - Assembly: PriorityQueue, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60696-60710
 
 namespace Priority_Queue
 {
-	public sealed class FastPriorityQueue<T> : IFixedSizePriorityQueue<T, float> // TypeDefIndex: 59594
+	public sealed class FastPriorityQueue<T> : IFixedSizePriorityQueue<T, float> // TypeDefIndex: 60698
 		where T : FastPriorityQueueNode
 	{
 		// Fields
@@ -26,6 +21,29 @@ namespace Priority_Queue
 		public int Count { get => default; }
 		public int MaxSize { get => default; }
 		public T First { get => default; }
+	
+		// Nested types
+		private sealed class _GetEnumerator_d__22 : IEnumerator<T> // TypeDefIndex: 60697
+		{
+			// Fields
+			private int __1__state;
+			private T __2__current;
+			public FastPriorityQueue<T> __4__this;
+			private int _i_5__2;
+	
+			// Properties
+			T IEnumerator<T>.Current { get => default; }
+			object IEnumerator.Current { get => default; }
+	
+			// Constructors
+			public _GetEnumerator_d__22() {} // Dummy constructor
+			public _GetEnumerator_d__22(int __1__state) {}
+	
+			// Methods
+			void IDisposable.Dispose() {}
+			private bool MoveNext() => default;
+			void IEnumerator.Reset() {}
+		}
 	
 		// Constructors
 		public FastPriorityQueue() {} // Dummy constructor
@@ -45,23 +63,26 @@ namespace Priority_Queue
 		private void OnNodeUpdated(T node) {}
 		public void Remove(T node) {}
 		public void ResetNode(T node) {}
-		[IteratorStateMachine(typeof(_GetEnumerator_d__22))]
 		public IEnumerator<T> GetEnumerator() => default;
 		IEnumerator IEnumerable.GetEnumerator() => default;
 		public bool IsValidQueue() => default;
 	}
 
-	public class FastPriorityQueueNode // TypeDefIndex: 59595
+	public class FastPriorityQueueNode // TypeDefIndex: 60699
 	{
+		// Fields
+		private float _Priority_k__BackingField; // 0x10
+		private int _QueueIndex_k__BackingField; // 0x14
+	
 		// Properties
-		public float Priority { get; protected internal set; } // 0x0000000183D4E7A0-0x0000000183D4E7B0 0x0000000183D50CA0-0x0000000183D50CB0
-		public int QueueIndex { get; internal set; } // 0x0000000183D50CC0-0x0000000183D50CD0 0x0000000183D595B0-0x0000000183D595C0
+		public float Priority { get; protected internal set; } // 0x0000000181DCCCE0-0x0000000181DCCCF0 0x0000000181A6E380-0x0000000181A6E390
+		public int QueueIndex { get; internal set; } // 0x0000000185FB21A0-0x0000000185FB21B0 0x0000000185FBB0B0-0x0000000185FBB0C0
 	
 		// Constructors
-		public FastPriorityQueueNode() {} // 0x000000018350B670-0x000000018350B680
+		public FastPriorityQueueNode() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public sealed class GenericPriorityQueue<TItem, TPriority> : IFixedSizePriorityQueue<TItem, TPriority> // TypeDefIndex: 59597
+	public sealed class GenericPriorityQueue<TItem, TPriority> : IFixedSizePriorityQueue<TItem, TPriority> // TypeDefIndex: 60701
 		where TItem : GenericPriorityQueueNode<TPriority>
 	{
 		// Fields
@@ -74,6 +95,29 @@ namespace Priority_Queue
 		public int Count { get => default; }
 		public int MaxSize { get => default; }
 		public TItem First { get => default; }
+	
+		// Nested types
+		private sealed class _GetEnumerator_d__25 : IEnumerator<TItem> // TypeDefIndex: 60700
+		{
+			// Fields
+			private int __1__state;
+			private TItem __2__current;
+			public GenericPriorityQueue<TItem, TPriority> __4__this;
+			private int _i_5__2;
+	
+			// Properties
+			TItem IEnumerator<TItem>.Current { get => default; }
+			object IEnumerator.Current { get => default; }
+	
+			// Constructors
+			public _GetEnumerator_d__25() {} // Dummy constructor
+			public _GetEnumerator_d__25(int __1__state) {}
+	
+			// Methods
+			void IDisposable.Dispose() {}
+			private bool MoveNext() => default;
+			void IEnumerator.Reset() {}
+		}
 	
 		// Constructors
 		public GenericPriorityQueue() {} // Dummy constructor
@@ -94,14 +138,18 @@ namespace Priority_Queue
 		private void OnNodeUpdated(TItem node) {}
 		public void Remove(TItem node) {}
 		public void ResetNode(TItem node) {}
-		[IteratorStateMachine(typeof(_GetEnumerator_d__25))]
 		public IEnumerator<TItem> GetEnumerator() => default;
 		IEnumerator IEnumerable.GetEnumerator() => default;
 		public bool IsValidQueue() => default;
 	}
 
-	public class GenericPriorityQueueNode<TPriority> // TypeDefIndex: 59598
+	public class GenericPriorityQueueNode<TPriority> // TypeDefIndex: 60702
 	{
+		// Fields
+		private TPriority _Priority_k__BackingField;
+		private int _QueueIndex_k__BackingField;
+		private long _InsertionIndex_k__BackingField;
+	
 		// Properties
 		public TPriority Priority { get; protected internal set; }
 		public int QueueIndex { get; internal set; }
@@ -111,7 +159,7 @@ namespace Priority_Queue
 		public GenericPriorityQueueNode() {}
 	}
 
-	internal interface IFixedSizePriorityQueue<TItem, in TPriority> : IPriorityQueue<TItem, TPriority> // TypeDefIndex: 59599
+	internal interface IFixedSizePriorityQueue<TItem, in TPriority> : IPriorityQueue<TItem, TPriority> // TypeDefIndex: 60703
 	{
 		// Properties
 		int MaxSize { get; }
@@ -121,7 +169,7 @@ namespace Priority_Queue
 		void ResetNode(TItem node);
 	}
 
-	public interface IPriorityQueue<TItem, in TPriority> : IEnumerable<TItem> // TypeDefIndex: 59600
+	public interface IPriorityQueue<TItem, in TPriority> : IEnumerable<TItem> // TypeDefIndex: 60704
 	{
 		// Properties
 		TItem First { get; }
@@ -136,10 +184,10 @@ namespace Priority_Queue
 		void UpdatePriority(TItem node, TPriority priority);
 	}
 
-	public class SimplePriorityQueue<TItem, TPriority> : IPriorityQueue<TItem, TPriority> // TypeDefIndex: 59602
+	public class SimplePriorityQueue<TItem, TPriority> : IPriorityQueue<TItem, TPriority> // TypeDefIndex: 60706
 	{
 		// Fields
-		private const int INITIAL_QUEUE_SIZE = 10; // Metadata: 0x01FDD1F0
+		private const int INITIAL_QUEUE_SIZE = 10; // Metadata: 0x02082ADC
 		private readonly GenericPriorityQueue<SimpleNode, TPriority> _queue;
 		private readonly Dictionary<TItem, IList<SimpleNode>> _itemToNodesCache;
 		private readonly IList<SimpleNode> _nullNodesCache;
@@ -149,8 +197,11 @@ namespace Priority_Queue
 		public TItem First { get => default; }
 	
 		// Nested types
-		private class SimpleNode : GenericPriorityQueueNode<TPriority> // TypeDefIndex: 59601
+		private class SimpleNode : GenericPriorityQueueNode<TPriority> // TypeDefIndex: 60705
 		{
+			// Fields
+			private TItem _Data_k__BackingField;
+	
 			// Properties
 			public TItem Data { get; private set; }
 	
@@ -199,7 +250,7 @@ namespace Priority_Queue
 		public bool IsValidQueue() => default;
 	}
 
-	public class SimplePriorityQueue<TItem> : SimplePriorityQueue<TItem, float> // TypeDefIndex: 59603
+	public class SimplePriorityQueue<TItem> : SimplePriorityQueue<TItem, float> // TypeDefIndex: 60707
 	{
 		// Constructors
 		public SimplePriorityQueue() {}
@@ -207,7 +258,7 @@ namespace Priority_Queue
 		public SimplePriorityQueue(Comparison<float> comparer) {}
 	}
 
-	public sealed class StablePriorityQueue<T> : IFixedSizePriorityQueue<T, float> // TypeDefIndex: 59605
+	public sealed class StablePriorityQueue<T> : IFixedSizePriorityQueue<T, float> // TypeDefIndex: 60709
 		where T : StablePriorityQueueNode
 	{
 		// Fields
@@ -219,6 +270,29 @@ namespace Priority_Queue
 		public int Count { get => default; }
 		public int MaxSize { get => default; }
 		public T First { get => default; }
+	
+		// Nested types
+		private sealed class _GetEnumerator_d__22 : IEnumerator<T> // TypeDefIndex: 60708
+		{
+			// Fields
+			private int __1__state;
+			private T __2__current;
+			public StablePriorityQueue<T> __4__this;
+			private int _i_5__2;
+	
+			// Properties
+			T IEnumerator<T>.Current { get => default; }
+			object IEnumerator.Current { get => default; }
+	
+			// Constructors
+			public _GetEnumerator_d__22() {} // Dummy constructor
+			public _GetEnumerator_d__22(int __1__state) {}
+	
+			// Methods
+			void IDisposable.Dispose() {}
+			private bool MoveNext() => default;
+			void IEnumerator.Reset() {}
+		}
 	
 		// Constructors
 		public StablePriorityQueue() {} // Dummy constructor
@@ -237,18 +311,20 @@ namespace Priority_Queue
 		private void OnNodeUpdated(T node) {}
 		public void Remove(T node) {}
 		public void ResetNode(T node) {}
-		[IteratorStateMachine(typeof(_GetEnumerator_d__22))]
 		public IEnumerator<T> GetEnumerator() => default;
 		IEnumerator IEnumerable.GetEnumerator() => default;
 		public bool IsValidQueue() => default;
 	}
 
-	public class StablePriorityQueueNode : FastPriorityQueueNode // TypeDefIndex: 59606
+	public class StablePriorityQueueNode : FastPriorityQueueNode // TypeDefIndex: 60710
 	{
+		// Fields
+		private long _InsertionIndex_k__BackingField; // 0x18
+	
 		// Properties
-		public long InsertionIndex { get; internal set; } // 0x0000000181041090-0x00000001810410A0 0x0000000183D4EC10-0x0000000183D4EC20
+		public long InsertionIndex { get; internal set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000181448AC0-0x0000000181448AD0
 	
 		// Constructors
-		public StablePriorityQueueNode() {} // 0x000000018350B670-0x000000018350B680
+		public StablePriorityQueueNode() {} // 0x0000000185492010-0x0000000185492020
 	}
 }

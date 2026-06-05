@@ -6,10 +6,8 @@ using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using AOT;
 using CriWare;
 using CriWare.CriMana;
 using CriWare.CriMana.Detail;
@@ -20,14 +18,42 @@ using UnityEngine.Rendering;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
 
-// Image 33: CriMw.CriWare.Runtime.dll - Assembly: CriMw.CriWare.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 54019-54348
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 33: CriMw.CriWare.Runtime.dll - Assembly: CriMw.CriWare.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 55012-55341
+
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 55338
+{
+	// Fields
+	internal static readonly __StaticArrayInitTypeSize_12 _4636993D3E1DA4E9D6B8F87B79E8F7C6D018580D52661950EABC3845C5897A4D; // 0x00 // Static value (base64): AQAAAAIAAAADAAAA - Metadata: 0x0207BE0C
+
+	// Nested types
+	private struct __StaticArrayInitTypeSize_12 // TypeDefIndex: 55337
+	{
+	}
+
+	// Constructors
+	public _PrivateImplementationDetails_() {} // Dummy constructor
+}
 
 namespace Beyond.SourceGenerator
 {
-	internal static class AnimatorBlackboardUtility // TypeDefIndex: 54021
+	internal class DataNAttribute : Attribute // TypeDefIndex: 55014
+	{
+		// Fields
+		public int capacity; // 0x10
+		public int tSize; // 0x14
+		public bool ring; // 0x18
+	
+		// Constructors
+		public DataNAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+
+	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 55015
+	{
+		// Constructors
+		public CameraControlConfigAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+
+	internal static class AnimatorBlackboardUtility // TypeDefIndex: 55016
 	{
 		// Fields
 		internal static bool s_enableFastPathBuffer; // 0x00
@@ -36,53 +62,32 @@ namespace Beyond.SourceGenerator
 		internal static void ClearAndEnsureDictionaryCapacity<TKey, TValue>(ref Dictionary<TKey, TValue> dict, int capacity) {}
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 54022
+	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 55017
 	{
 		// Constructors
-		public AnimatorBlackboardAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public AnimatorBlackboardAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class DataNAttribute : Attribute // TypeDefIndex: 54023
-	{
-		// Fields
-		public int capacity; // 0x10
-		public int tSize; // 0x14
-		public bool ring; // 0x18
-	
-		// Constructors
-		public DataNAttribute() {} // 0x000000018350B670-0x000000018350B680
-	}
-
-	[AttributeUsage(AttributeTargets.Class)]
-	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 54024
-	{
-		// Constructors
-		public CameraControlConfigAttribute() {} // 0x000000018350B670-0x000000018350B680
-	}
-
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 54025
+	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 55018
 	{
 		// Fields
 		public LayoutKind layoutKind; // 0x10
 		public bool isTag; // 0x14
 	
 		// Constructors
-		public ECSComponentAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public ECSComponentAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }
 
 namespace CriWare
 {
-	public class CriWarePS5 // TypeDefIndex: 54030
+	public class CriWarePS5 // TypeDefIndex: 55023
 	{
 		// Fields
-		public const int SystemUserID = 255; // Metadata: 0x01FD628C
+		public const int SystemUserID = 255; // Metadata: 0x0207BAB8
 	
 		// Nested types
-		public enum AudioPortType : ushort // TypeDefIndex: 54026
+		public enum AudioPortType : ushort // TypeDefIndex: 55019
 		{
 			Main = 0,
 			Bgm = 1,
@@ -96,7 +101,7 @@ namespace CriWare
 			ObjecPersonal = 260
 		}
 	
-		public enum AttributeId // TypeDefIndex: 54027
+		public enum AttributeId // TypeDefIndex: 55020
 		{
 			Pcm = 0,
 			Gain = 1,
@@ -113,26 +118,26 @@ namespace CriWare
 			MAX = 16
 		}
 	
-		public enum PortFlag : uint // TypeDefIndex: 54028
+		public enum PortFlag : uint // TypeDefIndex: 55021
 		{
 			Restricted = 1,
 			Passthrough = 2
 		}
 	
-		internal static class SafeNativeMethods // TypeDefIndex: 54029
+		internal static class SafeNativeMethods // TypeDefIndex: 55022
 		{
 			// Methods
-			public static void criFsUnity_Setup_PS5(bool enable_apr_direct_mode) {} // 0x000000018350B670-0x000000018350B680
+			public static void criFsUnity_Setup_PS5(bool enable_apr_direct_mode) {} // 0x0000000185492010-0x0000000185492020
 		}
 	
 		// Constructors
-		public CriWarePS5() {} // 0x000000018350B670-0x000000018350B680
+		public CriWarePS5() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		internal static void SetupFileSystem(bool enableAprDirectMode) {} // 0x000000018350B670-0x000000018350B680
+		internal static void SetupFileSystem(bool enableAprDirectMode) {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public static class CriAtomPlugin // TypeDefIndex: 54032
+	public static class CriAtomPlugin // TypeDefIndex: 55025
 	{
 		// Fields
 		private static int initializationCount; // 0x00
@@ -145,83 +150,81 @@ namespace CriWare
 		private static ulong temporalStorage; // 0x30
 	
 		// Properties
-		public static bool isInitialized { get; } // 0x00000001856C67F8-0x00000001856C6840 
+		public static bool isInitialized { get; } // 0x0000000187878C38-0x0000000187878D5C 
 	
 		// Nested types
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate ulong CallbackFromNativeDelegate(IntPtr ptr1); // TypeDefIndex: 54031; 0x000000018102B410-0x000000018102B420
+		public delegate ulong CallbackFromNativeDelegate(IntPtr ptr1); // TypeDefIndex: 55024; 0x0000000187879294-0x00000001878792DC
 	
 		// Constructors
-		static CriAtomPlugin() {} // 0x0000000183CA6330-0x0000000183CA6400
+		static CriAtomPlugin() {} // 0x00000001864BC1CC-0x00000001864BC2FC
 	
 		// Methods
-		public static void Log(string log) {} // 0x000000018350B670-0x000000018350B680
-		public static void ExecuteQueuedCueLinkCallbacks() {} // 0x0000000182F8C7C0-0x0000000182F8C810
-		public static void ExecuteQueuedEventCallbacks() {} // 0x0000000182F8C740-0x0000000182F8C790
-		public static void ExecuteQueuedBeatSyncCallbacks() {} // 0x0000000182F8C6C0-0x0000000182F8C710
+		public static void Log(string log) {} // 0x0000000184DCF2A0-0x0000000184DCF2F0
+		public static void ExecuteQueuedCueLinkCallbacks() {} // 0x000000018787904C-0x00000001878791E4
+		public static void ExecuteQueuedEventCallbacks() {} // 0x00000001850FA230-0x00000001850FA3C0
+		public static void ExecuteQueuedBeatSyncCallbacks() {} // 0x00000001850F9730-0x00000001850F97A0
 		public static bool GetAudioEffectInterfaceList(out List<IntPtr> effect_interface_list) {
 			effect_interface_list = default;
 			return default;
-		} // 0x00000001856C619C-0x00000001856C62C0
-		private static IntPtr GetSpatializerCoreInterfaceFromAtomOculusAudioBridge() => default; // 0x00000001856C65B0-0x00000001856C6748
-		public static void SetConfigParameters(int max_virtual_voices, int max_voice_limit_groups, int max_categories, int max_aisacs, int max_bus_sends, int max_sequence_events_per_frame, int max_beatsync_callbacks_per_frame, int max_cuelink_callbacks_per_frame, int num_standard_memory_voices, int num_standard_streaming_voices, int num_hca_mx_memory_voices, int num_hca_mx_streaming_voices, int output_sampling_rate, int num_asr_output_channels, bool uses_in_game_preview, float server_frequency, int max_parameter_blocks, int categories_per_playback, int max_faders, int num_buses, bool vr_mode) {} // 0x0000000183183A50-0x0000000183183BE0
-		public static void SetConfigMonitorParametes(int max_preview_objects, int communication_buffer_size, int playback_position_update_interval) {} // 0x0000000183183380-0x00000001831833F0
-		public static void SetConfigAdditionalParameters_EDITOR(bool enable_user_pcm_output, int user_pcm_buffer_length) {} // 0x0000000183183220-0x0000000183183270
-		public static void SetConfigAdditionalParameters_PC(long buffering_time_pc) {} // 0x00000001831831D0-0x0000000183183220
-		public static void SetConfigAdditionalParameters_LINUX(CriAtomConfig.LinuxOutput output, int pulse_latency_usec) {} // 0x00000001831832B0-0x0000000183183310
-		public static void SetConfigAdditionalParameters_IOS(bool enable_sonicsync, uint buffering_time_ios, bool override_ipod_music_ios) {} // 0x0000000183183310-0x0000000183183380
-		public static void SetConfigAdditionalParameters_ANDROID(bool enable_sonicsync, int num_low_delay_memory_voices, int num_low_delay_streaming_voices, int sound_buffering_time, int sound_start_buffering_time, bool use_fast_mixer, bool use_aaudio, int stream_type) {} // 0x00000001831833F0-0x00000001831834A0
-		public static void SetConfigAdditionalParameters_VITA(int num_atrac9_memory_voices, int num_atrac9_streaming_voices, int num_mana_decoders) {} // 0x000000018350B670-0x000000018350B680
-		public static void SetConfigAdditionalParameters_PS4(int num_atrac9_memory_voices, int num_atrac9_streaming_voices, bool use_audio3d, int num_audio3d_memory_voices, int num_audio3d_streaming_voices) {} // 0x000000018350B670-0x000000018350B680
-		public static void SetConfigAdditionalParameters_PS5(int max_channel_ports, int max_object_ports) {} // 0x000000018350B670-0x000000018350B680
-		public static void SetConfigAdditionalParameters_SWITCH(bool enable_sonicsync, int num_opus_memory_voices, int num_opus_streaming_voices, bool init_socket) {} // 0x000000018350B670-0x000000018350B680
-		public static void SetConfigAdditionalParameters_WEBGL(int num_webaudio_voices) {} // 0x000000018350B670-0x000000018350B680
-		public static void SetMaxSamplingRateForStandardVoicePool(int sampling_rate_for_memory, int sampling_rate_for_streaming) {} // 0x00000001856C67A0-0x00000001856C67F8
-		public static int GetRequiredMaxVirtualVoices(CriAtomConfig atomConfig) => default; // 0x0000000183182EC0-0x0000000183182F00
-		public static void InitializeLibrary() {} // 0x00000001831826A0-0x0000000183182860
-		public static bool IsLibraryInitialized() => default; // 0x0000000183183140-0x0000000183183190
-		public static void FinalizeLibrary() {} // 0x00000001856C5FE8-0x00000001856C619C
-		public static void Pause(bool pause) {} // 0x00000001856C6748-0x00000001856C67A0
-		public static Common.CpuUsage GetCpuUsage() => default; // 0x00000001856C62C0-0x00000001856C647C
-		public static int GetOutputSamplingRate() => default; // 0x00000001856C6570-0x00000001856C65B0
-		public static int GetOutputChannels() => default; // 0x00000001856C6530-0x00000001856C6570
-		public static bool IsInitializedForPcmOutput() => default; // 0x000000018115F4C0-0x000000018115F530
-		public static ushort GetLoopCountParameterId() => default; // 0x00000001856C647C-0x00000001856C6530
-		public static void DecryptAcb(IntPtr acb_hn, ulong key, ulong nonce) {} // 0x00000001856C5F1C-0x00000001856C5FE8
-		[AOT.MonoPInvokeCallback(typeof(CallbackFromNativeDelegate))]
-		private static ulong CallbackFromNative(IntPtr ptr1) => default; // 0x00000001856C5ECC-0x00000001856C5F1C
-		private static extern void CRIWARE009CE561(int max_virtual_voices, int max_voice_limit_groups, int max_categories, int max_aisacs, int max_bus_sends, int max_sequence_events_per_frame, int max_beatsync_callbacks_per_frame, int max_cuelink_callbacks_per_frame, int num_standard_memory_voices, int num_standard_streaming_voices, int num_hca_mx_memory_voices, int num_hca_mx_streaming_voices, int output_sampling_rate, int num_asr_output_channels, bool uses_in_game_preview, float server_frequency, int max_parameter_blocks, int categories_per_playback, int max_faders, int num_buses, bool use_ambisonics, IntPtr spatializer_core_interface); // 0x00000001822C87F0-0x00000001822C8940
-		private static extern void CRIWARE8384362B(uint max_preivew_objects, uint communication_buffer_size, int playback_position_update_interval); // 0x00000001822C7B50-0x00000001822C7BE0
-		private static extern void CRIWARE237CA5E3(bool enable_user_pcm_out_mode); // 0x0000000183183270-0x00000001831832B0
-		private static extern void CRIWARE780E6ED2(long buffering_time_pc); // 0x00000001822C87B0-0x00000001822C87F0
-		private static extern void CRIWAREE996B258(int output, int pulse_latency_usec); // 0x00000001822C8770-0x00000001822C87B0
-		private static extern void CRIWARE2F034134(bool enable_sonicsync, uint buffering_time_ios, bool override_ipod_music_ios); // 0x00000001822C7AB0-0x00000001822C7B50
-		private static extern void CRIWARE70981A20(bool enable_sonicsync, int num_low_delay_memory_voices, int num_low_delay_streaming_voices, int sound_buffering_time, int sound_start_buffering_time, bool apply_hw_property, int stream_type); // 0x00000001822C79F0-0x00000001822C7AB0
-		private static extern void CRIWARE2626EF5B(); // 0x0000000183182860-0x0000000183182890
-		public static extern bool CRIWAREC176B113(); // 0x0000000183183190-0x00000001831831D0
-		private static extern void CRIWARE63E1F278(); // 0x00000001856C5CF8-0x00000001856C5D24
-		private static extern void CRIWAREB64E0C3B(bool pause); // 0x00000001856C5DDC-0x00000001856C5E10
-		public static extern uint CRIWAREA703719E(); // 0x00000001856C5DB0-0x00000001856C5DDC
-		public static extern void CRIWAREBF97E87F(int code); // 0x00000001856C5E10-0x00000001856C5E44
-		public static extern void CRIWARE15B0037A(IntPtr cbfunc, string separator_string); // 0x00000001856C5AA0-0x00000001856C5B38
-		public static extern void CRIWARE28E5ABA4(IntPtr cbfunc); // 0x00000001856C5B6C-0x00000001856C5BA0
-		private static extern void CRIWARECCA1268B(); // 0x0000000182F8C790-0x0000000182F8C7C0
-		public static extern void CRIWARE88175F19(IntPtr cbfunc); // 0x00000001856C5D50-0x00000001856C5D84
-		private static extern void CRIWARE7581CF8C(); // 0x0000000182F8C710-0x0000000182F8C740
-		public static extern void CRIWARE15F30D07(IntPtr cbfunc); // 0x00000001856C5B38-0x00000001856C5B6C
-		private static extern void CRIWARED1FD92AA(); // 0x0000000182F8C810-0x0000000182F8C960
-		private static extern void CRIWARE2CFF30B7(int sampling_rate_for_memory, int sampling_rate_for_streaming); // 0x00000001856C5BA0-0x00000001856C5BE0
-		public static extern void CRIWARE797E0462(); // 0x00000001856C5D24-0x00000001856C5D50
-		public static extern void CRIWAREC54D0552(); // 0x00000001856C5E44-0x00000001856C5E70
-		public static extern void CRIWARE5BC8942D(IntPtr acb_hn, CallbackFromNativeDelegate func, IntPtr obj); // 0x00000001856C5C58-0x00000001856C5CF8
-		public static extern ushort CRIWARE5B1C5B3B(int id); // 0x00000001856C5BE0-0x00000001856C5C58
-		private static extern bool CRIWAREE097EA6E(); // 0x00000001856C5E70-0x00000001856C5EA0
-		private static extern int CRIWAREE320F01B(); // 0x00000001856C5EA0-0x00000001856C5ECC
-		private static extern int CRIWARE98A6BE5C(); // 0x00000001856C5D84-0x00000001856C5DB0
+		} // 0x00000001850F95D0-0x00000001850F9620
+		private static IntPtr GetSpatializerCoreInterfaceFromAtomOculusAudioBridge() => default; // 0x00000001850F9580-0x00000001850F95D0
+		public static void SetConfigParameters(int max_virtual_voices, int max_voice_limit_groups, int max_categories, int max_aisacs, int max_bus_sends, int max_sequence_events_per_frame, int max_beatsync_callbacks_per_frame, int max_cuelink_callbacks_per_frame, int num_standard_memory_voices, int num_standard_streaming_voices, int num_hca_mx_memory_voices, int num_hca_mx_streaming_voices, int output_sampling_rate, int num_asr_output_channels, bool uses_in_game_preview, float server_frequency, int max_parameter_blocks, int categories_per_playback, int max_faders, int num_buses, bool vr_mode) {} // 0x00000001850F9660-0x00000001850F96C0
+		public static void SetConfigMonitorParametes(int max_preview_objects, int communication_buffer_size, int playback_position_update_interval) {} // 0x00000001850F96C0-0x00000001850F9730
+		public static void SetConfigAdditionalParameters_EDITOR(bool enable_user_pcm_output, int user_pcm_buffer_length) {} // 0x00000001850F97A0-0x00000001850F9850
+		public static void SetConfigAdditionalParameters_PC(long buffering_time_pc) {} // 0x0000000185492010-0x0000000185492020
+		public static void SetConfigAdditionalParameters_LINUX(CriAtomConfig.LinuxOutput output, int pulse_latency_usec) {} // 0x0000000185492010-0x0000000185492020
+		public static void SetConfigAdditionalParameters_IOS(bool enable_sonicsync, uint buffering_time_ios, bool override_ipod_music_ios) {} // 0x0000000185492010-0x0000000185492020
+		public static void SetConfigAdditionalParameters_ANDROID(bool enable_sonicsync, int num_low_delay_memory_voices, int num_low_delay_streaming_voices, int sound_buffering_time, int sound_start_buffering_time, bool use_fast_mixer, bool use_aaudio, int stream_type) {} // 0x0000000185492010-0x0000000185492020
+		public static void SetConfigAdditionalParameters_VITA(int num_atrac9_memory_voices, int num_atrac9_streaming_voices, int num_mana_decoders) {} // 0x0000000185492010-0x0000000185492020
+		public static void SetConfigAdditionalParameters_PS4(int num_atrac9_memory_voices, int num_atrac9_streaming_voices, bool use_audio3d, int num_audio3d_memory_voices, int num_audio3d_streaming_voices) {} // 0x000000018787923C-0x0000000187879294
+		public static void SetConfigAdditionalParameters_PS5(int max_channel_ports, int max_object_ports) {} // 0x00000001850F9270-0x00000001850F92B0
+		public static void SetConfigAdditionalParameters_SWITCH(bool enable_sonicsync, int num_opus_memory_voices, int num_opus_streaming_voices, bool init_socket) {} // 0x00000001850F8A50-0x00000001850F8C10
+		public static void SetConfigAdditionalParameters_WEBGL(int num_webaudio_voices) {} // 0x00000001850F94F0-0x00000001850F9540
+		public static void SetMaxSamplingRateForStandardVoicePool(int sampling_rate_for_memory, int sampling_rate_for_streaming) {} // 0x0000000187878A84-0x0000000187878C38
+		public static int GetRequiredMaxVirtualVoices(CriAtomConfig atomConfig) => default; // 0x00000001878791E4-0x000000018787923C
+		public static void InitializeLibrary() {} // 0x0000000187878D5C-0x0000000187878F18
+		public static bool IsLibraryInitialized() => default; // 0x000000018787900C-0x000000018787904C
+		public static void FinalizeLibrary() {} // 0x0000000187878FCC-0x000000018787900C
+		public static void Pause(bool pause) {} // 0x00000001814A81B0-0x00000001814A81C0
+		public static Common.CpuUsage GetCpuUsage() => default; // 0x0000000187878F18-0x0000000187878FCC
+		public static int GetOutputSamplingRate() => default; // 0x00000001878789B8-0x0000000187878A84
+		public static int GetOutputChannels() => default; // 0x0000000187878968-0x00000001878789B8
+		public static bool IsInitializedForPcmOutput() => default; // 0x00000001844CF4B0-0x00000001844CF600
+		public static ushort GetLoopCountParameterId() => default; // 0x00000001844CE970-0x00000001844CEA00
+		public static void DecryptAcb(IntPtr acb_hn, ulong key, ulong nonce) {} // 0x00000001850F9620-0x00000001850F9660
+		private static ulong CallbackFromNative(IntPtr ptr1) => default; // 0x00000001844CF470-0x00000001844CF4B0
+		private static extern void CRIWARE009CE561(int max_virtual_voices, int max_voice_limit_groups, int max_categories, int max_aisacs, int max_bus_sends, int max_sequence_events_per_frame, int max_beatsync_callbacks_per_frame, int max_cuelink_callbacks_per_frame, int num_standard_memory_voices, int num_standard_streaming_voices, int num_hca_mx_memory_voices, int num_hca_mx_streaming_voices, int output_sampling_rate, int num_asr_output_channels, bool uses_in_game_preview, float server_frequency, int max_parameter_blocks, int categories_per_playback, int max_faders, int num_buses, bool use_ambisonics, IntPtr spatializer_core_interface); // 0x00000001844CF430-0x00000001844CF470
+		private static extern void CRIWARE8384362B(uint max_preivew_objects, uint communication_buffer_size, int playback_position_update_interval); // 0x00000001844CE8D0-0x00000001844CE970
+		private static extern void CRIWARE237CA5E3(bool enable_user_pcm_out_mode); // 0x00000001844CE810-0x00000001844CE8D0
+		private static extern void CRIWARE780E6ED2(long buffering_time_pc); // 0x00000001850F8C10-0x00000001850F8C40
+		private static extern void CRIWAREE996B258(int output, int pulse_latency_usec); // 0x00000001850F9540-0x00000001850F9580
+		private static extern void CRIWARE2F034134(bool enable_sonicsync, uint buffering_time_ios, bool override_ipod_music_ios); // 0x0000000187878794-0x00000001878787C0
+		private static extern void CRIWARE70981A20(bool enable_sonicsync, int num_low_delay_memory_voices, int num_low_delay_streaming_voices, int sound_buffering_time, int sound_start_buffering_time, bool apply_hw_property, int stream_type); // 0x0000000187878878-0x00000001878788AC
+		private static extern void CRIWARE2626EF5B(); // 0x000000018787884C-0x0000000187878878
+		public static extern bool CRIWAREC176B113(); // 0x00000001878788AC-0x00000001878788E0
+		private static extern void CRIWARE63E1F278(); // 0x000000018787853C-0x00000001878785D4
+		private static extern void CRIWAREB64E0C3B(bool pause); // 0x0000000187878608-0x000000018787863C
+		public static extern uint CRIWAREA703719E(); // 0x0000000184DCF370-0x0000000184DCF3A0
+		public static extern void CRIWAREBF97E87F(int code); // 0x00000001878787EC-0x0000000187878820
+		public static extern void CRIWARE15B0037A(IntPtr cbfunc, string separator_string); // 0x0000000184DCF2F0-0x0000000184DCF320
+		public static extern void CRIWARE28E5ABA4(IntPtr cbfunc); // 0x00000001878785D4-0x0000000187878608
+		private static extern void CRIWARECCA1268B(); // 0x0000000184DCF3F0-0x0000000184DCF540
+		public static extern void CRIWARE88175F19(IntPtr cbfunc); // 0x000000018787863C-0x000000018787867C
+		private static extern void CRIWARE7581CF8C(); // 0x00000001878787C0-0x00000001878787EC
+		public static extern void CRIWARE15F30D07(IntPtr cbfunc); // 0x00000001878788E0-0x000000018787890C
+		private static extern void CRIWARED1FD92AA(); // 0x00000001878786F4-0x0000000187878794
+		private static extern void CRIWARE2CFF30B7(int sampling_rate_for_memory, int sampling_rate_for_streaming); // 0x000000018787867C-0x00000001878786F4
+		public static extern void CRIWARE797E0462(); // 0x000000018787890C-0x000000018787893C
+		public static extern void CRIWAREC54D0552(); // 0x000000018787893C-0x0000000187878968
+		public static extern void CRIWARE5BC8942D(IntPtr acb_hn, CallbackFromNativeDelegate func, IntPtr obj); // 0x0000000187878820-0x000000018787884C
+		public static extern ushort CRIWARE5B1C5B3B(int id); // 0x0000000185EF73D0-0x0000000185EF74A0
+		private static extern bool CRIWAREE097EA6E(); // 0x0000000187868998-0x0000000187868A60
+		private static extern int CRIWAREE320F01B(); // 0x00000001817C2F70-0x00000001817C2F80
+		private static extern int CRIWARE98A6BE5C(); // 0x0000000187868920-0x0000000187868998
 	}
 
 	[Serializable]
-	public class CriAtomCueSheet // TypeDefIndex: 54033
+	public class CriAtomCueSheet // TypeDefIndex: 55026
 	{
 		// Fields
 		public string name; // 0x10
@@ -231,15 +234,14 @@ namespace CriWare
 		public CriAtomExAcbLoader.Status loaderStatus; // 0x30
 	
 		// Properties
-		public bool IsLoading { get => default; } // 0x00000001856B62D4-0x00000001856B62DC 
-		public bool IsError { get => default; } // 0x00000001856B62B8-0x00000001856B62D4 
+		public bool IsLoading { get => default; } // 0x0000000187868D70-0x0000000187868D78 
+		public bool IsError { get => default; } // 0x0000000187868D54-0x0000000187868D70 
 	
 		// Constructors
-		public CriAtomCueSheet() {} // 0x00000001856B6250-0x00000001856B62B8
+		public CriAtomCueSheet() {} // 0x0000000187868CEC-0x0000000187868D54
 	}
 
-	[AddComponentMenu("CRIWARE/CRI Atom")]
-	public class CriAtom : CriMonoBehaviour // TypeDefIndex: 54037
+	public class CriAtom : CriMonoBehaviour // TypeDefIndex: 55030
 	{
 		// Fields
 		public string acfFile; // 0x28
@@ -249,13 +251,16 @@ namespace CriWare
 		public bool dontDestroyOnLoad; // 0x48
 		private static CriAtomExSequencer.EventCallback eventUserCallback; // 0x00
 		private static CriAtomExSequencer.EventCbFunc eventUserCbFunc; // 0x08
+		private static CriAtomExBeatSync.CbFunc beatsyncUserCbFunc; // 0x10
 		private static CriAtomExBeatSync.CbFunc obsoleteBeatSyncFunc; // 0x18
+		private static CriAtomEx.CueLinkCbFunc cueLinkUserCbFunc; // 0x20
+		private static CriAtom _instance_k__BackingField; // 0x28
 		private GCHandle acfRegisterGCHandle; // 0x50
 		public bool dontRemoveExistsCueSheet; // 0x58
 	
 		// Properties
-		private static CriAtom instance { get; set; } // 0x00000001856CAB68-0x00000001856CABA0 0x00000001856CAD00-0x00000001856CAD54
-		public static bool CueSheetsAreLoading { get => default; } // 0x00000001856CAAD4-0x00000001856CAB68 
+		private static CriAtom instance { get; set; } // 0x000000018787CD48-0x000000018787CD78 0x000000018787CD78-0x000000018787CDA4
+		public static bool CueSheetsAreLoading { get => default; } // 0x0000000185492010-0x0000000185492020 
 	
 		// Events
 		internal static event CriAtomExSequencer.EventCallback OnEventSequencerCallback;
@@ -264,70 +269,133 @@ namespace CriWare
 		private static event CriAtomEx.CueLinkCbFunc cueLinkUserCbFunc;
 		internal static event CriAtomEx.CueLinkCbFunc OnCueLinkCallback;
 	
+		// Nested types
+		private sealed class __c__DisplayClass58_0 // TypeDefIndex: 55027
+		{
+			// Fields
+			public CriAtom __4__this; // 0x10
+			public int i; // 0x18
+			public Predicate<CriAtomCueSheet> __9__0; // 0x20
+	
+			// Constructors
+			public __c__DisplayClass58_0() {} // 0x0000000187875C94-0x0000000187875C9C
+	
+			// Methods
+			internal bool _MargeCueSheet_b__0(CriAtomCueSheet sheet) => default; // 0x0000000187875C9C-0x0000000187875CA4
+		}
+	
+		private sealed class _LoadAcbFileCoroutine_d__62 : IEnumerator<object> // TypeDefIndex: 55028
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public CriAtomCueSheet cueSheet; // 0x20
+			public CriFsBinder binder; // 0x28
+			public string acbPath; // 0x30
+			public string awbPath; // 0x38
+			public CriAtom __4__this; // 0x40
+			public bool loadAwbOnMemory; // 0x48
+			private CriAtomExAcbLoader _asyncLoader_5__2; // 0x50
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018787D4C0-0x000000018787D570 
+			object IEnumerator.Current { get => default; } // 0x0000000187876824-0x000000018787682C 
+	
+			// Constructors
+			public _LoadAcbFileCoroutine_d__62() {} // Dummy constructor
+			public _LoadAcbFileCoroutine_d__62(int __1__state) {} // 0x000000018787D410-0x000000018787D4C0
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018787D63C-0x000000018787D6EC
+			private bool MoveNext() => default; // 0x0000000187872388-0x0000000187872390
+			private void __m__Finally1() {} // 0x0000000187872390-0x0000000187872398
+			void IEnumerator.Reset() {} // 0x000000018787D6EC-0x000000018787D79C
+		}
+	
+		private sealed class _LoadAcbDataCoroutine_d__64 : IEnumerator<object> // TypeDefIndex: 55029
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public CriAtomCueSheet cueSheet; // 0x20
+			public string awbPath; // 0x28
+			public CriFsBinder awbBinder; // 0x30
+			public CriAtom __4__this; // 0x38
+			public byte[] acbData; // 0x40
+			public bool loadAwbOnMemory; // 0x48
+			private CriAtomExAcbLoader _asyncLoader_5__2; // 0x50
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018787BD54-0x000000018787BDC0 
+			object IEnumerator.Current { get => default; } // 0x000000018787BA18-0x000000018787BAC0 
+	
+			// Constructors
+			public _LoadAcbDataCoroutine_d__64() {} // Dummy constructor
+			public _LoadAcbDataCoroutine_d__64(int __1__state) {} // 0x00000001878776F4-0x00000001878776FC
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018787D604-0x000000018787D63C
+			private bool MoveNext() => default; // 0x000000018787D79C-0x000000018787D7F0
+			private void __m__Finally1() {} // 0x000000018787BAC0-0x000000018787BB40
+			void IEnumerator.Reset() {} // 0x000000018787BF88-0x000000018787BFB4
+		}
+	
 		// Constructors
-		public CriAtom() {} // 0x00000001856CA8F0-0x00000001856CA974
+		public CriAtom() {} // 0x0000000181377E40-0x0000000181377E50
 	
 		// Methods
-		public static void AttachDspBusSetting(string settingName) {} // 0x00000001856C9024-0x00000001856C90A4
-		public static void DetachDspBusSetting() {} // 0x00000001856C92B8-0x00000001856C9324
-		public static CriAtomCueSheet GetCueSheet(string name) => default; // 0x00000001856C94EC-0x00000001856C9518
-		public static CriAtomCueSheet AddCueSheet(string name, string acbFile, string awbFile, CriFsBinder binder = null) => default; // 0x00000001856C8F7C-0x00000001856C9024
-		public static CriAtomCueSheet AddCueSheetAsync(string name, string acbFile, string awbFile, CriFsBinder binder = null, bool loadAwbOnMemory = false /* Metadata: 0x01FD62B1 */) => default; // 0x00000001856C8CA8-0x00000001856C8D48
-		public static CriAtomCueSheet AddCueSheet(string name, byte[] acbData, string awbFile, CriFsBinder awbBinder = null) => default; // 0x00000001856C8EB4-0x00000001856C8F7C
-		public static CriAtomCueSheet AddCueSheetAsync(string name, byte[] acbData, string awbFile, CriFsBinder awbBinder = null, bool loadAwbOnMemory = false /* Metadata: 0x01FD62B2 */) => default; // 0x00000001856C8BE8-0x00000001856C8CA8
-		public static void RemoveCueSheet(string name) {} // 0x00000001856CA080-0x00000001856CA0F8
-		public static CriAtomExAcb GetAcb(string cueSheetName) => default; // 0x00000001856C9324-0x00000001856C9414
-		public static void SetCategoryVolume(string name, float volume) {} // 0x00000001856BFD84-0x00000001856BFD8C
-		public static void SetCategoryVolume(int id, float volume) {} // 0x00000001856BFD7C-0x00000001856BFD84
-		public static float GetCategoryVolume(string name) => default; // 0x00000001856BFCF8-0x00000001856BFD00
-		public static float GetCategoryVolume(int id) => default; // 0x00000001856BFD00-0x00000001856BFD08
-		public static void SetBusAnalyzer(string busName, bool sw) {} // 0x00000001856CA2AC-0x00000001856CA2DC
-		public static void SetBusAnalyzer(bool sw) {} // 0x00000001856CA2DC-0x00000001856CA308
-		public static CriAtomExAsr.BusAnalyzerInfo GetBusAnalyzerInfo(string busName) => default; // 0x00000001856C9414-0x00000001856C9444
-		[Obsolete("Use CriAtom.GetBusAnalyzerInfo(string busName)")]
-		public static CriAtomExAsr.BusAnalyzerInfo GetBusAnalyzerInfo(int busId) => default; // 0x00000001856C9444-0x00000001856C9470
-		public void Setup() {} // 0x00000001856CA41C-0x00000001856CA63C
-		public void Shutdown() {} // 0x00000001856CA63C-0x00000001856CA72C
-		private void Awake() {} // 0x00000001856C90A4-0x00000001856C9210
-		protected override void OnEnable() {} // 0x00000001856C9B64-0x00000001856C9BD4
-		private void OnDestroy() {} // 0x00000001856C9A70-0x00000001856C9B64
-		public override void CriInternalUpdate() {} // 0x000000018350B670-0x000000018350B680
-		public override void CriInternalLateUpdate() {} // 0x000000018350B670-0x000000018350B680
-		public CriAtomCueSheet GetCueSheetInternal(string name) => default; // 0x00000001856C9470-0x00000001856C94EC
-		public CriAtomCueSheet AddCueSheetInternal(string name, string acbFile, string awbFile, CriFsBinder binder) => default; // 0x00000001856C8D48-0x00000001856C8EB4
-		public void RemoveCueSheetInternal(string name) {} // 0x00000001856C9F18-0x00000001856CA080
-		private void MargeCueSheet(CriAtomCueSheet[] newCueSheets, bool newDontRemoveExistsCueSheet) {} // 0x00000001856C98D0-0x00000001856C9A70
-		private CriAtomExAcb LoadAcbFile(CriFsBinder binder, string acbFile, string awbFile) => default; // 0x00000001856C97D8-0x00000001856C98D0
-		private CriAtomExAcb LoadAcbData(byte[] acbData, CriFsBinder binder, string awbFile) => default; // 0x00000001856C961C-0x00000001856C96CC
-		private void LoadAcbFileAsync(CriAtomCueSheet cueSheet, CriFsBinder binder, string acbFile, string awbFile, bool loadAwbOnMemory) {} // 0x00000001856C96CC-0x00000001856C9714
-		[IteratorStateMachine(typeof(_LoadAcbFileCoroutine_d__62))]
-		private IEnumerator LoadAcbFileCoroutine(CriAtomCueSheet cueSheet, CriFsBinder binder, string acbPath, string awbPath, bool loadAwbOnMemory) => default; // 0x00000001856C9714-0x00000001856C97D8
-		private void LoadAcbDataAsync(CriAtomCueSheet cueSheet, byte[] acbData, CriFsBinder awbBinder, string awbFile, bool loadAwbOnMemory) {} // 0x00000001856C9518-0x00000001856C9558
-		[IteratorStateMachine(typeof(_LoadAcbDataCoroutine_d__64))]
-		private IEnumerator LoadAcbDataCoroutine(CriAtomCueSheet cueSheet, byte[] acbData, CriFsBinder awbBinder, string awbPath, bool loadAwbOnMemory) => default; // 0x00000001856C9558-0x00000001856C961C
-		[AOT.MonoPInvokeCallback(typeof(CriAtomExSequencer.EventCbFunc))]
-		public static void SequenceEventCallbackFromNative(string eventString) {} // 0x00000001856CA14C-0x00000001856CA1A0
-		[AOT.MonoPInvokeCallback(typeof(CriAtomExSequencer.EventCallback))]
-		private static void SequenceCallbackFromNative(ref CriAtomExSequencer.CriAtomExSequenceEventInfo criAtomExSequenceInfo) {} // 0x00000001856CA0F8-0x00000001856CA14C
-		[AOT.MonoPInvokeCallback(typeof(CriAtomExBeatSync.CbFunc))]
-		public static void BeatSyncCallbackFromNative(ref CriAtomExBeatSync.Info info) {} // 0x00000001856C9210-0x00000001856C9264
-		[AOT.MonoPInvokeCallback(typeof(CriAtomEx.CueLinkCbFunc))]
-		public static void CueLinkCallbackFromNative(ref CriAtomEx.CueLinkInfo info) {} // 0x00000001856C9264-0x00000001856C92B8
-		public static void SetEventCallback(CriAtomExSequencer.EventCbFunc func, string separator) {} // 0x00000001856CA308-0x00000001856CA41C
-		private static void RegisterEventCallbackChain(CriAtomExSequencer.EventCallback func) {} // 0x00000001856C9DB4-0x00000001856C9F18
-		private static void UnregisterEventCallbackChain(CriAtomExSequencer.EventCallback func) {} // 0x00000001856CA804-0x00000001856CA8F0
-		public static void SetBeatSyncCallback(CriAtomExBeatSync.CbFunc func) {} // 0x00000001856CA1A0-0x00000001856CA2AC
-		private static void RegisterBeatSyncCallbackChain(CriAtomExBeatSync.CbFunc func) {} // 0x00000001856C9BD4-0x00000001856C9CC4
-		private static void UnregisterBeatSyncCallbackChain(CriAtomExBeatSync.CbFunc func) {} // 0x00000001856CA72C-0x00000001856CA798
-		private static void RegisterCueLinkCallbackChain(CriAtomEx.CueLinkCbFunc func) {} // 0x00000001856C9CC4-0x00000001856C9DB4
-		private static void UnregisterCueLinkCallbackChain(CriAtomEx.CueLinkCbFunc func) {} // 0x00000001856CA798-0x00000001856CA804
+		public static void AttachDspBusSetting(string settingName) {} // 0x000000018787BEB0-0x000000018787BEE0
+		public static void DetachDspBusSetting() {} // 0x000000018787BEE0-0x000000018787BF0C
+		public static CriAtomCueSheet GetCueSheet(string name) => default; // 0x000000018787CEB8-0x000000018787D0D8
+		public static CriAtomCueSheet AddCueSheet(string name, string acbFile, string awbFile, CriFsBinder binder = null) => default; // 0x000000018787D0D8-0x000000018787D1C8
+		public static CriAtomCueSheet AddCueSheetAsync(string name, string acbFile, string awbFile, CriFsBinder binder = null, bool loadAwbOnMemory = false /* Metadata: 0x0207BADD */) => default; // 0x000000018787BB40-0x000000018787BCAC
+		public static CriAtomCueSheet AddCueSheet(string name, byte[] acbData, string awbFile, CriFsBinder awbBinder = null) => default; // 0x000000018787C600-0x000000018787C670
+		public static CriAtomCueSheet AddCueSheetAsync(string name, byte[] acbData, string awbFile, CriFsBinder awbBinder = null, bool loadAwbOnMemory = false /* Metadata: 0x0207BADE */) => default; // 0x000000018787C50C-0x000000018787C600
+		public static void RemoveCueSheet(string name) {} // 0x0000000185492010-0x0000000185492020
+		public static CriAtomExAcb GetAcb(string cueSheetName) => default; // 0x000000018787BF0C-0x000000018787BF88
+		public static void SetCategoryVolume(string name, float volume) {} // 0x000000018787B7E4-0x000000018787B950
+		public static void SetCategoryVolume(int id, float volume) {} // 0x000000018787C9B4-0x000000018787CB1C
+		public static float GetCategoryVolume(string name) => default; // 0x000000018787C36C-0x000000018787C50C
+		public static float GetCategoryVolume(int id) => default; // 0x000000018787C274-0x000000018787C36C
+		public static void SetBusAnalyzer(string busName, bool sw) {} // 0x000000018787C0B8-0x000000018787C168
+		public static void SetBusAnalyzer(bool sw) {} // 0x000000018787C168-0x000000018787C1B0
+		public static CriAtomExAsr.BusAnalyzerInfo GetBusAnalyzerInfo(string busName) => default; // 0x000000018787C1B0-0x000000018787C274
+		public static CriAtomExAsr.BusAnalyzerInfo GetBusAnalyzerInfo(int busId) => default; // 0x000000018787BFB4-0x000000018787BFF4
+		public void Setup() {} // 0x000000018787BFF4-0x000000018787C0B8
+		public void Shutdown() {} // 0x000000018787CBE8-0x000000018787CC3C
+		private void Awake() {} // 0x000000018787CB94-0x000000018787CBE8
+		protected override void OnEnable() {} // 0x000000018787BCAC-0x000000018787BD00
+		private void OnDestroy() {} // 0x000000018787BD00-0x000000018787BD54
+		public override void CriInternalUpdate() {} // 0x000000018787CDA4-0x000000018787CEB8
+		public override void CriInternalLateUpdate() {} // 0x000000018787C850-0x000000018787C9B4
+		public CriAtomCueSheet GetCueSheetInternal(string name) => default; // 0x000000018787D2A0-0x000000018787D38C
+		public CriAtomCueSheet AddCueSheetInternal(string name, string acbFile, string awbFile, CriFsBinder binder) => default; // 0x000000018787CC3C-0x000000018787CD48
+		public void RemoveCueSheetInternal(string name) {} // 0x000000018787C670-0x000000018787C760
+		private void MargeCueSheet(CriAtomCueSheet[] newCueSheets, bool newDontRemoveExistsCueSheet) {} // 0x000000018787D1C8-0x000000018787D234
+		private CriAtomExAcb LoadAcbFile(CriFsBinder binder, string acbFile, string awbFile) => default; // 0x000000018787C760-0x000000018787C850
+		private CriAtomExAcb LoadAcbData(byte[] acbData, CriFsBinder binder, string awbFile) => default; // 0x000000018787D234-0x000000018787D2A0
+		private void LoadAcbFileAsync(CriAtomCueSheet cueSheet, CriFsBinder binder, string acbFile, string awbFile, bool loadAwbOnMemory) {} // 0x000000018787D38C-0x000000018787D410
+		private IEnumerator LoadAcbFileCoroutine(CriAtomCueSheet cueSheet, CriFsBinder binder, string acbPath, string awbPath, bool loadAwbOnMemory) => default; // 0x0000000185492010-0x0000000185492020
+		private void LoadAcbDataAsync(CriAtomCueSheet cueSheet, byte[] acbData, CriFsBinder awbBinder, string awbFile, bool loadAwbOnMemory) {} // 0x000000018787F81C-0x000000018787F870
+		private IEnumerator LoadAcbDataCoroutine(CriAtomCueSheet cueSheet, byte[] acbData, CriFsBinder awbBinder, string awbPath, bool loadAwbOnMemory) => default; // 0x0000000181378230-0x0000000181378240
+		public static void SequenceEventCallbackFromNative(string eventString) {} // 0x000000018787F618-0x000000018787F690
+		private static void SequenceCallbackFromNative(ref CriAtomExSequencer.CriAtomExSequenceEventInfo criAtomExSequenceInfo) {} // 0x000000018787F00C-0x000000018787F5CC
+		public static void BeatSyncCallbackFromNative(ref CriAtomExBeatSync.Info info) {} // 0x000000018787F690-0x000000018787F6D8
+		public static void CueLinkCallbackFromNative(ref CriAtomEx.CueLinkInfo info) {} // 0x0000000181377E40-0x0000000181377E50
+		public static void SetEventCallback(CriAtomExSequencer.EventCbFunc func, string separator) {} // 0x000000018787F5CC-0x000000018787F618
+		private static void RegisterEventCallbackChain(CriAtomExSequencer.EventCallback func) {} // 0x0000000181377E40-0x0000000181377E50
+		private static void UnregisterEventCallbackChain(CriAtomExSequencer.EventCallback func) {} // 0x0000000181378230-0x0000000181378240
+		public static void SetBeatSyncCallback(CriAtomExBeatSync.CbFunc func) {} // 0x000000018787EF4C-0x000000018787EFC4
+		private static void RegisterBeatSyncCallbackChain(CriAtomExBeatSync.CbFunc func) {} // 0x000000018787EA48-0x000000018787EF00
+		private static void UnregisterBeatSyncCallbackChain(CriAtomExBeatSync.CbFunc func) {} // 0x000000018787EFC4-0x000000018787F00C
+		private static void RegisterCueLinkCallbackChain(CriAtomEx.CueLinkCbFunc func) {} // 0x0000000181377E40-0x0000000181377E50
+		private static void UnregisterCueLinkCallbackChain(CriAtomEx.CueLinkCbFunc func) {} // 0x000000018787EF00-0x000000018787EF4C
 	}
 
-	[AddComponentMenu("CRIWARE/CRI Atom Listener")]
-	public class CriAtomListener : CriMonoBehaviour // TypeDefIndex: 54038
+	public class CriAtomListener : CriMonoBehaviour // TypeDefIndex: 55031
 	{
 		// Fields
-		[SerializeField]
+		private CriAtomEx3dListener _nativeListener_k__BackingField; // 0x28
 		private CriAtomRegion regionOnStart; // 0x30
 		public bool activateListenerOnEnable; // 0x38
 		private static List<CriAtomListener> listenersList; // 0x00
@@ -337,98 +405,97 @@ namespace CriWare
 		private bool _isActive; // 0x50
 	
 		// Properties
-		public CriAtomEx3dListener nativeListener { get; protected set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
-		public bool isActive { get => default; set {} } // 0x0000000183D4F000-0x0000000183D4F010 0x00000001856C5350-0x00000001856C53B0
-		public CriAtomRegion region3d { get => default; set {} } // 0x0000000183D4EA70-0x0000000183D4EA80 0x00000001856C53B0-0x00000001856C556C
+		public CriAtomEx3dListener nativeListener { get; protected set; } // 0x00000001813B8590-0x00000001813B85A0 0x0000000184A4EDC0-0x0000000184A4EDD0
+		public bool isActive { get => default; set {} } // 0x00000001813ECBE0-0x00000001813ECBF0 0x0000000187877DEC-0x0000000187877E4C
+		public CriAtomRegion region3d { get => default; set {} } // 0x00000001813ECF20-0x00000001813ECF30 0x0000000187877E4C-0x0000000187878008
 	
 		// Constructors
-		public CriAtomListener() {} // 0x00000001856C5344-0x00000001856C5350
-		static CriAtomListener() {} // 0x0000000183CE4CF0-0x0000000183CE4D80
+		public CriAtomListener() {} // 0x0000000187877DE0-0x0000000187877DEC
+		static CriAtomListener() {} // 0x0000000185F407B0-0x0000000185F40840
 	
 		// Methods
-		public static void CreateDummyNativeListener() {} // 0x0000000183183570-0x0000000183183650
-		public static void DestroyDummyNativeListener() {} // 0x00000001856C4F30-0x00000001856C4FCC
-		private void Awake() {} // 0x00000001856C4E04-0x00000001856C4F20
-		private void Start() {} // 0x00000001856C50F0-0x00000001856C5154
-		protected override void OnEnable() {} // 0x00000001856C50CC-0x00000001856C50F0
-		protected override void OnDisable() {} // 0x00000001856C50A8-0x00000001856C50CC
-		private void OnDestroy() {} // 0x00000001856C4FCC-0x00000001856C50A8
-		public override void CriInternalUpdate() {} // 0x000000018350B670-0x000000018350B680
-		public override void CriInternalLateUpdate() {} // 0x00000001856C4F20-0x00000001856C4F30
-		private void UpdatePosition() {} // 0x00000001856C5154-0x00000001856C5344
-		public void ActivateListener(bool exclusive = true /* Metadata: 0x01FD62B3 */) {} // 0x00000001856C4C60-0x00000001856C4E04
+		public static void CreateDummyNativeListener() {} // 0x00000001850F9920-0x00000001850F9A00
+		public static void DestroyDummyNativeListener() {} // 0x00000001878779CC-0x0000000187877A68
+		private void Awake() {} // 0x00000001878778A0-0x00000001878779BC
+		private void Start() {} // 0x0000000187877B8C-0x0000000187877BF0
+		protected override void OnEnable() {} // 0x0000000187877B68-0x0000000187877B8C
+		protected override void OnDisable() {} // 0x0000000187877B44-0x0000000187877B68
+		private void OnDestroy() {} // 0x0000000187877A68-0x0000000187877B44
+		public override void CriInternalUpdate() {} // 0x0000000185492010-0x0000000185492020
+		public override void CriInternalLateUpdate() {} // 0x00000001878779BC-0x00000001878779CC
+		private void UpdatePosition() {} // 0x0000000187877BF0-0x0000000187877DE0
+		public void ActivateListener(bool exclusive = true /* Metadata: 0x0207BADF */) {} // 0x00000001878776FC-0x00000001878778A0
 	}
 
-	public class CriAtomOutputDeviceObserver : CriMonoBehaviour // TypeDefIndex: 54042
+	public class CriAtomOutputDeviceObserver : CriMonoBehaviour // TypeDefIndex: 55035
 	{
 		// Fields
-		[SerializeField]
 		private bool dontDestroyOnLoad; // 0x28
 		private bool lastIsConnected; // 0x29
 		private bool isConnected; // 0x2A
 		private OutputDeviceType lastDeviceType; // 0x2C
 		private OutputDeviceType deviceType; // 0x30
 		private static CriAtomOutputDeviceObserver instance; // 0x00
+		private static DeviceConnectionChangeCallback _onDeviceConnectionChanged; // 0x08
 	
 		// Properties
-		public static bool IsDeviceConnected { get => default; } // 0x00000001856C5988-0x00000001856C59E8 
-		public static OutputDeviceType DeviceType { get => default; } // 0x00000001856C5928-0x00000001856C5988 
+		public static bool IsDeviceConnected { get => default; } // 0x0000000187878008-0x000000018787815C 
+		public static OutputDeviceType DeviceType { get => default; } // 0x00000001878781E0-0x0000000187878274 
 	
 		// Events
 		public static event DeviceConnectionChangeCallback OnDeviceConnectionChanged;
 		private static event DeviceConnectionChangeCallback _onDeviceConnectionChanged;
 	
 		// Nested types
-		public enum OutputDeviceType // TypeDefIndex: 54039
+		public enum OutputDeviceType // TypeDefIndex: 55032
 		{
 			BuiltinSpeaker = 0,
 			WiredDevice = 1,
 			WirelessDevice = 2
 		}
 	
-		public delegate void DeviceConnectionChangeCallback(bool isConnected, OutputDeviceType deviceType); // TypeDefIndex: 54040; 0x0000000182065C10-0x0000000182065C20
+		public delegate void DeviceConnectionChangeCallback(bool isConnected, OutputDeviceType deviceType); // TypeDefIndex: 55033; 0x0000000187878484-0x000000018787848C
 	
-		private static class UnsafeNativeMethods // TypeDefIndex: 54041
+		private static class UnsafeNativeMethods // TypeDefIndex: 55034
 		{
 		}
 	
 		// Constructors
-		public CriAtomOutputDeviceObserver() {} // 0x0000000183772780-0x0000000183772790
+		public CriAtomOutputDeviceObserver() {} // 0x00000001864BB614-0x00000001864BB734
 	
 		// Methods
-		private void Awake() {} // 0x00000001856C556C-0x00000001856C56C0
-		private void OnDestroy() {} // 0x00000001856C5744-0x00000001856C57D8
-		public override void CriInternalUpdate() {} // 0x00000001856C56C0-0x00000001856C5744
-		public override void CriInternalLateUpdate() {} // 0x000000018350B670-0x000000018350B680
+		private void Awake() {} // 0x0000000185FAF3F0-0x0000000185FAF400
+		private void OnDestroy() {} // 0x000000018787DD34-0x000000018787DDFC
+		public override void CriInternalUpdate() {} // 0x00000001831C5680-0x00000001831C5690
+		public override void CriInternalLateUpdate() {} // 0x000000018787DCA0-0x000000018787DD34
 	}
 
-	[AddComponentMenu("CRIWARE/CRI Atom Region")]
-	[DisallowMultipleComponent]
-	public class CriAtomRegion : CriMonoBehaviour // TypeDefIndex: 54043
+	public class CriAtomRegion : CriMonoBehaviour // TypeDefIndex: 55036
 	{
 		// Fields
+		private CriAtomEx3dRegion _region3dHn_k__BackingField; // 0x28
 		internal List<CriAtomSourceBase> referringSources; // 0x30
 		internal List<CriAtomListener> referringListeners; // 0x38
 		internal List<CriAtomTransceiver> referringTransceivers; // 0x40
 	
 		// Properties
-		public CriAtomEx3dRegion region3dHn { get; protected set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+		public CriAtomEx3dRegion region3dHn { get; protected set; } // 0x00000001813B8590-0x00000001813B85A0 0x0000000184A4EDC0-0x0000000184A4EDD0
 	
 		// Constructors
-		public CriAtomRegion() {} // 0x00000001856C6B08-0x00000001856C6C1C
+		public CriAtomRegion() {} // 0x00000001878795A4-0x00000001878796B8
 	
 		// Methods
-		private void Awake() {} // 0x00000001856C6840-0x00000001856C6848
-		protected override void OnEnable() {} // 0x00000001856C6AE8-0x00000001856C6B08
-		private void OnDestroy() {} // 0x00000001856C6AE0-0x00000001856C6AE8
-		protected virtual void InternalInitialize() {} // 0x00000001856C6A5C-0x00000001856C6AE0
-		protected virtual void InternalFinalize() {} // 0x00000001856C68A4-0x00000001856C6A5C
-		protected virtual void InitializeParameters() {} // 0x00000001856C6848-0x00000001856C68A4
-		public override void CriInternalUpdate() {} // 0x000000018350B670-0x000000018350B680
-		public override void CriInternalLateUpdate() {} // 0x000000018350B670-0x000000018350B680
+		private void Awake() {} // 0x00000001878792DC-0x00000001878792E4
+		protected override void OnEnable() {} // 0x0000000187879584-0x00000001878795A4
+		private void OnDestroy() {} // 0x000000018787957C-0x0000000187879584
+		protected virtual void InternalInitialize() {} // 0x00000001878794F8-0x000000018787957C
+		protected virtual void InternalFinalize() {} // 0x0000000187879340-0x00000001878794F8
+		protected virtual void InitializeParameters() {} // 0x00000001878792E4-0x0000000187879340
+		public override void CriInternalUpdate() {} // 0x0000000185492010-0x0000000185492020
+		public override void CriInternalLateUpdate() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class CriAtomServer : CriMonoBehaviour // TypeDefIndex: 54044
+	public class CriAtomServer : CriMonoBehaviour // TypeDefIndex: 55037
 	{
 		// Fields
 		private static CriAtomServer _instance; // 0x00
@@ -438,109 +505,118 @@ namespace CriWare
 		public static bool EnableAutoConsumePcmOutput; // 0x09
 	
 		// Properties
-		public static CriAtomServer instance { get => default; } // 0x00000001856C6E28-0x00000001856C6E7C 
+		public static CriAtomServer instance { get => default; } // 0x00000001878798C4-0x0000000187879918 
 	
 		// Constructors
-		public CriAtomServer() {} // 0x0000000183772780-0x0000000183772790
-		static CriAtomServer() {} // 0x0000000183D04B40-0x0000000183D04BC0
+		public CriAtomServer() {} // 0x0000000185FAF3F0-0x0000000185FAF400
+		static CriAtomServer() {} // 0x0000000185F63360-0x0000000185F63460
 	
 		// Methods
-		public static void CreateInstance() {} // 0x000000018268E010-0x000000018268E0D0
-		public static void DestroyInstance() {} // 0x00000001856C6C1C-0x00000001856C6CC0
-		private void Awake() {} // 0x0000000183CB6550-0x0000000183CB6620
-		protected override void OnEnable() {} // 0x0000000183D4D9B0-0x0000000183D4D9C0
-		protected override void OnDisable() {} // 0x00000001856C6CC8-0x00000001856C6D80
-		public override void CriInternalUpdate() {} // 0x0000000182F8C640-0x0000000182F8C6C0
-		public override void CriInternalLateUpdate() {} // 0x000000018350B670-0x000000018350B680
-		private void ConsumePcmOutput() {} // 0x000000018350B670-0x000000018350B680
-		private void OnApplicationPause(bool appPause) {} // 0x00000001856C6CC0-0x00000001856C6CC8
-		private void ProcessApplicationPause(bool appPause) {} // 0x00000001856C6D80-0x00000001856C6E28
+		public static void CreateInstance() {} // 0x0000000184A82E80-0x0000000184A82F40
+		public static void DestroyInstance() {} // 0x00000001878796B8-0x000000018787975C
+		private void Awake() {} // 0x0000000185F09290-0x0000000185F09360
+		protected override void OnEnable() {} // 0x0000000184A81D70-0x0000000184A81D80
+		protected override void OnDisable() {} // 0x0000000187879764-0x000000018787981C
+		public override void CriInternalUpdate() {} // 0x0000000184DCF220-0x0000000184DCF2A0
+		public override void CriInternalLateUpdate() {} // 0x0000000185492010-0x0000000185492020
+		private void ConsumePcmOutput() {} // 0x0000000185492010-0x0000000185492020
+		private void OnApplicationPause(bool appPause) {} // 0x000000018787975C-0x0000000187879764
+		private void ProcessApplicationPause(bool appPause) {} // 0x000000018787981C-0x00000001878798C4
 	}
 
-	[AddComponentMenu("CRIWARE/CRI Atom Source")]
-	public class CriAtomSource : CriAtomSourceBase // TypeDefIndex: 54046
+	public class CriAtomSource : CriAtomSourceBase // TypeDefIndex: 55039
 	{
 		// Fields
-		[SerializeField]
 		private string _cueName; // 0xA0
-		[SerializeField]
 		private string _cueSheet; // 0xA8
 	
 		// Properties
-		public string cueName { get => default; set {} } // 0x0000000183D4EA80-0x0000000183D4EA90 0x0000000184270264-0x0000000184270278
-		public string cueSheet { get => default; set {} } // 0x0000000183D4EB10-0x0000000183D4EB20 0x000000018554A7F4-0x000000018554A808
+		public string cueName { get => default; set {} } // 0x000000018787A930-0x000000018787A970 0x000000018787A8BC-0x000000018787A930
+		public string cueSheet { get => default; set {} } // 0x000000018787A980-0x000000018787A9E8 0x0000000181378230-0x0000000181378240
+	
+		// Nested types
+		private sealed class _PlayAsync_d__11 : IEnumerator<object> // TypeDefIndex: 55038
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public CriAtomSource __4__this; // 0x20
+			public string cueName; // 0x28
+			private CriAtomExAcb _acb_5__2; // 0x30
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018774BD8C-0x000000018774BDA0 
+			object IEnumerator.Current { get => default; } // 0x000000018787A890-0x000000018787A8BC 
+	
+			// Constructors
+			public _PlayAsync_d__11() {} // Dummy constructor
+			public _PlayAsync_d__11(int __1__state) {} // 0x0000000185FB0520-0x0000000185FB0530
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018646EBCC-0x000000018646EBE0
+			private bool MoveNext() => default; // 0x000000018349D730-0x000000018349D740
+			void IEnumerator.Reset() {} // 0x000000018787A970-0x000000018787A980
+		}
 	
 		// Constructors
-		public CriAtomSource() {} // 0x00000001856C7EE4-0x00000001856C7F4C
+		public CriAtomSource() {} // 0x0000000181377E40-0x0000000181377E50
 	
 		// Methods
-		public override CriAtomExPlayback Play() => default; // 0x00000001856C7ED4-0x00000001856C7EE4
-		protected override CriAtomExAcb GetAcb() => default; // 0x00000001856C7DF4-0x00000001856C7E20
-		protected override void PlayOnStart() {} // 0x00000001856C7E94-0x00000001856C7ED4
-		[IteratorStateMachine(typeof(_PlayAsync_d__11))]
-		private IEnumerator PlayAsync(string cueName) => default; // 0x00000001856C7E20-0x00000001856C7E94
+		public override CriAtomExPlayback Play() => default; // 0x0000000185492010-0x0000000185492020
+		protected override CriAtomExAcb GetAcb() => default; // 0x000000018787F6D8-0x000000018787F7D0
+		protected override void PlayOnStart() {} // 0x0000000181377E40-0x0000000181377E50
+		private IEnumerator PlayAsync(string cueName) => default; // 0x000000018787F7D0-0x000000018787F81C
 	}
 
-	public abstract class CriAtomSourceBase : CriMonoBehaviour // TypeDefIndex: 54048
+	public abstract class CriAtomSourceBase : CriMonoBehaviour // TypeDefIndex: 55041
 	{
 		// Fields
+		private CriAtomExPlayer _player_k__BackingField; // 0x28
+		private CriAtomEx3dSource _source_k__BackingField; // 0x30
 		protected bool initialized; // 0x38
 		protected Vector3 lastPosition; // 0x3C
 		protected bool hasValidPosition; // 0x48
 		private CriAtomRegion currentRegion; // 0x50
 		private CriAtomListener currentListener; // 0x58
-		[SerializeField]
 		private bool _playOnStart; // 0x60
-		[SerializeField]
 		private CriAtomRegion _regionOnStart; // 0x68
-		[SerializeField]
 		private CriAtomListener _listenerOnStart; // 0x70
-		[SerializeField]
 		private bool _use3dPositioning; // 0x78
-		[SerializeField]
 		private bool _freezeOrientation; // 0x79
-		[SerializeField]
 		private bool _loop; // 0x7A
-		[SerializeField]
 		private float _volume; // 0x7C
-		[SerializeField]
 		private float _pitch; // 0x80
-		[SerializeField]
 		private bool _androidUseLowLatencyVoicePool; // 0x84
-		[SerializeField]
 		private bool need_to_player_update_all; // 0x85
-		[SerializeField]
 		private bool _use3dRandomization; // 0x86
-		[SerializeField]
 		private uint _randomPositionListMaxLength; // 0x88
-		[SerializeField]
 		private CriAtomEx.Randomize3dConfig randomize3dConfig; // 0x90
 	
 		// Properties
-		public CriAtomExPlayer player { get; protected set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
-		public CriAtomEx3dSource source { get; protected set; } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
-		public bool playOnStart { get; set; } // 0x0000000183D519A0-0x0000000183D519B0 0x0000000183D519B0-0x0000000183D519C0
-		public bool use3dPositioning { get; set; } // 0x0000000183D4F800-0x0000000183D4F810 0x00000001856C7CB8-0x00000001856C7CF0
-		public bool freezeOrientation { get; set; } // 0x0000000183D51AE0-0x0000000183D51AF0 0x0000000183D51B40-0x0000000183D51B50
-		public bool use3dRandomization { get; set; } // 0x0000000183D51B10-0x0000000183D51B20 0x00000001856C7CF0-0x00000001856C7DC0
-		public uint randomPositionListMaxLength { get; set; } // 0x0000000183D4F0B0-0x0000000183D4F0C0 0x00000001856C7A28-0x00000001856C7A98
-		public CriAtomRegion region3d { get; set; } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x00000001856C7A98-0x00000001856C7C88
-		public CriAtomListener listener { get; set; } // 0x0000000183D4EAA0-0x0000000183D4EAB0 0x00000001856C78CC-0x00000001856C7990
-		public CriAtomRegion regionOnStart { get; set; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 0x00000001838C5570-0x00000001838C5580
-		public CriAtomListener listenerOnStart { get; set; } // 0x0000000183D4EB30-0x0000000183D4EB40 0x000000018519C3C8-0x000000018519C3D8
-		public bool loop { get; set; } // 0x0000000183D51AF0-0x0000000183D51B00 0x0000000183D51B50-0x0000000183D51B60
-		public float volume { get; set; } // 0x0000000183D51B20-0x0000000183D51B30 0x00000001856C7DC0-0x00000001856C7DF4
-		public float pitch { get; set; } // 0x0000000183D51B00-0x0000000183D51B10 0x00000001856C79F0-0x00000001856C7A28
-		public float pan3dAngle { get; set; } // 0x00000001856C77CC-0x00000001856C77F4 0x00000001856C7990-0x00000001856C79C0
-		public float pan3dDistance { get; set; } // 0x00000001856C77F4-0x00000001856C781C 0x00000001856C79C0-0x00000001856C79F0
-		public int startTime { get; set; } // 0x00000001856C781C-0x00000001856C7844 0x00000001856C7C88-0x00000001856C7CB8
-		public long time { get; } // 0x00000001856C786C-0x00000001856C7890 
-		public Status status { get; } // 0x00000001856C7844-0x00000001856C786C 
-		public bool attenuationDistanceSetting { get; set; } // 0x00000001856C77A8-0x00000001856C77CC 0x00000001856C7890-0x00000001856C78CC
-		public bool androidUseLowLatencyVoicePool { get; set; } // 0x0000000183D51AD0-0x0000000183D51AE0 0x0000000183D51B30-0x0000000183D51B40
+		public CriAtomExPlayer player { get; protected set; } // 0x00000001813B8590-0x00000001813B85A0 0x0000000184A4EDC0-0x0000000184A4EDD0
+		public CriAtomEx3dSource source { get; protected set; } // 0x00000001813B51D0-0x00000001813B51E0 0x00000001864721F0-0x0000000186472200
+		public bool playOnStart { get; set; } // 0x000000018386C570-0x000000018386C580 0x000000018386C580-0x000000018386C590
+		public bool use3dPositioning { get; set; } // 0x0000000185FB0DA0-0x0000000185FB0DB0 0x000000018787A754-0x000000018787A78C
+		public bool freezeOrientation { get; set; } // 0x0000000185FB2E50-0x0000000185FB2E60 0x0000000185FB2EB0-0x0000000185FB2EC0
+		public bool use3dRandomization { get; set; } // 0x0000000185FB2E80-0x0000000185FB2E90 0x000000018787A78C-0x000000018787A85C
+		public uint randomPositionListMaxLength { get; set; } // 0x00000001834A1F30-0x00000001834A1F40 0x000000018787A4C4-0x000000018787A534
+		public CriAtomRegion region3d { get; set; } // 0x0000000181460F60-0x0000000181460F70 0x000000018787A534-0x000000018787A724
+		public CriAtomListener listener { get; set; } // 0x00000001813F1630-0x00000001813F1640 0x000000018787A368-0x000000018787A42C
+		public CriAtomRegion regionOnStart { get; set; } // 0x00000001813AC280-0x00000001813AC290 0x0000000185A62990-0x0000000185A629A0
+		public CriAtomListener listenerOnStart { get; set; } // 0x0000000181460F70-0x0000000181460F80 0x00000001874BE90C-0x00000001874BE91C
+		public bool loop { get; set; } // 0x0000000185FB2E60-0x0000000185FB2E70 0x0000000185FB2EC0-0x0000000185FB2ED0
+		public float volume { get; set; } // 0x0000000185FB2E90-0x0000000185FB2EA0 0x000000018787A85C-0x000000018787A890
+		public float pitch { get; set; } // 0x0000000185FB2E70-0x0000000185FB2E80 0x000000018787A48C-0x000000018787A4C4
+		public float pan3dAngle { get; set; } // 0x000000018787A268-0x000000018787A290 0x000000018787A42C-0x000000018787A45C
+		public float pan3dDistance { get; set; } // 0x000000018787A290-0x000000018787A2B8 0x000000018787A45C-0x000000018787A48C
+		public int startTime { get; set; } // 0x000000018787A2B8-0x000000018787A2E0 0x000000018787A724-0x000000018787A754
+		public long time { get; } // 0x000000018787A308-0x000000018787A32C 
+		public Status status { get; } // 0x000000018787A2E0-0x000000018787A308 
+		public bool attenuationDistanceSetting { get; set; } // 0x000000018787A244-0x000000018787A268 0x000000018787A32C-0x000000018787A368
+		public bool androidUseLowLatencyVoicePool { get; set; } // 0x0000000185FB2E40-0x0000000185FB2E50 0x0000000185FB2EA0-0x0000000185FB2EB0
 	
 		// Nested types
-		public enum Status // TypeDefIndex: 54047
+		public enum Status // TypeDefIndex: 55040
 		{
 			Stop = 0,
 			Prep = 1,
@@ -550,94 +626,68 @@ namespace CriWare
 		}
 	
 		// Constructors
-		protected CriAtomSourceBase() {} // 0x00000001856C774C-0x00000001856C77A8
+		protected CriAtomSourceBase() {} // 0x000000018787A1E8-0x000000018787A244
 	
 		// Methods
-		protected void SetNeedToPlayerUpdateAll() {} // 0x0000000183D51AC0-0x0000000183D51AD0
-		protected virtual void InternalInitialize() {} // 0x00000001856C6FB8-0x00000001856C7090
-		protected virtual void InternalFinalize() {} // 0x00000001856C6F20-0x00000001856C6FB8
-		private void Awake() {} // 0x00000001856C6EB0-0x00000001856C6EB8
-		protected override void OnEnable() {} // 0x00000001856C7114-0x00000001856C7140
-		private void OnDestroy() {} // 0x00000001856C710C-0x00000001856C7114
-		protected bool SetInitialSourcePosition() => default; // 0x00000001856C743C-0x00000001856C74C4
-		protected virtual void SetInitialParameters() {} // 0x00000001856C7384-0x00000001856C743C
-		protected virtual void UpdatePosition() {} // 0x00000001856C7584-0x00000001856C774C
-		private void Start() {} // 0x00000001856C74C4-0x00000001856C7570
-		public override void CriInternalUpdate() {} // 0x000000018350B670-0x000000018350B680
-		public override void CriInternalLateUpdate() {} // 0x00000001856C6EB8-0x00000001856C6F00
+		protected void SetNeedToPlayerUpdateAll() {} // 0x0000000185FB2E30-0x0000000185FB2E40
+		protected virtual void InternalInitialize() {} // 0x0000000187879A54-0x0000000187879B2C
+		protected virtual void InternalFinalize() {} // 0x00000001878799BC-0x0000000187879A54
+		private void Awake() {} // 0x000000018787994C-0x0000000187879954
+		protected override void OnEnable() {} // 0x0000000187879BB0-0x0000000187879BDC
+		private void OnDestroy() {} // 0x0000000187879BA8-0x0000000187879BB0
+		protected bool SetInitialSourcePosition() => default; // 0x0000000187879ED8-0x0000000187879F60
+		protected virtual void SetInitialParameters() {} // 0x0000000187879E20-0x0000000187879ED8
+		protected virtual void UpdatePosition() {} // 0x000000018787A020-0x000000018787A1E8
+		private void Start() {} // 0x0000000187879F60-0x000000018787A00C
+		public override void CriInternalUpdate() {} // 0x0000000185492010-0x0000000185492020
+		public override void CriInternalLateUpdate() {} // 0x0000000187879954-0x000000018787999C
 		public abstract CriAtomExPlayback Play();
 		protected abstract CriAtomExAcb GetAcb();
 		protected abstract void PlayOnStart();
-		public CriAtomExPlayback Play(string cueName) => default; // 0x00000001856C7170-0x00000001856C71E4
-		public CriAtomExPlayback Play(int cueId) => default; // 0x00000001856C71E4-0x00000001856C7254
-		protected CriAtomExPlayback InternalPlayCue() => default; // 0x00000001856C7090-0x00000001856C70E8
-		public void Stop() {} // 0x00000001856C7570-0x00000001856C7584
-		public void Pause(bool sw) {} // 0x00000001856C7140-0x00000001856C7170
-		public bool IsPaused() => default; // 0x00000001856C70E8-0x00000001856C710C
-		public void SetBusSendLevel(string busName, float level) {} // 0x00000001856C7354-0x00000001856C7384
-		[Obsolete("Use CriAtomSource.SetBusSendLevel(string, float)")]
-		public void SetBusSendLevel(int busId, float level) {} // 0x00000001856C7324-0x00000001856C7354
-		public void SetBusSendLevelOffset(string busName, float levelOffset) {} // 0x00000001856C72F4-0x00000001856C7324
-		[Obsolete("Use CriAtomSource.SetBusSendLevelOffset(string, float)")]
-		public void SetBusSendLevelOffset(int busId, float levelOffset) {} // 0x00000001856C72C4-0x00000001856C72F4
-		public void SetAisacControl(string controlName, float value) {} // 0x00000001856C7254-0x00000001856C7284
-		[Obsolete("Use CriAtomSource.SetAisacControl")]
-		public void SetAisac(string controlName, float value) {} // 0x00000001856C72BC-0x00000001856C72C4
-		public void SetAisacControl(uint controlId, float value) {} // 0x00000001856C7284-0x00000001856C72B4
-		[Obsolete("Use CriAtomSource.SetAisacControl")]
-		public void SetAisac(uint controlId, float value) {} // 0x00000001856C72B4-0x00000001856C72BC
-		public void AttachToAnalyzer(CriAtomExOutputAnalyzer analyzer) {} // 0x00000001856C6E7C-0x00000001856C6EB0
-		public void DetachFromAnalyzer(CriAtomExOutputAnalyzer analyzer) {} // 0x00000001856C6F00-0x00000001856C6F20
+		public CriAtomExPlayback Play(string cueName) => default; // 0x0000000187879C0C-0x0000000187879C80
+		public CriAtomExPlayback Play(int cueId) => default; // 0x0000000187879C80-0x0000000187879CF0
+		protected CriAtomExPlayback InternalPlayCue() => default; // 0x0000000187879B2C-0x0000000187879B84
+		public void Stop() {} // 0x000000018787A00C-0x000000018787A020
+		public void Pause(bool sw) {} // 0x0000000187879BDC-0x0000000187879C0C
+		public bool IsPaused() => default; // 0x0000000187879B84-0x0000000187879BA8
+		public void SetBusSendLevel(string busName, float level) {} // 0x0000000187879DF0-0x0000000187879E20
+		public void SetBusSendLevel(int busId, float level) {} // 0x0000000187879DC0-0x0000000187879DF0
+		public void SetBusSendLevelOffset(string busName, float levelOffset) {} // 0x0000000187879D90-0x0000000187879DC0
+		public void SetBusSendLevelOffset(int busId, float levelOffset) {} // 0x0000000187879D60-0x0000000187879D90
+		public void SetAisacControl(string controlName, float value) {} // 0x0000000187879CF0-0x0000000187879D20
+		public void SetAisac(string controlName, float value) {} // 0x0000000187879D58-0x0000000187879D60
+		public void SetAisacControl(uint controlId, float value) {} // 0x0000000187879D20-0x0000000187879D50
+		public void SetAisac(uint controlId, float value) {} // 0x0000000187879D50-0x0000000187879D58
+		public void AttachToAnalyzer(CriAtomExOutputAnalyzer analyzer) {} // 0x0000000187879918-0x000000018787994C
+		public void DetachFromAnalyzer(CriAtomExOutputAnalyzer analyzer) {} // 0x000000018787999C-0x00000001878799BC
 	}
 
-	[AddComponentMenu("CRIWARE/CRI Atom Transceiver")]
-	[DisallowMultipleComponent]
-	public class CriAtomTransceiver : CriMonoBehaviour // TypeDefIndex: 54050
+	public class CriAtomTransceiver : CriMonoBehaviour // TypeDefIndex: 55043
 	{
 		// Fields
-		[SerializeField]
+		private CriAtomEx3dTransceiver _transceiverHn_k__BackingField; // 0x28
+		private Vector3 _inputPos_k__BackingField; // 0x30
+		private Vector3 _inputFront_k__BackingField; // 0x3C
+		private Vector3 _inputUp_k__BackingField; // 0x48
 		private CriAtomRegion regionOnStart; // 0x58
-		[SerializeField]
 		private bool useDedicatedInput; // 0x60
-		[SerializeField]
 		private GameObject dedicatedInput; // 0x68
-		[Range(0f, 1f)]
-		[SerializeField]
 		private float outputVolume; // 0x70
-		[SerializeField]
 		private float directAudioRadius; // 0x74
-		[SerializeField]
 		private float crossFadeDistance; // 0x78
-		[Range(0f, 360f)]
-		[SerializeField]
 		private float coneInsideAngle; // 0x7C
-		[Range(0f, 360f)]
-		[SerializeField]
 		private float coneOutsideAngle; // 0x80
-		[Range(0f, 1f)]
-		[SerializeField]
 		private float coneOutsideVolume; // 0x84
-		[SerializeField]
 		private float transceiverRadius; // 0x88
-		[SerializeField]
 		private float interiorDistance; // 0x8C
-		[SerializeField]
 		public float minAttenuation; // 0x90
-		[SerializeField]
 		public float maxAttenuation; // 0x94
-		[SerializeField]
 		private string globalAisacName; // 0x98
-		[SerializeField]
 		private float maxAngleAisacDelta; // 0xA0
-		[SerializeField]
 		private string distanceAisacControlId; // 0xA8
-		[SerializeField]
 		private string listenerAzimuthAisacControlId; // 0xB0
-		[SerializeField]
 		private string listenerElevationAisacControlId; // 0xB8
-		[SerializeField]
 		private string outputAzimuthAisacControlId; // 0xC0
-		[SerializeField]
 		private string outputElevationAisacControlId; // 0xC8
 		[NonSerialized]
 		public bool inspectorAisacSettingFoldout; // 0xD0
@@ -646,36 +696,37 @@ namespace CriWare
 		private CriAtomRegion currentRegion; // 0xD8
 	
 		// Properties
-		public CriAtomEx3dTransceiver transceiverHn { get; protected set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
-		public Vector3 inputPos { get; private set; } // 0x0000000183D51B80-0x0000000183D51BA0 0x0000000183D51BB0-0x0000000183D51BC0
-		public Vector3 inputFront { get; private set; } // 0x0000000183D51B60-0x0000000183D51B80 0x0000000183D51BA0-0x0000000183D51BB0
-		public Vector3 inputUp { get; private set; } // 0x0000000183D50020-0x0000000183D50040 0x0000000183D50040-0x0000000183D50050
-		public CriAtomRegion region3d { get => default; set {} } // 0x0000000183D4E7B0-0x0000000183D4E7C0 0x00000001856C8A10-0x00000001856C8BE8
+		public CriAtomEx3dTransceiver transceiverHn { get; protected set; } // 0x0000000185FB2ED0-0x0000000185FB2EF0 0x0000000185FB2F10-0x0000000185FB2F20
+		public Vector3 inputPos { get; private set; } // 0x0000000185FB1570-0x0000000185FB1590 0x0000000185FB1590-0x0000000185FB15A0
+		public Vector3 inputFront { get; private set; } // 0x0000000185FB02F0-0x0000000185FB0300 0x000000018787B4AC-0x000000018787B684
+		public Vector3 inputUp { get; private set; } // 0x000000018787B040-0x000000018787B048 0x000000018787B1F0-0x000000018787B254
+		public CriAtomRegion region3d { get => default; set {} } // 0x000000018787B1D0-0x000000018787B1F0 0x000000018787B1C8-0x000000018787B1D0
 	
 		// Nested types
-		private delegate void SetControlIdMethod(ushort id); // TypeDefIndex: 54049; 0x0000000182149960-0x0000000182149970
+		private delegate void SetControlIdMethod(ushort id); // TypeDefIndex: 55042; 0x0000000184A4EDC0-0x0000000184A4EDD0
 	
 		// Constructors
-		public CriAtomTransceiver() {} // 0x00000001856C88BC-0x00000001856C8A10
+		public CriAtomTransceiver() {} // 0x00000001864BB614-0x00000001864BB734
 	
 		// Methods
-		private void Awake() {} // 0x00000001856C85A4-0x00000001856C85AC
-		private void Start() {} // 0x00000001856C8754-0x00000001856C87B8
-		protected override void OnEnable() {} // 0x00000001856C8734-0x00000001856C8754
-		private void OnDestroy() {} // 0x00000001856C872C-0x00000001856C8734
-		protected virtual void InternalInitialize() {} // 0x00000001856C86A0-0x00000001856C872C
-		protected virtual void InternalFinalize() {} // 0x00000001856C8628-0x00000001856C86A0
-		protected virtual void InitializeParameters() {} // 0x00000001856C85B4-0x00000001856C8628
-		public override void CriInternalUpdate() {} // 0x000000018350B670-0x000000018350B680
-		public override void CriInternalLateUpdate() {} // 0x00000001856C85AC-0x00000001856C85B4
-		private void ApplyCurrentPosition() {} // 0x00000001856C7F4C-0x00000001856C8284
-		private void ApplyParameters() {} // 0x00000001856C8284-0x00000001856C85A4
-		private void TrySetAisacControlId(string strId, SetControlIdMethod callback) {} // 0x00000001856C87B8-0x00000001856C88BC
+		private void Awake() {} // 0x000000018787B13C-0x000000018787B1C8
+		private void Start() {} // 0x000000018787B0C4-0x000000018787B13C
+		protected override void OnEnable() {} // 0x000000018787B050-0x000000018787B0C4
+		private void OnDestroy() {} // 0x0000000185492010-0x0000000185492020
+		protected virtual void InternalInitialize() {} // 0x000000018787B048-0x000000018787B050
+		protected virtual void InternalFinalize() {} // 0x000000018787A9E8-0x000000018787AD20
+		protected virtual void InitializeParameters() {} // 0x000000018787AD20-0x000000018787B040
+		public override void CriInternalUpdate() {} // 0x000000018787B254-0x000000018787B358
+		public override void CriInternalLateUpdate() {} // 0x000000018787B358-0x000000018787B4AC
+		private void ApplyCurrentPosition() {} // 0x000000018787E980-0x000000018787EA48
+		private void ApplyParameters() {} // 0x00000001833EEC70-0x00000001833EEC80
+		private void TrySetAisacControlId(string strId, SetControlIdMethod callback) {} // 0x000000018787E908-0x000000018787E980
 	}
 
-	public class CriStructMemory<Type> : IDisposable // TypeDefIndex: 54051
+	public class CriStructMemory<Type> : IDisposable // TypeDefIndex: 55044
 	{
 		// Fields
+		private byte[] _bytes_k__BackingField;
 		private GCHandle gch;
 	
 		// Properties
@@ -690,23 +741,23 @@ namespace CriWare
 		public void Dispose() {}
 	}
 
-	public static class CriAtomEx // TypeDefIndex: 54081
+	public static class CriAtomEx // TypeDefIndex: 55074
 	{
 		// Fields
-		public const uint InvalidAisacControlId = 4294967295; // Metadata: 0x01FD62BC
+		public const uint InvalidAisacControlId = 4294967295; // Metadata: 0x0207BAE8
 		public static readonly Dictionary<Randomize3dCalcType, Randomize3dParamType[]> randomize3dParamTable; // 0x00
 	
 		// Events
 		public static event CueLinkCbFunc OnCueLinkCallback;
 	
 		// Nested types
-		public enum CharacterEncoding // TypeDefIndex: 54052
+		public enum CharacterEncoding // TypeDefIndex: 55045
 		{
 			Utf8 = 0,
 			Sjis = 1
 		}
 	
-		public enum SoundRendererType // TypeDefIndex: 54053
+		public enum SoundRendererType // TypeDefIndex: 55046
 		{
 			Default = 0,
 			Native = 1,
@@ -716,13 +767,13 @@ namespace CriWare
 			Hw2 = 9
 		}
 	
-		public enum VoiceAllocationMethod // TypeDefIndex: 54054
+		public enum VoiceAllocationMethod // TypeDefIndex: 55047
 		{
 			Once = 0,
 			Retry = 1
 		}
 	
-		public enum BiquadFilterType // TypeDefIndex: 54055
+		public enum BiquadFilterType // TypeDefIndex: 55048
 		{
 			Off = 0,
 			LowPass = 1,
@@ -733,14 +784,14 @@ namespace CriWare
 			Peaking = 6
 		}
 	
-		public enum ResumeMode // TypeDefIndex: 54056
+		public enum ResumeMode // TypeDefIndex: 55049
 		{
 			AllPlayback = 0,
 			PausedPlayback = 1,
 			PreparedPlayback = 2
 		}
 	
-		public enum PanType // TypeDefIndex: 54057
+		public enum PanType // TypeDefIndex: 55050
 		{
 			Unknown = -1,
 			Pan3d = 0,
@@ -748,13 +799,13 @@ namespace CriWare
 			Auto = 2
 		}
 	
-		public enum VoiceControlMethod // TypeDefIndex: 54058
+		public enum VoiceControlMethod // TypeDefIndex: 55051
 		{
 			PreferLast = 0,
 			PreferFirst = 1
 		}
 	
-		public enum Parameter // TypeDefIndex: 54059
+		public enum Parameter // TypeDefIndex: 55052
 		{
 			Volume = 0,
 			Pitch = 1,
@@ -784,7 +835,7 @@ namespace CriWare
 			Priority = 31
 		}
 	
-		public enum Speaker // TypeDefIndex: 54060
+		public enum Speaker // TypeDefIndex: 55053
 		{
 			FrontLeft = 0,
 			FrontRight = 1,
@@ -796,7 +847,7 @@ namespace CriWare
 			SurroundBackRight = 7
 		}
 	
-		public enum Format : uint // TypeDefIndex: 54061
+		public enum Format : uint // TypeDefIndex: 55054
 		{
 			ADX = 1,
 			HCA = 3,
@@ -806,13 +857,13 @@ namespace CriWare
 			AUDIO_BUFFER = 9
 		}
 	
-		private enum SpeakerSystem : uint // TypeDefIndex: 54062
+		private enum SpeakerSystem : uint // TypeDefIndex: 55055
 		{
 			Surround_5_1 = 0,
 			Surround_7_1 = 1
 		}
 	
-		public struct SpeakerAngles6ch // TypeDefIndex: 54063
+		public struct SpeakerAngles6ch // TypeDefIndex: 55056
 		{
 			// Fields
 			public float frontLeft; // 0x00
@@ -823,10 +874,10 @@ namespace CriWare
 			public float surroundRight; // 0x14
 	
 			// Methods
-			public static SpeakerAngles6ch Default() => default; // 0x0000000183D51C00-0x0000000183D51C30
+			public static SpeakerAngles6ch Default() => default; // 0x0000000187876664-0x00000001878766B4
 		}
 	
-		public struct SpeakerAngles8ch // TypeDefIndex: 54064
+		public struct SpeakerAngles8ch // TypeDefIndex: 55057
 		{
 			// Fields
 			public float frontLeft; // 0x00
@@ -839,10 +890,10 @@ namespace CriWare
 			public float surroundBackRight; // 0x1C
 	
 			// Methods
-			public static SpeakerAngles8ch Default() => default; // 0x0000000183D51C30-0x0000000183D51C70
+			public static SpeakerAngles8ch Default() => default; // 0x00000001878766B4-0x0000000187876704
 		}
 	
-		public struct FormatInfo // TypeDefIndex: 54065
+		public struct FormatInfo // TypeDefIndex: 55058
 		{
 			// Fields
 			public Format format; // 0x00
@@ -854,7 +905,7 @@ namespace CriWare
 			public uint reserved; // 0x24
 		}
 	
-		public struct AisacControlInfo // TypeDefIndex: 54066
+		public struct AisacControlInfo // TypeDefIndex: 55059
 		{
 			// Fields
 			public readonly string name; // 0x00
@@ -864,10 +915,10 @@ namespace CriWare
 			public AisacControlInfo(byte[] data, int startIndex) {
 				name = default;
 				id = default;
-			} // 0x00000001856B59D0-0x00000001856B5A78
+			} // 0x0000000187876704-0x0000000187876754
 		}
 	
-		public enum Randomize3dCalcType // TypeDefIndex: 54067
+		public enum Randomize3dCalcType // TypeDefIndex: 55060
 		{
 			None = -1,
 			Rectangle = 0,
@@ -878,7 +929,7 @@ namespace CriWare
 			List = 6
 		}
 	
-		public enum Randomize3dParamType // TypeDefIndex: 54068
+		public enum Randomize3dParamType // TypeDefIndex: 55061
 		{
 			None = 0,
 			Width = 1,
@@ -888,48 +939,45 @@ namespace CriWare
 		}
 	
 		[Serializable]
-		public struct Randomize3dConfig // TypeDefIndex: 54069
+		public struct Randomize3dConfig // TypeDefIndex: 55062
 		{
 			// Fields
-			public const int NumOfCalcParams = 3; // Metadata: 0x01FD631D
-			[SerializeField]
+			public const int NumOfCalcParams = 3; // Metadata: 0x0207BB49
 			private bool followsOriginalSource; // 0x00
-			[SerializeField]
 			private Randomize3dCalcType calculationType; // 0x04
-			[SerializeField]
 			private float[] calculationParameters; // 0x08
 	
 			// Properties
-			public bool FollowsOriginalSource { get => default; } // 0x0000000183D51020-0x0000000183D51030 
-			public Randomize3dCalcType CalculationType { get => default; } // 0x0000000183D4E990-0x0000000183D4E9A0 
-			public float CalculationParameter1 { get => default; } // 0x00000001856CBC54-0x00000001856CBC80 
-			public float CalculationParameter2 { get => default; } // 0x00000001856CBC80-0x00000001856CBCAC 
-			public float CalculationParameter3 { get => default; } // 0x00000001856CBCAC-0x00000001856CBCD8 
+			public bool FollowsOriginalSource { get => default; } // 0x0000000187876754-0x00000001878767A4 
+			public Randomize3dCalcType CalculationType { get => default; } // 0x0000000187875D4C-0x0000000187875D98 
+			public float CalculationParameter1 { get => default; } // 0x0000000187876824-0x000000018787682C 
+			public float CalculationParameter2 { get => default; } // 0x00000001878776F4-0x00000001878776FC 
+			public float CalculationParameter3 { get => default; } // 0x0000000187876304-0x0000000187876368 
 	
 			// Constructors
 			internal Randomize3dConfig(byte[] data, int startIndex) : this() {
 				followsOriginalSource = default;
 				calculationType = default;
 				calculationParameters = default;
-			} // 0x00000001856CBAF0-0x00000001856CBBF4
-			public Randomize3dConfig(bool followsOriginalSource, Randomize3dCalcType calculationType, float param1 = 0f /* Metadata: 0x01FD630D */, float param2 = 0f /* Metadata: 0x01FD6311 */, float param3 = 0f /* Metadata: 0x01FD6315 */) : this() {
+			} // 0x0000000187876368-0x00000001878763C0
+			public Randomize3dConfig(bool followsOriginalSource, Randomize3dCalcType calculationType, float param1 = 0f /* Metadata: 0x0207BB39 */, float param2 = 0f /* Metadata: 0x0207BB3D */, float param3 = 0f /* Metadata: 0x0207BB41 */) : this() {
 				this.followsOriginalSource = default;
 				this.calculationType = default;
 				calculationParameters = default;
-			} // 0x00000001856CBA24-0x00000001856CBAF0
+			} // 0x00000001878762A8-0x0000000187876304
 			public Randomize3dConfig(int dummy) : this() {
 				followsOriginalSource = default;
 				calculationType = default;
 				calculationParameters = default;
-			} // 0x00000001856CBBF4-0x00000001856CBC54
+			} // 0x00000001878767E4-0x0000000187876824
 	
 			// Methods
-			public void ClearCalcParams(float initVal = 0f /* Metadata: 0x01FD6319 */) {} // 0x00000001856CB648-0x00000001856CB680
-			public bool GetParamByType(Randomize3dParamType paramType, ref float paramVal) => default; // 0x00000001856CB680-0x00000001856CB84C
-			public bool SetParamByType(Randomize3dParamType paramType, float paramVal) => default; // 0x00000001856CB84C-0x00000001856CBA24
+			public void ClearCalcParams(float initVal = 0f /* Metadata: 0x0207BB45 */) {} // 0x0000000187875E24-0x0000000187875E8C
+			public bool GetParamByType(Randomize3dParamType paramType, ref float paramVal) => default; // 0x0000000187875CFC-0x0000000187875D4C
+			public bool SetParamByType(Randomize3dParamType paramType, float paramVal) => default; // 0x0000000187875D98-0x0000000187875DD8
 		}
 	
-		public struct CuePos3dInfo // TypeDefIndex: 54070
+		public struct CuePos3dInfo // TypeDefIndex: 55063
 		{
 			// Fields
 			public float coneInsideAngle; // 0x00
@@ -961,10 +1009,10 @@ namespace CriWare
 				sourceBaseAngleAisacControl = default;
 				listenerBaseElevationAisacControl = default;
 				sourceBaseElevationAisacControl = default;
-			} // 0x00000001856CB0AC-0x00000001856CB204
+			} // 0x0000000187875CA4-0x0000000187875CFC
 		}
 	
-		public struct GameVariableInfo // TypeDefIndex: 54071
+		public struct GameVariableInfo // TypeDefIndex: 55064
 		{
 			// Fields
 			public readonly string name; // 0x00
@@ -976,15 +1024,15 @@ namespace CriWare
 				name = default;
 				id = default;
 				gameValue = default;
-			} // 0x00000001856CB3E0-0x00000001856CB49C
+			} // 0x000000018787619C-0x00000001878761DC
 			public GameVariableInfo(string name, uint id, float gameValue) {
 				this.name = default;
 				this.id = default;
 				this.gameValue = default;
-			} // 0x00000001856CB49C-0x00000001856CB4C0
+			} // 0x0000000187875EF8-0x00000001878760C8
 		}
 	
-		public enum CueType // TypeDefIndex: 54072
+		public enum CueType // TypeDefIndex: 55065
 		{
 			Polyphonic = 0,
 			Sequential = 1,
@@ -997,7 +1045,7 @@ namespace CriWare
 			TrackTransitionBySelector = 8
 		}
 	
-		public struct CueInfo // TypeDefIndex: 54073
+		public struct CueInfo // TypeDefIndex: 55066
 		{
 			// Fields
 			public int id; // 0x00
@@ -1037,10 +1085,10 @@ namespace CriWare
 				panType = default;
 				pos3dInfo = default;
 				gameVariableInfo = default;
-			} // 0x00000001856CAD54-0x00000001856CB02C
+			} // 0x0000000187876114-0x000000018787615C
 		}
 	
-		public struct WaveformInfo // TypeDefIndex: 54074
+		public struct WaveformInfo // TypeDefIndex: 55067
 		{
 			// Fields
 			public int waveId; // 0x00
@@ -1060,10 +1108,10 @@ namespace CriWare
 				numSamples = default;
 				streamingFlag = default;
 				reserved = default;
-			} // 0x00000001856CD754-0x00000001856CD910
+			} // 0x00000001878760C8-0x0000000187876114
 		}
 	
-		public struct AisacInfo // TypeDefIndex: 54075
+		public struct AisacInfo // TypeDefIndex: 55068
 		{
 			// Fields
 			public readonly string name; // 0x00
@@ -1079,10 +1127,10 @@ namespace CriWare
 				defaultControlValue = default;
 				controlId = default;
 				controlName = default;
-			} // 0x00000001856B5B6C-0x00000001856B5C60
+			} // 0x000000018787645C-0x00000001878764B4
 		}
 	
-		public struct PerformanceInfo // TypeDefIndex: 54076
+		public struct PerformanceInfo // TypeDefIndex: 55069
 		{
 			// Fields
 			public uint serverProcessCount; // 0x00
@@ -1094,14 +1142,14 @@ namespace CriWare
 			public uint averageServerInterval; // 0x18
 		}
 	
-		public struct ResourceUsage // TypeDefIndex: 54077
+		public struct ResourceUsage // TypeDefIndex: 55070
 		{
 			// Fields
 			public uint useCount; // 0x00
 			public uint limit; // 0x04
 		}
 	
-		public struct NativeVector // TypeDefIndex: 54078
+		public struct NativeVector // TypeDefIndex: 55071
 		{
 			// Fields
 			public float x; // 0x00
@@ -1113,15 +1161,15 @@ namespace CriWare
 				this.x = default;
 				this.y = default;
 				this.z = default;
-			} // 0x0000000183D51BD0-0x0000000183D51BE0
+			} // 0x0000000187876400-0x000000018787645C
 			public NativeVector(Vector3 vector) {
 				x = default;
 				y = default;
 				z = default;
-			} // 0x0000000183D51BE0-0x0000000183D51C00
+			} // 0x00000001850F92B0-0x00000001850F9300
 		}
 	
-		public struct CueLinkInfo // TypeDefIndex: 54079
+		public struct CueLinkInfo // TypeDefIndex: 55072
 		{
 			// Fields
 			public IntPtr nativePlayerHn; // 0x00
@@ -1130,106 +1178,104 @@ namespace CriWare
 			public int cueLinkType; // 0x10
 		}
 	
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate void CueLinkCbFunc(ref CueLinkInfo info); // TypeDefIndex: 54080; 0x0000000182149960-0x0000000182149970
+		public delegate void CueLinkCbFunc(ref CueLinkInfo info); // TypeDefIndex: 55073; 0x00000001878761DC-0x0000000187876228
 	
 		// Constructors
-		static CriAtomEx() {} // 0x00000001838C3D10-0x00000001838C3F80
+		static CriAtomEx() {} // 0x00000001872076D8-0x00000001872076F4
 	
 		// Methods
-		public static void SetSpeakerAngle(SpeakerAngles6ch speakerAngle) {} // 0x00000001856C3BC8-0x00000001856C3C18
-		public static void SetSpeakerAngle(SpeakerAngles8ch speakerAngle) {} // 0x00000001856C3C18-0x00000001856C3C68
-		public static void SetVirtualSpeakerAngle(SpeakerAngles6ch speakerAngle) {} // 0x00000001856C3C68-0x00000001856C3CB8
-		public static void SetVirtualSpeakerAngle(SpeakerAngles8ch speakerAngle) {} // 0x00000001856C3CB8-0x00000001856C3D08
-		public static void ControlVirtualSpeakerSetting(bool sw) {} // 0x00000001856C32B0-0x00000001856C32FC
-		public static void RegisterAcf(CriFsBinder binder, string acfPath) {} // 0x00000001856C3868-0x00000001856C38CC
-		public static void RegisterAcf(IntPtr acfData, int dataSize) {} // 0x00000001856C38CC-0x00000001856C3924
-		[Obsolete("Use RegisterAcf(IntPtr) instead")]
-		public static void RegisterAcf(byte[] acfData) {} // 0x00000001856C380C-0x00000001856C3868
-		public static void UnregisterAcf() {} // 0x00000001856C3D48-0x00000001856C3D88
-		public static string GetAppliedDspBusSnapshotName() => default; // 0x00000001856C3388-0x00000001856C33F0
-		public static void AttachDspBusSetting(string settingName) {} // 0x00000001856C3260-0x00000001856C32B0
-		public static void DetachDspBusSetting() {} // 0x00000001856C32FC-0x00000001856C333C
-		public static void ApplyDspBusSnapshot(string snapshot_name, int time_ms) {} // 0x00000001856C3208-0x00000001856C3260
-		public static int GetNumGameVariables() => default; // 0x00000001856C3700-0x00000001856C3740
+		public static void SetSpeakerAngle(SpeakerAngles6ch speakerAngle) {} // 0x0000000187876268-0x00000001878762A8
+		public static void SetSpeakerAngle(SpeakerAngles8ch speakerAngle) {} // 0x00000001878767A4-0x00000001878767E4
+		public static void SetVirtualSpeakerAngle(SpeakerAngles6ch speakerAngle) {} // 0x000000018787656C-0x0000000187876614
+		public static void SetVirtualSpeakerAngle(SpeakerAngles8ch speakerAngle) {} // 0x0000000187876228-0x0000000187876268
+		public static void ControlVirtualSpeakerSetting(bool sw) {} // 0x000000018787615C-0x000000018787619C
+		public static void RegisterAcf(CriFsBinder binder, string acfPath) {} // 0x0000000185492010-0x0000000185492020
+		public static void RegisterAcf(IntPtr acfData, int dataSize) {} // 0x00000001840A27C0-0x00000001840A27D0
+		public static void RegisterAcf(byte[] acfData) {} // 0x00000001814A81B0-0x00000001814A81C0
+		public static void UnregisterAcf() {} // 0x0000000185492010-0x0000000185492020
+		public static string GetAppliedDspBusSnapshotName() => default; // 0x0000000187875DD8-0x0000000187875E24
+		public static void AttachDspBusSetting(string settingName) {} // 0x0000000187876F04-0x0000000187876FC8
+		public static void DetachDspBusSetting() {} // 0x0000000187876DB8-0x0000000187876E58
+		public static void ApplyDspBusSnapshot(string snapshot_name, int time_ms) {} // 0x0000000187876E58-0x0000000187876F04
+		public static int GetNumGameVariables() => default; // 0x00000001878772D4-0x000000018787733C
 		public static bool GetGameVariableInfo(ushort index, out GameVariableInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856C345C-0x00000001856C362C
-		public static float GetGameVariable(uint game_variable_id) => default; // 0x00000001856C3678-0x00000001856C36C0
-		public static float GetGameVariable(string game_variable_name) => default; // 0x00000001856C362C-0x00000001856C3678
-		public static void SetGameVariable(uint game_variable_id, float game_variable_value) {} // 0x00000001856C39C0-0x00000001856C3A18
-		public static void SetGameVariable(string game_variable_name, float game_variable_value) {} // 0x00000001856C3964-0x00000001856C39C0
-		public static void SetRandomSeed(uint seed) {} // 0x0000000183182F00-0x0000000183182F50
-		public static void ResetPerformanceMonitor() {} // 0x00000001856C3924-0x00000001856C3964
+		} // 0x00000001878769B0-0x0000000187876A58
+		public static float GetGameVariable(uint game_variable_id) => default; // 0x0000000187876AD0-0x0000000187876B38
+		public static float GetGameVariable(string game_variable_name) => default; // 0x000000018787695C-0x00000001878769B0
+		public static void SetGameVariable(uint game_variable_id, float game_variable_value) {} // 0x0000000187876BB0-0x0000000187876C18
+		public static void SetGameVariable(string game_variable_name, float game_variable_value) {} // 0x0000000187876D24-0x0000000187876D50
+		public static void SetRandomSeed(uint seed) {} // 0x0000000187876C98-0x0000000187876D24
+		public static void ResetPerformanceMonitor() {} // 0x0000000187876C18-0x0000000187876C44
 		public static void GetPerformanceInfo(out PerformanceInfo info) {
 			info = default;
-		} // 0x00000001856C3740-0x00000001856C378C
-		public static void SetGlobalLabelToSelectorByIndex(ushort selector_index, ushort label_index) {} // 0x00000001856C3A18-0x00000001856C3A74
-		public static void SetGlobalLabelToSelectorByName(string selector_name, string label_name) {} // 0x00000001856C3A74-0x00000001856C3AD0
-		public static void Lock() {} // 0x00000001856C37CC-0x00000001856C380C
-		public static void Unlock() {} // 0x00000001856C3D08-0x00000001856C3D48
-		public static void SetOutputAudioDevice_PC(string deviceId) {} // 0x00000001856C3AD0-0x00000001856C3B78
-		public static bool LoadAudioDeviceList_PC() => default; // 0x00000001856C378C-0x00000001856C37CC
-		public static int GetNumAudioDevices_PC() => default; // 0x00000001856C36C0-0x00000001856C3700
-		public static string GetAudioDeviceName_PC(int index) => default; // 0x00000001856C33F0-0x00000001856C345C
-		public static void SetOutputAudioDevice_PC(int index) {} // 0x00000001856C3B78-0x00000001856C3BC8
-		public static void SetOutputVolume_VITA(float volume) {} // 0x000000018350B670-0x000000018350B680
-		public static bool IsBgmPortAcquired_VITA() => default; // 0x000000018232EB60-0x000000018232EB70
-		public static bool IsSoundStopped_IOS() => default; // 0x000000018115F4C0-0x000000018115F530
-		public static void EnableAudioSessionRestoration_IOS(bool flag) {} // 0x000000018350B670-0x000000018350B680
-		public static void EnableBusSendOffsetWhenLevelNotExist(bool enable) {} // 0x00000001856C333C-0x00000001856C3388
-		private static extern bool criAtomEx_RegisterAcfFile(IntPtr binder, string path, IntPtr work, int workSize); // 0x00000001856C4468-0x00000001856C452C
-		private static extern void criAtomEx_RegisterAcfData(IntPtr acfData, int acfDataSize, IntPtr work, int workSize); // 0x00000001856C431C-0x00000001856C43BC
-		private static extern void criAtomEx_RegisterAcfData(byte[] acfData, int acfDataSize, IntPtr work, int workSize); // 0x00000001856C43BC-0x00000001856C4468
-		private static extern void criAtomEx_UnregisterAcf(); // 0x00000001856C4838-0x00000001856C48A0
-		private static extern void criAtomEx_AttachDspBusSetting(string settingName, IntPtr work, int workSize); // 0x00000001856C3F14-0x00000001856C3FBC
-		private static extern void criAtomEx_DetachDspBusSetting(); // 0x00000001856C4034-0x00000001856C409C
-		private static extern void criAtomEx_ApplyDspBusSnapshot(string snapshot_name, int time_ms); // 0x00000001856C3EC0-0x00000001856C3F14
-		private static extern IntPtr criAtomEx_GetAppliedDspBusSnapshotName(); // 0x00000001856C4114-0x00000001856C417C
-		private static extern int criAtomEx_GetNumGameVariables(); // 0x00000001856C4288-0x00000001856C42B4
-		private static extern bool criAtomEx_GetGameVariableInfo(ushort index, IntPtr game_variable_info); // 0x00000001856C41FC-0x00000001856C4288
-		private static extern float criAtomEx_GetGameVariableById(uint game_variable_id); // 0x00000001856C417C-0x00000001856C41A8
-		private static extern float criAtomEx_GetGameVariableByName(string game_variable_name); // 0x00000001856C41A8-0x00000001856C41FC
-		private static extern void criAtomEx_SetGameVariableById(uint game_variable_id, float game_variable_value); // 0x00000001856C452C-0x00000001856C4568
-		private static extern void criAtomEx_SetGameVariableByName(string game_variable_name, float game_variable_value); // 0x00000001856C4568-0x00000001856C45C0
-		private static extern void criAtomEx_SetRandomSeed(uint seed); // 0x00000001822C8020-0x00000001822C80A0
-		private static extern void criAtomEx_Lock(); // 0x00000001856C42B4-0x00000001856C431C
-		private static extern void criAtomEx_Unlock(); // 0x00000001856C47D0-0x00000001856C4838
-		private static extern void criAtom_ResetPerformanceMonitor(); // 0x00000001856C4AE0-0x00000001856C4B48
-		private static extern void criAtom_GetPerformanceInfo(out PerformanceInfo info); // 0x00000001856C4A68-0x00000001856C4AE0
-		private static extern void criAtomExAcf_SetGlobalLabelToSelectorByIndex(ushort selector_index, ushort label_index); // 0x00000001856C3D90-0x00000001856C3E14
-		private static extern void criAtomExAcf_SetGlobalLabelToSelectorByName(string selector_name, string label_name); // 0x00000001856C3E14-0x00000001856C3EC0
-		private static extern void criAtomEx_SetSpeakerAngleArray(SpeakerSystem speaker_system, ref SpeakerAngles6ch angle_array); // 0x00000001856C45C0-0x00000001856C4644
-		private static extern void criAtomEx_SetSpeakerAngleArray(SpeakerSystem speaker_system, ref SpeakerAngles8ch angle_array); // 0x00000001856C4644-0x00000001856C46C8
-		private static extern void criAtomEx_SetVirtualSpeakerAngleArray(SpeakerSystem speaker_system, ref SpeakerAngles6ch angle_array); // 0x00000001856C46C8-0x00000001856C474C
-		private static extern void criAtomEx_SetVirtualSpeakerAngleArray(SpeakerSystem speaker_system, ref SpeakerAngles8ch angle_array); // 0x00000001856C474C-0x00000001856C47D0
-		private static extern void criAtomEx_ControlVirtualSpeakerSetting(bool sw); // 0x00000001856C3FBC-0x00000001856C4034
-		private static extern void criAtomEx_EnableBusSendOffsetWhenLevelNotExist(bool enable); // 0x00000001856C409C-0x00000001856C4114
-		private static extern void criAtom_SetDeviceId_WASAPI(SoundRendererType soundRendererType, string deviceId); // 0x00000001856C4BCC-0x00000001856C4C58
-		private static extern void criAtom_SetDeviceId_WASAPI(SoundRendererType type, IntPtr deviceId); // 0x00000001856C4B48-0x00000001856C4BCC
-		private static extern bool criAtomUnity_LoadAudioDeviceList_PC(); // 0x00000001856C49F8-0x00000001856C4A68
-		private static extern int criAtomUnity_GetNumAudioDevices_PC(); // 0x00000001856C4990-0x00000001856C49F8
-		private static extern IntPtr criAtomUnity_GetAudioDeviceName_PC(int index); // 0x00000001856C4918-0x00000001856C4990
-		private static extern IntPtr criAtomUnity_GetAudioDeviceId_PC(int index); // 0x00000001856C48A0-0x00000001856C4918
+		} // 0x0000000187876C44-0x0000000187876C98
+		public static void SetGlobalLabelToSelectorByIndex(ushort selector_index, ushort label_index) {} // 0x0000000187876FC8-0x0000000187877004
+		public static void SetGlobalLabelToSelectorByName(string selector_name, string label_name) {} // 0x0000000187877004-0x000000018787705C
+		public static void Lock() {} // 0x00000001844CED50-0x00000001844CEDD0
+		public static void Unlock() {} // 0x0000000187876D50-0x0000000187876DB8
+		public static void SetOutputAudioDevice_PC(string deviceId) {} // 0x000000018787726C-0x00000001878772D4
+		public static bool LoadAudioDeviceList_PC() => default; // 0x000000018787757C-0x00000001878775E4
+		public static int GetNumAudioDevices_PC() => default; // 0x0000000187877504-0x000000018787757C
+		public static string GetAudioDeviceName_PC(int index) => default; // 0x000000018787682C-0x00000001878768B0
+		public static void SetOutputAudioDevice_PC(int index) {} // 0x00000001878768B0-0x000000018787695C
+		public static void SetOutputVolume_VITA(float volume) {} // 0x000000018787705C-0x00000001878770E0
+		public static bool IsBgmPortAcquired_VITA() => default; // 0x00000001878770E0-0x0000000187877164
+		public static bool IsSoundStopped_IOS() => default; // 0x0000000187877164-0x00000001878771E8
+		public static void EnableAudioSessionRestoration_IOS(bool flag) {} // 0x00000001878771E8-0x000000018787726C
+		public static void EnableBusSendOffsetWhenLevelNotExist(bool enable) {} // 0x0000000187876A58-0x0000000187876AD0
+		private static extern bool criAtomEx_RegisterAcfFile(IntPtr binder, string path, IntPtr work, int workSize); // 0x0000000187876B38-0x0000000187876BB0
+		private static extern void criAtomEx_RegisterAcfData(IntPtr acfData, int acfDataSize, IntPtr work, int workSize); // 0x0000000187877668-0x00000001878776F4
+		private static extern void criAtomEx_RegisterAcfData(byte[] acfData, int acfDataSize, IntPtr work, int workSize); // 0x00000001878775E4-0x0000000187877668
+		private static extern void criAtomEx_UnregisterAcf(); // 0x0000000187877494-0x0000000187877504
+		private static extern void criAtomEx_AttachDspBusSetting(string settingName, IntPtr work, int workSize); // 0x000000018787742C-0x0000000187877494
+		private static extern void criAtomEx_DetachDspBusSetting(); // 0x00000001878773B4-0x000000018787742C
+		private static extern void criAtomEx_ApplyDspBusSnapshot(string snapshot_name, int time_ms); // 0x000000018787733C-0x00000001878773B4
+		private static extern IntPtr criAtomEx_GetAppliedDspBusSnapshotName(); // 0x0000000185A614B0-0x0000000185A61720
+		private static extern int criAtomEx_GetNumGameVariables(); // 0x0000000185FB2F70-0x0000000185FB2FA0
+		private static extern bool criAtomEx_GetGameVariableInfo(ushort index, IntPtr game_variable_info); // 0x0000000185FB2FA0-0x0000000185FB2FE0
+		private static extern float criAtomEx_GetGameVariableById(uint game_variable_id); // 0x000000018786846C-0x0000000187868514
+		private static extern float criAtomEx_GetGameVariableByName(string game_variable_name); // 0x00000001835E3010-0x00000001835E3020
+		private static extern void criAtomEx_SetGameVariableById(uint game_variable_id, float game_variable_value); // 0x000000018357CBC0-0x000000018357CBD0
+		private static extern void criAtomEx_SetGameVariableByName(string game_variable_name, float game_variable_value); // 0x000000018787E6F0-0x000000018787E71C
+		private static extern void criAtomEx_SetRandomSeed(uint seed); // 0x000000018787E71C-0x000000018787E748
+		private static extern void criAtomEx_Lock(); // 0x000000018787E748-0x000000018787E774
+		private static extern void criAtomEx_Unlock(); // 0x000000018787E58C-0x000000018787E690
+		private static extern void criAtom_ResetPerformanceMonitor(); // 0x000000018787E4C0-0x000000018787E58C
+		private static extern void criAtom_GetPerformanceInfo(out PerformanceInfo info); // 0x000000018787E690-0x000000018787E6F0
+		private static extern void criAtomExAcf_SetGlobalLabelToSelectorByIndex(ushort selector_index, ushort label_index); // 0x000000018787E0E4-0x000000018787E11C
+		private static extern void criAtomExAcf_SetGlobalLabelToSelectorByName(string selector_name, string label_name); // 0x000000018787E11C-0x000000018787E2E8
+		private static extern void criAtomEx_SetSpeakerAngleArray(SpeakerSystem speaker_system, ref SpeakerAngles6ch angle_array); // 0x000000018787E2E8-0x000000018787E4C0
+		private static extern void criAtomEx_SetSpeakerAngleArray(SpeakerSystem speaker_system, ref SpeakerAngles8ch angle_array); // 0x000000018787DB48-0x000000018787DCA0
+		private static extern void criAtomEx_SetVirtualSpeakerAngleArray(SpeakerSystem speaker_system, ref SpeakerAngles6ch angle_array); // 0x000000018787DE7C-0x000000018787DF38
+		private static extern void criAtomEx_SetVirtualSpeakerAngleArray(SpeakerSystem speaker_system, ref SpeakerAngles8ch angle_array); // 0x000000018787DF38-0x000000018787DF5C
+		private static extern void criAtomEx_ControlVirtualSpeakerSetting(bool sw); // 0x000000018787D7F0-0x000000018787DAC8
+		private static extern void criAtomEx_EnableBusSendOffsetWhenLevelNotExist(bool enable); // 0x00000001878801F0-0x00000001878803AC
+		private static extern void criAtom_SetDeviceId_WASAPI(SoundRendererType soundRendererType, string deviceId); // 0x0000000187868608-0x00000001878686FC
+		private static extern void criAtom_SetDeviceId_WASAPI(SoundRendererType type, IntPtr deviceId); // 0x0000000185FB2F40-0x0000000185FB2F50
+		private static extern bool criAtomUnity_LoadAudioDeviceList_PC(); // 0x0000000185FB2F50-0x0000000185FB2F70
+		private static extern int criAtomUnity_GetNumAudioDevices_PC(); // 0x0000000187868BC8-0x0000000187868C9C
+		private static extern IntPtr criAtomUnity_GetAudioDeviceName_PC(int index); // 0x00000001833EEC70-0x00000001833EEC80
+		private static extern IntPtr criAtomUnity_GetAudioDeviceId_PC(int index); // 0x000000018787DAC8-0x000000018787DB48
 	}
 
-	public static class CriAtomExCategory // TypeDefIndex: 54095
+	public static class CriAtomExCategory // TypeDefIndex: 55088
 	{
 		// Nested types
-		public enum ReactType // TypeDefIndex: 54082
+		public enum ReactType // TypeDefIndex: 55075
 		{
 			Ducker = 0,
 			AisacModulationTrigger = 1
 		}
 	
-		public enum ReactDuckerTargetType // TypeDefIndex: 54083
+		public enum ReactDuckerTargetType // TypeDefIndex: 55076
 		{
 			Volume = 0,
 			AisacControlValue = 1
 		}
 	
-		public enum ReactDuckerCurveType // TypeDefIndex: 54084
+		public enum ReactDuckerCurveType // TypeDefIndex: 55077
 		{
 			Linear = 0,
 			Square = 1,
@@ -1238,7 +1284,7 @@ namespace CriWare
 			FlatAtHalf = 4
 		}
 	
-		public struct ReactFadeParameter // TypeDefIndex: 54085
+		public struct ReactFadeParameter // TypeDefIndex: 55078
 		{
 			// Fields
 			public ReactDuckerCurveType curveType; // 0x00
@@ -1246,13 +1292,13 @@ namespace CriWare
 			public ushort fadeTimeMs; // 0x08
 		}
 	
-		public enum ReactHoldType // TypeDefIndex: 54086
+		public enum ReactHoldType // TypeDefIndex: 55079
 		{
 			WhilePlaying = 0,
 			FixedTime = 1
 		}
 	
-		public struct ReactDuckerParameter // TypeDefIndex: 54090
+		public struct ReactDuckerParameter // TypeDefIndex: 55083
 		{
 			// Fields
 			public Target target; // 0x00
@@ -1263,20 +1309,20 @@ namespace CriWare
 			public ushort holdTimeMs; // 0x28
 	
 			// Nested types
-			public struct Volume // TypeDefIndex: 54087
+			public struct Volume // TypeDefIndex: 55080
 			{
 				// Fields
 				public float level; // 0x00
 			}
 	
-			public struct AisacControl // TypeDefIndex: 54088
+			public struct AisacControl // TypeDefIndex: 55081
 			{
 				// Fields
 				public uint id; // 0x00
 				public float value; // 0x04
 			}
 	
-			public struct Target // TypeDefIndex: 54089
+			public struct Target // TypeDefIndex: 55082
 			{
 				// Fields
 				public CriWare.CriAtomExCategory.ReactDuckerParameter.Volume volume; // 0x00
@@ -1284,7 +1330,7 @@ namespace CriWare
 			}
 		}
 	
-		public struct ReactAisacModulationParameter // TypeDefIndex: 54091
+		public struct ReactAisacModulationParameter // TypeDefIndex: 55084
 		{
 			// Fields
 			private int _enableDecrementAisacModulationKey; // 0x00
@@ -1293,11 +1339,11 @@ namespace CriWare
 			public uint incrementAisacModulationKey; // 0x0C
 	
 			// Properties
-			public bool enableDecrementAisacModulationKey { get => default; } // 0x00000001856CBCD8-0x00000001856CBCE0 
-			public bool enableIncrementAisacModulationKey { get => default; } // 0x00000001856CBCE0-0x00000001856CBCE8 
+			public bool enableDecrementAisacModulationKey { get => default; } // 0x0000000187872820-0x0000000187872828 
+			public bool enableIncrementAisacModulationKey { get => default; } // 0x0000000187872818-0x0000000187872820 
 		}
 	
-		public struct ReactParameter // TypeDefIndex: 54093
+		public struct ReactParameter // TypeDefIndex: 55086
 		{
 			// Fields
 			public Parameter parameter; // 0x00
@@ -1305,7 +1351,7 @@ namespace CriWare
 			public bool enablePausingCue; // 0x30
 	
 			// Nested types
-			public struct Parameter // TypeDefIndex: 54092
+			public struct Parameter // TypeDefIndex: 55085
 			{
 				// Fields
 				public ReactDuckerParameter ducker; // 0x00
@@ -1313,7 +1359,7 @@ namespace CriWare
 			}
 		}
 	
-		public enum ReactStatus // TypeDefIndex: 54094
+		public enum ReactStatus // TypeDefIndex: 55087
 		{
 			Stop = 0,
 			FadeOut = 1,
@@ -1323,79 +1369,77 @@ namespace CriWare
 		}
 	
 		// Methods
-		public static void SetVolume(string name, float volume) {} // 0x00000001856BFD84-0x00000001856BFD8C
-		public static void SetVolume(int id, float volume) {} // 0x00000001856BFD7C-0x00000001856BFD84
-		public static float GetVolume(string name) => default; // 0x00000001856BFCF8-0x00000001856BFD00
-		public static float GetVolume(int id) => default; // 0x00000001856BFD00-0x00000001856BFD08
-		public static void Mute(string name, bool mute) {} // 0x00000001856BFD38-0x00000001856BFD40
-		public static void Mute(int id, bool mute) {} // 0x00000001856BFD40-0x00000001856BFD48
-		public static bool IsMuted(string name) => default; // 0x00000001856BFD10-0x00000001856BFD18
-		public static bool IsMuted(int id) => default; // 0x00000001856BFD08-0x00000001856BFD10
-		public static void Solo(string name, bool solo, float muteVolume) {} // 0x00000001856BFD94-0x00000001856BFD9C
-		public static void Solo(int id, bool solo, float muteVolume) {} // 0x00000001856BFD8C-0x00000001856BFD94
-		public static bool IsSoloed(string name) => default; // 0x00000001856BFD30-0x00000001856BFD38
-		public static bool IsSoloed(int id) => default; // 0x00000001856BFD28-0x00000001856BFD30
-		public static void Pause(string name, bool pause) {} // 0x00000001856BFD48-0x00000001856BFD50
-		public static void Pause(int id, bool pause) {} // 0x00000001856BFD50-0x00000001856BFD58
-		public static bool IsPaused(string name) => default; // 0x00000001856BFD18-0x00000001856BFD20
-		public static bool IsPaused(int id) => default; // 0x00000001856BFD20-0x00000001856BFD28
-		public static void SetAisacControl(string name, string controlName, float value) {} // 0x00000001856BFD60-0x00000001856BFD68
-		[Obsolete("Use CriAtomExCategory.SetAisacControl")]
-		public static void SetAisac(string name, string controlName, float value) {} // 0x00000001856BFD60-0x00000001856BFD68
-		public static void SetAisacControl(int id, int controlId, float value) {} // 0x00000001856BFD58-0x00000001856BFD60
-		[Obsolete("Use CriAtomExCategory.SetAisacControl")]
-		public static void SetAisac(int id, int controlId, float value) {} // 0x00000001856BFD58-0x00000001856BFD60
-		public static void SetReactParameter(string name, ReactParameter parameter) {} // 0x00000001856BFD68-0x00000001856BFD7C
+		public static void SetVolume(string name, float volume) {} // 0x0000000187872794-0x000000018787279C
+		public static void SetVolume(int id, float volume) {} // 0x000000018787279C-0x00000001878727A4
+		public static float GetVolume(string name) => default; // 0x00000001878727D4-0x00000001878727DC
+		public static float GetVolume(int id) => default; // 0x00000001878727DC-0x00000001878727E4
+		public static void Mute(string name, bool mute) {} // 0x00000001878727AC-0x00000001878727B4
+		public static void Mute(int id, bool mute) {} // 0x00000001878727A4-0x00000001878727AC
+		public static bool IsMuted(string name) => default; // 0x0000000187872830-0x0000000187872838
+		public static bool IsMuted(int id) => default; // 0x0000000187872828-0x0000000187872830
+		public static void Solo(string name, bool solo, float muteVolume) {} // 0x00000001878727CC-0x00000001878727D4
+		public static void Solo(int id, bool solo, float muteVolume) {} // 0x00000001878727C4-0x00000001878727CC
+		public static bool IsSoloed(string name) => default; // 0x00000001878727E4-0x00000001878727EC
+		public static bool IsSoloed(int id) => default; // 0x00000001878727EC-0x00000001878727F4
+		public static void Pause(string name, bool pause) {} // 0x00000001878727B4-0x00000001878727BC
+		public static void Pause(int id, bool pause) {} // 0x00000001878727BC-0x00000001878727C4
+		public static bool IsPaused(string name) => default; // 0x00000001878727FC-0x0000000187872804
+		public static bool IsPaused(int id) => default; // 0x00000001878727FC-0x0000000187872804
+		public static void SetAisacControl(string name, string controlName, float value) {} // 0x00000001878727F4-0x00000001878727FC
+		public static void SetAisac(string name, string controlName, float value) {} // 0x00000001878727F4-0x00000001878727FC
+		public static void SetAisacControl(int id, int controlId, float value) {} // 0x0000000187872804-0x0000000187872818
+		public static void SetAisac(int id, int controlId, float value) {} // 0x0000000187872784-0x000000018787278C
+		public static void SetReactParameter(string name, ReactParameter parameter) {} // 0x0000000187872398-0x0000000187872584
 		public static bool GetReactParameter(string name, out ReactParameter parameter) {
 			parameter = default;
 			return default;
-		} // 0x00000001856BFCE8-0x00000001856BFCF0
+		} // 0x0000000187872584-0x000000018787277C
 		public static bool GetAttachedAisacInfoById(uint id, int aisacAttachedIndex, out CriAtomEx.AisacInfo aisacInfo) {
 			aisacInfo = default;
 			return default;
-		} // 0x00000001856BF8FC-0x00000001856BFAE8
+		} // 0x000000018787277C-0x0000000187872784
 		public static bool GetAttachedAisacInfoByName(string name, int aisacAttachedIndex, out CriAtomEx.AisacInfo aisacInfo) {
 			aisacInfo = default;
 			return default;
-		} // 0x00000001856BFAE8-0x00000001856BFCE0
+		} // 0x000000018787278C-0x0000000187872794
 		public static bool GetCurrentAisacControlValue(string categoryName, string aisacControlName, out float controlValue) {
 			controlValue = default;
 			return default;
-		} // 0x00000001856BFCE0-0x00000001856BFCE8
-		public static ReactStatus GetReactStatus(string reactName) => default; // 0x00000001856BFCF0-0x00000001856BFCF8
-		private static extern void criAtomExCategory_SetVolumeByName(string name, float volume); // 0x00000001856C0804-0x00000001856C0854
-		private static extern float criAtomExCategory_GetVolumeByName(string name); // 0x00000001856C0150-0x00000001856C01A4
-		private static extern void criAtomExCategory_SetVolumeById(int id, float volume); // 0x00000001856C07C8-0x00000001856C0804
-		private static extern float criAtomExCategory_GetVolumeById(int id); // 0x00000001856C0124-0x00000001856C0150
-		private static extern void criAtomExCategory_MuteById(int id, bool mute); // 0x00000001856C03E4-0x00000001856C0468
-		private static extern bool criAtomExCategory_IsMutedById(int id); // 0x00000001856C01A4-0x00000001856C021C
-		private static extern void criAtomExCategory_MuteByName(string name, bool mute); // 0x00000001856C0468-0x00000001856C0500
-		private static extern bool criAtomExCategory_IsMutedByName(string name); // 0x00000001856C021C-0x00000001856C02BC
-		private static extern void criAtomExCategory_SoloById(int id, bool solo, float volume); // 0x00000001856C0854-0x00000001856C089C
-		private static extern bool criAtomExCategory_IsSoloedById(int id); // 0x00000001856C0350-0x00000001856C0388
-		private static extern void criAtomExCategory_SoloByName(string name, bool solo, float volume); // 0x00000001856C089C-0x00000001856C08FC
-		private static extern bool criAtomExCategory_IsSoloedByName(string name); // 0x00000001856C0388-0x00000001856C03E4
-		private static extern void criAtomExCategory_PauseById(int id, bool pause); // 0x00000001856C0500-0x00000001856C0584
-		private static extern bool criAtomExCategory_IsPausedById(int id); // 0x00000001856C02BC-0x00000001856C02F4
-		private static extern void criAtomExCategory_PauseByName(string name, bool pause); // 0x00000001856C0584-0x00000001856C05DC
-		private static extern bool criAtomExCategory_IsPausedByName(string name); // 0x00000001856C02F4-0x00000001856C0350
-		private static extern void criAtomExCategory_SetAisacControlById(int id, ushort controlId, float value); // 0x00000001856C05DC-0x00000001856C0628
-		private static extern void criAtomExCategory_SetAisacControlByName(string name, string controlName, float value); // 0x00000001856C0628-0x00000001856C069C
-		private static extern void criAtomExCategory_SetReactParameter(string react_name, ref ReactParameter parameter); // 0x00000001856C069C-0x00000001856C07C8
-		private static extern bool criAtomExCategory_GetReactParameter(string react_name, out ReactParameter parameter); // 0x00000001856BFFAC-0x00000001856C00CC
-		private static extern bool criAtomExCategory_GetAttachedAisacInfoById(uint id, int aisacAttachedIndex, IntPtr aisacInfo); // 0x00000001856BFD9C-0x00000001856BFE30
-		private static extern bool criAtomExCategory_GetAttachedAisacInfoByName(string name, int aisacAttachedIndex, IntPtr aisacInfo); // 0x00000001856BFE30-0x00000001856BFEE4
-		private static extern bool criAtomExCategory_GetCurrentAisacControlValueByName(string category_name, string aisac_control_name, out float control_value); // 0x00000001856BFEE4-0x00000001856BFFAC
-		private static extern ReactStatus criAtomExCategory_GetReactStatus(string react_name); // 0x00000001856C00CC-0x00000001856C0124
+		} // 0x00000001878732A0-0x00000001878732F0
+		public static ReactStatus GetReactStatus(string reactName) => default; // 0x0000000187872BEC-0x0000000187872C40
+		private static extern void criAtomExCategory_SetVolumeByName(string name, float volume); // 0x0000000187873264-0x00000001878732A0
+		private static extern float criAtomExCategory_GetVolumeByName(string name); // 0x0000000187872BC0-0x0000000187872BEC
+		private static extern void criAtomExCategory_SetVolumeById(int id, float volume); // 0x0000000187872E80-0x0000000187872F04
+		private static extern float criAtomExCategory_GetVolumeById(int id); // 0x0000000187872C40-0x0000000187872CB8
+		private static extern void criAtomExCategory_MuteById(int id, bool mute); // 0x0000000187872F04-0x0000000187872F9C
+		private static extern bool criAtomExCategory_IsMutedById(int id); // 0x0000000187872CB8-0x0000000187872D58
+		private static extern void criAtomExCategory_MuteByName(string name, bool mute); // 0x00000001878732F0-0x0000000187873338
+		private static extern bool criAtomExCategory_IsMutedByName(string name); // 0x0000000187872DEC-0x0000000187872E24
+		private static extern void criAtomExCategory_SoloById(int id, bool solo, float volume); // 0x0000000187873338-0x0000000187873398
+		private static extern bool criAtomExCategory_IsSoloedById(int id); // 0x0000000187872E24-0x0000000187872E80
+		private static extern void criAtomExCategory_SoloByName(string name, bool solo, float volume); // 0x0000000187872F9C-0x0000000187873020
+		private static extern bool criAtomExCategory_IsSoloedByName(string name); // 0x0000000187872D58-0x0000000187872D90
+		private static extern void criAtomExCategory_PauseById(int id, bool pause); // 0x0000000187873020-0x0000000187873078
+		private static extern bool criAtomExCategory_IsPausedById(int id); // 0x0000000187872D90-0x0000000187872DEC
+		private static extern void criAtomExCategory_PauseByName(string name, bool pause); // 0x0000000187873078-0x00000001878730C4
+		private static extern bool criAtomExCategory_IsPausedByName(string name); // 0x00000001878730C4-0x0000000187873138
+		private static extern void criAtomExCategory_SetAisacControlById(int id, ushort controlId, float value); // 0x0000000187873138-0x0000000187873264
+		private static extern void criAtomExCategory_SetAisacControlByName(string name, string controlName, float value); // 0x0000000187872A48-0x0000000187872B68
+		private static extern void criAtomExCategory_SetReactParameter(string react_name, ref ReactParameter parameter); // 0x0000000187872838-0x00000001878728CC
+		private static extern bool criAtomExCategory_GetReactParameter(string react_name, out ReactParameter parameter); // 0x00000001878728CC-0x0000000187872980
+		private static extern bool criAtomExCategory_GetAttachedAisacInfoById(uint id, int aisacAttachedIndex, IntPtr aisacInfo); // 0x0000000187872980-0x0000000187872A48
+		private static extern bool criAtomExCategory_GetAttachedAisacInfoByName(string name, int aisacAttachedIndex, IntPtr aisacInfo); // 0x0000000187872B68-0x0000000187872BC0
+		private static extern bool criAtomExCategory_GetCurrentAisacControlValueByName(string category_name, string aisac_control_name, out float control_value); // 0x000000018787E774-0x000000018787E77C
+		private static extern ReactStatus criAtomExCategory_GetReactStatus(string react_name); // 0x000000018787E77C-0x000000018787E784
 	}
 
-	public static class CriAtomExSequencer // TypeDefIndex: 54099
+	public static class CriAtomExSequencer // TypeDefIndex: 55092
 	{
 		// Events
 		public static event EventCallback OnCallback;
 	
 		// Nested types
-		public struct CriAtomExSequenceEventInfo // TypeDefIndex: 54096
+		public struct CriAtomExSequenceEventInfo // TypeDefIndex: 55089
 		{
 			// Fields
 			public ulong position; // 0x00
@@ -1407,24 +1451,21 @@ namespace CriWare
 			private uint reserved; // 0x24
 		}
 	
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate void EventCbFunc(string eventParamsString); // TypeDefIndex: 54097; 0x0000000182149960-0x0000000182149970
+		public delegate void EventCbFunc(string eventParamsString); // TypeDefIndex: 55090; 0x0000000187875C9C-0x0000000187875CA4
 	
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate void EventCallback(ref CriAtomExSequenceEventInfo criAtomExSequenceInfo); // TypeDefIndex: 54098; 0x0000000182149960-0x0000000182149970
+		public delegate void EventCallback(ref CriAtomExSequenceEventInfo criAtomExSequenceInfo); // TypeDefIndex: 55091; 0x0000000185A264E0-0x0000000185A26510
 	
 		// Methods
-		[Obsolete("SetEventCallback is deprecated. Use CriAtomExSequencer.OnCallback event", false)]
-		public static void SetEventCallback(EventCbFunc func, string separator = "\t" /* Metadata: 0x01FD6337 */) {} // 0x00000001856C31F0-0x00000001856C31F8
+		public static void SetEventCallback(EventCbFunc func, string separator = "\t" /* Metadata: 0x0207BB63 */) {} // 0x00000001872076D8-0x00000001872076F4
 	}
 
-	public static class CriAtomExBeatSync // TypeDefIndex: 54102
+	public static class CriAtomExBeatSync // TypeDefIndex: 55095
 	{
 		// Events
 		public static event CbFunc OnCallback;
 	
 		// Nested types
-		public struct Info // TypeDefIndex: 54100
+		public struct Info // TypeDefIndex: 55093
 		{
 			// Fields
 			public IntPtr playerHn; // 0x00
@@ -1437,25 +1478,23 @@ namespace CriWare
 			public uint numBeats; // 0x20
 		}
 	
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate void CbFunc(ref Info info); // TypeDefIndex: 54101; 0x0000000182149960-0x0000000182149970
+		public delegate void CbFunc(ref Info info); // TypeDefIndex: 55094; 0x0000000187872390-0x0000000187872398
 	
 		// Methods
-		[Obsolete("SetCallback is deprecated. Use OnBeatSyncCallback event", false)]
-		public static void SetCallback(CbFunc func) {} // 0x00000001856BF8E4-0x00000001856BF8EC
+		public static void SetCallback(CbFunc func) {} // 0x00000001872076D8-0x00000001872076F4
 	}
 
-	public class CriAtomExAsr // TypeDefIndex: 54105
+	public class CriAtomExAsr // TypeDefIndex: 55098
 	{
 		// Nested types
-		private struct BusAnalyzerConfig // TypeDefIndex: 54103
+		private struct BusAnalyzerConfig // TypeDefIndex: 55096
 		{
 			// Fields
 			public int interval; // 0x00
 			public int peakHoldTime; // 0x04
 		}
 	
-		public struct BusAnalyzerInfo // TypeDefIndex: 54104
+		public struct BusAnalyzerInfo // TypeDefIndex: 55097
 		{
 			// Fields
 			public int numChannels; // 0x00
@@ -1469,69 +1508,65 @@ namespace CriWare
 				rmsLevels = default;
 				peakLevels = default;
 				peakHoldLevels = default;
-			} // 0x00000001856B5C60-0x00000001856B5E84
+			} // 0x0000000187871008-0x0000000187871028
 		}
 	
 		// Constructors
-		public CriAtomExAsr() {} // 0x000000018350B670-0x000000018350B680
+		public CriAtomExAsr() {} // 0x00000001878686FC-0x0000000187868920
 	
 		// Methods
-		public static void AttachBusAnalyzer(string busName, int interval, int peakHoldTime) {} // 0x00000001856BE56C-0x00000001856BE58C
-		public static void AttachBusAnalyzer(int interval, int peakHoldTime) {} // 0x00000001856BE540-0x00000001856BE56C
-		public static void DetachBusAnalyzer(string busName) {} // 0x00000001856BE58C-0x00000001856BE594
-		public static void DetachBusAnalyzer() {} // 0x00000001856BE594-0x00000001856BE5B4
+		public static void AttachBusAnalyzer(string busName, int interval, int peakHoldTime) {} // 0x0000000187870FDC-0x0000000187871008
+		public static void AttachBusAnalyzer(int interval, int peakHoldTime) {} // 0x0000000187871028-0x0000000187871030
+		public static void DetachBusAnalyzer(string busName) {} // 0x0000000187871030-0x0000000187871050
+		public static void DetachBusAnalyzer() {} // 0x000000018787120C-0x00000001878713C0
 		public static void GetBusAnalyzerInfo(string busName, out BusAnalyzerInfo info) {
 			info = default;
-		} // 0x00000001856BE770-0x00000001856BE924
-		[Obsolete("Use CriAtomExAsr.GetBusAnalyzerInfo(string busName, out BusAnalyzerInfo info)")]
+		} // 0x0000000187871050-0x000000018787120C
 		public static void GetBusAnalyzerInfo(int busId, out BusAnalyzerInfo info) {
 			info = default;
-		} // 0x00000001856BE5B4-0x00000001856BE770
-		public static void SetBusVolume(string busName, float volume) {} // 0x00000001856BE96C-0x00000001856BE974
-		[Obsolete("Use CriAtomExAsr.SetBusVolume(string busName, float volume)")]
-		public static void SetBusVolume(int busId, float volume) {} // 0x00000001856BE974-0x00000001856BE97C
-		public static void SetBusSendLevel(string busName, string sendTo, float level) {} // 0x00000001856BE964-0x00000001856BE96C
-		[Obsolete("Use CriAtomExAsr.SetBusSendLevel(string busName, string sendTo, float level)")]
-		public static void SetBusSendLevel(int busId, int sendTo, float level) {} // 0x00000001856BE95C-0x00000001856BE964
-		public static void SetBusMatrix(string busName, int inputChannels, int outputChannels, float[] matrix) {} // 0x00000001856BE94C-0x00000001856BE95C
-		[Obsolete("Use CriAtomExAsr.SetBusMatrix(string busName, int inputChannels, int outputChannels, float[] matrix)")]
-		public static void SetBusMatrix(int busId, int inputChannels, int outputChannels, float[] matrix) {} // 0x00000001856BE93C-0x00000001856BE94C
-		public static void SetEffectBypass(string busName, string effectName, bool bypass) {} // 0x00000001856BE97C-0x00000001856BE984
-		public static void SetEffectParameter(string busName, string effectName, uint parameterIndex, float parameterValue) {} // 0x00000001856BE984-0x00000001856BE9BC
-		public static float GetEffectParameter(string busName, string effectName, uint parameterIndex) => default; // 0x00000001856BE92C-0x00000001856BE934
-		public static bool RegisterEffectInterface(IntPtr afx_interface) => default; // 0x00000001856BE934-0x00000001856BE93C
-		public static void UnregisterEffectInterface(IntPtr afx_interface) {} // 0x00000001856BE9BC-0x00000001856BE9C4
+		} // 0x0000000187871408-0x0000000187871410
+		public static void SetBusVolume(string busName, float volume) {} // 0x0000000187871410-0x0000000187871418
+		public static void SetBusVolume(int busId, float volume) {} // 0x0000000187871400-0x0000000187871408
+		public static void SetBusSendLevel(string busName, string sendTo, float level) {} // 0x00000001878713F8-0x0000000187871400
+		public static void SetBusSendLevel(int busId, int sendTo, float level) {} // 0x00000001878713E8-0x00000001878713F8
+		public static void SetBusMatrix(string busName, int inputChannels, int outputChannels, float[] matrix) {} // 0x00000001878713D8-0x00000001878713E8
+		public static void SetBusMatrix(int busId, int inputChannels, int outputChannels, float[] matrix) {} // 0x0000000187871418-0x0000000187871420
+		public static void SetEffectBypass(string busName, string effectName, bool bypass) {} // 0x0000000187871420-0x0000000187871458
+		public static void SetEffectParameter(string busName, string effectName, uint parameterIndex, float parameterValue) {} // 0x00000001878713C8-0x00000001878713D0
+		public static float GetEffectParameter(string busName, string effectName, uint parameterIndex) => default; // 0x00000001878713D0-0x00000001878713D8
+		public static bool RegisterEffectInterface(IntPtr afx_interface) => default; // 0x0000000187871458-0x0000000187871460
+		public static void UnregisterEffectInterface(IntPtr afx_interface) {} // 0x00000001878713C0-0x00000001878713C8
 		public static void GetBusVolume(string busName, out float volume) {
 			volume = default;
-		} // 0x00000001856BE924-0x00000001856BE92C
-		public static int GetPcmOutput(int outputChannels, int outputSamples, float[][] buffer) => default; // 0x0000000181002730-0x0000000181002740
-		public static int GetNumBufferedPcmOutputSamples() => default; // 0x0000000181002730-0x0000000181002740
-		public static void SetPcmBufferSize(int numSamples) {} // 0x000000018350B670-0x000000018350B680
-		private static extern void criAtomExAsr_AttachBusAnalyzerByName(string busName, ref BusAnalyzerConfig config); // 0x00000001856BE9C4-0x00000001856BEA5C
-		private static extern void criAtomExAsr_AttachBusAnalyzer(int busNo, ref BusAnalyzerConfig config); // 0x00000001856BEA5C-0x00000001856BEAE0
-		private static extern void criAtomExAsr_DetachBusAnalyzerByName(string busName); // 0x00000001856BEAE0-0x00000001856BEB6C
-		private static extern void criAtomExAsr_DetachBusAnalyzer(int busNo); // 0x00000001856BEB6C-0x00000001856BEBE4
-		private static extern void criAtomExAsr_GetBusAnalyzerInfoByName(string busName, IntPtr info); // 0x00000001856BEBE4-0x00000001856BEC7C
-		private static extern void criAtomExAsr_GetBusAnalyzerInfo(int busNo, IntPtr info); // 0x00000001856BEC7C-0x00000001856BED00
-		private static extern void criAtomExAsr_SetBusVolumeByName(string busName, float volume); // 0x00000001856BF07C-0x00000001856BF0D4
-		private static extern void criAtomExAsr_SetBusVolume(int busNo, float volume); // 0x00000001856BF0D4-0x00000001856BF110
-		private static extern void criAtomExAsr_SetBusSendLevelByName(string busName, string sendtoName, float level); // 0x00000001856BEFC0-0x00000001856BF034
-		private static extern void criAtomExAsr_SetBusSendLevel(int busNo, int sendtoNo, float level); // 0x00000001856BF034-0x00000001856BF07C
-		private static extern void criAtomExAsr_SetBusMatrixByName(string busName, int inputChannels, int outputChannels, float[] matrix); // 0x00000001856BEE58-0x00000001856BEF18
-		private static extern void criAtomExAsr_SetBusMatrix(int busNo, int inputChannels, int outputChannels, float[] matrix); // 0x00000001856BEF18-0x00000001856BEFC0
-		private static extern void criAtomExAsr_SetEffectBypass(string busName, string effectName, bool bypass); // 0x00000001856BF110-0x00000001856BF1CC
-		private static extern void criAtomExAsr_UpdateEffectParameters(string busName, string effectName); // 0x00000001856BF284-0x00000001856BF330
-		private static extern void criAtomExAsr_SetEffectParameter(string busName, string effectName, uint parameterIndex, float parameterValue); // 0x00000001856BF1CC-0x00000001856BF250
-		private static extern float criAtomExAsr_GetEffectParameter(string busName, string effectName, uint parameterIndex); // 0x00000001856BED98-0x00000001856BEE20
-		private static extern bool criAtomExAsr_RegisterEffectInterface(IntPtr afx_interface); // 0x00000001856BEE20-0x00000001856BEE58
-		private static extern void criAtomExAsr_UnregisterEffectInterface(IntPtr afx_interface); // 0x00000001856BF250-0x00000001856BF284
-		private static extern void criAtomExAsr_GetBusVolumeByName(string busName, out float volume); // 0x00000001856BED00-0x00000001856BED98
+		} // 0x00000001813AE580-0x00000001813AE590
+		public static int GetPcmOutput(int outputChannels, int outputSamples, float[][] buffer) => default; // 0x00000001813AE580-0x00000001813AE590
+		public static int GetNumBufferedPcmOutputSamples() => default; // 0x0000000185492010-0x0000000185492020
+		public static void SetPcmBufferSize(int numSamples) {} // 0x0000000187871460-0x00000001878714F8
+		private static extern void criAtomExAsr_AttachBusAnalyzerByName(string busName, ref BusAnalyzerConfig config); // 0x00000001878714F8-0x000000018787157C
+		private static extern void criAtomExAsr_AttachBusAnalyzer(int busNo, ref BusAnalyzerConfig config); // 0x000000018787157C-0x0000000187871608
+		private static extern void criAtomExAsr_DetachBusAnalyzerByName(string busName); // 0x0000000187871608-0x0000000187871680
+		private static extern void criAtomExAsr_DetachBusAnalyzer(int busNo); // 0x0000000187871680-0x0000000187871718
+		private static extern void criAtomExAsr_GetBusAnalyzerInfoByName(string busName, IntPtr info); // 0x0000000187871718-0x000000018787179C
+		private static extern void criAtomExAsr_GetBusAnalyzerInfo(int busNo, IntPtr info); // 0x0000000187871B18-0x0000000187871B70
+		private static extern void criAtomExAsr_SetBusVolumeByName(string busName, float volume); // 0x0000000187871B70-0x0000000187871BAC
+		private static extern void criAtomExAsr_SetBusVolume(int busNo, float volume); // 0x0000000187871A5C-0x0000000187871AD0
+		private static extern void criAtomExAsr_SetBusSendLevelByName(string busName, string sendtoName, float level); // 0x0000000187871AD0-0x0000000187871B18
+		private static extern void criAtomExAsr_SetBusSendLevel(int busNo, int sendtoNo, float level); // 0x00000001878718F4-0x00000001878719B4
+		private static extern void criAtomExAsr_SetBusMatrixByName(string busName, int inputChannels, int outputChannels, float[] matrix); // 0x00000001878719B4-0x0000000187871A5C
+		private static extern void criAtomExAsr_SetBusMatrix(int busNo, int inputChannels, int outputChannels, float[] matrix); // 0x0000000187871BAC-0x0000000187871C68
+		private static extern void criAtomExAsr_SetEffectBypass(string busName, string effectName, bool bypass); // 0x0000000187871D20-0x0000000187871DCC
+		private static extern void criAtomExAsr_UpdateEffectParameters(string busName, string effectName); // 0x0000000187871C68-0x0000000187871CEC
+		private static extern void criAtomExAsr_SetEffectParameter(string busName, string effectName, uint parameterIndex, float parameterValue); // 0x0000000187871834-0x00000001878718BC
+		private static extern float criAtomExAsr_GetEffectParameter(string busName, string effectName, uint parameterIndex); // 0x00000001878718BC-0x00000001878718F4
+		private static extern bool criAtomExAsr_RegisterEffectInterface(IntPtr afx_interface); // 0x0000000187871CEC-0x0000000187871D20
+		private static extern void criAtomExAsr_UnregisterEffectInterface(IntPtr afx_interface); // 0x000000018787179C-0x0000000187871834
+		private static extern void criAtomExAsr_GetBusVolumeByName(string busName, out float volume); // 0x0000000185492010-0x0000000185492020
 	}
 
-	public static class CriAtomExLatencyEstimator // TypeDefIndex: 54108
+	public static class CriAtomExLatencyEstimator // TypeDefIndex: 55101
 	{
 		// Nested types
-		public enum Status // TypeDefIndex: 54106
+		public enum Status // TypeDefIndex: 55099
 		{
 			Stop = 0,
 			Processing = 1,
@@ -1539,7 +1574,7 @@ namespace CriWare
 			Error = 3
 		}
 	
-		public struct EstimatorInfo // TypeDefIndex: 54107
+		public struct EstimatorInfo // TypeDefIndex: 55100
 		{
 			// Fields
 			public Status status; // 0x00
@@ -1547,73 +1582,72 @@ namespace CriWare
 		}
 	
 		// Methods
-		public static void InitializeModule() {} // 0x000000018350B670-0x000000018350B680
-		public static void FinalizeModule() {} // 0x000000018350B670-0x000000018350B680
-		public static EstimatorInfo GetCurrentInfo() => default; // 0x0000000183D51AB0-0x0000000183D51AC0
+		public static void InitializeModule() {} // 0x0000000185492010-0x0000000185492020
+		public static void FinalizeModule() {} // 0x0000000185492010-0x0000000185492020
+		public static EstimatorInfo GetCurrentInfo() => default; // 0x0000000185FB2E20-0x0000000185FB2E30
 	}
 
-	public class CriAtomEx3dListener : CriDisposable // TypeDefIndex: 54110
+	public class CriAtomEx3dListener : CriDisposable // TypeDefIndex: 55103
 	{
 		// Fields
 		private IntPtr handle; // 0x20
 	
 		// Properties
-		public IntPtr nativeHandle { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public IntPtr nativeHandle { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
 	
 		// Nested types
-		public struct Config // TypeDefIndex: 54109
+		public struct Config // TypeDefIndex: 55102
 		{
 			// Fields
 			public int reserved; // 0x00
 		}
 	
 		// Constructors
-		public CriAtomEx3dListener() {} // 0x0000000183183650-0x00000001831836D0
+		public CriAtomEx3dListener() {} // 0x00000001844CF600-0x00000001844CF680
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001856B62DC-0x00000001856B62E8
-		private void Dispose(bool disposing) {} // 0x00000001856B62E8-0x00000001856B6374
-		public void Update() {} // 0x00000001856B6664-0x00000001856B6678
-		public void ResetParameters() {} // 0x00000001856B63F4-0x00000001856B6408
-		public void SetPosition(float x, float y, float z) {} // 0x00000001856B65FC-0x00000001856B6630
-		public void SetVelocity(float x, float y, float z) {} // 0x00000001856B6630-0x00000001856B6664
-		public void SetOrientation(float fx, float fy, float fz, float ux, float uy, float uz) {} // 0x00000001856B65A0-0x00000001856B65FC
-		[Obsolete("Use SetDopplerMultiplier instead")]
-		public void SetDistanceFactor(float distanceFactor) {} // 0x00000001856B6448-0x00000001856B64D8
-		public void SetDopplerMultiplier(float dopplerMultiplier) {} // 0x00000001856B64EC-0x00000001856B656C
-		public void SetFocusPoint(float x, float y, float z) {} // 0x00000001856B656C-0x00000001856B65A0
-		public void SetDistanceFocusLevel(float distanceFocusLevel) {} // 0x00000001856B64D8-0x00000001856B64EC
-		public void SetDirectionFocusLevel(float directionFocusLevel) {} // 0x00000001856B6434-0x00000001856B6448
-		public void Set3dRegion(CriAtomEx3dRegion region3d) {} // 0x00000001856B6408-0x00000001856B6434
-		public bool IsDestroyable() => default; // 0x00000001856B63E8-0x00000001856B63F4
-		~CriAtomEx3dListener() {} // 0x00000001856B6374-0x00000001856B63E8
-		private static extern IntPtr criAtomEx3dListener_Create(ref Config config, IntPtr work, int work_size); // 0x00000001822C8250-0x00000001822C82F0
-		private static extern void criAtomEx3dListener_Destroy(IntPtr ex_3d_listener); // 0x00000001856B6678-0x00000001856B66AC
-		private static extern void criAtomEx3dListener_Update(IntPtr ex_3d_listener); // 0x00000001856B6A40-0x00000001856B6A74
-		private static extern void criAtomEx3dListener_ResetParameters(IntPtr ex_3d_listener); // 0x00000001856B6728-0x00000001856B675C
-		private static extern void criAtomEx3dListener_SetPosition(IntPtr ex_3d_listener, ref CriAtomEx.NativeVector position); // 0x00000001856B69B8-0x00000001856B69FC
-		private static extern void criAtomEx3dListener_SetVelocity(IntPtr ex_3d_listener, ref CriAtomEx.NativeVector velocity); // 0x00000001856B69FC-0x00000001856B6A40
-		private static extern void criAtomEx3dListener_SetOrientation(IntPtr ex_3d_listener, ref CriAtomEx.NativeVector front, ref CriAtomEx.NativeVector top); // 0x00000001856B6924-0x00000001856B69B8
-		private static extern void criAtomEx3dListener_SetDistanceFactor(IntPtr ex_3d_listener, float distance_factor); // 0x00000001856B67DC-0x00000001856B6820
-		private static extern void criAtomEx3dListener_SetDopplerMultiplier(IntPtr ex_3d_listener, float doppler_multiplier); // 0x00000001856B685C-0x00000001856B68A0
-		private static extern void criAtomEx3dListener_SetFocusPoint(IntPtr ex_3d_listener, ref CriAtomEx.NativeVector focus_point); // 0x00000001856B68A0-0x00000001856B6924
-		private static extern void criAtomEx3dListener_SetDistanceFocusLevel(IntPtr ex_3d_listener, float distance_focus_level); // 0x00000001856B6820-0x00000001856B685C
-		private static extern void criAtomEx3dListener_SetDirectionFocusLevel(IntPtr ex_3d_listener, float direction_focus_level); // 0x00000001856B67A0-0x00000001856B67DC
-		private static extern bool criAtomEx3dListener_IsDestroyable(IntPtr ex_3d_listener); // 0x00000001856B66AC-0x00000001856B6728
-		private static extern void criAtomEx3dListener_Set3dRegionHn(IntPtr ex_3d_listener, IntPtr ex_3d_region); // 0x00000001856B675C-0x00000001856B67A0
+		public override void Dispose() {} // 0x0000000187868D78-0x0000000187868D84
+		private void Dispose(bool disposing) {} // 0x0000000187868D84-0x0000000187868E10
+		public void Update() {} // 0x0000000187869100-0x0000000187869114
+		public void ResetParameters() {} // 0x0000000187868E90-0x0000000187868EA4
+		public void SetPosition(float x, float y, float z) {} // 0x0000000187869098-0x00000001878690CC
+		public void SetVelocity(float x, float y, float z) {} // 0x00000001878690CC-0x0000000187869100
+		public void SetOrientation(float fx, float fy, float fz, float ux, float uy, float uz) {} // 0x000000018786903C-0x0000000187869098
+		public void SetDistanceFactor(float distanceFactor) {} // 0x0000000187868EE4-0x0000000187868F74
+		public void SetDopplerMultiplier(float dopplerMultiplier) {} // 0x0000000187868F88-0x0000000187869008
+		public void SetFocusPoint(float x, float y, float z) {} // 0x0000000187869008-0x000000018786903C
+		public void SetDistanceFocusLevel(float distanceFocusLevel) {} // 0x0000000187868F74-0x0000000187868F88
+		public void SetDirectionFocusLevel(float directionFocusLevel) {} // 0x0000000187868ED0-0x0000000187868EE4
+		public void Set3dRegion(CriAtomEx3dRegion region3d) {} // 0x0000000187868EA4-0x0000000187868ED0
+		public bool IsDestroyable() => default; // 0x0000000187868E84-0x0000000187868E90
+		~CriAtomEx3dListener() {} // 0x0000000187868E10-0x0000000187868E84
+		private static extern IntPtr criAtomEx3dListener_Create(ref Config config, IntPtr work, int work_size); // 0x00000001844CEF80-0x00000001844CF020
+		private static extern void criAtomEx3dListener_Destroy(IntPtr ex_3d_listener); // 0x0000000187869114-0x0000000187869148
+		private static extern void criAtomEx3dListener_Update(IntPtr ex_3d_listener); // 0x00000001878694DC-0x0000000187869510
+		private static extern void criAtomEx3dListener_ResetParameters(IntPtr ex_3d_listener); // 0x00000001878691C4-0x00000001878691F8
+		private static extern void criAtomEx3dListener_SetPosition(IntPtr ex_3d_listener, ref CriAtomEx.NativeVector position); // 0x0000000187869454-0x0000000187869498
+		private static extern void criAtomEx3dListener_SetVelocity(IntPtr ex_3d_listener, ref CriAtomEx.NativeVector velocity); // 0x0000000187869498-0x00000001878694DC
+		private static extern void criAtomEx3dListener_SetOrientation(IntPtr ex_3d_listener, ref CriAtomEx.NativeVector front, ref CriAtomEx.NativeVector top); // 0x00000001878693C0-0x0000000187869454
+		private static extern void criAtomEx3dListener_SetDistanceFactor(IntPtr ex_3d_listener, float distance_factor); // 0x0000000187869278-0x00000001878692BC
+		private static extern void criAtomEx3dListener_SetDopplerMultiplier(IntPtr ex_3d_listener, float doppler_multiplier); // 0x00000001878692F8-0x000000018786933C
+		private static extern void criAtomEx3dListener_SetFocusPoint(IntPtr ex_3d_listener, ref CriAtomEx.NativeVector focus_point); // 0x000000018786933C-0x00000001878693C0
+		private static extern void criAtomEx3dListener_SetDistanceFocusLevel(IntPtr ex_3d_listener, float distance_focus_level); // 0x00000001878692BC-0x00000001878692F8
+		private static extern void criAtomEx3dListener_SetDirectionFocusLevel(IntPtr ex_3d_listener, float direction_focus_level); // 0x000000018786923C-0x0000000187869278
+		private static extern bool criAtomEx3dListener_IsDestroyable(IntPtr ex_3d_listener); // 0x0000000187869148-0x00000001878691C4
+		private static extern void criAtomEx3dListener_Set3dRegionHn(IntPtr ex_3d_listener, IntPtr ex_3d_region); // 0x00000001878691F8-0x000000018786923C
 	}
 
-	public class CriAtomEx3dSource : CriDisposable // TypeDefIndex: 54112
+	public class CriAtomEx3dSource : CriDisposable // TypeDefIndex: 55105
 	{
 		// Fields
 		private uint currentRandomPositionListMaxLength; // 0x20
 		private IntPtr handle; // 0x28
 	
 		// Properties
-		public IntPtr nativeHandle { get => default; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
+		public IntPtr nativeHandle { get => default; } // 0x0000000187869B58-0x0000000187869B64 
 	
 		// Nested types
-		public struct Config // TypeDefIndex: 54111
+		public struct Config // TypeDefIndex: 55104
 		{
 			// Fields
 			public bool enableVoicePriorityDecay; // 0x00
@@ -1623,267 +1657,266 @@ namespace CriWare
 			public Config(bool enableVoicePriorityDecay, uint randomPositionListMaxLength) {
 				this.enableVoicePriorityDecay = default;
 				this.randomPositionListMaxLength = default;
-			} // 0x0000000183D51A30-0x0000000183D51A40
+			} // 0x0000000187869B64-0x0000000187869BF8
 		}
 	
 		// Constructors
 		public CriAtomEx3dSource() {} // Dummy constructor
-		public CriAtomEx3dSource(bool enableVoicePriorityDecay = false /* Metadata: 0x01FD633D */, uint randomPositionListMaxLength = 0 /* Metadata: 0x01FD633E */) {} // 0x00000001856B70C8-0x00000001856B715C
+		public CriAtomEx3dSource(bool enableVoicePriorityDecay = false /* Metadata: 0x0207BB69 */, uint randomPositionListMaxLength = 0 /* Metadata: 0x0207BB6A */) {} // 0x000000018786968C-0x0000000187869698
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001856B6BF0-0x00000001856B6BFC
-		private void Dispose(bool disposing) {} // 0x00000001856B6BFC-0x00000001856B6C88
-		public void Update() {} // 0x00000001856B70BC-0x00000001856B70C8
-		public void ResetParameters() {} // 0x00000001856B6D48-0x00000001856B6D54
-		public void SetPosition(float x, float y, float z) {} // 0x00000001856B6E60-0x00000001856B6E8C
-		public void SetVelocity(float x, float y, float z) {} // 0x00000001856B7084-0x00000001856B70B0
-		public void SetOrientation(Vector3 front, Vector3 top) {} // 0x00000001856B6E00-0x00000001856B6E60
-		[Obsolete("Use CriAtomEx3dSource.SetOrientation instead")]
-		public void SetConeOrientation(float x, float y, float z) {} // 0x00000001856B6D78-0x00000001856B6DA4
-		public void SetConeParameter(float insideAngle, float outsideAngle, float outsideVolume) {} // 0x00000001856B6DA4-0x00000001856B6DB8
-		public void SetMinMaxDistance(float minDistance, float maxDistance) {} // 0x00000001856B6DF4-0x00000001856B6E00
-		public void SetInteriorPanField(float sourceRadius, float interiorDistance) {} // 0x00000001856B6DD0-0x00000001856B6DDC
-		public void SetDopplerFactor(float dopplerFactor) {} // 0x00000001856B6DC4-0x00000001856B6DD0
-		public void SetVolume(float volume) {} // 0x00000001856B70B0-0x00000001856B70BC
-		public void SetMaxAngleAisacDelta(float maxDelta) {} // 0x00000001856B6DE8-0x00000001856B6DF4
-		public void SetAttenuationDistanceSetting(bool flag) {} // 0x00000001856B6D6C-0x00000001856B6D78
-		public bool GetAttenuationDistanceSetting() => default; // 0x00000001856B6CFC-0x00000001856B6D08
-		public void SetRandomPositionConfig(CriAtomEx.Randomize3dConfig? config) {} // 0x00000001856B6E8C-0x00000001856B6F38
-		public void SetRandomPositionList(Vector3[] positionList) {} // 0x00000001856B6F38-0x00000001856B7078
-		public void Set3dRegion(CriAtomEx3dRegion region3d) {} // 0x00000001856B6D54-0x00000001856B6D6C
-		public void SetListenerBasedElevationAngleAisacControlId(ushort aisacControlId) {} // 0x00000001856B6DDC-0x00000001856B6DE8
-		public void SetSourceBasedElevationAngleAisacControlId(ushort aisacControlId) {} // 0x00000001856B7078-0x00000001856B7084
-		public void SetDistanceAisacControlId(ushort aisacControlId) {} // 0x00000001856B6DB8-0x00000001856B6DC4
-		public bool IsDestroyable() => default; // 0x00000001856B6D3C-0x00000001856B6D48
-		public CriAtomEx.NativeVector GetPosition() => default; // 0x00000001856B6D08-0x00000001856B6D3C
-		~CriAtomEx3dSource() {} // 0x00000001856B6C88-0x00000001856B6CFC
-		private static extern IntPtr criAtomEx3dSource_Create(ref Config config, IntPtr work, int work_size); // 0x00000001856B715C-0x00000001856B7220
-		private static extern void criAtomEx3dSource_Destroy(IntPtr ex_3d_source); // 0x00000001856B7220-0x00000001856B7254
-		private static extern void criAtomEx3dSource_Update(IntPtr ex_3d_source); // 0x00000001856B7BFC-0x00000001856B7C74
-		private static extern void criAtomEx3dSource_ResetParameters(IntPtr ex_3d_source); // 0x00000001856B73E4-0x00000001856B745C
-		private static extern void criAtomEx3dSource_SetPosition(IntPtr ex_3d_source, ref CriAtomEx.NativeVector position); // 0x00000001856B78BC-0x00000001856B7900
-		private static extern void criAtomEx3dSource_SetVelocity(IntPtr ex_3d_source, ref CriAtomEx.NativeVector velocity); // 0x00000001856B7B7C-0x00000001856B7BC0
-		private static extern void criAtomEx3dSource_SetOrientation(IntPtr ex_3d_source, ref CriAtomEx.NativeVector front, ref CriAtomEx.NativeVector top); // 0x00000001856B7828-0x00000001856B78BC
-		private static extern void criAtomEx3dSource_SetConeOrientation(IntPtr ex_3d_source, ref CriAtomEx.NativeVector cone_orient); // 0x00000001856B7524-0x00000001856B75A8
-		private static extern void criAtomEx3dSource_SetConeParameter(IntPtr ex_3d_source, float inside_angle, float outside_angle, float outside_volume); // 0x00000001856B75A8-0x00000001856B7608
-		private static extern void criAtomEx3dSource_SetMinMaxAttenuationDistance(IntPtr ex_3d_source, float min_distance, float max_distance); // 0x00000001856B77DC-0x00000001856B7828
-		private static extern void criAtomEx3dSource_SetInteriorPanField(IntPtr ex_3d_source, float source_radius, float interior_distance); // 0x00000001856B76C8-0x00000001856B7714
-		private static extern void criAtomEx3dSource_SetDopplerFactor(IntPtr ex_3d_source, float doppler_factor); // 0x00000001856B768C-0x00000001856B76C8
-		private static extern void criAtomEx3dSource_SetVolume(IntPtr ex_3d_source, float volume); // 0x00000001856B7BC0-0x00000001856B7BFC
-		private static extern void criAtomEx3dSource_SetMaxAngleAisacDelta(IntPtr ex_3d_source, float max_delta); // 0x00000001856B7798-0x00000001856B77DC
-		private static extern void criAtomEx3dSource_SetAttenuationDistanceSetting(IntPtr ex_3d_source, bool flag); // 0x00000001856B74A0-0x00000001856B7524
-		private static extern bool criAtomEx3dSource_GetAttenuationDistanceSetting(IntPtr ex_3d_source); // 0x00000001856B7254-0x00000001856B72D0
-		private static extern void criAtomEx3dSource_SetRandomPositionConfig(IntPtr ex_3d_source, ref CriAtomEx.Randomize3dConfig config); // 0x00000001856B7984-0x00000001856B7A58
-		private static extern void criAtomEx3dSource_SetRandomPositionConfig(IntPtr ex_3d_source, IntPtr config); // 0x00000001856B7900-0x00000001856B7984
-		private static extern void criAtomEx3dSource_SetRandomPositionList(IntPtr ex_3d_source, CriAtomEx.NativeVector[] position_list, uint length); // 0x00000001856B7A58-0x00000001856B7AF8
-		private static extern void criAtomEx3dSource_SetDistanceAisacControlId(IntPtr ex_3d_source, ushort aisac_control_id); // 0x00000001856B7608-0x00000001856B768C
-		private static extern bool criAtomEx3dSource_IsDestroyable(IntPtr ex_3d_source); // 0x00000001856B7368-0x00000001856B73E4
-		private static extern CriAtomEx.NativeVector criAtomEx3dSource_GetPosition(IntPtr ex_3d_source); // 0x00000001856B72D0-0x00000001856B7368
-		private static extern void criAtomEx3dSource_Set3dRegionHn(IntPtr ex_3d_source, IntPtr ex_3d_region); // 0x00000001856B745C-0x00000001856B74A0
-		private static extern void criAtomEx3dSource_SetListenerBasedElevationAngleAisacControlId(IntPtr ex_3d_source, ushort aisac_control_id); // 0x00000001856B7714-0x00000001856B7798
-		private static extern void criAtomEx3dSource_SetSourceBasedElevationAngleAisacControlId(IntPtr ex_3d_source, ushort aisac_control_id); // 0x00000001856B7AF8-0x00000001856B7B7C
+		public override void Dispose() {} // 0x0000000187869698-0x0000000187869724
+		private void Dispose(bool disposing) {} // 0x00000001813B8590-0x00000001813B85A0
+		public void Update() {} // 0x00000001878697E4-0x00000001878697F0
+		public void ResetParameters() {} // 0x00000001878698FC-0x0000000187869928
+		public void SetPosition(float x, float y, float z) {} // 0x0000000187869B20-0x0000000187869B4C
+		public void SetVelocity(float x, float y, float z) {} // 0x000000018786989C-0x00000001878698FC
+		public void SetOrientation(Vector3 front, Vector3 top) {} // 0x0000000187869814-0x0000000187869840
+		public void SetConeOrientation(float x, float y, float z) {} // 0x0000000187869840-0x0000000187869854
+		public void SetConeParameter(float insideAngle, float outsideAngle, float outsideVolume) {} // 0x0000000187869890-0x000000018786989C
+		public void SetMinMaxDistance(float minDistance, float maxDistance) {} // 0x000000018786986C-0x0000000187869878
+		public void SetInteriorPanField(float sourceRadius, float interiorDistance) {} // 0x0000000187869860-0x000000018786986C
+		public void SetDopplerFactor(float dopplerFactor) {} // 0x0000000187869B4C-0x0000000187869B58
+		public void SetVolume(float volume) {} // 0x0000000187869884-0x0000000187869890
+		public void SetMaxAngleAisacDelta(float maxDelta) {} // 0x0000000187869808-0x0000000187869814
+		public void SetAttenuationDistanceSetting(bool flag) {} // 0x0000000187869798-0x00000001878697A4
+		public bool GetAttenuationDistanceSetting() => default; // 0x0000000187869928-0x00000001878699D4
+		public void SetRandomPositionConfig(CriAtomEx.Randomize3dConfig? config) {} // 0x00000001878699D4-0x0000000187869B14
+		public void SetRandomPositionList(Vector3[] positionList) {} // 0x00000001878697F0-0x0000000187869808
+		public void Set3dRegion(CriAtomEx3dRegion region3d) {} // 0x0000000187869878-0x0000000187869884
+		public void SetListenerBasedElevationAngleAisacControlId(ushort aisacControlId) {} // 0x0000000187869B14-0x0000000187869B20
+		public void SetSourceBasedElevationAngleAisacControlId(ushort aisacControlId) {} // 0x0000000187869854-0x0000000187869860
+		public void SetDistanceAisacControlId(ushort aisacControlId) {} // 0x00000001878697D8-0x00000001878697E4
+		public bool IsDestroyable() => default; // 0x00000001878697A4-0x00000001878697D8
+		public CriAtomEx.NativeVector GetPosition() => default; // 0x0000000187869724-0x0000000187869798
+		~CriAtomEx3dSource() {} // 0x0000000187869BF8-0x0000000187869CBC
+		private static extern IntPtr criAtomEx3dSource_Create(ref Config config, IntPtr work, int work_size); // 0x0000000187869CBC-0x0000000187869CF0
+		private static extern void criAtomEx3dSource_Destroy(IntPtr ex_3d_source); // 0x000000018786A698-0x000000018786A710
+		private static extern void criAtomEx3dSource_Update(IntPtr ex_3d_source); // 0x0000000187869E80-0x0000000187869EF8
+		private static extern void criAtomEx3dSource_ResetParameters(IntPtr ex_3d_source); // 0x000000018786A358-0x000000018786A39C
+		private static extern void criAtomEx3dSource_SetPosition(IntPtr ex_3d_source, ref CriAtomEx.NativeVector position); // 0x000000018786A618-0x000000018786A65C
+		private static extern void criAtomEx3dSource_SetVelocity(IntPtr ex_3d_source, ref CriAtomEx.NativeVector velocity); // 0x000000018786A2C4-0x000000018786A358
+		private static extern void criAtomEx3dSource_SetOrientation(IntPtr ex_3d_source, ref CriAtomEx.NativeVector front, ref CriAtomEx.NativeVector top); // 0x0000000187869FC0-0x000000018786A044
+		private static extern void criAtomEx3dSource_SetConeOrientation(IntPtr ex_3d_source, ref CriAtomEx.NativeVector cone_orient); // 0x000000018786A044-0x000000018786A0A4
+		private static extern void criAtomEx3dSource_SetConeParameter(IntPtr ex_3d_source, float inside_angle, float outside_angle, float outside_volume); // 0x000000018786A278-0x000000018786A2C4
+		private static extern void criAtomEx3dSource_SetMinMaxAttenuationDistance(IntPtr ex_3d_source, float min_distance, float max_distance); // 0x000000018786A164-0x000000018786A1B0
+		private static extern void criAtomEx3dSource_SetInteriorPanField(IntPtr ex_3d_source, float source_radius, float interior_distance); // 0x000000018786A128-0x000000018786A164
+		private static extern void criAtomEx3dSource_SetDopplerFactor(IntPtr ex_3d_source, float doppler_factor); // 0x000000018786A65C-0x000000018786A698
+		private static extern void criAtomEx3dSource_SetVolume(IntPtr ex_3d_source, float volume); // 0x000000018786A234-0x000000018786A278
+		private static extern void criAtomEx3dSource_SetMaxAngleAisacDelta(IntPtr ex_3d_source, float max_delta); // 0x0000000187869F3C-0x0000000187869FC0
+		private static extern void criAtomEx3dSource_SetAttenuationDistanceSetting(IntPtr ex_3d_source, bool flag); // 0x0000000187869CF0-0x0000000187869D6C
+		private static extern bool criAtomEx3dSource_GetAttenuationDistanceSetting(IntPtr ex_3d_source); // 0x000000018786A420-0x000000018786A4F4
+		private static extern void criAtomEx3dSource_SetRandomPositionConfig(IntPtr ex_3d_source, ref CriAtomEx.Randomize3dConfig config); // 0x000000018786A39C-0x000000018786A420
+		private static extern void criAtomEx3dSource_SetRandomPositionConfig(IntPtr ex_3d_source, IntPtr config); // 0x000000018786A4F4-0x000000018786A594
+		private static extern void criAtomEx3dSource_SetRandomPositionList(IntPtr ex_3d_source, CriAtomEx.NativeVector[] position_list, uint length); // 0x000000018786A0A4-0x000000018786A128
+		private static extern void criAtomEx3dSource_SetDistanceAisacControlId(IntPtr ex_3d_source, ushort aisac_control_id); // 0x0000000187869E04-0x0000000187869E80
+		private static extern bool criAtomEx3dSource_IsDestroyable(IntPtr ex_3d_source); // 0x0000000187869D6C-0x0000000187869E04
+		private static extern CriAtomEx.NativeVector criAtomEx3dSource_GetPosition(IntPtr ex_3d_source); // 0x0000000187869EF8-0x0000000187869F3C
+		private static extern void criAtomEx3dSource_Set3dRegionHn(IntPtr ex_3d_source, IntPtr ex_3d_region); // 0x000000018786A1B0-0x000000018786A234
+		private static extern void criAtomEx3dSource_SetListenerBasedElevationAngleAisacControlId(IntPtr ex_3d_source, ushort aisac_control_id); // 0x000000018786A594-0x000000018786A618
+		private static extern void criAtomEx3dSource_SetSourceBasedElevationAngleAisacControlId(IntPtr ex_3d_source, ushort aisac_control_id); // 0x0000000181B53950-0x0000000181B53960
 	}
 
-	public class CriAtomEx3dTransceiver : CriDisposable // TypeDefIndex: 54115
+	public class CriAtomEx3dTransceiver : CriDisposable // TypeDefIndex: 55108
 	{
 		// Fields
 		private IntPtr handle; // 0x20
 	
 		// Properties
-		public IntPtr nativeHandle { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public IntPtr nativeHandle { get => default; } // 0x000000018787F990-0x000000018787FA24 
 	
 		// Nested types
-		public struct Config // TypeDefIndex: 54113
+		public struct Config // TypeDefIndex: 55106
 		{
 			// Fields
 			public int reserved; // 0x00
 		}
 	
-		private static class UnsafeNativeMethods // TypeDefIndex: 54114
+		private static class UnsafeNativeMethods // TypeDefIndex: 55107
 		{
 			// Methods
-			internal static extern IntPtr criAtomEx3dTransceiver_Create(ref Config config, IntPtr work, int work_size); // 0x00000001856CCEF4-0x00000001856CCF88
-			internal static extern void criAtomEx3dTransceiver_Destroy(IntPtr ex_3d_transceiver); // 0x00000001856CCF88-0x00000001856CCFBC
-			internal static extern void criAtomEx3dTransceiver_Update(IntPtr ex_3d_transceiver); // 0x00000001856CD720-0x00000001856CD754
-			internal static extern void criAtomEx3dTransceiver_SetInputPosition(IntPtr ex_3d_transceiver, ref CriAtomEx.NativeVector position); // 0x00000001856CD1FC-0x00000001856CD280
-			internal static extern void criAtomEx3dTransceiver_SetOutputPosition(IntPtr ex_3d_transceiver, ref CriAtomEx.NativeVector position); // 0x00000001856CD550-0x00000001856CD5D4
-			internal static extern void criAtomEx3dTransceiver_SetInputOrientation(IntPtr ex_3d_transceiver, ref CriAtomEx.NativeVector front, ref CriAtomEx.NativeVector top); // 0x00000001856CD168-0x00000001856CD1FC
-			internal static extern void criAtomEx3dTransceiver_SetOutputOrientation(IntPtr ex_3d_transceiver, ref CriAtomEx.NativeVector front, ref CriAtomEx.NativeVector top); // 0x00000001856CD4BC-0x00000001856CD550
-			internal static extern void criAtomEx3dTransceiver_SetOutputConeParameter(IntPtr ex_3d_transceiver, float inside_angle, float outside_angle, float outside_volume); // 0x00000001856CD3C4-0x00000001856CD424
-			internal static extern void criAtomEx3dTransceiver_SetOutputMinMaxAttenuationDistance(IntPtr ex_3d_transceiver, float min_attenuation_distance, float max_attenuation_distance); // 0x00000001856CD470-0x00000001856CD4BC
-			internal static extern void criAtomEx3dTransceiver_SetOutputInteriorPanField(IntPtr ex_3d_transceiver, float transceiver_radius, float interior_distance); // 0x00000001856CD424-0x00000001856CD470
-			internal static extern void criAtomEx3dTransceiver_SetInputCrossFadeField(IntPtr ex_3d_transceiver, float direct_audio_radius, float crossfade_distance); // 0x00000001856CD11C-0x00000001856CD168
-			internal static extern void criAtomEx3dTransceiver_SetOutputVolume(IntPtr ex_3d_transceiver, float volume); // 0x00000001856CD5D4-0x00000001856CD618
-			internal static extern void criAtomEx3dTransceiver_AttachAisac(IntPtr ex_3d_transceiver, string global_aisac_name); // 0x00000001856CCE9C-0x00000001856CCEF4
-			internal static extern void criAtomEx3dTransceiver_DetachAisac(IntPtr ex_3d_transceiver, string global_aisac_name); // 0x00000001856CCFBC-0x00000001856CD014
-			internal static extern void criAtomEx3dTransceiver_SetMaxAngleAisacDelta(IntPtr ex_3d_transceiver, float max_delta); // 0x00000001856CD388-0x00000001856CD3C4
-			internal static extern void criAtomEx3dTransceiver_SetDistanceAisacControlId(IntPtr ex_3d_transceiver, ushort aisac_control_id); // 0x00000001856CD098-0x00000001856CD11C
-			internal static extern void criAtomEx3dTransceiver_SetListenerBasedAzimuthAngleAisacControlId(IntPtr ex_3d_transceiver, ushort aisac_control_id); // 0x00000001856CD280-0x00000001856CD304
-			internal static extern void criAtomEx3dTransceiver_SetListenerBasedElevationAngleAisacControlId(IntPtr ex_3d_transceiver, ushort aisac_control_id); // 0x00000001856CD304-0x00000001856CD388
-			internal static extern void criAtomEx3dTransceiver_SetTransceiverOutputBasedAzimuthAngleAisacControlId(IntPtr ex_3d_transceiver, ushort aisac_control_id); // 0x00000001856CD618-0x00000001856CD69C
-			internal static extern void criAtomEx3dTransceiver_SetTransceiverOutputBasedElevationAngleAisacControlId(IntPtr ex_3d_transceiver, ushort aisac_control_id); // 0x00000001856CD69C-0x00000001856CD720
-			internal static extern void criAtomEx3dTransceiver_Set3dRegionHn(IntPtr ex_3d_transceiver, IntPtr ex_3d_region); // 0x00000001856CD014-0x00000001856CD098
+			internal static extern IntPtr criAtomEx3dTransceiver_Create(ref Config config, IntPtr work, int work_size); // 0x000000018786AA44-0x000000018786AAB4
+			internal static extern void criAtomEx3dTransceiver_Destroy(IntPtr ex_3d_transceiver); // 0x000000018786A7B4-0x000000018786A7C0
+			internal static extern void criAtomEx3dTransceiver_Update(IntPtr ex_3d_transceiver); // 0x000000018786A728-0x000000018786A7B4
+			internal static extern void criAtomEx3dTransceiver_SetInputPosition(IntPtr ex_3d_transceiver, ref CriAtomEx.NativeVector position); // 0x00000001813B31A0-0x00000001813B31B0
+			internal static extern void criAtomEx3dTransceiver_SetOutputPosition(IntPtr ex_3d_transceiver, ref CriAtomEx.NativeVector position); // 0x000000018786AA38-0x000000018786AA44
+			internal static extern void criAtomEx3dTransceiver_SetInputOrientation(IntPtr ex_3d_transceiver, ref CriAtomEx.NativeVector front, ref CriAtomEx.NativeVector top); // 0x000000018786A8D8-0x000000018786A914
+			internal static extern void criAtomEx3dTransceiver_SetOutputOrientation(IntPtr ex_3d_transceiver, ref CriAtomEx.NativeVector front, ref CriAtomEx.NativeVector top); // 0x000000018786A9D8-0x000000018786AA14
+			internal static extern void criAtomEx3dTransceiver_SetOutputConeParameter(IntPtr ex_3d_transceiver, float inside_angle, float outside_angle, float outside_volume); // 0x000000018786A864-0x000000018786A8D8
+			internal static extern void criAtomEx3dTransceiver_SetOutputMinMaxAttenuationDistance(IntPtr ex_3d_transceiver, float min_attenuation_distance, float max_attenuation_distance); // 0x000000018786A964-0x000000018786A9D8
+			internal static extern void criAtomEx3dTransceiver_SetOutputInteriorPanField(IntPtr ex_3d_transceiver, float transceiver_radius, float interior_distance); // 0x000000018786A938-0x000000018786A94C
+			internal static extern void criAtomEx3dTransceiver_SetInputCrossFadeField(IntPtr ex_3d_transceiver, float direct_audio_radius, float crossfade_distance); // 0x000000018786A958-0x000000018786A964
+			internal static extern void criAtomEx3dTransceiver_SetOutputVolume(IntPtr ex_3d_transceiver, float volume); // 0x000000018786A94C-0x000000018786A958
+			internal static extern void criAtomEx3dTransceiver_AttachAisac(IntPtr ex_3d_transceiver, string global_aisac_name); // 0x000000018786A858-0x000000018786A864
+			internal static extern void criAtomEx3dTransceiver_DetachAisac(IntPtr ex_3d_transceiver, string global_aisac_name); // 0x000000018786AA14-0x000000018786AA20
+			internal static extern void criAtomEx3dTransceiver_SetMaxAngleAisacDelta(IntPtr ex_3d_transceiver, float max_delta); // 0x000000018786A710-0x000000018786A71C
+			internal static extern void criAtomEx3dTransceiver_SetDistanceAisacControlId(IntPtr ex_3d_transceiver, ushort aisac_control_id); // 0x000000018786A71C-0x000000018786A728
+			internal static extern void criAtomEx3dTransceiver_SetListenerBasedAzimuthAngleAisacControlId(IntPtr ex_3d_transceiver, ushort aisac_control_id); // 0x000000018786A92C-0x000000018786A938
+			internal static extern void criAtomEx3dTransceiver_SetListenerBasedElevationAngleAisacControlId(IntPtr ex_3d_transceiver, ushort aisac_control_id); // 0x000000018786A84C-0x000000018786A858
+			internal static extern void criAtomEx3dTransceiver_SetTransceiverOutputBasedAzimuthAngleAisacControlId(IntPtr ex_3d_transceiver, ushort aisac_control_id); // 0x000000018786A914-0x000000018786A920
+			internal static extern void criAtomEx3dTransceiver_SetTransceiverOutputBasedElevationAngleAisacControlId(IntPtr ex_3d_transceiver, ushort aisac_control_id); // 0x000000018786A920-0x000000018786A92C
+			internal static extern void criAtomEx3dTransceiver_Set3dRegionHn(IntPtr ex_3d_transceiver, IntPtr ex_3d_region); // 0x000000018786AA20-0x000000018786AA2C
 		}
 	
 		// Constructors
-		public CriAtomEx3dTransceiver() {} // 0x00000001856B7FA8-0x00000001856B8018
+		public CriAtomEx3dTransceiver() {} // 0x000000018786AA2C-0x000000018786AA38
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001856B7D18-0x00000001856B7D24
-		private void Dispose(bool disposing) {} // 0x00000001856B7C8C-0x00000001856B7D18
-		public void Update() {} // 0x00000001856B7F9C-0x00000001856B7FA8
-		public void SetInputPosition(Vector3 position) {} // 0x00000001856B7E3C-0x00000001856B7E78
-		public void SetOutputPosition(Vector3 position) {} // 0x00000001856B7F3C-0x00000001856B7F78
-		public void SetInputOrientation(Vector3 front, Vector3 top) {} // 0x00000001856B7DC8-0x00000001856B7E3C
-		public void SetOutputOrientation(Vector3 front, Vector3 top) {} // 0x00000001856B7EC8-0x00000001856B7F3C
-		public void SetOutputConeParameter(float insideAngle, float outsideAngle, float outsideVolume) {} // 0x00000001856B7E9C-0x00000001856B7EB0
-		public void SetOutputMinMaxDistance(float minDistance, float maxDistance) {} // 0x00000001856B7EBC-0x00000001856B7EC8
-		public void SetOutputInteriorPanField(float radius, float interiorDistance) {} // 0x00000001856B7EB0-0x00000001856B7EBC
-		public void SetInputCrossFadeField(float directAudioRadius, float crossfadeDistance) {} // 0x00000001856B7DBC-0x00000001856B7DC8
-		public void SetOutputVolume(float volume) {} // 0x00000001856B7F78-0x00000001856B7F84
-		public void AttachAisac(string globalAisacName) {} // 0x00000001856B7C74-0x00000001856B7C80
-		public void DetachAisac(string globalAisacName) {} // 0x00000001856B7C80-0x00000001856B7C8C
-		public void SetMaxAngleAisacDelta(float maxDelta) {} // 0x00000001856B7E90-0x00000001856B7E9C
-		public void SetDistanceAisacControlId(ushort aisacControlId) {} // 0x00000001856B7DB0-0x00000001856B7DBC
-		public void SetListenerBasedAzimuthAngleAisacControlId(ushort aisacControlId) {} // 0x00000001856B7E78-0x00000001856B7E84
-		public void SetListenerBasedElevationAngleAisacControlId(ushort aisacControlId) {} // 0x00000001856B7E84-0x00000001856B7E90
-		public void SetTransceiverOutputBasedAzimuthAngleAisacControlId(ushort aisacControlId) {} // 0x00000001856B7F84-0x00000001856B7F90
-		public void SetTransceiverOutputBasedElevationAngleAisacControlId(ushort aisacControlId) {} // 0x00000001856B7F90-0x00000001856B7F9C
-		public void Set3dRegion(CriAtomEx3dRegion region3d) {} // 0x00000001856B7D98-0x00000001856B7DB0
-		~CriAtomEx3dTransceiver() {} // 0x00000001856B7D24-0x00000001856B7D98
+		public override void Dispose() {} // 0x000000018786A834-0x000000018786A84C
+		private void Dispose(bool disposing) {} // 0x000000018786A7C0-0x000000018786A834
+		public void Update() {} // 0x000000018787FA24-0x000000018787FA58
+		public void SetInputPosition(Vector3 position) {} // 0x00000001878801BC-0x00000001878801F0
+		public void SetOutputPosition(Vector3 position) {} // 0x000000018787FC98-0x000000018787FD1C
+		public void SetInputOrientation(Vector3 front, Vector3 top) {} // 0x000000018787FFEC-0x0000000187880070
+		public void SetOutputOrientation(Vector3 front, Vector3 top) {} // 0x000000018787FC04-0x000000018787FC98
+		public void SetOutputConeParameter(float insideAngle, float outsideAngle, float outsideVolume) {} // 0x000000018787FF58-0x000000018787FFEC
+		public void SetOutputMinMaxDistance(float minDistance, float maxDistance) {} // 0x000000018787FE60-0x000000018787FEC0
+		public void SetOutputInteriorPanField(float radius, float interiorDistance) {} // 0x000000018787FF0C-0x000000018787FF58
+		public void SetInputCrossFadeField(float directAudioRadius, float crossfadeDistance) {} // 0x000000018787FEC0-0x000000018787FF0C
+		public void SetOutputVolume(float volume) {} // 0x000000018787FBB8-0x000000018787FC04
+		public void AttachAisac(string globalAisacName) {} // 0x0000000187880070-0x00000001878800B4
+		public void DetachAisac(string globalAisacName) {} // 0x000000018787F938-0x000000018787F990
+		public void SetMaxAngleAisacDelta(float maxDelta) {} // 0x000000018787FA58-0x000000018787FAB0
+		public void SetDistanceAisacControlId(ushort aisacControlId) {} // 0x000000018787FE24-0x000000018787FE60
+		public void SetListenerBasedAzimuthAngleAisacControlId(ushort aisacControlId) {} // 0x000000018787FB34-0x000000018787FBB8
+		public void SetListenerBasedElevationAngleAisacControlId(ushort aisacControlId) {} // 0x000000018787FD1C-0x000000018787FDA0
+		public void SetTransceiverOutputBasedAzimuthAngleAisacControlId(ushort aisacControlId) {} // 0x000000018787FDA0-0x000000018787FE24
+		public void SetTransceiverOutputBasedElevationAngleAisacControlId(ushort aisacControlId) {} // 0x00000001878800B4-0x0000000187880138
+		public void Set3dRegion(CriAtomEx3dRegion region3d) {} // 0x0000000187880138-0x00000001878801BC
+		~CriAtomEx3dTransceiver() {} // 0x000000018787FAB0-0x000000018787FB34
 	}
 
-	public class CriAtomEx3dRegion : CriDisposable // TypeDefIndex: 54118
+	public class CriAtomEx3dRegion : CriDisposable // TypeDefIndex: 55111
 	{
 		// Fields
 		private IntPtr handle; // 0x20
 	
 		// Properties
-		public IntPtr nativeHandle { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public IntPtr nativeHandle { get => default; } // 0x000000018787F904-0x000000018787F938 
 	
 		// Nested types
-		public struct Config // TypeDefIndex: 54116
+		public struct Config // TypeDefIndex: 55109
 		{
 			// Fields
 			public int reserved; // 0x00
 		}
 	
-		private static class UnsafeNativeMethods // TypeDefIndex: 54117
+		private static class UnsafeNativeMethods // TypeDefIndex: 55110
 		{
 			// Methods
-			internal static extern IntPtr criAtomEx3dRegion_Create(ref Config config, IntPtr work, int work_size); // 0x00000001856CCDD4-0x00000001856CCE68
-			internal static extern void criAtomEx3dRegion_Destroy(IntPtr ex_3d_region); // 0x00000001856CCE68-0x00000001856CCE9C
+			internal static extern IntPtr criAtomEx3dRegion_Create(ref Config config, IntPtr work, int work_size); // 0x000000018786961C-0x000000018786968C
+			internal static extern void criAtomEx3dRegion_Destroy(IntPtr ex_3d_region); // 0x0000000187869510-0x000000018786951C
 		}
 	
 		// Constructors
-		public CriAtomEx3dRegion() {} // 0x00000001856B6B80-0x00000001856B6BF0
+		public CriAtomEx3dRegion() {} // 0x000000018786951C-0x00000001878695A8
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001856B6A74-0x00000001856B6A80
-		private void Dispose(bool disposing) {} // 0x00000001856B6A80-0x00000001856B6B0C
-		~CriAtomEx3dRegion() {} // 0x00000001856B6B0C-0x00000001856B6B80
+		public override void Dispose() {} // 0x00000001878695A8-0x000000018786961C
+		private void Dispose(bool disposing) {} // 0x00000001813B31A0-0x00000001813B31B0
+		~CriAtomEx3dRegion() {} // 0x000000018787F870-0x000000018787F904
 	}
 
-	public class CriAtomExAcb : CriDisposable // TypeDefIndex: 54119
+	public class CriAtomExAcb : CriDisposable // TypeDefIndex: 55112
 	{
 		// Fields
 		private IntPtr handle; // 0x20
 		private GCHandle dataHandle; // 0x28
 	
 		// Properties
-		public IntPtr nativeHandle { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
-		public bool isAvailable { get => default; } // 0x00000001856BAD24-0x00000001856BAD30 
+		public IntPtr nativeHandle { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
+		public bool isAvailable { get => default; } // 0x000000018786D7C0-0x000000018786D7CC 
 	
 		// Constructors
 		public CriAtomExAcb() {} // Dummy constructor
-		internal CriAtomExAcb(IntPtr handle, GCHandle? dataHandle) {} // 0x00000001856B9DB8-0x00000001856B9E58
+		internal CriAtomExAcb(IntPtr handle, GCHandle? dataHandle) {} // 0x000000018786C854-0x000000018786C8F4
 	
 		// Methods
-		public static CriAtomExAcb LoadAcbFile(CriFsBinder binder, string acbPath, string awbPath) => default; // 0x00000001856B9CD4-0x00000001856B9DA0
-		public static CriAtomExAcb LoadAcbData(byte[] acbData, CriFsBinder awbBinder, string awbPath) => default; // 0x00000001856B9BB8-0x00000001856B9CD4
-		public override void Dispose() {} // 0x00000001856B898C-0x00000001856B89DC
-		private void Dispose(bool disposing) {} // 0x00000001856B89DC-0x00000001856B8A58
-		public bool Exists(string cueName) => default; // 0x00000001856B8A58-0x00000001856B8A64
-		public bool Exists(int cueId) => default; // 0x00000001856B8A64-0x00000001856B8A70
+		public static CriAtomExAcb LoadAcbFile(CriFsBinder binder, string acbPath, string awbPath) => default; // 0x000000018786C770-0x000000018786C83C
+		public static CriAtomExAcb LoadAcbData(byte[] acbData, CriFsBinder awbBinder, string awbPath) => default; // 0x000000018786C654-0x000000018786C770
+		public override void Dispose() {} // 0x000000018786B428-0x000000018786B478
+		private void Dispose(bool disposing) {} // 0x000000018786B478-0x000000018786B4F4
+		public bool Exists(string cueName) => default; // 0x000000018786B4F4-0x000000018786B500
+		public bool Exists(int cueId) => default; // 0x000000018786B500-0x000000018786B50C
 		public bool GetCueInfo(string cueName, out CriAtomEx.CueInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856B9010-0x00000001856B9244
+		} // 0x000000018786BAAC-0x000000018786BCE0
 		public bool GetCueInfo(int cueId, out CriAtomEx.CueInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856B8DDC-0x00000001856B9010
+		} // 0x000000018786B878-0x000000018786BAAC
 		public bool GetCueInfoByIndex(int index, out CriAtomEx.CueInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856B8AFC-0x00000001856B8D30
-		public CriAtomEx.CueInfo[] GetCueInfoList() => default; // 0x00000001856B8D30-0x00000001856B8DDC
+		} // 0x000000018786B598-0x000000018786B7CC
+		public CriAtomEx.CueInfo[] GetCueInfoList() => default; // 0x000000018786B7CC-0x000000018786B878
 		public bool GetWaveFormInfo(string cueName, out CriAtomEx.WaveformInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856B97B8-0x00000001856B99AC
+		} // 0x000000018786C254-0x000000018786C448
 		public bool GetWaveFormInfo(int cueId, out CriAtomEx.WaveformInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856B99AC-0x00000001856B9BA0
-		public int GetNumCuePlaying(string name) => default; // 0x00000001856B9250-0x00000001856B925C
-		public int GetNumCuePlaying(int id) => default; // 0x00000001856B9244-0x00000001856B9250
-		public int GetBlockIndex(string cueName, string blockName) => default; // 0x00000001856B8AF0-0x00000001856B8AFC
-		public int GetBlockIndex(int cueId, string blockName) => default; // 0x00000001856B8AE4-0x00000001856B8AF0
-		public int GetNumUsableAisacControls(string cueName) => default; // 0x00000001856B925C-0x00000001856B9268
-		public int GetNumUsableAisacControls(int cueId) => default; // 0x00000001856B9268-0x00000001856B9274
+		} // 0x000000018786C448-0x000000018786C63C
+		public int GetNumCuePlaying(string name) => default; // 0x000000018786BCEC-0x000000018786BCF8
+		public int GetNumCuePlaying(int id) => default; // 0x000000018786BCE0-0x000000018786BCEC
+		public int GetBlockIndex(string cueName, string blockName) => default; // 0x000000018786B58C-0x000000018786B598
+		public int GetBlockIndex(int cueId, string blockName) => default; // 0x000000018786B580-0x000000018786B58C
+		public int GetNumUsableAisacControls(string cueName) => default; // 0x000000018786BCF8-0x000000018786BD04
+		public int GetNumUsableAisacControls(int cueId) => default; // 0x000000018786BD04-0x000000018786BD10
 		public bool GetUsableAisacControl(string cueName, int index, out CriAtomEx.AisacControlInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856B95E0-0x00000001856B97B8
+		} // 0x000000018786C07C-0x000000018786C254
 		public bool GetUsableAisacControl(int cueId, int index, out CriAtomEx.AisacControlInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856B93F8-0x00000001856B95E0
-		public CriAtomEx.AisacControlInfo[] GetUsableAisacControlList(string cueName) => default; // 0x00000001856B9274-0x00000001856B9338
-		public CriAtomEx.AisacControlInfo[] GetUsableAisacControlList(int cueId) => default; // 0x00000001856B9338-0x00000001856B93F8
-		public void ResetCueTypeState(string cueName) {} // 0x00000001856B9DAC-0x00000001856B9DB8
-		public void ResetCueTypeState(int cueId) {} // 0x00000001856B9DA0-0x00000001856B9DAC
-		public void AttachAwbFile(CriFsBinder awb_binder, string awb_path, string awb_name) {} // 0x00000001856B88D4-0x00000001856B890C
-		public void DetachAwbFile(string awb_name) {} // 0x00000001856B8978-0x00000001856B898C
-		public bool IsReadyToRelease() => default; // 0x00000001856B9BA0-0x00000001856B9BB8
-		public float GetLoadProgress() => default; // 0x0000000183D51A60-0x0000000183D51A70
-		public void Decrypt(ulong key, ulong nonce) {} // 0x00000001856B890C-0x00000001856B8978
-		~CriAtomExAcb() {} // 0x00000001856B8A70-0x00000001856B8AE4
-		private static extern IntPtr criAtomExAcb_LoadAcbFile(IntPtr acb_binder, string acb_path, IntPtr awb_binder, string awb_path, IntPtr work, int work_size); // 0x00000001856BAB20-0x00000001856BAC18
-		private static extern IntPtr criAtomExAcb_LoadAcbData(IntPtr acb_data, int acb_data_size, IntPtr awb_binder, string awb_path, IntPtr work, int work_size); // 0x00000001856BAA3C-0x00000001856BAB20
-		private static extern void criAtomExAcb_Release(IntPtr acb_hn); // 0x00000001856BAC18-0x00000001856BAC4C
-		private static extern int criAtomExAcb_GetNumCues(IntPtr acb_hn); // 0x00000001856BA5A4-0x00000001856BA5D8
-		private static extern bool criAtomExAcb_ExistsId(IntPtr acb_hn, int id); // 0x00000001856B9FD4-0x00000001856BA05C
-		private static extern bool criAtomExAcb_ExistsName(IntPtr acb_hn, string name); // 0x00000001856BA05C-0x00000001856BA10C
-		private static extern int criAtomExAcb_GetNumUsableAisacControlsById(IntPtr acb_hn, int id); // 0x00000001856BA5D8-0x00000001856BA65C
-		private static extern int criAtomExAcb_GetNumUsableAisacControlsByName(IntPtr acb_hn, string name); // 0x00000001856BA65C-0x00000001856BA708
-		private static extern bool criAtomExAcb_GetUsableAisacControlById(IntPtr acb_hn, int id, ushort index, IntPtr info); // 0x00000001856BA708-0x00000001856BA7B0
-		private static extern bool criAtomExAcb_GetUsableAisacControlByName(IntPtr acb_hn, string name, ushort index, IntPtr info); // 0x00000001856BA7B0-0x00000001856BA874
-		private static extern bool criAtomExAcb_GetWaveformInfoById(IntPtr acb_hn, int id, IntPtr waveform_info); // 0x00000001856BA874-0x00000001856BA90C
-		private static extern bool criAtomExAcb_GetWaveformInfoByName(IntPtr acb_hn, string name, IntPtr waveform_info); // 0x00000001856BA90C-0x00000001856BA9C0
-		private static extern bool criAtomExAcb_GetCueInfoByName(IntPtr acb_hn, string name, IntPtr info); // 0x00000001856BA3C0-0x00000001856BA474
-		private static extern bool criAtomExAcb_GetCueInfoById(IntPtr acb_hn, int id, IntPtr info); // 0x00000001856BA290-0x00000001856BA328
-		private static extern bool criAtomExAcb_GetCueInfoByIndex(IntPtr acb_hn, int index, IntPtr info); // 0x00000001856BA328-0x00000001856BA3C0
-		private static extern int criAtomExAcb_GetNumCuePlayingCountByName(IntPtr acb_hn, string name); // 0x00000001856BA4F8-0x00000001856BA5A4
-		private static extern int criAtomExAcb_GetNumCuePlayingCountById(IntPtr acb_hn, int id); // 0x00000001856BA474-0x00000001856BA4F8
-		private static extern int criAtomExAcb_GetBlockIndexById(IntPtr acb_hn, int id, string block_name); // 0x00000001856BA10C-0x00000001856BA1C4
-		private static extern int criAtomExAcb_GetBlockIndexByName(IntPtr acb_hn, string name, string block_name); // 0x00000001856BA1C4-0x00000001856BA290
-		private static extern void criAtomExAcb_ResetCueTypeStateByName(IntPtr acb_hn, string name); // 0x00000001856BAC8C-0x00000001856BAD24
-		private static extern void criAtomExAcb_ResetCueTypeStateById(IntPtr acb_hn, int id); // 0x00000001856BAC4C-0x00000001856BAC8C
-		private static extern void criAtomExAcb_AttachAwbFile(IntPtr acb_hn, IntPtr awb_binder, string awb_path, string awb_name, IntPtr work, int work_size); // 0x00000001856B9E58-0x00000001856B9F3C
-		private static extern void criAtomExAcb_DetachAwbFile(IntPtr acb_hn, string awb_name); // 0x00000001856B9F3C-0x00000001856B9FD4
-		private static extern bool criAtomExAcb_IsReadyToRelease(IntPtr acb_hn); // 0x00000001856BA9C0-0x00000001856BAA3C
+		} // 0x000000018786BE94-0x000000018786C07C
+		public CriAtomEx.AisacControlInfo[] GetUsableAisacControlList(string cueName) => default; // 0x000000018786BD10-0x000000018786BDD4
+		public CriAtomEx.AisacControlInfo[] GetUsableAisacControlList(int cueId) => default; // 0x000000018786BDD4-0x000000018786BE94
+		public void ResetCueTypeState(string cueName) {} // 0x000000018786C848-0x000000018786C854
+		public void ResetCueTypeState(int cueId) {} // 0x000000018786C83C-0x000000018786C848
+		public void AttachAwbFile(CriFsBinder awb_binder, string awb_path, string awb_name) {} // 0x000000018786B370-0x000000018786B3A8
+		public void DetachAwbFile(string awb_name) {} // 0x000000018786B414-0x000000018786B428
+		public bool IsReadyToRelease() => default; // 0x000000018786C63C-0x000000018786C654
+		public float GetLoadProgress() => default; // 0x0000000185FB2DD0-0x0000000185FB2DE0
+		public void Decrypt(ulong key, ulong nonce) {} // 0x000000018786B3A8-0x000000018786B414
+		~CriAtomExAcb() {} // 0x000000018786B50C-0x000000018786B580
+		private static extern IntPtr criAtomExAcb_LoadAcbFile(IntPtr acb_binder, string acb_path, IntPtr awb_binder, string awb_path, IntPtr work, int work_size); // 0x000000018786D5BC-0x000000018786D6B4
+		private static extern IntPtr criAtomExAcb_LoadAcbData(IntPtr acb_data, int acb_data_size, IntPtr awb_binder, string awb_path, IntPtr work, int work_size); // 0x000000018786D4D8-0x000000018786D5BC
+		private static extern void criAtomExAcb_Release(IntPtr acb_hn); // 0x000000018786D6B4-0x000000018786D6E8
+		private static extern int criAtomExAcb_GetNumCues(IntPtr acb_hn); // 0x000000018786D040-0x000000018786D074
+		private static extern bool criAtomExAcb_ExistsId(IntPtr acb_hn, int id); // 0x000000018786CA70-0x000000018786CAF8
+		private static extern bool criAtomExAcb_ExistsName(IntPtr acb_hn, string name); // 0x000000018786CAF8-0x000000018786CBA8
+		private static extern int criAtomExAcb_GetNumUsableAisacControlsById(IntPtr acb_hn, int id); // 0x000000018786D074-0x000000018786D0F8
+		private static extern int criAtomExAcb_GetNumUsableAisacControlsByName(IntPtr acb_hn, string name); // 0x000000018786D0F8-0x000000018786D1A4
+		private static extern bool criAtomExAcb_GetUsableAisacControlById(IntPtr acb_hn, int id, ushort index, IntPtr info); // 0x000000018786D1A4-0x000000018786D24C
+		private static extern bool criAtomExAcb_GetUsableAisacControlByName(IntPtr acb_hn, string name, ushort index, IntPtr info); // 0x000000018786D24C-0x000000018786D310
+		private static extern bool criAtomExAcb_GetWaveformInfoById(IntPtr acb_hn, int id, IntPtr waveform_info); // 0x000000018786D310-0x000000018786D3A8
+		private static extern bool criAtomExAcb_GetWaveformInfoByName(IntPtr acb_hn, string name, IntPtr waveform_info); // 0x000000018786D3A8-0x000000018786D45C
+		private static extern bool criAtomExAcb_GetCueInfoByName(IntPtr acb_hn, string name, IntPtr info); // 0x000000018786CE5C-0x000000018786CF10
+		private static extern bool criAtomExAcb_GetCueInfoById(IntPtr acb_hn, int id, IntPtr info); // 0x000000018786CD2C-0x000000018786CDC4
+		private static extern bool criAtomExAcb_GetCueInfoByIndex(IntPtr acb_hn, int index, IntPtr info); // 0x000000018786CDC4-0x000000018786CE5C
+		private static extern int criAtomExAcb_GetNumCuePlayingCountByName(IntPtr acb_hn, string name); // 0x000000018786CF94-0x000000018786D040
+		private static extern int criAtomExAcb_GetNumCuePlayingCountById(IntPtr acb_hn, int id); // 0x000000018786CF10-0x000000018786CF94
+		private static extern int criAtomExAcb_GetBlockIndexById(IntPtr acb_hn, int id, string block_name); // 0x000000018786CBA8-0x000000018786CC60
+		private static extern int criAtomExAcb_GetBlockIndexByName(IntPtr acb_hn, string name, string block_name); // 0x000000018786CC60-0x000000018786CD2C
+		private static extern void criAtomExAcb_ResetCueTypeStateByName(IntPtr acb_hn, string name); // 0x000000018786D728-0x000000018786D7C0
+		private static extern void criAtomExAcb_ResetCueTypeStateById(IntPtr acb_hn, int id); // 0x000000018786D6E8-0x000000018786D728
+		private static extern void criAtomExAcb_AttachAwbFile(IntPtr acb_hn, IntPtr awb_binder, string awb_path, string awb_name, IntPtr work, int work_size); // 0x000000018786C8F4-0x000000018786C9D8
+		private static extern void criAtomExAcb_DetachAwbFile(IntPtr acb_hn, string awb_name); // 0x000000018786C9D8-0x000000018786CA70
+		private static extern bool criAtomExAcb_IsReadyToRelease(IntPtr acb_hn); // 0x000000018786D45C-0x000000018786D4D8
 	}
 
-	public class CriAtomExAcbLoader : CriDisposable // TypeDefIndex: 54122
+	public class CriAtomExAcbLoader : CriDisposable // TypeDefIndex: 55115
 	{
 		// Fields
 		private IntPtr handle; // 0x20
 		private GCHandle? gch; // 0x28
 	
 		// Nested types
-		public enum Status // TypeDefIndex: 54120
+		public enum Status // TypeDefIndex: 55113
 		{
 			Stop = 0,
 			Loading = 1,
@@ -1891,7 +1924,7 @@ namespace CriWare
 			Error = 3
 		}
 	
-		private struct LoaderConfig // TypeDefIndex: 54121
+		private struct LoaderConfig // TypeDefIndex: 55114
 		{
 			// Fields
 			public bool shouldLoadAwbOnMemory; // 0x00
@@ -1899,29 +1932,29 @@ namespace CriWare
 	
 		// Constructors
 		public CriAtomExAcbLoader() {} // Dummy constructor
-		private CriAtomExAcbLoader(IntPtr handle, GCHandle? dataHandle) {} // 0x00000001856B8470-0x00000001856B8534
+		private CriAtomExAcbLoader(IntPtr handle, GCHandle? dataHandle) {} // 0x000000018786AF0C-0x000000018786AFD0
 	
 		// Methods
-		public static CriAtomExAcbLoader LoadAcbFileAsync(CriFsBinder binder, string acbPath, string awbPath, bool loadAwbOnMemory = false /* Metadata: 0x01FD633F */) => default; // 0x00000001856B82E8-0x00000001856B83D0
-		public static CriAtomExAcbLoader LoadAcbDataAsync(byte[] acbData, CriFsBinder awbBinder, string awbPath, bool loadAwbOnMemory = false /* Metadata: 0x01FD6340 */) => default; // 0x00000001856B81AC-0x00000001856B82E8
-		public Status GetStatus() => default; // 0x00000001856B81A0-0x00000001856B81AC
-		public CriAtomExAcb MoveAcb() => default; // 0x00000001856B83D0-0x00000001856B8470
-		public override void Dispose() {} // 0x00000001856B8018-0x00000001856B8068
-		private void Dispose(bool disposing) {} // 0x00000001856B8068-0x00000001856B812C
-		~CriAtomExAcbLoader() {} // 0x00000001856B812C-0x00000001856B81A0
-		private static extern IntPtr criAtomExAcbLoader_Create(in LoaderConfig config); // 0x00000001856B8534-0x00000001856B85B4
-		private static extern void criAtomExAcbLoader_Destroy(IntPtr acb_loader); // 0x00000001856B85B4-0x00000001856B85E8
-		private static extern bool criAtomExAcbLoader_LoadAcbFileAsync(IntPtr acb_loader, IntPtr acb_binder, string acb_path, IntPtr awb_binder, string awb_path); // 0x00000001856B8738-0x00000001856B8824
-		private static extern bool criAtomExAcbLoader_LoadAcbDataAsync(IntPtr acb_loader, IntPtr acb_data, int acb_size, IntPtr awb_binder, string awb_path); // 0x00000001856B8660-0x00000001856B8738
-		private static extern Status criAtomExAcbLoader_GetStatus(IntPtr acb_loader); // 0x00000001856B85E8-0x00000001856B8660
-		private static extern bool criAtomExAcbLoader_WaitForCompletion(IntPtr acb_loader); // 0x00000001856B889C-0x00000001856B88D4
-		private static extern IntPtr criAtomExAcbLoader_MoveAcbHandle(IntPtr acb_loader); // 0x00000001856B8824-0x00000001856B889C
+		public static CriAtomExAcbLoader LoadAcbFileAsync(CriFsBinder binder, string acbPath, string awbPath, bool loadAwbOnMemory = false /* Metadata: 0x0207BB6B */) => default; // 0x000000018786AD84-0x000000018786AE6C
+		public static CriAtomExAcbLoader LoadAcbDataAsync(byte[] acbData, CriFsBinder awbBinder, string awbPath, bool loadAwbOnMemory = false /* Metadata: 0x0207BB6C */) => default; // 0x000000018786AC48-0x000000018786AD84
+		public Status GetStatus() => default; // 0x000000018786AC3C-0x000000018786AC48
+		public CriAtomExAcb MoveAcb() => default; // 0x000000018786AE6C-0x000000018786AF0C
+		public override void Dispose() {} // 0x000000018786AAB4-0x000000018786AB04
+		private void Dispose(bool disposing) {} // 0x000000018786AB04-0x000000018786ABC8
+		~CriAtomExAcbLoader() {} // 0x000000018786ABC8-0x000000018786AC3C
+		private static extern IntPtr criAtomExAcbLoader_Create(in LoaderConfig config); // 0x000000018786AFD0-0x000000018786B050
+		private static extern void criAtomExAcbLoader_Destroy(IntPtr acb_loader); // 0x000000018786B050-0x000000018786B084
+		private static extern bool criAtomExAcbLoader_LoadAcbFileAsync(IntPtr acb_loader, IntPtr acb_binder, string acb_path, IntPtr awb_binder, string awb_path); // 0x000000018786B1D4-0x000000018786B2C0
+		private static extern bool criAtomExAcbLoader_LoadAcbDataAsync(IntPtr acb_loader, IntPtr acb_data, int acb_size, IntPtr awb_binder, string awb_path); // 0x000000018786B0FC-0x000000018786B1D4
+		private static extern Status criAtomExAcbLoader_GetStatus(IntPtr acb_loader); // 0x000000018786B084-0x000000018786B0FC
+		private static extern bool criAtomExAcbLoader_WaitForCompletion(IntPtr acb_loader); // 0x000000018786B338-0x000000018786B370
+		private static extern IntPtr criAtomExAcbLoader_MoveAcbHandle(IntPtr acb_loader); // 0x000000018786B2C0-0x000000018786B338
 	}
 
-	public class CriAtomExAcf // TypeDefIndex: 54137
+	public class CriAtomExAcf // TypeDefIndex: 55130
 	{
 		// Nested types
-		public struct AcfDspSettingInfo // TypeDefIndex: 54123
+		public struct AcfDspSettingInfo // TypeDefIndex: 55116
 		{
 			// Fields
 			public string name; // 0x00
@@ -1947,10 +1980,10 @@ namespace CriWare
 				snapshotWorkSize = default;
 				numMixerAisacs = default;
 				mixerAisacStartIndex = default;
-			} // 0x00000001856B5374-0x00000001856B55A8
+			} // 0x000000018786F004-0x000000018786F00C
 		}
 	
-		public struct AcfDspSettingSnapshotInfo // TypeDefIndex: 54124
+		public struct AcfDspSettingSnapshotInfo // TypeDefIndex: 55117
 		{
 			// Fields
 			public string name; // 0x00
@@ -1968,10 +2001,10 @@ namespace CriWare
 				reserved = default;
 				busIndexes = default;
 				extendBusIndexes = default;
-			} // 0x00000001856B55A8-0x00000001856B57C4
+			} // 0x000000018786D9C4-0x000000018786DB7C
 		}
 	
-		public struct AcfDspBusInfo // TypeDefIndex: 54125
+		public struct AcfDspBusInfo // TypeDefIndex: 55118
 		{
 			// Fields
 			public string name; // 0x00
@@ -1999,17 +2032,17 @@ namespace CriWare
 				busNo = default;
 				numFxes = default;
 				numBusLinks = default;
-			} // 0x00000001856B5018-0x00000001856B5248
+			} // 0x000000018786F02C-0x000000018786F034
 		}
 	
-		public enum AcfDspBusLinkType : uint // TypeDefIndex: 54126
+		public enum AcfDspBusLinkType : uint // TypeDefIndex: 55119
 		{
 			preVolume = 0,
 			postVolume = 1,
 			postPan = 2
 		}
 	
-		public struct AcfDspBusLinkInfo // TypeDefIndex: 54127
+		public struct AcfDspBusLinkInfo // TypeDefIndex: 55120
 		{
 			// Fields
 			public AcfDspBusLinkType type; // 0x00
@@ -2023,10 +2056,10 @@ namespace CriWare
 				sendLevel = default;
 				busNo = default;
 				busId = default;
-			} // 0x00000001856B5248-0x00000001856B5374
+			} // 0x000000018786F024-0x000000018786F02C
 		}
 	
-		public struct CategoryInfo // TypeDefIndex: 54128
+		public struct CategoryInfo // TypeDefIndex: 55121
 		{
 			// Fields
 			public uint groupNo; // 0x00
@@ -2042,16 +2075,16 @@ namespace CriWare
 				name = default;
 				numCueLimits = default;
 				volume = default;
-			} // 0x00000001856B5FC4-0x00000001856B60AC
+			} // 0x000000018786E654-0x000000018786E6AC
 		}
 	
-		public enum AcfAisacType : uint // TypeDefIndex: 54129
+		public enum AcfAisacType : uint // TypeDefIndex: 55122
 		{
 			normal = 0,
 			autoModulation = 1
 		}
 	
-		public struct GlobalAisacInfo // TypeDefIndex: 54130
+		public struct GlobalAisacInfo // TypeDefIndex: 55123
 		{
 			// Fields
 			public string name; // 0x00
@@ -2071,10 +2104,10 @@ namespace CriWare
 				randomRange = default;
 				controlId = default;
 				dummy = default;
-			} // 0x00000001856CB4C0-0x00000001856CB648
+			} // 0x000000018786E6AC-0x000000018786E720
 		}
 	
-		public enum AisacGraphType // TypeDefIndex: 54131
+		public enum AisacGraphType // TypeDefIndex: 55124
 		{
 			none = 0,
 			volume = 1,
@@ -2131,7 +2164,7 @@ namespace CriWare
 			panSpread = 52
 		}
 	
-		public struct AisacGraphInfo // TypeDefIndex: 54132
+		public struct AisacGraphInfo // TypeDefIndex: 55125
 		{
 			// Fields
 			public AisacGraphType type; // 0x00
@@ -2139,16 +2172,16 @@ namespace CriWare
 			// Constructors
 			public AisacGraphInfo(byte[] data, int startIndex) {
 				type = default;
-			} // 0x00000001856B5A78-0x00000001856B5B6C
+			} // 0x000000018786E470-0x000000018786E654
 		}
 	
-		public enum CharacterEncoding : uint // TypeDefIndex: 54133
+		public enum CharacterEncoding : uint // TypeDefIndex: 55126
 		{
 			utf8 = 0,
 			sjis = 1
 		}
 	
-		public struct AcfInfo // TypeDefIndex: 54134
+		public struct AcfInfo // TypeDefIndex: 55127
 		{
 			// Fields
 			public string name; // 0x00
@@ -2184,10 +2217,10 @@ namespace CriWare
 				numBuses = default;
 				numVoiceLimitGroups = default;
 				numOutputPorts = default;
-			} // 0x00000001856B57C4-0x00000001856B59D0
+			} // 0x000000018786E720-0x000000018786E90C
 		}
 	
-		public struct SelectorInfo // TypeDefIndex: 54135
+		public struct SelectorInfo // TypeDefIndex: 55128
 		{
 			// Fields
 			public string name; // 0x00
@@ -2201,10 +2234,10 @@ namespace CriWare
 				index = default;
 				numLabels = default;
 				globalLabelIndex = default;
-			} // 0x00000001856CBCE8-0x00000001856CBDB4
+			} // 0x000000018786E0F0-0x000000018786E2F0
 		}
 	
-		public struct SelectorLabelInfo // TypeDefIndex: 54136
+		public struct SelectorLabelInfo // TypeDefIndex: 55129
 		{
 			// Fields
 			public string selectorName; // 0x00
@@ -2214,142 +2247,142 @@ namespace CriWare
 			public SelectorLabelInfo(byte[] data, int startIndex) {
 				selectorName = default;
 				labelName = default;
-			} // 0x00000001856CBDB4-0x00000001856CBE6C
+			} // 0x000000018786E2F0-0x000000018786E470
 		}
 	
 		// Constructors
-		public CriAtomExAcf() {} // 0x000000018350B670-0x000000018350B680
+		public CriAtomExAcf() {} // 0x000000018787E850-0x000000018787E908
 	
 		// Methods
-		public static int GetNumAisacControls() => default; // 0x00000001856BC568-0x00000001856BC570
+		public static int GetNumAisacControls() => default; // 0x000000018786F01C-0x000000018786F024
 		public static bool GetAisacControlInfo(ushort index, out CriAtomEx.AisacControlInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BAF28-0x00000001856BB0E0
-		public static int GetNumDspSettings() => default; // 0x00000001856BC590-0x00000001856BC598
-		public static int GetNumDspSettings(IntPtr acfData, int size) => default; // 0x00000001856BC588-0x00000001856BC590
-		public static string GetDspSettingNameByIndex(ushort index) => default; // 0x00000001856BBBB8-0x00000001856BBC10
-		public static string GetDspSettingNameByIndex(IntPtr acfData, int size, ushort index) => default; // 0x00000001856BBC10-0x00000001856BBC84
+		} // 0x000000018786F014-0x000000018786F01C
+		public static int GetNumDspSettings() => default; // 0x000000018786DD50-0x000000018786DF28
+		public static int GetNumDspSettings(IntPtr acfData, int size) => default; // 0x000000018786DF28-0x000000018786E0F0
+		public static string GetDspSettingNameByIndex(ushort index) => default; // 0x000000018786DB7C-0x000000018786DD50
+		public static string GetDspSettingNameByIndex(IntPtr acfData, int size, ushort index) => default; // 0x000000018786F034-0x000000018786F03C
 		public static bool GetDspSettingInformation(string name, out AcfDspSettingInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BB9D4-0x00000001856BBBB8
+		} // 0x000000018786EB50-0x000000018786ED24
 		public static bool GetDspSettingSnapshotInformation(ushort index, out AcfDspSettingSnapshotInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BBC84-0x00000001856BBE70
+		} // 0x000000018786ED24-0x000000018786EEEC
 		public static bool GetDspBusInformation(ushort index, out AcfDspBusInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BB654-0x00000001856BB854
+		} // 0x000000018786E90C-0x000000018786EB50
 		public static bool GetDspBusLinkInformation(ushort index, out AcfDspBusLinkInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BB854-0x00000001856BB9D4
-		public static int GetNumCategories() => default; // 0x00000001856BC580-0x00000001856BC588
-		public static int GetNumCategoriesPerPlayback() => default; // 0x00000001856BC578-0x00000001856BC580
+		} // 0x000000018786EEEC-0x000000018786EFFC
+		public static int GetNumCategories() => default; // 0x000000018786D7D4-0x000000018786D9C4
+		public static int GetNumCategoriesPerPlayback() => default; // 0x000000018786F03C-0x000000018786F044
 		public static bool GetCategoryInfoByIndex(ushort index, out CategoryInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BB2B4-0x00000001856BB48C
+		} // 0x000000018786F044-0x000000018786F1FC
 		public static bool GetCategoryInfoByName(string name, out CategoryInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BB48C-0x00000001856BB654
+		} // 0x000000018786F1FC-0x000000018786F3B4
 		public static bool GetCategoryInfoById(uint id, out CategoryInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BB0E0-0x00000001856BB2B4
-		public static int GetNumGlobalAisacs() => default; // 0x00000001856BC598-0x00000001856BC5A0
+		} // 0x000000018786F3B4-0x000000018786F63C
+		public static int GetNumGlobalAisacs() => default; // 0x000000018786F00C-0x000000018786F014
 		public static bool GetGlobalAisacInfoByIndex(ushort index, out GlobalAisacInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BC0B4-0x00000001856BC288
+		} // 0x000000018786EFFC-0x000000018786F004
 		public static bool GetGlobalAisacInfoByName(string name, out GlobalAisacInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BC288-0x00000001856BC450
+		} // 0x000000018786D7CC-0x000000018786D7D4
 		public static bool GetGlobalAisacGraphInfo(GlobalAisacInfo aisacInfo, ushort graphIndex, out AisacGraphInfo graphInfo) {
 			graphInfo = default;
 			return default;
-		} // 0x00000001856BBE70-0x00000001856BC0B4
+		} // 0x00000001878701C4-0x00000001878701E8
 		public static bool GetGlobalAisacValue(GlobalAisacInfo aisacInfo, float control, AisacGraphType type, out float value) {
 			value = default;
 			return default;
-		} // 0x00000001856BC450-0x00000001856BC560
+		} // 0x000000018786F818-0x000000018786F8A4
 		public static bool GetAcfInfo(out AcfInfo acfInfo) {
 			acfInfo = default;
 			return default;
-		} // 0x00000001856BAD38-0x00000001856BAF28
-		public static int GetNumSelectors() => default; // 0x00000001856BC5A0-0x00000001856BC5A8
+		} // 0x000000018786F7C4-0x000000018786F818
+		public static int GetNumSelectors() => default; // 0x000000018786F8A4-0x000000018786F93C
 		public static bool GetSelectorInfoByIndex(ushort index, out SelectorInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BC5A8-0x00000001856BC760
+		} // 0x0000000187870438-0x00000001878704A0
 		public static bool GetSelectorInfoByName(string name, out SelectorInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BC760-0x00000001856BC918
+		} // 0x00000001878703B4-0x0000000187870438
 		public static bool GetSelectorLabelInfo(SelectorInfo selectorInfo, ushort labelIndex, out SelectorLabelInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856BC918-0x00000001856BCBA0
-		public static int GetNumBuses() => default; // 0x00000001856BC570-0x00000001856BC578
-		public static int GetMaxBusesOfDspBusSettings() => default; // 0x00000001856BC560-0x00000001856BC568
-		public static string FindBusName(string busName) => default; // 0x00000001856BAD30-0x00000001856BAD38
-		private static extern int criAtomExAcf_GetNumAisacControls(); // 0x00000001856BD728-0x00000001856BD74C
-		private static extern bool criAtomExAcf_GetAisacControlInfo(ushort index, IntPtr info); // 0x00000001856BCD7C-0x00000001856BCE08
-		private static extern uint criAtomExAcf_GetAisacControlIdByName(string name); // 0x00000001856BCD28-0x00000001856BCD7C
-		private static extern string criAtomExAcf_GetAisacControlNameById(uint id); // 0x00000001856BCE08-0x00000001856BCEA0
-		private static extern int criAtomExAcf_GetNumDspSettings(); // 0x00000001856BD99C-0x00000001856BDA04
-		private static extern int criAtomExAcf_GetNumDspSettingsFromAcfData(IntPtr acf_data, int acf_data_size); // 0x00000001856BD918-0x00000001856BD99C
-		private static extern IntPtr criAtomExAcf_GetDspSettingNameByIndex(ushort index); // 0x00000001856BD3D0-0x00000001856BD448
-		private static extern IntPtr criAtomExAcf_GetDspSettingNameByIndexFromAcfData(IntPtr acf_data, int acf_data_size, ushort index); // 0x00000001856BD33C-0x00000001856BD3D0
-		private static extern bool criAtomExAcf_GetDspSettingInformation(string name, IntPtr info); // 0x00000001856BD2D8-0x00000001856BD33C
-		private static extern bool criAtomExAcf_GetDspSettingSnapshotInformation(ushort index, IntPtr info); // 0x00000001856BD448-0x00000001856BD4D4
-		private static extern bool criAtomExAcf_GetDspBusInformation(ushort index, IntPtr info); // 0x00000001856BD018-0x00000001856BD0A4
-		private static extern int criAtomExAcf_GetDspFxType(ushort index); // 0x00000001856BD260-0x00000001856BD2D8
-		private static extern string criAtomExAcf_GetDspFxName(ushort index); // 0x00000001856BD130-0x00000001856BD1C8
-		private static extern bool criAtomExAcf_GetDspFxParameters(ushort index, IntPtr parameters, int size); // 0x00000001856BD1C8-0x00000001856BD260
-		private static extern bool criAtomExAcf_GetDspBusLinkInformation(ushort index, IntPtr info); // 0x00000001856BD0A4-0x00000001856BD130
-		private static extern int criAtomExAcf_GetNumCategoriesFromAcfData(IntPtr acf_data, int acf_data_size); // 0x00000001856BD7FC-0x00000001856BD880
-		private static extern int criAtomExAcf_GetNumCategories(); // 0x00000001856BD8EC-0x00000001856BD918
-		private static extern int criAtomExAcf_GetNumCategoriesPerPlaybackFromAcfData(IntPtr acf_data, int acf_data_size); // 0x00000001856BD880-0x00000001856BD8C0
-		private static extern int criAtomExAcf_GetNumCategoriesPerPlayback(); // 0x00000001856BD8C0-0x00000001856BD8EC
-		private static extern bool criAtomExAcf_GetCategoryInfo(ushort index, IntPtr info); // 0x00000001856BCF8C-0x00000001856BD018
-		private static extern bool criAtomExAcf_GetCategoryInfoByName(string name, IntPtr info); // 0x00000001856BCF28-0x00000001856BCF8C
-		private static extern bool criAtomExAcf_GetCategoryInfoById(uint id, IntPtr info); // 0x00000001856BCEA0-0x00000001856BCF28
-		private static extern int criAtomExAcf_GetNumGlobalAisacs(); // 0x00000001856BDA04-0x00000001856BDA28
-		private static extern bool criAtomExAcf_GetGlobalAisacInfo(ushort index, IntPtr info); // 0x00000001856BD5D0-0x00000001856BD65C
-		private static extern bool criAtomExAcf_GetGlobalAisacInfoByName(string name, IntPtr info); // 0x00000001856BD56C-0x00000001856BD5D0
-		private static extern bool criAtomExAcf_GetGlobalAisacGraphInfo(IntPtr aisac_info, ushort graph_index, IntPtr graph_info); // 0x00000001856BD4D4-0x00000001856BD56C
-		private static extern bool criAtomExAcf_GetGlobalAisacValue(IntPtr aisac_info, float control, AisacGraphType type, out float value); // 0x00000001856BD65C-0x00000001856BD6BC
-		private static extern bool criAtomExAcf_GetAcfInfo(IntPtr acf_info); // 0x00000001856BCCF0-0x00000001856BCD28
-		private static extern bool criAtomExAcf_GetAcfInfoFromAcfData(IntPtr acf_data, int acf_data_size, IntPtr acf_info); // 0x00000001856BCC58-0x00000001856BCCF0
-		private static extern int criAtomExAcf_GetNumSelectors(); // 0x00000001856BDA28-0x00000001856BDA4C
-		private static extern bool criAtomExAcf_GetSelectorInfoByIndex(ushort index, IntPtr info); // 0x00000001856BDA4C-0x00000001856BDAD8
-		private static extern bool criAtomExAcf_GetSelectorInfoByName(string name, IntPtr info); // 0x00000001856BDAD8-0x00000001856BDB3C
-		private static extern bool criAtomExAcf_GetSelectorLabelInfo(IntPtr selector_info, ushort label_index, IntPtr info); // 0x00000001856BDB3C-0x00000001856BDBD4
-		private static extern int criAtomExAcf_GetNumBusesFromAcfData(IntPtr acf_data, int acf_data_size); // 0x00000001856BD74C-0x00000001856BD7D0
-		private static extern int criAtomExAcf_GetNumBuses(); // 0x00000001856BD7D0-0x00000001856BD7FC
-		private static extern int criAtomExAcf_GetMaxBusesOfDspBusSettingsFromAcfData(IntPtr acf_data, int acf_data_size); // 0x00000001856BD6BC-0x00000001856BD6FC
-		private static extern int criAtomExAcf_GetMaxBusesOfDspBusSettings(); // 0x00000001856BD6FC-0x00000001856BD728
-		private static extern string criAtomExAcf_FindBusName(string bus_name); // 0x00000001856BCBA0-0x00000001856BCC58
+		} // 0x000000018786FE6C-0x000000018786FEE4
+		public static int GetNumBuses() => default; // 0x000000018786FDD8-0x000000018786FE6C
+		public static int GetMaxBusesOfDspBusSettings() => default; // 0x000000018786FD74-0x000000018786FDD8
+		public static string FindBusName(string busName) => default; // 0x000000018786FEE4-0x000000018786FF70
+		private static extern int criAtomExAcf_GetNumAisacControls(); // 0x000000018786FAB4-0x000000018786FB40
+		private static extern bool criAtomExAcf_GetAisacControlInfo(ushort index, IntPtr info); // 0x000000018786FCFC-0x000000018786FD74
+		private static extern uint criAtomExAcf_GetAisacControlIdByName(string name); // 0x000000018786FBCC-0x000000018786FC64
+		private static extern string criAtomExAcf_GetAisacControlNameById(uint id); // 0x000000018786FC64-0x000000018786FCFC
+		private static extern int criAtomExAcf_GetNumDspSettings(); // 0x000000018786FB40-0x000000018786FBCC
+		private static extern int criAtomExAcf_GetNumDspSettingsFromAcfData(IntPtr acf_data, int acf_data_size); // 0x0000000187870298-0x000000018787031C
+		private static extern IntPtr criAtomExAcf_GetDspSettingNameByIndex(ushort index); // 0x0000000187870388-0x00000001878703B4
+		private static extern IntPtr criAtomExAcf_GetDspSettingNameByIndexFromAcfData(IntPtr acf_data, int acf_data_size, ushort index); // 0x000000018787031C-0x000000018787035C
+		private static extern bool criAtomExAcf_GetDspSettingInformation(string name, IntPtr info); // 0x000000018787035C-0x0000000187870388
+		private static extern bool criAtomExAcf_GetDspSettingSnapshotInformation(ushort index, IntPtr info); // 0x000000018786FA28-0x000000018786FAB4
+		private static extern bool criAtomExAcf_GetDspBusInformation(ushort index, IntPtr info); // 0x000000018786F9C4-0x000000018786FA28
+		private static extern int criAtomExAcf_GetDspFxType(ushort index); // 0x000000018786F93C-0x000000018786F9C4
+		private static extern string criAtomExAcf_GetDspFxName(ushort index); // 0x00000001878704A0-0x00000001878704C4
+		private static extern bool criAtomExAcf_GetDspFxParameters(ushort index, IntPtr parameters, int size); // 0x000000018787006C-0x00000001878700F8
+		private static extern bool criAtomExAcf_GetDspBusLinkInformation(ushort index, IntPtr info); // 0x0000000187870008-0x000000018787006C
+		private static extern int criAtomExAcf_GetNumCategoriesFromAcfData(IntPtr acf_data, int acf_data_size); // 0x000000018786FF70-0x0000000187870008
+		private static extern int criAtomExAcf_GetNumCategories(); // 0x00000001878700F8-0x0000000187870158
+		private static extern int criAtomExAcf_GetNumCategoriesPerPlaybackFromAcfData(IntPtr acf_data, int acf_data_size); // 0x000000018786F78C-0x000000018786F7C4
+		private static extern int criAtomExAcf_GetNumCategoriesPerPlayback(); // 0x000000018786F6F4-0x000000018786F78C
+		private static extern bool criAtomExAcf_GetCategoryInfo(ushort index, IntPtr info); // 0x00000001878704C4-0x00000001878704E8
+		private static extern bool criAtomExAcf_GetCategoryInfoByName(string name, IntPtr info); // 0x00000001878704E8-0x0000000187870574
+		private static extern bool criAtomExAcf_GetCategoryInfoById(uint id, IntPtr info); // 0x0000000187870574-0x00000001878705D8
+		private static extern int criAtomExAcf_GetNumGlobalAisacs(); // 0x00000001878705D8-0x0000000187870670
+		private static extern bool criAtomExAcf_GetGlobalAisacInfo(ushort index, IntPtr info); // 0x00000001878701E8-0x000000018787026C
+		private static extern bool criAtomExAcf_GetGlobalAisacInfoByName(string name, IntPtr info); // 0x000000018787026C-0x0000000187870298
+		private static extern bool criAtomExAcf_GetGlobalAisacGraphInfo(IntPtr aisac_info, ushort graph_index, IntPtr graph_info); // 0x0000000187870158-0x0000000187870198
+		private static extern bool criAtomExAcf_GetGlobalAisacValue(IntPtr aisac_info, float control, AisacGraphType type, out float value); // 0x0000000187870198-0x00000001878701C4
+		private static extern bool criAtomExAcf_GetAcfInfo(IntPtr acf_info); // 0x000000018786F63C-0x000000018786F6F4
+		private static extern bool criAtomExAcf_GetAcfInfoFromAcfData(IntPtr acf_data, int acf_data_size, IntPtr acf_info); // 0x0000000185492010-0x0000000185492020
+		private static extern int criAtomExAcf_GetNumSelectors(); // 0x0000000187867E10-0x0000000187868044
+		private static extern bool criAtomExAcf_GetSelectorInfoByIndex(ushort index, IntPtr info); // 0x0000000187868044-0x0000000187868260
+		private static extern bool criAtomExAcf_GetSelectorInfoByName(string name, IntPtr info); // 0x0000000187867AB4-0x0000000187867CE4
+		private static extern bool criAtomExAcf_GetSelectorLabelInfo(IntPtr selector_info, ushort label_index, IntPtr info); // 0x0000000187867CE4-0x0000000187867E10
+		private static extern int criAtomExAcf_GetNumBusesFromAcfData(IntPtr acf_data, int acf_data_size); // 0x0000000187868A60-0x0000000187868B48
+		private static extern int criAtomExAcf_GetNumBuses(); // 0x000000018787DF5C-0x000000018787E0E4
+		private static extern int criAtomExAcf_GetMaxBusesOfDspBusSettingsFromAcfData(IntPtr acf_data, int acf_data_size); // 0x0000000187868514-0x0000000187868608
+		private static extern int criAtomExAcf_GetMaxBusesOfDspBusSettings(); // 0x0000000187868260-0x000000018786846C
+		private static extern string criAtomExAcf_FindBusName(string bus_name); // 0x000000018787E784-0x000000018787E850
 	}
 
-	public class CriAtomExAsrRack : CriDisposable // TypeDefIndex: 54142
+	public class CriAtomExAsrRack : CriDisposable // TypeDefIndex: 55135
 	{
 		// Fields
-		public const int defaultRackId = 0; // Metadata: 0x01FD6383
+		public const int defaultRackId = 0; // Metadata: 0x0207BBAF
 		private int _rackId; // 0x20
 		private bool hasExistingRackId; // 0x24
 	
 		// Properties
-		public int rackId { get => default; } // 0x0000000181003B50-0x0000000181003B60 
-		public static Config defaultConfig { get => default; } // 0x0000000183D51A70-0x0000000183D51AB0 
+		public int rackId { get => default; } // 0x00000001813B88B0-0x00000001813B88C0 
+		public static Config defaultConfig { get => default; } // 0x0000000185FB2DE0-0x0000000185FB2E20 
 	
 		// Nested types
-		public enum SpeakerMapping // TypeDefIndex: 54138
+		public enum SpeakerMapping // TypeDefIndex: 55131
 		{
 			Auto = 0,
 			Monaural = 1,
@@ -2360,7 +2393,7 @@ namespace CriWare
 			Ch7_1_4 = 6
 		}
 	
-		public struct Config // TypeDefIndex: 54139
+		public struct Config // TypeDefIndex: 55132
 		{
 			// Fields
 			public float serverFrequency; // 0x00
@@ -2373,13 +2406,13 @@ namespace CriWare
 			public IntPtr context; // 0x20
 		}
 	
-		public struct PlatformConfig // TypeDefIndex: 54140
+		public struct PlatformConfig // TypeDefIndex: 55133
 		{
 			// Fields
 			public byte reserved; // 0x00
 		}
 	
-		public struct PerformanceInfo // TypeDefIndex: 54141
+		public struct PerformanceInfo // TypeDefIndex: 55134
 		{
 			// Fields
 			public uint processCount; // 0x00
@@ -2396,44 +2429,44 @@ namespace CriWare
 	
 		// Constructors
 		public CriAtomExAsrRack() {} // Dummy constructor
-		public CriAtomExAsrRack(Config config, PlatformConfig platformConfig) {} // 0x00000001856BDF0C-0x00000001856BE018
-		public CriAtomExAsrRack(int existingRackId) {} // 0x00000001856BE018-0x00000001856BE0D4
+		public CriAtomExAsrRack(Config config, PlatformConfig platformConfig) {} // 0x00000001878709A8-0x0000000187870AB4
+		public CriAtomExAsrRack(int existingRackId) {} // 0x0000000187870AB4-0x0000000187870B70
 	
 		// Methods
-		public void AttachDspBusSetting(string settingName) {} // 0x00000001856BDBE0-0x00000001856BDC00
-		public void DetachDspBusSetting() {} // 0x00000001856BDC84-0x00000001856BDC90
-		public void ApplyDspBusSnapshot(string snapshotName, int timeMs) {} // 0x00000001856BDBD4-0x00000001856BDBE0
-		public static string GetAppliedDspBusSnapshotName(int rackId) => default; // 0x00000001856BDDD8-0x00000001856BDE2C
-		public string GetAppliedDspBusSnapshotName() => default; // 0x00000001856BDD80-0x00000001856BDDD8
-		public PerformanceInfo GetPerformanceInfo() => default; // 0x00000001856BDE60-0x00000001856BDEE8
-		public static PerformanceInfo GetPerformanceInfoByRackId(int rackId = 0 /* Metadata: 0x01FD6381 */) => default; // 0x00000001856BDE2C-0x00000001856BDE60
-		public void ResetPerformanceMonitor() {} // 0x00000001856BDEF0-0x00000001856BDEFC
-		public static void ResetPerformanceMonitorByRackId(int rackId = 0 /* Metadata: 0x01FD6382 */) {} // 0x00000001856BDEE8-0x00000001856BDEF0
-		public static void SetAisacControl(int rackId, string controlName, float value) {} // 0x00000001856BDEFC-0x00000001856BDF04
-		public static void SetAisacControl(int rackId, int controlId, float value) {} // 0x00000001856BDF04-0x00000001856BDF0C
-		public override void Dispose() {} // 0x00000001856BDC90-0x00000001856BDD0C
-		~CriAtomExAsrRack() {} // 0x00000001856BDD0C-0x00000001856BDD80
-		private static extern int CRIWARE6158351D(in Config config, in PlatformConfig platformConfig); // 0x00000001856BDC00-0x00000001856BDC84
-		private static extern void criAtomExAsrRack_Destroy(int rackId); // 0x00000001856BE230-0x00000001856BE2A8
-		private static extern void criAtomExAsrRack_AttachDspBusSetting(int rackId, string setting, IntPtr work, int workSize); // 0x00000001856BE17C-0x00000001856BE230
-		private static extern void criAtomExAsrRack_DetachDspBusSetting(int rackId); // 0x00000001856BE2A8-0x00000001856BE320
-		private static extern IntPtr criAtomExAsrRack_GetAppliedDspBusSnapshotName(int rackId); // 0x00000001856BE320-0x00000001856BE398
-		private static extern void criAtomExAsrRack_ApplyDspBusSnapshot(int rackId, string snapshotName, int timeMs); // 0x00000001856BE0D4-0x00000001856BE17C
-		private static extern void criAtomExAsrRack_GetPerformanceInfo(int rackId, out PerformanceInfo perfInfo); // 0x00000001856BE398-0x00000001856BE41C
-		private static extern void criAtomExAsrRack_ResetPerformanceMonitor(int rackId); // 0x00000001856BE41C-0x00000001856BE494
-		private static extern void criAtomExAsrRack_SetAisacControlById(int rackId, ushort controlId, float value); // 0x00000001856BE494-0x00000001856BE4E0
-		private static extern void criAtomExAsrRack_SetAisacControlByName(int rackId, string controlName, float value); // 0x00000001856BE4E0-0x00000001856BE540
+		public void AttachDspBusSetting(string settingName) {} // 0x000000018787067C-0x000000018787069C
+		public void DetachDspBusSetting() {} // 0x0000000187870720-0x000000018787072C
+		public void ApplyDspBusSnapshot(string snapshotName, int timeMs) {} // 0x0000000187870670-0x000000018787067C
+		public static string GetAppliedDspBusSnapshotName(int rackId) => default; // 0x0000000187870874-0x00000001878708C8
+		public string GetAppliedDspBusSnapshotName() => default; // 0x000000018787081C-0x0000000187870874
+		public PerformanceInfo GetPerformanceInfo() => default; // 0x00000001878708FC-0x0000000187870984
+		public static PerformanceInfo GetPerformanceInfoByRackId(int rackId = 0 /* Metadata: 0x0207BBAD */) => default; // 0x00000001878708C8-0x00000001878708FC
+		public void ResetPerformanceMonitor() {} // 0x000000018787098C-0x0000000187870998
+		public static void ResetPerformanceMonitorByRackId(int rackId = 0 /* Metadata: 0x0207BBAE */) {} // 0x0000000187870984-0x000000018787098C
+		public static void SetAisacControl(int rackId, string controlName, float value) {} // 0x0000000187870998-0x00000001878709A0
+		public static void SetAisacControl(int rackId, int controlId, float value) {} // 0x00000001878709A0-0x00000001878709A8
+		public override void Dispose() {} // 0x000000018787072C-0x00000001878707A8
+		~CriAtomExAsrRack() {} // 0x00000001878707A8-0x000000018787081C
+		private static extern int CRIWARE6158351D(in Config config, in PlatformConfig platformConfig); // 0x000000018787069C-0x0000000187870720
+		private static extern void criAtomExAsrRack_Destroy(int rackId); // 0x0000000187870CCC-0x0000000187870D44
+		private static extern void criAtomExAsrRack_AttachDspBusSetting(int rackId, string setting, IntPtr work, int workSize); // 0x0000000187870C18-0x0000000187870CCC
+		private static extern void criAtomExAsrRack_DetachDspBusSetting(int rackId); // 0x0000000187870D44-0x0000000187870DBC
+		private static extern IntPtr criAtomExAsrRack_GetAppliedDspBusSnapshotName(int rackId); // 0x0000000187870DBC-0x0000000187870E34
+		private static extern void criAtomExAsrRack_ApplyDspBusSnapshot(int rackId, string snapshotName, int timeMs); // 0x0000000187870B70-0x0000000187870C18
+		private static extern void criAtomExAsrRack_GetPerformanceInfo(int rackId, out PerformanceInfo perfInfo); // 0x0000000187870E34-0x0000000187870EB8
+		private static extern void criAtomExAsrRack_ResetPerformanceMonitor(int rackId); // 0x0000000187870EB8-0x0000000187870F30
+		private static extern void criAtomExAsrRack_SetAisacControlById(int rackId, ushort controlId, float value); // 0x0000000187870F30-0x0000000187870F7C
+		private static extern void criAtomExAsrRack_SetAisacControlByName(int rackId, string controlName, float value); // 0x0000000187870F7C-0x0000000187870FDC
 	}
 
-	public class CriAtomExAuxIn : CriDisposable // TypeDefIndex: 54144
+	public class CriAtomExAuxIn : CriDisposable // TypeDefIndex: 55137
 	{
 		// Fields
-		private const string errorInvalidHandle = "[CRIWARE] Invalid native handle of CriAtomExAuxIn."; // Metadata: 0x01FD638B
+		private const string errorInvalidHandle = "[CRIWARE] Invalid native handle of CriAtomExAuxIn."; // Metadata: 0x0207BBB7
 		private IntPtr handle; // 0x20
 		private CriAudioReadStream inputReadStream; // 0x28
 	
 		// Nested types
-		public struct Config // TypeDefIndex: 54143
+		public struct Config // TypeDefIndex: 55136
 		{
 			// Fields
 			public int maxChannels; // 0x00
@@ -2441,47 +2474,48 @@ namespace CriWare
 			public CriAtomEx.SoundRendererType soundRendererType; // 0x08
 	
 			// Properties
-			public static Config Default { get => default; } // 0x0000000183D51A40-0x0000000183D51A60 
+			public static Config Default { get => default; } // 0x0000000187871EE0-0x0000000187871FB0 
 		}
 	
 		// Constructors
 		public CriAtomExAuxIn() {} // Dummy constructor
-		public CriAtomExAuxIn(Config? config = default) {} // 0x00000001856BF444-0x00000001856BF514
+		public CriAtomExAuxIn(Config? config = default) {} // 0x00000001878707A8-0x000000018787081C
 	
 		// Methods
-		~CriAtomExAuxIn() {} // 0x00000001856BDD0C-0x00000001856BDD80
-		public override void Dispose() {} // 0x00000001856BF330-0x00000001856BF3AC
-		public void Start() {} // 0x00000001856BF424-0x00000001856BF430
-		public void Stop() {} // 0x00000001856BF430-0x00000001856BF444
-		public void SetFormat(int numChannels, int samplingRate) {} // 0x00000001856BF3C4-0x00000001856BF3D0
+		~CriAtomExAuxIn() {} // 0x0000000187871DCC-0x0000000187871E48
+		public override void Dispose() {} // 0x0000000187871EC0-0x0000000187871ECC
+		public void Start() {} // 0x0000000187871ECC-0x0000000187871EE0
+		public void Stop() {} // 0x0000000187871E60-0x0000000187871E6C
+		public void SetFormat(int numChannels, int samplingRate) {} // 0x0000000187871E48-0x0000000187871E54
 		public void GetFormat(out int numChannels, out int samplingRate) {
 			numChannels = default;
 			samplingRate = default;
-		} // 0x00000001856BF3AC-0x00000001856BF3B8
-		public void SetVolume(float volume) {} // 0x00000001856BF418-0x00000001856BF424
-		public void SetFrequencyRatio(float frequencyRatio) {} // 0x00000001856BF3D0-0x00000001856BF3DC
-		public void SetBusSendLevel(string busName, float level) {} // 0x00000001856BF3B8-0x00000001856BF3C4
-		public void SetInputReadStream(CriAudioReadStream stream) {} // 0x00000001856BF3DC-0x00000001856BF418
-		private static extern IntPtr criAtomAuxIn_Create(in Config config, IntPtr work, int work_size); // 0x00000001856BF514-0x00000001856BF5A8
-		private static extern void criAtomAuxIn_Destroy(IntPtr aux_in); // 0x00000001856BF5A8-0x00000001856BF5DC
-		private static extern void criAtomAuxIn_Start(IntPtr aux_in); // 0x00000001856BF838-0x00000001856BF86C
-		private static extern void criAtomAuxIn_Stop(IntPtr aux_in); // 0x00000001856BF86C-0x00000001856BF8E4
-		private static extern void criAtomAuxIn_SetVolume(IntPtr aux_in, float volume); // 0x00000001856BF7FC-0x00000001856BF838
-		private static extern void criAtomAuxIn_SetFrequencyRatio(IntPtr aux_in, float ratio); // 0x00000001856BF764-0x00000001856BF7A8
-		private static extern void criAtomAuxIn_SetBusSendLevelByName(IntPtr aux_in, string bus_name, float level); // 0x00000001856BF670-0x00000001856BF6D0
-		private static extern void criAtomAuxIn_SetFormat(IntPtr aux_in, int num_channels, int sampling_rate); // 0x00000001856BF6D0-0x00000001856BF764
-		private static extern void criAtomAuxIn_GetFormat(IntPtr aux_in, out int num_channels, out int sampling_rate); // 0x00000001856BF5DC-0x00000001856BF670
-		private static extern void criAtomAuxIn_SetInputReadStream(IntPtr aux_in, IntPtr stream_cbfunc, IntPtr stream_ptr); // 0x00000001856BF7A8-0x00000001856BF7FC
+		} // 0x0000000187871EB4-0x0000000187871EC0
+		public void SetVolume(float volume) {} // 0x0000000187871E6C-0x0000000187871E78
+		public void SetFrequencyRatio(float frequencyRatio) {} // 0x0000000187871E54-0x0000000187871E60
+		public void SetBusSendLevel(string busName, float level) {} // 0x0000000187871E78-0x0000000187871EB4
+		public void SetInputReadStream(CriAudioReadStream stream) {} // 0x0000000187871FB0-0x0000000187872044
+		private static extern IntPtr criAtomAuxIn_Create(in Config config, IntPtr work, int work_size); // 0x0000000187872044-0x0000000187872078
+		private static extern void criAtomAuxIn_Destroy(IntPtr aux_in); // 0x00000001878722D4-0x0000000187872308
+		private static extern void criAtomAuxIn_Start(IntPtr aux_in); // 0x0000000187872308-0x0000000187872380
+		private static extern void criAtomAuxIn_Stop(IntPtr aux_in); // 0x0000000187872298-0x00000001878722D4
+		private static extern void criAtomAuxIn_SetVolume(IntPtr aux_in, float volume); // 0x0000000187872200-0x0000000187872244
+		private static extern void criAtomAuxIn_SetFrequencyRatio(IntPtr aux_in, float ratio); // 0x000000018787210C-0x000000018787216C
+		private static extern void criAtomAuxIn_SetBusSendLevelByName(IntPtr aux_in, string bus_name, float level); // 0x000000018787216C-0x0000000187872200
+		private static extern void criAtomAuxIn_SetFormat(IntPtr aux_in, int num_channels, int sampling_rate); // 0x0000000187872078-0x000000018787210C
+		private static extern void criAtomAuxIn_GetFormat(IntPtr aux_in, out int num_channels, out int sampling_rate); // 0x0000000187872244-0x0000000187872298
+		private static extern void criAtomAuxIn_SetInputReadStream(IntPtr aux_in, IntPtr stream_cbfunc, IntPtr stream_ptr); // 0x0000000185FB2DB0-0x0000000185FB2DD0
 	}
 
-	public class CriAtomExMic : CriDisposable // TypeDefIndex: 54148
+	public class CriAtomExMic : CriDisposable // TypeDefIndex: 55141
 	{
 		// Fields
-		private const string errorInvalidHandle = "[CRIWARE] Invalid native handle of CriAtomMic."; // Metadata: 0x01FD63BE
-		private const string errorInvalidBufferLength = "[CRIWARE] Invalid buffer length for CriAtomMic.ReadData."; // Metadata: 0x01FD63ED
-		private const string errorInvalidNumBuffers = "[CRIWARE] Number of buffers are not same with channels of CriAtomMic."; // Metadata: 0x01FD6426
-		private const string errorAlreadyInitialized = "[CRIWARE] CriAtomMic module is already initialized."; // Metadata: 0x01FD646D
-		private const string errorNotInitialized = "[CRIWARE] CriAtomMic module is not initialized."; // Metadata: 0x01FD64A1
+		private const string errorInvalidHandle = "[CRIWARE] Invalid native handle of CriAtomMic."; // Metadata: 0x0207BBEA
+		private const string errorInvalidBufferLength = "[CRIWARE] Invalid buffer length for CriAtomMic.ReadData."; // Metadata: 0x0207BC19
+		private const string errorInvalidNumBuffers = "[CRIWARE] Number of buffers are not same with channels of CriAtomMic."; // Metadata: 0x0207BC52
+		private const string errorAlreadyInitialized = "[CRIWARE] CriAtomMic module is already initialized."; // Metadata: 0x0207BC99
+		private const string errorNotInitialized = "[CRIWARE] CriAtomMic module is not initialized."; // Metadata: 0x0207BCCD
+		private static bool _isInitialized_k__BackingField; // 0x00
 		private IntPtr handle; // 0x20
 		private IntPtr[] bufferPointers; // 0x28
 		private GCHandle[] gcHandles; // 0x30
@@ -2489,10 +2523,10 @@ namespace CriWare
 		private static int _initializationCount; // 0x04
 	
 		// Properties
-		public static bool isInitialized { get; private set; } // 0x00000001856C20D0-0x00000001856C2108 0x00000001856C2108-0x00000001856C2144
+		public static bool isInitialized { get; private set; } // 0x0000000187873928-0x0000000187873930 0x000000018787371C-0x000000018787381C
 	
 		// Nested types
-		public struct DeviceInfo // TypeDefIndex: 54145
+		public struct DeviceInfo // TypeDefIndex: 55138
 		{
 			// Fields
 			public string deviceId; // 0x00
@@ -2502,7 +2536,7 @@ namespace CriWare
 			public int maxSamplingRate; // 0x18
 		}
 	
-		public struct Config // TypeDefIndex: 54146
+		public struct Config // TypeDefIndex: 55139
 		{
 			// Fields
 			public string deviceId; // 0x00
@@ -2514,91 +2548,94 @@ namespace CriWare
 			public IntPtr context; // 0x20
 	
 			// Properties
-			public static Config Default { get => default; } // 0x00000001856B6200-0x00000001856B6250 
+			public static Config Default { get => default; } // 0x0000000187874B6C-0x0000000187874BA4 
 		}
 	
-		public class Effect // TypeDefIndex: 54147
+		public class Effect // TypeDefIndex: 55140
 		{
+			// Fields
+			private IntPtr _handle_k__BackingField; // 0x10
+			private IntPtr _afxInstance_k__BackingField; // 0x18
+	
 			// Properties
-			public IntPtr handle { get; private set; } // 0x00000001820B7B20-0x00000001820B7B30 0x0000000183D517C0-0x0000000183D517D0
-			public IntPtr afxInstance { get; private set; } // 0x0000000181041090-0x00000001810410A0 0x0000000183D4EC10-0x0000000183D4EC20
+			public IntPtr handle { get; private set; } // 0x0000000187874BA4-0x0000000187874BE0 0x00000001878739A0-0x0000000187873A3C
+			public IntPtr afxInstance { get; private set; } // 0x0000000187873658-0x000000018787371C 0x0000000185492010-0x0000000185492020
 	
 			// Constructors
 			public Effect() {} // Dummy constructor
-			public Effect(IntPtr handle, IntPtr afxInstance) {} // 0x0000000183D51BC0-0x0000000183D51BD0
+			public Effect(IntPtr handle, IntPtr afxInstance) {} // 0x000000018787381C-0x00000001878738EC
 		}
 	
 		// Constructors
 		public CriAtomExMic() {} // Dummy constructor
-		private CriAtomExMic(IntPtr handle) {} // 0x00000001856C1474-0x00000001856C1534
+		private CriAtomExMic(IntPtr handle) {} // 0x000000018787391C-0x0000000187873928
 	
 		// Methods
-		public static void InitializeModule() {} // 0x00000001856C0F04-0x00000001856C0FA0
-		public static void FinalizeModule() {} // 0x00000001856C0BBC-0x00000001856C0C80
-		public static void SetupOutputCategoryForMic_IOS(bool enable) {} // 0x000000018350B670-0x000000018350B680
-		public static DeviceInfo[] GetDevices() => default; // 0x00000001856C0D80-0x00000001856C0E50
-		public static int GetNumDevices() => default; // 0x00000001856C0E8C-0x00000001856C0E94
-		public static DeviceInfo? GetDefaultDevice() => default; // 0x00000001856C0C80-0x00000001856C0D80
-		public static bool IsFormatSupported(Config config) => default; // 0x00000001856C1058-0x00000001856C1068
-		public static CriAtomExMic Create(Config? config = default) => default; // 0x00000001856C09A4-0x00000001856C0AF0
-		~CriAtomExMic() {} // 0x00000001856BDD0C-0x00000001856BDD80
-		public override void Dispose() {} // 0x00000001856C0B6C-0x00000001856C0BBC
-		private void Dispose(bool disposing) {} // 0x00000001856C0B14-0x00000001856C0B6C
-		public void Start() {} // 0x00000001856C1438-0x00000001856C1444
-		public void Stop() {} // 0x00000001856C1444-0x00000001856C1450
-		public int GetNumChannels() => default; // 0x00000001856C0E80-0x00000001856C0E8C
-		public int GetSamplingRate() => default; // 0x00000001856C0EF8-0x00000001856C0F04
-		public uint GetNumBufferedSamples() => default; // 0x00000001856C0E74-0x00000001856C0E80
-		[Obsolete("Use CriAtomExMic.GetNumBufferedSamples")]
-		public uint GetNumBufferredSamples() => default; // 0x00000001856C0E74-0x00000001856C0E80
-		public bool IsAvailable() => default; // 0x00000001856C1038-0x00000001856C1058
-		public uint ReadData(float[] bufferMono) => default; // 0x00000001856C10CC-0x00000001856C10EC
-		public uint ReadData(float[] bufferMono, uint numToRead) => default; // 0x00000001856C1210-0x00000001856C12A0
-		public uint ReadData(float[] bufferL, float[] bufferR) => default; // 0x00000001856C1068-0x00000001856C1090
-		public uint ReadData(float[] bufferL, float[] bufferR, uint numToRead) => default; // 0x00000001856C10EC-0x00000001856C1210
-		public uint ReadData(float[][] buffers) => default; // 0x00000001856C1090-0x00000001856C10CC
-		public uint ReadData(float[][] buffers, uint numToRead) => default; // 0x00000001856C12A0-0x00000001856C13A8
-		public void SetOutputWriteStream(CriAudioWriteStream stream) {} // 0x00000001856C13F8-0x00000001856C1438
-		public CriAudioReadStream GetOutputReadStream() => default; // 0x00000001856C0E94-0x00000001856C0EF8
-		public Effect AttachEffect(IntPtr afxInterface, float[] configParameters) => default; // 0x00000001856C08FC-0x00000001856C09A4
-		public void DetachEffect(Effect effect) {} // 0x00000001856C0AF0-0x00000001856C0B14
-		public void SetEffectParameter(Effect effect, int parameterIndex, float parameterValue) {} // 0x00000001856C13CC-0x00000001856C13F8
-		public float GetEffectParameter(Effect effect, int parameterIndex) => default; // 0x00000001856C0E50-0x00000001856C0E74
-		public void SetEffectBypass(Effect effect, bool bypass) {} // 0x00000001856C13A8-0x00000001856C13CC
-		public void UpdateEffectParameters(Effect effect) {} // 0x00000001856C1450-0x00000001856C1474
-		private uint InternalReadDataFromBufferPointers(uint numToRead) => default; // 0x00000001856C1024-0x00000001856C1038
-		private void InternalClearBuffers() {} // 0x00000001856C0FA0-0x00000001856C1024
-		private static extern void criAtomMicUnity_Initialize(); // 0x00000001856C159C-0x00000001856C1604
-		private static extern void criAtomMicUnity_Finalize(); // 0x00000001856C1534-0x00000001856C159C
-		private static extern int criAtomMic_GetNumDevices(); // 0x00000001856C1C48-0x00000001856C1C74
-		private static extern bool criAtomMic_GetDevice(int index, out DeviceInfo info); // 0x00000001856C19D0-0x00000001856C1ACC
-		private static extern bool criAtomMic_GetDefaultDevice(out DeviceInfo info); // 0x00000001856C18E0-0x00000001856C19D0
-		private static extern bool criAtomMic_IsFormatSupported(in Config config); // 0x00000001856C1D50-0x00000001856C1DFC
-		private static extern IntPtr criAtomMic_Create(in Config config, IntPtr work, int work_size); // 0x00000001856C1760-0x00000001856C1828
-		private static extern void criAtomMic_Destroy(IntPtr mic); // 0x00000001856C1828-0x00000001856C185C
-		private static extern void criAtomMic_Start(IntPtr mic); // 0x00000001856C1FE0-0x00000001856C2058
-		private static extern void criAtomMic_Stop(IntPtr mic); // 0x00000001856C2058-0x00000001856C208C
-		private static extern int criAtomMic_GetNumChannels(IntPtr mic); // 0x00000001856C1C14-0x00000001856C1C48
-		private static extern int criAtomMic_GetSamplingRate(IntPtr mic); // 0x00000001856C1CA0-0x00000001856C1D18
-		private static extern uint criAtomMic_GetNumBufferedSamples(IntPtr mic); // 0x00000001856C1B9C-0x00000001856C1C14
-		private static extern bool criAtomMic_IsAvailable(IntPtr mic); // 0x00000001856C1D18-0x00000001856C1D50
-		private static extern uint criAtomMic_ReadData(IntPtr mic, IntPtr[] data, uint num_samples); // 0x00000001856C1DFC-0x00000001856C1E9C
-		private static extern void criAtomMic_SetOutputWriteStream(IntPtr mic, IntPtr stream_cbfunc, IntPtr stream_ptr); // 0x00000001856C1F8C-0x00000001856C1FE0
-		private static extern IntPtr criAtomMic_GetOutputReadStream(); // 0x00000001856C1C74-0x00000001856C1CA0
-		private static extern int criAtomMic_CalculateWorkSizeForEffect(IntPtr mic, IntPtr afx_interface, float[] config_parameters, uint num_config_parameters); // 0x00000001856C16B4-0x00000001856C1760
-		private static extern IntPtr criAtomMic_AttachEffect(IntPtr mic, IntPtr afx_interface, float[] config_parameters, uint num_config_parameters, IntPtr work, int work_size); // 0x00000001856C1604-0x00000001856C16B4
-		private static extern void criAtomMic_DetachEffect(IntPtr mic, IntPtr effect); // 0x00000001856C185C-0x00000001856C18E0
-		private static extern IntPtr criAtomMic_GetEffectInstance(IntPtr mic, IntPtr effect); // 0x00000001856C1ACC-0x00000001856C1B50
-		private static extern void criAtomMic_SetEffectBypass(IntPtr mic, IntPtr effect, bool bypass); // 0x00000001856C1E9C-0x00000001856C1F30
-		private static extern void criAtomMic_SetEffectParameter(IntPtr mic, IntPtr effect, uint parameter_index, float parameter_value); // 0x00000001856C1F30-0x00000001856C1F8C
-		private static extern float criAtomMic_GetEffectParameter(IntPtr mic, IntPtr effect, uint parameter_index); // 0x00000001856C1B50-0x00000001856C1B9C
-		private static extern void criAtomMic_UpdateEffectParameters(IntPtr mic, IntPtr effect); // 0x00000001856C208C-0x00000001856C20D0
+		public static void InitializeModule() {} // 0x0000000187873AF4-0x0000000187873B04
+		public static void FinalizeModule() {} // 0x0000000187873440-0x000000018787358C
+		public static void SetupOutputCategoryForMic_IOS(bool enable) {} // 0x0000000187873F10-0x0000000187873FD0
+		public static DeviceInfo[] GetDevices() => default; // 0x00000001878707A8-0x000000018787081C
+		public static int GetNumDevices() => default; // 0x0000000187873608-0x0000000187873658
+		public static DeviceInfo? GetDefaultDevice() => default; // 0x00000001878735B0-0x0000000187873608
+		public static bool IsFormatSupported(Config config) => default; // 0x0000000187873ED4-0x0000000187873EE0
+		public static CriAtomExMic Create(Config? config = default) => default; // 0x0000000187873EE0-0x0000000187873EEC
+		~CriAtomExMic() {} // 0x0000000187873994-0x00000001878739A0
+		public override void Dispose() {} // 0x0000000187873910-0x000000018787391C
+		private void Dispose(bool disposing) {} // 0x0000000187873910-0x000000018787391C
+		public void Start() {} // 0x0000000187873AD4-0x0000000187873AF4
+		public void Stop() {} // 0x0000000187873B68-0x0000000187873B88
+		public int GetNumChannels() => default; // 0x0000000187873CAC-0x0000000187873D3C
+		public int GetSamplingRate() => default; // 0x0000000187873B04-0x0000000187873B2C
+		public uint GetNumBufferedSamples() => default; // 0x0000000187873B88-0x0000000187873CAC
+		public uint GetNumBufferredSamples() => default; // 0x0000000187873B2C-0x0000000187873B68
+		public bool IsAvailable() => default; // 0x0000000187873D3C-0x0000000187873E44
+		public uint ReadData(float[] bufferMono) => default; // 0x0000000187873E94-0x0000000187873ED4
+		public uint ReadData(float[] bufferMono, uint numToRead) => default; // 0x0000000187873930-0x0000000187873994
+		public uint ReadData(float[] bufferL, float[] bufferR) => default; // 0x0000000187873398-0x0000000187873440
+		public uint ReadData(float[] bufferL, float[] bufferR, uint numToRead) => default; // 0x000000018787358C-0x00000001878735B0
+		public uint ReadData(float[][] buffers) => default; // 0x0000000187873E68-0x0000000187873E94
+		public uint ReadData(float[][] buffers, uint numToRead) => default; // 0x00000001878738EC-0x0000000187873910
+		public void SetOutputWriteStream(CriAudioWriteStream stream) {} // 0x0000000187873E44-0x0000000187873E68
+		public CriAudioReadStream GetOutputReadStream() => default; // 0x0000000187873EEC-0x0000000187873F10
+		public Effect AttachEffect(IntPtr afxInterface, float[] configParameters) => default; // 0x0000000187873AC0-0x0000000187873AD4
+		public void DetachEffect(Effect effect) {} // 0x0000000187873A3C-0x0000000187873AC0
+		public void SetEffectParameter(Effect effect, int parameterIndex, float parameterValue) {} // 0x0000000187874038-0x00000001878740A0
+		public float GetEffectParameter(Effect effect, int parameterIndex) => default; // 0x0000000187873FD0-0x0000000187874038
+		public void SetEffectBypass(Effect effect, bool bypass) {} // 0x00000001878746E4-0x0000000187874710
+		public void UpdateEffectParameters(Effect effect) {} // 0x000000018787446C-0x0000000187874568
+		private uint InternalReadDataFromBufferPointers(uint numToRead) => default; // 0x000000018787437C-0x000000018787446C
+		private void InternalClearBuffers() {} // 0x00000001878747EC-0x0000000187874898
+		private static extern void criAtomMicUnity_Initialize(); // 0x00000001878741FC-0x00000001878742C4
+		private static extern void criAtomMicUnity_Finalize(); // 0x00000001878742C4-0x00000001878742F8
+		private static extern int criAtomMic_GetNumDevices(); // 0x0000000187874A7C-0x0000000187874AF4
+		private static extern bool criAtomMic_GetDevice(int index, out DeviceInfo info); // 0x0000000187874AF4-0x0000000187874B28
+		private static extern bool criAtomMic_GetDefaultDevice(out DeviceInfo info); // 0x00000001878746B0-0x00000001878746E4
+		private static extern bool criAtomMic_IsFormatSupported(in Config config); // 0x000000018787473C-0x00000001878747B4
+		private static extern IntPtr criAtomMic_Create(in Config config, IntPtr work, int work_size); // 0x0000000187874638-0x00000001878746B0
+		private static extern void criAtomMic_Destroy(IntPtr mic); // 0x00000001878747B4-0x00000001878747EC
+		private static extern void criAtomMic_Start(IntPtr mic); // 0x0000000187874898-0x0000000187874938
+		private static extern void criAtomMic_Stop(IntPtr mic); // 0x0000000187874A28-0x0000000187874A7C
+		private static extern int criAtomMic_GetNumChannels(IntPtr mic); // 0x0000000187874710-0x000000018787473C
+		private static extern int criAtomMic_GetSamplingRate(IntPtr mic); // 0x0000000187874150-0x00000001878741FC
+		private static extern uint criAtomMic_GetNumBufferedSamples(IntPtr mic); // 0x00000001878740A0-0x0000000187874150
+		private static extern bool criAtomMic_IsAvailable(IntPtr mic); // 0x00000001878742F8-0x000000018787437C
+		private static extern uint criAtomMic_ReadData(IntPtr mic, IntPtr[] data, uint num_samples); // 0x0000000187874568-0x00000001878745EC
+		private static extern void criAtomMic_SetOutputWriteStream(IntPtr mic, IntPtr stream_cbfunc, IntPtr stream_ptr); // 0x0000000187874938-0x00000001878749CC
+		private static extern IntPtr criAtomMic_GetOutputReadStream(); // 0x00000001878749CC-0x0000000187874A28
+		private static extern int criAtomMic_CalculateWorkSizeForEffect(IntPtr mic, IntPtr afx_interface, float[] config_parameters, uint num_config_parameters); // 0x00000001878745EC-0x0000000187874638
+		private static extern IntPtr criAtomMic_AttachEffect(IntPtr mic, IntPtr afx_interface, float[] config_parameters, uint num_config_parameters, IntPtr work, int work_size); // 0x0000000187874B28-0x0000000187874B6C
+		private static extern void criAtomMic_DetachEffect(IntPtr mic, IntPtr effect); // 0x0000000187868C9C-0x0000000187868CEC
+		private static extern IntPtr criAtomMic_GetEffectInstance(IntPtr mic, IntPtr effect); // 0x000000018346D130-0x000000018346D140
+		private static extern void criAtomMic_SetEffectBypass(IntPtr mic, IntPtr effect, bool bypass); // 0x0000000185FB2C40-0x0000000185FB2C50
+		private static extern void criAtomMic_SetEffectParameter(IntPtr mic, IntPtr effect, uint parameter_index, float parameter_value); // 0x0000000181377E40-0x0000000181377E50
+		private static extern float criAtomMic_GetEffectParameter(IntPtr mic, IntPtr effect, uint parameter_index); // 0x0000000181448AC0-0x0000000181448AD0
+		private static extern void criAtomMic_UpdateEffectParameters(IntPtr mic, IntPtr effect); // 0x0000000185FB2F30-0x0000000185FB2F40
 	}
 
-	public class CriAtomExOutputAnalyzer : CriDisposable // TypeDefIndex: 54152
+	public class CriAtomExOutputAnalyzer : CriDisposable // TypeDefIndex: 55145
 	{
 		// Fields
-		public const int MaximumSpectrumBands = 512; // Metadata: 0x01FD64D1
+		public const int MaximumSpectrumBands = 512; // Metadata: 0x0207BCFD
 		protected IntPtr handle; // 0x20
 		protected CriAtomExPlayer player; // 0x28
 		protected string busName; // 0x30
@@ -2607,7 +2644,7 @@ namespace CriWare
 		protected PcmCaptureCallback userPcmCaptureCallback; // 0x40
 		protected float[] dataL; // 0x48
 		protected float[] dataR; // 0x50
-		protected const int pcmCapturerNumMaxData = 512; // Metadata: 0x01FD64D3
+		protected const int pcmCapturerNumMaxData = 512; // Metadata: 0x0207BCFF
 		protected static IntPtr InternalCallbackFunctionPointer; // 0x00
 		protected static InternalPcmCaptureCallback DelegateObject; // 0x08
 		protected static float[] DataL; // 0x10
@@ -2615,12 +2652,12 @@ namespace CriWare
 		protected static PcmCaptureCallback UserPcmCaptureCallback; // 0x20
 	
 		// Properties
-		public IntPtr nativeHandle { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public IntPtr nativeHandle { get => default; } // 0x00000001878754BC-0x0000000187875564 
 	
 		// Nested types
-		public delegate void PcmCaptureCallback(float[] dataL, float[] dataR, int numChannels, int numData); // TypeDefIndex: 54149; 0x0000000182097E50-0x0000000182097E70
+		public delegate void PcmCaptureCallback(float[] dataL, float[] dataR, int numChannels, int numData); // TypeDefIndex: 55142; 0x000000018787581C-0x00000001878758AC
 	
-		public struct Config // TypeDefIndex: 54150
+		public struct Config // TypeDefIndex: 55143
 		{
 			// Fields
 			public bool enableLevelmeter; // 0x00
@@ -2631,64 +2668,62 @@ namespace CriWare
 			public int numCapturedPcmSamples; // 0x08
 		}
 	
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		protected delegate void InternalPcmCaptureCallback(IntPtr dataL, IntPtr dataR, int numChannels, int numData); // TypeDefIndex: 54151; 0x0000000182097E50-0x0000000182097E70
+		protected delegate void InternalPcmCaptureCallback(IntPtr dataL, IntPtr dataR, int numChannels, int numData); // TypeDefIndex: 55144; 0x0000000187874F18-0x0000000187875004
 	
 		// Constructors
-		public CriAtomExOutputAnalyzer(Config config) {} // 0x00000001856C2D80-0x00000001856C2E10
-		protected CriAtomExOutputAnalyzer() {} // 0x00000001856C2D20-0x00000001856C2D80
-		static CriAtomExOutputAnalyzer() {} // 0x00000001856C2CC0-0x00000001856C2D20
+		public CriAtomExOutputAnalyzer(Config config) {} // 0x0000000187875564-0x0000000187875650
+		protected CriAtomExOutputAnalyzer() {} // 0x00000001878758AC-0x0000000187875904
+		static CriAtomExOutputAnalyzer() {} // 0x00000001864BB614-0x00000001864BB734
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001856C2568-0x00000001856C2574
-		protected void Dispose(bool disposing) {} // 0x00000001856C2574-0x00000001856C2638
-		public bool AttachExPlayer(CriAtomExPlayer player) => default; // 0x00000001856C21D8-0x00000001856C2290
-		public void DetachExPlayer() {} // 0x00000001856C247C-0x00000001856C2568
-		public bool AttachDspBus(string busName) => default; // 0x00000001856C2144-0x00000001856C21D8
-		public void DetachDspBus() {} // 0x00000001856C2400-0x00000001856C247C
-		public float GetRms(int channel) => default; // 0x00000001856C2A20-0x00000001856C2AC8
-		public void GetSpectrumLevels(ref float[] levels) {} // 0x00000001856C2AC8-0x00000001856C2BB4
-		public void GetPcmData(ref float[] data, int ch) {} // 0x00000001856C2928-0x00000001856C2A20
-		public void SetPcmCaptureCallback(PcmCaptureCallback callback) {} // 0x0000000183CB2D80-0x0000000183CB2D90
-		public void ExecutePcmCaptureCallback() {} // 0x00000001856C265C-0x00000001856C28B4
-		[Obsolete("Use SetPcmCaptureCallback(PcmCaptureCallback) and ExecutePcmCaptureCallback()")]
-		public void ExecutePcmCaptureCallback(PcmCaptureCallback callback) {} // 0x00000001856C2638-0x00000001856C265C
-		~CriAtomExOutputAnalyzer() {} // 0x00000001856C28B4-0x00000001856C2928
-		protected void InitializeWithConfig(Config config) {} // 0x00000001856C2BB4-0x00000001856C2CC0
-		[AOT.MonoPInvokeCallback(typeof(InternalPcmCaptureCallback))]
-		private static void Callback(IntPtr ptrL, IntPtr ptrR, int numChannels, int numData) {} // 0x00000001856C2290-0x00000001856C2400
-		protected static extern IntPtr criAtomExOutputAnalyzer_Create(in Config config); // 0x00000001856C2EAC-0x00000001856C2F64
-		protected static extern void criAtomExOutputAnalyzer_Destroy(IntPtr analyzer); // 0x00000001856C2F64-0x00000001856C2F98
-		protected static extern void criAtomExOutputAnalyzer_AttachExPlayer(IntPtr analyzer, IntPtr player); // 0x00000001856C2E68-0x00000001856C2EAC
-		protected static extern void criAtomExOutputAnalyzer_DetachExPlayer(IntPtr analyzer, IntPtr player); // 0x00000001856C2FF0-0x00000001856C3034
-		protected static extern void criAtomExOutputAnalyzer_AttachDspBusByName(IntPtr analyzer, string busName); // 0x00000001856C2E10-0x00000001856C2E68
-		protected static extern void criAtomExOutputAnalyzer_DetachDspBusByName(IntPtr analyzer, string busName); // 0x00000001856C2F98-0x00000001856C2FF0
-		protected static extern float criAtomExOutputAnalyzer_GetRms(IntPtr analyzer, int channel); // 0x00000001856C313C-0x00000001856C3178
-		protected static extern IntPtr criAtomExOutputAnalyzer_GetSpectrumLevels(IntPtr analyzer); // 0x00000001856C3178-0x00000001856C31F0
-		protected static extern IntPtr criAtomExOutputAnalyzer_GetPcmData(IntPtr analyzer, int ch); // 0x00000001856C30B8-0x00000001856C313C
-		protected static extern void criAtomExOutputAnalyzer_ExecuteQueuedPcmCapturerCallbacks(IntPtr analyzer, IntPtr callback); // 0x00000001856C3034-0x00000001856C30B8
+		public override void Dispose() {} // 0x00000001878753C4-0x00000001878754BC
+		protected void Dispose(bool disposing) {} // 0x0000000185F05C80-0x0000000185F05C90
+		public bool AttachExPlayer(CriAtomExPlayer player) => default; // 0x00000001878750F8-0x0000000187875350
+		public void DetachExPlayer() {} // 0x00000001878750D4-0x00000001878750F8
+		public bool AttachDspBus(string busName) => default; // 0x00000001878757BC-0x000000018787581C
+		public void DetachDspBus() {} // 0x0000000187875350-0x00000001878753C4
+		public float GetRms(int channel) => default; // 0x0000000187875650-0x000000018787575C
+		public void GetSpectrumLevels(ref float[] levels) {} // 0x0000000187874D2C-0x0000000187874E9C
+		public void GetPcmData(ref float[] data, int ch) {} // 0x0000000187875948-0x0000000187875A00
+		public void SetPcmCaptureCallback(PcmCaptureCallback callback) {} // 0x0000000187875A00-0x0000000187875A34
+		public void ExecutePcmCaptureCallback() {} // 0x0000000187875904-0x0000000187875948
+		public void ExecutePcmCaptureCallback(PcmCaptureCallback callback) {} // 0x0000000187875A8C-0x0000000187875AD0
+		~CriAtomExOutputAnalyzer() {} // 0x0000000187875A34-0x0000000187875A8C
+		protected void InitializeWithConfig(Config config) {} // 0x0000000187875BD8-0x0000000187875C14
+		private static void Callback(IntPtr ptrL, IntPtr ptrR, int numChannels, int numData) {} // 0x0000000187875C14-0x0000000187875C8C
+		protected static extern IntPtr criAtomExOutputAnalyzer_Create(in Config config); // 0x0000000187875B54-0x0000000187875BD8
+		protected static extern void criAtomExOutputAnalyzer_Destroy(IntPtr analyzer); // 0x0000000187875AD0-0x0000000187875B54
+		protected static extern void criAtomExOutputAnalyzer_AttachExPlayer(IntPtr analyzer, IntPtr player); // 0x000000018787575C-0x00000001878757BC
+		protected static extern void criAtomExOutputAnalyzer_DetachExPlayer(IntPtr analyzer, IntPtr player); // 0x00000001878948C0-0x0000000187894994
+		protected static extern void criAtomExOutputAnalyzer_AttachDspBusByName(IntPtr analyzer, string busName); // 0x00000001832D8120-0x00000001832D8140
+		protected static extern void criAtomExOutputAnalyzer_DetachDspBusByName(IntPtr analyzer, string busName); // 0x0000000187894818-0x00000001878948C0
+		protected static extern float criAtomExOutputAnalyzer_GetRms(IntPtr analyzer, int channel); // 0x00000001864BB614-0x00000001864BB734
+		protected static extern IntPtr criAtomExOutputAnalyzer_GetSpectrumLevels(IntPtr analyzer); // 0x0000000187894494-0x000000018789455C
+		protected static extern IntPtr criAtomExOutputAnalyzer_GetPcmData(IntPtr analyzer, int ch); // 0x00000001832D8120-0x00000001832D8140
+		protected static extern void criAtomExOutputAnalyzer_ExecuteQueuedPcmCapturerCallbacks(IntPtr analyzer, IntPtr callback); // 0x00000001878943D8-0x0000000187894494
 	}
 
-	public struct CriAtomExPlayback // TypeDefIndex: 54155
+	public struct CriAtomExPlayback // TypeDefIndex: 55148
 	{
 		// Fields
-		public const uint invalidId = 4294967295; // Metadata: 0x01FD64D5
+		private uint _id_k__BackingField; // 0x00
+		public const uint invalidId = 4294967295; // Metadata: 0x0207BD01
 	
 		// Properties
-		public uint id { [IsReadOnly] get; private set; } // 0x0000000183D4E980-0x0000000183D4E990 0x0000000183D4E970-0x0000000183D4E980
-		public Status status { get => default; } // 0x00000001856CED90-0x00000001856CED9C 
-		public long time { get => default; } // 0x00000001856CEDA8-0x00000001856CEDB4 
-		public long timeSyncedWithAudio { get => default; } // 0x00000001856CED9C-0x00000001856CEDA8 
+		public uint id { get; private set; } // 0x00000001818226B0-0x00000001818226C0 0x00000001818AA390-0x00000001818AA3A0
+		public Status status { get => default; } // 0x000000018788182C-0x0000000187881838 
+		public long time { get => default; } // 0x0000000187881844-0x0000000187881850 
+		public long timeSyncedWithAudio { get => default; } // 0x0000000187881838-0x0000000187881844 
 	
 		// Nested types
-		public enum Status // TypeDefIndex: 54153
+		public enum Status // TypeDefIndex: 55146
 		{
 			Prep = 1,
 			Playing = 2,
 			Removed = 3
 		}
 	
-		public struct TrackInfo // TypeDefIndex: 54154
+		public struct TrackInfo // TypeDefIndex: 55147
 		{
 			// Fields
 			public uint id; // 0x00
@@ -2700,62 +2735,64 @@ namespace CriWare
 	
 		// Constructors
 		public CriAtomExPlayback(uint id) : this() {
-	
-		} // 0x0000000183D4E970-0x0000000183D4E980
+			<id>k__BackingField = default;
+		} // 0x00000001818AA390-0x00000001818AA3A0
 	
 		// Methods
-		public void Stop(bool ignoresReleaseTime) {} // 0x00000001856CEE54-0x00000001856CEEB8
-		public void Pause() {} // 0x00000001856CEDD8-0x00000001856CEDE4
-		public void Resume(CriAtomEx.ResumeMode mode) {} // 0x00000001856CEDE4-0x00000001856CEDF0
-		public bool IsPaused() => default; // 0x00000001856CEDC0-0x00000001856CEDCC
+		public void Stop(bool ignoresReleaseTime) {} // 0x00000001878818F0-0x0000000187881954
+		public void Pause() {} // 0x0000000187881874-0x0000000187881880
+		public void Resume(CriAtomEx.ResumeMode mode) {} // 0x0000000187881880-0x000000018788188C
+		public bool IsPaused() => default; // 0x000000018788185C-0x0000000187881868
 		public bool GetFormatInfo(out CriAtomEx.FormatInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856CED6C-0x00000001856CED78
-		public Status GetStatus() => default; // 0x00000001856CED90-0x00000001856CED9C
-		public long GetTime() => default; // 0x00000001856CEDA8-0x00000001856CEDB4
-		public long GetTimeSyncedWithAudio() => default; // 0x00000001856CED9C-0x00000001856CEDA8
+		} // 0x0000000187881808-0x0000000187881814
+		public Status GetStatus() => default; // 0x000000018788182C-0x0000000187881838
+		public long GetTime() => default; // 0x0000000187881844-0x0000000187881850
+		public long GetTimeSyncedWithAudio() => default; // 0x0000000187881838-0x0000000187881844
 		public bool GetNumPlayedSamples(out long numSamples, out int samplingRate) {
 			numSamples = default;
 			samplingRate = default;
 			return default;
-		} // 0x00000001856CED78-0x00000001856CED84
-		public long GetSequencePosition() => default; // 0x00000001856CED84-0x00000001856CED90
-		public int GetCurrentBlockIndex() => default; // 0x00000001856CED60-0x00000001856CED6C
+		} // 0x0000000187881814-0x0000000187881820
+		public long GetSequencePosition() => default; // 0x0000000187881820-0x000000018788182C
+		public int GetCurrentBlockIndex() => default; // 0x00000001878817FC-0x0000000187881808
 		public bool GetTrackInfo(out TrackInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856CEDB4-0x00000001856CEDC0
+		} // 0x0000000187881850-0x000000018788185C
 		public bool GetBeatSyncInfo(out CriAtomExBeatSync.Info info) {
 			info = default;
 			return default;
-		} // 0x00000001856CED54-0x00000001856CED60
-		public void SetNextBlockIndex(int index) {} // 0x00000001856CEDFC-0x00000001856CEE08
-		public bool SetBeatSyncOffset(short timeMs) => default; // 0x00000001856CEDF0-0x00000001856CEDFC
-		public void Stop() {} // 0x00000001856CEEB8-0x00000001856CEF04
-		public void StopWithoutReleaseTime() {} // 0x00000001856CEE08-0x00000001856CEE54
-		public void Pause(bool sw) {} // 0x00000001856CEDCC-0x00000001856CEDD8
-		private static extern void criAtomExPlayback_Stop(uint id); // 0x00000001856CF688-0x00000001856CF700
-		private static extern void criAtomExPlayback_StopWithoutReleaseTime(uint id); // 0x00000001856CF610-0x00000001856CF688
-		private static extern void criAtomExPlayback_Pause(uint id, bool sw); // 0x00000001856CF404-0x00000001856CF488
-		private static extern void criAtomExPlayback_Resume(uint id, CriAtomEx.ResumeMode mode); // 0x00000001856CF488-0x00000001856CF508
-		private static extern bool criAtomExPlayback_IsPaused(uint id); // 0x00000001856CF38C-0x00000001856CF404
-		private static extern Status criAtomExPlayback_GetStatus(uint id); // 0x00000001856CF224-0x00000001856CF29C
-		private static extern bool criAtomExPlayback_GetFormatInfo(uint id, out CriAtomEx.FormatInfo info); // 0x00000001856CF004-0x00000001856CF08C
-		private static extern long criAtomExPlayback_GetTime(uint id); // 0x00000001856CF314-0x00000001856CF38C
-		private static extern long criAtomExPlayback_GetTimeSyncedWithAudio(uint id); // 0x00000001856CF29C-0x00000001856CF314
-		private static extern bool criAtomExPlayback_GetNumPlayedSamples(uint id, out long num_samples, out int sampling_rate); // 0x00000001856CF08C-0x00000001856CF124
-		private static extern long criAtomExPlayback_GetSequencePosition(uint id); // 0x00000001856CF1AC-0x00000001856CF224
-		private static extern void criAtomExPlayback_SetNextBlockIndex(uint id, int index); // 0x00000001856CF590-0x00000001856CF610
-		private static extern int criAtomExPlayback_GetCurrentBlockIndex(uint id); // 0x00000001856CEF8C-0x00000001856CF004
-		private static extern bool criAtomExPlayback_GetPlaybackTrackInfo(uint id, out TrackInfo info); // 0x00000001856CF124-0x00000001856CF1AC
-		private static extern bool criAtomExPlayback_GetBeatSyncInfo(uint id, out CriAtomExBeatSync.Info info); // 0x00000001856CEF04-0x00000001856CEF8C
-		private static extern bool criAtomExPlayback_SetBeatSyncOffset(uint id, short timeMs); // 0x00000001856CF508-0x00000001856CF590
+		} // 0x00000001878817F0-0x00000001878817FC
+		public void SetNextBlockIndex(int index) {} // 0x0000000187881898-0x00000001878818A4
+		public bool SetBeatSyncOffset(short timeMs) => default; // 0x000000018788188C-0x0000000187881898
+		public void Stop() {} // 0x0000000187881954-0x00000001878819A0
+		public void StopWithoutReleaseTime() {} // 0x00000001878818A4-0x00000001878818F0
+		public void Pause(bool sw) {} // 0x0000000187881868-0x0000000187881874
+		private static extern void criAtomExPlayback_Stop(uint id); // 0x0000000187882124-0x000000018788219C
+		private static extern void criAtomExPlayback_StopWithoutReleaseTime(uint id); // 0x00000001878820AC-0x0000000187882124
+		private static extern void criAtomExPlayback_Pause(uint id, bool sw); // 0x0000000187881EA0-0x0000000187881F24
+		private static extern void criAtomExPlayback_Resume(uint id, CriAtomEx.ResumeMode mode); // 0x0000000187881F24-0x0000000187881FA4
+		private static extern bool criAtomExPlayback_IsPaused(uint id); // 0x0000000187881E28-0x0000000187881EA0
+		private static extern Status criAtomExPlayback_GetStatus(uint id); // 0x0000000187881CC0-0x0000000187881D38
+		private static extern bool criAtomExPlayback_GetFormatInfo(uint id, out CriAtomEx.FormatInfo info); // 0x0000000187881AA0-0x0000000187881B28
+		private static extern long criAtomExPlayback_GetTime(uint id); // 0x0000000187881DB0-0x0000000187881E28
+		private static extern long criAtomExPlayback_GetTimeSyncedWithAudio(uint id); // 0x0000000187881D38-0x0000000187881DB0
+		private static extern bool criAtomExPlayback_GetNumPlayedSamples(uint id, out long num_samples, out int sampling_rate); // 0x0000000187881B28-0x0000000187881BC0
+		private static extern long criAtomExPlayback_GetSequencePosition(uint id); // 0x0000000187881C48-0x0000000187881CC0
+		private static extern void criAtomExPlayback_SetNextBlockIndex(uint id, int index); // 0x000000018788202C-0x00000001878820AC
+		private static extern int criAtomExPlayback_GetCurrentBlockIndex(uint id); // 0x0000000187881A28-0x0000000187881AA0
+		private static extern bool criAtomExPlayback_GetPlaybackTrackInfo(uint id, out TrackInfo info); // 0x0000000187881BC0-0x0000000187881C48
+		private static extern bool criAtomExPlayback_GetBeatSyncInfo(uint id, out CriAtomExBeatSync.Info info); // 0x00000001878819A0-0x0000000187881A28
+		private static extern bool criAtomExPlayback_SetBeatSyncOffset(uint id, short timeMs); // 0x0000000187881FA4-0x000000018788202C
 	}
 
-	public class CriAtomExPlayer : CriDisposable // TypeDefIndex: 54160
+	public class CriAtomExPlayer : CriDisposable // TypeDefIndex: 55153
 	{
 		// Fields
+		private CriAtomExBeatSync.CbFunc _onBeatSyncCallback; // 0x20
+		private CriAtomExSequencer.EventCallback _onSequenceCallback; // 0x28
 		private bool hasExistingNativeHandle; // 0x30
 		private IntPtr entryPoolHandle; // 0x38
 		private int _entryPoolCapacity; // 0x40
@@ -2763,9 +2800,9 @@ namespace CriWare
 		private IntPtr handle; // 0x48
 	
 		// Properties
-		public IntPtr nativeHandle { get => default; } // 0x0000000183D4EA70-0x0000000183D4EA80 
-		public bool isAvailable { get => default; } // 0x00000001856D2ECC-0x00000001856D2ED8 
-		public int entryPoolCapacity { get => default; } // 0x0000000183D4ED80-0x0000000183D4ED90 
+		public IntPtr nativeHandle { get => default; } // 0x00000001813ECF20-0x00000001813ECF30 
+		public bool isAvailable { get => default; } // 0x0000000187885968-0x0000000187885974 
+		public int entryPoolCapacity { get => default; } // 0x00000001813ECF10-0x00000001813ECF20 
 	
 		// Events
 		private event CriAtomExBeatSync.CbFunc _onBeatSyncCallback;
@@ -2774,7 +2811,7 @@ namespace CriWare
 		public event CriAtomExSequencer.EventCallback OnSequenceCallback;
 	
 		// Nested types
-		public enum Status // TypeDefIndex: 54156
+		public enum Status // TypeDefIndex: 55149
 		{
 			Stop = 0,
 			Prep = 1,
@@ -2783,7 +2820,7 @@ namespace CriWare
 			Error = 4
 		}
 	
-		private struct Config // TypeDefIndex: 54157
+		private struct Config // TypeDefIndex: 55150
 		{
 			// Fields
 			public CriAtomEx.VoiceAllocationMethod voiceAllocationMethod; // 0x00
@@ -2794,14 +2831,14 @@ namespace CriWare
 			public bool enableAudioSyncedTimer; // 0x11
 		}
 	
-		public enum TimeStretchParameterId // TypeDefIndex: 54158
+		public enum TimeStretchParameterId // TypeDefIndex: 55151
 		{
 			Ratio = 0,
 			FrameTime = 1,
 			Quality = 2
 		}
 	
-		public enum PitchShifterParameterId // TypeDefIndex: 54159
+		public enum PitchShifterParameterId // TypeDefIndex: 55152
 		{
 			Pitch = 0,
 			Formant = 1,
@@ -2809,270 +2846,265 @@ namespace CriWare
 		}
 	
 		// Constructors
-		public CriAtomExPlayer() {} // 0x00000001856D08D8-0x00000001856D08FC
-		public CriAtomExPlayer(int maxPath, int maxPathStrings) {} // 0x00000001856D08B8-0x00000001856D08D8
-		public CriAtomExPlayer(bool enableAudioSyncedTimer) {} // 0x00000001856D0894-0x00000001856D08B8
-		public CriAtomExPlayer(int maxPath, int maxPathStrings, bool enableAudioSyncedTimer) {} // 0x00000001856D0878-0x00000001856D0894
-		public CriAtomExPlayer(IntPtr existingNativeHandle) {} // 0x00000001856D0854-0x00000001856D0878
-		public CriAtomExPlayer(int maxPath, int maxPathStrings, bool enableAudioSyncedTimer, IntPtr existingNativeHandle) {} // 0x00000001856D08FC-0x00000001856D0A58
+		public CriAtomExPlayer() {} // 0x0000000187883374-0x0000000187883398
+		public CriAtomExPlayer(int maxPath, int maxPathStrings) {} // 0x0000000187883354-0x0000000187883374
+		public CriAtomExPlayer(bool enableAudioSyncedTimer) {} // 0x0000000187883330-0x0000000187883354
+		public CriAtomExPlayer(int maxPath, int maxPathStrings, bool enableAudioSyncedTimer) {} // 0x0000000187883314-0x0000000187883330
+		public CriAtomExPlayer(IntPtr existingNativeHandle) {} // 0x00000001878832F0-0x0000000187883314
+		public CriAtomExPlayer(int maxPath, int maxPathStrings, bool enableAudioSyncedTimer, IntPtr existingNativeHandle) {} // 0x0000000187883398-0x00000001878834F4
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001856CFE0C-0x00000001856CFF20
-		public void SetCue(CriAtomExAcb acb, string name) {} // 0x00000001856D0530-0x00000001856D0548
-		public void SetCue(CriAtomExAcb acb, int id) {} // 0x00000001856D0548-0x00000001856D0560
-		public void SetCueIndex(CriAtomExAcb acb, int index) {} // 0x00000001856D050C-0x00000001856D0524
-		public void SetContentId(CriFsBinder binder, int contentId) {} // 0x00000001856D04F4-0x00000001856D050C
-		public void SetFile(CriFsBinder binder, string path) {} // 0x00000001856D0628-0x00000001856D0640
-		public void SetData(byte[] buffer, int size) {} // 0x00000001856D056C-0x00000001856D0578
-		public void SetData(IntPtr buffer, int size) {} // 0x00000001856D0560-0x00000001856D056C
-		public void SetFormat(CriAtomEx.Format format) {} // 0x00000001856D064C-0x00000001856D0658
-		public void SetNumChannels(int numChannels) {} // 0x00000001856D0664-0x00000001856D0670
-		public void SetSamplingRate(int samplingRate) {} // 0x00000001856D06D0-0x00000001856D06DC
-		public void PrepareEntryPool(int capacity, bool stopOnEmpty) {} // 0x00000001856D039C-0x00000001856D0408
-		public int GetNumEntries() => default; // 0x00000001856D0228-0x00000001856D0248
-		public int GetNumConsumedEntries() => default; // 0x00000001856D0208-0x00000001856D0228
-		public bool EntryFile(CriFsBinder binder, string path, bool repeat) => default; // 0x00000001856CFFC0-0x00000001856CFFF4
-		public bool EntryContentId(CriFsBinder binder, int contentId, bool repeat) => default; // 0x00000001856CFF20-0x00000001856CFF4C
-		public bool EntryData(byte[] buffer, int size, bool repeat) => default; // 0x00000001856CFF9C-0x00000001856CFFC0
-		public bool EntryData(IntPtr buffer, int size, bool repeat) => default; // 0x00000001856CFF78-0x00000001856CFF9C
-		public bool EntryCue(CriAtomExAcb acb, string name, bool repeat) => default; // 0x00000001856CFF4C-0x00000001856CFF78
-		public CriAtomExPlayback Start() => default; // 0x00000001856D0750-0x00000001856D077C
-		public CriAtomExPlayback Prepare() => default; // 0x00000001856D0408-0x00000001856D0414
-		public void Stop(bool ignoresReleaseTime) {} // 0x00000001856D07B0-0x00000001856D07F0
-		public void Pause() {} // 0x00000001856D0380-0x00000001856D0390
-		public void Resume(CriAtomEx.ResumeMode mode) {} // 0x00000001856D042C-0x00000001856D0438
-		public bool IsPaused() => default; // 0x00000001856D0290-0x00000001856D029C
-		public void SetVolume(float volume) {} // 0x00000001856D0744-0x00000001856D0750
-		public void SetPitch(float pitch) {} // 0x00000001856D06A0-0x00000001856D06AC
-		public void SetPlaybackRatio(float ratio) {} // 0x00000001856D06AC-0x00000001856D06B8
-		public void SetPan3dAngle(float angle) {} // 0x00000001856D0670-0x00000001856D067C
-		public void SetPan3dInteriorDistance(float distance) {} // 0x00000001856D067C-0x00000001856D0688
-		public void SetPan3dVolume(float volume) {} // 0x00000001856D0688-0x00000001856D0694
-		public void SetPanType(CriAtomEx.PanType panType) {} // 0x00000001856D0694-0x00000001856D06A0
-		public void SetSendLevel(int channel, CriAtomEx.Speaker id, float level) {} // 0x00000001856D06E8-0x00000001856D06FC
-		public void SetBiquadFilterParameters(CriAtomEx.BiquadFilterType type, float frequency, float gain, float q) {} // 0x00000001856D0498-0x00000001856D04AC
-		public void SetBandpassFilterParameters(float cofLow, float cofHigh) {} // 0x00000001856D048C-0x00000001856D0498
-		public void SetBusSendLevel(string busName, float level) {} // 0x00000001856D04C4-0x00000001856D04D0
+		public override void Dispose() {} // 0x00000001878828A8-0x00000001878829BC
+		public void SetCue(CriAtomExAcb acb, string name) {} // 0x0000000187882FCC-0x0000000187882FE4
+		public void SetCue(CriAtomExAcb acb, int id) {} // 0x0000000187882FE4-0x0000000187882FFC
+		public void SetCueIndex(CriAtomExAcb acb, int index) {} // 0x0000000187882FA8-0x0000000187882FC0
+		public void SetContentId(CriFsBinder binder, int contentId) {} // 0x0000000187882F90-0x0000000187882FA8
+		public void SetFile(CriFsBinder binder, string path) {} // 0x00000001878830C4-0x00000001878830DC
+		public void SetData(byte[] buffer, int size) {} // 0x0000000187883008-0x0000000187883014
+		public void SetData(IntPtr buffer, int size) {} // 0x0000000187882FFC-0x0000000187883008
+		public void SetFormat(CriAtomEx.Format format) {} // 0x00000001878830E8-0x00000001878830F4
+		public void SetNumChannels(int numChannels) {} // 0x0000000187883100-0x000000018788310C
+		public void SetSamplingRate(int samplingRate) {} // 0x000000018788316C-0x0000000187883178
+		public void PrepareEntryPool(int capacity, bool stopOnEmpty) {} // 0x0000000187882E38-0x0000000187882EA4
+		public int GetNumEntries() => default; // 0x0000000187882CC4-0x0000000187882CE4
+		public int GetNumConsumedEntries() => default; // 0x0000000187882CA4-0x0000000187882CC4
+		public bool EntryFile(CriFsBinder binder, string path, bool repeat) => default; // 0x0000000187882A5C-0x0000000187882A90
+		public bool EntryContentId(CriFsBinder binder, int contentId, bool repeat) => default; // 0x00000001878829BC-0x00000001878829E8
+		public bool EntryData(byte[] buffer, int size, bool repeat) => default; // 0x0000000187882A38-0x0000000187882A5C
+		public bool EntryData(IntPtr buffer, int size, bool repeat) => default; // 0x0000000187882A14-0x0000000187882A38
+		public bool EntryCue(CriAtomExAcb acb, string name, bool repeat) => default; // 0x00000001878829E8-0x0000000187882A14
+		public CriAtomExPlayback Start() => default; // 0x00000001878831EC-0x0000000187883218
+		public CriAtomExPlayback Prepare() => default; // 0x0000000187882EA4-0x0000000187882EB0
+		public void Stop(bool ignoresReleaseTime) {} // 0x000000018788324C-0x000000018788328C
+		public void Pause() {} // 0x0000000187882E1C-0x0000000187882E2C
+		public void Resume(CriAtomEx.ResumeMode mode) {} // 0x0000000187882EC8-0x0000000187882ED4
+		public bool IsPaused() => default; // 0x0000000187882D2C-0x0000000187882D38
+		public void SetVolume(float volume) {} // 0x00000001878831E0-0x00000001878831EC
+		public void SetPitch(float pitch) {} // 0x000000018788313C-0x0000000187883148
+		public void SetPlaybackRatio(float ratio) {} // 0x0000000187883148-0x0000000187883154
+		public void SetPan3dAngle(float angle) {} // 0x000000018788310C-0x0000000187883118
+		public void SetPan3dInteriorDistance(float distance) {} // 0x0000000187883118-0x0000000187883124
+		public void SetPan3dVolume(float volume) {} // 0x0000000187883124-0x0000000187883130
+		public void SetPanType(CriAtomEx.PanType panType) {} // 0x0000000187883130-0x000000018788313C
+		public void SetSendLevel(int channel, CriAtomEx.Speaker id, float level) {} // 0x0000000187883184-0x0000000187883198
+		public void SetBiquadFilterParameters(CriAtomEx.BiquadFilterType type, float frequency, float gain, float q) {} // 0x0000000187882F34-0x0000000187882F48
+		public void SetBandpassFilterParameters(float cofLow, float cofHigh) {} // 0x0000000187882F28-0x0000000187882F34
+		public void SetBusSendLevel(string busName, float level) {} // 0x0000000187882F60-0x0000000187882F6C
 		public bool GetBusSendLevel(string busName, out float level) {
 			level = default;
 			return default;
-		} // 0x00000001856D01FC-0x00000001856D0208
-		[Obsolete("Use CriAtomExPlayer.SetBusSendLevel(string busName, float level)")]
-		public void SetBusSendLevel(int busId, float level) {} // 0x00000001856D04D0-0x00000001856D04DC
-		public void SetBusSendLevelOffset(string busName, float levelOffset) {} // 0x00000001856D04AC-0x00000001856D04B8
+		} // 0x0000000187882C98-0x0000000187882CA4
+		public void SetBusSendLevel(int busId, float level) {} // 0x0000000187882F6C-0x0000000187882F78
+		public void SetBusSendLevelOffset(string busName, float levelOffset) {} // 0x0000000187882F48-0x0000000187882F54
 		public bool GetBusSendLevelOffset(string busName, out float level) {
 			level = default;
 			return default;
-		} // 0x00000001856D01F0-0x00000001856D01FC
-		[Obsolete("Use CriAtomExPlayer.SetBusSendLevelOffset(int busId, float levelOffset)")]
-		public void SetBusSendLevelOffset(int busId, float levelOffset) {} // 0x00000001856D04B8-0x00000001856D04C4
-		public void AttachAisac(string globalAisacName) {} // 0x00000001856CF820-0x00000001856CF82C
-		public void DetachAisac(string globalAisacName) {} // 0x00000001856CFDC4-0x00000001856CFDD0
-		public void SetAisacControl(string controlName, float value) {} // 0x00000001856D0468-0x00000001856D0474
-		[Obsolete("Use CriAtomExPlayer.SetAisacControl")]
-		public void SetAisac(string controlName, float value) {} // 0x00000001856D0468-0x00000001856D0474
-		public void SetAisacControl(uint controlId, float value) {} // 0x00000001856D0474-0x00000001856D0480
-		[Obsolete("Use SetAisacControl")]
-		public void SetAisac(uint controlId, float value) {} // 0x00000001856D0474-0x00000001856D0480
+		} // 0x0000000187882C8C-0x0000000187882C98
+		public void SetBusSendLevelOffset(int busId, float levelOffset) {} // 0x0000000187882F54-0x0000000187882F60
+		public void AttachAisac(string globalAisacName) {} // 0x00000001878822BC-0x00000001878822C8
+		public void DetachAisac(string globalAisacName) {} // 0x0000000187882860-0x000000018788286C
+		public void SetAisacControl(string controlName, float value) {} // 0x0000000187882F04-0x0000000187882F10
+		public void SetAisac(string controlName, float value) {} // 0x0000000187882F04-0x0000000187882F10
+		public void SetAisacControl(uint controlId, float value) {} // 0x0000000187882F10-0x0000000187882F1C
+		public void SetAisac(uint controlId, float value) {} // 0x0000000187882F10-0x0000000187882F1C
 		public bool GetAttachedAisacInfo(int aisacAttachedIndex, out CriAtomEx.AisacInfo aisacInfo) {
 			aisacInfo = default;
 			return default;
-		} // 0x00000001856CFFF4-0x00000001856D01F0
-		public void Set3dSource(CriAtomEx3dSource source) {} // 0x00000001856D0450-0x00000001856D0468
-		public void Set3dListener(CriAtomEx3dListener listener) {} // 0x00000001856D0438-0x00000001856D0450
-		public void SetStartTime(long startTimeMs) {} // 0x00000001856D0714-0x00000001856D0720
-		public void SetFirstBlockIndex(int index) {} // 0x00000001856D0640-0x00000001856D064C
-		public void SetSelectorLabel(string selector, string label) {} // 0x00000001856D06DC-0x00000001856D06E8
-		public void UnsetSelectorLabel(string selector) {} // 0x00000001856D0830-0x00000001856D083C
-		public void ClearSelectorLabels() {} // 0x00000001856CFDB8-0x00000001856CFDC4
-		public void SetCategory(int categoryId) {} // 0x00000001856D04DC-0x00000001856D04E8
-		public void SetCategory(string categoryName) {} // 0x00000001856D04E8-0x00000001856D04F4
-		public void UnsetCategory() {} // 0x00000001856D0824-0x00000001856D0830
-		public void SetCuePriority(int priority) {} // 0x00000001856D0524-0x00000001856D0530
-		public void SetVoicePriority(int priority) {} // 0x00000001856D0738-0x00000001856D0744
-		public void SetVoiceControlMethod(CriAtomEx.VoiceControlMethod method) {} // 0x00000001856D0720-0x00000001856D072C
-		public void SetPreDelayTime(float time) {} // 0x00000001856D06B8-0x00000001856D06C4
-		public void SetEnvelopeAttackTime(float time) {} // 0x00000001856D05BC-0x00000001856D05C8
-		public void SetEnvelopeHoldTime(float time) {} // 0x00000001856D05D4-0x00000001856D05E0
-		public void SetEnvelopeDecayTime(float time) {} // 0x00000001856D05C8-0x00000001856D05D4
-		public void SetEnvelopeReleaseTime(float time) {} // 0x00000001856D05E0-0x00000001856D05EC
-		public void SetEnvelopeSustainLevel(float level) {} // 0x00000001856D05EC-0x00000001856D05F8
-		public void AttachFader() {} // 0x00000001856CF82C-0x00000001856CF850
-		public void DetachFader() {} // 0x00000001856CFDD0-0x00000001856CFDDC
-		public void SetFadeOutTime(int ms) {} // 0x00000001856D061C-0x00000001856D0628
-		public void SetFadeInTime(int ms) {} // 0x00000001856D0604-0x00000001856D0610
-		public void SetFadeInStartOffset(int ms) {} // 0x00000001856D05F8-0x00000001856D0604
-		public void SetFadeOutEndDelay(int ms) {} // 0x00000001856D0610-0x00000001856D061C
-		public bool IsFading() => default; // 0x00000001856D0284-0x00000001856D0290
-		public void ResetFaderParameters() {} // 0x00000001856D0414-0x00000001856D0420
-		public void SetGroupNumber(int group_no) {} // 0x00000001856D0658-0x00000001856D0664
-		public void Update(CriAtomExPlayback playback) {} // 0x00000001856D0848-0x00000001856D0854
-		public void UpdateAll() {} // 0x00000001856D083C-0x00000001856D0848
-		public void ResetParameters() {} // 0x00000001856D0420-0x00000001856D042C
-		public long GetTime() => default; // 0x00000001856D0278-0x00000001856D0284
-		public Status GetStatus() => default; // 0x00000001856D026C-0x00000001856D0278
-		public float GetParameterFloat32(CriAtomEx.Parameter id) => default; // 0x00000001856D0248-0x00000001856D0254
-		public uint GetParameterUint32(CriAtomEx.Parameter id) => default; // 0x00000001856D0260-0x00000001856D026C
-		public int GetParameterSint32(CriAtomEx.Parameter id) => default; // 0x00000001856D0254-0x00000001856D0260
-		public void SetSoundRendererType(CriAtomEx.SoundRendererType type) {} // 0x00000001856D0708-0x00000001856D0714
-		public void SetRandomSeed(uint seed) {} // 0x00000001856D06C4-0x00000001856D06D0
-		public void Loop(bool sw) {} // 0x00000001856D029C-0x00000001856D0318
-		public void SetAsrRackId(int asr_rack_id) {} // 0x00000001856D0480-0x00000001856D048C
-		public void SetVoicePoolIdentifier(uint identifier) {} // 0x00000001856D072C-0x00000001856D0738
-		public void SetDspTimeStretchRatio(float ratio) {} // 0x00000001856D05A8-0x00000001856D05BC
-		public void SetDspPitchShifterPitch(float pitch) {} // 0x00000001856D0584-0x00000001856D05A8
-		public void SetDspParameter(int id, float value) {} // 0x00000001856D0578-0x00000001856D0584
-		public void SetSequencePrepareTime(uint ms) {} // 0x00000001856D06FC-0x00000001856D0708
-		public void AttachTween(CriAtomExTween tween) {} // 0x00000001856CF850-0x00000001856CF874
-		public void DetachTween(CriAtomExTween tween) {} // 0x00000001856CFDE8-0x00000001856CFE0C
-		public void DetachTweenAll() {} // 0x00000001856CFDDC-0x00000001856CFDE8
-		public void Stop() {} // 0x00000001856D07F0-0x00000001856D0824
-		public void StopWithoutReleaseTime() {} // 0x00000001856D077C-0x00000001856D07B0
-		public void Pause(bool sw) {} // 0x00000001856D0390-0x00000001856D039C
-		~CriAtomExPlayer() {} // 0x00000001856BDD0C-0x00000001856BDD80
-		private void OnBeatSyncCallbackChainInternal(ref CriAtomExBeatSync.Info info) {} // 0x00000001856D0318-0x00000001856D034C
-		private void OnSequenceCallbackChainInternal(ref CriAtomExSequencer.CriAtomExSequenceEventInfo info) {} // 0x00000001856D034C-0x00000001856D0380
-		private static extern IntPtr criAtomExPlayer_Create(ref Config config, IntPtr work, int work_size); // 0x00000001856D0EB0-0x00000001856D0FC4
-		private static extern void criAtomExPlayer_Destroy(IntPtr player); // 0x00000001856D0FC4-0x00000001856D0FF8
-		private static extern void criAtomExPlayer_SetCueId(IntPtr player, IntPtr acb_hn, int id); // 0x00000001856D1DFC-0x00000001856D1E90
-		private static extern void criAtomExPlayer_SetCueName(IntPtr player, IntPtr acb_hn, string cue_name); // 0x00000001856D1F24-0x00000001856D1FCC
-		private static extern void criAtomExPlayer_SetCueIndex(IntPtr player, IntPtr acb_hn, int index); // 0x00000001856D1E90-0x00000001856D1F24
-		private static extern void criAtomExPlayer_SetFile(IntPtr player, IntPtr binder, string path); // 0x00000001856D2418-0x00000001856D24C0
-		private static extern void criAtomExPlayer_SetData(IntPtr player, byte[] buffer, int size); // 0x00000001856D20A0-0x00000001856D2140
-		private static extern void criAtomExPlayer_SetData(IntPtr player, IntPtr buffer, int size); // 0x00000001856D200C-0x00000001856D20A0
-		private static extern void criAtomExPlayer_SetContentId(IntPtr player, IntPtr binder, int id); // 0x00000001856D1D68-0x00000001856D1DFC
-		private static extern void criAtomExPlayer_SetVoicePoolIdentifier(IntPtr player, uint identifier); // 0x00000001856D2BA8-0x00000001856D2BE8
-		private static extern uint criAtomExPlayer_Start(IntPtr player); // 0x00000001856D2CA8-0x00000001856D2D20
-		private static extern uint criAtomExPlayer_Prepare(IntPtr player); // 0x00000001856D1698-0x00000001856D1710
-		private static extern void criAtomExPlayer_Stop(IntPtr player); // 0x00000001856D2D54-0x00000001856D2D88
-		private static extern void criAtomExPlayer_StopWithoutReleaseTime(IntPtr player); // 0x00000001856D2D20-0x00000001856D2D54
-		private static extern void criAtomExPlayer_Pause(IntPtr player, bool sw); // 0x00000001856D1614-0x00000001856D1698
-		private static extern void criAtomExPlayer_Resume(IntPtr player, CriAtomEx.ResumeMode mode); // 0x00000001856D17BC-0x00000001856D1840
-		private static extern bool criAtomExPlayer_IsPaused(IntPtr player); // 0x00000001856D159C-0x00000001856D15D4
-		private static extern Status criAtomExPlayer_GetStatus(IntPtr player); // 0x00000001856D14B8-0x00000001856D14EC
-		private static extern long criAtomExPlayer_GetTime(IntPtr player); // 0x00000001856D14EC-0x00000001856D1564
-		private static extern void criAtomExPlayer_SetFormat(IntPtr player, CriAtomEx.Format format); // 0x00000001856D2500-0x00000001856D2584
-		private static extern void criAtomExPlayer_SetNumChannels(IntPtr player, int num_channels); // 0x00000001856D25C4-0x00000001856D2604
-		private static extern void criAtomExPlayer_SetSamplingRate(IntPtr player, int sampling_rate); // 0x00000001856D2884-0x00000001856D2908
-		private static extern IntPtr CRIWAREF1DB6C3C(IntPtr player, int capacity, int max_path, bool stopOnEmpty); // 0x00000001856CFC5C-0x00000001856CFD00
-		private static extern void CRIWARE348B99F2(IntPtr pool); // 0x00000001856CF990-0x00000001856CF9C4
-		private static extern int CRIWAREB0CA8CB3(IntPtr pool); // 0x00000001856CFBF4-0x00000001856CFC28
-		private static extern int CRIWAREF2104D05(IntPtr pool); // 0x00000001856CFD00-0x00000001856CFD34
-		private static extern void CRIWAREBAFBC575(IntPtr pool); // 0x00000001856CFC28-0x00000001856CFC5C
-		private static extern bool CRIWARE5277731E(IntPtr pool, IntPtr binder, string path, bool repeat, int max_path); // 0x00000001856CF9C4-0x00000001856CFA94
-		private static extern bool CRIWARE78E74FE0(IntPtr pool, IntPtr binder, int id, bool repeat); // 0x00000001856CFB58-0x00000001856CFBC0
-		private static extern bool CRIWARE10CB0D07(IntPtr pool, byte[] buffer, int size, bool repeat); // 0x00000001856CF874-0x00000001856CF928
-		private static extern bool CRIWARE10CB0D07(IntPtr pool, IntPtr buffer, int size, bool repeat); // 0x00000001856CF928-0x00000001856CF990
-		private static extern bool CRIWARE59CCEB17(IntPtr pool, IntPtr acbhn, string name, bool repeat); // 0x00000001856CFA94-0x00000001856CFB58
-		private static extern void CRIWARE94DBB2A3(IntPtr pool); // 0x00000001856CFBC0-0x00000001856CFBF4
-		private static extern void criAtomExPlayer_SetStartTime(IntPtr player, long start_time_ms); // 0x00000001856D2AA0-0x00000001856D2B24
-		private static extern void criAtomExPlayer_SetSequencePrepareTime(IntPtr player, uint seq_prep_time_ms); // 0x00000001856D2A20-0x00000001856D2A60
-		private static extern void criAtomExPlayer_LimitLoopCount(IntPtr player, int count); // 0x00000001856D15D4-0x00000001856D1614
-		private static extern void criAtomExPlayer_Update(IntPtr player, uint id); // 0x00000001856D2E48-0x00000001856D2ECC
-		private static extern void criAtomExPlayer_UpdateAll(IntPtr player); // 0x00000001856D2E14-0x00000001856D2E48
-		private static extern void criAtomExPlayer_ResetParameters(IntPtr player); // 0x00000001856D1788-0x00000001856D17BC
-		private static extern float criAtomExPlayer_GetParameterFloat32(IntPtr player, CriAtomEx.Parameter id); // 0x00000001856D12FC-0x00000001856D1338
-		private static extern uint criAtomExPlayer_GetParameterUint32(IntPtr player, CriAtomEx.Parameter id); // 0x00000001856D13BC-0x00000001856D1440
-		private static extern int criAtomExPlayer_GetParameterSint32(IntPtr player, CriAtomEx.Parameter id); // 0x00000001856D1338-0x00000001856D13BC
-		private static extern IntPtr criAtomExPlayer_GetPlayerParameter(IntPtr player); // 0x00000001856D1440-0x00000001856D14B8
-		private static extern void criAtomExPlayerParameter_RemoveParameter(IntPtr player_parameter, ushort id); // 0x00000001856D0CB8-0x00000001856D0D3C
-		private static extern void criAtomExPlayer_SetVolume(IntPtr player, float volume); // 0x00000001856D2C6C-0x00000001856D2CA8
-		private static extern void criAtomExPlayer_SetPitch(IntPtr player, float pitch); // 0x00000001856D274C-0x00000001856D2788
-		private static extern void criAtomExPlayer_SetPlaybackRatio(IntPtr player, float playback_ratio); // 0x00000001856D2788-0x00000001856D27C4
-		private static extern void criAtomExPlayer_SetPan3dAngle(IntPtr player, float pan3d_angle); // 0x00000001856D2604-0x00000001856D2640
-		private static extern void criAtomExPlayer_SetPan3dInteriorDistance(IntPtr player, float pan3d_interior_distance); // 0x00000001856D2640-0x00000001856D2684
-		private static extern void criAtomExPlayer_SetPan3dVolume(IntPtr player, float pan3d_volume); // 0x00000001856D2684-0x00000001856D26C8
-		private static extern void criAtomExPlayer_SetPanType(IntPtr player, CriAtomEx.PanType panType); // 0x00000001856D26C8-0x00000001856D274C
-		private static extern void criAtomExPlayer_SetSendLevel(IntPtr player, int channel, CriAtomEx.Speaker id, float level); // 0x00000001856D29C4-0x00000001856D2A20
-		private static extern void criAtomExPlayer_SetBusSendLevel(IntPtr player, int bus_id, float level); // 0x00000001856D1BFC-0x00000001856D1C4C
-		private static extern void criAtomExPlayer_SetBusSendLevelByName(IntPtr player, string bus_name, float level); // 0x00000001856D1AE8-0x00000001856D1B50
-		private static extern bool criAtomExPlayer_GetBusSendLevelByName(IntPtr player, string bus_name, out float level); // 0x00000001856D1194-0x00000001856D1248
-		private static extern void criAtomExPlayer_SetBusSendLevelOffset(IntPtr player, int bus_id, float level_offset); // 0x00000001856D1BB0-0x00000001856D1BFC
-		private static extern void criAtomExPlayer_SetBusSendLevelOffsetByName(IntPtr player, string bus_name, float level_offset); // 0x00000001856D1B50-0x00000001856D1BB0
-		private static extern bool criAtomExPlayer_GetBusSendLevelOffsetByName(IntPtr player, string bus_name, out float level_offset); // 0x00000001856D1248-0x00000001856D12FC
-		private static extern void criAtomExPlayer_SetBandpassFilterParameters(IntPtr player, float cof_low, float cof_high); // 0x00000001856D1A40-0x00000001856D1A8C
-		private static extern void criAtomExPlayer_SetBiquadFilterParameters(IntPtr player, CriAtomEx.BiquadFilterType type, float frequency, float gain, float q); // 0x00000001856D1A8C-0x00000001856D1AE8
-		private static extern void criAtomExPlayer_SetVoicePriority(IntPtr player, int priority); // 0x00000001856D2BE8-0x00000001856D2C6C
-		private static extern void criAtomExPlayer_SetVoiceControlMethod(IntPtr player, CriAtomEx.VoiceControlMethod method); // 0x00000001856D2B24-0x00000001856D2BA8
-		private static extern void criAtomExPlayer_SetAisacControlById(IntPtr player, ushort control_id, float control_value); // 0x00000001856D1908-0x00000001856D1954
-		private static extern void criAtomExPlayer_SetAisacControlByName(IntPtr player, string control_name, float control_value); // 0x00000001856D1954-0x00000001856D19BC
-		private static extern void criAtomExPlayer_Set3dSourceHn(IntPtr player, IntPtr source); // 0x00000001856D1884-0x00000001856D1908
-		private static extern void criAtomExPlayer_Set3dListenerHn(IntPtr player, IntPtr listener); // 0x00000001856D1840-0x00000001856D1884
-		private static extern void criAtomExPlayer_SetCategoryById(IntPtr player, uint category_id); // 0x00000001856D1C4C-0x00000001856D1CD0
-		private static extern void criAtomExPlayer_SetCategoryByName(IntPtr player, string category_name); // 0x00000001856D1CD0-0x00000001856D1D68
-		private static extern void criAtomExPlayer_UnsetCategory(IntPtr player); // 0x00000001856D2D88-0x00000001856D2DBC
-		private static extern void criAtomExPlayer_SetCuePriority(IntPtr player, int cue_priority); // 0x00000001856D1FCC-0x00000001856D200C
-		private static extern void criAtomExPlayer_SetPreDelayTime(IntPtr player, float predelay_time_ms); // 0x00000001856D27C4-0x00000001856D2800
-		private static extern void criAtomExPlayer_SetEnvelopeAttackTime(IntPtr player, float attack_time_ms); // 0x00000001856D2190-0x00000001856D21D4
-		private static extern void criAtomExPlayer_SetEnvelopeHoldTime(IntPtr player, float hold_time_ms); // 0x00000001856D2210-0x00000001856D224C
-		private static extern void criAtomExPlayer_SetEnvelopeDecayTime(IntPtr player, float decay_time_ms); // 0x00000001856D21D4-0x00000001856D2210
-		private static extern void criAtomExPlayer_SetEnvelopeReleaseTime(IntPtr player, float release_time_ms); // 0x00000001856D224C-0x00000001856D2290
-		private static extern void criAtomExPlayer_SetEnvelopeSustainLevel(IntPtr player, float susutain_level); // 0x00000001856D2290-0x00000001856D22D4
-		private static extern void criAtomExPlayer_AttachFader(IntPtr player, IntPtr config, IntPtr work, int work_size); // 0x00000001856D0D94-0x00000001856D0E38
-		private static extern void criAtomExPlayer_AttachAisac(IntPtr player, string globalAisacName); // 0x00000001856D0D3C-0x00000001856D0D94
-		private static extern void criAtomExPlayer_DetachAisac(IntPtr player, string globalAisacName); // 0x00000001856D0FF8-0x00000001856D1050
-		private static extern void criAtomExPlayer_DetachFader(IntPtr player); // 0x00000001856D1050-0x00000001856D1084
-		private static extern void criAtomExPlayer_SetFadeOutTime(IntPtr player, int ms); // 0x00000001856D23D8-0x00000001856D2418
-		private static extern void criAtomExPlayer_SetFadeInTime(IntPtr player, int ms); // 0x00000001856D2314-0x00000001856D2398
-		private static extern void criAtomExPlayer_SetFadeInStartOffset(IntPtr player, int ms); // 0x00000001856D22D4-0x00000001856D2314
-		private static extern void criAtomExPlayer_SetFadeOutEndDelay(IntPtr player, int ms); // 0x00000001856D2398-0x00000001856D23D8
-		private static extern bool criAtomExPlayer_IsFading(IntPtr player); // 0x00000001856D1564-0x00000001856D159C
-		private static extern void criAtomExPlayer_ResetFaderParameters(IntPtr player); // 0x00000001856D1710-0x00000001856D1788
-		private static extern void criAtomExPlayer_SetGroupNumber(IntPtr player, int group_no); // 0x00000001856D2584-0x00000001856D25C4
-		private static extern bool criAtomExPlayer_GetAttachedAisacInfo(IntPtr player, int aisac_attached_index, IntPtr aisac_info); // 0x00000001856D10FC-0x00000001856D1194
-		private static extern void criAtomExPlayer_SetFirstBlockIndex(IntPtr player, int index); // 0x00000001856D24C0-0x00000001856D2500
-		private static extern void criAtomExPlayer_SetSelectorLabel(IntPtr player, string selector, string label); // 0x00000001856D2908-0x00000001856D29C4
-		private static extern void criAtomExPlayer_UnsetSelectorLabel(IntPtr player, string selector); // 0x00000001856D2DBC-0x00000001856D2E14
-		private static extern void criAtomExPlayer_ClearSelectorLabels(IntPtr player); // 0x00000001856D0E7C-0x00000001856D0EB0
-		private static extern void criAtomExPlayer_SetSoundRendererType(IntPtr player, CriAtomEx.SoundRendererType type); // 0x00000001856D2A60-0x00000001856D2AA0
-		private static extern void criAtomExPlayer_SetRandomSeed(IntPtr player, uint seed); // 0x00000001856D2800-0x00000001856D2884
-		private static extern void CRIWAREF466419F(IntPtr player, bool sw); // 0x00000001856CFD34-0x00000001856CFDB8
-		private static extern void criAtomExPlayer_SetAsrRackId(IntPtr player, int asr_rack_id); // 0x00000001856D19BC-0x00000001856D1A40
-		private static extern void criAtomExPlayer_SetDspParameter(IntPtr player, int id, float value); // 0x00000001856D2140-0x00000001856D2190
-		private static extern void criAtomExPlayer_AttachTween(IntPtr player, IntPtr tween); // 0x00000001856D0E38-0x00000001856D0E7C
-		private static extern void criAtomExPlayer_DetachTween(IntPtr player, IntPtr tween); // 0x00000001856D10B8-0x00000001856D10FC
-		private static extern void criAtomExPlayer_DetachTweenAll(IntPtr player); // 0x00000001856D1084-0x00000001856D10B8
+		} // 0x0000000187882A90-0x0000000187882C8C
+		public void Set3dSource(CriAtomEx3dSource source) {} // 0x0000000187882EEC-0x0000000187882F04
+		public void Set3dListener(CriAtomEx3dListener listener) {} // 0x0000000187882ED4-0x0000000187882EEC
+		public void SetStartTime(long startTimeMs) {} // 0x00000001878831B0-0x00000001878831BC
+		public void SetFirstBlockIndex(int index) {} // 0x00000001878830DC-0x00000001878830E8
+		public void SetSelectorLabel(string selector, string label) {} // 0x0000000187883178-0x0000000187883184
+		public void UnsetSelectorLabel(string selector) {} // 0x00000001878832CC-0x00000001878832D8
+		public void ClearSelectorLabels() {} // 0x0000000187882854-0x0000000187882860
+		public void SetCategory(int categoryId) {} // 0x0000000187882F78-0x0000000187882F84
+		public void SetCategory(string categoryName) {} // 0x0000000187882F84-0x0000000187882F90
+		public void UnsetCategory() {} // 0x00000001878832C0-0x00000001878832CC
+		public void SetCuePriority(int priority) {} // 0x0000000187882FC0-0x0000000187882FCC
+		public void SetVoicePriority(int priority) {} // 0x00000001878831D4-0x00000001878831E0
+		public void SetVoiceControlMethod(CriAtomEx.VoiceControlMethod method) {} // 0x00000001878831BC-0x00000001878831C8
+		public void SetPreDelayTime(float time) {} // 0x0000000187883154-0x0000000187883160
+		public void SetEnvelopeAttackTime(float time) {} // 0x0000000187883058-0x0000000187883064
+		public void SetEnvelopeHoldTime(float time) {} // 0x0000000187883070-0x000000018788307C
+		public void SetEnvelopeDecayTime(float time) {} // 0x0000000187883064-0x0000000187883070
+		public void SetEnvelopeReleaseTime(float time) {} // 0x000000018788307C-0x0000000187883088
+		public void SetEnvelopeSustainLevel(float level) {} // 0x0000000187883088-0x0000000187883094
+		public void AttachFader() {} // 0x00000001878822C8-0x00000001878822EC
+		public void DetachFader() {} // 0x000000018788286C-0x0000000187882878
+		public void SetFadeOutTime(int ms) {} // 0x00000001878830B8-0x00000001878830C4
+		public void SetFadeInTime(int ms) {} // 0x00000001878830A0-0x00000001878830AC
+		public void SetFadeInStartOffset(int ms) {} // 0x0000000187883094-0x00000001878830A0
+		public void SetFadeOutEndDelay(int ms) {} // 0x00000001878830AC-0x00000001878830B8
+		public bool IsFading() => default; // 0x0000000187882D20-0x0000000187882D2C
+		public void ResetFaderParameters() {} // 0x0000000187882EB0-0x0000000187882EBC
+		public void SetGroupNumber(int group_no) {} // 0x00000001878830F4-0x0000000187883100
+		public void Update(CriAtomExPlayback playback) {} // 0x00000001878832E4-0x00000001878832F0
+		public void UpdateAll() {} // 0x00000001878832D8-0x00000001878832E4
+		public void ResetParameters() {} // 0x0000000187882EBC-0x0000000187882EC8
+		public long GetTime() => default; // 0x0000000187882D14-0x0000000187882D20
+		public Status GetStatus() => default; // 0x0000000187882D08-0x0000000187882D14
+		public float GetParameterFloat32(CriAtomEx.Parameter id) => default; // 0x0000000187882CE4-0x0000000187882CF0
+		public uint GetParameterUint32(CriAtomEx.Parameter id) => default; // 0x0000000187882CFC-0x0000000187882D08
+		public int GetParameterSint32(CriAtomEx.Parameter id) => default; // 0x0000000187882CF0-0x0000000187882CFC
+		public void SetSoundRendererType(CriAtomEx.SoundRendererType type) {} // 0x00000001878831A4-0x00000001878831B0
+		public void SetRandomSeed(uint seed) {} // 0x0000000187883160-0x000000018788316C
+		public void Loop(bool sw) {} // 0x0000000187882D38-0x0000000187882DB4
+		public void SetAsrRackId(int asr_rack_id) {} // 0x0000000187882F1C-0x0000000187882F28
+		public void SetVoicePoolIdentifier(uint identifier) {} // 0x00000001878831C8-0x00000001878831D4
+		public void SetDspTimeStretchRatio(float ratio) {} // 0x0000000187883044-0x0000000187883058
+		public void SetDspPitchShifterPitch(float pitch) {} // 0x0000000187883020-0x0000000187883044
+		public void SetDspParameter(int id, float value) {} // 0x0000000187883014-0x0000000187883020
+		public void SetSequencePrepareTime(uint ms) {} // 0x0000000187883198-0x00000001878831A4
+		public void AttachTween(CriAtomExTween tween) {} // 0x00000001878822EC-0x0000000187882310
+		public void DetachTween(CriAtomExTween tween) {} // 0x0000000187882884-0x00000001878828A8
+		public void DetachTweenAll() {} // 0x0000000187882878-0x0000000187882884
+		public void Stop() {} // 0x000000018788328C-0x00000001878832C0
+		public void StopWithoutReleaseTime() {} // 0x0000000187883218-0x000000018788324C
+		public void Pause(bool sw) {} // 0x0000000187882E2C-0x0000000187882E38
+		~CriAtomExPlayer() {} // 0x00000001878707A8-0x000000018787081C
+		private void OnBeatSyncCallbackChainInternal(ref CriAtomExBeatSync.Info info) {} // 0x0000000187882DB4-0x0000000187882DE8
+		private void OnSequenceCallbackChainInternal(ref CriAtomExSequencer.CriAtomExSequenceEventInfo info) {} // 0x0000000187882DE8-0x0000000187882E1C
+		private static extern IntPtr criAtomExPlayer_Create(ref Config config, IntPtr work, int work_size); // 0x000000018788394C-0x0000000187883A60
+		private static extern void criAtomExPlayer_Destroy(IntPtr player); // 0x0000000187883A60-0x0000000187883A94
+		private static extern void criAtomExPlayer_SetCueId(IntPtr player, IntPtr acb_hn, int id); // 0x0000000187884898-0x000000018788492C
+		private static extern void criAtomExPlayer_SetCueName(IntPtr player, IntPtr acb_hn, string cue_name); // 0x00000001878849C0-0x0000000187884A68
+		private static extern void criAtomExPlayer_SetCueIndex(IntPtr player, IntPtr acb_hn, int index); // 0x000000018788492C-0x00000001878849C0
+		private static extern void criAtomExPlayer_SetFile(IntPtr player, IntPtr binder, string path); // 0x0000000187884EB4-0x0000000187884F5C
+		private static extern void criAtomExPlayer_SetData(IntPtr player, byte[] buffer, int size); // 0x0000000187884B3C-0x0000000187884BDC
+		private static extern void criAtomExPlayer_SetData(IntPtr player, IntPtr buffer, int size); // 0x0000000187884AA8-0x0000000187884B3C
+		private static extern void criAtomExPlayer_SetContentId(IntPtr player, IntPtr binder, int id); // 0x0000000187884804-0x0000000187884898
+		private static extern void criAtomExPlayer_SetVoicePoolIdentifier(IntPtr player, uint identifier); // 0x0000000187885644-0x0000000187885684
+		private static extern uint criAtomExPlayer_Start(IntPtr player); // 0x0000000187885744-0x00000001878857BC
+		private static extern uint criAtomExPlayer_Prepare(IntPtr player); // 0x0000000187884134-0x00000001878841AC
+		private static extern void criAtomExPlayer_Stop(IntPtr player); // 0x00000001878857F0-0x0000000187885824
+		private static extern void criAtomExPlayer_StopWithoutReleaseTime(IntPtr player); // 0x00000001878857BC-0x00000001878857F0
+		private static extern void criAtomExPlayer_Pause(IntPtr player, bool sw); // 0x00000001878840B0-0x0000000187884134
+		private static extern void criAtomExPlayer_Resume(IntPtr player, CriAtomEx.ResumeMode mode); // 0x0000000187884258-0x00000001878842DC
+		private static extern bool criAtomExPlayer_IsPaused(IntPtr player); // 0x0000000187884038-0x0000000187884070
+		private static extern Status criAtomExPlayer_GetStatus(IntPtr player); // 0x0000000187883F54-0x0000000187883F88
+		private static extern long criAtomExPlayer_GetTime(IntPtr player); // 0x0000000187883F88-0x0000000187884000
+		private static extern void criAtomExPlayer_SetFormat(IntPtr player, CriAtomEx.Format format); // 0x0000000187884F9C-0x0000000187885020
+		private static extern void criAtomExPlayer_SetNumChannels(IntPtr player, int num_channels); // 0x0000000187885060-0x00000001878850A0
+		private static extern void criAtomExPlayer_SetSamplingRate(IntPtr player, int sampling_rate); // 0x0000000187885320-0x00000001878853A4
+		private static extern IntPtr CRIWAREF1DB6C3C(IntPtr player, int capacity, int max_path, bool stopOnEmpty); // 0x00000001878826F8-0x000000018788279C
+		private static extern void CRIWARE348B99F2(IntPtr pool); // 0x000000018788242C-0x0000000187882460
+		private static extern int CRIWAREB0CA8CB3(IntPtr pool); // 0x0000000187882690-0x00000001878826C4
+		private static extern int CRIWAREF2104D05(IntPtr pool); // 0x000000018788279C-0x00000001878827D0
+		private static extern void CRIWAREBAFBC575(IntPtr pool); // 0x00000001878826C4-0x00000001878826F8
+		private static extern bool CRIWARE5277731E(IntPtr pool, IntPtr binder, string path, bool repeat, int max_path); // 0x0000000187882460-0x0000000187882530
+		private static extern bool CRIWARE78E74FE0(IntPtr pool, IntPtr binder, int id, bool repeat); // 0x00000001878825F4-0x000000018788265C
+		private static extern bool CRIWARE10CB0D07(IntPtr pool, byte[] buffer, int size, bool repeat); // 0x0000000187882310-0x00000001878823C4
+		private static extern bool CRIWARE10CB0D07(IntPtr pool, IntPtr buffer, int size, bool repeat); // 0x00000001878823C4-0x000000018788242C
+		private static extern bool CRIWARE59CCEB17(IntPtr pool, IntPtr acbhn, string name, bool repeat); // 0x0000000187882530-0x00000001878825F4
+		private static extern void CRIWARE94DBB2A3(IntPtr pool); // 0x000000018788265C-0x0000000187882690
+		private static extern void criAtomExPlayer_SetStartTime(IntPtr player, long start_time_ms); // 0x000000018788553C-0x00000001878855C0
+		private static extern void criAtomExPlayer_SetSequencePrepareTime(IntPtr player, uint seq_prep_time_ms); // 0x00000001878854BC-0x00000001878854FC
+		private static extern void criAtomExPlayer_LimitLoopCount(IntPtr player, int count); // 0x0000000187884070-0x00000001878840B0
+		private static extern void criAtomExPlayer_Update(IntPtr player, uint id); // 0x00000001878858E4-0x0000000187885968
+		private static extern void criAtomExPlayer_UpdateAll(IntPtr player); // 0x00000001878858B0-0x00000001878858E4
+		private static extern void criAtomExPlayer_ResetParameters(IntPtr player); // 0x0000000187884224-0x0000000187884258
+		private static extern float criAtomExPlayer_GetParameterFloat32(IntPtr player, CriAtomEx.Parameter id); // 0x0000000187883D98-0x0000000187883DD4
+		private static extern uint criAtomExPlayer_GetParameterUint32(IntPtr player, CriAtomEx.Parameter id); // 0x0000000187883E58-0x0000000187883EDC
+		private static extern int criAtomExPlayer_GetParameterSint32(IntPtr player, CriAtomEx.Parameter id); // 0x0000000187883DD4-0x0000000187883E58
+		private static extern IntPtr criAtomExPlayer_GetPlayerParameter(IntPtr player); // 0x0000000187883EDC-0x0000000187883F54
+		private static extern void criAtomExPlayerParameter_RemoveParameter(IntPtr player_parameter, ushort id); // 0x0000000187883754-0x00000001878837D8
+		private static extern void criAtomExPlayer_SetVolume(IntPtr player, float volume); // 0x0000000187885708-0x0000000187885744
+		private static extern void criAtomExPlayer_SetPitch(IntPtr player, float pitch); // 0x00000001878851E8-0x0000000187885224
+		private static extern void criAtomExPlayer_SetPlaybackRatio(IntPtr player, float playback_ratio); // 0x0000000187885224-0x0000000187885260
+		private static extern void criAtomExPlayer_SetPan3dAngle(IntPtr player, float pan3d_angle); // 0x00000001878850A0-0x00000001878850DC
+		private static extern void criAtomExPlayer_SetPan3dInteriorDistance(IntPtr player, float pan3d_interior_distance); // 0x00000001878850DC-0x0000000187885120
+		private static extern void criAtomExPlayer_SetPan3dVolume(IntPtr player, float pan3d_volume); // 0x0000000187885120-0x0000000187885164
+		private static extern void criAtomExPlayer_SetPanType(IntPtr player, CriAtomEx.PanType panType); // 0x0000000187885164-0x00000001878851E8
+		private static extern void criAtomExPlayer_SetSendLevel(IntPtr player, int channel, CriAtomEx.Speaker id, float level); // 0x0000000187885460-0x00000001878854BC
+		private static extern void criAtomExPlayer_SetBusSendLevel(IntPtr player, int bus_id, float level); // 0x0000000187884698-0x00000001878846E8
+		private static extern void criAtomExPlayer_SetBusSendLevelByName(IntPtr player, string bus_name, float level); // 0x0000000187884584-0x00000001878845EC
+		private static extern bool criAtomExPlayer_GetBusSendLevelByName(IntPtr player, string bus_name, out float level); // 0x0000000187883C30-0x0000000187883CE4
+		private static extern void criAtomExPlayer_SetBusSendLevelOffset(IntPtr player, int bus_id, float level_offset); // 0x000000018788464C-0x0000000187884698
+		private static extern void criAtomExPlayer_SetBusSendLevelOffsetByName(IntPtr player, string bus_name, float level_offset); // 0x00000001878845EC-0x000000018788464C
+		private static extern bool criAtomExPlayer_GetBusSendLevelOffsetByName(IntPtr player, string bus_name, out float level_offset); // 0x0000000187883CE4-0x0000000187883D98
+		private static extern void criAtomExPlayer_SetBandpassFilterParameters(IntPtr player, float cof_low, float cof_high); // 0x00000001878844DC-0x0000000187884528
+		private static extern void criAtomExPlayer_SetBiquadFilterParameters(IntPtr player, CriAtomEx.BiquadFilterType type, float frequency, float gain, float q); // 0x0000000187884528-0x0000000187884584
+		private static extern void criAtomExPlayer_SetVoicePriority(IntPtr player, int priority); // 0x0000000187885684-0x0000000187885708
+		private static extern void criAtomExPlayer_SetVoiceControlMethod(IntPtr player, CriAtomEx.VoiceControlMethod method); // 0x00000001878855C0-0x0000000187885644
+		private static extern void criAtomExPlayer_SetAisacControlById(IntPtr player, ushort control_id, float control_value); // 0x00000001878843A4-0x00000001878843F0
+		private static extern void criAtomExPlayer_SetAisacControlByName(IntPtr player, string control_name, float control_value); // 0x00000001878843F0-0x0000000187884458
+		private static extern void criAtomExPlayer_Set3dSourceHn(IntPtr player, IntPtr source); // 0x0000000187884320-0x00000001878843A4
+		private static extern void criAtomExPlayer_Set3dListenerHn(IntPtr player, IntPtr listener); // 0x00000001878842DC-0x0000000187884320
+		private static extern void criAtomExPlayer_SetCategoryById(IntPtr player, uint category_id); // 0x00000001878846E8-0x000000018788476C
+		private static extern void criAtomExPlayer_SetCategoryByName(IntPtr player, string category_name); // 0x000000018788476C-0x0000000187884804
+		private static extern void criAtomExPlayer_UnsetCategory(IntPtr player); // 0x0000000187885824-0x0000000187885858
+		private static extern void criAtomExPlayer_SetCuePriority(IntPtr player, int cue_priority); // 0x0000000187884A68-0x0000000187884AA8
+		private static extern void criAtomExPlayer_SetPreDelayTime(IntPtr player, float predelay_time_ms); // 0x0000000187885260-0x000000018788529C
+		private static extern void criAtomExPlayer_SetEnvelopeAttackTime(IntPtr player, float attack_time_ms); // 0x0000000187884C2C-0x0000000187884C70
+		private static extern void criAtomExPlayer_SetEnvelopeHoldTime(IntPtr player, float hold_time_ms); // 0x0000000187884CAC-0x0000000187884CE8
+		private static extern void criAtomExPlayer_SetEnvelopeDecayTime(IntPtr player, float decay_time_ms); // 0x0000000187884C70-0x0000000187884CAC
+		private static extern void criAtomExPlayer_SetEnvelopeReleaseTime(IntPtr player, float release_time_ms); // 0x0000000187884CE8-0x0000000187884D2C
+		private static extern void criAtomExPlayer_SetEnvelopeSustainLevel(IntPtr player, float susutain_level); // 0x0000000187884D2C-0x0000000187884D70
+		private static extern void criAtomExPlayer_AttachFader(IntPtr player, IntPtr config, IntPtr work, int work_size); // 0x0000000187883830-0x00000001878838D4
+		private static extern void criAtomExPlayer_AttachAisac(IntPtr player, string globalAisacName); // 0x00000001878837D8-0x0000000187883830
+		private static extern void criAtomExPlayer_DetachAisac(IntPtr player, string globalAisacName); // 0x0000000187883A94-0x0000000187883AEC
+		private static extern void criAtomExPlayer_DetachFader(IntPtr player); // 0x0000000187883AEC-0x0000000187883B20
+		private static extern void criAtomExPlayer_SetFadeOutTime(IntPtr player, int ms); // 0x0000000187884E74-0x0000000187884EB4
+		private static extern void criAtomExPlayer_SetFadeInTime(IntPtr player, int ms); // 0x0000000187884DB0-0x0000000187884E34
+		private static extern void criAtomExPlayer_SetFadeInStartOffset(IntPtr player, int ms); // 0x0000000187884D70-0x0000000187884DB0
+		private static extern void criAtomExPlayer_SetFadeOutEndDelay(IntPtr player, int ms); // 0x0000000187884E34-0x0000000187884E74
+		private static extern bool criAtomExPlayer_IsFading(IntPtr player); // 0x0000000187884000-0x0000000187884038
+		private static extern void criAtomExPlayer_ResetFaderParameters(IntPtr player); // 0x00000001878841AC-0x0000000187884224
+		private static extern void criAtomExPlayer_SetGroupNumber(IntPtr player, int group_no); // 0x0000000187885020-0x0000000187885060
+		private static extern bool criAtomExPlayer_GetAttachedAisacInfo(IntPtr player, int aisac_attached_index, IntPtr aisac_info); // 0x0000000187883B98-0x0000000187883C30
+		private static extern void criAtomExPlayer_SetFirstBlockIndex(IntPtr player, int index); // 0x0000000187884F5C-0x0000000187884F9C
+		private static extern void criAtomExPlayer_SetSelectorLabel(IntPtr player, string selector, string label); // 0x00000001878853A4-0x0000000187885460
+		private static extern void criAtomExPlayer_UnsetSelectorLabel(IntPtr player, string selector); // 0x0000000187885858-0x00000001878858B0
+		private static extern void criAtomExPlayer_ClearSelectorLabels(IntPtr player); // 0x0000000187883918-0x000000018788394C
+		private static extern void criAtomExPlayer_SetSoundRendererType(IntPtr player, CriAtomEx.SoundRendererType type); // 0x00000001878854FC-0x000000018788553C
+		private static extern void criAtomExPlayer_SetRandomSeed(IntPtr player, uint seed); // 0x000000018788529C-0x0000000187885320
+		private static extern void CRIWAREF466419F(IntPtr player, bool sw); // 0x00000001878827D0-0x0000000187882854
+		private static extern void criAtomExPlayer_SetAsrRackId(IntPtr player, int asr_rack_id); // 0x0000000187884458-0x00000001878844DC
+		private static extern void criAtomExPlayer_SetDspParameter(IntPtr player, int id, float value); // 0x0000000187884BDC-0x0000000187884C2C
+		private static extern void criAtomExPlayer_AttachTween(IntPtr player, IntPtr tween); // 0x00000001878838D4-0x0000000187883918
+		private static extern void criAtomExPlayer_DetachTween(IntPtr player, IntPtr tween); // 0x0000000187883B54-0x0000000187883B98
+		private static extern void criAtomExPlayer_DetachTweenAll(IntPtr player); // 0x0000000187883B20-0x0000000187883B54
 	}
 
-	[Obsolete("Use CriAtomExOutputAnalyzer")]
-	public class CriAtomExPlayerOutputAnalyzer : CriAtomExOutputAnalyzer // TypeDefIndex: 54163
+	public class CriAtomExPlayerOutputAnalyzer : CriAtomExOutputAnalyzer // TypeDefIndex: 55156
 	{
 		// Nested types
-		public enum Type // TypeDefIndex: 54161
+		public enum Type // TypeDefIndex: 55154
 		{
 			LevelMeter = 0,
 			SpectrumAnalyzer = 1,
 			PcmCapture = 2
 		}
 	
-		public struct Config // TypeDefIndex: 54162
+		public struct Config // TypeDefIndex: 55155
 		{
 			// Fields
 			public int num_spectrum_analyzer_bands; // 0x00
 			public int num_stored_output_data; // 0x04
 	
 			// Constructors
-			public Config(int num_spectrum_analyzer_bands = 8 /* Metadata: 0x01FD64E7 */, int num_stored_output_data = 4096 /* Metadata: 0x01FD64E8 */) {
+			public Config(int num_spectrum_analyzer_bands = 8 /* Metadata: 0x0207BD13 */, int num_stored_output_data = 4096 /* Metadata: 0x0207BD14 */) {
 				this.num_spectrum_analyzer_bands = default;
 				this.num_stored_output_data = default;
-			} // 0x0000000183D4E4B0-0x0000000183D4E4C0
+			} // 0x000000018788219C-0x00000001878822BC
 		}
 	
 		// Constructors
 		public CriAtomExPlayerOutputAnalyzer() {} // Dummy constructor
-		public CriAtomExPlayerOutputAnalyzer(Type[] types, Config[] configs = null) {} // 0x00000001856CF700-0x00000001856CF820
+		public CriAtomExPlayerOutputAnalyzer(Type[] types, Config[] configs = null) {} // 0x000000018357CB90-0x000000018357CBA0
 	}
 
-	public class CriAtomExSoundObject : CriDisposable // TypeDefIndex: 54165
+	public class CriAtomExSoundObject : CriDisposable // TypeDefIndex: 55158
 	{
 		// Fields
 		private IntPtr handle; // 0x20
 	
 		// Properties
-		public IntPtr nativeHandle { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public IntPtr nativeHandle { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
 	
 		// Nested types
-		private struct Config // TypeDefIndex: 54164
+		private struct Config // TypeDefIndex: 55157
 		{
 			// Fields
 			public bool enableVoiceLimitScope; // 0x00
@@ -3081,46 +3113,46 @@ namespace CriWare
 	
 		// Constructors
 		public CriAtomExSoundObject() {} // Dummy constructor
-		public CriAtomExSoundObject(bool enableVoiceLimitScope, bool enableCategoryCueLimitScope) {} // 0x00000001856D33B0-0x00000001856D34B4
+		public CriAtomExSoundObject(bool enableVoiceLimitScope, bool enableCategoryCueLimitScope) {} // 0x0000000187885E4C-0x0000000187885F50
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001856D3334-0x00000001856D33B0
-		public void AddPlayer(CriAtomExPlayer player) {} // 0x00000001856D32E0-0x00000001856D3304
-		public void DeletePlayer(CriAtomExPlayer player) {} // 0x00000001856D3310-0x00000001856D3334
-		public void DeleteAllPlayers() {} // 0x00000001856D3304-0x00000001856D3310
-		~CriAtomExSoundObject() {} // 0x00000001856BDD0C-0x00000001856BDD80
-		private static extern IntPtr criAtomExSoundObject_Create(ref Config config, IntPtr work, int work_size); // 0x00000001856D3538-0x00000001856D35FC
-		private static extern void criAtomExSoundObject_Destroy(IntPtr soundObject); // 0x00000001856D36B8-0x00000001856D36EC
-		private static extern void criAtomExSoundObject_AddPlayer(IntPtr soundObject, IntPtr player); // 0x00000001856D34B4-0x00000001856D3538
-		private static extern void criAtomExSoundObject_DeletePlayer(IntPtr soundObject, IntPtr player); // 0x00000001856D3674-0x00000001856D36B8
-		private static extern void criAtomExSoundObject_DeleteAllPlayers(IntPtr soundObject); // 0x00000001856D35FC-0x00000001856D3674
+		public override void Dispose() {} // 0x0000000187885DD0-0x0000000187885E4C
+		public void AddPlayer(CriAtomExPlayer player) {} // 0x0000000187885D7C-0x0000000187885DA0
+		public void DeletePlayer(CriAtomExPlayer player) {} // 0x0000000187885DAC-0x0000000187885DD0
+		public void DeleteAllPlayers() {} // 0x0000000187885DA0-0x0000000187885DAC
+		~CriAtomExSoundObject() {} // 0x00000001878707A8-0x000000018787081C
+		private static extern IntPtr criAtomExSoundObject_Create(ref Config config, IntPtr work, int work_size); // 0x0000000187885FD4-0x0000000187886098
+		private static extern void criAtomExSoundObject_Destroy(IntPtr soundObject); // 0x0000000187886154-0x0000000187886188
+		private static extern void criAtomExSoundObject_AddPlayer(IntPtr soundObject, IntPtr player); // 0x0000000187885F50-0x0000000187885FD4
+		private static extern void criAtomExSoundObject_DeletePlayer(IntPtr soundObject, IntPtr player); // 0x0000000187886110-0x0000000187886154
+		private static extern void criAtomExSoundObject_DeleteAllPlayers(IntPtr soundObject); // 0x0000000187886098-0x0000000187886110
 	}
 
-	public class CriAtomExTween : CriDisposable // TypeDefIndex: 54169
+	public class CriAtomExTween : CriDisposable // TypeDefIndex: 55162
 	{
 		// Fields
 		private IntPtr handle; // 0x20
 	
 		// Properties
-		internal IntPtr nativeHandle { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
-		public float Value { get => default; } // 0x00000001856D3E48-0x00000001856D3E54 
-		public bool IsActive { get => default; } // 0x00000001856D3E3C-0x00000001856D3E48 
+		internal IntPtr nativeHandle { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
+		public float Value { get => default; } // 0x00000001878868E4-0x00000001878868F0 
+		public bool IsActive { get => default; } // 0x00000001878868D8-0x00000001878868E4 
 	
 		// Nested types
-		public enum ParameterType // TypeDefIndex: 54166
+		public enum ParameterType // TypeDefIndex: 55159
 		{
 			Basic = 0,
 			Aisac = 1
 		}
 	
-		private struct Config // TypeDefIndex: 54168
+		private struct Config // TypeDefIndex: 55161
 		{
 			// Fields
 			public Target target; // 0x00
 			public ParameterType parameterType; // 0x04
 	
 			// Nested types
-			public struct Target // TypeDefIndex: 54167
+			public struct Target // TypeDefIndex: 55160
 			{
 				// Fields
 				public CriAtomEx.Parameter parameterId; // 0x00
@@ -3129,36 +3161,36 @@ namespace CriWare
 		}
 	
 		// Constructors
-		public CriAtomExTween() {} // 0x00000001856D3A58-0x00000001856D3A68
-		public CriAtomExTween(CriAtomEx.Parameter parameterId) {} // 0x00000001856D3B78-0x00000001856D3B88
-		public CriAtomExTween(uint aisacId) {} // 0x00000001856D3B68-0x00000001856D3B78
-		public CriAtomExTween(ParameterType parameterType, uint targetId) {} // 0x00000001856D3A68-0x00000001856D3B68
+		public CriAtomExTween() {} // 0x00000001878864F4-0x0000000187886504
+		public CriAtomExTween(CriAtomEx.Parameter parameterId) {} // 0x0000000187886614-0x0000000187886624
+		public CriAtomExTween(uint aisacId) {} // 0x0000000187886604-0x0000000187886614
+		public CriAtomExTween(ParameterType parameterType, uint targetId) {} // 0x0000000187886504-0x0000000187886604
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001856D391C-0x00000001856D3928
-		public void MoveTo(ushort durationMs, float value) {} // 0x00000001856D3A34-0x00000001856D3A40
-		public void MoveFrom(ushort durationMs, float value) {} // 0x00000001856D3A28-0x00000001856D3A34
-		public void Stop() {} // 0x00000001856D3A4C-0x00000001856D3A58
-		public void Reset() {} // 0x00000001856D3A40-0x00000001856D3A4C
-		~CriAtomExTween() {} // 0x00000001856D39B4-0x00000001856D3A28
-		protected virtual void Dispose(bool disposing) {} // 0x00000001856D3928-0x00000001856D39B4
-		private static extern IntPtr criAtomExTween_Create(ref Config config, IntPtr work, int work_size); // 0x00000001856D3B88-0x00000001856D3C1C
-		private static extern void criAtomExTween_Destroy(IntPtr tween); // 0x00000001856D3C1C-0x00000001856D3C94
-		private static extern float criAtomExTween_GetValue(IntPtr tween); // 0x00000001856D3C94-0x00000001856D3CC0
-		private static extern void criAtomExTween_MoveTo(IntPtr tween, ushort time_ms, float value); // 0x00000001856D3D44-0x00000001856D3D90
-		private static extern void criAtomExTween_MoveFrom(IntPtr tween, ushort time_ms, float value); // 0x00000001856D3CF8-0x00000001856D3D44
-		private static extern void criAtomExTween_Stop(IntPtr tween); // 0x00000001856D3DC4-0x00000001856D3E3C
-		private static extern void criAtomExTween_Reset(IntPtr tween); // 0x00000001856D3D90-0x00000001856D3DC4
-		private static extern bool criAtomExTween_IsActive(IntPtr tween); // 0x00000001856D3CC0-0x00000001856D3CF8
+		public override void Dispose() {} // 0x00000001878863B8-0x00000001878863C4
+		public void MoveTo(ushort durationMs, float value) {} // 0x00000001878864D0-0x00000001878864DC
+		public void MoveFrom(ushort durationMs, float value) {} // 0x00000001878864C4-0x00000001878864D0
+		public void Stop() {} // 0x00000001878864E8-0x00000001878864F4
+		public void Reset() {} // 0x00000001878864DC-0x00000001878864E8
+		~CriAtomExTween() {} // 0x0000000187886450-0x00000001878864C4
+		protected virtual void Dispose(bool disposing) {} // 0x00000001878863C4-0x0000000187886450
+		private static extern IntPtr criAtomExTween_Create(ref Config config, IntPtr work, int work_size); // 0x0000000187886624-0x00000001878866B8
+		private static extern void criAtomExTween_Destroy(IntPtr tween); // 0x00000001878866B8-0x0000000187886730
+		private static extern float criAtomExTween_GetValue(IntPtr tween); // 0x0000000187886730-0x000000018788675C
+		private static extern void criAtomExTween_MoveTo(IntPtr tween, ushort time_ms, float value); // 0x00000001878867E0-0x000000018788682C
+		private static extern void criAtomExTween_MoveFrom(IntPtr tween, ushort time_ms, float value); // 0x0000000187886794-0x00000001878867E0
+		private static extern void criAtomExTween_Stop(IntPtr tween); // 0x0000000187886860-0x00000001878868D8
+		private static extern void criAtomExTween_Reset(IntPtr tween); // 0x000000018788682C-0x0000000187886860
+		private static extern bool criAtomExTween_IsActive(IntPtr tween); // 0x000000018788675C-0x0000000187886794
 	}
 
-	public abstract class CriAtomExVoicePool : CriDisposable // TypeDefIndex: 54179
+	public abstract class CriAtomExVoicePool : CriDisposable // TypeDefIndex: 55172
 	{
 		// Fields
-		public const int StandardMemoryAsrVoicePoolId = 0; // Metadata: 0x01FD64F0
-		public const int StandardStreamingAsrVoicePoolId = 1; // Metadata: 0x01FD64F1
-		public const int StandardMemoryNsrVoicePoolId = 2; // Metadata: 0x01FD64F2
-		public const int StandardStreamingNsrVoicePoolId = 3; // Metadata: 0x01FD64F3
+		public const int StandardMemoryAsrVoicePoolId = 0; // Metadata: 0x0207BD1C
+		public const int StandardStreamingAsrVoicePoolId = 1; // Metadata: 0x0207BD1D
+		public const int StandardMemoryNsrVoicePoolId = 2; // Metadata: 0x0207BD1E
+		public const int StandardStreamingNsrVoicePoolId = 3; // Metadata: 0x0207BD1F
 		protected IntPtr _handle; // 0x20
 		protected uint _identifier; // 0x28
 		protected int _numVoices; // 0x2C
@@ -3166,14 +3198,14 @@ namespace CriWare
 		protected int _maxSamplingRate; // 0x34
 	
 		// Properties
-		public IntPtr nativeHandle { get; } // 0x0000000183D4EB40-0x0000000183D4EB50 
-		public uint identifier { get; } // 0x0000000183D4EB90-0x0000000183D4EBA0 
-		public int numVoices { get; } // 0x0000000183D4EDD0-0x0000000183D4EDE0 
-		public int maxChannels { get; } // 0x0000000183D4ED20-0x0000000183D4ED30 
-		public int maxSamplingRate { get; } // 0x0000000183D4EE00-0x0000000183D4EE10 
+		public IntPtr nativeHandle { get; } // 0x00000001813B31A0-0x00000001813B31B0 
+		public uint identifier { get; } // 0x0000000181C9AC80-0x0000000181C9AC90 
+		public int numVoices { get; } // 0x0000000185FB0630-0x0000000185FB0640 
+		public int maxChannels { get; } // 0x00000001813CFF60-0x00000001813CFF70 
+		public int maxSamplingRate { get; } // 0x0000000185FB07C0-0x0000000185FB07D0 
 	
 		// Nested types
-		public enum VoicePoolId // TypeDefIndex: 54170
+		public enum VoicePoolId // TypeDefIndex: 55163
 		{
 			StandardMemory = 0,
 			StandardStreaming = 1,
@@ -3181,7 +3213,7 @@ namespace CriWare
 			HcaMxStreaming = 5
 		}
 	
-		public enum PitchShifterMode // TypeDefIndex: 54171
+		public enum PitchShifterMode // TypeDefIndex: 55164
 		{
 			Music = 0,
 			Vocal = 1,
@@ -3189,14 +3221,14 @@ namespace CriWare
 			Speech = 3
 		}
 	
-		public struct UsedVoicesInfo // TypeDefIndex: 54172
+		public struct UsedVoicesInfo // TypeDefIndex: 55165
 		{
 			// Fields
 			public int numUsedVoices; // 0x00
 			public int numPoolVoices; // 0x04
 		}
 	
-		protected struct PlayerConfig // TypeDefIndex: 54173
+		protected struct PlayerConfig // TypeDefIndex: 55166
 		{
 			// Fields
 			public int maxChannels; // 0x00
@@ -3207,7 +3239,7 @@ namespace CriWare
 			private IntPtr context; // 0x18
 		}
 	
-		protected struct VoicePoolConfig // TypeDefIndex: 54174
+		protected struct VoicePoolConfig // TypeDefIndex: 55167
 		{
 			// Fields
 			public uint identifier; // 0x00
@@ -3215,7 +3247,7 @@ namespace CriWare
 			public PlayerConfig playerConfig; // 0x08
 		}
 	
-		private struct PitchShifterConfig // TypeDefIndex: 54175
+		private struct PitchShifterConfig // TypeDefIndex: 55168
 		{
 			// Fields
 			public int mode; // 0x00
@@ -3223,7 +3255,7 @@ namespace CriWare
 			public int overlapTimes; // 0x08
 		}
 	
-		private struct ExPitchShifterConfig // TypeDefIndex: 54176
+		private struct ExPitchShifterConfig // TypeDefIndex: 55169
 		{
 			// Fields
 			public int numDsp; // 0x00
@@ -3232,13 +3264,13 @@ namespace CriWare
 			public PitchShifterConfig config; // 0x0C
 		}
 	
-		private struct TimeStretchConfig // TypeDefIndex: 54177
+		private struct TimeStretchConfig // TypeDefIndex: 55170
 		{
 			// Fields
 			public int reserved; // 0x00
 		}
 	
-		private struct ExTimeStretchConfig // TypeDefIndex: 54178
+		private struct ExTimeStretchConfig // TypeDefIndex: 55171
 		{
 			// Fields
 			public int numDsp; // 0x00
@@ -3248,54 +3280,54 @@ namespace CriWare
 		}
 	
 		// Constructors
-		protected CriAtomExVoicePool() {} // 0x00000001856D4068-0x00000001856D4078
+		protected CriAtomExVoicePool() {} // 0x0000000187886B04-0x0000000187886B14
 	
 		// Methods
-		public static UsedVoicesInfo GetNumUsedVoices(VoicePoolId voicePoolId) => default; // 0x00000001856D4008-0x00000001856D4034
-		public override void Dispose() {} // 0x00000001856D3F8C-0x00000001856D4008
-		public UsedVoicesInfo GetNumUsedVoices() => default; // 0x00000001856D4034-0x00000001856D4068
-		public void AttachDspTimeStretch() {} // 0x00000001856D3EA0-0x00000001856D3EE4
-		public void AttachDspPitchShifter(PitchShifterMode mode = PitchShifterMode.Music /* Metadata: 0x01FD64EC */, int windosSize = 1024 /* Metadata: 0x01FD64ED */, int overlapTimes = 4 /* Metadata: 0x01FD64EF */) {} // 0x00000001856D3E54-0x00000001856D3EA0
-		public void DetachDsp() {} // 0x00000001856D3F78-0x00000001856D3F8C
-		~CriAtomExVoicePool() {} // 0x00000001856BDD0C-0x00000001856BDD80
-		private static extern void CRIWARED389B244(int voice_pool_id, out int num_used_voices, out int num_pool_voices); // 0x00000001856D3EE4-0x00000001856D3F78
-		private static extern void criAtomExVoicePool_GetNumUsedVoices(IntPtr pool, out int num_used_voices, out int num_pool_voices); // 0x00000001856D4228-0x00000001856D42BC
-		public static extern void criAtomExVoicePool_Free(IntPtr pool); // 0x00000001856D41F4-0x00000001856D4228
-		private static extern void criAtomExVoicePool_AttachDspTimeStretch(IntPtr pool, ref ExTimeStretchConfig config, IntPtr work, int work_size); // 0x00000001856D411C-0x00000001856D41C0
-		private static extern void criAtomExVoicePool_AttachDspPitchShifter(IntPtr pool, ref ExPitchShifterConfig config, IntPtr work, int work_size); // 0x00000001856D4078-0x00000001856D411C
-		private static extern void criAtomExVoicePool_DetachDsp(IntPtr pool); // 0x00000001856D41C0-0x00000001856D41F4
+		public static UsedVoicesInfo GetNumUsedVoices(VoicePoolId voicePoolId) => default; // 0x0000000187886AA4-0x0000000187886AD0
+		public override void Dispose() {} // 0x0000000187886A28-0x0000000187886AA4
+		public UsedVoicesInfo GetNumUsedVoices() => default; // 0x0000000187886AD0-0x0000000187886B04
+		public void AttachDspTimeStretch() {} // 0x000000018788693C-0x0000000187886980
+		public void AttachDspPitchShifter(PitchShifterMode mode = PitchShifterMode.Music /* Metadata: 0x0207BD18 */, int windosSize = 1024 /* Metadata: 0x0207BD19 */, int overlapTimes = 4 /* Metadata: 0x0207BD1B */) {} // 0x00000001878868F0-0x000000018788693C
+		public void DetachDsp() {} // 0x0000000187886A14-0x0000000187886A28
+		~CriAtomExVoicePool() {} // 0x00000001878707A8-0x000000018787081C
+		private static extern void CRIWARED389B244(int voice_pool_id, out int num_used_voices, out int num_pool_voices); // 0x0000000187886980-0x0000000187886A14
+		private static extern void criAtomExVoicePool_GetNumUsedVoices(IntPtr pool, out int num_used_voices, out int num_pool_voices); // 0x0000000187886CC4-0x0000000187886D58
+		public static extern void criAtomExVoicePool_Free(IntPtr pool); // 0x0000000187886C90-0x0000000187886CC4
+		private static extern void criAtomExVoicePool_AttachDspTimeStretch(IntPtr pool, ref ExTimeStretchConfig config, IntPtr work, int work_size); // 0x0000000187886BB8-0x0000000187886C5C
+		private static extern void criAtomExVoicePool_AttachDspPitchShifter(IntPtr pool, ref ExPitchShifterConfig config, IntPtr work, int work_size); // 0x0000000187886B14-0x0000000187886BB8
+		private static extern void criAtomExVoicePool_DetachDsp(IntPtr pool); // 0x0000000187886C5C-0x0000000187886C90
 	}
 
-	public class CriAtomExStandardVoicePool : CriAtomExVoicePool // TypeDefIndex: 54180
+	public class CriAtomExStandardVoicePool : CriAtomExVoicePool // TypeDefIndex: 55173
 	{
 		// Constructors
 		public CriAtomExStandardVoicePool() {} // Dummy constructor
-		public CriAtomExStandardVoicePool(int numVoices, int maxChannels, int maxSamplingRate, bool streamingFlag, uint identifier = 0 /* Metadata: 0x01FD64FC */) {} // 0x00000001856D36EC-0x00000001856D3818
+		public CriAtomExStandardVoicePool(int numVoices, int maxChannels, int maxSamplingRate, bool streamingFlag, uint identifier = 0 /* Metadata: 0x0207BD28 */) {} // 0x0000000187886188-0x00000001878862B4
 	
 		// Methods
-		private static extern IntPtr criAtomExVoicePool_AllocateStandardVoicePool(ref VoicePoolConfig config, IntPtr work, int work_size); // 0x00000001856D3818-0x00000001856D391C
+		private static extern IntPtr criAtomExVoicePool_AllocateStandardVoicePool(ref VoicePoolConfig config, IntPtr work, int work_size); // 0x00000001878862B4-0x00000001878863B8
 	}
 
-	public class CriAtomExWaveVoicePool : CriAtomExVoicePool // TypeDefIndex: 54181
+	public class CriAtomExWaveVoicePool : CriAtomExVoicePool // TypeDefIndex: 55174
 	{
 		// Constructors
 		public CriAtomExWaveVoicePool() {} // Dummy constructor
-		public CriAtomExWaveVoicePool(int numVoices, int maxChannels, int maxSamplingRate, bool streamingFlag, uint identifier = 0 /* Metadata: 0x01FD64FD */) {} // 0x00000001856D42BC-0x00000001856D43E8
+		public CriAtomExWaveVoicePool(int numVoices, int maxChannels, int maxSamplingRate, bool streamingFlag, uint identifier = 0 /* Metadata: 0x0207BD29 */) {} // 0x0000000187886D58-0x0000000187886E84
 	
 		// Methods
-		private static extern IntPtr criAtomExVoicePool_AllocateWaveVoicePool(ref VoicePoolConfig config, IntPtr work, int work_size); // 0x00000001856D43E8-0x00000001856D44EC
+		private static extern IntPtr criAtomExVoicePool_AllocateWaveVoicePool(ref VoicePoolConfig config, IntPtr work, int work_size); // 0x0000000187886E84-0x0000000187886F88
 	}
 
-	public class CriAtomExRawPcmVoicePool : CriAtomExVoicePool // TypeDefIndex: 54185
+	public class CriAtomExRawPcmVoicePool : CriAtomExVoicePool // TypeDefIndex: 55178
 	{
 		// Nested types
-		public enum RawPcmFormat // TypeDefIndex: 54182
+		public enum RawPcmFormat // TypeDefIndex: 55175
 		{
 			Sint16 = 0,
 			Float32 = 1
 		}
 	
-		protected struct RawPcmPlayerConfig // TypeDefIndex: 54183
+		protected struct RawPcmPlayerConfig // TypeDefIndex: 55176
 		{
 			// Fields
 			public RawPcmFormat format; // 0x00
@@ -3306,7 +3338,7 @@ namespace CriWare
 			private IntPtr context; // 0x18
 		}
 	
-		protected struct RawPcmVoicePoolConfig // TypeDefIndex: 54184
+		protected struct RawPcmVoicePoolConfig // TypeDefIndex: 55177
 		{
 			// Fields
 			public uint identifier; // 0x00
@@ -3316,55 +3348,87 @@ namespace CriWare
 	
 		// Constructors
 		public CriAtomExRawPcmVoicePool() {} // Dummy constructor
-		public CriAtomExRawPcmVoicePool(int numVoices, int maxChannels, int maxSamplingRate, RawPcmFormat format, uint identifier = 0 /* Metadata: 0x01FD64FE */) {} // 0x00000001856D3128-0x00000001856D3250
+		public CriAtomExRawPcmVoicePool(int numVoices, int maxChannels, int maxSamplingRate, RawPcmFormat format, uint identifier = 0 /* Metadata: 0x0207BD2A */) {} // 0x0000000187885BC4-0x0000000187885CEC
 	
 		// Methods
-		private static extern IntPtr criAtomExVoicePool_AllocateRawPcmVoicePool(ref RawPcmVoicePoolConfig config, IntPtr work, int work_size); // 0x00000001856D3250-0x00000001856D32E0
+		private static extern IntPtr criAtomExVoicePool_AllocateRawPcmVoicePool(ref RawPcmVoicePoolConfig config, IntPtr work, int work_size); // 0x0000000187885CEC-0x0000000187885D7C
 	}
 
-	public class CriAudioReadStream // TypeDefIndex: 54189
+	public class CriAudioReadStream // TypeDefIndex: 55182
 	{
 		// Fields
 		private InternalDelegate internalDelegate; // 0x10
+		private IntPtr _callbackFunction_k__BackingField; // 0x18
+		private IntPtr _callbackPointer_k__BackingField; // 0x20
 	
 		// Properties
-		public IntPtr callbackFunction { get; private set; } // 0x0000000181041090-0x00000001810410A0 0x0000000183D4EC10-0x0000000183D4EC20
-		public IntPtr callbackPointer { get; private set; } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000183D4ED30-0x0000000183D4ED40
+		public IntPtr callbackFunction { get; private set; } // 0x0000000187893D6C-0x0000000187893E40 0x0000000181B59400-0x0000000181B59410
+		public IntPtr callbackPointer { get; private set; } // 0x0000000187893C6C-0x0000000187893CEC 0x0000000186477E54-0x0000000186477F84
 	
 		// Nested types
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		private delegate uint InternalDelegate(IntPtr cbobj, IntPtr data, uint numSamples); // TypeDefIndex: 54186; 0x0000000181035ED0-0x0000000181035EF0
+		private delegate uint InternalDelegate(IntPtr cbobj, IntPtr data, uint numSamples); // TypeDefIndex: 55179; 0x0000000181448AC0-0x0000000181448AD0
 	
-		public delegate uint Delegate(float[][] buffer, uint numSamples); // TypeDefIndex: 54187; 0x0000000181165340-0x0000000181165350
+		public delegate uint Delegate(float[][] buffer, uint numSamples); // TypeDefIndex: 55180; 0x0000000187886F88-0x0000000187887108
+	
+		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 55181
+		{
+			// Fields
+			public int bufferSize; // 0x10
+			public CriWare.CriAudioReadStream.Delegate callback; // 0x18
+			public int numChannels; // 0x20
+			public float[][] buffer; // 0x28
+	
+			// Constructors
+			public __c__DisplayClass12_0() {} // 0x000000018789426C-0x0000000187894310
+	
+			// Methods
+			internal uint _.ctor_b__0(IntPtr cbobj, IntPtr data, uint numSamples) => default; // 0x0000000186477E54-0x0000000186477F84
+		}
 	
 		// Constructors
 		public CriAudioReadStream() {} // Dummy constructor
-		public CriAudioReadStream(IntPtr callbackFunction, IntPtr callbackPointer) {} // 0x0000000183D51C80-0x0000000183D51C90
-		public CriAudioReadStream(Delegate callback, int numChannels, int bufferSize = 256 /* Metadata: 0x01FD6501 */) {} // 0x00000001856D44EC-0x00000001856D466C
+		public CriAudioReadStream(IntPtr callbackFunction, IntPtr callbackPointer) {} // 0x0000000185492010-0x0000000185492020
+		public CriAudioReadStream(Delegate callback, int numChannels, int bufferSize = 256 /* Metadata: 0x0207BD2D */) {} // 0x0000000187894E4C-0x0000000187894F3C
 	}
 
-	public class CriAudioWriteStream // TypeDefIndex: 54193
+	public class CriAudioWriteStream // TypeDefIndex: 55186
 	{
 		// Fields
 		private InternalDelegate internalDelegate; // 0x10
+		private IntPtr _callbackFunction_k__BackingField; // 0x18
+		private IntPtr _callbackPointer_k__BackingField; // 0x20
 	
 		// Properties
-		public IntPtr callbackFunction { get; private set; } // 0x0000000181041090-0x00000001810410A0 0x0000000183D4EC10-0x0000000183D4EC20
-		public IntPtr callbackPointer { get; private set; } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000183D4ED30-0x0000000183D4ED40
+		public IntPtr callbackFunction { get; private set; } // 0x0000000187893D6C-0x0000000187893E40 0x0000000181B59400-0x0000000181B59410
+		public IntPtr callbackPointer { get; private set; } // 0x0000000187893CEC-0x0000000187893D6C 0x0000000186477E54-0x0000000186477F84
 	
 		// Nested types
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		private delegate uint InternalDelegate(IntPtr cbobj, IntPtr data, uint numSamples); // TypeDefIndex: 54190; 0x0000000181035ED0-0x0000000181035EF0
+		private delegate uint InternalDelegate(IntPtr cbobj, IntPtr data, uint numSamples); // TypeDefIndex: 55183; 0x0000000181448AC0-0x0000000181448AD0
 	
-		public delegate uint Delegate(float[][] buffer, uint numSamples); // TypeDefIndex: 54191; 0x0000000181165340-0x0000000181165350
+		public delegate uint Delegate(float[][] buffer, uint numSamples); // TypeDefIndex: 55184; 0x0000000187887108-0x0000000187887288
+	
+		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 55185
+		{
+			// Fields
+			public int bufferSize; // 0x10
+			public int numChannels; // 0x14
+			public CriWare.CriAudioWriteStream.Delegate callback; // 0x18
+			public float[][] buffer; // 0x20
+	
+			// Constructors
+			public __c__DisplayClass12_0() {} // 0x00000001878941C8-0x000000018789426C
+	
+			// Methods
+			internal uint _.ctor_b__0(IntPtr cbobj, IntPtr data, uint numSamples) => default; // 0x0000000186477E54-0x0000000186477F84
+		}
 	
 		// Constructors
 		public CriAudioWriteStream() {} // Dummy constructor
-		public CriAudioWriteStream(IntPtr callbackFunction, IntPtr callbackPointer) {} // 0x0000000183D51C80-0x0000000183D51C90
-		public CriAudioWriteStream(Delegate callback, int numChannels, int bufferSize = 256 /* Metadata: 0x01FD6503 */) {} // 0x00000001856D466C-0x00000001856D47EC
+		public CriAudioWriteStream(IntPtr callbackFunction, IntPtr callbackPointer) {} // 0x0000000185492010-0x0000000185492020
+		public CriAudioWriteStream(Delegate callback, int numChannels, int bufferSize = 256 /* Metadata: 0x0207BD2F */) {} // 0x0000000187894D70-0x0000000187894E4C
 	}
 
-	public class CriFsLoader : CriDisposable // TypeDefIndex: 54195
+	public class CriFsLoader : CriDisposable // TypeDefIndex: 55188
 	{
 		// Fields
 		private IntPtr handle; // 0x20
@@ -3372,7 +3436,7 @@ namespace CriWare
 		private GCHandle srcGch; // 0x30
 	
 		// Nested types
-		public enum Status // TypeDefIndex: 54194
+		public enum Status // TypeDefIndex: 55187
 		{
 			Stop = 0,
 			Loading = 1,
@@ -3381,33 +3445,33 @@ namespace CriWare
 		}
 	
 		// Constructors
-		public CriFsLoader() {} // 0x00000001856D8398-0x00000001856D84C8
+		public CriFsLoader() {} // 0x000000018788AE34-0x000000018788AF64
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001856D7F8C-0x00000001856D7FDC
-		private void Dispose(bool disposing) {} // 0x00000001856D7EFC-0x00000001856D7F8C
-		public void Load(CriFsBinder binder, string path, long fileOffset, long loadSize, byte[] buffer) {} // 0x00000001856D82BC-0x00000001856D836C
-		public void LoadById(CriFsBinder binder, int id, long fileOffset, long loadSize, byte[] buffer) {} // 0x00000001856D80AC-0x00000001856D815C
-		public void LoadWithoutDecompression(CriFsBinder binder, string path, long fileOffset, long loadSize, byte[] buffer) {} // 0x00000001856D820C-0x00000001856D82BC
-		public void LoadWithoutDecompressionById(CriFsBinder binder, int id, long fileOffset, long loadSize, byte[] buffer) {} // 0x00000001856D815C-0x00000001856D820C
-		public void DecompressData(long srcSize, byte[] srcBuffer, long dstSize, byte[] dstBuffer) {} // 0x00000001856D7E58-0x00000001856D7EFC
-		public void Stop() {} // 0x00000001856D8384-0x00000001856D8398
-		public Status GetStatus() => default; // 0x00000001856D8050-0x00000001856D80AC
-		public void SetReadUnitSize(int unit_size) {} // 0x00000001856D836C-0x00000001856D8384
-		~CriFsLoader() {} // 0x00000001856D7FDC-0x00000001856D8050
-		private static extern int criFsLoader_Create(out IntPtr loader); // 0x00000001856D84C8-0x00000001856D8540
-		private static extern int criFsLoader_Destroy(IntPtr loader); // 0x00000001856D85E4-0x00000001856D8618
-		private static extern int criFsLoader_Load(IntPtr loader, IntPtr binder, string path, long offset, long load_size, IntPtr buffer, long buffer_size); // 0x00000001856D88CC-0x00000001856D89B4
-		private static extern int criFsLoader_LoadById(IntPtr loader, IntPtr binder, int id, long offset, long load_size, IntPtr buffer, long buffer_size); // 0x00000001856D869C-0x00000001856D8740
-		private static extern int criFsLoader_Stop(IntPtr loader); // 0x00000001856D8A38-0x00000001856D8AB0
-		private static extern int criFsLoader_GetStatus(IntPtr loader, out Status status); // 0x00000001856D8618-0x00000001856D869C
-		private static extern int criFsLoader_SetReadUnitSize(IntPtr loader, long unit_size); // 0x00000001856D89B4-0x00000001856D8A38
-		private static extern int criFsLoader_LoadWithoutDecompression(IntPtr loader, IntPtr binder, string path, long offset, long load_size, IntPtr buffer, long buffer_size); // 0x00000001856D87E4-0x00000001856D88CC
-		private static extern int criFsLoader_LoadWithoutDecompressionById(IntPtr loader, IntPtr binder, int id, long offset, long load_size, IntPtr buffer, long buffer_size); // 0x00000001856D8740-0x00000001856D87E4
-		private static extern int criFsLoader_DecompressData(IntPtr loader, IntPtr src, long src_size, IntPtr dst, long dst_size); // 0x00000001856D8540-0x00000001856D85E4
+		public override void Dispose() {} // 0x000000018788AA28-0x000000018788AA78
+		private void Dispose(bool disposing) {} // 0x000000018788A998-0x000000018788AA28
+		public void Load(CriFsBinder binder, string path, long fileOffset, long loadSize, byte[] buffer) {} // 0x000000018788AD58-0x000000018788AE08
+		public void LoadById(CriFsBinder binder, int id, long fileOffset, long loadSize, byte[] buffer) {} // 0x000000018788AB48-0x000000018788ABF8
+		public void LoadWithoutDecompression(CriFsBinder binder, string path, long fileOffset, long loadSize, byte[] buffer) {} // 0x000000018788ACA8-0x000000018788AD58
+		public void LoadWithoutDecompressionById(CriFsBinder binder, int id, long fileOffset, long loadSize, byte[] buffer) {} // 0x000000018788ABF8-0x000000018788ACA8
+		public void DecompressData(long srcSize, byte[] srcBuffer, long dstSize, byte[] dstBuffer) {} // 0x000000018788A8F4-0x000000018788A998
+		public void Stop() {} // 0x000000018788AE20-0x000000018788AE34
+		public Status GetStatus() => default; // 0x000000018788AAEC-0x000000018788AB48
+		public void SetReadUnitSize(int unit_size) {} // 0x000000018788AE08-0x000000018788AE20
+		~CriFsLoader() {} // 0x000000018788AA78-0x000000018788AAEC
+		private static extern int criFsLoader_Create(out IntPtr loader); // 0x000000018788AF64-0x000000018788AFDC
+		private static extern int criFsLoader_Destroy(IntPtr loader); // 0x000000018788B080-0x000000018788B0B4
+		private static extern int criFsLoader_Load(IntPtr loader, IntPtr binder, string path, long offset, long load_size, IntPtr buffer, long buffer_size); // 0x000000018788B368-0x000000018788B450
+		private static extern int criFsLoader_LoadById(IntPtr loader, IntPtr binder, int id, long offset, long load_size, IntPtr buffer, long buffer_size); // 0x000000018788B138-0x000000018788B1DC
+		private static extern int criFsLoader_Stop(IntPtr loader); // 0x000000018788B4D4-0x000000018788B54C
+		private static extern int criFsLoader_GetStatus(IntPtr loader, out Status status); // 0x000000018788B0B4-0x000000018788B138
+		private static extern int criFsLoader_SetReadUnitSize(IntPtr loader, long unit_size); // 0x000000018788B450-0x000000018788B4D4
+		private static extern int criFsLoader_LoadWithoutDecompression(IntPtr loader, IntPtr binder, string path, long offset, long load_size, IntPtr buffer, long buffer_size); // 0x000000018788B280-0x000000018788B368
+		private static extern int criFsLoader_LoadWithoutDecompressionById(IntPtr loader, IntPtr binder, int id, long offset, long load_size, IntPtr buffer, long buffer_size); // 0x000000018788B1DC-0x000000018788B280
+		private static extern int criFsLoader_DecompressData(IntPtr loader, IntPtr src, long src_size, IntPtr dst, long dst_size); // 0x000000018788AFDC-0x000000018788B080
 	}
 
-	public class CriFsInstaller : CriDisposable // TypeDefIndex: 54198
+	public class CriFsInstaller : CriDisposable // TypeDefIndex: 55191
 	{
 		// Fields
 		private byte[] installBuffer; // 0x20
@@ -3415,7 +3479,7 @@ namespace CriWare
 		private IntPtr handle; // 0x30
 	
 		// Nested types
-		public enum Status // TypeDefIndex: 54196
+		public enum Status // TypeDefIndex: 55189
 		{
 			Stop = 0,
 			Busy = 1,
@@ -3423,42 +3487,42 @@ namespace CriWare
 			Error = 3
 		}
 	
-		private enum CopyPolicy // TypeDefIndex: 54197
+		private enum CopyPolicy // TypeDefIndex: 55190
 		{
 			Always = 0
 		}
 	
 		// Constructors
-		public CriFsInstaller() {} // 0x00000001856D7324-0x00000001856D7458
+		public CriFsInstaller() {} // 0x0000000187889DC0-0x0000000187889EF4
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001856D715C-0x00000001856D71AC
-		private void Dispose(bool disposing) {} // 0x00000001856D71AC-0x00000001856D7238
-		public void Copy(CriFsBinder binder, string srcPath, string dstPath, int installBufferSize) {} // 0x00000001856D6F2C-0x00000001856D715C
-		public void Stop() {} // 0x00000001856D7310-0x00000001856D7324
-		public Status GetStatus() => default; // 0x00000001856D72E4-0x00000001856D7310
-		public float GetProgress() => default; // 0x00000001856D72B4-0x00000001856D72E4
-		public static void ExecuteMain() {} // 0x00000001856D7238-0x00000001856D7240
-		~CriFsInstaller() {} // 0x00000001856D7240-0x00000001856D72B4
-		private static extern int criFsInstaller_ExecuteMain(); // 0x00000001856D7608-0x00000001856D7634
-		private static extern int criFsInstaller_Create(out IntPtr installer, CopyPolicy option); // 0x00000001856D7550-0x00000001856D75D4
-		private static extern int criFsInstaller_Destroy(IntPtr installer); // 0x00000001856D75D4-0x00000001856D7608
-		private static extern int criFsInstaller_Copy(IntPtr installer, IntPtr binder, string src_path, string dst_path, IntPtr buffer, long buffer_size); // 0x00000001856D7458-0x00000001856D7550
-		private static extern int criFsInstaller_Stop(IntPtr installer); // 0x00000001856D773C-0x00000001856D7770
-		private static extern int criFsInstaller_GetStatus(IntPtr installer, out Status status); // 0x00000001856D76B8-0x00000001856D773C
-		private static extern int criFsInstaller_GetProgress(IntPtr installer, out float progress); // 0x00000001856D7634-0x00000001856D76B8
+		public override void Dispose() {} // 0x0000000187889BF8-0x0000000187889C48
+		private void Dispose(bool disposing) {} // 0x0000000187889C48-0x0000000187889CD4
+		public void Copy(CriFsBinder binder, string srcPath, string dstPath, int installBufferSize) {} // 0x00000001878899C8-0x0000000187889BF8
+		public void Stop() {} // 0x0000000187889DAC-0x0000000187889DC0
+		public Status GetStatus() => default; // 0x0000000187889D80-0x0000000187889DAC
+		public float GetProgress() => default; // 0x0000000187889D50-0x0000000187889D80
+		public static void ExecuteMain() {} // 0x0000000187889CD4-0x0000000187889CDC
+		~CriFsInstaller() {} // 0x0000000187889CDC-0x0000000187889D50
+		private static extern int criFsInstaller_ExecuteMain(); // 0x000000018788A0A4-0x000000018788A0D0
+		private static extern int criFsInstaller_Create(out IntPtr installer, CopyPolicy option); // 0x0000000187889FEC-0x000000018788A070
+		private static extern int criFsInstaller_Destroy(IntPtr installer); // 0x000000018788A070-0x000000018788A0A4
+		private static extern int criFsInstaller_Copy(IntPtr installer, IntPtr binder, string src_path, string dst_path, IntPtr buffer, long buffer_size); // 0x0000000187889EF4-0x0000000187889FEC
+		private static extern int criFsInstaller_Stop(IntPtr installer); // 0x000000018788A1D8-0x000000018788A20C
+		private static extern int criFsInstaller_GetStatus(IntPtr installer, out Status status); // 0x000000018788A154-0x000000018788A1D8
+		private static extern int criFsInstaller_GetProgress(IntPtr installer, out float progress); // 0x000000018788A0D0-0x000000018788A154
 	}
 
-	public class CriFsBinder : CriDisposable // TypeDefIndex: 54201
+	public class CriFsBinder : CriDisposable // TypeDefIndex: 55194
 	{
 		// Fields
 		private IntPtr handle; // 0x20
 	
 		// Properties
-		public IntPtr nativeHandle { get => default; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public IntPtr nativeHandle { get => default; } // 0x00000001878883F8-0x000000018788846C 
 	
 		// Nested types
-		public enum Status // TypeDefIndex: 54199
+		public enum Status // TypeDefIndex: 55192
 		{
 			None = 0,
 			Analyze = 1,
@@ -3469,7 +3533,7 @@ namespace CriWare
 			Error = 6
 		}
 	
-		public struct ContentsFileInfo // TypeDefIndex: 54200
+		public struct ContentsFileInfo // TypeDefIndex: 55193
 		{
 			// Fields
 			public readonly string directory; // 0x00
@@ -3489,84 +3553,112 @@ namespace CriWare
 				offset = default;
 				fileId = default;
 				userStr = default;
-			} // 0x00000001856CDC6C-0x00000001856CDD84
+			} // 0x0000000187888D0C-0x0000000187888E3C
 		}
 	
 		// Constructors
-		public CriFsBinder() {} // 0x00000001856D6270-0x00000001856D63A0
+		public CriFsBinder() {} // 0x0000000187888350-0x00000001878883A0
 	
 		// Methods
-		public override void Dispose() {} // 0x00000001856D58B4-0x00000001856D5904
-		private void Dispose(bool disposing) {} // 0x00000001856D5904-0x00000001856D595C
-		public uint BindCpk(CriFsBinder srcBinder, string path) => default; // 0x00000001856D570C-0x00000001856D5754
-		public uint BindDirectory(CriFsBinder srcBinder, string path) => default; // 0x00000001856D5754-0x00000001856D579C
-		public uint BindFile(CriFsBinder srcBinder, string path) => default; // 0x00000001856D57FC-0x00000001856D583C
-		public uint BindFileSection(CriFsBinder srcBinder, string path, ulong offset, int size, string sectionName) => default; // 0x00000001856D579C-0x00000001856D57FC
-		public static void Unbind(uint bindId) {} // 0x00000001856D6224-0x00000001856D6270
-		public static Status GetStatus(uint bindId) => default; // 0x00000001856D6170-0x00000001856D61CC
-		public long GetFileSize(string path) => default; // 0x00000001856D612C-0x00000001856D6168
-		public long GetFileSize(int id) => default; // 0x00000001856D60F0-0x00000001856D612C
+		public override void Dispose() {} // 0x00000001878883A0-0x00000001878883F8
+		private void Dispose(bool disposing) {} // 0x00000001878881A8-0x00000001878881F0
+		public uint BindCpk(CriFsBinder srcBinder, string path) => default; // 0x00000001878881F0-0x0000000187888238
+		public uint BindDirectory(CriFsBinder srcBinder, string path) => default; // 0x0000000187888298-0x00000001878882D8
+		public uint BindFile(CriFsBinder srcBinder, string path) => default; // 0x0000000187888238-0x0000000187888298
+		public uint BindFileSection(CriFsBinder srcBinder, string path, ulong offset, int size, string sectionName) => default; // 0x0000000187888CC0-0x0000000187888D0C
+		public static void Unbind(uint bindId) {} // 0x0000000187888C0C-0x0000000187888C68
+		public static Status GetStatus(uint bindId) => default; // 0x0000000187888BC8-0x0000000187888C04
+		public long GetFileSize(string path) => default; // 0x0000000187888B8C-0x0000000187888BC8
+		public long GetFileSize(int id) => default; // 0x00000001878887AC-0x000000018788899C
 		public bool GetContentsFileInfo(string path, out ContentsFileInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856D5D10-0x00000001856D5F00
+		} // 0x000000018788899C-0x0000000187888B8C
 		public bool GetContentsFileInfo(int id, out ContentsFileInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856D5F00-0x00000001856D60F0
+		} // 0x000000018788846C-0x00000001878887AC
 		public static bool GetContentsFileInfoByIndex(uint bindId, int index, int numFiles, out ContentsFileInfo[] info) {
 			info = default;
 			return default;
-		} // 0x00000001856D59D0-0x00000001856D5D10
-		public static int GetNumContentsFiles(uint bindId) => default; // 0x00000001856D6168-0x00000001856D6170
-		public static void SetPriority(uint bindId, int priority) {} // 0x00000001856D61CC-0x00000001856D6224
-		~CriFsBinder() {} // 0x00000001856D595C-0x00000001856D59D0
-		private static extern uint criFsBinder_Create(out IntPtr binder); // 0x00000001856D6748-0x00000001856D67C0
-		private static extern uint criFsBinder_Destroy(IntPtr binder); // 0x00000001856D67C0-0x00000001856D6838
-		private static extern uint criFsBinder_BindCpk(IntPtr binder, IntPtr srcBinder, string path, IntPtr work, int worksize, out uint bindId); // 0x00000001856D63A0-0x00000001856D6478
-		private static extern uint criFsBinder_BindDirectory(IntPtr binder, IntPtr srcBinder, string path, IntPtr work, int worksize, out uint bindId); // 0x00000001856D6478-0x00000001856D6550
-		private static extern uint criFsBinder_BindFile(IntPtr binder, IntPtr srcBinder, string path, IntPtr work, int worksize, out uint bindId); // 0x00000001856D6670-0x00000001856D6748
-		private static extern uint criFsBinder_BindFileSection(IntPtr binder, IntPtr srcBinder, string path, ulong offset, int size, string sectionName, IntPtr work, int worksize, out uint bindId); // 0x00000001856D6550-0x00000001856D6670
-		private static extern int criFsBinder_Unbind(uint bindId); // 0x00000001856D6C64-0x00000001856D6CDC
-		private static extern int criFsBinder_GetStatus(uint bindId, out Status status); // 0x00000001856D6B60-0x00000001856D6BE4
-		private static extern int criFsBinder_GetFileSize(IntPtr binder, string path, out long size); // 0x00000001856D6AB0-0x00000001856D6B60
-		private static extern int criFsBinder_GetFileSizeById(IntPtr binder, int id, out long size); // 0x00000001856D6A1C-0x00000001856D6AB0
-		private static extern int criFsBinder_SetPriority(uint bindId, int priority); // 0x00000001856D6BE4-0x00000001856D6C64
-		private static extern int criFsBinder_GetContentsFileInfo(IntPtr binder, string path, IntPtr info); // 0x00000001856D696C-0x00000001856D6A1C
-		private static extern int criFsBinder_GetContentsFileInfoById(IntPtr binder, int id, IntPtr info); // 0x00000001856D6838-0x00000001856D68CC
-		private static extern int criFsBinder_GetContentsFileInfoByIndex(uint id, int index, IntPtr info, int num); // 0x00000001856D68CC-0x00000001856D696C
-		private static extern int CRIWAREF02BA103(uint id); // 0x00000001856D583C-0x00000001856D58B4
+		} // 0x0000000187888C04-0x0000000187888C0C
+		public static int GetNumContentsFiles(uint bindId) => default; // 0x0000000187888C68-0x0000000187888CC0
+		public static void SetPriority(uint bindId, int priority) {} // 0x00000001813B31A0-0x00000001813B31B0
+		~CriFsBinder() {} // 0x00000001878891E4-0x000000018788925C
+		private static extern uint criFsBinder_Create(out IntPtr binder); // 0x000000018788925C-0x00000001878892D4
+		private static extern uint criFsBinder_Destroy(IntPtr binder); // 0x0000000187888E3C-0x0000000187888F14
+		private static extern uint criFsBinder_BindCpk(IntPtr binder, IntPtr srcBinder, string path, IntPtr work, int worksize, out uint bindId); // 0x0000000187888F14-0x0000000187888FEC
+		private static extern uint criFsBinder_BindDirectory(IntPtr binder, IntPtr srcBinder, string path, IntPtr work, int worksize, out uint bindId); // 0x000000018788910C-0x00000001878891E4
+		private static extern uint criFsBinder_BindFile(IntPtr binder, IntPtr srcBinder, string path, IntPtr work, int worksize, out uint bindId); // 0x0000000187888FEC-0x000000018788910C
+		private static extern uint criFsBinder_BindFileSection(IntPtr binder, IntPtr srcBinder, string path, ulong offset, int size, string sectionName, IntPtr work, int worksize, out uint bindId); // 0x0000000187889700-0x0000000187889778
+		private static extern int criFsBinder_Unbind(uint bindId); // 0x00000001878895FC-0x0000000187889680
+		private static extern int criFsBinder_GetStatus(uint bindId, out Status status); // 0x000000018788954C-0x00000001878895FC
+		private static extern int criFsBinder_GetFileSize(IntPtr binder, string path, out long size); // 0x00000001878894B8-0x000000018788954C
+		private static extern int criFsBinder_GetFileSizeById(IntPtr binder, int id, out long size); // 0x0000000187889680-0x0000000187889700
+		private static extern int criFsBinder_SetPriority(uint bindId, int priority); // 0x0000000187889408-0x00000001878894B8
+		private static extern int criFsBinder_GetContentsFileInfo(IntPtr binder, string path, IntPtr info); // 0x00000001878892D4-0x0000000187889368
+		private static extern int criFsBinder_GetContentsFileInfoById(IntPtr binder, int id, IntPtr info); // 0x0000000187889368-0x0000000187889408
+		private static extern int criFsBinder_GetContentsFileInfoByIndex(uint id, int index, IntPtr info, int num); // 0x00000001878882D8-0x0000000187888350
+		private static extern int CRIWAREF02BA103(uint id); // 0x0000000187880708-0x0000000187880820
 	}
 
-	public class CriFsRequest : CriDisposable // TypeDefIndex: 54204
-	{
-		// Properties
-		public DoneDelegate doneDelegate { get; protected set; } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
-		public bool isDone { get; private set; } // 0x0000000183D4ED50-0x0000000183D4ED60 0x0000000183D4ED60-0x0000000183D4ED70
-		public string error { get; protected set; } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
-		public bool isDisposed { get; protected set; } // 0x0000000183D4F190-0x0000000183D4F1A0 0x0000000183D4E280-0x0000000183D4E290
-	
-		// Nested types
-		public delegate void DoneDelegate(CriFsRequest request); // TypeDefIndex: 54202; 0x0000000182149960-0x0000000182149970
-	
-		// Constructors
-		public CriFsRequest() {} // 0x00000001856D6F24-0x00000001856D6F2C
-	
-		// Methods
-		public override void Dispose() {} // 0x00000001856D8FC8-0x00000001856D9024
-		public virtual void Stop() {} // 0x000000018350B670-0x000000018350B680
-		public YieldInstruction WaitForDone(MonoBehaviour mb) => default; // 0x00000001856D90C8-0x00000001856D90F8
-		protected virtual void Dispose(bool disposing) {} // 0x000000018350B670-0x000000018350B680
-		public virtual void Update() {} // 0x000000018350B670-0x000000018350B680
-		protected void Done() {} // 0x00000001856D9024-0x00000001856D9044
-		[IteratorStateMachine(typeof(_CheckDone_d__23))]
-		private IEnumerator CheckDone() => default; // 0x00000001856D8F6C-0x00000001856D8FC8
-		~CriFsRequest() {} // 0x00000001856D9044-0x00000001856D90C8
-	}
-
-	public class CriFsLoadFileRequest : CriFsRequest // TypeDefIndex: 54206
+	public class CriFsRequest : CriDisposable // TypeDefIndex: 55197
 	{
 		// Fields
+		private DoneDelegate _doneDelegate_k__BackingField; // 0x20
+		private bool _isDone_k__BackingField; // 0x28
+		private string _error_k__BackingField; // 0x30
+		private bool _isDisposed_k__BackingField; // 0x38
+	
+		// Properties
+		public DoneDelegate doneDelegate { get; protected set; } // 0x000000018788BB64-0x000000018788BB94 0x0000000185492010-0x0000000185492020
+		public bool isDone { get; private set; } // 0x0000000185492010-0x0000000185492020 0x000000018788BAC0-0x000000018788BAE0
+		public string error { get; protected set; } // 0x000000018788BA08-0x000000018788BA64 0x000000018788BAE0-0x000000018788BB64
+		public bool isDisposed { get; protected set; } // 0x00000001878899C0-0x00000001878899C8 0x0000000187893E40-0x0000000187893F64
+	
+		// Nested types
+		public delegate void DoneDelegate(CriFsRequest request); // TypeDefIndex: 55195; 0x000000018646EE40-0x000000018646EE50
+	
+		private sealed class _CheckDone_d__23 : IEnumerator<object> // TypeDefIndex: 55196
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public CriFsRequest __4__this; // 0x20
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000185FAFE20-0x0000000185FAFE30 
+			object IEnumerator.Current { get => default; } // 0x0000000185492010-0x0000000185492020 
+	
+			// Constructors
+			public _CheckDone_d__23() {} // Dummy constructor
+			public _CheckDone_d__23(int __1__state) {} // 0x00000001813B51D0-0x00000001813B51E0
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x00000001864721F0-0x0000000186472200
+			private bool MoveNext() => default; // 0x0000000185FB0700-0x0000000185FB0710
+			void IEnumerator.Reset() {} // 0x000000018788BA64-0x000000018788BAC0
+		}
+	
+		// Constructors
+		public CriFsRequest() {} // 0x0000000181377E40-0x0000000181377E50
+	
+		// Methods
+		public override void Dispose() {} // 0x00000001833EEC70-0x00000001833EEC80
+		public virtual void Stop() {} // 0x0000000185A264E0-0x0000000185A26510
+		public YieldInstruction WaitForDone(MonoBehaviour mb) => default; // 0x00000001864BB614-0x00000001864BB734
+		protected virtual void Dispose(bool disposing) {} // 0x0000000181378230-0x0000000181378240
+		public virtual void Update() {} // 0x0000000185492010-0x0000000185492020
+		protected void Done() {} // 0x0000000187894BA8-0x0000000187894BF0
+		private IEnumerator CheckDone() => default; // 0x0000000181377E40-0x0000000181377E50
+		~CriFsRequest() {} // 0x0000000187894BF0-0x0000000187894C3C
+	}
+
+	public class CriFsLoadFileRequest : CriFsRequest // TypeDefIndex: 55199
+	{
+		// Fields
+		private string _path_k__BackingField; // 0x40
+		private byte[] _bytes_k__BackingField; // 0x48
 		private Phase phase; // 0x50
 		private CriFsBinder refBinder; // 0x58
 		private CriFsBinder newBinder; // 0x60
@@ -3576,11 +3668,11 @@ namespace CriWare
 		private long fileSize; // 0x80
 	
 		// Properties
-		public string path { get; private set; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
-		public byte[] bytes { get; private set; } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+		public string path { get; private set; } // 0x00000001813FF010-0x00000001813FF020 0x0000000185F05C80-0x0000000185F05C90
+		public byte[] bytes { get; private set; } // 0x00000001813ECF20-0x00000001813ECF30 0x000000018571FEC0-0x000000018571FED0
 	
 		// Nested types
-		private enum Phase // TypeDefIndex: 54205
+		private enum Phase // TypeDefIndex: 55198
 		{
 			Stop = 0,
 			Bind = 1,
@@ -3591,63 +3683,70 @@ namespace CriWare
 	
 		// Constructors
 		public CriFsLoadFileRequest() {} // Dummy constructor
-		public CriFsLoadFileRequest(CriFsBinder srcBinder, string path, DoneDelegate doneDelegate, int readUnitSize) {} // 0x00000001856D7D0C-0x00000001856D7E58
+		public CriFsLoadFileRequest(CriFsBinder srcBinder, string path, DoneDelegate doneDelegate, int readUnitSize) {} // 0x000000018788A7A8-0x000000018788A8F4
 	
 		// Methods
-		protected override void Dispose(bool disposing) {} // 0x00000001856D796C-0x00000001856D7A00
-		public override void Stop() {} // 0x00000001856D7AB4-0x00000001856D7AE0
-		public override void Update() {} // 0x00000001856D7CD0-0x00000001856D7D0C
-		private void UpdateBinder() {} // 0x00000001856D7AE0-0x00000001856D7B48
-		private void UpdateLoader() {} // 0x00000001856D7B48-0x00000001856D7CD0
-		private void OnError() {} // 0x00000001856D7A00-0x00000001856D7AB4
+		protected override void Dispose(bool disposing) {} // 0x000000018788A408-0x000000018788A49C
+		public override void Stop() {} // 0x000000018788A550-0x000000018788A57C
+		public override void Update() {} // 0x000000018788A76C-0x000000018788A7A8
+		private void UpdateBinder() {} // 0x000000018788A57C-0x000000018788A5E4
+		private void UpdateLoader() {} // 0x000000018788A5E4-0x000000018788A76C
+		private void OnError() {} // 0x000000018788A49C-0x000000018788A550
 	}
 
-	public class CriFsLoadAssetBundleRequest : CriFsRequest // TypeDefIndex: 54207
+	public class CriFsLoadAssetBundleRequest : CriFsRequest // TypeDefIndex: 55200
 	{
 		// Fields
+		private string _path_k__BackingField; // 0x40
+		private AssetBundle _assetBundle_k__BackingField; // 0x48
 		private CriFsLoadFileRequest loadFileReq; // 0x50
 		private AssetBundleCreateRequest assetBundleReq; // 0x58
 	
 		// Properties
-		public string path { get; private set; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
-		public AssetBundle assetBundle { get; private set; } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+		public string path { get; private set; } // 0x00000001813FF010-0x00000001813FF020 0x0000000185F05C80-0x0000000185F05C90
+		public AssetBundle assetBundle { get; private set; } // 0x00000001813ECF20-0x00000001813ECF30 0x000000018571FEC0-0x000000018571FED0
 	
 		// Constructors
 		public CriFsLoadAssetBundleRequest() {} // Dummy constructor
-		public CriFsLoadAssetBundleRequest(CriFsBinder binder, string path, int readUnitSize) {} // 0x00000001856D78CC-0x00000001856D796C
+		public CriFsLoadAssetBundleRequest(CriFsBinder binder, string path, int readUnitSize) {} // 0x000000018788A368-0x000000018788A408
 	
 		// Methods
-		public override void Update() {} // 0x00000001856D77D4-0x00000001856D78CC
-		protected override void Dispose(bool disposing) {} // 0x00000001856D7770-0x00000001856D77D4
+		public override void Update() {} // 0x000000018788A270-0x000000018788A368
+		protected override void Dispose(bool disposing) {} // 0x000000018788A20C-0x000000018788A270
 	}
 
-	public class CriFsInstallRequest : CriFsRequest // TypeDefIndex: 54208
+	public class CriFsInstallRequest : CriFsRequest // TypeDefIndex: 55201
 	{
+		// Fields
+		private string _sourcePath_k__BackingField; // 0x40
+		private string _destinationPath_k__BackingField; // 0x48
+		private float _progress_k__BackingField; // 0x50
+	
 		// Properties
-		public string sourcePath { get; protected set; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
-		public string destinationPath { get; protected set; } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
-		public float progress { get; protected set; } // 0x0000000183D51C90-0x0000000183D51CA0 0x0000000183D51CA0-0x0000000183D51CB0
+		public string sourcePath { get; protected set; } // 0x00000001813FF010-0x00000001813FF020 0x0000000185F05C80-0x0000000185F05C90
+		public string destinationPath { get; protected set; } // 0x00000001813ECF20-0x00000001813ECF30 0x000000018571FEC0-0x000000018571FED0
+		public float progress { get; protected set; } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
 	
 		// Constructors
-		public CriFsInstallRequest() {} // 0x00000001856D6F24-0x00000001856D6F2C
+		public CriFsInstallRequest() {} // 0x00000001878899C0-0x00000001878899C8
 	}
 
-	public class CriFsInstallRequestLegacy : CriFsInstallRequest // TypeDefIndex: 54209
+	public class CriFsInstallRequestLegacy : CriFsInstallRequest // TypeDefIndex: 55202
 	{
 		// Fields
 		private CriFsInstaller installer; // 0x58
 	
 		// Constructors
 		public CriFsInstallRequestLegacy() {} // Dummy constructor
-		public CriFsInstallRequestLegacy(CriFsBinder srcBinder, string srcPath, string dstPath, DoneDelegate doneDelegate, int installBufferSize) {} // 0x00000001856D6E10-0x00000001856D6F24
+		public CriFsInstallRequestLegacy(CriFsBinder srcBinder, string srcPath, string dstPath, DoneDelegate doneDelegate, int installBufferSize) {} // 0x00000001878898AC-0x00000001878899C0
 	
 		// Methods
-		public override void Stop() {} // 0x00000001856D6D40-0x00000001856D6D68
-		public override void Update() {} // 0x00000001856D6D68-0x00000001856D6E10
-		protected override void Dispose(bool disposing) {} // 0x00000001856D6CDC-0x00000001856D6D40
+		public override void Stop() {} // 0x00000001878897DC-0x0000000187889804
+		public override void Update() {} // 0x0000000187889804-0x00000001878898AC
+		protected override void Dispose(bool disposing) {} // 0x0000000187889778-0x00000001878897DC
 	}
 
-	public class CriFsWebInstallRequest : CriFsInstallRequest // TypeDefIndex: 54210
+	public class CriFsWebInstallRequest : CriFsInstallRequest // TypeDefIndex: 55203
 	{
 		// Fields
 		private CriFsWebInstaller installer; // 0x58
@@ -3656,26 +3755,30 @@ namespace CriWare
 	
 		// Constructors
 		public CriFsWebInstallRequest() {} // Dummy constructor
-		public CriFsWebInstallRequest(string srcPath, string dstPath, DoneDelegate doneDelegate) {} // 0x00000001856DA3D0-0x00000001856DA4D4
+		public CriFsWebInstallRequest(string srcPath, string dstPath, DoneDelegate doneDelegate) {} // 0x000000018788CE6C-0x000000018788CF70
 	
 		// Methods
-		public override void Stop() {} // 0x00000001856DA230-0x00000001856DA258
+		public override void Stop() {} // 0x000000018788CCCC-0x000000018788CCF4
 		public bool GetCRC32(out uint ret_val) {
 			ret_val = default;
 			return default;
-		} // 0x0000000183D51CB0-0x0000000183D51CC0
-		public override void Update() {} // 0x00000001856DA258-0x00000001856DA3D0
-		protected override void Dispose(bool disposing) {} // 0x00000001856DA1CC-0x00000001856DA230
+		} // 0x0000000185FB3020-0x0000000185FB3030
+		public override void Update() {} // 0x000000018788CCF4-0x000000018788CE6C
+		protected override void Dispose(bool disposing) {} // 0x000000018788CC68-0x000000018788CCCC
 	}
 
-	public class CriFsBindRequest : CriFsRequest // TypeDefIndex: 54212
+	public class CriFsBindRequest : CriFsRequest // TypeDefIndex: 55205
 	{
+		// Fields
+		private string _path_k__BackingField; // 0x40
+		private uint _bindId_k__BackingField; // 0x48
+	
 		// Properties
-		public string path { get; private set; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
-		public uint bindId { get; private set; } // 0x0000000183D4EC50-0x0000000183D4EC60 0x0000000183D4ECD0-0x0000000183D4ECE0
+		public string path { get; private set; } // 0x00000001813FF010-0x00000001813FF020 0x0000000185F05C80-0x0000000185F05C90
+		public uint bindId { get; private set; } // 0x0000000185FB0570-0x0000000185FB0580 0x0000000185FB05D0-0x0000000185FB05E0
 	
 		// Nested types
-		public enum BindType // TypeDefIndex: 54211
+		public enum BindType // TypeDefIndex: 55204
 		{
 			Cpk = 0,
 			Directory = 1,
@@ -3684,45 +3787,45 @@ namespace CriWare
 	
 		// Constructors
 		public CriFsBindRequest() {} // Dummy constructor
-		public CriFsBindRequest(BindType type, CriFsBinder targetBinder, CriFsBinder srcBinder, string path) {} // 0x00000001856D55D4-0x00000001856D570C
+		public CriFsBindRequest(BindType type, CriFsBinder targetBinder, CriFsBinder srcBinder, string path) {} // 0x0000000187888070-0x00000001878881A8
 	
 		// Methods
-		public override void Stop() {} // 0x000000018350B670-0x000000018350B680
-		public override void Update() {} // 0x00000001856D5570-0x00000001856D55D4
-		protected override void Dispose(bool disposing) {} // 0x00000001856D5524-0x00000001856D5570
+		public override void Stop() {} // 0x0000000185492010-0x0000000185492020
+		public override void Update() {} // 0x000000018788800C-0x0000000187888070
+		protected override void Dispose(bool disposing) {} // 0x0000000187887FC0-0x000000018788800C
 	}
 
-	public static class CriFsUtility // TypeDefIndex: 54213
+	public static class CriFsUtility // TypeDefIndex: 55206
 	{
 		// Fields
-		public const int DefaultReadUnitSize = 1048576; // Metadata: 0x01FD6531
+		public const int DefaultReadUnitSize = 1048576; // Metadata: 0x0207BD5D
 	
 		// Methods
-		public static CriFsLoadFileRequest LoadFile(string path, int readUnitSize = 1048576 /* Metadata: 0x01FD651D */) => default; // 0x00000001856DA114-0x00000001856DA160
-		public static CriFsLoadFileRequest LoadFile(string path, CriFsRequest.DoneDelegate doneDelegate, int readUnitSize = 1048576 /* Metadata: 0x01FD6521 */) => default; // 0x00000001856DA068-0x00000001856DA0BC
-		public static CriFsLoadFileRequest LoadFile(CriFsBinder binder, string path, int readUnitSize = 1048576 /* Metadata: 0x01FD6525 */) => default; // 0x00000001856DA0BC-0x00000001856DA114
-		public static CriFsLoadAssetBundleRequest LoadAssetBundle(string path, int readUnitSize = 1048576 /* Metadata: 0x01FD6529 */) => default; // 0x00000001856DA058-0x00000001856DA068
-		public static CriFsLoadAssetBundleRequest LoadAssetBundle(CriFsBinder binder, string path, int readUnitSize = 1048576 /* Metadata: 0x01FD652D */) => default; // 0x00000001856DA004-0x00000001856DA058
-		public static CriFsInstallRequest Install(string srcPath, string dstPath) => default; // 0x00000001856D9F7C-0x00000001856D9FA0
-		public static CriFsInstallRequest Install(string srcPath, string dstPath, CriFsRequest.DoneDelegate doneDeleagate) => default; // 0x00000001856D9F00-0x00000001856D9F24
-		public static CriFsInstallRequest Install(CriFsBinder srcBinder, string srcPath, string dstPath) => default; // 0x00000001856D9F24-0x00000001856D9F7C
-		public static CriFsInstallRequest Install(CriFsBinder srcBinder, string srcPath, string dstPath, CriFsRequest.DoneDelegate doneDeleagate) => default; // 0x00000001856D9FA0-0x00000001856DA004
-		public static CriFsInstallRequest WebInstall(string srcPath, string dstPath, CriFsRequest.DoneDelegate doneDeleagate) => default; // 0x00000001856DA178-0x00000001856DA1CC
-		public static CriFsBindRequest BindCpk(CriFsBinder targetBinder, string srcPath) => default; // 0x00000001856D9C08-0x00000001856D9C18
-		public static CriFsBindRequest BindCpk(CriFsBinder targetBinder, CriFsBinder srcBinder, string srcPath) => default; // 0x00000001856D9C18-0x00000001856D9C6C
-		public static CriFsBindRequest BindDirectory(CriFsBinder targetBinder, string srcPath) => default; // 0x00000001856D9C6C-0x00000001856D9CB4
-		public static CriFsBindRequest BindDirectory(CriFsBinder targetBinder, CriFsBinder srcBinder, string srcPath) => default; // 0x00000001856D9CB4-0x00000001856D9D08
-		public static CriFsBindRequest BindFile(CriFsBinder targetBinder, string srcPath) => default; // 0x00000001856D9D5C-0x00000001856D9DA4
-		public static CriFsBindRequest BindFile(CriFsBinder targetBinder, CriFsBinder srcBinder, string srcPath) => default; // 0x00000001856D9D08-0x00000001856D9D5C
-		public static void SetUserAgentString(string userAgentString) {} // 0x00000001856DA170-0x00000001856DA178
-		public static void SetProxyServer(string proxyPath, ushort proxyPort) {} // 0x00000001856DA168-0x00000001856DA170
-		public static void SetPathSeparator(string filter) {} // 0x00000001856DA160-0x00000001856DA168
-		private static extern bool CRIWARECD0DC04A(string userAgentString); // 0x00000001856D9EA4-0x00000001856D9F00
-		private static extern bool CRIWARE48E31D64(string proxyPath, ushort proxyPort); // 0x00000001856D9E00-0x00000001856D9EA4
-		private static extern bool CRIWARE0C80F382(string filter); // 0x00000001856D9DA4-0x00000001856D9E00
+		public static CriFsLoadFileRequest LoadFile(string path, int readUnitSize = 1048576 /* Metadata: 0x0207BD49 */) => default; // 0x000000018788CBB0-0x000000018788CBFC
+		public static CriFsLoadFileRequest LoadFile(string path, CriFsRequest.DoneDelegate doneDelegate, int readUnitSize = 1048576 /* Metadata: 0x0207BD4D */) => default; // 0x000000018788CB04-0x000000018788CB58
+		public static CriFsLoadFileRequest LoadFile(CriFsBinder binder, string path, int readUnitSize = 1048576 /* Metadata: 0x0207BD51 */) => default; // 0x000000018788CB58-0x000000018788CBB0
+		public static CriFsLoadAssetBundleRequest LoadAssetBundle(string path, int readUnitSize = 1048576 /* Metadata: 0x0207BD55 */) => default; // 0x000000018788CAF4-0x000000018788CB04
+		public static CriFsLoadAssetBundleRequest LoadAssetBundle(CriFsBinder binder, string path, int readUnitSize = 1048576 /* Metadata: 0x0207BD59 */) => default; // 0x000000018788CAA0-0x000000018788CAF4
+		public static CriFsInstallRequest Install(string srcPath, string dstPath) => default; // 0x000000018788CA18-0x000000018788CA3C
+		public static CriFsInstallRequest Install(string srcPath, string dstPath, CriFsRequest.DoneDelegate doneDeleagate) => default; // 0x000000018788C99C-0x000000018788C9C0
+		public static CriFsInstallRequest Install(CriFsBinder srcBinder, string srcPath, string dstPath) => default; // 0x000000018788C9C0-0x000000018788CA18
+		public static CriFsInstallRequest Install(CriFsBinder srcBinder, string srcPath, string dstPath, CriFsRequest.DoneDelegate doneDeleagate) => default; // 0x000000018788CA3C-0x000000018788CAA0
+		public static CriFsInstallRequest WebInstall(string srcPath, string dstPath, CriFsRequest.DoneDelegate doneDeleagate) => default; // 0x000000018788CC14-0x000000018788CC68
+		public static CriFsBindRequest BindCpk(CriFsBinder targetBinder, string srcPath) => default; // 0x000000018788C6A4-0x000000018788C6B4
+		public static CriFsBindRequest BindCpk(CriFsBinder targetBinder, CriFsBinder srcBinder, string srcPath) => default; // 0x000000018788C6B4-0x000000018788C708
+		public static CriFsBindRequest BindDirectory(CriFsBinder targetBinder, string srcPath) => default; // 0x000000018788C708-0x000000018788C750
+		public static CriFsBindRequest BindDirectory(CriFsBinder targetBinder, CriFsBinder srcBinder, string srcPath) => default; // 0x000000018788C750-0x000000018788C7A4
+		public static CriFsBindRequest BindFile(CriFsBinder targetBinder, string srcPath) => default; // 0x000000018788C7F8-0x000000018788C840
+		public static CriFsBindRequest BindFile(CriFsBinder targetBinder, CriFsBinder srcBinder, string srcPath) => default; // 0x000000018788C7A4-0x000000018788C7F8
+		public static void SetUserAgentString(string userAgentString) {} // 0x000000018788CC0C-0x000000018788CC14
+		public static void SetProxyServer(string proxyPath, ushort proxyPort) {} // 0x000000018788CC04-0x000000018788CC0C
+		public static void SetPathSeparator(string filter) {} // 0x000000018788CBFC-0x000000018788CC04
+		private static extern bool CRIWARECD0DC04A(string userAgentString); // 0x000000018788C940-0x000000018788C99C
+		private static extern bool CRIWARE48E31D64(string proxyPath, ushort proxyPort); // 0x000000018788C89C-0x000000018788C940
+		private static extern bool CRIWARE0C80F382(string filter); // 0x000000018788C840-0x000000018788C89C
 	}
 
-	public static class CriFsPlugin // TypeDefIndex: 54214
+	public static class CriFsPlugin // TypeDefIndex: 55207
 	{
 		// Fields
 		private static int initializationCount; // 0x00
@@ -3731,76 +3834,79 @@ namespace CriWare
 		public static int installBufferSize; // 0x0C
 	
 		// Properties
-		public static bool isInitialized { get; } // 0x00000001856D8F24-0x00000001856D8F6C 
+		public static bool isInitialized { get; } // 0x000000018788B9C0-0x000000018788BA08 
 	
 		// Constructors
-		static CriFsPlugin() {} // 0x0000000183D02220-0x0000000183D022A0
+		static CriFsPlugin() {} // 0x0000000185F60CE0-0x0000000185F60D60
 	
 		// Methods
-		public static void SetConfigParameters(int num_loaders, int num_binders, int num_installers, int argInstallBufferSize, int max_path, bool minimize_file_descriptor_usage, bool enable_crc_check) {} // 0x0000000183CC5020-0x0000000183CC50E0
-		public static void SetReadDeviceEnabled(int deviceId, bool enabled) {} // 0x00000001856D8BF0-0x00000001856D8C7C
-		public static void SetConfigAdditionalParameters_ANDROID(int device_read_bps) {} // 0x000000018350B670-0x000000018350B680
-		public static void SetMemoryFileSystemThreadPriorityExperimentalAndroid(int prio) {} // 0x000000018350B670-0x000000018350B680
-		public static void SetDataDecompressionThreadPriorityExperimentalAndroid(int prio) {} // 0x000000018350B670-0x000000018350B680
-		public static void InitializeLibrary() {} // 0x0000000183183740-0x0000000183183830
-		public static bool IsLibraryInitialized() => default; // 0x000000018268CE20-0x000000018268CE70
-		public static void FinalizeLibrary() {} // 0x00000001856D8B08-0x00000001856D8BF0
-		private static extern void CRIWARE8451156E(int num_loaders, int num_binders, int num_installers, int max_path, bool minimize_file_descriptor_usage, bool enable_crc_check); // 0x00000001822C7930-0x00000001822C79F0
-		private static extern void CRIWARE601ABE43(); // 0x0000000183183830-0x0000000183183860
-		public static extern bool CRIWARE1012AF20(); // 0x000000018268CE70-0x000000018268CEB0
-		private static extern void CRIWARE74A6103A(); // 0x00000001856D8AB0-0x00000001856D8ADC
-		public static extern uint CRIWARE785081A5(); // 0x00000001856D8ADC-0x00000001856D8B08
-		public static extern uint criFsLoader_GetRetryCount(); // 0x00000001856D8C7C-0x00000001856D8CE4
-		public static extern int criFs_GetNumBinds(ref int cur, ref int max, ref int limit); // 0x00000001856D8CE4-0x00000001856D8D78
-		public static extern int criFs_GetNumUsedLoaders(ref int cur, ref int max, ref int limit); // 0x00000001856D8E0C-0x00000001856D8EA0
-		public static extern int criFs_GetNumUsedInstallers(ref int cur, ref int max, ref int limit); // 0x00000001856D8D78-0x00000001856D8E0C
-		private static extern int criFs_SetReadDeviceEnabled(int device_id, bool enabled); // 0x00000001856D8EA0-0x00000001856D8F24
+		public static void SetConfigParameters(int num_loaders, int num_binders, int num_installers, int argInstallBufferSize, int max_path, bool minimize_file_descriptor_usage, bool enable_crc_check) {} // 0x00000001850F9F80-0x00000001850FA040
+		public static void SetReadDeviceEnabled(int deviceId, bool enabled) {} // 0x000000018788B68C-0x000000018788B718
+		public static void SetConfigAdditionalParameters_ANDROID(int device_read_bps) {} // 0x0000000185492010-0x0000000185492020
+		public static void SetMemoryFileSystemThreadPriorityExperimentalAndroid(int prio) {} // 0x0000000185492010-0x0000000185492020
+		public static void SetDataDecompressionThreadPriorityExperimentalAndroid(int prio) {} // 0x0000000185492010-0x0000000185492020
+		public static void InitializeLibrary() {} // 0x00000001850F9A00-0x00000001850F9AF0
+		public static bool IsLibraryInitialized() => default; // 0x00000001850F9E60-0x00000001850F9EB0
+		public static void FinalizeLibrary() {} // 0x000000018788B5A4-0x000000018788B68C
+		private static extern void CRIWARE8451156E(int num_loaders, int num_binders, int num_installers, int max_path, bool minimize_file_descriptor_usage, bool enable_crc_check); // 0x00000001844CE750-0x00000001844CE810
+		private static extern void CRIWARE601ABE43(); // 0x00000001850F9AF0-0x00000001850F9B20
+		public static extern bool CRIWARE1012AF20(); // 0x00000001850F9EB0-0x00000001850F9EF0
+		private static extern void CRIWARE74A6103A(); // 0x000000018788B54C-0x000000018788B578
+		public static extern uint CRIWARE785081A5(); // 0x000000018788B578-0x000000018788B5A4
+		public static extern uint criFsLoader_GetRetryCount(); // 0x000000018788B718-0x000000018788B780
+		public static extern int criFs_GetNumBinds(ref int cur, ref int max, ref int limit); // 0x000000018788B780-0x000000018788B814
+		public static extern int criFs_GetNumUsedLoaders(ref int cur, ref int max, ref int limit); // 0x000000018788B8A8-0x000000018788B93C
+		public static extern int criFs_GetNumUsedInstallers(ref int cur, ref int max, ref int limit); // 0x000000018788B814-0x000000018788B8A8
+		private static extern int criFs_SetReadDeviceEnabled(int device_id, bool enabled); // 0x000000018788B93C-0x000000018788B9C0
 	}
 
-	public class CriFsServer : CriMonoBehaviour // TypeDefIndex: 54215
+	public class CriFsServer : CriMonoBehaviour // TypeDefIndex: 55208
 	{
 		// Fields
 		private static CriFsServer _instance; // 0x00
 		private List<CriFsRequest> requestList; // 0x28
+		private int _installBufferSize_k__BackingField; // 0x30
 	
 		// Properties
-		public static CriFsServer instance { get => default; } // 0x00000001856D9BC8-0x00000001856D9C08 
-		public int installBufferSize { get; private set; } // 0x0000000183D4ED20-0x0000000183D4ED30 0x0000000183D4EE10-0x0000000183D4EE20
+		public static CriFsServer instance { get => default; } // 0x000000018788C664-0x000000018788C6A4 
+		public int installBufferSize { get; private set; } // 0x00000001813CFF60-0x00000001813CFF70 0x00000001813D0A90-0x00000001813D0AA0
 	
 		// Constructors
-		public CriFsServer() {} // 0x0000000183772780-0x0000000183772790
+		public CriFsServer() {} // 0x0000000185FAF3F0-0x0000000185FAF400
 	
 		// Methods
-		public static void CreateInstance() {} // 0x00000001856D94AC-0x00000001856D9580
-		public static void DestroyInstance() {} // 0x00000001856D96B0-0x00000001856D973C
-		private void Awake() {} // 0x00000001856D914C-0x00000001856D92B8
-		private void OnDestroy() {} // 0x00000001856D994C-0x00000001856D9B14
-		public override void CriInternalUpdate() {} // 0x00000001856D9580-0x00000001856D96B0
-		public override void CriInternalLateUpdate() {} // 0x000000018350B670-0x000000018350B680
-		public void AddRequest(CriFsRequest request) {} // 0x00000001856D90F8-0x00000001856D914C
-		public CriFsLoadFileRequest LoadFile(CriFsBinder binder, string path, CriFsRequest.DoneDelegate doneDelegate, int readUnitSize) => default; // 0x00000001856D98A4-0x00000001856D994C
-		public CriFsLoadAssetBundleRequest LoadAssetBundle(CriFsBinder binder, string path, int readUnitSize) => default; // 0x00000001856D9804-0x00000001856D98A4
-		public CriFsInstallRequest Install(CriFsBinder srcBinder, string srcPath, string dstPath, CriFsRequest.DoneDelegate doneDelegate) => default; // 0x00000001856D973C-0x00000001856D9804
-		public CriFsInstallRequest WebInstall(string srcPath, string dstPath, CriFsRequest.DoneDelegate doneDelegate) => default; // 0x00000001856D9B14-0x00000001856D9BC8
-		public CriFsBindRequest BindCpk(CriFsBinder targetBinder, CriFsBinder srcBinder, string path) => default; // 0x00000001856D92B8-0x00000001856D935C
-		public CriFsBindRequest BindDirectory(CriFsBinder targetBinder, CriFsBinder srcBinder, string path) => default; // 0x00000001856D935C-0x00000001856D9404
-		public CriFsBindRequest BindFile(CriFsBinder targetBinder, CriFsBinder srcBinder, string path) => default; // 0x00000001856D9404-0x00000001856D94AC
+		public static void CreateInstance() {} // 0x000000018788BF48-0x000000018788C01C
+		public static void DestroyInstance() {} // 0x000000018788C14C-0x000000018788C1D8
+		private void Awake() {} // 0x000000018788BBE8-0x000000018788BD54
+		private void OnDestroy() {} // 0x000000018788C3E8-0x000000018788C5B0
+		public override void CriInternalUpdate() {} // 0x000000018788C01C-0x000000018788C14C
+		public override void CriInternalLateUpdate() {} // 0x0000000185492010-0x0000000185492020
+		public void AddRequest(CriFsRequest request) {} // 0x000000018788BB94-0x000000018788BBE8
+		public CriFsLoadFileRequest LoadFile(CriFsBinder binder, string path, CriFsRequest.DoneDelegate doneDelegate, int readUnitSize) => default; // 0x000000018788C340-0x000000018788C3E8
+		public CriFsLoadAssetBundleRequest LoadAssetBundle(CriFsBinder binder, string path, int readUnitSize) => default; // 0x000000018788C2A0-0x000000018788C340
+		public CriFsInstallRequest Install(CriFsBinder srcBinder, string srcPath, string dstPath, CriFsRequest.DoneDelegate doneDelegate) => default; // 0x000000018788C1D8-0x000000018788C2A0
+		public CriFsInstallRequest WebInstall(string srcPath, string dstPath, CriFsRequest.DoneDelegate doneDelegate) => default; // 0x000000018788C5B0-0x000000018788C664
+		public CriFsBindRequest BindCpk(CriFsBinder targetBinder, CriFsBinder srcBinder, string path) => default; // 0x000000018788BD54-0x000000018788BDF8
+		public CriFsBindRequest BindDirectory(CriFsBinder targetBinder, CriFsBinder srcBinder, string path) => default; // 0x000000018788BDF8-0x000000018788BEA0
+		public CriFsBindRequest BindFile(CriFsBinder targetBinder, CriFsBinder srcBinder, string path) => default; // 0x000000018788BEA0-0x000000018788BF48
 	}
 
-	public class CriFsWebInstaller : CriDisposable // TypeDefIndex: 54221
+	public class CriFsWebInstaller : CriDisposable // TypeDefIndex: 55214
 	{
 		// Fields
-		public const int InvalidHttpStatusCode = -1; // Metadata: 0x01FD6535
-		public const long InvalidContentsSize = -1; // Metadata: 0x01FD6536
+		private static bool _isInitialized_k__BackingField; // 0x00
+		private static bool _isCrcEnabled_k__BackingField; // 0x01
+		public const int InvalidHttpStatusCode = -1; // Metadata: 0x0207BD61
+		public const long InvalidContentsSize = -1; // Metadata: 0x0207BD62
 		private IntPtr handle; // 0x20
 	
 		// Properties
-		public static bool isInitialized { get; private set; } // 0x00000001856DAFB0-0x00000001856DAFE8 0x00000001856DB024-0x00000001856DB060
-		public static bool isCrcEnabled { get; private set; } // 0x00000001856DAF78-0x00000001856DAFB0 0x00000001856DAFE8-0x00000001856DB024
-		public static ModuleConfig defaultModuleConfig { get => default; } // 0x00000001856DAF20-0x00000001856DAF78 
+		public static bool isInitialized { get; private set; } // 0x000000018788DAC0-0x000000018788DAFC 0x000000018788DA14-0x000000018788DA4C
+		public static bool isCrcEnabled { get; private set; } // 0x000000018788DA84-0x000000018788DAC0 0x000000018788D9BC-0x000000018788DA14
+		public static ModuleConfig defaultModuleConfig { get => default; } // 0x000000018788D48C-0x000000018788D548 
 	
 		// Nested types
-		public enum Status // TypeDefIndex: 54216
+		public enum Status // TypeDefIndex: 55209
 		{
 			Stop = 0,
 			Busy = 1,
@@ -3808,7 +3914,7 @@ namespace CriWare
 			Error = 3
 		}
 	
-		public enum Error // TypeDefIndex: 54217
+		public enum Error // TypeDefIndex: 55210
 		{
 			None = 0,
 			Timeout = 1,
@@ -3821,7 +3927,7 @@ namespace CriWare
 			Internal = 8
 		}
 	
-		public struct StatusInfo // TypeDefIndex: 54218
+		public struct StatusInfo // TypeDefIndex: 55211
 		{
 			// Fields
 			public Status status; // 0x00
@@ -3831,7 +3937,7 @@ namespace CriWare
 			public long receivedSize; // 0x18
 		}
 	
-		public struct ModuleConfig // TypeDefIndex: 54219
+		public struct ModuleConfig // TypeDefIndex: 55212
 		{
 			// Fields
 			public uint numInstallers; // 0x00
@@ -3844,47 +3950,47 @@ namespace CriWare
 			public ModulePlatformConfig platformConfig; // 0x26
 		}
 	
-		public struct ModulePlatformConfig // TypeDefIndex: 54220
+		public struct ModulePlatformConfig // TypeDefIndex: 55213
 		{
 			// Fields
 			public byte reserved; // 0x00
 	
 			// Properties
-			public static ModulePlatformConfig defaultConfig { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+			public static ModulePlatformConfig defaultConfig { get => default; } // 0x000000018788DA4C-0x000000018788DA84 
 		}
 	
 		// Constructors
-		public CriFsWebInstaller() {} // 0x00000001856DA9F0-0x00000001856DAAAC
+		public CriFsWebInstaller() {} // 0x000000018788D13C-0x000000018788D1B0
 	
 		// Methods
-		~CriFsWebInstaller() {} // 0x00000001856DA6A0-0x00000001856DA714
-		public override void Dispose() {} // 0x00000001856DA4E0-0x00000001856DA530
-		public void Copy(string url, string dstPath) {} // 0x00000001856DA4D4-0x00000001856DA4E0
-		public void Stop() {} // 0x00000001856DA9DC-0x00000001856DA9F0
-		public StatusInfo GetStatusInfo() => default; // 0x00000001856DA798-0x00000001856DA7E8
+		~CriFsWebInstaller() {} // 0x000000018788CF7C-0x000000018788CFCC
+		public override void Dispose() {} // 0x000000018788CF70-0x000000018788CF7C
+		public void Copy(string url, string dstPath) {} // 0x000000018788D478-0x000000018788D48C
+		public void Stop() {} // 0x000000018788D234-0x000000018788D284
+		public StatusInfo GetStatusInfo() => default; // 0x000000018788D1B0-0x000000018788D1CC
 		public bool GetCRC32(out uint ret_val) {
 			ret_val = default;
 			return default;
-		} // 0x00000001856DA714-0x00000001856DA730
-		public static void InitializeModule(ModuleConfig config) {} // 0x00000001856DA7E8-0x00000001856DA9C4
-		private static System.Type GetCriFsWebInstallerCurlExpansionClass() => default; // 0x00000001856DA730-0x00000001856DA798
-		public static void FinalizeModule() {} // 0x00000001856DA5F8-0x00000001856DA6A0
-		public static void ExecuteMain() {} // 0x00000001856DA5F0-0x00000001856DA5F8
-		public static bool SetRequestHeader(string field, string value) => default; // 0x00000001856DA9C4-0x00000001856DA9DC
-		private void Dispose(bool disposing) {} // 0x00000001856DA530-0x00000001856DA5F0
-		private static extern int criFsWebInstaller_Initialize(in ModuleConfig config); // 0x00000001856DAD84-0x00000001856DAE2C
-		private static extern int criFsWebInstaller_Finalize(); // 0x00000001856DAC50-0x00000001856DAC7C
-		private static extern int criFsWebInstaller_ExecuteMain(); // 0x00000001856DAC24-0x00000001856DAC50
-		private static extern int criFsWebInstaller_Create(out IntPtr installer); // 0x00000001856DAB78-0x00000001856DABF0
-		private static extern int criFsWebInstaller_Destroy(IntPtr installer); // 0x00000001856DABF0-0x00000001856DAC24
-		private static extern int criFsWebInstaller_Copy(IntPtr installer, string url, string dstPath); // 0x00000001856DAAAC-0x00000001856DAB78
-		private static extern int criFsWebInstaller_Stop(IntPtr installer); // 0x00000001856DAEEC-0x00000001856DAF20
-		private static extern int criFsWebInstaller_GetStatusInfo(IntPtr installer, out StatusInfo status); // 0x00000001856DAD00-0x00000001856DAD84
-		private static extern int criFsWebInstaller_GetCRC32(IntPtr installer, out uint crc32); // 0x00000001856DAC7C-0x00000001856DAD00
-		private static extern int criFsWebInstaller_SetRequestHeader(string field, string value); // 0x00000001856DAE2C-0x00000001856DAEEC
+		} // 0x000000018788D284-0x000000018788D460
+		public static void InitializeModule(ModuleConfig config) {} // 0x000000018788D1CC-0x000000018788D234
+		private static System.Type GetCriFsWebInstallerCurlExpansionClass() => default; // 0x000000018788D094-0x000000018788D13C
+		public static void FinalizeModule() {} // 0x000000018788D08C-0x000000018788D094
+		public static void ExecuteMain() {} // 0x000000018788D460-0x000000018788D478
+		public static bool SetRequestHeader(string field, string value) => default; // 0x000000018788CFCC-0x000000018788D08C
+		private void Dispose(bool disposing) {} // 0x000000018788D820-0x000000018788D8C8
+		private static extern int criFsWebInstaller_Initialize(in ModuleConfig config); // 0x000000018788D6EC-0x000000018788D718
+		private static extern int criFsWebInstaller_Finalize(); // 0x000000018788D6C0-0x000000018788D6EC
+		private static extern int criFsWebInstaller_ExecuteMain(); // 0x000000018788D614-0x000000018788D68C
+		private static extern int criFsWebInstaller_Create(out IntPtr installer); // 0x000000018788D68C-0x000000018788D6C0
+		private static extern int criFsWebInstaller_Destroy(IntPtr installer); // 0x000000018788D548-0x000000018788D614
+		private static extern int criFsWebInstaller_Copy(IntPtr installer, string url, string dstPath); // 0x000000018788D988-0x000000018788D9BC
+		private static extern int criFsWebInstaller_Stop(IntPtr installer); // 0x000000018788D79C-0x000000018788D820
+		private static extern int criFsWebInstaller_GetStatusInfo(IntPtr installer, out StatusInfo status); // 0x000000018788D718-0x000000018788D79C
+		private static extern int criFsWebInstaller_GetCRC32(IntPtr installer, out uint crc32); // 0x000000018788D8C8-0x000000018788D988
+		private static extern int criFsWebInstaller_SetRequestHeader(string field, string value); // 0x00000001814A81B0-0x00000001814A81C0
 	}
 
-	public class CriManaPlugin // TypeDefIndex: 54222
+	public class CriManaPlugin // TypeDefIndex: 55215
 	{
 		// Fields
 		private static int initializationCount; // 0x00
@@ -3893,48 +3999,47 @@ namespace CriWare
 		public static int renderingEventOffset; // 0x08
 	
 		// Properties
-		public static bool isInitialized { get => default; } // 0x00000001856E01AC-0x00000001856E01F4 
-		public static bool isMultithreadedRenderingEnabled { get => default; } // 0x00000001856E01F4-0x00000001856E0244 
+		public static bool isInitialized { get => default; } // 0x0000000187892C48-0x0000000187892C90 
+		public static bool isMultithreadedRenderingEnabled { get => default; } // 0x0000000187892C90-0x0000000187892CE0 
 	
 		// Constructors
-		public CriManaPlugin() {} // 0x000000018350B670-0x000000018350B680
-		static CriManaPlugin() {} // 0x0000000183D04AC0-0x0000000183D04B40
+		public CriManaPlugin() {} // 0x0000000185492010-0x0000000185492020
+		static CriManaPlugin() {} // 0x0000000185F632E0-0x0000000185F63360
 	
 		// Methods
-		public static void SetConfigParameters(bool graphicsMultiThreaded, int num_decoders, int max_num_of_entries) {} // 0x00000001831834A0-0x0000000183183570
-		private static void SetupVp9() {} // 0x0000000183183860-0x0000000183183960
-		[Obsolete("Use CriWareVITA.EnableH264Playback and CriWareVITA.SetH264DecoderMaxSize instead.")]
-		public static void SetConfigAdditonalParameters_VITA(bool use_h264_playback, int width, int height) {} // 0x000000018350B670-0x000000018350B680
-		public static void SetConfigAdditonalParameters_PC(bool use_h264_playback) {} // 0x000000018268CEB0-0x000000018268CF00
-		public static void SetConfigAdditonalParameters_ANDROID(bool enable_buffer_output_for_h264, bool enable_buffer_output_for_vp9) {} // 0x000000018350B670-0x000000018350B680
-		public static void SetConfigAdditonalParameters_WEBGL(string webworkerPath, uint heapSize) {} // 0x000000018350B670-0x000000018350B680
-		public static void InitializeLibrary() {} // 0x0000000183182890-0x00000001831829E0
-		public static bool IsLibraryInitialized() => default; // 0x00000001831830B0-0x0000000183183100
-		public static void FinalizeLibrary() {} // 0x00000001856DFDC0-0x00000001856DFEF0
-		public static bool IsCodecSupported(CodecType codecType) => default; // 0x00000001856DFF30-0x00000001856E001C
-		private static System.Type GetVp9ExpansionClass() => default; // 0x000000018318ADF0-0x000000018318AEB0
-		private static bool IsVp9CodecSupported() => default; // 0x0000000183183960-0x0000000183183A50
-		private static bool IsH264CodecSupported() => default; // 0x000000018232EB60-0x000000018232EB70
-		public static void SetDecodeThreadPriorityAndroidExperimental(int prio) {} // 0x000000018350B670-0x000000018350B680
-		public static bool ShouldSampleRed(GraphicsDeviceType type, IntPtr tex_ptr) => default; // 0x000000018115F4C0-0x000000018115F530
-		public static void Lock() {} // 0x00000001856E001C-0x00000001856E005C
-		public static void Unlock() {} // 0x00000001856E005C-0x00000001856E009C
-		public static uint GetPrimeBufferAlignmentSize() => default; // 0x00000001856DFEF0-0x00000001856DFF30
-		private static extern void CRIWARECFA78B41(int graphics_api, bool graphics_multi_threaded, int num_decoders, int num_of_max_entries); // 0x00000001822C7890-0x00000001822C7930
-		private static extern void CRIWARE7BFC56AA(); // 0x00000001831829E0-0x0000000183182A10
-		public static extern bool CRIWARE611B78A5(); // 0x0000000183183100-0x0000000183183140
-		private static extern void CRIWARED672C36F(); // 0x00000001856DFD94-0x00000001856DFDC0
-		public static extern void CRIWARE9F182D39(bool flag); // 0x00000001856DFD60-0x00000001856DFD94
-		public static extern void CRIWARE06C87176(); // 0x00000001856DFCDC-0x00000001856DFD08
-		public static extern void CRIWARE46E1A37B(); // 0x00000001856DFD34-0x00000001856DFD60
-		private static extern uint criManaUnity_GetPrimeBufferAlignmentSize(); // 0x00000001856E009C-0x00000001856E0104
-		public static extern void criMana_UseStreamerManager(bool flag); // 0x00000001856E0134-0x00000001856E01AC
-		public static extern bool criMana_IsStreamerManagerUsed(); // 0x00000001856E0104-0x00000001856E0134
-		public static extern uint CRIWARE257CA763(); // 0x00000001856DFD08-0x00000001856DFD34
-		public static extern void CRIWARE62B7B053(bool enable); // 0x000000018268CF00-0x000000018268CF40
+		public static void SetConfigParameters(bool graphicsMultiThreaded, int num_decoders, int max_num_of_entries) {} // 0x00000001850F9850-0x00000001850F9920
+		private static void SetupVp9() {} // 0x00000001850FA040-0x00000001850FA140
+		public static void SetConfigAdditonalParameters_VITA(bool use_h264_playback, int width, int height) {} // 0x0000000185492010-0x0000000185492020
+		public static void SetConfigAdditonalParameters_PC(bool use_h264_playback) {} // 0x00000001850F9EF0-0x00000001850F9F40
+		public static void SetConfigAdditonalParameters_ANDROID(bool enable_buffer_output_for_h264, bool enable_buffer_output_for_vp9) {} // 0x0000000185492010-0x0000000185492020
+		public static void SetConfigAdditonalParameters_WEBGL(string webworkerPath, uint heapSize) {} // 0x0000000185492010-0x0000000185492020
+		public static void InitializeLibrary() {} // 0x00000001850F8C40-0x00000001850F8D90
+		public static bool IsLibraryInitialized() => default; // 0x00000001850F9460-0x00000001850F94B0
+		public static void FinalizeLibrary() {} // 0x000000018789285C-0x000000018789298C
+		public static bool IsCodecSupported(CodecType codecType) => default; // 0x00000001878929CC-0x0000000187892AB8
+		private static System.Type GetVp9ExpansionClass() => default; // 0x0000000184F7B7F0-0x0000000184F7B8B0
+		private static bool IsVp9CodecSupported() => default; // 0x00000001850FA140-0x00000001850FA230
+		private static bool IsH264CodecSupported() => default; // 0x00000001840A27C0-0x00000001840A27D0
+		public static void SetDecodeThreadPriorityAndroidExperimental(int prio) {} // 0x0000000185492010-0x0000000185492020
+		public static bool ShouldSampleRed(GraphicsDeviceType type, IntPtr tex_ptr) => default; // 0x00000001814A81B0-0x00000001814A81C0
+		public static void Lock() {} // 0x0000000187892AB8-0x0000000187892AF8
+		public static void Unlock() {} // 0x0000000187892AF8-0x0000000187892B38
+		public static uint GetPrimeBufferAlignmentSize() => default; // 0x000000018789298C-0x00000001878929CC
+		private static extern void CRIWARECFA78B41(int graphics_api, bool graphics_multi_threaded, int num_decoders, int num_of_max_entries); // 0x00000001844CE6B0-0x00000001844CE750
+		private static extern void CRIWARE7BFC56AA(); // 0x00000001850F8D90-0x00000001850F8DC0
+		public static extern bool CRIWARE611B78A5(); // 0x00000001850F94B0-0x00000001850F94F0
+		private static extern void CRIWARED672C36F(); // 0x0000000187892830-0x000000018789285C
+		public static extern void CRIWARE9F182D39(bool flag); // 0x00000001878927FC-0x0000000187892830
+		public static extern void CRIWARE06C87176(); // 0x0000000187892778-0x00000001878927A4
+		public static extern void CRIWARE46E1A37B(); // 0x00000001878927D0-0x00000001878927FC
+		private static extern uint criManaUnity_GetPrimeBufferAlignmentSize(); // 0x0000000187892B38-0x0000000187892BA0
+		public static extern void criMana_UseStreamerManager(bool flag); // 0x0000000187892BD0-0x0000000187892C48
+		public static extern bool criMana_IsStreamerManagerUsed(); // 0x0000000187892BA0-0x0000000187892BD0
+		public static extern uint CRIWARE257CA763(); // 0x00000001878927A4-0x00000001878927D0
+		public static extern void CRIWARE62B7B053(bool enable); // 0x00000001850F9F40-0x00000001850F9F80
 	}
 
-	public class CriManaAmbisonicSource : CriMonoBehaviour // TypeDefIndex: 54223
+	public class CriManaAmbisonicSource : CriMonoBehaviour // TypeDefIndex: 55216
 	{
 		// Fields
 		private CriAtomEx3dSource atomEx3DsourceForAmbisonics; // 0x28
@@ -3943,19 +4048,18 @@ namespace CriWare
 		private Vector3 lastEulerOfAmbisonicSource; // 0x48
 	
 		// Constructors
-		public CriManaAmbisonicSource() {} // 0x0000000183772780-0x0000000183772790
+		public CriManaAmbisonicSource() {} // 0x0000000185FAF3F0-0x0000000185FAF400
 	
 		// Methods
-		public override void CriInternalUpdate() {} // 0x00000001856DB060-0x00000001856DB068
-		public override void CriInternalLateUpdate() {} // 0x000000018350B670-0x000000018350B680
-		protected override void OnEnable() {} // 0x00000001856DB110-0x00000001856DB1F4
-		private void ForceUpdateAmbisonicSourceOrientation() {} // 0x00000001856DB068-0x00000001856DB110
-		private void UpdateAmbisonicSourceOrientation() {} // 0x00000001856DB600-0x00000001856DB6A0
-		private void RoatateAmbisonicSourceOrientationByTransformOfChild(ref Vector3 input_euler) {} // 0x00000001856DB1F4-0x00000001856DB600
+		public override void CriInternalUpdate() {} // 0x000000018788DAFC-0x000000018788DB04
+		public override void CriInternalLateUpdate() {} // 0x0000000185492010-0x0000000185492020
+		protected override void OnEnable() {} // 0x000000018788DBAC-0x000000018788DC90
+		private void ForceUpdateAmbisonicSourceOrientation() {} // 0x000000018788DB04-0x000000018788DBAC
+		private void UpdateAmbisonicSourceOrientation() {} // 0x000000018788E09C-0x000000018788E13C
+		private void RoatateAmbisonicSourceOrientationByTransformOfChild(ref Vector3 input_euler) {} // 0x000000018788DC90-0x000000018788E09C
 	}
 
-	[AddComponentMenu("CRIWARE/CriManaMovieController")]
-	public class CriManaMovieController : CriManaMovieMaterial // TypeDefIndex: 54224
+	public class CriManaMovieController : CriManaMovieMaterial // TypeDefIndex: 55217
 	{
 		// Fields
 		public Renderer target; // 0x98
@@ -3963,17 +4067,16 @@ namespace CriWare
 		private Material originalMaterial; // 0xA8
 	
 		// Constructors
-		public CriManaMovieController() {} // 0x00000001856DE72C-0x00000001856DE734
+		public CriManaMovieController() {} // 0x00000001878911C8-0x00000001878911D0
 	
 		// Methods
-		public override void CriInternalUpdate() {} // 0x00000001856DE734-0x00000001856DE7D4
-		public override bool RenderTargetManualSetup() => default; // 0x00000001856DE944-0x00000001856DEA84
-		public override void RenderTargetManualFinalize() {} // 0x00000001856DE898-0x00000001856DE944
-		protected override void OnMaterialAvailableChanged() {} // 0x00000001856DE7D4-0x00000001856DE898
+		public override void CriInternalUpdate() {} // 0x00000001878911D0-0x0000000187891270
+		public override bool RenderTargetManualSetup() => default; // 0x00000001878913E0-0x0000000187891520
+		public override void RenderTargetManualFinalize() {} // 0x0000000187891334-0x00000001878913E0
+		protected override void OnMaterialAvailableChanged() {} // 0x0000000187891270-0x0000000187891334
 	}
 
-	[AddComponentMenu("CRIWARE/CriManaMovieControllerForUI")]
-	public class CriManaMovieControllerForUI : CriManaMovieMaterial // TypeDefIndex: 54225
+	public class CriManaMovieControllerForUI : CriManaMovieMaterial // TypeDefIndex: 55218
 	{
 		// Fields
 		public Graphic target; // 0x98
@@ -3981,69 +4084,60 @@ namespace CriWare
 		private Material originalMaterial; // 0xA8
 	
 		// Constructors
-		public CriManaMovieControllerForUI() {} // 0x00000001856DE72C-0x00000001856DE734
+		public CriManaMovieControllerForUI() {} // 0x00000001878911C8-0x00000001878911D0
 	
 		// Methods
-		protected override void Awake() {} // 0x00000001856DE3A8-0x00000001856DE3CC
-		public override void CriInternalUpdate() {} // 0x00000001856DE3CC-0x00000001856DE470
-		public override bool RenderTargetManualSetup() => default; // 0x00000001856DE5E8-0x00000001856DE72C
-		public override void RenderTargetManualFinalize() {} // 0x00000001856DE538-0x00000001856DE5E8
-		protected override void OnMaterialAvailableChanged() {} // 0x00000001856DE470-0x00000001856DE538
+		protected override void Awake() {} // 0x0000000187890E44-0x0000000187890E68
+		public override void CriInternalUpdate() {} // 0x0000000187890E68-0x0000000187890F0C
+		public override bool RenderTargetManualSetup() => default; // 0x0000000187891084-0x00000001878911C8
+		public override void RenderTargetManualFinalize() {} // 0x0000000187890FD4-0x0000000187891084
+		protected override void OnMaterialAvailableChanged() {} // 0x0000000187890F0C-0x0000000187890FD4
 	}
 
-	[AddComponentMenu("CRIWARE/CriManaMovieMaterial")]
-	public class CriManaMovieMaterial : CriManaMovieMaterialBase // TypeDefIndex: 54226
+	public class CriManaMovieMaterial : CriManaMovieMaterialBase // TypeDefIndex: 55219
 	{
 		// Fields
-		[SerializeField]
 		private string _moviePath; // 0x80
-		[SerializeField]
 		private bool _loop; // 0x88
-		[SerializeField]
 		private bool _additiveMode; // 0x89
-		[SerializeField]
 		private bool _useMaterialBlendMode; // 0x8A
-		[SerializeField]
 		private bool _advancedAudio; // 0x8B
-		[SerializeField]
 		private bool _ambisonics; // 0x8C
-		[SerializeField]
 		private bool _applyTargetAlpha; // 0x8D
-		[SerializeField]
 		private bool _uiRenderMode; // 0x8E
 		private GameObject ambisonicSource; // 0x90
 	
 		// Properties
-		public string moviePath { get => default; set {} } // 0x0000000183D4EAE0-0x0000000183D4EAF0 0x00000001856DFB40-0x00000001856DFBB8
-		public bool loop { get => default; set {} } // 0x0000000183D51D50-0x0000000183D51D60 0x00000001856DFAD4-0x00000001856DFB40
-		public bool advancedAudio { get => default; set {} } // 0x0000000183D51D20-0x0000000183D51D30 0x00000001856DF56C-0x00000001856DF5EC
-		public bool ambisonics { get => default; set {} } // 0x0000000183D51D30-0x0000000183D51D40 0x00000001856DF5EC-0x00000001856DFA68
-		public bool additiveMode { get => default; set {} } // 0x0000000183D51D10-0x0000000183D51D20 0x00000001856DF500-0x00000001856DF56C
-		public bool useMaterialBlendMode { get => default; set {} } // 0x0000000183D51D70-0x0000000183D51D80 0x00000001856DFC24-0x00000001856DFC90
-		public bool applyTargetAlpha { get => default; set {} } // 0x0000000183D51D40-0x0000000183D51D50 0x00000001856DFA68-0x00000001856DFAD4
-		public bool uiRenderMode { get => default; set {} } // 0x0000000183D51D60-0x0000000183D51D70 0x00000001856DFBB8-0x00000001856DFC24
-		protected override uint FilePathLength { get => default; } // 0x00000001856DF4B0-0x00000001856DF500 
-		protected override bool initializeWithAdvancedAudio { get => default; } // 0x0000000183D51D20-0x0000000183D51D30 
-		protected override bool initializeWithAmbisonics { get => default; } // 0x0000000183D51D30-0x0000000183D51D40 
+		public string moviePath { get => default; set {} } // 0x000000018140CF50-0x000000018140CF60 0x00000001878925DC-0x0000000187892654
+		public bool loop { get => default; set {} } // 0x000000018316BFD0-0x000000018316BFE0 0x0000000187892570-0x00000001878925DC
+		public bool advancedAudio { get => default; set {} } // 0x0000000185FB3090-0x0000000185FB30A0 0x0000000187892008-0x0000000187892088
+		public bool ambisonics { get => default; set {} } // 0x0000000181DB8300-0x0000000181DB8310 0x0000000187892088-0x0000000187892504
+		public bool additiveMode { get => default; set {} } // 0x0000000185FB3080-0x0000000185FB3090 0x0000000187891F9C-0x0000000187892008
+		public bool useMaterialBlendMode { get => default; set {} } // 0x0000000185FB30C0-0x0000000185FB30D0 0x00000001878926C0-0x000000018789272C
+		public bool applyTargetAlpha { get => default; set {} } // 0x0000000185FB30A0-0x0000000185FB30B0 0x0000000187892504-0x0000000187892570
+		public bool uiRenderMode { get => default; set {} } // 0x0000000185FB30B0-0x0000000185FB30C0 0x0000000187892654-0x00000001878926C0
+		protected override uint FilePathLength { get => default; } // 0x0000000187891F4C-0x0000000187891F9C 
+		protected override bool initializeWithAdvancedAudio { get => default; } // 0x0000000185FB3090-0x0000000185FB30A0 
+		protected override bool initializeWithAmbisonics { get => default; } // 0x0000000181DB8300-0x0000000181DB8310 
 	
 		// Constructors
-		public CriManaMovieMaterial() {} // 0x00000001856DE72C-0x00000001856DE734
+		public CriManaMovieMaterial() {} // 0x00000001878911C8-0x00000001878911D0
 	
 		// Methods
-		protected override void SetDataToPlayer() {} // 0x00000001856DF3EC-0x00000001856DF4B0
+		protected override void SetDataToPlayer() {} // 0x0000000187891E88-0x0000000187891F4C
 	}
 
-	public abstract class CriManaMovieMaterialBase : CriMonoBehaviour // TypeDefIndex: 54232
+	public abstract class CriManaMovieMaterialBase : CriMonoBehaviour // TypeDefIndex: 55225
 	{
 		// Fields
 		public bool playOnStart; // 0x28
 		public bool restartOnEnable; // 0x29
+		private bool _isMaterialAvailable_k__BackingField; // 0x2A
+		private Player _player_k__BackingField; // 0x30
 		public RenderMode renderMode; // 0x38
 		public OnApplicationPauseCallback onApplicationPauseCallback; // 0x40
 		private Player.TimerType _timerType; // 0x48
-		[SerializeField]
 		private Material _material; // 0x50
-		[SerializeField]
 		private MaxFrameDrop _maxFrameDrop; // 0x58
 		private bool materialOwn; // 0x5C
 		protected bool isMonoBehaviourStartCalled; // 0x5D
@@ -4052,21 +4146,22 @@ namespace CriWare
 		private bool previousOnApplicationPauseStatus; // 0x60
 		private WaitForEndOfFrame frameEnd; // 0x68
 		private bool unpauseOnApplicationUnpause; // 0x70
+		private bool _HaveRendererOwner_k__BackingField; // 0x71
 		private CriManaMoviePlayerHolder playerHolder; // 0x78
 	
 		// Properties
-		public MaxFrameDrop maxFrameDrop { get; set; } // 0x0000000183D4EF00-0x0000000183D4EF10 0x00000001856DF3B4-0x00000001856DF3CC
-		protected abstract bool initializeWithAdvancedAudio { get; }
-		protected abstract bool initializeWithAmbisonics { get; }
-		public bool isMaterialAvailable { get; private set; } // 0x0000000183D4F4B0-0x0000000183D4F4C0 0x0000000183D4F4E0-0x0000000183D4F4F0
-		public Player player { get; private set; } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
-		public Material material { get; set; } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x00000001856DF31C-0x00000001856DF3B4
-		public Player.TimerType timerType { get; set; } // 0x0000000183D4EC50-0x0000000183D4EC60 0x00000001856DF3CC-0x00000001856DF3EC
-		protected abstract uint FilePathLength { get; }
-		protected bool HaveRendererOwner { get; private set; } // 0x0000000183D51CF0-0x0000000183D51D00 0x0000000183D51D00-0x0000000183D51D10
+		public MaxFrameDrop maxFrameDrop { get; set; }
+		protected abstract bool initializeWithAdvancedAudio { get; } // 0x0000000185FB3060-0x0000000185FB3070 
+		protected abstract bool initializeWithAmbisonics { get; } // 0x0000000185FB3070-0x0000000185FB3080 
+		public bool isMaterialAvailable { get; private set; } // 0x0000000187891800-0x0000000187891834 0x0000000187891D20-0x0000000187891D58
+		public Player player { get; private set; } // 0x00000001878917CC-0x0000000187891800 0x0000000185492010-0x0000000185492020
+		public Material material { get; set; } // 0x0000000185492010-0x0000000185492020 0x0000000187891874-0x0000000187891A14
+		public Player.TimerType timerType { get; set; } // 0x0000000187891834-0x0000000187891874 0x0000000187891520-0x00000001878915C0
+		protected abstract uint FilePathLength { get; } // 0x0000000187891A14-0x0000000187891AC8 
+		protected bool HaveRendererOwner { get; private set; } // 0x0000000185492010-0x0000000185492020 0x0000000187891AC8-0x0000000187891BA0
 	
 		// Nested types
-		public enum MaxFrameDrop // TypeDefIndex: 54227
+		public enum MaxFrameDrop // TypeDefIndex: 55220
 		{
 			Infinite = -1,
 			Disabled = 0,
@@ -4082,84 +4177,117 @@ namespace CriWare
 			Ten = 10
 		}
 	
-		public enum RenderMode // TypeDefIndex: 54228
+		public enum RenderMode // TypeDefIndex: 55221
 		{
 			Always = 0,
 			OnVisibility = 1,
 			Never = 2
 		}
 	
-		public delegate void OnApplicationPauseCallback(CriManaMovieMaterialBase manaMovieMaterial, bool appPause); // TypeDefIndex: 54229; 0x0000000182065C10-0x0000000182065C20
+		public delegate void OnApplicationPauseCallback(CriManaMovieMaterialBase manaMovieMaterial, bool appPause); // TypeDefIndex: 55222; 0x0000000187891E50-0x0000000187891E68
+	
+		private struct _AsyncDispose_d__53 : IAsyncStateMachine // TypeDefIndex: 55223
+		{
+			// Fields
+			public int __1__state; // 0x00
+			public AsyncVoidMethodBuilder __t__builder; // 0x08
+			public Player player; // 0x28
+			private TaskAwaiter __u__1; // 0x30
+	
+			// Methods
+			private void MoveNext() {} // 0x0000000181E2DB70-0x0000000181E2DB80
+			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x000000018306A5F0-0x000000018306BCC0
+		}
+	
+		private sealed class _RestartPlayerRoutine_d__60 : IEnumerator<object> // TypeDefIndex: 55224
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public CriManaMovieMaterialBase __4__this; // 0x20
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000187891DB8-0x0000000187891E50 
+			object IEnumerator.Current { get => default; } // 0x0000000187891E68-0x0000000187891E88 
+	
+			// Constructors
+			public _RestartPlayerRoutine_d__60() {} // Dummy constructor
+			public _RestartPlayerRoutine_d__60(int __1__state) {} // 0x00000001813B51D0-0x00000001813B51E0
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x00000001864721F0-0x0000000186472200
+			private bool MoveNext() => default; // 0x0000000181460F60-0x0000000181460F70
+			void IEnumerator.Reset() {} // 0x0000000185FB0570-0x0000000185FB0580
+		}
 	
 		// Constructors
-		protected CriManaMovieMaterialBase() {} // 0x00000001856DF2BC-0x00000001856DF31C
+		protected CriManaMovieMaterialBase() {} // 0x0000000181377E40-0x0000000181377E50
 	
 		// Methods
-		protected abstract void SetDataToPlayer();
-		public void Play() {} // 0x00000001856DED64-0x00000001856DED98
-		public void Stop() {} // 0x00000001856DF284-0x00000001856DF2BC
-		public void Pause(bool sw) {} // 0x00000001856DED30-0x00000001856DED64
-		protected virtual void OnMaterialAvailableChanged() {} // 0x000000018350B670-0x000000018350B680
-		protected virtual void OnMaterialUpdated() {} // 0x000000018350B670-0x000000018350B680
-		public void PlayerManualInitialize() {} // 0x00000001856DEDD8-0x00000001856DEF78
-		public void PlayerManualFinalize() {} // 0x00000001856DED98-0x00000001856DEDD8
-		private async void AsyncDispose(Player player) {} // 0x00000001856DEA84-0x00000001856DEB24
-		public void PlayerManualSetup() {} // 0x00000001856DEF78-0x00000001856DF02C
-		public virtual bool RenderTargetManualSetup() => default; // 0x000000018232EB60-0x000000018232EB70
-		public virtual void RenderTargetManualFinalize() {} // 0x000000018350B670-0x000000018350B680
-		public void PlayerManualUpdate() {} // 0x00000001856DF02C-0x00000001856DF104
-		protected virtual void Awake() {} // 0x00000001856DEB24-0x00000001856DEB2C
-		protected override void OnEnable() {} // 0x00000001856DECA0-0x00000001856DED00
-		[IteratorStateMachine(typeof(_RestartPlayerRoutine_d__60))]
-		private IEnumerator RestartPlayerRoutine() => default; // 0x00000001856DF1C8-0x00000001856DF224
-		protected override void OnDisable() {} // 0x00000001856DEC4C-0x00000001856DECA0
-		protected virtual void OnDestroy() {} // 0x00000001856DEC24-0x00000001856DEC4C
-		protected virtual void Start() {} // 0x00000001856DF224-0x00000001856DF284
-		public override void CriInternalUpdate() {} // 0x00000001856DEC14-0x00000001856DEC1C
-		public virtual void RenderMovie() {} // 0x00000001856DF1A0-0x00000001856DF1C8
-		public override void CriInternalLateUpdate() {} // 0x00000001856DEBE4-0x00000001856DEC14
-		protected virtual void OnWillRenderObject() {} // 0x00000001856DED00-0x00000001856DED30
-		private void OnApplicationPause(bool appPause) {} // 0x00000001856DEC1C-0x00000001856DEC24
-		private void ProcessApplicationPause(bool appPause) {} // 0x00000001856DF104-0x00000001856DF1A0
-		private void CreateMaterial() {} // 0x00000001856DEB2C-0x00000001856DEBE4
+		protected abstract void SetDataToPlayer(); // 0x00000001840A27C0-0x00000001840A27D0
+		public void Play() {} // 0x00000001878915C0-0x00000001878915C8
+		public void Stop() {} // 0x000000018789173C-0x000000018789179C
+		public void Pause(bool sw) {} // 0x0000000187891C64-0x0000000187891CC0
+		protected virtual void OnMaterialAvailableChanged() {} // 0x00000001878916E8-0x000000018789173C
+		protected virtual void OnMaterialUpdated() {} // 0x00000001878916C0-0x00000001878916E8
+		public void PlayerManualInitialize() {} // 0x0000000187891CC0-0x0000000187891D20
+		public void PlayerManualFinalize() {} // 0x00000001878916B0-0x00000001878916B8
+		private void AsyncDispose(Player player) {} // 0x0000000187891C3C-0x0000000187891C64
+		public void PlayerManualSetup() {} // 0x0000000187891680-0x00000001878916B0
+		public virtual bool RenderTargetManualSetup() => default; // 0x000000018789179C-0x00000001878917CC
+		public virtual void RenderTargetManualFinalize() {} // 0x00000001878916B8-0x00000001878916C0
+		public void PlayerManualUpdate() {} // 0x0000000187891BA0-0x0000000187891C3C
+		protected virtual void Awake() {} // 0x00000001878915C8-0x0000000187891680
+		protected override void OnEnable() {} // 0x0000000187891D58-0x0000000187891DB8
+		private IEnumerator RestartPlayerRoutine() => default; // 0x00000001878946F0-0x0000000187894818
+		protected override void OnDisable() {} // 0x00000001831C5680-0x00000001831C5690
+		protected virtual void OnDestroy() {} // 0x0000000187894670-0x00000001878946F0
+		protected virtual void Start() {} // 0x00000001864BB614-0x00000001864BB734
+		public override void CriInternalUpdate() {} // 0x0000000187894A28-0x0000000187894BA8
+		public virtual void RenderMovie() {} // 0x0000000186475504-0x0000000186475510
+		public override void CriInternalLateUpdate() {} // 0x0000000181378230-0x0000000181378240
+		protected virtual void OnWillRenderObject() {} // 0x0000000185492010-0x0000000185492020
+		private void OnApplicationPause(bool appPause) {} // 0x0000000187894C3C-0x0000000187894D24
+		private void ProcessApplicationPause(bool appPause) {} // 0x0000000181377E40-0x0000000181377E50
+		private void CreateMaterial() {} // 0x0000000187894D24-0x0000000187894D70
 	}
 
-	public class CriManaMoviePlayerHolder : CriMonoBehaviour // TypeDefIndex: 54233
+	public class CriManaMoviePlayerHolder : CriMonoBehaviour // TypeDefIndex: 55226
 	{
 		// Fields
 		private Player _player; // 0x28
 	
 		// Properties
-		public Player player { set {} } // 0x0000000182C92F10-0x0000000182C92F20
+		public Player player { set {} } // 0x0000000184A4EDC0-0x0000000184A4EDD0
 	
 		// Constructors
-		public CriManaMoviePlayerHolder() {} // 0x0000000183772780-0x0000000183772790
+		public CriManaMoviePlayerHolder() {} // 0x0000000185FAF3F0-0x0000000185FAF400
 	
 		// Methods
-		private void Awake() {} // 0x00000001856DFC90-0x00000001856DFCDC
-		public override void CriInternalUpdate() {} // 0x000000018350B670-0x000000018350B680
-		public override void CriInternalLateUpdate() {} // 0x000000018350B670-0x000000018350B680
-		private void Start() {} // 0x000000018350B670-0x000000018350B680
+		private void Awake() {} // 0x000000018789272C-0x0000000187892778
+		public override void CriInternalUpdate() {} // 0x0000000185492010-0x0000000185492020
+		public override void CriInternalLateUpdate() {} // 0x0000000185492010-0x0000000185492020
+		private void Start() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class Common // TypeDefIndex: 54235
+	public class Common // TypeDefIndex: 55228
 	{
 		// Fields
-		private const string scriptVersionString = "1.0.6(2.40.31_PS5SDKUpdate)"; // Metadata: 0x01FD655A
-		public const bool supportsCriFsInstaller = true; // Metadata: 0x01FD6576
-		public const bool supportsCriFsWebInstaller = true; // Metadata: 0x01FD6577
-		public const string pluginName = "cri_ware_unity"; // Metadata: 0x01FD6578
-		public const CallingConvention pluginCallingConvention = CallingConvention.Cdecl; // Metadata: 0x01FD6587
+		private const string scriptVersionString = "1.0.6(2.40.31_PS5SDKUpdate)"; // Metadata: 0x0207BD86
+		public const bool supportsCriFsInstaller = true; // Metadata: 0x0207BDA2
+		public const bool supportsCriFsWebInstaller = true; // Metadata: 0x0207BDA3
+		public const string pluginName = "cri_ware_unity"; // Metadata: 0x0207BDA4
+		public const CallingConvention pluginCallingConvention = CallingConvention.Cdecl; // Metadata: 0x0207BDB3
 		private static GameObject _managerObject; // 0x00
 	
 		// Properties
-		public static string streamingAssetsPath { get => default; } // 0x000000018268B580-0x000000018268B5D0 
-		public static string installTargetPath { get => default; } // 0x00000001856CDC64-0x00000001856CDC6C 
-		public static string installCachePath { get => default; } // 0x00000001856CDC3C-0x00000001856CDC64 
-		public static GameObject managerObject { get => default; } // 0x000000018268EB30-0x000000018268ECD0 
+		public static string streamingAssetsPath { get => default; } // 0x00000001844CFC90-0x00000001844CFCE0 
+		public static string installTargetPath { get => default; } // 0x0000000187880700-0x0000000187880708 
+		public static string installCachePath { get => default; } // 0x00000001878806D8-0x0000000187880700 
+		public static GameObject managerObject { get => default; } // 0x0000000184A839A0-0x0000000184A83B40 
 	
 		// Nested types
-		public struct CpuUsage // TypeDefIndex: 54234
+		public struct CpuUsage // TypeDefIndex: 55227
 		{
 			// Fields
 			public float last; // 0x00
@@ -4168,81 +4296,80 @@ namespace CriWare
 		}
 	
 		// Constructors
-		public Common() {} // 0x000000018350B670-0x000000018350B680
+		public Common() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public static bool IsStreamingAssetsPath(string path) => default; // 0x0000000183CF2DE0-0x0000000183CF2E60
-		public static string GetScriptVersionString() => default; // 0x00000001856CDC10-0x00000001856CDC3C
-		public static int GetBinaryVersionNumber() => default; // 0x00000001842710A0-0x00000001842710A8
-		public static int GetRequiredBinaryVersionNumber() => default; // 0x0000000183D51C70-0x0000000183D51C80
-		public static bool CheckBinaryVersionCompatibility() => default; // 0x000000018268CF60-0x000000018268CFB0
-		public static uint GetFsMemoryUsage() => default; // 0x00000001856CDB90-0x00000001856CDBD0
-		public static uint GetAtomMemoryUsage() => default; // 0x00000001856CDB50-0x00000001856CDB90
-		public static uint GetManaMemoryUsage() => default; // 0x00000001856CDBD0-0x00000001856CDC10
-		public static CpuUsage GetAtomCpuUsage() => default; // 0x00000001856CDAFC-0x00000001856CDB50
-		public static extern int CRIWAREC8077C29(); // 0x0000000183CFE760-0x0000000183CFE790
-		public static extern void criWareUnity_SetRenderingEventOffsetForMana(int offset); // 0x00000001822C8470-0x00000001822C84F0
+		public static bool IsStreamingAssetsPath(string path) => default; // 0x0000000185F4F3B0-0x0000000185F4F430
+		public static string GetScriptVersionString() => default; // 0x00000001878806AC-0x00000001878806D8
+		public static int GetBinaryVersionNumber() => default; // 0x0000000186471830-0x0000000186471838
+		public static int GetRequiredBinaryVersionNumber() => default; // 0x0000000185FB2FE0-0x0000000185FB2FF0
+		public static bool CheckBinaryVersionCompatibility() => default; // 0x0000000184A81DA0-0x0000000184A81DF0
+		public static uint GetFsMemoryUsage() => default; // 0x000000018788062C-0x000000018788066C
+		public static uint GetAtomMemoryUsage() => default; // 0x00000001878805EC-0x000000018788062C
+		public static uint GetManaMemoryUsage() => default; // 0x000000018788066C-0x00000001878806AC
+		public static CpuUsage GetAtomCpuUsage() => default; // 0x0000000187880598-0x00000001878805EC
+		public static extern int CRIWAREC8077C29(); // 0x0000000185F5A910-0x0000000185F5A940
+		public static extern void criWareUnity_SetRenderingEventOffsetForMana(int offset); // 0x00000001844CF1A0-0x00000001844CF220
 	}
 
-	public static class CriWareDecrypter // TypeDefIndex: 54237
+	public static class CriWareDecrypter // TypeDefIndex: 55230
 	{
 		// Fields
 		private static ulong temporalStorage; // 0x00
 	
 		// Nested types
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate ulong CallbackFromNativeDelegate(IntPtr ptr1); // TypeDefIndex: 54236; 0x000000018102B410-0x000000018102B420
+		public delegate ulong CallbackFromNativeDelegate(IntPtr ptr1); // TypeDefIndex: 55229; 0x00000001844CF990-0x00000001844CFB50
 	
 		// Methods
-		public static bool Initialize(CriWareDecrypterConfig config) => default; // 0x00000001856E0410-0x00000001856E0440
-		public static bool Initialize(string key, string authenticationFile, bool enableAtomDecryption, bool enableManaDecryption) => default; // 0x000000018268B280-0x000000018268B440
-		[AOT.MonoPInvokeCallback(typeof(CallbackFromNativeDelegate))]
-		private static ulong CallbackFromNative(IntPtr ptr1) => default; // 0x00000001856E03D8-0x00000001856E0410
-		public static extern int CRIWARE05CA8EB2(bool enable_atom_decryption, bool enable_mana_decryption, CallbackFromNativeDelegate func, IntPtr obj); // 0x00000001822C77E0-0x00000001822C7890
+		public static bool Initialize(CriWareDecrypterConfig config) => default; // 0x0000000185F1A920-0x0000000185F1A9B0
+		public static bool Initialize(string key, string authenticationFile, bool enableAtomDecryption, bool enableManaDecryption) => default; // 0x00000001817C2F70-0x00000001817C2F80
+		private static ulong CallbackFromNative(IntPtr ptr1) => default; // 0x00000001878804D4-0x000000018788054C
+		public static extern int CRIWARE05CA8EB2(bool enable_atom_decryption, bool enable_mana_decryption, CallbackFromNativeDelegate func, IntPtr obj); // 0x00000001864BC1CC-0x00000001864BC2FC
 	}
 
-	[AddComponentMenu("CRIWARE/Error Handler")]
-	public class CriWareErrorHandler : CriMonoBehaviour // TypeDefIndex: 54239
+	public class CriWareErrorHandler : CriMonoBehaviour // TypeDefIndex: 55232
 	{
 		// Fields
 		public bool enableDebugPrintOnTerminal; // 0x28
 		public bool enableForceCrashOnError; // 0x29
 		public bool dontDestroyOnLoad; // 0x2A
+		private static string _errorMessage_k__BackingField; // 0x00
 		public static readonly string logPrefix; // 0x08
-		[Obsolete("CriWareErrorHandler.callback is deprecated. Use CriWareErrorHandler.OnCallback event", false)]
+		private static Callback OnCallback; // 0x10
 		public static Callback callback; // 0x18
 		public uint messageBufferCounts; // 0x2C
 		private ConcurrentQueue<string> unThreadSafeMessages; // 0x30
 		private static int initializationCount; // 0x20
 	
 		// Properties
-		public static string errorMessage { get; set; } // 0x00000001856E0EF8-0x00000001856E0F48 0x00000001856E101C-0x00000001856E1078
+		public static string errorMessage { get; set; } // 0x0000000187892EDC-0x0000000187893058 0x0000000187893458-0x0000000187893538
 	
 		// Events
 		public static event Callback OnCallback;
 	
 		// Nested types
-		public delegate void Callback(string message); // TypeDefIndex: 54238; 0x0000000182149960-0x0000000182149970
+		public delegate void Callback(string message); // TypeDefIndex: 55231; 0x0000000187893AB8-0x0000000187893B14
 	
 		// Constructors
-		public CriWareErrorHandler() {} // 0x00000001856E0D98-0x00000001856E0E24
-		static CriWareErrorHandler() {} // 0x00000001856E0CD0-0x00000001856E0D98
+		public CriWareErrorHandler() {} // 0x0000000185A264E0-0x0000000185A26510
+		static CriWareErrorHandler() {} // 0x00000001864BB614-0x00000001864BB734
 	
 		// Methods
-		private void Awake() {} // 0x00000001856E0440-0x00000001856E05BC
-		protected override void OnEnable() {} // 0x00000001856E09BC-0x00000001856E0A9C
-		protected override void OnDisable() {} // 0x00000001856E08DC-0x00000001856E09BC
-		public override void CriInternalUpdate() {} // 0x00000001856E05BC-0x00000001856E05C4
-		public override void CriInternalLateUpdate() {} // 0x000000018350B670-0x000000018350B680
-		private void OnDestroy() {} // 0x00000001856E07C0-0x00000001856E08DC
-		private void DequeueErrorMessages() {} // 0x00000001856E05C4-0x00000001856E06FC
-		private void HandleMessage(string errmsg) {} // 0x00000001856E06FC-0x00000001856E07C0
-		private static void OutputDefaultLog(string errmsg) {} // 0x00000001856E0A9C-0x00000001856E0CD0
+		private void Awake() {} // 0x0000000185492010-0x0000000185492020
+		protected override void OnEnable() {} // 0x000000018789325C-0x0000000187893378
+		protected override void OnDisable() {} // 0x0000000187893060-0x0000000187893198
+		public override void CriInternalUpdate() {} // 0x0000000187893198-0x000000018789325C
+		public override void CriInternalLateUpdate() {} // 0x0000000187893538-0x000000018789376C
+		private void OnDestroy() {} // 0x0000000187893834-0x00000001878938C0
+		private void DequeueErrorMessages() {} // 0x000000018789376C-0x0000000187893834
+		private void HandleMessage(string errmsg) {} // 0x0000000187759874-0x0000000187759948
+		private static void OutputDefaultLog(string errmsg) {} // 0x00000001833EEC70-0x00000001833EEC80
 	}
 
-	public static class CriErrorNotifier // TypeDefIndex: 54243
+	public static class CriErrorNotifier // TypeDefIndex: 55236
 	{
 		// Fields
+		private static Callback _onCallbackThreadUnsafe; // 0x00
 		private static object objectLock; // 0x08
 	
 		// Events
@@ -4250,33 +4377,31 @@ namespace CriWare
 		public static event Callback OnCallbackThreadUnsafe;
 	
 		// Nested types
-		public delegate void Callback(string message); // TypeDefIndex: 54240; 0x0000000182149960-0x0000000182149970
+		public delegate void Callback(string message); // TypeDefIndex: 55233; 0x0000000187887EF4-0x0000000187887FC0
 	
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		internal delegate void ErrorCallbackFunc(IntPtr errmsgPtr, uint p1, uint p2, IntPtr parray); // TypeDefIndex: 54241; 0x0000000182097E50-0x0000000182097E70
+		internal delegate void ErrorCallbackFunc(IntPtr errmsgPtr, uint p1, uint p2, IntPtr parray); // TypeDefIndex: 55234; 0x00000001878877BC-0x0000000187887838
 	
-		public static class NativeMethod // TypeDefIndex: 54242
+		public static class NativeMethod // TypeDefIndex: 55235
 		{
 			// Methods
-			internal static extern void criErr_SetCallback(ErrorCallbackFunc callback); // 0x00000001856E1B54-0x00000001856E1BD4
-			internal static extern IntPtr criErr_ConvertIdToMessage(IntPtr errmsgPtr, uint p1, uint p2); // 0x00000001856E1AC0-0x00000001856E1B54
+			internal static extern void criErr_SetCallback(ErrorCallbackFunc callback); // 0x0000000187759874-0x0000000187759948
+			internal static extern IntPtr criErr_ConvertIdToMessage(IntPtr errmsgPtr, uint p1, uint p2); // 0x00000001833EEC70-0x00000001833EEC80
 		}
 	
 		// Constructors
-		static CriErrorNotifier() {} // 0x00000001856D4F0C-0x00000001856D4FA4
+		static CriErrorNotifier() {} // 0x000000018789455C-0x00000001878945F0
 	
 		// Methods
-		public static bool IsRegistered(Callback target) => default; // 0x00000001856D4E2C-0x00000001856D4F0C
-		public static void CallEvent(string message) {} // 0x00000001856D4D20-0x00000001856D4D9C
-		[AOT.MonoPInvokeCallback(typeof(ErrorCallbackFunc))]
-		private static void ErrorCallbackFromNative(IntPtr errmsgPtr, uint p1, uint p2, IntPtr parray) {} // 0x00000001856D4D9C-0x00000001856D4E2C
+		public static bool IsRegistered(Callback target) => default; // 0x0000000187893FEC-0x00000001878940A8
+		public static void CallEvent(string message) {} // 0x00000001864BB614-0x00000001864BB734
+		private static void ErrorCallbackFromNative(IntPtr errmsgPtr, uint p1, uint p2, IntPtr parray) {} // 0x00000001878945F0-0x0000000187894670
 	}
 
 	[Serializable]
-	public class CriFsConfig // TypeDefIndex: 54244
+	public class CriFsConfig // TypeDefIndex: 55237
 	{
 		// Fields
-		public const int defaultAndroidDeviceReadBitrate = 50000000; // Metadata: 0x01FD6588
+		public const int defaultAndroidDeviceReadBitrate = 50000000; // Metadata: 0x0207BDB4
 		public int numberOfLoaders; // 0x10
 		public int numberOfBinders; // 0x14
 		public int numberOfInstallers; // 0x18
@@ -4288,11 +4413,11 @@ namespace CriWare
 		public int androidDeviceReadBitrate; // 0x34
 	
 		// Constructors
-		public CriFsConfig() {} // 0x00000001837729A0-0x0000000183772A50
+		public CriFsConfig() {} // 0x00000001858A56B0-0x00000001858A5760
 	}
 
 	[Serializable]
-	public class CriAtomConfig // TypeDefIndex: 54260
+	public class CriAtomConfig // TypeDefIndex: 55253
 	{
 		// Fields
 		public string acfFileName; // 0x10
@@ -4346,29 +4471,29 @@ namespace CriWare
 	
 		// Nested types
 		[Serializable]
-		public class StandardVoicePoolConfig // TypeDefIndex: 54245
+		public class StandardVoicePoolConfig // TypeDefIndex: 55238
 		{
 			// Fields
 			public int memoryVoices; // 0x10
 			public int streamingVoices; // 0x14
 	
 			// Constructors
-			public StandardVoicePoolConfig() {} // 0x0000000183D51DE0-0x0000000183D51DF0
+			public StandardVoicePoolConfig() {} // 0x00000001858A5890-0x00000001858A5C30
 		}
 	
 		[Serializable]
-		public class HcaMxVoicePoolConfig // TypeDefIndex: 54246
+		public class HcaMxVoicePoolConfig // TypeDefIndex: 55239
 		{
 			// Fields
 			public int memoryVoices; // 0x10
 			public int streamingVoices; // 0x14
 	
 			// Constructors
-			public HcaMxVoicePoolConfig() {} // 0x000000018350B670-0x000000018350B680
+			public HcaMxVoicePoolConfig() {} // 0x0000000185FB3120-0x0000000185FB3130
 		}
 	
 		[Serializable]
-		public enum InGamePreviewSwitchMode // TypeDefIndex: 54247
+		public enum InGamePreviewSwitchMode // TypeDefIndex: 55240
 		{
 			Disable = 0,
 			Enable = 1,
@@ -4377,7 +4502,7 @@ namespace CriWare
 		}
 	
 		[Serializable]
-		public class InGamePreviewConfig // TypeDefIndex: 54248
+		public class InGamePreviewConfig // TypeDefIndex: 55241
 		{
 			// Fields
 			public int maxPreviewObjects; // 0x10
@@ -4385,21 +4510,21 @@ namespace CriWare
 			public int playbackPositionUpdateInterval; // 0x18
 	
 			// Constructors
-			public InGamePreviewConfig() {} // 0x0000000183D51DB0-0x0000000183D51DD0
+			public InGamePreviewConfig() {} // 0x0000000185492010-0x0000000185492020
 		}
 	
 		[Serializable]
-		public class EditorPcmOutputConfig // TypeDefIndex: 54249
+		public class EditorPcmOutputConfig // TypeDefIndex: 55242
 		{
 			// Fields
 			public bool enable; // 0x10
 			public int bufferLength; // 0x14
 	
 			// Constructors
-			public EditorPcmOutputConfig() {} // 0x0000000183D51DA0-0x0000000183D51DB0
+			public EditorPcmOutputConfig() {} // 0x0000000185FB3100-0x0000000185FB3120
 		}
 	
-		public enum LinuxOutput // TypeDefIndex: 54250
+		public enum LinuxOutput // TypeDefIndex: 55243
 		{
 			Default = 0,
 			PulseAudio = 1,
@@ -4407,72 +4532,72 @@ namespace CriWare
 		}
 	
 		[Serializable]
-		public class AndroidLowLatencyStandardVoicePoolConfig // TypeDefIndex: 54251
+		public class AndroidLowLatencyStandardVoicePoolConfig // TypeDefIndex: 55244
 		{
 			// Fields
 			public int memoryVoices; // 0x10
 			public int streamingVoices; // 0x14
 	
 			// Constructors
-			public AndroidLowLatencyStandardVoicePoolConfig() {} // 0x000000018350B670-0x000000018350B680
+			public AndroidLowLatencyStandardVoicePoolConfig() {} // 0x0000000185FB30F0-0x0000000185FB3100
 		}
 	
 		[Serializable]
-		public class VitaManaVoicePoolConfig // TypeDefIndex: 54252
+		public class VitaManaVoicePoolConfig // TypeDefIndex: 55245
 		{
 			// Fields
 			public int numberOfManaDecoders; // 0x10
 	
 			// Constructors
-			public VitaManaVoicePoolConfig() {} // 0x0000000183D51E00-0x0000000183D51E10
+			public VitaManaVoicePoolConfig() {} // 0x0000000185492010-0x0000000185492020
 		}
 	
 		[Serializable]
-		public class VitaAtrac9VoicePoolConfig // TypeDefIndex: 54253
+		public class VitaAtrac9VoicePoolConfig // TypeDefIndex: 55246
 		{
 			// Fields
 			public int memoryVoices; // 0x10
 			public int streamingVoices; // 0x14
 	
 			// Constructors
-			public VitaAtrac9VoicePoolConfig() {} // 0x000000018350B670-0x000000018350B680
+			public VitaAtrac9VoicePoolConfig() {} // 0x0000000185FB3140-0x0000000185FB3150
 		}
 	
 		[Serializable]
-		public class Ps4Atrac9VoicePoolConfig // TypeDefIndex: 54254
+		public class Ps4Atrac9VoicePoolConfig // TypeDefIndex: 55247
 		{
 			// Fields
 			public int memoryVoices; // 0x10
 			public int streamingVoices; // 0x14
 	
 			// Constructors
-			public Ps4Atrac9VoicePoolConfig() {} // 0x000000018350B670-0x000000018350B680
+			public Ps4Atrac9VoicePoolConfig() {} // 0x0000000185492010-0x0000000185492020
 		}
 	
 		[Serializable]
-		public class Ps5PortConfig // TypeDefIndex: 54255
+		public class Ps5PortConfig // TypeDefIndex: 55248
 		{
 			// Fields
 			public int maxChannelPorts; // 0x10
 			public int maxObjectPorts; // 0x14
 	
 			// Constructors
-			public Ps5PortConfig() {} // 0x0000000183D51DD0-0x0000000183D51DE0
+			public Ps5PortConfig() {} // 0x0000000185492010-0x0000000185492020
 		}
 	
 		[Serializable]
-		public class SwitchOpusVoicePoolConfig // TypeDefIndex: 54256
+		public class SwitchOpusVoicePoolConfig // TypeDefIndex: 55249
 		{
 			// Fields
 			public int memoryVoices; // 0x10
 			public int streamingVoices; // 0x14
 	
 			// Constructors
-			public SwitchOpusVoicePoolConfig() {} // 0x000000018350B670-0x000000018350B680
+			public SwitchOpusVoicePoolConfig() {} // 0x00000001830836C0-0x00000001830836D0
 		}
 	
 		[Serializable]
-		public class Ps4Audio3dConfig // TypeDefIndex: 54258
+		public class Ps4Audio3dConfig // TypeDefIndex: 55251
 		{
 			// Fields
 			public bool useAudio3D; // 0x10
@@ -4480,36 +4605,36 @@ namespace CriWare
 	
 			// Nested types
 			[Serializable]
-			public class VoicePoolConfig // TypeDefIndex: 54257
+			public class VoicePoolConfig // TypeDefIndex: 55250
 			{
 				// Fields
 				public int memoryVoices; // 0x10
 				public int streamingVoices; // 0x14
 	
 				// Constructors
-				public VoicePoolConfig() {} // 0x000000018350B670-0x000000018350B680
+				public VoicePoolConfig() {} // 0x0000000185492010-0x0000000185492020
 			}
 	
 			// Constructors
-			public Ps4Audio3dConfig() {} // 0x0000000183772F20-0x0000000183772F70
+			public Ps4Audio3dConfig() {} // 0x00000001858A5C30-0x00000001858A5C80
 		}
 	
 		[Serializable]
-		public class WebGLWebAudioVoicePoolConfig // TypeDefIndex: 54259
+		public class WebGLWebAudioVoicePoolConfig // TypeDefIndex: 55252
 		{
 			// Fields
 			public int voices; // 0x10
 	
 			// Constructors
-			public WebGLWebAudioVoicePoolConfig() {} // 0x0000000183D51E10-0x0000000183D51E20
+			public WebGLWebAudioVoicePoolConfig() {} // 0x0000000185492010-0x0000000185492020
 		}
 	
 		// Constructors
-		public CriAtomConfig() {} // 0x0000000183772B80-0x0000000183772F20
+		public CriAtomConfig() {} // 0x0000000185FB3150-0x0000000185FB3160
 	}
 
 	[Serializable]
-	public class CriManaConfig // TypeDefIndex: 54264
+	public class CriManaConfig // TypeDefIndex: 55257
 	{
 		// Fields
 		public int numberOfDecoders; // 0x10
@@ -4521,17 +4646,17 @@ namespace CriWare
 	
 		// Nested types
 		[Serializable]
-		public class PCH264PlaybackConfig // TypeDefIndex: 54261
+		public class PCH264PlaybackConfig // TypeDefIndex: 55254
 		{
 			// Fields
 			public bool useH264Playback; // 0x10
 	
 			// Constructors
-			public PCH264PlaybackConfig() {} // 0x0000000181168960-0x0000000181168970
+			public PCH264PlaybackConfig() {} // 0x00000001858A5760-0x00000001858A5840
 		}
 	
 		[Serializable]
-		public class VitaH264PlaybackConfig // TypeDefIndex: 54262
+		public class VitaH264PlaybackConfig // TypeDefIndex: 55255
 		{
 			// Fields
 			public bool useH264Playback; // 0x10
@@ -4540,26 +4665,26 @@ namespace CriWare
 			public bool getMemoryFromTexture; // 0x1C
 	
 			// Constructors
-			public VitaH264PlaybackConfig() {} // 0x0000000183D51DF0-0x0000000183D51E00
+			public VitaH264PlaybackConfig() {} // 0x0000000181B9A230-0x0000000181B9A240
 		}
 	
 		[Serializable]
-		public class WebGLConfig // TypeDefIndex: 54263
+		public class WebGLConfig // TypeDefIndex: 55256
 		{
 			// Fields
 			public string webworkerPath; // 0x10
 			public int heapSize; // 0x18
 	
 			// Constructors
-			public WebGLConfig() {} // 0x0000000183772B30-0x0000000183772B80
+			public WebGLConfig() {} // 0x0000000185FB3130-0x0000000185FB3140
 		}
 	
 		// Constructors
-		public CriManaConfig() {} // 0x0000000183772A50-0x0000000183772B30
+		public CriManaConfig() {} // 0x00000001858A5840-0x00000001858A5890
 	}
 
 	[Serializable]
-	public class CriWareDecrypterConfig // TypeDefIndex: 54265
+	public class CriWareDecrypterConfig // TypeDefIndex: 55258
 	{
 		// Fields
 		public string key; // 0x10
@@ -4568,11 +4693,10 @@ namespace CriWare
 		public bool enableManaDecryption; // 0x21
 	
 		// Constructors
-		public CriWareDecrypterConfig() {} // 0x00000001837728C0-0x0000000183772920
+		public CriWareDecrypterConfig() {} // 0x00000001858A5650-0x00000001858A56B0
 	}
 
-	[AddComponentMenu("CRIWARE/Library Initializer")]
-	public class CriWareInitializer : CriMonoBehaviour // TypeDefIndex: 54266
+	public class CriWareInitializer : CriMonoBehaviour // TypeDefIndex: 55259
 	{
 		// Fields
 		public bool initializesFileSystem; // 0x28
@@ -4588,30 +4712,29 @@ namespace CriWare
 		private static int initializationCount; // 0x00
 	
 		// Constructors
-		public CriWareInitializer() {} // 0x0000000183772790-0x00000001837728C0
+		public CriWareInitializer() {} // 0x00000001858A5520-0x00000001858A5650
 	
 		// Methods
-		private void Awake() {} // 0x000000018268CF40-0x000000018268CF60
-		protected override void OnEnable() {} // 0x0000000183D4D9B0-0x0000000183D4D9C0
-		private void Start() {} // 0x000000018350B670-0x000000018350B680
-		private void OnDestroy() {} // 0x00000001856E10F8-0x00000001856E1100
-		public override void CriInternalUpdate() {} // 0x000000018350B670-0x000000018350B680
-		public override void CriInternalLateUpdate() {} // 0x000000018350B670-0x000000018350B680
-		public void Initialize() {} // 0x000000018268CC30-0x000000018268CE20
-		public void Shutdown() {} // 0x00000001856E1100-0x00000001856E11D0
-		public static bool IsInitialized() => default; // 0x000000018268CFB0-0x000000018268D000
-		public static void AddAudioEffectInterface(IntPtr effect_interface) {} // 0x00000001856E1078-0x00000001856E10F0
-		public static bool InitializeFileSystem(CriFsConfig config) => default; // 0x000000018268CAE0-0x000000018268CC30
-		public static bool InitializeAtom(CriAtomConfig config) => default; // 0x0000000183182A10-0x0000000183182EC0
-		public static bool InitializeMana(CriManaConfig config) => default; // 0x0000000183182F50-0x0000000183183070
-		[Obsolete("Use CriWareDecypter.Initialize")]
-		public static bool InitializeDecrypter(CriWareDecrypterConfig config) => default; // 0x00000001856E10F0-0x00000001856E10F8
+		private void Awake() {} // 0x0000000184A81D80-0x0000000184A81DA0
+		protected override void OnEnable() {} // 0x0000000184A81D70-0x0000000184A81D80
+		private void Start() {} // 0x0000000185492010-0x0000000185492020
+		private void OnDestroy() {} // 0x0000000187893B94-0x0000000187893B9C
+		public override void CriInternalUpdate() {} // 0x0000000185492010-0x0000000185492020
+		public override void CriInternalLateUpdate() {} // 0x0000000185492010-0x0000000185492020
+		public void Initialize() {} // 0x00000001850F9C70-0x00000001850F9E60
+		public void Shutdown() {} // 0x0000000187893B9C-0x0000000187893C6C
+		public static bool IsInitialized() => default; // 0x0000000184A81DF0-0x0000000184A81E40
+		public static void AddAudioEffectInterface(IntPtr effect_interface) {} // 0x0000000187893B14-0x0000000187893B8C
+		public static bool InitializeFileSystem(CriFsConfig config) => default; // 0x00000001850F9B20-0x00000001850F9C70
+		public static bool InitializeAtom(CriAtomConfig config) => default; // 0x00000001850F8DC0-0x00000001850F9270
+		public static bool InitializeMana(CriManaConfig config) => default; // 0x00000001850F9300-0x00000001850F9420
+		public static bool InitializeDecrypter(CriWareDecrypterConfig config) => default; // 0x0000000187893B8C-0x0000000187893B94
 	}
 
-	public static class CriAtomExDebug // TypeDefIndex: 54268
+	public static class CriAtomExDebug // TypeDefIndex: 55261
 	{
 		// Nested types
-		public struct ResourcesInfo // TypeDefIndex: 54267
+		public struct ResourcesInfo // TypeDefIndex: 55260
 		{
 			// Fields
 			public CriAtomEx.ResourceUsage virtualVoiceUsage; // 0x00
@@ -4623,14 +4746,14 @@ namespace CriWare
 		// Methods
 		public static void GetResourcesInfo(out ResourcesInfo resourcesInfo) {
 			resourcesInfo = default;
-		} // 0x00000001856CE96C-0x00000001856CE974
-		private static extern void criAtomExDebug_GetResourcesInfo(out ResourcesInfo resourcesInfo); // 0x00000001856CE974-0x00000001856CE9EC
+		} // 0x0000000187881408-0x0000000187881410
+		private static extern void criAtomExDebug_GetResourcesInfo(out ResourcesInfo resourcesInfo); // 0x0000000187881410-0x0000000187881488
 	}
 
-	public static class CriAtomExAcfDebug // TypeDefIndex: 54282
+	public static class CriAtomExAcfDebug // TypeDefIndex: 55275
 	{
 		// Nested types
-		public struct CategoryInfo // TypeDefIndex: 54269
+		public struct CategoryInfo // TypeDefIndex: 55262
 		{
 			// Fields
 			public uint groupNo; // 0x00
@@ -4640,7 +4763,7 @@ namespace CriWare
 			public float volume; // 0x14
 		}
 	
-		public struct DspBusInfo // TypeDefIndex: 54270
+		public struct DspBusInfo // TypeDefIndex: 55263
 		{
 			// Fields
 			public string name; // 0x00
@@ -4656,20 +4779,20 @@ namespace CriWare
 			public byte numBusLinks; // 0x33
 		}
 	
-		public struct AisacControlInfo // TypeDefIndex: 54271
+		public struct AisacControlInfo // TypeDefIndex: 55264
 		{
 			// Fields
 			public string name; // 0x00
 			public uint id; // 0x08
 		}
 	
-		public enum AisacType // TypeDefIndex: 54272
+		public enum AisacType // TypeDefIndex: 55265
 		{
 			Normal = 0,
 			AutoModulation = 1
 		}
 	
-		public struct GlobalAisacInfo // TypeDefIndex: 54273
+		public struct GlobalAisacInfo // TypeDefIndex: 55266
 		{
 			// Fields
 			public string name; // 0x00
@@ -4680,7 +4803,7 @@ namespace CriWare
 			public ushort controlId; // 0x14
 		}
 	
-		public struct SelectorInfo // TypeDefIndex: 54274
+		public struct SelectorInfo // TypeDefIndex: 55267
 		{
 			// Fields
 			public string name; // 0x00
@@ -4689,14 +4812,14 @@ namespace CriWare
 			public ushort globalLabelIndex; // 0x0C
 		}
 	
-		public struct SelectorLabelInfo // TypeDefIndex: 54275
+		public struct SelectorLabelInfo // TypeDefIndex: 55268
 		{
 			// Fields
 			public string selectorName; // 0x00
 			public string labelName; // 0x08
 		}
 	
-		private struct CategoryInfoForMarshaling // TypeDefIndex: 54276
+		private struct CategoryInfoForMarshaling // TypeDefIndex: 55269
 		{
 			// Fields
 			public uint groupNo; // 0x00
@@ -4708,10 +4831,10 @@ namespace CriWare
 			// Methods
 			public void Convert(out CategoryInfo x) {
 				x = default;
-			} // 0x00000001856CDAB0-0x00000001856CDAFC
+			} // 0x0000000187880B4C-0x0000000187880B54
 		}
 	
-		private struct DspBusInfoForMarshaling // TypeDefIndex: 54277
+		private struct DspBusInfoForMarshaling // TypeDefIndex: 55270
 		{
 			// Fields
 			public IntPtr namePtr; // 0x00
@@ -4729,10 +4852,10 @@ namespace CriWare
 			// Methods
 			public void Convert(out DspBusInfo x) {
 				x = default;
-			} // 0x00000001856E14C8-0x00000001856E1550
+			} // 0x00000001878809B4-0x0000000187880A00
 		}
 	
-		private struct AisacControlInfoForMarshaling // TypeDefIndex: 54278
+		private struct AisacControlInfoForMarshaling // TypeDefIndex: 55271
 		{
 			// Fields
 			public IntPtr namePtr; // 0x00
@@ -4741,10 +4864,10 @@ namespace CriWare
 			// Methods
 			public void Convert(out AisacControlInfo x) {
 				x = default;
-			} // 0x00000001856CDA00-0x00000001856CDA38
+			} // 0x0000000187880A00-0x0000000187880A4C
 		}
 	
-		private struct GlobalAisacInfoForMarshaling // TypeDefIndex: 54279
+		private struct GlobalAisacInfoForMarshaling // TypeDefIndex: 55272
 		{
 			// Fields
 			public IntPtr namePtr; // 0x00
@@ -4758,10 +4881,10 @@ namespace CriWare
 			// Methods
 			public void Convert(out GlobalAisacInfo x) {
 				x = default;
-			} // 0x00000001856E16D4-0x00000001856E172C
+			} // 0x0000000187880968-0x00000001878809B4
 		}
 	
-		private struct SelectorInfoForMarshaling // TypeDefIndex: 54280
+		private struct SelectorInfoForMarshaling // TypeDefIndex: 55273
 		{
 			// Fields
 			public IntPtr namePtr; // 0x00
@@ -4772,10 +4895,10 @@ namespace CriWare
 			// Methods
 			public void Convert(out SelectorInfo x) {
 				x = default;
-			} // 0x00000001856E1EF8-0x00000001856E1F44
+			} // 0x0000000187880B44-0x0000000187880B4C
 		}
 	
-		private struct SelectorLabelInfoForMarshaling // TypeDefIndex: 54281
+		private struct SelectorLabelInfoForMarshaling // TypeDefIndex: 55274
 		{
 			// Fields
 			public IntPtr selectorNamePtr; // 0x00
@@ -4784,80 +4907,80 @@ namespace CriWare
 			// Methods
 			public void Convert(out SelectorLabelInfo x) {
 				x = default;
-			} // 0x00000001856E1F44-0x00000001856E1F8C
+			} // 0x0000000187880A4C-0x0000000187880AA4
 		}
 	
 		// Methods
-		public static int GetNumCategories() => default; // 0x00000001856CE0B0-0x00000001856CE0B8
+		public static int GetNumCategories() => default; // 0x0000000187880B3C-0x0000000187880B44
 		public static bool GetCategoryInfoByIndex(ushort index, out CategoryInfo categoryInfo) {
 			categoryInfo = default;
 			return default;
-		} // 0x00000001856CDF18-0x00000001856CDF64
+		} // 0x0000000187880908-0x000000018788094C
 		public static bool GetCategoryInfoByName(string name, out CategoryInfo categoryInfo) {
 			categoryInfo = default;
 			return default;
-		} // 0x00000001856CDF64-0x00000001856CDFB0
+		} // 0x0000000187880900-0x0000000187880908
 		public static bool GetCategoryInfoById(uint id, out CategoryInfo categoryInfo) {
 			categoryInfo = default;
 			return default;
-		} // 0x00000001856CDECC-0x00000001856CDF18
-		public static int GetNumBuses() => default; // 0x00000001856CE0A8-0x00000001856CE0B0
+		} // 0x000000018788094C-0x0000000187880968
+		public static int GetNumBuses() => default; // 0x0000000187880B54-0x0000000187880B5C
 		public static bool GetDspBusInformation(ushort index, out DspBusInfo dspBusInfo) {
 			dspBusInfo = default;
 			return default;
-		} // 0x00000001856CDFB0-0x00000001856CE008
-		public static int GetNumAisacControls() => default; // 0x00000001856CE0A0-0x00000001856CE0A8
+		} // 0x0000000187880AF0-0x0000000187880B3C
+		public static int GetNumAisacControls() => default; // 0x0000000187880AA4-0x0000000187880AF0
 		public static bool GetAisacControlInfo(ushort index, out AisacControlInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856CDE6C-0x00000001856CDEB0
-		public static uint GetAisacControlIdByName(string name) => default; // 0x00000001856CDE64-0x00000001856CDE6C
-		public static string GetAisacControlNameById(uint id) => default; // 0x00000001856CDEB0-0x00000001856CDECC
-		public static int GetNumGlobalAisacs() => default; // 0x00000001856CE0B8-0x00000001856CE0C0
+		} // 0x0000000187880B5C-0x0000000187880B64
+		public static uint GetAisacControlIdByName(string name) => default; // 0x0000000187880B64-0x0000000187880BA8
+		public static string GetAisacControlNameById(uint id) => default; // 0x0000000187880BA8-0x0000000187880BEC
+		public static int GetNumGlobalAisacs() => default; // 0x0000000187880BEC-0x0000000187880C50
 		public static bool GetGlobalAisacInfo(ushort index, out GlobalAisacInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856CE054-0x00000001856CE0A0
+		} // 0x00000001878811D8-0x0000000187881204
 		public static bool GetGlobalAisacInfoByName(string name, out GlobalAisacInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856CE008-0x00000001856CE054
-		public static int GetNumSelectors() => default; // 0x00000001856CE0C0-0x00000001856CE0C8
+		} // 0x0000000187880EC8-0x0000000187880F4C
+		public static int GetNumSelectors() => default; // 0x0000000187880E24-0x0000000187880EC8
 		public static bool GetSelectorInfoByIndex(ushort index, out SelectorInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856CE0C8-0x00000001856CE10C
+		} // 0x0000000187880DA0-0x0000000187880E24
 		public static bool GetSelectorInfoByName(string name, out SelectorInfo info) {
 			info = default;
 			return default;
-		} // 0x00000001856CE10C-0x00000001856CE150
+		} // 0x00000001878811AC-0x00000001878811D8
 		public static bool GetSelectorLabelInfo(ref SelectorInfo selectorInfo, ushort index, out SelectorLabelInfo labelInfo) {
 			labelInfo = default;
 			return default;
-		} // 0x00000001856CE150-0x00000001856CE1B4
-		private static extern int criAtomExAcf_GetNumCategories(); // 0x00000001856CE73C-0x00000001856CE768
-		private static extern int criAtomExAcf_GetCategoryInfo(ushort index, out CategoryInfoForMarshaling categoryInfo); // 0x00000001856CE42C-0x00000001856CE4B0
-		private static extern int criAtomExAcf_GetCategoryInfoByName(string name, out CategoryInfoForMarshaling categoryInfo); // 0x00000001856CE388-0x00000001856CE42C
-		private static extern int criAtomExAcf_GetCategoryInfoById(uint id, out CategoryInfoForMarshaling categoryInfo); // 0x00000001856CE304-0x00000001856CE388
-		private static extern int criAtomExAcf_GetNumBuses(); // 0x00000001856CE710-0x00000001856CE73C
-		private static extern int criAtomExAcf_GetDspBusInformation(ushort index, out DspBusInfoForMarshaling dspBusInfo); // 0x00000001856CE4B0-0x00000001856CE5C4
-		private static extern int criAtomExAcf_GetNumAisacControls(); // 0x00000001856CE6EC-0x00000001856CE710
-		private static extern int criAtomExAcf_GetAisacControlInfo(ushort index, out AisacControlInfoForMarshaling info); // 0x00000001856CE208-0x00000001856CE28C
-		private static extern uint criAtomExAcf_GetAisacControlIdByName(string name); // 0x00000001856CE1B4-0x00000001856CE208
-		private static extern IntPtr criAtomExAcf_GetAisacControlNameById(uint id); // 0x00000001856CE28C-0x00000001856CE304
-		private static extern int criAtomExAcf_GetNumGlobalAisacs(); // 0x00000001856CE768-0x00000001856CE78C
-		private static extern int criAtomExAcf_GetGlobalAisacInfo(ushort index, out GlobalAisacInfoForMarshaling info); // 0x00000001856CE668-0x00000001856CE6EC
-		private static extern int criAtomExAcf_GetGlobalAisacInfoByName(string name, out GlobalAisacInfoForMarshaling info); // 0x00000001856CE5C4-0x00000001856CE668
-		private static extern int criAtomExAcf_GetNumSelectors(); // 0x00000001856CE78C-0x00000001856CE7B0
-		private static extern int criAtomExAcf_GetSelectorInfoByIndex(ushort index, out SelectorInfoForMarshaling info); // 0x00000001856CE7B0-0x00000001856CE834
-		private static extern int criAtomExAcf_GetSelectorInfoByName(string name, out SelectorInfoForMarshaling info); // 0x00000001856CE834-0x00000001856CE8D8
-		private static extern int criAtomExAcf_GetSelectorLabelInfo(ref SelectorInfoForMarshaling info, ushort labelIndex, out SelectorLabelInfoForMarshaling label_info); // 0x00000001856CE8D8-0x00000001856CE96C
+		} // 0x0000000187880F4C-0x0000000187881060
+		private static extern int criAtomExAcf_GetNumCategories(); // 0x0000000187881188-0x00000001878811AC
+		private static extern int criAtomExAcf_GetCategoryInfo(ushort index, out CategoryInfoForMarshaling categoryInfo); // 0x0000000187880CA4-0x0000000187880D28
+		private static extern int criAtomExAcf_GetCategoryInfoByName(string name, out CategoryInfoForMarshaling categoryInfo); // 0x0000000187880C50-0x0000000187880CA4
+		private static extern int criAtomExAcf_GetCategoryInfoById(uint id, out CategoryInfoForMarshaling categoryInfo); // 0x0000000187880D28-0x0000000187880DA0
+		private static extern int criAtomExAcf_GetNumBuses(); // 0x0000000187881204-0x0000000187881228
+		private static extern int criAtomExAcf_GetDspBusInformation(ushort index, out DspBusInfoForMarshaling dspBusInfo); // 0x0000000187881104-0x0000000187881188
+		private static extern int criAtomExAcf_GetNumAisacControls(); // 0x0000000187881060-0x0000000187881104
+		private static extern int criAtomExAcf_GetAisacControlInfo(ushort index, out AisacControlInfoForMarshaling info); // 0x0000000187881228-0x000000018788124C
+		private static extern uint criAtomExAcf_GetAisacControlIdByName(string name); // 0x000000018788124C-0x00000001878812D0
+		private static extern IntPtr criAtomExAcf_GetAisacControlNameById(uint id); // 0x00000001878812D0-0x0000000187881374
+		private static extern int criAtomExAcf_GetNumGlobalAisacs(); // 0x0000000187881374-0x0000000187881408
+		private static extern int criAtomExAcf_GetGlobalAisacInfo(ushort index, out GlobalAisacInfoForMarshaling info); // 0x000000018788054C-0x0000000187880598
+		private static extern int criAtomExAcf_GetGlobalAisacInfoByName(string name, out GlobalAisacInfoForMarshaling info); // 0x0000000187893F64-0x0000000187893FEC
+		private static extern int criAtomExAcf_GetNumSelectors(); // 0x000000018788049C-0x00000001878804D4
+		private static extern int criAtomExAcf_GetSelectorInfoByIndex(ushort index, out SelectorInfoForMarshaling info); // 0x0000000187894170-0x00000001878941C8
+		private static extern int criAtomExAcf_GetSelectorInfoByName(string name, out SelectorInfoForMarshaling info); // 0x0000000187894994-0x00000001878949E0
+		private static extern int criAtomExAcf_GetSelectorLabelInfo(ref SelectorInfoForMarshaling info, ushort labelIndex, out SelectorLabelInfoForMarshaling label_info); // 0x00000001878949E0-0x0000000187894A28
 	}
 
-	public static class CriAtomExAcbDebug // TypeDefIndex: 54285
+	public static class CriAtomExAcbDebug // TypeDefIndex: 55278
 	{
 		// Nested types
-		public struct AcbInfo // TypeDefIndex: 54283
+		public struct AcbInfo // TypeDefIndex: 55276
 		{
 			// Fields
 			public string name; // 0x00
@@ -4868,7 +4991,7 @@ namespace CriWare
 			public int numCues; // 0x18
 		}
 	
-		private struct AcbInfoForMarshaling // TypeDefIndex: 54284
+		private struct AcbInfoForMarshaling // TypeDefIndex: 55277
 		{
 			// Fields
 			public IntPtr namePtr; // 0x00
@@ -4881,66 +5004,66 @@ namespace CriWare
 			// Methods
 			public void Convert(out AcbInfo x) {
 				x = default;
-			} // 0x00000001856CD9B0-0x00000001856CDA00
+			} // 0x0000000187880820-0x000000018788087C
 		}
 	
 		// Methods
 		public static bool GetAcbInfo(CriAtomExAcb acb, out AcbInfo acbInfo) {
 			acbInfo = default;
 			return default;
-		} // 0x00000001856CDD84-0x00000001856CDDE0
-		private static extern int criAtomExAcb_GetAcbInfo(IntPtr acbHn, out AcbInfoForMarshaling acbInfo); // 0x00000001856CDDE0-0x00000001856CDE64
+		} // 0x000000018788087C-0x0000000187880900
+		private static extern int criAtomExAcb_GetAcbInfo(IntPtr acbHn, out AcbInfoForMarshaling acbInfo); // 0x000000018788044C-0x000000018788049C
 	}
 
-	public static class CriAtomExPlaybackDebug // TypeDefIndex: 54286
+	public static class CriAtomExPlaybackDebug // TypeDefIndex: 55279
 	{
 		// Methods
 		public static bool GetParameter(CriAtomExPlayback playback, CriAtomEx.Parameter parameterId, out float value) {
 			value = default;
 			return default;
-		} // 0x00000001856CEA34-0x00000001856CEA4C
+		} // 0x00000001878814D0-0x00000001878814E8
 		public static bool GetParameter(CriAtomExPlayback playback, CriAtomEx.Parameter parameterId, out uint value) {
 			value = default;
 			return default;
-		} // 0x00000001856CEA4C-0x00000001856CEA64
+		} // 0x00000001878814E8-0x0000000187881500
 		public static bool GetParameter(CriAtomExPlayback playback, CriAtomEx.Parameter parameterId, out int value) {
 			value = default;
 			return default;
-		} // 0x00000001856CEA1C-0x00000001856CEA34
+		} // 0x00000001878814B8-0x00000001878814D0
 		public static bool GetAisacControl(CriAtomExPlayback playback, uint controlId, out float value) {
 			value = default;
 			return default;
-		} // 0x00000001856CE9EC-0x00000001856CEA04
+		} // 0x0000000187881488-0x00000001878814A0
 		public static bool GetAisacControl(CriAtomExPlayback playback, string controlName, out float value) {
 			value = default;
 			return default;
-		} // 0x00000001856CEA04-0x00000001856CEA1C
-		private static extern int criAtomExPlayback_GetParameterFloat32(uint id, int parameterId, out float value); // 0x00000001856CEBA4-0x00000001856CEC34
-		private static extern int criAtomExPlayback_GetParameterUint32(uint id, int parameterId, out uint value); // 0x00000001856CECC4-0x00000001856CED54
-		private static extern int criAtomExPlayback_GetParameterSint32(uint id, int parameterId, out int value); // 0x00000001856CEC34-0x00000001856CECC4
-		private static extern int criAtomExPlayback_GetAisacControlById(uint id, uint controlId, out float value); // 0x00000001856CEA64-0x00000001856CEAF4
-		private static extern int criAtomExPlayback_GetAisacControlByName(uint id, string controlName, out float value); // 0x00000001856CEAF4-0x00000001856CEBA4
+		} // 0x00000001878814A0-0x00000001878814B8
+		private static extern int criAtomExPlayback_GetParameterFloat32(uint id, int parameterId, out float value); // 0x0000000187881640-0x00000001878816D0
+		private static extern int criAtomExPlayback_GetParameterUint32(uint id, int parameterId, out uint value); // 0x0000000187881760-0x00000001878817F0
+		private static extern int criAtomExPlayback_GetParameterSint32(uint id, int parameterId, out int value); // 0x00000001878816D0-0x0000000187881760
+		private static extern int criAtomExPlayback_GetAisacControlById(uint id, uint controlId, out float value); // 0x0000000187881500-0x0000000187881590
+		private static extern int criAtomExPlayback_GetAisacControlByName(uint id, string controlName, out float value); // 0x0000000187881590-0x0000000187881640
 	}
 
-	public abstract class CriDisposable : IDisposable // TypeDefIndex: 54287
+	public abstract class CriDisposable : IDisposable // TypeDefIndex: 55280
 	{
 		// Fields
 		public Guid guid; // 0x10
 	
 		// Constructors
-		public CriDisposable() {} // 0x00000001831836D0-0x0000000183183740
+		public CriDisposable() {} // 0x0000000185FAA770-0x0000000185FAA7E0
 	
 		// Methods
 		public abstract void Dispose();
 	}
 
-	public static class CriDisposableObjectManager // TypeDefIndex: 54290
+	public static class CriDisposableObjectManager // TypeDefIndex: 55283
 	{
 		// Fields
 		private static List<ObjectRef> refList; // 0x00
 	
 		// Nested types
-		public enum ModuleType // TypeDefIndex: 54288
+		public enum ModuleType // TypeDefIndex: 55281
 		{
 			Atom = 0,
 			AtomMic = 1,
@@ -4952,7 +5075,7 @@ namespace CriWare
 			Rtc = 7
 		}
 	
-		public struct ObjectRef // TypeDefIndex: 54289
+		public struct ObjectRef // TypeDefIndex: 55282
 		{
 			// Fields
 			public Guid guid; // 0x00
@@ -4964,76 +5087,79 @@ namespace CriWare
 				guid = default;
 				type = default;
 				disposable = default;
-			} // 0x0000000184275A98-0x0000000184275AB0
+			} // 0x0000000185AD1250-0x0000000185AD1520
 		}
 	
 		// Constructors
-		static CriDisposableObjectManager() {} // 0x0000000183CE4C60-0x0000000183CE4CF0
+		static CriDisposableObjectManager() {} // 0x0000000186474FC4-0x0000000186474FDC
 	
 		// Methods
-		private static int SearchForDisposable(CriDisposable disposable) => default; // 0x0000000183184360-0x0000000183184630
-		public static void Register(CriDisposable disposable, ModuleType type) {} // 0x0000000183183FA0-0x0000000183184360
-		public static bool Unregister(CriDisposable disposable) => default; // 0x00000001856D4BDC-0x00000001856D4D20
-		public static bool IsDisposed(CriDisposable disposable) => default; // 0x00000001856D4B98-0x00000001856D4BDC
-		public static void CallOnModuleFinalization(ModuleType type) {} // 0x00000001856D47EC-0x00000001856D4834
-		private static int GetNextWithType(ModuleType type) => default; // 0x00000001856D4AD0-0x00000001856D4B98
-		public static void DisposeAll(ModuleType type) {} // 0x00000001856D4834-0x00000001856D4AD0
+		private static int SearchForDisposable(CriDisposable disposable) => default; // 0x0000000185AD0E90-0x0000000185AD1250
+		public static void Register(CriDisposable disposable, ModuleType type) {} // 0x0000000187887678-0x00000001878877BC
+		public static bool Unregister(CriDisposable disposable) => default; // 0x0000000187887634-0x0000000187887678
+		public static bool IsDisposed(CriDisposable disposable) => default; // 0x0000000187887288-0x00000001878872D0
+		public static void CallOnModuleFinalization(ModuleType type) {} // 0x000000018788756C-0x0000000187887634
+		private static int GetNextWithType(ModuleType type) => default; // 0x00000001878872D0-0x000000018788756C
+		public static void DisposeAll(ModuleType type) {} // 0x0000000185F40720-0x0000000185F407B0
 	}
 
-	public abstract class CriMonoBehaviour : MonoBehaviour // TypeDefIndex: 54291
+	public abstract class CriMonoBehaviour : MonoBehaviour // TypeDefIndex: 55284
 	{
+		// Fields
+		private Guid _guid_k__BackingField; // 0x18
+	
 		// Properties
-		public Guid guid { get; private set; } // 0x0000000183D51D80-0x0000000183D51D90 0x0000000183D51D90-0x0000000183D51DA0
+		public Guid guid { get; private set; } // 0x0000000185FB30D0-0x0000000185FB30E0 0x0000000185FB30E0-0x0000000185FB30F0
 	
 		// Constructors
-		public CriMonoBehaviour() {} // 0x0000000183772920-0x00000001837729A0
+		public CriMonoBehaviour() {} // 0x00000001843D1350-0x00000001843D13D0
 	
 		// Methods
-		protected virtual void OnEnable() {} // 0x000000018268E0D0-0x000000018268E140
-		protected virtual void OnDisable() {} // 0x00000001856E038C-0x00000001856E03D8
+		protected virtual void OnEnable() {} // 0x0000000184A82F40-0x0000000184A82FB0
+		protected virtual void OnDisable() {} // 0x0000000187892E28-0x0000000187892E74
 		public abstract void CriInternalUpdate();
 		public abstract void CriInternalLateUpdate();
 	}
 
-	public class CriMonoBehaviourManager : MonoBehaviour // TypeDefIndex: 54292
+	public class CriMonoBehaviourManager : MonoBehaviour // TypeDefIndex: 55285
 	{
 		// Fields
 		private static CriMonoBehaviourManager _instance; // 0x00
 		private static List<CriMonoBehaviour> criMonoBehaviourList; // 0x08
 	
 		// Properties
-		public static CriMonoBehaviourManager instance { get => default; } // 0x000000018268E140-0x000000018268E1A0 
+		public static CriMonoBehaviourManager instance { get => default; } // 0x0000000184A82FB0-0x0000000184A83010 
 	
 		// Constructors
-		public CriMonoBehaviourManager() {} // 0x000000018426FE60-0x000000018426FE68
-		static CriMonoBehaviourManager() {} // 0x0000000183CAC4D0-0x0000000183CAC590
+		public CriMonoBehaviourManager() {} // 0x000000018646DB20-0x000000018646DB28
+		static CriMonoBehaviourManager() {} // 0x0000000185EFF600-0x0000000185EFF6C0
 	
 		// Methods
-		public static void CreateInstance() {} // 0x000000018268E1A0-0x000000018268E260
-		private static int GetIndex(CriMonoBehaviour criMonoBehaviour) => default; // 0x000000018268E4B0-0x000000018268E5E0
-		public bool Register(CriMonoBehaviour criMonoBehaviour) => default; // 0x000000018268E260-0x000000018268E4B0
-		public static bool UnRegister(CriMonoBehaviour criMonoBehaviour) => default; // 0x00000001856E0244-0x00000001856E038C
-		private void Awake() {} // 0x0000000183CB6480-0x0000000183CB6550
-		private void Update() {} // 0x000000018268E840-0x000000018268EAA0
-		private void LateUpdate() {} // 0x000000018268E5E0-0x000000018268E840
+		public static void CreateInstance() {} // 0x0000000184A83010-0x0000000184A830D0
+		private static int GetIndex(CriMonoBehaviour criMonoBehaviour) => default; // 0x0000000184A83320-0x0000000184A83450
+		public bool Register(CriMonoBehaviour criMonoBehaviour) => default; // 0x0000000184A830D0-0x0000000184A83320
+		public static bool UnRegister(CriMonoBehaviour criMonoBehaviour) => default; // 0x0000000187892CE0-0x0000000187892E28
+		private void Awake() {} // 0x0000000185F091C0-0x0000000185F09290
+		private void Update() {} // 0x0000000184A836B0-0x0000000184A83910
+		private void LateUpdate() {} // 0x0000000184A83450-0x0000000184A836B0
 	}
 }
 
 namespace CriWare.CriAtomDebugDetail
 {
-	public class Utility // TypeDefIndex: 54293
+	public class Utility // TypeDefIndex: 55286
 	{
 		// Constructors
-		public Utility() {} // 0x000000018350B670-0x000000018350B680
+		public Utility() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public static string PtrToStringAutoOrNull(IntPtr stringPtr) => default; // 0x00000001856E24A0-0x00000001856E24EC
+		public static string PtrToStringAutoOrNull(IntPtr stringPtr) => default; // 0x0000000187894F3C-0x0000000187894F88
 	}
 }
 
 namespace CriWare.CriMana
 {
-	public enum CodecType // TypeDefIndex: 54312
+	public enum CodecType // TypeDefIndex: 55305
 	{
 		Unknown = 0,
 		SofdecPrime = 1,
@@ -5041,7 +5167,7 @@ namespace CriWare.CriMana
 		VP9 = 9
 	}
 
-	public enum AlphaType // TypeDefIndex: 54313
+	public enum AlphaType // TypeDefIndex: 55306
 	{
 		CompoOpaq = 0,
 		CompoAlphaFull = 1,
@@ -5049,7 +5175,7 @@ namespace CriWare.CriMana
 		CompoAlpha32Bit = 3
 	}
 
-	public struct AudioInfo // TypeDefIndex: 54314
+	public struct AudioInfo // TypeDefIndex: 55307
 	{
 		// Fields
 		public uint samplingRate; // 0x00
@@ -5058,7 +5184,7 @@ namespace CriWare.CriMana
 	}
 
 	[Serializable]
-	public class MovieInfo // TypeDefIndex: 54315
+	public class MovieInfo // TypeDefIndex: 55308
 	{
 		// Fields
 		private uint _reserved1; // 0x10
@@ -5079,13 +5205,13 @@ namespace CriWare.CriMana
 		public uint maxChunkSize; // 0x50
 	
 		// Properties
-		public bool hasAlpha { get => default; internal set {} } // 0x00000001856E5CC0-0x00000001856E5CC8 0x00000001856E5CC8-0x00000001856E5CE4
+		public bool hasAlpha { get => default; internal set {} } // 0x000000018789875C-0x0000000187898764 0x0000000187898764-0x0000000187898780
 	
 		// Constructors
-		public MovieInfo() {} // 0x000000018350B670-0x000000018350B680
+		public MovieInfo() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class FrameInfo // TypeDefIndex: 54316
+	public class FrameInfo // TypeDefIndex: 55309
 	{
 		// Fields
 		public int frameNo; // 0x10
@@ -5106,10 +5232,10 @@ namespace CriWare.CriMana
 		public uint totalFramesPerFile; // 0x54
 	
 		// Constructors
-		public FrameInfo() {} // 0x000000018350B670-0x000000018350B680
+		public FrameInfo() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public struct EventPoint // TypeDefIndex: 54317
+	public struct EventPoint // TypeDefIndex: 55310
 	{
 		// Fields
 		public IntPtr cueName; // 0x00
@@ -5122,16 +5248,16 @@ namespace CriWare.CriMana
 		public uint cntCallback; // 0x34
 	}
 
-	public static class Settings // TypeDefIndex: 54318
+	public static class Settings // TypeDefIndex: 55311
 	{
 		// Methods
-		public static void SetDecodeSkippingEnabled(bool enabled) {} // 0x00000001856EC79C-0x00000001856EC7E8
+		public static void SetDecodeSkippingEnabled(bool enabled) {} // 0x000000018789F238-0x000000018789F284
 	}
 
-	public class Player : CriDisposable // TypeDefIndex: 54333
+	public class Player : CriDisposable // TypeDefIndex: 55326
 	{
 		// Fields
-		private const int InvalidPlayerId = -1; // Metadata: 0x01FD65BB
+		private const int InvalidPlayerId = -1; // Metadata: 0x0207BDE7
 		private static Player updatingPlayer; // 0x00
 		private int playerId; // 0x20
 		private bool isDisposed; // 0x24
@@ -5158,35 +5284,44 @@ namespace CriWare.CriMana
 		private bool isStoppingForSeek; // 0x94
 		public CuePointCallback cuePointCallback; // 0x98
 		public StatusChangeCallback statusChangeCallback; // 0xA0
+		private SubtitleChangeCallback OnSubtitleChanged; // 0xA8
+		private bool _additiveMode_k__BackingField; // 0xB0
+		private bool _useMaterialBlendMode_k__BackingField; // 0xB1
+		private int _maxFrameDrop_k__BackingField; // 0xB4
+		private bool _applyTargetAlpha_k__BackingField; // 0xB8
+		private bool _uiRenderMode_k__BackingField; // 0xB9
+		private IntPtr _subtitleBuffer_k__BackingField; // 0xC0
+		private int _subtitleSize_k__BackingField; // 0xC8
+		private CriManaMoviePlayerHolder _playerHolder_k__BackingField; // 0xD0
 		protected Queue<Operation> operationQueue; // 0xD8
 		protected Operation? cntOperation; // 0xE0
 	
 		// Properties
-		private Status requiredStatus { get => default; set {} } // 0x0000000183D4EB90-0x0000000183D4EBA0 0x00000001856E9A6C-0x00000001856E9A8C
-		public bool additiveMode { get; set; } // 0x0000000181151530-0x0000000181151540 0x0000000181151540-0x0000000181151550
-		public bool useMaterialBlendMode { get; set; } // 0x0000000183D51890-0x0000000183D518A0 0x0000000183D518D0-0x0000000183D518E0
-		public int maxFrameDrop { get; set; } // 0x0000000183D51FA0-0x0000000183D51FB0 0x0000000183D51FE0-0x0000000183D51FF0
-		public bool applyTargetAlpha { get; set; } // 0x0000000183D51F80-0x0000000183D51F90 0x0000000183D51FD0-0x0000000183D51FE0
-		public bool uiRenderMode { get; set; } // 0x0000000183D51FC0-0x0000000183D51FD0 0x0000000183D52000-0x0000000183D52010
-		public bool isFrameAvailable { get => default; } // 0x0000000183D51F90-0x0000000183D51FA0 
-		public MovieInfo movieInfo { get => default; } // 0x00000001856E9944-0x00000001856E9954 
-		public FrameInfo frameInfo { get => default; } // 0x00000001856E992C-0x00000001856E993C 
-		public Status status { get => default; } // 0x00000001856E9960-0x00000001856E99D4 
-		public Status nativeStatus { get => default; } // 0x0000000183D4EDD0-0x0000000183D4EDE0 
-		public int numberOfEntries { get => default; } // 0x00000001856E9954-0x00000001856E9960 
-		public IntPtr subtitleBuffer { get; private set; } // 0x0000000183D50E60-0x0000000183D50E70 0x0000000183D50F30-0x0000000183D50F40
-		public int subtitleSize { get; private set; } // 0x0000000183D51FB0-0x0000000183D51FC0 0x0000000183D51FF0-0x0000000183D52000
-		public CriAtomExPlayer atomExPlayer { get => default; } // 0x0000000183D4EAE0-0x0000000183D4EAF0 
-		public CriAtomEx3dSource atomEx3DsourceForAmbisonics { get => default; } // 0x0000000183D4EA60-0x0000000183D4EA70 
-		public TimerType timerType { get => default; } // 0x0000000183D4FB60-0x0000000183D4FB70 
-		public CriManaMoviePlayerHolder playerHolder { get; set; } // 0x0000000183D50050-0x0000000183D50060 0x000000018554A7E0-0x000000018554A7F4
-		public bool isAlive { get => default; } // 0x00000001856E993C-0x00000001856E9944 
+		private Status requiredStatus { get => default; set {} } // 0x000000018789A0B8-0x000000018789A0F0 0x000000018789B460-0x000000018789B4A0
+		public bool additiveMode { get; set; } // 0x000000018789B9FC-0x000000018789BA44 0x000000018789B948-0x000000018789B9FC
+		public bool useMaterialBlendMode { get; set; } // 0x000000018789B368-0x000000018789B380 0x000000018789B1FC-0x000000018789B208
+		public int maxFrameDrop { get; set; } // 0x000000018789B68C-0x000000018789B754 0x000000018789B5D0-0x000000018789B600
+		public bool applyTargetAlpha { get; set; } // 0x000000018789B5A0-0x000000018789B5D0 0x000000018789B4F4-0x000000018789B5A0
+		public bool uiRenderMode { get; set; } // 0x000000018789B654-0x000000018789B68C 0x000000018789B31C-0x000000018789B32C
+		public bool isFrameAvailable { get => default; } // 0x000000018789B7D8-0x000000018789B7EC 
+		public MovieInfo movieInfo { get => default; } // 0x000000018789B810-0x000000018789B81C 
+		public FrameInfo frameInfo { get => default; } // 0x000000018789B804-0x000000018789B810 
+		public Status status { get => default; } // 0x000000018789B81C-0x000000018789B828 
+		public Status nativeStatus { get => default; } // 0x000000018789B7EC-0x000000018789B7F8 
+		public int numberOfEntries { get => default; } // 0x000000018789B4DC-0x000000018789B4E8 
+		public IntPtr subtitleBuffer { get; private set; } // 0x000000018789B7F8-0x000000018789B804 0x000000018789B4D0-0x000000018789B4DC
+		public int subtitleSize { get; private set; } // 0x000000018789B4AC-0x000000018789B4D0 0x000000018789B834-0x000000018789B840
+		public CriAtomExPlayer atomExPlayer { get => default; } // 0x000000018789B840-0x000000018789B864 
+		public CriAtomEx3dSource atomEx3DsourceForAmbisonics { get => default; } // 0x000000018789B60C-0x000000018789B618 
+		public TimerType timerType { get => default; } // 0x000000018789B618-0x000000018789B63C 
+		public CriManaMoviePlayerHolder playerHolder { get; set; } // 0x000000018789B8DC-0x000000018789B8E8 0x000000018789AD10-0x000000018789AD1C
+		public bool isAlive { get => default; } // 0x00000001878997E8-0x000000018789981C 
 	
 		// Events
 		public event SubtitleChangeCallback OnSubtitleChanged;
 	
 		// Nested types
-		public enum Status // TypeDefIndex: 54319
+		public enum Status // TypeDefIndex: 55312
 		{
 			Stop = 0,
 			Dechead = 1,
@@ -5200,26 +5335,26 @@ namespace CriWare.CriMana
 			ReadyForRendering = 9
 		}
 	
-		public enum SetMode // TypeDefIndex: 54320
+		public enum SetMode // TypeDefIndex: 55313
 		{
 			New = 0,
 			Append = 1,
 			AppendRepeatedly = 2
 		}
 	
-		public enum MovieEventSyncMode // TypeDefIndex: 54321
+		public enum MovieEventSyncMode // TypeDefIndex: 55314
 		{
 			FrameTime = 0,
 			PlayBackTime = 1
 		}
 	
-		public enum AudioTrack // TypeDefIndex: 54322
+		public enum AudioTrack // TypeDefIndex: 55315
 		{
 			Off = 0,
 			Auto = 1
 		}
 	
-		public enum TimerType // TypeDefIndex: 54323
+		public enum TimerType // TypeDefIndex: 55316
 		{
 			None = 0,
 			System = 1,
@@ -5228,18 +5363,17 @@ namespace CriWare.CriMana
 			Manual = 4
 		}
 	
-		public delegate void CuePointCallback(ref EventPoint eventPoint); // TypeDefIndex: 54324; 0x0000000182149960-0x0000000182149970
+		public delegate void CuePointCallback(ref EventPoint eventPoint); // TypeDefIndex: 55317; 0x000000018789C508-0x000000018789C528
 	
-		public delegate void StatusChangeCallback(Status status); // TypeDefIndex: 54325; 0x0000000182149960-0x0000000182149970
+		public delegate void StatusChangeCallback(Status status); // TypeDefIndex: 55318; 0x0000000181B10460-0x0000000181B10470
 	
-		public delegate void SubtitleChangeCallback(IntPtr subtitleBuffer); // TypeDefIndex: 54326; 0x0000000182149960-0x0000000182149970
+		public delegate void SubtitleChangeCallback(IntPtr subtitleBuffer); // TypeDefIndex: 55319; 0x0000000185FB3300-0x0000000185FB3310
 	
-		public delegate Shader ShaderDispatchCallback(MovieInfo movieInfo, bool additiveMode); // TypeDefIndex: 54327; 0x0000000181165340-0x0000000181165350
+		public delegate Shader ShaderDispatchCallback(MovieInfo movieInfo, bool additiveMode); // TypeDefIndex: 55320; 0x0000000185FB3320-0x0000000185FB3330
 	
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		private delegate void CuePointCallbackFromNativeDelegate(IntPtr ptr1, IntPtr ptr2, in EventPoint eventPoint); // TypeDefIndex: 54328; 0x00000001811360D0-0x00000001811360F0
+		private delegate void CuePointCallbackFromNativeDelegate(IntPtr ptr1, IntPtr ptr2, in EventPoint eventPoint); // TypeDefIndex: 55321; 0x000000018789C3FC-0x000000018789C470
 	
-		public enum CriManaUnityPlayer_RenderEventAction // TypeDefIndex: 54329
+		public enum CriManaUnityPlayer_RenderEventAction // TypeDefIndex: 55322
 		{
 			UPDATE = 0,
 			INITIALIZE = 256,
@@ -5247,7 +5381,7 @@ namespace CriWare.CriMana
 			DESTROY = 768
 		}
 	
-		protected enum OperationType // TypeDefIndex: 54330
+		protected enum OperationType // TypeDefIndex: 55323
 		{
 			Normal = 0,
 			SetFile = 1,
@@ -5255,7 +5389,7 @@ namespace CriWare.CriMana
 			Pause = 3
 		}
 	
-		protected struct Operation // TypeDefIndex: 54331
+		protected struct Operation // TypeDefIndex: 55324
 		{
 			// Fields
 			public OperationType opType; // 0x00
@@ -5268,218 +5402,237 @@ namespace CriWare.CriMana
 			public bool sw; // 0x28
 	
 			// Methods
-			public static Operation Start() => default; // 0x0000000183D51F10-0x0000000183D51F40
-			public static Operation Pause(bool sw) => default; // 0x0000000183D51E60-0x0000000183D51E80
-			public static Operation Stop() => default; // 0x0000000183D51F60-0x0000000183D51F80
-			public static Operation StopForSeek() => default; // 0x0000000183D51F40-0x0000000183D51F60
-			public static Operation Prepare() => default; // 0x0000000183D51EB0-0x0000000183D51EE0
-			public static Operation PrepareForRendering() => default; // 0x0000000183D51E80-0x0000000183D51EB0
-			public static Operation SetFile(CriFsBinder binder, string moviePath, SetMode setMode) => default; // 0x00000001856E5CE4-0x00000001856E5D28
-			public static Operation SeekToTime(float time) => default; // 0x0000000183D51EE0-0x0000000183D51F10
+			public static Operation Start() => default; // 0x0000000181B388F0-0x0000000181B38900
+			public static Operation Pause(bool sw) => default; // 0x00000001835FC740-0x00000001835FC750
+			public static Operation Stop() => default; // 0x0000000185FB32E0-0x0000000185FB32F0
+			public static Operation StopForSeek() => default; // 0x0000000185FB3310-0x0000000185FB3320
+			public static Operation Prepare() => default; // 0x000000018140CF50-0x000000018140CF60
+			public static Operation PrepareForRendering() => default; // 0x0000000185FB0510-0x0000000185FB0520
+			public static Operation SetFile(CriFsBinder binder, string moviePath, SetMode setMode) => default; // 0x00000001834A0D50-0x00000001834A0D60
+			public static Operation SeekToTime(float time) => default; // 0x0000000185FB15A0-0x0000000185FB15B0
+		}
+	
+		private sealed class _IssuePluginUpdatesForFrames_d__152 : IEnumerator<object> // TypeDefIndex: 55325
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public Player __4__this; // 0x20
+			public int playerId; // 0x28
+			public int frameCount; // 0x2C
+			public bool destroy; // 0x30
+			public MonoBehaviour playerHolder; // 0x38
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018789ABE4-0x000000018789AC58 
+			object IEnumerator.Current { get => default; } // 0x0000000187899E40-0x0000000187899FBC 
+	
+			// Constructors
+			public _IssuePluginUpdatesForFrames_d__152() {} // Dummy constructor
+			public _IssuePluginUpdatesForFrames_d__152(int __1__state) {} // 0x000000018774BD78-0x000000018774BD8C
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018789C024-0x000000018789C1C8
+			private bool MoveNext() => default; // 0x000000018789BD34-0x000000018789C024
+			void IEnumerator.Reset() {} // 0x000000018789A348-0x000000018789A398
 		}
 	
 		// Constructors
-		public Player() {} // 0x00000001856E9588-0x00000001856E972C
-		public Player(bool advanced_audio_mode, bool ambisonics_mode, uint max_path_length) {} // 0x00000001856E9298-0x00000001856E9588
+		public Player() {} // 0x000000018789B864-0x000000018789B870
+		public Player(bool advanced_audio_mode, bool ambisonics_mode, uint max_path_length) {} // 0x000000018789AC70-0x000000018789AC7C
 	
 		// Methods
-		~Player() {} // 0x00000001856E8148-0x00000001856E81BC
-		public override void Dispose() {} // 0x00000001856E78AC-0x00000001856E78FC
-		public void CreateRendererResource(int width, int height, bool alpha) {} // 0x00000001856E73A4-0x00000001856E7520
-		public void DisposeRendererResource() {} // 0x00000001856E761C-0x00000001856E7654
-		public void Prepare() {} // 0x00000001856E89C4-0x00000001856E8A04
-		public void PrepareForRendering() {} // 0x00000001856E88E4-0x00000001856E8928
-		public void Start() {} // 0x00000001856E8E4C-0x00000001856E8EAC
-		public void Stop() {} // 0x00000001856E8F60-0x00000001856E8FA8
-		public void StopForSeek() {} // 0x00000001856E8EAC-0x00000001856E8F60
-		public void Pause(bool sw) {} // 0x00000001856E88CC-0x00000001856E88E4
-		public bool IsPaused() => default; // 0x00000001856E8760-0x00000001856E876C
-		public bool SetFile(CriFsBinder binder, string moviePath, SetMode setMode = SetMode.New /* Metadata: 0x01FD65B4 */) => default; // 0x00000001856E8BF0-0x00000001856E8CB8
-		public bool SetData(IntPtr data, long dataSize, SetMode setMode = SetMode.New /* Metadata: 0x01FD65B5 */) => default; // 0x00000001856E8B34-0x00000001856E8B64
-		[Obsolete("Use SetData(IntPtr, Int64, SetMode) instead")]
-		public bool SetData(byte[] data, long datasize, SetMode setMode = SetMode.New /* Metadata: 0x01FD65B6 */) => default; // 0x00000001856E8B04-0x00000001856E8B34
-		public bool SetContentId(CriFsBinder binder, int contentId, SetMode setMode = SetMode.New /* Metadata: 0x01FD65B7 */) => default; // 0x00000001856E8A58-0x00000001856E8B04
-		public bool SetFileRange(string filePath, ulong offset, long range, SetMode setMode = SetMode.New /* Metadata: 0x01FD65B8 */) => default; // 0x00000001856E8BB8-0x00000001856E8BF0
-		public void Loop(bool sw) {} // 0x00000001856E8880-0x00000001856E8890
-		public void SetMasterTimerType(TimerType timerType) {} // 0x00000001856E8D3C-0x00000001856E8D50
-		public void SetSeekPosition(int frameNumber) {} // 0x00000001856E8D74-0x00000001856E8D80
-		public void SetMovieEventSyncMode(MovieEventSyncMode mode) {} // 0x00000001856E8D68-0x00000001856E8D74
-		public void SetSpeed(float speed) {} // 0x00000001856E8D80-0x00000001856E8D8C
-		public void SetMaxPictureDataSize(uint maxDataSize) {} // 0x00000001856E8D50-0x00000001856E8D5C
-		public void SetBufferingTime(float sec) {} // 0x00000001856E8A40-0x00000001856E8A4C
-		public void SetMinBufferSize(int min_buffer_size) {} // 0x00000001856E8D5C-0x00000001856E8D68
-		public void SetAudioTrack(int track) {} // 0x00000001856E8A34-0x00000001856E8A40
-		public void SetAudioTrack(AudioTrack track) {} // 0x00000001856E8A10-0x00000001856E8A34
-		public void SetSubAudioTrack(int track) {} // 0x00000001856E8D98-0x00000001856E8DA4
-		public void SetSubAudioTrack(AudioTrack track) {} // 0x00000001856E8DA4-0x00000001856E8DC8
-		public void SetExtraAudioTrack(int track) {} // 0x00000001856E8B70-0x00000001856E8B7C
-		public void SetExtraAudioTrack(AudioTrack track) {} // 0x00000001856E8B7C-0x00000001856E8BA0
-		public void SetVolume(float volume) {} // 0x00000001856E8E40-0x00000001856E8E4C
-		public float GetVolume() => default; // 0x00000001856E8274-0x00000001856E8280
-		public void SetSubAudioVolume(float volume) {} // 0x00000001856E8DC8-0x00000001856E8DD4
-		public float GetSubAudioVolume() => default; // 0x00000001856E81D4-0x00000001856E81E0
-		public void SetExtraAudioVolume(float volume) {} // 0x00000001856E8BA0-0x00000001856E8BAC
-		public float GetExtraAudioVolume() => default; // 0x00000001856E81C8-0x00000001856E81D4
-		public void SetBusSendLevel(string bus_name, float level) {} // 0x00000001856E8A4C-0x00000001856E8A58
-		public void SetSubAudioBusSendLevel(string bus_name, float volume) {} // 0x00000001856E8D8C-0x00000001856E8D98
-		public void SetExtraAudioBusSendLevel(string bus_name, float volume) {} // 0x00000001856E8B64-0x00000001856E8B70
-		public void SetSubtitleChannel(int channel) {} // 0x00000001856E8DD4-0x00000001856E8E34
-		public void SetShaderDispatchCallback(ShaderDispatchCallback shaderDispatchCallback) {} // 0x00000001838C5570-0x00000001838C5580
-		public long GetTime() => default; // 0x00000001856E81E0-0x00000001856E81EC
-		public int GetDisplayedFrameNo() => default; // 0x00000001856E81BC-0x00000001856E81C8
-		public bool HasRenderedNewFrame() => default; // 0x00000001856E8280-0x00000001856E82A8
-		public void SetAsrRackId(int asrRackId) {} // 0x00000001856E8A04-0x00000001856E8A10
-		public void SetUserTimeCorrectionThreshold(uint threshold_msec) {} // 0x00000001856E8E34-0x00000001856E8E40
-		public void SetExtraFramePoolSize(uint size) {} // 0x00000001856E8BAC-0x00000001856E8BB8
-		public void UpdateWithUserTime(ulong timeCount, ulong timeUnit) {} // 0x00000001856E91EC-0x00000001856E927C
-		public void SetManualTimerUnit(ulong timeUnitN, ulong timeUnitD) {} // 0x00000001856E8CB8-0x00000001856E8D3C
-		public void UpdateWithManualTimeAdvanced() {} // 0x00000001856E917C-0x00000001856E91EC
-		public void Update() {} // 0x00000001856E927C-0x00000001856E9298
-		public void OnWillRenderObject(CriManaMovieMaterialBase sender) {} // 0x00000001856E8890-0x00000001856E88CC
-		public bool UpdateMaterial(Material material) => default; // 0x00000001856E8FA8-0x00000001856E9010
-		public void IssuePluginEvent(CriManaUnityPlayer_RenderEventAction renderEventAction) {} // 0x00000001856E876C-0x00000001856E87E4
-		private void Dispose(bool disposing) {} // 0x00000001856E7654-0x00000001856E78AC
-		private void InternalUpdate() {} // 0x00000001856E82A8-0x00000001856E86A4
-		[IteratorStateMachine(typeof(_IssuePluginUpdatesForFrames_d__152))]
-		private IEnumerator IssuePluginUpdatesForFrames(int frameCount, MonoBehaviour playerHolder, bool destroy, int playerId) => default; // 0x00000001856E87E4-0x00000001856E8880
-		private void DisableInfos(bool keepFrameInfo = false /* Metadata: 0x01FD65B9 */) {} // 0x00000001856E7600-0x00000001856E761C
-		private void PrepareNativePlayer() {} // 0x00000001856E8928-0x00000001856E89C4
-		private void UpdateNativePlayer() {} // 0x00000001856E9010-0x00000001856E917C
-		private void InvokePlayerStatusCheck() {} // 0x00000001856E86A4-0x00000001856E8760
-		private void AllocateSubtitleBuffer(int size) {} // 0x00000001856E5E48-0x00000001856E5F0C
-		private void DeallocateSubtitleBuffer() {} // 0x00000001856E7588-0x00000001856E7600
-		internal void PauseOnApplicationPause(bool sw) {} // 0x00000001856E88CC-0x00000001856E88E4
-		[AOT.MonoPInvokeCallback(typeof(CuePointCallbackFromNativeDelegate))]
-		private static void CuePointCallbackFromNative(IntPtr ptr1, IntPtr ptr2, in EventPoint eventPoint) {} // 0x00000001856E7520-0x00000001856E7588
-		private static extern int CRIWAREFD186F02(); // 0x00000001856E7330-0x00000001856E735C
-		private static extern int CRIWARE72A5B8BF(); // 0x00000001856E6858-0x00000001856E6884
-		private static extern int CRIWARE95A85424(bool useAtomExPlayer, uint maxPathLength); // 0x00000001856E6A94-0x00000001856E6B18
-		private static extern void CRIWAREABF659EC(int player_id); // 0x00000001856E6C20-0x00000001856E6C54
-		private static extern void CRIWAREEDB46019(int player_id, IntPtr binder, string path); // 0x00000001856E71EC-0x00000001856E7294
-		private static extern void CRIWAREB28B5D50(int player_id, IntPtr binder, int content_id); // 0x00000001856E6CB8-0x00000001856E6D4C
-		private static extern void CRIWARE65553651(int player_id, string path, ulong offset, long range); // 0x00000001856E66B8-0x00000001856E676C
-		private static extern void CRIWARE7C753A2E(int player_id, IntPtr data, long datasize); // 0x00000001856E68EC-0x00000001856E6980
-		private static extern void CRIWARE7C753A2E(int player_id, byte[] data, long datasize); // 0x00000001856E6980-0x00000001856E6A1C
-		private static extern bool CRIWARE328F2911(int player_id, IntPtr binder, string path, bool repeat); // 0x00000001856E639C-0x00000001856E6460
-		private static extern bool CRIWAREDA0693CD(int player_id, IntPtr binder, int content_id, bool repeat); // 0x00000001856E70D0-0x00000001856E7178
-		private static extern bool CRIWARE162DD162(int player_id, string path, ulong offset, long range, bool repeat); // 0x00000001856E5F90-0x00000001856E6060
-		private static extern bool CRIWAREC35C3DC3(int player_id, IntPtr data, long datasize, bool repeat); // 0x00000001856E6DC0-0x00000001856E6E68
-		private static extern bool CRIWAREC35C3DC3(int player_id, byte[] data, long datasize, bool repeat); // 0x00000001856E6E68-0x00000001856E6F18
-		private static extern void CRIWARE66A63134(int player_id); // 0x00000001856E676C-0x00000001856E67A0
-		private static extern int CRIWARE88D04318(int player_id); // 0x00000001856E6A1C-0x00000001856E6A50
-		private static extern void CRIWARED9F7168D(int player_id, CuePointCallbackFromNativeDelegate cbfunc); // 0x00000001856E7044-0x00000001856E70D0
-		private static extern void CRIWARE1E785A43(int player_id, out MovieInfo movie_info); // 0x00000001856E60D4-0x00000001856E61B0
-		private static extern int CRIWARE3CE8CE6A(int player_id, IntPtr subtitle_buffer, ref uint subtitle_size); // 0x00000001856E64C8-0x00000001856E655C
-		private static extern void CRIWARE362A826C(int player_id); // 0x00000001856E6494-0x00000001856E64C8
-		private static extern void CRIWARE61523A0C(int player_id); // 0x00000001856E6684-0x00000001856E66B8
-		private static extern void CRIWAREBB898C91(int player_id); // 0x00000001856E6D4C-0x00000001856E6D80
-		private static extern void CRIWARE705B8C6D(int player_id, int seek_frame_no); // 0x00000001856E67E0-0x00000001856E6820
-		private static extern void CRIWAREEB32FC73(int player_id, MovieEventSyncMode mode); // 0x00000001856E71AC-0x00000001856E71EC
-		private static extern void CRIWARE18BFCB88(int player_id, int sw); // 0x00000001856E6094-0x00000001856E60D4
-		private static extern bool CRIWAREEFA5210A(int player_id); // 0x00000001856E7294-0x00000001856E72CC
-		private static extern void CRIWARE4331E077(int player_id, int sw); // 0x00000001856E6610-0x00000001856E6650
-		private static extern long CRIWARE7779586C(int player_id); // 0x00000001856E68B8-0x00000001856E68EC
-		private static extern int CRIWARE33981CC9(int player_id); // 0x00000001856E6460-0x00000001856E6494
-		private static extern IntPtr CRIWARE165B6B70(int player_id); // 0x00000001856E6060-0x00000001856E6094
-		private static extern int CRIWARE7500F0DD(int player_id); // 0x00000001856E6884-0x00000001856E68B8
-		private static extern void CRIWARED99932F6(int player_id, int track); // 0x00000001856E7004-0x00000001856E7044
-		private static extern void CRIWARE1FF2F5BE(int player_id, float vol); // 0x00000001856E61F4-0x00000001856E6238
-		private static extern float CRIWARED30C9C6F(int player_id); // 0x00000001856E6FD0-0x00000001856E7004
-		private static extern void CRIWARE0EA59F65(int player_id, int track); // 0x00000001856E5F50-0x00000001856E5F90
-		private static extern void CRIWARE1EBB12C5(int player_id, float vol); // 0x00000001856E61B0-0x00000001856E61F4
-		private static extern float CRIWARE966C4BA9(int player_id); // 0x00000001856E6B18-0x00000001856E6B4C
-		private static extern void CRIWARE213452EF(int player_id, int track); // 0x00000001856E6238-0x00000001856E6278
-		private static extern void CRIWARE0348BF1B(int player_id, float vol); // 0x00000001856E5F0C-0x00000001856E5F50
-		private static extern float CRIWAREC5A3A88D(int player_id); // 0x00000001856E6F18-0x00000001856E6F4C
-		private static extern void CRIWARE31668293(int player_id, string bus_name, float level); // 0x00000001856E6338-0x00000001856E639C
-		private static extern void CRIWAREB2460D7A(int player_id, string bus_name, float level); // 0x00000001856E6C54-0x00000001856E6CB8
-		private static extern void CRIWAREF4B0CC4E(int player_id, string bus_name, float level); // 0x00000001856E72CC-0x00000001856E7330
-		private static extern void CRIWARE2C8FF595(int player_id, int channel); // 0x00000001856E62F8-0x00000001856E6338
-		private static extern void CRIWAREAB576D15(int player_id, float speed); // 0x00000001856E6BDC-0x00000001856E6C20
-		private static extern void CRIWARE3F9C5D06(int player_id, uint max_data_size); // 0x00000001856E655C-0x00000001856E65DC
-		public static extern void CRIWARE8A87737B(int player_id, float sec); // 0x00000001856E6A50-0x00000001856E6A94
-		public static extern void CRIWARE6756AE56(int player_id, int min_buffer_size); // 0x00000001856E67A0-0x00000001856E67E0
-		public static extern void CRIWAREA7F6DE6B(int player_id, int asr_rack_id); // 0x00000001856E6B9C-0x00000001856E6BDC
-		private static extern void CRIWAREE2DF1163(int player_id); // 0x00000001856E7178-0x00000001856E71AC
-		private static extern void CRIWAREBD24DE27(int player_id, TimerType timer_type); // 0x00000001856E6D80-0x00000001856E6DC0
-		private static extern void CRIWAREC7C5CC77(int player_id, ulong user_count, ulong user_unit); // 0x00000001856E6F4C-0x00000001856E6F9C
-		private static extern void CRIWAREA59E0F01(int player_id, ulong timer_unit_n, ulong timer_unit_d); // 0x00000001856E6B4C-0x00000001856E6B9C
-		private static extern void CRIWARE55ECC3E4(int player_id); // 0x00000001856E6650-0x00000001856E6684
-		private static extern void CRIWARECEA2FA98(int player_id); // 0x00000001856E6F9C-0x00000001856E6FD0
-		private static extern IntPtr CRIWARE27ED314F(int player_id, int bufferSize); // 0x00000001856E6278-0x00000001856E62F8
-		private static extern bool CRIWARE725ED4B4(int player_id); // 0x00000001856E6820-0x00000001856E6858
-		private static extern void CRIWARE419ECAF8(int player_id); // 0x00000001856E65DC-0x00000001856E6610
-		private static extern IntPtr criWareUnity_GetRenderEventFunc(); // 0x00000001856E98C4-0x00000001856E992C
-		private static extern void criManaUnityPlayer_SetUserTimeCorrectionThreshold(int player_id, uint threshold_msec); // 0x00000001856E9844-0x00000001856E98C4
-		private static extern void criManaUnityPlayer_SetExtraFramePoolSize(int player_id, uint size); // 0x00000001856E97C4-0x00000001856E9844
-		public void ClearAllOperation() {} // 0x00000001856E735C-0x00000001856E73A4
-		protected void ExecuteOperation() {} // 0x00000001856E7E8C-0x00000001856E8148
-		public void EasyPrepare() {} // 0x00000001856E7A08-0x00000001856E7A7C
-		public void EasyPrepareForRendering() {} // 0x00000001856E7994-0x00000001856E7A08
-		public void EasyStart() {} // 0x00000001856E7D40-0x00000001856E7DB4
-		public void EasyPause(bool sw) {} // 0x00000001856E78FC-0x00000001856E7994
-		public void EasyStop() {} // 0x00000001856E7E28-0x00000001856E7E8C
-		public void EasyStopForSeek() {} // 0x00000001856E7DB4-0x00000001856E7E28
-		public void EasySetFile(CriFsBinder binder, string moviePath, SetMode setMode = SetMode.New /* Metadata: 0x01FD65BA */) {} // 0x00000001856E7A7C-0x00000001856E7B68
-		public void EasySetSeekTime(float time) {} // 0x00000001856E7B68-0x00000001856E7C04
-		public void EasyStartAtTime(float time) {} // 0x00000001856E7C04-0x00000001856E7D40
-		public float GetVideoLength() => default; // 0x00000001856E81EC-0x00000001856E8274
+		~Player() {} // 0x000000018789B63C-0x000000018789B648
+		public override void Dispose() {} // 0x000000018789AC64-0x000000018789AC70
+		public void CreateRendererResource(int width, int height, bool alpha) {} // 0x000000018789B4E8-0x000000018789B4F4
+		public void DisposeRendererResource() {} // 0x000000018789B828-0x000000018789B834
+		public void Prepare() {} // 0x000000018789B600-0x000000018789B60C
+		public void PrepareForRendering() {} // 0x000000018789B870-0x000000018789B8D0
+		public void Start() {} // 0x0000000185A62990-0x0000000185A629A0
+		public void Stop() {} // 0x000000018789AC7C-0x000000018789AC88
+		public void StopForSeek() {} // 0x000000018789AC58-0x000000018789AC64
+		public void Pause(bool sw) {} // 0x000000018789AD1C-0x000000018789AD44
+		public bool IsPaused() => default; // 0x000000018789B4A0-0x000000018789B4AC
+		public bool SetFile(CriFsBinder binder, string moviePath, SetMode setMode = SetMode.New /* Metadata: 0x0207BDE0 */) => default; // 0x000000018789B8D0-0x000000018789B8DC
+		public bool SetData(IntPtr data, long dataSize, SetMode setMode = SetMode.New /* Metadata: 0x0207BDE1 */) => default; // 0x000000018789B648-0x000000018789B654
+		public bool SetData(byte[] data, long datasize, SetMode setMode = SetMode.New /* Metadata: 0x0207BDE2 */) => default; // 0x000000018789BC88-0x000000018789BD18
+		public bool SetContentId(CriFsBinder binder, int contentId, SetMode setMode = SetMode.New /* Metadata: 0x0207BDE3 */) => default; // 0x000000018789B754-0x000000018789B7D8
+		public bool SetFileRange(string filePath, ulong offset, long range, SetMode setMode = SetMode.New /* Metadata: 0x0207BDE4 */) => default; // 0x000000018789BC18-0x000000018789BC88
+		public void Loop(bool sw) {} // 0x000000018789BD18-0x000000018789BD34
+		public void SetMasterTimerType(TimerType timerType) {} // 0x000000018789B32C-0x000000018789B368
+		public void SetSeekPosition(int frameNumber) {} // 0x000000018789BA44-0x000000018789BAAC
+		public void SetMovieEventSyncMode(MovieEventSyncMode mode) {} // 0x000000018789C3D8-0x000000018789C3E0
+		public void SetSpeed(float speed) {} // 0x000000018789B208-0x000000018789B280
+		public void SetMaxPictureDataSize(uint maxDataSize) {} // 0x000000018789A0F0-0x000000018789A348
+		public void SetBufferingTime(float sec) {} // 0x000000018789AD44-0x000000018789B140
+		public void SetMinBufferSize(int min_buffer_size) {} // 0x000000018789B280-0x000000018789B31C
+		public void SetAudioTrack(int track) {} // 0x000000018789A09C-0x000000018789A0B8
+		public void SetAudioTrack(AudioTrack track) {} // 0x000000018789B3C4-0x000000018789B460
+		public void SetSubAudioTrack(int track) {} // 0x000000018789BAAC-0x000000018789BC18
+		public void SetSubAudioTrack(AudioTrack track) {} // 0x000000018789B140-0x000000018789B1FC
+		public void SetExtraAudioTrack(int track) {} // 0x00000001878988E4-0x00000001878989A8
+		public void SetExtraAudioTrack(AudioTrack track) {} // 0x000000018789A024-0x000000018789A09C
+		public void SetVolume(float volume) {} // 0x000000018789B368-0x000000018789B380
+		public float GetVolume() => default; // 0x0000000187899FBC-0x000000018789A024
+		public void SetSubAudioVolume(float volume) {} // 0x0000000187899DCC-0x0000000187899DF8
+		public float GetSubAudioVolume() => default; // 0x00000001878992F4-0x0000000187899320
+		public void SetExtraAudioVolume(float volume) {} // 0x0000000187899530-0x00000001878995B4
+		public float GetExtraAudioVolume() => default; // 0x00000001878996BC-0x00000001878996F0
+		public void SetBusSendLevel(string bus_name, float level) {} // 0x0000000187899C88-0x0000000187899D30
+		public void SetSubAudioBusSendLevel(string bus_name, float volume) {} // 0x0000000187899754-0x00000001878997E8
+		public void SetExtraAudioBusSendLevel(string bus_name, float volume) {} // 0x0000000187899154-0x0000000187899208
+		public void SetSubtitleChannel(int channel) {} // 0x0000000187899388-0x000000018789941C
+		public void SetShaderDispatchCallback(ShaderDispatchCallback shaderDispatchCallback) {} // 0x000000018789941C-0x00000001878994B8
+		public long GetTime() => default; // 0x0000000187898E38-0x0000000187898EFC
+		public int GetDisplayedFrameNo() => default; // 0x0000000187899B6C-0x0000000187899C14
+		public bool HasRenderedNewFrame() => default; // 0x0000000187898A2C-0x0000000187898AFC
+		public void SetAsrRackId(int asrRackId) {} // 0x000000018789985C-0x0000000187899904
+		public void SetUserTimeCorrectionThreshold(uint threshold_msec) {} // 0x0000000187899904-0x00000001878999B4
+		public void SetExtraFramePoolSize(uint size) {} // 0x0000000187899208-0x000000018789923C
+		public void UpdateWithUserTime(ulong timeCount, ulong timeUnit) {} // 0x00000001878994B8-0x00000001878994EC
+		public void SetManualTimerUnit(ulong timeUnitN, ulong timeUnitD) {} // 0x0000000187899AE0-0x0000000187899B6C
+		public void UpdateWithManualTimeAdvanced() {} // 0x0000000187898B70-0x0000000187898C4C
+		public void Update() {} // 0x0000000187898F64-0x0000000187898FF8
+		public void OnWillRenderObject(CriManaMovieMaterialBase sender) {} // 0x0000000187898F30-0x0000000187898F64
+		public bool UpdateMaterial(Material material) => default; // 0x0000000187899120-0x0000000187899154
+		public void IssuePluginEvent(CriManaUnityPlayer_RenderEventAction renderEventAction) {} // 0x000000018789927C-0x00000001878992BC
+		private void Dispose(bool disposing) {} // 0x0000000187899C48-0x0000000187899C88
+		private void InternalUpdate() {} // 0x0000000187898B30-0x0000000187898B70
+		private IEnumerator IssuePluginUpdatesForFrames(int frameCount, MonoBehaviour playerHolder, bool destroy, int playerId) => default; // 0x0000000187899D30-0x0000000187899D68
+		private void DisableInfos(bool keepFrameInfo = false /* Metadata: 0x0207BDE5 */) {} // 0x00000001878990AC-0x00000001878990EC
+		private void PrepareNativePlayer() {} // 0x0000000187899354-0x0000000187899388
+		private void UpdateNativePlayer() {} // 0x0000000187898EFC-0x0000000187898F30
+		private void InvokePlayerStatusCheck() {} // 0x0000000187898AFC-0x0000000187898B30
+		private void AllocateSubtitleBuffer(int size) {} // 0x0000000187899320-0x0000000187899354
+		private void DeallocateSubtitleBuffer() {} // 0x0000000187899AA0-0x0000000187899AE0
+		internal void PauseOnApplicationPause(bool sw) {} // 0x0000000187898C90-0x0000000187898CD4
+		private static void CuePointCallbackFromNative(IntPtr ptr1, IntPtr ptr2, in EventPoint eventPoint) {} // 0x0000000187899A6C-0x0000000187899AA0
+		private static extern int CRIWAREFD186F02(); // 0x00000001878989EC-0x0000000187898A2C
+		private static extern int CRIWARE72A5B8BF(); // 0x0000000187898C4C-0x0000000187898C90
+		private static extern int CRIWARE95A85424(bool useAtomExPlayer, uint maxPathLength); // 0x00000001878995B4-0x00000001878995E8
+		private static extern void CRIWAREABF659EC(int player_id); // 0x0000000187898CD4-0x0000000187898D14
+		private static extern void CRIWAREEDB46019(int player_id, IntPtr binder, string path); // 0x00000001878989A8-0x00000001878989EC
+		private static extern void CRIWAREB28B5D50(int player_id, IntPtr binder, int content_id); // 0x00000001878999B4-0x00000001878999E8
+		private static extern void CRIWARE65553651(int player_id, string path, ulong offset, long range); // 0x0000000187898DD4-0x0000000187898E38
+		private static extern void CRIWARE7C753A2E(int player_id, IntPtr data, long datasize); // 0x00000001878996F0-0x0000000187899754
+		private static extern void CRIWARE7C753A2E(int player_id, byte[] data, long datasize); // 0x0000000187899D68-0x0000000187899DCC
+		private static extern bool CRIWARE328F2911(int player_id, IntPtr binder, string path, bool repeat); // 0x0000000187898D94-0x0000000187898DD4
+		private static extern bool CRIWAREDA0693CD(int player_id, IntPtr binder, int content_id, bool repeat); // 0x0000000187899678-0x00000001878996BC
+		private static extern bool CRIWARE162DD162(int player_id, string path, ulong offset, long range, bool repeat); // 0x0000000187898FF8-0x0000000187899078
+		private static extern bool CRIWAREC35C3DC3(int player_id, IntPtr data, long datasize, bool repeat); // 0x00000001878994EC-0x0000000187899530
+		private static extern bool CRIWAREC35C3DC3(int player_id, byte[] data, long datasize, bool repeat); // 0x000000018789923C-0x000000018789927C
+		private static extern void CRIWARE66A63134(int player_id); // 0x0000000187899638-0x0000000187899678
+		private static extern int CRIWARE88D04318(int player_id); // 0x0000000187899C14-0x0000000187899C48
+		private static extern void CRIWARED9F7168D(int player_id, CuePointCallbackFromNativeDelegate cbfunc); // 0x000000018789981C-0x000000018789985C
+		private static extern void CRIWARE1E785A43(int player_id, out MovieInfo movie_info); // 0x00000001878999E8-0x0000000187899A38
+		private static extern int CRIWARE3CE8CE6A(int player_id, IntPtr subtitle_buffer, ref uint subtitle_size); // 0x00000001878995E8-0x0000000187899638
+		private static extern void CRIWARE362A826C(int player_id); // 0x00000001878990EC-0x0000000187899120
+		private static extern void CRIWARE61523A0C(int player_id); // 0x0000000187899A38-0x0000000187899A6C
+		private static extern void CRIWAREBB898C91(int player_id); // 0x0000000187898D14-0x0000000187898D94
+		private static extern void CRIWARE705B8C6D(int player_id, int seek_frame_no); // 0x00000001878992BC-0x00000001878992F4
+		private static extern void CRIWAREEB32FC73(int player_id, MovieEventSyncMode mode); // 0x0000000187899078-0x00000001878990AC
+		private static extern void CRIWARE18BFCB88(int player_id, int sw); // 0x000000018789C360-0x000000018789C3C8
+		private static extern bool CRIWAREEFA5210A(int player_id); // 0x000000018789C2E0-0x000000018789C360
+		private static extern void CRIWARE4331E077(int player_id, int sw); // 0x000000018789C260-0x000000018789C2E0
+		private static extern long CRIWARE7779586C(int player_id); // 0x0000000187899DF8-0x0000000187899E40
+		private static extern int CRIWARE33981CC9(int player_id); // 0x000000018789A928-0x000000018789ABE4
+		private static extern IntPtr CRIWARE165B6B70(int player_id); // 0x000000018789A4A4-0x000000018789A518
+		private static extern int CRIWARE7500F0DD(int player_id); // 0x000000018789A430-0x000000018789A4A4
+		private static extern void CRIWARED99932F6(int player_id, int track); // 0x000000018789A7DC-0x000000018789A850
+		private static extern void CRIWARE1FF2F5BE(int player_id, float vol); // 0x000000018789A398-0x000000018789A430
+		private static extern float CRIWARED30C9C6F(int player_id); // 0x000000018789A8C4-0x000000018789A928
+		private static extern void CRIWARE0EA59F65(int player_id, int track); // 0x000000018789A850-0x000000018789A8C4
+		private static extern void CRIWARE1EBB12C5(int player_id, float vol); // 0x000000018789A518-0x000000018789A604
+		private static extern float CRIWARE966C4BA9(int player_id); // 0x000000018789A604-0x000000018789A6A0
+		private static extern void CRIWARE213452EF(int player_id, int track); // 0x000000018789A6A0-0x000000018789A7DC
+		private static extern void CRIWARE0348BF1B(int player_id, float vol); // 0x000000018789AC88-0x000000018789AD10
+		private static extern float CRIWAREC5A3A88D(int player_id); // 0x0000000187868BC8-0x0000000187868C9C
+		private static extern void CRIWARE31668293(int player_id, string bus_name, float level); // 0x00000001833EEC70-0x00000001833EEC80
+		private static extern void CRIWAREB2460D7A(int player_id, string bus_name, float level); // 0x00000001878985A0-0x0000000187898620
+		private static extern void CRIWAREF4B0CC4E(int player_id, string bus_name, float level); // 0x00000001872076D8-0x00000001872076F4
+		private static extern void CRIWARE2C8FF595(int player_id, int channel); // 0x000000018789F4A4-0x000000018789F56C
+		private static extern void CRIWAREAB576D15(int player_id, float speed); // 0x00000001833EEC70-0x00000001833EEC80
+		private static extern void CRIWARE3F9C5D06(int player_id, uint max_data_size); // 0x000000018789F42C-0x000000018789F4A4
+		public static extern void CRIWARE8A87737B(int player_id, float sec); // 0x00000001864BB614-0x00000001864BB734
+		public static extern void CRIWARE6756AE56(int player_id, int min_buffer_size); // 0x000000018789F5E4-0x000000018789F6AC
+		public static extern void CRIWAREA7F6DE6B(int player_id, int asr_rack_id); // 0x00000001833EEC70-0x00000001833EEC80
+		private static extern void CRIWAREE2DF1163(int player_id); // 0x000000018789F56C-0x000000018789F5E4
+		private static extern void CRIWAREBD24DE27(int player_id, TimerType timer_type); // 0x00000001864BB614-0x00000001864BB734
+		private static extern void CRIWAREC7C5CC77(int player_id, ulong user_count, ulong user_unit); // 0x000000018789F304-0x000000018789F42C
+		private static extern void CRIWAREA59E0F01(int player_id, ulong timer_unit_n, ulong timer_unit_d); // 0x0000000181B59400-0x0000000181B59410
+		private static extern void CRIWARE55ECC3E4(int player_id); // 0x000000018789F284-0x000000018789F304
+		private static extern void CRIWARECEA2FA98(int player_id); // 0x00000001864750A8-0x00000001864751CC
+		private static extern IntPtr CRIWARE27ED314F(int player_id, int bufferSize); // 0x00000001878984D8-0x00000001878985A0
+		private static extern bool CRIWARE725ED4B4(int player_id); // 0x0000000181A578C0-0x0000000181A578E0
+		private static extern void CRIWARE419ECAF8(int player_id); // 0x000000018789842C-0x00000001878984D8
+		private static extern IntPtr criWareUnity_GetRenderEventFunc(); // 0x00000001872076D8-0x00000001872076F4
+		private static extern void criManaUnityPlayer_SetUserTimeCorrectionThreshold(int player_id, uint threshold_msec); // 0x0000000185FB3250-0x0000000185FB3280
+		private static extern void criManaUnityPlayer_SetExtraFramePoolSize(int player_id, uint size); // 0x0000000185FB31A0-0x0000000185FB31C0
+		public void ClearAllOperation() {} // 0x0000000185FB32A0-0x0000000185FB32C0
+		protected void ExecuteOperation() {} // 0x0000000185FB3280-0x0000000185FB32A0
+		public void EasyPrepare() {} // 0x0000000185FB31F0-0x0000000185FB3220
+		public void EasyPrepareForRendering() {} // 0x0000000185FB31C0-0x0000000185FB31F0
+		public void EasyStart() {} // 0x0000000187898780-0x00000001878987C4
+		public void EasyPause(bool sw) {} // 0x0000000185FB3220-0x0000000185FB3250
+		public void EasyStop() {} // 0x0000000181378230-0x0000000181378240
+		public void EasyStopForSeek() {} // 0x0000000185492010-0x0000000185492020
+		public void EasySetFile(CriFsBinder binder, string moviePath, SetMode setMode = SetMode.New /* Metadata: 0x0207BDE6 */) {} // 0x000000018789F6AC-0x000000018789F758
+		public void EasySetSeekTime(float time) {} // 0x0000000181377E40-0x0000000181377E50
+		public void EasyStartAtTime(float time) {} // 0x000000018789F758-0x000000018789F7A4
+		public float GetVideoLength() => default; // 0x0000000181377E40-0x0000000181377E50
 	}
 }
 
 namespace CriWare.CriMana.Detail
 {
-	public static class AutoResisterRendererResourceFactories // TypeDefIndex: 54337
+	public static class AutoResisterRendererResourceFactories // TypeDefIndex: 55330
 	{
 		// Nested types
-		[RendererResourceFactoryPriority(7050)]
-		public class RendererResourceFactoryH264Yuv : RendererResourceFactory // TypeDefIndex: 54334
+		public class RendererResourceFactoryH264Yuv : RendererResourceFactory // TypeDefIndex: 55327
 		{
 			// Constructors
-			public RendererResourceFactoryH264Yuv() {} // 0x0000000183D46E10-0x0000000183D46E50
+			public RendererResourceFactoryH264Yuv() {} // 0x0000000185492010-0x0000000185492020
 	
 			// Methods
-			public override RendererResource CreateRendererResource(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) => default; // 0x00000001856E9A8C-0x00000001856E9B28
-			protected override void OnDisposeManaged() {} // 0x000000018350B670-0x000000018350B680
-			protected override void OnDisposeUnmanaged() {} // 0x000000018350B670-0x000000018350B680
+			public override RendererResource CreateRendererResource(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) => default; // 0x00000001850FA3C0-0x00000001850FA600
+			protected override void OnDisposeManaged() {} // 0x000000018789C528-0x000000018789C5C4
+			protected override void OnDisposeUnmanaged() {} // 0x0000000185492010-0x0000000185492020
 		}
 	
-		[RendererResourceFactoryPriority(5000)]
-		public class RendererResourceFactorySofdecPrimeYuv : RendererResourceFactory // TypeDefIndex: 54335
+		public class RendererResourceFactorySofdecPrimeYuv : RendererResourceFactory // TypeDefIndex: 55328
 		{
 			// Constructors
-			public RendererResourceFactorySofdecPrimeYuv() {} // 0x0000000183D46D90-0x0000000183D46DD0
+			public RendererResourceFactorySofdecPrimeYuv() {} // 0x0000000185492010-0x0000000185492020
 	
 			// Methods
-			public override RendererResource CreateRendererResource(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) => default; // 0x00000001856E9BD4-0x00000001856E9C80
-			protected override void OnDisposeManaged() {} // 0x000000018350B670-0x000000018350B680
-			protected override void OnDisposeUnmanaged() {} // 0x000000018350B670-0x000000018350B680
+			public override RendererResource CreateRendererResource(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) => default; // 0x0000000185FA72C0-0x0000000185FA7300
+			protected override void OnDisposeManaged() {} // 0x000000018789C670-0x000000018789C71C
+			protected override void OnDisposeUnmanaged() {} // 0x0000000185492010-0x0000000185492020
 		}
 	
-		[RendererResourceFactoryPriority(10000)]
-		public class RendererResourceFactorySofdecPrimeYuvRawData : RendererResourceFactory // TypeDefIndex: 54336
+		public class RendererResourceFactorySofdecPrimeYuvRawData : RendererResourceFactory // TypeDefIndex: 55329
 		{
 			// Constructors
-			public RendererResourceFactorySofdecPrimeYuvRawData() {} // 0x0000000183D46DD0-0x0000000183D46E10
+			public RendererResourceFactorySofdecPrimeYuvRawData() {} // 0x0000000185492010-0x0000000185492020
 	
 			// Methods
-			public override RendererResource CreateRendererResource(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) => default; // 0x00000001856E9B28-0x00000001856E9BD4
-			protected override void OnDisposeManaged() {} // 0x000000018350B670-0x000000018350B680
-			protected override void OnDisposeUnmanaged() {} // 0x000000018350B670-0x000000018350B680
+			public override RendererResource CreateRendererResource(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) => default; // 0x0000000185FA7240-0x0000000185FA7280
+			protected override void OnDisposeManaged() {} // 0x000000018789C5C4-0x000000018789C670
+			protected override void OnDisposeUnmanaged() {} // 0x0000000185492010-0x0000000185492020
 		}
 	
 		// Methods
-		public static void InvokeAutoRegister() {} // 0x0000000183183BE0-0x0000000183183E20
+		public static void InvokeAutoRegister() {} // 0x0000000185FA7280-0x0000000185FA72C0
 	}
 
-	public class RendererResourceH264Yuv : RendererResourceSofdecPrimeYuv // TypeDefIndex: 54338
+	public class RendererResourceH264Yuv : RendererResourceSofdecPrimeYuv // TypeDefIndex: 55331
 	{
 		// Constructors
 		public RendererResourceH264Yuv() {} // Dummy constructor
-		public RendererResourceH264Yuv(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) {} // 0x00000001856EA2C0-0x00000001856EA2D0
+		public RendererResourceH264Yuv(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) {} // 0x000000018789CD5C-0x000000018789CD6C
 	}
 
-	public abstract class RendererResource : IDisposable // TypeDefIndex: 54339
+	public abstract class RendererResource : IDisposable // TypeDefIndex: 55332
 	{
 		// Fields
 		private bool disposed; // 0x10
@@ -5492,23 +5645,23 @@ namespace CriWare.CriMana.Detail
 		private bool _useMaterialBlendMode; // 0x2C
 	
 		// Properties
-		public bool useMaterialBlendMode { get; set; } // 0x0000000183D4F1A0-0x0000000183D4F1B0 0x0000000183D4F1B0-0x0000000183D4F1C0
+		public bool useMaterialBlendMode { get; set; } // 0x0000000185FB08C0-0x0000000185FB08D0 0x0000000185FB08D0-0x0000000185FB08E0
 	
 		// Constructors
-		protected RendererResource() {} // 0x000000018350B670-0x000000018350B680
+		protected RendererResource() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		~RendererResource() {} // 0x00000001856EC484-0x00000001856EC4F8
-		public void Dispose() {} // 0x00000001856EC3FC-0x00000001856EC44C
-		private void Dispose(bool disposing) {} // 0x00000001856EC44C-0x00000001856EC484
-		public int GetNumberOfFrameBeforeDestroy(int playerId) => default; // 0x00000001856EC52C-0x00000001856EC544
-		protected void SetupStaticMaterialProperties() {} // 0x00000001856EC598-0x00000001856EC79C
+		~RendererResource() {} // 0x000000018789EF20-0x000000018789EF94
+		public void Dispose() {} // 0x000000018789EE98-0x000000018789EEE8
+		private void Dispose(bool disposing) {} // 0x000000018789EEE8-0x000000018789EF20
+		public int GetNumberOfFrameBeforeDestroy(int playerId) => default; // 0x000000018789EFC8-0x000000018789EFE0
+		protected void SetupStaticMaterialProperties() {} // 0x000000018789F034-0x000000018789F238
 		private void GetBlendModes(out int srcBlendMode, out int dstBlendMode) {
 			srcBlendMode = default;
 			dstBlendMode = default;
-		} // 0x00000001856EC4F8-0x00000001856EC52C
-		public virtual void SetApplyTargetAlpha(bool flag) {} // 0x00000001856EC54C-0x00000001856EC558
-		public virtual void SetUiRenderMode(bool flag) {} // 0x00000001856EC58C-0x00000001856EC598
+		} // 0x000000018789EF94-0x000000018789EFC8
+		public virtual void SetApplyTargetAlpha(bool flag) {} // 0x000000018789EFE8-0x000000018789EFF4
+		public virtual void SetUiRenderMode(bool flag) {} // 0x000000018789F028-0x000000018789F034
 		protected abstract void OnDisposeManaged();
 		protected abstract void OnDisposeUnmanaged();
 		public abstract bool IsPrepared();
@@ -5518,62 +5671,61 @@ namespace CriWare.CriMana.Detail
 		public abstract bool UpdateMaterial(Material material);
 		public abstract void UpdateTextures();
 		public abstract bool IsSuitable(int playerId, MovieInfo movieInfo, bool additive, Shader userShader);
-		public virtual void OnPlayerPause(bool pauseStatus, bool triggredFromApplciationPause) {} // 0x000000018350B670-0x000000018350B680
-		public virtual void OnPlayerStop() {} // 0x000000018350B670-0x000000018350B680
-		public virtual bool OnPlayerStopForSeek() => default; // 0x000000018115F4C0-0x000000018115F530
-		public virtual void OnPlayerStart() {} // 0x000000018350B670-0x000000018350B680
-		public virtual bool ShouldSkipDestroyOnStopForSeek() => default; // 0x000000018115F4C0-0x000000018115F530
-		public virtual bool HasRenderedNewFrame() => default; // 0x000000018232EB60-0x000000018232EB70
-		public static uint NextPowerOfTwo(uint x) => default; // 0x0000000183D520C0-0x0000000183D520F0
-		public static int NextPowerOfTwo(int x) => default; // 0x00000001856EC544-0x00000001856EC54C
-		public static int CeilingWith(int x, int ceilingValue) => default; // 0x0000000183D520B0-0x0000000183D520C0
-		public static int Ceiling16(int x) => default; // 0x0000000183D52070-0x0000000183D52080
-		public static int Ceiling32(int x) => default; // 0x0000000183D52090-0x0000000183D520A0
-		public static int Ceiling64(int x) => default; // 0x0000000183D520A0-0x0000000183D520B0
-		public static int Ceiling256(int x) => default; // 0x0000000183D52080-0x0000000183D52090
-		protected static void DisposeTextures(Texture[] textures) {} // 0x00000001856EC350-0x00000001856EC3FC
-		protected static void SetKeyword(Material material, string keyword, bool flag) {} // 0x00000001856EC558-0x00000001856EC58C
-		protected static extern bool CRIWARE98318E69(int player_id, int num_textures, IntPtr[] tex_ptrs, [In, Out] FrameInfo frame_info, ref bool frame_drop); // 0x00000001856EC138-0x00000001856EC218
-		protected static extern bool CRIWARED618B369(int player_id, int num_textures, [In, Out] IntPtr[] tex_ptrs); // 0x00000001856EC218-0x00000001856EC278
-		protected static extern bool CRIWARE5267266A(int player_id, int num_textures, [In, Out] IntPtr[] tex_ptrs); // 0x00000001856EC0D8-0x00000001856EC138
-		protected static extern bool CRIWAREE519EFD4(int player_id, int num_textures, [In, Out] IntPtr[] tex_ptrs); // 0x00000001856EC278-0x00000001856EC2D8
-		protected static extern sbyte CRIWAREF14F77D8(int player_id); // 0x00000001856EC2D8-0x00000001856EC350
+		public virtual void OnPlayerPause(bool pauseStatus, bool triggredFromApplciationPause) {} // 0x0000000185492010-0x0000000185492020
+		public virtual void OnPlayerStop() {} // 0x0000000185492010-0x0000000185492020
+		public virtual bool OnPlayerStopForSeek() => default; // 0x00000001814A81B0-0x00000001814A81C0
+		public virtual void OnPlayerStart() {} // 0x0000000185492010-0x0000000185492020
+		public virtual bool ShouldSkipDestroyOnStopForSeek() => default; // 0x00000001814A81B0-0x00000001814A81C0
+		public virtual bool HasRenderedNewFrame() => default; // 0x00000001840A27C0-0x00000001840A27D0
+		public static uint NextPowerOfTwo(uint x) => default; // 0x0000000185FB33E0-0x0000000185FB3410
+		public static int NextPowerOfTwo(int x) => default; // 0x000000018789EFE0-0x000000018789EFE8
+		public static int CeilingWith(int x, int ceilingValue) => default; // 0x0000000185FB33D0-0x0000000185FB33E0
+		public static int Ceiling16(int x) => default; // 0x0000000185FB3390-0x0000000185FB33A0
+		public static int Ceiling32(int x) => default; // 0x0000000185FB33B0-0x0000000185FB33C0
+		public static int Ceiling64(int x) => default; // 0x0000000185FB33C0-0x0000000185FB33D0
+		public static int Ceiling256(int x) => default; // 0x0000000185FB33A0-0x0000000185FB33B0
+		protected static void DisposeTextures(Texture[] textures) {} // 0x000000018789EDEC-0x000000018789EE98
+		protected static void SetKeyword(Material material, string keyword, bool flag) {} // 0x000000018789EFF4-0x000000018789F028
+		protected static extern bool CRIWARE98318E69(int player_id, int num_textures, IntPtr[] tex_ptrs, [In, Out] FrameInfo frame_info, ref bool frame_drop); // 0x000000018789EBD4-0x000000018789ECB4
+		protected static extern bool CRIWARED618B369(int player_id, int num_textures, [In, Out] IntPtr[] tex_ptrs); // 0x000000018789ECB4-0x000000018789ED14
+		protected static extern bool CRIWARE5267266A(int player_id, int num_textures, [In, Out] IntPtr[] tex_ptrs); // 0x000000018789EB74-0x000000018789EBD4
+		protected static extern bool CRIWAREE519EFD4(int player_id, int num_textures, [In, Out] IntPtr[] tex_ptrs); // 0x000000018789ED14-0x000000018789ED74
+		protected static extern sbyte CRIWAREF14F77D8(int player_id); // 0x000000018789ED74-0x000000018789EDEC
 	}
 
-	public abstract class RendererResourceFactory : IDisposable // TypeDefIndex: 54340
+	public abstract class RendererResourceFactory : IDisposable // TypeDefIndex: 55333
 	{
 		// Fields
 		private static SortedList<int, RendererResourceFactory> factoryList; // 0x00
 		private bool disposed; // 0x10
 	
 		// Constructors
-		protected RendererResourceFactory() {} // 0x000000018350B670-0x000000018350B680
-		static RendererResourceFactory() {} // 0x0000000183CE31F0-0x0000000183CE3280
+		protected RendererResourceFactory() {} // 0x0000000185492010-0x0000000185492020
+		static RendererResourceFactory() {} // 0x0000000185F3EDD0-0x0000000185F3EE60
 	
 		// Methods
-		public static void RegisterFactory(RendererResourceFactory factory, int priority) {} // 0x0000000183183F10-0x0000000183183FA0
-		public static void DisposeAllFactories() {} // 0x00000001856EA02C-0x00000001856EA1C4
-		public static RendererResource DispatchAndCreate(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) => default; // 0x00000001856E9C80-0x00000001856EA02C
-		~RendererResourceFactory() {} // 0x00000001856EA24C-0x00000001856EA2C0
-		public void Dispose() {} // 0x00000001856EA1FC-0x00000001856EA24C
-		private void Dispose(bool disposing) {} // 0x00000001856EA1C4-0x00000001856EA1FC
+		public static void RegisterFactory(RendererResourceFactory factory, int priority) {} // 0x00000001850FA6F0-0x00000001850FA800
+		public static void DisposeAllFactories() {} // 0x000000018789CAC8-0x000000018789CC60
+		public static RendererResource DispatchAndCreate(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) => default; // 0x000000018789C71C-0x000000018789CAC8
+		~RendererResourceFactory() {} // 0x000000018789CCE8-0x000000018789CD5C
+		public void Dispose() {} // 0x000000018789CC98-0x000000018789CCE8
+		private void Dispose(bool disposing) {} // 0x000000018789CC60-0x000000018789CC98
 		protected abstract void OnDisposeManaged();
 		protected abstract void OnDisposeUnmanaged();
 		public abstract RendererResource CreateRendererResource(int playerId, MovieInfo movieInfo, bool additive, Shader userShader);
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	public class RendererResourceFactoryPriorityAttribute : Attribute // TypeDefIndex: 54341
+	public class RendererResourceFactoryPriorityAttribute : Attribute // TypeDefIndex: 55334
 	{
 		// Fields
 		public readonly int priority; // 0x10
 	
 		// Constructors
 		public RendererResourceFactoryPriorityAttribute() {} // Dummy constructor
-		public RendererResourceFactoryPriorityAttribute(int priority) {} // 0x00000001810410F0-0x0000000181041100
+		public RendererResourceFactoryPriorityAttribute(int priority) {} // 0x0000000181378230-0x0000000181378240
 	}
 
-	public class RendererResourceSofdecPrimeYuv : RendererResource // TypeDefIndex: 54342
+	public class RendererResourceSofdecPrimeYuv : RendererResource // TypeDefIndex: 55335
 	{
 		// Fields
 		private int width; // 0x30
@@ -5595,29 +5747,29 @@ namespace CriWare.CriMana.Detail
 		private bool hasRenderedNewFrame; // 0x96
 	
 		// Properties
-		private static int NumTextureSets { get => default; } // 0x0000000181168950-0x0000000181168960 
-		private static bool IsEditor { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		private static int NumTextureSets { get => default; } // 0x0000000181B87DE0-0x0000000181B87DF0 
+		private static bool IsEditor { get => default; } // 0x00000001814A81B0-0x00000001814A81C0 
 	
 		// Constructors
 		public RendererResourceSofdecPrimeYuv() {} // Dummy constructor
-		public RendererResourceSofdecPrimeYuv(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) {} // 0x00000001856EBB70-0x00000001856EC0D8
+		public RendererResourceSofdecPrimeYuv(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) {} // 0x000000018789E60C-0x000000018789EB74
 	
 		// Methods
-		protected override void OnDisposeManaged() {} // 0x000000018350B670-0x000000018350B680
-		protected override void OnDisposeUnmanaged() {} // 0x00000001856EB390-0x00000001856EB60C
-		public override bool IsPrepared() => default; // 0x0000000183D52050-0x0000000183D52060
-		public override bool ContinuePreparing() => default; // 0x000000018232EB60-0x000000018232EB70
-		public override bool IsSuitable(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) => default; // 0x00000001856EB2A0-0x00000001856EB390
-		public override bool OnPlayerStopForSeek() => default; // 0x0000000183D52060-0x0000000183D52070
-		public override bool HasRenderedNewFrame() => default; // 0x0000000183D52040-0x0000000183D52050
-		public override void AttachToPlayer(int playerId) {} // 0x00000001856EB234-0x00000001856EB2A0
-		public override bool UpdateFrame(int playerId, FrameInfo frameInfo, ref bool frameDrop) => default; // 0x00000001856EB60C-0x00000001856EB6A8
-		public override bool UpdateMaterial(Material material) => default; // 0x00000001856EB6A8-0x00000001856EB8D0
-		private void UpdateMovieTextureST(uint dispWidth, uint dispHeight) {} // 0x00000001856EB8D0-0x00000001856EB9DC
-		public override void UpdateTextures() {} // 0x00000001856EB9DC-0x00000001856EBB70
+		protected override void OnDisposeManaged() {} // 0x0000000185492010-0x0000000185492020
+		protected override void OnDisposeUnmanaged() {} // 0x000000018789DE2C-0x000000018789E0A8
+		public override bool IsPrepared() => default; // 0x0000000185FB3370-0x0000000185FB3380
+		public override bool ContinuePreparing() => default; // 0x00000001840A27C0-0x00000001840A27D0
+		public override bool IsSuitable(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) => default; // 0x000000018789DD3C-0x000000018789DE2C
+		public override bool OnPlayerStopForSeek() => default; // 0x0000000185FB3380-0x0000000185FB3390
+		public override bool HasRenderedNewFrame() => default; // 0x0000000185FB3360-0x0000000185FB3370
+		public override void AttachToPlayer(int playerId) {} // 0x000000018789DCD0-0x000000018789DD3C
+		public override bool UpdateFrame(int playerId, FrameInfo frameInfo, ref bool frameDrop) => default; // 0x000000018789E0A8-0x000000018789E144
+		public override bool UpdateMaterial(Material material) => default; // 0x000000018789E144-0x000000018789E36C
+		private void UpdateMovieTextureST(uint dispWidth, uint dispHeight) {} // 0x000000018789E36C-0x000000018789E478
+		public override void UpdateTextures() {} // 0x000000018789E478-0x000000018789E60C
 	}
 
-	public class RendererResourceSofdecPrimeYuvRawData : RendererResource // TypeDefIndex: 54343
+	public class RendererResourceSofdecPrimeYuvRawData : RendererResource // TypeDefIndex: 55336
 	{
 		// Fields
 		private int width; // 0x30
@@ -5638,32 +5790,32 @@ namespace CriWare.CriMana.Detail
 		private bool hasRenderedNewFrame; // 0x86
 	
 		// Properties
-		private static int NumTextureSets { get => default; } // 0x0000000181168950-0x0000000181168960 
+		private static int NumTextureSets { get => default; } // 0x0000000181B87DE0-0x0000000181B87DF0 
 	
 		// Constructors
 		public RendererResourceSofdecPrimeYuvRawData() {} // Dummy constructor
-		public RendererResourceSofdecPrimeYuvRawData(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) {} // 0x00000001856EAD08-0x00000001856EB234
+		public RendererResourceSofdecPrimeYuvRawData(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) {} // 0x000000018789D7A4-0x000000018789DCD0
 	
 		// Methods
-		protected override void OnDisposeManaged() {} // 0x000000018350B670-0x000000018350B680
-		protected override void OnDisposeUnmanaged() {} // 0x00000001856EA554-0x00000001856EA5C0
-		public override bool IsPrepared() => default; // 0x0000000183D52010-0x0000000183D52020
-		public override bool ContinuePreparing() => default; // 0x000000018232EB60-0x000000018232EB70
-		public override bool IsSuitable(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) => default; // 0x00000001856EA464-0x00000001856EA554
-		public override bool OnPlayerStopForSeek() => default; // 0x0000000183D52020-0x0000000183D52040
-		public override bool HasRenderedNewFrame() => default; // 0x0000000183D51B10-0x0000000183D51B20
-		public override void AttachToPlayer(int playerId) {} // 0x00000001856EA2D0-0x00000001856EA33C
-		public override bool UpdateFrame(int playerId, FrameInfo frameInfo, ref bool frameDrop) => default; // 0x00000001856EA5C0-0x00000001856EA654
-		public override bool UpdateMaterial(Material material) => default; // 0x00000001856EA654-0x00000001856EA8C4
-		private void UpdateMovieTextureST(uint dispWidth, uint dispHeight) {} // 0x00000001856EA8C4-0x00000001856EA9E0
-		public override void UpdateTextures() {} // 0x00000001856EA9E0-0x00000001856EAD08
-		private static void CalculateTextureSize(ref int w, ref int h, int videoWidth, int videoHeight, CodecType type, bool isChroma) {} // 0x00000001856EA33C-0x00000001856EA464
+		protected override void OnDisposeManaged() {} // 0x0000000185492010-0x0000000185492020
+		protected override void OnDisposeUnmanaged() {} // 0x000000018789CFF0-0x000000018789D05C
+		public override bool IsPrepared() => default; // 0x0000000185FB3330-0x0000000185FB3340
+		public override bool ContinuePreparing() => default; // 0x00000001840A27C0-0x00000001840A27D0
+		public override bool IsSuitable(int playerId, MovieInfo movieInfo, bool additive, Shader userShader) => default; // 0x000000018789CF00-0x000000018789CFF0
+		public override bool OnPlayerStopForSeek() => default; // 0x0000000185FB3340-0x0000000185FB3360
+		public override bool HasRenderedNewFrame() => default; // 0x0000000185FB2E80-0x0000000185FB2E90
+		public override void AttachToPlayer(int playerId) {} // 0x000000018789CD6C-0x000000018789CDD8
+		public override bool UpdateFrame(int playerId, FrameInfo frameInfo, ref bool frameDrop) => default; // 0x000000018789D05C-0x000000018789D0F0
+		public override bool UpdateMaterial(Material material) => default; // 0x000000018789D0F0-0x000000018789D360
+		private void UpdateMovieTextureST(uint dispWidth, uint dispHeight) {} // 0x000000018789D360-0x000000018789D47C
+		public override void UpdateTextures() {} // 0x000000018789D47C-0x000000018789D7A4
+		private static void CalculateTextureSize(ref int w, ref int h, int videoWidth, int videoHeight, CodecType type, bool isChroma) {} // 0x000000018789CDD8-0x000000018789CF00
 	}
 }
 
 namespace CriWare.CriTimeline.Atom
 {
-	public struct CriAtomClipPlayConfig // TypeDefIndex: 54304
+	public struct CriAtomClipPlayConfig // TypeDefIndex: 55297
 	{
 		// Fields
 		public readonly CriAtomClipBase clip; // 0x00
@@ -5677,64 +5829,63 @@ namespace CriWare.CriTimeline.Atom
 			this.startTimeMs = default;
 			this.speedRate = default;
 			this.loop = default;
-		} // 0x00000001856E2C6C-0x00000001856E2C98
+		} // 0x0000000187895708-0x0000000187895734
 	}
 
 	[Serializable]
-	public class CriAtomBehaviour : PlayableBehaviour // TypeDefIndex: 54305
+	public class CriAtomBehaviour : PlayableBehaviour // TypeDefIndex: 55298
 	{
 		// Fields
-		[Range(0f, 1f)]
 		public float volume; // 0x10
-		[Range(-1200f, 1200f)]
 		public float pitch; // 0x14
-		[Range(0f, 1f)]
 		public float AISACValue; // 0x18
 		private static int cPreviewStopTimeMs; // 0x00
 		private CriAtomExAcb m_acb; // 0x20
 		private string m_lastCueSheetPath; // 0x28
+		private CriAtomExPlayback _playback_k__BackingField; // 0x30
 		private bool _IsClipPlaying; // 0x34
 		private double _CueLength; // 0x38
 	
 		// Properties
-		public CriAtomExPlayback playback { get; private set; } // 0x0000000183D4ED20-0x0000000183D4ED30 0x0000000183D4EE10-0x0000000183D4EE20
-		public bool IsClipPlaying { get => default; private set {} } // 0x0000000183D4F570-0x0000000183D4F580 0x0000000183D4F590-0x0000000183D4F5A0
-		public double CueLength { get => default; private set {} } // 0x0000000183D4F210-0x0000000183D4F220 0x0000000183D4F230-0x0000000183D4F240
+		public CriAtomExPlayback playback { get; private set; } // 0x00000001813CFF60-0x00000001813CFF70 0x00000001813D0A90-0x00000001813D0AA0
+		public bool IsClipPlaying { get => default; private set {} } // 0x0000000185FB0B90-0x0000000185FB0BA0 0x0000000185FB0BB0-0x0000000185FB0BC0
+		public double CueLength { get => default; private set {} } // 0x0000000185FB0910-0x0000000185FB0920 0x0000000185FB0930-0x0000000185FB0940
 	
 		// Constructors
-		public CriAtomBehaviour() {} // 0x0000000183D4FB80-0x0000000183D4FB90
-		static CriAtomBehaviour() {} // 0x00000001856E2AEC-0x00000001856E2B28
+		public CriAtomBehaviour() {} // 0x0000000185FB10F0-0x0000000185FB1100
+		static CriAtomBehaviour() {} // 0x0000000187895588-0x00000001878955C4
 	
 		// Methods
-		public override void OnGraphStop(Playable playable) {} // 0x0000000183D51E20-0x0000000183D51E30
-		public void Play(CriAtomSourceBase atomSource, CriAtomClipPlayConfig config) {} // 0x00000001856E2548-0x00000001856E272C
-		public void PreviewPlay(Guid trackId, bool instantStop, CriAtomClipPlayConfig config) {} // 0x00000001856E272C-0x00000001856E29BC
-		private void WaitAndStop() {} // 0x00000001856E2A40-0x00000001856E2AEC
-		public void Stop(bool noReleaseTime = false /* Metadata: 0x01FD65A7 */) {} // 0x00000001856E29BC-0x00000001856E29E4
-		private double GetCueLengthSec(CriAtomExAcb acb, string cueName) => default; // 0x00000001856E24EC-0x00000001856E2548
+		public override void OnGraphStop(Playable playable) {} // 0x0000000185FB3160-0x0000000185FB3170
+		public void Play(CriAtomSourceBase atomSource, CriAtomClipPlayConfig config) {} // 0x0000000187894FE4-0x00000001878951C8
+		public void PreviewPlay(Guid trackId, bool instantStop, CriAtomClipPlayConfig config) {} // 0x00000001878951C8-0x0000000187895458
+		private void WaitAndStop() {} // 0x00000001878954DC-0x0000000187895588
+		public void Stop(bool noReleaseTime = false /* Metadata: 0x0207BDD3 */) {} // 0x0000000187895458-0x0000000187895480
+		private double GetCueLengthSec(CriAtomExAcb acb, string cueName) => default; // 0x0000000187894F88-0x0000000187894FE4
+		private void _WaitAndStop_b__21_0() {} // 0x0000000187895480-0x00000001878954DC
 	}
 
-	public class CriAtomClip : CriAtomClipBase // TypeDefIndex: 54306
+	public class CriAtomClip : CriAtomClipBase // TypeDefIndex: 55299
 	{
 		// Fields
 		public string cueSheet; // 0x30
 		public string cueName; // 0x38
 	
 		// Properties
-		public override string CueName { get => default; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
-		public override string AcbPath { get => default; } // 0x00000001856E2D9C-0x00000001856E2E24 
-		public override string AwbPath { get => default; } // 0x00000001856E2E24-0x00000001856E2EAC 
+		public override string CueName { get => default; } // 0x00000001813ECBC0-0x00000001813ECBD0 
+		public override string AcbPath { get => default; } // 0x0000000187895838-0x00000001878958C0 
+		public override string AwbPath { get => default; } // 0x00000001878958C0-0x0000000187895948 
 	
 		// Constructors
-		public CriAtomClip() {} // 0x00000001856E2D94-0x00000001856E2D9C
+		public CriAtomClip() {} // 0x0000000187895830-0x0000000187895838
 	
 		// Methods
-		public override CriAtomExAcb GetAcb() => default; // 0x00000001856E2C98-0x00000001856E2CA4
-		private CriAtomCueSheet GetCueSheet() => default; // 0x00000001856E2CA4-0x00000001856E2CB0
-		public override void SetCueFromAtomSource(CriAtomSourceBase atomSource) {} // 0x00000001856E2CB0-0x00000001856E2D94
+		public override CriAtomExAcb GetAcb() => default; // 0x0000000187895734-0x0000000187895740
+		private CriAtomCueSheet GetCueSheet() => default; // 0x0000000187895740-0x000000018789574C
+		public override void SetCueFromAtomSource(CriAtomSourceBase atomSource) {} // 0x000000018789574C-0x0000000187895830
 	}
 
-	public abstract class CriAtomClipBase : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 54307
+	public abstract class CriAtomClipBase : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 55300
 	{
 		// Fields
 		public bool stopWithoutRelease; // 0x18
@@ -5743,29 +5894,27 @@ namespace CriWare.CriTimeline.Atom
 		public bool loopWithinClip; // 0x1B
 		public bool stopAtClipEnd; // 0x1C
 		public CriAtomBehaviour templateBehaviour; // 0x20
-		[HideInInspector]
-		[SerializeField]
 		private double clipDuration; // 0x28
 	
 		// Properties
-		public ClipCaps clipCaps { get; } // 0x0000000183D51E30-0x0000000183D51E40 
-		public override double duration { get; } // 0x00000001856E2C50-0x00000001856E2C6C 
+		public ClipCaps clipCaps { get; } // 0x0000000185FB3170-0x0000000185FB3180 
+		public override double duration { get; } // 0x00000001878956EC-0x0000000187895708 
 		public abstract string CueName { get; }
 		public abstract string AcbPath { get; }
 		public abstract string AwbPath { get; }
 	
 		// Constructors
-		protected CriAtomClipBase() {} // 0x00000001856E2BEC-0x00000001856E2C50
+		protected CriAtomClipBase() {} // 0x0000000187895688-0x00000001878956EC
 	
 		// Methods
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x00000001856E2B28-0x00000001856E2BEC
-		public void SetClipDuration(double clipDuration) {} // 0x0000000183D4F5C0-0x0000000183D4F5D0
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x00000001878955C4-0x0000000187895688
+		public void SetClipDuration(double clipDuration) {} // 0x0000000185FB0BD0-0x0000000185FB0BE0
 		public abstract CriAtomExAcb GetAcb();
 		public abstract void SetCueFromAtomSource(CriAtomSourceBase atomSource);
 	}
 
 	[Serializable]
-	public class CriAtomMixerBehaviour : PlayableBehaviour // TypeDefIndex: 54308
+	public class CriAtomMixerBehaviour : PlayableBehaviour // TypeDefIndex: 55301
 	{
 		// Fields
 		internal PlayableDirector m_Director; // 0x10
@@ -5774,24 +5923,25 @@ namespace CriWare.CriTimeline.Atom
 		internal string m_AisacControls; // 0x28
 		internal bool m_StopOnWrapping; // 0x30
 		internal bool m_StopAtGraphEnd; // 0x31
-		private const int cScratchTimeIntervalMs = 200; // Metadata: 0x01FD65A8
+		private Guid _m_Guid_k__BackingField; // 0x34
+		private const int cScratchTimeIntervalMs = 200; // Metadata: 0x0207BDD4
 		private System.DateTime m_lastScrubTime; // 0x48
 		private double m_lastDirectorTime; // 0x50
 	
 		// Properties
-		public Guid m_Guid { get; private set; } // 0x0000000183D51E40-0x0000000183D51E50 0x0000000183D51E50-0x0000000183D51E60
-		private static bool IsEditor { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		public Guid m_Guid { get; private set; } // 0x0000000185FB3180-0x0000000185FB3190 0x0000000185FB3190-0x0000000185FB31A0
+		private static bool IsEditor { get => default; } // 0x00000001814A81B0-0x00000001814A81C0 
 	
 		// Constructors
-		public CriAtomMixerBehaviour() {} // 0x000000018350B670-0x000000018350B680
+		public CriAtomMixerBehaviour() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public override void OnPlayableCreate(Playable playable) {} // 0x00000001856E2F24-0x00000001856E2FA4
-		public override void OnGraphStop(Playable playable) {} // 0x00000001856E2EAC-0x00000001856E2F24
-		public override void ProcessFrame(Playable playable, FrameData info, object playerData) {} // 0x00000001856E2FA4-0x00000001856E35C0
+		public override void OnPlayableCreate(Playable playable) {} // 0x00000001878959C0-0x0000000187895A40
+		public override void OnGraphStop(Playable playable) {} // 0x0000000187895948-0x00000001878959C0
+		public override void ProcessFrame(Playable playable, FrameData info, object playerData) {} // 0x0000000187895A40-0x000000018789605C
 	}
 
-	public class CriAtomTimelinePreviewer : IDisposable // TypeDefIndex: 54310
+	public class CriAtomTimelinePreviewer : IDisposable // TypeDefIndex: 55303
 	{
 		// Fields
 		private static CriAtomTimelinePreviewer instance; // 0x00
@@ -5802,11 +5952,11 @@ namespace CriWare.CriTimeline.Atom
 		private CriAtomEx3dListener listener3d; // 0x30
 	
 		// Properties
-		public static CriAtomTimelinePreviewer Instance { get => default; } // 0x00000001856E45A8-0x00000001856E4638 
-		public static bool IsInitialized { get => default; } // 0x00000001856E4638-0x00000001856E4674 
+		public static CriAtomTimelinePreviewer Instance { get => default; } // 0x0000000187896A44-0x0000000187896AAC 
+		public static bool IsInitialized { get => default; } // 0x0000000187896EF0-0x0000000187897044 
 	
 		// Nested types
-		private struct PlayerSource // TypeDefIndex: 54309
+		private struct PlayerSource // TypeDefIndex: 55302
 		{
 			// Fields
 			public readonly CriAtomExPlayer player; // 0x00
@@ -5816,35 +5966,32 @@ namespace CriWare.CriTimeline.Atom
 			public PlayerSource(CriAtomEx3dListener listener) {
 				player = default;
 				source3d = default;
-			} // 0x00000001856E5D28-0x00000001856E5E48
+			} // 0x0000000187897044-0x00000001878970D4
 		}
 	
 		// Constructors
-		public CriAtomTimelinePreviewer() {} // 0x00000001856E4454-0x00000001856E45A8
+		public CriAtomTimelinePreviewer() {} // 0x0000000187896868-0x0000000187896A44
 	
 		// Methods
-		public static void InstanceDispose() {} // 0x00000001856E3FA8-0x00000001856E4010
-		public CriAtomExPlayer GetPlayer(Guid trackId) => default; // 0x00000001856E3DCC-0x00000001856E3FA8
-		public void SetCue(Guid trackId, CriAtomExAcb acb, string cueName) {} // 0x00000001856E40D0-0x00000001856E4190
-		public CriAtomExAcb GetAcb(string acbPath, string awbPath) => default; // 0x00000001856E3A0C-0x00000001856E3DCC
-		public CriAtomExPlayback Play(Guid trackId) => default; // 0x00000001856E4010-0x00000001856E4044
-		public void StopTrack(Guid trackId, bool stopWithoutRelease = true /* Metadata: 0x01FD65AA */) {} // 0x00000001856E4400-0x00000001856E4454
-		public void StopAllTracks(bool stopWithoutRelease = true /* Metadata: 0x01FD65AB */) {} // 0x00000001856E4298-0x00000001856E4400
-		public void SetStartTime(Guid trackId, long startTimeMs) {} // 0x00000001856E4214-0x00000001856E4254
-		public void SetLoop(Guid trackId, bool sw) {} // 0x00000001856E4190-0x00000001856E41D0
-		public void SetVolume(Guid trackId, float volume) {} // 0x00000001856E4254-0x00000001856E4298
-		public void SetPitch(Guid trackId, float pitch) {} // 0x00000001856E41D0-0x00000001856E4214
-		public void SetAISAC(Guid trackId, string controlName, float value) {} // 0x00000001856E4080-0x00000001856E40D0
-		public void PlayerUpdateParameter(Guid trackId, CriAtomExPlayback atomExPlayback) {} // 0x00000001856E4044-0x00000001856E4080
-		~CriAtomTimelinePreviewer() {} // 0x00000001856E3998-0x00000001856E3A0C
-		public void Dispose() {} // 0x00000001856E35C0-0x00000001856E3610
-		private void Dispose(bool disposing) {} // 0x00000001856E3610-0x00000001856E3998
+		public static void InstanceDispose() {} // 0x00000001878970D4-0x0000000187897110
+		public CriAtomExPlayer GetPlayer(Guid trackId) => default; // 0x0000000187896B6C-0x0000000187896C2C
+		public void SetCue(Guid trackId, CriAtomExAcb acb, string cueName) {} // 0x00000001878964A8-0x0000000187896868
+		public CriAtomExAcb GetAcb(string acbPath, string awbPath) => default; // 0x0000000187896AAC-0x0000000187896AE0
+		public CriAtomExPlayback Play(Guid trackId) => default; // 0x0000000187896E9C-0x0000000187896EF0
+		public void StopTrack(Guid trackId, bool stopWithoutRelease = true /* Metadata: 0x0207BDD6 */) {} // 0x0000000187896D34-0x0000000187896E9C
+		public void StopAllTracks(bool stopWithoutRelease = true /* Metadata: 0x0207BDD7 */) {} // 0x0000000187896CB0-0x0000000187896CF0
+		public void SetStartTime(Guid trackId, long startTimeMs) {} // 0x0000000187896C2C-0x0000000187896C6C
+		public void SetLoop(Guid trackId, bool sw) {} // 0x0000000187896CF0-0x0000000187896D34
+		public void SetVolume(Guid trackId, float volume) {} // 0x0000000187896C6C-0x0000000187896CB0
+		public void SetPitch(Guid trackId, float pitch) {} // 0x0000000187896B1C-0x0000000187896B6C
+		public void SetAISAC(Guid trackId, string controlName, float value) {} // 0x0000000187896AE0-0x0000000187896B1C
+		public void PlayerUpdateParameter(Guid trackId, CriAtomExPlayback atomExPlayback) {} // 0x0000000187896434-0x00000001878964A8
+		~CriAtomTimelinePreviewer() {} // 0x000000018789605C-0x00000001878960AC
+		public void Dispose() {} // 0x00000001878960AC-0x0000000187896434
+		private void Dispose(bool disposing) {} // 0x00000001878987C4-0x00000001878988E4
 	}
 
-	[TrackBindingType(typeof(CriAtomSourceBase))]
-	[TrackClipType(typeof(CriAtomClipBase))]
-	[TrackColor(0.3317462f, 0.6611561f, 0.990566f)]
-	public class CriAtomTrack : TrackAsset // TypeDefIndex: 54311
+	public class CriAtomTrack : TrackAsset // TypeDefIndex: 55304
 	{
 		// Fields
 		public string m_AisacControls; // 0xC0
@@ -5852,48 +5999,46 @@ namespace CriWare.CriTimeline.Atom
 		public bool m_StopAtGraphEnd; // 0xC9
 	
 		// Constructors
-		public CriAtomTrack() {} // 0x00000001856E4AE0-0x00000001856E4B34
+		public CriAtomTrack() {} // 0x000000018789757C-0x00000001878975D0
 	
 		// Methods
-		public override Playable CreateTrackMixer(PlayableGraph graph, GameObject owner, int inputCount) => default; // 0x00000001856E4674-0x00000001856E4AE0
+		public override Playable CreateTrackMixer(PlayableGraph graph, GameObject owner, int inputCount) => default; // 0x0000000187897110-0x000000018789757C
 	}
 }
 
 namespace CriWare.CriTimeline.Mana
 {
 	[Serializable]
-	public class CriManaBehaviour : PlayableBehaviour // TypeDefIndex: 54294
+	public class CriManaBehaviour : PlayableBehaviour // TypeDefIndex: 55287
 	{
 		// Constructors
-		public CriManaBehaviour() {} // 0x000000018350B670-0x000000018350B680
+		public CriManaBehaviour() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class CriManaClip : CriManaClipBase // TypeDefIndex: 54295
+	public class CriManaClip : CriManaClipBase // TypeDefIndex: 55288
 	{
 		// Fields
 		public string m_moviePath; // 0xA8
 		public TextAsset m_movieData; // 0xB0
 	
 		// Properties
-		public override string MoviePath { get => default; } // 0x0000000183D4EB10-0x0000000183D4EB20 
-		public override byte[] MovieData { get => default; } // 0x00000001856DBDA4-0x00000001856DBE1C 
-		public override string MovieName { get => default; } // 0x00000001856DBE1C-0x00000001856DBEB8 
-		public override int DataId { get => default; } // 0x00000001856DBCFC-0x00000001856DBDA4 
+		public override string MoviePath { get => default; } // 0x000000018349D730-0x000000018349D740 
+		public override byte[] MovieData { get => default; } // 0x000000018788E840-0x000000018788E8B8 
+		public override string MovieName { get => default; } // 0x000000018788E8B8-0x000000018788E954 
+		public override int DataId { get => default; } // 0x000000018788E798-0x000000018788E840 
 	
 		// Constructors
-		public CriManaClip() {} // 0x00000001856DBCAC-0x00000001856DBCFC
+		public CriManaClip() {} // 0x000000018788E748-0x000000018788E798
 	}
 
-	public abstract class CriManaClipBase : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 54297
+	public abstract class CriManaClipBase : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 55290
 	{
 		// Fields
 		public readonly Guid guid; // 0x18
 		public bool m_loopWithinClip; // 0x28
 		public bool m_useOnMemoryPlayback; // 0x29
 		public GCHandle gcHandle; // 0x30
-		[SerializeField]
 		private double m_movieFrameRate; // 0x38
-		[SerializeField]
 		private double m_clipDuration; // 0x40
 		public float m_fadeinDuration; // 0x48
 		public AnimationCurve m_fadeinCurve; // 0x50
@@ -5910,12 +6055,12 @@ namespace CriWare.CriTimeline.Mana
 		public abstract byte[] MovieData { get; }
 		public abstract string MovieName { get; }
 		public abstract int DataId { get; }
-		public ClipCaps clipCaps { get; } // 0x0000000181168950-0x0000000181168960 
-		public bool IsMovieInfoReady { get; } // 0x00000001856DBC54-0x00000001856DBC90 
-		public override double duration { get; } // 0x00000001856DBC90-0x00000001856DBCAC 
+		public ClipCaps clipCaps { get; } // 0x0000000181B87DE0-0x0000000181B87DF0 
+		public bool IsMovieInfoReady { get; } // 0x000000018788E6F0-0x000000018788E72C 
+		public override double duration { get; } // 0x000000018788E72C-0x000000018788E748 
 	
 		// Nested types
-		private struct MovieInfoStruct // TypeDefIndex: 54296
+		private struct MovieInfoStruct // TypeDefIndex: 55289
 		{
 			// Fields
 			public uint width; // 0x00
@@ -5930,18 +6075,18 @@ namespace CriWare.CriTimeline.Mana
 		}
 	
 		// Constructors
-		protected CriManaClipBase() {} // 0x00000001856DBB90-0x00000001856DBC54
+		protected CriManaClipBase() {} // 0x000000018788E62C-0x000000018788E6F0
 	
 		// Methods
-		private MovieInfoStruct? StructToMovieInfo(MovieInfo movieInfo) => default; // 0x00000001856DBAB8-0x00000001856DBB90
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x00000001856DB6A0-0x00000001856DB764
-		public void ReplaceMovieInfo(MovieInfo movieInfo) {} // 0x00000001856DB90C-0x00000001856DBAB8
-		public bool IsSameMovie(MovieInfo movieInfo) => default; // 0x00000001856DB830-0x00000001856DB90C
-		public int GetSeekFrame(double seekTimeSec, bool loop) => default; // 0x00000001856DB764-0x00000001856DB830
+		private MovieInfoStruct? StructToMovieInfo(MovieInfo movieInfo) => default; // 0x000000018788E554-0x000000018788E62C
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x000000018788E13C-0x000000018788E200
+		public void ReplaceMovieInfo(MovieInfo movieInfo) {} // 0x000000018788E3A8-0x000000018788E554
+		public bool IsSameMovie(MovieInfo movieInfo) => default; // 0x000000018788E2CC-0x000000018788E3A8
+		public int GetSeekFrame(double seekTimeSec, bool loop) => default; // 0x000000018788E200-0x000000018788E2CC
 	}
 
 	[Serializable]
-	public class CriManaMixerBehaviour : PlayableBehaviour // TypeDefIndex: 54302
+	public class CriManaMixerBehaviour : PlayableBehaviour // TypeDefIndex: 55295
 	{
 		// Fields
 		internal PlayableDirector m_PlayableDirector; // 0x10
@@ -5964,10 +6109,10 @@ namespace CriWare.CriTimeline.Mana
 		private MovieMixerState m_movieMixerState; // 0x80
 	
 		// Properties
-		private static bool IsEditMode { get => default; } // 0x000000018115F4C0-0x000000018115F530 
+		private static bool IsEditMode { get => default; } // 0x000000018788EB84-0x000000018788EBA8 
 	
 		// Nested types
-		private enum MovieMixerState // TypeDefIndex: 54298
+		private enum MovieMixerState // TypeDefIndex: 55291
 		{
 			Preloading = 0,
 			Ready = 1,
@@ -5976,7 +6121,7 @@ namespace CriWare.CriTimeline.Mana
 			Stopped = 4
 		}
 	
-		private enum ClipState // TypeDefIndex: 54299
+		private enum ClipState // TypeDefIndex: 55292
 		{
 			Idle = 0,
 			Prepare = 1,
@@ -5984,75 +6129,108 @@ namespace CriWare.CriTimeline.Mana
 			Seek = 3
 		}
 	
+		private struct _ProcessFrameOnSeeking_d__31 : IAsyncStateMachine // TypeDefIndex: 55293
+		{
+			// Fields
+			public int __1__state; // 0x00
+			public AsyncVoidMethodBuilder __t__builder; // 0x08
+			public CriManaMixerBehaviour __4__this; // 0x28
+			public TimelineClip activeClip; // 0x30
+			public CriManaClipBase clip; // 0x38
+			public double frameTime; // 0x40
+			private bool _movieInfoReplaced_5__2; // 0x48
+			private TaskAwaiter __u__1; // 0x50
+	
+			// Methods
+			private void MoveNext() {} // 0x00000001814A81B0-0x00000001814A81C0
+			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x000000018788EC44-0x000000018788ED00
+		}
+	
+		private sealed class _seekPlaybackEnumerator_d__35 : IEnumerator<object> // TypeDefIndex: 55294
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public CriManaMixerBehaviour __4__this; // 0x20
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000187890A64-0x0000000187890AE0 
+			object IEnumerator.Current { get => default; } // 0x000000018788EC24-0x000000018788EC44 
+	
+			// Constructors
+			public _seekPlaybackEnumerator_d__35() {} // Dummy constructor
+			public _seekPlaybackEnumerator_d__35(int __1__state) {} // 0x000000018788F2C8-0x000000018788F68C
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018788F68C-0x000000018788F8E4
+			private bool MoveNext() => default; // 0x0000000187890AE0-0x0000000187890BE8
+			void IEnumerator.Reset() {} // 0x000000018788EBA8-0x000000018788EBD8
+		}
+	
 		// Constructors
-		public CriManaMixerBehaviour() {} // 0x0000000183D51CC0-0x0000000183D51CF0
-		static CriManaMixerBehaviour() {} // 0x00000001856DE30C-0x00000001856DE34C
+		public CriManaMixerBehaviour() {} // 0x000000018789FFB0-0x000000018789FFFC
+		static CriManaMixerBehaviour() {} // 0x0000000181377E40-0x0000000181377E50
 	
 		// Methods
-		private void KeepAudioVolume(bool fadeAudio) {} // 0x00000001856DC1A8-0x00000001856DC264
-		private bool PlayMovie(CriManaClipBase clipAsset, int startFrame, double startTime) => default; // 0x00000001856DC82C-0x00000001856DCBF0
-		private bool PrepareMovie(CriManaClipBase clipAsset) => default; // 0x00000001856DCBF0-0x00000001856DCE48
-		private bool StopMovie() => default; // 0x00000001856DE044-0x00000001856DE14C
-		private bool StopForSeekMovie() => default; // 0x00000001856DDFC8-0x00000001856DE044
-		private static bool IsPlayerPreparing(Player player) => default; // 0x00000001856DC10C-0x00000001856DC13C
-		private static bool IsPlayerStopped(Player player) => default; // 0x00000001856DC188-0x00000001856DC1A8
-		private static bool IsPlayerError(Player player) => default; // 0x00000001856DC0E8-0x00000001856DC10C
-		private static bool IsPlayerReadyOrPlaying(Player player) => default; // 0x00000001856DC13C-0x00000001856DC188
-		private async void ProcessFrameOnSeeking(TimelineClip activeClip, CriManaClipBase clip, double frameTime) {} // 0x00000001856DCE48-0x00000001856DCF24
-		private void ForceSyncedStop(bool keepLastFrame = false /* Metadata: 0x01FD659D */) {} // 0x00000001856DBEB8-0x00000001856DBF68
-		private void ToggleFMVNode(FrameData info, bool isOn) {} // 0x00000001856DE14C-0x00000001856DE30C
-		public override void ProcessFrame(Playable playable, FrameData info, object playerData) {} // 0x00000001856DCF24-0x00000001856DDFC8
-		[IteratorStateMachine(typeof(_seekPlaybackEnumerator_d__35))]
-		private IEnumerator seekPlaybackEnumerator() => default; // 0x00000001856DE34C-0x00000001856DE3A8
-		public override void OnBehaviourPlay(Playable playable, FrameData info) {} // 0x00000001856DC270-0x00000001856DC27C
-		public override void OnBehaviourPause(Playable playable, FrameData info) {} // 0x00000001856DC264-0x00000001856DC270
-		private void PausePlayer(bool pause) {} // 0x00000001856DC7A4-0x00000001856DC82C
-		public override void OnGraphStart(Playable playable) {} // 0x00000001856DC27C-0x00000001856DC558
-		public override void OnGraphStop(Playable playable) {} // 0x00000001856DC558-0x00000001856DC6C0
-		public override void OnPlayableCreate(Playable playable) {} // 0x00000001856DC6C0-0x00000001856DC758
-		public override void OnPlayableDestroy(Playable playable) {} // 0x00000001856DC758-0x00000001856DC7A4
-		public void InitMovieMixerState() {} // 0x00000001856DBF68-0x00000001856DC0E8
+		private void KeepAudioVolume(bool fadeAudio) {} // 0x000000018788EBD8-0x000000018788EC24
+		private bool PlayMovie(CriManaClipBase clipAsset, int startFrame, double startTime) => default; // 0x000000018788F8E4-0x000000018788F9C0
+		private bool PrepareMovie(CriManaClipBase clipAsset) => default; // 0x000000018788E954-0x000000018788EA04
+		private bool StopMovie() => default; // 0x0000000187890BE8-0x0000000187890DA8
+		private bool StopForSeekMovie() => default; // 0x000000018788F9C0-0x0000000187890A64
+		private static bool IsPlayerPreparing(Player player) => default; // 0x0000000187890DE8-0x0000000187890E44
+		private static bool IsPlayerStopped(Player player) => default; // 0x000000018788ED0C-0x000000018788ED18
+		private static bool IsPlayerError(Player player) => default; // 0x000000018788ED00-0x000000018788ED0C
+		private static bool IsPlayerReadyOrPlaying(Player player) => default; // 0x000000018788F240-0x000000018788F2C8
+		private void ProcessFrameOnSeeking(TimelineClip activeClip, CriManaClipBase clip, double frameTime) {} // 0x000000018788ED18-0x000000018788EFF4
+		private void ForceSyncedStop(bool keepLastFrame = false /* Metadata: 0x0207BDC9 */) {} // 0x000000018788EFF4-0x000000018788F15C
+		private void ToggleFMVNode(FrameData info, bool isOn) {} // 0x000000018788F15C-0x000000018788F1F4
+		public override void ProcessFrame(Playable playable, FrameData info, object playerData) {} // 0x000000018788F1F4-0x000000018788F240
+		private IEnumerator seekPlaybackEnumerator() => default; // 0x000000018788EA04-0x000000018788EB84
+		public override void OnBehaviourPlay(Playable playable, FrameData info) {} // 0x0000000185FB3030-0x0000000185FB3060
+		public override void OnBehaviourPause(Playable playable, FrameData info) {} // 0x0000000187890DA8-0x0000000187890DE8
+		private void PausePlayer(bool pause) {} // 0x000000018789F7A4-0x000000018789FEEC
+		public override void OnGraphStart(Playable playable) {} // 0x0000000186475504-0x0000000186475510
+		public override void OnGraphStop(Playable playable) {} // 0x0000000181378230-0x0000000181378240
+		public override void OnPlayableCreate(Playable playable) {} // 0x0000000185492010-0x0000000185492020
+		public override void OnPlayableDestroy(Playable playable) {} // 0x000000018789FEEC-0x000000018789FFB0
+		public void InitMovieMixerState() {} // 0x0000000181377E40-0x0000000181377E50
 	}
 
-	[TrackBindingType(typeof(CriManaMovieMaterialBase))]
-	[TrackClipType(typeof(CriManaClipBase))]
-	[TrackColor(0.15f, 0.5f, 1f)]
-	public class CriManaTrack : TrackAsset // TypeDefIndex: 54303
+	public class CriManaTrack : TrackAsset // TypeDefIndex: 55296
 	{
 		// Fields
-		[Tooltip("\u9ED8\u8BA4\u662FTrue\uFF0C\u4E0D\u5141\u8BB8\u4FEE\u6539")]
 		public bool frameSync; // 0xC0
 		public readonly Guid guid; // 0xC4
 		private static Dictionary<int, Guid> bindDict; // 0x00
+		private CriManaMixerBehaviour _MixerBehaviour_k__BackingField; // 0xD8
 	
 		// Properties
-		public CriManaMixerBehaviour MixerBehaviour { get; private set; } // 0x0000000183D4E7B0-0x0000000183D4E7C0 0x0000000185142FC4-0x0000000185142FD8
+		public CriManaMixerBehaviour MixerBehaviour { get; private set; } // 0x0000000185FB02F0-0x0000000185FB0300 0x00000001873368EC-0x0000000187336900
 	
 		// Constructors
-		public CriManaTrack() {} // 0x00000001856E5930-0x00000001856E5990
-		static CriManaTrack() {} // 0x00000001856E58A4-0x00000001856E5930
+		public CriManaTrack() {} // 0x00000001878983CC-0x000000018789842C
+		static CriManaTrack() {} // 0x0000000187898340-0x00000001878983CC
 	
 		// Methods
-		public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount) => default; // 0x00000001856E4FA8-0x00000001856E5424
-		public void BindBehaviourMovieMaterial(PlayableDirector director, CriManaMovieMaterialBase boundMovieMaterial) {} // 0x00000001856E4B34-0x00000001856E4FA8
-		private void OnDestroy() {} // 0x00000001856E5424-0x00000001856E5478
-		private static void RemoveTrackFromBindDict(CriManaTrack trackAsset) {} // 0x00000001856E5478-0x00000001856E58A4
+		public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount) => default; // 0x0000000187897A44-0x0000000187897EC0
+		public void BindBehaviourMovieMaterial(PlayableDirector director, CriManaMovieMaterialBase boundMovieMaterial) {} // 0x00000001878975D0-0x0000000187897A44
+		private void OnDestroy() {} // 0x0000000187897EC0-0x0000000187897F14
+		private static void RemoveTrackFromBindDict(CriManaTrack trackAsset) {} // 0x0000000187897F14-0x0000000187898340
 	}
 }
 
 namespace HG.Rendering.Runtime
 {
-	[AttributeUsage(AttributeTargets.Struct)]
-	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 54020
+	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 55013
 	{
 		// Constructors
-		public HGConstantBufferLayoutAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public HGConstantBufferLayoutAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 54346
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 55339
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -6062,35 +6240,35 @@ namespace IFix
 	
 		// Constructors
 		public ILFixDynamicMethodWrapper() {} // Dummy constructor
-		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000183020510-0x0000000183020540
-		static ILFixDynamicMethodWrapper() {} // 0x00000001856E5B84-0x00000001856E5BE8
+		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000184E6FCD0-0x0000000184E6FD00
+		static ILFixDynamicMethodWrapper() {} // 0x0000000187898620-0x0000000187898684
 	}
 
-	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 54347
+	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 55340
 	{
 		// Constructors
 		public ILFixInterfaceBridge() {} // Dummy constructor
-		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x00000001856E5C2C-0x00000001856E5CC0
+		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x00000001878986C8-0x000000018789875C
 	
 		// Methods
-		public void RefAsyncBuilderStartMethod() {} // 0x00000001856E5BE8-0x00000001856E5C2C
+		public void RefAsyncBuilderStartMethod() {} // 0x0000000187898684-0x00000001878986C8
 	}
 
-	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 54348
+	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 55341
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
 	
 		// Constructors
 		public WrappersManagerImpl() {} // Dummy constructor
-		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x0000000184096E30-0x0000000184096EF0
 	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x00000001856ED748-0x00000001856ED7AC
-		public static bool IsPatched(int id) => default; // 0x00000001856ED838-0x00000001856ED8D0
-		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x00000001856ED604-0x00000001856ED6D0
-		public object CreateWrapper(int id) => default; // 0x00000001856ED6D0-0x00000001856ED748
-		public object InitWrapperArray(int len) => default; // 0x00000001856ED7AC-0x00000001856ED838
-		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x00000001856ED560-0x00000001856ED604
+		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x00000001878A01E4-0x00000001878A0248
+		public static bool IsPatched(int id) => default; // 0x00000001878A02D4-0x00000001878A036C
+		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x00000001878A00A0-0x00000001878A016C
+		public object CreateWrapper(int id) => default; // 0x00000001878A016C-0x00000001878A01E4
+		public object InitWrapperArray(int len) => default; // 0x00000001878A0248-0x00000001878A02D4
+		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x000000018789FFFC-0x00000001878A00A0
 	}
 }

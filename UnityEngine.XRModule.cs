@@ -3,182 +3,41 @@
  */
 
 using System;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Bindings;
 using UnityEngine.Rendering;
-using UnityEngine.Scripting;
 
-// Image 105: UnityEngine.XRModule.dll - Assembly: UnityEngine.XRModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59644-59675
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
-[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
-[assembly: InternalsVisibleTo("UnityEngine")]
-[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
-[assembly: InternalsVisibleTo("Unity.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.Networking")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
-[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
-[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
-[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
-[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
-[assembly: InternalsVisibleTo("Unity.Burst")]
-[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
-[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
-[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
-[assembly: InternalsVisibleTo("Unity.Automation")]
-[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
-[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
-[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
-[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
-[assembly: InternalsVisibleTo("Unity.Timeline")]
-[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
-[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
-[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
-[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
-[assembly: InternalsVisibleTo("UnityEngine.UI")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
-[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
-[assembly: InternalsVisibleTo("Unity.UIElements")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
-[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.Core")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
-[assembly: InternalsVisibleTo("Unity.Collections")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
-[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
-[assembly: InternalsVisibleTo("Unity.Services.QoS")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
-[assembly: InternalsVisibleTo("Unity.Logging")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
-[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: UnityEngineModuleAssembly]
+// Image 108: UnityEngine.XRModule.dll - Assembly: UnityEngine.XRModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60748-60779
+
+namespace Microsoft.CodeAnalysis
+{
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 60749
+	{
+		// Constructors
+		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+}
+
+namespace System.Runtime.CompilerServices
+{
+	internal sealed class IsReadOnlyAttribute : Attribute // TypeDefIndex: 60750
+	{
+		// Constructors
+		public IsReadOnlyAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+}
 
 namespace UnityEngine.XR
 {
-	[NativeConditional("ENABLE_VR")]
-	[NativeHeader("Modules/XR/Subsystems/Input/Public/XRInputTrackingFacade.h")]
-	[RequiredByNativeCode]
-	[StaticAccessor("XRInputTrackingFacade::Get()", StaticAccessorType.Dot)]
-	public static class InputTracking // TypeDefIndex: 59648
+	public static class InputTracking // TypeDefIndex: 60752
 	{
+		// Fields
+		private static Action<XRNodeState> trackingAcquired; // 0x00
+		private static Action<XRNodeState> trackingLost; // 0x08
+		private static Action<XRNodeState> nodeAdded; // 0x10
+		private static Action<XRNodeState> nodeRemoved; // 0x18
+	
 		// Nested types
-		private enum TrackingStateEventType // TypeDefIndex: 59647
+		private enum TrackingStateEventType // TypeDefIndex: 60751
 		{
 			NodeAdded = 0,
 			NodeRemoved = 1,
@@ -187,11 +46,10 @@ namespace UnityEngine.XR
 		}
 	
 		// Methods
-		[RequiredByNativeCode]
-		private static void InvokeTrackingEvent(TrackingStateEventType eventType, XRNode nodeType, long uniqueID, bool tracked) {} // 0x0000000189F8C4EC-0x0000000189F8C6AC
+		private static void InvokeTrackingEvent(TrackingStateEventType eventType, XRNode nodeType, long uniqueID, bool tracked) {} // 0x000000018C0A41D8-0x000000018C0A4398
 	}
 
-	public enum XRNode // TypeDefIndex: 59649
+	public enum XRNode // TypeDefIndex: 60753
 	{
 		LeftEye = 0,
 		RightEye = 1,
@@ -204,8 +62,7 @@ namespace UnityEngine.XR
 		HardwareTracker = 8
 	}
 
-	[Flags]
-	internal enum AvailableTrackingData // TypeDefIndex: 59650
+	internal enum AvailableTrackingData // TypeDefIndex: 60754
 	{
 		None = 0,
 		PositionAvailable = 1,
@@ -216,8 +73,7 @@ namespace UnityEngine.XR
 		AngularAccelerationAvailable = 32
 	}
 
-	[UsedByNativeCode]
-	public struct XRNodeState // TypeDefIndex: 59651
+	public struct XRNodeState // TypeDefIndex: 60755
 	{
 		// Fields
 		private XRNode m_Type; // 0x00
@@ -232,12 +88,12 @@ namespace UnityEngine.XR
 		private ulong m_UniqueID; // 0x58
 	
 		// Properties
-		public ulong uniqueID { set {} } // 0x0000000183D4F270-0x0000000183D4F280
-		public XRNode nodeType { set {} } // 0x0000000183D4E970-0x0000000183D4E980
-		public bool tracked { set {} } // 0x0000000189F8CE00-0x0000000189F8CE0C
+		public ulong uniqueID { set {} } // 0x0000000185FB0960-0x0000000185FB0970
+		public XRNode nodeType { set {} } // 0x00000001818AA390-0x00000001818AA3A0
+		public bool tracked { set {} } // 0x000000018C0A4AEC-0x000000018C0A4AF8
 	}
 
-	internal enum InputFeatureType : uint // TypeDefIndex: 59652
+	internal enum InputFeatureType : uint // TypeDefIndex: 60756
 	{
 		Custom = 0,
 		Binary = 1,
@@ -252,15 +108,14 @@ namespace UnityEngine.XR
 		kUnityXRInputFeatureTypeInvalid = 4294967295
 	}
 
-	internal enum ConnectionChangeType : uint // TypeDefIndex: 59653
+	internal enum ConnectionChangeType : uint // TypeDefIndex: 60757
 	{
 		Connected = 0,
 		Disconnected = 1,
 		ConfigChange = 2
 	}
 
-	[Flags]
-	public enum InputDeviceCharacteristics : uint // TypeDefIndex: 59654
+	public enum InputDeviceCharacteristics : uint // TypeDefIndex: 60758
 	{
 		None = 0,
 		HeadMounted = 1,
@@ -276,8 +131,7 @@ namespace UnityEngine.XR
 		Simulated6DOF = 1024
 	}
 
-	[Flags]
-	public enum InputTrackingState : uint // TypeDefIndex: 59655
+	public enum InputTrackingState : uint // TypeDefIndex: 60759
 	{
 		None = 0,
 		Position = 1,
@@ -289,140 +143,112 @@ namespace UnityEngine.XR
 		All = 63
 	}
 
-	[NativeConditional("ENABLE_VR")]
-	[NativeHeader("Modules/XR/Subsystems/Input/Public/XRInputDevices.h")]
-	[RequiredByNativeCode]
-	public struct InputFeatureUsage : IEquatable<InputFeatureUsage> // TypeDefIndex: 59656
+	public struct InputFeatureUsage : IEquatable<InputFeatureUsage> // TypeDefIndex: 60760
 	{
 		// Fields
 		internal string m_Name; // 0x00
-		[NativeName("m_FeatureType")]
 		internal InputFeatureType m_InternalType; // 0x08
 	
 		// Properties
-		public string name { get => default; } // 0x000000018253BE20-0x000000018253BE30 
-		internal InputFeatureType internalType { get => default; } // 0x0000000183D68070-0x0000000183D68080 
+		public string name { get => default; } // 0x0000000184142CB0-0x0000000184142CC0 
+		internal InputFeatureType internalType { get => default; } // 0x00000001835DC780-0x00000001835DC790 
 	
 		// Methods
-		public override bool Equals(object obj) => default; // 0x0000000189F8C404-0x0000000189F8C47C
-		public bool Equals(InputFeatureUsage other) => default; // 0x0000000189F8C47C-0x0000000189F8C4BC
-		public override int GetHashCode() => default; // 0x0000000189F8C4BC-0x0000000189F8C4EC
+		public override bool Equals(object obj) => default; // 0x000000018C0A40F0-0x000000018C0A4168
+		public bool Equals(InputFeatureUsage other) => default; // 0x000000018C0A4168-0x000000018C0A41A8
+		public override int GetHashCode() => default; // 0x000000018C0A41A8-0x000000018C0A41D8
 	}
 
-	[NativeConditional("ENABLE_VR")]
-	[UsedByNativeCode]
-	public struct InputDevice : IEquatable<InputDevice> // TypeDefIndex: 59657
+	public struct InputDevice : IEquatable<InputDevice> // TypeDefIndex: 60761
 	{
 		// Fields
 		private ulong m_DeviceId; // 0x00
 		private bool m_Initialized; // 0x08
 	
 		// Properties
-		private ulong deviceId { get => default; } // 0x0000000189F8C330-0x0000000189F8C344 
+		private ulong deviceId { get => default; } // 0x000000018C0A401C-0x000000018C0A4030 
 	
 		// Constructors
 		internal InputDevice(ulong deviceId) : this() {
 			m_DeviceId = default;
 			m_Initialized = default;
-		} // 0x0000000183D89F90-0x0000000183D89FA0
+		} // 0x0000000185FEADD0-0x0000000185FEADE0
 	
 		// Methods
-		public override bool Equals(object obj) => default; // 0x0000000189F8C258-0x0000000189F8C2E0
-		public bool Equals(InputDevice other) => default; // 0x0000000189F8C2E0-0x0000000189F8C314
-		public override int GetHashCode() => default; // 0x0000000189F8C314-0x0000000189F8C330
+		public override bool Equals(object obj) => default; // 0x000000018C0A3F44-0x000000018C0A3FCC
+		public bool Equals(InputDevice other) => default; // 0x000000018C0A3FCC-0x000000018C0A4000
+		public override int GetHashCode() => default; // 0x000000018C0A4000-0x000000018C0A401C
 	}
 
-	[NativeConditional("ENABLE_VR")]
-	[NativeHeader("Modules/XR/Subsystems/Input/Public/XRInputDevices.h")]
-	[NativeHeader("Modules/XR/XRPrefix.h")]
-	[NativeHeader("XRScriptingClasses.h")]
-	[RequiredByNativeCode]
-	[StaticAccessor("XRInputDevices::Get()", StaticAccessorType.Dot)]
-	public struct Hand : IEquatable<Hand> // TypeDefIndex: 59658
+	public struct Hand : IEquatable<Hand> // TypeDefIndex: 60762
 	{
 		// Fields
 		private ulong m_DeviceId; // 0x00
 		private uint m_FeatureIndex; // 0x08
 	
 		// Properties
-		internal ulong deviceId { get => default; } // 0x000000018253BE20-0x000000018253BE30 
-		internal uint featureIndex { get => default; } // 0x0000000183D68070-0x0000000183D68080 
+		internal ulong deviceId { get => default; } // 0x0000000184142CB0-0x0000000184142CC0 
+		internal uint featureIndex { get => default; } // 0x00000001835DC780-0x00000001835DC790 
 	
 		// Methods
-		public override bool Equals(object obj) => default; // 0x0000000189F8C118-0x0000000189F8C190
-		public bool Equals(Hand other) => default; // 0x0000000189F8C010-0x0000000189F8C028
-		public override int GetHashCode() => default; // 0x0000000183D89F20-0x0000000183D89F40
+		public override bool Equals(object obj) => default; // 0x000000018C0A3E04-0x000000018C0A3E7C
+		public bool Equals(Hand other) => default; // 0x000000018C0A3CFC-0x000000018C0A3D14
+		public override int GetHashCode() => default; // 0x0000000185FEAD60-0x0000000185FEAD80
 	}
 
-	[NativeConditional("ENABLE_VR")]
-	[NativeHeader("Modules/XR/Subsystems/Input/Public/XRInputDevices.h")]
-	[NativeHeader("XRScriptingClasses.h")]
-	[NativeHeader("Modules/XR/XRPrefix.h")]
-	[RequiredByNativeCode]
-	[StaticAccessor("XRInputDevices::Get()", StaticAccessorType.Dot)]
-	public struct Eyes : IEquatable<Eyes> // TypeDefIndex: 59659
+	public struct Eyes : IEquatable<Eyes> // TypeDefIndex: 60763
 	{
 		// Fields
 		private ulong m_DeviceId; // 0x00
 		private uint m_FeatureIndex; // 0x08
 	
 		// Properties
-		internal ulong deviceId { get => default; } // 0x000000018253BE20-0x000000018253BE30 
-		internal uint featureIndex { get => default; } // 0x0000000183D68070-0x0000000183D68080 
+		internal ulong deviceId { get => default; } // 0x0000000184142CB0-0x0000000184142CC0 
+		internal uint featureIndex { get => default; } // 0x00000001835DC780-0x00000001835DC790 
 	
 		// Methods
-		public override bool Equals(object obj) => default; // 0x0000000189F8C0A0-0x0000000189F8C118
-		public bool Equals(Eyes other) => default; // 0x0000000189F8C010-0x0000000189F8C028
-		public override int GetHashCode() => default; // 0x0000000183D89F20-0x0000000183D89F40
+		public override bool Equals(object obj) => default; // 0x000000018C0A3D8C-0x000000018C0A3E04
+		public bool Equals(Eyes other) => default; // 0x000000018C0A3CFC-0x000000018C0A3D14
+		public override int GetHashCode() => default; // 0x0000000185FEAD60-0x0000000185FEAD80
 	}
 
-	[NativeConditional("ENABLE_VR")]
-	[NativeHeader("Modules/XR/Subsystems/Input/Public/XRInputDevices.h")]
-	[NativeHeader("XRScriptingClasses.h")]
-	[NativeHeader("Modules/XR/XRPrefix.h")]
-	[RequiredByNativeCode]
-	[StaticAccessor("XRInputDevices::Get()", StaticAccessorType.Dot)]
-	public struct Bone : IEquatable<Bone> // TypeDefIndex: 59660
+	public struct Bone : IEquatable<Bone> // TypeDefIndex: 60764
 	{
 		// Fields
 		private ulong m_DeviceId; // 0x00
 		private uint m_FeatureIndex; // 0x08
 	
 		// Properties
-		internal ulong deviceId { get => default; } // 0x000000018253BE20-0x000000018253BE30 
-		internal uint featureIndex { get => default; } // 0x0000000183D68070-0x0000000183D68080 
+		internal ulong deviceId { get => default; } // 0x0000000184142CB0-0x0000000184142CC0 
+		internal uint featureIndex { get => default; } // 0x00000001835DC780-0x00000001835DC790 
 	
 		// Methods
-		public override bool Equals(object obj) => default; // 0x0000000189F8C028-0x0000000189F8C0A0
-		public bool Equals(Bone other) => default; // 0x0000000189F8C010-0x0000000189F8C028
-		public override int GetHashCode() => default; // 0x0000000183D89F20-0x0000000183D89F40
+		public override bool Equals(object obj) => default; // 0x000000018C0A3D14-0x000000018C0A3D8C
+		public bool Equals(Bone other) => default; // 0x000000018C0A3CFC-0x000000018C0A3D14
+		public override int GetHashCode() => default; // 0x0000000185FEAD60-0x0000000185FEAD80
 	}
 
-	[NativeConditional("ENABLE_VR")]
-	[NativeHeader("Modules/XR/Subsystems/Input/Public/XRInputDevices.h")]
-	[StaticAccessor("XRInputDevices::Get()", StaticAccessorType.Dot)]
-	[UsedByNativeCode]
-	public class InputDevices // TypeDefIndex: 59661
+	public class InputDevices // TypeDefIndex: 60765
 	{
+		// Fields
+		private static Action<InputDevice> deviceConnected; // 0x00
+		private static Action<InputDevice> deviceDisconnected; // 0x08
+		private static Action<InputDevice> deviceConfigChanged; // 0x10
+	
 		// Constructors
 		public InputDevices() {} // Dummy constructor
 	
 		// Methods
-		[RequiredByNativeCode]
-		private static void InvokeConnectionEvent(ulong deviceId, ConnectionChangeType change) {} // 0x0000000189F8C344-0x0000000189F8C404
+		private static void InvokeConnectionEvent(ulong deviceId, ConnectionChangeType change) {} // 0x000000018C0A4030-0x000000018C0A40F0
 	}
 
-	[NativeConditional("ENABLE_XR")]
-	[NativeHeader("Modules/XR/XRPrefix.h")]
-	[NativeType(Header = "Modules/XR/Subsystems/Display/XRDisplaySubsystem.h")]
-	[UsedByNativeCode]
-	public class XRDisplaySubsystem : IntegratedSubsystem<XRDisplaySubsystemDescriptor> // TypeDefIndex: 59664
+	public class XRDisplaySubsystem : IntegratedSubsystem<XRDisplaySubsystemDescriptor> // TypeDefIndex: 60768
 	{
+		// Fields
+		private Action<bool> displayFocusChanged; // 0x20
+	
 		// Nested types
-		[NativeHeader("Runtime/Graphics/CommandBuffer/RenderingCommandBuffer.h")]
-		[NativeHeader("Runtime/Graphics/RenderTextureDesc.h")]
-		[NativeHeader("Modules/XR/Subsystems/Display/XRDisplaySubsystem.bindings.h")]
-		public struct XRRenderPass // TypeDefIndex: 59662
+		public struct XRRenderPass // TypeDefIndex: 60766
 		{
 			// Fields
 			private IntPtr displaySubsystemInstance; // 0x00
@@ -436,8 +262,7 @@ namespace UnityEngine.XR
 			public int cullingPassIndex; // 0xD0
 		}
 	
-		[NativeHeader("Modules/XR/Subsystems/Display/XRDisplaySubsystem.bindings.h")]
-		public struct XRMirrorViewBlitDesc // TypeDefIndex: 59663
+		public struct XRMirrorViewBlitDesc // TypeDefIndex: 60767
 		{
 			// Fields
 			private IntPtr displaySubsystemInstance; // 0x00
@@ -447,49 +272,39 @@ namespace UnityEngine.XR
 		}
 	
 		// Constructors
-		public XRDisplaySubsystem() {} // 0x0000000189F8CBE8-0x0000000189F8CC10
+		public XRDisplaySubsystem() {} // 0x000000018C0A48D4-0x000000018C0A48FC
 	
 		// Methods
-		[RequiredByNativeCode]
-		private void InvokeDisplayFocusChanged(bool focus) {} // 0x0000000189F8CBCC-0x0000000189F8CBE8
+		private void InvokeDisplayFocusChanged(bool focus) {} // 0x000000018C0A48B8-0x000000018C0A48D4
 	}
 
-	[NativeType(Header = "Modules/XR/Subsystems/Display/XRDisplaySubsystemDescriptor.h")]
-	[UsedByNativeCode]
-	public class XRDisplaySubsystemDescriptor : IntegratedSubsystemDescriptor<XRDisplaySubsystem> // TypeDefIndex: 59665
+	public class XRDisplaySubsystemDescriptor : IntegratedSubsystemDescriptor<XRDisplaySubsystem> // TypeDefIndex: 60769
 	{
 		// Constructors
-		public XRDisplaySubsystemDescriptor() {} // 0x0000000189F8CBA4-0x0000000189F8CBCC
+		public XRDisplaySubsystemDescriptor() {} // 0x000000018C0A4890-0x000000018C0A48B8
 	}
 
-	[NativeConditional("ENABLE_XR")]
-	[NativeType(Header = "Modules/XR/Subsystems/Input/XRInputSubsystem.h")]
-	[UsedByNativeCode]
-	public class XRInputSubsystem : IntegratedSubsystem<XRInputSubsystemDescriptor> // TypeDefIndex: 59666
+	public class XRInputSubsystem : IntegratedSubsystem<XRInputSubsystemDescriptor> // TypeDefIndex: 60770
 	{
+		// Fields
+		private Action<XRInputSubsystem> trackingOriginUpdated; // 0x20
+		private Action<XRInputSubsystem> boundaryChanged; // 0x28
+	
 		// Constructors
-		public XRInputSubsystem() {} // 0x0000000189F8CD28-0x0000000189F8CD50
+		public XRInputSubsystem() {} // 0x000000018C0A4A14-0x000000018C0A4A3C
 	
 		// Methods
-		[RequiredByNativeCode(GenerateProxy = true)]
-		private static void InvokeTrackingOriginUpdatedEvent(IntPtr internalPtr) {} // 0x0000000189F8CCB0-0x0000000189F8CD28
-		[RequiredByNativeCode(GenerateProxy = true)]
-		private static void InvokeBoundaryChangedEvent(IntPtr internalPtr) {} // 0x0000000189F8CC38-0x0000000189F8CCB0
+		private static void InvokeTrackingOriginUpdatedEvent(IntPtr internalPtr) {} // 0x000000018C0A499C-0x000000018C0A4A14
+		private static void InvokeBoundaryChangedEvent(IntPtr internalPtr) {} // 0x000000018C0A4924-0x000000018C0A499C
 	}
 
-	[NativeConditional("ENABLE_XR")]
-	[NativeHeader("Modules/XR/XRPrefix.h")]
-	[NativeType(Header = "Modules/XR/Subsystems/Input/XRInputSubsystemDescriptor.h")]
-	[UsedByNativeCode]
-	public class XRInputSubsystemDescriptor : IntegratedSubsystemDescriptor<XRInputSubsystem> // TypeDefIndex: 59667
+	public class XRInputSubsystemDescriptor : IntegratedSubsystemDescriptor<XRInputSubsystem> // TypeDefIndex: 60771
 	{
 		// Constructors
-		public XRInputSubsystemDescriptor() {} // 0x0000000189F8CC10-0x0000000189F8CC38
+		public XRInputSubsystemDescriptor() {} // 0x000000018C0A48FC-0x000000018C0A4924
 	}
 
-	[NativeHeader("Modules/XR/Subsystems/Meshing/XRMeshBindings.h")]
-	[UsedByNativeCode]
-	public struct MeshId : IEquatable<MeshId> // TypeDefIndex: 59668
+	public struct MeshId : IEquatable<MeshId> // TypeDefIndex: 60772
 	{
 		// Fields
 		private static MeshId s_InvalidId; // 0x00
@@ -499,18 +314,16 @@ namespace UnityEngine.XR
 		// Constructors
 		static MeshId() {
 			s_InvalidId = default;
-		} // 0x0000000189F8CB28-0x0000000189F8CB64
+		} // 0x000000018C0A4814-0x000000018C0A4850
 	
 		// Methods
-		public override string ToString() => default; // 0x0000000189F8CAAC-0x0000000189F8CB28
-		public override int GetHashCode() => default; // 0x0000000183D85F30-0x0000000183D85F50
-		public override bool Equals(object obj) => default; // 0x0000000189F8CA28-0x0000000189F8CAAC
-		public bool Equals(MeshId other) => default; // 0x000000018558249C-0x00000001855824B4
+		public override string ToString() => default; // 0x000000018C0A4798-0x000000018C0A4814
+		public override int GetHashCode() => default; // 0x0000000185FE6BC0-0x0000000185FE6BE0
+		public override bool Equals(object obj) => default; // 0x000000018C0A4714-0x000000018C0A4798
+		public bool Equals(MeshId other) => default; // 0x0000000187783A50-0x0000000187783A68
 	}
 
-	[NativeHeader("Modules/XR/Subsystems/Meshing/XRMeshBindings.h")]
-	[RequiredByNativeCode]
-	public enum MeshGenerationStatus // TypeDefIndex: 59669
+	public enum MeshGenerationStatus // TypeDefIndex: 60773
 	{
 		Success = 0,
 		InvalidMeshId = 1,
@@ -519,42 +332,48 @@ namespace UnityEngine.XR
 		UnknownError = 4
 	}
 
-	internal static class HashCodeHelper // TypeDefIndex: 59670
+	internal static class HashCodeHelper // TypeDefIndex: 60774
 	{
 		// Methods
-		public static int Combine(int hash1, int hash2) => default; // 0x0000000183D89F40-0x0000000183D89F50
-		public static int Combine(int hash1, int hash2, int hash3) => default; // 0x0000000183D89F50-0x0000000183D89F70
-		public static int Combine(int hash1, int hash2, int hash3, int hash4) => default; // 0x0000000183D89F70-0x0000000183D89F90
-		public static int Combine(int hash1, int hash2, int hash3, int hash4, int hash5) => default; // 0x0000000189F8C1F4-0x0000000189F8C218
-		public static int Combine(int hash1, int hash2, int hash3, int hash4, int hash5, int hash6) => default; // 0x0000000189F8C1C8-0x0000000189F8C1F4
-		public static int Combine(int hash1, int hash2, int hash3, int hash4, int hash5, int hash6, int hash7) => default; // 0x0000000189F8C190-0x0000000189F8C1C8
-		public static int Combine(int hash1, int hash2, int hash3, int hash4, int hash5, int hash6, int hash7, int hash8) => default; // 0x0000000189F8C218-0x0000000189F8C258
+		public static int Combine(int hash1, int hash2) => default; // 0x0000000185FEAD80-0x0000000185FEAD90
+		public static int Combine(int hash1, int hash2, int hash3) => default; // 0x0000000185FEAD90-0x0000000185FEADB0
+		public static int Combine(int hash1, int hash2, int hash3, int hash4) => default; // 0x0000000185FEADB0-0x0000000185FEADD0
+		public static int Combine(int hash1, int hash2, int hash3, int hash4, int hash5) => default; // 0x000000018C0A3EE0-0x000000018C0A3F04
+		public static int Combine(int hash1, int hash2, int hash3, int hash4, int hash5, int hash6) => default; // 0x000000018C0A3EB4-0x000000018C0A3EE0
+		public static int Combine(int hash1, int hash2, int hash3, int hash4, int hash5, int hash6, int hash7) => default; // 0x000000018C0A3E7C-0x000000018C0A3EB4
+		public static int Combine(int hash1, int hash2, int hash3, int hash4, int hash5, int hash6, int hash7, int hash8) => default; // 0x000000018C0A3F04-0x000000018C0A3F44
 	}
 
-	[NativeHeader("Modules/XR/Subsystems/Meshing/XRMeshBindings.h")]
-	[RequiredByNativeCode]
-	public struct MeshGenerationResult : IEquatable<MeshGenerationResult> // TypeDefIndex: 59671
+	public struct MeshGenerationResult : IEquatable<MeshGenerationResult> // TypeDefIndex: 60775
 	{
+		// Fields
+		private readonly MeshId _MeshId_k__BackingField; // 0x00
+		private readonly Mesh _Mesh_k__BackingField; // 0x10
+		private readonly MeshCollider _MeshCollider_k__BackingField; // 0x18
+		private readonly MeshGenerationStatus _Status_k__BackingField; // 0x20
+		private readonly MeshVertexAttributes _Attributes_k__BackingField; // 0x24
+		private readonly ulong _Timestamp_k__BackingField; // 0x28
+		private readonly Vector3 _Position_k__BackingField; // 0x30
+		private readonly Quaternion _Rotation_k__BackingField; // 0x3C
+		private readonly Vector3 _Scale_k__BackingField; // 0x4C
+	
 		// Properties
-		public MeshId MeshId { [IsReadOnly] get; } // 0x0000000183D5B250-0x0000000183D5B260 
-		public Mesh Mesh { [IsReadOnly] get; } // 0x00000001820B7B20-0x00000001820B7B30 
-		public MeshCollider MeshCollider { [IsReadOnly] get; } // 0x0000000181041090-0x00000001810410A0 
-		public MeshGenerationStatus Status { [IsReadOnly] get; } // 0x0000000181003B50-0x0000000181003B60 
-		public MeshVertexAttributes Attributes { [IsReadOnly] get; } // 0x0000000183D4E2E0-0x0000000183D4E2F0 
-		public Vector3 Position { [IsReadOnly] get; } // 0x0000000183D51B80-0x0000000183D51BA0 
-		public Quaternion Rotation { [IsReadOnly] get; } // 0x0000000183D5E660-0x0000000183D5E670 
-		public Vector3 Scale { [IsReadOnly] get; } // 0x0000000183D58880-0x0000000183D588A0 
+		public MeshId MeshId { get; } // 0x0000000181D61820-0x0000000181D61830 
+		public Mesh Mesh { get; } // 0x000000018346D130-0x000000018346D140 
+		public MeshCollider MeshCollider { get; } // 0x0000000181377E40-0x0000000181377E50 
+		public MeshGenerationStatus Status { get; } // 0x00000001813B88B0-0x00000001813B88C0 
+		public MeshVertexAttributes Attributes { get; } // 0x0000000181424480-0x0000000181424490 
+		public Vector3 Position { get; } // 0x0000000185FB2EF0-0x0000000185FB2F10 
+		public Quaternion Rotation { get; } // 0x0000000185FBFAA0-0x0000000185FBFAB0 
+		public Vector3 Scale { get; } // 0x0000000181DE28A0-0x0000000181DE28C0 
 	
 		// Methods
-		public override bool Equals(object obj) => default; // 0x0000000189F8C6AC-0x0000000189F8C75C
-		public bool Equals(MeshGenerationResult other) => default; // 0x0000000189F8C75C-0x0000000189F8C8C4
-		public override int GetHashCode() => default; // 0x0000000189F8C8C4-0x0000000189F8CA28
+		public override bool Equals(object obj) => default; // 0x000000018C0A4398-0x000000018C0A4448
+		public bool Equals(MeshGenerationResult other) => default; // 0x000000018C0A4448-0x000000018C0A45B0
+		public override int GetHashCode() => default; // 0x000000018C0A45B0-0x000000018C0A4714
 	}
 
-	[Flags]
-	[NativeHeader("Modules/XR/Subsystems/Meshing/XRMeshBindings.h")]
-	[UsedByNativeCode]
-	public enum MeshVertexAttributes // TypeDefIndex: 59672
+	public enum MeshVertexAttributes // TypeDefIndex: 60776
 	{
 		None = 0,
 		Normals = 1,
@@ -563,40 +382,29 @@ namespace UnityEngine.XR
 		Colors = 8
 	}
 
-	[NativeConditional("ENABLE_XR")]
-	[NativeHeader("Modules/XR/XRPrefix.h")]
-	[NativeHeader("Modules/XR/Subsystems/Meshing/XRMeshingSubsystem.h")]
-	[UsedByNativeCode]
-	public class XRMeshSubsystem : IntegratedSubsystem<XRMeshSubsystemDescriptor> // TypeDefIndex: 59674
+	public class XRMeshSubsystem : IntegratedSubsystem<XRMeshSubsystemDescriptor> // TypeDefIndex: 60778
 	{
 		// Nested types
-		[IsReadOnly]
-		[NativeConditional("ENABLE_XR")]
-		private struct MeshTransformList : IDisposable // TypeDefIndex: 59673
+		private struct MeshTransformList : IDisposable // TypeDefIndex: 60777
 		{
 			// Fields
 			private readonly IntPtr m_Self; // 0x00
 	
 			// Methods
-			public void Dispose() {} // 0x0000000189F8CB64-0x0000000189F8CB70
-			[FreeFunction("UnityXRMeshTransformList_Dispose")]
-			private static void Dispose(IntPtr self) {} // 0x0000000189F8CB70-0x0000000189F8CBA4
+			public void Dispose() {} // 0x000000018C0A4A64-0x000000018C0A4AC4
+			private static void Dispose(IntPtr self) {} // 0x000000018C0A4AC4-0x000000018C0A4AEC
 		}
 	
 		// Constructors
-		public XRMeshSubsystem() {} // 0x0000000189F8CDD8-0x0000000189F8CE00
+		public XRMeshSubsystem() {} // 0x000000018C0A485C-0x000000018C0A4890
 	
 		// Methods
-		[RequiredByNativeCode]
-		private void InvokeMeshReadyDelegate(MeshGenerationResult result, Action<MeshGenerationResult> onMeshGenerationComplete) {} // 0x0000000189F8CD78-0x0000000189F8CDD8
+		private void InvokeMeshReadyDelegate(MeshGenerationResult result, Action<MeshGenerationResult> onMeshGenerationComplete) {} // 0x000000018C0A4850-0x000000018C0A485C
 	}
 
-	[NativeHeader("Modules/XR/XRPrefix.h")]
-	[NativeType(Header = "Modules/XR/Subsystems/Planes/XRMeshSubsystemDescriptor.h")]
-	[UsedByNativeCode]
-	public class XRMeshSubsystemDescriptor : IntegratedSubsystemDescriptor<XRMeshSubsystem> // TypeDefIndex: 59675
+	public class XRMeshSubsystemDescriptor : IntegratedSubsystemDescriptor<XRMeshSubsystem> // TypeDefIndex: 60779
 	{
 		// Constructors
-		public XRMeshSubsystemDescriptor() {} // 0x0000000189F8CD50-0x0000000189F8CD78
+		public XRMeshSubsystemDescriptor() {} // 0x000000018C0A4A3C-0x000000018C0A4A64
 	}
 }

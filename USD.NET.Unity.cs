@@ -5,35 +5,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Reflection;
-using System.Runtime.CompilerServices;
-using pxr;
-using UnityEngine;
 using USD.NET;
+using UnityEngine;
+using pxr;
 
-// Image 79: USD.NET.Unity.dll - Assembly: USD.NET.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 58955-59006
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 79: USD.NET.Unity.dll - Assembly: USD.NET.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59980-60031
 
 namespace USD.NET.Unity
 {
-	public class DiagnosticHandler : pxr.DiagnosticHandler // TypeDefIndex: 58956
+	public class DiagnosticHandler : pxr.DiagnosticHandler // TypeDefIndex: 59981
 	{
 		// Constructors
-		public DiagnosticHandler() {} // 0x0000000189FD2F00-0x0000000189FD2F08
+		public DiagnosticHandler() {} // 0x000000018C0EAFD0-0x000000018C0EAFD8
 	
 		// Methods
-		public override void OnFatalError(string msg) {} // 0x0000000189FD2D98-0x0000000189FD2E38
-		public override void OnError(string msg) {} // 0x0000000189FD2CD4-0x0000000189FD2D98
-		public override void OnWarning(string msg) {} // 0x0000000189FD2E9C-0x0000000189FD2F00
-		public override void OnInfo(string msg) {} // 0x0000000189FD2E38-0x0000000189FD2E9C
+		public override void OnFatalError(string msg) {} // 0x000000018C0EAE68-0x000000018C0EAF08
+		public override void OnError(string msg) {} // 0x000000018C0EADA4-0x000000018C0EAE68
+		public override void OnWarning(string msg) {} // 0x000000018C0EAF6C-0x000000018C0EAFD0
+		public override void OnInfo(string msg) {} // 0x000000018C0EAF08-0x000000018C0EAF6C
 	}
 
 	[Serializable]
-	[UsdSchema("BasisCurves")]
-	public class BasisCurvesSample : CurvesSample // TypeDefIndex: 58960
+	public class BasisCurvesSample : CurvesSample // TypeDefIndex: 59985
 	{
 		// Fields
 		public CurveType type; // 0xB0
@@ -41,13 +35,13 @@ namespace USD.NET.Unity
 		public WrapMode wrap; // 0xB8
 	
 		// Nested types
-		public enum CurveType // TypeDefIndex: 58957
+		public enum CurveType // TypeDefIndex: 59982
 		{
 			Linear = 0,
 			Cubic = 1
 		}
 	
-		public enum Basis // TypeDefIndex: 58958
+		public enum Basis // TypeDefIndex: 59983
 		{
 			Bezier = 0,
 			Bspline = 1,
@@ -56,30 +50,28 @@ namespace USD.NET.Unity
 			Power = 4
 		}
 	
-		public enum WrapMode // TypeDefIndex: 58959
+		public enum WrapMode // TypeDefIndex: 59984
 		{
 			Nonperiodic = 0,
 			Periodic = 1
 		}
 	
 		// Constructors
-		public BasisCurvesSample() {} // 0x0000000189FD2738-0x0000000189FD2740
+		public BasisCurvesSample() {} // 0x000000018C0EA808-0x000000018C0EA810
 	}
 
 	[Serializable]
-	[UsdSchema("UsdGeomBoundable")]
-	public class BoundableSample : XformableSample // TypeDefIndex: 58961
+	public class BoundableSample : XformableSample // TypeDefIndex: 59986
 	{
 		// Fields
 		public Bounds extent; // 0x60
 	
 		// Constructors
-		public BoundableSample() {} // 0x0000000189B85118-0x0000000189B85120
+		public BoundableSample() {} // 0x000000018BC9E98C-0x000000018BC9E994
 	}
 
 	[Serializable]
-	[UsdSchema("Camera")]
-	public class CameraSample : XformSample // TypeDefIndex: 58965
+	public class CameraSample : XformSample // TypeDefIndex: 59990
 	{
 		// Fields
 		public ProjectionType projection; // 0x60
@@ -92,21 +84,19 @@ namespace USD.NET.Unity
 		public Vector4[] clippingPlanes; // 0x80
 		public float fStop; // 0x88
 		public float focusDistance; // 0x8C
-		[UsdVariability(Variability.Uniform)]
 		public StereoRole stereoRole; // 0x90
-		[UsdNamespace("shutter")]
 		public Shutter shutter; // 0x98
 	
 		// Nested types
 		[Serializable]
-		public enum ProjectionType // TypeDefIndex: 58962
+		public enum ProjectionType // TypeDefIndex: 59987
 		{
 			Perspective = 0,
 			Orthographic = 1
 		}
 	
 		[Serializable]
-		public enum StereoRole // TypeDefIndex: 58963
+		public enum StereoRole // TypeDefIndex: 59988
 		{
 			Mono = 0,
 			Left = 1,
@@ -114,48 +104,44 @@ namespace USD.NET.Unity
 		}
 	
 		[Serializable]
-		public class Shutter : SampleBase // TypeDefIndex: 58964
+		public class Shutter : SampleBase // TypeDefIndex: 59989
 		{
 			// Fields
 			public double open; // 0x10
 			public double close; // 0x18
 	
 			// Constructors
-			public Shutter() {} // 0x000000018350B670-0x000000018350B680
+			public Shutter() {} // 0x000000018BC9E98C-0x000000018BC9E994
 		}
 	
 		// Constructors
-		public CameraSample() {} // 0x0000000189B85118-0x0000000189B85120
-		public CameraSample(Camera fromCamera) {} // 0x0000000189FD2BC8-0x0000000189FD2BFC
+		public CameraSample() {} // 0x000000018C0EAC98-0x000000018C0EACCC
+		public CameraSample(Camera fromCamera) {} // 0x000000018C0EA810-0x000000018C0EAA40
 	
 		// Methods
-		public void CopyFromCamera(Camera camera, bool convertTransformToUsd = true /* Metadata: 0x01FDCC0E */) {} // 0x0000000189FD2740-0x0000000189FD2970
-		public void CopyToCamera(Camera camera, bool setTransform) {} // 0x0000000189FD2970-0x0000000189FD2BC8
+		public void CopyFromCamera(Camera camera, bool convertTransformToUsd = true /* Metadata: 0x020824F2 */) {} // 0x000000018C0EAA40-0x000000018C0EAC98
+		public void CopyToCamera(Camera camera, bool setTransform) {} // 0x0000000185492010-0x0000000185492020
 	}
 
 	[Serializable]
-	[UsdSchema("Cube")]
-	public class CubeSample : GprimSample // TypeDefIndex: 58966
+	public class CubeSample : GprimSample // TypeDefIndex: 59991
 	{
 		// Fields
 		private double m_size; // 0x80
 	
 		// Properties
-		public double size { get => default; set {} } // 0x0000000183D50B60-0x0000000183D50B70 0x0000000189FD2C28-0x0000000189FD2CD4
+		public double size { get => default; set {} } // 0x0000000185FB2050-0x0000000185FB2060 0x000000018C0EACF8-0x000000018C0EADA4
 	
 		// Constructors
-		public CubeSample() {} // 0x0000000189FD2738-0x0000000189FD2740
-		public CubeSample(double size) {} // 0x0000000189FD2BFC-0x0000000189FD2C28
+		public CubeSample() {} // 0x000000018C0EA808-0x000000018C0EA810
+		public CubeSample(double size) {} // 0x000000018C0EACCC-0x000000018C0EACF8
 	}
 
 	[Serializable]
-	[UsdSchema("Curves")]
-	public class CurvesSample : PointBasedSample // TypeDefIndex: 58967
+	public class CurvesSample : PointBasedSample // TypeDefIndex: 59992
 	{
 		// Fields
-		[UsdVariability(Variability.Uniform)]
 		public bool doubleSided; // 0x80
-		[UsdVariability(Variability.Uniform)]
 		public Orientation orientation; // 0x84
 		public Vector3[] points; // 0x88
 		public Vector3[] normals; // 0x90
@@ -164,93 +150,80 @@ namespace USD.NET.Unity
 		public float[] widths; // 0xA8
 	
 		// Constructors
-		public CurvesSample() {} // 0x0000000189FD2738-0x0000000189FD2740
+		public CurvesSample() {} // 0x000000018C0EA808-0x000000018C0EA810
 	}
 
 	[Serializable]
-	[UsdSchema("UsdGeomGprim")]
-	public class GprimSample : BoundableSample // TypeDefIndex: 58968
+	public class GprimSample : BoundableSample // TypeDefIndex: 59993
 	{
 		// Fields
-		[FusedDisplayColor]
-		[VertexData]
 		public Primvar<UnityEngine.Color[]> colors; // 0x78
 	
 		// Constructors
-		public GprimSample() {} // 0x0000000189FD2F08-0x0000000189FD2F74
+		public GprimSample() {} // 0x000000018C0EAFD8-0x000000018C0EB044
 	}
 
 	[Serializable]
-	[UsdSchema("UsdGeomImageable")]
-	public class ImageableSample : SampleBase // TypeDefIndex: 58969
+	public class ImageableSample : SampleBase // TypeDefIndex: 59994
 	{
 		// Constructors
-		public ImageableSample() {} // 0x000000018350B670-0x000000018350B680
+		public ImageableSample() {} // 0x0000000185492010-0x0000000185492020
 	}
 
 	[Serializable]
-	[UsdSchema("Mesh")]
-	public class MeshSample : MeshSampleBase // TypeDefIndex: 58970
+	public class MeshSample : MeshSampleBase // TypeDefIndex: 59995
 	{
 		// Fields
 		public Visibility visibility; // 0xA8
-		[UsdVariability(Variability.Uniform)]
 		public Purpose purpose; // 0xAC
-		[UsdVariability(Variability.Uniform)]
 		public bool doubleSided; // 0xB0
-		[UsdVariability(Variability.Uniform)]
 		public Orientation orientation; // 0xB4
 		public int[] faceVertexCounts; // 0xB8
 	
 		// Constructors
-		public MeshSample() {} // 0x0000000189B8704C-0x0000000189B87054
+		public MeshSample() {} // 0x000000018BCA08C0-0x000000018BCA08C8
 	
 		// Methods
-		public void SetTriangles(int[] triangleIndices) {} // 0x0000000189FD3E5C-0x0000000189FD3F18
+		public void SetTriangles(int[] triangleIndices) {} // 0x000000018C0EBF2C-0x000000018C0EBFE8
 	}
 
 	[Serializable]
-	[UsdSchema("Mesh")]
-	public class MeshSampleBase : PointBasedSample, IArbitraryPrimvars // TypeDefIndex: 58971
+	public class MeshSampleBase : PointBasedSample, IArbitraryPrimvars // TypeDefIndex: 59996
 	{
 		// Fields
 		public int[] faceVertexIndices; // 0x80
 		public Vector3[] points; // 0x88
 		public Vector3[] normals; // 0x90
 		public Primvar<Vector4[]> tangents; // 0x98
-		[ForceNoNamespace]
 		public Dictionary<string, Primvar<object>> ArbitraryPrimvars; // 0xA0
 	
 		// Constructors
-		public MeshSampleBase() {} // 0x0000000189FD3D8C-0x0000000189FD3E5C
+		public MeshSampleBase() {} // 0x000000018C0EBE5C-0x000000018C0EBF2C
 	
 		// Methods
-		public Dictionary<string, Primvar<object>> GetArbitraryPrimvars() => default; // 0x0000000183D4EA80-0x0000000183D4EA90
-		public void AddPrimvars(List<string> primvars) {} // 0x0000000189FD3BAC-0x0000000189FD3D8C
+		public Dictionary<string, Primvar<object>> GetArbitraryPrimvars() => default; // 0x0000000185FB0520-0x0000000185FB0530
+		public void AddPrimvars(List<string> primvars) {} // 0x000000018C0EBC7C-0x000000018C0EBE5C
 	}
 
 	[Serializable]
-	[UsdSchema("UsdGeomPointBased")]
-	public class PointBasedSample : GprimSample // TypeDefIndex: 58972
+	public class PointBasedSample : GprimSample // TypeDefIndex: 59997
 	{
 		// Constructors
-		public PointBasedSample() {} // 0x0000000189FD2738-0x0000000189FD2740
+		public PointBasedSample() {} // 0x000000018C0EA808-0x000000018C0EA810
 	}
 
 	[Serializable]
-	[UsdSchema("PointInstancer")]
-	public class PointInstancerPrototypesSample : BoundableSample // TypeDefIndex: 58973
+	public class PointInstancerPrototypesSample : BoundableSample // TypeDefIndex: 59998
 	{
 		// Fields
 		public Relationship prototypes; // 0x78
 	
 		// Constructors
-		public PointInstancerPrototypesSample() {} // 0x0000000189FD4050-0x0000000189FD40A8
+		public PointInstancerPrototypesSample() {} // 0x000000018C0EC120-0x000000018C0EC178
 	}
 
 	[Serializable]
-	[UsdSchema("PointInstancer")]
-	public class PointInstancerSample : PointInstancerPrototypesSample // TypeDefIndex: 58974
+	public class PointInstancerSample : PointInstancerPrototypesSample // TypeDefIndex: 59999
 	{
 		// Fields
 		public int[] protoIndices; // 0x80
@@ -263,104 +236,93 @@ namespace USD.NET.Unity
 		public Vector3[] angularVelocities; // 0xB8
 	
 		// Constructors
-		public PointInstancerSample() {} // 0x0000000189FD42FC-0x0000000189FD4304
+		public PointInstancerSample() {} // 0x000000018C0EC3CC-0x000000018C0EC3D4
 	
 		// Methods
-		public Matrix4x4[] ComputeInstanceMatrices(Scene scene, string primPath) => default; // 0x0000000189FD40A8-0x0000000189FD42FC
+		public Matrix4x4[] ComputeInstanceMatrices(Scene scene, string primPath) => default; // 0x000000018C0EC178-0x000000018C0EC3CC
 	}
 
 	[Serializable]
-	[UsdSchema("Scope")]
-	public class ScopeSample : ImageableSample // TypeDefIndex: 58975
+	public class ScopeSample : ImageableSample // TypeDefIndex: 60000
 	{
 		// Constructors
-		public ScopeSample() {} // 0x000000018350B670-0x000000018350B680
+		public ScopeSample() {} // 0x0000000185492010-0x0000000185492020
 	}
 
 	[Serializable]
-	[UsdSchema("Sphere")]
-	public class SphereSample : GprimSample // TypeDefIndex: 58976
+	public class SphereSample : GprimSample // TypeDefIndex: 60001
 	{
 		// Fields
 		private double m_radius; // 0x80
 	
 		// Properties
-		public double radius { get => default; set {} } // 0x0000000183D50B60-0x0000000183D50B70 0x0000000189FD4800-0x0000000189FD48D0
+		public double radius { get => default; set {} } // 0x0000000185FB2050-0x0000000185FB2060 0x000000018C0EC8D0-0x000000018C0EC9A0
 	
 		// Constructors
-		public SphereSample() {} // 0x0000000189FD2738-0x0000000189FD2740
-		public SphereSample(double radius) {} // 0x0000000189FD2BFC-0x0000000189FD2C28
+		public SphereSample() {} // 0x000000018C0EA808-0x000000018C0EA810
+		public SphereSample(double radius) {} // 0x000000018C0EACCC-0x000000018C0EACF8
 	}
 
 	[Serializable]
-	[UsdSchema("UsdGeomXformable")]
-	public class XformableSample : ImageableSample // TypeDefIndex: 58977
+	public class XformableSample : ImageableSample // TypeDefIndex: 60002
 	{
 		// Fields
 		private readonly string[] kXformOpTransform; // 0x10
 		private Matrix4x4 m_xf; // 0x18
-		[UsdVariability(Variability.Uniform)]
 		public string[] xformOpOrder; // 0x58
 	
 		// Properties
-		[FusedTransform]
-		[UsdNamespace("xformOp")]
-		public Matrix4x4 transform { get => default; set {} } // 0x0000000183D58F00-0x0000000183D58F30 0x0000000189FDD744-0x0000000189FDD78C
+		public Matrix4x4 transform { get => default; set {} } // 0x0000000185FBA490-0x0000000185FBA4C0 0x000000018C0F5814-0x000000018C0F585C
 	
 		// Constructors
-		public XformableSample() {} // 0x0000000189FDD680-0x0000000189FDD744
+		public XformableSample() {} // 0x000000018C0F5750-0x000000018C0F5814
 	
 		// Methods
-		public static XformableSample FromTransform(Transform transform) => default; // 0x0000000189FDD548-0x0000000189FDD680
-		public void ConvertTransform() {} // 0x0000000189FDD484-0x0000000189FDD548
+		public static XformableSample FromTransform(Transform transform) => default; // 0x000000018C0F5618-0x000000018C0F5750
+		public void ConvertTransform() {} // 0x000000018C0F5554-0x000000018C0F5618
 	}
 
 	[Serializable]
-	[UsdSchema("Xform")]
-	public class XformSample : XformableSample // TypeDefIndex: 58978
+	public class XformSample : XformableSample // TypeDefIndex: 60003
 	{
 		// Constructors
-		public XformSample() {} // 0x0000000189B85118-0x0000000189B85120
+		public XformSample() {} // 0x000000018BC9E98C-0x000000018BC9E994
 	}
 
 	[Serializable]
-	public class MaterialBindingSample : SampleBase // TypeDefIndex: 58979
+	public class MaterialBindingSample : SampleBase // TypeDefIndex: 60004
 	{
 		// Fields
-		[UsdNamespace("material")]
 		public Relationship binding; // 0x10
 	
 		// Constructors
-		public MaterialBindingSample() {} // 0x000000018350B670-0x000000018350B680
-		public MaterialBindingSample(string materialPath) {} // 0x0000000189FD30DC-0x0000000189FD3154
+		public MaterialBindingSample() {} // 0x0000000185492010-0x0000000185492020
+		public MaterialBindingSample(string materialPath) {} // 0x000000018C0EB1AC-0x000000018C0EB224
 	}
 
 	[Serializable]
-	[UsdSchema("Material")]
-	public class MaterialSample : SampleBase // TypeDefIndex: 58980
+	public class MaterialSample : SampleBase // TypeDefIndex: 60005
 	{
 		// Fields
-		[UsdNamespace("outputs")]
 		public Connectable<TfToken> surface; // 0x10
-		[UsdNamespace("outputs")]
 		public Connectable<TfToken> displacement; // 0x18
 		public string[] requiredKeywords; // 0x20
 	
 		// Constructors
-		public MaterialSample() {} // 0x0000000189FD3A64-0x0000000189FD3ADC
-		public MaterialSample(string surfacePath) {} // 0x0000000189FD39BC-0x0000000189FD3A64
-		public MaterialSample(string surfacePath, string displacementPath) {} // 0x0000000189FD3ADC-0x0000000189FD3BAC
+		public MaterialSample() {} // 0x000000018C0EBB34-0x000000018C0EBBAC
+		public MaterialSample(string surfacePath) {} // 0x000000018C0EBA8C-0x000000018C0EBB34
+		public MaterialSample(string surfacePath, string displacementPath) {} // 0x000000018C0EBBAC-0x000000018C0EBC7C
 	
 		// Methods
 		public static bool ReadMaterial(Scene scene, string geometryPath, MaterialSample materialSample, out string shaderId) {
 			shaderId = default;
 			return default;
-		} // 0x0000000189FD33DC-0x0000000189FD3864
-		public static void Bind(Scene scene, string primPath, string materialPath) {} // 0x0000000189FD3154-0x0000000189FD33DC
-		public static void Unbind(Scene scene, string primPath) {} // 0x0000000189FD3864-0x0000000189FD39BC
+		} // 0x000000018C0EB4AC-0x000000018C0EB934
+		public static void Bind(Scene scene, string primPath, string materialPath) {} // 0x000000018C0EB224-0x000000018C0EB4AC
+		public static void Unbind(Scene scene, string primPath) {} // 0x000000018C0EB934-0x000000018C0EBA8C
 	}
 
-	public struct ParameterInfo // TypeDefIndex: 58981
+	public struct ParameterInfo // TypeDefIndex: 60006
 	{
 		// Fields
 		public object value; // 0x00
@@ -370,210 +332,240 @@ namespace USD.NET.Unity
 		public string[] requiredShaderKeywords; // 0x20
 	
 		// Methods
-		public override string ToString() => default; // 0x0000000189FD3F18-0x0000000189FD4050
+		public override string ToString() => default; // 0x000000018C0EBFE8-0x000000018C0EC120
 	}
 
-	public class InputParameterAttribute : UsdNamespaceAttribute // TypeDefIndex: 58982
+	public class InputParameterAttribute : UsdNamespaceAttribute // TypeDefIndex: 60007
 	{
+		// Fields
+		private string _UnityName_k__BackingField; // 0x18
+	
 		// Properties
-		public string UnityName { get; private set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		public string UnityName { get; private set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
 	
 		// Constructors
-		public InputParameterAttribute() {} // 0x0000000189FD2FCC-0x0000000189FD3028
-		public InputParameterAttribute(string unityName) {} // 0x0000000189FD2F74-0x0000000189FD2FCC
+		public InputParameterAttribute() {} // 0x000000018C0EB09C-0x000000018C0EB0F8
+		public InputParameterAttribute(string unityName) {} // 0x000000018C0EB044-0x000000018C0EB09C
 	}
 
-	public class InputTextureAttribute : UsdNamespaceAttribute // TypeDefIndex: 58983
+	public class InputTextureAttribute : UsdNamespaceAttribute // TypeDefIndex: 60008
 	{
+		// Fields
+		private string _UnityName_k__BackingField; // 0x18
+	
 		// Properties
-		public string UnityName { get; private set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		public string UnityName { get; private set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
 	
 		// Constructors
-		public InputTextureAttribute() {} // 0x0000000189FD3028-0x0000000189FD3084
-		public InputTextureAttribute(string unityName) {} // 0x0000000189FD3084-0x0000000189FD30DC
+		public InputTextureAttribute() {} // 0x000000018C0EB0F8-0x000000018C0EB154
+		public InputTextureAttribute(string unityName) {} // 0x000000018C0EB154-0x000000018C0EB1AC
 	}
 
-	public class RequireShaderKeywordsAttribute : Attribute // TypeDefIndex: 58984
+	public class RequireShaderKeywordsAttribute : Attribute // TypeDefIndex: 60009
 	{
+		// Fields
+		private string[] _Keywords_k__BackingField; // 0x10
+	
 		// Properties
-		public string[] Keywords { get; private set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
+		public string[] Keywords { get; private set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
 	
 		// Constructors
 		public RequireShaderKeywordsAttribute() {} // Dummy constructor
-		public RequireShaderKeywordsAttribute(string keyword) {} // 0x0000000189FD4684-0x0000000189FD4700
-		public RequireShaderKeywordsAttribute(string[] keywords) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public RequireShaderKeywordsAttribute(string keyword) {} // 0x000000018C0EC754-0x000000018C0EC7D0
+		public RequireShaderKeywordsAttribute(string[] keywords) {} // 0x0000000184096E30-0x0000000184096EF0
 	}
 
 	[Serializable]
-	[UsdSchema("Shader")]
-	public class ShaderSample : SampleBase // TypeDefIndex: 58989
+	public class ShaderSample : SampleBase // TypeDefIndex: 60014
 	{
 		// Fields
-		[UsdNamespace("info")]
 		public TfToken id; // 0x10
 	
+		// Nested types
+		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 60010
+		{
+			// Fields
+			public System.Type inputParamType; // 0x10
+			public Func<System.Reflection.FieldInfo, bool> __9__0; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass3_0() {} // 0x000000018646D8A4-0x000000018646D8B0
+	
+			// Methods
+			internal bool _GetInputParameters_b__0(System.Reflection.FieldInfo info) => default; // 0x000000018C0EC8B0-0x000000018C0EC8D0
+		}
+	
+		private sealed class _GetInputParameters_d__3 : IEnumerable<ParameterInfo>, IEnumerator<ParameterInfo> // TypeDefIndex: 60011
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private ParameterInfo __2__current; // 0x18
+			private int __l__initialThreadId; // 0x40
+			public ShaderSample __4__this; // 0x48
+			private __c__DisplayClass3_0 __8__1; // 0x50
+			private IEnumerator<System.Reflection.FieldInfo> __7__wrap1; // 0x58
+	
+			// Properties
+			ParameterInfo IEnumerator<USD.NET.Unity.ParameterInfo>.Current { get => default; } // 0x000000018C0EF1EC-0x000000018C0EF204 
+			object IEnumerator.Current { get => default; } // 0x000000018C0EDC30-0x000000018C0EDCA8 
+	
+			// Constructors
+			public _GetInputParameters_d__3() {} // Dummy constructor
+			public _GetInputParameters_d__3(int __1__state) {} // 0x000000018C0EC7D0-0x000000018C0EC840
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018C0EC840-0x000000018C0EC8B0
+			private bool MoveNext() => default; // 0x0000000185492010-0x0000000185492020
+			private void __m__Finally1() {} // 0x0000000185492010-0x0000000185492020
+			void IEnumerator.Reset() {} // 0x000000018C0EDCF0-0x000000018C0EDD0C
+			IEnumerator<ParameterInfo> IEnumerable<ParameterInfo>.GetEnumerator() => default; // 0x000000018C0ED378-0x000000018C0EDAF4
+			IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018C0EDCA8-0x000000018C0EDCF0
+		}
+	
+		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 60012
+		{
+			// Fields
+			public System.Type inputParamType; // 0x10
+			public Func<System.Reflection.FieldInfo, bool> __9__0; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass4_0() {} // 0x0000000185FBDF40-0x0000000185FBDF60
+	
+			// Methods
+			internal bool _GetInputTextures_b__0(System.Reflection.FieldInfo info) => default; // 0x000000018C0EDB88-0x000000018C0EDBD4
+		}
+	
+		private sealed class _GetInputTextures_d__4 : IEnumerable<ParameterInfo>, IEnumerator<ParameterInfo> // TypeDefIndex: 60013
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private ParameterInfo __2__current; // 0x18
+			private int __l__initialThreadId; // 0x40
+			public ShaderSample __4__this; // 0x48
+			private __c__DisplayClass4_0 __8__1; // 0x50
+			private System.Type _requireKeywordType_5__2; // 0x58
+			private IEnumerator<System.Reflection.FieldInfo> __7__wrap2; // 0x60
+	
+			// Properties
+			ParameterInfo IEnumerator<USD.NET.Unity.ParameterInfo>.Current { get => default; } // 0x000000018C0EF1EC-0x000000018C0EF204 
+			object IEnumerator.Current { get => default; } // 0x000000018C0EE768-0x000000018C0EE7E0 
+	
+			// Constructors
+			public _GetInputTextures_d__4() {} // Dummy constructor
+			public _GetInputTextures_d__4(int __1__state) {} // 0x000000018C0EDBD4-0x000000018C0EDC30
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018C0EDAF4-0x000000018C0EDB80
+			private bool MoveNext() => default; // 0x000000018C0EDB80-0x000000018C0EDB88
+			private void __m__Finally1() {} // 0x0000000185492010-0x0000000185492020
+			void IEnumerator.Reset() {} // 0x000000018C0EDCF0-0x000000018C0EDD0C
+			IEnumerator<ParameterInfo> IEnumerable<ParameterInfo>.GetEnumerator() => default; // 0x000000018C0EDD0C-0x000000018C0EE62C
+			IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018C0EE7E0-0x000000018C0EE828
+		}
+	
 		// Constructors
-		public ShaderSample() {} // 0x000000018350B670-0x000000018350B680
+		public ShaderSample() {} // 0x000000018C0EE6B8-0x000000018C0EE6C0
 	
 		// Methods
-		private System.Type GetClassType() => default; // 0x000000018426F82C-0x000000018426F838
-		private object GetValue(System.Reflection.FieldInfo info) => default; // 0x0000000189FD47E0-0x0000000189FD4800
-		[IteratorStateMachine(typeof(_GetInputParameters_d__3))]
-		public IEnumerable<ParameterInfo> GetInputParameters() => default; // 0x0000000189FD4700-0x0000000189FD4770
-		[IteratorStateMachine(typeof(_GetInputTextures_d__4))]
-		public IEnumerable<ParameterInfo> GetInputTextures() => default; // 0x0000000189FD4770-0x0000000189FD47E0
+		private System.Type GetClassType() => default; // 0x0000000185FBDF40-0x0000000185FBDF60
+		private object GetValue(System.Reflection.FieldInfo info) => default; // 0x000000018C0EE6C0-0x000000018C0EE70C
+		public IEnumerable<ParameterInfo> GetInputParameters() => default; // 0x000000018C0EE70C-0x000000018C0EE768
+		public IEnumerable<ParameterInfo> GetInputTextures() => default; // 0x000000018C0EE62C-0x000000018C0EE6B8
 	}
 
 	[Serializable]
-	[UsdSchema("Shader")]
-	public class StandardShaderSample : ShaderSample // TypeDefIndex: 58990
+	public class StandardShaderSample : ShaderSample // TypeDefIndex: 60015
 	{
 		// Fields
-		[UsdNamespace("info")]
 		public bool enableGpuInstancing; // 0x18
-		[InputParameter("_Color")]
 		public Connectable<UnityEngine.Color> albedo; // 0x20
-		[InputTexture("_MainTex")]
 		public Connectable<UnityEngine.Color> albedoMap; // 0x28
-		[InputParameter("_Cutoff")]
 		public Connectable<float> cutoff; // 0x30
-		[InputParameter("_Glossiness")]
 		public Connectable<float> smoothness; // 0x38
-		[InputParameter("_GlossMapScale")]
 		public Connectable<float> smoothnessScale; // 0x40
-		[InputParameter("_SmoothnessTextureChannel")]
 		public Connectable<float> smoothnessTextureChannel; // 0x48
-		[InputTexture("_MetallicGlossMap")]
-		[RequireShaderKeywords("_METALLICGLOSSMAP")]
 		public Connectable<float> metallicMap; // 0x50
-		[InputParameter("_Metallic")]
 		public Connectable<float> metallicScale; // 0x58
-		[InputParameter("_SpecularHighlights")]
 		public Connectable<bool> enableSpecularHighlights; // 0x60
-		[InputParameter("_GlossyReflections")]
 		public Connectable<bool> enableGlossyReflections; // 0x68
-		[InputTexture("_BumpMap")]
-		[RequireShaderKeywords("_NORMALMAP")]
 		public Connectable<UnityEngine.Color> normalMap; // 0x70
-		[InputParameter("_BumpScale")]
 		public Connectable<float> normalMapScale; // 0x78
-		[InputTexture("_ParallaxMap")]
-		[RequireShaderKeywords("_PARALLAXMAP")]
 		public Connectable<UnityEngine.Color> parallaxMap; // 0x80
-		[InputParameter("_Parallax")]
 		public Connectable<float> parallaxMapScale; // 0x88
-		[InputTexture("_OcclusionMap")]
 		public Connectable<float> occlusionMap; // 0x90
-		[InputParameter("_OcclusionStrength")]
 		public Connectable<float> occlusionMapScale; // 0x98
-		[InputParameter("_EmissionColor")]
 		public Connectable<UnityEngine.Color> emission; // 0xA0
-		[InputTexture("_EmissionMap")]
-		[RequireShaderKeywords("_EMISSION")]
 		public Connectable<UnityEngine.Color> emissionMap; // 0xA8
-		[InputTexture("_DetailMask")]
 		public Connectable<UnityEngine.Color> detailMask; // 0xB0
-		[InputTexture("_DetailAlbedoMap")]
-		[RequireShaderKeywords("_DETAIL_MULX2")]
 		public Connectable<UnityEngine.Color> detailAlbedoMap; // 0xB8
-		[InputTexture("_DetailNormalMap")]
-		[RequireShaderKeywords("_DETAIL_MULX2")]
 		public Connectable<UnityEngine.Color> detailNormalMap; // 0xC0
-		[InputParameter("_DetailNormalMapScale")]
 		public Connectable<float> detailNormalMapScale; // 0xC8
-		[InputParameter("_UVSec")]
 		public Connectable<float> uvSetForSecondaryTextures; // 0xD0
-		[InputParameter("_Mode")]
 		public Connectable<float> renderingMode; // 0xD8
-		[InputParameter("_SrcBlend")]
 		public Connectable<float> srcBlend; // 0xE0
-		[InputParameter("_DstBlend")]
 		public Connectable<float> dstBlend; // 0xE8
-		[InputParameter("_ZWrite")]
 		public Connectable<float> zwrite; // 0xF0
 	
 		// Constructors
-		public StandardShaderSample() {} // 0x0000000189FD48D0-0x0000000189FD4DF8
+		public StandardShaderSample() {} // 0x000000018C0EC9A0-0x000000018C0ECEC8
 	}
 
 	[Serializable]
-	[UsdSchema("Texture2D")]
-	public class Texture2DSample : SampleBase // TypeDefIndex: 58991
+	public class Texture2DSample : SampleBase // TypeDefIndex: 60016
 	{
 		// Fields
-		[UsdAssetPath]
-		[UsdNamespace("inputs")]
 		public Connectable<string> sourceFile; // 0x10
 		public bool sRgb; // 0x18
 	
 		// Constructors
-		public Texture2DSample() {} // 0x0000000189FD4DF8-0x0000000189FD4E54
+		public Texture2DSample() {} // 0x000000018C0ECEC8-0x000000018C0ECF24
 	}
 
 	[Serializable]
-	[UsdSchema("Shader")]
-	public class PreviewSurfaceSample : ShaderSample // TypeDefIndex: 58993
+	public class PreviewSurfaceSample : ShaderSample // TypeDefIndex: 60018
 	{
 		// Fields
-		[InputParameter("_DiffuseColor")]
 		public Connectable<Vector3> diffuseColor; // 0x18
-		[InputParameter("_EmissiveColor")]
 		public Connectable<Vector3> emissiveColor; // 0x20
-		[InputParameter("_UseSpecularWorkflow")]
 		public Connectable<int> useSpecularWorkflow; // 0x28
-		[InputParameter("_SpecularColor")]
 		public Connectable<Vector3> specularColor; // 0x30
-		[InputParameter("_Metallic")]
 		public Connectable<float> metallic; // 0x38
-		[InputParameter("_Roughness")]
 		public Connectable<float> roughness; // 0x40
-		[InputParameter("_Clearcoat")]
 		public Connectable<float> clearcoat; // 0x48
-		[InputParameter("_ClearcoatRoughness")]
 		public Connectable<float> clearcoatRoughness; // 0x50
-		[InputParameter("_Opacity")]
 		public Connectable<float> opacity; // 0x58
-		[InputParameter("_OpacityThreshold")]
 		public Connectable<float> opacityThreshold; // 0x60
-		[InputParameter("_Ior")]
 		public Connectable<float> ior; // 0x68
-		[InputParameter("_Normal")]
 		public Connectable<Vector3> normal; // 0x70
-		[InputParameter("_Displacement")]
 		public Connectable<float> displacement; // 0x78
-		[InputParameter("_Occlusion")]
 		public Connectable<float> occlusion; // 0x80
-		[UsdNamespace("outputs")]
 		public Outputs outputs; // 0x88
 	
 		// Nested types
-		public class Outputs : SampleBase // TypeDefIndex: 58992
+		public class Outputs : SampleBase // TypeDefIndex: 60017
 		{
 			// Fields
 			public TfToken displacement; // 0x10
 			public TfToken surface; // 0x18
 	
 			// Constructors
-			public Outputs() {} // 0x000000018350B670-0x000000018350B680
+			public Outputs() {} // 0x000000018C0EC3D4-0x000000018C0EC754
 		}
 	
 		// Constructors
-		public PreviewSurfaceSample() {} // 0x0000000189FD4304-0x0000000189FD4684
+		public PreviewSurfaceSample() {} // 0x0000000185492010-0x0000000185492020
 	}
 
 	[Serializable]
-	[UsdSchema("Shader")]
-	public class PrimvarReaderSample<T> : ShaderSample // TypeDefIndex: 58995
+	public class PrimvarReaderSample<T> : ShaderSample // TypeDefIndex: 60020
 		where T : struct
 	{
 		// Fields
-		[InputParameter("_Fallback")]
 		public Connectable<T> fallback;
-		[UsdNamespace("outputs")]
 		public Outputs outputs;
 	
 		// Nested types
-		public class Outputs : SampleBase // TypeDefIndex: 58994
+		public class Outputs : SampleBase // TypeDefIndex: 60019
 		{
 			// Fields
 			public T? result;
@@ -587,12 +579,10 @@ namespace USD.NET.Unity
 	}
 
 	[Serializable]
-	[UsdSchema("Shader")]
-	public class PrimvarReaderImportSample<T> : PrimvarReaderSample<T> // TypeDefIndex: 58996
+	public class PrimvarReaderImportSample<T> : PrimvarReaderSample<T> // TypeDefIndex: 60021
 		where T : struct
 	{
 		// Fields
-		[InputParameter("_Varname")]
 		public Connectable<string> varname;
 	
 		// Constructors
@@ -600,12 +590,10 @@ namespace USD.NET.Unity
 	}
 
 	[Serializable]
-	[UsdSchema("Shader")]
-	public class PrimvarReaderExportSample<T> : PrimvarReaderSample<T> // TypeDefIndex: 58997
+	public class PrimvarReaderExportSample<T> : PrimvarReaderSample<T> // TypeDefIndex: 60022
 		where T : struct
 	{
 		// Fields
-		[InputParameter("_Varname")]
 		public Connectable<TfToken> varname;
 	
 		// Constructors
@@ -613,31 +601,21 @@ namespace USD.NET.Unity
 	}
 
 	[Serializable]
-	[UsdSchema("Shader")]
-	public class TextureReaderSample : ShaderSample // TypeDefIndex: 59001
+	public class TextureReaderSample : ShaderSample // TypeDefIndex: 60026
 	{
 		// Fields
-		[InputParameter("_File")]
 		public Connectable<SdfAssetPath> file; // 0x18
-		[InputParameter("_St")]
 		public Connectable<Vector2> st; // 0x20
-		[InputParameter("_WrapS")]
 		public Connectable<WrapMode> wrapS; // 0x28
-		[InputParameter("_WrapT")]
 		public Connectable<WrapMode> wrapT; // 0x30
-		[InputParameter("_Fallback")]
 		public Connectable<Vector4> fallback; // 0x38
-		[InputParameter("_Scale")]
 		public Connectable<Vector4> scale; // 0x40
-		[InputParameter("_Bias")]
 		public Connectable<Vector4> bias; // 0x48
-		[InputParameter("_IsSRGB")]
 		public Connectable<SRGBMode> isSRGB; // 0x50
-		[UsdNamespace("outputs")]
 		public Outputs outputs; // 0x58
 	
 		// Nested types
-		public enum WrapMode // TypeDefIndex: 58998
+		public enum WrapMode // TypeDefIndex: 60023
 		{
 			Black = 0,
 			Clamp = 1,
@@ -645,14 +623,14 @@ namespace USD.NET.Unity
 			Mirror = 3
 		}
 	
-		public enum SRGBMode // TypeDefIndex: 58999
+		public enum SRGBMode // TypeDefIndex: 60024
 		{
 			Yes = 0,
 			No = 1,
 			Auto = 2
 		}
 	
-		public class Outputs : SampleBase // TypeDefIndex: 59000
+		public class Outputs : SampleBase // TypeDefIndex: 60025
 		{
 			// Fields
 			public float? r; // 0x10
@@ -663,194 +641,203 @@ namespace USD.NET.Unity
 			public Vector4? rgba; // 0x40
 	
 			// Constructors
-			public Outputs() {} // 0x000000018350B670-0x000000018350B680
+			public Outputs() {} // 0x000000018C0ECF4C-0x000000018C0ED22C
 		}
 	
 		// Constructors
-		public TextureReaderSample() {} // 0x0000000189FD4E7C-0x0000000189FD515C
-		public TextureReaderSample(string filePath) {} // 0x0000000189FD5220-0x0000000189FD52A8
-		public TextureReaderSample(string filePath, string stConnectionPath) {} // 0x0000000189FD515C-0x0000000189FD5220
+		public TextureReaderSample() {} // 0x000000018C0ED2F0-0x000000018C0ED378
+		public TextureReaderSample(string filePath) {} // 0x000000018C0ED22C-0x000000018C0ED2F0
+		public TextureReaderSample(string filePath, string stConnectionPath) {} // 0x000000018C0ECF24-0x000000018C0ECF4C
 	
 		// Methods
-		public static WrapMode GetWrapMode(TextureWrapMode wrap) => default; // 0x0000000189FD4E54-0x0000000189FD4E7C
+		public static WrapMode GetWrapMode(TextureWrapMode wrap) => default; // 0x0000000185492010-0x0000000185492020
 	}
 
-	public static class UnityTypeBindings // TypeDefIndex: 59003
+	public static class UnityTypeBindings // TypeDefIndex: 60028
 	{
 		// Fields
 		private static bool isInitialized; // 0x00
 	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 60027
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static ToVtConverter __9__2_0; // 0x08
+			public static ToCsConverter __9__2_1; // 0x10
+			public static ToVtConverter __9__2_2; // 0x18
+			public static ToCsConverter __9__2_3; // 0x20
+			public static ToVtConverter __9__2_4; // 0x28
+			public static ToCsConverter __9__2_5; // 0x30
+			public static ToVtConverter __9__2_6; // 0x38
+			public static ToCsConverter __9__2_7; // 0x40
+			public static ToVtConverter __9__2_8; // 0x48
+			public static ToCsConverter __9__2_9; // 0x50
+			public static ToVtConverter __9__2_10; // 0x58
+			public static ToCsConverter __9__2_11; // 0x60
+			public static ToVtConverter __9__2_12; // 0x68
+			public static ToCsConverter __9__2_13; // 0x70
+			public static ToVtConverter __9__2_14; // 0x78
+			public static ToCsConverter __9__2_15; // 0x80
+			public static ToVtConverter __9__2_16; // 0x88
+			public static ToCsConverter __9__2_17; // 0x90
+			public static ToVtConverter __9__2_18; // 0x98
+			public static ToCsConverter __9__2_19; // 0xA0
+	
+			// Constructors
+			static __c() {} // 0x000000018C0F0B80-0x000000018C0F0B88
+			public __c() {} // 0x000000018C0EF268-0x000000018C0F0B80
+	
+			// Methods
+			internal VtValue _RegisterTypes_b__2_0(object obj) => default; // 0x000000018C0EF204-0x000000018C0EF268
+			internal object _RegisterTypes_b__2_1(VtValue value) => default; // 0x0000000185492010-0x0000000185492020
+			internal VtValue _RegisterTypes_b__2_2(object obj) => default; // 0x000000018C0EE828-0x000000018C0EE898
+			internal object _RegisterTypes_b__2_3(VtValue value) => default; // 0x000000018C0EED2C-0x000000018C0EEDA8
+			internal VtValue _RegisterTypes_b__2_4(object obj) => default; // 0x000000018C0EEDA8-0x000000018C0EEE10
+			internal object _RegisterTypes_b__2_5(VtValue value) => default; // 0x000000018C0EEE10-0x000000018C0EEE80
+			internal VtValue _RegisterTypes_b__2_6(object obj) => default; // 0x000000018C0EEE80-0x000000018C0EEEF8
+			internal object _RegisterTypes_b__2_7(VtValue value) => default; // 0x000000018C0EEEF8-0x000000018C0EEF7C
+			internal VtValue _RegisterTypes_b__2_8(object obj) => default; // 0x000000018C0EEF7C-0x000000018C0EEFEC
+			internal object _RegisterTypes_b__2_9(VtValue value) => default; // 0x000000018C0EEFEC-0x000000018C0EF068
+			internal VtValue _RegisterTypes_b__2_10(object obj) => default; // 0x000000018C0EF068-0x000000018C0EF0D8
+			internal object _RegisterTypes_b__2_11(VtValue vtVal) => default; // 0x000000018C0EF0D8-0x000000018C0EF154
+			internal VtValue _RegisterTypes_b__2_12(object obj) => default; // 0x000000018C0EE898-0x000000018C0EE900
+			internal object _RegisterTypes_b__2_13(VtValue vtVal) => default; // 0x000000018C0EE900-0x000000018C0EE950
+			internal VtValue _RegisterTypes_b__2_14(object obj) => default; // 0x000000018C0EE950-0x000000018C0EE9C0
+			internal object _RegisterTypes_b__2_15(VtValue vtVal) => default; // 0x000000018C0EE9C0-0x000000018C0EEA3C
+			internal VtValue _RegisterTypes_b__2_16(object obj) => default; // 0x000000018C0EEA3C-0x000000018C0EEAA0
+			internal object _RegisterTypes_b__2_17(VtValue vtVal) => default; // 0x000000018C0EEAA0-0x000000018C0EEB10
+			internal VtValue _RegisterTypes_b__2_18(object obj) => default; // 0x000000018C0EEB10-0x000000018C0EEB8C
+			internal object _RegisterTypes_b__2_19(VtValue vtVal) => default; // 0x000000018C0EEB8C-0x000000018C0EEC04
+		}
+	
 		// Constructors
-		static UnityTypeBindings() {} // 0x0000000189FD8AB0-0x0000000189FD8AB8
+		static UnityTypeBindings() {} // 0x000000018C0EEC04-0x000000018C0EEC90
 	
 		// Methods
-		public static void RegisterTypes() {} // 0x0000000189FD7198-0x0000000189FD8AB0
+		public static void RegisterTypes() {} // 0x000000018C0EEC90-0x000000018C0EED2C
 	}
 
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field)]
-	internal class PreserveAttribute : Attribute // TypeDefIndex: 59004
+	internal class PreserveAttribute : Attribute // TypeDefIndex: 60029
 	{
 		// Constructors
-		public PreserveAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public PreserveAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class UnityTypeConverter : IntrinsicTypeConverter // TypeDefIndex: 59006
+	public class UnityTypeConverter : IntrinsicTypeConverter // TypeDefIndex: 60031
 	{
 		// Fields
 		public static Matrix4x4 basisChange; // 0x00
 		public static Matrix4x4 inverseBasisChange; // 0x40
 	
+		// Nested types
+		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 60030
+		{
+			// Fields
+			public Transform transform; // 0x10
+			public string name; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass11_0() {} // 0x000000018C0F1144-0x000000018C0F1290
+	
+			// Methods
+			internal bool _HasAnySiblingsWithName_b__0(GameObject sibling) => default; // 0x000000018C0F10BC-0x000000018C0F1144
+		}
+	
 		// Constructors
-		public UnityTypeConverter() {} // 0x000000018350B670-0x000000018350B680
-		static UnityTypeConverter() {} // 0x0000000189FDD390-0x0000000189FDD484
+		public UnityTypeConverter() {} // 0x0000000185492010-0x0000000185492020
+		static UnityTypeConverter() {} // 0x000000018C0EF154-0x000000018C0EF1EC
 	
 		// Methods
-		public static Matrix4x4 ChangeBasis(Matrix4x4 input) => default; // 0x0000000189FD9074-0x0000000189FD91C0
-		public static Vector3 ChangeBasis(Vector3 point) => default; // 0x0000000189FD8FEC-0x0000000189FD9074
-		public static void SetTransform(Matrix4x4 localXf, Transform transform) {} // 0x0000000189FDBFEC-0x0000000189FDC0F8
+		public static Matrix4x4 ChangeBasis(Matrix4x4 input) => default; // 0x000000018C0F40BC-0x000000018C0F41C8
+		public static Vector3 ChangeBasis(Vector3 point) => default; // 0x000000018C0F1694-0x000000018C0F20B0
+		public static void SetTransform(Matrix4x4 localXf, Transform transform) {} // 0x000000018C0F53C4-0x000000018C0F5460
 		public static bool Decompose(Matrix4x4 matrix, out Vector3 translation, out Quaternion rotation, out Vector3 scale) {
 			translation = default;
 			rotation = default;
 			scale = default;
 			return default;
-		} // 0x0000000189FD95C4-0x0000000189FD9FE0
-		private static Vector3 WeightedAvg(Vector3 a, Vector3 b, float aWeight, float bWeight) => default; // 0x0000000189FDD2F4-0x0000000189FDD390
-		public static void ExtractTrs(Matrix4x4 transform, ref Vector3 localPosition, ref Quaternion localRotation, ref Vector3 localScale) {} // 0x0000000189FDA52C-0x0000000189FDA648
-		private static Quaternion ExtractRotation(Matrix4x4 mat4) => default; // 0x0000000189FDA3B0-0x0000000189FDA440
-		private static Vector3 ExtractPosition(Matrix4x4 mat4) => default; // 0x0000000183D8A030-0x0000000183D8A050
-		private static Vector3 ExtractScale(Matrix4x4 mat4) => default; // 0x0000000189FDA440-0x0000000189FDA52C
-		private static bool HasAnySiblingsWithName(Transform transform, string name) => default; // 0x0000000189FDB3F0-0x0000000189FDB778
-		public static string GetUniqueName(Transform transform) => default; // 0x0000000189FDB334-0x0000000189FDB3F0
-		public static string GetPath(Transform unityObj) => default; // 0x0000000189FDB2E8-0x0000000189FDB334
-		public static string GetPath(Transform unityObj, Transform unityObjRoot) => default; // 0x0000000189FDB120-0x0000000189FDB2E8
-		public static Matrix4x4 GetLocalToParentXf(Transform unityXf) => default; // 0x0000000189FDB03C-0x0000000189FDB120
-		[Preserve]
-		public static GfMatrix4d ToGfMatrix(Transform unityXf) => default; // 0x0000000189FDC194-0x0000000189FDC210
-		[Preserve]
-		public static GfMatrix4d ToGfMatrix(Matrix4x4 unityMat4) => default; // 0x0000000189FDC210-0x0000000189FDC504
-		[Preserve]
-		public static Matrix4x4 FromMatrix(GfMatrix4d gfMat) => default; // 0x0000000189FDA648-0x0000000189FDA964
-		[Preserve]
-		public static VtMatrix4dArray ToVtArray(Matrix4x4[] input) => default; // 0x0000000189FDC880-0x0000000189FDC97C
-		[Preserve]
-		public static Matrix4x4[] FromVtArray(VtMatrix4dArray input) => default; // 0x0000000189FDACB0-0x0000000189FDADDC
-		[Preserve]
-		public static VtMatrix4dArray ListToVtArray(List<Matrix4x4> input) => default; // 0x0000000189FDBDD4-0x0000000189FDBE40
-		[Preserve]
-		public static List<Matrix4x4> ListFromVtArray(VtMatrix4dArray input) => default; // 0x0000000189FDB778-0x0000000189FDB8BC
-		[Preserve]
-		public static GfVec4f Color32ToVec4f(Color32 c) => default; // 0x0000000189FD9344-0x0000000189FD93A8
-		[Preserve]
-		public static Color32 Vec4fToColor32(GfVec4f v) => default; // 0x0000000189FDD0AC-0x0000000189FDD108
-		[Preserve]
-		public static VtVec4fArray ToVtArray(List<Color32> input) => default; // 0x0000000189FDCC5C-0x0000000189FDCCC8
-		[Preserve]
+		} // 0x000000018C0F25FC-0x000000018C0F2718
+		private static Vector3 WeightedAvg(Vector3 a, Vector3 b, float aWeight, float bWeight) => default; // 0x000000018C0F2480-0x000000018C0F2510
+		public static void ExtractTrs(Matrix4x4 transform, ref Vector3 localPosition, ref Quaternion localRotation, ref Vector3 localScale) {} // 0x0000000185FEAE70-0x0000000185FEAE90
+		private static Quaternion ExtractRotation(Matrix4x4 mat4) => default; // 0x000000018C0F2510-0x000000018C0F25FC
+		private static Vector3 ExtractPosition(Matrix4x4 mat4) => default; // 0x000000018C0F34C0-0x000000018C0F3848
+		private static Vector3 ExtractScale(Matrix4x4 mat4) => default; // 0x000000018C0F3404-0x000000018C0F34C0
+		private static bool HasAnySiblingsWithName(Transform transform, string name) => default; // 0x000000018C0F33B8-0x000000018C0F3404
+		public static string GetUniqueName(Transform transform) => default; // 0x000000018C0F31F0-0x000000018C0F33B8
+		public static string GetPath(Transform unityObj) => default; // 0x000000018C0F310C-0x000000018C0F31F0
+		public static string GetPath(Transform unityObj, Transform unityObjRoot) => default; // 0x000000018C0F4264-0x000000018C0F42E0
+		public static Matrix4x4 GetLocalToParentXf(Transform unityXf) => default; // 0x000000018C0F42E0-0x000000018C0F45D4
+		public static GfMatrix4d ToGfMatrix(Transform unityXf) => default; // 0x000000018C0F2718-0x000000018C0F2A34
+		public static GfMatrix4d ToGfMatrix(Matrix4x4 unityMat4) => default; // 0x000000018C0F4950-0x000000018C0F4A4C
+		public static Matrix4x4 FromMatrix(GfMatrix4d gfMat) => default; // 0x000000018C0F2D80-0x000000018C0F2EAC
+		public static VtMatrix4dArray ToVtArray(Matrix4x4[] input) => default; // 0x000000018C0F3EA4-0x000000018C0F3F10
+		public static Matrix4x4[] FromVtArray(VtMatrix4dArray input) => default; // 0x000000018C0F3848-0x000000018C0F398C
+		public static VtMatrix4dArray ListToVtArray(List<Matrix4x4> input) => default; // 0x000000018C0F1414-0x000000018C0F1478
+		public static List<Matrix4x4> ListFromVtArray(VtMatrix4dArray input) => default; // 0x000000018C0F517C-0x000000018C0F51D8
+		public static GfVec4f Color32ToVec4f(Color32 c) => default; // 0x000000018C0F4D2C-0x000000018C0F4D98
+		public static Color32 Vec4fToColor32(GfVec4f v) => default; // 0x000000018C0F4C10-0x000000018C0F4C9C
+		public static VtVec4fArray ToVtArray(List<Color32> input) => default; // 0x000000018C0F4F84-0x000000018C0F5070
 		public static void ToVtArray(List<Color32> input, out VtVec3fArray rgb, out VtFloatArray alpha) {
 			rgb = default;
 			alpha = default;
-		} // 0x0000000189FDCB40-0x0000000189FDCBCC
-		[Preserve]
-		public static VtVec4fArray ToVtArray(Color32[] input) => default; // 0x0000000189FDCEB4-0x0000000189FDCFA0
-		[Preserve]
-		public static Color32[] Color32FromVtArray(VtVec4fArray input) => default; // 0x0000000189FD91C0-0x0000000189FD9344
-		[Preserve]
-		public static GfVec4f ColorToVec4f(UnityEngine.Color c) => default; // 0x0000000189FD954C-0x0000000189FD95C4
-		[Preserve]
-		public static UnityEngine.Color Vec4fToColor(GfVec4f v) => default; // 0x0000000189FDD108-0x0000000189FDD1A8
-		[Preserve]
-		public static VtVec4fArray ToVtArray(List<UnityEngine.Color> input) => default; // 0x0000000189FDC504-0x0000000189FDC570
-		[Preserve]
+		} // 0x000000018C0F1290-0x000000018C0F1414
+		public static VtVec4fArray ToVtArray(Color32[] input) => default; // 0x000000018C0F161C-0x000000018C0F1694
+		public static Color32[] Color32FromVtArray(VtVec4fArray input) => default; // 0x000000018C0F51D8-0x000000018C0F5278
+		public static GfVec4f ColorToVec4f(UnityEngine.Color c) => default; // 0x000000018C0F45D4-0x000000018C0F4640
+		public static UnityEngine.Color Vec4fToColor(GfVec4f v) => default; // 0x000000018C0F47A4-0x000000018C0F4830
+		public static VtVec4fArray ToVtArray(List<UnityEngine.Color> input) => default; // 0x000000018C0F4714-0x000000018C0F47A4
 		public static void ToVtArray(List<UnityEngine.Color> input, out VtVec3fArray rgb, out VtFloatArray alpha) {
 			rgb = default;
 			alpha = default;
-		} // 0x0000000189FDC6D4-0x0000000189FDC760
-		[Preserve]
-		public static VtVec4fArray ToVtArray(UnityEngine.Color[] input) => default; // 0x0000000189FDC644-0x0000000189FDC6D4
-		[Preserve]
-		public static UnityEngine.Color[] ColorFromVtArray(VtVec4fArray input) => default; // 0x0000000189FD93A8-0x0000000189FD9458
-		[Preserve]
-		public static UnityEngine.Color[] ColorFromVtArray(VtVec4fArray input, ref UnityEngine.Color[] output) => default; // 0x0000000189FD9458-0x0000000189FD954C
-		[Preserve]
+		} // 0x000000018C0F1478-0x000000018C0F1528
+		public static VtVec4fArray ToVtArray(UnityEngine.Color[] input) => default; // 0x000000018C0F1528-0x000000018C0F161C
+		public static UnityEngine.Color[] ColorFromVtArray(VtVec4fArray input) => default; // 0x000000018C0F4D98-0x000000018C0F4F84
+		public static UnityEngine.Color[] ColorFromVtArray(VtVec4fArray input, ref UnityEngine.Color[] output) => default; // 0x000000018C0F2238-0x000000018C0F237C
 		public static void ToVtArray(Color32[] input, out VtVec3fArray rgb, out VtFloatArray alpha) {
 			rgb = default;
 			alpha = default;
-		} // 0x0000000189FDCCC8-0x0000000189FDCEB4
-		[Preserve]
-		public static Vector3[] ExtractRgb(Color32[] colors) => default; // 0x0000000189FDA168-0x0000000189FDA2AC
-		[Preserve]
-		public static float[] ExtractAlpha(Color32[] colors) => default; // 0x0000000189FD9FE0-0x0000000189FDA0AC
-		[Preserve]
+		} // 0x000000018C0F20B0-0x000000018C0F217C
+		public static Vector3[] ExtractRgb(Color32[] colors) => default; // 0x000000018C0F4A4C-0x000000018C0F4C10
+		public static float[] ExtractAlpha(Color32[] colors) => default; // 0x000000018C0F2EAC-0x000000018C0F3054
 		public static void ToVtArray(UnityEngine.Color[] input, out VtVec3fArray rgb, out VtFloatArray alpha) {
 			rgb = default;
 			alpha = default;
-		} // 0x0000000189FDC97C-0x0000000189FDCB40
-		[Preserve]
-		public static UnityEngine.Color[] FromVtArray(VtVec3fArray rgbIn, VtFloatArray alphaIn) => default; // 0x0000000189FDADDC-0x0000000189FDAF84
-		[Preserve]
-		public static Vector3[] ExtractRgb(UnityEngine.Color[] colors) => default; // 0x0000000189FDA2AC-0x0000000189FDA3B0
-		[Preserve]
-		public static float[] ExtractAlpha(UnityEngine.Color[] colors) => default; // 0x0000000189FDA0AC-0x0000000189FDA168
-		[Preserve]
-		private static void SwapQuaternionReal(ref Quaternion[] input) {} // 0x0000000189FDC0F8-0x0000000189FDC194
-		[Preserve]
-		public static GfQuatf QuaternionToQuatf(Quaternion quaternion) => default; // 0x0000000189FDBE40-0x0000000189FDBEB8
-		[Preserve]
-		public static Quaternion QuatfToQuaternion(GfQuatf quat) => default; // 0x0000000189FDBEB8-0x0000000189FDBF74
-		[Preserve]
-		public static VtQuatfArray ToVtArray(Quaternion[] input) => default; // 0x0000000189FDC570-0x0000000189FDC644
-		[Preserve]
-		public static Quaternion[] FromVtArray(VtQuatfArray input) => default; // 0x0000000189FDA964-0x0000000189FDAA48
-		[Preserve]
-		public static VtQuatfArray ListToVtArray(List<Quaternion> input) => default; // 0x0000000189FDBD68-0x0000000189FDBDD4
-		[Preserve]
-		public static List<Quaternion> ListFromVtArray(VtQuatfArray input) => default; // 0x0000000189FDBB2C-0x0000000189FDBC24
-		[Preserve]
-		public static VtVec4fArray ToVtArray(Vector4[] input) => default; // 0x0000000189FDC760-0x0000000189FDC7F0
-		[Preserve]
-		public static Vector4[] FromVtArray(VtVec4fArray input) => default; // 0x0000000189FDAB38-0x0000000189FDABF4
-		[Preserve]
-		public static VtVec4fArray ListToVtArray(List<Vector4> input) => default; // 0x0000000189FDBC90-0x0000000189FDBCFC
-		[Preserve]
-		public static List<Vector4> ListFromVtArray(VtVec4fArray input) => default; // 0x0000000189FDB8BC-0x0000000189FDB98C
-		[Preserve]
-		public static VtVec3fArray BoundsToVtArray(Bounds input) => default; // 0x0000000189FD8E2C-0x0000000189FD8FEC
-		[Preserve]
-		public static Bounds BoundsFromVtArray(VtValue vtBounds) => default; // 0x0000000189FD8BB8-0x0000000189FD8E2C
-		[Preserve]
-		public static Bounds BoundsFromVtArray(VtValue vtBounds, Vector3[] bbox) => default; // 0x0000000189FD8AB8-0x0000000189FD8BB8
-		[Preserve]
-		public static VtVec3fArray ToVtArray(Vector3[] input) => default; // 0x0000000189FDC7F0-0x0000000189FDC880
-		[Preserve]
-		public static Vector3[] FromVtArray(VtVec3fArray input) => default; // 0x0000000189FDAF84-0x0000000189FDB03C
-		[Preserve]
-		public static void FromVtArray(VtVec3fArray input, ref Vector3[] output) {} // 0x0000000189FDAA48-0x0000000189FDAB38
-		[Preserve]
-		public static VtVec3fArray ListToVtArray(List<Vector3> input) => default; // 0x0000000189FDBC24-0x0000000189FDBC90
-		[Preserve]
-		public static List<Vector3> ListFromVtArray(VtVec3fArray input) => default; // 0x0000000189FDB98C-0x0000000189FDBA5C
-		[Preserve]
-		public static VtVec2fArray ToVtArray(Vector2[] input) => default; // 0x0000000189FDCBCC-0x0000000189FDCC5C
-		[Preserve]
-		public static Vector2[] FromVtArray(VtVec2fArray input) => default; // 0x0000000189FDABF4-0x0000000189FDACB0
-		[Preserve]
-		public static VtVec2fArray ListToVtArray(List<Vector2> input) => default; // 0x0000000189FDBCFC-0x0000000189FDBD68
-		[Preserve]
-		public static List<Vector2> ListFromVtArray(VtVec2fArray input) => default; // 0x0000000189FDBA5C-0x0000000189FDBB2C
-		[Preserve]
-		public static GfVec2f Vector2ToVec2f(Vector2 vec2) => default; // 0x0000000189FDD1A8-0x0000000189FDD20C
-		[Preserve]
-		public static Vector2 Vec2fToVector2(GfVec2f value) => default; // 0x0000000189FDCFA0-0x0000000189FDD030
-		[Preserve]
-		public static GfVec3f Vector3ToVec3f(Vector3 vec3) => default; // 0x0000000189FDD20C-0x0000000189FDD27C
-		[Preserve]
-		public static Vector3 Vec3fToVector3(GfVec3f v3) => default; // 0x0000000189FDD030-0x0000000189FDD0AC
-		[Preserve]
-		public static GfVec4f Vector4ToVec4f(Vector4 vector4) => default; // 0x0000000189FDD27C-0x0000000189FDD2F4
-		[Preserve]
-		public static Vector4 Vec4fToVector4(GfVec4f v4) => default; // 0x0000000189FDD108-0x0000000189FDD1A8
-		[Preserve]
-		public static GfVec4f RectToVtVec4(Rect rect) => default; // 0x0000000189FDBF74-0x0000000189FDBFEC
-		[Preserve]
-		public static Rect Vec4fToRect(GfVec4f v4) => default; // 0x0000000189FDD108-0x0000000189FDD1A8
+		} // 0x000000018C0F237C-0x000000018C0F2480
+		public static UnityEngine.Color[] FromVtArray(VtVec3fArray rgbIn, VtFloatArray alphaIn) => default; // 0x000000018C0F217C-0x000000018C0F2238
+		public static Vector3[] ExtractRgb(UnityEngine.Color[] colors) => default; // 0x000000018C0F41C8-0x000000018C0F4264
+		public static float[] ExtractAlpha(UnityEngine.Color[] colors) => default; // 0x000000018C0F3F10-0x000000018C0F3F88
+		private static void SwapQuaternionReal(ref Quaternion[] input) {} // 0x000000018C0F3F88-0x000000018C0F4044
+		public static GfQuatf QuaternionToQuatf(Quaternion quaternion) => default; // 0x000000018C0F4640-0x000000018C0F4714
+		public static Quaternion QuatfToQuaternion(GfQuatf quat) => default; // 0x000000018C0F2A34-0x000000018C0F2B18
+		public static VtQuatfArray ToVtArray(Quaternion[] input) => default; // 0x000000018C0F3E38-0x000000018C0F3EA4
+		public static Quaternion[] FromVtArray(VtQuatfArray input) => default; // 0x000000018C0F3BFC-0x000000018C0F3CF4
+		public static VtQuatfArray ListToVtArray(List<Quaternion> input) => default; // 0x000000018C0F4830-0x000000018C0F48C0
+		public static List<Quaternion> ListFromVtArray(VtQuatfArray input) => default; // 0x000000018C0F2C08-0x000000018C0F2CC4
+		public static VtVec4fArray ToVtArray(Vector4[] input) => default; // 0x000000018C0F3D60-0x000000018C0F3DCC
+		public static Vector4[] FromVtArray(VtVec4fArray input) => default; // 0x000000018C0F398C-0x000000018C0F3A5C
+		public static VtVec4fArray ListToVtArray(List<Vector4> input) => default; // 0x000000018C0F0EFC-0x000000018C0F10BC
+		public static List<Vector4> ListFromVtArray(VtVec4fArray input) => default; // 0x000000018C0F0C88-0x000000018C0F0EFC
+		public static VtVec3fArray BoundsToVtArray(Bounds input) => default; // 0x000000018C0F0B88-0x000000018C0F0C88
+		public static Bounds BoundsFromVtArray(VtValue vtBounds) => default; // 0x000000018C0F48C0-0x000000018C0F4950
+		public static Bounds BoundsFromVtArray(VtValue vtBounds, Vector3[] bbox) => default; // 0x000000018C0F3054-0x000000018C0F310C
+		public static VtVec3fArray ToVtArray(Vector3[] input) => default; // 0x000000018C0F2B18-0x000000018C0F2C08
+		public static Vector3[] FromVtArray(VtVec3fArray input) => default; // 0x000000018C0F3CF4-0x000000018C0F3D60
+		public static void FromVtArray(VtVec3fArray input, ref Vector3[] output) {} // 0x000000018C0F3A5C-0x000000018C0F3B2C
+		public static VtVec3fArray ListToVtArray(List<Vector3> input) => default; // 0x000000018C0F4C9C-0x000000018C0F4D2C
+		public static List<Vector3> ListFromVtArray(VtVec3fArray input) => default; // 0x000000018C0F2CC4-0x000000018C0F2D80
+		public static VtVec2fArray ToVtArray(Vector2[] input) => default; // 0x000000018C0F3DCC-0x000000018C0F3E38
+		public static Vector2[] FromVtArray(VtVec2fArray input) => default; // 0x000000018C0F3B2C-0x000000018C0F3BFC
+		public static VtVec2fArray ListToVtArray(List<Vector2> input) => default; // 0x000000018C0F5278-0x000000018C0F52DC
+		public static List<Vector2> ListFromVtArray(VtVec2fArray input) => default; // 0x000000018C0F5070-0x000000018C0F5100
+		public static GfVec2f Vector2ToVec2f(Vector2 vec2) => default; // 0x000000018C0F52DC-0x000000018C0F534C
+		public static Vector2 Vec2fToVector2(GfVec2f value) => default; // 0x000000018C0F5100-0x000000018C0F517C
+		public static GfVec3f Vector3ToVec3f(Vector3 vec3) => default; // 0x000000018C0F534C-0x000000018C0F53C4
+		public static Vector3 Vec3fToVector3(GfVec3f v3) => default; // 0x000000018C0F51D8-0x000000018C0F5278
+		public static GfVec4f Vector4ToVec4f(Vector4 vector4) => default; // 0x000000018C0F4044-0x000000018C0F40BC
+		public static Vector4 Vec4fToVector4(GfVec4f v4) => default; // 0x000000018C0F51D8-0x000000018C0F5278
+		public static GfVec4f RectToVtVec4(Rect rect) => default; // 0x0000000185492010-0x0000000185492020
+		public static Rect Vec4fToRect(GfVec4f v4) => default; // 0x000000018C0F5460-0x000000018C0F5554
 	}
 }

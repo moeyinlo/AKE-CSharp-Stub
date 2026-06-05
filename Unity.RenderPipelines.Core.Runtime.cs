@@ -6,9 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Text;
 using Unity.Collections;
 using UnityEngine;
@@ -21,96 +19,133 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.RendererUtils;
 using UnityEngine.Rendering.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.Scripting.APIUpdating;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-// Image 30: Unity.RenderPipelines.Core.Runtime.dll - Assembly: Unity.RenderPipelines.Core.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 53285-53695
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: InternalsVisibleTo("Unity.RenderPipelines.Core.Editor.Tests")]
-[assembly: InternalsVisibleTo("Unity.RenderPipelines.Core.Editor")]
-[assembly: InternalsVisibleTo("Unity.RenderPipelines.HighDefinition.Runtime")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 30: Unity.RenderPipelines.Core.Runtime.dll - Assembly: Unity.RenderPipelines.Core.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 54278-54688
 
-[ExecuteAlways]
-public class SceneRenderPipeline : MonoBehaviour // TypeDefIndex: 53288
+public class SceneRenderPipeline : MonoBehaviour // TypeDefIndex: 54281
 {
 	// Fields
 	public RenderPipelineAsset renderPipelineAsset; // 0x18
 
 	// Constructors
-	public SceneRenderPipeline() {} // 0x000000018426FE60-0x000000018426FE68
+	public SceneRenderPipeline() {} // 0x000000018646DB20-0x000000018646DB28
 
 	// Methods
-	private void OnEnable() {} // 0x0000000189C98974-0x0000000189C98980
-	private void OnValidate() {} // 0x0000000189C98974-0x0000000189C98980
+	private void OnEnable() {} // 0x000000018BDB2190-0x000000018BDB219C
+	private void OnValidate() {} // 0x000000018BDB2190-0x000000018BDB219C
+}
+
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 54688
+{
+	// Fields
+	internal static readonly __StaticArrayInitTypeSize_256 _45AC882BD91FEBD5A58E67471A0EF32BFC485447A8A18D61DBA335FDA5A2C097; // 0x00 // Static value (base64): AAAAAAAAAAAAAAAAAAAAAAAAgD0AAAA/AAAAAAAAAAAAAAA+AACAPgAAAAAAAAAAAABAPgAAQD8AAAAAAAAAAAAAgD4AAAA+AAAAAAAAAAAAAKA+AAAgPwAAAAAAAAAAAADAPgAAwD4AAAAAAAAAAAAA4D4AAGA/AAAAAAAAAAAAAAA/AACAPQAAAAAAAAAAAAAQPwAAED8AAAAAAAAAAAAAID8AAKA+AAAAAAAAAAAAADA/AABQPwAAAAAAAAAAAABAPwAAQD4AAAAAAAAAAAAAUD8AADA/AAAAAAAAAAAAAGA/AADgPgAAAAAAAAAAAABwPwAAcD8AAAAAAAAAAA== - Metadata: 0x0207A09C
+	internal static readonly __StaticArrayInitTypeSize_512 _4A1D5C231BB4DDB64A57CFF5FC45592F845DB22D8DE0DCCA7BB59D822908C39A; // 0x100 // Static value (base64): AAAAAAAAAAAAAAAAAAAAAAAAAD0AAAA/AAAAAAAAAAAAAIA9AACAPgAAAAAAAAAAAADAPQAAQD8AAAAAAAAAAAAAAD4AAAA+AAAAAAAAAAAAACA+AAAgPwAAAAAAAAAAAABAPgAAwD4AAAAAAAAAAAAAYD4AAGA/AAAAAAAAAAAAAIA+AACAPQAAAAAAAAAAAACQPgAAED8AAAAAAAAAAAAAoD4AAKA+AAAAAAAAAAAAALA+AABQPwAAAAAAAAAAAADAPgAAQD4AAAAAAAAAAAAA0D4AADA/AAAAAAAAAAAAAOA+AADgPgAAAAAAAAAAAADwPgAAcD8AAAAAAAAAAAAAAD8AAAA9AAAAAAAAAAAAAAg/AAAIPwAAAAAAAAAAAAAQPwAAkD4AAAAAAAAAAAAAGD8AAEg/AAAAAAAAAAAAACA/AAAgPgAAAAAAAAAAAAAoPwAAKD8AAAAAAAAAAAAAMD8AANA+AAAAAAAAAAAAADg/AABoPwAAAAAAAAAAAABAPwAAwD0AAAAAAAAAAAAASD8AABg/AAAAAAAAAAAAAFA/AACwPgAAAAAAAAAAAABYPwAAWD8AAAAAAAAAAAAAYD8AAGA+AAAAAAAAAAAAAGg/AAA4PwAAAAAAAAAAAABwPwAA8D4AAAAAAAAAAAAAeD8AAHg/AAAAAAAAAAA= - Metadata: 0x0207A1A4
+	internal static readonly __StaticArrayInitTypeSize_1024 _90C2D148CDB931199C77ADD692B92324CDFC328EDD1D0AB7FA24830C177A4FF4; // 0x300 // Static value (base64): AAAAAAAAAAAAAAAAAAAAAAAAgDwAAAA/AAAAAAAAAAAAAAA9AACAPgAAAAAAAAAAAABAPQAAQD8AAAAAAAAAAAAAgD0AAAA+AAAAAAAAAAAAAKA9AAAgPwAAAAAAAAAAAADAPQAAwD4AAAAAAAAAAAAA4D0AAGA/AAAAAAAAAAAAAAA+AACAPQAAAAAAAAAAAAAQPgAAED8AAAAAAAAAAAAAID4AAKA+AAAAAAAAAAAAADA+AABQPwAAAAAAAAAAAABAPgAAQD4AAAAAAAAAAAAAUD4AADA/AAAAAAAAAAAAAGA+AADgPgAAAAAAAAAAAABwPgAAcD8AAAAAAAAAAAAAgD4AAAA9AAAAAAAAAAAAAIg+AAAIPwAAAAAAAAAAAACQPgAAkD4AAAAAAAAAAAAAmD4AAEg/AAAAAAAAAAAAAKA+AAAgPgAAAAAAAAAAAACoPgAAKD8AAAAAAAAAAAAAsD4AANA+AAAAAAAAAAAAALg+AABoPwAAAAAAAAAAAADAPgAAwD0AAAAAAAAAAAAAyD4AABg/AAAAAAAAAAAAANA+AACwPgAAAAAAAAAAAADYPgAAWD8AAAAAAAAAAAAA4D4AAGA+AAAAAAAAAAAAAOg+AAA4PwAAAAAAAAAAAADwPgAA8D4AAAAAAAAAAAAA+D4AAHg/AAAAAAAAAAAAAAA/AACAPAAAAAAAAAAAAAAEPwAABD8AAAAAAAAAAAAACD8AAIg+AAAAAAAAAAAAAAw/AABEPwAAAAAAAAAAAAAQPwAAED4AAAAAAAAAAAAAFD8AACQ/AAAAAAAAAAAAABg/AADIPgAAAAAAAAAAAAAcPwAAZD8AAAAAAAAAAAAAID8AAKA9AAAAAAAAAAAAACQ/AAAUPwAAAAAAAAAAAAAoPwAAqD4AAAAAAAAAAAAALD8AAFQ/AAAAAAAAAAAAADA/AABQPgAAAAAAAAAAAAA0PwAAND8AAAAAAAAAAAAAOD8AAOg+AAAAAAAAAAAAADw/AAB0PwAAAAAAAAAAAABAPwAAQD0AAAAAAAAAAAAARD8AAAw/AAAAAAAAAAAAAEg/AACYPgAAAAAAAAAAAABMPwAATD8AAAAAAAAAAAAAUD8AADA+AAAAAAAAAAAAAFQ/AAAsPwAAAAAAAAAAAABYPwAA2D4AAAAAAAAAAAAAXD8AAGw/AAAAAAAAAAAAAGA/AADgPQAAAAAAAAAAAABkPwAAHD8AAAAAAAAAAAAAaD8AALg+AAAAAAAAAAAAAGw/AABcPwAAAAAAAAAAAABwPwAAcD4AAAAAAAAAAAAAdD8AADw/AAAAAAAAAAAAAHg/AAD4PgAAAAAAAAAAAAB8PwAAfD8AAAAAAAAAAA== - Metadata: 0x0207A3AC
+	internal static readonly __StaticArrayInitTypeSize_144 BDFF4BF48DBC7214A392CF884F7F2A6073CCDB77CA3EB11BEBB93DA8ED8B2158; // 0x700 // Static value (base64): AwAAAAEAAAAAAAAAAwAAAAIAAAABAAAABwAAAAUAAAAEAAAABwAAAAYAAAAFAAAACwAAAAkAAAAIAAAACwAAAAoAAAAJAAAADwAAAA0AAAAMAAAADwAAAA4AAAANAAAAEwAAABEAAAAQAAAAEwAAABIAAAARAAAAFwAAABUAAAAUAAAAFwAAABYAAAAVAAAA - Metadata: 0x0207A7B4
+	internal static readonly __StaticArrayInitTypeSize_4096 C606E03B5FE8EAD2ECA6BCB45AE684039D928B4EE7C4A03C63D0DF9F94F81DAF; // 0x790 // Static value (base64): AAAAAAAAAAAAAAAAAAAAAAAAgDsAAAA/AAAAAAAAAAAAAAA8AACAPgAAAAAAAAAAAABAPAAAQD8AAAAAAAAAAAAAgDwAAAA+AAAAAAAAAAAAAKA8AAAgPwAAAAAAAAAAAADAPAAAwD4AAAAAAAAAAAAA4DwAAGA/AAAAAAAAAAAAAAA9AACAPQAAAAAAAAAAAAAQPQAAED8AAAAAAAAAAAAAID0AAKA+AAAAAAAAAAAAADA9AABQPwAAAAAAAAAAAABAPQAAQD4AAAAAAAAAAAAAUD0AADA/AAAAAAAAAAAAAGA9AADgPgAAAAAAAAAAAABwPQAAcD8AAAAAAAAAAAAAgD0AAAA9AAAAAAAAAAAAAIg9AAAIPwAAAAAAAAAAAACQPQAAkD4AAAAAAAAAAAAAmD0AAEg/AAAAAAAAAAAAAKA9AAAgPgAAAAAAAAAAAACoPQAAKD8AAAAAAAAAAAAAsD0AANA+AAAAAAAAAAAAALg9AABoPwAAAAAAAAAAAADAPQAAwD0AAAAAAAAAAAAAyD0AABg/AAAAAAAAAAAAANA9AACwPgAAAAAAAAAAAADYPQAAWD8AAAAAAAAAAAAA4D0AAGA+AAAAAAAAAAAAAOg9AAA4PwAAAAAAAAAAAADwPQAA8D4AAAAAAAAAAAAA+D0AAHg/AAAAAAAAAAAAAAA+AACAPAAAAAAAAAAAAAAEPgAABD8AAAAAAAAAAAAACD4AAIg+AAAAAAAAAAAAAAw+AABEPwAAAAAAAAAAAAAQPgAAED4AAAAAAAAAAAAAFD4AACQ/AAAAAAAAAAAAABg+AADIPgAAAAAAAAAAAAAcPgAAZD8AAAAAAAAAAAAAID4AAKA9AAAAAAAAAAAAACQ+AAAUPwAAAAAAAAAAAAAoPgAAqD4AAAAAAAAAAAAALD4AAFQ/AAAAAAAAAAAAADA+AABQPgAAAAAAAAAAAAA0PgAAND8AAAAAAAAAAAAAOD4AAOg+AAAAAAAAAAAAADw+AAB0PwAAAAAAAAAAAABAPgAAQD0AAAAAAAAAAAAARD4AAAw/AAAAAAAAAAAAAEg+AACYPgAAAAAAAAAAAABMPgAATD8AAAAAAAAAAAAAUD4AADA+AAAAAAAAAAAAAFQ+AAAsPwAAAAAAAAAAAABYPgAA2D4AAAAAAAAAAAAAXD4AAGw/AAAAAAAAAAAAAGA+AADgPQAAAAAAAAAAAABkPgAAHD8AAAAAAAAAAAAAaD4AALg+AAAAAAAAAAAAAGw+AABcPwAAAAAAAAAAAABwPgAAcD4AAAAAAAAAAAAAdD4AADw/AAAAAAAAAAAAAHg+AAD4PgAAAAAAAAAAAAB8PgAAfD8AAAAAAAAAAAAAgD4AAAA8AAAAAAAAAAAAAII+AAACPwAAAAAAAAAAAACEPgAAhD4AAAAAAAAAAAAAhj4AAEI/AAAAAAAAAAAAAIg+AAAIPgAAAAAAAAAAAACKPgAAIj8AAAAAAAAAAAAAjD4AAMQ+AAAAAAAAAAAAAI4+AABiPwAAAAAAAAAAAACQPgAAkD0AAAAAAAAAAAAAkj4AABI/AAAAAAAAAAAAAJQ+AACkPgAAAAAAAAAAAACWPgAAUj8AAAAAAAAAAAAAmD4AAEg+AAAAAAAAAAAAAJo+AAAyPwAAAAAAAAAAAACcPgAA5D4AAAAAAAAAAAAAnj4AAHI/AAAAAAAAAAAAAKA+AAAgPQAAAAAAAAAAAACiPgAACj8AAAAAAAAAAAAApD4AAJQ+AAAAAAAAAAAAAKY+AABKPwAAAAAAAAAAAACoPgAAKD4AAAAAAAAAAAAAqj4AACo/AAAAAAAAAAAAAKw+AADUPgAAAAAAAAAAAACuPgAAaj8AAAAAAAAAAAAAsD4AANA9AAAAAAAAAAAAALI+AAAaPwAAAAAAAAAAAAC0PgAAtD4AAAAAAAAAAAAAtj4AAFo/AAAAAAAAAAAAALg+AABoPgAAAAAAAAAAAAC6PgAAOj8AAAAAAAAAAAAAvD4AAPQ+AAAAAAAAAAAAAL4+AAB6PwAAAAAAAAAAAADAPgAAwDwAAAAAAAAAAAAAwj4AAAY/AAAAAAAAAAAAAMQ+AACMPgAAAAAAAAAAAADGPgAARj8AAAAAAAAAAAAAyD4AABg+AAAAAAAAAAAAAMo+AAAmPwAAAAAAAAAAAADMPgAAzD4AAAAAAAAAAAAAzj4AAGY/AAAAAAAAAAAAANA+AACwPQAAAAAAAAAAAADSPgAAFj8AAAAAAAAAAAAA1D4AAKw+AAAAAAAAAAAAANY+AABWPwAAAAAAAAAAAADYPgAAWD4AAAAAAAAAAAAA2j4AADY/AAAAAAAAAAAAANw+AADsPgAAAAAAAAAAAADePgAAdj8AAAAAAAAAAAAA4D4AAGA9AAAAAAAAAAAAAOI+AAAOPwAAAAAAAAAAAADkPgAAnD4AAAAAAAAAAAAA5j4AAE4/AAAAAAAAAAAAAOg+AAA4PgAAAAAAAAAAAADqPgAALj8AAAAAAAAAAAAA7D4AANw+AAAAAAAAAAAAAO4+AABuPwAAAAAAAAAAAADwPgAA8D0AAAAAAAAAAAAA8j4AAB4/AAAAAAAAAAAAAPQ+AAC8PgAAAAAAAAAAAAD2PgAAXj8AAAAAAAAAAAAA+D4AAHg+AAAAAAAAAAAAAPo+AAA+PwAAAAAAAAAAAAD8PgAA/D4AAAAAAAAAAAAA/j4AAH4/AAAAAAAAAAAAAAA/AACAOwAAAAAAAAAAAAABPwAAAT8AAAAAAAAAAAAAAj8AAII+AAAAAAAAAAAAAAM/AABBPwAAAAAAAAAAAAAEPwAABD4AAAAAAAAAAAAABT8AACE/AAAAAAAAAAAAAAY/AADCPgAAAAAAAAAAAAAHPwAAYT8AAAAAAAAAAAAACD8AAIg9AAAAAAAAAAAAAAk/AAARPwAAAAAAAAAAAAAKPwAAoj4AAAAAAAAAAAAACz8AAFE/AAAAAAAAAAAAAAw/AABEPgAAAAAAAAAAAAANPwAAMT8AAAAAAAAAAAAADj8AAOI+AAAAAAAAAAAAAA8/AABxPwAAAAAAAAAAAAAQPwAAED0AAAAAAAAAAAAAET8AAAk/AAAAAAAAAAAAABI/AACSPgAAAAAAAAAAAAATPwAAST8AAAAAAAAAAAAAFD8AACQ+AAAAAAAAAAAAABU/AAApPwAAAAAAAAAAAAAWPwAA0j4AAAAAAAAAAAAAFz8AAGk/AAAAAAAAAAAAABg/AADIPQAAAAAAAAAAAAAZPwAAGT8AAAAAAAAAAAAAGj8AALI+AAAAAAAAAAAAABs/AABZPwAAAAAAAAAAAAAcPwAAZD4AAAAAAAAAAAAAHT8AADk/AAAAAAAAAAAAAB4/AADyPgAAAAAAAAAAAAAfPwAAeT8AAAAAAAAAAAAAID8AAKA8AAAAAAAAAAAAACE/AAAFPwAAAAAAAAAAAAAiPwAAij4AAAAAAAAAAAAAIz8AAEU/AAAAAAAAAAAAACQ/AAAUPgAAAAAAAAAAAAAlPwAAJT8AAAAAAAAAAAAAJj8AAMo+AAAAAAAAAAAAACc/AABlPwAAAAAAAAAAAAAoPwAAqD0AAAAAAAAAAAAAKT8AABU/AAAAAAAAAAAAACo/AACqPgAAAAAAAAAAAAArPwAAVT8AAAAAAAAAAAAALD8AAFQ+AAAAAAAAAAAAAC0/AAA1PwAAAAAAAAAAAAAuPwAA6j4AAAAAAAAAAAAALz8AAHU/AAAAAAAAAAAAADA/AABQPQAAAAAAAAAAAAAxPwAADT8AAAAAAAAAAAAAMj8AAJo+AAAAAAAAAAAAADM/AABNPwAAAAAAAAAAAAA0PwAAND4AAAAAAAAAAAAANT8AAC0/AAAAAAAAAAAAADY/AADaPgAAAAAAAAAAAAA3PwAAbT8AAAAAAAAAAAAAOD8AAOg9AAAAAAAAAAAAADk/AAAdPwAAAAAAAAAAAAA6PwAAuj4AAAAAAAAAAAAAOz8AAF0/AAAAAAAAAAAAADw/AAB0PgAAAAAAAAAAAAA9PwAAPT8AAAAAAAAAAAAAPj8AAPo+AAAAAAAAAAAAAD8/AAB9PwAAAAAAAAAAAABAPwAAQDwAAAAAAAAAAAAAQT8AAAM/AAAAAAAAAAAAAEI/AACGPgAAAAAAAAAAAABDPwAAQz8AAAAAAAAAAAAARD8AAAw+AAAAAAAAAAAAAEU/AAAjPwAAAAAAAAAAAABGPwAAxj4AAAAAAAAAAAAARz8AAGM/AAAAAAAAAAAAAEg/AACYPQAAAAAAAAAAAABJPwAAEz8AAAAAAAAAAAAASj8AAKY+AAAAAAAAAAAAAEs/AABTPwAAAAAAAAAAAABMPwAATD4AAAAAAAAAAAAATT8AADM/AAAAAAAAAAAAAE4/AADmPgAAAAAAAAAAAABPPwAAcz8AAAAAAAAAAAAAUD8AADA9AAAAAAAAAAAAAFE/AAALPwAAAAAAAAAAAABSPwAAlj4AAAAAAAAAAAAAUz8AAEs/AAAAAAAAAAAAAFQ/AAAsPgAAAAAAAAAAAABVPwAAKz8AAAAAAAAAAAAAVj8AANY+AAAAAAAAAAAAAFc/AABrPwAAAAAAAAAAAABYPwAA2D0AAAAAAAAAAAAAWT8AABs/AAAAAAAAAAAAAFo/AAC2PgAAAAAAAAAAAABbPwAAWz8AAAAAAAAAAAAAXD8AAGw+AAAAAAAAAAAAAF0/AAA7PwAAAAAAAAAAAABePwAA9j4AAAAAAAAAAAAAXz8AAHs/AAAAAAAAAAAAAGA/AADgPAAAAAAAAAAAAABhPwAABz8AAAAAAAAAAAAAYj8AAI4+AAAAAAAAAAAAAGM/AABHPwAAAAAAAAAAAABkPwAAHD4AAAAAAAAAAAAAZT8AACc/AAAAAAAAAAAAAGY/AADOPgAAAAAAAAAAAABnPwAAZz8AAAAAAAAAAAAAaD8AALg9AAAAAAAAAAAAAGk/AAAXPwAAAAAAAAAAAABqPwAArj4AAAAAAAAAAAAAaz8AAFc/AAAAAAAAAAAAAGw/AABcPgAAAAAAAAAAAABtPwAANz8AAAAAAAAAAAAAbj8AAO4+AAAAAAAAAAAAAG8/AAB3PwAAAAAAAAAAAABwPwAAcD0AAAAAAAAAAAAAcT8AAA8/AAAAAAAAAAAAAHI/AACePgAAAAAAAAAAAABzPwAATz8AAAAAAAAAAAAAdD8AADw+AAAAAAAAAAAAAHU/AAAvPwAAAAAAAAAAAAB2PwAA3j4AAAAAAAAAAAAAdz8AAG8/AAAAAAAAAAAAAHg/AAD4PQAAAAAAAAAAAAB5PwAAHz8AAAAAAAAAAAAAej8AAL4+AAAAAAAAAAAAAHs/AABfPwAAAAAAAAAAAAB8PwAAfD4AAAAAAAAAAAAAfT8AAD8/AAAAAAAAAAAAAH4/AAD+PgAAAAAAAAAAAAB/PwAAfz8AAAAAAAAAAA== - Metadata: 0x0207A84C
+	internal static readonly __StaticArrayInitTypeSize_24 FE78C65211DD0B56A97024FB61111E686EF1FE054AA132BA58E2891AC496F1EE; // 0x1790 // Static value (base64): AAAAAAEAAAACAAAAAAAAAAIAAAADAAAA - Metadata: 0x0207B854
+
+	// Nested types
+	private struct __StaticArrayInitTypeSize_24 // TypeDefIndex: 54682
+	{
+	}
+
+	private struct __StaticArrayInitTypeSize_144 // TypeDefIndex: 54683
+	{
+	}
+
+	private struct __StaticArrayInitTypeSize_256 // TypeDefIndex: 54684
+	{
+	}
+
+	private struct __StaticArrayInitTypeSize_512 // TypeDefIndex: 54685
+	{
+	}
+
+	private struct __StaticArrayInitTypeSize_1024 // TypeDefIndex: 54686
+	{
+	}
+
+	private struct __StaticArrayInitTypeSize_4096 // TypeDefIndex: 54687
+	{
+	}
+
+	// Constructors
+	public _PrivateImplementationDetails_() {} // Dummy constructor
 }
 
 namespace Beyond.Rendering
 {
-	public static class HGShaderQualitySettings // TypeDefIndex: 53290
+	public static class HGShaderQualitySettings // TypeDefIndex: 54283
 	{
 		// Fields
 		public static ShaderQuality HgShaderLod; // 0x00
 	
 		// Nested types
-		public enum ShaderQuality // TypeDefIndex: 53289
+		public enum ShaderQuality // TypeDefIndex: 54282
 		{
 			Low = 0,
 			High = 1
 		}
 	
 		// Constructors
-		static HGShaderQualitySettings() {} // 0x0000000189C82120-0x0000000189C8215C
+		static HGShaderQualitySettings() {} // 0x000000018BD9B93C-0x000000018BD9B978
+	}
+}
+
+namespace Microsoft.CodeAnalysis
+{
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 54279
+	{
+		// Constructors
+		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+}
+
+namespace System.Runtime.CompilerServices
+{
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 54280
+	{
+		// Constructors
+		public IsUnmanagedAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }
 
 namespace UnityEngine
 {
-	[AddComponentMenu("Rendering/Light Anchor")]
-	[DisallowMultipleComponent]
-	[ExecuteInEditMode]
-	public class LightAnchor : MonoBehaviour // TypeDefIndex: 53293
+	public class LightAnchor : MonoBehaviour // TypeDefIndex: 54286
 	{
 		// Fields
-		private const float k_ArcRadius = 5f; // Metadata: 0x01FD4497
-		private const float k_AxisLength = 10f; // Metadata: 0x01FD449B
-		internal const float k_MaxDistance = 10000f; // Metadata: 0x01FD449F
-		[Min(0f)]
-		[SerializeField]
+		private const float k_ArcRadius = 5f; // Metadata: 0x02079CBE
+		private const float k_AxisLength = 10f; // Metadata: 0x02079CC2
+		internal const float k_MaxDistance = 10000f; // Metadata: 0x02079CC6
 		private float m_Distance; // 0x18
-		[SerializeField]
 		private UpDirection m_FrameSpace; // 0x1C
-		[SerializeField]
 		private Transform m_AnchorPositionOverride; // 0x20
-		[SerializeField]
 		private Vector3 m_AnchorPositionOffset; // 0x28
-		[SerializeField]
 		private float m_Yaw; // 0x34
-		[SerializeField]
 		private float m_Pitch; // 0x38
-		[SerializeField]
 		private float m_Roll; // 0x3C
 	
 		// Properties
-		public float yaw { get => default; set {} } // 0x0000000183D56CA0-0x0000000183D56CB0 0x0000000189C8364C-0x0000000189C8369C
-		public float pitch { get => default; set {} } // 0x0000000183D51000-0x0000000183D51010 0x0000000189C835AC-0x0000000189C835FC
-		public float roll { get => default; set {} } // 0x0000000183D4EC60-0x0000000183D4EC70 0x0000000189C835FC-0x0000000189C8364C
-		public float distance { get => default; set {} } // 0x0000000183D4EBF0-0x0000000183D4EC00 0x0000000189C83588-0x0000000189C835AC
-		public UpDirection frameSpace { get => default; set {} } // 0x0000000183D4EBB0-0x0000000183D4EBC0 0x0000000183D4EBC0-0x0000000183D4EBD0
-		public Vector3 anchorPosition { get => default; } // 0x0000000189C8340C-0x0000000189C83588 
-		public Transform anchorPositionOverride { get => default; set {} } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
-		public Vector3 anchorPositionOffset { get => default; set {} } // 0x0000000183D50E80-0x0000000183D50EA0 0x0000000183D50F50-0x0000000183D50F60
+		public float yaw { get => default; set {} } // 0x0000000185FB8060-0x0000000185FB8070 0x000000018BD9CE68-0x000000018BD9CEB8
+		public float pitch { get => default; set {} } // 0x0000000185FB24B0-0x0000000185FB24C0 0x000000018BD9CDC8-0x000000018BD9CE18
+		public float roll { get => default; set {} } // 0x0000000185FB0580-0x0000000185FB0590 0x000000018BD9CE18-0x000000018BD9CE68
+		public float distance { get => default; set {} } // 0x0000000181C9AC50-0x0000000181C9AC60 0x000000018BD9CDA4-0x000000018BD9CDC8
+		public UpDirection frameSpace { get => default; set {} } // 0x00000001813AE570-0x00000001813AE580 0x00000001813AE9D0-0x00000001813AE9E0
+		public Vector3 anchorPosition { get => default; } // 0x000000018BD9CC28-0x000000018BD9CDA4 
+		public Transform anchorPositionOverride { get => default; set {} } // 0x00000001813B31A0-0x00000001813B31B0 0x000000018646EE40-0x000000018646EE50
+		public Vector3 anchorPositionOffset { get => default; set {} } // 0x0000000185FB2340-0x0000000185FB2360 0x0000000185FB2400-0x0000000185FB2410
 	
 		// Nested types
-		public enum UpDirection // TypeDefIndex: 53291
+		public enum UpDirection // TypeDefIndex: 54284
 		{
 			World = 0,
 			Local = 1
 		}
 	
-		private struct Axes // TypeDefIndex: 53292
+		private struct Axes // TypeDefIndex: 54285
 		{
 			// Fields
 			public Vector3 up; // 0x00
@@ -119,43 +154,43 @@ namespace UnityEngine
 		}
 	
 		// Constructors
-		public LightAnchor() {} // 0x000000018426FE60-0x000000018426FE68
+		public LightAnchor() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		public static float NormalizeAngleDegree(float angle) => default; // 0x0000000189C82A24-0x0000000189C82A6C
-		public void SynchronizeOnTransform(Camera camera) {} // 0x0000000189C82BB4-0x0000000189C82FB0
-		public void UpdateTransform(Camera camera, Vector3 anchor) {} // 0x0000000189C82FB0-0x0000000189C8308C
-		private Axes GetWorldSpaceAxes(Camera camera, Vector3 anchor) => default; // 0x0000000189C822E8-0x0000000189C82A24
-		private void Update() {} // 0x0000000189C83310-0x0000000189C8340C
-		private void OnDrawGizmosSelected() {} // 0x0000000189C82A6C-0x0000000189C82BB4
-		private void UpdateTransform(Vector3 up, Vector3 right, Vector3 forward, Vector3 anchor) {} // 0x0000000189C8308C-0x0000000189C83310
+		public static float NormalizeAngleDegree(float angle) => default; // 0x000000018BD9C240-0x000000018BD9C288
+		public void SynchronizeOnTransform(Camera camera) {} // 0x000000018BD9C3D0-0x000000018BD9C7CC
+		public void UpdateTransform(Camera camera, Vector3 anchor) {} // 0x000000018BD9C7CC-0x000000018BD9C8A8
+		private Axes GetWorldSpaceAxes(Camera camera, Vector3 anchor) => default; // 0x000000018BD9BB04-0x000000018BD9C240
+		private void Update() {} // 0x000000018BD9CB2C-0x000000018BD9CC28
+		private void OnDrawGizmosSelected() {} // 0x000000018BD9C288-0x000000018BD9C3D0
+		private void UpdateTransform(Vector3 up, Vector3 right, Vector3 forward, Vector3 anchor) {} // 0x000000018BD9C8A8-0x000000018BD9CB2C
 	}
 }
 
 namespace UnityEngine.Experimental.Rendering
 {
-	internal class ProbeBrickIndex // TypeDefIndex: 53301
+	internal class ProbeBrickIndex // TypeDefIndex: 54294
 	{
 		// Fields
-		internal const int kMaxSubdivisionLevels = 7; // Metadata: 0x01FD44A5
-		internal const int kIndexChunkSize = 243; // Metadata: 0x01FD44A6
+		internal const int kMaxSubdivisionLevels = 7; // Metadata: 0x02079CCC
+		internal const int kIndexChunkSize = 243; // Metadata: 0x02079CCD
 		private BitArray m_IndexChunks; // 0x10
 		private int m_IndexInChunks; // 0x18
 		private int m_NextFreeChunk; // 0x1C
 		private ComputeBuffer m_PhysicalIndexBuffer; // 0x20
 		private int[] m_PhysicalIndexBufferData; // 0x28
+		private int _estimatedVMemCost_k__BackingField; // 0x30
 		private Vector3Int m_CenterRS; // 0x34
 		private Dictionary<Vector3Int, List<VoxelMeta>> m_VoxelToBricks; // 0x40
 		private Dictionary<ProbeReferenceVolume.RegId, BrickMeta> m_BricksToVoxels; // 0x48
 		private bool m_NeedUpdateIndexComputeBuffer; // 0x50
 	
 		// Properties
-		internal int estimatedVMemCost { get; private set; } // 0x0000000183D4ED20-0x0000000183D4ED30 0x0000000183D4EE10-0x0000000183D4EE20
+		internal int estimatedVMemCost { get; private set; } // 0x000000018BD9DBC4-0x000000018BD9DC6C 0x000000018BD9DF00-0x000000018BD9E0F0
 	
 		// Nested types
 		[Serializable]
-		[DebuggerDisplay("Brick [{position}, {subdivisionLevel}]")]
-		public struct Brick : IEquatable<Brick> // TypeDefIndex: 53294
+		public struct Brick : IEquatable<Brick> // TypeDefIndex: 54287
 		{
 			// Fields
 			public Vector3Int position; // 0x00
@@ -165,35 +200,34 @@ namespace UnityEngine.Experimental.Rendering
 			internal Brick(Vector3Int position, int subdivisionLevel) {
 				this.position = default;
 				this.subdivisionLevel = default;
-			} // 0x0000000183D5DE00-0x0000000183D5DE20
+			} // 0x00000001813CFF60-0x00000001813CFF70
 	
 			// Methods
-			public bool Equals(Brick other) => default; // 0x0000000189C81F5C-0x0000000189C81FB0
+			public bool Equals(Brick other) => default; // 0x00000001813D0A90-0x00000001813D0AA0
 		}
 	
-		[DebuggerDisplay("Brick [{brick.position}, {brick.subdivisionLevel}], {flattenedIdx}")]
-		private struct ReservedBrick // TypeDefIndex: 53295
+		private struct ReservedBrick // TypeDefIndex: 54288
 		{
 			// Fields
 			public Brick brick; // 0x00
 			public int flattenedIdx; // 0x10
 		}
 	
-		private struct VoxelMeta // TypeDefIndex: 53296
+		private struct VoxelMeta // TypeDefIndex: 54289
 		{
 			// Fields
 			public ProbeReferenceVolume.RegId id; // 0x00
 			public List<ushort> brickIndices; // 0x08
 		}
 	
-		private struct BrickMeta // TypeDefIndex: 53297
+		private struct BrickMeta // TypeDefIndex: 54290
 		{
 			// Fields
 			public HashSet<Vector3Int> voxels; // 0x00
 			public List<ReservedBrick> bricks; // 0x08
 		}
 	
-		public struct CellIndexUpdateInfo // TypeDefIndex: 53298
+		public struct CellIndexUpdateInfo // TypeDefIndex: 54291
 		{
 			// Fields
 			public int firstChunkIndex; // 0x00
@@ -204,39 +238,66 @@ namespace UnityEngine.Experimental.Rendering
 			public Vector3Int cellPositionInBricksAtMaxRes; // 0x24
 		}
 	
+		private sealed class __c__DisplayClass31_0 // TypeDefIndex: 54292
+		{
+			// Fields
+			public ProbeReferenceVolume.RegId id; // 0x10
+			public Predicate<VoxelMeta> __9__0; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass31_0() {} // 0x000000018BD9DEB0-0x000000018BD9DF00
+	
+			// Methods
+			internal bool _AddBricks_b__0(VoxelMeta lhs) => default; // 0x000000018BD9E574-0x000000018BD9E5A0
+		}
+	
+		private sealed class __c__DisplayClass32_0 // TypeDefIndex: 54293
+		{
+			// Fields
+			public ProbeReferenceVolume.RegId id; // 0x10
+			public Predicate<VoxelMeta> __9__0; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass32_0() {} // 0x000000018BD9EFBC-0x000000018BD9F1B8
+	
+			// Methods
+			internal bool _RemoveBricks_b__0(VoxelMeta lhs) => default; // 0x000000018BD9EF8C-0x000000018BD9EFBC
+		}
+	
 		// Constructors
 		public ProbeBrickIndex() {} // Dummy constructor
-		internal ProbeBrickIndex(ProbeVolumeTextureMemoryBudget memoryBudget) {} // 0x0000000189C857A0-0x0000000189C8599C
+		internal ProbeBrickIndex(ProbeVolumeTextureMemoryBudget memoryBudget) {} // 0x000000018BD9DA64-0x000000018BD9DAC4
 	
 		// Methods
-		private int GetVoxelSubdivLevel() => default; // 0x0000000189C84694-0x0000000189C846E4
-		private int SizeOfPhysicalIndexFromBudget(ProbeVolumeTextureMemoryBudget memoryBudget) => default; // 0x0000000189C84D58-0x0000000189C84D84
-		internal void UploadIndexData() {} // 0x0000000189C85770-0x0000000189C857A0
-		internal void Clear() {} // 0x0000000189C843A8-0x0000000189C84450
-		private void MapBrickToVoxels(Brick brick, HashSet<Vector3Int> voxels) {} // 0x0000000189C846E4-0x0000000189C848D4
-		private void ClearVoxel(Vector3Int pos, CellIndexUpdateInfo cellInfo) {} // 0x0000000189C842A8-0x0000000189C843A8
-		internal void GetRuntimeResources(ref ProbeReferenceVolume.RuntimeResources rr) {} // 0x0000000189C8465C-0x0000000189C84694
-		internal void Cleanup() {} // 0x0000000189C84248-0x0000000189C842A8
-		private int MergeIndex(int index, int size) => default; // 0x0000000183D83C90-0x0000000183D83CB0
-		internal bool AssignIndexChunksToCell(ProbeReferenceVolume.Cell cell, int bricksCount, ref CellIndexUpdateInfo cellUpdateInfo) => default; // 0x0000000189C8412C-0x0000000189C84248
-		public void AddBricks(ProbeReferenceVolume.RegId id, List<Brick> bricks, List<ProbeBrickPool.BrickChunkAlloc> allocations, int allocationSize, int poolWidth, int poolHeight, CellIndexUpdateInfo cellInfo) {} // 0x0000000189C8369C-0x0000000189C8412C
-		public void RemoveBricks(ProbeReferenceVolume.RegId id, CellIndexUpdateInfo cellInfo) {} // 0x0000000189C848D4-0x0000000189C84D58
-		private void UpdateIndexForVoxel(Vector3Int voxel, CellIndexUpdateInfo cellInfo) {} // 0x0000000189C84D84-0x0000000189C84FE4
-		private void UpdatePhysicalIndex(Vector3Int brickMin, Vector3Int brickMax, int value, CellIndexUpdateInfo cellInfo) {} // 0x0000000189C85374-0x0000000189C85770
+		private int GetVoxelSubdivLevel() => default; // 0x000000018BD9DAC4-0x000000018BD9DBC4
+		private int SizeOfPhysicalIndexFromBudget(ProbeVolumeTextureMemoryBudget memoryBudget) => default; // 0x000000018BD9DE78-0x000000018BD9DEB0
+		internal void UploadIndexData() {} // 0x0000000185FE4920-0x0000000185FE4940
+		internal void Clear() {} // 0x000000018BD9D948-0x000000018BD9DA64
+		private void MapBrickToVoxels(Brick brick, HashSet<Vector3Int> voxels) {} // 0x000000018BD9CEB8-0x000000018BD9D948
+		private void ClearVoxel(Vector3Int pos, CellIndexUpdateInfo cellInfo) {} // 0x000000018BD9E0F0-0x000000018BD9E574
+		internal void GetRuntimeResources(ref ProbeReferenceVolume.RuntimeResources rr) {} // 0x000000018BD9E5A0-0x000000018BD9E800
+		internal void Cleanup() {} // 0x000000018BD9EB90-0x000000018BD9EF8C
+		private int MergeIndex(int index, int size) => default; // 0x000000018BD9DC6C-0x000000018BD9DE78
+		internal bool AssignIndexChunksToCell(ProbeReferenceVolume.Cell cell, int bricksCount, ref CellIndexUpdateInfo cellUpdateInfo) => default; // 0x000000018BD9E800-0x000000018BD9EB90
+		public void AddBricks(ProbeReferenceVolume.RegId id, List<Brick> bricks, List<ProbeBrickPool.BrickChunkAlloc> allocations, int allocationSize, int poolWidth, int poolHeight, CellIndexUpdateInfo cellInfo) {} // 0x0000000185FBF320-0x0000000185FBF340
+		public void RemoveBricks(ProbeReferenceVolume.RegId id, CellIndexUpdateInfo cellInfo) {} // 0x000000018BD9B778-0x000000018BD9B7CC
+		private void UpdateIndexForVoxel(Vector3Int voxel, CellIndexUpdateInfo cellInfo) {} // 0x0000000185492010-0x0000000185492020
+		private void UpdatePhysicalIndex(Vector3Int brickMin, Vector3Int brickMax, int value, CellIndexUpdateInfo cellInfo) {} // 0x0000000187EBD7DC-0x0000000187EBD8E8
 		private void ClipToIndexSpace(Vector3Int pos, int subdiv, out Vector3Int outMinpos, out Vector3Int outMaxpos, CellIndexUpdateInfo cellInfo) {
 			outMinpos = default;
 			outMaxpos = default;
-		} // 0x0000000189C84450-0x0000000189C8465C
-		private void UpdateIndexForVoxel(Vector3Int voxel, List<ReservedBrick> bricks, List<ushort> indices, CellIndexUpdateInfo cellInfo) {} // 0x0000000189C84FE4-0x0000000189C85374
+		} // 0x0000000185492010-0x0000000185492020
+		private void UpdateIndexForVoxel(Vector3Int voxel, List<ReservedBrick> bricks, List<ushort> indices, CellIndexUpdateInfo cellInfo) {} // 0x0000000187EBD7DC-0x0000000187EBD8E8
 	}
 
-	internal class ProbeBrickPool // TypeDefIndex: 53304
+	internal class ProbeBrickPool // TypeDefIndex: 54297
 	{
 		// Fields
-		internal const int kBrickCellCount = 3; // Metadata: 0x01FD44A8
-		internal const int kBrickProbeCountPerDim = 4; // Metadata: 0x01FD44A9
-		internal const int kBrickProbeCountTotal = 64; // Metadata: 0x01FD44AA
-		private const int kMaxPoolWidth = 2048; // Metadata: 0x01FD44AC
+		internal const int kBrickCellCount = 3; // Metadata: 0x02079CCF
+		internal const int kBrickProbeCountPerDim = 4; // Metadata: 0x02079CD0
+		internal const int kBrickProbeCountTotal = 64; // Metadata: 0x02079CD1
+		private int _estimatedVMemCost_k__BackingField; // 0x10
+		private const int kMaxPoolWidth = 2048; // Metadata: 0x02079CD3
 		private int m_AllocationSize; // 0x14
 		private ProbeVolumeTextureMemoryBudget m_MemoryBudget; // 0x18
 		private DataLocation m_Pool; // 0x20
@@ -245,11 +306,10 @@ namespace UnityEngine.Experimental.Rendering
 		private ProbeVolumeSHBands m_SHBands; // 0x80
 	
 		// Properties
-		internal int estimatedVMemCost { get; private set; } // 0x0000000183D4E340-0x0000000183D4E350 0x00000001810410F0-0x0000000181041100
+		internal int estimatedVMemCost { get; private set; } // 0x000000018BDA0708-0x000000018BDA0830 0x000000018BD9F888-0x000000018BD9F970
 	
 		// Nested types
-		[DebuggerDisplay("Chunk ({x}, {y}, {z})")]
-		public struct BrickChunkAlloc // TypeDefIndex: 53302
+		public struct BrickChunkAlloc // TypeDefIndex: 54295
 		{
 			// Fields
 			public int x; // 0x00
@@ -257,10 +317,10 @@ namespace UnityEngine.Experimental.Rendering
 			public int z; // 0x08
 	
 			// Methods
-			internal int flattenIndex(int sx, int sy) => default; // 0x0000000183D83C70-0x0000000183D83C90
+			internal int flattenIndex(int sx, int sy) => default; // 0x0000000181C0BBD0-0x0000000181C0BBE0
 		}
 	
-		public struct DataLocation // TypeDefIndex: 53303
+		public struct DataLocation // TypeDefIndex: 54296
 		{
 			// Fields
 			internal Texture3D TexL0_L1rx; // 0x00
@@ -275,44 +335,45 @@ namespace UnityEngine.Experimental.Rendering
 			internal int depth; // 0x40
 	
 			// Methods
-			internal void Cleanup() {} // 0x0000000189C82030-0x0000000189C82120
+			internal void Cleanup() {} // 0x0000000181378230-0x0000000181378240
 		}
 	
 		// Constructors
 		public ProbeBrickPool() {} // Dummy constructor
-		internal ProbeBrickPool(int allocationSize, ProbeVolumeTextureMemoryBudget memoryBudget, ProbeVolumeSHBands shBands) {} // 0x0000000189C86EEC-0x0000000189C87014
+		internal ProbeBrickPool(int allocationSize, ProbeVolumeTextureMemoryBudget memoryBudget, ProbeVolumeSHBands shBands) {} // 0x0000000185FB21A0-0x0000000185FB21B0
 	
 		// Methods
-		internal void EnsureTextureValidity() {} // 0x0000000189C8606C-0x0000000189C86154
-		internal int GetChunkSize() => default; // 0x0000000183D50CC0-0x0000000183D50CD0
-		internal int GetChunkSizeInProbeCount() => default; // 0x0000000183D83CD0-0x0000000183D83CE0
-		internal int GetPoolWidth() => default; // 0x0000000183D4EF00-0x0000000183D4EF10
-		internal int GetPoolHeight() => default; // 0x0000000183D4EEF0-0x0000000183D4EF00
-		internal Vector3Int GetPoolDimensions() => default; // 0x0000000183D83CE0-0x0000000183D83D00
-		internal void GetRuntimeResources(ref ProbeReferenceVolume.RuntimeResources rr) {} // 0x0000000189C86A28-0x0000000189C86AB0
-		internal void Clear() {} // 0x0000000189C85AE4-0x0000000189C85B34
-		internal void Allocate(int numberOfBrickChunks, List<BrickChunkAlloc> outAllocations) {} // 0x0000000189C8599C-0x0000000189C85AD8
-		internal void Deallocate(List<BrickChunkAlloc> allocations) {} // 0x0000000189C85F20-0x0000000189C8606C
-		internal void Update(DataLocation source, List<BrickChunkAlloc> srcLocations, List<BrickChunkAlloc> dstLocations, ProbeVolumeSHBands bands) {} // 0x0000000189C86B54-0x0000000189C86EEC
-		private static Vector3Int ProbeCountToDataLocSize(int numProbes) => default; // 0x0000000189C86AB0-0x0000000189C86B10
+		internal void EnsureTextureValidity() {} // 0x0000000185FE4960-0x0000000185FE4970
+		internal int GetChunkSize() => default; // 0x0000000183F80450-0x0000000183F80460
+		internal int GetChunkSizeInProbeCount() => default; // 0x0000000183F80460-0x0000000183F80470
+		internal int GetPoolWidth() => default; // 0x0000000185FE4970-0x0000000185FE4990
+		internal int GetPoolHeight() => default; // 0x000000018BDA0244-0x000000018BDA02CC
+		internal Vector3Int GetPoolDimensions() => default; // 0x000000018BD9F300-0x000000018BD9F350
+		internal void GetRuntimeResources(ref ProbeReferenceVolume.RuntimeResources rr) {} // 0x000000018BD9F1B8-0x000000018BD9F2F4
+		internal void Clear() {} // 0x000000018BD9F73C-0x000000018BD9F888
+		internal void Allocate(int numberOfBrickChunks, List<BrickChunkAlloc> outAllocations) {} // 0x000000018BDA0370-0x000000018BDA0708
+		internal void Deallocate(List<BrickChunkAlloc> allocations) {} // 0x000000018BDA02CC-0x000000018BDA032C
+		internal void Update(DataLocation source, List<BrickChunkAlloc> srcLocations, List<BrickChunkAlloc> dstLocations, ProbeVolumeSHBands bands) {} // 0x000000018BD9F350-0x000000018BD9F73C
+		private static Vector3Int ProbeCountToDataLocSize(int numProbes) => default; // 0x000000018BDA032C-0x000000018BDA0370
 		public static DataLocation CreateDataLocation(int numProbes, bool compressed, ProbeVolumeSHBands bands, out int allocatedBytes) {
 			allocatedBytes = default;
 			return default;
-		} // 0x0000000189C85B34-0x0000000189C85F20
-		private static void SetPixel(ref UnityEngine.Color[] data, int x, int y, int z, int dataLocWidth, int dataLocHeight, UnityEngine.Color value) {} // 0x0000000189C86B10-0x0000000189C86B54
-		public static void FillDataLocation(ref DataLocation loc, SphericalHarmonicsL2[] shl2, ProbeVolumeSHBands bands) {} // 0x0000000189C86154-0x0000000189C86A28
+		} // 0x000000018BD9F970-0x000000018BDA0244
+		private static void SetPixel(ref UnityEngine.Color[] data, int x, int y, int z, int dataLocWidth, int dataLocHeight, UnityEngine.Color value) {} // 0x0000000185FE4940-0x0000000185FE4960
+		public static void FillDataLocation(ref DataLocation loc, SphericalHarmonicsL2[] shl2, ProbeVolumeSHBands bands) {} // 0x000000018BD9F2F4-0x000000018BD9F300
 		private void DerivePoolSizeFromBudget(int allocationSize, ProbeVolumeTextureMemoryBudget memoryBudget, out int width, out int height, out int depth) {
 			width = default;
 			height = default;
 			depth = default;
-		} // 0x0000000183D83CB0-0x0000000183D83CD0
-		internal void Cleanup() {} // 0x0000000189C85AD8-0x0000000189C85AE4
+		} // 0x0000000185FE4900-0x0000000185FE4920
+		internal void Cleanup() {} // 0x000000018BD9B84C-0x000000018BD9B93C
 	}
 
-	internal class ProbeCellIndices // TypeDefIndex: 53306
+	internal class ProbeCellIndices // TypeDefIndex: 54299
 	{
 		// Fields
-		private const int kUintPerEntry = 3; // Metadata: 0x01FD44AE
+		private const int kUintPerEntry = 3; // Metadata: 0x02079CD5
+		private int _estimatedVMemCost_k__BackingField; // 0x10
 		private ComputeBuffer m_IndexOfIndicesBuffer; // 0x18
 		private uint[] m_IndexOfIndicesData; // 0x20
 		private Vector3Int m_CellCount; // 0x28
@@ -321,10 +382,10 @@ namespace UnityEngine.Experimental.Rendering
 		private bool m_NeedUpdateComputeBuffer; // 0x44
 	
 		// Properties
-		internal int estimatedVMemCost { get; private set; } // 0x0000000183D4E340-0x0000000183D4E350 0x00000001810410F0-0x0000000181041100
+		internal int estimatedVMemCost { get; private set; } // 0x0000000181378230-0x0000000181378240 0x0000000185FB2340-0x0000000185FB2360
 	
 		// Nested types
-		internal struct IndexMetaData // TypeDefIndex: 53305
+		internal struct IndexMetaData // TypeDefIndex: 54298
 		{
 			// Fields
 			internal Vector3Int minLocalIdx; // 0x00
@@ -335,26 +396,26 @@ namespace UnityEngine.Experimental.Rendering
 			// Methods
 			internal void Pack(out uint[] vals) {
 				vals = default;
-			} // 0x0000000189C8215C-0x0000000189C822E8
+			} // 0x0000000181C0BBD0-0x0000000181C0BBE0
 		}
 	
 		// Constructors
 		public ProbeCellIndices() {} // Dummy constructor
-		internal ProbeCellIndices(Vector3Int cellMin, Vector3Int cellMax, int cellSizeInMinBricks) {} // 0x0000000189C872F8-0x0000000189C87438
+		internal ProbeCellIndices(Vector3Int cellMin, Vector3Int cellMax, int cellSizeInMinBricks) {} // 0x000000018BDA0A00-0x000000018BDA0A64
 	
 		// Methods
-		internal Vector3Int GetCellIndexDimension() => default; // 0x0000000183D50E80-0x0000000183D50EA0
-		internal Vector3Int GetCellMinPosition() => default; // 0x0000000183D522E0-0x0000000183D52300
-		private int GetFlatIndex(Vector3Int normalizedPos) => default; // 0x0000000183D83D00-0x0000000183D83D20
-		internal int GetFlatIdxForCell(Vector3Int cellPosition) => default; // 0x0000000189C871E4-0x0000000189C87248
-		internal void AddCell(int cellFlatIdx, ProbeBrickIndex.CellIndexUpdateInfo cellUpdateInfo) {} // 0x0000000189C87014-0x0000000189C87184
-		internal void MarkCellAsUnloaded(int cellFlatIdx) {} // 0x0000000189C87280-0x0000000189C872C8
-		internal void PushComputeData() {} // 0x0000000189C872C8-0x0000000189C872F8
-		internal void GetRuntimeResources(ref ProbeReferenceVolume.RuntimeResources rr) {} // 0x0000000189C87248-0x0000000189C87280
-		internal void Cleanup() {} // 0x0000000189C87184-0x0000000189C871E4
+		internal Vector3Int GetCellIndexDimension() => default; // 0x0000000185FB3600-0x0000000185FB3620
+		internal Vector3Int GetCellMinPosition() => default; // 0x0000000185FE4990-0x0000000185FE49B0
+		private int GetFlatIndex(Vector3Int normalizedPos) => default; // 0x000000018BDA0B14-0x000000018BDA0C54
+		internal int GetFlatIdxForCell(Vector3Int cellPosition) => default; // 0x000000018BDA0830-0x000000018BDA09A0
+		internal void AddCell(int cellFlatIdx, ProbeBrickIndex.CellIndexUpdateInfo cellUpdateInfo) {} // 0x000000018BDA0A9C-0x000000018BDA0AE4
+		internal void MarkCellAsUnloaded(int cellFlatIdx) {} // 0x000000018BDA0AE4-0x000000018BDA0B14
+		internal void PushComputeData() {} // 0x000000018BDA0A64-0x000000018BDA0A9C
+		internal void GetRuntimeResources(ref ProbeReferenceVolume.RuntimeResources rr) {} // 0x000000018BDA09A0-0x000000018BDA0A00
+		internal void Cleanup() {} // 0x000000018BD9B978-0x000000018BD9BB04
 	}
 
-	public struct ProbeVolumeSystemParameters // TypeDefIndex: 53307
+	public struct ProbeVolumeSystemParameters // TypeDefIndex: 54300
 	{
 		// Fields
 		public ProbeVolumeTextureMemoryBudget memoryBudget; // 0x00
@@ -364,7 +425,7 @@ namespace UnityEngine.Experimental.Rendering
 		public ProbeVolumeSHBands shBands; // 0x20
 	}
 
-	public struct ProbeVolumeShadingParameters // TypeDefIndex: 53308
+	public struct ProbeVolumeShadingParameters // TypeDefIndex: 54301
 	{
 		// Fields
 		public float normalBias; // 0x00
@@ -374,7 +435,7 @@ namespace UnityEngine.Experimental.Rendering
 	}
 
 	[Serializable]
-	public enum ProbeVolumeTextureMemoryBudget // TypeDefIndex: 53309
+	public enum ProbeVolumeTextureMemoryBudget // TypeDefIndex: 54302
 	{
 		MemoryBudgetLow = 512,
 		MemoryBudgetMedium = 1024,
@@ -382,16 +443,16 @@ namespace UnityEngine.Experimental.Rendering
 	}
 
 	[Serializable]
-	public enum ProbeVolumeSHBands // TypeDefIndex: 53310
+	public enum ProbeVolumeSHBands // TypeDefIndex: 54303
 	{
 		SphericalHarmonicsL1 = 1,
 		SphericalHarmonicsL2 = 2
 	}
 
-	public class ProbeReferenceVolume // TypeDefIndex: 53322
+	public class ProbeReferenceVolume // TypeDefIndex: 54315
 	{
 		// Fields
-		private const int kProbeIndexPoolAllocationSize = 128; // Metadata: 0x01FD44B9
+		private const int kProbeIndexPoolAllocationSize = 128; // Metadata: 0x02079CE0
 		private bool m_IsInitialized; // 0x10
 		private int m_ID; // 0x14
 		private RefVolTransform m_Transform; // 0x18
@@ -427,7 +488,9 @@ namespace UnityEngine.Experimental.Rendering
 		private ProbeVolumeSHBands m_SHBands; // 0x154
 		internal bool clearAssetsOnVolumeClear; // 0x158
 		private static ProbeReferenceVolume _instance; // 0x00
-		private const int kProbesPerBatch = 1023; // Metadata: 0x01FD44BB
+		private const int kProbesPerBatch = 1023; // Metadata: 0x02079CE2
+		private readonly ProbeVolumeDebug _debugDisplay_k__BackingField; // 0x160
+		private readonly UnityEngine.Color[] _subdivisionDebugColors_k__BackingField; // 0x168
 		private DebugUI.Widget[] m_DebugItems; // 0x170
 		private Mesh m_DebugMesh; // 0x178
 		private Material m_DebugMaterial; // 0x180
@@ -437,17 +500,17 @@ namespace UnityEngine.Experimental.Rendering
 		internal Dictionary<Volume, List<ProbeBrickIndex.Brick>> realtimeSubdivisionInfo; // 0x1A0
 	
 		// Properties
-		internal bool isInitialized { get => default; } // 0x0000000183D83DB0-0x0000000183D83DC0 
-		internal bool enabledBySRP { get => default; } // 0x0000000183D83DA0-0x0000000183D83DB0 
-		public ProbeVolumeSHBands shBands { get => default; } // 0x0000000183D58C90-0x0000000183D58CA0 
-		public ProbeVolumeTextureMemoryBudget memoryBudget { get => default; } // 0x0000000183D6D1F0-0x0000000183D6D200 
-		public static ProbeReferenceVolume instance { get => default; } // 0x0000000189C8D440-0x0000000189C8D490 
-		internal ProbeVolumeDebug debugDisplay { get; } // 0x0000000183D570E0-0x0000000183D570F0 
-		public UnityEngine.Color[] subdivisionDebugColors { get; } // 0x0000000183D570F0-0x0000000183D57100 
+		internal bool isInitialized { get => default; } // 0x000000018BDA65DC-0x000000018BDA6700 
+		internal bool enabledBySRP { get => default; } // 0x00000001858ECAC0-0x00000001858ED060 
+		public ProbeVolumeSHBands shBands { get => default; } // 0x000000018BDA3734-0x000000018BDA37FC 
+		public ProbeVolumeTextureMemoryBudget memoryBudget { get => default; } // 0x000000018BDA62C0-0x000000018BDA6390 
+		public static ProbeReferenceVolume instance { get => default; } // 0x000000018BDA61EC-0x000000018BDA623C 
+		internal ProbeVolumeDebug debugDisplay { get; } // 0x000000018BDA6760-0x000000018BDA6780 
+		public UnityEngine.Color[] subdivisionDebugColors { get; } // 0x000000018BDA6780-0x000000018BDA67A0 
 	
 		// Nested types
 		[Serializable]
-		internal class Cell // TypeDefIndex: 53311
+		internal class Cell // TypeDefIndex: 54304
 		{
 			// Fields
 			public int index; // 0x10
@@ -463,19 +526,19 @@ namespace UnityEngine.Experimental.Rendering
 			public bool loaded; // 0x48
 	
 			// Constructors
-			public Cell() {} // 0x0000000183D58930-0x0000000183D58940
+			public Cell() {} // 0x000000018BDA3D3C-0x000000018BDA3D84
 		}
 	
-		private class CellChunkInfo // TypeDefIndex: 53312
+		private class CellChunkInfo // TypeDefIndex: 54305
 		{
 			// Fields
 			public List<ProbeBrickPool.BrickChunkAlloc> chunks; // 0x10
 	
 			// Constructors
-			public CellChunkInfo() {} // 0x000000018350B670-0x000000018350B680
+			public CellChunkInfo() {} // 0x0000000185FE4A40-0x0000000185FE4A50
 		}
 	
-		private class CellSortInfo : IComparable // TypeDefIndex: 53313
+		private class CellSortInfo : IComparable // TypeDefIndex: 54306
 		{
 			// Fields
 			internal string sourceAsset; // 0x10
@@ -484,13 +547,13 @@ namespace UnityEngine.Experimental.Rendering
 			internal Vector3 position; // 0x24
 	
 			// Constructors
-			public CellSortInfo() {} // 0x000000018350B670-0x000000018350B680
+			public CellSortInfo() {} // 0x0000000185FBA220-0x0000000185FBA230
 	
 			// Methods
-			public int CompareTo(object obj) => default; // 0x0000000189C81FB0-0x0000000189C82030
+			public int CompareTo(object obj) => default; // 0x0000000185FE4A30-0x0000000185FE4A40
 		}
 	
-		internal struct Volume : IEquatable<Volume> // TypeDefIndex: 53314
+		internal struct Volume : IEquatable<Volume> // TypeDefIndex: 54307
 		{
 			// Fields
 			internal Vector3 corner; // 0x00
@@ -508,15 +571,15 @@ namespace UnityEngine.Experimental.Rendering
 				Z = default;
 				maxSubdivisionMultiplier = default;
 				minSubdivisionMultiplier = default;
-			} // 0x0000000189C99660-0x0000000189C99A68
-			public Volume(Vector3 corner, Vector3 X, Vector3 Y, Vector3 Z, float maxSubdivision = 1f /* Metadata: 0x01FD44BD */, float minSubdivision = 0f /* Metadata: 0x01FD44C1 */) {
+			} // 0x0000000185FCDE60-0x0000000185FCDE70
+			public Volume(Vector3 corner, Vector3 X, Vector3 Y, Vector3 Z, float maxSubdivision = 1f /* Metadata: 0x02079CE4 */, float minSubdivision = 0f /* Metadata: 0x02079CE8 */) {
 				this.corner = default;
 				this.X = default;
 				this.Y = default;
 				this.Z = default;
 				maxSubdivisionMultiplier = default;
 				minSubdivisionMultiplier = default;
-			} // 0x0000000183D83E60-0x0000000183D83EC0
+			} // 0x000000018BDA6C5C-0x000000018BDA6CAC
 			public Volume(Volume copy) {
 				corner = default;
 				X = default;
@@ -524,20 +587,20 @@ namespace UnityEngine.Experimental.Rendering
 				Z = default;
 				maxSubdivisionMultiplier = default;
 				minSubdivisionMultiplier = default;
-			} // 0x0000000183D83E10-0x0000000183D83E60
+			} // 0x000000018BDA62AC-0x000000018BDA62C0
 	
 			// Methods
-			public Bounds CalculateAABB() => default; // 0x0000000189C98D74-0x0000000189C99084
+			public Bounds CalculateAABB() => default; // 0x000000018BDA3C68-0x000000018BDA3D3C
 			public void CalculateCenterAndSize(out Vector3 center, out Vector3 size) {
 				center = default;
 				size = default;
-			} // 0x0000000189C99084-0x0000000189C99204
-			public void Transform(Matrix4x4 trs) {} // 0x0000000189C99574-0x0000000189C99660
-			public override string ToString() => default; // 0x0000000189C993A8-0x0000000189C99574
-			public bool Equals(Volume other) => default; // 0x0000000189C99204-0x0000000189C993A8
+			} // 0x0000000185FE4A20-0x0000000185FE4A30
+			public void Transform(Matrix4x4 trs) {} // 0x000000018BDA30E0-0x000000018BDA3138
+			public override string ToString() => default; // 0x000000018BDA1E44-0x000000018BDA1EC4
+			public bool Equals(Volume other) => default; // 0x000000018BDA37FC-0x000000018BDA384C
 		}
 	
-		internal struct RefVolTransform // TypeDefIndex: 53315
+		internal struct RefVolTransform // TypeDefIndex: 54308
 		{
 			// Fields
 			public Matrix4x4 refSpaceToWS; // 0x00
@@ -546,7 +609,7 @@ namespace UnityEngine.Experimental.Rendering
 			public float scale; // 0x5C
 		}
 	
-		public struct RuntimeResources // TypeDefIndex: 53316
+		public struct RuntimeResources // TypeDefIndex: 54309
 		{
 			// Fields
 			public ComputeBuffer index; // 0x00
@@ -560,32 +623,32 @@ namespace UnityEngine.Experimental.Rendering
 			public Texture3D L2_3; // 0x40
 		}
 	
-		internal struct RegId // TypeDefIndex: 53317
+		internal struct RegId // TypeDefIndex: 54310
 		{
 			// Fields
 			internal int id; // 0x00
 	
 			// Methods
-			public bool IsValid() => default; // 0x000000018426F724-0x000000018426F72C
-			public void Invalidate() {} // 0x0000000183D5BBD0-0x0000000183D5BBE0
-			public static bool operator ==(RegId lhs, RegId rhs) => default; // 0x0000000186505FF4-0x0000000186505FFC
-			public static bool operator !=(RegId lhs, RegId rhs) => default; // 0x000000018950C868-0x000000018950C870
-			public override bool Equals(object obj) => default; // 0x0000000189C90018-0x0000000189C900C4
-			public override int GetHashCode() => default; // 0x0000000183D4E980-0x0000000183D4E990
+			public bool IsValid() => default; // 0x000000018BDA5D10-0x000000018BDA5F78
+			public void Invalidate() {} // 0x000000018BDA1164-0x000000018BDA12F4
+			public static bool operator ==(RegId lhs, RegId rhs) => default; // 0x000000018BDA1BC4-0x000000018BDA1D7C
+			public static bool operator !=(RegId lhs, RegId rhs) => default; // 0x000000018BDA12F4-0x000000018BDA1A90
+			public override bool Equals(object obj) => default; // 0x000000018BDA1A90-0x000000018BDA1B50
+			public override int GetHashCode() => default; // 0x000000018BDA5F78-0x000000018BDA61EC
 		}
 	
-		public struct ExtraDataActionInput // TypeDefIndex: 53318
+		public struct ExtraDataActionInput // TypeDefIndex: 54311
 		{
 		}
 	
-		private struct InitInfo // TypeDefIndex: 53319
+		private struct InitInfo // TypeDefIndex: 54312
 		{
 			// Fields
 			public Vector3Int pendingMinCellPosition; // 0x00
 			public Vector3Int pendingMaxCellPosition; // 0x0C
 		}
 	
-		private class CellInstancedDebugProbes // TypeDefIndex: 53320
+		private class CellInstancedDebugProbes // TypeDefIndex: 54313
 		{
 			// Fields
 			public List<Matrix4x4[]> probeBuffers; // 0x10
@@ -594,83 +657,127 @@ namespace UnityEngine.Experimental.Rendering
 			public Vector3 cellPosition; // 0x30
 	
 			// Constructors
-			public CellInstancedDebugProbes() {} // 0x000000018350B670-0x000000018350B680
+			public CellInstancedDebugProbes() {} // 0x000000018BDA45F8-0x000000018BDA4654
+		}
+	
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54314
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<float> __9__119_6; // 0x08
+			public static Func<float> __9__119_15; // 0x10
+			public static Func<float> __9__119_16; // 0x18
+			public static Func<float> __9__119_21; // 0x20
+			public static Func<int> __9__119_24; // 0x28
+			public static Func<int> __9__119_25; // 0x30
+	
+			// Constructors
+			static __c() {} // 0x000000018BDA623C-0x000000018BDA62AC
+			public __c() {} // 0x000000018BDA3D84-0x000000018BDA3FEC
+	
+			// Methods
+			internal float _RegisterDebug_b__119_6() => default; // 0x000000018BDA4654-0x000000018BDA49C0
+			internal float _RegisterDebug_b__119_15() => default; // 0x000000018BDA4450-0x000000018BDA45F8
+			internal float _RegisterDebug_b__119_16() => default; // 0x000000018BDA32EC-0x000000018BDA3734
+			internal float _RegisterDebug_b__119_21() => default; // 0x000000018BDA3138-0x000000018BDA32BC
+			internal int _RegisterDebug_b__119_24() => default; // 0x000000018BDA3FEC-0x000000018BDA4434
+			internal int _RegisterDebug_b__119_25() => default; // 0x000000018BDA49C0-0x000000018BDA4A04
 		}
 	
 		// Constructors
-		private ProbeReferenceVolume() {} // 0x00000001837BA1B0-0x00000001837BA750
-		static ProbeReferenceVolume() {} // 0x00000001837BA140-0x00000001837BA1B0
+		private ProbeReferenceVolume() {} // 0x000000018BDA4A04-0x000000018BDA5B5C
+		static ProbeReferenceVolume() {} // 0x0000000185FE4AA0-0x0000000185FE4AF0
 	
 		// Methods
-		private void InvalidateAllCellRefs() {} // 0x0000000189C8A520-0x0000000189C8A568
-		public void SetNumberOfCellsLoadedPerFrame(int numberOfCells) {} // 0x0000000189C8CA90-0x0000000189C8CAA4
-		public void Initialize([IsReadOnly] in ProbeVolumeSystemParameters parameters) {} // 0x0000000189C8A44C-0x0000000189C8A520
-		public void SetEnableStateFromSRP(bool srpEnablesPV) {} // 0x0000000183D83D90-0x0000000183D83DA0
-		internal void ForceSHBand(ProbeVolumeSHBands shBands) {} // 0x0000000189C898C4-0x0000000189C8991C
-		public void Cleanup() {} // 0x0000000189C88628-0x0000000189C886A8
-		public int GetVideoMemoryCost() => default; // 0x0000000189C89FE0-0x0000000189C8A030
-		private void RemoveCell(Cell cell) {} // 0x0000000189C8C4F4-0x0000000189C8C75C
-		private void AddCell(Cell cell, List<ProbeBrickPool.BrickChunkAlloc> chunks) {} // 0x0000000189C87948-0x0000000189C87AD8
-		private bool CheckCompatibilityWithCollection(ProbeVolumeAsset asset, Dictionary<string, ProbeVolumeAsset> collection) => default; // 0x0000000189C883A8-0x0000000189C88560
-		internal void AddPendingAssetLoading(ProbeVolumeAsset asset) {} // 0x0000000189C87AD8-0x0000000189C88274
-		internal void AddPendingAssetRemoval(ProbeVolumeAsset asset) {} // 0x0000000189C88274-0x0000000189C88334
-		internal void RemovePendingAsset(ProbeVolumeAsset asset) {} // 0x0000000189C8C75C-0x0000000189C8C9D0
-		private void PerformPendingIndexChangeAndInit() {} // 0x0000000189C8ADDC-0x0000000189C8AE38
-		internal void SetMinBrickAndMaxSubdiv(float minBrickSize, int maxSubdiv) {} // 0x0000000189C8CA20-0x0000000189C8CA90
-		private void LoadAsset(ProbeVolumeAsset asset) {} // 0x0000000189C8A568-0x0000000189C8A7D0
-		private void PerformPendingLoading() {} // 0x0000000189C8AE38-0x0000000189C8B1A4
-		private void PerformPendingDeletion() {} // 0x0000000189C8AC34-0x0000000189C8ADDC
+		private void InvalidateAllCellRefs() {} // 0x000000018BDA384C-0x000000018BDA3A98
+		public void SetNumberOfCellsLoadedPerFrame(int numberOfCells) {} // 0x0000000185FE49F0-0x0000000185FE4A20
+		public void Initialize(in ProbeVolumeSystemParameters parameters) {} // 0x000000018BDA1B50-0x000000018BDA1BC4
+		public void SetEnableStateFromSRP(bool srpEnablesPV) {} // 0x0000000185FB89F0-0x0000000185FB8A00
+		internal void ForceSHBand(ProbeVolumeSHBands shBands) {} // 0x000000018BDA4434-0x000000018BDA4444
+		public void Cleanup() {} // 0x0000000185FBA490-0x0000000185FBA4C0
+		public int GetVideoMemoryCost() => default; // 0x0000000185FC3410-0x0000000185FC3450
+		private void RemoveCell(Cell cell) {} // 0x0000000185FB0560-0x0000000185FB0570
+		private void AddCell(Cell cell, List<ProbeBrickPool.BrickChunkAlloc> chunks) {} // 0x000000018BDA32D8-0x000000018BDA32EC
+		private bool CheckCompatibilityWithCollection(ProbeVolumeAsset asset, Dictionary<string, ProbeVolumeAsset> collection) => default; // 0x000000018BDA32BC-0x000000018BDA32D8
+		internal void AddPendingAssetLoading(ProbeVolumeAsset asset) {} // 0x000000018BDA4444-0x000000018BDA4450
+		internal void AddPendingAssetRemoval(ProbeVolumeAsset asset) {} // 0x0000000185FB67C0-0x0000000185FB67D0
+		internal void RemovePendingAsset(ProbeVolumeAsset asset) {} // 0x000000018BDA1F30-0x000000018BDA2018
+		private void PerformPendingIndexChangeAndInit() {} // 0x000000018BDA0DE4-0x000000018BDA1164
+		internal void SetMinBrickAndMaxSubdiv(float minBrickSize, int maxSubdiv) {} // 0x000000018BDA5B5C-0x000000018BDA5D10
+		private void LoadAsset(ProbeVolumeAsset asset) {} // 0x000000018BDA6A58-0x000000018BDA6C5C
+		private void PerformPendingLoading() {} // 0x000000018BDA1DD0-0x000000018BDA1E44
+		private void PerformPendingDeletion() {} // 0x0000000185FB8520-0x0000000185FB8530
 		private int GetNumberOfBricksAtSubdiv(Cell cell, out Vector3Int minValidLocalIdxAtMaxRes, out Vector3Int sizeOfValidIndicesAtMaxRes) {
 			minValidLocalIdxAtMaxRes = default;
 			sizeOfValidIndicesAtMaxRes = default;
 			return default;
-		} // 0x0000000189C89AD0-0x0000000189C89F18
+		} // 0x0000000185FB88D0-0x0000000185FB88E0
 		private bool GetCellIndexUpdate(Cell cell, out ProbeBrickIndex.CellIndexUpdateInfo cellUpdateInfo) {
 			cellUpdateInfo = default;
 			return default;
-		} // 0x0000000189C8991C-0x0000000189C89AA0
-		private void LoadPendingCells(bool loadAll = false /* Metadata: 0x01FD44B7 */) {} // 0x0000000189C8A7D0-0x0000000189C8AC18
-		public void PerformPendingOperations(bool loadAllCells = false /* Metadata: 0x01FD44B8 */) {} // 0x0000000189C8B1A4-0x0000000189C8B1E8
-		private void InitProbeReferenceVolume(int allocationSize, ProbeVolumeTextureMemoryBudget memoryBudget, ProbeVolumeSHBands shBands) {} // 0x0000000189C8A030-0x0000000189C8A27C
-		public void SortPendingCells(Vector3 cameraPosition) {} // 0x0000000189C8CDC0-0x0000000189C8CEE4
-		public RuntimeResources GetRuntimeResources() => default; // 0x0000000189C89F18-0x0000000189C89FE0
-		internal void SetTRS(Vector3 position, Quaternion rotation, float minBrickSize) {} // 0x0000000189C8CAA4-0x0000000189C8CB74
-		internal void SetMaxSubdivision(int maxSubdivision) {} // 0x0000000189C8C9D0-0x0000000189C8CA20
-		internal static int CellSize(int subdivisionLevel) => default; // 0x0000000183D83D60-0x0000000183D83D90
-		internal float BrickSize(int subdivisionLevel) => default; // 0x0000000189C88334-0x0000000189C883A8
-		internal float MinBrickSize() => default; // 0x0000000183D56C30-0x0000000183D56C40
-		internal float MaxBrickSize() => default; // 0x0000000189C8AC18-0x0000000189C8AC28
-		internal Matrix4x4 GetRefSpaceToWS() => default; // 0x0000000183D58F00-0x0000000183D58F30
-		internal RefVolTransform GetTransform() => default; // 0x0000000183D626A0-0x0000000183D626E0
-		internal int GetMaxSubdivision() => default; // 0x0000000183D4EC40-0x0000000183D4EC50
-		internal int GetMaxSubdivision(float multiplier) => default; // 0x0000000189C89ABC-0x0000000189C89AD0
-		internal float GetDistanceBetweenProbes(int subdivisionLevel) => default; // 0x0000000189C89AA0-0x0000000189C89ABC
-		internal float MinDistanceBetweenProbes() => default; // 0x0000000189C8AC28-0x0000000189C8AC34
-		public bool DataHasBeenLoaded() => default; // 0x0000000183D554A0-0x0000000183D554B0
-		internal void Clear() {} // 0x0000000189C88714-0x0000000189C887FC
+		} // 0x00000001843F9880-0x00000001843F98F0
+		private void LoadPendingCells(bool loadAll = false /* Metadata: 0x02079CDE */) {} // 0x000000018BDA3A98-0x000000018BDA3C68
+		public void PerformPendingOperations(bool loadAllCells = false /* Metadata: 0x02079CDF */) {} // 0x000000018BDA1D7C-0x000000018BDA1DD0
+		private void InitProbeReferenceVolume(int allocationSize, ProbeVolumeTextureMemoryBudget memoryBudget, ProbeVolumeSHBands shBands) {}
+		public void SortPendingCells(Vector3 cameraPosition) {}
+		public RuntimeResources GetRuntimeResources() => default; // 0x000000018BDA698C-0x000000018BDA6A58
+		internal void SetTRS(Vector3 position, Quaternion rotation, float minBrickSize) {} // 0x000000018BDA6390-0x000000018BDA65DC
+		internal void SetMaxSubdivision(int maxSubdivision) {} // 0x000000018BDA2BA8-0x000000018BDA30E0
+		internal static int CellSize(int subdivisionLevel) => default; // 0x000000018BDA1EC4-0x000000018BDA1F30
+		internal float BrickSize(int subdivisionLevel) => default; // 0x000000018BDA2018-0x000000018BDA2BA8
+		internal float MinBrickSize() => default; // 0x000000018859A3EC-0x000000018859A3F4
+		internal float MaxBrickSize() => default; // 0x00000001858ECA50-0x00000001858ECAC0
+		internal Matrix4x4 GetRefSpaceToWS() => default; // 0x000000018BDA6700-0x000000018BDA6720
+		internal RefVolTransform GetTransform() => default; // 0x000000018BDA6800-0x000000018BDA6820
+		internal int GetMaxSubdivision() => default; // 0x000000018BDA68CC-0x000000018BDA68EC
+		internal int GetMaxSubdivision(float multiplier) => default; // 0x000000018BDA68EC-0x000000018BDA690C
+		internal float GetDistanceBetweenProbes(int subdivisionLevel) => default; // 0x000000018BDA690C-0x000000018BDA692C
+		internal float MinDistanceBetweenProbes() => default; // 0x000000018BDA692C-0x000000018BDA694C
+		public bool DataHasBeenLoaded() => default; // 0x000000018BDA694C-0x000000018BDA696C
+		internal void Clear() {} // 0x000000018BDA696C-0x000000018BDA698C
 		private RegId AddBricks(List<ProbeBrickIndex.Brick> bricks, ProbeBrickPool.DataLocation dataloc, ProbeBrickIndex.CellIndexUpdateInfo cellUpdateInfo, out List<ProbeBrickPool.BrickChunkAlloc> ch_list) {
 			ch_list = default;
 			return default;
-		} // 0x0000000189C875C8-0x0000000189C87948
-		private void ReleaseBricks(RegId id) {} // 0x0000000189C8C340-0x0000000189C8C4F4
-		public void UpdateConstantBuffer(CommandBuffer cmd, ProbeVolumeShadingParameters parameters) {} // 0x0000000189C8D23C-0x0000000189C8D440
-		private void CleanupLoadedData() {} // 0x0000000189C885B4-0x0000000189C88628
-		public void RenderDebug(Camera camera) {} // 0x00000001825B1100-0x00000001825B1170
-		private void InitializeDebug(Mesh debugProbeMesh, Shader debugProbeShader) {} // 0x0000000189C8A27C-0x0000000189C8A44C
-		private void CleanupDebug() {} // 0x0000000189C88560-0x0000000189C885B4
-		private void RefreshDebug<T>(DebugUI.Field<T> field, T value) {}
-		private void DebugCellIndexChanged<T>(DebugUI.Field<T> field, T value) {}
-		private void RegisterDebug() {} // 0x0000000189C8B1E8-0x0000000189C8C340
-		private void UnregisterDebug(bool destroyPanel) {} // 0x0000000189C8D170-0x0000000189C8D23C
-		private bool ShouldCullCell(Vector3 cellPosition, Transform cameraTransform, Plane[] frustumPlanes) => default; // 0x0000000189C8CB74-0x0000000189C8CDC0
-		private void DrawProbeDebug(Camera camera) {} // 0x0000000189C8938C-0x0000000189C898C4
-		private void ClearDebugData() {} // 0x0000000189C886A8-0x0000000189C88714
-		private void CreateInstancedProbes() {} // 0x0000000189C887FC-0x0000000189C8938C
-		private void OnClearLightingdata() {} // 0x000000018645F904-0x000000018645F90C
+		} // 0x000000018BDA6740-0x000000018BDA6760
+		private void ReleaseBricks(RegId id) {} // 0x000000018BDA6720-0x000000018BDA6740
+		public void UpdateConstantBuffer(CommandBuffer cmd, ProbeVolumeShadingParameters parameters) {} // 0x000000018BDA6740-0x000000018BDA6760
+		private void CleanupLoadedData() {} // 0x000000018BDA6720-0x000000018BDA6740
+		public void RenderDebug(Camera camera) {} // 0x000000018BDA67A0-0x000000018BDA67C0
+		private void InitializeDebug(Mesh debugProbeMesh, Shader debugProbeShader) {} // 0x000000018BDA67C0-0x000000018BDA67E0
+		private void CleanupDebug() {} // 0x000000018BDA67E0-0x000000018BDA6800
+		private void RefreshDebug<T>(DebugUI.Field<T> field, T value) {} // 0x000000018BDA6820-0x000000018BDA6840
+		private void DebugCellIndexChanged<T>(DebugUI.Field<T> field, T value) {} // 0x000000018BDA6840-0x000000018BDA6860
+		private void RegisterDebug() {} // 0x000000018BDA6860-0x000000018BDA68CC
+		private void UnregisterDebug(bool destroyPanel) {} // 0x0000000185FBAD70-0x0000000185FBAD80
+		private bool ShouldCullCell(Vector3 cellPosition, Transform cameraTransform, Plane[] frustumPlanes) => default; // 0x0000000185492010-0x0000000185492020
+		private void DrawProbeDebug(Camera camera) {} // 0x000000018BD9B7CC-0x000000018BD9B84C
+		private void ClearDebugData() {} // 0x0000000185492010-0x0000000185492020
+		private void CreateInstancedProbes() {} // 0x000000018BDB2E7C-0x000000018BDB3284
+		private void OnClearLightingdata() {} // 0x0000000185FE4AF0-0x0000000185FE4B50
+		private bool _RegisterDebug_b__119_0() => default; // 0x000000018BDB2590-0x000000018BDB28A0
+		private void _RegisterDebug_b__119_1(bool value) {} // 0x000000018BDB28A0-0x000000018BDB2A20
+		private bool _RegisterDebug_b__119_2() => default; // 0x000000018BDB2D90-0x000000018BDB2E7C
+		private void _RegisterDebug_b__119_3(bool value) {} // 0x000000018BDB2BC4-0x000000018BDB2D90
+		private float _RegisterDebug_b__119_4() => default; // 0x000000018BDB2A20-0x000000018BDB2BC4
+		private void _RegisterDebug_b__119_5(float value) {} // 0x000000018646D60C-0x000000018646D614
+		private bool _RegisterDebug_b__119_7() => default; // 0x0000000185FBD010-0x0000000185FBD020
+		private void _RegisterDebug_b__119_8(bool value) {} // 0x0000000188645D08-0x0000000188645D10
+		private int _RegisterDebug_b__119_9() => default; // 0x000000018B6328C0-0x000000018B6328C8
+		private void _RegisterDebug_b__119_10(int value) {} // 0x000000018BDA9834-0x000000018BDA98E0
+		private int _RegisterDebug_b__119_11() => default; // 0x00000001818226B0-0x00000001818226C0
+		private void _RegisterDebug_b__119_12(int value) {} // 0x0000000185492010-0x0000000185492020
+		private float _RegisterDebug_b__119_13() => default; // 0x000000018BDB252C-0x000000018BDB2590
+		private void _RegisterDebug_b__119_14(float value) {} // 0x0000000185492010-0x0000000185492020
+		private float _RegisterDebug_b__119_17() => default; // 0x0000000183908D00-0x0000000183908D10
+		private void _RegisterDebug_b__119_18(float value) {} // 0x0000000185FBB810-0x0000000185FBB820
+		private float _RegisterDebug_b__119_19() => default; // 0x0000000185FBF670-0x0000000185FBF680
+		private void _RegisterDebug_b__119_20(float value) {} // 0x0000000183908D00-0x0000000183908D10
+		private int _RegisterDebug_b__119_22() => default; // 0x00000001813AE580-0x00000001813AE590
+		private void _RegisterDebug_b__119_23(int v) {} // 0x000000018BDB2478-0x000000018BDB24C8
 	}
 
-	[GenerateHLSL(PackingRules.Exact, true, false, false, 1, false, false, false, -1, "F:\\Build\\Release_v1d2\\Windows\\Rel\\Proj\\Packages\\com.unity.render-pipelines.core\\Runtime\\Lighting\\ProbeVolume\\ProbeReferenceVolume.Debug.cs")]
-	public enum DebugProbeShadingMode // TypeDefIndex: 53323
+	public enum DebugProbeShadingMode // TypeDefIndex: 54316
 	{
 		SH = 0,
 		Validity = 1,
@@ -678,7 +785,7 @@ namespace UnityEngine.Experimental.Rendering
 		Size = 3
 	}
 
-	internal class ProbeVolumeDebug // TypeDefIndex: 53324
+	internal class ProbeVolumeDebug // TypeDefIndex: 54317
 	{
 		// Fields
 		public bool drawProbes; // 0x10
@@ -695,101 +802,76 @@ namespace UnityEngine.Experimental.Rendering
 		public float exposureCompensation; // 0x30
 	
 		// Constructors
-		public ProbeVolumeDebug() {} // 0x0000000183D83DD0-0x0000000183D83E00
+		public ProbeVolumeDebug() {} // 0x0000000185FE4A60-0x0000000185FE4A90
 	}
 
-	public sealed class ProbeReferenceVolumeProfile : ScriptableObject // TypeDefIndex: 53326
+	public sealed class ProbeReferenceVolumeProfile : ScriptableObject // TypeDefIndex: 54319
 	{
 		// Fields
-		[SerializeField]
 		private Version version; // 0x18
-		[Range(2f, 5f)]
 		public int simplificationLevels; // 0x1C
-		[Min(0.1f)]
 		public float minDistanceBetweenProbes; // 0x20
 	
 		// Properties
-		public int cellSizeInBricks { get => default; } // 0x0000000183D83D20-0x0000000183D83D50 
-		public int maxSubdivision { get => default; } // 0x0000000183D83D50-0x0000000183D83D60 
-		public float minBrickSize { get => default; } // 0x0000000189C875AC-0x0000000189C875C8 
-		public float cellSizeInMeters { get => default; } // 0x0000000189C87560-0x0000000189C875AC 
+		public int cellSizeInBricks { get => default; } // 0x0000000185FE49B0-0x0000000185FE49E0 
+		public int maxSubdivision { get => default; } // 0x0000000185FE49E0-0x0000000185FE49F0 
+		public float minBrickSize { get => default; } // 0x000000018BDA0DC8-0x000000018BDA0DE4 
+		public float cellSizeInMeters { get => default; } // 0x000000018BDA0D7C-0x000000018BDA0DC8 
 	
 		// Nested types
-		internal enum Version // TypeDefIndex: 53325
+		internal enum Version // TypeDefIndex: 54318
 		{
 			Initial = 0
 		}
 	
 		// Constructors
-		public ProbeReferenceVolumeProfile() {} // 0x0000000189C874F4-0x0000000189C87560
+		public ProbeReferenceVolumeProfile() {} // 0x000000018BDA0D10-0x000000018BDA0D7C
 	
 		// Methods
-		private void OnEnable() {} // 0x0000000189C874A0-0x0000000189C874F4
-		public bool IsEquivalent(ProbeReferenceVolumeProfile otherProfile) => default; // 0x0000000189C87438-0x0000000189C874A0
+		private void OnEnable() {} // 0x000000018BDA0CBC-0x000000018BDA0D10
+		public bool IsEquivalent(ProbeReferenceVolumeProfile otherProfile) => default; // 0x000000018BDA0C54-0x000000018BDA0CBC
 	}
 
-	[AddComponentMenu("Light/Probe Volume (Experimental)")]
-	[ExecuteAlways]
-	public class ProbeVolume : MonoBehaviour // TypeDefIndex: 53327
+	public class ProbeVolume : MonoBehaviour // TypeDefIndex: 54320
 	{
 		// Fields
 		public bool globalVolume; // 0x18
 		public Vector3 size; // 0x1C
-		[HideInInspector]
-		[Range(0f, 2f)]
 		public float geometryDistanceOffset; // 0x28
 		public LayerMask objectLayerMask; // 0x2C
-		[HideInInspector]
 		public int lowestSubdivLevelOverride; // 0x30
-		[HideInInspector]
 		public int highestSubdivLevelOverride; // 0x34
-		[HideInInspector]
 		public bool overridesSubdivLevels; // 0x38
-		[SerializeField]
 		internal bool mightNeedRebaking; // 0x39
-		[SerializeField]
 		internal Matrix4x4 cachedTransform; // 0x3C
-		[SerializeField]
 		internal int cachedHashCode; // 0x7C
 	
 		// Constructors
-		public ProbeVolume() {} // 0x0000000189C8FFE4-0x0000000189C90018
+		public ProbeVolume() {} // 0x000000018BDA9800-0x000000018BDA9834
 	}
 
-	[PreferBinarySerialization]
-	internal class ProbeVolumeAsset : ScriptableObject // TypeDefIndex: 53329
+	internal class ProbeVolumeAsset : ScriptableObject // TypeDefIndex: 54322
 	{
 		// Fields
-		[SerializeField]
 		protected internal int m_Version; // 0x18
-		[SerializeField]
 		internal List<ProbeReferenceVolume.Cell> cells; // 0x20
-		[SerializeField]
 		internal Vector3Int maxCellPosition; // 0x28
-		[SerializeField]
 		internal Vector3Int minCellPosition; // 0x34
-		[SerializeField]
 		internal Bounds globalBounds; // 0x40
-		[SerializeField]
 		internal ProbeVolumeSHBands bands; // 0x58
-		[SerializeField]
 		private string m_AssetFullPath; // 0x60
-		[SerializeField]
 		internal int cellSizeInBricks; // 0x68
-		[SerializeField]
 		internal float minDistanceBetweenProbes; // 0x6C
-		[SerializeField]
 		internal int simplificationLevels; // 0x70
 	
 		// Properties
-		[SerializeField]
-		public int Version { get => default; } // 0x00000001820D1AC0-0x00000001820D1AD0 
-		internal int maxSubdivision { get => default; } // 0x0000000183D83DC0-0x0000000183D83DD0 
-		internal float minBrickSize { get => default; } // 0x0000000189C8D598-0x0000000189C8D5B4 
+		public int Version { get => default; } // 0x00000001813AE560-0x00000001813AE570 
+		internal int maxSubdivision { get => default; } // 0x0000000185FE4A50-0x0000000185FE4A60 
+		internal float minBrickSize { get => default; } // 0x000000018BDA6DB4-0x000000018BDA6DD0 
 	
 		// Nested types
 		[Serializable]
-		internal enum AssetVersion // TypeDefIndex: 53328
+		internal enum AssetVersion // TypeDefIndex: 54321
 		{
 			First = 0,
 			AddProbeVolumesAtlasEncodingModes = 1,
@@ -800,15 +882,15 @@ namespace UnityEngine.Experimental.Rendering
 		}
 	
 		// Constructors
-		public ProbeVolumeAsset() {} // 0x0000000189C8D4F0-0x0000000189C8D598
+		public ProbeVolumeAsset() {} // 0x000000018BDA6D0C-0x000000018BDA6DB4
 	
 		// Methods
-		internal bool CompatibleWith(ProbeVolumeAsset otherAsset) => default; // 0x0000000189C8D490-0x0000000189C8D4F0
-		public string GetSerializedFullPath() => default; // 0x0000000183D4EB00-0x0000000183D4EB10
+		internal bool CompatibleWith(ProbeVolumeAsset otherAsset) => default; // 0x000000018BDA6CAC-0x000000018BDA6D0C
+		public string GetSerializedFullPath() => default; // 0x0000000185FB0530-0x0000000185FB0540
 	}
 
 	[Serializable]
-	internal struct ProbeDilationSettings // TypeDefIndex: 53330
+	internal struct ProbeDilationSettings // TypeDefIndex: 54323
 	{
 		// Fields
 		public bool enableDilation; // 0x00
@@ -819,7 +901,7 @@ namespace UnityEngine.Experimental.Rendering
 	}
 
 	[Serializable]
-	internal struct VirtualOffsetSettings // TypeDefIndex: 53331
+	internal struct VirtualOffsetSettings // TypeDefIndex: 54324
 	{
 		// Fields
 		public bool useVirtualOffset; // 0x00
@@ -828,72 +910,62 @@ namespace UnityEngine.Experimental.Rendering
 	}
 
 	[Serializable]
-	internal struct ProbeVolumeBakingProcessSettings // TypeDefIndex: 53332
+	internal struct ProbeVolumeBakingProcessSettings // TypeDefIndex: 54325
 	{
 		// Fields
 		public ProbeDilationSettings dilationSettings; // 0x00
 		public VirtualOffsetSettings virtualOffsetSettings; // 0x14
 	}
 
-	internal enum ProbeVolumeState // TypeDefIndex: 53333
+	internal enum ProbeVolumeState // TypeDefIndex: 54326
 	{
 		Default = 0,
 		Invalid = 999
 	}
 
-	[AddComponentMenu("")]
-	[ExecuteAlways]
-	internal class ProbeVolumePerSceneData : MonoBehaviour, ISerializationCallbackReceiver // TypeDefIndex: 53335
+	internal class ProbeVolumePerSceneData : MonoBehaviour, ISerializationCallbackReceiver // TypeDefIndex: 54328
 	{
 		// Fields
 		internal Dictionary<ProbeVolumeState, ProbeVolumeAsset> assets; // 0x18
-		[SerializeField]
 		private List<SerializableAssetItem> serializedAssets; // 0x20
 		private ProbeVolumeState m_CurrentState; // 0x28
 		private ProbeVolumeState m_PreviousState; // 0x2C
 	
 		// Nested types
 		[Serializable]
-		private struct SerializableAssetItem // TypeDefIndex: 53334
+		private struct SerializableAssetItem // TypeDefIndex: 54327
 		{
 			// Fields
-			[SerializeField]
 			public ProbeVolumeState state; // 0x00
-			[SerializeField]
 			public ProbeVolumeAsset asset; // 0x08
 		}
 	
 		// Constructors
-		public ProbeVolumePerSceneData() {} // 0x0000000189C8DF3C-0x0000000189C8DFC4
+		public ProbeVolumePerSceneData() {} // 0x000000018BDA7758-0x000000018BDA77E0
 	
 		// Methods
-		public void OnAfterDeserialize() {} // 0x0000000189C8D7F0-0x0000000189C8D984
-		public void OnBeforeSerialize() {} // 0x0000000189C8D984-0x0000000189C8DBB4
-		internal void StoreAssetForState(ProbeVolumeState state, ProbeVolumeAsset asset) {} // 0x0000000189C8DDC4-0x0000000189C8DE28
-		internal void InvalidateAllAssets() {} // 0x0000000189C8D62C-0x0000000189C8D7F0
-		internal ProbeVolumeAsset GetCurrentStateAsset() => default; // 0x0000000189C8D5B4-0x0000000189C8D62C
-		internal void QueueAssetLoading() {} // 0x0000000189C8DBC4-0x0000000189C8DCCC
-		internal void QueueAssetRemoval() {} // 0x0000000189C8DCCC-0x0000000189C8DDC4
-		private void OnEnable() {} // 0x0000000189C8DBBC-0x0000000189C8DBC4
-		private void OnDisable() {} // 0x0000000189C8DBB4-0x0000000189C8DBBC
-		private void OnDestroy() {} // 0x0000000189C8DBB4-0x0000000189C8DBBC
-		private void Update() {} // 0x0000000189C8DE28-0x0000000189C8DF3C
+		public void OnAfterDeserialize() {} // 0x000000018BDA700C-0x000000018BDA71A0
+		public void OnBeforeSerialize() {} // 0x000000018BDA71A0-0x000000018BDA73D0
+		internal void StoreAssetForState(ProbeVolumeState state, ProbeVolumeAsset asset) {} // 0x000000018BDA75E0-0x000000018BDA7644
+		internal void InvalidateAllAssets() {} // 0x000000018BDA6E48-0x000000018BDA700C
+		internal ProbeVolumeAsset GetCurrentStateAsset() => default; // 0x000000018BDA6DD0-0x000000018BDA6E48
+		internal void QueueAssetLoading() {} // 0x000000018BDA73E0-0x000000018BDA74E8
+		internal void QueueAssetRemoval() {} // 0x000000018BDA74E8-0x000000018BDA75E0
+		private void OnEnable() {} // 0x000000018BDA73D8-0x000000018BDA73E0
+		private void OnDisable() {} // 0x000000018BDA73D0-0x000000018BDA73D8
+		private void OnDestroy() {} // 0x000000018BDA73D0-0x000000018BDA73D8
+		private void Update() {} // 0x000000018BDA7644-0x000000018BDA7758
 	}
 
 	[Serializable]
-	public class ProbeVolumeSceneData : ISerializationCallbackReceiver // TypeDefIndex: 53342
+	public class ProbeVolumeSceneData : ISerializationCallbackReceiver // TypeDefIndex: 54335
 	{
 		// Fields
 		private static PropertyInfo s_SceneGUID; // 0x00
-		[SerializeField]
 		private List<SerializableBoundItem> serializedBounds; // 0x10
-		[SerializeField]
 		private List<SerializableHasPVItem> serializedHasVolumes; // 0x18
-		[SerializeField]
 		private List<SerializablePVProfile> serializedProfiles; // 0x20
-		[SerializeField]
 		private List<SerializablePVBakeSettings> serializedBakeSettings; // 0x28
-		[SerializeField]
 		private List<BakingSet> serializedBakingSets; // 0x30
 		internal UnityEngine.Object parentAsset; // 0x38
 		internal string parentSceneDataPropertyName; // 0x40
@@ -905,47 +977,39 @@ namespace UnityEngine.Experimental.Rendering
 	
 		// Nested types
 		[Serializable]
-		private struct SerializableBoundItem // TypeDefIndex: 53336
+		private struct SerializableBoundItem // TypeDefIndex: 54329
 		{
 			// Fields
-			[SerializeField]
 			public string sceneGUID; // 0x00
-			[SerializeField]
 			public Bounds bounds; // 0x08
 		}
 	
 		[Serializable]
-		private struct SerializableHasPVItem // TypeDefIndex: 53337
+		private struct SerializableHasPVItem // TypeDefIndex: 54330
 		{
 			// Fields
-			[SerializeField]
 			public string sceneGUID; // 0x00
-			[SerializeField]
 			public bool hasProbeVolumes; // 0x08
 		}
 	
 		[Serializable]
-		private struct SerializablePVProfile // TypeDefIndex: 53338
+		private struct SerializablePVProfile // TypeDefIndex: 54331
 		{
 			// Fields
-			[SerializeField]
 			public string sceneGUID; // 0x00
-			[SerializeField]
 			public ProbeReferenceVolumeProfile profile; // 0x08
 		}
 	
 		[Serializable]
-		private struct SerializablePVBakeSettings // TypeDefIndex: 53339
+		private struct SerializablePVBakeSettings // TypeDefIndex: 54332
 		{
 			// Fields
-			[SerializeField]
 			public string sceneGUID; // 0x00
-			[SerializeField]
 			public ProbeVolumeBakingProcessSettings settings; // 0x08
 		}
 	
 		[Serializable]
-		internal class BakingSet // TypeDefIndex: 53340
+		internal class BakingSet // TypeDefIndex: 54333
 		{
 			// Fields
 			public string name; // 0x10
@@ -954,51 +1018,65 @@ namespace UnityEngine.Experimental.Rendering
 			public ProbeReferenceVolumeProfile profile; // 0x40
 	
 			// Constructors
-			public BakingSet() {} // 0x0000000189C81EE4-0x0000000189C81F5C
+			public BakingSet() {} // 0x000000018BDA7880-0x000000018BDA7944
+		}
+	
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54334
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<SerializablePVProfile, string> __9__22_0; // 0x08
+	
+			// Constructors
+			static __c() {} // 0x000000018BDA94F4-0x000000018BDA9800
+			public __c() {} // 0x000000018BDA8DD8-0x000000018BDA8E0C
+	
+			// Methods
+			internal string _UpdateBakingSets_b__22_0(SerializablePVProfile s) => default; // 0x000000018BDA7A20-0x000000018BDA827C
 		}
 	
 		// Constructors
 		public ProbeVolumeSceneData() {} // Dummy constructor
-		public ProbeVolumeSceneData(UnityEngine.Object parentAsset, string parentSceneDataPropertyName) {} // 0x0000000189C8FCD8-0x0000000189C8FFE4
-		static ProbeVolumeSceneData() {} // 0x0000000189C8FC28-0x0000000189C8FCD8
+		public ProbeVolumeSceneData(UnityEngine.Object parentAsset, string parentSceneDataPropertyName) {} // 0x000000018BDA827C-0x000000018BDA8DD8
+		static ProbeVolumeSceneData() {} // 0x000000018305C9B0-0x000000018305C9C0
 	
 		// Methods
-		private string GetSceneGUID(Scene scene) => default; // 0x0000000189C8E064-0x0000000189C8E128
-		public void SetParentObject(UnityEngine.Object parent, string parentSceneDataPropertyName) {} // 0x0000000189C8F5BC-0x0000000189C8F5F0
-		public void OnAfterDeserialize() {} // 0x0000000189C8E204-0x0000000189C8EA60
-		private void UpdateBakingSets() {} // 0x0000000189C8F8AC-0x0000000189C8FC28
-		public void OnBeforeSerialize() {} // 0x0000000189C8EA60-0x0000000189C8F5BC
-		internal BakingSet CreateNewBakingSet(string name) => default; // 0x0000000189C8DFC4-0x0000000189C8E064
-		private void InitializeBakingSet(BakingSet set, string name) {} // 0x0000000189C8E128-0x0000000189C8E204
-		internal void SyncBakingSetSettings() {} // 0x0000000189C8F5F0-0x0000000189C8F8AC
+		private string GetSceneGUID(Scene scene) => default; // 0x000000018BDA90C8-0x000000018BDA9444
+		public void SetParentObject(UnityEngine.Object parent, string parentSceneDataPropertyName) {} // 0x000000018BDA77E0-0x000000018BDA7880
+		public void OnAfterDeserialize() {} // 0x000000018BDA7944-0x000000018BDA7A20
+		private void UpdateBakingSets() {} // 0x000000018BDA8E0C-0x000000018BDA90C8
+		public void OnBeforeSerialize() {} // 0x000000018BDA9444-0x000000018BDA94F4
+		internal BakingSet CreateNewBakingSet(string name) => default; // 0x000000018BD9B700-0x000000018BD9B778
+		private void InitializeBakingSet(BakingSet set, string name) {} // 0x000000018BDB24C8-0x000000018BDB252C
+		internal void SyncBakingSetSettings() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[Obsolete("Use the updated RendererList API which is defined in the UnityEngine.Rendering.RendererUtils namespace.")]
-	public struct RendererList // TypeDefIndex: 53343
+	public struct RendererList // TypeDefIndex: 54336
 	{
 		// Fields
 		private static readonly ShaderTagId s_EmptyName; // 0x00
 		public static readonly RendererList nullRendererList; // 0x08
+		private bool _isValid_k__BackingField; // 0x00
 		public CullingResults cullingResult; // 0x08
 		public DrawingSettings drawSettings; // 0x18
 		public FilteringSettings filteringSettings; // 0x164
 		public RenderStateBlock? stateBlock; // 0x184
 	
 		// Properties
-		public bool isValid { [IsReadOnly] get; private set; } // 0x0000000183D51020-0x0000000183D51030 0x0000000183D4F9D0-0x0000000183D4F9E0
+		public bool isValid { get; private set; } // 0x00000001835E3010-0x00000001835E3020 0x0000000185FB0F60-0x0000000185FB0F70
 	
 		// Constructors
 		static RendererList() {
 			s_EmptyName = default;
 			nullRendererList = default;
-		} // 0x0000000189C988F8-0x0000000189C98974
+		} // 0x000000018BDB2114-0x000000018BDB2190
 	
 		// Methods
-		public static RendererList Create([IsReadOnly] in UnityEngine.Experimental.Rendering.RendererListDesc desc) => default; // 0x0000000189C9835C-0x0000000189C988F8
+		public static RendererList Create(in UnityEngine.Experimental.Rendering.RendererListDesc desc) => default; // 0x000000018BDB1B78-0x000000018BDB2114
 	}
 
-	[Obsolete("Use the updated RendererList API which is defined in the UnityEngine.Rendering.RendererUtils namespace.")]
-	public struct RendererListDesc // TypeDefIndex: 53344
+	public struct RendererListDesc // TypeDefIndex: 54337
 	{
 		// Fields
 		public SortingCriteria sortingCriteria; // 0x00
@@ -1009,12 +1087,16 @@ namespace UnityEngine.Experimental.Rendering
 		public bool excludeObjectMotionVectors; // 0x88
 		public int layerMask; // 0x8C
 		public int overrideMaterialPassIndex; // 0x90
+		private CullingResults _cullingResult_k__BackingField; // 0x98
+		private Camera _camera_k__BackingField; // 0xA8
+		private ShaderTagId _passName_k__BackingField; // 0xB0
+		private ShaderTagId[] _passNames_k__BackingField; // 0xB8
 	
 		// Properties
-		internal CullingResults cullingResult { [IsReadOnly] get; private set; } // 0x0000000183D58680-0x0000000183D58690 0x0000000183D83E00-0x0000000183D83E10
-		internal Camera camera { [IsReadOnly] get; set; } // 0x0000000183D4EB10-0x0000000183D4EB20 0x000000018554A7F4-0x000000018554A808
-		internal ShaderTagId passName { [IsReadOnly] get; private set; } // 0x0000000183D59C80-0x0000000183D59C90 0x0000000183D59C90-0x0000000183D59CA0
-		internal ShaderTagId[] passNames { [IsReadOnly] get; private set; } // 0x0000000183D4E750-0x0000000183D4E760 0x00000001858AAF64-0x00000001858AAF78
+		internal CullingResults cullingResult { get; private set; } // 0x0000000185FB9E70-0x0000000185FB9E80 0x0000000185FE4A90-0x0000000185FE4AA0
+		internal Camera camera { get; set; } // 0x000000018349D730-0x000000018349D740 0x000000018774BD8C-0x000000018774BDA0
+		internal ShaderTagId passName { get; private set; } // 0x0000000185FBB310-0x0000000185FBB320 0x0000000185FBB320-0x0000000185FBB330
+		internal ShaderTagId[] passNames { get; private set; } // 0x000000018349D710-0x000000018349D720 0x0000000187A47500-0x0000000187A47514
 	
 		// Constructors
 		public RendererListDesc(ShaderTagId passName, CullingResults cullingResult, Camera camera) : this() {
@@ -1026,7 +1108,11 @@ namespace UnityEngine.Experimental.Rendering
 			excludeObjectMotionVectors = default;
 			layerMask = default;
 			overrideMaterialPassIndex = default;
-		} // 0x0000000189C982DC-0x0000000189C9835C
+			<cullingResult>k__BackingField = default;
+			<camera>k__BackingField = default;
+			<passName>k__BackingField = default;
+			<passNames>k__BackingField = default;
+		} // 0x000000018BDB1AF8-0x000000018BDB1B78
 		public RendererListDesc(ShaderTagId[] passNames, CullingResults cullingResult, Camera camera) : this() {
 			sortingCriteria = default;
 			rendererConfiguration = default;
@@ -1036,24 +1122,27 @@ namespace UnityEngine.Experimental.Rendering
 			excludeObjectMotionVectors = default;
 			layerMask = default;
 			overrideMaterialPassIndex = default;
-		} // 0x0000000189C98224-0x0000000189C982DC
+			<cullingResult>k__BackingField = default;
+			<camera>k__BackingField = default;
+			<passName>k__BackingField = default;
+			<passNames>k__BackingField = default;
+		} // 0x000000018BDB1A40-0x000000018BDB1AF8
 	
 		// Methods
-		public bool IsValid() => default; // 0x0000000189C98184-0x0000000189C98224
+		public bool IsValid() => default; // 0x000000018BDB19A0-0x000000018BDB1A40
 	}
 }
 
 namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 {
-	[Flags]
-	public enum DepthAccess // TypeDefIndex: 53345
+	public enum DepthAccess // TypeDefIndex: 54338
 	{
 		Read = 1,
 		Write = 2,
 		ReadWrite = 3
 	}
 
-	public class RenderGraphContext // TypeDefIndex: 53346
+	public class RenderGraphContext // TypeDefIndex: 54339
 	{
 		// Fields
 		public ScriptableRenderContext renderContext; // 0x10
@@ -1062,10 +1151,10 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		public RenderGraphDefaultResources defaultResources; // 0x28
 	
 		// Constructors
-		public RenderGraphContext() {} // 0x000000018350B670-0x000000018350B680
+		public RenderGraphContext() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public struct RenderGraphParameters // TypeDefIndex: 53347
+	public struct RenderGraphParameters // TypeDefIndex: 54340
 	{
 		// Fields
 		public string executionName; // 0x00
@@ -1075,7 +1164,7 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		public CommandBuffer commandBuffer; // 0x18
 	}
 
-	public struct RenderGraphExecution : IDisposable // TypeDefIndex: 53348
+	public struct RenderGraphExecution : IDisposable // TypeDefIndex: 54341
 	{
 		// Fields
 		private RenderGraph renderGraph; // 0x00
@@ -1083,13 +1172,13 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		// Constructors
 		internal RenderGraphExecution(RenderGraph renderGraph) {
 			this.renderGraph = default;
-		} // 0x00000001842715A0-0x00000001842715A8
+		} // 0x000000018646FE2C-0x000000018646FE34
 	
 		// Methods
-		public void Dispose() {} // 0x0000000189C90B38-0x0000000189C90B58
+		public void Dispose() {} // 0x000000018BDAA354-0x000000018BDAA374
 	}
 
-	internal class RenderGraphDebugParams // TypeDefIndex: 53350
+	internal class RenderGraphDebugParams // TypeDefIndex: 54343
 	{
 		// Fields
 		private DebugUI.Widget[] m_DebugItems; // 0x10
@@ -1103,7 +1192,7 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		public bool logResources; // 0x26
 	
 		// Nested types
-		private static class Strings // TypeDefIndex: 53349
+		private static class Strings // TypeDefIndex: 54342
 		{
 			// Fields
 			public static readonly DebugUI.Widget.NameAndTooltip ClearRenderTargetsAtCreation; // 0x00
@@ -1114,28 +1203,37 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 			public static readonly DebugUI.Widget.NameAndTooltip LogResources; // 0x50
 	
 			// Constructors
-			static Strings() {} // 0x0000000189C98980-0x0000000189C98C5C
+			static Strings() {} // 0x000000018BDA9AC0-0x000000018BDAA22C
 		}
 	
 		// Constructors
-		public RenderGraphDebugParams() {} // 0x000000018350B670-0x000000018350B680
+		public RenderGraphDebugParams() {} // 0x00000001813ECBF0-0x00000001813ECC00
 	
 		// Methods
-		public void RegisterDebug(string name, DebugUI.Panel debugPanel = null) {} // 0x0000000189C902A4-0x0000000189C90A10
-		public void UnRegisterDebug(string name) {} // 0x0000000189C90AC8-0x0000000189C90B38
+		public void RegisterDebug(string name, DebugUI.Panel debugPanel = null) {} // 0x000000018BDAA2E4-0x000000018BDAA354
+		public void UnRegisterDebug(string name) {} // 0x0000000185492010-0x0000000185492020
+		private bool _RegisterDebug_b__10_0() => default; // 0x00000001813EE9B0-0x00000001813EE9C0
+		private void _RegisterDebug_b__10_1(bool value) {} // 0x00000001813FF330-0x00000001813FF340
+		private bool _RegisterDebug_b__10_2() => default; // 0x00000001813FF340-0x00000001813FF350
+		private void _RegisterDebug_b__10_3(bool value) {} // 0x0000000185FB8A60-0x0000000185FB8A70
+		private bool _RegisterDebug_b__10_4() => default; // 0x0000000185FB8A80-0x0000000185FB8A90
+		private void _RegisterDebug_b__10_5(bool value) {} // 0x0000000185FB0810-0x0000000185FB0820
+		private bool _RegisterDebug_b__10_6() => default; // 0x0000000185FB0820-0x0000000185FB0830
+		private void _RegisterDebug_b__10_7(bool value) {} // 0x000000018BDAA22C-0x000000018BDAA288
+		private void _RegisterDebug_b__10_8() {} // 0x000000018BDAA288-0x000000018BDAA2E4
+		private void _RegisterDebug_b__10_9() {} // 0x000000018BDB219C-0x000000018BDB2478
 	}
 
-	public delegate void RenderFunc<PassData>(PassData data, RenderGraphContext renderGraphContext); // TypeDefIndex: 53351; 0x00000000-0x00000000
+	public delegate void RenderFunc<PassData>(PassData data, RenderGraphContext renderGraphContext); // TypeDefIndex: 54344; 0x00000000-0x00000000
 
-	internal class RenderGraphDebugData // TypeDefIndex: 53354
+	internal class RenderGraphDebugData // TypeDefIndex: 54347
 	{
 		// Fields
 		public List<PassDebugData> passList; // 0x10
 		public List<ResourceDebugData>[] resourceLists; // 0x18
 	
 		// Nested types
-		[DebuggerDisplay("PassDebug: {name}")]
-		public struct PassDebugData // TypeDefIndex: 53352
+		public struct PassDebugData // TypeDefIndex: 54345
 		{
 			// Fields
 			public string name; // 0x00
@@ -1145,8 +1243,7 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 			public bool generateDebugData; // 0x19
 		}
 	
-		[DebuggerDisplay("ResourceDebug: {name} [{creationPassIndex}:{releasePassIndex}]")]
-		public struct ResourceDebugData // TypeDefIndex: 53353
+		public struct ResourceDebugData // TypeDefIndex: 54346
 		{
 			// Fields
 			public string name; // 0x00
@@ -1158,13 +1255,13 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		}
 	
 		// Constructors
-		public RenderGraphDebugData() {} // 0x0000000189C90204-0x0000000189C902A4
+		public RenderGraphDebugData() {} // 0x000000018BDA9A20-0x000000018BDA9AC0
 	
 		// Methods
-		public void Clear() {} // 0x0000000189C900C4-0x0000000189C90204
+		public void Clear() {} // 0x000000018BDA98E0-0x000000018BDA9A20
 	}
 
-	public class RenderGraph // TypeDefIndex: 53361
+	public class RenderGraph // TypeDefIndex: 54354
 	{
 		// Fields
 		public static readonly int kMaxMRTCount; // 0x00
@@ -1191,11 +1288,17 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		private bool m_RendererListCulling; // 0xA8
 		private Dictionary<string, RenderGraphDebugData> m_DebugData; // 0xB0
 		private static List<RenderGraph> s_RegisteredGraphs; // 0x08
+		private string _name_k__BackingField; // 0xB8
+		private static bool _requireDebugData_k__BackingField; // 0x10
+		private static OnGraphRegisteredDelegate onGraphRegistered; // 0x18
+		private static OnGraphRegisteredDelegate onGraphUnregistered; // 0x20
+		private static OnExecutionRegisteredDelegate onExecutionRegistered; // 0x28
+		private static OnExecutionRegisteredDelegate onExecutionUnregistered; // 0x30
 	
 		// Properties
-		public string name { get; private set; } // 0x0000000183D4E750-0x0000000183D4E760 0x00000001858AAF64-0x00000001858AAF78
-		internal static bool requireDebugData { get; set; } // 0x0000000189C97D90-0x0000000189C97DE0 0x0000000189C98130-0x0000000189C98184
-		public RenderGraphDefaultResources defaultResources { get => default; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
+		public string name { get; private set; } // 0x000000018BDAFF54-0x000000018BDAFFDC 0x000000018BDABEA0-0x000000018BDABF44
+		internal static bool requireDebugData { get; set; } // 0x000000018BDABDD4-0x000000018BDABE60 0x000000018BDAE554-0x000000018BDAE5B8
+		public RenderGraphDefaultResources defaultResources { get => default; } // 0x000000018BDABC54-0x000000018BDABC74 
 	
 		// Events
 		internal static event OnGraphRegisteredDelegate onGraphRegistered;
@@ -1204,7 +1307,7 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		internal static event OnExecutionRegisteredDelegate onExecutionUnregistered;
 	
 		// Nested types
-		internal struct CompiledResourceInfo // TypeDefIndex: 53355
+		internal struct CompiledResourceInfo // TypeDefIndex: 54348
 		{
 			// Fields
 			public List<int> producers; // 0x00
@@ -1213,11 +1316,10 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 			public bool imported; // 0x14
 	
 			// Methods
-			public void Reset() {} // 0x0000000189C9A690-0x0000000189C9A778
+			public void Reset() {} // 0x000000018349D710-0x000000018349D720
 		}
 	
-		[DebuggerDisplay("RenderPass: {pass.name} (Index:{pass.index} Async:{enableAsyncCompute})")]
-		internal struct CompiledPassInfo // TypeDefIndex: 53356
+		internal struct CompiledPassInfo // TypeDefIndex: 54349
 		{
 			// Fields
 			public RenderGraphPass pass; // 0x00
@@ -1233,105 +1335,122 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 			public bool enableAsyncCompute; // 0x40
 	
 			// Properties
-			public bool allowPassCulling { get => default; } // 0x0000000189C9A674-0x0000000189C9A690 
+			public bool allowPassCulling { get => default; } // 0x0000000187A47500-0x0000000187A47514 
 	
 			// Methods
-			public void Reset(RenderGraphPass pass) {} // 0x0000000189C9A48C-0x0000000189C9A674
+			public void Reset(RenderGraphPass pass) {} // 0x000000018BDB15AC-0x000000018BDB15FC
 		}
 	
-		private class ProfilingScopePassData // TypeDefIndex: 53357
+		private class ProfilingScopePassData // TypeDefIndex: 54350
 		{
 			// Fields
 			public ProfilingSampler sampler; // 0x10
 	
 			// Constructors
-			public ProfilingScopePassData() {} // 0x000000018350B670-0x000000018350B680
+			public ProfilingScopePassData() {} // 0x000000018BDB194C-0x000000018BDB19A0
 		}
 	
-		internal delegate void OnGraphRegisteredDelegate(RenderGraph graph); // TypeDefIndex: 53358; 0x0000000182149960-0x0000000182149970
+		internal delegate void OnGraphRegisteredDelegate(RenderGraph graph); // TypeDefIndex: 54351; 0x000000018BDB0D58-0x000000018BDB125C
 	
-		internal delegate void OnExecutionRegisteredDelegate(RenderGraph graph, string executionName); // TypeDefIndex: 53359; 0x0000000182065C10-0x0000000182065C20
+		internal delegate void OnExecutionRegisteredDelegate(RenderGraph graph, string executionName); // TypeDefIndex: 54352; 0x000000018BDAE504-0x000000018BDAE554
+	
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54353
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static RenderFunc<ProfilingScopePassData> __9__61_0; // 0x08
+			public static RenderFunc<ProfilingScopePassData> __9__62_0; // 0x10
+	
+			// Constructors
+			static __c() {} // 0x000000018BDAE634-0x000000018BDAE668
+			public __c() {} // 0x000000018BDAE5B8-0x000000018BDAE614
+	
+			// Methods
+			internal void _BeginProfilingSampler_b__61_0(ProfilingScopePassData data, RenderGraphContext ctx) {} // 0x000000018BDABE60-0x000000018BDABEA0
+			internal void _EndProfilingSampler_b__62_0(ProfilingScopePassData data, RenderGraphContext ctx) {} // 0x000000018BDABD44-0x000000018BDABDD4
+		}
 	
 		// Constructors
 		public RenderGraph() {} // Dummy constructor
-		public RenderGraph(string name = "RenderGraph" /* Metadata: 0x01FD44D6 */) {} // 0x0000000189C9753C-0x0000000189C97A40
-		static RenderGraph() {} // 0x0000000189C97484-0x0000000189C9753C
+		public RenderGraph(string name = "RenderGraph" /* Metadata: 0x02079CFD */) {} // 0x000000018BDAE614-0x000000018BDAE634
+		static RenderGraph() {} // 0x000000018A6E2CBC-0x000000018A6E2CEC
 	
 		// Methods
-		public void Cleanup() {} // 0x0000000189C9116C-0x0000000189C91234
-		public void RegisterDebug(DebugUI.Panel panel = null) {} // 0x0000000189C9656C-0x0000000189C9659C
-		public void UnRegisterDebug() {} // 0x0000000189C968C4-0x0000000189C968F0
-		public static List<RenderGraph> GetRegisteredRenderGraphs() => default; // 0x0000000189C94CE8-0x0000000189C94D38
-		internal RenderGraphDebugData GetDebugData(string executionName) => default; // 0x0000000189C947E4-0x0000000189C94854
-		public void EndFrame() {} // 0x0000000189C92DC0-0x0000000189C92E80
-		public TextureHandle ImportTexture(RTHandle rt) => default; // 0x0000000189C94E18-0x0000000189C94E4C
-		public TextureHandle ImportBackbuffer(RenderTargetIdentifier rt) => default; // 0x0000000189C94D9C-0x0000000189C94DF8
-		public TextureHandle CreateTexture([IsReadOnly] in TextureDesc desc) => default; // 0x0000000189C92644-0x0000000189C92684
-		public TextureHandle CreateSharedTexture([IsReadOnly] in TextureDesc desc, bool explicitRelease = false /* Metadata: 0x01FD44E2 */) => default; // 0x0000000189C92528-0x0000000189C925B8
-		public void ReleaseSharedTexture(TextureHandle texture) {} // 0x0000000189C96738-0x0000000189C967C0
-		public TextureHandle CreateTexture(TextureHandle texture) => default; // 0x0000000189C92684-0x0000000189C92728
-		public void CreateTextureIfInvalid([IsReadOnly] in TextureDesc desc, ref TextureHandle texture) {} // 0x0000000189C925B8-0x0000000189C92644
-		public TextureDesc GetTextureDesc(TextureHandle texture) => default; // 0x0000000189C94D38-0x0000000189C94D9C
-		public RendererListHandle CreateRendererList([IsReadOnly] in UnityEngine.Rendering.RendererUtils.RendererListDesc desc) => default; // 0x0000000189C92438-0x0000000189C92458
-		public ComputeBufferHandle ImportComputeBuffer(ComputeBuffer computeBuffer) => default; // 0x0000000189C94DF8-0x0000000189C94E18
-		public ComputeBufferHandle CreateComputeBuffer([IsReadOnly] in ComputeBufferDesc desc) => default; // 0x0000000189C92410-0x0000000189C92438
-		public ComputeBufferHandle CreateComputeBuffer([IsReadOnly] in ComputeBufferHandle computeBuffer) => default; // 0x0000000189C923B8-0x0000000189C92410
-		public ComputeBufferDesc GetComputeBufferDesc([IsReadOnly] in ComputeBufferHandle computeBuffer) => default; // 0x0000000189C947A4-0x0000000189C947E4
+		public void Cleanup() {} // 0x000000018BDABC2C-0x000000018BDABC54
+		public void RegisterDebug(DebugUI.Panel panel = null) {} // 0x000000018BDABBD4-0x000000018BDABC2C
+		public void UnRegisterDebug() {} // 0x000000018BDADFC0-0x000000018BDAE000
+		public static List<RenderGraph> GetRegisteredRenderGraphs() => default;
+		internal RenderGraphDebugData GetDebugData(string executionName) => default;
+		public void EndFrame() {} // 0x000000018BDAFACC-0x000000018BDAFD88
+		public TextureHandle ImportTexture(RTHandle rt) => default; // 0x000000018BDACDD8-0x000000018BDAD000
+		public TextureHandle ImportBackbuffer(RenderTargetIdentifier rt) => default; // 0x000000018BDAA540-0x000000018BDAA7D4
+		public TextureHandle CreateTexture(in TextureDesc desc) => default; // 0x000000018BDAC69C-0x000000018BDAC930
+		public TextureHandle CreateSharedTexture(in TextureDesc desc, bool explicitRelease = false /* Metadata: 0x02079D09 */) => default; // 0x000000018140CF50-0x000000018140CF60
+		public void ReleaseSharedTexture(TextureHandle texture) {} // 0x000000018BDAAA50-0x000000018BDAAB20
+		public TextureHandle CreateTexture(TextureHandle texture) => default; // 0x000000018BDAE87C-0x000000018BDAE8D4
+		public void CreateTextureIfInvalid(in TextureDesc desc, ref TextureHandle texture) {} // 0x000000018BDAF0B8-0x000000018BDAF0E4
+		public TextureDesc GetTextureDesc(TextureHandle texture) => default; // 0x000000018BDB1404-0x000000018BDB14D8
+		public RendererListHandle CreateRendererList(in UnityEngine.Rendering.RendererUtils.RendererListDesc desc) => default; // 0x000000018BDB17A4-0x000000018BDB1878
+		public ComputeBufferHandle ImportComputeBuffer(ComputeBuffer computeBuffer) => default; // 0x000000018BDB14D8-0x000000018BDB15AC
+		public ComputeBufferHandle CreateComputeBuffer(in ComputeBufferDesc desc) => default; // 0x000000018BDB1878-0x000000018BDB194C
+		public ComputeBufferHandle CreateComputeBuffer(in ComputeBufferHandle computeBuffer) => default; // 0x000000018BDB125C-0x000000018BDB1330
+		public ComputeBufferDesc GetComputeBufferDesc(in ComputeBufferHandle computeBuffer) => default; // 0x000000018BDB15FC-0x000000018BDB16D0
 		public RenderGraphBuilder AddRenderPass<PassData>(string passName, out ref PassData passData, ProfilingSampler sampler)
 			where PassData : class, new() {
 			passData = default;
 			return default;
-		}
+		} // 0x000000018BDB1330-0x000000018BDB1404
 		public RenderGraphBuilder AddRenderPass<PassData>(string passName, out ref PassData passData)
 			where PassData : class, new() {
 			passData = default;
 			return default;
-		}
-		public RenderGraphExecution RecordAndExecute([IsReadOnly] in RenderGraphParameters parameters) => default; // 0x0000000189C962B0-0x0000000189C9656C
-		internal void Execute() {} // 0x0000000189C935BC-0x0000000189C937E4
-		public void BeginProfilingSampler(ProfilingSampler sampler) {} // 0x0000000189C90D24-0x0000000189C90FB8
-		public void EndProfilingSampler(ProfilingSampler sampler) {} // 0x0000000189C92E80-0x0000000189C93114
-		internal DynamicArray<CompiledPassInfo> GetCompiledPassInfos() => default; // 0x0000000183D4EAE0-0x0000000183D4EAF0
-		internal void ClearCompiledGraph() {} // 0x0000000189C91234-0x0000000189C91304
-		private void InvalidateContext() {} // 0x0000000189C95060-0x0000000189C950B8
-		internal void OnPassAdded(RenderGraphPass pass) {} // 0x0000000189C9589C-0x0000000189C958C8
-		private void InitResourceInfosData(DynamicArray<CompiledResourceInfo> resourceInfos, int count) {} // 0x0000000189C94E4C-0x0000000189C94EEC
-		private void InitializeCompilationData() {} // 0x0000000189C94EEC-0x0000000189C95060
-		private void CountReferences() {} // 0x0000000189C91D64-0x0000000189C923B8
-		private void CullUnusedPasses() {} // 0x0000000189C92820-0x0000000189C92DC0
-		private void UpdatePassSynchronization(ref CompiledPassInfo currentPassInfo, ref CompiledPassInfo producerPassInfo, int currentPassIndex, int lastProducer, ref int intLastSyncIndex) {} // 0x0000000189C96A50-0x0000000189C96A70
-		private void UpdateResourceSynchronization(ref int lastGraphicsPipeSync, ref int lastComputePipeSync, int currentPassIndex, [IsReadOnly] in CompiledResourceInfo resource) {} // 0x0000000189C97364-0x0000000189C97484
-		private int GetLatestProducerIndex(int passIndex, [IsReadOnly] in CompiledResourceInfo info) => default; // 0x0000000189C94A14-0x0000000189C94B48
-		private int GetLatestValidReadIndex([IsReadOnly] in CompiledResourceInfo info) => default; // 0x0000000189C94B48-0x0000000189C94C18
-		private int GetFirstValidWriteIndex([IsReadOnly] in CompiledResourceInfo info) => default; // 0x0000000189C94944-0x0000000189C94A14
-		private int GetLatestValidWriteIndex([IsReadOnly] in CompiledResourceInfo info) => default; // 0x0000000189C94C18-0x0000000189C94CE8
-		private void CreateRendererLists() {} // 0x0000000189C92458-0x0000000189C92528
-		private void UpdateResourceAllocationAndSynchronization() {} // 0x0000000189C96A70-0x0000000189C97364
-		private bool AreRendererListsEmpty(List<RendererListHandle> rendererLists) => default; // 0x0000000189C90B58-0x0000000189C90D24
-		private void TryCullPassAtIndex(int passIndex) {} // 0x0000000189C967C0-0x0000000189C968C4
-		private void CullRendererLists() {} // 0x0000000189C92728-0x0000000189C92820
-		internal void CompileRenderGraph() {} // 0x0000000189C91C6C-0x0000000189C91D64
-		private ref CompiledPassInfo CompilePassImmediatly(RenderGraphPass pass) => ref _refReturnTypeForCompilePassImmediatly; // 0x0000000189C9147C-0x0000000189C91C6C
+		} // 0x000000018BDB16D0-0x000000018BDB17A4
+		public RenderGraphExecution RecordAndExecute(in RenderGraphParameters parameters) => default; // 0x000000018BDAE668-0x000000018BDAE708
+		internal void Execute() {} // 0x000000018BDAE708-0x000000018BDAE87C
+		public void BeginProfilingSampler(ProfilingSampler sampler) {} // 0x000000018BDAB580-0x000000018BDABBD4
+		public void EndProfilingSampler(ProfilingSampler sampler) {} // 0x000000018BDAC03C-0x000000018BDAC5DC
+		internal DynamicArray<CompiledPassInfo> GetCompiledPassInfos() => default; // 0x000000018BDB026C-0x000000018BDB028C
+		internal void ClearCompiledGraph() {} // 0x000000018BDB0B80-0x000000018BDB0CA0
+		private void InvalidateContext() {} // 0x000000018BDAE230-0x000000018BDAE364
+		internal void OnPassAdded(RenderGraphPass pass) {} // 0x000000018BDAE364-0x000000018BDAE434
+		private void InitResourceInfosData(DynamicArray<CompiledResourceInfo> resourceInfos, int count) {} // 0x000000018BDAAC98-0x000000018BDAB488
+		private void InitializeCompilationData() {} // 0x000000018BDACCA4-0x000000018BDACCD0
+		private void CountReferences() {} // 0x000000018BDAC930-0x000000018BDACCA4
+		private void CullUnusedPasses() {} // 0x000000018BDACCD0-0x000000018BDACDD8
+		private void UpdatePassSynchronization(ref CompiledPassInfo currentPassInfo, ref CompiledPassInfo producerPassInfo, int currentPassIndex, int lastProducer, ref int intLastSyncIndex) {} // 0x000000018BDAF6C8-0x000000018BDAFACC
+		private void UpdateResourceSynchronization(ref int lastGraphicsPipeSync, ref int lastComputePipeSync, int currentPassIndex, in CompiledResourceInfo resource) {} // 0x000000018BDAF388-0x000000018BDAF6C8
+		private int GetLatestProducerIndex(int passIndex, in CompiledResourceInfo info) => default; // 0x000000018BDAF0E4-0x000000018BDAF388
+		private int GetLatestValidReadIndex(in CompiledResourceInfo info) => default; // 0x000000018BDAAB20-0x000000018BDAAC98
+		private int GetFirstValidWriteIndex(in CompiledResourceInfo info) => default; // 0x000000018BDAFDB8-0x000000018BDAFF54
+		private int GetLatestValidWriteIndex(in CompiledResourceInfo info) => default; // 0x000000018BDAEB98-0x000000018BDAED0C
+		private void CreateRendererLists() {} // 0x000000018BDAEFC8-0x000000018BDAF0B8
+		private void UpdateResourceAllocationAndSynchronization() {} // 0x000000018BDAED0C-0x000000018BDAEFC8
+		private bool AreRendererListsEmpty(List<RendererListHandle> rendererLists) => default; // 0x000000018BDAE8D4-0x000000018BDAEB98
+		private void TryCullPassAtIndex(int passIndex) {} // 0x000000018BDAE070-0x000000018BDAE160
+		private void CullRendererLists() {} // 0x000000018BDB010C-0x000000018BDB026C
+		internal void CompileRenderGraph() {} // 0x000000018BDAD000-0x000000018BDADFC0
+		private ref CompiledPassInfo CompilePassImmediatly(RenderGraphPass pass) => ref _refReturnTypeForCompilePassImmediatly; // 0x000000018BDAA7D4-0x000000018BDAA988
 		private ref CompiledPassInfo _refReturnTypeForCompilePassImmediatly; // Dummy field
-		private void ExecutePassImmediatly(RenderGraphPass pass) {} // 0x0000000189C93488-0x0000000189C934B4
-		private void ExecuteCompiledPass(ref CompiledPassInfo passInfo, int passIndex) {} // 0x0000000189C93114-0x0000000189C93488
-		private void ExecuteRenderGraph() {} // 0x0000000189C934B4-0x0000000189C935BC
-		private void PreRenderPassSetRenderTargets([IsReadOnly] in CompiledPassInfo passInfo, RenderGraphContext rgContext) {} // 0x0000000189C95EAC-0x0000000189C962B0
-		private void PreRenderPassExecute([IsReadOnly] in CompiledPassInfo passInfo, RenderGraphContext rgContext) {} // 0x0000000189C95B6C-0x0000000189C95EAC
-		private void PostRenderPassExecute(ref CompiledPassInfo passInfo, RenderGraphContext rgContext) {} // 0x0000000189C958C8-0x0000000189C95B6C
-		private void ClearRenderPasses() {} // 0x0000000189C91304-0x0000000189C9147C
-		private void ReleaseImmediateModeResources() {} // 0x0000000189C9659C-0x0000000189C96738
-		private void LogFrameInformation() {} // 0x0000000189C9537C-0x0000000189C954F0
-		private void LogRendererListsCreation() {} // 0x0000000189C957AC-0x0000000189C9589C
-		private void LogRenderPassBegin([IsReadOnly] in CompiledPassInfo passInfo) {} // 0x0000000189C954F0-0x0000000189C957AC
-		private void LogCulledPasses() {} // 0x0000000189C950B8-0x0000000189C9537C
-		private ProfilingSampler GetDefaultProfilingSampler(string name) => default; // 0x0000000189C94854-0x0000000189C94944
-		private void UpdateImportedResourceLifeTime(ref RenderGraphDebugData.ResourceDebugData data, List<int> passList) {} // 0x0000000189C968F0-0x0000000189C96A50
-		private void GenerateDebugData() {} // 0x0000000189C937E4-0x0000000189C947A4
-		private void CleanupDebugData() {} // 0x0000000189C90FB8-0x0000000189C9116C
+		private void ExecutePassImmediatly(RenderGraphPass pass) {} // 0x000000018BDB0CA0-0x000000018BDB0D58
+		private void ExecuteCompiledPass(ref CompiledPassInfo passInfo, int passIndex) {} // 0x000000018BDB3EAC-0x000000018BDB3F94
+		private void ExecuteRenderGraph() {} // 0x000000018BDB3E90-0x000000018BDB3EAC
+		private void PreRenderPassSetRenderTargets(in CompiledPassInfo passInfo, RenderGraphContext rgContext) {} // 0x000000018BDB3CA8-0x000000018BDB3E90
+		private void PreRenderPassExecute(in CompiledPassInfo passInfo, RenderGraphContext rgContext) {} // 0x0000000185492010-0x0000000185492020
+		private void PostRenderPassExecute(ref CompiledPassInfo passInfo, RenderGraphContext rgContext) {} // 0x0000000187893E40-0x0000000187893F64
+		private void ClearRenderPasses() {} // 0x00000001833EEC70-0x00000001833EEC80
+		private void ReleaseImmediateModeResources() {} // 0x0000000185A264E0-0x0000000185A26510
+		private void LogFrameInformation() {} // 0x00000001864BB614-0x00000001864BB734
+		private void LogRendererListsCreation() {} // 0x000000018A6DE1D4-0x000000018A6DE2FC
+		private void LogRenderPassBegin(in CompiledPassInfo passInfo) {} // 0x00000001831C5680-0x00000001831C5690
+		private void LogCulledPasses() {} // 0x0000000186E8C1B8-0x0000000186E8C1EC
+		private ProfilingSampler GetDefaultProfilingSampler(string name) => default; // 0x00000001864BB614-0x00000001864BB734
+		private void UpdateImportedResourceLifeTime(ref RenderGraphDebugData.ResourceDebugData data, List<int> passList) {} // 0x000000018BDC4010-0x000000018BDC4074
+		private void GenerateDebugData() {} // 0x0000000185492010-0x0000000185492020
+		private void CleanupDebugData() {} // 0x000000018A6E2C8C-0x000000018A6E2CBC
 	}
 
-	public struct RenderGraphProfilingScope : IDisposable // TypeDefIndex: 53362
+	public struct RenderGraphProfilingScope : IDisposable // TypeDefIndex: 54355
 	{
 		// Fields
 		private bool m_Disposed; // 0x00
@@ -1343,14 +1462,14 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 			m_Disposed = default;
 			m_Sampler = default;
 			m_RenderGraph = default;
-		} // 0x0000000189CA5C68-0x0000000189CA5CB0
+		} // 0x000000018BDBF484-0x000000018BDBF4CC
 	
 		// Methods
-		public void Dispose() {} // 0x0000000189CA5C5C-0x0000000189CA5C68
-		private void Dispose(bool disposing) {} // 0x0000000189CA5C24-0x0000000189CA5C5C
+		public void Dispose() {} // 0x000000018BDBF478-0x000000018BDBF484
+		private void Dispose(bool disposing) {} // 0x000000018BDBF440-0x000000018BDBF478
 	}
 
-	public struct RenderGraphBuilder : IDisposable // TypeDefIndex: 53363
+	public struct RenderGraphBuilder : IDisposable // TypeDefIndex: 54356
 	{
 		// Fields
 		private RenderGraphPass m_RenderPass; // 0x00
@@ -1364,62 +1483,72 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 			m_Resources = default;
 			m_RenderGraph = default;
 			m_Disposed = default;
-		} // 0x00000001885AAC24-0x00000001885AAC5C
+		} // 0x000000018A6D47B4-0x000000018A6D47EC
 	
 		// Methods
-		public TextureHandle UseColorBuffer([IsReadOnly] in TextureHandle input, int index) => default; // 0x0000000189CA43F0-0x0000000189CA446C
-		public TextureHandle UseDepthBuffer([IsReadOnly] in TextureHandle input, DepthAccess flags) => default; // 0x0000000189CA446C-0x0000000189CA4538
-		public TextureHandle ReadTexture([IsReadOnly] in TextureHandle input) => default; // 0x0000000189CA41B0-0x0000000189CA437C
-		public TextureHandle WriteTexture([IsReadOnly] in TextureHandle input) => default; // 0x0000000189CA4580-0x0000000189CA45E0
-		public TextureHandle ReadWriteTexture([IsReadOnly] in TextureHandle input) => default; // 0x0000000189CA437C-0x0000000189CA43F0
-		public TextureHandle CreateTransientTexture([IsReadOnly] in TextureDesc desc) => default; // 0x0000000189CA3FA8-0x0000000189CA4014
-		public TextureHandle CreateTransientTexture([IsReadOnly] in TextureHandle texture) => default; // 0x0000000189CA4014-0x0000000189CA40E4
-		public RendererListHandle UseRendererList([IsReadOnly] in RendererListHandle input) => default; // 0x0000000189CA40E4-0x0000000189CA4110
-		public ComputeBufferHandle ReadComputeBuffer([IsReadOnly] in ComputeBufferHandle input) => default; // 0x0000000189CA4188-0x0000000189CA41B0
-		public ComputeBufferHandle WriteComputeBuffer([IsReadOnly] in ComputeBufferHandle input) => default; // 0x0000000189CA4538-0x0000000189CA4580
-		public ComputeBufferHandle CreateTransientComputeBuffer([IsReadOnly] in ComputeBufferDesc desc) => default; // 0x0000000189CA3F54-0x0000000189CA3FA8
-		public ComputeBufferHandle CreateTransientComputeBuffer([IsReadOnly] in ComputeBufferHandle computebuffer) => default; // 0x0000000189CA3ED0-0x0000000189CA3F54
+		public TextureHandle UseColorBuffer(in TextureHandle input, int index) => default; // 0x000000018BDBDC0C-0x000000018BDBDC88
+		public TextureHandle UseDepthBuffer(in TextureHandle input, DepthAccess flags) => default; // 0x000000018BDBDC88-0x000000018BDBDD54
+		public TextureHandle ReadTexture(in TextureHandle input) => default; // 0x000000018BDBD9CC-0x000000018BDBDB98
+		public TextureHandle WriteTexture(in TextureHandle input) => default; // 0x000000018BDBDD9C-0x000000018BDBDDFC
+		public TextureHandle ReadWriteTexture(in TextureHandle input) => default; // 0x000000018BDBDB98-0x000000018BDBDC0C
+		public TextureHandle CreateTransientTexture(in TextureDesc desc) => default; // 0x000000018BDBD7C4-0x000000018BDBD830
+		public TextureHandle CreateTransientTexture(in TextureHandle texture) => default; // 0x000000018BDBD830-0x000000018BDBD900
+		public RendererListHandle UseRendererList(in RendererListHandle input) => default; // 0x000000018BDBD900-0x000000018BDBD92C
+		public ComputeBufferHandle ReadComputeBuffer(in ComputeBufferHandle input) => default; // 0x000000018BDBD9A4-0x000000018BDBD9CC
+		public ComputeBufferHandle WriteComputeBuffer(in ComputeBufferHandle input) => default; // 0x000000018BDBDD54-0x000000018BDBDD9C
+		public ComputeBufferHandle CreateTransientComputeBuffer(in ComputeBufferDesc desc) => default; // 0x000000018BDBD770-0x000000018BDBD7C4
+		public ComputeBufferHandle CreateTransientComputeBuffer(in ComputeBufferHandle computebuffer) => default; // 0x000000018BDBD6EC-0x000000018BDBD770
 		public void SetRenderFunc<PassData>(RenderFunc<PassData> renderFunc)
 			where PassData : class, new() {}
-		public void EnableAsyncCompute(bool value) {} // 0x0000000189CA4150-0x0000000189CA416C
-		public void AllowPassCulling(bool value) {} // 0x0000000189CA3E98-0x0000000189CA3EB4
-		public void Dispose() {} // 0x0000000189CA4144-0x0000000189CA4150
-		public void AllowRendererListCulling(bool value) {} // 0x0000000189CA3EB4-0x0000000189CA3ED0
-		public RendererListHandle DependsOn([IsReadOnly] in RendererListHandle input) => default; // 0x0000000189CA40E4-0x0000000189CA4110
-		private void Dispose(bool disposing) {} // 0x0000000189CA4110-0x0000000189CA4144
-		private void CheckResource([IsReadOnly] in ResourceHandle res, bool dontCheckTransientReadWrite = false /* Metadata: 0x01FD44E3 */) {} // 0x000000018350B670-0x000000018350B680
-		internal void GenerateDebugData(bool value) {} // 0x0000000189CA416C-0x0000000189CA4188
+		public void EnableAsyncCompute(bool value) {} // 0x000000018BDBD96C-0x000000018BDBD988
+		public void AllowPassCulling(bool value) {} // 0x000000018BDBD6B4-0x000000018BDBD6D0
+		public void Dispose() {} // 0x000000018BDBD960-0x000000018BDBD96C
+		public void AllowRendererListCulling(bool value) {} // 0x000000018BDBD6D0-0x000000018BDBD6EC
+		public RendererListHandle DependsOn(in RendererListHandle input) => default; // 0x000000018BDBD900-0x000000018BDBD92C
+		private void Dispose(bool disposing) {} // 0x000000018BDBD92C-0x000000018BDBD960
+		private void CheckResource(in ResourceHandle res, bool dontCheckTransientReadWrite = false /* Metadata: 0x02079D0A */) {} // 0x0000000185492010-0x0000000185492020
+		internal void GenerateDebugData(bool value) {} // 0x000000018BDBD988-0x000000018BDBD9A4
 	}
 
-	public class RenderGraphDefaultResources // TypeDefIndex: 53364
+	public class RenderGraphDefaultResources // TypeDefIndex: 54357
 	{
 		// Fields
 		private bool m_IsValid; // 0x10
 		private RTHandle m_BlackTexture2D; // 0x18
 		private RTHandle m_WhiteTexture2D; // 0x20
 		private RTHandle m_ShadowTexture2D; // 0x28
+		private TextureHandle _blackTexture_k__BackingField; // 0x30
+		private TextureHandle _whiteTexture_k__BackingField; // 0x40
+		private TextureHandle _clearTextureXR_k__BackingField; // 0x50
+		private TextureHandle _magentaTextureXR_k__BackingField; // 0x60
+		private TextureHandle _blackTextureXR_k__BackingField; // 0x70
+		private TextureHandle _blackTextureArrayXR_k__BackingField; // 0x80
+		private TextureHandle _blackUIntTextureXR_k__BackingField; // 0x90
+		private TextureHandle _blackTexture3DXR_k__BackingField; // 0xA0
+		private TextureHandle _whiteTextureXR_k__BackingField; // 0xB0
+		private TextureHandle _defaultShadowTexture_k__BackingField; // 0xC0
 	
 		// Properties
-		public TextureHandle blackTexture { get; private set; } // 0x0000000183D4FD30-0x0000000183D4FD40 0x0000000183D4FD40-0x0000000183D4FD50
-		public TextureHandle whiteTexture { get; private set; } // 0x0000000183D5A160-0x0000000183D5A170 0x0000000183D5D610-0x0000000183D5D620
-		public TextureHandle clearTextureXR { get; private set; } // 0x0000000183D55950-0x0000000183D55960 0x0000000183D5A610-0x0000000183D5A620
-		public TextureHandle magentaTextureXR { get; private set; } // 0x0000000183D5A130-0x0000000183D5A140 0x0000000183D6C120-0x0000000183D6C130
-		public TextureHandle blackTextureXR { get; private set; } // 0x0000000183D5AAE0-0x0000000183D5AAF0 0x0000000183D6C100-0x0000000183D6C110
-		public TextureHandle blackTextureArrayXR { get; private set; } // 0x0000000183D5AAF0-0x0000000183D5AB00 0x0000000183D68EB0-0x0000000183D68EC0
-		public TextureHandle blackUIntTextureXR { get; private set; } // 0x0000000183D68BC0-0x0000000183D68BD0 0x0000000183D6C0C0-0x0000000183D6C0D0
-		public TextureHandle blackTexture3DXR { get; private set; } // 0x0000000183D6C070-0x0000000183D6C080 0x0000000183D6C0F0-0x0000000183D6C100
-		public TextureHandle whiteTextureXR { get; private set; } // 0x0000000183D6C040-0x0000000183D6C050 0x0000000183D6C0B0-0x0000000183D6C0C0
-		public TextureHandle defaultShadowTexture { get; private set; } // 0x0000000183D6C030-0x0000000183D6C040 0x0000000183D6C0A0-0x0000000183D6C0B0
+		public TextureHandle blackTexture { get; private set; } // 0x0000000185FB1290-0x0000000185FB12A0 0x0000000185FB12A0-0x0000000185FB12B0
+		public TextureHandle whiteTexture { get; private set; } // 0x0000000185FBBFF0-0x0000000185FBC000 0x0000000185FBEB30-0x0000000185FBEB40
+		public TextureHandle clearTextureXR { get; private set; } // 0x0000000185FB6BD0-0x0000000185FB6BE0 0x0000000185FBC330-0x0000000185FBC340
+		public TextureHandle magentaTextureXR { get; private set; } // 0x0000000185FCCD00-0x0000000185FCCD10 0x0000000185FCCDA0-0x0000000185FCCDB0
+		public TextureHandle blackTextureXR { get; private set; } // 0x0000000185FBB870-0x0000000185FBB880 0x0000000185FCCD80-0x0000000185FCCD90
+		public TextureHandle blackTextureArrayXR { get; private set; } // 0x0000000185FBC0B0-0x0000000185FBC0C0 0x0000000185FC9CB0-0x0000000185FC9CC0
+		public TextureHandle blackUIntTextureXR { get; private set; } // 0x0000000185FC9A40-0x0000000185FC9A50 0x0000000185FCCD40-0x0000000185FCCD50
+		public TextureHandle blackTexture3DXR { get; private set; } // 0x0000000185FCCCE0-0x0000000185FCCCF0 0x0000000185FCCD70-0x0000000185FCCD80
+		public TextureHandle whiteTextureXR { get; private set; } // 0x0000000185FCCCB0-0x0000000185FCCCC0 0x0000000185FCCD30-0x0000000185FCCD40
+		public TextureHandle defaultShadowTexture { get; private set; } // 0x0000000185FCCCA0-0x0000000185FCCCB0 0x0000000185FCCD20-0x0000000185FCCD30
 	
 		// Constructors
-		internal RenderGraphDefaultResources() {} // 0x0000000189CA47C0-0x0000000189CA48E4
+		internal RenderGraphDefaultResources() {} // 0x000000018BDBDFDC-0x000000018BDBE100
 	
 		// Methods
-		internal void Cleanup() {} // 0x0000000189CA45E0-0x0000000189CA4624
-		internal void InitializeForRendering(RenderGraph renderGraph) {} // 0x0000000189CA4624-0x0000000189CA47C0
+		internal void Cleanup() {} // 0x000000018BDBDDFC-0x000000018BDBDE40
+		internal void InitializeForRendering(RenderGraph renderGraph) {} // 0x000000018BDBDE40-0x000000018BDBDFDC
 	}
 
-	internal struct RenderGraphLogIndent : IDisposable // TypeDefIndex: 53365
+	internal struct RenderGraphLogIndent : IDisposable // TypeDefIndex: 54358
 	{
 		// Fields
 		private int m_Indentation; // 0x00
@@ -1427,18 +1556,18 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		private bool m_Disposed; // 0x10
 	
 		// Constructors
-		public RenderGraphLogIndent(RenderGraphLogger logger, int indentation = 1 /* Metadata: 0x01FD44E4 */) {
+		public RenderGraphLogIndent(RenderGraphLogger logger, int indentation = 1 /* Metadata: 0x02079D0B */) {
 			m_Indentation = default;
 			m_Logger = default;
 			m_Disposed = default;
-		} // 0x0000000189CA4924-0x0000000189CA4960
+		} // 0x000000018BDBE140-0x000000018BDBE17C
 	
 		// Methods
-		public void Dispose() {} // 0x0000000189CA48E4-0x0000000189CA48F0
-		private void Dispose(bool disposing) {} // 0x0000000189CA48F0-0x0000000189CA4924
+		public void Dispose() {} // 0x000000018BDBE100-0x000000018BDBE10C
+		private void Dispose(bool disposing) {} // 0x000000018BDBE10C-0x000000018BDBE140
 	}
 
-	internal class RenderGraphLogger // TypeDefIndex: 53366
+	internal class RenderGraphLogger // TypeDefIndex: 54359
 	{
 		// Fields
 		private Dictionary<string, StringBuilder> m_LogMap; // 0x10
@@ -1446,18 +1575,18 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		private int m_CurrentIndentation; // 0x20
 	
 		// Constructors
-		public RenderGraphLogger() {} // 0x0000000189CA4DC4-0x0000000189CA4E3C
+		public RenderGraphLogger() {} // 0x000000018BDBE5E0-0x000000018BDBE658
 	
 		// Methods
-		public void Initialize(string logName) {} // 0x0000000189CA4C50-0x0000000189CA4D40
-		public void IncrementIndentation(int value) {} // 0x0000000189CA4BF4-0x0000000189CA4C50
-		public void DecrementIndentation(int value) {} // 0x0000000189CA4960-0x0000000189CA49CC
-		public void LogLine(string format, params object[] args) {} // 0x0000000189CA4D40-0x0000000189CA4DC4
-		public string GetLog(string logName) => default; // 0x0000000189CA4B64-0x0000000189CA4BF4
-		public string GetAllLogs() => default; // 0x0000000189CA49CC-0x0000000189CA4B64
+		public void Initialize(string logName) {} // 0x000000018BDBE46C-0x000000018BDBE55C
+		public void IncrementIndentation(int value) {} // 0x000000018BDBE410-0x000000018BDBE46C
+		public void DecrementIndentation(int value) {} // 0x000000018BDBE17C-0x000000018BDBE1E8
+		public void LogLine(string format, object[] args) {} // 0x000000018BDBE55C-0x000000018BDBE5E0
+		public string GetLog(string logName) => default; // 0x000000018BDBE380-0x000000018BDBE410
+		public string GetAllLogs() => default; // 0x000000018BDBE1E8-0x000000018BDBE380
 	}
 
-	public sealed class RenderGraphObjectPool // TypeDefIndex: 53369
+	public sealed class RenderGraphObjectPool // TypeDefIndex: 54362
 	{
 		// Fields
 		private Dictionary<ValueTuple<System.Type, int>, Stack<object>> m_ArrayPool; // 0x10
@@ -1465,21 +1594,21 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		private List<MaterialPropertyBlock> m_AllocatedMaterialPropertyBlocks; // 0x20
 	
 		// Nested types
-		private abstract class SharedObjectPoolBase // TypeDefIndex: 53367
+		private abstract class SharedObjectPoolBase // TypeDefIndex: 54360
 		{
 			// Fields
 			protected static List<SharedObjectPoolBase> s_AllocatedPools; // 0x00
 	
 			// Constructors
-			protected SharedObjectPoolBase() {} // 0x000000018350B670-0x000000018350B680
-			static SharedObjectPoolBase() {} // 0x0000000189CA91B0-0x0000000189CA923C
+			protected SharedObjectPoolBase() {} // 0x000000018BDBE700-0x000000018BDBE7BC
+			static SharedObjectPoolBase() {} // 0x000000018BDBE7BC-0x000000018BDBEB38
 	
 			// Methods
-			protected abstract void Clear();
-			public static void ClearAll() {} // 0x0000000189CA907C-0x0000000189CA91B0
+			protected abstract void Clear(); // 0x000000018BDBEB38-0x000000018BDBEC44
+			public static void ClearAll() {}
 		}
 	
-		private class SharedObjectPool<T> : SharedObjectPoolBase // TypeDefIndex: 53368
+		private class SharedObjectPool<T> : SharedObjectPoolBase // TypeDefIndex: 54361
 			where T : new()
 		{
 			// Fields
@@ -1487,11 +1616,11 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 			private static readonly Lazy<SharedObjectPool<T>> s_Instance;
 	
 			// Properties
-			public static SharedObjectPool<T> sharedPool { get => default; }
+			public static SharedObjectPool<T> sharedPool { get => default; } // 0x000000018BDC2898-0x000000018BDC29CC 
 	
 			// Constructors
 			public SharedObjectPool() {}
-			static SharedObjectPool() {}
+			static SharedObjectPool() {} // 0x000000018BDC29CC-0x000000018BDC2A58
 	
 			// Methods
 			public T Get() => default;
@@ -1501,23 +1630,33 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		}
 	
 		// Constructors
-		internal RenderGraphObjectPool() {} // 0x0000000189CA531C-0x0000000189CA5428
+		internal RenderGraphObjectPool() {}
 	
 		// Methods
 		public T[] GetTempArray<T>(int size) => default;
-		public MaterialPropertyBlock GetTempMaterialPropertyBlock() => default; // 0x0000000189CA4EE4-0x0000000189CA4FA0
-		internal void ReleaseAllTempAlloc() {} // 0x0000000189CA4FA0-0x0000000189CA531C
+		public MaterialPropertyBlock GetTempMaterialPropertyBlock() => default;
+		internal void ReleaseAllTempAlloc() {}
 		internal T Get<T>()
 			where T : new() => default;
 		internal void Release<T>(T value)
 			where T : new() {}
-		internal void Cleanup() {} // 0x0000000189CA4E3C-0x0000000189CA4EE4
+		internal void Cleanup() {}
 	}
 
-	[DebuggerDisplay("RenderPass: {name} (Index:{index} Async:{enableAsyncCompute})")]
-	internal abstract class RenderGraphPass // TypeDefIndex: 53370
+	internal abstract class RenderGraphPass // TypeDefIndex: 54363
 	{
 		// Fields
+		private string _name_k__BackingField; // 0x10
+		private int _index_k__BackingField; // 0x18
+		private ProfilingSampler _customSampler_k__BackingField; // 0x20
+		private bool _enableAsyncCompute_k__BackingField; // 0x28
+		private bool _allowPassCulling_k__BackingField; // 0x29
+		private TextureHandle _depthBuffer_k__BackingField; // 0x2C
+		private TextureHandle[] _colorBuffers_k__BackingField; // 0x40
+		private int _colorBufferMaxIndex_k__BackingField; // 0x48
+		private int _refCount_k__BackingField; // 0x4C
+		private bool _generateDebugData_k__BackingField; // 0x50
+		private bool _allowRendererListCulling_k__BackingField; // 0x51
 		public List<ResourceHandle>[] resourceReadLists; // 0x58
 		public List<ResourceHandle>[] resourceWriteLists; // 0x60
 		public List<ResourceHandle>[] transientResourceList; // 0x68
@@ -1525,20 +1664,20 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		public List<RendererListHandle> dependsOnRendererListList; // 0x78
 	
 		// Properties
-		public string name { get; protected set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
-		public int index { get; protected set; } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000183D4E9C0-0x0000000183D4E9D0
-		public ProfilingSampler customSampler { get; protected set; } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
-		public bool enableAsyncCompute { get; protected set; } // 0x0000000183D4ED50-0x0000000183D4ED60 0x0000000183D4ED60-0x0000000183D4ED70
-		public bool allowPassCulling { get; protected set; } // 0x0000000183D4F2A0-0x0000000183D4F2B0 0x0000000183D4F2B0-0x0000000183D4F2C0
-		public TextureHandle depthBuffer { get; protected set; } // 0x0000000183D56F70-0x0000000183D56F80 0x0000000183D56F80-0x0000000183D56F90
-		public TextureHandle[] colorBuffers { get; protected set; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
-		public int colorBufferMaxIndex { get; protected set; } // 0x0000000183D4EC50-0x0000000183D4EC60 0x0000000183D4ECD0-0x0000000183D4ECE0
-		public int refCount { get; protected set; } // 0x0000000183D4EDF0-0x0000000183D4EE00 0x0000000183D4EE30-0x0000000183D4EE40
-		public bool generateDebugData { get; protected set; } // 0x0000000183D4F000-0x0000000183D4F010 0x0000000183D4F030-0x0000000183D4F040
-		public bool allowRendererListCulling { get; protected set; } // 0x0000000183D518F0-0x0000000183D51900 0x0000000183D51900-0x0000000183D51910
+		public string name { get; protected set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
+		public int index { get; protected set; } // 0x00000001813AE560-0x00000001813AE570 0x00000001813AE9C0-0x00000001813AE9D0
+		public ProfilingSampler customSampler { get; protected set; } // 0x00000001813B31A0-0x00000001813B31B0 0x000000018646EE40-0x000000018646EE50
+		public bool enableAsyncCompute { get; protected set; } // 0x00000001813B31B0-0x00000001813B31C0 0x00000001813B4840-0x00000001813B4850
+		public bool allowPassCulling { get; protected set; } // 0x00000001813B34D0-0x00000001813B34E0 0x00000001813B4850-0x00000001813B4860
+		public TextureHandle depthBuffer { get; protected set; } // 0x0000000185FB8CA0-0x0000000185FB8CB0 0x0000000185FB8CB0-0x0000000185FB8CC0
+		public TextureHandle[] colorBuffers { get; protected set; } // 0x00000001813FF010-0x00000001813FF020 0x0000000185F05C80-0x0000000185F05C90
+		public int colorBufferMaxIndex { get; protected set; } // 0x0000000185FB0570-0x0000000185FB0580 0x0000000185FB05D0-0x0000000185FB05E0
+		public int refCount { get; protected set; } // 0x0000000185FB06E0-0x0000000185FB06F0 0x0000000185FB06F0-0x0000000185FB0700
+		public bool generateDebugData { get; protected set; } // 0x00000001813ECBE0-0x00000001813ECBF0 0x00000001813EE9A0-0x00000001813EE9B0
+		public bool allowRendererListCulling { get; protected set; } // 0x00000001813AF340-0x00000001813AF350 0x00000001813AF350-0x00000001813AF360
 	
 		// Constructors
-		public RenderGraphPass() {} // 0x0000000189CA599C-0x0000000189CA5C24
+		public RenderGraphPass() {} // 0x000000018BDBF1B8-0x000000018BDBF440
 	
 		// Methods
 		public RenderFunc<PassData> GetExecuteDelegate<PassData>()
@@ -1546,22 +1685,21 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		public abstract void Execute(RenderGraphContext renderGraphContext);
 		public abstract void Release(RenderGraphObjectPool pool);
 		public abstract bool HasRenderFunc();
-		public void Clear() {} // 0x0000000189CA55F0-0x0000000189CA5804
-		public void AddResourceWrite([IsReadOnly] in ResourceHandle res) {} // 0x0000000189CA54C0-0x0000000189CA5558
-		public void AddResourceRead([IsReadOnly] in ResourceHandle res) {} // 0x0000000189CA5428-0x0000000189CA54C0
-		public void AddTransientResource([IsReadOnly] in ResourceHandle res) {} // 0x0000000189CA5558-0x0000000189CA55F0
-		public void UseRendererList(RendererListHandle rendererList) {} // 0x0000000189CA5948-0x0000000189CA599C
-		public void DependsOnRendererList(RendererListHandle rendererList) {} // 0x0000000189CA5804-0x0000000189CA5858
-		public void EnableAsyncCompute(bool value) {} // 0x0000000183D4ED60-0x0000000183D4ED70
-		public void AllowPassCulling(bool value) {} // 0x0000000183D4F2B0-0x0000000183D4F2C0
-		public void AllowRendererListCulling(bool value) {} // 0x0000000183D51900-0x0000000183D51910
-		public void GenerateDebugData(bool value) {} // 0x0000000183D4F030-0x0000000183D4F040
-		public void SetColorBuffer(TextureHandle resource, int index) {} // 0x0000000189CA5858-0x0000000189CA58F4
-		public void SetDepthBuffer(TextureHandle resource, DepthAccess flags) {} // 0x0000000189CA58F4-0x0000000189CA5948
+		public void Clear() {} // 0x000000018BDBEE0C-0x000000018BDBF020
+		public void AddResourceWrite(in ResourceHandle res) {} // 0x000000018BDBECDC-0x000000018BDBED74
+		public void AddResourceRead(in ResourceHandle res) {} // 0x000000018BDBEC44-0x000000018BDBECDC
+		public void AddTransientResource(in ResourceHandle res) {} // 0x000000018BDBED74-0x000000018BDBEE0C
+		public void UseRendererList(RendererListHandle rendererList) {} // 0x000000018BDBF164-0x000000018BDBF1B8
+		public void DependsOnRendererList(RendererListHandle rendererList) {} // 0x000000018BDBF020-0x000000018BDBF074
+		public void EnableAsyncCompute(bool value) {} // 0x00000001813B4840-0x00000001813B4850
+		public void AllowPassCulling(bool value) {} // 0x00000001813B4850-0x00000001813B4860
+		public void AllowRendererListCulling(bool value) {} // 0x00000001813AF350-0x00000001813AF360
+		public void GenerateDebugData(bool value) {} // 0x00000001813EE9A0-0x00000001813EE9B0
+		public void SetColorBuffer(TextureHandle resource, int index) {} // 0x000000018BDBF074-0x000000018BDBF110
+		public void SetDepthBuffer(TextureHandle resource, DepthAccess flags) {} // 0x000000018BDBF110-0x000000018BDBF164
 	}
 
-	[DebuggerDisplay("RenderPass: {name} (Index:{index} Async:{enableAsyncCompute})")]
-	internal sealed class RenderGraphPass<PassData> : RenderGraphPass // TypeDefIndex: 53371
+	internal sealed class RenderGraphPass<PassData> : RenderGraphPass // TypeDefIndex: 54364
 		where PassData : class, new()
 	{
 		// Fields
@@ -1578,7 +1716,7 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		public override bool HasRenderFunc() => default;
 	}
 
-	internal enum RenderGraphProfileId // TypeDefIndex: 53372
+	internal enum RenderGraphProfileId // TypeDefIndex: 54365
 	{
 		CompileRenderGraph = 0,
 		ExecuteRenderGraph = 1,
@@ -1586,30 +1724,29 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		RenderGraphClearDebug = 3
 	}
 
-	[DebuggerDisplay("ComputeBuffer ({handle.index})")]
-	public struct ComputeBufferHandle // TypeDefIndex: 53373
+	public struct ComputeBufferHandle // TypeDefIndex: 54366
 	{
 		// Fields
 		private static ComputeBufferHandle s_NullHandle; // 0x00
 		internal ResourceHandle handle; // 0x00
 	
 		// Properties
-		public static ComputeBufferHandle nullHandle { get => default; } // 0x0000000189C9A7FC-0x0000000189C9A84C 
+		public static ComputeBufferHandle nullHandle { get => default; } // 0x000000018BDB4018-0x000000018BDB4068 
 	
 		// Constructors
-		internal ComputeBufferHandle(int handle, bool shared = false /* Metadata: 0x01FD44E9 */) : this() {
+		internal ComputeBufferHandle(int handle, bool shared = false /* Metadata: 0x02079D10 */) : this() {
 			this.handle = default;
-		} // 0x0000000189C9A7C4-0x0000000189C9A7FC
+		} // 0x000000018BDB3FE0-0x000000018BDB4018
 		static ComputeBufferHandle() {
 			s_NullHandle = default;
-		} // 0x000000018350B670-0x000000018350B680
+		} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public static implicit operator ComputeBuffer(ComputeBufferHandle buffer) => default; // 0x0000000189C9A84C-0x0000000189C9A8B8
-		public bool IsValid() => default; // 0x0000000189C9A778-0x0000000189C9A7C4
+		public static implicit operator ComputeBuffer(ComputeBufferHandle buffer) => default; // 0x000000018BDB4068-0x000000018BDB40D4
+		public bool IsValid() => default; // 0x000000018BDB3F94-0x000000018BDB3FE0
 	}
 
-	public struct ComputeBufferDesc // TypeDefIndex: 53374
+	public struct ComputeBufferDesc // TypeDefIndex: 54367
 	{
 		// Fields
 		public int count; // 0x00
@@ -1623,52 +1760,51 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 			this.stride = default;
 			type = default;
 			name = default;
-		} // 0x0000000183D6C010-0x0000000183D6C030
+		} // 0x0000000185FCCC80-0x0000000185FCCCA0
 		public ComputeBufferDesc(int count, int stride, ComputeBufferType type) {
 			this.count = default;
 			this.stride = default;
 			this.type = default;
 			name = default;
-		} // 0x0000000183D6BFF0-0x0000000183D6C010
+		} // 0x0000000185FCCC60-0x0000000185FCCC80
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x0000000183D83EC0-0x0000000183D83EE0
+		public override int GetHashCode() => default; // 0x0000000185FE4B50-0x0000000185FE4B70
 	}
 
-	[DebuggerDisplay("ComputeBufferResource ({desc.name})")]
-	internal class ComputeBufferResource : RenderGraphResource<ComputeBufferDesc, ComputeBuffer> // TypeDefIndex: 53375
+	internal class ComputeBufferResource : RenderGraphResource<ComputeBufferDesc, ComputeBuffer> // TypeDefIndex: 54368
 	{
 		// Constructors
-		public ComputeBufferResource() {} // 0x0000000189C9B338-0x0000000189C9B360
+		public ComputeBufferResource() {} // 0x000000018BDB4B54-0x000000018BDB4B7C
 	
 		// Methods
-		public override string GetName() => default; // 0x0000000189C9B078-0x0000000189C9B0B8
-		public override void CreatePooledGraphicsResource() {} // 0x0000000189C9AF24-0x0000000189C9B078
-		public override void ReleasePooledGraphicsResource(int frameIndex) {} // 0x0000000189C9B1FC-0x0000000189C9B338
-		public override void CreateGraphicsResource(string name = "" /* Metadata: 0x01FD44EA */) {} // 0x0000000189C9ADBC-0x0000000189C9AF24
-		public override void ReleaseGraphicsResource() {} // 0x0000000189C9B1B8-0x0000000189C9B1FC
-		public override void LogCreation(RenderGraphLogger logger) {} // 0x0000000189C9B0B8-0x0000000189C9B138
-		public override void LogRelease(RenderGraphLogger logger) {} // 0x0000000189C9B138-0x0000000189C9B1B8
+		public override string GetName() => default; // 0x000000018BDB4894-0x000000018BDB48D4
+		public override void CreatePooledGraphicsResource() {} // 0x000000018BDB4740-0x000000018BDB4894
+		public override void ReleasePooledGraphicsResource(int frameIndex) {} // 0x000000018BDB4A18-0x000000018BDB4B54
+		public override void CreateGraphicsResource(string name = "" /* Metadata: 0x02079D11 */) {} // 0x000000018BDB45D8-0x000000018BDB4740
+		public override void ReleaseGraphicsResource() {} // 0x000000018BDB49D4-0x000000018BDB4A18
+		public override void LogCreation(RenderGraphLogger logger) {} // 0x000000018BDB48D4-0x000000018BDB4954
+		public override void LogRelease(RenderGraphLogger logger) {} // 0x000000018BDB4954-0x000000018BDB49D4
 	}
 
-	internal class ComputeBufferPool : RenderGraphResourcePool<ComputeBuffer> // TypeDefIndex: 53376
+	internal class ComputeBufferPool : RenderGraphResourcePool<ComputeBuffer> // TypeDefIndex: 54369
 	{
 		// Constructors
-		public ComputeBufferPool() {} // 0x0000000189C9AD80-0x0000000189C9ADBC
+		public ComputeBufferPool() {} // 0x000000018BDB459C-0x000000018BDB45D8
 	
 		// Methods
-		protected override void ReleaseInternalResource(ComputeBuffer res) {} // 0x0000000189C9AD60-0x0000000189C9AD80
-		protected override string GetResourceName(ComputeBuffer res) => default; // 0x0000000189C9A8B8-0x0000000189C9A8E4
-		protected override long GetResourceSize(ComputeBuffer res) => default; // 0x0000000189C9A8E4-0x0000000189C9A924
-		protected override string GetResourceTypeName() => default; // 0x0000000189C9A924-0x0000000189C9A950
-		protected override int GetSortIndex(ComputeBuffer res) => default; // 0x00000001882953C4-0x00000001882953E4
-		public override void PurgeUnusedResources(int currentFrameIndex) {} // 0x0000000189C9A950-0x0000000189C9AD60
+		protected override void ReleaseInternalResource(ComputeBuffer res) {} // 0x000000018BDB457C-0x000000018BDB459C
+		protected override string GetResourceName(ComputeBuffer res) => default; // 0x000000018BDB40D4-0x000000018BDB4100
+		protected override long GetResourceSize(ComputeBuffer res) => default; // 0x000000018BDB4100-0x000000018BDB4140
+		protected override string GetResourceTypeName() => default; // 0x000000018BDB4140-0x000000018BDB416C
+		protected override int GetSortIndex(ComputeBuffer res) => default; // 0x000000018A3E81C8-0x000000018A3E81E8
+		public override void PurgeUnusedResources(int currentFrameIndex) {} // 0x000000018BDB416C-0x000000018BDB457C
 	}
 
-	internal abstract class IRenderGraphResourcePool // TypeDefIndex: 53377
+	internal abstract class IRenderGraphResourcePool // TypeDefIndex: 54370
 	{
 		// Constructors
-		protected IRenderGraphResourcePool() {} // 0x000000018350B670-0x000000018350B680
+		protected IRenderGraphResourcePool() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
 		public abstract void PurgeUnusedResources(int currentFrameIndex);
@@ -1677,23 +1813,37 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		public abstract void LogResources(RenderGraphLogger logger);
 	}
 
-	internal abstract class RenderGraphResourcePool<Type> : IRenderGraphResourcePool // TypeDefIndex: 53380
+	internal abstract class RenderGraphResourcePool<Type> : IRenderGraphResourcePool // TypeDefIndex: 54373
 		where Type : class
 	{
 		// Fields
-		[TupleElementNames(new string[2] {"resource", "frameIndex" })]
 		protected Dictionary<int, SortedList<int, ValueTuple<Type, int>>> m_ResourcePool;
 		protected List<int> m_RemoveList;
 		private List<ValueTuple<int, Type>> m_FrameAllocatedResources;
 		protected static int s_CurrentFrameIndex;
-		private const int kStaleResourceLifetime = 10; // Metadata: 0x01FD44EB
+		private const int kStaleResourceLifetime = 10; // Metadata: 0x02079D12
 	
 		// Nested types
-		private struct ResourceLogInfo // TypeDefIndex: 53378
+		private struct ResourceLogInfo // TypeDefIndex: 54371
 		{
 			// Fields
 			public string name;
 			public long size;
+		}
+	
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54372
+		{
+			// Fields
+			public static readonly __c<Type> __9;
+			public static Comparison<ResourceLogInfo<Type>> __9__17_0;
+	
+			// Constructors
+			static __c() {}
+			public __c() {}
+	
+			// Methods
+			internal int _LogResources_b__17_0(ResourceLogInfo<Type> a, ResourceLogInfo<Type> b) => default;
 		}
 	
 		// Constructors
@@ -1718,10 +1868,10 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		protected static bool ShouldReleaseResource(int lastUsedFrameIndex, int currentFrameIndex) => default;
 	}
 
-	internal class RenderGraphResourceRegistry // TypeDefIndex: 53383
+	internal class RenderGraphResourceRegistry // TypeDefIndex: 54376
 	{
 		// Fields
-		private const int kSharedResourceLifetime = 30; // Metadata: 0x01FD44EF
+		private const int kSharedResourceLifetime = 30; // Metadata: 0x02079D16
 		private static RenderGraphResourceRegistry m_CurrentRegistry; // 0x00
 		private RenderGraphResourcesData[] m_RenderGraphResources; // 0x10
 		private DynamicArray<RendererListResource> m_RendererListResources; // 0x18
@@ -1731,16 +1881,16 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		private int m_CurrentFrameIndex; // 0x38
 		private int m_ExecutionCount; // 0x3C
 		private RTHandle m_CurrentBackbuffer; // 0x40
-		private const int kInitialRendererListCount = 256; // Metadata: 0x01FD44F0
+		private const int kInitialRendererListCount = 256; // Metadata: 0x02079D17
 		private List<UnityEngine.Rendering.RendererUtils.RendererList> m_ActiveRendererLists; // 0x48
 	
 		// Properties
-		internal static RenderGraphResourceRegistry current { get => default; set {} } // 0x0000000189CA897C-0x0000000189CA89B4 0x0000000189CA89B4-0x0000000189CA8A04
+		internal static RenderGraphResourceRegistry current { get => default; set {} } // 0x000000018BDBF4CC-0x000000018BDBF4EC 0x000000018BDC0428-0x000000018BDC0430
 	
 		// Nested types
-		private delegate void ResourceCallback(RenderGraphContext rgContext, IRenderGraphResource res); // TypeDefIndex: 53381; 0x0000000182065C10-0x0000000182065C20
+		private delegate void ResourceCallback(RenderGraphContext rgContext, IRenderGraphResource res); // TypeDefIndex: 54374; 0x000000018BDC21D0-0x000000018BDC2220
 	
-		private class RenderGraphResourcesData // TypeDefIndex: 53382
+		private class RenderGraphResourcesData // TypeDefIndex: 54375
 		{
 			// Fields
 			public DynamicArray<IRenderGraphResource> resourceArray; // 0x10
@@ -1750,144 +1900,147 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 			public ResourceCallback releaseResourceCallback; // 0x30
 	
 			// Constructors
-			public RenderGraphResourcesData() {} // 0x0000000189CA8B2C-0x0000000189CA8BA4
+			public RenderGraphResourcesData() {} // 0x000000018BDBF4EC-0x000000018BDBF574
 	
 			// Methods
-			public void Clear(bool onException, int frameIndex) {} // 0x0000000189CA8A88-0x0000000189CA8B08
-			public void Cleanup() {} // 0x0000000189CA8A04-0x0000000189CA8A88
-			public void PurgeUnusedGraphicsResources(int frameIndex) {} // 0x0000000189CA8B08-0x0000000189CA8B2C
-			public int AddNewRenderGraphResource<ResType>(out ref ResType outRes, bool pooledResource = true /* Metadata: 0x01FD44F2 */)
+			public void Clear(bool onException, int frameIndex) {} // 0x000000018BDC09F8-0x000000018BDC0AC4
+			public void Cleanup() {} // 0x000000018BDC070C-0x000000018BDC07DC
+			public void PurgeUnusedGraphicsResources(int frameIndex) {} // 0x000000018BDC2070-0x000000018BDC2198
+			public int AddNewRenderGraphResource<ResType>(out ref ResType outRes, bool pooledResource = true /* Metadata: 0x02079D19 */)
 				where ResType : IRenderGraphResource, new() {
 				outRes = default;
 				return default;
-			}
+			} // 0x000000018BDC1D0C-0x000000018BDC2070
 		}
 	
 		// Constructors
-		private RenderGraphResourceRegistry() {} // 0x0000000189CA8854-0x0000000189CA897C
-		internal RenderGraphResourceRegistry(RenderGraphDebugParams renderGraphDebug, RenderGraphLogger frameInformationLogger) {} // 0x0000000189CA84F0-0x0000000189CA8854
+		private RenderGraphResourceRegistry() {} // 0x000000018BDC089C-0x000000018BDC093C
+		internal RenderGraphResourceRegistry(RenderGraphDebugParams renderGraphDebug, RenderGraphLogger frameInformationLogger) {} // 0x000000018BDC13CC-0x000000018BDC1488
 	
 		// Methods
-		internal RTHandle GetTexture([IsReadOnly] in TextureHandle handle) => default; // 0x0000000189CA74EC-0x0000000189CA7698
-		internal bool TextureNeedsFallback([IsReadOnly] in TextureHandle handle) => default; // 0x0000000189CA83DC-0x0000000189CA8460
-		internal UnityEngine.Rendering.RendererUtils.RendererList GetRendererList([IsReadOnly] in RendererListHandle handle) => default; // 0x0000000189CA71DC-0x0000000189CA72A8
-		internal ComputeBuffer GetComputeBuffer([IsReadOnly] in ComputeBufferHandle handle) => default; // 0x0000000189CA6EF0-0x0000000189CA6FC0
-		internal void BeginRenderGraph(int executionCount) {} // 0x0000000189CA5CD0-0x0000000189CA5D58
-		internal void BeginExecute(int currentFrameIndex) {} // 0x0000000189CA5CB0-0x0000000189CA5CD0
-		internal void EndExecute() {} // 0x0000000189CA6C0C-0x0000000189CA6C14
-		private void CheckHandleValidity([IsReadOnly] in ResourceHandle res) {} // 0x0000000189CA5D58-0x0000000189CA5DAC
-		private void CheckHandleValidity(RenderGraphResourceType type, int index) {} // 0x0000000189CA5DAC-0x0000000189CA5ED4
-		internal void IncrementWriteCount([IsReadOnly] in ResourceHandle res) {} // 0x0000000189CA7998-0x0000000189CA7A54
-		internal string GetRenderGraphResourceName([IsReadOnly] in ResourceHandle res) => default; // 0x0000000189CA6FC0-0x0000000189CA7080
-		internal string GetRenderGraphResourceName(RenderGraphResourceType type, int index) => default; // 0x0000000189CA7080-0x0000000189CA7120
-		internal bool IsRenderGraphResourceImported([IsReadOnly] in ResourceHandle res) => default; // 0x0000000189CA7BB0-0x0000000189CA7C6C
-		internal bool IsRenderGraphResourceShared(RenderGraphResourceType type, int index) => default; // 0x0000000189CA7C6C-0x0000000189CA7CC8
-		internal bool IsGraphicsResourceCreated([IsReadOnly] in ResourceHandle res) => default; // 0x0000000189CA7A54-0x0000000189CA7B14
-		internal bool IsRendererListCreated([IsReadOnly] in RendererListHandle res) => default; // 0x0000000189CA7CC8-0x0000000189CA7D50
-		internal bool IsRenderGraphResourceImported(RenderGraphResourceType type, int index) => default; // 0x0000000189CA7B14-0x0000000189CA7BB0
-		internal int GetRenderGraphResourceTransientIndex([IsReadOnly] in ResourceHandle res) => default; // 0x0000000189CA7120-0x0000000189CA71DC
-		internal TextureHandle ImportTexture(RTHandle rt) => default; // 0x0000000189CA78C8-0x0000000189CA7998
-		internal TextureHandle CreateSharedTexture([IsReadOnly] in TextureDesc desc, bool explicitRelease) => default; // 0x0000000189CA6648-0x0000000189CA6850
-		internal void ReleaseSharedTexture(TextureHandle texture) {} // 0x0000000189CA8110-0x0000000189CA8238
-		internal TextureHandle ImportBackbuffer(RenderTargetIdentifier rt) => default; // 0x0000000189CA7698-0x0000000189CA780C
-		internal TextureHandle CreateTexture([IsReadOnly] in TextureDesc desc, int transientPassIndex = -1 /* Metadata: 0x01FD44EC */) => default; // 0x0000000189CA6AF4-0x0000000189CA6C0C
-		internal int GetTextureResourceCount() => default; // 0x0000000189CA72A8-0x0000000189CA7304
-		private TextureResource GetTextureResource([IsReadOnly] in ResourceHandle handle) => default; // 0x0000000189CA742C-0x0000000189CA74EC
-		internal TextureDesc GetTextureResourceDesc([IsReadOnly] in ResourceHandle handle) => default; // 0x0000000189CA7304-0x0000000189CA742C
-		internal void ForceTextureClear([IsReadOnly] in ResourceHandle handle, UnityEngine.Color clearColor) {} // 0x0000000189CA6C70-0x0000000189CA6CD0
-		internal RendererListHandle CreateRendererList([IsReadOnly] in UnityEngine.Rendering.RendererUtils.RendererListDesc desc) => default; // 0x0000000189CA61DC-0x0000000189CA6310
-		internal ComputeBufferHandle ImportComputeBuffer(ComputeBuffer computeBuffer) => default; // 0x0000000189CA780C-0x0000000189CA78C8
-		internal ComputeBufferHandle CreateComputeBuffer([IsReadOnly] in ComputeBufferDesc desc, int transientPassIndex = -1 /* Metadata: 0x01FD44ED */) => default; // 0x0000000189CA5FF0-0x0000000189CA60CC
-		internal ComputeBufferDesc GetComputeBufferResourceDesc([IsReadOnly] in ResourceHandle handle) => default; // 0x0000000189CA6D2C-0x0000000189CA6E30
-		internal int GetComputeBufferResourceCount() => default; // 0x0000000189CA6CD0-0x0000000189CA6D2C
-		private ComputeBufferResource GetComputeBufferResource([IsReadOnly] in ResourceHandle handle) => default; // 0x0000000189CA6E30-0x0000000189CA6EF0
-		internal void UpdateSharedResourceLastFrameIndex(int type, int index) {} // 0x0000000189CA8460-0x0000000189CA84F0
-		private void ManageSharedRenderGraphResources() {} // 0x0000000189CA7E5C-0x0000000189CA7FA8
-		internal void CreatePooledResource(RenderGraphContext rgContext, int type, int index) {} // 0x0000000189CA60CC-0x0000000189CA61DC
-		private void CreateTextureCallback(RenderGraphContext rgContext, IRenderGraphResource res) {} // 0x0000000189CA6850-0x0000000189CA6AF4
-		internal void ReleasePooledResource(RenderGraphContext rgContext, int type, int index) {} // 0x0000000189CA7FFC-0x0000000189CA8110
-		private void ReleaseTextureCallback(RenderGraphContext rgContext, IRenderGraphResource res) {} // 0x0000000189CA8238-0x0000000189CA83DC
-		private void ValidateTextureDesc([IsReadOnly] in TextureDesc desc) {} // 0x000000018350B670-0x000000018350B680
-		private void ValidateRendererListDesc([IsReadOnly] in UnityEngine.Rendering.RendererUtils.RendererListDesc desc) {} // 0x000000018350B670-0x000000018350B680
-		private void ValidateComputeBufferDesc([IsReadOnly] in ComputeBufferDesc desc) {} // 0x000000018350B670-0x000000018350B680
-		internal void CreateRendererLists(List<RendererListHandle> rendererLists, ScriptableRenderContext context, bool manualDispatch = false /* Metadata: 0x01FD44EE */) {} // 0x0000000189CA6310-0x0000000189CA6648
-		internal void Clear(bool onException) {} // 0x0000000189CA5F34-0x0000000189CA5FF0
-		internal void PurgeUnusedGraphicsResources() {} // 0x0000000189CA7FA8-0x0000000189CA7FFC
-		internal void Cleanup() {} // 0x0000000189CA5ED4-0x0000000189CA5F34
-		internal void FlushLogs() {} // 0x0000000189CA6C14-0x0000000189CA6C70
-		private void LogResources() {} // 0x0000000189CA7D50-0x0000000189CA7E5C
+		internal RTHandle GetTexture(in TextureHandle handle) => default; // 0x000000018BDBF574-0x000000018BDBF5C8
+		internal bool TextureNeedsFallback(in TextureHandle handle) => default; // 0x000000018BDBF5C8-0x000000018BDBF6F0
+		internal UnityEngine.Rendering.RendererUtils.RendererList GetRendererList(in RendererListHandle handle) => default; // 0x000000018BDC11B4-0x000000018BDC1270
+		internal ComputeBuffer GetComputeBuffer(in ComputeBufferHandle handle) => default; // 0x000000018BDC07DC-0x000000018BDC089C
+		internal void BeginRenderGraph(int executionCount) {} // 0x000000018BDC1488-0x000000018BDC14E4
+		internal void BeginExecute(int currentFrameIndex) {} // 0x000000018BDC1270-0x000000018BDC1330
+		internal void EndExecute() {} // 0x000000018BDC14E4-0x000000018BDC156C
+		private void CheckHandleValidity(in ResourceHandle res) {} // 0x000000018BDC1330-0x000000018BDC13CC
+		private void CheckHandleValidity(RenderGraphResourceType type, int index) {} // 0x000000018BDC093C-0x000000018BDC09F8
+		internal void IncrementWriteCount(in ResourceHandle res) {} // 0x000000018BDC10E4-0x000000018BDC11B4
+		internal string GetRenderGraphResourceName(in ResourceHandle res) => default; // 0x000000018BDBFE64-0x000000018BDC006C
+		internal string GetRenderGraphResourceName(RenderGraphResourceType type, int index) => default; // 0x000000018BDC192C-0x000000018BDC1A54
+		internal bool IsRenderGraphResourceImported(in ResourceHandle res) => default; // 0x000000018BDC0EB4-0x000000018BDC1028
+		internal bool IsRenderGraphResourceShared(RenderGraphResourceType type, int index) => default; // 0x000000018BDC0310-0x000000018BDC0428
+		internal bool IsGraphicsResourceCreated(in ResourceHandle res) => default; // 0x000000018BDC0AC4-0x000000018BDC0B20
+		internal bool IsRendererListCreated(in RendererListHandle res) => default; // 0x000000018BDC0C48-0x000000018BDC0D08
+		internal bool IsRenderGraphResourceImported(RenderGraphResourceType type, int index) => default; // 0x000000018BDC0B20-0x000000018BDC0C48
+		internal int GetRenderGraphResourceTransientIndex(in ResourceHandle res) => default; // 0x000000018BDC048C-0x000000018BDC04EC
+		internal TextureHandle ImportTexture(RTHandle rt) => default; // 0x000000018BDBF9F8-0x000000018BDBFB2C
+		internal TextureHandle CreateSharedTexture(in TextureDesc desc, bool explicitRelease) => default; // 0x000000018BDC1028-0x000000018BDC10E4
+		internal void ReleaseSharedTexture(TextureHandle texture) {} // 0x000000018BDBF80C-0x000000018BDBF8E8
+		internal TextureHandle ImportBackbuffer(RenderTargetIdentifier rt) => default; // 0x000000018BDC0548-0x000000018BDC064C
+		internal TextureHandle CreateTexture(in TextureDesc desc, int transientPassIndex = -1 /* Metadata: 0x02079D13 */) => default; // 0x000000018BDC04EC-0x000000018BDC0548
+		internal int GetTextureResourceCount() => default; // 0x000000018BDC064C-0x000000018BDC070C
+		private TextureResource GetTextureResource(in ResourceHandle handle) => default; // 0x000000018BDC1C7C-0x000000018BDC1D0C
+		internal TextureDesc GetTextureResourceDesc(in ResourceHandle handle) => default; // 0x000000018BDC1678-0x000000018BDC17C4
+		internal void ForceTextureClear(in ResourceHandle handle, UnityEngine.Color clearColor) {} // 0x000000018BDBF8E8-0x000000018BDBF9F8
+		internal RendererListHandle CreateRendererList(in UnityEngine.Rendering.RendererUtils.RendererListDesc desc) => default; // 0x000000018BDC006C-0x000000018BDC0310
+		internal ComputeBufferHandle ImportComputeBuffer(ComputeBuffer computeBuffer) => default; // 0x000000018BDC1818-0x000000018BDC192C
+		internal ComputeBufferHandle CreateComputeBuffer(in ComputeBufferDesc desc, int transientPassIndex = -1 /* Metadata: 0x02079D14 */) => default; // 0x000000018BDC1A54-0x000000018BDC1BF8
+		internal ComputeBufferDesc GetComputeBufferResourceDesc(in ResourceHandle handle) => default; // 0x0000000185492010-0x0000000185492020
+		internal int GetComputeBufferResourceCount() => default; // 0x0000000185492010-0x0000000185492020
+		private ComputeBufferResource GetComputeBufferResource(in ResourceHandle handle) => default; // 0x0000000185492010-0x0000000185492020
+		internal void UpdateSharedResourceLastFrameIndex(int type, int index) {} // 0x000000018BDBFB2C-0x000000018BDBFE64
+		private void ManageSharedRenderGraphResources() {} // 0x000000018BDBF750-0x000000018BDBF80C
+		internal void CreatePooledResource(RenderGraphContext rgContext, int type, int index) {} // 0x000000018BDC17C4-0x000000018BDC1818
+		private void CreateTextureCallback(RenderGraphContext rgContext, IRenderGraphResource res) {} // 0x000000018BDBF6F0-0x000000018BDBF750
+		internal void ReleasePooledResource(RenderGraphContext rgContext, int type, int index) {} // 0x000000018BDC0430-0x000000018BDC048C
+		private void ReleaseTextureCallback(RenderGraphContext rgContext, IRenderGraphResource res) {} // 0x000000018BDC156C-0x000000018BDC1678
+		private void ValidateTextureDesc(in TextureDesc desc) {} // 0x0000000189345C7C-0x0000000189345DA4
+		private void ValidateRendererListDesc(in UnityEngine.Rendering.RendererUtils.RendererListDesc desc) {} // 0x00000001831C5680-0x00000001831C5690
+		private void ValidateComputeBufferDesc(in ComputeBufferDesc desc) {} // 0x0000000186E8C1B8-0x0000000186E8C1EC
+		internal void CreateRendererLists(List<RendererListHandle> rendererLists, ScriptableRenderContext context, bool manualDispatch = false /* Metadata: 0x02079D15 */) {} // 0x00000001864BB614-0x00000001864BB734
+		internal void Clear(bool onException) {} // 0x000000018BDC22A4-0x000000018BDC2324
+		internal void PurgeUnusedGraphicsResources() {} // 0x000000018BDC2220-0x000000018BDC22A4
+		internal void Cleanup() {} // 0x000000018BDC2324-0x000000018BDC2348
+		internal void FlushLogs() {}
+		private void LogResources() {} // 0x000000018BDC2348-0x000000018BDC23C0
 	}
 
-	[DebuggerDisplay("RendererList ({handle})")]
-	public struct RendererListHandle // TypeDefIndex: 53384
+	public struct RendererListHandle // TypeDefIndex: 54377
 	{
 		// Fields
 		private bool m_IsValid; // 0x00
+		private int _handle_k__BackingField; // 0x04
 	
 		// Properties
-		internal int handle { [IsReadOnly] get; private set; } // 0x0000000183D4E990-0x0000000183D4E9A0 0x0000000183D51720-0x0000000183D51730
+		internal int handle { get; private set; } // 0x000000018357CBC0-0x000000018357CBD0 0x0000000185FB2BA0-0x0000000185FB2BB0
 	
 		// Constructors
 		internal RendererListHandle(int handle) : this() {
 			m_IsValid = default;
-		} // 0x0000000183D68530-0x0000000183D68540
+			<handle>k__BackingField = default;
+		} // 0x0000000185FC9280-0x0000000185FC9290
 	
 		// Methods
-		public static implicit operator int(RendererListHandle handle) => default; // 0x0000000183D68B20-0x0000000183D68B30
-		public static implicit operator UnityEngine.Rendering.RendererUtils.RendererList(RendererListHandle rendererList) => default; // 0x0000000189CA8BA4-0x0000000189CA8C34
-		public bool IsValid() => default; // 0x0000000183D51020-0x0000000183D51030
+		public static implicit operator int(RendererListHandle handle) => default; // 0x0000000185FC9980-0x0000000185FC9990
+		public static implicit operator UnityEngine.Rendering.RendererUtils.RendererList(RendererListHandle rendererList) => default; // 0x000000018BDC23C0-0x000000018BDC2450
+		public bool IsValid() => default; // 0x00000001835E3010-0x00000001835E3020
 	}
 
-	internal struct RendererListResource // TypeDefIndex: 53385
+	internal struct RendererListResource // TypeDefIndex: 54378
 	{
 		// Fields
 		public UnityEngine.Rendering.RendererUtils.RendererListDesc desc; // 0x00
 		public UnityEngine.Rendering.RendererUtils.RendererList rendererList; // 0xE0
 	
 		// Constructors
-		internal RendererListResource([IsReadOnly] in UnityEngine.Rendering.RendererUtils.RendererListDesc desc) {
+		internal RendererListResource(in UnityEngine.Rendering.RendererUtils.RendererListDesc desc) {
 			this.desc = default;
 			rendererList = default;
-		} // 0x00000001885B4914-0x00000001885B4A34
+		} // 0x000000018A6DE4A4-0x000000018A6DE5C4
 	}
 
-	internal enum RenderGraphResourceType // TypeDefIndex: 53386
+	internal enum RenderGraphResourceType // TypeDefIndex: 54379
 	{
 		Texture = 0,
 		ComputeBuffer = 1,
 		Count = 2
 	}
 
-	internal struct ResourceHandle // TypeDefIndex: 53387
+	internal struct ResourceHandle // TypeDefIndex: 54380
 	{
 		// Fields
-		private const uint kValidityMask = 4294901760; // Metadata: 0x01FD44F6
-		private const uint kIndexMask = 65535; // Metadata: 0x01FD44FB
+		private const uint kValidityMask = 4294901760; // Metadata: 0x02079D1D
+		private const uint kIndexMask = 65535; // Metadata: 0x02079D22
 		private uint m_Value; // 0x00
 		private static uint s_CurrentValidBit; // 0x00
 		private static uint s_SharedResourceValidBit; // 0x04
+		private RenderGraphResourceType _type_k__BackingField; // 0x04
 	
 		// Properties
-		public int index { get => default; } // 0x0000000183D4F990-0x0000000183D4F9A0 
-		public RenderGraphResourceType type { [IsReadOnly] get; private set; } // 0x0000000183D4E990-0x0000000183D4E9A0 0x0000000183D51720-0x0000000183D51730
-		public int iType { get => default; } // 0x0000000189CA8E4C-0x0000000189CA8E90 
+		public int index { get => default; } // 0x0000000182FA7E40-0x0000000182FA7E50 
+		public RenderGraphResourceType type { get; private set; } // 0x000000018357CBC0-0x000000018357CBD0 0x0000000185FB2BA0-0x0000000185FB2BB0
+		public int iType { get => default; } // 0x000000018BDC2668-0x000000018BDC26AC 
 	
 		// Constructors
 		internal ResourceHandle(int value, RenderGraphResourceType type, bool shared) : this() {
 			m_Value = default;
-		} // 0x0000000189CA8DC0-0x0000000189CA8E4C
+			<type>k__BackingField = default;
+		} // 0x000000018BDC25DC-0x000000018BDC2668
 		static ResourceHandle() {
 			s_CurrentValidBit = default;
 			s_SharedResourceValidBit = default;
-		} // 0x0000000189CA8D70-0x0000000189CA8DC0
+		} // 0x000000018BDC258C-0x000000018BDC25DC
 	
 		// Methods
-		public static implicit operator int(ResourceHandle handle) => default; // 0x0000000189CA8E90-0x0000000189CA8ED4
-		public bool IsValid() => default; // 0x0000000189CA8C34-0x0000000189CA8CAC
-		public static void NewFrame(int executionIndex) {} // 0x0000000189CA8CAC-0x0000000189CA8D70
+		public static implicit operator int(ResourceHandle handle) => default; // 0x000000018BDC26AC-0x000000018BDC26F0
+		public bool IsValid() => default; // 0x000000018BDC2450-0x000000018BDC24C8
+		public static void NewFrame(int executionIndex) {} // 0x000000018BDC24C8-0x000000018BDC258C
 	}
 
-	internal class IRenderGraphResource // TypeDefIndex: 53388
+	internal class IRenderGraphResource // TypeDefIndex: 54381
 	{
 		// Fields
 		public bool imported; // 0x10
@@ -1901,25 +2054,24 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		protected IRenderGraphResourcePool m_Pool; // 0x28
 	
 		// Constructors
-		public IRenderGraphResource() {} // 0x000000018350B670-0x000000018350B680
+		public IRenderGraphResource() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public virtual void Reset(IRenderGraphResourcePool pool) {} // 0x0000000189CA3DD8-0x0000000189CA3DFC
-		public virtual string GetName() => default; // 0x0000000189CA3D98-0x0000000189CA3DC4
-		public virtual bool IsCreated() => default; // 0x000000018115F4C0-0x000000018115F530
-		public virtual void IncrementWriteCount() {} // 0x0000000183D83F50-0x0000000183D83F60
-		public virtual bool NeedsFallBack() => default; // 0x0000000189CA3DC4-0x0000000189CA3DD8
-		public virtual void CreatePooledGraphicsResource() {} // 0x000000018350B670-0x000000018350B680
-		public virtual void CreateGraphicsResource(string name = "" /* Metadata: 0x01FD44FF */) {} // 0x000000018350B670-0x000000018350B680
-		public virtual void ReleasePooledGraphicsResource(int frameIndex) {} // 0x000000018350B670-0x000000018350B680
-		public virtual void ReleaseGraphicsResource() {} // 0x000000018350B670-0x000000018350B680
-		public virtual void LogCreation(RenderGraphLogger logger) {} // 0x000000018350B670-0x000000018350B680
-		public virtual void LogRelease(RenderGraphLogger logger) {} // 0x000000018350B670-0x000000018350B680
-		public virtual int GetSortIndex() => default; // 0x0000000181002730-0x0000000181002740
+		public virtual void Reset(IRenderGraphResourcePool pool) {} // 0x000000018BDBD5F4-0x000000018BDBD618
+		public virtual string GetName() => default; // 0x000000018BDBD5B4-0x000000018BDBD5E0
+		public virtual bool IsCreated() => default; // 0x00000001814A81B0-0x00000001814A81C0
+		public virtual void IncrementWriteCount() {} // 0x0000000185FE4BE0-0x0000000185FE4BF0
+		public virtual bool NeedsFallBack() => default; // 0x000000018BDBD5E0-0x000000018BDBD5F4
+		public virtual void CreatePooledGraphicsResource() {} // 0x0000000185492010-0x0000000185492020
+		public virtual void CreateGraphicsResource(string name = "" /* Metadata: 0x02079D26 */) {} // 0x0000000185492010-0x0000000185492020
+		public virtual void ReleasePooledGraphicsResource(int frameIndex) {} // 0x0000000185492010-0x0000000185492020
+		public virtual void ReleaseGraphicsResource() {} // 0x0000000185492010-0x0000000185492020
+		public virtual void LogCreation(RenderGraphLogger logger) {} // 0x0000000185492010-0x0000000185492020
+		public virtual void LogRelease(RenderGraphLogger logger) {} // 0x0000000185492010-0x0000000185492020
+		public virtual int GetSortIndex() => default; // 0x00000001813AE580-0x00000001813AE590
 	}
 
-	[DebuggerDisplay("Resource ({GetType().Name}:{GetName()})")]
-	internal abstract class RenderGraphResource<DescType, ResType> : IRenderGraphResource // TypeDefIndex: 53389
+	internal abstract class RenderGraphResource<DescType, ResType> : IRenderGraphResource // TypeDefIndex: 54382
 		where DescType : struct
 		where ResType : class
 	{
@@ -1936,8 +2088,7 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		public override void ReleaseGraphicsResource() {}
 	}
 
-	[DebuggerDisplay("Texture ({handle.index})")]
-	public struct TextureHandle // TypeDefIndex: 53390
+	public struct TextureHandle // TypeDefIndex: 54383
 	{
 		// Fields
 		private static TextureHandle s_NullHandle; // 0x00
@@ -1945,34 +2096,34 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		internal ResourceHandle fallBackResource; // 0x08
 	
 		// Properties
-		public static TextureHandle nullHandle { get => default; } // 0x0000000189CA97D8-0x0000000189CA9834 
+		public static TextureHandle nullHandle { get => default; } // 0x000000018BDC2FF4-0x000000018BDC3050 
 	
 		// Constructors
-		internal TextureHandle(int handle, bool shared = false /* Metadata: 0x01FD4500 */) : this() {
+		internal TextureHandle(int handle, bool shared = false /* Metadata: 0x02079D27 */) : this() {
 			this.handle = default;
 			fallBackResource = default;
-		} // 0x0000000189CA974C-0x0000000189CA97D8
+		} // 0x000000018BDC2F68-0x000000018BDC2FF4
 		static TextureHandle() {
 			s_NullHandle = default;
-		} // 0x000000018350B670-0x000000018350B680
+		} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public static implicit operator RenderTargetIdentifier(TextureHandle texture) => default; // 0x0000000189CA9994-0x0000000189CA9A48
-		public static implicit operator Texture(TextureHandle texture) => default; // 0x0000000189CA9834-0x0000000189CA98B0
-		public static implicit operator RenderTexture(TextureHandle texture) => default; // 0x0000000189CA9918-0x0000000189CA9994
-		public static implicit operator RTHandle(TextureHandle texture) => default; // 0x0000000189CA98B0-0x0000000189CA9918
-		public bool IsValid() => default; // 0x0000000189CA9700-0x0000000189CA974C
-		public void SetFallBackResource(TextureHandle texture) {} // 0x0000000183D83F60-0x0000000183D83F70
+		public static implicit operator RenderTargetIdentifier(TextureHandle texture) => default; // 0x000000018BDC31B0-0x000000018BDC3264
+		public static implicit operator Texture(TextureHandle texture) => default; // 0x000000018BDC3050-0x000000018BDC30CC
+		public static implicit operator RenderTexture(TextureHandle texture) => default; // 0x000000018BDC3134-0x000000018BDC31B0
+		public static implicit operator RTHandle(TextureHandle texture) => default; // 0x000000018BDC30CC-0x000000018BDC3134
+		public bool IsValid() => default; // 0x000000018BDC2F1C-0x000000018BDC2F68
+		public void SetFallBackResource(TextureHandle texture) {} // 0x0000000185FE4BF0-0x0000000185FE4C00
 	}
 
-	public enum TextureSizeMode // TypeDefIndex: 53391
+	public enum TextureSizeMode // TypeDefIndex: 54384
 	{
 		Explicit = 0,
 		Scale = 1,
 		Functor = 2
 	}
 
-	public struct FastMemoryDesc // TypeDefIndex: 53392
+	public struct FastMemoryDesc // TypeDefIndex: 54385
 	{
 		// Fields
 		public bool inFastMemory; // 0x00
@@ -1980,7 +2131,7 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		public float residencyFraction; // 0x08
 	}
 
-	public struct TextureDesc // TypeDefIndex: 53393
+	public struct TextureDesc // TypeDefIndex: 54386
 	{
 		// Fields
 		public int width; // 0x00
@@ -2007,7 +2158,7 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 		public UnityEngine.Color clearColor; // 0x50
 	
 		// Constructors
-		public TextureDesc(int width, int height, bool xrReady = false /* Metadata: 0x01FD4504 */) {
+		public TextureDesc(int width, int height, bool xrReady = false /* Metadata: 0x02079D2B */) {
 			this.width = default;
 			this.height = default;
 			slices = default;
@@ -2030,7 +2181,7 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 			fallBackToBlackTexture = default;
 			clearBuffer = default;
 			clearColor = default;
-		} // 0x0000000189CA96CC-0x0000000189CA9700
+		} // 0x000000018BDC2EE8-0x000000018BDC2F1C
 		public TextureDesc(TextureDesc input) {
 			width = default;
 			height = default;
@@ -2054,50 +2205,49 @@ namespace UnityEngine.Experimental.Rendering.RenderGraphModule
 			fallBackToBlackTexture = default;
 			clearBuffer = default;
 			clearColor = default;
-		} // 0x00000001885B7F4C-0x00000001885B7F84
+		} // 0x000000018A6E1ADC-0x000000018A6E1B14
 	
 		// Methods
-		private void InitDefaultValues(bool xrReady) {} // 0x0000000189CA9664-0x0000000189CA96CC
-		public override int GetHashCode() => default; // 0x0000000189CA9568-0x0000000189CA9664
+		private void InitDefaultValues(bool xrReady) {} // 0x000000018BDC2E80-0x000000018BDC2EE8
+		public override int GetHashCode() => default; // 0x000000018BDC2D84-0x000000018BDC2E80
 	}
 
-	[DebuggerDisplay("TextureResource ({desc.name})")]
-	internal class TextureResource : RenderGraphResource<TextureDesc, RTHandle> // TypeDefIndex: 53394
+	internal class TextureResource : RenderGraphResource<TextureDesc, RTHandle> // TypeDefIndex: 54387
 	{
 		// Fields
 		private static int m_TextureCreationIndex; // 0x00
 	
 		// Constructors
-		public TextureResource() {} // 0x0000000189CAA5E8-0x0000000189CAA610
+		public TextureResource() {} // 0x000000018BDC3E04-0x000000018BDC3E2C
 	
 		// Methods
-		public override string GetName() => default; // 0x0000000189CAA2C4-0x0000000189CAA320
-		public override void CreatePooledGraphicsResource() {} // 0x0000000189CAA170-0x0000000189CAA2C4
-		public override void ReleasePooledGraphicsResource(int frameIndex) {} // 0x0000000189CAA4A0-0x0000000189CAA5E8
-		public override void CreateGraphicsResource(string name = "" /* Metadata: 0x01FD4505 */) {} // 0x0000000189CA9F48-0x0000000189CAA170
-		public override void ReleaseGraphicsResource() {} // 0x0000000189CAA454-0x0000000189CAA4A0
-		public override void LogCreation(RenderGraphLogger logger) {} // 0x0000000189CAA320-0x0000000189CAA3D4
-		public override void LogRelease(RenderGraphLogger logger) {} // 0x0000000189CAA3D4-0x0000000189CAA454
+		public override string GetName() => default; // 0x000000018BDC3AE0-0x000000018BDC3B3C
+		public override void CreatePooledGraphicsResource() {} // 0x000000018BDC398C-0x000000018BDC3AE0
+		public override void ReleasePooledGraphicsResource(int frameIndex) {} // 0x000000018BDC3CBC-0x000000018BDC3E04
+		public override void CreateGraphicsResource(string name = "" /* Metadata: 0x02079D2C */) {} // 0x000000018BDC3764-0x000000018BDC398C
+		public override void ReleaseGraphicsResource() {} // 0x000000018BDC3C70-0x000000018BDC3CBC
+		public override void LogCreation(RenderGraphLogger logger) {} // 0x000000018BDC3B3C-0x000000018BDC3BF0
+		public override void LogRelease(RenderGraphLogger logger) {} // 0x000000018BDC3BF0-0x000000018BDC3C70
 	}
 
-	internal class TexturePool : RenderGraphResourcePool<RTHandle> // TypeDefIndex: 53395
+	internal class TexturePool : RenderGraphResourcePool<RTHandle> // TypeDefIndex: 54388
 	{
 		// Constructors
-		public TexturePool() {} // 0x0000000189CA9F0C-0x0000000189CA9F48
+		public TexturePool() {} // 0x000000018BDC3728-0x000000018BDC3764
 	
 		// Methods
-		protected override void ReleaseInternalResource(RTHandle res) {} // 0x0000000189CA9EEC-0x0000000189CA9F0C
-		protected override string GetResourceName(RTHandle res) => default; // 0x0000000189CA9A48-0x0000000189CA9A6C
-		protected override long GetResourceSize(RTHandle res) => default; // 0x0000000189CA9A6C-0x0000000189CA9A90
-		protected override string GetResourceTypeName() => default; // 0x0000000189CA9A90-0x0000000189CA9ABC
-		protected override int GetSortIndex(RTHandle res) => default; // 0x0000000189CA9ABC-0x0000000189CA9ADC
-		public override void PurgeUnusedResources(int currentFrameIndex) {} // 0x0000000189CA9ADC-0x0000000189CA9EEC
+		protected override void ReleaseInternalResource(RTHandle res) {} // 0x000000018BDC3708-0x000000018BDC3728
+		protected override string GetResourceName(RTHandle res) => default; // 0x000000018BDC3264-0x000000018BDC3288
+		protected override long GetResourceSize(RTHandle res) => default; // 0x000000018BDC3288-0x000000018BDC32AC
+		protected override string GetResourceTypeName() => default; // 0x000000018BDC32AC-0x000000018BDC32D8
+		protected override int GetSortIndex(RTHandle res) => default; // 0x000000018BDC32D8-0x000000018BDC32F8
+		public override void PurgeUnusedResources(int currentFrameIndex) {} // 0x000000018BDC32F8-0x000000018BDC3708
 	}
 }
 
 namespace UnityEngine.Rendering
 {
-	public class CameraSwitcher : MonoBehaviour // TypeDefIndex: 53396
+	public class CameraSwitcher : MonoBehaviour // TypeDefIndex: 54389
 	{
 		// Fields
 		public Camera[] m_Cameras; // 0x18
@@ -2112,20 +2262,24 @@ namespace UnityEngine.Rendering
 		private int m_DebugEntryEnumIndex; // 0x70
 	
 		// Constructors
-		public CameraSwitcher() {} // 0x0000000189C9A3D8-0x0000000189C9A3E8
+		public CameraSwitcher() {} // 0x000000018BDB3BF4-0x000000018BDB3C04
 	
 		// Methods
-		private void OnEnable() {} // 0x0000000189C99BE4-0x0000000189C9A138
-		private void OnDisable() {} // 0x0000000189C99B70-0x0000000189C99BE4
-		private int GetCameraCount() => default; // 0x0000000189C99B10-0x0000000189C99B30
-		private Camera GetNextCamera() => default; // 0x0000000189C99B30-0x0000000189C99B70
-		private void SetCameraIndex(int index) {} // 0x0000000189C9A138-0x0000000189C9A3D0
+		private void OnEnable() {} // 0x000000018BDB3400-0x000000018BDB3954
+		private void OnDisable() {} // 0x000000018BDB338C-0x000000018BDB3400
+		private int GetCameraCount() => default; // 0x000000018BDB332C-0x000000018BDB334C
+		private Camera GetNextCamera() => default; // 0x000000018BDB334C-0x000000018BDB338C
+		private void SetCameraIndex(int index) {} // 0x000000018BDB3954-0x000000018BDB3BEC
+		private int _OnEnable_b__10_0() => default; // 0x00000001813B88B0-0x00000001813B88C0
+		private void _OnEnable_b__10_1(int value) {} // 0x000000018BDB3BEC-0x000000018BDB3BF4
+		private int _OnEnable_b__10_2() => default; // 0x0000000185FB0690-0x0000000185FB06A0
+		private void _OnEnable_b__10_3(int value) {} // 0x0000000185FB06C0-0x0000000185FB06D0
 	}
 
-	public class FreeCamera : MonoBehaviour // TypeDefIndex: 53397
+	public class FreeCamera : MonoBehaviour // TypeDefIndex: 54390
 	{
 		// Fields
-		private const float k_MouseSensitivityMultiplier = 0.01f; // Metadata: 0x01FD4506
+		private const float k_MouseSensitivityMultiplier = 0.01f; // Metadata: 0x02079D2D
 		public float m_LookSpeedController; // 0x18
 		public float m_LookSpeedMouse; // 0x1C
 		public float m_MoveSpeed; // 0x20
@@ -2146,31 +2300,46 @@ namespace UnityEngine.Rendering
 		private bool fire1; // 0x6A
 	
 		// Constructors
-		public FreeCamera() {} // 0x0000000189CA3C7C-0x0000000189CA3CA8
+		public FreeCamera() {} // 0x000000018BDBD498-0x000000018BDBD4C4
 	
 		// Methods
-		private void OnEnable() {} // 0x0000000189CA2E04-0x0000000189CA2E0C
-		private void RegisterInputs() {} // 0x0000000189CA2E0C-0x0000000189CA35A0
-		private void UpdateInputs() {} // 0x0000000189CA35A0-0x0000000189CA37B8
-		private void Update() {} // 0x0000000189CA37B8-0x0000000189CA3C7C
+		private void OnEnable() {} // 0x000000018BDBC620-0x000000018BDBC628
+		private void RegisterInputs() {} // 0x000000018BDBC628-0x000000018BDBCDBC
+		private void UpdateInputs() {} // 0x000000018BDBCDBC-0x000000018BDBCFD4
+		private void Update() {} // 0x000000018BDBCFD4-0x000000018BDBD498
 	}
 
-	public static class CommandBufferPool // TypeDefIndex: 53399
+	public static class CommandBufferPool // TypeDefIndex: 54392
 	{
 		// Fields
 		private static ObjectPool<CommandBuffer> s_BufferPool; // 0x00
 	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54391
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+	
+			// Constructors
+			static __c() {} // 0x0000000185EF7C30-0x0000000185EF7CE0
+			public __c() {} // 0x00000001840C3750-0x00000001840C3820
+	
+			// Methods
+			internal void _.cctor_b__4_0(CommandBuffer x) {} // 0x00000001840C3AA0-0x00000001840C3C30
+			internal void _.cctor_b__4_1(CommandBuffer x) {} // 0x0000000185D21130-0x0000000185D212A0
+		}
+	
 		// Constructors
-		static CommandBufferPool() {} // 0x0000000183B0D970-0x0000000183B0DAE0
+		static CommandBufferPool() {} // 0x0000000183F8EE30-0x0000000183F8EE90
 	
 		// Methods
-		public static CommandBuffer Get() => default; // 0x000000018263D260-0x000000018263D310
-		public static CommandBuffer Get(string name) => default; // 0x000000018263CC60-0x000000018263CD30
-		public static void Release(CommandBuffer buffer) {} // 0x000000018263CFB0-0x000000018263D140
+		public static CommandBuffer Get() => default; // 0x0000000185F70210-0x0000000185F70270
+		public static CommandBuffer Get(string name) => default; // 0x0000000185492010-0x0000000185492020
+		public static void Release(CommandBuffer buffer) {} // 0x0000000183F8EBB0-0x0000000183F8EE30
 	}
 
-	[Flags]
-	public enum ClearFlag // TypeDefIndex: 53400
+	public enum ClearFlag // TypeDefIndex: 54393
 	{
 		None = 0,
 		Color = 1,
@@ -2181,7 +2350,7 @@ namespace UnityEngine.Rendering
 		All = 7
 	}
 
-	public static class ComponentSingleton<TType> // TypeDefIndex: 53401
+	public static class ComponentSingleton<TType> // TypeDefIndex: 54394
 		where TType : Component
 	{
 		// Fields
@@ -2194,31 +2363,31 @@ namespace UnityEngine.Rendering
 		public static void Release() {}
 	}
 
-	public class ConstantBuffer // TypeDefIndex: 53402
+	public class ConstantBuffer // TypeDefIndex: 54395
 	{
 		// Fields
 		private static List<ConstantBufferBase> m_RegisteredConstantBuffers; // 0x00
 	
 		// Constructors
-		public ConstantBuffer() {} // 0x000000018350B670-0x000000018350B680
-		static ConstantBuffer() {} // 0x0000000183CE4E10-0x0000000183CE4EA0
+		public ConstantBuffer() {} // 0x0000000185492010-0x0000000185492020
+		static ConstantBuffer() {} // 0x0000000185F408D0-0x0000000185F40960
 	
 		// Methods
-		public static void PushGlobal<CBType>(CommandBuffer cmd, [IsReadOnly] in ref CBType data, int shaderId)
+		public static void PushGlobal<CBType>(CommandBuffer cmd, in ref CBType data, int shaderId)
 			where CBType : struct {}
-		public static void PushGlobal<CBType>([IsReadOnly] in ref CBType data, int shaderId)
+		public static void PushGlobal<CBType>(in ref CBType data, int shaderId)
 			where CBType : struct {}
-		public static void Push<CBType>(CommandBuffer cmd, [IsReadOnly] in ref CBType data, ComputeShader cs, int shaderId)
+		public static void Push<CBType>(CommandBuffer cmd, in ref CBType data, ComputeShader cs, int shaderId)
 			where CBType : struct {}
-		public static void Push<CBType>([IsReadOnly] in ref CBType data, ComputeShader cs, int shaderId)
+		public static void Push<CBType>(in ref CBType data, ComputeShader cs, int shaderId)
 			where CBType : struct {}
-		public static void Push<CBType>(CommandBuffer cmd, [IsReadOnly] in ref CBType data, Material mat, int shaderId)
+		public static void Push<CBType>(CommandBuffer cmd, in ref CBType data, Material mat, int shaderId)
 			where CBType : struct {}
-		public static void Push<CBType>([IsReadOnly] in ref CBType data, Material mat, int shaderId)
+		public static void Push<CBType>(in ref CBType data, Material mat, int shaderId)
 			where CBType : struct {}
-		public static void UpdateData<CBType>(CommandBuffer cmd, [IsReadOnly] in ref CBType data)
+		public static void UpdateData<CBType>(CommandBuffer cmd, in ref CBType data)
 			where CBType : struct {}
-		public static void UpdateData<CBType>([IsReadOnly] in ref CBType data)
+		public static void UpdateData<CBType>(in ref CBType data)
 			where CBType : struct {}
 		public static void SetGlobal<CBType>(CommandBuffer cmd, int shaderId)
 			where CBType : struct {}
@@ -2230,20 +2399,20 @@ namespace UnityEngine.Rendering
 			where CBType : struct {}
 		public static void Set<CBType>(Material mat, int shaderId)
 			where CBType : struct {}
-		public static void ReleaseAll() {} // 0x0000000183A594E0-0x0000000183A59660
-		internal static void Register(ConstantBufferBase cb) {} // 0x0000000189C9B360-0x0000000189C9B3D0
+		public static void ReleaseAll() {} // 0x00000001852C7B10-0x00000001852C7C90
+		internal static void Register(ConstantBufferBase cb) {} // 0x000000018BDB4B7C-0x000000018BDB4BEC
 	}
 
-	public abstract class ConstantBufferBase // TypeDefIndex: 53403
+	public abstract class ConstantBufferBase // TypeDefIndex: 54396
 	{
 		// Constructors
-		protected ConstantBufferBase() {} // 0x000000018350B670-0x000000018350B680
+		protected ConstantBufferBase() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
 		public abstract void Release();
 	}
 
-	public class ConstantBuffer<CBType> : ConstantBufferBase // TypeDefIndex: 53404
+	public class ConstantBuffer<CBType> : ConstantBufferBase // TypeDefIndex: 54397
 		where CBType : struct
 	{
 		// Fields
@@ -2255,19 +2424,19 @@ namespace UnityEngine.Rendering
 		public ConstantBuffer() {}
 	
 		// Methods
-		public void UpdateData(CommandBuffer cmd, [IsReadOnly] in ref CBType data) {}
-		public void UpdateData([IsReadOnly] in ref CBType data) {}
+		public void UpdateData(CommandBuffer cmd, in ref CBType data) {}
+		public void UpdateData(in ref CBType data) {}
 		public void SetGlobal(CommandBuffer cmd, int shaderId) {}
 		public void SetGlobal(int shaderId) {}
 		public void Set(CommandBuffer cmd, ComputeShader cs, int shaderId) {}
 		public void Set(ComputeShader cs, int shaderId) {}
 		public void Set(Material mat, int shaderId) {}
-		public void PushGlobal(CommandBuffer cmd, [IsReadOnly] in ref CBType data, int shaderId) {}
-		public void PushGlobal([IsReadOnly] in ref CBType data, int shaderId) {}
+		public void PushGlobal(CommandBuffer cmd, in ref CBType data, int shaderId) {}
+		public void PushGlobal(in ref CBType data, int shaderId) {}
 		public override void Release() {}
 	}
 
-	internal class ConstantBufferSingleton<CBType> : ConstantBuffer<CBType> // TypeDefIndex: 53405
+	internal class ConstantBufferSingleton<CBType> : ConstantBuffer<CBType> // TypeDefIndex: 54398
 		where CBType : struct
 	{
 		// Fields
@@ -2283,33 +2452,31 @@ namespace UnityEngine.Rendering
 		public override void Release() {}
 	}
 
-	[AttributeUsage(AttributeTargets.Field)]
-	public class DisplayInfoAttribute : Attribute // TypeDefIndex: 53406
+	public class DisplayInfoAttribute : Attribute // TypeDefIndex: 54399
 	{
 		// Fields
 		public string name; // 0x10
 		public int order; // 0x18
 	
 		// Constructors
-		public DisplayInfoAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public DisplayInfoAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Field)]
-	public class AdditionalPropertyAttribute : Attribute // TypeDefIndex: 53407
+	public class AdditionalPropertyAttribute : Attribute // TypeDefIndex: 54400
 	{
 		// Constructors
-		public AdditionalPropertyAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public AdditionalPropertyAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	internal enum CoreProfileId // TypeDefIndex: 53408
+	internal enum CoreProfileId // TypeDefIndex: 54401
 	{
 		BlitTextureInPotAtlas = 0
 	}
 
-	public static class CoreUnsafeUtils // TypeDefIndex: 53413
+	public static class CoreUnsafeUtils // TypeDefIndex: 54406
 	{
 		// Nested types
-		public struct FixedBufferStringQueue // TypeDefIndex: 53409
+		public struct FixedBufferStringQueue // TypeDefIndex: 54402
 		{
 			// Fields
 			private unsafe byte* m_ReadCursor; // 0x00
@@ -2317,9 +2484,10 @@ namespace UnityEngine.Rendering
 			private readonly unsafe byte* m_BufferEnd; // 0x10
 			private readonly unsafe byte* m_BufferStart; // 0x18
 			private readonly int m_BufferLength; // 0x20
+			private int _Count_k__BackingField; // 0x24
 	
 			// Properties
-			public int Count { [IsReadOnly] get; private set; } // 0x0000000183D4E2E0-0x0000000183D4E2F0 0x0000000183D4E2F0-0x0000000183D4E300
+			public int Count { get; private set; }
 	
 			// Constructors
 			public unsafe FixedBufferStringQueue(byte* ptr, int length) : this() {
@@ -2328,68 +2496,73 @@ namespace UnityEngine.Rendering
 				m_BufferEnd = default;
 				m_BufferStart = default;
 				m_BufferLength = default;
-			} // 0x0000000189CA2C74-0x0000000189CA2C9C
+				<Count>k__BackingField = default;
+			} // 0x000000018BDB52F0-0x000000018BDB536C
 	
 			// Methods
-			public bool TryPush(string v) => default; // 0x0000000189CA2BD4-0x0000000189CA2C74
+			public bool TryPush(string v) => default; // 0x0000000185FE4BB0-0x0000000185FE4BC0
 			public bool TryPop(out string v) {
 				v = default;
 				return default;
-			} // 0x0000000189CA2B64-0x0000000189CA2BD4
-			public void Clear() {} // 0x0000000189CA2B40-0x0000000189CA2B64
+			} // 0x0000000185FE4B70-0x0000000185FE4BB0
+			public void Clear() {} // 0x000000018BDB5690-0x000000018BDB583C
 		}
 	
-		public interface IKeyGetter<TValue, TKey> // TypeDefIndex: 53410
+		public interface IKeyGetter<TValue, TKey> // TypeDefIndex: 54403
 		{
 			// Methods
-			TKey Get(ref ref TValue v);
+			TKey Get(ref ref TValue v); // 0x000000018BDB583C-0x000000018BDB5930
 		}
 	
-		internal struct DefaultKeyGetter<T> : IKeyGetter<T, T> // TypeDefIndex: 53411
+		internal struct DefaultKeyGetter<T> : IKeyGetter<T, T> // TypeDefIndex: 54404
 		{
 			// Methods
-			public T Get(ref ref T v) => default;
+			public T Get(ref ref T v) => default; // 0x000000018BDB5930-0x000000018BDB5A00
 		}
 	
-		internal struct UintKeyGetter : IKeyGetter<uint, uint> // TypeDefIndex: 53412
+		internal struct UintKeyGetter : IKeyGetter<uint, uint> // TypeDefIndex: 54405
 		{
 			// Methods
-			public uint Get(ref uint v) => default; // 0x0000000183D60740-0x0000000183D60750
+			public uint Get(ref uint v) => default; // 0x000000018BDB55CC-0x000000018BDB560C
 		}
 	
 		// Methods
+		public static unsafe void CopyTo<T>(List<T> list, void* dest, int count)
+			where T : struct {} // 0x000000018BDB560C-0x000000018BDB5690
+		public static unsafe void CopyTo<T>(T[] list, void* dest, int count)
+			where T : struct {} // 0x000000018BDB5554-0x000000018BDB55CC
 		private static void CalculateRadixParams(int radixBits, out int bitStates) {
 			bitStates = default;
-		} // 0x0000000189C9BAD4-0x0000000189C9BB50
-		private static int CalculateRadixSupportSize(int bitStates, int arrayLength) => default; // 0x0000000183D83F20-0x0000000183D83F30
+		} // 0x000000018BDB5A78-0x000000018BDB5C3C
+		private static int CalculateRadixSupportSize(int bitStates, int arrayLength) => default; // 0x000000018BDB5D28-0x000000018BDB5E38
 		private static unsafe void CalculateRadixSortSupportArrays(int bitStates, int arrayLength, uint* supportArray, out uint* bucketIndices, out uint* bucketSizes, out uint* bucketPrefix, out uint* arrayOutput) {
 			bucketIndices = default;
 			bucketSizes = default;
 			bucketPrefix = default;
 			arrayOutput = default;
-		} // 0x0000000183D83EE0-0x0000000183D83F20
-		private static unsafe void MergeSort(uint* array, uint* support, int length) {} // 0x0000000189C9BE74-0x0000000189C9C020
-		public static void MergeSort(uint[] arr, int sortSize, ref uint[] supportArray) {} // 0x0000000189C9C020-0x0000000189C9C114
-		public static void MergeSort(NativeArray<uint> arr, Unity.Collections.Allocator arrAllocator, int sortSize, ref NativeArray<uint> supportArray) {} // 0x0000000189C9C114-0x0000000189C9C1E4
-		private static unsafe void InsertionSort(uint* arr, int length) {} // 0x0000000189C9BDB0-0x0000000189C9BDF0
-		public static void InsertionSort(uint[] arr, int sortSize) {} // 0x0000000189C9BDF0-0x0000000189C9BE74
-		public static void InsertionSort(NativeArray<uint> arr, int sortSize) {} // 0x0000000189C9BD38-0x0000000189C9BDB0
-		private static unsafe void RadixSort(uint* array, uint* support, int radixBits, int bitStates, int length) {} // 0x0000000189C9C25C-0x0000000189C9C420
-		public static void RadixSort(uint[] arr, int sortSize, ref uint[] supportArray, int radixBits = 8 /* Metadata: 0x01FD4512 */) {} // 0x0000000189C9C50C-0x0000000189C9C61C
-		public static void RadixSort(NativeArray<uint> array, int sortSize, ref NativeArray<uint> supportArray, Unity.Collections.Allocator supportArrayAllocator, int radixBits = 8 /* Metadata: 0x01FD4513 */) {} // 0x0000000189C9C420-0x0000000189C9C50C
-		public static void QuickSort(uint[] arr, int left, int right) {} // 0x0000000189C9C1E4-0x0000000189C9C25C
+		} // 0x000000018BDB5C3C-0x000000018BDB5D28
+		private static unsafe void MergeSort(uint* array, uint* support, int length) {} // 0x000000018BDB5A00-0x000000018BDB5A78
+		public static void MergeSort(uint[] arr, int sortSize, ref uint[] supportArray) {}
+		public static void MergeSort(NativeArray<uint> arr, Unity.Collections.Allocator arrAllocator, int sortSize, ref NativeArray<uint> supportArray) {}
+		private static unsafe void InsertionSort(uint* arr, int length) {}
+		public static void InsertionSort(uint[] arr, int sortSize) {}
+		public static void InsertionSort(NativeArray<uint> arr, int sortSize) {}
+		private static unsafe void RadixSort(uint* array, uint* support, int radixBits, int bitStates, int length) {} // 0x000000018BDB53C4-0x000000018BDB5434
+		public static void RadixSort(uint[] arr, int sortSize, ref uint[] supportArray, int radixBits = 8 /* Metadata: 0x02079D39 */) {}
+		public static void RadixSort(NativeArray<uint> array, int sortSize, ref NativeArray<uint> supportArray, Unity.Collections.Allocator supportArrayAllocator, int radixBits = 8 /* Metadata: 0x02079D3A */) {} // 0x000000018BDB536C-0x000000018BDB53C4
+		public static void QuickSort(uint[] arr, int left, int right) {}
 		public static unsafe void QuickSort<T>(int count, void* data)
-			where T : struct, IComparable<T> {}
+			where T : struct, IComparable<T> {} // 0x000000018BDB5434-0x000000018BDB5554
 		public static unsafe void QuickSort<TValue, TKey, TGetter>(int count, void* data)
 			where TValue : struct
 			where TKey : struct, IComparable<TKey>
-			where TGetter : struct, IKeyGetter<TValue, TKey> {}
+			where TGetter : struct, IKeyGetter<TValue, TKey> {} // 0x0000000181424480-0x0000000181424490
 		public static unsafe void QuickSort<TValue, TKey, TGetter>(void* data, int left, int right)
 			where TValue : struct
 			where TKey : struct, IComparable<TKey>
 			where TGetter : struct, IKeyGetter<TValue, TKey> {}
 		public static unsafe int IndexOf<T>(void* data, int count, T v)
-			where T : struct, IEquatable<T> => default;
+			where T : struct, IEquatable<T> => default; // 0x000000018BDBC490-0x000000018BDBC4B8
 		public static unsafe int CompareHashes<TOldValue, TOldGetter, TNewValue, TNewGetter>(int oldHashCount, void* oldHashes, int newHashCount, void* newHashes, int* addIndices, int* removeIndices, out int addCount, out int remCount)
 			where TOldValue : struct
 			where TOldGetter : struct, IKeyGetter<TOldValue, Hash128>
@@ -2398,34 +2571,29 @@ namespace UnityEngine.Rendering
 			addCount = default;
 			remCount = default;
 			return default;
-		}
+		} // 0x000000018BDBC3F0-0x000000018BDBC490
 		public static unsafe int CompareHashes(int oldHashCount, Hash128* oldHashes, int newHashCount, Hash128* newHashes, int* addIndices, int* removeIndices, out int addCount, out int remCount) {
 			addCount = default;
 			remCount = default;
 			return default;
-		} // 0x0000000189C9BBA8-0x0000000189C9BC18
+		} // 0x000000018BDBC380-0x000000018BDBC3F0
 		public static unsafe void CombineHashes<TValue, TGetter>(int count, void* hashes, Hash128* outHash)
 			where TValue : struct
-			where TGetter : struct, IKeyGetter<TValue, Hash128> {}
-		public static unsafe void CombineHashes(int count, Hash128* hashes, Hash128* outHash) {} // 0x0000000189C9BB50-0x0000000189C9BBA8
+			where TGetter : struct, IKeyGetter<TValue, Hash128> {} // 0x000000018BDBC35C-0x000000018BDBC380
+		public static unsafe void CombineHashes(int count, Hash128* hashes, Hash128* outHash) {}
 		private static unsafe int Partition<TValue, TKey, TGetter>(void* data, int left, int right)
 			where TValue : struct
 			where TKey : struct, IComparable<TKey>
 			where TGetter : struct, IKeyGetter<TValue, TKey> => default;
-		public static bool HaveDuplicates(int[] arr) => default; // 0x0000000189C9BC18-0x0000000189C9BD38
-	
-		// Extension methods
-		public static unsafe void CopyTo<T>(this List<T> list, void* dest, int count)
-			where T : struct {}
-		public static unsafe void CopyTo<T>(this T[] list, void* dest, int count)
-			where T : struct {}
+		public static bool HaveDuplicates(int[] arr) => default; // 0x0000000185FC1A10-0x0000000185FC1A20
 	}
 
-	public class DynamicArray<T> // TypeDefIndex: 53414
+	public class DynamicArray<T> // TypeDefIndex: 54407
 		where T : new()
 	{
 		// Fields
 		private T[] m_Array;
+		private int _size_k__BackingField;
 	
 		// Properties
 		public int size { get; private set; }
@@ -2439,7 +2607,7 @@ namespace UnityEngine.Rendering
 		// Methods
 		public void Clear() {}
 		public bool Contains(T item) => default;
-		public int Add([IsReadOnly] in ref T value) => default;
+		public int Add(in ref T value) => default;
 		public void AddRange(DynamicArray<T> array) {}
 		public bool Remove(T item) => default;
 		public void RemoveAt(int index) {}
@@ -2448,40 +2616,38 @@ namespace UnityEngine.Rendering
 		public int IndexOf(T item, int index, int count) => default;
 		public int IndexOf(T item, int index) => default;
 		public int IndexOf(T item) => default;
-		public void Resize(int newSize, bool keepContent = false /* Metadata: 0x01FD4514 */) {}
-		public void Reserve(int newCapacity, bool keepContent = false /* Metadata: 0x01FD4515 */) {}
+		public void Resize(int newSize, bool keepContent = false /* Metadata: 0x02079D3B */) {}
+		public void Reserve(int newCapacity, bool keepContent = false /* Metadata: 0x02079D3C */) {}
 		public static implicit operator T[](DynamicArray<T> array) => default;
 	}
 
-	public static class DynamicArrayExtensions // TypeDefIndex: 53415
+	public static class DynamicArrayExtensions // TypeDefIndex: 54408
 	{
 		// Methods
 		private static int Partition<T>(T[] data, int left, int right)
 			where T : IComparable<T>, new() => default;
 		private static void QuickSort<T>(T[] data, int left, int right)
 			where T : IComparable<T>, new() {}
-	
-		// Extension methods
-		public static void QuickSort<T>(this DynamicArray<T> array)
+		public static void QuickSort<T>(DynamicArray<T> array)
 			where T : IComparable<T>, new() {}
 	}
 
-	public delegate float PerformDynamicRes(); // TypeDefIndex: 53416; 0x0000000186F0A8DC-0x0000000186F0A8EC
+	public delegate float PerformDynamicRes(); // TypeDefIndex: 54409; 0x0000000183683B30-0x0000000183683B40
 
-	public enum DynamicResScalePolicyType // TypeDefIndex: 53417
+	public enum DynamicResScalePolicyType // TypeDefIndex: 54410
 	{
 		ReturnsPercentage = 0,
 		ReturnsMinMaxLerpFactor = 1
 	}
 
-	public enum DynamicResScalerSlot // TypeDefIndex: 53418
+	public enum DynamicResScalerSlot // TypeDefIndex: 54411
 	{
 		User = 0,
 		System = 1,
 		Count = 2
 	}
 
-	public class DynamicResolutionHandler // TypeDefIndex: 53421
+	public class DynamicResolutionHandler // TypeDefIndex: 54414
 	{
 		// Fields
 		private bool m_Enabled; // 0x10
@@ -2500,10 +2666,12 @@ namespace UnityEngine.Rendering
 		private static DynamicResScalerSlot s_ActiveScalerSlot; // 0x00
 		private static ScalerContainer[] s_ScalerContainers; // 0x08
 		private Vector2Int cachedOriginalSize; // 0x3C
+		private DynamicResUpscaleFilter _filter_k__BackingField; // 0x44
 		private static Dictionary<int, DynamicResUpscaleFilter> s_CameraUpscaleFilters; // 0x10
+		private Vector2Int _finalViewport_k__BackingField; // 0x48
 		private DynamicResolutionType type; // 0x50
 		private GlobalDynamicResolutionSettings m_CachedSettings; // 0x54
-		private const int CameraDictionaryMaxcCapacity = 32; // Metadata: 0x01FD451E
+		private const int CameraDictionaryMaxcCapacity = 32; // Metadata: 0x02079D45
 		private WeakReference m_OwnerCameraWeakRef; // 0x80
 		private static Dictionary<int, DynamicResolutionHandler> s_CameraInstances; // 0x18
 		private static DynamicResolutionHandler s_DefaultInstance; // 0x20
@@ -2515,66 +2683,66 @@ namespace UnityEngine.Rendering
 		private UpsamplerScheduleType m_UpsamplerSchedule; // 0x88
 	
 		// Properties
-		public DynamicResUpscaleFilter filter { get; private set; } // 0x0000000183D4F170-0x0000000183D4F180 0x0000000183D4F180-0x0000000183D4F190
-		public Vector2Int finalViewport { get; set; } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000183D4EDA0-0x0000000183D4EDB0
-		public bool runUpscalerFilterOnFullResolution { get => default; set {} } // 0x0000000189CA2574-0x0000000189CA2588 0x0000000183D4F2B0-0x0000000183D4F2C0
-		public UpsamplerScheduleType upsamplerSchedule { get => default; set {} } // 0x0000000183D4F0B0-0x0000000183D4F0C0 0x0000000183D4F0E0-0x0000000183D4F0F0
-		public static DynamicResolutionHandler instance { get => default; } // 0x0000000189CA2524-0x0000000189CA2574 
+		public DynamicResUpscaleFilter filter { get; private set; } // 0x0000000185FB08A0-0x0000000185FB08B0 0x0000000185FB08B0-0x0000000185FB08C0
+		public Vector2Int finalViewport { get; set; } // 0x00000001813ECF20-0x00000001813ECF30 0x00000001813EE9D0-0x00000001813EE9E0
+		public bool runUpscalerFilterOnFullResolution { get => default; set {} } // 0x000000018BDBBD90-0x000000018BDBBDA4 0x00000001813B4850-0x00000001813B4860
+		public UpsamplerScheduleType upsamplerSchedule { get => default; set {} } // 0x00000001834A1F30-0x00000001834A1F40 0x00000001834A2280-0x00000001834A2290
+		public static DynamicResolutionHandler instance { get => default; } // 0x000000018BDBBD40-0x000000018BDBBD90 
 	
 		// Nested types
-		private struct ScalerContainer // TypeDefIndex: 53419
+		private struct ScalerContainer // TypeDefIndex: 54412
 		{
 			// Fields
 			public DynamicResScalePolicyType type; // 0x00
 			public PerformDynamicRes method; // 0x08
 		}
 	
-		public enum UpsamplerScheduleType // TypeDefIndex: 53420
+		public enum UpsamplerScheduleType // TypeDefIndex: 54413
 		{
 			BeforePost = 0,
 			AfterPost = 1
 		}
 	
 		// Constructors
-		private DynamicResolutionHandler() {} // 0x00000001837242C0-0x0000000183724310
-		static DynamicResolutionHandler() {} // 0x0000000183723F10-0x0000000183724230
+		private DynamicResolutionHandler() {} // 0x0000000185827D70-0x0000000185827DC0
+		static DynamicResolutionHandler() {} // 0x00000001858279C0-0x0000000185827CE0
 	
 		// Methods
-		private void Reset() {} // 0x00000001837244F0-0x0000000183724540
-		private bool FlushScalableBufferManagerState() => default; // 0x0000000189CA15BC-0x0000000189CA16C8
-		private static DynamicResolutionHandler GetOrCreateDrsInstanceHandler(Camera camera) => default; // 0x0000000189CA16E4-0x0000000189CA1BB0
-		private static float DefaultDynamicResMethod() => default; // 0x0000000183D51A60-0x0000000183D51A70
-		private void ProcessSettings(GlobalDynamicResolutionSettings settings) {} // 0x0000000189CA1C10-0x0000000189CA1DD8
-		public Vector2 GetResolvedScale() => default; // 0x0000000189CA1BB0-0x0000000189CA1C10
-		public float CalculateMipBias(Vector2Int inputResolution, Vector2Int outputResolution, bool forceApply = false /* Metadata: 0x01FD451B */) => default; // 0x00000001830FEC10-0x00000001830FEC80
-		public static void SetDynamicResScaler(PerformDynamicRes scaler, DynamicResScalePolicyType scalerType = DynamicResScalePolicyType.ReturnsMinMaxLerpFactor /* Metadata: 0x01FD451C */) {} // 0x0000000189CA1E40-0x0000000189CA1ED4
-		public static void SetSystemDynamicResScaler(PerformDynamicRes scaler, DynamicResScalePolicyType scalerType = DynamicResScalePolicyType.ReturnsMinMaxLerpFactor /* Metadata: 0x01FD451D */) {} // 0x0000000189CA1ED4-0x0000000189CA1F68
-		public static void SetActiveDynamicScalerSlot(DynamicResScalerSlot slot) {} // 0x0000000189CA1DEC-0x0000000189CA1E40
-		public static void ClearSelectedCamera() {} // 0x00000001830A9260-0x00000001830A9300
-		public static void SetUpscaleFilter(Camera camera, DynamicResUpscaleFilter filter) {} // 0x0000000189CA1F68-0x0000000189CA207C
-		public void SetCurrentCameraRequest(bool cameraRequest) {} // 0x0000000183D4F080-0x0000000183D4F090
-		public static void UpdateAndUseCamera(Camera camera, GlobalDynamicResolutionSettings? settings = default, Action OnResolutionChange = null) {} // 0x0000000189CA20C8-0x0000000189CA22A0
-		public void Update(GlobalDynamicResolutionSettings settings, Action OnResolutionChange = null) {} // 0x0000000189CA22A0-0x0000000189CA2524
-		public bool SoftwareDynamicResIsEnabled() => default; // 0x0000000189CA207C-0x0000000189CA20C8
-		public bool HardwareDynamicResIsEnabled() => default; // 0x0000000183CFE790-0x0000000183CFE7B0
-		public bool RequestsHardwareDynamicResolution() => default; // 0x0000000189CA1DD8-0x0000000189CA1DEC
-		public bool DynamicResolutionEnabled() => default; // 0x0000000189CA1588-0x0000000189CA15BC
-		public void ForceSoftwareFallback() {} // 0x0000000183D75F20-0x0000000183D75F30
-		public Vector2Int GetScaledSize(Vector2Int size) => default; // 0x00000001831EBE00-0x00000001831EBE20
-		public Vector2Int ApplyScalesOnSize(Vector2Int size) => default; // 0x0000000189CA14A0-0x0000000189CA14D4
-		internal Vector2Int ApplyScalesOnSize(Vector2Int size, Vector2 scales) => default; // 0x0000000189CA14D4-0x0000000189CA1588
-		public float GetCurrentScale() => default; // 0x0000000189CA16C8-0x0000000189CA16E4
-		public Vector2Int GetLastScaledSize() => default; // 0x0000000183D83F40-0x0000000183D83F50
-		public float GetLowResMultiplier(float targetLowRes) => default; // 0x0000000183184D30-0x0000000183184D80
+		private void Reset() {} // 0x0000000185827FA0-0x0000000185827FF0
+		private bool FlushScalableBufferManagerState() => default; // 0x000000018BDBADD8-0x000000018BDBAEE4
+		private static DynamicResolutionHandler GetOrCreateDrsInstanceHandler(Camera camera) => default; // 0x000000018BDBAF00-0x000000018BDBB3CC
+		private static float DefaultDynamicResMethod() => default; // 0x0000000185FB2DD0-0x0000000185FB2DE0
+		private void ProcessSettings(GlobalDynamicResolutionSettings settings) {} // 0x000000018BDBB42C-0x000000018BDBB5F4
+		public Vector2 GetResolvedScale() => default; // 0x000000018BDBB3CC-0x000000018BDBB42C
+		public float CalculateMipBias(Vector2Int inputResolution, Vector2Int outputResolution, bool forceApply = false /* Metadata: 0x02079D42 */) => default; // 0x000000018502CCB0-0x000000018502CD20
+		public static void SetDynamicResScaler(PerformDynamicRes scaler, DynamicResScalePolicyType scalerType = DynamicResScalePolicyType.ReturnsMinMaxLerpFactor /* Metadata: 0x02079D43 */) {} // 0x000000018BDBB65C-0x000000018BDBB6F0
+		public static void SetSystemDynamicResScaler(PerformDynamicRes scaler, DynamicResScalePolicyType scalerType = DynamicResScalePolicyType.ReturnsMinMaxLerpFactor /* Metadata: 0x02079D44 */) {} // 0x000000018BDBB6F0-0x000000018BDBB784
+		public static void SetActiveDynamicScalerSlot(DynamicResScalerSlot slot) {} // 0x000000018BDBB608-0x000000018BDBB65C
+		public static void ClearSelectedCamera() {} // 0x0000000184F6DFD0-0x0000000184F6E070
+		public static void SetUpscaleFilter(Camera camera, DynamicResUpscaleFilter filter) {} // 0x000000018BDBB784-0x000000018BDBB898
+		public void SetCurrentCameraRequest(bool cameraRequest) {} // 0x00000001813EE990-0x00000001813EE9A0
+		public static void UpdateAndUseCamera(Camera camera, GlobalDynamicResolutionSettings? settings = default, Action OnResolutionChange = null) {} // 0x000000018BDBB8E4-0x000000018BDBBABC
+		public void Update(GlobalDynamicResolutionSettings settings, Action OnResolutionChange = null) {} // 0x000000018BDBBABC-0x000000018BDBBD40
+		public bool SoftwareDynamicResIsEnabled() => default; // 0x000000018BDBB898-0x000000018BDBB8E4
+		public bool HardwareDynamicResIsEnabled() => default; // 0x0000000185F5A940-0x0000000185F5A960
+		public bool RequestsHardwareDynamicResolution() => default; // 0x000000018BDBB5F4-0x000000018BDBB608
+		public bool DynamicResolutionEnabled() => default; // 0x000000018BDBADA4-0x000000018BDBADD8
+		public void ForceSoftwareFallback() {} // 0x0000000185FD6B80-0x0000000185FD6B90
+		public Vector2Int GetScaledSize(Vector2Int size) => default; // 0x000000018515FBB0-0x000000018515FBD0
+		public Vector2Int ApplyScalesOnSize(Vector2Int size) => default; // 0x000000018BDBACBC-0x000000018BDBACF0
+		internal Vector2Int ApplyScalesOnSize(Vector2Int size, Vector2 scales) => default; // 0x000000018BDBACF0-0x000000018BDBADA4
+		public float GetCurrentScale() => default; // 0x000000018BDBAEE4-0x000000018BDBAF00
+		public Vector2Int GetLastScaledSize() => default; // 0x0000000185FE4BD0-0x0000000185FE4BE0
+		public float GetLowResMultiplier(float targetLowRes) => default; // 0x00000001850FB220-0x00000001850FB270
 	}
 
-	public enum DynamicResolutionType : byte // TypeDefIndex: 53422
+	public enum DynamicResolutionType : byte // TypeDefIndex: 54415
 	{
 		Software = 0,
 		Hardware = 1
 	}
 
-	public enum DynamicResUpscaleFilter : byte // TypeDefIndex: 53423
+	public enum DynamicResUpscaleFilter : byte // TypeDefIndex: 54416
 	{
 		Bilinear = 0,
 		CatmullRom = 1,
@@ -2585,7 +2753,7 @@ namespace UnityEngine.Rendering
 	}
 
 	[Serializable]
-	public struct GlobalDynamicResolutionSettings // TypeDefIndex: 53424
+	public struct GlobalDynamicResolutionSettings // TypeDefIndex: 54417
 	{
 		// Fields
 		public bool enabled; // 0x00
@@ -2593,7 +2761,6 @@ namespace UnityEngine.Rendering
 		public bool enableDLSS; // 0x02
 		public uint DLSSPerfQualitySetting; // 0x04
 		public bool DLSSUseOptimalSettings; // 0x08
-		[Range(0f, 1f)]
 		public float DLSSSharpness; // 0x0C
 		public float maxPercentage; // 0x10
 		public float minPercentage; // 0x14
@@ -2605,20 +2772,20 @@ namespace UnityEngine.Rendering
 		public float rayTracingHalfResThreshold; // 0x24
 	
 		// Methods
-		public static GlobalDynamicResolutionSettings NewDefault() => default; // 0x00000001837244A0-0x00000001837244F0
+		public static GlobalDynamicResolutionSettings NewDefault() => default; // 0x0000000185827F50-0x0000000185827FA0
 	}
 
-	public interface IAdditionalData // TypeDefIndex: 53425
+	public interface IAdditionalData // TypeDefIndex: 54418
 	{
 	}
 
-	public interface IVirtualTexturingEnabledRenderPipeline // TypeDefIndex: 53426
+	public interface IVirtualTexturingEnabledRenderPipeline // TypeDefIndex: 54419
 	{
 		// Properties
 		bool virtualTexturingEnabled { get; }
 	}
 
-	public struct ListBuffer<T> // TypeDefIndex: 53427
+	public struct ListBuffer<T> // TypeDefIndex: 54420
 		where T : struct
 	{
 		// Fields
@@ -2630,7 +2797,7 @@ namespace UnityEngine.Rendering
 		internal unsafe T* BufferPtr { get => default; }
 		public int Count { get => default; }
 		public int Capacity { get => default; }
-		public ref T this[[IsReadOnly] in int index] { get => default; }
+		public ref T this[in int index] { get => default; }
 	
 		// Constructors
 		public unsafe ListBuffer(T* bufferPtr, int* countPtr, int capacity) : this() {
@@ -2640,22 +2807,22 @@ namespace UnityEngine.Rendering
 		}
 	
 		// Methods
-		public ref ref T GetUnchecked([IsReadOnly] in int index) => ref _refReturnTypeForGetUnchecked;
+		public ref ref T GetUnchecked(in int index) => ref _refReturnTypeForGetUnchecked;
 		private ref T _refReturnTypeForGetUnchecked; // Dummy field
-		public bool TryAdd([IsReadOnly] in ref T value) => default;
+		public bool TryAdd(in ref T value) => default;
 		public unsafe void CopyTo(T* dstBuffer, int startDstIndex, int copyCount) {}
 		public bool TryCopyTo(ListBuffer<T> other) => default;
 		public unsafe bool TryCopyFrom(T* srcPtr, int count) => default;
 	}
 
-	public static class ListBufferExtensions // TypeDefIndex: 53428
+	public static class ListBufferExtensions // TypeDefIndex: 54421
 	{
-		// Extension methods
-		public static void QuickSort<T>(this ListBuffer<T> self)
+		// Methods
+		public static void QuickSort<T>(ListBuffer<T> self)
 			where T : struct, IComparable<T> {}
 	}
 
-	public class ObjectPool<T> // TypeDefIndex: 53430
+	public class ObjectPool<T> // TypeDefIndex: 54423
 		where T : new()
 	{
 		// Fields
@@ -2663,6 +2830,7 @@ namespace UnityEngine.Rendering
 		private readonly UnityAction<T> m_ActionOnGet;
 		private readonly UnityAction<T> m_ActionOnRelease;
 		private readonly bool m_CollectionCheck;
+		private int _countAll_k__BackingField;
 	
 		// Properties
 		public int countAll { get; private set; }
@@ -2670,7 +2838,7 @@ namespace UnityEngine.Rendering
 		public int countInactive { get => default; }
 	
 		// Nested types
-		public struct PooledObject : IDisposable // TypeDefIndex: 53429
+		public struct PooledObject : IDisposable // TypeDefIndex: 54422
 		{
 			// Fields
 			private readonly T m_ToReturn;
@@ -2688,7 +2856,7 @@ namespace UnityEngine.Rendering
 	
 		// Constructors
 		public ObjectPool() {} // Dummy constructor
-		public ObjectPool(UnityAction<T> actionOnGet, UnityAction<T> actionOnRelease, bool collectionCheck = true /* Metadata: 0x01FD4529 */) {}
+		public ObjectPool(UnityAction<T> actionOnGet, UnityAction<T> actionOnRelease, bool collectionCheck = true /* Metadata: 0x02079D50 */) {}
 	
 		// Methods
 		public T Get() => default;
@@ -2699,7 +2867,7 @@ namespace UnityEngine.Rendering
 		public void Release(T element) {}
 	}
 
-	public static class GenericPool<T> // TypeDefIndex: 53431
+	public static class GenericPool<T> // TypeDefIndex: 54424
 		where T : new()
 	{
 		// Fields
@@ -2717,7 +2885,7 @@ namespace UnityEngine.Rendering
 		public static void Release(T toRelease) {}
 	}
 
-	public static class UnsafeGenericPool<T> // TypeDefIndex: 53432
+	public static class UnsafeGenericPool<T> // TypeDefIndex: 54425
 		where T : new()
 	{
 		// Fields
@@ -2735,10 +2903,25 @@ namespace UnityEngine.Rendering
 		public static void Release(T toRelease) {}
 	}
 
-	public static class ListPool<T> // TypeDefIndex: 53434
+	public static class ListPool<T> // TypeDefIndex: 54427
 	{
 		// Fields
 		private static readonly ObjectPool<List<T>> s_Pool;
+	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54426
+		{
+			// Fields
+			public static readonly __c<T> __9;
+	
+			// Constructors
+			static __c() {}
+			public __c() {}
+	
+			// Methods
+			internal void _.cctor_b__4_0(List<T> l) {}
+		}
 	
 		// Constructors
 		static ListPool() {}
@@ -2752,10 +2935,25 @@ namespace UnityEngine.Rendering
 		public static void Release(List<T> toRelease) {}
 	}
 
-	public static class HashSetPool<T> // TypeDefIndex: 53436
+	public static class HashSetPool<T> // TypeDefIndex: 54429
 	{
 		// Fields
 		private static readonly ObjectPool<HashSet<T>> s_Pool;
+	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54428
+		{
+			// Fields
+			public static readonly __c<T> __9;
+	
+			// Constructors
+			static __c() {}
+			public __c() {}
+	
+			// Methods
+			internal void _.cctor_b__4_0(HashSet<T> l) {}
+		}
 	
 		// Constructors
 		static HashSetPool() {}
@@ -2769,10 +2967,25 @@ namespace UnityEngine.Rendering
 		public static void Release(HashSet<T> toRelease) {}
 	}
 
-	public static class DictionaryPool<TKey, TValue> // TypeDefIndex: 53438
+	public static class DictionaryPool<TKey, TValue> // TypeDefIndex: 54431
 	{
 		// Fields
 		private static readonly ObjectPool<Dictionary<TKey, TValue>> s_Pool;
+	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54430
+		{
+			// Fields
+			public static readonly __c<TKey, TValue> __9;
+	
+			// Constructors
+			static __c() {}
+			public __c() {}
+	
+			// Methods
+			internal void _.cctor_b__4_0(Dictionary<TKey, TValue> l) {}
+		}
 	
 		// Constructors
 		static DictionaryPool() {}
@@ -2786,7 +2999,7 @@ namespace UnityEngine.Rendering
 		public static void Release(Dictionary<TKey, TValue> toRelease) {}
 	}
 
-	public sealed class ListChangedEventArgs<T> : EventArgs // TypeDefIndex: 53439
+	public sealed class ListChangedEventArgs<T> : EventArgs // TypeDefIndex: 54432
 	{
 		// Fields
 		public readonly int index;
@@ -2797,12 +3010,14 @@ namespace UnityEngine.Rendering
 		public ListChangedEventArgs(int index, T item) {}
 	}
 
-	public delegate void ListChangedEventHandler<T>(ObservableList<T> sender, ListChangedEventArgs<T> e); // TypeDefIndex: 53440; 0x00000000-0x00000000
+	public delegate void ListChangedEventHandler<T>(ObservableList<T> sender, ListChangedEventArgs<T> e); // TypeDefIndex: 54433; 0x00000000-0x00000000
 
-	public class ObservableList<T> : IList<T> // TypeDefIndex: 53441
+	public class ObservableList<T> : IList<T> // TypeDefIndex: 54434
 	{
 		// Fields
 		private IList<T> m_List;
+		private ListChangedEventHandler<T> ItemAdded;
+		private ListChangedEventHandler<T> ItemRemoved;
 	
 		// Properties
 		public T this[int index] { get => default; set {} }
@@ -2823,10 +3038,10 @@ namespace UnityEngine.Rendering
 		public bool Contains(T item) => default;
 		public int IndexOf(T item) => default;
 		public void Add(T item) {}
-		public void Add(params T[] items) {}
+		public void Add(T[] items) {}
 		public void Insert(int index, T item) {}
 		public bool Remove(T item) => default;
-		public int Remove(params T[] items) => default;
+		public int Remove(T[] items) => default;
 		public void RemoveAt(int index) {}
 		public void Clear() {}
 		public void CopyTo(T[] array, int arrayIndex) {}
@@ -2835,24 +3050,22 @@ namespace UnityEngine.Rendering
 	}
 
 	[Serializable]
-	public class SerializableEnum // TypeDefIndex: 53442
+	public class SerializableEnum // TypeDefIndex: 54435
 	{
 		// Fields
-		[SerializeField]
 		private string m_EnumValueAsString; // 0x10
-		[SerializeField]
 		private System.Type m_EnumType; // 0x18
 	
 		// Properties
-		public Enum value { get => default; set {} } // 0x0000000189CA8FA0-0x0000000189CA904C 0x0000000189CA904C-0x0000000189CA907C
+		public Enum value { get => default; set {} } // 0x000000018BDC27BC-0x000000018BDC2868 0x000000018BDC2868-0x000000018BDC2898
 	
 		// Constructors
 		public SerializableEnum() {} // Dummy constructor
-		public SerializableEnum(System.Type enumType) {} // 0x0000000189CA8F1C-0x0000000189CA8FA0
+		public SerializableEnum(System.Type enumType) {} // 0x000000018BDC2738-0x000000018BDC27BC
 	}
 
 	[Serializable]
-	public class SerializedDictionary<K, V> : SerializedDictionary<K, V, K, V> // TypeDefIndex: 53443
+	public class SerializedDictionary<K, V> : SerializedDictionary<K, V, K, V> // TypeDefIndex: 54436
 	{
 		// Constructors
 		public SerializedDictionary() {}
@@ -2865,12 +3078,10 @@ namespace UnityEngine.Rendering
 	}
 
 	[Serializable]
-	public abstract class SerializedDictionary<K, V, SK, SV> : Dictionary<K, V>, ISerializationCallbackReceiver // TypeDefIndex: 53444
+	public abstract class SerializedDictionary<K, V, SK, SV> : Dictionary<K, V>, ISerializationCallbackReceiver // TypeDefIndex: 54437
 	{
 		// Fields
-		[SerializeField]
 		private List<SK> m_Keys;
-		[SerializeField]
 		private List<SV> m_Values;
 	
 		// Constructors
@@ -2886,22 +3097,22 @@ namespace UnityEngine.Rendering
 	}
 
 	[Serializable]
-	public class XRGraphics // TypeDefIndex: 53446
+	public class XRGraphics // TypeDefIndex: 54439
 	{
 		// Properties
-		public static float eyeTextureResolutionScale { get => default; set {} } // 0x0000000189CAAC84-0x0000000189CAACB0 0x0000000189CAADDC-0x0000000189CAADE4
-		public static float renderViewportScale { get => default; } // 0x0000000189CAAD3C-0x0000000189CAAD68 
-		public static bool enabled { get => default; } // 0x0000000189CAABEC-0x0000000189CAABF4 
-		public static bool isDeviceActive { get => default; } // 0x0000000189CAACD4-0x0000000189CAACF8 
-		public static string loadedDeviceName { get => default; } // 0x0000000189CAACF8-0x0000000189CAAD3C 
-		public static string[] supportedDevices { get => default; } // 0x0000000189CAAD90-0x0000000189CAADDC 
-		public static StereoRenderingMode stereoRenderingMode { get => default; } // 0x0000000189CAAD68-0x0000000189CAAD90 
-		public static RenderTextureDescriptor eyeTextureDesc { get => default; } // 0x0000000189CAABF4-0x0000000189CAAC60 
-		public static int eyeTextureWidth { get => default; } // 0x0000000189CAACB0-0x0000000189CAACD4 
-		public static int eyeTextureHeight { get => default; } // 0x0000000189CAAC60-0x0000000189CAAC84 
+		public static float eyeTextureResolutionScale { get => default; set {} } // 0x000000018BDC44A0-0x000000018BDC44CC 0x000000018BDC45F8-0x000000018BDC4600
+		public static float renderViewportScale { get => default; } // 0x000000018BDC4558-0x000000018BDC4584 
+		public static bool enabled { get => default; } // 0x000000018BDC4408-0x000000018BDC4410 
+		public static bool isDeviceActive { get => default; } // 0x000000018BDC44F0-0x000000018BDC4514 
+		public static string loadedDeviceName { get => default; } // 0x000000018BDC4514-0x000000018BDC4558 
+		public static string[] supportedDevices { get => default; } // 0x000000018BDC45AC-0x000000018BDC45F8 
+		public static StereoRenderingMode stereoRenderingMode { get => default; } // 0x000000018BDC4584-0x000000018BDC45AC 
+		public static RenderTextureDescriptor eyeTextureDesc { get => default; } // 0x000000018BDC4410-0x000000018BDC447C 
+		public static int eyeTextureWidth { get => default; } // 0x000000018BDC44CC-0x000000018BDC44F0 
+		public static int eyeTextureHeight { get => default; } // 0x000000018BDC447C-0x000000018BDC44A0 
 	
 		// Nested types
-		public enum StereoRenderingMode // TypeDefIndex: 53445
+		public enum StereoRenderingMode // TypeDefIndex: 54438
 		{
 			MultiPass = 0,
 			SinglePass = 1,
@@ -2910,10 +3121,10 @@ namespace UnityEngine.Rendering
 		}
 	
 		// Constructors
-		public XRGraphics() {} // 0x000000018350B670-0x000000018350B680
+		public XRGraphics() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	internal enum DebugAction // TypeDefIndex: 53447
+	internal enum DebugAction // TypeDefIndex: 54440
 	{
 		EnableDebugMenu = 0,
 		PreviousDebugPanel = 1,
@@ -2927,32 +3138,35 @@ namespace UnityEngine.Rendering
 		DebugActionCount = 9
 	}
 
-	internal enum DebugActionRepeatMode // TypeDefIndex: 53448
+	internal enum DebugActionRepeatMode // TypeDefIndex: 54441
 	{
 		Never = 0,
 		Delay = 1
 	}
 
-	public sealed class DebugManager // TypeDefIndex: 53450
+	public sealed class DebugManager // TypeDefIndex: 54443
 	{
 		// Fields
-		private const string kEnableDebugBtn1 = "Enable Debug Button 1"; // Metadata: 0x01FD453D
-		private const string kEnableDebugBtn2 = "Enable Debug Button 2"; // Metadata: 0x01FD4553
-		private const string kDebugPreviousBtn = "Debug Previous"; // Metadata: 0x01FD4569
-		private const string kDebugNextBtn = "Debug Next"; // Metadata: 0x01FD4578
-		private const string kValidateBtn = "Debug Validate"; // Metadata: 0x01FD4583
-		private const string kPersistentBtn = "Debug Persistent"; // Metadata: 0x01FD4592
-		private const string kDPadVertical = "Debug Vertical"; // Metadata: 0x01FD45A3
-		private const string kDPadHorizontal = "Debug Horizontal"; // Metadata: 0x01FD45B2
-		private const string kMultiplierBtn = "Debug Multiplier"; // Metadata: 0x01FD45C3
-		private const string kResetBtn = "Debug Reset"; // Metadata: 0x01FD45D4
-		private const string kEnableDebug = "Enable Debug"; // Metadata: 0x01FD45E0
+		private const string kEnableDebugBtn1 = "Enable Debug Button 1"; // Metadata: 0x02079D64
+		private const string kEnableDebugBtn2 = "Enable Debug Button 2"; // Metadata: 0x02079D7A
+		private const string kDebugPreviousBtn = "Debug Previous"; // Metadata: 0x02079D90
+		private const string kDebugNextBtn = "Debug Next"; // Metadata: 0x02079D9F
+		private const string kValidateBtn = "Debug Validate"; // Metadata: 0x02079DAA
+		private const string kPersistentBtn = "Debug Persistent"; // Metadata: 0x02079DB9
+		private const string kDPadVertical = "Debug Vertical"; // Metadata: 0x02079DCA
+		private const string kDPadHorizontal = "Debug Horizontal"; // Metadata: 0x02079DD9
+		private const string kMultiplierBtn = "Debug Multiplier"; // Metadata: 0x02079DEA
+		private const string kResetBtn = "Debug Reset"; // Metadata: 0x02079DFB
+		private const string kEnableDebug = "Enable Debug"; // Metadata: 0x02079E07
 		private DebugActionDesc[] m_DebugActions; // 0x10
 		private DebugActionState[] m_DebugActionStates; // 0x18
 		private InputActionMap debugActionMap; // 0x20
 		private static readonly Lazy<DebugManager> s_Instance; // 0x00
 		private ReadOnlyCollection<DebugUI.Panel> m_ReadOnlyPanels; // 0x28
 		private readonly List<DebugUI.Panel> m_Panels; // 0x30
+		private Action<bool> onDisplayRuntimeUIChanged; // 0x38
+		private Action onSetDirty; // 0x40
+		private Action resetData; // 0x48
 		public bool refreshEditorRequested; // 0x50
 		private int? m_RequestedPanelIndex; // 0x54
 		private GameObject m_Root; // 0x60
@@ -2963,57 +3177,76 @@ namespace UnityEngine.Rendering
 		private bool m_EnableRuntimeUI; // 0x81
 	
 		// Properties
-		public static DebugManager instance { get => default; } // 0x0000000182D17800-0x0000000182D17880 
-		public ReadOnlyCollection<DebugUI.Panel> panels { get => default; } // 0x0000000189C9ED88-0x0000000189C9EDB0 
-		public bool displayEditorUI { get => default; } // 0x0000000183D4F360-0x0000000183D4F370 
-		public bool enableRuntimeUI { get => default; set {} } // 0x0000000183D5A210-0x0000000183D5A220 0x0000000182D17500-0x0000000182D17530
-		public bool displayRuntimeUI { get => default; set {} } // 0x0000000182D17880-0x0000000182D17960 0x0000000183924CA0-0x0000000183924DA0
-		public bool displayPersistentRuntimeUI { get => default; set {} } // 0x0000000189C9ED18-0x0000000189C9ED88 0x0000000183924C20-0x0000000183924CA0
+		public static DebugManager instance { get => default; } // 0x000000018BDB840C-0x000000018BDB84A0 
+		public ReadOnlyCollection<DebugUI.Panel> panels { get => default; } // 0x000000018BDB84A0-0x000000018BDB8534 
+		public bool displayEditorUI { get => default; } // 0x0000000185A83580-0x0000000185A83680 
+		public bool enableRuntimeUI { get => default; set {} } // 0x0000000185A83500-0x0000000185A83580 0x0000000185A1B9E0-0x0000000185A1BC60
+		public bool displayRuntimeUI { get => default; set {} } // 0x0000000185FD5DD0-0x0000000185FD5DE0 0x000000018BDB801C-0x000000018BDB8044
+		public bool displayPersistentRuntimeUI { get => default; set {} } // 0x000000018BDB6F28-0x000000018BDB6F54 0x000000018BDB7394-0x000000018BDB73C4
 	
 		// Events
 		public event Action<bool> onDisplayRuntimeUIChanged;
 		public event Action onSetDirty;
 		private event Action resetData;
 	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54442
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Action<bool> __9__61_0; // 0x08
+			public static Action __9__61_1; // 0x10
+	
+			// Constructors
+			static __c() {} // 0x000000018BDB6F54-0x000000018BDB7394
+			public __c() {} // 0x000000018BDB6188-0x000000018BDB6294
+	
+			// Methods
+			internal void _.ctor_b__61_0(bool _p0_) {} // 0x000000018BDB6098-0x000000018BDB6168
+			internal void _.ctor_b__61_1() {} // 0x000000018BDB8044-0x000000018BDB8110
+			internal DebugManager _.cctor_b__81_0() => default; // 0x000000018BDB8268-0x000000018BDB82C0
+		}
+	
 		// Constructors
-		private DebugManager() {} // 0x00000001838953C0-0x0000000183895640
-		static DebugManager() {} // 0x0000000183B69000-0x0000000183B69110
+		private DebugManager() {} // 0x000000018BDB8238-0x000000018BDB8268
+		static DebugManager() {} // 0x0000000185A1B990-0x0000000185A1B9E0
 	
 		// Methods
-		private void RegisterActions() {} // 0x0000000189C9D738-0x0000000189C9DB78
-		internal void EnableInputActions() {} // 0x0000000189C9C96C-0x0000000189C9CA78
-		private void AddAction(DebugAction action, DebugActionDesc desc) {} // 0x0000000189C9C87C-0x0000000189C9C94C
-		private void SampleAction(int actionIndex) {} // 0x0000000189C9E828-0x0000000189C9E8F4
-		private void UpdateAction(int actionIndex) {} // 0x0000000189C9EA4C-0x0000000189C9EAA4
-		internal void UpdateActions() {} // 0x0000000189C9EAA4-0x0000000189C9EAF0
-		internal float GetAction(DebugAction action) => default; // 0x0000000189C9CED0-0x0000000189C9CF08
-		internal bool GetActionToggleDebugMenuWithTouch() => default; // 0x0000000189C9CD14-0x0000000189C9CED0
-		internal bool GetActionReleaseScrollTarget() => default; // 0x0000000189C9CC48-0x0000000189C9CD14
-		private void RegisterInputs() {} // 0x0000000189C9DBA8-0x0000000189C9E52C
-		private void UpdateReadOnlyCollection() {} // 0x0000000189C9EAF0-0x0000000189C9EB64
-		public void ToggleEditorUI(bool open) {} // 0x0000000183D4F380-0x0000000183D4F390
-		public void RefreshEditor() {} // 0x0000000183D75180-0x0000000183D75190
-		public void Reset() {} // 0x0000000189C9E800-0x0000000189C9E828
-		public void ReDrawOnScreenDebug() {} // 0x0000000189C9D70C-0x0000000189C9D738
-		public void RegisterData(IDebugData data) {} // 0x0000000189C9DB78-0x0000000189C9DBA8
-		public void UnregisterData(IDebugData data) {} // 0x0000000189C9EA1C-0x0000000189C9EA4C
-		public int GetState() => default; // 0x0000000189C9D5B8-0x0000000189C9D6F0
-		internal void RegisterRootCanvas(DebugUIHandlerCanvas root) {} // 0x0000000189C9E52C-0x0000000189C9E578
-		internal void ChangeSelection(DebugUIHandlerWidget widget, bool fromNext) {} // 0x0000000189C9C94C-0x0000000189C9C96C
-		internal void SetScrollTarget(DebugUIHandlerWidget widget) {} // 0x0000000189C9E8F4-0x0000000189C9E970
-		private void EnsurePersistentCanvas() {} // 0x0000000189C9CA78-0x0000000189C9CC48
-		internal void TogglePersistent(DebugUI.Widget widget) {} // 0x0000000189C9E970-0x0000000189C9EA1C
-		private void OnPanelDirty(DebugUI.Panel panel) {} // 0x0000000189C9D6F0-0x0000000189C9D70C
-		public void RequestEditorWindowPanelIndex(int index) {} // 0x0000000189C9E7AC-0x0000000189C9E800
-		internal int? GetRequestedEditorWindowPanelIndex() => default; // 0x0000000183D83F30-0x0000000183D83F40
-		public DebugUI.Panel GetPanel(string displayName, bool createIfNull = false /* Metadata: 0x01FD453A */, int groupIndex = 0 /* Metadata: 0x01FD453B */, bool overrideIfExist = false /* Metadata: 0x01FD453C */) => default; // 0x0000000189C9D1EC-0x0000000189C9D5B8
-		public void RemovePanel(string displayName) {} // 0x0000000189C9E578-0x0000000189C9E748
-		public void RemovePanel(DebugUI.Panel panel) {} // 0x0000000189C9E748-0x0000000189C9E7AC
-		public DebugUI.Widget GetItem(string queryPath) => default; // 0x0000000189C9D0C0-0x0000000189C9D1EC
-		private DebugUI.Widget GetItem(string queryPath, DebugUI.IContainer container) => default; // 0x0000000189C9CF08-0x0000000189C9D0C0
+		private void RegisterActions() {} // 0x000000018BDB82C0-0x000000018BDB830C
+		internal void EnableInputActions() {} // 0x000000018BDB66EC-0x000000018BDB6724
+		private void AddAction(DebugAction action, DebugActionDesc desc) {} // 0x000000018BDB6530-0x000000018BDB66EC
+		private void SampleAction(int actionIndex) {} // 0x000000018BDB6464-0x000000018BDB6530
+		private void UpdateAction(int actionIndex) {} // 0x000000018BDB73C4-0x000000018BDB7D48
+		internal void UpdateActions() {} // 0x0000000184A776A0-0x0000000184A77720
+		internal float GetAction(DebugAction action) => default; // 0x000000018BDB830C-0x000000018BDB8380
+		internal bool GetActionToggleDebugMenuWithTouch() => default; // 0x000000018BDB85A4-0x000000018BDB85CC
+		internal bool GetActionReleaseScrollTarget() => default; // 0x000000018BDB8380-0x000000018BDB840C
+		private void RegisterInputs() {} // 0x000000018BDB85CC-0x000000018BDB8658
+		private void UpdateReadOnlyCollection() {} // 0x000000018BDB8658-0x000000018BDB86EC
+		public void ToggleEditorUI(bool open) {} // 0x000000018BDB8534-0x000000018BDB85A4
+		public void RefreshEditor() {} // 0x000000018BDB6DD4-0x000000018BDB6F0C
+		public void Reset() {} // 0x000000018BDB7D48-0x000000018BDB7D94
+		public void ReDrawOnScreenDebug() {} // 0x000000018BDB6168-0x000000018BDB6188
+		public void RegisterData(IDebugData data) {} // 0x000000018BDB8110-0x000000018BDB818C
+		public void UnregisterData(IDebugData data) {} // 0x000000018BDB6294-0x000000018BDB6464
+		public int GetState() => default; // 0x000000018BDB818C-0x000000018BDB8238
+		internal void RegisterRootCanvas(DebugUIHandlerCanvas root) {} // 0x000000018BDB6F0C-0x000000018BDB6F28
+		internal void ChangeSelection(DebugUIHandlerWidget widget, bool fromNext) {} // 0x000000018BDB7FC8-0x000000018BDB801C
+		internal void SetScrollTarget(DebugUIHandlerWidget widget) {} // 0x0000000185FE4BC0-0x0000000185FE4BD0
+		private void EnsurePersistentCanvas() {} // 0x000000018BDB6A08-0x000000018BDB6DD4
+		internal void TogglePersistent(DebugUI.Widget widget) {} // 0x000000018BDB7D94-0x000000018BDB7F64
+		private void OnPanelDirty(DebugUI.Panel panel) {} // 0x000000018BDB7F64-0x000000018BDB7FC8
+		public void RequestEditorWindowPanelIndex(int index) {} // 0x000000018BDB68DC-0x000000018BDB6A08
+		internal int? GetRequestedEditorWindowPanelIndex() => default; // 0x000000018BDB6724-0x000000018BDB68DC
+		public DebugUI.Panel GetPanel(string displayName, bool createIfNull = false /* Metadata: 0x02079D61 */, int groupIndex = 0 /* Metadata: 0x02079D62 */, bool overrideIfExist = false /* Metadata: 0x02079D63 */) => default; // 0x0000000185DA5D20-0x0000000185DA5E30
+		public void RemovePanel(string displayName) {} // 0x0000000185F6E230-0x0000000185F6E290
+		public void RemovePanel(DebugUI.Panel panel) {} // 0x0000000185492010-0x0000000185492020
+		public DebugUI.Widget GetItem(string queryPath) => default; // 0x0000000185492010-0x0000000185492020
+		private DebugUI.Widget GetItem(string queryPath, DebugUI.IContainer container) => default; // 0x0000000185492010-0x0000000185492020
 	}
 
-	internal class DebugActionDesc // TypeDefIndex: 53451
+	internal class DebugActionDesc // TypeDefIndex: 54444
 	{
 		// Fields
 		public InputAction buttonAction; // 0x10
@@ -3021,23 +3254,25 @@ namespace UnityEngine.Rendering
 		public float repeatDelay; // 0x1C
 	
 		// Constructors
-		public DebugActionDesc() {} // 0x000000018350B670-0x000000018350B680
+		public DebugActionDesc() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	internal class DebugActionState // TypeDefIndex: 53453
+	internal class DebugActionState // TypeDefIndex: 54446
 	{
 		// Fields
 		private DebugActionKeyType m_Type; // 0x10
 		private InputAction inputAction; // 0x18
 		private bool[] m_TriggerPressedUp; // 0x20
 		private float m_Timer; // 0x28
+		private bool _runningAction_k__BackingField; // 0x2C
+		private float _actionState_k__BackingField; // 0x30
 	
 		// Properties
-		internal bool runningAction { get; private set; } // 0x0000000183D4F1A0-0x0000000183D4F1B0 0x0000000183D4F1B0-0x0000000183D4F1C0
-		internal float actionState { get; private set; } // 0x0000000183D4F5D0-0x0000000183D4F5E0 0x0000000183D4F5E0-0x0000000183D4F5F0
+		internal bool runningAction { get; private set; } // 0x0000000185FB08C0-0x0000000185FB08D0 0x0000000185FB08D0-0x0000000185FB08E0
+		internal float actionState { get; private set; } // 0x0000000185FB0BE0-0x0000000185FB0BF0 0x0000000185FB0BF0-0x0000000185FB0C00
 	
 		// Nested types
-		private enum DebugActionKeyType // TypeDefIndex: 53452
+		private enum DebugActionKeyType // TypeDefIndex: 54445
 		{
 			Button = 0,
 			Axis = 1,
@@ -3045,22 +3280,22 @@ namespace UnityEngine.Rendering
 		}
 	
 		// Constructors
-		public DebugActionState() {} // 0x000000018350B670-0x000000018350B680
+		public DebugActionState() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		private void Trigger(int triggerCount, float state) {} // 0x0000000189C9C6B8-0x0000000189C9C754
-		public void TriggerWithButton(InputAction action, float state) {} // 0x0000000189C9C634-0x0000000189C9C6B8
-		private void Reset() {} // 0x0000000189C9C61C-0x0000000189C9C634
-		public void Update(DebugActionDesc desc) {} // 0x0000000189C9C754-0x0000000189C9C87C
+		private void Trigger(int triggerCount, float state) {} // 0x000000018BDB5ED4-0x000000018BDB5F70
+		public void TriggerWithButton(InputAction action, float state) {} // 0x000000018BDB5E50-0x000000018BDB5ED4
+		private void Reset() {} // 0x000000018BDB5E38-0x000000018BDB5E50
+		public void Update(DebugActionDesc desc) {} // 0x000000018BDB5F70-0x000000018BDB6098
 	}
 
-	public interface IDebugData // TypeDefIndex: 53454
+	public interface IDebugData // TypeDefIndex: 54447
 	{
 		// Methods
 		Action GetReset();
 	}
 
-	public class DebugShapes // TypeDefIndex: 53455
+	public class DebugShapes // TypeDefIndex: 54448
 	{
 		// Fields
 		private static DebugShapes s_Instance; // 0x00
@@ -3070,58 +3305,63 @@ namespace UnityEngine.Rendering
 		private Mesh m_pyramidMesh; // 0x28
 	
 		// Properties
-		public static DebugShapes instance { get => default; } // 0x0000000189CA141C-0x0000000189CA14A0 
+		public static DebugShapes instance { get => default; } // 0x000000018BDBAC38-0x000000018BDBACBC 
 	
 		// Constructors
-		public DebugShapes() {} // 0x000000018350B670-0x000000018350B680
+		public DebugShapes() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		private void BuildSphere(ref Mesh outputMesh, float radius, uint longSubdiv, uint latSubdiv) {} // 0x0000000189CA0C88-0x0000000189CA12E8
-		private void BuildBox(ref Mesh outputMesh, float length, float width, float height) {} // 0x0000000189C9EF64-0x0000000189C9FBA4
-		private void BuildCone(ref Mesh outputMesh, float height, float topRadius, float bottomRadius, int nbSides) {} // 0x0000000189C9FBA4-0x0000000189CA05EC
-		private void BuildPyramid(ref Mesh outputMesh, float width, float height, float depth) {} // 0x0000000189CA05EC-0x0000000189CA0AFC
-		private void BuildShapes() {} // 0x0000000189CA0AFC-0x0000000189CA0C88
-		private void RebuildResources() {} // 0x0000000189CA12E8-0x0000000189CA13AC
-		public Mesh RequestSphereMesh() => default; // 0x0000000189CA1400-0x0000000189CA141C
-		public Mesh RequestBoxMesh() => default; // 0x0000000189CA13AC-0x0000000189CA13C8
-		public Mesh RequestConeMesh() => default; // 0x0000000189CA13C8-0x0000000189CA13E4
-		public Mesh RequestPyramidMesh() => default; // 0x0000000189CA13E4-0x0000000189CA1400
+		private void BuildSphere(ref Mesh outputMesh, float radius, uint longSubdiv, uint latSubdiv) {} // 0x000000018BDBA4A4-0x000000018BDBAB04
+		private void BuildBox(ref Mesh outputMesh, float length, float width, float height) {} // 0x000000018BDB8780-0x000000018BDB93C0
+		private void BuildCone(ref Mesh outputMesh, float height, float topRadius, float bottomRadius, int nbSides) {} // 0x000000018BDB93C0-0x000000018BDB9E08
+		private void BuildPyramid(ref Mesh outputMesh, float width, float height, float depth) {} // 0x000000018BDB9E08-0x000000018BDBA318
+		private void BuildShapes() {} // 0x000000018BDBA318-0x000000018BDBA4A4
+		private void RebuildResources() {} // 0x000000018BDBAB04-0x000000018BDBABC8
+		public Mesh RequestSphereMesh() => default; // 0x000000018BDBAC1C-0x000000018BDBAC38
+		public Mesh RequestBoxMesh() => default; // 0x000000018BDBABC8-0x000000018BDBABE4
+		public Mesh RequestConeMesh() => default; // 0x000000018BDBABE4-0x000000018BDBAC00
+		public Mesh RequestPyramidMesh() => default; // 0x000000018BDBAC00-0x000000018BDBAC1C
 	}
 
-	public class DebugUI // TypeDefIndex: 53490
+	public class DebugUI // TypeDefIndex: 54483
 	{
 		// Nested types
-		public class Container : Widget, IContainer // TypeDefIndex: 53456
+		public class Container : Widget, IContainer // TypeDefIndex: 54449
 		{
+			// Fields
+			private ObservableList<Widget> _children_k__BackingField; // 0x48
+	
 			// Properties
-			public ObservableList<Widget> children { get; private set; } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
-			public override Panel panel { get => default; internal set {} } // 0x00000001820B7B20-0x00000001820B7B30 0x0000000189C9B998-0x0000000189C9BAD4
+			public ObservableList<Widget> children { get; private set; } // 0x0000000185492010-0x0000000185492020 0x00000001813ECF20-0x00000001813ECF30
+			public override Panel panel { get => default; internal set {} } // 0x000000018571FEC0-0x000000018571FED0 0x000000018346D130-0x000000018346D140
 	
 			// Constructors
-			public Container() {} // 0x0000000189C9B724-0x0000000189C9B88C
-			public Container(string displayName, ObservableList<Widget> children) {} // 0x0000000189C9B88C-0x0000000189C9B998
+			public Container() {} // 0x000000018BDB51B4-0x000000018BDB52F0
+			public Container(string displayName, ObservableList<Widget> children) {} // 0x000000018BDB4F40-0x000000018BDB50A8
 	
 			// Methods
-			internal override void GenerateQueryPath() {} // 0x0000000189C9B3D0-0x0000000189C9B4F8
-			protected virtual void OnItemAdded(ObservableList<Widget> sender, ListChangedEventArgs<Widget> e) {} // 0x0000000189C9B65C-0x0000000189C9B6C0
-			protected virtual void OnItemRemoved(ObservableList<Widget> sender, ListChangedEventArgs<Widget> e) {} // 0x0000000189C9B6C0-0x0000000189C9B724
-			public override int GetHashCode() => default; // 0x0000000189C9B4F8-0x0000000189C9B65C
+			internal override void GenerateQueryPath() {} // 0x000000018BDB50A8-0x000000018BDB51B4
+			protected virtual void OnItemAdded(ObservableList<Widget> sender, ListChangedEventArgs<Widget> e) {} // 0x000000018BDB4BEC-0x000000018BDB4D14
+			protected virtual void OnItemRemoved(ObservableList<Widget> sender, ListChangedEventArgs<Widget> e) {} // 0x000000018BDB4E78-0x000000018BDB4EDC
+			public override int GetHashCode() => default; // 0x000000018BDB4EDC-0x000000018BDB4F40
 		}
 	
-		public class Foldout : Container, IValueField // TypeDefIndex: 53458
+		public class Foldout : Container, IValueField // TypeDefIndex: 54451
 		{
 			// Fields
 			public bool opened; // 0x50
 			public bool isHeader; // 0x51
 			public List<ContextMenuItem> contextMenuItems; // 0x58
+			private string[] _columnLabels_k__BackingField; // 0x60
+			private string[] _columnTooltips_k__BackingField; // 0x68
 	
 			// Properties
-			public bool isReadOnly { get => default; } // 0x000000018115F4C0-0x000000018115F530 
-			public string[] columnLabels { get; set; } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
-			public string[] columnTooltips { get; set; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 0x00000001838C5570-0x00000001838C5580
+			public bool isReadOnly { get => default; } // 0x000000018BDB4D14-0x000000018BDB4E78 
+			public string[] columnLabels { get; set; } // 0x00000001814A81B0-0x00000001814A81C0 0x0000000185FB0530-0x0000000185FB0540
+			public string[] columnTooltips { get; set; } // 0x0000000185AE8FE0-0x0000000185AE8FF0 0x00000001813AC280-0x00000001813AC290
 	
 			// Nested types
-			public struct ContextMenuItem // TypeDefIndex: 53457
+			public struct ContextMenuItem // TypeDefIndex: 54450
 			{
 				// Fields
 				public string displayName; // 0x00
@@ -3129,57 +3369,56 @@ namespace UnityEngine.Rendering
 			}
 	
 			// Constructors
-			public Foldout() {} // 0x0000000189CA2DB8-0x0000000189CA2DC0
-			public Foldout(string displayName, ObservableList<Widget> children, string[] columnLabels = null, string[] columnTooltips = null) {} // 0x0000000189CA2DC0-0x0000000189CA2E04
+			public Foldout() {} // 0x0000000185A62990-0x0000000185A629A0
+			public Foldout(string displayName, ObservableList<Widget> children, string[] columnLabels = null, string[] columnTooltips = null) {} // 0x000000018BDBC5D4-0x000000018BDBC5DC
 	
 			// Methods
-			public bool GetValue() => default; // 0x0000000183D4F000-0x0000000183D4F010
-			object UnityEngine.Rendering.DebugUI.IValueField.GetValue() => default; // 0x0000000189CA2D74-0x0000000189CA2DB8
-			public void SetValue(object value) {} // 0x0000000189CA2D28-0x0000000189CA2D74
-			public object ValidateValue(object value) => default; // 0x0000000183D51810-0x0000000183D51820
-			public void SetValue(bool value) {} // 0x0000000183D4F030-0x0000000183D4F040
+			public bool GetValue() => default; // 0x000000018BDBC5DC-0x000000018BDBC620
+			object UnityEngine.Rendering.DebugUI.IValueField.GetValue() => default; // 0x00000001813ECBE0-0x00000001813ECBF0
+			public void SetValue(object value) {} // 0x000000018BDBC590-0x000000018BDBC5D4
+			public object ValidateValue(object value) => default; // 0x000000018BDBC544-0x000000018BDBC590
+			public void SetValue(bool value) {} // 0x00000001834A4750-0x00000001834A4760
 		}
 	
-		public class HBox : Container // TypeDefIndex: 53459
+		public class HBox : Container // TypeDefIndex: 54452
 		{
 			// Constructors
-			public HBox() {} // 0x0000000189CA3CA8-0x0000000189CA3CF0
+			public HBox() {} // 0x00000001813EE9A0-0x00000001813EE9B0
 		}
 	
-		public class VBox : Container // TypeDefIndex: 53460
+		public class VBox : Container // TypeDefIndex: 54453
 		{
 			// Constructors
-			public VBox() {} // 0x0000000189CAA9BC-0x0000000189CAAA04
+			public VBox() {} // 0x000000018BDBD4C4-0x000000018BDBD50C
 		}
 	
-		public class Table : Container // TypeDefIndex: 53462
+		public class Table : Container // TypeDefIndex: 54455
 		{
 			// Fields
 			public bool isReadOnly; // 0x50
 			private bool[] m_Header; // 0x58
 	
 			// Properties
-			public bool[] VisibleColumns { get => default; } // 0x0000000189CA9358-0x0000000189CA9568 
+			public bool[] VisibleColumns { get => default; } // 0x000000018BDC2B74-0x000000018BDC2D84 
 	
 			// Nested types
-			public class Row : Foldout // TypeDefIndex: 53461
+			public class Row : Foldout // TypeDefIndex: 54454
 			{
 				// Constructors
-				public Row() {} // 0x0000000189CA8ED4-0x0000000189CA8F1C
+				public Row() {} // 0x000000018BDC41D8-0x000000018BDC4220
 			}
 	
 			// Constructors
-			public Table() {} // 0x0000000189CA9310-0x0000000189CA9358
+			public Table() {} // 0x000000018BDC2B2C-0x000000018BDC2B74
 	
 			// Methods
-			public void SetColumnVisibility(int index, bool visible) {} // 0x0000000189CA92CC-0x0000000189CA9310
-			public bool GetColumnVisibility(int index) => default; // 0x0000000189CA923C-0x0000000189CA927C
-			protected override void OnItemAdded(ObservableList<Widget> sender, ListChangedEventArgs<Widget> e) {} // 0x0000000189CA927C-0x0000000189CA92A4
-			protected override void OnItemRemoved(ObservableList<Widget> sender, ListChangedEventArgs<Widget> e) {} // 0x0000000189CA92A4-0x0000000189CA92CC
+			public void SetColumnVisibility(int index, bool visible) {} // 0x000000018BDC2AE8-0x000000018BDC2B2C
+			public bool GetColumnVisibility(int index) => default; // 0x000000018BDC2A58-0x000000018BDC2A98
+			protected override void OnItemAdded(ObservableList<Widget> sender, ListChangedEventArgs<Widget> e) {} // 0x000000018BDC2A98-0x000000018BDC2AC0
+			protected override void OnItemRemoved(ObservableList<Widget> sender, ListChangedEventArgs<Widget> e) {} // 0x000000018BDC2AC0-0x000000018BDC2AE8
 		}
 	
-		[Flags]
-		public enum Flags // TypeDefIndex: 53463
+		public enum Flags // TypeDefIndex: 54456
 		{
 			None = 0,
 			EditorOnly = 2,
@@ -3187,28 +3426,32 @@ namespace UnityEngine.Rendering
 			EditorForceUpdate = 8
 		}
 	
-		public abstract class Widget // TypeDefIndex: 53465
+		public abstract class Widget // TypeDefIndex: 54458
 		{
 			// Fields
 			protected Panel m_Panel; // 0x10
 			protected IContainer m_Parent; // 0x18
+			private Flags _flags_k__BackingField; // 0x20
+			private string _displayName_k__BackingField; // 0x28
+			private string _tooltip_k__BackingField; // 0x30
+			private string _queryPath_k__BackingField; // 0x38
 			public Func<bool> isHiddenCallback; // 0x40
 	
 			// Properties
-			public virtual Panel panel { get; internal set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
-			public virtual IContainer parent { get; internal set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
-			public Flags flags { get; set; } // 0x0000000181003B50-0x0000000181003B60 0x0000000181003B60-0x0000000181003B70
-			public string displayName { get; set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
-			public string tooltip { get; set; } // 0x0000000181003830-0x0000000181003840 0x0000000184270470-0x0000000184270480
-			public string queryPath { get; private set; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x000000018388FF30-0x000000018388FF40
-			public bool isEditorOnly { get; } // 0x0000000189CAAB70-0x0000000189CAAB78 
-			public bool isRuntimeOnly { get; } // 0x0000000189CAABB4-0x0000000189CAABC0 
-			public bool isInactiveInEditor { get; } // 0x0000000189CAAB98-0x0000000189CAABB4 
-			public bool isHidden { get; } // 0x0000000189CAAB78-0x0000000189CAAB98 
-			public NameAndTooltip nameAndTooltip { get; set; } // 0x0000000189CAABC0-0x0000000189CAABEC
+			public virtual Panel panel { get; internal set; } // 0x000000018BDC26F0-0x000000018BDC2738 0x000000018346D130-0x000000018346D140
+			public virtual IContainer parent { get; internal set; } // 0x0000000184096E30-0x0000000184096EF0 0x0000000181377E40-0x0000000181377E50
+			public Flags flags { get; set; } // 0x0000000184088E70-0x0000000184088E80 0x00000001813B88B0-0x00000001813B88C0
+			public string displayName { get; set; } // 0x00000001813B9430-0x00000001813B9440 0x00000001813B8590-0x00000001813B85A0
+			public string tooltip { get; set; } // 0x0000000184A4EDC0-0x0000000184A4EDD0 0x00000001813B51D0-0x00000001813B51E0
+			public string queryPath { get; private set; } // 0x00000001864721F0-0x0000000186472200 0x00000001813ECBC0-0x00000001813ECBD0
+			public bool isEditorOnly { get; } // 0x0000000185A16440-0x0000000185A16450 
+			public bool isRuntimeOnly { get; } // 0x000000018BDC438C-0x000000018BDC4394 
+			public bool isInactiveInEditor { get; } // 0x000000018BDC43D0-0x000000018BDC43DC 
+			public bool isHidden { get; } // 0x000000018BDC43B4-0x000000018BDC43D0 
+			public NameAndTooltip nameAndTooltip { get; set; } // 0x000000018BDC4368-0x000000018BDC438C
 	
 			// Nested types
-			public struct NameAndTooltip // TypeDefIndex: 53464
+			public struct NameAndTooltip // TypeDefIndex: 54457
 			{
 				// Fields
 				public string name; // 0x00
@@ -3216,22 +3459,22 @@ namespace UnityEngine.Rendering
 			}
 	
 			// Constructors
-			protected Widget() {} // 0x000000018350B670-0x000000018350B680
+			protected Widget() {} // 0x000000018BDC43DC-0x000000018BDC4408
 	
 			// Methods
-			internal virtual void GenerateQueryPath() {} // 0x0000000189CAAA6C-0x0000000189CAAB4C
-			public override int GetHashCode() => default; // 0x0000000189CAAB4C-0x0000000189CAAB70
+			internal virtual void GenerateQueryPath() {} // 0x000000018BDC4394-0x000000018BDC43B4
+			public override int GetHashCode() => default; // 0x000000018BDC4288-0x000000018BDC4368
 		}
 	
-		public interface IContainer // TypeDefIndex: 53466
+		public interface IContainer // TypeDefIndex: 54459
 		{
 			// Properties
-			ObservableList<Widget> children { get; }
+			ObservableList<Widget> children { get; } // 0x0000000185492010-0x0000000185492020 
 			string displayName { get; set; }
 			string queryPath { get; }
 		}
 	
-		public interface IValueField // TypeDefIndex: 53467
+		public interface IValueField // TypeDefIndex: 54460
 		{
 			// Methods
 			object GetValue();
@@ -3239,33 +3482,39 @@ namespace UnityEngine.Rendering
 			object ValidateValue(object value);
 		}
 	
-		public class Button : Widget // TypeDefIndex: 53468
-		{
-			// Properties
-			public Action action { get; set; } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
-	
-			// Constructors
-			public Button() {} // 0x000000018350B670-0x000000018350B680
-		}
-	
-		public class Value : Widget // TypeDefIndex: 53469
+		public class Button : Widget // TypeDefIndex: 54461
 		{
 			// Fields
+			private Action _action_k__BackingField; // 0x48
+	
+			// Properties
+			public Action action { get; set; } // 0x00000001813ECF20-0x00000001813ECF30
+	
+			// Constructors
+			public Button() {} // 0x000000018571FEC0-0x000000018571FED0
+		}
+	
+		public class Value : Widget // TypeDefIndex: 54462
+		{
+			// Fields
+			private Func<object> _getter_k__BackingField; // 0x48
 			public float refreshRate; // 0x50
 	
 			// Properties
-			public Func<object> getter { get; set; } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+			public Func<object> getter { get; set; } // 0x0000000185492010-0x0000000185492020 0x00000001813ECF20-0x00000001813ECF30
 	
 			// Constructors
-			public Value() {} // 0x0000000189CAAA24-0x0000000189CAAA6C
+			public Value() {} // 0x000000018571FEC0-0x000000018571FED0
 	
 			// Methods
-			public object GetValue() => default; // 0x0000000189CAAA04-0x0000000189CAAA24
+			public object GetValue() => default; // 0x000000018BDC4240-0x000000018BDC4288
 		}
 	
-		public abstract class Field<T> : Widget, IValueField // TypeDefIndex: 53470
+		public abstract class Field<T> : Widget, IValueField // TypeDefIndex: 54463
 		{
 			// Fields
+			private Func<T> _getter_k__BackingField;
+			private Action<T> _setter_k__BackingField;
 			public Action<Field<T>, T> onValueChanged;
 	
 			// Properties
@@ -3284,26 +3533,29 @@ namespace UnityEngine.Rendering
 			public void SetValue(T value) {}
 		}
 	
-		public class BoolField : Field<bool> // TypeDefIndex: 53471
+		public class BoolField : Field<bool> // TypeDefIndex: 54464
 		{
 			// Constructors
-			public BoolField() {} // 0x0000000189C99AE8-0x0000000189C99B10
+			public BoolField() {}
 		}
 	
-		public class HistoryBoolField : BoolField // TypeDefIndex: 53472
+		public class HistoryBoolField : BoolField // TypeDefIndex: 54465
 		{
+			// Fields
+			private Func<bool>[] _historyGetter_k__BackingField; // 0x60
+	
 			// Properties
-			public Func<bool>[] historyGetter { get; set; } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
-			public int historyDepth { get => default; } // 0x0000000189CA3D30-0x0000000189CA3D40 
+			public Func<bool>[] historyGetter { get; set; } // 0x000000018BDB3304-0x000000018BDB332C 0x0000000185FB0530-0x0000000185FB0540
+			public int historyDepth { get => default; } // 0x0000000185AE8FE0-0x0000000185AE8FF0 
 	
 			// Constructors
-			public HistoryBoolField() {} // 0x0000000189CA3D28-0x0000000189CA3D30
+			public HistoryBoolField() {} // 0x000000018BDBD50C-0x000000018BDBD544
 	
 			// Methods
-			public bool GetHistoryValue(int historyIndex) => default; // 0x0000000189CA3CF0-0x0000000189CA3D28
+			public bool GetHistoryValue(int historyIndex) => default; // 0x000000018BDBD54C-0x000000018BDBD55C
 		}
 	
-		public class IntField : Field<int> // TypeDefIndex: 53473
+		public class IntField : Field<int> // TypeDefIndex: 54466
 		{
 			// Fields
 			public Func<int> min; // 0x60
@@ -3312,13 +3564,13 @@ namespace UnityEngine.Rendering
 			public int intStepMult; // 0x74
 	
 			// Constructors
-			public IntField() {} // 0x0000000189CA3E4C-0x0000000189CA3E98
+			public IntField() {} // 0x000000018BDBD618-0x000000018BDBD668
 	
 			// Methods
-			public override int ValidateValue(int value) => default; // 0x0000000189CA3DFC-0x0000000189CA3E4C
+			public override int ValidateValue(int value) => default; // 0x000000018BDBD544-0x000000018BDBD54C
 		}
 	
-		public class UIntField : Field<uint> // TypeDefIndex: 53474
+		public class UIntField : Field<uint> // TypeDefIndex: 54467
 		{
 			// Fields
 			public Func<uint> min; // 0x60
@@ -3327,13 +3579,13 @@ namespace UnityEngine.Rendering
 			public uint intStepMult; // 0x74
 	
 			// Constructors
-			public UIntField() {} // 0x0000000189CAA970-0x0000000189CAA9BC
+			public UIntField() {} // 0x000000018BDC413C-0x000000018BDC418C
 	
 			// Methods
-			public override uint ValidateValue(uint value) => default; // 0x0000000189CAA920-0x0000000189CAA970
+			public override uint ValidateValue(uint value) => default; // 0x000000018BDBD668-0x000000018BDBD6B4
 		}
 	
-		public class FloatField : Field<float> // TypeDefIndex: 53475
+		public class FloatField : Field<float> // TypeDefIndex: 54468
 		{
 			// Fields
 			public Func<float> min; // 0x60
@@ -3343,69 +3595,108 @@ namespace UnityEngine.Rendering
 			public int decimals; // 0x78
 	
 			// Constructors
-			public FloatField() {} // 0x0000000189CA2CE8-0x0000000189CA2D28
+			public FloatField() {} // 0x000000018BDBC4B8-0x000000018BDBC504
 	
 			// Methods
-			public override float ValidateValue(float value) => default; // 0x0000000189CA2C9C-0x0000000189CA2CE8
+			public override float ValidateValue(float value) => default; // 0x000000018BDC418C-0x000000018BDC41D8
 		}
 	
-		private static class EnumUtility // TypeDefIndex: 53477
+		private static class EnumUtility // TypeDefIndex: 54470
 		{
+			// Nested types
+			[Serializable]
+			private sealed class __c // TypeDefIndex: 54469
+			{
+				// Fields
+				public static readonly __c __9; // 0x00
+				public static Func<System.Reflection.FieldInfo, GUIContent> __9__0_0; // 0x08
+	
+				// Constructors
+				static __c() {} // 0x000000018BDBC504-0x000000018BDBC544
+				public __c() {} // 0x000000018BDBC13C-0x000000018BDBC278
+	
+				// Methods
+				internal GUIContent _MakeEnumNames_b__0_0(System.Reflection.FieldInfo fieldInfo) => default; // 0x000000018BDBC278-0x000000018BDBC35C
+			}
+	
 			// Methods
-			internal static GUIContent[] MakeEnumNames(System.Type enumType) => default; // 0x0000000189CA2920-0x0000000189CA2A5C
-			internal static int[] MakeEnumValues(System.Type enumType) => default; // 0x0000000189CA2A5C-0x0000000189CA2B40
+			internal static GUIContent[] MakeEnumNames(System.Type enumType) => default; // 0x000000018BDC4074-0x000000018BDC40D8
+			internal static int[] MakeEnumValues(System.Type enumType) => default; // 0x0000000185492010-0x0000000185492020
 		}
 	
-		public class EnumField : Field<int> // TypeDefIndex: 53479
+		public class EnumField : Field<int> // TypeDefIndex: 54472
 		{
 			// Fields
 			public GUIContent[] enumNames; // 0x60
 			public int[] enumValues; // 0x68
 			internal int[] quickSeparators; // 0x70
 			internal int[] indexes; // 0x78
+			private Func<int> _getIndex_k__BackingField; // 0x80
+			private Action<int> _setIndex_k__BackingField; // 0x88
 	
 			// Properties
-			public Func<int> getIndex { get; set; } // 0x0000000183D4EAE0-0x0000000183D4EAF0 0x00000001851DFC94-0x00000001851DFCA4
-			public Action<int> setIndex { get; set; } // 0x0000000183D4EA60-0x0000000183D4EA70 0x0000000184274DA0-0x0000000184274DB4
-			public int currentIndex { get => default; set {} } // 0x0000000189CA287C-0x0000000189CA28A0 0x0000000189CA28FC-0x0000000189CA2920
-			public System.Type autoEnum { set {} } // 0x0000000189CA28A0-0x0000000189CA28FC
+			public Func<int> getIndex { get; set; } // 0x0000000185FB0510-0x0000000185FB0520 0x0000000186472AA8-0x0000000186472ABC
+			public Action<int> setIndex { get; set; } // 0x000000018BDBC098-0x000000018BDBC0BC 0x000000018BDBC118-0x000000018BDBC13C
+			public int currentIndex { get => default; set {} } // 0x000000018BDBC0BC-0x000000018BDBC118 0x000000018BDBBE5C-0x000000018BDBC070
+			public System.Type autoEnum { set {} } // 0x000000018BDBBDA4-0x000000018BDBBE5C
+	
+			// Nested types
+			[Serializable]
+			private sealed class __c // TypeDefIndex: 54471
+			{
+				// Fields
+				public static readonly __c __9; // 0x00
+				public static Func<GUIContent, string> __9__17_0; // 0x08
+	
+				// Constructors
+				static __c() {} // 0x000000018BDC3EA0-0x000000018BDC4010
+				public __c() {} // 0x000000018140CF50-0x000000018140CF60
+	
+				// Methods
+				internal string _InitQuickSeparators_b__17_0(GUIContent x) => default; // 0x00000001873CBE98-0x00000001873CBEA8
+			}
 	
 			// Constructors
-			public EnumField() {} // 0x0000000189CA2854-0x0000000189CA287C
+			public EnumField() {} // 0x0000000185492010-0x0000000185492020
 	
 			// Methods
-			internal void InitQuickSeparators() {} // 0x0000000189CA2640-0x0000000189CA2854
-			internal void InitIndexes() {} // 0x0000000189CA2588-0x0000000189CA2640
+			internal void InitQuickSeparators() {} // 0x000000018BDBC070-0x000000018BDBC098
+			internal void InitIndexes() {} // 0x000000018BDC40D8-0x000000018BDC413C
 		}
 	
-		public class HistoryEnumField : EnumField // TypeDefIndex: 53480
-		{
-			// Properties
-			public Func<int>[] historyIndexGetter { get; set; } // 0x0000000183D4EA90-0x0000000183D4EAA0 0x00000001851DFCB4-0x00000001851DFCC8
-			public int historyDepth { get => default; } // 0x0000000189CA3D84-0x0000000189CA3D98 
-	
-			// Constructors
-			public HistoryEnumField() {} // 0x0000000189CA3D7C-0x0000000189CA3D84
-	
-			// Methods
-			public int GetHistoryValue(int historyIndex) => default; // 0x0000000189CA3D40-0x0000000189CA3D7C
-		}
-	
-		public class BitField : Field<Enum> // TypeDefIndex: 53481
+		public class HistoryEnumField : EnumField // TypeDefIndex: 54473
 		{
 			// Fields
+			private Func<int>[] _historyIndexGetter_k__BackingField; // 0x90
+	
+			// Properties
+			public Func<int>[] historyIndexGetter { get; set; } // 0x000000018BDC3E2C-0x000000018BDC3EA0 0x0000000181B5FFD0-0x0000000181B5FFE0
+			public int historyDepth { get => default; } // 0x00000001873CBEA8-0x00000001873CBEBC 
+	
+			// Constructors
+			public HistoryEnumField() {} // 0x000000018BDBD55C-0x000000018BDBD598
+	
+			// Methods
+			public int GetHistoryValue(int historyIndex) => default; // 0x000000018BDBD5A0-0x000000018BDBD5B4
+		}
+	
+		public class BitField : Field<Enum> // TypeDefIndex: 54474
+		{
+			// Fields
+			private GUIContent[] _enumNames_k__BackingField; // 0x60
+			private int[] _enumValues_k__BackingField; // 0x68
 			private System.Type m_EnumType; // 0x70
 	
 			// Properties
-			public GUIContent[] enumNames { get; private set; } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
-			public int[] enumValues { get; private set; } // 0x0000000183D4EAB0-0x0000000183D4EAC0 0x00000001838C5570-0x00000001838C5580
-			public System.Type enumType { get => default; set {} } // 0x0000000183D4EB30-0x0000000183D4EB40 0x0000000189C99A90-0x0000000189C99AE8
+			public GUIContent[] enumNames { get; private set; } // 0x000000018BDBD598-0x000000018BDBD5A0 0x0000000185FB0530-0x0000000185FB0540
+			public int[] enumValues { get; private set; } // 0x0000000185AE8FE0-0x0000000185AE8FF0 0x00000001813AC280-0x00000001813AC290
+			public System.Type enumType { get => default; set {} } // 0x0000000185A62990-0x0000000185A629A0 0x0000000181460F70-0x0000000181460F80
 	
 			// Constructors
-			public BitField() {} // 0x0000000189C99A68-0x0000000189C99A90
+			public BitField() {} // 0x000000018BDB32AC-0x000000018BDB3304
 		}
 	
-		public class ColorField : Field<UnityEngine.Color> // TypeDefIndex: 53482
+		public class ColorField : Field<UnityEngine.Color> // TypeDefIndex: 54475
 		{
 			// Fields
 			public bool hdr; // 0x60
@@ -3416,13 +3707,13 @@ namespace UnityEngine.Rendering
 			public int decimals; // 0x6C
 	
 			// Constructors
-			public ColorField() {} // 0x0000000189C9A444-0x0000000189C9A48C
+			public ColorField() {} // 0x000000018BDB3C04-0x000000018BDB3C60
 	
 			// Methods
-			public override UnityEngine.Color ValidateValue(UnityEngine.Color value) => default; // 0x0000000189C9A3E8-0x0000000189C9A444
+			public override UnityEngine.Color ValidateValue(UnityEngine.Color value) => default; // 0x000000018BDB3284-0x000000018BDB32AC
 		}
 	
-		public class Vector2Field : Field<Vector2> // TypeDefIndex: 53483
+		public class Vector2Field : Field<Vector2> // TypeDefIndex: 54476
 		{
 			// Fields
 			public float incStep; // 0x60
@@ -3430,10 +3721,10 @@ namespace UnityEngine.Rendering
 			public int decimals; // 0x68
 	
 			// Constructors
-			public Vector2Field() {} // 0x0000000189CBB880-0x0000000189CBB8C0
+			public Vector2Field() {} // 0x000000018BDB3C60-0x000000018BDB3CA8
 		}
 	
-		public class Vector3Field : Field<Vector3> // TypeDefIndex: 53484
+		public class Vector3Field : Field<Vector3> // TypeDefIndex: 54477
 		{
 			// Fields
 			public float incStep; // 0x60
@@ -3441,10 +3732,10 @@ namespace UnityEngine.Rendering
 			public int decimals; // 0x68
 	
 			// Constructors
-			public Vector3Field() {} // 0x0000000189CBB8C0-0x0000000189CBB900
+			public Vector3Field() {} // 0x000000018BDD509C-0x000000018BDD50DC
 		}
 	
-		public class Vector4Field : Field<Vector4> // TypeDefIndex: 53485
+		public class Vector4Field : Field<Vector4> // TypeDefIndex: 54478
 		{
 			// Fields
 			public float incStep; // 0x60
@@ -3452,16 +3743,16 @@ namespace UnityEngine.Rendering
 			public int decimals; // 0x68
 	
 			// Constructors
-			public Vector4Field() {} // 0x0000000189CBB900-0x0000000189CBB940
+			public Vector4Field() {} // 0x000000018BDD50DC-0x000000018BDD511C
 		}
 	
-		public class MessageBox : Widget // TypeDefIndex: 53487
+		public class MessageBox : Widget // TypeDefIndex: 54480
 		{
 			// Fields
 			public Style style; // 0x48
 	
 			// Nested types
-			public enum Style // TypeDefIndex: 53486
+			public enum Style // TypeDefIndex: 54479
 			{
 				Info = 0,
 				Warning = 1,
@@ -3469,89 +3760,151 @@ namespace UnityEngine.Rendering
 			}
 	
 			// Constructors
-			public MessageBox() {} // 0x000000018350B670-0x000000018350B680
+			public MessageBox() {} // 0x000000018BDD511C-0x000000018BDD515C
 		}
 	
-		public class Panel : IContainer, IComparable<Panel> // TypeDefIndex: 53489
+		public class Panel : IContainer, IComparable<Panel> // TypeDefIndex: 54482
 		{
+			// Fields
+			private Flags _flags_k__BackingField; // 0x10
+			private string _displayName_k__BackingField; // 0x18
+			private int _groupIndex_k__BackingField; // 0x20
+			private ObservableList<Widget> _children_k__BackingField; // 0x28
+			private Action<Panel> onSetDirty; // 0x30
+	
 			// Properties
-			public Flags flags { get; set; } // 0x0000000183D4E340-0x0000000183D4E350 0x00000001810410F0-0x0000000181041100
-			public string displayName { get; set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
-			public int groupIndex { get; set; } // 0x0000000181003B50-0x0000000181003B60 0x0000000181003B60-0x0000000181003B70
-			public string queryPath { get => default; } // 0x0000000181041090-0x00000001810410A0 
-			public bool isEditorOnly { get => default; } // 0x000000018286E960-0x000000018286E970 
-			public bool isRuntimeOnly { get => default; } // 0x0000000189CB47D4-0x0000000189CB47DC 
-			public bool isInactiveInEditor { get => default; } // 0x0000000189CB47B8-0x0000000189CB47D4 
-			public bool editorForceUpdate { get => default; } // 0x0000000189CB47B0-0x0000000189CB47B8 
-			public ObservableList<Widget> children { get; private set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+			public Flags flags { get; set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
+			public string displayName { get; set; } // 0x00000001813B88B0-0x00000001813B88C0 0x00000001813B9430-0x00000001813B9440
+			public int groupIndex { get; set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184BBC860-0x0000000184BBC870
+			public string queryPath { get => default; } // 0x000000018BDCDFF0-0x000000018BDCDFF8 
+			public bool isEditorOnly { get => default; } // 0x000000018BDCDFD4-0x000000018BDCDFF0 
+			public bool isRuntimeOnly { get => default; } // 0x000000018BDCDFCC-0x000000018BDCDFD4 
+			public bool isInactiveInEditor { get => default; } // 0x00000001813B8590-0x00000001813B85A0 
+			public bool editorForceUpdate { get => default; } // 0x0000000184A4EDC0-0x0000000184A4EDD0 
+			public ObservableList<Widget> children { get; private set; } // 0x000000018BDCDF40-0x000000018BDCDFCC 0x000000018BDCDFF8-0x000000018BDCE084
 	
 			// Events
 			public event Action<Panel> onSetDirty;
 	
+			// Nested types
+			[Serializable]
+			private sealed class __c // TypeDefIndex: 54481
+			{
+				// Fields
+				public static readonly __c __9; // 0x00
+				public static Action<Panel> __9__29_0; // 0x08
+	
+				// Constructors
+				static __c() {} // 0x0000000185492010-0x0000000185492020
+				public __c() {} // 0x0000000181C0BBD0-0x0000000181C0BBE0
+	
+				// Methods
+				internal void _.ctor_b__29_0(Panel _p0_) {} // 0x0000000181378230-0x0000000181378240
+			}
+	
 			// Constructors
-			public Panel() {} // 0x0000000189CB4514-0x0000000189CB4724
+			public Panel() {} // 0x000000018BDCDB54-0x000000018BDCDBB0
 	
 			// Methods
-			protected virtual void OnItemAdded(ObservableList<Widget> sender, ListChangedEventArgs<Widget> e) {} // 0x0000000189CB42E0-0x0000000189CB4338
-			protected virtual void OnItemRemoved(ObservableList<Widget> sender, ListChangedEventArgs<Widget> e) {} // 0x0000000189CB4338-0x0000000189CB4394
-			public void SetDirty() {} // 0x0000000189CB4394-0x0000000189CB44E8
-			public override int GetHashCode() => default; // 0x0000000189CB417C-0x0000000189CB42E0
-			int System.IComparable<UnityEngine.Rendering.DebugUI.Panel>.CompareTo(Panel other) => default; // 0x0000000189CB44E8-0x0000000189CB4514
+			protected virtual void OnItemAdded(ObservableList<Widget> sender, ListChangedEventArgs<Widget> e) {} // 0x000000018BDCDBB0-0x000000018BDCDD04
+			protected virtual void OnItemRemoved(ObservableList<Widget> sender, ListChangedEventArgs<Widget> e) {} // 0x000000018BDCD998-0x000000018BDCDAFC
+			public void SetDirty() {} // 0x000000018BDCDD04-0x000000018BDCDD30
+			public override int GetHashCode() => default; // 0x000000018BDD4FD4-0x000000018BDD5038
+			int System.IComparable<UnityEngine.Rendering.DebugUI.Panel>.CompareTo(Panel other) => default; // 0x0000000185492010-0x0000000185492020
 		}
 	
 		// Constructors
-		public DebugUI() {} // 0x000000018350B670-0x000000018350B680
+		public DebugUI() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	internal class DebugUpdater : MonoBehaviour // TypeDefIndex: 53493
+	internal class DebugUpdater : MonoBehaviour // TypeDefIndex: 54486
 	{
 		// Fields
 		private static DebugUpdater s_Instance; // 0x00
 		private ScreenOrientation m_Orientation; // 0x18
 		private bool m_RuntimeUiWasVisibleLastFrame; // 0x1C
 	
+		// Nested types
+		private sealed class _DoAfterInputModuleUpdated_d__9 : IEnumerator<object> // TypeDefIndex: 54484
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public Action action; // 0x20
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000185A83430-0x0000000185A83500 
+			object IEnumerator.Current { get => default; } // 0x000000018BDC6F7C-0x000000018BDC7108 
+	
+			// Constructors
+			public _DoAfterInputModuleUpdated_d__9() {} // Dummy constructor
+			public _DoAfterInputModuleUpdated_d__9(int __1__state) {} // 0x0000000185492010-0x0000000185492020
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x0000000185A83410-0x0000000185A83430
+			private bool MoveNext() => default; // 0x000000018BDC6E10-0x000000018BDC6F7C
+			void IEnumerator.Reset() {} // 0x0000000185A83680-0x0000000185A83700
+		}
+	
+		private sealed class _RefreshRuntimeUINextFrame_d__15 : IEnumerator<object> // TypeDefIndex: 54485
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018BDC6BA4-0x000000018BDC6C84 
+			object IEnumerator.Current { get => default; } // 0x000000018BDC714C-0x000000018BDC72A0 
+	
+			// Constructors
+			public _RefreshRuntimeUINextFrame_d__15() {} // Dummy constructor
+			public _RefreshRuntimeUINextFrame_d__15(int __1__state) {} // 0x000000018BDC6DB4-0x000000018BDC6E10
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018BDC6ACC-0x000000018BDC6BA4
+			private bool MoveNext() => default; // 0x000000018BDC69AC-0x000000018BDC6ACC
+			void IEnumerator.Reset() {} // 0x000000018BDC6C84-0x000000018BDC6DB4
+		}
+	
 		// Constructors
-		public DebugUpdater() {} // 0x000000018426FE60-0x000000018426FE68
+		public DebugUpdater() {} // 0x0000000181377E40-0x0000000181377E50
 	
 		// Methods
-		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-		private static void RuntimeInit() {} // 0x000000018350B670-0x000000018350B680
-		internal static void SetEnabled(bool enabled) {} // 0x0000000183924B30-0x0000000183924B50
-		private static void EnableRuntime() {} // 0x0000000189CAD5F4-0x0000000189CAD760
-		private static void DisableRuntime() {} // 0x0000000183924B50-0x0000000183924C20
-		internal static void HandleInternalEventSystemComponents(bool uiEnabled) {} // 0x0000000183924DA0-0x0000000183924E20
-		private void EnsureExactlyOneEventSystem() {} // 0x0000000189CAD760-0x0000000189CAD8EC
-		[IteratorStateMachine(typeof(_DoAfterInputModuleUpdated_d__9))]
-		private IEnumerator DoAfterInputModuleUpdated(Action action) => default; // 0x0000000189CAD598-0x0000000189CAD5F4
-		private void CheckInputModuleExists() {} // 0x0000000189CAD2B0-0x0000000189CAD388
-		private void AssignDefaultActions() {} // 0x0000000189CAD190-0x0000000189CAD2B0
-		private void CreateDebugEventSystem() {} // 0x0000000189CAD388-0x0000000189CAD468
-		private void DestroyDebugEventSystem() {} // 0x0000000189CAD468-0x0000000189CAD598
-		private void Update() {} // 0x0000000189CAD930-0x0000000189CADA84
-		[IteratorStateMachine(typeof(_RefreshRuntimeUINextFrame_d__15))]
-		private static IEnumerator RefreshRuntimeUINextFrame() => default; // 0x0000000189CAD8EC-0x0000000189CAD930
+		private static void RuntimeInit() {} // 0x000000018BDC7108-0x000000018BDC714C
+		internal static void SetEnabled(bool enabled) {} // 0x000000018646DB20-0x000000018646DB28
+		private static void EnableRuntime() {} // 0x0000000181378230-0x0000000181378240
+		private static void DisableRuntime() {} // 0x0000000185492010-0x0000000185492020
+		internal static void HandleInternalEventSystemComponents(bool uiEnabled) {} // 0x000000018BDD4D6C-0x000000018BDD4E1C
+		private void EnsureExactlyOneEventSystem() {} // 0x0000000181377E40-0x0000000181377E50
+		private IEnumerator DoAfterInputModuleUpdated(Action action) => default; // 0x000000018BDD4E1C-0x000000018BDD4E68
+		private void CheckInputModuleExists() {} // 0x0000000181377E40-0x0000000181377E50
+		private void AssignDefaultActions() {} // 0x0000000181378230-0x0000000181378240
+		private void CreateDebugEventSystem() {} // 0x0000000185492010-0x0000000185492020
+		private void DestroyDebugEventSystem() {} // 0x000000018BDD4E68-0x000000018BDD4EEC
+		private void Update() {} // 0x0000000181377E40-0x0000000181377E50
+		private static IEnumerator RefreshRuntimeUINextFrame() => default; // 0x000000018BDD4EEC-0x000000018BDD4F38
 	}
 
-	public class MousePositionDebug // TypeDefIndex: 53494
+	public class MousePositionDebug // TypeDefIndex: 54487
 	{
 		// Fields
 		private static MousePositionDebug s_Instance; // 0x00
 	
 		// Properties
-		public static MousePositionDebug instance { get => default; } // 0x0000000182D15F20-0x0000000182D15FB0 
+		public static MousePositionDebug instance { get => default; } // 0x00000001852C8740-0x00000001852C87D0 
 	
 		// Constructors
-		public MousePositionDebug() {} // 0x000000018350B670-0x000000018350B680
+		public MousePositionDebug() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public void Build() {} // 0x000000018350B670-0x000000018350B680
-		public void Cleanup() {} // 0x000000018350B670-0x000000018350B680
-		public Vector2 GetMousePosition(float ScreenHeight, bool sceneView) => default; // 0x0000000189CB3F70-0x0000000189CB3F78
-		private Vector2 GetInputMousePosition() => default; // 0x0000000189CB3F00-0x0000000189CB3F70
-		public Vector2 GetMouseClickPosition(float ScreenHeight) => default; // 0x0000000183D5DE90-0x0000000183D5DEA0
+		public void Build() {} // 0x0000000185492010-0x0000000185492020
+		public void Cleanup() {} // 0x0000000185492010-0x0000000185492020
+		public Vector2 GetMousePosition(float ScreenHeight, bool sceneView) => default; // 0x000000018BDCD78C-0x000000018BDCD794
+		private Vector2 GetInputMousePosition() => default; // 0x000000018BDCD71C-0x000000018BDCD78C
+		public Vector2 GetMouseClickPosition(float ScreenHeight) => default; // 0x0000000185FBF3B0-0x0000000185FBF3C0
 	}
 
-	internal class TProfilingSampler<TEnum> : ProfilingSampler // TypeDefIndex: 53495
+	internal class TProfilingSampler<TEnum> : ProfilingSampler // TypeDefIndex: 54488
 		where TEnum : Enum
 	{
 		// Fields
@@ -3563,47 +3916,49 @@ namespace UnityEngine.Rendering
 		public TProfilingSampler(string name) {}
 	}
 
-	public class ProfilingSampler // TypeDefIndex: 53496
+	public class ProfilingSampler // TypeDefIndex: 54489
 	{
 		// Fields
+		private CustomSampler _sampler_k__BackingField; // 0x10
+		private CustomSampler _inlineSampler_k__BackingField; // 0x18
+		private string _name_k__BackingField; // 0x20
 		private Recorder m_Recorder; // 0x28
 		private Recorder m_InlineRecorder; // 0x30
 	
 		// Properties
-		internal CustomSampler sampler { get; private set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
-		internal CustomSampler inlineSampler { get; private set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
-		public string name { get; private set; } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
-		public bool enableRecording { set {} } // 0x0000000189CB609C-0x0000000189CB60E0
-		public float gpuElapsedTime { get => default; } // 0x0000000189CB5F7C-0x0000000189CB5FCC 
-		public int gpuSampleCount { get => default; } // 0x0000000189CB5FCC-0x0000000189CB600C 
-		public float cpuElapsedTime { get => default; } // 0x0000000189CB5EEC-0x0000000189CB5F3C 
-		public int cpuSampleCount { get => default; } // 0x0000000189CB5F3C-0x0000000189CB5F7C 
-		public float inlineCpuElapsedTime { get => default; } // 0x0000000189CB600C-0x0000000189CB605C 
-		public int inlineCpuSampleCount { get => default; } // 0x0000000189CB605C-0x0000000189CB609C 
+		internal CustomSampler sampler { get; private set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
+		internal CustomSampler inlineSampler { get; private set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
+		public string name { get; private set; } // 0x00000001813B31A0-0x00000001813B31B0 0x000000018646EE40-0x000000018646EE50
+		public bool enableRecording { set {} } // 0x000000018BDCF8B8-0x000000018BDCF8FC
+		public float gpuElapsedTime { get => default; } // 0x000000018BDCF798-0x000000018BDCF7E8 
+		public int gpuSampleCount { get => default; } // 0x000000018BDCF7E8-0x000000018BDCF828 
+		public float cpuElapsedTime { get => default; } // 0x000000018BDCF708-0x000000018BDCF758 
+		public int cpuSampleCount { get => default; } // 0x000000018BDCF758-0x000000018BDCF798 
+		public float inlineCpuElapsedTime { get => default; } // 0x000000018BDCF828-0x000000018BDCF878 
+		public int inlineCpuSampleCount { get => default; } // 0x000000018BDCF878-0x000000018BDCF8B8 
 	
 		// Constructors
-		public ProfilingSampler(string name) {} // 0x0000000182E13740-0x0000000182E13870
-		private ProfilingSampler() {} // 0x000000018350B670-0x000000018350B680
+		public ProfilingSampler(string name) {} // 0x0000000184B30AF0-0x0000000184B30C20
+		private ProfilingSampler() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
 		public static ProfilingSampler Get<TEnum>(TEnum marker)
 			where TEnum : Enum => default;
-		public void Begin(CommandBuffer cmd) {} // 0x0000000189CB5E64-0x0000000189CB5EA8
-		public void End(CommandBuffer cmd) {} // 0x0000000189CB5EA8-0x0000000189CB5EEC
-		internal bool IsValid() => default; // 0x00000001895ABC40-0x00000001895ABC54
+		public void Begin(CommandBuffer cmd) {} // 0x000000018BDCF680-0x000000018BDCF6C4
+		public void End(CommandBuffer cmd) {} // 0x000000018BDCF6C4-0x000000018BDCF708
+		internal bool IsValid() => default; // 0x000000018B6D1CC8-0x000000018B6D1CDC
 	}
 
-	public struct ProfilingScope : IDisposable // TypeDefIndex: 53497
+	public struct ProfilingScope : IDisposable // TypeDefIndex: 54490
 	{
 		// Constructors
-		public ProfilingScope(CommandBuffer cmd, ProfilingSampler sampler) {} // 0x000000018350B670-0x000000018350B680
+		public ProfilingScope(CommandBuffer cmd, ProfilingSampler sampler) {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public void Dispose() {} // 0x000000018350B670-0x000000018350B680
+		public void Dispose() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[Obsolete("Please use ProfilingScope")]
-	public struct ProfilingSample : IDisposable // TypeDefIndex: 53498
+	public struct ProfilingSample : IDisposable // TypeDefIndex: 54491
 	{
 		// Fields
 		private readonly CommandBuffer m_Cmd; // 0x00
@@ -3617,64 +3972,61 @@ namespace UnityEngine.Rendering
 			m_Name = default;
 			m_Disposed = default;
 			m_Sampler = default;
-		} // 0x0000000189CB5D30-0x0000000189CB5DD4
+		} // 0x000000018BDCF54C-0x000000018BDCF5F0
 		public ProfilingSample(CommandBuffer cmd, string format, object arg) {
 			m_Cmd = default;
 			m_Name = default;
 			m_Disposed = default;
 			m_Sampler = default;
-		} // 0x0000000189CB5DD4-0x0000000189CB5E1C
-		public ProfilingSample(CommandBuffer cmd, string format, params object[] args) {
+		} // 0x000000018BDCF5F0-0x000000018BDCF638
+		public ProfilingSample(CommandBuffer cmd, string format, object[] args) {
 			m_Cmd = default;
 			m_Name = default;
 			m_Disposed = default;
 			m_Sampler = default;
-		} // 0x0000000189CB5E1C-0x0000000189CB5E64
+		} // 0x000000018BDCF638-0x000000018BDCF680
 	
 		// Methods
-		public void Dispose() {} // 0x0000000189CB5D24-0x0000000189CB5D30
-		private void Dispose(bool disposing) {} // 0x0000000189CB5CA4-0x0000000189CB5D24
+		public void Dispose() {} // 0x000000018BDCF540-0x000000018BDCF54C
+		private void Dispose(bool disposing) {} // 0x000000018BDCF4C0-0x000000018BDCF540
 	}
 
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Enum, AllowMultiple = false)]
-	[Conditional("UNITY_EDITOR")]
-	public class CoreRPHelpURLAttribute : HelpURLAttribute // TypeDefIndex: 53499
+	public class CoreRPHelpURLAttribute : HelpURLAttribute // TypeDefIndex: 54492
 	{
 		// Constructors
 		public CoreRPHelpURLAttribute() {} // Dummy constructor
-		public CoreRPHelpURLAttribute(string pageName, string packageName = "com.unity.render-pipelines.core" /* Metadata: 0x01FD45F7 */) {} // 0x0000000189CAD164-0x0000000189CAD190
+		public CoreRPHelpURLAttribute(string pageName, string packageName = "com.unity.render-pipelines.core" /* Metadata: 0x02079E1E */) {} // 0x000000018BDC6980-0x000000018BDC69AC
 	}
 
-	public class DocumentationInfo // TypeDefIndex: 53500
+	public class DocumentationInfo // TypeDefIndex: 54493
 	{
 		// Fields
-		private const string fallbackVersion = "12.1"; // Metadata: 0x01FD4617
-		private const string url = "https://docs.unity3d.com/Packages/{0}@{1}/manual/{2}.html"; // Metadata: 0x01FD461C
+		private const string fallbackVersion = "12.1"; // Metadata: 0x02079E3E
+		private const string url = "https://docs.unity3d.com/Packages/{0}@{1}/manual/{2}.html"; // Metadata: 0x02079E43
 	
 		// Properties
-		public static string version { get => default; } // 0x0000000189CADAE0-0x0000000189CADB0C 
+		public static string version { get => default; } // 0x000000018BDC72FC-0x000000018BDC7328 
 	
 		// Constructors
-		public DocumentationInfo() {} // 0x000000018350B670-0x000000018350B680
+		public DocumentationInfo() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public static string GetPageLink(string packageName, string pageName) => default; // 0x0000000189CADA84-0x0000000189CADAE0
+		public static string GetPageLink(string packageName, string pageName) => default; // 0x000000018BDC72A0-0x000000018BDC72FC
 	}
 
-	public static class DocumentationUtils // TypeDefIndex: 53501
+	public static class DocumentationUtils // TypeDefIndex: 54494
 	{
 		// Methods
 		public static string GetHelpURL<TEnum>(TEnum mask = default)
 			where TEnum : struct, IConvertible => default;
 	}
 
-	public enum APVConstantBufferRegister // TypeDefIndex: 53502
+	public enum APVConstantBufferRegister // TypeDefIndex: 54495
 	{
 		GlobalRegister = 5
 	}
 
-	[GenerateHLSL(PackingRules.Exact, true, false, false, 1, false, false, false, -1, "F:\\Build\\Release_v1d2\\Windows\\Rel\\Proj\\Packages\\com.unity.render-pipelines.core\\Runtime\\Lighting\\ProbeVolume\\ShaderVariablesProbeVolumes.cs", needAccessors = false, generateCBuffer = true, constantRegister = 5)]
-	internal struct ShaderVariablesProbeVolumes // TypeDefIndex: 53503
+	internal struct ShaderVariablesProbeVolumes // TypeDefIndex: 54496
 	{
 		// Fields
 		public Vector3 _PoolDim; // 0x00
@@ -3690,7 +4042,7 @@ namespace UnityEngine.Rendering
 	}
 
 	[Serializable]
-	public struct SphericalHarmonicsL1 // TypeDefIndex: 53504
+	public struct SphericalHarmonicsL1 // TypeDefIndex: 54497
 	{
 		// Fields
 		public Vector4 shAr; // 0x00
@@ -3701,47 +4053,47 @@ namespace UnityEngine.Rendering
 		// Constructors
 		static SphericalHarmonicsL1() {
 			zero = default;
-		} // 0x0000000189CB6D80-0x0000000189CB6DE8
+		} // 0x000000018BDD059C-0x000000018BDD0604
 	
 		// Methods
-		public static SphericalHarmonicsL1 operator +(SphericalHarmonicsL1 lhs, SphericalHarmonicsL1 rhs) => default; // 0x0000000189CB6DE8-0x0000000189CB6EA0
-		public static SphericalHarmonicsL1 operator -(SphericalHarmonicsL1 lhs, SphericalHarmonicsL1 rhs) => default; // 0x0000000189CB71EC-0x0000000189CB72A4
-		public static SphericalHarmonicsL1 operator *(SphericalHarmonicsL1 lhs, float rhs) => default; // 0x0000000189CB7160-0x0000000189CB71EC
-		public static SphericalHarmonicsL1 operator /(SphericalHarmonicsL1 lhs, float rhs) => default; // 0x0000000189CB6EA0-0x0000000189CB6F88
-		public static bool operator ==(SphericalHarmonicsL1 lhs, SphericalHarmonicsL1 rhs) => default; // 0x0000000189CB6F88-0x0000000189CB70CC
-		public static bool operator !=(SphericalHarmonicsL1 lhs, SphericalHarmonicsL1 rhs) => default; // 0x0000000189CB70CC-0x0000000189CB7160
-		public override bool Equals(object other) => default; // 0x0000000189CB6C4C-0x0000000189CB6D30
-		public override int GetHashCode() => default; // 0x0000000189CB6D30-0x0000000189CB6D80
+		public static SphericalHarmonicsL1 operator +(SphericalHarmonicsL1 lhs, SphericalHarmonicsL1 rhs) => default; // 0x000000018BDD0604-0x000000018BDD06BC
+		public static SphericalHarmonicsL1 operator -(SphericalHarmonicsL1 lhs, SphericalHarmonicsL1 rhs) => default; // 0x000000018BDD0A08-0x000000018BDD0AC0
+		public static SphericalHarmonicsL1 operator *(SphericalHarmonicsL1 lhs, float rhs) => default; // 0x000000018BDD097C-0x000000018BDD0A08
+		public static SphericalHarmonicsL1 operator /(SphericalHarmonicsL1 lhs, float rhs) => default; // 0x000000018BDD06BC-0x000000018BDD07A4
+		public static bool operator ==(SphericalHarmonicsL1 lhs, SphericalHarmonicsL1 rhs) => default; // 0x000000018BDD07A4-0x000000018BDD08E8
+		public static bool operator !=(SphericalHarmonicsL1 lhs, SphericalHarmonicsL1 rhs) => default; // 0x000000018BDD08E8-0x000000018BDD097C
+		public override bool Equals(object other) => default; // 0x000000018BDD0468-0x000000018BDD054C
+		public override int GetHashCode() => default; // 0x000000018BDD054C-0x000000018BDD059C
 	}
 
-	public class SphericalHarmonicsL2Utils // TypeDefIndex: 53505
+	public class SphericalHarmonicsL2Utils // TypeDefIndex: 54498
 	{
 		// Constructors
-		public SphericalHarmonicsL2Utils() {} // 0x000000018350B670-0x000000018350B680
+		public SphericalHarmonicsL2Utils() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
 		public static void GetL1(SphericalHarmonicsL2 sh, out Vector3 L1_R, out Vector3 L1_G, out Vector3 L1_B) {
 			L1_R = default;
 			L1_G = default;
 			L1_B = default;
-		} // 0x0000000189CB7328-0x0000000189CB744C
+		} // 0x000000018BDD0B44-0x000000018BDD0C68
 		public static void GetL2(SphericalHarmonicsL2 sh, out Vector3 L2_0, out Vector3 L2_1, out Vector3 L2_2, out Vector3 L2_3, out Vector3 L2_4) {
 			L2_0 = default;
 			L2_1 = default;
 			L2_2 = default;
 			L2_3 = default;
 			L2_4 = default;
-		} // 0x0000000189CB744C-0x0000000189CB7618
-		public static void SetL0(ref SphericalHarmonicsL2 sh, Vector3 L0) {} // 0x0000000189CB768C-0x0000000189CB76F0
-		public static void SetL1R(ref SphericalHarmonicsL2 sh, Vector3 L1_R) {} // 0x0000000189CB77C8-0x0000000189CB782C
-		public static void SetL1G(ref SphericalHarmonicsL2 sh, Vector3 L1_G) {} // 0x0000000189CB775C-0x0000000189CB77C8
-		public static void SetL1B(ref SphericalHarmonicsL2 sh, Vector3 L1_B) {} // 0x0000000189CB76F0-0x0000000189CB775C
-		public static void SetL1(ref SphericalHarmonicsL2 sh, Vector3 L1_R, Vector3 L1_G, Vector3 L1_B) {} // 0x0000000189CB782C-0x0000000189CB78B4
-		public static void SetCoefficient(ref SphericalHarmonicsL2 sh, int index, Vector3 coefficient) {} // 0x0000000189CB7618-0x0000000189CB768C
-		public static Vector3 GetCoefficient(SphericalHarmonicsL2 sh, int index) => default; // 0x0000000189CB72A4-0x0000000189CB7328
+		} // 0x000000018BDD0C68-0x000000018BDD0E34
+		public static void SetL0(ref SphericalHarmonicsL2 sh, Vector3 L0) {} // 0x000000018BDD0EA8-0x000000018BDD0F0C
+		public static void SetL1R(ref SphericalHarmonicsL2 sh, Vector3 L1_R) {} // 0x000000018BDD0FE4-0x000000018BDD1048
+		public static void SetL1G(ref SphericalHarmonicsL2 sh, Vector3 L1_G) {} // 0x000000018BDD0F78-0x000000018BDD0FE4
+		public static void SetL1B(ref SphericalHarmonicsL2 sh, Vector3 L1_B) {} // 0x000000018BDD0F0C-0x000000018BDD0F78
+		public static void SetL1(ref SphericalHarmonicsL2 sh, Vector3 L1_R, Vector3 L1_G, Vector3 L1_B) {} // 0x000000018BDD1048-0x000000018BDD10D0
+		public static void SetCoefficient(ref SphericalHarmonicsL2 sh, int index, Vector3 coefficient) {} // 0x000000018BDD0E34-0x000000018BDD0EA8
+		public static Vector3 GetCoefficient(SphericalHarmonicsL2 sh, int index) => default; // 0x000000018BDD0AC0-0x000000018BDD0B44
 	}
 
-	public sealed class LensFlareCommonSRP // TypeDefIndex: 53511
+	public sealed class LensFlareCommonSRP // TypeDefIndex: 54504
 	{
 		// Fields
 		private static LensFlareCommonSRP m_Instance; // 0x00
@@ -3754,11 +4106,11 @@ namespace UnityEngine.Rendering
 		private static int frameIdx; // 0x30
 	
 		// Properties
-		public static LensFlareCommonSRP Instance { get => default; } // 0x0000000182DC6F70-0x0000000182DC7480 
-		private List<LensFlareComponentSRP> Data { get => default; } // 0x0000000189CB3D18-0x0000000189CB3D68 
+		public static LensFlareCommonSRP Instance { get => default; } // 0x0000000184BB59B0-0x0000000184BB5EC0 
+		private List<LensFlareComponentSRP> Data { get => default; } // 0x000000018BDCD534-0x000000018BDCD584 
 	
 		// Nested types
-		public struct SunSourceDirLightOverrideLensFlareData // TypeDefIndex: 53506
+		public struct SunSourceDirLightOverrideLensFlareData // TypeDefIndex: 54499
 		{
 			// Fields
 			public bool enable; // 0x00
@@ -3772,7 +4124,7 @@ namespace UnityEngine.Rendering
 			public bool allowOffScreen; // 0x28
 		}
 	
-		public struct SunSourceDirLightOverrideLightData // TypeDefIndex: 53507
+		public struct SunSourceDirLightOverrideLightData // TypeDefIndex: 54500
 		{
 			// Fields
 			public Quaternion rotationLensFlare; // 0x00
@@ -3780,7 +4132,7 @@ namespace UnityEngine.Rendering
 			public UnityEngine.Color color; // 0x1C
 		}
 	
-		public struct SunSourceDirLightOverrideInfo // TypeDefIndex: 53508
+		public struct SunSourceDirLightOverrideInfo // TypeDefIndex: 54501
 		{
 			// Fields
 			public GameObject dirLightGameObject; // 0x00
@@ -3788,63 +4140,75 @@ namespace UnityEngine.Rendering
 			public SunSourceDirLightOverrideLightData lightData; // 0x38
 		}
 	
+		private struct __c__DisplayClass35_0 // TypeDefIndex: 54502
+		{
+			// Fields
+			public LensFlareDataElementSRP element; // 0x00
+		}
+	
+		private struct __c__DisplayClass35_1 // TypeDefIndex: 54503
+		{
+			// Fields
+			public Vector2 screenPos; // 0x00
+			public float position; // 0x08
+			public float globalCos0; // 0x0C
+			public float globalSin0; // 0x10
+			public float combinedScale; // 0x14
+			public float usedAspectRatio; // 0x18
+		}
+	
 		// Constructors
-		private LensFlareCommonSRP() {} // 0x000000018350B670-0x000000018350B680
-		static LensFlareCommonSRP() {} // 0x0000000183B1D0F0-0x0000000183B1D280
+		private LensFlareCommonSRP() {} // 0x0000000185492010-0x0000000185492020
+		static LensFlareCommonSRP() {} // 0x0000000185D43D80-0x0000000185D43F10
 	
 		// Methods
-		public static void Initialize() {} // 0x0000000189CB2970-0x0000000189CB2B04
-		public static void Dispose() {} // 0x0000000189CAF3C0-0x0000000189CAF45C
-		public List<LensFlareComponentSRP> GetData() => default; // 0x0000000184273B00-0x0000000184273B08
-		public bool IsEmpty() => default; // 0x0000000182DC6C40-0x0000000182DC6CF0
-		public void AddData(LensFlareComponentSRP newData) {} // 0x0000000189CAE1C0-0x0000000189CAE274
-		public static float ShapeAttenuationPointLight() => default; // 0x0000000183D51A60-0x0000000183D51A70
-		public static float ShapeAttenuationDirLight(Vector3 forward, Vector3 wo) => default; // 0x0000000189CB3090-0x0000000189CB30D4
-		public static float ShapeAttenuationSpotConeLight(Vector3 forward, Vector3 wo, float spotAngle, float innerSpotPercent01) => default; // 0x0000000189CB311C-0x0000000189CB3210
-		public static float ShapeAttenuationSpotBoxLight(Vector3 forward, Vector3 wo) => default; // 0x0000000189CB30D4-0x0000000189CB311C
-		public static float ShapeAttenuationSpotPyramidLight(Vector3 forward, Vector3 wo) => default; // 0x0000000189CB3210-0x0000000189CB3294
-		public static float ShapeAttenuationAreaTubeLight(Vector3 lightPositionWS, Vector3 lightSide, float lightWidth, Camera cam) => default; // 0x0000000189CB2C78-0x0000000189CB3090
-		public static float ShapeAttenuationAreaRectangleLight(Vector3 forward, Vector3 wo) => default; // 0x0000000189CB2BFC-0x0000000189CB2C78
-		public static float ShapeAttenuationAreaDiscLight(Vector3 forward, Vector3 wo) => default; // 0x0000000189CB2B80-0x0000000189CB2BFC
-		public static Vector4 GetFlareData0(Vector2 screenPos, Vector2 translationScale, Vector2 rayOff0, Vector2 vLocalScreenRatio, float angleDeg, float position, float angularOffset, Vector2 positionOffset, bool autoRotate) => default; // 0x0000000189CB26A8-0x0000000189CB28E8
-		public static Vector2 GetLensFlareRayOffset(Vector2 screenPos, float position, float globalCos0, float globalSin0) => default; // 0x0000000189CB28E8-0x0000000189CB2970
-		public static Vector3 WorldToViewport(Camera camera, bool isLocalLight, bool isCameraRelative, Matrix4x4 viewProjMatrix, Vector3 positionWS) => default; // 0x0000000189CB3BC0-0x0000000189CB3D18
-		private static Vector3 WorldToViewportLocal(bool isCameraRelative, Matrix4x4 viewProjMatrix, Vector3 cameraPosWS, Vector3 positionWS) => default; // 0x0000000189CB3A64-0x0000000189CB3BC0
-		private static Vector3 WorldToViewportDistance(Camera cam, Vector3 positionWS) => default; // 0x0000000189CB38D8-0x0000000189CB3A64
-		public static void ComputeOcclusion(Material lensFlareShader, LensFlareCommonSRP lensFlares, Camera cam, float actualWidth, float actualHeight, bool usePanini, float paniniDistance, float paniniCropToFit, bool isCameraRelative, Vector3 cameraPositionWS, Matrix4x4 viewProjMatrix, CommandBuffer cmd, bool taaEnabled, int _FlareOcclusionTex, int _FlareOcclusionIndex, int _FlareTex, int _FlareColorValue, int _FlareData0, int _FlareData1, int _FlareData2, int _FlareData3, int _FlareData4) {} // 0x0000000189CAE3A8-0x0000000189CAF3C0
-		public static void DoLensFlareDataDrivenCommon(Material lensFlareShader, LensFlareCommonSRP lensFlares, Camera cam, float actualWidth, float actualHeight, bool usePanini, float paniniDistance, float paniniCropToFit, bool isCameraRelative, Vector3 cameraPositionWS, Matrix4x4 viewProjMatrix, CommandBuffer cmd, RenderTargetIdentifier colorBuffer, Func<Light, Camera, Vector3, float> GetLensFlareLightAttenuation, int _FlareOcclusionTex, int _FlareOcclusionIndex, int _FlareTex, int _FlareColorValue, int _FlareData0, int _FlareData1, int _FlareData2, int _FlareData3, int _FlareData4, bool debugFullScreen, ComputeBuffer debugFullscreenBuffer, SunSourceDirLightOverrideInfo dirLightOverrideInfo) {} // 0x0000000189CAF45C-0x0000000189CB24EC
-		public void RemoveData(LensFlareComponentSRP data) {} // 0x0000000182DC6AA0-0x0000000182DC6B40
-		private static Vector2 DoPaniniProjection(Vector2 screenPos, float actualWidth, float actualHeight, float fieldOfView, float paniniProjectionCropToFit, float paniniProjectionDistance) => default; // 0x0000000189CB24EC-0x0000000189CB26A8
-		private static Vector2 CalcViewExtents(float actualWidth, float actualHeight, float fieldOfView) => default; // 0x0000000189CAE35C-0x0000000189CAE3A8
-		private static Vector2 CalcCropExtents(float actualWidth, float actualHeight, float fieldOfView, float d) => default; // 0x0000000189CAE274-0x0000000189CAE35C
-		private static Vector2 Panini_Generic_Inv(Vector2 projPos, float d) => default; // 0x0000000189CB2B04-0x0000000189CB2B80
+		public static void Initialize() {} // 0x000000018BDCC18C-0x000000018BDCC320
+		public static void Dispose() {} // 0x000000018BDC8BDC-0x000000018BDC8C78
+		public List<LensFlareComponentSRP> GetData() => default; // 0x0000000186471FE4-0x0000000186471FEC
+		public bool IsEmpty() => default; // 0x0000000184BB5680-0x0000000184BB5730
+		public void AddData(LensFlareComponentSRP newData) {} // 0x000000018BDC79DC-0x000000018BDC7A90
+		public static float ShapeAttenuationPointLight() => default; // 0x0000000185FB2DD0-0x0000000185FB2DE0
+		public static float ShapeAttenuationDirLight(Vector3 forward, Vector3 wo) => default; // 0x000000018BDCC8AC-0x000000018BDCC8F0
+		public static float ShapeAttenuationSpotConeLight(Vector3 forward, Vector3 wo, float spotAngle, float innerSpotPercent01) => default; // 0x000000018BDCC938-0x000000018BDCCA2C
+		public static float ShapeAttenuationSpotBoxLight(Vector3 forward, Vector3 wo) => default; // 0x000000018BDCC8F0-0x000000018BDCC938
+		public static float ShapeAttenuationSpotPyramidLight(Vector3 forward, Vector3 wo) => default; // 0x000000018BDCCA2C-0x000000018BDCCAB0
+		public static float ShapeAttenuationAreaTubeLight(Vector3 lightPositionWS, Vector3 lightSide, float lightWidth, Camera cam) => default; // 0x000000018BDCC494-0x000000018BDCC8AC
+		public static float ShapeAttenuationAreaRectangleLight(Vector3 forward, Vector3 wo) => default; // 0x000000018BDCC418-0x000000018BDCC494
+		public static float ShapeAttenuationAreaDiscLight(Vector3 forward, Vector3 wo) => default; // 0x000000018BDCC39C-0x000000018BDCC418
+		public static Vector4 GetFlareData0(Vector2 screenPos, Vector2 translationScale, Vector2 rayOff0, Vector2 vLocalScreenRatio, float angleDeg, float position, float angularOffset, Vector2 positionOffset, bool autoRotate) => default; // 0x000000018BDCBEC4-0x000000018BDCC104
+		public static Vector2 GetLensFlareRayOffset(Vector2 screenPos, float position, float globalCos0, float globalSin0) => default; // 0x000000018BDCC104-0x000000018BDCC18C
+		public static Vector3 WorldToViewport(Camera camera, bool isLocalLight, bool isCameraRelative, Matrix4x4 viewProjMatrix, Vector3 positionWS) => default; // 0x000000018BDCD3DC-0x000000018BDCD534
+		private static Vector3 WorldToViewportLocal(bool isCameraRelative, Matrix4x4 viewProjMatrix, Vector3 cameraPosWS, Vector3 positionWS) => default; // 0x000000018BDCD280-0x000000018BDCD3DC
+		private static Vector3 WorldToViewportDistance(Camera cam, Vector3 positionWS) => default; // 0x000000018BDCD0F4-0x000000018BDCD280
+		public static void ComputeOcclusion(Material lensFlareShader, LensFlareCommonSRP lensFlares, Camera cam, float actualWidth, float actualHeight, bool usePanini, float paniniDistance, float paniniCropToFit, bool isCameraRelative, Vector3 cameraPositionWS, Matrix4x4 viewProjMatrix, CommandBuffer cmd, bool taaEnabled, int _FlareOcclusionTex, int _FlareOcclusionIndex, int _FlareTex, int _FlareColorValue, int _FlareData0, int _FlareData1, int _FlareData2, int _FlareData3, int _FlareData4) {} // 0x000000018BDC7BC4-0x000000018BDC8BDC
+		public static void DoLensFlareDataDrivenCommon(Material lensFlareShader, LensFlareCommonSRP lensFlares, Camera cam, float actualWidth, float actualHeight, bool usePanini, float paniniDistance, float paniniCropToFit, bool isCameraRelative, Vector3 cameraPositionWS, Matrix4x4 viewProjMatrix, CommandBuffer cmd, RenderTargetIdentifier colorBuffer, Func<Light, Camera, Vector3, float> GetLensFlareLightAttenuation, int _FlareOcclusionTex, int _FlareOcclusionIndex, int _FlareTex, int _FlareColorValue, int _FlareData0, int _FlareData1, int _FlareData2, int _FlareData3, int _FlareData4, bool debugFullScreen, ComputeBuffer debugFullscreenBuffer, SunSourceDirLightOverrideInfo dirLightOverrideInfo) {} // 0x000000018BDC8C78-0x000000018BDCBD08
+		public void RemoveData(LensFlareComponentSRP data) {} // 0x0000000184BB54E0-0x0000000184BB5580
+		private static Vector2 DoPaniniProjection(Vector2 screenPos, float actualWidth, float actualHeight, float fieldOfView, float paniniProjectionCropToFit, float paniniProjectionDistance) => default; // 0x000000018BDCBD08-0x000000018BDCBEC4
+		private static Vector2 CalcViewExtents(float actualWidth, float actualHeight, float fieldOfView) => default; // 0x000000018BDC7B78-0x000000018BDC7BC4
+		private static Vector2 CalcCropExtents(float actualWidth, float actualHeight, float fieldOfView, float d) => default; // 0x000000018BDC7A90-0x000000018BDC7B78
+		private static Vector2 Panini_Generic_Inv(Vector2 projPos, float d) => default; // 0x000000018BDCC320-0x000000018BDCC39C
+		internal static float _ShapeAttenuationAreaTubeLight_g__Fpo_26_0(float d, float l) => default; // 0x000000018BDCD080-0x000000018BDCD0D8
+		internal static float _ShapeAttenuationAreaTubeLight_g__Fwt_26_1(float d, float l) => default; // 0x000000018BDCD0D8-0x000000018BDCD0F4
+		internal static float _ShapeAttenuationAreaTubeLight_g__DiffLineIntegral_26_2(Vector3 p1, Vector3 p2) => default; // 0x000000018BDCCCA4-0x000000018BDCD080
+		internal static Vector2 _DoLensFlareDataDrivenCommon_g__ComputeLocalSize_35_0(Vector2 rayOff, Vector2 rayOff0, Vector2 curSize, AnimationCurve distortionCurve, ref __c__DisplayClass35_0 param_000726ca, ref __c__DisplayClass35_1 param_000726cb) => default; // 0x000000018BDCCAB0-0x000000018BDCCCA4
+		internal static float _DoLensFlareDataDrivenCommon_g__RandomRange_35_1(float min, float max) => default; // 0x000000018A74E798-0x000000018A74E7A0
 	}
 
-	[AddComponentMenu("Rendering/Lens Flare (SRP)")]
-	[DisallowMultipleComponent]
-	[ExecuteAlways]
-	public sealed class LensFlareComponentSRP : MonoBehaviour // TypeDefIndex: 53512
+	public sealed class LensFlareComponentSRP : MonoBehaviour // TypeDefIndex: 54505
 	{
 		// Fields
-		[SerializeField]
 		private LensFlareDataSRP m_LensFlareData; // 0x18
-		[Min(0f)]
 		public float intensity; // 0x20
-		[Min(1E-05f)]
 		public float maxAttenuationDistance; // 0x24
-		[Min(1E-05f)]
 		public float maxAttenuationScale; // 0x28
 		public AnimationCurve distanceAttenuationCurve; // 0x30
 		public AnimationCurve scaleByDistanceCurve; // 0x38
 		public bool attenuationByLightShape; // 0x40
 		public AnimationCurve radialScreenAttenuationCurve; // 0x48
 		public bool useOcclusion; // 0x50
-		[Min(0f)]
 		public float occlusionRadius; // 0x54
-		[Range(1f, 64f)]
 		public uint sampleCount; // 0x58
 		public float occlusionOffset; // 0x5C
-		[Min(0f)]
 		public float scale; // 0x60
 		public bool allowOffScreen; // 0x64
 		public bool useCustomForward; // 0x65
@@ -3852,21 +4216,21 @@ namespace UnityEngine.Rendering
 		private static float sCelestialAngularRadius; // 0x00
 	
 		// Properties
-		public LensFlareDataSRP lensFlareData { get => default; set {} } // 0x0000000181041090-0x00000001810410A0 0x0000000189CB3EDC-0x0000000189CB3F00
+		public LensFlareDataSRP lensFlareData { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x000000018BDCD6F8-0x000000018BDCD71C
 	
 		// Constructors
-		public LensFlareComponentSRP() {} // 0x00000001838D1170-0x00000001838D1420
-		static LensFlareComponentSRP() {} // 0x0000000183D443E0-0x0000000183D44420
+		public LensFlareComponentSRP() {} // 0x0000000185A73600-0x0000000185A738B0
+		static LensFlareComponentSRP() {} // 0x0000000185FA4820-0x0000000185FA4860
 	
 		// Methods
-		public float celestialProjectedOcclusionRadius(Camera mainCam) => default; // 0x0000000189CB3E2C-0x0000000189CB3EDC
-		private void OnEnable() {} // 0x0000000182DC6B40-0x0000000182DC6BE0
-		private void OnDisable() {} // 0x0000000182DC6BE0-0x0000000182DC6C40
-		private void OnValidate() {} // 0x0000000189CB3D68-0x0000000189CB3E2C
+		public float celestialProjectedOcclusionRadius(Camera mainCam) => default; // 0x000000018BDCD648-0x000000018BDCD6F8
+		private void OnEnable() {} // 0x0000000184BB5580-0x0000000184BB5620
+		private void OnDisable() {} // 0x0000000184BB5620-0x0000000184BB5680
+		private void OnValidate() {} // 0x000000018BDCD584-0x000000018BDCD648
 	}
 
 	[Serializable]
-	public enum SRPLensFlareBlendMode // TypeDefIndex: 53513
+	public enum SRPLensFlareBlendMode // TypeDefIndex: 54506
 	{
 		Additive = 0,
 		Screen = 1,
@@ -3875,7 +4239,7 @@ namespace UnityEngine.Rendering
 	}
 
 	[Serializable]
-	public enum SRPLensFlareDistribution // TypeDefIndex: 53514
+	public enum SRPLensFlareDistribution // TypeDefIndex: 54507
 	{
 		Uniform = 0,
 		Curve = 1,
@@ -3883,7 +4247,7 @@ namespace UnityEngine.Rendering
 	}
 
 	[Serializable]
-	public enum SRPLensFlareType // TypeDefIndex: 53515
+	public enum SRPLensFlareType // TypeDefIndex: 54508
 	{
 		Image = 0,
 		Circle = 1,
@@ -3891,7 +4255,7 @@ namespace UnityEngine.Rendering
 	}
 
 	[Serializable]
-	public sealed class LensFlareDataElementSRP // TypeDefIndex: 53516
+	public sealed class LensFlareDataElementSRP // TypeDefIndex: 54509
 	{
 		// Fields
 		public bool visible; // 0x10
@@ -3899,17 +4263,11 @@ namespace UnityEngine.Rendering
 		public Vector2 positionOffset; // 0x18
 		public float angularOffset; // 0x20
 		public Vector2 translationScale; // 0x24
-		[FormerlySerializedAs("localIntensity")]
-		[Min(0f)]
-		[SerializeField]
 		private float m_LocalIntensity; // 0x2C
 		public Texture lensFlareTexture; // 0x30
 		public float uniformScale; // 0x38
 		public Vector2 sizeXY; // 0x3C
 		public bool allowMultipleElement; // 0x44
-		[FormerlySerializedAs("count")]
-		[Min(1f)]
-		[SerializeField]
 		private int m_Count; // 0x48
 		public bool preserveAspectRatio; // 0x4C
 		public float rotation; // 0x50
@@ -3918,7 +4276,6 @@ namespace UnityEngine.Rendering
 		public bool autoRotate; // 0x68
 		public SRPLensFlareType flareType; // 0x6C
 		public bool modulateByLightColor; // 0x70
-		[SerializeField]
 		private bool isFoldOpened; // 0x71
 		public SRPLensFlareDistribution distribution; // 0x74
 		public float lengthSpread; // 0x78
@@ -3926,9 +4283,6 @@ namespace UnityEngine.Rendering
 		public AnimationCurve scaleCurve; // 0x88
 		public int seed; // 0x90
 		public Gradient colorGradient; // 0x98
-		[FormerlySerializedAs("intensityVariation")]
-		[Range(0f, 1f)]
-		[SerializeField]
 		private float m_IntensityVariation; // 0xA0
 		public Vector2 positionVariation; // 0xA4
 		public float scaleVariation; // 0xAC
@@ -3937,66 +4291,54 @@ namespace UnityEngine.Rendering
 		public Vector2 targetSizeDistortion; // 0xB8
 		public AnimationCurve distortionCurve; // 0xC0
 		public bool distortionRelativeToCenter; // 0xC8
-		[FormerlySerializedAs("fallOff")]
-		[Range(0f, 1f)]
-		[SerializeField]
 		private float m_FallOff; // 0xCC
-		[FormerlySerializedAs("edgeOffset")]
-		[Range(0f, 1f)]
-		[SerializeField]
 		private float m_EdgeOffset; // 0xD0
-		[FormerlySerializedAs("sideCount")]
-		[Min(3f)]
-		[SerializeField]
 		private int m_SideCount; // 0xD4
-		[FormerlySerializedAs("sdfRoundness")]
-		[Range(0f, 1f)]
-		[SerializeField]
 		private float m_SdfRoundness; // 0xD8
 		public bool inverseSDF; // 0xDC
 		public float uniformAngle; // 0xE0
 		public AnimationCurve uniformAngleCurve; // 0xE8
 	
 		// Properties
-		public float localIntensity { get => default; set {} } // 0x0000000183D4F3A0-0x0000000183D4F3B0 0x000000018427151C-0x000000018427152C
-		public int count { get => default; set {} } // 0x0000000183D4EC50-0x0000000183D4EC60 0x000000018427152C-0x000000018427153C
-		public float intensityVariation { get => default; set {} } // 0x0000000183D58340-0x0000000183D58350 0x00000001842714A0-0x00000001842714B4
-		public float fallOff { get => default; set {} } // 0x0000000183D58310-0x0000000183D58320 0x00000001842714B4-0x00000001842714D0
-		public float edgeOffset { get => default; set {} } // 0x0000000183D57560-0x0000000183D57570 0x00000001842714D0-0x00000001842714EC
-		public int sideCount { get => default; set {} } // 0x0000000183D50EB0-0x0000000183D50EC0 0x00000001842714EC-0x0000000184271500
-		public float sdfRoundness { get => default; set {} } // 0x0000000183D598B0-0x0000000183D598C0 0x0000000184271500-0x000000018427151C
+		public float localIntensity { get => default; set {} } // 0x0000000185FB09A0-0x0000000185FB09B0 0x0000000186471E84-0x0000000186471E94
+		public int count { get => default; set {} } // 0x0000000185FB0570-0x0000000185FB0580 0x0000000186471E94-0x0000000186471EA4
+		public float intensityVariation { get => default; set {} } // 0x0000000185FB9B70-0x0000000185FB9B80 0x0000000186471E08-0x0000000186471E1C
+		public float fallOff { get => default; set {} } // 0x0000000185FB9B40-0x0000000185FB9B50 0x0000000186471E1C-0x0000000186471E38
+		public float edgeOffset { get => default; set {} } // 0x0000000185FB8D40-0x0000000185FB8D50 0x0000000186471E38-0x0000000186471E54
+		public int sideCount { get => default; set {} } // 0x0000000185FB2370-0x0000000185FB2380 0x0000000186471E54-0x0000000186471E68
+		public float sdfRoundness { get => default; set {} } // 0x0000000185FBAB60-0x0000000185FBAB70 0x0000000186471E68-0x0000000186471E84
 	
 		// Constructors
-		public LensFlareDataElementSRP() {} // 0x0000000182700110-0x0000000182700690
+		public LensFlareDataElementSRP() {} // 0x0000000184B377E0-0x0000000184B37D60
 	}
 
 	[Serializable]
-	public sealed class LensFlareDataSRP : ScriptableObject // TypeDefIndex: 53517
+	public sealed class LensFlareDataSRP : ScriptableObject // TypeDefIndex: 54510
 	{
 		// Fields
 		public LensFlareDataElementSRP[] elements; // 0x18
 	
 		// Constructors
-		public LensFlareDataSRP() {} // 0x0000000183D4A460-0x0000000183D4A490
+		public LensFlareDataSRP() {} // 0x0000000185FAB430-0x0000000185FAB460
 	}
 
-	public abstract class RenderPipelineResources : ScriptableObject // TypeDefIndex: 53518
+	public abstract class RenderPipelineResources : ScriptableObject // TypeDefIndex: 54511
 	{
 		// Properties
-		protected virtual string packagePath { get; } // 0x0000000181002730-0x0000000181002740 
-		internal string packagePath_Internal { get; } // 0x0000000184273A44-0x0000000184273A54 
+		protected virtual string packagePath { get; } // 0x00000001813AE580-0x00000001813AE590 
+		internal string packagePath_Internal { get; } // 0x00000001864738F0-0x0000000186473900 
 	
 		// Constructors
-		protected RenderPipelineResources() {} // 0x000000018286F540-0x000000018286F550
+		protected RenderPipelineResources() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
 	}
 
-	public enum PackingRules // TypeDefIndex: 53519
+	public enum PackingRules // TypeDefIndex: 54512
 	{
 		Exact = 0,
 		Aggressive = 1
 	}
 
-	public enum FieldPacking // TypeDefIndex: 53520
+	public enum FieldPacking // TypeDefIndex: 54513
 	{
 		NoPacking = 0,
 		R11G11B10 = 1,
@@ -4004,15 +4346,14 @@ namespace UnityEngine.Rendering
 		PackedUint = 3
 	}
 
-	public enum FieldPrecision // TypeDefIndex: 53521
+	public enum FieldPrecision // TypeDefIndex: 54514
 	{
 		Half = 0,
 		Real = 1,
 		Default = 2
 	}
 
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum)]
-	public class GenerateHLSL : Attribute // TypeDefIndex: 53522
+	public class GenerateHLSL : Attribute // TypeDefIndex: 54515
 	{
 		// Fields
 		public PackingRules packingRules; // 0x10
@@ -4028,11 +4369,10 @@ namespace UnityEngine.Rendering
 	
 		// Constructors
 		public GenerateHLSL() {} // Dummy constructor
-		public GenerateHLSL(PackingRules rules = PackingRules.Exact /* Metadata: 0x01FD466A */, bool needAccessors = true /* Metadata: 0x01FD466B */, bool needSetters = false /* Metadata: 0x01FD466C */, bool needParamDebug = false /* Metadata: 0x01FD466D */, int paramDefinesStart = 1 /* Metadata: 0x01FD466E */, bool omitStructDeclaration = false /* Metadata: 0x01FD466F */, bool containsPackedFields = false /* Metadata: 0x01FD4670 */, bool generateCBuffer = false /* Metadata: 0x01FD4671 */, int constantRegister = -1 /* Metadata: 0x01FD4672 */, [CallerFilePath] string sourcePath = null) {} // 0x0000000189CADB0C-0x0000000189CADB6C
+		public GenerateHLSL(PackingRules rules = PackingRules.Exact /* Metadata: 0x02079E91 */, bool needAccessors = true /* Metadata: 0x02079E92 */, bool needSetters = false /* Metadata: 0x02079E93 */, bool needParamDebug = false /* Metadata: 0x02079E94 */, int paramDefinesStart = 1 /* Metadata: 0x02079E95 */, bool omitStructDeclaration = false /* Metadata: 0x02079E96 */, bool containsPackedFields = false /* Metadata: 0x02079E97 */, bool generateCBuffer = false /* Metadata: 0x02079E98 */, int constantRegister = -1 /* Metadata: 0x02079E99 */, string sourcePath = null) {} // 0x000000018BDC7328-0x000000018BDC7388
 	}
 
-	[AttributeUsage(AttributeTargets.Field)]
-	public class SurfaceDataAttributes : Attribute // TypeDefIndex: 53523
+	public class SurfaceDataAttributes : Attribute // TypeDefIndex: 54516
 	{
 		// Fields
 		public string[] displayNames; // 0x10
@@ -4044,12 +4384,11 @@ namespace UnityEngine.Rendering
 	
 		// Constructors
 		public SurfaceDataAttributes() {} // Dummy constructor
-		public SurfaceDataAttributes(string displayName = "" /* Metadata: 0x01FD4673 */, bool isDirection = false /* Metadata: 0x01FD4674 */, bool sRGBDisplay = false /* Metadata: 0x01FD4675 */, FieldPrecision precision = FieldPrecision.Default /* Metadata: 0x01FD4676 */, bool checkIsNormalized = false /* Metadata: 0x01FD4677 */, string preprocessor = "" /* Metadata: 0x01FD4678 */) {} // 0x0000000189CB78B4-0x0000000189CB7964
-		public SurfaceDataAttributes(string[] displayNames, bool isDirection = false /* Metadata: 0x01FD4679 */, bool sRGBDisplay = false /* Metadata: 0x01FD467A */, FieldPrecision precision = FieldPrecision.Default /* Metadata: 0x01FD467B */, bool checkIsNormalized = false /* Metadata: 0x01FD467C */, string preprocessor = "" /* Metadata: 0x01FD467D */) {} // 0x0000000189CB7964-0x0000000189CB79AC
+		public SurfaceDataAttributes(string displayName = "" /* Metadata: 0x02079E9A */, bool isDirection = false /* Metadata: 0x02079E9B */, bool sRGBDisplay = false /* Metadata: 0x02079E9C */, FieldPrecision precision = FieldPrecision.Default /* Metadata: 0x02079E9D */, bool checkIsNormalized = false /* Metadata: 0x02079E9E */, string preprocessor = "" /* Metadata: 0x02079E9F */) {} // 0x000000018BDD10D0-0x000000018BDD1180
+		public SurfaceDataAttributes(string[] displayNames, bool isDirection = false /* Metadata: 0x02079EA0 */, bool sRGBDisplay = false /* Metadata: 0x02079EA1 */, FieldPrecision precision = FieldPrecision.Default /* Metadata: 0x02079EA2 */, bool checkIsNormalized = false /* Metadata: 0x02079EA3 */, string preprocessor = "" /* Metadata: 0x02079EA4 */) {} // 0x000000018BDD1180-0x000000018BDD11C8
 	}
 
-	[AttributeUsage(AttributeTargets.Field)]
-	public class HLSLArray : Attribute // TypeDefIndex: 53524
+	public class HLSLArray : Attribute // TypeDefIndex: 54517
 	{
 		// Fields
 		public int arraySize; // 0x10
@@ -4057,11 +4396,10 @@ namespace UnityEngine.Rendering
 	
 		// Constructors
 		public HLSLArray() {} // Dummy constructor
-		public HLSLArray(int arraySize, System.Type elementType) {} // 0x0000000184270E40-0x0000000184270E50
+		public HLSLArray(int arraySize, System.Type elementType) {} // 0x000000018646E950-0x000000018646E960
 	}
 
-	[AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
-	public class PackingAttribute : Attribute // TypeDefIndex: 53525
+	public class PackingAttribute : Attribute // TypeDefIndex: 54518
 	{
 		// Fields
 		public string[] displayNames; // 0x10
@@ -4076,15 +4414,15 @@ namespace UnityEngine.Rendering
 	
 		// Constructors
 		public PackingAttribute() {} // Dummy constructor
-		public PackingAttribute(string[] displayNames, FieldPacking packingScheme = FieldPacking.NoPacking /* Metadata: 0x01FD467E */, int bitSize = 32 /* Metadata: 0x01FD467F */, int offsetInSource = 0 /* Metadata: 0x01FD4680 */, float minValue = 0f /* Metadata: 0x01FD4681 */, float maxValue = 1f /* Metadata: 0x01FD4685 */, bool isDirection = false /* Metadata: 0x01FD4689 */, bool sRGBDisplay = false /* Metadata: 0x01FD468A */, bool checkIsNormalized = false /* Metadata: 0x01FD468B */, string preprocessor = "" /* Metadata: 0x01FD468C */) {} // 0x0000000189CB3F78-0x0000000189CB4060
-		public PackingAttribute(string displayName = "" /* Metadata: 0x01FD468D */, FieldPacking packingScheme = FieldPacking.NoPacking /* Metadata: 0x01FD468E */, int bitSize = 0 /* Metadata: 0x01FD468F */, int offsetInSource = 0 /* Metadata: 0x01FD4690 */, float minValue = 0f /* Metadata: 0x01FD4691 */, float maxValue = 1f /* Metadata: 0x01FD4695 */, bool isDirection = false /* Metadata: 0x01FD4699 */, bool sRGBDisplay = false /* Metadata: 0x01FD469A */, bool checkIsNormalized = false /* Metadata: 0x01FD469B */, string preprocessor = "" /* Metadata: 0x01FD469C */) {} // 0x0000000189CB4060-0x0000000189CB417C
+		public PackingAttribute(string[] displayNames, FieldPacking packingScheme = FieldPacking.NoPacking /* Metadata: 0x02079EA5 */, int bitSize = 32 /* Metadata: 0x02079EA6 */, int offsetInSource = 0 /* Metadata: 0x02079EA7 */, float minValue = 0f /* Metadata: 0x02079EA8 */, float maxValue = 1f /* Metadata: 0x02079EAC */, bool isDirection = false /* Metadata: 0x02079EB0 */, bool sRGBDisplay = false /* Metadata: 0x02079EB1 */, bool checkIsNormalized = false /* Metadata: 0x02079EB2 */, string preprocessor = "" /* Metadata: 0x02079EB3 */) {} // 0x000000018BDCD794-0x000000018BDCD87C
+		public PackingAttribute(string displayName = "" /* Metadata: 0x02079EB4 */, FieldPacking packingScheme = FieldPacking.NoPacking /* Metadata: 0x02079EB5 */, int bitSize = 0 /* Metadata: 0x02079EB6 */, int offsetInSource = 0 /* Metadata: 0x02079EB7 */, float minValue = 0f /* Metadata: 0x02079EB8 */, float maxValue = 1f /* Metadata: 0x02079EBC */, bool isDirection = false /* Metadata: 0x02079EC0 */, bool sRGBDisplay = false /* Metadata: 0x02079EC1 */, bool checkIsNormalized = false /* Metadata: 0x02079EC2 */, string preprocessor = "" /* Metadata: 0x02079EC3 */) {} // 0x000000018BDCD87C-0x000000018BDCD998
 	}
 
-	public struct ShaderGenUInt4 // TypeDefIndex: 53526
+	public struct ShaderGenUInt4 // TypeDefIndex: 54519
 	{
 	}
 
-	internal static class Hammersley // TypeDefIndex: 53535
+	internal static class Hammersley // TypeDefIndex: 54528
 	{
 		// Fields
 		private static float[] k_Hammersley2dSeq16; // 0x00
@@ -4097,67 +4435,87 @@ namespace UnityEngine.Rendering
 		private static readonly int s_hammersley2DSeq256Id; // 0x2C
 	
 		// Nested types
-		[GenerateHLSL(PackingRules.Exact, true, false, false, 1, false, false, false, -1, "F:\\Build\\Release_v1d2\\Windows\\Rel\\Proj\\Packages\\com.unity.render-pipelines.core\\Runtime\\ShaderLibrary\\Sampling\\Hammersley.cs", needAccessors = false, generateCBuffer = true)]
-		private struct Hammersley2dSeq16 // TypeDefIndex: 53528
+		private struct Hammersley2dSeq16 // TypeDefIndex: 54521
 		{
 			// Fields
-			[HLSLArray(16, typeof(Vector4))]
-			public unsafe fixed /* 0x00000000-0x00000000 */ float hammersley2dSeq16[0]; // 0x00
+			public _hammersley2dSeq16_e__FixedBuffer hammersley2dSeq16; // 0x00
+	
+			// Nested types
+			public struct _hammersley2dSeq16_e__FixedBuffer // TypeDefIndex: 54520
+			{
+				// Fields
+				public float FixedElementField; // 0x00
+			}
 		}
 	
-		[GenerateHLSL(PackingRules.Exact, true, false, false, 1, false, false, false, -1, "F:\\Build\\Release_v1d2\\Windows\\Rel\\Proj\\Packages\\com.unity.render-pipelines.core\\Runtime\\ShaderLibrary\\Sampling\\Hammersley.cs", needAccessors = false, generateCBuffer = true)]
-		private struct Hammersley2dSeq32 // TypeDefIndex: 53530
+		private struct Hammersley2dSeq32 // TypeDefIndex: 54523
 		{
 			// Fields
-			[HLSLArray(32, typeof(Vector4))]
-			public unsafe fixed /* 0x00000000-0x00000000 */ float hammersley2dSeq32[0]; // 0x00
+			public _hammersley2dSeq32_e__FixedBuffer hammersley2dSeq32; // 0x00
+	
+			// Nested types
+			public struct _hammersley2dSeq32_e__FixedBuffer // TypeDefIndex: 54522
+			{
+				// Fields
+				public float FixedElementField; // 0x00
+			}
 		}
 	
-		[GenerateHLSL(PackingRules.Exact, true, false, false, 1, false, false, false, -1, "F:\\Build\\Release_v1d2\\Windows\\Rel\\Proj\\Packages\\com.unity.render-pipelines.core\\Runtime\\ShaderLibrary\\Sampling\\Hammersley.cs", needAccessors = false, generateCBuffer = true)]
-		private struct Hammersley2dSeq64 // TypeDefIndex: 53532
+		private struct Hammersley2dSeq64 // TypeDefIndex: 54525
 		{
 			// Fields
-			[HLSLArray(64, typeof(Vector4))]
-			public unsafe fixed /* 0x00000000-0x00000000 */ float hammersley2dSeq64[0]; // 0x00
+			public _hammersley2dSeq64_e__FixedBuffer hammersley2dSeq64; // 0x00
+	
+			// Nested types
+			public struct _hammersley2dSeq64_e__FixedBuffer // TypeDefIndex: 54524
+			{
+				// Fields
+				public float FixedElementField; // 0x00
+			}
 		}
 	
-		[GenerateHLSL(PackingRules.Exact, true, false, false, 1, false, false, false, -1, "F:\\Build\\Release_v1d2\\Windows\\Rel\\Proj\\Packages\\com.unity.render-pipelines.core\\Runtime\\ShaderLibrary\\Sampling\\Hammersley.cs", needAccessors = false, generateCBuffer = true)]
-		private struct Hammersley2dSeq256 // TypeDefIndex: 53534
+		private struct Hammersley2dSeq256 // TypeDefIndex: 54527
 		{
 			// Fields
-			[HLSLArray(256, typeof(Vector4))]
-			public unsafe fixed /* 0x00000000-0x00000000 */ float hammersley2dSeq256[0]; // 0x00
+			public _hammersley2dSeq256_e__FixedBuffer hammersley2dSeq256; // 0x00
+	
+			// Nested types
+			public struct _hammersley2dSeq256_e__FixedBuffer // TypeDefIndex: 54526
+			{
+				// Fields
+				public float FixedElementField; // 0x00
+			}
 		}
 	
 		// Constructors
-		static Hammersley() {} // 0x0000000189CADF78-0x0000000189CAE1C0
+		static Hammersley() {} // 0x000000018BDC7794-0x000000018BDC79DC
 	
 		// Methods
-		public static void Initialize() {} // 0x0000000189CADC94-0x0000000189CADF78
-		public static void BindConstants(CommandBuffer cmd, ComputeShader cs) {} // 0x0000000189CADB6C-0x0000000189CADC94
+		public static void Initialize() {} // 0x000000018BDC74B0-0x000000018BDC7794
+		public static void BindConstants(CommandBuffer cmd, ComputeShader cs) {} // 0x000000018BDC7388-0x000000018BDC74B0
 	}
 
-	public class BufferedRTHandleSystem : IDisposable // TypeDefIndex: 53536
+	public class BufferedRTHandleSystem : IDisposable // TypeDefIndex: 54529
 	{
 		// Fields
 		private Dictionary<int, RTHandle[]> m_RTHandles; // 0x10
 		private bool m_DisposedValue; // 0x18
 	
 		// Constructors
-		public BufferedRTHandleSystem() {} // 0x0000000183A4E400-0x0000000183A4E480
+		public BufferedRTHandleSystem() {} // 0x0000000185C54E20-0x0000000185C54EA0
 	
 		// Methods
-		public RTHandle GetFrameRT(int bufferId, int frameIndex) => default; // 0x0000000189CACD64-0x0000000189CACE04
-		public void AllocBuffer(int bufferId, Func<int, RTHandle> allocator, int bufferCount) {} // 0x0000000189CACC3C-0x0000000189CACD58
-		public void ReleaseBuffer(int bufferId) {} // 0x0000000189CACE8C-0x0000000189CACF60
-		public int GetNumFramesAllocated(int bufferId) => default; // 0x0000000189CACE04-0x0000000189CACE8C
-		private void Swap() {} // 0x0000000189CACF60-0x0000000189CAD164
-		private void Dispose(bool disposing) {} // 0x000000018376FB60-0x000000018376FB90
-		public void Dispose() {} // 0x0000000189CACD58-0x0000000189CACD64
-		public void ReleaseAll() {} // 0x000000018376FB90-0x000000018376FD40
+		public RTHandle GetFrameRT(int bufferId, int frameIndex) => default; // 0x000000018BDC6580-0x000000018BDC6620
+		public void AllocBuffer(int bufferId, Func<int, RTHandle> allocator, int bufferCount) {} // 0x000000018BDC6458-0x000000018BDC6574
+		public void ReleaseBuffer(int bufferId) {} // 0x000000018BDC66A8-0x000000018BDC677C
+		public int GetNumFramesAllocated(int bufferId) => default; // 0x000000018BDC6620-0x000000018BDC66A8
+		private void Swap() {} // 0x000000018BDC677C-0x000000018BDC6980
+		private void Dispose(bool disposing) {} // 0x00000001852C73C0-0x00000001852C73F0
+		public void Dispose() {} // 0x000000018BDC6574-0x000000018BDC6580
+		public void ReleaseAll() {} // 0x00000001852C73F0-0x00000001852C75A0
 	}
 
-	public enum DepthBits // TypeDefIndex: 53537
+	public enum DepthBits // TypeDefIndex: 54530
 	{
 		None = 0,
 		Depth8 = 8,
@@ -4166,7 +4524,7 @@ namespace UnityEngine.Rendering
 		Depth32 = 32
 	}
 
-	public enum MSAASamples // TypeDefIndex: 53538
+	public enum MSAASamples // TypeDefIndex: 54531
 	{
 		None = 1,
 		MSAA2x = 2,
@@ -4174,18 +4532,18 @@ namespace UnityEngine.Rendering
 		MSAA8x = 8
 	}
 
-	public class PowerOfTwoTextureAtlas : Texture2DAtlas // TypeDefIndex: 53541
+	public class PowerOfTwoTextureAtlas : Texture2DAtlas // TypeDefIndex: 54534
 	{
 		// Fields
 		private readonly int m_MipPadding; // 0x48
-		private const float k_MipmapFactorApprox = 1.33f; // Metadata: 0x01FD46B2
+		private const float k_MipmapFactorApprox = 1.33f; // Metadata: 0x02079ED9
 		private Dictionary<int, Vector2Int> m_RequestedTextures; // 0x50
 	
 		// Properties
-		public int mipPadding { get => default; } // 0x0000000183D4EC50-0x0000000183D4EC60 
+		public int mipPadding { get => default; } // 0x000000018BDCEAB4-0x000000018BDCEBCC 
 	
 		// Nested types
-		private enum BlitType // TypeDefIndex: 53539
+		private enum BlitType // TypeDefIndex: 54532
 		{
 			Padding = 0,
 			PaddingMultiply = 1,
@@ -4193,33 +4551,48 @@ namespace UnityEngine.Rendering
 			OctahedralPaddingMultiply = 3
 		}
 	
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54533
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Comparison<ValueTuple<int, Vector2Int>> __9__23_0; // 0x08
+	
+			// Constructors
+			static __c() {} // 0x000000018BDCF3C8-0x000000018BDCF4C0
+			public __c() {} // 0x0000000185FB0570-0x0000000185FB0580
+	
+			// Methods
+			internal int _RelayoutEntries_b__23_0(ValueTuple<int, Vector2Int> c1, ValueTuple<int, Vector2Int> c2) => default; // 0x0000000185FE4CC0-0x0000000185FE4CF0
+		}
+	
 		// Constructors
 		public PowerOfTwoTextureAtlas() {} // Dummy constructor
-		public PowerOfTwoTextureAtlas(int size, int mipPadding, GraphicsFormat format, UnityEngine.FilterMode filterMode = UnityEngine.FilterMode.Point /* Metadata: 0x01FD46A6 */, string name = "" /* Metadata: 0x01FD46A7 */, bool useMipMap = true /* Metadata: 0x01FD46A8 */) {} // 0x0000000189CB5BAC-0x0000000189CB5CA4
+		public PowerOfTwoTextureAtlas(int size, int mipPadding, GraphicsFormat format, UnityEngine.FilterMode filterMode = UnityEngine.FilterMode.Point /* Metadata: 0x02079ECD */, string name = "" /* Metadata: 0x02079ECE */, bool useMipMap = true /* Metadata: 0x02079ECF */) {} // 0x000000018BDCEBCC-0x000000018BDCEC78
 	
 		// Methods
-		private int GetTexturePadding() => default; // 0x0000000183D84030-0x0000000183D84060
-		public Vector4 GetPayloadScaleOffset(Texture texture, [IsReadOnly] in Vector4 scaleOffset) => default; // 0x0000000189CB53B0-0x0000000189CB545C
-		public static Vector4 GetPayloadScaleOffset([IsReadOnly] in Vector2 textureSize, [IsReadOnly] in Vector2 paddingSize, [IsReadOnly] in Vector4 scaleOffset) => default; // 0x0000000189CB5298-0x0000000189CB53B0
-		private void Blit2DTexture(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips, BlitType blitType) {} // 0x0000000189CB4A00-0x0000000189CB4DD8
-		public override void BlitTexture(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips = true /* Metadata: 0x01FD46A9 */, int overrideInstanceID = -1 /* Metadata: 0x01FD46AA */) {} // 0x0000000189CB5054-0x0000000189CB5120
-		public void BlitTextureMultiply(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips = true /* Metadata: 0x01FD46AB */, int overrideInstanceID = -1 /* Metadata: 0x01FD46AC */) {} // 0x0000000189CB4F80-0x0000000189CB5054
-		public override void BlitOctahedralTexture(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips = true /* Metadata: 0x01FD46AD */, int overrideInstanceID = -1 /* Metadata: 0x01FD46AE */) {} // 0x0000000189CB4EAC-0x0000000189CB4F80
-		public void BlitOctahedralTextureMultiply(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips = true /* Metadata: 0x01FD46AF */, int overrideInstanceID = -1 /* Metadata: 0x01FD46B0 */) {} // 0x0000000189CB4DD8-0x0000000189CB4EAC
-		private void TextureSizeToPowerOfTwo(Texture texture, ref int width, ref int height) {} // 0x0000000189CB5B78-0x0000000189CB5BAC
-		private Vector2 GetPowerOfTwoTextureSize(Texture texture) => default; // 0x0000000189CB545C-0x0000000189CB54D8
-		public override bool AllocateTexture(CommandBuffer cmd, ref Vector4 scaleOffset, Texture texture, int width, int height, int overrideInstanceID = -1 /* Metadata: 0x01FD46B1 */) => default; // 0x0000000189CB4868-0x0000000189CB4A00
-		public void ResetRequestedTexture() {} // 0x0000000189CB5B30-0x0000000189CB5B78
-		public bool ReserveSpace(Texture texture) => default; // 0x0000000189CB5954-0x0000000189CB59B4
-		public bool ReserveSpace(Texture texture, int width, int height) => default; // 0x0000000189CB5AE8-0x0000000189CB5B30
-		public bool ReserveSpace(Texture textureA, Texture textureB, int width, int height) => default; // 0x0000000189CB5AA8-0x0000000189CB5AE8
-		private bool ReserveSpace(int id, int width, int height) => default; // 0x0000000189CB59B4-0x0000000189CB5AA8
-		public bool RelayoutEntries() => default; // 0x0000000189CB54D8-0x0000000189CB5954
-		public static long GetApproxCacheSizeInByte(int nbElement, int resolution, bool hasMipmap, GraphicsFormat format) => default; // 0x0000000189CB5120-0x0000000189CB51D0
-		public static int GetMaxCacheSizeForWeightInByte(int weight, bool hasMipmap, GraphicsFormat format) => default; // 0x0000000189CB51D0-0x0000000189CB5298
+		private int GetTexturePadding() => default; // 0x000000018BDCE21C-0x000000018BDCE5F4
+		public Vector4 GetPayloadScaleOffset(Texture texture, in Vector4 scaleOffset) => default; // 0x000000018BDCE870-0x000000018BDCE93C
+		public static Vector4 GetPayloadScaleOffset(in Vector2 textureSize, in Vector2 paddingSize, in Vector4 scaleOffset) => default; // 0x000000018BDCE79C-0x000000018BDCE870
+		private void Blit2DTexture(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips, BlitType blitType) {} // 0x000000018BDCE6C8-0x000000018BDCE79C
+		public override void BlitTexture(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips = true /* Metadata: 0x02079ED0 */, int overrideInstanceID = -1 /* Metadata: 0x02079ED1 */) {} // 0x000000018BDCE5F4-0x000000018BDCE6C8
+		public void BlitTextureMultiply(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips = true /* Metadata: 0x02079ED2 */, int overrideInstanceID = -1 /* Metadata: 0x02079ED3 */) {} // 0x000000018BDCF394-0x000000018BDCF3C8
+		public override void BlitOctahedralTexture(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips = true /* Metadata: 0x02079ED4 */, int overrideInstanceID = -1 /* Metadata: 0x02079ED5 */) {} // 0x000000018BDCEC78-0x000000018BDCECF4
+		public void BlitOctahedralTextureMultiply(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips = true /* Metadata: 0x02079ED6 */, int overrideInstanceID = -1 /* Metadata: 0x02079ED7 */) {} // 0x000000018BDCE084-0x000000018BDCE21C
+		private void TextureSizeToPowerOfTwo(Texture texture, ref int width, ref int height) {} // 0x000000018BDCF34C-0x000000018BDCF394
+		private Vector2 GetPowerOfTwoTextureSize(Texture texture) => default; // 0x000000018BDCF170-0x000000018BDCF1D0
+		public override bool AllocateTexture(CommandBuffer cmd, ref Vector4 scaleOffset, Texture texture, int width, int height, int overrideInstanceID = -1 /* Metadata: 0x02079ED8 */) => default; // 0x000000018BDCF304-0x000000018BDCF34C
+		public void ResetRequestedTexture() {} // 0x000000018BDCF2C4-0x000000018BDCF304
+		public bool ReserveSpace(Texture texture) => default; // 0x000000018BDCF1D0-0x000000018BDCF2C4
+		public bool ReserveSpace(Texture texture, int width, int height) => default; // 0x000000018BDCECF4-0x000000018BDCF170
+		public bool ReserveSpace(Texture textureA, Texture textureB, int width, int height) => default; // 0x000000018BDCE93C-0x000000018BDCE9EC
+		private bool ReserveSpace(int id, int width, int height) => default; // 0x000000018BDCE9EC-0x000000018BDCEAB4
+		public bool RelayoutEntries() => default; // 0x000000018BDD5038-0x000000018BDD509C
+		public static long GetApproxCacheSizeInByte(int nbElement, int resolution, bool hasMipmap, GraphicsFormat format) => default; // 0x0000000185492010-0x0000000185492020
+		public static int GetMaxCacheSizeForWeightInByte(int weight, bool hasMipmap, GraphicsFormat format) => default; // 0x000000018BDD4F38-0x000000018BDD4F70
 	}
 
-	public class RTHandle // TypeDefIndex: 53542
+	public class RTHandle // TypeDefIndex: 54535
 	{
 		// Fields
 		internal RenderTexture m_RT; // 0x10
@@ -4230,64 +4603,64 @@ namespace UnityEngine.Rendering
 		internal string m_Name; // 0x50
 	
 		// Properties
-		public RenderTexture rt { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
-		public RenderTargetIdentifier nameID { get => default; } // 0x0000000183D581B0-0x0000000183D581D0 
-		public string name { get => default; set {} } // 0x0000000183D4EAF0-0x0000000183D4EB00 0x0000000189CB6A00-0x0000000189CB6AB8
-		public bool isMSAAEnabled { get => default; } // 0x0000000183D4EFE0-0x0000000183D4EFF0 
+		public RenderTexture rt { get => default; } // 0x000000018346D130-0x000000018346D140 
+		public RenderTargetIdentifier nameID { get => default; } // 0x0000000185FB9A00-0x0000000185FB9A20 
+		public string name { get => default; set {} } // 0x0000000181460F60-0x0000000181460F70 0x000000018BDD021C-0x000000018BDD02D4
+		public bool isMSAAEnabled { get => default; } // 0x0000000185FB0750-0x0000000185FB0760 
 	
 		// Constructors
-		public RTHandle() {} // 0x000000018350B670-0x000000018350B680
+		public RTHandle() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public static implicit operator RenderTargetIdentifier(RTHandle handle) => default; // 0x0000000189CB6954-0x0000000189CB6998
-		public static implicit operator Texture(RTHandle handle) => default; // 0x0000000189CB6998-0x0000000189CB6A00
-		public static implicit operator RenderTexture(RTHandle handle) => default; // 0x0000000182524410-0x0000000182524420
-		public void SetRenderTexture(RenderTexture rt) {} // 0x00000001825252E0-0x0000000182525360
-		public void SetTexture(Texture tex) {} // 0x00000001825253F0-0x0000000182525470
-		public void SetTexture(RenderTargetIdentifier tex) {} // 0x0000000189CB6818-0x0000000189CB6864
-		public int GetInstanceID() => default; // 0x0000000189CB6774-0x0000000189CB6818
-		public void Release() {} // 0x0000000182E7E2A0-0x0000000182E7E350
-		public void SwitchToFastMemory(CommandBuffer cmd, float residencyFraction = 1f /* Metadata: 0x01FD46BA */, FastMemoryFlags flags = FastMemoryFlags.None | FastMemoryFlags.SpillTop /* Metadata: 0x01FD46BE */, bool copyContents = false /* Metadata: 0x01FD46BF */) {} // 0x0000000189CB68C8-0x0000000189CB6954
-		public void CopyToFastMemory(CommandBuffer cmd, float residencyFraction = 1f /* Metadata: 0x01FD46C0 */, FastMemoryFlags flags = FastMemoryFlags.None | FastMemoryFlags.SpillTop /* Metadata: 0x01FD46C4 */) {} // 0x0000000189CB6758-0x0000000189CB6774
-		public void SwitchOutFastMemory(CommandBuffer cmd, bool copyContents = true /* Metadata: 0x01FD46C5 */) {} // 0x0000000189CB6864-0x0000000189CB68C8
+		public static implicit operator RenderTargetIdentifier(RTHandle handle) => default; // 0x000000018BDD0170-0x000000018BDD01B4
+		public static implicit operator Texture(RTHandle handle) => default; // 0x000000018BDD01B4-0x000000018BDD021C
+		public static implicit operator RenderTexture(RTHandle handle) => default; // 0x0000000183FD9A90-0x0000000183FD9AA0
+		public void SetRenderTexture(RenderTexture rt) {} // 0x0000000183FDAAB0-0x0000000183FDAB30
+		public void SetTexture(Texture tex) {} // 0x0000000183FDABC0-0x0000000183FDAC40
+		public void SetTexture(RenderTargetIdentifier tex) {} // 0x000000018BDD0034-0x000000018BDD0080
+		public int GetInstanceID() => default; // 0x000000018BDCFF90-0x000000018BDD0034
+		public void Release() {} // 0x00000001852C8ED0-0x00000001852C8F80
+		public void SwitchToFastMemory(CommandBuffer cmd, float residencyFraction = 1f /* Metadata: 0x02079EE1 */, FastMemoryFlags flags = FastMemoryFlags.SpillTop /* Metadata: 0x02079EE5 */, bool copyContents = false /* Metadata: 0x02079EE6 */) {} // 0x000000018BDD00E4-0x000000018BDD0170
+		public void CopyToFastMemory(CommandBuffer cmd, float residencyFraction = 1f /* Metadata: 0x02079EE7 */, FastMemoryFlags flags = FastMemoryFlags.SpillTop /* Metadata: 0x02079EEB */) {} // 0x000000018BDCFF74-0x000000018BDCFF90
+		public void SwitchOutFastMemory(CommandBuffer cmd, bool copyContents = true /* Metadata: 0x02079EEC */) {} // 0x000000018BDD0080-0x000000018BDD00E4
 	}
 
-	public static class RTHandles // TypeDefIndex: 53543
+	public static class RTHandles // TypeDefIndex: 54536
 	{
 		// Fields
 		private static RTHandleSystem s_DefaultInstance; // 0x00
 	
 		// Constructors
-		static RTHandles() {} // 0x0000000183CFFE00-0x0000000183CFFE70
+		static RTHandles() {} // 0x0000000185F5E570-0x0000000185F5E5E0
 	
 		// Methods
-		public static RTHandle Alloc(int width, int height, int slices = 1 /* Metadata: 0x01FD46C6 */, DepthBits depthBufferBits = DepthBits.None /* Metadata: 0x01FD46C7 */, GraphicsFormat colorFormat = GraphicsFormat.R8G8B8A8_SRGB /* Metadata: 0x01FD46C8 */, UnityEngine.FilterMode filterMode = UnityEngine.FilterMode.Point /* Metadata: 0x01FD46C9 */, TextureWrapMode wrapMode = TextureWrapMode.Repeat /* Metadata: 0x01FD46CA */, TextureDimension dimension = TextureDimension.Tex2D /* Metadata: 0x01FD46CB */, bool enableRandomWrite = false /* Metadata: 0x01FD46CC */, bool useMipMap = false /* Metadata: 0x01FD46CD */, bool autoGenerateMips = true /* Metadata: 0x01FD46CE */, bool isShadowMap = false /* Metadata: 0x01FD46CF */, int anisoLevel = 1 /* Metadata: 0x01FD46D0 */, float mipMapBias = 0f /* Metadata: 0x01FD46D1 */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x01FD46D5 */, bool bindTextureMS = false /* Metadata: 0x01FD46D6 */, RenderTextureMemoryless memoryless = RenderTextureMemoryless.None /* Metadata: 0x01FD46D7 */, string name = "" /* Metadata: 0x01FD46D8 */) => default; // 0x0000000182524790-0x0000000182524860
-		public static RTHandle Alloc(int width, int height, TextureWrapMode wrapModeU, TextureWrapMode wrapModeV, TextureWrapMode wrapModeW = TextureWrapMode.Repeat /* Metadata: 0x01FD46D9 */, int slices = 1 /* Metadata: 0x01FD46DA */, DepthBits depthBufferBits = DepthBits.None /* Metadata: 0x01FD46DB */, GraphicsFormat colorFormat = GraphicsFormat.R8G8B8A8_SRGB /* Metadata: 0x01FD46DC */, UnityEngine.FilterMode filterMode = UnityEngine.FilterMode.Point /* Metadata: 0x01FD46DD */, TextureDimension dimension = TextureDimension.Tex2D /* Metadata: 0x01FD46DE */, bool enableRandomWrite = false /* Metadata: 0x01FD46DF */, bool useMipMap = false /* Metadata: 0x01FD46E0 */, bool autoGenerateMips = true /* Metadata: 0x01FD46E1 */, bool isShadowMap = false /* Metadata: 0x01FD46E2 */, int anisoLevel = 1 /* Metadata: 0x01FD46E3 */, float mipMapBias = 0f /* Metadata: 0x01FD46E4 */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x01FD46E8 */, bool bindTextureMS = false /* Metadata: 0x01FD46E9 */, bool useDynamicScale = false /* Metadata: 0x01FD46EA */, RenderTextureMemoryless memoryless = RenderTextureMemoryless.None /* Metadata: 0x01FD46EB */, string name = "" /* Metadata: 0x01FD46EC */) => default; // 0x0000000189CB6AB8-0x0000000189CB6B8C
-		public static RTHandle Alloc(Texture tex) => default; // 0x00000001842703D8-0x00000001842703E0
-		public static RTHandle Alloc(RenderTexture tex) => default; // 0x0000000189CB6C44-0x0000000189CB6C4C
-		public static RTHandle Alloc(RenderTargetIdentifier tex) => default; // 0x0000000189CB6B8C-0x0000000189CB6BC0
-		public static RTHandle Alloc(RenderTargetIdentifier tex, string name) => default; // 0x0000000189CB6C10-0x0000000189CB6C44
-		private static RTHandle Alloc(RTHandle tex) => default; // 0x0000000189CB6BC0-0x0000000189CB6C10
+		public static RTHandle Alloc(int width, int height, int slices = 1 /* Metadata: 0x02079EED */, DepthBits depthBufferBits = DepthBits.None /* Metadata: 0x02079EEE */, GraphicsFormat colorFormat = GraphicsFormat.R8G8B8A8_SRGB /* Metadata: 0x02079EEF */, UnityEngine.FilterMode filterMode = UnityEngine.FilterMode.Point /* Metadata: 0x02079EF0 */, TextureWrapMode wrapMode = TextureWrapMode.Repeat /* Metadata: 0x02079EF1 */, TextureDimension dimension = TextureDimension.Tex2D /* Metadata: 0x02079EF2 */, bool enableRandomWrite = false /* Metadata: 0x02079EF3 */, bool useMipMap = false /* Metadata: 0x02079EF4 */, bool autoGenerateMips = true /* Metadata: 0x02079EF5 */, bool isShadowMap = false /* Metadata: 0x02079EF6 */, int anisoLevel = 1 /* Metadata: 0x02079EF7 */, float mipMapBias = 0f /* Metadata: 0x02079EF8 */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x02079EFC */, bool bindTextureMS = false /* Metadata: 0x02079EFD */, RenderTextureMemoryless memoryless = RenderTextureMemoryless.None /* Metadata: 0x02079EFE */, string name = "" /* Metadata: 0x02079EFF */) => default; // 0x0000000183FD9F60-0x0000000183FDA030
+		public static RTHandle Alloc(int width, int height, TextureWrapMode wrapModeU, TextureWrapMode wrapModeV, TextureWrapMode wrapModeW = TextureWrapMode.Repeat /* Metadata: 0x02079F00 */, int slices = 1 /* Metadata: 0x02079F01 */, DepthBits depthBufferBits = DepthBits.None /* Metadata: 0x02079F02 */, GraphicsFormat colorFormat = GraphicsFormat.R8G8B8A8_SRGB /* Metadata: 0x02079F03 */, UnityEngine.FilterMode filterMode = UnityEngine.FilterMode.Point /* Metadata: 0x02079F04 */, TextureDimension dimension = TextureDimension.Tex2D /* Metadata: 0x02079F05 */, bool enableRandomWrite = false /* Metadata: 0x02079F06 */, bool useMipMap = false /* Metadata: 0x02079F07 */, bool autoGenerateMips = true /* Metadata: 0x02079F08 */, bool isShadowMap = false /* Metadata: 0x02079F09 */, int anisoLevel = 1 /* Metadata: 0x02079F0A */, float mipMapBias = 0f /* Metadata: 0x02079F0B */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x02079F0F */, bool bindTextureMS = false /* Metadata: 0x02079F10 */, bool useDynamicScale = false /* Metadata: 0x02079F11 */, RenderTextureMemoryless memoryless = RenderTextureMemoryless.None /* Metadata: 0x02079F12 */, string name = "" /* Metadata: 0x02079F13 */) => default; // 0x000000018BDD02D4-0x000000018BDD03A8
+		public static RTHandle Alloc(Texture tex) => default; // 0x000000018646D564-0x000000018646D56C
+		public static RTHandle Alloc(RenderTexture tex) => default; // 0x000000018BDD0460-0x000000018BDD0468
+		public static RTHandle Alloc(RenderTargetIdentifier tex) => default; // 0x000000018BDD03A8-0x000000018BDD03DC
+		public static RTHandle Alloc(RenderTargetIdentifier tex, string name) => default; // 0x000000018BDD042C-0x000000018BDD0460
+		private static RTHandle Alloc(RTHandle tex) => default; // 0x000000018BDD03DC-0x000000018BDD042C
 	}
 
-	public class RTHandleSystem // TypeDefIndex: 53544
+	public class RTHandleSystem // TypeDefIndex: 54537
 	{
 		// Constructors
-		public RTHandleSystem() {} // 0x000000018350B670-0x000000018350B680
+		public RTHandleSystem() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public void Initialize() {} // 0x000000018350B670-0x000000018350B680
-		public static RTHandle Alloc(int width, int height, int slices = 1 /* Metadata: 0x01FD46ED */, DepthBits depthBufferBits = DepthBits.None /* Metadata: 0x01FD46EE */, GraphicsFormat colorFormat = GraphicsFormat.R8G8B8A8_SRGB /* Metadata: 0x01FD46EF */, UnityEngine.FilterMode filterMode = UnityEngine.FilterMode.Point /* Metadata: 0x01FD46F0 */, TextureWrapMode wrapMode = TextureWrapMode.Repeat /* Metadata: 0x01FD46F1 */, TextureDimension dimension = TextureDimension.Tex2D /* Metadata: 0x01FD46F2 */, bool enableRandomWrite = false /* Metadata: 0x01FD46F3 */, bool useMipMap = false /* Metadata: 0x01FD46F4 */, bool autoGenerateMips = true /* Metadata: 0x01FD46F5 */, bool isShadowMap = false /* Metadata: 0x01FD46F6 */, int anisoLevel = 1 /* Metadata: 0x01FD46F7 */, float mipMapBias = 0f /* Metadata: 0x01FD46F8 */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x01FD46FC */, bool bindTextureMS = false /* Metadata: 0x01FD46FD */, RenderTextureMemoryless memoryless = RenderTextureMemoryless.None /* Metadata: 0x01FD46FE */, string name = "" /* Metadata: 0x01FD46FF */) => default; // 0x0000000182524860-0x0000000182524940
-		public static RTHandle Alloc(int width, int height, TextureWrapMode wrapModeU, TextureWrapMode wrapModeV, TextureWrapMode wrapModeW = TextureWrapMode.Repeat /* Metadata: 0x01FD4700 */, int slices = 1 /* Metadata: 0x01FD4701 */, DepthBits depthBufferBits = DepthBits.None /* Metadata: 0x01FD4702 */, GraphicsFormat colorFormat = GraphicsFormat.R8G8B8A8_SRGB /* Metadata: 0x01FD4703 */, UnityEngine.FilterMode filterMode = UnityEngine.FilterMode.Point /* Metadata: 0x01FD4704 */, TextureDimension dimension = TextureDimension.Tex2D /* Metadata: 0x01FD4705 */, bool enableRandomWrite = false /* Metadata: 0x01FD4706 */, bool useMipMap = false /* Metadata: 0x01FD4707 */, bool autoGenerateMips = true /* Metadata: 0x01FD4708 */, bool isShadowMap = false /* Metadata: 0x01FD4709 */, int anisoLevel = 1 /* Metadata: 0x01FD470A */, float mipMapBias = 0f /* Metadata: 0x01FD470B */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x01FD470F */, bool bindTextureMS = false /* Metadata: 0x01FD4710 */, RenderTextureMemoryless memoryless = RenderTextureMemoryless.None /* Metadata: 0x01FD4711 */, string name = "" /* Metadata: 0x01FD4712 */) => default; // 0x0000000182524940-0x0000000182524E40
-		private static RTHandle AllocAutoSizedRenderTexture(int width, int height, int slices, DepthBits depthBufferBits, GraphicsFormat colorFormat, UnityEngine.FilterMode filterMode, TextureWrapMode wrapMode, TextureDimension dimension, bool enableRandomWrite, bool useMipMap, bool autoGenerateMips, bool isShadowMap, int anisoLevel, float mipMapBias, MSAASamples msaaSamples, bool bindTextureMS, RenderTextureMemoryless memoryless, string name) => default; // 0x0000000189CB60E0-0x0000000189CB6590
-		public static RTHandle Alloc(RenderTexture texture) => default; // 0x0000000189CB65EC-0x0000000189CB666C
-		public static RTHandle Alloc(Texture texture) => default; // 0x0000000182525360-0x00000001825253F0
-		public static RTHandle Alloc(RenderTargetIdentifier texture) => default; // 0x0000000189CB6590-0x0000000189CB65EC
-		public static RTHandle Alloc(RenderTargetIdentifier texture, string name) => default; // 0x0000000189CB666C-0x0000000189CB6708
-		private static RTHandle Alloc(RTHandle tex) => default; // 0x0000000189CB6708-0x0000000189CB6758
+		public void Initialize() {} // 0x0000000185492010-0x0000000185492020
+		public static RTHandle Alloc(int width, int height, int slices = 1 /* Metadata: 0x02079F14 */, DepthBits depthBufferBits = DepthBits.None /* Metadata: 0x02079F15 */, GraphicsFormat colorFormat = GraphicsFormat.R8G8B8A8_SRGB /* Metadata: 0x02079F16 */, UnityEngine.FilterMode filterMode = UnityEngine.FilterMode.Point /* Metadata: 0x02079F17 */, TextureWrapMode wrapMode = TextureWrapMode.Repeat /* Metadata: 0x02079F18 */, TextureDimension dimension = TextureDimension.Tex2D /* Metadata: 0x02079F19 */, bool enableRandomWrite = false /* Metadata: 0x02079F1A */, bool useMipMap = false /* Metadata: 0x02079F1B */, bool autoGenerateMips = true /* Metadata: 0x02079F1C */, bool isShadowMap = false /* Metadata: 0x02079F1D */, int anisoLevel = 1 /* Metadata: 0x02079F1E */, float mipMapBias = 0f /* Metadata: 0x02079F1F */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x02079F23 */, bool bindTextureMS = false /* Metadata: 0x02079F24 */, RenderTextureMemoryless memoryless = RenderTextureMemoryless.None /* Metadata: 0x02079F25 */, string name = "" /* Metadata: 0x02079F26 */) => default; // 0x0000000183FDA030-0x0000000183FDA110
+		public static RTHandle Alloc(int width, int height, TextureWrapMode wrapModeU, TextureWrapMode wrapModeV, TextureWrapMode wrapModeW = TextureWrapMode.Repeat /* Metadata: 0x02079F27 */, int slices = 1 /* Metadata: 0x02079F28 */, DepthBits depthBufferBits = DepthBits.None /* Metadata: 0x02079F29 */, GraphicsFormat colorFormat = GraphicsFormat.R8G8B8A8_SRGB /* Metadata: 0x02079F2A */, UnityEngine.FilterMode filterMode = UnityEngine.FilterMode.Point /* Metadata: 0x02079F2B */, TextureDimension dimension = TextureDimension.Tex2D /* Metadata: 0x02079F2C */, bool enableRandomWrite = false /* Metadata: 0x02079F2D */, bool useMipMap = false /* Metadata: 0x02079F2E */, bool autoGenerateMips = true /* Metadata: 0x02079F2F */, bool isShadowMap = false /* Metadata: 0x02079F30 */, int anisoLevel = 1 /* Metadata: 0x02079F31 */, float mipMapBias = 0f /* Metadata: 0x02079F32 */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x02079F36 */, bool bindTextureMS = false /* Metadata: 0x02079F37 */, RenderTextureMemoryless memoryless = RenderTextureMemoryless.None /* Metadata: 0x02079F38 */, string name = "" /* Metadata: 0x02079F39 */) => default; // 0x0000000183FDA110-0x0000000183FDA610
+		private static RTHandle AllocAutoSizedRenderTexture(int width, int height, int slices, DepthBits depthBufferBits, GraphicsFormat colorFormat, UnityEngine.FilterMode filterMode, TextureWrapMode wrapMode, TextureDimension dimension, bool enableRandomWrite, bool useMipMap, bool autoGenerateMips, bool isShadowMap, int anisoLevel, float mipMapBias, MSAASamples msaaSamples, bool bindTextureMS, RenderTextureMemoryless memoryless, string name) => default; // 0x000000018BDCF8FC-0x000000018BDCFDAC
+		public static RTHandle Alloc(RenderTexture texture) => default; // 0x000000018BDCFE08-0x000000018BDCFE88
+		public static RTHandle Alloc(Texture texture) => default; // 0x0000000183FDAB30-0x0000000183FDABC0
+		public static RTHandle Alloc(RenderTargetIdentifier texture) => default; // 0x000000018BDCFDAC-0x000000018BDCFE08
+		public static RTHandle Alloc(RenderTargetIdentifier texture, string name) => default; // 0x000000018BDCFE88-0x000000018BDCFF24
+		private static RTHandle Alloc(RTHandle tex) => default; // 0x000000018BDCFF24-0x000000018BDCFF74
 	}
 
-	internal class AtlasAllocator // TypeDefIndex: 53547
+	internal class AtlasAllocator // TypeDefIndex: 54540
 	{
 		// Fields
 		private AtlasNode m_Root; // 0x10
@@ -4297,7 +4670,7 @@ namespace UnityEngine.Rendering
 		private ObjectPool<AtlasNode> m_NodePool; // 0x28
 	
 		// Nested types
-		private class AtlasNode // TypeDefIndex: 53545
+		private class AtlasNode // TypeDefIndex: 54538
 		{
 			// Fields
 			public AtlasNode m_RightChild; // 0x10
@@ -4305,28 +4678,45 @@ namespace UnityEngine.Rendering
 			public Vector4 m_Rect; // 0x20
 	
 			// Constructors
-			public AtlasNode() {} // 0x0000000183D83FA0-0x0000000183D83FB0
+			public AtlasNode() {} // 0x000000018BDC4F3C-0x000000018BDC4F94
 	
 			// Methods
-			public AtlasNode Allocate(ref ObjectPool<AtlasNode> pool, int width, int height, bool powerOfTwoPadding) => default; // 0x0000000189CABBB4-0x0000000189CABF14
-			public void Release(ref ObjectPool<AtlasNode> pool) {} // 0x0000000189CAC50C-0x0000000189CAC5D4
+			public AtlasNode Allocate(ref ObjectPool<AtlasNode> pool, int width, int height, bool powerOfTwoPadding) => default; // 0x000000018BDC4F94-0x000000018BDC5204
+			public void Release(ref ObjectPool<AtlasNode> pool) {} // 0x000000018BDC4EE0-0x000000018BDC4F3C
+		}
+	
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54539
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static UnityAction<AtlasNode> __9__6_0; // 0x08
+			public static UnityAction<AtlasNode> __9__6_1; // 0x10
+	
+			// Constructors
+			static __c() {} // 0x000000018BDC53D0-0x000000018BDC5730
+			public __c() {} // 0x000000018BDC5D28-0x000000018BDC5DF0
+	
+			// Methods
+			internal void _.ctor_b__6_0(AtlasNode _) {} // 0x0000000185FE4C30-0x0000000185FE4C40
+			internal void _.ctor_b__6_1(AtlasNode _) {} // 0x000000018BDD4F70-0x000000018BDD4FD4
 		}
 	
 		// Constructors
 		public AtlasAllocator() {} // Dummy constructor
-		public AtlasAllocator(int width, int height, bool potPadding) {} // 0x0000000189CAB778-0x0000000189CAB9E8
+		public AtlasAllocator(int width, int height, bool potPadding) {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public bool Allocate(ref Vector4 result, int width, int height) => default; // 0x0000000189CAB6C4-0x0000000189CAB720
-		public void Reset() {} // 0x0000000189CAB720-0x0000000189CAB778
+		public bool Allocate(ref Vector4 result, int width, int height) => default; // 0x0000000185492010-0x0000000185492020
+		public void Reset() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class Texture2DAtlas // TypeDefIndex: 53549
+	public class Texture2DAtlas // TypeDefIndex: 54542
 	{
 		// Fields
-		private protected const int kGPUTexInvalid = 0; // Metadata: 0x01FD4725
-		private protected const int kGPUTexValidMip0 = 1; // Metadata: 0x01FD4726
-		private protected const int kGPUTexValidMipAll = 2; // Metadata: 0x01FD4727
+		private protected const int kGPUTexInvalid = 0; // Metadata: 0x02079F4C
+		private protected const int kGPUTexValidMip0 = 1; // Metadata: 0x02079F4D
+		private protected const int kGPUTexValidMipAll = 2; // Metadata: 0x02079F4E
 		private protected RTHandle m_AtlasTexture; // 0x10
 		private protected int m_Width; // 0x18
 		private protected int m_Height; // 0x1C
@@ -4334,7 +4724,6 @@ namespace UnityEngine.Rendering
 		private protected bool m_UseMipMaps; // 0x24
 		private bool m_IsAtlasTextureOwner; // 0x25
 		private AtlasAllocator m_AtlasAllocator; // 0x28
-		[TupleElementNames(new string[2] {"scaleOffset", "size" })]
 		private Dictionary<int, ValueTuple<Vector4, Vector2Int>> m_AllocationCache; // 0x30
 		private Dictionary<int, int> m_IsGPUTextureUpToDate; // 0x38
 		private Dictionary<int, int> m_TextureHashes; // 0x40
@@ -4342,11 +4731,11 @@ namespace UnityEngine.Rendering
 		private static readonly int s_MaxMipLevelPadding; // 0x10
 	
 		// Properties
-		public static int maxMipLevelPadding { get => default; } // 0x0000000189CB9ED8-0x0000000189CB9F28 
-		public RTHandle AtlasTexture { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public static int maxMipLevelPadding { get => default; } // 0x000000018BDD36F4-0x000000018BDD3744 
+		public RTHandle AtlasTexture { get => default; } // 0x000000018346D130-0x000000018346D140 
 	
 		// Nested types
-		private enum BlitType // TypeDefIndex: 53548
+		private enum BlitType // TypeDefIndex: 54541
 		{
 			Default = 0,
 			CubeTo2DOctahedral = 1,
@@ -4356,53 +4745,53 @@ namespace UnityEngine.Rendering
 	
 		// Constructors
 		public Texture2DAtlas() {} // Dummy constructor
-		public Texture2DAtlas(int width, int height, GraphicsFormat format, UnityEngine.FilterMode filterMode = UnityEngine.FilterMode.Point /* Metadata: 0x01FD4713 */, bool powerOfTwoPadding = false /* Metadata: 0x01FD4714 */, string name = "" /* Metadata: 0x01FD4715 */, bool useMipMap = true /* Metadata: 0x01FD4716 */) {} // 0x0000000189CB9C10-0x0000000189CB9ED8
-		static Texture2DAtlas() {} // 0x0000000189CB9BBC-0x0000000189CB9C10
+		public Texture2DAtlas(int width, int height, GraphicsFormat format, UnityEngine.FilterMode filterMode = UnityEngine.FilterMode.Point /* Metadata: 0x02079F3A */, bool powerOfTwoPadding = false /* Metadata: 0x02079F3B */, string name = "" /* Metadata: 0x02079F3C */, bool useMipMap = true /* Metadata: 0x02079F3D */) {} // 0x000000018BDD342C-0x000000018BDD36F4
+		static Texture2DAtlas() {} // 0x000000018BDD33D8-0x000000018BDD342C
 	
 		// Methods
-		public void Release() {} // 0x0000000189CB98EC-0x0000000189CB9924
-		public void ResetAllocator() {} // 0x0000000189CB9924-0x0000000189CB999C
-		public void ClearTarget(CommandBuffer cmd) {} // 0x0000000189CB8B10-0x0000000189CB8C9C
-		private protected int GetTextureMipmapCount(int width, int height) => default; // 0x0000000189CB8F68-0x0000000189CB8FA0
-		private protected bool Is2D(Texture texture) => default; // 0x0000000189CB8FA0-0x0000000189CB9014
-		private protected bool IsSingleChannelBlit(Texture source, Texture destination) => default; // 0x0000000189CB9110-0x0000000189CB92E4
-		private void Blit2DTexture(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips, BlitType blitType) {} // 0x0000000189CB85EC-0x0000000189CB8800
-		private protected void MarkGPUTextureValid(int instanceId, bool mipAreValid = false /* Metadata: 0x01FD4717 */) {} // 0x0000000189CB933C-0x0000000189CB93A0
-		private protected void MarkGPUTextureInvalid(int instanceId) {} // 0x0000000189CB92E4-0x0000000189CB933C
-		public virtual void BlitTexture(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips = true /* Metadata: 0x01FD4718 */, int overrideInstanceID = -1 /* Metadata: 0x01FD4719 */) {} // 0x0000000189CB89B8-0x0000000189CB8B10
-		public virtual void BlitOctahedralTexture(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips = true /* Metadata: 0x01FD471A */, int overrideInstanceID = -1 /* Metadata: 0x01FD471B */) {} // 0x0000000189CB8960-0x0000000189CB89B8
-		public virtual void BlitCubeTexture2D(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, bool blitMips = true /* Metadata: 0x01FD471C */, int overrideInstanceID = -1 /* Metadata: 0x01FD471D */) {} // 0x0000000189CB8800-0x0000000189CB8960
-		public virtual bool AllocateTexture(CommandBuffer cmd, ref Vector4 scaleOffset, Texture texture, int width, int height, int overrideInstanceID = -1 /* Metadata: 0x01FD471E */) => default; // 0x0000000189CB8434-0x0000000189CB85EC
-		public bool AllocateTextureWithoutBlit(Texture texture, int width, int height, ref Vector4 scaleOffset) => default; // 0x0000000189CB83D4-0x0000000189CB8434
-		public virtual bool AllocateTextureWithoutBlit(int instanceId, int width, int height, ref Vector4 scaleOffset) => default; // 0x0000000189CB8248-0x0000000189CB83D4
-		private protected int GetTextureHash(Texture textureA, Texture textureB) => default; // 0x0000000189CB8EA4-0x0000000189CB8F04
-		public int GetTextureID(Texture texture) => default; // 0x0000000189CB8F48-0x0000000189CB8F68
-		public int GetTextureID(Texture textureA, Texture textureB) => default; // 0x0000000189CB8F04-0x0000000189CB8F48
+		public void Release() {} // 0x000000018BDD3108-0x000000018BDD3140
+		public void ResetAllocator() {} // 0x000000018BDD3140-0x000000018BDD31B8
+		public void ClearTarget(CommandBuffer cmd) {} // 0x000000018BDD232C-0x000000018BDD24B8
+		private protected int GetTextureMipmapCount(int width, int height) => default; // 0x000000018BDD2784-0x000000018BDD27BC
+		private protected bool Is2D(Texture texture) => default; // 0x000000018BDD27BC-0x000000018BDD2830
+		private protected bool IsSingleChannelBlit(Texture source, Texture destination) => default; // 0x000000018BDD292C-0x000000018BDD2B00
+		private void Blit2DTexture(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips, BlitType blitType) {} // 0x000000018BDD1E08-0x000000018BDD201C
+		private protected void MarkGPUTextureValid(int instanceId, bool mipAreValid = false /* Metadata: 0x02079F3E */) {} // 0x000000018BDD2B58-0x000000018BDD2BBC
+		private protected void MarkGPUTextureInvalid(int instanceId) {} // 0x000000018BDD2B00-0x000000018BDD2B58
+		public virtual void BlitTexture(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips = true /* Metadata: 0x02079F3F */, int overrideInstanceID = -1 /* Metadata: 0x02079F40 */) {} // 0x000000018BDD21D4-0x000000018BDD232C
+		public virtual void BlitOctahedralTexture(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, Vector4 sourceScaleOffset, bool blitMips = true /* Metadata: 0x02079F41 */, int overrideInstanceID = -1 /* Metadata: 0x02079F42 */) {} // 0x000000018BDD217C-0x000000018BDD21D4
+		public virtual void BlitCubeTexture2D(CommandBuffer cmd, Vector4 scaleOffset, Texture texture, bool blitMips = true /* Metadata: 0x02079F43 */, int overrideInstanceID = -1 /* Metadata: 0x02079F44 */) {} // 0x000000018BDD201C-0x000000018BDD217C
+		public virtual bool AllocateTexture(CommandBuffer cmd, ref Vector4 scaleOffset, Texture texture, int width, int height, int overrideInstanceID = -1 /* Metadata: 0x02079F45 */) => default; // 0x000000018BDD1C50-0x000000018BDD1E08
+		public bool AllocateTextureWithoutBlit(Texture texture, int width, int height, ref Vector4 scaleOffset) => default; // 0x000000018BDD1BF0-0x000000018BDD1C50
+		public virtual bool AllocateTextureWithoutBlit(int instanceId, int width, int height, ref Vector4 scaleOffset) => default; // 0x000000018BDD1A64-0x000000018BDD1BF0
+		private protected int GetTextureHash(Texture textureA, Texture textureB) => default; // 0x000000018BDD26C0-0x000000018BDD2720
+		public int GetTextureID(Texture texture) => default; // 0x000000018BDD2764-0x000000018BDD2784
+		public int GetTextureID(Texture textureA, Texture textureB) => default; // 0x000000018BDD2720-0x000000018BDD2764
 		public bool IsCached(out Vector4 scaleOffset, Texture textureA, Texture textureB) {
 			scaleOffset = default;
 			return default;
-		} // 0x0000000189CB9014-0x0000000189CB9054
+		} // 0x000000018BDD2830-0x000000018BDD2870
 		public bool IsCached(out Vector4 scaleOffset, Texture texture) {
 			scaleOffset = default;
 			return default;
-		} // 0x0000000189CB90D4-0x0000000189CB9110
+		} // 0x000000018BDD28F0-0x000000018BDD292C
 		public bool IsCached(out Vector4 scaleOffset, int id) {
 			scaleOffset = default;
 			return default;
-		} // 0x0000000189CB9054-0x0000000189CB90D4
-		internal Vector2Int GetCachedTextureSize(int id) => default; // 0x0000000189CB8E38-0x0000000189CB8EA4
-		public virtual bool NeedsUpdate(Texture texture, bool needMips = false /* Metadata: 0x01FD471F */) => default; // 0x0000000189CB96F4-0x0000000189CB98EC
-		public virtual bool NeedsUpdate(Texture textureA, Texture textureB, bool needMips = false /* Metadata: 0x01FD4720 */) => default; // 0x0000000189CB93A0-0x0000000189CB96F4
-		public virtual bool AddTexture(CommandBuffer cmd, ref Vector4 scaleOffset, Texture texture) => default; // 0x0000000189CB81B0-0x0000000189CB8248
-		public virtual bool UpdateTexture(CommandBuffer cmd, Texture oldTexture, Texture newTexture, ref Vector4 scaleOffset, Vector4 sourceScaleOffset, bool updateIfNeeded = true /* Metadata: 0x01FD4721 */, bool blitMips = true /* Metadata: 0x01FD4722 */) => default; // 0x0000000189CB999C-0x0000000189CB9B08
-		public virtual bool UpdateTexture(CommandBuffer cmd, Texture texture, ref Vector4 scaleOffset, bool updateIfNeeded = true /* Metadata: 0x01FD4723 */, bool blitMips = true /* Metadata: 0x01FD4724 */) => default; // 0x0000000189CB9B08-0x0000000189CB9BBC
+		} // 0x000000018BDD2870-0x000000018BDD28F0
+		internal Vector2Int GetCachedTextureSize(int id) => default; // 0x000000018BDD2654-0x000000018BDD26C0
+		public virtual bool NeedsUpdate(Texture texture, bool needMips = false /* Metadata: 0x02079F46 */) => default; // 0x000000018BDD2F10-0x000000018BDD3108
+		public virtual bool NeedsUpdate(Texture textureA, Texture textureB, bool needMips = false /* Metadata: 0x02079F47 */) => default; // 0x000000018BDD2BBC-0x000000018BDD2F10
+		public virtual bool AddTexture(CommandBuffer cmd, ref Vector4 scaleOffset, Texture texture) => default; // 0x000000018BDD19CC-0x000000018BDD1A64
+		public virtual bool UpdateTexture(CommandBuffer cmd, Texture oldTexture, Texture newTexture, ref Vector4 scaleOffset, Vector4 sourceScaleOffset, bool updateIfNeeded = true /* Metadata: 0x02079F48 */, bool blitMips = true /* Metadata: 0x02079F49 */) => default; // 0x000000018BDD31B8-0x000000018BDD3324
+		public virtual bool UpdateTexture(CommandBuffer cmd, Texture texture, ref Vector4 scaleOffset, bool updateIfNeeded = true /* Metadata: 0x02079F4A */, bool blitMips = true /* Metadata: 0x02079F4B */) => default; // 0x000000018BDD3324-0x000000018BDD33D8
 		internal bool EnsureTextureSlot(out bool isUploadNeeded, ref Vector4 scaleBias, int key, int width, int height) {
 			isUploadNeeded = default;
 			return default;
-		} // 0x0000000189CB8C9C-0x0000000189CB8E38
+		} // 0x000000018BDD24B8-0x000000018BDD2654
 	}
 
-	internal class AtlasAllocatorDynamic // TypeDefIndex: 53553
+	internal class AtlasAllocatorDynamic // TypeDefIndex: 54546
 	{
 		// Fields
 		private int m_Width; // 0x10
@@ -4412,7 +4801,7 @@ namespace UnityEngine.Rendering
 		private Dictionary<int, short> m_NodeFromID; // 0x28
 	
 		// Nested types
-		private class AtlasNodePool // TypeDefIndex: 53550
+		private class AtlasNodePool // TypeDefIndex: 54543
 		{
 			// Fields
 			internal AtlasNode[] m_Nodes; // 0x10
@@ -4421,16 +4810,16 @@ namespace UnityEngine.Rendering
 	
 			// Constructors
 			public AtlasNodePool() {} // Dummy constructor
-			public AtlasNodePool(short capacity) {} // 0x0000000189CABB4C-0x0000000189CABBB4
+			public AtlasNodePool(short capacity) {} // 0x000000018BDC4D9C-0x000000018BDC4EE0
 	
 			// Methods
-			public void Dispose() {} // 0x0000000189CABB34-0x0000000189CABB4C
-			public void Clear() {} // 0x0000000183D83F70-0x0000000183D83F80
-			public short AtlasNodeCreate(short parent) => default; // 0x0000000189CAB9E8-0x0000000189CABAE8
-			public void AtlasNodeFree(short index) {} // 0x0000000189CABAE8-0x0000000189CABB34
+			public void Dispose() {} // 0x000000018BDC46B4-0x000000018BDC47B8
+			public void Clear() {} // 0x000000018BDC4C20-0x000000018BDC4CE8
+			public short AtlasNodeCreate(short parent) => default; // 0x000000018BDC4CE8-0x000000018BDC4D9C
+			public void AtlasNodeFree(short index) {} // 0x000000018BDC4BB8-0x000000018BDC4C20
 		}
 	
-		private struct AtlasNode // TypeDefIndex: 53552
+		private struct AtlasNode // TypeDefIndex: 54545
 		{
 			// Fields
 			public short m_Self; // 0x00
@@ -4442,7 +4831,7 @@ namespace UnityEngine.Rendering
 			public Vector4 m_Rect; // 0x10
 	
 			// Nested types
-			private enum AtlasNodeFlags : uint // TypeDefIndex: 53551
+			private enum AtlasNodeFlags : uint // TypeDefIndex: 54544
 			{
 				IsOccupied = 1
 			}
@@ -4456,35 +4845,35 @@ namespace UnityEngine.Rendering
 				m_FreelistNext = default;
 				m_Flags = default;
 				m_Rect = default;
-			} // 0x0000000189CAC5D4-0x0000000189CAC608
+			} // 0x000000018BDC47B8-0x000000018BDC4BB8
 	
 			// Methods
-			public bool IsOccupied() => default; // 0x0000000189CAC3AC-0x0000000189CAC3B4
-			public void SetIsOccupied() {} // 0x0000000183D83F90-0x0000000183D83FA0
-			public void ClearIsOccupied() {} // 0x0000000183D83F80-0x0000000183D83F90
-			public bool IsLeafNode() => default; // 0x0000000189CAC30C-0x0000000189CAC318
-			public short Allocate(AtlasNodePool pool, int width, int height) => default; // 0x0000000189CABF14-0x0000000189CAC30C
-			public void ReleaseChildren(AtlasNodePool pool) {} // 0x0000000189CAC468-0x0000000189CAC50C
-			public void ReleaseAndMerge(AtlasNodePool pool) {} // 0x0000000189CAC3B4-0x0000000189CAC468
-			public bool IsMergeNeeded(AtlasNodePool pool) => default; // 0x0000000189CAC318-0x0000000189CAC3AC
+			public bool IsOccupied() => default; // 0x000000018BDC5368-0x000000018BDC53D0
+			public void SetIsOccupied() {} // 0x000000018BDC5350-0x000000018BDC5368
+			public void ClearIsOccupied() {} // 0x0000000185FE4C00-0x0000000185FE4C10
+			public bool IsLeafNode() => default; // 0x000000018BDC5204-0x000000018BDC5304
+			public short Allocate(AtlasNodePool pool, int width, int height) => default; // 0x000000018BDC5304-0x000000018BDC5350
+			public void ReleaseChildren(AtlasNodePool pool) {} // 0x000000018BDC5DF0-0x000000018BDC5E24
+			public void ReleaseAndMerge(AtlasNodePool pool) {} // 0x000000018BDC5BC8-0x000000018BDC5BD0
+			public bool IsMergeNeeded(AtlasNodePool pool) => default; // 0x0000000185FE4C20-0x0000000185FE4C30
 		}
 	
 		// Constructors
 		public AtlasAllocatorDynamic() {} // Dummy constructor
-		public AtlasAllocatorDynamic(int width, int height, int capacityAllocations) {} // 0x0000000189CAB580-0x0000000189CAB6C4
+		public AtlasAllocatorDynamic(int width, int height, int capacityAllocations) {} // 0x0000000185FE4C10-0x0000000185FE4C20
 	
 		// Methods
 		public bool Allocate(out Vector4 result, int key, int width, int height) {
 			result = default;
 			return default;
-		} // 0x0000000189CAAE98-0x0000000189CAAF9C
-		public void Release(int key) {} // 0x0000000189CAB404-0x0000000189CAB4CC
-		public void Release() {} // 0x0000000189CAB4CC-0x0000000189CAB580
-		public string DebugStringFromRoot(int depthMax = -1 /* Metadata: 0x01FD472C */) => default; // 0x0000000189CAB39C-0x0000000189CAB404
-		private void DebugStringFromNode(ref string res, short n, int depthCurrent = 0 /* Metadata: 0x01FD472D */, int depthMax = -1 /* Metadata: 0x01FD472E */) {} // 0x0000000189CAAF9C-0x0000000189CAB39C
+		} // 0x000000018BDC5B28-0x000000018BDC5B34
+		public void Release(int key) {} // 0x000000018BDC5730-0x000000018BDC5B28
+		public void Release() {} // 0x000000018BDC5C84-0x000000018BDC5D28
+		public string DebugStringFromRoot(int depthMax = -1 /* Metadata: 0x02079F53 */) => default; // 0x000000018BDC5BD0-0x000000018BDC5C84
+		private void DebugStringFromNode(ref string res, short n, int depthCurrent = 0 /* Metadata: 0x02079F54 */, int depthMax = -1 /* Metadata: 0x02079F55 */) {} // 0x000000018BDC5B34-0x000000018BDC5BC8
 	}
 
-	internal class Texture2DAtlasDynamic // TypeDefIndex: 53554
+	internal class Texture2DAtlasDynamic // TypeDefIndex: 54547
 	{
 		// Fields
 		private RTHandle m_AtlasTexture; // 0x10
@@ -4496,33 +4885,33 @@ namespace UnityEngine.Rendering
 		private Dictionary<int, Vector4> m_AllocationCache; // 0x30
 	
 		// Properties
-		public RTHandle AtlasTexture { get => default; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public RTHandle AtlasTexture { get => default; } // 0x000000018346D130-0x000000018346D140 
 	
 		// Constructors
 		public Texture2DAtlasDynamic() {} // Dummy constructor
-		public Texture2DAtlasDynamic(int width, int height, int capacity, GraphicsFormat format) {} // 0x0000000189CB8004-0x0000000189CB81B0
-		public Texture2DAtlasDynamic(int width, int height, int capacity, RTHandle atlasTexture) {} // 0x0000000189CB7EE4-0x0000000189CB8004
+		public Texture2DAtlasDynamic(int width, int height, int capacity, GraphicsFormat format) {} // 0x000000018BDD1820-0x000000018BDD19CC
+		public Texture2DAtlasDynamic(int width, int height, int capacity, RTHandle atlasTexture) {} // 0x000000018BDD1700-0x000000018BDD1820
 	
 		// Methods
-		public void Release() {} // 0x0000000189CB7E54-0x0000000189CB7E8C
-		public void ResetAllocator() {} // 0x0000000189CB7E8C-0x0000000189CB7EE4
+		public void Release() {} // 0x000000018BDD1670-0x000000018BDD16A8
+		public void ResetAllocator() {} // 0x000000018BDD16A8-0x000000018BDD1700
 		public bool AddTexture(CommandBuffer cmd, out Vector4 scaleOffset, Texture texture) {
 			scaleOffset = default;
 			return default;
-		} // 0x0000000189CB79AC-0x0000000189CB7C24
+		} // 0x000000018BDD11C8-0x000000018BDD1440
 		public bool IsCached(out Vector4 scaleOffset, int key) {
 			scaleOffset = default;
 			return default;
-		} // 0x0000000189CB7D88-0x0000000189CB7DEC
+		} // 0x000000018BDD15A4-0x000000018BDD1608
 		public bool EnsureTextureSlot(out bool isUploadNeeded, out Vector4 scaleOffset, int key, int width, int height) {
 			isUploadNeeded = default;
 			scaleOffset = default;
 			return default;
-		} // 0x0000000189CB7C24-0x0000000189CB7D88
-		public void ReleaseTextureSlot(int key) {} // 0x0000000189CB7DEC-0x0000000189CB7E54
+		} // 0x000000018BDD1440-0x000000018BDD15A4
+		public void ReleaseTextureSlot(int key) {} // 0x000000018BDD1608-0x000000018BDD1670
 	}
 
-	public static class TextureXR // TypeDefIndex: 53555
+	public static class TextureXR // TypeDefIndex: 54548
 	{
 		// Fields
 		private static int m_MaxViews; // 0x00
@@ -4549,44 +4938,42 @@ namespace UnityEngine.Rendering
 		private static RTHandle m_WhiteTextureRTH; // 0xA8
 	
 		// Properties
-		public static int maxViews { get; set; } // 0x0000000189CBB4FC-0x0000000189CBB550
-		public static int slices { get; } // 0x0000000189CBB4AC-0x0000000189CBB4FC 
-		public static bool useTexArray { get; } // 0x0000000183D079A0-0x0000000183D079D0 
-		public static TextureDimension dimension { get; } // 0x0000000189CBB458-0x0000000189CBB4AC 
+		public static int maxViews { get; set; } // 0x000000018BDD4D18-0x000000018BDD4D6C
+		public static int slices { get; } // 0x000000018BDD4CC8-0x000000018BDD4D18 
+		public static bool useTexArray { get; } // 0x0000000184516340-0x0000000184516370 
+		public static TextureDimension dimension { get; } // 0x000000018BDD4C74-0x000000018BDD4CC8 
 	
 		// Constructors
-		static TextureXR() {} // 0x0000000183D43A60-0x0000000183D43AA0
+		static TextureXR() {} // 0x0000000185FA3E60-0x0000000185FA3EA0
 	
 		// Methods
-		public static RTHandle GetBlackUIntTexture() => default; // 0x0000000189CBA63C-0x0000000189CBA6B0
-		public static RTHandle GetClearTexture() => default; // 0x0000000189CBA6B0-0x0000000189CBA724
-		public static RTHandle GetMagentaTexture() => default; // 0x0000000189CBA724-0x0000000189CBA798
-		public static RTHandle GetBlackTexture() => default; // 0x0000000189CBA5C0-0x0000000189CBA63C
-		public static RTHandle GetBlackTextureArray() => default; // 0x0000000189CBA56C-0x0000000189CBA5C0
-		public static RTHandle GetBlackTexture3D() => default; // 0x0000000189CBA518-0x0000000189CBA56C
-		public static RTHandle GetWhiteTexture() => default; // 0x0000000189CBA798-0x0000000189CBA814
-		public static void Initialize(CommandBuffer cmd, ComputeShader clearR32_UIntShader) {} // 0x0000000189CBA814-0x0000000189CBB458
-		private static Texture2DArray CreateTexture2DArrayFromTexture2D(Texture2D source, string name) => default; // 0x0000000189CBA3B0-0x0000000189CBA518
-		private static Texture CreateBlackUIntTextureArray(CommandBuffer cmd, ComputeShader clearR32_UIntShader) => default; // 0x0000000189CB9FF8-0x0000000189CBA1D4
-		private static Texture CreateBlackUintTexture(CommandBuffer cmd, ComputeShader clearR32_UIntShader) => default; // 0x0000000189CBA1D4-0x0000000189CBA3B0
-		private static Texture3D CreateBlackTexture3D(string name) => default; // 0x0000000189CB9F28-0x0000000189CB9FF8
+		public static RTHandle GetBlackUIntTexture() => default; // 0x000000018BDD3E58-0x000000018BDD3ECC
+		public static RTHandle GetClearTexture() => default; // 0x000000018BDD3ECC-0x000000018BDD3F40
+		public static RTHandle GetMagentaTexture() => default; // 0x000000018BDD3F40-0x000000018BDD3FB4
+		public static RTHandle GetBlackTexture() => default; // 0x000000018BDD3DDC-0x000000018BDD3E58
+		public static RTHandle GetBlackTextureArray() => default; // 0x000000018BDD3D88-0x000000018BDD3DDC
+		public static RTHandle GetBlackTexture3D() => default; // 0x000000018BDD3D34-0x000000018BDD3D88
+		public static RTHandle GetWhiteTexture() => default; // 0x000000018BDD3FB4-0x000000018BDD4030
+		public static void Initialize(CommandBuffer cmd, ComputeShader clearR32_UIntShader) {} // 0x000000018BDD4030-0x000000018BDD4C74
+		private static Texture2DArray CreateTexture2DArrayFromTexture2D(Texture2D source, string name) => default; // 0x000000018BDD3BCC-0x000000018BDD3D34
+		private static Texture CreateBlackUIntTextureArray(CommandBuffer cmd, ComputeShader clearR32_UIntShader) => default; // 0x000000018BDD3814-0x000000018BDD39F0
+		private static Texture CreateBlackUintTexture(CommandBuffer cmd, ComputeShader clearR32_UIntShader) => default; // 0x000000018BDD39F0-0x000000018BDD3BCC
+		private static Texture3D CreateBlackTexture3D(string name) => default; // 0x000000018BDD3744-0x000000018BDD3814
 	}
 
-	public static class ArrayExtensions // TypeDefIndex: 53556
+	public static class ArrayExtensions // TypeDefIndex: 54549
 	{
 		// Methods
+		public static void ResizeArray<T>(ref NativeArray<T> array, int capacity, Unity.Collections.Allocator allocator)
+			where T : struct {}
+		public static void ResizeArray(ref TransformAccessArray array, int capacity) {} // 0x000000018BDC4600-0x000000018BDC468C
 		public static void ResizeArray<T>(ref ref T[] array, int capacity) {}
 		public static void Grow<T>(ref ref T[] array, int targetSize) {}
 		public static void GrowToNearestPowerOf2<T>(ref ref T[] array, int targetSize) {}
-		public static uint RoundUpToPowerOf2(uint n) => default; // 0x0000000189CAAE70-0x0000000189CAAE98
-	
-		// Extension methods
-		public static void ResizeArray<T>(this ref NativeArray<T> array, int capacity, Unity.Collections.Allocator allocator)
-			where T : struct {}
-		public static void ResizeArray(this ref TransformAccessArray array, int capacity) {} // 0x0000000189CAADE4-0x0000000189CAAE70
+		public static uint RoundUpToPowerOf2(uint n) => default; // 0x000000018BDC468C-0x000000018BDC46B4
 	}
 
-	public interface IBitArray // TypeDefIndex: 53557
+	public interface IBitArray // TypeDefIndex: 54550
 	{
 		// Properties
 		uint capacity { get; }
@@ -4602,212 +4989,196 @@ namespace UnityEngine.Rendering
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{this.GetType().Name} {humanizedData}")]
-	public struct BitArray8 : IBitArray // TypeDefIndex: 53558
+	public struct BitArray8 : IBitArray // TypeDefIndex: 54551
 	{
 		// Fields
-		[SerializeField]
 		private byte data; // 0x00
 	
 		// Properties
-		public uint capacity { get => default; } // 0x0000000183D55800-0x0000000183D55810 
-		public bool allFalse { get => default; } // 0x00000001880712C4-0x00000001880712CC 
-		public bool allTrue { get => default; } // 0x0000000189CACB60-0x0000000189CACB68 
-		public string humanizedData { get => default; } // 0x0000000189CACB68-0x0000000189CACC2C 
-		public bool this[uint index] { get => default; set {} } // 0x0000000189CACB44-0x0000000189CACB60 0x0000000189CACC2C-0x0000000189CACC3C
+		public uint capacity { get => default; } // 0x0000000181E1B510-0x0000000181E1B520 
+		public bool allFalse { get => default; } // 0x000000018A1D97C0-0x000000018A1D97C8 
+		public bool allTrue { get => default; } // 0x000000018BDC637C-0x000000018BDC6384 
+		public string humanizedData { get => default; } // 0x000000018BDC6384-0x000000018BDC6448 
+		public bool this[uint index] { get => default; set {} } // 0x000000018BDC6360-0x000000018BDC637C 0x000000018BDC6448-0x000000018BDC6458
 	
 		// Constructors
 		public BitArray8(byte initValue) : this() {
 			data = default;
-		} // 0x0000000183D4F9D0-0x0000000183D4F9E0
+		} // 0x0000000185FB0F60-0x0000000185FB0F70
 		public BitArray8(IEnumerable<uint> bitIndexTrue) : this() {
 			data = default;
-		} // 0x0000000189CACAB4-0x0000000189CACB44
+		} // 0x000000018BDC62D0-0x000000018BDC6360
 	
 		// Methods
-		public static BitArray8 operator ~(BitArray8 a) => default; // 0x0000000183D84020-0x0000000183D84030
-		public static BitArray8 operator |(BitArray8 a, BitArray8 b) => default; // 0x0000000183D84010-0x0000000183D84020
-		public static BitArray8 operator &(BitArray8 a, BitArray8 b) => default; // 0x0000000183D84000-0x0000000183D84010
-		public IBitArray BitAnd(IBitArray other) => default; // 0x0000000189CAC94C-0x0000000189CAC9B0
-		public IBitArray BitOr(IBitArray other) => default; // 0x0000000189CAC9F8-0x0000000189CACA58
-		public IBitArray BitNot() => default; // 0x0000000189CAC9B0-0x0000000189CAC9F8
-		public static bool operator ==(BitArray8 a, BitArray8 b) => default; // 0x00000001854B3B60-0x00000001854B3B68
-		public static bool operator !=(BitArray8 a, BitArray8 b) => default; // 0x00000001854B3B68-0x00000001854B3B70
-		public override bool Equals(object obj) => default; // 0x0000000189CACA58-0x0000000189CACAB4
-		public override int GetHashCode() => default; // 0x0000000183D83FF0-0x0000000183D84000
+		public static BitArray8 operator ~(BitArray8 a) => default; // 0x0000000185FE4CB0-0x0000000185FE4CC0
+		public static BitArray8 operator |(BitArray8 a, BitArray8 b) => default; // 0x0000000185FE4CA0-0x0000000185FE4CB0
+		public static BitArray8 operator &(BitArray8 a, BitArray8 b) => default; // 0x0000000185FE4C90-0x0000000185FE4CA0
+		public IBitArray BitAnd(IBitArray other) => default; // 0x000000018BDC6168-0x000000018BDC61CC
+		public IBitArray BitOr(IBitArray other) => default; // 0x000000018BDC6214-0x000000018BDC6274
+		public IBitArray BitNot() => default; // 0x000000018BDC61CC-0x000000018BDC6214
+		public static bool operator ==(BitArray8 a, BitArray8 b) => default; // 0x00000001876B50D8-0x00000001876B50E0
+		public static bool operator !=(BitArray8 a, BitArray8 b) => default; // 0x00000001876B50E0-0x00000001876B50E8
+		public override bool Equals(object obj) => default; // 0x000000018BDC6274-0x000000018BDC62D0
+		public override int GetHashCode() => default; // 0x0000000185FE4C80-0x0000000185FE4C90
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{this.GetType().Name} {humanizedData}")]
-	public struct BitArray16 : IBitArray // TypeDefIndex: 53559
+	public struct BitArray16 : IBitArray // TypeDefIndex: 54552
 	{
 		// Fields
-		[SerializeField]
 		private ushort data; // 0x00
 	
 		// Properties
-		public uint capacity { get => default; } // 0x0000000183D55B10-0x0000000183D55B20 
-		public bool allFalse { get => default; } // 0x0000000189B64878-0x0000000189B64880 
-		public bool allTrue { get => default; } // 0x0000000189CAC810-0x0000000189CAC81C 
-		public string humanizedData { get => default; } // 0x0000000189CAC81C-0x0000000189CAC944 
-		public bool this[uint index] { get => default; set {} } // 0x000000018426FFF4-0x0000000184270004 0x00000001842743A4-0x00000001842743B4
+		public uint capacity { get => default; } // 0x0000000181C3DA10-0x0000000181C3DA20 
+		public bool allFalse { get => default; } // 0x000000018BC7E0EC-0x000000018BC7E0F4 
+		public bool allTrue { get => default; } // 0x000000018BDC602C-0x000000018BDC6038 
+		public string humanizedData { get => default; } // 0x000000018BDC6038-0x000000018BDC6160 
+		public bool this[uint index] { get => default; set {} } // 0x00000001864727A0-0x00000001864727B0 0x000000018646F258-0x000000018646F268
 	
 		// Constructors
 		public BitArray16(ushort initValue) : this() {
 			data = default;
-		} // 0x0000000183D4F9B0-0x0000000183D4F9C0
+		} // 0x0000000185FB0F40-0x0000000185FB0F50
 		public BitArray16(IEnumerable<uint> bitIndexTrue) : this() {
 			data = default;
-		} // 0x0000000189CAC77C-0x0000000189CAC810
+		} // 0x000000018BDC5F98-0x000000018BDC602C
 	
 		// Methods
-		public static BitArray16 operator ~(BitArray16 a) => default; // 0x0000000183D83FE0-0x0000000183D83FF0
-		public static BitArray16 operator |(BitArray16 a, BitArray16 b) => default; // 0x0000000183D83FD0-0x0000000183D83FE0
-		public static BitArray16 operator &(BitArray16 a, BitArray16 b) => default; // 0x0000000183D83FC0-0x0000000183D83FD0
-		public IBitArray BitAnd(IBitArray other) => default; // 0x0000000189CAC608-0x0000000189CAC670
-		public IBitArray BitOr(IBitArray other) => default; // 0x0000000189CAC6B8-0x0000000189CAC71C
-		public IBitArray BitNot() => default; // 0x0000000189CAC670-0x0000000189CAC6B8
-		public static bool operator ==(BitArray16 a, BitArray16 b) => default; // 0x0000000189C72524-0x0000000189C7252C
-		public static bool operator !=(BitArray16 a, BitArray16 b) => default; // 0x0000000189CAC944-0x0000000189CAC94C
-		public override bool Equals(object obj) => default; // 0x0000000189CAC71C-0x0000000189CAC77C
-		public override int GetHashCode() => default; // 0x0000000183D83FB0-0x0000000183D83FC0
+		public static BitArray16 operator ~(BitArray16 a) => default; // 0x0000000185FE4C70-0x0000000185FE4C80
+		public static BitArray16 operator |(BitArray16 a, BitArray16 b) => default; // 0x0000000185FE4C60-0x0000000185FE4C70
+		public static BitArray16 operator &(BitArray16 a, BitArray16 b) => default; // 0x0000000185FE4C50-0x0000000185FE4C60
+		public IBitArray BitAnd(IBitArray other) => default; // 0x000000018BDC5E24-0x000000018BDC5E8C
+		public IBitArray BitOr(IBitArray other) => default; // 0x000000018BDC5ED4-0x000000018BDC5F38
+		public IBitArray BitNot() => default; // 0x000000018BDC5E8C-0x000000018BDC5ED4
+		public static bool operator ==(BitArray16 a, BitArray16 b) => default; // 0x000000018BD8BD40-0x000000018BD8BD48
+		public static bool operator !=(BitArray16 a, BitArray16 b) => default; // 0x000000018BDC6160-0x000000018BDC6168
+		public override bool Equals(object obj) => default; // 0x000000018BDC5F38-0x000000018BDC5F98
+		public override int GetHashCode() => default; // 0x0000000185FE4C40-0x0000000185FE4C50
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{this.GetType().Name} {humanizedData}")]
-	public struct BitArray32 : IBitArray // TypeDefIndex: 53560
+	public struct BitArray32 : IBitArray // TypeDefIndex: 54553
 	{
 		// Fields
-		[SerializeField]
 		private uint data; // 0x00
 	
 		// Properties
-		public uint capacity { get => default; } // 0x0000000183D55B70-0x0000000183D55B80 
-		public bool allFalse { get => default; } // 0x00000001822FBAA0-0x00000001822FBAB0 
-		public bool allTrue { get => default; } // 0x0000000189CBC6AC-0x0000000189CBC6B4 
-		private string humanizedVersion { get => default; } // 0x0000000189CBC7DC-0x0000000189CBC830 
-		public string humanizedData { get => default; } // 0x0000000189CBC6B4-0x0000000189CBC7DC 
-		public bool this[uint index] { get => default; set {} } // 0x0000000189CBC694-0x0000000189CBC6AC 0x0000000189CBC830-0x0000000189CBC840
+		public uint capacity { get => default; } // 0x0000000185FB6DA0-0x0000000185FB6DB0 
+		public bool allFalse { get => default; } // 0x00000001840066E0-0x00000001840066F0 
+		public bool allTrue { get => default; } // 0x000000018BDD5EC8-0x000000018BDD5ED0 
+		private string humanizedVersion { get => default; } // 0x000000018BDD5FF8-0x000000018BDD604C 
+		public string humanizedData { get => default; } // 0x000000018BDD5ED0-0x000000018BDD5FF8 
+		public bool this[uint index] { get => default; set {} } // 0x000000018BDD5EB0-0x000000018BDD5EC8 0x000000018BDD604C-0x000000018BDD605C
 	
 		// Constructors
 		public BitArray32(uint initValue) : this() {
 			data = default;
-		} // 0x0000000183D4E970-0x0000000183D4E980
+		} // 0x00000001818AA390-0x00000001818AA3A0
 		public BitArray32(IEnumerable<uint> bitIndexTrue) : this() {
 			data = default;
-		} // 0x0000000189CBC604-0x0000000189CBC694
+		} // 0x000000018BDD5E20-0x000000018BDD5EB0
 	
 		// Methods
-		public IBitArray BitAnd(IBitArray other) => default; // 0x0000000189CBC4A0-0x0000000189CBC504
-		public IBitArray BitOr(IBitArray other) => default; // 0x0000000189CBC548-0x0000000189CBC5A8
-		public IBitArray BitNot() => default; // 0x0000000189CBC504-0x0000000189CBC548
-		public static BitArray32 operator ~(BitArray32 a) => default; // 0x0000000183D84210-0x0000000183D84220
-		public static BitArray32 operator |(BitArray32 a, BitArray32 b) => default; // 0x0000000183D84200-0x0000000183D84210
-		public static BitArray32 operator &(BitArray32 a, BitArray32 b) => default; // 0x0000000183D71180-0x0000000183D71190
-		public static bool operator ==(BitArray32 a, BitArray32 b) => default; // 0x0000000186505FF4-0x0000000186505FFC
-		public static bool operator !=(BitArray32 a, BitArray32 b) => default; // 0x000000018950C868-0x000000018950C870
-		public override bool Equals(object obj) => default; // 0x0000000189CBC5A8-0x0000000189CBC604
-		public override int GetHashCode() => default; // 0x0000000183D841F0-0x0000000183D84200
+		public IBitArray BitAnd(IBitArray other) => default; // 0x000000018BDD5CBC-0x000000018BDD5D20
+		public IBitArray BitOr(IBitArray other) => default; // 0x000000018BDD5D64-0x000000018BDD5DC4
+		public IBitArray BitNot() => default; // 0x000000018BDD5D20-0x000000018BDD5D64
+		public static BitArray32 operator ~(BitArray32 a) => default; // 0x0000000185FE4EA0-0x0000000185FE4EB0
+		public static BitArray32 operator |(BitArray32 a, BitArray32 b) => default; // 0x0000000185FE4E90-0x0000000185FE4EA0
+		public static BitArray32 operator &(BitArray32 a, BitArray32 b) => default; // 0x0000000185FD1DD0-0x0000000185FD1DE0
+		public static bool operator ==(BitArray32 a, BitArray32 b) => default; // 0x0000000188645D08-0x0000000188645D10
+		public static bool operator !=(BitArray32 a, BitArray32 b) => default; // 0x000000018B6328C0-0x000000018B6328C8
+		public override bool Equals(object obj) => default; // 0x000000018BDD5DC4-0x000000018BDD5E20
+		public override int GetHashCode() => default; // 0x0000000185FE4E80-0x0000000185FE4E90
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{this.GetType().Name} {humanizedData}")]
-	public struct BitArray64 : IBitArray // TypeDefIndex: 53561
+	public struct BitArray64 : IBitArray // TypeDefIndex: 54554
 	{
 		// Fields
-		[SerializeField]
 		private ulong data; // 0x00
 	
 		// Properties
-		public uint capacity { get => default; } // 0x0000000183D55C70-0x0000000183D55C80 
-		public bool allFalse { get => default; } // 0x0000000182361C20-0x0000000182361C30 
-		public bool allTrue { get => default; } // 0x0000000189CBCA60-0x0000000189CBCA68 
-		public string humanizedData { get => default; } // 0x0000000189CBCA68-0x0000000189CBCB90 
-		public bool this[uint index] { get => default; set {} } // 0x0000000189CBCA48-0x0000000189CBCA60 0x0000000189CBCB90-0x0000000189CBCBA0
+		public uint capacity { get => default; } // 0x0000000181C44E80-0x0000000181C44E90 
+		public bool allFalse { get => default; } // 0x000000018402E460-0x000000018402E470 
+		public bool allTrue { get => default; } // 0x000000018BDD627C-0x000000018BDD6284 
+		public string humanizedData { get => default; } // 0x000000018BDD6284-0x000000018BDD63AC 
+		public bool this[uint index] { get => default; set {} } // 0x000000018BDD6264-0x000000018BDD627C 0x000000018BDD63AC-0x000000018BDD63BC
 	
 		// Constructors
 		public BitArray64(ulong initValue) : this() {
 			data = default;
-		} // 0x0000000183D51730-0x0000000183D51740
+		} // 0x0000000185FB2BB0-0x0000000185FB2BC0
 		public BitArray64(IEnumerable<uint> bitIndexTrue) : this() {
 			data = default;
-		} // 0x0000000189CBC9B4-0x0000000189CBCA48
+		} // 0x000000018BDD61D0-0x000000018BDD6264
 	
 		// Methods
-		public static BitArray64 operator ~(BitArray64 a) => default; // 0x0000000183D84250-0x0000000183D84260
-		public static BitArray64 operator |(BitArray64 a, BitArray64 b) => default; // 0x0000000183D84240-0x0000000183D84250
-		public static BitArray64 operator &(BitArray64 a, BitArray64 b) => default; // 0x0000000183D84230-0x0000000183D84240
-		public IBitArray BitAnd(IBitArray other) => default; // 0x0000000189CBC840-0x0000000189CBC8A8
-		public IBitArray BitOr(IBitArray other) => default; // 0x0000000189CBC8F0-0x0000000189CBC954
-		public IBitArray BitNot() => default; // 0x0000000189CBC8A8-0x0000000189CBC8F0
-		public static bool operator ==(BitArray64 a, BitArray64 b) => default; // 0x000000018232CE30-0x000000018232CE40
-		public static bool operator !=(BitArray64 a, BitArray64 b) => default; // 0x00000001822E54C0-0x00000001822E54D0
-		public override bool Equals(object obj) => default; // 0x0000000189CBC954-0x0000000189CBC9B4
-		public override int GetHashCode() => default; // 0x0000000183D84220-0x0000000183D84230
+		public static BitArray64 operator ~(BitArray64 a) => default; // 0x0000000185FE4EE0-0x0000000185FE4EF0
+		public static BitArray64 operator |(BitArray64 a, BitArray64 b) => default; // 0x0000000185FE4ED0-0x0000000185FE4EE0
+		public static BitArray64 operator &(BitArray64 a, BitArray64 b) => default; // 0x0000000185FE4EC0-0x0000000185FE4ED0
+		public IBitArray BitAnd(IBitArray other) => default; // 0x000000018BDD605C-0x000000018BDD60C4
+		public IBitArray BitOr(IBitArray other) => default; // 0x000000018BDD610C-0x000000018BDD6170
+		public IBitArray BitNot() => default; // 0x000000018BDD60C4-0x000000018BDD610C
+		public static bool operator ==(BitArray64 a, BitArray64 b) => default; // 0x000000018406FBE0-0x000000018406FBF0
+		public static bool operator !=(BitArray64 a, BitArray64 b) => default; // 0x0000000183FA9580-0x0000000183FA9590
+		public override bool Equals(object obj) => default; // 0x000000018BDD6170-0x000000018BDD61D0
+		public override int GetHashCode() => default; // 0x0000000185FE4EB0-0x0000000185FE4EC0
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{this.GetType().Name} {humanizedData}")]
-	public struct BitArray128 : IBitArray // TypeDefIndex: 53562
+	public struct BitArray128 : IBitArray // TypeDefIndex: 54555
 	{
 		// Fields
-		[SerializeField]
 		private ulong data1; // 0x00
-		[SerializeField]
 		private ulong data2; // 0x08
 	
 		// Properties
-		public ulong Data1 { get => default; } // 0x00000001820C61B0-0x00000001820C61C0 
-		public ulong Data2 { get => default; } // 0x0000000183D50DE0-0x0000000183D50DF0 
-		public uint capacity { get => default; } // 0x0000000183D567A0-0x0000000183D567B0 
-		public bool allFalse { get => default; } // 0x0000000189CBBB40-0x0000000189CBBB54 
-		public bool allTrue { get => default; } // 0x0000000189CBBB54-0x0000000189CBBB68 
-		public string humanizedData { get => default; } // 0x0000000189CBBB68-0x0000000189CBBD28 
-		public bool this[uint index] { get => default; set {} } // 0x00000001842708B0-0x00000001842708C4 0x00000001842708C4-0x00000001842708EC
+		public ulong Data1 { get => default; } // 0x00000001834AFB60-0x00000001834AFB70 
+		public ulong Data2 { get => default; } // 0x000000018357A260-0x000000018357A270 
+		public uint capacity { get => default; } // 0x0000000185FB7DE0-0x0000000185FB7DF0 
+		public bool allFalse { get => default; } // 0x000000018BDD535C-0x000000018BDD5370 
+		public bool allTrue { get => default; } // 0x000000018BDD5370-0x000000018BDD5384 
+		public string humanizedData { get => default; } // 0x000000018BDD5384-0x000000018BDD5544 
+		public bool this[uint index] { get => default; set {} } // 0x000000018646EC98-0x000000018646ECAC 0x000000018646ECAC-0x000000018646ECD4
 	
 		// Constructors
 		public BitArray128(ulong initValue1, ulong initValue2) : this() {
 			data1 = default;
 			data2 = default;
-		} // 0x0000000183D4EA10-0x0000000183D4EA20
+		} // 0x0000000183680100-0x0000000183680110
 		public BitArray128(IEnumerable<uint> bitIndexTrue) : this() {
 			data1 = default;
 			data2 = default;
-		} // 0x00000001825645A0-0x0000000182564660
+		} // 0x00000001848EDBE0-0x00000001848EDCA0
 	
 		// Methods
-		public static BitArray128 operator ~(BitArray128 a) => default; // 0x0000000183D840D0-0x0000000183D840F0
-		public static BitArray128 operator |(BitArray128 a, BitArray128 b) => default; // 0x0000000183D840B0-0x0000000183D840D0
-		public static BitArray128 operator &(BitArray128 a, BitArray128 b) => default; // 0x0000000183D84090-0x0000000183D840B0
-		public IBitArray BitAnd(IBitArray other) => default; // 0x0000000189CBB940-0x0000000189CBB9D4
-		public IBitArray BitOr(IBitArray other) => default; // 0x0000000189CBBA34-0x0000000189CBBAC8
-		public IBitArray BitNot() => default; // 0x0000000189CBB9D4-0x0000000189CBBA34
-		public static bool operator ==(BitArray128 a, BitArray128 b) => default; // 0x000000018558249C-0x00000001855824B4
-		public static bool operator !=(BitArray128 a, BitArray128 b) => default; // 0x00000001855824B4-0x00000001855824CC
-		public override bool Equals(object obj) => default; // 0x0000000189CBBAC8-0x0000000189CBBB40
-		public override int GetHashCode() => default; // 0x0000000183D84060-0x0000000183D84090
+		public static BitArray128 operator ~(BitArray128 a) => default; // 0x0000000185FE4D60-0x0000000185FE4D80
+		public static BitArray128 operator |(BitArray128 a, BitArray128 b) => default; // 0x0000000185FE4D40-0x0000000185FE4D60
+		public static BitArray128 operator &(BitArray128 a, BitArray128 b) => default; // 0x0000000185FE4D20-0x0000000185FE4D40
+		public IBitArray BitAnd(IBitArray other) => default; // 0x000000018BDD515C-0x000000018BDD51F0
+		public IBitArray BitOr(IBitArray other) => default; // 0x000000018BDD5250-0x000000018BDD52E4
+		public IBitArray BitNot() => default; // 0x000000018BDD51F0-0x000000018BDD5250
+		public static bool operator ==(BitArray128 a, BitArray128 b) => default; // 0x0000000187783A50-0x0000000187783A68
+		public static bool operator !=(BitArray128 a, BitArray128 b) => default; // 0x0000000187783A68-0x0000000187783A80
+		public override bool Equals(object obj) => default; // 0x000000018BDD52E4-0x000000018BDD535C
+		public override int GetHashCode() => default; // 0x0000000185FE4CF0-0x0000000185FE4D20
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{this.GetType().Name} {humanizedData}")]
-	public struct BitArray256 : IBitArray // TypeDefIndex: 53563
+	public struct BitArray256 : IBitArray // TypeDefIndex: 54556
 	{
 		// Fields
-		[SerializeField]
 		private ulong data1; // 0x00
-		[SerializeField]
 		private ulong data2; // 0x08
-		[SerializeField]
 		private ulong data3; // 0x10
-		[SerializeField]
 		private ulong data4; // 0x18
 	
 		// Properties
-		public uint capacity { get => default; } // 0x0000000183D4EA40-0x0000000183D4EA50 
-		public bool allFalse { get => default; } // 0x0000000189CBC0E8-0x0000000189CBC108 
-		public bool allTrue { get => default; } // 0x0000000189CBC108-0x0000000189CBC128 
-		public string humanizedData { get => default; } // 0x0000000189CBC128-0x0000000189CBC3F4 
-		public bool this[uint index] { get => default; set {} } // 0x0000000189CBC0B4-0x0000000189CBC0E8 0x0000000189CBC464-0x0000000189CBC4A0
+		public uint capacity { get => default; } // 0x0000000185FB04F0-0x0000000185FB0500 
+		public bool allFalse { get => default; } // 0x000000018BDD5904-0x000000018BDD5924 
+		public bool allTrue { get => default; } // 0x000000018BDD5924-0x000000018BDD5944 
+		public string humanizedData { get => default; } // 0x000000018BDD5944-0x000000018BDD5C10 
+		public bool this[uint index] { get => default; set {} } // 0x000000018BDD58D0-0x000000018BDD5904 0x000000018BDD5C80-0x000000018BDD5CBC
 	
 		// Constructors
 		public BitArray256(ulong initValue1, ulong initValue2, ulong initValue3, ulong initValue4) : this() {
@@ -4815,45 +5186,45 @@ namespace UnityEngine.Rendering
 			data2 = default;
 			data3 = default;
 			data4 = default;
-		} // 0x0000000183D4EA20-0x0000000183D4EA40
+		} // 0x0000000185FB04D0-0x0000000185FB04F0
 		public BitArray256(IEnumerable<uint> bitIndexTrue) : this() {
 			data1 = default;
 			data2 = default;
 			data3 = default;
 			data4 = default;
-		} // 0x0000000189CBBFC0-0x0000000189CBC0B4
+		} // 0x000000018BDD57DC-0x000000018BDD58D0
 	
 		// Methods
-		public static BitArray256 operator ~(BitArray256 a) => default; // 0x0000000183D841C0-0x0000000183D841F0
-		public static BitArray256 operator |(BitArray256 a, BitArray256 b) => default; // 0x0000000183D84180-0x0000000183D841C0
-		public static BitArray256 operator &(BitArray256 a, BitArray256 b) => default; // 0x0000000183D84140-0x0000000183D84180
-		public IBitArray BitAnd(IBitArray other) => default; // 0x0000000189CBBD28-0x0000000189CBBDE8
-		public IBitArray BitOr(IBitArray other) => default; // 0x0000000189CBBE58-0x0000000189CBBF18
-		public IBitArray BitNot() => default; // 0x0000000189CBBDE8-0x0000000189CBBE58
-		public static bool operator ==(BitArray256 a, BitArray256 b) => default; // 0x0000000189CBC3F4-0x0000000189CBC42C
-		public static bool operator !=(BitArray256 a, BitArray256 b) => default; // 0x0000000189CBC42C-0x0000000189CBC464
-		public override bool Equals(object obj) => default; // 0x0000000189CBBF18-0x0000000189CBBFC0
-		public override int GetHashCode() => default; // 0x0000000183D840F0-0x0000000183D84140
+		public static BitArray256 operator ~(BitArray256 a) => default; // 0x0000000185FE4E50-0x0000000185FE4E80
+		public static BitArray256 operator |(BitArray256 a, BitArray256 b) => default; // 0x0000000185FE4E10-0x0000000185FE4E50
+		public static BitArray256 operator &(BitArray256 a, BitArray256 b) => default; // 0x0000000185FE4DD0-0x0000000185FE4E10
+		public IBitArray BitAnd(IBitArray other) => default; // 0x000000018BDD5544-0x000000018BDD5604
+		public IBitArray BitOr(IBitArray other) => default; // 0x000000018BDD5674-0x000000018BDD5734
+		public IBitArray BitNot() => default; // 0x000000018BDD5604-0x000000018BDD5674
+		public static bool operator ==(BitArray256 a, BitArray256 b) => default; // 0x000000018BDD5C10-0x000000018BDD5C48
+		public static bool operator !=(BitArray256 a, BitArray256 b) => default; // 0x000000018BDD5C48-0x000000018BDD5C80
+		public override bool Equals(object obj) => default; // 0x000000018BDD5734-0x000000018BDD57DC
+		public override int GetHashCode() => default; // 0x0000000185FE4D80-0x0000000185FE4DD0
 	}
 
-	public static class BitArrayUtilities // TypeDefIndex: 53564
+	public static class BitArrayUtilities // TypeDefIndex: 54557
 	{
 		// Methods
-		public static bool Get8(uint index, byte data) => default; // 0x0000000189CBCBF4-0x0000000189CBCC0C
-		public static bool Get16(uint index, ushort data) => default; // 0x0000000183B45E60-0x0000000183B45E80
-		public static bool Get32(uint index, uint data) => default; // 0x00000001856F0EC8-0x00000001856F0ED8
-		public static bool Get64(uint index, ulong data) => default; // 0x0000000189CBCBE0-0x0000000189CBCBF4
-		public static bool Get128(uint index, ulong data1, ulong data2) => default; // 0x0000000182D74A40-0x0000000182D74A70
-		public static bool Get256(uint index, ulong data1, ulong data2, ulong data3, ulong data4) => default; // 0x0000000189CBCBA0-0x0000000189CBCBE0
-		public static void Set8(uint index, ref byte data, bool value) {} // 0x0000000189CBCCA8-0x0000000189CBCCC0
-		public static void Set16(uint index, ref ushort data, bool value) {} // 0x0000000183627C60-0x0000000183627C80
-		public static void Set32(uint index, ref uint data, bool value) {} // 0x0000000189CBCC74-0x0000000189CBCC8C
-		public static void Set64(uint index, ref ulong data, bool value) {} // 0x0000000189CBCC8C-0x0000000189CBCCA8
-		public static void Set128(uint index, ref ulong data1, ref ulong data2, bool value) {} // 0x0000000182E52820-0x0000000182E52850
-		public static void Set256(uint index, ref ulong data1, ref ulong data2, ref ulong data3, ref ulong data4, bool value) {} // 0x0000000189CBCC0C-0x0000000189CBCC74
+		public static bool Get8(uint index, byte data) => default; // 0x000000018BDD6410-0x000000018BDD6428
+		public static bool Get16(uint index, ushort data) => default; // 0x0000000185D78AE0-0x0000000185D78B00
+		public static bool Get32(uint index, uint data) => default; // 0x00000001878A3964-0x00000001878A3974
+		public static bool Get64(uint index, ulong data) => default; // 0x000000018BDD63FC-0x000000018BDD6410
+		public static bool Get128(uint index, ulong data1, ulong data2) => default; // 0x0000000184B223A0-0x0000000184B223D0
+		public static bool Get256(uint index, ulong data1, ulong data2, ulong data3, ulong data4) => default; // 0x000000018BDD63BC-0x000000018BDD63FC
+		public static void Set8(uint index, ref byte data, bool value) {} // 0x000000018BDD64C4-0x000000018BDD64DC
+		public static void Set16(uint index, ref ushort data, bool value) {} // 0x00000001856D98E0-0x00000001856D9900
+		public static void Set32(uint index, ref uint data, bool value) {} // 0x000000018BDD6490-0x000000018BDD64A8
+		public static void Set64(uint index, ref ulong data, bool value) {} // 0x000000018BDD64A8-0x000000018BDD64C4
+		public static void Set128(uint index, ref ulong data1, ref ulong data2, bool value) {} // 0x0000000184C452B0-0x0000000184C45330
+		public static void Set256(uint index, ref ulong data1, ref ulong data2, ref ulong data3, ref ulong data4, bool value) {} // 0x000000018BDD6428-0x000000018BDD6490
 	}
 
-	public static class Blitter // TypeDefIndex: 53566
+	public static class Blitter // TypeDefIndex: 54559
 	{
 		// Fields
 		private static Material s_Blit; // 0x00
@@ -4867,7 +5238,7 @@ namespace UnityEngine.Rendering
 		private static Mesh s_QuadMesh; // 0x40
 	
 		// Nested types
-		private static class BlitShaderIDs // TypeDefIndex: 53565
+		private static class BlitShaderIDs // TypeDefIndex: 54558
 		{
 			// Fields
 			public static readonly int _BlitTexture; // 0x00
@@ -4880,120 +5251,116 @@ namespace UnityEngine.Rendering
 			public static readonly int _InputDepth; // 0x1C
 	
 			// Constructors
-			static BlitShaderIDs() {} // 0x0000000189CBCCC0-0x0000000189CBCE3C
+			static BlitShaderIDs() {} // 0x0000000184515F70-0x00000001845162F0
 		}
 	
 		// Constructors
-		static Blitter() {} // 0x0000000183CF1CB0-0x0000000183CF1D40
+		static Blitter() {} // 0x000000018BDD8870-0x000000018BDD893C
 	
 		// Methods
-		public static void Initialize(Shader blitPS, Shader blitColorAndDepthPS, Shader blitMotionVectorPS, Shader lowResBlitPS) {} // 0x0000000182E80590-0x0000000182E80910
-		public static void Cleanup() {} // 0x0000000182E7E030-0x0000000182E7E2A0
-		public static Material GetBlitMaterial(bool isFP32Output, TextureDimension dimension, bool singleSlice = false /* Metadata: 0x01FD4730 */) => default; // 0x0000000183008FD0-0x0000000183009120
-		public static Material GetBlitColorAndDepth(bool isFP32Output) => default; // 0x0000000189CBEE6C-0x0000000189CBEEBC
-		public static Material GetBlitMotionVectorMaterial() => default; // 0x0000000189CBEEBC-0x0000000189CBEF0C
-		public static Material GetLowResBlitMaterial() => default; // 0x0000000189CBEF0C-0x0000000189CBEF5C
-		private static void DrawTriangle(CommandBuffer cmd, Material material, int shaderPass) {} // 0x0000000189CBECC0-0x0000000189CBEE6C
-		internal static void DrawQuad(CommandBuffer cmd, Material material, int shaderPass) {} // 0x0000000189CBEB14-0x0000000189CBECC0
-		public static void BlitTexture(CommandBuffer cmd, RTHandle source, Vector4 scaleBias, float mipLevel, bool bilinear) {} // 0x0000000189CBE9EC-0x0000000189CBEB14
-		public static void BlitTexture2D(CommandBuffer cmd, RTHandle source, Vector4 scaleBias, float mipLevel, bool bilinear) {} // 0x0000000189CBE7C4-0x0000000189CBE8CC
-		public static void BlitTexture(CommandBuffer cmd, RTHandle source, Vector4 scaleBias, Material material, int pass) {} // 0x0000000189CBE8CC-0x0000000189CBE9EC
-		public static void BlitCameraTexture(CommandBuffer cmd, RTHandle source, RTHandle destination, float mipLevel = 0f /* Metadata: 0x01FD4731 */, bool bilinear = false /* Metadata: 0x01FD4735 */) {} // 0x0000000189CBCFE0-0x0000000189CBD184
-		public static void BlitCameraTexture2D(CommandBuffer cmd, RTHandle source, RTHandle destination, float mipLevel = 0f /* Metadata: 0x01FD4736 */, bool bilinear = false /* Metadata: 0x01FD473A */) {} // 0x0000000189CBCE3C-0x0000000189CBCFE0
-		public static void BlitCameraTexture(CommandBuffer cmd, RTHandle source, RTHandle destination, Material material, int pass) {} // 0x0000000189CBD408-0x0000000189CBD598
-		public static void BlitCameraTexture(CommandBuffer cmd, RTHandle source, RTHandle destination, Vector4 scaleBias, float mipLevel = 0f /* Metadata: 0x01FD473B */, bool bilinear = false /* Metadata: 0x01FD473F */) {} // 0x0000000189CBD33C-0x0000000189CBD408
-		public static void BlitCameraTexture(CommandBuffer cmd, RTHandle source, RTHandle destination, Rect destViewport, float mipLevel = 0f /* Metadata: 0x01FD4740 */, bool bilinear = false /* Metadata: 0x01FD4744 */) {} // 0x0000000189CBD184-0x0000000189CBD33C
-		public static void BlitQuad(CommandBuffer cmd, Texture source, Vector4 scaleBiasTex, Vector4 scaleBiasRT, int mipLevelTex, bool bilinear) {} // 0x0000000189CBE600-0x0000000189CBE7C4
-		public static void BlitQuadWithPadding(CommandBuffer cmd, Texture source, Vector2 textureSize, Vector4 scaleBiasTex, Vector4 scaleBiasRT, int mipLevelTex, bool bilinear, int paddingInPixels) {} // 0x0000000189CBE338-0x0000000189CBE600
-		public static void BlitQuadWithPaddingMultiply(CommandBuffer cmd, Texture source, Vector2 textureSize, Vector4 scaleBiasTex, Vector4 scaleBiasRT, int mipLevelTex, bool bilinear, int paddingInPixels) {} // 0x0000000189CBE070-0x0000000189CBE338
-		public static void BlitOctahedralWithPadding(CommandBuffer cmd, Texture source, Vector2 textureSize, Vector4 scaleBiasTex, Vector4 scaleBiasRT, int mipLevelTex, bool bilinear, int paddingInPixels) {} // 0x0000000189CBDBE0-0x0000000189CBDE2C
-		public static void BlitOctahedralWithPaddingMultiply(CommandBuffer cmd, Texture source, Vector2 textureSize, Vector4 scaleBiasTex, Vector4 scaleBiasRT, int mipLevelTex, bool bilinear, int paddingInPixels) {} // 0x0000000189CBD994-0x0000000189CBDBE0
-		public static void BlitCubeToOctahedral2DQuad(CommandBuffer cmd, Texture source, Vector4 scaleBiasRT, int mipLevelTex) {} // 0x0000000189CBD7E0-0x0000000189CBD994
-		public static void BlitCubeToOctahedral2DQuadSingleChannel(CommandBuffer cmd, Texture source, Vector4 scaleBiasRT, int mipLevelTex) {} // 0x0000000189CBD598-0x0000000189CBD7E0
-		public static void BlitQuadSingleChannel(CommandBuffer cmd, Texture source, Vector4 scaleBiasTex, Vector4 scaleBiasRT, int mipLevelTex) {} // 0x0000000189CBDE2C-0x0000000189CBE070
+		public static void Initialize(Shader blitPS, Shader blitColorAndDepthPS, Shader blitMotionVectorPS, Shader lowResBlitPS) {} // 0x00000001852C78A0-0x00000001852C7B10
+		public static void Cleanup() {} // 0x0000000184E55AF0-0x0000000184E55C40
+		public static Material GetBlitMaterial(bool isFP32Output, TextureDimension dimension, bool singleSlice = false /* Metadata: 0x02079F57 */) => default; // 0x000000018BDD8688-0x000000018BDD86D8
+		public static Material GetBlitColorAndDepth(bool isFP32Output) => default; // 0x000000018BDD86D8-0x000000018BDD8728
+		public static Material GetBlitMotionVectorMaterial() => default; // 0x000000018BDD8728-0x000000018BDD8778
+		public static Material GetLowResBlitMaterial() => default; // 0x000000018BDD84DC-0x000000018BDD8688
+		private static void DrawTriangle(CommandBuffer cmd, Material material, int shaderPass) {} // 0x000000018BDD8330-0x000000018BDD84DC
+		internal static void DrawQuad(CommandBuffer cmd, Material material, int shaderPass) {} // 0x000000018BDD8208-0x000000018BDD8330
+		public static void BlitTexture(CommandBuffer cmd, RTHandle source, Vector4 scaleBias, float mipLevel, bool bilinear) {} // 0x000000018BDD7FE0-0x000000018BDD80E8
+		public static void BlitTexture2D(CommandBuffer cmd, RTHandle source, Vector4 scaleBias, float mipLevel, bool bilinear) {} // 0x000000018BDD80E8-0x000000018BDD8208
+		public static void BlitTexture(CommandBuffer cmd, RTHandle source, Vector4 scaleBias, Material material, int pass) {} // 0x000000018BDD67FC-0x000000018BDD69A0
+		public static void BlitCameraTexture(CommandBuffer cmd, RTHandle source, RTHandle destination, float mipLevel = 0f /* Metadata: 0x02079F58 */, bool bilinear = false /* Metadata: 0x02079F5C */) {} // 0x000000018BDD6658-0x000000018BDD67FC
+		public static void BlitCameraTexture2D(CommandBuffer cmd, RTHandle source, RTHandle destination, float mipLevel = 0f /* Metadata: 0x02079F5D */, bool bilinear = false /* Metadata: 0x02079F61 */) {} // 0x000000018BDD6C24-0x000000018BDD6DB4
+		public static void BlitCameraTexture(CommandBuffer cmd, RTHandle source, RTHandle destination, Material material, int pass) {} // 0x000000018BDD6B58-0x000000018BDD6C24
+		public static void BlitCameraTexture(CommandBuffer cmd, RTHandle source, RTHandle destination, Vector4 scaleBias, float mipLevel = 0f /* Metadata: 0x02079F62 */, bool bilinear = false /* Metadata: 0x02079F66 */) {} // 0x000000018BDD69A0-0x000000018BDD6B58
+		public static void BlitCameraTexture(CommandBuffer cmd, RTHandle source, RTHandle destination, Rect destViewport, float mipLevel = 0f /* Metadata: 0x02079F67 */, bool bilinear = false /* Metadata: 0x02079F6B */) {} // 0x000000018BDD7E1C-0x000000018BDD7FE0
+		public static void BlitQuad(CommandBuffer cmd, Texture source, Vector4 scaleBiasTex, Vector4 scaleBiasRT, int mipLevelTex, bool bilinear) {} // 0x000000018BDD7B54-0x000000018BDD7E1C
+		public static void BlitQuadWithPadding(CommandBuffer cmd, Texture source, Vector2 textureSize, Vector4 scaleBiasTex, Vector4 scaleBiasRT, int mipLevelTex, bool bilinear, int paddingInPixels) {} // 0x000000018BDD788C-0x000000018BDD7B54
+		public static void BlitQuadWithPaddingMultiply(CommandBuffer cmd, Texture source, Vector2 textureSize, Vector4 scaleBiasTex, Vector4 scaleBiasRT, int mipLevelTex, bool bilinear, int paddingInPixels) {} // 0x000000018BDD73FC-0x000000018BDD7648
+		public static void BlitOctahedralWithPadding(CommandBuffer cmd, Texture source, Vector2 textureSize, Vector4 scaleBiasTex, Vector4 scaleBiasRT, int mipLevelTex, bool bilinear, int paddingInPixels) {} // 0x000000018BDD71B0-0x000000018BDD73FC
+		public static void BlitOctahedralWithPaddingMultiply(CommandBuffer cmd, Texture source, Vector2 textureSize, Vector4 scaleBiasTex, Vector4 scaleBiasRT, int mipLevelTex, bool bilinear, int paddingInPixels) {} // 0x000000018BDD6FFC-0x000000018BDD71B0
+		public static void BlitCubeToOctahedral2DQuad(CommandBuffer cmd, Texture source, Vector4 scaleBiasRT, int mipLevelTex) {} // 0x000000018BDD6DB4-0x000000018BDD6FFC
+		public static void BlitCubeToOctahedral2DQuadSingleChannel(CommandBuffer cmd, Texture source, Vector4 scaleBiasRT, int mipLevelTex) {} // 0x000000018BDD7648-0x000000018BDD788C
+		public static void BlitQuadSingleChannel(CommandBuffer cmd, Texture source, Vector4 scaleBiasTex, Vector4 scaleBiasRT, int mipLevelTex) {} // 0x0000000185F4E300-0x0000000185F4E390
+		internal static Vector3[] _Initialize_g__GetFullScreenTriangleVertexPosition_10_0(float z) => default; // 0x000000018BDD8778-0x000000018BDD8870
+		internal static Vector2[] _Initialize_g__GetFullScreenTriangleTexCoord_10_1() => default; // 0x000000018BDD8A04-0x000000018BDD8AC4
+		internal static Vector3[] _Initialize_g__GetQuadVertexPosition_10_2(float z) => default; // 0x000000018BDD893C-0x000000018BDD8A04
+		internal static Vector2[] _Initialize_g__GetQuadTexCoord_10_3() => default; // 0x000000018BDD64DC-0x000000018BDD6658
 	}
 
-	public static class CameraCaptureBridge // TypeDefIndex: 53567
+	public static class CameraCaptureBridge // TypeDefIndex: 54560
 	{
 		// Fields
 		private static Dictionary<Camera, HashSet<Action<RenderTargetIdentifier, CommandBuffer>>> actionDict; // 0x00
 		private static bool _enabled; // 0x08
 	
 		// Properties
-		public static bool enabled { get; set; } // 0x0000000189CBF4C4-0x0000000189CBF514 0x0000000189CBF514-0x0000000189CBF568
+		public static bool enabled { get; set; } // 0x000000018BDD8CE0-0x000000018BDD8D30 0x000000018BDD8D30-0x000000018BDD8D84
 	
 		// Constructors
-		static CameraCaptureBridge() {} // 0x0000000183CE50E0-0x0000000183CE5170
+		static CameraCaptureBridge() {} // 0x0000000185F40BA0-0x0000000185F40C30
 	
 		// Methods
-		public static IEnumerator<Action<RenderTargetIdentifier, CommandBuffer>> GetCaptureActions(Camera camera) => default; // 0x00000001825B41E0-0x00000001825B4300
-		public static void AddCaptureAction(Camera camera, Action<RenderTargetIdentifier, CommandBuffer> action) {} // 0x0000000189CBF2A8-0x0000000189CBF3EC
-		public static void RemoveCaptureAction(Camera camera, Action<RenderTargetIdentifier, CommandBuffer> action) {} // 0x0000000189CBF3EC-0x0000000189CBF4C4
+		public static IEnumerator<Action<RenderTargetIdentifier, CommandBuffer>> GetCaptureActions(Camera camera) => default; // 0x00000001843F6500-0x00000001843F6620
+		public static void AddCaptureAction(Camera camera, Action<RenderTargetIdentifier, CommandBuffer> action) {} // 0x000000018BDD8AC4-0x000000018BDD8C08
+		public static void RemoveCaptureAction(Camera camera, Action<RenderTargetIdentifier, CommandBuffer> action) {} // 0x000000018BDD8C08-0x000000018BDD8CE0
 	}
 
-	public static class ColorUtils // TypeDefIndex: 53568
+	public static class ColorUtils // TypeDefIndex: 54561
 	{
 		// Fields
 		public static float s_LightMeterCalibrationConstant; // 0x00
 		public static float s_LensAttenuation; // 0x04
 	
 		// Properties
-		public static float lensImperfectionExposureScale { get; } // 0x0000000189CC0090-0x0000000189CC00F4 
+		public static float lensImperfectionExposureScale { get; } // 0x000000018BDD98AC-0x000000018BDD9910 
 	
 		// Constructors
-		static ColorUtils() {} // 0x0000000183D2C620-0x0000000183D2C670
+		static ColorUtils() {} // 0x0000000185F8B910-0x0000000185F8B960
 	
 		// Methods
-		public static float StandardIlluminantY(float x) => default; // 0x0000000183D84300-0x0000000183D84330
-		public static Vector3 CIExyToLMS(float x, float y) => default; // 0x0000000189CBF5D4-0x0000000189CBF664
-		public static Vector3 ColorBalanceToLMSCoeffs(float temperature, float tint) => default; // 0x0000000189CBF664-0x0000000189CBF778
-		public static ValueTuple<Vector4, Vector4, Vector4> PrepareShadowsMidtonesHighlights([IsReadOnly] in Vector4 inShadows, [IsReadOnly] in Vector4 inMidtones, [IsReadOnly] in Vector4 inHighlights) => default; // 0x0000000189CBFCAC-0x0000000189CBFF0C
-		public static ValueTuple<Vector4, Vector4, Vector4> PrepareLiftGammaGain([IsReadOnly] in Vector4 inLift, [IsReadOnly] in Vector4 inGamma, [IsReadOnly] in Vector4 inGain) => default; // 0x0000000189CBF928-0x0000000189CBFCAC
-		public static ValueTuple<Vector4, Vector4> PrepareSplitToning([IsReadOnly] in Vector4 inShadows, [IsReadOnly] in Vector4 inHighlights, float balance) => default; // 0x0000000189CBFF0C-0x0000000189CBFF98
-		public static float Luminance([IsReadOnly] in UnityEngine.Color color) => default; // 0x0000000183D842D0-0x0000000183D84300
-		public static float ComputeEV100(float aperture, float shutterSpeed, float ISO) => default; // 0x0000000189CBF7E0-0x0000000189CBF804
-		public static float ConvertEV100ToExposure(float EV100) => default; // 0x0000000189CBF850-0x0000000189CBF8C4
-		public static float ConvertExposureToEV100(float exposure) => default; // 0x0000000189CBF8C4-0x0000000189CBF928
-		public static float ComputeEV100FromAvgLuminance(float avgLuminance) => default; // 0x0000000189CBF778-0x0000000189CBF7E0
-		public static float ComputeISO(float aperture, float shutterSpeed, float targetEV100) => default; // 0x0000000189CBF804-0x0000000189CBF850
-		public static uint ToHex(UnityEngine.Color c) => default; // 0x0000000189CBFF98-0x0000000189CC0018
-		public static UnityEngine.Color ToRGBA(uint hex) => default; // 0x0000000189CC0018-0x0000000189CC0090
+		public static float StandardIlluminantY(float x) => default; // 0x0000000185FE4F90-0x0000000185FE4FC0
+		public static Vector3 CIExyToLMS(float x, float y) => default; // 0x000000018BDD8DF0-0x000000018BDD8E80
+		public static Vector3 ColorBalanceToLMSCoeffs(float temperature, float tint) => default; // 0x000000018BDD8E80-0x000000018BDD8F94
+		public static ValueTuple<Vector4, Vector4, Vector4> PrepareShadowsMidtonesHighlights(in Vector4 inShadows, in Vector4 inMidtones, in Vector4 inHighlights) => default; // 0x000000018BDD94C8-0x000000018BDD9728
+		public static ValueTuple<Vector4, Vector4, Vector4> PrepareLiftGammaGain(in Vector4 inLift, in Vector4 inGamma, in Vector4 inGain) => default; // 0x000000018BDD9144-0x000000018BDD94C8
+		public static ValueTuple<Vector4, Vector4> PrepareSplitToning(in Vector4 inShadows, in Vector4 inHighlights, float balance) => default; // 0x000000018BDD9728-0x000000018BDD97B4
+		public static float Luminance(in UnityEngine.Color color) => default; // 0x0000000185FE4F60-0x0000000185FE4F90
+		public static float ComputeEV100(float aperture, float shutterSpeed, float ISO) => default; // 0x000000018BDD8FFC-0x000000018BDD9020
+		public static float ConvertEV100ToExposure(float EV100) => default; // 0x000000018BDD906C-0x000000018BDD90E0
+		public static float ConvertExposureToEV100(float exposure) => default; // 0x000000018BDD90E0-0x000000018BDD9144
+		public static float ComputeEV100FromAvgLuminance(float avgLuminance) => default; // 0x000000018BDD8F94-0x000000018BDD8FFC
+		public static float ComputeISO(float aperture, float shutterSpeed, float targetEV100) => default; // 0x000000018BDD9020-0x000000018BDD906C
+		public static uint ToHex(UnityEngine.Color c) => default; // 0x000000018BDD97B4-0x000000018BDD9834
+		public static UnityEngine.Color ToRGBA(uint hex) => default; // 0x000000018BDD9834-0x000000018BDD98AC
 	}
 
-	public static class CoreMatrixUtils // TypeDefIndex: 53569
+	public static class CoreMatrixUtils // TypeDefIndex: 54562
 	{
 		// Methods
-		public static void MatrixTimesTranslation(ref Matrix4x4 inOutMatrix, Vector3 translation) {} // 0x0000000183D84330-0x0000000183D843C0
-		public static void TranslationTimesMatrix(ref Matrix4x4 inOutMatrix, Vector3 translation) {} // 0x0000000183D84800-0x0000000183D848F0
-		public static Matrix4x4 MultiplyPerspectiveMatrix(Matrix4x4 perspective, Matrix4x4 rhs) => default; // 0x0000000183D846B0-0x0000000183D84800
-		private static Matrix4x4 MultiplyOrthoMatrixCentered(Matrix4x4 ortho, Matrix4x4 rhs) => default; // 0x0000000183D84570-0x0000000183D846B0
-		private static Matrix4x4 MultiplyGenericOrthoMatrix(Matrix4x4 ortho, Matrix4x4 rhs) => default; // 0x0000000183D843C0-0x0000000183D84570
-		public static Matrix4x4 MultiplyOrthoMatrix(Matrix4x4 ortho, Matrix4x4 rhs, bool centered) => default; // 0x0000000189CC00F4-0x0000000189CC01E4
-		public static Matrix4x4 MultiplyProjectionMatrix(Matrix4x4 projMatrix, Matrix4x4 rhs, bool orthoCentered) => default; // 0x0000000189CC01E4-0x0000000189CC02D4
+		public static void MatrixTimesTranslation(ref Matrix4x4 inOutMatrix, Vector3 translation) {} // 0x0000000185FE4FC0-0x0000000185FE5050
+		public static void TranslationTimesMatrix(ref Matrix4x4 inOutMatrix, Vector3 translation) {} // 0x0000000185FE5490-0x0000000185FE5580
+		public static Matrix4x4 MultiplyPerspectiveMatrix(Matrix4x4 perspective, Matrix4x4 rhs) => default; // 0x0000000185FE5340-0x0000000185FE5490
+		private static Matrix4x4 MultiplyOrthoMatrixCentered(Matrix4x4 ortho, Matrix4x4 rhs) => default; // 0x0000000185FE5200-0x0000000185FE5340
+		private static Matrix4x4 MultiplyGenericOrthoMatrix(Matrix4x4 ortho, Matrix4x4 rhs) => default; // 0x0000000185FE5050-0x0000000185FE5200
+		public static Matrix4x4 MultiplyOrthoMatrix(Matrix4x4 ortho, Matrix4x4 rhs, bool centered) => default; // 0x000000018BDD9910-0x000000018BDD9A00
+		public static Matrix4x4 MultiplyProjectionMatrix(Matrix4x4 projMatrix, Matrix4x4 rhs, bool orthoCentered) => default; // 0x000000018BDD9A00-0x000000018BDD9AF0
 	}
 
-	public static class CoreUtils // TypeDefIndex: 53574
+	public static class CoreUtils // TypeDefIndex: 54567
 	{
 		// Fields
 		public static readonly Vector3[] lookAtList; // 0x00
 		public static readonly Vector3[] upVectorList; // 0x08
-		private const string obsoletePriorityMessage = "Use CoreUtils.Priorities instead"; // Metadata: 0x01FD4784
-		[Obsolete("Use CoreUtils.Priorities instead", false)]
-		public const int editMenuPriority1 = 320; // Metadata: 0x01FD47A5
-		[Obsolete("Use CoreUtils.Priorities instead", false)]
-		public const int editMenuPriority2 = 331; // Metadata: 0x01FD47A7
-		[Obsolete("Use CoreUtils.Priorities instead", false)]
-		public const int editMenuPriority3 = 342; // Metadata: 0x01FD47A9
-		[Obsolete("Use CoreUtils.Priorities instead", false)]
-		public const int editMenuPriority4 = 353; // Metadata: 0x01FD47AB
-		[Obsolete("Use CoreUtils.Priorities instead", false)]
-		public const int assetCreateMenuPriority1 = 230; // Metadata: 0x01FD47AD
-		[Obsolete("Use CoreUtils.Priorities instead", false)]
-		public const int assetCreateMenuPriority2 = 241; // Metadata: 0x01FD47AF
-		[Obsolete("Use CoreUtils.Priorities instead", false)]
-		public const int assetCreateMenuPriority3 = 300; // Metadata: 0x01FD47B1
-		[Obsolete("Use CoreUtils.Priorities instead", false)]
-		public const int gameObjectMenuPriority = 10; // Metadata: 0x01FD47B3
+		private const string obsoletePriorityMessage = "Use CoreUtils.Priorities instead"; // Metadata: 0x02079FAB
+		public const int editMenuPriority1 = 320; // Metadata: 0x02079FCC
+		public const int editMenuPriority2 = 331; // Metadata: 0x02079FCE
+		public const int editMenuPriority3 = 342; // Metadata: 0x02079FD0
+		public const int editMenuPriority4 = 353; // Metadata: 0x02079FD2
+		public const int assetCreateMenuPriority1 = 230; // Metadata: 0x02079FD4
+		public const int assetCreateMenuPriority2 = 241; // Metadata: 0x02079FD6
+		public const int assetCreateMenuPriority3 = 300; // Metadata: 0x02079FD8
+		public const int gameObjectMenuPriority = 10; // Metadata: 0x02079FDA
 		private static Cubemap m_BlackCubeTexture; // 0x10
 		private static Cubemap m_MagentaCubeTexture; // 0x18
 		private static CubemapArray m_MagentaCubeTextureArray; // 0x20
@@ -5003,127 +5370,156 @@ namespace UnityEngine.Rendering
 		private static IEnumerable<System.Type> m_AssemblyTypes; // 0x40
 	
 		// Properties
-		public static Cubemap blackCubeTexture { get; } // 0x0000000189CC2F44-0x0000000189CC30D8 
-		public static Cubemap magentaCubeTexture { get; } // 0x0000000189CC35A0-0x0000000189CC3734 
-		public static CubemapArray magentaCubeTextureArray { get; } // 0x0000000189CC33D0-0x0000000189CC35A0 
-		public static Cubemap whiteCubeTexture { get; } // 0x0000000189CC3734-0x0000000189CC38C8 
-		public static RenderTexture emptyUAV { get; } // 0x0000000189CC3288-0x0000000189CC33D0 
-		public static Texture3D blackVolumeTexture { get; } // 0x0000000189CC30D8-0x0000000189CC3288 
+		public static Cubemap blackCubeTexture { get; } // 0x000000018BDD9C40-0x000000018BDD9C80 
+		public static Cubemap magentaCubeTexture { get; } // 0x000000018BDDA9FC-0x000000018BDDAA40 
+		public static CubemapArray magentaCubeTextureArray { get; } // 0x000000018BDDA9EC-0x000000018BDDA9FC 
+		public static Cubemap whiteCubeTexture { get; } // 0x000000018BDDB4FC-0x000000018BDDB5DC 
+		public static RenderTexture emptyUAV { get; } // 0x000000018BDDB6EC-0x000000018BDDB7C0 
+		public static Texture3D blackVolumeTexture { get; } // 0x000000018BDDC37C-0x000000018BDDC484 
 	
 		// Nested types
-		public static class Sections // TypeDefIndex: 53570
+		public static class Sections // TypeDefIndex: 54563
 		{
 			// Fields
-			public const int section1 = 10000; // Metadata: 0x01FD47B4
-			public const int section2 = 20000; // Metadata: 0x01FD47B8
-			public const int section3 = 30000; // Metadata: 0x01FD47BC
-			public const int section4 = 40000; // Metadata: 0x01FD47C0
-			public const int section5 = 50000; // Metadata: 0x01FD47C4
-			public const int section6 = 60000; // Metadata: 0x01FD47C8
-			public const int section7 = 70000; // Metadata: 0x01FD47CC
-			public const int section8 = 80000; // Metadata: 0x01FD47D0
+			public const int section1 = 10000; // Metadata: 0x02079FDB
+			public const int section2 = 20000; // Metadata: 0x02079FDF
+			public const int section3 = 30000; // Metadata: 0x02079FE3
+			public const int section4 = 40000; // Metadata: 0x02079FE7
+			public const int section5 = 50000; // Metadata: 0x02079FEB
+			public const int section6 = 60000; // Metadata: 0x02079FEF
+			public const int section7 = 70000; // Metadata: 0x02079FF3
+			public const int section8 = 80000; // Metadata: 0x02079FF7
 		}
 	
-		public static class Priorities // TypeDefIndex: 53571
+		public static class Priorities // TypeDefIndex: 54564
 		{
 			// Fields
-			public const int assetsCreateShaderMenuPriority = 83; // Metadata: 0x01FD47D4
-			public const int assetsCreateRenderingMenuPriority = 308; // Metadata: 0x01FD47D6
-			public const int editMenuPriority = 320; // Metadata: 0x01FD47D8
-			public const int gameObjectMenuPriority = 10; // Metadata: 0x01FD47DA
-			public const int srpLensFlareMenuPriority = 303; // Metadata: 0x01FD47DB
+			public const int assetsCreateShaderMenuPriority = 83; // Metadata: 0x02079FFB
+			public const int assetsCreateRenderingMenuPriority = 308; // Metadata: 0x02079FFD
+			public const int editMenuPriority = 320; // Metadata: 0x02079FFF
+			public const int gameObjectMenuPriority = 10; // Metadata: 0x0207A001
+			public const int srpLensFlareMenuPriority = 303; // Metadata: 0x0207A002
+		}
+	
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54565
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<Assembly, IEnumerable<System.Type>> __9__81_0; // 0x08
+	
+			// Constructors
+			static __c() {} // 0x000000018BDDC760-0x000000018BDDC8F4
+			public __c() {} // 0x000000018BDDCDBC-0x000000018BDDCF50
+	
+			// Methods
+			internal IEnumerable<System.Type> _GetAllAssemblyTypes_b__81_0(Assembly t) => default; // 0x000000018BDDCBEC-0x000000018BDDCDBC
+		}
+	
+		[Serializable]
+		private sealed class __c__82<T> // TypeDefIndex: 54566
+		{
+			// Fields
+			public static readonly __c__82<T> __9;
+			public static Func<System.Type, bool> __9__82_0;
+	
+			// Constructors
+			static __c__82() {} // 0x000000018BDDCF50-0x000000018BDDD0E4
+			public __c__82() {}
+	
+			// Methods
+			internal bool _GetAllTypesDerivedFrom_b__82_0(System.Type t) => default; // 0x000000018BDDC8F4-0x000000018BDDCAA4
 		}
 	
 		// Constructors
-		static CoreUtils() {} // 0x00000001838E50D0-0x00000001838E5300
+		static CoreUtils() {}
 	
 		// Methods
-		public static void ClearRenderTarget(CommandBuffer cmd, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x0000000189CC0424-0x0000000189CC0464
-		private static int FixupDepthSlice(int depthSlice, RTHandle buffer) => default; // 0x0000000189CC11E0-0x0000000189CC1224
-		private static int FixupDepthSlice(int depthSlice, CubemapFace cubemapFace) => default; // 0x0000000189CC11D0-0x0000000189CC11E0
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier buffer, ClearFlag clearFlag, UnityEngine.Color clearColor, int miplevel = 0 /* Metadata: 0x01FD4745 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x01FD4746 */, int depthSlice = -1 /* Metadata: 0x01FD4747 */) {} // 0x0000000189CC1CE0-0x0000000189CC1DC0
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier buffer, ClearFlag clearFlag = ClearFlag.None /* Metadata: 0x01FD4748 */, int miplevel = 0 /* Metadata: 0x01FD4749 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x01FD474A */, int depthSlice = -1 /* Metadata: 0x01FD474B */) {} // 0x0000000189CC1ED0-0x0000000189CC1FA4
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier colorBuffer, RenderTargetIdentifier depthBuffer, int miplevel = 0 /* Metadata: 0x01FD474C */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x01FD474D */, int depthSlice = -1 /* Metadata: 0x01FD474E */) {} // 0x0000000189CC2B60-0x0000000189CC2C68
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier colorBuffer, RenderTargetIdentifier depthBuffer, ClearFlag clearFlag, int miplevel = 0 /* Metadata: 0x01FD474F */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x01FD4750 */, int depthSlice = -1 /* Metadata: 0x01FD4751 */) {} // 0x0000000189CC1DC0-0x0000000189CC1ED0
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier colorBuffer, RenderTargetIdentifier depthBuffer, ClearFlag clearFlag, UnityEngine.Color clearColor, int miplevel = 0 /* Metadata: 0x01FD4752 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x01FD4753 */, int depthSlice = -1 /* Metadata: 0x01FD4754 */) {} // 0x0000000189CC259C-0x0000000189CC26B4
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier[] colorBuffers, RenderTargetIdentifier depthBuffer) {} // 0x0000000189CC1C28-0x0000000189CC1CE0
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier[] colorBuffers, RenderTargetIdentifier depthBuffer, ClearFlag clearFlag = ClearFlag.None /* Metadata: 0x01FD4755 */) {} // 0x0000000189CC1B68-0x0000000189CC1C28
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier[] colorBuffers, RenderTargetIdentifier depthBuffer, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x0000000189CC26B4-0x0000000189CC2788
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier buffer, RenderBufferLoadAction loadAction, RenderBufferStoreAction storeAction, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x0000000189CC2C68-0x0000000189CC2D30
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier buffer, RenderBufferLoadAction loadAction, RenderBufferStoreAction storeAction, ClearFlag clearFlag) {} // 0x0000000189CC288C-0x0000000189CC2958
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier colorBuffer, RenderBufferLoadAction colorLoadAction, RenderBufferStoreAction colorStoreAction, RenderTargetIdentifier depthBuffer, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x0000000189CC2A44-0x0000000189CC2B60
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier buffer, RenderBufferLoadAction colorLoadAction, RenderBufferStoreAction colorStoreAction, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x0000000189CC1FA4-0x0000000189CC2088
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier colorBuffer, RenderBufferLoadAction colorLoadAction, RenderBufferStoreAction colorStoreAction, RenderTargetIdentifier depthBuffer, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction, ClearFlag clearFlag) {} // 0x0000000189CC22B0-0x0000000189CC23D0
-		private static void SetViewportAndClear(CommandBuffer cmd, RTHandle buffer, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x0000000189CC2DE0-0x0000000189CC2E68
-		public static void SetRenderTarget(CommandBuffer cmd, RTHandle buffer, ClearFlag clearFlag, UnityEngine.Color clearColor, int miplevel = 0 /* Metadata: 0x01FD4756 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x01FD4757 */, int depthSlice = -1 /* Metadata: 0x01FD4758 */) {} // 0x0000000189CC2788-0x0000000189CC288C
-		public static void SetRenderTarget(CommandBuffer cmd, RTHandle buffer, ClearFlag clearFlag = ClearFlag.None /* Metadata: 0x01FD4759 */, int miplevel = 0 /* Metadata: 0x01FD475A */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x01FD475B */, int depthSlice = -1 /* Metadata: 0x01FD475C */) {} // 0x0000000189CC2D30-0x0000000189CC2DE0
-		public static void SetRenderTarget(CommandBuffer cmd, RTHandle colorBuffer, RTHandle depthBuffer, int miplevel = 0 /* Metadata: 0x01FD475D */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x01FD475E */, int depthSlice = -1 /* Metadata: 0x01FD475F */) {} // 0x0000000189CC2184-0x0000000189CC22B0
-		public static void SetRenderTarget(CommandBuffer cmd, RTHandle colorBuffer, RTHandle depthBuffer, ClearFlag clearFlag, int miplevel = 0 /* Metadata: 0x01FD4760 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x01FD4761 */, int depthSlice = -1 /* Metadata: 0x01FD4762 */) {} // 0x0000000189CC1934-0x0000000189CC1A68
-		public static void SetRenderTarget(CommandBuffer cmd, RTHandle colorBuffer, RTHandle depthBuffer, ClearFlag clearFlag, UnityEngine.Color clearColor, int miplevel = 0 /* Metadata: 0x01FD4763 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x01FD4764 */, int depthSlice = -1 /* Metadata: 0x01FD4765 */) {} // 0x0000000189CC23D0-0x0000000189CC259C
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier[] colorBuffers, RTHandle depthBuffer) {} // 0x0000000189CC1A68-0x0000000189CC1B68
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier[] colorBuffers, RTHandle depthBuffer, ClearFlag clearFlag = ClearFlag.None /* Metadata: 0x01FD4766 */) {} // 0x0000000189CC2088-0x0000000189CC2184
-		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier[] colorBuffers, RTHandle depthBuffer, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x0000000189CC2958-0x0000000189CC2A44
-		public static void SetViewport(CommandBuffer cmd, RTHandle target) {} // 0x0000000189CC2E68-0x0000000189CC2F44
-		public static string GetRenderTargetAutoName(int width, int height, int depth, RenderTextureFormat format, string name, bool mips = false /* Metadata: 0x01FD4767 */, bool enableMSAA = false /* Metadata: 0x01FD4768 */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x01FD4769 */) => default; // 0x0000000182526050-0x0000000182526150
-		public static string GetRenderTargetAutoName(int width, int height, int depth, GraphicsFormat format, string name, bool mips = false /* Metadata: 0x01FD476A */, bool enableMSAA = false /* Metadata: 0x01FD476B */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x01FD476C */) => default; // 0x0000000189CC1250-0x0000000189CC1330
-		public static string GetRenderTargetAutoName(int width, int height, int depth, GraphicsFormat format, TextureDimension dim, string name, bool mips = false /* Metadata: 0x01FD476D */, bool enableMSAA = false /* Metadata: 0x01FD476E */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x01FD476F */, bool dynamicRes = false /* Metadata: 0x01FD4770 */) => default; // 0x0000000182524420-0x0000000182524530
-		private static string GetRenderTargetAutoName(int width, int height, int depth, string format, TextureDimension dim, string name, bool mips, bool enableMSAA, MSAASamples msaaSamples, bool dynamicRes) => default; // 0x0000000182526150-0x0000000182526310
-		public static string GetTextureAutoName(int width, int height, TextureFormat format, TextureDimension dim = TextureDimension.None /* Metadata: 0x01FD4771 */, string name = "" /* Metadata: 0x01FD4772 */, bool mips = false /* Metadata: 0x01FD4773 */, int depth = 0 /* Metadata: 0x01FD4774 */) => default; // 0x0000000189CC13F8-0x0000000189CC14C0
-		public static string GetTextureAutoName(int width, int height, GraphicsFormat format, TextureDimension dim = TextureDimension.None /* Metadata: 0x01FD4775 */, string name = "" /* Metadata: 0x01FD4776 */, bool mips = false /* Metadata: 0x01FD4777 */, int depth = 0 /* Metadata: 0x01FD4778 */) => default; // 0x0000000189CC1330-0x0000000189CC13F8
-		private static string GetTextureAutoName(int width, int height, string format, TextureDimension dim = TextureDimension.None /* Metadata: 0x01FD4779 */, string name = "" /* Metadata: 0x01FD477A */, bool mips = false /* Metadata: 0x01FD477B */, int depth = 0 /* Metadata: 0x01FD477C */) => default; // 0x0000000189CC14C0-0x0000000189CC17BC
-		public static void ClearCubemap(CommandBuffer cmd, RenderTexture renderTexture, UnityEngine.Color clearColor, bool clearMips = false /* Metadata: 0x01FD477D */) {} // 0x0000000189CC02D4-0x0000000189CC0424
-		public static void DrawFullScreen(CommandBuffer commandBuffer, Material material, MaterialPropertyBlock properties = null, int shaderPassId = 0 /* Metadata: 0x01FD477E */) {} // 0x0000000189CC0C0C-0x0000000189CC0CB8
-		public static void DrawFullScreen(CommandBuffer commandBuffer, Material material, RenderTargetIdentifier colorBuffer, MaterialPropertyBlock properties = null, int shaderPassId = 0 /* Metadata: 0x01FD477F */) {} // 0x0000000189CC0CB8-0x0000000189CC0D9C
-		public static void DrawFullScreen(CommandBuffer commandBuffer, Material material, RenderTargetIdentifier colorBuffer, RenderTargetIdentifier depthStencilBuffer, MaterialPropertyBlock properties = null, int shaderPassId = 0 /* Metadata: 0x01FD4780 */) {} // 0x0000000189CC0D9C-0x0000000189CC0E94
-		public static void DrawFullScreen(CommandBuffer commandBuffer, Material material, RenderTargetIdentifier[] colorBuffers, RenderTargetIdentifier depthStencilBuffer, MaterialPropertyBlock properties = null, int shaderPassId = 0 /* Metadata: 0x01FD4781 */) {} // 0x0000000189CC0A58-0x0000000189CC0B40
-		public static void DrawFullScreen(CommandBuffer commandBuffer, Material material, RenderTargetIdentifier[] colorBuffers, MaterialPropertyBlock properties = null, int shaderPassId = 0 /* Metadata: 0x01FD4782 */) {} // 0x0000000189CC0B40-0x0000000189CC0C0C
-		public static UnityEngine.Color ConvertSRGBToActiveColorSpace(UnityEngine.Color color) => default; // 0x0000000189CC04A8-0x0000000189CC04EC
-		public static UnityEngine.Color ConvertLinearToActiveColorSpace(UnityEngine.Color color) => default; // 0x0000000189CC0464-0x0000000189CC04A8
-		public static Material CreateEngineMaterial(string shaderPath) => default; // 0x0000000189CC0958-0x0000000189CC0A58
-		public static Material CreateEngineMaterial(Shader shader, bool enableInstancing = false /* Metadata: 0x01FD4783 */) => default; // 0x0000000182E80300-0x0000000182E803F0
+		public static void ClearRenderTarget(CommandBuffer cmd, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x000000018BDDB5DC-0x000000018BDDB6EC
+		private static int FixupDepthSlice(int depthSlice, RTHandle buffer) => default; // 0x000000018BDDBDB8-0x000000018BDDBED0
+		private static int FixupDepthSlice(int depthSlice, CubemapFace cubemapFace) => default; // 0x000000018BDDB444-0x000000018BDDB4FC
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier buffer, ClearFlag clearFlag, UnityEngine.Color clearColor, int miplevel = 0 /* Metadata: 0x02079F6C */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x02079F6D */, int depthSlice = -1 /* Metadata: 0x02079F6E */) {} // 0x000000018BDDB384-0x000000018BDDB444
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier buffer, ClearFlag clearFlag = ClearFlag.None /* Metadata: 0x02079F6F */, int miplevel = 0 /* Metadata: 0x02079F70 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x02079F71 */, int depthSlice = -1 /* Metadata: 0x02079F72 */) {} // 0x000000018BDDBED0-0x000000018BDDBFA4
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier colorBuffer, RenderTargetIdentifier depthBuffer, int miplevel = 0 /* Metadata: 0x02079F73 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x02079F74 */, int depthSlice = -1 /* Metadata: 0x02079F75 */) {} // 0x000000018BDDC484-0x000000018BDDC54C
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier colorBuffer, RenderTargetIdentifier depthBuffer, ClearFlag clearFlag, int miplevel = 0 /* Metadata: 0x02079F76 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x02079F77 */, int depthSlice = -1 /* Metadata: 0x02079F78 */) {} // 0x000000018BDDC0A8-0x000000018BDDC174
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier colorBuffer, RenderTargetIdentifier depthBuffer, ClearFlag clearFlag, UnityEngine.Color clearColor, int miplevel = 0 /* Metadata: 0x02079F79 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x02079F7A */, int depthSlice = -1 /* Metadata: 0x02079F7B */) {} // 0x000000018BDDC260-0x000000018BDDC37C
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier[] colorBuffers, RenderTargetIdentifier depthBuffer) {} // 0x000000018BDDB7C0-0x000000018BDDB8A4
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier[] colorBuffers, RenderTargetIdentifier depthBuffer, ClearFlag clearFlag = ClearFlag.None /* Metadata: 0x02079F7C */) {} // 0x000000018BDDBACC-0x000000018BDDBBEC
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier[] colorBuffers, RenderTargetIdentifier depthBuffer, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x000000018BDDC5FC-0x000000018BDDC684
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier buffer, RenderBufferLoadAction loadAction, RenderBufferStoreAction storeAction, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x000000018BDDBFA4-0x000000018BDDC0A8
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier buffer, RenderBufferLoadAction loadAction, RenderBufferStoreAction storeAction, ClearFlag clearFlag) {} // 0x000000018BDDC54C-0x000000018BDDC5FC
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier colorBuffer, RenderBufferLoadAction colorLoadAction, RenderBufferStoreAction colorStoreAction, RenderTargetIdentifier depthBuffer, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x000000018BDDB9A0-0x000000018BDDBACC
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier buffer, RenderBufferLoadAction colorLoadAction, RenderBufferStoreAction colorStoreAction, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x000000018BDDB150-0x000000018BDDB284
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier colorBuffer, RenderBufferLoadAction colorLoadAction, RenderBufferStoreAction colorStoreAction, RenderTargetIdentifier depthBuffer, RenderBufferLoadAction depthLoadAction, RenderBufferStoreAction depthStoreAction, ClearFlag clearFlag) {} // 0x000000018BDDBBEC-0x000000018BDDBDB8
+		private static void SetViewportAndClear(CommandBuffer cmd, RTHandle buffer, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x000000018BDDB284-0x000000018BDDB384
+		public static void SetRenderTarget(CommandBuffer cmd, RTHandle buffer, ClearFlag clearFlag, UnityEngine.Color clearColor, int miplevel = 0 /* Metadata: 0x02079F7D */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x02079F7E */, int depthSlice = -1 /* Metadata: 0x02079F7F */) {} // 0x000000018BDDB8A4-0x000000018BDDB9A0
+		public static void SetRenderTarget(CommandBuffer cmd, RTHandle buffer, ClearFlag clearFlag = ClearFlag.None /* Metadata: 0x02079F80 */, int miplevel = 0 /* Metadata: 0x02079F81 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x02079F82 */, int depthSlice = -1 /* Metadata: 0x02079F83 */) {} // 0x000000018BDDC174-0x000000018BDDC260
+		public static void SetRenderTarget(CommandBuffer cmd, RTHandle colorBuffer, RTHandle depthBuffer, int miplevel = 0 /* Metadata: 0x02079F84 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x02079F85 */, int depthSlice = -1 /* Metadata: 0x02079F86 */) {} // 0x000000018BDDC684-0x000000018BDDC760
+		public static void SetRenderTarget(CommandBuffer cmd, RTHandle colorBuffer, RTHandle depthBuffer, ClearFlag clearFlag, int miplevel = 0 /* Metadata: 0x02079F87 */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x02079F88 */, int depthSlice = -1 /* Metadata: 0x02079F89 */) {} // 0x0000000183FD9E60-0x0000000183FD9F60
+		public static void SetRenderTarget(CommandBuffer cmd, RTHandle colorBuffer, RTHandle depthBuffer, ClearFlag clearFlag, UnityEngine.Color clearColor, int miplevel = 0 /* Metadata: 0x02079F8A */, CubemapFace cubemapFace = CubemapFace.Unknown /* Metadata: 0x02079F8B */, int depthSlice = -1 /* Metadata: 0x02079F8C */) {} // 0x000000018BDDAA6C-0x000000018BDDAB4C
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier[] colorBuffers, RTHandle depthBuffer) {} // 0x0000000183FD9AA0-0x0000000183FD9BB0
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier[] colorBuffers, RTHandle depthBuffer, ClearFlag clearFlag = ClearFlag.None /* Metadata: 0x02079F8D */) {} // 0x0000000183FD9CA0-0x0000000183FD9E60
+		public static void SetRenderTarget(CommandBuffer cmd, RenderTargetIdentifier[] colorBuffers, RTHandle depthBuffer, ClearFlag clearFlag, UnityEngine.Color clearColor) {} // 0x000000018BDDAC14-0x000000018BDDACDC
+		public static void SetViewport(CommandBuffer cmd, RTHandle target) {} // 0x000000018BDDAB4C-0x000000018BDDAC14
+		public static string GetRenderTargetAutoName(int width, int height, int depth, RenderTextureFormat format, string name, bool mips = false /* Metadata: 0x02079F8E */, bool enableMSAA = false /* Metadata: 0x02079F8F */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x02079F90 */) => default; // 0x000000018BDDACDC-0x000000018BDDAFD8
+		public static string GetRenderTargetAutoName(int width, int height, int depth, GraphicsFormat format, string name, bool mips = false /* Metadata: 0x02079F91 */, bool enableMSAA = false /* Metadata: 0x02079F92 */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x02079F93 */) => default; // 0x000000018BDD9AF0-0x000000018BDD9C40
+		public static string GetRenderTargetAutoName(int width, int height, int depth, GraphicsFormat format, TextureDimension dim, string name, bool mips = false /* Metadata: 0x02079F94 */, bool enableMSAA = false /* Metadata: 0x02079F95 */, MSAASamples msaaSamples = MSAASamples.None /* Metadata: 0x02079F96 */, bool dynamicRes = false /* Metadata: 0x02079F97 */) => default; // 0x000000018BDDA428-0x000000018BDDA4D4
+		private static string GetRenderTargetAutoName(int width, int height, int depth, string format, TextureDimension dim, string name, bool mips, bool enableMSAA, MSAASamples msaaSamples, bool dynamicRes) => default; // 0x000000018BDDA4D4-0x000000018BDDA5B8
+		public static string GetTextureAutoName(int width, int height, TextureFormat format, TextureDimension dim = TextureDimension.None /* Metadata: 0x02079F98 */, string name = "" /* Metadata: 0x02079F99 */, bool mips = false /* Metadata: 0x02079F9A */, int depth = 0 /* Metadata: 0x02079F9B */) => default; // 0x000000018BDDA5B8-0x000000018BDDA6B0
+		public static string GetTextureAutoName(int width, int height, GraphicsFormat format, TextureDimension dim = TextureDimension.None /* Metadata: 0x02079F9C */, string name = "" /* Metadata: 0x02079F9D */, bool mips = false /* Metadata: 0x02079F9E */, int depth = 0 /* Metadata: 0x02079F9F */) => default; // 0x000000018BDDA274-0x000000018BDDA35C
+		private static string GetTextureAutoName(int width, int height, string format, TextureDimension dim = TextureDimension.None /* Metadata: 0x02079FA0 */, string name = "" /* Metadata: 0x02079FA1 */, bool mips = false /* Metadata: 0x02079FA2 */, int depth = 0 /* Metadata: 0x02079FA3 */) => default; // 0x000000018BDDA35C-0x000000018BDDA428
+		public static void ClearCubemap(CommandBuffer cmd, RenderTexture renderTexture, UnityEngine.Color clearColor, bool clearMips = false /* Metadata: 0x02079FA4 */) {} // 0x000000018BDD9CC4-0x000000018BDD9D08
+		public static void DrawFullScreen(CommandBuffer commandBuffer, Material material, MaterialPropertyBlock properties = null, int shaderPassId = 0 /* Metadata: 0x02079FA5 */) {} // 0x000000018BDD9C80-0x000000018BDD9CC4
+		public static void DrawFullScreen(CommandBuffer commandBuffer, Material material, RenderTargetIdentifier colorBuffer, MaterialPropertyBlock properties = null, int shaderPassId = 0 /* Metadata: 0x02079FA6 */) {} // 0x000000018BDDA174-0x000000018BDDA274
+		public static void DrawFullScreen(CommandBuffer commandBuffer, Material material, RenderTargetIdentifier colorBuffer, RenderTargetIdentifier depthStencilBuffer, MaterialPropertyBlock properties = null, int shaderPassId = 0 /* Metadata: 0x02079FA7 */) {} // 0x0000000184A74B40-0x0000000184A74C30
+		public static void DrawFullScreen(CommandBuffer commandBuffer, Material material, RenderTargetIdentifier[] colorBuffers, RenderTargetIdentifier depthStencilBuffer, MaterialPropertyBlock properties = null, int shaderPassId = 0 /* Metadata: 0x02079FA8 */) {}
+		public static void DrawFullScreen(CommandBuffer commandBuffer, Material material, RenderTargetIdentifier[] colorBuffers, MaterialPropertyBlock properties = null, int shaderPassId = 0 /* Metadata: 0x02079FA9 */) {}
+		public static UnityEngine.Color ConvertSRGBToActiveColorSpace(UnityEngine.Color color) => default; // 0x000000018BDDB11C-0x000000018BDDB150
+		public static UnityEngine.Color ConvertLinearToActiveColorSpace(UnityEngine.Color color) => default; // 0x000000018789EFF4-0x000000018789F028
+		public static Material CreateEngineMaterial(string shaderPath) => default; // 0x000000018BDDB0E8-0x000000018BDDB11C
+		public static Material CreateEngineMaterial(Shader shader, bool enableInstancing = false /* Metadata: 0x02079FAA */) => default; // 0x0000000184A74570-0x0000000184A745F0
 		public static bool HasFlag<T>(T mask, T flag)
-			where T : IConvertible => default;
+			where T : IConvertible => default; // 0x0000000184A8D400-0x0000000184A8D5E0
 		public static void Swap<T>(ref ref T a, ref ref T b) {}
-		public static void SetKeyword(CommandBuffer cmd, string keyword, bool state) {} // 0x0000000189CC1900-0x0000000189CC1934
-		public static void SetKeyword(Material material, string keyword, bool state) {} // 0x00000001856EC558-0x00000001856EC58C
-		public static void SetKeyword(ComputeShader cs, string keyword, bool state) {} // 0x0000000189CC18CC-0x0000000189CC1900
-		public static void Destroy(UnityEngine.Object obj) {} // 0x0000000182E7FD30-0x0000000182E7FDB0
-		public static IEnumerable<System.Type> GetAllAssemblyTypes() => default; // 0x000000018267CE90-0x000000018267D070
-		public static IEnumerable<System.Type> GetAllTypesDerivedFrom<T>() => default;
-		public static void SafeRelease(ComputeBuffer buffer) {} // 0x0000000189CC18BC-0x0000000189CC18CC
-		public static Mesh CreateCubeMesh(Vector3 min, Vector3 max) => default; // 0x0000000189CC04EC-0x0000000189CC0958
-		public static bool ArePostProcessesEnabled(Camera camera) => default; // 0x000000018232EB60-0x000000018232EB70
-		public static bool AreAnimatedMaterialsEnabled(Camera camera) => default; // 0x000000018232EB60-0x000000018232EB70
-		public static bool IsSceneLightingDisabled(Camera camera) => default; // 0x000000018115F4C0-0x000000018115F530
-		public static bool IsLightOverlapDebugEnabled(Camera camera) => default; // 0x000000018115F4C0-0x000000018115F530
-		public static bool IsSceneViewFogEnabled(Camera camera) => default; // 0x000000018232EB60-0x000000018232EB70
-		public static bool IsSceneFilteringEnabled() => default; // 0x000000018115F4C0-0x000000018115F530
-		public static bool IsSceneViewPrefabStageContextHidden() => default; // 0x000000018115F4C0-0x000000018115F530
-		[Obsolete("Use the updated RendererList API in the UnityEngine.Rendering.RendererUtils namespace.")]
-		public static void DrawRendererList(ScriptableRenderContext renderContext, CommandBuffer cmd, UnityEngine.Experimental.Rendering.RendererList rendererList) {} // 0x0000000189CC0E94-0x0000000189CC1158
-		public static void DrawRendererList(ScriptableRenderContext renderContext, CommandBuffer cmd, UnityEngine.Rendering.RendererUtils.RendererList rendererList) {} // 0x0000000189CC1158-0x0000000189CC11D0
-		public static int GetTextureHash(Texture texture) => default; // 0x0000000189CC17BC-0x0000000189CC1888
-		public static int PreviousPowerOfTwo(int size) => default; // 0x0000000189CC1888-0x0000000189CC18BC
+		public static void SetKeyword(CommandBuffer cmd, string keyword, bool state) {} // 0x000000018BDDB0D8-0x000000018BDDB0E8
+		public static void SetKeyword(Material material, string keyword, bool state) {} // 0x000000018BDD9D08-0x000000018BDDA174
+		public static void SetKeyword(ComputeShader cs, string keyword, bool state) {} // 0x00000001840A27C0-0x00000001840A27D0
+		public static void Destroy(UnityEngine.Object obj) {} // 0x00000001840A27C0-0x00000001840A27D0
+		public static IEnumerable<System.Type> GetAllAssemblyTypes() => default; // 0x00000001814A81B0-0x00000001814A81C0
+		public static IEnumerable<System.Type> GetAllTypesDerivedFrom<T>() => default; // 0x00000001814A81B0-0x00000001814A81C0
+		public static void SafeRelease(ComputeBuffer buffer) {} // 0x00000001840A27C0-0x00000001840A27D0
+		public static Mesh CreateCubeMesh(Vector3 min, Vector3 max) => default; // 0x00000001814A81B0-0x00000001814A81C0
+		public static bool ArePostProcessesEnabled(Camera camera) => default; // 0x00000001814A81B0-0x00000001814A81C0
+		public static bool AreAnimatedMaterialsEnabled(Camera camera) => default; // 0x000000018BDDA6B0-0x000000018BDDA974
+		public static bool IsSceneLightingDisabled(Camera camera) => default; // 0x000000018BDDA974-0x000000018BDDA9EC
+		public static bool IsLightOverlapDebugEnabled(Camera camera) => default; // 0x000000018BDDAFD8-0x000000018BDDB0A4
+		public static bool IsSceneViewFogEnabled(Camera camera) => default; // 0x000000018BDDB0A4-0x000000018BDDB0D8
+		public static bool IsSceneFilteringEnabled() => default;
+		public static bool IsSceneViewPrefabStageContextHidden() => default; // 0x000000018BDDAA40-0x000000018BDDAA6C
+		public static void DrawRendererList(ScriptableRenderContext renderContext, CommandBuffer cmd, UnityEngine.Experimental.Rendering.RendererList rendererList) {} // 0x0000000185A8C700-0x0000000185A8C930
+		public static void DrawRendererList(ScriptableRenderContext renderContext, CommandBuffer cmd, UnityEngine.Rendering.RendererUtils.RendererList rendererList) {} // 0x0000000185F70ED0-0x0000000185F70F30
+		public static int GetTextureHash(Texture texture) => default; // 0x0000000185492010-0x0000000185492020
+		public static int PreviousPowerOfTwo(int size) => default; // 0x0000000184A8E850-0x0000000184A8E8C0
 		public static T GetLastEnumValue<T>()
 			where T : Enum => default;
-		internal static string GetCorePath() => default; // 0x0000000189CC1224-0x0000000189CC1250
+		internal static string GetCorePath() => default;
 	}
 
-	public static class DelegateUtility // TypeDefIndex: 53575
+	public static class DelegateUtility // TypeDefIndex: 54568
 	{
 		// Methods
-		public static Delegate Cast(Delegate source, System.Type type) => default; // 0x0000000189CC5D84-0x0000000189CC5EC4
+		public static Delegate Cast(Delegate source, System.Type type) => default; // 0x000000018BDDF5A0-0x000000018BDDF6E0
 	}
 
-	public static class FSRUtils // TypeDefIndex: 53577
+	public static class FSRUtils // TypeDefIndex: 54570
 	{
 		// Fields
-		internal const float kMaxSharpnessStops = 2.5f; // Metadata: 0x01FD47E5
-		public const float kDefaultSharpnessStops = 0.2f; // Metadata: 0x01FD47E9
-		public const float kDefaultSharpnessLinear = 0.92f; // Metadata: 0x01FD47ED
+		internal const float kMaxSharpnessStops = 2.5f; // Metadata: 0x0207A00C
+		public const float kDefaultSharpnessStops = 0.2f; // Metadata: 0x0207A010
+		public const float kDefaultSharpnessLinear = 0.92f; // Metadata: 0x0207A014
 	
 		// Nested types
-		private static class ShaderConstants // TypeDefIndex: 53576
+		private static class ShaderConstants // TypeDefIndex: 54569
 		{
 			// Fields
 			public static readonly int _FsrEasuConstants0; // 0x00
@@ -5133,30 +5529,34 @@ namespace UnityEngine.Rendering
 			public static readonly int _FsrRcasConstants; // 0x10
 	
 			// Constructors
-			static ShaderConstants() {} // 0x0000000189CC8CD0-0x0000000189CC8DCC
+			static ShaderConstants() {} // 0x000000018BDDF6F8-0x000000018BDDF8E4
 		}
 	
 		// Methods
-		public static void SetEasuConstants(CommandBuffer cmd, Vector2 inputViewportSizeInPixels, Vector2 inputImageSizeInPixels, Vector2 outputImageSizeInPixels) {} // 0x0000000189CC5EDC-0x0000000189CC60C8
-		public static void SetRcasConstants(CommandBuffer cmd, float sharpnessStops = 0.2f /* Metadata: 0x01FD47DD */) {} // 0x0000000189CC60E8-0x0000000189CC61C4
-		public static void SetRcasConstantsLinear(CommandBuffer cmd, float sharpnessLinear = 0.92f /* Metadata: 0x01FD47E1 */) {} // 0x0000000189CC60C8-0x0000000189CC60E8
-		public static bool IsSupported() => default; // 0x0000000189CC5EC4-0x0000000189CC5EDC
+		public static void SetEasuConstants(CommandBuffer cmd, Vector2 inputViewportSizeInPixels, Vector2 inputImageSizeInPixels, Vector2 outputImageSizeInPixels) {} // 0x000000018BDDF904-0x000000018BDDF9E0
+		public static void SetRcasConstants(CommandBuffer cmd, float sharpnessStops = 0.2f /* Metadata: 0x0207A004 */) {} // 0x000000018BDDF8E4-0x000000018BDDF904
+		public static void SetRcasConstantsLinear(CommandBuffer cmd, float sharpnessLinear = 0.92f /* Metadata: 0x0207A008 */) {} // 0x000000018BDDF6E0-0x000000018BDDF6F8
+		public static bool IsSupported() => default; // 0x000000018BDE24EC-0x000000018BDE25E8
 	}
 
-	public class HableCurve // TypeDefIndex: 53581
+	public class HableCurve // TypeDefIndex: 54574
 	{
 		// Fields
+		private float _whitePoint_k__BackingField; // 0x10
+		private float _inverseWhitePoint_k__BackingField; // 0x14
+		private float _x0_k__BackingField; // 0x18
+		private float _x1_k__BackingField; // 0x1C
 		public readonly Segment[] segments; // 0x20
 		public readonly Uniforms uniforms; // 0x28
 	
 		// Properties
-		public float whitePoint { get; private set; } // 0x0000000183D4E7A0-0x0000000183D4E7B0 0x0000000183D50CA0-0x0000000183D50CB0
-		public float inverseWhitePoint { get; private set; } // 0x0000000183D51930-0x0000000183D51940 0x0000000183D51940-0x0000000183D51950
-		public float x0 { get; private set; } // 0x0000000183D4EBF0-0x0000000183D4EC00 0x0000000183D4EC00-0x0000000183D4EC10
-		public float x1 { get; private set; } // 0x0000000183D4F110-0x0000000183D4F120 0x0000000183D4F120-0x0000000183D4F130
+		public float whitePoint { get; private set; } // 0x000000018BDDFFA0-0x000000018BDE0144 0x000000018BDDFAB8-0x000000018BDDFFA0
+		public float inverseWhitePoint { get; private set; } // 0x000000018BDE0144-0x000000018BDE01B4 0x000000018BDDFA08-0x000000018BDDFA50
+		public float x0 { get; private set; } // 0x0000000185FE55F0-0x0000000185FE5640 0x000000018BDE24A8-0x000000018BDE24EC
+		public float x1 { get; private set; } // 0x0000000185492010-0x0000000185492020 0x0000000184096E30-0x0000000184096EF0
 	
 		// Nested types
-		public class Segment // TypeDefIndex: 53578
+		public class Segment // TypeDefIndex: 54571
 		{
 			// Fields
 			public float offsetX; // 0x10
@@ -5167,13 +5567,13 @@ namespace UnityEngine.Rendering
 			public float B; // 0x24
 	
 			// Constructors
-			public Segment() {} // 0x000000018350B670-0x000000018350B680
+			public Segment() {} // 0x0000000181A6E380-0x0000000181A6E390
 	
 			// Methods
-			public float Eval(float x) => default; // 0x0000000189CC8C8C-0x0000000189CC8CD0
+			public float Eval(float x) => default; // 0x0000000181DCCCE0-0x0000000181DCCCF0
 		}
 	
-		private struct DirectParams // TypeDefIndex: 53579
+		private struct DirectParams // TypeDefIndex: 54572
 		{
 			// Fields
 			internal float x0; // 0x00
@@ -5186,60 +5586,57 @@ namespace UnityEngine.Rendering
 			internal float gamma; // 0x1C
 		}
 	
-		public class Uniforms // TypeDefIndex: 53580
+		public class Uniforms // TypeDefIndex: 54573
 		{
 			// Fields
 			private HableCurve parent; // 0x10
 	
 			// Properties
-			public Vector4 curve { get => default; } // 0x0000000189CC9468-0x0000000189CC94A0 
-			public Vector4 toeSegmentA { get => default; } // 0x0000000189CC9688-0x0000000189CC9714 
-			public Vector4 toeSegmentB { get => default; } // 0x0000000189CC9714-0x0000000189CC977C 
-			public Vector4 midSegmentA { get => default; } // 0x0000000189CC94A0-0x0000000189CC952C 
-			public Vector4 midSegmentB { get => default; } // 0x0000000189CC952C-0x0000000189CC9594 
-			public Vector4 shoSegmentA { get => default; } // 0x0000000189CC9594-0x0000000189CC9620 
-			public Vector4 shoSegmentB { get => default; } // 0x0000000189CC9620-0x0000000189CC9688 
+			public Vector4 curve { get => default; } // 0x0000000181A6E390-0x0000000181A6FA00 
+			public Vector4 toeSegmentA { get => default; } // 0x0000000181C9AC50-0x0000000181C9AC60 
+			public Vector4 toeSegmentB { get => default; } // 0x0000000181C9A5A0-0x0000000181C9A5B0 
+			public Vector4 midSegmentA { get => default; } // 0x0000000185FB0850-0x0000000185FB0860 
+			public Vector4 midSegmentB { get => default; } // 0x0000000183B7E5A0-0x0000000183B7E5B0 
+			public Vector4 shoSegmentA { get => default; } // 0x000000018BDE01B4-0x000000018BDE02B8 
+			public Vector4 shoSegmentB { get => default; } // 0x000000018BDDFA50-0x000000018BDDFAB8 
 	
 			// Constructors
 			public Uniforms() {} // Dummy constructor
-			internal Uniforms(HableCurve parent) {} // 0x000000018426FEE0-0x000000018426FEF0
+			internal Uniforms(HableCurve parent) {} // 0x0000000185FB2D80-0x0000000185FB2D90
 		}
 	
 		// Constructors
-		public HableCurve() {} // 0x0000000189CC6998-0x0000000189CC6A9C
+		public HableCurve() {} // 0x000000018BDE2C84-0x000000018BDE2CBC
 	
 		// Methods
-		public float Eval(float x) => default; // 0x0000000189CC6234-0x0000000189CC629C
-		public void Init(float toeStrength, float toeLength, float shoulderStrength, float shoulderLength, float shoulderAngle, float gamma) {} // 0x0000000189CC6784-0x0000000189CC6928
-		private void InitSegments(DirectParams srcParams) {} // 0x0000000189CC629C-0x0000000189CC6784
+		public float Eval(float x) => default; // 0x000000018BDE2EA4-0x000000018BDE2F30
+		public void Init(float toeStrength, float toeLength, float shoulderStrength, float shoulderLength, float shoulderAngle, float gamma) {} // 0x000000018BDE2F30-0x000000018BDE2F98
+		private void InitSegments(DirectParams srcParams) {} // 0x000000018BDE2CBC-0x000000018BDE2D48
 		private void SolveAB(out float lnA, out float B, float x0, float y0, float m) {
 			lnA = default;
 			B = default;
-		} // 0x0000000189CC6928-0x0000000189CC6998
+		} // 0x000000018BDE2D48-0x000000018BDE2DB0
 		private void AsSlopeIntercept(out float m, out float b, float x0, float x1, float y0, float y1) {
 			m = default;
 			b = default;
-		} // 0x0000000189CC61EC-0x0000000189CC6234
-		private float EvalDerivativeLinearGamma(float m, float b, float g, float x) => default; // 0x0000000183D84960-0x0000000183D849B0
+		} // 0x000000018BDE2DB0-0x000000018BDE2E3C
+		private float EvalDerivativeLinearGamma(float m, float b, float g, float x) => default; // 0x000000018BDE2E3C-0x000000018BDE2EA4
 	}
 
-	public static class HaltonSequence // TypeDefIndex: 53582
+	public static class HaltonSequence // TypeDefIndex: 54575
 	{
 		// Methods
-		public static float Get(int index, int radix) => default; // 0x000000018272BF50-0x000000018272BFA0
+		public static float Get(int index, int radix) => default; // 0x00000001842358F0-0x0000000184235940
 	}
 
-	[Flags]
-	[MovedFrom("Utilities")]
-	public enum MaterialQuality // TypeDefIndex: 53583
+	public enum MaterialQuality // TypeDefIndex: 54576
 	{
 		Low = 1,
 		Medium = 2,
 		High = 4
 	}
 
-	[MovedFrom("Utilities")]
-	public static class MaterialQualityUtilities // TypeDefIndex: 53584
+	public static class MaterialQualityUtilities // TypeDefIndex: 54577
 	{
 		// Fields
 		public static string[] KeywordNames; // 0x00
@@ -5247,20 +5644,18 @@ namespace UnityEngine.Rendering
 		public static ShaderKeyword[] Keywords; // 0x10
 	
 		// Constructors
-		static MaterialQualityUtilities() {} // 0x0000000189CC6EC4-0x0000000189CC7178
+		static MaterialQualityUtilities() {} // 0x000000018BDE06E0-0x000000018BDE0994
 	
 		// Methods
-		public static MaterialQuality FromIndex(int index) => default; // 0x0000000183D516D0-0x0000000183D516E0
-	
-		// Extension methods
-		public static MaterialQuality GetHighestQuality(this MaterialQuality levels) => default; // 0x0000000189CC6BF8-0x0000000189CC6C6C
-		public static MaterialQuality GetClosestQuality(this MaterialQuality availableLevels, MaterialQuality requestedLevel) => default; // 0x0000000189CC6AF0-0x0000000189CC6BF8
-		public static void SetGlobalShaderKeywords(this MaterialQuality level) {} // 0x0000000189CC6C6C-0x0000000189CC6D48
-		public static void SetGlobalShaderKeywords(this MaterialQuality level, CommandBuffer cmd) {} // 0x0000000189CC6D48-0x0000000189CC6E48
-		public static int ToFirstIndex(this MaterialQuality level) => default; // 0x0000000189CC6E48-0x0000000189CC6EC4
+		public static MaterialQuality GetHighestQuality(MaterialQuality levels) => default; // 0x000000018BDE0414-0x000000018BDE0488
+		public static MaterialQuality GetClosestQuality(MaterialQuality availableLevels, MaterialQuality requestedLevel) => default; // 0x000000018BDE030C-0x000000018BDE0414
+		public static void SetGlobalShaderKeywords(MaterialQuality level) {} // 0x000000018BDE0488-0x000000018BDE0564
+		public static void SetGlobalShaderKeywords(MaterialQuality level, CommandBuffer cmd) {} // 0x000000018BDE0564-0x000000018BDE0664
+		public static int ToFirstIndex(MaterialQuality level) => default; // 0x000000018BDE0664-0x000000018BDE06E0
+		public static MaterialQuality FromIndex(int index) => default; // 0x0000000185FB2B60-0x0000000185FB2B70
 	}
 
-	internal class MeshGizmo : IDisposable // TypeDefIndex: 53586
+	internal class MeshGizmo : IDisposable // TypeDefIndex: 54579
 	{
 		// Fields
 		public static readonly int vertexCountPerCube; // 0x00
@@ -5272,24 +5667,32 @@ namespace UnityEngine.Rendering
 		private Material dottedWireMaterial; // 0x38
 		private Material solidMaterial; // 0x40
 	
+		// Nested types
+		private struct __c__DisplayClass10_0 // TypeDefIndex: 54578
+		{
+			// Fields
+			public MeshGizmo __4__this; // 0x00
+			public UnityEngine.Color color; // 0x08
+		}
+	
 		// Constructors
 		public MeshGizmo() {} // Dummy constructor
-		public MeshGizmo(int capacity = 0 /* Metadata: 0x01FD47F4 */) {} // 0x0000000189CC7F84-0x0000000189CC80F8
-		static MeshGizmo() {} // 0x0000000189CC7F48-0x0000000189CC7F84
+		public MeshGizmo(int capacity = 0 /* Metadata: 0x0207A01B */) {} // 0x000000018BDE17A0-0x000000018BDE1914
+		static MeshGizmo() {} // 0x000000018BDE1764-0x000000018BDE17A0
 	
 		// Methods
-		public void Clear() {} // 0x0000000189CC7B08-0x0000000189CC7B84
-		public void AddWireCube(Vector3 center, Vector3 size, UnityEngine.Color color) {} // 0x0000000189CC71C4-0x0000000189CC7B08
-		private void DrawMesh(Matrix4x4 trs, Material mat, MeshTopology topology, CompareFunction depthTest, string gizmoName) {} // 0x0000000189CC7BD4-0x0000000189CC7D94
-		public void RenderWireframe(Matrix4x4 trs, CompareFunction depthTest = CompareFunction.LessEqual /* Metadata: 0x01FD47F5 */, string gizmoName = null) {} // 0x0000000189CC7D94-0x0000000189CC7DE8
-		public void Dispose() {} // 0x0000000189CC7B84-0x0000000189CC7BD4
+		public void Clear() {} // 0x000000018BDE1324-0x000000018BDE13A0
+		public void AddWireCube(Vector3 center, Vector3 size, UnityEngine.Color color) {} // 0x000000018BDE09E0-0x000000018BDE1324
+		private void DrawMesh(Matrix4x4 trs, Material mat, MeshTopology topology, CompareFunction depthTest, string gizmoName) {} // 0x000000018BDE13F0-0x000000018BDE15B0
+		public void RenderWireframe(Matrix4x4 trs, CompareFunction depthTest = CompareFunction.LessEqual /* Metadata: 0x0207A01C */, string gizmoName = null) {} // 0x000000018BDE15B0-0x000000018BDE1604
+		public void Dispose() {} // 0x000000018BDE13A0-0x000000018BDE13F0
+		private void _AddWireCube_g__AddEdge_10_0(Vector3 p1, Vector3 p2, ref __c__DisplayClass10_0 param_00072af2) {} // 0x000000018BDE1604-0x000000018BDE1764
 	}
 
-	[AttributeUsage(AttributeTargets.Field)]
-	public sealed class ReloadAttribute : Attribute // TypeDefIndex: 53588
+	public sealed class ReloadAttribute : Attribute // TypeDefIndex: 54581
 	{
 		// Nested types
-		public enum Package // TypeDefIndex: 53587
+		public enum Package // TypeDefIndex: 54580
 		{
 			Builtin = 0,
 			Root = 1
@@ -5297,31 +5700,27 @@ namespace UnityEngine.Rendering
 	
 		// Constructors
 		public ReloadAttribute() {} // Dummy constructor
-		public ReloadAttribute(string[] paths, Package package = Package.Root /* Metadata: 0x01FD47F6 */) {} // 0x000000018350B670-0x000000018350B680
-		public ReloadAttribute(string path, Package package = Package.Root /* Metadata: 0x01FD47F7 */) {} // 0x0000000189CC8B28-0x0000000189CC8B7C
-		public ReloadAttribute(string pathFormat, int rangeMin, int rangeMax, Package package = Package.Root /* Metadata: 0x01FD47F8 */) {} // 0x000000018350B670-0x000000018350B680
+		public ReloadAttribute(string[] paths, Package package = Package.Root /* Metadata: 0x0207A01D */) {} // 0x0000000185492010-0x0000000185492020
+		public ReloadAttribute(string path, Package package = Package.Root /* Metadata: 0x0207A01E */) {} // 0x000000018BDE2344-0x000000018BDE2398
+		public ReloadAttribute(string pathFormat, int rangeMin, int rangeMax, Package package = Package.Root /* Metadata: 0x0207A01F */) {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	public sealed class ReloadGroupAttribute : Attribute // TypeDefIndex: 53589
+	public sealed class ReloadGroupAttribute : Attribute // TypeDefIndex: 54582
 	{
 		// Constructors
-		public ReloadGroupAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public ReloadGroupAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
 	[Serializable]
-	public class TextureCurve : IDisposable // TypeDefIndex: 53590
+	public class TextureCurve : IDisposable // TypeDefIndex: 54583
 	{
 		// Fields
-		private const int k_Precision = 128; // Metadata: 0x01FD47FB
-		private const float k_Step = 0.0078125f; // Metadata: 0x01FD47FD
-		[SerializeField]
+		private const int k_Precision = 128; // Metadata: 0x0207A022
+		private const float k_Step = 0.0078125f; // Metadata: 0x0207A024
+		private int _length_k__BackingField; // 0x10
 		private bool m_Loop; // 0x14
-		[SerializeField]
 		private float m_ZeroValue; // 0x18
-		[SerializeField]
 		private float m_Range; // 0x1C
-		[SerializeField]
 		private AnimationCurve m_Curve; // 0x20
 		private AnimationCurve m_LoopingCurve; // 0x28
 		private Texture2D m_Texture; // 0x30
@@ -5330,42 +5729,41 @@ namespace UnityEngine.Rendering
 		private int m_LastUpdatedFrame; // 0x3C
 	
 		// Properties
-		public int length { get; private set; } // 0x0000000183D4E340-0x0000000183D4E350 0x00000001810410F0-0x0000000181041100
-		public Keyframe this[int index] { get => default; } // 0x0000000189CC90F0-0x0000000189CC9134 
+		public int length { get; private set; } // 0x0000000181C0BBD0-0x0000000181C0BBE0 0x0000000181378230-0x0000000181378240
+		public Keyframe this[int index] { get => default; } // 0x000000018BDE290C-0x000000018BDE2950 
 	
 		// Constructors
 		public TextureCurve() {} // Dummy constructor
-		public TextureCurve(AnimationCurve baseCurve, float zeroValue, bool loop, [IsReadOnly] in Vector2 bounds) {} // 0x0000000189CC908C-0x0000000189CC90F0
-		public TextureCurve(Keyframe[] keys, float zeroValue, bool loop, [IsReadOnly] in Vector2 bounds) {} // 0x0000000182700EA0-0x0000000182700F80
+		public TextureCurve(AnimationCurve baseCurve, float zeroValue, bool loop, in Vector2 bounds) {} // 0x000000018BDE28A8-0x000000018BDE290C
+		public TextureCurve(Keyframe[] keys, float zeroValue, bool loop, in Vector2 bounds) {} // 0x0000000184B38500-0x0000000184B385E0
 	
 		// Methods
-		public bool IsTextureCurveDirty() => default; // 0x0000000182508660-0x0000000182508690
-		~TextureCurve() {} // 0x0000000183529690-0x00000001835296B0
-		[Obsolete("Please use Release() instead.")]
-		public void Dispose() {} // 0x000000018350B670-0x000000018350B680
-		public void Release() {} // 0x0000000182E7EB60-0x0000000182E7EBD0
-		public void SetDirty() {} // 0x0000000183D849E0-0x0000000183D849F0
-		private static GraphicsFormat GetTextureFormat() => default; // 0x0000000182527560-0x0000000182527590
-		public Texture2D GetTexture() => default; // 0x0000000182508690-0x0000000182508940
-		public float Evaluate(float time) => default; // 0x0000000182A3BE50-0x0000000182A3BF40
-		public int AddKey(float time, float value) => default; // 0x0000000189CC8FB0-0x0000000189CC8FE4
-		public int MoveKey(int index, [IsReadOnly] in Keyframe key) => default; // 0x0000000189CC8FE4-0x0000000189CC9034
-		public void RemoveKey(int index) {} // 0x0000000189CC9034-0x0000000189CC9060
-		public void SmoothTangents(int index, float weight) {} // 0x0000000189CC9060-0x0000000189CC908C
+		public bool IsTextureCurveDirty() => default; // 0x0000000184170520-0x0000000184170550
+		~TextureCurve() {} // 0x000000018556D0C0-0x000000018556D0E0
+		public void Dispose() {} // 0x0000000185492010-0x0000000185492020
+		public void Release() {} // 0x0000000184A75740-0x0000000184A757B0
+		public void SetDirty() {} // 0x0000000185FE5670-0x0000000185FE5680
+		private static GraphicsFormat GetTextureFormat() => default; // 0x0000000184015810-0x0000000184015840
+		public Texture2D GetTexture() => default; // 0x0000000184170550-0x0000000184170800
+		public float Evaluate(float time) => default; // 0x000000018520D080-0x000000018520D170
+		public int AddKey(float time, float value) => default; // 0x000000018BDE27CC-0x000000018BDE2800
+		public int MoveKey(int index, in Keyframe key) => default; // 0x000000018BDE2800-0x000000018BDE2850
+		public void RemoveKey(int index) {} // 0x000000018BDE2850-0x000000018BDE287C
+		public void SmoothTangents(int index, float weight) {} // 0x000000018BDE287C-0x000000018BDE28A8
 	}
 
 	[Serializable]
-	public class TextureCurveParameter : VolumeParameter<TextureCurve> // TypeDefIndex: 53591
+	public class TextureCurveParameter : VolumeParameter<TextureCurve> // TypeDefIndex: 54584
 	{
 		// Constructors
 		public TextureCurveParameter() {} // Dummy constructor
-		public TextureCurveParameter(TextureCurve value, bool overrideState = false /* Metadata: 0x01FD4801 */) {} // 0x0000000182700E40-0x0000000182700EA0
+		public TextureCurveParameter(TextureCurve value, bool overrideState = false /* Metadata: 0x0207A028 */) {} // 0x0000000184B384A0-0x0000000184B38500
 	
 		// Methods
-		public override void Release() {} // 0x0000000182E7EB40-0x0000000182E7EB60
+		public override void Release() {} // 0x0000000184A75720-0x0000000184A75740
 	}
 
-	public static class TileLayoutUtils // TypeDefIndex: 53592
+	public static class TileLayoutUtils // TypeDefIndex: 54585
 	{
 		// Methods
 		public static bool TryLayoutByTiles(RectInt src, uint tileSize, out RectInt main, out RectInt topRow, out RectInt rightCol, out RectInt topRight) {
@@ -5374,152 +5772,168 @@ namespace UnityEngine.Rendering
 			rightCol = default;
 			topRight = default;
 			return default;
-		} // 0x0000000189CC92D8-0x0000000189CC93D4
+		} // 0x000000018BDE2AF4-0x000000018BDE2BF0
 		public static bool TryLayoutByRow(RectInt src, uint tileSize, out RectInt main, out RectInt other) {
 			main = default;
 			other = default;
 			return default;
-		} // 0x0000000189CC9264-0x0000000189CC92D8
+		} // 0x000000018BDE2A80-0x000000018BDE2AF4
 		public static bool TryLayoutByCol(RectInt src, uint tileSize, out RectInt main, out RectInt other) {
 			main = default;
 			other = default;
 			return default;
-		} // 0x0000000189CC91F4-0x0000000189CC9264
+		} // 0x000000018BDE2A10-0x000000018BDE2A80
 	}
 
-	public static class XRUtils // TypeDefIndex: 53593
+	public static class XRUtils // TypeDefIndex: 54586
 	{
 		// Methods
-		public static void DrawOcclusionMesh(CommandBuffer cmd, Camera camera, bool stereoEnabled = true /* Metadata: 0x01FD4802 */) {} // 0x0000000189CCA584-0x0000000189CCA61C
+		public static void DrawOcclusionMesh(CommandBuffer cmd, Camera camera, bool stereoEnabled = true /* Metadata: 0x0207A029 */) {} // 0x000000018BDE3DA0-0x000000018BDE3E38
 	}
 
-	public interface IVolume // TypeDefIndex: 53594
+	public interface IVolume // TypeDefIndex: 54587
 	{
 		// Properties
 		bool isGlobal { get; set; }
 		List<Collider> colliders { get; }
+	
+		// Methods
+		void Play();
+		void Stop();
 	}
 
-	[AddComponentMenu("Miscellaneous/Volume")]
-	[ExecuteAlways]
-	public class Volume : MonoBehaviour, IVolume // TypeDefIndex: 53595
+	public class Volume : MonoBehaviour, IVolume // TypeDefIndex: 54588
 	{
 		// Fields
-		[FormerlySerializedAs("isGlobal")]
-		[SerializeField]
 		private bool m_IsGlobal; // 0x18
-		[HideInInspector]
 		public bool isLunaPlatform; // 0x19
 		public Action<VolumeProfile> LunaCreateVolumeProfile; // 0x20
-		[Tooltip("When multiple Volumes affect the same settings, Unity uses this value to determine which Volume to use. A Volume with the highest Priority value takes precedence.")]
 		public float priority; // 0x28
-		[Tooltip("Sets the outer distance to start blending from. A value of 0 means no blending and Unity applies the Volume overrides immediately upon entry.")]
 		public float blendDistance; // 0x2C
-		[Range(0f, 1f)]
-		[Tooltip("Sets the total weight of this Volume in the Scene. 0 means no effect and 1 means full effect.")]
 		public float weight; // 0x30
 		public VolumeProfile sharedProfile; // 0x38
 		internal List<Collider> m_Colliders; // 0x40
 		private int m_PreviousLayer; // 0x48
 		private float m_PreviousPriority; // 0x4C
 		private VolumeProfile m_InternalProfile; // 0x50
+		[NonSerialized]
+		public bool vfxEnableState; // 0x58
 	
 		// Properties
-		[Tooltip("When enabled, the Volume is applied to the entire Scene.")]
-		public bool isGlobal { get => default; set {} } // 0x0000000181002A50-0x0000000181002A60 0x0000000181002B40-0x0000000181002B50
-		public List<Collider> colliders { get => default; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
-		internal VolumeProfile profileRef { get => default; } // 0x0000000182520010-0x0000000182520120 
+		public bool isGlobal { get => default; set {} } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
+		public List<Collider> colliders { get => default; } // 0x00000001813FF010-0x00000001813FF020 
+		internal VolumeProfile profileRef { get => default; } // 0x0000000183FD5690-0x0000000183FD57A0 
 	
 		// Constructors
-		public Volume() {} // 0x00000001832B4B40-0x00000001832B4BD0
+		public Volume() {} // 0x00000001852BD9D0-0x00000001852BDA60
 	
 		// Methods
-		public VolumeProfile GetInstantiatedProfile() => default; // 0x0000000189CCA248-0x0000000189CCA49C
-		public void SetInstantiatedProfile(VolumeProfile profile) {} // 0x0000000182C926C0-0x0000000182C926D0
-		public bool HasInstantiatedProfile() => default; // 0x0000000189CCA49C-0x0000000189CCA4EC
-		private void OnEnable() {} // 0x00000001827AE1C0-0x00000001827AE270
-		private void OnDisable() {} // 0x00000001827AD700-0x00000001827AD790
-		private void Update() {} // 0x0000000182393C90-0x0000000182393DD0
-		internal void UpdateLayer() {} // 0x0000000182393DD0-0x0000000182393E70
+		public VolumeProfile GetInstantiatedProfile() => default; // 0x000000018BDE3A64-0x000000018BDE3CB8
+		public void SetInstantiatedProfile(VolumeProfile profile) {} // 0x0000000184A4E570-0x0000000184A4E580
+		public bool HasInstantiatedProfile() => default; // 0x000000018BDE3CB8-0x000000018BDE3D08
+		private void OnEnable() {} // 0x0000000184482ED0-0x0000000184482F80
+		private void OnDisable() {} // 0x0000000184482410-0x00000001844824A0
+		private void Update() {} // 0x000000018421A890-0x000000018421A9D0
+		internal void UpdateLayer() {} // 0x000000018421A9D0-0x000000018421AA70
+		public void Play() {} // 0x0000000183F76C40-0x0000000183F76C50
+		public void Stop() {} // 0x0000000183F76C50-0x0000000183F76C70
 	}
 
-	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
-	public class VolumeComponentMenu : Attribute // TypeDefIndex: 53596
+	public class VolumeComponentMenu : Attribute // TypeDefIndex: 54589
 	{
 		// Fields
 		public readonly string menu; // 0x10
 	
 		// Constructors
 		public VolumeComponentMenu() {} // Dummy constructor
-		public VolumeComponentMenu(string menu) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public VolumeComponentMenu(string menu) {} // 0x0000000184096E30-0x0000000184096EF0
 	}
 
-	public class VolumeComponentMenuForRenderPipeline : VolumeComponentMenu // TypeDefIndex: 53597
+	public class VolumeComponentMenuForRenderPipeline : VolumeComponentMenu // TypeDefIndex: 54590
 	{
+		// Fields
+		private readonly System.Type[] _pipelineTypes_k__BackingField; // 0x18
+	
 		// Properties
-		public System.Type[] pipelineTypes { get; } // 0x0000000181041090-0x00000001810410A0 
+		public System.Type[] pipelineTypes { get; } // 0x0000000181377E40-0x0000000181377E50 
 	
 		// Constructors
 		public VolumeComponentMenuForRenderPipeline() {} // Dummy constructor
-		public VolumeComponentMenuForRenderPipeline(string menu, params System.Type[] pipelineTypes) {} // 0x0000000189CC977C-0x0000000189CC9948
+		public VolumeComponentMenuForRenderPipeline(string menu, System.Type[] pipelineTypes) {} // 0x000000018BDE2F98-0x000000018BDE3164
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	[Obsolete("VolumeComponentDeprecated has been deprecated (UnityUpgradable) -> [UnityEngine] UnityEngine.HideInInspector", false)]
-	public sealed class VolumeComponentDeprecated : Attribute // TypeDefIndex: 53598
+	public sealed class VolumeComponentDeprecated : Attribute // TypeDefIndex: 54591
 	{
 		// Constructors
-		public VolumeComponentDeprecated() {} // 0x000000018350B670-0x000000018350B680
+		public VolumeComponentDeprecated() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	public sealed class MigratingVolumeComponent : Attribute // TypeDefIndex: 53599
+	public sealed class MigratingVolumeComponent : Attribute // TypeDefIndex: 54592
 	{
 		// Constructors
-		public MigratingVolumeComponent() {} // 0x000000018350B670-0x000000018350B680
+		public MigratingVolumeComponent() {} // 0x0000000185492010-0x0000000185492020
 	}
 
 	[Serializable]
-	public class VolumeComponent : ScriptableObject // TypeDefIndex: 53602
+	public class VolumeComponent : ScriptableObject // TypeDefIndex: 54595
 	{
 		// Fields
 		public bool active; // 0x18
+		private string _displayName_k__BackingField; // 0x20
+		private VolumeParameter[] _parameters_k__BackingField; // 0x28
 	
 		// Properties
-		public string displayName { get; protected set; } // 0x0000000183D4EB40-0x0000000183D4EB50 0x0000000184271930-0x0000000184271940
-		public VolumeParameter[] parameters { get; private set; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 0x0000000182C92F10-0x0000000182C92F20
+		public string displayName { get; protected set; } // 0x00000001843A5B80-0x00000001843A6050 0x0000000185099F00-0x000000018509A020
+		public VolumeParameter[] parameters { get; private set; } // 0x0000000185251A40-0x0000000185251A70 0x0000000183FD5A90-0x0000000183FD6560
 	
 		// Nested types
-		public sealed class Indent : PropertyAttribute // TypeDefIndex: 53600
+		public sealed class Indent : PropertyAttribute // TypeDefIndex: 54593
 		{
 			// Fields
 			public readonly int relativeAmount; // 0x10
 	
 			// Constructors
 			public Indent() {} // Dummy constructor
-			public Indent(int relativeAmount = 1 /* Metadata: 0x01FD4803 */) {} // 0x00000001810410F0-0x0000000181041100
+			public Indent(int relativeAmount = 1 /* Metadata: 0x0207A02A */) {} // 0x00000001813B31A0-0x00000001813B31B0
+		}
+	
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54594
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<System.Reflection.FieldInfo, int> __9__10_0; // 0x08
+	
+			// Constructors
+			static __c() {} // 0x000000018646EE40-0x000000018646EE50
+			public __c() {} // 0x00000001813B8590-0x00000001813B85A0
+	
+			// Methods
+			internal int _FindParameters_b__10_0(System.Reflection.FieldInfo t) => default; // 0x0000000184A4EDC0-0x0000000184A4EDD0
 		}
 	
 		// Constructors
-		public VolumeComponent() {} // 0x000000018286F2A0-0x000000018286F2F0
+		public VolumeComponent() {} // 0x000000018523FDC0-0x000000018523FDE0
 	
 		// Methods
-		internal static void FindParameters(object o, List<VolumeParameter> parameters, Func<System.Reflection.FieldInfo, bool> filter = null) {} // 0x00000001824D89D0-0x00000001824D8EA0
-		protected virtual void OnEnable() {} // 0x00000001824D88B0-0x00000001824D89D0
-		protected virtual void OnDisable() {} // 0x00000001832F4FF0-0x00000001832F5020
-		public virtual void Override(VolumeComponent state, float interpFactor) {} // 0x0000000182520410-0x0000000182520EE0
-		public void SetAllOverridesTo(bool state) {} // 0x0000000183709CC0-0x0000000183709CD0
-		internal void SetOverridesTo(IEnumerable<VolumeParameter> enumerable, bool state) {} // 0x0000000183709CD0-0x0000000183709F00
-		public override int GetHashCode() => default; // 0x0000000189CC9948-0x0000000189CC99B4
-		protected virtual void OnDestroy() {} // 0x00000001832B9480-0x00000001832B9490
-		public void Release() {} // 0x00000001832B9490-0x00000001832B9500
+		internal static void FindParameters(object o, List<VolumeParameter> parameters, Func<System.Reflection.FieldInfo, bool> filter = null) {} // 0x000000018580A880-0x000000018580A890
+		protected virtual void OnEnable() {} // 0x000000018580A890-0x000000018580AAC0
+		protected virtual void OnDisable() {} // 0x000000018BDE3164-0x000000018BDE31D0
+		public virtual void Override(VolumeComponent state, float interpFactor) {} // 0x0000000185225A30-0x0000000185225A40
+		public void SetAllOverridesTo(bool state) {} // 0x0000000185225A40-0x0000000185225AB0
+		internal void SetOverridesTo(IEnumerable<VolumeParameter> enumerable, bool state) {} // 0x0000000184BBD510-0x0000000184BBD560
+		public override int GetHashCode() => default; // 0x0000000181378230-0x0000000181378240
+		protected virtual void OnDestroy() {} // 0x0000000185F769F0-0x0000000185F76A50
+		public void Release() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public sealed class VolumeManager // TypeDefIndex: 53604
+	public sealed class VolumeManager // TypeDefIndex: 54597
 	{
 		// Fields
 		private static readonly Lazy<VolumeManager> s_Instance; // 0x00
-		private const int k_MaxLayerCount = 32; // Metadata: 0x01FD4804
+		private VolumeStack _stack_k__BackingField; // 0x10
+		private System.Type[] _baseComponentTypeArray_k__BackingField; // 0x18
+		private const int k_MaxLayerCount = 32; // Metadata: 0x0207A02B
 		private readonly Dictionary<int, List<UnityEngine.Rendering.Volume>> m_SortedVolumes; // 0x20
 		private readonly List<UnityEngine.Rendering.Volume> m_Volumes; // 0x28
 		private readonly Dictionary<int, bool> m_SortNeeded; // 0x30
@@ -5528,78 +5942,89 @@ namespace UnityEngine.Rendering
 		private VolumeStack m_DefaultStack; // 0x48
 	
 		// Properties
-		public static VolumeManager instance { get => default; } // 0x00000001825AFBA0-0x00000001825AFC20 
-		public VolumeStack stack { get; set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
-		[Obsolete("Please use baseComponentTypeArray instead.")]
-		public IEnumerable<System.Type> baseComponentTypes { get => default; private set {} } // 0x0000000181041090-0x00000001810410A0 0x0000000189CC9DC8-0x0000000189CC9E1C
-		public System.Type[] baseComponentTypeArray { get; private set; } // 0x0000000181041090-0x00000001810410A0 0x00000001822C3A90-0x00000001822C3AA0
+		public static VolumeManager instance { get => default; } // 0x0000000181377E40-0x0000000181377E50 
+		public VolumeStack stack { get; set; } // 0x0000000184088E70-0x0000000184088E80 0x0000000184480940-0x0000000184480B20
+		public IEnumerable<System.Type> baseComponentTypes { get => default; private set {} } // 0x0000000183FD8110-0x0000000183FD8180 0x000000018BDE356C-0x000000018BDE3580
+		public System.Type[] baseComponentTypeArray { get; private set; } // 0x0000000185F66690-0x0000000185F666B0 0x0000000183FD78F0-0x0000000183FD7B60
+	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54596
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<System.Type, bool> __9__25_0; // 0x08
+			public static Predicate<UnityEngine.Rendering.Volume> __9__38_0; // 0x10
+	
+			// Constructors
+			static __c() {} // 0x00000001843F8320-0x00000001843F83A0
+			public __c() {} // 0x000000018346D130-0x000000018346D140
+	
+			// Methods
+			internal bool _ReloadBaseTypes_b__25_0(System.Type t) => default; // 0x0000000184096E30-0x0000000184096EF0
+			internal bool _GetVolumes_b__38_0(UnityEngine.Rendering.Volume v) => default; // 0x0000000181377E40-0x0000000181377E50
+			internal VolumeManager _.cctor_b__42_0() => default; // 0x000000018BDE35E4-0x000000018BDE3638
+		}
 	
 		// Constructors
-		private VolumeManager() {} // 0x00000001827ABBE0-0x00000001827ABDC0
-		static VolumeManager() {} // 0x0000000183B5DB60-0x0000000183B5DC70
+		private VolumeManager() {} // 0x0000000184483100-0x00000001844832F0
+		static VolumeManager() {} // 0x00000001844808F0-0x0000000184480940
 	
 		// Methods
-		public VolumeStack CreateStack() => default; // 0x0000000182522A90-0x0000000182522B00
-		public void ResetMainStack() {} // 0x0000000189CC9D50-0x0000000189CC9D64
-		public void DestroyStack(VolumeStack stack) {} // 0x0000000183D07B20-0x0000000183D07B40
-		private void ReloadBaseTypes() {} // 0x0000000182522270-0x00000001825224E0
-		public void Register(UnityEngine.Rendering.Volume volume, int layer) {} // 0x00000001827AE3F0-0x00000001827AE5E0
-		public void Unregister(UnityEngine.Rendering.Volume volume, int layer) {} // 0x00000001827AE270-0x00000001827AE3F0
+		public VolumeStack CreateStack() => default; // 0x0000000184482F80-0x0000000184483100
+		public void ResetMainStack() {}
+		public void DestroyStack(VolumeStack stack) {} // 0x00000001844832F0-0x00000001844834A0
+		private void ReloadBaseTypes() {} // 0x000000018BDE3580-0x000000018BDE35C0
+		public void Register(UnityEngine.Rendering.Volume volume, int layer) {} // 0x0000000183FD57A0-0x0000000183FD5950
+		public void Unregister(UnityEngine.Rendering.Volume volume, int layer) {} // 0x0000000183FD6A90-0x0000000183FD6E10
 		public bool IsComponentActiveInMask<T>(LayerMask layerMask)
-			where T : VolumeComponent => default;
-		internal void SetLayerDirty(int layer) {} // 0x00000001827AE5E0-0x00000001827AE790
-		internal void UpdateVolumeLayer(UnityEngine.Rendering.Volume volume, int prevLayer, int newLayer) {} // 0x0000000189CC9D64-0x0000000189CC9DA4
-		private void OverrideData(VolumeStack stack, List<VolumeComponent> components, float interpFactor) {} // 0x0000000182520120-0x00000001825202D0
-		private void ReplaceData(VolumeStack stack) {} // 0x0000000182521410-0x0000000182521790
-		[Conditional("UNITY_EDITOR")]
-		public void CheckBaseTypes() {} // 0x0000000189CC99B4-0x0000000189CC9A4C
-		[Conditional("UNITY_EDITOR")]
-		public void CheckStack(VolumeStack stack) {} // 0x0000000189CC9A4C-0x0000000189CC9C14
-		private bool CheckUpdateRequired(VolumeStack stack) => default; // 0x000000018302D600-0x000000018302D660
-		public void Update(Transform trigger, LayerMask layerMask) {} // 0x0000000189CC9DA4-0x0000000189CC9DC8
-		public void Update(VolumeStack stack, Transform trigger, LayerMask layerMask) {} // 0x000000018251EE60-0x0000000182520010
-		public UnityEngine.Rendering.Volume[] GetVolumes(LayerMask layerMask) => default; // 0x0000000189CC9C14-0x0000000189CC9D50
-		private List<UnityEngine.Rendering.Volume> GrabVolumes(LayerMask mask) => default; // 0x00000001827AD790-0x00000001827AE1C0
-		private static void SortByPriority(List<UnityEngine.Rendering.Volume> volumes) {} // 0x00000001827AE790-0x00000001827AE8B0
-		private static bool IsVolumeRenderedByCamera(UnityEngine.Rendering.Volume volume, Camera camera) => default; // 0x000000018232EB60-0x000000018232EB70
+			where T : VolumeComponent => default; // 0x000000018BDE31D0-0x000000018BDE3268
+		internal void SetLayerDirty(int layer) {} // 0x000000018BDE3268-0x000000018BDE3430
+		internal void UpdateVolumeLayer(UnityEngine.Rendering.Volume volume, int prevLayer, int newLayer) {} // 0x0000000184EA3550-0x0000000184EA35B0
+		private void OverrideData(VolumeStack stack, List<VolumeComponent> components, float interpFactor) {} // 0x000000018BDE35C0-0x000000018BDE35E4
+		private void ReplaceData(VolumeStack stack) {} // 0x0000000183FD3800-0x0000000183FD5690
+		public void CheckBaseTypes() {} // 0x000000018BDE3430-0x000000018BDE356C
+		public void CheckStack(VolumeStack stack) {} // 0x00000001844824A0-0x0000000184482ED0
+		private bool CheckUpdateRequired(VolumeStack stack) => default; // 0x00000001844834A0-0x00000001844835C0
+		public void Update(Transform trigger, LayerMask layerMask) {} // 0x00000001840A27C0-0x00000001840A27D0
+		public void Update(VolumeStack stack, Transform trigger, LayerMask layerMask) {} // 0x0000000185D9A880-0x0000000185D9A990
+		public UnityEngine.Rendering.Volume[] GetVolumes(LayerMask layerMask) => default; // 0x0000000185F78190-0x0000000185F781F0
+		private List<UnityEngine.Rendering.Volume> GrabVolumes(LayerMask mask) => default; // 0x0000000185492010-0x0000000185492020
+		private static void SortByPriority(List<UnityEngine.Rendering.Volume> volumes) {} // 0x00000001858C7BA0-0x00000001858C7BD0
+		private static bool IsVolumeRenderedByCamera(UnityEngine.Rendering.Volume volume, Camera camera) => default; // 0x000000018BDE2BF0-0x000000018BDE2C3C
 	}
 
-	[Obsolete("VolumeIsolationScope is deprecated, it does not have any effect anymore.")]
-	public struct VolumeIsolationScope : IDisposable // TypeDefIndex: 53605
+	public struct VolumeIsolationScope : IDisposable // TypeDefIndex: 54598
 	{
 		// Constructors
-		public VolumeIsolationScope(bool unused) {} // 0x000000018350B670-0x000000018350B680
+		public VolumeIsolationScope(bool unused) {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		void IDisposable.Dispose() {} // 0x000000018350B670-0x000000018350B680
+		void IDisposable.Dispose() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public abstract class VolumeParameter // TypeDefIndex: 53606
+	public abstract class VolumeParameter // TypeDefIndex: 54599
 	{
 		// Fields
-		public const string k_DebuggerDisplay = "{m_Value} ({overrideState})"; // Metadata: 0x01FD4805
-		[FormerlySerializedAs("m_OverrideState")]
-		[SerializeField]
+		public const string k_DebuggerDisplay = "{m_Value} ({overrideState})"; // Metadata: 0x0207A02C
 		public bool overrideState; // 0x10
 	
 		// Constructors
-		protected VolumeParameter() {} // 0x000000018350B670-0x000000018350B680
+		protected VolumeParameter() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
 		internal abstract void Interp(VolumeParameter from, VolumeParameter to, float t);
 		public T GetValue<T>() => default;
 		public abstract void SetValue(VolumeParameter parameter);
-		protected internal virtual void OnEnable() {} // 0x000000018350B670-0x000000018350B680
-		protected internal virtual void OnDisable() {} // 0x000000018350B670-0x000000018350B680
-		public virtual void Release() {} // 0x000000018350B670-0x000000018350B680
+		protected internal virtual void OnEnable() {} // 0x0000000185492010-0x0000000185492020
+		protected internal virtual void OnDisable() {} // 0x0000000185492010-0x0000000185492020
+		public virtual void Release() {} // 0x0000000185492010-0x0000000185492020
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class VolumeParameter<T> : VolumeParameter, IEquatable<VolumeParameter<T>> // TypeDefIndex: 53607
+	public class VolumeParameter<T> : VolumeParameter, IEquatable<VolumeParameter<T>> // TypeDefIndex: 54600
 	{
 		// Fields
-		[SerializeField]
 		protected T m_Value;
 	
 		// Properties
@@ -5624,111 +6049,102 @@ namespace UnityEngine.Rendering
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class BoolParameter : VolumeParameter<bool> // TypeDefIndex: 53608
+	public class BoolParameter : VolumeParameter<bool> // TypeDefIndex: 54601
 	{
 		// Constructors
 		public BoolParameter() {} // Dummy constructor
-		public BoolParameter(bool value, bool overrideState = false /* Metadata: 0x01FD4821 */) {} // 0x0000000182C62DD0-0x0000000182C62E40
+		public BoolParameter(bool value, bool overrideState = false /* Metadata: 0x0207A048 */) {} // 0x000000018475B8F0-0x000000018475B960
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class LayerMaskParameter : VolumeParameter<LayerMask> // TypeDefIndex: 53609
+	public class LayerMaskParameter : VolumeParameter<LayerMask> // TypeDefIndex: 54602
 	{
 		// Constructors
 		public LayerMaskParameter() {} // Dummy constructor
-		public LayerMaskParameter(LayerMask value, bool overrideState = false /* Metadata: 0x01FD4822 */) {} // 0x0000000189CC6A9C-0x0000000189CC6AF0
+		public LayerMaskParameter(LayerMask value, bool overrideState = false /* Metadata: 0x0207A049 */) {} // 0x000000018BDE02B8-0x000000018BDE030C
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class IntParameter : VolumeParameter<int> // TypeDefIndex: 53610
+	public class IntParameter : VolumeParameter<int> // TypeDefIndex: 54603
 	{
 		// Constructors
 		public IntParameter() {} // Dummy constructor
-		public IntParameter(int value, bool overrideState = false /* Metadata: 0x01FD4823 */) {} // 0x0000000183807430-0x00000001838074A0
+		public IntParameter(int value, bool overrideState = false /* Metadata: 0x0207A04A */) {} // 0x000000018596E050-0x000000018596E0C0
 	
 		// Methods
-		public sealed override void Interp(int from, int to, float t) {} // 0x0000000183D849B0-0x0000000183D849E0
+		public sealed override void Interp(int from, int to, float t) {} // 0x0000000185FE5640-0x0000000185FE5670
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpIntParameter : VolumeParameter<int> // TypeDefIndex: 53611
+	public class NoInterpIntParameter : VolumeParameter<int> // TypeDefIndex: 54604
 	{
 		// Constructors
 		public NoInterpIntParameter() {} // Dummy constructor
-		public NoInterpIntParameter(int value, bool overrideState = false /* Metadata: 0x01FD4824 */) {} // 0x0000000189CC8538-0x0000000189CC858C
+		public NoInterpIntParameter(int value, bool overrideState = false /* Metadata: 0x0207A04B */) {} // 0x000000018BDE1D54-0x000000018BDE1DA8
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class MinIntParameter : IntParameter // TypeDefIndex: 53612
+	public class MinIntParameter : IntParameter // TypeDefIndex: 54605
 	{
 		// Fields
 		[NonSerialized]
 		public int min; // 0x20
 	
 		// Properties
-		public override int value { get => default; set {} } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000189CC8108-0x0000000189CC8114
+		public override int value { get => default; set {} } // 0x00000001813AE560-0x00000001813AE570 0x000000018BDE1924-0x000000018BDE1930
 	
 		// Constructors
 		public MinIntParameter() {} // Dummy constructor
-		public MinIntParameter(int value, int min, bool overrideState = false /* Metadata: 0x01FD4825 */) {} // 0x0000000189CC7188-0x0000000189CC71B8
+		public MinIntParameter(int value, int min, bool overrideState = false /* Metadata: 0x0207A04C */) {} // 0x000000018BDE09A4-0x000000018BDE09D4
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpMinIntParameter : VolumeParameter<int> // TypeDefIndex: 53613
+	public class NoInterpMinIntParameter : VolumeParameter<int> // TypeDefIndex: 54606
 	{
 		// Fields
 		[NonSerialized]
 		public int min; // 0x20
 	
 		// Properties
-		public override int value { get => default; set {} } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000189CC8108-0x0000000189CC8114
+		public override int value { get => default; set {} } // 0x00000001813AE560-0x00000001813AE570 0x000000018BDE1924-0x000000018BDE1930
 	
 		// Constructors
 		public NoInterpMinIntParameter() {} // Dummy constructor
-		public NoInterpMinIntParameter(int value, int min, bool overrideState = false /* Metadata: 0x01FD4826 */) {} // 0x0000000189CC86A8-0x0000000189CC8704
+		public NoInterpMinIntParameter(int value, int min, bool overrideState = false /* Metadata: 0x0207A04D */) {} // 0x000000018BDE1EC4-0x000000018BDE1F20
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class MaxIntParameter : IntParameter // TypeDefIndex: 53614
+	public class MaxIntParameter : IntParameter // TypeDefIndex: 54607
 	{
 		// Fields
 		[NonSerialized]
 		public int max; // 0x20
 	
 		// Properties
-		public override int value { get => default; set {} } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000189CC71B8-0x0000000189CC71C4
+		public override int value { get => default; set {} } // 0x00000001813AE560-0x00000001813AE570 0x000000018BDE09D4-0x000000018BDE09E0
 	
 		// Constructors
 		public MaxIntParameter() {} // Dummy constructor
-		public MaxIntParameter(int value, int max, bool overrideState = false /* Metadata: 0x01FD4827 */) {} // 0x0000000189CC7188-0x0000000189CC71B8
+		public MaxIntParameter(int value, int max, bool overrideState = false /* Metadata: 0x0207A04E */) {} // 0x000000018BDE09A4-0x000000018BDE09D4
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpMaxIntParameter : VolumeParameter<int> // TypeDefIndex: 53615
+	public class NoInterpMaxIntParameter : VolumeParameter<int> // TypeDefIndex: 54608
 	{
 		// Fields
 		[NonSerialized]
 		public int max; // 0x20
 	
 		// Properties
-		public override int value { get => default; set {} } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000189CC71B8-0x0000000189CC71C4
+		public override int value { get => default; set {} } // 0x00000001813AE560-0x00000001813AE570 0x000000018BDE09D4-0x000000018BDE09E0
 	
 		// Constructors
 		public NoInterpMaxIntParameter() {} // Dummy constructor
-		public NoInterpMaxIntParameter(int value, int max, bool overrideState = false /* Metadata: 0x01FD4828 */) {} // 0x0000000189CC85EC-0x0000000189CC8648
+		public NoInterpMaxIntParameter(int value, int max, bool overrideState = false /* Metadata: 0x0207A04F */) {} // 0x000000018BDE1E08-0x000000018BDE1E64
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class ClampedIntParameter : IntParameter // TypeDefIndex: 53616
+	public class ClampedIntParameter : IntParameter // TypeDefIndex: 54609
 	{
 		// Fields
 		[NonSerialized]
@@ -5737,16 +6153,15 @@ namespace UnityEngine.Rendering
 		public int max; // 0x24
 	
 		// Properties
-		public override int value { get => default; set {} } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000189CBF5B4-0x0000000189CBF5D4
+		public override int value { get => default; set {} } // 0x00000001813AE560-0x00000001813AE570 0x000000018BDD8DD0-0x000000018BDD8DF0
 	
 		// Constructors
 		public ClampedIntParameter() {} // Dummy constructor
-		public ClampedIntParameter(int value, int min, int max, bool overrideState = false /* Metadata: 0x01FD4829 */) {} // 0x0000000184272F24-0x0000000184272F60
+		public ClampedIntParameter(int value, int min, int max, bool overrideState = false /* Metadata: 0x0207A050 */) {} // 0x000000018646E234-0x000000018646E270
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpClampedIntParameter : VolumeParameter<int> // TypeDefIndex: 53617
+	public class NoInterpClampedIntParameter : VolumeParameter<int> // TypeDefIndex: 54610
 	{
 		// Fields
 		[NonSerialized]
@@ -5755,101 +6170,94 @@ namespace UnityEngine.Rendering
 		public int max; // 0x24
 	
 		// Properties
-		public override int value { get => default; set {} } // 0x00000001820D1AC0-0x00000001820D1AD0 0x0000000189CBF5B4-0x0000000189CBF5D4
+		public override int value { get => default; set {} } // 0x00000001813AE560-0x00000001813AE570 0x000000018BDD8DD0-0x000000018BDD8DF0
 	
 		// Constructors
 		public NoInterpClampedIntParameter() {} // Dummy constructor
-		public NoInterpClampedIntParameter(int value, int min, int max, bool overrideState = false /* Metadata: 0x01FD482A */) {} // 0x0000000189CC8234-0x0000000189CC8294
+		public NoInterpClampedIntParameter(int value, int min, int max, bool overrideState = false /* Metadata: 0x0207A051 */) {} // 0x000000018BDE1A50-0x000000018BDE1AB0
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class FloatParameter : VolumeParameter<float> // TypeDefIndex: 53618
+	public class FloatParameter : VolumeParameter<float> // TypeDefIndex: 54611
 	{
 		// Constructors
 		public FloatParameter() {} // Dummy constructor
-		public FloatParameter(float value, bool overrideState = false /* Metadata: 0x01FD482B */) {} // 0x0000000182C63E10-0x0000000182C63E80
+		public FloatParameter(float value, bool overrideState = false /* Metadata: 0x0207A052 */) {} // 0x000000018475C930-0x000000018475C9A0
 	
 		// Methods
-		public sealed override void Interp(float from, float to, float t) {} // 0x0000000183D848F0-0x0000000183D84910
+		public sealed override void Interp(float from, float to, float t) {} // 0x0000000185FE5580-0x0000000185FE55A0
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpFloatParameter : VolumeParameter<float> // TypeDefIndex: 53619
+	public class NoInterpFloatParameter : VolumeParameter<float> // TypeDefIndex: 54612
 	{
 		// Constructors
 		public NoInterpFloatParameter() {} // Dummy constructor
-		public NoInterpFloatParameter(float value, bool overrideState = false /* Metadata: 0x01FD482C */) {} // 0x0000000189CC846C-0x0000000189CC84C8
+		public NoInterpFloatParameter(float value, bool overrideState = false /* Metadata: 0x0207A053 */) {} // 0x000000018BDE1C88-0x000000018BDE1CE4
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class MinFloatParameter : FloatParameter // TypeDefIndex: 53620
+	public class MinFloatParameter : FloatParameter // TypeDefIndex: 54613
 	{
 		// Fields
 		[NonSerialized]
 		public float min; // 0x20
 	
 		// Properties
-		public override float value { get => default; set {} } // 0x0000000183D4EBF0-0x0000000183D4EC00 0x0000000189CC80F8-0x0000000189CC8108
+		public override float value { get => default; set {} } // 0x0000000181C9AC50-0x0000000181C9AC60 0x000000018BDE1914-0x000000018BDE1924
 	
 		// Constructors
 		public MinFloatParameter() {} // Dummy constructor
-		public MinFloatParameter(float value, float min, bool overrideState = false /* Metadata: 0x01FD482D */) {} // 0x0000000184272F60-0x0000000184272F90
+		public MinFloatParameter(float value, float min, bool overrideState = false /* Metadata: 0x0207A054 */) {} // 0x000000018646FE70-0x000000018646FEA0
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpMinFloatParameter : VolumeParameter<float> // TypeDefIndex: 53621
+	public class NoInterpMinFloatParameter : VolumeParameter<float> // TypeDefIndex: 54614
 	{
 		// Fields
 		[NonSerialized]
 		public float min; // 0x20
 	
 		// Properties
-		public override float value { get => default; set {} } // 0x0000000183D4EBF0-0x0000000183D4EC00 0x0000000189CC80F8-0x0000000189CC8108
+		public override float value { get => default; set {} } // 0x0000000181C9AC50-0x0000000181C9AC60 0x000000018BDE1914-0x000000018BDE1924
 	
 		// Constructors
 		public NoInterpMinFloatParameter() {} // Dummy constructor
-		public NoInterpMinFloatParameter(float value, float min, bool overrideState = false /* Metadata: 0x01FD482E */) {} // 0x0000000189CC8648-0x0000000189CC86A8
+		public NoInterpMinFloatParameter(float value, float min, bool overrideState = false /* Metadata: 0x0207A055 */) {} // 0x000000018BDE1E64-0x000000018BDE1EC4
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class MaxFloatParameter : FloatParameter // TypeDefIndex: 53622
+	public class MaxFloatParameter : FloatParameter // TypeDefIndex: 54615
 	{
 		// Fields
 		[NonSerialized]
 		public float max; // 0x20
 	
 		// Properties
-		public override float value { get => default; set {} } // 0x0000000183D4EBF0-0x0000000183D4EC00 0x0000000189CC7178-0x0000000189CC7188
+		public override float value { get => default; set {} } // 0x0000000181C9AC50-0x0000000181C9AC60 0x000000018BDE0994-0x000000018BDE09A4
 	
 		// Constructors
 		public MaxFloatParameter() {} // Dummy constructor
-		public MaxFloatParameter(float value, float max, bool overrideState = false /* Metadata: 0x01FD482F */) {} // 0x0000000184272F60-0x0000000184272F90
+		public MaxFloatParameter(float value, float max, bool overrideState = false /* Metadata: 0x0207A056 */) {} // 0x000000018646FE70-0x000000018646FEA0
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpMaxFloatParameter : VolumeParameter<float> // TypeDefIndex: 53623
+	public class NoInterpMaxFloatParameter : VolumeParameter<float> // TypeDefIndex: 54616
 	{
 		// Fields
 		[NonSerialized]
 		public float max; // 0x20
 	
 		// Properties
-		public override float value { get => default; set {} } // 0x0000000183D4EBF0-0x0000000183D4EC00 0x0000000189CC7178-0x0000000189CC7188
+		public override float value { get => default; set {} } // 0x0000000181C9AC50-0x0000000181C9AC60 0x000000018BDE0994-0x000000018BDE09A4
 	
 		// Constructors
 		public NoInterpMaxFloatParameter() {} // Dummy constructor
-		public NoInterpMaxFloatParameter(float value, float max, bool overrideState = false /* Metadata: 0x01FD4830 */) {} // 0x0000000189CC858C-0x0000000189CC85EC
+		public NoInterpMaxFloatParameter(float value, float max, bool overrideState = false /* Metadata: 0x0207A057 */) {} // 0x000000018BDE1DA8-0x000000018BDE1E08
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class ClampedFloatParameter : FloatParameter // TypeDefIndex: 53624
+	public class ClampedFloatParameter : FloatParameter // TypeDefIndex: 54617
 	{
 		// Fields
 		[NonSerialized]
@@ -5860,17 +6268,16 @@ namespace UnityEngine.Rendering
 		public float sliderExponent; // 0x28
 	
 		// Properties
-		public override float value { get => default; set {} } // 0x0000000183D4EBF0-0x0000000183D4EC00 0x0000000183196950-0x0000000183196980
+		public override float value { get => default; set {} } // 0x0000000181C9AC50-0x0000000181C9AC60 0x000000018510F880-0x000000018510F8B0
 	
 		// Constructors
 		public ClampedFloatParameter() {} // Dummy constructor
-		public ClampedFloatParameter(float value, float min, float max, float sliderExponent, bool overrideState = false /* Metadata: 0x01FD4831 */) {} // 0x0000000189CBF568-0x0000000189CBF5B4
-		public ClampedFloatParameter(float value, float min, float max, bool overrideState = false /* Metadata: 0x01FD4832 */) {} // 0x0000000182C63D90-0x0000000182C63E10
+		public ClampedFloatParameter(float value, float min, float max, float sliderExponent, bool overrideState = false /* Metadata: 0x0207A058 */) {} // 0x000000018BDD8D84-0x000000018BDD8DD0
+		public ClampedFloatParameter(float value, float min, float max, bool overrideState = false /* Metadata: 0x0207A059 */) {} // 0x000000018475C8B0-0x000000018475C930
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpClampedFloatParameter : VolumeParameter<float> // TypeDefIndex: 53625
+	public class NoInterpClampedFloatParameter : VolumeParameter<float> // TypeDefIndex: 54618
 	{
 		// Fields
 		[NonSerialized]
@@ -5881,17 +6288,16 @@ namespace UnityEngine.Rendering
 		public float sliderExponent; // 0x28
 	
 		// Properties
-		public override float value { get => default; set {} } // 0x0000000183D4EBF0-0x0000000183D4EC00 0x0000000189CC820C-0x0000000189CC8234
+		public override float value { get => default; set {} } // 0x0000000181C9AC50-0x0000000181C9AC60 0x000000018BDE1A28-0x000000018BDE1A50
 	
 		// Constructors
 		public NoInterpClampedFloatParameter() {} // Dummy constructor
-		public NoInterpClampedFloatParameter(float value, float min, float max, float sliderExponent, bool overrideState = false /* Metadata: 0x01FD4833 */) {} // 0x0000000189CC818C-0x0000000189CC820C
-		public NoInterpClampedFloatParameter(float value, float min, float max, bool overrideState = false /* Metadata: 0x01FD4834 */) {} // 0x0000000189CC8114-0x0000000189CC818C
+		public NoInterpClampedFloatParameter(float value, float min, float max, float sliderExponent, bool overrideState = false /* Metadata: 0x0207A05A */) {} // 0x000000018BDE19A8-0x000000018BDE1A28
+		public NoInterpClampedFloatParameter(float value, float min, float max, bool overrideState = false /* Metadata: 0x0207A05B */) {} // 0x000000018BDE1930-0x000000018BDE19A8
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class UnclampedFloatParameter : FloatParameter // TypeDefIndex: 53626
+	public class UnclampedFloatParameter : FloatParameter // TypeDefIndex: 54619
 	{
 		// Fields
 		[NonSerialized]
@@ -5902,17 +6308,16 @@ namespace UnityEngine.Rendering
 		public float sliderExponent; // 0x28
 	
 		// Properties
-		public override float value { get => default; set {} } // 0x0000000183D4EBF0-0x0000000183D4EC00 0x0000000183D4EC00-0x0000000183D4EC10
+		public override float value { get => default; set {} } // 0x0000000181C9AC50-0x0000000181C9AC60 0x0000000181C9A5A0-0x0000000181C9A5B0
 	
 		// Constructors
 		public UnclampedFloatParameter() {} // Dummy constructor
-		public UnclampedFloatParameter(float value, float min, float max, float sliderExponent, bool overrideState = false /* Metadata: 0x01FD4835 */) {} // 0x0000000189CBF568-0x0000000189CBF5B4
-		public UnclampedFloatParameter(float value, float min, float max, bool overrideState = false /* Metadata: 0x01FD4836 */) {} // 0x0000000189CC9420-0x0000000189CC9468
+		public UnclampedFloatParameter(float value, float min, float max, float sliderExponent, bool overrideState = false /* Metadata: 0x0207A05C */) {} // 0x000000018BDD8D84-0x000000018BDD8DD0
+		public UnclampedFloatParameter(float value, float min, float max, bool overrideState = false /* Metadata: 0x0207A05D */) {} // 0x000000018BDE2C3C-0x000000018BDE2C84
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpUnclampedFloatParameter : VolumeParameter<float> // TypeDefIndex: 53627
+	public class NoInterpUnclampedFloatParameter : VolumeParameter<float> // TypeDefIndex: 54620
 	{
 		// Fields
 		[NonSerialized]
@@ -5923,17 +6328,16 @@ namespace UnityEngine.Rendering
 		public float sliderExponent; // 0x28
 	
 		// Properties
-		public override float value { get => default; set {} } // 0x0000000183D4EBF0-0x0000000183D4EC00 0x0000000183D4EC00-0x0000000183D4EC10
+		public override float value { get => default; set {} } // 0x0000000181C9AC50-0x0000000181C9AC60 0x0000000181C9A5A0-0x0000000181C9A5B0
 	
 		// Constructors
 		public NoInterpUnclampedFloatParameter() {} // Dummy constructor
-		public NoInterpUnclampedFloatParameter(float value, float min, float max, float sliderExponent, bool overrideState = false /* Metadata: 0x01FD4837 */) {} // 0x0000000189CC892C-0x0000000189CC89AC
-		public NoInterpUnclampedFloatParameter(float value, float min, float max, bool overrideState = false /* Metadata: 0x01FD4838 */) {} // 0x0000000189CC89AC-0x0000000189CC8A24
+		public NoInterpUnclampedFloatParameter(float value, float min, float max, float sliderExponent, bool overrideState = false /* Metadata: 0x0207A05E */) {} // 0x000000018BDE2148-0x000000018BDE21C8
+		public NoInterpUnclampedFloatParameter(float value, float min, float max, bool overrideState = false /* Metadata: 0x0207A05F */) {} // 0x000000018BDE21C8-0x000000018BDE2240
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class FloatRangeParameter : VolumeParameter<Vector2> // TypeDefIndex: 53628
+	public class FloatRangeParameter : VolumeParameter<Vector2> // TypeDefIndex: 54621
 	{
 		// Fields
 		[NonSerialized]
@@ -5942,19 +6346,18 @@ namespace UnityEngine.Rendering
 		public float max; // 0x24
 	
 		// Properties
-		public override Vector2 value { get => default; set {} } // 0x0000000183D5CC20-0x0000000183D5CC40 0x0000000189CC61C4-0x0000000189CC61EC
+		public override Vector2 value { get => default; set {} } // 0x0000000185FBE180-0x0000000185FBE1A0 0x000000018BDDF9E0-0x000000018BDDFA08
 	
 		// Constructors
 		public FloatRangeParameter() {} // Dummy constructor
-		public FloatRangeParameter(Vector2 value, float min, float max, bool overrideState = false /* Metadata: 0x01FD4839 */) {} // 0x0000000182C666E0-0x0000000182C66760
+		public FloatRangeParameter(Vector2 value, float min, float max, bool overrideState = false /* Metadata: 0x0207A060 */) {} // 0x000000018475E840-0x000000018475E8C0
 	
 		// Methods
-		public override void Interp(Vector2 from, Vector2 to, float t) {} // 0x0000000183D84910-0x0000000183D84960
+		public override void Interp(Vector2 from, Vector2 to, float t) {} // 0x0000000185FE55A0-0x0000000185FE55F0
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpFloatRangeParameter : VolumeParameter<Vector2> // TypeDefIndex: 53629
+	public class NoInterpFloatRangeParameter : VolumeParameter<Vector2> // TypeDefIndex: 54622
 	{
 		// Fields
 		[NonSerialized]
@@ -5963,16 +6366,15 @@ namespace UnityEngine.Rendering
 		public float max; // 0x24
 	
 		// Properties
-		public override Vector2 value { get => default; set {} } // 0x0000000183D5CC20-0x0000000183D5CC40 0x0000000189CC61C4-0x0000000189CC61EC
+		public override Vector2 value { get => default; set {} } // 0x0000000185FBE180-0x0000000185FBE1A0 0x000000018BDDF9E0-0x000000018BDDFA08
 	
 		// Constructors
 		public NoInterpFloatRangeParameter() {} // Dummy constructor
-		public NoInterpFloatRangeParameter(Vector2 value, float min, float max, bool overrideState = false /* Metadata: 0x01FD483A */) {} // 0x0000000189CC84C8-0x0000000189CC8538
+		public NoInterpFloatRangeParameter(Vector2 value, float min, float max, bool overrideState = false /* Metadata: 0x0207A061 */) {} // 0x000000018BDE1CE4-0x000000018BDE1D54
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class ColorParameter : VolumeParameter<UnityEngine.Color> // TypeDefIndex: 53630
+	public class ColorParameter : VolumeParameter<UnityEngine.Color> // TypeDefIndex: 54623
 	{
 		// Fields
 		[NonSerialized]
@@ -5984,16 +6386,15 @@ namespace UnityEngine.Rendering
 	
 		// Constructors
 		public ColorParameter() {} // Dummy constructor
-		public ColorParameter(UnityEngine.Color value, bool overrideState = false /* Metadata: 0x01FD483B */) {} // 0x0000000182C62710-0x0000000182C62770
-		public ColorParameter(UnityEngine.Color value, bool hdr, bool showAlpha, bool showEyeDropper, bool overrideState = false /* Metadata: 0x01FD483C */) {} // 0x0000000182C60520-0x0000000182C605A0
+		public ColorParameter(UnityEngine.Color value, bool overrideState = false /* Metadata: 0x0207A062 */) {} // 0x000000018475B230-0x000000018475B290
+		public ColorParameter(UnityEngine.Color value, bool hdr, bool showAlpha, bool showEyeDropper, bool overrideState = false /* Metadata: 0x0207A063 */) {} // 0x000000018475EBD0-0x000000018475EC50
 	
 		// Methods
-		public override void Interp(UnityEngine.Color from, UnityEngine.Color to, float t) {} // 0x0000000183D84260-0x0000000183D842D0
+		public override void Interp(UnityEngine.Color from, UnityEngine.Color to, float t) {} // 0x0000000185FE4EF0-0x0000000185FE4F60
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpColorParameter : VolumeParameter<UnityEngine.Color> // TypeDefIndex: 53631
+	public class NoInterpColorParameter : VolumeParameter<UnityEngine.Color> // TypeDefIndex: 54624
 	{
 		// Fields
 		public bool hdr; // 0x28
@@ -6004,205 +6405,207 @@ namespace UnityEngine.Rendering
 	
 		// Constructors
 		public NoInterpColorParameter() {} // Dummy constructor
-		public NoInterpColorParameter(UnityEngine.Color value, bool overrideState = false /* Metadata: 0x01FD483D */) {} // 0x0000000189CC8294-0x0000000189CC82EC
-		public NoInterpColorParameter(UnityEngine.Color value, bool hdr, bool showAlpha, bool showEyeDropper, bool overrideState = false /* Metadata: 0x01FD483E */) {} // 0x0000000189CC82EC-0x0000000189CC835C
+		public NoInterpColorParameter(UnityEngine.Color value, bool overrideState = false /* Metadata: 0x0207A064 */) {} // 0x000000018BDE1AB0-0x000000018BDE1B08
+		public NoInterpColorParameter(UnityEngine.Color value, bool hdr, bool showAlpha, bool showEyeDropper, bool overrideState = false /* Metadata: 0x0207A065 */) {} // 0x000000018BDE1B08-0x000000018BDE1B78
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class Vector2Parameter : VolumeParameter<Vector2> // TypeDefIndex: 53632
+	public class Vector2Parameter : VolumeParameter<Vector2> // TypeDefIndex: 54625
 	{
 		// Constructors
 		public Vector2Parameter() {} // Dummy constructor
-		public Vector2Parameter(Vector2 value, bool overrideState = false /* Metadata: 0x01FD483F */) {} // 0x0000000182C617D0-0x0000000182C61840
+		public Vector2Parameter(Vector2 value, bool overrideState = false /* Metadata: 0x0207A066 */) {} // 0x0000000184A20AF0-0x0000000184A20B60
 	
 		// Methods
-		public override void Interp(Vector2 from, Vector2 to, float t) {} // 0x0000000183D84910-0x0000000183D84960
+		public override void Interp(Vector2 from, Vector2 to, float t) {} // 0x0000000185FE55A0-0x0000000185FE55F0
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpVector2Parameter : VolumeParameter<Vector2> // TypeDefIndex: 53633
+	public class NoInterpVector2Parameter : VolumeParameter<Vector2> // TypeDefIndex: 54626
 	{
 		// Constructors
 		public NoInterpVector2Parameter() {} // Dummy constructor
-		public NoInterpVector2Parameter(Vector2 value, bool overrideState = false /* Metadata: 0x01FD4840 */) {} // 0x0000000189CC8A24-0x0000000189CC8A80
+		public NoInterpVector2Parameter(Vector2 value, bool overrideState = false /* Metadata: 0x0207A067 */) {} // 0x000000018BDE2240-0x000000018BDE229C
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class Vector3Parameter : VolumeParameter<Vector3> // TypeDefIndex: 53634
+	public class Vector3Parameter : VolumeParameter<Vector3> // TypeDefIndex: 54627
 	{
 		// Constructors
 		public Vector3Parameter() {} // Dummy constructor
-		public Vector3Parameter(Vector3 value, bool overrideState = false /* Metadata: 0x01FD4841 */) {} // 0x0000000183511690-0x00000001835116F0
+		public Vector3Parameter(Vector3 value, bool overrideState = false /* Metadata: 0x0207A068 */) {} // 0x0000000184A20F80-0x0000000184A20FE0
 	
 		// Methods
-		public override void Interp(Vector3 from, Vector3 to, float t) {} // 0x0000000183D849F0-0x0000000183D84A40
+		public override void Interp(Vector3 from, Vector3 to, float t) {} // 0x0000000185FE5680-0x0000000185FE56D0
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpVector3Parameter : VolumeParameter<Vector3> // TypeDefIndex: 53635
+	public class NoInterpVector3Parameter : VolumeParameter<Vector3> // TypeDefIndex: 54628
 	{
 		// Constructors
 		public NoInterpVector3Parameter() {} // Dummy constructor
-		public NoInterpVector3Parameter(Vector3 value, bool overrideState = false /* Metadata: 0x01FD4842 */) {} // 0x0000000189CC8A80-0x0000000189CC8AD8
+		public NoInterpVector3Parameter(Vector3 value, bool overrideState = false /* Metadata: 0x0207A069 */) {} // 0x000000018BDE229C-0x000000018BDE22F4
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class Vector4Parameter : VolumeParameter<Vector4> // TypeDefIndex: 53636
+	public class Vector4Parameter : VolumeParameter<Vector4> // TypeDefIndex: 54629
 	{
 		// Constructors
 		public Vector4Parameter() {} // Dummy constructor
-		public Vector4Parameter(Vector4 value, bool overrideState = false /* Metadata: 0x01FD4843 */) {} // 0x0000000182C60AD0-0x0000000182C60B30
+		public Vector4Parameter(Vector4 value, bool overrideState = false /* Metadata: 0x0207A06A */) {} // 0x000000018475F410-0x000000018475F470
 	
 		// Methods
-		public override void Interp(Vector4 from, Vector4 to, float t) {} // 0x0000000183D84260-0x0000000183D842D0
+		public override void Interp(Vector4 from, Vector4 to, float t) {} // 0x0000000185FE4EF0-0x0000000185FE4F60
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpVector4Parameter : VolumeParameter<Vector4> // TypeDefIndex: 53637
+	public class NoInterpVector4Parameter : VolumeParameter<Vector4> // TypeDefIndex: 54630
 	{
 		// Constructors
 		public NoInterpVector4Parameter() {} // Dummy constructor
-		public NoInterpVector4Parameter(Vector4 value, bool overrideState = false /* Metadata: 0x01FD4844 */) {} // 0x0000000189CC8AD8-0x0000000189CC8B28
+		public NoInterpVector4Parameter(Vector4 value, bool overrideState = false /* Metadata: 0x0207A06B */) {} // 0x000000018BDE22F4-0x000000018BDE2344
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class TextureParameter : VolumeParameter<Texture> // TypeDefIndex: 53638
+	public class TextureParameter : VolumeParameter<Texture> // TypeDefIndex: 54631
 	{
 		// Fields
 		public TextureDimension dimension; // 0x20
 	
 		// Constructors
 		public TextureParameter() {} // Dummy constructor
-		public TextureParameter(Texture value, bool overrideState = false /* Metadata: 0x01FD4845 */) {} // 0x0000000184276B6C-0x0000000184276B90
-		public TextureParameter(Texture value, TextureDimension dimension, bool overrideState = false /* Metadata: 0x01FD4846 */) {} // 0x0000000182C66A30-0x0000000182C66AA0
+		public TextureParameter(Texture value, bool overrideState = false /* Metadata: 0x0207A06C */) {} // 0x0000000186474728-0x000000018647474C
+		public TextureParameter(Texture value, TextureDimension dimension, bool overrideState = false /* Metadata: 0x0207A06D */) {} // 0x0000000185BA5A40-0x0000000185BA5AB0
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x0000000189CC9134-0x0000000189CC91F4
+		public override int GetHashCode() => default; // 0x000000018BDE2950-0x000000018BDE2A10
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpTextureParameter : VolumeParameter<Texture> // TypeDefIndex: 53639
+	public class NoInterpTextureParameter : VolumeParameter<Texture> // TypeDefIndex: 54632
 	{
 		// Constructors
 		public NoInterpTextureParameter() {} // Dummy constructor
-		public NoInterpTextureParameter(Texture value, bool overrideState = false /* Metadata: 0x01FD4847 */) {} // 0x0000000189CC88D4-0x0000000189CC892C
+		public NoInterpTextureParameter(Texture value, bool overrideState = false /* Metadata: 0x0207A06E */) {} // 0x000000018BDE20F0-0x000000018BDE2148
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x0000000189CC8814-0x0000000189CC88D4
+		public override int GetHashCode() => default; // 0x000000018BDE2030-0x000000018BDE20F0
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class Texture2DParameter : VolumeParameter<Texture> // TypeDefIndex: 53640
+	public class Texture2DParameter : VolumeParameter<Texture> // TypeDefIndex: 54633
 	{
 		// Constructors
 		public Texture2DParameter() {} // Dummy constructor
-		public Texture2DParameter(Texture value, bool overrideState = false /* Metadata: 0x01FD4848 */) {} // 0x0000000182C66760-0x0000000182C667C0
+		public Texture2DParameter(Texture value, bool overrideState = false /* Metadata: 0x0207A06F */) {} // 0x000000018475EB00-0x000000018475EB60
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x0000000189CC8E30-0x0000000189CC8EF0
+		public override int GetHashCode() => default; // 0x000000018BDE264C-0x000000018BDE270C
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class Texture3DParameter : VolumeParameter<Texture> // TypeDefIndex: 53641
+	public class Texture3DParameter : VolumeParameter<Texture> // TypeDefIndex: 54634
 	{
 		// Constructors
 		public Texture3DParameter() {} // Dummy constructor
-		public Texture3DParameter(Texture value, bool overrideState = false /* Metadata: 0x01FD4849 */) {} // 0x0000000182C66890-0x0000000182C668F0
+		public Texture3DParameter(Texture value, bool overrideState = false /* Metadata: 0x0207A070 */) {} // 0x0000000185B3FC00-0x0000000185B3FC60
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x0000000189CC8EF0-0x0000000189CC8FB0
+		public override int GetHashCode() => default; // 0x000000018BDE270C-0x000000018BDE27CC
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class RenderTextureParameter : VolumeParameter<RenderTexture> // TypeDefIndex: 53642
+	public class RenderTextureParameter : VolumeParameter<RenderTexture> // TypeDefIndex: 54635
 	{
 		// Constructors
 		public RenderTextureParameter() {} // Dummy constructor
-		public RenderTextureParameter(RenderTexture value, bool overrideState = false /* Metadata: 0x01FD484A */) {} // 0x0000000189CC8C34-0x0000000189CC8C8C
+		public RenderTextureParameter(RenderTexture value, bool overrideState = false /* Metadata: 0x0207A071 */) {} // 0x000000018BDE2450-0x000000018BDE24A8
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x0000000189CC8B7C-0x0000000189CC8C34
+		public override int GetHashCode() => default; // 0x000000018BDE2398-0x000000018BDE2450
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpRenderTextureParameter : VolumeParameter<RenderTexture> // TypeDefIndex: 53643
+	public class NoInterpRenderTextureParameter : VolumeParameter<RenderTexture> // TypeDefIndex: 54636
 	{
 		// Constructors
 		public NoInterpRenderTextureParameter() {} // Dummy constructor
-		public NoInterpRenderTextureParameter(RenderTexture value, bool overrideState = false /* Metadata: 0x01FD484B */) {} // 0x0000000189CC87BC-0x0000000189CC8814
+		public NoInterpRenderTextureParameter(RenderTexture value, bool overrideState = false /* Metadata: 0x0207A072 */) {} // 0x000000018BDE1FD8-0x000000018BDE2030
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x0000000189CC8704-0x0000000189CC87BC
+		public override int GetHashCode() => default; // 0x000000018BDE1F20-0x000000018BDE1FD8
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class CubemapParameter : VolumeParameter<Texture> // TypeDefIndex: 53644
+	public class CubemapParameter : VolumeParameter<Texture> // TypeDefIndex: 54637
 	{
 		// Constructors
 		public CubemapParameter() {} // Dummy constructor
-		public CubemapParameter(Texture value, bool overrideState = false /* Metadata: 0x01FD484C */) {} // 0x0000000182C66830-0x0000000182C66890
+		public CubemapParameter(Texture value, bool overrideState = false /* Metadata: 0x0207A073 */) {} // 0x0000000185A89220-0x0000000185A89280
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x0000000189CC38C8-0x0000000189CC3988
+		public override int GetHashCode() => default; // 0x000000018BDDD0E4-0x000000018BDDD1A4
 	}
 
 	[Serializable]
-	[DebuggerDisplay("{m_Value} ({overrideState})")]
-	public class NoInterpCubemapParameter : VolumeParameter<Cubemap> // TypeDefIndex: 53645
+	public class NoInterpCubemapParameter : VolumeParameter<Cubemap> // TypeDefIndex: 54638
 	{
 		// Constructors
 		public NoInterpCubemapParameter() {} // Dummy constructor
-		public NoInterpCubemapParameter(Cubemap value, bool overrideState = false /* Metadata: 0x01FD484D */) {} // 0x0000000189CC8414-0x0000000189CC846C
+		public NoInterpCubemapParameter(Cubemap value, bool overrideState = false /* Metadata: 0x0207A074 */) {} // 0x000000018BDE1C30-0x000000018BDE1C88
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x0000000189CC835C-0x0000000189CC8414
+		public override int GetHashCode() => default; // 0x000000018BDE1B78-0x000000018BDE1C30
 	}
 
 	[Serializable]
-	public class AnimationCurveParameter : VolumeParameter<AnimationCurve> // TypeDefIndex: 53646
+	public class AnimationCurveParameter : VolumeParameter<AnimationCurve> // TypeDefIndex: 54639
 	{
 		// Constructors
 		public AnimationCurveParameter() {} // Dummy constructor
-		public AnimationCurveParameter(AnimationCurve value, bool overrideState = false /* Metadata: 0x01FD484E */) {} // 0x0000000182C668F0-0x0000000182C66950
+		public AnimationCurveParameter(AnimationCurve value, bool overrideState = false /* Metadata: 0x0207A075 */) {} // 0x0000000185B6E730-0x0000000185B6E790
 	}
 
-	public sealed class VolumeProfile : ScriptableObject // TypeDefIndex: 53648
+	public sealed class VolumeProfile : ScriptableObject // TypeDefIndex: 54641
 	{
 		// Fields
 		public List<VolumeComponent> components; // 0x18
 		[NonSerialized]
 		public bool isDirty; // 0x20
 	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54640
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Predicate<VolumeComponent> __9__2_0; // 0x08
+	
+			// Constructors
+			static __c() {} // 0x0000000185989AE0-0x0000000185989C20
+			public __c() {} // 0x0000000185225950-0x0000000185225A30
+	
+			// Methods
+			internal bool _OnEnable_b__2_0(VolumeComponent x) => default; // 0x0000000185FBB160-0x0000000185FBB170
+		}
+	
 		// Constructors
-		public VolumeProfile() {} // 0x00000001827ABDC0-0x00000001827ABE50
+		public VolumeProfile() {} // 0x0000000184C75EA0-0x0000000184C75EF0
 	
 		// Methods
-		private void OnEnable() {} // 0x000000018381C070-0x000000018381C1B0
-		internal void OnDisable() {} // 0x00000001832B93A0-0x00000001832B9480
-		public void Reset() {} // 0x0000000183D59690-0x0000000183D596A0
-		public T Add<T>(bool overrides = false /* Metadata: 0x01FD484F */)
-			where T : VolumeComponent => default;
-		public VolumeComponent Add(System.Type type, bool overrides = false /* Metadata: 0x01FD4850 */) => default; // 0x0000000183709BF0-0x0000000183709CC0
+		private void OnEnable() {}
+		internal void OnDisable() {} // 0x000000018580A7B0-0x000000018580A880
+		public void Reset() {}
+		public T Add<T>(bool overrides = false /* Metadata: 0x0207A076 */)
+			where T : VolumeComponent => default; // 0x000000018BDE38BC-0x000000018BDE3998
+		public VolumeComponent Add(System.Type type, bool overrides = false /* Metadata: 0x0207A077 */) => default;
 		public void Remove<T>()
-			where T : VolumeComponent {}
-		public void Remove(System.Type type) {} // 0x0000000189CCA0A0-0x0000000189CCA17C
+			where T : VolumeComponent {} // 0x0000000183FD7710-0x0000000183FD7870
+		public void Remove(System.Type type) {} // 0x000000018BDE3770-0x000000018BDE38BC
 		public bool Has<T>()
 			where T : VolumeComponent => default;
-		public bool Has(System.Type type) => default; // 0x0000000182522090-0x00000001825221F0
-		public bool HasSubclassOf(System.Type type) => default; // 0x0000000189CC9F54-0x0000000189CCA0A0
+		public bool Has(System.Type type) => default;
+		public bool HasSubclassOf(System.Type type) => default;
 		public bool TryGet<T>(out ref T component)
 			where T : VolumeComponent {
 			component = default;
@@ -6212,55 +6615,55 @@ namespace UnityEngine.Rendering
 			where T : VolumeComponent {
 			component = default;
 			return default;
-		}
+		} // 0x000000018BDE36DC-0x000000018BDE3770
 		public bool TryGetSubclassOf<T>(System.Type type, out ref T component)
 			where T : VolumeComponent {
 			component = default;
 			return default;
-		}
+		} // 0x000000018BDE3638-0x000000018BDE36DC
 		public bool TryGetAllSubclassOf<T>(System.Type type, List<T> result)
-			where T : VolumeComponent => default;
-		public override int GetHashCode() => default; // 0x0000000189CC9EC0-0x0000000189CC9F54
-		internal int GetComponentListHashCode() => default; // 0x0000000189CC9E1C-0x0000000189CC9EC0
-		internal void Sanitize() {} // 0x0000000189CCA17C-0x0000000189CCA248
+			where T : VolumeComponent => default; // 0x000000018BDE3998-0x000000018BDE3A64
+		public override int GetHashCode() => default; // 0x0000000184480B20-0x0000000184480BB0
+		internal int GetComponentListHashCode() => default; // 0x0000000185F73DB0-0x0000000185F73E10
+		internal void Sanitize() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public sealed class VolumeStack : IDisposable // TypeDefIndex: 53649
+	public sealed class VolumeStack : IDisposable // TypeDefIndex: 54642
 	{
 		// Fields
 		internal readonly Dictionary<System.Type, VolumeComponent> components; // 0x10
-		[TupleElementNames(new string[2] {"parameter", "defaultValue" })]
 		public ValueTuple<VolumeParameter, VolumeParameter>[] defaultParameters; // 0x18
 		internal bool requiresReset; // 0x20
 	
 		// Constructors
-		internal VolumeStack() {} // 0x0000000182522B00-0x0000000182522B80
+		internal VolumeStack() {} // 0x0000000183FD8180-0x0000000183FD8200
 	
 		// Methods
-		internal void Reload(List<VolumeComponent> componentDefaultStates) {} // 0x00000001825224E0-0x0000000182522A00
+		internal void Reload(List<VolumeComponent> componentDefaultStates) {} // 0x0000000183FD7B60-0x0000000183FD8080
 		public T GetComponent<T>()
 			where T : VolumeComponent => default;
-		public VolumeComponent GetComponent(System.Type type) => default; // 0x00000001825202D0-0x0000000182520410
-		public void Dispose() {} // 0x0000000182E7F2F0-0x0000000182E7FC10
+		public VolumeComponent GetComponent(System.Type type) => default; // 0x0000000183FD5950-0x0000000183FD5A90
+		public void Dispose() {} // 0x0000000184A73B30-0x0000000184A74450
 	}
 
-	public static class XRGraphicsAutomatedTests // TypeDefIndex: 53650
+	public static class XRGraphicsAutomatedTests // TypeDefIndex: 54643
 	{
 		// Fields
+		private static readonly bool _enabled_k__BackingField; // 0x00
 		public static bool running; // 0x01
 	
 		// Properties
-		private static bool activatedFromCommandLine { get; } // 0x000000018115F4C0-0x000000018115F530 
-		public static bool enabled { get; } // 0x0000000189CCA534-0x0000000189CCA584 
+		private static bool activatedFromCommandLine { get; } // 0x00000001814A81B0-0x00000001814A81C0 
+		public static bool enabled { get; } // 0x000000018BDE3D50-0x000000018BDE3DA0 
 	
 		// Constructors
-		static XRGraphicsAutomatedTests() {} // 0x0000000189CCA4EC-0x0000000189CCA534
+		static XRGraphicsAutomatedTests() {} // 0x000000018BDE3D08-0x000000018BDE3D50
 	}
 }
 
 namespace UnityEngine.Rendering.LookDev
 {
-	public interface IDataProvider // TypeDefIndex: 53651
+	public interface IDataProvider // TypeDefIndex: 54644
 	{
 		// Properties
 		IEnumerable<string> supportedDebugModes { get; }
@@ -6275,7 +6678,7 @@ namespace UnityEngine.Rendering.LookDev
 		void Cleanup(StageRuntimeInterface SRI);
 	}
 
-	public struct Sky // TypeDefIndex: 53652
+	public struct Sky // TypeDefIndex: 54645
 	{
 		// Fields
 		public Cubemap cubemap; // 0x00
@@ -6283,7 +6686,7 @@ namespace UnityEngine.Rendering.LookDev
 		public float exposure; // 0x0C
 	}
 
-	public class StageRuntimeInterface // TypeDefIndex: 53653
+	public class StageRuntimeInterface // TypeDefIndex: 54646
 	{
 		// Fields
 		private Func<bool, GameObject> m_AddGameObject; // 0x10
@@ -6292,21 +6695,21 @@ namespace UnityEngine.Rendering.LookDev
 		public object SRPData; // 0x28
 	
 		// Properties
-		public Camera camera { get => default; } // 0x0000000189CC8DF0-0x0000000189CC8E10 
-		public Light sunLight { get => default; } // 0x0000000189CC8E10-0x0000000189CC8E30 
+		public Camera camera { get => default; } // 0x000000018BDE260C-0x000000018BDE262C 
+		public Light sunLight { get => default; } // 0x000000018BDE262C-0x000000018BDE264C 
 	
 		// Constructors
 		public StageRuntimeInterface() {} // Dummy constructor
-		public StageRuntimeInterface(Func<bool, GameObject> AddGameObject, Func<Camera> GetCamera, Func<Light> GetSunLight) {} // 0x000000018285BDC0-0x000000018285BE00
+		public StageRuntimeInterface(Func<bool, GameObject> AddGameObject, Func<Camera> GetCamera, Func<Light> GetSunLight) {} // 0x000000018496F6A0-0x000000018496F6E0
 	
 		// Methods
-		public GameObject AddGameObject(bool persistent = false /* Metadata: 0x01FD4851 */) => default; // 0x0000000189CC8DCC-0x0000000189CC8DF0
+		public GameObject AddGameObject(bool persistent = false /* Metadata: 0x0207A078 */) => default; // 0x000000018BDE25E8-0x000000018BDE260C
 	}
 }
 
 namespace UnityEngine.Rendering.UI
 {
-	public class DebugUIHandlerBitField : DebugUIHandlerWidget // TypeDefIndex: 53654
+	public class DebugUIHandlerBitField : DebugUIHandlerWidget // TypeDefIndex: 54647
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6316,48 +6719,48 @@ namespace UnityEngine.Rendering.UI
 		private DebugUIHandlerContainer m_Container; // 0x78
 	
 		// Constructors
-		public DebugUIHandlerBitField() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerBitField() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CC3F28-0x0000000189CC4274
-		private bool GetValue(int index) => default; // 0x0000000189CC3988-0x0000000189CC3A24
-		private void SetValue(int index, bool value) {} // 0x0000000189CC3C58-0x0000000189CC3F28
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CC3B7C-0x0000000189CC3C58
-		public override void OnDeselection() {} // 0x0000000189CC3B24-0x0000000189CC3B54
-		public override void OnIncrement(bool fast) {} // 0x0000000189CC3B54-0x0000000189CC3B7C
-		public override void OnDecrement(bool fast) {} // 0x0000000189CC3B00-0x0000000189CC3B24
-		public override void OnAction() {} // 0x0000000189CC3AD0-0x0000000189CC3B00
-		public override DebugUIHandlerWidget Next() => default; // 0x0000000189CC3A24-0x0000000189CC3AD0
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDDD744-0x000000018BDDDA90
+		private bool GetValue(int index) => default; // 0x000000018BDDD1A4-0x000000018BDDD240
+		private void SetValue(int index, bool value) {} // 0x000000018BDDD474-0x000000018BDDD744
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDDD398-0x000000018BDDD474
+		public override void OnDeselection() {} // 0x000000018BDDD340-0x000000018BDDD370
+		public override void OnIncrement(bool fast) {} // 0x000000018BDDD370-0x000000018BDDD398
+		public override void OnDecrement(bool fast) {} // 0x000000018BDDD31C-0x000000018BDDD340
+		public override void OnAction() {} // 0x000000018BDDD2EC-0x000000018BDDD31C
+		public override DebugUIHandlerWidget Next() => default; // 0x000000018BDDD240-0x000000018BDDD2EC
 	}
 
-	public class DebugUIHandlerButton : DebugUIHandlerWidget // TypeDefIndex: 53655
+	public class DebugUIHandlerButton : DebugUIHandlerWidget // TypeDefIndex: 54648
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
 		private DebugUI.Button m_Field; // 0x60
 	
 		// Constructors
-		public DebugUIHandlerButton() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerButton() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CC42DC-0x0000000189CC4360
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CC42A8-0x0000000189CC42DC
-		public override void OnDeselection() {} // 0x0000000189CC3B24-0x0000000189CC3B54
-		public override void OnAction() {} // 0x0000000189CC427C-0x0000000189CC42A8
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDDDAF8-0x000000018BDDDB7C
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDDDAC4-0x000000018BDDDAF8
+		public override void OnDeselection() {} // 0x000000018BDDD340-0x000000018BDDD370
+		public override void OnAction() {} // 0x000000018BDDDA98-0x000000018BDDDAC4
 	}
 
 	[Serializable]
-	public class DebugUIPrefabBundle // TypeDefIndex: 53656
+	public class DebugUIPrefabBundle // TypeDefIndex: 54649
 	{
 		// Fields
 		public string type; // 0x10
 		public RectTransform prefab; // 0x18
 	
 		// Constructors
-		public DebugUIPrefabBundle() {} // 0x000000018350B670-0x000000018350B680
+		public DebugUIPrefabBundle() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class DebugUIHandlerCanvas : MonoBehaviour // TypeDefIndex: 53659
+	public class DebugUIHandlerCanvas : MonoBehaviour // TypeDefIndex: 54652
 	{
 		// Fields
 		private int m_DebugTreeState; // 0x18
@@ -6369,30 +6772,60 @@ namespace UnityEngine.Rendering.UI
 		private DebugUIHandlerWidget m_SelectedWidget; // 0x48
 		private string m_CurrentQueryPath; // 0x50
 	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 54650
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<DebugUI.Widget, bool> __9__12_0; // 0x08
+			public static Action<DebugUIHandlerPanel> __9__15_0; // 0x10
+	
+			// Constructors
+			static __c() {} // 0x000000018BDDE3A4-0x000000018BDDE4F4
+			public __c() {} // 0x000000018BDDF498-0x000000018BDDF5A0
+	
+			// Methods
+			internal bool _Rebuild_b__12_0(DebugUI.Widget x) => default; // 0x0000000185FB1880-0x0000000185FB1890
+			internal void _ActivatePanel_b__15_0(DebugUIHandlerPanel p) {} // 0x000000018BDDEC10-0x000000018BDDEDC8
+		}
+	
+		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 54651
+		{
+			// Fields
+			public string queryPath; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass14_0() {} // 0x000000018BDDE4F4-0x000000018BDDEC10
+	
+			// Methods
+			internal bool _GetWidgetFromPath_b__0(DebugUIHandlerWidget w) => default; // 0x000000018BDDF0C4-0x000000018BDDF498
+		}
+	
 		// Constructors
-		public DebugUIHandlerCanvas() {} // 0x000000018426FE60-0x000000018426FE68
+		public DebugUIHandlerCanvas() {} // 0x000000018BDEA624-0x000000018BDEA654
 	
 		// Methods
-		private void OnEnable() {} // 0x0000000189CC4B88-0x0000000189CC4CD8
-		private void Update() {} // 0x0000000189CC5C7C-0x0000000189CC5D84
-		internal void RequestHierarchyReset() {} // 0x0000000183D50330-0x0000000183D50340
-		private void ResetAllHierarchy() {} // 0x0000000189CC53F4-0x0000000189CC55AC
-		private void Rebuild() {} // 0x0000000189CC4CD8-0x0000000189CC53F4
-		private void Traverse(DebugUI.IContainer container, Transform parentTransform, DebugUIHandlerWidget parentUIHandler, ref DebugUIHandlerWidget selectedHandler) {} // 0x0000000189CC58A8-0x0000000189CC5C7C
-		private DebugUIHandlerWidget GetWidgetFromPath(string queryPath) => default; // 0x0000000189CC4848-0x0000000189CC4974
-		private void ActivatePanel(int index, DebugUIHandlerWidget selectedWidget = null) {} // 0x0000000189CC4360-0x0000000189CC4568
-		internal void ChangeSelection(DebugUIHandlerWidget widget, bool fromNext) {} // 0x0000000189CC46BC-0x0000000189CC4848
-		internal void SelectPreviousItem() {} // 0x0000000189CC56CC-0x0000000189CC5768
-		internal void SelectNextPanel() {} // 0x0000000189CC5660-0x0000000189CC56CC
-		internal void SelectPreviousPanel() {} // 0x0000000189CC5768-0x0000000189CC57D8
-		internal void SelectNextItem() {} // 0x0000000189CC55AC-0x0000000189CC5660
-		private void ChangeSelectionValue(float multiplier) {} // 0x0000000189CC45D8-0x0000000189CC46BC
-		private void ActivateSelection() {} // 0x0000000189CC4568-0x0000000189CC45D8
-		private void HandleInput() {} // 0x0000000189CC4974-0x0000000189CC4B88
-		internal void SetScrollTarget(DebugUIHandlerWidget widget) {} // 0x0000000189CC57D8-0x0000000189CC58A8
+		private void OnEnable() {} // 0x000000018BDDE064-0x000000018BDDE190
+		private void Update() {} // 0x000000018BDDDB7C-0x000000018BDDDD84
+		internal void RequestHierarchyReset() {} // 0x000000018BDDDED8-0x000000018BDDE064
+		private void ResetAllHierarchy() {} // 0x000000018BDDEEE8-0x000000018BDDEF84
+		private void Rebuild() {} // 0x000000018BDDEE7C-0x000000018BDDEEE8
+		private void Traverse(DebugUI.IContainer container, Transform parentTransform, DebugUIHandlerWidget parentUIHandler, ref DebugUIHandlerWidget selectedHandler) {} // 0x000000018BDDEF84-0x000000018BDDEFF4
+		private DebugUIHandlerWidget GetWidgetFromPath(string queryPath) => default; // 0x000000018BDDEDC8-0x000000018BDDEE7C
+		private void ActivatePanel(int index, DebugUIHandlerWidget selectedWidget = null) {} // 0x000000018BDDDDF4-0x000000018BDDDED8
+		internal void ChangeSelection(DebugUIHandlerWidget widget, bool fromNext) {} // 0x000000018BDDDD84-0x000000018BDDDDF4
+		internal void SelectPreviousItem() {} // 0x000000018BDDE190-0x000000018BDDE3A4
+		internal void SelectNextPanel() {} // 0x000000018BDDEFF4-0x000000018BDDF0C4
+		internal void SelectPreviousPanel() {} // 0x000000018646DB20-0x000000018646DB28
+		internal void SelectNextItem() {} // 0x000000018BDEA6C8-0x000000018BDEA72C
+		private void ChangeSelectionValue(float multiplier) {} // 0x0000000185492010-0x0000000185492020
+		private void ActivateSelection() {} // 0x000000018BDEA5F4-0x000000018BDEA624
+		private void HandleInput() {} // 0x000000018BDEA5C0-0x000000018BDEA5F4
+		internal void SetScrollTarget(DebugUIHandlerWidget widget) {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class DebugUIHandlerColor : DebugUIHandlerWidget // TypeDefIndex: 53660
+	public class DebugUIHandlerColor : DebugUIHandlerWidget // TypeDefIndex: 54653
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6406,38 +6839,61 @@ namespace UnityEngine.Rendering.UI
 		private DebugUIHandlerContainer m_Container; // 0x98
 	
 		// Constructors
-		public DebugUIHandlerColor() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerColor() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCA8C8-0x0000000189CCADB4
-		private void SetValue(float x, bool r = false /* Metadata: 0x01FD4852 */, bool g = false /* Metadata: 0x01FD4853 */, bool b = false /* Metadata: 0x01FD4854 */, bool a = false /* Metadata: 0x01FD4855 */) {} // 0x0000000189CCA7B4-0x0000000189CCA8C8
-		private void SetupSettings(DebugUIHandlerIndirectFloatField field) {} // 0x0000000189CCADB4-0x0000000189CCAEF0
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCA6D0-0x0000000189CCA7B4
-		public override void OnDeselection() {} // 0x0000000189CC3B24-0x0000000189CC3B54
-		public override void OnIncrement(bool fast) {} // 0x0000000189CC3B54-0x0000000189CC3B7C
-		public override void OnDecrement(bool fast) {} // 0x0000000189CC3B00-0x0000000189CC3B24
-		public override void OnAction() {} // 0x0000000189CC3AD0-0x0000000189CC3B00
-		internal void UpdateColor() {} // 0x0000000189CCB144-0x0000000189CCB1F0
-		public override DebugUIHandlerWidget Next() => default; // 0x0000000189CCA61C-0x0000000189CCA6D0
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE40E4-0x000000018BDE45D0
+		private void SetValue(float x, bool r = false /* Metadata: 0x0207A079 */, bool g = false /* Metadata: 0x0207A07A */, bool b = false /* Metadata: 0x0207A07B */, bool a = false /* Metadata: 0x0207A07C */) {} // 0x000000018BDE3FD0-0x000000018BDE40E4
+		private void SetupSettings(DebugUIHandlerIndirectFloatField field) {} // 0x000000018BDE45D0-0x000000018BDE470C
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE3EEC-0x000000018BDE3FD0
+		public override void OnDeselection() {} // 0x000000018BDDD340-0x000000018BDDD370
+		public override void OnIncrement(bool fast) {} // 0x000000018BDDD370-0x000000018BDDD398
+		public override void OnDecrement(bool fast) {} // 0x000000018BDDD31C-0x000000018BDDD340
+		public override void OnAction() {} // 0x000000018BDDD2EC-0x000000018BDDD31C
+		internal void UpdateColor() {} // 0x000000018BDE4960-0x000000018BDE4A0C
+		public override DebugUIHandlerWidget Next() => default; // 0x000000018BDE3E38-0x000000018BDE3EEC
+		private float _SetWidget_b__9_0() => default; // 0x000000018BDE470C-0x000000018BDE4760
+		private void _SetWidget_b__9_1(float x) {} // 0x000000018BDE4760-0x000000018BDE4788
+		private float _SetWidget_b__9_2() => default; // 0x000000018BDE4788-0x000000018BDE47DC
+		private void _SetWidget_b__9_3(float x) {} // 0x000000018BDE47DC-0x000000018BDE4804
+		private float _SetWidget_b__9_4() => default; // 0x000000018BDE4804-0x000000018BDE4858
+		private void _SetWidget_b__9_5(float x) {} // 0x000000018BDE4858-0x000000018BDE4880
+		private float _SetWidget_b__9_6() => default; // 0x000000018BDE4880-0x000000018BDE48D4
+		private void _SetWidget_b__9_7(float x) {} // 0x000000018BDE48D4-0x000000018BDE48FC
+		private float _SetupSettings_b__11_0() => default; // 0x000000018BDE48FC-0x000000018BDE491C
+		private float _SetupSettings_b__11_1() => default; // 0x000000018BDE491C-0x000000018BDE493C
+		private float _SetupSettings_b__11_2() => default; // 0x000000018BDE493C-0x000000018BDE4960
 	}
 
-	public class DebugUIHandlerContainer : MonoBehaviour // TypeDefIndex: 53662
+	public class DebugUIHandlerContainer : MonoBehaviour // TypeDefIndex: 54655
 	{
 		// Fields
-		[SerializeField]
 		public RectTransform contentHolder; // 0x18
 	
+		// Nested types
+		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 54654
+		{
+			// Fields
+			public DebugUIHandlerWidget widget; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass3_0() {} // 0x000000018BDE4C60-0x000000018BDE4CE0
+	
+			// Methods
+			internal bool _IsDirectChild_b__0(DebugUIHandlerWidget x) => default; // 0x000000018BDE4CE0-0x000000018BDE4D64
+		}
+	
 		// Constructors
-		public DebugUIHandlerContainer() {} // 0x000000018426FE60-0x000000018426FE68
+		public DebugUIHandlerContainer() {} // 0x000000018BDEA654-0x000000018BDEA6A8
 	
 		// Methods
-		internal DebugUIHandlerWidget GetFirstItem() => default; // 0x0000000189CCB444-0x0000000189CCB4C4
-		internal DebugUIHandlerWidget GetLastItem() => default; // 0x0000000189CCB4C4-0x0000000189CCB548
-		internal bool IsDirectChild(DebugUIHandlerWidget widget) => default; // 0x0000000189CCB548-0x0000000189CCB640
-		private List<DebugUIHandlerWidget> GetActiveChildren() => default; // 0x0000000189CCB1F0-0x0000000189CCB444
+		internal DebugUIHandlerWidget GetFirstItem() => default; // 0x000000018BDE4D64-0x000000018BDE4E5C
+		internal DebugUIHandlerWidget GetLastItem() => default; // 0x000000018BDE4A0C-0x000000018BDE4C60
+		internal bool IsDirectChild(DebugUIHandlerWidget widget) => default; // 0x000000018646DB20-0x000000018646DB28
+		private List<DebugUIHandlerWidget> GetActiveChildren() => default; // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class DebugUIHandlerEnumField : DebugUIHandlerWidget // TypeDefIndex: 53663
+	public class DebugUIHandlerEnumField : DebugUIHandlerWidget // TypeDefIndex: 54656
 	{
 		// Fields
 		public UI.Text nextButtonText; // 0x58
@@ -6447,35 +6903,56 @@ namespace UnityEngine.Rendering.UI
 		protected internal DebugUI.EnumField m_Field; // 0x78
 	
 		// Constructors
-		public DebugUIHandlerEnumField() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerEnumField() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCBB4C-0x0000000189CCBBDC
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCBA40-0x0000000189CCBB4C
-		public override void OnDeselection() {} // 0x0000000189CCB7EC-0x0000000189CCB8F4
-		public override void OnAction() {} // 0x0000000189CCB640-0x0000000189CCB650
-		public override void OnIncrement(bool fast) {} // 0x0000000189CCB8F4-0x0000000189CCBA40
-		public override void OnDecrement(bool fast) {} // 0x0000000189CCB650-0x0000000189CCB7EC
-		protected virtual void UpdateValueLabel() {} // 0x0000000189CCBBDC-0x0000000189CCBC98
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE5368-0x000000018BDE53F8
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE525C-0x000000018BDE5368
+		public override void OnDeselection() {} // 0x000000018BDE5008-0x000000018BDE5110
+		public override void OnAction() {} // 0x000000018BDE4E5C-0x000000018BDE4E6C
+		public override void OnIncrement(bool fast) {} // 0x000000018BDE5110-0x000000018BDE525C
+		public override void OnDecrement(bool fast) {} // 0x000000018BDE4E6C-0x000000018BDE5008
+		protected virtual void UpdateValueLabel() {} // 0x000000018BDE53F8-0x000000018BDE54B4
 	}
 
-	public class DebugUIHandlerEnumHistory : DebugUIHandlerEnumField // TypeDefIndex: 53665
+	public class DebugUIHandlerEnumHistory : DebugUIHandlerEnumField // TypeDefIndex: 54658
 	{
 		// Fields
 		private UI.Text[] historyValues; // 0x80
-		private const float xDecal = 60f; // Metadata: 0x01FD4856
+		private const float xDecal = 60f; // Metadata: 0x0207A07D
+	
+		// Nested types
+		private sealed class _RefreshAfterSanitization_d__4 : IEnumerator<object> // TypeDefIndex: 54657
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public DebugUIHandlerEnumHistory __4__this; // 0x20
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018BDDDA90-0x000000018BDDDA98 
+			object IEnumerator.Current { get => default; } // 0x0000000185492010-0x0000000185492020 
+	
+			// Constructors
+			public _RefreshAfterSanitization_d__4() {} // Dummy constructor
+			public _RefreshAfterSanitization_d__4(int __1__state) {} // 0x000000018BDE5510-0x000000018BDE5744
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018BDE5744-0x000000018BDE591C
+			private bool MoveNext() => default; // 0x000000018BDE54B4-0x000000018BDE5510
+			void IEnumerator.Reset() {} // 0x0000000181378230-0x0000000181378240
+		}
 	
 		// Constructors
-		public DebugUIHandlerEnumHistory() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerEnumHistory() {} // 0x0000000181377E40-0x0000000181377E50
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCBCF4-0x0000000189CCBF28
-		protected override void UpdateValueLabel() {} // 0x0000000189CCBF28-0x0000000189CCC100
-		[IteratorStateMachine(typeof(_RefreshAfterSanitization_d__4))]
-		private IEnumerator RefreshAfterSanitization() => default; // 0x0000000189CCBC98-0x0000000189CCBCF4
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDEA444-0x000000018BDEA528
+		protected override void UpdateValueLabel() {} // 0x0000000181377E40-0x0000000181377E50
+		private IEnumerator RefreshAfterSanitization() => default; // 0x000000018BDEA574-0x000000018BDEA5C0
 	}
 
-	public class DebugUIHandlerFloatField : DebugUIHandlerWidget // TypeDefIndex: 53666
+	public class DebugUIHandlerFloatField : DebugUIHandlerWidget // TypeDefIndex: 54659
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6483,43 +6960,43 @@ namespace UnityEngine.Rendering.UI
 		private DebugUI.FloatField m_Field; // 0x68
 	
 		// Constructors
-		public DebugUIHandlerFloatField() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerFloatField() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCC28C-0x0000000189CCC31C
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCC230-0x0000000189CCC28C
-		public override void OnDeselection() {} // 0x0000000189CCC1C4-0x0000000189CCC220
-		public override void OnIncrement(bool fast) {} // 0x0000000189CCC220-0x0000000189CCC230
-		public override void OnDecrement(bool fast) {} // 0x0000000189CCC1B4-0x0000000189CCC1C4
-		private void ChangeValue(bool fast, float multiplier) {} // 0x0000000189CCC100-0x0000000189CCC1B4
-		private void UpdateValueLabel() {} // 0x0000000189CCC31C-0x0000000189CCC3CC
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE5AA8-0x000000018BDE5B38
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE5A4C-0x000000018BDE5AA8
+		public override void OnDeselection() {} // 0x000000018BDE59E0-0x000000018BDE5A3C
+		public override void OnIncrement(bool fast) {} // 0x000000018BDE5A3C-0x000000018BDE5A4C
+		public override void OnDecrement(bool fast) {} // 0x000000018BDE59D0-0x000000018BDE59E0
+		private void ChangeValue(bool fast, float multiplier) {} // 0x000000018BDE591C-0x000000018BDE59D0
+		private void UpdateValueLabel() {} // 0x000000018BDE5B38-0x000000018BDE5BE8
 	}
 
-	public class DebugUIHandlerFoldout : DebugUIHandlerWidget // TypeDefIndex: 53667
+	public class DebugUIHandlerFoldout : DebugUIHandlerWidget // TypeDefIndex: 54660
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
 		public UIFoldout valueToggle; // 0x60
 		private DebugUI.Foldout m_Field; // 0x68
 		private DebugUIHandlerContainer m_Container; // 0x70
-		private const float xDecal = 60f; // Metadata: 0x01FD485A
-		private const float xDecalInit = 230f; // Metadata: 0x01FD485E
+		private const float xDecal = 60f; // Metadata: 0x0207A081
+		private const float xDecalInit = 230f; // Metadata: 0x0207A085
 	
 		// Constructors
-		public DebugUIHandlerFoldout() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerFoldout() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCC5C8-0x0000000189CCC9A4
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCC4EC-0x0000000189CCC5C8
-		public override void OnDeselection() {} // 0x0000000189CC3B24-0x0000000189CC3B54
-		public override void OnIncrement(bool fast) {} // 0x0000000189CCC4C8-0x0000000189CCC4EC
-		public override void OnDecrement(bool fast) {} // 0x0000000189CCC4A4-0x0000000189CCC4C8
-		public override void OnAction() {} // 0x0000000189CCC478-0x0000000189CCC4A4
-		private void UpdateValue() {} // 0x0000000189CCC9A4-0x0000000189CCC9D8
-		public override DebugUIHandlerWidget Next() => default; // 0x0000000189CCC3CC-0x0000000189CCC478
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE5DE4-0x000000018BDE61C0
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE5D08-0x000000018BDE5DE4
+		public override void OnDeselection() {} // 0x000000018BDDD340-0x000000018BDDD370
+		public override void OnIncrement(bool fast) {} // 0x000000018BDE5CE4-0x000000018BDE5D08
+		public override void OnDecrement(bool fast) {} // 0x000000018BDE5CC0-0x000000018BDE5CE4
+		public override void OnAction() {} // 0x000000018BDE5C94-0x000000018BDE5CC0
+		private void UpdateValue() {} // 0x000000018BDE61C0-0x000000018BDE61F4
+		public override DebugUIHandlerWidget Next() => default; // 0x000000018BDE5BE8-0x000000018BDE5C94
 	}
 
-	public class DebugUIHandlerGroup : DebugUIHandlerWidget // TypeDefIndex: 53668
+	public class DebugUIHandlerGroup : DebugUIHandlerWidget // TypeDefIndex: 54661
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6528,29 +7005,29 @@ namespace UnityEngine.Rendering.UI
 		private DebugUIHandlerContainer m_Container; // 0x70
 	
 		// Constructors
-		public DebugUIHandlerGroup() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerGroup() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCCB20-0x0000000189CCCC04
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCCA74-0x0000000189CCCB20
-		public override DebugUIHandlerWidget Next() => default; // 0x0000000189CCC9D8-0x0000000189CCCA74
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE633C-0x000000018BDE6420
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE6290-0x000000018BDE633C
+		public override DebugUIHandlerWidget Next() => default; // 0x000000018BDE61F4-0x000000018BDE6290
 	}
 
-	public class DebugUIHandlerHBox : DebugUIHandlerWidget // TypeDefIndex: 53669
+	public class DebugUIHandlerHBox : DebugUIHandlerWidget // TypeDefIndex: 54662
 	{
 		// Fields
 		private DebugUIHandlerContainer m_Container; // 0x58
 	
 		// Constructors
-		public DebugUIHandlerHBox() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerHBox() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCCD4C-0x0000000189CCCDAC
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCCCA0-0x0000000189CCCD4C
-		public override DebugUIHandlerWidget Next() => default; // 0x0000000189CCCC04-0x0000000189CCCCA0
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE6568-0x000000018BDE65C8
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE64BC-0x000000018BDE6568
+		public override DebugUIHandlerWidget Next() => default; // 0x000000018BDE6420-0x000000018BDE64BC
 	}
 
-	public class DebugUIHandlerIndirectFloatField : DebugUIHandlerWidget // TypeDefIndex: 53670
+	public class DebugUIHandlerIndirectFloatField : DebugUIHandlerWidget // TypeDefIndex: 54663
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6562,19 +7039,19 @@ namespace UnityEngine.Rendering.UI
 		public Func<float> decimalsGetter; // 0x88
 	
 		// Constructors
-		public DebugUIHandlerIndirectFloatField() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerIndirectFloatField() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		public void Init() {} // 0x0000000189CCCE68-0x0000000189CCCE70
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCC230-0x0000000189CCC28C
-		public override void OnDeselection() {} // 0x0000000189CCC1C4-0x0000000189CCC220
-		public override void OnIncrement(bool fast) {} // 0x0000000189CCCE80-0x0000000189CCCE90
-		public override void OnDecrement(bool fast) {} // 0x0000000189CCCE70-0x0000000189CCCE80
-		private void ChangeValue(bool fast, float multiplier) {} // 0x0000000189CCCDAC-0x0000000189CCCE68
-		private void UpdateValueLabel() {} // 0x0000000189CCCE90-0x0000000189CCCF6C
+		public void Init() {} // 0x000000018BDE6684-0x000000018BDE668C
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE5A4C-0x000000018BDE5AA8
+		public override void OnDeselection() {} // 0x000000018BDE59E0-0x000000018BDE5A3C
+		public override void OnIncrement(bool fast) {} // 0x000000018BDE669C-0x000000018BDE66AC
+		public override void OnDecrement(bool fast) {} // 0x000000018BDE668C-0x000000018BDE669C
+		private void ChangeValue(bool fast, float multiplier) {} // 0x000000018BDE65C8-0x000000018BDE6684
+		private void UpdateValueLabel() {} // 0x000000018BDE66AC-0x000000018BDE6788
 	}
 
-	public class DebugUIHandlerIndirectToggle : DebugUIHandlerWidget // TypeDefIndex: 53671
+	public class DebugUIHandlerIndirectToggle : DebugUIHandlerWidget // TypeDefIndex: 54664
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6585,18 +7062,18 @@ namespace UnityEngine.Rendering.UI
 		internal int index; // 0x80
 	
 		// Constructors
-		public DebugUIHandlerIndirectToggle() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerIndirectToggle() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		public void Init() {} // 0x0000000189CCCF6C-0x0000000189CCD024
-		private void OnToggleValueChanged(bool value) {} // 0x0000000189CCD130-0x0000000189CCD160
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCD0D4-0x0000000189CCD130
-		public override void OnDeselection() {} // 0x0000000189CCD078-0x0000000189CCD0D4
-		public override void OnAction() {} // 0x0000000189CCD024-0x0000000189CCD078
-		internal void UpdateValueLabel() {} // 0x0000000189CCD160-0x0000000189CCD1EC
+		public void Init() {} // 0x000000018BDE6788-0x000000018BDE6840
+		private void OnToggleValueChanged(bool value) {} // 0x000000018BDE694C-0x000000018BDE697C
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE68F0-0x000000018BDE694C
+		public override void OnDeselection() {} // 0x000000018BDE6894-0x000000018BDE68F0
+		public override void OnAction() {} // 0x000000018BDE6840-0x000000018BDE6894
+		internal void UpdateValueLabel() {} // 0x000000018BDE697C-0x000000018BDE6A08
 	}
 
-	public class DebugUIHandlerIntField : DebugUIHandlerWidget // TypeDefIndex: 53672
+	public class DebugUIHandlerIntField : DebugUIHandlerWidget // TypeDefIndex: 54665
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6604,19 +7081,19 @@ namespace UnityEngine.Rendering.UI
 		private DebugUI.IntField m_Field; // 0x68
 	
 		// Constructors
-		public DebugUIHandlerIntField() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerIntField() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCD2C0-0x0000000189CCD350
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCC230-0x0000000189CCC28C
-		public override void OnDeselection() {} // 0x0000000189CCC1C4-0x0000000189CCC220
-		public override void OnIncrement(bool fast) {} // 0x0000000189CCD2B0-0x0000000189CCD2C0
-		public override void OnDecrement(bool fast) {} // 0x0000000189CCD2A0-0x0000000189CCD2B0
-		private void ChangeValue(bool fast, int multiplier) {} // 0x0000000189CCD1EC-0x0000000189CCD2A0
-		private void UpdateValueLabel() {} // 0x0000000189CCD350-0x0000000189CCD408
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE6ADC-0x000000018BDE6B6C
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE5A4C-0x000000018BDE5AA8
+		public override void OnDeselection() {} // 0x000000018BDE59E0-0x000000018BDE5A3C
+		public override void OnIncrement(bool fast) {} // 0x000000018BDE6ACC-0x000000018BDE6ADC
+		public override void OnDecrement(bool fast) {} // 0x000000018BDE6ABC-0x000000018BDE6ACC
+		private void ChangeValue(bool fast, int multiplier) {} // 0x000000018BDE6A08-0x000000018BDE6ABC
+		private void UpdateValueLabel() {} // 0x000000018BDE6B6C-0x000000018BDE6C24
 	}
 
-	public class DebugUIHandlerMessageBox : DebugUIHandlerWidget // TypeDefIndex: 53673
+	public class DebugUIHandlerMessageBox : DebugUIHandlerWidget // TypeDefIndex: 54666
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6627,15 +7104,15 @@ namespace UnityEngine.Rendering.UI
 		private static Color32 k_ErrorTextColor; // 0x0C
 	
 		// Constructors
-		public DebugUIHandlerMessageBox() {} // 0x0000000189CC4274-0x0000000189CC427C
-		static DebugUIHandlerMessageBox() {} // 0x0000000189CCD538-0x0000000189CCD5D0
+		public DebugUIHandlerMessageBox() {} // 0x000000018BDDDA90-0x000000018BDDDA98
+		static DebugUIHandlerMessageBox() {} // 0x000000018BDE6D54-0x000000018BDE6DEC
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCD408-0x0000000189CCD538
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018115F4C0-0x000000018115F530
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE6C24-0x000000018BDE6D54
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x00000001814A81B0-0x00000001814A81C0
 	}
 
-	public class DebugUIHandlerPanel : MonoBehaviour // TypeDefIndex: 53674
+	public class DebugUIHandlerPanel : MonoBehaviour // TypeDefIndex: 54667
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x18
@@ -6649,51 +7126,64 @@ namespace UnityEngine.Rendering.UI
 		protected internal DebugUI.Panel m_Panel; // 0x58
 	
 		// Constructors
-		public DebugUIHandlerPanel() {} // 0x000000018426FE60-0x000000018426FE68
+		public DebugUIHandlerPanel() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		private void OnEnable() {} // 0x0000000189CCD784-0x0000000189CCD840
-		internal void SetPanel(DebugUI.Panel panel) {} // 0x0000000189CCD91C-0x0000000189CCD958
-		internal DebugUI.Panel GetPanel() => default; // 0x0000000183D4EAA0-0x0000000183D4EAB0
-		public void SelectNextItem() {} // 0x0000000189CCD8DC-0x0000000189CCD8FC
-		public void SelectPreviousItem() {} // 0x0000000189CCD8FC-0x0000000189CCD91C
-		public void OnScrollbarClicked() {} // 0x0000000189CCD840-0x0000000189CCD890
-		internal void SetScrollTarget(DebugUIHandlerWidget target) {} // 0x0000000182C926C0-0x0000000182C926D0
-		internal void UpdateScroll() {} // 0x0000000189CCD958-0x0000000189CCDB08
-		private float GetYPosInScroll(RectTransform target) => default; // 0x0000000189CCD620-0x0000000189CCD784
-		internal DebugUIHandlerWidget GetFirstItem() => default; // 0x0000000189CCD5D0-0x0000000189CCD620
-		public void ResetDebugManager() {} // 0x0000000189CCD890-0x0000000189CCD8DC
+		private void OnEnable() {} // 0x000000018BDE6FA0-0x000000018BDE705C
+		internal void SetPanel(DebugUI.Panel panel) {} // 0x000000018BDE7138-0x000000018BDE7174
+		internal DebugUI.Panel GetPanel() => default; // 0x00000001813F1630-0x00000001813F1640
+		public void SelectNextItem() {} // 0x000000018BDE70F8-0x000000018BDE7118
+		public void SelectPreviousItem() {} // 0x000000018BDE7118-0x000000018BDE7138
+		public void OnScrollbarClicked() {} // 0x000000018BDE705C-0x000000018BDE70AC
+		internal void SetScrollTarget(DebugUIHandlerWidget target) {} // 0x0000000184A4E570-0x0000000184A4E580
+		internal void UpdateScroll() {} // 0x000000018BDE7174-0x000000018BDE7324
+		private float GetYPosInScroll(RectTransform target) => default; // 0x000000018BDE6E3C-0x000000018BDE6FA0
+		internal DebugUIHandlerWidget GetFirstItem() => default; // 0x000000018BDE6DEC-0x000000018BDE6E3C
+		public void ResetDebugManager() {} // 0x000000018BDE70AC-0x000000018BDE70F8
 	}
 
-	internal class DebugUIHandlerPersistentCanvas : MonoBehaviour // TypeDefIndex: 53676
+	internal class DebugUIHandlerPersistentCanvas : MonoBehaviour // TypeDefIndex: 54669
 	{
 		// Fields
 		public RectTransform panel; // 0x18
 		public RectTransform valuePrefab; // 0x20
 		private List<DebugUIHandlerValue> m_Items; // 0x28
 	
+		// Nested types
+		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 54668
+		{
+			// Fields
+			public DebugUI.Value widget; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass3_0() {} // 0x000000018BDE7490-0x000000018BDE76D4
+	
+			// Methods
+			internal bool _Toggle_b__0(DebugUIHandlerValue x) => default; // 0x000000018BDE7324-0x000000018BDE7490
+		}
+	
 		// Constructors
-		public DebugUIHandlerPersistentCanvas() {} // 0x0000000189CCDEB8-0x0000000189CCDF38
+		public DebugUIHandlerPersistentCanvas() {} // 0x000000018BDEA6A8-0x000000018BDEA6C8
 	
 		// Methods
-		internal void Toggle(DebugUI.Value widget) {} // 0x0000000189CCDC74-0x0000000189CCDEB8
-		internal void Clear() {} // 0x0000000189CCDB08-0x0000000189CCDC74
+		internal void Toggle(DebugUI.Value widget) {} // 0x000000018BDE76D4-0x000000018BDE7754
+		internal void Clear() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class DebugUIHandlerRow : DebugUIHandlerFoldout // TypeDefIndex: 53677
+	public class DebugUIHandlerRow : DebugUIHandlerFoldout // TypeDefIndex: 54670
 	{
 		// Fields
 		private float m_Timer; // 0x78
 	
 		// Constructors
-		public DebugUIHandlerRow() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerRow() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		protected override void OnEnable() {} // 0x0000000183D84A40-0x0000000183D84A50
-		protected void Update() {} // 0x0000000189CCDF38-0x0000000189CCE2F8
+		protected override void OnEnable() {} // 0x0000000185FE56D0-0x0000000185FE56E0
+		protected void Update() {} // 0x000000018BDE7754-0x000000018BDE7B14
 	}
 
-	public class DebugUIHandlerToggle : DebugUIHandlerWidget // TypeDefIndex: 53678
+	public class DebugUIHandlerToggle : DebugUIHandlerWidget // TypeDefIndex: 54671
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6702,34 +7192,55 @@ namespace UnityEngine.Rendering.UI
 		protected internal DebugUI.BoolField m_Field; // 0x70
 	
 		// Constructors
-		public DebugUIHandlerToggle() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerToggle() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCE8A0-0x0000000189CCE9B0
-		private void OnToggleValueChanged(bool value) {} // 0x0000000189CCE84C-0x0000000189CCE8A0
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCD0D4-0x0000000189CCD130
-		public override void OnDeselection() {} // 0x0000000189CCD078-0x0000000189CCD0D4
-		public override void OnAction() {} // 0x0000000189CCE7D4-0x0000000189CCE84C
-		protected internal virtual void UpdateValueLabel() {} // 0x0000000189CCE9B0-0x0000000189CCEA48
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE80BC-0x000000018BDE81CC
+		private void OnToggleValueChanged(bool value) {} // 0x000000018BDE8068-0x000000018BDE80BC
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE68F0-0x000000018BDE694C
+		public override void OnDeselection() {} // 0x000000018BDE6894-0x000000018BDE68F0
+		public override void OnAction() {} // 0x000000018BDE7FF0-0x000000018BDE8068
+		protected internal virtual void UpdateValueLabel() {} // 0x000000018BDE81CC-0x000000018BDE8264
 	}
 
-	public class DebugUIHandlerToggleHistory : DebugUIHandlerToggle // TypeDefIndex: 53680
+	public class DebugUIHandlerToggleHistory : DebugUIHandlerToggle // TypeDefIndex: 54673
 	{
 		// Fields
 		private Toggle[] historyToggles; // 0x78
-		private const float xDecal = 60f; // Metadata: 0x01FD4862
+		private const float xDecal = 60f; // Metadata: 0x0207A089
+	
+		// Nested types
+		private sealed class _RefreshAfterSanitization_d__4 : IEnumerator<object> // TypeDefIndex: 54672
+		{
+			// Fields
+			private int __1__state; // 0x10
+			private object __2__current; // 0x18
+			public DebugUIHandlerToggleHistory __4__this; // 0x20
+	
+			// Properties
+			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018BDDDA90-0x000000018BDDDA98 
+			object IEnumerator.Current { get => default; } // 0x0000000185492010-0x0000000185492020 
+	
+			// Constructors
+			public _RefreshAfterSanitization_d__4() {} // Dummy constructor
+			public _RefreshAfterSanitization_d__4(int __1__state) {} // 0x000000018BDE7B70-0x000000018BDE7EA8
+	
+			// Methods
+			void IDisposable.Dispose() {} // 0x000000018BDE7EA8-0x000000018BDE7FF0
+			private bool MoveNext() => default; // 0x000000018BDE7B14-0x000000018BDE7B70
+			void IEnumerator.Reset() {} // 0x0000000181378230-0x0000000181378240
+		}
 	
 		// Constructors
-		public DebugUIHandlerToggleHistory() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerToggleHistory() {} // 0x0000000181377E40-0x0000000181377E50
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCE354-0x0000000189CCE68C
-		protected internal override void UpdateValueLabel() {} // 0x0000000189CCE68C-0x0000000189CCE7D4
-		[IteratorStateMachine(typeof(_RefreshAfterSanitization_d__4))]
-		private IEnumerator RefreshAfterSanitization() => default; // 0x0000000189CCE2F8-0x0000000189CCE354
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDEA3A8-0x000000018BDEA444
+		protected internal override void UpdateValueLabel() {} // 0x0000000181377E40-0x0000000181377E50
+		private IEnumerator RefreshAfterSanitization() => default; // 0x000000018BDEA528-0x000000018BDEA574
 	}
 
-	public class DebugUIHandlerUIntField : DebugUIHandlerWidget // TypeDefIndex: 53681
+	public class DebugUIHandlerUIntField : DebugUIHandlerWidget // TypeDefIndex: 54674
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6737,19 +7248,19 @@ namespace UnityEngine.Rendering.UI
 		private DebugUI.UIntField m_Field; // 0x68
 	
 		// Constructors
-		public DebugUIHandlerUIntField() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerUIntField() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCEB28-0x0000000189CCEBB8
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCC230-0x0000000189CCC28C
-		public override void OnDeselection() {} // 0x0000000189CCC1C4-0x0000000189CCC220
-		public override void OnIncrement(bool fast) {} // 0x0000000189CCEB18-0x0000000189CCEB28
-		public override void OnDecrement(bool fast) {} // 0x0000000189CCEB08-0x0000000189CCEB18
-		private void ChangeValue(bool fast, int multiplier) {} // 0x0000000189CCEA48-0x0000000189CCEB08
-		private void UpdateValueLabel() {} // 0x0000000189CCEBB8-0x0000000189CCEC70
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE8344-0x000000018BDE83D4
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE5A4C-0x000000018BDE5AA8
+		public override void OnDeselection() {} // 0x000000018BDE59E0-0x000000018BDE5A3C
+		public override void OnIncrement(bool fast) {} // 0x000000018BDE8334-0x000000018BDE8344
+		public override void OnDecrement(bool fast) {} // 0x000000018BDE8324-0x000000018BDE8334
+		private void ChangeValue(bool fast, int multiplier) {} // 0x000000018BDE8264-0x000000018BDE8324
+		private void UpdateValueLabel() {} // 0x000000018BDE83D4-0x000000018BDE848C
 	}
 
-	public class DebugUIHandlerValue : DebugUIHandlerWidget // TypeDefIndex: 53682
+	public class DebugUIHandlerValue : DebugUIHandlerWidget // TypeDefIndex: 54675
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6758,31 +7269,31 @@ namespace UnityEngine.Rendering.UI
 		private float m_Timer; // 0x70
 	
 		// Constructors
-		public DebugUIHandlerValue() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerValue() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		protected override void OnEnable() {} // 0x0000000183D84A50-0x0000000183D84A60
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCEE18-0x0000000189CCEE9C
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCC230-0x0000000189CCC28C
-		public override void OnDeselection() {} // 0x0000000189CCC1C4-0x0000000189CCC220
-		private void Update() {} // 0x0000000189CCEE9C-0x0000000189CCEF38
+		protected override void OnEnable() {} // 0x0000000185FE56E0-0x0000000185FE56F0
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE8634-0x000000018BDE86B8
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE5A4C-0x000000018BDE5AA8
+		public override void OnDeselection() {} // 0x000000018BDE59E0-0x000000018BDE5A3C
+		private void Update() {} // 0x000000018BDE86B8-0x000000018BDE8754
 	}
 
-	public class DebugUIHandlerVBox : DebugUIHandlerWidget // TypeDefIndex: 53683
+	public class DebugUIHandlerVBox : DebugUIHandlerWidget // TypeDefIndex: 54676
 	{
 		// Fields
 		private DebugUIHandlerContainer m_Container; // 0x58
 	
 		// Constructors
-		public DebugUIHandlerVBox() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerVBox() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCEDB8-0x0000000189CCEE18
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCED0C-0x0000000189CCEDB8
-		public override DebugUIHandlerWidget Next() => default; // 0x0000000189CCEC70-0x0000000189CCED0C
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE85D4-0x000000018BDE8634
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE8528-0x000000018BDE85D4
+		public override DebugUIHandlerWidget Next() => default; // 0x000000018BDE848C-0x000000018BDE8528
 	}
 
-	public class DebugUIHandlerVector2 : DebugUIHandlerWidget // TypeDefIndex: 53684
+	public class DebugUIHandlerVector2 : DebugUIHandlerWidget // TypeDefIndex: 54677
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6793,21 +7304,28 @@ namespace UnityEngine.Rendering.UI
 		private DebugUIHandlerContainer m_Container; // 0x80
 	
 		// Constructors
-		public DebugUIHandlerVector2() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerVector2() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCF188-0x0000000189CCF400
-		private void SetValue(float v, bool x = false /* Metadata: 0x01FD4866 */, bool y = false /* Metadata: 0x01FD4867 */) {} // 0x0000000189CCF0D0-0x0000000189CCF188
-		private void SetupSettings(DebugUIHandlerIndirectFloatField field) {} // 0x0000000189CCF400-0x0000000189CCF53C
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCEFEC-0x0000000189CCF0D0
-		public override void OnDeselection() {} // 0x0000000189CC3B24-0x0000000189CC3B54
-		public override void OnIncrement(bool fast) {} // 0x0000000189CC3B54-0x0000000189CC3B7C
-		public override void OnDecrement(bool fast) {} // 0x0000000189CC3B00-0x0000000189CC3B24
-		public override void OnAction() {} // 0x0000000189CC3AD0-0x0000000189CC3B00
-		public override DebugUIHandlerWidget Next() => default; // 0x0000000189CCEF38-0x0000000189CCEFEC
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE89A4-0x000000018BDE8C1C
+		private void SetValue(float v, bool x = false /* Metadata: 0x0207A08D */, bool y = false /* Metadata: 0x0207A08E */) {} // 0x000000018BDE88EC-0x000000018BDE89A4
+		private void SetupSettings(DebugUIHandlerIndirectFloatField field) {} // 0x000000018BDE8C1C-0x000000018BDE8D58
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE8808-0x000000018BDE88EC
+		public override void OnDeselection() {} // 0x000000018BDDD340-0x000000018BDDD370
+		public override void OnIncrement(bool fast) {} // 0x000000018BDDD370-0x000000018BDDD398
+		public override void OnDecrement(bool fast) {} // 0x000000018BDDD31C-0x000000018BDDD340
+		public override void OnAction() {} // 0x000000018BDDD2EC-0x000000018BDDD31C
+		public override DebugUIHandlerWidget Next() => default; // 0x000000018BDE8754-0x000000018BDE8808
+		private float _SetWidget_b__6_0() => default; // 0x000000018BDE8D58-0x000000018BDE8DAC
+		private void _SetWidget_b__6_1(float x) {} // 0x000000018BDE8DAC-0x000000018BDE8DCC
+		private float _SetWidget_b__6_2() => default; // 0x000000018BDE8DCC-0x000000018BDE8E20
+		private void _SetWidget_b__6_3(float x) {} // 0x000000018BDE8E20-0x000000018BDE8E40
+		private float _SetupSettings_b__8_0() => default; // 0x000000018BDE8E40-0x000000018BDE8E60
+		private float _SetupSettings_b__8_1() => default; // 0x000000018BDE8E60-0x000000018BDE8E80
+		private float _SetupSettings_b__8_2() => default; // 0x000000018BDE8E80-0x000000018BDE8EA0
 	}
 
-	public class DebugUIHandlerVector3 : DebugUIHandlerWidget // TypeDefIndex: 53685
+	public class DebugUIHandlerVector3 : DebugUIHandlerWidget // TypeDefIndex: 54678
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6819,21 +7337,30 @@ namespace UnityEngine.Rendering.UI
 		private DebugUIHandlerContainer m_Container; // 0x88
 	
 		// Constructors
-		public DebugUIHandlerVector3() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerVector3() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CCF8F4-0x0000000189CCFC64
-		private void SetValue(float v, bool x = false /* Metadata: 0x01FD4868 */, bool y = false /* Metadata: 0x01FD4869 */, bool z = false /* Metadata: 0x01FD486A */) {} // 0x0000000189CCF81C-0x0000000189CCF8F4
-		private void SetupSettings(DebugUIHandlerIndirectFloatField field) {} // 0x0000000189CCFC64-0x0000000189CCFDA0
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CCF738-0x0000000189CCF81C
-		public override void OnDeselection() {} // 0x0000000189CC3B24-0x0000000189CC3B54
-		public override void OnIncrement(bool fast) {} // 0x0000000189CC3B54-0x0000000189CC3B7C
-		public override void OnDecrement(bool fast) {} // 0x0000000189CC3B00-0x0000000189CC3B24
-		public override void OnAction() {} // 0x0000000189CC3AD0-0x0000000189CC3B00
-		public override DebugUIHandlerWidget Next() => default; // 0x0000000189CCF684-0x0000000189CCF738
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE9110-0x000000018BDE9480
+		private void SetValue(float v, bool x = false /* Metadata: 0x0207A08F */, bool y = false /* Metadata: 0x0207A090 */, bool z = false /* Metadata: 0x0207A091 */) {} // 0x000000018BDE9038-0x000000018BDE9110
+		private void SetupSettings(DebugUIHandlerIndirectFloatField field) {} // 0x000000018BDE9480-0x000000018BDE95BC
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE8F54-0x000000018BDE9038
+		public override void OnDeselection() {} // 0x000000018BDDD340-0x000000018BDDD370
+		public override void OnIncrement(bool fast) {} // 0x000000018BDDD370-0x000000018BDDD398
+		public override void OnDecrement(bool fast) {} // 0x000000018BDDD31C-0x000000018BDDD340
+		public override void OnAction() {} // 0x000000018BDDD2EC-0x000000018BDDD31C
+		public override DebugUIHandlerWidget Next() => default; // 0x000000018BDE8EA0-0x000000018BDE8F54
+		private float _SetWidget_b__7_0() => default; // 0x000000018BDE95BC-0x000000018BDE9610
+		private void _SetWidget_b__7_1(float v) {} // 0x000000018BDE9610-0x000000018BDE9634
+		private float _SetWidget_b__7_2() => default; // 0x000000018BDE9634-0x000000018BDE9688
+		private void _SetWidget_b__7_3(float v) {} // 0x000000018BDE9688-0x000000018BDE96AC
+		private float _SetWidget_b__7_4() => default; // 0x000000018BDE96AC-0x000000018BDE9700
+		private void _SetWidget_b__7_5(float v) {} // 0x000000018BDE9700-0x000000018BDE9724
+		private float _SetupSettings_b__9_0() => default; // 0x000000018BDE9724-0x000000018BDE9744
+		private float _SetupSettings_b__9_1() => default; // 0x000000018BDE9744-0x000000018BDE9764
+		private float _SetupSettings_b__9_2() => default; // 0x000000018BDE9764-0x000000018BDE9788
 	}
 
-	public class DebugUIHandlerVector4 : DebugUIHandlerWidget // TypeDefIndex: 53686
+	public class DebugUIHandlerVector4 : DebugUIHandlerWidget // TypeDefIndex: 54679
 	{
 		// Fields
 		public UI.Text nameLabel; // 0x58
@@ -6846,54 +7373,65 @@ namespace UnityEngine.Rendering.UI
 		private DebugUIHandlerContainer m_Container; // 0x90
 	
 		// Constructors
-		public DebugUIHandlerVector4() {} // 0x0000000189CC4274-0x0000000189CC427C
+		public DebugUIHandlerVector4() {} // 0x000000018BDDDA90-0x000000018BDDDA98
 	
 		// Methods
-		internal override void SetWidget(DebugUI.Widget widget) {} // 0x0000000189CD020C-0x0000000189CD0680
-		private void SetValue(float v, bool x = false /* Metadata: 0x01FD486B */, bool y = false /* Metadata: 0x01FD486C */, bool z = false /* Metadata: 0x01FD486D */, bool w = false /* Metadata: 0x01FD486E */) {} // 0x0000000189CD0104-0x0000000189CD020C
-		private void SetupSettings(DebugUIHandlerIndirectFloatField field) {} // 0x0000000189CD0680-0x0000000189CD07BC
-		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x0000000189CD0020-0x0000000189CD0104
-		public override void OnDeselection() {} // 0x0000000189CC3B24-0x0000000189CC3B54
-		public override void OnIncrement(bool fast) {} // 0x0000000189CC3B54-0x0000000189CC3B7C
-		public override void OnDecrement(bool fast) {} // 0x0000000189CC3B00-0x0000000189CC3B24
-		public override void OnAction() {} // 0x0000000189CC3AD0-0x0000000189CC3B00
-		public override DebugUIHandlerWidget Next() => default; // 0x0000000189CCFF6C-0x0000000189CD0020
+		internal override void SetWidget(DebugUI.Widget widget) {} // 0x000000018BDE9A28-0x000000018BDE9E9C
+		private void SetValue(float v, bool x = false /* Metadata: 0x0207A092 */, bool y = false /* Metadata: 0x0207A093 */, bool z = false /* Metadata: 0x0207A094 */, bool w = false /* Metadata: 0x0207A095 */) {} // 0x000000018BDE9920-0x000000018BDE9A28
+		private void SetupSettings(DebugUIHandlerIndirectFloatField field) {} // 0x000000018BDE9E9C-0x000000018BDE9FD8
+		public override bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018BDE983C-0x000000018BDE9920
+		public override void OnDeselection() {} // 0x000000018BDDD340-0x000000018BDDD370
+		public override void OnIncrement(bool fast) {} // 0x000000018BDDD370-0x000000018BDDD398
+		public override void OnDecrement(bool fast) {} // 0x000000018BDDD31C-0x000000018BDDD340
+		public override void OnAction() {} // 0x000000018BDDD2EC-0x000000018BDDD31C
+		public override DebugUIHandlerWidget Next() => default; // 0x000000018BDE9788-0x000000018BDE983C
+		private float _SetWidget_b__8_0() => default; // 0x000000018BDE9FD8-0x000000018BDEA02C
+		private void _SetWidget_b__8_1(float x) {} // 0x000000018BDEA02C-0x000000018BDEA054
+		private float _SetWidget_b__8_2() => default; // 0x000000018BDEA054-0x000000018BDEA0A8
+		private void _SetWidget_b__8_3(float x) {} // 0x000000018BDEA0A8-0x000000018BDEA0D0
+		private float _SetWidget_b__8_4() => default; // 0x000000018BDEA0D0-0x000000018BDEA124
+		private void _SetWidget_b__8_5(float x) {} // 0x000000018BDEA124-0x000000018BDEA14C
+		private float _SetWidget_b__8_6() => default; // 0x000000018BDEA14C-0x000000018BDEA1A0
+		private void _SetWidget_b__8_7(float x) {} // 0x000000018BDEA1A0-0x000000018BDEA1C8
+		private float _SetupSettings_b__10_0() => default; // 0x000000018BDEA1C8-0x000000018BDEA1E8
+		private float _SetupSettings_b__10_1() => default; // 0x000000018BDEA1E8-0x000000018BDEA208
+		private float _SetupSettings_b__10_2() => default; // 0x000000018BDEA208-0x000000018BDEA22C
 	}
 
-	public class DebugUIHandlerWidget : MonoBehaviour // TypeDefIndex: 53687
+	public class DebugUIHandlerWidget : MonoBehaviour // TypeDefIndex: 54680
 	{
 		// Fields
-		[HideInInspector]
 		public UnityEngine.Color colorDefault; // 0x18
-		[HideInInspector]
 		public UnityEngine.Color colorSelected; // 0x28
+		private DebugUIHandlerWidget _parentUIHandler_k__BackingField; // 0x38
+		private DebugUIHandlerWidget _previousUIHandler_k__BackingField; // 0x40
+		private DebugUIHandlerWidget _nextUIHandler_k__BackingField; // 0x48
 		protected DebugUI.Widget m_Widget; // 0x50
 	
 		// Properties
-		public DebugUIHandlerWidget parentUIHandler { get; set; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 0x000000018388FF30-0x000000018388FF40
-		public DebugUIHandlerWidget previousUIHandler { get; set; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 0x0000000183CB2D80-0x0000000183CB2D90
-		public DebugUIHandlerWidget nextUIHandler { get; set; } // 0x0000000183D4EA70-0x0000000183D4EA80 0x0000000182692290-0x00000001826922A0
+		public DebugUIHandlerWidget parentUIHandler { get; set; } // 0x00000001813ECBC0-0x00000001813ECBD0 0x0000000185A16440-0x0000000185A16450
+		public DebugUIHandlerWidget previousUIHandler { get; set; } // 0x00000001813FF010-0x00000001813FF020 0x0000000185F05C80-0x0000000185F05C90
+		public DebugUIHandlerWidget nextUIHandler { get; set; } // 0x00000001813ECF20-0x00000001813ECF30 0x000000018571FEC0-0x000000018571FED0
 	
 		// Constructors
-		public DebugUIHandlerWidget() {} // 0x0000000189CD0B6C-0x0000000189CD0B8C
+		public DebugUIHandlerWidget() {} // 0x000000018BDEA388-0x000000018BDEA3A8
 	
 		// Methods
-		protected virtual void OnEnable() {} // 0x000000018350B670-0x000000018350B680
-		internal virtual void SetWidget(DebugUI.Widget widget) {} // 0x0000000182C926C0-0x0000000182C926D0
-		internal DebugUI.Widget GetWidget() => default; // 0x0000000183D4EAF0-0x0000000183D4EB00
+		protected virtual void OnEnable() {} // 0x0000000185492010-0x0000000185492020
+		internal virtual void SetWidget(DebugUI.Widget widget) {} // 0x0000000184A4E570-0x0000000184A4E580
+		internal DebugUI.Widget GetWidget() => default; // 0x0000000181460F60-0x0000000181460F70
 		protected T CastWidget<T>()
 			where T : DebugUI.Widget => default;
-		public virtual bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x000000018232EB60-0x000000018232EB70
-		public virtual void OnDeselection() {} // 0x000000018350B670-0x000000018350B680
-		public virtual void OnAction() {} // 0x000000018350B670-0x000000018350B680
-		public virtual void OnIncrement(bool fast) {} // 0x000000018350B670-0x000000018350B680
-		public virtual void OnDecrement(bool fast) {} // 0x000000018350B670-0x000000018350B680
-		public virtual DebugUIHandlerWidget Previous() => default; // 0x0000000189CD0AE8-0x0000000189CD0B6C
-		public virtual DebugUIHandlerWidget Next() => default; // 0x0000000189CD0A10-0x0000000189CD0AE8
+		public virtual bool OnSelection(bool fromNext, DebugUIHandlerWidget previous) => default; // 0x00000001840A27C0-0x00000001840A27D0
+		public virtual void OnDeselection() {} // 0x0000000185492010-0x0000000185492020
+		public virtual void OnAction() {} // 0x0000000185492010-0x0000000185492020
+		public virtual void OnIncrement(bool fast) {} // 0x0000000185492010-0x0000000185492020
+		public virtual void OnDecrement(bool fast) {} // 0x0000000185492010-0x0000000185492020
+		public virtual DebugUIHandlerWidget Previous() => default; // 0x000000018BDEA304-0x000000018BDEA388
+		public virtual DebugUIHandlerWidget Next() => default; // 0x000000018BDEA22C-0x000000018BDEA304
 	}
 
-	[ExecuteAlways]
-	public class UIFoldout : Toggle // TypeDefIndex: 53688
+	public class UIFoldout : Toggle // TypeDefIndex: 54681
 	{
 		// Fields
 		public GameObject content; // 0x1A8
@@ -6901,12 +7439,12 @@ namespace UnityEngine.Rendering.UI
 		public GameObject arrowClosed; // 0x1B8
 	
 		// Constructors
-		public UIFoldout() {} // 0x0000000189CD11D4-0x0000000189CD11DC
+		public UIFoldout() {} // 0x000000018BDEA9F0-0x000000018BDEA9F8
 	
 		// Methods
-		protected override void Start() {} // 0x0000000189CD1110-0x0000000189CD11D4
-		private void OnValidate() {} // 0x0000000189CD0F10-0x0000000189CD0F24
-		public void SetState(bool state) {} // 0x0000000189CD0F24-0x0000000189CD0F30
-		public void SetState(bool state, bool rebuildLayout) {} // 0x0000000189CD0F30-0x0000000189CD1110
+		protected override void Start() {} // 0x000000018BDEA92C-0x000000018BDEA9F0
+		private void OnValidate() {} // 0x000000018BDEA72C-0x000000018BDEA740
+		public void SetState(bool state) {} // 0x000000018BDEA740-0x000000018BDEA74C
+		public void SetState(bool state, bool rebuildLayout) {} // 0x000000018BDEA74C-0x000000018BDEA92C
 	}
 }

@@ -3,91 +3,73 @@
  */
 
 using System;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using Beyond;
 using Beyond.Gameplay.Core;
 using IFix.Core;
-using Unity.Burst;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-// Image 99: SkeletalUnsafe.Gameplay.Beyond.dll - Assembly: SkeletalUnsafe.Gameplay.Beyond, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59526-59549
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 102: SkeletalUnsafe.Gameplay.Beyond.dll - Assembly: SkeletalUnsafe.Gameplay.Beyond, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60630-60653
 
-[DOTSCompilerGenerated]
-internal class __JobReflectionRegistrationOutput__2734917912 // TypeDefIndex: 59545
+internal class __JobReflectionRegistrationOutput__668062907 // TypeDefIndex: 60649
 {
 	// Constructors
-	public __JobReflectionRegistrationOutput__2734917912() {} // Dummy constructor
+	public __JobReflectionRegistrationOutput__668062907() {} // Dummy constructor
 
 	// Methods
-	public static void CreateJobReflectionData() {} // 0x000000018227D630-0x000000018227DE40
-	[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
-	public static void EarlyInit() {} // 0x000000018227DE40-0x000000018228B0F0
+	public static void CreateJobReflectionData() {} // 0x0000000183EAF2C0-0x0000000183EAFAD0
+	public static void EarlyInit() {} // 0x0000000183EAFAD0-0x0000000183EB5BA0
 }
 
 namespace Beyond.Gameplay.Core
 {
-	public static class NativeArrayExtensions // TypeDefIndex: 59529
+	public static class NativeArrayExtensions // TypeDefIndex: 60633
 	{
 		// Methods
 		public static void FastCopy<T>(NativeArray<T> src, NativeArray<T> dst)
 			where T : struct {}
 	}
 
-	public static class SkeletalMorphUnsafeJobDefines // TypeDefIndex: 59533
+	public static class SkeletalMorphUnsafeJobDefines // TypeDefIndex: 60637
 	{
 		// Nested types
-		public static class SimpleWriteLock // TypeDefIndex: 59530
+		public static class SimpleWriteLock // TypeDefIndex: 60634
 		{
 			// Methods
-			public static bool EnterLock(NativeArray<int> lockFlag, int maxSpinCount = 10000 /* Metadata: 0x01FDD193 */) => default; // 0x000000018966E29C-0x000000018966E350
-			public static void MainThreadEnterLock(NativeArray<int> lockFlag, int millisecondsTimeout = 500 /* Metadata: 0x01FDD197 */, int spinBeforeTiming = 1000 /* Metadata: 0x01FDD199 */) {} // 0x0000000182FABFA0-0x0000000182FAC120
-			public static void ExitLock(NativeArray<int> lockFlag) {} // 0x0000000182FABF50-0x0000000182FABFA0
+			public static bool EnterLock(NativeArray<int> lockFlag, int maxSpinCount = 10000 /* Metadata: 0x02082A7F */) => default; // 0x000000018B7943B8-0x000000018B79446C
+			public static void MainThreadEnterLock(NativeArray<int> lockFlag, int millisecondsTimeout = 500 /* Metadata: 0x02082A83 */, int spinBeforeTiming = 1000 /* Metadata: 0x02082A85 */) {} // 0x00000001847DF380-0x00000001847DF500
+			public static void ExitLock(NativeArray<int> lockFlag) {} // 0x00000001847DF330-0x00000001847DF380
 		}
 	
-		[BurstCompile]
-		public struct TrackerLock : IJob // TypeDefIndex: 59531
+		public struct TrackerLock : IJob // TypeDefIndex: 60635
 		{
 			// Fields
-			[NativeDisableParallelForRestriction]
 			public NativeArray<int> flag; // 0x00
-			[NativeDisableParallelForRestriction]
 			public bool isEnter; // 0x10
 	
 			// Methods
-			public void Execute() {} // 0x000000018966E518-0x000000018966E58C
+			public void Execute() {} // 0x000000018B794634-0x000000018B7946A8
 		}
 	
-		[BurstCompile]
-		public struct ApplyBoneToAnimatorTransJob : IJob // TypeDefIndex: 59532
+		public struct ApplyBoneToAnimatorTransJob : IJob // TypeDefIndex: 60636
 		{
 			// Fields
-			[ReadOnly]
 			public bool runtime_writeNoDirty; // 0x00
-			[ReadOnly]
 			public float runtime_applyWeight; // 0x04
-			[NativeDisableParallelForRestriction]
 			public NativeArray<FBoneRuntimeData> runtime_allBoneBasePose; // 0x08
-			[NativeDisableParallelForRestriction]
 			public NativeArray<FBoneRuntimeData> runtime_allBonePose; // 0x18
-			[NativeDisableUnsafePtrRestriction]
 			public AnimationTransformRWBufferHandle runtime_allBonesTransformRWBufferHandle; // 0x28
 	
 			// Methods
-			public void Execute() {} // 0x000000018966AD10-0x000000018966AF24
-			public static void CleanAnimatorTransJob(AnimationTransformRWBufferHandle rwHandler) {} // 0x0000000182514AD0-0x0000000182514B20
-			public static void SetAnimatorTransPhysicsRatioPtr(AnimationTransformRWBufferHandle rwHandler, float value) {} // 0x00000001829F8070-0x00000001829F8100
+			public void Execute() {} // 0x000000018B790E2C-0x000000018B791040
+			public static void CleanAnimatorTransJob(AnimationTransformRWBufferHandle rwHandler) {} // 0x00000001841E7B00-0x00000001841E8710
+			public static void SetAnimatorTransPhysicsRatioPtr(AnimationTransformRWBufferHandle rwHandler, float value) {} // 0x00000001847DF750-0x00000001847DF7E0
 		}
 	}
 
-	public struct FSkeletalMorphShaderPropMappingData // TypeDefIndex: 59534
+	public struct FSkeletalMorphShaderPropMappingData // TypeDefIndex: 60638
 	{
 		// Fields
 		public int vectorIndex; // 0x00
@@ -96,7 +78,7 @@ namespace Beyond.Gameplay.Core
 		public int paramRuntimeIdx; // 0x0C
 	}
 
-	public struct FBoneRuntimeData // TypeDefIndex: 59535
+	public struct FBoneRuntimeData // TypeDefIndex: 60639
 	{
 		// Fields
 		public Vector3 pos; // 0x00
@@ -105,11 +87,11 @@ namespace Beyond.Gameplay.Core
 		public bool bIsDirty; // 0x24
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018966AF24-0x000000018966B038
-		public string __iFixBaseProxy_ToString() => default; // 0x000000018966B038-0x000000018966B09C
+		public override string ToString() => default; // 0x000000018B791040-0x000000018B791154
+		public string __iFixBaseProxy_ToString() => default; // 0x000000018B791154-0x000000018B7911B8
 	}
 
-	public struct FSkeletalMorphBoneData // TypeDefIndex: 59536
+	public struct FSkeletalMorphBoneData // TypeDefIndex: 60640
 	{
 		// Fields
 		public int boneNameHash; // 0x00
@@ -119,8 +101,7 @@ namespace Beyond.Gameplay.Core
 		public Vector3 scale; // 0x20
 	}
 
-	[Flags]
-	public enum EMorphPartType // TypeDefIndex: 59537
+	public enum EMorphPartType // TypeDefIndex: 60641
 	{
 		None = 0,
 		REyeMorphs = 1,
@@ -134,7 +115,7 @@ namespace Beyond.Gameplay.Core
 		All = 255
 	}
 
-	public struct FSkeletalMorphMappingData // TypeDefIndex: 59538
+	public struct FSkeletalMorphMappingData // TypeDefIndex: 60642
 	{
 		// Fields
 		public int id; // 0x00
@@ -150,15 +131,15 @@ namespace Beyond.Gameplay.Core
 		// Constructors
 		static FSkeletalMorphMappingData() {
 			s_defaultMappingData = default;
-		} // 0x000000018350B670-0x000000018350B680
+		} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public bool IsValid() => default; // 0x000000018966B390-0x000000018966B3DC
-		public FSkeletalMorphBoneData GetBoneData(int idx) => default; // 0x000000018966B284-0x000000018966B390
-		public void SetMapping(NativeArray<FSkeletalMorphBoneData> bigList, int bonesOffset, int bonesLen) {} // 0x00000001829F2B10-0x00000001829F2B90
+		public bool IsValid() => default; // 0x000000018B7914AC-0x000000018B7914F8
+		public FSkeletalMorphBoneData GetBoneData(int idx) => default; // 0x000000018B7913A0-0x000000018B7914AC
+		public void SetMapping(NativeArray<FSkeletalMorphBoneData> bigList, int bonesOffset, int bonesLen) {} // 0x00000001847DF7E0-0x00000001847DF860
 	}
 
-	public struct PtrList<T> // TypeDefIndex: 59539
+	public struct PtrList<T> // TypeDefIndex: 60643
 		where T : struct
 	{
 		// Fields
@@ -166,7 +147,7 @@ namespace Beyond.Gameplay.Core
 		public unsafe T* data;
 	}
 
-	public struct FSkeletalMorphAnim // TypeDefIndex: 59540
+	public struct FSkeletalMorphAnim // TypeDefIndex: 60644
 	{
 		// Fields
 		public static FSkeletalMorphAnim INVALID; // 0x00
@@ -188,34 +169,32 @@ namespace Beyond.Gameplay.Core
 		// Constructors
 		static FSkeletalMorphAnim() {
 			INVALID = default;
-		} // 0x000000018350B670-0x000000018350B680
+		} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public bool IsValid() => default; // 0x00000001829F2EF0-0x00000001829F2F80
-		public NativeArray<FMorphCtrlCurve> Create(EMorphPartType partType, int curveLen) => default; // 0x0000000182CFCC30-0x0000000182CFCD60
+		public bool IsValid() => default; // 0x00000001847DFBC0-0x00000001847DFC50
+		public NativeArray<FMorphCtrlCurve> Create(EMorphPartType partType, int curveLen) => default; // 0x00000001847DEFD0-0x00000001847DF100
 		public bool GetCurveData(EMorphPartType partType, int idx, out FMorphCtrlCurve curve) {
 			curve = default;
 			return default;
-		} // 0x000000018966B09C-0x000000018966B1DC
-		public int GetCurveLen(EMorphPartType partType) => default; // 0x000000018966B1DC-0x000000018966B284
-		public void SetCurveData(EMorphPartType partType, int idx, ref FMorphCtrlCurve curve) {} // 0x0000000182CFCB10-0x0000000182CFCC30
+		} // 0x000000018B7911B8-0x000000018B7912F8
+		public int GetCurveLen(EMorphPartType partType) => default; // 0x000000018B7912F8-0x000000018B7913A0
+		public void SetCurveData(EMorphPartType partType, int idx, ref FMorphCtrlCurve curve) {} // 0x00000001847DF100-0x00000001847DF220
 	}
 
-	public struct FMorphCtrlCurve // TypeDefIndex: 59541
+	public struct FMorphCtrlCurve // TypeDefIndex: 60645
 	{
 		// Fields
-		public const int RESOLUTION = 30; // Metadata: 0x01FDD1A8
+		public const int RESOLUTION = 30; // Metadata: 0x02082A94
 		public int ctrlNameHash; // 0x00
 		public FPtrAnimNativeCurve curve; // 0x08
 	
 		// Methods
-		[IDTag(0)]
-		public NativeArray<Keyframe> Create(string name, AnimationCurve animCurve, Unity.Collections.Allocator allocator) => default; // 0x0000000182FAC6A0-0x0000000182FAC760
-		[IDTag(1)]
-		public NativeArray<Keyframe> Create(string name, float poseVal, Unity.Collections.Allocator allocator) => default; // 0x0000000182CFBFB0-0x0000000182CFC070
+		public NativeArray<Keyframe> Create(string name, AnimationCurve animCurve, Unity.Collections.Allocator allocator) => default; // 0x0000000184879870-0x0000000184879930
+		public NativeArray<Keyframe> Create(string name, float poseVal, Unity.Collections.Allocator allocator) => default; // 0x000000018487A980-0x000000018487AA40
 	}
 
-	public struct FSkeletalMorphPose // TypeDefIndex: 59542
+	public struct FSkeletalMorphPose // TypeDefIndex: 60646
 	{
 		// Fields
 		public static FSkeletalMorphPose INVALID; // 0x00
@@ -230,28 +209,28 @@ namespace Beyond.Gameplay.Core
 		// Constructors
 		static FSkeletalMorphPose() {
 			INVALID = default;
-		} // 0x000000018350B670-0x000000018350B680
+		} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		public bool IsValid() => default; // 0x000000018966B704-0x000000018966B778
-		public int AllCurveNum() => default; // 0x000000018966B3DC-0x000000018966B434
-		public NativeArray<FMorphCtrlValue> Create(EMorphPartType partType, int curveLen) => default; // 0x000000018966B434-0x000000018966B588
+		public bool IsValid() => default; // 0x000000018B791820-0x000000018B791894
+		public int AllCurveNum() => default; // 0x000000018B7914F8-0x000000018B791550
+		public NativeArray<FMorphCtrlValue> Create(EMorphPartType partType, int curveLen) => default; // 0x000000018B791550-0x000000018B7916A4
 		public bool GetValueData(EMorphPartType partType, int idx, out FMorphCtrlValue curve) {
 			curve = default;
 			return default;
-		} // 0x000000018966B588-0x000000018966B674
-		public int GetValueLen(EMorphPartType partType) => default; // 0x000000018966B674-0x000000018966B704
-		public void SetValueData(EMorphPartType partType, int idx, ref FMorphCtrlValue curve) {} // 0x000000018966B778-0x000000018966B854
+		} // 0x000000018B7916A4-0x000000018B791790
+		public int GetValueLen(EMorphPartType partType) => default; // 0x000000018B791790-0x000000018B791820
+		public void SetValueData(EMorphPartType partType, int idx, ref FMorphCtrlValue curve) {} // 0x000000018B791894-0x000000018B791970
 	}
 
-	public struct FMorphCtrlValue // TypeDefIndex: 59543
+	public struct FMorphCtrlValue // TypeDefIndex: 60647
 	{
 		// Fields
 		public int ctrlNameHash; // 0x00
 		public float value; // 0x04
 	}
 
-	public static class SkeletalMorphUnsafeJobUtils // TypeDefIndex: 59544
+	public static class SkeletalMorphUnsafeJobUtils // TypeDefIndex: 60648
 	{
 		// Methods
 		public static ref ref T GetUnsafeElementRef<T>(NativeArray<T> array, int idx)
@@ -259,13 +238,13 @@ namespace Beyond.Gameplay.Core
 		private ref T _refReturnTypeForGetUnsafeElementRef; // Dummy field
 		public static void SetUnsafeElementRef<T>(NativeArray<T> array, int idx, ref ref T val)
 			where T : struct {}
-		public static Quaternion FromMaya(Vector3 eulerAngle) => default; // 0x000000018966E350-0x000000018966E518
+		public static Quaternion FromMaya(Vector3 eulerAngle) => default; // 0x000000018B79446C-0x000000018B794634
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 59546
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 60650
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -275,72 +254,72 @@ namespace IFix
 	
 		// Constructors
 		public ILFixDynamicMethodWrapper() {} // Dummy constructor
-		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000183020510-0x0000000183020540
-		static ILFixDynamicMethodWrapper() {} // 0x0000000183D05720-0x0000000183D05790
+		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000184E6FCD0-0x0000000184E6FD00
+		static ILFixDynamicMethodWrapper() {} // 0x0000000185F64010-0x0000000185F64080
 	
 		// Methods
-		public bool __Gen_Wrap_0(NativeArray<int> P0, int P1) => default; // 0x000000018966B854-0x000000018966B960
-		public void __Gen_Wrap_1(NativeArray<int> P0, int P1, int P2) {} // 0x000000018966CCF4-0x000000018966CE20
-		public void __Gen_Wrap_2(NativeArray<int> P0) {} // 0x000000018966D7A8-0x000000018966D8A0
-		public void __Gen_Wrap_3(ref SkeletalMorphUnsafeJobDefines.TrackerLock P0) {} // 0x000000018966D8A0-0x000000018966D9D4
-		public Quaternion __Gen_Wrap_4(Vector3 P0) => default; // 0x000000018966D9D4-0x000000018966DAFC
-		public void __Gen_Wrap_5(ref SkeletalMorphUnsafeJobDefines.ApplyBoneToAnimatorTransJob P0) {} // 0x000000018966DAFC-0x000000018966DCD8
-		public void __Gen_Wrap_6(AnimationTransformRWBufferHandle P0) {} // 0x000000018966DCD8-0x000000018966DE00
-		public void __Gen_Wrap_7(AnimationTransformRWBufferHandle P0, float P1) {} // 0x000000018966DE00-0x000000018966DF50
-		public string __Gen_Wrap_8(ref FBoneRuntimeData P0) => default; // 0x000000018966DF50-0x000000018966E0B4
-		public bool __Gen_Wrap_9(ref FSkeletalMorphMappingData P0) => default; // 0x000000018966E0B4-0x000000018966E208
-		public FSkeletalMorphBoneData __Gen_Wrap_10(ref FSkeletalMorphMappingData P0, int P1) => default; // 0x000000018966B960-0x000000018966BB14
-		public void __Gen_Wrap_11(ref FSkeletalMorphMappingData P0, NativeArray<FSkeletalMorphBoneData> P1, int P2, int P3) {} // 0x000000018966BB14-0x000000018966BCD4
-		public bool __Gen_Wrap_12(ref FSkeletalMorphAnim P0) => default; // 0x000000018966BCD4-0x000000018966BEC4
-		public NativeArray<FMorphCtrlCurve> __Gen_Wrap_13(ref FSkeletalMorphAnim P0, EMorphPartType P1, int P2) => default; // 0x000000018966BEC4-0x000000018966C104
+		public bool __Gen_Wrap_0(NativeArray<int> P0, int P1) => default; // 0x000000018B791970-0x000000018B791A7C
+		public void __Gen_Wrap_1(NativeArray<int> P0, int P1, int P2) {} // 0x000000018B792E10-0x000000018B792F3C
+		public void __Gen_Wrap_2(NativeArray<int> P0) {} // 0x000000018B7938C4-0x000000018B7939BC
+		public void __Gen_Wrap_3(ref SkeletalMorphUnsafeJobDefines.TrackerLock P0) {} // 0x000000018B7939BC-0x000000018B793AF0
+		public Quaternion __Gen_Wrap_4(Vector3 P0) => default; // 0x000000018B793AF0-0x000000018B793C18
+		public void __Gen_Wrap_5(ref SkeletalMorphUnsafeJobDefines.ApplyBoneToAnimatorTransJob P0) {} // 0x000000018B793C18-0x000000018B793DF4
+		public void __Gen_Wrap_6(AnimationTransformRWBufferHandle P0) {} // 0x000000018B793DF4-0x000000018B793F1C
+		public void __Gen_Wrap_7(AnimationTransformRWBufferHandle P0, float P1) {} // 0x000000018B793F1C-0x000000018B79406C
+		public string __Gen_Wrap_8(ref FBoneRuntimeData P0) => default; // 0x000000018B79406C-0x000000018B7941D0
+		public bool __Gen_Wrap_9(ref FSkeletalMorphMappingData P0) => default; // 0x000000018B7941D0-0x000000018B794324
+		public FSkeletalMorphBoneData __Gen_Wrap_10(ref FSkeletalMorphMappingData P0, int P1) => default; // 0x000000018B791A7C-0x000000018B791C30
+		public void __Gen_Wrap_11(ref FSkeletalMorphMappingData P0, NativeArray<FSkeletalMorphBoneData> P1, int P2, int P3) {} // 0x000000018B791C30-0x000000018B791DF0
+		public bool __Gen_Wrap_12(ref FSkeletalMorphAnim P0) => default; // 0x000000018B791DF0-0x000000018B791FE0
+		public NativeArray<FMorphCtrlCurve> __Gen_Wrap_13(ref FSkeletalMorphAnim P0, EMorphPartType P1, int P2) => default; // 0x000000018B791FE0-0x000000018B792220
 		public bool __Gen_Wrap_14(ref FSkeletalMorphAnim P0, EMorphPartType P1, int P2, out FMorphCtrlCurve P3) {
 			P3 = default;
 			return default;
-		} // 0x000000018966C104-0x000000018966C364
-		public int __Gen_Wrap_15(ref FSkeletalMorphAnim P0, EMorphPartType P1) => default; // 0x000000018966C364-0x000000018966C558
-		public void __Gen_Wrap_16(ref FSkeletalMorphAnim P0, EMorphPartType P1, int P2, ref FMorphCtrlCurve P3) {} // 0x000000018966C558-0x000000018966C7F0
-		public NativeArray<Keyframe> __Gen_Wrap_17(ref FMorphCtrlCurve P0, object P1, object P2, Unity.Collections.Allocator P3) => default; // 0x000000018966C7F0-0x000000018966C9A8
-		public NativeArray<Keyframe> __Gen_Wrap_18(ref FMorphCtrlCurve P0, object P1, float P2, Unity.Collections.Allocator P3) => default; // 0x000000018966C9A8-0x000000018966CB60
-		public bool __Gen_Wrap_19(ref FSkeletalMorphPose P0) => default; // 0x000000018966CB60-0x000000018966CCF4
-		public int __Gen_Wrap_20(ref FSkeletalMorphPose P0) => default; // 0x000000018966CE20-0x000000018966CFB4
-		public NativeArray<FMorphCtrlValue> __Gen_Wrap_21(ref FSkeletalMorphPose P0, EMorphPartType P1, int P2) => default; // 0x000000018966CFB4-0x000000018966D1B0
+		} // 0x000000018B792220-0x000000018B792480
+		public int __Gen_Wrap_15(ref FSkeletalMorphAnim P0, EMorphPartType P1) => default; // 0x000000018B792480-0x000000018B792674
+		public void __Gen_Wrap_16(ref FSkeletalMorphAnim P0, EMorphPartType P1, int P2, ref FMorphCtrlCurve P3) {} // 0x000000018B792674-0x000000018B79290C
+		public NativeArray<Keyframe> __Gen_Wrap_17(ref FMorphCtrlCurve P0, object P1, object P2, Unity.Collections.Allocator P3) => default; // 0x000000018B79290C-0x000000018B792AC4
+		public NativeArray<Keyframe> __Gen_Wrap_18(ref FMorphCtrlCurve P0, object P1, float P2, Unity.Collections.Allocator P3) => default; // 0x000000018B792AC4-0x000000018B792C7C
+		public bool __Gen_Wrap_19(ref FSkeletalMorphPose P0) => default; // 0x000000018B792C7C-0x000000018B792E10
+		public int __Gen_Wrap_20(ref FSkeletalMorphPose P0) => default; // 0x000000018B792F3C-0x000000018B7930D0
+		public NativeArray<FMorphCtrlValue> __Gen_Wrap_21(ref FSkeletalMorphPose P0, EMorphPartType P1, int P2) => default; // 0x000000018B7930D0-0x000000018B7932CC
 		public bool __Gen_Wrap_22(ref FSkeletalMorphPose P0, EMorphPartType P1, int P2, out FMorphCtrlValue P3) {
 			P3 = default;
 			return default;
-		} // 0x000000018966D1B0-0x000000018966D3C8
-		public int __Gen_Wrap_23(ref FSkeletalMorphPose P0, EMorphPartType P1) => default; // 0x000000018966D3C8-0x000000018966D578
-		public void __Gen_Wrap_24(ref FSkeletalMorphPose P0, EMorphPartType P1, int P2, ref FMorphCtrlValue P3) {} // 0x000000018966D578-0x000000018966D7A8
+		} // 0x000000018B7932CC-0x000000018B7934E4
+		public int __Gen_Wrap_23(ref FSkeletalMorphPose P0, EMorphPartType P1) => default; // 0x000000018B7934E4-0x000000018B793694
+		public void __Gen_Wrap_24(ref FSkeletalMorphPose P0, EMorphPartType P1, int P2, ref FMorphCtrlValue P3) {} // 0x000000018B793694-0x000000018B7938C4
 	}
 
-	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 59547
+	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 60651
 	{
 		// Constructors
 		public ILFixInterfaceBridge() {} // Dummy constructor
-		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x000000018966E208-0x000000018966E29C
+		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x000000018B794324-0x000000018B7943B8
 	
 		// Methods
-		public void RefAsyncBuilderStartMethod() {} // 0x000000018350B670-0x000000018350B680
+		public void RefAsyncBuilderStartMethod() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 59548
+	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 60652
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
 	
 		// Constructors
 		public WrappersManagerImpl() {} // Dummy constructor
-		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x0000000184096E30-0x0000000184096EF0
 	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x000000018966E774-0x000000018966E7D8
-		public static bool IsPatched(int id) => default; // 0x00000001829F2F80-0x00000001829F2FF0
-		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x000000018966E630-0x000000018966E6FC
-		public object CreateWrapper(int id) => default; // 0x000000018966E6FC-0x000000018966E774
-		public object InitWrapperArray(int len) => default; // 0x000000018966E7D8-0x0000000189670D70
-		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x000000018966E58C-0x000000018966E630
+		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x000000018B794890-0x000000018B7948F4
+		public static bool IsPatched(int id) => default; // 0x00000001847DFC50-0x00000001847DFCC0
+		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x000000018B79474C-0x000000018B794818
+		public object CreateWrapper(int id) => default; // 0x000000018B794818-0x000000018B794890
+		public object InitWrapperArray(int len) => default; // 0x000000018B7948F4-0x000000018B796E8C
+		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x000000018B7946A8-0x000000018B79474C
 	}
 
-	public enum IDMAP0 // TypeDefIndex: 59549
+	public enum IDMAP0 // TypeDefIndex: 60653
 	{
 		Beyond-Gameplay-Core-SkeletalMorphUnsafeJobDefines-SimpleWriteLock-EnterLock0 = 0,
 		Beyond-Gameplay-Core-SkeletalMorphUnsafeJobDefines-SimpleWriteLock-MainThreadEnterLock0 = 1,
@@ -367,5 +346,23 @@ namespace IFix
 		Beyond-Gameplay-Core-FSkeletalMorphPose-GetValueData0 = 22,
 		Beyond-Gameplay-Core-FSkeletalMorphPose-GetValueLen0 = 23,
 		Beyond-Gameplay-Core-FSkeletalMorphPose-SetValueData0 = 24
+	}
+}
+
+namespace Microsoft.CodeAnalysis
+{
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 60631
+	{
+		// Constructors
+		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+	}
+}
+
+namespace System.Runtime.CompilerServices
+{
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 60632
+	{
+		// Constructors
+		public IsUnmanagedAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }

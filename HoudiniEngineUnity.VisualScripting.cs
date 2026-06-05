@@ -3,94 +3,100 @@
  */
 
 using System;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 
-// Image 143: HoudiniEngineUnity.VisualScripting.dll - Assembly: HoudiniEngineUnity.VisualScripting, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60137-60143
-[assembly: CompilationRelaxations(8)]
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 145: HoudiniEngineUnity.VisualScripting.dll - Assembly: HoudiniEngineUnity.VisualScripting, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61222-61228
 
 namespace HoudiniEngineUnity
 {
-	[UnitCategory("Events/Editor/Houdini Engine")]
-	[UnitShortTitle("Instantiate HDA")]
-	[UnitTitle("Houdini Engine Instantiate HDA")]
-	public class HEU_InstantiateHDA : ManualEventUnit<EmptyEventArgs> // TypeDefIndex: 60139
+	public class HEU_InstantiateHDA : ManualEventUnit<EmptyEventArgs> // TypeDefIndex: 61224
 	{
 		// Fields
-		[HEU_UnitButton("TriggerButton", "Instantiate HDA", 100)]
-		[UnitHeaderInspectable]
 		public HEU_UnitButton triggerButton; // 0x80
-		[DoNotSerialize]
 		public ValueInput inputPath; // 0x88
-		[DoNotSerialize]
 		public ValueInput inputAsync; // 0x90
-		[DoNotSerialize]
 		public ValueInput inputPosition; // 0x98
-		[DoNotSerialize]
 		public ValueOutput outputHDARoot; // 0xA0
-		[DoNotSerialize]
 		public ValueOutput outputHDAAsset; // 0xA8
-		[DoNotSerialize]
 		public ValueOutput outputSuccess; // 0xB0
 		private HEU_HoudiniAssetRoot hdaRoot; // 0xB8
 		private HEU_HoudiniAsset hdaAsset; // 0xC0
 		private bool bSuccess; // 0xC8
 	
 		// Properties
-		protected override string hookName { get => default; } // 0x00000001887F0BC4-0x00000001887F0BF0 
+		protected override string hookName { get => default; } // 0x000000018A904710-0x000000018A90474C 
+	
+		// Nested types
+		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 61223
+		{
+			// Fields
+			public Flow flow; // 0x10
+			public HEU_InstantiateHDA __4__this; // 0x18
+			public Action ContinueFlow; // 0x20
+	
+			// Constructors
+			public __c__DisplayClass13_0() {} // 0x000000018A90474C-0x000000018A904778
+	
+			// Methods
+			internal void _TriggerButton_b__0() {} // 0x000000018A904040-0x000000018A90431C
+			internal void _TriggerButton_b__1(HEU_ReloadEventData data) {} // 0x000000018A90431C-0x000000018A904710
+		}
 	
 		// Constructors
-		public HEU_InstantiateHDA() {} // 0x00000001887F0B88-0x00000001887F0BC4
+		public HEU_InstantiateHDA() {} // 0x0000000185FB2DA0-0x0000000185FB2DB0
 	
 		// Methods
-		protected override void Definition() {} // 0x00000001887F04B8-0x00000001887F0794
-		public void TriggerButton(GraphReference reference) {} // 0x00000001887F0794-0x00000001887F0B88
+		protected override void Definition() {} // 0x000000018349D710-0x000000018349D720
+		public void TriggerButton(GraphReference reference) {} // 0x0000000181B388F0-0x0000000181B38900
+		private HEU_HoudiniAssetRoot _Definition_b__12_0(Flow flow) => default; // 0x0000000185492010-0x0000000185492020
+		private HEU_HoudiniAsset _Definition_b__12_1(Flow flow) => default; // 0x000000018A904A94-0x000000018A904AE4
+		private bool _Definition_b__12_2(Flow flow) => default; // 0x000000018A904AE4-0x000000018A904B1C
 	}
 
-	[UnitCategory("Events/Editor/Houdini Engine")]
-	[UnitShortTitle("Modify HDA")]
-	[UnitTitle("Houdini Engine Modify HDA")]
-	public class HEU_ModifyHDA : ManualEventUnit<EmptyEventArgs> // TypeDefIndex: 60141
+	public class HEU_ModifyHDA : ManualEventUnit<EmptyEventArgs> // TypeDefIndex: 61226
 	{
 		// Fields
-		[HEU_UnitButton("TriggerButton", "Modify HDA", 50)]
-		[UnitHeaderInspectable]
 		public HEU_UnitButton triggerButton; // 0x80
-		[DoNotSerialize]
 		public ValueInput inputHDA; // 0x88
-		[DoNotSerialize]
 		public ValueOutput outputHDAAsset; // 0x90
 		private HEU_HoudiniAsset hdaAsset; // 0x98
 	
 		// Properties
-		protected override string hookName { get => default; } // 0x00000001887F0EE0-0x00000001887F0F0C 
+		protected override string hookName { get => default; } // 0x000000018A90488C-0x000000018A904A2C 
+	
+		// Nested types
+		private sealed class __c__DisplayClass7_0 // TypeDefIndex: 61225
+		{
+			// Fields
+			public Flow flow; // 0x10
+			public HEU_ModifyHDA __4__this; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass7_0() {} // 0x000000018A904A68-0x000000018A904A94
+	
+			// Methods
+			internal void _TriggerButton_b__0() {} // 0x000000018A904778-0x000000018A90488C
+		}
 	
 		// Constructors
-		public HEU_ModifyHDA() {} // 0x00000001887F0EA4-0x00000001887F0EE0
+		public HEU_ModifyHDA() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		protected override void Definition() {} // 0x00000001887F0BF0-0x00000001887F0D04
-		public void TriggerButton(GraphReference reference) {} // 0x00000001887F0D04-0x00000001887F0EA4
+		protected override void Definition() {} // 0x000000018A904A2C-0x000000018A904A68
+		public void TriggerButton(GraphReference reference) {} // 0x0000000181E336C0-0x0000000181E336D0
+		private HEU_HoudiniAsset _Definition_b__6_0(Flow flow) => default; // 0x000000018A904B1C-0x000000018A904B6C
 	}
 
-	[Inspectable]
-	public class HEU_UnitButton // TypeDefIndex: 60142
+	public class HEU_UnitButton // TypeDefIndex: 61227
 	{
 		// Fields
 		public Action action; // 0x10
 	
 		// Constructors
-		public HEU_UnitButton() {} // 0x000000018350B670-0x000000018350B680
+		public HEU_UnitButton() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
-	public class HEU_UnitButtonAttribute : Attribute // TypeDefIndex: 60143
+	public class HEU_UnitButtonAttribute : Attribute // TypeDefIndex: 61228
 	{
 		// Fields
 		public string functionName; // 0x10
@@ -99,6 +105,6 @@ namespace HoudiniEngineUnity
 	
 		// Constructors
 		public HEU_UnitButtonAttribute() {} // Dummy constructor
-		public HEU_UnitButtonAttribute(string fnName, string btnLabel, int btnWidth) {} // 0x0000000183864580-0x00000001838645B0
+		public HEU_UnitButtonAttribute(string fnName, string btnLabel, int btnWidth) {} // 0x00000001859D9860-0x00000001859D9890
 	}
 }

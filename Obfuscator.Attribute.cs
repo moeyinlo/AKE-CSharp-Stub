@@ -3,24 +3,20 @@
  */
 
 using System;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 
-// Image 158: Obfuscator.Attribute.dll - Assembly: Obfuscator.Attribute, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60243-60245
+// Image 159: Obfuscator.Attribute.dll - Assembly: Obfuscator.Attribute, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61320-61322
 
 namespace Beebyte.Obfuscator
 {
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Parameter | AttributeTargets.Delegate)]
-	public class SkipAttribute : Attribute // TypeDefIndex: 60244
+	public class SkipAttribute : Attribute // TypeDefIndex: 61321
 	{
 		// Constructors
-		public SkipAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public SkipAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Parameter | AttributeTargets.Delegate)]
-	public class SkipRenameAttribute : Attribute // TypeDefIndex: 60245
+	public class SkipRenameAttribute : Attribute // TypeDefIndex: 61322
 	{
 		// Constructors
-		public SkipRenameAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public SkipRenameAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 }

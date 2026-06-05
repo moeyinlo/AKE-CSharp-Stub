@@ -6,91 +6,87 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
-// Image 84: Unity.VisualScripting.Flow.dll - Assembly: Unity.VisualScripting.Flow, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59119-59172
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: InternalsVisibleTo("Unity.VisualScripting.Tests")]
-[assembly: InternalsVisibleTo("Unity.VisualScripting.Tests.Editor")]
-[assembly: InternalsVisibleTo("Unity.VisualScripting.Flow.Editor")]
-[assembly: InternalsVisibleTo("Unity.VisualScripting.State.Editor")]
-[assembly: InternalsVisibleTo("Unity.VisualScripting.State")]
-[assembly: InternalsVisibleTo("Unity.VisualScripting.SettingsProvider.Editor")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+// Image 84: Unity.VisualScripting.Flow.dll - Assembly: Unity.VisualScripting.Flow, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60144-60197
 
 namespace Unity.VisualScripting
 {
-	public sealed class ControlConnection : UnitConnection<Unity.VisualScripting.ControlOutput, Unity.VisualScripting.ControlInput>, IUnitConnection // TypeDefIndex: 59120
+	public sealed class ControlConnection : UnitConnection<Unity.VisualScripting.ControlOutput, Unity.VisualScripting.ControlInput>, IUnitConnection // TypeDefIndex: 60145
 	{
 		// Properties
-		public override ControlOutput source { get => default; } // 0x0000000189D77E9C-0x0000000189D77F04 
-		public override ControlInput destination { get => default; } // 0x0000000189D77DC0-0x0000000189D77E28 
-		IUnitOutputPort Unity.VisualScripting.IConnection<Unity.VisualScripting.IUnitOutputPort,Unity.VisualScripting.IUnitInputPort>.source { get => default; } // 0x0000000189D77C80-0x0000000189D77C88 
-		IUnitInputPort Unity.VisualScripting.IConnection<Unity.VisualScripting.IUnitOutputPort,Unity.VisualScripting.IUnitInputPort>.destination { get => default; } // 0x0000000189D77C78-0x0000000189D77C80 
-		public override bool sourceExists { get => default; } // 0x0000000189D77E28-0x0000000189D77E9C 
-		public override bool destinationExists { get => default; } // 0x0000000189D77D4C-0x0000000189D77DC0 
+		public override ControlOutput source { get => default; } // 0x000000018BE8FCAC-0x000000018BE8FD14 
+		public override ControlInput destination { get => default; } // 0x000000018BE8FBD0-0x000000018BE8FC38 
+		IUnitOutputPort Unity.VisualScripting.IConnection<Unity.VisualScripting.IUnitOutputPort,Unity.VisualScripting.IUnitInputPort>.source { get => default; } // 0x000000018BE8FA90-0x000000018BE8FA98 
+		IUnitInputPort Unity.VisualScripting.IConnection<Unity.VisualScripting.IUnitOutputPort,Unity.VisualScripting.IUnitInputPort>.destination { get => default; } // 0x000000018BE8FA88-0x000000018BE8FA90 
+		public override bool sourceExists { get => default; } // 0x000000018BE8FC38-0x000000018BE8FCAC 
+		public override bool destinationExists { get => default; } // 0x000000018BE8FB5C-0x000000018BE8FBD0 
 	
 		// Constructors
 		public ControlConnection() {} // Dummy constructor
-		public ControlConnection(ControlOutput source, ControlInput destination) {} // 0x0000000189D77C88-0x0000000189D77D4C
+		public ControlConnection(ControlOutput source, ControlInput destination) {} // 0x000000018BE8FA98-0x000000018BE8FB5C
 	}
 
-	public sealed class InvalidConnection : UnitConnection<Unity.VisualScripting.IUnitOutputPort, Unity.VisualScripting.IUnitInputPort>, IUnitConnection // TypeDefIndex: 59121
+	public sealed class InvalidConnection : UnitConnection<Unity.VisualScripting.IUnitOutputPort, Unity.VisualScripting.IUnitInputPort>, IUnitConnection // TypeDefIndex: 60146
 	{
 		// Properties
-		public override IUnitOutputPort source { get => default; } // 0x0000000189D7A87C-0x0000000189D7A930 
-		public override IUnitInputPort destination { get => default; } // 0x0000000189D7A714-0x0000000189D7A7C8 
-		public IUnitOutputPort validSource { get => default; } // 0x0000000189D7AB4C-0x0000000189D7AC00 
-		public IUnitInputPort validDestination { get => default; } // 0x0000000189D7A9E4-0x0000000189D7AA98 
-		public override bool sourceExists { get => default; } // 0x0000000189D7A7C8-0x0000000189D7A87C 
-		public override bool destinationExists { get => default; } // 0x0000000189D7A660-0x0000000189D7A714 
-		public bool validSourceExists { get => default; } // 0x0000000189D7AA98-0x0000000189D7AB4C 
-		public bool validDestinationExists { get => default; } // 0x0000000189D7A930-0x0000000189D7A9E4 
+		public override IUnitOutputPort source { get => default; } // 0x000000018BE9268C-0x000000018BE92740 
+		public override IUnitInputPort destination { get => default; } // 0x000000018BE92524-0x000000018BE925D8 
+		public IUnitOutputPort validSource { get => default; } // 0x000000018BE9295C-0x000000018BE92A10 
+		public IUnitInputPort validDestination { get => default; } // 0x000000018BE927F4-0x000000018BE928A8 
+		public override bool sourceExists { get => default; } // 0x000000018BE925D8-0x000000018BE9268C 
+		public override bool destinationExists { get => default; } // 0x000000018BE92470-0x000000018BE92524 
+		public bool validSourceExists { get => default; } // 0x000000018BE928A8-0x000000018BE9295C 
+		public bool validDestinationExists { get => default; } // 0x000000018BE92740-0x000000018BE927F4 
 	
 		// Constructors
 		public InvalidConnection() {} // Dummy constructor
-		public InvalidConnection(IUnitOutputPort source, IUnitInputPort destination) {} // 0x0000000189D7A608-0x0000000189D7A660
+		public InvalidConnection(IUnitOutputPort source, IUnitInputPort destination) {} // 0x000000018BE92418-0x000000018BE92470
 	
 		// Methods
-		public override bool HandleDependencies() => default; // 0x0000000189D7A16C-0x0000000189D7A348
+		public override bool HandleDependencies() => default; // 0x000000018BE91F7C-0x000000018BE92158
+		private bool _get_source_b__4_0(IUnitOutputPort p) => default; // 0x000000018BE92260-0x000000018BE922B8
+		private bool _get_destination_b__6_0(IUnitInputPort p) => default; // 0x000000018BE921B0-0x000000018BE92208
+		private bool _get_validSource_b__8_0(IUnitOutputPort p) => default; // 0x000000018BE923C0-0x000000018BE92418
+		private bool _get_validDestination_b__10_0(IUnitInputPort p) => default; // 0x000000018BE92310-0x000000018BE92368
+		private bool _get_sourceExists_b__12_0(IUnitOutputPort p) => default; // 0x000000018BE92208-0x000000018BE92260
+		private bool _get_destinationExists_b__14_0(IUnitInputPort p) => default; // 0x000000018BE92158-0x000000018BE921B0
+		private bool _get_validSourceExists_b__16_0(IUnitOutputPort p) => default; // 0x000000018BE92368-0x000000018BE923C0
+		private bool _get_validDestinationExists_b__18_0(IUnitInputPort p) => default; // 0x000000018BE922B8-0x000000018BE92310
 	}
 
-	public interface IUnitConnection : IConnection<Unity.VisualScripting.IUnitOutputPort, Unity.VisualScripting.IUnitInputPort>, IGraphElementWithDebugData // TypeDefIndex: 59122
+	public interface IUnitConnection : IConnection<Unity.VisualScripting.IUnitOutputPort, Unity.VisualScripting.IUnitInputPort>, IGraphElementWithDebugData // TypeDefIndex: 60147
 	{
 	}
 
-	public interface IUnitConnectionDebugData : IGraphElementDebugData // TypeDefIndex: 59123
+	public interface IUnitConnectionDebugData : IGraphElementDebugData // TypeDefIndex: 60148
 	{
 		// Properties
 		int lastInvokeFrame { get; set; }
 		float lastInvokeTime { get; set; }
 	}
 
-	public interface IUnitRelation : IConnection<Unity.VisualScripting.IUnitPort, Unity.VisualScripting.IUnitPort> // TypeDefIndex: 59124
+	public interface IUnitRelation : IConnection<Unity.VisualScripting.IUnitPort, Unity.VisualScripting.IUnitPort> // TypeDefIndex: 60149
 	{
 	}
 
-	public abstract class UnitConnection<TSourcePort, TDestinationPort> : GraphElement<Unity.VisualScripting.FlowGraph>, IConnection<TSourcePort, TDestinationPort> // TypeDefIndex: 59125
+	public abstract class UnitConnection<TSourcePort, TDestinationPort> : GraphElement<Unity.VisualScripting.FlowGraph>, IConnection<TSourcePort, TDestinationPort> // TypeDefIndex: 60150
 		where TSourcePort : class, IUnitOutputPort
 		where TDestinationPort : class, IUnitInputPort
 	{
+		// Fields
+		private IUnit _sourceUnit_k__BackingField;
+		private string _sourceKey_k__BackingField;
+		private IUnit _destinationUnit_k__BackingField;
+		private string _destinationKey_k__BackingField;
+	
 		// Properties
-		[Serialize]
 		protected IUnit sourceUnit { get; private set; }
-		[Serialize]
 		protected string sourceKey { get; private set; }
-		[Serialize]
 		protected IUnit destinationUnit { get; private set; }
-		[Serialize]
 		protected string destinationKey { get; private set; }
-		[DoNotSerialize]
 		public abstract TSourcePort source { get; }
-		[DoNotSerialize]
 		public abstract TDestinationPort destination { get; }
 		public override int dependencyOrder { get; }
 		public abstract bool sourceExists { get; }
@@ -104,33 +100,42 @@ namespace Unity.VisualScripting
 		public override bool HandleDependencies() => default;
 	}
 
-	public class UnitConnectionDebugData : IUnitConnectionDebugData // TypeDefIndex: 59126
+	public class UnitConnectionDebugData : IUnitConnectionDebugData // TypeDefIndex: 60151
 	{
+		// Fields
+		private int _lastInvokeFrame_k__BackingField; // 0x10
+		private float _lastInvokeTime_k__BackingField; // 0x14
+		private Exception _runtimeException_k__BackingField; // 0x18
+	
 		// Properties
-		public int lastInvokeFrame { get; set; } // 0x00000001810410F0-0x0000000181041100
-		public float lastInvokeTime { get; set; } // 0x0000000183D51940-0x0000000183D51950
-		public Exception runtimeException { get; set; } // 0x00000001822C3A90-0x00000001822C3AA0
+		public int lastInvokeFrame { get; set; } // 0x0000000181378230-0x0000000181378240
+		public float lastInvokeTime { get; set; } // 0x0000000181A6E390-0x0000000181A6FA00
+		public Exception runtimeException { get; set; } // 0x0000000184088E70-0x0000000184088E80
 	
 		// Constructors
 		public UnitConnectionDebugData() {} // Dummy constructor
 	}
 
-	public sealed class ValueConnection : UnitConnection<Unity.VisualScripting.ValueOutput, Unity.VisualScripting.ValueInput>, IUnitConnection // TypeDefIndex: 59128
+	public sealed class ValueConnection : UnitConnection<Unity.VisualScripting.ValueOutput, Unity.VisualScripting.ValueInput>, IUnitConnection // TypeDefIndex: 60153
 	{
 		// Properties
-		public override ValueOutput source { get => default; } // 0x0000000189D7CC1C-0x0000000189D7CC84 
-		public override ValueInput destination { get => default; } // 0x0000000189D7CB40-0x0000000189D7CBA8 
-		IUnitOutputPort Unity.VisualScripting.IConnection<Unity.VisualScripting.IUnitOutputPort,Unity.VisualScripting.IUnitInputPort>.source { get => default; } // 0x0000000189D77C80-0x0000000189D77C88 
-		IUnitInputPort Unity.VisualScripting.IConnection<Unity.VisualScripting.IUnitOutputPort,Unity.VisualScripting.IUnitInputPort>.destination { get => default; } // 0x0000000189D77C78-0x0000000189D77C80 
-		public override bool sourceExists { get => default; } // 0x0000000189D7CBA8-0x0000000189D7CC1C 
-		public override bool destinationExists { get => default; } // 0x0000000189D7CACC-0x0000000189D7CB40 
+		public override ValueOutput source { get => default; } // 0x000000018BE8FA90-0x000000018BE8FA98 
+		public override ValueInput destination { get => default; } // 0x000000018BE8FA88-0x000000018BE8FA90 
+		IUnitOutputPort Unity.VisualScripting.IConnection<Unity.VisualScripting.IUnitOutputPort,Unity.VisualScripting.IUnitInputPort>.source { get => default; } // 0x000000018BE949B8-0x000000018BE94A2C 
+		IUnitInputPort Unity.VisualScripting.IConnection<Unity.VisualScripting.IUnitOutputPort,Unity.VisualScripting.IUnitInputPort>.destination { get => default; } // 0x000000018BE948DC-0x000000018BE94950 
+		public override bool sourceExists { get => default; } // 0x000000018646EE40-0x000000018646EE50 
+		public override bool destinationExists { get => default; } // 0x00000001813B4840-0x00000001813B4850 
 	
 		// Nested types
-		public class DebugData : UnitConnectionDebugData // TypeDefIndex: 59127
+		public class DebugData : UnitConnectionDebugData // TypeDefIndex: 60152
 		{
+			// Fields
+			private object _lastValue_k__BackingField; // 0x20
+			private bool _assignedLastValue_k__BackingField; // 0x28
+	
 			// Properties
-			public object lastValue { get; set; } // 0x0000000184271930-0x0000000184271940
-			public bool assignedLastValue { get; set; } // 0x0000000183D4ED60-0x0000000183D4ED70
+			public object lastValue { get; set; } // 0x000000018BE94758-0x000000018BE948DC
+			public bool assignedLastValue { get; set; } // 0x000000018BE94A2C-0x000000018BE94A94
 	
 			// Constructors
 			public DebugData() {} // Dummy constructor
@@ -138,135 +143,161 @@ namespace Unity.VisualScripting
 	
 		// Constructors
 		public ValueConnection() {} // Dummy constructor
-		public ValueConnection(ValueOutput source, ValueInput destination) {} // 0x0000000189D7C948-0x0000000189D7CACC
+		public ValueConnection(ValueOutput source, ValueInput destination) {} // 0x000000018BE94950-0x000000018BE949B8
 	}
 
-	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = false)]
-	public class PortLabelHiddenAttribute : Attribute // TypeDefIndex: 59129
+	public class PortLabelHiddenAttribute : Attribute // TypeDefIndex: 60154
 	{
 		// Constructors
-		public PortLabelHiddenAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public PortLabelHiddenAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = false, Inherited = true)]
-	public sealed class SpecialUnitAttribute : Attribute // TypeDefIndex: 59130
+	public sealed class SpecialUnitAttribute : Attribute // TypeDefIndex: 60155
 	{
 		// Constructors
-		public SpecialUnitAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public SpecialUnitAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
-	public sealed class UnitHeaderInspectableAttribute : Attribute // TypeDefIndex: 59131
+	public sealed class UnitHeaderInspectableAttribute : Attribute // TypeDefIndex: 60156
 	{
 		// Constructors
-		public UnitHeaderInspectableAttribute() {} // 0x000000018350B670-0x000000018350B680
+		public UnitHeaderInspectableAttribute() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-	public sealed class UnitShortTitleAttribute : Attribute // TypeDefIndex: 59132
+	public sealed class UnitShortTitleAttribute : Attribute // TypeDefIndex: 60157
 	{
+		// Fields
+		private string _title_k__BackingField; // 0x10
+	
 		// Properties
-		private string title { get; set; } // 0x000000018426FEE0-0x000000018426FEF0
+		private string title { get; set; } // 0x0000000184096E30-0x0000000184096EF0
 	
 		// Constructors
 		public UnitShortTitleAttribute() {} // Dummy constructor
-		public UnitShortTitleAttribute(string title) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public UnitShortTitleAttribute(string title) {} // 0x0000000184096E30-0x0000000184096EF0
 	}
 
-	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-	public sealed class UnitTitleAttribute : Attribute // TypeDefIndex: 59133
+	public sealed class UnitTitleAttribute : Attribute // TypeDefIndex: 60158
 	{
+		// Fields
+		private string _title_k__BackingField; // 0x10
+	
 		// Properties
-		private string title { get; set; } // 0x000000018426FEE0-0x000000018426FEF0
+		private string title { get; set; } // 0x0000000184096E30-0x0000000184096EF0
 	
 		// Constructors
 		public UnitTitleAttribute() {} // Dummy constructor
-		public UnitTitleAttribute(string title) {} // 0x000000018426FEE0-0x000000018426FEF0
+		public UnitTitleAttribute(string title) {} // 0x0000000184096E30-0x0000000184096EF0
 	}
 
-	public sealed class Flow : IPoolable, IDisposable // TypeDefIndex: 59136
+	public sealed class Flow : IPoolable, IDisposable // TypeDefIndex: 60161
 	{
 		// Fields
+		private GraphStack _stack_k__BackingField; // 0x10
 		private Recursion<RecursionNode> recursion; // 0x18
 		private readonly Dictionary<IUnitValuePort, object> locals; // 0x20
 		public readonly VariableDeclarations variables; // 0x28
 		private readonly Stack<int> loops; // 0x30
 		private readonly HashSet<GraphStack> preservedStacks; // 0x38
+		private MonoBehaviour _coroutineRunner_k__BackingField; // 0x40
 		private ICollection<Flow> activeCoroutinesRegistry; // 0x48
 		private bool coroutineStopRequested; // 0x50
+		private bool _isCoroutine_k__BackingField; // 0x51
 		private IEnumerator coroutineEnumerator; // 0x58
+		private bool _isPrediction_k__BackingField; // 0x60
 		private bool disposed; // 0x61
 		public int loopIdentifier; // 0x64
 	
 		// Properties
-		public GraphStack stack { get; private set; } // 0x00000001820B7B20-0x00000001820B7B30 0x000000018426FEE0-0x000000018426FEF0
-		private MonoBehaviour coroutineRunner { get; set; } // 0x0000000183CB2D80-0x0000000183CB2D90
-		private bool isCoroutine { get; set; } // 0x0000000183D51900-0x0000000183D51910
-		public bool isPrediction { get; private set; } // 0x0000000183D519A0-0x0000000183D519B0 0x0000000183D519B0-0x0000000183D519C0
-		public bool enableDebug { get => default; } // 0x0000000189D7A13C-0x0000000189D7A16C 
+		public GraphStack stack { get; private set; } // 0x000000018BE91DB8-0x000000018BE91E00 0x000000018BE90C50-0x000000018BE90D08
+		private MonoBehaviour coroutineRunner { get; set; } // 0x000000018BE91A14-0x000000018BE91DB8
+		private bool isCoroutine { get; set; } // 0x000000018BE915B8-0x000000018BE917B4
+		public bool isPrediction { get; private set; } // 0x000000018BE90A00-0x000000018BE90C50 0x000000018BE909AC-0x000000018BE90A00
+		public bool enableDebug { get => default; } // 0x000000018BE91448-0x000000018BE915B8 
 	
 		// Nested types
-		private struct RecursionNode : IEquatable<RecursionNode> // TypeDefIndex: 59134
+		private struct RecursionNode : IEquatable<RecursionNode> // TypeDefIndex: 60159
 		{
+			// Fields
+			private readonly IUnitPort _port_k__BackingField; // 0x00
+			private readonly IGraphParent _context_k__BackingField; // 0x08
+	
 			// Properties
-			public IUnitPort port { [IsReadOnly] get; } // 0x00000001820C61B0-0x00000001820C61C0 
-			public IGraphParent context { [IsReadOnly] get; } // 0x0000000183D50DE0-0x0000000183D50DF0 
+			public IUnitPort port { get; } // 0x000000018346D130-0x000000018346D140 
+			public IGraphParent context { get; } // 0x0000000184096E30-0x0000000184096EF0 
 	
 			// Constructors
-			public RecursionNode(IUnitPort port, GraphPointer pointer) : this() {} // 0x0000000189D7B60C-0x0000000189D7B648
+			public RecursionNode(IUnitPort port, GraphPointer pointer) : this() {
+				<port>k__BackingField = default;
+				<context>k__BackingField = default;
+			} // 0x0000000185F05C80-0x0000000185F05C90
 	
 			// Methods
-			public bool Equals(RecursionNode other) => default; // 0x0000000189D7B5B4-0x0000000189D7B5CC
-			public override bool Equals(object obj) => default; // 0x0000000189D7B544-0x0000000189D7B5B4
-			public override int GetHashCode() => default; // 0x0000000189D7B5CC-0x0000000189D7B60C
+			public bool Equals(RecursionNode other) => default; // 0x00000001813AF350-0x00000001813AF360
+			public override bool Equals(object obj) => default; // 0x000000018386C570-0x000000018386C580
+			public override int GetHashCode() => default; // 0x000000018386C580-0x000000018386C590
+		}
+	
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 60160
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<Flow> __9__35_0; // 0x08
+	
+			// Constructors
+			static __c() {} // 0x000000018BE91F4C-0x000000018BE91F7C
+			public __c() {} // 0x000000018BE91E00-0x000000018BE91F4C
+	
+			// Methods
+			internal Flow _New_b__35_0() => default; // 0x000000018BE917B4-0x000000018BE91954
 		}
 	
 		// Constructors
-		private Flow() {} // 0x0000000189D79FF0-0x0000000189D7A13C
+		private Flow() {} // 0x000000018BE911DC-0x000000018BE913D8
 	
 		// Methods
-		public static Flow New(GraphReference reference) => default; // 0x0000000189D799A4-0x0000000189D79B44
-		void IPoolable.New() {} // 0x0000000189D79FA8-0x0000000189D79FF0
-		public void Dispose() {} // 0x0000000189D78E40-0x0000000189D78EF8
-		void IPoolable.Free() {} // 0x0000000189D79C04-0x0000000189D79FA8
-		public void Invoke(ControlOutput output) {} // 0x0000000189D797A8-0x0000000189D799A4
-		private RecursionNode BeforeInvoke(ControlOutput output, RecursionNode recursionNode) => default; // 0x0000000189D78BF0-0x0000000189D78E40
-		private void AfterInvoke(ControlOutput output, RecursionNode recursionNode) {} // 0x0000000189D78B9C-0x0000000189D78BF0
-		private ControlOutput InvokeDelegate(ControlInput input) => default; // 0x0000000189D79638-0x0000000189D797A8
-		public object GetValue(ValueInput input) => default; // 0x0000000189D793CC-0x0000000189D795C8
-		private object GetValue(ValueOutput output) => default; // 0x0000000189D78FDC-0x0000000189D793CC
-		public object GetValue(ValueInput input, System.Type type) => default; // 0x0000000189D795C8-0x0000000189D79638
-		public T GetValue<T>(ValueInput input) => default;
+		public static Flow New(GraphReference reference) => default; // 0x000000018BE90DEC-0x000000018BE911DC
+		void IPoolable.New() {} // 0x000000018BE913D8-0x000000018BE91448
+		public void Dispose() {}
+		void IPoolable.Free() {} // 0x000000018BE91954-0x000000018BE91A14
+		public void Invoke(ControlOutput output) {} // 0x000000018BE90D08-0x000000018BE90DEC
+		private RecursionNode BeforeInvoke(ControlOutput output, RecursionNode recursionNode) => default; // 0x00000001834AFB60-0x00000001834AFB70
+		private void AfterInvoke(ControlOutput output, RecursionNode recursionNode) {} // 0x000000018357A260-0x000000018357A270
+		private ControlOutput InvokeDelegate(ControlInput input) => default; // 0x000000018BE9341C-0x000000018BE93458
+		public object GetValue(ValueInput input) => default; // 0x000000018BE933C4-0x000000018BE933DC
+		private object GetValue(ValueOutput output) => default; // 0x000000018BE93354-0x000000018BE933C4
+		public object GetValue(ValueInput input, System.Type type) => default; // 0x000000018BE933DC-0x000000018BE9341C
+		public T GetValue<T>(ValueInput input) => default; // 0x000000018BE93630-0x000000018BE93694
 		public bool TryGetDefaultValue(ValueInput input, out object defaultValue) {
 			defaultValue = default;
 			return default;
-		} // 0x0000000189D79B44-0x0000000189D79C04
-		private object GetValueDelegate(ValueOutput output) => default; // 0x0000000189D78EF8-0x0000000189D78FDC
+		} // 0x0000000185492010-0x0000000185492020
+		private object GetValueDelegate(ValueOutput output) => default; // 0x000000018BE93458-0x000000018BE934A8
 	}
 
-	[System.ComponentModel.DisplayName("Script Graph")]
-	[SerializationVersion("A", new System.Type[0])]
-	public sealed class FlowGraph : Graph, IGraph // TypeDefIndex: 59137
+	public sealed class FlowGraph : Graph, IGraph // TypeDefIndex: 60162
 	{
+		// Fields
+		private GraphConnectionCollection<ControlConnection, ControlOutput, ControlInput> _controlConnections_k__BackingField; // 0x20
+		private GraphConnectionCollection<ValueConnection, ValueOutput, ValueInput> _valueConnections_k__BackingField; // 0x28
+		private GraphConnectionCollection<InvalidConnection, IUnitOutputPort, IUnitInputPort> _invalidConnections_k__BackingField; // 0x30
+	
 		// Properties
-		[DoNotSerialize]
-		public GraphConnectionCollection<ControlConnection, ControlOutput, ControlInput> controlConnections { get; } // 0x0000000183D4EB40-0x0000000183D4EB50 
-		[DoNotSerialize]
-		public GraphConnectionCollection<ValueConnection, ValueOutput, ValueInput> valueConnections { get; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
-		[DoNotSerialize]
-		public GraphConnectionCollection<InvalidConnection, IUnitOutputPort, IUnitInputPort> invalidConnections { get; } // 0x0000000181003830-0x0000000181003840 
+		public GraphConnectionCollection<ControlConnection, ControlOutput, ControlInput> controlConnections { get; } // 0x00000001813B31A0-0x00000001813B31B0 
+		public GraphConnectionCollection<ValueConnection, ValueOutput, ValueInput> valueConnections { get; } // 0x00000001813B8590-0x00000001813B85A0 
+		public GraphConnectionCollection<InvalidConnection, IUnitOutputPort, IUnitInputPort> invalidConnections { get; } // 0x00000001813B51D0-0x00000001813B51E0 
 	
 		// Constructors
 		public FlowGraph() {} // Dummy constructor
 	}
 
-	[SerializationVersion("A", new System.Type[0])]
-	[SpecialUnit]
-	public abstract class EventUnit<TArgs> : Unit, IUnit // TypeDefIndex: 59138
+	public abstract class EventUnit<TArgs> : Unit, IUnit // TypeDefIndex: 60163
 	{
+		// Fields
+		private ControlOutput _trigger_k__BackingField;
+	
 		// Properties
-		[DoNotSerialize]
-		[PortLabelHidden]
 		public ControlOutput trigger { get; private set; }
 		new FlowGraph IUnit.graph { get; }
 	
@@ -277,7 +308,7 @@ namespace Unity.VisualScripting
 		protected override void Definition() {}
 	}
 
-	public abstract class ManualEventUnit<TArgs> : EventUnit<TArgs> // TypeDefIndex: 59139
+	public abstract class ManualEventUnit<TArgs> : EventUnit<TArgs> // TypeDefIndex: 60164
 	{
 		// Properties
 		protected abstract string hookName { get; }
@@ -286,19 +317,16 @@ namespace Unity.VisualScripting
 		protected ManualEventUnit() {}
 	}
 
-	[SpecialUnit]
-	[UnitShortTitle("Missing Script!")]
-	[UnitTitle("Node script is missing!")]
-	public sealed class MissingType : Unit // TypeDefIndex: 59140
+	public sealed class MissingType : Unit // TypeDefIndex: 60165
 	{
 		// Constructors
 		public MissingType() {} // Dummy constructor
 	
 		// Methods
-		protected override void Definition() {} // 0x000000018350B670-0x000000018350B680
+		protected override void Definition() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public interface IUnit : IGraphElementWithDebugData // TypeDefIndex: 59141
+	public interface IUnit : IGraphElementWithDebugData // TypeDefIndex: 60166
 	{
 		// Properties
 		FlowGraph graph { get; }
@@ -318,107 +346,203 @@ namespace Unity.VisualScripting
 		void PortsChanged();
 	}
 
-	public interface IUnitDebugData : IGraphElementDebugData // TypeDefIndex: 59142
+	public interface IUnitDebugData : IGraphElementDebugData // TypeDefIndex: 60167
 	{
 		// Properties
 		int lastInvokeFrame { get; set; }
 		float lastInvokeTime { get; set; }
 	}
 
-	public sealed class ControlInput : UnitPort<Unity.VisualScripting.ControlOutput, Unity.VisualScripting.IUnitOutputPort, Unity.VisualScripting.ControlConnection>, IUnitInputPort // TypeDefIndex: 59145
+	public sealed class ControlInput : UnitPort<Unity.VisualScripting.ControlOutput, Unity.VisualScripting.IUnitOutputPort, Unity.VisualScripting.ControlConnection>, IUnitInputPort // TypeDefIndex: 60170
 	{
 		// Fields
 		internal readonly Func<Flow, ControlOutput> action; // 0x20
 	
 		// Properties
-		public bool requiresCoroutine { get => default; } // 0x00000001892233D8-0x00000001892233E4 
-		public override IEnumerable<ControlConnection> validConnections { get => default; } // 0x0000000189D78460-0x0000000189D784E8 
-		public override IEnumerable<InvalidConnection> invalidConnections { get => default; } // 0x0000000189D782C0-0x0000000189D78348 
-		public override IEnumerable<ControlOutput> validConnectedPorts { get => default; } // 0x0000000189D78348-0x0000000189D78460 
-		public override IEnumerable<IUnitOutputPort> invalidConnectedPorts { get => default; } // 0x0000000189D781A8-0x0000000189D782C0 
+		public bool requiresCoroutine { get => default; } // 0x000000018BE8FD60-0x000000018BE8FE3C 
+		public override IEnumerable<ControlConnection> validConnections { get => default; } // 0x000000018BE8FD14-0x000000018BE8FD60 
+		public override IEnumerable<InvalidConnection> invalidConnections { get => default; } // 0x000000018BE8FE88-0x000000018BE8FFB8 
+		public override IEnumerable<ControlOutput> validConnectedPorts { get => default; } // 0x000000018BE8FE3C-0x000000018BE8FE88 
+		public override IEnumerable<IUnitOutputPort> invalidConnectedPorts { get => default; } // 0x000000018BE935CC-0x000000018BE93630 
+	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 60168
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<ControlConnection, ControlOutput> __9__14_0; // 0x08
+			public static Func<InvalidConnection, IUnitOutputPort> __9__16_0; // 0x10
+	
+			// Constructors
+			static __c() {} // 0x000000018B34D6B0-0x000000018B34D6BC
+			public __c() {} // 0x000000018BE90270-0x000000018BE902F8
+	
+			// Methods
+			internal ControlOutput _get_validConnectedPorts_b__14_0(ControlConnection c) => default; // 0x000000018BE900D0-0x000000018BE90158
+			internal IUnitOutputPort _get_invalidConnectedPorts_b__16_0(InvalidConnection c) => default; // 0x000000018BE90158-0x000000018BE90270
+		}
+	
+		private sealed class __c__DisplayClass25_0 // TypeDefIndex: 60169
+		{
+			// Fields
+			public ControlOutput port; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass25_0() {} // 0x000000018BE8FFB8-0x000000018BE900D0
+	
+			// Methods
+			internal bool _DisconnectFromValid_b__0(ControlConnection c) => default; // 0x00000001840A27C0-0x00000001840A27D0
+		}
 	
 		// Constructors
 		public ControlInput() {} // Dummy constructor
 	
 		// Methods
-		public override bool CanConnectToValid(ControlOutput port) => default; // 0x000000018232EB60-0x000000018232EB70
-		public override void ConnectToValid(ControlOutput port) {} // 0x0000000189D77F50-0x0000000189D7802C
-		public override void ConnectToInvalid(IUnitOutputPort port) {} // 0x0000000189D77F04-0x0000000189D77F50
-		public override void DisconnectFromValid(ControlOutput port) {} // 0x0000000189D78078-0x0000000189D781A8
-		public override void DisconnectFromInvalid(IUnitOutputPort port) {} // 0x0000000189D7802C-0x0000000189D78078
+		public override bool CanConnectToValid(ControlOutput port) => default; // 0x0000000185492010-0x0000000185492020
+		public override void ConnectToValid(ControlOutput port) {} // 0x000000018BE934E8-0x000000018BE93500
+		public override void ConnectToInvalid(IUnitOutputPort port) {} // 0x000000018BE934A8-0x000000018BE934C8
+		public override void DisconnectFromValid(ControlOutput port) {} // 0x0000000185492010-0x0000000185492020
+		public override void DisconnectFromInvalid(IUnitOutputPort port) {} // 0x000000018BE93540-0x000000018BE93568
 	}
 
-	public sealed class ControlOutput : UnitPort<Unity.VisualScripting.ControlInput, Unity.VisualScripting.IUnitInputPort, Unity.VisualScripting.ControlConnection>, IUnitOutputPort // TypeDefIndex: 59148
+	public sealed class ControlOutput : UnitPort<Unity.VisualScripting.ControlInput, Unity.VisualScripting.IUnitInputPort, Unity.VisualScripting.ControlConnection>, IUnitOutputPort // TypeDefIndex: 60173
 	{
 		// Properties
-		public override IEnumerable<ControlConnection> validConnections { get => default; } // 0x0000000189D78B14-0x0000000189D78B9C 
-		public override IEnumerable<InvalidConnection> invalidConnections { get => default; } // 0x0000000189D78974-0x0000000189D789FC 
-		public override IEnumerable<ControlInput> validConnectedPorts { get => default; } // 0x0000000189D789FC-0x0000000189D78B14 
-		public override IEnumerable<IUnitInputPort> invalidConnectedPorts { get => default; } // 0x0000000189D7885C-0x0000000189D78974 
-		public ControlConnection connection { get => default; } // 0x0000000189D787D4-0x0000000189D78844 
-		public override bool hasValidConnection { get => default; } // 0x0000000189D78844-0x0000000189D7885C 
+		public override IEnumerable<ControlConnection> validConnections { get => default; } // 0x00000001840A27C0-0x00000001840A27D0 
+		public override IEnumerable<InvalidConnection> invalidConnections { get => default; } // 0x000000018BE90344-0x000000018BE90420 
+		public override IEnumerable<ControlInput> validConnectedPorts { get => default; } // 0x000000018BE902F8-0x000000018BE90344 
+		public override IEnumerable<IUnitInputPort> invalidConnectedPorts { get => default; } // 0x000000018BE9046C-0x000000018BE9059C 
+		public ControlConnection connection { get => default; } // 0x000000018BE90420-0x000000018BE9046C 
+		public override bool hasValidConnection { get => default; } // 0x000000018BE93694-0x000000018BE936F8 
+	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 60171
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<ControlConnection, ControlInput> __9__6_0; // 0x08
+			public static Func<InvalidConnection, IUnitInputPort> __9__8_0; // 0x10
+	
+			// Constructors
+			static __c() {} // 0x000000018BE9059C-0x000000018BE905E4
+			public __c() {} // 0x000000018BE90924-0x000000018BE909AC
+	
+			// Methods
+			internal ControlInput _get_validConnectedPorts_b__6_0(ControlConnection c) => default; // 0x000000018BE90784-0x000000018BE9080C
+			internal IUnitInputPort _get_invalidConnectedPorts_b__8_0(InvalidConnection c) => default; // 0x000000018BE9080C-0x000000018BE90924
+		}
+	
+		private sealed class __c__DisplayClass21_0 // TypeDefIndex: 60172
+		{
+			// Fields
+			public ControlInput port; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass21_0() {} // 0x000000018BE9066C-0x000000018BE90784
+	
+			// Methods
+			internal bool _DisconnectFromValid_b__0(ControlConnection c) => default; // 0x000000018BE905E4-0x000000018BE90654
+		}
 	
 		// Constructors
 		public ControlOutput() {} // Dummy constructor
-		public ControlOutput(string key) {} // 0x0000000189D7878C-0x0000000189D787D4
+		public ControlOutput(string key) {} // 0x000000018BE90654-0x000000018BE9066C
 	
 		// Methods
-		public override bool CanConnectToValid(ControlInput port) => default; // 0x000000018232EB60-0x000000018232EB70
-		public override void ConnectToValid(ControlInput port) {} // 0x0000000189D78534-0x0000000189D78610
-		public override void ConnectToInvalid(IUnitInputPort port) {} // 0x0000000189D784E8-0x0000000189D78534
-		public override void DisconnectFromValid(ControlInput port) {} // 0x0000000189D7865C-0x0000000189D7878C
-		public override void DisconnectFromInvalid(IUnitInputPort port) {} // 0x0000000189D78610-0x0000000189D7865C
+		public override bool CanConnectToValid(ControlInput port) => default; // 0x0000000185492010-0x0000000185492020
+		public override void ConnectToValid(ControlInput port) {} // 0x000000018BE93500-0x000000018BE93518
+		public override void ConnectToInvalid(IUnitInputPort port) {} // 0x000000018BE934C8-0x000000018BE934E8
+		public override void DisconnectFromValid(ControlInput port) {} // 0x0000000185492010-0x0000000185492020
+		public override void DisconnectFromInvalid(IUnitInputPort port) {} // 0x000000018BE93518-0x000000018BE93540
 	}
 
-	public sealed class InvalidInput : UnitPort<Unity.VisualScripting.IUnitOutputPort, Unity.VisualScripting.IUnitOutputPort, Unity.VisualScripting.InvalidConnection>, IUnitInputPort // TypeDefIndex: 59150
+	public sealed class InvalidInput : UnitPort<Unity.VisualScripting.IUnitOutputPort, Unity.VisualScripting.IUnitOutputPort, Unity.VisualScripting.InvalidConnection>, IUnitInputPort // TypeDefIndex: 60175
 	{
 		// Properties
-		public override IEnumerable<InvalidConnection> validConnections { get => default; } // 0x0000000189D7AFD8-0x0000000189D7B060 
-		public override IEnumerable<InvalidConnection> invalidConnections { get => default; } // 0x0000000189D7AE90-0x0000000189D7AEC0 
-		public override IEnumerable<IUnitOutputPort> validConnectedPorts { get => default; } // 0x0000000189D7AEC0-0x0000000189D7AFD8 
-		public override IEnumerable<IUnitOutputPort> invalidConnectedPorts { get => default; } // 0x0000000189D7AD78-0x0000000189D7AE90 
+		public override IEnumerable<InvalidConnection> validConnections { get => default; } // 0x00000001814A81B0-0x00000001814A81C0 
+		public override IEnumerable<InvalidConnection> invalidConnections { get => default; } // 0x000000018BE92A5C-0x000000018BE92AA8 
+		public override IEnumerable<IUnitOutputPort> validConnectedPorts { get => default; } // 0x000000018BE92A10-0x000000018BE92A5C 
+		public override IEnumerable<IUnitOutputPort> invalidConnectedPorts { get => default; } // 0x000000018BE92AF4-0x000000018BE92B40 
+	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 60174
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<InvalidConnection, IUnitOutputPort> __9__6_0; // 0x08
+			public static Func<InvalidConnection, IUnitOutputPort> __9__8_0; // 0x10
+	
+			// Constructors
+			static __c() {} // 0x000000018BE92B40-0x000000018BE92B88
+			public __c() {} // 0x000000018BE92DE8-0x000000018BE92E70
+	
+			// Methods
+			internal IUnitOutputPort _get_validConnectedPorts_b__6_0(InvalidConnection c) => default; // 0x000000018BE92CA0-0x000000018BE92CD0
+			internal IUnitOutputPort _get_invalidConnectedPorts_b__8_0(InvalidConnection c) => default; // 0x000000018BE92CD0-0x000000018BE92DE8
+		}
 	
 		// Constructors
 		public InvalidInput() {} // Dummy constructor
-		public InvalidInput(string key) {} // 0x0000000189D7AD30-0x0000000189D7AD78
+		public InvalidInput(string key) {} // 0x000000018BE92B88-0x000000018BE92CA0
 	
 		// Methods
-		public override bool CanConnectToValid(IUnitOutputPort port) => default; // 0x000000018115F4C0-0x000000018115F530
-		public override void ConnectToValid(IUnitOutputPort port) {} // 0x0000000189D7AC4C-0x0000000189D7AC98
-		public override void ConnectToInvalid(IUnitOutputPort port) {} // 0x0000000189D7AC00-0x0000000189D7AC4C
-		public override void DisconnectFromValid(IUnitOutputPort port) {} // 0x0000000189D7ACE4-0x0000000189D7AD30
-		public override void DisconnectFromInvalid(IUnitOutputPort port) {} // 0x0000000189D7AC98-0x0000000189D7ACE4
+		public override bool CanConnectToValid(IUnitOutputPort port) => default; // 0x000000018BE92AA8-0x000000018BE92AF4
+		public override void ConnectToValid(IUnitOutputPort port) {} // 0x000000018BE93568-0x000000018BE935CC
+		public override void ConnectToInvalid(IUnitOutputPort port) {} // 0x0000000185492010-0x0000000185492020
+		public override void DisconnectFromValid(IUnitOutputPort port) {} // 0x000000018BE934A8-0x000000018BE934C8
+		public override void DisconnectFromInvalid(IUnitOutputPort port) {} // 0x000000018BE934A8-0x000000018BE934C8
 	}
 
-	public sealed class InvalidOutput : UnitPort<Unity.VisualScripting.IUnitInputPort, Unity.VisualScripting.IUnitInputPort, Unity.VisualScripting.InvalidConnection>, IUnitOutputPort // TypeDefIndex: 59152
+	public sealed class InvalidOutput : UnitPort<Unity.VisualScripting.IUnitInputPort, Unity.VisualScripting.IUnitInputPort, Unity.VisualScripting.InvalidConnection>, IUnitOutputPort // TypeDefIndex: 60177
 	{
 		// Properties
-		public override IEnumerable<InvalidConnection> validConnections { get => default; } // 0x0000000189D7B438-0x0000000189D7B4C0 
-		public override IEnumerable<InvalidConnection> invalidConnections { get => default; } // 0x0000000189D7B2F0-0x0000000189D7B320 
-		public override IEnumerable<IUnitInputPort> validConnectedPorts { get => default; } // 0x0000000189D7B320-0x0000000189D7B438 
-		public override IEnumerable<IUnitInputPort> invalidConnectedPorts { get => default; } // 0x0000000189D7B1D8-0x0000000189D7B2F0 
+		public override IEnumerable<InvalidConnection> validConnections { get => default; } // 0x00000001814A81B0-0x00000001814A81C0 
+		public override IEnumerable<InvalidConnection> invalidConnections { get => default; } // 0x000000018BE92EBC-0x000000018BE92F08 
+		public override IEnumerable<IUnitInputPort> validConnectedPorts { get => default; } // 0x000000018BE92E70-0x000000018BE92EBC 
+		public override IEnumerable<IUnitInputPort> invalidConnectedPorts { get => default; } // 0x000000018BE92F54-0x000000018BE92FA0 
+	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 60176
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<InvalidConnection, IUnitInputPort> __9__6_0; // 0x08
+			public static Func<InvalidConnection, IUnitInputPort> __9__8_0; // 0x10
+	
+			// Constructors
+			static __c() {} // 0x000000018BE92FA0-0x000000018BE92FE8
+			public __c() {} // 0x000000018BE93248-0x000000018BE932D0
+	
+			// Methods
+			internal IUnitInputPort _get_validConnectedPorts_b__6_0(InvalidConnection c) => default; // 0x000000018BE93100-0x000000018BE93130
+			internal IUnitInputPort _get_invalidConnectedPorts_b__8_0(InvalidConnection c) => default; // 0x000000018BE93130-0x000000018BE93248
+		}
 	
 		// Constructors
 		public InvalidOutput() {} // Dummy constructor
-		public InvalidOutput(string key) {} // 0x0000000189D7B190-0x0000000189D7B1D8
+		public InvalidOutput(string key) {} // 0x000000018BE92FE8-0x000000018BE93100
 	
 		// Methods
-		public override bool CanConnectToValid(IUnitInputPort port) => default; // 0x000000018115F4C0-0x000000018115F530
-		public override void ConnectToValid(IUnitInputPort port) {} // 0x0000000189D7B0AC-0x0000000189D7B0F8
-		public override void ConnectToInvalid(IUnitInputPort port) {} // 0x0000000189D7B060-0x0000000189D7B0AC
-		public override void DisconnectFromValid(IUnitInputPort port) {} // 0x0000000189D7B144-0x0000000189D7B190
-		public override void DisconnectFromInvalid(IUnitInputPort port) {} // 0x0000000189D7B0F8-0x0000000189D7B144
+		public override bool CanConnectToValid(IUnitInputPort port) => default; // 0x000000018BE92F08-0x000000018BE92F54
+		public override void ConnectToValid(IUnitInputPort port) {} // 0x000000018BE9375C-0x000000018BE937C0
+		public override void ConnectToInvalid(IUnitInputPort port) {} // 0x0000000185492010-0x0000000185492020
+		public override void DisconnectFromValid(IUnitInputPort port) {} // 0x000000018BE934C8-0x000000018BE934E8
+		public override void DisconnectFromInvalid(IUnitInputPort port) {} // 0x000000018BE934C8-0x000000018BE934E8
 	}
 
-	public interface IUnitInputPort : IUnitPort // TypeDefIndex: 59153
+	public interface IUnitInputPort : IUnitPort // TypeDefIndex: 60178
 	{
 	}
 
-	public interface IUnitOutputPort : IUnitPort // TypeDefIndex: 59154
+	public interface IUnitOutputPort : IUnitPort // TypeDefIndex: 60179
 	{
 	}
 
-	public interface IUnitPort // TypeDefIndex: 59155
+	public interface IUnitPort // TypeDefIndex: 60180
 	{
 		// Properties
 		IUnit unit { get; set; }
@@ -431,27 +555,31 @@ namespace Unity.VisualScripting
 		void ValidlyConnectTo(IUnitPort port);
 	}
 
-	public interface IUnitPortCollection<TPort> : IKeyedCollection<string, TPort> // TypeDefIndex: 59156
+	public interface IUnitPortCollection<TPort> : IKeyedCollection<string, TPort> // TypeDefIndex: 60181
 		where TPort : IUnitPort
 	{
 	}
 
-	public interface IUnitValuePort : IUnitPort // TypeDefIndex: 59157
+	public interface IUnitValuePort : IUnitPort // TypeDefIndex: 60182
 	{
 	}
 
-	public sealed class MissingValuePortInputException : Exception // TypeDefIndex: 59158
+	public sealed class MissingValuePortInputException : Exception // TypeDefIndex: 60183
 	{
 		// Constructors
 		public MissingValuePortInputException() {} // Dummy constructor
-		public MissingValuePortInputException(string key) {} // 0x0000000189D7B4C0-0x0000000189D7B544
+		public MissingValuePortInputException(string key) {} // 0x000000018BE932D0-0x000000018BE93354
 	}
 
-	public abstract class UnitPort<TValidOther, TInvalidOther, TExternalConnection> : IUnitPort // TypeDefIndex: 59161
+	public abstract class UnitPort<TValidOther, TInvalidOther, TExternalConnection> : IUnitPort // TypeDefIndex: 60186
 		where TValidOther : IUnitPort
 		where TInvalidOther : IUnitPort
 		where TExternalConnection : IUnitConnection
 	{
+		// Fields
+		private IUnit _unit_k__BackingField;
+		private readonly string _key_k__BackingField;
+	
 		// Properties
 		public IUnit unit { get; set; }
 		public string key { get; }
@@ -460,6 +588,33 @@ namespace Unity.VisualScripting
 		public abstract IEnumerable<TValidOther> validConnectedPorts { get; }
 		public abstract IEnumerable<TInvalidOther> invalidConnectedPorts { get; }
 		public virtual bool hasValidConnection { get; }
+	
+		// Nested types
+		private sealed class __c__DisplayClass45_0 // TypeDefIndex: 60184
+		{
+			// Fields
+			public IUnitOutputPort source;
+			public IUnitInputPort destination;
+	
+			// Constructors
+			public __c__DisplayClass45_0() {}
+	
+			// Methods
+			internal bool _ConnectInvalid_b__0(InvalidConnection c) => default;
+		}
+	
+		private sealed class __c__DisplayClass46_0 // TypeDefIndex: 60185
+		{
+			// Fields
+			public IUnitOutputPort source;
+			public IUnitInputPort destination;
+	
+			// Constructors
+			public __c__DisplayClass46_0() {}
+	
+			// Methods
+			internal bool _DisconnectInvalid_b__0(InvalidConnection c) => default;
+		}
 	
 		// Constructors
 		protected UnitPort() {} // Dummy constructor
@@ -482,9 +637,12 @@ namespace Unity.VisualScripting
 		protected void DisconnectInvalid(IUnitOutputPort source, IUnitInputPort destination) {}
 	}
 
-	public sealed class UnitPortCollection<TPort> : KeyedCollection<string, TPort>, IUnitPortCollection<TPort> // TypeDefIndex: 59162
+	public sealed class UnitPortCollection<TPort> : KeyedCollection<string, TPort>, IUnitPortCollection<TPort> // TypeDefIndex: 60187
 		where TPort : IUnitPort
 	{
+		// Fields
+		private readonly IUnit _unit_k__BackingField;
+	
 		// Properties
 		public IUnit unit { get; }
 		TPort Unity.VisualScripting.IKeyedCollection<System.String,TPort>.this[string key] { get => default; }
@@ -506,130 +664,209 @@ namespace Unity.VisualScripting
 		bool IKeyedCollection<string, TPort>.Contains(string key) => default;
 	}
 
-	public sealed class ValueInput : UnitPort<Unity.VisualScripting.ValueOutput, Unity.VisualScripting.IUnitOutputPort, Unity.VisualScripting.ValueConnection>, IUnitValuePort, IUnitInputPort // TypeDefIndex: 59165
+	public sealed class ValueInput : UnitPort<Unity.VisualScripting.ValueOutput, Unity.VisualScripting.IUnitOutputPort, Unity.VisualScripting.ValueConnection>, IUnitValuePort, IUnitInputPort // TypeDefIndex: 60190
 	{
 		// Fields
+		private readonly System.Type _type_k__BackingField; // 0x20
+		private bool _nullMeansSelf_k__BackingField; // 0x28
 		private static readonly HashSet<System.Type> typesWithDefaultValues; // 0x00
 	
 		// Properties
-		public System.Type type { get; } // 0x0000000183D4EB40-0x0000000183D4EB50 
-		public override IEnumerable<ValueConnection> validConnections { get => default; } // 0x0000000189D7D8D0-0x0000000189D7D958 
-		public override IEnumerable<InvalidConnection> invalidConnections { get => default; } // 0x0000000189D7D730-0x0000000189D7D7B8 
-		public override IEnumerable<ValueOutput> validConnectedPorts { get => default; } // 0x0000000189D7D7B8-0x0000000189D7D8D0 
-		public override IEnumerable<IUnitOutputPort> invalidConnectedPorts { get => default; } // 0x0000000189D7D618-0x0000000189D7D730 
-		public bool nullMeansSelf { get; } // 0x0000000183D4ED50-0x0000000183D4ED60 
-		public ValueConnection connection { get => default; } // 0x0000000189D7D590-0x0000000189D7D600 
-		public override bool hasValidConnection { get => default; } // 0x0000000189D7D600-0x0000000189D7D618 
+		public System.Type type { get; } // 0x000000018BE953A0-0x000000018BE95410 
+		public override IEnumerable<ValueConnection> validConnections { get => default; } // 0x000000018BE95410-0x000000018BE95428 
+		public override IEnumerable<InvalidConnection> invalidConnections { get => default; } // 0x000000018BE94DB0-0x000000018BE94F2C 
+		public override IEnumerable<ValueOutput> validConnectedPorts { get => default; } // 0x000000018BE94A94-0x000000018BE94B0C 
+		public override IEnumerable<IUnitOutputPort> invalidConnectedPorts { get => default; } // 0x000000018BE94B58-0x000000018BE94C34 
+		public bool nullMeansSelf { get; } // 0x000000018BE94B0C-0x000000018BE94B58 
+		public ValueConnection connection { get => default; } // 0x000000018BE94C80-0x000000018BE94DB0 
+		public override bool hasValidConnection { get => default; } // 0x000000018BE94C34-0x000000018BE94C80 
+	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 60188
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<ValueConnection, ValueOutput> __9__11_0; // 0x08
+			public static Func<InvalidConnection, IUnitOutputPort> __9__13_0; // 0x10
+	
+			// Constructors
+			static __c() {} // 0x000000018BE952E0-0x000000018BE953A0
+			public __c() {} // 0x00000001813B31A0-0x00000001813B31B0
+	
+			// Methods
+			internal ValueOutput _get_validConnectedPorts_b__11_0(ValueConnection c) => default; // 0x000000018BE956E0-0x000000018BE95768
+			internal IUnitOutputPort _get_invalidConnectedPorts_b__13_0(InvalidConnection c) => default; // 0x000000018BE95540-0x000000018BE955C8
+		}
+	
+		private sealed class __c__DisplayClass33_0 // TypeDefIndex: 60189
+		{
+			// Fields
+			public ValueOutput port; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass33_0() {} // 0x000000018BE955C8-0x000000018BE956E0
+	
+			// Methods
+			internal bool _DisconnectFromValid_b__0(ValueConnection c) => default; // 0x000000018BE95428-0x000000018BE95540
+		}
 	
 		// Constructors
 		public ValueInput() {} // Dummy constructor
-		public ValueInput(string key, System.Type type) {} // 0x0000000189D7D4D0-0x0000000189D7D590
-		static ValueInput() {} // 0x0000000189D7D258-0x0000000189D7D4D0
+		public ValueInput(string key, System.Type type) {} // 0x00000001813B31B0-0x00000001813B31C0
+		static ValueInput() {} // 0x000000018BE93540-0x000000018BE93568
 	
 		// Methods
-		public void SetDefaultValue(object value) {} // 0x0000000189D7CFA0-0x0000000189D7D11C
-		public override bool CanConnectToValid(ValueOutput port) => default; // 0x0000000189D7CC84-0x0000000189D7CCFC
-		public override void ConnectToValid(ValueOutput port) {} // 0x0000000189D7CD48-0x0000000189D7CE24
-		public override void ConnectToInvalid(IUnitOutputPort port) {} // 0x0000000189D7CCFC-0x0000000189D7CD48
-		public override void DisconnectFromValid(ValueOutput port) {} // 0x0000000189D7CE70-0x0000000189D7CFA0
-		public override void DisconnectFromInvalid(IUnitOutputPort port) {} // 0x0000000189D7CE24-0x0000000189D7CE70
-		public static bool SupportsDefaultValue(System.Type type) => default; // 0x0000000189D7D11C-0x0000000189D7D258
+		public void SetDefaultValue(object value) {} // 0x000000018BE94F2C-0x000000018BE95068
+		public override bool CanConnectToValid(ValueOutput port) => default; // 0x000000018BE95068-0x000000018BE952E0
+		public override void ConnectToValid(ValueOutput port) {} // 0x000000018BE937C0-0x000000018BE93824
+		public override void ConnectToInvalid(IUnitOutputPort port) {} // 0x0000000185492010-0x0000000185492020
+		public override void DisconnectFromValid(ValueOutput port) {} // 0x000000018BE934E8-0x000000018BE93500
+		public override void DisconnectFromInvalid(IUnitOutputPort port) {} // 0x000000018BE934A8-0x000000018BE934C8
+		public static bool SupportsDefaultValue(System.Type type) => default; // 0x0000000185492010-0x0000000185492020
 	}
 
-	public sealed class ValueOutput : UnitPort<Unity.VisualScripting.ValueInput, Unity.VisualScripting.IUnitInputPort, Unity.VisualScripting.ValueConnection>, IUnitValuePort, IUnitOutputPort // TypeDefIndex: 59168
+	public sealed class ValueOutput : UnitPort<Unity.VisualScripting.ValueInput, Unity.VisualScripting.IUnitInputPort, Unity.VisualScripting.ValueConnection>, IUnitValuePort, IUnitOutputPort // TypeDefIndex: 60193
 	{
 		// Fields
 		internal readonly Func<Flow, object> getValue; // 0x20
+		private readonly System.Type _type_k__BackingField; // 0x28
 	
 		// Properties
-		public bool supportsFetch { get => default; } // 0x0000000188571E40-0x0000000188571E4C 
-		public System.Type type { get; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
-		public override IEnumerable<ValueConnection> validConnections { get => default; } // 0x0000000189D7E030-0x0000000189D7E0B8 
-		public override IEnumerable<InvalidConnection> invalidConnections { get => default; } // 0x0000000189D7DE90-0x0000000189D7DF18 
-		public override IEnumerable<ValueInput> validConnectedPorts { get => default; } // 0x0000000189D7DF18-0x0000000189D7E030 
-		public override IEnumerable<IUnitInputPort> invalidConnectedPorts { get => default; } // 0x0000000189D7DD78-0x0000000189D7DE90 
+		public bool supportsFetch { get => default; } // 0x000000018BE95768-0x000000018BE957D0 
+		public System.Type type { get; } // 0x000000018BE9581C-0x000000018BE958F8 
+		public override IEnumerable<ValueConnection> validConnections { get => default; } // 0x000000018BE957D0-0x000000018BE9581C 
+		public override IEnumerable<InvalidConnection> invalidConnections { get => default; } // 0x000000018BE95944-0x000000018BE95A74 
+		public override IEnumerable<ValueInput> validConnectedPorts { get => default; } // 0x000000018BE958F8-0x000000018BE95944 
+		public override IEnumerable<IUnitInputPort> invalidConnectedPorts { get => default; } // 0x000000018BE936F8-0x000000018BE9375C 
+	
+		// Nested types
+		[Serializable]
+		private sealed class __c // TypeDefIndex: 60191
+		{
+			// Fields
+			public static readonly __c __9; // 0x00
+			public static Func<ValueConnection, ValueInput> __9__16_0; // 0x08
+			public static Func<InvalidConnection, IUnitInputPort> __9__18_0; // 0x10
+	
+			// Constructors
+			static __c() {} // 0x000000018BE95A74-0x000000018BE95B88
+			public __c() {} // 0x000000018A69B84C-0x000000018A69B858
+	
+			// Methods
+			internal ValueInput _get_validConnectedPorts_b__16_0(ValueConnection c) => default; // 0x00000001813B8590-0x00000001813B85A0
+			internal IUnitInputPort _get_invalidConnectedPorts_b__18_0(InvalidConnection c) => default; // 0x000000018BE95E40-0x000000018BE95EC8
+		}
+	
+		private sealed class __c__DisplayClass22_0 // TypeDefIndex: 60192
+		{
+			// Fields
+			public ValueInput port; // 0x10
+	
+			// Constructors
+			public __c__DisplayClass22_0() {} // 0x000000018BE95CA0-0x000000018BE95D28
+	
+			// Methods
+			internal bool _DisconnectFromValid_b__0(ValueConnection c) => default; // 0x000000018BE95D28-0x000000018BE95E40
+		}
 	
 		// Constructors
 		public ValueOutput() {} // Dummy constructor
-		public ValueOutput(string key, System.Type type, Func<Flow, object> getValue) {} // 0x0000000189D7DC64-0x0000000189D7DD78
+		public ValueOutput(string key, System.Type type, Func<Flow, object> getValue) {} // 0x000000018BE95B88-0x000000018BE95CA0
 	
 		// Methods
-		public override bool CanConnectToValid(ValueInput port) => default; // 0x0000000189D7D958-0x0000000189D7D9C0
-		public override void ConnectToValid(ValueInput port) {} // 0x0000000189D7DA0C-0x0000000189D7DAE8
-		public override void ConnectToInvalid(IUnitInputPort port) {} // 0x0000000189D7D9C0-0x0000000189D7DA0C
-		public override void DisconnectFromValid(ValueInput port) {} // 0x0000000189D7DB34-0x0000000189D7DC64
-		public override void DisconnectFromInvalid(IUnitInputPort port) {} // 0x0000000189D7DAE8-0x0000000189D7DB34
+		public override bool CanConnectToValid(ValueInput port) => default; // 0x0000000185492010-0x0000000185492020
+		public override void ConnectToValid(ValueInput port) {} // 0x000000018BE93500-0x000000018BE93518
+		public override void ConnectToInvalid(IUnitInputPort port) {} // 0x000000018BE934C8-0x000000018BE934E8
+		public override void DisconnectFromValid(ValueInput port) {} // 0x0000000185492010-0x0000000185492020
+		public override void DisconnectFromInvalid(IUnitInputPort port) {} // 0x000000018BE93518-0x000000018BE93540
 	}
 
-	[SerializationVersion("A", new System.Type[0])]
-	public abstract class Unit : GraphElement<Unity.VisualScripting.FlowGraph>, IUnit // TypeDefIndex: 59170
+	public abstract class Unit : GraphElement<Unity.VisualScripting.FlowGraph>, IUnit // TypeDefIndex: 60195
 	{
+		// Fields
+		private readonly IUnitPortCollection<ControlInput> _controlInputs_k__BackingField; // 0x28
+		private readonly IUnitPortCollection<ControlOutput> _controlOutputs_k__BackingField; // 0x30
+		private readonly IUnitPortCollection<ValueInput> _valueInputs_k__BackingField; // 0x38
+		private readonly IUnitPortCollection<ValueOutput> _valueOutputs_k__BackingField; // 0x40
+		private readonly IUnitPortCollection<InvalidInput> _invalidInputs_k__BackingField; // 0x48
+		private readonly IUnitPortCollection<InvalidOutput> _invalidOutputs_k__BackingField; // 0x50
+		private Action onPortsChanged; // 0x58
+		private Dictionary<string, object> _defaultValues_k__BackingField; // 0x60
+		private IConnectionCollection<IUnitRelation, IUnitPort, IUnitPort> _relations_k__BackingField; // 0x68
+		private bool _isControlRoot_k__BackingField; // 0x70
+	
 		// Properties
-		[DoNotSerialize]
-		public IUnitPortCollection<ControlInput> controlInputs { get; } // 0x0000000183D4EAC0-0x0000000183D4EAD0 
-		[DoNotSerialize]
-		public IUnitPortCollection<ControlOutput> controlOutputs { get; } // 0x0000000181003830-0x0000000181003840 
-		[DoNotSerialize]
-		public IUnitPortCollection<ValueInput> valueInputs { get; } // 0x0000000183D4E2A0-0x0000000183D4E2B0 
-		[DoNotSerialize]
-		public IUnitPortCollection<ValueOutput> valueOutputs { get; } // 0x0000000183D4E2B0-0x0000000183D4E2C0 
-		[DoNotSerialize]
-		public IUnitPortCollection<InvalidInput> invalidInputs { get; } // 0x0000000183D4EA70-0x0000000183D4EA80 
-		[DoNotSerialize]
-		public IUnitPortCollection<InvalidOutput> invalidOutputs { get; } // 0x0000000183D4EAF0-0x0000000183D4EB00 
-		[DoNotSerialize]
-		public IEnumerable<IUnitInputPort> inputs { get; } // 0x0000000189D7C638-0x0000000189D7C70C 
-		[DoNotSerialize]
-		public IEnumerable<IUnitOutputPort> outputs { get; } // 0x0000000189D7C70C-0x0000000189D7C7E0 
-		[DoNotSerialize]
-		public IEnumerable<IUnitInputPort> validInputs { get; } // 0x0000000189D7C7E0-0x0000000189D7C894 
-		[DoNotSerialize]
-		public IEnumerable<IUnitOutputPort> validOutputs { get; } // 0x0000000189D7C894-0x0000000189D7C948 
-		[Serialize]
-		public Dictionary<string, object> defaultValues { get; private set; } // 0x0000000183D4EB00-0x0000000183D4EB10 0x00000001839274B0-0x00000001839274C0
-		[DoNotSerialize]
-		private IConnectionCollection<IUnitRelation, IUnitPort, IUnitPort> relations { get; set; } // 0x00000001838C5570-0x00000001838C5580
-		[DoNotSerialize]
-		protected virtual bool isControlRoot { get; set; } // 0x0000000183D4F290-0x0000000183D4F2A0
-		FlowGraph IUnit.graph { get; } // 0x0000000189D7C1EC-0x0000000189D7C224 
+		public IUnitPortCollection<ControlInput> controlInputs { get; } // 0x00000001813ECBC0-0x00000001813ECBD0 
+		public IUnitPortCollection<ControlOutput> controlOutputs { get; } // 0x00000001813FF010-0x00000001813FF020 
+		public IUnitPortCollection<ValueInput> valueInputs { get; } // 0x00000001813ECF20-0x00000001813ECF30 
+		public IUnitPortCollection<ValueOutput> valueOutputs { get; } // 0x0000000181460F60-0x0000000181460F70 
+		public IUnitPortCollection<InvalidInput> invalidInputs { get; } // 0x000000018BE94448-0x000000018BE9451C 
+		public IUnitPortCollection<InvalidOutput> invalidOutputs { get; } // 0x000000018BE9451C-0x000000018BE945F0 
+		public IEnumerable<IUnitInputPort> inputs { get; } // 0x000000018BE945F0-0x000000018BE946A4 
+		public IEnumerable<IUnitOutputPort> outputs { get; } // 0x000000018BE946A4-0x000000018BE94758 
+		public IEnumerable<IUnitInputPort> validInputs { get; } // 0x0000000187F5B4C8-0x0000000187F5B4D8 
+		public IEnumerable<IUnitOutputPort> validOutputs { get; } // 0x0000000185FB0530-0x0000000185FB0540 
+		public Dictionary<string, object> defaultValues { get; private set; } // 0x0000000185A62990-0x0000000185A629A0 0x0000000185FB0970-0x0000000185FB0980
+		private IConnectionCollection<IUnitRelation, IUnitPort, IUnitPort> relations { get; set; } // 0x000000018BE93D94-0x000000018BE93EC8
+		protected virtual bool isControlRoot { get; set; } // 0x000000018BE93EC8-0x000000018BE93FFC
+		FlowGraph IUnit.graph { get; }
+	
+		// Nested types
+		private sealed class __c__DisplayClass86_0<T> // TypeDefIndex: 60194
+		{
+			// Fields
+			public Func<Flow, T> getValue;
+	
+			// Constructors
+			public __c__DisplayClass86_0() {} // 0x000000018BE94198-0x000000018BE94448
+	
+			// Methods
+			internal object _ValueOutput_b__0(Flow recursion) => default;
+		}
 	
 		// Constructors
-		protected Unit() {} // 0x0000000189D7C388-0x0000000189D7C638
+		protected Unit() {} // 0x00000001813B8590-0x00000001813B85A0
 	
 		// Methods
-		protected abstract void Definition();
-		public void PortsChanged() {} // 0x0000000185DA555C-0x0000000185DA556C
-		protected void EnsureUniqueInput(string key) {} // 0x0000000189D7BF84-0x0000000189D7C0B8
-		protected void EnsureUniqueOutput(string key) {} // 0x0000000189D7C0B8-0x0000000189D7C1EC
-		protected ControlOutput ControlOutput(string key) => default; // 0x0000000189D7BEEC-0x0000000189D7BF84
-		protected ValueInput ValueInput(System.Type type, string key) => default; // 0x0000000189D7C224-0x0000000189D7C2CC
-		protected ValueInput ValueInput<T>(string key) => default;
+		protected abstract void Definition(); // 0x00000001813B51D0-0x00000001813B51E0
+		public void PortsChanged() {} // 0x0000000185AE8FE0-0x0000000185AE8FF0
+		protected void EnsureUniqueInput(string key) {} // 0x000000018BE93CFC-0x000000018BE93D94
+		protected void EnsureUniqueOutput(string key) {} // 0x000000018BE94034-0x000000018BE940DC
+		protected ControlOutput ControlOutput(string key) => default;
+		protected ValueInput ValueInput(System.Type type, string key) => default;
+		protected ValueInput ValueInput<T>(string key) => default; // 0x000000018BE940DC-0x000000018BE94198
 		protected ValueInput ValueInput<T>(string key, T @default) => default;
-		protected ValueOutput ValueOutput(System.Type type, string key, Func<Flow, object> getValue) => default; // 0x0000000189D7C2CC-0x0000000189D7C388
+		protected ValueOutput ValueOutput(System.Type type, string key, Func<Flow, object> getValue) => default; // 0x000000018BE93FFC-0x000000018BE94034
 		protected ValueOutput ValueOutput<T>(string key, Func<Flow, T> getValue) => default;
 	}
 
-	[AttributeUsage(AttributeTargets.Class)]
-	[fsObject(Converter = typeof(UnitCategoryConverter))]
-	public class UnitCategory : Attribute // TypeDefIndex: 59171
+	public class UnitCategory : Attribute // TypeDefIndex: 60196
 	{
+		// Fields
+		private readonly UnitCategory _root_k__BackingField; // 0x10
+		private readonly UnitCategory _parent_k__BackingField; // 0x18
+		private readonly string _fullName_k__BackingField; // 0x20
+		private readonly string _name_k__BackingField; // 0x28
+		private readonly bool _isRoot_k__BackingField; // 0x30
+	
 		// Properties
-		public string fullName { get; } // 0x0000000183D4EB40-0x0000000183D4EB50 
+		public string fullName { get; } // 0x00000001813B31A0-0x00000001813B31B0 
 	
 		// Constructors
 		public UnitCategory() {} // Dummy constructor
-		public UnitCategory(string fullName) {} // 0x0000000189D7BD28-0x0000000189D7BEEC
+		public UnitCategory(string fullName) {} // 0x000000018BE93B38-0x000000018BE93CFC
 	
 		// Methods
-		public override bool Equals(object obj) => default; // 0x0000000189D7BC7C-0x0000000189D7BD04
-		public override int GetHashCode() => default; // 0x0000000189D7BD04-0x0000000189D7BD28
-		public override string ToString() => default; // 0x0000000183D4EB40-0x0000000183D4EB50
+		public override bool Equals(object obj) => default; // 0x000000018BE93A8C-0x000000018BE93B14
+		public override int GetHashCode() => default; // 0x000000018BE93B14-0x000000018BE93B38
+		public override string ToString() => default; // 0x00000001813B31A0-0x00000001813B31B0
 	}
 
-	public class UnitCategoryConverter : fsDirectConverter // TypeDefIndex: 59172
+	public class UnitCategoryConverter : fsDirectConverter // TypeDefIndex: 60197
 	{
 		// Properties
-		public override System.Type ModelType { get => default; } // 0x0000000189D7BC2C-0x0000000189D7BC7C 
+		public override System.Type ModelType { get => default; } // 0x000000018BE93A3C-0x000000018BE93A8C 
 	
 		// Constructors
 		public UnitCategoryConverter() {} // Dummy constructor
@@ -638,7 +875,7 @@ namespace Unity.VisualScripting
 		public override fsResult TrySerialize(object instance, out fsData serialized, System.Type storageType) {
 			serialized = default;
 			return default;
-		} // 0x0000000189D7BB44-0x0000000189D7BC2C
-		public override fsResult TryDeserialize(fsData data, ref object instance, System.Type storageType) => default; // 0x0000000189D7BA14-0x0000000189D7BB44
+		} // 0x000000018BE93954-0x000000018BE93A3C
+		public override fsResult TryDeserialize(fsData data, ref object instance, System.Type storageType) => default; // 0x000000018BE93824-0x000000018BE93954
 	}
 }

@@ -3,48 +3,35 @@
  */
 
 using System;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using UnityEngine;
-using UnityEngine.Bindings;
-using UnityEngine.Scripting;
 
-// Image 135: UnityEngine.GridModule.dll - Assembly: UnityEngine.GridModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60091-60093
+// Image 138: UnityEngine.GridModule.dll - Assembly: UnityEngine.GridModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61200-61202
 
 namespace UnityEngine
 {
-	[NativeHeader("Modules/Grid/Public/GridMarshalling.h")]
-	[NativeType(Header = "Modules/Grid/Public/Grid.h")]
-	[RequireComponent(typeof(Transform))]
-	public sealed class Grid : GridLayout // TypeDefIndex: 60092
+	public sealed class Grid : GridLayout // TypeDefIndex: 61201
 	{
 		// Properties
-		public Vector3 cellSize { [FreeFunction("GridBindings::GetCellSize", HasExplicitThis = true)] get => default; } // 0x0000000189DF4660-0x0000000189DF468C 
+		public Vector3 cellSize { get => default; } // 0x000000018BF0C410-0x000000018BF0C43C 
 	
 		// Constructors
-		public Grid() {} // 0x000000018426FE60-0x000000018426FE68
+		public Grid() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
 		private void get_cellSize_Injected(out Vector3 ret) {
 			ret = default;
-		} // 0x0000000189DF461C-0x0000000189DF4660
+		} // 0x000000018BF0C3CC-0x000000018BF0C410
 	}
 
-	[NativeHeader("Modules/Grid/Public/GridMarshalling.h")]
-	[NativeType(Header = "Modules/Grid/Public/Grid.h")]
-	[RequireComponent(typeof(Transform))]
-	public class GridLayout : UnityEngine.Behaviour // TypeDefIndex: 60093
+	public class GridLayout : Behaviour // TypeDefIndex: 61202
 	{
 		// Constructors
-		public GridLayout() {} // 0x000000018426FE60-0x000000018426FE68
+		public GridLayout() {} // 0x000000018646DB20-0x000000018646DB28
 	
 		// Methods
-		[FreeFunction("GridLayoutBindings::CellToLocal", HasExplicitThis = true)]
-		public Vector3 CellToLocal(Vector3Int cellPosition) => default; // 0x0000000189DF45E8-0x0000000189DF461C
-		[RequiredByNativeCode]
-		private void DoNothing() {} // 0x000000018350B670-0x000000018350B680
+		public Vector3 CellToLocal(Vector3Int cellPosition) => default; // 0x000000018BF0C398-0x000000018BF0C3CC
+		private void DoNothing() {} // 0x0000000185492010-0x0000000185492020
 		private void CellToLocal_Injected(ref Vector3Int cellPosition, out Vector3 ret) {
 			ret = default;
-		} // 0x0000000189DF4594-0x0000000189DF45E8
+		} // 0x000000018BF0C344-0x000000018BF0C398
 	}
 }

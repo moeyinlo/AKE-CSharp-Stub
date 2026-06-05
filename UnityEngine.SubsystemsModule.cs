@@ -4,282 +4,115 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Bindings;
-using UnityEngine.Scripting;
 using UnityEngine.SubsystemsImplementation;
 
-// Image 126: UnityEngine.SubsystemsModule.dll - Assembly: UnityEngine.SubsystemsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60014-60027
-[assembly: CompilationRelaxations(8)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
-[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
-[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
-[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
-[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
-[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
-[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
-[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
-[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
-[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
-[assembly: InternalsVisibleTo("UnityEngine.UI")]
-[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
-[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
-[assembly: InternalsVisibleTo("Unity.Services.QoS")]
-[assembly: InternalsVisibleTo("Unity.Timeline")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
-[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
-[assembly: InternalsVisibleTo("Unity.Logging")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
-[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.Collections")]
-[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
-[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.Core")]
-[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
-[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
-[assembly: InternalsVisibleTo("UnityEngine")]
-[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
-[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
-[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
-[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
-[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
-[assembly: InternalsVisibleTo("Unity.Burst")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
-[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
-[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
-[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
-[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
-[assembly: InternalsVisibleTo("Unity.Analytics")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
-[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
-[assembly: InternalsVisibleTo("UnityEngine.Networking")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
-[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
-[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
-[assembly: InternalsVisibleTo("Unity.Automation")]
-[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
-[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
-[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
-[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
-[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
-[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
-[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
-[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
-[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
-[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
-[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
-[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: UnityEngineModuleAssembly]
+// Image 129: UnityEngine.SubsystemsModule.dll - Assembly: UnityEngine.SubsystemsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61119-61132
 
 namespace UnityEngine
 {
-	[NativeHeader("Modules/Subsystems/Subsystem.h")]
-	[UsedByNativeCode]
-	public class IntegratedSubsystem // TypeDefIndex: 60015
+	public class IntegratedSubsystem // TypeDefIndex: 61120
 	{
 		// Fields
 		internal IntPtr m_Ptr; // 0x10
 		internal ISubsystemDescriptor m_SubsystemDescriptor; // 0x18
 	
 		// Constructors
-		public IntegratedSubsystem() {} // 0x000000018350B670-0x000000018350B680
+		public IntegratedSubsystem() {} // 0x0000000185492010-0x0000000185492020
 	
 		// Methods
-		internal void SetHandle(IntegratedSubsystem subsystem) {} // 0x0000000189E28DE0-0x0000000189E28E24
+		internal void SetHandle(IntegratedSubsystem subsystem) {} // 0x000000018BF40AC8-0x000000018BF40B0C
 	}
 
-	[UsedByNativeCode("Subsystem_TSubsystemDescriptor")]
-	public class IntegratedSubsystem<TSubsystemDescriptor> : IntegratedSubsystem // TypeDefIndex: 60016
+	public class IntegratedSubsystem<TSubsystemDescriptor> : IntegratedSubsystem // TypeDefIndex: 61121
 		where TSubsystemDescriptor : ISubsystemDescriptor
 	{
 		// Constructors
 		public IntegratedSubsystem() {}
 	}
 
-	[UsedByNativeCode("SubsystemDescriptorBase")]
-	public abstract class IntegratedSubsystemDescriptor : ISubsystemDescriptor // TypeDefIndex: 60017
+	public abstract class IntegratedSubsystemDescriptor : ISubsystemDescriptor // TypeDefIndex: 61122
 	{
 		// Fields
 		internal IntPtr m_Ptr; // 0x10
 	
 		// Properties
-		public string id { get; } // 0x0000000189E28DD4-0x0000000189E28DE0 
+		public string id { get; } // 0x000000018BF40ABC-0x000000018BF40AC8 
 	
 		// Constructors
-		protected IntegratedSubsystemDescriptor() {} // 0x000000018350B670-0x000000018350B680
+		protected IntegratedSubsystemDescriptor() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	[NativeHeader("Modules/Subsystems/SubsystemDescriptor.h")]
-	[UsedByNativeCode("SubsystemDescriptor")]
-	public class IntegratedSubsystemDescriptor<TSubsystem> : IntegratedSubsystemDescriptor // TypeDefIndex: 60018
+	public class IntegratedSubsystemDescriptor<TSubsystem> : IntegratedSubsystemDescriptor // TypeDefIndex: 61123
 		where TSubsystem : IntegratedSubsystem
 	{
 		// Constructors
 		public IntegratedSubsystemDescriptor() {}
 	}
 
-	internal static class SubsystemDescriptorBindings // TypeDefIndex: 60019
+	internal static class SubsystemDescriptorBindings // TypeDefIndex: 61124
 	{
 		// Methods
-		public static string GetId(IntPtr descriptorPtr) => default; // 0x0000000189E28E70-0x0000000189E28EA4
+		public static string GetId(IntPtr descriptorPtr) => default; // 0x000000018BF40B58-0x000000018BF40B8C
 	}
 
-	public interface ISubsystemDescriptor // TypeDefIndex: 60020
+	public interface ISubsystemDescriptor // TypeDefIndex: 61125
 	{
 		// Properties
 		string id { get; }
 	}
 
-	public abstract class Subsystem // TypeDefIndex: 60021
+	public abstract class Subsystem // TypeDefIndex: 61126
 	{
 		// Constructors
-		protected Subsystem() {} // 0x000000018350B670-0x000000018350B680
+		protected Subsystem() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public abstract class SubsystemDescriptor : ISubsystemDescriptor // TypeDefIndex: 60022
-	{
-		// Properties
-		public string id { get; } // 0x00000001820B7B20-0x00000001820B7B30 
-	
-		// Constructors
-		protected SubsystemDescriptor() {} // 0x000000018350B670-0x000000018350B680
-	}
-
-	internal static class Internal_SubsystemDescriptors // TypeDefIndex: 60023
-	{
-		// Methods
-		[RequiredByNativeCode]
-		internal static void Internal_AddDescriptor(SubsystemDescriptor descriptor) {} // 0x0000000189E28E24-0x0000000189E28E70
-	}
-
-	[NativeHeader("Modules/Subsystems/SubsystemManager.h")]
-	public static class SubsystemManager // TypeDefIndex: 60024
+	public abstract class SubsystemDescriptor : ISubsystemDescriptor // TypeDefIndex: 61127
 	{
 		// Fields
+		private string _id_k__BackingField; // 0x10
+	
+		// Properties
+		public string id { get; } // 0x000000018346D130-0x000000018346D140 
+	
+		// Constructors
+		protected SubsystemDescriptor() {} // 0x0000000185492010-0x0000000185492020
+	}
+
+	internal static class Internal_SubsystemDescriptors // TypeDefIndex: 61128
+	{
+		// Methods
+		internal static void Internal_AddDescriptor(SubsystemDescriptor descriptor) {} // 0x000000018BF40B0C-0x000000018BF40B58
+	}
+
+	public static class SubsystemManager // TypeDefIndex: 61129
+	{
+		// Fields
+		private static Action beforeReloadSubsystems; // 0x00
+		private static Action afterReloadSubsystems; // 0x08
 		private static List<IntegratedSubsystem> s_IntegratedSubsystems; // 0x10
 		private static List<SubsystemWithProvider> s_StandaloneSubsystems; // 0x18
 		private static List<Subsystem> s_DeprecatedSubsystems; // 0x20
+		private static Action reloadSubsytemsStarted; // 0x28
+		private static Action reloadSubsytemsCompleted; // 0x30
 	
 		// Constructors
-		static SubsystemManager() {} // 0x0000000189E297CC-0x0000000189E29934
+		static SubsystemManager() {} // 0x000000018BF414B4-0x000000018BF4161C
 	
 		// Methods
-		[RequiredByNativeCode]
-		private static void ReloadSubsystemsStarted() {} // 0x0000000189E296F0-0x0000000189E297A0
-		[RequiredByNativeCode]
-		private static void ReloadSubsystemsCompleted() {} // 0x0000000189E29640-0x0000000189E296F0
-		[RequiredByNativeCode]
-		private static void InitializeIntegratedSubsystem(IntPtr ptr, IntegratedSubsystem subsystem) {} // 0x0000000189E295AC-0x0000000189E29640
-		[RequiredByNativeCode]
-		private static void ClearSubsystems() {} // 0x0000000189E29290-0x0000000189E2946C
-		private static void StaticConstructScriptingClassMap() {} // 0x0000000189E297A0-0x0000000189E297CC
-		internal static IntegratedSubsystem GetIntegratedSubsystemByPtr(IntPtr ptr) => default; // 0x0000000189E2946C-0x0000000189E295AC
+		private static void ReloadSubsystemsStarted() {} // 0x000000018BF413D8-0x000000018BF41488
+		private static void ReloadSubsystemsCompleted() {} // 0x000000018BF41328-0x000000018BF413D8
+		private static void InitializeIntegratedSubsystem(IntPtr ptr, IntegratedSubsystem subsystem) {} // 0x000000018BF41294-0x000000018BF41328
+		private static void ClearSubsystems() {} // 0x000000018BF40F78-0x000000018BF41154
+		private static void StaticConstructScriptingClassMap() {} // 0x000000018BF41488-0x000000018BF414B4
+		internal static IntegratedSubsystem GetIntegratedSubsystemByPtr(IntPtr ptr) => default; // 0x000000018BF41154-0x000000018BF41294
 	}
 }
 
 namespace UnityEngine.SubsystemsImplementation
 {
-	[NativeHeader("Modules/Subsystems/SubsystemManager.h")]
-	public static class SubsystemDescriptorStore // TypeDefIndex: 60025
+	public static class SubsystemDescriptorStore // TypeDefIndex: 61130
 	{
 		// Fields
 		private static List<IntegratedSubsystemDescriptor> s_IntegratedDescriptors; // 0x00
@@ -287,32 +120,33 @@ namespace UnityEngine.SubsystemsImplementation
 		private static List<SubsystemDescriptor> s_DeprecatedDescriptors; // 0x10
 	
 		// Constructors
-		static SubsystemDescriptorStore() {} // 0x0000000189E29134-0x0000000189E29290
+		static SubsystemDescriptorStore() {} // 0x000000018BF40E1C-0x000000018BF40F78
 	
 		// Methods
-		[RequiredByNativeCode]
-		internal static void InitializeManagedDescriptor(IntPtr ptr, IntegratedSubsystemDescriptor desc) {} // 0x0000000189E29018-0x0000000189E2909C
-		[RequiredByNativeCode]
-		internal static void ClearManagedDescriptors() {} // 0x0000000189E28EA4-0x0000000189E29018
-		private static void ReportSingleSubsystemAnalytics(string id) {} // 0x0000000189E29100-0x0000000189E29134
+		internal static void InitializeManagedDescriptor(IntPtr ptr, IntegratedSubsystemDescriptor desc) {} // 0x000000018BF40D00-0x000000018BF40D84
+		internal static void ClearManagedDescriptors() {} // 0x000000018BF40B8C-0x000000018BF40D00
+		private static void ReportSingleSubsystemAnalytics(string id) {} // 0x000000018BF40DE8-0x000000018BF40E1C
 		internal static void RegisterDescriptor<TDescriptor, TBaseTypeInList>(TDescriptor descriptor, List<TBaseTypeInList> storeInList)
 			where TDescriptor : TBaseTypeInList
 			where TBaseTypeInList : ISubsystemDescriptor {}
-		internal static void RegisterDeprecatedDescriptor(SubsystemDescriptor descriptor) {} // 0x0000000189E2909C-0x0000000189E29100
+		internal static void RegisterDeprecatedDescriptor(SubsystemDescriptor descriptor) {} // 0x000000018BF40D84-0x000000018BF40DE8
 	}
 
-	public abstract class SubsystemDescriptorWithProvider : ISubsystemDescriptor // TypeDefIndex: 60026
+	public abstract class SubsystemDescriptorWithProvider : ISubsystemDescriptor // TypeDefIndex: 61131
 	{
+		// Fields
+		private string _id_k__BackingField; // 0x10
+	
 		// Properties
-		public string id { get; } // 0x00000001820B7B20-0x00000001820B7B30 
+		public string id { get; } // 0x000000018346D130-0x000000018346D140 
 	
 		// Constructors
-		protected SubsystemDescriptorWithProvider() {} // 0x000000018350B670-0x000000018350B680
+		protected SubsystemDescriptorWithProvider() {} // 0x0000000185492010-0x0000000185492020
 	}
 
-	public abstract class SubsystemWithProvider // TypeDefIndex: 60027
+	public abstract class SubsystemWithProvider // TypeDefIndex: 61132
 	{
 		// Constructors
-		protected SubsystemWithProvider() {} // 0x000000018350B670-0x000000018350B680
+		protected SubsystemWithProvider() {} // 0x0000000185492010-0x0000000185492020
 	}
 }
