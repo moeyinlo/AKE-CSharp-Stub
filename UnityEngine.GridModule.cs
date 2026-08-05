@@ -3,35 +3,201 @@
  */
 
 using System;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using UnityEngine;
+using UnityEngine.Bindings;
+using UnityEngine.Scripting;
 
-// Image 138: UnityEngine.GridModule.dll - Assembly: UnityEngine.GridModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61200-61202
+// Image 140: UnityEngine.GridModule.dll - Assembly: UnityEngine.GridModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63839-63841
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
+[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
+[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
+[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
+[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
+[assembly: InternalsVisibleTo("Unity.Entities")]
+[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
+[assembly: InternalsVisibleTo("Unity.Collections")]
+[assembly: InternalsVisibleTo("Unity.Runtime")]
+[assembly: InternalsVisibleTo("Unity.Core")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
+[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
+[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
+[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
+[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
+[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
+[assembly: InternalsVisibleTo("Unity.Logging")]
+[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
+[assembly: InternalsVisibleTo("UnityEngine")]
+[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
+[assembly: InternalsVisibleTo("Unity.Services.QoS")]
+[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
+[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
+[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
+[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
+[assembly: InternalsVisibleTo("Unity.Automation")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
+[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.Networking")]
+[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
+[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
+[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
+[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
+[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
+[assembly: InternalsVisibleTo("Unity.Timeline")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
+[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
+[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
+[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
+[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
+[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
+[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
+[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
+[assembly: InternalsVisibleTo("Unity.Analytics")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
+[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
+[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
+[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
+[assembly: InternalsVisibleTo("UnityEngine.UI")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
+[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
+[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
+[assembly: InternalsVisibleTo("Unity.Burst")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
+[assembly: InternalsVisibleTo("Unity.UIElements")]
+[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
+[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
+[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: UnityEngineModuleAssembly]
 
 namespace UnityEngine
 {
-	public sealed class Grid : GridLayout // TypeDefIndex: 61201
+	[NativeHeader("Modules/Grid/Public/GridMarshalling.h")]
+	[NativeType(Header = "Modules/Grid/Public/Grid.h")]
+	[RequireComponent(typeof(Transform))]
+	public sealed class Grid : GridLayout // TypeDefIndex: 63840
 	{
 		// Properties
-		public Vector3 cellSize { get => default; } // 0x000000018BF0C410-0x000000018BF0C43C 
+		public Vector3 cellSize { [FreeFunction("GridBindings::GetCellSize", HasExplicitThis = true)] get; } // 0x000000018B3F723C-0x000000018B3F7268 
 	
 		// Constructors
-		public Grid() {} // 0x000000018646DB20-0x000000018646DB28
+		public Grid(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void get_cellSize_Injected(out Vector3 ret) {
-			ret = default;
-		} // 0x000000018BF0C3CC-0x000000018BF0C410
+		private void get_cellSize_Injected(out Vector3 ret); // 0x000000018B3F71F8-0x000000018B3F723C
 	}
 
-	public class GridLayout : Behaviour // TypeDefIndex: 61202
+	[NativeHeader("Modules/Grid/Public/GridMarshalling.h")]
+	[NativeType(Header = "Modules/Grid/Public/Grid.h")]
+	[RequireComponent(typeof(Transform))]
+	public class GridLayout : UnityEngine.Behaviour // TypeDefIndex: 63841
 	{
 		// Constructors
-		public GridLayout() {} // 0x000000018646DB20-0x000000018646DB28
+		public GridLayout(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		public Vector3 CellToLocal(Vector3Int cellPosition) => default; // 0x000000018BF0C398-0x000000018BF0C3CC
-		private void DoNothing() {} // 0x0000000185492010-0x0000000185492020
-		private void CellToLocal_Injected(ref Vector3Int cellPosition, out Vector3 ret) {
-			ret = default;
-		} // 0x000000018BF0C344-0x000000018BF0C398
+		[FreeFunction("GridLayoutBindings::CellToLocal", HasExplicitThis = true)]
+		public Vector3 CellToLocal(Vector3Int cellPosition); // 0x000000018B3F71C4-0x000000018B3F71F8
+		[RequiredByNativeCode]
+		private void DoNothing(); // 0x00000001841E1670-0x00000001841E1680
+		private void CellToLocal_Injected(ref Vector3Int cellPosition, out Vector3 ret); // 0x000000018B3F7170-0x000000018B3F71C4
 	}
 }

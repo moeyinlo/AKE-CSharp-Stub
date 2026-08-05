@@ -4,11 +4,13 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Beyond;
-using Beyond.GEnums;
 using Beyond.Gameplay;
 using Beyond.Gameplay.Core;
+using Beyond.GEnums;
 using Beyond.Lua;
 using Beyond.Resource;
 using Beyond.UI;
@@ -21,22 +23,25 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
 using XLua;
+using XLua.LuaDLL;
 
-// Image 70: Lua.Beyond.dll - Assembly: Lua.Beyond, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59658-59704
+// Image 67: Lua.Beyond.dll - Assembly: Lua.Beyond, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 62029-62076
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Beyond.Lua
 {
-	public abstract class CsToLuaClass // TypeDefIndex: 59665
+	public abstract class CsToLuaClass // TypeDefIndex: 62036
 	{
 		// Fields
 		protected LuaTable m_luaTable; // 0x10
 	
 		// Constructors
-		protected CsToLuaClass() {} // Dummy constructor
-		public CsToLuaClass(string luaPath) {} // 0x000000018AA48C9C-0x000000018AA48D74
+		public CsToLuaClass(string luaPath); // 0x0000000189EB60B8-0x0000000189EB6190
 	}
 
-	public class LuaEventSystem : ILuaEventSystem, IDisposable // TypeDefIndex: 59673
+	public class LuaEventSystem : ILuaEventSystem, IDisposable // TypeDefIndex: 62044
 	{
 		// Fields
 		private DispatchEventFunc m_luaNotify; // 0x10
@@ -48,22 +53,25 @@ namespace Beyond.Lua
 		private int csNotifyRef; // 0x40
 	
 		// Nested types
-		public delegate void DispatchEventFunc(string eventName, LuaTable luaTable); // TypeDefIndex: 59666; 0x0000000184772110-0x0000000184772290
+		[CSharpCallLua]
+		public delegate void DispatchEventFunc(string eventName, LuaTable luaTable); // TypeDefIndex: 62037; 0x00000001838E1420-0x00000001838E1430
 	
-		private sealed class __c__DisplayClass9_0 // TypeDefIndex: 59667
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass9_0 // TypeDefIndex: 62038
 		{
 			// Fields
 			public LuaEventSystem __4__this; // 0x10
 			public string eventName; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass9_0() {}
+			public __c__DisplayClass9_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _DispatchEvent_b__0() {}
+			internal void _DispatchEvent_b__0(); // 0x0000000184CAEE20-0x0000000184CAEF00
 		}
 	
-		private sealed class __c__DisplayClass10_0<T> // TypeDefIndex: 59668
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass10_0<T> // TypeDefIndex: 62039
 		{
 			// Fields
 			public LuaEventSystem __4__this;
@@ -71,13 +79,14 @@ namespace Beyond.Lua
 			public T arg;
 	
 			// Constructors
-			public __c__DisplayClass10_0() {}
+			public __c__DisplayClass10_0();
 	
 			// Methods
-			internal void _DispatchEvent_b__0() {} // 0x0000000184772740-0x00000001847728A0
+			internal void _DispatchEvent_b__0();
 		}
 	
-		private sealed class __c__DisplayClass11_0<T0, T1> // TypeDefIndex: 59669
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass11_0<T0, T1> // TypeDefIndex: 62040
 		{
 			// Fields
 			public LuaEventSystem __4__this;
@@ -86,13 +95,14 @@ namespace Beyond.Lua
 			public T1 arg1;
 	
 			// Constructors
-			public __c__DisplayClass11_0() {} // 0x000000018AA4F518-0x000000018AA4F5B4
+			public __c__DisplayClass11_0();
 	
 			// Methods
-			internal void _DispatchEvent_b__0() {} // 0x00000001846DBAD0-0x00000001846DBB50
+			internal void _DispatchEvent_b__0();
 		}
 	
-		private sealed class __c__DisplayClass12_0<T0, T1, T2> // TypeDefIndex: 59670
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass12_0<T0, T1, T2> // TypeDefIndex: 62041
 		{
 			// Fields
 			public LuaEventSystem __4__this;
@@ -102,13 +112,14 @@ namespace Beyond.Lua
 			public T2 arg2;
 	
 			// Constructors
-			public __c__DisplayClass12_0() {} // 0x00000001831C5680-0x00000001831C5690
+			public __c__DisplayClass12_0();
 	
 			// Methods
-			internal void _DispatchEvent_b__0() {} // 0x0000000186E8C1B8-0x0000000186E8C1EC
+			internal void _DispatchEvent_b__0();
 		}
 	
-		private sealed class __c__DisplayClass13_0<T0, T1, T2, T3> // TypeDefIndex: 59671
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass13_0<T0, T1, T2, T3> // TypeDefIndex: 62042
 		{
 			// Fields
 			public LuaEventSystem __4__this;
@@ -119,13 +130,14 @@ namespace Beyond.Lua
 			public T3 arg3;
 	
 			// Constructors
-			public __c__DisplayClass13_0() {} // 0x00000001864BB614-0x00000001864BB734
+			public __c__DisplayClass13_0();
 	
 			// Methods
-			internal void _DispatchEvent_b__0() {} // 0x0000000185492010-0x0000000185492020
+			internal void _DispatchEvent_b__0();
 		}
 	
-		private sealed class __c__DisplayClass14_0<T0, T1, T2, T3, T4> // TypeDefIndex: 59672
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass14_0<T0, T1, T2, T3, T4> // TypeDefIndex: 62043
 		{
 			// Fields
 			public LuaEventSystem __4__this;
@@ -137,50 +149,51 @@ namespace Beyond.Lua
 			public T4 arg4;
 	
 			// Constructors
-			public __c__DisplayClass14_0() {} // 0x000000018AA5215C-0x000000018AA52244
+			public __c__DisplayClass14_0();
 	
 			// Methods
-			internal void _DispatchEvent_b__0() {}
+			internal void _DispatchEvent_b__0();
 		}
 	
 		// Constructors
-		public LuaEventSystem() {}
+		public LuaEventSystem(); // 0x0000000184852550-0x0000000184852760
 	
 		// Methods
-		public void DispatchEvent(string eventName) {}
-		public void DispatchEvent<T>(string eventName, T arg) {}
-		public void DispatchEvent<T0, T1>(string eventName, T0 arg0, T1 arg1) {}
-		public void DispatchEvent<T0, T1, T2>(string eventName, T0 arg0, T1 arg1, T2 arg2) {}
-		public void DispatchEvent<T0, T1, T2, T3>(string eventName, T0 arg0, T1 arg1, T2 arg2, T3 arg3) {}
-		public void DispatchEvent<T0, T1, T2, T3, T4>(string eventName, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4) {}
-		public void PushEventName(string eventName) {}
-		public void Dispose() {}
+		public void DispatchEvent(string eventName); // 0x000000018423A270-0x000000018423A400
+		public void DispatchEvent<T>(string eventName, T arg);
+		public void DispatchEvent<T0, T1>(string eventName, T0 arg0, T1 arg1);
+		public void DispatchEvent<T0, T1, T2>(string eventName, T0 arg0, T1 arg1, T2 arg2);
+		public void DispatchEvent<T0, T1, T2, T3>(string eventName, T0 arg0, T1 arg1, T2 arg2, T3 arg3);
+		public void DispatchEvent<T0, T1, T2, T3, T4>(string eventName, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4);
+		public void PushEventName(string eventName); // 0x0000000183124F10-0x0000000183125030
+		public void Dispose(); // 0x0000000189EB9230-0x0000000189EB92CC
 	}
 
-	public class CSharpCallLuaRegistration // TypeDefIndex: 59674
+	public class CSharpCallLuaRegistration // TypeDefIndex: 62045
 	{
 		// Fields
 		private LuaEventSystem m_luaEventSystem; // 0x10
 	
 		// Constructors
-		public CSharpCallLuaRegistration() {} // 0x0000000185492010-0x0000000185492020
+		public CSharpCallLuaRegistration(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public void Init() {} // 0x0000000185A21860-0x0000000185A21950
-		public void Dispose() {} // 0x000000018AA48BFC-0x000000018AA48C9C
+		public void Init(); // 0x00000001848523D0-0x00000001848524C0
+		public void Dispose(); // 0x0000000189EB6018-0x0000000189EB60B8
 	}
 
-	public class LuaCustomConfig : MonoBehaviour, ILuaCallCSharp, ISerializationCallbackReceiver // TypeDefIndex: 59679
+	public class LuaCustomConfig : MonoBehaviour, ILuaCallCSharp, ISerializationCallbackReceiver // TypeDefIndex: 62050
 	{
 		// Fields
+		[SerializeField]
 		public List<Item> itemList; // 0x18
 		private Dictionary<string, Item> m_itemDict; // 0x20
 	
 		// Properties
-		public Dictionary<string, Item> itemDict { get => default; } // 0x000000018AA4D8F4-0x000000018AA4DA3C 
+		public Dictionary<string, Item> itemDict { get; } // 0x0000000189EB904C-0x0000000189EB9230 
 	
 		// Nested types
-		public enum ValueType // TypeDefIndex: 59675
+		public enum ValueType // TypeDefIndex: 62046
 		{
 			Bool = 0,
 			Int = 1,
@@ -200,7 +213,7 @@ namespace Beyond.Lua
 		}
 	
 		[Serializable]
-		public class Item : ILuaCallCSharp // TypeDefIndex: 59676
+		public class Item : ILuaCallCSharp // TypeDefIndex: 62047
 		{
 			// Fields
 			public string name; // 0x10
@@ -225,116 +238,131 @@ namespace Beyond.Lua
 			public string enumAssemblyName; // 0xB0
 			public int enumValue; // 0xB8
 			public string luaTableJson; // 0xC0
+			[SerializeField]
 			private string m_lastLuaValue; // 0xC8
 			[NonSerialized]
 			private System.Type m_cachedEnumType; // 0xD0
 	
 			// Constructors
-			public Item() {} // 0x000000018AA4EBF4-0x000000018AA4EDC8
+			public Item(); // 0x0000000183E6D660-0x0000000183E6D830
 	
 			// Methods
-			public bool HasLuaValueChanged() => default; // 0x000000018AA4F334-0x000000018AA4F518
-			public bool ShouldSerializeLuaTableJson() => default; // 0x00000001855DEE90-0x00000001855DEEC0
-			public void MarkLuaValueProcessed() {} // 0x00000001854D22B0-0x00000001854D22E0
-			public System.Type GetEnumType() => default; // 0x000000018AA4EDC8-0x000000018AA4F044
-			public object GetEnumValueObject() => default; // 0x000000018AA4D3E8-0x000000018AA4D488
+			public bool HasLuaValueChanged(); // 0x0000000189EB6B90-0x0000000189EB6BEC
+			public bool ShouldSerializeLuaTableJson(); // 0x0000000189EB6C48-0x0000000189EB6CB8
+			public void MarkLuaValueProcessed(); // 0x0000000189EB6BEC-0x0000000189EB6C48
+			public System.Type GetEnumType(); // 0x0000000189EB67F0-0x0000000189EB69DC
+			public object GetEnumValueObject(); // 0x0000000189EB69DC-0x0000000189EB6B90
 		}
 	
-		private sealed class __c__DisplayClass15_0 // TypeDefIndex: 59677
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass15_0 // TypeDefIndex: 62048
 		{
 			// Fields
 			public List<object> keys1; // 0x10
 			public List<object> keys2; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass15_0() {} // 0x000000018AA4F044-0x000000018AA4F334
+			public __c__DisplayClass15_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void __CompareLuaTables_b__0(object k, object _) {} // 0x000000018AA4DEC0-0x000000018AA4E00C
-			internal void __CompareLuaTables_b__1(object k, object _) {} // 0x000000018AA4E1B4-0x000000018AA4E64C
+			internal void __CompareLuaTables_b__0(object k, object _); // 0x0000000189EBC634-0x0000000189EBC688
+			internal void __CompareLuaTables_b__1(object k, object _); // 0x0000000189EBC688-0x0000000189EBC6DC
 		}
 	
-		private sealed class __c__DisplayClass23_0 // TypeDefIndex: 59678
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass23_0 // TypeDefIndex: 62049
 		{
 			// Fields
 			public JObject jObject; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass23_0() {} // 0x000000018AA4DA3C-0x000000018AA4DBB4
+			public __c__DisplayClass23_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _ConvertLuaTableToJson_b__0(object key, object value) {} // 0x000000018AA4D488-0x000000018AA4D8F4
+			internal void _ConvertLuaTableToJson_b__0(object key, object value); // 0x0000000189EBC6DC-0x0000000189EBC7E0
 		}
 	
 		// Constructors
-		public LuaCustomConfig() {} // 0x000000018AA51F94-0x000000018AA52098
+		public LuaCustomConfig(); // 0x0000000183698ED0-0x0000000183698F40
 	
 		// Methods
-		public void OnBeforeSerialize() {} // 0x000000018AA4DD34-0x000000018AA4DEC0
-		public void OnAfterDeserialize() {} // 0x0000000185097BB0-0x0000000185099E50
-		private bool _ProcessLuaTableItem(Item item) => default; // 0x000000018AA4E00C-0x000000018AA4E1B4
-		public bool ShouldProcessEnumItem(Item item) => default; // 0x000000018AA4E64C-0x000000018AA4EBF4
-		private bool _ProcessEnumItem(Item item) => default; // 0x000000018AA4DBB4-0x000000018AA4DD34
-		private bool _ValidateLuaTableConsistency(string luaCode, string json) => default; // 0x000000018AA4CFA0-0x000000018AA4D26C
-		private LuaTable _JsonToLuaTableForValidation(string json, LuaEnv luaEnv) => default; // 0x000000018AA4D26C-0x000000018AA4D3E8
-		private void _PopulateLuaTableFromJTokenForValidation(LuaTable luaTable, JToken jToken, LuaEnv luaEnv) {} // 0x00000001845608D0-0x0000000184560960
-		private object _ConvertJValueToObjectForValidation(JToken jValue) => default; // 0x000000018AA4CE78-0x000000018AA4CED4
-		private bool _CompareLuaTables(LuaTable table1, LuaTable table2) => default; // 0x000000018AA4CF30-0x000000018AA4CFA0
-		private bool _CompareValues(object value1, object value2) => default; // 0x000000018AA4CED4-0x000000018AA4CF30
-		private bool _IsNumericType(object obj) => default; // 0x000000018AA4CAD8-0x000000018AA4CCC4
-		public void InitConfigTable(LuaTable configTable) {} // 0x000000018AA4CCC4-0x000000018AA4CE78
-		private LuaTable _JsonToLuaTable(string json, LuaEnv luaEnv) => default; // 0x0000000184F9CB00-0x0000000184F9CBE0
-		private void _PopulateLuaTableFromJToken(LuaTable luaTable, JToken jToken) {} // 0x0000000185492010-0x0000000185492020
-		private object _ConvertJValueToObject(JToken jValue) => default; // 0x000000018AA51EEC-0x000000018AA51F40
-		public static string ConvertLuaCodeToJson(string luaCode) => default; // 0x000000018AA51F40-0x000000018AA51F94
-		public static string ConvertLuaTableToJson(LuaTable luaTable) => default; // 0x0000000185492010-0x0000000185492020
+		public void OnBeforeSerialize(); // 0x000000018441E0E0-0x000000018441E110
+		public void OnAfterDeserialize(); // 0x000000018434A2A0-0x000000018434A2D0
+		private bool _ProcessLuaTableItem(Item item); // 0x0000000189EB8AE0-0x0000000189EB8D5C
+		public bool ShouldProcessEnumItem(Item item); // 0x0000000189EB7100-0x0000000189EB71A0
+		private bool _ProcessEnumItem(Item item); // 0x0000000189EB890C-0x0000000189EB8AE0
+		private bool _ValidateLuaTableConsistency(string luaCode, string json); // 0x0000000189EB8D5C-0x0000000189EB904C
+		private LuaTable _JsonToLuaTableForValidation(string json, LuaEnv luaEnv); // 0x0000000189EB7BD8-0x0000000189EB7D24
+		private void _PopulateLuaTableFromJTokenForValidation(LuaTable luaTable, JToken jToken, LuaEnv luaEnv); // 0x0000000189EB7ECC-0x0000000189EB8364
+		private object _ConvertJValueToObjectForValidation(JToken jValue); // 0x0000000189EB7754-0x0000000189EB78CC
+		private bool _CompareLuaTables(LuaTable table1, LuaTable table2); // 0x0000000189EB71A0-0x0000000189EB760C
+		private bool _CompareValues(object value1, object value2); // 0x0000000189EB760C-0x0000000189EB7754
+		private bool _IsNumericType(object obj); // 0x0000000189EB7A4C-0x0000000189EB7BD8
+		public void InitConfigTable(LuaTable configTable); // 0x0000000183F27100-0x0000000183F28880
+		private LuaTable _JsonToLuaTable(string json, LuaEnv luaEnv); // 0x0000000189EB7D24-0x0000000189EB7ECC
+		private void _PopulateLuaTableFromJToken(LuaTable luaTable, JToken jToken); // 0x0000000189EB8364-0x0000000189EB890C
+		private object _ConvertJValueToObject(JToken jValue); // 0x0000000189EB78CC-0x0000000189EB7A4C
+		public static string ConvertLuaCodeToJson(string luaCode); // 0x0000000189EB6CB8-0x0000000189EB6F84
+		public static string ConvertLuaTableToJson(LuaTable luaTable); // 0x0000000189EB6F84-0x0000000189EB7100
 	}
 
-	public class LuaDebugSocketManager : MonoBehaviour // TypeDefIndex: 59680
+	public class LuaDebugSocketManager : MonoBehaviour // TypeDefIndex: 62051
 	{
 		// Constructors
-		public LuaDebugSocketManager() {} // 0x0000000185EDCA50-0x0000000185EDCF80
+		public LuaDebugSocketManager(); // 0x0000000184CC3270-0x0000000184CC3560
 	}
 
-	public static class LuaHotFix // TypeDefIndex: 59682
+	public static class LuaHotFix // TypeDefIndex: 62053
 	{
 		// Nested types
-		public delegate bool LuaHotFixInvoker(string luaCode); // TypeDefIndex: 59681; 0x000000018AA4F990-0x000000018AA4FA88
+		[CSharpCallLua]
+		public delegate bool LuaHotFixInvoker(string luaCode); // TypeDefIndex: 62052; 0x00000001814E2060-0x00000001814E2070
 	
 		// Methods
-		public static void LuaHotFixTest() {} // 0x0000000189ED183C-0x0000000189ED1910
-		public static bool HotFixLua(string lua) => default; // 0x00000001817C2F70-0x00000001817C2F80
-		public static bool HotFixLua(byte[] lua) => default; // 0x0000000185A264E0-0x0000000185A26510
-		public static bool HotFixLua(Span<byte> lua, int length) => default; // 0x00000001864BBBD0-0x00000001864BBD00
+		public static void LuaHotFixTest(); // 0x0000000189EB97A0-0x0000000189EB97E0
+		[IDTag(1)]
+		public static bool HotFixLua(string lua); // 0x0000000189EB96A8-0x0000000189EB97A0
+		[IDTag(2)]
+		public static bool HotFixLua(byte[] lua); // 0x0000000189EB92CC-0x0000000189EB9364
+		[IDTag(0)]
+		public static bool HotFixLua(Span<byte> lua, int length); // 0x0000000189EB9364-0x0000000189EB96A8
 	}
 
-	public class LoadLuaProxy : ILoadLuaProxy // TypeDefIndex: 59683
+	public static class LuaLogBuffer // TypeDefIndex: 62054
+	{
+	}
+
+	public class LoadLuaProxy : ILoadLuaProxy // TypeDefIndex: 62055
 	{
 		// Constructors
-		public LoadLuaProxy() {} // 0x0000000185492010-0x0000000185492020
+		public LoadLuaProxy(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		private static void _RunOnStart() {} // 0x0000000185F072D0-0x0000000185F07380
-		public byte[] LoadLua(string name) => default; // 0x0000000184C33280-0x0000000184C332F0
+		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
+		private static void _RunOnStart(); // 0x0000000184CE2CF0-0x0000000184CE2DA0
+		public byte[] LoadLua(string name); // 0x0000000183600DA0-0x0000000183600E10
 	}
 
-	public class LuaMethodPointerModule // TypeDefIndex: 59684
+	public class LuaMethodPointerModule // TypeDefIndex: 62056
 	{
 		// Constructors
-		public LuaMethodPointerModule() {} // 0x0000000185492010-0x0000000185492020
+		public LuaMethodPointerModule(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		private static void _RunOnStart() {} // 0x0000000185D5C1D0-0x0000000185D5C310
+		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
+		private static void _RunOnStart(); // 0x0000000184B32CB0-0x0000000184B32DF0
 	}
 
-	public class LuaManager : BaseTickManager, ILuaProxy // TypeDefIndex: 59686
+	public class LuaManager : BaseTickManager, ILuaProxy // TypeDefIndex: 62058
 	{
 		// Fields
+		[CompilerGenerated]
 		private static LuaManager _instance_k__BackingField; // 0x00
-		private const float TICK_INTERVAL = 1f; // Metadata: 0x0208102B
+		private const float TICK_INTERVAL = 1f; // Metadata: 0x0235004A
 		private readonly CSharpCallLuaRegistration m_csCallLua; // 0x70
 		private PeriodicTimer m_envTickTimer; // 0x78
 		public static bool s_xluaReflectionOpt; // 0x08
+		[CompilerGenerated]
 		private LuaEnv _luaEnv_k__BackingField; // 0x80
 		public Action<LuaTable, string, LuaUIWidget> wrapUIWidgetFunction; // 0x88
 		public Action<LuaTable, string, LuaReference> bindLuaRefFunction; // 0x90
@@ -345,134 +373,144 @@ namespace Beyond.Lua
 		public TickEvent actionRenderDone; // 0xB8
 	
 		// Properties
-		public static LuaManager instance { get; private set; } // 0x000000018AA505C0-0x000000018AA5061C 0x0000000184CC6750-0x0000000184CC6830
-		public LuaEnv luaEnv { get; private set; } // 0x00000001873CBE98-0x00000001873CBEA8 0x0000000184771F80-0x0000000184772110
-		public bool isQuittingApplication { get => default; set {} } // 0x000000018AA5061C-0x000000018AA506A4 0x000000018AA503FC-0x000000018AA505C0
-		public override FrameTickGroup frameTickGroup { get => default; } // 0x0000000185FA4760-0x0000000185FA47A0 
+		public static LuaManager instance { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D613F0-0x0000000184D61440 0x0000000189EBA0E0-0x0000000189EBA13C
+		public LuaEnv luaEnv { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86260-0x0000000184D86270 0x0000000184CD9970-0x0000000184CD9980
+		public bool isQuittingApplication { get; set; } // 0x0000000189EBA094-0x0000000189EBA0E0 0x0000000189EBA13C-0x0000000189EBA1C4
+		public override FrameTickGroup frameTickGroup { get; } // 0x0000000184D7D310-0x0000000184D7D340 
 	
 		// Nested types
-		public class TickEvent : DisposedUnityEvent<float> // TypeDefIndex: 59685
+		public class TickEvent : DisposedUnityEvent<float> // TypeDefIndex: 62057
 		{
 			// Constructors
-			public TickEvent() {} // 0x0000000185F8D6E0-0x0000000185F8D730
+			public TickEvent(); // 0x0000000183EB2740-0x0000000183EB2780
 		}
 	
 		// Constructors
-		public LuaManager() {} // 0x000000018140CF50-0x000000018140CF60
-		static LuaManager() {} // 0x0000000187A71414-0x0000000187A7141C
+		public LuaManager(); // 0x0000000183EB25B0-0x0000000183EB2740
+		static LuaManager(); // 0x0000000184D7A1D0-0x0000000184D7A210
 	
 		// Methods
-		public static void CreateInstance() {} // 0x0000000184CC64D0-0x0000000184CC6580
-		public static void DestroyInstance() {} // 0x0000000184B51CF0-0x0000000184B51E80
-		public static bool IsEnableMultithreadGC() => default; // 0x0000000184772F50-0x0000000184773090
-		public static bool IsLuaGCing() => default; // 0x00000001853DB8A0-0x00000001853DFA00
-		protected override void OnInit() {} // 0x000000018AA4FC68-0x000000018AA4FE2C
-		public static string GetLuaStack() => default; // 0x0000000185D577B0-0x0000000185D5AA20
-		protected override void OnRelease() {} // 0x000000018AA50020-0x000000018AA50060
-		public static void ReStartLuaProfiler() {} // 0x0000000185FB9E80-0x0000000185FB9E90
-		private void _ReleaseDelegateInAnotherStackFrame() {} // 0x0000000184559C80-0x0000000184559F20
-		public override void Tick(float deltaTime) {} // 0x0000000184559F20-0x000000018455A0F0
-		public override void LateTick(float deltaTime) {} // 0x000000018455A0F0-0x000000018455A2C0
-		public override void TailLateTick(float deltaTime) {} // 0x000000018AA4FBE4-0x000000018AA4FC68
-		public string GetLuaFileRealPath(string modulePath) => default; // 0x000000018425B600-0x000000018425B670
-		public bool IsLuaFileExist(string modulePath) => default; // 0x000000018AA4FE2C-0x000000018AA4FEF4
-		public long LoadLuaByteByFileRealPath(string modulePath, out int len) {
-			len = default;
-			return default;
-		} // 0x00000001849607D0-0x0000000184960850
-		public byte[] LoadLua(string modulePath) => default; // 0x000000018AA4FEF4-0x000000018AA50020
-		public IntPtr LoadLuaBytePtr(string modulePath) => default; // 0x0000000185BAB3F0-0x0000000185BAB470
-		public byte[] LoadLuaBytes(ref string modulePath) => default; // 0x0000000185A21820-0x0000000185A21860
-		private void _RegisterCSharpCallLua() {} // 0x0000000184C33C70-0x0000000184C33EF0
-		private static void _Register3rdPartyLibraries(LuaEnv env) {} // 0x000000018AA50124-0x000000018AA50210
-		private static void _HyperLuaLogCallback(IntPtr L, int level, string text) {} // 0x000000018AA50210-0x000000018AA502A0
-		private static void _LuaUtilsLogCallback(int level, string text) {} // 0x000000018AA502A0-0x000000018AA50374
-		private void _OnEnvLangChanged(EnvLang lang) {} // 0x000000018AA4FB4C-0x000000018AA4FBE4
-		public object[] DoString(string code) => default; // 0x0000000184921DF0-0x0000000184921E30
-		public IntPtr GetLuaState() => default; // 0x0000000184FD23C0-0x0000000184FD2420
-		public void ClearAllUnityObjectUserdata() {} // 0x000000018AA50374-0x000000018AA503FC
-		private void _OnRenderDone(HGRenderPipeCallbackArgs args) {} // 0x000000018455A450-0x000000018455A500
-		private void _OnRenderDone() {} // 0x0000000185A5F090-0x0000000185A5F0E0
-		public bool AddLuaEventAfterGCDo(UnityAction action) => default; // 0x000000018AA50060-0x000000018AA50124
-		public static void RemoveLuaEventAfterGCDo(UnityAction action) {} // 0x000000018AA4FAC8-0x000000018AA4FB4C
-		public void AddOnceLuaEventAfterGCDo(UnityAction action) {} // 0x0000000184852880-0x0000000184852960
-		public static int LuaCalculateABPathHash(IntPtr L) => default; // 0x000000018433FD30-0x000000018433FE20
-		public static void CasterStringPathHash(IntPtr L, int index, out StringPathHash o) {
-			o = default;
-		} // 0x000000018433F170-0x000000018433F1F0
-		public static bool CheckStringPathHash(IntPtr L, int index) => default; // 0x0000000181D409B0-0x0000000181D40CF0
-		public void __iFixBaseProxy_Tick(float P0) {} // 0x0000000187A713F4-0x0000000187A713FC
-		public void __iFixBaseProxy_LateTick(float P0) {} // 0x0000000187A7140C-0x0000000187A71414
-		public void __iFixBaseProxy_TailLateTick(float P0) {} // 0x0000000184B51E80-0x0000000184B51EC0
+		public static void CreateInstance(); // 0x00000001848162C0-0x00000001848163A0
+		public static void DestroyInstance(); // 0x00000001848163A0-0x0000000184816450
+		public static bool IsEnableMultithreadGC(); // 0x0000000183A74140-0x0000000183A74270
+		public static bool IsLuaGCing(); // 0x00000001832F1550-0x00000001832F1660
+		protected override void OnInit(); // 0x00000001842D2660-0x00000001842D6560
+		public static string GetLuaStack(); // 0x00000001832F1320-0x00000001832F1550
+		protected override void OnRelease(); // 0x0000000184A79AD0-0x0000000184A7CB10
+		public static void ReStartLuaProfiler(); // 0x0000000189EB9AF0-0x0000000189EB9B30
+		private void _ReleaseDelegateInAnotherStackFrame(); // 0x0000000189EB9ECC-0x0000000189EBA094
+		public override void Tick(float deltaTime); // 0x000000018301EB50-0x000000018301F840
+		public override void LateTick(float deltaTime); // 0x000000018301F840-0x000000018301F9D0
+		public override void TailLateTick(float deltaTime); // 0x000000018301F9D0-0x000000018301FB60
+		public string GetLuaFileRealPath(string modulePath); // 0x0000000189EB9878-0x0000000189EB98FC
+		public bool IsLuaFileExist(string modulePath); // 0x0000000182F21AB0-0x0000000182F21B00
+		public long LoadLuaByteByFileRealPath(string modulePath, out int len); // 0x0000000189EB98FC-0x0000000189EB99C4
+		public byte[] LoadLua(string modulePath); // 0x0000000183CDC650-0x0000000183CDC6B0
+		public IntPtr LoadLuaBytePtr(string modulePath); // 0x0000000189EB99C4-0x0000000189EB9AF0
+		public byte[] LoadLuaBytes(ref string modulePath); // 0x00000001849CB280-0x00000001849CB300
+		private void _RegisterCSharpCallLua(); // 0x0000000184852390-0x00000001848523D0
+		private static void _Register3rdPartyLibraries(LuaEnv env); // 0x0000000183601780-0x0000000183601A00
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		private static void _HyperLuaLogCallback(IntPtr L, int level, string text); // 0x0000000189EB9BF4-0x0000000189EB9CE0
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		private static void _LuaUtilsLogCallback(int level, string text); // 0x0000000189EB9CE0-0x0000000189EB9D70
+		private void _OnEnvLangChanged(EnvLang lang); // 0x0000000189EB9D70-0x0000000189EB9E44
+		public object[] DoString(string code); // 0x0000000189EB97E0-0x0000000189EB9878
+		public IntPtr GetLuaState(); // 0x00000001838B54E0-0x00000001838B5520
+		public void ClearAllUnityObjectUserdata(); // 0x0000000184034F10-0x0000000184034F70
+		[IDTag(1)]
+		private void _OnRenderDone(HGRenderPipeCallbackArgs args); // 0x0000000189EB9E44-0x0000000189EB9ECC
+		[IDTag(0)]
+		private void _OnRenderDone(); // 0x000000018301FC60-0x000000018301FCD0
+		public bool AddLuaEventAfterGCDo(UnityAction action); // 0x000000018488B620-0x000000018488B670
+		public static void RemoveLuaEventAfterGCDo(UnityAction action); // 0x0000000189EB9B30-0x0000000189EB9BF4
+		public void AddOnceLuaEventAfterGCDo(UnityAction action); // 0x000000018423A400-0x000000018423A460
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int LuaCalculateABPathHash(IntPtr L); // 0x0000000183EC1580-0x0000000183EC1650
+		public static void CasterStringPathHash(IntPtr L, int index, out StringPathHash o); // 0x0000000182F34080-0x0000000182F34150
+		public static bool CheckStringPathHash(IntPtr L, int index); // 0x0000000182F33240-0x0000000182F332A0
+		public void __iFixBaseProxy_Tick(float P0); // 0x0000000186AC5358-0x0000000186AC5360
+		public void __iFixBaseProxy_LateTick(float P0); // 0x0000000186AC5328-0x0000000186AC5330
+		public void __iFixBaseProxy_TailLateTick(float P0); // 0x0000000186ADDC58-0x0000000186ADDC60
+		public FrameTickGroup __iFixBaseProxy_get_frameTickGroup(); // 0x0000000186D78630-0x0000000186D78638
 	}
 
-	public class LuaReference : MonoBehaviour, ILuaCallCSharp // TypeDefIndex: 59691
+	[ExecuteInEditMode]
+	public class LuaReference : MonoBehaviour, ILuaCallCSharp // TypeDefIndex: 62063
 	{
 		// Fields
+		[SerializeField]
 		public ComponentRefDict refDict; // 0x18
+		[SerializeField]
 		public SerializeReferenceDictionary<string, RefExtraInfo> refExtraInfoDict; // 0x20
+		[SerializeField]
 		public bool isRootRef; // 0x28
+		[SerializeField]
 		public List<LuaReference> subReferences; // 0x30
 		private LuaTable m_table; // 0x38
+		private Dictionary<string, Component> m_customUIStyleComp; // 0x40
 	
 		// Nested types
 		[Serializable]
-		public class ComponentRefDict : SerializeReferenceDictionary<string, Component> // TypeDefIndex: 59687
+		public class ComponentRefDict : SerializeReferenceDictionary<string, Component> // TypeDefIndex: 62059
 		{
 			// Constructors
-			public ComponentRefDict() {} // 0x000000018AA50B88-0x000000018AA50E1C
+			public ComponentRefDict(); // 0x0000000183698670-0x00000001836986B0
 		}
 	
 		[Serializable]
-		public class RefExtraInfo // TypeDefIndex: 59689
+		public class RefExtraInfo // TypeDefIndex: 62061
 		{
 			// Fields
 			public List<CustomUIStyleInfo> customUIStyles; // 0x10
 	
 			// Nested types
 			[Serializable]
-			public class CustomUIStyleInfo // TypeDefIndex: 59688
+			public class CustomUIStyleInfo // TypeDefIndex: 62060
 			{
 				// Fields
 				public CustomUIStyle style; // 0x10
 				public Component component; // 0x18
 	
 				// Constructors
-				public CustomUIStyleInfo() {} // 0x000000018454F4C0-0x000000018454F510
+				public CustomUIStyleInfo(); // 0x00000001841E1670-0x00000001841E1680
 			}
 	
 			// Constructors
-			public RefExtraInfo() {} // 0x000000018454E620-0x000000018454F3F0
+			public RefExtraInfo(); // 0x00000001847D3E80-0x00000001847D3F00
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 59690
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 62062
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
-			public static Predicate<LuaReference> __9__7_0; // 0x08
+			public static Predicate<LuaReference> __9__8_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x000000018454C810-0x000000018454D3D0
-			public __c() {} // 0x000000018454D3D0-0x000000018454E620
+			static __c(); // 0x0000000189EBC8A4-0x0000000189EBC908
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _Reset_b__7_0(LuaReference item) => default; // 0x000000018AA506A4-0x000000018AA50B88
+			internal bool _Reset_b__8_0(LuaReference item); // 0x0000000189EBC5E8-0x0000000189EBC634
 		}
 	
 		// Constructors
-		public LuaReference() {} // 0x000000018AA51EA0-0x000000018AA51EEC
+		public LuaReference(); // 0x0000000183698340-0x0000000183698470
 	
 		// Methods
-		private void Reset() {} // 0x0000000184560F80-0x0000000184561120
-		private void OnDestroy() {} // 0x0000000184562850-0x00000001845628B0
-		private void _UnBindFromXluaRef() {} // 0x0000000185905C80-0x0000000185905D00
-		public void BindToLua(LuaTable table) {} // 0x0000000185492010-0x0000000185492020
-		private void _BindSelfReferences(LuaTable table) {} // 0x000000018AA52244-0x000000018AA522A8
-		public bool ContainsGameObject(GameObject obj, bool recursive = true /* Metadata: 0x0208102F */) => default; // 0x0000000185492010-0x0000000185492020
+		private void Reset(); // 0x0000000189EBA88C-0x0000000189EBAB20
+		private void OnDestroy(); // 0x00000001832EF680-0x00000001832EF6F0
+		private void _UnBindFromXluaRef(); // 0x00000001832EFC60-0x00000001832F0100
+		public void BindToLua(LuaTable table); // 0x00000001832EF6F0-0x00000001832EFC60
+		private void _BindSelfReferences(LuaTable table); // 0x00000001832F0170-0x00000001832F1200
+		public bool RefreshCustomUIStyleBindings(); // 0x0000000189EBA6A8-0x0000000189EBA88C
+		private bool _RefreshSelfCustomUIStyleBindings(LuaTable table); // 0x0000000189EBAB20-0x0000000189EBB114
+		public bool ContainsGameObject(GameObject obj, bool recursive = true /* Metadata: 0x0235004E */); // 0x0000000189EBA1C4-0x0000000189EBA6A8
 	}
 
-	public struct LuaTestReflectionOptStruct // TypeDefIndex: 59692
+	public struct LuaTestReflectionOptStruct // TypeDefIndex: 62064
 	{
 		// Fields
 		public int a; // 0x00
@@ -484,35 +522,27 @@ namespace Beyond.Lua
 		public bool bl; // 0x30
 	
 		// Properties
-		public int a1 { get => default; } // 0x00000001818226B0-0x00000001818226C0 
-		public string b1 { get => default; } // 0x000000018357A260-0x000000018357A270 
-		public long l1 { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public ulong ul1 { get => default; } // 0x0000000181377E40-0x0000000181377E50 
-		public float f1 { get => default; } // 0x0000000181C9AC70-0x0000000181C9AC80 
-		public double d1 { get => default; } // 0x0000000185FB0BC0-0x0000000185FB0BD0 
-		public bool bl1 { get => default; } // 0x00000001814294C0-0x00000001814294D0 
+		public int a1 { get; } // 0x0000000189EBBD7C-0x0000000189EBBDC4 
+		public string b1 { get; } // 0x0000000189EBBDC4-0x0000000189EBBE10 
+		public long l1 { get; } // 0x0000000189EBBEF0-0x0000000189EBBF3C 
+		public ulong ul1 { get; } // 0x0000000189EBBF3C-0x0000000189EBBF88 
+		public float f1 { get; } // 0x0000000189EBBEA4-0x0000000189EBBEF0 
+		public double d1 { get; } // 0x0000000189EBBE58-0x0000000189EBBEA4 
+		public bool bl1 { get; } // 0x0000000189EBBE10-0x0000000189EBBE58 
 	
 		// Constructors
-		public LuaTestReflectionOptStruct(int a, string b, long l, ulong ul, float f, double d, bool bl) : this() {
-			this.a = default;
-			this.b = default;
-			this.l = default;
-			this.ul = default;
-			this.f = default;
-			this.d = default;
-			this.bl = default;
-		} // 0x000000018AA51824-0x000000018AA5186C
+		public LuaTestReflectionOptStruct(int a, string b, long l, ulong ul, float f, double d, bool bl); // 0x0000000189EBBD34-0x0000000189EBBD7C
 	
 		// Methods
-		public int TestInt(int a) => default; // 0x000000018AA51604-0x000000018AA51658
-		public void TestVoid() {} // 0x000000018AA517E4-0x000000018AA51824
-		public void TestStructParam(LuaTestReflectionOptStruct testStruct) {} // 0x000000018AA5176C-0x000000018AA517E4
-		public void TestStructParam2(ref LuaTestReflectionOptStruct testStruct) {} // 0x000000018AA5171C-0x000000018AA5176C
-		public object TestReturnObj() => default; // 0x000000018AA516A8-0x000000018AA5171C
-		public void TestObjParam(object obj) {} // 0x000000018AA51658-0x000000018AA516A8
+		public int TestInt(int a); // 0x0000000189EBBB14-0x0000000189EBBB68
+		public void TestVoid(); // 0x0000000189EBBCF4-0x0000000189EBBD34
+		public void TestStructParam(LuaTestReflectionOptStruct testStruct); // 0x0000000189EBBC7C-0x0000000189EBBCF4
+		public void TestStructParam2(ref LuaTestReflectionOptStruct testStruct); // 0x0000000189EBBC2C-0x0000000189EBBC7C
+		public object TestReturnObj(); // 0x0000000189EBBBB8-0x0000000189EBBC2C
+		public void TestObjParam(object obj); // 0x0000000189EBBB68-0x0000000189EBBBB8
 	}
 
-	public struct LuaTestReflectionOptStruct2 // TypeDefIndex: 59693
+	public struct LuaTestReflectionOptStruct2 // TypeDefIndex: 62065
 	{
 		// Fields
 		public int a; // 0x00
@@ -524,190 +554,215 @@ namespace Beyond.Lua
 		public bool bl; // 0x30
 	
 		// Properties
-		public int a1 { get => default; } // 0x00000001818226B0-0x00000001818226C0 
-		public string b1 { get => default; } // 0x000000018357A260-0x000000018357A270 
-		public long l1 { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public ulong ul1 { get => default; } // 0x0000000181377E40-0x0000000181377E50 
-		public float f1 { get => default; } // 0x0000000181C9AC70-0x0000000181C9AC80 
-		public double d1 { get => default; } // 0x0000000185FB0BC0-0x0000000185FB0BD0 
-		public bool bl1 { get => default; } // 0x00000001814294C0-0x00000001814294D0 
+		public int a1 { get; } // 0x0000000189EBB908-0x0000000189EBB950 
+		public string b1 { get; } // 0x0000000189EBB950-0x0000000189EBB99C 
+		public long l1 { get; } // 0x0000000189EBBA7C-0x0000000189EBBAC8 
+		public ulong ul1 { get; } // 0x0000000189EBBAC8-0x0000000189EBBB14 
+		public float f1 { get; } // 0x0000000189EBBA30-0x0000000189EBBA7C 
+		public double d1 { get; } // 0x0000000189EBB9E4-0x0000000189EBBA30 
+		public bool bl1 { get; } // 0x0000000189EBB99C-0x0000000189EBB9E4 
 	
 		// Methods
-		public int TestInt(int a) => default; // 0x000000018AA513E4-0x000000018AA51438
-		public void TestVoid() {} // 0x000000018AA515C4-0x000000018AA51604
-		public void TestStructParam(LuaTestReflectionOptStruct2 testStruct) {} // 0x000000018AA5154C-0x000000018AA515C4
-		public void TestStructParam2(ref LuaTestReflectionOptStruct2 testStruct) {} // 0x000000018AA514FC-0x000000018AA5154C
-		public object TestReturnObj() => default; // 0x000000018AA51488-0x000000018AA514FC
-		public void TestObjParam(object obj) {} // 0x000000018AA51438-0x000000018AA51488
+		public int TestInt(int a); // 0x0000000189EBB6E8-0x0000000189EBB73C
+		public void TestVoid(); // 0x0000000189EBB8C8-0x0000000189EBB908
+		public void TestStructParam(LuaTestReflectionOptStruct2 testStruct); // 0x0000000189EBB850-0x0000000189EBB8C8
+		public void TestStructParam2(ref LuaTestReflectionOptStruct2 testStruct); // 0x0000000189EBB800-0x0000000189EBB850
+		public object TestReturnObj(); // 0x0000000189EBB78C-0x0000000189EBB800
+		public void TestObjParam(object obj); // 0x0000000189EBB73C-0x0000000189EBB78C
 	}
 
-	public enum ETestEnum // TypeDefIndex: 59694
+	public enum ETestEnum // TypeDefIndex: 62066
 	{
 		Test1 = 2,
 		Test2 = 2
 	}
 
-	public class LuaTestReflectionOpt2 // TypeDefIndex: 59695
+	public class LuaTestReflectionOpt2 // TypeDefIndex: 62067
 	{
 		// Fields
 		public List<int> TestList; // 0x10
 		public Dictionary<int, string> TestDict; // 0x18
 	
 		// Constructors
-		public LuaTestReflectionOpt2() {} // 0x000000018AA51258-0x000000018AA513E4
+		public LuaTestReflectionOpt2(); // 0x0000000189EBB55C-0x0000000189EBB6E8
 	
 		// Methods
-		public void TestVoid() {} // 0x000000018AA51218-0x000000018AA51258
-		public int TestInt(int a) => default; // 0x000000018AA50E6C-0x000000018AA50EC0
-		public void TestStructParam(LuaTestReflectionOptStruct testStruct) {} // 0x000000018AA51098-0x000000018AA51110
-		public void TestStructParam(LuaTestReflectionOptStruct2 testStruct) {} // 0x000000018AA51020-0x000000018AA51098
-		public void TestStructParam2(ref LuaTestReflectionOptStruct testStruct) {} // 0x000000018AA50FD0-0x000000018AA51020
-		public object TestReturnObj() => default; // 0x000000018AA50F5C-0x000000018AA50FD0
-		public void TestObjParam(object obj) {} // 0x000000018AA50EC0-0x000000018AA50F10
-		public void TestEnum(ETestEnum e) {} // 0x000000018AA50E1C-0x000000018AA50E6C
-		public ETestEnum TestReturnEnum() => default; // 0x000000018AA50F10-0x000000018AA50F5C
-		public LuaTestReflectionOptStruct TestStruct(LuaTestReflectionOptStruct a) => default; // 0x000000018AA51110-0x000000018AA51218
+		public void TestVoid(); // 0x0000000189EBB51C-0x0000000189EBB55C
+		public int TestInt(int a); // 0x0000000189EBB168-0x0000000189EBB1BC
+		[IDTag(0)]
+		public void TestStructParam(LuaTestReflectionOptStruct testStruct); // 0x0000000189EBB398-0x0000000189EBB410
+		[IDTag(1)]
+		public void TestStructParam(LuaTestReflectionOptStruct2 testStruct); // 0x0000000189EBB320-0x0000000189EBB398
+		public void TestStructParam2(ref LuaTestReflectionOptStruct testStruct); // 0x0000000189EBB2D0-0x0000000189EBB320
+		public object TestReturnObj(); // 0x0000000189EBB25C-0x0000000189EBB2D0
+		public void TestObjParam(object obj); // 0x0000000189EBB1BC-0x0000000189EBB20C
+		public void TestEnum(ETestEnum e); // 0x0000000189EBB114-0x0000000189EBB168
+		public ETestEnum TestReturnEnum(); // 0x0000000189EBB20C-0x0000000189EBB25C
+		public LuaTestReflectionOptStruct TestStruct(LuaTestReflectionOptStruct a); // 0x0000000189EBB410-0x0000000189EBB51C
 	}
 
-	public class LuaTestReflectionOpt // TypeDefIndex: 59696
+	public class LuaTestReflectionOpt // TypeDefIndex: 62068
 	{
 		// Fields
 		public List<int> TestList; // 0x10
 		public Dictionary<int, string> TestDict; // 0x18
 	
 		// Constructors
-		public LuaTestReflectionOpt() {} // 0x000000018AA51CA8-0x000000018AA51E34
+		public LuaTestReflectionOpt(); // 0x0000000189EBC3EC-0x0000000189EBC578
 	
 		// Methods
-		public void TestVoid() {} // 0x000000018AA51C68-0x000000018AA51CA8
-		public int TestInt(int a) => default; // 0x000000018AA518BC-0x000000018AA51910
-		public void TestStructParam(LuaTestReflectionOptStruct testStruct) {} // 0x000000018AA51AE8-0x000000018AA51B60
-		public void TestStructParam(LuaTestReflectionOptStruct2 testStruct) {} // 0x000000018AA51A70-0x000000018AA51AE8
-		public void TestStructParam2(ref LuaTestReflectionOptStruct testStruct) {} // 0x000000018AA51A20-0x000000018AA51A70
-		public object TestReturnObj() => default; // 0x000000018AA519AC-0x000000018AA51A20
-		public void TestObjParam(object obj) {} // 0x000000018AA51910-0x000000018AA51960
-		public void TestEnum(ETestEnum e) {} // 0x000000018AA5186C-0x000000018AA518BC
-		public ETestEnum TestReturnEnum() => default; // 0x000000018AA51960-0x000000018AA519AC
-		public LuaTestReflectionOptStruct TestStruct(LuaTestReflectionOptStruct a) => default; // 0x000000018AA51B60-0x000000018AA51C68
+		public void TestVoid(); // 0x0000000189EBC3A8-0x0000000189EBC3EC
+		public int TestInt(int a); // 0x0000000189EBBFDC-0x0000000189EBC034
+		[IDTag(0)]
+		public void TestStructParam(LuaTestReflectionOptStruct testStruct); // 0x0000000189EBC220-0x0000000189EBC29C
+		[IDTag(1)]
+		public void TestStructParam(LuaTestReflectionOptStruct2 testStruct); // 0x0000000189EBC1A4-0x0000000189EBC220
+		public void TestStructParam2(ref LuaTestReflectionOptStruct testStruct); // 0x0000000189EBC150-0x0000000189EBC1A4
+		public object TestReturnObj(); // 0x0000000189EBC0D8-0x0000000189EBC150
+		public void TestObjParam(object obj); // 0x0000000189EBC034-0x0000000189EBC088
+		public void TestEnum(ETestEnum e); // 0x0000000189EBBF88-0x0000000189EBBFDC
+		public ETestEnum TestReturnEnum(); // 0x0000000189EBC088-0x0000000189EBC0D8
+		public LuaTestReflectionOptStruct TestStruct(LuaTestReflectionOptStruct a); // 0x0000000189EBC29C-0x0000000189EBC3A8
 	}
 
-	public class LuaUIWidget : MonoBehaviour, IUIClearable // TypeDefIndex: 59697
+	public class LuaUIWidget : MonoBehaviour, IUIClearable // TypeDefIndex: 62069
 	{
 		// Fields
 		public string id; // 0x18
 		public bool isEmbeddedWidget; // 0x20
+		[CompilerGenerated]
 		private LuaTable _table_k__BackingField; // 0x28
 		public LuaFunction onEnable; // 0x30
 		public LuaFunction onDisable; // 0x38
 		public LuaFunction onDestroy; // 0x40
 	
 		// Properties
-		public LuaTable table { get; set; } // 0x00000001813B8590-0x00000001813B85A0 0x00000001858474A0-0x00000001858474B0
+		public LuaTable table { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86240-0x0000000184D86250 0x00000001844ECC30-0x00000001844ECC40
 	
 		// Constructors
-		public LuaUIWidget() {} // 0x000000018646DB20-0x000000018646DB28
+		public LuaUIWidget(); // 0x0000000183695570-0x0000000183695590
 	
 		// Methods
-		private void Reset() {} // 0x000000018AA51E34-0x000000018AA51EA0
-		private void OnEnable() {} // 0x000000018439EDD0-0x000000018439EE40
-		private void OnDisable() {} // 0x000000018439ED30-0x000000018439EDA0
-		private void OnDestroy() {} // 0x00000001855D1DC0-0x00000001855D1E00
-		public void ClearComponent() {} // 0x000000018454F5B0-0x000000018454F6D0
+		private void Reset(); // 0x0000000189EBC578-0x0000000189EBC5E8
+		private void OnEnable(); // 0x000000018321CC80-0x000000018321CCD0
+		private void OnDisable(); // 0x000000018321CCD0-0x000000018321CD20
+		private void OnDestroy(); // 0x0000000184209D50-0x0000000184209D90
+		public void ClearComponent(); // 0x00000001832EF120-0x00000001832EF250
 	}
 
-	public static class UtilsForLua // TypeDefIndex: 59700
+	public static class UtilsForLua // TypeDefIndex: 62072
 	{
 		// Fields
 		private static Vector3[] s_worldCorners; // 0x00
 	
 		// Nested types
-		public class ImageContentParam // TypeDefIndex: 59698
+		public class ImageContentParam // TypeDefIndex: 62070
 		{
 			// Fields
 			public string path; // 0x10
 	
 			// Constructors
-			public ImageContentParam() {} // 0x0000000185DB1350-0x0000000185DB13D0
+			public ImageContentParam(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
-		private sealed class __c__DisplayClass33_0 // TypeDefIndex: 59699
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass34_0 // TypeDefIndex: 62071
 		{
 			// Fields
 			public float from; // 0x10
 			public LuaFunction setter; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass33_0() {} // 0x00000001845A8ED0-0x00000001845A8F60
+			public __c__DisplayClass34_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal float _TweenTo_b__0() => default; // 0x00000001845A8E30-0x00000001845A8ED0
-			internal void _TweenTo_b__1(float value) {} // 0x000000018AA539A0-0x000000018AA53B84
+			internal float _TweenTo_b__0(); // 0x0000000184D85F70-0x0000000184D85F80
+			internal void _TweenTo_b__1(float value); // 0x0000000189EBC7E0-0x0000000189EBC8A4
 		}
 	
 		// Constructors
-		static UtilsForLua() {} // 0x000000018AA52098-0x000000018AA5215C
+		static UtilsForLua(); // 0x0000000184D36290-0x0000000184D36300
 	
 		// Methods
-		public static GameObject CreateObject(GameObject asset) => default; // 0x000000018AA5374C-0x000000018AA537B0
-		public static GameObject CreateObject(GameObject asset, Transform parent) => default; // 0x000000018AA537B0-0x000000018AA53814
-		public static GameObject CreateObject(GameObject asset, GameObject parent) => default; // 0x000000018AA535DC-0x000000018AA53640
-		public static void UIContainerResize(Transform container, int size, int templateIndex = 0 /* Metadata: 0x02081032 */) {} // 0x000000018AA52F5C-0x000000018AA52FFC
-		public static int TurnOffLayer(int value, string layerName) => default; // 0x000000018AA52FFC-0x000000018AA5309C
-		public static int TurnOnLayer(int value, string layerName) => default; // 0x000000018AA5309C-0x000000018AA53130
-		public static int ToggleLayer(int value, string layerName) => default; // 0x000000018AA53130-0x000000018AA531D0
-		public static void SetPosX(Transform t, float value) {} // 0x000000018AA531D0-0x000000018AA53270
-		public static void SetPosY(Transform t, float value) {} // 0x000000018AA53270-0x000000018AA53304
-		public static void SetPosZ(Transform t, float value) {} // 0x000000018AA53304-0x000000018AA533A4
-		public static void SetRotX(Transform t, float value) {} // 0x000000018AA533A4-0x000000018AA53444
-		public static void SetRotY(Transform t, float value) {} // 0x000000018AA53444-0x000000018AA534D8
-		public static void SetRotZ(Transform t, float value) {} // 0x00000001845D6EA0-0x00000001845D6F10
-		public static void SetScaleX(Transform t, float value) {} // 0x000000018AA52C38-0x000000018AA52D34
-		public static void SetScaleY(Transform t, float value) {} // 0x000000018AA52D34-0x000000018AA52E30
-		public static void SetScaleZ(Transform t, float value) {} // 0x00000001848461E0-0x0000000184846380
-		public static void ClearUIComponents(GameObject gameObject) {} // 0x000000018AA52E30-0x000000018AA52EE0
-		public static bool RayCast(out RaycastHit hitInfo, Ray ray, float maxDistance, int layerMask, QueryTriggerInteraction interaction = QueryTriggerInteraction.UseGlobal /* Metadata: 0x02081033 */) {
-			hitInfo = default;
-			return default;
-		} // 0x000000018AA52790-0x000000018AA528C4
-		public static int RaycastNonAlloc(Ray ray, RaycastHit[] results, float maxDistance, int layerMask, QueryTriggerInteraction interaction) => default; // 0x000000018AA522A8-0x000000018AA52360
-		public static Bounds GetRectTransformBounds(RectTransform transform) => default; // 0x000000018AA52928-0x000000018AA529B8
-		public static UnityEngine.Rect RectTransformToScreenRect(RectTransform rectTransform, Camera uiCamera) => default; // 0x000000018AA528C4-0x000000018AA52928
-		public static Vector3 GetRectTransformCenterPosition(RectTransform rectTransform) => default; // 0x000000018AA52360-0x000000018AA5241C
-		public static Bounds CalcBoundOfRectTransform(RectTransform transform, RectTransform local) => default; // 0x000000018AA529B8-0x000000018AA52A24
-		public static List<string> GetStringList() => default; // 0x000000018AA5241C-0x000000018AA5249C
-		public static int GetStringHash(string str) => default; // 0x000000018AA52670-0x000000018AA526F4
-		public static float EntityDistance(Entity a, Entity b) => default; // 0x000000018AA534D8-0x000000018AA53568
-		public static void OpenAccountCenter() {} // 0x000000018AA536B4-0x000000018AA5374C
-		public static void ExitGame() {} // 0x000000018AA5249C-0x000000018AA52518
-		public static string GetCurrentUID() => default; // 0x000000018AA53814-0x000000018AA539A0
-		public static bool StartPayment(string productId, string signParams) => default; // 0x00000001852CECC0-0x00000001852CED30
-		public static bool TryGetCharacterVolume(UnityEngine.Rendering.Volume volume, out HGCharacterVolume hgCharacterVolume) {
-			hgCharacterVolume = default;
-			return default;
-		} // 0x000000018AA52A24-0x000000018AA52BE8
-		public static float GetAnimationCurveLength(AnimationCurve curve) => default; // 0x000000018AA52EE0-0x000000018AA52F5C
-		public static Tweener TweenTo(float from, float to, float duration, LuaFunction setter) => default; // 0x000000018AA52BE8-0x000000018AA52C38
-		public static bool IsNull(UnityEngine.Object o) => default; // 0x000000018AA53568-0x000000018AA535DC
-		public static ImageContentParam ParseImageContent(string xml) => default; // 0x000000018AA53640-0x000000018AA536B4
-		public static void ReturnToLogin() {} // 0x000000018AA525C4-0x000000018AA52670
-		public static void QuitGame(int exitCode) {} // 0x000000018AA52518-0x000000018AA525C4
-		public static void ToggleCharInfoInUpgradePanelOption(bool isIn) {} // 0x000000018AA526F4-0x000000018AA52790
-		public static void ToggleWeaponInUpgradePanelOption(bool isIn) {} // 0x0000000185FA3670-0x0000000185FA36E0
-		public static CinemachineTransposer GetCinemachineTransposer(CinemachineVirtualCamera vcam) => default; // 0x0000000185492010-0x0000000185492020
-		public static CinemachineComposer GetCinemachineComposer(CinemachineVirtualCamera vcam) => default; // 0x0000000185492010-0x0000000185492020
-		public static CinemachineCameraOffset GetOrAddCinemachineCameraOffset(CinemachineVirtualCamera vcam) => default; // 0x0000000181DCCCE0-0x0000000181DCCCF0
+		[IDTag(0)]
+		public static GameObject CreateObject(GameObject asset); // 0x0000000184B4E940-0x0000000184B4E9C0
+		[IDTag(1)]
+		public static GameObject CreateObject(GameObject asset, Transform parent); // 0x0000000183B1CCD0-0x0000000183B1CD60
+		[IDTag(2)]
+		public static GameObject CreateObject(GameObject asset, GameObject parent); // 0x0000000183B1CC50-0x0000000183B1CCD0
+		public static void UIContainerResize(Transform container, int size, int templateIndex = 0 /* Metadata: 0x02350051 */); // 0x0000000189EBE220-0x0000000189EBE404
+		public static int TurnOffLayer(int value, string layerName); // 0x0000000189EBDFCC-0x0000000189EBE030
+		public static int TurnOnLayer(int value, string layerName); // 0x0000000189EBE030-0x0000000189EBE094
+		public static int ToggleLayer(int value, string layerName); // 0x0000000189EBDE5C-0x0000000189EBDEC0
+		public static void ClearUIComponents(GameObject gameObject); // 0x0000000183DC7E60-0x0000000183DC7EB0
+		public static bool RayCast(out RaycastHit hitInfo, Ray ray, float maxDistance, int layerMask, QueryTriggerInteraction interaction = QueryTriggerInteraction.UseGlobal /* Metadata: 0x02350052 */); // 0x0000000189EBD4D4-0x0000000189EBD5D0
+		public static int RaycastNonAlloc(Ray ray, RaycastHit[] results, float maxDistance, int layerMask, QueryTriggerInteraction interaction); // 0x0000000189EBD5D0-0x0000000189EBD6CC
+		public static Bounds GetRectTransformBounds(RectTransform transform); // 0x00000001837D7060-0x00000001837D7200
+		public static UnityEngine.Rect RectTransformToScreenRect(RectTransform rectTransform, Camera uiCamera); // 0x0000000189EBD6CC-0x0000000189EBD760
+		public static Vector3 GetRectTransformCenterPosition(RectTransform rectTransform); // 0x0000000189EBD02C-0x0000000189EBD160
+		public static Bounds CalcBoundOfRectTransform(RectTransform transform, RectTransform local); // 0x0000000189EBC908-0x0000000189EBC9C0
+		public static Vector2 ClampPointInRectTransform(RectTransform source, RectTransform target, Vector2 sourcePoint); // 0x0000000189EBCB54-0x0000000189EBCBFC
+		public static List<string> GetStringList(); // 0x0000000189EBD1C4-0x0000000189EBD254
+		public static int GetStringHash(string str); // 0x0000000189EBD160-0x0000000189EBD1C4
+		public static float EntityDistance(Entity a, Entity b); // 0x0000000189EBCBFC-0x0000000189EBCCB8
+		public static void OpenAccountCenter(); // 0x0000000189EBD254-0x0000000189EBD2C0
+		public static void ExitGame(); // 0x0000000189EBCCB8-0x0000000189EBCD38
+		public static string GetCurrentUID(); // 0x0000000189EBCF0C-0x0000000189EBCF90
+		public static bool StartPayment(string productId, string signParams); // 0x0000000189EBDD58-0x0000000189EBDDE8
+		public static bool TryGetCharacterVolume(UnityEngine.Rendering.Volume volume, out HGCharacterVolume hgCharacterVolume); // 0x0000000189EBDF34-0x0000000189EBDFCC
+		public static float GetAnimationCurveLength(AnimationCurve curve); // 0x0000000189EBCD38-0x0000000189EBCDB4
+		public static Tweener TweenTo(float from, float to, float duration, LuaFunction setter); // 0x0000000189EBE094-0x0000000189EBE220
+		public static bool IsNull(UnityEngine.Object o); // 0x0000000184086AE0-0x0000000184086B90
+		public static ImageContentParam ParseImageContent(string xml); // 0x0000000189EBD2C0-0x0000000189EBD484
+		public static void ReturnToLogin(); // 0x0000000189EBD760-0x0000000189EBD7DC
+		public static void QuitGame(int exitCode); // 0x0000000189EBD484-0x0000000189EBD4D4
+		public static bool CheckExtremeDangerousByLevel(int level); // 0x0000000189EBC9C0-0x0000000189EBCB54
+		public static void ToggleCharInfoInUpgradePanelOption(bool isIn); // 0x0000000189EBDDE8-0x0000000189EBDE5C
+		public static void ToggleWeaponInUpgradePanelOption(bool isIn); // 0x0000000189EBDEC0-0x0000000189EBDF34
+		public static CinemachineTransposer GetCinemachineTransposer(CinemachineVirtualCamera vcam); // 0x0000000189EBCE60-0x0000000189EBCF0C
+		public static CinemachineComposer GetCinemachineComposer(CinemachineVirtualCamera vcam); // 0x0000000189EBCDB4-0x0000000189EBCE60
+		public static CinemachineCameraOffset GetOrAddCinemachineCameraOffset(CinemachineVirtualCamera vcam); // 0x0000000189EBCF90-0x0000000189EBD02C
+	
+		// Extension methods
+		public static void SetPosX(this Transform t, float value); // 0x0000000189EBD7DC-0x0000000189EBD87C
+		public static void SetPosY(this Transform t, float value); // 0x0000000189EBD87C-0x0000000189EBD91C
+		public static void SetPosZ(this Transform t, float value); // 0x0000000189EBD91C-0x0000000189EBD9B0
+		public static void SetRotX(this Transform t, float value); // 0x0000000189EBD9B0-0x0000000189EBDA50
+		public static void SetRotY(this Transform t, float value); // 0x0000000189EBDA50-0x0000000189EBDAF0
+		public static void SetRotZ(this Transform t, float value); // 0x0000000189EBDAF0-0x0000000189EBDB84
+		public static void SetScaleX(this Transform t, float value); // 0x0000000189EBDB84-0x0000000189EBDC24
+		public static void SetScaleY(this Transform t, float value); // 0x0000000189EBDC24-0x0000000189EBDCC4
+		public static void SetScaleZ(this Transform t, float value); // 0x0000000189EBDCC4-0x0000000189EBDD58
 	}
 }
 
 namespace Beyond.SourceGenerator
 {
-	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 59660
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 62031
 	{
 		// Constructors
-		public CameraControlConfigAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public CameraControlConfigAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class DataNAttribute : Attribute // TypeDefIndex: 59661
+	internal static class AnimatorBlackboardUtility // TypeDefIndex: 62032
+	{
+		// Fields
+		internal static bool s_enableFastPathBuffer; // 0x00
+	
+		// Methods
+		internal static void ClearAndEnsureDictionaryCapacity<TKey, TValue>(ref Dictionary<TKey, TValue> dict, int capacity);
+	}
+
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 62033
+	{
+		// Constructors
+		public AnimatorBlackboardAttribute(); // 0x00000001841E1670-0x00000001841E1680
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class DataNAttribute : Attribute // TypeDefIndex: 62034
 	{
 		// Fields
 		public int capacity; // 0x10
@@ -715,47 +770,34 @@ namespace Beyond.SourceGenerator
 		public bool ring; // 0x18
 	
 		// Constructors
-		public DataNAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public DataNAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 59662
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 62035
 	{
 		// Fields
 		public LayoutKind layoutKind; // 0x10
 		public bool isTag; // 0x14
 	
 		// Constructors
-		public ECSComponentAttribute() {} // 0x0000000185492010-0x0000000185492020
-	}
-
-	internal static class AnimatorBlackboardUtility // TypeDefIndex: 59663
-	{
-		// Fields
-		internal static bool s_enableFastPathBuffer; // 0x00
-	
-		// Methods
-		internal static void ClearAndEnsureDictionaryCapacity<TKey, TValue>(ref Dictionary<TKey, TValue> dict, int capacity) {}
-	}
-
-	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 59664
-	{
-		// Constructors
-		public AnimatorBlackboardAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public ECSComponentAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace HG.Rendering.Runtime
 {
-	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 59659
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 62030
 	{
 		// Constructors
-		public HGConstantBufferLayoutAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public HGConstantBufferLayoutAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 59701
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 62073
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -764,131 +806,134 @@ namespace IFix
 		public static ILFixDynamicMethodWrapper[] wrapperArray; // 0x00
 	
 		// Constructors
-		public ILFixDynamicMethodWrapper() {} // Dummy constructor
-		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000184E6FCD0-0x0000000184E6FD00
-		static ILFixDynamicMethodWrapper() {} // 0x0000000185F642B0-0x0000000185F64320
+		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj); // 0x00000001832B2C30-0x00000001832B2C60
+		static ILFixDynamicMethodWrapper(); // 0x0000000184D37330-0x0000000184D373A0
 	
 		// Methods
-		public void __Gen_Wrap_0(object P0, object P1) {} // 0x00000001873527E8-0x00000001873528C4
-		public bool __Gen_Wrap_1() => default; // 0x000000018735B3F8-0x000000018735B4A4
-		public void __Gen_Wrap_2() {} // 0x0000000187678160-0x00000001876781FC
-		public void __Gen_Wrap_3(object P0) {} // 0x000000018646FFC0-0x0000000186470080
-		public Dictionary<string, LuaCustomConfig.Item> __Gen_Wrap_4(object P0) => default; // 0x000000018AA4B230-0x000000018AA4B30C
-		public string __Gen_Wrap_5(object P0) => default; // 0x000000018AA4BBC0-0x000000018AA4BC9C
-		public object __Gen_Wrap_6(object P0, object P1) => default; // 0x000000018AA4C370-0x000000018AA4C47C
-		public void __Gen_Wrap_7(object P0, object P1, object P2, object P3) {} // 0x000000018734F774-0x000000018734F86C
-		public LuaTable __Gen_Wrap_8(object P0, object P1, object P2) => default; // 0x000000018AA4C91C-0x000000018AA4CA44
-		public bool __Gen_Wrap_9(object P0, object P1) => default; // 0x0000000187342174-0x0000000187342260
-		public bool __Gen_Wrap_10(object P0, object P1, object P2) => default; // 0x000000018768937C-0x0000000187689470
-		public void __Gen_Wrap_11(object P0, object P1, object P2) {} // 0x0000000187340E48-0x0000000187340F40
-		public System.Type __Gen_Wrap_12(object P0) => default; // 0x000000018AA48D74-0x000000018AA48E64
-		public object __Gen_Wrap_13(object P0) => default; // 0x000000018AA48E64-0x000000018AA48F54
-		public bool __Gen_Wrap_14(object P0) => default; // 0x000000018735B960-0x000000018735BA30
-		public bool __Gen_Wrap_15(Span<byte> P0, int P1) => default; // 0x000000018AA48F54-0x000000018AA49074
-		public byte[] __Gen_Wrap_16(object P0, object P1) => default; // 0x000000018AA49074-0x000000018AA49180
-		public void __Gen_Wrap_17(object P0, HGRenderPipeCallbackArgs P1) {} // 0x000000018AA49180-0x000000018AA49280
-		public string __Gen_Wrap_18() => default; // 0x000000018AA49280-0x000000018AA49338
-		public void __Gen_Wrap_19(IntPtr P0, int P1, object P2) {} // 0x000000018AA49338-0x000000018AA4941C
-		public void __Gen_Wrap_20(int P0, object P1) {} // 0x000000018A849A0C-0x000000018A849AD4
-		public byte[] __Gen_Wrap_21(object P0, ref string P1) => default; // 0x000000018AA4941C-0x000000018AA49554
-		public void __Gen_Wrap_22(object P0, EnvLang P1) {} // 0x000000018A80A9F8-0x000000018A80AAC0
-		public int __Gen_Wrap_23(IntPtr P0) => default; // 0x000000018AA49554-0x000000018AA49610
-		public void __Gen_Wrap_24(IntPtr P0, int P1, out StringPathHash P2) {
-			P2 = default;
-		} // 0x000000018AA49610-0x000000018AA49748
-		public bool __Gen_Wrap_25(IntPtr P0, int P1) => default; // 0x000000018AA49748-0x000000018AA49834
-		public void __Gen_Wrap_26(object P0, bool P1) {} // 0x000000018AA49834-0x000000018AA498FC
-		public void __Gen_Wrap_27(object P0, float P1) {} // 0x0000000187678884-0x0000000187678964
-		public string __Gen_Wrap_28(object P0, object P1) => default; // 0x000000018AA498FC-0x000000018AA499F4
-		public long __Gen_Wrap_29(object P0, object P1, out int P2) {
-			P2 = default;
-			return default;
-		} // 0x000000018AA499F4-0x000000018AA49B0C
-		public IntPtr __Gen_Wrap_30(object P0, object P1) => default; // 0x000000018A8145AC-0x000000018A814684
-		public object[] __Gen_Wrap_31(object P0, object P1) => default; // 0x000000018AA49B0C-0x000000018AA49C04
-		public IntPtr __Gen_Wrap_32(object P0) => default; // 0x000000018735B890-0x000000018735B960
-		public bool __Gen_Wrap_33(LuaReference P0) => default; // 0x0000000187678D18-0x0000000187678DD4
-		public bool __Gen_Wrap_34(object P0, object P1, bool P2) => default; // 0x000000018AA49C04-0x000000018AA49CF8
-		public int __Gen_Wrap_35(ref LuaTestReflectionOptStruct P0, int P1) => default; // 0x000000018AA49CF8-0x000000018AA49E80
-		public void __Gen_Wrap_36(ref LuaTestReflectionOptStruct P0) {} // 0x000000018AA49E80-0x000000018AA49FDC
-		public void __Gen_Wrap_37(ref LuaTestReflectionOptStruct P0, LuaTestReflectionOptStruct P1) {} // 0x000000018AA49FDC-0x000000018AA4A184
-		public void __Gen_Wrap_38(ref LuaTestReflectionOptStruct P0, ref LuaTestReflectionOptStruct P1) {} // 0x000000018AA4A184-0x000000018AA4A380
-		public object __Gen_Wrap_39(ref LuaTestReflectionOptStruct P0) => default; // 0x000000018AA4A380-0x000000018AA4A500
-		public void __Gen_Wrap_40(ref LuaTestReflectionOptStruct P0, object P1) {} // 0x000000018AA4A500-0x000000018AA4A678
-		public int __Gen_Wrap_41(ref LuaTestReflectionOptStruct2 P0, int P1) => default; // 0x000000018AA4A678-0x000000018AA4A800
-		public void __Gen_Wrap_42(ref LuaTestReflectionOptStruct2 P0) {} // 0x000000018AA4A800-0x000000018AA4A95C
-		public void __Gen_Wrap_43(ref LuaTestReflectionOptStruct2 P0, LuaTestReflectionOptStruct2 P1) {} // 0x000000018AA4A95C-0x000000018AA4AB04
-		public void __Gen_Wrap_44(ref LuaTestReflectionOptStruct2 P0, ref LuaTestReflectionOptStruct2 P1) {} // 0x000000018AA4AB04-0x000000018AA4AD00
-		public object __Gen_Wrap_45(ref LuaTestReflectionOptStruct2 P0) => default; // 0x000000018AA4AD00-0x000000018AA4AE80
-		public void __Gen_Wrap_46(ref LuaTestReflectionOptStruct2 P0, object P1) {} // 0x000000018AA4AE80-0x000000018AA4AFF8
-		public int __Gen_Wrap_47(object P0, int P1) => default; // 0x000000018A803240-0x000000018A803318
-		public void __Gen_Wrap_48(object P0, LuaTestReflectionOptStruct P1) {} // 0x000000018AA4AFF8-0x000000018AA4B114
-		public void __Gen_Wrap_49(object P0, LuaTestReflectionOptStruct2 P1) {} // 0x000000018AA4B114-0x000000018AA4B230
-		public void __Gen_Wrap_50(object P0, ref LuaTestReflectionOptStruct P1) {} // 0x000000018AA4B30C-0x000000018AA4B484
-		public void __Gen_Wrap_51(object P0, ETestEnum P1) {} // 0x000000018A80A9F8-0x000000018A80AAC0
-		public ETestEnum __Gen_Wrap_52(object P0) => default; // 0x000000018767917C-0x0000000187679238
-		public LuaTestReflectionOptStruct __Gen_Wrap_53(object P0, LuaTestReflectionOptStruct P1) => default; // 0x000000018AA4B484-0x000000018AA4B5F0
-		public GameObject __Gen_Wrap_54(object P0) => default; // 0x000000018AA4B5F0-0x000000018AA4B6E0
-		public GameObject __Gen_Wrap_55(object P0, object P1) => default; // 0x000000018AA4B6E0-0x000000018AA4B7EC
-		public void __Gen_Wrap_56(object P0, int P1, int P2) {} // 0x000000018A8169B4-0x000000018A816A98
-		public int __Gen_Wrap_57(int P0, object P1) => default; // 0x000000018AA4B7EC-0x000000018AA4B8C4
-		public bool __Gen_Wrap_58(out RaycastHit P0, Ray P1, float P2, int P3, QueryTriggerInteraction P4) {
-			P0 = default;
-			return default;
-		} // 0x000000018AA4B8C4-0x000000018AA4BA6C
-		public int __Gen_Wrap_59(Ray P0, object P1, float P2, int P3, QueryTriggerInteraction P4) => default; // 0x000000018AA4BA6C-0x000000018AA4BBC0
-		public Bounds __Gen_Wrap_60(object P0) => default; // 0x000000018AA4BC9C-0x000000018AA4BDA0
-		public UnityEngine.Rect __Gen_Wrap_61(object P0, object P1) => default; // 0x000000018AA4BDA0-0x000000018AA4BEB8
-		public Vector3 __Gen_Wrap_62(object P0) => default; // 0x000000018AA4BEB8-0x000000018AA4BFB8
-		public Bounds __Gen_Wrap_63(object P0, object P1) => default; // 0x000000018AA4BFB8-0x000000018AA4C0D8
-		public List<string> __Gen_Wrap_64() => default; // 0x000000018AA4C0D8-0x000000018AA4C190
-		public int __Gen_Wrap_65(object P0) => default; // 0x000000018767917C-0x0000000187679238
-		public float __Gen_Wrap_66(object P0, object P1) => default; // 0x000000018A81D3F0-0x000000018A81D4C8
-		public bool __Gen_Wrap_67(object P0, out HGCharacterVolume P1) {
-			P1 = default;
-			return default;
-		} // 0x000000018AA4C190-0x000000018AA4C2B4
-		public float __Gen_Wrap_68(object P0) => default; // 0x000000018AA4C2B4-0x000000018AA4C370
-		public float __Gen_Wrap_69() => default; // 0x000000018735B7F8-0x000000018735B890
-		public void __Gen_Wrap_70(float P0) {} // 0x00000001876927D8-0x0000000187692884
-		public Tweener __Gen_Wrap_71(float P0, float P1, float P2, object P3) => default; // 0x000000018AA4C47C-0x000000018AA4C5AC
-		public UtilsForLua.ImageContentParam __Gen_Wrap_72(object P0) => default; // 0x000000018AA4C5AC-0x000000018AA4C688
-		public void __Gen_Wrap_73(int P0) {} // 0x00000001872E71D4-0x00000001872E7280
-		public void __Gen_Wrap_74(bool P0) {} // 0x000000018769263C-0x00000001876926E8
-		public CinemachineTransposer __Gen_Wrap_75(object P0) => default; // 0x000000018AA4C688-0x000000018AA4C764
-		public CinemachineComposer __Gen_Wrap_76(object P0) => default; // 0x000000018AA4C764-0x000000018AA4C840
-		public CinemachineCameraOffset __Gen_Wrap_77(object P0) => default; // 0x000000018AA4C840-0x000000018AA4C91C
+		public void __Gen_Wrap_0(object P0, object P1); // 0x0000000186377B18-0x0000000186377BF4
+		public bool __Gen_Wrap_1(); // 0x00000001863623A8-0x0000000186362454
+		public void __Gen_Wrap_2(); // 0x00000001863625A4-0x0000000186362640
+		public void __Gen_Wrap_3(object P0); // 0x00000001863633B4-0x0000000186363474
+		public Dictionary<string, LuaCustomConfig.Item> __Gen_Wrap_4(object P0); // 0x0000000189EB6370-0x0000000189EB644C
+		public string __Gen_Wrap_5(object P0); // 0x0000000189EB644C-0x0000000189EB6528
+		public object __Gen_Wrap_6(object P0, object P1); // 0x0000000189EB6528-0x0000000189EB6634
+		public void __Gen_Wrap_7(object P0, object P1, object P2, object P3); // 0x0000000186373E64-0x0000000186373F5C
+		public LuaTable __Gen_Wrap_8(object P0, object P1, object P2); // 0x0000000189EB6634-0x0000000189EB675C
+		public bool __Gen_Wrap_9(object P0, object P1); // 0x0000000186366BC4-0x0000000186366CB0
+		public bool __Gen_Wrap_10(object P0, object P1, object P2); // 0x00000001866D3350-0x00000001866D3444
+		public void __Gen_Wrap_11(object P0, object P1, object P2); // 0x0000000186364290-0x0000000186364388
+		public System.Type __Gen_Wrap_12(object P0); // 0x0000000189EB6190-0x0000000189EB6280
+		public object __Gen_Wrap_13(object P0); // 0x0000000189EB6280-0x0000000189EB6370
+		public bool __Gen_Wrap_14(object P0); // 0x00000001863632E4-0x00000001863633B4
+		public bool __Gen_Wrap_15(Span<byte> P0, int P1); // 0x0000000182D54B10-0x0000000182D550D0
+		public byte[] __Gen_Wrap_16(object P0, object P1); // 0x0000000182D550D0-0x0000000182D55B00
+		public void __Gen_Wrap_17(object P0, HGRenderPipeCallbackArgs P1); // 0x0000000182D55B00-0x0000000182D56180
+		public string __Gen_Wrap_18(); // 0x0000000182D56180-0x0000000182D569C0
+		public void __Gen_Wrap_19(IntPtr P0, int P1, object P2); // 0x0000000181AF7A70-0x0000000181AF7D60
+		public void __Gen_Wrap_20(int P0, object P1); // 0x0000000181FBD880-0x0000000181FBDB50
+		public byte[] __Gen_Wrap_21(object P0, ref string P1); // 0x0000000182D569C0-0x0000000182D57720
+		public void __Gen_Wrap_22(object P0, EnvLang P1); // 0x00000001812A0D50-0x00000001812A1020
+		public int __Gen_Wrap_23(IntPtr P0); // 0x0000000181B59610-0x0000000181B59810
+		public void __Gen_Wrap_24(IntPtr P0, int P1, out StringPathHash P2); // 0x0000000182D57720-0x0000000182D58010
+		public bool __Gen_Wrap_25(IntPtr P0, int P1); // 0x0000000182D58010-0x0000000182D58240
+		public void __Gen_Wrap_26(object P0, bool P1); // 0x0000000182D58240-0x0000000182D58520
+		public void __Gen_Wrap_27(object P0, float P1); // 0x0000000181410050-0x0000000181410330
+		public string __Gen_Wrap_28(object P0, object P1); // 0x0000000182D58520-0x0000000182D58F40
+		public long __Gen_Wrap_29(object P0, object P1, out int P2); // 0x0000000182D58F40-0x0000000182D59310
+		public IntPtr __Gen_Wrap_30(object P0, object P1); // 0x0000000182D59310-0x0000000182D596A0
+		public object[] __Gen_Wrap_31(object P0, object P1); // 0x0000000182D596A0-0x0000000182D5A0C0
+		public IntPtr __Gen_Wrap_32(object P0); // 0x00000001811D1C90-0x00000001811D1F50
+		public FrameTickGroup __Gen_Wrap_33(object P0); // 0x0000000181298AE0-0x0000000181298DA0
+		public bool __Gen_Wrap_34(LuaReference P0); // 0x0000000181738AF0-0x0000000181738DC0
+		public bool __Gen_Wrap_35(object P0, object P1, bool P2); // 0x000000018147A0D0-0x000000018147A480
+		public int __Gen_Wrap_36(ref LuaTestReflectionOptStruct P0); // 0x0000000182D5A0C0-0x0000000182D5AD00
+		public string __Gen_Wrap_37(ref LuaTestReflectionOptStruct P0); // 0x0000000182D5AD00-0x0000000182D5BC30
+		public long __Gen_Wrap_38(ref LuaTestReflectionOptStruct P0); // 0x0000000182D5BC30-0x0000000182D5C870
+		public ulong __Gen_Wrap_39(ref LuaTestReflectionOptStruct P0); // 0x0000000182D5C870-0x0000000182D5D4B0
+		public float __Gen_Wrap_40(ref LuaTestReflectionOptStruct P0); // 0x0000000182D5D4B0-0x0000000182D5E0F0
+		public double __Gen_Wrap_41(ref LuaTestReflectionOptStruct P0); // 0x0000000182D5E0F0-0x0000000182D5ED30
+		public bool __Gen_Wrap_42(ref LuaTestReflectionOptStruct P0); // 0x0000000182D5ED30-0x0000000182D5F970
+		public int __Gen_Wrap_43(ref LuaTestReflectionOptStruct P0, int P1); // 0x0000000182D5F970-0x0000000182D605C0
+		public void __Gen_Wrap_44(ref LuaTestReflectionOptStruct P0); // 0x0000000182D605C0-0x0000000182D611F0
+		public void __Gen_Wrap_45(ref LuaTestReflectionOptStruct P0, LuaTestReflectionOptStruct P1); // 0x0000000182D611F0-0x0000000182D61F30
+		public void __Gen_Wrap_46(ref LuaTestReflectionOptStruct P0, ref LuaTestReflectionOptStruct P1); // 0x0000000182D61F30-0x0000000182D62E90
+		public object __Gen_Wrap_47(ref LuaTestReflectionOptStruct P0); // 0x0000000182D62E90-0x0000000182D63DC0
+		public void __Gen_Wrap_48(ref LuaTestReflectionOptStruct P0, object P1); // 0x0000000182D63DC0-0x0000000182D64AE0
+		public int __Gen_Wrap_49(ref LuaTestReflectionOptStruct2 P0); // 0x0000000182D64AE0-0x0000000182D65720
+		public string __Gen_Wrap_50(ref LuaTestReflectionOptStruct2 P0); // 0x0000000182D65720-0x0000000182D66650
+		public long __Gen_Wrap_51(ref LuaTestReflectionOptStruct2 P0); // 0x0000000182D66650-0x0000000182D67290
+		public ulong __Gen_Wrap_52(ref LuaTestReflectionOptStruct2 P0); // 0x0000000182D67290-0x0000000182D67ED0
+		public float __Gen_Wrap_53(ref LuaTestReflectionOptStruct2 P0); // 0x0000000182D67ED0-0x0000000182D68B10
+		public double __Gen_Wrap_54(ref LuaTestReflectionOptStruct2 P0); // 0x0000000182D68B10-0x0000000182D69750
+		public bool __Gen_Wrap_55(ref LuaTestReflectionOptStruct2 P0); // 0x0000000182D69750-0x0000000182D6A390
+		public int __Gen_Wrap_56(ref LuaTestReflectionOptStruct2 P0, int P1); // 0x0000000182D6A390-0x0000000182D6AFE0
+		public void __Gen_Wrap_57(ref LuaTestReflectionOptStruct2 P0); // 0x0000000182D6AFE0-0x0000000182D6BC10
+		public void __Gen_Wrap_58(ref LuaTestReflectionOptStruct2 P0, LuaTestReflectionOptStruct2 P1); // 0x0000000182D6BC10-0x0000000182D6C950
+		public void __Gen_Wrap_59(ref LuaTestReflectionOptStruct2 P0, ref LuaTestReflectionOptStruct2 P1); // 0x0000000182D6C950-0x0000000182D6D8B0
+		public object __Gen_Wrap_60(ref LuaTestReflectionOptStruct2 P0); // 0x0000000182D6D8B0-0x0000000182D6E7E0
+		public void __Gen_Wrap_61(ref LuaTestReflectionOptStruct2 P0, object P1); // 0x0000000182D6E7E0-0x0000000182D6F500
+		public int __Gen_Wrap_62(object P0, int P1); // 0x000000018135C3D0-0x000000018135C6B0
+		public void __Gen_Wrap_63(object P0, LuaTestReflectionOptStruct P1); // 0x0000000182D6F500-0x0000000182D6FB90
+		public void __Gen_Wrap_64(object P0, LuaTestReflectionOptStruct2 P1); // 0x0000000182D6FB90-0x0000000182D70220
+		public void __Gen_Wrap_65(object P0, ref LuaTestReflectionOptStruct P1); // 0x0000000182D70220-0x0000000182D70F40
+		public void __Gen_Wrap_66(object P0, ETestEnum P1); // 0x00000001812A0D50-0x00000001812A1020
+		public ETestEnum __Gen_Wrap_67(object P0); // 0x0000000181298AE0-0x0000000181298DA0
+		public LuaTestReflectionOptStruct __Gen_Wrap_68(object P0, LuaTestReflectionOptStruct P1); // 0x0000000182D70F40-0x0000000182D71BE0
+		public GameObject __Gen_Wrap_69(object P0); // 0x0000000182D71BE0-0x0000000182D72520
+		public GameObject __Gen_Wrap_70(object P0, object P1); // 0x0000000182D72520-0x0000000182D72F50
+		public void __Gen_Wrap_71(object P0, int P1, int P2); // 0x0000000181992E90-0x0000000181993180
+		public int __Gen_Wrap_72(int P0, object P1); // 0x0000000182D72F50-0x0000000182D73230
+		public bool __Gen_Wrap_73(out RaycastHit P0, Ray P1, float P2, int P3, QueryTriggerInteraction P4); // 0x0000000182D73230-0x0000000182D73E00
+		public int __Gen_Wrap_74(Ray P0, object P1, float P2, int P3, QueryTriggerInteraction P4); // 0x0000000182D73E00-0x0000000182D744E0
+		public Bounds __Gen_Wrap_75(object P0); // 0x0000000182D744E0-0x0000000182D74DE0
+		public UnityEngine.Rect __Gen_Wrap_76(object P0, object P1); // 0x0000000182D74DE0-0x0000000182D757B0
+		public Vector3 __Gen_Wrap_77(object P0); // 0x0000000182D757B0-0x0000000182D760B0
+		public Bounds __Gen_Wrap_78(object P0, object P1); // 0x0000000182D760B0-0x0000000182D76A80
+		public Vector2 __Gen_Wrap_79(object P0, object P1, Vector2 P2); // 0x0000000182D76A80-0x0000000182D777B0
+		public List<string> __Gen_Wrap_80(); // 0x0000000182D777B0-0x0000000182D77FF0
+		public int __Gen_Wrap_81(object P0); // 0x0000000181298AE0-0x0000000181298DA0
+		public float __Gen_Wrap_82(object P0, object P1); // 0x0000000182D77FF0-0x0000000182D78380
+		public bool __Gen_Wrap_83(object P0, out HGCharacterVolume P1); // 0x0000000182D78380-0x0000000182D78DA0
+		public float __Gen_Wrap_84(object P0); // 0x0000000182837EF0-0x00000001828381B0
+		public float __Gen_Wrap_85(); // 0x00000001811D1AC0-0x00000001811D1C90
+		public void __Gen_Wrap_86(float P0); // 0x0000000181494100-0x00000001814942F0
+		public Tweener __Gen_Wrap_87(float P0, float P1, float P2, object P3); // 0x0000000182D78DA0-0x0000000182D79740
+		public UtilsForLua.ImageContentParam __Gen_Wrap_88(object P0); // 0x0000000182D79740-0x0000000182D7A070
+		public void __Gen_Wrap_89(int P0); // 0x00000001812F6920-0x00000001812F6B10
+		public bool __Gen_Wrap_90(int P0); // 0x00000001818C3AD0-0x00000001818C3CD0
+		public void __Gen_Wrap_91(bool P0); // 0x0000000181488F50-0x0000000181489140
+		public CinemachineTransposer __Gen_Wrap_92(object P0); // 0x0000000182D7A070-0x0000000182D7A9A0
+		public CinemachineComposer __Gen_Wrap_93(object P0); // 0x0000000182D7A9A0-0x0000000182D7B2D0
+		public CinemachineCameraOffset __Gen_Wrap_94(object P0); // 0x0000000182D7B2D0-0x0000000182D7BC00
 	}
 
-	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 59702
+	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 62074
 	{
 		// Constructors
-		public ILFixInterfaceBridge() {} // Dummy constructor
-		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x000000018AA4CA44-0x000000018AA4CAD8
+		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine); // 0x0000000189EB675C-0x0000000189EB67F0
 	
 		// Methods
-		public void RefAsyncBuilderStartMethod() {} // 0x0000000185492010-0x0000000185492020
+		public void RefAsyncBuilderStartMethod(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 59703
+	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 62075
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
 	
 		// Constructors
-		public WrappersManagerImpl() {} // Dummy constructor
-		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x0000000184096E30-0x0000000184096EF0
+		public WrappersManagerImpl(VirtualMachine virtualMachine); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x000000018AA53D6C-0x000000018AA53DD0
-		public static bool IsPatched(int id) => default; // 0x000000018455A520-0x000000018455A590
-		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x000000018AA53C28-0x000000018AA53CF4
-		public object CreateWrapper(int id) => default; // 0x000000018AA53CF4-0x000000018AA53D6C
-		public object InitWrapperArray(int len) => default; // 0x000000018AA53DD0-0x000000018AA53E5C
-		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x000000018AA53B84-0x000000018AA53C28
+		public static ILFixDynamicMethodWrapper GetPatch(int id); // 0x0000000189EBE5EC-0x0000000189EBE650
+		public static bool IsPatched(int id); // 0x000000018301FCF0-0x000000018301FD40
+		public Delegate CreateDelegate(System.Type type, int id, object anon); // 0x0000000189EBE4A8-0x0000000189EBE574
+		public object CreateWrapper(int id); // 0x0000000189EBE574-0x0000000189EBE5EC
+		public object InitWrapperArray(int len); // 0x0000000189EBE650-0x0000000189EBE6DC
+		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine); // 0x0000000189EBE404-0x0000000189EBE4A8
 	}
 
-	public enum IDMAP0 // TypeDefIndex: 59704
+	public enum IDMAP0 // TypeDefIndex: 62076
 	{
 		Beyond-Lua-LuaEventSystem-DispatchEvent0 = 0,
 		Beyond-Lua-LuaEventSystem-PushEventName0 = 3,
@@ -945,106 +990,126 @@ namespace IFix
 		Beyond-Lua-LuaManager-CheckStringPathHash0 = 63,
 		Beyond-Lua-LuaManager-_RegisterCSharpCallLua0 = 64,
 		Beyond-Lua-LuaManager-OnRelease0 = 65,
-		Beyond-Lua-LuaManager-_ReleaseDelegateInAnotherStackFrame0 = 66,
-		Beyond-Lua-LuaManager-ReStartLuaProfiler0 = 67,
-		Beyond-Lua-LuaManager-set_isQuittingApplication0 = 68,
-		Beyond-Lua-LuaManager-Tick0 = 69,
-		Beyond-Lua-LuaManager-LateTick0 = 70,
-		Beyond-Lua-LuaManager-TailLateTick0 = 71,
-		Beyond-Lua-LuaManager-GetLuaFileRealPath0 = 72,
-		Beyond-Lua-LuaManager-IsLuaFileExist0 = 73,
-		Beyond-Lua-LuaManager-LoadLuaByteByFileRealPath0 = 74,
-		Beyond-Lua-LuaManager-LoadLua0 = 75,
-		Beyond-Lua-LuaManager-LoadLuaBytePtr0 = 76,
-		Beyond-Lua-LuaManager-DoString0 = 77,
-		Beyond-Lua-LuaManager-GetLuaState0 = 78,
-		Beyond-Lua-LuaManager-ClearAllUnityObjectUserdata0 = 79,
-		Beyond-Lua-LuaManager-AddLuaEventAfterGCDo0 = 80,
-		Beyond-Lua-LuaManager-RemoveLuaEventAfterGCDo0 = 81,
-		Beyond-Lua-LuaReference-Reset0 = 82,
-		Beyond-Lua-LuaReference-OnDestroy0 = 86,
-		Beyond-Lua-LuaReference-_UnBindFromXluaRef0 = 87,
-		Beyond-Lua-LuaReference-BindToLua0 = 88,
-		Beyond-Lua-LuaReference-_BindSelfReferences0 = 89,
-		Beyond-Lua-LuaReference-ContainsGameObject0 = 90,
-		Beyond-Lua-LuaTestReflectionOptStruct-TestInt0 = 91,
-		Beyond-Lua-LuaTestReflectionOptStruct-TestVoid0 = 92,
-		Beyond-Lua-LuaTestReflectionOptStruct-TestStructParam0 = 93,
-		Beyond-Lua-LuaTestReflectionOptStruct-TestStructParam20 = 94,
-		Beyond-Lua-LuaTestReflectionOptStruct-TestReturnObj0 = 95,
-		Beyond-Lua-LuaTestReflectionOptStruct-TestObjParam0 = 96,
-		Beyond-Lua-LuaTestReflectionOptStruct2-TestInt0 = 97,
-		Beyond-Lua-LuaTestReflectionOptStruct2-TestVoid0 = 98,
-		Beyond-Lua-LuaTestReflectionOptStruct2-TestStructParam0 = 99,
-		Beyond-Lua-LuaTestReflectionOptStruct2-TestStructParam20 = 100,
-		Beyond-Lua-LuaTestReflectionOptStruct2-TestReturnObj0 = 101,
-		Beyond-Lua-LuaTestReflectionOptStruct2-TestObjParam0 = 102,
-		Beyond-Lua-LuaTestReflectionOpt2-TestVoid0 = 103,
-		Beyond-Lua-LuaTestReflectionOpt2-TestInt0 = 104,
-		Beyond-Lua-LuaTestReflectionOpt2-TestStructParam0 = 105,
-		Beyond-Lua-LuaTestReflectionOpt2-TestStructParam1 = 106,
-		Beyond-Lua-LuaTestReflectionOpt2-TestStructParam20 = 107,
-		Beyond-Lua-LuaTestReflectionOpt2-TestReturnObj0 = 108,
-		Beyond-Lua-LuaTestReflectionOpt2-TestObjParam0 = 109,
-		Beyond-Lua-LuaTestReflectionOpt2-TestEnum0 = 110,
-		Beyond-Lua-LuaTestReflectionOpt2-TestReturnEnum0 = 111,
-		Beyond-Lua-LuaTestReflectionOpt2-TestStruct0 = 112,
-		Beyond-Lua-LuaTestReflectionOpt-TestVoid0 = 113,
-		Beyond-Lua-LuaTestReflectionOpt-TestInt0 = 114,
-		Beyond-Lua-LuaTestReflectionOpt-TestStructParam0 = 115,
-		Beyond-Lua-LuaTestReflectionOpt-TestStructParam1 = 116,
-		Beyond-Lua-LuaTestReflectionOpt-TestStructParam20 = 117,
-		Beyond-Lua-LuaTestReflectionOpt-TestReturnObj0 = 118,
-		Beyond-Lua-LuaTestReflectionOpt-TestObjParam0 = 119,
-		Beyond-Lua-LuaTestReflectionOpt-TestEnum0 = 120,
-		Beyond-Lua-LuaTestReflectionOpt-TestReturnEnum0 = 121,
-		Beyond-Lua-LuaTestReflectionOpt-TestStruct0 = 122,
-		Beyond-Lua-LuaUIWidget-Reset0 = 123,
-		Beyond-Lua-LuaUIWidget-OnEnable0 = 124,
-		Beyond-Lua-LuaUIWidget-OnDisable0 = 125,
-		Beyond-Lua-LuaUIWidget-OnDestroy0 = 126,
-		Beyond-Lua-LuaUIWidget-ClearComponent0 = 127,
-		Beyond-Lua-UtilsForLua-CreateObject0 = 130,
-		Beyond-Lua-UtilsForLua-CreateObject1 = 131,
-		Beyond-Lua-UtilsForLua-CreateObject2 = 132,
-		Beyond-Lua-UtilsForLua-UIContainerResize0 = 133,
-		Beyond-Lua-UtilsForLua-TurnOffLayer0 = 134,
-		Beyond-Lua-UtilsForLua-TurnOnLayer0 = 135,
-		Beyond-Lua-UtilsForLua-ToggleLayer0 = 136,
-		Beyond-Lua-UtilsForLua-SetPosX0 = 137,
-		Beyond-Lua-UtilsForLua-SetPosY0 = 138,
-		Beyond-Lua-UtilsForLua-SetPosZ0 = 139,
-		Beyond-Lua-UtilsForLua-SetRotX0 = 140,
-		Beyond-Lua-UtilsForLua-SetRotY0 = 141,
-		Beyond-Lua-UtilsForLua-SetRotZ0 = 142,
-		Beyond-Lua-UtilsForLua-SetScaleX0 = 143,
-		Beyond-Lua-UtilsForLua-SetScaleY0 = 144,
-		Beyond-Lua-UtilsForLua-SetScaleZ0 = 145,
-		Beyond-Lua-UtilsForLua-ClearUIComponents0 = 146,
-		Beyond-Lua-UtilsForLua-RayCast0 = 147,
-		Beyond-Lua-UtilsForLua-RaycastNonAlloc0 = 148,
-		Beyond-Lua-UtilsForLua-GetRectTransformBounds0 = 149,
-		Beyond-Lua-UtilsForLua-RectTransformToScreenRect0 = 150,
-		Beyond-Lua-UtilsForLua-GetRectTransformCenterPosition0 = 151,
-		Beyond-Lua-UtilsForLua-CalcBoundOfRectTransform0 = 152,
-		Beyond-Lua-UtilsForLua-GetStringList0 = 153,
-		Beyond-Lua-UtilsForLua-GetStringHash0 = 154,
-		Beyond-Lua-UtilsForLua-EntityDistance0 = 155,
-		Beyond-Lua-UtilsForLua-OpenAccountCenter0 = 156,
-		Beyond-Lua-UtilsForLua-ExitGame0 = 157,
-		Beyond-Lua-UtilsForLua-GetCurrentUID0 = 158,
-		Beyond-Lua-UtilsForLua-StartPayment0 = 159,
-		Beyond-Lua-UtilsForLua-TryGetCharacterVolume0 = 160,
-		Beyond-Lua-UtilsForLua-GetAnimationCurveLength0 = 161,
-		Beyond-Lua-UtilsForLua-TweenTo0 = 162,
-		Beyond-Lua-UtilsForLua-IsNull0 = 166,
-		Beyond-Lua-UtilsForLua-ParseImageContent0 = 167,
-		Beyond-Lua-UtilsForLua-ReturnToLogin0 = 168,
-		Beyond-Lua-UtilsForLua-QuitGame0 = 169,
-		Beyond-Lua-UtilsForLua-ToggleCharInfoInUpgradePanelOption0 = 170,
-		Beyond-Lua-UtilsForLua-ToggleWeaponInUpgradePanelOption0 = 171,
-		Beyond-Lua-UtilsForLua-GetCinemachineTransposer0 = 172,
-		Beyond-Lua-UtilsForLua-GetCinemachineComposer0 = 173,
-		Beyond-Lua-UtilsForLua-GetOrAddCinemachineCameraOffset0 = 174
+		Beyond-Lua-LuaManager-get_isQuittingApplication0 = 66,
+		Beyond-Lua-LuaManager-_ReleaseDelegateInAnotherStackFrame0 = 67,
+		Beyond-Lua-LuaManager-ReStartLuaProfiler0 = 68,
+		Beyond-Lua-LuaManager-set_isQuittingApplication0 = 69,
+		Beyond-Lua-LuaManager-Tick0 = 70,
+		Beyond-Lua-LuaManager-LateTick0 = 71,
+		Beyond-Lua-LuaManager-TailLateTick0 = 72,
+		Beyond-Lua-LuaManager-GetLuaFileRealPath0 = 73,
+		Beyond-Lua-LuaManager-IsLuaFileExist0 = 74,
+		Beyond-Lua-LuaManager-LoadLuaByteByFileRealPath0 = 75,
+		Beyond-Lua-LuaManager-LoadLua0 = 76,
+		Beyond-Lua-LuaManager-LoadLuaBytePtr0 = 77,
+		Beyond-Lua-LuaManager-DoString0 = 78,
+		Beyond-Lua-LuaManager-GetLuaState0 = 79,
+		Beyond-Lua-LuaManager-ClearAllUnityObjectUserdata0 = 80,
+		Beyond-Lua-LuaManager-AddLuaEventAfterGCDo0 = 81,
+		Beyond-Lua-LuaManager-RemoveLuaEventAfterGCDo0 = 82,
+		Beyond-Lua-LuaManager-get_frameTickGroup0 = 83,
+		Beyond-Lua-LuaReference-Reset0 = 84,
+		Beyond-Lua-LuaReference-OnDestroy0 = 88,
+		Beyond-Lua-LuaReference-_UnBindFromXluaRef0 = 89,
+		Beyond-Lua-LuaReference-BindToLua0 = 90,
+		Beyond-Lua-LuaReference-_BindSelfReferences0 = 91,
+		Beyond-Lua-LuaReference-RefreshCustomUIStyleBindings0 = 92,
+		Beyond-Lua-LuaReference-_RefreshSelfCustomUIStyleBindings0 = 93,
+		Beyond-Lua-LuaReference-ContainsGameObject0 = 94,
+		Beyond-Lua-LuaTestReflectionOptStruct-get_a10 = 95,
+		Beyond-Lua-LuaTestReflectionOptStruct-get_b10 = 96,
+		Beyond-Lua-LuaTestReflectionOptStruct-get_l10 = 97,
+		Beyond-Lua-LuaTestReflectionOptStruct-get_ul10 = 98,
+		Beyond-Lua-LuaTestReflectionOptStruct-get_f10 = 99,
+		Beyond-Lua-LuaTestReflectionOptStruct-get_d10 = 100,
+		Beyond-Lua-LuaTestReflectionOptStruct-get_bl10 = 101,
+		Beyond-Lua-LuaTestReflectionOptStruct-TestInt0 = 102,
+		Beyond-Lua-LuaTestReflectionOptStruct-TestVoid0 = 103,
+		Beyond-Lua-LuaTestReflectionOptStruct-TestStructParam0 = 104,
+		Beyond-Lua-LuaTestReflectionOptStruct-TestStructParam20 = 105,
+		Beyond-Lua-LuaTestReflectionOptStruct-TestReturnObj0 = 106,
+		Beyond-Lua-LuaTestReflectionOptStruct-TestObjParam0 = 107,
+		Beyond-Lua-LuaTestReflectionOptStruct2-get_a10 = 108,
+		Beyond-Lua-LuaTestReflectionOptStruct2-get_b10 = 109,
+		Beyond-Lua-LuaTestReflectionOptStruct2-get_l10 = 110,
+		Beyond-Lua-LuaTestReflectionOptStruct2-get_ul10 = 111,
+		Beyond-Lua-LuaTestReflectionOptStruct2-get_f10 = 112,
+		Beyond-Lua-LuaTestReflectionOptStruct2-get_d10 = 113,
+		Beyond-Lua-LuaTestReflectionOptStruct2-get_bl10 = 114,
+		Beyond-Lua-LuaTestReflectionOptStruct2-TestInt0 = 115,
+		Beyond-Lua-LuaTestReflectionOptStruct2-TestVoid0 = 116,
+		Beyond-Lua-LuaTestReflectionOptStruct2-TestStructParam0 = 117,
+		Beyond-Lua-LuaTestReflectionOptStruct2-TestStructParam20 = 118,
+		Beyond-Lua-LuaTestReflectionOptStruct2-TestReturnObj0 = 119,
+		Beyond-Lua-LuaTestReflectionOptStruct2-TestObjParam0 = 120,
+		Beyond-Lua-LuaTestReflectionOpt2-TestVoid0 = 121,
+		Beyond-Lua-LuaTestReflectionOpt2-TestInt0 = 122,
+		Beyond-Lua-LuaTestReflectionOpt2-TestStructParam0 = 123,
+		Beyond-Lua-LuaTestReflectionOpt2-TestStructParam1 = 124,
+		Beyond-Lua-LuaTestReflectionOpt2-TestStructParam20 = 125,
+		Beyond-Lua-LuaTestReflectionOpt2-TestReturnObj0 = 126,
+		Beyond-Lua-LuaTestReflectionOpt2-TestObjParam0 = 127,
+		Beyond-Lua-LuaTestReflectionOpt2-TestEnum0 = 128,
+		Beyond-Lua-LuaTestReflectionOpt2-TestReturnEnum0 = 129,
+		Beyond-Lua-LuaTestReflectionOpt2-TestStruct0 = 130,
+		Beyond-Lua-LuaTestReflectionOpt-TestVoid0 = 131,
+		Beyond-Lua-LuaTestReflectionOpt-TestInt0 = 132,
+		Beyond-Lua-LuaTestReflectionOpt-TestStructParam0 = 133,
+		Beyond-Lua-LuaTestReflectionOpt-TestStructParam1 = 134,
+		Beyond-Lua-LuaTestReflectionOpt-TestStructParam20 = 135,
+		Beyond-Lua-LuaTestReflectionOpt-TestReturnObj0 = 136,
+		Beyond-Lua-LuaTestReflectionOpt-TestObjParam0 = 137,
+		Beyond-Lua-LuaTestReflectionOpt-TestEnum0 = 138,
+		Beyond-Lua-LuaTestReflectionOpt-TestReturnEnum0 = 139,
+		Beyond-Lua-LuaTestReflectionOpt-TestStruct0 = 140,
+		Beyond-Lua-LuaUIWidget-Reset0 = 141,
+		Beyond-Lua-LuaUIWidget-OnEnable0 = 142,
+		Beyond-Lua-LuaUIWidget-OnDisable0 = 143,
+		Beyond-Lua-LuaUIWidget-OnDestroy0 = 144,
+		Beyond-Lua-LuaUIWidget-ClearComponent0 = 145,
+		Beyond-Lua-UtilsForLua-CreateObject0 = 148,
+		Beyond-Lua-UtilsForLua-CreateObject1 = 149,
+		Beyond-Lua-UtilsForLua-CreateObject2 = 150,
+		Beyond-Lua-UtilsForLua-UIContainerResize0 = 151,
+		Beyond-Lua-UtilsForLua-TurnOffLayer0 = 152,
+		Beyond-Lua-UtilsForLua-TurnOnLayer0 = 153,
+		Beyond-Lua-UtilsForLua-ToggleLayer0 = 154,
+		Beyond-Lua-UtilsForLua-SetPosX0 = 155,
+		Beyond-Lua-UtilsForLua-SetPosY0 = 156,
+		Beyond-Lua-UtilsForLua-SetPosZ0 = 157,
+		Beyond-Lua-UtilsForLua-SetRotX0 = 158,
+		Beyond-Lua-UtilsForLua-SetRotY0 = 159,
+		Beyond-Lua-UtilsForLua-SetRotZ0 = 160,
+		Beyond-Lua-UtilsForLua-SetScaleX0 = 161,
+		Beyond-Lua-UtilsForLua-SetScaleY0 = 162,
+		Beyond-Lua-UtilsForLua-SetScaleZ0 = 163,
+		Beyond-Lua-UtilsForLua-ClearUIComponents0 = 164,
+		Beyond-Lua-UtilsForLua-RayCast0 = 165,
+		Beyond-Lua-UtilsForLua-RaycastNonAlloc0 = 166,
+		Beyond-Lua-UtilsForLua-GetRectTransformBounds0 = 167,
+		Beyond-Lua-UtilsForLua-RectTransformToScreenRect0 = 168,
+		Beyond-Lua-UtilsForLua-GetRectTransformCenterPosition0 = 169,
+		Beyond-Lua-UtilsForLua-CalcBoundOfRectTransform0 = 170,
+		Beyond-Lua-UtilsForLua-ClampPointInRectTransform0 = 171,
+		Beyond-Lua-UtilsForLua-GetStringList0 = 172,
+		Beyond-Lua-UtilsForLua-GetStringHash0 = 173,
+		Beyond-Lua-UtilsForLua-EntityDistance0 = 174,
+		Beyond-Lua-UtilsForLua-OpenAccountCenter0 = 175,
+		Beyond-Lua-UtilsForLua-ExitGame0 = 176,
+		Beyond-Lua-UtilsForLua-GetCurrentUID0 = 177,
+		Beyond-Lua-UtilsForLua-StartPayment0 = 178,
+		Beyond-Lua-UtilsForLua-TryGetCharacterVolume0 = 179,
+		Beyond-Lua-UtilsForLua-GetAnimationCurveLength0 = 180,
+		Beyond-Lua-UtilsForLua-TweenTo0 = 181,
+		Beyond-Lua-UtilsForLua-IsNull0 = 185,
+		Beyond-Lua-UtilsForLua-ParseImageContent0 = 186,
+		Beyond-Lua-UtilsForLua-ReturnToLogin0 = 187,
+		Beyond-Lua-UtilsForLua-QuitGame0 = 188,
+		Beyond-Lua-UtilsForLua-CheckExtremeDangerousByLevel0 = 189,
+		Beyond-Lua-UtilsForLua-ToggleCharInfoInUpgradePanelOption0 = 190,
+		Beyond-Lua-UtilsForLua-ToggleWeaponInUpgradePanelOption0 = 191,
+		Beyond-Lua-UtilsForLua-GetCinemachineTransposer0 = 192,
+		Beyond-Lua-UtilsForLua-GetCinemachineComposer0 = 193,
+		Beyond-Lua-UtilsForLua-GetOrAddCinemachineCameraOffset0 = 194
 	}
 }

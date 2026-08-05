@@ -5,55 +5,47 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading;
-using USD.NET;
-using USD.NET.Unity;
+using pxr;
 using Unity.Jobs;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
-using pxr;
+using USD.NET;
+using USD.NET.Unity;
 
-// Image 47: Unity.Formats.USD.Runtime.dll - Assembly: Unity.Formats.USD.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 57578-57689
+// Image 47: Unity.Formats.USD.Runtime.dll - Assembly: Unity.Formats.USD.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60087-60198
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("Unity.Formats.USD.Tests.Runtime")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Beyond.SourceGenerator
 {
-	internal static class AnimatorBlackboardUtility // TypeDefIndex: 57580
+	internal static class AnimatorBlackboardUtility // TypeDefIndex: 60089
 	{
 		// Fields
 		internal static bool s_enableFastPathBuffer; // 0x00
 	
 		// Methods
-		internal static void ClearAndEnsureDictionaryCapacity<TKey, TValue>(ref Dictionary<TKey, TValue> dict, int capacity) {}
+		internal static void ClearAndEnsureDictionaryCapacity<TKey, TValue>(ref Dictionary<TKey, TValue> dict, int capacity);
 	}
 
-	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 57581
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 60090
 	{
 		// Constructors
-		public AnimatorBlackboardAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public AnimatorBlackboardAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 57582
-	{
-		// Fields
-		public LayoutKind layoutKind; // 0x10
-		public bool isTag; // 0x14
-	
-		// Constructors
-		public ECSComponentAttribute() {} // 0x0000000185492010-0x0000000185492020
-	}
-
-	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 57583
-	{
-		// Constructors
-		public CameraControlConfigAttribute() {} // 0x0000000185492010-0x0000000185492020
-	}
-
-	internal class DataNAttribute : Attribute // TypeDefIndex: 57584
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class DataNAttribute : Attribute // TypeDefIndex: 60091
 	{
 		// Fields
 		public int capacity; // 0x10
@@ -61,55 +53,108 @@ namespace Beyond.SourceGenerator
 		public bool ring; // 0x18
 	
 		// Constructors
-		public DataNAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public DataNAttribute(); // 0x00000001841E1670-0x00000001841E1680
+	}
+
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 60092
+	{
+		// Constructors
+		public CameraControlConfigAttribute(); // 0x00000001841E1670-0x00000001841E1680
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 60093
+	{
+		// Fields
+		public LayoutKind layoutKind; // 0x10
+		public bool isTag; // 0x14
+	
+		// Constructors
+		public ECSComponentAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace HG.Rendering.Runtime
 {
-	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 57579
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 60088
 	{
 		// Constructors
-		public HGConstantBufferLayoutAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public HGConstantBufferLayoutAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace Unity.Formats.USD
 {
-	public class UsdAssemblyRoot : MonoBehaviour // TypeDefIndex: 57585
+	public class UsdAssemblyRoot : MonoBehaviour // TypeDefIndex: 60094
 	{
 		// Constructors
-		public UsdAssemblyRoot() {} // 0x000000018646DB20-0x000000018646DB28
+		public UsdAssemblyRoot(); // 0x0000000185393520-0x0000000185393538
 	}
 
-	public class UsdAsset : MonoBehaviour // TypeDefIndex: 57586
+	[ExecuteInEditMode]
+	public class UsdAsset : MonoBehaviour // TypeDefIndex: 60095
 	{
 		// Fields
+		[Header("Source Asset")]
+		[SerializeField]
 		private string m_usdFile; // 0x18
+		[HideInInspector]
+		[Tooltip("The Unity project path into which imported files (such as textures) will be placed.")]
 		public string m_projectAssetPath; // 0x20
+		[Tooltip("The USD prim path in the USD scene at which to start the import process.")]
 		public string m_usdRootPath; // 0x28
+		[Tooltip("An offset applied to all data in the USD file")]
 		public float m_usdTimeOffset; // 0x30
+		[Tooltip("For assets with payloads authored, indicates if payloads should be loaded or unloaded by default.")]
 		public PayloadPolicy m_payloadPolicy; // 0x34
+		[HideInInspector]
 		public bool m_importHierarchy; // 0x38
+		[Header("Conversions")]
+		[Tooltip("A scale to be applied to the root asset, useful for converting asset units to meters.")]
 		public float m_scale; // 0x3C
+		[Tooltip("Conversion method for right-handed (USD) to left-handed conversion (Unity) and vice versa.")]
 		public BasisTransformation m_changeHandedness; // 0x40
+		[Tooltip("Behavior to use when no value was authored at the requested time.")]
 		public Scene.InterpolationMode m_interpolation; // 0x44
+		[Header("Material Options")]
+		[Tooltip("If the original shader name is stored in USD, attempt to find that shader in this project.")]
 		public bool m_useOriginalShaderIfAvailable; // 0x48
+		[Tooltip("The default material to use when importing materials as display color.")]
 		public Material m_displayColorMaterial; // 0x50
+		[Tooltip("The default material to use when importing specular workflow USD Preview Surface materials.")]
 		public Material m_specularWorkflowMaterial; // 0x58
+		[Tooltip("The default material to use when importing metallic workflow USD Preview Surface materials.")]
 		public Material m_metallicWorkflowMaterial; // 0x60
+		[HideInInspector]
+		[Tooltip("When enabled, set the GPU Instancing flag on all materials.")]
 		public bool m_enableGpuInstancing; // 0x68
+		[Header("Mesh Options")]
 		public ImportMode m_points; // 0x6C
 		public ImportMode m_topology; // 0x70
 		public ImportMode m_boundingBox; // 0x74
+		[Tooltip("Combined import policy for primvars:displayColor and primvars:displayOpacity")]
 		public ImportMode m_color; // 0x78
+		[Tooltip("Import policy for normals, note that the \'normals\' attribute is built-in, not a primvar")]
 		public ImportMode m_normals; // 0x7C
+		[Tooltip("Import policy for primvars:tangent")]
 		public ImportMode m_tangents; // 0x80
+		[Header("Mesh Lightmap UV Unwrapping")]
 		public bool m_generateLightmapUVs; // 0x84
+		[Range(0f, 1f)]
+		[Tooltip("Maximum allowed angle distortion")]
 		public float m_unwrapAngleError; // 0x88
+		[Range(0f, 1f)]
+		[Tooltip("Maximum allowed area distortion")]
 		public float m_unwrapAreaError; // 0x8C
+		[Range(1f, 359f)]
+		[Tooltip("This angle (in degrees) or greater between triangles will cause seam to be created")]
 		public float m_unwrapHardAngle; // 0x90
+		[Range(0f, 32f)]
+		[Tooltip("UV-island padding in pixels")]
 		public int m_unwrapPackMargin; // 0x94
+		[Header("Import Settings")]
 		public MaterialImportMode m_materialImportMode; // 0x98
 		public bool m_importCameras; // 0x9C
 		public bool m_importMeshes; // 0x9D
@@ -118,11 +163,15 @@ namespace Unity.Formats.USD
 		public bool m_importSceneInstances; // 0xA0
 		public bool m_importPointInstances; // 0xA1
 		public bool m_importMonoBehaviors; // 0xA2
+		[Header("Debug Options")]
 		public bool m_debugShowSkeletonBindPose; // 0xA3
 		public bool m_debugShowSkeletonRestPose; // 0xA4
 		public bool m_debugPrintVariabilityCache; // 0xA5
+		[Tooltip("Memorizes which attributes change over time, to speed up playback (trades time for memory)")]
 		public bool m_usdVariabilityCache; // 0xA6
+		[HideInInspector]
 		public BasisTransformation LastHandedness; // 0xA8
+		[HideInInspector]
 		public float LastScale; // 0xAC
 		private float m_lastTime; // 0xB0
 		private Scene m_lastScene; // 0xB8
@@ -130,38 +179,39 @@ namespace Unity.Formats.USD
 		private AccessMask m_lastAccessMask; // 0xC8
 	
 		// Properties
-		public double Length { get => default; } // 0x000000018BC966C0-0x000000018BC966C8 
-		public string usdFullPath { get => default; set {} } // 0x000000018BC966C8-0x000000018BC96740 0x0000000184088E70-0x0000000184088E80
+		public double Length { get; } // 0x000000018B17882C-0x000000018B178834 
+		public string usdFullPath { get; set; } // 0x000000018B178834-0x000000018B1788AC 0x0000000185392C40-0x0000000185392C50
 	
 		// Constructors
-		public UsdAsset() {} // 0x000000018BC96604-0x000000018BC966C0
+		public UsdAsset(); // 0x000000018B178770-0x000000018B17882C
 	
 		// Methods
-		private void OnDestroy() {} // 0x000000018BC940CC-0x000000018BC94110
-		private string GetPrefabAssetPath(GameObject root) => default; // 0x00000001813AE580-0x00000001813AE590
-		public void OptionsToState(SceneImportOptions options) {} // 0x000000018BC94174-0x000000018BC943B0
-		public void StateToOptions(ref SceneImportOptions options) {} // 0x000000018BC961CC-0x000000018BC965C4
-		private bool SceneFileChanged() => default; // 0x000000018BC947B8-0x000000018BC948B8
-		public Scene GetScene() => default; // 0x000000018BC93BE8-0x000000018BC93EFC
-		private void OnReload() {} // 0x000000018BC94110-0x000000018BC94174
-		private void DestroyComponent(Component comp) {} // 0x000000018BC93598-0x000000018BC935F8
-		private void ClearLastData() {} // 0x000000018BC933C8-0x000000018BC93410
-		public void RemoveAllUsdComponents() {} // 0x000000018BC945BC-0x000000018BC947B8
-		public void DestroyAllImportedObjects() {} // 0x000000018BC93474-0x000000018BC93598
-		public void Reload(bool forceRebuild) {} // 0x000000018BC94434-0x000000018BC945BC
-		private UsdPrim GetFirstPrim(Scene scene) => default; // 0x000000018BC93B4C-0x000000018BC93BE8
-		public void ExportOverrides(Scene sceneInWhichToStoreTransforms) {} // 0x000000018BC935F8-0x000000018BC93B4C
-		private double ComputeLength() => default; // 0x000000018BC93410-0x000000018BC93474
-		public void SetTime(double time, UsdAsset foreignRoot, bool saveMeshUpdates) {} // 0x000000018BC95100-0x000000018BC958C0
-		private void Update() {} // 0x000000018BC965C4-0x000000018BC96604
-		public static void PrepOptionsForTimeChange(ref SceneImportOptions options) {} // 0x000000018BC943B0-0x000000018BC94434
-		public void ImportUsdAsCoroutine(GameObject goRoot, string usdFilePath, double time, SceneImportOptions importOptions, float targetFrameMilliseconds) {} // 0x000000018BC93EFC-0x000000018BC940CC
-		public void SetPayloadState(GameObject go, bool isLoaded) {} // 0x000000018BC948B8-0x000000018BC95100
-		private void ApplyVariantSelectionState(Scene scene, UsdVariantSet variants) {} // 0x000000018BC93084-0x000000018BC933C8
-		public void SetVariantSelection(GameObject go, string usdPrimPath, Dictionary<string, string> selections) {} // 0x000000018BC958C0-0x000000018BC961CC
+		private void OnDestroy(); // 0x000000018B1766F0-0x000000018B176734
+		private string GetPrefabAssetPath(GameObject root); // 0x00000001811EC580-0x00000001811EC590
+		public void OptionsToState(SceneImportOptions options); // 0x000000018B176798-0x000000018B1769D4
+		public void StateToOptions(ref SceneImportOptions options); // 0x000000018B178338-0x000000018B178730
+		private bool SceneFileChanged(); // 0x000000018B176DDC-0x000000018B176EDC
+		public Scene GetScene(); // 0x000000018B17620C-0x000000018B176520
+		private void OnReload(); // 0x000000018B176734-0x000000018B176798
+		private void DestroyComponent(UnityEngine.Component comp); // 0x000000018B175BBC-0x000000018B175C1C
+		private void ClearLastData(); // 0x000000018B1759EC-0x000000018B175A34
+		public void RemoveAllUsdComponents(); // 0x000000018B176BE0-0x000000018B176DDC
+		public void DestroyAllImportedObjects(); // 0x000000018B175A98-0x000000018B175BBC
+		public void Reload(bool forceRebuild); // 0x000000018B176A58-0x000000018B176BE0
+		private UsdPrim GetFirstPrim(Scene scene); // 0x000000018B176170-0x000000018B17620C
+		public void ExportOverrides(Scene sceneInWhichToStoreTransforms); // 0x000000018B175C1C-0x000000018B176170
+		private double ComputeLength(); // 0x000000018B175A34-0x000000018B175A98
+		public void SetTime(double time, UsdAsset foreignRoot, bool saveMeshUpdates); // 0x000000018B1774C0-0x000000018B177C80
+		private void Update(); // 0x000000018B178730-0x000000018B178770
+		public static void PrepOptionsForTimeChange(ref SceneImportOptions options); // 0x000000018B1769D4-0x000000018B176A58
+		public void ImportUsdAsCoroutine(GameObject goRoot, string usdFilePath, double time, SceneImportOptions importOptions, float targetFrameMilliseconds); // 0x000000018B176520-0x000000018B1766F0
+		public void SetPayloadState(GameObject go, bool isLoaded); // 0x000000018B176EDC-0x000000018B1774C0
+		private void ApplyVariantSelectionState(Scene scene, UsdVariantSet variants); // 0x000000018B1756A8-0x000000018B1759EC
+		public void SetVariantSelection(GameObject go, string usdPrimPath, Dictionary<string, string> selections); // 0x000000018B177C80-0x000000018B178338
 	}
 
-	public class UsdLayerStack : MonoBehaviour // TypeDefIndex: 57587
+	[RequireComponent(typeof(UsdAsset))]
+	public class UsdLayerStack : MonoBehaviour // TypeDefIndex: 60096
 	{
 		// Fields
 		public string m_targetLayer; // 0x18
@@ -169,15 +219,15 @@ namespace Unity.Formats.USD
 		public string[] m_mutedLayers; // 0x28
 	
 		// Constructors
-		public UsdLayerStack() {} // 0x000000018646DB20-0x000000018646DB28
+		public UsdLayerStack(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void SetupNewSubLayer(Scene parentScene, Scene subLayerScene) {} // 0x000000018BC96C24-0x000000018BC96CB4
-		public void SaveLayerStack(Scene scene, string[] layerStack) {} // 0x000000018BC96740-0x000000018BC968EC
-		public void SaveToLayer() {} // 0x000000018BC968EC-0x000000018BC96C24
+		private void SetupNewSubLayer(Scene parentScene, Scene subLayerScene); // 0x000000018B178D90-0x000000018B178E20
+		public void SaveLayerStack(Scene scene, string[] layerStack); // 0x000000018B1788AC-0x000000018B178A58
+		public void SaveToLayer(); // 0x000000018B178A58-0x000000018B178D90
 	}
 
-	public class UsdModelRoot : MonoBehaviour // TypeDefIndex: 57588
+	public class UsdModelRoot : MonoBehaviour // TypeDefIndex: 60097
 	{
 		// Fields
 		public string m_modelName; // 0x18
@@ -185,38 +235,42 @@ namespace Unity.Formats.USD
 		public string m_modelAssetPath; // 0x28
 	
 		// Constructors
-		public UsdModelRoot() {} // 0x000000018646DB20-0x000000018646DB28
+		public UsdModelRoot(); // 0x0000000185393520-0x0000000185393538
 	}
 
-	public class UsdPayload : MonoBehaviour // TypeDefIndex: 57589
+	[ExecuteInEditMode]
+	public class UsdPayload : MonoBehaviour // TypeDefIndex: 60098
 	{
 		// Fields
+		[SerializeField]
 		private bool m_isLoaded; // 0x18
+		[HideInInspector]
+		[SerializeField]
 		private bool m_wasLoaded; // 0x19
 	
 		// Properties
-		public bool IsLoaded { get => default; } // 0x00000001813C0430-0x00000001813C0440 
+		public bool IsLoaded { get; } // 0x0000000184D86340-0x0000000184D86350 
 	
 		// Constructors
-		public UsdPayload() {} // 0x000000018BC96D40-0x000000018BC96D50
+		public UsdPayload(); // 0x000000018B178EAC-0x000000018B178EC8
 	
 		// Methods
-		public void Load() {} // 0x0000000181B75280-0x0000000181B75290
-		public void Unload() {} // 0x0000000185FBD8D0-0x0000000185FBD8E0
-		public void SetInitialState(bool loaded) {} // 0x0000000185FD76B0-0x0000000185FD76C0
-		public void Update() {} // 0x000000018BC96CB4-0x000000018BC96D40
+		public void Load(); // 0x0000000184D8EB60-0x0000000184D8EB70
+		public void Unload(); // 0x0000000184D91AA0-0x0000000184D91AB0
+		public void SetInitialState(bool loaded); // 0x0000000184DAB6F0-0x0000000184DAB700
+		public void Update(); // 0x000000018B178E20-0x000000018B178EAC
 	}
 
-	public class UsdPrimSource : MonoBehaviour // TypeDefIndex: 57590
+	public class UsdPrimSource : MonoBehaviour // TypeDefIndex: 60099
 	{
 		// Fields
 		public string m_usdPrimPath; // 0x18
 	
 		// Constructors
-		public UsdPrimSource() {} // 0x000000018646DB20-0x000000018646DB28
+		public UsdPrimSource(); // 0x0000000185393520-0x0000000185393538
 	}
 
-	public class UsdVariantSet : MonoBehaviour // TypeDefIndex: 57592
+	public class UsdVariantSet : MonoBehaviour // TypeDefIndex: 60101
 	{
 		// Fields
 		public string[] m_variantSetNames; // 0x18
@@ -226,115 +280,121 @@ namespace Unity.Formats.USD
 		public string m_primPath; // 0x38
 	
 		// Nested types
-		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 57591
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 60100
 		{
 			// Fields
 			public UsdVariantSets variantSets; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass5_0() {} // 0x000000018BC96EB8-0x000000018BC97140
+			public __c__DisplayClass5_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal string _LoadFromUsd_b__0(string setName) => default; // 0x000000018BC96D50-0x000000018BC96DE8
-			internal IEnumerable<string> _LoadFromUsd_b__1(string setName) => default; // 0x000000018BC96DE8-0x000000018BC96EB8
-			internal int _LoadFromUsd_b__2(string setName) => default; // 0x000000018646DB20-0x000000018646DB28
+			internal string _LoadFromUsd_b__0(string setName); // 0x000000018B1755C8-0x000000018B1755E8
+			internal IEnumerable<string> _LoadFromUsd_b__1(string setName); // 0x000000018B1755E8-0x000000018B175618
+			internal int _LoadFromUsd_b__2(string setName); // 0x000000018B175618-0x000000018B175658
 		}
 	
 		// Constructors
-		public UsdVariantSet() {} // 0x000000018BC92FF4-0x000000018BC93034
+		public UsdVariantSet(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		public void LoadFromUsd(UsdPrim prim) {} // 0x0000000185492010-0x0000000185492020
-		public void ApplyVariantSelections() {} // 0x000000018BC92FA4-0x000000018BC92FC4
-		public Dictionary<string, string> GetVariantSelections() => default; // 0x000000018BC92FC4-0x000000018BC92FF4
+		public void LoadFromUsd(UsdPrim prim); // 0x000000018B179030-0x000000018B1792B8
+		public void ApplyVariantSelections(); // 0x000000018B178EC8-0x000000018B178F60
+		public Dictionary<string, string> GetVariantSelections(); // 0x000000018B178F60-0x000000018B179030
 	}
 
-	public class SkinnedMeshUnityDiff : MonoBehaviour // TypeDefIndex: 57593
+	[ExecuteInEditMode]
+	public class SkinnedMeshUnityDiff : MonoBehaviour // TypeDefIndex: 60102
 	{
 		// Fields
+		[Tooltip("The USD skinned mesh to compare")]
 		public SkinnedMeshRenderer m_usdMesh; // 0x18
+		[Tooltip("The Unity skinned mesh to compare")]
 		public SkinnedMeshRenderer m_unityMesh; // 0x20
 	
 		// Constructors
-		public SkinnedMeshUnityDiff() {} // 0x000000018646DB20-0x000000018646DB28
+		public SkinnedMeshUnityDiff(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void OnEnable() {} // 0x000000018BC8EA7C-0x000000018BC8FA50
-		private bool Approximately(Matrix4x4 rhs, Matrix4x4 lhs) => default; // 0x000000018BC8E9E4-0x000000018BC8EA50
-		private bool WeightsMatch(BoneWeight w1, BoneWeight w2) => default; // 0x000000018BC8FA50-0x000000018BC8FAB8
-		private bool IndicesMatch(BoneWeight w1, BoneWeight w2) => default; // 0x000000018BC8EA50-0x000000018BC8EA7C
-		private void Update() {} // 0x0000000185492010-0x0000000185492020
+		private void OnEnable(); // 0x000000018B17124C-0x000000018B172220
+		private bool Approximately(Matrix4x4 rhs, Matrix4x4 lhs); // 0x000000018B171170-0x000000018B171220
+		private bool WeightsMatch(BoneWeight w1, BoneWeight w2); // 0x000000018B172220-0x000000018B172320
+		private bool IndicesMatch(BoneWeight w1, BoneWeight w2); // 0x000000018B171220-0x000000018B17124C
+		private void Update(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class SkinnedMeshUsdDiff : MonoBehaviour // TypeDefIndex: 57594
+	[ExecuteInEditMode]
+	[RequireComponent(typeof(SkinnedMeshRenderer))]
+	public class SkinnedMeshUsdDiff : MonoBehaviour // TypeDefIndex: 60103
 	{
 		// Fields
+		[Tooltip("A path to a USD file for comparing weights")]
 		public string m_usdFile; // 0x18
+		[Tooltip("A prim path to the skinned mesh in the USD file")]
 		public string m_usdMeshPath; // 0x20
+		[Tooltip("How to convert transforms for comparison")]
 		public BasisTransformation m_basisTransform; // 0x28
 	
 		// Constructors
-		public SkinnedMeshUsdDiff() {} // 0x000000018646DB20-0x000000018646DB28
+		public SkinnedMeshUsdDiff(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void OnEnable() {} // 0x000000018BC8FC5C-0x000000018BC90BF8
-		private string GetUsdBoneData<T>(int bone, int weightIndex, Primvar<T[]> primvar) => default;
-		private Scene GetScene() => default; // 0x000000018BC8FAB8-0x000000018BC8FC5C
-		private SkelBindingSample ReadUsdWeights(Scene scene) => default; // 0x000000018BC91014-0x000000018BC91130
-		private SkeletonSample ReadUsdSkeleton(Scene scene, out string skelRootPath) {
-			skelRootPath = default;
-			return default;
-		} // 0x000000018BC90BF8-0x000000018BC91014
-		private void Update() {} // 0x0000000185492010-0x0000000185492020
+		private void OnEnable(); // 0x000000018B1724C4-0x000000018B173374
+		private string GetUsdBoneData<T>(int bone, int weightIndex, Primvar<T[]> primvar);
+		private Scene GetScene(); // 0x000000018B172320-0x000000018B1724C4
+		private SkelBindingSample ReadUsdWeights(Scene scene); // 0x000000018B173790-0x000000018B1738AC
+		private SkeletonSample ReadUsdSkeleton(Scene scene, out string skelRootPath); // 0x000000018B173374-0x000000018B173790
+		private void Update(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public static class CameraExporter // TypeDefIndex: 57595
+	public static class CameraExporter // TypeDefIndex: 60104
 	{
 		// Methods
-		public static void ExportCamera(ObjectContext objContext, ExportContext exportContext) {} // 0x000000018BC82C60-0x000000018BC82F28
+		public static void ExportCamera(ObjectContext objContext, ExportContext exportContext); // 0x000000018B165B8C-0x000000018B165E58
 	}
 
-	public static class CameraImporter // TypeDefIndex: 57596
+	public static class CameraImporter // TypeDefIndex: 60105
 	{
 		// Methods
-		public static void BuildCamera(CameraSample usdCamera, GameObject go, SceneImportOptions options) {} // 0x000000018BC82F28-0x000000018BC82FE4
+		public static void BuildCamera(CameraSample usdCamera, GameObject go, SceneImportOptions options); // 0x000000018B165E58-0x000000018B165F14
 	}
 
-	public static class CubeImporter // TypeDefIndex: 57597
+	public static class CubeImporter // TypeDefIndex: 60106
 	{
 		// Methods
-		public static void BuildCube(CubeSample usdCube, GameObject go, SceneImportOptions options, bool skinnedMesh = false /* Metadata: 0x0207D9E0 */) {} // 0x000000018BC82FE4-0x000000018BC84AB8
-		private static bool ShouldImport(ImportMode mode) => default; // 0x000000018B5E8780-0x000000018B5E8790
-		private static bool ShouldCompute(ImportMode mode) => default; // 0x0000000187C10D24-0x0000000187C10D34
+		public static void BuildCube(CubeSample usdCube, GameObject go, SceneImportOptions options, bool skinnedMesh = false /* Metadata: 0x0234D288 */); // 0x000000018B165F14-0x000000018B1679E8
+		private static bool ShouldImport(ImportMode mode); // 0x000000018AAA50A8-0x000000018AAA50B8
+		private static bool ShouldCompute(ImportMode mode); // 0x0000000186D41C40-0x0000000186D41C50
 	}
 
-	public static class InstanceImporter // TypeDefIndex: 57598
+	public static class InstanceImporter // TypeDefIndex: 60107
 	{
 		// Methods
-		public static void BuildSceneInstances(PrimMap primMap, SceneImportOptions options) {} // 0x000000018BC873CC-0x000000018BC879C4
-		public static void BuildPointInstances(Scene scene, PrimMap primMap, string pointInstancerPath, PointInstancerSample sample, GameObject root, SceneImportOptions options) {} // 0x000000018BC86D38-0x000000018BC873CC
-		private static void EnableGpuInstancing(GameObject go) {} // 0x000000018BC879C4-0x000000018BC87C1C
+		public static void BuildSceneInstances(PrimMap primMap, SceneImportOptions options); // 0x000000018B16A330-0x000000018B16A928
+		public static void BuildPointInstances(Scene scene, PrimMap primMap, string pointInstancerPath, PointInstancerSample sample, GameObject root, SceneImportOptions options); // 0x000000018B169C9C-0x000000018B16A330
+		private static void EnableGpuInstancing(GameObject go); // 0x000000018B16A928-0x000000018B16AB80
 	}
 
-	public static class MeshExporter // TypeDefIndex: 57599
+	public static class MeshExporter // TypeDefIndex: 60108
 	{
 		// Fields
 		private static TfToken m_materialBindToken; // 0x00
 		private static TfToken m_subMeshesToken; // 0x08
 	
 		// Constructors
-		static MeshExporter() {} // 0x000000018BC8C18C-0x000000018BC8C27C
+		static MeshExporter(); // 0x000000018B16EBD0-0x000000018B16ECC0
 	
 		// Methods
-		public static void ExportSkinnedMesh(ObjectContext objContext, ExportContext exportContext) {} // 0x000000018BC8BE8C-0x000000018BC8C18C
-		private static void ExportSkelWeights(Scene scene, string path, Mesh unityMesh, Transform rootBone, Transform[] bones, string skeletonPath) {} // 0x000000018BC8B938-0x000000018BC8BE8C
-		public static void ExportMesh(ObjectContext objContext, ExportContext exportContext) {} // 0x000000018BC8B808-0x000000018BC8B938
-		private static void ExportMesh(ObjectContext objContext, ExportContext exportContext, Mesh mesh, Material sharedMaterial, Material[] sharedMaterials, bool exportMeshPose = true /* Metadata: 0x0207D9E1 */) {} // 0x000000018BC8A38C-0x000000018BC8B808
+		public static void ExportSkinnedMesh(ObjectContext objContext, ExportContext exportContext); // 0x000000018B16E8D0-0x000000018B16EBD0
+		private static void ExportSkelWeights(Scene scene, string path, Mesh unityMesh, Transform rootBone, Transform[] bones, string skeletonPath); // 0x000000018B16E378-0x000000018B16E8D0
+		public static void ExportMesh(ObjectContext objContext, ExportContext exportContext); // 0x000000018B16E248-0x000000018B16E378
+		private static void ExportMesh(ObjectContext objContext, ExportContext exportContext, Mesh mesh, Material sharedMaterial, Material[] sharedMaterials, bool exportMeshPose = true /* Metadata: 0x0234D289 */); // 0x000000018B16CDCC-0x000000018B16E248
 	}
 
-	public delegate void MeshImportFunction<T>(string path, T sample, MeshImporter.GeometrySubsets subsets, GameObject go, SceneImportOptions option, bool isDynamic, UsdSkelSkinningQuery query = null); // TypeDefIndex: 57600; 0x00000000-0x00000000
+	public delegate void MeshImportFunction<T>(string path, T sample, MeshImporter.GeometrySubsets subsets, GameObject go, SceneImportOptions option, bool isDynamic, UsdSkelSkinningQuery query = null); // TypeDefIndex: 60109; 0x00000000-0x00000000
 
-	public class MeshImportStrategy : IImporter // TypeDefIndex: 57602
+	public class MeshImportStrategy : IImporter // TypeDefIndex: 60111
 	{
 		// Fields
 		private MeshImportFunction<SanitizedMeshSample> m_meshImporter; // 0x10
@@ -342,7 +402,8 @@ namespace Unity.Formats.USD
 		private ReadAllJob<SanitizedMeshSample> m_readMeshesJob; // 0x20
 	
 		// Nested types
-		private sealed class _Import_d__5 : IEnumerator<object> // TypeDefIndex: 57601
+		[CompilerGenerated]
+		private sealed class _Import_d__5 : IEnumerator<object> // TypeDefIndex: 60110
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -363,45 +424,49 @@ namespace Unity.Formats.USD
 			private IEnumerator<SampleEnumerator<SanitizedMeshSample>> __7__wrap10; // 0x88
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018BC92EA8-0x000000018BC92F20 
-			object IEnumerator.Current { get => default; } // 0x000000018BC92F20-0x000000018BC92F70 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _Import_d__5() {} // Dummy constructor
-			public _Import_d__5(int __1__state) {} // 0x00000001841BC230-0x00000001841BC260
+			[DebuggerHidden]
+			public _Import_d__5(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018BC8C27C-0x000000018BC8C348
-			private bool MoveNext() => default; // 0x000000018BC8C348-0x000000018BC8C3F0
-			private void __m__Finally1() {} // 0x0000000181378230-0x0000000181378240
-			void IEnumerator.Reset() {} // 0x000000018BC91758-0x000000018BC92E5C
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x000000018B1754CC-0x000000018B175544
+			private bool MoveNext(); // 0x000000018B173ED4-0x000000018B175480
+			private void __m__Finally1(); // 0x000000018B175544-0x000000018B175594
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B175480-0x000000018B1754CC
 		}
 	
 		// Constructors
-		public MeshImportStrategy() {} // Dummy constructor
-		public MeshImportStrategy(MeshImportFunction<SanitizedMeshSample> meshImporter, MeshImportFunction<SanitizedMeshSample> skinnedMeshImporter) {} // 0x0000000181377E40-0x0000000181377E50
+		public MeshImportStrategy(MeshImportFunction<SanitizedMeshSample> meshImporter, MeshImportFunction<SanitizedMeshSample> skinnedMeshImporter); // 0x00000001832AF420-0x00000001832AF450
 	
 		// Methods
-		public void BeginReading(Scene scene, PrimMap primMap, SceneImportOptions importOptions) {} // 0x000000018BC92E5C-0x000000018BC92EA8
-		public IEnumerator Import(Scene scene, PrimMap primMap, SceneImportOptions importOptions) => default; // 0x0000000181377E40-0x0000000181377E50
+		public void BeginReading(Scene scene, PrimMap primMap, SceneImportOptions importOptions); // 0x000000018B16ECC0-0x000000018B16ED8C
+		[IteratorStateMachine(typeof(_Import_d__5))]
+		public IEnumerator Import(Scene scene, PrimMap primMap, SceneImportOptions importOptions); // 0x000000018B16ED8C-0x000000018B16EE34
 	}
 
-	public static class MeshImporter // TypeDefIndex: 57606
+	public static class MeshImporter // TypeDefIndex: 60115
 	{
 		// Nested types
-		public class GeometrySubsets // TypeDefIndex: 57603
+		public class GeometrySubsets // TypeDefIndex: 60112
 		{
 			// Fields
+			[CompilerGenerated]
 			private Dictionary<string, int[]> _Subsets_k__BackingField; // 0x10
 	
 			// Properties
-			public Dictionary<string, int[]> Subsets { get; set; } // 0x000000018BC8E58C-0x000000018BC8E934 0x000000018BC8D964-0x000000018BC8DB24
+			public Dictionary<string, int[]> Subsets { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
 	
 			// Constructors
-			public GeometrySubsets() {} // 0x000000018BC8DB24-0x000000018BC8E13C
+			public GeometrySubsets(); // 0x000000018B1679E8-0x000000018B167A60
 		}
 	
-		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 57604
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 60113
 		{
 			// Fields
 			public Mesh unityMesh; // 0x10
@@ -410,42 +475,43 @@ namespace Unity.Formats.USD
 			public SanitizedMeshSample usdMesh; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass5_0() {} // 0x000000018BC8D7AC-0x000000018BC8D964
+			public __c__DisplayClass5_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _BuildMesh__b__0(Scene scene, Material boundMat, List<string> primvars) {} // 0x000000018BC8C4E4-0x000000018BC8D7AC
+			internal void _BuildMesh__b__0(Scene scene, Material boundMat, List<string> primvars); // 0x000000018B175594-0x000000018B1755C8
 		}
 	
-		private sealed class __c__DisplayClass5_1 // TypeDefIndex: 57605
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass5_1 // TypeDefIndex: 60114
 		{
 			// Fields
 			public int idx; // 0x10
 			public __c__DisplayClass5_0 CS___8__locals1; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass5_1() {} // 0x000000018BC8E2F4-0x000000018BC8E58C
+			public __c__DisplayClass5_1(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _BuildMesh__b__1(Scene scene, Material boundMat, List<string> primvars) {} // 0x000000018BC8C494-0x000000018BC8C4E4
+			internal void _BuildMesh__b__1(Scene scene, Material boundMat, List<string> primvars); // 0x000000018B175658-0x000000018B1756A8
 		}
 	
 		// Methods
-		public static GeometrySubsets ReadGeomSubsets(Scene scene, string path) => default; // 0x000000018BC8C3F0-0x000000018BC8C494
-		public static void BuildSkinnedMesh(string path, SanitizedMeshSample usdMesh, GeometrySubsets geomSubsets, GameObject go, SceneImportOptions options, bool isDynamic, UsdSkelSkinningQuery skinningQuery = null) {}
-		public static void ImportSkinning(string path, SanitizedMeshSample usdMesh, Mesh unityMesh, UsdSkelSkinningQuery skinningQuery) {} // 0x000000018BC8E13C-0x000000018BC8E2F4
-		public static void BuildMesh(string path, SanitizedMeshSample usdMesh, GeometrySubsets geomSubsets, GameObject go, SceneImportOptions options, bool isDynamic, UsdSkelSkinningQuery skinQuery = null) {} // 0x000000018B5E8780-0x000000018B5E8790
-		private static void BuildMesh_(string path, SanitizedMeshSample usdMesh, Mesh unityMesh, GeometrySubsets geomSubsets, GameObject go, Renderer renderer, SceneImportOptions options) {} // 0x0000000187C10D24-0x0000000187C10D34
-		private static void LoadPrimvars(Mesh unityMesh, string usdMeshPath, List<string> primvars, MeshSample sample) {} // 0x000000018BC8E934-0x000000018BC8E9E4
-		private static void BindMat(Mesh unityMesh, Material mat, Renderer renderer, string usdMeshPath, List<string> primvars, MeshSample sample) {} // 0x000000018346D130-0x000000018346D140
-		private static void BindMat(Mesh unityMesh, Material mat, Renderer renderer, int index, string usdMeshPath, List<string> primvars, MeshSample sample) {} // 0x0000000184096E30-0x0000000184096EF0
-		private static T[] TryGetPrimvarValue<T>(Primvar<object> primvar) => default; // 0x000000018BC84AB8-0x000000018BC84B30
-		private static void ImportUv(Mesh unityMesh, int uvSetIndex, Primvar<object> uv) {} // 0x0000000185492010-0x0000000185492020
-		public static bool ShouldImport(ImportMode mode) => default; // 0x000000018BC92F70-0x000000018BC92FA4
-		public static bool ShouldCompute(ImportMode mode) => default; // 0x0000000185492010-0x0000000185492020
-		private static string UniqueMeshName(string meshName) => default; // 0x000000018BC93034-0x000000018BC93084
+		public static GeometrySubsets ReadGeomSubsets(Scene scene, string path); // 0x000000018B170D18-0x000000018B1710C0
+		public static void BuildSkinnedMesh(string path, SanitizedMeshSample usdMesh, GeometrySubsets geomSubsets, GameObject go, SceneImportOptions options, bool isDynamic, UsdSkelSkinningQuery skinningQuery = null); // 0x000000018B1700F0-0x000000018B1702B0
+		public static void ImportSkinning(string path, SanitizedMeshSample usdMesh, Mesh unityMesh, UsdSkelSkinningQuery skinningQuery); // 0x000000018B1702B0-0x000000018B1708C8
+		public static void BuildMesh(string path, SanitizedMeshSample usdMesh, GeometrySubsets geomSubsets, GameObject go, SceneImportOptions options, bool isDynamic, UsdSkelSkinningQuery skinQuery = null); // 0x000000018B16FF38-0x000000018B1700F0
+		private static void BuildMesh_(string path, SanitizedMeshSample usdMesh, Mesh unityMesh, GeometrySubsets geomSubsets, GameObject go, Renderer renderer, SceneImportOptions options); // 0x000000018B16EF28-0x000000018B16FF38
+		private static void LoadPrimvars(Mesh unityMesh, string usdMeshPath, List<string> primvars, MeshSample sample); // 0x000000018B170A80-0x000000018B170D18
+		private static void BindMat(Mesh unityMesh, Material mat, Renderer renderer, string usdMeshPath, List<string> primvars, MeshSample sample); // 0x000000018B16EED8-0x000000018B16EF28
+		private static void BindMat(Mesh unityMesh, Material mat, Renderer renderer, int index, string usdMeshPath, List<string> primvars, MeshSample sample); // 0x000000018B16EE34-0x000000018B16EED8
+		private static T[] TryGetPrimvarValue<T>(Primvar<object> primvar);
+		private static void ImportUv(Mesh unityMesh, int uvSetIndex, Primvar<object> uv); // 0x000000018B1708C8-0x000000018B170A80
+		public static bool ShouldImport(ImportMode mode); // 0x000000018AAA50A8-0x000000018AAA50B8
+		public static bool ShouldCompute(ImportMode mode); // 0x0000000186D41C40-0x0000000186D41C50
+		private static string UniqueMeshName(string meshName); // 0x000000018B1710C0-0x000000018B171170
 	}
 
-	public enum ImportMode // TypeDefIndex: 57607
+	public enum ImportMode // TypeDefIndex: 60116
 	{
 		Import = 0,
 		ImportOrCompute = 1,
@@ -454,7 +520,7 @@ namespace Unity.Formats.USD
 	}
 
 	[Serializable]
-	public class MeshImportOptions // TypeDefIndex: 57608
+	public class MeshImportOptions // TypeDefIndex: 60117
 	{
 		// Fields
 		public bool debugShowSkeletonRestPose; // 0x10
@@ -473,71 +539,70 @@ namespace Unity.Formats.USD
 		public ImportMode boundingBox; // 0x3C
 	
 		// Constructors
-		public MeshImportOptions() {} // 0x0000000185FD7670-0x0000000185FD76B0
+		public MeshImportOptions(); // 0x0000000184DAB6B0-0x0000000184DAB6F0
 	}
 
-	public static class SphereImporter // TypeDefIndex: 57609
+	public static class SphereImporter // TypeDefIndex: 60118
 	{
 		// Methods
-		public static void BuildSphere(SphereSample usdSphere, GameObject go, SceneImportOptions options, bool skinnedMesh = false /* Metadata: 0x0207D9E6 */) {} // 0x000000018BC91130-0x000000018BC91758
-		private static bool ShouldImport(ImportMode mode) => default; // 0x000000018B5E8780-0x000000018B5E8790
-		private static bool ShouldCompute(ImportMode mode) => default; // 0x0000000187C10D24-0x0000000187C10D34
+		public static void BuildSphere(SphereSample usdSphere, GameObject go, SceneImportOptions options, bool skinnedMesh = false /* Metadata: 0x0234D28E */); // 0x000000018B1738AC-0x000000018B173ED4
+		private static bool ShouldImport(ImportMode mode); // 0x000000018AAA50A8-0x000000018AAA50B8
+		private static bool ShouldCompute(ImportMode mode); // 0x0000000186D41C40-0x0000000186D41C50
 	}
 
-	public static class XformExporter // TypeDefIndex: 57610
+	public static class XformExporter // TypeDefIndex: 60119
 	{
 		// Methods
-		public static void ExportXform(ObjectContext objContext, ExportContext exportContext) {} // 0x000000018BC97140-0x000000018BC973CC
-		public static void WriteSparseOverrides(Scene scene, PrimMap primMap, BasisTransformation changeHandedness, float tolerance = 0.0001f /* Metadata: 0x0207D9E7 */) {} // 0x000000018BC9769C-0x000000018BC979C4
-		public static Matrix4x4 GetLocalTransformMatrix(Transform tr, bool correctZUp, bool isRootPrim, BasisTransformation conversionType) => default; // 0x000000018BC973CC-0x000000018BC9769C
+		public static void ExportXform(ObjectContext objContext, ExportContext exportContext); // 0x000000018B1792B8-0x000000018B179544
+		public static void WriteSparseOverrides(Scene scene, PrimMap primMap, BasisTransformation changeHandedness, float tolerance = 0.0001f /* Metadata: 0x0234D28F */); // 0x000000018B17981C-0x000000018B179B44
+		public static Matrix4x4 GetLocalTransformMatrix(Transform tr, bool correctZUp, bool isRootPrim, BasisTransformation conversionType); // 0x000000018B179544-0x000000018B17981C
 	}
 
-	public static class XformImporter // TypeDefIndex: 57611
+	public static class XformImporter // TypeDefIndex: 60120
 	{
 		// Methods
-		public static void BuildXform(SdfPath path, XformableSample usdXf, GameObject go, SceneImportOptions options, Scene scene) {} // 0x000000018BC97F04-0x000000018BC98084
-		public static void BuildXform(Matrix4x4 xf, GameObject go, SceneImportOptions options) {} // 0x000000018BC97D64-0x000000018BC97F04
-		public static void ImportXform(ref Matrix4x4 mat, SceneImportOptions options) {} // 0x000000018BC98084-0x000000018BC9816C
-		public static void BuildSceneRoot(Scene scene, Transform root, SceneImportOptions options) {} // 0x000000018BC979C4-0x000000018BC97D64
-		public static void UndoRootTransform(Scene scene, UsdAsset stageRoot, ref Vector3 localScale, ref Quaternion localRotation) {} // 0x000000018BC9816C-0x000000018BC98458
+		public static void BuildXform(SdfPath path, XformableSample usdXf, GameObject go, SceneImportOptions options, Scene scene); // 0x000000018B17A084-0x000000018B17A204
+		public static void BuildXform(Matrix4x4 xf, GameObject go, SceneImportOptions options); // 0x000000018B179EE4-0x000000018B17A084
+		public static void ImportXform(ref Matrix4x4 mat, SceneImportOptions options); // 0x000000018B17A204-0x000000018B17A2EC
+		public static void BuildSceneRoot(Scene scene, Transform root, SceneImportOptions options); // 0x000000018B179B44-0x000000018B179EE4
+		public static void UndoRootTransform(Scene scene, UsdAsset stageRoot, ref Vector3 localScale, ref Quaternion localRotation); // 0x000000018B17A2EC-0x000000018B17A4C8
 	}
 
-	public static class ImporterBase // TypeDefIndex: 57612
+	public static class ImporterBase // TypeDefIndex: 60121
 	{
 		// Methods
-		public static string MakeRelativePath(string anchorPath, string pathToMakeRelative) => default; // 0x000000018BC86884-0x000000018BC86B20
-		public static bool ApproximatelyEqual(Matrix4x4 lhs, Matrix4x4 rhs) => default; // 0x000000018BC8681C-0x000000018BC86884
-		public static void MoveComponentFirst(Component comp) {} // 0x000000018BC86B20-0x000000018BC86B74
-		public static void MoveComponentLast(Component comp) {} // 0x000000018BC86B74-0x000000018BC86BC8
-		public static T GetOrAddComponent<T>(GameObject go, bool insertFirst = false /* Metadata: 0x0207D9EB */)
-			where T : Component => default;
-		public static string SafeGetDirectoryName(string fullPath) => default; // 0x000000018BC86BC8-0x000000018BC86D38
+		public static string MakeRelativePath(string anchorPath, string pathToMakeRelative); // 0x000000018B169800-0x000000018B169A84
+		public static bool ApproximatelyEqual(Matrix4x4 lhs, Matrix4x4 rhs); // 0x000000018B16974C-0x000000018B169800
+		public static void MoveComponentFirst(UnityEngine.Component comp); // 0x000000018B169A84-0x000000018B169AD8
+		public static void MoveComponentLast(UnityEngine.Component comp); // 0x000000018B169AD8-0x000000018B169B2C
+		public static T GetOrAddComponent<T>(GameObject go, bool insertFirst = false /* Metadata: 0x0234D293 */)
+			where T : UnityEngine.Component;
+		public static string SafeGetDirectoryName(string fullPath); // 0x000000018B169B2C-0x000000018B169C9C
 	}
 
-	public class HdrpShaderExporter : ShaderExporterBase // TypeDefIndex: 57613
+	public class HdrpShaderExporter : ShaderExporterBase // TypeDefIndex: 60122
 	{
 		// Constructors
-		public HdrpShaderExporter() {} // 0x0000000185492010-0x0000000185492020
+		public HdrpShaderExporter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static void ExportLit(Scene scene, string usdShaderPath, Material material, PreviewSurfaceSample surface, string destTexturePath) {} // 0x000000018BC84B30-0x000000018BC85AE8
+		public static void ExportLit(Scene scene, string usdShaderPath, Material material, PreviewSurfaceSample surface, string destTexturePath); // 0x000000018B167A60-0x000000018B168A18
 	}
 
-	public class HdrpShaderImporter : ShaderImporterBase // TypeDefIndex: 57614
+	public class HdrpShaderImporter : ShaderImporterBase // TypeDefIndex: 60123
 	{
 		// Fields
 		private static Material ChannelCombinerMat; // 0x00
 	
 		// Constructors
-		public HdrpShaderImporter() {} // Dummy constructor
-		public HdrpShaderImporter(Material material) {} // 0x0000000184096E30-0x0000000184096EF0
+		public HdrpShaderImporter(Material material); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		public override void ImportFromUsd() {} // 0x000000018BC861F4-0x000000018BC8681C
-		private static Texture2D BuildMaskMap(Texture2D red, Texture2D green, Texture2D blue, Texture2D alpha) => default; // 0x000000018BC85AE8-0x000000018BC861F4
+		public override void ImportFromUsd(); // 0x000000018B169124-0x000000018B16974C
+		private static Texture2D BuildMaskMap(Texture2D red, Texture2D green, Texture2D blue, Texture2D alpha); // 0x000000018B168A18-0x000000018B169124
 	}
 
-	public static class MaterialExporter // TypeDefIndex: 57616
+	public static class MaterialExporter // TypeDefIndex: 60125
 	{
 		// Fields
 		public static readonly string kStandardFallbackHandler; // 0x00
@@ -546,16 +611,16 @@ namespace Unity.Formats.USD
 		public static Dictionary<string, ExportHandler> ExportRegistry; // 0x18
 	
 		// Nested types
-		public delegate void ExportHandler(Scene scene, string usdShaderPath, Material material, UnityPreviewSurfaceSample surface, string destTexturePath); // TypeDefIndex: 57615; 0x000000018BC87C1C-0x000000018BC8813C
+		public delegate void ExportHandler(Scene scene, string usdShaderPath, Material material, UnityPreviewSurfaceSample surface, string destTexturePath); // TypeDefIndex: 60124; 0x00000001814DD080-0x00000001814DD0A0
 	
 		// Constructors
-		static MaterialExporter() {} // 0x000000018773B27C-0x000000018773B2CC
+		static MaterialExporter(); // 0x000000018B16B0A0-0x000000018B16B748
 	
 		// Methods
-		public static void ExportMaterial(Scene scene, Material mat, string usdMaterialPath) {} // 0x00000001864BB614-0x00000001864BB734
+		public static void ExportMaterial(Scene scene, Material mat, string usdMaterialPath); // 0x000000018B16AB80-0x000000018B16B0A0
 	}
 
-	public static class MaterialImporter // TypeDefIndex: 57618
+	public static class MaterialImporter // TypeDefIndex: 60127
 	{
 		// Fields
 		private static readonly TfToken materialBindToken; // 0x00
@@ -563,24 +628,21 @@ namespace Unity.Formats.USD
 		public static TextureResolver OnResolveTexture; // 0x10
 	
 		// Nested types
-		public delegate Texture2D TextureResolver(SdfAssetPath textureAssetPath, bool isNormalMap, SceneImportOptions importOptions); // TypeDefIndex: 57617; 0x000000018BC887E4-0x000000018BC898CC
+		public delegate Texture2D TextureResolver(SdfAssetPath textureAssetPath, bool isNormalMap, SceneImportOptions importOptions); // TypeDefIndex: 60126; 0x00000001814F3120-0x00000001814F3140
 	
 		// Constructors
-		static MaterialImporter() {} // 0x00000001864750A8-0x00000001864751CC
+		static MaterialImporter(); // 0x000000018B16CD3C-0x000000018B16CDCC
 	
 		// Methods
-		public static void ProcessMaterialBindings(Scene scene, SceneImportOptions importOptions) {} // 0x000000018BC898CC-0x000000018BC89BCC
-		public static Material BuildMaterial(Scene scene, string materialPath, MaterialSample sample, SceneImportOptions options) => default; // 0x000000018BC89BCC-0x000000018BC89DE8
-		public static Texture2D ImportConnectedTexture<T>(Scene scene, Connectable<T> connection, bool isNormalMap, SceneImportOptions options, out string uvPrimvar) {
-			uvPrimvar = default;
-			return default;
-		} // 0x000000018BC8A2FC-0x000000018BC8A38C
-		private static Texture2D DefaultTextureResolver(SdfAssetPath textureAssetPath, bool isNormalMap, SceneImportOptions options) => default; // 0x000000018BCA9AD4-0x000000018BCA9BFC
-		public static Texture2D CombineRoughness(Texture2D rgbTex, Texture2D roughnessTex, string fileNameSuffix) => default; // 0x00000001817E31E0-0x00000001817E3200
-		public static UnityPreviewSurfaceSample GetSurfaceShaderPrim(Scene scene, string primPath) => default; // 0x000000018BCA9A4C-0x000000018BCA9AD4
+		public static void ProcessMaterialBindings(Scene scene, SceneImportOptions importOptions); // 0x000000018B16C828-0x000000018B16CD3C
+		public static Material BuildMaterial(Scene scene, string materialPath, MaterialSample sample, SceneImportOptions options); // 0x000000018B16B748-0x000000018B16C30C
+		public static Texture2D ImportConnectedTexture<T>(Scene scene, Connectable<T> connection, bool isNormalMap, SceneImportOptions options, out string uvPrimvar);
+		private static Texture2D DefaultTextureResolver(SdfAssetPath textureAssetPath, bool isNormalMap, SceneImportOptions options); // 0x00000001811EC580-0x00000001811EC590
+		public static Texture2D CombineRoughness(Texture2D rgbTex, Texture2D roughnessTex, string fileNameSuffix); // 0x000000018B16C30C-0x000000018B16C60C
+		public static UnityPreviewSurfaceSample GetSurfaceShaderPrim(Scene scene, string primPath); // 0x000000018B16C60C-0x000000018B16C828
 	}
 
-	public class MaterialMap : IEnumerable<KeyValuePair<string, Material>> // TypeDefIndex: 57620
+	public class MaterialMap : IEnumerable<KeyValuePair<string, Material>> // TypeDefIndex: 60129
 	{
 		// Fields
 		private Dictionary<string, Material> m_map; // 0x10
@@ -593,37 +655,37 @@ namespace Unity.Formats.USD
 		private Material m_metallicWorkflowMaterial; // 0x48
 	
 		// Properties
-		public Material DisplayColorMaterial { get => default; set {} } // 0x000000018BC9D920-0x000000018BC9D984 0x000000018571FEC0-0x000000018571FED0
-		public Material SpecularWorkflowMaterial { get => default; set {} } // 0x000000018BC9D2C0-0x000000018BC9D490 0x000000018BC9D188-0x000000018BC9D210
-		public Material MetallicWorkflowMaterial { get => default; set {} } // 0x000000018BC9D5A8-0x000000018BC9D60C 0x000000018BC9D8B4-0x000000018BC9D920
-		public Material this[string path] { get => default; set {} } // 0x000000018BC9D490-0x000000018BC9D5A8 0x000000018BC9D0D4-0x000000018BC9D188
+		public Material DisplayColorMaterial { get; set; } // 0x000000018B17F5F0-0x000000018B17F654 0x00000001846A91B0-0x00000001846A91C0
+		public Material SpecularWorkflowMaterial { get; set; } // 0x000000018B17F724-0x000000018B17F788 0x00000001842B4AE0-0x00000001842B4AF0
+		public Material MetallicWorkflowMaterial { get; set; } // 0x000000018B17F6C0-0x000000018B17F724 0x00000001835A41A0-0x00000001835A41B0
+		public Material this[string path] { get => default; set {} } // 0x000000018B17F654-0x000000018B17F6C0 0x000000018B17F788-0x000000018B17F7EC
 	
 		// Nested types
-		public delegate void MaterialBinder(Scene scene, Material mat, List<string> uvPrimvars); // TypeDefIndex: 57619; 0x0000000185A16440-0x0000000185A16450
+		public delegate void MaterialBinder(Scene scene, Material mat, List<string> uvPrimvars); // TypeDefIndex: 60128; 0x0000000181546280-0x00000001815462A0
 	
 		// Constructors
-		public MaterialMap() {} // 0x00000001864BB614-0x00000001864BB734
+		public MaterialMap(); // 0x000000018B17F498-0x000000018B17F5F0
 	
 		// Methods
-		private void InstantiateMaterials() {} // 0x000000018BC9D9E8-0x000000018BC9DA4C
-		public Dictionary<string, MaterialBinder> ClearRequestedBindings() => default; // 0x000000018BC9D258-0x000000018BC9D2C0
-		public void RequestBinding(string usdPath, MaterialBinder binder) {} // 0x000000018BC9D60C-0x000000018BC9D670
-		public List<string> GetPrimvars(string materialPath) => default; // 0x000000018BC9D210-0x000000018BC9D258
-		public void SetPrimvars(string materialPath, List<string> primvars) {} // 0x000000018BC9D670-0x000000018BC9D6F8
-		public Material InstantiateSolidColor(UnityEngine.Color color) => default; // 0x000000018BC9D6F8-0x000000018BC9D850
-		public static void AssignColor(Material material, UnityEngine.Color color) {} // 0x000000018A2AD604-0x000000018A2AD72C
-		public IEnumerator GetEnumerator() => default; // 0x0000000181A578C0-0x0000000181A578E0
-		IEnumerator<KeyValuePair<string, Material>> IEnumerable<KeyValuePair<string, Material>>.GetEnumerator() => default; // 0x0000000187206B7C-0x0000000187206BB4
+		private void InstantiateMaterials(); // 0x000000018B17F060-0x000000018B17F230
+		public Dictionary<string, MaterialBinder> ClearRequestedBindings(); // 0x000000018B17EF28-0x000000018B17EFB0
+		public void RequestBinding(string usdPath, MaterialBinder binder); // 0x000000018B17F348-0x000000018B17F3AC
+		public List<string> GetPrimvars(string materialPath); // 0x000000018B17EFF8-0x000000018B17F060
+		public void SetPrimvars(string materialPath, List<string> primvars); // 0x000000018B17F3AC-0x000000018B17F410
+		public Material InstantiateSolidColor(UnityEngine.Color color); // 0x000000018B17F230-0x000000018B17F348
+		public static void AssignColor(Material material, UnityEngine.Color color); // 0x000000018B17EE74-0x000000018B17EF28
+		public IEnumerator GetEnumerator(); // 0x000000018B17EFB0-0x000000018B17EFF8
+		IEnumerator<KeyValuePair<string, Material>> IEnumerable<KeyValuePair<string, Material>>.GetEnumerator(); // 0x000000018B17F410-0x000000018B17F498
 	}
 
-	public class ShaderExporterBase // TypeDefIndex: 57622
+	public class ShaderExporterBase // TypeDefIndex: 60131
 	{
 		// Fields
 		private static Material _metalGlossChannelSwapMaterial; // 0x00
 		private static Material _normalChannelMaterial; // 0x08
 	
 		// Nested types
-		public enum ConversionType // TypeDefIndex: 57621
+		public enum ConversionType // TypeDefIndex: 60130
 		{
 			None = 0,
 			SwapRASmoothnessToBGRoughness = 1,
@@ -634,16 +696,18 @@ namespace Unity.Formats.USD
 		}
 	
 		// Constructors
-		public ShaderExporterBase() {} // 0x0000000185492010-0x0000000185492020
+		public ShaderExporterBase(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		protected static string SetupTexture(Scene scene, string usdShaderPath, Material material, PreviewSurfaceSample surface, Vector4 scale, string destTexturePath, string textureName, string textureOutput, ConversionType conversionType = ConversionType.None /* Metadata: 0x0207D9EC */) => default; // 0x000000018BCA57C4-0x000000018BCA6FBC
+		protected static string SetupTexture(Scene scene, string usdShaderPath, Material material, PreviewSurfaceSample surface, Vector4 scale, string destTexturePath, string textureName, string textureOutput, ConversionType conversionType = ConversionType.None /* Metadata: 0x0234D294 */); // 0x000000018B186C68-0x000000018B1880CC
 	}
 
-	public abstract class ShaderImporterBase // TypeDefIndex: 57624
+	public abstract class ShaderImporterBase // TypeDefIndex: 60133
 	{
 		// Fields
+		[CompilerGenerated]
 		private Material _Material_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private bool _IsSpecularWorkflow_k__BackingField; // 0x18
 		public UnityEngine.Color? Diffuse; // 0x1C
 		public Texture2D DiffuseMap; // 0x30
@@ -669,43 +733,39 @@ namespace Unity.Formats.USD
 		public Texture2D OpacityMap; // 0xF8
 	
 		// Properties
-		public Material Material { get; private set; } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
-		public bool IsSpecularWorkflow { get; private set; } // 0x0000000184096E30-0x0000000184096EF0 
+		public Material Material { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public bool IsSpecularWorkflow { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86340-0x0000000184D86350 0x0000000184D86350-0x0000000184D86360
 	
 		// Nested types
-		private sealed class __c__DisplayClass34_0 // TypeDefIndex: 57623
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass34_0 // TypeDefIndex: 60132
 		{
 			// Fields
 			public string localName; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass34_0() {} // 0x000000018346D130-0x000000018346D140
+			public __c__DisplayClass34_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _MergePrimvars_b__0(string str) => default; // 0x0000000184096E30-0x0000000184096EF0
+			internal bool _MergePrimvars_b__0(string str); // 0x000000018B191A88-0x000000018B191A9C
 		}
 	
 		// Constructors
-		protected ShaderImporterBase() {} // Dummy constructor
-		public ShaderImporterBase(Material material) {} // 0x000000018BCA6FBC-0x000000018BCA7114
+		public ShaderImporterBase(Material material); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
 		public abstract void ImportFromUsd();
-		protected void ImportColorOrMap(Scene scene, Connectable<Vector3> usdParam, bool isNormalMap, SceneImportOptions options, ref Texture2D map, ref UnityEngine.Color? value, out string uvPrimvar) {
-			uvPrimvar = default;
-		} // 0x000000018BCA759C-0x000000018BCA76A4
+		protected void ImportColorOrMap(Scene scene, Connectable<Vector3> usdParam, bool isNormalMap, SceneImportOptions options, ref Texture2D map, ref UnityEngine.Color? value, out string uvPrimvar); // 0x000000018B1880CC-0x000000018B188224
 		protected void ImportValueOrMap<T>(Scene scene, Connectable<T> usdParam, bool isNormalMap, SceneImportOptions options, ref Texture2D map, ref T? value, out string uvPrimvar)
-			where T : struct {
-			uvPrimvar = default;
-		} // 0x000000018BCA7114-0x000000018BCA759C
-		private void MergePrimvars(string newPrimvar, List<string> primvars) {} // 0x0000000185492010-0x0000000185492020
-		public virtual void ImportParametersFromUsd(Scene scene, string materialPath, MaterialSample materialSample, PreviewSurfaceSample previewSurf, SceneImportOptions options) {} // 0x000000018820D3F8-0x000000018820D40C
+			where T : struct;
+		private void MergePrimvars(string newPrimvar, List<string> primvars); // 0x000000018B1886AC-0x000000018B1887B4
+		public virtual void ImportParametersFromUsd(Scene scene, string materialPath, MaterialSample materialSample, PreviewSurfaceSample previewSurf, SceneImportOptions options); // 0x000000018B188224-0x000000018B1886AC
 	}
 
-	public class StandardShaderExporter : ShaderExporterBase // TypeDefIndex: 57626
+	public class StandardShaderExporter : ShaderExporterBase // TypeDefIndex: 60135
 	{
 		// Nested types
-		private enum StandardShaderBlendMode // TypeDefIndex: 57625
+		private enum StandardShaderBlendMode // TypeDefIndex: 60134
 		{
 			Opaque = 0,
 			Cutout = 1,
@@ -714,60 +774,62 @@ namespace Unity.Formats.USD
 		}
 	
 		// Constructors
-		public StandardShaderExporter() {} // 0x0000000185492010-0x0000000185492020
+		public StandardShaderExporter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static void ExportStandardSpecular(Scene scene, string usdShaderPath, Material material, UnityPreviewSurfaceSample surface, string destTexturePath) {} // 0x000000018BCA8B74-0x000000018BCA8E70
-		public static void ExportStandardRoughness(Scene scene, string usdShaderPath, Material material, UnityPreviewSurfaceSample surface, string destTexturePath) {} // 0x000000018BCA8738-0x000000018BCA8B74
-		public static void ExportStandard(Scene scene, string usdShaderPath, Material material, UnityPreviewSurfaceSample surface, string destTexturePath) {} // 0x000000018BCA8E70-0x000000018BCA91A4
-		public static void ExportGeneric(Scene scene, string usdShaderPath, Material material, UnityPreviewSurfaceSample surface, string destTexturePath) {} // 0x000000018BCA76A4-0x000000018BCA7D24
-		private static void ExportStandardCommon(Scene scene, string usdShaderPath, Material mat, UnityPreviewSurfaceSample surface, string destTexturePath) {} // 0x000000018BCA7D24-0x000000018BCA8738
-		private static bool ShouldUseSpecularWorkflow(Material material) => default; // 0x000000018BCA91A4-0x000000018BCA92D8
+		public static void ExportStandardSpecular(Scene scene, string usdShaderPath, Material material, UnityPreviewSurfaceSample surface, string destTexturePath); // 0x000000018B189C84-0x000000018B189F80
+		public static void ExportStandardRoughness(Scene scene, string usdShaderPath, Material material, UnityPreviewSurfaceSample surface, string destTexturePath); // 0x000000018B189848-0x000000018B189C84
+		public static void ExportStandard(Scene scene, string usdShaderPath, Material material, UnityPreviewSurfaceSample surface, string destTexturePath); // 0x000000018B189F80-0x000000018B18A2B4
+		public static void ExportGeneric(Scene scene, string usdShaderPath, Material material, UnityPreviewSurfaceSample surface, string destTexturePath); // 0x000000018B1887B4-0x000000018B188E34
+		private static void ExportStandardCommon(Scene scene, string usdShaderPath, Material mat, UnityPreviewSurfaceSample surface, string destTexturePath); // 0x000000018B188E34-0x000000018B189848
+		private static bool ShouldUseSpecularWorkflow(Material material); // 0x000000018B18A2B4-0x000000018B18A3E8
 	}
 
-	public class StandardShaderImporter : ShaderImporterBase // TypeDefIndex: 57627
+	public class StandardShaderImporter : ShaderImporterBase // TypeDefIndex: 60136
 	{
 		// Constructors
-		public StandardShaderImporter() {} // Dummy constructor
-		public StandardShaderImporter(Material material) {} // 0x0000000184096E30-0x0000000184096EF0
+		public StandardShaderImporter(Material material); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		public override void ImportFromUsd() {} // 0x000000018BCA92D8-0x000000018BCA9A4C
+		public override void ImportFromUsd(); // 0x000000018B18A3E8-0x000000018B18AB5C
 	}
 
-	public class UnityMaterialData : SampleBase // TypeDefIndex: 57628
+	public class UnityMaterialData : SampleBase // TypeDefIndex: 60137
 	{
 		// Fields
 		public string shaderName; // 0x10
 		public string[] shaderKeywords; // 0x18
+		[UsdNamespace("floats")]
 		public Dictionary<string, float> floatArgs; // 0x20
+		[UsdNamespace("colors")]
 		public Dictionary<string, UnityEngine.Color> colorArgs; // 0x28
+		[UsdNamespace("vectors")]
 		public Dictionary<string, Vector4> vectorArgs; // 0x30
 	
 		// Constructors
-		public UnityMaterialData() {} // 0x000000018BCB0A40-0x000000018BCB0B4C
+		public UnityMaterialData(); // 0x000000018B191B64-0x000000018B191C70
 	}
 
-	public class UnityPreviewSurfaceSample : PreviewSurfaceSample // TypeDefIndex: 57629
+	public class UnityPreviewSurfaceSample : PreviewSurfaceSample // TypeDefIndex: 60138
 	{
 		// Fields
+		[UsdNamespace("unity")]
 		public UnityMaterialData unity; // 0x90
 	
 		// Constructors
-		public UnityPreviewSurfaceSample() {} // 0x000000018BCB0B4C-0x000000018BCB0BC0
+		public UnityPreviewSurfaceSample(); // 0x000000018B191C70-0x000000018B191CE4
 	}
 
-	public class UrpShaderImporter : ShaderImporterBase // TypeDefIndex: 57630
+	public class UrpShaderImporter : ShaderImporterBase // TypeDefIndex: 60139
 	{
 		// Constructors
-		public UrpShaderImporter() {} // Dummy constructor
-		public UrpShaderImporter(Material material) {} // 0x0000000184096E30-0x0000000184096EF0
+		public UrpShaderImporter(Material material); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		public override void ImportFromUsd() {} // 0x000000018BCB0BC0-0x000000018BCB1334
+		public override void ImportFromUsd(); // 0x000000018B191CE4-0x000000018B192458
 	}
 
-	public struct ReadAllJob<T> : IEnumerator<SampleEnumerator<T>>, IEnumerable<SampleEnumerator<T>>, IJobParallelFor // TypeDefIndex: 57631
+	public struct ReadAllJob<T> : IEnumerator<SampleEnumerator<T>>, IEnumerable<SampleEnumerator<T>>, IJobParallelFor // TypeDefIndex: 60140
 		where T : SampleBase, ISanitizable, new()
 	{
 		// Fields
@@ -780,27 +842,25 @@ namespace Unity.Formats.USD
 		private static SceneImportOptions m_importOptions;
 	
 		// Properties
-		public SampleEnumerator<T> Current { get => default; }
-		object IEnumerator.Current { get => default; }
+		public SampleEnumerator<T> Current { get; }
+		object IEnumerator.Current { get; }
 	
 		// Constructors
-		public ReadAllJob(Scene scene, SdfPath[] paths, SceneImportOptions importOptions) : this() {
-	
-		}
+		public ReadAllJob(Scene scene, SdfPath[] paths, SceneImportOptions importOptions);
 	
 		// Methods
-		private bool ShouldReadPath(Scene scene, SdfPath path) => default;
-		public void Run() {}
-		public void Execute(int index) {}
-		private static void AddPrimvarsFromMaterial(int index, ref IArbitraryPrimvars sample) {}
-		public bool MoveNext() => default;
-		public void Reset() {}
-		public void Dispose() {}
-		public IEnumerator<SampleEnumerator<T>> GetEnumerator() => default;
-		IEnumerator IEnumerable.GetEnumerator() => default;
+		private bool ShouldReadPath(Scene scene, SdfPath path);
+		public void Run();
+		public void Execute(int index);
+		private static void AddPrimvarsFromMaterial(int index, ref IArbitraryPrimvars sample);
+		public bool MoveNext();
+		public void Reset();
+		public void Dispose();
+		public IEnumerator<SampleEnumerator<T>> GetEnumerator();
+		IEnumerator IEnumerable.GetEnumerator();
 	}
 
-	public interface IRestorable // TypeDefIndex: 57632
+	public interface IRestorable // TypeDefIndex: 60141
 	{
 		// Methods
 		bool IsRestoredFromCachedData();
@@ -808,13 +868,13 @@ namespace Unity.Formats.USD
 		IRestorableData ToCachedData();
 	}
 
-	public interface ISanitizable // TypeDefIndex: 57633
+	public interface ISanitizable // TypeDefIndex: 60142
 	{
 		// Methods
 		void Sanitize(Scene scene, SceneImportOptions importOptions);
 	}
 
-	public class MeshStaticPropertiesData : IRestorableData // TypeDefIndex: 57634
+	public class MeshStaticPropertiesData : IRestorableData // TypeDefIndex: 60143
 	{
 		// Fields
 		internal int[] originalFaceVertexCounts; // 0x10
@@ -823,28 +883,28 @@ namespace Unity.Formats.USD
 		internal Orientation orientation; // 0x24
 	
 		// Constructors
-		public MeshStaticPropertiesData() {} // 0x0000000185492010-0x0000000185492020
+		public MeshStaticPropertiesData(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class SanitizedXformSample : XformSample, ISanitizable // TypeDefIndex: 57635
+	public class SanitizedXformSample : XformSample, ISanitizable // TypeDefIndex: 60144
 	{
 		// Constructors
-		public SanitizedXformSample() {} // 0x000000018BC9E98C-0x000000018BC9E994
+		public SanitizedXformSample(); // 0x000000018B18072C-0x000000018B180734
 	
 		// Methods
-		public void Sanitize(Scene scene, SceneImportOptions importOptions) {} // 0x000000018BC9E964-0x000000018BC9E98C
+		public void Sanitize(Scene scene, SceneImportOptions importOptions); // 0x000000018B180704-0x000000018B18072C
 	}
 
-	public class SanitizedCameraSample : CameraSample, ISanitizable // TypeDefIndex: 57636
+	public class SanitizedCameraSample : CameraSample, ISanitizable // TypeDefIndex: 60145
 	{
 		// Constructors
-		public SanitizedCameraSample() {} // 0x000000018BC9E98C-0x000000018BC9E994
+		public SanitizedCameraSample(); // 0x000000018B18072C-0x000000018B180734
 	
 		// Methods
-		public void Sanitize(Scene scene, SceneImportOptions importOptions) {} // 0x000000018BC9E964-0x000000018BC9E98C
+		public void Sanitize(Scene scene, SceneImportOptions importOptions); // 0x000000018B180704-0x000000018B18072C
 	}
 
-	public class SanitizedMeshSample : MeshSample, ISanitizable, IRestorable // TypeDefIndex: 57637
+	public class SanitizedMeshSample : MeshSample, ISanitizable, IRestorable // TypeDefIndex: 60146
 	{
 		// Fields
 		internal int[] originalFaceVertexCounts; // 0xC0
@@ -855,44 +915,44 @@ namespace Unity.Formats.USD
 		private bool isRestoredFromCachedData; // 0xE8
 	
 		// Constructors
-		public SanitizedMeshSample() {} // 0x000000018BCA08C0-0x000000018BCA08C8
+		public SanitizedMeshSample(); // 0x000000018B182660-0x000000018B182668
 	
 		// Methods
-		public bool IsRestoredFromCachedData() => default; // 0x0000000185FB67C0-0x0000000185FB67D0
-		public void FromCachedData(IRestorableData restorableData) {} // 0x000000018BC9F114-0x000000018BC9F1C0
-		public IRestorableData ToCachedData() => default; // 0x000000018BCA001C-0x000000018BCA00A4
-		public void BackupTopology() {} // 0x000000018BC9EB08-0x000000018BC9EC10
-		public bool IsTopologyBackedUp() => default; // 0x000000018BC9F4B8-0x000000018BC9F4D4
-		public void Sanitize(Scene scene, SceneImportOptions importOptions) {} // 0x000000018BC9F4D4-0x000000018BC9FE40
-		internal void Triangulate(bool changeHandedness) {} // 0x000000018BCA00A4-0x000000018BCA0508
-		internal bool ShouldUnweldVertices(bool bindMaterials) => default; // 0x000000018BC9FE40-0x000000018BCA0004
-		internal bool AreAnyArbitraryPrimvarsFaceVarying() => default; // 0x000000018BC9E994-0x000000018BC9EB08
-		internal static void Flatten<T>(ref ref T[] values, int[] indices) {}
-		private void UnweldPrimvar(Primvar<object> primvar, bool changeHandedness) {} // 0x000000018BCA0508-0x000000018BCA08C0
-		private static void FlattenPrimvar(Primvar<object> primvar) {} // 0x000000018BC9EF10-0x000000018BC9F114
-		internal static void TriangulateAttributes<T>(ref ref T[] values, int[] faceVertexCounts, bool changeHandedness) {}
-		private void ConvertInterpolationToFaceVarying<T>(ref ref T[] values, int[] vertexIndices, bool changeHandedness = false /* Metadata: 0x0207D9F7 */, TfToken interpolation = null) {}
-		internal TfToken GuessInterpolation(int count) => default; // 0x000000018BC9F1C0-0x000000018BC9F318
-		internal bool IsInterpolationValid(TfToken interpolation, int count) => default; // 0x000000018BC9F318-0x000000018BC9F4B8
-		internal void UniformToFaceVarying<T>(ref ref T[] values, int vertexCount) {}
-		private static void ComputeNormals(Vector3[] points, int[] faceVertexIndices, ref Vector3[] normals) {} // 0x000000018BC9EC10-0x000000018BC9EF10
-		internal bool ShouldUnwindVertices(bool changeHandedness) => default; // 0x000000018BCA0004-0x000000018BCA001C
+		public bool IsRestoredFromCachedData(); // 0x0000000184D8C8C0-0x0000000184D8C8D0
+		public void FromCachedData(IRestorableData restorableData); // 0x000000018B180EB4-0x000000018B180F60
+		public IRestorableData ToCachedData(); // 0x000000018B181DBC-0x000000018B181E44
+		public void BackupTopology(); // 0x000000018B1808A8-0x000000018B1809B0
+		public bool IsTopologyBackedUp(); // 0x000000018B181258-0x000000018B181274
+		public void Sanitize(Scene scene, SceneImportOptions importOptions); // 0x000000018B181274-0x000000018B181BE0
+		internal void Triangulate(bool changeHandedness); // 0x000000018B181E44-0x000000018B1822A8
+		internal bool ShouldUnweldVertices(bool bindMaterials); // 0x000000018B181BE0-0x000000018B181DA4
+		internal bool AreAnyArbitraryPrimvarsFaceVarying(); // 0x000000018B180734-0x000000018B1808A8
+		internal static void Flatten<T>(ref ref T[] values, int[] indices);
+		private void UnweldPrimvar(Primvar<object> primvar, bool changeHandedness); // 0x000000018B1822A8-0x000000018B182660
+		private static void FlattenPrimvar(Primvar<object> primvar); // 0x000000018B180CB0-0x000000018B180EB4
+		internal static void TriangulateAttributes<T>(ref ref T[] values, int[] faceVertexCounts, bool changeHandedness);
+		private void ConvertInterpolationToFaceVarying<T>(ref ref T[] values, int[] vertexIndices, bool changeHandedness = false /* Metadata: 0x0234D29F */, TfToken interpolation = null);
+		internal TfToken GuessInterpolation(int count); // 0x000000018B180F60-0x000000018B1810B8
+		internal bool IsInterpolationValid(TfToken interpolation, int count); // 0x000000018B1810B8-0x000000018B181258
+		internal void UniformToFaceVarying<T>(ref ref T[] values, int vertexCount);
+		private static void ComputeNormals(Vector3[] points, int[] faceVertexIndices, ref Vector3[] normals); // 0x000000018B1809B0-0x000000018B180CB0
+		internal bool ShouldUnwindVertices(bool changeHandedness); // 0x000000018B181DA4-0x000000018B181DBC
 	}
 
-	public static class ExportHelpers // TypeDefIndex: 57638
+	public static class ExportHelpers // TypeDefIndex: 60147
 	{
 		// Methods
-		public static Scene InitForSave(string filePath) => default; // 0x000000018BC98B10-0x000000018BC98C68
-		public static void ExportGameObjects(GameObject[] objects, Scene scene, BasisTransformation basisTransform, bool exportMonoBehaviours = false /* Metadata: 0x0207D9F8 */) {} // 0x000000018BC988A0-0x000000018BC98B10
+		public static Scene InitForSave(string filePath); // 0x000000018B17AB80-0x000000018B17ACD8
+		public static void ExportGameObjects(GameObject[] objects, Scene scene, BasisTransformation basisTransform, bool exportMonoBehaviours = false /* Metadata: 0x0234D2A0 */); // 0x000000018B17A910-0x000000018B17AB80
 	}
 
-	public static class HierarchyBuilder // TypeDefIndex: 57645
+	public static class HierarchyBuilder // TypeDefIndex: 60154
 	{
 		// Fields
 		private static readonly SdfPath kAbsoluteRootPath; // 0x00
 	
 		// Nested types
-		private struct HierInfo // TypeDefIndex: 57639
+		private struct HierInfo // TypeDefIndex: 60148
 		{
 			// Fields
 			public bool isVisible; // 0x00
@@ -908,7 +968,7 @@ namespace Unity.Formats.USD
 			public string modelVersion; // 0x30
 		}
 	
-		private struct ReadHierJob : IJobParallelFor // TypeDefIndex: 57640
+		private struct ReadHierJob : IJobParallelFor // TypeDefIndex: 60149
 		{
 			// Fields
 			public static HierInfo[] result; // 0x00
@@ -917,11 +977,11 @@ namespace Unity.Formats.USD
 			public static SdfPath[] paths; // 0x18
 	
 			// Methods
-			public void Run() {} // 0x000000018BC992C4-0x000000018BC99C9C
-			public void Execute(int index) {} // 0x000000018BC9AB84-0x000000018BC9AD18
+			public void Run(); // 0x000000018B180698-0x000000018B180704
+			public void Execute(int index); // 0x000000018B1804AC-0x000000018B180698
 		}
 	
-		private struct FindPathsJob : IJobParallelFor // TypeDefIndex: 57643
+		private struct FindPathsJob : IJobParallelFor // TypeDefIndex: 60152
 		{
 			// Fields
 			public static SdfPath usdRoot; // 0x00
@@ -930,26 +990,27 @@ namespace Unity.Formats.USD
 			public static IQuery[] queries; // 0x18
 	
 			// Nested types
-			public interface IQuery // TypeDefIndex: 57641
+			public interface IQuery // TypeDefIndex: 60150
 			{
 				// Methods
-				SdfPath[] Find(Scene scene, SdfPath usdRoot); // 0x000000018BC99C9C-0x000000018BC9AB84
+				SdfPath[] Find(Scene scene, SdfPath usdRoot);
 			}
 	
-			public struct Query<T> : IQuery // TypeDefIndex: 57642
+			public struct Query<T> : IQuery // TypeDefIndex: 60151
 				where T : SampleBase, new()
 			{
 				// Methods
-				public SdfPath[] Find(Scene scene, SdfPath usdRoot) => default; // 0x000000018BC9B650-0x000000018BC9B798
+				public SdfPath[] Find(Scene scene, SdfPath usdRoot);
 			}
 	
 			// Methods
-			public void Run() {} // 0x000000018BC99234-0x000000018BC992C4
-			public void Execute(int index) {} // 0x000000018BC9AD18-0x000000018BC9B064
+			public void Run(); // 0x000000018B17AE58-0x000000018B17AEC4
+			public void Execute(int index); // 0x000000018B17AD50-0x000000018B17AE58
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 57644
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 60153
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -957,83 +1018,91 @@ namespace Unity.Formats.USD
 			public static Func<SdfPath[], IEnumerable<SdfPath>> __9__4_1; // 0x10
 	
 			// Constructors
-			static __c() {} // 0x000000018BC9BA1C-0x000000018BC9BFB8
-			public __c() {} // 0x000000018BC9B798-0x000000018BC9BA1C
+			static __c(); // 0x000000018B191A9C-0x000000018B191B00
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _BeginReading_b__4_0(SdfPath[] i) => default; // 0x000000018BC9C2B0-0x000000018BC9C8D0
-			internal IEnumerable<SdfPath> _BeginReading_b__4_1(SdfPath[] i) => default; // 0x000000018BC9B064-0x000000018BC9B3B0
+			internal bool _BeginReading_b__4_0(SdfPath[] i); // 0x000000018721682C-0x0000000187216834
+			internal IEnumerable<SdfPath> _BeginReading_b__4_1(SdfPath[] i); // 0x0000000184D88C30-0x0000000184D88C40
 		}
 	
 		// Constructors
-		static HierarchyBuilder() {} // 0x00000001834A4750-0x00000001834A4760
+		static HierarchyBuilder(); // 0x000000018B17E758-0x000000018B17E7A8
 	
 		// Methods
-		private static JobHandle BeginReading(Scene scene, SdfPath usdRoot, PrimMap map, SceneImportOptions options) => default; // 0x000000018BC9BFB8-0x000000018BC9C2B0
-		private static HierInfo[] BuildObjectLists(Scene scene, GameObject unityRoot, SdfPath usdRoot, PrimMap map, SceneImportOptions options) => default; // 0x000000018BC98DFC-0x000000018BC9900C
-		public static PrimMap BuildGameObjects(Scene scene, GameObject unityRoot, SdfPath usdRoot, IEnumerable<SdfPath> paths, PrimMap map, SceneImportOptions options) => default; // 0x000000018BC9900C-0x000000018BC99104
-		private static bool IsVisible(UsdPrim usdPrim) => default; // 0x000000018BC99104-0x000000018BC99234
-		private static void ApplySelfVisibility(GameObject go, UsdPrim usdPrim) {} // 0x000000018BC9B3B0-0x000000018BC9B650
-		private static void CreateAncestors(SdfPath path, PrimMap map, GameObject unityRoot, SdfPath usdRoot, SceneImportOptions options, out GameObject parentGo) {
-			parentGo = default;
-		} // 0x000000018BC9C8D0-0x000000018BC9C920
-		private static void ProcessPaths(HierInfo[] infos, Scene scene, GameObject unityRoot, SdfPath usdRoot, PrimMap map, SceneImportOptions options) {} // 0x000000018BC9E8F8-0x000000018BC9E964
-		private static void PopulateSkelCache(ref HierInfo skelRootInfo, UsdSkelCache skelCache) {} // 0x000000018BC9E70C-0x000000018BC9E8F8
-		private static void ReadSkeletonJoints(ref HierInfo skelRootInfo) {} // 0x000000018BC98D90-0x000000018BC98DFC
-		private static void ExpandSkeleton(HierInfo info, GameObject unityRoot, SdfPath usdRoot, UsdPrim prim, PrimMap map, SceneImportOptions options) {} // 0x000000018BC98CE0-0x000000018BC98D90
-		private static void ReadModelInfo(ref HierInfo info) {}
-		private static void AddModelRoot(GameObject go, HierInfo info) {}
-		private static void AddPayload(GameObject go, HierInfo info, SceneImportOptions options) {} // 0x000000018BCB0978-0x000000018BCB09DC
-		private static void AddVariantSet(GameObject go, UsdPrim prim) {} // 0x0000000185492010-0x0000000185492020
-		private static GameObject FindOrCreateGameObject(Transform parent, SdfPath path, Transform unityRoot, PrimMap primMap, SceneImportOptions options) => default; // 0x0000000182F7A4D0-0x0000000182F7A4E0
+		private static JobHandle BeginReading(Scene scene, SdfPath usdRoot, PrimMap map, SceneImportOptions options); // 0x000000018B17B38C-0x000000018B17BD64
+		private static HierInfo[] BuildObjectLists(Scene scene, GameObject unityRoot, SdfPath usdRoot, PrimMap map, SceneImportOptions options); // 0x000000018B17CAAC-0x000000018B17CC40
+		public static PrimMap BuildGameObjects(Scene scene, GameObject unityRoot, SdfPath usdRoot, IEnumerable<SdfPath> paths, PrimMap map, SceneImportOptions options); // 0x000000018B17BD64-0x000000018B17CAAC
+		private static bool IsVisible(UsdPrim usdPrim); // 0x000000018B17D578-0x000000018B17D6C0
+		private static void ApplySelfVisibility(GameObject go, UsdPrim usdPrim); // 0x000000018B17B2FC-0x000000018B17B38C
+		private static void CreateAncestors(SdfPath path, PrimMap map, GameObject unityRoot, SdfPath usdRoot, SceneImportOptions options, out GameObject parentGo); // 0x000000018B17CC40-0x000000018B17CF8C
+		private static void ProcessPaths(HierInfo[] infos, Scene scene, GameObject unityRoot, SdfPath usdRoot, PrimMap map, SceneImportOptions options); // 0x000000018B17D944-0x000000018B17DEE0
+		private static void PopulateSkelCache(ref HierInfo skelRootInfo, UsdSkelCache skelCache); // 0x000000018B17D6C0-0x000000018B17D944
+		private static void ReadSkeletonJoints(ref HierInfo skelRootInfo); // 0x000000018B17E1D8-0x000000018B17E758
+		private static void ExpandSkeleton(HierInfo info, GameObject unityRoot, SdfPath usdRoot, UsdPrim prim, PrimMap map, SceneImportOptions options); // 0x000000018B17CF8C-0x000000018B17D2D8
+		private static void ReadModelInfo(ref HierInfo info); // 0x000000018B17DEE0-0x000000018B17E1D8
+		private static void AddModelRoot(GameObject go, HierInfo info); // 0x000000018B17AEC4-0x000000018B17B0D4
+		private static void AddPayload(GameObject go, HierInfo info, SceneImportOptions options); // 0x000000018B17B0D4-0x000000018B17B1CC
+		private static void AddVariantSet(GameObject go, UsdPrim prim); // 0x000000018B17B1CC-0x000000018B17B2FC
+		private static GameObject FindOrCreateGameObject(Transform parent, SdfPath path, Transform unityRoot, PrimMap primMap, SceneImportOptions options); // 0x000000018B17D2D8-0x000000018B17D578
 	}
 
-	public static class ImportHelpers // TypeDefIndex: 57646
+	public static class ImportHelpers // TypeDefIndex: 60155
 	{
 		// Methods
-		public static GameObject ImportSceneAsGameObject(Scene scene, GameObject parent = null, SceneImportOptions importOptions = null) => default; // 0x000000018BC9CBF8-0x000000018BC9CE60
-		public static Scene InitForOpen(string path = "" /* Metadata: 0x0207D9F9 */, UsdStage.InitialLoadSet loadSet = UsdStage.InitialLoadSet.LoadNone /* Metadata: 0x0207D9FA */) => default; // 0x000000018BC9CE60-0x000000018BC9CED4
-		private static SdfPath GetDefaultRoot(Scene scene) => default; // 0x000000018BC9CA28-0x000000018BC9CADC
-		private static GameObject UsdToGameObject(GameObject parent, Scene scene, SceneImportOptions importOptions) => default; // 0x000000018BC9CED4-0x000000018BC9D0D4
-		private static string GetObjectName(SdfPath rootPrimName, string path) => default; // 0x000000018BC9CADC-0x000000018BC9CB64
-		private static string GetObjectName(string path) => default; // 0x000000018BC9CB64-0x000000018BC9CBB0
-		private static string GetPrefabName(string path) => default; // 0x000000018BC9CBB0-0x000000018BC9CBF8
+		public static GameObject ImportSceneAsGameObject(Scene scene, GameObject parent = null, SceneImportOptions importOptions = null); // 0x000000018B17EA80-0x000000018B17ECE8
+		public static Scene InitForOpen(string path = "" /* Metadata: 0x0234D2A1 */, UsdStage.InitialLoadSet loadSet = UsdStage.InitialLoadSet.LoadNone /* Metadata: 0x0234D2A2 */); // 0x000000018B17ECE8-0x000000018B17ED5C
+		private static SdfPath GetDefaultRoot(Scene scene); // 0x000000018B17E8B0-0x000000018B17E964
+		private static GameObject UsdToGameObject(GameObject parent, Scene scene, SceneImportOptions importOptions); // 0x000000018B17ED5C-0x000000018B17EE74
+		private static string GetObjectName(SdfPath rootPrimName, string path); // 0x000000018B17E964-0x000000018B17E9EC
+		private static string GetObjectName(string path); // 0x000000018B17E9EC-0x000000018B17EA38
+		private static string GetPrefabName(string path); // 0x000000018B17EA38-0x000000018B17EA80
 	}
 
-	public interface IImportProcessUsd // TypeDefIndex: 57647
+	public interface IImportProcessUsd // TypeDefIndex: 60156
 	{
 		// Methods
 		void ProcessUsd(Scene scene, SceneImportOptions sceneImportOptions);
 	}
 
-	public interface IImportPostProcessHierarchy // TypeDefIndex: 57648
+	public interface IImportPostProcessHierarchy // TypeDefIndex: 60157
 	{
 		// Methods
 		void PostProcessHierarchy(PrimMap primMap, SceneImportOptions sceneImportOptions);
 	}
 
-	public interface IImportPostProcessComponents // TypeDefIndex: 57649
+	public interface IImportPostProcessComponents // TypeDefIndex: 60158
 	{
 		// Methods
 		void PostProcessComponents(PrimMap primMap, SceneImportOptions sceneImportOptions);
 	}
 
-	public class PrimMap : IEnumerable<KeyValuePair<SdfPath, GameObject>> // TypeDefIndex: 57651
+	public class PrimMap : IEnumerable<KeyValuePair<SdfPath, GameObject>> // TypeDefIndex: 60160
 	{
 		// Fields
 		public UsdSkelCache SkelCache; // 0x10
 		public Dictionary<SdfPath, UsdSkelBindingVector> SkelBindings; // 0x18
 		public Dictionary<SdfPath, UsdSkelSkinningQuery> SkinningQueries; // 0x20
 		public Dictionary<SdfPath, MeshImporter.GeometrySubsets> MeshSubsets; // 0x28
+		[CompilerGenerated]
 		private SdfPath[] _Cameras_k__BackingField; // 0x30
+		[CompilerGenerated]
 		private SdfPath[] _Meshes_k__BackingField; // 0x38
+		[CompilerGenerated]
 		private SdfPath[] _Cubes_k__BackingField; // 0x40
+		[CompilerGenerated]
 		private SdfPath[] _Spheres_k__BackingField; // 0x48
+		[CompilerGenerated]
 		private SdfPath[] _Xforms_k__BackingField; // 0x50
+		[CompilerGenerated]
 		private SdfPath[] _SkelRoots_k__BackingField; // 0x58
+		[CompilerGenerated]
 		private SdfPath[] _Skeletons_k__BackingField; // 0x60
+		[CompilerGenerated]
 		private SdfPath[] _Materials_k__BackingField; // 0x68
+		[CompilerGenerated]
 		private bool _ContainsPointInstances_k__BackingField; // 0x70
+		[CompilerGenerated]
 		private bool _HasErrors_k__BackingField; // 0x71
 		private Dictionary<SdfPath, GameObject> m_prims; // 0x78
 		private Dictionary<SdfPath, InstanceRoot> m_instanceRoots; // 0x80
@@ -1041,20 +1110,20 @@ namespace Unity.Formats.USD
 		private Dictionary<SdfPath, GameObject> m_masterRoots; // 0x90
 	
 		// Properties
-		public SdfPath[] Cameras { get; set; } // 0x00000001813B51D0-0x00000001813B51E0 0x00000001864721F0-0x0000000186472200
-		public SdfPath[] Meshes { get; set; } // 0x00000001813ECBC0-0x00000001813ECBD0 0x0000000185A16440-0x0000000185A16450
-		public SdfPath[] Cubes { get; set; } // 0x00000001813FF010-0x00000001813FF020 0x0000000185F05C80-0x0000000185F05C90
-		public SdfPath[] Spheres { get; set; } // 0x00000001813ECF20-0x00000001813ECF30 0x000000018571FEC0-0x000000018571FED0
-		public SdfPath[] Xforms { get; set; } // 0x0000000181460F60-0x0000000181460F70 0x0000000184A4E570-0x0000000184A4E580
-		public SdfPath[] SkelRoots { get; set; } // 0x00000001813F1630-0x00000001813F1640 0x0000000186472DB0-0x0000000186472DC0
-		public SdfPath[] Skeletons { get; set; } // 0x0000000185FB0530-0x0000000185FB0540 0x0000000185AE8FE0-0x0000000185AE8FF0
-		public SdfPath[] Materials { get; set; } // 0x00000001813AC280-0x00000001813AC290 0x0000000185A62990-0x0000000185A629A0
-		public bool ContainsPointInstances { get; set; } // 0x0000000185FB0950-0x0000000185FB0960 0x0000000185FB0970-0x0000000185FB0980
-		public bool HasErrors { get; set; } // 0x0000000185FB3060-0x0000000185FB3070 0x0000000185FB3070-0x0000000185FB3080
-		public GameObject this[SdfPath path] { get => default; set {} } // 0x000000018BC9E5BC-0x000000018BC9E6A8 0x000000018BC9E6A8-0x000000018BC9E70C
+		public SdfPath[] Cameras { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
+		public SdfPath[] Meshes { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D85A50-0x0000000184D85A60 0x00000001846A91B0-0x00000001846A91C0
+		public SdfPath[] Cubes { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001842B4AE0-0x00000001842B4AF0
+		public SdfPath[] Spheres { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
+		public SdfPath[] Xforms { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
+		public SdfPath[] SkelRoots { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182E56440-0x0000000182E56460 0x00000001836E5590-0x00000001836E55A0
+		public SdfPath[] Skeletons { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86280-0x0000000184D86290 0x00000001863CC164-0x00000001863CC174
+		public SdfPath[] Materials { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86230-0x0000000184D86240 0x000000018485F170-0x000000018485F180
+		public bool ContainsPointInstances { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86A50-0x0000000184D86A60 0x0000000184D86A80-0x0000000184D86A90
+		public bool HasErrors { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D89040-0x0000000184D89050 0x0000000184D89050-0x0000000184D89060
+		public GameObject this[SdfPath path] { get => default; set {} } // 0x000000018B18035C-0x000000018B180448 0x000000018B180448-0x000000018B1804AC
 	
 		// Nested types
-		public struct InstanceRoot // TypeDefIndex: 57650
+		public struct InstanceRoot // TypeDefIndex: 60159
 		{
 			// Fields
 			public GameObject gameObject; // 0x00
@@ -1062,29 +1131,26 @@ namespace Unity.Formats.USD
 		}
 	
 		// Constructors
-		public PrimMap() {} // 0x000000018BC9E3D0-0x000000018BC9E5BC
+		public PrimMap(); // 0x000000018B180170-0x000000018B18035C
 	
 		// Methods
-		public bool TryGetValue(SdfPath key, out GameObject obj) {
-			obj = default;
-			return default;
-		} // 0x000000018BC9E36C-0x000000018BC9E3D0
-		public IEnumerator GetEnumerator() => default; // 0x000000018BC9E1CC-0x000000018BC9E254
-		IEnumerator<KeyValuePair<SdfPath, GameObject>> IEnumerable<KeyValuePair<SdfPath, GameObject>>.GetEnumerator() => default; // 0x000000018BC9E2E4-0x000000018BC9E36C
-		public void AddInstance(GameObject goInst) {} // 0x000000018BC9DAF8-0x000000018BC9DB50
-		public void AddMasterRoot(SdfPath path, GameObject go) {} // 0x000000018BC9DB50-0x000000018BC9DBC8
-		public void AddInstanceRoot(SdfPath instancePath, GameObject go, SdfPath masterPath) {} // 0x000000018BC9DA4C-0x000000018BC9DAF8
-		public Dictionary<SdfPath, GameObject> GetMasterRootPaths() => default; // 0x000000018BC9E29C-0x000000018BC9E2E4
-		public Dictionary<SdfPath, InstanceRoot> GetInstanceRoots() => default; // 0x000000018BC9E254-0x000000018BC9E29C
-		public void DestroyAll() {} // 0x000000018BC9DCF4-0x000000018BC9E1CC
-		public void Clear() {} // 0x000000018BC9DBC8-0x000000018BC9DCF4
+		public bool TryGetValue(SdfPath key, out GameObject obj); // 0x000000018B18010C-0x000000018B180170
+		public IEnumerator GetEnumerator(); // 0x000000018B17FF6C-0x000000018B17FFF4
+		IEnumerator<KeyValuePair<SdfPath, GameObject>> IEnumerable<KeyValuePair<SdfPath, GameObject>>.GetEnumerator(); // 0x000000018B180084-0x000000018B18010C
+		public void AddInstance(GameObject goInst); // 0x000000018B17F898-0x000000018B17F8F0
+		public void AddMasterRoot(SdfPath path, GameObject go); // 0x000000018B17F8F0-0x000000018B17F968
+		public void AddInstanceRoot(SdfPath instancePath, GameObject go, SdfPath masterPath); // 0x000000018B17F7EC-0x000000018B17F898
+		public Dictionary<SdfPath, GameObject> GetMasterRootPaths(); // 0x000000018B18003C-0x000000018B180084
+		public Dictionary<SdfPath, InstanceRoot> GetInstanceRoots(); // 0x000000018B17FFF4-0x000000018B18003C
+		public void DestroyAll(); // 0x000000018B17FA94-0x000000018B17FF6C
+		public void Clear(); // 0x000000018B17F968-0x000000018B17FA94
 	}
 
-	public delegate void ExportFunction(ObjectContext objContext, ExportContext exportContext); // TypeDefIndex: 57652; 0x0000000188B09B4C-0x0000000188B09B7C
+	public delegate void ExportFunction(ObjectContext objContext, ExportContext exportContext); // TypeDefIndex: 60161; 0x0000000187D85524-0x0000000187D85554
 
-	internal delegate void ObjectProcessor(GameObject go, ExportContext context); // TypeDefIndex: 57653; 0x00000001831C5680-0x00000001831C5690
+	internal delegate void ObjectProcessor(GameObject go, ExportContext context); // TypeDefIndex: 60162; 0x00000001838E1420-0x00000001838E1430
 
-	public struct ObjectContext // TypeDefIndex: 57654
+	public struct ObjectContext // TypeDefIndex: 60163
 	{
 		// Fields
 		public GameObject gameObject; // 0x00
@@ -1093,7 +1159,7 @@ namespace Unity.Formats.USD
 		public object additionalData; // 0x18
 	}
 
-	public enum ActiveExportPolicy // TypeDefIndex: 57655
+	public enum ActiveExportPolicy // TypeDefIndex: 60164
 	{
 		ExportAsVisibility = 0,
 		ExportAsActive = 1,
@@ -1101,7 +1167,7 @@ namespace Unity.Formats.USD
 		Ignore = 3
 	}
 
-	public class ExportContext // TypeDefIndex: 57656
+	public class ExportContext // TypeDefIndex: 60165
 	{
 		// Fields
 		public Scene scene; // 0x10
@@ -1124,10 +1190,10 @@ namespace Unity.Formats.USD
 		public Stopwatch analyticsTotalTimeStopwatch; // 0x80
 	
 		// Constructors
-		public ExportContext() {} // 0x000000018BC98458-0x000000018BC98750
+		public ExportContext(); // 0x000000018B17A4C8-0x000000018B17A7C0
 	}
 
-	public class Exporter // TypeDefIndex: 57657
+	public class Exporter // TypeDefIndex: 60166
 	{
 		// Fields
 		public string path; // 0x10
@@ -1136,23 +1202,24 @@ namespace Unity.Formats.USD
 		public object data; // 0x28
 	
 		// Constructors
-		public Exporter() {} // 0x0000000185492010-0x0000000185492020
+		public Exporter(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class ExportPlan // TypeDefIndex: 57658
+	public class ExportPlan // TypeDefIndex: 60167
 	{
 		// Fields
 		public List<Exporter> exporters; // 0x10
 	
 		// Constructors
-		public ExportPlan() {} // 0x000000018BC98C68-0x000000018BC98CE0
+		public ExportPlan(); // 0x000000018B17ACD8-0x000000018B17AD50
 	}
 
-	public static class SceneExporter // TypeDefIndex: 57660
+	public static class SceneExporter // TypeDefIndex: 60169
 	{
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 57659
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 60168
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -1160,52 +1227,53 @@ namespace Unity.Formats.USD
 			public static Func<string, string> __9__8_1; // 0x10
 	
 			// Constructors
-			static __c() {} // 0x000000018BCA22D4-0x000000018BCA2444
-			public __c() {} // 0x000000018BCA1D40-0x000000018BCA22D4
+			static __c(); // 0x000000018B191B00-0x000000018B191B64
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal string _MergeBonesBelowAnimator_b__8_0(Transform boneXf) => default; // 0x000000018BCA1008-0x000000018BCA1D40
-			internal string _MergeBonesBelowAnimator_b__8_1(string str) => default; // 0x000000018BCA4EB0-0x000000018BCA5084
+			internal string _MergeBonesBelowAnimator_b__8_0(Transform boneXf); // 0x000000018B191A3C-0x000000018B191A88
+			internal string _MergeBonesBelowAnimator_b__8_1(string str); // 0x0000000184D88C30-0x0000000184D88C40
 		}
 	
 		// Methods
-		public static void Export(GameObject root, Scene scene, BasisTransformation basisTransform, bool exportUnvarying, bool zeroRootTransform, bool exportMaterials = false /* Metadata: 0x0207D9FF */, bool exportMonoBehaviours = false /* Metadata: 0x0207DA00 */, bool exportOverrides = false /* Metadata: 0x0207DA01 */) {} // 0x000000018BCA08C8-0x000000018BCA0AC0
-		public static void Export(GameObject root, ExportContext context, bool zeroRootTransform) {}
-		private static void ExportImpl(GameObject root, ExportContext context) {} // 0x000000018BCA3C80-0x000000018BCA4EB0
-		private static void Traverse(GameObject obj, ObjectProcessor processor, ExportContext context) {} // 0x000000018BCA2444-0x000000018BCA2E6C
-		private static void AccumNestedBones(Transform curXf, List<Transform> children, ExportContext ctx) {} // 0x000000018BCA2E6C-0x000000018BCA3830
+		public static void Export(GameObject root, Scene scene, BasisTransformation basisTransform, bool exportUnvarying, bool zeroRootTransform, bool exportMaterials = false /* Metadata: 0x0234D2A7 */, bool exportMonoBehaviours = false /* Metadata: 0x0234D2A8 */, bool exportOverrides = false /* Metadata: 0x0234D2A9 */); // 0x000000018B183ED4-0x000000018B184044
+		public static void Export(GameObject root, ExportContext context, bool zeroRootTransform); // 0x000000018B183940-0x000000018B183ED4
+		private static void ExportImpl(GameObject root, ExportContext context); // 0x000000018B182DA8-0x000000018B183940
+		private static void Traverse(GameObject obj, ObjectProcessor processor, ExportContext context); // 0x000000018B186354-0x000000018B186528
+		private static void AccumNestedBones(Transform curXf, List<Transform> children, ExportContext ctx); // 0x000000018B182668-0x000000018B182860
 		private static T CreateSample<T>(ExportContext context)
-			where T : SampleBase, new() => default; // 0x000000018BCA3830-0x000000018BCA3C80
-		public static void SyncExportContext(GameObject exportRoot, ExportContext context) {} // 0x000000018BCA0C38-0x000000018BCA1008
-		private static void InitExportableObjects(GameObject go, ExportContext context) {} // 0x000000018BCA0AC0-0x000000018BCA0C38
-		private static Transform MergeBonesBelowAnimator(Transform animator, ExportContext context) => default; // 0x000000018BCB09DC-0x000000018BCB0A40
-		private static void MergeBonesSimple(Transform source, Transform rootBone, Transform[] bones, Matrix4x4[] bindPoses, ExportContext context) {} // 0x0000000185492010-0x0000000185492020
-		private static void CreateExportPlan(GameObject go, SampleBase sample, ExportFunction exportFunc, ExportContext context, string pathSuffix = null, bool insertFirst = true /* Metadata: 0x0207DA02 */) {} // 0x000000018BCB092C-0x000000018BCB0978
-		private static Matrix4x4 ComputeWorldXf(Transform curBone, ExportContext context) => default; // 0x00000001834A4750-0x00000001834A4760
+			where T : SampleBase, new();
+		public static void SyncExportContext(GameObject exportRoot, ExportContext context); // 0x000000018B185658-0x000000018B186354
+		private static void InitExportableObjects(GameObject go, ExportContext context); // 0x000000018B184044-0x000000018B184A6C
+		private static Transform MergeBonesBelowAnimator(Transform animator, ExportContext context); // 0x000000018B184A6C-0x000000018B185208
+		private static void MergeBonesSimple(Transform source, Transform rootBone, Transform[] bones, Matrix4x4[] bindPoses, ExportContext context); // 0x000000018B185208-0x000000018B185658
+		private static void CreateExportPlan(GameObject go, SampleBase sample, ExportFunction exportFunc, ExportContext context, string pathSuffix = null, bool insertFirst = true /* Metadata: 0x0234D2AA */); // 0x000000018B1829D8-0x000000018B182DA8
+		private static Matrix4x4 ComputeWorldXf(Transform curBone, ExportContext context); // 0x000000018B182860-0x000000018B1829D8
 	}
 
-	public interface IImporter // TypeDefIndex: 57661
+	public interface IImporter // TypeDefIndex: 60170
 	{
 		// Methods
 		void BeginReading(Scene scene, PrimMap primMap, SceneImportOptions importOptions);
 		IEnumerator Import(Scene scene, PrimMap primMap, SceneImportOptions importOptions);
 	}
 
-	public static class SceneImporter // TypeDefIndex: 57664
+	public static class SceneImporter // TypeDefIndex: 60173
 	{
 		// Fields
 		public static IImporter ActiveMeshImporter; // 0x00
 	
 		// Nested types
-		public class ImportException : Exception // TypeDefIndex: 57662
+		public class ImportException : Exception // TypeDefIndex: 60171
 		{
 			// Constructors
-			public ImportException() {} // 0x000000018BCA56B4-0x000000018BCA57C4
-			public ImportException(string message) {} // 0x000000018BCA52D4-0x000000018BCA5350
-			public ImportException(string message, Exception innerException) {} // 0x000000018BCA5350-0x000000018BCA5584
+			public ImportException(); // 0x000000018B17E7A8-0x000000018B17E7F4
+			public ImportException(string message); // 0x000000018B17E854-0x000000018B17E8B0
+			public ImportException(string message, Exception innerException); // 0x000000018B17E7F4-0x000000018B17E854
 		}
 	
-		private sealed class _BuildScene_d__8 : IEnumerator<object> // TypeDefIndex: 57663
+		[CompilerGenerated]
+		private sealed class _BuildScene_d__8 : IEnumerator<object> // TypeDefIndex: 60172
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1236,51 +1304,54 @@ namespace Unity.Formats.USD
 			private IEnumerator<SampleEnumerator<PointInstancerSample>> __7__wrap18; // 0x108
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018BCB0684-0x000000018BCB06D4 
-			object IEnumerator.Current { get => default; } // 0x000000018BCB0724-0x000000018BCB0774 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _BuildScene_d__8() {} // Dummy constructor
-			public _BuildScene_d__8(int __1__state) {} // 0x000000018BCA525C-0x000000018BCA52D4
+			[DebuggerHidden]
+			public _BuildScene_d__8(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018BCA5084-0x000000018BCA51A0
-			private bool MoveNext() => default;
-			private void __m__Finally1() {} // 0x000000018BCA51A0-0x000000018BCA525C
-			private void __m__Finally2() {} // 0x000000018BCA5678-0x000000018BCA56B4
-			private void __m__Finally3() {} // 0x000000018BCA5640-0x000000018BCA5678
-			private void __m__Finally4() {} // 0x000000018BCA5584-0x000000018BCA5640
-			private void __m__Finally5() {} // 0x000000018BC9C920-0x000000018BC9C96C
-			private void __m__Finally6() {} // 0x000000018BC9C9CC-0x000000018BC9CA28
-			private void __m__Finally7() {} // 0x000000018BC9C96C-0x000000018BC9C9CC
-			private void __m__Finally8() {} // 0x0000000181378230-0x0000000181378240
-			private void __m__Finally9() {} // 0x000000018BCB0168-0x000000018BCB0634
-			private void __m__Finally10() {} // 0x000000018BCA9BFC-0x000000018BCB011C
-			void IEnumerator.Reset() {} // 0x000000018BCB06D4-0x000000018BCB0724
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x000000018B191278-0x000000018B191744
+			private bool MoveNext(); // 0x000000018B18AD0C-0x000000018B19122C
+			private void __m__Finally1(); // 0x000000018B191794-0x000000018B1917E4
+			private void __m__Finally2(); // 0x000000018B1917E4-0x000000018B191834
+			private void __m__Finally3(); // 0x000000018B191834-0x000000018B191884
+			private void __m__Finally4(); // 0x000000018B191884-0x000000018B1918D4
+			private void __m__Finally5(); // 0x000000018B1918D4-0x000000018B191924
+			private void __m__Finally6(); // 0x000000018B191924-0x000000018B191974
+			private void __m__Finally7(); // 0x000000018B191974-0x000000018B1919C4
+			private void __m__Finally8(); // 0x000000018B1919C4-0x000000018B191A00
+			private void __m__Finally9(); // 0x000000018B191A00-0x000000018B191A3C
+			private void __m__Finally10(); // 0x000000018B191744-0x000000018B191794
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B19122C-0x000000018B191278
 		}
 	
 		// Constructors
-		static SceneImporter() {} // 0x000000018BCB0774-0x000000018BCB07C4
+		static SceneImporter(); // 0x000000018B186B58-0x000000018B186C68
 	
 		// Methods
-		public static void ImportUsd(GameObject goRoot, Scene scene, PrimMap primMap, SceneImportOptions importOptions) {} // 0x000000018BCB07C4-0x000000018BCB0814
-		public static void ImportUsd(GameObject goRoot, Scene scene, PrimMap primMap, bool composingSubtree, SceneImportOptions importOptions) {} // 0x000000018BCB0814-0x000000018BCB0864
-		private static UsdEditorAnalytics.ImportResult CreateImportResult(bool success, PrimMap primMap, ImportType importType = ImportType.Initial /* Metadata: 0x0207DA03 */) => default; // 0x000000018BCB0864-0x000000018BCB08B4
-		public static PrimMap BuildScene(Scene scene, GameObject root, SceneImportOptions importOptions, PrimMap primMap, bool composingSubtree) => default; // 0x000000018BCB08B4-0x000000018BCB08F0
-		private static void RemoveComponent<T>(GameObject go) {} // 0x000000018BCB08F0-0x000000018BCB092C
-		public static IEnumerator BuildScene(Scene scene, GameObject root, SceneImportOptions importOptions, PrimMap primMap, float targetFrameMilliseconds, bool composingSubtree) => default; // 0x000000018BCB0634-0x000000018BCB0684
-		private static bool ShouldYield(float targetTime, Stopwatch timer) => default; // 0x0000000181377E40-0x0000000181377E50
-		private static void ResetTimer(Stopwatch timer) {} // 0x000000018BCB011C-0x000000018BCB0168
-		private static bool IsSkinnedMesh(UsdPrim prim, PrimMap primMap, SceneImportOptions importOptions) => default; // 0x0000000181377E40-0x0000000181377E50
+		public static void ImportUsd(GameObject goRoot, Scene scene, PrimMap primMap, SceneImportOptions importOptions); // 0x000000018B186778-0x000000018B1867F4
+		public static void ImportUsd(GameObject goRoot, Scene scene, PrimMap primMap, bool composingSubtree, SceneImportOptions importOptions); // 0x000000018B1867F4-0x000000018B186A28
+		private static UsdEditorAnalytics.ImportResult CreateImportResult(bool success, PrimMap primMap, ImportType importType = ImportType.Initial /* Metadata: 0x0234D2AB */); // 0x000000018B186700-0x000000018B186778
+		public static PrimMap BuildScene(Scene scene, GameObject root, SceneImportOptions importOptions, PrimMap primMap, bool composingSubtree); // 0x000000018B186528-0x000000018B186644
+		private static void RemoveComponent<T>(GameObject go);
+		[IteratorStateMachine(typeof(_BuildScene_d__8))]
+		public static IEnumerator BuildScene(Scene scene, GameObject root, SceneImportOptions importOptions, PrimMap primMap, float targetFrameMilliseconds, bool composingSubtree); // 0x000000018B186644-0x000000018B186700
+		private static bool ShouldYield(float targetTime, Stopwatch timer); // 0x000000018B186B1C-0x000000018B186B58
+		private static void ResetTimer(Stopwatch timer); // 0x000000018B186AE4-0x000000018B186B1C
+		private static bool IsSkinnedMesh(UsdPrim prim, PrimMap primMap, SceneImportOptions importOptions); // 0x000000018B186A28-0x000000018B186AE4
 	}
 
-	public enum PayloadPolicy // TypeDefIndex: 57665
+	public enum PayloadPolicy // TypeDefIndex: 60174
 	{
 		DontLoadPayloads = 0,
 		LoadAll = 1
 	}
 
-	public enum BasisTransformation // TypeDefIndex: 57666
+	public enum BasisTransformation // TypeDefIndex: 60175
 	{
 		FastWithNegativeScale = 0,
 		SlowAndSafe = 1,
@@ -1289,7 +1360,7 @@ namespace Unity.Formats.USD
 	}
 
 	[Serializable]
-	public enum MaterialImportMode // TypeDefIndex: 57667
+	public enum MaterialImportMode // TypeDefIndex: 60176
 	{
 		ImportPreviewSurface = 0,
 		ImportDisplayColor = 1,
@@ -1297,7 +1368,7 @@ namespace Unity.Formats.USD
 	}
 
 	[Serializable]
-	public class SceneImportOptions // TypeDefIndex: 57668
+	public class SceneImportOptions // TypeDefIndex: 60177
 	{
 		// Fields
 		public string projectAssetPath; // 0x10
@@ -1322,202 +1393,232 @@ namespace Unity.Formats.USD
 		[NonSerialized]
 		public MaterialMap materialMap; // 0x48
 		public MeshImportOptions meshOptions; // 0x50
+		[CompilerGenerated]
 		private ImportType _ImportType_k__BackingField; // 0x58
 	
 		// Properties
-		public bool ShouldBindMaterials { get => default; } // 0x00000001878618DC-0x00000001878618E4 
-		public ImportType ImportType { get; set; } // 0x0000000183F80450-0x0000000183F80460 0x0000000183F804E0-0x0000000183F804F0
+		public bool ShouldBindMaterials { get; } // 0x000000018B192578-0x000000018B192580 
+		public ImportType ImportType { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86570-0x0000000184D86580 0x0000000184D865D0-0x0000000184D865E0
 	
 		// Constructors
-		public SceneImportOptions() {} // 0x000000018BCB1334-0x000000018BCB1454
+		public SceneImportOptions(); // 0x000000018B192458-0x000000018B192578
 	}
 
-	public class UsdzExporter // TypeDefIndex: 57669
+	public class UsdzExporter // TypeDefIndex: 60178
 	{
 		// Constructors
-		public UsdzExporter() {} // 0x0000000185492010-0x0000000185492020
+		public UsdzExporter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static void ExportUsdz(string usdzFilePath, GameObject root) {} // 0x000000018BCB65D8-0x000000018BCB6CE8
+		public static void ExportUsdz(string usdzFilePath, GameObject root); // 0x000000018B1975F0-0x000000018B197C14
 	}
 
-	public static class SkeletonExporter // TypeDefIndex: 57670
+	public static class SkeletonExporter // TypeDefIndex: 60179
 	{
 		// Methods
-		public static void ExportSkeleton(ObjectContext objContext, ExportContext exportContext) {} // 0x000000018BCB21B8-0x000000018BCB2B0C
-		public static void ExportSkelRoot(ObjectContext objContext, ExportContext exportContext) {} // 0x000000018BCB1D18-0x000000018BCB21B8
-		public static void ExportSkelAnimation(ObjectContext objContext, ExportContext exportContext) {} // 0x000000018BCB1620-0x000000018BCB1D18
+		public static void ExportSkeleton(ObjectContext objContext, ExportContext exportContext); // 0x000000018B1932E0-0x000000018B193B1C
+		public static void ExportSkelRoot(ObjectContext objContext, ExportContext exportContext); // 0x000000018B192E40-0x000000018B1932E0
+		public static void ExportSkelAnimation(ObjectContext objContext, ExportContext exportContext); // 0x000000018B19274C-0x000000018B192E40
 	}
 
-	public static class SkeletonImporter // TypeDefIndex: 57671
+	public static class SkeletonImporter // TypeDefIndex: 60180
 	{
 		// Methods
-		public static void BuildSkeletonBone(string skelPath, GameObject go, Matrix4x4 restXform, VtTokenArray joints, SceneImportOptions importOptions) {} // 0x000000018BCB34B8-0x000000018BCB3928
-		public static void BuildDebugBindTransforms(SkeletonSample skelSample, GameObject goSkeleton, SceneImportOptions options) {} // 0x000000018BCB2C18-0x000000018BCB34B8
-		public static void BuildBindTransforms(string path, SkeletonSample skelSample, SceneImportOptions options) {} // 0x000000018BCB2B0C-0x000000018BCB2C18
-		private static bool JointsMatch(string[] lhs, string[] rhs) => default; // 0x000000018BCB418C-0x000000018BCB4208
-		public static void BuildSkinnedMesh(string meshPath, string skelPath, SkeletonSample skeleton, UsdSkelSkinningQuery skinningQuery, GameObject go, PrimMap primMap, SceneImportOptions options) {} // 0x000000018BCB3928-0x000000018BCB418C
+		public static void BuildSkeletonBone(string skelPath, GameObject go, Matrix4x4 restXform, VtTokenArray joints, SceneImportOptions importOptions); // 0x000000018B1944C8-0x000000018B194938
+		public static void BuildDebugBindTransforms(SkeletonSample skelSample, GameObject goSkeleton, SceneImportOptions options); // 0x000000018B193C28-0x000000018B1944C8
+		public static void BuildBindTransforms(string path, SkeletonSample skelSample, SceneImportOptions options); // 0x000000018B193B1C-0x000000018B193C28
+		private static bool JointsMatch(string[] lhs, string[] rhs); // 0x000000018B1951A4-0x000000018B195220
+		public static void BuildSkinnedMesh(string meshPath, string skelPath, SkeletonSample skeleton, UsdSkelSkinningQuery skinningQuery, GameObject go, PrimMap primMap, SceneImportOptions options); // 0x000000018B194938-0x000000018B1951A4
 	}
 
-	public class UnitySkeleton // TypeDefIndex: 57672
+	public class UnitySkeleton // TypeDefIndex: 60181
 	{
 		// Fields
 		public Transform rootBone; // 0x10
 		public Transform[] bones; // 0x18
 	
 		// Constructors
-		public UnitySkeleton() {} // 0x0000000185492010-0x0000000185492020
+		public UnitySkeleton(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class SkelBindingSample : SampleBase // TypeDefIndex: 57673
+	public class SkelBindingSample : SampleBase // TypeDefIndex: 60182
 	{
 		// Fields
+		[UsdNamespace("skel")]
+		[UsdVariability(Variability.Uniform)]
 		public string[] blendShapes; // 0x10
+		[UsdNamespace("skel")]
 		public Relationship blendShapeTargets; // 0x18
+		[UsdNamespace("skel")]
 		public Relationship animationSource; // 0x20
+		[UsdNamespace("skel")]
 		public Relationship skeleton; // 0x28
+		[UsdNamespace("skel")]
+		[UsdVariability(Variability.Uniform)]
 		public string[] joints; // 0x30
+		[UsdNamespace("skel")]
+		[UsdVariability(Variability.Uniform)]
 		public Primvar<int[]> jointIndices; // 0x38
+		[UsdNamespace("skel")]
+		[UsdVariability(Variability.Uniform)]
 		public Primvar<Matrix4x4> geomBindTransform; // 0x40
+		[UsdNamespace("skel")]
+		[UsdVariability(Variability.Uniform)]
 		public Primvar<float[]> jointWeights; // 0x48
 	
 		// Constructors
-		public SkelBindingSample() {} // 0x000000018BCB1454-0x000000018BCB15A4
+		public SkelBindingSample(); // 0x000000018B192580-0x000000018B1926D0
 	}
 
 	[Serializable]
-	public class SkelRootSample : BoundableSample // TypeDefIndex: 57674
+	[UsdSchema("SkelRoot")]
+	public class SkelRootSample : BoundableSample // TypeDefIndex: 60183
 	{
 		// Fields
+		[UsdNamespace("skel")]
 		public Relationship skeleton; // 0x78
+		[UsdNamespace("skel")]
 		public Relationship animationSource; // 0x80
 	
 		// Constructors
-		public SkelRootSample() {} // 0x000000018BCB15A4-0x000000018BCB1620
+		public SkelRootSample(); // 0x000000018B1926D0-0x000000018B19274C
 	}
 
 	[Serializable]
-	public class SkeletonSample : XformableSample // TypeDefIndex: 57675
+	[UsdSchema("Skeleton")]
+	public class SkeletonSample : XformableSample // TypeDefIndex: 60184
 	{
 		// Fields
+		[UsdVariability(Variability.Uniform)]
 		public string[] joints; // 0x60
+		[UsdVariability(Variability.Uniform)]
 		public Matrix4x4[] bindTransforms; // 0x68
+		[UsdVariability(Variability.Uniform)]
 		public Matrix4x4[] restTransforms; // 0x70
 	
 		// Constructors
-		public SkeletonSample() {} // 0x000000018BC9E98C-0x000000018BC9E994
+		public SkeletonSample(); // 0x000000018B18072C-0x000000018B180734
 	}
 
 	[Serializable]
-	public class SkelAnimationSample : SampleBase // TypeDefIndex: 57676
+	[UsdSchema("SkelAnimation")]
+	public class SkelAnimationSample : SampleBase // TypeDefIndex: 60185
 	{
 		// Fields
+		[UsdVariability(Variability.Uniform)]
 		public string[] joints; // 0x10
 		public Vector3[] translations; // 0x18
 		public Quaternion[] rotations; // 0x20
 		public VtVec3hArray scales; // 0x28
+		[UsdVariability(Variability.Uniform)]
 		public string[] blendShapes; // 0x30
+		[UsdVariability(Variability.Uniform)]
 		public float[] blendShapeWeights; // 0x38
 	
 		// Constructors
-		public SkelAnimationSample() {} // 0x0000000185492010-0x0000000185492020
+		public SkelAnimationSample(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class BlendShapeSample : SampleBase // TypeDefIndex: 57677
+	[UsdSchema("BlendShape")]
+	public class BlendShapeSample : SampleBase // TypeDefIndex: 60186
 	{
 		// Fields
 		public Vector3[] offsets; // 0x10
 		public uint[] pointIndices; // 0x18
 	
 		// Constructors
-		public BlendShapeSample() {} // 0x0000000185492010-0x0000000185492020
+		public BlendShapeSample(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class SkeletonIo // TypeDefIndex: 57678
+	public class SkeletonIo // TypeDefIndex: 60187
 	{
 		// Fields
 		private Dictionary<Transform, Transform[]> m_bindings; // 0x10
 	
 		// Constructors
-		public SkeletonIo() {} // 0x000000018BCB42C0-0x000000018BCB4338
+		public SkeletonIo(); // 0x000000018B1952D8-0x000000018B195350
 	
 		// Methods
-		public Transform[] GetBones(Transform rootBone) => default; // 0x000000018BCB4208-0x000000018BCB425C
-		public void RegisterSkeleton(Transform rootBone, Transform[] bones) {} // 0x000000018BCB425C-0x000000018BCB42C0
+		public Transform[] GetBones(Transform rootBone); // 0x000000018B195220-0x000000018B195274
+		public void RegisterSkeleton(Transform rootBone, Transform[] bones); // 0x000000018B195274-0x000000018B1952D8
 	}
 
-	public class NativeExporter // TypeDefIndex: 57679
+	public class NativeExporter // TypeDefIndex: 60188
 	{
 		// Constructors
-		public NativeExporter() {} // 0x0000000185492010-0x0000000185492020
+		public NativeExporter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static void ExportObject(ObjectContext objContext, ExportContext exportContext) {} // 0x0000000185492010-0x0000000185492020
+		public static void ExportObject(ObjectContext objContext, ExportContext exportContext); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class NativeImporter // TypeDefIndex: 57680
+	public class NativeImporter // TypeDefIndex: 60189
 	{
 		// Constructors
-		public NativeImporter() {} // 0x0000000185492010-0x0000000185492020
+		public NativeImporter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static void ImportObject(Scene scene, GameObject go, UsdPrim usdPrim, SceneImportOptions options) {} // 0x0000000185492010-0x0000000185492020
+		public static void ImportObject(Scene scene, GameObject go, UsdPrim usdPrim, SceneImportOptions options); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class UsdPlayableAsset : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 57681
+	public class UsdPlayableAsset : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 60190
 	{
 		// Fields
 		private UsdAsset m_sourceUsdAsset; // 0x18
+		[Tooltip("USD Player to Control")]
 		public ExposedReference<UsdAsset> SourceUsdAsset; // 0x20
 	
 		// Properties
-		public ClipCaps clipCaps { get => default; } // 0x0000000185FB6D20-0x0000000185FB6D30 
-		public override double duration { get => default; } // 0x000000018BCB4868-0x000000018BCB49C0 
+		public ClipCaps clipCaps { get; } // 0x0000000184D8D050-0x0000000184D8D060 
+		public override double duration { get; } // 0x000000018B195880-0x000000018B1959D8 
 	
 		// Constructors
-		public UsdPlayableAsset() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public UsdPlayableAsset(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
-		public UsdAsset GetUsdAsset(string usdRootPath) => default; // 0x000000018BCB483C-0x000000018BCB4868
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x000000018BCB4670-0x000000018BCB483C
+		public UsdAsset GetUsdAsset(string usdRootPath); // 0x000000018B195854-0x000000018B195880
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner); // 0x000000018B195688-0x000000018B195854
 	}
 
-	public class UsdPlayableBehaviour : PlayableBehaviour // TypeDefIndex: 57682
+	public class UsdPlayableBehaviour : PlayableBehaviour // TypeDefIndex: 60191
 	{
 		// Fields
 		public UsdPlayableAsset playableAsset; // 0x10
 		private bool m_errorOnce; // 0x18
 	
 		// Constructors
-		public UsdPlayableBehaviour() {} // 0x0000000181B75280-0x0000000181B75290
+		public UsdPlayableBehaviour(); // 0x0000000184D8EB60-0x0000000184D8EB70
 	
 		// Methods
-		public override void OnGraphStart(Playable playable) {} // 0x000000018BCB49C0-0x000000018BCB49C8
-		public override void OnGraphStop(Playable playable) {} // 0x0000000185492010-0x0000000185492020
-		public override void OnBehaviourPlay(Playable playable, FrameData info) {} // 0x0000000185492010-0x0000000185492020
-		public override void OnBehaviourPause(Playable playable, FrameData info) {} // 0x0000000185492010-0x0000000185492020
-		public override void PrepareFrame(Playable playable, FrameData info) {} // 0x0000000185492010-0x0000000185492020
-		public override void ProcessFrame(Playable playable, FrameData info, object playerData) {} // 0x000000018BCB49C8-0x000000018BCB4B48
-		public override void PrepareData(Playable playable, FrameData info) {} // 0x0000000185492010-0x0000000185492020
+		public override void OnGraphStart(Playable playable); // 0x000000018B1959D8-0x000000018B1959E0
+		public override void OnGraphStop(Playable playable); // 0x00000001841E1670-0x00000001841E1680
+		public override void OnBehaviourPlay(Playable playable, FrameData info); // 0x00000001841E1670-0x00000001841E1680
+		public override void OnBehaviourPause(Playable playable, FrameData info); // 0x00000001841E1670-0x00000001841E1680
+		public override void PrepareFrame(Playable playable, FrameData info); // 0x00000001841E1670-0x00000001841E1680
+		public override void ProcessFrame(Playable playable, FrameData info, object playerData); // 0x000000018B1959E0-0x000000018B195B60
+		public override void PrepareData(Playable playable, FrameData info); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class UsdPlayableTrack : TrackAsset // TypeDefIndex: 57683
+	[TrackBindingType(typeof(UsdAsset))]
+	[TrackClipType(typeof(UsdPlayableAsset))]
+	[TrackColor(0.1f, 0.2f, 0.8f)]
+	public class UsdPlayableTrack : TrackAsset // TypeDefIndex: 60192
 	{
 		// Constructors
-		public UsdPlayableTrack() {} // 0x000000018BCB4B84-0x000000018BCB4BD0
+		public UsdPlayableTrack(); // 0x000000018B195B9C-0x000000018B195BE8
 	
 		// Methods
-		protected override void OnCreateClip(TimelineClip clip) {} // 0x000000018BCB4B48-0x000000018BCB4B84
+		protected override void OnCreateClip(TimelineClip clip); // 0x000000018B195B60-0x000000018B195B9C
 	}
 
-	public class UsdRecorderBehaviour : PlayableBehaviour // TypeDefIndex: 57685
+	public class UsdRecorderBehaviour : PlayableBehaviour // TypeDefIndex: 60194
 	{
 		// Fields
-		private const int kExportFrameRate = 60; // Metadata: 0x0207DA0D
+		private const int kExportFrameRate = 60; // Metadata: 0x0234D2B5
 		private bool m_isPaused; // 0x10
 		public UsdRecorderClip Clip; // 0x18
 		private string usdcFileName; // 0x20
@@ -1528,7 +1629,8 @@ namespace Unity.Formats.USD
 		private GameObject _root; // 0x48
 	
 		// Nested types
-		private sealed class __c__DisplayClass17_0 // TypeDefIndex: 57684
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass17_0 // TypeDefIndex: 60193
 		{
 			// Fields
 			public UsdRecorderBehaviour __4__this; // 0x10
@@ -1537,31 +1639,32 @@ namespace Unity.Formats.USD
 			public object playerData; // 0x68
 	
 			// Constructors
-			public __c__DisplayClass17_0() {} // 0x000000018BCB4BD0-0x000000018BCB5784
+			public __c__DisplayClass17_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _ProcessFrame_b__0() {} // 0x000000018BCB5C84-0x000000018BCB6068
+			internal void _ProcessFrame_b__0(); // 0x000000018B195350-0x000000018B1953B8
 		}
 	
 		// Constructors
-		public UsdRecorderBehaviour() {} // 0x000000018BCB4338-0x000000018BCB43A0
+		public UsdRecorderBehaviour(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public void BeginRecording(double currentTime, GameObject root) {} // 0x000000018BCB5B00-0x000000018BCB5C84
-		public void StopRecording(double currentTime) {} // 0x00000001840A27C0-0x00000001840A27D0
-		private void ProcessRecording(double currentTime, GameObject root) {} // 0x0000000185492010-0x0000000185492020
-		private bool IsPlaying() => default; // 0x000000018BCB598C-0x000000018BCB59E4
-		public override void OnPlayableCreate(Playable playable) {} // 0x000000018BCB586C-0x000000018BCB5934
-		public override void OnPlayableDestroy(Playable playable) {} // 0x000000018BCB5934-0x000000018BCB598C
-		public override void OnGraphStart(Playable playable) {} // 0x000000018BCB59E4-0x000000018BCB5B00
-		public override void OnGraphStop(Playable playable) {} // 0x0000000185FB6A70-0x0000000185FB6A80
-		public override void ProcessFrame(Playable playable, FrameData info, object playerData) {} // 0x0000000181B9A230-0x0000000181B9A240
-		public override void OnBehaviourPlay(Playable playable, FrameData info) {} // 0x000000018BCB5784-0x000000018BCB586C
-		public override void OnBehaviourPause(Playable playable, FrameData info) {} // 0x0000000185492010-0x0000000185492020
-		public void OnFrameEnd(Playable playable, FrameData info, object playerData) {} // 0x0000000185492010-0x0000000185492020
+		public void BeginRecording(double currentTime, GameObject root); // 0x000000018B195BE8-0x000000018B19679C
+		public void StopRecording(double currentTime); // 0x000000018B196C9C-0x000000018B197080
+		private void ProcessRecording(double currentTime, GameObject root); // 0x000000018B196B18-0x000000018B196C9C
+		private bool IsPlaying(); // 0x0000000182FFF600-0x0000000182FFF610
+		public override void OnPlayableCreate(Playable playable); // 0x00000001841E1670-0x00000001841E1680
+		public override void OnPlayableDestroy(Playable playable); // 0x000000018B1969A4-0x000000018B1969FC
+		public override void OnGraphStart(Playable playable); // 0x000000018B196884-0x000000018B19694C
+		public override void OnGraphStop(Playable playable); // 0x000000018B19694C-0x000000018B1969A4
+		public override void ProcessFrame(Playable playable, FrameData info, object playerData); // 0x000000018B1969FC-0x000000018B196B18
+		public override void OnBehaviourPlay(Playable playable, FrameData info); // 0x0000000184D8CCB0-0x0000000184D8CCC0
+		public override void OnBehaviourPause(Playable playable, FrameData info); // 0x00000001815EFCD0-0x00000001815EFCE0
+		public void OnFrameEnd(Playable playable, FrameData info, object playerData); // 0x000000018B19679C-0x000000018B196884
 	}
 
-	public class UsdRecorderClip : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 57686
+	[System.ComponentModel.DisplayName("USD Recorder Clip")]
+	public class UsdRecorderClip : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 60195
 	{
 		// Fields
 		public ExposedReference<GameObject> m_exportRoot; // 0x18
@@ -1570,39 +1673,44 @@ namespace Unity.Formats.USD
 		public BasisTransformation m_convertHandedness; // 0x34
 		public ActiveExportPolicy m_activePolicy; // 0x38
 		public string m_usdFile; // 0x40
+		[CompilerGenerated]
 		private Scene _UsdScene_k__BackingField; // 0x48
 		private ExportContext m_context; // 0x50
 	
 		// Properties
-		public Scene UsdScene { get; set; } // 0x00000001813ECF20-0x00000001813ECF30 0x000000018571FEC0-0x000000018571FED0
-		public ExportContext Context { get => default; set {} } // 0x0000000181460F60-0x0000000181460F70 0x0000000184A4E570-0x0000000184A4E580
-		public ClipCaps clipCaps { get => default; } // 0x00000001813AE580-0x00000001813AE590 
-		public bool IsUSDZ { get => default; } // 0x000000018BCB6250-0x000000018BCB62BC 
+		public Scene UsdScene { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
+		public ExportContext Context { get; set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
+		public ClipCaps clipCaps { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public bool IsUSDZ { get; } // 0x000000018B197268-0x000000018B1972D4 
 	
 		// Constructors
-		public UsdRecorderClip() {} // 0x000000018BCB61B4-0x000000018BCB6250
+		public UsdRecorderClip(); // 0x000000018B1971CC-0x000000018B197268
 	
 		// Methods
-		public GameObject GetExportRoot(PlayableGraph graph) => default; // 0x000000018BCB6160-0x000000018BCB61B4
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x000000018BCB6068-0x000000018BCB6160
-		public virtual void OnDestroy() {} // 0x0000000185492010-0x0000000185492020
+		public GameObject GetExportRoot(PlayableGraph graph); // 0x000000018B197178-0x000000018B1971CC
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner); // 0x000000018B197080-0x000000018B197178
+		public virtual void OnDestroy(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class UsdRecorderTrack : TrackAsset // TypeDefIndex: 57687
+	[TrackClipType(typeof(UsdRecorderClip))]
+	[TrackColor(0.7f, 0f, 0f)]
+	public class UsdRecorderTrack : TrackAsset // TypeDefIndex: 60196
 	{
 		// Constructors
-		public UsdRecorderTrack() {} // 0x000000018BCB62BC-0x000000018BCB6308
+		public UsdRecorderTrack(); // 0x000000018B1972D4-0x000000018B197320
 	}
 
-	internal class UsdWaitForEndOfFrame : MonoBehaviour // TypeDefIndex: 57689
+	[ExecuteInEditMode]
+	internal class UsdWaitForEndOfFrame : MonoBehaviour // TypeDefIndex: 60198
 	{
 		// Fields
 		private List<Action> m_pending; // 0x18
 		private static UsdWaitForEndOfFrame s_instance; // 0x00
 	
 		// Nested types
-		private sealed class _WaitForEndOfFrame_d__4 : IEnumerator<object> // TypeDefIndex: 57688
+		[CompilerGenerated]
+		private sealed class _WaitForEndOfFrame_d__4 : IEnumerator<object> // TypeDefIndex: 60197
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1610,26 +1718,29 @@ namespace Unity.Formats.USD
 			public UsdWaitForEndOfFrame __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018BCB64D8-0x000000018BCB64FC 
-			object IEnumerator.Current { get => default; } // 0x0000000181378230-0x0000000181378240 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _WaitForEndOfFrame_d__4() {} // Dummy constructor
-			public _WaitForEndOfFrame_d__4(int __1__state) {} // 0x000000018BCB635C-0x000000018BCB64D8
+			[DebuggerHidden]
+			public _WaitForEndOfFrame_d__4(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018BCB6308-0x000000018BCB635C
-			private bool MoveNext() => default; // 0x000000018BCB64FC-0x000000018BCB6558
-			void IEnumerator.Reset() {} // 0x000000018BCB6558-0x000000018BCB65D8
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018B1953B8-0x000000018B19563C
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B19563C-0x000000018B195688
 		}
 	
 		// Constructors
-		public UsdWaitForEndOfFrame() {} // 0x0000000181377E40-0x0000000181377E50
+		public UsdWaitForEndOfFrame(); // 0x000000018B197570-0x000000018B1975F0
 	
 		// Methods
-		private static UsdWaitForEndOfFrame GetInstance() => default; // 0x0000000185492010-0x0000000185492020
-		public static void Add(Action callback) {} // 0x000000018BCB43A0-0x000000018BCB4624
-		private IEnumerator WaitForEndOfFrame() => default; // 0x0000000181377E40-0x0000000181377E50
-		private void LateUpdate() {} // 0x000000018BCB4624-0x000000018BCB4670
+		private static UsdWaitForEndOfFrame GetInstance(); // 0x000000018B197374-0x000000018B1974F0
+		public static void Add(Action callback); // 0x000000018B197320-0x000000018B197374
+		[IteratorStateMachine(typeof(_WaitForEndOfFrame_d__4))]
+		private IEnumerator WaitForEndOfFrame(); // 0x000000018B197514-0x000000018B197570
+		private void LateUpdate(); // 0x000000018B1974F0-0x000000018B197514
 	}
 }

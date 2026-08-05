@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Net;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using SRDebugger;
 using SRDebugger.Scripts;
 using SRDebugger.Services;
@@ -26,93 +28,105 @@ using UnityEngine.InputSystem;
 using UnityEngine.Networking;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-// Image 48: StompyRobot.SRDebugger.dll - Assembly: StompyRobot.SRDebugger, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 57690-57848
+// Image 48: StompyRobot.SRDebugger.dll - Assembly: StompyRobot.SRDebugger, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60199-60357
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("StompyRobot.SRDebugger.Editor")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
-public static class SRDebug // TypeDefIndex: 57692
+public static class SRDebug // TypeDefIndex: 60201
 {
 	// Fields
-	public const string Version = "1.12.1"; // Metadata: 0x0207DA0E
+	public const string Version = "1.12.1"; // Metadata: 0x0234D2B6
+	[CompilerGenerated]
 	private static bool _IsInitialized_k__BackingField; // 0x00
 	public static Action<ConsoleEntry> CopyConsoleItemCallback; // 0x08
 
 	// Properties
-	public static bool IsInitialized { get; private set; } // 0x0000000185C2B2A0-0x0000000185C2B390 0x0000000185D6F890-0x0000000185D6F990
-	public static IDebugService Instance { get; } // 0x0000000185D6F830-0x0000000185D6F890 
+	public static bool IsInitialized { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018AC97118-0x000000018AC97168 0x000000018AC97168-0x000000018AC971BC
+	public static IDebugService Instance { get; } // 0x000000018AC970EC-0x000000018AC97118 
 
 	// Nested types
 	[Serializable]
-	private sealed class __c // TypeDefIndex: 57691
+	[CompilerGenerated]
+	private sealed class __c // TypeDefIndex: 60200
 	{
 		// Fields
 		public static readonly __c __9; // 0x00
 		public static Action<ConsoleEntry> __9__9_0; // 0x08
 
 		// Constructors
-		static __c() {} // 0x000000018B7DE9E4-0x000000018B7DEA34
-		public __c() {} // 0x000000018B7DEA34-0x000000018B7DEA88
+		static __c(); // 0x0000000184D449B0-0x0000000184D44A10
+		public __c(); // 0x00000001841E1670-0x00000001841E1680
 
 		// Methods
-		internal void _GetDefaultCopyConsoleItemCallback_b__9_0(ConsoleEntry entry) {} // 0x000000018B7DE990-0x000000018B7DE9E4
+		internal void _GetDefaultCopyConsoleItemCallback_b__9_0(ConsoleEntry entry); // 0x000000018AC99254-0x000000018AC992D4
 	}
 
 	// Constructors
-	static SRDebug() {} // 0x000000018B7E0B28-0x000000018B7E0BA8
+	static SRDebug(); // 0x0000000184B4AA70-0x0000000184B4AAD0
 
 	// Methods
-	public static void Init() {} // 0x0000000185F70E10-0x0000000185F70E70
-	public static Action<ConsoleEntry> GetDefaultCopyConsoleItemCallback() => default; // 0x0000000185492010-0x0000000185492020
+	public static void Init(); // 0x0000000184A24910-0x0000000184A24A00
+	public static Action<ConsoleEntry> GetDefaultCopyConsoleItemCallback(); // 0x0000000184B4AAD0-0x0000000184B4ABD0
 }
 
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 57848
+[CompilerGenerated]
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 60357
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_36 _0B92E635AE849B517CA3A2F28C2502AF8675E5C6C01CD75EA9F53120E81DDAAA; // 0x00 // Static value (base64): CtejO83MzDuJiAg8CtcjPImIiDyJiAg9zcxMPauqqj2rqio+ - Metadata: 0x0207DCAC
+	internal static readonly __StaticArrayInitTypeSize_36 _0B92E635AE849B517CA3A2F28C2502AF8675E5C6C01CD75EA9F53120E81DDAAA; // 0x00 // Static value (base64): CtejO83MzDuJiAg8CtcjPImIiDyJiAg9zcxMPauqqj2rqio+ - Metadata: 0x0234D554
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_36 // TypeDefIndex: 57847
+	private struct __StaticArrayInitTypeSize_36 // TypeDefIndex: 60356
 	{
 	}
-
-	// Constructors
-	public _PrivateImplementationDetails_() {} // Dummy constructor
 }
 
 namespace Assets.StompyRobot.SRDebugger.Scripts.Services.Implementation
 {
-	public sealed class ConsoleFilterStateService : IConsoleFilterState // TypeDefIndex: 57693
+	[Service(typeof(IConsoleFilterState))]
+	public sealed class ConsoleFilterStateService : IConsoleFilterState // TypeDefIndex: 60202
 	{
 		// Fields
+		[CompilerGenerated]
 		private ConsoleStateChangedEventHandler FilterStateChange; // 0x10
 		private readonly bool[] _states; // 0x18
 	
 		// Events
-		public event ConsoleStateChangedEventHandler FilterStateChange;
+		public event ConsoleStateChangedEventHandler FilterStateChange {
+			add; // 0x000000018AC8AF94-0x000000018AC8B028
+			remove; // 0x000000018AC8B0BC-0x000000018AC8B150
+		}
 	
 		// Constructors
-		public ConsoleFilterStateService() {} // 0x000000018B7D2530-0x000000018B7D2618
+		public ConsoleFilterStateService(); // 0x000000018AC8AE18-0x000000018AC8AF00
 	
 		// Methods
-		public void SetConsoleFilterState(UnityEngine.LogType type, bool newState) {} // 0x000000018B7D23D8-0x000000018B7D2448
-		public bool GetConsoleFilterState(UnityEngine.LogType type) => default; // 0x000000018B7D235C-0x000000018B7D2398
-		private static UnityEngine.LogType GetType(UnityEngine.LogType type) => default; // 0x000000018B7D2398-0x000000018B7D23D8
+		public void SetConsoleFilterState(UnityEngine.LogType type, bool newState); // 0x000000018AC8ACC0-0x000000018AC8AD30
+		public bool GetConsoleFilterState(UnityEngine.LogType type); // 0x000000018AC8AC44-0x000000018AC8AC80
+		private static UnityEngine.LogType GetType(UnityEngine.LogType type); // 0x000000018AC8AC80-0x000000018AC8ACC0
 	}
 }
 
 namespace SRDebugger
 {
-	public static class AutoInitialize // TypeDefIndex: 57694
+	public static class AutoInitialize // TypeDefIndex: 60203
 	{
 		// Fields
-		private const RuntimeInitializeLoadType InitializeLoadType = RuntimeInitializeLoadType.SubsystemRegistration; // Metadata: 0x0207DA15
+		private const RuntimeInitializeLoadType InitializeLoadType = RuntimeInitializeLoadType.SubsystemRegistration; // Metadata: 0x0234D2BD
 	
 		// Methods
-		public static void OnLoadBeforeScene() {} // 0x0000000185C2B390-0x0000000185C2B430
-		public static void OnLoad() {} // 0x0000000185C2B240-0x0000000185C2B2A0
+		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+		public static void OnLoadBeforeScene(); // 0x0000000184A24A00-0x0000000184A24AA0
+		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+		public static void OnLoad(); // 0x0000000184A248B0-0x0000000184A24910
 	}
 
-	public class BugReport // TypeDefIndex: 57695
+	public class BugReport // TypeDefIndex: 60204
 	{
 		// Fields
 		public List<ConsoleEntry> ConsoleLog; // 0x10
@@ -122,29 +136,30 @@ namespace SRDebugger
 		public string UserDescription; // 0x30
 	
 		// Constructors
-		public BugReport() {} // 0x0000000185492010-0x0000000185492020
+		public BugReport(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public sealed class BugReportSubmitResult // TypeDefIndex: 57696
+	public sealed class BugReportSubmitResult // TypeDefIndex: 60205
 	{
 		// Fields
+		[CompilerGenerated]
 		private readonly bool _IsSuccessful_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private readonly string _ErrorMessage_k__BackingField; // 0x18
 	
 		// Properties
-		public static BugReportSubmitResult Success { get => default; } // 0x000000018B7D15AC-0x000000018B7D1600 
-		public bool IsSuccessful { get; } // 0x0000000181C2FD60-0x0000000181C2FD70 
-		public string ErrorMessage { get; } // 0x0000000181377E40-0x0000000181377E50 
+		public static BugReportSubmitResult Success { get; } // 0x000000018AC89E9C-0x000000018AC89EF0 
+		public bool IsSuccessful { [CompilerGenerated] get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
+		public string ErrorMessage { [CompilerGenerated] get; } // 0x000000018385B100-0x000000018385B110 
 	
 		// Constructors
-		public BugReportSubmitResult() {} // Dummy constructor
-		private BugReportSubmitResult(bool successful, string error) {} // 0x000000018470BFE0-0x000000018470BFF0
+		private BugReportSubmitResult(bool successful, string error); // 0x0000000183219380-0x0000000183219390
 	
 		// Methods
-		public static BugReportSubmitResult Error(string errorMessage) => default; // 0x000000018B7D1550-0x000000018B7D15AC
+		public static BugReportSubmitResult Error(string errorMessage); // 0x000000018AC89E40-0x000000018AC89E9C
 	}
 
-	public interface IBugReporterHandler // TypeDefIndex: 57697
+	public interface IBugReporterHandler // TypeDefIndex: 60206
 	{
 		// Properties
 		bool IsUsable { get; }
@@ -153,7 +168,7 @@ namespace SRDebugger
 		void Submit(BugReport report, Action<BugReportSubmitResult> onComplete, IProgress<float> progress);
 	}
 
-	public class CircularBuffer<T> : IReadOnlyList<T> // TypeDefIndex: 57699
+	public class CircularBuffer<T> : IReadOnlyList<T> // TypeDefIndex: 60208
 	{
 		// Fields
 		private readonly T[] _buffer;
@@ -162,14 +177,15 @@ namespace SRDebugger
 		private int _start;
 	
 		// Properties
-		public int Capacity { get => default; }
-		public bool IsFull { get => default; }
-		public bool IsEmpty { get => default; }
-		public int Count { get => default; }
+		public int Capacity { get; }
+		public bool IsFull { get; }
+		public bool IsEmpty { get; }
+		public int Count { get; }
 		public T this[int index] { get => default; set {} }
 	
 		// Nested types
-		private sealed class _GetEnumerator_d__18 : IEnumerator<T> // TypeDefIndex: 57698
+		[CompilerGenerated]
+		private sealed class _GetEnumerator_d__18 : IEnumerator<T> // TypeDefIndex: 60207
 		{
 			// Fields
 			private int __1__state;
@@ -181,117 +197,137 @@ namespace SRDebugger
 			private int _i_5__5;
 	
 			// Properties
-			T IEnumerator<T>.Current { get => default; }
-			object IEnumerator.Current { get => default; }
+			T IEnumerator<T>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
 	
 			// Constructors
-			public _GetEnumerator_d__18() {} // Dummy constructor
-			public _GetEnumerator_d__18(int __1__state) {}
+			[DebuggerHidden]
+			public _GetEnumerator_d__18(int __1__state);
 	
 			// Methods
-			void IDisposable.Dispose() {}
-			private bool MoveNext() => default;
-			void IEnumerator.Reset() {}
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
 		}
 	
 		// Constructors
-		public CircularBuffer() {} // Dummy constructor
-		public CircularBuffer(int capacity) {}
-		public CircularBuffer(int capacity, T[] items) {}
+		public CircularBuffer(int capacity);
+		public CircularBuffer(int capacity, T[] items);
 	
 		// Methods
-		public void Clear() {}
-		public IEnumerator<T> GetEnumerator() => default;
-		IEnumerator IEnumerable.GetEnumerator() => default;
-		public T Front() => default;
-		public T Back() => default;
-		public void PushBack(T item) {}
-		public void PushFront(T item) {}
-		public void PopBack() {}
-		public void PopFront() {}
-		public T[] ToArray() => default;
-		private void ThrowIfEmpty(string message = "Cannot access an empty buffer." /* Metadata: 0x0207DA16 */) {}
-		private void Increment(ref int index) {}
-		private void Decrement(ref int index) {}
-		private int InternalIndex(int index) => default;
-		private ArraySegment<T> ArrayOne() => default;
-		private ArraySegment<T> ArrayTwo() => default;
+		public void Clear();
+		[IteratorStateMachine(typeof(_GetEnumerator_d__18))]
+		public IEnumerator<T> GetEnumerator();
+		IEnumerator IEnumerable.GetEnumerator();
+		public T Front();
+		public T Back();
+		public void PushBack(T item);
+		public void PushFront(T item);
+		public void PopBack();
+		public void PopFront();
+		public T[] ToArray();
+		private void ThrowIfEmpty(string message = "Cannot access an empty buffer." /* Metadata: 0x0234D2BE */);
+		private void Increment(ref int index);
+		private void Decrement(ref int index);
+		private int InternalIndex(int index);
+		private ArraySegment<T> ArrayOne();
+		private ArraySegment<T> ArrayTwo();
 	}
 
-	public sealed class OptionDefinition // TypeDefIndex: 57700
+	public sealed class OptionDefinition // TypeDefIndex: 60209
 	{
 		// Fields
+		[CompilerGenerated]
 		private string _Name_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private string _Category_k__BackingField; // 0x18
+		[CompilerGenerated]
 		private int _SortPriority_k__BackingField; // 0x20
+		[CompilerGenerated]
 		private MethodReference _Method_k__BackingField; // 0x28
+		[CompilerGenerated]
 		private PropertyReference _Property_k__BackingField; // 0x30
 	
 		// Properties
-		public string Name { get; private set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public string Category { get; private set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-		public int SortPriority { get; private set; } // 0x00000001813B88B0-0x00000001813B88C0 0x00000001813B9430-0x00000001813B9440
-		public bool IsMethod { get => default; } // 0x00000001878567E4-0x00000001878567F0 
-		public bool IsProperty { get => default; } // 0x000000018A6AD3DC-0x000000018A6AD3E8 
-		public MethodReference Method { get; private set; } // 0x00000001813B8590-0x00000001813B85A0 0x0000000184A4EDC0-0x0000000184A4EDD0
-		public PropertyReference Property { get; private set; } // 0x00000001813B51D0-0x00000001813B51E0 0x00000001864721F0-0x0000000186472200
+		public string Name { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public string Category { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public int SortPriority { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B70F90-0x0000000182B70FA0 0x0000000184D86330-0x0000000184D86340
+		public bool IsMethod { get; } // 0x00000001868C60A8-0x00000001868C60B4 
+		public bool IsProperty { get; } // 0x0000000189B11948-0x0000000189B11954 
+		public MethodReference Method { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
+		public PropertyReference Property { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
 	
 		// Constructors
-		public OptionDefinition() {} // Dummy constructor
-		private OptionDefinition(string name, string category, int sortPriority) {} // 0x00000001859D9860-0x00000001859D9890
-		public OptionDefinition(string name, string category, int sortPriority, MethodReference method) {} // 0x000000018B7D98DC-0x000000018B7D990C
-		public OptionDefinition(string name, string category, int sortPriority, PropertyReference property) {} // 0x000000018B7D98AC-0x000000018B7D98DC
+		private OptionDefinition(string name, string category, int sortPriority); // 0x00000001847E1B40-0x00000001847E1B70
+		public OptionDefinition(string name, string category, int sortPriority, MethodReference method); // 0x000000018AC9214C-0x000000018AC9217C
+		public OptionDefinition(string name, string category, int sortPriority, PropertyReference property); // 0x000000018AC9211C-0x000000018AC9214C
 	
 		// Methods
-		public static OptionDefinition FromMethod(string name, Action callback, string category = "Default" /* Metadata: 0x0207DA35 */, int sortPriority = 0 /* Metadata: 0x0207DA3D */) => default; // 0x000000018B7D9808-0x000000018B7D98AC
-		public static OptionDefinition Create<T>(string name, Func<T> getter, Action<T> setter = null, string category = "Default" /* Metadata: 0x0207DA3E */, int sortPriority = 0 /* Metadata: 0x0207DA46 */) => default;
+		public static OptionDefinition FromMethod(string name, Action callback, string category = "Default" /* Metadata: 0x0234D2DD */, int sortPriority = 0 /* Metadata: 0x0234D2E5 */); // 0x000000018AC92078-0x000000018AC9211C
+		public static OptionDefinition Create<T>(string name, Func<T> getter, Action<T> setter = null, string category = "Default" /* Metadata: 0x0234D2E6 */, int sortPriority = 0 /* Metadata: 0x0234D2EE */);
 	}
 
-	public interface IOptionContainer // TypeDefIndex: 57701
+	public interface IOptionContainer // TypeDefIndex: 60210
 	{
 		// Properties
 		bool IsDynamic { get; }
 	
 		// Events
-		event Action<OptionDefinition> OptionAdded;
-		event Action<OptionDefinition> OptionRemoved;
+		event Action<OptionDefinition> OptionAdded {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
+		event Action<OptionDefinition> OptionRemoved {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
 	
 		// Methods
 		IEnumerable<OptionDefinition> GetOptions();
 	}
 
-	public sealed class DynamicOptionContainer : IOptionContainer // TypeDefIndex: 57702
+	public sealed class DynamicOptionContainer : IOptionContainer // TypeDefIndex: 60211
 	{
 		// Fields
 		private readonly List<OptionDefinition> _options; // 0x10
 		private readonly IList<OptionDefinition> _optionsReadOnly; // 0x18
+		[CompilerGenerated]
 		private Action<OptionDefinition> OptionAdded; // 0x20
+		[CompilerGenerated]
 		private Action<OptionDefinition> OptionRemoved; // 0x28
 	
 		// Properties
-		public IList<OptionDefinition> Options { get => default; } // 0x0000000181377E40-0x0000000181377E50 
-		public bool IsDynamic { get => default; } // 0x00000001840A27C0-0x00000001840A27D0 
+		public IList<OptionDefinition> Options { get; } // 0x000000018385B100-0x000000018385B110 
+		public bool IsDynamic { get; } // 0x0000000182FFF600-0x0000000182FFF610 
 	
 		// Events
-		public event Action<OptionDefinition> OptionAdded;
-		public event Action<OptionDefinition> OptionRemoved;
+		public event Action<OptionDefinition> OptionAdded {
+			add; // 0x000000018AC8EBE8-0x000000018AC8EC74
+			remove; // 0x000000018AC8ED00-0x000000018AC8ED8C
+		}
+		public event Action<OptionDefinition> OptionRemoved {
+			add; // 0x000000018AC8EC74-0x000000018AC8ED00
+			remove; // 0x000000018AC8ED8C-0x000000018AC8EE18
+		}
 	
 		// Constructors
-		public DynamicOptionContainer() {} // 0x000000018B7D62BC-0x000000018B7D6360
+		public DynamicOptionContainer(); // 0x000000018AC8EB44-0x000000018AC8EBE8
 	
 		// Methods
-		public void AddOption(OptionDefinition option) {} // 0x000000018B7D61DC-0x000000018B7D6248
-		public bool RemoveOption(OptionDefinition option) => default; // 0x000000018B7D6248-0x000000018B7D62BC
-		IEnumerable<OptionDefinition> IOptionContainer.GetOptions() => default; // 0x000000018346D130-0x000000018346D140
+		public void AddOption(OptionDefinition option); // 0x000000018AC8EA64-0x000000018AC8EAD0
+		public bool RemoveOption(OptionDefinition option); // 0x000000018AC8EAD0-0x000000018AC8EB44
+		IEnumerable<OptionDefinition> IOptionContainer.GetOptions(); // 0x0000000182B2ECC0-0x0000000182B2ECD0
 	}
 
-	public delegate void VisibilityChangedDelegate(bool isVisible); // TypeDefIndex: 57703; 0x00000001833EEC70-0x00000001833EEC80
+	public delegate void VisibilityChangedDelegate(bool isVisible); // TypeDefIndex: 60212; 0x0000000182B46B90-0x0000000182B46BA0
 
-	public delegate void ActionCompleteCallback(bool success); // TypeDefIndex: 57704; 0x00000001833EEC70-0x00000001833EEC80
+	public delegate void ActionCompleteCallback(bool success); // TypeDefIndex: 60213; 0x0000000182B46B90-0x0000000182B46BA0
 
-	public delegate void PinnedUiCanvasCreated(RectTransform canvasTransform); // TypeDefIndex: 57705; 0x00000001833EEC70-0x00000001833EEC80
+	public delegate void PinnedUiCanvasCreated(RectTransform canvasTransform); // TypeDefIndex: 60214; 0x0000000182B46B90-0x0000000182B46BA0
 
-	public struct EntryCode : IReadOnlyList<int> // TypeDefIndex: 57706
+	public struct EntryCode : IReadOnlyList<int> // TypeDefIndex: 60215
 	{
 		// Fields
 		public readonly int Digit1; // 0x00
@@ -300,56 +336,54 @@ namespace SRDebugger
 		public readonly int Digit4; // 0x0C
 	
 		// Properties
-		public int Count { get => default; } // 0x0000000181C44E90-0x0000000181C44EA0 
-		public int this[int index] { get => default; } // 0x000000018B7D6880-0x000000018B7D6904 
+		public int Count { get; } // 0x0000000184D882B0-0x0000000184D882C0 
+		public int this[int index] { get => default; } // 0x000000018AC8F108-0x000000018AC8F18C 
 	
 		// Constructors
-		public EntryCode(int digit1, int digit2, int digit3, int digit4) : this() {
-			Digit1 = default;
-			Digit2 = default;
-			Digit3 = default;
-			Digit4 = default;
-		} // 0x000000018B7D66A8-0x000000018B7D6880
+		public EntryCode(int digit1, int digit2, int digit3, int digit4); // 0x000000018AC8EF30-0x000000018AC8F108
 	
 		// Methods
-		public IEnumerator<int> GetEnumerator() => default; // 0x000000018B7D6590-0x000000018B7D66A0
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018B7D66A0-0x000000018B7D66A8
+		public IEnumerator<int> GetEnumerator(); // 0x000000018AC8EE18-0x000000018AC8EF28
+		IEnumerator IEnumerable.GetEnumerator(); // 0x000000018AC8EF28-0x000000018AC8EF30
 	}
 
-	public sealed class InfoEntry // TypeDefIndex: 57708
+	public sealed class InfoEntry // TypeDefIndex: 60217
 	{
 		// Fields
+		[CompilerGenerated]
 		private string _Title_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private bool _IsPrivate_k__BackingField; // 0x18
 		private Func<object> _valueGetter; // 0x20
 	
 		// Properties
-		public string Title { get; set; } // 0x000000018B7D720C-0x000000018B7D7320 0x00000001813C0430-0x00000001813C0440
-		public object Value { get => default; } // 0x00000001813C0520-0x00000001813C0530 
-		public bool IsPrivate { get; private set; } // 0x0000000183FC52E0-0x0000000183FC5370 0x0000000183FC5370-0x0000000183FC5480
+		public string Title { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public object Value { get; } // 0x000000018AC8FAB4-0x000000018AC8FBC8 
+		public bool IsPrivate { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86340-0x0000000184D86350 0x0000000184D86350-0x0000000184D86360
 	
 		// Nested types
-		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 57707
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 60216
 		{
 			// Fields
 			public object value; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass12_0() {} // 0x000000018346D130-0x000000018346D140
+			public __c__DisplayClass12_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal object _Create_b__0() => default; // 0x0000000184096E30-0x0000000184096EF0
+			internal object _Create_b__0(); // 0x0000000182B2ECC0-0x0000000182B2ECD0
 		}
 	
 		// Constructors
-		public InfoEntry() {} // 0x000000018346D130-0x000000018346D140
+		public InfoEntry(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static InfoEntry Create(string name, Func<object> getter, bool isPrivate = false /* Metadata: 0x0207DA47 */) => default; // 0x0000000185492010-0x0000000185492020
-		public static InfoEntry Create(string name, object value, bool isPrivate = false /* Metadata: 0x0207DA48 */) => default; // 0x0000000185492010-0x0000000185492020
+		public static InfoEntry Create(string name, Func<object> getter, bool isPrivate = false /* Metadata: 0x0234D2EF */); // 0x00000001841A8030-0x00000001841A80C0
+		public static InfoEntry Create(string name, object value, bool isPrivate = false /* Metadata: 0x0234D2F0 */); // 0x00000001841A80C0-0x00000001841A81D0
 	}
 
-	public enum DefaultTabs // TypeDefIndex: 57709
+	public enum DefaultTabs // TypeDefIndex: 60218
 	{
 		SystemInformation = 0,
 		Options = 1,
@@ -358,7 +392,7 @@ namespace SRDebugger
 		BugReporter = 4
 	}
 
-	public enum PinAlignment // TypeDefIndex: 57710
+	public enum PinAlignment // TypeDefIndex: 60219
 	{
 		TopLeft = 0,
 		TopRight = 1,
@@ -370,96 +404,138 @@ namespace SRDebugger
 		BottomCenter = 7
 	}
 
-	public enum ConsoleAlignment // TypeDefIndex: 57711
+	public enum ConsoleAlignment // TypeDefIndex: 60220
 	{
 		Top = 0,
 		Bottom = 1
 	}
 
-	public class Settings : ScriptableObject // TypeDefIndex: 57718
+	public class Settings : ScriptableObject // TypeDefIndex: 60227
 	{
 		// Fields
-		internal const string ResourcesName = "Settings"; // Metadata: 0x0207DA58
+		internal const string ResourcesName = "Settings"; // Metadata: 0x0234D300
 		private static Settings _instance; // 0x00
+		[CompilerGenerated]
 		private PropertyChangedEventHandler PropertyChanged; // 0x18
+		[SerializeField]
 		private bool _isEnabled; // 0x20
+		[SerializeField]
 		private bool _disableWelcomePopup; // 0x21
+		[SerializeField]
 		private UIModes _uiInputMode; // 0x24
+		[SerializeField]
 		private DefaultTabs _defaultTab; // 0x28
+		[SerializeField]
 		private TriggerEnableModes _triggerEnableMode; // 0x2C
+		[SerializeField]
 		private TriggerBehaviours _triggerBehaviour; // 0x30
+		[SerializeField]
 		private bool _errorNotification; // 0x34
+		[SerializeField]
 		private bool _enableKeyboardShortcuts; // 0x35
+		[SerializeField]
 		private KeyboardShortcut[] _keyboardShortcuts; // 0x38
+		[SerializeField]
 		private KeyboardShortcut[] _newKeyboardShortcuts; // 0x40
+		[SerializeField]
 		private bool _keyboardModifierControl; // 0x48
+		[SerializeField]
 		private bool _keyboardModifierAlt; // 0x49
+		[SerializeField]
 		private bool _keyboardModifierShift; // 0x4A
+		[SerializeField]
 		private bool _keyboardEscapeClose; // 0x4B
+		[SerializeField]
 		private bool _enableBackgroundTransparency; // 0x4C
+		[SerializeField]
 		private float _backgroundTransparency; // 0x50
+		[SerializeField]
 		private bool _collapseDuplicateLogEntries; // 0x54
+		[SerializeField]
 		private bool _richTextInConsole; // 0x55
+		[SerializeField]
 		private bool _requireEntryCode; // 0x56
+		[SerializeField]
 		private bool _requireEntryCodeEveryTime; // 0x57
+		[SerializeField]
 		private int[] _entryCode; // 0x58
+		[SerializeField]
 		private bool _useDebugCamera; // 0x60
+		[SerializeField]
 		private int _debugLayer; // 0x64
+		[Range(-100f, 100f)]
+		[SerializeField]
 		private float _debugCameraDepth; // 0x68
+		[SerializeField]
 		private string _apiKey; // 0x70
+		[SerializeField]
 		private bool _enableBugReporter; // 0x78
+		[SerializeField]
 		private bool _enableBugReportScreenshot; // 0x79
+		[SerializeField]
 		private DefaultTabs[] _disabledTabs; // 0x80
+		[SerializeField]
 		private PinAlignment _profilerAlignment; // 0x88
+		[SerializeField]
 		private PinAlignment _optionsAlignment; // 0x8C
+		[SerializeField]
 		private ConsoleAlignment _consoleAlignment; // 0x90
+		[SerializeField]
 		private PinAlignment _triggerPosition; // 0x94
+		[SerializeField]
 		private int _maximumConsoleEntries; // 0x98
+		[SerializeField]
 		private bool _enableEventSystemCreation; // 0x9C
+		[SerializeField]
 		private bool _automaticShowCursor; // 0x9D
+		[SerializeField]
 		private float _uiScale; // 0xA0
+		[SerializeField]
 		private bool _unloadOnClose; // 0xA4
 	
 		// Properties
-		public static Settings Instance { get => default; } // 0x000000018B7DFB78-0x000000018B7DFC0C 
-		public bool IsEnabled { get => default; } // 0x00000001813CFF60-0x00000001813CFF70 
-		public UIModes UIInputMode { get => default; } // 0x0000000185FB0B90-0x0000000185FB0BA0 
-		public DefaultTabs DefaultTab { get => default; } // 0x0000000185FB0B80-0x0000000185FB0B90 
-		public TriggerEnableModes EnableTrigger { get => default; } // 0x00000001813FF010-0x00000001813FF020 
-		public TriggerBehaviours TriggerBehaviour { get => default; } // 0x0000000185FB8A70-0x0000000185FB8A80 
-		public bool ErrorNotification { get => default; } // 0x0000000185FB0B40-0x0000000185FB0B50 
-		public bool EnableKeyboardShortcuts { get => default; } // 0x0000000185FB3000-0x0000000185FB3010 
-		public IList<KeyboardShortcut> KeyboardShortcuts { get => default; } // 0x0000000185FB9CC0-0x0000000185FB9CD0 
-		public bool KeyboardEscapeClose { get => default; } // 0x0000000185FB9CB0-0x0000000185FB9CC0 
-		public bool EnableBackgroundTransparency { get => default; } // 0x000000018B7DFB04-0x000000018B7DFB78 
-		public float BackgroundTransparency { get => default; } // 0x000000018B7DFC0C-0x000000018B7DFE1C 
-		public bool RequireCode { get => default; } // 0x000000018386C570-0x000000018386C580 
-		public bool RequireEntryCodeEveryTime { get => default; } // 0x0000000185FB2020-0x0000000185FB2030 
-		public IList<int> EntryCode { get => default; set {} } // 0x0000000185FB8230-0x0000000185FB8240 0x0000000185FB0A80-0x0000000185FB0A90
-		public bool UseDebugCamera { get => default; } // 0x0000000185FB0A70-0x0000000185FB0A80 
-		public int DebugLayer { get => default; } // 0x0000000181460F70-0x0000000181460F80 
-		public float DebugCameraDepth { get => default; } // 0x0000000185FB0DA0-0x0000000185FB0DB0 
-		public bool CollapseDuplicateLogEntries { get => default; } // 0x0000000185FB2E50-0x0000000185FB2E60 
-		public bool RichTextInConsole { get => default; } // 0x000000018140CF50-0x000000018140CF60 
-		public string ApiKey { get => default; } // 0x0000000181A73EA0-0x0000000181A73EB0 
-		public bool EnableBugReporter { get => default; } // 0x00000001834A1F30-0x00000001834A1F40 
-		public bool EnableBugReportScreenshot { get => default; } // 0x000000018349D720-0x000000018349D730 
-		public IList<DefaultTabs> DisabledTabs { get => default; } // 0x00000001834A0D50-0x00000001834A0D60 
-		public PinAlignment TriggerPosition { get => default; } // 0x00000001834A2260-0x00000001834A2270 
-		public PinAlignment ProfilerAlignment { get => default; } // 0x00000001834A0D40-0x00000001834A0D50 
-		public PinAlignment OptionsAlignment { get => default; } // 0x00000001834A2250-0x00000001834A2260 
-		public ConsoleAlignment ConsoleAlignment { get => default; set {} } // 0x0000000185FBF7D0-0x0000000185FBF7E0 0x0000000185FBF810-0x0000000185FBF820
-		public int MaximumConsoleEntries { get => default; set {} } // 0x0000000185FCECC0-0x0000000185FCECD0 0x0000000185FB9B70-0x0000000185FB9B80
-		public bool EnableEventSystemGeneration { get => default; set {} } // 0x000000018B7DFE1C-0x000000018B7DFE7C 0x0000000185FB9C80-0x0000000185FB9C90
-		public bool AutomaticallyShowCursor { get => default; } // 0x000000018B7DF9E0-0x000000018B7DFA70 
-		public float UIScale { get => default; set {} } // 0x000000018B7DF940-0x000000018B7DF9E0 0x0000000185C48E20-0x0000000185C48E70
-		public bool UnloadOnClose { get => default; } // 0x0000000185C48D80-0x0000000185C48E20 
+		public static Settings Instance { get; } // 0x0000000183E3E580-0x0000000183E3E690 
+		public bool IsEnabled { get; } // 0x0000000184D866B0-0x0000000184D866C0 
+		public UIModes UIInputMode { get; } // 0x00000001811F0020-0x00000001811F0030 
+		public DefaultTabs DefaultTab { get; } // 0x00000001811F2A90-0x00000001811F2AA0 
+		public TriggerEnableModes EnableTrigger { get; } // 0x0000000184D86710-0x0000000184D86720 
+		public TriggerBehaviours TriggerBehaviour { get; } // 0x0000000184D864F0-0x0000000184D86500 
+		public bool ErrorNotification { get; } // 0x0000000184D86A90-0x0000000184D86AA0 
+		public bool EnableKeyboardShortcuts { get; } // 0x0000000184D86D30-0x0000000184D86D40 
+		public IList<KeyboardShortcut> KeyboardShortcuts { get; } // 0x0000000184D85A60-0x0000000184D85A70 
+		public bool KeyboardEscapeClose { get; } // 0x0000000184D8EC30-0x0000000184D8EC40 
+		public bool EnableBackgroundTransparency { get; } // 0x0000000184D86910-0x0000000184D86920 
+		public float BackgroundTransparency { get; } // 0x0000000184D885A0-0x0000000184D885B0 
+		public bool RequireCode { get; } // 0x0000000184D92D20-0x0000000184D92D30 
+		public bool RequireEntryCodeEveryTime { get; } // 0x0000000184D92D30-0x0000000184D92D40 
+		public IList<int> EntryCode { get; set; } // 0x000000018AC98268-0x000000018AC982DC 0x000000018AC98370-0x000000018AC98580
+		public bool UseDebugCamera { get; } // 0x0000000184D88340-0x0000000184D88350 
+		public int DebugLayer { get; } // 0x0000000184D88110-0x0000000184D88120 
+		public float DebugCameraDepth { get; } // 0x0000000184D8F060-0x0000000184D8F070 
+		public bool CollapseDuplicateLogEntries { get; } // 0x0000000184D86C20-0x0000000184D86C30 
+		public bool RichTextInConsole { get; } // 0x0000000184D86C10-0x0000000184D86C20 
+		public string ApiKey { get; } // 0x0000000184D862B0-0x0000000184D862C0 
+		public bool EnableBugReporter { get; } // 0x0000000184D86F90-0x0000000184D86FA0 
+		public bool EnableBugReportScreenshot { get; } // 0x0000000184D88E40-0x0000000184D88E50 
+		public IList<DefaultTabs> DisabledTabs { get; } // 0x0000000184D86260-0x0000000184D86270 
+		public PinAlignment TriggerPosition { get; } // 0x0000000184D86B20-0x0000000184D86B30 
+		public PinAlignment ProfilerAlignment { get; } // 0x0000000184D86890-0x0000000184D868A0 
+		public PinAlignment OptionsAlignment { get; } // 0x0000000184D90C40-0x0000000184D90C50 
+		public ConsoleAlignment ConsoleAlignment { get; set; } // 0x0000000184D86B60-0x0000000184D86B70 0x0000000184D86BC0-0x0000000184D86BD0
+		public int MaximumConsoleEntries { get; set; } // 0x0000000184D862D0-0x0000000184D862E0 0x0000000184D86300-0x0000000184D86310
+		public bool EnableEventSystemGeneration { get; set; } // 0x0000000184D92ED0-0x0000000184D92EE0 0x0000000184D92F60-0x0000000184D92F70
+		public bool AutomaticallyShowCursor { get; } // 0x0000000184DA34D0-0x0000000184DA34E0 
+		public float UIScale { get; set; } // 0x0000000184D91E60-0x0000000184D91E70 0x000000018AC98580-0x000000018AC985E0
+		public bool UnloadOnClose { get; } // 0x0000000184D88D60-0x0000000184D88D70 
 	
 		// Events
-		public event PropertyChangedEventHandler PropertyChanged;
+		public event PropertyChangedEventHandler PropertyChanged {
+			add; // 0x000000018AC981D4-0x000000018AC98268
+			remove; // 0x000000018AC982DC-0x000000018AC98370
+		}
 	
 		// Nested types
-		public enum ShortcutActions // TypeDefIndex: 57712
+		public enum ShortcutActions // TypeDefIndex: 60221
 		{
 			None = 0,
 			OpenSystemInfoTab = 1,
@@ -475,14 +551,14 @@ namespace SRDebugger
 			ToggleDockedProfiler = 11
 		}
 	
-		public enum TriggerBehaviours // TypeDefIndex: 57713
+		public enum TriggerBehaviours // TypeDefIndex: 60222
 		{
 			TripleTap = 0,
 			TapAndHold = 1,
 			DoubleTap = 2
 		}
 	
-		public enum TriggerEnableModes // TypeDefIndex: 57714
+		public enum TriggerEnableModes // TypeDefIndex: 60223
 		{
 			Enabled = 0,
 			MobileOnly = 1,
@@ -490,122 +566,127 @@ namespace SRDebugger
 			DevelopmentBuildsOnly = 3
 		}
 	
-		public enum UIModes // TypeDefIndex: 57715
+		public enum UIModes // TypeDefIndex: 60224
 		{
 			NewInputSystem = 0,
 			LegacyInputSystem = 1
 		}
 	
 		[Serializable]
-		public sealed class KeyboardShortcut // TypeDefIndex: 57716
+		public sealed class KeyboardShortcut // TypeDefIndex: 60225
 		{
 			// Fields
+			[SerializeField]
 			public ShortcutActions Action; // 0x10
+			[SerializeField]
 			public bool Alt; // 0x14
+			[SerializeField]
 			public bool Control; // 0x15
+			[SerializeField]
 			public KeyCode Key; // 0x18
+			[SerializeField]
 			public bool Shift; // 0x1C
 			[NonSerialized]
 			public UnityEngine.InputSystem.Key? Cached_KeyCode; // 0x20
 	
 			// Constructors
-			public KeyboardShortcut() {} // 0x0000000184A8F7E0-0x0000000184A8F890
+			public KeyboardShortcut(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 57717
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 60226
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Func<int, bool> __9__42_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x0000000185A29620-0x0000000185A29760
-			public __c() {} // 0x0000000185C48E70-0x0000000185C48F10
+			static __c(); // 0x000000018AC993F4-0x000000018AC99458
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _set_EntryCode_b__42_0(int p) => default; // 0x000000018B7DFA70-0x000000018B7DFB04
+			internal bool _set_EntryCode_b__42_0(int p); // 0x000000018AC99334-0x000000018AC99344
 		}
 	
 		// Constructors
-		public Settings() {} // 0x000000018B7E0C08-0x000000018B7E0C18
+		public Settings(); // 0x000000018485C270-0x000000018485C390
 	
 		// Methods
-		private static KeyboardShortcut[] GetDefaultKeyboardShortcuts() => default; // 0x00000001813ECBF0-0x00000001813ECC00
-		private void UpgradeKeyboardShortcuts() {} // 0x0000000181424480-0x0000000181424490
-		private void OnPropertyChanged(string propertyName) {} // 0x0000000185A29500-0x0000000185A29620
-		internal static void ClearCache() {} // 0x0000000185492010-0x0000000185492020
-		internal static Settings GetInstance() => default; // 0x000000018B7E0CC8-0x000000018B7E0D2C
-		private static Settings GetOrCreateInstance() => default; // 0x0000000185492010-0x0000000185492020
+		private static KeyboardShortcut[] GetDefaultKeyboardShortcuts(); // 0x000000018485C390-0x000000018485C4D0
+		private void UpgradeKeyboardShortcuts(); // 0x0000000184A34530-0x0000000184A345D0
+		private void OnPropertyChanged(string propertyName); // 0x000000018AC98144-0x000000018AC981D4
+		internal static void ClearCache(); // 0x000000018AC980A4-0x000000018AC98144
+		internal static Settings GetInstance(); // 0x0000000184A344E0-0x0000000184A34530
+		private static Settings GetOrCreateInstance(); // 0x0000000184A34420-0x0000000184A344E0
 	}
 
-	public class SRDebuggerInit : SRMonoBehaviourEx // TypeDefIndex: 57719
+	[AddComponentMenu("")]
+	[Obsolete("No longer required, use Automatic initialization mode or call SRDebug.Init() manually.")]
+	public class SRDebuggerInit : SRMonoBehaviourEx // TypeDefIndex: 60228
 	{
 		// Constructors
-		public SRDebuggerInit() {} // 0x000000018646DB20-0x000000018646DB28
+		public SRDebuggerInit(); // 0x0000000185393520-0x0000000185393538
 	}
 
-	public class NumberRangeAttribute : Attribute // TypeDefIndex: 57720
+	[AttributeUsage(AttributeTargets.Property)]
+	public class NumberRangeAttribute : Attribute // TypeDefIndex: 60229
 	{
 		// Fields
 		public readonly double Max; // 0x10
 		public readonly double Min; // 0x18
 	
 		// Constructors
-		public NumberRangeAttribute() {} // Dummy constructor
-		public NumberRangeAttribute(double min, double max) {} // 0x0000000185FAFF70-0x0000000185FAFF80
+		public NumberRangeAttribute(double min, double max); // 0x0000000184D85BB0-0x0000000184D85BC0
 	}
 
-	public class IncrementAttribute : Attribute // TypeDefIndex: 57721
+	[AttributeUsage(AttributeTargets.Property)]
+	public class IncrementAttribute : Attribute // TypeDefIndex: 60230
 	{
 		// Fields
 		public readonly double Increment; // 0x10
 	
 		// Constructors
-		public IncrementAttribute() {} // Dummy constructor
-		public IncrementAttribute(double increment) {} // 0x0000000185FAFF60-0x0000000185FAFF70
+		public IncrementAttribute(double increment); // 0x0000000184D85BA0-0x0000000184D85BB0
 	}
 
-	public class SortAttribute : Attribute // TypeDefIndex: 57722
+	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property)]
+	public class SortAttribute : Attribute // TypeDefIndex: 60231
 	{
 		// Fields
 		public readonly int SortPriority; // 0x10
 	
 		// Constructors
-		public SortAttribute() {} // Dummy constructor
-		public SortAttribute(int priority) {} // 0x0000000181378230-0x0000000181378240
+		public SortAttribute(int priority); // 0x00000001814F51F0-0x00000001814F5220
 	}
 
-	public static class VersionInfo // TypeDefIndex: 57723
+	public static class VersionInfo // TypeDefIndex: 60232
 	{
 		// Fields
-		public const string Version = "1.12.1"; // Metadata: 0x0207DA76
+		public const string Version = "1.12.1"; // Metadata: 0x0234D31E
 	}
 }
 
 namespace SRDebugger.Internal
 {
-	public static class SRDebugApi // TypeDefIndex: 57832
+	public static class SRDebugApi // TypeDefIndex: 60341
 	{
 		// Fields
-		public const string Protocol = "https://"; // Metadata: 0x0207DB31
-		public const string EndPoint = "https://srdebugger.stompyrobot.uk"; // Metadata: 0x0207DB3A
-		public const string BugReportEndPoint = "https://srdebugger.stompyrobot.uk/report/submit"; // Metadata: 0x0207DB5C
+		public const string Protocol = "https://"; // Metadata: 0x0234D3D9
+		public const string EndPoint = "https://srdebugger.stompyrobot.uk"; // Metadata: 0x0234D3E2
+		public const string BugReportEndPoint = "https://srdebugger.stompyrobot.uk/report/submit"; // Metadata: 0x0234D404
 	}
 
-	public static class SRDebugApiUtil // TypeDefIndex: 57833
+	public static class SRDebugApiUtil // TypeDefIndex: 60342
 	{
 		// Methods
-		public static string ParseErrorException(WebException ex) => default; // 0x000000018B7E7160-0x000000018B7E723C
-		public static string ParseErrorResponse(string response, string fallback = "Unexpected Response" /* Metadata: 0x0207DB8C */) => default; // 0x000000018B7E723C-0x000000018B7E76D4
-		public static bool ReadResponse(HttpWebRequest request, out string result) {
-			result = default;
-			return default;
-		} // 0x000000018B7E785C-0x000000018B7E791C
-		public static string ReadResponseStream(WebResponse stream) => default; // 0x000000018B7E76D4-0x000000018B7E785C
+		public static string ParseErrorException(WebException ex); // 0x000000018AC9F6BC-0x000000018AC9F798
+		public static string ParseErrorResponse(string response, string fallback = "Unexpected Response" /* Metadata: 0x0234D434 */); // 0x000000018AC9F798-0x000000018AC9FC30
+		public static bool ReadResponse(HttpWebRequest request, out string result); // 0x000000018AC9FDB8-0x000000018AC9FE78
+		public static string ReadResponseStream(WebResponse stream); // 0x000000018AC9FC30-0x000000018AC9FDB8
 	}
 
-	internal class BugReportApi : MonoBehaviour // TypeDefIndex: 57835
+	internal class BugReportApi : MonoBehaviour // TypeDefIndex: 60344
 	{
 		// Fields
 		private string _apiKey; // 0x18
@@ -616,7 +697,8 @@ namespace SRDebugger.Internal
 		private IProgress<float> _progress; // 0x40
 	
 		// Nested types
-		private sealed class _Submit_d__9 : IEnumerator<object> // TypeDefIndex: 57834
+		[CompilerGenerated]
+		private sealed class _Submit_d__9 : IEnumerator<object> // TypeDefIndex: 60343
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -624,92 +706,100 @@ namespace SRDebugger.Internal
 			public BugReportApi __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018B7E18A0-0x000000018B7E18FC 
-			object IEnumerator.Current { get => default; } // 0x000000018B7E11C4-0x000000018B7E1340 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _Submit_d__9() {} // Dummy constructor
-			public _Submit_d__9(int __1__state) {} // 0x000000018B7E1760-0x000000018B7E18A0
+			[DebuggerHidden]
+			public _Submit_d__9(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018B7E162C-0x000000018B7E1674
-			private bool MoveNext() => default; // 0x000000018B7E18FC-0x000000018B7E196C
-			void IEnumerator.Reset() {} // 0x000000018B7E1674-0x000000018B7E1760
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018ACA3294-0x000000018ACA37EC
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018ACA37EC-0x000000018ACA3838
 		}
 	
 		// Constructors
-		public BugReportApi() {} // 0x0000000181377E40-0x0000000181377E50
+		public BugReportApi(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		public static void Submit(BugReport report, string apiKey, Action<BugReportSubmitResult> onComplete, IProgress<float> progress) {} // 0x000000018B7E1340-0x000000018B7E162C
-		private void Init(BugReport report, string apiKey, Action<BugReportSubmitResult> onComplete, IProgress<float> progress) {} // 0x000000018646DB20-0x000000018646DB28
-		private void Update() {} // 0x0000000181378230-0x0000000181378240
-		private IEnumerator Submit() => default; // 0x0000000185492010-0x0000000185492020
-		private void SetCompletionState(BugReportSubmitResult result) {} // 0x000000018B7EAF7C-0x000000018B7EB4D4
-		private static string BuildJsonRequest(BugReport report) => default; // 0x0000000181377E40-0x0000000181377E50
-		private static List<List<string>> CreateConsoleDump() => default; // 0x000000018B7EB4D4-0x000000018B7EB520
+		public static void Submit(BugReport report, string apiKey, Action<BugReportSubmitResult> onComplete, IProgress<float> progress); // 0x000000018AC99D98-0x000000018AC99ED8
+		private void Init(BugReport report, string apiKey, Action<BugReportSubmitResult> onComplete, IProgress<float> progress); // 0x000000018AC99C64-0x000000018AC99CAC
+		private void Update(); // 0x000000018AC99F34-0x000000018AC99FA4
+		[IteratorStateMachine(typeof(_Submit_d__9))]
+		private IEnumerator Submit(); // 0x000000018AC99ED8-0x000000018AC99F34
+		private void SetCompletionState(BugReportSubmitResult result); // 0x000000018AC99CAC-0x000000018AC99D98
+		private static string BuildJsonRequest(BugReport report); // 0x000000018AC997FC-0x000000018AC99978
+		private static List<List<string>> CreateConsoleDump(); // 0x000000018AC99978-0x000000018AC99C64
 	}
 
-	public class BugReportScreenshotUtil // TypeDefIndex: 57837
+	public class BugReportScreenshotUtil // TypeDefIndex: 60346
 	{
 		// Fields
 		public static byte[] ScreenshotData; // 0x00
 	
 		// Nested types
-		private sealed class _ScreenshotCaptureCo_d__1 : IEnumerator<object> // TypeDefIndex: 57836
+		[CompilerGenerated]
+		private sealed class _ScreenshotCaptureCo_d__1 : IEnumerator<object> // TypeDefIndex: 60345
 		{
 			// Fields
 			private int __1__state; // 0x10
 			private object __2__current; // 0x18
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000185492010-0x0000000185492020 
-			object IEnumerator.Current { get => default; } // 0x0000000181377E40-0x0000000181377E50 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _ScreenshotCaptureCo_d__1() {} // Dummy constructor
-			public _ScreenshotCaptureCo_d__1(int __1__state) {} // 0x000000018B7E196C-0x000000018B7E19B0
+			[DebuggerHidden]
+			public _ScreenshotCaptureCo_d__1(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x0000000185492010-0x0000000185492020
-			private bool MoveNext() => default; // 0x0000000181378230-0x0000000181378240
-			void IEnumerator.Reset() {} // 0x000000018B7EAD54-0x000000018B7EAF30
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018ACA306C-0x000000018ACA3248
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018ACA3248-0x000000018ACA3294
 		}
 	
 		// Constructors
-		public BugReportScreenshotUtil() {} // 0x0000000181377E40-0x0000000181377E50
+		public BugReportScreenshotUtil(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static IEnumerator ScreenshotCaptureCo() => default; // 0x000000018B7EAF30-0x000000018B7EAF7C
+		[IteratorStateMachine(typeof(_ScreenshotCaptureCo_d__1))]
+		public static IEnumerator ScreenshotCaptureCo(); // 0x000000018AC99FA4-0x000000018AC99FE8
 	}
 
-	internal class InternalBugReporterHandler : IBugReporterHandler // TypeDefIndex: 57838
+	internal class InternalBugReporterHandler : IBugReporterHandler // TypeDefIndex: 60347
 	{
 		// Properties
-		public bool IsUsable { get => default; } // 0x000000018B7E2F58-0x000000018B7E2F98 
+		public bool IsUsable { get; } // 0x000000018AC9B554-0x000000018AC9B594 
 	
 		// Constructors
-		public InternalBugReporterHandler() {} // 0x0000000185492010-0x0000000185492020
+		public InternalBugReporterHandler(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public void Submit(BugReport report, Action<BugReportSubmitResult> onComplete, IProgress<float> progress) {} // 0x000000018B7E2F04-0x000000018B7E2F58
+		public void Submit(BugReport report, Action<BugReportSubmitResult> onComplete, IProgress<float> progress); // 0x000000018AC9B500-0x000000018AC9B554
 	}
 
-	public sealed class InternalOptionsRegistry // TypeDefIndex: 57839
+	[Service(typeof(InternalOptionsRegistry))]
+	public sealed class InternalOptionsRegistry // TypeDefIndex: 60348
 	{
 		// Fields
 		private List<object> _registeredContainers; // 0x10
 		private Action<object> _handler; // 0x18
 	
 		// Constructors
-		public InternalOptionsRegistry() {} // 0x0000000185F595F0-0x0000000185F59670
+		public InternalOptionsRegistry(); // 0x0000000184D2F4A0-0x0000000184D2F520
 	
 		// Methods
-		public void AddOptionContainer(object obj) {} // 0x000000018466ED40-0x000000018466EDA0
-		public void SetHandler(Action<object> action) {} // 0x0000000184B89330-0x0000000184B89490
+		public void AddOptionContainer(object obj); // 0x0000000183A45A50-0x0000000183A45AB0
+		public void SetHandler(Action<object> action); // 0x00000001839E8710-0x00000001839E8870
 	}
 
-	public static class OptionControlFactory // TypeDefIndex: 57842
+	public static class OptionControlFactory // TypeDefIndex: 60351
 	{
 		// Fields
 		private static IList<DataBoundControl> _dataControlPrefabs; // 0x00
@@ -717,62 +807,60 @@ namespace SRDebugger.Internal
 		private static readonly Dictionary<OptionType, DataBoundControl> TypeCache; // 0x10
 	
 		// Nested types
-		private struct OptionType // TypeDefIndex: 57840
+		private struct OptionType // TypeDefIndex: 60349
 		{
 			// Fields
 			public readonly System.Type Type; // 0x00
 			public readonly bool IsReadyOnly; // 0x08
 	
 			// Constructors
-			public OptionType(System.Type type, bool isReadyOnly) {
-				Type = default;
-				IsReadyOnly = default;
-			} // 0x000000018B7E3FF0-0x000000018B7E4098
+			public OptionType(System.Type type, bool isReadyOnly); // 0x00000001886D0120-0x00000001886D013C
 	
 			// Methods
-			public bool Equals(OptionType other) => default; // 0x000000018B7E4198-0x000000018B7E4284
-			public override bool Equals(object obj) => default; // 0x000000018B7E4568-0x000000018B7E4734
-			public override int GetHashCode() => default; // 0x000000018B7E4098-0x000000018B7E4198
+			public bool Equals(OptionType other); // 0x000000018AC9CF80-0x000000018AC9CFB8
+			public override bool Equals(object obj); // 0x000000018AC9CF10-0x000000018AC9CF80
+			public override int GetHashCode(); // 0x000000018AC9CFB8-0x000000018AC9D054
 		}
 	
-		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 57841
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 60350
 		{
 			// Fields
 			public OptionDefinition from; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass8_0() {} // 0x000000018B7E4284-0x000000018B7E4568
+			public __c__DisplayClass8_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _TryGetDataControlPrefab_b__0(DataBoundControl p) => default; // 0x000000018B7E4734-0x000000018B7E4910
+			internal bool _TryGetDataControlPrefab_b__0(DataBoundControl p); // 0x000000018ACA3BF4-0x000000018ACA3C38
 		}
 	
 		// Constructors
-		static OptionControlFactory() {} // 0x000000018B7EB90C-0x000000018B7EB950
+		static OptionControlFactory(); // 0x000000018AC9CE7C-0x000000018AC9CF10
 	
 		// Methods
-		public static bool CanCreateControl(OptionDefinition from) => default; // 0x000000018B7E4910-0x000000018B7E49A4
-		public static OptionsControlBase CreateControl(OptionDefinition from, string categoryPrefix = null) => default; // 0x000000018931A200-0x000000018931A21C
-		private static void PopulateDataControlPrefabs() {} // 0x000000018B7E4A14-0x000000018B7E4A4C
-		private static ActionControl CreateActionControl(OptionDefinition from, string categoryPrefix = null) => default; // 0x000000018B7E49A4-0x000000018B7E4A14
-		private static DataBoundControl CreateDataControl(OptionDefinition from, string categoryPrefix = null) => default; // 0x000000018B7E4A4C-0x000000018B7E4AE8
-		private static DataBoundControl TryGetDataControlPrefab(OptionDefinition from) => default; // 0x0000000185492010-0x0000000185492020
+		public static bool CanCreateControl(OptionDefinition from); // 0x000000018AC9C55C-0x000000018AC9C604
+		public static OptionsControlBase CreateControl(OptionDefinition from, string categoryPrefix = null); // 0x000000018AC9C704-0x000000018AC9C7F0
+		private static void PopulateDataControlPrefabs(); // 0x000000018AC9CAD4-0x000000018AC9CCA0
+		private static ActionControl CreateActionControl(OptionDefinition from, string categoryPrefix = null); // 0x000000018AC9C604-0x000000018AC9C704
+		private static DataBoundControl CreateDataControl(OptionDefinition from, string categoryPrefix = null); // 0x000000018AC9C7F0-0x000000018AC9CAD4
+		private static DataBoundControl TryGetDataControlPrefab(OptionDefinition from); // 0x000000018AC9CCA0-0x000000018AC9CE7C
 	}
 
-	public static class SRDebugPaths // TypeDefIndex: 57843
+	public static class SRDebugPaths // TypeDefIndex: 60352
 	{
 		// Fields
-		public const string DataControlsResourcesPath = "SRDebugger/UI/Prefabs/Options"; // Metadata: 0x0207DBA0
-		public const string TriggerPrefabPath = "SRDebugger/UI/Prefabs/Trigger"; // Metadata: 0x0207DBBE
-		public const string DebugPanelPrefabPath = "SRDebugger/UI/Prefabs/DebugPanel"; // Metadata: 0x0207DBDC
-		public const string PinnedUIPrefabPath = "SRDebugger/UI/Prefabs/PinnedUI"; // Metadata: 0x0207DBFD
-		public const string DockConsolePrefabPath = "SRDebugger/UI/Prefabs/DockConsole"; // Metadata: 0x0207DC1C
-		public const string PinEntryPrefabPath = "SRDebugger/UI/Prefabs/PinEntry"; // Metadata: 0x0207DC3E
-		public const string BugReportPopoverPath = "SRDebugger/UI/Prefabs/BugReportPopover"; // Metadata: 0x0207DC5D
-		public const string BugReportSheetPath = "SRDebugger/UI/Prefabs/BugReportSheet"; // Metadata: 0x0207DC84
+		public const string DataControlsResourcesPath = "SRDebugger/UI/Prefabs/Options"; // Metadata: 0x0234D448
+		public const string TriggerPrefabPath = "SRDebugger/UI/Prefabs/Trigger"; // Metadata: 0x0234D466
+		public const string DebugPanelPrefabPath = "SRDebugger/UI/Prefabs/DebugPanel"; // Metadata: 0x0234D484
+		public const string PinnedUIPrefabPath = "SRDebugger/UI/Prefabs/PinnedUI"; // Metadata: 0x0234D4A5
+		public const string DockConsolePrefabPath = "SRDebugger/UI/Prefabs/DockConsole"; // Metadata: 0x0234D4C4
+		public const string PinEntryPrefabPath = "SRDebugger/UI/Prefabs/PinEntry"; // Metadata: 0x0234D4E6
+		public const string BugReportPopoverPath = "SRDebugger/UI/Prefabs/BugReportPopover"; // Metadata: 0x0234D505
+		public const string BugReportSheetPath = "SRDebugger/UI/Prefabs/BugReportSheet"; // Metadata: 0x0234D52C
 	}
 
-	public static class Service // TypeDefIndex: 57844
+	public static class Service // TypeDefIndex: 60353
 	{
 		// Fields
 		private static IConsoleService _consoleService; // 0x00
@@ -784,16 +872,16 @@ namespace SRDebugger.Internal
 		private static IDockConsoleService _dockConsoleService; // 0x30
 	
 		// Properties
-		public static IConsoleService Console { get; } // 0x000000018B7E9670-0x000000018B7E9710 
-		public static IDockConsoleService DockConsole { get; } // 0x000000018B7E97B8-0x000000018B7E9860 
-		public static IDebugPanelService Panel { get; } // 0x000000018B7E9908-0x000000018B7E99B0 
-		public static IDebugTriggerService Trigger { get; } // 0x000000018B7E9A58-0x000000018B7E9B00 
-		public static IPinnedUIService PinnedUI { get; } // 0x000000018B7E99B0-0x000000018B7E9A58 
-		public static IDebugCameraService DebugCamera { get; } // 0x000000018B7E9710-0x000000018B7E97B8 
-		public static IOptionsService Options { get; } // 0x000000018B7E9860-0x000000018B7E9908 
+		public static IConsoleService Console { get; } // 0x000000018ACA19AC-0x000000018ACA1A4C 
+		public static IDockConsoleService DockConsole { get; } // 0x000000018ACA1AF4-0x000000018ACA1B9C 
+		public static IDebugPanelService Panel { get; } // 0x000000018ACA1C44-0x000000018ACA1CEC 
+		public static IDebugTriggerService Trigger { get; } // 0x000000018ACA1D94-0x000000018ACA1E3C 
+		public static IPinnedUIService PinnedUI { get; } // 0x000000018ACA1CEC-0x000000018ACA1D94 
+		public static IDebugCameraService DebugCamera { get; } // 0x000000018ACA1A4C-0x000000018ACA1AF4 
+		public static IOptionsService Options { get; } // 0x000000018ACA1B9C-0x000000018ACA1C44 
 	}
 
-	public class SRDebugStrings // TypeDefIndex: 57845
+	public class SRDebugStrings // TypeDefIndex: 60354
 	{
 		// Fields
 		public static readonly SRDebugStrings Current; // 0x00
@@ -807,46 +895,48 @@ namespace SRDebugger.Internal
 		public readonly string ProfilerCameraListenerHelp; // 0x48
 	
 		// Constructors
-		public SRDebugStrings() {} // 0x000000018B7E917C-0x000000018B7E929C
-		static SRDebugStrings() {} // 0x000000018B7E910C-0x000000018B7E917C
+		public SRDebugStrings(); // 0x000000018ACA14E4-0x000000018ACA1604
+		static SRDebugStrings(); // 0x000000018ACA1474-0x000000018ACA14E4
 	}
 
-	public static class SRDebuggerUtil // TypeDefIndex: 57846
+	public static class SRDebuggerUtil // TypeDefIndex: 60355
 	{
 		// Properties
-		public static bool IsMobilePlatform { get; } // 0x000000018B7E9644-0x000000018B7E9670 
+		public static bool IsMobilePlatform { get; } // 0x000000018ACA1980-0x000000018ACA19AC 
 	
 		// Methods
-		public static bool EnsureEventSystemExists() => default; // 0x000000018B7E94E8-0x000000018B7E9620
-		public static void CreateDefaultEventSystem() {} // 0x000000018B7E93E8-0x000000018B7E94E8
-		private static void AddInputSystem(GameObject go) {} // 0x000000018B7E929C-0x000000018B7E92FC
-		private static void AddLegacyInputSystem(GameObject go) {} // 0x000000018B7E92FC-0x000000018B7E9340
-		public static List<OptionDefinition> ScanForOptions(object obj) => default; // 0x00000001840886B0-0x0000000184088A80
-		public static string GetNumberString(int value, int max, string exceedsMaxString) => default; // 0x000000018B7E9620-0x000000018B7E9644
-		public static void ConfigureCanvas(Canvas canvas) {} // 0x000000018B7E9340-0x000000018B7E93E8
+		public static bool EnsureEventSystemExists(); // 0x000000018ACA1824-0x000000018ACA195C
+		public static void CreateDefaultEventSystem(); // 0x000000018ACA1724-0x000000018ACA1824
+		private static void AddInputSystem(GameObject go); // 0x000000018ACA1604-0x000000018ACA1664
+		private static void AddLegacyInputSystem(GameObject go); // 0x000000018ACA1664-0x000000018ACA16A8
+		public static List<OptionDefinition> ScanForOptions(object obj); // 0x000000018445F630-0x000000018445FA00
+		public static string GetNumberString(int value, int max, string exceedsMaxString); // 0x000000018ACA195C-0x000000018ACA1980
+		public static void ConfigureCanvas(Canvas canvas); // 0x000000018ACA16A8-0x000000018ACA1724
 	}
 }
 
 namespace SRDebugger.Profiler
 {
-	public class ProfilerLateUpdateListener : MonoBehaviour // TypeDefIndex: 57828
+	public class ProfilerLateUpdateListener : MonoBehaviour // TypeDefIndex: 60337
 	{
 		// Fields
 		public Action OnLateUpdate; // 0x18
 	
 		// Constructors
-		public ProfilerLateUpdateListener() {} // 0x000000018646DB20-0x000000018646DB28
+		public ProfilerLateUpdateListener(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void LateUpdate() {} // 0x00000001850F1AC0-0x00000001850F1AE0
+		private void LateUpdate(); // 0x0000000183EFA060-0x0000000183EFA080
 	}
 
-	public class ProfilerServiceImpl : SRServiceBase<IProfilerService>, IProfilerService // TypeDefIndex: 57829
+	public class ProfilerServiceImpl : SRServiceBase<IProfilerService>, IProfilerService // TypeDefIndex: 60338
 	{
 		// Fields
+		[CompilerGenerated]
 		private float _AverageFrameTime_k__BackingField; // 0x48
+		[CompilerGenerated]
 		private float _LastFrameTime_k__BackingField; // 0x4C
-		private const int FrameBufferSize = 400; // Metadata: 0x0207DB2D
+		private const int FrameBufferSize = 400; // Metadata: 0x0234D3D5
 		private readonly CircularBuffer<ProfilerFrame> _frameBuffer; // 0x50
 		private ProfilerLateUpdateListener _lateUpdateListener; // 0x58
 		private readonly Stopwatch _stopwatch; // 0x60
@@ -856,29 +946,31 @@ namespace SRDebugger.Profiler
 		private int _camerasThisFrame; // 0x80
 	
 		// Properties
-		public float AverageFrameTime { get; private set; } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public float LastFrameTime { get; private set; } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public CircularBuffer<ProfilerFrame> FrameBuffer { get => default; } // 0x0000000181460F60-0x0000000181460F70 
+		public float AverageFrameTime { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public float LastFrameTime { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public CircularBuffer<ProfilerFrame> FrameBuffer { get; } // 0x0000000184D86270-0x0000000184D86280 
 	
 		// Constructors
-		public ProfilerServiceImpl() {} // 0x000000018B7E6FC8-0x000000018B7E7084
+		public ProfilerServiceImpl(); // 0x000000018AC9F520-0x000000018AC9F5E0
 	
 		// Methods
-		protected override void Awake() {} // 0x000000018B7E6888-0x000000018B7E6B8C
-		protected override void Update() {} // 0x000000018B7E6E44-0x000000018B7E6FC8
-		protected void PushFrame(double totalTime, double updateTime, double renderTime) {} // 0x000000018B7E6DA8-0x000000018B7E6E44
-		private void OnLateUpdate() {} // 0x000000018B7E6D38-0x000000018B7E6DA8
-		private void OnCameraPreRender(Camera cam) {} // 0x000000018B7E6CB8-0x000000018B7E6D38
-		private void OnCameraPostRender(Camera cam) {} // 0x000000018B7E6C44-0x000000018B7E6CB8
-		private void EndFrame() {} // 0x000000018B7E6B8C-0x000000018B7E6C44
+		protected override void Awake(); // 0x000000018AC9EDE0-0x000000018AC9F0E4
+		protected override void Update(); // 0x000000018AC9F39C-0x000000018AC9F520
+		protected void PushFrame(double totalTime, double updateTime, double renderTime); // 0x000000018AC9F300-0x000000018AC9F39C
+		private void OnLateUpdate(); // 0x000000018AC9F290-0x000000018AC9F300
+		private void OnCameraPreRender(Camera cam); // 0x000000018AC9F210-0x000000018AC9F290
+		private void OnCameraPostRender(Camera cam); // 0x000000018AC9F19C-0x000000018AC9F210
+		private void EndFrame(); // 0x000000018AC9F0E4-0x000000018AC9F19C
 	}
 
-	public class SRPProfilerService : SRServiceBase<IProfilerService>, IProfilerService // TypeDefIndex: 57831
+	public class SRPProfilerService : SRServiceBase<IProfilerService>, IProfilerService // TypeDefIndex: 60340
 	{
 		// Fields
+		[CompilerGenerated]
 		private float _AverageFrameTime_k__BackingField; // 0x48
+		[CompilerGenerated]
 		private float _LastFrameTime_k__BackingField; // 0x4C
-		private const int FrameBufferSize = 400; // Metadata: 0x0207DB2F
+		private const int FrameBufferSize = 400; // Metadata: 0x0234D3D7
 		private readonly CircularBuffer<ProfilerFrame> _frameBuffer; // 0x50
 		private ProfilerLateUpdateListener _lateUpdateListener; // 0x58
 		private double _updateDuration; // 0x60
@@ -887,12 +979,13 @@ namespace SRDebugger.Profiler
 		private readonly Stopwatch _stopwatch; // 0x78
 	
 		// Properties
-		public float AverageFrameTime { get; private set; } // 0x0000000183F9E7C0-0x0000000183F9ED00 0x0000000184A82C40-0x0000000184A82CA0
-		public float LastFrameTime { get; private set; } // 0x0000000183F9F110-0x0000000183F9F1D0 0x0000000183F9EF80-0x0000000183F9F000
-		public CircularBuffer<ProfilerFrame> FrameBuffer { get => default; } // 0x0000000183F9DD80-0x0000000183F9DE00 
+		public float AverageFrameTime { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public float LastFrameTime { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public CircularBuffer<ProfilerFrame> FrameBuffer { get; } // 0x0000000184D86270-0x0000000184D86280 
 	
 		// Nested types
-		private sealed class _EndOfFrameCoroutine_d__19 : IEnumerator<object> // TypeDefIndex: 57830
+		[CompilerGenerated]
+		private sealed class _EndOfFrameCoroutine_d__19 : IEnumerator<object> // TypeDefIndex: 60339
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -901,82 +994,90 @@ namespace SRDebugger.Profiler
 			private WaitForEndOfFrame _endOfFrame_5__2; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000185FBFAC0-0x0000000185FBFAD0 
-			object IEnumerator.Current { get => default; } // 0x0000000184A82A50-0x0000000184A82C40 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _EndOfFrameCoroutine_d__19() {} // Dummy constructor
-			public _EndOfFrameCoroutine_d__19(int __1__state) {} // 0x0000000185FB80E0-0x0000000185FB80F0
+			[DebuggerHidden]
+			public _EndOfFrameCoroutine_d__19(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x0000000185FBCE20-0x0000000185FBCE30
-			private bool MoveNext() => default; // 0x0000000185FB1750-0x0000000185FB1760
-			void IEnumerator.Reset() {} // 0x0000000181460F60-0x0000000181460F70
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x00000001833F62F0-0x00000001833F63D0
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018ACA3020-0x000000018ACA306C
 		}
 	
 		// Constructors
-		public SRPProfilerService() {} // 0x0000000181377E40-0x0000000181377E50
+		public SRPProfilerService(); // 0x0000000184CC7890-0x0000000184CC7960
 	
 		// Methods
-		protected override void Awake() {} // 0x0000000183F9EDA0-0x0000000183F9EF80
-		protected override void Update() {} // 0x0000000185EDEBA0-0x0000000185EDEC60
-		private IEnumerator EndOfFrameCoroutine() => default; // 0x0000000181378230-0x0000000181378240
-		protected void PushFrame(double totalTime, double updateTime, double renderTime) {} // 0x0000000185492010-0x0000000185492020
-		private void OnLateUpdate() {} // 0x0000000183F9F000-0x0000000183F9F110
-		private void RenderPipelineOnBeginFrameRendering(ScriptableRenderContext context, List<Camera> cameras) {} // 0x0000000181377E40-0x0000000181377E50
-		private void EndFrame() {} // 0x000000018B7EAD08-0x000000018B7EAD54
+		protected override void Awake(); // 0x0000000183A47560-0x0000000183A47750
+		protected override void Update(); // 0x00000001833F5BC0-0x00000001833F6120
+		[IteratorStateMachine(typeof(_EndOfFrameCoroutine_d__19))]
+		private IEnumerator EndOfFrameCoroutine(); // 0x0000000183A47750-0x0000000183A477B0
+		protected void PushFrame(double totalTime, double updateTime, double renderTime); // 0x00000001833F63D0-0x00000001833F6440
+		private void OnLateUpdate(); // 0x00000001833F6290-0x00000001833F62F0
+		private void RenderPipelineOnBeginFrameRendering(ScriptableRenderContext context, List<Camera> cameras); // 0x00000001833F58E0-0x00000001833F5940
+		private void EndFrame(); // 0x00000001833F6160-0x00000001833F6290
 	}
 }
 
 namespace SRDebugger.Scripts
 {
-	public class DebuggerTabController : SRMonoBehaviourEx // TypeDefIndex: 57724
+	public class DebuggerTabController : SRMonoBehaviourEx // TypeDefIndex: 60233
 	{
 		// Fields
 		private SRTab _aboutTabInstance; // 0x48
 		private DefaultTabs? _activeTab; // 0x50
 		private bool _hasStarted; // 0x58
 		public SRTab AboutTab; // 0x60
+		[RequiredField]
 		public SRTabController TabController; // 0x68
 	
 		// Properties
-		public DefaultTabs? ActiveTab { get => default; } // 0x000000018B7D5354-0x000000018B7D5478 
+		public DefaultTabs? ActiveTab { get; } // 0x000000018AC8DBDC-0x000000018AC8DD00 
 	
 		// Constructors
-		public DebuggerTabController() {} // 0x000000018646DB20-0x000000018646DB28
+		public DebuggerTabController(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7D4F78-0x000000018B7D5354
-		public bool OpenTab(DefaultTabs tab) => default; // 0x000000018B7D4D14-0x000000018B7D4F08
-		public void ShowAboutTab() {} // 0x000000018B7D4F08-0x000000018B7D4F78
+		protected override void Start(); // 0x000000018AC8D820-0x000000018AC8DBDC
+		public bool OpenTab(DefaultTabs tab); // 0x000000018AC8D5BC-0x000000018AC8D7B0
+		public void ShowAboutTab(); // 0x000000018AC8D7B0-0x000000018AC8D820
 	}
 }
 
 namespace SRDebugger.Services
 {
-	public sealed class ConsoleFilterStateService // TypeDefIndex: 57786
+	public sealed class ConsoleFilterStateService // TypeDefIndex: 60295
 	{
 		// Fields
+		[CompilerGenerated]
 		private ConsoleStateChangedEventHandler FilterStateChange; // 0x10
 		private bool[] _states; // 0x18
 	
 		// Events
-		public event ConsoleStateChangedEventHandler FilterStateChange;
+		public event ConsoleStateChangedEventHandler FilterStateChange {
+			add; // 0x000000018AC8AF00-0x000000018AC8AF94
+			remove; // 0x000000018AC8B028-0x000000018AC8B0BC
+		}
 	
 		// Constructors
-		public ConsoleFilterStateService() {} // 0x000000018B7D2448-0x000000018B7D2530
+		public ConsoleFilterStateService(); // 0x000000018AC8AD30-0x000000018AC8AE18
 	
 		// Methods
-		public void SetState(UnityEngine.LogType type, bool newState) {} // 0x000000018B7D23D8-0x000000018B7D2448
-		public bool GetState(UnityEngine.LogType type) => default; // 0x000000018B7D235C-0x000000018B7D2398
-		private static UnityEngine.LogType GetType(UnityEngine.LogType type) => default; // 0x000000018B7D2398-0x000000018B7D23D8
+		public void SetState(UnityEngine.LogType type, bool newState); // 0x000000018AC8ACC0-0x000000018AC8AD30
+		public bool GetState(UnityEngine.LogType type); // 0x000000018AC8AC44-0x000000018AC8AC80
+		private static UnityEngine.LogType GetType(UnityEngine.LogType type); // 0x000000018AC8AC80-0x000000018AC8ACC0
 	}
 
-	public delegate void BugReportCompleteCallback(bool didSucceed, string errorMessage); // TypeDefIndex: 57787; 0x00000001831C5680-0x00000001831C5690
+	public delegate void BugReportCompleteCallback(bool didSucceed, string errorMessage); // TypeDefIndex: 60296; 0x00000001838E1420-0x00000001838E1430
 
-	public delegate void BugReportProgressCallback(float progress); // TypeDefIndex: 57788; 0x00000001833EEC70-0x00000001833EEC80
+	public delegate void BugReportProgressCallback(float progress); // TypeDefIndex: 60297; 0x0000000182B46B90-0x0000000182B46BA0
 
-	public interface IBugReportService // TypeDefIndex: 57789
+	public interface IBugReportService // TypeDefIndex: 60298
 	{
 		// Properties
 		bool IsUsable { get; }
@@ -986,21 +1087,24 @@ namespace SRDebugger.Services
 		void SendBugReport(BugReport report, BugReportCompleteCallback completeHandler, IProgress<float> progressCallback = null);
 	}
 
-	public delegate void ConsoleStateChangedEventHandler(UnityEngine.LogType logType, bool newState); // TypeDefIndex: 57790; 0x00000001831C5680-0x00000001831C5690
+	public delegate void ConsoleStateChangedEventHandler(UnityEngine.LogType logType, bool newState); // TypeDefIndex: 60299; 0x00000001838E1420-0x00000001838E1430
 
-	public interface IConsoleFilterState // TypeDefIndex: 57791
+	public interface IConsoleFilterState // TypeDefIndex: 60300
 	{
 		// Events
-		event ConsoleStateChangedEventHandler FilterStateChange;
+		event ConsoleStateChangedEventHandler FilterStateChange {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
 	
 		// Methods
 		void SetConsoleFilterState(UnityEngine.LogType logType, bool enabled);
 		bool GetConsoleFilterState(UnityEngine.LogType logType);
 	}
 
-	public delegate void ConsoleUpdatedEventHandler(IConsoleService console); // TypeDefIndex: 57792; 0x00000001833EEC70-0x00000001833EEC80
+	public delegate void ConsoleUpdatedEventHandler(IConsoleService console); // TypeDefIndex: 60301; 0x0000000182B46B90-0x0000000182B46BA0
 
-	public interface IConsoleService // TypeDefIndex: 57793
+	public interface IConsoleService // TypeDefIndex: 60302
 	{
 		// Properties
 		int CriticalCount { get; }
@@ -1013,18 +1117,24 @@ namespace SRDebugger.Services
 		bool LogHandlerIsOverriden { get; }
 	
 		// Events
-		event ConsoleUpdatedEventHandler Updated;
-		event ConsoleUpdatedEventHandler Error;
+		event ConsoleUpdatedEventHandler Updated {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
+		event ConsoleUpdatedEventHandler Error {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
 	
 		// Methods
 		void Clear();
 	}
 
-	public class ConsoleEntry // TypeDefIndex: 57794
+	public class ConsoleEntry // TypeDefIndex: 60303
 	{
 		// Fields
-		private const int MessagePreviewLength = 180; // Metadata: 0x0207DAFC
-		private const int StackTracePreviewLength = 120; // Metadata: 0x0207DAFE
+		private const int MessagePreviewLength = 180; // Metadata: 0x0234D3A4
+		private const int StackTracePreviewLength = 120; // Metadata: 0x0234D3A6
 		private string _messagePreview; // 0x10
 		private string _stackTracePreview; // 0x18
 		public int Count; // 0x20
@@ -1033,24 +1143,24 @@ namespace SRDebugger.Services
 		public string StackTrace; // 0x30
 	
 		// Properties
-		public string MessagePreview { get => default; } // 0x000000018B7D21E4-0x000000018B7D22A0 
-		public string StackTracePreview { get => default; } // 0x000000018B7D22A0-0x000000018B7D235C 
+		public string MessagePreview { get; } // 0x000000018AC8AACC-0x000000018AC8AB88 
+		public string StackTracePreview { get; } // 0x000000018AC8AB88-0x000000018AC8AC44 
 	
 		// Constructors
-		public ConsoleEntry() {} // 0x0000000185FBAD80-0x0000000185FBAD90
-		public ConsoleEntry(ConsoleEntry other) {} // 0x000000018B7D2190-0x000000018B7D21E4
+		public ConsoleEntry(); // 0x0000000184D8ECB0-0x0000000184D8ECC0
+		public ConsoleEntry(ConsoleEntry other); // 0x000000018AC8AA78-0x000000018AC8AACC
 	
 		// Methods
-		public bool Matches(ConsoleEntry other) => default; // 0x000000018B7D2130-0x000000018B7D2190
+		public bool Matches(ConsoleEntry other); // 0x000000018AC8AA18-0x000000018AC8AA78
 	}
 
-	public interface IDebugCameraService // TypeDefIndex: 57795
+	public interface IDebugCameraService // TypeDefIndex: 60304
 	{
 		// Properties
 		Camera Camera { get; }
 	}
 
-	public interface IDebugPanelService // TypeDefIndex: 57796
+	public interface IDebugPanelService // TypeDefIndex: 60305
 	{
 		// Properties
 		bool IsLoaded { get; }
@@ -1058,14 +1168,17 @@ namespace SRDebugger.Services
 		DefaultTabs? ActiveTab { get; }
 	
 		// Events
-		event Action<IDebugPanelService, bool> VisibilityChanged;
+		event Action<IDebugPanelService, bool> VisibilityChanged {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
 	
 		// Methods
 		void Unload();
 		void OpenTab(DefaultTabs tab);
 	}
 
-	public interface IDebugService // TypeDefIndex: 57797
+	public interface IDebugService // TypeDefIndex: 60306
 	{
 		// Properties
 		SRDebugger.Settings Settings { get; }
@@ -1077,13 +1190,19 @@ namespace SRDebugger.Services
 		bool IsProfilerDocked { get; set; }
 	
 		// Events
-		event VisibilityChangedDelegate PanelVisibilityChanged;
-		event PinnedUiCanvasCreated PinnedUiCanvasCreated;
+		event VisibilityChangedDelegate PanelVisibilityChanged {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
+		event PinnedUiCanvasCreated PinnedUiCanvasCreated {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
 	
 		// Methods
-		void AddSystemInfo(SRDebugger.InfoEntry entry, string category = "Default" /* Metadata: 0x0207DB00 */);
-		void ShowDebugPanel(bool requireEntryCode = true /* Metadata: 0x0207DB08 */);
-		void ShowDebugPanel(DefaultTabs tab, bool requireEntryCode = true /* Metadata: 0x0207DB09 */);
+		void AddSystemInfo(SRDebugger.InfoEntry entry, string category = "Default" /* Metadata: 0x0234D3A8 */);
+		void ShowDebugPanel(bool requireEntryCode = true /* Metadata: 0x0234D3B0 */);
+		void ShowDebugPanel(DefaultTabs tab, bool requireEntryCode = true /* Metadata: 0x0234D3B1 */);
 		void HideDebugPanel();
 		void SetEntryCode(EntryCode newCode);
 		void DisableEntryCode();
@@ -1097,12 +1216,12 @@ namespace SRDebugger.Services
 		void PinOption(string name);
 		void UnpinOption(string name);
 		void ClearPinnedOptions();
-		void ShowBugReportSheet(ActionCompleteCallback onComplete = null, bool takeScreenshot = true /* Metadata: 0x0207DB0A */, string descriptionContent = null);
+		void ShowBugReportSheet(ActionCompleteCallback onComplete = null, bool takeScreenshot = true /* Metadata: 0x0234D3B2 */, string descriptionContent = null);
 		RectTransform EnableWorldSpaceMode();
 		void SetBugReporterHandler(IBugReporterHandler bugReporterHandler);
 	}
 
-	public interface IDebugTriggerService // TypeDefIndex: 57798
+	public interface IDebugTriggerService // TypeDefIndex: 60307
 	{
 		// Properties
 		bool IsEnabled { get; set; }
@@ -1110,7 +1229,7 @@ namespace SRDebugger.Services
 		PinAlignment Position { get; set; }
 	}
 
-	public interface IDockConsoleService // TypeDefIndex: 57799
+	public interface IDockConsoleService // TypeDefIndex: 60308
 	{
 		// Properties
 		bool IsVisible { get; set; }
@@ -1118,15 +1237,19 @@ namespace SRDebugger.Services
 		ConsoleAlignment Alignment { get; set; }
 	}
 
-	public interface IOptionsService // TypeDefIndex: 57800
+	public interface IOptionsService // TypeDefIndex: 60309
 	{
 		// Properties
 		ICollection<OptionDefinition> Options { get; }
 	
 		// Events
-		event System.EventHandler OptionsUpdated;
+		event System.EventHandler OptionsUpdated {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
 	
 		// Methods
+		[Obsolete("Use IOptionsService.AddContainer instead.")]
 		void Scan(object obj);
 		void AddContainer(object obj);
 		void AddContainer(IOptionContainer optionContainer);
@@ -1134,40 +1257,47 @@ namespace SRDebugger.Services
 		void RemoveContainer(IOptionContainer optionContainer);
 	}
 
-	public delegate void PinEntryCompleteCallback(bool validPinEntered); // TypeDefIndex: 57801; 0x00000001833EEC70-0x00000001833EEC80
+	public delegate void PinEntryCompleteCallback(bool validPinEntered); // TypeDefIndex: 60310; 0x0000000182B46B90-0x0000000182B46BA0
 
-	public interface IPinEntryService // TypeDefIndex: 57802
+	public interface IPinEntryService // TypeDefIndex: 60311
 	{
 		// Properties
 		bool IsShowingKeypad { get; }
 	
 		// Methods
-		void ShowPinEntry(IReadOnlyList<int> requiredPin, string message, PinEntryCompleteCallback callback, bool allowCancel = true /* Metadata: 0x0207DB0B */);
+		void ShowPinEntry(IReadOnlyList<int> requiredPin, string message, PinEntryCompleteCallback callback, bool allowCancel = true /* Metadata: 0x0234D3B3 */);
 	}
 
-	public interface IPinnedUIService // TypeDefIndex: 57803
+	public interface IPinnedUIService // TypeDefIndex: 60312
 	{
 		// Properties
 		bool IsProfilerPinned { get; set; }
 	
 		// Events
-		event Action<OptionDefinition, bool> OptionPinStateChanged;
-		event Action<RectTransform> OptionsCanvasCreated;
+		event Action<OptionDefinition, bool> OptionPinStateChanged {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
+		event Action<RectTransform> OptionsCanvasCreated {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
 	
 		// Methods
-		void Pin(OptionDefinition option, int order = -1 /* Metadata: 0x0207DB0C */);
+		void Pin(OptionDefinition option, int order = -1 /* Metadata: 0x0234D3B4 */);
 		void Unpin(OptionDefinition option);
 		void UnpinAll();
 		bool HasPinned(OptionDefinition option);
 	}
 
-	public static class ProfilerServiceSelector // TypeDefIndex: 57804
+	public static class ProfilerServiceSelector // TypeDefIndex: 60313
 	{
 		// Methods
-		public static System.Type GetProfilerServiceType() => default; // 0x00000001840165D0-0x0000000184016680
+		[ServiceSelector(typeof(IProfilerService))]
+		public static System.Type GetProfilerServiceType(); // 0x00000001841E43F0-0x00000001841E44D0
 	}
 
-	public struct ProfilerFrame // TypeDefIndex: 57805
+	public struct ProfilerFrame // TypeDefIndex: 60314
 	{
 		// Fields
 		public double FrameTime; // 0x00
@@ -1176,7 +1306,7 @@ namespace SRDebugger.Services
 		public double UpdateTime; // 0x18
 	}
 
-	public interface IProfilerService // TypeDefIndex: 57806
+	public interface IProfilerService // TypeDefIndex: 60315
 	{
 		// Properties
 		float AverageFrameTime { get; }
@@ -1184,48 +1314,51 @@ namespace SRDebugger.Services
 		CircularBuffer<ProfilerFrame> FrameBuffer { get; }
 	}
 
-	public interface ISystemInformationService // TypeDefIndex: 57807
+	public interface ISystemInformationService // TypeDefIndex: 60316
 	{
 		// Methods
 		IEnumerable<string> GetCategories();
 		IList<SRDebugger.InfoEntry> GetInfo(string category);
-		void Add(SRDebugger.InfoEntry info, string category = "Default" /* Metadata: 0x0207DB0D */);
-		Dictionary<string, Dictionary<string, object>> CreateReport(bool includePrivate = false /* Metadata: 0x0207DB15 */);
+		void Add(SRDebugger.InfoEntry info, string category = "Default" /* Metadata: 0x0234D3B5 */);
+		Dictionary<string, Dictionary<string, object>> CreateReport(bool includePrivate = false /* Metadata: 0x0234D3BD */);
 	}
 }
 
 namespace SRDebugger.Services.Implementation
 {
-	internal class BugReportApiService : IBugReportService // TypeDefIndex: 57809
+	[Service(typeof(IBugReportService))]
+	internal class BugReportApiService : IBugReportService // TypeDefIndex: 60318
 	{
 		// Fields
 		private IBugReporterHandler _handler; // 0x10
 	
 		// Properties
-		public bool IsUsable { get => default; } // 0x000000018B7D0044-0x000000018B7D0328 
+		public bool IsUsable { get; } // 0x000000018AC88D18-0x000000018AC88D30 
 	
 		// Nested types
-		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 57808
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 60317
 		{
 			// Fields
 			public BugReportCompleteCallback completeHandler; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass4_0() {} // 0x000000018B7D0434-0x000000018B7D044C
+			public __c__DisplayClass4_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _SendBugReport_b__0(BugReportSubmitResult result) {} // 0x000000018B7D0328-0x000000018B7D03E4
+			internal void _SendBugReport_b__0(BugReportSubmitResult result); // 0x000000018AC993C4-0x000000018AC993F4
 		}
 	
 		// Constructors
-		public BugReportApiService() {} // 0x000000018B7E0C98-0x000000018B7E0CC8
+		public BugReportApiService(); // 0x000000018AC88CC8-0x000000018AC88D18
 	
 		// Methods
-		public void SetHandler(IBugReporterHandler handler) {} // 0x000000018B7D03E4-0x000000018B7D0434
-		public void SendBugReport(BugReport report, BugReportCompleteCallback completeHandler, IProgress<float> progress = null) {} // 0x0000000185492010-0x0000000185492020
+		public void SetHandler(IBugReporterHandler handler); // 0x000000018AC88C0C-0x000000018AC88CC8
+		public void SendBugReport(BugReport report, BugReportCompleteCallback completeHandler, IProgress<float> progress = null); // 0x000000018AC88944-0x000000018AC88C0C
 	}
 
-	public class BugReportPopoverService : SRServiceBase<BugReportPopoverService> // TypeDefIndex: 57811
+	[Service(typeof(BugReportPopoverService))]
+	public class BugReportPopoverService : SRServiceBase<BugReportPopoverService> // TypeDefIndex: 60320
 	{
 		// Fields
 		private BugReportCompleteCallback _callback; // 0x48
@@ -1234,10 +1367,11 @@ namespace SRDebugger.Services.Implementation
 		private BugReportSheetController _sheet; // 0x60
 	
 		// Properties
-		public bool IsShowingPopover { get => default; } // 0x000000018B7D0E20-0x000000018B7D0EA0 
+		public bool IsShowingPopover { get; } // 0x0000000184D86800-0x0000000184D86810 
 	
 		// Nested types
-		private sealed class _OpenCo_d__7 : IEnumerator<object> // TypeDefIndex: 57810
+		[CompilerGenerated]
+		private sealed class _OpenCo_d__7 : IEnumerator<object> // TypeDefIndex: 60319
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1247,75 +1381,85 @@ namespace SRDebugger.Services.Implementation
 			public string descriptionText; // 0x30
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018B7D0E04-0x000000018B7D0E20 
-			object IEnumerator.Current { get => default; } // 0x000000018B7D0A00-0x000000018B7D0B64 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _OpenCo_d__7() {} // Dummy constructor
-			public _OpenCo_d__7(int __1__state) {} // 0x00000001813ECBE0-0x00000001813ECBF0
+			[DebuggerHidden]
+			public _OpenCo_d__7(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018B7D0C6C-0x000000018B7D0E04
-			private bool MoveNext() => default; // 0x000000018B7D0B64-0x000000018B7D0BE8
-			void IEnumerator.Reset() {} // 0x000000018B7D0628-0x000000018B7D0670
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018AC98AFC-0x000000018AC98C24
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018AC98C24-0x000000018AC98C70
 		}
 	
 		// Constructors
-		public BugReportPopoverService() {} // 0x0000000181377E40-0x0000000181377E50
+		public BugReportPopoverService(); // 0x000000018AC89784-0x000000018AC897C4
 	
 		// Methods
-		public void ShowBugReporter(BugReportCompleteCallback callback, bool takeScreenshotFirst = true /* Metadata: 0x0207DB16 */, string descriptionText = null) {} // 0x000000018B7D0BE8-0x000000018B7D0C6C
-		private IEnumerator OpenCo(bool takeScreenshot, string descriptionText) => default; // 0x000000018B7D0594-0x000000018B7D0628
-		private void SubmitComplete(bool didSucceed, string errorMessage) {} // 0x000000018B7D0670-0x000000018B7D0A00
-		private void CancelPressed() {} // 0x000000018B7D0EA0-0x000000018B7D0ED4
-		private void OnComplete(bool success, string errorMessage, bool close) {} // 0x0000000181378230-0x0000000181378240
-		private void TakingScreenshot() {} // 0x0000000185492010-0x0000000185492020
-		private void ScreenshotComplete() {} // 0x000000018B7E0398-0x000000018B7E04C0
-		protected override void Awake() {} // 0x0000000181377E40-0x0000000181377E50
-		private void Load() {} // 0x000000018B7E04C0-0x000000018B7E050C
+		public void ShowBugReporter(BugReportCompleteCallback callback, bool takeScreenshotFirst = true /* Metadata: 0x0234D3BE */, string descriptionText = null); // 0x000000018AC89550-0x000000018AC896E8
+		[IteratorStateMachine(typeof(_OpenCo_d__7))]
+		private IEnumerator OpenCo(bool takeScreenshot, string descriptionText); // 0x000000018AC89448-0x000000018AC894CC
+		private void SubmitComplete(bool didSucceed, string errorMessage); // 0x000000018AC896E8-0x000000018AC89704
+		private void CancelPressed(); // 0x000000018AC88F0C-0x000000018AC88F54
+		private void OnComplete(bool success, string errorMessage, bool close); // 0x000000018AC892E4-0x000000018AC89448
+		private void TakingScreenshot(); // 0x000000018AC89704-0x000000018AC89784
+		private void ScreenshotComplete(); // 0x000000018AC894CC-0x000000018AC89550
+		protected override void Awake(); // 0x000000018AC88E78-0x000000018AC88F0C
+		private void Load(); // 0x000000018AC88F54-0x000000018AC892E4
 	}
 
-	public class DebugCameraServiceImpl : IDebugCameraService // TypeDefIndex: 57812
+	[Service(typeof(IDebugCameraService))]
+	public class DebugCameraServiceImpl : IDebugCameraService // TypeDefIndex: 60321
 	{
 		// Fields
 		private Camera _debugCamera; // 0x10
 	
 		// Properties
-		public Camera Camera { get => default; } // 0x000000018346D130-0x000000018346D140 
+		public Camera Camera { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
 	
 		// Constructors
-		public DebugCameraServiceImpl() {} // 0x000000018B7E19B0-0x000000018B7E1B2C
+		public DebugCameraServiceImpl(); // 0x000000018AC99FE8-0x000000018AC9A164
 	}
 
-	public class DebugPanelServiceImpl : ScriptableObject, IDebugPanelService, IDisposable // TypeDefIndex: 57813
+	[Service(typeof(IDebugPanelService))]
+	public class DebugPanelServiceImpl : ScriptableObject, IDebugPanelService, IDisposable // TypeDefIndex: 60322
 	{
 		// Fields
 		private DebugPanelRoot _debugPanelRootObject; // 0x18
+		[CompilerGenerated]
 		private Action<IDebugPanelService, bool> VisibilityChanged; // 0x20
 		private bool _isVisible; // 0x28
 		private bool? _cursorWasVisible; // 0x29
 		private CursorLockMode? _cursorLockMode; // 0x2C
 	
 		// Properties
-		public DebugPanelRoot RootObject { get => default; } // 0x0000000181377E40-0x0000000181377E50 
-		public bool IsLoaded { get => default; } // 0x000000018B7E1EC8-0x000000018B7E1F18 
-		public bool IsVisible { get => default; set {} } // 0x000000018B7E1F18-0x000000018B7E1F38 0x000000018B7E1FC4-0x000000018B7E22D4
-		public DefaultTabs? ActiveTab { get => default; } // 0x000000018B7E1E50-0x000000018B7E1EC8 
+		public DebugPanelRoot RootObject { get; } // 0x000000018385B100-0x000000018385B110 
+		public bool IsLoaded { get; } // 0x000000018AC9A500-0x000000018AC9A534 
+		public bool IsVisible { get; set; } // 0x000000018AC9A534-0x000000018AC9A554 0x000000018AC9A5E0-0x000000018AC9A8F0
+		public DefaultTabs? ActiveTab { get; } // 0x000000018AC9A488-0x000000018AC9A500 
 	
 		// Events
-		public event Action<IDebugPanelService, bool> VisibilityChanged;
+		public event Action<IDebugPanelService, bool> VisibilityChanged {
+			add; // 0x0000000183A458C0-0x0000000183A45950
+			remove; // 0x000000018AC9A554-0x000000018AC9A5E0
+		}
 	
 		// Constructors
-		public DebugPanelServiceImpl() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public DebugPanelServiceImpl(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
-		public void OpenTab(DefaultTabs tab) {} // 0x000000018B7E1D38-0x000000018B7E1D8C
-		public void Unload() {} // 0x000000018B7E1D8C-0x000000018B7E1E50
-		private void Load() {} // 0x000000018B7E1BB0-0x000000018B7E1D38
-		public void Dispose() {} // 0x000000018B7E1B2C-0x000000018B7E1BB0
+		public void OpenTab(DefaultTabs tab); // 0x000000018AC9A370-0x000000018AC9A3C4
+		public void Unload(); // 0x000000018AC9A3C4-0x000000018AC9A488
+		private void Load(); // 0x000000018AC9A1E8-0x000000018AC9A370
+		public void Dispose(); // 0x000000018AC9A164-0x000000018AC9A1E8
 	}
 
-	public class DebugTriggerImpl : SRServiceBase<IDebugTriggerService>, IDebugTriggerService // TypeDefIndex: 57814
+	[Service(typeof(IDebugTriggerService))]
+	public class DebugTriggerImpl : SRServiceBase<IDebugTriggerService>, IDebugTriggerService // TypeDefIndex: 60323
 	{
 		// Fields
 		private PinAlignment _position; // 0x48
@@ -1324,24 +1468,25 @@ namespace SRDebugger.Services.Implementation
 		private bool _showErrorNotification; // 0x60
 	
 		// Properties
-		public bool IsEnabled { get => default; set {} } // 0x000000018B7E29E4-0x000000018B7E2A60 0x000000018466EBD0-0x000000018466EC50
-		public bool ShowErrorNotification { get => default; set {} } // 0x000000018386C570-0x000000018386C580 0x0000000184A81CD0-0x0000000184A81D70
-		public PinAlignment Position { get => default; set {} } // 0x0000000185FB0570-0x0000000185FB0580 0x000000018466EC50-0x000000018466ECD0
+		public bool IsEnabled { get; set; } // 0x000000018AC9B000-0x000000018AC9B07C 0x0000000183A455C0-0x0000000183A45670
+		public bool ShowErrorNotification { get; set; } // 0x0000000184D88340-0x0000000184D88350 0x0000000183A48D40-0x0000000183A48E10
+		public PinAlignment Position { get; set; } // 0x0000000184D863D0-0x0000000184D863E0 0x0000000183A45710-0x0000000183A457B0
 	
 		// Constructors
-		public DebugTriggerImpl() {} // 0x0000000185FA13F0-0x0000000185FA1430
+		public DebugTriggerImpl(); // 0x0000000184D75AC0-0x0000000184D75B00
 	
 		// Methods
-		protected override void Awake() {} // 0x0000000184A82890-0x0000000184A829B0
-		private void OnError(IConsoleService console) {} // 0x000000018B7E2800-0x000000018B7E2874
-		private void CreateTrigger() {} // 0x000000018B7E22D4-0x000000018B7E26E8
-		protected override void OnDestroy() {} // 0x000000018B7E26F0-0x000000018B7E2800
-		private static void OnActiveSceneChanged(Scene s1, Scene s2) {} // 0x000000018B7E26E8-0x000000018B7E26F0
-		private void OnTriggerButtonClick() {} // 0x000000018B7E2874-0x000000018B7E2904
-		private static void SetTriggerPosition(RectTransform t, PinAlignment position) {} // 0x000000018B7E2904-0x000000018B7E29E4
+		protected override void Awake(); // 0x0000000183A473A0-0x0000000183A474C0
+		private void OnError(IConsoleService console); // 0x000000018AC9AE1C-0x000000018AC9AE90
+		private void CreateTrigger(); // 0x000000018AC9A8F0-0x000000018AC9AD04
+		protected override void OnDestroy(); // 0x000000018AC9AD0C-0x000000018AC9AE1C
+		private static void OnActiveSceneChanged(Scene s1, Scene s2); // 0x000000018AC9AD04-0x000000018AC9AD0C
+		private void OnTriggerButtonClick(); // 0x000000018AC9AE90-0x000000018AC9AF20
+		private static void SetTriggerPosition(RectTransform t, PinAlignment position); // 0x000000018AC9AF20-0x000000018AC9B000
 	}
 
-	public class DockConsoleServiceImpl : IDockConsoleService // TypeDefIndex: 57815
+	[Service(typeof(IDockConsoleService))]
+	public class DockConsoleServiceImpl : IDockConsoleService // TypeDefIndex: 60324
 	{
 		// Fields
 		private ConsoleAlignment _alignment; // 0x10
@@ -1351,38 +1496,41 @@ namespace SRDebugger.Services.Implementation
 		private bool _isVisible; // 0x22
 	
 		// Properties
-		public bool IsVisible { get => default; set {} } // 0x00000001813FF330-0x00000001813FF340 0x000000018B7E2E58-0x000000018B7E2F04
-		public bool IsExpanded { get => default; set {} } // 0x00000001813ECBD0-0x00000001813ECBE0 0x000000018B7E2DB8-0x000000018B7E2E58
-		public ConsoleAlignment Alignment { get => default; set {} } // 0x0000000181C0BBD0-0x0000000181C0BBE0 0x000000018B7E2D30-0x000000018B7E2DB8
+		public bool IsVisible { get; set; } // 0x0000000184D86AD0-0x0000000184D86AE0 0x000000018AC9B454-0x000000018AC9B500
+		public bool IsExpanded { get; set; } // 0x0000000184D86850-0x0000000184D86860 0x000000018AC9B3B4-0x000000018AC9B454
+		public ConsoleAlignment Alignment { get; set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x000000018AC9B32C-0x000000018AC9B3B4
 	
 		// Constructors
-		public DockConsoleServiceImpl() {} // 0x000000018B7E2D00-0x000000018B7E2D30
+		public DockConsoleServiceImpl(); // 0x000000018AC9B2FC-0x000000018AC9B32C
 	
 		// Methods
-		private void Load() {} // 0x000000018B7E2B98-0x000000018B7E2D00
-		private void CheckTrigger() {} // 0x000000018B7E2A60-0x000000018B7E2B98
+		private void Load(); // 0x000000018AC9B194-0x000000018AC9B2FC
+		private void CheckTrigger(); // 0x000000018AC9B07C-0x000000018AC9B194
 	}
 
-	public class KeyboardShortcutListenerService : SRServiceBase<KeyboardShortcutListenerService> // TypeDefIndex: 57816
+	[Service(typeof(KeyboardShortcutListenerService))]
+	public class KeyboardShortcutListenerService : SRServiceBase<KeyboardShortcutListenerService> // TypeDefIndex: 60325
 	{
 		// Fields
 		private List<SRDebugger.Settings.KeyboardShortcut> _shortcuts; // 0x48
 	
 		// Constructors
-		public KeyboardShortcutListenerService() {} // 0x000000018B7E3C78-0x000000018B7E3CAC
+		public KeyboardShortcutListenerService(); // 0x000000018AC9C238-0x000000018AC9C278
 	
 		// Methods
-		protected override void Awake() {} // 0x000000018B7E2F98-0x000000018B7E33F8
-		private void ToggleTab(DefaultTabs t) {} // 0x000000018B7E36DC-0x000000018B7E37FC
-		private void ExecuteShortcut(SRDebugger.Settings.KeyboardShortcut shortcut) {} // 0x000000018B7E33F8-0x000000018B7E36DC
-		protected override void Update() {} // 0x000000018B7E3C30-0x000000018B7E3C78
-		private void UpdateInputSystem() {} // 0x000000018B7E37FC-0x000000018B7E3A88
-		private void UpdateLegacyInputSystem() {} // 0x000000018B7E3A88-0x000000018B7E3C30
+		protected override void Awake(); // 0x000000018AC9B594-0x000000018AC9B9F4
+		private void ToggleTab(DefaultTabs t); // 0x000000018AC9BCB8-0x000000018AC9BDBC
+		private void ExecuteShortcut(SRDebugger.Settings.KeyboardShortcut shortcut); // 0x000000018AC9B9F4-0x000000018AC9BCB8
+		protected override void Update(); // 0x000000018AC9C1F0-0x000000018AC9C238
+		private void UpdateInputSystem(); // 0x000000018AC9BDBC-0x000000018AC9C048
+		private void UpdateLegacyInputSystem(); // 0x000000018AC9C048-0x000000018AC9C1F0
 	}
 
-	public sealed class OptionsServiceImpl : IOptionsService // TypeDefIndex: 57819
+	[Service(typeof(IOptionsService))]
+	public sealed class OptionsServiceImpl : IOptionsService // TypeDefIndex: 60328
 	{
 		// Fields
+		[CompilerGenerated]
 		private System.EventHandler OptionsUpdated; // 0x10
 		private readonly Dictionary<IOptionContainer, List<OptionDefinition>> _optionContainerLookup; // 0x18
 		private readonly Dictionary<IOptionContainer, OptionContainerEventHandler> _optionContainerEventHandlerLookup; // 0x20
@@ -1390,68 +1538,76 @@ namespace SRDebugger.Services.Implementation
 		private readonly IList<OptionDefinition> _optionsReadonly; // 0x30
 	
 		// Properties
-		public ICollection<OptionDefinition> Options { get => default; } // 0x0000000185492010-0x0000000185492020 
+		public ICollection<OptionDefinition> Options { get; } // 0x00000001811F36E0-0x00000001811F36F0 
 	
 		// Events
-		public event System.EventHandler OptionsUpdated;
+		public event System.EventHandler OptionsUpdated {
+			add; // 0x000000018AC9D64C-0x000000018AC9D6E0
+			remove; // 0x000000018AC9D6E0-0x000000018AC9D774
+		}
 	
 		// Nested types
-		private class OptionContainerEventHandler : IDisposable // TypeDefIndex: 57817
+		private class OptionContainerEventHandler : IDisposable // TypeDefIndex: 60326
 		{
 			// Fields
 			private readonly OptionsServiceImpl _service; // 0x10
 			private readonly IOptionContainer _container; // 0x18
 	
 			// Constructors
-			public OptionContainerEventHandler() {} // Dummy constructor
-			public OptionContainerEventHandler(OptionsServiceImpl service, IOptionContainer container) {} // 0x000000018B7E50E0-0x000000018B7E5174
+			public OptionContainerEventHandler(OptionsServiceImpl service, IOptionContainer container); // 0x000000018AC9C40C-0x000000018AC9C55C
 	
 			// Methods
-			private void ContainerOnOptionAdded(OptionDefinition obj) {} // 0x000000018B7E5174-0x000000018B7E5208
-			private void ContainerOnOptionRemoved(OptionDefinition obj) {} // 0x00000001813B51D0-0x00000001813B51E0
-			public void Dispose() {} // 0x000000018B7E4B54-0x000000018B7E4C98
+			private void ContainerOnOptionAdded(OptionDefinition obj); // 0x000000018AC9C278-0x000000018AC9C2A4
+			private void ContainerOnOptionRemoved(OptionDefinition obj); // 0x000000018AC9C2A4-0x000000018AC9C2D0
+			public void Dispose(); // 0x000000018AC9C2D0-0x000000018AC9C40C
 		}
 	
-		private class ReflectionOptionContainer : IOptionContainer // TypeDefIndex: 57818
+		private class ReflectionOptionContainer : IOptionContainer // TypeDefIndex: 60327
 		{
 			// Fields
 			private List<OptionDefinition> _options; // 0x10
 			private readonly object _target; // 0x18
 	
 			// Properties
-			public bool IsDynamic { get => default; } // 0x0000000184088AC0-0x0000000184088C70 
-			private List<OptionDefinition> Options { get => default; } // 0x000000018B7E4DB0-0x000000018B7E4E4C 
+			public bool IsDynamic { get; } // 0x00000001812081B0-0x0000000181208610 
+			private List<OptionDefinition> Options { get; } // 0x000000018445F5F0-0x000000018445F630 
 	
 			// Events
-			public event Action<OptionDefinition> OptionAdded;
-			public event Action<OptionDefinition> OptionRemoved;
+			public event Action<OptionDefinition> OptionAdded {
+				add; // 0x00000001841E1670-0x00000001841E1680
+				remove; // 0x00000001841E1670-0x00000001841E1680
+			}
+			public event Action<OptionDefinition> OptionRemoved {
+				add; // 0x00000001841E1670-0x00000001841E1680
+				remove; // 0x00000001841E1670-0x00000001841E1680
+			}
 	
 			// Constructors
-			public ReflectionOptionContainer() {} // Dummy constructor
-			public ReflectionOptionContainer(object target) {} // 0x000000018B7E4AE8-0x000000018B7E4B54
+			public ReflectionOptionContainer(object target); // 0x0000000185392C40-0x0000000185392C50
 	
 			// Methods
-			public IEnumerable<OptionDefinition> GetOptions() => default; // 0x000000018B7E4E4C-0x000000018B7E50D8
-			protected bool Equals(ReflectionOptionContainer other) => default; // 0x000000018B7E3E70-0x000000018B7E3FF0
-			public override bool Equals(object obj) => default; // 0x000000018B7E3CAC-0x000000018B7E3CD8
-			public override int GetHashCode() => default; // 0x000000018B7E3CD8-0x000000018B7E3D04
+			public IEnumerable<OptionDefinition> GetOptions(); // 0x00000001853976CC-0x00000001853976D4
+			protected bool Equals(ReflectionOptionContainer other); // 0x000000018AC9F694-0x000000018AC9F6BC
+			public override bool Equals(object obj); // 0x000000018AC9F5E0-0x000000018AC9F694
+			public override int GetHashCode(); // 0x0000000184D80F90-0x0000000184D80FC0
 		}
 	
 		// Constructors
-		public OptionsServiceImpl() {} // 0x00000001814A81B0-0x00000001814A81C0
+		public OptionsServiceImpl(); // 0x000000018445F310-0x000000018445F480
 	
 		// Methods
-		private void OptionsContainerOnOptionAdded(IOptionContainer container, OptionDefinition optionDefinition) {} // 0x0000000185492010-0x0000000185492020
-		private void OptionsContainerOnOptionRemoved(IOptionContainer container, OptionDefinition optionDefinition) {} // 0x0000000185492010-0x0000000185492020
-		public void Scan(object obj) {} // 0x0000000184088A80-0x0000000184088AC0
-		public void AddContainer(object obj) {} // 0x000000018646D96C-0x000000018646D974
-		public void AddContainer(IOptionContainer optionContainer) {} // 0x0000000184088E70-0x0000000184088E80
-		public void RemoveContainer(object obj) {} // 0x000000018B7E7138-0x000000018B7E7160
-		public void RemoveContainer(IOptionContainer optionContainer) {} // 0x000000018B7E7084-0x000000018B7E7138
-		private void OnOptionsUpdated() {} // 0x0000000185FAB1F0-0x0000000185FAB220
+		private void OptionsContainerOnOptionAdded(IOptionContainer container, OptionDefinition optionDefinition); // 0x000000018AC9D0C0-0x000000018AC9D204
+		private void OptionsContainerOnOptionRemoved(IOptionContainer container, OptionDefinition optionDefinition); // 0x000000018AC9D204-0x000000018AC9D31C
+		public void Scan(object obj); // 0x000000018AC9D644-0x000000018AC9D64C
+		public void AddContainer(object obj); // 0x000000018445F280-0x000000018445F310
+		public void AddContainer(IOptionContainer optionContainer); // 0x000000018445F480-0x000000018445F5F0
+		public void RemoveContainer(object obj); // 0x000000018AC9D31C-0x000000018AC9D3B8
+		public void RemoveContainer(IOptionContainer optionContainer); // 0x000000018AC9D3B8-0x000000018AC9D644
+		private void OnOptionsUpdated(); // 0x000000018AC9D054-0x000000018AC9D0C0
 	}
 
-	public class PinEntryServiceImpl : SRServiceBase<IPinEntryService>, IPinEntryService // TypeDefIndex: 57820
+	[Service(typeof(IPinEntryService))]
+	public class PinEntryServiceImpl : SRServiceBase<IPinEntryService>, IPinEntryService // TypeDefIndex: 60329
 	{
 		// Fields
 		private PinEntryCompleteCallback _callback; // 0x48
@@ -1460,59 +1616,71 @@ namespace SRDebugger.Services.Implementation
 		private readonly List<int> _requiredPin; // 0x60
 	
 		// Properties
-		public bool IsShowingKeypad { get => default; } // 0x00000001813ECBE0-0x00000001813ECBF0 
+		public bool IsShowingKeypad { get; } // 0x0000000184D86800-0x0000000184D86810 
 	
 		// Constructors
-		public PinEntryServiceImpl() {} // 0x000000018B7E5868-0x000000018B7E58F8
+		public PinEntryServiceImpl(); // 0x000000018AC9DDD4-0x000000018AC9DE6C
 	
 		// Methods
-		public void ShowPinEntry(IReadOnlyList<int> requiredPin, string message, PinEntryCompleteCallback callback, bool allowCancel = true /* Metadata: 0x0207DB17 */) {} // 0x000000018B7E54EC-0x000000018B7E570C
-		protected override void Awake() {} // 0x000000018B7E5208-0x000000018B7E529C
-		private void Load() {} // 0x000000018B7E529C-0x000000018B7E5428
-		private void PinControlOnComplete(IList<int> result, bool didCancel) {} // 0x000000018B7E5428-0x000000018B7E54EC
-		private void VerifyPin(IReadOnlyList<int> pin) {} // 0x000000018B7E570C-0x000000018B7E5868
+		public void ShowPinEntry(IReadOnlyList<int> requiredPin, string message, PinEntryCompleteCallback callback, bool allowCancel = true /* Metadata: 0x0234D3BF */); // 0x000000018AC9DA58-0x000000018AC9DC78
+		protected override void Awake(); // 0x000000018AC9D774-0x000000018AC9D808
+		private void Load(); // 0x000000018AC9D808-0x000000018AC9D994
+		private void PinControlOnComplete(IList<int> result, bool didCancel); // 0x000000018AC9D994-0x000000018AC9DA58
+		private void VerifyPin(IReadOnlyList<int> pin); // 0x000000018AC9DC78-0x000000018AC9DDD4
 	}
 
-	public class PinnedUIServiceImpl : SRServiceBase<IPinnedUIService>, IPinnedUIService // TypeDefIndex: 57821
+	[Service(typeof(IPinnedUIService))]
+	public class PinnedUIServiceImpl : SRServiceBase<IPinnedUIService>, IPinnedUIService // TypeDefIndex: 60330
 	{
 		// Fields
 		private readonly List<OptionsControlBase> _controlList; // 0x48
 		private readonly Dictionary<OptionDefinition, OptionsControlBase> _pinnedObjects; // 0x50
 		private bool _queueRefresh; // 0x58
 		private PinnedUIRoot _uiRoot; // 0x60
+		[CompilerGenerated]
 		private Action<OptionDefinition, bool> OptionPinStateChanged; // 0x68
+		[CompilerGenerated]
 		private Action<RectTransform> OptionsCanvasCreated; // 0x70
 	
 		// Properties
-		public DockConsoleController DockConsoleController { get => default; } // 0x000000018B7E65F4-0x000000018B7E6668 
-		public bool IsProfilerPinned { get => default; set {} } // 0x000000018B7E6668-0x000000018B7E66E0 0x000000018B7E67F8-0x000000018B7E6888
+		public DockConsoleController DockConsoleController { get; } // 0x000000018AC9EB4C-0x000000018AC9EBC0 
+		public bool IsProfilerPinned { get; set; } // 0x000000018AC9EBC0-0x000000018AC9EC38 0x000000018AC9ED50-0x000000018AC9EDE0
 	
 		// Events
-		public event Action<OptionDefinition, bool> OptionPinStateChanged;
-		public event Action<RectTransform> OptionsCanvasCreated;
+		public event Action<OptionDefinition, bool> OptionPinStateChanged {
+			add; // 0x000000018AC9EAC0-0x000000018AC9EB4C
+			remove; // 0x000000018AC9EC38-0x000000018AC9ECC4
+		}
+		public event Action<RectTransform> OptionsCanvasCreated {
+			add; // 0x0000000183A45950-0x0000000183A459E0
+			remove; // 0x000000018AC9ECC4-0x000000018AC9ED50
+		}
 	
 		// Constructors
-		public PinnedUIServiceImpl() {} // 0x0000000185EBF430-0x0000000185EBF510
+		public PinnedUIServiceImpl(); // 0x0000000184CACC60-0x0000000184CACD40
 	
 		// Methods
-		public void Pin(OptionDefinition obj, int order = -1 /* Metadata: 0x0207DB18 */) {} // 0x000000018B7E5DA4-0x000000018B7E5F34
-		public void Unpin(OptionDefinition obj) {} // 0x000000018B7E616C-0x000000018B7E6290
-		private void OnPinnedStateChanged(OptionDefinition option, bool isPinned) {} // 0x000000018B7E5D90-0x000000018B7E5DA4
-		public void UnpinAll() {} // 0x000000018B7E5FB4-0x000000018B7E616C
-		public bool HasPinned(OptionDefinition option) => default; // 0x000000018B7E58F8-0x000000018B7E594C
-		protected override void Awake() {} // 0x0000000184A829B0-0x0000000184A82A50
-		private void Load() {} // 0x000000018B7E594C-0x000000018B7E5BDC
-		private void UpdateAnchors() {} // 0x000000018B7E6290-0x000000018B7E6568
-		protected override void Update() {} // 0x00000001852B42F0-0x00000001852B4310
-		private void OnOptionsUpdated(object sender, EventArgs eventArgs) {} // 0x000000018B7E5BE8-0x000000018B7E5D90
-		private void OnDebugPanelVisibilityChanged(bool isVisible) {} // 0x000000018B7E5BDC-0x000000018B7E5BE8
-		private void Refresh() {} // 0x000000018B7E5F34-0x000000018B7E5FB4
+		public void Pin(OptionDefinition obj, int order = -1 /* Metadata: 0x0234D3C0 */); // 0x000000018AC9E2FC-0x000000018AC9E48C
+		public void Unpin(OptionDefinition obj); // 0x000000018AC9E6C4-0x000000018AC9E7E8
+		private void OnPinnedStateChanged(OptionDefinition option, bool isPinned); // 0x000000018AC9E2E8-0x000000018AC9E2FC
+		public void UnpinAll(); // 0x000000018AC9E50C-0x000000018AC9E6C4
+		public bool HasPinned(OptionDefinition option); // 0x000000018AC9DE6C-0x000000018AC9DEC0
+		protected override void Awake(); // 0x0000000183A474C0-0x0000000183A47560
+		private void Load(); // 0x000000018AC9DEC0-0x000000018AC9E134
+		private void UpdateAnchors(); // 0x000000018AC9E7E8-0x000000018AC9EAC0
+		protected override void Update(); // 0x00000001840B9FF0-0x00000001840BA010
+		private void OnOptionsUpdated(object sender, EventArgs eventArgs); // 0x000000018AC9E140-0x000000018AC9E2E8
+		private void OnDebugPanelVisibilityChanged(bool isVisible); // 0x000000018AC9E134-0x000000018AC9E140
+		private void Refresh(); // 0x000000018AC9E48C-0x000000018AC9E50C
 	}
 
-	public class SRDebugService : IDebugService // TypeDefIndex: 57823
+	[Service(typeof(IDebugService))]
+	public class SRDebugService : IDebugService // TypeDefIndex: 60332
 	{
 		// Fields
+		[CompilerGenerated]
 		private VisibilityChangedDelegate PanelVisibilityChanged; // 0x10
+		[CompilerGenerated]
 		private PinnedUiCanvasCreated PinnedUiCanvasCreated; // 0x18
 		private readonly IDebugPanelService _debugPanelService; // 0x20
 		private readonly IDebugTriggerService _debugTrigger; // 0x28
@@ -1527,61 +1695,71 @@ namespace SRDebugger.Services.Implementation
 		private DynamicOptionContainer _looseOptionContainer; // 0x78
 	
 		// Properties
-		public IDockConsoleService DockConsole { get => default; } // 0x000000018B7E8C24-0x000000018B7E8CB8 
-		public IConsoleFilterState ConsoleFilter { get => default; } // 0x000000018B7E8EC8-0x000000018B7E8F5C 
-		public SRDebugger.Settings Settings { get => default; } // 0x000000018B7E8E4C-0x000000018B7E8E68 
-		public bool IsDebugPanelVisible { get => default; } // 0x000000018B7E9074-0x000000018B7E9090 
-		public bool IsTriggerEnabled { get => default; set {} } // 0x000000018B7E8E68-0x000000018B7E8EC8 0x000000018B7E9090-0x000000018B7E910C
-		public bool IsTriggerErrorNotificationEnabled { get => default; set {} } // 0x000000018B7E8DD8-0x000000018B7E8E4C 0x000000018B7E8FF0-0x000000018B7E9074
-		public bool IsProfilerDocked { get => default; set {} } // 0x000000018B7E7A94-0x000000018B7E7B18 0x000000018B7E8774-0x000000018B7E87E0
+		public IDockConsoleService DockConsole { get; } // 0x000000018ACA11AC-0x000000018ACA11B4 
+		public IConsoleFilterState ConsoleFilter { get; } // 0x000000018ACA1144-0x000000018ACA11AC 
+		public SRDebugger.Settings Settings { get; } // 0x0000000185394964-0x000000018539496C 
+		public bool IsDebugPanelVisible { get; } // 0x000000018ACA11B4-0x000000018ACA11D0 
+		public bool IsTriggerEnabled { get; set; } // 0x000000018ACA1220-0x000000018ACA123C 0x000000018ACA1408-0x000000018ACA1424
+		public bool IsTriggerErrorNotificationEnabled { get; set; } // 0x000000018ACA123C-0x000000018ACA1280 0x000000018ACA1424-0x000000018ACA1474
+		public bool IsProfilerDocked { get; set; } // 0x000000018ACA11D0-0x000000018ACA1220 0x000000018ACA13A8-0x000000018ACA1408
 	
 		// Events
-		public event VisibilityChangedDelegate PanelVisibilityChanged;
-		public event PinnedUiCanvasCreated PinnedUiCanvasCreated;
+		public event VisibilityChangedDelegate PanelVisibilityChanged {
+			add; // 0x000000018ACA101C-0x000000018ACA10B0
+			remove; // 0x000000018ACA1280-0x000000018ACA1314
+		}
+		public event PinnedUiCanvasCreated PinnedUiCanvasCreated {
+			add; // 0x000000018ACA10B0-0x000000018ACA1144
+			remove; // 0x000000018ACA1314-0x000000018ACA13A8
+		}
 	
 		// Nested types
-		private sealed class __c__DisplayClass51_0 // TypeDefIndex: 57822
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass51_0 // TypeDefIndex: 60331
 		{
 			// Fields
 			public ActionCompleteCallback onComplete; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass51_0() {} // 0x000000018B7E8DB4-0x000000018B7E8DBC
+			public __c__DisplayClass51_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _ShowBugReportSheet_b__0(bool succeed, string message) {} // 0x000000018B7E8D4C-0x000000018B7E8DB4
+			internal void _ShowBugReportSheet_b__0(bool succeed, string message); // 0x000000018ACA3BDC-0x000000018ACA3BF4
 		}
 	
 		// Constructors
-		public SRDebugService() {} // 0x000000018B7E8DBC-0x000000018B7E8DD8
+		public SRDebugService(); // 0x0000000183A460E0-0x0000000183A46560
 	
 		// Methods
-		public void AddSystemInfo(SRDebugger.InfoEntry entry, string category = "Default" /* Metadata: 0x0207DB19 */) {} // 0x000000018B7E8680-0x000000018B7E8774
-		public void ShowDebugPanel(bool requireEntryCode = true /* Metadata: 0x0207DB21 */) {} // 0x000000018B7E7F00-0x000000018B7E7F20
-		public void ShowDebugPanel(DefaultTabs tab, bool requireEntryCode = true /* Metadata: 0x0207DB22 */) {} // 0x000000018B7E8500-0x000000018B7E8564
-		public void HideDebugPanel() {} // 0x0000000185FD5E10-0x0000000185FD5E20
-		public void SetEntryCode(EntryCode newCode) {} // 0x000000018B7E7C54-0x000000018B7E7CD4
-		public void DisableEntryCode() {} // 0x000000018B7E791C-0x000000018B7E7998
-		public void DestroyDebugPanel() {} // 0x000000018B7E83B4-0x000000018B7E8430
-		public void AddOptionContainer(object container) {} // 0x000000018B7E7998-0x000000018B7E7A94
-		public void RemoveOptionContainer(object container) {} // 0x000000018B7E8430-0x000000018B7E8448
-		public void AddOption(OptionDefinition option) {} // 0x000000018B7E7F20-0x000000018B7E8094
-		public bool RemoveOption(OptionDefinition option) => default; // 0x000000018B7E893C-0x000000018B7E8AB0
-		public void PinAllOptions(string category) {} // 0x000000018B7E8094-0x000000018B7E8208
-		public void UnpinAllOptions(string category) {} // 0x000000018B7E8AB0-0x000000018B7E8C24
-		public void PinOption(string name) {} // 0x000000018B7E7B18-0x000000018B7E7B84
-		public void UnpinOption(string name) {} // 0x000000018B7E8564-0x000000018B7E8680
-		public void ClearPinnedOptions() {} // 0x000000018B7E7B84-0x000000018B7E7C54
-		public void ShowBugReportSheet(ActionCompleteCallback onComplete = null, bool takeScreenshot = true /* Metadata: 0x0207DB23 */, string descriptionContent = null) {} // 0x000000018B7E8208-0x000000018B7E83B4
-		private void DebugPanelServiceOnVisibilityChanged(IDebugPanelService debugPanelService, bool b) {} // 0x000000018B7E7CD4-0x000000018B7E7F00
-		private void PromptEntryCode() {} // 0x000000018B7E8448-0x000000018B7E8500
-		public RectTransform EnableWorldSpaceMode() => default; // 0x000000018B7E8888-0x000000018B7E893C
-		public void SetBugReporterHandler(IBugReporterHandler bugReporterHandler) {} // 0x000000018B7E87E0-0x000000018B7E8888
-		private void _.ctor_b__21_0(RectTransform transform) {} // 0x0000000185492010-0x0000000185492020
-		private void _PromptEntryCode_b__53_0(bool entered) {} // 0x000000018B7EB8F4-0x000000018B7EB90C
+		public void AddSystemInfo(SRDebugger.InfoEntry entry, string category = "Default" /* Metadata: 0x0234D3C1 */); // 0x000000018AC9FF94-0x000000018AC9FFDC
+		public void ShowDebugPanel(bool requireEntryCode = true /* Metadata: 0x0234D3C9 */); // 0x000000018ACA0B6C-0x000000018ACA0BD8
+		public void ShowDebugPanel(DefaultTabs tab, bool requireEntryCode = true /* Metadata: 0x0234D3CA */); // 0x000000018ACA0A94-0x000000018ACA0B6C
+		public void HideDebugPanel(); // 0x000000018ACA0380-0x000000018ACA03A0
+		public void SetEntryCode(EntryCode newCode); // 0x000000018ACA0914-0x000000018ACA0978
+		public void DisableEntryCode(); // 0x0000000184DA9E20-0x0000000184DA9E30
+		public void DestroyDebugPanel(); // 0x000000018ACA00F4-0x000000018ACA0154
+		public void AddOptionContainer(object container); // 0x000000018AC9FE78-0x000000018AC9FEC8
+		public void RemoveOptionContainer(object container); // 0x000000018ACA0814-0x000000018ACA0864
+		public void AddOption(OptionDefinition option); // 0x000000018AC9FEC8-0x000000018AC9FF94
+		public bool RemoveOption(OptionDefinition option); // 0x000000018ACA0864-0x000000018ACA087C
+		public void PinAllOptions(string category); // 0x000000018ACA03A0-0x000000018ACA0514
+		public void UnpinAllOptions(string category); // 0x000000018ACA0D34-0x000000018ACA0EA8
+		public void PinOption(string name); // 0x000000018ACA0514-0x000000018ACA0688
+		public void UnpinOption(string name); // 0x000000018ACA0EA8-0x000000018ACA101C
+		public void ClearPinnedOptions(); // 0x000000018AC9FFDC-0x000000018ACA0024
+		public void ShowBugReportSheet(ActionCompleteCallback onComplete = null, bool takeScreenshot = true /* Metadata: 0x0234D3CB */, string descriptionContent = null); // 0x000000018ACA0978-0x000000018ACA0A94
+		private void DebugPanelServiceOnVisibilityChanged(IDebugPanelService debugPanelService, bool b); // 0x000000018ACA0024-0x000000018ACA00F4
+		private void PromptEntryCode(); // 0x000000018ACA0688-0x000000018ACA0814
+		public RectTransform EnableWorldSpaceMode(); // 0x000000018ACA0154-0x000000018ACA0380
+		public void SetBugReporterHandler(IBugReporterHandler bugReporterHandler); // 0x000000018ACA087C-0x000000018ACA0914
+		[CompilerGenerated]
+		private void _.ctor_b__21_0(RectTransform transform); // 0x000000018ACA0C80-0x000000018ACA0D34
+		[CompilerGenerated]
+		private void _PromptEntryCode_b__53_0(bool entered); // 0x000000018ACA0BD8-0x000000018ACA0C80
 	}
 
-	public class StandardConsoleService : IConsoleService, IDisposable // TypeDefIndex: 57824
+	[Service(typeof(IConsoleService))]
+	public class StandardConsoleService : IConsoleService, IDisposable // TypeDefIndex: 60333
 	{
 		// Fields
 		private readonly bool _collapseEnabled; // 0x10
@@ -1590,60 +1768,75 @@ namespace SRDebugger.Services.Implementation
 		private CircularBuffer<ConsoleEntry> _consoleEntries; // 0x20
 		private readonly object _threadLock; // 0x28
 		private ILogHandler _expectedLogHandler; // 0x30
+		[CompilerGenerated]
 		private int _CriticalCount_k__BackingField; // 0x38
+		[CompilerGenerated]
 		private int _ErrorCount_k__BackingField; // 0x3C
+		[CompilerGenerated]
 		private int _WarningCount_k__BackingField; // 0x40
+		[CompilerGenerated]
 		private int _InfoCount_k__BackingField; // 0x44
+		[CompilerGenerated]
 		private ConsoleUpdatedEventHandler Updated; // 0x48
+		[CompilerGenerated]
 		private ConsoleUpdatedEventHandler Error; // 0x50
 	
 		// Properties
-		public int CriticalCount { get; private set; } // 0x00000001813E5E30-0x00000001813E5E40 0x00000001813E6F50-0x00000001813E6F60
-		public int ErrorCount { get; private set; } // 0x0000000185FB0790-0x0000000185FB07A0 0x0000000185FB07A0-0x0000000185FB07B0
-		public int WarningCount { get; private set; } // 0x00000001813ECF10-0x00000001813ECF20 0x00000001813EE9C0-0x00000001813EE9D0
-		public int InfoCount { get; private set; } // 0x0000000183908D10-0x0000000183908D20 0x0000000183909010-0x0000000183909020
-		public bool LoggingEnabled { get => default; set {} } // 0x000000018B7EA234-0x000000018B7EA288 0x000000018B7EA3B0-0x000000018B7EA44C
-		public bool LogHandlerIsOverriden { get => default; } // 0x000000018B7EA1DC-0x000000018B7EA234 
-		public IReadOnlyList<ConsoleEntry> Entries { get => default; } // 0x000000018B7EA1CC-0x000000018B7EA1DC 
-		public IReadOnlyList<ConsoleEntry> AllEntries { get => default; } // 0x0000000181377E40-0x0000000181377E50 
+		public int CriticalCount { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D863B0-0x0000000184D863C0 0x0000000184D86430-0x0000000184D86440
+		public int ErrorCount { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86640-0x0000000184D86650 0x0000000184D86670-0x0000000184D86680
+		public int WarningCount { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D865E0-0x0000000184D865F0 0x0000000184D86610-0x0000000184D86620
+		public int InfoCount { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86530-0x0000000184D86540 0x0000000184D86580-0x0000000184D86590
+		public bool LoggingEnabled { get; set; } // 0x000000018ACA2570-0x000000018ACA25C4 0x000000018ACA26EC-0x000000018ACA2764
+		public bool LogHandlerIsOverriden { get; } // 0x000000018ACA2518-0x000000018ACA2570 
+		public IReadOnlyList<ConsoleEntry> Entries { get; } // 0x000000018ACA2508-0x000000018ACA2518 
+		public IReadOnlyList<ConsoleEntry> AllEntries { get; } // 0x000000018385B100-0x000000018385B110 
 	
 		// Events
-		public event ConsoleUpdatedEventHandler Updated;
-		public event ConsoleUpdatedEventHandler Error;
+		public event ConsoleUpdatedEventHandler Updated {
+			add; // 0x000000018ACA2474-0x000000018ACA2508
+			remove; // 0x000000018ACA2658-0x000000018ACA26EC
+		}
+		public event ConsoleUpdatedEventHandler Error {
+			add; // 0x000000018ACA23E0-0x000000018ACA2474
+			remove; // 0x000000018ACA25C4-0x000000018ACA2658
+		}
 	
 		// Constructors
-		public StandardConsoleService() {} // 0x0000000184A8F620-0x0000000184A8F7E0
+		public StandardConsoleService(); // 0x0000000183E3E3D0-0x0000000183E3E580
 	
 		// Methods
-		public void Dispose() {} // 0x000000018B7E9D38-0x000000018B7E9DEC
-		public void Clear() {} // 0x000000018B7E9B78-0x000000018B7E9D38
-		protected void OnEntryAdded(ConsoleEntry entry) {} // 0x000000018B7E9DEC-0x000000018B7E9F5C
-		protected void OnEntryDuplicated(ConsoleEntry entry) {} // 0x000000018B7E9F5C-0x000000018B7EA010
-		private void OnUpdated() {} // 0x000000018B7EA010-0x000000018B7EA0A4
-		private void UnityLogCallback(string condition, string stackTrace, UnityEngine.LogType type) {} // 0x0000000185492010-0x0000000185492020
-		private void AdjustCounter(UnityEngine.LogType type, int amount) {} // 0x000000018B7E9B00-0x000000018B7E9B78
+		public void Dispose(); // 0x000000018ACA2074-0x000000018ACA2128
+		public void Clear(); // 0x000000018ACA1EB4-0x000000018ACA2074
+		protected void OnEntryAdded(ConsoleEntry entry); // 0x000000018ACA2128-0x000000018ACA2298
+		protected void OnEntryDuplicated(ConsoleEntry entry); // 0x000000018ACA2298-0x000000018ACA234C
+		private void OnUpdated(); // 0x000000018ACA234C-0x000000018ACA23E0
+		private void UnityLogCallback(string condition, string stackTrace, UnityEngine.LogType type); // 0x00000001841E1670-0x00000001841E1680
+		private void AdjustCounter(UnityEngine.LogType type, int amount); // 0x000000018ACA1E3C-0x000000018ACA1EB4
 	}
 
-	public class StandardSystemInformationService : ISystemInformationService // TypeDefIndex: 57827
+	[Service(typeof(ISystemInformationService))]
+	public class StandardSystemInformationService : ISystemInformationService // TypeDefIndex: 60336
 	{
 		// Fields
 		private readonly Dictionary<string, IList<SRDebugger.InfoEntry>> _info; // 0x10
 	
 		// Nested types
-		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 57825
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 60334
 		{
 			// Fields
 			public SRDebugger.InfoEntry info; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass4_0() {} // 0x0000000185F4E830-0x0000000185F4E8B0
+			public __c__DisplayClass4_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _Add_b__0(SRDebugger.InfoEntry p) => default; // 0x000000018B7EAA60-0x000000018B7EAAA8
+			internal bool _Add_b__0(SRDebugger.InfoEntry p); // 0x0000000186B8D048-0x0000000186B8D078
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 57826
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 60335
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -1658,130 +1851,154 @@ namespace SRDebugger.Services.Implementation
 			public static Func<object> __9__6_8; // 0x48
 	
 			// Constructors
-			static __c() {} // 0x000000018B7EABFC-0x000000018B7EAD08
-			public __c() {} // 0x000000018B7EA44C-0x000000018B7EA658
+			static __c(); // 0x0000000184D46030-0x0000000184D46090
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal object _CreateDefaultSet_b__6_0() => default; // 0x000000018B7EA658-0x000000018B7EAA60
-			internal object _CreateDefaultSet_b__6_1() => default; // 0x0000000183FC5480-0x0000000183FC9AD0
-			internal object _CreateDefaultSet_b__6_2() => default; // 0x000000018B7EAAA8-0x000000018B7EABFC
-			internal object _CreateDefaultSet_b__6_3() => default; // 0x0000000185492010-0x0000000185492020
-			internal object _CreateDefaultSet_b__6_4() => default; // 0x000000018B7EB8C4-0x000000018B7EB8F4
-			internal object _CreateDefaultSet_b__6_5() => default; // 0x0000000185F72670-0x0000000185F726D0
-			internal object _CreateDefaultSet_b__6_6() => default; // 0x0000000185492010-0x0000000185492020
-			internal object _CreateDefaultSet_b__6_7() => default; // 0x000000018B7EB520-0x000000018B7EB590
-			internal object _CreateDefaultSet_b__6_8() => default; // 0x000000018B7EB590-0x000000018B7EB5D4
+			internal object _CreateDefaultSet_b__6_0(); // 0x000000018ACA3838-0x000000018ACA38A8
+			internal object _CreateDefaultSet_b__6_1(); // 0x000000018ACA38A8-0x000000018ACA38EC
+			internal object _CreateDefaultSet_b__6_2(); // 0x000000018ACA38EC-0x000000018ACA3930
+			internal object _CreateDefaultSet_b__6_3(); // 0x000000018ACA3930-0x000000018ACA3974
+			internal object _CreateDefaultSet_b__6_4(); // 0x000000018ACA3974-0x000000018ACA39B8
+			internal object _CreateDefaultSet_b__6_5(); // 0x000000018ACA39B8-0x000000018ACA39FC
+			internal object _CreateDefaultSet_b__6_6(); // 0x000000018ACA39FC-0x000000018ACA3A40
+			internal object _CreateDefaultSet_b__6_7(); // 0x000000018ACA3A40-0x000000018ACA3B44
+			internal object _CreateDefaultSet_b__6_8(); // 0x000000018ACA3B44-0x000000018ACA3BDC
 		}
 	
 		// Constructors
-		public StandardSystemInformationService() {} // 0x000000018B7EB5D4-0x000000018B7EB618
+		public StandardSystemInformationService(); // 0x0000000184D22760-0x0000000184D227E0
 	
 		// Methods
-		public IEnumerable<string> GetCategories() => default; // 0x000000018B7EB618-0x000000018B7EB65C
-		public IList<SRDebugger.InfoEntry> GetInfo(string category) => default; // 0x000000018B7EB65C-0x000000018B7EB6A0
-		public void Add(SRDebugger.InfoEntry info, string category = "Default" /* Metadata: 0x0207DB24 */) {} // 0x000000018B7EB6A0-0x000000018B7EB6E4
-		public Dictionary<string, Dictionary<string, object>> CreateReport(bool includePrivate = false /* Metadata: 0x0207DB2C */) => default; // 0x000000018B7EB6E4-0x000000018B7EB728
-		private void CreateDefaultSet() {} // 0x000000018B7EB728-0x000000018B7EB82C
-		private static string GetCloudManifestPrettyName(string name) => default; // 0x000000018B7EB82C-0x000000018B7EB8C4
+		public IEnumerable<string> GetCategories(); // 0x000000018ACA2D78-0x000000018ACA2DC0
+		public IList<SRDebugger.InfoEntry> GetInfo(string category); // 0x000000018ACA2F14-0x000000018ACA3020
+		public void Add(SRDebugger.InfoEntry info, string category = "Default" /* Metadata: 0x0234D3CC */); // 0x000000018ACA2764-0x000000018ACA2970
+		public Dictionary<string, Dictionary<string, object>> CreateReport(bool includePrivate = false /* Metadata: 0x0234D3D4 */); // 0x000000018ACA2970-0x000000018ACA2D78
+		private void CreateDefaultSet(); // 0x00000001841A81D0-0x00000001841AAC60
+		private static string GetCloudManifestPrettyName(string name); // 0x000000018ACA2DC0-0x000000018ACA2F14
 	}
 }
 
 namespace SRDebugger.UI
 {
-	public class ProfilerFPSLabel : SRMonoBehaviourEx // TypeDefIndex: 57725
+	public class ProfilerFPSLabel : SRMonoBehaviourEx // TypeDefIndex: 60234
 	{
 		// Fields
 		private float _nextUpdate; // 0x48
+		[Import]
 		private IProfilerService _profilerService; // 0x50
 		public float UpdateFrequency; // 0x58
+		[RequiredField]
+		[SerializeField]
 		private UnityEngine.UI.Text _text; // 0x60
 	
 		// Constructors
-		public ProfilerFPSLabel() {} // 0x000000018B7DCBD8-0x000000018B7DCBE8
+		public ProfilerFPSLabel(); // 0x000000018AC9532C-0x000000018AC95348
 	
 		// Methods
-		protected override void Update() {} // 0x000000018B7DCBAC-0x000000018B7DCBD8
-		private void Refresh() {} // 0x000000018B7DCAA0-0x000000018B7DCBAC
+		protected override void Update(); // 0x000000018AC95300-0x000000018AC9532C
+		private void Refresh(); // 0x000000018AC951F4-0x000000018AC95300
 	}
 
-	public class DebugPanelRoot : SRMonoBehaviourEx // TypeDefIndex: 57726
+	public class DebugPanelRoot : SRMonoBehaviourEx // TypeDefIndex: 60235
 	{
 		// Fields
+		[RequiredField]
 		public Canvas Canvas; // 0x48
+		[RequiredField]
 		public CanvasGroup CanvasGroup; // 0x50
+		[RequiredField]
 		public DebuggerTabController TabController; // 0x58
 	
 		// Constructors
-		public DebugPanelRoot() {} // 0x000000018646DB20-0x000000018646DB28
+		public DebugPanelRoot(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		public void Close() {} // 0x000000018B7D4C80-0x000000018B7D4D14
-		public void CloseAndDestroy() {} // 0x000000018B7D4C24-0x000000018B7D4C80
+		public void Close(); // 0x000000018AC8D528-0x000000018AC8D5BC
+		public void CloseAndDestroy(); // 0x000000018AC8D4CC-0x000000018AC8D528
 	}
 
-	public class MobileMenuController : SRMonoBehaviourEx // TypeDefIndex: 57727
+	public class MobileMenuController : SRMonoBehaviourEx // TypeDefIndex: 60236
 	{
 		// Fields
 		private UnityEngine.UI.Button _closeButton; // 0x48
+		[SerializeField]
 		private float _maxMenuWidth; // 0x50
+		[SerializeField]
 		private float _peekAmount; // 0x54
 		private float _targetXPosition; // 0x58
+		[RequiredField]
 		public RectTransform Content; // 0x60
+		[RequiredField]
 		public RectTransform Menu; // 0x68
+		[RequiredField]
 		public UnityEngine.UI.Button OpenButton; // 0x70
+		[RequiredField]
 		public SRTabController TabController; // 0x78
 	
 		// Properties
-		public float PeekAmount { get => default; } // 0x0000000183F80440-0x0000000183F80450 
-		public float MaxMenuWidth { get => default; } // 0x0000000185FB3000-0x0000000185FB3010 
+		public float PeekAmount { get; } // 0x0000000184D86E00-0x0000000184D86E10 
+		public float MaxMenuWidth { get; } // 0x0000000184D885A0-0x0000000184D885B0 
 	
 		// Constructors
-		public MobileMenuController() {} // 0x000000018B7D880C-0x000000018B7D8824
+		public MobileMenuController(); // 0x000000018AC91070-0x000000018AC91094
 	
 		// Methods
-		protected override void OnEnable() {} // 0x000000018B7D8394-0x000000018B7D8610
-		protected override void OnDisable() {} // 0x000000018B7D825C-0x000000018B7D8394
-		private void CreateCloseButton() {} // 0x000000018B7D7EA8-0x000000018B7D825C
-		private void SetRectSize(RectTransform rect) {} // 0x000000018B7D8668-0x000000018B7D871C
-		private void CloseButtonClicked() {} // 0x000000018B7D7E68-0x000000018B7D7E70
-		protected override void Update() {} // 0x000000018B7D871C-0x000000018B7D880C
-		private void TabControllerOnActiveTabChanged(SRTabController srTabController, SRTab srTab) {} // 0x000000018B7D7E68-0x000000018B7D7E70
-		public void Open() {} // 0x000000018B7D8610-0x000000018B7D8668
-		public void Close() {} // 0x000000018B7D7E70-0x000000018B7D7EA8
+		protected override void OnEnable(); // 0x000000018AC90BF8-0x000000018AC90E74
+		protected override void OnDisable(); // 0x000000018AC90AC0-0x000000018AC90BF8
+		private void CreateCloseButton(); // 0x000000018AC9070C-0x000000018AC90AC0
+		private void SetRectSize(RectTransform rect); // 0x000000018AC90ECC-0x000000018AC90F80
+		private void CloseButtonClicked(); // 0x000000018AC906CC-0x000000018AC906D4
+		protected override void Update(); // 0x000000018AC90F80-0x000000018AC91070
+		private void TabControllerOnActiveTabChanged(SRTabController srTabController, SRTab srTab); // 0x000000018AC906CC-0x000000018AC906D4
+		[ContextMenu("Open")]
+		public void Open(); // 0x000000018AC90E74-0x000000018AC90ECC
+		[ContextMenu("Close")]
+		public void Close(); // 0x000000018AC906D4-0x000000018AC9070C
 	}
 }
 
 namespace SRDebugger.UI.Controls
 {
-	public class ConsoleEntryView : SRMonoBehaviourEx, SRF.UI.Layout.IVirtualView // TypeDefIndex: 57761
+	[RequireComponent(typeof(RectTransform))]
+	public class ConsoleEntryView : SRMonoBehaviourEx, SRF.UI.Layout.IVirtualView // TypeDefIndex: 60270
 	{
 		// Fields
-		public const string ConsoleBlobInfo = "Console_Info_Blob"; // Metadata: 0x0207DA9D
-		public const string ConsoleBlobWarning = "Console_Warning_Blob"; // Metadata: 0x0207DAAF
-		public const string ConsoleBlobError = "Console_Error_Blob"; // Metadata: 0x0207DAC4
-		public const string ConsoleBlobCritical = "Console_Critical_Blob"; // Metadata: 0x0207DAD7
+		public const string ConsoleBlobInfo = "Console_Info_Blob"; // Metadata: 0x0234D345
+		public const string ConsoleBlobWarning = "Console_Warning_Blob"; // Metadata: 0x0234D357
+		public const string ConsoleBlobError = "Console_Error_Blob"; // Metadata: 0x0234D36C
+		public const string ConsoleBlobCritical = "Console_Critical_Blob"; // Metadata: 0x0234D37F
 		private int _count; // 0x48
 		private bool _hasCount; // 0x4C
 		private ConsoleEntry _prevData; // 0x50
 		private RectTransform _rectTransform; // 0x58
+		[RequiredField]
 		public UnityEngine.UI.Text Count; // 0x60
+		[RequiredField]
 		public CanvasGroup CountContainer; // 0x68
+		[RequiredField]
 		public StyleComponent ImageStyle; // 0x70
+		[RequiredField]
 		public UnityEngine.UI.Text Message; // 0x78
+		[RequiredField]
 		public UnityEngine.UI.Text StackTrace; // 0x80
 	
 		// Constructors
-		public ConsoleEntryView() {} // 0x000000018646DB20-0x000000018646DB28
+		public ConsoleEntryView(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		public void SetDataContext(object data) {} // 0x000000018B7D1DF4-0x000000018B7D2130
-		protected override void Awake() {} // 0x000000018B7D1D50-0x000000018B7D1DF4
+		public void SetDataContext(object data); // 0x000000018AC8A6DC-0x000000018AC8AA18
+		protected override void Awake(); // 0x000000018AC8A638-0x000000018AC8A6DC
 	}
 
-	public class ConsoleLogControl : SRMonoBehaviourEx // TypeDefIndex: 57763
+	public class ConsoleLogControl : SRMonoBehaviourEx // TypeDefIndex: 60272
 	{
 		// Fields
+		[RequiredField]
+		[SerializeField]
 		private VirtualVerticalLayoutGroup _consoleScrollLayoutGroup; // 0x48
+		[RequiredField]
+		[SerializeField]
 		private ScrollRect _consoleScrollRect; // 0x50
 		private bool _isDirty; // 0x58
 		private Vector2? _scrollPosition; // 0x5C
@@ -1793,15 +2010,16 @@ namespace SRDebugger.UI.Controls
 		private string _filter; // 0x78
 	
 		// Properties
-		public bool ShowCriticals { get => default; set {} } // 0x0000000185FD5D70-0x0000000185FD5D80 0x0000000185FD5DB0-0x0000000185FD5DC0
-		public bool ShowErrors { get => default; set {} } // 0x000000018B7D2D84-0x000000018B7D2DA4 0x000000018B7D2DA4-0x000000018B7D2DC4
-		public bool ShowWarnings { get => default; set {} } // 0x0000000183060C50-0x0000000183060C60 0x000000018B7D2DC4-0x000000018B7D2E00
-		public bool ShowInfo { get => default; set {} } // 0x000000018B7D2868-0x000000018B7D2980 0x000000018B7D2CC0-0x000000018B7D2CE8
-		public bool EnableSelection { get => default; set {} } // 0x000000018B7D2C64-0x000000018B7D2CC0 0x000000018B7D2980-0x000000018B7D2A20
-		public string Filter { get => default; set {} } // 0x000000018B7D2A20-0x000000018B7D2A7C 0x000000018B7D2CE8-0x000000018B7D2D74
+		public bool ShowCriticals { get; set; } // 0x0000000184D86B40-0x0000000184D86B50 0x0000000184DA9DA0-0x0000000184DA9DB0
+		public bool ShowErrors { get; set; } // 0x0000000184D86B10-0x0000000184D86B20 0x0000000184DA9DB0-0x0000000184DA9DC0
+		public bool ShowWarnings { get; set; } // 0x0000000184DA9D90-0x0000000184DA9DA0 0x0000000184DA9DD0-0x0000000184DA9DE0
+		public bool ShowInfo { get; set; } // 0x0000000184DA9D80-0x0000000184DA9D90 0x0000000184DA9DC0-0x0000000184DA9DD0
+		public bool EnableSelection { get; set; } // 0x000000018AC8B678-0x000000018AC8B698 0x000000018AC8B698-0x000000018AC8B6B8
+		public string Filter { get; set; } // 0x0000000184D862A0-0x0000000184D862B0 0x000000018AC8B6B8-0x000000018AC8B6F4
 	
 		// Nested types
-		private sealed class _ScrollToBottom_d__30 : IEnumerator<object> // TypeDefIndex: 57762
+		[CompilerGenerated]
+		private sealed class _ScrollToBottom_d__30 : IEnumerator<object> // TypeDefIndex: 60271
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1809,174 +2027,196 @@ namespace SRDebugger.UI.Controls
 			public ConsoleLogControl __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000185FD5DA0-0x0000000185FD5DB0 
-			object IEnumerator.Current { get => default; } // 0x0000000185FD5DC0-0x0000000185FD5DD0 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _ScrollToBottom_d__30() {} // Dummy constructor
-			public _ScrollToBottom_d__30(int __1__state) {} // 0x0000000185FB09E0-0x0000000185FB09F0
+			[DebuggerHidden]
+			public _ScrollToBottom_d__30(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x0000000185FD5D90-0x0000000185FD5DA0
-			private bool MoveNext() => default; // 0x0000000185FB09C0-0x0000000185FB09D0
-			void IEnumerator.Reset() {} // 0x0000000185FD5D80-0x0000000185FD5D90
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018AC98C70-0x000000018AC98D88
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018AC98D88-0x000000018AC98DD4
 		}
 	
 		// Constructors
-		public ConsoleLogControl() {} // 0x0000000181377E40-0x0000000181377E50
+		public ConsoleLogControl(); // 0x000000018AC8B65C-0x000000018AC8B678
 	
 		// Methods
-		protected override void Awake() {} // 0x000000018B7D2A7C-0x000000018B7D2C64
-		protected override void Start() {} // 0x0000000183F76C40-0x0000000183F76C50
-		private IEnumerator ScrollToBottom() => default; // 0x0000000183F76C40-0x0000000183F76C50
-		protected override void OnDestroy() {} // 0x000000018B7D2D74-0x000000018B7D2D84
-		private void OnSelectedItemChanged(object arg0) {} // 0x0000000181378230-0x0000000181378240
-		protected override void Update() {} // 0x0000000185492010-0x0000000185492020
-		private void Refresh() {} // 0x000000018B7E050C-0x000000018B7E0624
-		private void SetIsDirty() {} // 0x0000000181377E40-0x0000000181377E50
-		private void ConsoleOnUpdated(IConsoleService console) {} // 0x000000018B7E0624-0x000000018B7E0670
+		protected override void Awake(); // 0x000000018AC8B150-0x000000018AC8B268
+		protected override void Start(); // 0x000000018AC8B5A8-0x000000018AC8B5D0
+		[IteratorStateMachine(typeof(_ScrollToBottom_d__30))]
+		private IEnumerator ScrollToBottom(); // 0x000000018AC8B54C-0x000000018AC8B5A8
+		protected override void OnDestroy(); // 0x000000018AC8B268-0x000000018AC8B308
+		private void OnSelectedItemChanged(object arg0); // 0x000000018AC8B308-0x000000018AC8B364
+		protected override void Update(); // 0x000000018AC8B5D0-0x000000018AC8B65C
+		private void Refresh(); // 0x000000018AC8B364-0x000000018AC8B54C
+		private void SetIsDirty(); // 0x0000000184DA7440-0x0000000184DA7450
+		private void ConsoleOnUpdated(IConsoleService console); // 0x0000000184DA7440-0x0000000184DA7450
 	}
 
-	public abstract class DataBoundControl : OptionsControlBase // TypeDefIndex: 57764
+	public abstract class DataBoundControl : OptionsControlBase // TypeDefIndex: 60273
 	{
 		// Fields
 		private bool _hasStarted; // 0x60
 		private bool _isReadOnly; // 0x61
 		private object _prevValue; // 0x68
 		private PropertyReference _prop; // 0x70
+		[CompilerGenerated]
 		private string _PropertyName_k__BackingField; // 0x78
 	
 		// Properties
-		public PropertyReference Property { get; } // 0x0000000181460F70-0x0000000181460F80 
-		public bool IsReadOnly { get; } // 0x0000000185FB32C0-0x0000000185FB32D0 
-		public string PropertyName { get; private set; } // 0x0000000183060C50-0x0000000183060C60 0x000000018738A324-0x000000018738A334
+		public PropertyReference Property { get; } // 0x0000000184D862B0-0x0000000184D862C0 
+		public bool IsReadOnly { get; } // 0x0000000184D892D0-0x0000000184D892E0 
+		public string PropertyName { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862A0-0x0000000184D862B0 0x0000000186402320-0x0000000186402330
 	
 		// Constructors
-		protected DataBoundControl() {} // 0x000000018646DB20-0x000000018646DB28
+		protected DataBoundControl(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		public void Bind(string propertyName, PropertyReference prop) {} // 0x000000018B7D4768-0x000000018B7D4860
-		private void OnValueChanged(PropertyReference property) {} // 0x000000018A3B3758-0x000000018A3B3768
-		protected void UpdateValue(object newValue) {} // 0x000000018B7D4AC8-0x000000018B7D4B14
-		public override void Refresh() {} // 0x000000018B7D49A4-0x000000018B7D4AA8
-		protected virtual void OnBind(string propertyName, System.Type t) {} // 0x0000000185492010-0x0000000185492020
+		public void Bind(string propertyName, PropertyReference prop); // 0x000000018AC8CFFC-0x000000018AC8D0F4
+		private void OnValueChanged(PropertyReference property); // 0x0000000189843110-0x0000000189843120
+		protected void UpdateValue(object newValue); // 0x000000018AC8D35C-0x000000018AC8D3A8
+		public override void Refresh(); // 0x000000018AC8D238-0x000000018AC8D33C
+		protected virtual void OnBind(string propertyName, System.Type t); // 0x00000001841E1670-0x00000001841E1680
 		protected abstract void OnValueUpdated(object newValue);
 		public abstract bool CanBind(System.Type type, bool isReadOnly);
-		protected override void Start() {} // 0x000000018B7D4AA8-0x000000018B7D4AC8
-		protected override void OnEnable() {} // 0x000000018B7D48F4-0x000000018B7D49A4
-		protected override void OnDisable() {} // 0x000000018B7D4860-0x000000018B7D48F4
+		protected override void Start(); // 0x000000018AC8D33C-0x000000018AC8D35C
+		protected override void OnEnable(); // 0x000000018AC8D188-0x000000018AC8D238
+		protected override void OnDisable(); // 0x000000018AC8D0F4-0x000000018AC8D188
 	}
 
-	public abstract class OptionsControlBase : SRMonoBehaviourEx // TypeDefIndex: 57765
+	public abstract class OptionsControlBase : SRMonoBehaviourEx // TypeDefIndex: 60274
 	{
 		// Fields
 		private bool _selectionModeEnabled; // 0x48
+		[RequiredField]
 		public Toggle SelectionModeToggle; // 0x50
 		public OptionDefinition Option; // 0x58
 	
 		// Properties
-		public bool SelectionModeEnabled { get; set; } // 0x0000000185FB0750-0x0000000185FB0760 0x000000018B7D9B14-0x000000018B7D9C10
-		public bool IsSelected { get; set; } // 0x000000018B7D9A1C-0x000000018B7D9A3C 0x000000018B7D9A3C-0x000000018B7D9B14
+		public bool SelectionModeEnabled { get; set; } // 0x0000000184D867D0-0x0000000184D867E0 0x000000018AC92384-0x000000018AC92480
+		public bool IsSelected { get; set; } // 0x000000018AC9228C-0x000000018AC922AC 0x000000018AC922AC-0x000000018AC92384
 	
 		// Constructors
-		protected OptionsControlBase() {} // 0x000000018646DB20-0x000000018646DB28
+		protected OptionsControlBase(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Awake() {} // 0x000000018B7D990C-0x000000018B7D995C
-		protected override void OnEnable() {} // 0x000000018B7D995C-0x000000018B7D9A1C
-		public virtual void Refresh() {} // 0x0000000185492010-0x0000000185492020
+		protected override void Awake(); // 0x000000018AC9217C-0x000000018AC921CC
+		protected override void OnEnable(); // 0x000000018AC921CC-0x000000018AC9228C
+		public virtual void Refresh(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class InfoBlock : SRMonoBehaviourEx // TypeDefIndex: 57766
+	public class InfoBlock : SRMonoBehaviourEx // TypeDefIndex: 60275
 	{
 		// Fields
+		[RequiredField]
 		public UnityEngine.UI.Text Content; // 0x48
+		[RequiredField]
 		public UnityEngine.UI.Text Title; // 0x50
 	
 		// Constructors
-		public InfoBlock() {} // 0x000000018646DB20-0x000000018646DB28
+		public InfoBlock(); // 0x0000000185393520-0x0000000185393538
 	}
 
-	public class MultiTapButton : UnityEngine.UI.Button // TypeDefIndex: 57767
+	public class MultiTapButton : UnityEngine.UI.Button // TypeDefIndex: 60276
 	{
 		// Fields
-		private float _lastTap; // 0x188
-		private int _tapCount; // 0x18C
-		public int RequiredTapCount; // 0x190
-		public float ResetTime; // 0x194
+		private float _lastTap; // 0x190
+		private int _tapCount; // 0x194
+		public int RequiredTapCount; // 0x198
+		public float ResetTime; // 0x19C
 	
 		// Constructors
-		public MultiTapButton() {} // 0x000000018B7D8898-0x000000018B7D88B4
+		public MultiTapButton(); // 0x000000018AC91108-0x000000018AC91124
 	
 		// Methods
-		public override void OnPointerClick(PointerEventData eventData) {} // 0x000000018B7D8824-0x000000018B7D8898
+		public override void OnPointerClick(PointerEventData eventData); // 0x000000018AC91094-0x000000018AC91108
 	}
 
-	public delegate void PinEntryControlCallback(IList<int> result, bool didCancel); // TypeDefIndex: 57768; 0x00000001831C5680-0x00000001831C5690
+	public delegate void PinEntryControlCallback(IList<int> result, bool didCancel); // TypeDefIndex: 60277; 0x00000001838E1420-0x00000001838E1430
 
-	public class PinEntryControl : SRMonoBehaviourEx // TypeDefIndex: 57770
+	public class PinEntryControl : SRMonoBehaviourEx // TypeDefIndex: 60279
 	{
 		// Fields
 		private bool _isVisible; // 0x48
 		private List<int> _numbers; // 0x50
+		[RequiredField]
 		public Image Background; // 0x58
 		public bool CanCancel; // 0x60
+		[RequiredField]
 		public UnityEngine.UI.Button CancelButton; // 0x68
+		[RequiredField]
 		public UnityEngine.UI.Text CancelButtonText; // 0x70
+		[RequiredField]
 		public CanvasGroup CanvasGroup; // 0x78
+		[RequiredField]
 		public Animator DotAnimator; // 0x80
 		public UnityEngine.UI.Button[] NumberButtons; // 0x88
 		public Toggle[] NumberDots; // 0x90
+		[RequiredField]
 		public UnityEngine.UI.Text PromptText; // 0x98
+		[CompilerGenerated]
 		private PinEntryControlCallback Complete; // 0xA0
 	
 		// Events
-		public event PinEntryControlCallback Complete;
+		public event PinEntryControlCallback Complete {
+			add; // 0x000000018AC94E40-0x000000018AC94ED8
+			remove; // 0x000000018AC94ED8-0x000000018AC94F70
+		}
 	
 		// Nested types
-		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 57769
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 60278
 		{
 			// Fields
 			public int number; // 0x10
 			public PinEntryControl __4__this; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass14_0() {} // 0x000000018B7DC6EC-0x000000018B7DC784
+			public __c__DisplayClass14_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _Awake_b__0() {} // 0x000000018B7DC784-0x000000018B7DC81C
+			internal void _Awake_b__0(); // 0x000000018AC99344-0x000000018AC9936C
 		}
 	
 		// Constructors
-		public PinEntryControl() {} // 0x000000018B7E0C18-0x000000018B7E0C40
+		public PinEntryControl(); // 0x000000018AC94DB4-0x000000018AC94E40
 	
 		// Methods
-		protected override void Awake() {} // 0x000000018B7DC208-0x000000018B7DC29C
-		protected override void OnEnable() {} // 0x000000018B7DC588-0x000000018B7DC660
-		protected override void OnDisable() {} // 0x000000018B7DC034-0x000000018B7DC0B4
-		protected override void Update() {} // 0x000000018B7DC528-0x000000018B7DC588
-		private void HandleCharacter(char i) {} // 0x000000018B7DC0B4-0x000000018B7DC110
-		public void Show() {} // 0x000000018B7DBFE8-0x000000018B7DC034
-		public void Hide() {} // 0x000000018B7DC330-0x000000018B7DC37C
-		public void Clear() {} // 0x000000018B7DC16C-0x000000018B7DC208
-		public void PlayInvalidCodeAnimation() {} // 0x000000018B7DC110-0x000000018B7DC16C
-		protected void OnComplete() {} // 0x000000018B7DBF78-0x000000018B7DBFE8
-		protected void OnCancel() {} // 0x000000018B7DC37C-0x000000018B7DC43C
-		private void CancelButtonPressed() {} // 0x000000018B7DC43C-0x000000018B7DC528
-		public void PushNumber(int number) {} // 0x000000018B7DC660-0x000000018B7DC6EC
-		private void RefreshState() {} // 0x0000000185492010-0x0000000185492020
+		protected override void Awake(); // 0x000000018AC9452C-0x000000018AC946CC
+		protected override void OnEnable(); // 0x000000018AC949F0-0x000000018AC94A84
+		protected override void OnDisable(); // 0x000000018AC9495C-0x000000018AC949F0
+		protected override void Update(); // 0x000000018AC94CDC-0x000000018AC94DB4
+		private void HandleCharacter(char i); // 0x000000018AC94788-0x000000018AC94808
+		public void Show(); // 0x000000018AC94C7C-0x000000018AC94CDC
+		public void Hide(); // 0x000000018AC94808-0x000000018AC94864
+		public void Clear(); // 0x000000018AC9473C-0x000000018AC94788
+		public void PlayInvalidCodeAnimation(); // 0x000000018AC94A84-0x000000018AC94AD0
+		protected void OnComplete(); // 0x000000018AC948C0-0x000000018AC9495C
+		protected void OnCancel(); // 0x000000018AC94864-0x000000018AC948C0
+		private void CancelButtonPressed(); // 0x000000018AC946CC-0x000000018AC9473C
+		public void PushNumber(int number); // 0x000000018AC94AD0-0x000000018AC94B90
+		private void RefreshState(); // 0x000000018AC94B90-0x000000018AC94C7C
 	}
 
-	public class ProfilerMemoryBlock : SRMonoBehaviourEx // TypeDefIndex: 57772
+	public class ProfilerMemoryBlock : SRMonoBehaviourEx // TypeDefIndex: 60281
 	{
 		// Fields
 		private float _lastRefresh; // 0x48
+		[RequiredField]
 		public UnityEngine.UI.Text CurrentUsedText; // 0x50
+		[RequiredField]
 		public Slider Slider; // 0x58
+		[RequiredField]
 		public UnityEngine.UI.Text TotalAllocatedText; // 0x60
 	
 		// Nested types
-		private sealed class _CleanUp_d__8 : IEnumerator<object> // TypeDefIndex: 57771
+		[CompilerGenerated]
+		private sealed class _CleanUp_d__8 : IEnumerator<object> // TypeDefIndex: 60280
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1984,86 +2224,101 @@ namespace SRDebugger.UI.Controls
 			public ProfilerMemoryBlock __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018B7DE158-0x000000018B7DE17C 
-			object IEnumerator.Current { get => default; } // 0x000000018646DB20-0x000000018646DB28 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _CleanUp_d__8() {} // Dummy constructor
-			public _CleanUp_d__8(int __1__state) {} // 0x000000018B7DE150-0x000000018B7DE158
+			[DebuggerHidden]
+			public _CleanUp_d__8(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018B7DE340-0x000000018B7DE3C0
-			private bool MoveNext() => default; // 0x000000018B7DE17C-0x000000018B7DE340
-			void IEnumerator.Reset() {} // 0x000000018B7DE0F4-0x000000018B7DE150
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018AC98830-0x000000018AC988D8
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018AC988D8-0x000000018AC98924
 		}
 	
 		// Constructors
-		public ProfilerMemoryBlock() {} // 0x0000000181377E40-0x0000000181377E50
+		public ProfilerMemoryBlock(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void OnEnable() {} // 0x0000000181378230-0x0000000181378240
-		protected override void Update() {} // 0x0000000185492010-0x0000000185492020
-		public void TriggerRefresh() {} // 0x000000018B7E00CC-0x000000018B7E0174
-		public void TriggerCleanup() {} // 0x0000000181377E40-0x0000000181377E50
-		private IEnumerator CleanUp() => default; // 0x000000018B7E0174-0x000000018B7E01C0
+		protected override void OnEnable(); // 0x000000018AC968AC-0x000000018AC968B4
+		protected override void Update(); // 0x000000018AC96A9C-0x000000018AC96B1C
+		public void TriggerRefresh(); // 0x000000018AC968D8-0x000000018AC96A9C
+		public void TriggerCleanup(); // 0x000000018AC968B4-0x000000018AC968D8
+		[IteratorStateMachine(typeof(_CleanUp_d__8))]
+		private IEnumerator CleanUp(); // 0x000000018AC96850-0x000000018AC968AC
 	}
 
-	public class ProfilerMonoBlock : SRMonoBehaviourEx // TypeDefIndex: 57773
+	public class ProfilerMonoBlock : SRMonoBehaviourEx // TypeDefIndex: 60282
 	{
 		// Fields
 		private float _lastRefresh; // 0x48
+		[RequiredField]
 		public UnityEngine.UI.Text CurrentUsedText; // 0x50
+		[RequiredField]
 		public GameObject NotSupportedMessage; // 0x58
+		[RequiredField]
 		public Slider Slider; // 0x60
+		[RequiredField]
 		public UnityEngine.UI.Text TotalAllocatedText; // 0x68
 		private bool _isSupported; // 0x70
 	
 		// Constructors
-		public ProfilerMonoBlock() {} // 0x000000018646DB20-0x000000018646DB28
+		public ProfilerMonoBlock(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void OnEnable() {} // 0x000000018B7DE3C0-0x000000018B7DE428
-		protected override void Update() {} // 0x000000018B7DE66C-0x000000018B7DE6EC
-		public void TriggerRefresh() {} // 0x000000018B7DE478-0x000000018B7DE66C
-		public void TriggerCollection() {} // 0x000000018B7DE428-0x000000018B7DE478
+		protected override void OnEnable(); // 0x000000018AC96B1C-0x000000018AC96B84
+		protected override void Update(); // 0x000000018AC96DC8-0x000000018AC96E48
+		public void TriggerRefresh(); // 0x000000018AC96BD4-0x000000018AC96DC8
+		public void TriggerCollection(); // 0x000000018AC96B84-0x000000018AC96BD4
 	}
 
-	public class ProfilerEnableControl : SRMonoBehaviourEx // TypeDefIndex: 57774
+	public class ProfilerEnableControl : SRMonoBehaviourEx // TypeDefIndex: 60283
 	{
 		// Fields
 		private bool _previousState; // 0x48
+		[RequiredField]
 		public UnityEngine.UI.Text ButtonText; // 0x50
+		[RequiredField]
 		public UnityEngine.UI.Button EnableButton; // 0x58
+		[RequiredField]
 		public UnityEngine.UI.Text Text; // 0x60
 	
 		// Constructors
-		public ProfilerEnableControl() {} // 0x000000018646DB20-0x000000018646DB28
+		public ProfilerEnableControl(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7DC81C-0x000000018B7DC918
-		protected void UpdateLabels() {} // 0x000000018B7DC974-0x000000018B7DCA74
-		protected override void Update() {} // 0x000000018B7DCA74-0x000000018B7DCAA0
-		public void ToggleProfiler() {} // 0x000000018B7DC918-0x000000018B7DC974
+		protected override void Start(); // 0x000000018AC94F70-0x000000018AC9506C
+		protected void UpdateLabels(); // 0x000000018AC950C8-0x000000018AC951C8
+		protected override void Update(); // 0x000000018AC951C8-0x000000018AC951F4
+		public void ToggleProfiler(); // 0x000000018AC9506C-0x000000018AC950C8
 	}
 
-	public class ProfilerGraphAxisLabel : SRMonoBehaviourEx // TypeDefIndex: 57775
+	[RequireComponent(typeof(RectTransform))]
+	public class ProfilerGraphAxisLabel : SRMonoBehaviourEx // TypeDefIndex: 60284
 	{
 		// Fields
 		private float _prevFrameTime; // 0x48
 		private float? _queuedFrameTime; // 0x4C
 		private float _yPosition; // 0x54
+		[RequiredField]
 		public UnityEngine.UI.Text Text; // 0x58
 	
 		// Constructors
-		public ProfilerGraphAxisLabel() {} // 0x000000018646DB20-0x000000018646DB28
+		public ProfilerGraphAxisLabel(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Update() {} // 0x000000018B7DCE1C-0x000000018B7DCE80
-		public void SetValue(float frameTime, float yPosition) {} // 0x000000018B7DCDA0-0x000000018B7DCE1C
-		private void SetValueInternal(float frameTime) {} // 0x000000018B7DCBE8-0x000000018B7DCDA0
+		protected override void Update(); // 0x000000018AC9557C-0x000000018AC955E0
+		public void SetValue(float frameTime, float yPosition); // 0x000000018AC95500-0x000000018AC9557C
+		private void SetValueInternal(float frameTime); // 0x000000018AC95348-0x000000018AC95500
 	}
 
-	public class ProfilerGraphControl : Graphic // TypeDefIndex: 57777
+	[ExecuteInEditMode]
+	[RequireComponent(typeof(RectTransform))]
+	[RequireComponent(typeof(CanvasRenderer))]
+	public class ProfilerGraphControl : Graphic // TypeDefIndex: 60286
 	{
 		// Fields
 		public VerticalAlignments VerticalAlignment; // 0xB0
@@ -2073,11 +2328,11 @@ namespace SRDebugger.UI.Controls
 		public bool DrawAxes; // 0xB6
 		public int TargetFps; // 0xB8
 		public bool Clip; // 0xBC
-		public const float DataPointMargin = 2f; // Metadata: 0x0207DAED
-		public const float DataPointVerticalMargin = 2f; // Metadata: 0x0207DAF1
-		public const float DataPointWidth = 4f; // Metadata: 0x0207DAF5
+		public const float DataPointMargin = 2f; // Metadata: 0x0234D395
+		public const float DataPointVerticalMargin = 2f; // Metadata: 0x0234D399
+		public const float DataPointWidth = 4f; // Metadata: 0x0234D39D
 		public int VerticalPadding; // 0xC0
-		public const int LineCount = 3; // Metadata: 0x0207DAF9
+		public const int LineCount = 3; // Metadata: 0x0234D3A1
 		public UnityEngine.Color[] LineColours; // 0xC8
 		private IProfilerService _profilerService; // 0xD0
 		private ProfilerGraphAxisLabel[] _axisLabels; // 0xD8
@@ -2087,113 +2342,127 @@ namespace SRDebugger.UI.Controls
 		private readonly List<int> _meshTriangles; // 0x100
 	
 		// Nested types
-		public enum VerticalAlignments // TypeDefIndex: 57776
+		public enum VerticalAlignments // TypeDefIndex: 60285
 		{
 			Top = 0,
 			Bottom = 1
 		}
 	
 		// Constructors
-		public ProfilerGraphControl() {} // 0x000000018B7DDF5C-0x000000018B7DE0F4
-		static ProfilerGraphControl() {} // 0x000000018B7DDED0-0x000000018B7DDF5C
+		public ProfilerGraphControl(); // 0x000000018AC966B8-0x000000018AC96850
+		static ProfilerGraphControl(); // 0x000000018AC9662C-0x000000018AC966B8
 	
 		// Methods
-		protected override void Awake() {} // 0x000000018B7DD1B8-0x000000018B7DD21C
-		protected override void Start() {} // 0x0000000185492010-0x0000000185492020
-		protected void Update() {} // 0x000000018B7DDEC0-0x000000018B7DDED0
-		protected override void OnPopulateMesh(Mesh m) {} // 0x000000018B7DD9D4-0x000000018B7DDEC0
-		protected void DrawDataPoint(float xPosition, float verticalScale, ProfilerFrame frame) {} // 0x000000018B7DD4E8-0x000000018B7DD7D4
-		protected void DrawAxis(float frameTime, float yPosition, ProfilerGraphAxisLabel label) {} // 0x000000018B7DD2E0-0x000000018B7DD4E8
-		protected void AddRect(Vector3 tl, Vector3 tr, Vector3 bl, Vector3 br, UnityEngine.Color c) {} // 0x000000018B7DCE80-0x000000018B7DD1B8
-		protected ProfilerFrame GetFrame(int i) => default; // 0x000000018B7DD948-0x000000018B7DD9D4
-		protected int CalculateVisibleDataPointCount() => default; // 0x000000018B7DD2A4-0x000000018B7DD2E0
-		protected int GetFrameBufferCurrentSize() => default; // 0x000000018B7DD8A4-0x000000018B7DD8F0
-		protected int GetFrameBufferMaxSize() => default; // 0x000000018B7DD8F0-0x000000018B7DD948
-		protected float CalculateMaxFrameTime() => default; // 0x000000018B7DD21C-0x000000018B7DD2A4
-		private ProfilerGraphAxisLabel GetAxisLabel(int index) => default; // 0x000000018B7DD7D4-0x000000018B7DD8A4
+		protected override void Awake(); // 0x000000018AC95918-0x000000018AC9597C
+		protected override void Start(); // 0x00000001841E1670-0x00000001841E1680
+		protected void Update(); // 0x000000018AC9661C-0x000000018AC9662C
+		[Obsolete]
+		protected override void OnPopulateMesh(Mesh m); // 0x000000018AC96130-0x000000018AC9661C
+		protected void DrawDataPoint(float xPosition, float verticalScale, ProfilerFrame frame); // 0x000000018AC95C48-0x000000018AC95F30
+		protected void DrawAxis(float frameTime, float yPosition, ProfilerGraphAxisLabel label); // 0x000000018AC95A40-0x000000018AC95C48
+		protected void AddRect(Vector3 tl, Vector3 tr, Vector3 bl, Vector3 br, UnityEngine.Color c); // 0x000000018AC955E0-0x000000018AC95918
+		protected ProfilerFrame GetFrame(int i); // 0x000000018AC960A4-0x000000018AC96130
+		protected int CalculateVisibleDataPointCount(); // 0x000000018AC95A04-0x000000018AC95A40
+		protected int GetFrameBufferCurrentSize(); // 0x000000018AC96000-0x000000018AC9604C
+		protected int GetFrameBufferMaxSize(); // 0x000000018AC9604C-0x000000018AC960A4
+		protected float CalculateMaxFrameTime(); // 0x000000018AC9597C-0x000000018AC95A04
+		private ProfilerGraphAxisLabel GetAxisLabel(int index); // 0x000000018AC95F30-0x000000018AC96000
 	}
 
-	public class SRTabButton : SRMonoBehaviourEx // TypeDefIndex: 57778
+	public class SRTabButton : SRMonoBehaviourEx // TypeDefIndex: 60287
 	{
 		// Fields
+		[RequiredField]
 		public UnityEngine.Behaviour ActiveToggle; // 0x48
+		[RequiredField]
 		public UnityEngine.UI.Button Button; // 0x50
+		[RequiredField]
 		public RectTransform ExtraContentContainer; // 0x58
+		[RequiredField]
 		public StyleComponent IconStyleComponent; // 0x60
+		[RequiredField]
 		public UnityEngine.UI.Text TitleText; // 0x68
 	
 		// Properties
-		public bool IsActive { get => default; set {} } // 0x000000018B7DEA88-0x000000018B7DEAA8 0x000000018B7DEAA8-0x000000018B7DEAC8
+		public bool IsActive { get; set; } // 0x000000018AC971BC-0x000000018AC971DC 0x000000018AC971DC-0x000000018AC971FC
 	
 		// Constructors
-		public SRTabButton() {} // 0x000000018646DB20-0x000000018646DB28
+		public SRTabButton(); // 0x0000000185393520-0x0000000185393538
 	}
 }
 
 namespace SRDebugger.UI.Controls.Data
 {
-	public class ActionControl : OptionsControlBase // TypeDefIndex: 57779
+	public class ActionControl : OptionsControlBase // TypeDefIndex: 60288
 	{
 		// Fields
 		private MethodReference _method; // 0x60
+		[RequiredField]
 		public UnityEngine.UI.Button Button; // 0x68
+		[RequiredField]
 		public UnityEngine.UI.Text Title; // 0x70
 	
 		// Properties
-		public MethodReference Method { get => default; } // 0x0000000185FB0530-0x0000000185FB0540 
+		public MethodReference Method { get; } // 0x0000000184D86280-0x0000000184D86290 
 	
 		// Constructors
-		public ActionControl() {} // 0x000000018646DB20-0x000000018646DB28
+		public ActionControl(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7CFD8C-0x000000018B7CFE28
-		private void ButtonOnClick() {} // 0x000000018B7CFC3C-0x000000018B7CFD54
-		public void SetMethod(string methodName, MethodReference method) {} // 0x000000018B7CFD54-0x000000018B7CFD8C
+		protected override void Start(); // 0x000000018AC8868C-0x000000018AC88728
+		private void ButtonOnClick(); // 0x000000018AC8853C-0x000000018AC88654
+		public void SetMethod(string methodName, MethodReference method); // 0x000000018AC88654-0x000000018AC8868C
 	}
 
-	public class BoolControl : DataBoundControl // TypeDefIndex: 57780
+	public class BoolControl : DataBoundControl // TypeDefIndex: 60289
 	{
 		// Fields
+		[RequiredField]
 		public UnityEngine.UI.Text Title; // 0x80
+		[RequiredField]
 		public Toggle Toggle; // 0x88
 	
 		// Constructors
-		public BoolControl() {} // 0x000000018646DB20-0x000000018646DB28
+		public BoolControl(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7CFF34-0x000000018B7CFFEC
-		private void ToggleOnValueChanged(bool isOn) {} // 0x000000018B7CFFEC-0x000000018B7D0044
-		protected override void OnBind(string propertyName, System.Type t) {} // 0x000000018B7CFE8C-0x000000018B7CFED0
-		protected override void OnValueUpdated(object newValue) {} // 0x000000018B7CFED0-0x000000018B7CFF34
-		public override bool CanBind(System.Type type, bool isReadOnly) => default; // 0x000000018B7CFE28-0x000000018B7CFE8C
+		protected override void Start(); // 0x000000018AC88834-0x000000018AC888EC
+		private void ToggleOnValueChanged(bool isOn); // 0x000000018AC888EC-0x000000018AC88944
+		protected override void OnBind(string propertyName, System.Type t); // 0x000000018AC8878C-0x000000018AC887D0
+		protected override void OnValueUpdated(object newValue); // 0x000000018AC887D0-0x000000018AC88834
+		public override bool CanBind(System.Type type, bool isReadOnly); // 0x000000018AC88728-0x000000018AC8878C
 	}
 
-	public class EnumControl : DataBoundControl // TypeDefIndex: 57781
+	public class EnumControl : DataBoundControl // TypeDefIndex: 60290
 	{
 		// Fields
 		private object _lastValue; // 0x80
 		private string[] _names; // 0x88
 		private Array _values; // 0x90
+		[RequiredField]
 		public LayoutElement ContentLayoutElement; // 0x98
 		public GameObject[] DisableOnReadOnly; // 0xA0
+		[RequiredField]
 		public SRSpinner Spinner; // 0xA8
+		[RequiredField]
 		public UnityEngine.UI.Text Title; // 0xB0
+		[RequiredField]
 		public UnityEngine.UI.Text Value; // 0xB8
 	
 		// Constructors
-		public EnumControl() {} // 0x000000018646DB20-0x000000018646DB28
+		public EnumControl(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7D4AA8-0x000000018B7D4AC8
-		protected override void OnBind(string propertyName, System.Type t) {} // 0x000000018B7D69CC-0x000000018B7D6C28
-		protected override void OnValueUpdated(object newValue) {} // 0x000000018B7D6C28-0x000000018B7D6CE4
-		public override bool CanBind(System.Type type, bool isReadOnly) => default; // 0x000000018B4E6B54-0x000000018B4E6B74
-		private void SetIndex(int i) {} // 0x000000018B7D6CE4-0x000000018B7D6D28
-		public void GoToNext() {} // 0x000000018B7D6904-0x000000018B7D6968
-		public void GoToPrevious() {} // 0x000000018B7D6968-0x000000018B7D69CC
+		protected override void Start(); // 0x000000018AC8D33C-0x000000018AC8D35C
+		protected override void OnBind(string propertyName, System.Type t); // 0x000000018AC8F274-0x000000018AC8F4D0
+		protected override void OnValueUpdated(object newValue); // 0x000000018AC8F4D0-0x000000018AC8F58C
+		public override bool CanBind(System.Type type, bool isReadOnly); // 0x000000018AC8F18C-0x000000018AC8F1AC
+		private void SetIndex(int i); // 0x000000018AC8F58C-0x000000018AC8F5D0
+		public void GoToNext(); // 0x000000018AC8F1AC-0x000000018AC8F210
+		public void GoToPrevious(); // 0x000000018AC8F210-0x000000018AC8F274
 	}
 
-	public class NumberControl : DataBoundControl // TypeDefIndex: 57783
+	public class NumberControl : DataBoundControl // TypeDefIndex: 60292
 	{
 		// Fields
 		private static readonly System.Type[] IntegerTypes; // 0x00
@@ -2203,12 +2472,14 @@ namespace SRDebugger.UI.Controls.Data
 		private System.Type _type; // 0x88
 		public GameObject[] DisableOnReadOnly; // 0x90
 		public SRNumberButton DownNumberButton; // 0x98
+		[RequiredField]
 		public SRNumberSpinner NumberSpinner; // 0xA0
+		[RequiredField]
 		public UnityEngine.UI.Text Title; // 0xA8
 		public SRNumberButton UpNumberButton; // 0xB0
 	
 		// Nested types
-		public struct ValueRange // TypeDefIndex: 57782
+		public struct ValueRange // TypeDefIndex: 60291
 		{
 			// Fields
 			public double MaxValue; // 0x00
@@ -2216,88 +2487,103 @@ namespace SRDebugger.UI.Controls.Data
 		}
 	
 		// Constructors
-		public NumberControl() {} // 0x000000018646DB20-0x000000018646DB28
-		static NumberControl() {} // 0x000000018B7D9388-0x000000018B7D9808
+		public NumberControl(); // 0x0000000185393520-0x0000000185393538
+		static NumberControl(); // 0x000000018AC91BF8-0x000000018AC92078
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7D92D0-0x000000018B7D9388
-		private void OnValueChanged(string newValue) {} // 0x000000018B7D9054-0x000000018B7D91C8
-		protected override void OnBind(string propertyName, System.Type t) {} // 0x000000018B7D8CE0-0x000000018B7D9054
-		protected override void OnValueUpdated(object newValue) {} // 0x000000018B7D91C8-0x000000018B7D92D0
-		public override bool CanBind(System.Type type, bool isReadOnly) => default; // 0x000000018B7D88B4-0x000000018B7D8918
-		protected static bool IsIntegerType(System.Type t) => default; // 0x000000018B7D8C1C-0x000000018B7D8CE0
-		protected static bool IsDecimalType(System.Type t) => default; // 0x000000018B7D8B58-0x000000018B7D8C1C
-		protected double GetMaxValue(System.Type t) => default; // 0x000000018B7D8918-0x000000018B7D8A38
-		protected double GetMinValue(System.Type t) => default; // 0x000000018B7D8A38-0x000000018B7D8B58
+		protected override void Start(); // 0x000000018AC91B40-0x000000018AC91BF8
+		private void OnValueChanged(string newValue); // 0x000000018AC918C4-0x000000018AC91A38
+		protected override void OnBind(string propertyName, System.Type t); // 0x000000018AC91550-0x000000018AC918C4
+		protected override void OnValueUpdated(object newValue); // 0x000000018AC91A38-0x000000018AC91B40
+		public override bool CanBind(System.Type type, bool isReadOnly); // 0x000000018AC91124-0x000000018AC91188
+		protected static bool IsIntegerType(System.Type t); // 0x000000018AC9148C-0x000000018AC91550
+		protected static bool IsDecimalType(System.Type t); // 0x000000018AC913C8-0x000000018AC9148C
+		protected double GetMaxValue(System.Type t); // 0x000000018AC91188-0x000000018AC912A8
+		protected double GetMinValue(System.Type t); // 0x000000018AC912A8-0x000000018AC913C8
 	}
 
-	public class ReadOnlyControl : DataBoundControl // TypeDefIndex: 57784
+	public class ReadOnlyControl : DataBoundControl // TypeDefIndex: 60293
 	{
 		// Fields
+		[RequiredField]
 		public UnityEngine.UI.Text ValueText; // 0x80
+		[RequiredField]
 		public UnityEngine.UI.Text Title; // 0x88
 	
 		// Constructors
-		public ReadOnlyControl() {} // 0x000000018646DB20-0x000000018646DB28
+		public ReadOnlyControl(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7D4AA8-0x000000018B7D4AC8
-		protected override void OnBind(string propertyName, System.Type t) {} // 0x000000018B7DE900-0x000000018B7DE924
-		protected override void OnValueUpdated(object newValue) {} // 0x000000018B7DE924-0x000000018B7DE990
-		public override bool CanBind(System.Type type, bool isReadOnly) => default; // 0x000000018B7DE880-0x000000018B7DE900
+		protected override void Start(); // 0x000000018AC8D33C-0x000000018AC8D35C
+		protected override void OnBind(string propertyName, System.Type t); // 0x000000018AC9705C-0x000000018AC97080
+		protected override void OnValueUpdated(object newValue); // 0x000000018AC97080-0x000000018AC970EC
+		public override bool CanBind(System.Type type, bool isReadOnly); // 0x000000018AC96FDC-0x000000018AC9705C
 	}
 
-	public class StringControl : DataBoundControl // TypeDefIndex: 57785
+	public class StringControl : DataBoundControl // TypeDefIndex: 60294
 	{
 		// Fields
+		[RequiredField]
 		public InputField InputField; // 0x80
+		[RequiredField]
 		public UnityEngine.UI.Text Title; // 0x88
 	
 		// Constructors
-		public StringControl() {} // 0x000000018646DB20-0x000000018646DB28
+		public StringControl(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7E0014-0x000000018B7E00CC
-		private void OnValueChanged(string newValue) {} // 0x000000018B7DFF84-0x000000018B7DFF8C
-		protected override void OnBind(string propertyName, System.Type t) {} // 0x000000018B7DFEF8-0x000000018B7DFF84
-		protected override void OnValueUpdated(object newValue) {} // 0x000000018B7DFF8C-0x000000018B7E0014
-		public override bool CanBind(System.Type type, bool isReadOnly) => default; // 0x000000018B7DFE7C-0x000000018B7DFEF8
+		protected override void Start(); // 0x000000018AC98778-0x000000018AC98830
+		private void OnValueChanged(string newValue); // 0x000000018AC986E8-0x000000018AC986F0
+		protected override void OnBind(string propertyName, System.Type t); // 0x000000018AC9865C-0x000000018AC986E8
+		protected override void OnValueUpdated(object newValue); // 0x000000018AC986F0-0x000000018AC98778
+		public override bool CanBind(System.Type type, bool isReadOnly); // 0x000000018AC985E0-0x000000018AC9865C
 	}
 }
 
 namespace SRDebugger.UI.Other
 {
-	public class BugReportPopoverRoot : SRMonoBehaviourEx // TypeDefIndex: 57738
+	public class BugReportPopoverRoot : SRMonoBehaviourEx // TypeDefIndex: 60247
 	{
 		// Fields
+		[RequiredField]
 		public CanvasGroup CanvasGroup; // 0x48
+		[RequiredField]
 		public RectTransform Container; // 0x50
 	
 		// Constructors
-		public BugReportPopoverRoot() {} // 0x000000018646DB20-0x000000018646DB28
+		public BugReportPopoverRoot(); // 0x0000000185393520-0x0000000185393538
 	}
 
-	public class BugReportSheetController : SRMonoBehaviourEx // TypeDefIndex: 57740
+	public class BugReportSheetController : SRMonoBehaviourEx // TypeDefIndex: 60249
 	{
 		// Fields
+		[RequiredField]
 		public GameObject ButtonContainer; // 0x48
+		[RequiredField]
 		public UnityEngine.UI.Text ButtonText; // 0x50
+		[RequiredField]
 		public UnityEngine.UI.Button CancelButton; // 0x58
 		public Action CancelPressed; // 0x60
+		[RequiredField]
 		public InputField DescriptionField; // 0x68
+		[RequiredField]
 		public InputField EmailField; // 0x70
+		[RequiredField]
 		public Slider ProgressBar; // 0x78
+		[RequiredField]
 		public UnityEngine.UI.Text ResultMessageText; // 0x80
 		public Action ScreenshotComplete; // 0x88
+		[RequiredField]
 		public UnityEngine.UI.Button SubmitButton; // 0x90
 		public Action<bool, string> SubmitComplete; // 0x98
 		public Action TakingScreenshot; // 0xA0
 	
 		// Properties
-		public bool IsCancelButtonEnabled { get => default; set {} } // 0x000000018B7D1150-0x000000018B7D1174 0x000000018B7D1094-0x000000018B7D1150
+		public bool IsCancelButtonEnabled { get; set; } // 0x000000018AC89DD8-0x000000018AC89E08 0x000000018AC89E08-0x000000018AC89E40
 	
 		// Nested types
-		private sealed class _SubmitCo_d__18 : IEnumerator<object> // TypeDefIndex: 57739
+		[CompilerGenerated]
+		private sealed class _SubmitCo_d__18 : IEnumerator<object> // TypeDefIndex: 60248
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -2305,57 +2591,65 @@ namespace SRDebugger.UI.Other
 			public BugReportSheetController __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018B7D1404-0x000000018B7D14E8 
-			object IEnumerator.Current { get => default; } // 0x000000018B7D13A8-0x000000018B7D1404 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _SubmitCo_d__18() {} // Dummy constructor
-			public _SubmitCo_d__18(int __1__state) {} // 0x000000018B7D14E8-0x000000018B7D1518
+			[DebuggerHidden]
+			public _SubmitCo_d__18(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018B7D1518-0x000000018B7D1550
-			private bool MoveNext() => default; // 0x000000018B7D137C-0x000000018B7D13A8
-			void IEnumerator.Reset() {} // 0x000000018B7D0F50-0x000000018B7D0F64
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018AC98DD4-0x000000018AC991D4
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018AC991D4-0x000000018AC99220
 		}
 	
 		// Constructors
-		public BugReportSheetController() {} // 0x0000000181377E40-0x0000000181377E50
+		public BugReportSheetController(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7D1224-0x000000018B7D127C
-		public void Submit() {} // 0x000000018B7D0FD4-0x000000018B7D104C
-		public void Cancel() {} // 0x000000018B7D127C-0x000000018B7D137C
-		private IEnumerator SubmitCo() => default; // 0x000000018B7D0F64-0x000000018B7D0FD4
-		private void OnBugReportProgress(float progress) {} // 0x000000018B7D11B8-0x000000018B7D1224
-		private void OnBugReportComplete(bool didSucceed, string errorMessage) {} // 0x000000018B7D104C-0x000000018B7D1094
-		protected void SetLoadingSpinnerVisible(bool visible) {} // 0x000000018B7D1174-0x000000018B7D11B8
-		protected void ClearForm() {} // 0x000000018646DB20-0x000000018646DB28
-		protected void ShowErrorMessage(string userMessage, string serverMessage = null) {} // 0x0000000181378230-0x0000000181378240
-		protected void ClearErrorMessage() {} // 0x0000000185492010-0x0000000185492020
-		protected void SetFormEnabled(bool e) {} // 0x000000018B7E0670-0x000000018B7E0AA8
-		private string GetDefaultEmailFieldContents() => default; // 0x0000000181377E40-0x0000000181377E50
-		private void SetDefaultEmailFieldContents(string value) {} // 0x000000018B7E0AA8-0x000000018B7E0AF4
+		protected override void Start(); // 0x000000018AC89C6C-0x000000018AC89C98
+		public void Submit(); // 0x000000018AC89CF4-0x000000018AC89DD8
+		public void Cancel(); // 0x000000018AC89840-0x000000018AC89854
+		[IteratorStateMachine(typeof(_SubmitCo_d__18))]
+		private IEnumerator SubmitCo(); // 0x000000018AC89C98-0x000000018AC89CF4
+		private void OnBugReportProgress(float progress); // 0x000000018AC89A40-0x000000018AC89A64
+		private void OnBugReportComplete(bool didSucceed, string errorMessage); // 0x000000018AC89984-0x000000018AC89A40
+		protected void SetLoadingSpinnerVisible(bool visible); // 0x000000018AC89B14-0x000000018AC89B6C
+		protected void ClearForm(); // 0x000000018AC898C4-0x000000018AC8993C
+		protected void ShowErrorMessage(string userMessage, string serverMessage = null); // 0x000000018AC89B6C-0x000000018AC89C6C
+		protected void ClearErrorMessage(); // 0x000000018AC89854-0x000000018AC898C4
+		protected void SetFormEnabled(bool e); // 0x000000018AC89AA8-0x000000018AC89B14
+		private string GetDefaultEmailFieldContents(); // 0x000000018AC8993C-0x000000018AC89984
+		private void SetDefaultEmailFieldContents(string value); // 0x000000018AC89A64-0x000000018AC89AA8
 	}
 
-	public class CategoryGroup : SRMonoBehaviourEx // TypeDefIndex: 57741
+	public class CategoryGroup : SRMonoBehaviourEx // TypeDefIndex: 60250
 	{
 		// Fields
+		[RequiredField]
 		public RectTransform Container; // 0x48
+		[RequiredField]
 		public UnityEngine.UI.Text Header; // 0x50
+		[RequiredField]
 		public GameObject Background; // 0x58
+		[RequiredField]
 		public Toggle SelectionToggle; // 0x60
 		public GameObject[] EnabledDuringSelectionMode; // 0x68
 		private bool _selectionModeEnabled; // 0x70
 	
 		// Properties
-		public bool IsSelected { get => default; set {} } // 0x000000018B7D18C0-0x000000018B7D18E0 0x000000018B7D18E0-0x000000018B7D19B8
-		public bool SelectionModeEnabled { get => default; set {} } // 0x0000000185FB0950-0x0000000185FB0960 0x000000018B7D19B8-0x000000018B7D1A18
+		public bool IsSelected { get; set; } // 0x000000018AC8A190-0x000000018AC8A1B0 0x000000018AC8A1B0-0x000000018AC8A288
+		public bool SelectionModeEnabled { get; set; } // 0x0000000184D86A50-0x0000000184D86A60 0x000000018AC8A288-0x000000018AC8A2E8
 	
 		// Constructors
-		public CategoryGroup() {} // 0x000000018B7D186C-0x000000018B7D18C0
+		public CategoryGroup(); // 0x000000018AC8A13C-0x000000018AC8A190
 	}
 
-	public class ConfigureCanvasFromSettings : SRMonoBehaviour // TypeDefIndex: 57742
+	[RequireComponent(typeof(Canvas))]
+	public class ConfigureCanvasFromSettings : SRMonoBehaviour // TypeDefIndex: 60251
 	{
 		// Fields
 		private Canvas _canvas; // 0x48
@@ -2365,115 +2659,145 @@ namespace SRDebugger.UI.Other
 		private SRDebugger.Settings _settings; // 0x60
 	
 		// Constructors
-		public ConfigureCanvasFromSettings() {} // 0x000000018646DB20-0x000000018646DB28
+		public ConfigureCanvasFromSettings(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void Start() {} // 0x000000018B7D1BD4-0x000000018B7D1D50
-		private void OnDestroy() {} // 0x000000018B7D1AA8-0x000000018B7D1B68
-		private void SettingsOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs) {} // 0x000000018B7D1B68-0x000000018B7D1BD4
+		private void Start(); // 0x000000018AC8A4A4-0x000000018AC8A638
+		private void OnDestroy(); // 0x000000018AC8A378-0x000000018AC8A438
+		private void SettingsOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs); // 0x000000018AC8A438-0x000000018AC8A4A4
 	}
 
-	public class ConsoleTabQuickViewControl : SRMonoBehaviourEx // TypeDefIndex: 57743
+	public class ConsoleTabQuickViewControl : SRMonoBehaviourEx // TypeDefIndex: 60252
 	{
 		// Fields
-		private const int Max = 1000; // Metadata: 0x0207DA8E
+		private const int Max = 1000; // Metadata: 0x0234D336
 		private static readonly string MaxString; // 0x00
 		private int _prevCriticalCount; // 0x48
 		private int _prevErrorCount; // 0x4C
 		private int _prevInfoCount; // 0x50
 		private int _prevWarningCount; // 0x54
+		[Import]
 		public IConsoleService ConsoleService; // 0x58
+		[RequiredField]
 		public UnityEngine.UI.Text CriticalCountText; // 0x60
+		[RequiredField]
 		public UnityEngine.UI.Text ErrorCountText; // 0x68
+		[RequiredField]
 		public UnityEngine.UI.Text InfoCountText; // 0x70
+		[RequiredField]
 		public UnityEngine.UI.Text WarningCountText; // 0x78
 	
 		// Constructors
-		public ConsoleTabQuickViewControl() {} // 0x000000018B7D4750-0x000000018B7D4768
-		static ConsoleTabQuickViewControl() {} // 0x000000018B7D46D4-0x000000018B7D4750
+		public ConsoleTabQuickViewControl(); // 0x000000018AC8CFD4-0x000000018AC8CFFC
+		static ConsoleTabQuickViewControl(); // 0x000000018AC8CF58-0x000000018AC8CFD4
 	
 		// Methods
-		protected override void Awake() {} // 0x000000018B7D4380-0x000000018B7D4420
-		protected override void Update() {} // 0x000000018B7D4450-0x000000018B7D46D4
-		private static bool HasChanged(int newCount, ref int oldCount, int max) => default; // 0x000000018B7D4420-0x000000018B7D4450
+		protected override void Awake(); // 0x000000018AC8CC04-0x000000018AC8CCA4
+		protected override void Update(); // 0x000000018AC8CCD4-0x000000018AC8CF58
+		private static bool HasChanged(int newCount, ref int oldCount, int max); // 0x000000018AC8CCA4-0x000000018AC8CCD4
 	}
 
-	public class DebugPanelBackgroundBehaviour : SRMonoBehaviour // TypeDefIndex: 57744
+	[RequireComponent(typeof(StyleComponent))]
+	public class DebugPanelBackgroundBehaviour : SRMonoBehaviour // TypeDefIndex: 60253
 	{
 		// Fields
 		private StyleComponent _styleComponent; // 0x48
 		public string TransparentStyleKey; // 0x50
+		[SerializeField]
 		private StyleSheet _styleSheet; // 0x58
 	
 		// Constructors
-		public DebugPanelBackgroundBehaviour() {} // 0x000000018B7D4BDC-0x000000018B7D4C24
+		public DebugPanelBackgroundBehaviour(); // 0x000000018AC8D470-0x000000018AC8D4CC
 	
 		// Methods
-		private void Awake() {} // 0x000000018B7D4B14-0x000000018B7D4BDC
+		private void Awake(); // 0x000000018AC8D3A8-0x000000018AC8D470
 	}
 
-	public class DockConsoleController : SRMonoBehaviourEx, IPointerEnterHandler, IPointerExitHandler // TypeDefIndex: 57745
+	public class DockConsoleController : SRMonoBehaviourEx, IPointerEnterHandler, IPointerExitHandler // TypeDefIndex: 60254
 	{
 		// Fields
-		public const float NonFocusOpacity = 0.65f; // Metadata: 0x0207DA90
+		public const float NonFocusOpacity = 0.65f; // Metadata: 0x0234D338
 		private bool _isDirty; // 0x48
 		private bool _isDragging; // 0x49
 		private int _pointersOver; // 0x4C
+		[Import]
 		public IConsoleFilterState FilterState; // 0x50
+		[RequiredField]
 		public GameObject BottomHandle; // 0x58
+		[RequiredField]
 		public CanvasGroup CanvasGroup; // 0x60
+		[RequiredField]
 		public ConsoleLogControl Console; // 0x68
+		[RequiredField]
 		public GameObject Dropdown; // 0x70
+		[RequiredField]
 		public Image DropdownToggleSprite; // 0x78
+		[RequiredField]
 		public UnityEngine.UI.Text TextCriticals; // 0x80
+		[RequiredField]
 		public UnityEngine.UI.Text TextErrors; // 0x88
+		[RequiredField]
 		public UnityEngine.UI.Text TextInfo; // 0x90
+		[RequiredField]
 		public UnityEngine.UI.Text TextWarnings; // 0x98
+		[RequiredField]
 		public Toggle ToggleCriticals; // 0xA0
+		[RequiredField]
 		public Toggle ToggleErrors; // 0xA8
+		[RequiredField]
 		public Toggle ToggleInfo; // 0xB0
+		[RequiredField]
 		public Toggle ToggleWarnings; // 0xB8
+		[RequiredField]
 		public GameObject TopBar; // 0xC0
+		[RequiredField]
 		public GameObject TopHandle; // 0xC8
+		[RequiredField]
 		public GameObject TopSafeAreaSpacer; // 0xD0
+		[RequiredField]
 		public GameObject BottomSafeAreaSpacer; // 0xD8
 	
 		// Properties
-		public bool IsVisible { get => default; set {} } // 0x000000018B7D6188-0x000000018B7D61AC 0x000000018B7D61AC-0x000000018B7D61DC
+		public bool IsVisible { get; set; } // 0x000000018AC8EA10-0x000000018AC8EA34 0x000000018AC8EA34-0x000000018AC8EA64
 	
 		// Constructors
-		public DockConsoleController() {} // 0x000000018646DB20-0x000000018646DB28
+		public DockConsoleController(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7D5C38-0x000000018B7D5FD4
-		protected override void OnDestroy() {} // 0x000000018B7D54F8-0x000000018B7D55EC
-		protected override void OnEnable() {} // 0x000000018B7D55EC-0x000000018B7D5600
-		protected override void OnDisable() {} // 0x0000000185FD5DE0-0x0000000185FD5DF0
-		protected override void Update() {} // 0x000000018B7D6178-0x000000018B7D6188
-		private void OnFilterStateChange(UnityEngine.LogType logType, bool newState) {} // 0x000000018B7D5614-0x000000018B7D5674
-		private void ConsoleOnUpdated(IConsoleService console) {} // 0x0000000185FD46B0-0x0000000185FD46C0
-		public void SetDropdownVisibility(bool visible) {} // 0x000000018B7D5BAC-0x000000018B7D5C38
-		public void SetAlignmentMode(ConsoleAlignment alignment) {} // 0x000000018B7D5910-0x000000018B7D5BAC
-		private void Refresh() {} // 0x000000018B7D56DC-0x000000018B7D5910
-		private void RefreshAlpha() {} // 0x000000018B7D5694-0x000000018B7D56DC
-		public void ToggleDropdownVisible() {} // 0x000000018B7D5FD4-0x000000018B7D6008
-		public void MenuButtonPressed() {} // 0x000000018B7D549C-0x000000018B7D54EC
-		public void ClearButtonPressed() {} // 0x000000018B7D5478-0x000000018B7D549C
-		public void TogglesUpdated() {} // 0x000000018B7D6008-0x000000018B7D60B8
-		public void OnPointerEnter(PointerEventData e) {} // 0x000000018B7D5674-0x000000018B7D5684
-		public void OnPointerExit(PointerEventData e) {} // 0x000000018B7D5684-0x000000018B7D5694
-		public void OnBeginDrag() {} // 0x000000018B7D54EC-0x000000018B7D54F8
-		public void OnEndDrag() {} // 0x000000018B7D5600-0x000000018B7D5614
-		private void _Start_b__25_0(bool isOn) {} // 0x000000018B7D60B8-0x000000018B7D60E8
-		private void _Start_b__25_1(bool isOn) {} // 0x000000018B7D60E8-0x000000018B7D6118
-		private void _Start_b__25_2(bool isOn) {} // 0x000000018B7D6118-0x000000018B7D6148
-		private void _Start_b__25_3(bool isOn) {} // 0x000000018B7D6148-0x000000018B7D6178
+		protected override void Start(); // 0x000000018AC8E4C0-0x000000018AC8E85C
+		protected override void OnDestroy(); // 0x000000018AC8DD80-0x000000018AC8DE74
+		protected override void OnEnable(); // 0x000000018AC8DE74-0x000000018AC8DE88
+		protected override void OnDisable(); // 0x0000000184DA9DF0-0x0000000184DA9E00
+		protected override void Update(); // 0x000000018AC8EA00-0x000000018AC8EA10
+		private void OnFilterStateChange(UnityEngine.LogType logType, bool newState); // 0x000000018AC8DE9C-0x000000018AC8DEFC
+		private void ConsoleOnUpdated(IConsoleService console); // 0x0000000184D99870-0x0000000184D99880
+		public void SetDropdownVisibility(bool visible); // 0x000000018AC8E434-0x000000018AC8E4C0
+		public void SetAlignmentMode(ConsoleAlignment alignment); // 0x000000018AC8E198-0x000000018AC8E434
+		private void Refresh(); // 0x000000018AC8DF64-0x000000018AC8E198
+		private void RefreshAlpha(); // 0x000000018AC8DF1C-0x000000018AC8DF64
+		public void ToggleDropdownVisible(); // 0x000000018AC8E85C-0x000000018AC8E890
+		public void MenuButtonPressed(); // 0x000000018AC8DD24-0x000000018AC8DD74
+		public void ClearButtonPressed(); // 0x000000018AC8DD00-0x000000018AC8DD24
+		public void TogglesUpdated(); // 0x000000018AC8E890-0x000000018AC8E940
+		public void OnPointerEnter(PointerEventData e); // 0x000000018AC8DEFC-0x000000018AC8DF0C
+		public void OnPointerExit(PointerEventData e); // 0x000000018AC8DF0C-0x000000018AC8DF1C
+		public void OnBeginDrag(); // 0x000000018AC8DD74-0x000000018AC8DD80
+		public void OnEndDrag(); // 0x000000018AC8DE88-0x000000018AC8DE9C
+		[CompilerGenerated]
+		private void _Start_b__25_0(bool isOn); // 0x000000018AC8E940-0x000000018AC8E970
+		[CompilerGenerated]
+		private void _Start_b__25_1(bool isOn); // 0x000000018AC8E970-0x000000018AC8E9A0
+		[CompilerGenerated]
+		private void _Start_b__25_2(bool isOn); // 0x000000018AC8E9A0-0x000000018AC8E9D0
+		[CompilerGenerated]
+		private void _Start_b__25_3(bool isOn); // 0x000000018AC8E9D0-0x000000018AC8EA00
 	}
 
-	public class ErrorNotifier : MonoBehaviour // TypeDefIndex: 57746
+	public class ErrorNotifier : MonoBehaviour // TypeDefIndex: 60255
 	{
 		// Fields
-		private const float DisplayTime = 6f; // Metadata: 0x0207DA94
+		private const float DisplayTime = 6f; // Metadata: 0x0234D33C
+		[SerializeField]
 		private Animator _animator; // 0x18
 		private int _triggerHash; // 0x20
 		private float _hideTime; // 0x24
@@ -2481,33 +2805,35 @@ namespace SRDebugger.UI.Other
 		private bool _queueWarning; // 0x29
 	
 		// Properties
-		public bool IsVisible { get => default; } // 0x00000001813B31B0-0x00000001813B31C0 
+		public bool IsVisible { get; } // 0x00000001811F33C0-0x00000001811F33D0 
 	
 		// Constructors
-		public ErrorNotifier() {} // 0x000000018646DB20-0x000000018646DB28
+		public ErrorNotifier(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void Awake() {} // 0x000000018B7D6D28-0x000000018B7D6D64
-		public void ShowErrorWarning() {} // 0x0000000185FD5DF0-0x0000000185FD5E00
-		private void Update() {} // 0x000000018B7D6D64-0x000000018B7D6DE8
+		private void Awake(); // 0x000000018AC8F5D0-0x000000018AC8F60C
+		public void ShowErrorWarning(); // 0x0000000184DA9E00-0x0000000184DA9E10
+		private void Update(); // 0x000000018AC8F60C-0x000000018AC8F690
 	}
 
-	public class FloatOverElement : UIBehaviour, ILayoutSelfController // TypeDefIndex: 57747
+	[ExecuteAlways]
+	[RequireComponent(typeof(RectTransform))]
+	public class FloatOverElement : UIBehaviour, ILayoutSelfController // TypeDefIndex: 60256
 	{
 		// Fields
 		public RectTransform CopyFrom; // 0x18
 		private DrivenRectTransformTracker _tracker; // 0x20
 	
 		// Constructors
-		public FloatOverElement() {} // 0x000000018646DB20-0x000000018646DB28
+		public FloatOverElement(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void Copy() {} // 0x000000018B7D6DE8-0x000000018B7D6F94
-		public void SetLayoutHorizontal() {} // 0x000000018B7D6F94-0x000000018B7D6F9C
-		public void SetLayoutVertical() {} // 0x000000018B7D6F94-0x000000018B7D6F9C
+		private void Copy(); // 0x000000018AC8F690-0x000000018AC8F83C
+		public void SetLayoutHorizontal(); // 0x000000018AC8F83C-0x000000018AC8F844
+		public void SetLayoutVertical(); // 0x000000018AC8F83C-0x000000018AC8F844
 	}
 
-	public class HandleManager : SRMonoBehaviour // TypeDefIndex: 57748
+	public class HandleManager : SRMonoBehaviour // TypeDefIndex: 60257
 	{
 		// Fields
 		private bool _hasSet; // 0x48
@@ -2522,21 +2848,21 @@ namespace SRDebugger.UI.Other
 		public GameObject TopRightHandle; // 0x90
 	
 		// Constructors
-		public HandleManager() {} // 0x000000018646DB20-0x000000018646DB28
+		public HandleManager(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void Start() {} // 0x000000018B7D71F8-0x000000018B7D720C
-		public void SetAlignment(PinAlignment alignment) {} // 0x000000018B7D700C-0x000000018B7D71F8
-		private void SetActive(GameObject obj, bool active) {} // 0x000000018B7D6F9C-0x000000018B7D700C
+		private void Start(); // 0x000000018AC8FAA0-0x000000018AC8FAB4
+		public void SetAlignment(PinAlignment alignment); // 0x000000018AC8F8B4-0x000000018AC8FAA0
+		private void SetActive(GameObject obj, bool active); // 0x000000018AC8F844-0x000000018AC8F8B4
 	}
 
-	public interface IEnableTab // TypeDefIndex: 57749
+	public interface IEnableTab // TypeDefIndex: 60258
 	{
 		// Properties
 		bool IsEnabled { get; }
 	}
 
-	public class LoadingSpinnerBehaviour : SRMonoBehaviour // TypeDefIndex: 57750
+	public class LoadingSpinnerBehaviour : SRMonoBehaviour // TypeDefIndex: 60259
 	{
 		// Fields
 		private float _dt; // 0x48
@@ -2544,244 +2870,307 @@ namespace SRDebugger.UI.Other
 		public float SpinDuration; // 0x50
 	
 		// Constructors
-		public LoadingSpinnerBehaviour() {} // 0x000000018B7D7E50-0x000000018B7D7E68
+		public LoadingSpinnerBehaviour(); // 0x000000018AC906A8-0x000000018AC906CC
 	
 		// Methods
-		private void Update() {} // 0x000000018B7D7D44-0x000000018B7D7E50
+		private void Update(); // 0x000000018AC9059C-0x000000018AC906A8
 	}
 
-	public class PinnedUIRoot : SRMonoBehaviourEx // TypeDefIndex: 57751
+	public class PinnedUIRoot : SRMonoBehaviourEx // TypeDefIndex: 60260
 	{
 		// Fields
+		[RequiredField]
 		public Canvas Canvas; // 0x48
+		[RequiredField]
 		public RectTransform Container; // 0x50
+		[RequiredField]
 		public DockConsoleController DockConsoleController; // 0x58
+		[RequiredField]
 		public GameObject Options; // 0x60
+		[RequiredField]
 		public FlowLayoutGroup OptionsLayoutGroup; // 0x68
+		[RequiredField]
 		public GameObject Profiler; // 0x70
+		[RequiredField]
 		public HandleManager ProfilerHandleManager; // 0x78
+		[RequiredField]
 		public VerticalLayoutGroup ProfilerVerticalLayoutGroup; // 0x80
 	
 		// Constructors
-		public PinnedUIRoot() {} // 0x000000018646DB20-0x000000018646DB28
+		public PinnedUIRoot(); // 0x0000000185393520-0x0000000185393538
 	}
 
-	public class SafeAreaSizer : UIBehaviour, ILayoutElement // TypeDefIndex: 57752
+	[ExecuteInEditMode]
+	[RequireComponent(typeof(RectTransform))]
+	public class SafeAreaSizer : UIBehaviour, ILayoutElement // TypeDefIndex: 60261
 	{
 		// Fields
+		[FormerlySerializedAs("Edge")]
+		[SerializeField]
 		private RectTransform.Edge _edge; // 0x18
 		public float Scale; // 0x1C
 		private float _height; // 0x20
 		private float _width; // 0x24
 	
 		// Properties
-		public RectTransform.Edge Edge { get => default; set {} } // 0x00000001813AE560-0x00000001813AE570 0x000000018B7DF814-0x000000018B7DF8A0
-		public float preferredWidth { get => default; } // 0x0000000185FB3810-0x0000000185FB3820 
-		public float preferredHeight { get => default; } // 0x0000000181C9AC70-0x0000000181C9AC80 
-		public float minWidth { get => default; } // 0x0000000185FB3810-0x0000000185FB3820 
-		public float minHeight { get => default; } // 0x0000000181C9AC70-0x0000000181C9AC80 
-		public int layoutPriority { get => default; } // 0x0000000181C6A970-0x0000000181C6A980 
-		public float flexibleHeight { get => default; } // 0x0000000185FD5E00-0x0000000185FD5E10 
-		public float flexibleWidth { get => default; } // 0x0000000185FD5E00-0x0000000185FD5E10 
+		public RectTransform.Edge Edge { get; set; } // 0x00000001811EF5B0-0x00000001811EF5C0 0x000000018AC97F78-0x000000018AC98004
+		public float preferredWidth { get; } // 0x0000000184D89850-0x0000000184D89860 
+		public float preferredHeight { get; } // 0x00000001811EC8A0-0x00000001811EC8B0 
+		public float minWidth { get; } // 0x0000000184D89850-0x0000000184D89860 
+		public float minHeight { get; } // 0x00000001811EC8A0-0x00000001811EC8B0 
+		public int layoutPriority { get; } // 0x0000000182BBE540-0x0000000182BBE550 
+		public float flexibleHeight { get; } // 0x0000000184DA9E10-0x0000000184DA9E20 
+		public float flexibleWidth { get; } // 0x0000000184DA9E10-0x0000000184DA9E20 
 	
 		// Constructors
-		public SafeAreaSizer() {} // 0x0000000185D78B50-0x0000000185D78B60
+		public SafeAreaSizer(); // 0x000000018AC97F5C-0x000000018AC97F78
 	
 		// Methods
-		private void Refresh() {} // 0x000000018B7DF574-0x000000018B7DF814
-		public void CalculateLayoutInputHorizontal() {} // 0x000000018B7DF548-0x000000018B7DF574
-		public void CalculateLayoutInputVertical() {} // 0x000000018B7DF548-0x000000018B7DF574
+		private void Refresh(); // 0x000000018AC97CBC-0x000000018AC97F5C
+		public void CalculateLayoutInputHorizontal(); // 0x000000018AC97C90-0x000000018AC97CBC
+		public void CalculateLayoutInputVertical(); // 0x000000018AC97C90-0x000000018AC97CBC
 	}
 
-	public class ScrollSettingsBehaviour : MonoBehaviour // TypeDefIndex: 57753
+	[RequireComponent(typeof(ScrollRect))]
+	public class ScrollSettingsBehaviour : MonoBehaviour // TypeDefIndex: 60262
 	{
 		// Fields
-		public const float ScrollSensitivity = 40f; // Metadata: 0x0207DA98
+		public const float ScrollSensitivity = 40f; // Metadata: 0x0234D340
 	
 		// Constructors
-		public ScrollSettingsBehaviour() {} // 0x000000018646DB20-0x000000018646DB28
+		public ScrollSettingsBehaviour(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void Awake() {} // 0x000000018B7DF8A0-0x000000018B7DF904
+		private void Awake(); // 0x000000018AC98004-0x000000018AC98068
 	}
 
-	public class SetLayerFromSettings : SRMonoBehaviour // TypeDefIndex: 57754
+	public class SetLayerFromSettings : SRMonoBehaviour // TypeDefIndex: 60263
 	{
 		// Constructors
-		public SetLayerFromSettings() {} // 0x000000018646DB20-0x000000018646DB28
+		public SetLayerFromSettings(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void Start() {} // 0x000000018B7DF904-0x000000018B7DF940
+		private void Start(); // 0x000000018AC98068-0x000000018AC980A4
 	}
 
-	public class SRTab : SRMonoBehaviourEx // TypeDefIndex: 57755
+	public class SRTab : SRMonoBehaviourEx // TypeDefIndex: 60264
 	{
 		// Fields
 		public RectTransform HeaderExtraContent; // 0x48
+		[HideInInspector]
+		[Obsolete]
 		public Sprite Icon; // 0x50
 		public RectTransform IconExtraContent; // 0x58
 		public string IconStyleKey; // 0x60
 		public int SortIndex; // 0x68
+		[HideInInspector]
 		public SRTabButton TabButton; // 0x70
+		[FormerlySerializedAs("Title")]
+		[SerializeField]
 		private string _title; // 0x78
+		[SerializeField]
 		private string _longTitle; // 0x80
+		[SerializeField]
 		private string _key; // 0x88
 	
 		// Properties
-		public string Title { get => default; } // 0x0000000183060C50-0x0000000183060C60 
-		public string LongTitle { get => default; } // 0x000000018B7DF530-0x000000018B7DF548 
-		public string Key { get => default; } // 0x0000000185FB0510-0x0000000185FB0520 
+		public string Title { get; } // 0x0000000184D862A0-0x0000000184D862B0 
+		public string LongTitle { get; } // 0x000000018AC97C78-0x000000018AC97C90 
+		public string Key { get; } // 0x0000000184D861F0-0x0000000184D86200 
 	
 		// Constructors
-		public SRTab() {} // 0x000000018B7DF4E8-0x000000018B7DF530
+		public SRTab(); // 0x000000018AC97C1C-0x000000018AC97C78
 	}
 
-	public class SRTabController : SRMonoBehaviourEx // TypeDefIndex: 57758
+	public class SRTabController : SRMonoBehaviourEx // TypeDefIndex: 60267
 	{
 		// Fields
 		private readonly SRList<SRTab> _tabs; // 0x48
 		private SRTab _activeTab; // 0x50
+		[RequiredField]
 		public RectTransform TabButtonContainer; // 0x58
+		[RequiredField]
 		public SRTabButton TabButtonPrefab; // 0x60
+		[RequiredField]
 		public RectTransform TabContentsContainer; // 0x68
+		[RequiredField]
 		public RectTransform TabHeaderContentContainer; // 0x70
+		[RequiredField]
 		public UnityEngine.UI.Text TabHeaderText; // 0x78
+		[CompilerGenerated]
 		private Action<SRTabController, SRTab> ActiveTabChanged; // 0x80
 	
 		// Properties
-		public SRTab ActiveTab { get => default; set {} } // 0x000000018B7DEAC8-0x000000018B7DEDD4 0x000000018B7DEDD4-0x000000018B7DF13C
-		public IList<SRTab> Tabs { get => default; } // 0x000000018B7DF13C-0x000000018B7DF314 
+		public SRTab ActiveTab { get; set; } // 0x0000000184D86270-0x0000000184D86280 0x000000018AC97C14-0x000000018AC97C1C
+		public IList<SRTab> Tabs { get; } // 0x000000018AC97B3C-0x000000018AC97B84 
 	
 		// Events
-		public event Action<SRTabController, SRTab> ActiveTabChanged;
+		public event Action<SRTabController, SRTab> ActiveTabChanged {
+			add; // 0x000000018AC97AAC-0x000000018AC97B3C
+			remove; // 0x000000018AC97B84-0x000000018AC97C14
+		}
 	
 		// Nested types
-		private sealed class __c__DisplayClass15_0 // TypeDefIndex: 57756
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass15_0 // TypeDefIndex: 60265
 		{
 			// Fields
 			public SRTabController __4__this; // 0x10
 			public SRTab tab; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass15_0() {} // 0x0000000181460F60-0x0000000181460F70
+			public __c__DisplayClass15_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _AddTab_b__0() {} // 0x000000018B7DF4E0-0x000000018B7DF4E8
+			internal void _AddTab_b__0(); // 0x000000018AC9936C-0x000000018AC99394
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 57757
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 60266
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Comparison<SRTab> __9__17_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x000000018B7DF408-0x000000018B7DF450
-			public __c() {} // 0x000000018B7DF378-0x000000018B7DF408
+			static __c(); // 0x000000018AC994BC-0x000000018AC99520
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _SortTabs_b__17_0(SRTab t1, SRTab t2) => default; // 0x000000018B7DF450-0x000000018B7DF4E0
+			internal int _SortTabs_b__17_0(SRTab t1, SRTab t2); // 0x000000018AC99308-0x000000018AC99334
 		}
 	
 		// Constructors
-		public SRTabController() {} // 0x000000018B7E0BDC-0x000000018B7E0C08
+		public SRTabController(); // 0x000000018AC97A48-0x000000018AC97AAC
 	
 		// Methods
-		public void AddTab(SRTab tab, bool visibleInSidebar = true /* Metadata: 0x0207DA9C */) {} // 0x000000018B7E0C40-0x000000018B7E0C68
-		private void MakeActive(SRTab tab) {} // 0x000000018B7E0D90-0x000000018B7E0DF4
-		private void SortTabs() {} // 0x0000000185492010-0x0000000185492020
+		public void AddTab(SRTab tab, bool visibleInSidebar = true /* Metadata: 0x0234D344 */); // 0x000000018AC971FC-0x000000018AC97508
+		private void MakeActive(SRTab tab); // 0x000000018AC97508-0x000000018AC97870
+		private void SortTabs(); // 0x000000018AC97870-0x000000018AC97A48
 	}
 
-	public class TriggerRoot : SRMonoBehaviourEx // TypeDefIndex: 57759
+	public class TriggerRoot : SRMonoBehaviourEx // TypeDefIndex: 60268
 	{
 		// Fields
+		[RequiredField]
 		public Canvas Canvas; // 0x48
+		[RequiredField]
 		public LongPressButton TapHoldButton; // 0x50
+		[RequiredField]
 		public RectTransform TriggerTransform; // 0x58
+		[RequiredField]
 		public ErrorNotifier ErrorNotifier; // 0x60
+		[FormerlySerializedAs("TriggerButton")]
+		[RequiredField]
 		public MultiTapButton TripleTapButton; // 0x68
 	
 		// Constructors
-		public TriggerRoot() {} // 0x000000018646DB20-0x000000018646DB28
+		public TriggerRoot(); // 0x0000000185393520-0x0000000185393538
 	}
 
-	public class VersionTextBehaviour : SRMonoBehaviourEx // TypeDefIndex: 57760
+	public class VersionTextBehaviour : SRMonoBehaviourEx // TypeDefIndex: 60269
 	{
 		// Fields
 		public string Format; // 0x48
+		[RequiredField]
 		public UnityEngine.UI.Text Text; // 0x50
 	
 		// Constructors
-		public VersionTextBehaviour() {} // 0x000000018B7E0E58-0x000000018B7E0EA0
+		public VersionTextBehaviour(); // 0x000000018AC99584-0x000000018AC995E0
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7E0DF4-0x000000018B7E0E58
+		protected override void Start(); // 0x000000018AC99520-0x000000018AC99584
 	}
 }
 
 namespace SRDebugger.UI.Tabs
 {
-	public class BugReportTabController : SRMonoBehaviourEx, IEnableTab // TypeDefIndex: 57728
+	public class BugReportTabController : SRMonoBehaviourEx, IEnableTab // TypeDefIndex: 60237
 	{
 		// Fields
+		[RequiredField]
 		public BugReportSheetController BugReportSheetPrefab; // 0x48
+		[RequiredField]
 		public RectTransform Container; // 0x50
 	
 		// Properties
-		public bool IsEnabled { get => default; } // 0x000000018B7D17C8-0x000000018B7D186C 
+		public bool IsEnabled { get; } // 0x000000018AC8A0B8-0x000000018AC8A13C 
 	
 		// Constructors
-		public BugReportTabController() {} // 0x000000018646DB20-0x000000018646DB28
+		public BugReportTabController(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7D164C-0x000000018B7D177C
-		private void TakingScreenshot() {} // 0x000000018B7D177C-0x000000018B7D17C8
-		private void ScreenshotComplete() {} // 0x000000018B7D1600-0x000000018B7D164C
+		protected override void Start(); // 0x000000018AC89F3C-0x000000018AC8A06C
+		private void TakingScreenshot(); // 0x000000018AC8A06C-0x000000018AC8A0B8
+		private void ScreenshotComplete(); // 0x000000018AC89EF0-0x000000018AC89F3C
 	}
 
-	public class ConsoleTabController : SRMonoBehaviourEx // TypeDefIndex: 57731
+	public class ConsoleTabController : SRMonoBehaviourEx // TypeDefIndex: 60240
 	{
 		// Fields
-		private const int MaxLength = 2600; // Metadata: 0x0207DA7D
+		private const int MaxLength = 2600; // Metadata: 0x0234D325
 		private Canvas _consoleCanvas; // 0x48
 		private bool _isDirty; // 0x50
 		private static bool _hasWarnedAboutLogHandler; // 0x00
 		private static bool _hasWarnedAboutLoggingDisabled; // 0x01
+		[Import]
 		public IConsoleFilterState FilterState; // 0x58
+		[RequiredField]
 		public ConsoleLogControl ConsoleLogControl; // 0x60
+		[RequiredField]
 		public Toggle PinToggle; // 0x68
+		[RequiredField]
 		public ScrollRect StackTraceScrollRect; // 0x70
+		[RequiredField]
 		public UnityEngine.UI.Text StackTraceText; // 0x78
+		[RequiredField]
 		public Toggle ToggleCriticals; // 0x80
+		[RequiredField]
 		public UnityEngine.UI.Text ToggleCriticalsText; // 0x88
+		[RequiredField]
 		public Toggle ToggleErrors; // 0x90
+		[RequiredField]
 		public UnityEngine.UI.Text ToggleErrorsText; // 0x98
+		[RequiredField]
 		public Toggle ToggleInfo; // 0xA0
+		[RequiredField]
 		public UnityEngine.UI.Text ToggleInfoText; // 0xA8
+		[RequiredField]
 		public Toggle ToggleWarnings; // 0xB0
+		[RequiredField]
 		public UnityEngine.UI.Text ToggleWarningsText; // 0xB8
+		[RequiredField]
 		public GameObject CopyToClipboardContainer; // 0xC0
+		[RequiredField]
 		public GameObject CopyToClipboardButton; // 0xC8
+		[RequiredField]
 		public GameObject CopyToClipboardMessage; // 0xD0
+		[RequiredField]
 		public CanvasGroup CopyToClipboardMessageCanvasGroup; // 0xD8
+		[RequiredField]
 		public GameObject LoggingIsDisabledCanvasGroup; // 0xE0
+		[RequiredField]
 		public GameObject LogHandlerHasBeenOverridenGroup; // 0xE8
+		[RequiredField]
 		public Toggle FilterToggle; // 0xF0
+		[RequiredField]
 		public InputField FilterField; // 0xF8
+		[RequiredField]
 		public GameObject FilterBarContainer; // 0x100
 		private ConsoleEntry _selectedItem; // 0x108
 		private Coroutine _fadeButtonCoroutine; // 0x110
 	
 		// Nested types
-		public enum CopyToClipboardStates // TypeDefIndex: 57729
+		public enum CopyToClipboardStates // TypeDefIndex: 60238
 		{
 			Hidden = 0,
 			Visible = 1,
 			Activated = 2
 		}
 	
-		private sealed class _FadeCopyButton_d__44 : IEnumerator<object> // TypeDefIndex: 57730
+		[CompilerGenerated]
+		private sealed class _FadeCopyButton_d__44 : IEnumerator<object> // TypeDefIndex: 60239
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -2791,77 +3180,87 @@ namespace SRDebugger.UI.Tabs
 			private float _endTime_5__3; // 0x2C
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018B7D30C8-0x000000018B7D3144 
-			object IEnumerator.Current { get => default; } // 0x000000018B7D34D8-0x000000018B7D3504 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _FadeCopyButton_d__44() {} // Dummy constructor
-			public _FadeCopyButton_d__44(int __1__state) {} // 0x000000018B7D3C1C-0x000000018B7D4254
+			[DebuggerHidden]
+			public _FadeCopyButton_d__44(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018B7D33DC-0x000000018B7D343C
-			private bool MoveNext() => default; // 0x000000018B7D3048-0x000000018B7D30C8
-			void IEnumerator.Reset() {} // 0x000000018B7D343C-0x000000018B7D34D8
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018AC98924-0x000000018AC98AB0
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018AC98AB0-0x000000018AC98AFC
 		}
 	
 		// Constructors
-		public ConsoleTabController() {} // 0x0000000185492010-0x0000000185492020
+		public ConsoleTabController(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7D32D4-0x000000018B7D33D4
-		private void OnFilterStateChange(UnityEngine.LogType logtype, bool newstate) {} // 0x0000000185FD5DD0-0x0000000185FD5DE0
-		private void FilterToggleValueChanged(bool isOn) {} // 0x000000018B7D33D4-0x000000018B7D33DC
-		private void FilterValueChanged(string filterText) {} // 0x000000018B7D2EC4-0x000000018B7D2F18
-		private void PanelOnVisibilityChanged(IDebugPanelService debugPanelService, bool b) {} // 0x000000018B7D4370-0x000000018B7D4380
-		private void PinToggleValueChanged(bool isOn) {} // 0x000000018B7D3504-0x000000018B7D36D8
-		protected override void OnDestroy() {} // 0x000000018B7D2F18-0x000000018B7D2FEC
-		protected override void OnEnable() {} // 0x000000018B7D3A5C-0x000000018B7D3C1C
-		protected override void OnDisable() {} // 0x000000018B7D2FEC-0x000000018B7D3048
-		private void ConsoleLogSelectedItemChanged(object item) {} // 0x000000018B7D4254-0x000000018B7D42B0
-		protected override void Update() {} // 0x000000018B7D36D8-0x000000018B7D3A5C
-		private void PopulateStackTraceArea(ConsoleEntry entry) {} // 0x0000000185FD5DD0-0x0000000185FD5DE0
-		public void CopyToClipboard() {} // 0x000000018B7D2E94-0x000000018B7D2EC4
-		private void SetCopyToClipboardButtonState(CopyToClipboardStates state) {} // 0x000000018B7D3144-0x000000018B7D319C
-		private IEnumerator FadeCopyButton() => default; // 0x000000018B7D319C-0x000000018B7D31F8
-		private void StopAnimations() {} // 0x000000018B7D31F8-0x000000018B7D32D4
-		private void Refresh() {} // 0x000000018646DB20-0x000000018646DB28
-		private void ConsoleOnUpdated(IConsoleService console) {} // 0x000000018B7D42B0-0x000000018B7D42E0
-		public void Clear() {} // 0x000000018B7D42E0-0x000000018B7D4310
-		public void LogHandlerHasBeenOverridenOkayButtonPress() {} // 0x000000018B7D4310-0x000000018B7D4340
-		public void LoggingDisableCloseAndIgnorePressed() {} // 0x000000018B7D4340-0x000000018B7D4370
-		public void LoggingDisableReenablePressed() {} // 0x0000000181378230-0x0000000181378240
-		private void _Start_b__29_0(bool isOn) {} // 0x000000018B7E01C0-0x000000018B7E034C
-		private void _Start_b__29_1(bool isOn) {} // 0x0000000181377E40-0x0000000181377E50
-		private void _Start_b__29_2(bool isOn) {} // 0x000000018B7E034C-0x000000018B7E0398
-		private void _Start_b__29_3(bool isOn) {} // 0x0000000181377E40-0x0000000181377E50
+		protected override void Start(); // 0x000000018AC8C4A0-0x000000018AC8CAD8
+		private void OnFilterStateChange(UnityEngine.LogType logtype, bool newstate); // 0x000000018AC8BCA4-0x000000018AC8BD04
+		private void FilterToggleValueChanged(bool isOn); // 0x000000018AC8B93C-0x000000018AC8B9BC
+		private void FilterValueChanged(string filterText); // 0x000000018AC8B9BC-0x000000018AC8BA38
+		private void PanelOnVisibilityChanged(IDebugPanelService debugPanelService, bool b); // 0x000000018AC8BD04-0x000000018AC8BDA0
+		private void PinToggleValueChanged(bool isOn); // 0x000000018AC8BDA0-0x000000018AC8BDCC
+		protected override void OnDestroy(); // 0x000000018AC8BB9C-0x000000018AC8BC9C
+		protected override void OnEnable(); // 0x0000000184DA9DE0-0x0000000184DA9DF0
+		protected override void OnDisable(); // 0x000000018AC8BC9C-0x000000018AC8BCA4
+		private void ConsoleLogSelectedItemChanged(object item); // 0x000000018AC8B7B8-0x000000018AC8B80C
+		protected override void Update(); // 0x000000018AC8CBF4-0x000000018AC8CC04
+		private void PopulateStackTraceArea(ConsoleEntry entry); // 0x000000018AC8BDCC-0x000000018AC8BFA0
+		public void CopyToClipboard(); // 0x000000018AC8B80C-0x000000018AC8B8E0
+		private void SetCopyToClipboardButtonState(CopyToClipboardStates state); // 0x000000018AC8C2E0-0x000000018AC8C4A0
+		[IteratorStateMachine(typeof(_FadeCopyButton_d__44))]
+		private IEnumerator FadeCopyButton(); // 0x000000018AC8B8E0-0x000000018AC8B93C
+		private void StopAnimations(); // 0x000000018AC8CAD8-0x000000018AC8CB34
+		private void Refresh(); // 0x000000018AC8BFA0-0x000000018AC8C2E0
+		private void ConsoleOnUpdated(IConsoleService console); // 0x0000000184DA9DE0-0x0000000184DA9DF0
+		public void Clear(); // 0x000000018AC8B788-0x000000018AC8B7B8
+		public void LogHandlerHasBeenOverridenOkayButtonPress(); // 0x000000018AC8BA38-0x000000018AC8BA90
+		public void LoggingDisableCloseAndIgnorePressed(); // 0x000000018AC8BA90-0x000000018AC8BAEC
+		public void LoggingDisableReenablePressed(); // 0x000000018AC8BAEC-0x000000018AC8BB9C
+		[CompilerGenerated]
+		private void _Start_b__29_0(bool isOn); // 0x000000018AC8CB34-0x000000018AC8CB64
+		[CompilerGenerated]
+		private void _Start_b__29_1(bool isOn); // 0x000000018AC8CB64-0x000000018AC8CB94
+		[CompilerGenerated]
+		private void _Start_b__29_2(bool isOn); // 0x000000018AC8CB94-0x000000018AC8CBC4
+		[CompilerGenerated]
+		private void _Start_b__29_3(bool isOn); // 0x000000018AC8CBC4-0x000000018AC8CBF4
 	}
 
-	public class InfoTabController : SRMonoBehaviourEx // TypeDefIndex: 57732
+	public class InfoTabController : SRMonoBehaviourEx // TypeDefIndex: 60241
 	{
 		// Fields
-		public const char Tick = '\x2713'; // Metadata: 0x0207DA82
-		public const char Cross = '\x00d7'; // Metadata: 0x0207DA84
-		public const string NameColor = "#BCBCBC"; // Metadata: 0x0207DA86
+		public const char Tick = '\x2713'; // Metadata: 0x0234D32A
+		public const char Cross = '\x00d7'; // Metadata: 0x0234D32C
+		public const string NameColor = "#BCBCBC"; // Metadata: 0x0234D32E
 		private Dictionary<string, InfoBlock> _infoBlocks; // 0x48
+		[RequiredField]
 		public InfoBlock InfoBlockPrefab; // 0x50
+		[RequiredField]
 		public RectTransform LayoutContainer; // 0x58
+		[RequiredField]
 		public FlashGraphic ToggleButton; // 0x60
 		private bool _updateEveryFrame; // 0x68
 	
 		// Constructors
-		public InfoTabController() {} // 0x000000018B7D7CC4-0x000000018B7D7D44
+		public InfoTabController(); // 0x000000018AC9051C-0x000000018AC9059C
 	
 		// Methods
-		protected override void OnEnable() {} // 0x000000018B7D7C48-0x000000018B7D7C80
-		public void Refresh() {} // 0x000000018B7D7C80-0x000000018B7D7CB4
-		protected override void Update() {} // 0x000000018B7D7CB4-0x000000018B7D7CC4
-		public void ActivateRefreshEveryFrame() {} // 0x000000018B7D7320-0x000000018B7D7354
-		private void InternalRefresh() {} // 0x000000018B7D7858-0x000000018B7D7C48
-		private void FillInfoBlock(InfoBlock block, IList<SRDebugger.InfoEntry> info) {} // 0x000000018B7D73EC-0x000000018B7D7858
-		private InfoBlock CreateBlock(string title) => default; // 0x000000018B7D7354-0x000000018B7D73EC
+		protected override void OnEnable(); // 0x000000018AC904A0-0x000000018AC904D8
+		public void Refresh(); // 0x000000018AC904D8-0x000000018AC9050C
+		protected override void Update(); // 0x000000018AC9050C-0x000000018AC9051C
+		public void ActivateRefreshEveryFrame(); // 0x000000018AC8FBC8-0x000000018AC8FBFC
+		private void InternalRefresh(); // 0x000000018AC90100-0x000000018AC904A0
+		private void FillInfoBlock(InfoBlock block, IList<SRDebugger.InfoEntry> info); // 0x000000018AC8FC94-0x000000018AC90100
+		private InfoBlock CreateBlock(string title); // 0x000000018AC8FBFC-0x000000018AC8FC94
 	}
 
-	public class OptionsTabController : SRMonoBehaviourEx // TypeDefIndex: 57736
+	public class OptionsTabController : SRMonoBehaviourEx // TypeDefIndex: 60245
 	{
 		// Fields
 		private readonly List<OptionsControlBase> _controls; // 0x48
@@ -2870,32 +3269,40 @@ namespace SRDebugger.UI.Tabs
 		private bool _queueRefresh; // 0x60
 		private bool _selectionModeEnabled; // 0x61
 		private Canvas _optionCanvas; // 0x68
+		[RequiredField]
 		public ActionControl ActionControlPrefab; // 0x70
+		[RequiredField]
 		public CategoryGroup CategoryGroupPrefab; // 0x78
+		[RequiredField]
 		public RectTransform ContentContainer; // 0x80
+		[RequiredField]
 		public GameObject NoOptionsNotice; // 0x88
+		[RequiredField]
 		public Toggle PinButton; // 0x90
+		[RequiredField]
 		public GameObject PinPromptSpacer; // 0x98
+		[RequiredField]
 		public GameObject PinPromptText; // 0xA0
 		private bool _isTogglingCategory; // 0xA8
 	
 		// Nested types
-		private class CategoryInstance // TypeDefIndex: 57733
+		private class CategoryInstance // TypeDefIndex: 60242
 		{
 			// Fields
+			[CompilerGenerated]
 			private CategoryGroup _CategoryGroup_k__BackingField; // 0x10
 			public readonly List<OptionsControlBase> Options; // 0x18
 	
 			// Properties
-			public CategoryGroup CategoryGroup { get; private set; } // 0x000000018B7DB9B4-0x000000018B7DBBB8 0x000000018B7DA81C-0x000000018B7DA9B0
+			public CategoryGroup CategoryGroup { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
 	
 			// Constructors
-			public CategoryInstance() {} // Dummy constructor
-			public CategoryInstance(CategoryGroup group) {} // 0x000000018B7DAB30-0x000000018B7DABD0
+			public CategoryInstance(CategoryGroup group); // 0x000000018AC8A2E8-0x000000018AC8A378
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 57734
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 60243
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -2903,64 +3310,66 @@ namespace SRDebugger.UI.Tabs
 			public static Comparison<OptionDefinition> __9__30_0; // 0x10
 	
 			// Constructors
-			static __c() {} // 0x000000018B7DAC00-0x000000018B7DAC20
-			public __c() {} // 0x000000018B7DAA9C-0x000000018B7DAB30
+			static __c(); // 0x000000018AC99458-0x000000018AC994BC
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal string _Populate_b__29_0(KeyValuePair<string, List<OptionDefinition>> p) => default; // 0x000000018B7DA9B0-0x000000018B7DAA9C
-			internal int _CreateCategory_b__30_0(OptionDefinition d1, OptionDefinition d2) => default; // 0x000000018B7DBBB8-0x000000018B7DBBCC
+			internal string _Populate_b__29_0(KeyValuePair<string, List<OptionDefinition>> p); // 0x000000018AC992D4-0x000000018AC99308
+			internal int _CreateCategory_b__30_0(OptionDefinition d1, OptionDefinition d2); // 0x000000018AC99220-0x000000018AC99254
 		}
 	
-		private sealed class __c__DisplayClass30_0 // TypeDefIndex: 57735
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass30_0 // TypeDefIndex: 60244
 		{
 			// Fields
 			public OptionsTabController __4__this; // 0x10
 			public CategoryInstance categoryInstance; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass30_0() {} // 0x000000018B7DAC20-0x000000018B7DACD4
+			public __c__DisplayClass30_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _CreateCategory_b__1(bool b) {} // 0x000000018B7DB654-0x000000018B7DB9B4
+			internal void _CreateCategory_b__1(bool b); // 0x000000018AC99394-0x000000018AC993C4
 		}
 	
 		// Constructors
-		public OptionsTabController() {} // 0x000000018B7E0C68-0x000000018B7E0C98
+		public OptionsTabController(); // 0x000000018AC94320-0x000000018AC94434
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7DB514-0x000000018B7DB654
-		protected override void OnDestroy() {} // 0x000000018B7D9DDC-0x000000018B7DA008
-		private void OnOptionPinnedStateChanged(OptionDefinition optionDefinition, bool isPinned) {} // 0x000000018B7DB350-0x000000018B7DB514
-		private void OnOptionsUpdated(object sender, EventArgs eventArgs) {} // 0x000000018B7DABD0-0x000000018B7DAC00
-		protected override void OnEnable() {} // 0x000000018B7DA768-0x000000018B7DA81C
-		protected override void OnDisable() {} // 0x000000018B7DACD4-0x000000018B7DB350
-		protected override void Update() {} // 0x000000018B7DA008-0x000000018B7DA768
-		private void PanelOnVisibilityChanged(IDebugPanelService debugPanelService, bool b) {} // 0x000000018B7D9C10-0x000000018B7D9DDC
-		public void SetSelectionModeEnabled(bool isEnabled) {} // 0x000000018B7DBBCC-0x000000018B7DBCE0
-		private void Refresh() {} // 0x000000018346D130-0x000000018346D140
-		private void CommitPinnedOptions() {} // 0x0000000184096E30-0x0000000184096EF0
-		private void RefreshCategorySelection() {} // 0x000000018B7D1A18-0x000000018B7D1AA8
-		private void OnOptionSelectionToggle(bool selected) {} // 0x000000018B7E0D2C-0x000000018B7E0D90
-		private void OnCategorySelectionToggle(CategoryInstance category, bool selected) {} // 0x0000000185492010-0x0000000185492020
-		protected void Populate() {} // 0x000000018B7E0BA8-0x000000018B7E0BDC
-		protected void CreateCategory(string title, List<OptionDefinition> options) {} // 0x000000018B7E0AF4-0x000000018B7E0B28
-		private void Clear() {} // 0x0000000185492010-0x0000000185492020
+		protected override void Start(); // 0x000000018AC94128-0x000000018AC9430C
+		protected override void OnDestroy(); // 0x000000018AC92FE8-0x000000018AC93140
+		private void OnOptionPinnedStateChanged(OptionDefinition optionDefinition, bool isPinned); // 0x000000018AC932A4-0x000000018AC93344
+		private void OnOptionsUpdated(object sender, EventArgs eventArgs); // 0x000000018AC93374-0x000000018AC93394
+		protected override void OnEnable(); // 0x000000018AC93210-0x000000018AC932A4
+		protected override void OnDisable(); // 0x000000018AC93140-0x000000018AC93210
+		protected override void Update(); // 0x000000018AC9430C-0x000000018AC94320
+		private void PanelOnVisibilityChanged(IDebugPanelService debugPanelService, bool b); // 0x000000018AC93394-0x000000018AC93448
+		public void SetSelectionModeEnabled(bool isEnabled); // 0x000000018AC93DC8-0x000000018AC94128
+		private void Refresh(); // 0x000000018AC93C88-0x000000018AC93DC8
+		private void CommitPinnedOptions(); // 0x000000018AC9264C-0x000000018AC92878
+		private void RefreshCategorySelection(); // 0x000000018AC93AC4-0x000000018AC93C88
+		private void OnOptionSelectionToggle(bool selected); // 0x000000018AC93344-0x000000018AC93374
+		private void OnCategorySelectionToggle(CategoryInstance category, bool selected); // 0x000000018AC92F34-0x000000018AC92FE8
+		protected void Populate(); // 0x000000018AC93448-0x000000018AC93AC4
+		protected void CreateCategory(string title, List<OptionDefinition> options); // 0x000000018AC92878-0x000000018AC92F34
+		private void Clear(); // 0x000000018AC92480-0x000000018AC9264C
 	}
 
-	public class ProfilerTabController : SRMonoBehaviourEx // TypeDefIndex: 57737
+	public class ProfilerTabController : SRMonoBehaviourEx // TypeDefIndex: 60246
 	{
 		// Fields
 		private bool _isDirty; // 0x48
+		[RequiredField]
 		public Toggle PinToggle; // 0x50
 	
 		// Constructors
-		public ProfilerTabController() {} // 0x000000018646DB20-0x000000018646DB28
+		public ProfilerTabController(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void Start() {} // 0x000000018B7DE7B8-0x000000018B7DE870
-		private void PinToggleValueChanged(bool isOn) {} // 0x000000018B7DE6EC-0x000000018B7DE740
-		protected override void OnEnable() {} // 0x0000000185FD46B0-0x0000000185FD46C0
-		protected override void Update() {} // 0x000000018B7DE870-0x000000018B7DE880
-		private void Refresh() {} // 0x000000018B7DE740-0x000000018B7DE7B8
+		protected override void Start(); // 0x000000018AC96F14-0x000000018AC96FCC
+		private void PinToggleValueChanged(bool isOn); // 0x000000018AC96E48-0x000000018AC96E9C
+		protected override void OnEnable(); // 0x0000000184D99870-0x0000000184D99880
+		protected override void Update(); // 0x000000018AC96FCC-0x000000018AC96FDC
+		private void Refresh(); // 0x000000018AC96E9C-0x000000018AC96F14
 	}
 }

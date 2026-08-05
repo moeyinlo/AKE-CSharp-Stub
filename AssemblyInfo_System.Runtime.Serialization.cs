@@ -1,1 +1,0 @@
-// Image 153: System.Runtime.Serialization.dll - Assembly: System.Runtime.Serialization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60215-60219

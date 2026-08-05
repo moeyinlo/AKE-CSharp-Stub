@@ -4,71 +4,86 @@
 
 using System;
 using System.Buffers;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Win32.SafeHandles;
 
-// Image 106: System.IO.Compression.dll - Assembly: System.IO.Compression, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60711-60728
+// Image 108: System.IO.Compression.dll - Assembly: System.IO.Compression, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 - Types 63337-63354
+[assembly: AssemblyCompany("Mono development team")]
+[assembly: AssemblyCopyright("(c) Various Mono authors")]
+[assembly: AssemblyDefaultAlias("System.IO.Compression.dll")]
+[assembly: AssemblyDelaySign(true)]
+[assembly: AssemblyDescription("System.IO.Compression.dll")]
+[assembly: AssemblyFileVersion("4.0.30319.17020")]
+[assembly: AssemblyInformationalVersion("4.0.30319.17020")]
+[assembly: AssemblyProduct("Mono Common Language Infrastructure")]
+[assembly: AssemblyTitle("System.IO.Compression.dll")]
+[assembly: CLSCompliant(true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
-internal static class Interop // TypeDefIndex: 60713
+internal static class Interop // TypeDefIndex: 63339
 {
 	// Nested types
-	internal static class Brotli // TypeDefIndex: 60712
+	internal static class Brotli // TypeDefIndex: 63338
 	{
 		// Methods
-		internal static extern SafeBrotliDecoderHandle BrotliDecoderCreateInstance(IntPtr allocFunc, IntPtr freeFunc, IntPtr opaque); // 0x00000001858B0D60-0x00000001858B0E00
-		internal static unsafe extern int BrotliDecoderDecompressStream(SafeBrotliDecoderHandle state, ref IntPtr availableIn, byte** nextIn, ref IntPtr availableOut, byte** nextOut, out IntPtr totalOut); // 0x00000001841B2CB0-0x00000001841B2D40
-		internal static extern void BrotliDecoderDestroyInstance(IntPtr state); // 0x000000018647548C-0x0000000186475494
-		internal static extern bool BrotliDecoderIsFinished(SafeBrotliDecoderHandle state); // 0x00000001841B28E0-0x00000001841B2940
-		internal static extern SafeBrotliEncoderHandle BrotliEncoderCreateInstance(IntPtr allocFunc, IntPtr freeFunc, IntPtr opaque); // 0x000000018B956394-0x000000018B95640C
-		internal static extern bool BrotliEncoderSetParameter(SafeBrotliEncoderHandle state, BrotliEncoderParameter parameter, uint value); // 0x000000018B956484-0x000000018B956504
-		internal static unsafe extern bool BrotliEncoderCompressStream(SafeBrotliEncoderHandle state, BrotliEncoderOperation op, ref IntPtr availableIn, byte** nextIn, ref IntPtr availableOut, byte** nextOut, out IntPtr totalOut); // 0x000000018B9562E4-0x000000018B956394
-		internal static extern bool BrotliEncoderHasMoreOutput(SafeBrotliEncoderHandle state); // 0x000000018B956414-0x000000018B956484
-		internal static extern void BrotliEncoderDestroyInstance(IntPtr state); // 0x000000018B95640C-0x000000018B956414
+		internal static extern SafeBrotliDecoderHandle BrotliDecoderCreateInstance(IntPtr allocFunc, IntPtr freeFunc, IntPtr opaque); // 0x000000018454C8D0-0x000000018454C950
+		internal static unsafe extern int BrotliDecoderDecompressStream(SafeBrotliDecoderHandle state, ref IntPtr availableIn, byte** nextIn, ref IntPtr availableOut, byte** nextOut, out IntPtr totalOut); // 0x0000000183078030-0x00000001830780C0
+		internal static extern void BrotliDecoderDestroyInstance(IntPtr state); // 0x00000001853982CC-0x00000001853982D4
+		internal static extern bool BrotliDecoderIsFinished(SafeBrotliDecoderHandle state); // 0x0000000183077FD0-0x0000000183078030
+		internal static extern SafeBrotliEncoderHandle BrotliEncoderCreateInstance(IntPtr allocFunc, IntPtr freeFunc, IntPtr opaque); // 0x000000018AE10054-0x000000018AE100CC
+		internal static extern bool BrotliEncoderSetParameter(SafeBrotliEncoderHandle state, BrotliEncoderParameter parameter, uint value); // 0x000000018AE10144-0x000000018AE101C4
+		internal static unsafe extern bool BrotliEncoderCompressStream(SafeBrotliEncoderHandle state, BrotliEncoderOperation op, ref IntPtr availableIn, byte** nextIn, ref IntPtr availableOut, byte** nextOut, out IntPtr totalOut); // 0x000000018AE0FFA4-0x000000018AE10054
+		internal static extern bool BrotliEncoderHasMoreOutput(SafeBrotliEncoderHandle state); // 0x000000018AE100D4-0x000000018AE10144
+		internal static extern void BrotliEncoderDestroyInstance(IntPtr state); // 0x000000018AE100CC-0x000000018AE100D4
 	}
 }
 
-internal static class SR // TypeDefIndex: 60714
+internal static class SR // TypeDefIndex: 63340
 {
 	// Methods
-	internal static string Format(string resourceFormat, object p1) => default; // 0x000000018B956584-0x000000018B9565E0
-	internal static string Format(string resourceFormat, object p1, object p2, object p3) => default; // 0x000000018B956504-0x000000018B956584
+	internal static string Format(string resourceFormat, object p1); // 0x000000018AE10244-0x000000018AE102A0
+	internal static string Format(string resourceFormat, object p1, object p2, object p3); // 0x000000018AE101C4-0x000000018AE10244
 }
 
 namespace Microsoft.Win32.SafeHandles
 {
-	internal sealed class SafeBrotliEncoderHandle : SafeHandle // TypeDefIndex: 60727
+	internal sealed class SafeBrotliEncoderHandle : SafeHandle // TypeDefIndex: 63353
 	{
 		// Properties
-		public override bool IsInvalid { get => default; } // 0x00000001841C04C0-0x00000001841C04D0 
+		public override bool IsInvalid { get; } // 0x0000000183BA32C0-0x0000000183BA32D0 
 	
 		// Constructors
-		public SafeBrotliEncoderHandle() {} // 0x00000001864701C8-0x00000001864701D8
+		public SafeBrotliEncoderHandle(); // 0x00000001853948D4-0x00000001853948E4
 	
 		// Methods
-		protected override bool ReleaseHandle() => default; // 0x000000018B9565E0-0x000000018B9565F4
+		protected override bool ReleaseHandle(); // 0x000000018AE102A0-0x000000018AE102B4
 	}
 
-	internal sealed class SafeBrotliDecoderHandle : SafeHandle // TypeDefIndex: 60728
+	internal sealed class SafeBrotliDecoderHandle : SafeHandle // TypeDefIndex: 63354
 	{
 		// Properties
-		public override bool IsInvalid { get => default; } // 0x00000001841C04C0-0x00000001841C04D0 
+		public override bool IsInvalid { get; } // 0x0000000183BA32C0-0x0000000183BA32D0 
 	
 		// Constructors
-		public SafeBrotliDecoderHandle() {} // 0x00000001864701C8-0x00000001864701D8
+		public SafeBrotliDecoderHandle(); // 0x00000001853948D4-0x00000001853948E4
 	
 		// Methods
-		protected override bool ReleaseHandle() => default; // 0x0000000185FA5520-0x0000000185FA5540
+		protected override bool ReleaseHandle(); // 0x0000000184D7AFF0-0x0000000184D7B010
 	}
 }
 
 namespace System.IO.Compression
 {
-	public sealed class BrotliStream : Stream // TypeDefIndex: 60718
+	public sealed class BrotliStream : Stream // TypeDefIndex: 63344
 	{
 		// Fields
 		private Stream _stream; // 0x28
@@ -82,15 +97,16 @@ namespace System.IO.Compression
 		private BrotliEncoder _encoder; // 0x60
 	
 		// Properties
-		public override bool CanRead { get => default; } // 0x000000018B956274-0x000000018B9562C0 
-		public override bool CanWrite { get => default; } // 0x000000018B955898-0x000000018B9558E4 
-		public override bool CanSeek { get => default; } // 0x000000018B95617C-0x000000018B956184 
-		public override long Length { get => default; } // 0x000000018B954F90-0x000000018B954FB0 
-		public override long Position { get => default; set {} } // 0x000000018B954F80-0x000000018B954F90 0x000000018B9558E4-0x000000018B955940
-		private bool AsyncOperationIsActive { get => default; } // 0x000000018466ABF0-0x000000018466AEF0 
+		public override bool CanRead { get; } // 0x000000018AE0FE44-0x000000018AE0FE70 
+		public override bool CanWrite { get; } // 0x000000018AE0FE70-0x000000018AE0FE9C 
+		public override bool CanSeek { get; } // 0x00000001812081B0-0x0000000181208610 
+		public override long Length { get; } // 0x000000018AE0FE9C-0x000000018AE0FEE8 
+		public override long Position { get; set; } // 0x000000018AE0FEE8-0x000000018AE0FF34 0x000000018AE0FF34-0x000000018AE0FF80
+		private bool AsyncOperationIsActive { get; } // 0x000000018AE0FE3C-0x000000018AE0FE44 
 	
 		// Nested types
-		private struct _FinishReadAsyncMemory_d__41 : IAsyncStateMachine // TypeDefIndex: 60715
+		[CompilerGenerated]
+		private struct _FinishReadAsyncMemory_d__41 : IAsyncStateMachine // TypeDefIndex: 63341
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -102,11 +118,13 @@ namespace System.IO.Compression
 			private ConfiguredValueTaskAwaitable<int> __u__1; // 0x50
 	
 			// Methods
-			private void MoveNext() {} // 0x0000000185C6D950-0x0000000185C6DA40
-			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x00000001852A4160-0x00000001852A4180
+			private void MoveNext(); // 0x000000018AE10564-0x000000018AE10E5C
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018AE10E5C-0x000000018AE10EA8
 		}
 	
-		private struct _WriteAsyncMemoryCore_d__52 : IAsyncStateMachine // TypeDefIndex: 60716
+		[CompilerGenerated]
+		private struct _WriteAsyncMemoryCore_d__52 : IAsyncStateMachine // TypeDefIndex: 63342
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -118,11 +136,13 @@ namespace System.IO.Compression
 			private ConfiguredValueTaskAwaitable.ConfiguredValueTaskAwaiter __u__1; // 0x48
 	
 			// Methods
-			private void MoveNext() {} // 0x0000000185D4AC40-0x0000000185D4AD30
-			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x000000018B955940-0x000000018B955AE4
+			private void MoveNext(); // 0x000000018AE11420-0x000000018AE119C8
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018AE119C8-0x000000018AE11AA4
 		}
 	
-		private struct _FlushAsyncCore_d__55 : IAsyncStateMachine // TypeDefIndex: 60717
+		[CompilerGenerated]
+		private struct _FlushAsyncCore_d__55 : IAsyncStateMachine // TypeDefIndex: 63343
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -133,115 +153,90 @@ namespace System.IO.Compression
 			private ConfiguredValueTaskAwaitable.ConfiguredValueTaskAwaiter __u__1; // 0x38
 	
 			// Methods
-			private void MoveNext() {} // 0x000000018B956184-0x000000018B9561B0
-			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x000000018B9561B0-0x000000018B9561DC
+			private void MoveNext(); // 0x000000018AE10EA8-0x000000018AE113C4
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018AE113C4-0x000000018AE11420
 		}
 	
 		// Constructors
-		public BrotliStream() {} // Dummy constructor
-		public BrotliStream(Stream stream, CompressionMode mode, bool leaveOpen) {} // 0x00000001814A81B0-0x00000001814A81C0
-		public BrotliStream(Stream stream, CompressionLevel compressionLevel) {} // 0x000000018B955108-0x000000018B955114
-		public BrotliStream(Stream stream, CompressionLevel compressionLevel, bool leaveOpen) {} // 0x000000018B955D20-0x000000018B955E08
+		public BrotliStream(Stream stream, CompressionMode mode, bool leaveOpen); // 0x0000000184A43A50-0x0000000184A43B30
+		public BrotliStream(Stream stream, CompressionLevel compressionLevel); // 0x000000018AE0FDC4-0x000000018AE0FDE0
+		public BrotliStream(Stream stream, CompressionLevel compressionLevel, bool leaveOpen); // 0x000000018AE0FDE0-0x000000018AE0FE3C
 	
 		// Methods
-		private void EnsureNotDisposed() {} // 0x000000018B95584C-0x000000018B955898
-		protected override void Dispose(bool disposing) {} // 0x000000018B9561DC-0x000000018B956228
-		private static void ValidateParameters(byte[] array, int offset, int count) {} // 0x000000018B956228-0x000000018B956274
-		public override long Seek(long offset, SeekOrigin origin) => default; // 0x000000018B955114-0x000000018B95512C
-		public override void SetLength(long value) {} // 0x000000018B9557AC-0x000000018B95584C
-		private void EnsureNoActiveAsyncOperation() {} // 0x000000018B954FB0-0x000000018B955040
-		private void AsyncOperationStarting() {} // 0x000000018B9550CC-0x000000018B955108
-		private void AsyncOperationCompleting() {} // 0x000000018B9556CC-0x000000018B9557AC
-		private static void ThrowInvalidBeginCall() {} // 0x000000018B955560-0x000000018B9556CC
-		public override int Read(byte[] buffer, int offset, int count) => default; // 0x000000018B95512C-0x000000018B955230
-		public override int Read(Span<byte> buffer) => default; // 0x000000018B956104-0x000000018B956120
-		public override IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback asyncCallback, object asyncState) => default; // 0x000000018B956120-0x000000018B95617C
-		public override int EndRead(IAsyncResult asyncResult) => default; // 0x000000018B956044-0x000000018B9560E0
-		public override Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken) => default; // 0x000000018B9560E0-0x000000018B956104
-		public override ValueTask<int> ReadAsync(Memory<byte> buffer, CancellationToken cancellationToken = default) => default; // 0x000000018B955E08-0x000000018B956044
-		private ValueTask<int> FinishReadAsyncMemory(Memory<byte> buffer, CancellationToken cancellationToken) => default; // 0x000000018B955040-0x000000018B9550CC
-		public override void Write(byte[] buffer, int offset, int count) {} // 0x000000018B955BD4-0x000000018B955D20
-		public override void Write(ReadOnlySpan<byte> buffer) {} // 0x000000018B955AE4-0x000000018B955BD4
-		internal void WriteCore(ReadOnlySpan<byte> buffer, bool isFinalBlock = false /* Metadata: 0x02082ADD */) {} // 0x000000018B9553BC-0x000000018B955560
-		public override IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback asyncCallback, object asyncState) => default; // 0x000000018B955304-0x000000018B9553BC
-		public override void EndWrite(IAsyncResult asyncResult) {} // 0x000000018B955230-0x000000018B955304
-		public override System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken) => default; // 0x000000018B9568A4-0x000000018B95719C
-		public override ValueTask WriteAsync(ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken = default) => default; // 0x000000018B95719C-0x000000018B9571E8
-		private System.Threading.Tasks.Task WriteAsyncMemoryCore(ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken) => default; // 0x000000018B9577A8-0x000000018B957D84
-		public override void Flush() {} // 0x000000018B957D84-0x000000018B957E80
-		public override System.Threading.Tasks.Task FlushAsync(CancellationToken cancellationToken) => default; // 0x000000018B9571E8-0x000000018B95774C
-		private System.Threading.Tasks.Task FlushAsyncCore(CancellationToken cancellationToken) => default; // 0x000000018B95774C-0x000000018B9577A8
+		private void EnsureNotDisposed(); // 0x00000001830780C0-0x00000001830780E0
+		protected override void Dispose(bool disposing); // 0x0000000184B21780-0x0000000184B21870
+		private static void ValidateParameters(byte[] array, int offset, int count); // 0x000000018AE0F600-0x000000018AE0F7A4
+		public override long Seek(long offset, SeekOrigin origin); // 0x000000018AE0F50C-0x000000018AE0F558
+		public override void SetLength(long value); // 0x000000018AE0F558-0x000000018AE0F5A4
+		private void EnsureNoActiveAsyncOperation(); // 0x000000018AE0EDD4-0x000000018AE0EDEC
+		private void AsyncOperationStarting(); // 0x000000018AE0EC50-0x000000018AE0EC70
+		private void AsyncOperationCompleting(); // 0x000000018AE0EC40-0x000000018AE0EC50
+		private static void ThrowInvalidBeginCall(); // 0x000000018AE0F5A4-0x000000018AE0F600
+		public override int Read(byte[] buffer, int offset, int count); // 0x000000018AE0F46C-0x000000018AE0F50C
+		public override int Read(Span<byte> buffer); // 0x0000000183077A60-0x0000000183077CC0
+		public override IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback asyncCallback, object asyncState); // 0x000000018AE0EC70-0x000000018AE0ED00
+		public override int EndRead(IAsyncResult asyncResult); // 0x000000018AE0ED8C-0x000000018AE0EDC8
+		public override Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken); // 0x000000018AE0F38C-0x000000018AE0F46C
+		public override ValueTask<int> ReadAsync(Memory<byte> buffer, CancellationToken cancellationToken = default); // 0x000000018AE0F220-0x000000018AE0F38C
+		private async ValueTask<int> FinishReadAsyncMemory(Memory<byte> buffer, CancellationToken cancellationToken); // 0x000000018AE0EDEC-0x000000018AE0EEF0
+		public override void Write(byte[] buffer, int offset, int count); // 0x000000018AE0FD04-0x000000018AE0FDA0
+		public override void Write(ReadOnlySpan<byte> buffer); // 0x000000018AE0FDA0-0x000000018AE0FDC4
+		internal void WriteCore(ReadOnlySpan<byte> buffer, bool isFinalBlock = false /* Metadata: 0x023527A7 */); // 0x000000018AE0FAC8-0x000000018AE0FD04
+		public override IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback asyncCallback, object asyncState); // 0x000000018AE0ED00-0x000000018AE0ED8C
+		public override void EndWrite(IAsyncResult asyncResult); // 0x000000018AE0EDC8-0x000000018AE0EDD4
+		public override System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken); // 0x000000018AE0F9E0-0x000000018AE0FAC8
+		public override ValueTask WriteAsync(ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken = default); // 0x000000018AE0F894-0x000000018AE0F9E0
+		private async System.Threading.Tasks.Task WriteAsyncMemoryCore(ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken); // 0x000000018AE0F7A4-0x000000018AE0F894
+		public override void Flush(); // 0x000000018AE0F07C-0x000000018AE0F220
+		public override System.Threading.Tasks.Task FlushAsync(CancellationToken cancellationToken); // 0x000000018AE0EFC4-0x000000018AE0F07C
+		private async System.Threading.Tasks.Task FlushAsyncCore(CancellationToken cancellationToken); // 0x000000018AE0EEF0-0x000000018AE0EFC4
 	}
 
-	internal static class BrotliUtils // TypeDefIndex: 60719
+	internal static class BrotliUtils // TypeDefIndex: 63345
 	{
 		// Methods
-		internal static int GetQualityFromCompressionLevel(CompressionLevel level) => default; // 0x000000018B9562C0-0x000000018B9562E4
+		internal static int GetQualityFromCompressionLevel(CompressionLevel level); // 0x000000018AE0FF80-0x000000018AE0FFA4
 	}
 
-	public struct BrotliDecoder : IDisposable // TypeDefIndex: 60720
+	public struct BrotliDecoder : IDisposable // TypeDefIndex: 63346
 	{
 		// Fields
 		private SafeBrotliDecoderHandle _state; // 0x00
 		private bool _disposed; // 0x08
 	
 		// Methods
-		internal void InitializeDecoder() {} // 0x00000001858B0D10-0x00000001858B0D60
-		internal void EnsureInitialized() {} // 0x00000001841B2C60-0x00000001841B2C90
-		public void Dispose() {} // 0x0000000184FA68D0-0x0000000184FA68F0
-		private void EnsureNotDisposed() {} // 0x00000001841B2C90-0x00000001841B2CB0
-		public OperationStatus Decompress(ReadOnlySpan<byte> source, Span<byte> destination, out int bytesConsumed, out int bytesWritten) {
-			bytesConsumed = default;
-			bytesWritten = default;
-			return default;
-		} // 0x00000001841B2940-0x00000001841B2C60
+		internal void InitializeDecoder(); // 0x000000018454C880-0x000000018454C8D0
+		internal void EnsureInitialized(); // 0x0000000183077F80-0x0000000183077FB0
+		public void Dispose(); // 0x00000001840F0480-0x00000001840F04A0
+		private void EnsureNotDisposed(); // 0x0000000183077FB0-0x0000000183077FD0
+		public OperationStatus Decompress(ReadOnlySpan<byte> source, Span<byte> destination, out int bytesConsumed, out int bytesWritten); // 0x0000000183077CC0-0x0000000183077F80
 	}
 
-	public struct BrotliEncoder : IDisposable // TypeDefIndex: 60721
+	public struct BrotliEncoder : IDisposable // TypeDefIndex: 63347
 	{
 		// Fields
 		internal SafeBrotliEncoderHandle _state; // 0x00
 		private bool _disposed; // 0x08
 	
 		// Constructors
-		public BrotliEncoder(int quality, int window) {
-			_state = default;
-			_disposed = default;
-		} // 0x000000018B954EB4-0x000000018B954F80
+		public BrotliEncoder(int quality, int window); // 0x000000018AE0EB74-0x000000018AE0EC40
 	
 		// Methods
-		internal void InitializeEncoder() {} // 0x000000018B954A74-0x000000018B954B10
-		internal void EnsureInitialized() {} // 0x000000018B9548C4-0x000000018B9548F0
-		public void Dispose() {} // 0x0000000185FA8050-0x0000000185FA8070
-		private void EnsureNotDisposed() {} // 0x000000018B9548F0-0x000000018B954974
-		internal void SetQuality(int quality) {} // 0x000000018B954B10-0x000000018B954CE0
-		internal void SetWindow(int window) {} // 0x000000018B954CE0-0x000000018B954EB4
-		internal OperationStatus Flush(Memory<byte> destination, out int bytesWritten) {
-			bytesWritten = default;
-			return default;
-		} // 0x000000018B954974-0x000000018B9549EC
-		public OperationStatus Flush(Span<byte> destination, out int bytesWritten) {
-			bytesWritten = default;
-			return default;
-		} // 0x000000018B9549EC-0x000000018B954A74
-		internal OperationStatus Compress(ReadOnlyMemory<byte> source, Memory<byte> destination, out int bytesConsumed, out int bytesWritten, bool isFinalBlock) {
-			bytesConsumed = default;
-			bytesWritten = default;
-			return default;
-		} // 0x000000018B9547A8-0x000000018B954878
-		public OperationStatus Compress(ReadOnlySpan<byte> source, Span<byte> destination, out int bytesConsumed, out int bytesWritten, bool isFinalBlock) {
-			bytesConsumed = default;
-			bytesWritten = default;
-			return default;
-		} // 0x000000018B954878-0x000000018B9548C4
-		internal OperationStatus Compress(ReadOnlySpan<byte> source, Span<byte> destination, out int bytesConsumed, out int bytesWritten, BrotliEncoderOperation operation) {
-			bytesConsumed = default;
-			bytesWritten = default;
-			return default;
-		} // 0x000000018B9545EC-0x000000018B9547A8
+		internal void InitializeEncoder(); // 0x000000018AE0E730-0x000000018AE0E7CC
+		internal void EnsureInitialized(); // 0x000000018AE0E580-0x000000018AE0E5AC
+		public void Dispose(); // 0x0000000184D7F810-0x0000000184D7F830
+		private void EnsureNotDisposed(); // 0x000000018AE0E5AC-0x000000018AE0E630
+		internal void SetQuality(int quality); // 0x000000018AE0E7CC-0x000000018AE0E99C
+		internal void SetWindow(int window); // 0x000000018AE0E99C-0x000000018AE0EB74
+		internal OperationStatus Flush(Memory<byte> destination, out int bytesWritten); // 0x000000018AE0E630-0x000000018AE0E6A8
+		public OperationStatus Flush(Span<byte> destination, out int bytesWritten); // 0x000000018AE0E6A8-0x000000018AE0E730
+		internal OperationStatus Compress(ReadOnlyMemory<byte> source, Memory<byte> destination, out int bytesConsumed, out int bytesWritten, bool isFinalBlock); // 0x000000018AE0E464-0x000000018AE0E534
+		public OperationStatus Compress(ReadOnlySpan<byte> source, Span<byte> destination, out int bytesConsumed, out int bytesWritten, bool isFinalBlock); // 0x000000018AE0E534-0x000000018AE0E580
+		internal OperationStatus Compress(ReadOnlySpan<byte> source, Span<byte> destination, out int bytesConsumed, out int bytesWritten, BrotliEncoderOperation operation); // 0x000000018AE0E2A8-0x000000018AE0E464
 	}
 
-	internal enum BrotliEncoderOperation // TypeDefIndex: 60722
+	internal enum BrotliEncoderOperation // TypeDefIndex: 63348
 	{
 		Process = 0,
 		Flush = 1,
@@ -249,7 +244,7 @@ namespace System.IO.Compression
 		EmitMetadata = 3
 	}
 
-	internal enum BrotliEncoderParameter // TypeDefIndex: 60723
+	internal enum BrotliEncoderParameter // TypeDefIndex: 63349
 	{
 		Mode = 0,
 		Quality = 1,
@@ -262,10 +257,10 @@ namespace System.IO.Compression
 
 namespace System.Threading.Tasks
 {
-	internal static class TaskToApm // TypeDefIndex: 60726
+	internal static class TaskToApm // TypeDefIndex: 63352
 	{
 		// Nested types
-		private sealed class TaskWrapperAsyncResult : IAsyncResult // TypeDefIndex: 60724
+		private sealed class TaskWrapperAsyncResult : IAsyncResult // TypeDefIndex: 63350
 		{
 			// Fields
 			internal readonly System.Threading.Tasks.Task Task; // 0x10
@@ -273,33 +268,33 @@ namespace System.Threading.Tasks
 			private readonly bool _completedSynchronously; // 0x20
 	
 			// Properties
-			object IAsyncResult.AsyncState { get => default; } // 0x000000018B9566F0-0x000000018B9567AC 
-			bool IAsyncResult.CompletedSynchronously { get => default; }
-			bool IAsyncResult.IsCompleted { get => default; } // 0x000000018B9567AC-0x000000018B9568A4 
-			WaitHandle IAsyncResult.AsyncWaitHandle { get => default; } // 0x0000000185F5FD40-0x0000000185F5FD70 
+			object IAsyncResult.AsyncState { get; } // 0x000000018385B100-0x000000018385B110 
+			bool IAsyncResult.CompletedSynchronously { get; } // 0x0000000184D866B0-0x0000000184D866C0 
+			bool IAsyncResult.IsCompleted { get; } // 0x000000018A88881C-0x000000018A88883C 
+			WaitHandle IAsyncResult.AsyncWaitHandle { get; } // 0x000000018A8887FC-0x000000018A88881C 
 	
 			// Constructors
-			public TaskWrapperAsyncResult() {} // Dummy constructor
-			internal TaskWrapperAsyncResult(System.Threading.Tasks.Task task, object state, bool completedSynchronously) {} // 0x000000018B9565F4-0x000000018B9566F0
+			internal TaskWrapperAsyncResult(System.Threading.Tasks.Task task, object state, bool completedSynchronously); // 0x0000000184D33BE0-0x0000000184D33C10
 		}
 	
-		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 60725
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 63351
 		{
 			// Fields
 			public AsyncCallback callback; // 0x10
 			public IAsyncResult asyncResult; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass3_0() {} // 0x0000000181377E40-0x0000000181377E50
+			public __c__DisplayClass3_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _InvokeCallbackWhenTaskCompletes_b__0() {} // 0x00000001813ECBF0-0x00000001813ECC00
+			internal void _InvokeCallbackWhenTaskCompletes_b__0(); // 0x000000018A88CE18-0x000000018A88CE3C
 		}
 	
 		// Methods
-		public static IAsyncResult Begin(System.Threading.Tasks.Task task, AsyncCallback callback, object state) => default; // 0x000000018B3BE8E0-0x000000018B3BE900
-		public static void End(IAsyncResult asyncResult) {} // 0x000000018B3BE8C0-0x000000018B3BE8E0
-		public static TResult End<TResult>(IAsyncResult asyncResult) => default; // 0x0000000185492010-0x0000000185492020
-		private static void InvokeCallbackWhenTaskCompletes(System.Threading.Tasks.Task antecedent, AsyncCallback callback, IAsyncResult asyncResult) {} // 0x000000018B3C2F90-0x000000018B3C2FB4
+		public static IAsyncResult Begin(System.Threading.Tasks.Task task, AsyncCallback callback, object state); // 0x000000018AE102B4-0x000000018AE103B0
+		public static void End(IAsyncResult asyncResult); // 0x000000018AE103B0-0x000000018AE1046C
+		public static TResult End<TResult>(IAsyncResult asyncResult);
+		private static void InvokeCallbackWhenTaskCompletes(System.Threading.Tasks.Task antecedent, AsyncCallback callback, IAsyncResult asyncResult); // 0x000000018AE1046C-0x000000018AE10564
 	}
 }

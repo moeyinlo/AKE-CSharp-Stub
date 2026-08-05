@@ -4,7 +4,12 @@
 
 using System;
 using System.Collections;
+using System.Diagnostics;
 using System.IO;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Security.Authentication;
 using System.Security.Cryptography;
@@ -16,92 +21,110 @@ using Mono.Security;
 using Mono.Security.Cryptography;
 using Mono.Security.X509;
 
-// Image 51: Mono.Security.dll - Assembly: Mono.Security, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 57923-58026
+// Image 51: Mono.Security.dll - Assembly: Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756 - Types 60432-60535
+[assembly: AssemblyCompany("MONO development team")]
+[assembly: AssemblyCopyright("(c) 2003-2004 Various Authors")]
+[assembly: AssemblyDelaySign(true)]
+[assembly: AssemblyDescription("Mono.Security.dll")]
+[assembly: AssemblyProduct("MONO CLI")]
+[assembly: AssemblyTitle("Mono.Security.dll")]
+[assembly: CLSCompliant(true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: ComVisible(false)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("System, PublicKey=00240000048000009400000006020000002400005253413100040000010001008D56C76F9E8649383049F383C44BE0EC204181822A6C31CF5EB7EF486944D032188EA1D3920763712CCB12D75FB77E9811149E6148E5D32FBAAB37611C1878DDC19E20EF135D0CB2CFF2BFEC3D115810C3D9069638FE4BE215DBF795861920E5AB6F7DB2E2CEEF136AC23D5DD2BF031700AEC232F6C6B1C785B4305C123B37AB")]
+[assembly: NeutralResourcesLanguage("en-US")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 58026
+internal sealed class Locale // TypeDefIndex: 60433
+{
+	// Methods
+	public static string GetText(string msg); // 0x000000018464E630-0x000000018464E640
+	public static string GetText(string fmt, params object[] args); // 0x0000000185397134-0x000000018539713C
+}
+
+[CompilerGenerated]
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 60535
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_64 _001D686DB504E20C792EAA07FE09224A45FF328E24A80072D04D16ABC5C2B5D2; // 0x00 // Static value (base64): z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg== - Metadata: 0x0207E40C
-	internal static readonly __StaticArrayInitTypeSize_3132 _25E3E48132FBDBE9B7C0C6C54D7C10A5DE12A105AA3E5DE2A0DC808BF245B7A5; // 0x40 // Static value (base64): AgAAAAMAAAAFAAAABwAAAAsAAAANAAAAEQAAABMAAAAXAAAAHQAAAB8AAAAlAAAAKQAAACsAAAAvAAAANQAAADsAAAA9AAAAQwAAAEcAAABJAAAATwAAAFMAAABZAAAAYQAAAGUAAABnAAAAawAAAG0AAABxAAAAfwAAAIMAAACJAAAAiwAAAJUAAACXAAAAnQAAAKMAAACnAAAArQAAALMAAAC1AAAAvwAAAMEAAADFAAAAxwAAANMAAADfAAAA4wAAAOUAAADpAAAA7wAAAPEAAAD7AAAAAQEAAAcBAAANAQAADwEAABUBAAAZAQAAGwEAACUBAAAzAQAANwEAADkBAAA9AQAASwEAAFEBAABbAQAAXQEAAGEBAABnAQAAbwEAAHUBAAB7AQAAfwEAAIUBAACNAQAAkQEAAJkBAACjAQAApQEAAK8BAACxAQAAtwEAALsBAADBAQAAyQEAAM0BAADPAQAA0wEAAN8BAADnAQAA6wEAAPMBAAD3AQAA/QEAAAkCAAALAgAAHQIAACMCAAAtAgAAMwIAADkCAAA7AgAAQQIAAEsCAABRAgAAVwIAAFkCAABfAgAAZQIAAGkCAABrAgAAdwIAAIECAACDAgAAhwIAAI0CAACTAgAAlQIAAKECAAClAgAAqwIAALMCAAC9AgAAxQIAAM8CAADXAgAA3QIAAOMCAADnAgAA7wIAAPUCAAD5AgAAAQMAAAUDAAATAwAAHQMAACkDAAArAwAANQMAADcDAAA7AwAAPQMAAEcDAABVAwAAWQMAAFsDAABfAwAAbQMAAHEDAABzAwAAdwMAAIsDAACPAwAAlwMAAKEDAACpAwAArQMAALMDAAC5AwAAxwMAAMsDAADRAwAA1wMAAN8DAADlAwAA8QMAAPUDAAD7AwAA/QMAAAcEAAAJBAAADwQAABkEAAAbBAAAJQQAACcEAAAtBAAAPwQAAEMEAABFBAAASQQAAE8EAABVBAAAXQQAAGMEAABpBAAAfwQAAIEEAACLBAAAkwQAAJ0EAACjBAAAqQQAALEEAAC9BAAAwQQAAMcEAADNBAAAzwQAANUEAADhBAAA6wQAAP0EAAD/BAAAAwUAAAkFAAALBQAAEQUAABUFAAAXBQAAGwUAACcFAAApBQAALwUAAFEFAABXBQAAXQUAAGUFAAB3BQAAgQUAAI8FAACTBQAAlQUAAJkFAACfBQAApwUAAKsFAACtBQAAswUAAL8FAADJBQAAywUAAM8FAADRBQAA1QUAANsFAADnBQAA8wUAAPsFAAAHBgAADQYAABEGAAAXBgAAHwYAACMGAAArBgAALwYAAD0GAABBBgAARwYAAEkGAABNBgAAUwYAAFUGAABbBgAAZQYAAHkGAAB/BgAAgwYAAIUGAACdBgAAoQYAAKMGAACtBgAAuQYAALsGAADFBgAAzQYAANMGAADZBgAA3wYAAPEGAAD3BgAA+wYAAP0GAAAJBwAAEwcAAB8HAAAnBwAANwcAAEUHAABLBwAATwcAAFEHAABVBwAAVwcAAGEHAABtBwAAcwcAAHkHAACLBwAAjQcAAJ0HAACfBwAAtQcAALsHAADDBwAAyQcAAM0HAADPBwAA0wcAANsHAADhBwAA6wcAAO0HAAD3BwAABQgAAA8IAAAVCAAAIQgAACMIAAAnCAAAKQgAADMIAAA/CAAAQQgAAFEIAABTCAAAWQgAAF0IAABfCAAAaQgAAHEIAACDCAAAmwgAAJ8IAAClCAAArQgAAL0IAAC/CAAAwwgAAMsIAADbCAAA3QgAAOEIAADpCAAA7wgAAPUIAAD5CAAABQkAAAcJAAAdCQAAIwkAACUJAAArCQAALwkAADUJAABDCQAASQkAAE0JAABPCQAAVQkAAFkJAABfCQAAawkAAHEJAAB3CQAAhQkAAIkJAACPCQAAmwkAAKMJAACpCQAArQkAAMcJAADZCQAA4wkAAOsJAADvCQAA9QkAAPcJAAD9CQAAEwoAAB8KAAAhCgAAMQoAADkKAAA9CgAASQoAAFcKAABhCgAAYwoAAGcKAABvCgAAdQoAAHsKAAB/CgAAgQoAAIUKAACLCgAAkwoAAJcKAACZCgAAnwoAAKkKAACrCgAAtQoAAL0KAADBCgAAzwoAANkKAADlCgAA5woAAO0KAADxCgAA8woAAAMLAAARCwAAFQsAABsLAAAjCwAAKQsAAC0LAAA/CwAARwsAAFELAABXCwAAXQsAAGULAABvCwAAewsAAIkLAACNCwAAkwsAAJkLAACbCwAAtwsAALkLAADDCwAAywsAAM8LAADdCwAA4QsAAOkLAAD1CwAA+wsAAAcMAAALDAAAEQwAACUMAAAvDAAAMQwAAEEMAABbDAAAXwwAAGEMAABtDAAAcwwAAHcMAACDDAAAiQwAAJEMAACVDAAAnQwAALMMAAC1DAAAuQwAALsMAADHDAAA4wwAAOUMAADrDAAA8QwAAPcMAAD7DAAAAQ0AAAMNAAAPDQAAEw0AAB8NAAAhDQAAKw0AAC0NAAA9DQAAPw0AAE8NAABVDQAAaQ0AAHkNAACBDQAAhQ0AAIcNAACLDQAAjQ0AAKMNAACrDQAAtw0AAL0NAADHDQAAyQ0AAM0NAADTDQAA1Q0AANsNAADlDQAA5w0AAPMNAAD9DQAA/w0AAAkOAAAXDgAAHQ4AACEOAAAnDgAALw4AADUOAAA7DgAASw4AAFcOAABZDgAAXQ4AAGsOAABxDgAAdQ4AAH0OAACHDgAAjw4AAJUOAACbDgAAsQ4AALcOAAC5DgAAww4AANEOAADVDgAA2w4AAO0OAADvDgAA+Q4AAAcPAAALDwAADQ8AABcPAAAlDwAAKQ8AADEPAABDDwAARw8AAE0PAABPDwAAUw8AAFkPAABbDwAAZw8AAGsPAAB/DwAAlQ8AAKEPAACjDwAApw8AAK0PAACzDwAAtQ8AALsPAADRDwAA0w8AANkPAADpDwAA7w8AAPsPAAD9DwAAAxAAAA8QAAAfEAAAIRAAACUQAAArEAAAORAAAD0QAAA/EAAAURAAAGkQAABzEAAAeRAAAHsQAACFEAAAhxAAAJEQAACTEAAAnRAAAKMQAAClEAAArxAAALEQAAC7EAAAwRAAAMkQAADnEAAA8RAAAPMQAAD9EAAABREAAAsRAAAVEQAAJxEAAC0RAAA5EQAARREAAEcRAABZEQAAXxEAAGMRAABpEQAAbxEAAIERAACDEQAAjREAAJsRAAChEQAApREAAKcRAACrEQAAwxEAAMURAADREQAA1xEAAOcRAADvEQAA9REAAPsRAAANEgAAHRIAAB8SAAAjEgAAKRIAACsSAAAxEgAANxIAAEESAABHEgAAUxIAAF8SAABxEgAAcxIAAHkSAAB9EgAAjxIAAJcSAACvEgAAsxIAALUSAAC5EgAAvxIAAMESAADNEgAA0RIAAN8SAAD9EgAABxMAAA0TAAAZEwAAJxMAAC0TAAA3EwAAQxMAAEUTAABJEwAATxMAAFcTAABdEwAAZxMAAGkTAABtEwAAexMAAIETAACHEwAAixMAAJETAACTEwAAnRMAAJ8TAACvEwAAuxMAAMMTAADVEwAA2RMAAN8TAADrEwAA7RMAAPMTAAD5EwAA/xMAABsUAAAhFAAALxQAADMUAAA7FAAARRQAAE0UAABZFAAAaxQAAG8UAABxFAAAdRQAAI0UAACZFAAAnxQAAKEUAACxFAAAtxQAAL0UAADLFAAA1RQAAOMUAADnFAAABRUAAAsVAAARFQAAFxUAAB8VAAAlFQAAKRUAACsVAAA3FQAAPRUAAEEVAABDFQAASRUAAF8VAABlFQAAZxUAAGsVAAB9FQAAfxUAAIMVAACPFQAAkRUAAJcVAACbFQAAtRUAALsVAADBFQAAxRUAAM0VAADXFQAA9xUAAAcWAAAJFgAADxYAABMWAAAVFgAAGRYAABsWAAAlFgAAMxYAADkWAAA9FgAARRYAAE8WAABVFgAAaRYAAG0WAABvFgAAdRYAAJMWAACXFgAAnxYAAKkWAACvFgAAtRYAAL0WAADDFgAAzxYAANMWAADZFgAA2xYAAOEWAADlFgAA6xYAAO0WAAD3FgAA+RYAAAkXAAAPFwAAIxcAACcXAAAzFwAAQRcAAF0XAABjFwAA - Metadata: 0x0207E454
-	internal static readonly long _290C4A052C215D096172EB81AEE671FB3286E5C1DB5E73F96021FC09825DDB88; // 0xC80 // Static value (base64): S0dTIUAjJCU= - Metadata: 0x0207F094
-	internal static readonly __StaticArrayInitTypeSize_3 _32D0830B8EE1D49A66F395C8EA80E02BFC07C2A12A8EA8C8B484AF02108A1950; // 0xC88 // Static value (base64): VQQL - Metadata: 0x0207F0A4
-	internal static readonly __StaticArrayInitTypeSize_3 _35BF50EEF3270FD8CA09E66FC5B0481C5A151B14F6A634854E32F63633D49DCB; // 0xC8B // Static value (base64): VQQE - Metadata: 0x0207F0AC
-	internal static readonly __StaticArrayInitTypeSize_3 _3C0C410618682C4DF0474E034114CC8E562F05A512B521AC367571017BDFA75D; // 0xC8E // Static value (base64): VQQK - Metadata: 0x0207F0B4
-	internal static readonly __StaticArrayInitTypeSize_3 _44F5B1A2C48314502ACCBF186D1A2F9F7F176825898F32F1A2047B956194F174; // 0xC91 // Static value (base64): VQQq - Metadata: 0x0207F0BC
-	internal static readonly __StaticArrayInitTypeSize_48 _4800FBFC4566EB02D1727A4B1C949CCBC7535C216A0766564C199308631B5DD6; // 0xC94 // Static value (base64): OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb - Metadata: 0x0207F0C4
-	internal static readonly __StaticArrayInitTypeSize_20 _533B8C444F951E83EFF7305E3807B66CE0005DE0A2D0A44873C130895A3BE6AA; // 0xCC4 // Static value (base64): 2jmj7l5rSw0yVb/vlWAYkK/YBwk= - Metadata: 0x0207F0FC
-	internal static readonly __StaticArrayInitTypeSize_256 _55D0BF716B334D123E0088CFB3F8E2FEA17AF5025BB527F95EEB09BA978EA329; // 0xCD8 // Static value (base64): KS5DyaLYfAE9NlSh7PAGE2KnBfPAx3OMmJMr2bxMgsoem1c8/dTgFmdCbxiKF+USvk7E1tqe3kmg+/WOuy/ueqloeZEVsgc/lMIQiQsiXyGAf12aWpAyJzU+zOe/95cD/xkws0iltdHXXpIqrFaqxk+4ONKWpH22dvxr4px0BPFFnXBZZHGHIIZbz2XmLagCG2Alra6wufYcRmFpNEB+D1VHoyPdUa86w1z5zrrF6iYsUw1uhSiECdPfzfRBgU1Satw3yGzBq/ok4XsIDL2xSniIlYvjY+ht6cvV/jsAHTny77cOZljQ5KZ3cvjrdUsKMURQtI/tHxrbmY0znxGDFA== - Metadata: 0x0207F114
-	internal static readonly __StaticArrayInitTypeSize_3 _59BE5A634187B8A57216EFF5371A47732C05744B1C1A0A6382A6D5622C9FFDCE; // 0xDD8 // Static value (base64): VQQG - Metadata: 0x0207F21C
-	internal static readonly __StaticArrayInitTypeSize_32 _5DF6E0E2761359D30A8275058E299FCC0381534545F55CF43E41983F5D4C9456; // 0xDDB // Static value (base64): 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU= - Metadata: 0x0207F224
-	internal static readonly __StaticArrayInitTypeSize_3 _5F8C6B3C66B972606D85E7651F67ADBD02E8316876884674E8328FA710747E5B; // 0xDFB // Static value (base64): VQQM - Metadata: 0x0207F24C
-	internal static readonly __StaticArrayInitTypeSize_10 _60C6ED13AF98DBFEEDA8F8197FFFCC349BB04395CC81DF0D477CBC57BF5B398B; // 0xDFE // Static value (base64): CZImiZPyLGQBGQ== - Metadata: 0x0207F254
-	internal static readonly __StaticArrayInitTypeSize_10 _64B3E7D737AFF47D4C3BBD81D2D06D697DDD8EB60F29E13E4425D19D8BBCA1F7; // 0xE08 // Static value (base64): CZImiZPyLGQBAQ== - Metadata: 0x0207F264
-	internal static readonly long _6772A9B8BF207A3CFE6EE68769D6985B69522183F24A2A3D41BC3B4602953426; // 0xE18 // Static value (base64): TlRMTVNTUAA= - Metadata: 0x0207F274
-	internal static readonly __StaticArrayInitTypeSize_9 _684312AFB7719E57993D2826FFBAF7EA965614F20F91D999FB19B01E21AA62E6; // 0xE20 // Static value (base64): KoZIhvcNAQkB - Metadata: 0x0207F284
-	internal static readonly __StaticArrayInitTypeSize_64 _6AA56C4BCD208911792AD24C7681FEFB93BED51903AFC54860C9BD37E41E5A31; // 0xE29 // Static value (base64): AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw== - Metadata: 0x0207F294
-	internal static readonly __StaticArrayInitTypeSize_3 _796E63069E193A008CB4E85573AA1FE53C5F4E58B42A7F61FD0EEE1D89B5120B; // 0xE69 // Static value (base64): VQQH - Metadata: 0x0207F2DC
-	internal static readonly __StaticArrayInitTypeSize_64 _7C8975E1E60A5C8337F28EDF8C33C3B180360B7279644A9BC1AF3C51E6220BF5; // 0xE6C // Static value (base64): AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ== - Metadata: 0x0207F2E4
-	internal static readonly __StaticArrayInitTypeSize_3 _850D7367E4FB0766E2CBC3ACF5AB42B4E98348E58E5A789845D4FCCDB63D2AEE; // 0xEAC // Static value (base64): VQQJ - Metadata: 0x0207F32C
-	internal static readonly long _992F16C986809AB68C7466CC3EC6F12B2506A962EA539753E5D84A2FB7FF8A24; // 0xEB0 // Static value (base64): qtO0NbUUBO4= - Metadata: 0x0207F334
-	internal static readonly __StaticArrayInitTypeSize_3 _9A65C09A11757751BFED67A414E00B188DC4C7757FCB6CBD33A916DDE4A3D925; // 0xEB8 // Static value (base64): VQQF - Metadata: 0x0207F344
-	internal static readonly __StaticArrayInitTypeSize_18 _9ACEFCC0C950280B64AB9E045E38C34ABF71EC70A0DC61B9C621C6BFB4F78047; // 0xEBB // Static value (base64): LAArACIAPQA8AD4AOwAjAAoA - Metadata: 0x0207F34C
-	internal static readonly __StaticArrayInitTypeSize_3 B1E34F4A11EE411B83415EF0B252A0B2BBCFCAC2E592865E09C12E4252C93A75; // 0xECD // Static value (base64): VQQu - Metadata: 0x0207F364
-	internal static readonly __StaticArrayInitTypeSize_3 C92FAD7F348A682E7D5B7E74C76B5D019174EE7BC87545B25A1FDD49FBCC2D0B; // 0xED0 // Static value (base64): VQQI - Metadata: 0x0207F36C
-	internal static readonly __StaticArrayInitTypeSize_3 E17B8359E685992B0DE6242AAA24FCB7404173CBB7FF8646FF7D658139F41B5F; // 0xED3 // Static value (base64): VQQD - Metadata: 0x0207F374
-	internal static readonly __StaticArrayInitTypeSize_64 F83B332BE4E6A5A4B1C56AAF6DB52657DA495E149870057D8590AB9D7A6167AD; // 0xED6 // Static value (base64): AgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg== - Metadata: 0x0207F37C
-	internal static readonly __StaticArrayInitTypeSize_3 FB6D7301FFDCB5FBA5807A19B4F0606947897C1105240B6BBA815352DBBE2064; // 0xF16 // Static value (base64): VQQr - Metadata: 0x0207F3C4
+	internal static readonly __StaticArrayInitTypeSize_64 _001D686DB504E20C792EAA07FE09224A45FF328E24A80072D04D16ABC5C2B5D2; // 0x00 // Static value (base64): z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg== - Metadata: 0x0234DCB4
+	internal static readonly __StaticArrayInitTypeSize_3132 _25E3E48132FBDBE9B7C0C6C54D7C10A5DE12A105AA3E5DE2A0DC808BF245B7A5; // 0x40 // Static value (base64): AgAAAAMAAAAFAAAABwAAAAsAAAANAAAAEQAAABMAAAAXAAAAHQAAAB8AAAAlAAAAKQAAACsAAAAvAAAANQAAADsAAAA9AAAAQwAAAEcAAABJAAAATwAAAFMAAABZAAAAYQAAAGUAAABnAAAAawAAAG0AAABxAAAAfwAAAIMAAACJAAAAiwAAAJUAAACXAAAAnQAAAKMAAACnAAAArQAAALMAAAC1AAAAvwAAAMEAAADFAAAAxwAAANMAAADfAAAA4wAAAOUAAADpAAAA7wAAAPEAAAD7AAAAAQEAAAcBAAANAQAADwEAABUBAAAZAQAAGwEAACUBAAAzAQAANwEAADkBAAA9AQAASwEAAFEBAABbAQAAXQEAAGEBAABnAQAAbwEAAHUBAAB7AQAAfwEAAIUBAACNAQAAkQEAAJkBAACjAQAApQEAAK8BAACxAQAAtwEAALsBAADBAQAAyQEAAM0BAADPAQAA0wEAAN8BAADnAQAA6wEAAPMBAAD3AQAA/QEAAAkCAAALAgAAHQIAACMCAAAtAgAAMwIAADkCAAA7AgAAQQIAAEsCAABRAgAAVwIAAFkCAABfAgAAZQIAAGkCAABrAgAAdwIAAIECAACDAgAAhwIAAI0CAACTAgAAlQIAAKECAAClAgAAqwIAALMCAAC9AgAAxQIAAM8CAADXAgAA3QIAAOMCAADnAgAA7wIAAPUCAAD5AgAAAQMAAAUDAAATAwAAHQMAACkDAAArAwAANQMAADcDAAA7AwAAPQMAAEcDAABVAwAAWQMAAFsDAABfAwAAbQMAAHEDAABzAwAAdwMAAIsDAACPAwAAlwMAAKEDAACpAwAArQMAALMDAAC5AwAAxwMAAMsDAADRAwAA1wMAAN8DAADlAwAA8QMAAPUDAAD7AwAA/QMAAAcEAAAJBAAADwQAABkEAAAbBAAAJQQAACcEAAAtBAAAPwQAAEMEAABFBAAASQQAAE8EAABVBAAAXQQAAGMEAABpBAAAfwQAAIEEAACLBAAAkwQAAJ0EAACjBAAAqQQAALEEAAC9BAAAwQQAAMcEAADNBAAAzwQAANUEAADhBAAA6wQAAP0EAAD/BAAAAwUAAAkFAAALBQAAEQUAABUFAAAXBQAAGwUAACcFAAApBQAALwUAAFEFAABXBQAAXQUAAGUFAAB3BQAAgQUAAI8FAACTBQAAlQUAAJkFAACfBQAApwUAAKsFAACtBQAAswUAAL8FAADJBQAAywUAAM8FAADRBQAA1QUAANsFAADnBQAA8wUAAPsFAAAHBgAADQYAABEGAAAXBgAAHwYAACMGAAArBgAALwYAAD0GAABBBgAARwYAAEkGAABNBgAAUwYAAFUGAABbBgAAZQYAAHkGAAB/BgAAgwYAAIUGAACdBgAAoQYAAKMGAACtBgAAuQYAALsGAADFBgAAzQYAANMGAADZBgAA3wYAAPEGAAD3BgAA+wYAAP0GAAAJBwAAEwcAAB8HAAAnBwAANwcAAEUHAABLBwAATwcAAFEHAABVBwAAVwcAAGEHAABtBwAAcwcAAHkHAACLBwAAjQcAAJ0HAACfBwAAtQcAALsHAADDBwAAyQcAAM0HAADPBwAA0wcAANsHAADhBwAA6wcAAO0HAAD3BwAABQgAAA8IAAAVCAAAIQgAACMIAAAnCAAAKQgAADMIAAA/CAAAQQgAAFEIAABTCAAAWQgAAF0IAABfCAAAaQgAAHEIAACDCAAAmwgAAJ8IAAClCAAArQgAAL0IAAC/CAAAwwgAAMsIAADbCAAA3QgAAOEIAADpCAAA7wgAAPUIAAD5CAAABQkAAAcJAAAdCQAAIwkAACUJAAArCQAALwkAADUJAABDCQAASQkAAE0JAABPCQAAVQkAAFkJAABfCQAAawkAAHEJAAB3CQAAhQkAAIkJAACPCQAAmwkAAKMJAACpCQAArQkAAMcJAADZCQAA4wkAAOsJAADvCQAA9QkAAPcJAAD9CQAAEwoAAB8KAAAhCgAAMQoAADkKAAA9CgAASQoAAFcKAABhCgAAYwoAAGcKAABvCgAAdQoAAHsKAAB/CgAAgQoAAIUKAACLCgAAkwoAAJcKAACZCgAAnwoAAKkKAACrCgAAtQoAAL0KAADBCgAAzwoAANkKAADlCgAA5woAAO0KAADxCgAA8woAAAMLAAARCwAAFQsAABsLAAAjCwAAKQsAAC0LAAA/CwAARwsAAFELAABXCwAAXQsAAGULAABvCwAAewsAAIkLAACNCwAAkwsAAJkLAACbCwAAtwsAALkLAADDCwAAywsAAM8LAADdCwAA4QsAAOkLAAD1CwAA+wsAAAcMAAALDAAAEQwAACUMAAAvDAAAMQwAAEEMAABbDAAAXwwAAGEMAABtDAAAcwwAAHcMAACDDAAAiQwAAJEMAACVDAAAnQwAALMMAAC1DAAAuQwAALsMAADHDAAA4wwAAOUMAADrDAAA8QwAAPcMAAD7DAAAAQ0AAAMNAAAPDQAAEw0AAB8NAAAhDQAAKw0AAC0NAAA9DQAAPw0AAE8NAABVDQAAaQ0AAHkNAACBDQAAhQ0AAIcNAACLDQAAjQ0AAKMNAACrDQAAtw0AAL0NAADHDQAAyQ0AAM0NAADTDQAA1Q0AANsNAADlDQAA5w0AAPMNAAD9DQAA/w0AAAkOAAAXDgAAHQ4AACEOAAAnDgAALw4AADUOAAA7DgAASw4AAFcOAABZDgAAXQ4AAGsOAABxDgAAdQ4AAH0OAACHDgAAjw4AAJUOAACbDgAAsQ4AALcOAAC5DgAAww4AANEOAADVDgAA2w4AAO0OAADvDgAA+Q4AAAcPAAALDwAADQ8AABcPAAAlDwAAKQ8AADEPAABDDwAARw8AAE0PAABPDwAAUw8AAFkPAABbDwAAZw8AAGsPAAB/DwAAlQ8AAKEPAACjDwAApw8AAK0PAACzDwAAtQ8AALsPAADRDwAA0w8AANkPAADpDwAA7w8AAPsPAAD9DwAAAxAAAA8QAAAfEAAAIRAAACUQAAArEAAAORAAAD0QAAA/EAAAURAAAGkQAABzEAAAeRAAAHsQAACFEAAAhxAAAJEQAACTEAAAnRAAAKMQAAClEAAArxAAALEQAAC7EAAAwRAAAMkQAADnEAAA8RAAAPMQAAD9EAAABREAAAsRAAAVEQAAJxEAAC0RAAA5EQAARREAAEcRAABZEQAAXxEAAGMRAABpEQAAbxEAAIERAACDEQAAjREAAJsRAAChEQAApREAAKcRAACrEQAAwxEAAMURAADREQAA1xEAAOcRAADvEQAA9REAAPsRAAANEgAAHRIAAB8SAAAjEgAAKRIAACsSAAAxEgAANxIAAEESAABHEgAAUxIAAF8SAABxEgAAcxIAAHkSAAB9EgAAjxIAAJcSAACvEgAAsxIAALUSAAC5EgAAvxIAAMESAADNEgAA0RIAAN8SAAD9EgAABxMAAA0TAAAZEwAAJxMAAC0TAAA3EwAAQxMAAEUTAABJEwAATxMAAFcTAABdEwAAZxMAAGkTAABtEwAAexMAAIETAACHEwAAixMAAJETAACTEwAAnRMAAJ8TAACvEwAAuxMAAMMTAADVEwAA2RMAAN8TAADrEwAA7RMAAPMTAAD5EwAA/xMAABsUAAAhFAAALxQAADMUAAA7FAAARRQAAE0UAABZFAAAaxQAAG8UAABxFAAAdRQAAI0UAACZFAAAnxQAAKEUAACxFAAAtxQAAL0UAADLFAAA1RQAAOMUAADnFAAABRUAAAsVAAARFQAAFxUAAB8VAAAlFQAAKRUAACsVAAA3FQAAPRUAAEEVAABDFQAASRUAAF8VAABlFQAAZxUAAGsVAAB9FQAAfxUAAIMVAACPFQAAkRUAAJcVAACbFQAAtRUAALsVAADBFQAAxRUAAM0VAADXFQAA9xUAAAcWAAAJFgAADxYAABMWAAAVFgAAGRYAABsWAAAlFgAAMxYAADkWAAA9FgAARRYAAE8WAABVFgAAaRYAAG0WAABvFgAAdRYAAJMWAACXFgAAnxYAAKkWAACvFgAAtRYAAL0WAADDFgAAzxYAANMWAADZFgAA2xYAAOEWAADlFgAA6xYAAO0WAAD3FgAA+RYAAAkXAAAPFwAAIxcAACcXAAAzFwAAQRcAAF0XAABjFwAA - Metadata: 0x0234DCFC
+	internal static readonly long _290C4A052C215D096172EB81AEE671FB3286E5C1DB5E73F96021FC09825DDB88; // 0xC80 // Static value (base64): S0dTIUAjJCU= - Metadata: 0x0234E93C
+	internal static readonly __StaticArrayInitTypeSize_3 _32D0830B8EE1D49A66F395C8EA80E02BFC07C2A12A8EA8C8B484AF02108A1950; // 0xC88 // Static value (base64): VQQL - Metadata: 0x0234E94C
+	internal static readonly __StaticArrayInitTypeSize_3 _35BF50EEF3270FD8CA09E66FC5B0481C5A151B14F6A634854E32F63633D49DCB; // 0xC8B // Static value (base64): VQQE - Metadata: 0x0234E954
+	internal static readonly __StaticArrayInitTypeSize_3 _3C0C410618682C4DF0474E034114CC8E562F05A512B521AC367571017BDFA75D; // 0xC8E // Static value (base64): VQQK - Metadata: 0x0234E95C
+	internal static readonly __StaticArrayInitTypeSize_3 _44F5B1A2C48314502ACCBF186D1A2F9F7F176825898F32F1A2047B956194F174; // 0xC91 // Static value (base64): VQQq - Metadata: 0x0234E964
+	internal static readonly __StaticArrayInitTypeSize_48 _4800FBFC4566EB02D1727A4B1C949CCBC7535C216A0766564C199308631B5DD6; // 0xC94 // Static value (base64): OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb - Metadata: 0x0234E96C
+	internal static readonly __StaticArrayInitTypeSize_20 _533B8C444F951E83EFF7305E3807B66CE0005DE0A2D0A44873C130895A3BE6AA; // 0xCC4 // Static value (base64): 2jmj7l5rSw0yVb/vlWAYkK/YBwk= - Metadata: 0x0234E9A4
+	internal static readonly __StaticArrayInitTypeSize_256 _55D0BF716B334D123E0088CFB3F8E2FEA17AF5025BB527F95EEB09BA978EA329; // 0xCD8 // Static value (base64): KS5DyaLYfAE9NlSh7PAGE2KnBfPAx3OMmJMr2bxMgsoem1c8/dTgFmdCbxiKF+USvk7E1tqe3kmg+/WOuy/ueqloeZEVsgc/lMIQiQsiXyGAf12aWpAyJzU+zOe/95cD/xkws0iltdHXXpIqrFaqxk+4ONKWpH22dvxr4px0BPFFnXBZZHGHIIZbz2XmLagCG2Alra6wufYcRmFpNEB+D1VHoyPdUa86w1z5zrrF6iYsUw1uhSiECdPfzfRBgU1Satw3yGzBq/ok4XsIDL2xSniIlYvjY+ht6cvV/jsAHTny77cOZljQ5KZ3cvjrdUsKMURQtI/tHxrbmY0znxGDFA== - Metadata: 0x0234E9BC
+	internal static readonly __StaticArrayInitTypeSize_3 _59BE5A634187B8A57216EFF5371A47732C05744B1C1A0A6382A6D5622C9FFDCE; // 0xDD8 // Static value (base64): VQQG - Metadata: 0x0234EAC4
+	internal static readonly __StaticArrayInitTypeSize_32 _5DF6E0E2761359D30A8275058E299FCC0381534545F55CF43E41983F5D4C9456; // 0xDDB // Static value (base64): 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU= - Metadata: 0x0234EACC
+	internal static readonly __StaticArrayInitTypeSize_3 _5F8C6B3C66B972606D85E7651F67ADBD02E8316876884674E8328FA710747E5B; // 0xDFB // Static value (base64): VQQM - Metadata: 0x0234EAF4
+	internal static readonly __StaticArrayInitTypeSize_10 _60C6ED13AF98DBFEEDA8F8197FFFCC349BB04395CC81DF0D477CBC57BF5B398B; // 0xDFE // Static value (base64): CZImiZPyLGQBGQ== - Metadata: 0x0234EAFC
+	internal static readonly __StaticArrayInitTypeSize_10 _64B3E7D737AFF47D4C3BBD81D2D06D697DDD8EB60F29E13E4425D19D8BBCA1F7; // 0xE08 // Static value (base64): CZImiZPyLGQBAQ== - Metadata: 0x0234EB0C
+	internal static readonly long _6772A9B8BF207A3CFE6EE68769D6985B69522183F24A2A3D41BC3B4602953426; // 0xE18 // Static value (base64): TlRMTVNTUAA= - Metadata: 0x0234EB1C
+	internal static readonly __StaticArrayInitTypeSize_9 _684312AFB7719E57993D2826FFBAF7EA965614F20F91D999FB19B01E21AA62E6; // 0xE20 // Static value (base64): KoZIhvcNAQkB - Metadata: 0x0234EB2C
+	internal static readonly __StaticArrayInitTypeSize_64 _6AA56C4BCD208911792AD24C7681FEFB93BED51903AFC54860C9BD37E41E5A31; // 0xE29 // Static value (base64): AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw== - Metadata: 0x0234EB3C
+	internal static readonly __StaticArrayInitTypeSize_3 _796E63069E193A008CB4E85573AA1FE53C5F4E58B42A7F61FD0EEE1D89B5120B; // 0xE69 // Static value (base64): VQQH - Metadata: 0x0234EB84
+	internal static readonly __StaticArrayInitTypeSize_64 _7C8975E1E60A5C8337F28EDF8C33C3B180360B7279644A9BC1AF3C51E6220BF5; // 0xE6C // Static value (base64): AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ== - Metadata: 0x0234EB8C
+	internal static readonly __StaticArrayInitTypeSize_3 _850D7367E4FB0766E2CBC3ACF5AB42B4E98348E58E5A789845D4FCCDB63D2AEE; // 0xEAC // Static value (base64): VQQJ - Metadata: 0x0234EBD4
+	internal static readonly long _992F16C986809AB68C7466CC3EC6F12B2506A962EA539753E5D84A2FB7FF8A24; // 0xEB0 // Static value (base64): qtO0NbUUBO4= - Metadata: 0x0234EBDC
+	internal static readonly __StaticArrayInitTypeSize_3 _9A65C09A11757751BFED67A414E00B188DC4C7757FCB6CBD33A916DDE4A3D925; // 0xEB8 // Static value (base64): VQQF - Metadata: 0x0234EBEC
+	internal static readonly __StaticArrayInitTypeSize_18 _9ACEFCC0C950280B64AB9E045E38C34ABF71EC70A0DC61B9C621C6BFB4F78047; // 0xEBB // Static value (base64): LAArACIAPQA8AD4AOwAjAAoA - Metadata: 0x0234EBF4
+	internal static readonly __StaticArrayInitTypeSize_3 B1E34F4A11EE411B83415EF0B252A0B2BBCFCAC2E592865E09C12E4252C93A75; // 0xECD // Static value (base64): VQQu - Metadata: 0x0234EC0C
+	internal static readonly __StaticArrayInitTypeSize_3 C92FAD7F348A682E7D5B7E74C76B5D019174EE7BC87545B25A1FDD49FBCC2D0B; // 0xED0 // Static value (base64): VQQI - Metadata: 0x0234EC14
+	internal static readonly __StaticArrayInitTypeSize_3 E17B8359E685992B0DE6242AAA24FCB7404173CBB7FF8646FF7D658139F41B5F; // 0xED3 // Static value (base64): VQQD - Metadata: 0x0234EC1C
+	internal static readonly __StaticArrayInitTypeSize_64 F83B332BE4E6A5A4B1C56AAF6DB52657DA495E149870057D8590AB9D7A6167AD; // 0xED6 // Static value (base64): AgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg== - Metadata: 0x0234EC24
+	internal static readonly __StaticArrayInitTypeSize_3 FB6D7301FFDCB5FBA5807A19B4F0606947897C1105240B6BBA815352DBBE2064; // 0xF16 // Static value (base64): VQQr - Metadata: 0x0234EC6C
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_3 // TypeDefIndex: 58016
+	private struct __StaticArrayInitTypeSize_3 // TypeDefIndex: 60525
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_9 // TypeDefIndex: 58017
+	private struct __StaticArrayInitTypeSize_9 // TypeDefIndex: 60526
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_10 // TypeDefIndex: 58018
+	private struct __StaticArrayInitTypeSize_10 // TypeDefIndex: 60527
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_18 // TypeDefIndex: 58019
+	private struct __StaticArrayInitTypeSize_18 // TypeDefIndex: 60528
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_20 // TypeDefIndex: 58020
+	private struct __StaticArrayInitTypeSize_20 // TypeDefIndex: 60529
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_32 // TypeDefIndex: 58021
+	private struct __StaticArrayInitTypeSize_32 // TypeDefIndex: 60530
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_48 // TypeDefIndex: 58022
+	private struct __StaticArrayInitTypeSize_48 // TypeDefIndex: 60531
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_64 // TypeDefIndex: 58023
+	private struct __StaticArrayInitTypeSize_64 // TypeDefIndex: 60532
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_256 // TypeDefIndex: 58024
+	private struct __StaticArrayInitTypeSize_256 // TypeDefIndex: 60533
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_3132 // TypeDefIndex: 58025
+	private struct __StaticArrayInitTypeSize_3132 // TypeDefIndex: 60534
 	{
 	}
-
-	// Constructors
-	public _PrivateImplementationDetails_() {} // Dummy constructor
 
 	// Methods
-	internal static uint ComputeStringHash(string s) => default; // 0x0000000187809354-0x00000001878093A8
+	internal static uint ComputeStringHash(string s); // 0x000000018687A850-0x000000018687A8A4
 }
 
 namespace Mono.Math
 {
-	public class BigInteger // TypeDefIndex: 58010
+	public class BigInteger // TypeDefIndex: 60519
 	{
 		// Fields
 		private uint length; // 0x10
@@ -110,110 +133,117 @@ namespace Mono.Math
 		private static RandomNumberGenerator rng; // 0x08
 	
 		// Properties
-		private static RandomNumberGenerator Rng { get => default; } // 0x000000018B252890-0x000000018B2528D4 
+		private static RandomNumberGenerator Rng { get; } // 0x000000018A723B08-0x000000018A723BB0 
 	
 		// Nested types
-		public enum Sign // TypeDefIndex: 58007
+		public enum Sign // TypeDefIndex: 60516
 		{
 			Negative = -1,
 			Zero = 0,
 			Positive = 1
 		}
 	
-		public sealed class ModulusRing // TypeDefIndex: 58008
+		public sealed class ModulusRing // TypeDefIndex: 60517
 		{
 			// Fields
 			private BigInteger mod; // 0x10
 			private BigInteger constant; // 0x18
 	
 			// Constructors
-			public ModulusRing() {} // Dummy constructor
-			public ModulusRing(BigInteger modulus) {} // 0x000000018B252F7C-0x000000018B252FDC
+			public ModulusRing(BigInteger modulus); // 0x000000018A728DB0-0x000000018A728EA4
 	
 			// Methods
-			public void BarrettReduction(BigInteger x) {} // 0x000000018B252EE4-0x000000018B252F7C
-			public BigInteger Multiply(BigInteger a, BigInteger b) => default; // 0x000000018B253278-0x000000018B25332C
-			public BigInteger Difference(BigInteger a, BigInteger b) => default; // 0x000000018B252FDC-0x000000018B253204
-			public BigInteger Pow(BigInteger a, BigInteger k) => default; // 0x000000018B253204-0x000000018B253278
-			public BigInteger Pow(uint b, BigInteger exp) => default; // 0x000000018B2535E4-0x000000018B253644
+			public void BarrettReduction(BigInteger x); // 0x000000018A728664-0x000000018A728920
+			public BigInteger Multiply(BigInteger a, BigInteger b); // 0x000000018A728ABC-0x000000018A728C18
+			public BigInteger Difference(BigInteger a, BigInteger b); // 0x000000018A728920-0x000000018A728ABC
+			public BigInteger Pow(BigInteger a, BigInteger k); // 0x000000018A728C9C-0x000000018A728DB0
+			[CLSCompliant(false)]
+			public BigInteger Pow(uint b, BigInteger exp); // 0x000000018A728C18-0x000000018A728C9C
 		}
 	
-		private sealed class Kernel // TypeDefIndex: 58009
+		private sealed class Kernel // TypeDefIndex: 60518
 		{
-			// Constructors
-			public Kernel() {} // Dummy constructor
-	
 			// Methods
-			public static BigInteger AddSameSign(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B253644-0x000000018B2536F4
-			public static BigInteger Subtract(BigInteger big, BigInteger small) => default; // 0x000000018B2533D4-0x000000018B25349C
-			public static void MinusEq(BigInteger big, BigInteger small) {} // 0x000000018B253A64-0x000000018B253C30
-			public static void PlusEq(BigInteger bi1, BigInteger bi2) {} // 0x000000018B253840-0x000000018B253848
-			public static Sign Compare(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B253814-0x000000018B253840
-			public static uint SingleByteDivideInPlace(BigInteger n, uint d) => default; // 0x000000018B25349C-0x000000018B2534C8
-			public static uint DwordMod(BigInteger n, uint d) => default; // 0x000000018B253848-0x000000018B253A5C
-			public static BigInteger[] DwordDivMod(BigInteger n, uint d) => default; // 0x000000018B2537E0-0x000000018B2537E8
-			public static BigInteger[] multiByteDivide(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B253A5C-0x000000018B253A64
-			public static BigInteger LeftShift(BigInteger bi, int n) => default; // 0x000000018B25332C-0x000000018B2533D4
-			public static BigInteger RightShift(BigInteger bi, int n) => default; // 0x000000018B2525CC-0x000000018B25272C
-			public static void Multiply(uint[] x, uint xOffset, uint xLen, uint[] y, uint yOffset, uint yLen, uint[] d, uint dOffset) {} // 0x000000018B25272C-0x000000018B252778
-			public static void MultiplyMod2p32pmod(uint[] x, int xOffset, int xLen, uint[] y, int yOffest, int yLen, uint[] d, int dOffset, int mod) {} // 0x000000018B2523D8-0x000000018B252434
-			public static uint modInverse(BigInteger bi, uint modulus) => default; // 0x000000018B252B0C-0x000000018B252BAC
-			public static BigInteger modInverse(BigInteger bi, BigInteger modulus) => default; // 0x000000018B252AAC-0x000000018B252AB8
+			public static BigInteger AddSameSign(BigInteger bi1, BigInteger bi2); // 0x000000018A724EA0-0x000000018A725070
+			public static BigInteger Subtract(BigInteger big, BigInteger small); // 0x000000018A725C64-0x000000018A725E10
+			public static void MinusEq(BigInteger big, BigInteger small); // 0x000000018A72553C-0x000000018A725664
+			public static void PlusEq(BigInteger bi1, BigInteger bi2); // 0x000000018A7258AC-0x000000018A725A44
+			public static Sign Compare(BigInteger bi1, BigInteger bi2); // 0x000000018A725070-0x000000018A7251A4
+			public static uint SingleByteDivideInPlace(BigInteger n, uint d); // 0x000000018A725BF8-0x000000018A725C64
+			public static uint DwordMod(BigInteger n, uint d); // 0x000000018A72530C-0x000000018A725364
+			public static BigInteger[] DwordDivMod(BigInteger n, uint d); // 0x000000018A7251A4-0x000000018A72530C
+			public static BigInteger[] multiByteDivide(BigInteger bi1, BigInteger bi2); // 0x000000018A72634C-0x000000018A7268C8
+			public static BigInteger LeftShift(BigInteger bi, int n); // 0x000000018A725364-0x000000018A72553C
+			public static BigInteger RightShift(BigInteger bi, int n); // 0x000000018A725A44-0x000000018A725BF8
+			public static void Multiply(uint[] x, uint xOffset, uint xLen, uint[] y, uint yOffset, uint yLen, uint[] d, uint dOffset); // 0x000000018A725798-0x000000018A7258AC
+			public static void MultiplyMod2p32pmod(uint[] x, int xOffset, int xLen, uint[] y, int yOffest, int yLen, uint[] d, int dOffset, int mod); // 0x000000018A725664-0x000000018A725798
+			public static uint modInverse(BigInteger bi, uint modulus); // 0x000000018A725E10-0x000000018A725EBC
+			public static BigInteger modInverse(BigInteger bi, BigInteger modulus); // 0x000000018A725EBC-0x000000018A72634C
 		}
 	
 		// Constructors
-		public BigInteger() {} // Dummy constructor
-		public BigInteger(Sign sign, uint len) {} // 0x000000018B252AB8-0x000000018B252B0C
-		public BigInteger(BigInteger bi) {} // 0x000000018B25295C-0x000000018B2529D0
-		public BigInteger(BigInteger bi, uint len) {} // 0x000000018B252778-0x000000018B252890
-		public BigInteger(byte[] inData) {} // 0x000000018B2534C8-0x000000018B253520
-		public BigInteger(uint ui) {} // 0x000000018B253788-0x000000018B2537E0
-		static BigInteger() {} // 0x000000018B2556E0-0x000000018B255B70
+		[CLSCompliant(false)]
+		public BigInteger(Sign sign, uint len); // 0x000000018A723758-0x000000018A7237B8
+		public BigInteger(BigInteger bi); // 0x000000018A7236C0-0x000000018A723758
+		[CLSCompliant(false)]
+		public BigInteger(BigInteger bi, uint len); // 0x000000018A723A54-0x000000018A723B08
+		public BigInteger(byte[] inData); // 0x000000018A7237B8-0x000000018A7239E0
+		[CLSCompliant(false)]
+		public BigInteger(uint ui); // 0x000000018A7239E0-0x000000018A723A54
+		static BigInteger(); // 0x000000018A723634-0x000000018A7236C0
 	
 		// Methods
-		public static implicit operator BigInteger(uint value) => default; // 0x000000018B253520-0x000000018B2535B4
-		public static implicit operator BigInteger(int value) => default; // 0x000000018B2536F4-0x000000018B253788
-		public static BigInteger operator +(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B2535CC-0x000000018B2535E4
-		public static BigInteger operator -(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B253800-0x000000018B253814
-		public static uint operator %(BigInteger bi, uint ui) => default; // 0x000000018B2535B4-0x000000018B2535CC
-		public static BigInteger operator %(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B2537E8-0x000000018B253800
-		public static BigInteger operator /(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B252DFC-0x000000018B252E48
-		public static BigInteger operator *(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B252BAC-0x000000018B252DFC
-		public static BigInteger operator <<(BigInteger bi1, int shiftVal) => default; // 0x000000018B252A60-0x000000018B252AAC
-		public static BigInteger operator >>(BigInteger bi1, int shiftVal) => default; // 0x000000018B252434-0x000000018B25247C
-		public static BigInteger GenerateRandom(int bits, RandomNumberGenerator rng) => default; // 0x000000018B252E48-0x000000018B252E58
-		public static BigInteger GenerateRandom(int bits) => default; // 0x000000018B25247C-0x000000018B25255C
-		public int BitCount() => default; // 0x000000018B2529D0-0x000000018B2529D8
-		public bool TestBit(int bitNum) => default; // 0x000000018B2529D8-0x000000018B252A60
-		public void SetBit(uint bitNum) {} // 0x000000018B25255C-0x000000018B2525CC
-		public void SetBit(uint bitNum, bool value) {} // 0x000000018B2528D4-0x000000018B25295C
-		public int LowestSetBit() => default; // 0x000000018B252E58-0x000000018B252EE4
-		public byte[] GetBytes() => default; // 0x000000018B2585D4-0x000000018B2586C8
-		public static bool operator ==(BigInteger bi1, uint ui) => default; // 0x000000018B257E88-0x000000018B258144
-		public static bool operator !=(BigInteger bi1, uint ui) => default; // 0x000000018B2582E0-0x000000018B25843C
-		public static bool operator ==(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B258144-0x000000018B2582E0
-		public static bool operator !=(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B2584C0-0x000000018B2585D4
-		public static bool operator >(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B25843C-0x000000018B2584C0
-		public static bool operator <(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B2546C4-0x000000018B254894
-		public static bool operator >=(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B255488-0x000000018B255634
-		public static bool operator <=(BigInteger bi1, BigInteger bi2) => default; // 0x000000018B254D60-0x000000018B254E88
-		public string ToString(uint radix) => default; // 0x000000018B2550D0-0x000000018B255268
-		public string ToString(uint radix, string characterSet) => default; // 0x000000018B254894-0x000000018B2549C8
-		private void Normalize() {} // 0x000000018B25541C-0x000000018B255488
-		public void Clear() {} // 0x000000018B254B30-0x000000018B254B88
-		public override int GetHashCode() => default; // 0x000000018B2549C8-0x000000018B254B30
-		public override string ToString() => default; // 0x000000018B255B70-0x000000018B2560EC
-		public override bool Equals(object o) => default; // 0x000000018B254B88-0x000000018B254D60
-		public BigInteger ModInverse(BigInteger modulus) => default; // 0x000000018B255268-0x000000018B25541C
-		public BigInteger ModPow(BigInteger exp, BigInteger n) => default; // 0x000000018B254FBC-0x000000018B2550D0
-		public static BigInteger GeneratePseudoPrime(int bits) => default; // 0x000000018B254E88-0x000000018B254FBC
-		public void Incr2() {} // 0x000000018B255634-0x000000018B2556E0
+		[CLSCompliant(false)]
+		public static implicit operator BigInteger(uint value); // 0x000000018A723DC0-0x000000018A723E20
+		public static implicit operator BigInteger(int value); // 0x000000018A723E20-0x000000018A723ED0
+		public static BigInteger operator +(BigInteger bi1, BigInteger bi2); // 0x000000018A723BB0-0x000000018A723C78
+		public static BigInteger operator -(BigInteger bi1, BigInteger bi2); // 0x000000018A724240-0x000000018A72440C
+		[CLSCompliant(false)]
+		public static uint operator %(BigInteger bi, uint ui); // 0x000000018A72401C-0x000000018A724024
+		public static BigInteger operator %(BigInteger bi1, BigInteger bi2); // 0x000000018A723FF0-0x000000018A72401C
+		public static BigInteger operator /(BigInteger bi1, BigInteger bi2); // 0x000000018A723C78-0x000000018A723CA4
+		public static BigInteger operator *(BigInteger bi1, BigInteger bi2); // 0x000000018A724024-0x000000018A724238
+		public static BigInteger operator <<(BigInteger bi1, int shiftVal); // 0x000000018A723FBC-0x000000018A723FC4
+		public static BigInteger operator >>(BigInteger bi1, int shiftVal); // 0x000000018A724238-0x000000018A724240
+		public static BigInteger GenerateRandom(int bits, RandomNumberGenerator rng); // 0x000000018A722DA8-0x000000018A722F08
+		public static BigInteger GenerateRandom(int bits); // 0x000000018A722F08-0x000000018A722F54
+		public int BitCount(); // 0x000000018A722BB4-0x000000018A722C10
+		public bool TestBit(int bitNum); // 0x000000018A7232E8-0x000000018A723388
+		[CLSCompliant(false)]
+		public void SetBit(uint bitNum); // 0x000000018A723288-0x000000018A723294
+		[CLSCompliant(false)]
+		public void SetBit(uint bitNum, bool value); // 0x000000018A723294-0x000000018A7232E8
+		public int LowestSetBit(); // 0x000000018A723138-0x000000018A7231AC
+		public byte[] GetBytes(); // 0x000000018A722F54-0x000000018A72306C
+		[CLSCompliant(false)]
+		public static bool operator ==(BigInteger bi1, uint ui); // 0x000000018A723CA4-0x000000018A723CFC
+		[CLSCompliant(false)]
+		public static bool operator !=(BigInteger bi1, uint ui); // 0x000000018A723F64-0x000000018A723FBC
+		public static bool operator ==(BigInteger bi1, BigInteger bi2); // 0x000000018A723CFC-0x000000018A723D90
+		public static bool operator !=(BigInteger bi1, BigInteger bi2); // 0x000000018A723ED0-0x000000018A723F64
+		public static bool operator >(BigInteger bi1, BigInteger bi2); // 0x000000018A723DA8-0x000000018A723DC0
+		public static bool operator <(BigInteger bi1, BigInteger bi2); // 0x000000018A723FDC-0x000000018A723FF0
+		public static bool operator >=(BigInteger bi1, BigInteger bi2); // 0x000000018A723D90-0x000000018A723DA8
+		public static bool operator <=(BigInteger bi1, BigInteger bi2); // 0x000000018A723FC4-0x000000018A723FDC
+		[CLSCompliant(false)]
+		public string ToString(uint radix); // 0x000000018A7235D8-0x000000018A723624
+		[CLSCompliant(false)]
+		public string ToString(uint radix, string characterSet); // 0x000000018A723388-0x000000018A7235D8
+		private void Normalize(); // 0x000000018A72323C-0x000000018A723288
+		public void Clear(); // 0x000000018A722C10-0x000000018A722C58
+		public override int GetHashCode(); // 0x000000018A72306C-0x000000018A7230B0
+		public override string ToString(); // 0x000000018A723624-0x000000018A723634
+		public override bool Equals(object o); // 0x000000018A722C58-0x000000018A722D38
+		public BigInteger ModInverse(BigInteger modulus); // 0x000000018A7231AC-0x000000018A7231B4
+		public BigInteger ModPow(BigInteger exp, BigInteger n); // 0x000000018A7231B4-0x000000018A72323C
+		public static BigInteger GeneratePseudoPrime(int bits); // 0x000000018A722D38-0x000000018A722DA8
+		public void Incr2(); // 0x000000018A7230B0-0x000000018A723138
 	}
 }
 
 namespace Mono.Math.Prime
 {
-	public enum ConfidenceFactor // TypeDefIndex: 58011
+	public enum ConfidenceFactor // TypeDefIndex: 60520
 	{
 		ExtraLow = 0,
 		Low = 1,
@@ -223,51 +253,48 @@ namespace Mono.Math.Prime
 		Provable = 5
 	}
 
-	public delegate bool PrimalityTest(BigInteger bi, ConfidenceFactor confidence); // TypeDefIndex: 58012; 0x0000000181B59400-0x0000000181B59410
+	public delegate bool PrimalityTest(BigInteger bi, ConfidenceFactor confidence); // TypeDefIndex: 60521; 0x00000001815802E0-0x00000001815802F0
 
-	public sealed class PrimalityTests // TypeDefIndex: 58013
+	public sealed class PrimalityTests // TypeDefIndex: 60522
 	{
-		// Constructors
-		public PrimalityTests() {} // Dummy constructor
-	
 		// Methods
-		private static int GetSPPRounds(BigInteger bi, ConfidenceFactor confidence) => default; // 0x000000018B259BE8-0x000000018B259D9C
-		public static bool RabinMillerTest(BigInteger n, ConfidenceFactor confidence) => default; // 0x000000018B259D9C-0x000000018B25A024
+		private static int GetSPPRounds(BigInteger bi, ConfidenceFactor confidence); // 0x000000018A72A3C4-0x000000018A72A578
+		public static bool RabinMillerTest(BigInteger n, ConfidenceFactor confidence); // 0x000000018A72A578-0x000000018A72A800
 	}
 }
 
 namespace Mono.Math.Prime.Generator
 {
-	public abstract class PrimeGeneratorBase // TypeDefIndex: 58014
+	public abstract class PrimeGeneratorBase // TypeDefIndex: 60523
 	{
 		// Properties
-		public virtual ConfidenceFactor Confidence { get; } // 0x0000000181C6A970-0x0000000181C6A980 
-		public virtual PrimalityTest PrimalityTest { get; } // 0x000000018B25A024-0x000000018B25A08C 
-		public virtual int TrialDivisionBounds { get; } // 0x0000000185FBE5C0-0x0000000185FBE5D0 
+		public virtual ConfidenceFactor Confidence { get; } // 0x0000000182BBE540-0x0000000182BBE550 
+		public virtual PrimalityTest PrimalityTest { get; } // 0x000000018A72A800-0x000000018A72A868 
+		public virtual int TrialDivisionBounds { get; } // 0x0000000184DA3390-0x0000000184DA33A0 
 	
 		// Constructors
-		protected PrimeGeneratorBase() {} // 0x0000000185492010-0x0000000185492020
+		protected PrimeGeneratorBase(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
 		public abstract BigInteger GenerateNewPrime(int bits);
 	}
 
-	public class SequentialSearchPrimeGeneratorBase : PrimeGeneratorBase // TypeDefIndex: 58015
+	public class SequentialSearchPrimeGeneratorBase : PrimeGeneratorBase // TypeDefIndex: 60524
 	{
 		// Constructors
-		public SequentialSearchPrimeGeneratorBase() {} // 0x0000000185492010-0x0000000185492020
+		public SequentialSearchPrimeGeneratorBase(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		protected virtual BigInteger GenerateSearchBase(int bits, object context) => default; // 0x000000018B25D278-0x000000018B25D2D8
-		public override BigInteger GenerateNewPrime(int bits) => default; // 0x000000018B25D26C-0x000000018B25D278
-		public virtual BigInteger GenerateNewPrime(int bits, object context) => default; // 0x000000018B25D058-0x000000018B25D26C
-		protected virtual bool IsPrimeAcceptable(BigInteger bi, object context) => default; // 0x00000001840A27C0-0x00000001840A27D0
+		protected virtual BigInteger GenerateSearchBase(int bits, object context); // 0x000000018A72DA54-0x000000018A72DAB4
+		public override BigInteger GenerateNewPrime(int bits); // 0x000000018A72DA48-0x000000018A72DA54
+		public virtual BigInteger GenerateNewPrime(int bits, object context); // 0x000000018A72D834-0x000000018A72DA48
+		protected virtual bool IsPrimeAcceptable(BigInteger bi, object context); // 0x0000000182FFF600-0x0000000182FFF610
 	}
 }
 
 namespace Mono.Security
 {
-	public class ASN1 // TypeDefIndex: 57925
+	public class ASN1 // TypeDefIndex: 60434
 	{
 		// Fields
 		private byte m_nTag; // 0x10
@@ -275,86 +302,78 @@ namespace Mono.Security
 		private ArrayList elist; // 0x20
 	
 		// Properties
-		public int Count { get => default; } // 0x000000018B23BF54-0x000000018B23BF7C 
-		public byte Tag { get => default; } // 0x0000000181C2FD60-0x0000000181C2FD70 
-		public int Length { get => default; } // 0x000000018AA85BD8-0x000000018AA85BEC 
-		public byte[] Value { get => default; set {} } // 0x000000018B23C06C-0x000000018B23C0CC 0x000000018B23C0CC-0x000000018B23C140
-		public ASN1 this[int index] { get => default; } // 0x000000018B23BF7C-0x000000018B23C06C 
+		public int Count { get; } // 0x000000018A70CD60-0x000000018A70CD88 
+		public byte Tag { get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
+		public int Length { get; } // 0x0000000189EEF220-0x0000000189EEF234 
+		public byte[] Value { get; set; } // 0x000000018A70CE5C-0x000000018A70CE9C 0x000000018A70CE9C-0x000000018A70CEF0
+		public ASN1 this[int index] { get => default; } // 0x000000018A70CD88-0x000000018A70CE5C 
 	
 		// Constructors
-		public ASN1() {} // Dummy constructor
-		public ASN1(byte tag) {} // 0x0000000186472D90-0x0000000186472DB0
-		public ASN1(byte tag, byte[] data) {} // 0x000000018470BFE0-0x000000018470BFF0
-		public ASN1(byte[] data) {} // 0x000000018B23BDE4-0x000000018B23BF54
+		public ASN1(byte tag); // 0x0000000185391954-0x0000000185391968
+		public ASN1(byte tag, byte[] data); // 0x0000000183219380-0x0000000183219390
+		public ASN1(byte[] data); // 0x000000018A70CC0C-0x000000018A70CD60
 	
 		// Methods
-		private bool CompareArray(byte[] array1, byte[] array2) => default; // 0x000000018B23B294-0x000000018B23B2F8
-		public bool CompareValue(byte[] value) => default; // 0x000000018B23B2F8-0x000000018B23B308
-		public ASN1 Add(ASN1 asn1) => default; // 0x000000018B23B1FC-0x000000018B23B294
-		public virtual byte[] GetBytes() => default; // 0x000000018B23B640-0x000000018B23BBBC
-		protected void Decode(byte[] asn1, ref int anPos, int anLength) {} // 0x000000018B23B408-0x000000018B23B52C
-		protected void DecodeTLV(byte[] asn1, ref int pos, out byte tag, out int length, out byte[] content) {
-			tag = default;
-			length = default;
-			content = default;
-		} // 0x000000018B23B308-0x000000018B23B408
-		public ASN1 Element(int index, byte anTag) => default; // 0x000000018B23B52C-0x000000018B23B640
-		public override string ToString() => default; // 0x000000018B23BBBC-0x000000018B23BDE4
+		private bool CompareArray(byte[] array1, byte[] array2); // 0x000000018A70C118-0x000000018A70C17C
+		public bool CompareValue(byte[] value); // 0x000000018A70C17C-0x000000018A70C18C
+		public ASN1 Add(ASN1 asn1); // 0x000000018A70C09C-0x000000018A70C118
+		public virtual byte[] GetBytes(); // 0x000000018A70C468-0x000000018A70C9E4
+		protected void Decode(byte[] asn1, ref int anPos, int anLength); // 0x000000018A70C270-0x000000018A70C374
+		protected void DecodeTLV(byte[] asn1, ref int pos, out byte tag, out int length, out byte[] content); // 0x000000018A70C18C-0x000000018A70C270
+		public ASN1 Element(int index, byte anTag); // 0x000000018A70C374-0x000000018A70C468
+		public override string ToString(); // 0x000000018A70C9E4-0x000000018A70CC0C
 	}
 
-	public static class ASN1Convert // TypeDefIndex: 57926
+	public static class ASN1Convert // TypeDefIndex: 60435
 	{
 		// Methods
-		public static ASN1 FromInt32(int value) => default; // 0x000000018B23A6C8-0x000000018B23A7F8
-		public static ASN1 FromOid(string oid) => default; // 0x000000018B23A7F8-0x000000018B23A8D0
-		public static ASN1 FromUnsignedBigInteger(byte[] big) => default; // 0x000000018B23A8D0-0x000000018B23A9EC
-		public static int ToInt32(ASN1 asn1) => default; // 0x000000018B23AE74-0x000000018B23AF98
-		public static string ToOid(ASN1 asn1) => default; // 0x000000018B23AF98-0x000000018B23B1FC
-		public static System.DateTime ToDateTime(ASN1 time) => default; // 0x000000018B23A9EC-0x000000018B23AE74
+		public static ASN1 FromInt32(int value); // 0x000000018A70B5A4-0x000000018A70B6D4
+		public static ASN1 FromOid(string oid); // 0x000000018A70B6D4-0x000000018A70B7AC
+		public static ASN1 FromUnsignedBigInteger(byte[] big); // 0x000000018A70B7AC-0x000000018A70B8C8
+		public static int ToInt32(ASN1 asn1); // 0x000000018A70BD50-0x000000018A70BE74
+		public static string ToOid(ASN1 asn1); // 0x000000018A70BE74-0x000000018A70C09C
+		public static System.DateTime ToDateTime(ASN1 time); // 0x000000018A70B8C8-0x000000018A70BD50
 	}
 
-	internal sealed class BitConverterLE // TypeDefIndex: 57927
+	internal sealed class BitConverterLE // TypeDefIndex: 60436
 	{
-		// Constructors
-		public BitConverterLE() {} // Dummy constructor
-	
 		// Methods
-		private static unsafe byte[] GetUIntBytes(byte* bytes) => default; // 0x000000018B23CC64-0x000000018B23CD40
-		private static unsafe byte[] GetULongBytes(byte* bytes) => default; // 0x000000018B23CD40-0x000000018B23CE9C
-		internal static byte[] GetBytes(int value) => default; // 0x000000018B23CC48-0x000000018B23CC64
-		internal static byte[] GetBytes(long value) => default; // 0x000000018B23CC2C-0x000000018B23CC48
-		private static unsafe void UShortFromBytes(byte* dst, byte[] src, int startIndex) {} // 0x000000018B23CFE4-0x000000018B23D098
-		private static unsafe void UIntFromBytes(byte* dst, byte[] src, int startIndex) {} // 0x000000018B23CEEC-0x000000018B23CFE4
-		internal static int ToInt32(byte[] value, int startIndex) => default; // 0x000000018B23CE9C-0x000000018B23CEC4
-		internal static ushort ToUInt16(byte[] value, int startIndex) => default; // 0x000000018B23CEC4-0x000000018B23CEEC
-		internal static uint ToUInt32(byte[] value, int startIndex) => default; // 0x000000018B23CE9C-0x000000018B23CEC4
+		private static unsafe byte[] GetUIntBytes(byte* bytes); // 0x000000018A70DA14-0x000000018A70DAF0
+		private static unsafe byte[] GetULongBytes(byte* bytes); // 0x000000018A70DAF0-0x000000018A70DC4C
+		internal static byte[] GetBytes(int value); // 0x000000018A70D9F8-0x000000018A70DA14
+		internal static byte[] GetBytes(long value); // 0x000000018A70D9DC-0x000000018A70D9F8
+		private static unsafe void UShortFromBytes(byte* dst, byte[] src, int startIndex); // 0x000000018A70DD94-0x000000018A70DE48
+		private static unsafe void UIntFromBytes(byte* dst, byte[] src, int startIndex); // 0x000000018A70DC9C-0x000000018A70DD94
+		internal static int ToInt32(byte[] value, int startIndex); // 0x000000018A70DC4C-0x000000018A70DC74
+		internal static ushort ToUInt16(byte[] value, int startIndex); // 0x000000018A70DC74-0x000000018A70DC9C
+		internal static uint ToUInt32(byte[] value, int startIndex); // 0x000000018A70DC4C-0x000000018A70DC74
 	}
 
-	public sealed class PKCS7 // TypeDefIndex: 57932
+	public sealed class PKCS7 // TypeDefIndex: 60441
 	{
 		// Nested types
-		public class ContentInfo // TypeDefIndex: 57928
+		public class ContentInfo // TypeDefIndex: 60437
 		{
 			// Fields
 			private string contentType; // 0x10
 			private ASN1 content; // 0x18
 	
 			// Properties
-			public ASN1 ASN1 { get => default; } // 0x000000018B23F228-0x000000018B23F230 
-			public ASN1 Content { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-			public string ContentType { get => default; set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
+			public ASN1 ASN1 { get; } // 0x000000018A70FFD8-0x000000018A70FFE0 
+			public ASN1 Content { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+			public string ContentType { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
 	
 			// Constructors
-			public ContentInfo() {} // 0x000000018B23EF40-0x000000018B23EFA8
-			public ContentInfo(string oid) {} // 0x000000018B23F020-0x000000018B23F050
-			public ContentInfo(byte[] data) {} // 0x000000018B23EFA8-0x000000018B23F020
-			public ContentInfo(ASN1 asn1) {} // 0x000000018B23F050-0x000000018B23F228
+			public ContentInfo(); // 0x000000018A70FCF0-0x000000018A70FD58
+			public ContentInfo(string oid); // 0x000000018A70FDD0-0x000000018A70FE00
+			public ContentInfo(byte[] data); // 0x000000018A70FD58-0x000000018A70FDD0
+			public ContentInfo(ASN1 asn1); // 0x000000018A70FE00-0x000000018A70FFD8
 	
 			// Methods
-			internal ASN1 GetASN1() => default; // 0x000000018B23EEA4-0x000000018B23EF40
+			internal ASN1 GetASN1(); // 0x000000018A70FC54-0x000000018A70FCF0
 		}
 	
-		public class EncryptedData // TypeDefIndex: 57929
+		public class EncryptedData // TypeDefIndex: 60438
 		{
 			// Fields
 			private byte _version; // 0x10
@@ -363,15 +382,15 @@ namespace Mono.Security
 			private byte[] _encrypted; // 0x28
 	
 			// Properties
-			public ContentInfo EncryptionAlgorithm { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
-			public byte[] EncryptedContent { get => default; } // 0x000000018B23FFB8-0x000000018B24000C 
+			public ContentInfo EncryptionAlgorithm { get; } // 0x0000000184D862C0-0x0000000184D862D0 
+			public byte[] EncryptedContent { get; } // 0x000000018A710D68-0x000000018A710DBC 
 	
 			// Constructors
-			public EncryptedData() {} // 0x0000000185FB6A70-0x0000000185FB6A80
-			public EncryptedData(ASN1 asn1) {} // 0x000000018B23FB98-0x000000018B23FFB8
+			public EncryptedData(); // 0x0000000184D8CCB0-0x0000000184D8CCC0
+			public EncryptedData(ASN1 asn1); // 0x000000018A710948-0x000000018A710D68
 		}
 	
-		public class SignedData // TypeDefIndex: 57930
+		public class SignedData // TypeDefIndex: 60439
 		{
 			// Fields
 			private byte version; // 0x10
@@ -383,20 +402,19 @@ namespace Mono.Security
 			private bool mda; // 0x40
 	
 			// Properties
-			public Mono.Security.X509.X509CertificateCollection Certificates { get => default; } // 0x00000001813B8590-0x00000001813B85A0 
-			public ContentInfo ContentInfo { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
-			public string HashName { set {} } // 0x000000018B247C5C-0x000000018B247C94
-			public SignerInfo SignerInfo { get => default; } // 0x00000001813ECBC0-0x00000001813ECBD0 
+			public Mono.Security.X509.X509CertificateCollection Certificates { get; } // 0x0000000184D86240-0x0000000184D86250 
+			public ContentInfo ContentInfo { get; } // 0x0000000184D862C0-0x0000000184D862D0 
+			public string HashName { set; } // 0x000000018A718824-0x000000018A71885C
+			public SignerInfo SignerInfo { get; } // 0x0000000184D85A50-0x0000000184D85A60 
 	
 			// Constructors
-			public SignedData() {} // Dummy constructor
-			public SignedData(ASN1 asn1) {} // 0x000000018B247684-0x000000018B247C5C
+			public SignedData(ASN1 asn1); // 0x000000018A71824C-0x000000018A718824
 	
 			// Methods
-			internal string OidToName(string oid) => default; // 0x000000018B247514-0x000000018B247684
+			internal string OidToName(string oid); // 0x000000018A7180DC-0x000000018A71824C
 		}
 	
-		public class SignerInfo // TypeDefIndex: 57931
+		public class SignerInfo // TypeDefIndex: 60440
 		{
 			// Fields
 			private byte version; // 0x10
@@ -409,27 +427,24 @@ namespace Mono.Security
 			private byte[] ski; // 0x48
 	
 			// Properties
-			public string IssuerName { get => default; } // 0x00000001813ECBC0-0x00000001813ECBD0 
-			public byte[] SerialNumber { get => default; } // 0x000000018B248158-0x000000018B2481AC 
-			public ArrayList AuthenticatedAttributes { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
-			public string HashName { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-			public byte[] Signature { get => default; } // 0x000000018B2481AC-0x000000018B248200 
-			public ArrayList UnauthenticatedAttributes { get => default; } // 0x00000001813B8590-0x00000001813B85A0 
-			public byte Version { get => default; } // 0x0000000181C2FD60-0x0000000181C2FD70 
+			public string IssuerName { get; } // 0x0000000184D85A50-0x0000000184D85A60 
+			public byte[] SerialNumber { get; } // 0x000000018A718D20-0x000000018A718D74 
+			public ArrayList AuthenticatedAttributes { get; } // 0x0000000184D862C0-0x0000000184D862D0 
+			public string HashName { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+			public byte[] Signature { get; } // 0x000000018A718D74-0x000000018A718DC8 
+			public ArrayList UnauthenticatedAttributes { get; } // 0x0000000184D86240-0x0000000184D86250 
+			public byte Version { get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
 	
 			// Constructors
-			public SignerInfo() {} // 0x000000018B247C94-0x000000018B247D28
-			public SignerInfo(ASN1 asn1) {} // 0x000000018B247D28-0x000000018B248158
+			public SignerInfo(); // 0x000000018A71885C-0x000000018A7188F0
+			public SignerInfo(ASN1 asn1); // 0x000000018A7188F0-0x000000018A718D20
 		}
-	
-		// Constructors
-		public PKCS7() {} // Dummy constructor
 	}
 }
 
 namespace Mono.Security.Authenticode
 {
-	public class AuthenticodeBase // TypeDefIndex: 58005
+	public class AuthenticodeBase // TypeDefIndex: 60514
 	{
 		// Fields
 		private byte[] fileblock; // 0x10
@@ -443,22 +458,22 @@ namespace Mono.Security.Authenticode
 		private bool pe64; // 0x38
 	
 		// Properties
-		internal int PEOffset { get => default; } // 0x000000018B250A24-0x000000018B250A48 
+		internal int PEOffset { get; } // 0x000000018A721478-0x000000018A72149C 
 	
 		// Constructors
-		public AuthenticodeBase() {} // 0x000000018B2509DC-0x000000018B250A24
+		public AuthenticodeBase(); // 0x000000018A721430-0x000000018A721478
 	
 		// Methods
-		internal void Open(string filename) {} // 0x000000018B250580-0x000000018B250620
-		internal void Open(byte[] rawdata) {} // 0x000000018B250620-0x000000018B2506B0
-		internal void Close() {} // 0x000000018B250070-0x000000018B2500AC
-		internal void ReadFirstBlock() {} // 0x000000018B2508F8-0x000000018B2509DC
-		internal int ProcessFirstBlock() => default; // 0x000000018B2506B0-0x000000018B2508F8
-		internal byte[] GetSecurityEntry() => default; // 0x000000018B2504D0-0x000000018B250580
-		internal byte[] GetHash(HashAlgorithm hash) => default; // 0x000000018B2500AC-0x000000018B2504D0
+		internal void Open(string filename); // 0x000000018A720FD4-0x000000018A721074
+		internal void Open(byte[] rawdata); // 0x000000018A721074-0x000000018A721104
+		internal void Close(); // 0x000000018A720AC4-0x000000018A720B00
+		internal void ReadFirstBlock(); // 0x000000018A72134C-0x000000018A721430
+		internal int ProcessFirstBlock(); // 0x000000018A721104-0x000000018A72134C
+		internal byte[] GetSecurityEntry(); // 0x000000018A720F24-0x000000018A720FD4
+		internal byte[] GetHash(HashAlgorithm hash); // 0x000000018A720B00-0x000000018A720F24
 	}
 
-	public class AuthenticodeDeformatter : AuthenticodeBase // TypeDefIndex: 58006
+	public class AuthenticodeDeformatter : AuthenticodeBase // TypeDefIndex: 60515
 	{
 		// Fields
 		private string filename; // 0x40
@@ -476,45 +491,42 @@ namespace Mono.Security.Authenticode
 		private Mono.Security.X509.X509Chain timestampChain; // 0x90
 	
 		// Properties
-		public byte[] RawData { set {} } // 0x000000018B2522EC-0x000000018B2523D8
-		public Mono.Security.X509.X509Certificate SigningCertificate { get => default; } // 0x0000000181460F70-0x0000000181460F80 
+		public byte[] RawData { set; } // 0x000000018A722AC8-0x000000018A722BB4
+		public Mono.Security.X509.X509Certificate SigningCertificate { get; } // 0x0000000184D862B0-0x0000000184D862C0 
 	
 		// Constructors
-		public AuthenticodeDeformatter() {} // 0x000000018B252210-0x000000018B2522BC
-		public AuthenticodeDeformatter(byte[] rawData) {} // 0x000000018B2522BC-0x000000018B2522EC
+		public AuthenticodeDeformatter(); // 0x000000018A7229EC-0x000000018A722A98
+		public AuthenticodeDeformatter(byte[] rawData); // 0x000000018A722A98-0x000000018A722AC8
 	
 		// Methods
-		private bool CheckSignature() => default; // 0x000000018B250A48-0x000000018B250D44
-		private bool CompareIssuerSerial(string issuer, byte[] serial, Mono.Security.X509.X509Certificate x509) => default; // 0x000000018B250D44-0x000000018B250E04
-		private bool VerifySignature(PKCS7.SignedData sd, byte[] calculatedMessageDigest, HashAlgorithm ha) => default; // 0x000000018B2517F0-0x000000018B252210
-		private bool VerifyCounterSignature(PKCS7.SignerInfo cs, byte[] signature) => default; // 0x000000018B250EE0-0x000000018B2517F0
-		private void Reset() {} // 0x000000018B250E04-0x000000018B250EE0
+		private bool CheckSignature(); // 0x000000018A72149C-0x000000018A721798
+		private bool CompareIssuerSerial(string issuer, byte[] serial, Mono.Security.X509.X509Certificate x509); // 0x000000018A721798-0x000000018A721858
+		private bool VerifySignature(PKCS7.SignedData sd, byte[] calculatedMessageDigest, HashAlgorithm ha); // 0x000000018A722144-0x000000018A7229EC
+		private bool VerifyCounterSignature(PKCS7.SignerInfo cs, byte[] signature); // 0x000000018A721934-0x000000018A722144
+		private void Reset(); // 0x000000018A721858-0x000000018A721934
 	}
 }
 
 namespace Mono.Security.Cryptography
 {
-	public sealed class CryptoConvert // TypeDefIndex: 57994
+	public sealed class CryptoConvert // TypeDefIndex: 60503
 	{
-		// Constructors
-		public CryptoConvert() {} // Dummy constructor
-	
 		// Methods
-		public static string ToHex(byte[] input) => default; // 0x000000018B253E08-0x000000018B253EF8
-		private static byte FromHexChar(char c) => default; // 0x000000018B253C30-0x000000018B253CB8
-		public static byte[] FromHex(string hex) => default; // 0x000000018B253CB8-0x000000018B253E08
+		public static string ToHex(byte[] input); // 0x000000018A7245E4-0x000000018A7246D4
+		private static byte FromHexChar(char c); // 0x000000018A72440C-0x000000018A724494
+		public static byte[] FromHex(string hex); // 0x000000018A724494-0x000000018A7245E4
 	}
 
-	public abstract class MD2 : HashAlgorithm // TypeDefIndex: 57995
+	public abstract class MD2 : HashAlgorithm // TypeDefIndex: 60504
 	{
 		// Constructors
-		protected MD2() {} // 0x0000000185FCF290-0x0000000185FCF2A0
+		protected MD2(); // 0x0000000184DA3AD0-0x0000000184DA3AE0
 	
 		// Methods
-		public static MD2 Create() => default; // 0x000000018B2566F0-0x000000018B256740
+		public static MD2 Create(); // 0x000000018A726ECC-0x000000018A726F1C
 	}
 
-	public class MD2Managed : MD2 // TypeDefIndex: 57996
+	public class MD2Managed : MD2 // TypeDefIndex: 60505
 	{
 		// Fields
 		private byte[] state; // 0x28
@@ -525,27 +537,27 @@ namespace Mono.Security.Cryptography
 		private static readonly byte[] PI_SUBST; // 0x00
 	
 		// Constructors
-		public MD2Managed() {} // 0x000000018B256638-0x000000018B2566F0
-		static MD2Managed() {} // 0x000000018B2565AC-0x000000018B256638
+		public MD2Managed(); // 0x000000018A726E14-0x000000018A726ECC
+		static MD2Managed(); // 0x000000018A726D88-0x000000018A726E14
 	
 		// Methods
-		private byte[] Padding(int nLength) => default; // 0x000000018B256534-0x000000018B2565AC
-		public override void Initialize() {} // 0x000000018B256298-0x000000018B2562F4
-		protected override void HashCore(byte[] array, int ibStart, int cbSize) {} // 0x000000018B2560EC-0x000000018B2561E8
-		protected override byte[] HashFinal() => default; // 0x000000018B2561E8-0x000000018B256298
-		private void MD2Transform(byte[] state, byte[] checksum, byte[] block, int index) {} // 0x000000018B2562F4-0x000000018B256534
+		private byte[] Padding(int nLength); // 0x000000018A726D10-0x000000018A726D88
+		public override void Initialize(); // 0x000000018A726A74-0x000000018A726AD0
+		protected override void HashCore(byte[] array, int ibStart, int cbSize); // 0x000000018A7268C8-0x000000018A7269C4
+		protected override byte[] HashFinal(); // 0x000000018A7269C4-0x000000018A726A74
+		private void MD2Transform(byte[] state, byte[] checksum, byte[] block, int index); // 0x000000018A726AD0-0x000000018A726D10
 	}
 
-	public abstract class MD4 : HashAlgorithm // TypeDefIndex: 57997
+	public abstract class MD4 : HashAlgorithm // TypeDefIndex: 60506
 	{
 		// Constructors
-		protected MD4() {} // 0x0000000185FCF290-0x0000000185FCF2A0
+		protected MD4(); // 0x0000000184DA3AD0-0x0000000184DA3AE0
 	
 		// Methods
-		public static MD4 Create() => default; // 0x000000018B257A30-0x000000018B257A80
+		public static MD4 Create(); // 0x000000018A72820C-0x000000018A72825C
 	}
 
-	public class MD4Managed : MD4 // TypeDefIndex: 57998
+	public class MD4Managed : MD4 // TypeDefIndex: 60507
 	{
 		// Fields
 		private uint[] state; // 0x28
@@ -555,26 +567,26 @@ namespace Mono.Security.Cryptography
 		private byte[] digest; // 0x48
 	
 		// Constructors
-		public MD4Managed() {} // 0x000000018B257950-0x000000018B257A30
+		public MD4Managed(); // 0x000000018A72812C-0x000000018A72820C
 	
 		// Methods
-		public override void Initialize() {} // 0x000000018B256B1C-0x000000018B256BE8
-		protected override void HashCore(byte[] array, int ibStart, int cbSize) {} // 0x000000018B25689C-0x000000018B256A1C
-		protected override byte[] HashFinal() => default; // 0x000000018B256A1C-0x000000018B256B1C
-		private byte[] Padding(int nLength) => default; // 0x000000018B2578F4-0x000000018B257950
-		private uint F(uint x, uint y, uint z) => default; // 0x0000000185FCF2E0-0x0000000185FCF2F0
-		private uint G(uint x, uint y, uint z) => default; // 0x0000000185FCF340-0x0000000185FCF350
-		private uint H(uint x, uint y, uint z) => default; // 0x0000000185FCF390-0x0000000185FCF3A0
-		private uint ROL(uint x, byte n) => default; // 0x0000000185FCF3A0-0x0000000185FCF3C0
-		private void FF(ref uint a, uint b, uint c, uint d, uint x, byte s) {} // 0x0000000185FCF2A0-0x0000000185FCF2E0
-		private void GG(ref uint a, uint b, uint c, uint d, uint x, byte s) {} // 0x0000000185FCF2F0-0x0000000185FCF340
-		private void HH(ref uint a, uint b, uint c, uint d, uint x, byte s) {} // 0x0000000185FCF350-0x0000000185FCF390
-		private void Encode(byte[] output, uint[] input) {} // 0x000000018B2567D8-0x000000018B25689C
-		private void Decode(uint[] output, byte[] input, int index) {} // 0x000000018B256740-0x000000018B2567D8
-		private void MD4Transform(uint[] state, byte[] block, int index) {} // 0x000000018B256BE8-0x000000018B2578F4
+		public override void Initialize(); // 0x000000018A7272F8-0x000000018A7273C4
+		protected override void HashCore(byte[] array, int ibStart, int cbSize); // 0x000000018A727078-0x000000018A7271F8
+		protected override byte[] HashFinal(); // 0x000000018A7271F8-0x000000018A7272F8
+		private byte[] Padding(int nLength); // 0x000000018A7280D0-0x000000018A72812C
+		private uint F(uint x, uint y, uint z); // 0x0000000184DA3B20-0x0000000184DA3B30
+		private uint G(uint x, uint y, uint z); // 0x0000000184DA3B80-0x0000000184DA3B90
+		private uint H(uint x, uint y, uint z); // 0x0000000184DA3BD0-0x0000000184DA3BE0
+		private uint ROL(uint x, byte n); // 0x0000000184DA3BE0-0x0000000184DA3C00
+		private void FF(ref uint a, uint b, uint c, uint d, uint x, byte s); // 0x0000000184DA3AE0-0x0000000184DA3B20
+		private void GG(ref uint a, uint b, uint c, uint d, uint x, byte s); // 0x0000000184DA3B30-0x0000000184DA3B80
+		private void HH(ref uint a, uint b, uint c, uint d, uint x, byte s); // 0x0000000184DA3B90-0x0000000184DA3BD0
+		private void Encode(byte[] output, uint[] input); // 0x000000018A726FB4-0x000000018A727078
+		private void Decode(uint[] output, byte[] input, int index); // 0x000000018A726F1C-0x000000018A726FB4
+		private void MD4Transform(uint[] state, byte[] block, int index); // 0x000000018A7273C4-0x000000018A7280D0
 	}
 
-	public sealed class PKCS1 // TypeDefIndex: 57999
+	public sealed class PKCS1 // TypeDefIndex: 60508
 	{
 		// Fields
 		private static byte[] emptySHA1; // 0x00
@@ -583,25 +595,24 @@ namespace Mono.Security.Cryptography
 		private static byte[] emptySHA512; // 0x18
 	
 		// Constructors
-		public PKCS1() {} // Dummy constructor
-		static PKCS1() {} // 0x000000018B259924-0x000000018B259AC0
+		static PKCS1(); // 0x000000018A72A100-0x000000018A72A29C
 	
 		// Methods
-		private static bool Compare(byte[] array1, byte[] array2) => default; // 0x000000018B258C14-0x000000018B258C78
-		public static byte[] I2OSP(byte[] x, int size) => default; // 0x000000018B259638-0x000000018B2596B8
-		public static byte[] OS2IP(byte[] x) => default; // 0x000000018B2596B8-0x000000018B259768
-		public static byte[] RSAVP1(RSA rsa, byte[] s) => default; // 0x0000000184F77FC0-0x0000000184F77FF0
-		public static bool Verify_v15(RSA rsa, HashAlgorithm hash, byte[] hashValue, byte[] signature, bool tryNonStandardEncoding) => default; // 0x000000018B259768-0x000000018B259924
-		public static byte[] Encode_v15(HashAlgorithm hash, byte[] hashValue, int emLength) => default; // 0x000000018B259008-0x000000018B259320
-		internal static string HashNameFromOid(string oid, bool throwOnError = true /* Metadata: 0x0207E3FB */) => default; // 0x000000018B259320-0x000000018B259638
-		internal static HashAlgorithm CreateFromOid(string oid) => default; // 0x000000018B258FB8-0x000000018B259008
-		internal static HashAlgorithm CreateFromName(string name) => default; // 0x000000018B258C78-0x000000018B258FB8
+		private static bool Compare(byte[] array1, byte[] array2); // 0x000000018A7293F0-0x000000018A729454
+		public static byte[] I2OSP(byte[] x, int size); // 0x000000018A729E14-0x000000018A729E94
+		public static byte[] OS2IP(byte[] x); // 0x000000018A729E94-0x000000018A729F44
+		public static byte[] RSAVP1(RSA rsa, byte[] s); // 0x0000000183219480-0x00000001832194B0
+		public static bool Verify_v15(RSA rsa, HashAlgorithm hash, byte[] hashValue, byte[] signature, bool tryNonStandardEncoding); // 0x000000018A729F44-0x000000018A72A100
+		public static byte[] Encode_v15(HashAlgorithm hash, byte[] hashValue, int emLength); // 0x000000018A7297E4-0x000000018A729AFC
+		internal static string HashNameFromOid(string oid, bool throwOnError = true /* Metadata: 0x0234DCA3 */); // 0x000000018A729AFC-0x000000018A729E14
+		internal static HashAlgorithm CreateFromOid(string oid); // 0x000000018A729794-0x000000018A7297E4
+		internal static HashAlgorithm CreateFromName(string name); // 0x000000018A729454-0x000000018A729794
 	}
 
-	public sealed class PKCS8 // TypeDefIndex: 58002
+	public sealed class PKCS8 // TypeDefIndex: 60511
 	{
 		// Nested types
-		public class PrivateKeyInfo // TypeDefIndex: 58000
+		public class PrivateKeyInfo // TypeDefIndex: 60509
 		{
 			// Fields
 			private int _version; // 0x10
@@ -610,26 +621,26 @@ namespace Mono.Security.Cryptography
 			private ArrayList _list; // 0x28
 	
 			// Properties
-			public string Algorithm { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-			public byte[] PrivateKey { get => default; set {} } // 0x000000018B25B2E4-0x000000018B25B338 0x000000018B25B338-0x000000018B25B400
+			public string Algorithm { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+			public byte[] PrivateKey { get; set; } // 0x000000018A72BAC0-0x000000018A72BB14 0x000000018A72BB14-0x000000018A72BBDC
 	
 			// Constructors
-			public PrivateKeyInfo() {} // 0x000000018B25B24C-0x000000018B25B2B4
-			public PrivateKeyInfo(byte[] data) {} // 0x000000018B25B2B4-0x000000018B25B2E4
+			public PrivateKeyInfo(); // 0x000000018A72BA28-0x000000018A72BA90
+			public PrivateKeyInfo(byte[] data); // 0x000000018A72BA90-0x000000018A72BAC0
 	
 			// Methods
-			private void Decode(byte[] data) {} // 0x000000018B25A6D4-0x000000018B25A9D8
-			public byte[] GetBytes() => default; // 0x000000018B25AD20-0x000000018B25B110
-			private static byte[] RemoveLeadingZero(byte[] bigInt) => default; // 0x000000018B25B1A8-0x000000018B25B24C
-			private static byte[] Normalize(byte[] bigInt, int length) => default; // 0x000000018B25B110-0x000000018B25B1A8
-			public static RSA DecodeRSA(byte[] keypair) => default; // 0x000000018B25A1BC-0x000000018B25A6D4
-			public static byte[] Encode(RSA rsa) => default; // 0x000000018B25AA1C-0x000000018B25AC18
-			public static DSA DecodeDSA(byte[] privateKey, DSAParameters dsaParameters) => default; // 0x000000018B25A08C-0x000000018B25A1BC
-			public static byte[] Encode(DSA dsa) => default; // 0x000000018B25A9D8-0x000000018B25AA1C
-			public static byte[] Encode(AsymmetricAlgorithm aa) => default; // 0x000000018B25AC18-0x000000018B25AD20
+			private void Decode(byte[] data); // 0x000000018A72AEB0-0x000000018A72B1B4
+			public byte[] GetBytes(); // 0x000000018A72B4FC-0x000000018A72B8EC
+			private static byte[] RemoveLeadingZero(byte[] bigInt); // 0x000000018A72B984-0x000000018A72BA28
+			private static byte[] Normalize(byte[] bigInt, int length); // 0x000000018A72B8EC-0x000000018A72B984
+			public static RSA DecodeRSA(byte[] keypair); // 0x000000018A72A998-0x000000018A72AEB0
+			public static byte[] Encode(RSA rsa); // 0x000000018A72B1F8-0x000000018A72B3F4
+			public static DSA DecodeDSA(byte[] privateKey, DSAParameters dsaParameters); // 0x000000018A72A868-0x000000018A72A998
+			public static byte[] Encode(DSA dsa); // 0x000000018A72B1B4-0x000000018A72B1F8
+			public static byte[] Encode(AsymmetricAlgorithm aa); // 0x000000018A72B3F4-0x000000018A72B4FC
 		}
 	
-		public class EncryptedPrivateKeyInfo // TypeDefIndex: 58001
+		public class EncryptedPrivateKeyInfo // TypeDefIndex: 60510
 		{
 			// Fields
 			private string _algorithm; // 0x10
@@ -638,25 +649,22 @@ namespace Mono.Security.Cryptography
 			private byte[] _data; // 0x28
 	
 			// Properties
-			public string Algorithm { get => default; set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-			public byte[] EncryptedData { get => default; set {} } // 0x000000018B2544E0-0x000000018B254534 0x000000018B2545D0-0x000000018B254640
-			public byte[] Salt { get => default; } // 0x000000018B254534-0x000000018B2545D0 
-			public int IterationCount { get => default; set {} } // 0x00000001813B88B0-0x00000001813B88C0 0x000000018B254640-0x000000018B2546C4
+			public string Algorithm { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+			public byte[] EncryptedData { get; set; } // 0x000000018A724CBC-0x000000018A724D10 0x000000018A724DAC-0x000000018A724E1C
+			public byte[] Salt { get; } // 0x000000018A724D10-0x000000018A724DAC 
+			public int IterationCount { get; set; } // 0x0000000182B70F90-0x0000000182B70FA0 0x000000018A724E1C-0x000000018A724EA0
 	
 			// Constructors
-			public EncryptedPrivateKeyInfo() {} // 0x0000000185492010-0x0000000185492020
-			public EncryptedPrivateKeyInfo(byte[] data) {} // 0x000000018B2544D8-0x000000018B2544E0
+			public EncryptedPrivateKeyInfo(); // 0x00000001841E1670-0x00000001841E1680
+			public EncryptedPrivateKeyInfo(byte[] data); // 0x000000018A724CB4-0x000000018A724CBC
 	
 			// Methods
-			private void Decode(byte[] data) {} // 0x000000018B253EF8-0x000000018B2542D8
-			public byte[] GetBytes() => default; // 0x000000018B2542D8-0x000000018B2544D8
+			private void Decode(byte[] data); // 0x000000018A7246D4-0x000000018A724AB4
+			public byte[] GetBytes(); // 0x000000018A724AB4-0x000000018A724CB4
 		}
-	
-		// Constructors
-		public PKCS8() {} // Dummy constructor
 	}
 
-	public class RSAManaged : RSA // TypeDefIndex: 58004
+	public class RSAManaged : RSA // TypeDefIndex: 60513
 	{
 		// Fields
 		private bool isCRTpossible; // 0x20
@@ -671,41 +679,42 @@ namespace Mono.Security.Cryptography
 		private BigInteger qInv; // 0x50
 		private BigInteger n; // 0x58
 		private BigInteger e; // 0x60
+		[CompilerGenerated]
 		private KeyGeneratedEventHandler KeyGenerated; // 0x68
 	
 		// Properties
-		public override int KeySize { get => default; } // 0x000000018B25B400-0x000000018B25B770 
-		public bool PublicOnly { get => default; } // 0x000000018B25B9E0-0x000000018B25BB0C 
+		public override int KeySize { get; } // 0x000000018A72D71C-0x000000018A72D7B4 
+		public bool PublicOnly { get; } // 0x000000018A72D7B4-0x000000018A72D834 
 	
 		// Nested types
-		public delegate void KeyGeneratedEventHandler(object sender, EventArgs e); // TypeDefIndex: 58003; 0x000000018B25CE84-0x000000018B25CF40
+		public delegate void KeyGeneratedEventHandler(object sender, EventArgs e); // TypeDefIndex: 60512; 0x00000001838E1420-0x00000001838E1430
 	
 		// Constructors
-		public RSAManaged() {} // 0x000000018B25BED0-0x000000018B25BF48
-		public RSAManaged(int keySize) {} // 0x000000018B25BF48-0x000000018B25C20C
+		public RSAManaged(); // 0x000000018A72D650-0x000000018A72D660
+		public RSAManaged(int keySize); // 0x000000018A72D660-0x000000018A72D71C
 	
 		// Methods
-		~RSAManaged() {} // 0x000000018B25CF40-0x000000018B25CFD8
-		private void GenerateKeyPair() {} // 0x000000018B25CFD8-0x000000018B25D058
-		public override byte[] DecryptValue(byte[] rgb) => default; // 0x000000018B25BB0C-0x000000018B25BED0
-		public override byte[] EncryptValue(byte[] rgb) => default; // 0x000000018B25C2B8-0x000000018B25C8DC
-		public override RSAParameters ExportParameters(bool includePrivateParameters) => default; // 0x000000018B25B770-0x000000018B25B9E0
-		public override void ImportParameters(RSAParameters parameters) {} // 0x000000018B25C8DC-0x000000018B25CE74
-		protected override void Dispose(bool disposing) {} // 0x000000018B25C20C-0x000000018B25C2B8
-		public override string ToXmlString(bool includePrivateParameters) => default; // 0x0000000188FDE568-0x0000000188FDE690
-		private byte[] GetPaddedValue(BigInteger value, int length) => default; // 0x00000001831C5680-0x00000001831C5690
+		~RSAManaged(); // 0x000000018A72C6AC-0x000000018A72C724
+		private void GenerateKeyPair(); // 0x000000018A72C724-0x000000018A72C9E8
+		public override byte[] DecryptValue(byte[] rgb); // 0x000000018A72BBDC-0x000000018A72BF4C
+		public override byte[] EncryptValue(byte[] rgb); // 0x000000018A72C1BC-0x000000018A72C2E8
+		public override RSAParameters ExportParameters(bool includePrivateParameters); // 0x000000018A72C2E8-0x000000018A72C6AC
+		public override void ImportParameters(RSAParameters parameters); // 0x000000018A72CA94-0x000000018A72D0B8
+		protected override void Dispose(bool disposing); // 0x000000018A72BF4C-0x000000018A72C1BC
+		public override string ToXmlString(bool includePrivateParameters); // 0x000000018A72D0B8-0x000000018A72D650
+		private byte[] GetPaddedValue(BigInteger value, int length); // 0x000000018A72C9E8-0x000000018A72CA94
 	}
 }
 
 namespace Mono.Security.Interface
 {
-	public enum AlertLevel : byte // TypeDefIndex: 57978
+	public enum AlertLevel : byte // TypeDefIndex: 60487
 	{
 		Warning = 1,
 		Fatal = 2
 	}
 
-	public enum AlertDescription : byte // TypeDefIndex: 57979
+	public enum AlertDescription : byte // TypeDefIndex: 60488
 	{
 		CloseNotify = 0,
 		UnexpectedMessage = 10,
@@ -734,26 +743,25 @@ namespace Mono.Security.Interface
 		UnsupportedExtension = 110
 	}
 
-	public class Alert // TypeDefIndex: 57980
+	public class Alert // TypeDefIndex: 60489
 	{
 		// Fields
 		private AlertLevel level; // 0x10
 		private AlertDescription description; // 0x11
 	
 		// Properties
-		public AlertLevel Level { get => default; } // 0x0000000181C2FD60-0x0000000181C2FD70 
-		public AlertDescription Description { get => default; } // 0x0000000185FB22C0-0x0000000185FB22D0 
+		public AlertLevel Level { get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
+		public AlertDescription Description { get; } // 0x0000000184D88380-0x0000000184D88390 
 	
 		// Constructors
-		public Alert() {} // Dummy constructor
-		public Alert(AlertDescription description) {} // 0x000000018B24FFF8-0x000000018B250004
+		public Alert(AlertDescription description); // 0x000000018A720A4C-0x000000018A720A58
 	
 		// Methods
-		private void inferAlertLevel() {} // 0x000000018B250004-0x000000018B250070
-		public override string ToString() => default; // 0x000000018B24FF64-0x000000018B24FFF8
+		private void inferAlertLevel(); // 0x000000018A720A58-0x000000018A720AC4
+		public override string ToString(); // 0x000000018A7209B8-0x000000018A720A4C
 	}
 
-	public class ValidationResult // TypeDefIndex: 57981
+	public class ValidationResult // TypeDefIndex: 60490
 	{
 		// Fields
 		private bool trusted; // 0x10
@@ -762,19 +770,19 @@ namespace Mono.Security.Interface
 		private MonoSslPolicyErrors? policy_errors; // 0x18
 	
 		// Properties
-		public bool Trusted { get => default; } // 0x0000000181C2FD60-0x0000000181C2FD70 
-		public bool UserDenied { get => default; } // 0x0000000185FB22C0-0x0000000185FB22D0 
+		public bool Trusted { get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
+		public bool UserDenied { get; } // 0x0000000184D88380-0x0000000184D88390 
 	
 		// Constructors
-		public ValidationResult() {} // Dummy constructor
-		public ValidationResult(bool trusted, bool user_denied, int error_code, MonoSslPolicyErrors? policy_errors) {} // 0x0000000185FCF410-0x0000000185FCF430
+		public ValidationResult(bool trusted, bool user_denied, int error_code, MonoSslPolicyErrors? policy_errors); // 0x0000000184DA3C50-0x0000000184DA3C70
 	}
 
-	public interface ICertificateValidator // TypeDefIndex: 57982
+	public interface ICertificateValidator // TypeDefIndex: 60491
 	{
 	}
 
-	public enum CipherSuiteCode : ushort // TypeDefIndex: 57983
+	[CLSCompliant(false)]
+	public enum CipherSuiteCode : ushort // TypeDefIndex: 60492
 	{
 		TLS_NULL_WITH_NULL_NULL = 0,
 		TLS_RSA_WITH_NULL_MD5 = 1,
@@ -1044,26 +1052,31 @@ namespace Mono.Security.Interface
 		TLS_DHE_RSA_WITH_SALSA20_SHA1 = 58399
 	}
 
-	public class MonoTlsConnectionInfo // TypeDefIndex: 57984
+	public class MonoTlsConnectionInfo // TypeDefIndex: 60493
 	{
 		// Fields
+		[CompilerGenerated]
 		private CipherSuiteCode _CipherSuiteCode_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private TlsProtocols _ProtocolVersion_k__BackingField; // 0x14
+		[CompilerGenerated]
 		private string _PeerDomainName_k__BackingField; // 0x18
 	
 		// Properties
-		public CipherSuiteCode CipherSuiteCode { get; set; } // 0x0000000185FC2810-0x0000000185FC2820 0x0000000185FC1C30-0x0000000185FC1C40
-		public TlsProtocols ProtocolVersion { get; set; } // 0x0000000185FB21A0-0x0000000185FB21B0 0x0000000185FBB0B0-0x0000000185FBB0C0
-		public string PeerDomainName { get; set; } // 0x0000000184088E70-0x0000000184088E80
+		[CLSCompliant(false)]
+		public CipherSuiteCode CipherSuiteCode { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D96190-0x0000000184D961A0 0x0000000184D94F60-0x0000000184D94F70
+		public TlsProtocols ProtocolVersion { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D882A0-0x0000000184D882B0 0x0000000184D8F540-0x0000000184D8F550
+		public string PeerDomainName { [CompilerGenerated] set; } // 0x0000000185392C40-0x0000000185392C50
 	
 		// Constructors
-		public MonoTlsConnectionInfo() {} // 0x0000000185492010-0x0000000185492020
+		public MonoTlsConnectionInfo(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018B25879C-0x000000018B258834
+		public override string ToString(); // 0x000000018A728F78-0x000000018A729010
 	}
 
-	public enum MonoSslPolicyErrors // TypeDefIndex: 57985
+	[Flags]
+	public enum MonoSslPolicyErrors // TypeDefIndex: 60494
 	{
 		None = 0,
 		RemoteCertificateNotAvailable = 1,
@@ -1071,11 +1084,11 @@ namespace Mono.Security.Interface
 		RemoteCertificateChainErrors = 4
 	}
 
-	public delegate bool MonoRemoteCertificateValidationCallback(string targetHost, System.Security.Cryptography.X509Certificates.X509Certificate certificate, System.Security.Cryptography.X509Certificates.X509Chain chain, MonoSslPolicyErrors sslPolicyErrors); // TypeDefIndex: 57986; 0x00000001817B21C0-0x00000001817B21E0
+	public delegate bool MonoRemoteCertificateValidationCallback(string targetHost, System.Security.Cryptography.X509Certificates.X509Certificate certificate, System.Security.Cryptography.X509Certificates.X509Chain chain, MonoSslPolicyErrors sslPolicyErrors); // TypeDefIndex: 60495; 0x00000001814D0D00-0x00000001814D0D20
 
-	public delegate System.Security.Cryptography.X509Certificates.X509Certificate MonoLocalCertificateSelectionCallback(string targetHost, System.Security.Cryptography.X509Certificates.X509CertificateCollection localCertificates, System.Security.Cryptography.X509Certificates.X509Certificate remoteCertificate, string[] acceptableIssuers); // TypeDefIndex: 57987; 0x00000001817B21C0-0x00000001817B21E0
+	public delegate System.Security.Cryptography.X509Certificates.X509Certificate MonoLocalCertificateSelectionCallback(string targetHost, System.Security.Cryptography.X509Certificates.X509CertificateCollection localCertificates, System.Security.Cryptography.X509Certificates.X509Certificate remoteCertificate, string[] acceptableIssuers); // TypeDefIndex: 60496; 0x00000001814D0D00-0x00000001814D0D20
 
-	public abstract class MonoTlsProvider // TypeDefIndex: 57988
+	public abstract class MonoTlsProvider // TypeDefIndex: 60497
 	{
 		// Properties
 		public abstract Guid ID { get; }
@@ -1087,28 +1100,39 @@ namespace Mono.Security.Interface
 		internal abstract bool SupportsCleanShutdown { get; }
 	
 		// Constructors
-		internal MonoTlsProvider() {} // 0x0000000185492010-0x0000000185492020
+		internal MonoTlsProvider(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public static class MonoTlsProviderFactory // TypeDefIndex: 57989
+	public static class MonoTlsProviderFactory // TypeDefIndex: 60498
 	{
 		// Methods
-		public static MonoTlsProvider GetProvider() => default; // 0x000000018B258834-0x000000018B258870
+		public static MonoTlsProvider GetProvider(); // 0x000000018A729010-0x000000018A72904C
 	}
 
-	public sealed class MonoTlsSettings // TypeDefIndex: 57990
+	public sealed class MonoTlsSettings // TypeDefIndex: 60499
 	{
 		// Fields
+		[CompilerGenerated]
 		private MonoRemoteCertificateValidationCallback _RemoteCertificateValidationCallback_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private MonoLocalCertificateSelectionCallback _ClientCertificateSelectionCallback_k__BackingField; // 0x18
+		[CompilerGenerated]
 		private System.DateTime? _CertificateValidationTime_k__BackingField; // 0x20
+		[CompilerGenerated]
 		private System.Security.Cryptography.X509Certificates.X509CertificateCollection _TrustAnchors_k__BackingField; // 0x30
+		[CompilerGenerated]
 		private object _UserSettings_k__BackingField; // 0x38
+		[CompilerGenerated]
 		private string[] _CertificateSearchPaths_k__BackingField; // 0x40
+		[CompilerGenerated]
 		private bool _SendCloseNotify_k__BackingField; // 0x48
+		[CompilerGenerated]
 		private string[] _ClientCertificateIssuers_k__BackingField; // 0x50
+		[CompilerGenerated]
 		private bool _DisallowUnauthenticatedCertificateRequest_k__BackingField; // 0x58
+		[CompilerGenerated]
 		private TlsProtocols? _EnabledProtocols_k__BackingField; // 0x5C
+		[CompilerGenerated]
 		private CipherSuiteCode[] _EnabledCiphers_k__BackingField; // 0x68
 		private bool cloned; // 0x70
 		private bool checkCertName; // 0x71
@@ -1120,53 +1144,56 @@ namespace Mono.Security.Interface
 		private static MonoTlsSettings defaultSettings; // 0x00
 	
 		// Properties
-		public MonoRemoteCertificateValidationCallback RemoteCertificateValidationCallback { get; set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public MonoLocalCertificateSelectionCallback ClientCertificateSelectionCallback { get; set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-		public bool? UseServicePointManagerCallback { get => default; set {} } // 0x0000000185FCF3E0-0x0000000185FCF3F0 0x0000000185FCF400-0x0000000185FCF410
-		public bool CallbackNeedsCertificateChain { get => default; } // 0x0000000185FB9F70-0x0000000185FB9F80 
-		public System.DateTime? CertificateValidationTime { get; set; } // 0x0000000185FB6120-0x0000000185FB6130 0x0000000185FB6130-0x0000000185FB6140
-		public System.Security.Cryptography.X509Certificates.X509CertificateCollection TrustAnchors { get; set; } // 0x00000001813B51D0-0x00000001813B51E0 0x00000001864721F0-0x0000000186472200
-		public object UserSettings { get; set; } // 0x00000001813ECBC0-0x00000001813ECBD0 0x0000000185A16440-0x0000000185A16450
-		internal string[] CertificateSearchPaths { get; set; } // 0x00000001813FF010-0x00000001813FF020 0x0000000185F05C80-0x0000000185F05C90
-		internal bool SendCloseNotify { get; set; } // 0x0000000185FB0750-0x0000000185FB0760 0x0000000185FB0770-0x0000000185FB0780
-		public string[] ClientCertificateIssuers { get; set; } // 0x0000000181460F60-0x0000000181460F70 0x0000000184A4E570-0x0000000184A4E580
-		public bool DisallowUnauthenticatedCertificateRequest { get; set; } // 0x0000000181BE64B0-0x0000000181BE64C0 0x0000000181BE64C0-0x0000000181BE64D0
-		public TlsProtocols? EnabledProtocols { get; set; } // 0x0000000185FCF3D0-0x0000000185FCF3E0 0x0000000185FCF3F0-0x0000000185FCF400
-		public CipherSuiteCode[] EnabledCiphers { get; set; } // 0x00000001813AC280-0x00000001813AC290 0x0000000185A62990-0x0000000185A629A0
-		public static MonoTlsSettings DefaultSettings { get => default; } // 0x000000018B258B0C-0x000000018B258B88 
-		public ICertificateValidator CertificateValidator { get => default; } // 0x0000000183060C50-0x0000000183060C60 
+		public MonoRemoteCertificateValidationCallback RemoteCertificateValidationCallback { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public MonoLocalCertificateSelectionCallback ClientCertificateSelectionCallback { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public bool? UseServicePointManagerCallback { get; set; } // 0x0000000184DA3C20-0x0000000184DA3C30 0x0000000184DA3C40-0x0000000184DA3C50
+		public bool CallbackNeedsCertificateChain { get; } // 0x0000000184D91610-0x0000000184D91620 
+		public System.DateTime? CertificateValidationTime { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8C200-0x0000000184D8C210 0x0000000184D8C210-0x0000000184D8C220
+		public System.Security.Cryptography.X509Certificates.X509CertificateCollection TrustAnchors { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
+		public object UserSettings { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D85A50-0x0000000184D85A60 0x00000001846A91B0-0x00000001846A91C0
+		internal string[] CertificateSearchPaths { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001842B4AE0-0x00000001842B4AF0
+		internal bool SendCloseNotify { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D867D0-0x0000000184D867E0 0x0000000184D86810-0x0000000184D86820
+		public string[] ClientCertificateIssuers { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
+		public bool DisallowUnauthenticatedCertificateRequest { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86F70-0x0000000184D86F80 0x0000000184D86F80-0x0000000184D86F90
+		public TlsProtocols? EnabledProtocols { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA3C10-0x0000000184DA3C20 0x0000000184DA3C30-0x0000000184DA3C40
+		[CLSCompliant(false)]
+		public CipherSuiteCode[] EnabledCiphers { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86230-0x0000000184D86240 0x000000018485F170-0x000000018485F180
+		public static MonoTlsSettings DefaultSettings { get; } // 0x000000018A7292E8-0x000000018A729364 
+		[Obsolete("Do not use outside System.dll!")]
+		public ICertificateValidator CertificateValidator { get; } // 0x0000000184D862A0-0x0000000184D862B0 
 	
 		// Constructors
-		public MonoTlsSettings() {} // 0x0000000185FCF3C0-0x0000000185FCF3D0
-		private MonoTlsSettings(MonoTlsSettings other) {} // 0x000000018B258988-0x000000018B258B0C
+		public MonoTlsSettings(); // 0x0000000184DA3C00-0x0000000184DA3C10
+		private MonoTlsSettings(MonoTlsSettings other); // 0x000000018A729164-0x000000018A7292E8
 	
 		// Methods
-		public static MonoTlsSettings CopyDefaultSettings() => default; // 0x000000018B258964-0x000000018B258988
-		public MonoTlsSettings CloneWithValidator(ICertificateValidator validator) => default; // 0x000000018B258870-0x000000018B258904
-		public MonoTlsSettings Clone() => default; // 0x000000018B258904-0x000000018B258964
+		public static MonoTlsSettings CopyDefaultSettings(); // 0x000000018A729140-0x000000018A729164
+		[Obsolete("Do not use outside System.dll!")]
+		public MonoTlsSettings CloneWithValidator(ICertificateValidator validator); // 0x000000018A72904C-0x000000018A7290E0
+		public MonoTlsSettings Clone(); // 0x000000018A7290E0-0x000000018A729140
 	}
 
-	public sealed class TlsException : Exception // TypeDefIndex: 57991
+	public sealed class TlsException : Exception // TypeDefIndex: 60500
 	{
 		// Fields
 		private Alert alert; // 0x90
 	
 		// Constructors
-		public TlsException() {} // Dummy constructor
-		public TlsException(Alert alert) {} // 0x000000018B25D448-0x000000018B25D4C0
-		public TlsException(Alert alert, string message) {} // 0x000000018B25D2D8-0x000000018B25D348
-		public TlsException(AlertDescription description) {} // 0x000000018B25D3D0-0x000000018B25D448
-		public TlsException(AlertDescription description, string message) {} // 0x000000018B25D348-0x000000018B25D3D0
+		public TlsException(Alert alert); // 0x000000018A72DC24-0x000000018A72DC9C
+		public TlsException(Alert alert, string message); // 0x000000018A72DAB4-0x000000018A72DB24
+		public TlsException(AlertDescription description); // 0x000000018A72DBAC-0x000000018A72DC24
+		public TlsException(AlertDescription description, string message); // 0x000000018A72DB24-0x000000018A72DBAC
 	}
 
-	public enum TlsProtocolCode : short // TypeDefIndex: 57992
+	public enum TlsProtocolCode : short // TypeDefIndex: 60501
 	{
 		Tls10 = 769,
 		Tls11 = 770,
 		Tls12 = 771
 	}
 
-	public enum TlsProtocols // TypeDefIndex: 57993
+	[Flags]
+	public enum TlsProtocols // TypeDefIndex: 60502
 	{
 		Zero = 0,
 		Tls10Server = 64,
@@ -1185,7 +1212,8 @@ namespace Mono.Security.Interface
 
 namespace Mono.Security.Protocol.Ntlm
 {
-	public class ChallengeResponse : IDisposable // TypeDefIndex: 57969
+	[Obsolete("Use of this API is highly discouraged, it selects legacy-mode LM/NTLM authentication, which sends your password in very weak encryption over the wire even if the server supports the more secure NTLMv2 / NTLMv2 Session. You need to use the new `Type3Message (Type2Message)\' constructor to use the more secure NTLMv2 / NTLMv2 Session authentication modes. These require the Type 2 message from the server to compute the response.")]
+	public class ChallengeResponse : IDisposable // TypeDefIndex: 60478
 	{
 		// Fields
 		private static byte[] magic; // 0x00
@@ -1196,53 +1224,47 @@ namespace Mono.Security.Protocol.Ntlm
 		private byte[] _ntpwd; // 0x28
 	
 		// Properties
-		public string Password { set {} } // 0x000000018B23EB38-0x000000018B23EE60
-		public byte[] Challenge { set {} } // 0x000000018B23EA18-0x000000018B23EB38
-		public byte[] LM { get => default; } // 0x000000018B23E930-0x000000018B23E9A4 
-		public byte[] NT { get => default; } // 0x000000018B23E9A4-0x000000018B23EA18 
+		public string Password { set; } // 0x000000018A70F8E8-0x000000018A70FC10
+		public byte[] Challenge { set; } // 0x000000018A70F7C8-0x000000018A70F8E8
+		public byte[] LM { get; } // 0x000000018A70F6E0-0x000000018A70F754 
+		public byte[] NT { get; } // 0x000000018A70F754-0x000000018A70F7C8 
 	
 		// Constructors
-		public ChallengeResponse() {} // 0x000000018B23E8C4-0x000000018B23E930
-		public ChallengeResponse(string password, byte[] challenge) {} // 0x000000018B23E878-0x000000018B23E8C4
-		static ChallengeResponse() {} // 0x000000018B23E794-0x000000018B23E878
+		public ChallengeResponse(); // 0x000000018A70F674-0x000000018A70F6E0
+		public ChallengeResponse(string password, byte[] challenge); // 0x000000018A70F628-0x000000018A70F674
+		static ChallengeResponse(); // 0x000000018A70F544-0x000000018A70F628
 	
 		// Methods
-		~ChallengeResponse() {} // 0x000000018B23E26C-0x000000018B23E2E4
-		public void Dispose() {} // 0x000000018B23E1A8-0x000000018B23E1F8
-		private void Dispose(bool disposing) {} // 0x000000018B23E1F8-0x000000018B23E26C
-		private byte[] GetResponse(byte[] pwd) => default; // 0x000000018B23E2E4-0x000000018B23E490
-		private byte[] PrepareDESKey(byte[] key56bits, int position) => default; // 0x000000018B23E5B4-0x000000018B23E794
-		private byte[] PasswordToKey(string password, int position) => default; // 0x000000018B23E490-0x000000018B23E5B4
+		~ChallengeResponse(); // 0x000000018A70F01C-0x000000018A70F094
+		public void Dispose(); // 0x000000018A70EF58-0x000000018A70EFA8
+		private void Dispose(bool disposing); // 0x000000018A70EFA8-0x000000018A70F01C
+		private byte[] GetResponse(byte[] pwd); // 0x000000018A70F094-0x000000018A70F240
+		private byte[] PrepareDESKey(byte[] key56bits, int position); // 0x000000018A70F364-0x000000018A70F544
+		private byte[] PasswordToKey(string password, int position); // 0x000000018A70F240-0x000000018A70F364
 	}
 
-	public static class ChallengeResponse2 // TypeDefIndex: 57970
+	public static class ChallengeResponse2 // TypeDefIndex: 60479
 	{
 		// Fields
 		private static byte[] magic; // 0x00
 		private static byte[] nullEncMagic; // 0x08
 	
 		// Constructors
-		static ChallengeResponse2() {} // 0x000000018B23E0C4-0x000000018B23E1A8
+		static ChallengeResponse2(); // 0x000000018A70EE74-0x000000018A70EF58
 	
 		// Methods
-		private static byte[] Compute_LM(string password, byte[] challenge) => default; // 0x000000018B23D098-0x000000018B23D2D4
-		private static byte[] Compute_NTLM_Password(string password) => default; // 0x000000018B23D2D4-0x000000018B23D3D4
-		private static byte[] Compute_NTLM(string password, byte[] challenge) => default; // 0x000000018B23D3D4-0x000000018B23D430
-		private static void Compute_NTLMv2_Session(string password, byte[] challenge, out byte[] lm, out byte[] ntlm) {
-			lm = default;
-			ntlm = default;
-		} // 0x000000018B23D430-0x000000018B23D604
-		private static byte[] Compute_NTLMv2(Type2Message type2, string username, string password, string domain) => default; // 0x000000018B23D604-0x000000018B23DA2C
-		public static void Compute(Type2Message type2, NtlmAuthLevel level, string username, string password, string domain, out byte[] lm, out byte[] ntlm) {
-			lm = default;
-			ntlm = default;
-		} // 0x000000018B23DA2C-0x000000018B23DBF4
-		private static byte[] GetResponse(byte[] challenge, byte[] pwd) => default; // 0x000000018B23DBF4-0x000000018B23DDAC
-		private static byte[] PrepareDESKey(byte[] key56bits, int position) => default; // 0x000000018B23DEE4-0x000000018B23E0C4
-		private static byte[] PasswordToKey(string password, int position) => default; // 0x000000018B23DDAC-0x000000018B23DEE4
+		private static byte[] Compute_LM(string password, byte[] challenge); // 0x000000018A70DE48-0x000000018A70E084
+		private static byte[] Compute_NTLM_Password(string password); // 0x000000018A70E084-0x000000018A70E184
+		private static byte[] Compute_NTLM(string password, byte[] challenge); // 0x000000018A70E184-0x000000018A70E1E0
+		private static void Compute_NTLMv2_Session(string password, byte[] challenge, out byte[] lm, out byte[] ntlm); // 0x000000018A70E1E0-0x000000018A70E3B4
+		private static byte[] Compute_NTLMv2(Type2Message type2, string username, string password, string domain); // 0x000000018A70E3B4-0x000000018A70E7DC
+		public static void Compute(Type2Message type2, NtlmAuthLevel level, string username, string password, string domain, out byte[] lm, out byte[] ntlm); // 0x000000018A70E7DC-0x000000018A70E9A4
+		private static byte[] GetResponse(byte[] challenge, byte[] pwd); // 0x000000018A70E9A4-0x000000018A70EB5C
+		private static byte[] PrepareDESKey(byte[] key56bits, int position); // 0x000000018A70EC94-0x000000018A70EE74
+		private static byte[] PasswordToKey(string password, int position); // 0x000000018A70EB5C-0x000000018A70EC94
 	}
 
-	public abstract class MessageBase // TypeDefIndex: 57971
+	public abstract class MessageBase // TypeDefIndex: 60480
 	{
 		// Fields
 		private static byte[] header; // 0x00
@@ -1250,22 +1272,21 @@ namespace Mono.Security.Protocol.Ntlm
 		private NtlmFlags _flags; // 0x14
 	
 		// Properties
-		public NtlmFlags Flags { get; set; } // 0x0000000185FB21A0-0x0000000185FB21B0 0x0000000185FBB0B0-0x0000000185FBB0C0
-		public int Type { get; } // 0x0000000181C0BBD0-0x0000000181C0BBE0 
+		public NtlmFlags Flags { get; set; } // 0x0000000184D882A0-0x0000000184D882B0 0x0000000184D8F540-0x0000000184D8F550
+		public int Type { get; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 
 	
 		// Constructors
-		protected MessageBase() {} // Dummy constructor
-		protected MessageBase(int messageType) {} // 0x0000000181378230-0x0000000181378240
-		static MessageBase() {} // 0x000000018B257DFC-0x000000018B257E88
+		protected MessageBase(int messageType); // 0x00000001814F51F0-0x00000001814F5220
+		static MessageBase(); // 0x000000018A7285D8-0x000000018A728664
 	
 		// Methods
-		protected byte[] PrepareMessage(int messageSize) => default; // 0x000000018B257D20-0x000000018B257DFC
-		protected virtual void Decode(byte[] message) {} // 0x000000018B257B64-0x000000018B257D20
-		protected bool CheckHeader(byte[] message) => default; // 0x000000018B257A80-0x000000018B257B64
+		protected byte[] PrepareMessage(int messageSize); // 0x000000018A7284FC-0x000000018A7285D8
+		protected virtual void Decode(byte[] message); // 0x000000018A728340-0x000000018A7284FC
+		protected bool CheckHeader(byte[] message); // 0x000000018A72825C-0x000000018A728340
 		public abstract byte[] GetBytes();
 	}
 
-	public enum NtlmAuthLevel // TypeDefIndex: 57972
+	public enum NtlmAuthLevel // TypeDefIndex: 60481
 	{
 		LM_and_NTLM = 0,
 		LM_and_NTLM_and_try_NTLMv2_Session = 1,
@@ -1273,7 +1294,8 @@ namespace Mono.Security.Protocol.Ntlm
 		NTLMv2_only = 3
 	}
 
-	public enum NtlmFlags // TypeDefIndex: 57973
+	[Flags]
+	public enum NtlmFlags // TypeDefIndex: 60482
 	{
 		NegotiateUnicode = 1,
 		NegotiateOem = 2,
@@ -1287,37 +1309,37 @@ namespace Mono.Security.Protocol.Ntlm
 		Negotiate56 = 2147483647
 	}
 
-	public static class NtlmSettings // TypeDefIndex: 57974
+	public static class NtlmSettings // TypeDefIndex: 60483
 	{
 		// Fields
 		private static NtlmAuthLevel defaultAuthLevel; // 0x00
 	
 		// Properties
-		public static NtlmAuthLevel DefaultAuthLevel { get; } // 0x000000018B258BC4-0x000000018B258C14 
+		public static NtlmAuthLevel DefaultAuthLevel { get; } // 0x000000018A7293A0-0x000000018A7293F0 
 	
 		// Constructors
-		static NtlmSettings() {} // 0x000000018B258B88-0x000000018B258BC4
+		static NtlmSettings(); // 0x000000018A729364-0x000000018A7293A0
 	}
 
-	public class Type1Message : MessageBase // TypeDefIndex: 57975
+	public class Type1Message : MessageBase // TypeDefIndex: 60484
 	{
 		// Fields
 		private string _host; // 0x18
 		private string _domain; // 0x20
 	
 		// Properties
-		public string Domain { set {} } // 0x000000018B25D8B8-0x000000018B25D92C
-		public string Host { set {} } // 0x000000018B25D92C-0x000000018B25D9A0
+		public string Domain { set; } // 0x000000018A72E094-0x000000018A72E108
+		public string Host { set; } // 0x000000018A72E108-0x000000018A72E17C
 	
 		// Constructors
-		public Type1Message() {} // 0x000000018B25D84C-0x000000018B25D8B8
+		public Type1Message(); // 0x000000018A72E028-0x000000018A72E094
 	
 		// Methods
-		protected override void Decode(byte[] message) {} // 0x000000018B25D4C0-0x000000018B25D5A0
-		public override byte[] GetBytes() => default; // 0x000000018B25D5A0-0x000000018B25D84C
+		protected override void Decode(byte[] message); // 0x000000018A72DC9C-0x000000018A72DD7C
+		public override byte[] GetBytes(); // 0x000000018A72DD7C-0x000000018A72E028
 	}
 
-	public class Type2Message : MessageBase // TypeDefIndex: 57976
+	public class Type2Message : MessageBase // TypeDefIndex: 60485
 	{
 		// Fields
 		private byte[] _nonce; // 0x18
@@ -1325,21 +1347,20 @@ namespace Mono.Security.Protocol.Ntlm
 		private byte[] _targetInfo; // 0x28
 	
 		// Properties
-		public byte[] Nonce { get => default; } // 0x000000018B25DCD8-0x000000018B25DD28 
-		public string TargetName { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
-		public byte[] TargetInfo { get => default; } // 0x000000018B25DD28-0x000000018B25DD78 
+		public byte[] Nonce { get; } // 0x000000018A72E4B4-0x000000018A72E504 
+		public string TargetName { get; } // 0x0000000184D862C0-0x0000000184D862D0 
+		public byte[] TargetInfo { get; } // 0x000000018A72E504-0x000000018A72E554 
 	
 		// Constructors
-		public Type2Message() {} // Dummy constructor
-		public Type2Message(byte[] message) {} // 0x000000018B25DC54-0x000000018B25DCD8
+		public Type2Message(byte[] message); // 0x000000018A72E430-0x000000018A72E4B4
 	
 		// Methods
-		~Type2Message() {} // 0x000000018B25DB0C-0x000000018B25DB94
-		protected override void Decode(byte[] message) {} // 0x000000018B25D9A0-0x000000018B25DB0C
-		public override byte[] GetBytes() => default; // 0x000000018B25DB94-0x000000018B25DC54
+		~Type2Message(); // 0x000000018A72E2E8-0x000000018A72E370
+		protected override void Decode(byte[] message); // 0x000000018A72E17C-0x000000018A72E2E8
+		public override byte[] GetBytes(); // 0x000000018A72E370-0x000000018A72E430
 	}
 
-	public class Type3Message : MessageBase // TypeDefIndex: 57977
+	public class Type3Message : MessageBase // TypeDefIndex: 60486
 	{
 		// Fields
 		private NtlmAuthLevel _level; // 0x18
@@ -1353,41 +1374,39 @@ namespace Mono.Security.Protocol.Ntlm
 		private byte[] _nt; // 0x58
 	
 		// Properties
-		public string Domain { set {} } // 0x000000018B25E95C-0x000000018B25EB64
-		public string Password { set {} } // 0x0000000185F05C80-0x0000000185F05C90
-		public string Username { set {} } // 0x0000000185A16440-0x0000000185A16450
+		public string Domain { set; } // 0x000000018A72F138-0x000000018A72F230
+		public string Password { set; } // 0x00000001842B4AE0-0x00000001842B4AF0
+		public string Username { set; } // 0x00000001846A91B0-0x00000001846A91C0
 	
 		// Constructors
-		public Type3Message() {} // Dummy constructor
-		public Type3Message(Type2Message type2) {} // 0x000000018B25E7C0-0x000000018B25E95C
+		public Type3Message(Type2Message type2); // 0x000000018A72EF9C-0x000000018A72F138
 	
 		// Methods
-		~Type3Message() {} // 0x000000018B25E068-0x000000018B25E134
-		protected override void Decode(byte[] message) {} // 0x000000018B25DDD4-0x000000018B25DFEC
-		private string DecodeString(byte[] buffer, int offset, int len) => default; // 0x000000018B25DD78-0x000000018B25DDD4
-		private byte[] EncodeString(string text) => default; // 0x000000018B25DFEC-0x000000018B25E068
-		public override byte[] GetBytes() => default; // 0x000000018B25E134-0x000000018B25E7C0
+		~Type3Message(); // 0x000000018A72E844-0x000000018A72E910
+		protected override void Decode(byte[] message); // 0x000000018A72E5B0-0x000000018A72E7C8
+		private string DecodeString(byte[] buffer, int offset, int len); // 0x000000018A72E554-0x000000018A72E5B0
+		private byte[] EncodeString(string text); // 0x000000018A72E7C8-0x000000018A72E844
+		public override byte[] GetBytes(); // 0x000000018A72E910-0x000000018A72EF9C
 	}
 }
 
 namespace Mono.Security.X509
 {
-	internal class SafeBag // TypeDefIndex: 57933
+	internal class SafeBag // TypeDefIndex: 60442
 	{
 		// Fields
 		private string _bagOID; // 0x10
 		private ASN1 _asn1; // 0x18
 	
 		// Properties
-		public string BagOID { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public ASN1 ASN1 { get => default; } // 0x0000000181377E40-0x0000000181377E50 
+		public string BagOID { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public ASN1 ASN1 { get; } // 0x000000018385B100-0x000000018385B110 
 	
 		// Constructors
-		public SafeBag() {} // Dummy constructor
-		public SafeBag(string bagOID, ASN1 asn1) {} // 0x00000001841BC230-0x00000001841BC260
+		public SafeBag(string bagOID, ASN1 asn1); // 0x00000001832AF420-0x00000001832AF450
 	}
 
-	public class PKCS12 : ICloneable // TypeDefIndex: 57935
+	public class PKCS12 : ICloneable // TypeDefIndex: 60444
 	{
 		// Fields
 		private byte[] _password; // 0x10
@@ -1403,15 +1422,15 @@ namespace Mono.Security.X509
 		private static int password_max_length; // 0x00
 	
 		// Properties
-		public string Password { set {} } // 0x000000018B2445D0-0x000000018B2447FC
-		public int IterationCount { get => default; set {} } // 0x000000018B24073C-0x000000018B240A78 0x000000018B245B48-0x000000018B2463AC
-		public ArrayList Keys { get => default; } // 0x000000018B244E64-0x000000018B245B48 
-		public Mono.Security.X509.X509CertificateCollection Certificates { get => default; } // 0x000000018B240A78-0x000000018B241498 
-		internal RandomNumberGenerator RNG { get => default; } // 0x000000018B244D50-0x000000018B244E64 
-		public static int MaximumPasswordLength { get => default; } // 0x000000018B23F404-0x000000018B23F468 
+		public string Password { set; } // 0x000000018A717F34-0x000000018A718090
+		public int IterationCount { get; set; } // 0x0000000184D86730-0x0000000184D86740 0x0000000184D86760-0x0000000184D86770
+		public ArrayList Keys { get; } // 0x000000018A7178FC-0x000000018A717EB0 
+		public Mono.Security.X509.X509CertificateCollection Certificates { get; } // 0x000000018A71752C-0x000000018A7178FC 
+		internal RandomNumberGenerator RNG { get; } // 0x000000018A717F00-0x000000018A717F34 
+		public static int MaximumPasswordLength { get; } // 0x000000018A717EB0-0x000000018A717F00 
 	
 		// Nested types
-		public class DeriveBytes // TypeDefIndex: 57934
+		public class DeriveBytes // TypeDefIndex: 60443
 		{
 			// Fields
 			private static byte[] keyDiversifier; // 0x00
@@ -1423,58 +1442,55 @@ namespace Mono.Security.X509
 			private byte[] _salt; // 0x28
 	
 			// Properties
-			public string HashName { set {} } // 0x000000018B24681C-0x000000018B246858
-			public int IterationCount { set {} } // 0x000000018B2467D0-0x000000018B24681C
-			public byte[] Password { set {} } // 0x000000018B24165C-0x000000018B241F4C
-			public byte[] Salt { set {} } // 0x000000018B242544-0x000000018B242618
+			public string HashName { set; } // 0x00000001853908C0-0x00000001853908D0
+			public int IterationCount { set; } // 0x00000001811EF9B0-0x00000001811EF9C0
+			public byte[] Password { set; } // 0x000000018A71075C-0x000000018A7107E8
+			public byte[] Salt { set; } // 0x000000018A7107E8-0x000000018A710864
 	
 			// Constructors
-			public DeriveBytes() {} // 0x000000018B246858-0x000000018B246964
-			static DeriveBytes() {} // 0x000000018B247338-0x000000018B24736C
+			public DeriveBytes(); // 0x00000001841E1670-0x00000001841E1680
+			static DeriveBytes(); // 0x000000018A710618-0x000000018A71075C
 	
 			// Methods
-			private void Adjust(byte[] a, int aOff, byte[] b) {} // 0x000000018B24736C-0x000000018B2474C8
-			private byte[] Derive(byte[] diversifier, int n) => default; // 0x0000000185FB07C0-0x0000000185FB07D0
-			public byte[] DeriveKey(int size) => default; // 0x0000000185FB07E0-0x0000000185FB07F0
-			public byte[] DeriveIV(int size) => default; // 0x000000018B246D34-0x000000018B2472E8
-			public byte[] DeriveMAC(int size) => default; // 0x000000018B246964-0x000000018B246D34
+			private void Adjust(byte[] a, int aOff, byte[] b); // 0x000000018A71002C-0x000000018A7100F0
+			private byte[] Derive(byte[] diversifier, int n); // 0x000000018A710218-0x000000018A710618
+			public byte[] DeriveKey(int size); // 0x000000018A710154-0x000000018A7101B4
+			public byte[] DeriveIV(int size); // 0x000000018A7100F0-0x000000018A710154
+			public byte[] DeriveMAC(int size); // 0x000000018A7101B4-0x000000018A710218
 		}
 	
 		// Constructors
-		public PKCS12() {} // 0x000000018B2415FC-0x000000018B24165C
-		public PKCS12(byte[] data) {} // 0x000000018B2447FC-0x000000018B244D50
-		public PKCS12(byte[] data, string password) {} // 0x000000018B242020-0x000000018B242104
-		static PKCS12() {} // 0x000000018B23F868-0x000000018B23F9AC
+		public PKCS12(); // 0x000000018A717420-0x000000018A71752C
+		public PKCS12(byte[] data); // 0x000000018A7173E4-0x000000018A717420
+		public PKCS12(byte[] data, string password); // 0x000000018A717398-0x000000018A7173E4
+		static PKCS12(); // 0x000000018A71735C-0x000000018A717398
 	
 		// Methods
-		private void Decode(byte[] data) {} // 0x000000018B241F4C-0x000000018B242020
-		~PKCS12() {} // 0x000000018B242104-0x000000018B242224
-		private bool Compare(byte[] expected, byte[] actual) => default; // 0x000000018B242618-0x000000018B2445D0
-		private SymmetricAlgorithm GetSymmetricAlgorithm(string algorithmOid, byte[] salt, int iterationCount) => default; // 0x000000018B242224-0x000000018B242544
-		public byte[] Decrypt(string algorithmOid, byte[] salt, int iterationCount, byte[] encryptedData) => default; // 0x000000018B240170-0x000000018B24017C
-		public byte[] Decrypt(PKCS7.EncryptedData ed) => default; // 0x000000018B24017C-0x000000018B2403B4
-		public byte[] Encrypt(string algorithmOid, byte[] salt, int iterationCount, byte[] data) => default; // 0x000000018B246788-0x000000018B246794
-		private DSAParameters GetExistingParameters(out bool found) {
-			found = default;
-			return default;
-		} // 0x000000018B2463AC-0x000000018B246788
-		private void AddPrivateKey(PKCS8.PrivateKeyInfo pki) {} // 0x000000018B241574-0x000000018B2415FC
-		private void ReadSafeBag(ASN1 safeBag) {} // 0x000000018B2403B4-0x000000018B24073C
-		private ASN1 Pkcs8ShroudedKeyBagSafeBag(AsymmetricAlgorithm aa, IDictionary attributes) => default; // 0x000000018B241498-0x000000018B241574
-		private ASN1 CertificateSafeBag(Mono.Security.X509.X509Certificate x509, IDictionary attributes) => default; // 0x000000018B2472E8-0x000000018B247338
-		private byte[] MAC(byte[] password, byte[] salt, int iterations, byte[] data) => default; // 0x000000018B246794-0x000000018B2467D0
-		public byte[] GetBytes() => default; // 0x0000000185492010-0x0000000185492020
-		private PKCS7.ContentInfo EncryptedContentInfo(ASN1 safeBags, string algorithmOid) => default; // 0x0000000184096E30-0x0000000184096EF0
-		public void AddCertificate(Mono.Security.X509.X509Certificate cert) {} // 0x00000001813AE9C0-0x00000001813AE9D0
-		public void AddCertificate(Mono.Security.X509.X509Certificate cert, IDictionary attributes) {} // 0x000000018B23F9AC-0x000000018B23FA38
-		public void RemoveCertificate(Mono.Security.X509.X509Certificate cert) {} // 0x000000018B23FA38-0x000000018B23FAB4
-		public void RemoveCertificate(Mono.Security.X509.X509Certificate cert, IDictionary attrs) {} // 0x000000018B23F27C-0x000000018B23F340
-		private bool CompareAsymmetricAlgorithm(AsymmetricAlgorithm a1, AsymmetricAlgorithm a2) => default; // 0x000000018B23F468-0x000000018B23F868
-		public void AddPkcs8ShroudedKeyBag(AsymmetricAlgorithm aa, IDictionary attributes) {} // 0x000000018B23F3A4-0x000000018B23F404
-		public object Clone() => default; // 0x000000018B23F340-0x000000018B23F3A4
+		private void Decode(byte[] data); // 0x000000018A71240C-0x000000018A712CFC
+		~PKCS12(); // 0x000000018A7132F4-0x000000018A7133C8
+		private bool Compare(byte[] expected, byte[] actual); // 0x000000018A7123AC-0x000000018A71240C
+		private SymmetricAlgorithm GetSymmetricAlgorithm(string algorithmOid, byte[] salt, int iterationCount); // 0x000000018A7155AC-0x000000018A715B00
+		public byte[] Decrypt(string algorithmOid, byte[] salt, int iterationCount, byte[] encryptedData); // 0x000000018A712DD0-0x000000018A712EB4
+		public byte[] Decrypt(PKCS7.EncryptedData ed); // 0x000000018A712CFC-0x000000018A712DD0
+		public byte[] Encrypt(string algorithmOid, byte[] salt, int iterationCount, byte[] data); // 0x000000018A712EB4-0x000000018A712FD4
+		private DSAParameters GetExistingParameters(out bool found); // 0x000000018A715380-0x000000018A7155AC
+		private void AddPrivateKey(PKCS8.PrivateKeyInfo pki); // 0x000000018A7114EC-0x000000018A711828
+		private void ReadSafeBag(ASN1 safeBag); // 0x000000018A716710-0x000000018A716F74
+		private ASN1 Pkcs8ShroudedKeyBagSafeBag(AsymmetricAlgorithm aa, IDictionary attributes); // 0x000000018A715C14-0x000000018A716710
+		private ASN1 CertificateSafeBag(Mono.Security.X509.X509Certificate x509, IDictionary attributes); // 0x000000018A711828-0x000000018A712248
+		private byte[] MAC(byte[] password, byte[] salt, int iterations, byte[] data); // 0x000000018A715B00-0x000000018A715C14
+		public byte[] GetBytes(); // 0x000000018A7133C8-0x000000018A715380
+		private PKCS7.ContentInfo EncryptedContentInfo(ASN1 safeBags, string algorithmOid); // 0x000000018A712FD4-0x000000018A7132F4
+		public void AddCertificate(Mono.Security.X509.X509Certificate cert); // 0x000000018A710F20-0x000000018A710F2C
+		public void AddCertificate(Mono.Security.X509.X509Certificate cert, IDictionary attributes); // 0x000000018A710F2C-0x000000018A711164
+		public void RemoveCertificate(Mono.Security.X509.X509Certificate cert); // 0x000000018A717350-0x000000018A71735C
+		public void RemoveCertificate(Mono.Security.X509.X509Certificate cert, IDictionary attrs); // 0x000000018A716F74-0x000000018A717350
+		private bool CompareAsymmetricAlgorithm(AsymmetricAlgorithm a1, AsymmetricAlgorithm a2); // 0x000000018A712324-0x000000018A7123AC
+		public void AddPkcs8ShroudedKeyBag(AsymmetricAlgorithm aa, IDictionary attributes); // 0x000000018A711164-0x000000018A7114EC
+		public object Clone(); // 0x000000018A712248-0x000000018A712324
 	}
 
-	public sealed class X501 // TypeDefIndex: 57936
+	public sealed class X501 // TypeDefIndex: 60445
 	{
 		// Fields
 		private static byte[] countryName; // 0x00
@@ -1495,25 +1511,25 @@ namespace Mono.Security.X509
 		private static byte[] initial; // 0x78
 	
 		// Constructors
-		public X501() {} // Dummy constructor
-		static X501() {} // 0x000000018B24A09C-0x000000018B24A660
+		static X501(); // 0x000000018A71AB18-0x000000018A71B0DC
 	
 		// Methods
-		public static string ToString(ASN1 seq) => default; // 0x000000018B249F9C-0x000000018B24A09C
-		public static string ToString(ASN1 seq, bool reversed, string separator, bool quotes) => default; // 0x000000018B249E30-0x000000018B249F9C
-		private static void AppendEntry(StringBuilder sb, ASN1 entry, bool quotes) {} // 0x000000018B248310-0x000000018B248BA8
-		private static X520.AttributeTypeAndValue GetAttributeFromOid(string attributeType) => default; // 0x000000018B248D28-0x000000018B2494F8
-		private static bool IsOid(string oid) => default; // 0x000000018B249598-0x000000018B249624
-		private static X520.AttributeTypeAndValue ReadAttribute(string value, ref int pos) => default; // 0x000000018B249624-0x000000018B249798
-		private static bool IsHex(char c) => default; // 0x000000018B2494F8-0x000000018B249598
-		private static string ReadHex(string value, ref int pos) => default; // 0x000000018B249920-0x000000018B249AA4
-		private static int ReadEscaped(StringBuilder sb, string value, int pos) => default; // 0x000000018B249798-0x000000018B249920
-		private static int ReadQuoted(StringBuilder sb, string value, int pos) => default; // 0x000000018B249AA4-0x000000018B249BDC
-		private static string ReadValue(string value, ref int pos) => default; // 0x000000018B249BDC-0x000000018B249E30
-		public static ASN1 FromString(string rdn) => default; // 0x000000018B248BA8-0x000000018B248D28
+		public static string ToString(ASN1 seq); // 0x000000018A71AA18-0x000000018A71AB18
+		public static string ToString(ASN1 seq, bool reversed, string separator, bool quotes); // 0x000000018A71A8AC-0x000000018A71AA18
+		private static void AppendEntry(StringBuilder sb, ASN1 entry, bool quotes); // 0x000000018A718ED8-0x000000018A719624
+		private static X520.AttributeTypeAndValue GetAttributeFromOid(string attributeType); // 0x000000018A7197A4-0x000000018A719F74
+		private static bool IsOid(string oid); // 0x000000018A71A014-0x000000018A71A0A0
+		private static X520.AttributeTypeAndValue ReadAttribute(string value, ref int pos); // 0x000000018A71A0A0-0x000000018A71A214
+		private static bool IsHex(char c); // 0x000000018A719F74-0x000000018A71A014
+		private static string ReadHex(string value, ref int pos); // 0x000000018A71A39C-0x000000018A71A520
+		private static int ReadEscaped(StringBuilder sb, string value, int pos); // 0x000000018A71A214-0x000000018A71A39C
+		private static int ReadQuoted(StringBuilder sb, string value, int pos); // 0x000000018A71A520-0x000000018A71A658
+		private static string ReadValue(string value, ref int pos); // 0x000000018A71A658-0x000000018A71A8AC
+		public static ASN1 FromString(string rdn); // 0x000000018A719624-0x000000018A7197A4
 	}
 
-	public class X509Crl // TypeDefIndex: 57938
+	[DefaultMember("Item")]
+	public class X509Crl // TypeDefIndex: 60447
 	{
 		// Fields
 		private string issuer; // 0x10
@@ -1528,13 +1544,13 @@ namespace Mono.Security.X509
 		private byte[] hash_value; // 0x58
 	
 		// Properties
-		public Mono.Security.X509.X509ExtensionCollection Extensions { get => default; } // 0x000000018B24A7A8-0x000000018B24A800 
-		public byte[] Hash { get => default; } // 0x000000018B24D540-0x000000018B24D5C4 
-		public string IssuerName { get => default; } // 0x000000018B24D5C4-0x000000018B24D6E0 
-		public System.DateTime NextUpdate { get => default; } // 0x000000018B24DF5C-0x000000018B24E200 
+		public Mono.Security.X509.X509ExtensionCollection Extensions { get; } // 0x0000000184D86200-0x0000000184D86210 
+		public byte[] Hash { get; } // 0x000000018A71ED50-0x000000018A71EEF8 
+		public string IssuerName { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public System.DateTime NextUpdate { get; } // 0x0000000184D86240-0x0000000184D86250 
 	
 		// Nested types
-		public class X509CrlEntry // TypeDefIndex: 57937
+		public class X509CrlEntry // TypeDefIndex: 60446
 		{
 			// Fields
 			private byte[] sn; // 0x10
@@ -1542,30 +1558,28 @@ namespace Mono.Security.X509
 			private Mono.Security.X509.X509ExtensionCollection extensions; // 0x20
 	
 			// Properties
-			public byte[] SerialNumber { get => default; } // 0x000000018B24D6E0-0x000000018B24DD24 
-			public System.DateTime RevocationDate { get => default; } // 0x00000001813ECF20-0x00000001813ECF30 
-			public Mono.Security.X509.X509ExtensionCollection Extensions { get => default; } // 0x000000018B24E2D4-0x000000018B24E47C 
+			public byte[] SerialNumber { get; } // 0x000000018A71DF6C-0x000000018A71DFBC 
+			public System.DateTime RevocationDate { get; } // 0x000000018385B100-0x000000018385B110 
+			public Mono.Security.X509.X509ExtensionCollection Extensions { get; } // 0x0000000184D862C0-0x0000000184D862D0 
 	
 			// Constructors
-			public X509CrlEntry() {} // Dummy constructor
-			internal X509CrlEntry(ASN1 entry) {} // 0x000000018B24E200-0x000000018B24E2D4
+			internal X509CrlEntry(ASN1 entry); // 0x000000018A71DE74-0x000000018A71DF6C
 		}
 	
 		// Constructors
-		public X509Crl() {} // Dummy constructor
-		public X509Crl(byte[] crl) {} // 0x000000018346D130-0x000000018346D140
+		public X509Crl(byte[] crl); // 0x000000018A71EC7C-0x000000018A71ED50
 	
 		// Methods
-		private void Parse(byte[] crl) {} // 0x00000001813B8590-0x00000001813B85A0
-		private bool Compare(byte[] array1, byte[] array2) => default; // 0x000000018B24DE9C-0x000000018B24DF5C
-		public X509CrlEntry GetCrlEntry(Mono.Security.X509.X509Certificate x509) => default; // 0x000000018B24DD24-0x000000018B24DE9C
-		public X509CrlEntry GetCrlEntry(byte[] serialNumber) => default; // 0x000000018B24D3F8-0x000000018B24D4F0
-		internal bool VerifySignature(DSA dsa) => default; // 0x000000018B24D4F0-0x000000018B24D540
-		internal bool VerifySignature(RSA rsa) => default; // 0x0000000181377E40-0x0000000181377E50
-		public bool VerifySignature(AsymmetricAlgorithm aa) => default; // 0x00000001813B31A0-0x00000001813B31B0
+		private void Parse(byte[] crl); // 0x000000018A71E15C-0x000000018A71E7A0
+		private bool Compare(byte[] array1, byte[] array2); // 0x000000018A71B224-0x000000018A71B27C
+		public X509CrlEntry GetCrlEntry(Mono.Security.X509.X509Certificate x509); // 0x000000018A71DFBC-0x000000018A71E040
+		public X509CrlEntry GetCrlEntry(byte[] serialNumber); // 0x000000018A71E040-0x000000018A71E15C
+		internal bool VerifySignature(DSA dsa); // 0x000000018A71E9D8-0x000000018A71EC7C
+		internal bool VerifySignature(RSA rsa); // 0x000000018A71E918-0x000000018A71E9D8
+		public bool VerifySignature(AsymmetricAlgorithm aa); // 0x000000018A71E7A0-0x000000018A71E918
 	}
 
-	public class X509Certificate : ISerializable // TypeDefIndex: 57939
+	public class X509Certificate : ISerializable // TypeDefIndex: 60448
 	{
 		// Fields
 		private ASN1 decoder; // 0x10
@@ -1593,81 +1607,79 @@ namespace Mono.Security.X509
 		private static string encoding_error; // 0x00
 	
 		// Properties
-		public DSA DSA { get => default; set {} } // 0x000000018B24BC7C-0x000000018B24BFC0 0x000000018B24C9E0-0x000000018B24CA24
-		public Mono.Security.X509.X509ExtensionCollection Extensions { get => default; } // 0x000000018349D710-0x000000018349D720 
-		public byte[] Hash { get => default; } // 0x000000018B24BFC0-0x000000018B24C1DC 
-		public virtual string IssuerName { get => default; } // 0x00000001813ECBC0-0x00000001813ECBD0 
-		public virtual string KeyAlgorithm { get => default; } // 0x00000001813FF010-0x00000001813FF020 
-		public virtual byte[] KeyAlgorithmParameters { get => default; set {} } // 0x000000018B24C314-0x000000018B24C368 0x000000018571FEC0-0x000000018571FED0
-		public virtual byte[] PublicKey { get => default; } // 0x000000018B24C368-0x000000018B24C3BC 
-		public virtual RSA RSA { get => default; set {} } // 0x000000018B24C3BC-0x000000018B24C59C 0x000000018B24CA24-0x000000018B24CA64
-		public virtual byte[] RawData { get => default; } // 0x000000018B24C59C-0x000000018B24C5F0 
-		public virtual byte[] SerialNumber { get => default; } // 0x000000018B24C5F0-0x000000018B24C648 
-		public virtual byte[] Signature { get => default; } // 0x000000018B24C648-0x000000018B24C9E0 
-		public virtual string SubjectName { get => default; } // 0x00000001813F1630-0x00000001813F1640 
-		public virtual System.DateTime ValidFrom { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
-		public virtual System.DateTime ValidUntil { get => default; } // 0x00000001813B8590-0x00000001813B85A0 
-		public int Version { get => default; } // 0x00000001834A0D40-0x00000001834A0D50 
-		public bool IsCurrent { get => default; } // 0x000000018B24C1DC-0x000000018B24C228 
-		public bool IsSelfSigned { get => default; } // 0x000000018B24C228-0x000000018B24C314 
+		public DSA DSA { get; set; } // 0x000000018A71C6F8-0x000000018A71CA3C 0x000000018A71D45C-0x000000018A71D4A0
+		public Mono.Security.X509.X509ExtensionCollection Extensions { get; } // 0x0000000184D85EF0-0x0000000184D85F00 
+		public byte[] Hash { get; } // 0x000000018A71CA3C-0x000000018A71CC58 
+		public virtual string IssuerName { get; } // 0x0000000184D85A50-0x0000000184D85A60 
+		public virtual string KeyAlgorithm { get; } // 0x0000000184D85A60-0x0000000184D85A70 
+		public virtual byte[] KeyAlgorithmParameters { get; set; } // 0x000000018A71CD90-0x000000018A71CDE4 0x00000001835A41A0-0x00000001835A41B0
+		public virtual byte[] PublicKey { get; } // 0x000000018A71CDE4-0x000000018A71CE38 
+		public virtual RSA RSA { get; set; } // 0x000000018A71CE38-0x000000018A71D018 0x000000018A71D4A0-0x000000018A71D4E0
+		public virtual byte[] RawData { get; } // 0x000000018A71D018-0x000000018A71D06C 
+		public virtual byte[] SerialNumber { get; } // 0x000000018A71D06C-0x000000018A71D0C4 
+		public virtual byte[] Signature { get; } // 0x000000018A71D0C4-0x000000018A71D45C 
+		public virtual string SubjectName { get; } // 0x0000000182E56440-0x0000000182E56460 
+		public virtual System.DateTime ValidFrom { get; } // 0x0000000184D862C0-0x0000000184D862D0 
+		public virtual System.DateTime ValidUntil { get; } // 0x0000000184D86240-0x0000000184D86250 
+		public int Version { get; } // 0x0000000184D862D0-0x0000000184D862E0 
+		public bool IsCurrent { get; } // 0x000000018A71CC58-0x000000018A71CCA4 
+		public bool IsSelfSigned { get; } // 0x000000018A71CCA4-0x000000018A71CD90 
 	
 		// Constructors
-		public X509Certificate() {} // Dummy constructor
-		public X509Certificate(byte[] data) {} // 0x000000018B24BB00-0x000000018B24BC7C
-		static X509Certificate() {} // 0x000000018B24BAA4-0x000000018B24BB00
+		public X509Certificate(byte[] data); // 0x000000018A71C57C-0x000000018A71C6F8
+		static X509Certificate(); // 0x000000018A71C520-0x000000018A71C57C
 	
 		// Methods
-		private void Parse(byte[] data) {} // 0x000000018B24AE08-0x000000018B24B6FC
-		private byte[] GetUnsignedBigInteger(byte[] integer) => default; // 0x000000018B24AC68-0x000000018B24AD00
-		public bool WasCurrent(System.DateTime instant) => default; // 0x000000018B24BA20-0x000000018B24BAA4
-		internal bool VerifySignature(DSA dsa) => default; // 0x000000018B24B96C-0x000000018B24BA20
-		internal bool VerifySignature(RSA rsa) => default; // 0x000000018B24B874-0x000000018B24B96C
-		public bool VerifySignature(AsymmetricAlgorithm aa) => default; // 0x000000018B24B6FC-0x000000018B24B874
-		public virtual void GetObjectData(SerializationInfo info, StreamingContext context) {} // 0x000000018B24AC10-0x000000018B24AC68
-		private static byte[] PEM(string type, byte[] data) => default; // 0x000000018B24AD00-0x000000018B24AE08
+		private void Parse(byte[] data); // 0x000000018A71B884-0x000000018A71C178
+		private byte[] GetUnsignedBigInteger(byte[] integer); // 0x000000018A71B6E4-0x000000018A71B77C
+		public bool WasCurrent(System.DateTime instant); // 0x000000018A71C49C-0x000000018A71C520
+		internal bool VerifySignature(DSA dsa); // 0x000000018A71C3E8-0x000000018A71C49C
+		internal bool VerifySignature(RSA rsa); // 0x000000018A71C2F0-0x000000018A71C3E8
+		public bool VerifySignature(AsymmetricAlgorithm aa); // 0x000000018A71C178-0x000000018A71C2F0
+		public virtual void GetObjectData(SerializationInfo info, StreamingContext context); // 0x000000018A71B68C-0x000000018A71B6E4
+		private static byte[] PEM(string type, byte[] data); // 0x000000018A71B77C-0x000000018A71B884
 	}
 
 	[Serializable]
-	public class X509CertificateCollection : CollectionBase, IEnumerable // TypeDefIndex: 57941
+	public class X509CertificateCollection : CollectionBase, IEnumerable // TypeDefIndex: 60450
 	{
 		// Properties
-		public Mono.Security.X509.X509Certificate this[int index] { get => default; } // 0x00000001891011C8-0x00000001891011EC 
+		public Mono.Security.X509.X509Certificate this[int index] { get => default; } // 0x000000018A71B43C-0x000000018A71B49C 
 	
 		// Nested types
-		public class X509CertificateEnumerator : IEnumerator // TypeDefIndex: 57940
+		public class X509CertificateEnumerator : IEnumerator // TypeDefIndex: 60449
 		{
 			// Fields
 			private IEnumerator enumerator; // 0x10
 	
 			// Properties
-			public Mono.Security.X509.X509Certificate Current { get => default; } // 0x000000018B24A9C0-0x000000018B24AA20 
-			object IEnumerator.Current { get => default; } // 0x000000018B24A72C-0x000000018B24A7A8 
+			public Mono.Security.X509.X509Certificate Current { get; } // 0x000000018A71B624-0x000000018A71B68C 
+			object IEnumerator.Current { get; } // 0x000000018A71B578-0x000000018A71B5C4 
 	
 			// Constructors
-			public X509CertificateEnumerator() {} // Dummy constructor
-			public X509CertificateEnumerator(X509CertificateCollection mappings) {} // 0x000000018B24A9B8-0x000000018B24A9C0
+			public X509CertificateEnumerator(X509CertificateCollection mappings); // 0x000000018A71B5C4-0x000000018A71B624
 	
 			// Methods
-			bool IEnumerator.MoveNext() => default; // 0x000000018B24A660-0x000000018B24A72C
-			void IEnumerator.Reset() {} // 0x000000018B24A800-0x000000018B24A818
-			public bool MoveNext() => default; // 0x000000018B24A818-0x000000018B24A878
+			bool IEnumerator.MoveNext(); // 0x000000018A71B4E4-0x000000018A71B52C
+			void IEnumerator.Reset(); // 0x000000018A71B52C-0x000000018A71B578
+			public bool MoveNext(); // 0x000000018A71B49C-0x000000018A71B4E4
 		}
 	
 		// Constructors
-		public X509CertificateCollection() {} // 0x000000018B24A994-0x000000018B24A9B8
+		public X509CertificateCollection(); // 0x000000018A71B434-0x000000018A71B43C
 	
 		// Methods
-		public int Add(Mono.Security.X509.X509Certificate value) => default; // 0x000000018B24A878-0x000000018B24A994
-		public void AddRange(X509CertificateCollection value) {} // 0x000000018B24A7A8-0x000000018B24A800
-		public bool Contains(Mono.Security.X509.X509Certificate value) => default; // 0x000000018B24AB48-0x000000018B24ABA8
-		public new X509CertificateEnumerator GetEnumerator() => default; // 0x000000018B24ABA8-0x000000018B24AC10
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018B24AAFC-0x000000018B24AB48
-		public override int GetHashCode() => default; // 0x000000018B24AA68-0x000000018B24AAB0
-		public int IndexOf(Mono.Security.X509.X509Certificate value) => default; // 0x000000018B24AAB0-0x000000018B24AAFC
-		private bool Compare(byte[] array1, byte[] array2) => default; // 0x000000018B24AA20-0x000000018B24AA68
+		public int Add(Mono.Security.X509.X509Certificate value); // 0x000000018A71B1A8-0x000000018A71B224
+		public void AddRange(X509CertificateCollection value); // 0x000000018A71B0DC-0x000000018A71B1A8
+		public bool Contains(Mono.Security.X509.X509Certificate value); // 0x000000018A71B27C-0x000000018A71B294
+		public new X509CertificateEnumerator GetEnumerator(); // 0x000000018A71B294-0x000000018A71B2F4
+		IEnumerator IEnumerable.GetEnumerator(); // 0x000000018A71B410-0x000000018A71B434
+		public override int GetHashCode(); // 0x0000000188479504-0x0000000188479528
+		public int IndexOf(Mono.Security.X509.X509Certificate value); // 0x000000018A71B2F4-0x000000018A71B410
+		private bool Compare(byte[] array1, byte[] array2); // 0x000000018A71B224-0x000000018A71B27C
 	}
 
-	public class X509Chain // TypeDefIndex: 57942
+	public class X509Chain // TypeDefIndex: 60451
 	{
 		// Fields
 		private Mono.Security.X509.X509CertificateCollection roots; // 0x10
@@ -1677,24 +1689,25 @@ namespace Mono.Security.X509
 		private Mono.Security.X509.X509ChainStatusFlags _status; // 0x30
 	
 		// Properties
-		public Mono.Security.X509.X509CertificateCollection TrustAnchors { get => default; } // 0x000000018B24D368-0x000000018B24D3F8 
+		public Mono.Security.X509.X509CertificateCollection TrustAnchors { get; } // 0x000000018A71DDE4-0x000000018A71DE74 
 	
 		// Constructors
-		public X509Chain() {} // 0x000000018B24D304-0x000000018B24D368
+		public X509Chain(); // 0x000000018A71DD80-0x000000018A71DDE4
 	
 		// Methods
-		public void LoadCertificates(Mono.Security.X509.X509CertificateCollection collection) {} // 0x000000018B24D298-0x000000018B24D2B8
-		public bool Build(Mono.Security.X509.X509Certificate leaf) => default; // 0x000000018B24CA64-0x000000018B24CDCC
-		public void Reset() {} // 0x000000018B24D2B8-0x000000018B24D304
-		private bool IsValid(Mono.Security.X509.X509Certificate cert) => default; // 0x000000018B24D228-0x000000018B24D298
-		private Mono.Security.X509.X509Certificate FindCertificateParent(Mono.Security.X509.X509Certificate child) => default; // 0x000000018B24CDCC-0x000000018B24CF14
-		private Mono.Security.X509.X509Certificate FindCertificateRoot(Mono.Security.X509.X509Certificate potentialRoot) => default; // 0x000000018B24CF14-0x000000018B24D0C8
-		private bool IsTrusted(Mono.Security.X509.X509Certificate potentialTrusted) => default; // 0x000000018B24D1F8-0x000000018B24D228
-		private bool IsParent(Mono.Security.X509.X509Certificate child, Mono.Security.X509.X509Certificate parent) => default; // 0x000000018B24D0C8-0x000000018B24D1F8
+		public void LoadCertificates(Mono.Security.X509.X509CertificateCollection collection); // 0x000000018A71DD14-0x000000018A71DD34
+		public bool Build(Mono.Security.X509.X509Certificate leaf); // 0x000000018A71D4E0-0x000000018A71D848
+		public void Reset(); // 0x000000018A71DD34-0x000000018A71DD80
+		private bool IsValid(Mono.Security.X509.X509Certificate cert); // 0x000000018A71DCA4-0x000000018A71DD14
+		private Mono.Security.X509.X509Certificate FindCertificateParent(Mono.Security.X509.X509Certificate child); // 0x000000018A71D848-0x000000018A71D990
+		private Mono.Security.X509.X509Certificate FindCertificateRoot(Mono.Security.X509.X509Certificate potentialRoot); // 0x000000018A71D990-0x000000018A71DB44
+		private bool IsTrusted(Mono.Security.X509.X509Certificate potentialTrusted); // 0x000000018A71DC74-0x000000018A71DCA4
+		private bool IsParent(Mono.Security.X509.X509Certificate child, Mono.Security.X509.X509Certificate parent); // 0x000000018A71DB44-0x000000018A71DC74
 	}
 
 	[Serializable]
-	public enum X509ChainStatusFlags // TypeDefIndex: 57943
+	[Flags]
+	public enum X509ChainStatusFlags // TypeDefIndex: 60452
 	{
 		NoError = 0,
 		NotTimeValid = 1,
@@ -1705,7 +1718,7 @@ namespace Mono.Security.X509
 		PartialChain = 65536
 	}
 
-	public class X509Extension // TypeDefIndex: 57944
+	public class X509Extension // TypeDefIndex: 60453
 	{
 		// Fields
 		protected string extnOid; // 0x10
@@ -1713,42 +1726,41 @@ namespace Mono.Security.X509
 		protected ASN1 extnValue; // 0x20
 	
 		// Properties
-		public string Oid { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public bool Critical { get => default; } // 0x00000001813C0430-0x00000001813C0440 
-		public ASN1 Value { get => default; } // 0x000000018B24EF90-0x000000018B24EFC0 
+		public string Oid { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public bool Critical { get; } // 0x0000000184D86340-0x0000000184D86350 
+		public ASN1 Value { get; } // 0x000000018A71F9E4-0x000000018A71FA14 
 	
 		// Constructors
-		public X509Extension() {} // Dummy constructor
-		public X509Extension(ASN1 asn1) {} // 0x000000018B24EB34-0x000000018B24EE3C
-		public X509Extension(X509Extension extension) {} // 0x000000018B24EE3C-0x000000018B24EF90
+		public X509Extension(ASN1 asn1); // 0x000000018A71F5B0-0x000000018A71F890
+		public X509Extension(X509Extension extension); // 0x000000018A71F890-0x000000018A71F9E4
 	
 		// Methods
-		protected virtual void Decode() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void Encode() {} // 0x0000000185492010-0x0000000185492020
-		public override bool Equals(object obj) => default; // 0x000000018B24E744-0x000000018B24E850
-		public override int GetHashCode() => default; // 0x00000001891011C8-0x00000001891011EC
-		private void WriteLine(StringBuilder sb, int n, int pos) {} // 0x000000018B24E950-0x000000018B24EB34
-		public override string ToString() => default; // 0x000000018B24E850-0x000000018B24E950
+		protected virtual void Decode(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void Encode(); // 0x00000001841E1670-0x00000001841E1680
+		public override bool Equals(object obj); // 0x000000018A71F1C0-0x000000018A71F2CC
+		public override int GetHashCode(); // 0x0000000188479504-0x0000000188479528
+		private void WriteLine(StringBuilder sb, int n, int pos); // 0x000000018A71F3CC-0x000000018A71F5B0
+		public override string ToString(); // 0x000000018A71F2CC-0x000000018A71F3CC
 	}
 
-	public sealed class X509ExtensionCollection : CollectionBase, IEnumerable // TypeDefIndex: 57945
+	public sealed class X509ExtensionCollection : CollectionBase, IEnumerable // TypeDefIndex: 60454
 	{
 		// Fields
 		private bool readOnly; // 0x18
 	
 		// Properties
-		public Mono.Security.X509.X509Extension this[string oid] { get => default; } // 0x000000018B24E6C8-0x000000018B24E744 
+		public Mono.Security.X509.X509Extension this[string oid] { get => default; } // 0x000000018A71F144-0x000000018A71F1C0 
 	
 		// Constructors
-		public X509ExtensionCollection() {} // 0x000000018B24A9B8-0x000000018B24A9C0
-		public X509ExtensionCollection(ASN1 asn1) {} // 0x000000018B24E5A0-0x000000018B24E6C8
+		public X509ExtensionCollection(); // 0x000000018A71B434-0x000000018A71B43C
+		public X509ExtensionCollection(ASN1 asn1); // 0x000000018A71F01C-0x000000018A71F144
 	
 		// Methods
-		public int IndexOf(string oid) => default; // 0x000000018B24E47C-0x000000018B24E5A0
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018B24A994-0x000000018B24A9B8
+		public int IndexOf(string oid); // 0x000000018A71EEF8-0x000000018A71F01C
+		IEnumerator IEnumerable.GetEnumerator(); // 0x000000018A71B410-0x000000018A71B434
 	}
 
-	public class X509Store // TypeDefIndex: 57946
+	public class X509Store // TypeDefIndex: 60455
 	{
 		// Fields
 		private string _storePath; // 0x10
@@ -1758,23 +1770,22 @@ namespace Mono.Security.X509
 		private bool _newFormat; // 0x29
 	
 		// Properties
-		public Mono.Security.X509.X509CertificateCollection Certificates { get => default; } // 0x000000018B24FCB0-0x000000018B24FCEC 
-		public ArrayList Crls { get => default; } // 0x000000018B24FCEC-0x000000018B24FD80 
+		public Mono.Security.X509.X509CertificateCollection Certificates { get; } // 0x000000018A720704-0x000000018A720740 
+		public ArrayList Crls { get; } // 0x000000018A720740-0x000000018A7207D4 
 	
 		// Constructors
-		public X509Store() {} // Dummy constructor
-		internal X509Store(string path, bool crl, bool newFormat) {} // 0x000000018B24FC88-0x000000018B24FCB0
+		internal X509Store(string path, bool crl, bool newFormat); // 0x000000018A7206DC-0x000000018A720704
 	
 		// Methods
-		private byte[] Load(string filename) => default; // 0x000000018B24FB4C-0x000000018B24FC88
-		private Mono.Security.X509.X509Certificate LoadCertificate(string filename) => default; // 0x000000018B24FA64-0x000000018B24FAD8
-		private X509Crl LoadCrl(string filename) => default; // 0x000000018B24FAD8-0x000000018B24FB4C
-		private bool CheckStore(string path, bool throwException) => default; // 0x000000018B24F9AC-0x000000018B24FA64
-		private Mono.Security.X509.X509CertificateCollection BuildCertificatesCollection(string storeName) => default; // 0x000000018B24F650-0x000000018B24F808
-		private ArrayList BuildCrlsCollection(string storeName) => default; // 0x000000018B24F808-0x000000018B24F9AC
+		private byte[] Load(string filename); // 0x000000018A7205A0-0x000000018A7206DC
+		private Mono.Security.X509.X509Certificate LoadCertificate(string filename); // 0x000000018A7204B8-0x000000018A72052C
+		private X509Crl LoadCrl(string filename); // 0x000000018A72052C-0x000000018A7205A0
+		private bool CheckStore(string path, bool throwException); // 0x000000018A720400-0x000000018A7204B8
+		private Mono.Security.X509.X509CertificateCollection BuildCertificatesCollection(string storeName); // 0x000000018A7200A4-0x000000018A72025C
+		private ArrayList BuildCrlsCollection(string storeName); // 0x000000018A72025C-0x000000018A720400
 	}
 
-	public sealed class X509StoreManager // TypeDefIndex: 57947
+	public sealed class X509StoreManager // TypeDefIndex: 60456
 	{
 		// Fields
 		private static string _userPath; // 0x00
@@ -1785,19 +1796,16 @@ namespace Mono.Security.X509
 		private static X509Stores _machineStore; // 0x28
 	
 		// Properties
-		internal static string CurrentUserPath { get => default; } // 0x000000018B24EFC0-0x000000018B24F0C8 
-		internal static string LocalMachinePath { get => default; } // 0x000000018B24F18C-0x000000018B24F2A4 
-		internal static string NewCurrentUserPath { get => default; } // 0x000000018B24F368-0x000000018B24F480 
-		internal static string NewLocalMachinePath { get => default; } // 0x000000018B24F480-0x000000018B24F598 
-		public static X509Stores CurrentUser { get => default; } // 0x000000018B24F0C8-0x000000018B24F18C 
-		public static X509Stores LocalMachine { get => default; } // 0x000000018B24F2A4-0x000000018B24F368 
-		public static Mono.Security.X509.X509CertificateCollection TrustedRootCertificates { get => default; } // 0x000000018B24F598-0x000000018B24F650 
-	
-		// Constructors
-		public X509StoreManager() {} // Dummy constructor
+		internal static string CurrentUserPath { get; } // 0x000000018A71FA14-0x000000018A71FB1C 
+		internal static string LocalMachinePath { get; } // 0x000000018A71FBE0-0x000000018A71FCF8 
+		internal static string NewCurrentUserPath { get; } // 0x000000018A71FDBC-0x000000018A71FED4 
+		internal static string NewLocalMachinePath { get; } // 0x000000018A71FED4-0x000000018A71FFEC 
+		public static X509Stores CurrentUser { get; } // 0x000000018A71FB1C-0x000000018A71FBE0 
+		public static X509Stores LocalMachine { get; } // 0x000000018A71FCF8-0x000000018A71FDBC 
+		public static Mono.Security.X509.X509CertificateCollection TrustedRootCertificates { get; } // 0x000000018A71FFEC-0x000000018A7200A4 
 	}
 
-	public class X509Stores // TypeDefIndex: 57948
+	public class X509Stores // TypeDefIndex: 60457
 	{
 		// Fields
 		private string _storePath; // 0x10
@@ -1805,20 +1813,19 @@ namespace Mono.Security.X509
 		private Mono.Security.X509.X509Store _trusted; // 0x20
 	
 		// Properties
-		public Mono.Security.X509.X509Store TrustedRoot { get => default; } // 0x000000018B24FE90-0x000000018B24FF64 
+		public Mono.Security.X509.X509Store TrustedRoot { get; } // 0x000000018A7208E4-0x000000018A7209B8 
 	
 		// Constructors
-		public X509Stores() {} // Dummy constructor
-		internal X509Stores(string path, bool newFormat) {} // 0x00000001843A39A0-0x00000001843A39D0
+		internal X509Stores(string path, bool newFormat); // 0x00000001832B1EA0-0x00000001832B1ED0
 	
 		// Methods
-		public Mono.Security.X509.X509Store Open(string storeName, bool create) => default; // 0x000000018B24FD80-0x000000018B24FE90
+		public Mono.Security.X509.X509Store Open(string storeName, bool create); // 0x000000018A7207D4-0x000000018A7208E4
 	}
 
-	public class X520 // TypeDefIndex: 57966
+	public class X520 // TypeDefIndex: 60475
 	{
 		// Nested types
-		public abstract class AttributeTypeAndValue // TypeDefIndex: 57949
+		public abstract class AttributeTypeAndValue // TypeDefIndex: 60458
 		{
 			// Fields
 			private string oid; // 0x10
@@ -1827,157 +1834,150 @@ namespace Mono.Security.X509
 			private byte encoding; // 0x24
 	
 			// Properties
-			public string Value { get; set; } // 0x000000018B23C370-0x000000018B23C438
+			public string Value { set; } // 0x000000018A70D120-0x000000018A70D1E8
 	
 			// Constructors
-			protected AttributeTypeAndValue() {} // Dummy constructor
-			protected AttributeTypeAndValue(string oid, int upperBound) {} // 0x000000018B23C324-0x000000018B23C34C
-			protected AttributeTypeAndValue(string oid, int upperBound, byte encoding) {} // 0x000000018B23C34C-0x000000018B23C370
+			protected AttributeTypeAndValue(string oid, int upperBound); // 0x000000018A70D0D4-0x000000018A70D0FC
+			protected AttributeTypeAndValue(string oid, int upperBound, byte encoding); // 0x000000018A70D0FC-0x000000018A70D120
 	
 			// Methods
-			internal ASN1 GetASN1(byte encoding) => default; // 0x000000018B23C14C-0x000000018B23C2D0
-			internal ASN1 GetASN1() => default; // 0x000000018B23C140-0x000000018B23C14C
-			private byte SelectBestEncoding() => default; // 0x000000018B23C2D0-0x000000018B23C324
+			internal ASN1 GetASN1(byte encoding); // 0x000000018A70CEFC-0x000000018A70D080
+			internal ASN1 GetASN1(); // 0x000000018A70CEF0-0x000000018A70CEFC
+			private byte SelectBestEncoding(); // 0x000000018A70D080-0x000000018A70D0D4
 		}
 	
-		public class CommonName : AttributeTypeAndValue // TypeDefIndex: 57950
+		public class CommonName : AttributeTypeAndValue // TypeDefIndex: 60459
 		{
 			// Constructors
-			public CommonName() {} // 0x000000018B23EE60-0x000000018B23EEA4
+			public CommonName(); // 0x000000018A70FC10-0x000000018A70FC54
 		}
 	
-		public class SerialNumber : AttributeTypeAndValue // TypeDefIndex: 57951
+		public class SerialNumber : AttributeTypeAndValue // TypeDefIndex: 60460
 		{
 			// Constructors
-			public SerialNumber() {} // 0x000000018B2474C8-0x000000018B247514
+			public SerialNumber(); // 0x000000018A718090-0x000000018A7180DC
 		}
 	
-		public class LocalityName : AttributeTypeAndValue // TypeDefIndex: 57952
+		public class LocalityName : AttributeTypeAndValue // TypeDefIndex: 60461
 		{
 			// Constructors
-			public LocalityName() {} // 0x000000018B240094-0x000000018B2400D8
+			public LocalityName(); // 0x000000018A710E44-0x000000018A710E88
 		}
 	
-		public class StateOrProvinceName : AttributeTypeAndValue // TypeDefIndex: 57953
+		public class StateOrProvinceName : AttributeTypeAndValue // TypeDefIndex: 60462
 		{
 			// Constructors
-			public StateOrProvinceName() {} // 0x000000018B248200-0x000000018B248244
+			public StateOrProvinceName(); // 0x000000018A718DC8-0x000000018A718E0C
 		}
 	
-		public class OrganizationName : AttributeTypeAndValue // TypeDefIndex: 57954
+		public class OrganizationName : AttributeTypeAndValue // TypeDefIndex: 60463
 		{
 			// Constructors
-			public OrganizationName() {} // 0x000000018B2400E8-0x000000018B24012C
+			public OrganizationName(); // 0x000000018A710E98-0x000000018A710EDC
 		}
 	
-		public class OrganizationalUnitName : AttributeTypeAndValue // TypeDefIndex: 57955
+		public class OrganizationalUnitName : AttributeTypeAndValue // TypeDefIndex: 60464
 		{
 			// Constructors
-			public OrganizationalUnitName() {} // 0x000000018B24012C-0x000000018B240170
+			public OrganizationalUnitName(); // 0x000000018A710EDC-0x000000018A710F20
 		}
 	
-		public class EmailAddress : AttributeTypeAndValue // TypeDefIndex: 57956
+		public class EmailAddress : AttributeTypeAndValue // TypeDefIndex: 60465
 		{
 			// Constructors
-			public EmailAddress() {} // 0x000000018B23FB4C-0x000000018B23FB98
+			public EmailAddress(); // 0x000000018A7108FC-0x000000018A710948
 		}
 	
-		public class DomainComponent : AttributeTypeAndValue // TypeDefIndex: 57957
+		public class DomainComponent : AttributeTypeAndValue // TypeDefIndex: 60466
 		{
 			// Constructors
-			public DomainComponent() {} // 0x000000018B23FB00-0x000000018B23FB4C
+			public DomainComponent(); // 0x000000018A7108B0-0x000000018A7108FC
 		}
 	
-		public class UserId : AttributeTypeAndValue // TypeDefIndex: 57958
+		public class UserId : AttributeTypeAndValue // TypeDefIndex: 60467
 		{
 			// Constructors
-			public UserId() {} // 0x000000018B2482CC-0x000000018B248310
+			public UserId(); // 0x000000018A718E94-0x000000018A718ED8
 		}
 	
-		public class Oid : AttributeTypeAndValue // TypeDefIndex: 57959
+		public class Oid : AttributeTypeAndValue // TypeDefIndex: 60468
 		{
 			// Constructors
-			public Oid() {} // Dummy constructor
-			public Oid(string oid) {} // 0x000000018B2400D8-0x000000018B2400E8
+			public Oid(string oid); // 0x000000018A710E88-0x000000018A710E98
 		}
 	
-		public class Title : AttributeTypeAndValue // TypeDefIndex: 57960
+		public class Title : AttributeTypeAndValue // TypeDefIndex: 60469
 		{
 			// Constructors
-			public Title() {} // 0x000000018B248288-0x000000018B2482CC
+			public Title(); // 0x000000018A718E50-0x000000018A718E94
 		}
 	
-		public class CountryName : AttributeTypeAndValue // TypeDefIndex: 57961
+		public class CountryName : AttributeTypeAndValue // TypeDefIndex: 60470
 		{
 			// Constructors
-			public CountryName() {} // 0x000000018B23F230-0x000000018B23F27C
+			public CountryName(); // 0x000000018A70FFE0-0x000000018A71002C
 		}
 	
-		public class DnQualifier : AttributeTypeAndValue // TypeDefIndex: 57962
+		public class DnQualifier : AttributeTypeAndValue // TypeDefIndex: 60471
 		{
 			// Constructors
-			public DnQualifier() {} // 0x000000018B23FAB4-0x000000018B23FB00
+			public DnQualifier(); // 0x000000018A710864-0x000000018A7108B0
 		}
 	
-		public class Surname : AttributeTypeAndValue // TypeDefIndex: 57963
+		public class Surname : AttributeTypeAndValue // TypeDefIndex: 60472
 		{
 			// Constructors
-			public Surname() {} // 0x000000018B248244-0x000000018B248288
+			public Surname(); // 0x000000018A718E0C-0x000000018A718E50
 		}
 	
-		public class GivenName : AttributeTypeAndValue // TypeDefIndex: 57964
+		public class GivenName : AttributeTypeAndValue // TypeDefIndex: 60473
 		{
 			// Constructors
-			public GivenName() {} // 0x000000018B24000C-0x000000018B240050
+			public GivenName(); // 0x000000018A710DBC-0x000000018A710E00
 		}
 	
-		public class Initial : AttributeTypeAndValue // TypeDefIndex: 57965
+		public class Initial : AttributeTypeAndValue // TypeDefIndex: 60474
 		{
 			// Constructors
-			public Initial() {} // 0x000000018B240050-0x000000018B240094
+			public Initial(); // 0x000000018A710E00-0x000000018A710E44
 		}
-	
-		// Constructors
-		public X520() {} // Dummy constructor
 	}
 }
 
 namespace Mono.Security.X509.Extensions
 {
-	public class AuthorityKeyIdentifierExtension : Mono.Security.X509.X509Extension // TypeDefIndex: 57967
+	public class AuthorityKeyIdentifierExtension : Mono.Security.X509.X509Extension // TypeDefIndex: 60476
 	{
 		// Fields
 		private byte[] aki; // 0x28
 	
 		// Properties
-		public byte[] Identifier { get => default; } // 0x000000018B23C7F0-0x000000018B23C844 
+		public byte[] Identifier { get; } // 0x000000018A70D5A0-0x000000018A70D5F4 
 	
 		// Constructors
-		public AuthorityKeyIdentifierExtension() {} // Dummy constructor
-		public AuthorityKeyIdentifierExtension(Mono.Security.X509.X509Extension extension) {} // 0x000000018B23C7E8-0x000000018B23C7F0
+		public AuthorityKeyIdentifierExtension(Mono.Security.X509.X509Extension extension); // 0x000000018A70D598-0x000000018A70D5A0
 	
 		// Methods
-		protected override void Decode() {} // 0x000000018B23C438-0x000000018B23C554
-		protected override void Encode() {} // 0x000000018B23C554-0x000000018B23C698
-		public override string ToString() => default; // 0x000000018B23C698-0x000000018B23C7E8
+		protected override void Decode(); // 0x000000018A70D1E8-0x000000018A70D304
+		protected override void Encode(); // 0x000000018A70D304-0x000000018A70D448
+		public override string ToString(); // 0x000000018A70D448-0x000000018A70D598
 	}
 
-	public class BasicConstraintsExtension : Mono.Security.X509.X509Extension // TypeDefIndex: 57968
+	public class BasicConstraintsExtension : Mono.Security.X509.X509Extension // TypeDefIndex: 60477
 	{
 		// Fields
 		private bool cA; // 0x28
 		private int pathLenConstraint; // 0x2C
 	
 		// Properties
-		public bool CertificateAuthority { get => default; } // 0x00000001813B31B0-0x00000001813B31C0 
+		public bool CertificateAuthority { get; } // 0x00000001811F33C0-0x00000001811F33D0 
 	
 		// Constructors
-		public BasicConstraintsExtension() {} // Dummy constructor
-		public BasicConstraintsExtension(Mono.Security.X509.X509Extension extension) {} // 0x000000018B23C7E8-0x000000018B23C7F0
+		public BasicConstraintsExtension(Mono.Security.X509.X509Extension extension); // 0x000000018A70D598-0x000000018A70D5A0
 	
 		// Methods
-		protected override void Decode() {} // 0x000000018B23C844-0x000000018B23C98C
-		protected override void Encode() {} // 0x000000018B23C98C-0x000000018B23CAD4
-		public override string ToString() => default; // 0x000000018B23CAD4-0x000000018B23CC2C
+		protected override void Decode(); // 0x000000018A70D5F4-0x000000018A70D73C
+		protected override void Encode(); // 0x000000018A70D73C-0x000000018A70D884
+		public override string ToString(); // 0x000000018A70D884-0x000000018A70D9DC
 	}
 }

@@ -8,14 +8,18 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using AOT;
 using Beyond.Lua;
 using Beyond.Reflection;
 using Beyond.Scripts.Lua;
 using IFix.Core;
+using Microsoft.CodeAnalysis;
 using Unity.Profiling;
 using UnityEngine;
 using UnityEngine.Events;
@@ -24,52 +28,68 @@ using UnityEngine.Pool;
 using XLua;
 using XLua.LuaDLL;
 
-// Image 37: XLua.Runtime.dll - Assembly: XLua.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 55971-56214
+// Image 38: XLua.Runtime.dll - Assembly: XLua.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 58612-58854
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
-internal sealed class __f__AnonymousType0<_Type_j__TPar, _Value_j__TPar, _Index_j__TPar> // TypeDefIndex: 55972
+[CompilerGenerated]
+internal sealed class __f__AnonymousType0<_Type_j__TPar, _Value_j__TPar, _Index_j__TPar> // TypeDefIndex: 58613
 {
 	// Fields
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	private readonly _Type_j__TPar _Type_i__Field;
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	private readonly _Value_j__TPar _Value_i__Field;
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	private readonly _Index_j__TPar _Index_i__Field;
 
 	// Properties
-	public _Type_j__TPar Type { get => default; }
-	public _Value_j__TPar Value { get => default; }
-	public _Index_j__TPar Index { get => default; }
+	public _Type_j__TPar Type { get; }
+	public _Value_j__TPar Value { get; }
+	public _Index_j__TPar Index { get; }
 
 	// Constructors
-	public __f__AnonymousType0() {} // Dummy constructor
-	public __f__AnonymousType0(_Type_j__TPar Type, _Value_j__TPar Value, _Index_j__TPar Index) {}
+	[DebuggerHidden]
+	public __f__AnonymousType0(_Type_j__TPar Type, _Value_j__TPar Value, _Index_j__TPar Index);
 
 	// Methods
-	public override bool Equals(object value) => default;
-	public override int GetHashCode() => default;
-	public override string ToString() => default;
+	[DebuggerHidden]
+	public override bool Equals(object value);
+	[DebuggerHidden]
+	public override int GetHashCode();
+	[DebuggerHidden]
+	public override string ToString();
 }
 
-internal sealed class __f__AnonymousType1<_type_j__TPar, _method_j__TPar> // TypeDefIndex: 55973
+[CompilerGenerated]
+internal sealed class __f__AnonymousType1<_type_j__TPar, _method_j__TPar> // TypeDefIndex: 58614
 {
 	// Fields
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	private readonly _type_j__TPar _type_i__Field;
+	[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 	private readonly _method_j__TPar _method_i__Field;
 
 	// Properties
-	public _type_j__TPar type { get => default; }
-	public _method_j__TPar method { get => default; }
+	public _type_j__TPar type { get; }
+	public _method_j__TPar method { get; }
 
 	// Constructors
-	public __f__AnonymousType1() {} // Dummy constructor
-	public __f__AnonymousType1(_type_j__TPar type, _method_j__TPar method) {}
+	[DebuggerHidden]
+	public __f__AnonymousType1(_type_j__TPar type, _method_j__TPar method);
 
 	// Methods
-	public override bool Equals(object value) => default;
-	public override int GetHashCode() => default;
-	public override string ToString() => default;
+	[DebuggerHidden]
+	public override bool Equals(object value);
+	[DebuggerHidden]
+	public override int GetHashCode();
+	[DebuggerHidden]
+	public override string ToString();
 }
 
 [Serializable]
-public class LuaAsset : ScriptableObject // TypeDefIndex: 55976
+public class LuaAsset : ScriptableObject // TypeDefIndex: 58617
 {
 	// Fields
 	public static string LuaDecodeKey; // 0x00
@@ -77,78 +97,76 @@ public class LuaAsset : ScriptableObject // TypeDefIndex: 55976
 	public byte[] data; // 0x20
 
 	// Constructors
-	public LuaAsset() {} // 0x0000000187C9E364-0x0000000187C9E370
-	static LuaAsset() {} // 0x000000018C3B3690-0x000000018C3B36EC
+	public LuaAsset(); // 0x0000000186DCF4A4-0x0000000186DCF4B0
+	static LuaAsset(); // 0x000000018B89F134-0x000000018B89F190
 
 	// Methods
-	public byte[] GetDecodeBytes() => default; // 0x000000018C3B3608-0x000000018C3B3690
+	public byte[] GetDecodeBytes(); // 0x000000018B89F0AC-0x000000018B89F134
 }
 
 namespace Beyond.Lua
 {
-	public class LuaCypher // TypeDefIndex: 56047
+	public class LuaCypher // TypeDefIndex: 58687
 	{
 		// Fields
-		private const string KEY = "=="; // Metadata: 0x0207C1A5
+		private const string KEY = "=="; // Metadata: 0x0234BE55
 		private static readonly string[] KEYS; // 0x00
-		private const string INITIAL_ASSETS_ROOT_PATH = "Assets/Beyond/InitialAssets/"; // Metadata: 0x0207C1A8
+		private const string INITIAL_ASSETS_ROOT_PATH = "Assets/Beyond/InitialAssets/"; // Metadata: 0x0234BE58
 		private static readonly ProfilerMarker decryptionMaker; // 0x08
 	
 		// Constructors
-		public LuaCypher() {} // 0x0000000185492010-0x0000000185492020
-		static LuaCypher() {} // 0x0000000185BB9010-0x0000000185BB91D0
+		public LuaCypher(); // 0x00000001841E1670-0x00000001841E1680
+		static LuaCypher(); // 0x00000001849D9E80-0x00000001849DA040
 	
 		// Methods
-		private static string GetKey() => default; // 0x000000018C3B43B0-0x000000018C3B46E0
-		private static void GetKey(Span<byte> buffer, out int len) {
-			len = default;
-		} // 0x000000018C3B4144-0x000000018C3B43B0
-		protected static bool SkipDecrypt(string luaString) => default; // 0x000000018C3B46E0-0x000000018C3B47F0
-		public static string DecryptLuaString(string encryptLua) => default; // 0x000000018C3B392C-0x000000018C3B39C8
-		public static byte[] DecryptLua(string encryptLua) => default; // 0x000000018C3B39C8-0x000000018C3B4144
-		public static IntPtr DecryptionFunc(IntPtr input, int size, out int outSize) {
-			outSize = default;
-			return default;
-		} // 0x00000001852128F0-0x0000000185213AC0
+		[IDTag(0)]
+		private static string GetKey(); // 0x000000018B89FE54-0x000000018B8A0184
+		[IDTag(1)]
+		private static void GetKey(Span<byte> buffer, out int len); // 0x000000018B89FBE8-0x000000018B89FE54
+		protected static bool SkipDecrypt(string luaString); // 0x000000018B8A0184-0x000000018B8A0294
+		public static string DecryptLuaString(string encryptLua); // 0x000000018B89F3D0-0x000000018B89F46C
+		public static byte[] DecryptLua(string encryptLua); // 0x000000018B89F46C-0x000000018B89FBE8
+		[XLua.MonoPInvokeCallback(typeof(Lua.DecryptionFunc))]
+		public static IntPtr DecryptionFunc(IntPtr input, int size, out int outSize); // 0x00000001838F0A60-0x00000001838F13E0
 	}
 
-	public class LuaGenericDelegateCaller // TypeDefIndex: 56049
+	public class LuaGenericDelegateCaller // TypeDefIndex: 58689
 	{
 		// Fields
 		private static Dictionary<string, LuaGenericDelegateCall> s_callerDic; // 0x00
 	
 		// Nested types
-		public delegate int LuaGenericDelegateCall(IntPtr L, Delegate @delegate, ObjectTranslator objectTranslator, List<System.Type> castType); // TypeDefIndex: 56048; 0x0000000184E61400-0x0000000184E615E0
+		public delegate int LuaGenericDelegateCall(IntPtr L, Delegate @delegate, ObjectTranslator objectTranslator, List<System.Type> castType); // TypeDefIndex: 58688; 0x00000001814D0D00-0x00000001814D0D20
 	
 		// Constructors
-		public LuaGenericDelegateCaller() {} // 0x000000018C3B7E08-0x000000018C3B7EA4
-		static LuaGenericDelegateCaller() {} // 0x0000000186477E54-0x0000000186477F84
+		public LuaGenericDelegateCaller(); // 0x00000001841E1670-0x00000001841E1680
+		static LuaGenericDelegateCaller(); // 0x0000000184D179A0-0x0000000184D17A30
 	
 		// Methods
-		public static LuaGenericDelegateCall GetCaller(string delegateTypeName) => default; // 0x0000000185492010-0x0000000185492020
-		public static void AddCaller(string delegateTypeName, LuaGenericDelegateCall caller) {} // 0x0000000185F3F6D0-0x0000000185F3F760
-		public static int OverloadMethodCall(IntPtr L, ObjectTranslator objectTranslator, IOverloadMethodWrap[] overload) => default; // 0x0000000183FB1670-0x0000000183FB1700
-		public static int DefaultValueMethodCall(IntPtr L, ObjectTranslator objectTranslator, IOverloadMethodWrap[] defaultValues) => default; // 0x00000001817B21C0-0x00000001817B21E0
+		public static LuaGenericDelegateCall GetCaller(string delegateTypeName); // 0x00000001838EDEB0-0x00000001838EDF40
+		public static void AddCaller(string delegateTypeName, LuaGenericDelegateCall caller); // 0x00000001838EE6A0-0x00000001838EE820
+		public static int OverloadMethodCall(IntPtr L, ObjectTranslator objectTranslator, IOverloadMethodWrap[] overload); // 0x000000018329ABB0-0x000000018329B230
+		public static int DefaultValueMethodCall(IntPtr L, ObjectTranslator objectTranslator, IOverloadMethodWrap[] defaultValues); // 0x00000001838EE200-0x00000001838EE520
 	}
 }
 
 namespace Beyond.Reflection
 {
-	public class GenericDelegateCaller // TypeDefIndex: 55978
+	public class GenericDelegateCaller // TypeDefIndex: 58619
 	{
 		// Fields
 		private static Dictionary<string, System.Type> s_customDelegateTypeDic; // 0x00
 	
 		// Constructors
-		public GenericDelegateCaller() {} // 0x0000000185492010-0x0000000185492020
-		static GenericDelegateCaller() {} // 0x000000018576E730-0x000000018576E7C0
+		public GenericDelegateCaller(); // 0x00000001841E1670-0x00000001841E1680
+		static GenericDelegateCaller(); // 0x00000001845B1A60-0x00000001845B1AF0
 	
 		// Methods
-		public static System.Type GetCustomDelegateType(string delegateName) => default; // 0x00000001843DEEA0-0x00000001843DEF60
-		public static void AddCustomDelegateType(string delegateName, System.Type type) {} // 0x0000000184F6E890-0x0000000184F6EA70
+		public static System.Type GetCustomDelegateType(string delegateName); // 0x00000001838F13E0-0x00000001838F1470
+		public static void AddCustomDelegateType(string delegateName, System.Type type); // 0x00000001838EE520-0x00000001838EE6A0
 	}
 
-	public class MethodParamItem // TypeDefIndex: 55979
+	public class MethodParamItem // TypeDefIndex: 58620
 	{
 		// Fields
 		public System.Type type; // 0x10
@@ -160,81 +178,82 @@ namespace Beyond.Reflection
 		public System.Type realType; // 0x38
 	
 		// Constructors
-		public MethodParamItem() {} // 0x0000000185492010-0x0000000185492020
+		public MethodParamItem(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static List<MethodParamItem> GetMethodParamList(MethodInfo method, bool needLua = false /* Metadata: 0x0207C19D */, bool needEnum = false /* Metadata: 0x0207C19E */) => default; // 0x000000018400DA90-0x000000018400E010
-		public static string GetMethodSignatureString(MethodInfo method, bool needLua = false /* Metadata: 0x0207C19F */, bool keepType = false /* Metadata: 0x0207C1A0 */, bool needEnum = false /* Metadata: 0x0207C1A1 */) => default; // 0x0000000184398AF0-0x0000000184399430
+		public static List<MethodParamItem> GetMethodParamList(MethodInfo method, bool needLua = false /* Metadata: 0x0234BE4D */, bool needEnum = false /* Metadata: 0x0234BE4E */); // 0x0000000182F2D880-0x0000000182F2DD60
+		public static string GetMethodSignatureString(MethodInfo method, bool needLua = false /* Metadata: 0x0234BE4F */, bool keepType = false /* Metadata: 0x0234BE50 */, bool needEnum = false /* Metadata: 0x0234BE51 */); // 0x0000000182F2B440-0x0000000182F2BCB0
 	}
 }
 
 namespace Beyond.Reflection.StructSizeGen
 {
-	public struct FStructSize0 // TypeDefIndex: 55980
+	public struct FStructSize0 // TypeDefIndex: 58621
 	{
 	}
 
-	public struct FStructSize1 // TypeDefIndex: 55981
+	public struct FStructSize1 // TypeDefIndex: 58622
 	{
 		// Fields
 		public byte b0; // 0x00
 	}
 
-	public struct FStructSize2 // TypeDefIndex: 55982
+	public struct FStructSize2 // TypeDefIndex: 58623
 	{
 		// Fields
 		public short s0; // 0x00
 	}
 
-	public struct FStructSize3 // TypeDefIndex: 55983
+	public struct FStructSize3 // TypeDefIndex: 58624
 	{
 		// Fields
 		public short s0; // 0x00
 		public byte b0; // 0x02
 	}
 
-	public struct FStructSize4 // TypeDefIndex: 55984
+	public struct FStructSize4 // TypeDefIndex: 58625
 	{
 		// Fields
 		public int i0; // 0x00
 	}
 
-	public struct FStructSize5 // TypeDefIndex: 55985
+	public struct FStructSize5 // TypeDefIndex: 58626
 	{
 		// Fields
 		public int i0; // 0x00
 		public byte b0; // 0x04
 	}
 
-	public struct FStructSize8 // TypeDefIndex: 55986
+	public struct FStructSize8 // TypeDefIndex: 58627
 	{
 		// Fields
 		public long l0; // 0x00
 	}
 
-	public struct FStructSize12 // TypeDefIndex: 55987
+	public struct FStructSize12 // TypeDefIndex: 58628
 	{
 		// Fields
 		public long l0; // 0x00
 		public int i0; // 0x08
 	}
 
-	public struct FStructSize16 // TypeDefIndex: 55988
+	public struct FStructSize16 // TypeDefIndex: 58629
 	{
 		// Fields
 		public long l0; // 0x00
 		public long l1; // 0x08
 	}
 
-	public struct FStructSize18 // TypeDefIndex: 55989
+	public struct FStructSize19 // TypeDefIndex: 58630
 	{
 		// Fields
 		public long l0; // 0x00
 		public long l1; // 0x08
 		public short s0; // 0x10
+		public byte b0; // 0x12
 	}
 
-	public struct FStructSize20 // TypeDefIndex: 55990
+	public struct FStructSize20 // TypeDefIndex: 58631
 	{
 		// Fields
 		public long l0; // 0x00
@@ -242,7 +261,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x10
 	}
 
-	public struct FStructSize24 // TypeDefIndex: 55991
+	public struct FStructSize24 // TypeDefIndex: 58632
 	{
 		// Fields
 		public long l0; // 0x00
@@ -250,7 +269,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l2; // 0x10
 	}
 
-	public struct FStructSize28 // TypeDefIndex: 55992
+	public struct FStructSize28 // TypeDefIndex: 58633
 	{
 		// Fields
 		public long l0; // 0x00
@@ -259,7 +278,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x18
 	}
 
-	public struct FStructSize32 // TypeDefIndex: 55993
+	public struct FStructSize32 // TypeDefIndex: 58634
 	{
 		// Fields
 		public long l0; // 0x00
@@ -268,7 +287,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l3; // 0x18
 	}
 
-	public struct FStructSize34 // TypeDefIndex: 55994
+	public struct FStructSize34 // TypeDefIndex: 58635
 	{
 		// Fields
 		public long l0; // 0x00
@@ -278,7 +297,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public short s0; // 0x20
 	}
 
-	public struct FStructSize36 // TypeDefIndex: 55995
+	public struct FStructSize36 // TypeDefIndex: 58636
 	{
 		// Fields
 		public long l0; // 0x00
@@ -288,7 +307,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x20
 	}
 
-	public struct FStructSize40 // TypeDefIndex: 55996
+	public struct FStructSize40 // TypeDefIndex: 58637
 	{
 		// Fields
 		public long l0; // 0x00
@@ -298,7 +317,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l4; // 0x20
 	}
 
-	public struct FStructSize44 // TypeDefIndex: 55997
+	public struct FStructSize44 // TypeDefIndex: 58638
 	{
 		// Fields
 		public long l0; // 0x00
@@ -309,7 +328,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x28
 	}
 
-	public struct FStructSize48 // TypeDefIndex: 55998
+	public struct FStructSize48 // TypeDefIndex: 58639
 	{
 		// Fields
 		public long l0; // 0x00
@@ -320,7 +339,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l5; // 0x28
 	}
 
-	public struct FStructSize52 // TypeDefIndex: 55999
+	public struct FStructSize52 // TypeDefIndex: 58640
 	{
 		// Fields
 		public long l0; // 0x00
@@ -332,7 +351,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x30
 	}
 
-	public struct FStructSize56 // TypeDefIndex: 56000
+	public struct FStructSize56 // TypeDefIndex: 58641
 	{
 		// Fields
 		public long l0; // 0x00
@@ -344,7 +363,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l6; // 0x30
 	}
 
-	public struct FStructSize60 // TypeDefIndex: 56001
+	public struct FStructSize60 // TypeDefIndex: 58642
 	{
 		// Fields
 		public long l0; // 0x00
@@ -357,7 +376,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x38
 	}
 
-	public struct FStructSize64 // TypeDefIndex: 56002
+	public struct FStructSize64 // TypeDefIndex: 58643
 	{
 		// Fields
 		public long l0; // 0x00
@@ -370,7 +389,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l7; // 0x38
 	}
 
-	public struct FStructSize68 // TypeDefIndex: 56003
+	public struct FStructSize68 // TypeDefIndex: 58644
 	{
 		// Fields
 		public long l0; // 0x00
@@ -384,7 +403,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x40
 	}
 
-	public struct FStructSize72 // TypeDefIndex: 56004
+	public struct FStructSize72 // TypeDefIndex: 58645
 	{
 		// Fields
 		public long l0; // 0x00
@@ -398,7 +417,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l8; // 0x40
 	}
 
-	public struct FStructSize76 // TypeDefIndex: 56005
+	public struct FStructSize76 // TypeDefIndex: 58646
 	{
 		// Fields
 		public long l0; // 0x00
@@ -413,7 +432,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x48
 	}
 
-	public struct FStructSize80 // TypeDefIndex: 56006
+	public struct FStructSize80 // TypeDefIndex: 58647
 	{
 		// Fields
 		public long l0; // 0x00
@@ -428,7 +447,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l9; // 0x48
 	}
 
-	public struct FStructSize84 // TypeDefIndex: 56007
+	public struct FStructSize84 // TypeDefIndex: 58648
 	{
 		// Fields
 		public long l0; // 0x00
@@ -444,7 +463,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x50
 	}
 
-	public struct FStructSize88 // TypeDefIndex: 56008
+	public struct FStructSize88 // TypeDefIndex: 58649
 	{
 		// Fields
 		public long l0; // 0x00
@@ -460,7 +479,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l10; // 0x50
 	}
 
-	public struct FStructSize92 // TypeDefIndex: 56009
+	public struct FStructSize92 // TypeDefIndex: 58650
 	{
 		// Fields
 		public long l0; // 0x00
@@ -477,7 +496,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x58
 	}
 
-	public struct FStructSize96 // TypeDefIndex: 56010
+	public struct FStructSize96 // TypeDefIndex: 58651
 	{
 		// Fields
 		public long l0; // 0x00
@@ -494,7 +513,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l11; // 0x58
 	}
 
-	public struct FStructSize104 // TypeDefIndex: 56011
+	public struct FStructSize104 // TypeDefIndex: 58652
 	{
 		// Fields
 		public long l0; // 0x00
@@ -512,7 +531,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l12; // 0x60
 	}
 
-	public struct FStructSize108 // TypeDefIndex: 56012
+	public struct FStructSize108 // TypeDefIndex: 58653
 	{
 		// Fields
 		public long l0; // 0x00
@@ -531,7 +550,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x68
 	}
 
-	public struct FStructSize112 // TypeDefIndex: 56013
+	public struct FStructSize112 // TypeDefIndex: 58654
 	{
 		// Fields
 		public long l0; // 0x00
@@ -550,7 +569,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l13; // 0x68
 	}
 
-	public struct FStructSize116 // TypeDefIndex: 56014
+	public struct FStructSize116 // TypeDefIndex: 58655
 	{
 		// Fields
 		public long l0; // 0x00
@@ -570,7 +589,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x70
 	}
 
-	public struct FStructSize120 // TypeDefIndex: 56015
+	public struct FStructSize120 // TypeDefIndex: 58656
 	{
 		// Fields
 		public long l0; // 0x00
@@ -590,7 +609,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l14; // 0x70
 	}
 
-	public struct FStructSize124 // TypeDefIndex: 56016
+	public struct FStructSize124 // TypeDefIndex: 58657
 	{
 		// Fields
 		public long l0; // 0x00
@@ -611,7 +630,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x78
 	}
 
-	public struct FStructSize128 // TypeDefIndex: 56017
+	public struct FStructSize128 // TypeDefIndex: 58658
 	{
 		// Fields
 		public long l0; // 0x00
@@ -632,7 +651,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l15; // 0x78
 	}
 
-	public struct FStructSize136 // TypeDefIndex: 56018
+	public struct FStructSize136 // TypeDefIndex: 58659
 	{
 		// Fields
 		public long l0; // 0x00
@@ -654,7 +673,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l16; // 0x80
 	}
 
-	public struct FStructSize140 // TypeDefIndex: 56019
+	public struct FStructSize140 // TypeDefIndex: 58660
 	{
 		// Fields
 		public long l0; // 0x00
@@ -677,7 +696,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x88
 	}
 
-	public struct FStructSize144 // TypeDefIndex: 56020
+	public struct FStructSize144 // TypeDefIndex: 58661
 	{
 		// Fields
 		public long l0; // 0x00
@@ -700,7 +719,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l17; // 0x88
 	}
 
-	public struct FStructSize148 // TypeDefIndex: 56021
+	public struct FStructSize148 // TypeDefIndex: 58662
 	{
 		// Fields
 		public long l0; // 0x00
@@ -724,7 +743,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0x90
 	}
 
-	public struct FStructSize152 // TypeDefIndex: 56022
+	public struct FStructSize152 // TypeDefIndex: 58663
 	{
 		// Fields
 		public long l0; // 0x00
@@ -748,7 +767,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l18; // 0x90
 	}
 
-	public struct FStructSize160 // TypeDefIndex: 56023
+	public struct FStructSize160 // TypeDefIndex: 58664
 	{
 		// Fields
 		public long l0; // 0x00
@@ -773,7 +792,33 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l19; // 0x98
 	}
 
-	public struct FStructSize168 // TypeDefIndex: 56024
+	public struct FStructSize164 // TypeDefIndex: 58665
+	{
+		// Fields
+		public long l0; // 0x00
+		public long l1; // 0x08
+		public long l2; // 0x10
+		public long l3; // 0x18
+		public long l4; // 0x20
+		public long l5; // 0x28
+		public long l6; // 0x30
+		public long l7; // 0x38
+		public long l8; // 0x40
+		public long l9; // 0x48
+		public long l10; // 0x50
+		public long l11; // 0x58
+		public long l12; // 0x60
+		public long l13; // 0x68
+		public long l14; // 0x70
+		public long l15; // 0x78
+		public long l16; // 0x80
+		public long l17; // 0x88
+		public long l18; // 0x90
+		public long l19; // 0x98
+		public int i0; // 0xA0
+	}
+
+	public struct FStructSize168 // TypeDefIndex: 58666
 	{
 		// Fields
 		public long l0; // 0x00
@@ -799,34 +844,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l20; // 0xA0
 	}
 
-	public struct FStructSize172 // TypeDefIndex: 56025
-	{
-		// Fields
-		public long l0; // 0x00
-		public long l1; // 0x08
-		public long l2; // 0x10
-		public long l3; // 0x18
-		public long l4; // 0x20
-		public long l5; // 0x28
-		public long l6; // 0x30
-		public long l7; // 0x38
-		public long l8; // 0x40
-		public long l9; // 0x48
-		public long l10; // 0x50
-		public long l11; // 0x58
-		public long l12; // 0x60
-		public long l13; // 0x68
-		public long l14; // 0x70
-		public long l15; // 0x78
-		public long l16; // 0x80
-		public long l17; // 0x88
-		public long l18; // 0x90
-		public long l19; // 0x98
-		public long l20; // 0xA0
-		public int i0; // 0xA8
-	}
-
-	public struct FStructSize176 // TypeDefIndex: 56026
+	public struct FStructSize176 // TypeDefIndex: 58667
 	{
 		// Fields
 		public long l0; // 0x00
@@ -853,7 +871,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l21; // 0xA8
 	}
 
-	public struct FStructSize180 // TypeDefIndex: 56027
+	public struct FStructSize180 // TypeDefIndex: 58668
 	{
 		// Fields
 		public long l0; // 0x00
@@ -881,7 +899,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0xB0
 	}
 
-	public struct FStructSize184 // TypeDefIndex: 56028
+	public struct FStructSize184 // TypeDefIndex: 58669
 	{
 		// Fields
 		public long l0; // 0x00
@@ -909,7 +927,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l22; // 0xB0
 	}
 
-	public struct FStructSize192 // TypeDefIndex: 56029
+	public struct FStructSize192 // TypeDefIndex: 58670
 	{
 		// Fields
 		public long l0; // 0x00
@@ -938,7 +956,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l23; // 0xB8
 	}
 
-	public struct FStructSize196 // TypeDefIndex: 56030
+	public struct FStructSize196 // TypeDefIndex: 58671
 	{
 		// Fields
 		public long l0; // 0x00
@@ -968,7 +986,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0xC0
 	}
 
-	public struct FStructSize200 // TypeDefIndex: 56031
+	public struct FStructSize200 // TypeDefIndex: 58672
 	{
 		// Fields
 		public long l0; // 0x00
@@ -998,38 +1016,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l24; // 0xC0
 	}
 
-	public struct FStructSize208 // TypeDefIndex: 56032
-	{
-		// Fields
-		public long l0; // 0x00
-		public long l1; // 0x08
-		public long l2; // 0x10
-		public long l3; // 0x18
-		public long l4; // 0x20
-		public long l5; // 0x28
-		public long l6; // 0x30
-		public long l7; // 0x38
-		public long l8; // 0x40
-		public long l9; // 0x48
-		public long l10; // 0x50
-		public long l11; // 0x58
-		public long l12; // 0x60
-		public long l13; // 0x68
-		public long l14; // 0x70
-		public long l15; // 0x78
-		public long l16; // 0x80
-		public long l17; // 0x88
-		public long l18; // 0x90
-		public long l19; // 0x98
-		public long l20; // 0xA0
-		public long l21; // 0xA8
-		public long l22; // 0xB0
-		public long l23; // 0xB8
-		public long l24; // 0xC0
-		public long l25; // 0xC8
-	}
-
-	public struct FStructSize216 // TypeDefIndex: 56033
+	public struct FStructSize208 // TypeDefIndex: 58673
 	{
 		// Fields
 		public long l0; // 0x00
@@ -1058,10 +1045,9 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l23; // 0xB8
 		public long l24; // 0xC0
 		public long l25; // 0xC8
-		public long l26; // 0xD0
 	}
 
-	public struct FStructSize220 // TypeDefIndex: 56034
+	public struct FStructSize220 // TypeDefIndex: 58674
 	{
 		// Fields
 		public long l0; // 0x00
@@ -1094,7 +1080,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public int i0; // 0xD8
 	}
 
-	public struct FStructSize224 // TypeDefIndex: 56035
+	public struct FStructSize224 // TypeDefIndex: 58675
 	{
 		// Fields
 		public long l0; // 0x00
@@ -1127,7 +1113,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l27; // 0xD8
 	}
 
-	public struct FStructSize232 // TypeDefIndex: 56036
+	public struct FStructSize232 // TypeDefIndex: 58676
 	{
 		// Fields
 		public long l0; // 0x00
@@ -1161,7 +1147,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l28; // 0xE0
 	}
 
-	public struct FStructSize240 // TypeDefIndex: 56037
+	public struct FStructSize240 // TypeDefIndex: 58677
 	{
 		// Fields
 		public long l0; // 0x00
@@ -1196,7 +1182,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l29; // 0xE8
 	}
 
-	public struct FStructSize248 // TypeDefIndex: 56038
+	public struct FStructSize248 // TypeDefIndex: 58678
 	{
 		// Fields
 		public long l0; // 0x00
@@ -1232,7 +1218,7 @@ namespace Beyond.Reflection.StructSizeGen
 		public long l30; // 0xF0
 	}
 
-	public struct FStructSize256 // TypeDefIndex: 56039
+	public struct FStructSize256 // TypeDefIndex: 58679
 	{
 		// Fields
 		public long l0; // 0x00
@@ -1272,19 +1258,19 @@ namespace Beyond.Reflection.StructSizeGen
 
 namespace Beyond.Scripts.Lua
 {
-	public enum ELuaMultithreadingGCState // TypeDefIndex: 56040
+	public enum ELuaMultithreadingGCState // TypeDefIndex: 58680
 	{
 		MinorGC = 0,
 		MajorGC = 1
 	}
 
-	public class OnGCEndEvent : UnityEvent // TypeDefIndex: 56041
+	public class OnGCEndEvent : UnityEvent // TypeDefIndex: 58681
 	{
 		// Constructors
-		public OnGCEndEvent() {} // 0x0000000186470378-0x0000000186470380
+		public OnGCEndEvent(); // 0x0000000185393538-0x0000000185393540
 	}
 
-	public class LuaMultithreadingGC // TypeDefIndex: 56046
+	public class LuaMultithreadingGC // TypeDefIndex: 58686
 	{
 		// Fields
 		public static int threadGcCount; // 0x00
@@ -1301,77 +1287,81 @@ namespace Beyond.Scripts.Lua
 		private int m_badGCThreshold; // 0x34
 		private float m_genGcIncreaseThreshold; // 0x38
 		private float m_genGcIncreaseThresholdDiff; // 0x3C
-		private int m_incGCThreshold; // 0x40
-		private OnGCEndEvent m_afterGCEvent; // 0x48
-		private List<UnityAction> m_afterGCEventOnceEvents; // 0x50
-		public ELuaMultithreadingGCState gcState; // 0x58
-		public long mainThreadWait; // 0x60
-		public long gcThreadStop; // 0x68
-		public bool stop; // 0x70
-		public bool isRunning; // 0x71
-		private XLua.LuaDLL.lua_Hook hook; // 0x78
+		private int m_forceGCBaseLine; // 0x40
+		private int m_incGCThreshold; // 0x44
+		private int m_majorGCFactor; // 0x48
+		private int m_forceGCFactor; // 0x4C
+		private OnGCEndEvent m_afterGCEvent; // 0x50
+		private List<UnityAction> m_afterGCEventOnceEvents; // 0x58
+		public ELuaMultithreadingGCState gcState; // 0x60
+		public long mainThreadWait; // 0x68
+		public long gcThreadStop; // 0x70
+		public bool stop; // 0x78
+		public bool isRunning; // 0x79
+		private XLua.LuaDLL.lua_Hook hook; // 0x80
 		private static XLua.LuaDLL.lua_Hook oldHook; // 0x18
 		private static int oldHookMask; // 0x20
-		private bool haveRunOnce; // 0x80
+		private bool haveRunOnce; // 0x88
 		private static readonly ProfilerMarker PROFILER_MARKER_START_GC; // 0x28
 		private static readonly ProfilerMarker PROFILER_MARKER_THREAD_NOTIFY; // 0x30
 	
 		// Nested types
-		public struct StartLuaGC // TypeDefIndex: 56042
+		public struct StartLuaGC // TypeDefIndex: 58682
 		{
 		}
 	
-		public struct WaitLuaGC // TypeDefIndex: 56043
+		public struct WaitLuaGC // TypeDefIndex: 58683
 		{
 		}
 	
-		public struct OnGCEnd // TypeDefIndex: 56044
+		public struct OnGCEnd // TypeDefIndex: 58684
 		{
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 56045
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58685
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
-			public static Func<PlayerLoopSystem, bool> __9__41_0; // 0x08
+			public static Func<PlayerLoopSystem, bool> __9__44_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x0000000184CC43C0-0x0000000184CC46D0
-			public __c() {} // 0x000000018455A590-0x000000018455AC00
+			static __c(); // 0x000000018B8A5BD8-0x000000018B8A5C3C
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool __Dispose_b__41_0(PlayerLoopSystem x) => default; // 0x000000018C3B80E8-0x000000018C3B8188
+			internal bool __Dispose_b__44_0(PlayerLoopSystem x); // 0x0000000182ED60A0-0x0000000182ED6C30
 		}
 	
 		// Constructors
-		public LuaMultithreadingGC() {} // Dummy constructor
-		public LuaMultithreadingGC(LuaEnv luaEnv) {} // 0x000000018C3B7F2C-0x000000018C3B7FA4
-		static LuaMultithreadingGC() {} // 0x000000018C3BC3B0-0x000000018C3BC474
+		public LuaMultithreadingGC(LuaEnv luaEnv); // 0x0000000183B25580-0x0000000183B258B0
+		static LuaMultithreadingGC(); // 0x0000000184B84B50-0x0000000184B84C60
 	
 		// Methods
-		public void StartGCAsync() {} // 0x0000000184559950-0x0000000184559AF0
-		public void NormalStop() {} // 0x0000000185A5F110-0x0000000185A5F160
-		public void ForceStopAsyncGC() {} // 0x000000018C3B7EA4-0x000000018C3B7F2C
-		public void MainThreadWait() {} // 0x000000018C3B8188-0x000000018C3B81F0
-		public void AddLuaAfterGCEvent(UnityAction action) {} // 0x0000000184559AF0-0x0000000184559C10
-		public void AddLuaAfterGCOnceEvent(UnityAction action) {} // 0x0000000184B25570-0x0000000184B25CC0
-		public void RemoveLuaAfterGCEvent(UnityAction action) {} // 0x000000018C3B81F0-0x000000018C3B86C0
-		private void _OnGCEnd() {} // 0x0000000184B281C0-0x0000000184B28270
-		private void _Init() {} // 0x000000018C3B7FA4-0x000000018C3B80E8
-		private void _Dispose() {} // 0x000000018C3B86C0-0x000000018C3B88A4
-		private static int _FindLoopSystemIndex(PlayerLoopSystem[] playerLoopList, string typeName) => default; // 0x00000001847C40E0-0x00000001847C4120
-		public static int LuaHook(IntPtr L, ref lua_debug ar) => default; // 0x00000001847C2CF0-0x00000001847C2DD0
-		private void _UpdateOldHook() {} // 0x00000001847C4120-0x00000001847C4420
-		private bool _DoLock() => default; // 0x0000000185DAB8A0-0x0000000185DAB9B0
-		private bool _DoGc(int work = 0 /* Metadata: 0x0207C1A4 */) => default; // 0x000000018C3BCAFC-0x000000018C3BCB60
-		private void _GCMethodWrapper() {} // 0x0000000185492010-0x0000000185492020
+		public void StartGCAsync(); // 0x00000001838EE820-0x00000001838EF140
+		public void NormalStop(); // 0x000000018B8A11B4-0x000000018B8A1254
+		public void ForceStopAsyncGC(); // 0x000000018B8A0FF8-0x000000018B8A1070
+		public void MainThreadWait(); // 0x00000001838EF140-0x00000001838EF8C0
+		public void AddLuaAfterGCEvent(UnityAction action); // 0x000000018488B6A0-0x000000018488B6F0
+		public void AddLuaAfterGCOnceEvent(UnityAction action); // 0x000000018423A4A0-0x000000018423A510
+		public void RemoveLuaAfterGCEvent(UnityAction action); // 0x000000018B8A1254-0x000000018B8A12BC
+		private void _OnGCEnd(); // 0x00000001838EF910-0x00000001838EFAD0
+		private void _Init(); // 0x0000000183322B40-0x0000000183323290
+		private void _Dispose(); // 0x000000018B8A12BC-0x000000018B8A178C
+		private static int _FindLoopSystemIndex(PlayerLoopSystem[] playerLoopList, string typeName); // 0x0000000183325790-0x0000000183325840
+		[AOT.MonoPInvokeCallback(typeof(XLua.lua_Hook))]
+		public static int LuaHook(IntPtr L, ref lua_debug ar); // 0x000000018B8A1070-0x000000018B8A11B4
+		private void _UpdateOldHook(); // 0x000000018B8A178C-0x000000018B8A1974
+		private bool _DoLock(); // 0x00000001838F0A20-0x00000001838F0A60
+		private bool _DoGc(int work = 0 /* Metadata: 0x0234BE54 */); // 0x00000001838F1730-0x00000001838F17F0
+		private void _GCMethodWrapper(); // 0x00000001838EFB20-0x00000001838F0A20
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 56211
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 58851
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -1380,64 +1370,56 @@ namespace IFix
 		public static ILFixDynamicMethodWrapper[] wrapperArray; // 0x00
 	
 		// Constructors
-		public ILFixDynamicMethodWrapper() {} // Dummy constructor
-		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000184E6FCD0-0x0000000184E6FD00
-		static ILFixDynamicMethodWrapper() {} // 0x0000000185F64780-0x0000000185F647F0
+		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj); // 0x00000001832B2C30-0x00000001832B2C60
+		static ILFixDynamicMethodWrapper(); // 0x0000000184D37800-0x0000000184D37870
 	
 		// Methods
-		public System.Type __Gen_Wrap_0(object P0) => default; // 0x000000018C3C54E0-0x000000018C3C55BC
-		public void __Gen_Wrap_1(object P0, object P1) {} // 0x00000001873527E8-0x00000001873528C4
-		public List<MethodParamItem> __Gen_Wrap_2(object P0, bool P1, bool P2) => default; // 0x000000018C3C5C38-0x000000018C3C5D4C
-		public string __Gen_Wrap_3(object P0, bool P1, bool P2, bool P3) => default; // 0x000000018C3C5D4C-0x000000018C3C5E74
-		public void __Gen_Wrap_4(object P0) {} // 0x000000018646FFC0-0x0000000186470080
-		public bool __Gen_Wrap_5(PlayerLoopSystem P0) => default; // 0x000000018C3C5E74-0x000000018C3C5F78
-		public int __Gen_Wrap_6(object P0, object P1) => default; // 0x00000001876A48A4-0x00000001876A4990
-		public int __Gen_Wrap_7(IntPtr P0, ref lua_debug P1) => default; // 0x000000018C3C5F78-0x000000018C3C60E4
-		public bool __Gen_Wrap_8(object P0) => default; // 0x000000018735B960-0x000000018735BA30
-		public bool __Gen_Wrap_9(object P0, int P1) => default; // 0x000000018768D9EC-0x000000018768DAD8
-		public string __Gen_Wrap_10() => default; // 0x000000018C3C55BC-0x000000018C3C5674
-		public void __Gen_Wrap_11(Span<byte> P0, out int P1) {
-			P1 = default;
-		} // 0x000000018C3C5674-0x000000018C3C5798
-		public byte[] __Gen_Wrap_12(object P0) => default; // 0x000000018C3C5798-0x000000018C3C5874
-		public string __Gen_Wrap_13(object P0) => default; // 0x000000018C3C5874-0x000000018C3C5950
-		public IntPtr __Gen_Wrap_14(IntPtr P0, int P1, out int P2) {
-			P2 = default;
-			return default;
-		} // 0x000000018C3C5950-0x000000018C3C5A68
-		public LuaGenericDelegateCaller.LuaGenericDelegateCall __Gen_Wrap_15(object P0) => default; // 0x000000018C3C5A68-0x000000018C3C5B44
-		public int __Gen_Wrap_16(IntPtr P0, object P1, object P2) => default; // 0x000000018C3C5B44-0x000000018C3C5C38
+		public System.Type __Gen_Wrap_0(object P0); // 0x000000018B8AE564-0x000000018B8AE640
+		public void __Gen_Wrap_1(object P0, object P1); // 0x0000000186377B18-0x0000000186377BF4
+		public List<MethodParamItem> __Gen_Wrap_2(object P0, bool P1, bool P2); // 0x000000018B8AECBC-0x000000018B8AEDD0
+		public string __Gen_Wrap_3(object P0, bool P1, bool P2, bool P3); // 0x000000018B8AEDD0-0x000000018B8AEEF8
+		public void __Gen_Wrap_4(object P0); // 0x00000001863633B4-0x0000000186363474
+		public bool __Gen_Wrap_5(PlayerLoopSystem P0); // 0x000000018B8AEEF8-0x000000018B8AEFFC
+		public int __Gen_Wrap_6(object P0, object P1); // 0x0000000186360610-0x00000001863606FC
+		public int __Gen_Wrap_7(IntPtr P0, ref lua_debug P1); // 0x000000018B8AEFFC-0x000000018B8AF168
+		public bool __Gen_Wrap_8(object P0); // 0x00000001863632E4-0x00000001863633B4
+		public bool __Gen_Wrap_9(object P0, int P1); // 0x00000001866E0A9C-0x00000001866E0B88
+		public string __Gen_Wrap_10(); // 0x000000018B8AE640-0x000000018B8AE6F8
+		public void __Gen_Wrap_11(Span<byte> P0, out int P1); // 0x000000018B8AE6F8-0x000000018B8AE81C
+		public byte[] __Gen_Wrap_12(object P0); // 0x000000018B8AE81C-0x000000018B8AE8F8
+		public string __Gen_Wrap_13(object P0); // 0x000000018B8AE8F8-0x000000018B8AE9D4
+		public IntPtr __Gen_Wrap_14(IntPtr P0, int P1, out int P2); // 0x000000018B8AE9D4-0x000000018B8AEAEC
+		public LuaGenericDelegateCaller.LuaGenericDelegateCall __Gen_Wrap_15(object P0); // 0x000000018B8AEAEC-0x000000018B8AEBC8
+		public int __Gen_Wrap_16(IntPtr P0, object P1, object P2); // 0x000000018B8AEBC8-0x000000018B8AECBC
 	}
 
-	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 56212
+	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 58852
 	{
 		// Constructors
-		public ILFixInterfaceBridge() {} // Dummy constructor
-		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x000000018C3C60E4-0x000000018C3C6178
+		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine); // 0x000000018B8AF168-0x000000018B8AF1FC
 	
 		// Methods
-		public void RefAsyncBuilderStartMethod() {} // 0x0000000185492010-0x0000000185492020
+		public void RefAsyncBuilderStartMethod(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 56213
+	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 58853
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
 	
 		// Constructors
-		public WrappersManagerImpl() {} // Dummy constructor
-		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x0000000184096E30-0x0000000184096EF0
+		public WrappersManagerImpl(VirtualMachine virtualMachine); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x0000000186470080-0x00000001864700E4
-		public static bool IsPatched(int id) => default; // 0x0000000184559C10-0x0000000184559C80
-		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x000000018C3CDA3C-0x000000018C3CDB08
-		public object CreateWrapper(int id) => default; // 0x000000018C3CDB08-0x000000018C3CDB80
-		public object InitWrapperArray(int len) => default; // 0x000000018C3CDB80-0x000000018C3CDC0C
-		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x000000018C3CD998-0x000000018C3CDA3C
+		public static ILFixDynamicMethodWrapper GetPatch(int id); // 0x000000018B8B6A50-0x000000018B8B6AB4
+		public static bool IsPatched(int id); // 0x00000001838EFAD0-0x00000001838EFB20
+		public Delegate CreateDelegate(System.Type type, int id, object anon); // 0x000000018B8B690C-0x000000018B8B69D8
+		public object CreateWrapper(int id); // 0x000000018B8B69D8-0x000000018B8B6A50
+		public object InitWrapperArray(int len); // 0x000000018B8B6AB4-0x000000018B8B6B40
+		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine); // 0x000000018B8B6868-0x000000018B8B690C
 	}
 
-	public enum IDMAP0 // TypeDefIndex: 56214
+	public enum IDMAP0 // TypeDefIndex: 58854
 	{
 		Beyond-Reflection-GenericDelegateCaller-GetCustomDelegateType0 = 0,
 		Beyond-Reflection-GenericDelegateCaller-AddCustomDelegateType0 = 1,
@@ -1474,140 +1456,109 @@ namespace IFix
 
 namespace Microsoft.CodeAnalysis
 {
-	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 55974
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 58615
 	{
 		// Constructors
-		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public EmbeddedAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace Security
 {
-	public sealed class XXTEA // TypeDefIndex: 55977
+	public sealed class XXTEA // TypeDefIndex: 58618
 	{
 		// Fields
 		private static readonly UTF8Encoding utf8; // 0x00
-		private const uint delta = 2654435769; // Metadata: 0x0207C198
+		private const uint delta = 2654435769; // Metadata: 0x0234BE48
 	
 		// Constructors
-		private XXTEA() {} // 0x0000000185492010-0x0000000185492020
-		static XXTEA() {} // 0x000000018C3BE250-0x000000018C3BE2CC
+		private XXTEA(); // 0x00000001841E1670-0x00000001841E1680
+		static XXTEA(); // 0x000000018B8A732C-0x000000018B8A73A8
 	
 		// Methods
-		private static uint MX(uint sum, uint y, uint z, int p, uint e, uint[] k) => default; // 0x000000018C3BDA98-0x000000018C3BDB3C
-		public static byte[] Encrypt(byte[] data, byte[] key) => default; // 0x000000018C3BD838-0x000000018C3BD8D4
-		public static byte[] Encrypt(string data, byte[] key) => default; // 0x000000018C3BD55C-0x000000018C3BD5D8
-		public static byte[] Encrypt(byte[] data, string key) => default; // 0x000000018C3BD8D4-0x000000018C3BD950
-		public static byte[] Encrypt(string data, string key) => default; // 0x000000018C3BD5D8-0x000000018C3BD678
-		public static string EncryptToBase64String(byte[] data, byte[] key) => default; // 0x000000018C3BD46C-0x000000018C3BD4E4
-		public static string EncryptToBase64String(string data, byte[] key) => default; // 0x000000018C3BD4E4-0x000000018C3BD55C
-		public static string EncryptToBase64String(byte[] data, string key) => default; // 0x000000018C3BD37C-0x000000018C3BD3F4
-		public static string EncryptToBase64String(string data, string key) => default; // 0x000000018C3BD3F4-0x000000018C3BD46C
-		public static byte[] Decrypt(byte[] data, byte[] key) => default; // 0x000000018C3BD25C-0x000000018C3BD2F8
-		private static int _Decrypt(Span<byte> data, Span<byte> key, Span<byte> result) => default; // 0x000000018C3BDFA0-0x000000018C3BE250
-		public static byte[] Decrypt(byte[] data, string key) => default; // 0x000000018C3BD1E0-0x000000018C3BD25C
-		public static int Decrypt(Span<byte> data, Span<byte> key, Span<byte> result) => default; // 0x000000018C3BD2F8-0x000000018C3BD37C
-		public static byte[] DecryptBase64String(string data, byte[] key) => default; // 0x000000018C3BCC68-0x000000018C3BCCE0
-		public static byte[] DecryptBase64String(string data, string key) => default; // 0x000000018C3BCCE0-0x000000018C3BCD58
-		public static string DecryptToString(byte[] data, byte[] key) => default; // 0x000000018C3BCF34-0x000000018C3BCFB8
-		public static string DecryptToString(byte[] data, string key) => default; // 0x000000018C3BCFB8-0x000000018C3BD03C
-		public static string DecryptBase64StringToString(string data, byte[] key) => default; // 0x000000018C3BCBE4-0x000000018C3BCC68
-		public static string DecryptBase64StringToString(string data, string key) => default; // 0x000000018C3BCB60-0x000000018C3BCBE4
-		private static uint[] Encrypt(uint[] v, uint[] k) => default; // 0x000000018C3BD678-0x000000018C3BD838
-		private static uint[] Decrypt(uint[] v, uint[] k) => default; // 0x000000018C3BD03C-0x000000018C3BD1E0
-		private static void DecryptInPlace(Span<uint> v, Span<uint> k) {} // 0x000000018C3BCD58-0x000000018C3BCF34
-		private static uint MxForSpan(uint sum, uint y, uint z, int p, uint e, Span<uint> k) => default; // 0x000000018C3BDB3C-0x000000018C3BDBA0
-		private static byte[] FixKey(byte[] key) => default; // 0x000000018C3BDA00-0x000000018C3BDA98
-		private static void FixKey(Span<byte> key, Span<byte> fixedkey) {} // 0x000000018C3BD950-0x000000018C3BDA00
-		private static uint[] ToUInt32Array(byte[] data, bool includeLength) => default; // 0x000000018C3BDEB0-0x000000018C3BDFA0
-		private static void ToUInt32Array(Span<byte> data, bool includeLength, Span<uint> result) {} // 0x000000018C3BDDC0-0x000000018C3BDEB0
-		private static byte[] ToByteArray(uint[] data, bool includeLength) => default; // 0x000000018C3BDBA0-0x000000018C3BDC7C
-		private static void ToByteSpanFromUInt32(Span<uint> data, bool includeLength, Span<byte> result, out int len) {
-			len = default;
-		} // 0x000000018C3BDC7C-0x000000018C3BDDC0
+		private static uint MX(uint sum, uint y, uint z, int p, uint e, uint[] k); // 0x000000018B8A6B74-0x000000018B8A6C18
+		public static byte[] Encrypt(byte[] data, byte[] key); // 0x000000018B8A6914-0x000000018B8A69B0
+		public static byte[] Encrypt(string data, byte[] key); // 0x000000018B8A6638-0x000000018B8A66B4
+		public static byte[] Encrypt(byte[] data, string key); // 0x000000018B8A69B0-0x000000018B8A6A2C
+		public static byte[] Encrypt(string data, string key); // 0x000000018B8A66B4-0x000000018B8A6754
+		public static string EncryptToBase64String(byte[] data, byte[] key); // 0x000000018B8A6548-0x000000018B8A65C0
+		public static string EncryptToBase64String(string data, byte[] key); // 0x000000018B8A65C0-0x000000018B8A6638
+		public static string EncryptToBase64String(byte[] data, string key); // 0x000000018B8A6458-0x000000018B8A64D0
+		public static string EncryptToBase64String(string data, string key); // 0x000000018B8A64D0-0x000000018B8A6548
+		public static byte[] Decrypt(byte[] data, byte[] key); // 0x000000018B8A6338-0x000000018B8A63D4
+		private static int _Decrypt(Span<byte> data, Span<byte> key, Span<byte> result); // 0x000000018B8A707C-0x000000018B8A732C
+		public static byte[] Decrypt(byte[] data, string key); // 0x000000018B8A62BC-0x000000018B8A6338
+		public static int Decrypt(Span<byte> data, Span<byte> key, Span<byte> result); // 0x000000018B8A63D4-0x000000018B8A6458
+		public static byte[] DecryptBase64String(string data, byte[] key); // 0x000000018B8A5D44-0x000000018B8A5DBC
+		public static byte[] DecryptBase64String(string data, string key); // 0x000000018B8A5DBC-0x000000018B8A5E34
+		public static string DecryptToString(byte[] data, byte[] key); // 0x000000018B8A6010-0x000000018B8A6094
+		public static string DecryptToString(byte[] data, string key); // 0x000000018B8A6094-0x000000018B8A6118
+		public static string DecryptBase64StringToString(string data, byte[] key); // 0x000000018B8A5CC0-0x000000018B8A5D44
+		public static string DecryptBase64StringToString(string data, string key); // 0x000000018B8A5C3C-0x000000018B8A5CC0
+		private static uint[] Encrypt(uint[] v, uint[] k); // 0x000000018B8A6754-0x000000018B8A6914
+		private static uint[] Decrypt(uint[] v, uint[] k); // 0x000000018B8A6118-0x000000018B8A62BC
+		private static void DecryptInPlace(Span<uint> v, Span<uint> k); // 0x000000018B8A5E34-0x000000018B8A6010
+		private static uint MxForSpan(uint sum, uint y, uint z, int p, uint e, Span<uint> k); // 0x000000018B8A6C18-0x000000018B8A6C7C
+		private static byte[] FixKey(byte[] key); // 0x000000018B8A6ADC-0x000000018B8A6B74
+		private static void FixKey(Span<byte> key, Span<byte> fixedkey); // 0x000000018B8A6A2C-0x000000018B8A6ADC
+		private static uint[] ToUInt32Array(byte[] data, bool includeLength); // 0x000000018B8A6F8C-0x000000018B8A707C
+		private static void ToUInt32Array(Span<byte> data, bool includeLength, Span<uint> result); // 0x000000018B8A6E9C-0x000000018B8A6F8C
+		private static byte[] ToByteArray(uint[] data, bool includeLength); // 0x000000018B8A6C7C-0x000000018B8A6D58
+		private static void ToByteSpanFromUInt32(Span<uint> data, bool includeLength, Span<byte> result, out int len); // 0x000000018B8A6D58-0x000000018B8A6E9C
 	}
 }
 
 namespace System.Runtime.CompilerServices
 {
-	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 55975
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 58616
 	{
 		// Constructors
-		public IsUnmanagedAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public IsUnmanagedAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace XLua
 {
-	public class CopyByValue // TypeDefIndex: 56050
+	public class CopyByValue // TypeDefIndex: 58690
 	{
 		// Fields
 		public static CopyByValue Instance; // 0x00
 	
 		// Constructors
-		public CopyByValue() {} // 0x0000000185492010-0x0000000185492020
-		static CopyByValue() {} // 0x0000000185F7A170-0x0000000185F7A1D0
+		public CopyByValue(); // 0x00000001841E1670-0x00000001841E1680
+		static CopyByValue(); // 0x0000000184D4E3D0-0x0000000184D4E430
 	
 		// Methods
-		public bool Pack(IntPtr buff, int offset, byte field) => default; // 0x000000018C3B2B2C-0x000000018C3B2B90
-		public bool UnPack(IntPtr buff, int offset, out byte field) {
-			field = default;
-			return default;
-		} // 0x000000018C3B328C-0x000000018C3B32F0
-		public bool Pack(IntPtr buff, int offset, sbyte field) => default; // 0x000000018C3B2A68-0x000000018C3B2ACC
-		public bool UnPack(IntPtr buff, int offset, out sbyte field) {
-			field = default;
-			return default;
-		} // 0x000000018C3B321C-0x000000018C3B328C
-		public bool Pack(IntPtr buff, int offset, short field) => default; // 0x000000018C3B2B90-0x000000018C3B2BF4
-		public bool UnPack(IntPtr buff, int offset, out short field) {
-			field = default;
-			return default;
-		} // 0x000000018C3B31B8-0x000000018C3B321C
-		public bool Pack(IntPtr buff, int offset, ushort field) => default; // 0x000000018C3B2D84-0x000000018C3B2DE8
-		public bool UnPack(IntPtr buff, int offset, out ushort field) {
-			field = default;
-			return default;
-		} // 0x000000018C3B2EB0-0x000000018C3B2F30
-		public bool Pack(IntPtr buff, int offset, int field) => default; // 0x0000000184CF4D60-0x0000000184CF4DE0
-		public bool UnPack(IntPtr buff, int offset, out int field) {
-			field = default;
-			return default;
-		} // 0x0000000184D27620-0x0000000184D276A0
-		public bool Pack(IntPtr buff, int offset, uint field) => default; // 0x000000018C3B2ACC-0x000000018C3B2B2C
-		public bool UnPack(IntPtr buff, int offset, out uint field) {
-			field = default;
-			return default;
-		} // 0x000000018C3B2F94-0x000000018C3B3004
-		public bool Pack(IntPtr buff, int offset, long field) => default; // 0x000000018C3B2D20-0x000000018C3B2D84
-		public bool UnPack(IntPtr buff, int offset, out long field) {
-			field = default;
-			return default;
-		} // 0x000000018C3B2E4C-0x000000018C3B2EB0
-		public bool Pack(IntPtr buff, int offset, ulong field) => default; // 0x000000018C3B2CBC-0x000000018C3B2D20
-		public bool UnPack(IntPtr buff, int offset, out ulong field) {
-			field = default;
-			return default;
-		} // 0x000000018C3B3144-0x000000018C3B31B8
-		public bool Pack(IntPtr buff, int offset, float field) => default; // 0x000000018C3B2C58-0x000000018C3B2CBC
-		public bool UnPack(IntPtr buff, int offset, out float field) {
-			field = default;
-			return default;
-		} // 0x000000018C3B2F30-0x000000018C3B2F94
-		public bool Pack(IntPtr buff, int offset, double field) => default; // 0x000000018C3B2BF4-0x000000018C3B2C58
-		public bool UnPack(IntPtr buff, int offset, out double field) {
-			field = default;
-			return default;
-		} // 0x000000018C3B30E0-0x000000018C3B3144
-		public bool Pack(IntPtr buff, int offset, decimal field) => default; // 0x000000018C3B2DE8-0x000000018C3B2E4C
-		public bool UnPack(IntPtr buff, int offset, out decimal field) {
-			field = default;
-			return default;
-		} // 0x000000018C3B3004-0x000000018C3B30E0
-		public bool IsStruct(System.Type type) => default; // 0x0000000184343F40-0x0000000184343F90
+		public bool Pack(IntPtr buff, int offset, byte field); // 0x000000018B89E56C-0x000000018B89E5D0
+		public bool UnPack(IntPtr buff, int offset, out byte field); // 0x000000018B89ED38-0x000000018B89ED9C
+		public bool Pack(IntPtr buff, int offset, sbyte field); // 0x000000018B89E4A8-0x000000018B89E50C
+		public bool UnPack(IntPtr buff, int offset, out sbyte field); // 0x000000018B89ECC8-0x000000018B89ED38
+		public bool Pack(IntPtr buff, int offset, short field); // 0x000000018B89E5D0-0x000000018B89E634
+		public bool UnPack(IntPtr buff, int offset, out short field); // 0x000000018B89EC64-0x000000018B89ECC8
+		public bool Pack(IntPtr buff, int offset, ushort field); // 0x000000018B89E7C4-0x000000018B89E828
+		public bool UnPack(IntPtr buff, int offset, out ushort field); // 0x000000018B89E8F0-0x000000018B89E970
+		public bool Pack(IntPtr buff, int offset, int field); // 0x0000000183B61630-0x0000000183B61690
+		public bool UnPack(IntPtr buff, int offset, out int field); // 0x0000000183A1B1B0-0x0000000183A1B210
+		public bool Pack(IntPtr buff, int offset, uint field); // 0x000000018B89E50C-0x000000018B89E56C
+		public bool UnPack(IntPtr buff, int offset, out uint field); // 0x000000018B89E9D4-0x000000018B89EA44
+		public bool Pack(IntPtr buff, int offset, long field); // 0x000000018B89E760-0x000000018B89E7C4
+		public bool UnPack(IntPtr buff, int offset, out long field); // 0x000000018B89E88C-0x000000018B89E8F0
+		public bool Pack(IntPtr buff, int offset, ulong field); // 0x000000018B89E6FC-0x000000018B89E760
+		public bool UnPack(IntPtr buff, int offset, out ulong field); // 0x000000018B89EBF0-0x000000018B89EC64
+		public bool Pack(IntPtr buff, int offset, float field); // 0x000000018B89E698-0x000000018B89E6FC
+		public bool UnPack(IntPtr buff, int offset, out float field); // 0x000000018B89E970-0x000000018B89E9D4
+		public bool Pack(IntPtr buff, int offset, double field); // 0x000000018B89E634-0x000000018B89E698
+		public bool UnPack(IntPtr buff, int offset, out double field); // 0x000000018B89EB8C-0x000000018B89EBF0
+		public bool Pack(IntPtr buff, int offset, decimal field); // 0x000000018B89E828-0x000000018B89E88C
+		public bool UnPack(IntPtr buff, int offset, out decimal field); // 0x000000018B89EA44-0x000000018B89EB8C
+		public bool IsStruct(System.Type type); // 0x0000000182F2A650-0x0000000182F2A6A0
 	}
 
-	public abstract class DelegateBridgeBase : LuaBase // TypeDefIndex: 56051
+	public abstract class DelegateBridgeBase : LuaBase // TypeDefIndex: 58691
 	{
 		// Fields
 		private System.Type firstKey; // 0x20
@@ -1616,30 +1567,26 @@ namespace XLua
 		public int errorFuncRef; // 0x38
 	
 		// Properties
-		public bool IsDispose { get; } // 0x0000000181C2FD60-0x0000000181C2FD70 
+		public bool IsDispose { get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
 	
 		// Constructors
-		protected DelegateBridgeBase() {} // Dummy constructor
-		public DelegateBridgeBase(int reference, LuaEnv luaenv) {} // 0x0000000185167420-0x0000000185167460
+		public DelegateBridgeBase(int reference, LuaEnv luaenv); // 0x0000000183F20D50-0x0000000183F20D90
 	
 		// Methods
-		public bool TryGetDelegate(System.Type key, out Delegate value) {
-			value = default;
-			return default;
-		} // 0x000000018545B200-0x000000018545B2A0
-		public void AddDelegate(System.Type key, Delegate value) {} // 0x00000001850E1030-0x00000001850E11C0
-		public virtual Delegate GetDelegateByType(System.Type type) => default; // 0x00000001813AE580-0x00000001813AE590
+		public bool TryGetDelegate(System.Type key, out Delegate value); // 0x00000001844228D0-0x0000000184422940
+		public void AddDelegate(System.Type key, Delegate value); // 0x0000000183608370-0x0000000183608420
+		public virtual Delegate GetDelegateByType(System.Type type); // 0x00000001811EC580-0x00000001811EC590
 	}
 
-	public static class HotfixDelegateBridge // TypeDefIndex: 56052
+	public static class HotfixDelegateBridge // TypeDefIndex: 58692
 	{
 		// Methods
-		public static bool xlua_get_hotfix_flag(int idx) => default; // 0x000000018C3B34F0-0x000000018C3B3580
-		public static DelegateBridge Get(int idx) => default; // 0x000000018C3B32F8-0x000000018C3B335C
-		public static void Set(int idx, DelegateBridge val) {} // 0x000000018C3B335C-0x000000018C3B34F0
+		public static bool xlua_get_hotfix_flag(int idx); // 0x000000018B89EF94-0x000000018B89F024
+		public static DelegateBridge Get(int idx); // 0x000000018B89ED9C-0x000000018B89EE00
+		public static void Set(int idx, DelegateBridge val); // 0x000000018B89EE00-0x000000018B89EF94
 	}
 
-	public class DelegateBridge : DelegateBridgeBase // TypeDefIndex: 56057
+	public class DelegateBridge : DelegateBridgeBase // TypeDefIndex: 58697
 	{
 		// Fields
 		internal static DelegateBridge[] DelegateBridgeList; // 0x00
@@ -1647,20 +1594,22 @@ namespace XLua
 		public static Func<DelegateBridge, System.Type, Delegate> GetDelegateTypeDelegate; // 0x10
 	
 		// Nested types
-		private sealed class __c__DisplayClass8_0<T1> // TypeDefIndex: 56053
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass8_0<T1> // TypeDefIndex: 58693
 		{
 			// Fields
 			public DelegateBridge __4__this;
 			public T1 p1;
 	
 			// Constructors
-			public __c__DisplayClass8_0() {} // 0x000000018C3B32F0-0x000000018C3B32F8
+			public __c__DisplayClass8_0();
 	
 			// Methods
-			internal void _ActionAfterGC_b__0() {} // 0x0000000184774DC0-0x0000000184774E90
+			internal void _ActionAfterGC_b__0();
 		}
 	
-		private sealed class __c__DisplayClass10_0<T1, T2> // TypeDefIndex: 56054
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass10_0<T1, T2> // TypeDefIndex: 58694
 		{
 			// Fields
 			public DelegateBridge __4__this;
@@ -1668,13 +1617,14 @@ namespace XLua
 			public T2 p2;
 	
 			// Constructors
-			public __c__DisplayClass10_0() {} // 0x00000001851E9DE0-0x00000001851E9E60
+			public __c__DisplayClass10_0();
 	
 			// Methods
-			internal void _ActionAfterGC_b__0() {} // 0x0000000184772290-0x00000001847723D0
+			internal void _ActionAfterGC_b__0();
 		}
 	
-		private sealed class __c__DisplayClass12_0<T1, T2, T3> // TypeDefIndex: 56055
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass12_0<T1, T2, T3> // TypeDefIndex: 58695
 		{
 			// Fields
 			public DelegateBridge __4__this;
@@ -1683,13 +1633,14 @@ namespace XLua
 			public T3 p3;
 	
 			// Constructors
-			public __c__DisplayClass12_0() {}
+			public __c__DisplayClass12_0();
 	
 			// Methods
-			internal void _ActionAfterGC_b__0() {}
+			internal void _ActionAfterGC_b__0();
 		}
 	
-		private sealed class __c__DisplayClass14_0<T1, T2, T3, T4> // TypeDefIndex: 56056
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass14_0<T1, T2, T3, T4> // TypeDefIndex: 58696
 		{
 			// Fields
 			public DelegateBridge __4__this;
@@ -1699,106 +1650,105 @@ namespace XLua
 			public T4 p4;
 	
 			// Constructors
-			public __c__DisplayClass14_0() {}
+			public __c__DisplayClass14_0();
 	
 			// Methods
-			internal void _ActionAfterGC_b__0() {}
+			internal void _ActionAfterGC_b__0();
 		}
 	
 		// Constructors
-		public DelegateBridge() {} // Dummy constructor
-		public DelegateBridge(int reference, LuaEnv luaenv) {}
-		static DelegateBridge() {}
+		public DelegateBridge(int reference, LuaEnv luaenv); // 0x00000001853932E8-0x00000001853932F0
+		static DelegateBridge(); // 0x0000000184CF5740-0x0000000184CF57F0
 	
 		// Methods
-		public void PCall(IntPtr L, int nArgs, int nResults, int errFunc) {}
-		public override Delegate GetDelegateByType(System.Type type) => default;
-		public void Action() {}
-		public void Action<T1>(T1 p1) {}
-		private void ActionAfterGC<T1>(T1 p1) {}
-		public void Action<T1, T2>(T1 p1, T2 p2) {}
-		private void ActionAfterGC<T1, T2>(T1 p1, T2 p2) {}
-		public void Action<T1, T2, T3>(T1 p1, T2 p2, T3 p3) {}
-		private void ActionAfterGC<T1, T2, T3>(T1 p1, T2 p2, T3 p3) {} // 0x0000000185F1EC70-0x0000000185F1ED20
-		public void Action<T1, T2, T3, T4>(T1 p1, T2 p2, T3 p3, T4 p4) {}
-		private void ActionAfterGC<T1, T2, T3, T4>(T1 p1, T2 p2, T3 p3, T4 p4) {}
-		public TResult Func<TResult>() => default;
-		public TResult Func<T1, TResult>(T1 p1) => default;
-		public TResult Func<T1, T2, TResult>(T1 p1, T2 p2) => default;
-		public TResult Func<T1, T2, T3, TResult>(T1 p1, T2 p2, T3 p3) => default;
-		public TResult Func<T1, T2, T3, T4, TResult>(T1 p1, T2 p2, T3 p3, T4 p4) => default;
+		public void PCall(IntPtr L, int nArgs, int nResults, int errFunc); // 0x000000018329DBE0-0x000000018329E7E0
+		public override Delegate GetDelegateByType(System.Type type); // 0x0000000183FC2290-0x0000000183FC22F0
+		public void Action(); // 0x0000000183544810-0x0000000183544910
+		public void Action<T1>(T1 p1);
+		private void ActionAfterGC<T1>(T1 p1);
+		public void Action<T1, T2>(T1 p1, T2 p2);
+		private void ActionAfterGC<T1, T2>(T1 p1, T2 p2);
+		public void Action<T1, T2, T3>(T1 p1, T2 p2, T3 p3);
+		private void ActionAfterGC<T1, T2, T3>(T1 p1, T2 p2, T3 p3);
+		public void Action<T1, T2, T3, T4>(T1 p1, T2 p2, T3 p3, T4 p4);
+		private void ActionAfterGC<T1, T2, T3, T4>(T1 p1, T2 p2, T3 p3, T4 p4);
+		public TResult Func<TResult>();
+		public TResult Func<T1, TResult>(T1 p1);
+		public TResult Func<T1, T2, TResult>(T1 p1, T2 p2);
+		public TResult Func<T1, T2, T3, TResult>(T1 p1, T2 p2, T3 p3);
+		public TResult Func<T1, T2, T3, T4, TResult>(T1 p1, T2 p2, T3 p3, T4 p4);
 	}
 
-	public enum GenFlag // TypeDefIndex: 56058
+	public enum GenFlag // TypeDefIndex: 58698
 	{
 		No = 0,
 		GCOptimize = 1
 	}
 
-	public class LuaCallCSharpAttribute : Attribute // TypeDefIndex: 56059
+	public class LuaCallCSharpAttribute : Attribute // TypeDefIndex: 58699
 	{
 		// Fields
 		private GenFlag flag; // 0x10
 	
 		// Properties
-		public GenFlag Flag { get => default; } // 0x0000000181C0BBD0-0x0000000181C0BBE0 
+		public GenFlag Flag { get; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 
 	
 		// Constructors
-		public LuaCallCSharpAttribute() {} // Dummy constructor
-		public LuaCallCSharpAttribute(GenFlag flag = GenFlag.No /* Metadata: 0x0207C1C7 */) {} // 0x0000000181378230-0x0000000181378240
+		public LuaCallCSharpAttribute(GenFlag flag = GenFlag.No /* Metadata: 0x0234BE77 */); // 0x00000001814F51F0-0x00000001814F5220
 	}
 
-	public class CSharpCallLuaAttribute : Attribute // TypeDefIndex: 56060
+	public class CSharpCallLuaAttribute : Attribute // TypeDefIndex: 58700
 	{
 		// Constructors
-		public CSharpCallLuaAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public CSharpCallLuaAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class BlackListAttribute : Attribute // TypeDefIndex: 56061
+	public class BlackListAttribute : Attribute // TypeDefIndex: 58701
 	{
 		// Constructors
-		public BlackListAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public BlackListAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public enum OptimizeFlag // TypeDefIndex: 56062
+	[Flags]
+	public enum OptimizeFlag // TypeDefIndex: 58702
 	{
 		Default = 0,
 		PackAsTable = 1,
 		Custom = 2
 	}
 
-	public class GCOptimizeAttribute : Attribute // TypeDefIndex: 56063
+	public class GCOptimizeAttribute : Attribute // TypeDefIndex: 58703
 	{
 		// Fields
 		private OptimizeFlag flag; // 0x10
 	
 		// Properties
-		public OptimizeFlag Flag { get => default; } // 0x0000000181C0BBD0-0x0000000181C0BBE0 
+		public OptimizeFlag Flag { get; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 
 	
 		// Constructors
-		public GCOptimizeAttribute() {} // Dummy constructor
-		public GCOptimizeAttribute(OptimizeFlag flag = OptimizeFlag.Default /* Metadata: 0x0207C1CB */) {} // 0x0000000181378230-0x0000000181378240
+		public GCOptimizeAttribute(OptimizeFlag flag = OptimizeFlag.Default /* Metadata: 0x0234BE7B */); // 0x00000001814F51F0-0x00000001814F5220
 	}
 
-	public class ReflectionUseAttribute : Attribute // TypeDefIndex: 56064
+	public class ReflectionUseAttribute : Attribute // TypeDefIndex: 58704
 	{
 		// Constructors
-		public ReflectionUseAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public ReflectionUseAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class DoNotGenAttribute : Attribute // TypeDefIndex: 56065
+	public class DoNotGenAttribute : Attribute // TypeDefIndex: 58705
 	{
 		// Constructors
-		public DoNotGenAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public DoNotGenAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class AdditionalPropertiesAttribute : Attribute // TypeDefIndex: 56066
+	public class AdditionalPropertiesAttribute : Attribute // TypeDefIndex: 58706
 	{
 		// Constructors
-		public AdditionalPropertiesAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public AdditionalPropertiesAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public enum HotfixFlag // TypeDefIndex: 56067
+	[Flags]
+	public enum HotfixFlag // TypeDefIndex: 58707
 	{
 		Stateless = 0,
 		Stateful = 1,
@@ -1812,33 +1762,35 @@ namespace XLua
 		NoBaseProxy = 256
 	}
 
-	public class HotfixAttribute : Attribute // TypeDefIndex: 56068
+	public class HotfixAttribute : Attribute // TypeDefIndex: 58708
 	{
 		// Fields
 		private HotfixFlag flag; // 0x10
 	
 		// Properties
-		public HotfixFlag Flag { get => default; } // 0x0000000181C0BBD0-0x0000000181C0BBE0 
+		public HotfixFlag Flag { get; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 
 	
 		// Constructors
-		public HotfixAttribute() {} // Dummy constructor
-		public HotfixAttribute(HotfixFlag e = HotfixFlag.Stateless /* Metadata: 0x0207C1D9 */) {} // 0x0000000181378230-0x0000000181378240
+		public HotfixAttribute(HotfixFlag e = HotfixFlag.Stateless /* Metadata: 0x0234BE89 */); // 0x00000001814F51F0-0x00000001814F5220
 	}
 
-	internal class HotfixDelegateAttribute : Attribute // TypeDefIndex: 56069
+	[AttributeUsage(AttributeTargets.Delegate)]
+	internal class HotfixDelegateAttribute : Attribute // TypeDefIndex: 58709
 	{
 		// Constructors
-		public HotfixDelegateAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public HotfixDelegateAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public static class SysGenConfig // TypeDefIndex: 56070
+	public static class SysGenConfig // TypeDefIndex: 58710
 	{
 		// Properties
-		private static List<System.Type> GCOptimize { get; } // 0x000000018C3BBDF0-0x000000018C3BBFE4 
-		private static Dictionary<System.Type, List<string>> AdditionalProperties { get; } // 0x000000018C3BBB6C-0x000000018C3BBDF0 
+		[GCOptimize(OptimizeFlag.Default)]
+		private static List<System.Type> GCOptimize { get; } // 0x000000018B8A4F10-0x000000018B8A5104 
+		[AdditionalProperties]
+		private static Dictionary<System.Type, List<string>> AdditionalProperties { get; } // 0x000000018B8A4C8C-0x000000018B8A4F10 
 	}
 
-	public class InternalGlobals // TypeDefIndex: 56073
+	public class InternalGlobals // TypeDefIndex: 58713
 	{
 		// Fields
 		internal static byte[] strBuff; // 0x00
@@ -1850,16 +1802,16 @@ namespace XLua
 		internal static lua_CSFunction LazyReflectionWrap; // 0x30
 	
 		// Nested types
-		public delegate bool TryArrayGet(System.Type type, IntPtr L, ObjectTranslator translator, object obj, int index); // TypeDefIndex: 56071; 0x000000018592B900-0x000000018592BE20
+		public delegate bool TryArrayGet(System.Type type, IntPtr L, ObjectTranslator translator, object obj, int index); // TypeDefIndex: 58711; 0x00000001814D3FD0-0x00000001814D3FF0
 	
-		public delegate bool TryArraySet(System.Type type, IntPtr L, ObjectTranslator translator, object obj, int array_idx, int obj_idx); // TypeDefIndex: 56072; 0x00000001864BBBD0-0x00000001864BBD00
+		public delegate bool TryArraySet(System.Type type, IntPtr L, ObjectTranslator translator, object obj, int array_idx, int obj_idx); // TypeDefIndex: 58712; 0x00000001814CDD50-0x00000001814CDD70
 	
 		// Constructors
-		public InternalGlobals() {} // 0x000000018C3BC0A4-0x000000018C3BC16C
-		static InternalGlobals() {} // 0x00000001864BBBD0-0x00000001864BBD00
+		public InternalGlobals(); // 0x00000001841E1670-0x00000001841E1680
+		static InternalGlobals(); // 0x00000001847729E0-0x0000000184772F00
 	}
 
-	public abstract class LuaBase : IDisposable // TypeDefIndex: 56074
+	public abstract class LuaBase : IDisposable // TypeDefIndex: 58714
 	{
 		// Fields
 		public bool disposed; // 0x10
@@ -1867,19 +1819,18 @@ namespace XLua
 		public readonly LuaEnv luaEnv; // 0x18
 	
 		// Constructors
-		protected LuaBase() {} // Dummy constructor
-		public LuaBase(int reference, LuaEnv luaenv) {} // 0x000000018646F290-0x000000018646F2A0
+		public LuaBase(int reference, LuaEnv luaenv); // 0x00000001853932C0-0x00000001853932D0
 	
 		// Methods
-		~LuaBase() {} // 0x00000001853BB8E0-0x00000001853BB930
-		public void Dispose() {} // 0x000000018454F6D0-0x000000018454F730
-		public virtual void Dispose(bool disposeManagedResources) {} // 0x000000018454F730-0x000000018454F820
-		public override bool Equals(object o) => default; // 0x000000018C3B36EC-0x000000018C3B3824
-		public override int GetHashCode() => default; // 0x000000018C3B3824-0x000000018C3B38D8
-		public virtual void push(IntPtr L) {} // 0x000000018C3B38D8-0x000000018C3B392C
+		~LuaBase(); // 0x00000001832EF070-0x00000001832EF120
+		public void Dispose(); // 0x00000001832EF250-0x00000001832EF310
+		public virtual void Dispose(bool disposeManagedResources); // 0x00000001832EF310-0x00000001832EF3E0
+		public override bool Equals(object o); // 0x000000018B89F190-0x000000018B89F2C8
+		public override int GetHashCode(); // 0x000000018B89F2C8-0x000000018B89F37C
+		public virtual void push(IntPtr L); // 0x000000018B89F37C-0x000000018B89F3D0
 	}
 
-	public struct lua_debug // TypeDefIndex: 56075
+	public struct lua_debug // TypeDefIndex: 58715
 	{
 		// Fields
 		public int eventCode; // 0x00
@@ -1891,7 +1842,7 @@ namespace XLua
 		public int linedefined; // 0x2C
 	}
 
-	public struct lua_state // TypeDefIndex: 56076
+	public struct lua_state // TypeDefIndex: 58716
 	{
 		// Fields
 		public IntPtr ptr; // 0x00
@@ -1901,9 +1852,10 @@ namespace XLua
 		public byte allowhook; // 0x0B
 	}
 
-	public delegate int lua_Hook(IntPtr L, ref lua_debug ar); // TypeDefIndex: 56077; 0x0000000181B59400-0x0000000181B59410
+	[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+	public delegate int lua_Hook(IntPtr L, ref lua_debug ar); // TypeDefIndex: 58717; 0x00000001815802E0-0x00000001815802F0
 
-	public static class LuaDeadLoopCheck // TypeDefIndex: 56079
+	public static class LuaDeadLoopCheck // TypeDefIndex: 58719
 	{
 		// Fields
 		private static Thread s_checkThread; // 0x00
@@ -1916,7 +1868,8 @@ namespace XLua
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 56078
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58718
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -1925,48 +1878,49 @@ namespace XLua
 			public static Action<Stopwatch> __9__7_2; // 0x18
 	
 			// Constructors
-			static __c() {} // 0x000000018C3B4A90-0x000000018C3B7064
-			public __c() {} // 0x000000018C3B7064-0x000000018C3B7394
+			static __c(); // 0x0000000184D4A1D0-0x0000000184D4A230
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal Stopwatch _EnableCheck_b__7_0() => default; // 0x000000018C3B4A58-0x000000018C3B4A90
-			internal void _EnableCheck_b__7_1(Stopwatch sw) {} // 0x00000001847753F0-0x0000000184775530
-			internal void _EnableCheck_b__7_2(Stopwatch sw) {} // 0x0000000184EC2D10-0x0000000184EC2E70
+			internal Stopwatch _EnableCheck_b__7_0(); // 0x0000000184A3E0F0-0x0000000184A3E130
+			internal void _EnableCheck_b__7_1(Stopwatch sw); // 0x000000018329ECB0-0x000000018329ED00
+			internal void _EnableCheck_b__7_2(Stopwatch sw); // 0x000000018329E930-0x000000018329E990
 		}
 	
 		// Methods
-		public static void EnableCheck(IntPtr L) {} // 0x000000018C3B47F0-0x000000018C3B4A58
-		public static int LuaHook(IntPtr L, ref lua_debug ar) => default; // 0x0000000183F8B990-0x0000000183F8BD20
-		public static void DisableCheck(IntPtr L) {} // 0x0000000185492010-0x0000000185492020
-		public static void PushTime() {} // 0x0000000183F8B330-0x0000000183F8B630
-		public static void PopTime() {} // 0x0000000183F8B630-0x0000000183F8B970
-		public static void CheckDeadLoop() {} // 0x0000000183F8B970-0x0000000183F8B990
+		public static void EnableCheck(IntPtr L); // 0x0000000183B26BD0-0x0000000183B27100
+		[AOT.MonoPInvokeCallback(typeof(XLua.lua_Hook))]
+		public static int LuaHook(IntPtr L, ref lua_debug ar); // 0x000000018B8A02CC-0x000000018B8A0528
+		public static void DisableCheck(IntPtr L); // 0x000000018B8A0294-0x000000018B8A02CC
+		public static void PushTime(); // 0x000000018329EB90-0x000000018329ECB0
+		public static void PopTime(); // 0x000000018329E7E0-0x000000018329E930
+		public static void CheckDeadLoop(); // 0x0000000182EFE970-0x0000000182EFEC80
 	}
 
-	public interface ILoadLuaProxy // TypeDefIndex: 56080
+	public interface ILoadLuaProxy // TypeDefIndex: 58720
 	{
 		// Methods
 		byte[] LoadLua(string name);
 	}
 
-	public class LoadLuaProxyModule // TypeDefIndex: 56081
+	public class LoadLuaProxyModule // TypeDefIndex: 58721
 	{
 		// Fields
 		private static ILoadLuaProxy s_loadLuaProxy; // 0x00
 	
 		// Constructors
-		public LoadLuaProxyModule() {} // 0x0000000185492010-0x0000000185492020
+		public LoadLuaProxyModule(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static void RegisterProxy(ILoadLuaProxy loadLuaProxy) {} // 0x000000018C3B35B8-0x000000018C3B3608
-		public static ILoadLuaProxy GetLoadLuaProxy() => default; // 0x000000018C3B3580-0x000000018C3B35B8
+		public static void RegisterProxy(ILoadLuaProxy loadLuaProxy); // 0x000000018B89F05C-0x000000018B89F0AC
+		public static ILoadLuaProxy GetLoadLuaProxy(); // 0x000000018B89F024-0x000000018B89F05C
 	}
 
-	public class LuaEnv : IDisposable // TypeDefIndex: 56084
+	public class LuaEnv : IDisposable // TypeDefIndex: 58724
 	{
 		// Fields
-		public const string CSHARP_NAMESPACE = "xlua_csharp_namespace"; // Metadata: 0x0207C1FF
-		public const string MAIN_SHREAD = "xlua_main_thread"; // Metadata: 0x0207C215
+		public const string CSHARP_NAMESPACE = "xlua_csharp_namespace"; // Metadata: 0x0234BEAF
+		public const string MAIN_SHREAD = "xlua_main_thread"; // Metadata: 0x0234BEC5
 		private LuaMultithreadingGC m_luaMultithreadingGC; // 0x10
 		public static bool ENABLE_MULTITHREAD_GC; // 0x00
 		public bool isQuittingApplication; // 0x18
@@ -1974,7 +1928,7 @@ namespace XLua
 		private LuaTable _G; // 0x28
 		public ObjectTranslator translator; // 0x30
 		public int errorFuncRef; // 0x38
-		private const int LIB_VERSION_EXPECT = 105; // Metadata: 0x0207C226
+		private const int LIB_VERSION_EXPECT = 105; // Metadata: 0x0234BED6
 		private static List<Action<LuaEnv, ObjectTranslator>> initers; // 0x08
 		private Dictionary<long, string> _stringCache; // 0x40
 		private long _stringCacheMemory; // 0x48
@@ -1988,97 +1942,98 @@ namespace XLua
 		internal Dictionary<string, lua_CSFunction> buildin_initer; // 0x80
 	
 		// Properties
-		public IntPtr L { get => default; } // 0x000000018C3B78EC-0x000000018C3B7900 
-		public LuaTable Global { get => default; } // 0x0000000184C332F0-0x0000000184C33440 
-		public int GcPause { get => default; set {} } // 0x000000018C3B76A8-0x000000018C3B76FC 0x000000018C3B7954-0x000000018C3B79A4
-		public int GcStepmul { get => default; set {} } // 0x000000018C3B7900-0x000000018C3B7954 0x000000018C3B7704-0x000000018C3B7768
-		public int Memroy { get => default; } // 0x000000018A2FF9D4-0x000000018A2FF9F8 
+		public IntPtr L { get; } // 0x000000018329D7C0-0x000000018329D7E0 
+		public LuaTable Global { get; } // 0x0000000184D86240-0x0000000184D86250 
+		public int GcPause { get; set; } // 0x000000018B8A0C40-0x000000018B8A0CC0 0x000000018B8A0D40-0x000000018B8A0DA0
+		public int GcStepmul { get; set; } // 0x000000018B8A0CC0-0x000000018B8A0D40 0x000000018B8A0DA0-0x000000018B8A0E00
+		public int Memroy { get; } // 0x00000001838EF8C0-0x00000001838EF910 
 	
 		// Nested types
-		internal struct GCAction // TypeDefIndex: 56082
+		internal struct GCAction // TypeDefIndex: 58722
 		{
 			// Fields
 			public int Reference; // 0x00
 			public bool IsDelegate; // 0x04
 		}
 	
-		public delegate byte[] CustomLoader(ref string filepath); // TypeDefIndex: 56083; 0x0000000184771640-0x00000001847716B0
+		public delegate byte[] CustomLoader(ref string filepath); // TypeDefIndex: 58723; 0x00000001814E2060-0x00000001814E2070
 	
 		// Constructors
-		public LuaEnv() {}
-		static LuaEnv() {} // 0x00000001872076D8-0x00000001872076F4
+		public LuaEnv(); // 0x0000000183601B70-0x0000000183602800
+		static LuaEnv(); // 0x0000000184D4F970-0x0000000184D4F9E0
 	
 		// Methods
-		public bool IsEnableMultithreadGC() => default; // 0x000000018C3B7394-0x000000018C3B73D4
-		public bool IsLuaGCing() => default; // 0x000000018C3B73F4-0x000000018C3B7450
-		public bool AddLuaEventAfterGCDo(UnityAction action) => default; // 0x000000018C3B77D8-0x000000018C3B77EC
-		public void RemoveLuaEventAfterGCDo(UnityAction action) {} // 0x000000018C3B79A4-0x000000018C3B79D4
-		public void AddOnceLuaEventAfterGCDo(UnityAction action) {} // 0x0000000184C34060-0x0000000184C34CF0
-		public void CriticalLuaCallWaitLuaGC() {} // 0x00000001859DD8F0-0x00000001859DDA40
-		public void MainThreadWait() {} // 0x00000001813B8590-0x00000001813B85A0
-		public void StopMultiGC() {}
-		public static void AddIniter(Action<LuaEnv, ObjectTranslator> initer) {} // 0x000000018C3B7768-0x000000018C3B77D8
-		public T LoadString<T>(byte[] chunk, string chunkName = "chunk" /* Metadata: 0x0207C1DA */, LuaTable env = null) => default; // 0x000000018C3B7638-0x000000018C3B76A8
-		public T LoadString<T>(string chunk, string chunkName = "chunk" /* Metadata: 0x0207C1E0 */, LuaTable env = null) => default; // 0x0000000184C331B0-0x0000000184C33280
-		public LuaFunction LoadString(string chunk, string chunkName = "chunk" /* Metadata: 0x0207C1E6 */, LuaTable env = null) => default; // 0x0000000186472154-0x0000000186472174
-		public object[] DoString(byte[] chunk, string chunkName = "chunk" /* Metadata: 0x0207C1EC */, LuaTable env = null) => default; // 0x000000018598E9F0-0x000000018598EA70
-		public object[] DoString(string chunk, string chunkName = "chunk" /* Metadata: 0x0207C1F2 */, LuaTable env = null) => default;
-		public object[] DoFile(string luaFile, string chunkName = "chunk" /* Metadata: 0x0207C1F8 */, LuaTable env = null) => default;
-		public object[] DoFile(string luaFile, LuaTable env = null) => default;
-		public object[] CallGlobalFunction(string funcName) => default; // 0x0000000184C319C0-0x0000000184C33040
-		public object[] CallGlobalFunction<T0>(string funcName, T0 param0) => default; // 0x0000000184CFCE80-0x0000000184CFD0F0
-		public void SetGlobalTable<K, V>(K key, V value) {} // 0x0000000184552480-0x0000000184553130
-		public V GetGlobalTable<K, V>(K key) => default; // 0x0000000185D78B60-0x0000000185D798F0
-		public void InitCacheString() {} // 0x000000018455A500-0x000000018455A520
-		public string TryGetLuaString(IntPtr p) => default; // 0x0000000184C34CF0-0x0000000184C34E90
-		public void RefString(IntPtr L, IntPtr strPoint, int index, string ss) {} // 0x000000018C3B73D4-0x000000018C3B73F4
-		public void ReleaseStringCache(bool dispose = true /* Metadata: 0x0207C1FE */) {} // 0x0000000184AAB8C0-0x0000000184AAB9D0
-		public void AutoFreeStringCache() {} // 0x0000000184FD2420-0x0000000184FD2460
-		private void AddSearcher(lua_CSFunction searcher, int index) {} // 0x00000001845595D0-0x0000000184559950
-		public void Alias(System.Type type, string alias) {} // 0x000000018C3B76FC-0x000000018C3B7704
-		private static bool ObjectValidCheck(object obj) => default; // 0x000000018C3B77EC-0x000000018C3B78EC
-		public void ClearAllUserdata() {} // 0x000000018C3B7AE4-0x000000018C3B7AEC
-		public void CleanTick() {} // 0x000000018C3B75AC-0x000000018C3B7638
-		public void GC() {} // 0x000000018C3B7450-0x000000018C3B75AC
-		public LuaTable NewTable() => default; // 0x000000018C3B79D4-0x000000018C3B7AE4
-		public void WaitForGCComplete() {} // 0x00000001852C48A0-0x00000001852C4C40
-		public void Dispose() {} // 0x0000000185F81060-0x0000000185F810C0
-		public virtual void Dispose(bool dispose) {} // 0x0000000184C33EF0-0x0000000184C33F90
-		public void ThrowExceptionFromError(int oldTop) {} // 0x000000018C3B7AEC-0x000000018C3B7B6C
-		internal void equeueGCAction(GCAction action) {} // 0x000000018C3B7BEC-0x000000018C3B7C4C
-		public void AddLoader(CustomLoader loader) {} // 0x000000018C3B7B6C-0x000000018C3B7BEC
-		public void AddBuildin(string name, lua_CSFunction initer) {} // 0x000000018C3B7C4C-0x000000018C3B7CAC
-		public void FullGc() {} // 0x00000001845591C0-0x0000000184559230
-		public void StopGc() {} // 0x0000000185F7C390-0x0000000185F7C400
-		public void RestartGc() {} // 0x000000018563DEC0-0x000000018563DF40
-		public bool GcStep(int data) => default; // 0x00000001817C2F70-0x00000001817C2F80
+		public bool IsEnableMultithreadGC(); // 0x0000000183A73F30-0x0000000183A73FA0
+		public bool IsLuaGCing(); // 0x000000018329DBC0-0x000000018329DBE0
+		public bool AddLuaEventAfterGCDo(UnityAction action); // 0x000000018488B670-0x000000018488B6A0
+		public void RemoveLuaEventAfterGCDo(UnityAction action); // 0x000000018B8A0A40-0x000000018B8A0A54
+		public void AddOnceLuaEventAfterGCDo(UnityAction action); // 0x000000018423A460-0x000000018423A4A0
+		public void CriticalLuaCallWaitLuaGC(); // 0x000000018B8A0548-0x000000018B8A05A4
+		public void MainThreadWait(); // 0x000000018B8A092C-0x000000018B8A0940
+		public void StopMultiGC(); // 0x000000018B8A0AF8-0x000000018B8A0B28
+		public static void AddIniter(Action<LuaEnv, ObjectTranslator> initer); // 0x0000000184810000-0x0000000184810150
+		public T LoadString<T>(byte[] chunk, string chunkName = "chunk" /* Metadata: 0x0234BE8A */, LuaTable env = null);
+		public T LoadString<T>(string chunk, string chunkName = "chunk" /* Metadata: 0x0234BE90 */, LuaTable env = null);
+		public LuaFunction LoadString(string chunk, string chunkName = "chunk" /* Metadata: 0x0234BE96 */, LuaTable env = null); // 0x000000018B8A08BC-0x000000018B8A092C
+		public object[] DoString(byte[] chunk, string chunkName = "chunk" /* Metadata: 0x0234BE9C */, LuaTable env = null); // 0x0000000183600E10-0x0000000183600F50
+		public object[] DoString(string chunk, string chunkName = "chunk" /* Metadata: 0x0234BEA2 */, LuaTable env = null); // 0x000000018B8A078C-0x000000018B8A07FC
+		public object[] DoFile(string luaFile, string chunkName = "chunk" /* Metadata: 0x0234BEA8 */, LuaTable env = null); // 0x0000000183600CF0-0x0000000183600DA0
+		public object[] DoFile(string luaFile, LuaTable env = null); // 0x000000018539321C-0x000000018539323C
+		public object[] CallGlobalFunction(string funcName); // 0x000000018321C3A0-0x000000018321C420
+		public object[] CallGlobalFunction<T0>(string funcName, T0 param0);
+		public void SetGlobalTable<K, V>(K key, V value);
+		public V GetGlobalTable<K, V>(K key);
+		public void InitCacheString(); // 0x0000000183600960-0x0000000183600B80
+		public string TryGetLuaString(IntPtr p); // 0x0000000183C16CA0-0x0000000183C16DC0
+		public void RefString(IntPtr L, IntPtr strPoint, int index, string ss); // 0x0000000183608420-0x00000001836085E0
+		public void ReleaseStringCache(bool dispose = true /* Metadata: 0x0234BEAE */); // 0x0000000183600890-0x0000000183600960
+		public void AutoFreeStringCache(); // 0x000000018301FCD0-0x000000018301FCF0
+		private void AddSearcher(lua_CSFunction searcher, int index); // 0x0000000183602870-0x0000000183602A10
+		public void Alias(System.Type type, string alias); // 0x000000018B8A0528-0x000000018B8A0548
+		private static bool ObjectValidCheck(object obj); // 0x0000000183B14BD0-0x0000000183B14C70
+		public void ClearAllUserdata(); // 0x0000000184034F70-0x0000000184034FB0
+		public void CleanTick(); // 0x000000018301FDD0-0x0000000183020120
+		public void GC(); // 0x000000018B8A0850-0x000000018B8A0858
+		public LuaTable NewTable(); // 0x000000018B8A0940-0x000000018B8A0A40
+		public void WaitForGCComplete(); // 0x000000018B8A0C38-0x000000018B8A0C40
+		public void Dispose(); // 0x000000018B8A0700-0x000000018B8A078C
+		public virtual void Dispose(bool dispose); // 0x000000018B8A05A4-0x000000018B8A0700
+		public void ThrowExceptionFromError(int oldTop); // 0x000000018B8A0B28-0x000000018B8A0C38
+		internal void equeueGCAction(GCAction action); // 0x00000001832EED00-0x00000001832EF070
+		public void AddLoader(CustomLoader loader); // 0x0000000184D54440-0x0000000184D544A0
+		public void AddBuildin(string name, lua_CSFunction initer); // 0x0000000183601A00-0x0000000183601AA0
+		public void FullGc(); // 0x000000018B8A07FC-0x000000018B8A0850
+		public void StopGc(); // 0x000000018B8A0AA8-0x000000018B8A0AF8
+		public void RestartGc(); // 0x000000018B8A0A54-0x000000018B8A0AA8
+		public bool GcStep(int data); // 0x000000018B8A0858-0x000000018B8A08BC
 	}
 
 	[Serializable]
-	public class LuaException : Exception // TypeDefIndex: 56085
+	public class LuaException : Exception // TypeDefIndex: 58725
 	{
 		// Constructors
-		public LuaException() {} // Dummy constructor
-		public LuaException(string message) {} // 0x000000018C3B7CAC-0x000000018C3B7D08
+		public LuaException(string message); // 0x000000018B8A0E00-0x000000018B8A0E5C
 	}
 
-	public class LuaFunction : LuaBase // TypeDefIndex: 56088
+	public class LuaFunction : LuaBase // TypeDefIndex: 58728
 	{
 		// Nested types
-		private sealed class __c__DisplayClass2_0<T> // TypeDefIndex: 56086
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass2_0<T> // TypeDefIndex: 58726
 		{
 			// Fields
 			public LuaFunction __4__this;
 			public T a;
 	
 			// Constructors
-			public __c__DisplayClass2_0() {} // 0x000000018646F290-0x000000018646F2A0
+			public __c__DisplayClass2_0();
 	
 			// Methods
-			internal void _ActionAfterGC_b__0() {}
+			internal void _ActionAfterGC_b__0();
 		}
 	
-		private sealed class __c__DisplayClass5_0<T1, T2> // TypeDefIndex: 56087
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass5_0<T1, T2> // TypeDefIndex: 58727
 		{
 			// Fields
 			public LuaFunction __4__this;
@@ -2086,40 +2041,42 @@ namespace XLua
 			public T2 a2;
 	
 			// Constructors
-			public __c__DisplayClass5_0() {}
+			public __c__DisplayClass5_0();
 	
 			// Methods
-			internal void _ActionAfterGC_b__0() {}
+			internal void _ActionAfterGC_b__0();
 		}
 	
 		// Constructors
-		public LuaFunction() {} // Dummy constructor
-		public LuaFunction(int reference, LuaEnv luaenv) {}
+		public LuaFunction(int reference, LuaEnv luaenv); // 0x00000001853932C0-0x00000001853932D0
 	
 		// Methods
-		public void Action<T>(T a) {}
-		private void ActionAfterGC<T>(T a) {}
-		public TResult Func<T, TResult>(T a) => default; // 0x00000001847730B0-0x0000000184773290
-		public void Action<T1, T2>(T1 a1, T2 a2) {} // 0x000000018646EA64-0x000000018646EA70
-		private void ActionAfterGC<T1, T2>(T1 a1, T2 a2) {}
-		public TResult Func<T1, T2, TResult>(T1 a1, T2 a2) => default; // 0x000000018C3B7D08-0x000000018C3B7DC0
-		public object[] Call(object[] args, System.Type[] returnTypes) => default; // 0x0000000185F81000-0x0000000185F81060
-		public object[] Call(object[] args) => default; // 0x000000018C3B7DC0-0x000000018C3B7E08
-		public T Cast<T>() => default;
-		public void SetEnv(LuaTable env) {}
-		public override void push(IntPtr L) {}
-		public override string ToString() => default;
+		public void Action<T>(T a);
+		private void ActionAfterGC<T>(T a);
+		public TResult Func<T, TResult>(T a);
+		public void Action<T1, T2>(T1 a1, T2 a2);
+		private void ActionAfterGC<T1, T2>(T1 a1, T2 a2);
+		public TResult Func<T1, T2, TResult>(T1 a1, T2 a2);
+		public object[] Call(object[] args, System.Type[] returnTypes); // 0x0000000183544DE0-0x0000000183544FA0
+		public object[] Call(params object[] args); // 0x0000000185391968-0x0000000185391974
+		public T Cast<T>();
+		public void SetEnv(LuaTable env); // 0x000000018B8A0E5C-0x000000018B8A0F14
+		public override void push(IntPtr L); // 0x0000000184D543E0-0x0000000184D54440
+		public override string ToString(); // 0x000000018B8A0F14-0x000000018B8A0F5C
 	}
 
-	public class LuaTable : LuaBase // TypeDefIndex: 56091
+	public class LuaTable : LuaBase // TypeDefIndex: 58731
 	{
 		// Properties
-		public object this[string field] { get => default; set {} } // 0x0000000184775050-0x0000000184775070 0x0000000185492010-0x0000000185492020
-		public object this[object field] { get => default; set {} } // 0x000000018C3BC16C-0x000000018C3BC2D0 0x0000000181377E40-0x0000000181377E50
-		public int Length { get => default; } // 0x0000000181377E40-0x0000000181377E50 
+		[Obsolete("use no boxing version: GetInPath/SetInPath Get/Set instead!")]
+		public object this[string field] { get => default; set {} } // 0x000000018B8A1AFC-0x000000018B8A1B44 0x000000018B8A1C78-0x000000018B8A1CD0
+		[Obsolete("use no boxing version: GetInPath/SetInPath Get/Set instead!")]
+		public object this[object field] { get => default; set {} } // 0x000000018B8A1B44-0x000000018B8A1B8C 0x000000018B8A1C20-0x000000018B8A1C78
+		public int Length { get; } // 0x000000018B8A1B8C-0x000000018B8A1C20 
 	
 		// Nested types
-		private sealed class _GetKeys_d__15 : IEnumerable<object>, IEnumerator<object> // TypeDefIndex: 56089
+		[CompilerGenerated]
+		private sealed class _GetKeys_d__15 : IEnumerable<object>, IEnumerator<object> // TypeDefIndex: 58729
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -2131,22 +2088,27 @@ namespace XLua
 			private int _oldTop_5__4; // 0x40
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; }
-			object IEnumerator.Current { get => default; }
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _GetKeys_d__15() {} // Dummy constructor
-			public _GetKeys_d__15(int __1__state) {} // 0x000000018646F290-0x000000018646F2A0
+			[DebuggerHidden]
+			public _GetKeys_d__15(int __1__state); // 0x0000000183A11010-0x0000000183A11030
 	
 			// Methods
-			void IDisposable.Dispose() {}
-			private bool MoveNext() => default;
-			void IEnumerator.Reset() {}
-			IEnumerator<object> IEnumerable<object>.GetEnumerator() => default; // 0x000000018C3B8A2C-0x000000018C3B8A74
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018C3B8BA8-0x000000018C3B8C00
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018B8A528C-0x000000018B8A53F0
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B8A5484-0x000000018B8A54D0
+			[DebuggerHidden]
+			IEnumerator<object> IEnumerable<object>.GetEnumerator(); // 0x000000018B8A53F0-0x000000018B8A547C
+			[DebuggerHidden]
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018B8A547C-0x000000018B8A5484
 		}
 	
-		private sealed class _GetKeys_d__16<T> : IEnumerable<T>, IEnumerator<T> // TypeDefIndex: 56090
+		[CompilerGenerated]
+		private sealed class _GetKeys_d__16<T> : IEnumerable<T>, IEnumerator<T> // TypeDefIndex: 58730
 		{
 			// Fields
 			private int __1__state;
@@ -2158,47 +2120,50 @@ namespace XLua
 			private int _oldTop_5__4;
 	
 			// Properties
-			T IEnumerator<T>.Current { get => default; } // 0x000000018C3B8ABC-0x000000018C3B8B50 
-			object IEnumerator.Current { get => default; }
+			T IEnumerator<T>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
 	
 			// Constructors
-			public _GetKeys_d__16() {} // Dummy constructor
-			public _GetKeys_d__16(int __1__state) {}
+			[DebuggerHidden]
+			public _GetKeys_d__16(int __1__state);
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018C3B8B50-0x000000018C3B8BA8
-			private bool MoveNext() => default;
-			void IEnumerator.Reset() {} // 0x000000018C3B88A4-0x000000018C3B8914
-			IEnumerator<T> IEnumerable<T>.GetEnumerator() => default;
-			IEnumerator IEnumerable.GetEnumerator() => default;
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
+			[DebuggerHidden]
+			IEnumerator<T> IEnumerable<T>.GetEnumerator();
+			[DebuggerHidden]
+			IEnumerator IEnumerable.GetEnumerator();
 		}
 	
 		// Constructors
-		public LuaTable() {} // Dummy constructor
-		public LuaTable(int reference, LuaEnv luaenv) {}
+		public LuaTable(int reference, LuaEnv luaenv); // 0x00000001853932C0-0x00000001853932D0
 	
 		// Methods
-		public void Get<TKey, TValue>(TKey key, out ref TValue value) {
-			value = default;
-		} // 0x000000018C3B8914-0x000000018C3B89E4
-		public bool ContainsKey<TKey>(TKey key) => default;
-		public void Set<TKey, TValue>(TKey key, TValue value) {} // 0x00000001853F9490-0x00000001853F94F0
-		public T GetInPath<T>(string path) => default; // 0x000000018C3B89E4-0x000000018C3B8A2C
-		public void SetInPath<T>(string path, T val) {} // 0x000000018454F510-0x000000018454F5B0
-		public void ForEach<TKey, TValue>(Action<TKey, TValue> action) {} // 0x000000018C3BC364-0x000000018C3BC3B0
-		public IEnumerable GetKeys() => default; // 0x000000018C3BC2D0-0x000000018C3BC35C
-		public IEnumerable<T> GetKeys<T>() => default; // 0x000000018C3BC35C-0x000000018C3BC364
-		public T Get<T>(object key) => default;
-		public TValue Get<TKey, TValue>(TKey key) => default;
-		public TValue Get<TValue>(string key) => default;
-		public void SetMetaTable(LuaTable metaTable) {}
-		public T Cast<T>() => default;
-		public override void push(IntPtr L) {}
-		public override string ToString() => default;
-		public ObjectTranslator GetTranslator() => default;
+		public void Get<TKey, TValue>(TKey key, out ref TValue value);
+		public bool ContainsKey<TKey>(TKey key);
+		public void Set<TKey, TValue>(TKey key, TValue value);
+		public T GetInPath<T>(string path);
+		public void SetInPath<T>(string path, T val);
+		public void ForEach<TKey, TValue>(Action<TKey, TValue> action);
+		[IteratorStateMachine(typeof(_GetKeys_d__15))]
+		public IEnumerable GetKeys(); // 0x000000018B8A1974-0x000000018B8A19E4
+		[IteratorStateMachine(typeof(_GetKeys_d__16<T>))]
+		public IEnumerable<T> GetKeys<T>();
+		public T Get<T>(object key);
+		public TValue Get<TKey, TValue>(TKey key);
+		public TValue Get<TValue>(string key);
+		public void SetMetaTable(LuaTable metaTable); // 0x000000018B8A19E4-0x000000018B8A1AB4
+		public T Cast<T>();
+		public override void push(IntPtr L); // 0x000000018427F7E0-0x000000018427F820
+		public override string ToString(); // 0x000000018B8A1AB4-0x000000018B8A1AFC
+		public ObjectTranslator GetTranslator(); // 0x00000001832F12A0-0x00000001832F1320
 	}
 
-	public interface IOverloadMethodWrap // TypeDefIndex: 56092
+	public interface IOverloadMethodWrap // TypeDefIndex: 58732
 	{
 		// Properties
 		bool InitedForDelegateCall { get; }
@@ -2206,53 +2171,56 @@ namespace XLua
 	
 		// Methods
 		int Call(IntPtr L, ObjectTranslator translator);
-		bool Check(IntPtr L, bool haveOverload = false /* Metadata: 0x0207C228 */);
+		bool Check(IntPtr L, bool haveOverload = false /* Metadata: 0x0234BED8 */);
 	}
 
-	public class OverloadMethodWrapBase // TypeDefIndex: 56093
+	public class OverloadMethodWrapBase // TypeDefIndex: 58733
 	{
 		// Fields
 		protected ObjectTranslator translator; // 0x10
 		protected MethodBase method; // 0x18
 	
 		// Constructors
-		public OverloadMethodWrapBase() {} // 0x0000000185492010-0x0000000185492020
+		public OverloadMethodWrapBase(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static IOverloadMethodWrap CreateMethodWrap(ObjectTranslator translator, MethodBase method, System.Type target) => default; // 0x0000000184BBB580-0x0000000184BBB670
+		public static IOverloadMethodWrap CreateMethodWrap(ObjectTranslator translator, MethodBase method, System.Type target); // 0x0000000182F2C470-0x0000000182F2C530
 	}
 
-	public class OverloadMethodWrapForDelegate : OverloadMethodWrapBase, IOverloadMethodWrap // TypeDefIndex: 56094
+	public class OverloadMethodWrapForDelegate : OverloadMethodWrapBase, IOverloadMethodWrap // TypeDefIndex: 58734
 	{
 		// Fields
 		private List<System.Type> castTypes; // 0x20
 		private Delegate @delegate; // 0x28
 		private LuaGenericDelegateCaller.LuaGenericDelegateCall caller; // 0x30
+		[CompilerGenerated]
 		private int _OptionParamCount_k__BackingField; // 0x38
+		[CompilerGenerated]
 		private object[] _DefalutValue_k__BackingField; // 0x40
+		[CompilerGenerated]
 		private bool _HasDefalutValue_k__BackingField; // 0x48
+		[CompilerGenerated]
 		private bool[] _OutParamFlags_k__BackingField; // 0x50
 	
 		// Properties
-		public bool InitedForDelegateCall { get => default; } // 0x00000001850EAEA0-0x00000001850EAEB0 
-		public List<System.Type> CastTypes { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
-		public int OptionParamCount { get; private set; } // 0x00000001813E5E30-0x00000001813E5E40 0x00000001813E6F50-0x00000001813E6F60
-		public object[] DefalutValue { get; private set; } // 0x00000001813FF010-0x00000001813FF020 0x0000000185F05C80-0x0000000185F05C90
-		public bool HasDefalutValue { get; private set; } // 0x0000000185FB0750-0x0000000185FB0760 0x0000000185FB0770-0x0000000185FB0780
-		public bool[] OutParamFlags { get; private set; } // 0x0000000181460F60-0x0000000181460F70 0x0000000184A4E570-0x0000000184A4E580
+		public bool InitedForDelegateCall { get; } // 0x0000000183FB3DE0-0x0000000183FB3DF0 
+		public List<System.Type> CastTypes { get; } // 0x0000000184D862C0-0x0000000184D862D0 
+		public int OptionParamCount { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D863B0-0x0000000184D863C0 0x0000000184D86430-0x0000000184D86440
+		public object[] DefalutValue { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001842B4AE0-0x00000001842B4AF0
+		public bool HasDefalutValue { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D867D0-0x0000000184D867E0 0x0000000184D86810-0x0000000184D86820
+		public bool[] OutParamFlags { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
 	
 		// Constructors
-		public OverloadMethodWrapForDelegate() {} // Dummy constructor
-		public OverloadMethodWrapForDelegate(MethodInfo method) {} // 0x000000018480C210-0x000000018480C2A0
+		public OverloadMethodWrapForDelegate(MethodInfo method); // 0x0000000182F2C410-0x0000000182F2C470
 	
 		// Methods
-		public static OverloadMethodWrapForDelegate TryGetWrapForDelegate(MethodInfo method) => default; // 0x000000018400D450-0x000000018400DA90
-		public void InitForDefaultValue() {} // 0x0000000184BBB6B0-0x0000000184BBB8D0
-		public int Call(IntPtr L, ObjectTranslator translator) => default; // 0x00000001845575F0-0x0000000184557CC0
-		public bool Check(IntPtr L, bool haveOverload = false /* Metadata: 0x0207C229 */) => default; // 0x00000001840A27C0-0x00000001840A27D0
+		public static OverloadMethodWrapForDelegate TryGetWrapForDelegate(MethodInfo method); // 0x0000000182F2CE00-0x0000000182F2D380
+		public void InitForDefaultValue(); // 0x0000000184281250-0x00000001842815A0
+		public int Call(IntPtr L, ObjectTranslator translator); // 0x000000018329BD30-0x000000018329C0B0
+		public bool Check(IntPtr L, bool haveOverload = false /* Metadata: 0x0234BED9 */); // 0x0000000182FFF600-0x0000000182FFF610
 	}
 
-	public class OverloadMethodWrapForReflection : OverloadMethodWrapBase, IOverloadMethodWrap // TypeDefIndex: 56095
+	public class OverloadMethodWrapForReflection : OverloadMethodWrapBase, IOverloadMethodWrap // TypeDefIndex: 58735
 	{
 		// Fields
 		private ObjectCheck[] checkArray; // 0x20
@@ -2270,22 +2238,21 @@ namespace XLua
 		private System.Type paramsType; // 0x78
 	
 		// Properties
-		public bool InitedForDelegateCall { get => default; } // 0x00000001814A81B0-0x00000001814A81C0 
-		public bool HasDefalutValue { get => default; } // 0x00000001814A81B0-0x00000001814A81C0 
+		public bool InitedForDelegateCall { get; } // 0x00000001812081B0-0x0000000181208610 
+		public bool HasDefalutValue { get; } // 0x00000001812081B0-0x0000000181208610 
 	
 		// Constructors
-		public OverloadMethodWrapForReflection() {} // Dummy constructor
-		public OverloadMethodWrapForReflection(System.Type target, MethodBase methodInfo) {} // 0x0000000184BBB670-0x0000000184BBB6B0
+		public OverloadMethodWrapForReflection(System.Type target, MethodBase methodInfo); // 0x00000001844C5110-0x00000001844C5150
 	
 		// Methods
-		public void Init(ObjectCheckers objCheckers, ObjectCasters objCasters) {} // 0x0000000184BBBC10-0x0000000184BBC690
-		public int Call(IntPtr L, ObjectTranslator translator) => default; // 0x0000000184557FA0-0x0000000184558BA0
-		public bool Check(IntPtr L, bool haveOverload = false /* Metadata: 0x0207C22A */) => default; // 0x0000000184557F70-0x0000000184557FA0
-		public bool Check(IntPtr L) => default; // 0x0000000184ED01F0-0x0000000184ED0390
-		public bool CheckForNoOverride(IntPtr L) => default; // 0x0000000184558C20-0x0000000184558DB0
+		public void Init(ObjectCheckers objCheckers, ObjectCasters objCasters); // 0x0000000182F2C530-0x0000000182F2CE00
+		public int Call(IntPtr L, ObjectTranslator translator); // 0x000000018329C0E0-0x000000018329C9E0
+		public bool Check(IntPtr L, bool haveOverload = false /* Metadata: 0x0234BEDA */); // 0x000000018329C0B0-0x000000018329C0E0
+		public bool Check(IntPtr L); // 0x0000000183DC80D0-0x0000000183DC8230
+		public bool CheckForNoOverride(IntPtr L); // 0x000000018329B2F0-0x000000018329B440
 	}
 
-	public class OverloadMethodWrap // TypeDefIndex: 56096
+	public class OverloadMethodWrap // TypeDefIndex: 58736
 	{
 		// Fields
 		private ObjectTranslator translator; // 0x10
@@ -2306,33 +2273,36 @@ namespace XLua
 		private object[] args; // 0x80
 		private int[] refPos; // 0x88
 		private System.Type paramsType; // 0x90
+		[CompilerGenerated]
 		private int _OptionParamCount_k__BackingField; // 0x98
+		[CompilerGenerated]
 		private object[] _DefalutValue_k__BackingField; // 0xA0
+		[CompilerGenerated]
 		private bool _IsInited_k__BackingField; // 0xA8
+		[CompilerGenerated]
 		private bool _HasDefalutValue_k__BackingField; // 0xA9
 	
 		// Properties
-		public bool InitedForDelegateCall { get => default; } // 0x000000018805D4CC-0x000000018805D4D8 
-		public MethodBase Method { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
-		public List<System.Type> CastTypes { get => default; } // 0x00000001813ECBC0-0x00000001813ECBD0 
-		public int OptionParamCount { get; private set; } // 0x00000001834A0D40-0x00000001834A0D50 0x00000001834A2250-0x00000001834A2260
-		public object[] DefalutValue { get; private set; } // 0x0000000185FB0520-0x0000000185FB0530 0x000000018646EBCC-0x000000018646EBE0
-		public bool IsInited { get; private set; } // 0x0000000185FB8C10-0x0000000185FB8C20 0x0000000185FBC1E0-0x0000000185FBC1F0
-		public bool HasDefalutValue { get; private set; } // 0x0000000185FBC1B0-0x0000000185FBC1C0 0x0000000185FBC1D0-0x0000000185FBC1E0
+		public bool InitedForDelegateCall { get; } // 0x00000001890BCB14-0x00000001890BCB20 
+		public MethodBase Method { get; } // 0x0000000184D862C0-0x0000000184D862D0 
+		public List<System.Type> CastTypes { get; } // 0x0000000184D85A50-0x0000000184D85A60 
+		public int OptionParamCount { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862D0-0x0000000184D862E0 0x0000000184D86300-0x0000000184D86310
+		public object[] DefalutValue { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86210-0x0000000184D86220 0x0000000185391334-0x0000000185391348
+		public bool IsInited { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D90720-0x0000000184D90730 0x0000000184D90750-0x0000000184D90760
+		public bool HasDefalutValue { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182ED0880-0x0000000182ED0890 0x0000000184D90740-0x0000000184D90750
 	
 		// Constructors
-		public OverloadMethodWrap() {} // Dummy constructor
-		public OverloadMethodWrap(ObjectTranslator translator, System.Type targetType, MethodBase method) {} // 0x000000018C3BBB20-0x000000018C3BBB6C
+		public OverloadMethodWrap(ObjectTranslator translator, System.Type targetType, MethodBase method); // 0x000000018B8A4C40-0x000000018B8A4C8C
 	
 		// Methods
-		public void Init(ObjectCheckers objCheckers, ObjectCasters objCasters) {} // 0x000000018C3BB05C-0x000000018C3BBB20
-		public void InitForDefaultValue() {} // 0x000000018C3BA790-0x000000018C3BAA5C
-		public void InitForDelegateCallMethod() {} // 0x000000018C3BAA5C-0x000000018C3BB05C
-		public int Call(IntPtr L) => default; // 0x000000018C3B9FCC-0x000000018C3BA790
-		public int CallForDelegate(IntPtr L, ObjectTranslator translator) => default; // 0x000000018C3B9E54-0x000000018C3B9FCC
+		public void Init(ObjectCheckers objCheckers, ObjectCasters objCasters); // 0x000000018B8A417C-0x000000018B8A4C40
+		public void InitForDefaultValue(); // 0x000000018B8A38B0-0x000000018B8A3B7C
+		public void InitForDelegateCallMethod(); // 0x000000018B8A3B7C-0x000000018B8A417C
+		public int Call(IntPtr L); // 0x000000018B8A30EC-0x000000018B8A38B0
+		public int CallForDelegate(IntPtr L, ObjectTranslator translator); // 0x000000018B8A2F74-0x000000018B8A30EC
 	}
 
-	public class MethodWrap // TypeDefIndex: 56097
+	public class MethodWrap // TypeDefIndex: 58737
 	{
 		// Fields
 		private string methodName; // 0x10
@@ -2344,15 +2314,14 @@ namespace XLua
 		private bool haveDefault; // 0x32
 	
 		// Constructors
-		public MethodWrap() {} // Dummy constructor
-		public MethodWrap(string methodName, List<MethodBase> overloads, System.Type targetType, bool forceCheck) {} // 0x000000018439D8F0-0x000000018439D990
+		public MethodWrap(string methodName, List<MethodBase> overloads, System.Type targetType, bool forceCheck); // 0x0000000182F320F0-0x0000000182F32150
 	
 		// Methods
-		private void _InitForDelegateCall() {} // 0x00000001850EACF0-0x00000001850EAEA0
-		public int Call(IntPtr L) => default; // 0x0000000184556E90-0x00000001845575F0
+		private void _InitForDelegateCall(); // 0x0000000183FB3C80-0x0000000183FB3DE0
+		public int Call(IntPtr L); // 0x000000018329B7B0-0x000000018329BD30
 	}
 
-	public class MethodWrapsCache // TypeDefIndex: 56101
+	public class MethodWrapsCache // TypeDefIndex: 58741
 	{
 		// Fields
 		public static Dictionary<System.Type, lua_CSFunction> CodeGenConstructorMap; // 0x00
@@ -2364,33 +2333,36 @@ namespace XLua
 		private Dictionary<System.Type, lua_CSFunction> delegateCache; // 0x38
 	
 		// Nested types
-		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 56098
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 58738
 		{
 			// Fields
 			public MethodWrapsCache __4__this; // 0x10
 			public System.Type type; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass11_0() {} // 0x000000018C3B8C00-0x000000018C3B8D00
+			public __c__DisplayClass11_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetConstructorWrap_b__0(IntPtr L) => default; // 0x000000018C3B8D00-0x000000018C3B8D64
+			internal int _GetConstructorWrap_b__0(IntPtr L); // 0x000000018B8A54D0-0x000000018B8A5524
 		}
 	
-		private sealed class __c__DisplayClass11_1 // TypeDefIndex: 56099
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass11_1 // TypeDefIndex: 58739
 		{
 			// Fields
 			public lua_CSFunction ctor; // 0x10
 			public __c__DisplayClass11_0 CS___8__locals1; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass11_1() {} // 0x0000000185C28B40-0x0000000185C28BD0
+			public __c__DisplayClass11_1(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetConstructorWrap_b__1(IntPtr L) => default; // 0x0000000185C28BD0-0x0000000185C28D10
+			internal int _GetConstructorWrap_b__1(IntPtr L); // 0x00000001848BB230-0x00000001848BB2C0
 		}
 	
-		private sealed class __c__DisplayClass15_0 // TypeDefIndex: 56100
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass15_0 // TypeDefIndex: 58740
 		{
 			// Fields
 			public MethodWrapsCache __4__this; // 0x10
@@ -2403,41 +2375,41 @@ namespace XLua
 			public MethodInfo remove; // 0x48
 	
 			// Constructors
-			public __c__DisplayClass15_0() {} // 0x000000018439D990-0x000000018439DD80
+			public __c__DisplayClass15_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetEventWrap_b__0(IntPtr L) => default; // 0x000000018C3B90BC-0x000000018C3B9304
+			internal int _GetEventWrap_b__0(IntPtr L); // 0x000000018B8A5640-0x000000018B8A5B58
 		}
 	
 		// Constructors
-		public MethodWrapsCache() {} // Dummy constructor
-		static MethodWrapsCache() {} // 0x00000001840880D0-0x00000001840883A0
-		public MethodWrapsCache(ObjectTranslator translator, ObjectCheckers objCheckers, ObjectCasters objCasters) {} // 0x000000018439CDA0-0x000000018439D880
+		static MethodWrapsCache(); // 0x0000000184A22640-0x0000000184A226D0
+		public MethodWrapsCache(ObjectTranslator translator, ObjectCheckers objCheckers, ObjectCasters objCasters); // 0x0000000184A226D0-0x0000000184A22810
 	
 		// Methods
-		public static void AddCodeGenConstructor(System.Type type, lua_CSFunction lua_CSFunction) {} // 0x000000018C3B8F64-0x000000018C3B90BC
-		public static void ClearCodeGenConstructorMap() {} // 0x000000018C3B8D64-0x000000018C3B8F64
-		public lua_CSFunction GetConstructorWrap(System.Type type) => default; // 0x000000018C3B9304-0x000000018C3B9510
-		public lua_CSFunction GetMethodWrap(System.Type type, string methodName) => default; // 0x0000000185492010-0x0000000185492020
-		public lua_CSFunction GetMethodWrapInCache(System.Type type, string methodName) => default; // 0x000000018C3BC474-0x000000018C3BC4C8
-		public lua_CSFunction GetDelegateWrap(System.Type type) => default; // 0x0000000185492010-0x0000000185492020
-		public lua_CSFunction GetEventWrap(System.Type type, string eventName) => default; // 0x00000001857DD2E0-0x00000001857DD370
-		public MethodWrap _GenMethodWrap(System.Type type, string methodName, IEnumerable<MemberInfo> methodBases, bool forceCheck = false /* Metadata: 0x0207C22B */) => default; // 0x0000000185492010-0x0000000185492020
-		private static bool tryMakeGenericMethod(ref MethodBase method) => default; // 0x000000018C3BC564-0x000000018C3BCA7C
+		public static void AddCodeGenConstructor(System.Type type, lua_CSFunction lua_CSFunction); // 0x000000018B8A1CD0-0x000000018B8A1DD0
+		public static void ClearCodeGenConstructorMap(); // 0x000000018B8A1DD0-0x000000018B8A1E34
+		public lua_CSFunction GetConstructorWrap(System.Type type); // 0x0000000183605D90-0x00000001836060D0
+		public lua_CSFunction GetMethodWrap(System.Type type, string methodName); // 0x000000018B8A218C-0x000000018B8A23D4
+		public lua_CSFunction GetMethodWrapInCache(System.Type type, string methodName); // 0x000000018B8A2034-0x000000018B8A218C
+		public lua_CSFunction GetDelegateWrap(System.Type type); // 0x000000018B8A1E34-0x000000018B8A2034
+		public lua_CSFunction GetEventWrap(System.Type type, string eventName); // 0x0000000183600400-0x00000001836006D0
+		public MethodWrap _GenMethodWrap(System.Type type, string methodName, IEnumerable<MemberInfo> methodBases, bool forceCheck = false /* Metadata: 0x0234BEDB */); // 0x0000000182F31950-0x0000000182F31D10
+		private static bool tryMakeGenericMethod(ref MethodBase method); // 0x000000018B8A23D4-0x000000018B8A25E0
 	}
 
-	public delegate bool ObjectCheck(IntPtr L, int idx); // TypeDefIndex: 56102; 0x0000000181B59400-0x0000000181B59410
+	public delegate bool ObjectCheck(IntPtr L, int idx); // TypeDefIndex: 58742; 0x00000001815802E0-0x00000001815802F0
 
-	public delegate object ObjectCast(IntPtr L, int idx, object target); // TypeDefIndex: 56103; 0x00000001817E31E0-0x00000001817E3200
+	public delegate object ObjectCast(IntPtr L, int idx, object target); // TypeDefIndex: 58743; 0x00000001814F3120-0x00000001814F3140
 
-	public class ObjectCheckers // TypeDefIndex: 56106
+	public class ObjectCheckers // TypeDefIndex: 58746
 	{
 		// Fields
 		private Dictionary<System.Type, ObjectCheck> checkersMap; // 0x10
 		private ObjectTranslator translator; // 0x18
 	
 		// Nested types
-		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 56104
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 58744
 		{
 			// Fields
 			public ObjectCheckers __4__this; // 0x10
@@ -2445,61 +2417,62 @@ namespace XLua
 			public ObjectCheck fixTypeCheck; // 0x20
 	
 			// Constructors
-			public __c__DisplayClass14_0() {} // 0x00000001843A0C70-0x00000001843A15D0
+			public __c__DisplayClass14_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _genChecker_b__0(IntPtr L, int idx) => default; // 0x00000001840A27C0-0x00000001840A27D0
-			internal bool _genChecker_b__1(IntPtr L, int idx) => default; // 0x000000018C3B9D74-0x000000018C3B9E54
-			internal bool _genChecker_b__2(IntPtr L, int idx) => default; // 0x00000001851D24C0-0x00000001851D2550
-			internal bool _genChecker_b__3(IntPtr L, int idx) => default; // 0x000000018C3B9BC0-0x000000018C3B9C40
-			internal bool _genChecker_b__4(IntPtr L, int idx) => default; // 0x0000000185125650-0x00000001851256F0
-			internal bool _genChecker_b__5(IntPtr L, int idx) => default; // 0x000000018C3B9AE0-0x000000018C3B9BC0
-			internal bool _genChecker_b__6(IntPtr L, int idx) => default; // 0x000000018520CC40-0x000000018520CCD0
-			internal bool _genChecker_b__7(IntPtr L, int idx) => default; // 0x0000000185485E90-0x0000000185485F00
+			internal bool _genChecker_b__0(IntPtr L, int idx); // 0x0000000183299A40-0x0000000183299B30
+			internal bool _genChecker_b__1(IntPtr L, int idx); // 0x000000018434B0B0-0x000000018434B130
+			internal bool _genChecker_b__2(IntPtr L, int idx); // 0x0000000183F70F10-0x0000000183F70F90
+			internal bool _genChecker_b__3(IntPtr L, int idx); // 0x000000018B8A5524-0x000000018B8A55C0
+			internal bool _genChecker_b__4(IntPtr L, int idx); // 0x0000000184192E50-0x0000000184192EF0
+			internal bool _genChecker_b__5(IntPtr L, int idx); // 0x00000001841AE0D0-0x00000001841AE170
+			internal bool _genChecker_b__6(IntPtr L, int idx); // 0x000000018B8A55C0-0x000000018B8A5640
+			internal bool _genChecker_b__7(IntPtr L, int idx); // 0x0000000183299530-0x00000001832995D0
 		}
 	
-		private sealed class __c__DisplayClass15_0 // TypeDefIndex: 56105
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass15_0 // TypeDefIndex: 58745
 		{
 			// Fields
 			public ObjectCheck oc; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass15_0() {} // 0x00000001859DB7D0-0x00000001859DB840
+			public __c__DisplayClass15_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _genNullableChecker_b__0(IntPtr L, int idx) => default; // 0x000000018C3B9C94-0x000000018C3B9D74
+			internal bool _genNullableChecker_b__0(IntPtr L, int idx); // 0x000000018B8A5B58-0x000000018B8A5BD8
 		}
 	
 		// Constructors
-		public ObjectCheckers() {} // Dummy constructor
-		public ObjectCheckers(ObjectTranslator translator) {} // 0x000000018C3B9C40-0x000000018C3B9C94
+		public ObjectCheckers(ObjectTranslator translator); // 0x0000000183602A10-0x0000000183603370
 	
 		// Methods
-		private static bool objectCheck(IntPtr L, int idx) => default; // 0x000000018439F830-0x000000018439FBA0
-		private bool luaTableCheck(IntPtr L, int idx) => default; // 0x0000000185C3BD50-0x0000000185C3BE00
-		private bool numberCheck(IntPtr L, int idx) => default; // 0x0000000185C57100-0x0000000185C57170
-		private bool decimalCheck(IntPtr L, int idx) => default; // 0x00000001845555B0-0x0000000184555820
-		private bool strCheck(IntPtr L, int idx) => default; // 0x0000000185492010-0x0000000185492020
-		private bool bytesCheck(IntPtr L, int idx) => default; // 0x0000000184554BE0-0x0000000184554D30
-		private bool boolCheck(IntPtr L, int idx) => default; // 0x0000000185504650-0x00000001855046F0
-		private bool int64Check(IntPtr L, int idx) => default; // 0x00000001850D3DE0-0x00000001850D3E80
-		private bool uint64Check(IntPtr L, int idx) => default; // 0x0000000185EBBAB0-0x0000000185EBBB70
-		private bool luaFunctionCheck(IntPtr L, int idx) => default; // 0x00000001853C66D0-0x00000001853C6790
-		private bool intptrCheck(IntPtr L, int idx) => default; // 0x00000001852C3530-0x00000001852C35F0
-		private ObjectCheck genChecker(System.Type type) => default; // 0x000000018C3BC4C8-0x000000018C3BC564
-		public ObjectCheck genNullableChecker(ObjectCheck oc) => default; // 0x0000000184554A70-0x0000000184554B40
-		public void AddChecker(System.Type type, ObjectCheck oc) {} // 0x0000000185492010-0x0000000185492020
-		public ObjectCheck GetChecker(System.Type type) => default; // 0x000000018C3BCA7C-0x000000018C3BCAFC
+		private static bool objectCheck(IntPtr L, int idx); // 0x0000000182FFF600-0x0000000182FFF610
+		private bool luaTableCheck(IntPtr L, int idx); // 0x000000018B8A2E94-0x000000018B8A2F74
+		private bool numberCheck(IntPtr L, int idx); // 0x00000001840B5BE0-0x00000001840B5C50
+		private bool decimalCheck(IntPtr L, int idx); // 0x000000018B8A2CE0-0x000000018B8A2D60
+		private bool strCheck(IntPtr L, int idx); // 0x0000000183FC2070-0x0000000183FC20F0
+		private bool bytesCheck(IntPtr L, int idx); // 0x000000018B8A2C00-0x000000018B8A2CE0
+		private bool boolCheck(IntPtr L, int idx); // 0x0000000184129F90-0x0000000184129FE0
+		private bool int64Check(IntPtr L, int idx); // 0x0000000184188EB0-0x0000000184188F00
+		private bool uint64Check(IntPtr L, int idx); // 0x0000000184188EB0-0x0000000184188F00
+		private bool luaFunctionCheck(IntPtr L, int idx); // 0x000000018B8A2DB4-0x000000018B8A2E94
+		private bool intptrCheck(IntPtr L, int idx); // 0x000000018B8A2D60-0x000000018B8A2DB4
+		private ObjectCheck genChecker(System.Type type); // 0x00000001836044C0-0x0000000183604830
+		public ObjectCheck genNullableChecker(ObjectCheck oc); // 0x0000000184A30C90-0x0000000184A30D40
+		public void AddChecker(System.Type type, ObjectCheck oc); // 0x0000000184A3C880-0x0000000184A3C8F0
+		public ObjectCheck GetChecker(System.Type type); // 0x0000000183299E60-0x000000018329A160
 	}
 
-	public class ObjectCasters // TypeDefIndex: 56111
+	public class ObjectCasters // TypeDefIndex: 58751
 	{
 		// Fields
 		private Dictionary<System.Type, ObjectCast> castersMap; // 0x10
 		private ObjectTranslator translator; // 0x18
 	
 		// Nested types
-		private sealed class __c__DisplayClass23_0 // TypeDefIndex: 56107
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass23_0 // TypeDefIndex: 58747
 		{
 			// Fields
 			public ObjectCasters __4__this; // 0x10
@@ -2507,19 +2480,20 @@ namespace XLua
 			public ObjectCast fixTypeGetter; // 0x20
 	
 			// Constructors
-			public __c__DisplayClass23_0() {} // 0x00000001843A02C0-0x00000001843A0C70
+			public __c__DisplayClass23_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal object _genCaster_b__0(IntPtr L, int idx, object target) => default; // 0x000000018C3B961C-0x000000018C3B968C
-			internal object _genCaster_b__1(IntPtr L, int idx, object target) => default; // 0x000000018C3B98FC-0x000000018C3B996C
-			internal object _genCaster_b__2(IntPtr L, int idx, object target) => default; // 0x000000018C3B95AC-0x000000018C3B961C
-			internal object _genCaster_b__3(IntPtr L, int idx, object target) => default; // 0x000000018C3B996C-0x000000018C3B99DC
-			internal object _genCaster_b__4(IntPtr L, int idx, object target) => default; // 0x000000018C3B99DC-0x000000018C3B9A4C
-			internal object _genCaster_b__5(IntPtr L, int idx, object target) => default; // 0x0000000184FC4450-0x0000000184FC44D0
-			internal object _genCaster_b__6(IntPtr L, int idx, object target) => default; // 0x0000000184FC4560-0x0000000184FC45E0
+			internal object _genCaster_b__0(IntPtr L, int idx, object target); // 0x0000000183605A30-0x0000000183605B50
+			internal object _genCaster_b__1(IntPtr L, int idx, object target); // 0x0000000183605CE0-0x0000000183605D90
+			internal object _genCaster_b__2(IntPtr L, int idx, object target); // 0x000000018B8ADB5C-0x000000018B8ADC18
+			internal object _genCaster_b__3(IntPtr L, int idx, object target); // 0x00000001847F20E0-0x00000001847F2190
+			internal object _genCaster_b__4(IntPtr L, int idx, object target); // 0x0000000183605C80-0x0000000183605CE0
+			internal object _genCaster_b__5(IntPtr L, int idx, object target); // 0x000000018B8ADC18-0x000000018B8ADF2C
+			internal object _genCaster_b__6(IntPtr L, int idx, object target); // 0x00000001836055C0-0x0000000183605A30
 		}
 	
-		private sealed class __c__DisplayClass23_1 // TypeDefIndex: 56108
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass23_1 // TypeDefIndex: 58748
 		{
 			// Fields
 			public System.Type elementType; // 0x10
@@ -2527,13 +2501,14 @@ namespace XLua
 			public __c__DisplayClass23_0 CS___8__locals1; // 0x20
 	
 			// Constructors
-			public __c__DisplayClass23_1() {} // 0x000000018433F1F0-0x000000018433F270
+			public __c__DisplayClass23_1(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal object _genCaster_b__7(IntPtr L, int idx, object target) => default; // 0x0000000184FC45E0-0x0000000184FC4660
+			internal object _genCaster_b__7(IntPtr L, int idx, object target); // 0x00000001836050E0-0x0000000183605350
 		}
 	
-		private sealed class __c__DisplayClass23_2 // TypeDefIndex: 56109
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass23_2 // TypeDefIndex: 58749
 		{
 			// Fields
 			public System.Type keyType; // 0x10
@@ -2543,121 +2518,114 @@ namespace XLua
 			public __c__DisplayClass23_0 CS___8__locals2; // 0x30
 	
 			// Constructors
-			public __c__DisplayClass23_2() {} // 0x000000018C3B981C-0x000000018C3B988C
+			public __c__DisplayClass23_2(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal object _genCaster_b__8(IntPtr L, int idx, object target) => default; // 0x0000000184FC44D0-0x0000000184FC4560
+			internal object _genCaster_b__8(IntPtr L, int idx, object target); // 0x000000018B8ADF2C-0x000000018B8AE218
 		}
 	
-		private sealed class __c__DisplayClass24_0 // TypeDefIndex: 56110
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass24_0 // TypeDefIndex: 58750
 		{
 			// Fields
 			public ObjectCast oc; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass24_0() {} // 0x000000018C3B968C-0x000000018C3B971C
+			public __c__DisplayClass24_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal object _genNullableCaster_b__0(IntPtr L, int idx, object target) => default; // 0x00000001853B1920-0x00000001853B19A0
+			internal object _genNullableCaster_b__0(IntPtr L, int idx, object target); // 0x000000018B8AE218-0x000000018B8AE2A8
 		}
 	
 		// Constructors
-		public ObjectCasters() {} // Dummy constructor
-		public ObjectCasters(ObjectTranslator translator) {} // 0x00000001853A8730-0x00000001853A8790
+		public ObjectCasters(ObjectTranslator translator); // 0x0000000183603370-0x0000000183603D20
 	
 		// Methods
-		private static object charCaster(IntPtr L, int idx, object target) => default; // 0x000000018C3B971C-0x000000018C3B981C
-		private static object sbyteCaster(IntPtr L, int idx, object target) => default; // 0x000000018C3B988C-0x000000018C3B98FC
-		private static object byteCaster(IntPtr L, int idx, object target) => default; // 0x0000000185B92E60-0x0000000185B92FC0
-		private static object shortCaster(IntPtr L, int idx, object target) => default; // 0x0000000184552120-0x0000000184552250
-		private static object ushortCaster(IntPtr L, int idx, object target) => default; // 0x0000000184551080-0x00000001845511B0
-		private static object intCaster(IntPtr L, int idx, object target) => default; // 0x0000000185925D70-0x0000000185925DE0
-		private static object uintCaster(IntPtr L, int idx, object target) => default; // 0x000000018439FC50-0x00000001843A01A0
-		private static object longCaster(IntPtr L, int idx, object target) => default; // 0x0000000185C3BE00-0x0000000185C3BEB0
-		private static object ulongCaster(IntPtr L, int idx, object target) => default; // 0x00000001845541B0-0x0000000184554360
-		private static object getDouble(IntPtr L, int idx, object target) => default; // 0x0000000185492010-0x0000000185492020
-		private static object floatCaster(IntPtr L, int idx, object target) => default; // 0x00000001843435E0-0x00000001843436D0
-		private object decimalCaster(IntPtr L, int idx, object target) => default; // 0x0000000184550550-0x0000000184550640
-		private static object getBoolean(IntPtr L, int idx, object target) => default; // 0x000000018C3C4A9C-0x000000018C3C4B58
-		private static object getString(IntPtr L, int idx, object target) => default; // 0x0000000185D7A080-0x0000000185D7A130
-		private object getBytes(IntPtr L, int idx, object target) => default; // 0x0000000184550A40-0x0000000184550AE0
-		private object getIntptr(IntPtr L, int idx, object target) => default; // 0x000000018C3C4B58-0x000000018C3C4EA8
-		private object getObject(IntPtr L, int idx, object target) => default; // 0x00000001853F0010-0x00000001853F0100
-		private object getLuaTable(IntPtr L, int idx, object target) => default; // 0x0000000185492010-0x0000000185492020
-		private object getLuaFunction(IntPtr L, int idx, object target) => default; // 0x0000000184C35050-0x0000000184C35310
-		public void AddCaster(System.Type type, ObjectCast oc) {} // 0x0000000185492010-0x0000000185492020
-		private ObjectCast genCaster(System.Type type) => default; // 0x000000018C3C4EA8-0x000000018C3C5194
-		private ObjectCast genNullableCaster(ObjectCast oc) => default; // 0x0000000185492010-0x0000000185492020
-		public ObjectCast GetCaster(System.Type type) => default; // 0x000000018C3C5194-0x000000018C3C5224
+		private static object charCaster(IntPtr L, int idx, object target); // 0x000000018B8A26EC-0x000000018B8A275C
+		private static object sbyteCaster(IntPtr L, int idx, object target); // 0x000000018B8A29CC-0x000000018B8A2A3C
+		private static object byteCaster(IntPtr L, int idx, object target); // 0x000000018B8A267C-0x000000018B8A26EC
+		private static object shortCaster(IntPtr L, int idx, object target); // 0x000000018B8A2A3C-0x000000018B8A2AAC
+		private static object ushortCaster(IntPtr L, int idx, object target); // 0x000000018B8A2AFC-0x000000018B8A2B6C
+		private static object intCaster(IntPtr L, int idx, object target); // 0x00000001834DC170-0x00000001834DC1C0
+		private static object uintCaster(IntPtr L, int idx, object target); // 0x000000018B8A2AAC-0x000000018B8A2AFC
+		private static object longCaster(IntPtr L, int idx, object target); // 0x0000000182F332A0-0x0000000182F33300
+		private static object ulongCaster(IntPtr L, int idx, object target); // 0x00000001834DC010-0x00000001834DC070
+		private static object getDouble(IntPtr L, int idx, object target); // 0x000000018B8A28EC-0x000000018B8A295C
+		private static object floatCaster(IntPtr L, int idx, object target); // 0x00000001834DC240-0x00000001834DC2A0
+		private object decimalCaster(IntPtr L, int idx, object target); // 0x000000018B8A275C-0x000000018B8A27EC
+		private static object getBoolean(IntPtr L, int idx, object target); // 0x00000001844606C0-0x0000000184460720
+		private static object getString(IntPtr L, int idx, object target); // 0x00000001841A2A70-0x00000001841A2AB0
+		private object getBytes(IntPtr L, int idx, object target); // 0x000000018B8A27EC-0x000000018B8A28EC
+		private object getIntptr(IntPtr L, int idx, object target); // 0x000000018B8A295C-0x000000018B8A29CC
+		private object getObject(IntPtr L, int idx, object target); // 0x00000001849B7D80-0x00000001849B7EE0
+		private object getLuaTable(IntPtr L, int idx, object target); // 0x0000000183606E60-0x0000000183606FA0
+		private object getLuaFunction(IntPtr L, int idx, object target); // 0x0000000183606CD0-0x0000000183606E10
+		public void AddCaster(System.Type type, ObjectCast oc); // 0x0000000183602800-0x0000000183602870
+		private ObjectCast genCaster(System.Type type); // 0x0000000183603D20-0x0000000183604170
+		private ObjectCast genNullableCaster(ObjectCast oc); // 0x0000000184A30D40-0x0000000184A30DF0
+		public ObjectCast GetCaster(System.Type type); // 0x0000000183298500-0x0000000183298710
 	}
 
-	public class ObjectPool // TypeDefIndex: 56113
+	public class ObjectPool // TypeDefIndex: 58753
 	{
 		// Fields
-		private const int LIST_END = -1; // Metadata: 0x0207C22C
-		private const int ALLOCED = -2; // Metadata: 0x0207C22D
+		private const int LIST_END = -1; // Metadata: 0x0234BEDC
+		private const int ALLOCED = -2; // Metadata: 0x0234BEDD
 		private Slot[] list; // 0x10
 		private int freelist; // 0x18
 		private int count; // 0x1C
 		private List<object> needCleanImmediately; // 0x20
 	
 		// Properties
-		public object this[int i] { get => default; } // 0x000000018454F460-0x000000018454F4C0 
+		public object this[int i] { get => default; } // 0x000000018B8A7F4C-0x000000018B8A7F80 
 	
 		// Nested types
-		private struct Slot // TypeDefIndex: 56112
+		private struct Slot // TypeDefIndex: 58752
 		{
 			// Fields
 			public int next; // 0x00
 			public object obj; // 0x08
 	
 			// Constructors
-			public Slot(int next, object obj) {
-				this.next = default;
-				this.obj = default;
-			} // 0x000000018C3BEE70-0x000000018C3BEEA4
+			public Slot(int next, object obj); // 0x0000000186B17430-0x0000000186B17440
 		}
 	
 		// Constructors
-		public ObjectPool() {} // 0x0000000189317CA8-0x0000000189317CB8
+		public ObjectPool(); // 0x0000000184CE6E20-0x0000000184CE6ED0
 	
 		// Methods
-		public void AddToNeedCleanImmediately(object obj) {} // 0x000000018C3BEE20-0x000000018C3BEE70
-		public void Clear() {} // 0x0000000184B5B380-0x0000000184B5B440
-		private void extend_capacity() {} // 0x00000001841509A0-0x0000000184150B50
-		public int Add(object obj) => default; // 0x0000000184151550-0x0000000184151690
-		public bool TryGetValue(int index, out object obj) {
-			obj = default;
-			return default;
-		} // 0x0000000184150B50-0x0000000184150B90
-		public object Get(int index) => default; // 0x00000001841510A0-0x00000001841511E0
-		public object Remove(int index) => default; // 0x0000000184150930-0x00000001841509A0
-		public object Replace(int index, object o) => default; // 0x0000000184151690-0x0000000184151BA0
-		public int Check(int check_pos, int max_check, Func<object, bool> checker, Dictionary<object, int> reverse_map) => default; // 0x0000000184FD2230-0x0000000184FD2300
-		public void ClearAllUserdata(Func<object, bool> checker, Dictionary<object, int> reverse_map) {} // 0x0000000185F09640-0x0000000185F096F0
+		public void AddToNeedCleanImmediately(object obj); // 0x00000001832F0140-0x00000001832F0170
+		public void Clear(); // 0x000000018B8A7EFC-0x000000018B8A7F4C
+		private void extend_capacity(); // 0x0000000183AC9B40-0x0000000183AC9C00
+		public int Add(object obj); // 0x00000001831342D0-0x00000001831346E0
+		public bool TryGetValue(int index, out object obj); // 0x0000000183135180-0x00000001831352C0
+		public object Get(int index); // 0x0000000183134170-0x00000001831341B0
+		public object Remove(int index); // 0x0000000183134BA0-0x0000000183134D10
+		public object Replace(int index, object o); // 0x00000001831346E0-0x0000000183134890
+		public int Check(int check_pos, int max_check, Func<object, bool> checker, Dictionary<object, int> reverse_map); // 0x0000000183134D10-0x0000000183135180
+		public void ClearAllUserdata(Func<object, bool> checker, Dictionary<object, int> reverse_map); // 0x0000000184034FB0-0x0000000184035120
 	}
 
-	internal class ReferenceEqualsComparer : IEqualityComparer<object> // TypeDefIndex: 56114
+	internal class ReferenceEqualsComparer : IEqualityComparer<object> // TypeDefIndex: 58754
 	{
 		// Constructors
-		public ReferenceEqualsComparer() {} // 0x0000000185492010-0x0000000185492020
+		public ReferenceEqualsComparer(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public new bool Equals(object o1, object o2) => default; // 0x0000000184D81F20-0x0000000184D81F30
-		public int GetHashCode(object obj) => default; // 0x0000000185FCF280-0x0000000185FCF290
+		public new bool Equals(object o1, object o2); // 0x0000000183C05140-0x0000000183C05150
+		public int GetHashCode(object obj); // 0x0000000184DA3AC0-0x0000000184DA3AD0
 	}
 
-	public class MonoPInvokeCallbackAttribute : Attribute // TypeDefIndex: 56115
+	public class MonoPInvokeCallbackAttribute : Attribute // TypeDefIndex: 58755
 	{
 		// Fields
 		private System.Type type; // 0x10
 	
 		// Constructors
-		public MonoPInvokeCallbackAttribute() {} // Dummy constructor
-		public MonoPInvokeCallbackAttribute(System.Type t) {} // 0x0000000184096E30-0x0000000184096EF0
+		public MonoPInvokeCallbackAttribute(System.Type t); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	public enum LuaTypes // TypeDefIndex: 56116
+	public enum LuaTypes // TypeDefIndex: 58756
 	{
 		LUA_TNONE = -1,
 		LUA_TNIL = 0,
@@ -2671,7 +2639,7 @@ namespace XLua
 		LUA_TTHREAD = 8
 	}
 
-	public enum LuaGCOptions // TypeDefIndex: 56117
+	public enum LuaGCOptions // TypeDefIndex: 58757
 	{
 		LUA_GCSTOP = 0,
 		LUA_GCRESTART = 1,
@@ -2686,7 +2654,7 @@ namespace XLua
 		LUA_GCINC = 11
 	}
 
-	public enum LuaThreadStatus // TypeDefIndex: 56118
+	public enum LuaThreadStatus // TypeDefIndex: 58758
 	{
 		LUA_RESUME_ERROR = -1,
 		LUA_OK = 0,
@@ -2697,16 +2665,16 @@ namespace XLua
 		LUA_ERRERR = 5
 	}
 
-	public class LuaIndexes // TypeDefIndex: 56119
+	public class LuaIndexes // TypeDefIndex: 58759
 	{
 		// Properties
-		public static int LUA_REGISTRYINDEX { get => default; set {} } // 0x0000000184559370-0x00000001845593D0 0x0000000185F88FE0-0x0000000185F89040
+		public static int LUA_REGISTRYINDEX { get; set; } // 0x000000018329B2B0-0x000000018329B2F0 0x0000000184D58F10-0x0000000184D58F70
 	
 		// Constructors
-		public LuaIndexes() {} // 0x0000000185492010-0x0000000185492020
+		public LuaIndexes(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class ObjectTranslator // TypeDefIndex: 56141
+	public class ObjectTranslator // TypeDefIndex: 58781
 	{
 		// Fields
 		public MethodWrapsCache methodWrapsCache; // 0x10
@@ -2754,10 +2722,10 @@ namespace XLua
 		private int decimal_type_id; // 0x120
 	
 		// Properties
-		public ObjectPool Pools { get => default; } // 0x000000018548EC80-0x000000018548ECE0 
+		public ObjectPool Pools { get; } // 0x0000000184D86240-0x0000000184D86250 
 	
 		// Nested types
-		public enum LOGLEVEL // TypeDefIndex: 56120
+		public enum LOGLEVEL // TypeDefIndex: 58760
 		{
 			NO = 0,
 			INFO = 1,
@@ -2765,7 +2733,7 @@ namespace XLua
 			ERROR = 3
 		}
 	
-		private struct EnumerableWrapper // TypeDefIndex: 56121
+		private struct EnumerableWrapper // TypeDefIndex: 58761
 		{
 			// Fields
 			public int Index; // 0x00
@@ -2774,26 +2742,27 @@ namespace XLua
 			public static Stack<EnumerableWrapper> enumerableStack; // 0x00
 	
 			// Constructors
-			static EnumerableWrapper() {
-				enumerableStack = default;
-			} // 0x00000001848116B0-0x0000000184811980
+			static EnumerableWrapper(); // 0x000000018B8A7444-0x000000018B8A74D0
 	
 			// Methods
-			public static int ListCsPairs(IntPtr L) => default; // 0x00000001813B8590-0x00000001813B85A0
-			public static int DicCsPairs(IntPtr L) => default; // 0x00000001851516E0-0x0000000185151750
-			public static int IEnumerableCsPairs(IntPtr L) => default; // 0x0000000185492020-0x0000000185492090
+			[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+			public static int ListCsPairs(IntPtr L); // 0x0000000183E77DB0-0x0000000183E84C50
+			[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+			public static int DicCsPairs(IntPtr L); // 0x0000000183C35420-0x0000000183C35660
+			[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+			public static int IEnumerableCsPairs(IntPtr L); // 0x0000000183E1DA60-0x0000000183E1DBB0
 		}
 	
-		private struct FStructWrap<T> // TypeDefIndex: 56122
+		private struct FStructWrap<T> // TypeDefIndex: 58762
 		{
 			// Fields
 			public T value;
 	
 			// Methods
-			public IntPtr GetPtr() => default; // 0x0000000184CB8990-0x0000000184CB8A40
+			public IntPtr GetPtr();
 		}
 	
-		private struct CSharpStructInLua // TypeDefIndex: 56123
+		private struct CSharpStructInLua // TypeDefIndex: 58763
 		{
 			// Fields
 			public int fake_id; // 0x00
@@ -2801,53 +2770,56 @@ namespace XLua
 			public IntPtr ptr; // 0x08
 		}
 	
-		public struct LuaCSFunctionPtr // TypeDefIndex: 56124
+		public struct LuaCSFunctionPtr // TypeDefIndex: 58764
 		{
 			// Fields
 			public IntPtr ptr; // 0x00
 			public object target; // 0x08
 		}
 	
-		public delegate ValueTuple<IntPtr, T1> GetDelegatePointer<T1>(Delegate d); // TypeDefIndex: 56125; 0x0000000184A8DE20-0x0000000184A8E850
+		public delegate ValueTuple<IntPtr, T1> GetDelegatePointer<T1>(Delegate d); // TypeDefIndex: 58765; 0x00000000-0x00000000
 	
-		public delegate void PushCSObject(IntPtr L, object obj); // TypeDefIndex: 56126; 0x00000001845532E0-0x0000000184553680
+		public delegate void PushCSObject(IntPtr L, object obj); // TypeDefIndex: 58766; 0x00000001838E1420-0x00000001838E1430
 	
-		public delegate object GetCSObject(IntPtr L, int idx); // TypeDefIndex: 56127; 0x0000000185BC8260-0x0000000185BC8450
+		public delegate object GetCSObject(IntPtr L, int idx); // TypeDefIndex: 58767; 0x00000001815802E0-0x00000001815802F0
 	
-		public delegate void UpdateCSObject(IntPtr L, int idx, object obj); // TypeDefIndex: 56128; 0x000000018C3BF200-0x000000018C3BF294
+		public delegate void UpdateCSObject(IntPtr L, int idx, object obj); // TypeDefIndex: 58768; 0x0000000181546280-0x00000001815462A0
 	
-		public delegate bool CheckFunc<T>(IntPtr L, int idx); // TypeDefIndex: 56129; 0x0000000184CB8CE0-0x0000000184CB9000
+		public delegate bool CheckFunc<T>(IntPtr L, int idx); // TypeDefIndex: 58769; 0x00000000-0x00000000
 	
-		public delegate void GetFunc<T>(IntPtr L, int idx, out ref T val); // TypeDefIndex: 56130; 0x0000000185AED790-0x0000000185AED850
+		public delegate void GetFunc<T>(IntPtr L, int idx, out ref T val); // TypeDefIndex: 58770; 0x00000000-0x00000000
 	
-		private sealed class __c__DisplayClass32_0 // TypeDefIndex: 56131
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass32_0 // TypeDefIndex: 58771
 		{
 			// Fields
 			public System.Type delegateType; // 0x10
 			public MethodInfo genericMethodInfo; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass32_0() {} // 0x0000000184555230-0x0000000184555530
+			public __c__DisplayClass32_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal Delegate _getCreatorUsingGeneric_b__7(DelegateBridgeBase o) => default; // 0x0000000184150F30-0x00000001841510A0
+			internal Delegate _getCreatorUsingGeneric_b__7(DelegateBridgeBase o); // 0x000000018B8AE2A8-0x000000018B8AE2B8
 		}
 	
-		private sealed class __c__DisplayClass32_1 // TypeDefIndex: 56132
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass32_1 // TypeDefIndex: 58772
 		{
 			// Fields
 			public MethodInfo methodInfo; // 0x10
 			public __c__DisplayClass32_0 CS___8__locals1; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass32_1() {} // 0x000000018646ED28-0x000000018646ED38
+			public __c__DisplayClass32_1(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal Delegate _getCreatorUsingGeneric_b__8(DelegateBridgeBase o) => default;
+			internal Delegate _getCreatorUsingGeneric_b__8(DelegateBridgeBase o); // 0x00000001835D0700-0x00000001835D0740
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 56133
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58773
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -2861,44 +2833,47 @@ namespace XLua
 			public static Func<MethodInfo, bool> __9__33_0; // 0x40
 	
 			// Constructors
-			static __c() {}
-			public __c() {}
+			static __c(); // 0x0000000184D47950-0x0000000184D479B0
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _getCreatorUsingGeneric_b__32_1(MethodInfo m) => default;
-			internal int _getCreatorUsingGeneric_b__32_2(MethodInfo m) => default; // 0x000000018C3BF360-0x000000018C3BF45C
-			internal bool _getCreatorUsingGeneric_b__32_3(MethodInfo m) => default;
-			internal int _getCreatorUsingGeneric_b__32_4(MethodInfo m) => default; // 0x000000018646EFA8-0x000000018646EFD4
-			internal Delegate _getCreatorUsingGeneric_b__32_0(DelegateBridgeBase x) => default; // 0x000000018C3BF7AC-0x000000018C3BF890
-			internal Delegate _getCreatorUsingGeneric_b__32_5(DelegateBridgeBase x) => default; // 0x000000018414EEC0-0x000000018414F550
-			internal System.Type _getCreatorUsingGeneric_b__32_6(ParameterInfo pinfo) => default; // 0x00000001848549E0-0x0000000184854D80
-			internal bool _getDelegate_b__33_0(MethodInfo m) => default; // 0x000000018646D8CC-0x000000018646D8D4
+			internal bool _getCreatorUsingGeneric_b__32_1(MethodInfo m); // 0x00000001848E05D0-0x00000001848E0630
+			internal int _getCreatorUsingGeneric_b__32_2(MethodInfo m); // 0x0000000183E647D0-0x0000000183E64880
+			internal bool _getCreatorUsingGeneric_b__32_3(MethodInfo m); // 0x00000001848E0570-0x00000001848E05D0
+			internal int _getCreatorUsingGeneric_b__32_4(MethodInfo m); // 0x0000000183E647D0-0x0000000183E64880
+			internal Delegate _getCreatorUsingGeneric_b__32_0(DelegateBridgeBase x); // 0x00000001811EC580-0x00000001811EC590
+			internal Delegate _getCreatorUsingGeneric_b__32_5(DelegateBridgeBase x); // 0x00000001811EC580-0x00000001811EC590
+			internal System.Type _getCreatorUsingGeneric_b__32_6(ParameterInfo pinfo); // 0x0000000184CA3150-0x0000000184CA3170
+			internal bool _getDelegate_b__33_0(MethodInfo m); // 0x000000018448D790-0x000000018448D820
 		}
 	
-		private sealed class __c__DisplayClass33_0 // TypeDefIndex: 56134
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass33_0 // TypeDefIndex: 58774
 		{
 			// Fields
 			public System.Type delegateType; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass33_0() {} // 0x000000018414E530-0x000000018414EA20
+			public __c__DisplayClass33_0(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
-		private sealed class __c__DisplayClass33_1 // TypeDefIndex: 56135
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass33_1 // TypeDefIndex: 58775
 		{
 			// Fields
 			public MethodInfo foundMethod; // 0x10
 			public __c__DisplayClass33_0 CS___8__locals1; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass33_1() {} // 0x000000018C3BFD50-0x000000018C3BFE70
+			public __c__DisplayClass33_1(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal Delegate _getDelegate_b__1(DelegateBridgeBase o) => default; // 0x000000018C3BFBC0-0x000000018C3BFC80
+			internal Delegate _getDelegate_b__1(DelegateBridgeBase o); // 0x00000001835D0700-0x00000001835D0740
 		}
 	
 		[Serializable]
-		private sealed class __c__123<T> // TypeDefIndex: 56136
+		[CompilerGenerated]
+		private sealed class __c__123<T> // TypeDefIndex: 58776
 			where T : class
 		{
 			// Fields
@@ -2911,20 +2886,21 @@ namespace XLua
 			public static Action<IntPtr, float> __9__123_5;
 	
 			// Constructors
-			static __c__123() {} // 0x000000018C3BFB5C-0x000000018C3BFBC0
-			public __c__123() {}
+			static __c__123();
+			public __c__123();
 	
 			// Methods
-			internal void _tryGetPushFuncByType_b__123_0(IntPtr L, byte v) {} // 0x000000018414EA40-0x000000018414ED60
-			internal void _tryGetPushFuncByType_b__123_1(IntPtr L, sbyte v) {} // 0x000000018C3BFA50-0x000000018C3BFB5C
-			internal void _tryGetPushFuncByType_b__123_2(IntPtr L, char v) {} // 0x00000001844DF7D0-0x00000001844DF8E0
-			internal void _tryGetPushFuncByType_b__123_3(IntPtr L, short v) {} // 0x00000001844DF500-0x00000001844DF7D0
-			internal void _tryGetPushFuncByType_b__123_4(IntPtr L, ushort v) {} // 0x00000001844DF8E0-0x00000001844DFA60
-			internal void _tryGetPushFuncByType_b__123_5(IntPtr L, float v) {} // 0x00000001844DE830-0x00000001844DEA10
+			internal void _tryGetPushFuncByType_b__123_0(IntPtr L, byte v);
+			internal void _tryGetPushFuncByType_b__123_1(IntPtr L, sbyte v);
+			internal void _tryGetPushFuncByType_b__123_2(IntPtr L, char v);
+			internal void _tryGetPushFuncByType_b__123_3(IntPtr L, short v);
+			internal void _tryGetPushFuncByType_b__123_4(IntPtr L, ushort v);
+			internal void _tryGetPushFuncByType_b__123_5(IntPtr L, float v);
 		}
 	
 		[Serializable]
-		private sealed class __c__125<T> // TypeDefIndex: 56137
+		[CompilerGenerated]
+		private sealed class __c__125<T> // TypeDefIndex: 58777
 			where T : class
 		{
 			// Fields
@@ -2937,19 +2913,20 @@ namespace XLua
 			public static Func<IntPtr, int, float> __9__125_6;
 	
 			// Constructors
-			static __c__125() {} // 0x000000018454F3F0-0x000000018454F460
-			public __c__125() {}
+			static __c__125();
+			public __c__125();
 	
 			// Methods
-			internal byte _tryGetGetFuncByType_b__125_1(IntPtr L, int idx) => default; // 0x0000000184341AC0-0x0000000184341B80
-			internal sbyte _tryGetGetFuncByType_b__125_2(IntPtr L, int idx) => default; // 0x000000018C3BF09C-0x000000018C3BF0AC
-			internal char _tryGetGetFuncByType_b__125_3(IntPtr L, int idx) => default; // 0x0000000184341B80-0x0000000184341C40
-			internal short _tryGetGetFuncByType_b__125_4(IntPtr L, int idx) => default;
-			internal ushort _tryGetGetFuncByType_b__125_5(IntPtr L, int idx) => default; // 0x0000000184558DB0-0x0000000184558F90
-			internal float _tryGetGetFuncByType_b__125_6(IntPtr L, int idx) => default; // 0x00000001841511E0-0x0000000184151550
+			internal byte _tryGetGetFuncByType_b__125_1(IntPtr L, int idx);
+			internal sbyte _tryGetGetFuncByType_b__125_2(IntPtr L, int idx);
+			internal char _tryGetGetFuncByType_b__125_3(IntPtr L, int idx);
+			internal short _tryGetGetFuncByType_b__125_4(IntPtr L, int idx);
+			internal ushort _tryGetGetFuncByType_b__125_5(IntPtr L, int idx);
+			internal float _tryGetGetFuncByType_b__125_6(IntPtr L, int idx);
 		}
 	
-		private sealed class __c__DisplayClass128_0<T> // TypeDefIndex: 56138
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass128_0<T> // TypeDefIndex: 58778
 		{
 			// Fields
 			public GetFunc<T> get;
@@ -2957,149 +2934,138 @@ namespace XLua
 			public Action<IntPtr, int, T> update;
 	
 			// Constructors
-			public __c__DisplayClass128_0() {} // 0x0000000184343F90-0x0000000184344020
+			public __c__DisplayClass128_0();
 	
 			// Methods
-			internal T _RegisterPushAndGetAndUpdate_b__0(IntPtr L, int idx) => default; // 0x000000018C3BF294-0x000000018C3BF308
-			internal void _RegisterPushAndGetAndUpdate_b__1(IntPtr L, object obj) {} // 0x000000018C3BFC80-0x000000018C3BFD50
-			internal object _RegisterPushAndGetAndUpdate_b__2(IntPtr L, int idx) => default; // 0x000000018C3BF308-0x000000018C3BF360
-			internal void _RegisterPushAndGetAndUpdate_b__3(IntPtr L, int idx, object obj) {} // 0x0000000183FCA080-0x0000000183FCA130
+			internal T _RegisterPushAndGetAndUpdate_b__0(IntPtr L, int idx);
+			internal void _RegisterPushAndGetAndUpdate_b__1(IntPtr L, object obj);
+			internal object _RegisterPushAndGetAndUpdate_b__2(IntPtr L, int idx);
+			internal void _RegisterPushAndGetAndUpdate_b__3(IntPtr L, int idx, object obj);
 		}
 	
-		private sealed class __c__DisplayClass129_0<T> // TypeDefIndex: 56139
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass129_0<T> // TypeDefIndex: 58779
 		{
 			// Fields
 			public CheckFunc<T> check;
 	
 			// Constructors
-			public __c__DisplayClass129_0() {} // 0x0000000184350220-0x00000001843505E0
+			public __c__DisplayClass129_0();
 	
 			// Methods
-			internal bool _RegisterChecker_b__0(IntPtr L, int idx) => default; // 0x0000000184773290-0x00000001847733C0
+			internal bool _RegisterChecker_b__0(IntPtr L, int idx);
 		}
 	
-		private sealed class __c__DisplayClass130_0<T> // TypeDefIndex: 56140
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass130_0<T> // TypeDefIndex: 58780
 		{
 			// Fields
 			public GetFunc<T> get;
 	
 			// Constructors
-			public __c__DisplayClass130_0() {} // 0x000000018C3BFEF4-0x000000018C3C0078
+			public __c__DisplayClass130_0();
 	
 			// Methods
-			internal object _RegisterCaster_b__0(IntPtr L, int idx, object o) => default; // 0x0000000184ED3740-0x0000000184ED38F0
+			internal object _RegisterCaster_b__0(IntPtr L, int idx, object o);
 		}
 	
 		// Constructors
-		public ObjectTranslator() {} // Dummy constructor
-		public ObjectTranslator(LuaEnv luaenv, IntPtr L) {} // 0x000000018C3BF890-0x000000018C3BFA50
-		static ObjectTranslator() {}
+		public ObjectTranslator(LuaEnv luaenv, IntPtr L); // 0x0000000183B0E680-0x0000000183B0F0B0
+		static ObjectTranslator(); // 0x0000000184B0D4C0-0x0000000184B0D610
 	
 		// Methods
-		public void DelayWrapLoader(System.Type type, Action<IntPtr> loader) {}
-		public void AddInterfaceBridgeCreator(System.Type type, Func<int, LuaEnv, LuaBase> creator) {}
-		public bool TryDelayWrapLoader(IntPtr L, System.Type type) => default;
-		public void Alias(System.Type type, string alias) {}
-		private void addAssemblieByName(IEnumerable<Assembly> assemblies_usorted, string name) {}
-		private void initCSharpCallLua() {} // 0x000000018C3BF73C-0x000000018C3BF7AC
-		private Func<DelegateBridgeBase, Delegate> getCreatorUsingGeneric(DelegateBridgeBase bridge, System.Type delegateType, MethodInfo delegateMethod) => default; // 0x00000001885563E8-0x0000000188556424
-		private Delegate getDelegate(DelegateBridgeBase bridge, System.Type delegateType) => default; // 0x000000018C3BF45C-0x000000018C3BF73C
-		public object CreateDelegateBridge(IntPtr L, System.Type delegateType, int idx) => default; // 0x0000000185D29530-0x0000000185D29680
-		public bool AllDelegateBridgeReleased() => default;
-		public void ReleaseLuaBase(IntPtr L, int reference, bool is_delegate) {} // 0x0000000184C34EB0-0x0000000184C35050
-		public object CreateInterfaceBridge(IntPtr L, System.Type interfaceType, int idx) => default; // 0x0000000184F47460-0x0000000184F476F0
-		public void CreateArrayMetatable(IntPtr L) {} // 0x00000001851984B0-0x0000000185198610
-		public void CreateDelegateMetatable(IntPtr L) {} // 0x000000018C3BE368-0x000000018C3BE3F4
-		internal void CreateEnumerablePairs(IntPtr L) {}
-		public static int CsPairs(IntPtr L) => default;
-		public static int EnumToInt(IntPtr L) => default;
-		internal void CreateEnumerableCSPairs(IntPtr L) {}
-		public void OpenLib(IntPtr L) {}
-		internal void createFunctionMetatable(IntPtr L) {} // 0x0000000183FB0D80-0x0000000183FB0DF0
-		internal System.Type FindType(string className, bool isQualifiedName = false /* Metadata: 0x0207C24A */) => default; // 0x00000001831C5680-0x00000001831C5690
-		private bool hasMethod(System.Type type, string methodName) => default; // 0x000000018C3C0078-0x000000018C3C00F8
-		internal void collectObject(int obj_index_to_collect) {} // 0x00000001864BB614-0x00000001864BB734
-		private int addObject(object obj, bool is_valuetype, bool is_enum) => default; // 0x0000000183FB0D10-0x0000000183FB0D80
-		internal object GetObject(IntPtr L, int index) => default; // 0x0000000181B59400-0x0000000181B59410
-		public System.Type GetTypeOf(IntPtr L, int idx) => default; // 0x000000018C3BE3F4-0x000000018C3BE488
-		public bool Assignable<T>(IntPtr L, int index) => default; // 0x00000001864750A8-0x00000001864751CC
-		public bool Assignable(IntPtr L, int index, System.Type type) => default; // 0x0000000183FB0CA0-0x0000000183FB0D10
-		public object FastGetObject(IntPtr L, int index, System.Type type) => default; // 0x0000000181A578C0-0x0000000181A578E0
-		public object GetObject(IntPtr L, int index, System.Type type) => default; // 0x000000018C3C5234-0x000000018C3C52D0
-		private void _Get<T>(IntPtr L, int index, out ref T v) {
-			v = default;
-		} // 0x00000001864BB614-0x00000001864BB734
-		public void Get<T>(IntPtr L, int index, out ref T v) {
-			v = default;
-		}
-		public void PushByType<T>(IntPtr L, T v) {}
-		public T[] GetParams<T>(IntPtr L, int index) => default;
-		public Array GetParams(IntPtr L, int index, System.Type type) => default;
+		public void DelayWrapLoader(System.Type type, Action<IntPtr> loader); // 0x000000018406D660-0x000000018406D690
+		public void AddInterfaceBridgeCreator(System.Type type, Func<int, LuaEnv, LuaBase> creator); // 0x000000018439C4B0-0x000000018439C520
+		public bool TryDelayWrapLoader(IntPtr L, System.Type type); // 0x00000001836060D0-0x0000000183606330
+		public void Alias(System.Type type, string alias); // 0x0000000183B11A90-0x0000000183B11B40
+		private void addAssemblieByName(IEnumerable<Assembly> assemblies_usorted, string name); // 0x0000000183B0E090-0x0000000183B0E360
+		private void initCSharpCallLua(); // 0x00000001841E1670-0x00000001841E1680
+		private Func<DelegateBridgeBase, Delegate> getCreatorUsingGeneric(DelegateBridgeBase bridge, System.Type delegateType, MethodInfo delegateMethod); // 0x00000001843E6550-0x00000001843E6E40
+		private Delegate getDelegate(DelegateBridgeBase bridge, System.Type delegateType); // 0x0000000183607FA0-0x0000000183608370
+		public object CreateDelegateBridge(IntPtr L, System.Type delegateType, int idx); // 0x0000000183606FF0-0x0000000183607450
+		public bool AllDelegateBridgeReleased(); // 0x000000018B8A803C-0x000000018B8A8178
+		public void ReleaseLuaBase(IntPtr L, int reference, bool is_delegate); // 0x00000001832EF3E0-0x00000001832EF630
+		public object CreateInterfaceBridge(IntPtr L, System.Type interfaceType, int idx); // 0x000000018B8A8188-0x000000018B8A82DC
+		public void CreateArrayMetatable(IntPtr L); // 0x00000001849E51E0-0x00000001849E53D0
+		public void CreateDelegateMetatable(IntPtr L); // 0x00000001849C0530-0x00000001849C0750
+		internal void CreateEnumerablePairs(IntPtr L); // 0x000000018321AE00-0x000000018321B050
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int CsPairs(IntPtr L); // 0x0000000183FE81A0-0x0000000183FF0EC0
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int EnumToInt(IntPtr L); // 0x000000018B8A82DC-0x000000018B8A8370
+		internal void CreateEnumerableCSPairs(IntPtr L); // 0x000000018321ADB0-0x000000018321AE00
+		public void OpenLib(IntPtr L); // 0x0000000184707AA0-0x0000000184708080
+		internal void createFunctionMetatable(IntPtr L); // 0x000000018404E170-0x000000018404E310
+		internal System.Type FindType(string className, bool isQualifiedName = false /* Metadata: 0x0234BEFA */); // 0x0000000183B112A0-0x0000000183B11550
+		private bool hasMethod(System.Type type, string methodName); // 0x000000018B8A8F4C-0x000000018B8A8FD0
+		internal void collectObject(int obj_index_to_collect); // 0x0000000182F39F90-0x0000000182F3A240
+		private int addObject(object obj, bool is_valuetype, bool is_enum); // 0x00000001831339F0-0x0000000183134170
+		internal object GetObject(IntPtr L, int index); // 0x00000001848FC960-0x00000001848FCA20
+		public System.Type GetTypeOf(IntPtr L, int idx); // 0x0000000183A1B080-0x0000000183A1B170
+		public bool Assignable<T>(IntPtr L, int index);
+		public bool Assignable(IntPtr L, int index, System.Type type); // 0x0000000183299B30-0x0000000183299E00
+		public object FastGetObject(IntPtr L, int index, System.Type type); // 0x00000001831341B0-0x00000001831342D0
+		public object GetObject(IntPtr L, int index, System.Type type); // 0x0000000185391698-0x00000001853916A8
+		private void _Get<T>(IntPtr L, int index, out ref T v);
+		public void Get<T>(IntPtr L, int index, out ref T v);
+		public void PushByType<T>(IntPtr L, T v);
+		public T[] GetParams<T>(IntPtr L, int index);
+		public Array GetParams(IntPtr L, int index, System.Type type); // 0x000000018B8A843C-0x000000018B8A8538
 		public T GetDelegate<T>(IntPtr L, int index)
-			where T : class => default;
-		public int GetTypeId(IntPtr L, System.Type type) => default;
-		public void PrivateAccessible(IntPtr L, System.Type type) {}
-		public int getTypeId(IntPtr L, System.Type type, out bool is_first, LOGLEVEL log_level = LOGLEVEL.WARN /* Metadata: 0x0207C24B */) {
-			is_first = default;
-			return default;
-		}
-		private void pushPrimitive(IntPtr L, object o) {} // 0x0000000185492010-0x0000000185492020
-		public void PushObject(IntPtr L, object o) {} // 0x000000018C3C5224-0x000000018C3C5234
-		public void PushAny(IntPtr L, object o) {} // 0x0000000185492010-0x0000000185492020
-		public int TranslateToEnumToTop(IntPtr L, System.Type type, int idx) => default; // 0x0000000184347460-0x0000000184347920
-		public void Push(IntPtr L, lua_CSFunction o) {} // 0x0000000185F73E70-0x0000000185F73ED0
-		public void Push(IntPtr L, LuaBase o) {} // 0x0000000185492010-0x0000000185492020
+			where T : class;
+		public int GetTypeId(IntPtr L, System.Type type); // 0x0000000185391C58-0x0000000185391C84
+		public void PrivateAccessible(IntPtr L, System.Type type); // 0x000000018B8A8888-0x000000018B8A896C
+		public int getTypeId(IntPtr L, System.Type type, out bool is_first, LOGLEVEL log_level = LOGLEVEL.WARN /* Metadata: 0x0234BEFB */); // 0x00000001831333D0-0x00000001831339F0
+		private void pushPrimitive(IntPtr L, object o); // 0x0000000182FB7620-0x0000000182FB7970
+		public void PushObject(IntPtr L, object o); // 0x0000000185391E68-0x0000000185391E70
+		public void PushAny(IntPtr L, object o); // 0x0000000182FB8890-0x0000000182FB8CC0
+		public int TranslateToEnumToTop(IntPtr L, System.Type type, int idx); // 0x000000018B8A8E2C-0x000000018B8A8F4C
+		public void Push(IntPtr L, lua_CSFunction o); // 0x000000018B8A8C9C-0x000000018B8A8D5C
+		public void Push(IntPtr L, LuaBase o); // 0x000000018B8A8C38-0x000000018B8A8C9C
 		public void Push<T>(IntPtr L, T o)
-			where T : struct {} // 0x0000000185AD1E90-0x0000000185AD1EF0
-		public void Push(IntPtr L, object o) {} // 0x0000000185DAF500-0x0000000185DAF530
-		public void PushObject(IntPtr L, object o, int type_id) {} // 0x0000000185AD1E30-0x0000000185AD1E90
-		public bool IsUnmanagedType(System.Type type) => default; // 0x0000000185DAF500-0x0000000185DAF530
-		public void PushBrigeStruct(IntPtr L, IntPtr ptr, System.Type type, int size) {} // 0x00000001813AE580-0x00000001813AE590
-		private void _PushBrigeStruct(IntPtr L, IntPtr ptr, System.Type type, int size) {} // 0x00000001813AE580-0x00000001813AE590
-		public void GetBrigeStruct(IntPtr L, IntPtr ptr, int index, int size, System.Type type) {} // 0x0000000185EBB940-0x0000000185EBB960
-		public void AddNeedRemoveObjRef(object obj) {} // 0x00000001855E7F40-0x00000001855E8000
-		private void _GetBrigeStruct(IntPtr L, IntPtr ptr, int index, int size, System.Type type) {} // 0x0000000185492010-0x0000000185492020
-		public void UpdateStructObj(IntPtr L, IntPtr ptr, int index, int size, System.Type type) {} // 0x0000000185492010-0x0000000185492020
-		public void BeyondUpdateStructObj(IntPtr L, IntPtr ptr, int index, int size, System.Type type) {} // 0x0000000184347460-0x0000000184347920
-		private void _UpdateStructObj(IntPtr L, IntPtr ptr, int index, int size, System.Type type) {}
+			where T : struct;
+		public void Push(IntPtr L, object o); // 0x0000000183132DB0-0x00000001831333D0
+		public void PushObject(IntPtr L, object o, int type_id); // 0x000000018B8A8B2C-0x000000018B8A8C38
+		public bool IsUnmanagedType(System.Type type); // 0x0000000183297170-0x0000000183297250
+		public void PushBrigeStruct(IntPtr L, IntPtr ptr, System.Type type, int size); // 0x0000000183296F20-0x0000000183297170
+		private void _PushBrigeStruct(IntPtr L, IntPtr ptr, System.Type type, int size); // 0x0000000183297250-0x0000000183297390
+		public void GetBrigeStruct(IntPtr L, IntPtr ptr, int index, int size, System.Type type); // 0x0000000183296BE0-0x0000000183296D50
+		public void AddNeedRemoveObjRef(object obj); // 0x00000001832F0100-0x00000001832F0140
+		private void _GetBrigeStruct(IntPtr L, IntPtr ptr, int index, int size, System.Type type); // 0x0000000183297390-0x0000000183297550
+		public void UpdateStructObj(IntPtr L, IntPtr ptr, int index, int size, System.Type type); // 0x0000000183EE0380-0x0000000183EE0420
+		public void BeyondUpdateStructObj(IntPtr L, IntPtr ptr, int index, int size, System.Type type); // 0x000000018B8A8178-0x000000018B8A8188
+		private void _UpdateStructObj(IntPtr L, IntPtr ptr, int index, int size, System.Type type); // 0x0000000183EE0420-0x0000000183EE04B0
 		public void Update<T>(IntPtr L, int index, T obj)
-			where T : struct {}
-		public void Update(IntPtr L, int index, object obj) {}
-		private object getCsObj(IntPtr L, int index, int udata) => default;
-		internal object SafeGetCSObj(IntPtr L, int index) => default;
-		public object FastGetCSObj(IntPtr L, int index) => default;
-		internal void ReleaseCSObj(IntPtr L, int index) {}
-		internal lua_CSFunction GetFixCSFunction(int index) => default;
-		internal LuaCSFunctionPtr GetFixCSFunctionPtr(int index) => default;
-		internal void PushFixCSFunction(IntPtr L, lua_CSFunction func) {}
-		internal object[] popValues(IntPtr L, int oldTop) => default;
-		internal object[] popValues(IntPtr L, int oldTop, System.Type[] popTypes) => default;
-		private void registerCustomOp(System.Type type, PushCSObject push, GetCSObject get, UpdateCSObject update) {}
-		public bool HasCustomOp(System.Type type) => default;
+			where T : struct;
+		public void Update(IntPtr L, int index, object obj); // 0x000000018329CA40-0x000000018329CCE0
+		private object getCsObj(IntPtr L, int index, int udata); // 0x0000000183134890-0x0000000183134BA0
+		internal object SafeGetCSObj(IntPtr L, int index); // 0x0000000183605B50-0x0000000183605BC0
+		public object FastGetCSObj(IntPtr L, int index); // 0x000000018B8A8370-0x000000018B8A83E4
+		internal void ReleaseCSObj(IntPtr L, int index); // 0x000000018B8A8D5C-0x000000018B8A8E2C
+		internal lua_CSFunction GetFixCSFunction(int index); // 0x000000018B8A83E4-0x000000018B8A843C
+		internal LuaCSFunctionPtr GetFixCSFunctionPtr(int index); // 0x0000000182F39AF0-0x0000000182F39B70
+		internal void PushFixCSFunction(IntPtr L, lua_CSFunction func); // 0x0000000183297D70-0x0000000183298160
+		internal object[] popValues(IntPtr L, int oldTop); // 0x0000000183544FA0-0x00000001835450A0
+		internal object[] popValues(IntPtr L, int oldTop, System.Type[] popTypes); // 0x000000018B8A8FD0-0x000000018B8A9154
+		private void registerCustomOp(System.Type type, PushCSObject push, GetCSObject get, UpdateCSObject update); // 0x0000000182F29E00-0x0000000182F29EA0
+		public bool HasCustomOp(System.Type type); // 0x00000001843C05F0-0x00000001843C0620
 		private bool tryGetPushFuncByType<T>(System.Type type, out ref T func)
-			where T : class {
-			func = default;
-			return default;
-		}
+			where T : class;
 		private bool tryGetGetFuncByType<T>(System.Type type, out ref T func)
-			where T : class {
-			func = default;
-			return default;
-		}
-		public void RegisterPushAndGetAndUpdate<T>(Action<IntPtr, T> push, GetFunc<T> get, Action<IntPtr, int, T> update) {}
-		public void RegisterChecker<T>(CheckFunc<T> check) {}
-		public void RegisterCaster<T>(GetFunc<T> get) {}
-		public void PushDecimal(IntPtr L, decimal val) {}
-		public bool IsDecimal(IntPtr L, int index) => default;
-		public decimal GetDecimal(IntPtr L, int index) => default;
-		public void Get(IntPtr L, int index, out decimal val) {
-			val = default;
-		}
+			where T : class;
+		public void RegisterPushAndGetAndUpdate<T>(Action<IntPtr, T> push, GetFunc<T> get, Action<IntPtr, int, T> update);
+		public void RegisterChecker<T>(CheckFunc<T> check);
+		public void RegisterCaster<T>(GetFunc<T> get);
+		public void PushDecimal(IntPtr L, decimal val); // 0x000000018B8A896C-0x000000018B8A8B2C
+		public bool IsDecimal(IntPtr L, int index); // 0x000000018B8A8818-0x000000018B8A8888
+		public decimal GetDecimal(IntPtr L, int index); // 0x0000000187766224-0x0000000187766260
+		public void Get(IntPtr L, int index, out decimal val); // 0x000000018B8A8538-0x000000018B8A8818
+		[CompilerGenerated]
 		private decimal _tryGetGetFuncByType_b__125_0<T>(IntPtr L, int idx)
-			where T : class => default;
+			where T : class;
 	}
 
-	public class ObjectTranslatorPool // TypeDefIndex: 56142
+	public class ObjectTranslatorPool // TypeDefIndex: 58782
 	{
 		// Fields
 		private Dictionary<IntPtr, WeakReference> translators; // 0x10
@@ -3108,56 +3074,56 @@ namespace XLua
 		public static ObjectTranslatorPool Instance; // 0x00
 	
 		// Constructors
-		public ObjectTranslatorPool() {} // 0x0000000185ECB190-0x0000000185ECB210
-		static ObjectTranslatorPool() {} // 0x0000000185ECB120-0x0000000185ECB190
+		public ObjectTranslatorPool(); // 0x0000000184CB69A0-0x0000000184CB6A20
+		static ObjectTranslatorPool(); // 0x0000000184CB6930-0x0000000184CB69A0
 	
 		// Methods
-		public void Add(IntPtr L, ObjectTranslator translator) {} // 0x0000000185EC2EA0-0x0000000185EC2F90
-		public ObjectTranslator Find(IntPtr L) => default; // 0x00000001813B31A0-0x00000001813B31B0
-		public void Remove(IntPtr L) {} // 0x000000018C3BEEA4-0x000000018C3BEF60
+		public void Add(IntPtr L, ObjectTranslator translator); // 0x0000000184CB0ED0-0x0000000184CB0FC0
+		public ObjectTranslator Find(IntPtr L); // 0x0000000184D862C0-0x0000000184D862D0
+		public void Remove(IntPtr L); // 0x000000018B8A7F80-0x000000018B8A803C
 	}
 
-	public interface RawObject // TypeDefIndex: 56143
+	public interface RawObject // TypeDefIndex: 58783
 	{
 		// Properties
 		object Target { get; }
 	}
 
-	public class InternalUtility // TypeDefIndex: 56144
+	public class InternalUtility // TypeDefIndex: 58784
 	{
 		// Fields
 		private static Dictionary<System.Type, string> s_baseValueTypeDic; // 0x00
 	
 		// Constructors
-		public InternalUtility() {} // 0x0000000185492010-0x0000000185492020
-		static InternalUtility() {} // 0x000000018576DAA0-0x000000018576DFA0
+		public InternalUtility(); // 0x00000001841E1670-0x00000001841E1680
+		static InternalUtility(); // 0x00000001845B0DD0-0x00000001845B12D0
 	
 		// Methods
-		public static string GetTypeGenericSignatureDefine(System.Type type, bool isGetType = false /* Metadata: 0x0207C250 */, bool isRef = false /* Metadata: 0x0207C251 */, bool isOut = false /* Metadata: 0x0207C252 */, bool needLua = false /* Metadata: 0x0207C253 */, bool keepType = false /* Metadata: 0x0207C254 */, bool needEnum = false /* Metadata: 0x0207C255 */) => default; // 0x000000018439A980-0x000000018439ACD0
-		public static bool CheckRegisterBaseStructOnArm(System.Type type) => default; // 0x0000000184399430-0x0000000184399690
-		public static bool CheckCustomDelegate(string name) => default; // 0x000000018400C150-0x000000018400C250
-		public static bool CheckTypNeedToGen(System.Type type) => default; // 0x000000018C3BE488-0x000000018C3BE5BC
-		public static bool IsPublic(System.Type type) => default; // 0x000000018C3BED6C-0x000000018C3BEE20
-		public static string GetTypeFullName(System.Type t) => default; // 0x0000000184BBB8D0-0x0000000184BBBC10
-		public static string GetDelegateName(MethodInfo method) => default; // 0x000000018C3BE5BC-0x000000018C3BE944
-		public static bool IsStruct(System.Type type) => default; // 0x0000000184399690-0x0000000184399710
-		public static string GetGenericTypeName(System.Type type, bool needPoint = false /* Metadata: 0x0207C256 */) => default; // 0x000000018C3BEAF4-0x000000018C3BED6C
-		public static string GeNormalName(string str) => default; // 0x0000000184397D60-0x0000000184397F10
-		public static string GetGenericTypeNameString(System.Type type) => default; // 0x000000018C3BE944-0x000000018C3BEAF4
+		public static string GetTypeGenericSignatureDefine(System.Type type, bool isGetType = false /* Metadata: 0x0234BF00 */, bool isRef = false /* Metadata: 0x0234BF01 */, bool isOut = false /* Metadata: 0x0234BF02 */, bool needLua = false /* Metadata: 0x0234BF03 */, bool keepType = false /* Metadata: 0x0234BF04 */, bool needEnum = false /* Metadata: 0x0234BF05 */); // 0x0000000182F2BF90-0x0000000182F2C220
+		public static bool CheckRegisterBaseStructOnArm(System.Type type); // 0x0000000182F2BCB0-0x0000000182F2BE60
+		public static bool CheckCustomDelegate(string name); // 0x00000001840B35E0-0x00000001840B3660
+		public static bool CheckTypNeedToGen(System.Type type); // 0x000000018B8A7564-0x000000018B8A7698
+		public static bool IsPublic(System.Type type); // 0x000000018B8A7E48-0x000000018B8A7EFC
+		public static string GetTypeFullName(System.Type t); // 0x00000001835CCBA0-0x00000001835CCDD0
+		public static string GetDelegateName(MethodInfo method); // 0x000000018B8A7698-0x000000018B8A7A20
+		public static bool IsStruct(System.Type type); // 0x0000000182F2BE60-0x0000000182F2BEE0
+		public static string GetGenericTypeName(System.Type type, bool needPoint = false /* Metadata: 0x0234BF06 */); // 0x000000018B8A7BD0-0x000000018B8A7E48
+		public static string GeNormalName(string str); // 0x0000000182F2C220-0x0000000182F2C330
+		public static string GetGenericTypeNameString(System.Type type); // 0x000000018B8A7A20-0x000000018B8A7BD0
 	}
 
-	public class MethodAndDelegateSignatureManager // TypeDefIndex: 56145
+	public class MethodAndDelegateSignatureManager // TypeDefIndex: 58785
 	{
 		// Constructors
-		public MethodAndDelegateSignatureManager() {} // 0x0000000185492010-0x0000000185492020
+		public MethodAndDelegateSignatureManager(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static System.Type MakeMethodDelegateType(MethodInfo method) => default; // 0x00000001843DFC40-0x00000001843E18F0
-		public static System.Type MakeMethodDelegateType(MethodInfo method, System.Type customDelegateType) => default; // 0x00000001843DDE00-0x00000001843DEEA0
-		public static ValueTuple<System.Type, string> GetMethodDelegateType(MethodInfo method) => default; // 0x00000001843DF840-0x00000001843DF960
+		public static System.Type MakeMethodDelegateType(MethodInfo method); // 0x0000000183895320-0x0000000183896C60
+		public static System.Type MakeMethodDelegateType(MethodInfo method, System.Type customDelegateType); // 0x0000000183897230-0x0000000183897F20
+		public static ValueTuple<System.Type, string> GetMethodDelegateType(MethodInfo method); // 0x0000000182F2C330-0x0000000182F2C410
 	}
 
-	public class SignatureLoader // TypeDefIndex: 56146
+	public class SignatureLoader // TypeDefIndex: 58786
 	{
 		// Fields
 		private LuaEnv.CustomLoader userLoader; // 0x10
@@ -3165,17 +3131,16 @@ namespace XLua
 		private SHA1 sha; // 0x20
 	
 		// Constructors
-		public SignatureLoader() {} // Dummy constructor
-		public SignatureLoader(string publicKey, LuaEnv.CustomLoader loader) {} // 0x000000018C3C00F8-0x000000018C3C01F8
+		public SignatureLoader(string publicKey, LuaEnv.CustomLoader loader); // 0x000000018B8A91D4-0x000000018B8A92D4
 	
 		// Methods
-		private byte[] load_and_verify(ref string filepath) => default; // 0x000000018C3C01F8-0x000000018C3C03D8
-		public static implicit operator LuaEnv.CustomLoader(SignatureLoader signatureLoader) => default; // 0x000000018C3C03D8-0x000000018C3C044C
+		private byte[] load_and_verify(ref string filepath); // 0x000000018B8A92D4-0x000000018B8A94B4
+		public static implicit operator LuaEnv.CustomLoader(SignatureLoader signatureLoader); // 0x000000018B8A94B4-0x000000018B8A9528
 	}
 
-	public delegate TRet CallDelegatePointer<TParam1, TParam2, TRet>(IntPtr ptr, TParam1 target, TParam2 param); // TypeDefIndex: 56147; 0x00000000-0x00000000
+	public delegate TRet CallDelegatePointer<TParam1, TParam2, TRet>(IntPtr ptr, TParam1 target, TParam2 param); // TypeDefIndex: 58787; 0x00000000-0x00000000
 
-	public class StaticLuaCallbacks // TypeDefIndex: 56148
+	public class StaticLuaCallbacks // TypeDefIndex: 58788
 	{
 		// Fields
 		internal lua_CSFunction GcMeta; // 0x10
@@ -3188,82 +3153,116 @@ namespace XLua
 		public static CallDelegatePointer<object, IntPtr, int> callDelegatePointer; // 0x00
 	
 		// Constructors
-		public StaticLuaCallbacks() {} // 0x0000000185B8BFF0-0x0000000185B8C200
+		public StaticLuaCallbacks(); // 0x00000001849B2490-0x00000001849B26A0
 	
 		// Methods
-		public static int EnumAnd(IntPtr L) => default; // 0x000000018C3C122C-0x000000018C3C14B4
-		public static int EnumOr(IntPtr L) => default; // 0x000000018C3C14B4-0x000000018C3C173C
-		private static int StaticCSFunction(IntPtr L) => default; // 0x000000018C3C3124-0x000000018C3C32D0
-		private static int FixCSFunction(IntPtr L) => default; // 0x0000000183FC9B00-0x0000000183FCA080
-		public static int DelegateCall(IntPtr L) => default; // 0x000000018C3C0BA0-0x000000018C3C0D90
-		public static int LuaGC(IntPtr L) => default; // 0x0000000184344020-0x00000001843440F0
-		public static int ToString(IntPtr L) => default; // 0x0000000185518A20-0x0000000185518B60
-		public static int DelegateCombine(IntPtr L) => default; // 0x000000018C3C0D90-0x000000018C3C0FF0
-		public static int DelegateRemove(IntPtr L) => default; // 0x00000001858DBF50-0x00000001858DC0C0
-		private static bool tryPrimitiveArrayGet(System.Type type, IntPtr L, object obj, int index) => default; // 0x000000018538F330-0x000000018538F820
-		public static int ArrayIndexer(IntPtr L) => default; // 0x000000018538EF50-0x000000018538F330
-		public static bool TryPrimitiveArraySet(System.Type type, IntPtr L, object obj, int array_idx, int obj_idx) => default; // 0x000000018C3C3664-0x000000018C3C3F88
-		public static int ArrayNewIndexer(IntPtr L) => default; // 0x000000018C3C044C-0x000000018C3C08FC
-		public static int ArrayLength(IntPtr L) => default; // 0x0000000185A19410-0x0000000185A19530
-		public static int MetaFuncIndex(IntPtr L) => default; // 0x0000000185408D80-0x0000000185408EE0
-		internal static int Panic(IntPtr L) => default; // 0x000000018C3C2C5C-0x000000018C3C2CF8
-		internal static int Print(IntPtr L) => default; // 0x000000018C3C2CF8-0x000000018C3C2FDC
-		internal static int LoadSocketCore(IntPtr L) => default; // 0x000000018C3C2C14-0x000000018C3C2C5C
-		internal static int LoadCS(IntPtr L) => default; // 0x000000018C3C2598-0x000000018C3C2604
-		internal static int LoadBuiltinLib(IntPtr L) => default; // 0x0000000185715FC0-0x0000000185716170
-		internal static int LoadFromResource(IntPtr L) => default; // 0x000000018C3C2604-0x000000018C3C2918
-		internal static int LoadFromStreamingAssetsPath(IntPtr L) => default; // 0x000000018C3C2918-0x000000018C3C2C14
-		internal static int LoadFromCustomLoaders(IntPtr L) => default; // 0x0000000184C33440-0x0000000184C33C00
-		public static int LoadAssembly(IntPtr L) => default; // 0x000000018C3C230C-0x000000018C3C2598
-		public static int ImportType(IntPtr L) => default; // 0x0000000184CB8B20-0x0000000184CB8CE0
-		public static int ImportGenericType(IntPtr L) => default; // 0x000000018C3C1F2C-0x000000018C3C230C
-		public static int Cast(IntPtr L) => default; // 0x000000018C3C08FC-0x000000018C3C0BA0
-		private static System.Type getType(IntPtr L, ObjectTranslator translator, int idx) => default; // 0x000000018C3C4918-0x000000018C3C4A9C
-		public static int XLuaAccess(IntPtr L) => default; // 0x000000018C3C3F88-0x000000018C3C440C
-		public static int XLuaPrivateAccessible(IntPtr L) => default; // 0x000000018C3C4710-0x000000018C3C4918
-		public static int XLuaMetatableOperation(IntPtr L) => default; // 0x000000018C3C440C-0x000000018C3C4710
-		public static int DelegateConstructor(IntPtr L) => default; // 0x000000018C3C0FF0-0x000000018C3C122C
-		public static int ToFunction(IntPtr L) => default; // 0x000000018C3C32D0-0x000000018C3C3664
-		public static int GenericMethodWraper(IntPtr L) => default; // 0x000000018C3C173C-0x000000018C3C1B24
-		public static int GetGenericMethod(IntPtr L) => default; // 0x000000018C3C1B24-0x000000018C3C1F2C
-		public static int ReleaseCsObject(IntPtr L) => default; // 0x000000018C3C2FDC-0x000000018C3C3124
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int EnumAnd(IntPtr L); // 0x000000018B8AA308-0x000000018B8AA590
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int EnumOr(IntPtr L); // 0x000000018B8AA590-0x000000018B8AA818
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		private static int StaticCSFunction(IntPtr L); // 0x000000018B8AC200-0x000000018B8AC3AC
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		private static int FixCSFunction(IntPtr L); // 0x0000000182F39600-0x0000000182F39AF0
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int DelegateCall(IntPtr L); // 0x000000018B8A9C7C-0x000000018B8A9E6C
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int LuaGC(IntPtr L); // 0x0000000182F39B70-0x0000000182F39F80
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int ToString(IntPtr L); // 0x00000001843DF130-0x00000001843DF230
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int DelegateCombine(IntPtr L); // 0x000000018B8A9E6C-0x000000018B8AA0CC
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int DelegateRemove(IntPtr L); // 0x0000000184611010-0x0000000184611180
+		private static bool tryPrimitiveArrayGet(System.Type type, IntPtr L, object obj, int index); // 0x0000000183FD2B40-0x0000000183FD2EB0
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int ArrayIndexer(IntPtr L); // 0x0000000183FD2800-0x0000000183FD2B40
+		public static bool TryPrimitiveArraySet(System.Type type, IntPtr L, object obj, int array_idx, int obj_idx); // 0x000000018B8AC724-0x000000018B8AD048
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int ArrayNewIndexer(IntPtr L); // 0x000000018B8A9528-0x000000018B8A99D8
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int ArrayLength(IntPtr L); // 0x000000018459E650-0x000000018459E770
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int MetaFuncIndex(IntPtr L); // 0x00000001842F06D0-0x00000001842F0830
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		internal static int Panic(IntPtr L); // 0x000000018B8ABD38-0x000000018B8ABDD4
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		internal static int Print(IntPtr L); // 0x000000018B8ABDD4-0x000000018B8AC0B8
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		internal static int LoadSocketCore(IntPtr L); // 0x000000018B8ABCF0-0x000000018B8ABD38
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		internal static int LoadCS(IntPtr L); // 0x000000018B8AB674-0x000000018B8AB6E0
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		internal static int LoadBuiltinLib(IntPtr L); // 0x0000000184564CC0-0x0000000184564E70
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		internal static int LoadFromResource(IntPtr L); // 0x000000018B8AB6E0-0x000000018B8AB9F4
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		internal static int LoadFromStreamingAssetsPath(IntPtr L); // 0x000000018B8AB9F4-0x000000018B8ABCF0
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		internal static int LoadFromCustomLoaders(IntPtr L); // 0x0000000183600F50-0x0000000183601710
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int LoadAssembly(IntPtr L); // 0x000000018B8AB3E8-0x000000018B8AB674
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int ImportType(IntPtr L); // 0x0000000183B11160-0x0000000183B112A0
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int ImportGenericType(IntPtr L); // 0x000000018B8AB008-0x000000018B8AB3E8
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int Cast(IntPtr L); // 0x000000018B8A99D8-0x000000018B8A9C7C
+		private static System.Type getType(IntPtr L, ObjectTranslator translator, int idx); // 0x000000018B8AD9D8-0x000000018B8ADB5C
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int XLuaAccess(IntPtr L); // 0x000000018B8AD048-0x000000018B8AD4CC
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int XLuaPrivateAccessible(IntPtr L); // 0x000000018B8AD7D0-0x000000018B8AD9D8
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int XLuaMetatableOperation(IntPtr L); // 0x000000018B8AD4CC-0x000000018B8AD7D0
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int DelegateConstructor(IntPtr L); // 0x000000018B8AA0CC-0x000000018B8AA308
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int ToFunction(IntPtr L); // 0x000000018B8AC3AC-0x000000018B8AC724
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int GenericMethodWraper(IntPtr L); // 0x000000018B8AA818-0x000000018B8AAC00
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int GetGenericMethod(IntPtr L); // 0x000000018B8AAC00-0x000000018B8AB008
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int ReleaseCsObject(IntPtr L); // 0x000000018B8AC0B8-0x000000018B8AC200
 	}
 
-	internal static class TypeExtensions // TypeDefIndex: 56150
+	internal static class TypeExtensions // TypeDefIndex: 58790
 	{
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 56149
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58789
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Func<System.Type, string> __9__12_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x000000018414ED60-0x000000018414ED80
-			public __c() {} // 0x0000000184344370-0x0000000184344390
+			static __c(); // 0x000000018B8B420C-0x000000018B8B4270
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal string _GetFriendlyName_b__12_0(System.Type x) => default; // 0x000000018414EA20-0x000000018414EA40
+			internal string _GetFriendlyName_b__12_0(System.Type x); // 0x000000018B8B1A80-0x000000018B8B1A8C
 		}
 	
-		// Methods
-		public static bool IsValueType(System.Type type) => default; // 0x0000000184346740-0x0000000184346770
-		public static bool IsEnum(System.Type type) => default; // 0x000000018C3C87B0-0x000000018C3C87CC
-		public static bool IsPrimitive(System.Type type) => default; // 0x0000000184348210-0x0000000184348230
-		public static bool IsAbstract(System.Type type) => default; // 0x00000001843A0250-0x00000001843A0270
-		public static bool IsSealed(System.Type type) => default; // 0x0000000184550530-0x0000000184550550
-		public static bool IsInterface(System.Type type) => default; // 0x00000001843481F0-0x0000000184348210
-		public static bool IsClass(System.Type type) => default; // 0x0000000184348230-0x0000000184348250
-		public static System.Type BaseType(System.Type type) => default; // 0x000000018C3C8778-0x000000018C3C8794
-		public static bool IsGenericType(System.Type type) => default; // 0x000000018C3C8794-0x000000018C3C87B0
-		public static bool IsGenericTypeDefinition(System.Type type) => default; // 0x000000018C3C8280-0x000000018C3C8778
-		public static bool IsNestedPublic(System.Type type) => default; // 0x000000018C3CB33C-0x000000018C3CB3A0
-		public static bool IsPublic(System.Type type) => default; // 0x0000000185492010-0x0000000185492020
-		public static string GetFriendlyName(System.Type type) => default; // 0x000000018C3C8B0C-0x000000018C3C8B18
+		// Extension methods
+		public static bool IsValueType(this System.Type type); // 0x0000000183131F30-0x0000000183131F50
+		public static bool IsEnum(this System.Type type); // 0x0000000182F3A240-0x0000000182F3A260
+		public static bool IsPrimitive(this System.Type type); // 0x0000000182F2AB50-0x0000000182F2AB70
+		public static bool IsAbstract(this System.Type type); // 0x00000001835CFFA0-0x00000001835CFFD0
+		public static bool IsSealed(this System.Type type); // 0x000000018B8B1724-0x000000018B8B1740
+		public static bool IsInterface(this System.Type type); // 0x00000001835CFF60-0x00000001835CFF80
+		public static bool IsClass(this System.Type type); // 0x00000001835CE330-0x00000001835CE350
+		public static System.Type BaseType(this System.Type type); // 0x0000000183607F30-0x0000000183607F50
+		public static bool IsGenericType(this System.Type type); // 0x0000000184D83A60-0x0000000184D83A80
+		public static bool IsGenericTypeDefinition(this System.Type type); // 0x00000001835CFF80-0x00000001835CFFA0
+		public static bool IsNestedPublic(this System.Type type); // 0x000000018B8B16EC-0x000000018B8B1708
+		public static bool IsPublic(this System.Type type); // 0x000000018B8B1708-0x000000018B8B1724
+		public static string GetFriendlyName(this System.Type type); // 0x000000018B8B11F4-0x000000018B8B16EC
 	}
 
-	public enum LazyMemberTypes // TypeDefIndex: 56151
+	public enum LazyMemberTypes // TypeDefIndex: 58791
 	{
 		Method = 0,
 		FieldGet = 1,
@@ -3273,98 +3272,104 @@ namespace XLua
 		Event = 5
 	}
 
-	public static class Utils // TypeDefIndex: 56167
+	public static class Utils // TypeDefIndex: 58807
 	{
 		// Fields
 		public static bool s_xluaReflectionOpt; // 0x00
-		public const int OBJ_META_IDX = -4; // Metadata: 0x0207C25F
-		public const int METHOD_IDX = -3; // Metadata: 0x0207C260
-		public const int GETTER_IDX = -2; // Metadata: 0x0207C261
-		public const int SETTER_IDX = -1; // Metadata: 0x0207C262
-		public const int CLS_IDX = -4; // Metadata: 0x0207C263
-		public const int CLS_META_IDX = -3; // Metadata: 0x0207C264
-		public const int CLS_GETTER_IDX = -2; // Metadata: 0x0207C265
-		public const int CLS_SETTER_IDX = -1; // Metadata: 0x0207C266
-		public const string LuaIndexsFieldName = "LuaIndexs"; // Metadata: 0x0207C267
-		public const string LuaNewIndexsFieldName = "LuaNewIndexs"; // Metadata: 0x0207C271
-		public const string LuaClassIndexsFieldName = "LuaClassIndexs"; // Metadata: 0x0207C27E
-		public const string LuaClassNewIndexsFieldName = "LuaClassNewIndexs"; // Metadata: 0x0207C28D
+		public const int OBJ_META_IDX = -4; // Metadata: 0x0234BF0F
+		public const int METHOD_IDX = -3; // Metadata: 0x0234BF10
+		public const int GETTER_IDX = -2; // Metadata: 0x0234BF11
+		public const int SETTER_IDX = -1; // Metadata: 0x0234BF12
+		public const int CLS_IDX = -4; // Metadata: 0x0234BF13
+		public const int CLS_META_IDX = -3; // Metadata: 0x0234BF14
+		public const int CLS_GETTER_IDX = -2; // Metadata: 0x0234BF15
+		public const int CLS_SETTER_IDX = -1; // Metadata: 0x0234BF16
+		public const string LuaIndexsFieldName = "LuaIndexs"; // Metadata: 0x0234BF17
+		public const string LuaNewIndexsFieldName = "LuaNewIndexs"; // Metadata: 0x0234BF21
+		public const string LuaClassIndexsFieldName = "LuaClassIndexs"; // Metadata: 0x0234BF2E
+		public const string LuaClassNewIndexsFieldName = "LuaClassNewIndexs"; // Metadata: 0x0234BF3D
 	
 		// Nested types
-		private struct MethodKey // TypeDefIndex: 56152
+		private struct MethodKey // TypeDefIndex: 58792
 		{
 			// Fields
 			public string Name; // 0x00
 			public bool IsStatic; // 0x08
 		}
 	
-		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 56153
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 58793
 		{
 			// Fields
 			public bool exclude_generic_definition; // 0x10
 			public Func<System.Type, bool> __9__0; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass3_0() {} // 0x000000018C3CC74C-0x000000018C3CC7E0
+			public __c__DisplayClass3_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetAllTypes_b__0(System.Type type) => default; // 0x000000018C3CB6A0-0x000000018C3CB75C
+			internal bool _GetAllTypes_b__0(System.Type type); // 0x000000018B8B36D0-0x000000018B8B36F4
 		}
 	
-		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 56154
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 58794
 		{
 			// Fields
 			public System.Reflection.FieldInfo field; // 0x10
 			public System.Type type; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass4_0() {} // 0x000000018C3CB468-0x000000018C3CB6A0
+			public __c__DisplayClass4_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _genFieldGetter_b__0(IntPtr L) => default; // 0x000000018C3CCF70-0x000000018C3CD064
-			internal int _genFieldGetter_b__1(IntPtr L) => default; // 0x00000001843436D0-0x0000000184343AE0
+			internal int _genFieldGetter_b__0(IntPtr L); // 0x000000018B8B36F4-0x000000018B8B3794
+			internal int _genFieldGetter_b__1(IntPtr L); // 0x000000018B8B3794-0x000000018B8B39E4
 		}
 	
-		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 56155
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 58795
 		{
 			// Fields
 			public System.Reflection.FieldInfo field; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass5_0() {} // 0x000000018C3CB75C-0x000000018C3CB7F0
+			public __c__DisplayClass5_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _genFieldGetterByPointer_b__0(IntPtr L) => default; // 0x000000018C3CD064-0x000000018C3CD158
+			internal int _genFieldGetterByPointer_b__0(IntPtr L); // 0x00000001835944C0-0x0000000183594590
 		}
 	
-		private sealed class __c__DisplayClass7_0 // TypeDefIndex: 56156
-		{
-			// Fields
-			public System.Reflection.FieldInfo field; // 0x10
-			public System.Type type; // 0x18
-	
-			// Constructors
-			public __c__DisplayClass7_0() {} // 0x0000000184343AE0-0x0000000184343EE0
-	
-			// Methods
-			internal int _genFieldSetter_b__0(IntPtr L) => default; // 0x000000018517B520-0x000000018517B970
-			internal int _genFieldSetter_b__1(IntPtr L) => default; // 0x000000018C3CD158-0x000000018C3CD414
-		}
-	
-		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 56157
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass7_0 // TypeDefIndex: 58796
 		{
 			// Fields
 			public System.Reflection.FieldInfo field; // 0x10
 			public System.Type type; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass8_0() {} // 0x000000018517B970-0x000000018517BDC0
+			public __c__DisplayClass7_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _genFieldSetterByPointer_b__0(IntPtr L) => default; // 0x000000018C3CD414-0x000000018C3CD6D0
+			internal int _genFieldSetter_b__0(IntPtr L); // 0x000000018B8B3B60-0x000000018B8B3DD0
+			internal int _genFieldSetter_b__1(IntPtr L); // 0x000000018B8B3DD0-0x000000018B8B41A8
 		}
 	
-		private sealed class __c__DisplayClass9_0 // TypeDefIndex: 56158
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 58797
+		{
+			// Fields
+			public System.Reflection.FieldInfo field; // 0x10
+			public System.Type type; // 0x18
+	
+			// Constructors
+			public __c__DisplayClass8_0(); // 0x00000001841E1670-0x00000001841E1680
+	
+			// Methods
+			internal int _genFieldSetterByPointer_b__0(IntPtr L); // 0x00000001849B9E60-0x00000001849B9FA0
+		}
+	
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass9_0 // TypeDefIndex: 58798
 		{
 			// Fields
 			public System.Type type; // 0x10
@@ -3373,14 +3378,15 @@ namespace XLua
 			public MethodWrap[] methods; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass9_0() {} // 0x00000001858699A0-0x0000000185869A50
+			public __c__DisplayClass9_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _genItemGetterOpt_b__1(IntPtr L) => default; // 0x0000000185192E50-0x0000000185193160
+			internal int _genItemGetterOpt_b__1(IntPtr L); // 0x00000001838EDD30-0x00000001838EDEB0
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 56159
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58799
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -3402,29 +3408,30 @@ namespace XLua
 			public static Func<MethodInfo, MethodInfo, MethodInfo> __9__16_2; // 0x80
 	
 			// Constructors
-			static __c() {} // 0x0000000184350740-0x0000000184356250
-			public __c() {} // 0x000000018C3CD7F4-0x000000018C3CD998
+			static __c(); // 0x0000000184D41AD0-0x0000000184D41B30
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _genItemGetterOpt_b__9_0(PropertyInfo prop) => default; // 0x00000001845511B0-0x00000001845513D0
-			internal bool _genItemGetter_b__10_0(PropertyInfo prop) => default; // 0x000000018C3CC948-0x000000018C3CCE08
-			internal bool _genItemSetterOpt_b__11_0(PropertyInfo prop) => default; // 0x000000018C3CBAD0-0x000000018C3CC74C
-			internal bool _genItemSetter_b__12_0(PropertyInfo prop) => default; // 0x000000018434F560-0x0000000184350200
-			internal bool _GetExtensionMethodsOf_b__14_7(System.Type t) => default; // 0x0000000184550640-0x0000000184550A40
-			internal bool _GetExtensionMethodsOf_b__14_8(System.Type t) => default; // 0x00000001845518A0-0x00000001845518B0
-			internal IEnumerable<MethodInfo> _GetExtensionMethodsOf_b__14_0(System.Type type) => default; // 0x0000000184551B60-0x0000000184552120
-			internal __f__AnonymousType1<System.Type, MethodInfo> _GetExtensionMethodsOf_b__14_1(System.Type type, MethodInfo method) => default; // 0x00000001845516B0-0x00000001845518A0
-			internal bool _GetExtensionMethodsOf_b__14_2(__f__AnonymousType1<System.Type, MethodInfo> __h__TransparentIdentifier0) => default; // 0x000000018C3CCE08-0x000000018C3CCF70
-			internal System.Type _GetExtensionMethodsOf_b__14_3(__f__AnonymousType1<System.Type, MethodInfo> __h__TransparentIdentifier0) => default; // 0x00000001845515B0-0x00000001845516B0
-			internal MethodInfo _GetExtensionMethodsOf_b__14_4(__f__AnonymousType1<System.Type, MethodInfo> __h__TransparentIdentifier0) => default; // 0x00000001845501E0-0x00000001845504C0
-			internal System.Type _GetExtensionMethodsOf_b__14_5(IGrouping<System.Type, MethodInfo> g) => default; // 0x00000001845518B0-0x0000000184551B60
-			internal IEnumerable<MethodInfo> _GetExtensionMethodsOf_b__14_6(IGrouping<System.Type, MethodInfo> g) => default; // 0x00000001843988E0-0x0000000184398AF0
-			internal string _makeReflectionWrap_b__16_0(MethodInfo p) => default; // 0x0000000184CF20A0-0x0000000184CF2290
-			internal string _makeReflectionWrap_b__16_1(MethodInfo q) => default; // 0x0000000184553A30-0x0000000184553EA0
-			internal MethodInfo _makeReflectionWrap_b__16_2(MethodInfo p, MethodInfo q) => default; // 0x0000000184F9A5A0-0x0000000184F9A6C0
+			internal bool _genItemGetterOpt_b__9_0(PropertyInfo prop); // 0x00000001844E1A70-0x00000001844E1B30
+			internal bool _genItemGetter_b__10_0(PropertyInfo prop); // 0x000000018B8B1D44-0x000000018B8B1DF0
+			internal bool _genItemSetterOpt_b__11_0(PropertyInfo prop); // 0x00000001844E19B0-0x00000001844E1A70
+			internal bool _genItemSetter_b__12_0(PropertyInfo prop); // 0x000000018B8B1DF0-0x000000018B8B1E9C
+			internal bool _GetExtensionMethodsOf_b__14_7(System.Type t); // 0x000000018B8B1988-0x000000018B8B1A04
+			internal bool _GetExtensionMethodsOf_b__14_8(System.Type t); // 0x000000018B8B1A04-0x000000018B8B1A80
+			internal IEnumerable<MethodInfo> _GetExtensionMethodsOf_b__14_0(System.Type type); // 0x000000018B8B1740-0x000000018B8B1760
+			internal __f__AnonymousType1<System.Type, MethodInfo> _GetExtensionMethodsOf_b__14_1(System.Type type, MethodInfo method); // 0x000000018B8B1760-0x000000018B8B17E0
+			internal bool _GetExtensionMethodsOf_b__14_2(__f__AnonymousType1<System.Type, MethodInfo> __h__TransparentIdentifier0); // 0x000000018B8B17E0-0x000000018B8B18A8
+			internal System.Type _GetExtensionMethodsOf_b__14_3(__f__AnonymousType1<System.Type, MethodInfo> __h__TransparentIdentifier0); // 0x000000018B8B18A8-0x000000018B8B1904
+			internal MethodInfo _GetExtensionMethodsOf_b__14_4(__f__AnonymousType1<System.Type, MethodInfo> __h__TransparentIdentifier0); // 0x000000018B8B1904-0x000000018B8B1940
+			internal System.Type _GetExtensionMethodsOf_b__14_5(IGrouping<System.Type, MethodInfo> g); // 0x000000018B8B1940-0x000000018B8B1988
+			internal IEnumerable<MethodInfo> _GetExtensionMethodsOf_b__14_6(IGrouping<System.Type, MethodInfo> g); // 0x0000000184D88C30-0x0000000184D88C40
+			internal string _makeReflectionWrap_b__16_0(MethodInfo p); // 0x000000018B8B1E9C-0x000000018B8B1EBC
+			internal string _makeReflectionWrap_b__16_1(MethodInfo q); // 0x000000018B8B1E9C-0x000000018B8B1EBC
+			internal MethodInfo _makeReflectionWrap_b__16_2(MethodInfo p, MethodInfo q); // 0x0000000184D88C30-0x0000000184D88C40
 		}
 	
-		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 56160
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 58800
 		{
 			// Fields
 			public System.Type type; // 0x10
@@ -3433,13 +3440,14 @@ namespace XLua
 			public object[] arg; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass10_0() {} // 0x000000018C3CB8F0-0x000000018C3CBAD0
+			public __c__DisplayClass10_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _genItemGetter_b__1(IntPtr L) => default; // 0x000000018C3CC7E0-0x000000018C3CC948
+			internal int _genItemGetter_b__1(IntPtr L); // 0x000000018B8B1EBC-0x000000018B8B2410
 		}
 	
-		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 56161
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 58801
 		{
 			// Fields
 			public System.Type type; // 0x10
@@ -3448,13 +3456,14 @@ namespace XLua
 			public MethodWrap[] methods; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass11_0() {} // 0x000000018C3CD6D0-0x000000018C3CD7F4
+			public __c__DisplayClass11_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _genItemSetterOpt_b__1(IntPtr L) => default; // 0x0000000184C33F90-0x0000000184C34060
+			internal int _genItemSetterOpt_b__1(IntPtr L); // 0x000000018B8B2410-0x000000018B8B291C
 		}
 	
-		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 56162
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 58802
 		{
 			// Fields
 			public System.Type type; // 0x10
@@ -3463,385 +3472,385 @@ namespace XLua
 			public object[] arg; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass12_0() {} // 0x000000018C3CB7F0-0x000000018C3CB8F0
+			public __c__DisplayClass12_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _genItemSetter_b__1(IntPtr L) => default; // 0x0000000185FA3C20-0x0000000185FA3C60
+			internal int _genItemSetter_b__1(IntPtr L); // 0x000000018B8B291C-0x000000018B8B2FA4
 		}
 	
-		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 56163
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 58803
 		{
 			// Fields
 			public System.Type type; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass13_0() {} // 0x0000000185492010-0x0000000185492020
+			public __c__DisplayClass13_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _genEnumCastFrom_b__0(IntPtr L) => default; // 0x000000018C3CA800-0x000000018C3CA824
+			internal int _genEnumCastFrom_b__0(IntPtr L); // 0x000000018B8B2FA4-0x000000018B8B3150
 		}
 	
-		private sealed class __c__DisplayClass16_0 // TypeDefIndex: 56164
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass16_0 // TypeDefIndex: 58804
 		{
 			// Fields
 			public string fieldName; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass16_0() {} // 0x0000000185492010-0x0000000185492020
+			public __c__DisplayClass16_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _makeReflectionWrap_b__3(EventInfo e) => default; // 0x000000018C3CA824-0x000000018C3CA8C4
+			internal bool _makeReflectionWrap_b__3(EventInfo e); // 0x0000000184CE1D50-0x0000000184CE1D90
 		}
 	
-		private sealed class __c__DisplayClass20_0 // TypeDefIndex: 56165
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass20_0 // TypeDefIndex: 58805
 		{
 			// Fields
 			public string memberName; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass20_0() {} // 0x000000018C3CA8C4-0x000000018C3CAB14
+			public __c__DisplayClass20_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _LazyReflectionCall_b__0(MethodInfo m) => default; // 0x0000000185492010-0x0000000185492020
+			internal bool _LazyReflectionCall_b__0(MethodInfo m); // 0x000000018A99AD6C-0x000000018A99ADA0
 		}
 	
-		private sealed class __c__DisplayClass21_0 // TypeDefIndex: 56166
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass21_0 // TypeDefIndex: 58806
 		{
 			// Fields
 			public System.Type type; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass21_0() {} // 0x00000001843A6050-0x00000001843A6150
+			public __c__DisplayClass21_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _ReflectionWrap_b__0(IntPtr LL) => default; // 0x0000000185492010-0x0000000185492020
+			internal int _ReflectionWrap_b__0(IntPtr LL); // 0x000000018B8B3638-0x000000018B8B36D0
 		}
 	
 		// Constructors
-		static Utils() {} // 0x000000018C3CA768-0x000000018C3CA800
+		static Utils(); // 0x0000000184D79790-0x0000000184D797D0
 	
 		// Methods
-		public static bool LoadField(IntPtr L, int idx, string field_name) => default; // 0x000000018C3CAC90-0x000000018C3CAF00
-		public static IntPtr GetMainState(IntPtr L) => default; // 0x000000018C3CAF00-0x000000018C3CB2D8
-		public static List<System.Type> GetAllTypes(bool exclude_generic_definition = true /* Metadata: 0x0207C25D */) => default; // 0x0000000185492010-0x0000000185492020
-		private static lua_CSFunction genFieldGetter(System.Type type, System.Reflection.FieldInfo field) => default; // 0x0000000185B960B0-0x0000000185B961F0
-		private static lua_CSFunction genFieldGetterByPointer(System.Type type, System.Reflection.FieldInfo field) => default; // 0x0000000185492010-0x0000000185492020
-		public static bool IsNullableType(System.Type type) => default; // 0x0000000185298900-0x0000000185298AF0
-		private static lua_CSFunction genFieldSetter(System.Type type, System.Reflection.FieldInfo field) => default; // 0x0000000185F6E170-0x0000000185F6E1D0
-		private static lua_CSFunction genFieldSetterByPointer(System.Type type, System.Reflection.FieldInfo field) => default; // 0x0000000185492010-0x0000000185492020
-		private static lua_CSFunction genItemGetterOpt(System.Type type, PropertyInfo[] props, ObjectTranslator translator) => default; // 0x000000018561ADF0-0x000000018561AEB0
-		private static lua_CSFunction genItemGetter(System.Type type, PropertyInfo[] props) => default; // 0x000000018C3C8DD0-0x000000018C3C8E7C
-		private static lua_CSFunction genItemSetterOpt(System.Type type, PropertyInfo[] props, ObjectTranslator translator) => default; // 0x000000018561AD30-0x000000018561ADF0
-		private static lua_CSFunction genItemSetter(System.Type type, PropertyInfo[] props) => default; // 0x000000018C3C8E7C-0x000000018C3C8F28
-		private static lua_CSFunction genEnumCastFrom(System.Type type) => default; // 0x000000018C3C8A14-0x000000018C3C8A90
-		internal static IEnumerable<MethodInfo> GetExtensionMethodsOf(System.Type type_to_be_extend) => default; // 0x000000018C3C8A90-0x000000018C3C8B0C
-		private static void makeReflectionWrap(IntPtr L, System.Type type, int cls_field, int cls_getter, int cls_setter, int obj_field, int obj_getter, int obj_setter, int obj_meta, out lua_CSFunction item_getter, out lua_CSFunction item_setter, System.Reflection.BindingFlags access) {
-			item_getter = default;
-			item_setter = default;
-		} // 0x000000018C3C87CC-0x000000018C3C87EC
-		public static void loadUpvalue(IntPtr L, System.Type type, string metafunc, int index) {} // 0x000000018C3C87EC-0x000000018C3C886C
-		public static void RegisterEnumType(IntPtr L, System.Type type) {} // 0x000000018C3C886C-0x000000018C3C8934
-		public static void MakePrivateAccessible(IntPtr L, System.Type type) {} // 0x000000018C3C8934-0x000000018C3C8990
-		internal static int LazyReflectionCall(IntPtr L) => default; // 0x000000018C3C8990-0x000000018C3C89CC
-		public static void ReflectionWrap(IntPtr L, System.Type type, bool privateAccessible) {} // 0x000000018C3C89CC-0x000000018C3C8A14
-		public static void BeginObjectRegister(System.Type type, IntPtr L, ObjectTranslator translator, int meta_count, int method_count, int getter_count, int setter_count, int type_id = -1 /* Metadata: 0x0207C25E */) {} // 0x00000001834A4750-0x00000001834A4760
-		private static int abs_idx(int top, int idx) => default; // 0x000000018C3C8F28-0x000000018C3C8F48
-		public static void EndObjectRegister(System.Type type, IntPtr L, ObjectTranslator translator, lua_CSFunction csIndexer, lua_CSFunction csNewIndexer, System.Type base_type, lua_CSFunction arrayIndexer, lua_CSFunction arrayNewIndexer) {} // 0x000000018C3C8F28-0x000000018C3C8F48
-		public static void RegisterFunc(IntPtr L, int idx, string name, lua_CSFunction func) {} // 0x00000001834A4750-0x00000001834A4760
-		public static void RegisterLazyFunc(IntPtr L, int idx, string name, System.Type type, LazyMemberTypes memberType, bool isStatic) {} // 0x0000000185492010-0x0000000185492020
-		public static void RegisterObject(IntPtr L, ObjectTranslator translator, int idx, string name, object obj) {} // 0x000000018C3C8F48-0x000000018C3C949C
-		public static void BeginClassRegister(System.Type type, IntPtr L, lua_CSFunction creator, int class_field_count, int static_getter_count, int static_setter_count) {} // 0x0000000185492010-0x0000000185492020
-		public static void EndClassRegister(System.Type type, IntPtr L, ObjectTranslator translator) {} // 0x000000018C3C949C-0x000000018C3C99A8
-		private static List<string> getPathOfType(System.Type type) => default; // 0x0000000185492010-0x0000000185492020
-		public static void LoadCSTable(IntPtr L, System.Type type) {} // 0x000000018C3C99A8-0x000000018C3CA030
-		public static void SetCSTable(IntPtr L, System.Type type, int cls_table) {} // 0x0000000185492010-0x0000000185492020
-		public static bool IsParamsMatch(MethodInfo delegateMethod, MethodInfo bridgeMethod) => default; // 0x000000018C3CA030-0x000000018C3CA1DC
-		public static bool IsSupportedMethod(MethodInfo method) => default; // 0x0000000185492010-0x0000000185492020
-		public static MethodInfo MakeGenericMethodWithConstraints(MethodInfo method) => default; // 0x0000000185F05730-0x0000000185F05770
-		private static System.Type getExtendedType(MethodInfo method) => default; // 0x0000000185492010-0x0000000185492020
-		public static bool IsStaticPInvokeCSFunction(lua_CSFunction csFunction) => default; // 0x000000018B4D5B74-0x000000018B4D5BA8
-		public static bool IsPublic(System.Type type) => default; // 0x0000000185492010-0x0000000185492020
+		public static bool LoadField(IntPtr L, int idx, string field_name); // 0x000000018B8B561C-0x000000018B8B56B0
+		public static IntPtr GetMainState(IntPtr L); // 0x000000018B8B4570-0x000000018B8B462C
+		public static List<System.Type> GetAllTypes(bool exclude_generic_definition = true /* Metadata: 0x0234BF0D */); // 0x000000018B8B4338-0x000000018B8B4570
+		private static lua_CSFunction genFieldGetter(System.Type type, System.Reflection.FieldInfo field); // 0x000000018B8B5E40-0x000000018B8B5F34
+		private static lua_CSFunction genFieldGetterByPointer(System.Type type, System.Reflection.FieldInfo field); // 0x0000000182F29FB0-0x0000000182F2A2E0
+		public static bool IsNullableType(System.Type type); // 0x000000018B8B462C-0x000000018B8B46C0
+		private static lua_CSFunction genFieldSetter(System.Type type, System.Reflection.FieldInfo field); // 0x000000018B8B5F34-0x000000018B8B6028
+		private static lua_CSFunction genFieldSetterByPointer(System.Type type, System.Reflection.FieldInfo field); // 0x0000000182F2A2E0-0x0000000182F2A600
+		private static lua_CSFunction genItemGetterOpt(System.Type type, PropertyInfo[] props, ObjectTranslator translator); // 0x0000000184074AC0-0x0000000184074F00
+		private static lua_CSFunction genItemGetter(System.Type type, PropertyInfo[] props); // 0x000000018B8B6028-0x000000018B8B62E4
+		private static lua_CSFunction genItemSetterOpt(System.Type type, PropertyInfo[] props, ObjectTranslator translator); // 0x0000000184074F00-0x0000000184075340
+		private static lua_CSFunction genItemSetter(System.Type type, PropertyInfo[] props); // 0x000000018B8B62E4-0x000000018B8B65A0
+		private static lua_CSFunction genEnumCastFrom(System.Type type); // 0x000000018468A000-0x000000018468A0B0
+		internal static IEnumerable<MethodInfo> GetExtensionMethodsOf(System.Type type_to_be_extend); // 0x000000018408E7B0-0x000000018408E8C0
+		private static void makeReflectionWrap(IntPtr L, System.Type type, int cls_field, int cls_getter, int cls_setter, int obj_field, int obj_getter, int obj_setter, int obj_meta, out lua_CSFunction item_getter, out lua_CSFunction item_setter, System.Reflection.BindingFlags access); // 0x0000000182F86380-0x0000000182F8A600
+		public static void loadUpvalue(IntPtr L, System.Type type, string metafunc, int index); // 0x000000018B8B66C4-0x000000018B8B6868
+		public static void RegisterEnumType(IntPtr L, System.Type type); // 0x00000001836FDEF0-0x00000001836FE100
+		public static void MakePrivateAccessible(IntPtr L, System.Type type); // 0x000000018B8B5818-0x000000018B8B5CD8
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		internal static int LazyReflectionCall(IntPtr L); // 0x000000018B8B49A0-0x000000018B8B561C
+		public static void ReflectionWrap(IntPtr L, System.Type type, bool privateAccessible); // 0x0000000183607450-0x0000000183607EE0
+		public static void BeginObjectRegister(System.Type type, IntPtr L, ObjectTranslator translator, int meta_count, int method_count, int getter_count, int setter_count, int type_id = -1 /* Metadata: 0x0234BF0E */); // 0x00000001832EE950-0x00000001832EED00
+		private static int abs_idx(int top, int idx); // 0x0000000183296720-0x0000000183296730
+		public static void EndObjectRegister(System.Type type, IntPtr L, ObjectTranslator translator, lua_CSFunction csIndexer, lua_CSFunction csNewIndexer, System.Type base_type, lua_CSFunction arrayIndexer, lua_CSFunction arrayNewIndexer); // 0x00000001836065E0-0x0000000183606B40
+		public static void RegisterFunc(IntPtr L, int idx, string name, lua_CSFunction func); // 0x00000001832965C0-0x0000000183296720
+		public static void RegisterLazyFunc(IntPtr L, int idx, string name, System.Type type, LazyMemberTypes memberType, bool isStatic); // 0x000000018B8B5CD8-0x000000018B8B5E40
+		public static void RegisterObject(IntPtr L, ObjectTranslator translator, int idx, string name, object obj); // 0x0000000183296260-0x0000000183296320
+		public static void BeginClassRegister(System.Type type, IntPtr L, lua_CSFunction creator, int class_field_count, int static_getter_count, int static_setter_count); // 0x0000000183605350-0x00000001836055C0
+		public static void EndClassRegister(System.Type type, IntPtr L, ObjectTranslator translator); // 0x0000000183606390-0x00000001836065E0
+		private static List<string> getPathOfType(System.Type type); // 0x00000001835AA040-0x00000001835AA210
+		public static void LoadCSTable(IntPtr L, System.Type type); // 0x00000001835A82B0-0x00000001835A8430
+		public static void SetCSTable(IntPtr L, System.Type type, int cls_table); // 0x0000000183030C20-0x0000000183030FD0
+		public static bool IsParamsMatch(MethodInfo delegateMethod, MethodInfo bridgeMethod); // 0x000000018463E4F0-0x000000018463E610
+		public static bool IsSupportedMethod(MethodInfo method); // 0x000000018B8B47C0-0x000000018B8B49A0
+		public static MethodInfo MakeGenericMethodWithConstraints(MethodInfo method); // 0x000000018B8B56B0-0x000000018B8B5818
+		private static System.Type getExtendedType(MethodInfo method); // 0x000000018B8B65A0-0x000000018B8B66C4
+		public static bool IsStaticPInvokeCSFunction(lua_CSFunction csFunction); // 0x0000000183601AA0-0x0000000183601B70
+		public static bool IsPublic(System.Type type); // 0x000000018B8B46C0-0x000000018B8B47C0
 	}
 }
 
 namespace XLua.Cast
 {
-	public class Any<T> : RawObject // TypeDefIndex: 56194
+	public class Any<T> : RawObject // TypeDefIndex: 58834
 	{
 		// Fields
 		private T mTarget;
 	
 		// Properties
-		public object Target { get => default; }
+		public object Target { get; }
 	
 		// Constructors
-		public Any() {} // Dummy constructor
-		public Any(T i) {}
+		public Any(T i);
 	}
 
-	public class Byte : Any<byte> // TypeDefIndex: 56195
+	public class Byte : Any<byte> // TypeDefIndex: 58835
 	{
 		// Constructors
-		public Byte() {} // Dummy constructor
-		public Byte(byte i) {} // 0x000000018C3C52D0-0x000000018C3C5310
+		public Byte(byte i); // 0x000000018B8AE354-0x000000018B8AE394
 	}
 
-	public class SByte : Any<sbyte> // TypeDefIndex: 56196
+	public class SByte : Any<sbyte> // TypeDefIndex: 58836
 	{
 		// Constructors
-		public SByte() {} // Dummy constructor
-		public SByte(sbyte i) {} // 0x000000018C3C81F4-0x000000018C3C8234
+		public SByte(sbyte i); // 0x000000018B8B1168-0x000000018B8B11A8
 	}
 
-	public class Char : Any<char> // TypeDefIndex: 56197
+	public class Char : Any<char> // TypeDefIndex: 58837
 	{
 		// Constructors
-		public Char() {} // Dummy constructor
-		public Char(char i) {} // 0x000000018C3C5310-0x000000018C3C5354
+		public Char(char i); // 0x000000018B8AE394-0x000000018B8AE3D8
 	}
 
-	public class Int16 : Any<short> // TypeDefIndex: 56198
+	public class Int16 : Any<short> // TypeDefIndex: 58838
 	{
 		// Constructors
-		public Int16() {} // Dummy constructor
-		public Int16(short i) {} // 0x000000018C3C6178-0x000000018C3C61BC
+		public Int16(short i); // 0x000000018B8AF1FC-0x000000018B8AF240
 	}
 
-	public class UInt16 : Any<ushort> // TypeDefIndex: 56199
+	public class UInt16 : Any<ushort> // TypeDefIndex: 58839
 	{
 		// Constructors
-		public UInt16() {} // Dummy constructor
-		public UInt16(ushort i) {} // 0x000000018C3CB3A0-0x000000018C3CB3E4
+		public UInt16(ushort i); // 0x000000018B8B4270-0x000000018B8B42B4
 	}
 
-	public class Int32 : Any<int> // TypeDefIndex: 56200
+	public class Int32 : Any<int> // TypeDefIndex: 58840
 	{
 		// Constructors
-		public Int32() {} // Dummy constructor
-		public Int32(int i) {} // 0x000000018C3C61BC-0x000000018C3C61FC
+		public Int32(int i); // 0x000000018B8AF240-0x000000018B8AF280
 	}
 
-	public class UInt32 : Any<uint> // TypeDefIndex: 56201
+	public class UInt32 : Any<uint> // TypeDefIndex: 58841
 	{
 		// Constructors
-		public UInt32() {} // Dummy constructor
-		public UInt32(uint i) {} // 0x000000018C3CB3E4-0x000000018C3CB424
+		public UInt32(uint i); // 0x000000018B8B42B4-0x000000018B8B42F4
 	}
 
-	public class Int64 : Any<long> // TypeDefIndex: 56202
+	public class Int64 : Any<long> // TypeDefIndex: 58842
 	{
 		// Constructors
-		public Int64() {} // Dummy constructor
-		public Int64(long i) {} // 0x000000018C3C61FC-0x000000018C3C6240
+		public Int64(long i); // 0x000000018B8AF280-0x000000018B8AF2C4
 	}
 
-	public class UInt64 : Any<ulong> // TypeDefIndex: 56203
+	public class UInt64 : Any<ulong> // TypeDefIndex: 58843
 	{
 		// Constructors
-		public UInt64() {} // Dummy constructor
-		public UInt64(ulong i) {} // 0x000000018C3CB424-0x000000018C3CB468
+		public UInt64(ulong i); // 0x000000018B8B42F4-0x000000018B8B4338
 	}
 
-	public class Float : Any<float> // TypeDefIndex: 56204
+	public class Float : Any<float> // TypeDefIndex: 58844
 	{
 		// Constructors
-		public Float() {} // Dummy constructor
-		public Float(float i) {} // 0x000000018C3C5400-0x000000018C3C5444
+		public Float(float i); // 0x000000018B8AE484-0x000000018B8AE4C8
 	}
 }
 
 namespace XLua.LuaDLL
 {
-	public delegate int lua_CSFunction(IntPtr L); // TypeDefIndex: 56205; 0x00000001817C2F70-0x00000001817C2F80
+	[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+	public delegate int lua_CSFunction(IntPtr L); // TypeDefIndex: 58845; 0x00000001814E2060-0x00000001814E2070
 
-	public static class Lua // TypeDefIndex: 56209
+	public static class Lua // TypeDefIndex: 58849
 	{
 		// Fields
-		private const string LUADLL = "__Internal"; // Metadata: 0x0207C2A6
+		private const string LUADLL = "__Internal"; // Metadata: 0x0234BF56
 		private static int s_mainThreadId; // 0x00
 		public static Func<IntPtr, string> tryGetLuaStringFunc; // 0x08
 		public static Action<IntPtr, IntPtr, int, string> refLuaStringFunc; // 0x10
-		public const int LUAI_MAXSHORTLEN = 40; // Metadata: 0x0207C2B1
+		public const int LUAI_MAXSHORTLEN = 40; // Metadata: 0x0234BF61
 	
 		// Nested types
-		public delegate void HyperLuaLogCallbackDelegate(IntPtr L, int level, string text); // TypeDefIndex: 56206; 0x000000018C3C711C-0x000000018C3C7124
+		public delegate void HyperLuaLogCallbackDelegate(IntPtr L, int level, string text); // TypeDefIndex: 58846; 0x0000000181546280-0x00000001815462A0
 	
-		public delegate void LuaUtilsLogCallbackDelegate(int level, string text); // TypeDefIndex: 56207; 0x000000018C3C7030-0x000000018C3C7038
+		public delegate void LuaUtilsLogCallbackDelegate(int level, string text); // TypeDefIndex: 58847; 0x00000001838E1420-0x00000001838E1430
 	
-		public delegate IntPtr DecryptionFunc(IntPtr input, int size, out int outSize); // TypeDefIndex: 56208; 0x00000001845551D0-0x0000000184555230
+		public delegate IntPtr DecryptionFunc(IntPtr input, int size, out int outSize); // TypeDefIndex: 58848; 0x00000001814F3120-0x00000001814F3140
 	
 		// Constructors
-		static Lua() {} // 0x000000018C3C6FE8-0x000000018C3C6FF0
+		static Lua(); // 0x0000000184D4DFB0-0x0000000184D4E010
 	
 		// Methods
-		public static extern IntPtr lua_tothread(IntPtr L, int index); // 0x0000000186472174-0x000000018647217C
-		public static extern int xlua_get_lib_version(); // 0x000000018C3C6DF4-0x000000018C3C6DFC
-		public static extern int lua_gc(IntPtr L, XLua.LuaGCOptions what, int data); // 0x000000018C3C712C-0x000000018C3C7134
-		public static extern IntPtr lua_getupvalue(IntPtr L, int funcindex, int n); // 0x000000018C3C6D88-0x000000018C3C6D90
-		public static extern IntPtr lua_setupvalue(IntPtr L, int funcindex, int n); // 0x0000000186472198-0x00000001864721A0
-		public static extern int lua_pushthread(IntPtr L); // 0x000000018646F27C-0x000000018646F290
-		public static bool lua_isfunction(IntPtr L, int stackPos) => default; // 0x00000001845504C0-0x0000000184550530
-		public static bool lua_islightuserdata(IntPtr L, int stackPos) => default; // 0x0000000184553130-0x0000000184553170
-		public static bool lua_istable(IntPtr L, int stackPos) => default; // 0x0000000184C33170-0x0000000184C331B0
-		public static bool lua_isthread(IntPtr L, int stackPos) => default; // 0x0000000186472190-0x0000000186472198
-		public static int luaL_error(IntPtr L, string message) => default; // 0x000000018646F368-0x000000018646F370
-		public static extern int lua_setfenv(IntPtr L, int stackPos); // 0x0000000184559250-0x00000001845592B0
-		public static extern IntPtr luaL_newstate(); // 0x0000000186473930-0x0000000186473938
-		public static extern void lua_close(IntPtr L); // 0x000000018646F2D8-0x000000018646F2E0
-		public static extern void luaopen_xlua(IntPtr L); // 0x000000018646F2B8-0x000000018646F2C0
-		public static extern void luaL_openlibs(IntPtr L); // 0x000000018646E8A8-0x000000018646E8B0
-		public static extern uint xlua_objlen(IntPtr L, int stackPos); // 0x0000000186472188-0x0000000186472190
-		public static extern void lua_createtable(IntPtr L, int narr, int nrec); // 0x000000018C3C6FD8-0x000000018C3C6FE0
-		public static void lua_newtable(IntPtr L, int arrayL = 0 /* Metadata: 0x0207C2A2 */, int hashL = 0 /* Metadata: 0x0207C2A3 */) {} // 0x000000018646F2C0-0x000000018646F2C8
-		public static extern int xlua_getglobal(IntPtr L, string name); // 0x000000018C3C6FD0-0x000000018C3C6FD8
-		public static extern int xlua_setglobal(IntPtr L, string name); // 0x000000018C3C6FE0-0x000000018C3C6FE8
-		public static extern void xlua_getloaders(IntPtr L); // 0x000000018646F320-0x000000018646F328
-		public static extern void lua_settop(IntPtr L, int newTop); // 0x000000018646F300-0x000000018646F308
-		public static void lua_pop(IntPtr L, int amount) {} // 0x0000000184555530-0x00000001845555B0
-		public static extern void lua_insert(IntPtr L, int newTop); // 0x000000018433FFA0-0x000000018433FFC0
-		public static extern void lua_remove(IntPtr L, int index); // 0x000000018C3C6EA4-0x000000018C3C6EF8
-		public static extern int lua_rawget(IntPtr L, int index); // 0x000000018646F2A8-0x000000018646F2B0
-		public static extern void lua_rawset(IntPtr L, int index); // 0x0000000184552250-0x00000001845522B0
-		public static extern int lua_setmetatable(IntPtr L, int objIndex); // 0x000000018646F370-0x000000018646F378
-		public static extern int lua_rawequal(IntPtr L, int index1, int index2); // 0x000000018647256C-0x0000000186472574
-		public static extern void lua_pushvalue(IntPtr L, int index); // 0x00000001845592B0-0x0000000184559370
-		public static extern void lua_pushcclosure(IntPtr L, IntPtr fn, int n); // 0x000000018C3C7134-0x000000018C3C713C
-		public static extern void lua_replace(IntPtr L, int index); // 0x000000018646F274-0x000000018646F27C
-		public static extern int lua_gettop(IntPtr L); // 0x000000018454FA20-0x000000018454FA90
-		public static extern LuaTypes lua_type(IntPtr L, int index); // 0x000000018C3C6F60-0x000000018C3C6F74
-		public static bool lua_isnil(IntPtr L, int index) => default; // 0x00000001850D3E80-0x00000001850D3EA0
-		public static extern bool lua_isnumber(IntPtr L, int index); // 0x000000018646F2A0-0x000000018646F2A8
-		public static bool lua_isboolean(IntPtr L, int index) => default; // 0x00000001843505F0-0x0000000184350740
-		public static extern int luaL_ref(IntPtr L, int registryIndex); // 0x000000018646D4EC-0x000000018646D4F4
-		public static int luaL_ref(IntPtr L) => default; // 0x0000000184774E90-0x0000000184775050
-		public static extern void xlua_rawgeti(IntPtr L, int tableIndex, long index); // 0x000000018646FEDC-0x000000018646FEE4
-		public static extern void xlua_rawseti(IntPtr L, int tableIndex, long index); // 0x000000018646EF8C-0x000000018646EF94
-		public static void lua_getref(IntPtr L, int reference) {} // 0x000000018646D4F4-0x000000018646D4FC
-		public static extern int pcall_prepare(IntPtr L, int error_func_ref, int func_ref); // 0x0000000186473090-0x0000000186473098
-		public static extern void luaL_unref(IntPtr L, int registryIndex, int reference); // 0x00000001844E18A0-0x00000001844E1900
-		public static void lua_unref(IntPtr L, int reference) {} // 0x000000018C3C7114-0x000000018C3C711C
-		public static extern bool lua_isstring(IntPtr L, int index); // 0x000000018646F318-0x000000018646F320
-		public static extern bool lua_isinteger(IntPtr L, int index); // 0x0000000184555D50-0x0000000184555DB0
-		public static extern void lua_pushnil(IntPtr L); // 0x0000000184555DB0-0x0000000184556840
-		public static void lua_pushstdcallcfunction(IntPtr L, lua_CSFunction function, int n = 0 /* Metadata: 0x0207C2A4 */) {} // 0x00000001844CE2A0-0x00000001844CE2D0
-		public static extern int xlua_upvalueindex(int n); // 0x000000018646F2B0-0x000000018646F2B8
-		public static int lua_pcall(IntPtr L, int nArgs, int nResults, int errfunc) => default; // 0x0000000184556840-0x0000000184556850
-		public static extern int _lua_pcall(IntPtr L, int nArgs, int nResults, int errfunc); // 0x00000001843505E0-0x00000001843505F0
-		public static extern double lua_tonumber(IntPtr L, int index); // 0x000000018647046C-0x0000000186470474
-		public static extern int xlua_tointeger(IntPtr L, int index); // 0x00000001843413D0-0x0000000184341630
-		public static extern uint xlua_touint(IntPtr L, int index); // 0x0000000184197F10-0x0000000184197F30
-		public static extern bool lua_toboolean(IntPtr L, int index); // 0x0000000184197F30-0x0000000184198180
-		public static extern IntPtr lua_topointer(IntPtr L, int index); // 0x000000018545B0C0-0x000000018545B130
-		public static extern IntPtr lua_tolstring(IntPtr L, int index, out IntPtr strLen); // 0x000000018C3C7038-0x000000018C3C7114
-		public static string lua_tostring_beyond(IntPtr L, int index) => default; // 0x0000000184811980-0x00000001848119C0
-		public static string lua_tostring(IntPtr L, int index, bool cache = false /* Metadata: 0x0207C2A5 */) => default; // 0x000000018646F378-0x000000018646F380
-		public static extern IntPtr lua_atpanic(IntPtr L, lua_CSFunction panicf); // 0x000000018646F360-0x000000018646F368
-		public static extern void lua_pushnumber(IntPtr L, double number); // 0x0000000184553270-0x00000001845532E0
-		public static extern void lua_pushboolean(IntPtr L, bool value); // 0x0000000184C33C00-0x0000000184C33C70
-		public static extern void xlua_pushinteger(IntPtr L, int value); // 0x000000018C3C6CF4-0x000000018C3C6D88
-		public static extern void xlua_pushuint(IntPtr L, uint value); // 0x000000018646E860-0x000000018646E868
-		public static void lua_pushstring(IntPtr L, string str) {} // 0x000000018646DE34-0x000000018646DE3C
-		public static extern void xlua_pushlstring(IntPtr L, byte[] str, int size); // 0x000000018C3C6DFC-0x000000018C3C6E48
-		public static void xlua_pushasciistring(IntPtr L, string str) {} // 0x0000000184C34E90-0x0000000184C34EB0
-		public static void lua_pushstring(IntPtr L, byte[] str) {} // 0x000000018C3C6FC8-0x000000018C3C6FD0
-		public static byte[] lua_tobytes(IntPtr L, int index) => default; // 0x0000000186475060-0x0000000186475068
-		public static extern int luaL_newmetatable(IntPtr L, string meta); // 0x0000000186475058-0x0000000186475060
-		public static extern int xlua_pgettable(IntPtr L, int idx); // 0x000000018C3C6DEC-0x000000018C3C6DF4
-		public static extern int xlua_psettable(IntPtr L, int idx); // 0x000000018646DE2C-0x000000018646DE34
-		public static void luaL_getmetatable(IntPtr L, string meta) {} // 0x000000018C3C73B0-0x000000018C3C73BC
-		public static extern int xluaL_loadbuffer(IntPtr L, byte[] buff, int size, string name); // 0x000000018C3C6C90-0x000000018C3C6C98
-		public static int luaL_loadbuffer(IntPtr L, string buff, string name) => default; // 0x000000018C3C6C98-0x000000018C3C6CA0
-		public static extern int xlua_tocsobj_safe(IntPtr L, int obj); // 0x000000018C3C6C80-0x000000018C3C6C88
-		public static extern int xlua_tocsobj_fast(IntPtr L, int obj); // 0x000000018C3C6C88-0x000000018C3C6C90
-		public static int lua_error(IntPtr L) => default; // 0x0000000186472134-0x000000018647213C
-		public static extern bool lua_checkstack(IntPtr L, int extra); // 0x000000018646FED4-0x000000018646FEDC
-		public static extern int lua_next(IntPtr L, int index); // 0x000000018647213C-0x0000000186472144
-		public static extern void lua_pushlightuserdata(IntPtr L, IntPtr udata); // 0x000000018C3C7124-0x000000018C3C712C
-		public static extern IntPtr xlua_tag(); // 0x000000018647045C-0x0000000186470464
-		public static extern void luaL_where(IntPtr L, int level); // 0x000000018647045C-0x0000000186470464
-		public static extern int xlua_tryget_cachedud(IntPtr L, int key, int cache_ref); // 0x000000018C3C6EF8-0x000000018C3C6F0C
-		public static extern void xlua_pushcsobj(IntPtr L, int key, int meta_ref, bool need_cache, int cache_ref); // 0x000000018C3C6EF8-0x000000018C3C6F0C
-		public static extern int gen_obj_indexer(IntPtr L); // 0x000000018646D4F4-0x000000018646D4FC
-		public static extern int gen_obj_newindexer(IntPtr L); // 0x000000018646D4F4-0x000000018646D4FC
-		public static extern int gen_cls_indexer(IntPtr L); // 0x000000018646E8A0-0x000000018646E8A8
-		public static extern int gen_cls_newindexer(IntPtr L); // 0x000000018C3C7144-0x000000018C3C7184
-		public static extern int get_error_func_ref(IntPtr L); // 0x000000018C3C713C-0x000000018C3C7144
-		public static extern int load_error_func(IntPtr L, int Ref); // 0x000000018C3C734C-0x000000018C3C7360
-		public static extern int luaopen_i64lib(IntPtr L); // 0x000000018C3C74DC-0x000000018C3C74F0
-		public static extern int luaopen_socket_core(IntPtr L); // 0x000000018C3C7324-0x000000018C3C7338
-		public static extern void lua_pushint64(IntPtr L, long n); // 0x000000018C3C74C8-0x000000018C3C74DC
-		public static extern void lua_pushuint64(IntPtr L, ulong n); // 0x0000000184CF4DE0-0x0000000184CF4E00
-		public static extern bool lua_isint64(IntPtr L, int idx); // 0x0000000184D276A0-0x0000000184D276C0
-		public static extern bool lua_isuint64(IntPtr L, int idx); // 0x000000018C3C7338-0x000000018C3C734C
-		public static extern long lua_toint64(IntPtr L, int idx); // 0x000000018C3C73EC-0x000000018C3C7400
-		public static extern ulong lua_touint64(IntPtr L, int idx); // 0x000000018C3C7310-0x000000018C3C7324
-		public static extern void xlua_push_csharp_function(IntPtr L, IntPtr fn, int n); // 0x000000018C3C74B4-0x000000018C3C74C8
-		public static extern int xlua_csharp_str_error(IntPtr L, string message); // 0x000000018C3C7274-0x000000018C3C7288
-		public static extern int xlua_csharp_error(IntPtr L); // 0x000000018C3C73EC-0x000000018C3C7400
-		public static extern bool xlua_pack_int8_t(IntPtr buff, int offset, byte field); // 0x000000018646EFA0-0x000000018646EFA8
-		public static extern bool xlua_unpack_int8_t(IntPtr buff, int offset, out byte field); // 0x000000018C3C73BC-0x000000018C3C73C4
-		public static extern bool xlua_pack_int16_t(IntPtr buff, int offset, short field); // 0x000000018646EFD4-0x000000018646EFDC
-		public static extern bool xlua_unpack_int16_t(IntPtr buff, int offset, out short field); // 0x000000018646F2C8-0x000000018646F2D0
-		public static extern bool xlua_pack_int32_t(IntPtr buff, int offset, int field); // 0x0000000186472144-0x000000018647214C
-		public static extern bool xlua_unpack_int32_t(IntPtr buff, int offset, out int field); // 0x000000018562B370-0x000000018562B3C0
-		public static extern bool xlua_pack_int64_t(IntPtr buff, int offset, long field); // 0x000000018C3C7360-0x000000018C3C73B0
-		public static extern bool xlua_unpack_int64_t(IntPtr buff, int offset, out long field); // 0x00000001844DFDB0-0x00000001844DFDD0
-		public static extern bool xlua_pack_float(IntPtr buff, int offset, float field); // 0x000000018C3C7400-0x000000018C3C7414
-		public static extern bool xlua_unpack_float(IntPtr buff, int offset, out float field); // 0x00000001844DFD00-0x00000001844DFD30
-		public static extern bool xlua_pack_double(IntPtr buff, int offset, double field); // 0x00000001851DF670-0x00000001851DF6A0
-		public static extern bool xlua_unpack_double(IntPtr buff, int offset, out double field); // 0x00000001844DBE00-0x00000001844DBE30
-		public static extern IntPtr xlua_pushstruct(IntPtr L, uint size, int meta_ref); // 0x000000018C3C7414-0x000000018C3C743C
-		public static extern void xlua_pushcstable(IntPtr L, uint field_count, int meta_ref); // 0x000000018C3C7288-0x000000018C3C72C4
-		public static extern IntPtr lua_touserdata(IntPtr L, int idx); // 0x000000018C3C743C-0x000000018C3C7470
-		public static extern int xlua_gettypeid(IntPtr L, int idx); // 0x000000018C3C72C4-0x000000018C3C7310
-		public static extern int xlua_get_registry_index(); // 0x000000018C3C7470-0x000000018C3C74B4
-		public static extern int xlua_pgettable_bypath(IntPtr L, int idx, string path); // 0x000000018C3C7260-0x000000018C3C7274
-		public static extern int xlua_psettable_bypath(IntPtr L, int idx, string path); // 0x000000018C3C73C4-0x000000018C3C73EC
-		public static extern bool xlua_pack_float2(IntPtr buff, int offset, float f1, float f2); // 0x000000018C3C7184-0x000000018C3C7204
-		public static extern bool xlua_unpack_float2(IntPtr buff, int offset, out float f1, out float f2); // 0x000000018C3C7204-0x000000018C3C7260
-		public static extern bool xlua_pack_float3(IntPtr buff, int offset, float f1, float f2, float f3); // 0x00000001864752C4-0x00000001864752CC
-		public static extern bool xlua_unpack_float3(IntPtr buff, int offset, out float f1, out float f2, out float f3); // 0x000000018C3C6D90-0x000000018C3C6DEC
-		public static extern bool xlua_pack_float4(IntPtr buff, int offset, float f1, float f2, float f3, float f4); // 0x000000018C3C6FF0-0x000000018C3C7030
-		public static extern bool xlua_unpack_float4(IntPtr buff, int offset, out float f1, out float f2, out float f3, out float f4); // 0x000000018C3C6E50-0x000000018C3C6E94
-		public static extern bool xlua_pack_float5(IntPtr buff, int offset, float f1, float f2, float f3, float f4, float f5); // 0x000000018C3C6E94-0x000000018C3C6E9C
-		public static extern bool xlua_unpack_float5(IntPtr buff, int offset, out float f1, out float f2, out float f3, out float f4, out float f5); // 0x000000018C3C6E48-0x000000018C3C6E50
-		public static extern bool xlua_pack_float6(IntPtr buff, int offset, float f1, float f2, float f3, float f4, float f5, float f6); // 0x000000018646FEA0-0x000000018646FEA8
-		public static extern bool xlua_unpack_float6(IntPtr buff, int offset, out float f1, out float f2, out float f3, out float f4, out float f5, out float f6); // 0x00000001864753BC-0x00000001864753C4
-		public static extern bool xlua_pack_decimal(IntPtr buff, int offset, ref decimal dec); // 0x00000001844CE2D0-0x00000001844CE2F0
-		public static extern bool xlua_unpack_decimal(IntPtr buff, int offset, out byte scale, out byte sign, out int hi32, out ulong lo64); // 0x0000000185F51580-0x0000000185F515D0
-		public static bool xlua_is_eq_str(IntPtr L, int index, string str) => default; // 0x0000000185F8B320-0x0000000185F8B370
-		public static extern bool xlua_is_eq_str(IntPtr L, int index, string str, int str_len); // 0x00000001864753AC-0x00000001864753B4
-		public static extern IntPtr xlua_gl(IntPtr L); // 0x00000001844CE2F0-0x00000001844CE310
-		public static extern int luaL_traceback(IntPtr L, IntPtr L1, string msg, int level); // 0x0000000185F514E0-0x0000000185F51530
-		public static extern int lua_sethook(IntPtr L, XLua.LuaDLL.lua_Hook hook, int mask, int count); // 0x0000000185F8B2D0-0x0000000185F8B320
-		public static extern XLua.LuaDLL.lua_Hook lua_gethook(IntPtr L); // 0x00000001864753A4-0x00000001864753AC
-		public static extern int lua_gethookmask(IntPtr L); // 0x0000000185F51490-0x0000000185F514E0
-		public static extern int lua_getglobal(IntPtr L, IntPtr charPtr); // 0x00000001864753B4-0x00000001864753BC
-		public static extern int lua_pushlstring(IntPtr L, IntPtr charPtr, int len); // 0x0000000185F51530-0x0000000185F51580
-		public static extern int luaopen_HyperLua(IntPtr L); // 0x000000018C3C6C78-0x000000018C3C6C80
-		public static extern void HyperLua_SetLogCallback(HyperLuaLogCallbackDelegate logCallback); // 0x0000000185F190A0-0x0000000185F19130
-		public static int LoadHyperLua(IntPtr L) => default; // 0x0000000181A578C0-0x0000000181A578E0
-		public static void SetHyperLuaLogCallback(HyperLuaLogCallbackDelegate logCallback) {} // 0x000000018C3C5444-0x000000018C3C54E0
-		public static extern int luaopen_LuaUtils(IntPtr L); // 0x00000001864BB614-0x00000001864BB734
-		public static extern void LuaUtils_SetLogCallback(LuaUtilsLogCallbackDelegate logCallback); // 0x000000018476D7A0-0x000000018476D830
-		public static int LoadLuaUtils(IntPtr L) => default; // 0x00000001831C5680-0x00000001831C5690
-		public static void SetLuaUtilsLogCallback(LuaUtilsLogCallbackDelegate logCallback) {} // 0x000000018C3C6BF8-0x000000018C3C6C78
-		public static extern int luaopen_rapidjson(IntPtr L); // 0x00000001864BB614-0x00000001864BB734
-		public static int LoadRapidJson(IntPtr L) => default; // 0x0000000185F1A770-0x0000000185F1A800
-		public static extern int luaopen_pb(IntPtr L); // 0x00000001817E31E0-0x00000001817E3200
-		public static int LoadLuaProtobuf(IntPtr L) => default; // 0x000000018C3C5354-0x000000018C3C5400
-		public static extern void beyond_setDecryptionFunc(IntPtr L, IntPtr func); // 0x0000000187208828-0x0000000187208854
+		public static extern IntPtr lua_tothread(IntPtr L, int index); // 0x0000000185391F08-0x0000000185391F10
+		public static extern int xlua_get_lib_version(); // 0x0000000185393214-0x000000018539321C
+		public static extern int lua_gc(IntPtr L, XLua.LuaGCOptions what, int data); // 0x0000000185393E50-0x0000000185393E58
+		public static extern IntPtr lua_getupvalue(IntPtr L, int funcindex, int n); // 0x000000018B8AFE9C-0x000000018B8AFEA4
+		public static extern IntPtr lua_setupvalue(IntPtr L, int funcindex, int n); // 0x000000018B8AFFC8-0x000000018B8AFFD0
+		public static extern int lua_pushthread(IntPtr L); // 0x0000000185391F10-0x0000000185391F18
+		public static bool lua_isfunction(IntPtr L, int stackPos); // 0x0000000183607F50-0x0000000183607FA0
+		public static bool lua_islightuserdata(IntPtr L, int stackPos); // 0x000000018B8AFF0C-0x000000018B8AFF60
+		public static bool lua_istable(IntPtr L, int stackPos); // 0x00000001832989B0-0x0000000183298A00
+		public static bool lua_isthread(IntPtr L, int stackPos); // 0x00000001832F1A20-0x00000001832F1A90
+		public static int luaL_error(IntPtr L, string message); // 0x000000018B8AFCFC-0x000000018B8AFD50
+		public static extern int lua_setfenv(IntPtr L, int stackPos); // 0x000000018B8AFF80-0x000000018B8AFF88
+		public static extern IntPtr luaL_newstate(); // 0x000000018539323C-0x0000000185393244
+		public static extern void lua_close(IntPtr L); // 0x000000018B8AFDF4-0x000000018B8AFDFC
+		public static extern void luaopen_xlua(IntPtr L); // 0x00000001853931EC-0x00000001853931F4
+		public static extern void luaL_openlibs(IntPtr L); // 0x000000018B8AFDE4-0x000000018B8AFDEC
+		public static extern uint xlua_objlen(IntPtr L, int stackPos); // 0x000000018539324C-0x0000000185393254
+		public static extern void lua_createtable(IntPtr L, int narr, int nrec); // 0x00000001853932E0-0x00000001853932E8
+		public static void lua_newtable(IntPtr L, int arrayL = 0 /* Metadata: 0x0234BF52 */, int hashL = 0 /* Metadata: 0x0234BF53 */); // 0x0000000183607EE0-0x0000000183607F30
+		public static extern int xlua_getglobal(IntPtr L, string name); // 0x00000001836085E0-0x0000000183608620
+		public static extern int xlua_setglobal(IntPtr L, string name); // 0x0000000183600CB0-0x0000000183600CF0
+		public static extern void xlua_getloaders(IntPtr L); // 0x0000000185393244-0x000000018539324C
+		public static extern void lua_settop(IntPtr L, int newTop); // 0x0000000185391D14-0x0000000185391D1C
+		public static void lua_pop(IntPtr L, int amount); // 0x000000018329D960-0x000000018329D9A0
+		public static extern void lua_insert(IntPtr L, int newTop); // 0x0000000185393ED0-0x0000000185393ED8
+		public static extern void lua_remove(IntPtr L, int index); // 0x0000000185390E48-0x0000000185390E50
+		public static extern int lua_rawget(IntPtr L, int index); // 0x00000001853932D8-0x00000001853932E0
+		public static extern void lua_rawset(IntPtr L, int index); // 0x0000000185390AAC-0x0000000185390AB4
+		public static extern int lua_setmetatable(IntPtr L, int objIndex); // 0x000000018539327C-0x0000000185393284
+		public static extern int lua_rawequal(IntPtr L, int index1, int index2); // 0x000000018B8AFF70-0x000000018B8AFF78
+		public static extern void lua_pushvalue(IntPtr L, int index); // 0x00000001853932D0-0x00000001853932D8
+		public static extern void lua_pushcclosure(IntPtr L, IntPtr fn, int n); // 0x000000018B8AFF68-0x000000018B8AFF70
+		public static extern void lua_replace(IntPtr L, int index); // 0x000000018B8AFF78-0x000000018B8AFF80
+		public static extern int lua_gettop(IntPtr L); // 0x0000000185391CCC-0x0000000185391CD4
+		public static extern LuaTypes lua_type(IntPtr L, int index); // 0x0000000185391CAC-0x0000000185391CB4
+		public static bool lua_isnil(IntPtr L, int index); // 0x0000000183299E00-0x0000000183299E60
+		public static extern bool lua_isnumber(IntPtr L, int index); // 0x0000000182F34150-0x0000000182F34170
+		public static bool lua_isboolean(IntPtr L, int index); // 0x000000018B8AFEA4-0x000000018B8AFEF8
+		public static extern int luaL_ref(IntPtr L, int registryIndex); // 0x00000001853932AC-0x00000001853932C0
+		public static int luaL_ref(IntPtr L); // 0x0000000183606FA0-0x0000000183606FF0
+		public static extern void xlua_rawgeti(IntPtr L, int tableIndex, long index); // 0x0000000185391CC4-0x0000000185391CCC
+		public static extern void xlua_rawseti(IntPtr L, int tableIndex, long index); // 0x0000000185395328-0x0000000185395330
+		public static void lua_getref(IntPtr L, int reference); // 0x000000018329B230-0x000000018329B2B0
+		public static extern int pcall_prepare(IntPtr L, int error_func_ref, int func_ref); // 0x0000000185391D0C-0x0000000185391D14
+		public static extern void luaL_unref(IntPtr L, int registryIndex, int reference); // 0x0000000185391F00-0x0000000185391F08
+		public static void lua_unref(IntPtr L, int reference); // 0x00000001832EF630-0x00000001832EF680
+		public static extern bool lua_isstring(IntPtr L, int index); // 0x0000000183606CB0-0x0000000183606CD0
+		public static extern bool lua_isinteger(IntPtr L, int index); // 0x0000000183F70F90-0x0000000183F70FB0
+		public static extern void lua_pushnil(IntPtr L); // 0x0000000185391EF8-0x0000000185391F00
+		public static void lua_pushstdcallcfunction(IntPtr L, lua_CSFunction function, int n = 0 /* Metadata: 0x0234BF54 */); // 0x0000000183298170-0x0000000183298250
+		public static extern int xlua_upvalueindex(int n); // 0x00000001853909D0-0x00000001853909D8
+		public static int lua_pcall(IntPtr L, int nArgs, int nResults, int errfunc); // 0x000000018329E9F0-0x000000018329EB90
+		public static extern int _lua_pcall(IntPtr L, int nArgs, int nResults, int errfunc); // 0x0000000185391D24-0x0000000185391D2C
+		public static extern double lua_tonumber(IntPtr L, int index); // 0x000000018539097C-0x0000000185390984
+		public static extern int xlua_tointeger(IntPtr L, int index); // 0x0000000185390990-0x0000000185390998
+		public static extern uint xlua_touint(IntPtr L, int index); // 0x0000000185391444-0x000000018539144C
+		public static extern bool lua_toboolean(IntPtr L, int index); // 0x000000018339E8E0-0x000000018339E900
+		public static extern IntPtr lua_topointer(IntPtr L, int index); // 0x000000018B8B00AC-0x000000018B8B00B4
+		public static extern IntPtr lua_tolstring(IntPtr L, int index, out IntPtr strLen); // 0x0000000185391C9C-0x0000000185391CA4
+		public static string lua_tostring_beyond(IntPtr L, int index); // 0x0000000183298C90-0x0000000183298CD0
+		public static string lua_tostring(IntPtr L, int index, bool cache = false /* Metadata: 0x0234BF55 */); // 0x0000000183298CD0-0x0000000183299040
+		public static extern IntPtr lua_atpanic(IntPtr L, lua_CSFunction panicf); // 0x0000000183826DF0-0x0000000183826E20
+		public static extern void lua_pushnumber(IntPtr L, double number); // 0x0000000185391D1C-0x0000000185391D24
+		public static extern void lua_pushboolean(IntPtr L, bool value); // 0x000000018329A510-0x000000018329A520
+		public static extern void xlua_pushinteger(IntPtr L, int value); // 0x0000000183298160-0x0000000183298170
+		public static extern void xlua_pushuint(IntPtr L, uint value); // 0x0000000185392CE0-0x0000000185392CE8
+		public static void lua_pushstring(IntPtr L, string str); // 0x0000000182F84530-0x0000000182F847C0
+		public static extern void xlua_pushlstring(IntPtr L, byte[] str, int size); // 0x0000000182F847C0-0x0000000182F847E0
+		public static void xlua_pushasciistring(IntPtr L, string str); // 0x0000000182F847E0-0x0000000182F849C0
+		public static void lua_pushstring(IntPtr L, byte[] str); // 0x000000018432B1E0-0x000000018432B230
+		public static byte[] lua_tobytes(IntPtr L, int index); // 0x000000018B8AFFD0-0x000000018B8B00AC
+		public static extern int luaL_newmetatable(IntPtr L, string meta); // 0x0000000183606330-0x0000000183606370
+		public static extern int xlua_pgettable(IntPtr L, int idx); // 0x0000000185391CA4-0x0000000185391CAC
+		public static extern int xlua_psettable(IntPtr L, int idx); // 0x0000000185391D04-0x0000000185391D0C
+		public static void luaL_getmetatable(IntPtr L, string meta); // 0x0000000183606E10-0x0000000183606E60
+		public static extern int xluaL_loadbuffer(IntPtr L, byte[] buff, int size, string name); // 0x0000000183601710-0x0000000183601780
+		public static int luaL_loadbuffer(IntPtr L, string buff, string name); // 0x000000018B8AFD50-0x000000018B8AFDE4
+		public static extern int xlua_tocsobj_safe(IntPtr L, int obj); // 0x00000001853909D8-0x00000001853909E0
+		public static extern int xlua_tocsobj_fast(IntPtr L, int obj); // 0x0000000185391314-0x000000018539131C
+		public static int lua_error(IntPtr L); // 0x000000018B8AFDFC-0x000000018B8AFE48
+		public static extern bool lua_checkstack(IntPtr L, int extra); // 0x0000000183606370-0x0000000183606390
+		public static extern int lua_next(IntPtr L, int index); // 0x000000018B8AFF60-0x000000018B8AFF68
+		public static extern void lua_pushlightuserdata(IntPtr L, IntPtr udata); // 0x0000000185393274-0x000000018539327C
+		public static extern IntPtr xlua_tag(); // 0x00000001853932A4-0x00000001853932AC
+		public static extern void luaL_where(IntPtr L, int level); // 0x000000018B8AFDEC-0x000000018B8AFDF4
+		public static extern int xlua_tryget_cachedud(IntPtr L, int key, int cache_ref); // 0x000000018539130C-0x0000000185391314
+		public static extern void xlua_pushcsobj(IntPtr L, int key, int meta_ref, bool need_cache, int cache_ref); // 0x00000001853912F0-0x00000001853912FC
+		public static extern int gen_obj_indexer(IntPtr L); // 0x0000000185393284-0x000000018539328C
+		public static extern int gen_obj_newindexer(IntPtr L); // 0x000000018539328C-0x0000000185393294
+		public static extern int gen_cls_indexer(IntPtr L); // 0x0000000185393294-0x000000018539329C
+		public static extern int gen_cls_newindexer(IntPtr L); // 0x000000018539329C-0x00000001853932A4
+		public static extern int get_error_func_ref(IntPtr L); // 0x00000001853931FC-0x0000000185393204
+		public static extern int load_error_func(IntPtr L, int Ref); // 0x0000000185392E2C-0x0000000185392E34
+		public static extern int luaopen_i64lib(IntPtr L); // 0x0000000185393204-0x000000018539320C
+		public static extern int luaopen_socket_core(IntPtr L); // 0x000000018B8B00B4-0x000000018B8B00BC
+		public static extern void lua_pushint64(IntPtr L, long n); // 0x00000001832978D0-0x00000001832978E0
+		public static extern void lua_pushuint64(IntPtr L, ulong n); // 0x000000018539733C-0x0000000185397344
+		public static extern bool lua_isint64(IntPtr L, int idx); // 0x000000018B8AFEF8-0x000000018B8AFF0C
+		public static extern bool lua_isuint64(IntPtr L, int idx); // 0x000000018B8AFEF8-0x000000018B8AFF0C
+		public static extern long lua_toint64(IntPtr L, int idx); // 0x0000000185390990-0x0000000185390998
+		public static extern ulong lua_touint64(IntPtr L, int idx); // 0x0000000185390990-0x0000000185390998
+		public static extern void xlua_push_csharp_function(IntPtr L, IntPtr fn, int n); // 0x0000000185391C8C-0x0000000185391C94
+		public static extern int xlua_csharp_str_error(IntPtr L, string message); // 0x000000018B8B00C4-0x000000018B8B0104
+		public static extern int xlua_csharp_error(IntPtr L); // 0x000000018B8B00BC-0x000000018B8B00C4
+		public static extern bool xlua_pack_int8_t(IntPtr buff, int offset, byte field); // 0x000000018B8B02CC-0x000000018B8B02E0
+		public static extern bool xlua_unpack_int8_t(IntPtr buff, int offset, out byte field); // 0x000000018B8B0450-0x000000018B8B0464
+		public static extern bool xlua_pack_int16_t(IntPtr buff, int offset, short field); // 0x000000018B8B02A4-0x000000018B8B02B8
+		public static extern bool xlua_unpack_int16_t(IntPtr buff, int offset, out short field); // 0x000000018B8B043C-0x000000018B8B0450
+		public static extern bool xlua_pack_int32_t(IntPtr buff, int offset, int field); // 0x0000000183B61690-0x0000000183B616B0
+		public static extern bool xlua_unpack_int32_t(IntPtr buff, int offset, out int field); // 0x0000000183A1B210-0x0000000183A1B230
+		public static extern bool xlua_pack_int64_t(IntPtr buff, int offset, long field); // 0x000000018B8B02B8-0x000000018B8B02CC
+		public static extern bool xlua_unpack_int64_t(IntPtr buff, int offset, out long field); // 0x000000018B8B0360-0x000000018B8B0374
+		public static extern bool xlua_pack_float(IntPtr buff, int offset, float field); // 0x000000018B8B0290-0x000000018B8B02A4
+		public static extern bool xlua_unpack_float(IntPtr buff, int offset, out float field); // 0x000000018B8B0428-0x000000018B8B043C
+		public static extern bool xlua_pack_double(IntPtr buff, int offset, double field); // 0x000000018B8B01F4-0x000000018B8B0208
+		public static extern bool xlua_unpack_double(IntPtr buff, int offset, out double field); // 0x000000018B8B0360-0x000000018B8B0374
+		public static extern IntPtr xlua_pushstruct(IntPtr L, uint size, int meta_ref); // 0x0000000185391C50-0x0000000185391C58
+		public static extern void xlua_pushcstable(IntPtr L, uint field_count, int meta_ref); // 0x000000018B8B0330-0x000000018B8B0338
+		public static extern IntPtr lua_touserdata(IntPtr L, int idx); // 0x0000000185391C84-0x0000000185391C8C
+		public static extern int xlua_gettypeid(IntPtr L, int idx); // 0x0000000185394850-0x0000000185394858
+		public static extern int xlua_get_registry_index(); // 0x000000018539320C-0x0000000185393214
+		public static extern int xlua_pgettable_bypath(IntPtr L, int idx, string path); // 0x00000001844BDE60-0x00000001844BDEB0
+		public static extern int xlua_psettable_bypath(IntPtr L, int idx, string path); // 0x000000018B8B02E0-0x000000018B8B0330
+		public static extern bool xlua_pack_float2(IntPtr buff, int offset, float f1, float f2); // 0x00000001832975B0-0x00000001832975D0
+		public static extern bool xlua_unpack_float2(IntPtr buff, int offset, out float f1, out float f2); // 0x000000018B8B0374-0x000000018B8B0388
+		public static extern bool xlua_pack_float3(IntPtr buff, int offset, float f1, float f2, float f3); // 0x0000000183297650-0x0000000183297680
+		public static extern bool xlua_unpack_float3(IntPtr buff, int offset, out float f1, out float f2, out float f3); // 0x00000001849E78C0-0x00000001849E78F0
+		public static extern bool xlua_pack_float4(IntPtr buff, int offset, float f1, float f2, float f3, float f4); // 0x0000000183A1C160-0x0000000183A1C190
+		public static extern bool xlua_unpack_float4(IntPtr buff, int offset, out float f1, out float f2, out float f3, out float f4); // 0x000000018B8B0388-0x000000018B8B03B0
+		public static extern bool xlua_pack_float5(IntPtr buff, int offset, float f1, float f2, float f3, float f4, float f5); // 0x000000018B8B0208-0x000000018B8B0244
+		public static extern bool xlua_unpack_float5(IntPtr buff, int offset, out float f1, out float f2, out float f3, out float f4, out float f5); // 0x000000018B8B03B0-0x000000018B8B03E4
+		public static extern bool xlua_pack_float6(IntPtr buff, int offset, float f1, float f2, float f3, float f4, float f5, float f6); // 0x000000018B8B0244-0x000000018B8B0290
+		public static extern bool xlua_unpack_float6(IntPtr buff, int offset, out float f1, out float f2, out float f3, out float f4, out float f5, out float f6); // 0x000000018B8B03E4-0x000000018B8B0428
+		public static extern bool xlua_pack_decimal(IntPtr buff, int offset, ref decimal dec); // 0x000000018B8B01E0-0x000000018B8B01F4
+		public static extern bool xlua_unpack_decimal(IntPtr buff, int offset, out byte scale, out byte sign, out int hi32, out ulong lo64); // 0x000000018B8B0338-0x000000018B8B0360
+		public static bool xlua_is_eq_str(IntPtr L, int index, string str); // 0x000000018B8B0104-0x000000018B8B0184
+		public static extern bool xlua_is_eq_str(IntPtr L, int index, string str, int str_len); // 0x000000018B8B0184-0x000000018B8B01E0
+		public static extern IntPtr xlua_gl(IntPtr L); // 0x00000001853980C0-0x00000001853980C8
+		public static extern int luaL_traceback(IntPtr L, IntPtr L1, string msg, int level); // 0x00000001832F19C0-0x00000001832F1A20
+		public static extern int lua_sethook(IntPtr L, XLua.LuaDLL.lua_Hook hook, int mask, int count); // 0x000000018B8AFF88-0x000000018B8AFFC8
+		public static extern XLua.LuaDLL.lua_Hook lua_gethook(IntPtr L); // 0x000000018B8AFE50-0x000000018B8AFE94
+		public static extern int lua_gethookmask(IntPtr L); // 0x000000018B8AFE94-0x000000018B8AFE9C
+		public static extern int lua_getglobal(IntPtr L, IntPtr charPtr); // 0x000000018B8AFE48-0x000000018B8AFE50
+		public static extern int lua_pushlstring(IntPtr L, IntPtr charPtr, int len); // 0x00000001853911C8-0x00000001853911D0
+		public static extern int luaopen_HyperLua(IntPtr L); // 0x000000018539820C-0x0000000185398214
+		public static extern void HyperLua_SetLogCallback(HyperLuaLogCallbackDelegate logCallback); // 0x0000000183826E20-0x0000000183826E40
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int LoadHyperLua(IntPtr L); // 0x0000000184D22950-0x0000000184D229A0
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static void SetHyperLuaLogCallback(HyperLuaLogCallbackDelegate logCallback); // 0x0000000184D5DAA0-0x0000000184D5DAF0
+		public static extern int luaopen_LuaUtils(IntPtr L); // 0x00000001853981FC-0x0000000185398204
+		public static extern void LuaUtils_SetLogCallback(LuaUtilsLogCallbackDelegate logCallback); // 0x0000000183826E40-0x0000000183826E60
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int LoadLuaUtils(IntPtr L); // 0x0000000184D228B0-0x0000000184D22900
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static void SetLuaUtilsLogCallback(LuaUtilsLogCallbackDelegate logCallback); // 0x0000000184D5DA50-0x0000000184D5DAA0
+		public static extern int luaopen_rapidjson(IntPtr L); // 0x00000001853981F4-0x00000001853981FC
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int LoadRapidJson(IntPtr L); // 0x0000000184D22860-0x0000000184D228B0
+		public static extern int luaopen_pb(IntPtr L); // 0x0000000185398204-0x000000018539820C
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int LoadLuaProtobuf(IntPtr L); // 0x0000000184D22900-0x0000000184D22950
+		public static extern void beyond_setDecryptionFunc(IntPtr L, IntPtr func); // 0x00000001853931F4-0x00000001853931FC
 	}
 
-	public delegate int lua_Hook(IntPtr L, ref lua_debug ar); // TypeDefIndex: 56210; 0x0000000181B59400-0x0000000181B59410
+	[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+	public delegate int lua_Hook(IntPtr L, ref lua_debug ar); // TypeDefIndex: 58850; 0x00000001815802E0-0x00000001815802F0
 }
 
 namespace XLua.Reflection
 {
-	public class LuaObjFieldGetterSetter // TypeDefIndex: 56192
+	public class LuaObjFieldGetterSetter // TypeDefIndex: 58832
 	{
 		// Nested types
-		private sealed class __c__DisplayClass3_0<T> // TypeDefIndex: 56174
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass3_0<T> // TypeDefIndex: 58814
 			where T : struct
 		{
 			// Fields
@@ -3851,13 +3860,14 @@ namespace XLua.Reflection
 			public int offset;
 	
 			// Constructors
-			public __c__DisplayClass3_0() {} // 0x000000018C3C6240-0x000000018C3C6410
+			public __c__DisplayClass3_0();
 	
 			// Methods
-			internal int _GetObjFieldGetterByPushInt32_b__0(IntPtr L) => default; // 0x000000018C3C64E0-0x000000018C3C6534
+			internal int _GetObjFieldGetterByPushInt32_b__0(IntPtr L);
 		}
 	
-		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 56175
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 58815
 		{
 			// Fields
 			public bool isUnmanagedType; // 0x10
@@ -3866,13 +3876,14 @@ namespace XLua.Reflection
 			public int offset; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass4_0() {} // 0x000000018C3C6410-0x000000018C3C64E0
+			public __c__DisplayClass4_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjFloatFieldGetterByPushNumber_b__0(IntPtr L) => default;
+			internal int _GetObjFloatFieldGetterByPushNumber_b__0(IntPtr L); // 0x0000000183FDBC00-0x0000000183FDBCC0
 		}
 	
-		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 56176
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 58816
 		{
 			// Fields
 			public bool isUnmanagedType; // 0x10
@@ -3881,13 +3892,14 @@ namespace XLua.Reflection
 			public int offset; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass5_0() {} // 0x00000001843450D0-0x00000001843451C0
+			public __c__DisplayClass5_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjDoubleFieldGetterByPushNumber_b__0(IntPtr L) => default; // 0x0000000185644150-0x0000000185644240
+			internal int _GetObjDoubleFieldGetterByPushNumber_b__0(IntPtr L); // 0x000000018B8B39E4-0x000000018B8B3B60
 		}
 	
-		private sealed class __c__DisplayClass6_0<T> // TypeDefIndex: 56177
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass6_0<T> // TypeDefIndex: 58817
 			where T : struct
 		{
 			// Fields
@@ -3897,13 +3909,14 @@ namespace XLua.Reflection
 			public int offset;
 	
 			// Constructors
-			public __c__DisplayClass6_0() {}
+			public __c__DisplayClass6_0();
 	
 			// Methods
-			internal int _GetObjFieldGetterByPushInt64_b__0(IntPtr L) => default; // 0x0000000184344E00-0x0000000184344EF0
+			internal int _GetObjFieldGetterByPushInt64_b__0(IntPtr L);
 		}
 	
-		private sealed class __c__DisplayClass7_0 // TypeDefIndex: 56178
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass7_0 // TypeDefIndex: 58818
 		{
 			// Fields
 			public bool isUnmanagedType; // 0x10
@@ -3912,13 +3925,14 @@ namespace XLua.Reflection
 			public int offset; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass7_0() {} // 0x0000000184344EF0-0x0000000184344FE0
+			public __c__DisplayClass7_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjFieldGetterByPushBool_b__0(IntPtr L) => default; // 0x0000000184344BE0-0x0000000184344CD0
+			internal int _GetObjFieldGetterByPushBool_b__0(IntPtr L); // 0x0000000183DC3010-0x0000000183DC30C0
 		}
 	
-		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 56179
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 58819
 		{
 			// Fields
 			public bool isUnmanagedType; // 0x10
@@ -3927,13 +3941,14 @@ namespace XLua.Reflection
 			public int offset; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass8_0() {} // 0x00000001843432F0-0x00000001843434E0
+			public __c__DisplayClass8_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjFieldGetterByPushString_b__0(IntPtr L) => default; // 0x00000001853EEF00-0x00000001853EEFD0
+			internal int _GetObjFieldGetterByPushString_b__0(IntPtr L); // 0x0000000183C33910-0x0000000183C33B40
 		}
 	
-		private sealed class __c__DisplayClass9_0 // TypeDefIndex: 56180
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass9_0 // TypeDefIndex: 58820
 		{
 			// Fields
 			public bool isUnmanagedType; // 0x10
@@ -3942,13 +3957,14 @@ namespace XLua.Reflection
 			public int offset; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass9_0() {}
+			public __c__DisplayClass9_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjFieldObjGetter_b__0(IntPtr L) => default; // 0x0000000184344390-0x00000001843444A0
+			internal int _GetObjFieldObjGetter_b__0(IntPtr L); // 0x000000018329CCE0-0x000000018329CF20
 		}
 	
-		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 56181
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 58821
 		{
 			// Fields
 			public bool isUnmanagedType; // 0x10
@@ -3960,13 +3976,14 @@ namespace XLua.Reflection
 			public int size; // 0x38
 	
 			// Constructors
-			public __c__DisplayClass10_0() {} // 0x0000000184343120-0x00000001843432F0
+			public __c__DisplayClass10_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjFieldStructGetter_b__0(IntPtr L) => default;
+			internal int _GetObjFieldStructGetter_b__0(IntPtr L); // 0x0000000183E85C70-0x0000000183E85D50
 		}
 	
-		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 56182
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 58822
 		{
 			// Fields
 			public System.Type type; // 0x10
@@ -3974,13 +3991,14 @@ namespace XLua.Reflection
 			public int offset; // 0x20
 	
 			// Constructors
-			public __c__DisplayClass11_0() {}
+			public __c__DisplayClass11_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjFieldEnumGetter_b__0(IntPtr L) => default; // 0x0000000184344FE0-0x00000001843450D0
+			internal int _GetObjFieldEnumGetter_b__0(IntPtr L); // 0x00000001836FD950-0x00000001836FDA70
 		}
 	
-		private sealed class __c__DisplayClass12_0<T> // TypeDefIndex: 56183
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass12_0<T> // TypeDefIndex: 58823
 			where T : struct
 		{
 			// Fields
@@ -3989,26 +4007,28 @@ namespace XLua.Reflection
 			public int offset;
 	
 			// Constructors
-			public __c__DisplayClass12_0() {} // 0x0000000185644060-0x0000000185644150
+			public __c__DisplayClass12_0();
 	
 			// Methods
-			internal int _GetObjFieldStructGetter_b__0(IntPtr L) => default; // 0x0000000184344D10-0x0000000184344E00
+			internal int _GetObjFieldStructGetter_b__0(IntPtr L);
 		}
 	
-		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 56184
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 58824
 		{
 			// Fields
 			public System.Reflection.FieldInfo field; // 0x10
 			public System.Type type; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass13_0() {} // 0x00000001853AE070-0x00000001853AE160
+			public __c__DisplayClass13_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjFieldObjSetter_b__0(IntPtr L) => default; // 0x0000000185492010-0x0000000185492020
+			internal int _GetObjFieldObjSetter_b__0(IntPtr L); // 0x00000001836FD840-0x00000001836FD950
 		}
 	
-		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 56185
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 58825
 		{
 			// Fields
 			public bool isUnmanagedType; // 0x10
@@ -4019,13 +4039,14 @@ namespace XLua.Reflection
 			public int size; // 0x30
 	
 			// Constructors
-			public __c__DisplayClass14_0() {}
+			public __c__DisplayClass14_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjFieldStructSetter_b__0(IntPtr L) => default;
+			internal int _GetObjFieldStructSetter_b__0(IntPtr L); // 0x00000001844AC740-0x00000001844AC850
 		}
 	
-		private sealed class __c__DisplayClass15_0<T> // TypeDefIndex: 56186
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass15_0<T> // TypeDefIndex: 58826
 			where T : struct
 		{
 			// Fields
@@ -4035,13 +4056,14 @@ namespace XLua.Reflection
 			public int offset;
 	
 			// Constructors
-			public __c__DisplayClass15_0() {} // 0x0000000185492010-0x0000000185492020
+			public __c__DisplayClass15_0();
 	
 			// Methods
-			internal int _GetObjFieldSetterByGetInt32_b__0(IntPtr L) => default; // 0x000000018515CDA0-0x000000018515CED0
+			internal int _GetObjFieldSetterByGetInt32_b__0(IntPtr L);
 		}
 	
-		private sealed class __c__DisplayClass16_0<T> // TypeDefIndex: 56187
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass16_0<T> // TypeDefIndex: 58827
 			where T : struct
 		{
 			// Fields
@@ -4051,13 +4073,14 @@ namespace XLua.Reflection
 			public int offset;
 	
 			// Constructors
-			public __c__DisplayClass16_0() {} // 0x0000000185492010-0x0000000185492020
+			public __c__DisplayClass16_0();
 	
 			// Methods
-			internal int _GetObjFieldSetterByGetInt64_b__0(IntPtr L) => default; // 0x000000018C3CAB14-0x000000018C3CAC90
+			internal int _GetObjFieldSetterByGetInt64_b__0(IntPtr L);
 		}
 	
-		private sealed class __c__DisplayClass17_0 // TypeDefIndex: 56188
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass17_0 // TypeDefIndex: 58828
 		{
 			// Fields
 			public bool isUnmanagedType; // 0x10
@@ -4066,13 +4089,14 @@ namespace XLua.Reflection
 			public int offset; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass17_0() {}
+			public __c__DisplayClass17_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjFloatFieldSetterByGetNumber_b__0(IntPtr L) => default;
+			internal int _GetObjFloatFieldSetterByGetNumber_b__0(IntPtr L); // 0x00000001849AEF10-0x00000001849AF040
 		}
 	
-		private sealed class __c__DisplayClass18_0 // TypeDefIndex: 56189
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass18_0 // TypeDefIndex: 58829
 		{
 			// Fields
 			public bool isUnmanagedType; // 0x10
@@ -4081,13 +4105,14 @@ namespace XLua.Reflection
 			public int offset; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass18_0() {} // 0x0000000185492010-0x0000000185492020
+			public __c__DisplayClass18_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjDoubleFieldSetterByGetNumber_b__0(IntPtr L) => default; // 0x0000000184F47970-0x0000000184F47A90
+			internal int _GetObjDoubleFieldSetterByGetNumber_b__0(IntPtr L); // 0x000000018B8B3150-0x000000018B8B32BC
 		}
 	
-		private sealed class __c__DisplayClass19_0 // TypeDefIndex: 56190
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass19_0 // TypeDefIndex: 58830
 		{
 			// Fields
 			public bool isUnmanagedType; // 0x10
@@ -4096,13 +4121,14 @@ namespace XLua.Reflection
 			public int offset; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass19_0() {} // 0x0000000185492010-0x0000000185492020
+			public __c__DisplayClass19_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjFieldBoolSetter_b__0(IntPtr L) => default; // 0x0000000184341270-0x00000001843413D0
+			internal int _GetObjFieldBoolSetter_b__0(IntPtr L); // 0x00000001841F2450-0x00000001841F2500
 		}
 	
-		private sealed class __c__DisplayClass20_0 // TypeDefIndex: 56191
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass20_0 // TypeDefIndex: 58831
 		{
 			// Fields
 			public bool isUnmanagedType; // 0x10
@@ -4111,100 +4137,102 @@ namespace XLua.Reflection
 			public int offset; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass20_0() {} // 0x0000000185492010-0x0000000185492020
+			public __c__DisplayClass20_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _GetObjFieldEnumSetter_b__0(IntPtr L) => default; // 0x0000000184557CC0-0x0000000184557F70
+			internal int _GetObjFieldEnumSetter_b__0(IntPtr L); // 0x000000018B8B32BC-0x000000018B8B3638
 		}
 	
 		// Constructors
-		public LuaObjFieldGetterSetter() {} // 0x000000018C3CA348-0x000000018C3CA768
+		public LuaObjFieldGetterSetter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		private static bool _CheckRuntimeType(IntPtr L, object obj, System.Type type, System.Reflection.FieldInfo field) => default; // 0x0000000185492010-0x0000000185492020
-		private static IntPtr _GetPtrFromObj(object obj) => default; // 0x00000001844DE4B0-0x00000001844DE5F0
-		private static IntPtr _GetPtrFromLuaStack(IntPtr L, ObjectTranslator translator, int index, bool isUnmanagedType) => default; // 0x0000000185492010-0x0000000185492020
+		private static bool _CheckRuntimeType(IntPtr L, object obj, System.Type type, System.Reflection.FieldInfo field); // 0x000000018B8AF2C4-0x000000018B8AF494
+		private static IntPtr _GetPtrFromObj(object obj); // 0x000000018B8AF564-0x000000018B8AF5B8
+		private static IntPtr _GetPtrFromLuaStack(IntPtr L, ObjectTranslator translator, int index, bool isUnmanagedType); // 0x000000018B8AF494-0x000000018B8AF564
 		public static lua_CSFunction GetObjFieldGetterByPushInt32<T>(System.Type type, System.Reflection.FieldInfo field)
-			where T : struct => default; // 0x000000018454FC40-0x000000018454FDA0
-		public static lua_CSFunction GetObjFloatFieldGetterByPushNumber(System.Type type, System.Reflection.FieldInfo field) => default;
-		public static lua_CSFunction GetObjDoubleFieldGetterByPushNumber(System.Type type, System.Reflection.FieldInfo field) => default;
+			where T : struct;
+		public static lua_CSFunction GetObjFloatFieldGetterByPushNumber(System.Type type, System.Reflection.FieldInfo field); // 0x0000000184221230-0x00000001842212E0
+		public static lua_CSFunction GetObjDoubleFieldGetterByPushNumber(System.Type type, System.Reflection.FieldInfo field); // 0x00000001844BB460-0x00000001844BB540
 		public static lua_CSFunction GetObjFieldGetterByPushInt64<T>(System.Type type, System.Reflection.FieldInfo field)
-			where T : struct => default; // 0x0000000185492010-0x0000000185492020
-		public static lua_CSFunction GetObjFieldGetterByPushBool(System.Type type, System.Reflection.FieldInfo field) => default; // 0x000000018454FA90-0x000000018454FBC0
-		public static lua_CSFunction GetObjFieldGetterByPushString(System.Type type, System.Reflection.FieldInfo field) => default; // 0x0000000185492010-0x0000000185492020
-		public static lua_CSFunction GetObjFieldObjGetter(System.Type type, System.Reflection.FieldInfo field) => default; // 0x00000001855F6D20-0x00000001855F6EB0
-		public static lua_CSFunction GetObjFieldStructGetter(System.Type type, System.Reflection.FieldInfo field) => default;
-		public static lua_CSFunction GetObjFieldEnumGetter(System.Type type, System.Reflection.FieldInfo field) => default;
+			where T : struct;
+		public static lua_CSFunction GetObjFieldGetterByPushBool(System.Type type, System.Reflection.FieldInfo field); // 0x00000001840E3940-0x00000001840E39F0
+		public static lua_CSFunction GetObjFieldGetterByPushString(System.Type type, System.Reflection.FieldInfo field); // 0x00000001840FBC40-0x00000001840FBCF0
+		public static lua_CSFunction GetObjFieldObjGetter(System.Type type, System.Reflection.FieldInfo field); // 0x0000000182F2BEE0-0x0000000182F2BF90
+		public static lua_CSFunction GetObjFieldStructGetter(System.Type type, System.Reflection.FieldInfo field); // 0x0000000183EE0030-0x0000000183EE01C0
+		public static lua_CSFunction GetObjFieldEnumGetter(System.Type type, System.Reflection.FieldInfo field); // 0x000000018429F080-0x000000018429F120
 		public static lua_CSFunction GetObjFieldStructGetter<T>(System.Type type, System.Reflection.FieldInfo field)
-			where T : struct => default;
-		public static lua_CSFunction GetObjFieldObjSetter(System.Type type, System.Reflection.FieldInfo field) => default;
-		public static lua_CSFunction GetObjFieldStructSetter(System.Type type, System.Reflection.FieldInfo field) => default; // 0x0000000185492010-0x0000000185492020
+			where T : struct;
+		public static lua_CSFunction GetObjFieldObjSetter(System.Type type, System.Reflection.FieldInfo field); // 0x0000000182F2AB70-0x0000000182F2AC20
+		public static lua_CSFunction GetObjFieldStructSetter(System.Type type, System.Reflection.FieldInfo field); // 0x0000000183EE01C0-0x0000000183EE0340
 		public static lua_CSFunction GetObjFieldSetterByGetInt32<T>(System.Type type, System.Reflection.FieldInfo field)
-			where T : struct => default; // 0x0000000185B88490-0x0000000185B885C0
+			where T : struct;
 		public static lua_CSFunction GetObjFieldSetterByGetInt64<T>(System.Type type, System.Reflection.FieldInfo field)
-			where T : struct => default; // 0x0000000185492010-0x0000000185492020
-		public static lua_CSFunction GetObjFloatFieldSetterByGetNumber(System.Type type, System.Reflection.FieldInfo field) => default; // 0x000000018C3CA1DC-0x000000018C3CA348
-		public static lua_CSFunction GetObjDoubleFieldSetterByGetNumber(System.Type type, System.Reflection.FieldInfo field) => default; // 0x0000000185492010-0x0000000185492020
-		public static lua_CSFunction GetObjFieldBoolSetter(System.Type type, System.Reflection.FieldInfo field) => default; // 0x00000001853B6BB0-0x00000001853B6CD0
-		public static lua_CSFunction GetObjFieldEnumSetter(System.Type type, System.Reflection.FieldInfo field) => default; // 0x0000000185492010-0x0000000185492020
+			where T : struct;
+		public static lua_CSFunction GetObjFloatFieldSetterByGetNumber(System.Type type, System.Reflection.FieldInfo field); // 0x0000000184221180-0x0000000184221230
+		public static lua_CSFunction GetObjDoubleFieldSetterByGetNumber(System.Type type, System.Reflection.FieldInfo field); // 0x00000001844BB380-0x00000001844BB460
+		public static lua_CSFunction GetObjFieldBoolSetter(System.Type type, System.Reflection.FieldInfo field); // 0x00000001840E39F0-0x00000001840E3AA0
+		public static lua_CSFunction GetObjFieldEnumSetter(System.Type type, System.Reflection.FieldInfo field); // 0x0000000184250A50-0x0000000184250B00
 	}
 
-	public static class RuntimeEnumDic // TypeDefIndex: 56193
+	public static class RuntimeEnumDic // TypeDefIndex: 58833
 	{
 		// Fields
 		private static Dictionary<System.Type, Dictionary<int, object>> s_enumDic; // 0x00
 	
 		// Constructors
-		static RuntimeEnumDic() {} // 0x0000000185F3ED40-0x0000000185F3EDD0
+		static RuntimeEnumDic(); // 0x0000000184D16EF0-0x0000000184D16F80
 	
 		// Methods
-		public static object GetEnumByTypeAndValue(System.Type enumType, int value) => default; // 0x000000018454FDA0-0x00000001845501E0
-		public static void AddEnumValue(System.Type enumType, object enumObj) {} // 0x00000001847B7FB0-0x00000001847B8150
+		public static object GetEnumByTypeAndValue(System.Type enumType, int value); // 0x00000001836FDA70-0x00000001836FDED0
+		public static void AddEnumValue(System.Type enumType, object enumObj); // 0x00000001836FD4A0-0x00000001836FD5D0
 	}
 }
 
 namespace XLua.TemplateEngine
 {
-	public enum TokenType // TypeDefIndex: 56168
+	public enum TokenType // TypeDefIndex: 58808
 	{
 		Code = 0,
 		Eval = 1,
 		Text = 2
 	}
 
-	public class Chunk // TypeDefIndex: 56169
+	public class Chunk // TypeDefIndex: 58809
 	{
 		// Fields
+		[CompilerGenerated]
 		private XLua.TemplateEngine.TokenType _Type_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private string _Text_k__BackingField; // 0x18
 	
 		// Properties
-		public XLua.TemplateEngine.TokenType Type { get; private set; } // 0x0000000181C0BBD0-0x0000000181C0BBE0 0x0000000181378230-0x0000000181378240
-		public string Text { get; private set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
+		public XLua.TemplateEngine.TokenType Type { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
+		public string Text { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
 	
 		// Constructors
-		public Chunk() {} // Dummy constructor
-		public Chunk(XLua.TemplateEngine.TokenType type, string text) {} // 0x000000018646E950-0x000000018646E960
+		public Chunk(XLua.TemplateEngine.TokenType type, string text); // 0x0000000185391D70-0x0000000185391D80
 	}
 
-	internal class TemplateFormatException : Exception // TypeDefIndex: 56170
+	internal class TemplateFormatException : Exception // TypeDefIndex: 58810
 	{
 		// Constructors
-		public TemplateFormatException() {} // Dummy constructor
-		public TemplateFormatException(string message) {} // 0x000000018C3C8234-0x000000018C3C8280
+		public TemplateFormatException(string message); // 0x000000018B8B11A8-0x000000018B8B11F4
 	}
 
-	public class Parser // TypeDefIndex: 56172
+	public class Parser // TypeDefIndex: 58812
 	{
 		// Fields
+		[CompilerGenerated]
 		private static string _RegexString_k__BackingField; // 0x00
 	
 		// Properties
-		public static string RegexString { get; private set; } // 0x000000018C3CB2D8-0x000000018C3CB33C 0x0000000185492010-0x0000000185492020
+		public static string RegexString { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018B8B10BC-0x000000018B8B110C 0x000000018B8B110C-0x000000018B8B1168
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 56171
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58811
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -4215,44 +4243,46 @@ namespace XLua.TemplateEngine
 			public static Func<__f__AnonymousType0<XLua.TemplateEngine.TokenType, string, int>, Chunk> __9__7_4; // 0x28
 	
 			// Constructors
-			static __c() {} // 0x000000018C3C8148-0x000000018C3C8198
-			public __c() {} // 0x000000018C3C8198-0x000000018C3C81F4
+			static __c(); // 0x000000018B8B41A8-0x000000018B8B420C
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal __f__AnonymousType0<XLua.TemplateEngine.TokenType, string, int> _Parse_b__7_0(System.Text.RegularExpressions.Capture p) => default; // 0x000000018C3C80D8-0x000000018C3C8148
-			internal __f__AnonymousType0<XLua.TemplateEngine.TokenType, string, int> _Parse_b__7_1(System.Text.RegularExpressions.Capture p) => default; // 0x000000018C3C74F0-0x000000018C3C7788
-			internal __f__AnonymousType0<XLua.TemplateEngine.TokenType, string, int> _Parse_b__7_2(System.Text.RegularExpressions.Capture p) => default; // 0x000000018C3C7788-0x000000018C3C79C0
-			internal int _Parse_b__7_3(__f__AnonymousType0<XLua.TemplateEngine.TokenType, string, int> p) => default; // 0x000000018C3C79C0-0x000000018C3C80D8
-			internal Chunk _Parse_b__7_4(__f__AnonymousType0<XLua.TemplateEngine.TokenType, string, int> m) => default; // 0x0000000185492010-0x0000000185492020
+			internal __f__AnonymousType0<XLua.TemplateEngine.TokenType, string, int> _Parse_b__7_0(System.Text.RegularExpressions.Capture p); // 0x000000018B8B1A8C-0x000000018B8B1B24
+			internal __f__AnonymousType0<XLua.TemplateEngine.TokenType, string, int> _Parse_b__7_1(System.Text.RegularExpressions.Capture p); // 0x000000018B8B1B24-0x000000018B8B1BE4
+			internal __f__AnonymousType0<XLua.TemplateEngine.TokenType, string, int> _Parse_b__7_2(System.Text.RegularExpressions.Capture p); // 0x000000018B8B1BE4-0x000000018B8B1C80
+			internal int _Parse_b__7_3(__f__AnonymousType0<XLua.TemplateEngine.TokenType, string, int> p); // 0x000000018B8B1C80-0x000000018B8B1CBC
+			internal Chunk _Parse_b__7_4(__f__AnonymousType0<XLua.TemplateEngine.TokenType, string, int> m); // 0x000000018B8B1CBC-0x000000018B8B1D44
 		}
 	
 		// Constructors
-		static Parser() {} // 0x000000018C3C8B18-0x000000018C3C8BB0
-		public Parser() {} // 0x000000018C3C8D48-0x000000018C3C8DD0
+		static Parser(); // 0x000000018B8B104C-0x000000018B8B10BC
+		public Parser(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		private static string EscapeString(string input) => default; // 0x000000018C3C8BB0-0x000000018C3C8C70
-		private static string GetRegexString() => default; // 0x000000018C3C8C70-0x000000018C3C8D0C
-		public static List<Chunk> Parse(string snippet) => default; // 0x000000018C3C8D0C-0x000000018C3C8D48
+		private static string EscapeString(string input); // 0x000000018B8B0464-0x000000018B8B06FC
+		private static string GetRegexString(); // 0x000000018B8B06FC-0x000000018B8B0934
+		public static List<Chunk> Parse(string snippet); // 0x000000018B8B0934-0x000000018B8B104C
 	}
 
-	public class LuaTemplate // TypeDefIndex: 56173
+	public class LuaTemplate // TypeDefIndex: 58813
 	{
 		// Fields
 		private static lua_CSFunction templateCompileFunction; // 0x00
 		private static lua_CSFunction templateExecuteFunction; // 0x08
 	
 		// Constructors
-		public LuaTemplate() {} // 0x0000000185492010-0x0000000185492020
-		static LuaTemplate() {} // 0x0000000185EB5410-0x0000000185EB5500
+		public LuaTemplate(); // 0x00000001841E1670-0x00000001841E1680
+		static LuaTemplate(); // 0x0000000184CA1250-0x0000000184CA1340
 	
 		// Methods
-		public static string ComposeCode(List<Chunk> chunks) => default; // 0x000000018C3C6794-0x000000018C3C6A1C
-		public static LuaFunction Compile(LuaEnv luaenv, string snippet) => default; // 0x000000018C3C6534-0x000000018C3C65D8
-		public static string Execute(LuaFunction compiledTemplate, LuaTable parameters) => default; // 0x000000018C3C6AF0-0x000000018C3C6B80
-		public static string Execute(LuaFunction compiledTemplate) => default; // 0x000000018C3C6B80-0x000000018C3C6BF8
-		public static int Compile(IntPtr L) => default; // 0x000000018C3C65D8-0x000000018C3C6794
-		public static int Execute(IntPtr L) => default; // 0x000000018C3C6A1C-0x000000018C3C6AF0
-		public static void OpenLib(IntPtr L) {} // 0x0000000184C33040-0x0000000184C33170
+		public static string ComposeCode(List<Chunk> chunks); // 0x000000018B8AF818-0x000000018B8AFAA0
+		public static LuaFunction Compile(LuaEnv luaenv, string snippet); // 0x000000018B8AF5B8-0x000000018B8AF65C
+		public static string Execute(LuaFunction compiledTemplate, LuaTable parameters); // 0x000000018B8AFB74-0x000000018B8AFC04
+		public static string Execute(LuaFunction compiledTemplate); // 0x000000018B8AFC04-0x000000018B8AFC7C
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int Compile(IntPtr L); // 0x000000018B8AF65C-0x000000018B8AF818
+		[XLua.MonoPInvokeCallback(typeof(lua_CSFunction))]
+		public static int Execute(IntPtr L); // 0x000000018B8AFAA0-0x000000018B8AFB74
+		public static void OpenLib(IntPtr L); // 0x0000000183600B80-0x0000000183600CB0
 	}
 }

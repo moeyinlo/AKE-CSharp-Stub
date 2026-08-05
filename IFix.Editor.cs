@@ -4,13 +4,53 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// Image 157: IFix.Editor.dll - Assembly: IFix.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61311-61317
+// Image 160: IFix.Editor.dll - Assembly: IFix.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63957-63963
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Beyond.SourceGenerator
 {
-	internal class DataNAttribute : Attribute // TypeDefIndex: 61313
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 63959
+	{
+		// Fields
+		public LayoutKind layoutKind; // 0x10
+		public bool isTag; // 0x14
+	
+		// Constructors
+		public ECSComponentAttribute(); // 0x00000001841E1670-0x00000001841E1680
+	}
+
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 63960
+	{
+		// Constructors
+		public CameraControlConfigAttribute(); // 0x00000001841E1670-0x00000001841E1680
+	}
+
+	internal static class AnimatorBlackboardUtility // TypeDefIndex: 63961
+	{
+		// Fields
+		internal static bool s_enableFastPathBuffer; // 0x00
+	
+		// Methods
+		internal static void ClearAndEnsureDictionaryCapacity<TKey, TValue>(ref Dictionary<TKey, TValue> dict, int capacity);
+	}
+
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 63962
+	{
+		// Constructors
+		public AnimatorBlackboardAttribute(); // 0x00000001841E1670-0x00000001841E1680
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class DataNAttribute : Attribute // TypeDefIndex: 63963
 	{
 		// Fields
 		public int capacity; // 0x10
@@ -18,46 +58,16 @@ namespace Beyond.SourceGenerator
 		public bool ring; // 0x18
 	
 		// Constructors
-		public DataNAttribute() {} // 0x0000000185492010-0x0000000185492020
-	}
-
-	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 61314
-	{
-		// Constructors
-		public CameraControlConfigAttribute() {} // 0x0000000185492010-0x0000000185492020
-	}
-
-	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 61315
-	{
-		// Fields
-		public LayoutKind layoutKind; // 0x10
-		public bool isTag; // 0x14
-	
-		// Constructors
-		public ECSComponentAttribute() {} // 0x0000000185492010-0x0000000185492020
-	}
-
-	internal static class AnimatorBlackboardUtility // TypeDefIndex: 61316
-	{
-		// Fields
-		internal static bool s_enableFastPathBuffer; // 0x00
-	
-		// Methods
-		internal static void ClearAndEnsureDictionaryCapacity<TKey, TValue>(ref Dictionary<TKey, TValue> dict, int capacity) {}
-	}
-
-	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 61317
-	{
-		// Constructors
-		public AnimatorBlackboardAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public DataNAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace HG.Rendering.Runtime
 {
-	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 61312
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 63958
 	{
 		// Constructors
-		public HGConstantBufferLayoutAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public HGConstantBufferLayoutAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }

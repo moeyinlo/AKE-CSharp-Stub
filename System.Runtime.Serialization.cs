@@ -3,24 +3,45 @@
  */
 
 using System;
+using System.Diagnostics;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
-// Image 154: System.Runtime.Serialization.dll - Assembly: System.Runtime.Serialization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61292-61296
+// Image 156: System.Runtime.Serialization.dll - Assembly: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e - Types 63931-63935
+[assembly: AssemblyCompany("Mono development team")]
+[assembly: AssemblyCopyright("(c) Various Mono authors")]
+[assembly: AssemblyDefaultAlias("System.Runtime.Serialization.dll")]
+[assembly: AssemblyDelaySign(true)]
+[assembly: AssemblyDescription("System.Runtime.Serialization.dll")]
+[assembly: AssemblyFileVersion("4.0.30319.17020")]
+[assembly: AssemblyInformationalVersion("4.0.30319.17020")]
+[assembly: AssemblyKeyFile("../silverlight.pub")]
+[assembly: AssemblyProduct("Mono Common Language Infrastructure")]
+[assembly: AssemblyTitle("System.Runtime.Serialization.dll")]
+[assembly: CLSCompliant(true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: ComVisible(false)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: NeutralResourcesLanguage("en-US")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: SatelliteContractVersion("4.0.0.0")]
 
 namespace System.Runtime.Serialization
 {
-	public sealed class DataContractAttribute : Attribute // TypeDefIndex: 61293
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum, Inherited = false, AllowMultiple = false)]
+	public sealed class DataContractAttribute : Attribute // TypeDefIndex: 63932
 	{
 		// Fields
 		private bool isReference; // 0x10
 	
 		// Properties
-		public bool IsReference { get => default; } // 0x0000000181C2FD60-0x0000000181C2FD70 
-	
-		// Constructors
-		public DataContractAttribute() {} // Dummy constructor
+		public bool IsReference { get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
 	}
 
-	public sealed class DataMemberAttribute : Attribute // TypeDefIndex: 61294
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, Inherited = false, AllowMultiple = false)]
+	public sealed class DataMemberAttribute : Attribute // TypeDefIndex: 63933
 	{
 		// Fields
 		private string name; // 0x10
@@ -29,30 +50,27 @@ namespace System.Runtime.Serialization
 		private bool emitDefaultValue; // 0x1D
 	
 		// Properties
-		public string Name { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public int Order { get => default; } // 0x00000001813AE560-0x00000001813AE570 
-		public bool IsRequired { get => default; } // 0x00000001814088D0-0x00000001814088E0 
-		public bool EmitDefaultValue { get => default; } // 0x0000000185FB2240-0x0000000185FB2250 
-	
-		// Constructors
-		public DataMemberAttribute() {} // Dummy constructor
+		public string Name { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public int Order { get; } // 0x00000001811EF5B0-0x00000001811EF5C0 
+		public bool IsRequired { get; } // 0x0000000184D86150-0x0000000184D86160 
+		public bool EmitDefaultValue { get; } // 0x0000000184D88310-0x0000000184D88320 
 	}
 
-	public sealed class EnumMemberAttribute : Attribute // TypeDefIndex: 61295
+	[AttributeUsage(AttributeTargets.Field, Inherited = false, AllowMultiple = false)]
+	public sealed class EnumMemberAttribute : Attribute // TypeDefIndex: 63934
 	{
 		// Fields
 		private string value; // 0x10
 	
 		// Properties
-		public string Value { get => default; } // 0x000000018346D130-0x000000018346D140 
+		public string Value { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
 	
 		// Constructors
-		public EnumMemberAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public EnumMemberAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public sealed class IgnoreDataMemberAttribute : Attribute // TypeDefIndex: 61296
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, Inherited = false, AllowMultiple = false)]
+	public sealed class IgnoreDataMemberAttribute : Attribute // TypeDefIndex: 63935
 	{
-		// Constructors
-		public IgnoreDataMemberAttribute() {} // Dummy constructor
 	}
 }

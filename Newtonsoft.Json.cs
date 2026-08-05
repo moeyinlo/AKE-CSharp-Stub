@@ -17,117 +17,144 @@ using System.IO;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Reflection;
+using System.Resources;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
+using Microsoft.CodeAnalysis;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Bson;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json.Utilities;
 
-// Image 23: Newtonsoft.Json.dll - Assembly: Newtonsoft.Json, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 52573-52881
+// Image 24: Newtonsoft.Json.dll - Assembly: Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed - Types 55255-55563
+[assembly: AssemblyCompany("Newtonsoft")]
+[assembly: AssemblyConfiguration("UnityAOT")]
+[assembly: AssemblyCopyright("Copyright \u00A9 James Newton-King 2008")]
+[assembly: AssemblyDelaySign(true)]
+[assembly: AssemblyDescription("Json.NET is a popular high-performance JSON framework for .NET")]
+[assembly: AssemblyFileVersion("13.0.2")]
+[assembly: AssemblyInformationalVersion("13.0.2+cf0a246981c33ae00121dfe58b850aefeac1aac0")]
+[assembly: AssemblyKeyFile("../IdentityPublicKey.snk")]
+[assembly: AssemblyMetadata("RepositoryUrl", "https://github.com/sousapedro/Newtonsoft.Json-for-Unity.git")]
+[assembly: AssemblyProduct("Json.NET")]
+[assembly: AssemblyTitle("Json.NET .NET Standard 2.0")]
+[assembly: AssemblyTrademark("")]
+[assembly: CLSCompliant(true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: ComVisible(false)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: Guid("9ca358aa-317b-4925-8ada-4a29e943a363")]
+[assembly: InternalsVisibleTo("Newtonsoft.Json.Schema, PublicKey=0024000004800000940000000602000000240000525341310004000001000100f561df277c6c0b497d629032b410cdcf286e537c054724f7ffa0164345f62b3e642029d7a80cc351918955328c4adc8a048823ef90b0cf38ea7db0d729caf2b633c3babe08b0310198c1081995c19029bc675193744eab9d7345b8a67258ec17d112cebdbbb2a281487dceeafb9d83aa930f32103fbe1d2911425bc5744002c7")]
+[assembly: InternalsVisibleTo("Newtonsoft.Json.Tests, PublicKey=0024000004800000940000000602000000240000525341310004000001000100f561df277c6c0b497d629032b410cdcf286e537c054724f7ffa0164345f62b3e642029d7a80cc351918955328c4adc8a048823ef90b0cf38ea7db0d729caf2b633c3babe08b0310198c1081995c19029bc675193744eab9d7345b8a67258ec17d112cebdbbb2a281487dceeafb9d83aa930f32103fbe1d2911425bc5744002c7")]
+[assembly: InternalsVisibleTo("Newtonsoft.Json.Dynamic, PublicKey=0024000004800000940000000602000000240000525341310004000001000100cbd8d53b9d7de30f1f1278f636ec462cf9c254991291e66ebb157a885638a517887633b898ccbcf0d5c5ff7be85a6abe9e765d0ac7cd33c68dac67e7e64530e8222101109f154ab14a941c490ac155cd1d4fcba0fabb49016b4ef28593b015cab5937da31172f03f67d09edda404b88a60023f062ae71d0b2e4438b74cc11dc9")]
+[assembly: NeutralResourcesLanguage("en-US")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: TargetFramework(".NETStandard,Version=v2.0", FrameworkDisplayName = "")]
 
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 52881
+[CompilerGenerated]
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 55563
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_44 _0698228BF899CAEAB9A53E5E6C7099E846C44F56432050D234DDF03AD772F139; // 0x00 // Static value (base64): DAAAAAYAAAAHAAAACAAAAAUAAAANAAAACQAAAA4AAAAPAAAAEQAAABAAAAA= - Metadata: 0x02076A84
-	internal static readonly __StaticArrayInitTypeSize_10 _19AE20A57B073E3E8DD45C6F6A4E9AB1076EA3EBFFF28E4AEB58B411472CF994; // 0x2C // Static value (base64): IgAnADwAPgAmAA== - Metadata: 0x02076AB4
-	internal static readonly __StaticArrayInitTypeSize_40 _223D6CA32241C349E421A0164F2341E20CC5B65D5A04AA021CFF71D623895570; // 0x36 // Static value (base64): AgAAAAIAAAAJAAAACQAAAAIAAAACAAAAAgAAAAIAAAAJAAAACQAAAA== - Metadata: 0x02076AC4
-	internal static readonly __StaticArrayInitTypeSize_20 _33350F5DA385CE1B8749AEC68BA060CD54EE981968522B5EDF62178537A1FEEE; // 0x5E // Static value (base64): BgAAAAcAAAAIAAAABQAAAA0AAAA= - Metadata: 0x02076AF4
-	internal static readonly __StaticArrayInitTypeSize_40 _38809B9974198671140931F729415F3FD75DF68A6398E3486AE3B58554329A63; // 0x72 // Static value (base64): BAAAAAQAAAAJAAAACQAAAAQAAAAEAAAABAAAAAQAAAAJAAAACQAAAA== - Metadata: 0x02076B0C
-	internal static readonly __StaticArrayInitTypeSize_28 _499E4F5C84E20C7347E10100E0EC90C1945EA21C7C80809E4F7F474179B39DF6; // 0x9A // Static value (base64): /////woAAABkAAAA6AMAABAnAACghgEAQEIPAA== - Metadata: 0x02076B3C
-	internal static readonly __StaticArrayInitTypeSize_16 _4EDE3546F1189E450DF4D4A2739BE90BEB3B1708B3B9F406B02E0773A92A10FF; // 0xB6 // Static value (base64): CAAAAAUAAAANAAAAEQAAAA== - Metadata: 0x02076B5C
-	internal static readonly __StaticArrayInitTypeSize_52 _5857EE4CE98BFABBD62B385C1098507DD0052FF3951043AAD6A1DABD495F18AA; // 0xC6 // Static value (base64): AAAAAB8AAAA7AAAAWgAAAHgAAACXAAAAtQAAANQAAADzAAAAEQEAADABAABOAQAAbQEAAA== - Metadata: 0x02076B74
-	internal static readonly __StaticArrayInitTypeSize_28 _5ADB7CA81690556AB2A3201A849839FA3562604BB469382C7D6D78AB426283E2; // 0xFA // Static value (base64): BgAAAAcAAAAIAAAABQAAAA0AAAAJAAAADgAAAA== - Metadata: 0x02076BAC
-	internal static readonly __StaticArrayInitTypeSize_24 _5DDF815AC046E7D4603FA586D1BDE42118AD4FE9875D64F716BC7D2740EE52C9; // 0x116 // Static value (base64): BgAAAAcAAAAIAAAABQAAAA0AAAAJAAAA - Metadata: 0x02076BCC
-	internal static readonly __StaticArrayInitTypeSize_16 _605A3F93AE7A97E00C156F977E942027EA532E263A5B440A4219984F803FDD04; // 0x12E // Static value (base64): DAAAAAgAAAAFAAAADQAAAA== - Metadata: 0x02076BEC
-	internal static readonly __StaticArrayInitTypeSize_36 _7367A65185E4F747AA29364AB199D01646A010A62129A6BA2E35E929D7294D62; // 0x13E // Static value (base64): LgAgACcALwAiAFsAXQAoACkACQAKAA0ADAAIAFwAhQAoICkg - Metadata: 0x02076C04
-	internal static readonly __StaticArrayInitTypeSize_40 _7439A4C9E30AC42BCC55AD1A2B617E29E7129B6DDAC79C886944B17819262CC1; // 0x162 // Static value (base64): BgAAAAYAAAAJAAAACQAAAAYAAAAGAAAABgAAAAYAAAAJAAAACQAAAA== - Metadata: 0x02076C2C
-	internal static readonly __StaticArrayInitTypeSize_40 _990F3F1286CC3928725497B2745CFF7BC7C9803B4EB8271611540BA6BF6654B5; // 0x18A // Static value (base64): AAAAAAEAAAACAAAAAwAAAAQAAAAFAAAABwAAAAcAAAAJAAAACQAAAA== - Metadata: 0x02076C5C
-	internal static readonly __StaticArrayInitTypeSize_16 A8636D08B42D058EFC34703DD37B6468FCE56138DF242B862C3F1CA138CB3B89; // 0x1B2 // Static value (base64): CAAAAAUAAAANAAAAEAAAAA== - Metadata: 0x02076C8C
-	internal static readonly __StaticArrayInitTypeSize_20 B1D1BCD1D06B4A563944BE3C67D51F63DF23702E5BE760D7897C6AD1F51C6122; // 0x1C2 // Static value (base64): CAAAAAUAAAANAAAADwAAAA4AAAA= - Metadata: 0x02076CA4
-	internal static readonly __StaticArrayInitTypeSize_20 CAA07D7573596B3356BD202533F0EAFDD05309981F270193A99E300D57587326; // 0x1D6 // Static value (base64): DgAAAAgAAAAFAAAADQAAAAYAAAA= - Metadata: 0x02076CBC
-	internal static readonly __StaticArrayInitTypeSize_40 D4B3B8EBA0589FC38724A0D318B46104B07BC528744109ED69ED71604B7EEC1A; // 0x1EA // Static value (base64): AQAAAAkAAAABAAAAAQAAAAkAAAAJAAAACQAAAAkAAAAJAAAACQAAAA== - Metadata: 0x02076CD4
-	internal static readonly __StaticArrayInitTypeSize_40 F6EDC1733B068F457C63E03BB041B9AB6BFAD5CD7673D3E0841968D3FBCB12C7; // 0x212 // Static value (base64): CQAAAAkAAAAJAAAACQAAAAkAAAAJAAAACQAAAAkAAAAJAAAACQAAAA== - Metadata: 0x02076D04
-	internal static readonly __StaticArrayInitTypeSize_52 FADB218011E7702BB9575D0C32A685DA10B5C72EB809BD9A955DB1C76E4D8315; // 0x23A // Static value (base64): AAAAAB8AAAA8AAAAWwAAAHkAAACYAAAAtgAAANUAAAD0AAAAEgEAADEBAABPAQAAbgEAAA== - Metadata: 0x02076D34
-	internal static readonly __StaticArrayInitTypeSize_40 FCA56C548368F7065472C8C8EE4D63921B4F16BB51181EC202A0C252D5209E6A; // 0x26E // Static value (base64): AAAAAAMAAAAJAAAACQAAAAUAAAAFAAAABwAAAAcAAAAJAAAACQAAAA== - Metadata: 0x02076D6C
+	internal static readonly __StaticArrayInitTypeSize_44 _0698228BF899CAEAB9A53E5E6C7099E846C44F56432050D234DDF03AD772F139; // 0x00 // Static value (base64): DAAAAAYAAAAHAAAACAAAAAUAAAANAAAACQAAAA4AAAAPAAAAEQAAABAAAAA= - Metadata: 0x02346D7C
+	internal static readonly __StaticArrayInitTypeSize_10 _19AE20A57B073E3E8DD45C6F6A4E9AB1076EA3EBFFF28E4AEB58B411472CF994; // 0x2C // Static value (base64): IgAnADwAPgAmAA== - Metadata: 0x02346DAC
+	internal static readonly __StaticArrayInitTypeSize_40 _223D6CA32241C349E421A0164F2341E20CC5B65D5A04AA021CFF71D623895570; // 0x36 // Static value (base64): AgAAAAIAAAAJAAAACQAAAAIAAAACAAAAAgAAAAIAAAAJAAAACQAAAA== - Metadata: 0x02346DBC
+	internal static readonly __StaticArrayInitTypeSize_20 _33350F5DA385CE1B8749AEC68BA060CD54EE981968522B5EDF62178537A1FEEE; // 0x5E // Static value (base64): BgAAAAcAAAAIAAAABQAAAA0AAAA= - Metadata: 0x02346DEC
+	internal static readonly __StaticArrayInitTypeSize_40 _38809B9974198671140931F729415F3FD75DF68A6398E3486AE3B58554329A63; // 0x72 // Static value (base64): BAAAAAQAAAAJAAAACQAAAAQAAAAEAAAABAAAAAQAAAAJAAAACQAAAA== - Metadata: 0x02346E04
+	internal static readonly __StaticArrayInitTypeSize_28 _499E4F5C84E20C7347E10100E0EC90C1945EA21C7C80809E4F7F474179B39DF6; // 0x9A // Static value (base64): /////woAAABkAAAA6AMAABAnAACghgEAQEIPAA== - Metadata: 0x02346E34
+	internal static readonly __StaticArrayInitTypeSize_16 _4EDE3546F1189E450DF4D4A2739BE90BEB3B1708B3B9F406B02E0773A92A10FF; // 0xB6 // Static value (base64): CAAAAAUAAAANAAAAEQAAAA== - Metadata: 0x02346E54
+	internal static readonly __StaticArrayInitTypeSize_52 _5857EE4CE98BFABBD62B385C1098507DD0052FF3951043AAD6A1DABD495F18AA; // 0xC6 // Static value (base64): AAAAAB8AAAA7AAAAWgAAAHgAAACXAAAAtQAAANQAAADzAAAAEQEAADABAABOAQAAbQEAAA== - Metadata: 0x02346E6C
+	internal static readonly __StaticArrayInitTypeSize_28 _5ADB7CA81690556AB2A3201A849839FA3562604BB469382C7D6D78AB426283E2; // 0xFA // Static value (base64): BgAAAAcAAAAIAAAABQAAAA0AAAAJAAAADgAAAA== - Metadata: 0x02346EA4
+	internal static readonly __StaticArrayInitTypeSize_24 _5DDF815AC046E7D4603FA586D1BDE42118AD4FE9875D64F716BC7D2740EE52C9; // 0x116 // Static value (base64): BgAAAAcAAAAIAAAABQAAAA0AAAAJAAAA - Metadata: 0x02346EC4
+	internal static readonly __StaticArrayInitTypeSize_16 _605A3F93AE7A97E00C156F977E942027EA532E263A5B440A4219984F803FDD04; // 0x12E // Static value (base64): DAAAAAgAAAAFAAAADQAAAA== - Metadata: 0x02346EE4
+	internal static readonly __StaticArrayInitTypeSize_36 _7367A65185E4F747AA29364AB199D01646A010A62129A6BA2E35E929D7294D62; // 0x13E // Static value (base64): LgAgACcALwAiAFsAXQAoACkACQAKAA0ADAAIAFwAhQAoICkg - Metadata: 0x02346EFC
+	internal static readonly __StaticArrayInitTypeSize_40 _7439A4C9E30AC42BCC55AD1A2B617E29E7129B6DDAC79C886944B17819262CC1; // 0x162 // Static value (base64): BgAAAAYAAAAJAAAACQAAAAYAAAAGAAAABgAAAAYAAAAJAAAACQAAAA== - Metadata: 0x02346F24
+	internal static readonly __StaticArrayInitTypeSize_40 _990F3F1286CC3928725497B2745CFF7BC7C9803B4EB8271611540BA6BF6654B5; // 0x18A // Static value (base64): AAAAAAEAAAACAAAAAwAAAAQAAAAFAAAABwAAAAcAAAAJAAAACQAAAA== - Metadata: 0x02346F54
+	internal static readonly __StaticArrayInitTypeSize_16 A8636D08B42D058EFC34703DD37B6468FCE56138DF242B862C3F1CA138CB3B89; // 0x1B2 // Static value (base64): CAAAAAUAAAANAAAAEAAAAA== - Metadata: 0x02346F84
+	internal static readonly __StaticArrayInitTypeSize_20 B1D1BCD1D06B4A563944BE3C67D51F63DF23702E5BE760D7897C6AD1F51C6122; // 0x1C2 // Static value (base64): CAAAAAUAAAANAAAADwAAAA4AAAA= - Metadata: 0x02346F9C
+	internal static readonly __StaticArrayInitTypeSize_20 CAA07D7573596B3356BD202533F0EAFDD05309981F270193A99E300D57587326; // 0x1D6 // Static value (base64): DgAAAAgAAAAFAAAADQAAAAYAAAA= - Metadata: 0x02346FB4
+	internal static readonly __StaticArrayInitTypeSize_40 D4B3B8EBA0589FC38724A0D318B46104B07BC528744109ED69ED71604B7EEC1A; // 0x1EA // Static value (base64): AQAAAAkAAAABAAAAAQAAAAkAAAAJAAAACQAAAAkAAAAJAAAACQAAAA== - Metadata: 0x02346FCC
+	internal static readonly __StaticArrayInitTypeSize_40 F6EDC1733B068F457C63E03BB041B9AB6BFAD5CD7673D3E0841968D3FBCB12C7; // 0x212 // Static value (base64): CQAAAAkAAAAJAAAACQAAAAkAAAAJAAAACQAAAAkAAAAJAAAACQAAAA== - Metadata: 0x02346FFC
+	internal static readonly __StaticArrayInitTypeSize_52 FADB218011E7702BB9575D0C32A685DA10B5C72EB809BD9A955DB1C76E4D8315; // 0x23A // Static value (base64): AAAAAB8AAAA8AAAAWwAAAHkAAACYAAAAtgAAANUAAAD0AAAAEgEAADEBAABPAQAAbgEAAA== - Metadata: 0x0234702C
+	internal static readonly __StaticArrayInitTypeSize_40 FCA56C548368F7065472C8C8EE4D63921B4F16BB51181EC202A0C252D5209E6A; // 0x26E // Static value (base64): AAAAAAMAAAAJAAAACQAAAAUAAAAFAAAABwAAAAcAAAAJAAAACQAAAA== - Metadata: 0x02347064
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_10 // TypeDefIndex: 52872
+	private struct __StaticArrayInitTypeSize_10 // TypeDefIndex: 55554
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_16 // TypeDefIndex: 52873
+	private struct __StaticArrayInitTypeSize_16 // TypeDefIndex: 55555
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_20 // TypeDefIndex: 52874
+	private struct __StaticArrayInitTypeSize_20 // TypeDefIndex: 55556
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_24 // TypeDefIndex: 52875
+	private struct __StaticArrayInitTypeSize_24 // TypeDefIndex: 55557
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_28 // TypeDefIndex: 52876
+	private struct __StaticArrayInitTypeSize_28 // TypeDefIndex: 55558
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_36 // TypeDefIndex: 52877
+	private struct __StaticArrayInitTypeSize_36 // TypeDefIndex: 55559
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_40 // TypeDefIndex: 52878
+	private struct __StaticArrayInitTypeSize_40 // TypeDefIndex: 55560
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_44 // TypeDefIndex: 52879
+	private struct __StaticArrayInitTypeSize_44 // TypeDefIndex: 55561
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_52 // TypeDefIndex: 52880
+	private struct __StaticArrayInitTypeSize_52 // TypeDefIndex: 55562
 	{
 	}
-
-	// Constructors
-	public _PrivateImplementationDetails_() {} // Dummy constructor
 }
 
 namespace Microsoft.CodeAnalysis
 {
-	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 52574
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 55256
 	{
 		// Constructors
-		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public EmbeddedAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace Newtonsoft.Json
 {
-	public enum ConstructorHandling // TypeDefIndex: 52580
+	public enum ConstructorHandling // TypeDefIndex: 55262
 	{
 		Default = 0,
 		AllowNonPublicDefaultConstructor = 1
 	}
 
-	public enum DateFormatHandling // TypeDefIndex: 52581
+	public enum DateFormatHandling // TypeDefIndex: 55263
 	{
 		IsoDateFormat = 0,
 		MicrosoftDateFormat = 1
 	}
 
-	public enum DateParseHandling // TypeDefIndex: 52582
+	public enum DateParseHandling // TypeDefIndex: 55264
 	{
 		None = 0,
 		DateTime = 1,
 		DateTimeOffset = 2
 	}
 
-	public enum DateTimeZoneHandling // TypeDefIndex: 52583
+	public enum DateTimeZoneHandling // TypeDefIndex: 55265
 	{
 		Local = 0,
 		Utc = 1,
@@ -135,7 +162,9 @@ namespace Newtonsoft.Json
 		RoundtripKind = 3
 	}
 
-	public class DefaultJsonNameTable : JsonNameTable // TypeDefIndex: 52585
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class DefaultJsonNameTable : JsonNameTable // TypeDefIndex: 55267
 	{
 		// Fields
 		private static readonly int HashCodeRandomizer; // 0x00
@@ -144,7 +173,8 @@ namespace Newtonsoft.Json
 		private int _mask; // 0x20
 	
 		// Nested types
-		private class Entry // TypeDefIndex: 52584
+		[Nullable(0)]
+		private class Entry // TypeDefIndex: 55266
 		{
 			// Fields
 			internal readonly string Value; // 0x10
@@ -152,23 +182,23 @@ namespace Newtonsoft.Json
 			internal Entry Next; // 0x20
 	
 			// Constructors
-			public Entry() {} // Dummy constructor
-			internal Entry(string value, int hashCode, Entry next) {} // 0x0000000185FA13B0-0x0000000185FA13F0
+			internal Entry(string value, int hashCode, Entry next); // 0x00000001832B2C30-0x00000001832B2C60
 		}
 	
 		// Constructors
-		static DefaultJsonNameTable() {} // 0x00000001857FE020-0x00000001857FE080
-		public DefaultJsonNameTable() {} // 0x0000000184023C40-0x0000000184023E30
+		static DefaultJsonNameTable(); // 0x0000000184D75A00-0x0000000184D75A40
+		public DefaultJsonNameTable(); // 0x000000018464D570-0x000000018464D5D0
 	
 		// Methods
-		public override string Get(char[] key, int start, int length) => default; // 0x000000018407FA20-0x000000018407FB90
-		public string Add(string key) => default; // 0x0000000184E6FBC0-0x0000000184E6FCD0
-		private string AddEntry(string str, int hashCode) => default; // 0x0000000184E6FD00-0x0000000184E6FE50
-		private void Grow() {} // 0x0000000184023BC0-0x0000000184023C40
-		private static bool TextEquals(string str1, char[] str2, int str2Start, int str2Length) => default; // 0x0000000184E6FCD0-0x0000000184E6FD00
+		public override string Get(char[] key, int start, int length); // 0x0000000182F06660-0x0000000182F06810
+		public string Add(string key); // 0x00000001832B3E00-0x00000001832B3F40
+		private string AddEntry(string str, int hashCode); // 0x00000001832B2C60-0x00000001832B2D50
+		private void Grow(); // 0x00000001832B3210-0x00000001832B3340
+		private static bool TextEquals(string str1, char[] str2, int str2Start, int str2Length); // 0x0000000182F065E0-0x0000000182F06660
 	}
 
-	public enum DefaultValueHandling // TypeDefIndex: 52586
+	[Flags]
+	public enum DefaultValueHandling // TypeDefIndex: 55268
 	{
 		Include = 0,
 		Ignore = 1,
@@ -176,33 +206,34 @@ namespace Newtonsoft.Json
 		IgnoreAndPopulate = 3
 	}
 
-	public enum FloatFormatHandling // TypeDefIndex: 52587
+	public enum FloatFormatHandling // TypeDefIndex: 55269
 	{
 		String = 0,
 		Symbol = 1,
 		DefaultValue = 2
 	}
 
-	public enum FloatParseHandling // TypeDefIndex: 52588
+	public enum FloatParseHandling // TypeDefIndex: 55270
 	{
 		Double = 0,
 		Decimal = 1
 	}
 
-	public enum Formatting // TypeDefIndex: 52589
+	public enum Formatting // TypeDefIndex: 55271
 	{
 		None = 0,
 		Indented = 1
 	}
 
-	public interface IArrayPool<T> // TypeDefIndex: 52590
+	[NullableContext(1)]
+	public interface IArrayPool<T> // TypeDefIndex: 55272
 	{
 		// Methods
 		T[] Rent(int minimumLength);
-		void Return(T[] array);
+		void Return([Nullable(new byte[2] {2, 1 })] T[] array);
 	}
 
-	public interface IJsonLineInfo // TypeDefIndex: 52591
+	public interface IJsonLineInfo // TypeDefIndex: 55273
 	{
 		// Properties
 		int LineNumber { get; }
@@ -212,45 +243,56 @@ namespace Newtonsoft.Json
 		bool HasLineInfo();
 	}
 
-	public sealed class JsonArrayAttribute : JsonContainerAttribute // TypeDefIndex: 52592
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = false)]
+	public sealed class JsonArrayAttribute : JsonContainerAttribute // TypeDefIndex: 55274
 	{
-		// Constructors
-		public JsonArrayAttribute() {} // Dummy constructor
 	}
 
-	public sealed class JsonConstructorAttribute : Attribute // TypeDefIndex: 52593
+	[AttributeUsage(AttributeTargets.Constructor, AllowMultiple = false)]
+	public sealed class JsonConstructorAttribute : Attribute // TypeDefIndex: 55275
 	{
 		// Constructors
-		public JsonConstructorAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public JsonConstructorAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public abstract class JsonContainerAttribute : Attribute // TypeDefIndex: 52594
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = false)]
+	[Nullable(0)]
+	[NullableContext(2)]
+	public abstract class JsonContainerAttribute : Attribute // TypeDefIndex: 55276
 	{
 		// Fields
+		[CompilerGenerated]
 		private System.Type _ItemConverterType_k__BackingField; // 0x10
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private object[] _ItemConverterParameters_k__BackingField; // 0x18
+		[CompilerGenerated]
 		private NamingStrategy _NamingStrategyInstance_k__BackingField; // 0x20
 		internal bool? _isReference; // 0x28
 		internal bool? _itemIsReference; // 0x2A
 		internal ReferenceLoopHandling? _itemReferenceLoopHandling; // 0x2C
 		internal TypeNameHandling? _itemTypeNameHandling; // 0x34
 		private System.Type _namingStrategyType; // 0x40
+		[Nullable(new byte[2] {2, 1 })]
 		private object[] _namingStrategyParameters; // 0x48
 	
 		// Properties
-		public System.Type ItemConverterType { get; } // 0x000000018346D130-0x000000018346D140 
-		public object[] ItemConverterParameters { get; } // 0x0000000181377E40-0x0000000181377E50 
-		public System.Type NamingStrategyType { get; } // 0x00000001813FF010-0x00000001813FF020 
-		public object[] NamingStrategyParameters { get; } // 0x00000001813ECF20-0x00000001813ECF30 
-		internal NamingStrategy NamingStrategyInstance { get; set; } // 0x00000001813B31A0-0x00000001813B31B0 0x000000018646EE40-0x000000018646EE50
-	
-		// Constructors
-		protected JsonContainerAttribute() {} // Dummy constructor
+		public System.Type ItemConverterType { [CompilerGenerated] get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		[Nullable(new byte[2] {2, 1 })]
+		public object[] ItemConverterParameters { [CompilerGenerated] get; } // 0x000000018385B100-0x000000018385B110 
+		public System.Type NamingStrategyType { get; } // 0x0000000184D85A60-0x0000000184D85A70 
+		[Nullable(new byte[2] {2, 1 })]
+		public object[] NamingStrategyParameters { get; } // 0x0000000184D86200-0x0000000184D86210 
+		internal NamingStrategy NamingStrategyInstance { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
 	}
 
-	public static class JsonConvert // TypeDefIndex: 52595
+	[Nullable(0)]
+	[NullableContext(1)]
+	public static class JsonConvert // TypeDefIndex: 55277
 	{
 		// Fields
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private static Func<JsonSerializerSettings> _DefaultSettings_k__BackingField; // 0x00
 		public static readonly string True; // 0x08
 		public static readonly string False; // 0x10
@@ -261,133 +303,165 @@ namespace Newtonsoft.Json
 		public static readonly string NaN; // 0x38
 	
 		// Properties
-		public static Func<JsonSerializerSettings> DefaultSettings { get; } // 0x000000018B3D66AC-0x000000018B3D66FC 
+		[Nullable(new byte[2] {2, 1 })]
+		public static Func<JsonSerializerSettings> DefaultSettings { [CompilerGenerated] get; } // 0x000000018A8A6DEC-0x000000018A8A6E3C 
 	
 		// Constructors
-		static JsonConvert() {} // 0x0000000185C321B0-0x0000000185C32380
+		static JsonConvert(); // 0x0000000184A282D0-0x0000000184A284A0
 	
 		// Methods
-		public static string ToString(bool value) => default; // 0x0000000184694A00-0x0000000184694A90
-		public static string ToString(char value) => default; // 0x000000018B3D6304-0x000000018B3D636C
-		internal static string ToString(float value, FloatFormatHandling floatFormatHandling, char quoteChar, bool nullable) => default; // 0x000000018B3D64EC-0x000000018B3D65D0
-		private static string EnsureFloatFormat(double value, string text, FloatFormatHandling floatFormatHandling, char quoteChar, bool nullable) => default; // 0x000000018B3D5EB0-0x000000018B3D5FA4
-		internal static string ToString(double value, FloatFormatHandling floatFormatHandling, char quoteChar, bool nullable) => default; // 0x000000018B3D65D0-0x000000018B3D66AC
-		private static string EnsureDecimalPlace(double value, string text) => default; // 0x000000018B3D5DAC-0x000000018B3D5E54
-		private static string EnsureDecimalPlace(string text) => default; // 0x000000018B3D5E54-0x000000018B3D5EB0
-		public static string ToString(decimal value) => default; // 0x000000018B3D626C-0x000000018B3D6304
-		public static string ToString(string value) => default; // 0x000000018B3D649C-0x000000018B3D64EC
-		public static string ToString(string value, char delimiter) => default; // 0x000000018B3D6448-0x000000018B3D649C
-		public static string ToString(string value, char delimiter, StringEscapeHandling stringEscapeHandling) => default; // 0x000000018B3D636C-0x000000018B3D6448
-		public static string SerializeObject(object value) => default; // 0x000000018525C5E0-0x000000018525C640
-		public static string SerializeObject(object value, Newtonsoft.Json.Formatting formatting) => default; // 0x000000018B3D61C4-0x000000018B3D6218
-		public static string SerializeObject(object value, JsonSerializerSettings settings) => default; // 0x000000018B3D6218-0x000000018B3D626C
-		public static string SerializeObject(object value, System.Type type, JsonSerializerSettings settings) => default; // 0x000000018525C640-0x000000018525C6C0
-		public static string SerializeObject(object value, Newtonsoft.Json.Formatting formatting, JsonSerializerSettings settings) => default; // 0x000000018550AC00-0x000000018550AC80
-		public static string SerializeObject(object value, System.Type type, Newtonsoft.Json.Formatting formatting, JsonSerializerSettings settings) => default; // 0x000000018550AC80-0x000000018550AD20
-		private static string SerializeObjectInternal(object value, System.Type type, JsonSerializer jsonSerializer) => default; // 0x0000000184592370-0x0000000184592610
-		public static object DeserializeObject(string value) => default; // 0x0000000185EDB050-0x0000000185EDB0A0
-		public static object DeserializeObject(string value, System.Type type) => default; // 0x0000000184590C80-0x0000000184590CE0
-		public static T DeserializeObject<T>(string value) => default;
-		public static T DeserializeObject<T>(string value, JsonSerializerSettings settings) => default;
-		public static object DeserializeObject(string value, System.Type type, JsonSerializerSettings settings) => default; // 0x000000018458FDD0-0x00000001845900B0
-		public static void PopulateObject(string value, object target, JsonSerializerSettings settings) {} // 0x000000018B3D5FA4-0x000000018B3D61C4
+		public static string ToString(bool value); // 0x0000000183778C50-0x0000000183778CB0
+		public static string ToString(char value); // 0x000000018A8A6A78-0x000000018A8A6AE0
+		internal static string ToString(float value, FloatFormatHandling floatFormatHandling, char quoteChar, bool nullable); // 0x000000018A8A6C60-0x000000018A8A6D10
+		private static string EnsureFloatFormat(double value, string text, FloatFormatHandling floatFormatHandling, char quoteChar, bool nullable); // 0x000000018A8A6658-0x000000018A8A6718
+		internal static string ToString(double value, FloatFormatHandling floatFormatHandling, char quoteChar, bool nullable); // 0x000000018A8A6D10-0x000000018A8A6DEC
+		private static string EnsureDecimalPlace(double value, string text); // 0x000000018A8A6580-0x000000018A8A65FC
+		private static string EnsureDecimalPlace(string text); // 0x000000018A8A65FC-0x000000018A8A6658
+		public static string ToString(decimal value); // 0x000000018A8A69E0-0x000000018A8A6A78
+		public static string ToString([Nullable(2)] string value); // 0x000000018A8A6C10-0x000000018A8A6C60
+		public static string ToString([Nullable(2)] string value, char delimiter); // 0x000000018A8A6BBC-0x000000018A8A6C10
+		public static string ToString([Nullable(2)] string value, char delimiter, StringEscapeHandling stringEscapeHandling); // 0x000000018A8A6AE0-0x000000018A8A6BBC
+		[DebuggerStepThrough]
+		public static string SerializeObject([Nullable(2)] object value); // 0x0000000183423A10-0x0000000183423A70
+		[DebuggerStepThrough]
+		public static string SerializeObject([Nullable(2)] object value, Newtonsoft.Json.Formatting formatting); // 0x000000018A8A6938-0x000000018A8A698C
+		[DebuggerStepThrough]
+		[NullableContext(2)]
+		public static string SerializeObject(object value, JsonSerializerSettings settings); // 0x000000018A8A698C-0x000000018A8A69E0
+		[DebuggerStepThrough]
+		[NullableContext(2)]
+		public static string SerializeObject(object value, System.Type type, JsonSerializerSettings settings); // 0x0000000183423A70-0x0000000183423AF0
+		[DebuggerStepThrough]
+		[NullableContext(2)]
+		public static string SerializeObject(object value, Newtonsoft.Json.Formatting formatting, JsonSerializerSettings settings); // 0x00000001835A6320-0x00000001835A63A0
+		[DebuggerStepThrough]
+		[NullableContext(2)]
+		public static string SerializeObject(object value, System.Type type, Newtonsoft.Json.Formatting formatting, JsonSerializerSettings settings); // 0x00000001835A63A0-0x00000001835A6450
+		private static string SerializeObjectInternal([Nullable(2)] object value, [Nullable(2)] System.Type type, JsonSerializer jsonSerializer); // 0x0000000183425340-0x00000001834255F0
+		[DebuggerStepThrough]
+		public static object DeserializeObject(string value); // 0x0000000184CC4980-0x0000000184CC49D0
+		[DebuggerStepThrough]
+		public static object DeserializeObject(string value, System.Type type); // 0x00000001835A6000-0x00000001835A6060
+		[DebuggerStepThrough]
+		[NullableContext(2)]
+		public static T DeserializeObject<T>([Nullable(1)] string value);
+		[DebuggerStepThrough]
+		[NullableContext(2)]
+		public static T DeserializeObject<T>([Nullable(1)] string value, JsonSerializerSettings settings);
+		[NullableContext(2)]
+		public static object DeserializeObject([Nullable(1)] string value, System.Type type, JsonSerializerSettings settings); // 0x00000001835A6700-0x00000001835A6940
+		public static void PopulateObject(string value, object target, [Nullable(2)] JsonSerializerSettings settings); // 0x000000018A8A6718-0x000000018A8A6938
 	}
 
-	public abstract class JsonConverter // TypeDefIndex: 52596
+	[Nullable(0)]
+	[NullableContext(1)]
+	public abstract class JsonConverter // TypeDefIndex: 55278
 	{
 		// Properties
-		public virtual bool CanRead { get; } // 0x00000001840A27C0-0x00000001840A27D0 
-		public virtual bool CanWrite { get; } // 0x00000001840A27C0-0x00000001840A27D0 
+		public virtual bool CanRead { get; } // 0x0000000182FFF600-0x0000000182FFF610 
+		public virtual bool CanWrite { get; } // 0x0000000182FFF600-0x0000000182FFF610 
 	
 		// Constructors
-		protected JsonConverter() {} // 0x0000000185492010-0x0000000185492020
+		protected JsonConverter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public abstract void WriteJson(JsonWriter writer, object value, JsonSerializer serializer);
-		public abstract object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer);
+		public abstract void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer);
+		public abstract object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer);
 		public abstract bool CanConvert(System.Type objectType);
 	}
 
-	public abstract class JsonConverter<T> : JsonConverter // TypeDefIndex: 52597
+	[Nullable(0)]
+	[NullableContext(1)]
+	public abstract class JsonConverter<T> : JsonConverter // TypeDefIndex: 55279
 	{
 		// Constructors
-		protected JsonConverter() {}
+		protected JsonConverter();
 	
 		// Methods
-		public sealed override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {}
-		public abstract void WriteJson(JsonWriter writer, T value, JsonSerializer serializer);
-		public sealed override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default;
-		public abstract T ReadJson(JsonReader reader, System.Type objectType, T existingValue, bool hasExistingValue, JsonSerializer serializer);
-		public sealed override bool CanConvert(System.Type objectType) => default;
+		public sealed override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer);
+		public abstract void WriteJson(JsonWriter writer, [Nullable(2)] T value, JsonSerializer serializer);
+		public sealed override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer);
+		public abstract T ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] T existingValue, bool hasExistingValue, JsonSerializer serializer);
+		public sealed override bool CanConvert(System.Type objectType);
 	}
 
-	public sealed class JsonConverterAttribute : Attribute // TypeDefIndex: 52598
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Interface | AttributeTargets.Parameter, AllowMultiple = false)]
+	[Nullable(0)]
+	[NullableContext(1)]
+	public sealed class JsonConverterAttribute : Attribute // TypeDefIndex: 55280
 	{
 		// Fields
 		private readonly System.Type _converterType; // 0x10
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private readonly object[] _ConverterParameters_k__BackingField; // 0x18
 	
 		// Properties
-		public System.Type ConverterType { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public object[] ConverterParameters { get; } // 0x0000000181377E40-0x0000000181377E50 
+		public System.Type ConverterType { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		[Nullable(new byte[2] {2, 1 })]
+		public object[] ConverterParameters { [CompilerGenerated] get; } // 0x000000018385B100-0x000000018385B110 
 	
 		// Constructors
-		public JsonConverterAttribute() {} // Dummy constructor
-		public JsonConverterAttribute(System.Type converterType) {} // 0x0000000183E60BE0-0x0000000183E60FA0
+		public JsonConverterAttribute(System.Type converterType); // 0x0000000184B0E520-0x0000000184B0E590
 	}
 
-	public class JsonConverterCollection : Collection<JsonConverter> // TypeDefIndex: 52599
+	[Nullable(new byte[2] {0, 1 })]
+	public class JsonConverterCollection : Collection<JsonConverter> // TypeDefIndex: 55281
 	{
 		// Constructors
-		public JsonConverterCollection() {} // 0x0000000184ECDB40-0x0000000184ECDB80
+		public JsonConverterCollection(); // 0x000000018539649C-0x00000001853964A8
 	}
 
-	public sealed class JsonDictionaryAttribute : JsonContainerAttribute // TypeDefIndex: 52600
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = false)]
+	public sealed class JsonDictionaryAttribute : JsonContainerAttribute // TypeDefIndex: 55282
 	{
-		// Constructors
-		public JsonDictionaryAttribute() {} // Dummy constructor
 	}
 
 	[Serializable]
-	public class JsonException : Exception // TypeDefIndex: 52601
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JsonException : Exception // TypeDefIndex: 55283
 	{
 		// Constructors
-		public JsonException() {} // 0x000000018B3D66FC-0x000000018B3D6748
-		public JsonException(string message) {} // 0x000000018B3D6748-0x000000018B3D67A4
-		public JsonException(string message, Exception innerException) {} // 0x000000018B3D67A4-0x000000018B3D6804
-		public JsonException(SerializationInfo info, StreamingContext context) {} // 0x000000018B3D6804-0x000000018B3D6870
+		public JsonException(); // 0x000000018A8A6E3C-0x000000018A8A6E88
+		public JsonException(string message); // 0x000000018A8A6E88-0x000000018A8A6EE4
+		public JsonException(string message, [Nullable(2)] Exception innerException); // 0x000000018A8A6EE4-0x000000018A8A6F44
+		public JsonException(SerializationInfo info, StreamingContext context); // 0x000000018A8A6F44-0x000000018A8A6FB0
 	}
 
-	public class JsonExtensionDataAttribute : Attribute // TypeDefIndex: 52602
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
+	public class JsonExtensionDataAttribute : Attribute // TypeDefIndex: 55284
 	{
 		// Fields
+		[CompilerGenerated]
 		private bool _WriteData_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private bool _ReadData_k__BackingField; // 0x11
 	
 		// Properties
-		public bool WriteData { get; } // 0x0000000181C2FD60-0x0000000181C2FD70 
-		public bool ReadData { get; } // 0x0000000185FB22C0-0x0000000185FB22D0 
-	
-		// Constructors
-		public JsonExtensionDataAttribute() {} // Dummy constructor
+		public bool WriteData { [CompilerGenerated] get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
+		public bool ReadData { [CompilerGenerated] get; } // 0x0000000184D88380-0x0000000184D88390 
 	}
 
-	public sealed class JsonIgnoreAttribute : Attribute // TypeDefIndex: 52603
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
+	public sealed class JsonIgnoreAttribute : Attribute // TypeDefIndex: 55285
 	{
 		// Constructors
-		public JsonIgnoreAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public JsonIgnoreAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public abstract class JsonNameTable // TypeDefIndex: 52604
+	public abstract class JsonNameTable // TypeDefIndex: 55286
 	{
 		// Constructors
-		protected JsonNameTable() {} // 0x0000000185492010-0x0000000185492020
+		protected JsonNameTable(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
+		[NullableContext(1)]
 		public abstract string Get(char[] key, int start, int length);
 	}
 
-	public sealed class JsonObjectAttribute : JsonContainerAttribute // TypeDefIndex: 52605
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Interface, AllowMultiple = false)]
+	public sealed class JsonObjectAttribute : JsonContainerAttribute // TypeDefIndex: 55287
 	{
 		// Fields
 		private MemberSerialization _memberSerialization; // 0x50
@@ -396,13 +470,10 @@ namespace Newtonsoft.Json
 		internal NullValueHandling? _itemNullValueHandling; // 0x64
 	
 		// Properties
-		public MemberSerialization MemberSerialization { get => default; } // 0x0000000185FB0680-0x0000000185FB0690 
-	
-		// Constructors
-		public JsonObjectAttribute() {} // Dummy constructor
+		public MemberSerialization MemberSerialization { get; } // 0x0000000184D86550-0x0000000184D86560 
 	}
 
-	internal enum JsonContainerType // TypeDefIndex: 52606
+	internal enum JsonContainerType // TypeDefIndex: 55288
 	{
 		None = 0,
 		Object = 1,
@@ -410,35 +481,35 @@ namespace Newtonsoft.Json
 		Constructor = 3
 	}
 
-	internal struct JsonPosition // TypeDefIndex: 52607
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal struct JsonPosition // TypeDefIndex: 55289
 	{
 		// Fields
 		private static readonly char[] SpecialCharacters; // 0x00
 		internal JsonContainerType Type; // 0x00
 		internal int Position; // 0x04
+		[Nullable(2)]
 		internal string PropertyName; // 0x08
 		internal bool HasIndex; // 0x10
 	
 		// Constructors
-		public JsonPosition(JsonContainerType type) {
-			Type = default;
-			Position = default;
-			PropertyName = default;
-			HasIndex = default;
-		} // 0x00000001846958D0-0x0000000184695980
-		static JsonPosition() {
-			SpecialCharacters = default;
-		} // 0x0000000185F3F910-0x0000000185F3F9A0
+		public JsonPosition(JsonContainerType type); // 0x0000000182FB6FF0-0x0000000182FB7090
+		static JsonPosition(); // 0x0000000184D17BE0-0x0000000184D17C70
 	
 		// Methods
-		internal int CalculateLength() => default; // 0x000000018B3D6BA4-0x000000018B3D6C34
-		internal void WriteTo(StringBuilder sb, ref StringWriter writer, ref char[] buffer) {} // 0x000000018B3D6E10-0x000000018B3D6FFC
-		internal static bool TypeHasIndex(JsonContainerType type) => default; // 0x0000000184695980-0x0000000184695990
-		internal static string BuildPath(List<JsonPosition> positions, JsonPosition? currentPosition) => default; // 0x000000018B3D6870-0x000000018B3D6BA4
-		internal static string FormatMessage(IJsonLineInfo lineInfo, string path, string message) => default; // 0x000000018B3D6C34-0x000000018B3D6E10
+		internal int CalculateLength(); // 0x000000018A8A72E4-0x000000018A8A7374
+		[NullableContext(2)]
+		internal void WriteTo([Nullable(1)] StringBuilder sb, ref StringWriter writer, ref char[] buffer); // 0x000000018A8A7550-0x000000018A8A773C
+		internal static bool TypeHasIndex(JsonContainerType type); // 0x0000000182FB7090-0x0000000182FB70A0
+		internal static string BuildPath(List<JsonPosition> positions, JsonPosition? currentPosition); // 0x000000018A8A6FB0-0x000000018A8A72E4
+		internal static string FormatMessage([Nullable(2)] IJsonLineInfo lineInfo, string path, string message); // 0x000000018A8A7374-0x000000018A8A7550
 	}
 
-	public sealed class JsonPropertyAttribute : Attribute // TypeDefIndex: 52608
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
+	[Nullable(0)]
+	[NullableContext(2)]
+	public sealed class JsonPropertyAttribute : Attribute // TypeDefIndex: 55290
 	{
 		// Fields
 		internal NullValueHandling? _nullValueHandling; // 0x10
@@ -452,27 +523,39 @@ namespace Newtonsoft.Json
 		internal bool? _itemIsReference; // 0x4C
 		internal ReferenceLoopHandling? _itemReferenceLoopHandling; // 0x50
 		internal TypeNameHandling? _itemTypeNameHandling; // 0x58
+		[CompilerGenerated]
 		private System.Type _ItemConverterType_k__BackingField; // 0x60
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private object[] _ItemConverterParameters_k__BackingField; // 0x68
+		[CompilerGenerated]
 		private System.Type _NamingStrategyType_k__BackingField; // 0x70
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private object[] _NamingStrategyParameters_k__BackingField; // 0x78
+		[CompilerGenerated]
 		private string _PropertyName_k__BackingField; // 0x80
 	
 		// Properties
-		public System.Type ItemConverterType { get; } // 0x0000000185FB0530-0x0000000185FB0540 
-		public object[] ItemConverterParameters { get; } // 0x00000001813AC280-0x00000001813AC290 
-		public System.Type NamingStrategyType { get; } // 0x0000000181460F70-0x0000000181460F80 
-		public object[] NamingStrategyParameters { get; } // 0x0000000183060C50-0x0000000183060C60 
-		public DefaultValueHandling DefaultValueHandling { set {} } // 0x000000018598DC20-0x000000018598DC80
-		public int Order { set {} } // 0x000000018515F130-0x000000018515F190
-		public string PropertyName { get; set; } // 0x000000018140CF50-0x000000018140CF60 0x00000001873CBE98-0x00000001873CBEA8
+		public System.Type ItemConverterType { [CompilerGenerated] get; } // 0x0000000184D86280-0x0000000184D86290 
+		[Nullable(new byte[2] {2, 1 })]
+		public object[] ItemConverterParameters { [CompilerGenerated] get; } // 0x0000000184D86230-0x0000000184D86240 
+		public System.Type NamingStrategyType { [CompilerGenerated] get; } // 0x0000000184D862B0-0x0000000184D862C0 
+		[Nullable(new byte[2] {2, 1 })]
+		public object[] NamingStrategyParameters { [CompilerGenerated] get; } // 0x0000000184D862A0-0x0000000184D862B0 
+		public DefaultValueHandling DefaultValueHandling { set; } // 0x00000001847C8250-0x00000001847C82B0
+		public int Order { set; } // 0x0000000183FC47A0-0x0000000183FC4800
+		public string PropertyName { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86260-0x0000000184D86270 0x0000000184CD9970-0x0000000184CD9980
 	
 		// Constructors
-		public JsonPropertyAttribute() {} // 0x0000000185492010-0x0000000185492020
-		public JsonPropertyAttribute(string propertyName) {} // 0x00000001873CBE98-0x00000001873CBEA8
+		public JsonPropertyAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		[NullableContext(1)]
+		public JsonPropertyAttribute(string propertyName); // 0x0000000184CD9970-0x0000000184CD9980
 	}
 
-	public abstract class JsonReader : IDisposable // TypeDefIndex: 52610
+	[Nullable(0)]
+	[NullableContext(2)]
+	public abstract class JsonReader : IDisposable // TypeDefIndex: 55292
 	{
 		// Fields
 		private JsonToken _tokenType; // 0x10
@@ -488,27 +571,32 @@ namespace Newtonsoft.Json
 		internal FloatParseHandling _floatParseHandling; // 0x5C
 		private string _dateFormatString; // 0x60
 		private List<JsonPosition> _stack; // 0x68
+		[CompilerGenerated]
 		private bool _CloseInput_k__BackingField; // 0x70
+		[CompilerGenerated]
 		private bool _SupportMultipleContent_k__BackingField; // 0x71
 	
 		// Properties
-		protected State CurrentState { get; } // 0x0000000181424480-0x0000000181424490 
-		public bool CloseInput { get; set; } // 0x0000000185FB0950-0x0000000185FB0960 0x0000000185FB0970-0x0000000185FB0980
-		public bool SupportMultipleContent { get; set; } // 0x0000000185FB3060-0x0000000185FB3070 0x0000000185FB3070-0x0000000185FB3080
-		public DateTimeZoneHandling DateTimeZoneHandling { get; set; } // 0x0000000185FB0570-0x0000000185FB0580 0x000000018B3D9598-0x000000018B3D9600
-		public DateParseHandling DateParseHandling { get; set; } // 0x0000000183F80450-0x0000000183F80460 0x000000018B3D9530-0x000000018B3D9598
-		public FloatParseHandling FloatParseHandling { get; set; } // 0x0000000183F80460-0x0000000183F80470 0x000000018B3D9600-0x000000018B3D9668
-		public string DateFormatString { get; set; } // 0x0000000185FB0530-0x0000000185FB0540 0x0000000185AE8FE0-0x0000000185AE8FF0
-		public int? MaxDepth { get; set; } // 0x0000000185FB7D50-0x0000000185FB7D60 0x000000018435DFA0-0x000000018435E010
-		public virtual JsonToken TokenType { get; } // 0x0000000181C0BBD0-0x0000000181C0BBE0 
-		public virtual object Value { get; } // 0x0000000181377E40-0x0000000181377E50 
-		public virtual System.Type ValueType { get; } // 0x000000018B3D950C-0x000000018B3D9530 
-		public virtual int Depth { get; } // 0x00000001845960E0-0x0000000184596150 
-		public virtual string Path { get; } // 0x000000018B3D9418-0x000000018B3D950C 
-		public CultureInfo Culture { get; set; } // 0x00000001841D6090-0x00000001841D60F0 0x0000000185F05C80-0x0000000185F05C90
+		protected State CurrentState { get; } // 0x00000001811F0020-0x00000001811F0030 
+		public bool CloseInput { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86A50-0x0000000184D86A60 0x0000000184D86A80-0x0000000184D86A90
+		public bool SupportMultipleContent { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D89040-0x0000000184D89050 0x0000000184D89050-0x0000000184D89060
+		public DateTimeZoneHandling DateTimeZoneHandling { get; set; } // 0x0000000184D863D0-0x0000000184D863E0 0x000000018A8A9CD8-0x000000018A8A9D40
+		public DateParseHandling DateParseHandling { get; set; } // 0x0000000184D86570-0x0000000184D86580 0x000000018A8A9C70-0x000000018A8A9CD8
+		public FloatParseHandling FloatParseHandling { get; set; } // 0x0000000184D86560-0x0000000184D86570 0x000000018A8A9D40-0x000000018A8A9DA8
+		public string DateFormatString { get; set; } // 0x0000000184D86280-0x0000000184D86290 0x00000001863CC164-0x00000001863CC174
+		public int? MaxDepth { get; set; } // 0x0000000184DA5BD0-0x0000000184DA5BE0 0x0000000182FBED20-0x0000000182FBED50
+		public virtual JsonToken TokenType { get; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 
+		public virtual object Value { get; } // 0x000000018385B100-0x000000018385B110 
+		public virtual System.Type ValueType { get; } // 0x000000018A8A9C4C-0x000000018A8A9C70 
+		public virtual int Depth { get; } // 0x00000001834252E0-0x0000000183425330 
+		[Nullable(1)]
+		public virtual string Path { [NullableContext(1)] get; } // 0x000000018A8A9B58-0x000000018A8A9C4C 
+		[Nullable(1)]
+		public CultureInfo Culture { [NullableContext(1)] get; [NullableContext(1)] set; } // 0x0000000182FBB470-0x0000000182FBB4D0 0x00000001842B4AE0-0x00000001842B4AF0
 	
 		// Nested types
-		protected internal enum State // TypeDefIndex: 52609
+		[NullableContext(0)]
+		protected internal enum State // TypeDefIndex: 55291
 		{
 			Start = 0,
 			Complete = 1,
@@ -526,102 +614,118 @@ namespace Newtonsoft.Json
 		}
 	
 		// Constructors
-		protected JsonReader() {} // 0x00000001845905D0-0x0000000184590630
+		protected JsonReader(); // 0x00000001835A6D00-0x00000001835A6D40
 	
 		// Methods
-		internal JsonPosition GetPosition(int depth) => default; // 0x000000018B3D7250-0x000000018B3D72F4
-		private void Push(JsonContainerType value) {} // 0x0000000184695340-0x00000001846958D0
-		private JsonContainerType Pop() => default; // 0x000000018468BD30-0x000000018468BFC0
-		private JsonContainerType Peek() => default; // 0x0000000181C9AC80-0x0000000181C9AC90
+		internal JsonPosition GetPosition(int depth); // 0x000000018A8A7990-0x000000018A8A7A34
+		private void Push(JsonContainerType value); // 0x0000000182FB70A0-0x0000000182FB7620
+		private JsonContainerType Pop(); // 0x0000000183638300-0x0000000183638550
+		private JsonContainerType Peek(); // 0x00000001811F2A90-0x00000001811F2AA0
 		public abstract bool Read();
-		public virtual int? ReadAsInt32() => default; // 0x000000018B3D83A4-0x000000018B3D8730
-		internal int? ReadInt32String(string s) => default; // 0x000000018B3D9080-0x000000018B3D91EC
-		public virtual string ReadAsString() => default; // 0x00000001841D34A0-0x00000001841D3550
-		public virtual byte[] ReadAsBytes() => default; // 0x000000018B3D757C-0x000000018B3D78C8
-		internal byte[] ReadArrayIntoByteArray() => default; // 0x000000018B3D74A8-0x000000018B3D757C
-		private bool ReadArrayElementIntoByteArrayReportDone(List<byte> buffer) => default; // 0x000000018B3D72F4-0x000000018B3D74A8
-		public virtual double? ReadAsDouble() => default; // 0x000000018B3D8100-0x000000018B3D83A4
-		internal double? ReadDoubleString(string s) => default; // 0x000000018B3D8EA0-0x000000018B3D902C
-		public virtual bool? ReadAsBoolean() => default; // 0x00000001841D33D0-0x00000001841D34A0
-		internal bool? ReadBooleanString(string s) => default; // 0x000000018B3D8730-0x000000018B3D8898
-		public virtual decimal? ReadAsDecimal() => default; // 0x000000018B3D7D28-0x000000018B3D8100
-		internal decimal? ReadDecimalString(string s) => default; // 0x000000018B3D8C90-0x000000018B3D8EA0
-		public virtual System.DateTime? ReadAsDateTime() => default; // 0x000000018B3D7B00-0x000000018B3D7D28
-		internal System.DateTime? ReadDateTimeString(string s) => default; // 0x000000018B3D8AA0-0x000000018B3D8C90
-		public virtual DateTimeOffset? ReadAsDateTimeOffset() => default; // 0x000000018B3D78C8-0x000000018B3D7B00
-		internal DateTimeOffset? ReadDateTimeOffsetString(string s) => default; // 0x000000018B3D8898-0x000000018B3D8AA0
-		internal void ReaderReadAndAssert() {} // 0x000000018B3D93D0-0x000000018B3D9418
-		internal JsonReaderException CreateUnexpectedEndException() => default; // 0x000000018B3D7210-0x000000018B3D7250
-		internal void ReadIntoWrappedTypeObject() {} // 0x000000018B3D91EC-0x000000018B3D93D0
-		public void Skip() {} // 0x0000000184595940-0x00000001845959C0
-		protected void SetToken(JsonToken newToken) {} // 0x000000018646DD1C-0x000000018646DD3C
-		protected void SetToken(JsonToken newToken, object value) {} // 0x000000018646E1D8-0x000000018646E1F4
-		protected void SetToken(JsonToken newToken, object value, bool updateIndex) {} // 0x00000001841D8F30-0x00000001841D9180
-		internal void SetPostValueState(bool updateIndex) {} // 0x00000001841D9180-0x00000001841D91C0
-		private void UpdateScopeWithFinishedValue() {} // 0x00000001841D91C0-0x00000001841D91D0
-		private void ValidateEnd(JsonToken endToken) {} // 0x000000018468B8B0-0x000000018468BCF0
-		protected void SetStateBasedOnCurrent() {} // 0x0000000184858DD0-0x0000000184858E20
-		private void SetFinished() {} // 0x000000018468BFC0-0x000000018468BFE0
-		private JsonContainerType GetTypeForCloseToken(JsonToken token) => default; // 0x000000018468BCF0-0x000000018468BD30
-		void IDisposable.Dispose() {} // 0x0000000184634770-0x0000000184634810
-		protected virtual void Dispose(bool disposing) {} // 0x0000000184634810-0x0000000184634840
-		public virtual void Close() {} // 0x0000000184F70480-0x0000000184F704A0
-		internal void ReadAndAssert() {} // 0x000000018407AA30-0x000000018407AA60
-		internal void ReadForTypeAndAssert(JsonContract contract, bool hasConverter) {} // 0x000000018B3D902C-0x000000018B3D9080
-		internal bool ReadForType(JsonContract contract, bool hasConverter) => default; // 0x000000018402D510-0x000000018402D760
-		internal bool ReadAndMoveToContent() => default; // 0x000000018402D760-0x000000018402D7B0
-		internal bool MoveToContent() => default; // 0x000000018402D7B0-0x000000018402D7E0
-		private JsonToken GetContentToken() => default; // 0x00000001841D3550-0x00000001841D3590
+		public virtual int? ReadAsInt32(); // 0x000000018A8A8AE4-0x000000018A8A8E70
+		internal int? ReadInt32String(string s); // 0x000000018A8A97C0-0x000000018A8A992C
+		public virtual string ReadAsString(); // 0x000000018342A500-0x000000018342A5B0
+		public virtual byte[] ReadAsBytes(); // 0x000000018A8A7CBC-0x000000018A8A8008
+		[NullableContext(1)]
+		internal byte[] ReadArrayIntoByteArray(); // 0x000000018A8A7BE8-0x000000018A8A7CBC
+		[NullableContext(1)]
+		private bool ReadArrayElementIntoByteArrayReportDone(List<byte> buffer); // 0x000000018A8A7A34-0x000000018A8A7BE8
+		public virtual double? ReadAsDouble(); // 0x000000018A8A8840-0x000000018A8A8AE4
+		internal double? ReadDoubleString(string s); // 0x000000018A8A95E0-0x000000018A8A976C
+		public virtual bool? ReadAsBoolean(); // 0x000000018342A430-0x000000018342A500
+		internal bool? ReadBooleanString(string s); // 0x000000018A8A8E70-0x000000018A8A8FD8
+		public virtual decimal? ReadAsDecimal(); // 0x000000018A8A8468-0x000000018A8A8840
+		internal decimal? ReadDecimalString(string s); // 0x000000018A8A93D0-0x000000018A8A95E0
+		public virtual System.DateTime? ReadAsDateTime(); // 0x000000018A8A8240-0x000000018A8A8468
+		internal System.DateTime? ReadDateTimeString(string s); // 0x000000018A8A91E0-0x000000018A8A93D0
+		public virtual DateTimeOffset? ReadAsDateTimeOffset(); // 0x000000018A8A8008-0x000000018A8A8240
+		internal DateTimeOffset? ReadDateTimeOffsetString(string s); // 0x000000018A8A8FD8-0x000000018A8A91E0
+		internal void ReaderReadAndAssert(); // 0x000000018A8A9B10-0x000000018A8A9B58
+		[NullableContext(1)]
+		internal JsonReaderException CreateUnexpectedEndException(); // 0x000000018A8A7950-0x000000018A8A7990
+		internal void ReadIntoWrappedTypeObject(); // 0x000000018A8A992C-0x000000018A8A9B10
+		public void Skip(); // 0x0000000183424C90-0x0000000183424D10
+		protected void SetToken(JsonToken newToken); // 0x0000000185390BEC-0x0000000185390C0C
+		protected void SetToken(JsonToken newToken, object value); // 0x000000018539086C-0x0000000185390888
+		protected void SetToken(JsonToken newToken, object value, bool updateIndex); // 0x0000000182FB8CC0-0x0000000182FB8F20
+		internal void SetPostValueState(bool updateIndex); // 0x0000000182FB8F20-0x0000000182FB8F60
+		private void UpdateScopeWithFinishedValue(); // 0x0000000182FB8F60-0x0000000182FB8F70
+		private void ValidateEnd(JsonToken endToken); // 0x0000000183637ED0-0x00000001836382C0
+		protected void SetStateBasedOnCurrent(); // 0x00000001838306D0-0x0000000183830720
+		private void SetFinished(); // 0x0000000183638550-0x0000000183638570
+		private JsonContainerType GetTypeForCloseToken(JsonToken token); // 0x00000001836382C0-0x0000000183638300
+		void IDisposable.Dispose(); // 0x0000000183F608D0-0x0000000183F60930
+		protected virtual void Dispose(bool disposing); // 0x0000000183F60930-0x0000000183F609F0
+		public virtual void Close(); // 0x00000001837786B0-0x00000001837786D0
+		internal void ReadAndAssert(); // 0x00000001832B61B0-0x00000001832B61E0
+		internal void ReadForTypeAndAssert(JsonContract contract, bool hasConverter); // 0x000000018A8A976C-0x000000018A8A97C0
+		internal bool ReadForType(JsonContract contract, bool hasConverter); // 0x0000000182FB4440-0x0000000182FB4660
+		internal bool ReadAndMoveToContent(); // 0x0000000183424BC0-0x0000000183424C10
+		internal bool MoveToContent(); // 0x0000000183424C10-0x0000000183424C40
+		private JsonToken GetContentToken(); // 0x000000018342A5B0-0x000000018342A5F0
 	}
 
 	[Serializable]
-	public class JsonReaderException : JsonException // TypeDefIndex: 52611
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JsonReaderException : JsonException // TypeDefIndex: 55293
 	{
 		// Fields
+		[CompilerGenerated]
 		private readonly int _LineNumber_k__BackingField; // 0x90
+		[CompilerGenerated]
 		private readonly int _LinePosition_k__BackingField; // 0x94
+		[CompilerGenerated]
+		[Nullable(2)]
 		private readonly string _Path_k__BackingField; // 0x98
 	
 		// Constructors
-		public JsonReaderException() {} // 0x000000018B3D7188-0x000000018B3D7190
-		public JsonReaderException(string message) {} // 0x000000018B3D7208-0x000000018B3D7210
-		public JsonReaderException(SerializationInfo info, StreamingContext context) {} // 0x000000018B3D71E8-0x000000018B3D7208
-		public JsonReaderException(string message, string path, int lineNumber, int linePosition, Exception innerException) {} // 0x000000018B3D7190-0x000000018B3D71E8
+		public JsonReaderException(); // 0x000000018A8A78C8-0x000000018A8A78D0
+		public JsonReaderException(string message); // 0x000000018A8A7948-0x000000018A8A7950
+		public JsonReaderException(SerializationInfo info, StreamingContext context); // 0x000000018A8A7928-0x000000018A8A7948
+		public JsonReaderException(string message, string path, int lineNumber, int linePosition, [Nullable(2)] Exception innerException); // 0x000000018A8A78D0-0x000000018A8A7928
 	
 		// Methods
-		internal static JsonReaderException Create(JsonReader reader, string message) => default; // 0x000000018B3D717C-0x000000018B3D7188
-		internal static JsonReaderException Create(JsonReader reader, string message, Exception ex) => default; // 0x000000018B3D70EC-0x000000018B3D717C
-		internal static JsonReaderException Create(IJsonLineInfo lineInfo, string path, string message, Exception ex) => default; // 0x000000018B3D6FFC-0x000000018B3D70EC
+		internal static JsonReaderException Create(JsonReader reader, string message); // 0x000000018A8A78BC-0x000000018A8A78C8
+		internal static JsonReaderException Create(JsonReader reader, string message, [Nullable(2)] Exception ex); // 0x000000018A8A782C-0x000000018A8A78BC
+		internal static JsonReaderException Create([Nullable(2)] IJsonLineInfo lineInfo, string path, string message, [Nullable(2)] Exception ex); // 0x000000018A8A773C-0x000000018A8A782C
 	}
 
-	public sealed class JsonRequiredAttribute : Attribute // TypeDefIndex: 52612
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
+	public sealed class JsonRequiredAttribute : Attribute // TypeDefIndex: 55294
 	{
-		// Constructors
-		public JsonRequiredAttribute() {} // Dummy constructor
 	}
 
 	[Serializable]
-	public class JsonSerializationException : JsonException // TypeDefIndex: 52613
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JsonSerializationException : JsonException // TypeDefIndex: 55295
 	{
 		// Fields
+		[CompilerGenerated]
 		private readonly int _LineNumber_k__BackingField; // 0x90
+		[CompilerGenerated]
 		private readonly int _LinePosition_k__BackingField; // 0x94
+		[CompilerGenerated]
+		[Nullable(2)]
 		private readonly string _Path_k__BackingField; // 0x98
 	
 		// Constructors
-		public JsonSerializationException() {} // 0x000000018B3D7188-0x000000018B3D7190
-		public JsonSerializationException(string message) {} // 0x000000018B3D7208-0x000000018B3D7210
-		public JsonSerializationException(string message, Exception innerException) {} // 0x000000018B3D97F4-0x000000018B3D97FC
-		public JsonSerializationException(SerializationInfo info, StreamingContext context) {} // 0x000000018B3D71E8-0x000000018B3D7208
-		public JsonSerializationException(string message, string path, int lineNumber, int linePosition, Exception innerException) {} // 0x000000018B3D7190-0x000000018B3D71E8
+		public JsonSerializationException(); // 0x000000018A8A78C8-0x000000018A8A78D0
+		public JsonSerializationException(string message); // 0x000000018A8A7948-0x000000018A8A7950
+		public JsonSerializationException(string message, Exception innerException); // 0x000000018A8A9F34-0x000000018A8A9F3C
+		public JsonSerializationException(SerializationInfo info, StreamingContext context); // 0x000000018A8A7928-0x000000018A8A7948
+		public JsonSerializationException(string message, string path, int lineNumber, int linePosition, [Nullable(2)] Exception innerException); // 0x000000018A8A78D0-0x000000018A8A7928
 	
 		// Methods
-		internal static JsonSerializationException Create(JsonReader reader, string message) => default; // 0x000000018B3D9668-0x000000018B3D9674
-		internal static JsonSerializationException Create(JsonReader reader, string message, Exception ex) => default; // 0x000000018B3D9674-0x000000018B3D9704
-		internal static JsonSerializationException Create(IJsonLineInfo lineInfo, string path, string message, Exception ex) => default; // 0x000000018B3D9704-0x000000018B3D97F4
+		internal static JsonSerializationException Create(JsonReader reader, string message); // 0x000000018A8A9DA8-0x000000018A8A9DB4
+		internal static JsonSerializationException Create(JsonReader reader, string message, [Nullable(2)] Exception ex); // 0x000000018A8A9DB4-0x000000018A8A9E44
+		internal static JsonSerializationException Create([Nullable(2)] IJsonLineInfo lineInfo, string path, string message, [Nullable(2)] Exception ex); // 0x000000018A8A9E44-0x000000018A8A9F34
 	}
 
-	public class JsonSerializer // TypeDefIndex: 52614
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JsonSerializer // TypeDefIndex: 55296
 	{
 		// Fields
 		internal TypeNameHandling _typeNameHandling; // 0x10
@@ -634,12 +738,16 @@ namespace Newtonsoft.Json
 		internal DefaultValueHandling _defaultValueHandling; // 0x2C
 		internal ConstructorHandling _constructorHandling; // 0x30
 		internal MetadataPropertyHandling _metadataPropertyHandling; // 0x34
+		[Nullable(2)]
 		internal JsonConverterCollection _converters; // 0x38
 		internal IContractResolver _contractResolver; // 0x40
+		[Nullable(2)]
 		internal ITraceWriter _traceWriter; // 0x48
+		[Nullable(2)]
 		internal IEqualityComparer _equalityComparer; // 0x50
 		internal ISerializationBinder _serializationBinder; // 0x58
 		internal StreamingContext _context; // 0x60
+		[Nullable(2)]
 		private IReferenceResolver _referenceResolver; // 0x70
 		private Newtonsoft.Json.Formatting? _formatting; // 0x78
 		private DateFormatHandling? _dateFormatHandling; // 0x80
@@ -652,94 +760,111 @@ namespace Newtonsoft.Json
 		private int? _maxDepth; // 0xB8
 		private bool _maxDepthSet; // 0xC0
 		private bool? _checkAdditionalContent; // 0xC1
+		[Nullable(2)]
 		private string _dateFormatString; // 0xC8
 		private bool _dateFormatStringSet; // 0xD0
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private EventHandler<ErrorEventArgs> Error; // 0xD8
 	
 		// Properties
-		public virtual IReferenceResolver ReferenceResolver { set {} } // 0x000000018B3D9FC8-0x000000018B3DA054
-		public virtual ISerializationBinder SerializationBinder { set {} } // 0x000000018B3DA054-0x000000018B3DA0E0
-		public virtual ITraceWriter TraceWriter { get => default; set {} } // 0x00000001813ECF20-0x00000001813ECF30 0x000000018571FEC0-0x000000018571FED0
-		public virtual IEqualityComparer EqualityComparer { set {} } // 0x0000000184A4E570-0x0000000184A4E580
-		public virtual TypeNameHandling TypeNameHandling { set {} } // 0x0000000185261D60-0x0000000185261D80
-		public virtual TypeNameAssemblyFormatHandling TypeNameAssemblyFormatHandling { set {} } // 0x0000000185FACD30-0x0000000185FACD50
-		public virtual PreserveReferencesHandling PreserveReferencesHandling { set {} } // 0x000000018B3D9F60-0x000000018B3D9FC8
-		public virtual ReferenceLoopHandling ReferenceLoopHandling { set {} } // 0x0000000185FACD50-0x0000000185FACD70
-		public virtual MissingMemberHandling MissingMemberHandling { set {} } // 0x000000018B3D9EF8-0x000000018B3D9F60
-		public virtual NullValueHandling NullValueHandling { get => default; set {} } // 0x0000000181C9AC80-0x0000000181C9AC90 0x0000000185262240-0x0000000185262260
-		public virtual DefaultValueHandling DefaultValueHandling { set {} } // 0x0000000185262260-0x0000000185262280
-		public virtual ObjectCreationHandling ObjectCreationHandling { set {} } // 0x0000000185D78AA0-0x0000000185D78AC0
-		public virtual ConstructorHandling ConstructorHandling { set {} } // 0x0000000185D78AC0-0x0000000185D78AE0
-		public virtual MetadataPropertyHandling MetadataPropertyHandling { get => default; set {} } // 0x0000000185FB07C0-0x0000000185FB07D0 0x000000018B3D9E90-0x000000018B3D9EF8
-		public virtual JsonConverterCollection Converters { get => default; } // 0x0000000184ECDAA0-0x0000000184ECDB40 
-		public virtual IContractResolver ContractResolver { get => default; set {} } // 0x00000001813FF010-0x00000001813FF020 0x0000000185D68580-0x0000000185D685E0
-		public virtual StreamingContext Context { get => default; set {} } // 0x0000000185FCCD00-0x0000000185FCCD10 0x000000018B3D9E80-0x000000018B3D9E90
-		public virtual Newtonsoft.Json.Formatting Formatting { get => default; set {} } // 0x0000000185F515D0-0x0000000185F51610 0x0000000185F55E60-0x0000000185F55EC0
-		public virtual int? MaxDepth { get => default; } // 0x000000018349D710-0x000000018349D720 
-		public virtual bool CheckAdditionalContent { get => default; set {} } // 0x000000018531E890-0x000000018531E8D0 0x0000000185193AF0-0x0000000185193B40
+		[Nullable(2)]
+		public virtual IReferenceResolver ReferenceResolver { [NullableContext(2)] set; } // 0x000000018A8AA708-0x000000018A8AA794
+		public virtual ISerializationBinder SerializationBinder { get; set; } // 0x0000000182E56440-0x0000000182E56460 0x000000018A8AA794-0x000000018A8AA820
+		[Nullable(2)]
+		public virtual ITraceWriter TraceWriter { [NullableContext(2)] get; [NullableContext(2)] set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
+		[Nullable(2)]
+		public virtual IEqualityComparer EqualityComparer { [NullableContext(2)] set; } // 0x0000000182FDAEA0-0x0000000182FDAEB0
+		public virtual TypeNameHandling TypeNameHandling { set; } // 0x000000018411B110-0x000000018411B130
+		public virtual TypeNameAssemblyFormatHandling TypeNameAssemblyFormatHandling { set; } // 0x0000000184D83110-0x0000000184D83130
+		public virtual PreserveReferencesHandling PreserveReferencesHandling { set; } // 0x000000018A8AA6A0-0x000000018A8AA708
+		public virtual ReferenceLoopHandling ReferenceLoopHandling { set; } // 0x0000000184D83130-0x0000000184D83150
+		public virtual MissingMemberHandling MissingMemberHandling { set; } // 0x000000018A8AA638-0x000000018A8AA6A0
+		public virtual NullValueHandling NullValueHandling { get; set; } // 0x00000001811F2A90-0x00000001811F2AA0 0x000000018411B460-0x000000018411B480
+		public virtual DefaultValueHandling DefaultValueHandling { set; } // 0x000000018411B480-0x000000018411B4D0
+		public virtual ObjectCreationHandling ObjectCreationHandling { set; } // 0x0000000184CB28E0-0x0000000184CB2900
+		public virtual ConstructorHandling ConstructorHandling { set; } // 0x0000000184CB2900-0x0000000184CB2920
+		public virtual MetadataPropertyHandling MetadataPropertyHandling { get; set; } // 0x0000000184D86730-0x0000000184D86740 0x000000018A8AA5D0-0x000000018A8AA638
+		public virtual JsonConverterCollection Converters { get; } // 0x0000000183EA57F0-0x0000000183EA5850 
+		public virtual IContractResolver ContractResolver { get; set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001849DAC00-0x00000001849DAC60
+		public virtual StreamingContext Context { get; set; } // 0x0000000184DA1280-0x0000000184DA1290 0x000000018A8AA5C0-0x000000018A8AA5D0
+		public virtual Newtonsoft.Json.Formatting Formatting { get; set; } // 0x0000000184CD9280-0x0000000184CD92C0 0x0000000184B89F60-0x0000000184B89FC0
+		public virtual int? MaxDepth { get; } // 0x0000000184D85EF0-0x0000000184D85F00 
+		public virtual bool CheckAdditionalContent { get; set; } // 0x0000000184DA5BF0-0x0000000184DA5C00 0x0000000184119FE0-0x000000018411A000
 	
 		// Events
-		public virtual event EventHandler<ErrorEventArgs> Error;
+		[Nullable(new byte[2] {2, 1 })]
+		public virtual event EventHandler<ErrorEventArgs> Error {
+			add; // 0x000000018A8AA4A0-0x000000018A8AA530
+			remove; // 0x000000018A8AA530-0x000000018A8AA5C0
+		}
 	
 		// Constructors
-		public JsonSerializer() {} // 0x0000000184590270-0x0000000184590400
+		public JsonSerializer(); // 0x00000001835A6AC0-0x00000001835A6C10
 	
 		// Methods
-		internal bool IsCheckAdditionalContentSet() => default; // 0x0000000184590400-0x0000000184590440
-		public static JsonSerializer Create() => default; // 0x0000000184590210-0x0000000184590270
-		public static JsonSerializer Create(JsonSerializerSettings settings) => default; // 0x0000000184590180-0x0000000184590210
-		public static JsonSerializer CreateDefault() => default; // 0x00000001845900F0-0x0000000184590180
-		public static JsonSerializer CreateDefault(JsonSerializerSettings settings) => default; // 0x00000001845900B0-0x00000001845900F0
-		private static void ApplySerializerSettings(JsonSerializer serializer, JsonSerializerSettings settings) {} // 0x0000000183FA1820-0x0000000183FA1D40
-		public void Populate(JsonReader reader, object target) {} // 0x000000018B3D9D14-0x000000018B3D9D60
-		internal virtual void PopulateInternal(JsonReader reader, object target) {} // 0x000000018B3D9A80-0x000000018B3D9D14
-		public T Deserialize<T>(JsonReader reader) => default;
-		public object Deserialize(JsonReader reader, System.Type objectType) => default; // 0x000000018646F428-0x000000018646F474
-		internal virtual object DeserializeInternal(JsonReader reader, System.Type objectType) => default; // 0x000000018435E1D0-0x000000018435E3F0
-		internal void SetupReader(JsonReader reader, out CultureInfo previousCulture, out DateTimeZoneHandling? previousDateTimeZoneHandling, out DateParseHandling? previousDateParseHandling, out FloatParseHandling? previousFloatParseHandling, out int? previousMaxDepth, out string previousDateFormatString) {
-			previousCulture = default;
-			previousDateTimeZoneHandling = default;
-			previousDateParseHandling = default;
-			previousFloatParseHandling = default;
-			previousMaxDepth = default;
-			previousDateFormatString = default;
-		} // 0x00000001841D5C20-0x00000001841D5F10
-		private void ResetReader(JsonReader reader, CultureInfo previousCulture, DateTimeZoneHandling? previousDateTimeZoneHandling, DateParseHandling? previousDateParseHandling, FloatParseHandling? previousFloatParseHandling, int? previousMaxDepth, string previousDateFormatString) {} // 0x000000018435E010-0x000000018435E1D0
-		public void Serialize(JsonWriter jsonWriter, object value, System.Type objectType) {} // 0x000000018646F4A0-0x000000018646F4B4
-		public void Serialize(JsonWriter jsonWriter, object value) {} // 0x000000018646F480-0x000000018646F4A0
-		private TraceJsonReader CreateTraceJsonReader(JsonReader reader) => default; // 0x000000018B3D9984-0x000000018B3D9A04
-		internal virtual void SerializeInternal(JsonWriter jsonWriter, object value, System.Type objectType) {} // 0x00000001850B7F30-0x00000001850B8280
-		internal IReferenceResolver GetReferenceResolver() => default; // 0x000000018B3D9A04-0x000000018B3D9A60
-		internal JsonConverter GetMatchingConverter(System.Type type) => default; // 0x000000018646E944-0x000000018646E950
-		internal static JsonConverter GetMatchingConverter(IList<JsonConverter> converters, System.Type objectType) => default; // 0x000000018406DD60-0x000000018406E190
-		internal void OnError(ErrorEventArgs e) {} // 0x000000018B3D9A60-0x000000018B3D9A80
+		internal bool IsCheckAdditionalContentSet(); // 0x0000000184D9E3E0-0x0000000184D9E3F0
+		public static JsonSerializer Create(); // 0x00000001835A6A20-0x00000001835A6AC0
+		public static JsonSerializer Create([Nullable(2)] JsonSerializerSettings settings); // 0x00000001835A69F0-0x00000001835A6A20
+		public static JsonSerializer CreateDefault(); // 0x00000001835A6980-0x00000001835A69F0
+		public static JsonSerializer CreateDefault([Nullable(2)] JsonSerializerSettings settings); // 0x00000001835A6940-0x00000001835A6980
+		private static void ApplySerializerSettings(JsonSerializer serializer, JsonSerializerSettings settings); // 0x00000001835A6D40-0x00000001835A70C0
+		[DebuggerStepThrough]
+		public void Populate(JsonReader reader, object target); // 0x000000018A8AA454-0x000000018A8AA4A0
+		internal virtual void PopulateInternal(JsonReader reader, object target); // 0x000000018A8AA1C0-0x000000018A8AA454
+		[DebuggerStepThrough]
+		[NullableContext(2)]
+		public T Deserialize<T>([Nullable(1)] JsonReader reader);
+		[DebuggerStepThrough]
+		[NullableContext(2)]
+		public object Deserialize([Nullable(1)] JsonReader reader, System.Type objectType); // 0x0000000185392F9C-0x0000000185392FE8
+		[NullableContext(2)]
+		internal virtual object DeserializeInternal([Nullable(1)] JsonReader reader, System.Type objectType); // 0x0000000182FBCD40-0x0000000182FBCF50
+		[NullableContext(2)]
+		internal void SetupReader([Nullable(1)] JsonReader reader, out CultureInfo previousCulture, out DateTimeZoneHandling? previousDateTimeZoneHandling, out DateParseHandling? previousDateParseHandling, out FloatParseHandling? previousFloatParseHandling, out int? previousMaxDepth, out string previousDateFormatString); // 0x0000000182FBCB20-0x0000000182FBCD40
+		[NullableContext(2)]
+		private void ResetReader([Nullable(1)] JsonReader reader, CultureInfo previousCulture, DateTimeZoneHandling? previousDateTimeZoneHandling, DateParseHandling? previousDateParseHandling, FloatParseHandling? previousFloatParseHandling, int? previousMaxDepth, string previousDateFormatString); // 0x0000000182FBEC20-0x0000000182FBED20
+		[NullableContext(2)]
+		public void Serialize([Nullable(1)] JsonWriter jsonWriter, object value, System.Type objectType); // 0x00000001853924E0-0x00000001853924FC
+		public void Serialize(JsonWriter jsonWriter, [Nullable(2)] object value); // 0x0000000185392EF0-0x0000000185392F10
+		private TraceJsonReader CreateTraceJsonReader(JsonReader reader); // 0x000000018A8AA0C4-0x000000018A8AA144
+		[NullableContext(2)]
+		internal virtual void SerializeInternal([Nullable(1)] JsonWriter jsonWriter, object value, System.Type objectType); // 0x0000000183F71C60-0x0000000183F71FB0
+		internal IReferenceResolver GetReferenceResolver(); // 0x000000018A8AA144-0x000000018A8AA1A0
+		internal JsonConverter GetMatchingConverter(System.Type type); // 0x0000000185390BBC-0x0000000185390BC8
+		internal static JsonConverter GetMatchingConverter([Nullable(new byte[2] {2, 1 })] IList<JsonConverter> converters, System.Type objectType); // 0x0000000182FAFF80-0x0000000182FB0370
+		internal void OnError(ErrorEventArgs e); // 0x000000018A8AA1A0-0x000000018A8AA1C0
 	}
 
-	public class JsonSerializerSettings // TypeDefIndex: 52615
+	[Nullable(0)]
+	[NullableContext(2)]
+	public class JsonSerializerSettings // TypeDefIndex: 55297
 	{
 		// Fields
-		internal const ReferenceLoopHandling DefaultReferenceLoopHandling = ReferenceLoopHandling.Error; // Metadata: 0x0207687B
-		internal const MissingMemberHandling DefaultMissingMemberHandling = MissingMemberHandling.Ignore; // Metadata: 0x0207687C
-		internal const NullValueHandling DefaultNullValueHandling = NullValueHandling.Include; // Metadata: 0x0207687D
-		internal const DefaultValueHandling DefaultDefaultValueHandling = DefaultValueHandling.Include; // Metadata: 0x0207687E
-		internal const ObjectCreationHandling DefaultObjectCreationHandling = ObjectCreationHandling.Auto; // Metadata: 0x0207687F
-		internal const PreserveReferencesHandling DefaultPreserveReferencesHandling = PreserveReferencesHandling.None; // Metadata: 0x02076880
-		internal const ConstructorHandling DefaultConstructorHandling = ConstructorHandling.Default; // Metadata: 0x02076881
-		internal const TypeNameHandling DefaultTypeNameHandling = TypeNameHandling.None; // Metadata: 0x02076882
-		internal const MetadataPropertyHandling DefaultMetadataPropertyHandling = MetadataPropertyHandling.Default; // Metadata: 0x02076883
+		internal const ReferenceLoopHandling DefaultReferenceLoopHandling = ReferenceLoopHandling.Error; // Metadata: 0x02346B73
+		internal const MissingMemberHandling DefaultMissingMemberHandling = MissingMemberHandling.Ignore; // Metadata: 0x02346B74
+		internal const NullValueHandling DefaultNullValueHandling = NullValueHandling.Include; // Metadata: 0x02346B75
+		internal const DefaultValueHandling DefaultDefaultValueHandling = DefaultValueHandling.Include; // Metadata: 0x02346B76
+		internal const ObjectCreationHandling DefaultObjectCreationHandling = ObjectCreationHandling.Auto; // Metadata: 0x02346B77
+		internal const PreserveReferencesHandling DefaultPreserveReferencesHandling = PreserveReferencesHandling.None; // Metadata: 0x02346B78
+		internal const ConstructorHandling DefaultConstructorHandling = ConstructorHandling.Default; // Metadata: 0x02346B79
+		internal const TypeNameHandling DefaultTypeNameHandling = TypeNameHandling.None; // Metadata: 0x02346B7A
+		internal const MetadataPropertyHandling DefaultMetadataPropertyHandling = MetadataPropertyHandling.Default; // Metadata: 0x02346B7B
 		internal static readonly StreamingContext DefaultContext; // 0x00
-		internal const Newtonsoft.Json.Formatting DefaultFormatting = Newtonsoft.Json.Formatting.None; // Metadata: 0x02076884
-		internal const DateFormatHandling DefaultDateFormatHandling = DateFormatHandling.IsoDateFormat; // Metadata: 0x02076885
-		internal const DateTimeZoneHandling DefaultDateTimeZoneHandling = DateTimeZoneHandling.RoundtripKind; // Metadata: 0x02076886
-		internal const DateParseHandling DefaultDateParseHandling = DateParseHandling.DateTime; // Metadata: 0x02076887
-		internal const FloatParseHandling DefaultFloatParseHandling = FloatParseHandling.Double; // Metadata: 0x02076888
-		internal const FloatFormatHandling DefaultFloatFormatHandling = FloatFormatHandling.String; // Metadata: 0x02076889
-		internal const StringEscapeHandling DefaultStringEscapeHandling = StringEscapeHandling.Default; // Metadata: 0x0207688A
-		internal const TypeNameAssemblyFormatHandling DefaultTypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Simple; // Metadata: 0x0207688B
+		internal const Newtonsoft.Json.Formatting DefaultFormatting = Newtonsoft.Json.Formatting.None; // Metadata: 0x02346B7C
+		internal const DateFormatHandling DefaultDateFormatHandling = DateFormatHandling.IsoDateFormat; // Metadata: 0x02346B7D
+		internal const DateTimeZoneHandling DefaultDateTimeZoneHandling = DateTimeZoneHandling.RoundtripKind; // Metadata: 0x02346B7E
+		internal const DateParseHandling DefaultDateParseHandling = DateParseHandling.DateTime; // Metadata: 0x02346B7F
+		internal const FloatParseHandling DefaultFloatParseHandling = FloatParseHandling.Double; // Metadata: 0x02346B80
+		internal const FloatFormatHandling DefaultFloatFormatHandling = FloatFormatHandling.String; // Metadata: 0x02346B81
+		internal const StringEscapeHandling DefaultStringEscapeHandling = StringEscapeHandling.Default; // Metadata: 0x02346B82
+		internal const TypeNameAssemblyFormatHandling DefaultTypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Simple; // Metadata: 0x02346B83
+		[Nullable(1)]
 		internal static readonly CultureInfo DefaultCulture; // 0x10
-		internal const bool DefaultCheckAdditionalContent = false; // Metadata: 0x0207688C
-		internal const string DefaultDateFormatString = "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss.FFFFFFFK"; // Metadata: 0x0207688D
-		internal const int DefaultMaxDepth = 64; // Metadata: 0x020768B4
+		internal const bool DefaultCheckAdditionalContent = false; // Metadata: 0x02346B84
+		[Nullable(1)]
+		internal const string DefaultDateFormatString = "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss.FFFFFFFK"; // Metadata: 0x02346B85
+		internal const int DefaultMaxDepth = 64; // Metadata: 0x02346BAC
 		internal Newtonsoft.Json.Formatting? _formatting; // 0x10
 		internal DateFormatHandling? _dateFormatHandling; // 0x18
 		internal DateTimeZoneHandling? _dateTimeZoneHandling; // 0x20
@@ -764,48 +889,64 @@ namespace Newtonsoft.Json
 		internal ConstructorHandling? _constructorHandling; // 0xC0
 		internal TypeNameHandling? _typeNameHandling; // 0xC8
 		internal MetadataPropertyHandling? _metadataPropertyHandling; // 0xD0
+		[CompilerGenerated]
+		[Nullable(1)]
 		private IList<JsonConverter> _Converters_k__BackingField; // 0xD8
+		[CompilerGenerated]
 		private IContractResolver _ContractResolver_k__BackingField; // 0xE0
+		[CompilerGenerated]
 		private IEqualityComparer _EqualityComparer_k__BackingField; // 0xE8
+		[CompilerGenerated]
 		private Func<IReferenceResolver> _ReferenceResolverProvider_k__BackingField; // 0xF0
+		[CompilerGenerated]
 		private ITraceWriter _TraceWriter_k__BackingField; // 0xF8
+		[CompilerGenerated]
 		private ISerializationBinder _SerializationBinder_k__BackingField; // 0x100
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private EventHandler<ErrorEventArgs> _Error_k__BackingField; // 0x108
 	
 		// Properties
-		public ReferenceLoopHandling ReferenceLoopHandling { get => default; set {} } // 0x0000000185FA73C0-0x0000000185FA7400 0x0000000185F89100-0x0000000185F89160
-		public MissingMemberHandling MissingMemberHandling { get => default; } // 0x000000018B3D990C-0x000000018B3D9948 
-		public ObjectCreationHandling ObjectCreationHandling { get => default; set {} } // 0x0000000185EDBFB0-0x0000000185EDBFF0 0x0000000185F89160-0x0000000185F891C0
-		public NullValueHandling NullValueHandling { get => default; set {} } // 0x0000000185325280-0x00000001853252C0 0x0000000185F55EC0-0x0000000185F55F20
-		public DefaultValueHandling DefaultValueHandling { get => default; set {} } // 0x00000001853252C0-0x0000000185325300 0x0000000185F55F20-0x0000000185F55F80
-		public IList<JsonConverter> Converters { get; set; } // 0x0000000185FB02F0-0x0000000185FB0300 0x00000001873368EC-0x0000000187336900
-		public PreserveReferencesHandling PreserveReferencesHandling { get => default; } // 0x000000018B3D9948-0x000000018B3D9984 
-		public TypeNameHandling TypeNameHandling { get => default; set {} } // 0x0000000185323E40-0x0000000185323E80 0x0000000185EDB8D0-0x0000000185EDB930
-		public MetadataPropertyHandling MetadataPropertyHandling { get => default; } // 0x000000018B3D98D0-0x000000018B3D990C 
-		public TypeNameAssemblyFormatHandling TypeNameAssemblyFormatHandling { get => default; set {} } // 0x0000000185FA7380-0x0000000185FA73C0 0x0000000185F890A0-0x0000000185F89100
-		public ConstructorHandling ConstructorHandling { get => default; set {} } // 0x0000000185EDBFF0-0x0000000185EDC030 0x0000000185F89220-0x0000000185F89280
-		public IContractResolver ContractResolver { get; set; } // 0x0000000185FB25D0-0x0000000185FB25E0 0x0000000187A4749C-0x0000000187A474B0
-		public IEqualityComparer EqualityComparer { get; set; } // 0x0000000185FB2360-0x0000000185FB2370 0x0000000187A47730-0x0000000187A47744
-		public Func<IReferenceResolver> ReferenceResolverProvider { get; set; } // 0x0000000185FB87A0-0x0000000185FB87B0 0x0000000187A47A14-0x0000000187A47A28
-		public ITraceWriter TraceWriter { get; set; } // 0x0000000185FB16B0-0x0000000185FB16C0 0x000000018774E878-0x000000018774E88C
-		public ISerializationBinder SerializationBinder { get; set; } // 0x0000000185FB1CB0-0x0000000185FB1CC0 0x0000000187764794-0x00000001877647A8
-		public EventHandler<ErrorEventArgs> Error { get; set; } // 0x0000000181ABEDF0-0x0000000181ABEE00 0x0000000187A474C4-0x0000000187A474D8
-		public StreamingContext Context { get => default; } // 0x000000018B3D9834-0x000000018B3D98D0 
-		public int? MaxDepth { set {} } // 0x0000000185EBDE00-0x0000000185EBDE70
-		public Newtonsoft.Json.Formatting Formatting { set {} } // 0x0000000185F891C0-0x0000000185F89220
-		public bool CheckAdditionalContent { get => default; } // 0x000000018B3D97FC-0x000000018B3D9834 
+		public ReferenceLoopHandling ReferenceLoopHandling { get; set; } // 0x0000000184D7C0B0-0x0000000184D7C0F0 0x0000000183581CC0-0x0000000183581D20
+		public MissingMemberHandling MissingMemberHandling { get; } // 0x000000018A8AA04C-0x000000018A8AA088 
+		public ObjectCreationHandling ObjectCreationHandling { get; set; } // 0x00000001835A7100-0x00000001835A7140 0x0000000183581D80-0x0000000183581DE0
+		public NullValueHandling NullValueHandling { get; set; } // 0x0000000184D86890-0x0000000184D868A0 0x0000000184D2B120-0x0000000184D2B180
+		public DefaultValueHandling DefaultValueHandling { get; set; } // 0x0000000184D863C0-0x0000000184D863D0 0x0000000184D2B180-0x0000000184D2B1E0
+		[Nullable(1)]
+		public IList<JsonConverter> Converters { [CompilerGenerated] [NullableContext(1)] get; [NullableContext(1)] [CompilerGenerated] set; } // 0x0000000184D88EF0-0x0000000184D88F00 0x0000000186902698-0x00000001869026AC
+		public PreserveReferencesHandling PreserveReferencesHandling { get; } // 0x000000018A8AA088-0x000000018A8AA0C4 
+		public TypeNameHandling TypeNameHandling { get; set; } // 0x0000000184DA5BE0-0x0000000184DA5BF0 0x0000000183581D20-0x0000000183581D80
+		public MetadataPropertyHandling MetadataPropertyHandling { get; } // 0x000000018A8AA010-0x000000018A8AA04C 
+		public TypeNameAssemblyFormatHandling TypeNameAssemblyFormatHandling { get; set; } // 0x0000000184D7C070-0x0000000184D7C0B0 0x0000000183581C60-0x0000000183581CC0
+		public ConstructorHandling ConstructorHandling { get; set; } // 0x00000001835A70C0-0x00000001835A7100 0x0000000183581DE0-0x0000000183581E40
+		public IContractResolver ContractResolver { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8D1C0-0x0000000184D8D1D0 0x0000000186AC5B08-0x0000000186AC5B1C
+		public IEqualityComparer EqualityComparer { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D88590-0x0000000184D885A0 0x0000000186AC5B1C-0x0000000186AC5B30
+		public Func<IReferenceResolver> ReferenceResolverProvider { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8D1A0-0x0000000184D8D1B0 0x0000000186AC5AE0-0x0000000186AC5AF4
+		public ITraceWriter TraceWriter { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D877C0-0x0000000184D877D0 0x0000000186790298-0x00000001867902AC
+		public ISerializationBinder SerializationBinder { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D87D50-0x0000000184D87D60 0x00000001867A5EA0-0x00000001867A5EB4
+		[Nullable(new byte[2] {2, 1 })]
+		public EventHandler<ErrorEventArgs> Error { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D85F90-0x0000000184D85FA0 0x00000001868C2E50-0x00000001868C2E64
+		public StreamingContext Context { get; } // 0x000000018A8A9F74-0x000000018A8AA010 
+		public int? MaxDepth { set; } // 0x0000000184CAB710-0x0000000184CAB780
+		public Newtonsoft.Json.Formatting Formatting { set; } // 0x0000000183581E40-0x0000000183581EA0
+		public bool CheckAdditionalContent { get; } // 0x000000018A8A9F3C-0x000000018A8A9F74 
 	
 		// Constructors
-		static JsonSerializerSettings() {} // 0x0000000185F4E0C0-0x0000000185F4E150
-		public JsonSerializerSettings() {} // 0x000000018550B1D0-0x000000018550B250
-		public JsonSerializerSettings(JsonSerializerSettings original) {} // 0x000000018550B250-0x000000018550B480
+		static JsonSerializerSettings(); // 0x0000000184D21F60-0x0000000184D21FF0
+		[DebuggerStepThrough]
+		public JsonSerializerSettings(); // 0x00000001835A41B0-0x00000001835A4230
+		[NullableContext(1)]
+		public JsonSerializerSettings(JsonSerializerSettings original); // 0x00000001835A4230-0x00000001835A4460
 	}
 
-	public class JsonTextReader : JsonReader, IJsonLineInfo // TypeDefIndex: 52616
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JsonTextReader : JsonReader, IJsonLineInfo // TypeDefIndex: 55298
 	{
 		// Fields
 		private readonly bool _safeAsync; // 0x78
 		private readonly TextReader _reader; // 0x80
+		[Nullable(2)]
 		private char[] _chars; // 0x88
 		private int _charsUsed; // 0x90
 		private int _charPos; // 0x94
@@ -814,94 +955,103 @@ namespace Newtonsoft.Json
 		private bool _isEndOfFile; // 0xA0
 		private StringBuffer _stringBuffer; // 0xA8
 		private StringReference _stringReference; // 0xB8
+		[Nullable(2)]
 		private IArrayPool<char> _arrayPool; // 0xC8
+		[CompilerGenerated]
+		[Nullable(2)]
 		private JsonNameTable _PropertyNameTable_k__BackingField; // 0xD0
 	
 		// Properties
-		public JsonNameTable PropertyNameTable { get; set; } // 0x0000000185FB15A0-0x0000000185FB15B0 0x000000018774BD78-0x000000018774BD8C
-		public int LineNumber { get => default; } // 0x00000001845946E0-0x0000000184594750 
-		public int LinePosition { get => default; } // 0x0000000185FD20A0-0x0000000185FD20B0 
+		[Nullable(2)]
+		public JsonNameTable PropertyNameTable { [NullableContext(2)] [CompilerGenerated] get; [NullableContext(2)] [CompilerGenerated] set; } // 0x0000000184D876B0-0x0000000184D876C0 0x000000018678D7BC-0x000000018678D7D0
+		public int LineNumber { get; } // 0x0000000183427620-0x0000000183427670 
+		public int LinePosition { get; } // 0x0000000184DA5C50-0x0000000184DA5C60 
 	
 		// Constructors
-		public JsonTextReader() {} // Dummy constructor
-		public JsonTextReader(TextReader reader) {} // 0x00000001845904B0-0x00000001845905D0
+		public JsonTextReader(TextReader reader); // 0x00000001835A6C60-0x00000001835A6D00
 	
 		// Methods
-		private void EnsureBufferNotEmpty() {} // 0x0000000184694660-0x00000001846946D0
-		private void SetNewLine(bool hasNextChar) {} // 0x0000000184023120-0x0000000184023180
-		private void OnNewLine(int pos) {} // 0x0000000185FD2070-0x0000000185FD2080
-		private void ParseString(char quote, ReadType readType) {} // 0x00000001841D6A90-0x00000001841D6BC0
-		private void ParseReadString(char quote, ReadType readType) {} // 0x00000001841D6250-0x00000001841D6A90
-		private static void BlockCopyChars(char[] src, int srcOffset, char[] dst, int dstOffset, int count) {} // 0x00000001841B2790-0x00000001841B27B0
-		private void ShiftBufferIfNeeded() {} // 0x00000001841D80B0-0x00000001841D81A0
-		private int ReadData(bool append) => default; // 0x000000018646E1F4-0x000000018646E200
-		private void PrepareBufferForReadData(bool append, int charsRequired) {} // 0x0000000184859100-0x0000000184859200
-		private int ReadData(bool append, int charsRequired) => default; // 0x0000000184858F70-0x0000000184859070
-		private bool EnsureChars(int relativePosition, bool append) => default; // 0x0000000184022E00-0x0000000184022F80
-		private bool ReadChars(int relativePosition, bool append) => default; // 0x0000000184858E20-0x0000000184858F70
-		public override bool Read() => default; // 0x00000001840227C0-0x0000000184022980
-		public override int? ReadAsInt32() => default; // 0x00000001841D3E50-0x00000001841D3F40
-		public override System.DateTime? ReadAsDateTime() => default; // 0x000000018B3DBA28-0x000000018B3DBAAC
-		public override string ReadAsString() => default; // 0x00000001841D7EA0-0x00000001841D7F00
-		public override byte[] ReadAsBytes() => default; // 0x000000018B3DB4E0-0x000000018B3DB99C
-		private object ReadStringValue(ReadType readType) => default; // 0x00000001841D6BC0-0x00000001841D7EA0
-		private object FinishReadQuotedStringValue(ReadType readType) => default; // 0x00000001841D60F0-0x00000001841D6250
-		private JsonReaderException CreateUnexpectedCharacterException(char c) => default; // 0x000000018B3DA2CC-0x000000018B3DA378
-		public override bool? ReadAsBoolean() => default; // 0x00000001841D4580-0x00000001841D54F0
-		private void ProcessValueComma() {} // 0x000000018B3DB478-0x000000018B3DB4E0
-		private object ReadNumberValue(ReadType readType) => default; // 0x00000001841D3F40-0x00000001841D4580
-		private object FinishReadQuotedNumber(ReadType readType) => default; // 0x000000018B3DA3B4-0x000000018B3DA514
-		public override DateTimeOffset? ReadAsDateTimeOffset() => default; // 0x000000018B3DB99C-0x000000018B3DBA28
-		public override decimal? ReadAsDecimal() => default; // 0x000000018B3DBAAC-0x000000018B3DBB38
-		public override double? ReadAsDouble() => default; // 0x00000001841D3D60-0x00000001841D3E50
-		private void HandleNull() {} // 0x000000018B3DA514-0x000000018B3DA5F0
-		private void ReadFinished() {} // 0x000000018B3DBB38-0x000000018B3DBC84
-		private bool ReadNullChar() => default; // 0x00000001841D5BE0-0x00000001841D5C20
-		private void EnsureBuffer() {} // 0x0000000184022980-0x0000000184022A30
-		private void ReadStringIntoBuffer(char quote) {} // 0x00000001840244C0-0x0000000184024D60
-		private void FinishReadStringIntoBuffer(int charPos, int initialPosition, int lastWritePosition) {} // 0x0000000184022BD0-0x0000000184022E00
-		private void WriteCharToBuffer(char writeChar, int lastWritePosition, int writeToPosition) {} // 0x000000018538EE00-0x000000018538EE70
-		private char ConvertUnicode(bool enoughChars) => default; // 0x000000018B3DA150-0x000000018B3DA2CC
-		private char ParseUnicode() => default; // 0x000000018B3DB33C-0x000000018B3DB368
-		private void ReadNumberIntoBuffer() {} // 0x0000000184023230-0x00000001840232B0
-		private bool ReadNumberCharIntoBuffer(char currentChar, int charPos) => default; // 0x0000000184024F90-0x0000000184025150
-		private void ClearRecentString() {} // 0x0000000185FD2050-0x0000000185FD2070
-		private bool ParsePostValue(bool ignoreComments) => default; // 0x00000001840232B0-0x0000000184023A10
-		private bool ParseObject() => default; // 0x0000000184023E30-0x00000001840244C0
-		private bool ParseProperty() => default; // 0x0000000184025150-0x0000000184025A20
-		private bool ValidIdentifierChar(char value) => default; // 0x000000018B3DBE34-0x000000018B3DBE8C
-		private void ParseUnquotedProperty() {} // 0x000000018B3DB368-0x000000018B3DB478
-		private bool ReadUnquotedPropertyReportIfDone(char currentChar, int initialPosition) => default; // 0x000000018B3DBC84-0x000000018B3DBDE0
-		private bool ParseValue() => default; // 0x000000018411DCB0-0x000000018411EA70
-		private void ProcessLineFeed() {} // 0x0000000185FD2080-0x0000000185FD20A0
-		private void ProcessCarriageReturn(bool append) {} // 0x0000000184022F80-0x0000000184023120
-		private void EatWhitespace() {} // 0x00000001841D8770-0x00000001841D8B70
-		private void ParseConstructor() {} // 0x000000018B3DA90C-0x000000018B3DACE4
-		private void ParseNumber(ReadType readType) {} // 0x00000001841D7F00-0x00000001841D80B0
-		private void ParseReadNumber(ReadType readType, char firstChar, int initialPosition) {} // 0x00000001841D91D0-0x00000001841DB310
-		private JsonReaderException ThrowReaderError(string message, Exception ex = null) => default; // 0x000000018B3DBDE0-0x000000018B3DBE34
-		private static object BigIntegerParse(string number, CultureInfo culture) => default; // 0x000000018B3DA0E0-0x000000018B3DA150
-		private void ParseComment(bool setToken) {} // 0x000000018B3DA5F0-0x000000018B3DA90C
-		private void EndComment(bool setToken, int initialPosition, int endPosition) {} // 0x000000018B3DA378-0x000000018B3DA3B4
-		private bool MatchValue(string value) => default; // 0x00000001841D5960-0x00000001841D5B50
-		private bool MatchValue(bool enoughChars, string value) => default; // 0x00000001841D5B50-0x00000001841D5BE0
-		private bool MatchValueWithTrailingSeparator(string value) => default; // 0x00000001841D5580-0x00000001841D58F0
-		private bool IsSeparator(char c) => default; // 0x00000001841D58F0-0x00000001841D5960
-		private void ParseTrue() {} // 0x00000001841D3AB0-0x00000001841D3B80
-		private void ParseNull() {} // 0x0000000185EC4070-0x0000000185EC40F0
-		private void ParseUndefined() {} // 0x000000018B3DB29C-0x000000018B3DB33C
-		private void ParseFalse() {} // 0x00000001841D3B80-0x00000001841D3C50
-		private object ParseNumberNegativeInfinity(ReadType readType) => default; // 0x000000018B3DB044-0x000000018B3DB0B4
-		private object ParseNumberNegativeInfinity(ReadType readType, bool matched) => default; // 0x000000018B3DAECC-0x000000018B3DB044
-		private object ParseNumberPositiveInfinity(ReadType readType) => default; // 0x000000018B3DB22C-0x000000018B3DB29C
-		private object ParseNumberPositiveInfinity(ReadType readType, bool matched) => default; // 0x000000018B3DB0B4-0x000000018B3DB22C
-		private object ParseNumberNaN(ReadType readType) => default; // 0x000000018B3DACE4-0x000000018B3DAD54
-		private object ParseNumberNaN(ReadType readType, bool matched) => default; // 0x000000018B3DAD54-0x000000018B3DAECC
-		public override void Close() {} // 0x0000000184F70390-0x0000000184F70480
-		public bool HasLineInfo() => default; // 0x00000001840A27C0-0x00000001840A27D0
+		private void EnsureBufferNotEmpty(); // 0x0000000183778750-0x00000001837787C0
+		private void SetNewLine(bool hasNextChar); // 0x0000000182F054D0-0x0000000182F05530
+		private void OnNewLine(int pos); // 0x0000000184DA5C20-0x0000000184DA5C30
+		private void ParseString(char quote, ReadType readType); // 0x0000000182FBB340-0x0000000182FBB470
+		private void ParseReadString(char quote, ReadType readType); // 0x0000000182FBAF00-0x0000000182FBB340
+		private static void BlockCopyChars(char[] src, int srcOffset, char[] dst, int dstOffset, int count); // 0x00000001832A9100-0x00000001832A9120
+		private void ShiftBufferIfNeeded(); // 0x0000000182F04780-0x0000000182F04870
+		private int ReadData(bool append); // 0x0000000185390C28-0x0000000185390C34
+		private void PrepareBufferForReadData(bool append, int charsRequired); // 0x0000000183777AF0-0x0000000183777C90
+		private int ReadData(bool append, int charsRequired); // 0x0000000183777960-0x0000000183777A60
+		private bool EnsureChars(int relativePosition, bool append); // 0x0000000182F051B0-0x0000000182F05330
+		private bool ReadChars(int relativePosition, bool append); // 0x0000000183777810-0x0000000183777960
+		public override bool Read(); // 0x0000000182F04D70-0x0000000182F04F00
+		public override int? ReadAsInt32(); // 0x0000000182FBC490-0x0000000182FBC540
+		public override System.DateTime? ReadAsDateTime(); // 0x000000018A8AC234-0x000000018A8AC2B8
+		[NullableContext(2)]
+		public override string ReadAsString(); // 0x0000000182FB86A0-0x0000000182FB86E0
+		[NullableContext(2)]
+		public override byte[] ReadAsBytes(); // 0x000000018A8ABCEC-0x000000018A8AC1A8
+		[NullableContext(2)]
+		private object ReadStringValue(ReadType readType); // 0x0000000182FB7970-0x0000000182FB86A0
+		[NullableContext(2)]
+		private object FinishReadQuotedStringValue(ReadType readType); // 0x0000000183A6E710-0x0000000183A6EA80
+		private JsonReaderException CreateUnexpectedCharacterException(char c); // 0x000000018A8AAA20-0x000000018A8AAACC
+		public override bool? ReadAsBoolean(); // 0x00000001834288E0-0x0000000183429720
+		private void ProcessValueComma(); // 0x000000018A8ABC84-0x000000018A8ABCEC
+		[NullableContext(2)]
+		private object ReadNumberValue(ReadType readType); // 0x0000000182FBC540-0x0000000182FBCB20
+		[NullableContext(2)]
+		private object FinishReadQuotedNumber(ReadType readType); // 0x000000018A8AAB08-0x000000018A8AAC68
+		public override DateTimeOffset? ReadAsDateTimeOffset(); // 0x000000018A8AC1A8-0x000000018A8AC234
+		public override decimal? ReadAsDecimal(); // 0x000000018A8AC2B8-0x000000018A8AC344
+		public override double? ReadAsDouble(); // 0x0000000182FBC3D0-0x0000000182FBC490
+		private void HandleNull(); // 0x000000018A8AAC68-0x000000018A8AAD44
+		private void ReadFinished(); // 0x000000018A8AC344-0x000000018A8AC494
+		private bool ReadNullChar(); // 0x0000000183429DB0-0x0000000183429DF0
+		private void EnsureBuffer(); // 0x0000000182F04F00-0x0000000182F04F80
+		private void ReadStringIntoBuffer(char quote); // 0x0000000182F06BF0-0x0000000182F07490
+		private void FinishReadStringIntoBuffer(int charPos, int initialPosition, int lastWritePosition); // 0x0000000182F04F80-0x0000000182F051B0
+		private void WriteCharToBuffer(char writeChar, int lastWritePosition, int writeToPosition); // 0x0000000184208C00-0x0000000184208C70
+		private char ConvertUnicode(bool enoughChars); // 0x000000018A8AA890-0x000000018A8AAA20
+		private char ParseUnicode(); // 0x000000018A8ABB48-0x000000018A8ABB74
+		private void ReadNumberIntoBuffer(); // 0x0000000182F05CF0-0x0000000182F05D70
+		private bool ReadNumberCharIntoBuffer(char currentChar, int charPos); // 0x0000000182F07660-0x0000000182F077C0
+		private void ClearRecentString(); // 0x0000000184DA5C00-0x0000000184DA5C20
+		private bool ParsePostValue(bool ignoreComments); // 0x0000000182F05E20-0x0000000182F06270
+		private bool ParseObject(); // 0x0000000182F06810-0x0000000182F06BF0
+		private bool ParseProperty(); // 0x0000000182F05530-0x0000000182F05CF0
+		private bool ValidIdentifierChar(char value); // 0x000000018A8AC644-0x000000018A8AC69C
+		private void ParseUnquotedProperty(); // 0x000000018A8ABB74-0x000000018A8ABC84
+		private bool ReadUnquotedPropertyReportIfDone(char currentChar, int initialPosition); // 0x000000018A8AC494-0x000000018A8AC5F0
+		private bool ParseValue(); // 0x0000000182FBB980-0x0000000182FBC2A0
+		private void ProcessLineFeed(); // 0x0000000184DA5C30-0x0000000184DA5C50
+		private void ProcessCarriageReturn(bool append); // 0x0000000182F05330-0x0000000182F054D0
+		private void EatWhitespace(); // 0x0000000182F03EE0-0x0000000182F04190
+		private void ParseConstructor(); // 0x000000018A8AB05C-0x000000018A8AB428
+		private void ParseNumber(ReadType readType); // 0x0000000182FB86E0-0x0000000182FB8890
+		private void ParseReadNumber(ReadType readType, char firstChar, int initialPosition); // 0x0000000182FB8F70-0x0000000182FBAEA0
+		private JsonReaderException ThrowReaderError(string message, [Nullable(2)] Exception ex = null); // 0x000000018A8AC5F0-0x000000018A8AC644
+		private static object BigIntegerParse(string number, CultureInfo culture); // 0x000000018A8AA820-0x000000018A8AA890
+		private void ParseComment(bool setToken); // 0x000000018A8AAD44-0x000000018A8AB05C
+		private void EndComment(bool setToken, int initialPosition, int endPosition); // 0x000000018A8AAACC-0x000000018A8AAB08
+		private bool MatchValue(string value); // 0x0000000183429B30-0x0000000183429D20
+		private bool MatchValue(bool enoughChars, string value); // 0x0000000183429D20-0x0000000183429DB0
+		private bool MatchValueWithTrailingSeparator(string value); // 0x0000000183429790-0x0000000183429AE0
+		private bool IsSeparator(char c); // 0x0000000183429AE0-0x0000000183429B30
+		private void ParseTrue(); // 0x000000018A8AB9E0-0x000000018A8ABAA8
+		private void ParseNull(); // 0x000000018342A3B0-0x000000018342A430
+		private void ParseUndefined(); // 0x000000018A8ABAA8-0x000000018A8ABB48
+		private void ParseFalse(); // 0x0000000183428810-0x00000001834288E0
+		private object ParseNumberNegativeInfinity(ReadType readType); // 0x000000018A8AB788-0x000000018A8AB7F8
+		private object ParseNumberNegativeInfinity(ReadType readType, bool matched); // 0x000000018A8AB610-0x000000018A8AB788
+		private object ParseNumberPositiveInfinity(ReadType readType); // 0x000000018A8AB970-0x000000018A8AB9E0
+		private object ParseNumberPositiveInfinity(ReadType readType, bool matched); // 0x000000018A8AB7F8-0x000000018A8AB970
+		private object ParseNumberNaN(ReadType readType); // 0x000000018A8AB428-0x000000018A8AB498
+		private object ParseNumberNaN(ReadType readType, bool matched); // 0x000000018A8AB498-0x000000018A8AB610
+		public override void Close(); // 0x00000001837785D0-0x0000000183778690
+		public bool HasLineInfo(); // 0x0000000182FFF600-0x0000000182FFF610
 	}
 
-	internal enum ReadType // TypeDefIndex: 52617
+	internal enum ReadType // TypeDefIndex: 55299
 	{
 		Read = 0,
 		ReadAsInt32 = 1,
@@ -915,85 +1065,101 @@ namespace Newtonsoft.Json
 		ReadAsBoolean = 9
 	}
 
-	public class JsonTextWriter : JsonWriter // TypeDefIndex: 52618
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JsonTextWriter : JsonWriter // TypeDefIndex: 55300
 	{
 		// Fields
 		private readonly bool _safeAsync; // 0x60
 		private readonly TextWriter _writer; // 0x68
+		[Nullable(2)]
 		private Newtonsoft.Json.Utilities.Base64Encoder _base64Encoder; // 0x70
 		private char _indentChar; // 0x78
 		private int _indentation; // 0x7C
 		private char _quoteChar; // 0x80
 		private bool _quoteName; // 0x82
+		[Nullable(2)]
 		private bool[] _charEscapeFlags; // 0x88
+		[Nullable(2)]
 		private char[] _writeBuffer; // 0x90
+		[Nullable(2)]
 		private IArrayPool<char> _arrayPool; // 0x98
+		[Nullable(2)]
 		private char[] _indentChars; // 0xA0
 	
 		// Properties
-		private Newtonsoft.Json.Utilities.Base64Encoder Base64Encoder { get => default; } // 0x000000018B3DCEF4-0x000000018B3DCF78 
-		public char QuoteChar { get => default; } // 0x0000000185FD20B0-0x0000000185FD20C0 
+		private Newtonsoft.Json.Utilities.Base64Encoder Base64Encoder { get; } // 0x000000018A8AD770-0x000000018A8AD7F4 
+		public char QuoteChar { get; } // 0x0000000184DA5C60-0x0000000184DA5C70 
 	
 		// Constructors
-		public JsonTextWriter() {} // Dummy constructor
-		public JsonTextWriter(TextWriter textWriter) {} // 0x0000000184593080-0x0000000184593190
+		public JsonTextWriter(TextWriter textWriter); // 0x0000000183425CE0-0x0000000183425DF0
 	
 		// Methods
-		public override void Close() {} // 0x0000000184F702F0-0x0000000184F70320
-		private void CloseBufferAndWriter() {} // 0x0000000184F70320-0x0000000184F70390
-		public override void WriteStartObject() {} // 0x0000000184694AF0-0x0000000184694B30
-		public override void WriteStartArray() {} // 0x0000000184694440-0x0000000184694480
-		public override void WriteStartConstructor(string name) {} // 0x000000018B3DC030-0x000000018B3DC0C8
-		protected override void WriteEnd(JsonToken token) {} // 0x0000000184694B30-0x0000000184694B90
-		public override void WritePropertyName(string name) {} // 0x0000000184694A90-0x0000000184694AF0
-		public override void WritePropertyName(string name, bool escape) {} // 0x0000000184694F20-0x0000000184695000
-		internal override void OnStringEscapeHandlingChanged() {} // 0x000000018B3DBE8C-0x000000018B3DBE94
-		private void UpdateCharEscapeFlags() {} // 0x0000000184593190-0x0000000184593210
-		protected override void WriteIndent() {} // 0x00000001841C2FA0-0x00000001841C3080
-		private int SetIndentChars() => default; // 0x00000001841C3140-0x00000001841C3230
-		protected override void WriteValueDelimiter() {} // 0x0000000184694B90-0x0000000184694BC0
-		protected override void WriteIndentSpace() {} // 0x0000000184694D30-0x0000000184694D60
-		private void WriteValueInternal(string value, JsonToken token) {} // 0x0000000184695990-0x00000001846959C0
-		public override void WriteValue(object value) {} // 0x000000018B3DC474-0x000000018B3DC53C
-		public override void WriteNull() {} // 0x000000018B3DBFA4-0x000000018B3DC00C
-		public override void WriteUndefined() {} // 0x000000018B3DC0C8-0x000000018B3DC130
-		public override void WriteRaw(string json) {} // 0x000000018B3DC00C-0x000000018B3DC030
-		public override void WriteValue(string value) {} // 0x0000000184694900-0x0000000184694970
-		private void WriteEscapedString(string value, bool quote) {} // 0x0000000184694C00-0x0000000184694CE0
-		public override void WriteValue(int value) {} // 0x00000001846943D0-0x0000000184694440
-		public override void WriteValue(uint value) {} // 0x000000018B3DC73C-0x000000018B3DC770
-		public override void WriteValue(long value) {} // 0x00000001846948C0-0x0000000184694900
-		public override void WriteValue(ulong value) {} // 0x000000018B3DCD60-0x000000018B3DCD98
-		public override void WriteValue(float value) {} // 0x000000018B3DCD98-0x000000018B3DCE30
-		public override void WriteValue(float? value) {} // 0x000000018B3DCE30-0x000000018B3DCEF4
-		public override void WriteValue(double value) {} // 0x000000018B3DCCC8-0x000000018B3DCD60
-		public override void WriteValue(double? value) {} // 0x000000018B3DC53C-0x000000018B3DC604
-		public override void WriteValue(bool value) {} // 0x0000000184694970-0x0000000184694A00
-		public override void WriteValue(short value) {} // 0x000000018B3DC604-0x000000018B3DC638
-		public override void WriteValue(ushort value) {} // 0x000000018B3DC708-0x000000018B3DC73C
-		public override void WriteValue(char value) {} // 0x000000018B3DCC58-0x000000018B3DCCC8
-		public override void WriteValue(byte value) {} // 0x000000018B3DCC24-0x000000018B3DCC58
-		public override void WriteValue(sbyte value) {} // 0x000000018B3DC9BC-0x000000018B3DC9F0
-		public override void WriteValue(decimal value) {} // 0x000000018B3DC8AC-0x000000018B3DC924
-		public override void WriteValue(System.DateTime value) {} // 0x000000018B3DC9F0-0x000000018B3DCB48
-		private int WriteValueToBuffer(System.DateTime value) => default; // 0x000000018B3DC294-0x000000018B3DC3B8
-		public override void WriteValue(byte[] value) {} // 0x000000018B3DC3B8-0x000000018B3DC474
-		public override void WriteValue(DateTimeOffset value) {} // 0x000000018B3DC770-0x000000018B3DC8AC
-		private int WriteValueToBuffer(DateTimeOffset value) => default; // 0x000000018B3DC130-0x000000018B3DC294
-		public override void WriteValue(Guid value) {} // 0x000000018B3DC638-0x000000018B3DC708
-		public override void WriteValue(TimeSpan value) {} // 0x000000018B3DCB48-0x000000018B3DCC24
-		public override void WriteValue(System.Uri value) {} // 0x000000018B3DC924-0x000000018B3DC9BC
-		public override void WriteComment(string text) {} // 0x000000018B3DBE94-0x000000018B3DBF30
-		private void EnsureWriteBuffer() {} // 0x0000000184694CE0-0x0000000184694D30
-		private void WriteIntegerValue(long value) {} // 0x00000001846959C0-0x00000001846959F0
-		private void WriteIntegerValue(ulong value, bool negative) {} // 0x0000000184694710-0x00000001846947A0
-		private int WriteNumberToBuffer(ulong value, bool negative) => default; // 0x00000001846947A0-0x00000001846947E0
-		private void WriteIntegerValue(int value) {} // 0x0000000184695B10-0x0000000184695B60
-		private void WriteIntegerValue(uint value, bool negative) {} // 0x000000018B3DBF30-0x000000018B3DBFA4
-		private int WriteNumberToBuffer(uint value, bool negative) => default; // 0x00000001846947E0-0x0000000184694890
+		public override void Close(); // 0x0000000183778720-0x0000000183778750
+		private void CloseBufferAndWriter(); // 0x0000000183778560-0x00000001837785D0
+		public override void WriteStartObject(); // 0x0000000183778CB0-0x0000000183778CF0
+		public override void WriteStartArray(); // 0x0000000183777750-0x0000000183777810
+		public override void WriteStartConstructor(string name); // 0x000000018A8AC894-0x000000018A8AC92C
+		protected override void WriteEnd(JsonToken token); // 0x0000000183778CF0-0x0000000183778D50
+		public override void WritePropertyName(string name); // 0x0000000183778B30-0x0000000183778B90
+		public override void WritePropertyName(string name, bool escape); // 0x0000000183779260-0x0000000183779340
+		internal override void OnStringEscapeHandlingChanged(); // 0x000000018A8AC69C-0x000000018A8AC6A4
+		private void UpdateCharEscapeFlags(); // 0x0000000183425DF0-0x0000000183425E70
+		protected override void WriteIndent(); // 0x0000000183779EA0-0x0000000183779F50
+		private int SetIndentChars(); // 0x0000000183779FD0-0x000000018377A0C0
+		protected override void WriteValueDelimiter(); // 0x0000000183778E60-0x0000000183778E90
+		protected override void WriteIndentSpace(); // 0x0000000183778ED0-0x0000000183778F00
+		private void WriteValueInternal(string value, JsonToken token); // 0x0000000183779620-0x0000000183779650
+		[NullableContext(2)]
+		public override void WriteValue(object value); // 0x000000018A8ACCD8-0x000000018A8ACDA0
+		public override void WriteNull(); // 0x000000018A8AC808-0x000000018A8AC870
+		public override void WriteUndefined(); // 0x000000018A8AC92C-0x000000018A8AC994
+		[NullableContext(2)]
+		public override void WriteRaw(string json); // 0x000000018A8AC870-0x000000018A8AC894
+		[NullableContext(2)]
+		public override void WriteValue(string value); // 0x0000000183778B90-0x0000000183778BE0
+		private void WriteEscapedString(string value, bool quote); // 0x0000000183778D50-0x0000000183778E10
+		public override void WriteValue(int value); // 0x000000018A8ACDA0-0x000000018A8ACDD4
+		[CLSCompliant(false)]
+		public override void WriteValue(uint value); // 0x000000018A8ACFD4-0x000000018A8AD008
+		public override void WriteValue(long value); // 0x0000000183778AF0-0x0000000183778B30
+		[CLSCompliant(false)]
+		public override void WriteValue(ulong value); // 0x000000018A8AD5F8-0x000000018A8AD630
+		public override void WriteValue(float value); // 0x000000018A8AD630-0x000000018A8AD6AC
+		public override void WriteValue(float? value); // 0x000000018A8AD6AC-0x000000018A8AD770
+		public override void WriteValue(double value); // 0x000000018A8AD560-0x000000018A8AD5F8
+		public override void WriteValue(double? value); // 0x000000018A8ACDD4-0x000000018A8ACE9C
+		public override void WriteValue(bool value); // 0x0000000183778BE0-0x0000000183778C50
+		public override void WriteValue(short value); // 0x000000018A8ACE9C-0x000000018A8ACED0
+		[CLSCompliant(false)]
+		public override void WriteValue(ushort value); // 0x000000018A8ACFA0-0x000000018A8ACFD4
+		public override void WriteValue(char value); // 0x000000018A8AD4F0-0x000000018A8AD560
+		public override void WriteValue(byte value); // 0x000000018A8AD4BC-0x000000018A8AD4F0
+		[CLSCompliant(false)]
+		public override void WriteValue(sbyte value); // 0x000000018A8AD254-0x000000018A8AD288
+		public override void WriteValue(decimal value); // 0x000000018A8AD144-0x000000018A8AD1BC
+		public override void WriteValue(System.DateTime value); // 0x000000018A8AD288-0x000000018A8AD3E0
+		private int WriteValueToBuffer(System.DateTime value); // 0x000000018A8ACAF8-0x000000018A8ACC1C
+		[NullableContext(2)]
+		public override void WriteValue(byte[] value); // 0x000000018A8ACC1C-0x000000018A8ACCD8
+		public override void WriteValue(DateTimeOffset value); // 0x000000018A8AD008-0x000000018A8AD144
+		private int WriteValueToBuffer(DateTimeOffset value); // 0x000000018A8AC994-0x000000018A8ACAF8
+		public override void WriteValue(Guid value); // 0x000000018A8ACED0-0x000000018A8ACFA0
+		public override void WriteValue(TimeSpan value); // 0x000000018A8AD3E0-0x000000018A8AD4BC
+		[NullableContext(2)]
+		public override void WriteValue(System.Uri value); // 0x000000018A8AD1BC-0x000000018A8AD254
+		[NullableContext(2)]
+		public override void WriteComment(string text); // 0x000000018A8AC6A4-0x000000018A8AC740
+		private void EnsureWriteBuffer(); // 0x0000000183778E10-0x0000000183778E60
+		private void WriteIntegerValue(long value); // 0x0000000183779650-0x0000000183779680
+		private void WriteIntegerValue(ulong value, bool negative); // 0x0000000183778940-0x00000001837789D0
+		private int WriteNumberToBuffer(ulong value, bool negative); // 0x00000001837789D0-0x0000000183778A10
+		private void WriteIntegerValue(int value); // 0x000000018A8AC7B4-0x000000018A8AC808
+		private void WriteIntegerValue(uint value, bool negative); // 0x000000018A8AC740-0x000000018A8AC7B4
+		private int WriteNumberToBuffer(uint value, bool negative); // 0x0000000183778A10-0x0000000183778AC0
 	}
 
-	public enum JsonToken // TypeDefIndex: 52619
+	public enum JsonToken // TypeDefIndex: 55301
 	{
 		None = 0,
 		StartObject = 1,
@@ -1015,41 +1181,50 @@ namespace Newtonsoft.Json
 		Bytes = 17
 	}
 
-	public abstract class JsonWriter : IDisposable // TypeDefIndex: 52621
+	[Nullable(0)]
+	[NullableContext(1)]
+	public abstract class JsonWriter : IDisposable // TypeDefIndex: 55303
 	{
 		// Fields
 		private static readonly State[][] StateArray; // 0x00
 		internal static readonly State[][] StateArrayTemplate; // 0x08
+		[Nullable(2)]
 		private List<JsonPosition> _stack; // 0x10
 		private JsonPosition _currentPosition; // 0x18
 		private State _currentState; // 0x30
 		private Newtonsoft.Json.Formatting _formatting; // 0x34
+		[CompilerGenerated]
 		private bool _CloseOutput_k__BackingField; // 0x38
+		[CompilerGenerated]
 		private bool _AutoCompleteOnClose_k__BackingField; // 0x39
 		private DateFormatHandling _dateFormatHandling; // 0x3C
 		private DateTimeZoneHandling _dateTimeZoneHandling; // 0x40
 		private StringEscapeHandling _stringEscapeHandling; // 0x44
 		private FloatFormatHandling _floatFormatHandling; // 0x48
+		[Nullable(2)]
 		private string _dateFormatString; // 0x50
+		[Nullable(2)]
 		private CultureInfo _culture; // 0x58
 	
 		// Properties
-		public bool CloseOutput { get; set; } // 0x0000000185FB0700-0x0000000185FB0710 0x0000000185FAFE20-0x0000000185FAFE30
-		public bool AutoCompleteOnClose { get; set; } // 0x0000000185FB0710-0x0000000185FB0720 0x0000000185FB0720-0x0000000185FB0730
-		protected internal int Top { get; } // 0x00000001841C30E0-0x00000001841C3140 
-		public Newtonsoft.Json.WriteState WriteState { get; } // 0x000000018B3DDF64-0x000000018B3DE068 
-		internal string ContainerPath { get; } // 0x000000018B3DDDEC-0x000000018B3DDE70 
-		public string Path { get; } // 0x000000018B3DDE70-0x000000018B3DDF64 
-		public Newtonsoft.Json.Formatting Formatting { get; set; } // 0x0000000185FB07C0-0x0000000185FB07D0 0x0000000184592EB0-0x0000000184592ED0
-		public DateFormatHandling DateFormatHandling { get; set; } // 0x0000000185FB0790-0x0000000185FB07A0 0x000000018B3DE068-0x000000018B3DE0D0
-		public DateTimeZoneHandling DateTimeZoneHandling { get; set; } // 0x00000001813ECF10-0x00000001813ECF20 0x000000018B3DE0D0-0x000000018B3DE138
-		public StringEscapeHandling StringEscapeHandling { get; set; } // 0x0000000183908D10-0x0000000183908D20 0x000000018B3DE1A0-0x000000018B3DE4F4
-		public FloatFormatHandling FloatFormatHandling { get; set; } // 0x0000000185FB0570-0x0000000185FB0580 0x000000018B3DE138-0x000000018B3DE1A0
-		public string DateFormatString { get; set; } // 0x0000000181460F60-0x0000000181460F70 0x0000000184A4E570-0x0000000184A4E580
-		public CultureInfo Culture { get; set; } // 0x00000001850B8280-0x00000001850B82E0 0x0000000186472DB0-0x0000000186472DC0
+		public bool CloseOutput { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811F2A70-0x00000001811F2A80 0x00000001811F2A80-0x00000001811F2A90
+		public bool AutoCompleteOnClose { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86650-0x0000000184D86660 0x0000000184D86680-0x0000000184D86690
+		protected internal int Top { get; } // 0x0000000183779FA0-0x0000000183779FD0 
+		public Newtonsoft.Json.WriteState WriteState { get; } // 0x000000018A8AE7E8-0x000000018A8AE8EC 
+		internal string ContainerPath { get; } // 0x000000018A8AE670-0x000000018A8AE6F4 
+		public string Path { get; } // 0x000000018A8AE6F4-0x000000018A8AE7E8 
+		public Newtonsoft.Json.Formatting Formatting { get; set; } // 0x0000000184D86730-0x0000000184D86740 0x0000000183425B10-0x0000000183425B30
+		public DateFormatHandling DateFormatHandling { get; set; } // 0x0000000184D86640-0x0000000184D86650 0x000000018A8AE8EC-0x000000018A8AE954
+		public DateTimeZoneHandling DateTimeZoneHandling { get; set; } // 0x0000000184D865E0-0x0000000184D865F0 0x000000018A8AE954-0x000000018A8AE9BC
+		public StringEscapeHandling StringEscapeHandling { get; set; } // 0x0000000184D86530-0x0000000184D86540 0x000000018A8AEA24-0x000000018A8AEC7C
+		public FloatFormatHandling FloatFormatHandling { get; set; } // 0x0000000184D863D0-0x0000000184D863E0 0x000000018A8AE9BC-0x000000018A8AEA24
+		[Nullable(2)]
+		public string DateFormatString { [NullableContext(2)] get; [NullableContext(2)] set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
+		public CultureInfo Culture { get; set; } // 0x0000000183F71FB0-0x0000000183F72010 0x00000001836E5590-0x00000001836E55A0
 	
 		// Nested types
-		internal enum State // TypeDefIndex: 52620
+		[NullableContext(0)]
+		internal enum State // TypeDefIndex: 55302
 		{
 			Start = 0,
 			Property = 1,
@@ -1064,155 +1239,173 @@ namespace Newtonsoft.Json
 		}
 	
 		// Constructors
-		static JsonWriter() {} // 0x00000001848EC330-0x00000001848EC5F0
-		protected JsonWriter() {} // 0x0000000185FD20C0-0x0000000185FD20E0
+		static JsonWriter(); // 0x00000001837D9EE0-0x00000001837DA1A0
+		protected JsonWriter(); // 0x0000000184DA5C70-0x0000000184DA5C90
 	
 		// Methods
-		internal static State[][] BuildStateArray() => default; // 0x0000000184694480-0x0000000184694660
-		internal virtual void OnStringEscapeHandlingChanged() {} // 0x0000000185492010-0x0000000185492020
-		internal void UpdateScopeWithFinishedValue() {} // 0x0000000184695050-0x0000000184695060
-		private void Push(JsonContainerType value) {} // 0x0000000184695220-0x0000000184695340
-		private JsonContainerType Pop() => default; // 0x000000018468B780-0x000000018468B870
-		private JsonContainerType Peek() => default; // 0x00000001813AE560-0x00000001813AE570
-		public virtual void Close() {} // 0x00000001841C3080-0x00000001841C3090
-		public virtual void WriteStartObject() {} // 0x000000018646F4C4-0x000000018646F4D4
-		public virtual void WriteEndObject() {} // 0x0000000185A196D0-0x0000000185A196E0
-		public virtual void WriteStartArray() {} // 0x000000018646F4D4-0x000000018646F4E4
-		public virtual void WriteEndArray() {} // 0x0000000185A196C0-0x0000000185A196D0
-		public virtual void WriteStartConstructor(string name) {} // 0x000000018B3DD500-0x000000018B3DD510
-		public virtual void WriteEndConstructor() {} // 0x000000018B3DD3D4-0x000000018B3DD3E4
-		public virtual void WritePropertyName(string name) {} // 0x000000018646F4E4-0x000000018646F4EC
-		public virtual void WritePropertyName(string name, bool escape) {} // 0x0000000185D78A80-0x0000000185D78AA0
-		public virtual void WriteEnd() {} // 0x000000018B3DD3E4-0x000000018B3DD3F0
-		public void WriteToken(JsonReader reader) {} // 0x000000018646F474-0x000000018646F480
-		public void WriteToken(JsonReader reader, bool writeChildren) {} // 0x00000001845959C0-0x0000000184595A30
-		public void WriteToken(JsonToken token, object value) {} // 0x0000000184595D50-0x0000000184596090
-		internal virtual void WriteToken(JsonReader reader, bool writeChildren, bool writeDateConstructorAsDate, bool writeComments) {} // 0x0000000184595BC0-0x0000000184595D40
-		private bool IsWriteTokenIncomplete(JsonReader reader, bool writeChildren, int initialDepth) => default; // 0x0000000184595B10-0x0000000184595B60
-		private int CalculateWriteTokenInitialDepth(JsonReader reader) => default; // 0x0000000184596090-0x00000001845960E0
-		private int CalculateWriteTokenFinalDepth(JsonReader reader) => default; // 0x0000000184595B60-0x0000000184595BC0
-		private void WriteConstructorDate(JsonReader reader) {} // 0x000000018B3DD32C-0x000000018B3DD3D4
-		private void WriteEnd(JsonContainerType type) {} // 0x000000018B3DD3F0-0x000000018B3DD4B0
-		private void AutoCompleteAll() {} // 0x00000001841C3090-0x00000001841C30E0
-		private JsonToken GetCloseTokenForType(JsonContainerType type) => default; // 0x000000018468B6E0-0x000000018468B720
-		private void AutoCompleteClose(JsonContainerType type) {} // 0x000000018468B640-0x000000018468B6E0
-		private int CalculateLevelsToComplete(JsonContainerType type) => default; // 0x000000018468B720-0x000000018468B780
-		private void UpdateCurrentState() {} // 0x000000018468B870-0x000000018468B8B0
-		protected virtual void WriteEnd(JsonToken token) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void WriteIndent() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void WriteValueDelimiter() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void WriteIndentSpace() {} // 0x0000000185492010-0x0000000185492020
-		internal void AutoComplete(JsonToken tokenBeingWritten) {} // 0x0000000184695060-0x00000001846951A0
-		public virtual void WriteNull() {} // 0x000000018B3DD4B0-0x000000018B3DD4C0
-		public virtual void WriteUndefined() {} // 0x000000018B3DD510-0x000000018B3DD520
-		public virtual void WriteRaw(string json) {} // 0x0000000185492010-0x0000000185492020
-		public virtual void WriteRawValue(string json) {} // 0x000000018B3DD4C0-0x000000018B3DD500
-		public virtual void WriteValue(string value) {} // 0x000000018646F518-0x000000018646F528
-		public virtual void WriteValue(int value) {} // 0x000000018646F528-0x000000018646F538
-		public virtual void WriteValue(uint value) {} // 0x000000018646F528-0x000000018646F538
-		public virtual void WriteValue(long value) {} // 0x000000018646F528-0x000000018646F538
-		public virtual void WriteValue(ulong value) {} // 0x000000018646F528-0x000000018646F538
-		public virtual void WriteValue(float value) {} // 0x000000018B3DD6DC-0x000000018B3DD6EC
-		public virtual void WriteValue(double value) {} // 0x000000018B3DD6DC-0x000000018B3DD6EC
-		public virtual void WriteValue(bool value) {} // 0x000000018646E1C8-0x000000018646E1D8
-		public virtual void WriteValue(short value) {} // 0x000000018646F528-0x000000018646F538
-		public virtual void WriteValue(ushort value) {} // 0x000000018646F528-0x000000018646F538
-		public virtual void WriteValue(char value) {} // 0x000000018646F518-0x000000018646F528
-		public virtual void WriteValue(byte value) {} // 0x000000018646F528-0x000000018646F538
-		public virtual void WriteValue(sbyte value) {} // 0x000000018646F528-0x000000018646F538
-		public virtual void WriteValue(decimal value) {} // 0x000000018B3DD6DC-0x000000018B3DD6EC
-		public virtual void WriteValue(System.DateTime value) {} // 0x000000018B3DD58C-0x000000018B3DD59C
-		public virtual void WriteValue(DateTimeOffset value) {} // 0x000000018B3DD58C-0x000000018B3DD59C
-		public virtual void WriteValue(Guid value) {} // 0x000000018646F518-0x000000018646F528
-		public virtual void WriteValue(TimeSpan value) {} // 0x000000018646F518-0x000000018646F528
-		public virtual void WriteValue(int? value) {} // 0x000000018B3DDCB0-0x000000018B3DDD1C
-		public virtual void WriteValue(uint? value) {} // 0x000000018B3DD7B8-0x000000018B3DD824
-		public virtual void WriteValue(long? value) {} // 0x000000018B3DDA38-0x000000018B3DDAA0
-		public virtual void WriteValue(ulong? value) {} // 0x000000018B3DD8F8-0x000000018B3DD960
-		public virtual void WriteValue(float? value) {} // 0x000000018B3DD6EC-0x000000018B3DD758
-		public virtual void WriteValue(double? value) {} // 0x000000018B3DD824-0x000000018B3DD88C
-		public virtual void WriteValue(bool? value) {} // 0x000000018B3DDC10-0x000000018B3DDC7C
-		public virtual void WriteValue(short? value) {} // 0x000000018B3DD960-0x000000018B3DD9CC
-		public virtual void WriteValue(ushort? value) {} // 0x000000018B3DDD88-0x000000018B3DDDEC
-		public virtual void WriteValue(char? value) {} // 0x000000018B3DD520-0x000000018B3DD58C
-		public virtual void WriteValue(byte? value) {} // 0x000000018B3DD88C-0x000000018B3DD8F8
-		public virtual void WriteValue(sbyte? value) {} // 0x000000018B3DD674-0x000000018B3DD6DC
-		public virtual void WriteValue(decimal? value) {} // 0x000000018B3DD604-0x000000018B3DD674
-		public virtual void WriteValue(System.DateTime? value) {} // 0x000000018B3DD59C-0x000000018B3DD604
-		public virtual void WriteValue(DateTimeOffset? value) {} // 0x000000018B3DD9CC-0x000000018B3DDA38
-		public virtual void WriteValue(Guid? value) {} // 0x000000018B3DDD1C-0x000000018B3DDD88
-		public virtual void WriteValue(TimeSpan? value) {} // 0x000000018B3DD758-0x000000018B3DD7B8
-		public virtual void WriteValue(byte[] value) {} // 0x000000018B3DDC7C-0x000000018B3DDCB0
-		public virtual void WriteValue(System.Uri value) {} // 0x000000018B3DDAA0-0x000000018B3DDB14
-		public virtual void WriteValue(object value) {} // 0x000000018B3DDB14-0x000000018B3DDC10
-		public virtual void WriteComment(string text) {} // 0x000000018B3DD018-0x000000018B3DD028
-		void IDisposable.Dispose() {} // 0x00000001853F3330-0x00000001853F3390
-		protected virtual void Dispose(bool disposing) {} // 0x00000001853F3390-0x00000001853F33C0
-		internal static void WriteValue(JsonWriter writer, PrimitiveTypeCode typeCode, object value) {} // 0x00000001850542F0-0x00000001850546E0
-		private static void ResolveConvertibleValue(IConvertible convertible, out PrimitiveTypeCode typeCode, out object value) {
-			typeCode = default;
-			value = default;
-		} // 0x000000018B3DD028-0x000000018B3DD120
-		private static JsonWriterException CreateUnsupportedTypeException(JsonWriter writer, object value) => default; // 0x000000018B3DCF78-0x000000018B3DD018
-		protected void SetWriteState(JsonToken token, object value) {} // 0x000000018B3DD120-0x000000018B3DD32C
-		internal void InternalWriteEnd(JsonContainerType container) {} // 0x0000000186474F3C-0x0000000186474F44
-		internal void InternalWritePropertyName(string name) {} // 0x0000000184695000-0x0000000184695030
-		internal void InternalWriteRaw() {} // 0x0000000185492010-0x0000000185492020
-		internal void InternalWriteStart(JsonToken token, JsonContainerType container) {} // 0x0000000184694BC0-0x0000000184694C00
-		internal void InternalWriteValue(JsonToken token) {} // 0x0000000184695030-0x0000000184695050
-		internal void InternalWriteComment() {} // 0x000000018B3DD018-0x000000018B3DD028
+		internal static State[][] BuildStateArray(); // 0x00000001837D88D0-0x00000001837D8AB0
+		internal virtual void OnStringEscapeHandlingChanged(); // 0x00000001841E1670-0x00000001841E1680
+		internal void UpdateScopeWithFinishedValue(); // 0x0000000183779390-0x00000001837793A0
+		private void Push(JsonContainerType value); // 0x00000001837794C0-0x00000001837795A0
+		private JsonContainerType Pop(); // 0x0000000183637DA0-0x0000000183637E70
+		private JsonContainerType Peek(); // 0x00000001811EF5B0-0x00000001811EF5C0
+		public virtual void Close(); // 0x0000000183779F50-0x0000000183779F60
+		public virtual void WriteStartObject(); // 0x00000001853924C4-0x00000001853924D4
+		public virtual void WriteEndObject(); // 0x00000001847A0930-0x00000001847A0940
+		public virtual void WriteStartArray(); // 0x00000001853924FC-0x000000018539250C
+		public virtual void WriteEndArray(); // 0x00000001847A0920-0x00000001847A0930
+		public virtual void WriteStartConstructor(string name); // 0x000000018A8ADD7C-0x000000018A8ADD8C
+		public virtual void WriteEndConstructor(); // 0x000000018A8ADC50-0x000000018A8ADC60
+		public virtual void WritePropertyName(string name); // 0x0000000185392558-0x0000000185392560
+		public virtual void WritePropertyName(string name, bool escape); // 0x0000000184CA3170-0x0000000184CA3190
+		public virtual void WriteEnd(); // 0x000000018A8ADC60-0x000000018A8ADC6C
+		public void WriteToken(JsonReader reader); // 0x0000000185392F1C-0x0000000185392F9C
+		public void WriteToken(JsonReader reader, bool writeChildren); // 0x0000000183424D10-0x0000000183424D40
+		[NullableContext(2)]
+		public void WriteToken(JsonToken token, object value); // 0x0000000183424FF0-0x0000000183425290
+		internal virtual void WriteToken(JsonReader reader, bool writeChildren, bool writeDateConstructorAsDate, bool writeComments); // 0x0000000183424E90-0x0000000183424FE0
+		private bool IsWriteTokenIncomplete(JsonReader reader, bool writeChildren, int initialDepth); // 0x0000000183424DE0-0x0000000183424E30
+		private int CalculateWriteTokenInitialDepth(JsonReader reader); // 0x0000000183425290-0x00000001834252E0
+		private int CalculateWriteTokenFinalDepth(JsonReader reader); // 0x0000000183424E30-0x0000000183424E90
+		private void WriteConstructorDate(JsonReader reader); // 0x000000018A8ADBA8-0x000000018A8ADC50
+		private void WriteEnd(JsonContainerType type); // 0x000000018A8ADC6C-0x000000018A8ADD2C
+		private void AutoCompleteAll(); // 0x0000000183779F60-0x0000000183779FA0
+		private JsonToken GetCloseTokenForType(JsonContainerType type); // 0x0000000183637D60-0x0000000183637DA0
+		private void AutoCompleteClose(JsonContainerType type); // 0x0000000183637C80-0x0000000183637D20
+		private int CalculateLevelsToComplete(JsonContainerType type); // 0x0000000183637D20-0x0000000183637D60
+		private void UpdateCurrentState(); // 0x0000000183637E70-0x0000000183637ED0
+		protected virtual void WriteEnd(JsonToken token); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void WriteIndent(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void WriteValueDelimiter(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void WriteIndentSpace(); // 0x00000001841E1670-0x00000001841E1680
+		internal void AutoComplete(JsonToken tokenBeingWritten); // 0x00000001837793A0-0x00000001837794C0
+		public virtual void WriteNull(); // 0x000000018A8ADD2C-0x000000018A8ADD3C
+		public virtual void WriteUndefined(); // 0x000000018A8ADD8C-0x000000018A8ADD9C
+		[NullableContext(2)]
+		public virtual void WriteRaw(string json); // 0x00000001841E1670-0x00000001841E1680
+		[NullableContext(2)]
+		public virtual void WriteRawValue(string json); // 0x000000018A8ADD3C-0x000000018A8ADD7C
+		[NullableContext(2)]
+		public virtual void WriteValue(string value); // 0x0000000185392548-0x0000000185392558
+		public virtual void WriteValue(int value); // 0x0000000185392528-0x0000000185392538
+		[CLSCompliant(false)]
+		public virtual void WriteValue(uint value); // 0x0000000185392528-0x0000000185392538
+		public virtual void WriteValue(long value); // 0x0000000185392528-0x0000000185392538
+		[CLSCompliant(false)]
+		public virtual void WriteValue(ulong value); // 0x0000000185392528-0x0000000185392538
+		public virtual void WriteValue(float value); // 0x000000018A8ADF58-0x000000018A8ADF68
+		public virtual void WriteValue(double value); // 0x000000018A8ADF58-0x000000018A8ADF68
+		public virtual void WriteValue(bool value); // 0x0000000185392560-0x0000000185392570
+		public virtual void WriteValue(short value); // 0x0000000185392528-0x0000000185392538
+		[CLSCompliant(false)]
+		public virtual void WriteValue(ushort value); // 0x0000000185392528-0x0000000185392538
+		public virtual void WriteValue(char value); // 0x0000000185392548-0x0000000185392558
+		public virtual void WriteValue(byte value); // 0x0000000185392528-0x0000000185392538
+		[CLSCompliant(false)]
+		public virtual void WriteValue(sbyte value); // 0x0000000185392528-0x0000000185392538
+		public virtual void WriteValue(decimal value); // 0x000000018A8ADF58-0x000000018A8ADF68
+		public virtual void WriteValue(System.DateTime value); // 0x000000018A8ADE08-0x000000018A8ADE18
+		public virtual void WriteValue(DateTimeOffset value); // 0x000000018A8ADE08-0x000000018A8ADE18
+		public virtual void WriteValue(Guid value); // 0x0000000185392548-0x0000000185392558
+		public virtual void WriteValue(TimeSpan value); // 0x0000000185392548-0x0000000185392558
+		public virtual void WriteValue(int? value); // 0x000000018A8AE52C-0x000000018A8AE598
+		[CLSCompliant(false)]
+		public virtual void WriteValue(uint? value); // 0x000000018A8AE034-0x000000018A8AE0A0
+		public virtual void WriteValue(long? value); // 0x000000018A8AE2B4-0x000000018A8AE31C
+		[CLSCompliant(false)]
+		public virtual void WriteValue(ulong? value); // 0x000000018A8AE174-0x000000018A8AE1DC
+		public virtual void WriteValue(float? value); // 0x000000018A8ADF68-0x000000018A8ADFD4
+		public virtual void WriteValue(double? value); // 0x000000018A8AE0A0-0x000000018A8AE108
+		public virtual void WriteValue(bool? value); // 0x000000018A8AE48C-0x000000018A8AE4F8
+		public virtual void WriteValue(short? value); // 0x000000018A8AE1DC-0x000000018A8AE248
+		[CLSCompliant(false)]
+		public virtual void WriteValue(ushort? value); // 0x000000018A8AE604-0x000000018A8AE670
+		public virtual void WriteValue(char? value); // 0x000000018A8ADD9C-0x000000018A8ADE08
+		public virtual void WriteValue(byte? value); // 0x000000018A8AE108-0x000000018A8AE174
+		[CLSCompliant(false)]
+		public virtual void WriteValue(sbyte? value); // 0x000000018A8ADEF0-0x000000018A8ADF58
+		public virtual void WriteValue(decimal? value); // 0x000000018A8ADE80-0x000000018A8ADEF0
+		public virtual void WriteValue(System.DateTime? value); // 0x000000018A8ADE18-0x000000018A8ADE80
+		public virtual void WriteValue(DateTimeOffset? value); // 0x000000018A8AE248-0x000000018A8AE2B4
+		public virtual void WriteValue(Guid? value); // 0x000000018A8AE598-0x000000018A8AE604
+		public virtual void WriteValue(TimeSpan? value); // 0x000000018A8ADFD4-0x000000018A8AE034
+		[NullableContext(2)]
+		public virtual void WriteValue(byte[] value); // 0x000000018A8AE4F8-0x000000018A8AE52C
+		[NullableContext(2)]
+		public virtual void WriteValue(System.Uri value); // 0x000000018A8AE31C-0x000000018A8AE390
+		[NullableContext(2)]
+		public virtual void WriteValue(object value); // 0x000000018A8AE390-0x000000018A8AE48C
+		[NullableContext(2)]
+		public virtual void WriteComment(string text); // 0x000000018A8AD894-0x000000018A8AD8A4
+		void IDisposable.Dispose(); // 0x00000001842EF170-0x00000001842EF1B0
+		protected virtual void Dispose(bool disposing); // 0x00000001842EF1B0-0x00000001842EF1E0
+		internal static void WriteValue(JsonWriter writer, PrimitiveTypeCode typeCode, object value); // 0x000000018377F170-0x000000018377F310
+		private static void ResolveConvertibleValue(IConvertible convertible, out PrimitiveTypeCode typeCode, out object value); // 0x000000018A8AD8A4-0x000000018A8AD99C
+		private static JsonWriterException CreateUnsupportedTypeException(JsonWriter writer, object value); // 0x000000018A8AD7F4-0x000000018A8AD894
+		protected void SetWriteState(JsonToken token, object value); // 0x000000018A8AD99C-0x000000018A8ADBA8
+		internal void InternalWriteEnd(JsonContainerType container); // 0x0000000185397C18-0x0000000185397C20
+		internal void InternalWritePropertyName(string name); // 0x0000000183779340-0x0000000183779370
+		internal void InternalWriteRaw(); // 0x00000001841E1670-0x00000001841E1680
+		internal void InternalWriteStart(JsonToken token, JsonContainerType container); // 0x0000000183778E90-0x0000000183778ED0
+		internal void InternalWriteValue(JsonToken token); // 0x0000000183779370-0x0000000183779390
+		internal void InternalWriteComment(); // 0x000000018A8AD894-0x000000018A8AD8A4
 	}
 
 	[Serializable]
-	public class JsonWriterException : JsonException // TypeDefIndex: 52622
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JsonWriterException : JsonException // TypeDefIndex: 55304
 	{
 		// Fields
+		[CompilerGenerated]
+		[Nullable(2)]
 		private readonly string _Path_k__BackingField; // 0x90
 	
 		// Constructors
-		public JsonWriterException() {} // 0x000000018B3D7188-0x000000018B3D7190
-		public JsonWriterException(SerializationInfo info, StreamingContext context) {} // 0x000000018B3D71E8-0x000000018B3D7208
-		public JsonWriterException(string message, string path, Exception innerException) {} // 0x000000018B3E7578-0x000000018B3E75B4
+		public JsonWriterException(); // 0x000000018A8A78C8-0x000000018A8A78D0
+		public JsonWriterException(SerializationInfo info, StreamingContext context); // 0x000000018A8A7928-0x000000018A8A7948
+		public JsonWriterException(string message, string path, [Nullable(2)] Exception innerException); // 0x000000018A8B7E20-0x000000018A8B7E5C
 	
 		// Methods
-		internal static JsonWriterException Create(JsonWriter writer, string message, Exception ex) => default; // 0x000000018B3E7538-0x000000018B3E7578
-		internal static JsonWriterException Create(string path, string message, Exception ex) => default; // 0x000000018B3E7488-0x000000018B3E7538
+		internal static JsonWriterException Create(JsonWriter writer, string message, [Nullable(2)] Exception ex); // 0x000000018A8B7DE0-0x000000018A8B7E20
+		internal static JsonWriterException Create(string path, string message, [Nullable(2)] Exception ex); // 0x000000018A8B7D30-0x000000018A8B7DE0
 	}
 
-	public enum MemberSerialization // TypeDefIndex: 52623
+	public enum MemberSerialization // TypeDefIndex: 55305
 	{
 		OptOut = 0,
 		OptIn = 1,
 		Fields = 2
 	}
 
-	public enum MetadataPropertyHandling // TypeDefIndex: 52624
+	public enum MetadataPropertyHandling // TypeDefIndex: 55306
 	{
 		Default = 0,
 		ReadAhead = 1,
 		Ignore = 2
 	}
 
-	public enum MissingMemberHandling // TypeDefIndex: 52625
+	public enum MissingMemberHandling // TypeDefIndex: 55307
 	{
 		Ignore = 0,
 		Error = 1
 	}
 
-	public enum NullValueHandling // TypeDefIndex: 52626
+	public enum NullValueHandling // TypeDefIndex: 55308
 	{
 		Include = 0,
 		Ignore = 1
 	}
 
-	public enum ObjectCreationHandling // TypeDefIndex: 52627
+	public enum ObjectCreationHandling // TypeDefIndex: 55309
 	{
 		Auto = 0,
 		Reuse = 1,
 		Replace = 2
 	}
 
-	public enum PreserveReferencesHandling // TypeDefIndex: 52628
+	[Flags]
+	public enum PreserveReferencesHandling // TypeDefIndex: 55310
 	{
 		None = 0,
 		Objects = 1,
@@ -1220,14 +1413,14 @@ namespace Newtonsoft.Json
 		All = 3
 	}
 
-	public enum ReferenceLoopHandling // TypeDefIndex: 52629
+	public enum ReferenceLoopHandling // TypeDefIndex: 55311
 	{
 		Error = 0,
 		Ignore = 1,
 		Serialize = 2
 	}
 
-	public enum Required // TypeDefIndex: 52630
+	public enum Required // TypeDefIndex: 55312
 	{
 		Default = 0,
 		AllowNull = 1,
@@ -1235,20 +1428,21 @@ namespace Newtonsoft.Json
 		DisallowNull = 3
 	}
 
-	public enum StringEscapeHandling // TypeDefIndex: 52631
+	public enum StringEscapeHandling // TypeDefIndex: 55313
 	{
 		Default = 0,
 		EscapeNonAscii = 1,
 		EscapeHtml = 2
 	}
 
-	public enum TypeNameAssemblyFormatHandling // TypeDefIndex: 52632
+	public enum TypeNameAssemblyFormatHandling // TypeDefIndex: 55314
 	{
 		Simple = 0,
 		Full = 1
 	}
 
-	public enum TypeNameHandling // TypeDefIndex: 52633
+	[Flags]
+	public enum TypeNameHandling // TypeDefIndex: 55315
 	{
 		None = 0,
 		Objects = 1,
@@ -1257,7 +1451,7 @@ namespace Newtonsoft.Json
 		Auto = 4
 	}
 
-	public enum WriteState // TypeDefIndex: 52634
+	public enum WriteState // TypeDefIndex: 55316
 	{
 		Error = 0,
 		Closed = 1,
@@ -1271,117 +1465,115 @@ namespace Newtonsoft.Json
 
 namespace Newtonsoft.Json.Bson
 {
-	public class BsonObjectId // TypeDefIndex: 52862
+	[Obsolete("BSON reading and writing has been moved to its own package. See https://www.nuget.org/packages/Newtonsoft.Json.Bson for more details.")]
+	public class BsonObjectId // TypeDefIndex: 55544
 	{
 		// Fields
+		[CompilerGenerated]
 		private readonly byte[] _Value_k__BackingField; // 0x10
 	
 		// Properties
-		public byte[] Value { get; } // 0x000000018346D130-0x000000018346D140 
+		public byte[] Value { [CompilerGenerated] get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
 	
 		// Constructors
-		public BsonObjectId() {} // Dummy constructor
-		public BsonObjectId(byte[] value) {} // 0x000000018B406560-0x000000018B406660
+		public BsonObjectId(byte[] value); // 0x000000018A8D36E0-0x000000018A8D37E0
 	}
 
-	internal abstract class BsonToken // TypeDefIndex: 52863
+	internal abstract class BsonToken // TypeDefIndex: 55545
 	{
 		// Fields
+		[CompilerGenerated]
 		private BsonToken _Parent_k__BackingField; // 0x10
 	
 		// Properties
 		public abstract BsonType Type { get; }
-		public BsonToken Parent { get; set; } // 0x0000000184096E30-0x0000000184096EF0
+		public BsonToken Parent { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
 	
 		// Constructors
-		protected BsonToken() {} // 0x0000000185492010-0x0000000185492020
+		protected BsonToken(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class BsonObject : BsonToken // TypeDefIndex: 52864
+	internal class BsonObject : BsonToken // TypeDefIndex: 55546
 	{
 		// Fields
 		private readonly List<BsonProperty> _children; // 0x18
 	
 		// Properties
-		public override BsonType Type { get => default; } // 0x0000000185FB24F0-0x0000000185FB2500 
-	
-		// Constructors
-		public BsonObject() {} // Dummy constructor
+		public override BsonType Type { get; } // 0x0000000184D91FD0-0x0000000184D91FE0 
 	
 		// Methods
-		public void Add(string name, BsonToken token) {} // 0x000000018B406660-0x000000018B406758
+		public void Add(string name, BsonToken token); // 0x000000018A8D37E0-0x000000018A8D38D8
 	}
 
-	internal class BsonArray : BsonToken // TypeDefIndex: 52865
+	internal class BsonArray : BsonToken // TypeDefIndex: 55547
 	{
 		// Fields
 		private readonly List<BsonToken> _children; // 0x18
 	
 		// Properties
-		public override BsonType Type { get => default; } // 0x0000000185FB24E0-0x0000000185FB24F0 
-	
-		// Constructors
-		public BsonArray() {} // Dummy constructor
+		public override BsonType Type { get; } // 0x0000000184D92120-0x0000000184D92130 
 	
 		// Methods
-		public void Add(BsonToken token) {} // 0x000000018B406304-0x000000018B40636C
+		public void Add(BsonToken token); // 0x000000018A8D3484-0x000000018A8D34EC
 	}
 
-	internal class BsonValue : BsonToken // TypeDefIndex: 52866
+	internal class BsonValue : BsonToken // TypeDefIndex: 55548
 	{
 		// Fields
 		private readonly object _value; // 0x18
 		private readonly BsonType _type; // 0x20
 	
 		// Properties
-		public override BsonType Type { get => default; } // 0x00000001813ECBF0-0x00000001813ECC00 
+		public override BsonType Type { get; } // 0x0000000184D866B0-0x0000000184D866C0 
 	
 		// Constructors
-		public BsonValue() {} // Dummy constructor
-		public BsonValue(object value, BsonType type) {} // 0x000000018A09CA64-0x000000018A09CA88
+		public BsonValue(object value, BsonType type); // 0x00000001894E5F8C-0x00000001894E5FB0
 	}
 
-	internal class BsonString : BsonValue // TypeDefIndex: 52867
+	internal class BsonString : BsonValue // TypeDefIndex: 55549
 	{
 		// Fields
+		[CompilerGenerated]
 		private readonly bool _IncludeLength_k__BackingField; // 0x28
 	
 		// Constructors
-		public BsonString() {} // Dummy constructor
-		public BsonString(object value, bool includeLength) {} // 0x000000018B406810-0x000000018B406838
+		public BsonString(object value, bool includeLength); // 0x000000018A8D3990-0x000000018A8D39B8
 	}
 
-	internal class BsonRegex : BsonToken // TypeDefIndex: 52868
+	internal class BsonRegex : BsonToken // TypeDefIndex: 55550
 	{
 		// Fields
+		[CompilerGenerated]
 		private BsonString _Pattern_k__BackingField; // 0x18
+		[CompilerGenerated]
 		private BsonString _Options_k__BackingField; // 0x20
 	
 		// Properties
-		public BsonString Pattern { get; set; } // 0x0000000184088E70-0x0000000184088E80
-		public BsonString Options { get; set; } // 0x000000018646EE40-0x000000018646EE50
-		public override BsonType Type { get => default; } // 0x0000000185FBDD20-0x0000000185FBDD30 
+		public BsonString Pattern { [CompilerGenerated] set; } // 0x0000000185392C40-0x0000000185392C50
+		public BsonString Options { [CompilerGenerated] set; } // 0x0000000185390F40-0x0000000185390F50
+		public override BsonType Type { get; } // 0x0000000184DA5E70-0x0000000184DA5E80 
 	
 		// Constructors
-		public BsonRegex() {} // Dummy constructor
-		public BsonRegex(string pattern, string options) {} // 0x000000018B406758-0x000000018B406810
+		public BsonRegex(string pattern, string options); // 0x000000018A8D38D8-0x000000018A8D3990
 	}
 
-	internal class BsonProperty // TypeDefIndex: 52869
+	internal class BsonProperty // TypeDefIndex: 55551
 	{
 		// Fields
+		[CompilerGenerated]
 		private BsonString _Name_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private BsonToken _Value_k__BackingField; // 0x18
 	
 		// Properties
-		public BsonString Name { get; set; } // 0x0000000184096E30-0x0000000184096EF0
-		public BsonToken Value { get; set; } // 0x0000000184088E70-0x0000000184088E80
+		public BsonString Name { [CompilerGenerated] set; } // 0x00000001853908C0-0x00000001853908D0
+		public BsonToken Value { [CompilerGenerated] set; } // 0x0000000185392C40-0x0000000185392C50
 	
 		// Constructors
-		public BsonProperty() {} // 0x0000000185492010-0x0000000185492020
+		public BsonProperty(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal enum BsonType : sbyte // TypeDefIndex: 52870
+	internal enum BsonType : sbyte // TypeDefIndex: 55552
 	{
 		Number = 1,
 		String = 2,
@@ -1405,125 +1597,137 @@ namespace Newtonsoft.Json.Bson
 		MinKey = 255
 	}
 
-	public class BsonWriter : JsonWriter // TypeDefIndex: 52871
+	[Obsolete("BSON reading and writing has been moved to its own package. See https://www.nuget.org/packages/Newtonsoft.Json.Bson for more details.")]
+	public class BsonWriter : JsonWriter // TypeDefIndex: 55553
 	{
 		// Fields
 		private BsonToken _root; // 0x60
 		private BsonToken _parent; // 0x68
 		private string _propertyName; // 0x70
 	
-		// Constructors
-		public BsonWriter() {} // Dummy constructor
-	
 		// Methods
-		private void AddValue(object value, BsonType type) {} // 0x000000018B4069D4-0x000000018B406A5C
-		internal void AddToken(BsonToken token) {} // 0x000000018B406838-0x000000018B4069D4
-		public void WriteObjectId(byte[] value) {} // 0x000000018B406A5C-0x000000018B406B48
-		public void WriteRegex(string pattern, string options) {} // 0x000000018B406B48-0x000000018B406C3C
+		private void AddValue(object value, BsonType type); // 0x000000018A8D3B54-0x000000018A8D3BDC
+		internal void AddToken(BsonToken token); // 0x000000018A8D39B8-0x000000018A8D3B54
+		public void WriteObjectId(byte[] value); // 0x000000018A8D3BDC-0x000000018A8D3CC8
+		public void WriteRegex(string pattern, string options); // 0x000000018A8D3CC8-0x000000018A8D3DBC
 	}
 }
 
 namespace Newtonsoft.Json.Converters
 {
-	public class BinaryConverter : JsonConverter // TypeDefIndex: 52821
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class BinaryConverter : JsonConverter // TypeDefIndex: 55503
 	{
 		// Fields
-		private const string BinaryTypeName = "System.Data.Linq.Binary"; // Metadata: 0x02076964
-		private const string BinaryToArrayName = "ToArray"; // Metadata: 0x0207697C
+		private const string BinaryTypeName = "System.Data.Linq.Binary"; // Metadata: 0x02346C5C
+		private const string BinaryToArrayName = "ToArray"; // Metadata: 0x02346C74
+		[Nullable(2)]
 		private static ReflectionObject _reflectionObject; // 0x00
 	
 		// Constructors
-		public BinaryConverter() {} // 0x0000000185492010-0x0000000185492020
+		public BinaryConverter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B3F45D4-0x000000018B3F4624
-		private byte[] GetByteArray(object value) => default; // 0x000000018B3F3E14-0x000000018B3F3FD8
-		private static void EnsureReflectionObject(System.Type t) {} // 0x000000018B3F3CAC-0x000000018B3F3E14
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B3F41F0-0x000000018B3F45D4
-		private byte[] ReadByteArray(JsonReader reader) => default; // 0x000000018B3F3FD8-0x000000018B3F41F0
-		public override bool CanConvert(System.Type objectType) => default; // 0x00000001851962E0-0x00000001851963F0
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8C2EAC-0x000000018A8C2EFC
+		private byte[] GetByteArray(object value); // 0x000000018A8C26EC-0x000000018A8C28B0
+		private static void EnsureReflectionObject(System.Type t); // 0x000000018A8C2584-0x000000018A8C26EC
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8C2AC8-0x000000018A8C2EAC
+		private byte[] ReadByteArray(JsonReader reader); // 0x000000018A8C28B0-0x000000018A8C2AC8
+		public override bool CanConvert(System.Type objectType); // 0x0000000184048480-0x0000000184048530
 	}
 
-	public class BsonObjectIdConverter : JsonConverter // TypeDefIndex: 52822
+	[Obsolete("BSON reading and writing has been moved to its own package. See https://www.nuget.org/packages/Newtonsoft.Json.Bson for more details.")]
+	public class BsonObjectIdConverter : JsonConverter // TypeDefIndex: 55504
 	{
 		// Constructors
-		public BsonObjectIdConverter() {} // 0x0000000185492010-0x0000000185492020
+		public BsonObjectIdConverter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B4064C0-0x000000018B406560
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B40636C-0x000000018B4064C0
-		public override bool CanConvert(System.Type objectType) => default; // 0x000000018536FCD0-0x000000018536FD40
+		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer); // 0x000000018A8D3640-0x000000018A8D36E0
+		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer); // 0x000000018A8D34EC-0x000000018A8D3640
+		public override bool CanConvert(System.Type objectType); // 0x0000000184239130-0x0000000184239180
 	}
 
-	public abstract class CustomCreationConverter<T> : JsonConverter // TypeDefIndex: 52823
+	[Nullable(0)]
+	[NullableContext(1)]
+	public abstract class CustomCreationConverter<T> : JsonConverter // TypeDefIndex: 55505
 	{
 		// Properties
 		public override bool CanWrite { get; }
 	
 		// Constructors
-		protected CustomCreationConverter() {}
+		protected CustomCreationConverter();
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {}
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default;
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer);
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer);
 		public abstract T Create(System.Type objectType);
-		public override bool CanConvert(System.Type objectType) => default;
+		public override bool CanConvert(System.Type objectType);
 	}
 
-	public class DataSetConverter : JsonConverter // TypeDefIndex: 52824
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class DataSetConverter : JsonConverter // TypeDefIndex: 55506
 	{
 		// Constructors
-		public DataSetConverter() {} // 0x0000000185492010-0x0000000185492020
+		public DataSetConverter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B406E5C-0x000000018B407158
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B406C3C-0x000000018B406E5C
-		public override bool CanConvert(System.Type valueType) => default; // 0x000000018531DBC0-0x000000018531DC50
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8D3FDC-0x000000018A8D42D8
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8D3DBC-0x000000018A8D3FDC
+		public override bool CanConvert(System.Type valueType); // 0x00000001841D0660-0x00000001841D06C0
 	}
 
-	public class DataTableConverter : JsonConverter // TypeDefIndex: 52825
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class DataTableConverter : JsonConverter // TypeDefIndex: 55507
 	{
 		// Constructors
-		public DataTableConverter() {} // 0x0000000185492010-0x0000000185492020
+		public DataTableConverter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B407970-0x000000018B407E20
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B407718-0x000000018B407970
-		private static void CreateRow(JsonReader reader, DataTable dt, JsonSerializer serializer) {} // 0x000000018B407158-0x000000018B407544
-		private static System.Type GetColumnDataType(JsonReader reader) => default; // 0x000000018B407544-0x000000018B407718
-		public override bool CanConvert(System.Type valueType) => default; // 0x000000018531DB30-0x000000018531DBC0
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8D4AF0-0x000000018A8D4FA0
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8D4898-0x000000018A8D4AF0
+		private static void CreateRow(JsonReader reader, DataTable dt, JsonSerializer serializer); // 0x000000018A8D42D8-0x000000018A8D46C4
+		private static System.Type GetColumnDataType(JsonReader reader); // 0x000000018A8D46C4-0x000000018A8D4898
+		public override bool CanConvert(System.Type valueType); // 0x00000001841D0600-0x00000001841D0660
 	}
 
-	public abstract class DateTimeConverterBase : JsonConverter // TypeDefIndex: 52826
+	public abstract class DateTimeConverterBase : JsonConverter // TypeDefIndex: 55508
 	{
 		// Constructors
-		protected DateTimeConverterBase() {} // 0x0000000185492010-0x0000000185492020
+		protected DateTimeConverterBase(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public override bool CanConvert(System.Type objectType) => default; // 0x000000018B407E20-0x000000018B407F14
+		[NullableContext(1)]
+		public override bool CanConvert(System.Type objectType); // 0x000000018A8D4FA0-0x000000018A8D5094
 	}
 
-	public class DiscriminatedUnionConverter : JsonConverter // TypeDefIndex: 52831
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class DiscriminatedUnionConverter : JsonConverter // TypeDefIndex: 55513
 	{
 		// Fields
-		private const string CasePropertyName = "Case"; // Metadata: 0x02076984
-		private const string FieldsPropertyName = "Fields"; // Metadata: 0x02076989
+		private const string CasePropertyName = "Case"; // Metadata: 0x02346C7C
+		private const string FieldsPropertyName = "Fields"; // Metadata: 0x02346C81
 		private static readonly ThreadSafeStore<System.Type, Union> UnionCache; // 0x00
 		private static readonly ThreadSafeStore<System.Type, System.Type> UnionTypeLookupCache; // 0x08
 	
 		// Nested types
-		internal class Union // TypeDefIndex: 52827
+		[Nullable(0)]
+		internal class Union // TypeDefIndex: 55509
 		{
 			// Fields
 			public readonly FSharpFunction TagReader; // 0x10
 			public readonly List<UnionCase> Cases; // 0x18
 	
 			// Constructors
-			public Union() {} // Dummy constructor
-			public Union(FSharpFunction tagReader, List<UnionCase> cases) {} // 0x000000018B407F14-0x000000018B408038
+			public Union(FSharpFunction tagReader, List<UnionCase> cases); // 0x00000001832AF420-0x00000001832AF450
 		}
 	
-		internal class UnionCase // TypeDefIndex: 52828
+		[Nullable(0)]
+		internal class UnionCase // TypeDefIndex: 55510
 		{
 			// Fields
 			public readonly int Tag; // 0x10
@@ -1533,325 +1737,382 @@ namespace Newtonsoft.Json.Converters
 			public readonly FSharpFunction Constructor; // 0x30
 	
 			// Constructors
-			public UnionCase() {} // Dummy constructor
-			public UnionCase(int tag, string name, PropertyInfo[] fields, FSharpFunction fieldReader, FSharpFunction constructor) {} // 0x000000018B408038-0x000000018B4084C0
+			public UnionCase(int tag, string name, PropertyInfo[] fields, FSharpFunction fieldReader, FSharpFunction constructor); // 0x000000018A8D912C-0x000000018A8D9178
 		}
 	
-		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 52829
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 55511
 		{
 			// Fields
 			public int tag; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass8_0() {} // 0x000000018B408B58-0x000000018B408F24
+			public __c__DisplayClass8_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _WriteJson_b__0(UnionCase c) => default; // 0x000000018B4084C0-0x000000018B408B58
+			[NullableContext(0)]
+			internal bool _WriteJson_b__0(UnionCase c); // 0x0000000186A829FC-0x0000000186A82A1C
 		}
 	
-		private sealed class __c__DisplayClass9_0 // TypeDefIndex: 52830
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass9_0 // TypeDefIndex: 55512
 		{
 			// Fields
+			[Nullable(0)]
 			public string caseName; // 0x10
+			[Nullable(0)]
 			public Func<UnionCase, bool> __9__0; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass9_0() {} // 0x0000000185004BD0-0x0000000185004D30
+			public __c__DisplayClass9_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _ReadJson_b__0(UnionCase c) => default; // 0x0000000185492010-0x0000000185492020
+			[NullableContext(0)]
+			internal bool _ReadJson_b__0(UnionCase c); // 0x000000018A8D9104-0x000000018A8D912C
 		}
 	
 		// Constructors
-		public DiscriminatedUnionConverter() {} // 0x0000000185492010-0x0000000185492020
-		static DiscriminatedUnionConverter() {} // 0x000000018B40BF7C-0x000000018B40BFA4
+		public DiscriminatedUnionConverter(); // 0x00000001841E1670-0x00000001841E1680
+		static DiscriminatedUnionConverter(); // 0x000000018489B2C0-0x000000018489B450
 	
 		// Methods
-		private static System.Type CreateUnionTypeLookup(System.Type t) => default; // 0x0000000185A6F420-0x0000000185A6F720
-		private static Union CreateUnion(System.Type t) => default; // 0x00000001841BC230-0x00000001841BC260
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B40BFA4-0x000000018B40BFF0
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x0000000185492010-0x0000000185492020
-		public override bool CanConvert(System.Type objectType) => default; // 0x0000000187B1DBD4-0x0000000187B1DBF4
+		private static System.Type CreateUnionTypeLookup(System.Type t); // 0x000000018A8D5094-0x000000018A8D51B8
+		private static Union CreateUnion(System.Type t); // 0x000000018A8D51B8-0x000000018A8D5640
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8D5CD8-0x000000018A8D60A4
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8D5640-0x000000018A8D5CD8
+		public override bool CanConvert(System.Type objectType); // 0x0000000183FAC670-0x0000000183FAC770
 	}
 
-	public class EntityKeyMemberConverter : JsonConverter // TypeDefIndex: 52832
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class EntityKeyMemberConverter : JsonConverter // TypeDefIndex: 55514
 	{
 		// Fields
-		private const string EntityKeyMemberFullTypeName = "System.Data.EntityKeyMember"; // Metadata: 0x02076990
-		private const string KeyPropertyName = "Key"; // Metadata: 0x020769AC
-		private const string TypePropertyName = "Type"; // Metadata: 0x020769B0
-		private const string ValuePropertyName = "Value"; // Metadata: 0x020769B5
+		private const string EntityKeyMemberFullTypeName = "System.Data.EntityKeyMember"; // Metadata: 0x02346C88
+		private const string KeyPropertyName = "Key"; // Metadata: 0x02346CA4
+		private const string TypePropertyName = "Type"; // Metadata: 0x02346CA8
+		private const string ValuePropertyName = "Value"; // Metadata: 0x02346CAD
+		[Nullable(2)]
 		private static ReflectionObject _reflectionObject; // 0x00
 	
 		// Constructors
-		public EntityKeyMemberConverter() {} // 0x0000000185492010-0x0000000185492020
+		public EntityKeyMemberConverter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B409348-0x000000018B409608
-		private static void ReadAndAssertProperty(JsonReader reader, string propertyName) {} // 0x000000018B409008-0x000000018B409104
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B409104-0x000000018B409348
-		private static void EnsureReflectionObject(System.Type objectType) {} // 0x000000018B408F24-0x000000018B409008
-		public override bool CanConvert(System.Type objectType) => default; // 0x00000001851D1240-0x00000001851D1290
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8D64C8-0x000000018A8D6788
+		private static void ReadAndAssertProperty(JsonReader reader, string propertyName); // 0x000000018A8D6188-0x000000018A8D6284
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8D6284-0x000000018A8D64C8
+		private static void EnsureReflectionObject(System.Type objectType); // 0x000000018A8D60A4-0x000000018A8D6188
+		public override bool CanConvert(System.Type objectType); // 0x00000001840B9A90-0x00000001840B9AC0
 	}
 
-	public class ExpandoObjectConverter : JsonConverter // TypeDefIndex: 52833
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class ExpandoObjectConverter : JsonConverter // TypeDefIndex: 55515
 	{
 		// Properties
-		public override bool CanWrite { get => default; } // 0x00000001814A81B0-0x00000001814A81C0 
+		public override bool CanWrite { get; } // 0x00000001812081B0-0x0000000181208610 
 	
 		// Constructors
-		public ExpandoObjectConverter() {} // 0x0000000185492010-0x0000000185492020
+		public ExpandoObjectConverter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x0000000185492010-0x0000000185492020
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B409608-0x000000018B409610
-		private object ReadValue(JsonReader reader) => default; // 0x000000018B4098C4-0x000000018B409A34
-		private object ReadList(JsonReader reader) => default; // 0x000000018B409610-0x000000018B40972C
-		private object ReadObject(JsonReader reader) => default; // 0x000000018B40972C-0x000000018B4098C4
-		public override bool CanConvert(System.Type objectType) => default; // 0x000000018536FC60-0x000000018536FCD0
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x00000001841E1670-0x00000001841E1680
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8D6788-0x000000018A8D6790
+		private object ReadValue(JsonReader reader); // 0x000000018A8D6A44-0x000000018A8D6BB4
+		private object ReadList(JsonReader reader); // 0x000000018A8D6790-0x000000018A8D68AC
+		private object ReadObject(JsonReader reader); // 0x000000018A8D68AC-0x000000018A8D6A44
+		public override bool CanConvert(System.Type objectType); // 0x00000001842390E0-0x0000000184239130
 	}
 
-	public class IsoDateTimeConverter : DateTimeConverterBase // TypeDefIndex: 52834
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class IsoDateTimeConverter : DateTimeConverterBase // TypeDefIndex: 55516
 	{
 		// Fields
-		private const string DefaultDateTimeFormat = "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss.FFFFFFFK"; // Metadata: 0x020769BB
+		private const string DefaultDateTimeFormat = "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss.FFFFFFFK"; // Metadata: 0x02346CB3
 		private DateTimeStyles _dateTimeStyles; // 0x10
+		[Nullable(2)]
 		private string _dateTimeFormat; // 0x18
+		[Nullable(2)]
 		private CultureInfo _culture; // 0x20
 	
 		// Properties
-		public DateTimeStyles DateTimeStyles { get => default; set {} } // 0x0000000181C0BBD0-0x0000000181C0BBE0 0x0000000181378230-0x0000000181378240
-		public string DateTimeFormat { get => default; set {} } // 0x000000018B40A0FC-0x000000018B40A144 0x000000018B40A144-0x000000018B40A18C
-		public CultureInfo Culture { get => default; set {} } // 0x000000018B40A0A8-0x000000018B40A0FC 0x000000018646EE40-0x000000018646EE50
+		public DateTimeStyles DateTimeStyles { get; set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
+		[Nullable(2)]
+		public string DateTimeFormat { [NullableContext(2)] get; [NullableContext(2)] set; } // 0x000000018A8D727C-0x000000018A8D72C4 0x000000018A8D72C4-0x000000018A8D730C
+		public CultureInfo Culture { get; set; } // 0x000000018A8D7228-0x000000018A8D727C 0x0000000185390F40-0x0000000185390F50
 	
 		// Constructors
-		public IsoDateTimeConverter() {} // 0x0000000185FD22B0-0x0000000185FD22C0
+		public IsoDateTimeConverter(); // 0x0000000184DA5E80-0x0000000184DA5E90
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B409E6C-0x000000018B40A0A8
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B409A34-0x000000018B409E6C
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8D6FEC-0x000000018A8D7228
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8D6BB4-0x000000018A8D6FEC
 	}
 
-	public class JavaScriptDateTimeConverter : DateTimeConverterBase // TypeDefIndex: 52835
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JavaScriptDateTimeConverter : DateTimeConverterBase // TypeDefIndex: 55517
 	{
 		// Constructors
-		public JavaScriptDateTimeConverter() {} // 0x0000000185492010-0x0000000185492020
+		public JavaScriptDateTimeConverter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B40A4A8-0x000000018B40A640
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B40A18C-0x000000018B40A4A8
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8D7628-0x000000018A8D77C0
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8D730C-0x000000018A8D7628
 	}
 
-	public class KeyValuePairConverter : JsonConverter // TypeDefIndex: 52836
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class KeyValuePairConverter : JsonConverter // TypeDefIndex: 55518
 	{
 		// Fields
-		private const string KeyName = "Key"; // Metadata: 0x020769E2
-		private const string ValueName = "Value"; // Metadata: 0x020769E6
+		private const string KeyName = "Key"; // Metadata: 0x02346CDA
+		private const string ValueName = "Value"; // Metadata: 0x02346CDE
 		private static readonly ThreadSafeStore<System.Type, ReflectionObject> ReflectionObjectPerType; // 0x00
 	
 		// Constructors
-		public KeyValuePairConverter() {} // 0x0000000185492010-0x0000000185492020
-		static KeyValuePairConverter() {} // 0x0000000185EC1BD0-0x0000000185EC1CB0
+		public KeyValuePairConverter(); // 0x00000001841E1670-0x00000001841E1680
+		static KeyValuePairConverter(); // 0x0000000184CAEFE0-0x0000000184CAF0C0
 	
 		// Methods
-		private static ReflectionObject InitializeReflectionObject(System.Type t) => default; // 0x000000018B40A640-0x000000018B40A7C0
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B40AB1C-0x000000018B40AD30
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B40A7C0-0x000000018B40AB1C
-		public override bool CanConvert(System.Type objectType) => default; // 0x00000001843464E0-0x00000001843465E0
+		private static ReflectionObject InitializeReflectionObject(System.Type t); // 0x000000018A8D77C0-0x000000018A8D7940
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8D7C9C-0x000000018A8D7EB8
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8D7940-0x000000018A8D7C9C
+		public override bool CanConvert(System.Type objectType); // 0x00000001835CF760-0x00000001835CF820
 	}
 
-	public class RegexConverter : JsonConverter // TypeDefIndex: 52837
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class RegexConverter : JsonConverter // TypeDefIndex: 55519
 	{
 		// Fields
-		private const string PatternName = "Pattern"; // Metadata: 0x020769EC
-		private const string OptionsName = "Options"; // Metadata: 0x020769F4
+		private const string PatternName = "Pattern"; // Metadata: 0x02346CE4
+		private const string OptionsName = "Options"; // Metadata: 0x02346CEC
 	
 		// Constructors
-		public RegexConverter() {} // 0x0000000185492010-0x0000000185492020
+		public RegexConverter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B40B4A4-0x000000018B40B56C
-		private bool HasFlag(RegexOptions options, RegexOptions flag) => default; // 0x00000001840784C0-0x0000000184078540
-		private void WriteBson(BsonWriter writer, Regex regex) {} // 0x000000018B40B214-0x000000018B40B330
-		private void WriteJson(JsonWriter writer, Regex regex, JsonSerializer serializer) {} // 0x000000018B40B330-0x000000018B40B4A4
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B40AD94-0x000000018B40AE34
-		private object ReadRegexString(JsonReader reader) => default; // 0x000000018B40B0C4-0x000000018B40B214
-		private Regex ReadRegexObject(JsonReader reader, JsonSerializer serializer) => default; // 0x000000018B40AE34-0x000000018B40B0C4
-		public override bool CanConvert(System.Type objectType) => default; // 0x000000018531DC50-0x000000018531DCC0
-		private bool IsRegex(System.Type objectType) => default; // 0x000000018B40AD30-0x000000018B40AD94
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8D862C-0x000000018A8D86F4
+		private bool HasFlag(RegexOptions options, RegexOptions flag); // 0x0000000182FB41C0-0x0000000182FB41D0
+		private void WriteBson(BsonWriter writer, Regex regex); // 0x000000018A8D839C-0x000000018A8D84B8
+		private void WriteJson(JsonWriter writer, Regex regex, JsonSerializer serializer); // 0x000000018A8D84B8-0x000000018A8D862C
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8D7F1C-0x000000018A8D7FBC
+		private object ReadRegexString(JsonReader reader); // 0x000000018A8D824C-0x000000018A8D839C
+		private Regex ReadRegexObject(JsonReader reader, JsonSerializer serializer); // 0x000000018A8D7FBC-0x000000018A8D824C
+		public override bool CanConvert(System.Type objectType); // 0x00000001841D06C0-0x00000001841D0710
+		private bool IsRegex(System.Type objectType); // 0x000000018A8D7EB8-0x000000018A8D7F1C
 	}
 
-	public class StringEnumConverter : JsonConverter // TypeDefIndex: 52838
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class StringEnumConverter : JsonConverter // TypeDefIndex: 55520
 	{
 		// Fields
+		[CompilerGenerated]
+		[Nullable(2)]
 		private NamingStrategy _NamingStrategy_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private bool _AllowIntegerValues_k__BackingField; // 0x18
 	
 		// Properties
-		public bool CamelCaseText { get => default; set {} } // 0x000000018B40BEB4-0x000000018B40BEF8 0x000000018B40BEF8-0x000000018B40BF7C
-		public NamingStrategy NamingStrategy { get; set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public bool AllowIntegerValues { get; set; } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
+		[Obsolete("StringEnumConverter.CamelCaseText is obsolete. Set StringEnumConverter.NamingStrategy with CamelCaseNamingStrategy instead.")]
+		public bool CamelCaseText { get; set; } // 0x000000018A8D903C-0x000000018A8D9080 0x000000018A8D9080-0x000000018A8D9104
+		[Nullable(2)]
+		public NamingStrategy NamingStrategy { [CompilerGenerated] [NullableContext(2)] get; [NullableContext(2)] [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public bool AllowIntegerValues { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86340-0x0000000184D86350 0x0000000184D86350-0x0000000184D86360
 	
 		// Constructors
-		public StringEnumConverter() {} // 0x0000000181B75280-0x0000000181B75290
-		public StringEnumConverter(bool camelCaseText) {} // 0x000000018B40BBE0-0x000000018B40BC44
-		public StringEnumConverter(NamingStrategy namingStrategy, bool allowIntegerValues = true /* Metadata: 0x020769FC */) {} // 0x000000018B40BBB8-0x000000018B40BBE0
-		public StringEnumConverter(System.Type namingStrategyType) {} // 0x000000018B40BC44-0x000000018B40BD04
-		public StringEnumConverter(System.Type namingStrategyType, object[] namingStrategyParameters) {} // 0x000000018B40BD04-0x000000018B40BDD4
-		public StringEnumConverter(System.Type namingStrategyType, object[] namingStrategyParameters, bool allowIntegerValues) {} // 0x000000018B40BDD4-0x000000018B40BEB4
+		public StringEnumConverter(); // 0x0000000184D8EB60-0x0000000184D8EB70
+		[Obsolete("StringEnumConverter(bool) is obsolete. Create a converter with StringEnumConverter(NamingStrategy, bool) instead.")]
+		public StringEnumConverter(bool camelCaseText); // 0x000000018A8D8D68-0x000000018A8D8DCC
+		public StringEnumConverter(NamingStrategy namingStrategy, bool allowIntegerValues = true /* Metadata: 0x02346CF4 */); // 0x000000018A8D8D40-0x000000018A8D8D68
+		public StringEnumConverter(System.Type namingStrategyType); // 0x000000018A8D8DCC-0x000000018A8D8E8C
+		public StringEnumConverter(System.Type namingStrategyType, object[] namingStrategyParameters); // 0x000000018A8D8E8C-0x000000018A8D8F5C
+		public StringEnumConverter(System.Type namingStrategyType, object[] namingStrategyParameters, bool allowIntegerValues); // 0x000000018A8D8F5C-0x000000018A8D903C
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B40B9FC-0x000000018B40BBB8
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B40B5C8-0x000000018B40B9FC
-		public override bool CanConvert(System.Type objectType) => default; // 0x000000018B40B56C-0x000000018B40B5C8
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8D8B84-0x000000018A8D8D40
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8D8750-0x000000018A8D8B84
+		public override bool CanConvert(System.Type objectType); // 0x000000018A8D86F4-0x000000018A8D8750
 	}
 
-	public class UnixDateTimeConverter : DateTimeConverterBase // TypeDefIndex: 52839
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class UnixDateTimeConverter : DateTimeConverterBase // TypeDefIndex: 55521
 	{
 		// Fields
 		internal static readonly System.DateTime UnixEpoch; // 0x00
+		[CompilerGenerated]
 		private bool _AllowPreEpoch_k__BackingField; // 0x10
 	
 		// Properties
-		public bool AllowPreEpoch { get; set; } // 0x0000000181C2FD60-0x0000000181C2FD70 0x000000018184FBD0-0x000000018184FBE0
+		public bool AllowPreEpoch { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001815EFCE0-0x00000001815EFCF0 0x0000000184D86130-0x0000000184D86140
 	
 		// Constructors
-		public UnixDateTimeConverter() {} // 0x0000000185FB6A70-0x0000000185FB6A80
-		public UnixDateTimeConverter(bool allowPreEpoch) {} // 0x000000018184FBD0-0x000000018184FBE0
-		static UnixDateTimeConverter() {} // 0x000000018B40C670-0x000000018B40C6E8
+		public UnixDateTimeConverter(); // 0x0000000184D8CCB0-0x0000000184D8CCC0
+		public UnixDateTimeConverter(bool allowPreEpoch); // 0x0000000184D86130-0x0000000184D86140
+		static UnixDateTimeConverter(); // 0x000000018A8D97F8-0x000000018A8D9870
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B40C41C-0x000000018B40C670
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B40BFF0-0x000000018B40C41C
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8D95A4-0x000000018A8D97F8
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8D9178-0x000000018A8D95A4
 	}
 
-	public class VersionConverter : JsonConverter // TypeDefIndex: 52840
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class VersionConverter : JsonConverter // TypeDefIndex: 55522
 	{
 		// Constructors
-		public VersionConverter() {} // 0x0000000185492010-0x0000000185492020
+		public VersionConverter(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B40C9C4-0x000000018B40CA98
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B40C74C-0x000000018B40C9C4
-		public override bool CanConvert(System.Type objectType) => default; // 0x000000018B40C6E8-0x000000018B40C74C
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8D9B4C-0x000000018A8D9C20
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8D98D4-0x000000018A8D9B4C
+		public override bool CanConvert(System.Type objectType); // 0x000000018A8D9870-0x000000018A8D98D4
 	}
 
-	internal class XmlDocumentWrapper : XmlNodeWrapper, IXmlDocument // TypeDefIndex: 52841
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class XmlDocumentWrapper : XmlNodeWrapper, IXmlDocument // TypeDefIndex: 55523
 	{
 		// Fields
 		private readonly XmlDocument _document; // 0x28
 	
 		// Properties
-		public IXmlElement DocumentElement { get => default; } // 0x000000018B40F124-0x000000018B40F1B0 
+		[Nullable(2)]
+		public IXmlElement DocumentElement { [NullableContext(2)] get; } // 0x000000018A8DC138-0x000000018A8DC1C4 
 	
 		// Constructors
-		public XmlDocumentWrapper() {} // Dummy constructor
-		public XmlDocumentWrapper(XmlDocument document) {} // 0x000000018B40E9C4-0x000000018B40E9EC
+		public XmlDocumentWrapper(XmlDocument document); // 0x000000018A8DB9D8-0x000000018A8DBA00
 	
 		// Methods
-		public IXmlNode CreateComment(string data) => default; // 0x000000018B40EC60-0x000000018B40ECDC
-		public IXmlNode CreateTextNode(string text) => default; // 0x000000018B40EEEC-0x000000018B40EF68
-		public IXmlNode CreateCDataSection(string data) => default; // 0x000000018B40EBE4-0x000000018B40EC60
-		public IXmlNode CreateWhitespace(string text) => default; // 0x000000018B40EF68-0x000000018B40EFE4
-		public IXmlNode CreateSignificantWhitespace(string text) => default; // 0x000000018B40EE70-0x000000018B40EEEC
-		public IXmlNode CreateXmlDeclaration(string version, string encoding, string standalone) => default; // 0x000000018B40EFE4-0x000000018B40F080
-		public IXmlNode CreateXmlDocumentType(string name, string publicId, string systemId, string internalSubset) => default; // 0x000000018B40F080-0x000000018B40F124
-		public IXmlNode CreateProcessingInstruction(string target, string data) => default; // 0x000000018B40EDE4-0x000000018B40EE70
-		public IXmlElement CreateElement(string elementName) => default; // 0x000000018B40ECDC-0x000000018B40ED58
-		public IXmlElement CreateElement(string qualifiedName, string namespaceUri) => default; // 0x000000018B40ED58-0x000000018B40EDE4
-		public IXmlNode CreateAttribute(string name, string value) => default; // 0x000000018B40EAAC-0x000000018B40EB40
-		public IXmlNode CreateAttribute(string qualifiedName, string namespaceUri, string value) => default; // 0x000000018B40EB40-0x000000018B40EBE4
+		public IXmlNode CreateComment([Nullable(2)] string data); // 0x000000018A8DBC74-0x000000018A8DBCF0
+		public IXmlNode CreateTextNode([Nullable(2)] string text); // 0x000000018A8DBF00-0x000000018A8DBF7C
+		public IXmlNode CreateCDataSection([Nullable(2)] string data); // 0x000000018A8DBBF8-0x000000018A8DBC74
+		public IXmlNode CreateWhitespace([Nullable(2)] string text); // 0x000000018A8DBF7C-0x000000018A8DBFF8
+		public IXmlNode CreateSignificantWhitespace([Nullable(2)] string text); // 0x000000018A8DBE84-0x000000018A8DBF00
+		public IXmlNode CreateXmlDeclaration(string version, [Nullable(2)] string encoding, [Nullable(2)] string standalone); // 0x000000018A8DBFF8-0x000000018A8DC094
+		[NullableContext(2)]
+		public IXmlNode CreateXmlDocumentType([Nullable(1)] string name, string publicId, string systemId, string internalSubset); // 0x000000018A8DC094-0x000000018A8DC138
+		public IXmlNode CreateProcessingInstruction(string target, string data); // 0x000000018A8DBDF8-0x000000018A8DBE84
+		public IXmlElement CreateElement(string elementName); // 0x000000018A8DBCF0-0x000000018A8DBD6C
+		public IXmlElement CreateElement(string qualifiedName, string namespaceUri); // 0x000000018A8DBD6C-0x000000018A8DBDF8
+		public IXmlNode CreateAttribute(string name, [Nullable(2)] string value); // 0x000000018A8DBAC0-0x000000018A8DBB54
+		public IXmlNode CreateAttribute(string qualifiedName, [Nullable(2)] string namespaceUri, [Nullable(2)] string value); // 0x000000018A8DBB54-0x000000018A8DBBF8
 	}
 
-	internal class XmlElementWrapper : XmlNodeWrapper, IXmlElement // TypeDefIndex: 52842
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class XmlElementWrapper : XmlNodeWrapper, IXmlElement // TypeDefIndex: 55524
 	{
 		// Fields
 		private readonly XmlElement _element; // 0x28
 	
 		// Properties
-		public bool IsEmpty { get => default; } // 0x000000018B40F254-0x000000018B40F274 
+		public bool IsEmpty { get; } // 0x000000018A8DC268-0x000000018A8DC288 
 	
 		// Constructors
-		public XmlElementWrapper() {} // Dummy constructor
-		public XmlElementWrapper(XmlElement element) {} // 0x000000018B40E9C4-0x000000018B40E9EC
+		public XmlElementWrapper(XmlElement element); // 0x000000018A8DB9D8-0x000000018A8DBA00
 	
 		// Methods
-		public void SetAttributeNode(IXmlNode attribute) {} // 0x000000018B40F1D0-0x000000018B40F254
-		public string GetPrefixOfNamespace(string namespaceUri) => default; // 0x000000018B40F1B0-0x000000018B40F1D0
+		public void SetAttributeNode(IXmlNode attribute); // 0x000000018A8DC1E4-0x000000018A8DC268
+		public string GetPrefixOfNamespace(string namespaceUri); // 0x000000018A8DC1C4-0x000000018A8DC1E4
 	}
 
-	internal class XmlDeclarationWrapper : XmlNodeWrapper, IXmlDeclaration // TypeDefIndex: 52843
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal class XmlDeclarationWrapper : XmlNodeWrapper, IXmlDeclaration // TypeDefIndex: 55525
 	{
 		// Fields
+		[Nullable(1)]
 		private readonly XmlDeclaration _declaration; // 0x28
 	
 		// Properties
-		public string Version { get => default; } // 0x000000018B40EA24-0x000000018B40EA40 
-		public string Encoding { get => default; } // 0x000000018B40E9EC-0x000000018B40EA08 
-		public string Standalone { get => default; } // 0x000000018B40EA08-0x000000018B40EA24 
+		public string Version { get; } // 0x000000018A8DBA38-0x000000018A8DBA54 
+		public string Encoding { get; } // 0x000000018A8DBA00-0x000000018A8DBA1C 
+		public string Standalone { get; } // 0x000000018A8DBA1C-0x000000018A8DBA38 
 	
 		// Constructors
-		public XmlDeclarationWrapper() {} // Dummy constructor
-		public XmlDeclarationWrapper(XmlDeclaration declaration) {} // 0x000000018B40E9C4-0x000000018B40E9EC
+		[NullableContext(1)]
+		public XmlDeclarationWrapper(XmlDeclaration declaration); // 0x000000018A8DB9D8-0x000000018A8DBA00
 	}
 
-	internal class XmlDocumentTypeWrapper : XmlNodeWrapper, IXmlDocumentType // TypeDefIndex: 52844
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal class XmlDocumentTypeWrapper : XmlNodeWrapper, IXmlDocumentType // TypeDefIndex: 55526
 	{
 		// Fields
+		[Nullable(1)]
 		private readonly XmlDocumentType _documentType; // 0x28
 	
 		// Properties
-		public string Name { get => default; } // 0x000000018B40EA88-0x000000018B40EAAC 
-		public string System { get => default; } // 0x000000018B40EA08-0x000000018B40EA24 
-		public string Public { get => default; } // 0x000000018B40E9EC-0x000000018B40EA08 
-		public string InternalSubset { get => default; } // 0x000000018B40EA40-0x000000018B40EA5C 
-		public override string LocalName { get => default; } // 0x000000018B40EA5C-0x000000018B40EA88 
+		[Nullable(1)]
+		public string Name { [NullableContext(1)] get; } // 0x000000018A8DBA9C-0x000000018A8DBAC0 
+		public string System { get; } // 0x000000018A8DBA1C-0x000000018A8DBA38 
+		public string Public { get; } // 0x000000018A8DBA00-0x000000018A8DBA1C 
+		public string InternalSubset { get; } // 0x000000018A8DBA54-0x000000018A8DBA70 
+		public override string LocalName { get; } // 0x000000018A8DBA70-0x000000018A8DBA9C 
 	
 		// Constructors
-		public XmlDocumentTypeWrapper() {} // Dummy constructor
-		public XmlDocumentTypeWrapper(XmlDocumentType documentType) {} // 0x000000018B40E9C4-0x000000018B40E9EC
+		[NullableContext(1)]
+		public XmlDocumentTypeWrapper(XmlDocumentType documentType); // 0x000000018A8DB9D8-0x000000018A8DBA00
 	}
 
-	internal class XmlNodeWrapper : IXmlNode // TypeDefIndex: 52845
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal class XmlNodeWrapper : IXmlNode // TypeDefIndex: 55527
 	{
 		// Fields
+		[Nullable(1)]
 		private readonly XmlNode _node; // 0x10
+		[Nullable(new byte[2] {2, 1 })]
 		private List<IXmlNode> _childNodes; // 0x18
+		[Nullable(new byte[2] {2, 1 })]
 		private List<IXmlNode> _attributes; // 0x20
 	
 		// Properties
-		public object WrappedNode { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public XmlNodeType NodeType { get => default; } // 0x000000018B415B0C-0x000000018B415B30 
-		public virtual string LocalName { get => default; } // 0x000000018B415AC4-0x000000018B415AE8 
-		public List<IXmlNode> ChildNodes { get => default; } // 0x000000018B41578C-0x000000018B415A44 
-		public List<IXmlNode> Attributes { get => default; } // 0x000000018B4154F0-0x000000018B41578C 
-		private bool HasAttributes { get => default; } // 0x000000018B415A44-0x000000018B415AC4 
-		public IXmlNode ParentNode { get => default; } // 0x000000018B415B30-0x000000018B415BAC 
-		public string Value { get => default; set {} } // 0x000000018B415BAC-0x000000018B415BD0 0x000000018B415BD0-0x000000018B415BF4
-		public string NamespaceUri { get => default; } // 0x000000018B415AE8-0x000000018B415B0C 
+		public object WrappedNode { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public XmlNodeType NodeType { get; } // 0x000000018A8E29E4-0x000000018A8E2A08 
+		public virtual string LocalName { get; } // 0x000000018A8E299C-0x000000018A8E29C0 
+		[Nullable(1)]
+		public List<IXmlNode> ChildNodes { [NullableContext(1)] get; } // 0x000000018A8E2664-0x000000018A8E291C 
+		[Nullable(1)]
+		public List<IXmlNode> Attributes { [NullableContext(1)] get; } // 0x000000018A8E23C8-0x000000018A8E2664 
+		private bool HasAttributes { get; } // 0x000000018A8E291C-0x000000018A8E299C 
+		public IXmlNode ParentNode { get; } // 0x000000018A8E2A08-0x000000018A8E2A84 
+		public string Value { get; set; } // 0x000000018A8E2A84-0x000000018A8E2AA8 0x000000018A8E2AA8-0x000000018A8E2ACC
+		public string NamespaceUri { get; } // 0x000000018A8E29C0-0x000000018A8E29E4 
 	
 		// Constructors
-		public XmlNodeWrapper() {} // Dummy constructor
-		public XmlNodeWrapper(XmlNode node) {} // 0x0000000184096E30-0x0000000184096EF0
+		[NullableContext(1)]
+		public XmlNodeWrapper(XmlNode node); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		internal static IXmlNode WrapNode(XmlNode node) => default; // 0x000000018B415384-0x000000018B4154F0
-		public IXmlNode AppendChild(IXmlNode newChild) => default; // 0x000000018B4152FC-0x000000018B415384
+		[NullableContext(1)]
+		internal static IXmlNode WrapNode(XmlNode node); // 0x000000018A8E225C-0x000000018A8E23C8
+		[NullableContext(1)]
+		public IXmlNode AppendChild(IXmlNode newChild); // 0x000000018A8E21D4-0x000000018A8E225C
 	}
 
-	internal interface IXmlDocument : IXmlNode // TypeDefIndex: 52846
+	[NullableContext(1)]
+	internal interface IXmlDocument : IXmlNode // TypeDefIndex: 55528
 	{
 		// Properties
-		IXmlElement DocumentElement { get; }
+		[Nullable(2)]
+		IXmlElement DocumentElement { [NullableContext(2)] get; }
 	
 		// Methods
-		IXmlNode CreateComment(string text);
-		IXmlNode CreateTextNode(string text);
-		IXmlNode CreateCDataSection(string data);
-		IXmlNode CreateWhitespace(string text);
-		IXmlNode CreateSignificantWhitespace(string text);
-		IXmlNode CreateXmlDeclaration(string version, string encoding, string standalone);
-		IXmlNode CreateXmlDocumentType(string name, string publicId, string systemId, string internalSubset);
+		IXmlNode CreateComment([Nullable(2)] string text);
+		IXmlNode CreateTextNode([Nullable(2)] string text);
+		IXmlNode CreateCDataSection([Nullable(2)] string data);
+		IXmlNode CreateWhitespace([Nullable(2)] string text);
+		IXmlNode CreateSignificantWhitespace([Nullable(2)] string text);
+		IXmlNode CreateXmlDeclaration(string version, [Nullable(2)] string encoding, [Nullable(2)] string standalone);
+		[NullableContext(2)]
+		IXmlNode CreateXmlDocumentType([Nullable(1)] string name, string publicId, string systemId, string internalSubset);
 		IXmlNode CreateProcessingInstruction(string target, string data);
 		IXmlElement CreateElement(string elementName);
 		IXmlElement CreateElement(string qualifiedName, string namespaceUri);
@@ -1859,7 +2120,8 @@ namespace Newtonsoft.Json.Converters
 		IXmlNode CreateAttribute(string qualifiedName, string namespaceUri, string value);
 	}
 
-	internal interface IXmlDeclaration : IXmlNode // TypeDefIndex: 52847
+	[NullableContext(2)]
+	internal interface IXmlDeclaration : IXmlNode // TypeDefIndex: 55529
 	{
 		// Properties
 		string Version { get; }
@@ -1867,16 +2129,19 @@ namespace Newtonsoft.Json.Converters
 		string Standalone { get; }
 	}
 
-	internal interface IXmlDocumentType : IXmlNode // TypeDefIndex: 52848
+	[NullableContext(2)]
+	internal interface IXmlDocumentType : IXmlNode // TypeDefIndex: 55530
 	{
 		// Properties
-		string Name { get; }
+		[Nullable(1)]
+		string Name { [NullableContext(1)] get; }
 		string System { get; }
 		string Public { get; }
 		string InternalSubset { get; }
 	}
 
-	internal interface IXmlElement : IXmlNode // TypeDefIndex: 52849
+	[NullableContext(1)]
+	internal interface IXmlElement : IXmlNode // TypeDefIndex: 55531
 	{
 		// Properties
 		bool IsEmpty { get; }
@@ -1886,721 +2151,855 @@ namespace Newtonsoft.Json.Converters
 		string GetPrefixOfNamespace(string namespaceUri);
 	}
 
-	internal interface IXmlNode // TypeDefIndex: 52850
+	[NullableContext(2)]
+	internal interface IXmlNode // TypeDefIndex: 55532
 	{
 		// Properties
 		XmlNodeType NodeType { get; }
 		string LocalName { get; }
-		List<IXmlNode> ChildNodes { get; }
-		List<IXmlNode> Attributes { get; }
+		[Nullable(1)]
+		List<IXmlNode> ChildNodes { [NullableContext(1)] get; }
+		[Nullable(1)]
+		List<IXmlNode> Attributes { [NullableContext(1)] get; }
 		IXmlNode ParentNode { get; }
 		string Value { get; }
 		string NamespaceUri { get; }
 		object WrappedNode { get; }
 	
 		// Methods
+		[NullableContext(1)]
 		IXmlNode AppendChild(IXmlNode newChild);
 	}
 
-	internal class XDeclarationWrapper : XObjectWrapper, IXmlDeclaration // TypeDefIndex: 52851
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal class XDeclarationWrapper : XObjectWrapper, IXmlDeclaration // TypeDefIndex: 55533
 	{
 		// Fields
+		[CompilerGenerated]
+		[Nullable(1)]
 		private readonly XDeclaration _Declaration_k__BackingField; // 0x18
 	
 		// Properties
-		internal XDeclaration Declaration { get; } // 0x0000000181377E40-0x0000000181377E50 
-		public override XmlNodeType NodeType { get => default; } // 0x0000000185FB7160-0x0000000185FB7170 
-		public string Version { get => default; } // 0x000000018B40D310-0x000000018B40D32C 
-		public string Encoding { get => default; } // 0x00000001882E7F70-0x00000001882E7F8C 
-		public string Standalone { get => default; } // 0x0000000188115408-0x0000000188115424 
+		[Nullable(1)]
+		internal XDeclaration Declaration { [NullableContext(1)] [CompilerGenerated] get; } // 0x000000018385B100-0x000000018385B110 
+		public override XmlNodeType NodeType { get; } // 0x0000000184DA5E90-0x0000000184DA5EA0 
+		public string Version { get; } // 0x000000018A8DA4D0-0x000000018A8DA4EC 
+		public string Encoding { get; } // 0x000000018A8DA498-0x000000018A8DA4B4 
+		public string Standalone { get; } // 0x000000018A8DA4B4-0x000000018A8DA4D0 
 	
 		// Constructors
-		public XDeclarationWrapper() {} // Dummy constructor
-		public XDeclarationWrapper(XDeclaration declaration) {} // 0x000000018B40D2E4-0x000000018B40D310
+		[NullableContext(1)]
+		public XDeclarationWrapper(XDeclaration declaration); // 0x000000018A8DA46C-0x000000018A8DA498
 	}
 
-	internal class XDocumentTypeWrapper : XObjectWrapper, IXmlDocumentType // TypeDefIndex: 52852
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal class XDocumentTypeWrapper : XObjectWrapper, IXmlDocumentType // TypeDefIndex: 55534
 	{
 		// Fields
+		[Nullable(1)]
 		private readonly XDocumentType _documentType; // 0x18
 	
 		// Properties
-		public string Name { get => default; } // 0x0000000188115440-0x000000018811545C 
-		public string System { get => default; } // 0x00000001880BDABC-0x00000001880BDAD8 
-		public string Public { get => default; } // 0x00000001882E6658-0x00000001882E6674 
-		public string InternalSubset { get => default; } // 0x000000018B40D354-0x000000018B40D370 
-		public override string LocalName { get => default; } // 0x000000018B40D370-0x000000018B40D39C 
+		[Nullable(1)]
+		public string Name { [NullableContext(1)] get; } // 0x000000018A8DA55C-0x000000018A8DA578 
+		public string System { get; } // 0x000000018A8DA594-0x000000018A8DA5B0 
+		public string Public { get; } // 0x000000018A8DA578-0x000000018A8DA594 
+		public string InternalSubset { get; } // 0x000000018A8DA514-0x000000018A8DA530 
+		public override string LocalName { get; } // 0x000000018A8DA530-0x000000018A8DA55C 
 	
 		// Constructors
-		public XDocumentTypeWrapper() {} // Dummy constructor
-		public XDocumentTypeWrapper(XDocumentType documentType) {} // 0x000000018B40D32C-0x000000018B40D354
+		[NullableContext(1)]
+		public XDocumentTypeWrapper(XDocumentType documentType); // 0x000000018A8DA4EC-0x000000018A8DA514
 	}
 
-	internal class XDocumentWrapper : XContainerWrapper, IXmlDocument // TypeDefIndex: 52853
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class XDocumentWrapper : XContainerWrapper, IXmlDocument // TypeDefIndex: 55535
 	{
 		// Properties
-		private XDocument Document { get => default; } // 0x000000018B40DD64-0x000000018B40DDA0 
-		public override List<IXmlNode> ChildNodes { get => default; } // 0x000000018B40DBB8-0x000000018B40DCC8 
-		protected override bool HasChildNodes { get => default; } // 0x000000018B40DDA0-0x000000018B40DDDC 
-		public IXmlElement DocumentElement { get => default; } // 0x000000018B40DCC8-0x000000018B40DD64 
+		private XDocument Document { get; } // 0x000000018A8DAF78-0x000000018A8DAFB4 
+		public override List<IXmlNode> ChildNodes { get; } // 0x000000018A8DADCC-0x000000018A8DAEDC 
+		protected override bool HasChildNodes { get; } // 0x000000018A8DAFB4-0x000000018A8DAFF0 
+		[Nullable(2)]
+		public IXmlElement DocumentElement { [NullableContext(2)] get; } // 0x000000018A8DAEDC-0x000000018A8DAF78 
 	
 		// Constructors
-		public XDocumentWrapper() {} // Dummy constructor
-		public XDocumentWrapper(XDocument document) {} // 0x0000000184096E30-0x0000000184096EF0
+		public XDocumentWrapper(XDocument document); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		public IXmlNode CreateComment(string text) => default; // 0x000000018B40D624-0x000000018B40D6B4
-		public IXmlNode CreateTextNode(string text) => default; // 0x000000018B40D92C-0x000000018B40D9BC
-		public IXmlNode CreateCDataSection(string data) => default; // 0x000000018B40D594-0x000000018B40D624
-		public IXmlNode CreateWhitespace(string text) => default; // 0x000000018B40D9BC-0x000000018B40DA4C
-		public IXmlNode CreateSignificantWhitespace(string text) => default; // 0x000000018B40D89C-0x000000018B40D92C
-		public IXmlNode CreateXmlDeclaration(string version, string encoding, string standalone) => default; // 0x000000018B40DA4C-0x000000018B40DAFC
-		public IXmlNode CreateXmlDocumentType(string name, string publicId, string systemId, string internalSubset) => default; // 0x000000018B40DAFC-0x000000018B40DBB8
-		public IXmlNode CreateProcessingInstruction(string target, string data) => default; // 0x000000018B40D7FC-0x000000018B40D89C
-		public IXmlElement CreateElement(string elementName) => default; // 0x000000018B40D6B4-0x000000018B40D750
-		public IXmlElement CreateElement(string qualifiedName, string namespaceUri) => default; // 0x000000018B40D750-0x000000018B40D7FC
-		public IXmlNode CreateAttribute(string name, string value) => default; // 0x000000018B40D42C-0x000000018B40D4D8
-		public IXmlNode CreateAttribute(string qualifiedName, string namespaceUri, string value) => default; // 0x000000018B40D4D8-0x000000018B40D594
-		public override IXmlNode AppendChild(IXmlNode newChild) => default; // 0x000000018B40D39C-0x000000018B40D42C
+		public IXmlNode CreateComment([Nullable(2)] string text); // 0x000000018A8DA838-0x000000018A8DA8C8
+		public IXmlNode CreateTextNode([Nullable(2)] string text); // 0x000000018A8DAB40-0x000000018A8DABD0
+		public IXmlNode CreateCDataSection([Nullable(2)] string data); // 0x000000018A8DA7A8-0x000000018A8DA838
+		public IXmlNode CreateWhitespace([Nullable(2)] string text); // 0x000000018A8DABD0-0x000000018A8DAC60
+		public IXmlNode CreateSignificantWhitespace([Nullable(2)] string text); // 0x000000018A8DAAB0-0x000000018A8DAB40
+		public IXmlNode CreateXmlDeclaration(string version, [Nullable(2)] string encoding, [Nullable(2)] string standalone); // 0x000000018A8DAC60-0x000000018A8DAD10
+		[NullableContext(2)]
+		public IXmlNode CreateXmlDocumentType([Nullable(1)] string name, string publicId, string systemId, string internalSubset); // 0x000000018A8DAD10-0x000000018A8DADCC
+		public IXmlNode CreateProcessingInstruction(string target, string data); // 0x000000018A8DAA10-0x000000018A8DAAB0
+		public IXmlElement CreateElement(string elementName); // 0x000000018A8DA8C8-0x000000018A8DA964
+		public IXmlElement CreateElement(string qualifiedName, string namespaceUri); // 0x000000018A8DA964-0x000000018A8DAA10
+		public IXmlNode CreateAttribute(string name, string value); // 0x000000018A8DA640-0x000000018A8DA6EC
+		public IXmlNode CreateAttribute(string qualifiedName, string namespaceUri, string value); // 0x000000018A8DA6EC-0x000000018A8DA7A8
+		public override IXmlNode AppendChild(IXmlNode newChild); // 0x000000018A8DA5B0-0x000000018A8DA640
 	}
 
-	internal class XTextWrapper : XObjectWrapper // TypeDefIndex: 52854
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal class XTextWrapper : XObjectWrapper // TypeDefIndex: 55536
 	{
 		// Properties
-		private XText Text { get => default; } // 0x000000018B40E968-0x000000018B40E9A4 
-		public override string Value { get => default; } // 0x000000018B40E9A4-0x000000018B40E9C4 
-		public override IXmlNode ParentNode { get => default; } // 0x000000018B40E910-0x000000018B40E968 
+		[Nullable(1)]
+		private XText Text { [NullableContext(1)] get; } // 0x000000018A8DB97C-0x000000018A8DB9B8 
+		public override string Value { get; } // 0x000000018A8DB9B8-0x000000018A8DB9D8 
+		public override IXmlNode ParentNode { get; } // 0x000000018A8DB924-0x000000018A8DB97C 
 	
 		// Constructors
-		public XTextWrapper() {} // Dummy constructor
-		public XTextWrapper(XText text) {} // 0x0000000184096E30-0x0000000184096EF0
+		[NullableContext(1)]
+		public XTextWrapper(XText text); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	internal class XCommentWrapper : XObjectWrapper // TypeDefIndex: 52855
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal class XCommentWrapper : XObjectWrapper // TypeDefIndex: 55537
 	{
 		// Properties
-		private XComment Text { get => default; } // 0x000000018B40CBF8-0x000000018B40CC34 
-		public override string Value { get => default; } // 0x000000018B40CC34-0x000000018B40CC54 
-		public override IXmlNode ParentNode { get => default; } // 0x000000018B40CBA0-0x000000018B40CBF8 
+		[Nullable(1)]
+		private XComment Text { [NullableContext(1)] get; } // 0x000000018A8D9D80-0x000000018A8D9DBC 
+		public override string Value { get; } // 0x000000018A8D9DBC-0x000000018A8D9DDC 
+		public override IXmlNode ParentNode { get; } // 0x000000018A8D9D28-0x000000018A8D9D80 
 	
 		// Constructors
-		public XCommentWrapper() {} // Dummy constructor
-		public XCommentWrapper(XComment text) {} // 0x0000000184096E30-0x0000000184096EF0
+		[NullableContext(1)]
+		public XCommentWrapper(XComment text); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	internal class XProcessingInstructionWrapper : XObjectWrapper // TypeDefIndex: 52856
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal class XProcessingInstructionWrapper : XObjectWrapper // TypeDefIndex: 55538
 	{
 		// Properties
-		private XProcessingInstruction ProcessingInstruction { get => default; } // 0x000000018B40E8B4-0x000000018B40E8F0 
-		public override string LocalName { get => default; } // 0x000000018B40E894-0x000000018B40E8B4 
-		public override string Value { get => default; } // 0x000000018B40E8F0-0x000000018B40E910 
+		[Nullable(1)]
+		private XProcessingInstruction ProcessingInstruction { [NullableContext(1)] get; } // 0x000000018A8DB8C8-0x000000018A8DB904 
+		public override string LocalName { get; } // 0x000000018A8DB8A8-0x000000018A8DB8C8 
+		public override string Value { get; } // 0x000000018A8DB904-0x000000018A8DB924 
 	
 		// Constructors
-		public XProcessingInstructionWrapper() {} // Dummy constructor
-		public XProcessingInstructionWrapper(XProcessingInstruction processingInstruction) {} // 0x0000000184096E30-0x0000000184096EF0
+		[NullableContext(1)]
+		public XProcessingInstructionWrapper(XProcessingInstruction processingInstruction); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	internal class XContainerWrapper : XObjectWrapper // TypeDefIndex: 52857
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class XContainerWrapper : XObjectWrapper // TypeDefIndex: 55539
 	{
 		// Fields
+		[Nullable(new byte[2] {2, 1 })]
 		private List<IXmlNode> _childNodes; // 0x18
 	
 		// Properties
-		private XContainer Container { get => default; } // 0x000000018B40D224-0x000000018B40D260 
-		public override List<IXmlNode> ChildNodes { get => default; } // 0x000000018B40CFF8-0x000000018B40D224 
-		protected virtual bool HasChildNodes { get => default; } // 0x000000018B40D260-0x000000018B40D28C 
-		public override IXmlNode ParentNode { get => default; } // 0x000000018B40D28C-0x000000018B40D2E4 
+		private XContainer Container { get; } // 0x000000018A8DA3AC-0x000000018A8DA3E8 
+		public override List<IXmlNode> ChildNodes { get; } // 0x000000018A8DA180-0x000000018A8DA3AC 
+		protected virtual bool HasChildNodes { get; } // 0x000000018A8DA3E8-0x000000018A8DA414 
+		[Nullable(2)]
+		public override IXmlNode ParentNode { [NullableContext(2)] get; } // 0x000000018A8DA414-0x000000018A8DA46C 
 	
 		// Constructors
-		public XContainerWrapper() {} // Dummy constructor
-		public XContainerWrapper(XContainer container) {} // 0x0000000184096E30-0x0000000184096EF0
+		public XContainerWrapper(XContainer container); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		internal static IXmlNode WrapNode(XObject node) => default; // 0x000000018B40CCBC-0x000000018B40CFF8
-		public override IXmlNode AppendChild(IXmlNode newChild) => default; // 0x000000018B40CC54-0x000000018B40CCBC
+		internal static IXmlNode WrapNode(XObject node); // 0x000000018A8D9E44-0x000000018A8DA180
+		public override IXmlNode AppendChild(IXmlNode newChild); // 0x000000018A8D9DDC-0x000000018A8D9E44
 	}
 
-	internal class XObjectWrapper : IXmlNode // TypeDefIndex: 52858
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal class XObjectWrapper : IXmlNode // TypeDefIndex: 55540
 	{
 		// Fields
 		private readonly XObject _xmlObject; // 0x10
 	
 		// Properties
-		public object WrappedNode { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public virtual XmlNodeType NodeType { get => default; } // 0x000000018B40E874-0x000000018B40E894 
-		public virtual string LocalName { get => default; } // 0x00000001813AE580-0x00000001813AE590 
-		public virtual List<IXmlNode> ChildNodes { get => default; } // 0x000000018B40E824-0x000000018B40E874 
-		public virtual List<IXmlNode> Attributes { get => default; } // 0x000000018B40E7D4-0x000000018B40E824 
-		public virtual IXmlNode ParentNode { get => default; } // 0x00000001813AE580-0x00000001813AE590 
-		public virtual string Value { get => default; } // 0x00000001813AE580-0x00000001813AE590 
-		public virtual string NamespaceUri { get => default; } // 0x00000001813AE580-0x00000001813AE590 
+		public object WrappedNode { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public virtual XmlNodeType NodeType { get; } // 0x000000018A8DB888-0x000000018A8DB8A8 
+		public virtual string LocalName { get; } // 0x00000001811EC580-0x00000001811EC590 
+		[Nullable(1)]
+		public virtual List<IXmlNode> ChildNodes { [NullableContext(1)] get; } // 0x000000018A8DB838-0x000000018A8DB888 
+		[Nullable(1)]
+		public virtual List<IXmlNode> Attributes { [NullableContext(1)] get; } // 0x000000018A8DB7E8-0x000000018A8DB838 
+		public virtual IXmlNode ParentNode { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public virtual string Value { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public virtual string NamespaceUri { get; } // 0x00000001811EC580-0x00000001811EC590 
 	
 		// Constructors
-		public XObjectWrapper() {} // Dummy constructor
-		public XObjectWrapper(XObject xmlObject) {} // 0x0000000184096E30-0x0000000184096EF0
+		public XObjectWrapper(XObject xmlObject); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		public virtual IXmlNode AppendChild(IXmlNode newChild) => default; // 0x000000018B40E788-0x000000018B40E7D4
+		[NullableContext(1)]
+		public virtual IXmlNode AppendChild(IXmlNode newChild); // 0x000000018A8DB79C-0x000000018A8DB7E8
 	}
 
-	internal class XAttributeWrapper : XObjectWrapper // TypeDefIndex: 52859
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal class XAttributeWrapper : XObjectWrapper // TypeDefIndex: 55541
 	{
 		// Properties
-		private XAttribute Attribute { get => default; } // 0x000000018B40CA98-0x000000018B40CAD4 
-		public override string Value { get => default; } // 0x000000018B40CB80-0x000000018B40CBA0 
-		public override string LocalName { get => default; } // 0x000000018B40CAD4-0x000000018B40CAFC 
-		public override string NamespaceUri { get => default; } // 0x000000018B40CAFC-0x000000018B40CB28 
-		public override IXmlNode ParentNode { get => default; } // 0x000000018B40CB28-0x000000018B40CB80 
+		[Nullable(1)]
+		private XAttribute Attribute { [NullableContext(1)] get; } // 0x000000018A8D9C20-0x000000018A8D9C5C 
+		public override string Value { get; } // 0x000000018A8D9D08-0x000000018A8D9D28 
+		public override string LocalName { get; } // 0x000000018A8D9C5C-0x000000018A8D9C84 
+		public override string NamespaceUri { get; } // 0x000000018A8D9C84-0x000000018A8D9CB0 
+		public override IXmlNode ParentNode { get; } // 0x000000018A8D9CB0-0x000000018A8D9D08 
 	
 		// Constructors
-		public XAttributeWrapper() {} // Dummy constructor
-		public XAttributeWrapper(XAttribute attribute) {} // 0x0000000184096E30-0x0000000184096EF0
+		[NullableContext(1)]
+		public XAttributeWrapper(XAttribute attribute); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	internal class XElementWrapper : XContainerWrapper, IXmlElement // TypeDefIndex: 52860
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class XElementWrapper : XContainerWrapper, IXmlElement // TypeDefIndex: 55542
 	{
 		// Fields
+		[Nullable(new byte[2] {2, 1 })]
 		private List<IXmlNode> _attributes; // 0x20
 	
 		// Properties
-		private XElement Element { get => default; } // 0x000000018B40E6B0-0x000000018B40E6EC 
-		public override List<IXmlNode> Attributes { get => default; } // 0x000000018B40E148-0x000000018B40E6B0 
-		public override string Value { get => default; } // 0x000000018B40E764-0x000000018B40E788 
-		public override string LocalName { get => default; } // 0x000000018B40E710-0x000000018B40E738 
-		public override string NamespaceUri { get => default; } // 0x000000018B40E738-0x000000018B40E764 
-		public bool IsEmpty { get => default; } // 0x000000018B40E6EC-0x000000018B40E710 
+		private XElement Element { get; } // 0x000000018A8DB6C4-0x000000018A8DB700 
+		public override List<IXmlNode> Attributes { get; } // 0x000000018A8DB35C-0x000000018A8DB6C4 
+		[Nullable(2)]
+		public override string Value { [NullableContext(2)] get; } // 0x000000018A8DB778-0x000000018A8DB79C 
+		[Nullable(2)]
+		public override string LocalName { [NullableContext(2)] get; } // 0x000000018A8DB724-0x000000018A8DB74C 
+		[Nullable(2)]
+		public override string NamespaceUri { [NullableContext(2)] get; } // 0x000000018A8DB74C-0x000000018A8DB778 
+		public bool IsEmpty { get; } // 0x000000018A8DB700-0x000000018A8DB724 
 	
 		// Constructors
-		public XElementWrapper() {} // Dummy constructor
-		public XElementWrapper(XElement element) {} // 0x0000000184096E30-0x0000000184096EF0
+		public XElementWrapper(XElement element); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		public void SetAttributeNode(IXmlNode attribute) {} // 0x000000018B40E0C8-0x000000018B40E148
-		private bool HasImplicitNamespaceAttribute(string namespaceUri) => default; // 0x000000018B40DE50-0x000000018B40E0C8
-		public override IXmlNode AppendChild(IXmlNode newChild) => default; // 0x000000018B40DDDC-0x000000018B40DE0C
-		public string GetPrefixOfNamespace(string namespaceUri) => default; // 0x000000018B40DE0C-0x000000018B40DE50
+		public void SetAttributeNode(IXmlNode attribute); // 0x000000018A8DB2DC-0x000000018A8DB35C
+		private bool HasImplicitNamespaceAttribute(string namespaceUri); // 0x000000018A8DB064-0x000000018A8DB2DC
+		public override IXmlNode AppendChild(IXmlNode newChild); // 0x000000018A8DAFF0-0x000000018A8DB020
+		public string GetPrefixOfNamespace(string namespaceUri); // 0x000000018A8DB020-0x000000018A8DB064
 	}
 
-	public class XmlNodeConverter : JsonConverter // TypeDefIndex: 52861
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class XmlNodeConverter : JsonConverter // TypeDefIndex: 55543
 	{
 		// Fields
 		internal static readonly List<IXmlNode> EmptyChildNodes; // 0x00
-		private const string TextName = "#text"; // Metadata: 0x020769FD
-		private const string CommentName = "#comment"; // Metadata: 0x02076A03
-		private const string CDataName = "#cdata-section"; // Metadata: 0x02076A0C
-		private const string WhitespaceName = "#whitespace"; // Metadata: 0x02076A1B
-		private const string SignificantWhitespaceName = "#significant-whitespace"; // Metadata: 0x02076A27
-		private const string DeclarationName = "?xml"; // Metadata: 0x02076A3F
-		private const string JsonNamespaceUri = "http://james.newtonking.com/projects/json"; // Metadata: 0x02076A44
+		private const string TextName = "#text"; // Metadata: 0x02346CF5
+		private const string CommentName = "#comment"; // Metadata: 0x02346CFB
+		private const string CDataName = "#cdata-section"; // Metadata: 0x02346D04
+		private const string WhitespaceName = "#whitespace"; // Metadata: 0x02346D13
+		private const string SignificantWhitespaceName = "#significant-whitespace"; // Metadata: 0x02346D1F
+		private const string DeclarationName = "?xml"; // Metadata: 0x02346D37
+		private const string JsonNamespaceUri = "http://james.newtonking.com/projects/json"; // Metadata: 0x02346D3C
+		[CompilerGenerated]
+		[Nullable(2)]
 		private string _DeserializeRootElementName_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private bool _WriteArrayAttribute_k__BackingField; // 0x18
+		[CompilerGenerated]
 		private bool _OmitRootObject_k__BackingField; // 0x19
+		[CompilerGenerated]
 		private bool _EncodeSpecialCharacters_k__BackingField; // 0x1A
 	
 		// Properties
-		public string DeserializeRootElementName { get; set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public bool WriteArrayAttribute { get; set; } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
-		public bool OmitRootObject { get; set; } // 0x0000000181A73E90-0x0000000181A73EA0 0x0000000181A73EB0-0x0000000181A73EC0
-		public bool EncodeSpecialCharacters { get; set; } // 0x0000000185FB0730-0x0000000185FB0740 0x0000000185FB0740-0x0000000185FB0750
+		[Nullable(2)]
+		public string DeserializeRootElementName { [CompilerGenerated] [NullableContext(2)] get; [CompilerGenerated] [NullableContext(2)] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public bool WriteArrayAttribute { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86340-0x0000000184D86350 0x0000000184D86350-0x0000000184D86360
+		public bool OmitRootObject { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D866A0-0x0000000184D866B0 0x0000000184D866C0-0x0000000184D866D0
+		public bool EncodeSpecialCharacters { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001815AF940-0x00000001815AF950 0x0000000184D866E0-0x0000000184D866F0
 	
 		// Constructors
-		public XmlNodeConverter() {} // 0x0000000185492010-0x0000000185492020
-		static XmlNodeConverter() {} // 0x0000000185F3E5F0-0x0000000185F3E680
+		public XmlNodeConverter(); // 0x00000001841E1670-0x00000001841E1680
+		static XmlNodeConverter(); // 0x0000000184D165F0-0x0000000184D16680
 	
 		// Methods
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {} // 0x000000018B4151C4-0x000000018B4152FC
-		private IXmlNode WrapXml(object value) => default; // 0x000000018B414EC8-0x000000018B414FB0
-		private void PushParentNamespaces(IXmlNode node, XmlNamespaceManager manager) {} // 0x000000018B411828-0x000000018B411BA8
-		private string ResolveFullName(IXmlNode node, XmlNamespaceManager manager) => default; // 0x000000018B412CFC-0x000000018B412E3C
-		private string GetPropertyName(IXmlNode node, XmlNamespaceManager manager) => default; // 0x000000018B4111D4-0x000000018B4114B4
-		private bool IsArray(IXmlNode node) => default; // 0x000000018B4114B4-0x000000018B41166C
-		private void SerializeGroupedNodes(JsonWriter writer, IXmlNode node, XmlNamespaceManager manager, bool writePropertyName) {} // 0x000000018B412E3C-0x000000018B4135D8
-		private void WriteGroupedNodes(JsonWriter writer, XmlNamespaceManager manager, bool writePropertyName, List<IXmlNode> groupedNodes, string elementNames) {} // 0x000000018B414FB0-0x000000018B4150FC
-		private void WriteGroupedNodes(JsonWriter writer, XmlNamespaceManager manager, bool writePropertyName, IXmlNode node, string elementNames) {} // 0x000000018B4150FC-0x000000018B4151C4
-		private void SerializeNode(JsonWriter writer, IXmlNode node, XmlNamespaceManager manager, bool writePropertyName) {} // 0x000000018B4135D8-0x000000018B414CC8
-		private static bool AllSameName(IXmlNode node) => default; // 0x000000018B40F5A4-0x000000018B40F700
-		public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) => default; // 0x000000018B412720-0x000000018B412CFC
-		private void DeserializeValue(JsonReader reader, IXmlDocument document, XmlNamespaceManager manager, string propertyName, IXmlNode currentNode) {} // 0x000000018B410E14-0x000000018B4111D4
-		private void ReadElement(JsonReader reader, IXmlDocument document, IXmlNode currentNode, string propertyName, XmlNamespaceManager manager) {} // 0x000000018B412414-0x000000018B412720
-		private void CreateElement(JsonReader reader, IXmlDocument document, IXmlNode currentNode, string elementName, XmlNamespaceManager manager, string elementPrefix, Dictionary<string, string> attributeNameValues) {} // 0x000000018B40FEE4-0x000000018B410338
-		private static void AddAttribute(JsonReader reader, IXmlDocument document, IXmlNode currentNode, string propertyName, string attributeName, XmlNamespaceManager manager, string attributePrefix) {} // 0x000000018B40F274-0x000000018B40F42C
-		private static string ConvertTokenToXmlValue(JsonReader reader) => default; // 0x000000018B40F700-0x000000018B40FC08
-		private void ReadArrayElements(JsonReader reader, IXmlDocument document, string propertyName, IXmlNode currentNode, XmlNamespaceManager manager) {} // 0x000000018B411BA8-0x000000018B411E34
-		private void AddJsonArrayAttribute(IXmlElement element, IXmlDocument document) {} // 0x000000018B40F42C-0x000000018B40F5A4
-		private bool ShouldReadInto(JsonReader reader) => default; // 0x000000018B414CC8-0x000000018B414D34
-		private Dictionary<string, string> ReadAttributeElements(JsonReader reader, XmlNamespaceManager manager) => default; // 0x000000018B411E34-0x000000018B412414
-		private void CreateInstruction(JsonReader reader, IXmlDocument document, IXmlNode currentNode, string propertyName) {} // 0x000000018B41049C-0x000000018B410794
-		private void CreateDocumentType(JsonReader reader, IXmlDocument document, IXmlNode currentNode) {} // 0x000000018B40FC08-0x000000018B40FEE4
-		private IXmlElement CreateElement(string elementName, IXmlDocument document, string elementPrefix, XmlNamespaceManager manager) => default; // 0x000000018B410338-0x000000018B41049C
-		private void DeserializeNode(JsonReader reader, IXmlDocument document, XmlNamespaceManager manager, IXmlNode currentNode) {} // 0x000000018B410794-0x000000018B410E14
-		private bool IsNamespaceAttribute(string attributeName, out string prefix) {
-			prefix = default;
-			return default;
-		} // 0x000000018B41166C-0x000000018B411738
-		private bool ValueAttributes(List<IXmlNode> c) => default; // 0x000000018B414D34-0x000000018B414EC8
-		public override bool CanConvert(System.Type valueType) => default; // 0x00000001851D1290-0x00000001851D1340
-		private bool IsXObject(System.Type valueType) => default; // 0x000000018B411738-0x000000018B4117B0
-		private bool IsXmlNode(System.Type valueType) => default; // 0x000000018B4117B0-0x000000018B411828
+		public override void WriteJson(JsonWriter writer, [Nullable(2)] object value, JsonSerializer serializer); // 0x000000018A8E209C-0x000000018A8E21D4
+		private IXmlNode WrapXml(object value); // 0x000000018A8E1DA0-0x000000018A8E1E88
+		private void PushParentNamespaces(IXmlNode node, XmlNamespaceManager manager); // 0x000000018A8DE8DC-0x000000018A8DEC5C
+		private string ResolveFullName(IXmlNode node, XmlNamespaceManager manager); // 0x000000018A8DFDB0-0x000000018A8DFEF0
+		private string GetPropertyName(IXmlNode node, XmlNamespaceManager manager); // 0x000000018A8DE288-0x000000018A8DE568
+		private bool IsArray(IXmlNode node); // 0x000000018A8DE568-0x000000018A8DE720
+		private void SerializeGroupedNodes(JsonWriter writer, IXmlNode node, XmlNamespaceManager manager, bool writePropertyName); // 0x000000018A8DFEF0-0x000000018A8E068C
+		private void WriteGroupedNodes(JsonWriter writer, XmlNamespaceManager manager, bool writePropertyName, List<IXmlNode> groupedNodes, string elementNames); // 0x000000018A8E1E88-0x000000018A8E1FD4
+		private void WriteGroupedNodes(JsonWriter writer, XmlNamespaceManager manager, bool writePropertyName, IXmlNode node, string elementNames); // 0x000000018A8E1FD4-0x000000018A8E209C
+		private void SerializeNode(JsonWriter writer, IXmlNode node, XmlNamespaceManager manager, bool writePropertyName); // 0x000000018A8E068C-0x000000018A8E1BA0
+		private static bool AllSameName(IXmlNode node); // 0x000000018A8DC58C-0x000000018A8DC6E8
+		public override object ReadJson(JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue, JsonSerializer serializer); // 0x000000018A8DF7D4-0x000000018A8DFDB0
+		private void DeserializeValue(JsonReader reader, IXmlDocument document, XmlNamespaceManager manager, string propertyName, IXmlNode currentNode); // 0x000000018A8DDF28-0x000000018A8DE288
+		private void ReadElement(JsonReader reader, IXmlDocument document, IXmlNode currentNode, string propertyName, XmlNamespaceManager manager); // 0x000000018A8DF4C8-0x000000018A8DF7D4
+		private void CreateElement(JsonReader reader, IXmlDocument document, IXmlNode currentNode, string elementName, XmlNamespaceManager manager, [Nullable(2)] string elementPrefix, [Nullable(new byte[3] {2, 1, 2 })] Dictionary<string, string> attributeNameValues); // 0x000000018A8DCF2C-0x000000018A8DD380
+		private static void AddAttribute(JsonReader reader, IXmlDocument document, IXmlNode currentNode, string propertyName, string attributeName, XmlNamespaceManager manager, [Nullable(2)] string attributePrefix); // 0x000000018A8DC288-0x000000018A8DC440
+		private static string ConvertTokenToXmlValue(JsonReader reader); // 0x000000018A8DC6E8-0x000000018A8DCBF0
+		private void ReadArrayElements(JsonReader reader, IXmlDocument document, string propertyName, IXmlNode currentNode, XmlNamespaceManager manager); // 0x000000018A8DEC5C-0x000000018A8DEEE8
+		private void AddJsonArrayAttribute(IXmlElement element, IXmlDocument document); // 0x000000018A8DC440-0x000000018A8DC58C
+		private bool ShouldReadInto(JsonReader reader); // 0x000000018A8E1BA0-0x000000018A8E1C0C
+		private Dictionary<string, string> ReadAttributeElements(JsonReader reader, XmlNamespaceManager manager); // 0x000000018A8DEEE8-0x000000018A8DF4C8
+		private void CreateInstruction(JsonReader reader, IXmlDocument document, IXmlNode currentNode, string propertyName); // 0x000000018A8DD518-0x000000018A8DD8C4
+		private void CreateDocumentType(JsonReader reader, IXmlDocument document, IXmlNode currentNode); // 0x000000018A8DCBF0-0x000000018A8DCF2C
+		private IXmlElement CreateElement(string elementName, IXmlDocument document, [Nullable(2)] string elementPrefix, XmlNamespaceManager manager); // 0x000000018A8DD380-0x000000018A8DD518
+		private void DeserializeNode(JsonReader reader, IXmlDocument document, XmlNamespaceManager manager, IXmlNode currentNode); // 0x000000018A8DD8C4-0x000000018A8DDF28
+		private bool IsNamespaceAttribute(string attributeName, [NotNullWhen(true)] [Nullable(2)] out string prefix); // 0x000000018A8DE720-0x000000018A8DE7EC
+		private bool ValueAttributes(List<IXmlNode> c); // 0x000000018A8E1C0C-0x000000018A8E1DA0
+		public override bool CanConvert(System.Type valueType); // 0x00000001840B9AC0-0x00000001840B9B40
+		private bool IsXObject(System.Type valueType); // 0x000000018A8DE7EC-0x000000018A8DE864
+		private bool IsXmlNode(System.Type valueType); // 0x000000018A8DE864-0x000000018A8DE8DC
 	}
 }
 
 namespace Newtonsoft.Json.Linq
 {
-	public enum CommentHandling // TypeDefIndex: 52794
+	public enum CommentHandling // TypeDefIndex: 55476
 	{
 		Ignore = 0,
 		Load = 1
 	}
 
-	public enum DuplicatePropertyNameHandling // TypeDefIndex: 52795
+	public enum DuplicatePropertyNameHandling // TypeDefIndex: 55477
 	{
 		Replace = 0,
 		Ignore = 1,
 		Error = 2
 	}
 
-	public static class Extensions // TypeDefIndex: 52796
+	[Nullable(0)]
+	[NullableContext(1)]
+	public static class Extensions // TypeDefIndex: 55478
 	{
-		// Methods
-		public static U Value<U>(IEnumerable<JToken> value) => default;
-		public static U Value<T, U>(IEnumerable<T> value)
-			where T : JToken => default;
-		internal static U Convert<T, U>(T token)
-			where T : JToken => default;
+		// Extension methods
+		[NullableContext(2)]
+		public static U Value<U>([Nullable(1)] this IEnumerable<JToken> value);
+		public static U Value<T, U>(this IEnumerable<T> value)
+			where T : JToken;
+		[NullableContext(2)]
+		internal static U Convert<T, U>([Nullable(1)] this T token)
+			where T : JToken;
 	}
 
-	public class JArray : JContainer, IList<JToken> // TypeDefIndex: 52797
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JArray : JContainer, IList<JToken> // TypeDefIndex: 55479
 	{
 		// Fields
 		private readonly List<JToken> _values; // 0x50
 	
 		// Properties
-		protected override IList<JToken> ChildrenTokens { get => default; } // 0x0000000181460F60-0x0000000181460F70 
-		public override JTokenType Type { get => default; } // 0x0000000181C6A970-0x0000000181C6A980 
-		public override JToken this[object key] { get => default; } // 0x000000018B3F4B84-0x000000018B3F4CCC 
-		public JToken this[int index] { get => default; set {} } // 0x000000018B3F4CCC-0x000000018B3F4CD8 0x000000018B3F4CD8-0x000000018B3F4CE8
-		public bool IsReadOnly { get => default; } // 0x00000001814A81B0-0x00000001814A81C0 
+		protected override IList<JToken> ChildrenTokens { get; } // 0x0000000184D86270-0x0000000184D86280 
+		public override JTokenType Type { get; } // 0x0000000182BBE540-0x0000000182BBE550 
+		[Nullable(2)]
+		public override JToken this[object key] { get => default; } // 0x000000018A8C3240-0x000000018A8C3388 
+		public JToken this[int index] { get => default; set {} } // 0x00000001853924D4-0x00000001853924E0 0x000000018A8C3388-0x000000018A8C3398
+		public bool IsReadOnly { get; } // 0x00000001812081B0-0x0000000181208610 
 	
 		// Constructors
-		public JArray() {} // 0x00000001845933F0-0x0000000184593480
-		internal JArray(JArray other, JsonCloneSettings settings) {} // 0x000000018B3F4AE4-0x000000018B3F4B84
-		public JArray(object content) {} // 0x000000018B3F4A48-0x000000018B3F4AE4
+		public JArray(); // 0x0000000183427EE0-0x0000000183427F70
+		internal JArray(JArray other, [Nullable(2)] JsonCloneSettings settings); // 0x000000018A8C31A0-0x000000018A8C3240
+		public JArray(object content); // 0x000000018A8C3104-0x000000018A8C31A0
 	
 		// Methods
-		internal override JToken CloneToken(JsonCloneSettings settings = null) => default; // 0x000000018B3F463C-0x000000018B3F46AC
-		public static new JArray Load(JsonReader reader, JsonLoadSettings settings) => default; // 0x000000018B3F47B0-0x000000018B3F4968
-		public override void WriteTo(JsonWriter writer, JsonConverter[] converters) {} // 0x000000018B3F4990-0x000000018B3F4A48
-		internal override int IndexOfItem(JToken item) => default; // 0x000000018B3F472C-0x000000018B3F4780
-		public int IndexOf(JToken item) => default; // 0x000000018B3F4780-0x000000018B3F478C
-		public void Insert(int index, JToken item) {} // 0x000000018B3F478C-0x000000018B3F47B0
-		public void RemoveAt(int index) {} // 0x000000018B3F4968-0x000000018B3F497C
-		public IEnumerator<JToken> GetEnumerator() => default; // 0x000000018B3F46C8-0x000000018B3F472C
-		public void Add(JToken item) {} // 0x000000018B3F4624-0x000000018B3F462C
-		public void Clear() {} // 0x000000018B3F462C-0x000000018B3F463C
-		public bool Contains(JToken item) => default; // 0x000000018B3F46AC-0x000000018B3F46C0
-		public void CopyTo(JToken[] array, int arrayIndex) {} // 0x000000018B3F46C0-0x000000018B3F46C8
-		public bool Remove(JToken item) => default; // 0x000000018B3F497C-0x000000018B3F4990
+		internal override JToken CloneToken([Nullable(2)] JsonCloneSettings settings = null); // 0x000000018A8C2F14-0x000000018A8C2F84
+		public static JArray Load(JsonReader reader); // 0x0000000185396950-0x000000018539695C
+		public static new JArray Load(JsonReader reader, [Nullable(2)] JsonLoadSettings settings); // 0x0000000183423920-0x0000000183423A10
+		public override void WriteTo(JsonWriter writer, params JsonConverter[] converters); // 0x000000018A8C304C-0x000000018A8C3104
+		[NullableContext(2)]
+		internal override int IndexOfItem(JToken item); // 0x000000018A8C2FA0-0x000000018A8C2FF4
+		public int IndexOf(JToken item); // 0x000000018A8C2FF4-0x000000018A8C3000
+		public void Insert(int index, JToken item); // 0x000000018A8C3000-0x000000018A8C3024
+		public void RemoveAt(int index); // 0x000000018A8C3024-0x000000018A8C3038
+		public IEnumerator<JToken> GetEnumerator(); // 0x0000000183F4DDF0-0x0000000183F4DE60
+		public void Add(JToken item); // 0x000000018A8C2EFC-0x000000018A8C2F04
+		public void Clear(); // 0x000000018A8C2F04-0x000000018A8C2F14
+		public bool Contains(JToken item); // 0x000000018A8C2F84-0x000000018A8C2F98
+		public void CopyTo(JToken[] array, int arrayIndex); // 0x000000018A8C2F98-0x000000018A8C2FA0
+		public bool Remove(JToken item); // 0x000000018A8C3038-0x000000018A8C304C
 	}
 
-	public class JConstructor : JContainer // TypeDefIndex: 52798
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JConstructor : JContainer // TypeDefIndex: 55480
 	{
 		// Fields
+		[Nullable(2)]
 		private string _name; // 0x50
 		private readonly List<JToken> _values; // 0x58
 	
 		// Properties
-		protected override IList<JToken> ChildrenTokens { get => default; } // 0x00000001813F1630-0x00000001813F1640 
-		public string Name { get => default; } // 0x0000000181460F60-0x0000000181460F70 
-		public override JTokenType Type { get => default; } // 0x0000000181D1CE70-0x0000000181D1CE80 
-		public override JToken this[object key] { get => default; } // 0x000000018B3F5290-0x000000018B3F53DC 
+		protected override IList<JToken> ChildrenTokens { get; } // 0x0000000182E56440-0x0000000182E56460 
+		[Nullable(2)]
+		public string Name { [NullableContext(2)] get; } // 0x0000000184D86270-0x0000000184D86280 
+		public override JTokenType Type { get; } // 0x0000000184D8C9E0-0x0000000184D8C9F0 
+		[Nullable(2)]
+		public override JToken this[object key] { get => default; } // 0x000000018A8C3940-0x000000018A8C3A8C 
 	
 		// Constructors
-		public JConstructor() {} // Dummy constructor
-		internal JConstructor(JConstructor other, JsonCloneSettings settings) {} // 0x000000018B3F51D8-0x000000018B3F5290
-		public JConstructor(string name) {} // 0x000000018B3F5078-0x000000018B3F51D8
+		internal JConstructor(JConstructor other, [Nullable(2)] JsonCloneSettings settings); // 0x000000018A8C3888-0x000000018A8C3940
+		public JConstructor(string name); // 0x000000018A8C3728-0x000000018A8C3888
 	
 		// Methods
-		internal override int IndexOfItem(JToken item) => default; // 0x000000018B3F4D58-0x000000018B3F4DAC
-		internal override JToken CloneToken(JsonCloneSettings settings = null) => default; // 0x000000018B3F4CE8-0x000000018B3F4D58
-		public override void WriteTo(JsonWriter writer, JsonConverter[] converters) {} // 0x000000018B3F4FA8-0x000000018B3F5078
-		public static new JConstructor Load(JsonReader reader, JsonLoadSettings settings) => default; // 0x000000018B3F4DAC-0x000000018B3F4FA8
+		[NullableContext(2)]
+		internal override int IndexOfItem(JToken item); // 0x000000018A8C3408-0x000000018A8C345C
+		internal override JToken CloneToken([Nullable(2)] JsonCloneSettings settings = null); // 0x000000018A8C3398-0x000000018A8C3408
+		public override void WriteTo(JsonWriter writer, params JsonConverter[] converters); // 0x000000018A8C3658-0x000000018A8C3728
+		public static new JConstructor Load(JsonReader reader, [Nullable(2)] JsonLoadSettings settings); // 0x000000018A8C345C-0x000000018A8C3658
 	}
 
-	public abstract class JContainer : JToken, IList<JToken>, IBindingList, INotifyCollectionChanged // TypeDefIndex: 52799
+	[Nullable(0)]
+	[NullableContext(1)]
+	public abstract class JContainer : JToken, IList<JToken>, IBindingList, INotifyCollectionChanged // TypeDefIndex: 55481
 	{
 		// Fields
+		[Nullable(2)]
 		internal ListChangedEventHandler _listChanged; // 0x30
+		[Nullable(2)]
 		internal NotifyCollectionChangedEventHandler _collectionChanged; // 0x38
+		[Nullable(2)]
 		private object _syncRoot; // 0x40
 		private bool _busy; // 0x48
 	
 		// Properties
 		protected abstract IList<JToken> ChildrenTokens { get; }
-		public override bool HasValues { get; } // 0x00000001856B6B40-0x00000001856B6BA0 
-		public override JToken First { get; } // 0x0000000185EB6E10-0x0000000185EB6EA0 
-		public override JToken Last { get; } // 0x0000000184593AE0-0x0000000184593B70 
-		JToken IList<Newtonsoft.Json.Linq.JToken>.this[int index] { get => default; set {} } // 0x000000018B3F4CCC-0x000000018B3F4CD8 0x000000018B3F4CD8-0x000000018B3F4CE8
-		bool ICollection<Newtonsoft.Json.Linq.JToken>.IsReadOnly { get; } // 0x00000001814A81B0-0x00000001814A81C0 
-		bool IList.IsFixedSize { get; } // 0x00000001814A81B0-0x00000001814A81C0 
-		bool IList.IsReadOnly { get; } // 0x00000001814A81B0-0x00000001814A81C0 
-		object IList.this[int index] { get => default; set {} } // 0x000000018B3F4CCC-0x000000018B3F4CD8 0x000000018B3F6424-0x000000018B3F645C
-		public int Count { get; } // 0x000000018B3F66EC-0x000000018B3F6740 
-		bool ICollection.IsSynchronized { get; } // 0x00000001814A81B0-0x00000001814A81C0 
-		object ICollection.SyncRoot { get; } // 0x000000018B3F62DC-0x000000018B3F633C 
+		public override bool HasValues { get; } // 0x00000001840464C0-0x0000000184046500 
+		[Nullable(2)]
+		public override JToken First { [NullableContext(2)] get; } // 0x00000001849E74E0-0x00000001849E7570 
+		[Nullable(2)]
+		public override JToken Last { [NullableContext(2)] get; } // 0x0000000183426800-0x0000000183426890 
+		JToken IList<Newtonsoft.Json.Linq.JToken>.this[int index] { get => default; set {} } // 0x00000001853924D4-0x00000001853924E0 0x000000018A8C3388-0x000000018A8C3398
+		bool ICollection<Newtonsoft.Json.Linq.JToken>.IsReadOnly { get; } // 0x00000001812081B0-0x0000000181208610 
+		bool IList.IsFixedSize { get; } // 0x00000001812081B0-0x0000000181208610 
+		bool IList.IsReadOnly { get; } // 0x00000001812081B0-0x0000000181208610 
+		[Nullable(2)]
+		object IList.this[int index] { [NullableContext(2)] get => default; [NullableContext(2)] set {} } // 0x00000001853924D4-0x00000001853924E0 0x000000018A8C47DC-0x000000018A8C4814
+		public int Count { get; } // 0x0000000183424A40-0x0000000183424AA0 
+		bool ICollection.IsSynchronized { get; } // 0x00000001812081B0-0x0000000181208610 
+		object ICollection.SyncRoot { get; } // 0x000000018A8C4694-0x000000018A8C46F4 
 	
 		// Events
-		public event NotifyCollectionChangedEventHandler CollectionChanged;
+		[Nullable(2)]
+		public event NotifyCollectionChangedEventHandler CollectionChanged {
+			add; // 0x000000018A8C4A18-0x000000018A8C4AA4
+			remove; // 0x000000018A8C4AA4-0x000000018A8C4B30
+		}
 	
 		// Constructors
-		internal JContainer() {} // 0x0000000184595590-0x00000001845955D0
-		internal JContainer(JContainer other, JsonCloneSettings settings) {} // 0x000000018B3F645C-0x000000018B3F6660
+		internal JContainer(); // 0x0000000183427C80-0x0000000183427CA0
+		internal JContainer(JContainer other, [Nullable(2)] JsonCloneSettings settings); // 0x000000018A8C4814-0x000000018A8C4A18
 	
 		// Methods
-		internal void CheckReentrancy() {} // 0x0000000184594360-0x0000000184594380
-		protected virtual void OnListChanged(ListChangedEventArgs e) {} // 0x000000018B3F5EE8-0x000000018B3F5F84
-		protected virtual void OnCollectionChanged(NotifyCollectionChangedEventArgs e) {} // 0x000000018B3F5E4C-0x000000018B3F5EE8
-		public override JEnumerable<JToken> Children() => default; // 0x000000018B3F53DC-0x000000018B3F5434
-		internal bool IsMultiContent(object content) => default; // 0x0000000184595470-0x0000000184595500
-		internal JToken EnsureParentToken(JToken item, bool skipParentCheck, bool copyAnnotations) => default; // 0x00000001845942C0-0x0000000184594360
+		internal void CheckReentrancy(); // 0x00000001834279A0-0x00000001834279C0
+		protected virtual void OnListChanged(ListChangedEventArgs e); // 0x000000018A8C42A0-0x000000018A8C433C
+		protected virtual void OnCollectionChanged(NotifyCollectionChangedEventArgs e); // 0x000000018A8C4204-0x000000018A8C42A0
+		public override JEnumerable<JToken> Children(); // 0x0000000184791E50-0x0000000184791EB0
+		[NullableContext(2)]
+		internal bool IsMultiContent([NotNullWhen(true)] object content); // 0x0000000183427480-0x0000000183427520
+		internal JToken EnsureParentToken([Nullable(2)] JToken item, bool skipParentCheck, bool copyAnnotations); // 0x0000000183427930-0x00000001834279A0
+		[NullableContext(2)]
 		internal abstract int IndexOfItem(JToken item);
-		internal virtual bool InsertItem(int index, JToken item, bool skipParentCheck, bool copyAnnotations) => default; // 0x0000000184594100-0x00000001845942C0
-		internal virtual void RemoveItemAt(int index) {} // 0x000000018B3F5F84-0x000000018B3F6260
-		internal virtual bool RemoveItem(JToken item) => default; // 0x000000018B3F6260-0x000000018B3F629C
-		internal virtual JToken GetItem(int index) => default; // 0x000000018B3F5DEC-0x000000018B3F5E4C
-		internal virtual void SetItem(int index, JToken item) {} // 0x00000001858D35E0-0x00000001858D3810
-		internal virtual void ClearItems() {} // 0x000000018B3F5434-0x000000018B3F5998
-		internal virtual void ReplaceItem(JToken existing, JToken replacement) {} // 0x000000018B3F629C-0x000000018B3F62DC
-		internal virtual bool ContainsItem(JToken item) => default; // 0x000000018B3F5998-0x000000018B3F59B4
-		internal virtual void CopyItemsTo(Array array, int arrayIndex) {} // 0x000000018B3F59B4-0x000000018B3F5D50
-		internal static bool IsTokenUnchanged(JToken currentValue, JToken newValue) => default; // 0x00000001858D3940-0x00000001858D39A0
-		internal virtual void ValidateToken(JToken o, JToken existing) {} // 0x00000001856AC150-0x00000001856AC1C0
-		public virtual void Add(object content) {} // 0x0000000184594860-0x00000001845948E0
-		internal bool TryAdd(object content) => default; // 0x0000000184593980-0x0000000184593A00
-		internal void AddAndSkipParentCheck(JToken token) {} // 0x00000001845935C0-0x0000000184593640
-		internal bool TryAddInternal(int index, object content, bool skipParentCheck, bool copyAnnotations) => default; // 0x00000001845948E0-0x0000000184595410
-		internal static JToken CreateFromContent(object content) => default; // 0x0000000184595410-0x0000000184595470
-		public void RemoveAll() {} // 0x000000018B3F462C-0x000000018B3F463C
-		internal void ReadTokenFrom(JsonReader reader, JsonLoadSettings options) {} // 0x0000000185A608C0-0x0000000185A60950
-		internal void ReadContentFrom(JsonReader r, JsonLoadSettings settings) {} // 0x0000000184593E20-0x0000000184594100
-		private static JProperty ReadProperty(JsonReader r, JsonLoadSettings settings, IJsonLineInfo lineInfo, JContainer parent) => default; // 0x0000000184593BE0-0x0000000184593D30
-		int IList<JToken>.IndexOf(JToken item) => default; // 0x000000018B3F4780-0x000000018B3F478C
-		void IList<JToken>.Insert(int index, JToken item) {} // 0x000000018B3F478C-0x000000018B3F47B0
-		void IList<JToken>.RemoveAt(int index) {} // 0x000000018B3F4968-0x000000018B3F497C
-		void ICollection<JToken>.Add(JToken item) {} // 0x000000018B3F4624-0x000000018B3F462C
-		void ICollection<JToken>.Clear() {} // 0x000000018B3F462C-0x000000018B3F463C
-		bool ICollection<JToken>.Contains(JToken item) => default; // 0x000000018B3F46AC-0x000000018B3F46C0
-		void ICollection<JToken>.CopyTo(JToken[] array, int arrayIndex) {} // 0x000000018B3F46C0-0x000000018B3F46C8
-		bool ICollection<JToken>.Remove(JToken item) => default; // 0x000000018B3F497C-0x000000018B3F4990
-		private JToken EnsureValue(object value) => default; // 0x000000018B3F5D50-0x000000018B3F5DEC
-		int IList.Add(object value) => default; // 0x000000018B3F633C-0x000000018B3F6370
-		void IList.Clear() {} // 0x000000018B3F462C-0x000000018B3F463C
-		bool IList.Contains(object value) => default; // 0x000000018B3F6370-0x000000018B3F6398
-		int IList.IndexOf(object value) => default; // 0x000000018B3F6398-0x000000018B3F63BC
-		void IList.Insert(int index, object value) {} // 0x000000018B3F63BC-0x000000018B3F63FC
-		void IList.Remove(object value) {} // 0x000000018B3F63FC-0x000000018B3F6424
-		void IList.RemoveAt(int index) {} // 0x000000018B3F4968-0x000000018B3F497C
-		void ICollection.CopyTo(Array array, int index) {} // 0x000000018B3F46C0-0x000000018B3F46C8
+		[NullableContext(2)]
+		internal virtual bool InsertItem(int index, JToken item, bool skipParentCheck, bool copyAnnotations); // 0x0000000183427750-0x0000000183427930
+		internal virtual void RemoveItemAt(int index); // 0x000000018A8C433C-0x000000018A8C4618
+		[NullableContext(2)]
+		internal virtual bool RemoveItem(JToken item); // 0x000000018A8C4618-0x000000018A8C4654
+		internal virtual JToken GetItem(int index); // 0x0000000183428730-0x00000001834287A0
+		[NullableContext(2)]
+		internal virtual void SetItem(int index, JToken item); // 0x00000001847C9BB0-0x00000001847C9DC0
+		internal virtual void ClearItems(); // 0x000000018A8C3A8C-0x000000018A8C3DB0
+		internal virtual void ReplaceItem(JToken existing, JToken replacement); // 0x000000018A8C4654-0x000000018A8C4694
+		[NullableContext(2)]
+		internal virtual bool ContainsItem(JToken item); // 0x000000018A8C3DB0-0x000000018A8C3DCC
+		internal virtual void CopyItemsTo(Array array, int arrayIndex); // 0x000000018A8C3DCC-0x000000018A8C4168
+		internal static bool IsTokenUnchanged(JToken currentValue, [Nullable(2)] JToken newValue); // 0x00000001847C9EA0-0x00000001847C9EF0
+		internal virtual void ValidateToken(JToken o, [Nullable(2)] JToken existing); // 0x00000001840B6120-0x00000001840B6170
+		[NullableContext(2)]
+		public virtual void Add(object content); // 0x0000000183426FD0-0x0000000183427040
+		[NullableContext(2)]
+		internal bool TryAdd(object content); // 0x00000001834285D0-0x0000000183428650
+		internal void AddAndSkipParentCheck(JToken token); // 0x0000000183426110-0x0000000183426190
+		[NullableContext(2)]
+		internal bool TryAddInternal(int index, object content, bool skipParentCheck, bool copyAnnotations); // 0x0000000183427040-0x0000000183427440
+		internal static JToken CreateFromContent([Nullable(2)] object content); // 0x0000000183427440-0x0000000183427480
+		public void RemoveAll(); // 0x000000018A8C2F04-0x000000018A8C2F14
+		internal void ReadTokenFrom(JsonReader reader, [Nullable(2)] JsonLoadSettings options); // 0x0000000183425FA0-0x0000000183426030
+		internal void ReadContentFrom(JsonReader r, [Nullable(2)] JsonLoadSettings settings); // 0x0000000183426CF0-0x0000000183426FD0
+		[NullableContext(2)]
+		private static JProperty ReadProperty([Nullable(1)] JsonReader r, JsonLoadSettings settings, IJsonLineInfo lineInfo, [Nullable(1)] JContainer parent); // 0x0000000183426A00-0x0000000183426BF0
+		int IList<JToken>.IndexOf(JToken item); // 0x000000018A8C2FF4-0x000000018A8C3000
+		void IList<JToken>.Insert(int index, JToken item); // 0x000000018A8C3000-0x000000018A8C3024
+		void IList<JToken>.RemoveAt(int index); // 0x000000018A8C3024-0x000000018A8C3038
+		void ICollection<JToken>.Add(JToken item); // 0x000000018A8C2EFC-0x000000018A8C2F04
+		void ICollection<JToken>.Clear(); // 0x000000018A8C2F04-0x000000018A8C2F14
+		bool ICollection<JToken>.Contains(JToken item); // 0x000000018A8C2F84-0x000000018A8C2F98
+		void ICollection<JToken>.CopyTo(JToken[] array, int arrayIndex); // 0x000000018A8C2F98-0x000000018A8C2FA0
+		bool ICollection<JToken>.Remove(JToken item); // 0x000000018A8C3038-0x000000018A8C304C
+		[NullableContext(2)]
+		private JToken EnsureValue(object value); // 0x000000018A8C4168-0x000000018A8C4204
+		[NullableContext(2)]
+		int IList.Add(object value); // 0x000000018A8C46F4-0x000000018A8C4728
+		void IList.Clear(); // 0x000000018A8C2F04-0x000000018A8C2F14
+		[NullableContext(2)]
+		bool IList.Contains(object value); // 0x000000018A8C4728-0x000000018A8C4750
+		[NullableContext(2)]
+		int IList.IndexOf(object value); // 0x000000018A8C4750-0x000000018A8C4774
+		[NullableContext(2)]
+		void IList.Insert(int index, object value); // 0x000000018A8C4774-0x000000018A8C47B4
+		[NullableContext(2)]
+		void IList.Remove(object value); // 0x000000018A8C47B4-0x000000018A8C47DC
+		void IList.RemoveAt(int index); // 0x000000018A8C3024-0x000000018A8C3038
+		void ICollection.CopyTo(Array array, int index); // 0x000000018A8C2F98-0x000000018A8C2FA0
 	}
 
-	public struct JEnumerable<T> : IEnumerable<T>, IEquatable<JEnumerable<T>> // TypeDefIndex: 52800
+	[DefaultMember("Item")]
+	[IsReadOnly]
+	[Nullable(0)]
+	[NullableContext(1)]
+	public struct JEnumerable<T> : IEnumerable<T>, IEquatable<JEnumerable<T>> // TypeDefIndex: 55482
 		where T : JToken
 	{
 		// Fields
+		[Nullable(new byte[2] {0, 1 })]
 		public static readonly JEnumerable<T> Empty;
 		private readonly IEnumerable<T> _enumerable;
 	
 		// Constructors
-		public JEnumerable(IEnumerable<T> enumerable) {
-			_enumerable = default;
-		}
-		static JEnumerable() {
-			Empty = default;
-		}
+		public JEnumerable(IEnumerable<T> enumerable);
+		static JEnumerable();
 	
 		// Methods
-		public IEnumerator<T> GetEnumerator() => default;
-		IEnumerator IEnumerable.GetEnumerator() => default;
-		public bool Equals(JEnumerable<T> other) => default;
-		public override bool Equals(object obj) => default;
-		public override int GetHashCode() => default;
+		public IEnumerator<T> GetEnumerator();
+		IEnumerator IEnumerable.GetEnumerator();
+		public bool Equals([Nullable(new byte[2] {0, 1 })] JEnumerable<T> other);
+		[NullableContext(2)]
+		public override bool Equals(object obj);
+		public override int GetHashCode();
 	}
 
-	public class JObject : JContainer, IDictionary<string, JToken>, INotifyPropertyChanged, ICustomTypeDescriptor // TypeDefIndex: 52804
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JObject : JContainer, IDictionary<string, JToken>, INotifyPropertyChanged, ICustomTypeDescriptor // TypeDefIndex: 55486
 	{
 		// Fields
 		private readonly JPropertyKeyedCollection _properties; // 0x50
+		[CompilerGenerated]
+		[Nullable(2)]
 		private PropertyChangedEventHandler PropertyChanged; // 0x58
+		[CompilerGenerated]
+		[Nullable(2)]
 		private PropertyChangingEventHandler PropertyChanging; // 0x60
 	
 		// Properties
-		protected override IList<JToken> ChildrenTokens { get => default; } // 0x0000000185090CD0-0x0000000185090D40 
-		public override JTokenType Type { get => default; } // 0x000000018B3F6C34-0x000000018B3F6C60 
-		public override JToken this[object key] { get => default; } // 0x000000018B3F722C-0x000000018B3F724C 
-		public JToken this[string propertyName] { get => default; set {} } // 0x0000000184593540-0x0000000184593560 0x0000000184592B90-0x0000000184592BE0
-		ICollection<string> System.Collections.Generic.IDictionary<System.String,Newtonsoft.Json.Linq.JToken>.Keys { get => default; } // 0x000000018B3F7324-0x000000018B3F76BC 
-		ICollection<JToken> System.Collections.Generic.IDictionary<System.String,Newtonsoft.Json.Linq.JToken>.Values { get => default; } // 0x000000018B3F76C4-0x000000018B3F7714 
-		bool System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<System.String,Newtonsoft.Json.Linq.JToken>>.IsReadOnly { get => default; } // 0x000000018B3F69E4-0x000000018B3F6A0C 
+		protected override IList<JToken> ChildrenTokens { get; } // 0x0000000184D86270-0x0000000184D86280 
+		public override JTokenType Type { get; } // 0x0000000184D85B80-0x0000000184D85B90 
+		[Nullable(2)]
+		public override JToken this[object key] { get => default; } // 0x00000001834268F0-0x0000000183426930 
+		[Nullable(2)]
+		public JToken this[string propertyName] { get => default; set {} } // 0x0000000183426930-0x0000000183426A00 0x0000000184CB6A90-0x0000000184CB6AE0
+		ICollection<string> System.Collections.Generic.IDictionary<System.String,Newtonsoft.Json.Linq.JToken>.Keys { get; } // 0x000000018A8C553C-0x000000018A8C555C 
+		[Nullable(new byte[2] {1, 2 })]
+		ICollection<JToken> System.Collections.Generic.IDictionary<System.String,Newtonsoft.Json.Linq.JToken>.Values { get; } // 0x000000018A8C555C-0x000000018A8C55A8 
+		bool System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<System.String,Newtonsoft.Json.Linq.JToken>>.IsReadOnly { get; } // 0x00000001812081B0-0x0000000181208610 
 	
 		// Events
-		public event PropertyChangedEventHandler PropertyChanged;
+		[Nullable(2)]
+		public event PropertyChangedEventHandler PropertyChanged {
+			add; // 0x000000018A8C5AB4-0x000000018A8C5B48
+			remove; // 0x000000018A8C5B48-0x000000018A8C5BDC
+		}
 	
 		// Nested types
-		private class JObjectDynamicProxy : DynamicProxy<JObject> // TypeDefIndex: 52802
+		[Nullable(new byte[2] {0, 1 })]
+		private class JObjectDynamicProxy : DynamicProxy<JObject> // TypeDefIndex: 55484
 		{
 			// Nested types
 			[Serializable]
-			private sealed class __c // TypeDefIndex: 52801
+			[CompilerGenerated]
+			private sealed class __c // TypeDefIndex: 55483
 			{
 				// Fields
+				[Nullable(0)]
 				public static readonly __c __9; // 0x00
+				[Nullable(0)]
 				public static Func<JProperty, string> __9__2_0; // 0x08
 	
 				// Constructors
-				static __c() {} // 0x0000000181460F60-0x0000000181460F70
-				public __c() {} // 0x000000018B3F77A4-0x000000018B3F7838
+				static __c(); // 0x000000018A8D2A98-0x000000018A8D2AFC
+				public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 				// Methods
-				internal string _GetDynamicMemberNames_b__2_0(JProperty p) => default; // 0x000000018B3F7838-0x000000018B3F78CC
+				[NullableContext(0)]
+				internal string _GetDynamicMemberNames_b__2_0(JProperty p); // 0x000000018A8D2A80-0x000000018A8D2A98
 			}
 	
 			// Constructors
-			public JObjectDynamicProxy() {} // 0x0000000184593D30-0x0000000184593DB0
+			public JObjectDynamicProxy(); // 0x000000018A8C4D48-0x000000018A8C4D70
 	
 			// Methods
-			public override bool TryGetMember(JObject instance, GetMemberBinder binder, out object result) {
-				result = default;
-				return default;
-			} // 0x0000000184593640-0x00000001845936B0
-			public override bool TrySetMember(JObject instance, SetMemberBinder binder, object value) => default; // 0x000000018B3F7714-0x000000018B3F77A4
-			public override IEnumerable<string> GetDynamicMemberNames(JObject instance) => default; // 0x000000018B3F6C70-0x000000018B3F6C9C
+			public override bool TryGetMember(JObject instance, GetMemberBinder binder, [Nullable(2)] out object result); // 0x000000018A8C4C50-0x000000018A8C4C90
+			public override bool TrySetMember(JObject instance, SetMemberBinder binder, object value); // 0x000000018A8C4C90-0x000000018A8C4D48
+			public override IEnumerable<string> GetDynamicMemberNames(JObject instance); // 0x000000018A8C4B30-0x000000018A8C4C50
 		}
 	
-		private sealed class _GetEnumerator_d__64 : IEnumerator<KeyValuePair<string, JToken>> // TypeDefIndex: 52803
+		[CompilerGenerated]
+		private sealed class _GetEnumerator_d__64 : IEnumerator<KeyValuePair<string, JToken>> // TypeDefIndex: 55485
 		{
 			// Fields
 			private int __1__state; // 0x10
+			[Nullable(new byte[3] {0, 1, 2 })]
 			private KeyValuePair<string, JToken> __2__current; // 0x18
+			[Nullable(0)]
 			public JObject __4__this; // 0x28
+			[Nullable(new byte[2] {0, 1 })]
 			private IEnumerator<JToken> __7__wrap1; // 0x30
 	
 			// Properties
-			KeyValuePair<string, JToken> IEnumerator<System.Collections.Generic.KeyValuePair<System.String,Newtonsoft.Json.Linq.JToken>>.Current { get => default; } // 0x0000000181B87DE0-0x0000000181B87DF0 
-			object IEnumerator.Current { get => default; } // 0x0000000184594460-0x0000000184594540 
+			KeyValuePair<string, JToken> IEnumerator<System.Collections.Generic.KeyValuePair<System.String,Newtonsoft.Json.Linq.JToken>>.Current { [DebuggerHidden] get; } // 0x0000000184D890C0-0x0000000184D890D0 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018A8D2904-0x000000018A8D294C 
 	
 			// Constructors
-			public _GetEnumerator_d__64() {} // Dummy constructor
-			public _GetEnumerator_d__64(int __1__state) {} // 0x0000000184594380-0x0000000184594460
+			[DebuggerHidden]
+			public _GetEnumerator_d__64(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x00000001858D39A0-0x00000001858D3A30
-			private bool MoveNext() => default; // 0x00000001858D38D0-0x00000001858D38F0
-			private void __m__Finally1() {} // 0x000000018B3F6A0C-0x000000018B3F6A7C
-			void IEnumerator.Reset() {} // 0x000000018B3F6C9C-0x000000018B3F6CD8
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x000000018A8D294C-0x000000018A8D29C4
+			private bool MoveNext(); // 0x000000018A8D259C-0x000000018A8D28B8
+			private void __m__Finally1(); // 0x000000018A8D29C4-0x000000018A8D2A0C
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018A8D28B8-0x000000018A8D2904
 		}
 	
 		// Constructors
-		public JObject() {} // 0x0000000183E60FA0-0x0000000183E60FB0
-		internal JObject(JObject other, JsonCloneSettings settings) {} // 0x0000000185A607C0-0x0000000185A608C0
+		public JObject(); // 0x0000000183426890-0x00000001834268F0
+		internal JObject(JObject other, [Nullable(2)] JsonCloneSettings settings); // 0x000000018A8C5A24-0x000000018A8C5AB4
 	
 		// Methods
-		internal override int IndexOfItem(JToken item) => default; // 0x00000001864731E4-0x00000001864731F0
-		internal override bool InsertItem(int index, JToken item, bool skipParentCheck, bool copyAnnotations) => default; // 0x0000000185A60660-0x0000000185A607C0
-		internal override void ValidateToken(JToken o, JToken existing) {} // 0x0000000184591720-0x0000000184591750
-		internal void InternalPropertyChanged(JProperty childProperty) {} // 0x0000000184591750-0x00000001845917F0
-		internal void InternalPropertyChanging(JProperty childProperty) {} // 0x0000000184593A00-0x0000000184593AE0
-		internal override JToken CloneToken(JsonCloneSettings settings) => default; // 0x000000018B3F6C60-0x000000018B3F6C70
-		public IEnumerable<JProperty> Properties() => default; // 0x00000001858D3A80-0x00000001858D3B10
-		public JProperty Property(string name, StringComparison comparison) => default; // 0x000000018B3F6A7C-0x000000018B3F6B1C
-		public static JObject Load(JsonReader reader) => default; // 0x000000018B3F724C-0x000000018B3F7298
-		public static new JObject Load(JsonReader reader, JsonLoadSettings settings) => default; // 0x000000018B3F6CD8-0x000000018B3F6D6C
-		public static new JObject Parse(string json) => default; // 0x000000018B3F462C-0x000000018B3F463C
-		public static new JObject Parse(string json, JsonLoadSettings settings) => default; // 0x000000018B3F6D6C-0x000000018B3F6DD8
-		public static new JObject FromObject(object o) => default; // 0x000000018B3F6DD8-0x000000018B3F71A4
-		public static JObject FromObject(object o, JsonSerializer jsonSerializer) => default; // 0x00000001814A81B0-0x00000001814A81C0
-		public override void WriteTo(JsonWriter writer, JsonConverter[] converters) {} // 0x000000018B3F71A4-0x000000018B3F722C
-		public JToken GetValue(string propertyName) => default; // 0x000000018B3F6B1C-0x000000018B3F6B78
-		public JToken GetValue(string propertyName, StringComparison comparison) => default; // 0x00000001858D3A30-0x00000001858D3A80
-		public void Add(string propertyName, JToken value) {} // 0x00000001858D38F0-0x00000001858D3940
-		public bool ContainsKey(string propertyName) => default; // 0x000000018B3F76BC-0x000000018B3F76C4
-		public bool Remove(string propertyName) => default; // 0x000000018B3F7298-0x000000018B3F72E8
-		public bool TryGetValue(string propertyName, out JToken value) {
-			value = default;
-			return default;
-		} // 0x000000018B3F72E8-0x000000018B3F7324
-		void ICollection<KeyValuePair<string, JToken>>.Add(KeyValuePair<string, JToken> item) {} // 0x000000018B3F6B78-0x000000018B3F6C34
-		void ICollection<KeyValuePair<string, JToken>>.Clear() {} // 0x000000018B3F68EC-0x000000018B3F692C
-		bool ICollection<KeyValuePair<string, JToken>>.Contains(KeyValuePair<string, JToken> item) => default; // 0x000000018B3F692C-0x000000018B3F69E4
-		void ICollection<KeyValuePair<string, JToken>>.CopyTo(KeyValuePair<string, JToken>[] array, int arrayIndex) {} // 0x000000018B3F67CC-0x000000018B3F68EC
-		bool ICollection<KeyValuePair<string, JToken>>.Remove(KeyValuePair<string, JToken> item) => default; // 0x000000018B405178-0x000000018B4051DC
-		public IEnumerator<KeyValuePair<string, JToken>> GetEnumerator() => default; // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnPropertyChanged(string propertyName) {} // 0x000000018B404D7C-0x000000018B404D94
-		protected virtual void OnPropertyChanging(string propertyName) {} // 0x0000000181378230-0x0000000181378240
-		PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties() => default; // 0x000000018B404C48-0x000000018B404CC0
-		PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties(Attribute[] attributes) => default; // 0x000000018B404898-0x000000018B404BB4
-		AttributeCollection ICustomTypeDescriptor.GetAttributes() => default; // 0x000000018B404CC0-0x000000018B404D08
-		TypeConverter ICustomTypeDescriptor.GetConverter() => default; // 0x0000000185FB30D0-0x0000000185FB30E0
-		object ICustomTypeDescriptor.GetPropertyOwner(PropertyDescriptor pd) => default; // 0x000000018B404BB4-0x000000018B404C00
-		protected override DynamicMetaObject GetMetaObject(Expression parameter) => default; // 0x000000018B404C00-0x000000018B404C48
+		[NullableContext(2)]
+		internal override int IndexOfItem(JToken item); // 0x000000018A8C4FBC-0x000000018A8C4FE8
+		[NullableContext(2)]
+		internal override bool InsertItem(int index, JToken item, bool skipParentCheck, bool copyAnnotations); // 0x0000000183426BF0-0x0000000183426C70
+		internal override void ValidateToken(JToken o, [Nullable(2)] JToken existing); // 0x00000001834279C0-0x0000000183427A60
+		internal void InternalPropertyChanged(JProperty childProperty); // 0x00000001847C9F40-0x00000001847C9FD0
+		internal void InternalPropertyChanging(JProperty childProperty); // 0x00000001847C9E80-0x00000001847C9EA0
+		internal override JToken CloneToken([Nullable(2)] JsonCloneSettings settings); // 0x000000018A8C4DF8-0x000000018A8C4E68
+		public IEnumerable<JProperty> Properties(); // 0x0000000183F4DBE0-0x0000000183F4DC20
+		public JProperty Property(string name, StringComparison comparison); // 0x0000000183427A60-0x0000000183427B20
+		public static JObject Load(JsonReader reader); // 0x0000000185396944-0x0000000185396950
+		public static new JObject Load(JsonReader reader, [Nullable(2)] JsonLoadSettings settings); // 0x0000000183424AA0-0x0000000183424BC0
+		public static new JObject Parse(string json); // 0x0000000185396938-0x0000000185396944
+		public static new JObject Parse(string json, [Nullable(2)] JsonLoadSettings settings); // 0x0000000183423680-0x00000001834237E0
+		public static new JObject FromObject(object o); // 0x00000001835A5E50-0x00000001835A5E80
+		public static JObject FromObject(object o, JsonSerializer jsonSerializer); // 0x00000001835A4FB0-0x00000001835A5050
+		public override void WriteTo(JsonWriter writer, params JsonConverter[] converters); // 0x00000001834266B0-0x0000000183426790
+		[NullableContext(2)]
+		public JToken GetValue(string propertyName); // 0x000000018A8C4FAC-0x000000018A8C4FBC
+		[NullableContext(2)]
+		public JToken GetValue(string propertyName, StringComparison comparison); // 0x000000018A8C4F80-0x000000018A8C4FAC
+		public void Add(string propertyName, [Nullable(2)] JToken value); // 0x000000018A8C4D70-0x000000018A8C4DF8
+		public bool ContainsKey(string propertyName); // 0x0000000183425800-0x0000000183425860
+		public bool Remove(string propertyName); // 0x0000000183428650-0x0000000183428670
+		public bool TryGetValue(string propertyName, [Nullable(2)] [NotNullWhen(true)] out JToken value); // 0x0000000183426660-0x00000001834266B0
+		void ICollection<KeyValuePair<string, JToken>>.Add([Nullable(new byte[3] {0, 1, 2 })] KeyValuePair<string, JToken> item); // 0x000000018A8C4FE8-0x000000018A8C507C
+		void ICollection<KeyValuePair<string, JToken>>.Clear(); // 0x000000018A8C2F04-0x000000018A8C2F14
+		bool ICollection<KeyValuePair<string, JToken>>.Contains([Nullable(new byte[3] {0, 1, 2 })] KeyValuePair<string, JToken> item); // 0x000000018A8C507C-0x000000018A8C50E8
+		void ICollection<KeyValuePair<string, JToken>>.CopyTo([Nullable(new byte[4] {1, 0, 1, 2 })] KeyValuePair<string, JToken>[] array, int arrayIndex); // 0x000000018A8C50E8-0x000000018A8C54B4
+		bool ICollection<KeyValuePair<string, JToken>>.Remove([Nullable(new byte[3] {0, 1, 2 })] KeyValuePair<string, JToken> item); // 0x000000018A8C54B4-0x000000018A8C553C
+		[IteratorStateMachine(typeof(_GetEnumerator_d__64))]
+		public IEnumerator<KeyValuePair<string, JToken>> GetEnumerator(); // 0x000000018A8C4E68-0x000000018A8C4EC4
+		protected virtual void OnPropertyChanged(string propertyName); // 0x00000001847C9FD0-0x00000001847CA020
+		protected virtual void OnPropertyChanging(string propertyName); // 0x00000001847C9EF0-0x00000001847C9F40
+		PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties(); // 0x000000018A8C59CC-0x000000018A8C59D4
+		PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties([Nullable(new byte[2] {2, 1 })] Attribute[] attributes); // 0x000000018A8C5634-0x000000018A8C59CC
+		AttributeCollection ICustomTypeDescriptor.GetAttributes(); // 0x000000018A8C55A8-0x000000018A8C55F8
+		TypeConverter ICustomTypeDescriptor.GetConverter(); // 0x000000018A8C55F8-0x000000018A8C5634
+		[NullableContext(2)]
+		object ICustomTypeDescriptor.GetPropertyOwner(PropertyDescriptor pd); // 0x000000018A8C59D4-0x000000018A8C5A24
+		protected override DynamicMetaObject GetMetaObject(Expression parameter); // 0x000000018A8C4EC4-0x000000018A8C4F80
 	}
 
-	public class JProperty : JContainer // TypeDefIndex: 52807
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JProperty : JContainer // TypeDefIndex: 55489
 	{
 		// Fields
 		private readonly JPropertyList _content; // 0x50
 		private readonly string _name; // 0x58
 	
 		// Properties
-		protected override IList<JToken> ChildrenTokens { get => default; } // 0x0000000184096E30-0x0000000184096EF0 
-		public string Name { get => default; } // 0x0000000185633D30-0x0000000185633D50 
-		public JToken Value { get => default; set {} } // 0x000000018B3F7EEC-0x000000018B3F7EF4 0x000000018B3F7EF4-0x000000018B3F7F5C
-		public override JTokenType Type { get => default; } // 0x0000000185492010-0x0000000185492020 
+		protected override IList<JToken> ChildrenTokens { get; } // 0x0000000184D86270-0x0000000184D86280 
+		public string Name { [DebuggerStepThrough] get; } // 0x0000000182E56440-0x0000000182E56460 
+		public JToken Value { [DebuggerStepThrough] get; set; } // 0x000000018539250C-0x0000000185392528 0x0000000184CB6AE0-0x0000000184CB6B40
+		public override JTokenType Type { [DebuggerStepThrough] get; } // 0x0000000184D882B0-0x0000000184D882C0 
 	
 		// Nested types
-		private class JPropertyList : IList<JToken> // TypeDefIndex: 52806
+		[Nullable(0)]
+		private class JPropertyList : IList<JToken> // TypeDefIndex: 55488
 		{
 			// Fields
+			[Nullable(2)]
 			internal JToken _token; // 0x10
 	
 			// Properties
-			public int Count { get => default; } // 0x000000018B3F80D0-0x000000018B3F8140 
-			public bool IsReadOnly { get => default; } // 0x0000000181C44E90-0x0000000181C44EA0 
-			public JToken this[int index] { get => default; set {} } // 0x000000018B3F81E8-0x000000018B3F83E4 0x000000018B3F7F5C-0x000000018B3F7FB8
+			public int Count { get; } // 0x00000001840C1F50-0x00000001840C1F60 
+			public bool IsReadOnly { get; } // 0x00000001812081B0-0x0000000181208610 
+			public JToken this[int index] { get => default; set {} } // 0x0000000184B48FB0-0x0000000184B48FD0 0x0000000184D83150-0x0000000184D83170
 	
 			// Nested types
-			private sealed class _GetEnumerator_d__1 : IEnumerator<JToken> // TypeDefIndex: 52805
+			[CompilerGenerated]
+			private sealed class _GetEnumerator_d__1 : IEnumerator<JToken> // TypeDefIndex: 55487
 			{
 				// Fields
 				private int __1__state; // 0x10
 				private JToken __2__current; // 0x18
+				[Nullable(0)]
 				public JPropertyList __4__this; // 0x20
 	
 				// Properties
-				JToken IEnumerator<Newtonsoft.Json.Linq.JToken>.Current { get => default; } // 0x00000001858D3580-0x00000001858D35E0 
-				object IEnumerator.Current { get => default; } // 0x000000018B3F815C-0x000000018B3F81B8 
+				JToken IEnumerator<Newtonsoft.Json.Linq.JToken>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+				object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 				// Constructors
-				public _GetEnumerator_d__1() {} // Dummy constructor
-				public _GetEnumerator_d__1(int __1__state) {} // 0x0000000181460F60-0x0000000181460F70
+				[DebuggerHidden]
+				public _GetEnumerator_d__1(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 				// Methods
-				void IDisposable.Dispose() {} // 0x00000001813F1630-0x00000001813F1640
-				private bool MoveNext() => default; // 0x000000018646F4EC-0x000000018646F508
-				void IEnumerator.Reset() {} // 0x000000018B3F8564-0x000000018B3F85F4
+				[DebuggerHidden]
+				void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+				private bool MoveNext(); // 0x000000018A8D24F8-0x000000018A8D2550
+				[DebuggerHidden]
+				void IEnumerator.Reset(); // 0x000000018A8D2550-0x000000018A8D259C
 			}
 	
 			// Constructors
-			public JPropertyList() {} // 0x000000018B3F8008-0x000000018B3F8010
+			public JPropertyList(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			public IEnumerator<JToken> GetEnumerator() => default; // 0x00000001858D3810-0x00000001858D38D0
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018B3F84A4-0x000000018B3F8564
-			public void Add(JToken item) {} // 0x000000018B3F83E4-0x000000018B3F84A4
-			public void Clear() {} // 0x000000018B3F81B8-0x000000018B3F81E8
-			public bool Contains(JToken item) => default; // 0x0000000184593DB0-0x0000000184593E20
-			public void CopyTo(JToken[] array, int arrayIndex) {} // 0x000000018B3F8140-0x000000018B3F815C
-			public bool Remove(JToken item) => default; // 0x000000018B3F8010-0x000000018B3F80D0
-			public int IndexOf(JToken item) => default; // 0x0000000184595500-0x0000000184595590
-			public void Insert(int index, JToken item) {} // 0x00000001858D3420-0x00000001858D34F0
-			public void RemoveAt(int index) {} // 0x0000000184593B70-0x0000000184593BE0
+			[IteratorStateMachine(typeof(_GetEnumerator_d__1))]
+			public IEnumerator<JToken> GetEnumerator(); // 0x000000018A8C61BC-0x000000018A8C6218
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018A8C6268-0x000000018A8C6270
+			public void Add(JToken item); // 0x00000001853908C0-0x00000001853908D0
+			public void Clear(); // 0x00000001840E20A0-0x00000001840E20C0
+			public bool Contains(JToken item); // 0x000000018A8C614C-0x000000018A8C6154
+			public void CopyTo(JToken[] array, int arrayIndex); // 0x000000018A8C6154-0x000000018A8C61BC
+			public bool Remove(JToken item); // 0x000000018A8C6240-0x000000018A8C6268
+			public int IndexOf(JToken item); // 0x000000018A8C6218-0x000000018A8C6228
+			public void Insert(int index, JToken item); // 0x000000018424C7C0-0x000000018424C7E0
+			public void RemoveAt(int index); // 0x000000018A8C6228-0x000000018A8C6240
 		}
 	
 		// Constructors
-		public JProperty() {} // Dummy constructor
-		internal JProperty(JProperty other, JsonCloneSettings settings) {} // 0x000000018B3F7FE0-0x000000018B3F8008
-		internal JProperty(string name) {} // 0x000000018B4047F4-0x000000018B40484C
-		public JProperty(string name, object content) {} // 0x0000000181377E40-0x0000000181377E50
+		internal JProperty(JProperty other, [Nullable(2)] JsonCloneSettings settings); // 0x000000018A8C67C4-0x000000018A8C6854
+		internal JProperty(string name); // 0x0000000183427C10-0x0000000183427C80
+		public JProperty(string name, [Nullable(2)] object content); // 0x000000018A8C6854-0x000000018A8C6994
 	
 		// Methods
-		internal override JToken GetItem(int index) => default; // 0x0000000185749B40-0x0000000185749B50
-		internal override void SetItem(int index, JToken item) {} // 0x00000001814A81B0-0x00000001814A81C0
-		internal override bool RemoveItem(JToken item) => default; // 0x000000018B3F7FB8-0x000000018B3F7FC8
-		internal override void RemoveItemAt(int index) {} // 0x0000000185989790-0x00000001859898C0
-		internal override int IndexOfItem(JToken item) => default; // 0x000000018B3F7FC8-0x000000018B3F7FE0
-		internal override bool InsertItem(int index, JToken item, bool skipParentCheck, bool copyAnnotations) => default; // 0x0000000185D8F360-0x0000000185D8F380
-		internal override bool ContainsItem(JToken item) => default; // 0x0000000185FACD70-0x0000000185FACD90
-		internal override void ClearItems() {} // 0x0000000185492010-0x0000000185492020
-		internal override JToken CloneToken(JsonCloneSettings settings) => default; // 0x0000000181378230-0x0000000181378240
-		public override void WriteTo(JsonWriter writer, JsonConverter[] converters) {} // 0x000000018B40484C-0x000000018B404898
-		public static new JProperty Load(JsonReader reader, JsonLoadSettings settings) => default; // 0x0000000181377E40-0x0000000181377E50
+		internal override JToken GetItem(int index); // 0x000000018A8C63BC-0x000000018A8C6418
+		[NullableContext(2)]
+		internal override void SetItem(int index, JToken item); // 0x00000001847C9DC0-0x00000001847C9E80
+		[NullableContext(2)]
+		internal override bool RemoveItem(JToken item); // 0x000000018A8C6704-0x000000018A8C67C4
+		internal override void RemoveItemAt(int index); // 0x000000018A8C6644-0x000000018A8C6704
+		[NullableContext(2)]
+		internal override int IndexOfItem(JToken item); // 0x000000018A8C6418-0x000000018A8C6448
+		[NullableContext(2)]
+		internal override bool InsertItem(int index, JToken item, bool skipParentCheck, bool copyAnnotations); // 0x0000000183426C70-0x0000000183426CF0
+		[NullableContext(2)]
+		internal override bool ContainsItem(JToken item); // 0x000000018A8C63A0-0x000000018A8C63BC
+		internal override void ClearItems(); // 0x000000018A8C6270-0x000000018A8C6330
+		internal override JToken CloneToken([Nullable(2)] JsonCloneSettings settings); // 0x000000018A8C6330-0x000000018A8C63A0
+		public override void WriteTo(JsonWriter writer, params JsonConverter[] converters); // 0x0000000183426790-0x0000000183426800
+		public static new JProperty Load(JsonReader reader, [Nullable(2)] JsonLoadSettings settings); // 0x000000018A8C6448-0x000000018A8C6644
 	}
 
-	public class JPropertyDescriptor : PropertyDescriptor // TypeDefIndex: 52808
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JPropertyDescriptor : PropertyDescriptor // TypeDefIndex: 55490
 	{
 		// Properties
-		public override System.Type ComponentType { get => default; } // 0x000000018B3F7A18-0x000000018B3F7A68 
-		public override bool IsReadOnly { get => default; } // 0x00000001814A81B0-0x00000001814A81C0 
-		public override System.Type PropertyType { get => default; } // 0x000000018B3F7A68-0x000000018B3F7AB8 
-		protected override int NameHashCode { get => default; } // 0x00000001813B88B0-0x00000001813B88C0 
+		public override System.Type ComponentType { get; } // 0x000000018A8C5D28-0x000000018A8C5D78 
+		public override bool IsReadOnly { get; } // 0x00000001812081B0-0x0000000181208610 
+		public override System.Type PropertyType { get; } // 0x000000018A8C5D78-0x000000018A8C5DC8 
+		protected override int NameHashCode { get; } // 0x0000000182B70F90-0x0000000182B70FA0 
 	
 		// Constructors
-		public JPropertyDescriptor() {} // Dummy constructor
-		public JPropertyDescriptor(string name) {} // 0x000000018B3F7A0C-0x000000018B3F7A18
+		public JPropertyDescriptor(string name); // 0x000000018A8C5D1C-0x000000018A8C5D28
 	
 		// Methods
-		public override bool CanResetValue(object component) => default; // 0x00000001814A81B0-0x00000001814A81C0
-		public override object GetValue(object component) => default; // 0x000000018B3F78CC-0x000000018B3F7934
-		public override void ResetValue(object component) {} // 0x0000000185492010-0x0000000185492020
-		public override void SetValue(object component, object value) {} // 0x000000018B3F7934-0x000000018B3F7A0C
-		public override bool ShouldSerializeValue(object component) => default; // 0x00000001814A81B0-0x00000001814A81C0
+		public override bool CanResetValue(object component); // 0x00000001812081B0-0x0000000181208610
+		[NullableContext(2)]
+		public override object GetValue(object component); // 0x000000018A8C5BDC-0x000000018A8C5C44
+		public override void ResetValue(object component); // 0x00000001841E1670-0x00000001841E1680
+		[NullableContext(2)]
+		public override void SetValue(object component, object value); // 0x000000018A8C5C44-0x000000018A8C5D1C
+		public override bool ShouldSerializeValue(object component); // 0x00000001812081B0-0x0000000181208610
 	}
 
-	internal class JPropertyKeyedCollection : Collection<JToken> // TypeDefIndex: 52809
+	[DefaultMember("Item")]
+	[Nullable(new byte[2] {0, 1 })]
+	[NullableContext(1)]
+	internal class JPropertyKeyedCollection : Collection<JToken> // TypeDefIndex: 55491
 	{
 		// Fields
 		private static readonly IEqualityComparer<string> Comparer; // 0x00
+		[Nullable(new byte[3] {2, 1, 1 })]
 		private Dictionary<string, JToken> _dictionary; // 0x18
 	
 		// Properties
-		public ICollection<string> Keys { get => default; } // 0x000000018B3F7E9C-0x000000018B3F7EEC 
+		public ICollection<string> Keys { get; } // 0x000000018A8C60FC-0x000000018A8C614C 
 	
 		// Constructors
-		public JPropertyKeyedCollection() {} // 0x00000001845936B0-0x0000000184593740
-		static JPropertyKeyedCollection() {} // 0x0000000185F63D20-0x0000000185F63D90
+		public JPropertyKeyedCollection(); // 0x0000000183427E80-0x0000000183427EE0
+		static JPropertyKeyedCollection(); // 0x0000000184D36ED0-0x0000000184D36F40
 	
 		// Methods
-		private void AddKey(string key, JToken item) {} // 0x00000001854D1220-0x00000001854D1290
-		protected override void ClearItems() {} // 0x000000018B3F7AB8-0x000000018B3F7B14
-		public bool Contains(string key) => default; // 0x000000018B3F7B14-0x000000018B3F7BC4
-		private void EnsureDictionary() {} // 0x00000001854D1290-0x00000001854D1360
-		private string GetKeyForItem(JToken item) => default; // 0x00000001854D11C0-0x00000001854D1220
-		protected override void InsertItem(int index, JToken item) {} // 0x00000001854D1140-0x00000001854D11C0
-		protected override void RemoveItem(int index) {} // 0x000000018B3F7C44-0x000000018B3F7CDC
-		private void RemoveKey(string key) {} // 0x000000018B3F7CDC-0x000000018B3F7D2C
-		protected override void SetItem(int index, JToken item) {} // 0x000000018B3F7D2C-0x000000018B3F7E9C
-		public bool TryGetValue(string key, out JToken value) {
-			value = default;
-			return default;
-		} // 0x0000000184594540-0x00000001845945C0
-		public int IndexOfReference(JToken t) => default; // 0x000000018B3F7BC4-0x000000018B3F7C44
+		private void AddKey(string key, JToken item); // 0x0000000183F010B0-0x0000000183F01100
+		protected override void ClearItems(); // 0x000000018A8C5DC8-0x000000018A8C5E24
+		public bool Contains(string key); // 0x0000000183425860-0x00000001834258C0
+		private void EnsureDictionary(); // 0x0000000183F01100-0x0000000183F01190
+		private string GetKeyForItem(JToken item); // 0x0000000183F01070-0x0000000183F010B0
+		protected override void InsertItem(int index, JToken item); // 0x0000000183F00FD0-0x0000000183F01070
+		protected override void RemoveItem(int index); // 0x000000018A8C5EA4-0x000000018A8C5F3C
+		private void RemoveKey(string key); // 0x000000018A8C5F3C-0x000000018A8C5F8C
+		protected override void SetItem(int index, JToken item); // 0x000000018A8C5F8C-0x000000018A8C60FC
+		public bool TryGetValue(string key, [Nullable(2)] [NotNullWhen(true)] out JToken value); // 0x0000000183427B20-0x0000000183427C10
+		public int IndexOfReference(JToken t); // 0x000000018A8C5E24-0x000000018A8C5EA4
 	}
 
-	public class JRaw : JValue // TypeDefIndex: 52810
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JRaw : JValue // TypeDefIndex: 55492
 	{
 		// Constructors
-		public JRaw() {} // Dummy constructor
-		internal JRaw(JRaw other, JsonCloneSettings settings) {} // 0x000000018B3F89A4-0x000000018B3F89AC
-		public JRaw(object rawJson) {} // 0x000000018B3F8994-0x000000018B3F89A4
+		internal JRaw(JRaw other, [Nullable(2)] JsonCloneSettings settings); // 0x000000018A8C6CC8-0x000000018A8C6CD0
+		[NullableContext(2)]
+		public JRaw(object rawJson); // 0x000000018A8C6CB8-0x000000018A8C6CC8
 	
 		// Methods
-		public static JRaw Create(JsonReader reader) => default; // 0x000000018B3F8664-0x000000018B3F8994
-		internal override JToken CloneToken(JsonCloneSettings settings) => default; // 0x000000018B3F85F4-0x000000018B3F8664
+		public static JRaw Create(JsonReader reader); // 0x000000018A8C6A04-0x000000018A8C6CB8
+		internal override JToken CloneToken([Nullable(2)] JsonCloneSettings settings); // 0x000000018A8C6994-0x000000018A8C6A04
 	}
 
-	public class JsonCloneSettings // TypeDefIndex: 52811
+	public class JsonCloneSettings // TypeDefIndex: 55493
 	{
 		// Fields
+		[Nullable(1)]
 		internal static readonly JsonCloneSettings SkipCopyAnnotations; // 0x00
+		[CompilerGenerated]
 		private bool _CopyAnnotations_k__BackingField; // 0x10
 	
 		// Properties
-		public bool CopyAnnotations { get; set; } // 0x0000000181C2FD60-0x0000000181C2FD70 0x000000018184FBD0-0x000000018184FBE0
+		public bool CopyAnnotations { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001815EFCE0-0x00000001815EFCF0 0x0000000184D86130-0x0000000184D86140
 	
 		// Constructors
-		public JsonCloneSettings() {} // 0x0000000181B9A230-0x0000000181B9A240
-		static JsonCloneSettings() {} // 0x000000018B4019C8-0x000000018B401A30
+		public JsonCloneSettings(); // 0x00000001815EFCD0-0x00000001815EFCE0
+		static JsonCloneSettings(); // 0x000000018A8CF7D8-0x000000018A8CF840
 	}
 
-	public class JsonLoadSettings // TypeDefIndex: 52812
+	public class JsonLoadSettings // TypeDefIndex: 55494
 	{
 		// Fields
 		private CommentHandling _commentHandling; // 0x10
@@ -2608,20 +3007,23 @@ namespace Newtonsoft.Json.Linq
 		private DuplicatePropertyNameHandling _duplicatePropertyNameHandling; // 0x18
 	
 		// Properties
-		public CommentHandling CommentHandling { get => default; } // 0x0000000181C0BBD0-0x0000000181C0BBE0 
-		public LineInfoHandling LineInfoHandling { get => default; } // 0x0000000185FB21A0-0x0000000185FB21B0 
-		public DuplicatePropertyNameHandling DuplicatePropertyNameHandling { get => default; } // 0x00000001813AE560-0x00000001813AE570 
-	
-		// Constructors
-		public JsonLoadSettings() {} // Dummy constructor
+		public CommentHandling CommentHandling { get; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 
+		public LineInfoHandling LineInfoHandling { get; } // 0x0000000184D882A0-0x0000000184D882B0 
+		public DuplicatePropertyNameHandling DuplicatePropertyNameHandling { get; } // 0x00000001811EF5B0-0x00000001811EF5C0 
 	}
 
-	public abstract class JToken : IEnumerable<JToken>, IJsonLineInfo, ICloneable, IDynamicMetaObjectProvider // TypeDefIndex: 52814
+	[Nullable(0)]
+	[NullableContext(1)]
+	public abstract class JToken : IEnumerable<JToken>, IJsonLineInfo, ICloneable, IDynamicMetaObjectProvider // TypeDefIndex: 55496
 	{
 		// Fields
+		[Nullable(2)]
 		private JContainer _parent; // 0x10
+		[Nullable(2)]
 		private JToken _previous; // 0x18
+		[Nullable(2)]
 		private JToken _next; // 0x20
+		[Nullable(2)]
 		private object _annotations; // 0x28
 		private static readonly JTokenType[] BooleanTypes; // 0x00
 		private static readonly JTokenType[] NumberTypes; // 0x08
@@ -2635,143 +3037,188 @@ namespace Newtonsoft.Json.Linq
 		private static readonly JTokenType[] BytesTypes; // 0x48
 	
 		// Properties
-		public JContainer Parent { get; internal set; } // 0x0000000184096E30-0x0000000184096EF0 0x0000000185F8A200-0x0000000185F8A220
-		public JToken Root { get; }
+		[Nullable(2)]
+		public JContainer Parent { [DebuggerStepThrough] [NullableContext(2)] get; [NullableContext(2)] internal set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public JToken Root { get; } // 0x0000000184D7B030-0x0000000184D7B050 
 		public abstract JTokenType Type { get; }
-		public abstract bool HasValues { get; } // 0x00000001813B31A0-0x00000001813B31B0 
-		public JToken Next { get; internal set; } // 0x000000018646EE40-0x000000018646EE50 0x0000000181377E40-0x0000000181377E50
-		public JToken Previous { get; internal set; } // 0x0000000184088E70-0x0000000184088E80 0x000000018B3FA9CC-0x000000018B3FABF4
-		public string Path { get; } // 0x0000000185492010-0x0000000185492020 
-		public virtual JToken this[object key] { get => default; } // 0x000000018B3FA7EC-0x000000018B3FA88C 
-		public virtual JToken First { get; } // 0x000000018B3FA92C-0x000000018B3FA9CC 
-		public virtual JToken Last { get; } // 0x000000018B3F978C-0x000000018B3F97DC 
-		int IJsonLineInfo.LineNumber { get; } // 0x000000018B3F9C88-0x000000018B3F9CCC 
-		int IJsonLineInfo.LinePosition { get; } // 0x000000018B3F99EC-0x000000018B3F9AAC 
+		public abstract bool HasValues { get; }
+		[Nullable(2)]
+		public JToken Next { [NullableContext(2)] get; [NullableContext(2)] internal set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+		[Nullable(2)]
+		public JToken Previous { [NullableContext(2)] get; [NullableContext(2)] internal set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public string Path { get; } // 0x000000018A8C876C-0x000000018A8C8994 
+		[Nullable(2)]
+		public virtual JToken this[object key] { get => default; } // 0x000000018A8C862C-0x000000018A8C86CC 
+		[Nullable(2)]
+		public virtual JToken First { [NullableContext(2)] get; } // 0x000000018A8C858C-0x000000018A8C862C 
+		[Nullable(2)]
+		public virtual JToken Last { [NullableContext(2)] get; } // 0x000000018A8C86CC-0x000000018A8C876C 
+		int IJsonLineInfo.LineNumber { get; } // 0x000000018A8C7F0C-0x000000018A8C7F50 
+		int IJsonLineInfo.LinePosition { get; } // 0x000000018A8C7F50-0x000000018A8C7F94 
 	
 		// Nested types
-		private class LineInfoAnnotation // TypeDefIndex: 52813
+		[NullableContext(0)]
+		private class LineInfoAnnotation // TypeDefIndex: 55495
 		{
 			// Fields
 			internal readonly int LineNumber; // 0x10
 			internal readonly int LinePosition; // 0x14
 	
 			// Constructors
-			public LineInfoAnnotation() {} // Dummy constructor
-			public LineInfoAnnotation(int lineNumber, int linePosition) {} // 0x000000018346D130-0x000000018346D140
+			public LineInfoAnnotation(int lineNumber, int linePosition); // 0x0000000184D88290-0x0000000184D882A0
 		}
 	
 		// Constructors
-		internal JToken() {} // 0x000000018B3FA88C-0x000000018B3FA92C
-		static JToken() {} // 0x0000000185FB2190-0x0000000185FB21A0
+		internal JToken(); // 0x00000001841E1670-0x00000001841E1680
+		static JToken(); // 0x00000001837DA1A0-0x00000001837DA560
 	
 		// Methods
-		internal abstract JToken CloneToken(JsonCloneSettings settings);
-		public virtual JEnumerable<JToken> Children() => default; // 0x000000018B3FA240-0x000000018B3FA2BC
-		public void Remove() {} // 0x000000018B3FA2BC-0x000000018B3FA334
-		public void Replace(JToken value) {}
-		public abstract void WriteTo(JsonWriter writer, JsonConverter[] converters); // 0x0000000184592C60-0x0000000184592CB0
-		public override string ToString() => default; // 0x0000000184592CB0-0x0000000184592EB0
-		public string ToString(Newtonsoft.Json.Formatting formatting, JsonConverter[] converters) => default; // 0x000000018B3F98D4-0x000000018B3F9994
-		private static JValue EnsureValue(JToken value) => default; // 0x000000018B3F9AAC-0x000000018B3F9BA8
-		private static string GetType(JToken token) => default; // 0x000000018B3FA748-0x000000018B3FA7EC
-		private static bool ValidateToken(JToken o, JTokenType[] validTypes, bool nullable) => default; // 0x000000018B3FCA9C-0x000000018B3FCC80
-		public static explicit operator bool(JToken value) => default; // 0x000000018B3FBC10-0x000000018B3FBE4C
-		public static explicit operator DateTimeOffset(JToken value) => default; // 0x000000018B3FDF7C-0x000000018B3FE19C
-		public static explicit operator bool?(JToken value) => default; // 0x000000018B3FE950-0x000000018B3FEB20
-		public static explicit operator long(JToken value) => default; // 0x000000018B3FDB20-0x000000018B3FDD3C
-		public static explicit operator System.DateTime?(JToken value) => default; // 0x000000018B3FB978-0x000000018B3FBC10
-		public static explicit operator DateTimeOffset?(JToken value) => default; // 0x000000018B3FD6B4-0x000000018B3FD914
-		public static explicit operator decimal?(JToken value) => default; // 0x000000018B3FF0D4-0x000000018B3FF2F8
-		public static explicit operator double?(JToken value) => default; // 0x000000018B3FC01C-0x000000018B3FC224
-		public static explicit operator char?(JToken value) => default; // 0x000000018B3FC638-0x000000018B3FC808
-		public static explicit operator int(JToken value) => default; // 0x000000018B3FCECC-0x000000018B3FD09C
-		public static explicit operator short(JToken value) => default; // 0x000000018B3FE19C-0x000000018B3FE36C
-		public static explicit operator ushort(JToken value) => default; // 0x000000018B3FE36C-0x000000018B3FE53C
-		public static explicit operator char(JToken value) => default; // 0x000000018B3FF2F8-0x000000018B3FF4C8
-		public static explicit operator byte(JToken value) => default; // 0x000000018B3FD2C0-0x000000018B3FD490
-		public static explicit operator sbyte(JToken value) => default; // 0x000000018B3FD914-0x000000018B3FDB20
-		public static explicit operator int?(JToken value) => default; // 0x000000018B3FC224-0x000000018B3FC42C
-		public static explicit operator short?(JToken value) => default; // 0x000000018B3FE53C-0x000000018B3FE744
-		public static explicit operator ushort?(JToken value) => default; // 0x000000018B3FB394-0x000000018B3FB5A0
-		public static explicit operator byte?(JToken value) => default; // 0x000000018B3FE744-0x000000018B3FE950
-		public static explicit operator sbyte?(JToken value) => default; // 0x000000018B3FB7B4-0x000000018B3FB978
-		public static explicit operator System.DateTime(JToken value) => default; // 0x000000018B3FD490-0x000000018B3FD6B4
-		public static explicit operator long?(JToken value) => default; // 0x000000018B3FAFB8-0x000000018B3FB1C4
-		public static explicit operator float?(JToken value) => default; // 0x000000018B3FADC4-0x000000018B3FAFB8
-		public static explicit operator decimal(JToken value) => default; // 0x000000018B3FC42C-0x000000018B3FC638
-		public static explicit operator uint?(JToken value) => default; // 0x000000018B3FD09C-0x000000018B3FD2C0
-		public static explicit operator ulong?(JToken value) => default; // 0x000000018B3FED3C-0x000000018B3FEF0C
-		public static explicit operator double(JToken value) => default; // 0x000000018B3FBE4C-0x000000018B3FC01C
-		public static explicit operator float(JToken value) => default; // 0x000000018B3FDD3C-0x000000018B3FDF7C
-		public static explicit operator string(JToken value) => default; // 0x000000018B3FB1C4-0x000000018B3FB394
-		public static explicit operator uint(JToken value) => default; // 0x000000018B3FABF4-0x000000018B3FADC4
-		public static explicit operator ulong(JToken value) => default; // 0x000000018B3FB5A0-0x000000018B3FB7B4
-		public static explicit operator Guid(JToken value) => default; // 0x000000018B3FC808-0x000000018B3FCA9C
-		public static explicit operator Guid?(JToken value) => default; // 0x000000018B3FEF0C-0x000000018B3FF0D4
-		public static explicit operator TimeSpan(JToken value) => default; // 0x000000018B3FEB20-0x000000018B3FED3C
-		public static explicit operator TimeSpan?(JToken value) => default; // 0x000000018B3FCC80-0x000000018B3FCECC
-		public static explicit operator System.Uri(JToken value) => default; // 0x000000018B3FA5DC-0x000000018B3FA748
-		private static BigInteger ToBigInteger(JToken value) => default; // 0x000000018B3FA410-0x000000018B3FA5DC
-		private static BigInteger? ToBigIntegerNullable(JToken value) => default; // 0x0000000183E615E0-0x0000000183E61F30
-		public static implicit operator JToken(int value) => default; // 0x0000000183E60FB0-0x0000000183E615E0
-		public static implicit operator JToken(string value) => default; // 0x000000018B3FA398-0x000000018B3FA3D4
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018B3FA334-0x000000018B3FA398
-		IEnumerator<JToken> IEnumerable<JToken>.GetEnumerator() => default; // 0x000000018B3F9868-0x000000018B3F98C8
-		public JsonReader CreateReader() => default; // 0x00000001845917F0-0x0000000184591A00
-		internal static JToken FromObjectInternal(object o, JsonSerializer jsonSerializer) => default; // 0x000000018B3F9994-0x000000018B3F99EC
-		public static JToken FromObject(object o) => default;
-		public T ToObject<T>() => default; // 0x0000000185B35350-0x0000000185B355F0
-		public object ToObject(System.Type objectType) => default; // 0x0000000185B355F0-0x0000000185B35B00
-		public object ToObject(System.Type objectType, JsonSerializer jsonSerializer) => default; // 0x000000018B3FA1F4-0x000000018B3FA240
-		public static JToken ReadFrom(JsonReader reader) => default; // 0x000000018B3F9EA0-0x000000018B3FA1F4
-		public static JToken ReadFrom(JsonReader reader, JsonLoadSettings settings) => default; // 0x000000018B3F9E54-0x000000018B3F9EA0
-		public static JToken Parse(string json) => default; // 0x000000018B3F9CCC-0x000000018B3F9E54
-		public static JToken Parse(string json, JsonLoadSettings settings) => default; // 0x000000018B3F9BA8-0x000000018B3F9C04
-		public static JToken Load(JsonReader reader, JsonLoadSettings settings) => default; // 0x00000001845945C0-0x00000001845946E0
-		internal void SetLineInfo(IJsonLineInfo lineInfo, JsonLoadSettings settings) {} // 0x0000000184594750-0x00000001845947C0
-		internal void SetLineInfo(int lineNumber, int linePosition) {} // 0x000000018B3F9C04-0x000000018B3F9C44
-		bool IJsonLineInfo.HasLineInfo() => default; // 0x000000018B3F9C44-0x000000018B3F9C88
-		protected virtual DynamicMetaObject GetMetaObject(Expression parameter) => default; // 0x000000018B3FA3D4-0x000000018B3FA410
-		DynamicMetaObject IDynamicMetaObjectProvider.GetMetaObject(Expression parameter) => default; // 0x000000018B3F98C8-0x000000018B3F98D4
-		object ICloneable.Clone() => default; // 0x000000018B3F98C8-0x000000018B3F98D4
-		public JToken DeepClone() => default; // 0x00000001845947C0-0x0000000184594860
-		public void AddAnnotation(object annotation) {}
+		internal abstract JToken CloneToken([Nullable(2)] JsonCloneSettings settings);
+		[NullableContext(2)]
+		public virtual T Value<T>([Nullable(1)] object key);
+		public virtual JEnumerable<JToken> Children(); // 0x000000018A8C7AB0-0x000000018A8C7B00
+		public void Remove(); // 0x000000018A8C7FE0-0x000000018A8C805C
+		public void Replace(JToken value); // 0x000000018A8C805C-0x000000018A8C80D4
+		public abstract void WriteTo(JsonWriter writer, params JsonConverter[] converters);
+		public override string ToString(); // 0x00000001834258C0-0x0000000183425910
+		public string ToString(Newtonsoft.Json.Formatting formatting, params JsonConverter[] converters); // 0x0000000183425910-0x0000000183425B10
+		private static JValue EnsureValue(JToken value); // 0x000000018A8C7BF8-0x000000018A8C7CB8
+		private static string GetType(JToken token); // 0x000000018A8C7DD0-0x000000018A8C7ECC
+		private static bool ValidateToken(JToken o, JTokenType[] validTypes, bool nullable); // 0x000000018A8C84E8-0x000000018A8C858C
+		public static explicit operator bool(JToken value); // 0x000000018A8CA83C-0x000000018A8CAA20
+		public static explicit operator DateTimeOffset(JToken value); // 0x000000018A8C99B0-0x000000018A8C9BEC
+		[NullableContext(2)]
+		public static explicit operator bool?(JToken value); // 0x000000018A8CBCBC-0x000000018A8CBEDC
+		public static explicit operator long(JToken value); // 0x000000018A8CC690-0x000000018A8CC860
+		[NullableContext(2)]
+		public static explicit operator System.DateTime?(JToken value); // 0x000000018A8CB860-0x000000018A8CBA7C
+		[NullableContext(2)]
+		public static explicit operator DateTimeOffset?(JToken value); // 0x000000018A8C9718-0x000000018A8C99B0
+		[NullableContext(2)]
+		public static explicit operator decimal?(JToken value); // 0x000000018A8CB3F4-0x000000018A8CB654
+		[NullableContext(2)]
+		public static explicit operator double?(JToken value); // 0x000000018A8CCE14-0x000000018A8CD038
+		[NullableContext(2)]
+		public static explicit operator char?(JToken value); // 0x000000018A8C9DBC-0x000000018A8C9FC4
+		public static explicit operator int(JToken value); // 0x000000018A8CA3D8-0x000000018A8CA5A8
+		public static explicit operator short(JToken value); // 0x000000018A8CAC0C-0x000000018A8CADDC
+		[CLSCompliant(false)]
+		public static explicit operator ushort(JToken value); // 0x000000018A8CBEDC-0x000000018A8CC0AC
+		[CLSCompliant(false)]
+		public static explicit operator char(JToken value); // 0x000000018A8CC0AC-0x000000018A8CC27C
+		public static explicit operator byte(JToken value); // 0x000000018A8CD038-0x000000018A8CD208
+		[CLSCompliant(false)]
+		public static explicit operator sbyte(JToken value); // 0x000000018A8CB000-0x000000018A8CB1D0
+		[NullableContext(2)]
+		public static explicit operator int?(JToken value); // 0x000000018A8CB654-0x000000018A8CB860
+		[NullableContext(2)]
+		public static explicit operator short?(JToken value); // 0x000000018A8C9FC4-0x000000018A8CA1CC
+		[CLSCompliant(false)]
+		[NullableContext(2)]
+		public static explicit operator ushort?(JToken value); // 0x000000018A8CC27C-0x000000018A8CC484
+		[NullableContext(2)]
+		public static explicit operator byte?(JToken value); // 0x000000018A8C9134-0x000000018A8C9340
+		[CLSCompliant(false)]
+		[NullableContext(2)]
+		public static explicit operator sbyte?(JToken value); // 0x000000018A8CC484-0x000000018A8CC690
+		public static explicit operator System.DateTime(JToken value); // 0x000000018A8C9554-0x000000018A8C9718
+		[NullableContext(2)]
+		public static explicit operator long?(JToken value); // 0x000000018A8CB1D0-0x000000018A8CB3F4
+		[NullableContext(2)]
+		public static explicit operator float?(JToken value); // 0x000000018A8C8D58-0x000000018A8C8F64
+		public static explicit operator decimal(JToken value); // 0x000000018A8C8B64-0x000000018A8C8D58
+		[CLSCompliant(false)]
+		[NullableContext(2)]
+		public static explicit operator uint?(JToken value); // 0x000000018A8CA1CC-0x000000018A8CA3D8
+		[CLSCompliant(false)]
+		[NullableContext(2)]
+		public static explicit operator ulong?(JToken value); // 0x000000018A8CADDC-0x000000018A8CB000
+		public static explicit operator double(JToken value); // 0x000000018A8CCA7C-0x000000018A8CCC4C
+		public static explicit operator float(JToken value); // 0x000000018A8C9BEC-0x000000018A8C9DBC
+		[NullableContext(2)]
+		public static explicit operator string(JToken value); // 0x000000018A8CBA7C-0x000000018A8CBCBC
+		[CLSCompliant(false)]
+		public static explicit operator uint(JToken value); // 0x000000018A8C8F64-0x000000018A8C9134
+		[CLSCompliant(false)]
+		public static explicit operator ulong(JToken value); // 0x000000018A8C8994-0x000000018A8C8B64
+		public static explicit operator Guid(JToken value); // 0x000000018A8C9340-0x000000018A8C9554
+		[NullableContext(2)]
+		public static explicit operator Guid?(JToken value); // 0x000000018A8CA5A8-0x000000018A8CA83C
+		public static explicit operator TimeSpan(JToken value); // 0x000000018A8CCC4C-0x000000018A8CCE14
+		[NullableContext(2)]
+		public static explicit operator TimeSpan?(JToken value); // 0x000000018A8CC860-0x000000018A8CCA7C
+		[NullableContext(2)]
+		public static explicit operator System.Uri(JToken value); // 0x000000018A8CAA20-0x000000018A8CAC0C
+		private static BigInteger ToBigInteger(JToken value); // 0x000000018A8C837C-0x000000018A8C84E8
+		private static BigInteger? ToBigIntegerNullable(JToken value); // 0x000000018A8C81B0-0x000000018A8C837C
+		public static implicit operator JToken(int value); // 0x000000018A8CD268-0x000000018A8CD2C8
+		public static implicit operator JToken([Nullable(2)] string value); // 0x000000018A8CD208-0x000000018A8CD268
+		IEnumerator IEnumerable.GetEnumerator(); // 0x000000018A8C8138-0x000000018A8C8174
+		IEnumerator<JToken> IEnumerable<JToken>.GetEnumerator(); // 0x000000018A8C80D4-0x000000018A8C8138
+		public JsonReader CreateReader(); // 0x000000018A8C7B8C-0x000000018A8C7BEC
+		internal static JToken FromObjectInternal(object o, JsonSerializer jsonSerializer); // 0x00000001835A4630-0x00000001835A4840
+		public static JToken FromObject(object o); // 0x000000018A8C7CB8-0x000000018A8C7D10
+		[NullableContext(2)]
+		public T ToObject<T>();
+		public object ToObject(System.Type objectType); // 0x00000001847915A0-0x0000000184791840
+		[NullableContext(2)]
+		public object ToObject(System.Type objectType, [Nullable(1)] JsonSerializer jsonSerializer); // 0x0000000184791840-0x0000000184791CC0
+		public static JToken ReadFrom(JsonReader reader); // 0x000000018A8C7F94-0x000000018A8C7FE0
+		public static JToken ReadFrom(JsonReader reader, [Nullable(2)] JsonLoadSettings settings); // 0x00000001834246E0-0x00000001834247C0
+		public static JToken Parse(string json); // 0x0000000183423DA0-0x0000000183423DF0
+		public static JToken Parse(string json, [Nullable(2)] JsonLoadSettings settings); // 0x0000000183423DF0-0x0000000183424680
+		public static JToken Load(JsonReader reader, [Nullable(2)] JsonLoadSettings settings); // 0x0000000183424680-0x00000001834246E0
+		[NullableContext(2)]
+		internal void SetLineInfo(IJsonLineInfo lineInfo, JsonLoadSettings settings); // 0x0000000183427520-0x0000000183427620
+		internal void SetLineInfo(int lineNumber, int linePosition); // 0x0000000183427670-0x00000001834276D0
+		bool IJsonLineInfo.HasLineInfo(); // 0x000000018A8C7ECC-0x000000018A8C7F0C
+		protected virtual DynamicMetaObject GetMetaObject(Expression parameter); // 0x000000018A8C7D10-0x000000018A8C7DD0
+		DynamicMetaObject IDynamicMetaObjectProvider.GetMetaObject(Expression parameter); // 0x000000018A8C8174-0x000000018A8C81B0
+		object ICloneable.Clone(); // 0x000000018A8C7BEC-0x000000018A8C7BF8
+		public JToken DeepClone(); // 0x000000018A8C7BEC-0x000000018A8C7BF8
+		public void AddAnnotation(object annotation); // 0x00000001834276D0-0x0000000183427750
 		public T Annotation<T>()
-			where T : class => default; // 0x000000018B3F97DC-0x000000018B3F9868
-		internal void CopyAnnotations(JToken target, JToken source) {} // 0x00000001848ECB20-0x00000001848ECEE0
+			where T : class;
+		internal void CopyAnnotations(JToken target, JToken source); // 0x000000018A8C7B00-0x000000018A8C7B8C
 	}
 
-	public class JTokenReader : JsonReader, IJsonLineInfo // TypeDefIndex: 52815
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JTokenReader : JsonReader, IJsonLineInfo // TypeDefIndex: 55497
 	{
 		// Fields
 		private readonly JToken _root; // 0x78
+		[Nullable(2)]
 		private string _initialPath; // 0x80
+		[Nullable(2)]
 		private JToken _parent; // 0x88
+		[Nullable(2)]
 		private JToken _current; // 0x90
 	
 		// Properties
-		public JToken CurrentToken { get => default; } // 0x0000000181B5FFD0-0x0000000181B5FFE0 
-		int IJsonLineInfo.LineNumber { get => default; } // 0x000000018B3F89D4-0x000000018B3F89FC 
-		int IJsonLineInfo.LinePosition { get => default; } // 0x000000018B3F89FC-0x000000018B3F8A24 
-		public override string Path { get => default; } // 0x000000018B3F8A74-0x000000018B3F8B54 
+		[Nullable(2)]
+		public JToken CurrentToken { [NullableContext(2)] get; } // 0x0000000184D86220-0x0000000184D86230 
+		int IJsonLineInfo.LineNumber { get; } // 0x000000018A8C6CF8-0x000000018A8C6D20 
+		int IJsonLineInfo.LinePosition { get; } // 0x000000018A8C6D20-0x000000018A8C6D48 
+		public override string Path { get; } // 0x000000018A8C6D98-0x000000018A8C6E78 
 	
 		// Constructors
-		public JTokenReader() {} // Dummy constructor
-		public JTokenReader(JToken token) {} // 0x0000000185B35B00-0x0000000185B35B60
+		public JTokenReader(JToken token); // 0x0000000184791CC0-0x0000000184791D20
 	
 		// Methods
-		public override bool Read() => default; // 0x00000001841D3770-0x00000001841D3840
-		private bool ReadOver(JToken t) => default; // 0x00000001841D3590-0x00000001841D3650
-		private bool ReadToEnd() => default; // 0x000000018B3F8A24-0x000000018B3F8A58
-		private JsonToken? GetEndToken(JContainer c) => default; // 0x00000001841D36F0-0x00000001841D3770
-		private bool ReadInto(JContainer c) => default; // 0x00000001841D3840-0x00000001841D38C0
-		private bool SetEnd(JContainer c) => default; // 0x00000001841D3650-0x00000001841D36F0
-		private void SetToken(JToken token) {} // 0x00000001841D38C0-0x00000001841D3AB0
-		private string SafeToString(object value) => default; // 0x000000018B3F8A58-0x000000018B3F8A74
-		bool IJsonLineInfo.HasLineInfo() => default; // 0x000000018B3F89AC-0x000000018B3F89D4
+		public override bool Read(); // 0x0000000183429F10-0x0000000183429FE0
+		private bool ReadOver(JToken t); // 0x000000018342A1D0-0x000000018342A290
+		private bool ReadToEnd(); // 0x000000018A8C6D48-0x000000018A8C6D7C
+		private JsonToken? GetEndToken(JContainer c); // 0x000000018342A330-0x000000018342A3B0
+		private bool ReadInto(JContainer c); // 0x0000000183429E90-0x0000000183429F10
+		private bool SetEnd(JContainer c); // 0x000000018342A290-0x000000018342A330
+		private void SetToken(JToken token); // 0x0000000183429FE0-0x000000018342A1D0
+		[NullableContext(2)]
+		private string SafeToString(object value); // 0x000000018A8C6D7C-0x000000018A8C6D98
+		bool IJsonLineInfo.HasLineInfo(); // 0x000000018A8C6CD0-0x000000018A8C6CF8
 	}
 
-	public enum JTokenType // TypeDefIndex: 52816
+	public enum JTokenType // TypeDefIndex: 55498
 	{
 		None = 0,
 		Object = 1,
@@ -2793,7 +3240,9 @@ namespace Newtonsoft.Json.Linq
 		TimeSpan = 17
 	}
 
-	public class JTokenWriter : JsonWriter // TypeDefIndex: 52817
+	[Nullable(0)]
+	[NullableContext(2)]
+	public class JTokenWriter : JsonWriter // TypeDefIndex: 55499
 	{
 		// Fields
 		private JContainer _token; // 0x60
@@ -2802,140 +3251,156 @@ namespace Newtonsoft.Json.Linq
 		private JToken _current; // 0x78
 	
 		// Properties
-		public JToken Token { get => default; } // 0x0000000184592110-0x0000000184592130 
+		public JToken Token { get; } // 0x00000001835A4C40-0x00000001835A4C60 
 	
 		// Constructors
-		public JTokenWriter() {} // 0x0000000184592130-0x0000000184592190
+		public JTokenWriter(); // 0x00000001835A4C60-0x00000001835A4CA0
 	
 		// Methods
-		public override void Close() {} // 0x00000001841C3080-0x00000001841C3090
-		public override void WriteStartObject() {} // 0x0000000184592BE0-0x0000000184592C60
-		private void AddParent(JContainer container) {} // 0x0000000184593560-0x00000001845935C0
-		private void RemoveParent() {} // 0x00000001858EAA40-0x00000001858EAAC0
-		public override void WriteStartArray() {} // 0x0000000184593370-0x00000001845933F0
-		public override void WriteStartConstructor(string name) {} // 0x000000018B3F8CE8-0x000000018B3F8D6C
-		protected override void WriteEnd(JsonToken token) {} // 0x00000001858EAA30-0x00000001858EAA40
-		public override void WritePropertyName(string name) {} // 0x0000000184593480-0x0000000184593540
-		private void AddRawValue(object value, JTokenType type, JsonToken token) {} // 0x000000018B3F8B54-0x000000018B3F8BEC
-		internal void AddJValue(JValue value, JsonToken token) {} // 0x0000000184596200-0x00000001845962C0
-		public override void WriteValue(object value) {} // 0x000000018B3F9138-0x000000018B3F91BC
-		public override void WriteNull() {} // 0x000000018B3F8C34-0x000000018B3F8C6C
-		public override void WriteUndefined() {} // 0x000000018B3F8D6C-0x000000018B3F8DA4
-		public override void WriteRaw(string json) {} // 0x000000018B3F8C6C-0x000000018B3F8CE8
-		public override void WriteComment(string text) {} // 0x000000018B3F8BEC-0x000000018B3F8C34
-		public override void WriteValue(string value) {} // 0x0000000184596160-0x0000000184596200
-		public override void WriteValue(int value) {} // 0x000000018B3F91BC-0x000000018B3F9230
-		public override void WriteValue(uint value) {} // 0x000000018B3F8E8C-0x000000018B3F8F00
-		public override void WriteValue(long value) {} // 0x00000001845962C0-0x0000000184596360
-		public override void WriteValue(ulong value) {} // 0x000000018B3F9028-0x000000018B3F90B0
-		public override void WriteValue(float value) {} // 0x000000018B3F8FA0-0x000000018B3F9028
-		public override void WriteValue(double value) {} // 0x000000018B3F9650-0x000000018B3F96D8
-		public override void WriteValue(bool value) {} // 0x00000001841D3C50-0x00000001841D3CF0
-		public override void WriteValue(short value) {} // 0x000000018B3F94FC-0x000000018B3F9574
-		public override void WriteValue(ushort value) {} // 0x000000018B3F93FC-0x000000018B3F9474
-		public override void WriteValue(char value) {} // 0x000000018B3F9574-0x000000018B3F9650
-		public override void WriteValue(byte value) {} // 0x000000018B3F8E18-0x000000018B3F8E8C
-		public override void WriteValue(sbyte value) {} // 0x000000018B3F8DA4-0x000000018B3F8E18
-		public override void WriteValue(decimal value) {} // 0x000000018B3F8F00-0x000000018B3F8FA0
-		public override void WriteValue(System.DateTime value) {} // 0x000000018B3F96D8-0x000000018B3F978C
-		public override void WriteValue(DateTimeOffset value) {} // 0x000000018B3F935C-0x000000018B3F93FC
-		public override void WriteValue(byte[] value) {} // 0x000000018B3F9230-0x000000018B3F92BC
-		public override void WriteValue(TimeSpan value) {} // 0x000000018B3F9474-0x000000018B3F94FC
-		public override void WriteValue(Guid value) {} // 0x000000018B3F92BC-0x000000018B3F935C
-		public override void WriteValue(System.Uri value) {} // 0x000000018B3F90B0-0x000000018B3F9138
-		internal override void WriteToken(JsonReader reader, bool writeChildren, bool writeDateConstructorAsDate, bool writeComments) {} // 0x0000000184595A30-0x0000000184595B10
+		public override void Close(); // 0x0000000183779F50-0x0000000183779F60
+		public override void WriteStartObject(); // 0x00000001834247C0-0x0000000183424840
+		[NullableContext(1)]
+		private void AddParent(JContainer container); // 0x00000001834260B0-0x0000000183426110
+		private void RemoveParent(); // 0x0000000184723710-0x0000000184723790
+		public override void WriteStartArray(); // 0x0000000183426030-0x00000001834260B0
+		[NullableContext(1)]
+		public override void WriteStartConstructor(string name); // 0x000000018A8C700C-0x000000018A8C7090
+		protected override void WriteEnd(JsonToken token); // 0x0000000184723700-0x0000000184723710
+		[NullableContext(1)]
+		public override void WritePropertyName(string name); // 0x0000000183428670-0x0000000183428730
+		private void AddRawValue(object value, JTokenType type, JsonToken token); // 0x000000018A8C6E78-0x000000018A8C6F10
+		internal void AddJValue(JValue value, JsonToken token); // 0x0000000183428510-0x00000001834285D0
+		public override void WriteValue(object value); // 0x000000018A8C745C-0x000000018A8C74E0
+		public override void WriteNull(); // 0x000000018A8C6F58-0x000000018A8C6F90
+		public override void WriteUndefined(); // 0x000000018A8C7090-0x000000018A8C70C8
+		public override void WriteRaw(string json); // 0x000000018A8C6F90-0x000000018A8C700C
+		public override void WriteComment(string text); // 0x000000018A8C6F10-0x000000018A8C6F58
+		public override void WriteValue(string value); // 0x0000000183428490-0x0000000183428510
+		public override void WriteValue(int value); // 0x000000018A8C74E0-0x000000018A8C7554
+		[CLSCompliant(false)]
+		public override void WriteValue(uint value); // 0x000000018A8C71B0-0x000000018A8C7224
+		public override void WriteValue(long value); // 0x00000001834283F0-0x0000000183428490
+		[CLSCompliant(false)]
+		public override void WriteValue(ulong value); // 0x000000018A8C734C-0x000000018A8C73D4
+		public override void WriteValue(float value); // 0x000000018A8C72C4-0x000000018A8C734C
+		public override void WriteValue(double value); // 0x000000018A8C7974-0x000000018A8C79FC
+		public override void WriteValue(bool value); // 0x0000000183429DF0-0x0000000183429E90
+		public override void WriteValue(short value); // 0x000000018A8C7820-0x000000018A8C7898
+		[CLSCompliant(false)]
+		public override void WriteValue(ushort value); // 0x000000018A8C7720-0x000000018A8C7798
+		public override void WriteValue(char value); // 0x000000018A8C7898-0x000000018A8C7974
+		public override void WriteValue(byte value); // 0x000000018A8C713C-0x000000018A8C71B0
+		[CLSCompliant(false)]
+		public override void WriteValue(sbyte value); // 0x000000018A8C70C8-0x000000018A8C713C
+		public override void WriteValue(decimal value); // 0x000000018A8C7224-0x000000018A8C72C4
+		public override void WriteValue(System.DateTime value); // 0x000000018A8C79FC-0x000000018A8C7AB0
+		public override void WriteValue(DateTimeOffset value); // 0x000000018A8C7680-0x000000018A8C7720
+		public override void WriteValue(byte[] value); // 0x000000018A8C7554-0x000000018A8C75E0
+		public override void WriteValue(TimeSpan value); // 0x000000018A8C7798-0x000000018A8C7820
+		public override void WriteValue(Guid value); // 0x000000018A8C75E0-0x000000018A8C7680
+		public override void WriteValue(System.Uri value); // 0x000000018A8C73D4-0x000000018A8C745C
+		[NullableContext(1)]
+		internal override void WriteToken(JsonReader reader, bool writeChildren, bool writeDateConstructorAsDate, bool writeComments); // 0x0000000183424D40-0x0000000183424DE0
 	}
 
-	public class JValue : JToken, IEquatable<JValue>, IFormattable, IComparable, IComparable<JValue>, IConvertible // TypeDefIndex: 52819
+	[Nullable(0)]
+	[NullableContext(2)]
+	public class JValue : JToken, IEquatable<JValue>, IFormattable, IComparable, IComparable<JValue>, IConvertible // TypeDefIndex: 55501
 	{
 		// Fields
 		private JTokenType _valueType; // 0x30
 		private object _value; // 0x38
 	
 		// Properties
-		public override bool HasValues { get => default; } // 0x000000018B3FFBB4-0x000000018B3FFC8C 
-		public override JTokenType Type { get => default; } // 0x000000018B401558-0x000000018B4015A0 
-		public object Value { get => default; } // 0x000000018B40072C-0x000000018B400748 
+		public override bool HasValues { get; } // 0x00000001812081B0-0x0000000181208610 
+		public override JTokenType Type { get; } // 0x0000000184D864F0-0x0000000184D86500 
+		public object Value { get; } // 0x0000000184D85A50-0x0000000184D85A60 
 	
 		// Nested types
-		private class JValueDynamicProxy : DynamicProxy<JValue> // TypeDefIndex: 52818
+		[Nullable(new byte[2] {0, 1 })]
+		[NullableContext(1)]
+		private class JValueDynamicProxy : DynamicProxy<JValue> // TypeDefIndex: 55500
 		{
 			// Constructors
-			public JValueDynamicProxy() {} // 0x0000000184596360-0x00000001845963D0
+			public JValueDynamicProxy(); // 0x000000018A8CD6F0-0x000000018A8CD718
 	
 			// Methods
-			public override bool TryConvert(JValue instance, ConvertBinder binder, out object result) {
-				result = default;
-				return default;
-			} // 0x00000001845966C0-0x0000000184596730
-			public override bool TryBinaryOperation(JValue instance, BinaryOperationBinder binder, object arg, out object result) {
-				result = default;
-				return default;
-			} // 0x000000018B401720-0x000000018B4017D0
+			public override bool TryConvert(JValue instance, ConvertBinder binder, [Nullable(2)] [NotNullWhen(true)] out object result); // 0x000000018A8CD574-0x000000018A8CD6F0
+			public override bool TryBinaryOperation(JValue instance, BinaryOperationBinder binder, object arg, [Nullable(2)] [NotNullWhen(true)] out object result); // 0x000000018A8CD2C8-0x000000018A8CD574
 		}
 	
 		// Constructors
-		public JValue() {} // Dummy constructor
-		internal JValue(object value, JTokenType type) {} // 0x000000018B4018F8-0x000000018B401964
-		internal JValue(JValue other, JsonCloneSettings settings) {} // 0x000000018B4015A0-0x000000018B401600
-		public JValue(long value) {} // 0x000000018B401600-0x000000018B401660
-		public JValue(decimal value) {} // 0x000000018B4017D0-0x000000018B401830
-		public JValue(ulong value) {} // 0x000000018B401660-0x000000018B4016C0
-		public JValue(double value) {} // 0x000000018B401964-0x000000018B4019C8
-		public JValue(float value) {} // 0x00000001841D3CF0-0x00000001841D3D60
-		public JValue(System.DateTime value) {} // 0x000000018646F508-0x000000018646F518
-		public JValue(DateTimeOffset value) {} // 0x000000018B401894-0x000000018B4018F8
-		public JValue(bool value) {} // 0x000000018B401830-0x000000018B401894
-		public JValue(string value) {} // 0x000000018B4016C0-0x000000018B401720
-		public JValue(Guid value) {} // 0x00000001845955D0-0x0000000184595610
-		public JValue(System.Uri value) {} // 0x00000001814A81B0-0x00000001814A81C0
-		public JValue(TimeSpan value) {} // 0x000000018B3FF988-0x000000018B3FFBB4
-		public JValue(object value) {} // 0x000000018B3FFCC0-0x000000018B4005BC
+		internal JValue(object value, JTokenType type); // 0x0000000183427E30-0x0000000183427E80
+		[NullableContext(1)]
+		internal JValue(JValue other, [Nullable(2)] JsonCloneSettings settings); // 0x000000018A8CF530-0x000000018A8CF5E0
+		public JValue(long value); // 0x0000000183427FC0-0x0000000183428030
+		public JValue(decimal value); // 0x000000018A8CF708-0x000000018A8CF774
+		[CLSCompliant(false)]
+		public JValue(ulong value); // 0x000000018A8CF3B0-0x000000018A8CF410
+		public JValue(double value); // 0x000000018A8CF410-0x000000018A8CF470
+		public JValue(float value); // 0x000000018A8CF5E0-0x000000018A8CF640
+		public JValue(System.DateTime value); // 0x000000018A8CF470-0x000000018A8CF4D0
+		public JValue(DateTimeOffset value); // 0x000000018A8CF774-0x000000018A8CF7D8
+		public JValue(bool value); // 0x00000001834287A0-0x0000000183428810
+		public JValue(string value); // 0x0000000185392538-0x0000000185392548
+		public JValue(Guid value); // 0x000000018A8CF6A4-0x000000018A8CF708
+		public JValue(System.Uri value); // 0x000000018A8CF640-0x000000018A8CF6A4
+		public JValue(TimeSpan value); // 0x000000018A8CF4D0-0x000000018A8CF530
+		public JValue(object value); // 0x0000000183427CA0-0x0000000183427D00
 	
 		// Methods
-		private static int CompareBigInteger(BigInteger i1, object i2) => default; // 0x000000018B40082C-0x000000018B400F74
-		internal static int Compare(JTokenType valueType, object objA, object objB) => default; // 0x000000018B3FF918-0x000000018B3FF988
-		private static int CompareFloat(object objA, object objB) => default; // 0x000000018B4005BC-0x000000018B400620
-		private static bool Operation(ExpressionType operation, object objA, object objB, out object result) {
-			result = default;
-			return default;
-		} // 0x000000018B400620-0x000000018B400678
-		internal override JToken CloneToken(JsonCloneSettings settings) => default; // 0x000000018B400678-0x000000018B4006D0
-		public static JValue CreateComment(string value) => default; // 0x0000000184595610-0x00000001845958F0
-		public static JValue CreateNull() => default; // 0x0000000185A548E0-0x0000000185A54930
-		public static JValue CreateUndefined() => default; // 0x00000001813CFF60-0x00000001813CFF70
-		private static JTokenType GetValueType(JTokenType? current, object value) => default; // 0x00000001813ECBC0-0x00000001813ECBD0
-		private static JTokenType GetStringValueType(JTokenType? current) => default; // 0x0000000184593740-0x0000000184593980
-		public override void WriteTo(JsonWriter writer, JsonConverter[] converters) {} // 0x000000018B4006D0-0x000000018B40072C
-		private static bool ValuesEquals(JValue v1, JValue v2) => default; // 0x000000018B400748-0x000000018B400770
-		public bool Equals(JValue other) => default; // 0x0000000185F7D7E0-0x0000000185F7D830
-		public override bool Equals(object obj) => default; // 0x000000018B401548-0x000000018B401558
-		public override int GetHashCode() => default; // 0x000000018B40149C-0x000000018B401548
-		public override string ToString() => default; // 0x000000018B400770-0x000000018B40082C
-		public string ToString(IFormatProvider formatProvider) => default; // 0x000000018B400F74-0x000000018B400FF8
-		public string ToString(string format, IFormatProvider formatProvider) => default; // 0x000000018B3FFC8C-0x000000018B3FFCC0
-		protected override DynamicMetaObject GetMetaObject(Expression parameter) => default; // 0x000000018B400FF8-0x000000018B401058
-		int IComparable.CompareTo(object obj) => default; // 0x000000018B401058-0x000000018B4010A4
-		public int CompareTo(JValue obj) => default; // 0x000000018B4010F0-0x000000018B40113C
-		TypeCode IConvertible.GetTypeCode() => default; // 0x000000018B401318-0x000000018B401364
-		bool IConvertible.ToBoolean(IFormatProvider provider) => default; // 0x000000018B4010A4-0x000000018B4010F0
-		char IConvertible.ToChar(IFormatProvider provider) => default; // 0x000000018B401234-0x000000018B401280
-		sbyte IConvertible.ToSByte(IFormatProvider provider) => default; // 0x000000018B4013B8-0x000000018B401404
-		byte IConvertible.ToByte(IFormatProvider provider) => default; // 0x000000018B401280-0x000000018B4012CC
-		short IConvertible.ToInt16(IFormatProvider provider) => default; // 0x000000018B401404-0x000000018B401450
-		ushort IConvertible.ToUInt16(IFormatProvider provider) => default; // 0x000000018B4012CC-0x000000018B401318
-		int IConvertible.ToInt32(IFormatProvider provider) => default; // 0x000000018B401450-0x000000018B40149C
-		uint IConvertible.ToUInt32(IFormatProvider provider) => default; // 0x000000018B401364-0x000000018B4013B0
-		long IConvertible.ToInt64(IFormatProvider provider) => default; // 0x000000018B4011E8-0x000000018B401234
-		ulong IConvertible.ToUInt64(IFormatProvider provider) => default; // 0x000000018B401188-0x000000018B4011E8
-		float IConvertible.ToSingle(IFormatProvider provider) => default; // 0x000000018B40113C-0x000000018B401188
-		double IConvertible.ToDouble(IFormatProvider provider) => default; // 0x000000018B4013B0-0x000000018B4013B8
-		decimal IConvertible.ToDecimal(IFormatProvider provider) => default; // 0x000000018B3FF774-0x000000018B3FF8F0
-		System.DateTime IConvertible.ToDateTime(IFormatProvider provider) => default; // 0x000000018B3FF4C8-0x000000018B3FF774
-		object IConvertible.ToType(System.Type conversionType, IFormatProvider provider) => default; // 0x000000018B3FF8F0-0x000000018B3FF918
+		[NullableContext(1)]
+		private static int CompareBigInteger(BigInteger i1, object i2); // 0x000000018A8CD788-0x000000018A8CD9B4
+		internal static int Compare(JTokenType valueType, object objA, object objB); // 0x000000018A8CDAC0-0x000000018A8CE3CC
+		[NullableContext(1)]
+		private static int CompareFloat(object objA, object objB); // 0x000000018A8CD9B4-0x000000018A8CDA8C
+		private static bool Operation(ExpressionType operation, object objA, object objB, out object result); // 0x000000018A8CE63C-0x000000018A8CED84
+		[NullableContext(1)]
+		internal override JToken CloneToken([Nullable(2)] JsonCloneSettings settings); // 0x000000018A8CD718-0x000000018A8CD788
+		[NullableContext(1)]
+		public static JValue CreateComment([Nullable(2)] string value); // 0x000000018A8CE3CC-0x000000018A8CE430
+		[NullableContext(1)]
+		public static JValue CreateNull(); // 0x000000018A8CE430-0x000000018A8CE488
+		[NullableContext(1)]
+		public static JValue CreateUndefined(); // 0x000000018A8CE488-0x000000018A8CE4E0
+		private static JTokenType GetValueType(JTokenType? current, object value); // 0x0000000183427D00-0x0000000183427E30
+		private static JTokenType GetStringValueType(JTokenType? current); // 0x0000000183427F70-0x0000000183427FC0
+		[NullableContext(1)]
+		public override void WriteTo(JsonWriter writer, params JsonConverter[] converters); // 0x0000000183426430-0x0000000183426660
+		[NullableContext(1)]
+		private static bool ValuesEquals(JValue v1, JValue v2); // 0x000000018A8CF368-0x000000018A8CF3B0
+		public bool Equals(JValue other); // 0x000000018A8CE53C-0x000000018A8CE558
+		public override bool Equals(object obj); // 0x000000018A8CE4E0-0x000000018A8CE53C
+		public override int GetHashCode(); // 0x000000018A8CE558-0x000000018A8CE580
+		[NullableContext(1)]
+		public override string ToString(); // 0x0000000184D50B60-0x0000000184D50BB0
+		[NullableContext(1)]
+		public string ToString([Nullable(2)] IFormatProvider formatProvider); // 0x000000018A8CF358-0x000000018A8CF368
+		public string ToString(string format, IFormatProvider formatProvider); // 0x000000018A8CF2AC-0x000000018A8CF358
+		[NullableContext(1)]
+		protected override DynamicMetaObject GetMetaObject(Expression parameter); // 0x000000018A8CE580-0x000000018A8CE63C
+		int IComparable.CompareTo(object obj); // 0x000000018A8CED84-0x000000018A8CEE08
+		public int CompareTo(JValue obj); // 0x000000018A8CDA8C-0x000000018A8CDAC0
+		TypeCode IConvertible.GetTypeCode(); // 0x000000018A8CEE08-0x000000018A8CEE68
+		bool IConvertible.ToBoolean(IFormatProvider provider); // 0x000000018A8CEE68-0x000000018A8CEEB4
+		char IConvertible.ToChar(IFormatProvider provider); // 0x000000018A8CEF00-0x000000018A8CEF4C
+		sbyte IConvertible.ToSByte(IFormatProvider provider); // 0x000000018A8CF128-0x000000018A8CF174
+		byte IConvertible.ToByte(IFormatProvider provider); // 0x000000018A8CEEB4-0x000000018A8CEF00
+		short IConvertible.ToInt16(IFormatProvider provider); // 0x000000018A8CF044-0x000000018A8CF090
+		ushort IConvertible.ToUInt16(IFormatProvider provider); // 0x000000018A8CF1C8-0x000000018A8CF214
+		int IConvertible.ToInt32(IFormatProvider provider); // 0x000000018A8CF090-0x000000018A8CF0DC
+		uint IConvertible.ToUInt32(IFormatProvider provider); // 0x000000018A8CF214-0x000000018A8CF260
+		long IConvertible.ToInt64(IFormatProvider provider); // 0x000000018A8CF0DC-0x000000018A8CF128
+		ulong IConvertible.ToUInt64(IFormatProvider provider); // 0x000000018A8CF260-0x000000018A8CF2AC
+		float IConvertible.ToSingle(IFormatProvider provider); // 0x000000018A8CF174-0x000000018A8CF1C0
+		double IConvertible.ToDouble(IFormatProvider provider); // 0x000000018A8CEFF8-0x000000018A8CF044
+		decimal IConvertible.ToDecimal(IFormatProvider provider); // 0x000000018A8CEF98-0x000000018A8CEFF8
+		System.DateTime IConvertible.ToDateTime(IFormatProvider provider); // 0x000000018A8CEF4C-0x000000018A8CEF98
+		[NullableContext(1)]
+		object IConvertible.ToType(System.Type conversionType, [Nullable(2)] IFormatProvider provider); // 0x000000018A8CF1C0-0x000000018A8CF1C8
 	}
 
-	public enum LineInfoHandling // TypeDefIndex: 52820
+	public enum LineInfoHandling // TypeDefIndex: 55502
 	{
 		Ignore = 0,
 		Load = 1
@@ -2944,31 +3409,36 @@ namespace Newtonsoft.Json.Linq
 
 namespace Newtonsoft.Json.Serialization
 {
-	internal static class CachedAttributeGetter<T> // TypeDefIndex: 52728
+	internal static class CachedAttributeGetter<T> // TypeDefIndex: 55410
 		where T : Attribute
 	{
 		// Fields
+		[Nullable(new byte[3] {1, 1, 2 })]
 		private static readonly ThreadSafeStore<object, T> TypeAttributeCache;
 	
 		// Constructors
-		static CachedAttributeGetter() {}
+		static CachedAttributeGetter();
 	
 		// Methods
-		public static T GetAttribute(object type) => default;
+		[NullableContext(1)]
+		public static T GetAttribute(object type);
 	}
 
-	public class CamelCaseNamingStrategy : NamingStrategy // TypeDefIndex: 52729
+	public class CamelCaseNamingStrategy : NamingStrategy // TypeDefIndex: 55411
 	{
 		// Constructors
-		public CamelCaseNamingStrategy(bool processDictionaryKeys, bool overrideSpecifiedNames) {} // 0x0000000185FD20F0-0x0000000185FD2100
-		public CamelCaseNamingStrategy(bool processDictionaryKeys, bool overrideSpecifiedNames, bool processExtensionDataNames) {} // 0x0000000185FD20E0-0x0000000185FD20F0
-		public CamelCaseNamingStrategy() {} // 0x0000000185492010-0x0000000185492020
+		public CamelCaseNamingStrategy(bool processDictionaryKeys, bool overrideSpecifiedNames); // 0x0000000184DA5CA0-0x0000000184DA5CB0
+		public CamelCaseNamingStrategy(bool processDictionaryKeys, bool overrideSpecifiedNames, bool processExtensionDataNames); // 0x0000000184DA5C90-0x0000000184DA5CA0
+		public CamelCaseNamingStrategy(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		protected override string ResolvePropertyName(string name) => default; // 0x000000018B3DF730-0x000000018B3DF73C
+		[NullableContext(1)]
+		protected override string ResolvePropertyName(string name); // 0x000000018A8AFEB8-0x000000018A8AFEC4
 	}
 
-	public class DefaultContractResolver : IContractResolver // TypeDefIndex: 52741
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class DefaultContractResolver : IContractResolver // TypeDefIndex: 55423
 	{
 		// Fields
 		private static readonly IContractResolver _instance; // 0x00
@@ -2976,336 +3446,401 @@ namespace Newtonsoft.Json.Serialization
 		private static readonly JsonConverter[] BuiltInConverters; // 0x10
 		private readonly DefaultJsonNameTable _nameTable; // 0x10
 		private readonly ThreadSafeStore<System.Type, JsonContract> _contractCache; // 0x18
+		[CompilerGenerated]
 		private System.Reflection.BindingFlags _DefaultMembersSearchFlags_k__BackingField; // 0x20
+		[CompilerGenerated]
 		private bool _SerializeCompilerGeneratedMembers_k__BackingField; // 0x24
+		[CompilerGenerated]
 		private bool _IgnoreSerializableInterface_k__BackingField; // 0x25
+		[CompilerGenerated]
 		private bool _IgnoreSerializableAttribute_k__BackingField; // 0x26
+		[CompilerGenerated]
 		private bool _IgnoreIsSpecifiedMembers_k__BackingField; // 0x27
+		[CompilerGenerated]
 		private bool _IgnoreShouldSerializeMembers_k__BackingField; // 0x28
+		[CompilerGenerated]
+		[Nullable(2)]
 		private NamingStrategy _NamingStrategy_k__BackingField; // 0x30
 	
 		// Properties
-		internal static IContractResolver Instance { get => default; } // 0x0000000184347D70-0x0000000184347E90 
-		public System.Reflection.BindingFlags DefaultMembersSearchFlags { get; set; } // 0x000000018480D5C0-0x000000018480D700 0x0000000184BB9A10-0x0000000184BB9C30
-		public bool SerializeCompilerGeneratedMembers { get; } // 0x0000000184BBAAE0-0x0000000184BBAC10 
-		public bool IgnoreSerializableInterface { get; } // 0x000000018541AAB0-0x000000018541AB30 
-		public bool IgnoreSerializableAttribute { get; set; } // 0x0000000185F52390-0x0000000185F52420 0x000000018B3E52E8-0x000000018B3E54C4
-		public bool IgnoreIsSpecifiedMembers { get; } // 0x000000018B3E50F8-0x000000018B3E52E8 
-		public bool IgnoreShouldSerializeMembers { get; } // 0x000000018541A9C0-0x000000018541AA40 
-		public NamingStrategy NamingStrategy { get; set; } // 0x0000000184346E90-0x00000001843472C0 0x0000000184346820-0x0000000184346880
+		internal static IContractResolver Instance { get; } // 0x000000018A8B67F8-0x000000018A8B6848 
+		[Obsolete("DefaultMembersSearchFlags is obsolete. To modify the members serialized inherit from DefaultContractResolver and override the GetSerializableMembers method instead.")]
+		public System.Reflection.BindingFlags DefaultMembersSearchFlags { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B70F90-0x0000000182B70FA0 0x0000000184D86330-0x0000000184D86340
+		public bool SerializeCompilerGeneratedMembers { [CompilerGenerated] get; } // 0x0000000184D86870-0x0000000184D86880 
+		public bool IgnoreSerializableInterface { [CompilerGenerated] get; } // 0x0000000184D86930-0x0000000184D86940 
+		public bool IgnoreSerializableAttribute { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86940-0x0000000184D86950 0x0000000184D86960-0x0000000184D86970
+		public bool IgnoreIsSpecifiedMembers { [CompilerGenerated] get; } // 0x0000000184DA5CB0-0x0000000184DA5CC0 
+		public bool IgnoreShouldSerializeMembers { [CompilerGenerated] get; } // 0x00000001811F33C0-0x00000001811F33D0 
+		[Nullable(2)]
+		public NamingStrategy NamingStrategy { [CompilerGenerated] [NullableContext(2)] get; [NullableContext(2)] [CompilerGenerated] set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
 	
 		// Nested types
-		internal class EnumerableDictionaryWrapper<TEnumeratorKey, TEnumeratorValue> : IEnumerable<KeyValuePair<object, object>> // TypeDefIndex: 52731
+		[NullableContext(0)]
+		internal class EnumerableDictionaryWrapper<TEnumeratorKey, TEnumeratorValue> : IEnumerable<KeyValuePair<object, object>> // TypeDefIndex: 55413
 		{
 			// Fields
+			[Nullable(new byte[4] {1, 0, 1, 1 })]
 			private readonly IEnumerable<KeyValuePair<TEnumeratorKey, TEnumeratorValue>> _e;
 	
 			// Nested types
-			private sealed class _GetEnumerator_d__2 : IEnumerator<KeyValuePair<object, object>> // TypeDefIndex: 52730
+			[CompilerGenerated]
+			private sealed class _GetEnumerator_d__2 : IEnumerator<KeyValuePair<object, object>> // TypeDefIndex: 55412
 			{
 				// Fields
 				private int __1__state;
+				[Nullable(new byte[3] {0, 1, 1 })]
 				private KeyValuePair<object, object> __2__current;
 				public EnumerableDictionaryWrapper<TEnumeratorKey, TEnumeratorValue> __4__this;
+				[Nullable(new byte[4] {0, 0, 1, 1 })]
 				private IEnumerator<KeyValuePair<TEnumeratorKey, TEnumeratorValue>> __7__wrap1;
 	
 				// Properties
-				KeyValuePair<object, object> IEnumerator<System.Collections.Generic.KeyValuePair<System.Object,System.Object>>.Current { get => default; } // 0x0000000185FB0860-0x0000000185FB0870 
-				object IEnumerator.Current { get => default; } // 0x0000000185FB0890-0x0000000185FB08A0 
+				KeyValuePair<object, object> IEnumerator<System.Collections.Generic.KeyValuePair<System.Object,System.Object>>.Current { [DebuggerHidden] get; }
+				object IEnumerator.Current { [DebuggerHidden] get; }
 	
 				// Constructors
-				public _GetEnumerator_d__2() {} // Dummy constructor
-				public _GetEnumerator_d__2(int __1__state) {} // 0x000000018B3E5F50-0x000000018B3E5FA0
+				[DebuggerHidden]
+				public _GetEnumerator_d__2(int __1__state);
 	
 				// Methods
-				void IDisposable.Dispose() {}
-				private bool MoveNext() => default; // 0x00000001813B9430-0x00000001813B9440
-				private void __m__Finally1() {}
-				void IEnumerator.Reset() {} // 0x0000000185FB0870-0x0000000185FB0880
+				[DebuggerHidden]
+				void IDisposable.Dispose();
+				private bool MoveNext();
+				private void __m__Finally1();
+				[DebuggerHidden]
+				void IEnumerator.Reset();
 			}
 	
 			// Constructors
-			public EnumerableDictionaryWrapper() {} // Dummy constructor
-			public EnumerableDictionaryWrapper(IEnumerable<KeyValuePair<TEnumeratorKey, TEnumeratorValue>> e) {} // 0x0000000185FD2100-0x0000000185FD2110
+			public EnumerableDictionaryWrapper([Nullable(new byte[4] {1, 0, 1, 1 })] IEnumerable<KeyValuePair<TEnumeratorKey, TEnumeratorValue>> e);
 	
 			// Methods
-			public IEnumerator<KeyValuePair<object, object>> GetEnumerator() => default;
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x00000001813B51D0-0x00000001813B51E0
+			[IteratorStateMachine(typeof(_GetEnumerator_d__2))]
+			public IEnumerator<KeyValuePair<object, object>> GetEnumerator();
+			[NullableContext(1)]
+			IEnumerator IEnumerable.GetEnumerator();
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 52732
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55414
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c __9; // 0x00
+			[Nullable(0)]
 			public static Func<MemberInfo, bool> __9__40_0; // 0x08
+			[Nullable(0)]
 			public static Func<MemberInfo, bool> __9__40_1; // 0x10
+			[Nullable(0)]
 			public static Func<System.Type, IEnumerable<MemberInfo>> __9__44_0; // 0x18
+			[Nullable(0)]
 			public static Func<MemberInfo, bool> __9__44_1; // 0x20
+			[Nullable(0)]
 			public static Func<ConstructorInfo, bool> __9__47_0; // 0x28
+			[Nullable(0)]
 			public static Func<JsonProperty, int> __9__75_0; // 0x30
 	
 			// Constructors
-			static __c() {} // 0x00000001864721F0-0x0000000186472200
-			public __c() {} // 0x00000001857FDF10-0x00000001857FE020
+			static __c(); // 0x0000000184D42010-0x0000000184D42070
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetSerializableMembers_b__40_0(MemberInfo m) => default; // 0x0000000184079DF0-0x000000018407A320
-			internal bool _GetSerializableMembers_b__40_1(MemberInfo m) => default; // 0x0000000184349E20-0x0000000184349F60
-			internal IEnumerable<MemberInfo> _GetExtensionDataMemberForType_b__44_0(System.Type baseType) => default; // 0x000000018439BFB0-0x000000018439CDA0
-			internal bool _GetExtensionDataMemberForType_b__44_1(MemberInfo m) => default; // 0x000000018B3E5DEC-0x000000018B3E5EA8
-			internal bool _GetAttributeConstructor_b__47_0(ConstructorInfo c) => default; // 0x000000018480BAF0-0x000000018480BF20
-			internal int _CreateProperties_b__75_0(JsonProperty p) => default; // 0x000000018B3E5EA8-0x000000018B3E5F50
+			[NullableContext(0)]
+			internal bool _GetSerializableMembers_b__40_0(MemberInfo m); // 0x0000000182F2EF40-0x0000000182F2F690
+			[NullableContext(0)]
+			internal bool _GetSerializableMembers_b__40_1(MemberInfo m); // 0x000000018A8C1F0C-0x000000018A8C1F68
+			[NullableContext(0)]
+			internal IEnumerable<MemberInfo> _GetExtensionDataMemberForType_b__44_0(System.Type baseType); // 0x00000001835D0740-0x00000001835D07D0
+			[NullableContext(0)]
+			internal bool _GetExtensionDataMemberForType_b__44_1(MemberInfo m); // 0x0000000182F2F8A0-0x0000000182F2F9F0
+			[NullableContext(0)]
+			internal bool _GetAttributeConstructor_b__47_0(ConstructorInfo c); // 0x0000000182F2E1D0-0x0000000182F2E230
+			[NullableContext(0)]
+			internal int _CreateProperties_b__75_0(JsonProperty p); // 0x0000000183FF4820-0x0000000183FF4A50
 		}
 	
-		private sealed class __c__DisplayClass42_0 // TypeDefIndex: 52733
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass42_0 // TypeDefIndex: 55415
 		{
 			// Fields
+			[Nullable(0)]
 			public NamingStrategy namingStrategy; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass42_0() {} // 0x000000018480BFD0-0x000000018480C210
+			public __c__DisplayClass42_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal string _CreateObjectContract_b__0(string s) => default; // 0x000000018B3E55BC-0x000000018B3E5DEC
+			internal string _CreateObjectContract_b__0(string s); // 0x000000018A8C1F88-0x000000018A8C1FA8
 		}
 	
-		private sealed class __c__DisplayClass45_0 // TypeDefIndex: 52734
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass45_0 // TypeDefIndex: 55416
 		{
 			// Fields
+			[Nullable(new byte[3] {0, 1, 2 })]
 			public Func<object, object> getExtensionDataDictionary; // 0x10
+			[Nullable(0)]
 			public MemberInfo member; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass45_0() {} // 0x000000018480B8C0-0x000000018480BAF0
+			public __c__DisplayClass45_0(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
-		private sealed class __c__DisplayClass45_1 // TypeDefIndex: 52735
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass45_1 // TypeDefIndex: 55417
 		{
 			// Fields
+			[Nullable(new byte[3] {0, 1, 2 })]
 			public Action<object, object> setExtensionDataDictionary; // 0x10
+			[Nullable(new byte[2] {0, 1 })]
 			public Func<object> createExtensionDataDictionary; // 0x18
+			[Nullable(new byte[3] {0, 1, 2 })]
 			public MethodCall<object, object> setExtensionDataDictionaryValue; // 0x20
+			[Nullable(0)]
 			public __c__DisplayClass45_0 CS___8__locals1; // 0x28
 	
 			// Constructors
-			public __c__DisplayClass45_1() {} // 0x0000000184588EC0-0x0000000184589040
+			public __c__DisplayClass45_1(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _SetExtensionDataDelegates_b__0(object o, string key, object value) {} // 0x0000000185F7A650-0x0000000185F7A690
+			internal void _SetExtensionDataDelegates_b__0(object o, string key, [Nullable(2)] object value); // 0x000000018A8C1FA8-0x000000018A8C2184
 		}
 	
-		private sealed class __c__DisplayClass45_2 // TypeDefIndex: 52736
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass45_2 // TypeDefIndex: 55418
 		{
 			// Fields
+			[Nullable(new byte[2] {0, 1 })]
 			public ObjectConstructor<object> createEnumerableWrapper; // 0x10
+			[Nullable(0)]
 			public __c__DisplayClass45_0 CS___8__locals2; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass45_2() {} // 0x0000000184588D90-0x0000000184588EC0
+			public __c__DisplayClass45_2(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal IEnumerable<KeyValuePair<object, object>> _SetExtensionDataDelegates_b__1(object o) => default; // 0x0000000184589040-0x00000001845890F0
+			internal IEnumerable<KeyValuePair<object, object>> _SetExtensionDataDelegates_b__1(object o); // 0x000000018A8C2184-0x000000018A8C225C
 		}
 	
-		private sealed class __c__DisplayClass62_0 // TypeDefIndex: 52737
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass62_0 // TypeDefIndex: 55419
 		{
 			// Fields
+			[Nullable(0)]
 			public NamingStrategy namingStrategy; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass62_0() {} // 0x0000000184589820-0x0000000184589E50
+			public __c__DisplayClass62_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal string _CreateDictionaryContract_b__0(string s) => default; // 0x0000000184345F60-0x0000000184345FB0
+			internal string _CreateDictionaryContract_b__0(string s); // 0x000000018A8C1F88-0x000000018A8C1FA8
 		}
 	
-		private sealed class __c__DisplayClass67_0 // TypeDefIndex: 52738
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass67_0 // TypeDefIndex: 55420
 		{
 			// Fields
+			[Nullable(0)]
 			public NamingStrategy namingStrategy; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass67_0() {} // 0x0000000184346200-0x0000000184346270
+			public __c__DisplayClass67_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal string _CreateDynamicContract_b__0(string s) => default; // 0x0000000184345CF0-0x0000000184345F60
+			internal string _CreateDynamicContract_b__0(string s); // 0x000000018A8C1F88-0x000000018A8C1FA8
 		}
 	
-		private sealed class __c__DisplayClass80_0 // TypeDefIndex: 52739
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass80_0 // TypeDefIndex: 55421
 		{
 			// Fields
+			[Nullable(new byte[3] {0, 1, 2 })]
 			public MethodCall<object, object> shouldSerializeCall; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass80_0() {} // 0x0000000184345FB0-0x0000000184346100
+			public __c__DisplayClass80_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _CreateShouldSerializeTest_b__0(object o) => default; // 0x000000018434DAD0-0x000000018434F130
+			internal bool _CreateShouldSerializeTest_b__0(object o); // 0x000000018A8C2350-0x000000018A8C23D4
 		}
 	
-		private sealed class __c__DisplayClass81_0 // TypeDefIndex: 52740
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass81_0 // TypeDefIndex: 55422
 		{
 			// Fields
+			[Nullable(new byte[3] {0, 1, 1 })]
 			public Func<object, object> specifiedPropertyGet; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass81_0() {} // 0x0000000184347E90-0x0000000184347FD0
+			public __c__DisplayClass81_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _SetIsSpecifiedActions_b__0(object o) => default; // 0x0000000184347C50-0x0000000184347D70
+			internal bool _SetIsSpecifiedActions_b__0(object o); // 0x000000018A8C23D4-0x000000018A8C2584
 		}
 	
 		// Constructors
-		public DefaultContractResolver() {} // 0x00000001843457A0-0x0000000184345880
-		static DefaultContractResolver() {} // 0x000000018B3F3A98-0x000000018B3F3CAC
+		public DefaultContractResolver(); // 0x000000018464D460-0x000000018464D570
+		static DefaultContractResolver(); // 0x000000018464D020-0x000000018464D410
 	
 		// Methods
-		public virtual JsonContract ResolveContract(System.Type type) => default; // 0x0000000184345920-0x0000000184345A40
-		private static bool FilterMembers(MemberInfo member) => default; // 0x000000018434F130-0x000000018434F430
-		protected virtual List<MemberInfo> GetSerializableMembers(System.Type objectType) => default; // 0x000000018B3E54C4-0x000000018B3E5598
-		private bool ShouldSerializeEntityMember(MemberInfo memberInfo) => default; // 0x000000018407F2F0-0x000000018407FA20
-		protected virtual JsonObjectContract CreateObjectContract(System.Type objectType) => default; // 0x000000018346D130-0x000000018346D140
-		private static void ThrowUnableToSerializeError(object o, StreamingContext context) {} // 0x0000000184080440-0x00000001840804D0
-		private MemberInfo GetExtensionDataMemberForType(System.Type type) => default; // 0x0000000184080000-0x0000000184080440
-		private static void SetExtensionDataDelegates(JsonObjectContract contract, MemberInfo member) {} // 0x000000018407EA00-0x000000018407F0F0
-		private ConstructorInfo GetAttributeConstructor(System.Type objectType) => default; // 0x0000000184080630-0x0000000184080890
-		private ConstructorInfo GetImmutableConstructor(System.Type objectType, JsonPropertyCollection memberProperties) => default; // 0x0000000184080890-0x0000000184080AA0
-		private ConstructorInfo GetParameterizedConstructor(System.Type objectType) => default; // 0x000000018407F0F0-0x000000018407F110
-		protected virtual IList<JsonProperty> CreateConstructorParameters(ConstructorInfo constructor, JsonPropertyCollection memberProperties) => default; // 0x000000018B3E55A0-0x000000018B3E55BC
-		private JsonProperty MatchProperty(JsonPropertyCollection properties, string name, System.Type type) => default; // 0x0000000185B9DF10-0x0000000185B9DF30
-		protected virtual JsonProperty CreatePropertyFromConstructorParameter(JsonProperty matchingMemberProperty, ParameterInfo parameterInfo) => default; // 0x000000018B3E5598-0x000000018B3E55A0
-		protected virtual JsonConverter ResolveContractConverter(System.Type objectType) => default; // 0x00000001857FDAD0-0x00000001857FDEC0
-		private Func<object> GetDefaultCreator(System.Type createdType) => default;
-		private void InitializeContract(JsonContract contract) {}
-		private void ResolveCallbackMethods(JsonContract contract, System.Type t) {}
-		private void GetCallbackMethodsForType(System.Type type, out List<SerializationCallback> onSerializing, out List<SerializationCallback> onSerialized, out List<SerializationCallback> onDeserializing, out List<SerializationCallback> onDeserialized, out List<SerializationErrorCallback> onError) {
-			onSerializing = default;
-			onSerialized = default;
-			onDeserializing = default;
-			onDeserialized = default;
-			onError = default;
-		}
-		private static bool IsConcurrentOrObservableCollection(System.Type t) => default;
-		private static bool ShouldSkipDeserialized(System.Type t) => default;
-		private static bool ShouldSkipSerializing(System.Type t) => default;
-		private List<System.Type> GetClassHierarchyForType(System.Type type) => default;
-		protected virtual JsonDictionaryContract CreateDictionaryContract(System.Type objectType) => default;
-		protected virtual JsonArrayContract CreateArrayContract(System.Type objectType) => default;
-		protected virtual JsonPrimitiveContract CreatePrimitiveContract(System.Type objectType) => default; // 0x0000000185F6E710-0x0000000185F6E770
-		protected virtual JsonLinqContract CreateLinqContract(System.Type objectType) => default; // 0x0000000185492010-0x0000000185492020
-		protected virtual JsonISerializableContract CreateISerializableContract(System.Type objectType) => default; // 0x000000018434AFC0-0x000000018434B070
-		protected virtual JsonDynamicContract CreateDynamicContract(System.Type objectType) => default; // 0x000000018B3F35D0-0x000000018B3F362C
-		protected virtual JsonStringContract CreateStringContract(System.Type objectType) => default; // 0x0000000184347960-0x0000000184347A30
-		protected virtual JsonContract CreateContract(System.Type objectType) => default; // 0x000000018434ADA0-0x000000018434AFC0
-		internal static bool IsJsonPrimitiveType(System.Type t) => default; // 0x0000000184349140-0x00000001843491D0
-		internal static bool IsIConvertible(System.Type t) => default; // 0x000000018510AA20-0x000000018510AA80
-		internal static bool CanConvertToString(System.Type type) => default; // 0x0000000185492010-0x0000000185492020
-		private static bool IsValidCallback(MethodInfo method, ParameterInfo[] parameters, System.Type attributeType, MethodInfo currentCallback, ref System.Type prevAttributeType) => default; // 0x000000018B3F364C-0x000000018B3F366C
-		internal static string GetClrTypeFullName(System.Type type) => default; // 0x0000000185492010-0x0000000185492020
-		protected virtual IList<JsonProperty> CreateProperties(System.Type type, MemberSerialization memberSerialization) => default; // 0x0000000185492010-0x0000000185492020
-		internal virtual DefaultJsonNameTable GetNameTable() => default; // 0x000000018B3F366C-0x000000018B3F3848
-		protected virtual IValueProvider CreateMemberValueProvider(MemberInfo member) => default; // 0x0000000185492010-0x0000000185492020
-		protected virtual JsonProperty CreateProperty(MemberInfo member, MemberSerialization memberSerialization) => default; // 0x000000018B3F3848-0x000000018B3F3920
-		private void SetPropertySettingsFromAttributes(JsonProperty property, object attributeProvider, string name, System.Type declaringType, MemberSerialization memberSerialization, out bool allowNonPublicAccess) {
-			allowNonPublicAccess = default;
-		} // 0x0000000185492010-0x0000000185492020
-		private Predicate<object> CreateShouldSerializeTest(MemberInfo member) => default; // 0x000000018B3F364C-0x000000018B3F366C
-		private void SetIsSpecifiedActions(JsonProperty property, MemberInfo member, bool allowNonPublicAccess) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual string ResolvePropertyName(string propertyName) => default; // 0x000000018B3F364C-0x000000018B3F366C
-		protected virtual string ResolveExtensionDataName(string extensionDataName) => default; // 0x0000000185492010-0x0000000185492020
-		protected virtual string ResolveDictionaryKey(string dictionaryKey) => default; // 0x000000018B3F3A14-0x000000018B3F3A98
-		public string GetResolvedPropertyName(string propertyName) => default; // 0x0000000185492010-0x0000000185492020
+		public virtual JsonContract ResolveContract(System.Type type); // 0x0000000182FBE740-0x0000000182FBEB90
+		private static bool FilterMembers(MemberInfo member); // 0x00000001832B3490-0x00000001832B3570
+		protected virtual List<MemberInfo> GetSerializableMembers(System.Type objectType); // 0x0000000182F30F80-0x0000000182F31950
+		private bool ShouldSerializeEntityMember(MemberInfo memberInfo); // 0x000000018A8B6694-0x000000018A8B6750
+		protected virtual JsonObjectContract CreateObjectContract(System.Type objectType); // 0x00000001835CE720-0x00000001835CEAB0
+		private static void ThrowUnableToSerializeError(object o, StreamingContext context); // 0x000000018A8B6750-0x000000018A8B67F8
+		private MemberInfo GetExtensionDataMemberForType(System.Type type); // 0x00000001835CEB30-0x00000001835CECF0
+		private static void SetExtensionDataDelegates(JsonObjectContract contract, MemberInfo member); // 0x000000018A8B5E64-0x000000018A8B6694
+		private ConstructorInfo GetAttributeConstructor(System.Type objectType); // 0x00000001835CE410-0x00000001835CE5A0
+		private ConstructorInfo GetImmutableConstructor(System.Type objectType, JsonPropertyCollection memberProperties); // 0x00000001843AA090-0x00000001843AA210
+		private ConstructorInfo GetParameterizedConstructor(System.Type objectType); // 0x0000000184CDE4B0-0x0000000184CDE4F0
+		protected virtual IList<JsonProperty> CreateConstructorParameters(ConstructorInfo constructor, JsonPropertyCollection memberProperties); // 0x00000001843A9F60-0x00000001843AA090
+		private JsonProperty MatchProperty(JsonPropertyCollection properties, string name, System.Type type); // 0x00000001843AA210-0x00000001843AA2C0
+		protected virtual JsonProperty CreatePropertyFromConstructorParameter([Nullable(2)] JsonProperty matchingMemberProperty, ParameterInfo parameterInfo); // 0x00000001843AA2C0-0x00000001843AA550
+		protected virtual JsonConverter ResolveContractConverter(System.Type objectType); // 0x00000001835CF340-0x00000001835CF370
+		private Func<object> GetDefaultCreator(System.Type createdType); // 0x00000001835CF4F0-0x00000001835CF540
+		private void InitializeContract(JsonContract contract); // 0x00000001835CF130-0x00000001835CF340
+		private void ResolveCallbackMethods(JsonContract contract, System.Type t); // 0x00000001835CF370-0x00000001835CF460
+		private void GetCallbackMethodsForType(System.Type type, [Nullable(new byte[2] {2, 1 })] out List<SerializationCallback> onSerializing, [Nullable(new byte[2] {2, 1 })] out List<SerializationCallback> onSerialized, [Nullable(new byte[2] {2, 1 })] out List<SerializationCallback> onDeserializing, [Nullable(new byte[2] {2, 1 })] out List<SerializationCallback> onDeserialized, [Nullable(new byte[2] {2, 1 })] out List<SerializationErrorCallback> onError); // 0x0000000182F2FB00-0x0000000182F30CB0
+		private static bool IsConcurrentOrObservableCollection(System.Type t); // 0x00000001835CFCB0-0x00000001835CFD90
+		private static bool ShouldSkipDeserialized(System.Type t); // 0x00000001835CFA20-0x00000001835CFB00
+		private static bool ShouldSkipSerializing(System.Type t); // 0x00000001835CFA20-0x00000001835CFB00
+		private List<System.Type> GetClassHierarchyForType(System.Type type); // 0x0000000182F2E080-0x0000000182F2E150
+		protected virtual JsonDictionaryContract CreateDictionaryContract(System.Type objectType); // 0x00000001835CDAA0-0x00000001835CDCD0
+		protected virtual JsonArrayContract CreateArrayContract(System.Type objectType); // 0x00000001835CDCD0-0x00000001835CDE00
+		protected virtual JsonPrimitiveContract CreatePrimitiveContract(System.Type objectType); // 0x00000001835CDE00-0x00000001835CDE60
+		protected virtual JsonLinqContract CreateLinqContract(System.Type objectType); // 0x0000000184D26960-0x0000000184D269F0
+		protected virtual JsonISerializableContract CreateISerializableContract(System.Type objectType); // 0x000000018A8B5B90-0x000000018A8B5D6C
+		protected virtual JsonDynamicContract CreateDynamicContract(System.Type objectType); // 0x000000018A8B59A0-0x000000018A8B5B90
+		protected virtual JsonStringContract CreateStringContract(System.Type objectType); // 0x0000000184CCFB90-0x0000000184CCFC10
+		protected virtual JsonContract CreateContract(System.Type objectType); // 0x00000001835D07D0-0x00000001835D0B60
+		internal static bool IsJsonPrimitiveType(System.Type t); // 0x00000001835D0CC0-0x00000001835D0D00
+		internal static bool IsIConvertible(System.Type t); // 0x00000001835CE690-0x00000001835CE720
+		internal static bool CanConvertToString(System.Type type); // 0x00000001835CED80-0x00000001835CEEB0
+		private static bool IsValidCallback(MethodInfo method, ParameterInfo[] parameters, System.Type attributeType, [Nullable(2)] MethodInfo currentCallback, [Nullable(2)] ref System.Type prevAttributeType); // 0x0000000182F30CB0-0x0000000182F30ED0
+		internal static string GetClrTypeFullName(System.Type type); // 0x000000018A8B5D6C-0x000000018A8B5E40
+		protected virtual IList<JsonProperty> CreateProperties(System.Type type, MemberSerialization memberSerialization); // 0x00000001832B3570-0x00000001832B3E00
+		internal virtual DefaultJsonNameTable GetNameTable(); // 0x0000000182B2ECC0-0x0000000182B2ECD0
+		protected virtual IValueProvider CreateMemberValueProvider(MemberInfo member); // 0x00000001832203A0-0x00000001832203F0
+		protected virtual JsonProperty CreateProperty(MemberInfo member, MemberSerialization memberSerialization); // 0x0000000183220060-0x00000001832203A0
+		private void SetPropertySettingsFromAttributes(JsonProperty property, object attributeProvider, string name, System.Type declaringType, MemberSerialization memberSerialization, out bool allowNonPublicAccess); // 0x00000001832B41E0-0x00000001832B4800
+		private Predicate<object> CreateShouldSerializeTest(MemberInfo member); // 0x0000000183220500-0x00000001832206A0
+		private void SetIsSpecifiedActions(JsonProperty property, MemberInfo member, bool allowNonPublicAccess); // 0x00000001832206A0-0x0000000183220820
+		protected virtual string ResolvePropertyName(string propertyName); // 0x00000001832B4800-0x00000001832B4820
+		protected virtual string ResolveExtensionDataName(string extensionDataName); // 0x000000018A8B5E48-0x000000018A8B5E64
+		protected virtual string ResolveDictionaryKey(string dictionaryKey); // 0x00000001848BDB70-0x00000001848BDB90
+		public string GetResolvedPropertyName(string propertyName); // 0x000000018A8B5E40-0x000000018A8B5E48
 	}
 
-	public class DefaultNamingStrategy : NamingStrategy // TypeDefIndex: 52742
+	public class DefaultNamingStrategy : NamingStrategy // TypeDefIndex: 55424
 	{
 		// Constructors
-		public DefaultNamingStrategy() {} // 0x0000000185492010-0x0000000185492020
+		public DefaultNamingStrategy(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		protected override string ResolvePropertyName(string name) => default; // 0x00000001834A4750-0x00000001834A4760
+		[NullableContext(1)]
+		protected override string ResolvePropertyName(string name); // 0x0000000184D88C30-0x0000000184D88C40
 	}
 
-	internal class DefaultReferenceResolver : IReferenceResolver // TypeDefIndex: 52743
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class DefaultReferenceResolver : IReferenceResolver // TypeDefIndex: 55425
 	{
 		// Fields
 		private int _referenceCount; // 0x10
 	
 		// Constructors
-		public DefaultReferenceResolver() {} // 0x0000000185492010-0x0000000185492020
+		public DefaultReferenceResolver(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		private BidirectionalDictionary<string, object> GetMappings(object context) => default; // 0x000000018B3EA738-0x000000018B3EA804
-		public object ResolveReference(object context, string reference) => default; // 0x000000018B3EA960-0x000000018B3EA9E0
-		public string GetReference(object context, object value) => default; // 0x000000018B3EA804-0x000000018B3EA8E4
-		public void AddReference(object context, string reference, object value) {} // 0x000000018B3EA6B8-0x000000018B3EA738
-		public bool IsReferenced(object context, object value) => default; // 0x000000018B3EA8E4-0x000000018B3EA960
+		private BidirectionalDictionary<string, object> GetMappings(object context); // 0x000000018A8BAF3C-0x000000018A8BB008
+		public object ResolveReference(object context, string reference); // 0x000000018A8BB164-0x000000018A8BB1E4
+		public string GetReference(object context, object value); // 0x000000018A8BB008-0x000000018A8BB0E8
+		public void AddReference(object context, string reference, object value); // 0x000000018A8BAEBC-0x000000018A8BAF3C
+		public bool IsReferenced(object context, object value); // 0x000000018A8BB0E8-0x000000018A8BB164
 	}
 
-	public class DefaultSerializationBinder : SerializationBinder, ISerializationBinder // TypeDefIndex: 52744
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class DefaultSerializationBinder : SerializationBinder, ISerializationBinder // TypeDefIndex: 55426
 	{
 		// Fields
 		internal static readonly DefaultSerializationBinder Instance; // 0x00
+		[Nullable(new byte[5] {1, 0, 2, 1, 1 })]
 		private readonly ThreadSafeStore<StructMultiKey<string, string>, System.Type> _typeCache; // 0x10
 	
 		// Constructors
-		public DefaultSerializationBinder() {} // 0x0000000185D6AD40-0x0000000185D6AE10
-		static DefaultSerializationBinder() {} // 0x0000000185D6ACD0-0x0000000185D6AD40
+		public DefaultSerializationBinder(); // 0x0000000184B460F0-0x0000000184B461C0
+		static DefaultSerializationBinder(); // 0x0000000184B46080-0x0000000184B460F0
 	
 		// Methods
-		private System.Type GetTypeFromTypeNameKey(StructMultiKey<string, string> typeNameKey) => default; // 0x0000000184CB8A40-0x0000000184CB8B20
-		private System.Type GetGenericTypeFromTypeName(string typeName, Assembly assembly) => default; // 0x000000018B3EAA54-0x000000018B3EAC64
-		private System.Type GetTypeByName(StructMultiKey<string, string> typeNameKey) => default; // 0x000000018407D0A0-0x000000018407D110
-		public override System.Type BindToType(string assemblyName, string typeName) => default; // 0x000000018407CFE0-0x000000018407D0A0
-		public override void BindToName(System.Type serializedType, out string assemblyName, out string typeName) {
-			assemblyName = default;
-			typeName = default;
-		} // 0x000000018B3EA9E0-0x000000018B3EAA54
+		private System.Type GetTypeFromTypeNameKey([Nullable(new byte[3] {0, 2, 1 })] StructMultiKey<string, string> typeNameKey); // 0x0000000183B110C0-0x0000000183B11160
+		private System.Type GetGenericTypeFromTypeName(string typeName, Assembly assembly); // 0x000000018A8BB258-0x000000018A8BB468
+		private System.Type GetTypeByName([Nullable(new byte[3] {0, 2, 1 })] StructMultiKey<string, string> typeNameKey); // 0x0000000182FBD550-0x0000000182FBD590
+		public override System.Type BindToType([Nullable(2)] string assemblyName, string typeName); // 0x0000000182FBD4E0-0x0000000182FBD550
+		[NullableContext(2)]
+		public override void BindToName([Nullable(1)] System.Type serializedType, out string assemblyName, out string typeName); // 0x000000018A8BB1E4-0x000000018A8BB258
 	}
 
-	public class ErrorContext // TypeDefIndex: 52745
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class ErrorContext // TypeDefIndex: 55427
 	{
 		// Fields
+		[CompilerGenerated]
 		private bool _Traced_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private readonly Exception _Error_k__BackingField; // 0x18
+		[CompilerGenerated]
+		[Nullable(2)]
 		private readonly object _OriginalObject_k__BackingField; // 0x20
+		[CompilerGenerated]
+		[Nullable(2)]
 		private readonly object _Member_k__BackingField; // 0x28
+		[CompilerGenerated]
 		private readonly string _Path_k__BackingField; // 0x30
+		[CompilerGenerated]
 		private bool _Handled_k__BackingField; // 0x38
 	
 		// Properties
-		internal bool Traced { get; set; } // 0x0000000181C2FD60-0x0000000181C2FD70 0x000000018184FBD0-0x000000018184FBE0
-		public Exception Error { get; } // 0x0000000181377E40-0x0000000181377E50 
-		public bool Handled { get; } // 0x0000000185FB0700-0x0000000185FB0710 
+		internal bool Traced { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001815EFCE0-0x00000001815EFCF0 0x0000000184D86130-0x0000000184D86140
+		public Exception Error { [CompilerGenerated] get; } // 0x000000018385B100-0x000000018385B110 
+		public bool Handled { [CompilerGenerated] get; } // 0x00000001811F2A70-0x00000001811F2A80 
 	
 		// Constructors
-		public ErrorContext() {} // Dummy constructor
-		internal ErrorContext(object originalObject, object member, string path, Exception error) {} // 0x000000018B3EAC64-0x000000018B3EACAC
+		internal ErrorContext([Nullable(2)] object originalObject, [Nullable(2)] object member, string path, Exception error); // 0x000000018A8BB468-0x000000018A8BB4B0
 	}
 
-	public class ErrorEventArgs : EventArgs // TypeDefIndex: 52746
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class ErrorEventArgs : EventArgs // TypeDefIndex: 55428
 	{
 		// Fields
+		[CompilerGenerated]
+		[Nullable(2)]
 		private readonly object _CurrentObject_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private readonly ErrorContext _ErrorContext_k__BackingField; // 0x18
 	
 		// Constructors
-		public ErrorEventArgs() {} // Dummy constructor
-		public ErrorEventArgs(object currentObject, ErrorContext errorContext) {} // 0x000000018B3EACAC-0x000000018B3EAD18
+		public ErrorEventArgs([Nullable(2)] object currentObject, ErrorContext errorContext); // 0x000000018A8BB4B0-0x000000018A8BB51C
 	}
 
-	public interface IAttributeProvider // TypeDefIndex: 52747
+	[NullableContext(1)]
+	public interface IAttributeProvider // TypeDefIndex: 55429
 	{
 	}
 
-	public interface IContractResolver // TypeDefIndex: 52748
+	[NullableContext(1)]
+	public interface IContractResolver // TypeDefIndex: 55430
 	{
 		// Methods
 		JsonContract ResolveContract(System.Type type);
 	}
 
-	public interface IReferenceResolver // TypeDefIndex: 52749
+	[NullableContext(1)]
+	public interface IReferenceResolver // TypeDefIndex: 55431
 	{
 		// Methods
 		object ResolveReference(object context, string reference);
@@ -3314,91 +3849,118 @@ namespace Newtonsoft.Json.Serialization
 		void AddReference(object context, string reference, object value);
 	}
 
-	public interface ISerializationBinder // TypeDefIndex: 52750
+	[NullableContext(1)]
+	public interface ISerializationBinder // TypeDefIndex: 55432
 	{
 		// Methods
-		System.Type BindToType(string assemblyName, string typeName);
-		void BindToName(System.Type serializedType, out string assemblyName, out string typeName);
+		System.Type BindToType([Nullable(2)] string assemblyName, string typeName);
+		[NullableContext(2)]
+		void BindToName([Nullable(1)] System.Type serializedType, out string assemblyName, out string typeName);
 	}
 
-	public interface ITraceWriter // TypeDefIndex: 52751
+	[NullableContext(1)]
+	public interface ITraceWriter // TypeDefIndex: 55433
 	{
 		// Properties
 		TraceLevel LevelFilter { get; }
 	
 		// Methods
-		void Trace(TraceLevel level, string message, Exception ex);
+		void Trace(TraceLevel level, string message, [Nullable(2)] Exception ex);
 	}
 
-	public interface IValueProvider // TypeDefIndex: 52752
+	[NullableContext(1)]
+	public interface IValueProvider // TypeDefIndex: 55434
 	{
 		// Methods
-		void SetValue(object target, object value);
+		void SetValue(object target, [Nullable(2)] object value);
 		object GetValue(object target);
 	}
 
-	public class JsonArrayContract : JsonContainerContract // TypeDefIndex: 52753
+	[Nullable(0)]
+	[NullableContext(2)]
+	public class JsonArrayContract : JsonContainerContract // TypeDefIndex: 55435
 	{
 		// Fields
+		[CompilerGenerated]
 		private readonly System.Type _CollectionItemType_k__BackingField; // 0xC0
+		[CompilerGenerated]
 		private readonly bool _IsMultidimensionalArray_k__BackingField; // 0xC8
 		private readonly System.Type _genericCollectionDefinitionType; // 0xD0
 		private System.Type _genericWrapperType; // 0xD8
+		[Nullable(new byte[2] {2, 1 })]
 		private ObjectConstructor<object> _genericWrapperCreator; // 0xE0
+		[Nullable(new byte[2] {2, 1 })]
 		private Func<object> _genericTemporaryCollectionCreator; // 0xE8
+		[CompilerGenerated]
 		private readonly bool _IsArray_k__BackingField; // 0xF0
+		[CompilerGenerated]
 		private readonly bool _ShouldCreateWrapper_k__BackingField; // 0xF1
+		[CompilerGenerated]
 		private bool _CanDeserialize_k__BackingField; // 0xF2
 		private readonly ConstructorInfo _parameterizedConstructor; // 0xF8
+		[Nullable(new byte[2] {2, 1 })]
 		private ObjectConstructor<object> _parameterizedCreator; // 0x100
+		[Nullable(new byte[2] {2, 1 })]
 		private ObjectConstructor<object> _overrideCreator; // 0x108
+		[CompilerGenerated]
 		private bool _HasParameterizedCreator_k__BackingField; // 0x110
 	
 		// Properties
-		public System.Type CollectionItemType { get; } // 0x0000000181B388F0-0x0000000181B38900 
-		public bool IsMultidimensionalArray { get; } // 0x0000000185FB2DA0-0x0000000185FB2DB0 
-		internal bool IsArray { get; } // 0x0000000185FB9520-0x0000000185FB9530 
-		internal bool ShouldCreateWrapper { get; } // 0x0000000185FB93A0-0x0000000185FB93B0 
-		internal bool CanDeserialize { get; private set; } // 0x0000000185FD2110-0x0000000185FD2120 0x0000000185FD2120-0x0000000185FD2130
-		internal ObjectConstructor<object> ParameterizedCreator { get => default; } // 0x000000018B3EAF18-0x000000018B3EAFD0 
-		public ObjectConstructor<object> OverrideCreator { get => default; set {} } // 0x0000000181ABEDF0-0x0000000181ABEE00 0x000000018B3EAFD0-0x000000018B3EAFF8
-		public bool HasParameterizedCreator { get; set; } // 0x0000000185FB92A0-0x0000000185FB92B0 0x0000000185FBCFA0-0x0000000185FBCFB0
-		internal bool HasParameterizedCreatorInternal { get => default; } // 0x0000000184F0A2F0-0x0000000184F0A390 
+		public System.Type CollectionItemType { [CompilerGenerated] get; } // 0x0000000184D892F0-0x0000000184D89300 
+		public bool IsMultidimensionalArray { [CompilerGenerated] get; } // 0x0000000184D8E270-0x0000000184D8E280 
+		internal bool IsArray { [CompilerGenerated] get; } // 0x0000000184D8E520-0x0000000184D8E530 
+		internal bool ShouldCreateWrapper { [CompilerGenerated] get; } // 0x0000000184D9B5F0-0x0000000184D9B600 
+		internal bool CanDeserialize { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA5CC0-0x0000000184DA5CD0 0x0000000184DA5CD0-0x0000000184DA5CE0
+		[Nullable(new byte[2] {2, 1 })]
+		internal ObjectConstructor<object> ParameterizedCreator { get; } // 0x000000018A8BB71C-0x000000018A8BB7D4 
+		[Nullable(new byte[2] {2, 1 })]
+		public ObjectConstructor<object> OverrideCreator { get; set; } // 0x0000000184D85F90-0x0000000184D85FA0 0x000000018A8BB7D4-0x000000018A8BB7FC
+		public bool HasParameterizedCreator { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D90FE0-0x0000000184D90FF0 0x0000000184D91070-0x0000000184D91080
+		internal bool HasParameterizedCreatorInternal { get; } // 0x00000001832B5600-0x00000001832B5670 
 	
 		// Constructors
-		public JsonArrayContract() {} // Dummy constructor
-		public JsonArrayContract(System.Type underlyingType) {} // 0x0000000184BBAE00-0x0000000184BBB580
+		[NullableContext(1)]
+		public JsonArrayContract(System.Type underlyingType); // 0x00000001835CD250-0x00000001835CD980
 	
 		// Methods
-		internal IWrappedCollection CreateWrapper(object list) => default; // 0x0000000184BB9650-0x0000000184BB9970
-		internal IList CreateTemporaryCollection() => default; // 0x000000018407DDF0-0x000000018407E000
-		private void StoreFSharpListCreatorIfNecessary(System.Type underlyingType) {} // 0x000000018B3EAE40-0x000000018B3EAF18
+		[NullableContext(1)]
+		internal IWrappedCollection CreateWrapper(object list); // 0x0000000183B2C5A0-0x0000000183B2C810
+		[NullableContext(1)]
+		internal IList CreateTemporaryCollection(); // 0x00000001832B5730-0x00000001832B58D0
+		[NullableContext(1)]
+		private void StoreFSharpListCreatorIfNecessary(System.Type underlyingType); // 0x000000018A8BB644-0x000000018A8BB71C
 	}
 
-	public class JsonContainerContract : JsonContract // TypeDefIndex: 52754
+	[Nullable(0)]
+	[NullableContext(2)]
+	public class JsonContainerContract : JsonContract // TypeDefIndex: 55436
 	{
 		// Fields
 		private JsonContract _itemContract; // 0x90
 		private JsonContract _finalItemContract; // 0x98
+		[CompilerGenerated]
 		private JsonConverter _ItemConverter_k__BackingField; // 0xA0
+		[CompilerGenerated]
 		private bool? _ItemIsReference_k__BackingField; // 0xA8
+		[CompilerGenerated]
 		private ReferenceLoopHandling? _ItemReferenceLoopHandling_k__BackingField; // 0xAC
+		[CompilerGenerated]
 		private TypeNameHandling? _ItemTypeNameHandling_k__BackingField; // 0xB4
 	
 		// Properties
-		internal JsonContract ItemContract { get => default; set {} } // 0x0000000181B5FFD0-0x0000000181B5FFE0 0x0000000185548330-0x00000001855483A0
-		internal JsonContract FinalItemContract { get => default; } // 0x0000000181E336C0-0x0000000181E336D0 
-		public JsonConverter ItemConverter { get; set; } // 0x0000000185FB0520-0x0000000185FB0530 0x000000018646EBCC-0x000000018646EBE0
-		public bool? ItemIsReference { get; set; } // 0x0000000185FD2130-0x0000000185FD2140 0x0000000185FD2160-0x0000000185FD2170
-		public ReferenceLoopHandling? ItemReferenceLoopHandling { get; set; } // 0x0000000185FD2140-0x0000000185FD2150 0x0000000185FD2170-0x0000000185FD2180
-		public TypeNameHandling? ItemTypeNameHandling { get; set; } // 0x0000000185FD2150-0x0000000185FD2160 0x0000000185FD2180-0x0000000185FD2190
+		internal JsonContract ItemContract { get; set; } // 0x0000000184D86220-0x0000000184D86230 0x00000001843C1090-0x00000001843C1180
+		internal JsonContract FinalItemContract { get; } // 0x0000000184D85EE0-0x0000000184D85EF0 
+		public JsonConverter ItemConverter { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86210-0x0000000184D86220 0x0000000185391334-0x0000000185391348
+		public bool? ItemIsReference { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA5CE0-0x0000000184DA5CF0 0x0000000184DA5D10-0x0000000184DA5D20
+		public ReferenceLoopHandling? ItemReferenceLoopHandling { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA5CF0-0x0000000184DA5D00 0x0000000184DA5D20-0x0000000184DA5D30
+		public TypeNameHandling? ItemTypeNameHandling { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA5D00-0x0000000184DA5D10 0x0000000184DA5D30-0x0000000184DA5D40
 	
 		// Constructors
-		public JsonContainerContract() {} // Dummy constructor
-		internal JsonContainerContract(System.Type underlyingType) {} // 0x0000000184345BF0-0x0000000184345C90
+		[NullableContext(1)]
+		internal JsonContainerContract(System.Type underlyingType); // 0x00000001835CF090-0x00000001835CF0F0
 	}
 
-	internal enum JsonContractType // TypeDefIndex: 52755
+	internal enum JsonContractType // TypeDefIndex: 55437
 	{
 		None = 0,
 		Object = 1,
@@ -3411,15 +3973,17 @@ namespace Newtonsoft.Json.Serialization
 		Linq = 8
 	}
 
-	public delegate void SerializationCallback(object o, StreamingContext context); // TypeDefIndex: 52756; 0x00000001844DB850-0x00000001844DB880
+	public delegate void SerializationCallback(object o, StreamingContext context); // TypeDefIndex: 55438; 0x0000000183A1B910-0x0000000183A1B940
 
-	public delegate void SerializationErrorCallback(object o, StreamingContext context, ErrorContext errorContext); // TypeDefIndex: 52757; 0x000000018720FD6C-0x000000018720FD98
+	public delegate void SerializationErrorCallback(object o, StreamingContext context, ErrorContext errorContext); // TypeDefIndex: 55439; 0x000000018621CA6C-0x000000018621CA98
 
-	public delegate void ExtensionDataSetter(object o, string key, object value); // TypeDefIndex: 52758; 0x0000000181A578C0-0x0000000181A578E0
+	public delegate void ExtensionDataSetter(object o, string key, [Nullable(2)] object value); // TypeDefIndex: 55440; 0x0000000181546280-0x00000001815462A0
 
-	public delegate IEnumerable<KeyValuePair<object, object>> ExtensionDataGetter(object o); // TypeDefIndex: 52759; 0x00000001817C2F70-0x00000001817C2F80
+	public delegate IEnumerable<KeyValuePair<object, object>> ExtensionDataGetter(object o); // TypeDefIndex: 55441; 0x00000001814E2060-0x00000001814E2070
 
-	public abstract class JsonContract // TypeDefIndex: 52762
+	[Nullable(0)]
+	[NullableContext(1)]
+	public abstract class JsonContract // TypeDefIndex: 55444
 	{
 		// Fields
 		internal bool IsNullable; // 0x10
@@ -3431,233 +3995,303 @@ namespace Newtonsoft.Json.Serialization
 		internal bool IsReadOnlyOrFixedSize; // 0x28
 		internal bool IsSealed; // 0x29
 		internal bool IsInstantiable; // 0x2A
+		[Nullable(new byte[2] {2, 1 })]
 		private List<SerializationCallback> _onDeserializedCallbacks; // 0x30
+		[Nullable(new byte[2] {2, 1 })]
 		private List<SerializationCallback> _onDeserializingCallbacks; // 0x38
+		[Nullable(new byte[2] {2, 1 })]
 		private List<SerializationCallback> _onSerializedCallbacks; // 0x40
+		[Nullable(new byte[2] {2, 1 })]
 		private List<SerializationCallback> _onSerializingCallbacks; // 0x48
+		[Nullable(new byte[2] {2, 1 })]
 		private List<SerializationErrorCallback> _onErrorCallbacks; // 0x50
 		private System.Type _createdType; // 0x58
+		[CompilerGenerated]
 		private readonly System.Type _UnderlyingType_k__BackingField; // 0x60
+		[CompilerGenerated]
 		private bool? _IsReference_k__BackingField; // 0x68
+		[CompilerGenerated]
+		[Nullable(2)]
 		private JsonConverter _Converter_k__BackingField; // 0x70
+		[CompilerGenerated]
+		[Nullable(2)]
 		private JsonConverter _InternalConverter_k__BackingField; // 0x78
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private Func<object> _DefaultCreator_k__BackingField; // 0x80
+		[CompilerGenerated]
 		private bool _DefaultCreatorNonPublic_k__BackingField; // 0x88
 	
 		// Properties
-		public System.Type UnderlyingType { get; } // 0x0000000185FD21A0-0x0000000185FD21B0 
-		public System.Type CreatedType { get; set; } // 0x0000000181460F70-0x0000000181460F80 0x00000001874BE90C-0x00000001874BE91C
-		public bool? IsReference { get; set; } // 0x0000000183060C50-0x0000000183060C60 0x000000018738A324-0x000000018738A334
-		public JsonConverter Converter { get; set; } // 0x00000001850B4DB0-0x00000001850B4E40 0x000000018B3EB1F8-0x000000018B3EB27C
-		public JsonConverter InternalConverter { get; internal set; } // 0x000000018B3EB27C-0x000000018B3EB300 0x00000001850B4D20-0x00000001850B4DB0
-		public IList<SerializationCallback> OnDeserializedCallbacks { get; } // 0x00000001850B5270-0x00000001850B5300 
-		public IList<SerializationCallback> OnDeserializingCallbacks { get; } // 0x000000018140CF50-0x000000018140CF60 
-		public IList<SerializationCallback> OnSerializedCallbacks { get; } // 0x00000001873CBE98-0x00000001873CBEA8 
-		public IList<SerializationCallback> OnSerializingCallbacks { get; } // 0x000000018316BFD0-0x000000018316BFE0 
-		public IList<SerializationErrorCallback> OnErrorCallbacks { get; } // 0x0000000185FB0AB0-0x0000000185FB0AC0 
-		public Func<object> DefaultCreator { get; set; } // 0x00000001843472C0-0x0000000184347420 0x0000000185052000-0x0000000185052110
-		public bool DefaultCreatorNonPublic { get; set; } // 0x00000001850521C0-0x00000001850522D0 0x000000018435E810-0x000000018435E920
+		public System.Type UnderlyingType { [CompilerGenerated] get; } // 0x0000000184D86280-0x0000000184D86290 
+		public System.Type CreatedType { get; set; } // 0x0000000182E56440-0x0000000182E56460 0x00000001835CF820-0x00000001835CF890
+		public bool? IsReference { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA5D40-0x0000000184DA5D50 0x0000000184DA5D50-0x0000000184DA5D60
+		[Nullable(2)]
+		public JsonConverter Converter { [NullableContext(2)] [CompilerGenerated] get; [NullableContext(2)] [CompilerGenerated] set; } // 0x0000000184D862B0-0x0000000184D862C0 0x00000001863AD760-0x00000001863AD770
+		[Nullable(2)]
+		public JsonConverter InternalConverter { [NullableContext(2)] [CompilerGenerated] get; [NullableContext(2)] [CompilerGenerated] internal set; } // 0x0000000184D862A0-0x0000000184D862B0 0x0000000186402320-0x0000000186402330
+		public IList<SerializationCallback> OnDeserializedCallbacks { get; } // 0x000000018484C760-0x000000018484C7F0 
+		public IList<SerializationCallback> OnDeserializingCallbacks { get; } // 0x000000018A8BB9FC-0x000000018A8BBA80 
+		public IList<SerializationCallback> OnSerializedCallbacks { get; } // 0x000000018A8BBA80-0x000000018A8BBB04 
+		public IList<SerializationCallback> OnSerializingCallbacks { get; } // 0x00000001832B56D0-0x00000001832B5730 
+		public IList<SerializationErrorCallback> OnErrorCallbacks { get; } // 0x00000001832B5670-0x00000001832B56D0 
+		[Nullable(new byte[2] {2, 1 })]
+		public Func<object> DefaultCreator { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86260-0x0000000184D86270 0x0000000184CD9970-0x0000000184CD9980
+		public bool DefaultCreatorNonPublic { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811F2750-0x00000001811F2760 0x00000001811F2760-0x00000001811F2770
 	
 		// Nested types
-		private sealed class __c__DisplayClass57_0 // TypeDefIndex: 52760
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass57_0 // TypeDefIndex: 55442
 		{
 			// Fields
+			[Nullable(0)]
 			public MethodInfo callbackMethodInfo; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass57_0() {} // 0x0000000185FB0530-0x0000000185FB0540
+			public __c__DisplayClass57_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _CreateSerializationCallback_b__0(object o, StreamingContext context) {} // 0x00000001813F1630-0x00000001813F1640
+			internal void _CreateSerializationCallback_b__0(object o, StreamingContext context); // 0x0000000183F4D850-0x0000000183F4D950
 		}
 	
-		private sealed class __c__DisplayClass58_0 // TypeDefIndex: 52761
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass58_0 // TypeDefIndex: 55443
 		{
 			// Fields
+			[Nullable(0)]
 			public MethodInfo callbackMethodInfo; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass58_0() {} // 0x0000000184346770-0x0000000184346820
+			public __c__DisplayClass58_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _CreateSerializationErrorCallback_b__0(object o, StreamingContext context, ErrorContext econtext) {} // 0x0000000185FD2190-0x0000000185FD21A0
+			internal void _CreateSerializationErrorCallback_b__0(object o, StreamingContext context, ErrorContext econtext); // 0x000000018A8C225C-0x000000018A8C2350
 		}
 	
 		// Constructors
-		protected JsonContract() {} // Dummy constructor
-		internal JsonContract(System.Type underlyingType) {} // 0x000000018402AD40-0x000000018402AEC0
+		internal JsonContract(System.Type underlyingType); // 0x00000001835D0B60-0x00000001835D0C80
 	
 		// Methods
-		internal void InvokeOnSerializing(object o, StreamingContext context) {} // 0x000000018B3EB098-0x000000018B3EB1F8
-		internal void InvokeOnSerialized(object o, StreamingContext context) {} // 0x00000001857D71B0-0x00000001857D7260
-		internal void InvokeOnDeserializing(object o, StreamingContext context) {} // 0x000000018B3EAFF8-0x000000018B3EB098
-		internal void InvokeOnDeserialized(object o, StreamingContext context) {} // 0x0000000185492010-0x0000000185492020
-		internal void InvokeOnError(object o, StreamingContext context, ErrorContext errorContext) {} // 0x000000018508A8D0-0x000000018508A9A0
-		internal static SerializationCallback CreateSerializationCallback(MethodInfo callbackMethodInfo) => default; // 0x0000000185492010-0x0000000185492020
-		internal static SerializationErrorCallback CreateSerializationErrorCallback(MethodInfo callbackMethodInfo) => default; // 0x000000018B3F3920-0x000000018B3F3A14
+		internal void InvokeOnSerializing(object o, StreamingContext context); // 0x0000000184386DC0-0x0000000184386E80
+		internal void InvokeOnSerialized(object o, StreamingContext context); // 0x0000000184386C90-0x0000000184386D50
+		internal void InvokeOnDeserializing(object o, StreamingContext context); // 0x00000001832B6CF0-0x00000001832B6DB0
+		internal void InvokeOnDeserialized(object o, StreamingContext context); // 0x00000001832B6E30-0x00000001832B6EF0
+		internal void InvokeOnError(object o, StreamingContext context, ErrorContext errorContext); // 0x000000018A8BB89C-0x000000018A8BB9FC
+		internal static SerializationCallback CreateSerializationCallback(MethodInfo callbackMethodInfo); // 0x00000001845D8F40-0x00000001845D8FF0
+		internal static SerializationErrorCallback CreateSerializationErrorCallback(MethodInfo callbackMethodInfo); // 0x000000018A8BB7FC-0x000000018A8BB89C
 	}
 
-	public class JsonDictionaryContract : JsonContainerContract // TypeDefIndex: 52763
+	[Nullable(0)]
+	[NullableContext(2)]
+	public class JsonDictionaryContract : JsonContainerContract // TypeDefIndex: 55445
 	{
 		// Fields
+		[CompilerGenerated]
+		[Nullable(new byte[3] {2, 1, 1 })]
 		private Func<string, string> _DictionaryKeyResolver_k__BackingField; // 0xC0
+		[CompilerGenerated]
 		private readonly System.Type _DictionaryKeyType_k__BackingField; // 0xC8
+		[CompilerGenerated]
 		private readonly System.Type _DictionaryValueType_k__BackingField; // 0xD0
+		[CompilerGenerated]
 		private JsonContract _KeyContract_k__BackingField; // 0xD8
 		private readonly System.Type _genericCollectionDefinitionType; // 0xE0
 		private System.Type _genericWrapperType; // 0xE8
+		[Nullable(new byte[2] {2, 1 })]
 		private ObjectConstructor<object> _genericWrapperCreator; // 0xF0
+		[Nullable(new byte[2] {2, 1 })]
 		private Func<object> _genericTemporaryDictionaryCreator; // 0xF8
+		[CompilerGenerated]
 		private readonly bool _ShouldCreateWrapper_k__BackingField; // 0x100
 		private readonly ConstructorInfo _parameterizedConstructor; // 0x108
+		[Nullable(new byte[2] {2, 1 })]
 		private ObjectConstructor<object> _overrideCreator; // 0x110
+		[Nullable(new byte[2] {2, 1 })]
 		private ObjectConstructor<object> _parameterizedCreator; // 0x118
+		[CompilerGenerated]
 		private bool _HasParameterizedCreator_k__BackingField; // 0x120
 	
 		// Properties
-		public Func<string, string> DictionaryKeyResolver { get; set; } // 0x0000000181B388F0-0x0000000181B38900 0x0000000187A47C1C-0x0000000187A47C30
-		public System.Type DictionaryKeyType { get; } // 0x0000000185FB0300-0x0000000185FB0310 
-		public System.Type DictionaryValueType { get; } // 0x0000000185FB15A0-0x0000000185FB15B0 
-		internal JsonContract KeyContract { get; set; } // 0x0000000185FB02F0-0x0000000185FB0300 0x00000001873368EC-0x0000000187336900
-		internal bool ShouldCreateWrapper { get; } // 0x0000000181ABEDC0-0x0000000181ABEDD0 
-		internal ObjectConstructor<object> ParameterizedCreator { get => default; } // 0x000000018B3EB71C-0x000000018B3EB7D4 
-		public ObjectConstructor<object> OverrideCreator { get => default; set {} } // 0x0000000185FB8600-0x0000000185FB8610 0x00000001864735E0-0x00000001864735F4
-		public bool HasParameterizedCreator { get; set; } // 0x0000000185FB9310-0x0000000185FB9320 0x0000000185FD21B0-0x0000000185FD21C0
-		internal bool HasParameterizedCreatorInternal { get => default; } // 0x0000000184BBA6D0-0x0000000184BBA750 
+		[Nullable(new byte[3] {2, 1, 1 })]
+		public Func<string, string> DictionaryKeyResolver { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D892F0-0x0000000184D89300 0x0000000186AC5ACC-0x0000000186AC5AE0
+		public System.Type DictionaryKeyType { [CompilerGenerated] get; } // 0x0000000184D8D1D0-0x0000000184D8D1E0 
+		public System.Type DictionaryValueType { [CompilerGenerated] get; } // 0x0000000184D876B0-0x0000000184D876C0 
+		internal JsonContract KeyContract { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D88EF0-0x0000000184D88F00 0x0000000186902698-0x00000001869026AC
+		internal bool ShouldCreateWrapper { [CompilerGenerated] get; } // 0x0000000184DA5D60-0x0000000184DA5D70 
+		[Nullable(new byte[2] {2, 1 })]
+		internal ObjectConstructor<object> ParameterizedCreator { get; } // 0x000000018A8BBF20-0x000000018A8BBFD8 
+		[Nullable(new byte[2] {2, 1 })]
+		public ObjectConstructor<object> OverrideCreator { get; set; } // 0x0000000184D8D1B0-0x0000000184D8D1C0 0x0000000185397170-0x0000000185397184
+		public bool HasParameterizedCreator { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8FE70-0x0000000184D8FE80 0x0000000184D8FEA0-0x0000000184D8FEB0
+		internal bool HasParameterizedCreatorInternal { get; } // 0x00000001844FE340-0x00000001844FE3C0 
 	
 		// Constructors
-		public JsonDictionaryContract() {} // Dummy constructor
-		public JsonDictionaryContract(System.Type underlyingType) {} // 0x0000000184BB9C30-0x0000000184BBA280
+		[NullableContext(1)]
+		public JsonDictionaryContract(System.Type underlyingType); // 0x0000000183897F20-0x0000000183898570
 	
 		// Methods
-		internal IWrappedDictionary CreateWrapper(object dictionary) => default; // 0x000000018B3EB4DC-0x000000018B3EB71C
-		internal IDictionary CreateTemporaryDictionary() => default; // 0x000000018B3EB300-0x000000018B3EB4DC
+		[NullableContext(1)]
+		internal IWrappedDictionary CreateWrapper(object dictionary); // 0x000000018A8BBCE0-0x000000018A8BBF20
+		[NullableContext(1)]
+		internal IDictionary CreateTemporaryDictionary(); // 0x000000018A8BBB04-0x000000018A8BBCE0
 	}
 
-	public class JsonDynamicContract : JsonContainerContract // TypeDefIndex: 52764
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JsonDynamicContract : JsonContainerContract // TypeDefIndex: 55446
 	{
 		// Fields
+		[CompilerGenerated]
 		private readonly JsonPropertyCollection _Properties_k__BackingField; // 0xC0
+		[CompilerGenerated]
+		[Nullable(new byte[3] {2, 1, 1 })]
 		private Func<string, string> _PropertyNameResolver_k__BackingField; // 0xC8
 		private readonly ThreadSafeStore<string, CallSite<Func<CallSite, object, object>>> _callSiteGetters; // 0xD0
+		[Nullable(new byte[8] {1, 1, 1, 1, 1, 1, 2, 1 })]
 		private readonly ThreadSafeStore<string, CallSite<Func<CallSite, object, object, object>>> _callSiteSetters; // 0xD8
 	
 		// Properties
-		public JsonPropertyCollection Properties { get; } // 0x0000000181B388F0-0x0000000181B38900 
-		public Func<string, string> PropertyNameResolver { get; set; } // 0x0000000185FB0300-0x0000000185FB0310 0x0000000187A47C30-0x0000000187A47C44
+		public JsonPropertyCollection Properties { [CompilerGenerated] get; } // 0x0000000184D892F0-0x0000000184D89300 
+		[Nullable(new byte[3] {2, 1, 1 })]
+		public Func<string, string> PropertyNameResolver { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8D1D0-0x0000000184D8D1E0 0x0000000186AC5B30-0x0000000186AC5B44
 	
 		// Constructors
-		public JsonDynamicContract() {} // Dummy constructor
-		public JsonDynamicContract(System.Type underlyingType) {} // 0x000000018B3EBBDC-0x000000018B3EBDAC
+		public JsonDynamicContract(System.Type underlyingType); // 0x000000018A8BC3E0-0x000000018A8BC5B0
 	
 		// Methods
-		private static CallSite<Func<CallSite, object, object>> CreateCallSiteGetter(string name) => default; // 0x000000018B3EB7D4-0x000000018B3EB8AC
-		private static CallSite<Func<CallSite, object, object, object>> CreateCallSiteSetter(string name) => default; // 0x000000018B3EB8AC-0x000000018B3EB984
-		internal bool TryGetMember(IDynamicMetaObjectProvider dynamicProvider, string name, out object value) {
-			value = default;
-			return default;
-		} // 0x000000018B3EB984-0x000000018B3EBAB8
-		internal bool TrySetMember(IDynamicMetaObjectProvider dynamicProvider, string name, object value) => default; // 0x000000018B3EBAB8-0x000000018B3EBBDC
+		private static CallSite<Func<CallSite, object, object>> CreateCallSiteGetter(string name); // 0x000000018A8BBFD8-0x000000018A8BC0B0
+		private static CallSite<Func<CallSite, object, object, object>> CreateCallSiteSetter(string name); // 0x000000018A8BC0B0-0x000000018A8BC188
+		internal bool TryGetMember(IDynamicMetaObjectProvider dynamicProvider, string name, [Nullable(2)] out object value); // 0x000000018A8BC188-0x000000018A8BC2BC
+		internal bool TrySetMember(IDynamicMetaObjectProvider dynamicProvider, string name, [Nullable(2)] object value); // 0x000000018A8BC2BC-0x000000018A8BC3E0
 	}
 
-	internal class JsonFormatterConverter : IFormatterConverter // TypeDefIndex: 52765
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class JsonFormatterConverter : IFormatterConverter // TypeDefIndex: 55447
 	{
 		// Fields
 		private readonly JsonSerializerInternalReader _reader; // 0x10
 		private readonly JsonISerializableContract _contract; // 0x18
+		[Nullable(2)]
 		private readonly JsonProperty _member; // 0x20
 	
 		// Constructors
-		public JsonFormatterConverter() {} // Dummy constructor
-		public JsonFormatterConverter(JsonSerializerInternalReader reader, JsonISerializableContract contract, JsonProperty member) {} // 0x000000018B3EC058-0x000000018B3EC180
+		public JsonFormatterConverter(JsonSerializerInternalReader reader, JsonISerializableContract contract, [Nullable(2)] JsonProperty member); // 0x000000018A8BC85C-0x000000018A8BC984
 	
 		// Methods
-		private T GetTokenValue<T>(object value) => default;
-		public object Convert(object value, System.Type type) => default; // 0x000000018B3EBDAC-0x000000018B3EBEF0
-		public bool ToBoolean(object value) => default; // 0x000000018B3EBEF0-0x000000018B3EBF38
-		public int ToInt32(object value) => default; // 0x000000018B3EBF38-0x000000018B3EBF80
-		public long ToInt64(object value) => default; // 0x000000018B3EBF80-0x000000018B3EBFC8
-		public float ToSingle(object value) => default; // 0x000000018B3EBFC8-0x000000018B3EC010
-		public string ToString(object value) => default; // 0x000000018B3EC010-0x000000018B3EC058
+		private T GetTokenValue<T>(object value);
+		public object Convert(object value, System.Type type); // 0x000000018A8BC5B0-0x000000018A8BC6F4
+		public bool ToBoolean(object value); // 0x000000018A8BC6F4-0x000000018A8BC73C
+		public int ToInt32(object value); // 0x000000018A8BC73C-0x000000018A8BC784
+		public long ToInt64(object value); // 0x000000018A8BC784-0x000000018A8BC7CC
+		public float ToSingle(object value); // 0x000000018A8BC7CC-0x000000018A8BC814
+		public string ToString(object value); // 0x000000018A8BC814-0x000000018A8BC85C
 	}
 
-	public class JsonISerializableContract : JsonContainerContract // TypeDefIndex: 52766
+	public class JsonISerializableContract : JsonContainerContract // TypeDefIndex: 55448
 	{
 		// Fields
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private ObjectConstructor<object> _ISerializableCreator_k__BackingField; // 0xC0
 	
 		// Properties
-		public ObjectConstructor<object> ISerializableCreator { get; set; } // 0x0000000181B388F0-0x0000000181B38900 0x0000000187A47C1C-0x0000000187A47C30
+		[Nullable(new byte[2] {2, 1 })]
+		public ObjectConstructor<object> ISerializableCreator { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D892F0-0x0000000184D89300 0x0000000186AC5ACC-0x0000000186AC5AE0
 	
 		// Constructors
-		public JsonISerializableContract() {} // Dummy constructor
-		public JsonISerializableContract(System.Type underlyingType) {} // 0x000000018B3EC180-0x000000018B3EC1A0
+		[NullableContext(1)]
+		public JsonISerializableContract(System.Type underlyingType); // 0x000000018A8BC984-0x000000018A8BC9A4
 	}
 
-	public class JsonLinqContract : JsonContract // TypeDefIndex: 52767
+	public class JsonLinqContract : JsonContract // TypeDefIndex: 55449
 	{
 		// Constructors
-		public JsonLinqContract() {} // Dummy constructor
-		public JsonLinqContract(System.Type underlyingType) {} // 0x00000001864753CC-0x00000001864753EC
+		[NullableContext(1)]
+		public JsonLinqContract(System.Type underlyingType); // 0x000000018539821C-0x000000018539823C
 	}
 
-	public class JsonObjectContract : JsonContainerContract // TypeDefIndex: 52768
+	[Nullable(0)]
+	[NullableContext(2)]
+	public class JsonObjectContract : JsonContainerContract // TypeDefIndex: 55450
 	{
 		// Fields
+		[CompilerGenerated]
 		private MemberSerialization _MemberSerialization_k__BackingField; // 0xC0
+		[CompilerGenerated]
 		private MissingMemberHandling? _MissingMemberHandling_k__BackingField; // 0xC4
+		[CompilerGenerated]
 		private Required? _ItemRequired_k__BackingField; // 0xCC
+		[CompilerGenerated]
 		private NullValueHandling? _ItemNullValueHandling_k__BackingField; // 0xD4
+		[CompilerGenerated]
+		[Nullable(1)]
 		private readonly JsonPropertyCollection _Properties_k__BackingField; // 0xE0
+		[CompilerGenerated]
 		private ExtensionDataSetter _ExtensionDataSetter_k__BackingField; // 0xE8
+		[CompilerGenerated]
 		private ExtensionDataGetter _ExtensionDataGetter_k__BackingField; // 0xF0
+		[CompilerGenerated]
+		[Nullable(new byte[3] {2, 1, 1 })]
 		private Func<string, string> _ExtensionDataNameResolver_k__BackingField; // 0xF8
 		internal bool ExtensionDataIsJToken; // 0x100
 		private bool? _hasRequiredOrDefaultValueProperties; // 0x101
+		[Nullable(new byte[2] {2, 1 })]
 		private ObjectConstructor<object> _overrideCreator; // 0x108
+		[Nullable(new byte[2] {2, 1 })]
 		private ObjectConstructor<object> _parameterizedCreator; // 0x110
 		private JsonPropertyCollection _creatorParameters; // 0x118
 		private System.Type _extensionDataValueType; // 0x120
 	
 		// Properties
-		public MemberSerialization MemberSerialization { get; set; } // 0x0000000185FBE0C0-0x0000000185FBE0D0 0x0000000185FD2210-0x0000000185FD2220
-		public MissingMemberHandling? MissingMemberHandling { get; set; } // 0x0000000185FD21E0-0x0000000185FD21F0 0x0000000185FCA130-0x0000000185FCA140
-		public Required? ItemRequired { get; set; } // 0x0000000185FD21D0-0x0000000185FD21E0 0x0000000185FD2200-0x0000000185FD2210
-		public NullValueHandling? ItemNullValueHandling { get; set; } // 0x0000000185FD21C0-0x0000000185FD21D0 0x0000000185FD21F0-0x0000000185FD2200
-		public JsonPropertyCollection Properties { get; } // 0x0000000185FB25D0-0x0000000185FB25E0 
-		public JsonPropertyCollection CreatorParameters { get => default; } // 0x0000000185F52150-0x0000000185F521E0 
-		public ObjectConstructor<object> OverrideCreator { get => default; set {} } // 0x0000000181ABEDF0-0x0000000181ABEE00 0x0000000187A474C4-0x0000000187A474D8
-		internal ObjectConstructor<object> ParameterizedCreator { get => default; set {} } // 0x0000000185FB8600-0x0000000185FB8610 0x00000001864735E0-0x00000001864735F4
-		public ExtensionDataSetter ExtensionDataSetter { get; set; } // 0x0000000185FB2360-0x0000000185FB2370 0x0000000187A47730-0x0000000187A47744
-		public ExtensionDataGetter ExtensionDataGetter { get; set; } // 0x0000000185FB87A0-0x0000000185FB87B0 0x0000000187A47A14-0x0000000187A47A28
-		public System.Type ExtensionDataValueType { set {} } // 0x000000018B3EC29C-0x000000018B3EC35C
-		public Func<string, string> ExtensionDataNameResolver { get; set; } // 0x0000000185FB16B0-0x0000000185FB16C0 0x000000018774E878-0x000000018774E88C
-		internal bool HasRequiredOrDefaultValueProperties { get => default; } // 0x0000000184B18930-0x0000000184B18EE0 
+		public MemberSerialization MemberSerialization { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA4B70-0x0000000184DA4B80 0x0000000184DA5DC0-0x0000000184DA5DD0
+		public MissingMemberHandling? MissingMemberHandling { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA5D90-0x0000000184DA5DA0 0x0000000184D9E430-0x0000000184D9E440
+		public Required? ItemRequired { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA5D80-0x0000000184DA5D90 0x0000000184DA5DB0-0x0000000184DA5DC0
+		public NullValueHandling? ItemNullValueHandling { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA5D70-0x0000000184DA5D80 0x0000000184DA5DA0-0x0000000184DA5DB0
+		[Nullable(1)]
+		public JsonPropertyCollection Properties { [NullableContext(1)] [CompilerGenerated] get; } // 0x0000000184D8D1C0-0x0000000184D8D1D0 
+		[Nullable(1)]
+		public JsonPropertyCollection CreatorParameters { [NullableContext(1)] get; } // 0x0000000183B2CBA0-0x0000000183B2CC20 
+		[Nullable(new byte[2] {2, 1 })]
+		public ObjectConstructor<object> OverrideCreator { get; set; } // 0x0000000184D85F90-0x0000000184D85FA0 0x00000001868C2E50-0x00000001868C2E64
+		[Nullable(new byte[2] {2, 1 })]
+		internal ObjectConstructor<object> ParameterizedCreator { get; set; } // 0x0000000184D8D1B0-0x0000000184D8D1C0 0x0000000185397170-0x0000000185397184
+		public ExtensionDataSetter ExtensionDataSetter { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D88590-0x0000000184D885A0 0x0000000186AC5B1C-0x0000000186AC5B30
+		public ExtensionDataGetter ExtensionDataGetter { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8D1A0-0x0000000184D8D1B0 0x0000000186AC5AE0-0x0000000186AC5AF4
+		public System.Type ExtensionDataValueType { set; } // 0x000000018A8BCAA0-0x000000018A8BCB60
+		[Nullable(new byte[3] {2, 1, 1 })]
+		public Func<string, string> ExtensionDataNameResolver { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D877C0-0x0000000184D877D0 0x0000000186790298-0x00000001867902AC
+		internal bool HasRequiredOrDefaultValueProperties { get; } // 0x0000000183B2C340-0x0000000183B2C5A0 
 	
 		// Constructors
-		public JsonObjectContract() {} // Dummy constructor
-		public JsonObjectContract(System.Type underlyingType) {} // 0x0000000184345880-0x0000000184345920
+		[NullableContext(1)]
+		public JsonObjectContract(System.Type underlyingType); // 0x00000001835CECF0-0x00000001835CED60
 	
 		// Methods
-		internal object GetUninitializedObject() => default; // 0x000000018B3EC1A0-0x000000018B3EC29C
+		[NullableContext(1)]
+		internal object GetUninitializedObject(); // 0x000000018A8BC9A4-0x000000018A8BCAA0
 	}
 
-	public class JsonPrimitiveContract : JsonContract // TypeDefIndex: 52769
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class JsonPrimitiveContract : JsonContract // TypeDefIndex: 55451
 	{
 		// Fields
+		[CompilerGenerated]
 		private PrimitiveTypeCode _TypeCode_k__BackingField; // 0x90
 		private static readonly Dictionary<System.Type, ReadType> ReadTypeMap; // 0x00
 	
 		// Properties
-		internal PrimitiveTypeCode TypeCode { get; set; } // 0x00000001834A0D50-0x00000001834A0D60 0x00000001834A2260-0x00000001834A2270
+		internal PrimitiveTypeCode TypeCode { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86B60-0x0000000184D86B70 0x0000000184D86BC0-0x0000000184D86BD0
 	
 		// Constructors
-		public JsonPrimitiveContract() {} // Dummy constructor
-		public JsonPrimitiveContract(System.Type underlyingType) {} // 0x000000018541AB30-0x000000018541AC40
-		static JsonPrimitiveContract() {} // 0x00000001859F3450-0x00000001859F3780
+		public JsonPrimitiveContract(System.Type underlyingType); // 0x00000001835CDE60-0x00000001835CDF20
+		static JsonPrimitiveContract(); // 0x0000000184825860-0x0000000184825B90
 	}
 
-	public class JsonProperty // TypeDefIndex: 52770
+	[Nullable(0)]
+	[NullableContext(2)]
+	public class JsonProperty // TypeDefIndex: 55452
 	{
 		// Fields
 		internal Required? _required; // 0x10
@@ -3667,140 +4301,188 @@ namespace Newtonsoft.Json.Serialization
 		private string _propertyName; // 0x30
 		internal bool _skipPropertyNameEscape; // 0x38
 		private System.Type _propertyType; // 0x40
+		[CompilerGenerated]
 		private JsonContract _PropertyContract_k__BackingField; // 0x48
+		[CompilerGenerated]
 		private System.Type _DeclaringType_k__BackingField; // 0x50
+		[CompilerGenerated]
 		private int? _Order_k__BackingField; // 0x58
+		[CompilerGenerated]
 		private string _UnderlyingName_k__BackingField; // 0x60
+		[CompilerGenerated]
 		private IValueProvider _ValueProvider_k__BackingField; // 0x68
+		[CompilerGenerated]
 		private IAttributeProvider _AttributeProvider_k__BackingField; // 0x70
+		[CompilerGenerated]
 		private JsonConverter _Converter_k__BackingField; // 0x78
+		[CompilerGenerated]
 		private bool _Ignored_k__BackingField; // 0x80
+		[CompilerGenerated]
 		private bool _Readable_k__BackingField; // 0x81
+		[CompilerGenerated]
 		private bool _Writable_k__BackingField; // 0x82
+		[CompilerGenerated]
 		private bool _HasMemberAttribute_k__BackingField; // 0x83
+		[CompilerGenerated]
 		private bool? _IsReference_k__BackingField; // 0x84
+		[CompilerGenerated]
 		private NullValueHandling? _NullValueHandling_k__BackingField; // 0x88
+		[CompilerGenerated]
 		private DefaultValueHandling? _DefaultValueHandling_k__BackingField; // 0x90
+		[CompilerGenerated]
 		private ReferenceLoopHandling? _ReferenceLoopHandling_k__BackingField; // 0x98
+		[CompilerGenerated]
 		private ObjectCreationHandling? _ObjectCreationHandling_k__BackingField; // 0xA0
+		[CompilerGenerated]
 		private TypeNameHandling? _TypeNameHandling_k__BackingField; // 0xA8
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private Predicate<object> _ShouldSerialize_k__BackingField; // 0xB0
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private Predicate<object> _ShouldDeserialize_k__BackingField; // 0xB8
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private Predicate<object> _GetIsSpecified_k__BackingField; // 0xC0
+		[CompilerGenerated]
+		[Nullable(new byte[3] {2, 1, 2 })]
 		private Action<object, object> _SetIsSpecified_k__BackingField; // 0xC8
+		[CompilerGenerated]
 		private JsonConverter _ItemConverter_k__BackingField; // 0xD0
+		[CompilerGenerated]
 		private bool? _ItemIsReference_k__BackingField; // 0xD8
+		[CompilerGenerated]
 		private TypeNameHandling? _ItemTypeNameHandling_k__BackingField; // 0xDC
+		[CompilerGenerated]
 		private ReferenceLoopHandling? _ItemReferenceLoopHandling_k__BackingField; // 0xE4
 	
 		// Properties
-		internal JsonContract PropertyContract { get; set; } // 0x00000001813ECF20-0x00000001813ECF30 0x000000018571FEC0-0x000000018571FED0
-		public string PropertyName { get => default; set {} } // 0x00000001813B51D0-0x00000001813B51E0 0x000000018407F1A0-0x000000018407F280
-		public System.Type DeclaringType { get; set; } // 0x0000000181460F60-0x0000000181460F70 0x0000000184A4E570-0x0000000184A4E580
-		public int? Order { get; set; } // 0x00000001813F1630-0x00000001813F1640 0x0000000185FB0960-0x0000000185FB0970
-		public string UnderlyingName { get; set; } // 0x0000000185FB0530-0x0000000185FB0540 0x0000000185AE8FE0-0x0000000185AE8FF0
-		public IValueProvider ValueProvider { get; set; } // 0x00000001813AC280-0x00000001813AC290 0x0000000185A62990-0x0000000185A629A0
-		public IAttributeProvider AttributeProvider { get; set; } // 0x00000001874BE90C-0x00000001874BE91C
-		public System.Type PropertyType { get => default; set {} } // 0x00000001813FF010-0x00000001813FF020 0x000000018407FEE0-0x000000018407FF60
-		public JsonConverter Converter { get; set; } // 0x0000000183060C50-0x0000000183060C60 0x000000018738A324-0x000000018738A334
-		public bool Ignored { get; set; } // 0x0000000181EFFA30-0x0000000181EFFA40 0x0000000181F01410-0x0000000181F01420
-		public bool Readable { get; set; } // 0x0000000185FBBA50-0x0000000185FBBA60 0x0000000185FBBA60-0x0000000185FBBA70
-		public bool Writable { get; set; } // 0x0000000185FCCE80-0x0000000185FCCE90 0x0000000185FD22A0-0x0000000185FD22B0
-		public bool HasMemberAttribute { get; set; } // 0x0000000185FD2240-0x0000000185FD2250 0x0000000185FD2280-0x0000000185FD2290
-		public object DefaultValue { get => default; set {} } // 0x000000018B3EC3A4-0x000000018B3EC3B4 0x000000018B3EC3B4-0x000000018B3EC3C8
-		public Required Required { get => default; } // 0x0000000184B18EE0-0x0000000184B18F20 
-		public bool? IsReference { get; set; } // 0x0000000185FC8CB0-0x0000000185FC8CC0 0x0000000185FC8CC0-0x0000000185FC8CD0
-		public NullValueHandling? NullValueHandling { get; set; } // 0x0000000185FB0510-0x0000000185FB0520 0x0000000185FB02A0-0x0000000185FB02B0
-		public DefaultValueHandling? DefaultValueHandling { get; set; } // 0x0000000181B5FFD0-0x0000000181B5FFE0 0x0000000185FBF0A0-0x0000000185FBF0B0
-		public ReferenceLoopHandling? ReferenceLoopHandling { get; set; } // 0x0000000181E336C0-0x0000000181E336D0 0x0000000185FB23D0-0x0000000185FB23E0
-		public ObjectCreationHandling? ObjectCreationHandling { get; set; } // 0x0000000185FB0520-0x0000000185FB0530 0x0000000185FBEC00-0x0000000185FBEC10
-		public TypeNameHandling? TypeNameHandling { get; set; } // 0x000000018349D730-0x000000018349D740 0x0000000185FB0550-0x0000000185FB0560
-		public Predicate<object> ShouldSerialize { get; set; } // 0x000000018346D8F0-0x000000018346D900 0x0000000184784C70-0x0000000184784C90
-		public Predicate<object> ShouldDeserialize { get; } // 0x000000018349D710-0x000000018349D720 
-		public Predicate<object> GetIsSpecified { get; set; } // 0x0000000181B388F0-0x0000000181B38900 0x0000000187A47C1C-0x0000000187A47C30
-		public Action<object, object> SetIsSpecified { get; set; } // 0x0000000185FB0300-0x0000000185FB0310 0x0000000187A47C30-0x0000000187A47C44
-		public JsonConverter ItemConverter { get; set; } // 0x0000000185FB15A0-0x0000000185FB15B0 0x000000018774BD78-0x000000018774BD8C
-		public bool? ItemIsReference { get; set; } // 0x0000000185FD2250-0x0000000185FD2260 0x0000000185FD2290-0x0000000185FD22A0
-		public TypeNameHandling? ItemTypeNameHandling { get; set; } // 0x0000000185FD2270-0x0000000185FD2280 0x0000000185FC9D90-0x0000000185FC9DA0
-		public ReferenceLoopHandling? ItemReferenceLoopHandling { get; set; } // 0x0000000185FD2260-0x0000000185FD2270 0x0000000185FC9D80-0x0000000185FC9D90
+		internal JsonContract PropertyContract { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
+		public string PropertyName { get; set; } // 0x00000001811F36E0-0x00000001811F36F0 0x00000001832B4000-0x00000001832B40C0
+		public System.Type DeclaringType { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
+		public int? Order { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182E56440-0x0000000182E56460 0x0000000184D86A60-0x0000000184D86A70
+		public string UnderlyingName { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86280-0x0000000184D86290 0x00000001863CC164-0x00000001863CC174
+		public IValueProvider ValueProvider { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86230-0x0000000184D86240 0x000000018485F170-0x000000018485F180
+		public IAttributeProvider AttributeProvider { [CompilerGenerated] set; } // 0x00000001863AD760-0x00000001863AD770
+		public System.Type PropertyType { get; set; } // 0x0000000184D85A60-0x0000000184D85A70 0x000000018321FFC0-0x0000000183220020
+		public JsonConverter Converter { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D862A0-0x0000000184D862B0 0x0000000186402320-0x0000000186402330
+		public bool Ignored { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8D1F0-0x0000000184D8D200 0x0000000184D8D200-0x0000000184D8D210
+		public bool Readable { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8FEE0-0x0000000184D8FEF0 0x0000000184D8FEF0-0x0000000184D8FF00
+		public bool Writable { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA5E30-0x0000000184DA5E40 0x0000000184DA5E60-0x0000000184DA5E70
+		public bool HasMemberAttribute { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA5DF0-0x0000000184DA5E00 0x0000000184DA5E40-0x0000000184DA5E50
+		public object DefaultValue { get; set; } // 0x000000018A8BCBA8-0x000000018A8BCBB8 0x000000018A8BCBB8-0x000000018A8BCBCC
+		public Required Required { get; } // 0x0000000184D882A0-0x0000000184D882B0 
+		public bool? IsReference { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D9CCF0-0x0000000184D9CD00 0x0000000184D9CD00-0x0000000184D9CD10
+		public NullValueHandling? NullValueHandling { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D861F0-0x0000000184D86200 0x0000000184D85ED0-0x0000000184D85EE0
+		public DefaultValueHandling? DefaultValueHandling { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86220-0x0000000184D86230 0x0000000184D92A70-0x0000000184D92A80
+		public ReferenceLoopHandling? ReferenceLoopHandling { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D85EE0-0x0000000184D85EF0 0x0000000184D92710-0x0000000184D92720
+		public ObjectCreationHandling? ObjectCreationHandling { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86210-0x0000000184D86220 0x0000000184D927B0-0x0000000184D927C0
+		public TypeNameHandling? TypeNameHandling { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86290-0x0000000184D862A0 0x0000000184D862F0-0x0000000184D86300
+		[Nullable(new byte[2] {2, 1 })]
+		public Predicate<object> ShouldSerialize { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86250-0x0000000184D86260 0x0000000184D84CE0-0x0000000184D84D00
+		[Nullable(new byte[2] {2, 1 })]
+		public Predicate<object> ShouldDeserialize { [CompilerGenerated] get; } // 0x0000000184D85EF0-0x0000000184D85F00 
+		[Nullable(new byte[2] {2, 1 })]
+		public Predicate<object> GetIsSpecified { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D892F0-0x0000000184D89300 0x0000000186AC5ACC-0x0000000186AC5AE0
+		[Nullable(new byte[3] {2, 1, 2 })]
+		public Action<object, object> SetIsSpecified { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8D1D0-0x0000000184D8D1E0 0x0000000186AC5B30-0x0000000186AC5B44
+		public JsonConverter ItemConverter { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D876B0-0x0000000184D876C0 0x000000018678D7BC-0x000000018678D7D0
+		public bool? ItemIsReference { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA5E00-0x0000000184DA5E10 0x0000000184DA5E50-0x0000000184DA5E60
+		public TypeNameHandling? ItemTypeNameHandling { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA5E20-0x0000000184DA5E30 0x0000000184D9E050-0x0000000184D9E060
+		public ReferenceLoopHandling? ItemReferenceLoopHandling { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DA5E10-0x0000000184DA5E20 0x0000000184D9E040-0x0000000184D9E050
 	
 		// Constructors
-		public JsonProperty() {} // 0x0000000185492010-0x0000000185492020
+		public JsonProperty(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		internal object GetResolvedDefaultValue() => default; // 0x0000000184C741A0-0x0000000184C74220
-		public override string ToString() => default; // 0x000000018B3EC35C-0x000000018B3EC3A4
-		internal void WritePropertyName(JsonWriter writer) {} // 0x0000000185053840-0x0000000185053870
+		internal object GetResolvedDefaultValue(); // 0x0000000182FBEF90-0x0000000182FBEFE0
+		[NullableContext(1)]
+		public override string ToString(); // 0x000000018A8BCB60-0x000000018A8BCBA8
+		[NullableContext(1)]
+		internal void WritePropertyName(JsonWriter writer); // 0x000000018377CE50-0x000000018377CE90
 	}
 
-	public class JsonPropertyCollection : KeyedCollection<string, JsonProperty> // TypeDefIndex: 52771
+	[Nullable(new byte[3] {0, 1, 1 })]
+	[NullableContext(1)]
+	public class JsonPropertyCollection : KeyedCollection<string, JsonProperty> // TypeDefIndex: 55453
 	{
 		// Fields
 		private readonly System.Type _type; // 0x30
 		private readonly List<JsonProperty> _list; // 0x38
 	
 		// Constructors
-		public JsonPropertyCollection() {} // Dummy constructor
-		public JsonPropertyCollection(System.Type type) {} // 0x0000000184345650-0x00000001843457A0
+		public JsonPropertyCollection(System.Type type); // 0x00000001835CE5A0-0x00000001835CE690
 	
 		// Methods
-		protected override string GetKeyForItem(JsonProperty item) => default; // 0x0000000185FD2220-0x0000000185FD2240
-		public void AddProperty(JsonProperty property) {} // 0x000000018407FB90-0x000000018407FC60
-		public JsonProperty GetClosestMatchProperty(string propertyName) => default; // 0x00000001845890F0-0x0000000184589330
-		private bool TryGetProperty(string key, out JsonProperty item) {
-			item = default;
-			return default;
-		} // 0x0000000184589610-0x0000000184589820
-		public JsonProperty GetProperty(string propertyName, StringComparison comparisonType) => default; // 0x0000000184589330-0x0000000184589610
+		protected override string GetKeyForItem(JsonProperty item); // 0x0000000184DA5DD0-0x0000000184DA5DF0
+		public void AddProperty(JsonProperty property); // 0x00000001832B3F40-0x00000001832B4000
+		public JsonProperty GetClosestMatchProperty(string propertyName); // 0x0000000182FB6580-0x0000000182FB67E0
+		private bool TryGetProperty(string key, [Nullable(2)] [NotNullWhen(true)] out JsonProperty item); // 0x0000000182FB6D30-0x0000000182FB6F20
+		public JsonProperty GetProperty(string propertyName, StringComparison comparisonType); // 0x0000000182FB67E0-0x0000000182FB6D30
 	}
 
-	internal abstract class JsonSerializerInternalBase // TypeDefIndex: 52773
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal abstract class JsonSerializerInternalBase // TypeDefIndex: 55455
 	{
 		// Fields
+		[Nullable(2)]
 		private ErrorContext _currentErrorContext; // 0x10
+		[Nullable(new byte[3] {2, 1, 1 })]
 		private BidirectionalDictionary<string, object> _mappings; // 0x18
 		internal readonly JsonSerializer Serializer; // 0x20
+		[Nullable(2)]
 		internal readonly ITraceWriter TraceWriter; // 0x28
+		[Nullable(2)]
 		protected JsonSerializerProxy InternalSerializer; // 0x30
 	
 		// Properties
-		internal BidirectionalDictionary<string, object> DefaultReferenceMappings { get; } // 0x000000018B3EC3C8-0x000000018B3EC43C 
+		internal BidirectionalDictionary<string, object> DefaultReferenceMappings { get; } // 0x000000018A8BD0A4-0x000000018A8BD1AC 
 	
 		// Nested types
-		private class ReferenceEqualsEqualityComparer : IEqualityComparer<object> // TypeDefIndex: 52772
+		[NullableContext(0)]
+		private class ReferenceEqualsEqualityComparer : IEqualityComparer<object> // TypeDefIndex: 55454
 		{
 			// Constructors
-			public ReferenceEqualsEqualityComparer() {} // 0x000000018B3EC814-0x000000018B3EC8A0
+			public ReferenceEqualsEqualityComparer(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			bool IEqualityComparer<object>.Equals(object x, object y) => default; // 0x00000001850B8380-0x00000001850B83F0
-			int IEqualityComparer<object>.GetHashCode(object obj) => default; // 0x000000018B3EC8A0-0x000000018B3EC9A8
+			[NullableContext(2)]
+			bool IEqualityComparer<object>.Equals(object x, object y); // 0x000000018829C278-0x000000018829C280
+			[NullableContext(1)]
+			int IEqualityComparer<object>.GetHashCode(object obj); // 0x0000000184DA3AC0-0x0000000184DA3AD0
 		}
 	
 		// Constructors
-		protected JsonSerializerInternalBase() {} // Dummy constructor
-		protected JsonSerializerInternalBase(JsonSerializer serializer) {} // 0x000000018B3EC43C-0x000000018B3EC548
+		protected JsonSerializerInternalBase(JsonSerializer serializer); // 0x0000000183F720B0-0x0000000183F72100
 	
 		// Methods
-		protected NullValueHandling ResolvedNullValueHandling(JsonObjectContract containerContract, JsonProperty property) => default; // 0x000000018B3EC548-0x000000018B3EC814
-		private ErrorContext GetErrorContext(object currentObject, object member, string path, Exception error) => default; // 0x0000000188F44660-0x0000000188F44668
-		protected void ClearErrorContext() {} // 0x0000000185FCF280-0x0000000185FCF290
-		protected bool IsErrorHandled(object currentObject, JsonContract contract, object keyValue, IJsonLineInfo lineInfo, string path, Exception ex) => default; // 0x0000000185492010-0x0000000185492020
+		protected NullValueHandling ResolvedNullValueHandling([Nullable(2)] JsonObjectContract containerContract, JsonProperty property); // 0x000000018A8BD018-0x000000018A8BD0A4
+		private ErrorContext GetErrorContext([Nullable(2)] object currentObject, [Nullable(2)] object member, string path, Exception error); // 0x000000018A8BCC40-0x000000018A8BCD4C
+		protected void ClearErrorContext(); // 0x000000018A8BCBCC-0x000000018A8BCC40
+		[NullableContext(2)]
+		protected bool IsErrorHandled(object currentObject, JsonContract contract, object keyValue, IJsonLineInfo lineInfo, [Nullable(1)] string path, [Nullable(1)] Exception ex); // 0x000000018A8BCD4C-0x000000018A8BD018
 	}
 
-	internal class JsonSerializerInternalReader : JsonSerializerInternalBase // TypeDefIndex: 52778
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class JsonSerializerInternalReader : JsonSerializerInternalBase // TypeDefIndex: 55460
 	{
 		// Nested types
-		internal enum PropertyPresence // TypeDefIndex: 52774
+		[NullableContext(0)]
+		internal enum PropertyPresence // TypeDefIndex: 55456
 		{
 			None = 0,
 			Null = 1,
 			Value = 2
 		}
 	
-		internal class CreatorPropertyContext // TypeDefIndex: 52775
+		[Nullable(0)]
+		[NullableContext(2)]
+		internal class CreatorPropertyContext // TypeDefIndex: 55457
 		{
 			// Fields
+			[Nullable(1)]
 			public readonly string Name; // 0x10
 			public JsonProperty Property; // 0x18
 			public JsonProperty ConstructorProperty; // 0x20
@@ -3809,386 +4491,423 @@ namespace Newtonsoft.Json.Serialization
 			public bool Used; // 0x38
 	
 			// Constructors
-			public CreatorPropertyContext() {} // Dummy constructor
-			public CreatorPropertyContext(string name) {} // 0x000000018646E93C-0x000000018646E944
+			[NullableContext(1)]
+			public CreatorPropertyContext(string name); // 0x00000001853908C0-0x00000001853908D0
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 52776
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55458
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c __9; // 0x00
+			[Nullable(0)]
 			public static Func<JsonProperty, string> __9__38_0; // 0x08
+			[Nullable(new byte[3] {0, 0, 1 })]
 			public static Func<JsonProperty, string> __9__38_2; // 0x10
+			[Nullable(0)]
 			public static Func<JsonProperty, JsonProperty> __9__42_0; // 0x18
+			[Nullable(0)]
 			public static Func<JsonProperty, PropertyPresence> __9__42_1; // 0x20
 	
 			// Constructors
-			static __c() {} // 0x000000018B3EFCB4-0x000000018B3F0190
-			public __c() {} // 0x000000018435E570-0x000000018435E5E0
+			static __c(); // 0x0000000184D3F730-0x0000000184D3F790
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal string _CreateObjectUsingCreatorWithParameters_b__38_0(JsonProperty p) => default; // 0x00000001840793A0-0x0000000184079DF0
-			internal string _CreateObjectUsingCreatorWithParameters_b__38_2(JsonProperty p) => default; // 0x000000018435E3F0-0x000000018435E570
-			internal JsonProperty _PopulateObject_b__42_0(JsonProperty m) => default; // 0x000000018458F100-0x000000018458F180
-			internal PropertyPresence _PopulateObject_b__42_1(JsonProperty m) => default; // 0x0000000184591A00-0x0000000184592110
+			[NullableContext(0)]
+			internal string _CreateObjectUsingCreatorWithParameters_b__38_0(JsonProperty p); // 0x000000018A8C1EF4-0x000000018A8C1F0C
+			[NullableContext(0)]
+			internal string _CreateObjectUsingCreatorWithParameters_b__38_2(JsonProperty p); // 0x00000001845B2270-0x00000001845B2290
+			[NullableContext(0)]
+			internal JsonProperty _PopulateObject_b__42_0(JsonProperty m); // 0x0000000184D88C30-0x0000000184D88C40
+			[NullableContext(0)]
+			internal PropertyPresence _PopulateObject_b__42_1(JsonProperty m); // 0x00000001811EC580-0x00000001811EC590
 		}
 	
-		private sealed class __c__DisplayClass38_0 // TypeDefIndex: 52777
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass38_0 // TypeDefIndex: 55459
 		{
 			// Fields
+			[Nullable(0)]
 			public JsonProperty property; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass38_0() {} // 0x0000000185C3C000-0x0000000185C3C790
+			public __c__DisplayClass38_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _CreateObjectUsingCreatorWithParameters_b__1(CreatorPropertyContext p) => default; // 0x0000000184078810-0x0000000184079040
+			[NullableContext(0)]
+			internal bool _CreateObjectUsingCreatorWithParameters_b__1(CreatorPropertyContext p); // 0x000000018A8C1F68-0x000000018A8C1F88
 		}
 	
 		// Constructors
-		public JsonSerializerInternalReader() {} // Dummy constructor
-		public JsonSerializerInternalReader(JsonSerializer serializer) {} // 0x000000018407A320-0x000000018407A430
+		public JsonSerializerInternalReader(JsonSerializer serializer); // 0x0000000185390C34-0x0000000185390C40
 	
 		// Methods
-		public void Populate(JsonReader reader, object target) {} // 0x000000018B3EF49C-0x000000018B3EF580
-		private JsonContract GetContractSafe(System.Type type) => default; // 0x000000018435E920-0x000000018435EDB0
-		private JsonContract GetContract(System.Type type) => default; // 0x000000018407A430-0x000000018407AA30
-		public object Deserialize(JsonReader reader, System.Type objectType, bool checkAdditionalContent) => default; // 0x000000018B3F023C-0x000000018B3F0834
-		private JsonSerializerProxy GetInternalSerializer() => default; // 0x000000018407ABF0-0x000000018407BE90
-		private JToken CreateJToken(JsonReader reader, JsonContract contract) => default; // 0x000000018407CAF0-0x000000018407CFE0
-		private JToken CreateJObject(JsonReader reader) => default; // 0x000000018407C580-0x000000018407C5F0
-		private object CreateValueInternal(JsonReader reader, System.Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, object existingValue) => default; // 0x000000018407BF60-0x000000018407C580
-		private static bool CoerceEmptyStringToNull(System.Type objectType, JsonContract contract, string s) => default; // 0x000000018407AA60-0x000000018407ABF0
-		internal string GetExpectedDescription(JsonContract contract) => default; // 0x0000000184070070-0x0000000184070890
-		private JsonConverter GetConverter(JsonContract contract, JsonConverter memberConverter, JsonContainerContract containerContract, JsonProperty containerProperty) => default; // 0x0000000184077980-0x0000000184077CB0
-		private object CreateObject(JsonReader reader, System.Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, object existingValue) => default; // 0x0000000184077CB0-0x00000001840784C0
-		private bool ReadMetadataPropertiesToken(JTokenReader reader, ref System.Type objectType, ref JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, object existingValue, out object newValue, out string id) {
-			newValue = default;
-			id = default;
-			return default;
-		} // 0x000000018B3EC9A8-0x000000018B3ECC64
-		private bool ReadMetadataProperties(JsonReader reader, ref System.Type objectType, ref JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, object existingValue, out object newValue, out string id) {
-			newValue = default;
-			id = default;
-			return default;
-		} // 0x00000001840784C0-0x0000000184078540
-		private void ResolveTypeName(JsonReader reader, ref System.Type objectType, ref JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, string qualifiedTypeName) {} // 0x00000001840778A0-0x0000000184077980
-		private JsonArrayContract EnsureArrayContract(JsonReader reader, System.Type objectType, JsonContract contract) => default; // 0x000000018407C8D0-0x000000018407CA20
-		private object CreateList(JsonReader reader, System.Type objectType, JsonContract contract, JsonProperty member, object existingValue, string id) => default; // 0x0000000185198220-0x0000000185198300
-		private bool HasNoDefinedType(JsonContract contract) => default; // 0x000000018435E740-0x000000018435E810
-		private object EnsureType(JsonReader reader, object value, CultureInfo culture, JsonContract contract, System.Type targetType) => default; // 0x000000018402AC70-0x000000018402AD40
-		private bool SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, object target) => default; // 0x000000018435EDB0-0x000000018435F430
-		private bool CalculatePropertyDetails(JsonProperty property, ref JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, object target, out bool useExistingValue, out object currentValue, out JsonContract propertyContract, out bool gottenCurrentValue, out bool ignoredValue) {
-			useExistingValue = default;
-			currentValue = default;
-			propertyContract = default;
-			gottenCurrentValue = default;
-			ignoredValue = default;
-			return default;
-		} // 0x000000018B3EF5EC-0x000000018B3EFCB4
-		private void AddReference(JsonReader reader, string id, object value) {} // 0x000000018B3F0F74-0x000000018B3F10BC
-		private bool HasFlag(DefaultValueHandling value, DefaultValueHandling flag) => default; // 0x000000018402C9A0-0x000000018402D1B0
-		private bool ShouldSetPropertyValue(JsonProperty property, JsonObjectContract contract, object value) => default; // 0x000000018B3ED470-0x000000018B3EDAC4
-		private IList CreateNewList(JsonReader reader, JsonArrayContract contract, out bool createdFromNonDefaultCreator) {
-			createdFromNonDefaultCreator = default;
-			return default;
-		} // 0x000000018B3ED354-0x000000018B3ED470
-		private IDictionary CreateNewDictionary(JsonReader reader, JsonDictionaryContract contract, out bool createdFromNonDefaultCreator) {
-			createdFromNonDefaultCreator = default;
-			return default;
-		} // 0x000000018B3ECC64-0x000000018B3ED354
-		private void OnDeserializing(JsonReader reader, JsonContract contract, object value) {} // 0x000000018B3EDAC4-0x000000018B3EF49C
-		private void OnDeserialized(JsonReader reader, JsonContract contract, object value) {} // 0x000000018458EF90-0x000000018458F100
-		private object PopulateDictionary(IDictionary dictionary, JsonReader reader, JsonDictionaryContract contract, JsonProperty containerProperty, string id) => default; // 0x000000018B3F0834-0x000000018B3F0F74
-		private object PopulateMultidimensionalArray(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, string id) => default; // 0x000000018407BE90-0x000000018407BF60
-		private void ThrowUnexpectedEndException(JsonReader reader, JsonContract contract, object currentObject, string message) {} // 0x0000000184075990-0x00000001840778A0
-		private object PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, string id) => default; // 0x0000000184802F60-0x0000000184802FF0
-		private object CreateISerializable(JsonReader reader, JsonISerializableContract contract, JsonProperty member, string id) => default; // 0x000000018435F430-0x0000000184365B20
-		internal object CreateISerializableItem(JToken token, System.Type type, JsonISerializableContract contract, JsonProperty member) => default; // 0x00000001845958F0-0x0000000184595940
-		private object CreateDynamic(JsonReader reader, JsonDynamicContract contract, JsonProperty member, string id) => default; // 0x000000018B3F0190-0x000000018B3F023C
-		private object CreateObjectUsingCreatorWithParameters(JsonReader reader, JsonObjectContract contract, JsonProperty containerProperty, ObjectConstructor<object> creator, string id) => default; // 0x00000001840790A0-0x00000001840793A0
-		private object DeserializeConvertable(JsonConverter converter, JsonReader reader, System.Type objectType, object existingValue) => default; // 0x00000001847A3610-0x00000001847A37F0
-		private List<CreatorPropertyContext> ResolvePropertyAndCreatorValues(JsonObjectContract contract, JsonProperty containerProperty, JsonReader reader, System.Type objectType) => default; // 0x000000018B3EF580-0x000000018B3EF5EC
-		public object CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, string id, out bool createdFromNonDefaultCreator) {
-			createdFromNonDefaultCreator = default;
-			return default;
-		} // 0x0000000184096E30-0x0000000184096EF0
-		private object PopulateObject(object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, string id) => default; // 0x0000000185F6C130-0x0000000185F6C190
-		private bool ShouldDeserialize(JsonReader reader, JsonProperty property, object target) => default; // 0x0000000185492010-0x0000000185492020
-		private bool CheckPropertyName(JsonReader reader, string memberName) => default; // 0x000000018B3F35B8-0x000000018B3F35D0
-		private void SetExtensionData(JsonObjectContract contract, JsonProperty member, JsonReader reader, string memberName, object o) {} // 0x000000018B3F35B8-0x000000018B3F35D0
-		private object ReadExtensionDataValue(JsonObjectContract contract, JsonProperty member, JsonReader reader) => default; // 0x00000001834A4750-0x00000001834A4760
-		private void EndProcessProperty(object newObject, JsonReader reader, JsonObjectContract contract, int initialDepth, JsonProperty property, PropertyPresence presence, bool setDefaultValue) {} // 0x00000001813AE580-0x00000001813AE590
-		private void SetPropertyPresence(JsonReader reader, JsonProperty property, Dictionary<JsonProperty, PropertyPresence> requiredProperties) {} // 0x0000000185492010-0x0000000185492020
-		private void HandleError(JsonReader reader, bool readPastError, int initialDepth) {} // 0x000000018B3F362C-0x000000018B3F364C
+		public void Populate(JsonReader reader, object target); // 0x000000018A8BEAB8-0x000000018A8BEF94
+		[NullableContext(2)]
+		private JsonContract GetContractSafe(System.Type type); // 0x0000000182FBD0A0-0x0000000182FBD0F0
+		private JsonContract GetContract(System.Type type); // 0x0000000182FBDED0-0x0000000182FBE740
+		[NullableContext(2)]
+		public object Deserialize([Nullable(1)] JsonReader reader, System.Type objectType, bool checkAdditionalContent); // 0x0000000182FBCF50-0x0000000182FBD0A0
+		private JsonSerializerProxy GetInternalSerializer(); // 0x000000018312E380-0x000000018312E3E0
+		[NullableContext(2)]
+		private JToken CreateJToken([Nullable(1)] JsonReader reader, JsonContract contract); // 0x00000001835A4840-0x00000001835A4C40
+		private JToken CreateJObject(JsonReader reader); // 0x00000001835A3A50-0x00000001835A3EF0
+		[NullableContext(2)]
+		private object CreateValueInternal([Nullable(1)] JsonReader reader, System.Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, object existingValue); // 0x0000000182FB24C0-0x0000000182FB2C00
+		[NullableContext(2)]
+		private static bool CoerceEmptyStringToNull(System.Type objectType, JsonContract contract, [Nullable(1)] string s); // 0x0000000182FBC320-0x0000000182FBC3D0
+		internal string GetExpectedDescription(JsonContract contract); // 0x000000018A8BE2A0-0x000000018A8BE384
+		[NullableContext(2)]
+		private JsonConverter GetConverter(JsonContract contract, JsonConverter memberConverter, JsonContainerContract containerContract, JsonProperty containerProperty); // 0x0000000182FB4810-0x0000000182FB4C80
+		[NullableContext(2)]
+		private object CreateObject([Nullable(1)] JsonReader reader, System.Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, object existingValue); // 0x00000001832B5D10-0x00000001832B61B0
+		[NullableContext(2)]
+		private bool ReadMetadataPropertiesToken([Nullable(1)] JTokenReader reader, ref System.Type objectType, ref JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, object existingValue, out object newValue, out string id); // 0x000000018A8BF040-0x000000018A8BF638
+		[NullableContext(2)]
+		private bool ReadMetadataProperties([Nullable(1)] JsonReader reader, ref System.Type objectType, ref JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, object existingValue, out object newValue, out string id); // 0x00000001832B62C0-0x00000001832B6B80
+		[NullableContext(2)]
+		private void ResolveTypeName([Nullable(1)] JsonReader reader, ref System.Type objectType, ref JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, [Nullable(1)] string qualifiedTypeName); // 0x0000000182FBD0F0-0x0000000182FBD4E0
+		private JsonArrayContract EnsureArrayContract(JsonReader reader, System.Type objectType, JsonContract contract); // 0x00000001832B7360-0x00000001832B73B0
+		[NullableContext(2)]
+		private object CreateList([Nullable(1)] JsonReader reader, System.Type objectType, JsonContract contract, JsonProperty member, object existingValue, string id); // 0x00000001832B6EF0-0x00000001832B7360
+		[NullableContext(2)]
+		private bool HasNoDefinedType(JsonContract contract); // 0x00000001832B61E0-0x00000001832B62C0
+		[NullableContext(2)]
+		private object EnsureType([Nullable(1)] JsonReader reader, object value, [Nullable(1)] CultureInfo culture, JsonContract contract, System.Type targetType); // 0x0000000182FB1850-0x0000000182FB2150
+		private bool SetPropertyValue(JsonProperty property, [Nullable(2)] JsonConverter propertyConverter, [Nullable(2)] JsonContainerContract containerContract, [Nullable(2)] JsonProperty containerProperty, JsonReader reader, object target); // 0x0000000182FB41D0-0x0000000182FB4440
+		[NullableContext(2)]
+		private bool CalculatePropertyDetails([Nullable(1)] JsonProperty property, ref JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, [Nullable(1)] JsonReader reader, [Nullable(1)] object target, out bool useExistingValue, out object currentValue, out JsonContract propertyContract, out bool gottenCurrentValue, out bool ignoredValue); // 0x0000000182FB3360-0x0000000182FB41C0
+		private void AddReference(JsonReader reader, string id, object value); // 0x000000018A8BD1AC-0x000000018A8BD448
+		private bool HasFlag(DefaultValueHandling value, DefaultValueHandling flag); // 0x0000000182FB41C0-0x0000000182FB41D0
+		[NullableContext(2)]
+		private bool ShouldSetPropertyValue([Nullable(1)] JsonProperty property, JsonObjectContract contract, object value); // 0x0000000182FB32B0-0x0000000182FB3360
+		private IList CreateNewList(JsonReader reader, JsonArrayContract contract, out bool createdFromNonDefaultCreator); // 0x00000001832B5940-0x00000001832B5A60
+		private IDictionary CreateNewDictionary(JsonReader reader, JsonDictionaryContract contract, out bool createdFromNonDefaultCreator); // 0x0000000184021D20-0x0000000184021E50
+		private void OnDeserializing(JsonReader reader, JsonContract contract, object value); // 0x00000001832B6C70-0x00000001832B6CF0
+		private void OnDeserialized(JsonReader reader, JsonContract contract, object value); // 0x00000001832B6DB0-0x00000001832B6E30
+		private object PopulateDictionary(IDictionary dictionary, JsonReader reader, JsonDictionaryContract contract, [Nullable(2)] JsonProperty containerProperty, [Nullable(2)] string id); // 0x00000001835D2C10-0x00000001835D9C40
+		private object PopulateMultidimensionalArray(IList list, JsonReader reader, JsonArrayContract contract, [Nullable(2)] JsonProperty containerProperty, [Nullable(2)] string id); // 0x000000018A8BE3F0-0x000000018A8BEAB8
+		private void ThrowUnexpectedEndException(JsonReader reader, JsonContract contract, [Nullable(2)] object currentObject, string message); // 0x000000018A8BF638-0x000000018A8BF780
+		private object PopulateList(IList list, JsonReader reader, JsonArrayContract contract, [Nullable(2)] JsonProperty containerProperty, [Nullable(2)] string id); // 0x00000001832B73B0-0x00000001832BFBB0
+		private object CreateISerializable(JsonReader reader, JsonISerializableContract contract, [Nullable(2)] JsonProperty member, [Nullable(2)] string id); // 0x000000018A8BDC54-0x000000018A8BE2A0
+		internal object CreateISerializableItem(JToken token, System.Type type, JsonISerializableContract contract, [Nullable(2)] JsonProperty member); // 0x000000018A8BDB38-0x000000018A8BDC54
+		private object CreateDynamic(JsonReader reader, JsonDynamicContract contract, [Nullable(2)] JsonProperty member, [Nullable(2)] string id); // 0x000000018A8BD448-0x000000018A8BDB38
+		private object CreateObjectUsingCreatorWithParameters(JsonReader reader, JsonObjectContract contract, [Nullable(2)] JsonProperty containerProperty, ObjectConstructor<object> creator, [Nullable(2)] string id); // 0x0000000183B2CC20-0x0000000183B2F4D0
+		private object DeserializeConvertable(JsonConverter converter, JsonReader reader, System.Type objectType, [Nullable(2)] object existingValue); // 0x000000018312E290-0x000000018312E380
+		private List<CreatorPropertyContext> ResolvePropertyAndCreatorValues(JsonObjectContract contract, [Nullable(2)] JsonProperty containerProperty, JsonReader reader, System.Type objectType); // 0x0000000183B2C810-0x0000000183B2CBA0
+		public object CreateNewObject(JsonReader reader, JsonObjectContract objectContract, [Nullable(2)] JsonProperty containerMember, [Nullable(2)] JsonProperty containerProperty, [Nullable(2)] string id, out bool createdFromNonDefaultCreator); // 0x00000001832B6B80-0x00000001832B6C70
+		private object PopulateObject(object newObject, JsonReader reader, JsonObjectContract contract, [Nullable(2)] JsonProperty member, [Nullable(2)] string id); // 0x0000000182FB4CC0-0x0000000182FB6580
+		private bool ShouldDeserialize(JsonReader reader, JsonProperty property, object target); // 0x0000000182FB47C0-0x0000000182FB4810
+		private bool CheckPropertyName(JsonReader reader, string memberName); // 0x0000000182FB4C80-0x0000000182FB4CC0
+		private void SetExtensionData(JsonObjectContract contract, [Nullable(2)] JsonProperty member, JsonReader reader, string memberName, object o); // 0x0000000183424C40-0x0000000183424C90
+		private object ReadExtensionDataValue(JsonObjectContract contract, [Nullable(2)] JsonProperty member, JsonReader reader); // 0x000000018A8BEF94-0x000000018A8BF040
+		private void EndProcessProperty(object newObject, JsonReader reader, JsonObjectContract contract, int initialDepth, JsonProperty property, PropertyPresence presence, bool setDefaultValue); // 0x0000000182FBED50-0x0000000182FBEF90
+		private void SetPropertyPresence(JsonReader reader, JsonProperty property, [Nullable(new byte[2] {2, 1 })] Dictionary<JsonProperty, PropertyPresence> requiredProperties); // 0x0000000182FB4660-0x0000000182FB47C0
+		private void HandleError(JsonReader reader, bool readPastError, int initialDepth); // 0x000000018A8BE384-0x000000018A8BE3F0
 	}
 
-	internal class JsonSerializerInternalWriter : JsonSerializerInternalBase // TypeDefIndex: 52779
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class JsonSerializerInternalWriter : JsonSerializerInternalBase // TypeDefIndex: 55461
 	{
 		// Fields
+		[Nullable(2)]
 		private System.Type _rootType; // 0x38
 		private int _rootLevel; // 0x40
 		private readonly List<object> _serializeStack; // 0x48
 	
 		// Constructors
-		public JsonSerializerInternalWriter() {} // Dummy constructor
-		public JsonSerializerInternalWriter(JsonSerializer serializer) {} // 0x00000001850B82E0-0x00000001850B8380
+		public JsonSerializerInternalWriter(JsonSerializer serializer); // 0x0000000183F72010-0x0000000183F720B0
 	
 		// Methods
-		public void Serialize(JsonWriter jsonWriter, object value, System.Type objectType) {} // 0x00000001850B83F0-0x00000001850B86A0
-		private JsonSerializerProxy GetInternalSerializer() => default; // 0x000000018B3F10BC-0x000000018B3F1130
-		private JsonContract GetContractSafe(object value) => default; // 0x0000000185056250-0x0000000185056270
-		private JsonContract GetContract(object value) => default; // 0x0000000185056270-0x0000000185056320
-		private void SerializePrimitive(JsonWriter writer, object value, JsonPrimitiveContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty) {} // 0x0000000185054240-0x00000001850542F0
-		private void SerializeValue(JsonWriter writer, object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty) {} // 0x0000000185053F00-0x0000000185054240
-		private bool? ResolveIsReference(JsonContract contract, JsonProperty property, JsonContainerContract collectionContract, JsonProperty containerProperty) => default; // 0x00000001850546E0-0x0000000185054770
-		private bool ShouldWriteReference(object value, JsonProperty property, JsonContract valueContract, JsonContainerContract collectionContract, JsonProperty containerProperty) => default; // 0x0000000185053C70-0x0000000185053D70
-		private bool ShouldWriteProperty(object memberValue, JsonObjectContract containerContract, JsonProperty property) => default; // 0x0000000185053BC0-0x0000000185053C60
-		private bool CheckForCircularReference(JsonWriter writer, object value, JsonProperty property, JsonContract contract, JsonContainerContract containerContract, JsonProperty containerProperty) => default; // 0x0000000185053D70-0x0000000185053F00
-		private void WriteReference(JsonWriter writer, object value) {} // 0x000000018B3F3270-0x000000018B3F3414
-		private string GetReference(JsonWriter writer, object value) => default; // 0x000000018B3F1130-0x000000018B3F12C8
-		internal static bool TryConvertToString(object value, System.Type type, out string s) {
-			s = default;
-			return default;
-		} // 0x000000018B3F302C-0x000000018B3F30FC
-		private void SerializeString(JsonWriter writer, object value, JsonStringContract contract) {} // 0x000000018B3F2EFC-0x000000018B3F2F94
-		private void OnSerializing(JsonWriter writer, JsonContract contract, object value) {} // 0x0000000185051F50-0x0000000185052000
-		private void OnSerialized(JsonWriter writer, JsonContract contract, object value) {} // 0x0000000185052110-0x00000001850521C0
-		private void SerializeObject(JsonWriter writer, object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty) {} // 0x00000001850522D0-0x0000000185053840
-		private bool CalculatePropertyValues(JsonWriter writer, object value, JsonContainerContract contract, JsonProperty member, JsonProperty property, out JsonContract memberContract, out object memberValue) {
-			memberContract = default;
-			memberValue = default;
-			return default;
-		} // 0x0000000185053870-0x0000000185053AA0
-		private void WriteObjectStart(JsonWriter writer, object value, JsonContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty) {} // 0x0000000185054770-0x00000001850548A0
-		private bool HasCreatorParameter(JsonContainerContract contract, JsonProperty property) => default; // 0x000000018B3F1330-0x000000018B3F13B8
-		private void WriteReferenceIdProperty(JsonWriter writer, System.Type type, object value) {} // 0x000000018B3F30FC-0x000000018B3F3270
-		private void WriteTypeProperty(JsonWriter writer, System.Type type) {} // 0x000000018B3F3414-0x000000018B3F35B8
-		private bool HasFlag(DefaultValueHandling value, DefaultValueHandling flag) => default; // 0x0000000185053C60-0x0000000185053C70
-		private bool HasFlag(PreserveReferencesHandling value, PreserveReferencesHandling flag) => default; // 0x0000000185053C60-0x0000000185053C70
-		private bool HasFlag(TypeNameHandling value, TypeNameHandling flag) => default; // 0x00000001840784C0-0x0000000184078540
-		private void SerializeConvertable(JsonWriter writer, JsonConverter converter, object value, JsonContract contract, JsonContainerContract collectionContract, JsonProperty containerProperty) {} // 0x000000018B3F13B8-0x000000018B3F16F8
-		private void SerializeList(JsonWriter writer, IEnumerable values, JsonArrayContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty) {} // 0x0000000185051010-0x0000000185051F50
-		private void SerializeMultidimensionalArray(JsonWriter writer, Array values, JsonArrayContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty) {} // 0x000000018B3F2D6C-0x000000018B3F2EFC
-		private void SerializeMultidimensionalArray(JsonWriter writer, Array values, JsonArrayContract contract, JsonProperty member, int initialDepth, int[] indices) {} // 0x000000018B3F2990-0x000000018B3F2D6C
-		private bool WriteStartArray(JsonWriter writer, object values, JsonArrayContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty) => default; // 0x0000000185050EB0-0x0000000185051010
-		private void SerializeISerializable(JsonWriter writer, ISerializable value, JsonISerializableContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty) {} // 0x000000018B3F258C-0x000000018B3F2990
-		private void SerializeDynamic(JsonWriter writer, IDynamicMetaObjectProvider value, JsonDynamicContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty) {} // 0x000000018B3F16F8-0x000000018B3F258C
-		private bool ShouldWriteDynamicProperty(object memberValue) => default; // 0x000000018B3F2F94-0x000000018B3F302C
-		private bool ShouldWriteType(TypeNameHandling typeNameHandlingFlag, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty) => default; // 0x00000001850548A0-0x0000000185054A60
-		private void SerializeDictionary(JsonWriter writer, IDictionary values, JsonDictionaryContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty) {} // 0x0000000185054A60-0x0000000185056250
-		private string GetPropertyName(JsonWriter writer, object name, JsonContract contract, out bool escape) {
-			escape = default;
-			return default;
-		} // 0x0000000185056320-0x00000001850564C0
-		private void HandleError(JsonWriter writer, int initialDepth) {} // 0x000000018B3F12C8-0x000000018B3F1330
-		private bool ShouldSerialize(JsonWriter writer, JsonProperty property, object target) => default; // 0x0000000185053B30-0x0000000185053BC0
-		private bool IsSpecified(JsonWriter writer, JsonProperty property, object target) => default; // 0x0000000185053AA0-0x0000000185053B30
+		[NullableContext(2)]
+		public void Serialize([Nullable(1)] JsonWriter jsonWriter, object value, System.Type objectType); // 0x0000000183F72100-0x0000000183F72490
+		private JsonSerializerProxy GetInternalSerializer(); // 0x000000018A8BF780-0x000000018A8BF7F4
+		[NullableContext(2)]
+		private JsonContract GetContractSafe(object value); // 0x0000000182FBEFE0-0x0000000182FBF000
+		private JsonContract GetContract(object value); // 0x0000000182FBF000-0x0000000182FBF040
+		private void SerializePrimitive(JsonWriter writer, object value, JsonPrimitiveContract contract, [Nullable(2)] JsonProperty member, [Nullable(2)] JsonContainerContract containerContract, [Nullable(2)] JsonProperty containerProperty); // 0x000000018377F0F0-0x000000018377F170
+		[NullableContext(2)]
+		private void SerializeValue([Nullable(1)] JsonWriter writer, object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty); // 0x000000018377D320-0x000000018377D590
+		[NullableContext(2)]
+		private bool? ResolveIsReference([Nullable(1)] JsonContract contract, JsonProperty property, JsonContainerContract collectionContract, JsonProperty containerProperty); // 0x000000018377BD10-0x000000018377BD70
+		[NullableContext(2)]
+		private bool ShouldWriteReference(object value, JsonProperty property, JsonContract valueContract, JsonContainerContract collectionContract, JsonProperty containerProperty); // 0x000000018377D190-0x000000018377D240
+		[NullableContext(2)]
+		private bool ShouldWriteProperty(object memberValue, JsonObjectContract containerContract, [Nullable(1)] JsonProperty property); // 0x000000018377D120-0x000000018377D190
+		[NullableContext(2)]
+		private bool CheckForCircularReference([Nullable(1)] JsonWriter writer, object value, JsonProperty property, JsonContract contract, JsonContainerContract containerContract, JsonProperty containerProperty); // 0x000000018377D240-0x000000018377D320
+		private void WriteReference(JsonWriter writer, object value); // 0x000000018A8C1BA4-0x000000018A8C1D4C
+		private string GetReference(JsonWriter writer, object value); // 0x000000018A8BF7F4-0x000000018A8BF96C
+		internal static bool TryConvertToString(object value, System.Type type, [Nullable(2)] [NotNullWhen(true)] out string s); // 0x000000018A8C1958-0x000000018A8C1A28
+		private void SerializeString(JsonWriter writer, object value, JsonStringContract contract); // 0x000000018A8C1828-0x000000018A8C18C0
+		private void OnSerializing(JsonWriter writer, JsonContract contract, object value); // 0x0000000184386D50-0x0000000184386DC0
+		private void OnSerialized(JsonWriter writer, JsonContract contract, object value); // 0x0000000184386C20-0x0000000184386C90
+		private void SerializeObject(JsonWriter writer, object value, JsonObjectContract contract, [Nullable(2)] JsonProperty member, [Nullable(2)] JsonContainerContract collectionContract, [Nullable(2)] JsonProperty containerProperty); // 0x000000018377BD80-0x000000018377CE50
+		private bool CalculatePropertyValues(JsonWriter writer, object value, JsonContainerContract contract, [Nullable(2)] JsonProperty member, JsonProperty property, [NotNullWhen(true)] [Nullable(2)] out JsonContract memberContract, [Nullable(2)] out object memberValue); // 0x000000018377CE90-0x000000018377D080
+		private void WriteObjectStart(JsonWriter writer, object value, JsonContract contract, [Nullable(2)] JsonProperty member, [Nullable(2)] JsonContainerContract collectionContract, [Nullable(2)] JsonProperty containerProperty); // 0x000000018377BC20-0x000000018377BD10
+		private bool HasCreatorParameter([Nullable(2)] JsonContainerContract contract, JsonProperty property); // 0x000000018A8BF9D4-0x000000018A8BFA5C
+		private void WriteReferenceIdProperty(JsonWriter writer, System.Type type, object value); // 0x000000018A8C1A28-0x000000018A8C1BA4
+		private void WriteTypeProperty(JsonWriter writer, System.Type type); // 0x000000018A8C1D4C-0x000000018A8C1EF4
+		private bool HasFlag(DefaultValueHandling value, DefaultValueHandling flag); // 0x000000018377BD70-0x000000018377BD80
+		private bool HasFlag(PreserveReferencesHandling value, PreserveReferencesHandling flag); // 0x000000018377BD70-0x000000018377BD80
+		private bool HasFlag(TypeNameHandling value, TypeNameHandling flag); // 0x0000000182FB41C0-0x0000000182FB41D0
+		private void SerializeConvertable(JsonWriter writer, JsonConverter converter, object value, JsonContract contract, [Nullable(2)] JsonContainerContract collectionContract, [Nullable(2)] JsonProperty containerProperty); // 0x000000018A8BFA5C-0x000000018A8BFD9C
+		private void SerializeList(JsonWriter writer, IEnumerable values, JsonArrayContract contract, [Nullable(2)] JsonProperty member, [Nullable(2)] JsonContainerContract collectionContract, [Nullable(2)] JsonProperty containerProperty); // 0x0000000184386090-0x0000000184386C20
+		private void SerializeMultidimensionalArray(JsonWriter writer, Array values, JsonArrayContract contract, [Nullable(2)] JsonProperty member, [Nullable(2)] JsonContainerContract collectionContract, [Nullable(2)] JsonProperty containerProperty); // 0x000000018A8C1698-0x000000018A8C1828
+		private void SerializeMultidimensionalArray(JsonWriter writer, Array values, JsonArrayContract contract, [Nullable(2)] JsonProperty member, int initialDepth, int[] indices); // 0x000000018A8C12BC-0x000000018A8C1698
+		private bool WriteStartArray(JsonWriter writer, object values, JsonArrayContract contract, [Nullable(2)] JsonProperty member, [Nullable(2)] JsonContainerContract containerContract, [Nullable(2)] JsonProperty containerProperty); // 0x0000000184386E80-0x0000000184386FA0
+		private void SerializeISerializable(JsonWriter writer, ISerializable value, JsonISerializableContract contract, [Nullable(2)] JsonProperty member, [Nullable(2)] JsonContainerContract collectionContract, [Nullable(2)] JsonProperty containerProperty); // 0x000000018A8C0EB8-0x000000018A8C12BC
+		private void SerializeDynamic(JsonWriter writer, IDynamicMetaObjectProvider value, JsonDynamicContract contract, [Nullable(2)] JsonProperty member, [Nullable(2)] JsonContainerContract collectionContract, [Nullable(2)] JsonProperty containerProperty); // 0x000000018A8BFD9C-0x000000018A8C0EB8
+		[NullableContext(2)]
+		private bool ShouldWriteDynamicProperty(object memberValue); // 0x000000018A8C18C0-0x000000018A8C1958
+		[NullableContext(2)]
+		private bool ShouldWriteType(TypeNameHandling typeNameHandlingFlag, [Nullable(1)] JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty); // 0x000000018377BAB0-0x000000018377BC20
+		private void SerializeDictionary(JsonWriter writer, IDictionary values, JsonDictionaryContract contract, [Nullable(2)] JsonProperty member, [Nullable(2)] JsonContainerContract collectionContract, [Nullable(2)] JsonProperty containerProperty); // 0x0000000182FBF040-0x0000000182FC0E20
+		private string GetPropertyName(JsonWriter writer, object name, JsonContract contract, out bool escape); // 0x0000000182FC0E90-0x0000000182FC0F80
+		private void HandleError(JsonWriter writer, int initialDepth); // 0x000000018A8BF96C-0x000000018A8BF9D4
+		private bool ShouldSerialize(JsonWriter writer, JsonProperty property, object target); // 0x000000018377D0D0-0x000000018377D120
+		private bool IsSpecified(JsonWriter writer, JsonProperty property, object target); // 0x000000018377D080-0x000000018377D0D0
 	}
 
-	internal class JsonSerializerProxy : JsonSerializer // TypeDefIndex: 52780
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class JsonSerializerProxy : JsonSerializer // TypeDefIndex: 55462
 	{
 		// Fields
+		[Nullable(2)]
 		private readonly JsonSerializerInternalReader _serializerReader; // 0xE0
+		[Nullable(2)]
 		private readonly JsonSerializerInternalWriter _serializerWriter; // 0xE8
 		internal readonly JsonSerializer _serializer; // 0xF0
 	
 		// Properties
-		public override IReferenceResolver ReferenceResolver { set {} } // 0x000000018B401F9C-0x000000018B401FC4
-		public override ITraceWriter TraceWriter { get => default; set {} } // 0x000000018B401D38-0x000000018B401D5C 0x000000018B401FEC-0x000000018B402014
-		public override IEqualityComparer EqualityComparer { set {} } // 0x000000018B401E5C-0x000000018B401E84
-		public override JsonConverterCollection Converters { get => default; } // 0x000000018B401C88-0x000000018B401CA8 
-		public override DefaultValueHandling DefaultValueHandling { set {} } // 0x000000018B401E34-0x000000018B401E5C
-		public override IContractResolver ContractResolver { get => default; set {} } // 0x000000018B401C64-0x000000018B401C88 0x000000018B401E0C-0x000000018B401E34
-		public override MissingMemberHandling MissingMemberHandling { set {} } // 0x000000018B401ED4-0x000000018B401EFC
-		public override NullValueHandling NullValueHandling { get => default; set {} } // 0x000000018B401D14-0x000000018B401D38 0x000000018B401EFC-0x000000018B401F24
-		public override ObjectCreationHandling ObjectCreationHandling { set {} } // 0x000000018B401F24-0x000000018B401F4C
-		public override ReferenceLoopHandling ReferenceLoopHandling { set {} } // 0x000000018B401F74-0x000000018B401F9C
-		public override PreserveReferencesHandling PreserveReferencesHandling { set {} } // 0x000000018B401F4C-0x000000018B401F74
-		public override TypeNameHandling TypeNameHandling { set {} } // 0x000000018B40203C-0x000000018B402064
-		public override MetadataPropertyHandling MetadataPropertyHandling { get => default; set {} } // 0x000000018B401CF0-0x000000018B401D14 0x000000018B401EAC-0x000000018B401ED4
-		public override TypeNameAssemblyFormatHandling TypeNameAssemblyFormatHandling { set {} } // 0x000000018B402014-0x000000018B40203C
-		public override ConstructorHandling ConstructorHandling { set {} } // 0x000000018B401DAC-0x000000018B401DD4
-		public override ISerializationBinder SerializationBinder { set {} } // 0x000000018B401FC4-0x000000018B401FEC
-		public override StreamingContext Context { get => default; set {} } // 0x000000018B401C30-0x000000018B401C64 0x000000018B401DD4-0x000000018B401E0C
-		public override Newtonsoft.Json.Formatting Formatting { get => default; set {} } // 0x000000018B401CA8-0x000000018B401CCC 0x000000018B401E84-0x000000018B401EAC
-		public override int? MaxDepth { get => default; } // 0x000000018B401CCC-0x000000018B401CF0 
-		public override bool CheckAdditionalContent { get => default; set {} } // 0x000000018B401C0C-0x000000018B401C30 0x000000018B401D84-0x000000018B401DAC
+		[Nullable(2)]
+		public override IReferenceResolver ReferenceResolver { [NullableContext(2)] set; } // 0x000000018A8CFDAC-0x000000018A8CFDD4
+		[Nullable(2)]
+		public override ITraceWriter TraceWriter { [NullableContext(2)] get; [NullableContext(2)] set; } // 0x000000018A8CFB48-0x000000018A8CFB6C 0x000000018A8CFDFC-0x000000018A8CFE24
+		[Nullable(2)]
+		public override IEqualityComparer EqualityComparer { [NullableContext(2)] set; } // 0x000000018A8CFC6C-0x000000018A8CFC94
+		public override JsonConverterCollection Converters { get; } // 0x000000018A8CFA98-0x000000018A8CFAB8 
+		public override DefaultValueHandling DefaultValueHandling { set; } // 0x000000018A8CFC44-0x000000018A8CFC6C
+		public override IContractResolver ContractResolver { get; set; } // 0x000000018A8CFA74-0x000000018A8CFA98 0x000000018A8CFC1C-0x000000018A8CFC44
+		public override MissingMemberHandling MissingMemberHandling { set; } // 0x000000018A8CFCE4-0x000000018A8CFD0C
+		public override NullValueHandling NullValueHandling { get; set; } // 0x000000018A8CFB24-0x000000018A8CFB48 0x000000018A8CFD0C-0x000000018A8CFD34
+		public override ObjectCreationHandling ObjectCreationHandling { set; } // 0x000000018A8CFD34-0x000000018A8CFD5C
+		public override ReferenceLoopHandling ReferenceLoopHandling { set; } // 0x000000018A8CFD84-0x000000018A8CFDAC
+		public override PreserveReferencesHandling PreserveReferencesHandling { set; } // 0x000000018A8CFD5C-0x000000018A8CFD84
+		public override TypeNameHandling TypeNameHandling { set; } // 0x000000018A8CFE4C-0x000000018A8CFE74
+		public override MetadataPropertyHandling MetadataPropertyHandling { get; set; } // 0x000000018A8CFB00-0x000000018A8CFB24 0x000000018A8CFCBC-0x000000018A8CFCE4
+		public override TypeNameAssemblyFormatHandling TypeNameAssemblyFormatHandling { set; } // 0x000000018A8CFE24-0x000000018A8CFE4C
+		public override ConstructorHandling ConstructorHandling { set; } // 0x000000018A8CFBBC-0x000000018A8CFBE4
+		public override ISerializationBinder SerializationBinder { get; set; } // 0x0000000182E56460-0x0000000182E574D0 0x000000018A8CFDD4-0x000000018A8CFDFC
+		public override StreamingContext Context { get; set; } // 0x000000018A8CFA40-0x000000018A8CFA74 0x000000018A8CFBE4-0x000000018A8CFC1C
+		public override Newtonsoft.Json.Formatting Formatting { get; set; } // 0x000000018A8CFAB8-0x000000018A8CFADC 0x000000018A8CFC94-0x000000018A8CFCBC
+		public override int? MaxDepth { get; } // 0x000000018A8CFADC-0x000000018A8CFB00 
+		public override bool CheckAdditionalContent { get; set; } // 0x000000018A8CFA1C-0x000000018A8CFA40 0x000000018A8CFB94-0x000000018A8CFBBC
 	
 		// Events
-		public override event EventHandler<ErrorEventArgs> Error;
+		[Nullable(new byte[2] {2, 1 })]
+		public override event EventHandler<ErrorEventArgs> Error {
+			add; // 0x000000018A8CF9F4-0x000000018A8CFA1C
+			remove; // 0x000000018A8CFB6C-0x000000018A8CFB94
+		}
 	
 		// Constructors
-		public JsonSerializerProxy() {} // Dummy constructor
-		public JsonSerializerProxy(JsonSerializerInternalReader serializerReader) {} // 0x000000018458FC30-0x000000018458FCB0
-		public JsonSerializerProxy(JsonSerializerInternalWriter serializerWriter) {} // 0x000000018B401B24-0x000000018B401BE4
+		public JsonSerializerProxy(JsonSerializerInternalReader serializerReader); // 0x00000001835A65F0-0x00000001835A6650
+		public JsonSerializerProxy(JsonSerializerInternalWriter serializerWriter); // 0x000000018A8CF934-0x000000018A8CF9F4
 	
 		// Methods
-		internal JsonSerializerInternalBase GetInternalSerializer() => default; // 0x000000018B401A7C-0x000000018B401A98
-		internal override object DeserializeInternal(JsonReader reader, System.Type objectType) => default; // 0x000000018B401A30-0x000000018B401A7C
-		internal override void PopulateInternal(JsonReader reader, object target) {} // 0x000000018B401A98-0x000000018B401ADC
-		internal override void SerializeInternal(JsonWriter jsonWriter, object value, System.Type rootType) {} // 0x000000018B401ADC-0x000000018B401B24
+		internal JsonSerializerInternalBase GetInternalSerializer(); // 0x000000018A8CF88C-0x000000018A8CF8A8
+		[NullableContext(2)]
+		internal override object DeserializeInternal([Nullable(1)] JsonReader reader, System.Type objectType); // 0x000000018A8CF840-0x000000018A8CF88C
+		internal override void PopulateInternal(JsonReader reader, object target); // 0x000000018A8CF8A8-0x000000018A8CF8EC
+		[NullableContext(2)]
+		internal override void SerializeInternal([Nullable(1)] JsonWriter jsonWriter, object value, System.Type rootType); // 0x000000018A8CF8EC-0x000000018A8CF934
 	}
 
-	public class JsonStringContract : JsonPrimitiveContract // TypeDefIndex: 52781
+	public class JsonStringContract : JsonPrimitiveContract // TypeDefIndex: 55463
 	{
 		// Constructors
-		public JsonStringContract() {} // Dummy constructor
-		public JsonStringContract(System.Type underlyingType) {} // 0x000000018541AA40-0x000000018541AAB0
+		[NullableContext(1)]
+		public JsonStringContract(System.Type underlyingType); // 0x0000000184CCFC10-0x0000000184CCFC80
 	}
 
-	internal static class JsonTypeReflector // TypeDefIndex: 52784
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class JsonTypeReflector // TypeDefIndex: 55466
 	{
 		// Fields
 		private static bool? _fullyTrusted; // 0x00
+		[Nullable(new byte[6] {1, 1, 1, 2, 1, 1 })]
 		private static readonly ThreadSafeStore<System.Type, Func<object[], object>> CreatorCache; // 0x08
+		[Nullable(new byte[3] {1, 1, 2 })]
 		private static readonly ThreadSafeStore<System.Type, System.Type> AssociatedMetadataTypesCache; // 0x10
+		[Nullable(2)]
 		private static ReflectionObject _metadataTypeAttributeReflectionObject; // 0x18
 	
 		// Properties
-		public static bool FullyTrusted { get; } // 0x000000018B404D08-0x000000018B404D7C 
-		public static ReflectionDelegateFactory ReflectionDelegateFactory { get; } // 0x0000000185492010-0x0000000185492020 
+		public static bool FullyTrusted { get; } // 0x000000018A8D0288-0x000000018A8D0348 
+		public static ReflectionDelegateFactory ReflectionDelegateFactory { get; } // 0x00000001835CF6E0-0x00000001835CF760 
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 52782
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55464
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c __9; // 0x00
+			[Nullable(0)]
 			public static Func<object, System.Type> __9__22_1; // 0x08
 	
 			// Constructors
-			static __c() {}
-			public __c() {} // 0x00000001843A3680-0x00000001843A3830
+			static __c(); // 0x000000018A8D2AFC-0x000000018A8D3484
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal System.Type _GetCreator_b__22_1(object param) => default; // 0x000000018407E0E0-0x000000018407E180
+			[NullableContext(0)]
+			internal System.Type _GetCreator_b__22_1(object param); // 0x000000018A8D2A0C-0x000000018A8D2A80
 		}
 	
-		private sealed class __c__DisplayClass22_0 // TypeDefIndex: 52783
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass22_0 // TypeDefIndex: 55465
 		{
 			// Fields
+			[Nullable(0)]
 			public System.Type type; // 0x10
+			[Nullable(new byte[2] {0, 1 })]
 			public Func<object> defaultConstructor; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass22_0() {} // 0x000000018B40237C-0x000000018B40253C
+			public __c__DisplayClass22_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal object _GetCreator_b__0(object[] parameters) => default; // 0x000000018480BF20-0x000000018480BFD0
+			internal object _GetCreator_b__0([Nullable(new byte[2] {2, 1 })] object[] parameters); // 0x00000001849B8240-0x00000001849B82F0
 		}
 	
 		// Constructors
-		static JsonTypeReflector() {} // 0x000000018B404D94-0x000000018B405178
+		static JsonTypeReflector(); // 0x000000018489B130-0x000000018489B2C0
 	
 		// Methods
 		public static T GetCachedAttribute<T>(object attributeProvider)
-			where T : Attribute => default; // 0x000000018407F110-0x000000018407F1A0
-		public static bool CanTypeDescriptorConvertString(System.Type type, out TypeConverter typeConverter) {
-			typeConverter = default;
-			return default;
-		} // 0x000000018B402064-0x000000018B40210C
-		public static DataContractAttribute GetDataContractAttribute(System.Type type) => default; // 0x000000018B40210C-0x000000018B4021B4
-		public static DataMemberAttribute GetDataMemberAttribute(MemberInfo memberInfo) => default; // 0x000000018B4021B4-0x000000018B40225C
-		public static MemberSerialization GetObjectMemberSerialization(System.Type objectType, bool ignoreSerializableAttribute) => default; // 0x000000018B40225C-0x000000018B40237C
-		public static JsonConverter GetJsonConverter(object attributeProvider) => default; // 0x000000018400E190-0x000000018400E680
-		public static JsonConverter CreateJsonConverterInstance(System.Type converterType, object[] args) => default; // 0x00000001843497A0-0x00000001843498E0
-		public static NamingStrategy CreateNamingStrategyInstance(System.Type namingStrategyType, object[] args) => default;
-		public static NamingStrategy GetContainerNamingStrategy(JsonContainerAttribute containerAttribute) => default;
-		private static Func<object[], object> GetCreator(System.Type type) => default; // 0x000000018509A1C0-0x000000018509A230
-		private static System.Type GetAssociatedMetadataType(System.Type type) => default; // 0x000000018B40253C-0x000000018B402598
-		private static System.Type GetAssociateMetadataTypeFromAttribute(System.Type type) => default;
+			where T : Attribute;
+		public static bool CanTypeDescriptorConvertString(System.Type type, out TypeConverter typeConverter); // 0x0000000183591BB0-0x0000000183591CF0
+		public static DataContractAttribute GetDataContractAttribute(System.Type type); // 0x00000001832B4DB0-0x00000001832B4E20
+		public static DataMemberAttribute GetDataMemberAttribute(MemberInfo memberInfo); // 0x000000018A8D006C-0x000000018A8D022C
+		public static MemberSerialization GetObjectMemberSerialization(System.Type objectType, bool ignoreSerializableAttribute); // 0x00000001835CEAB0-0x00000001835CEB30
+		public static JsonConverter GetJsonConverter(object attributeProvider); // 0x00000001832B40C0-0x00000001832B41E0
+		public static JsonConverter CreateJsonConverterInstance(System.Type converterType, [Nullable(new byte[2] {2, 1 })] object[] args); // 0x000000018A8CFE74-0x000000018A8CFF1C
+		public static NamingStrategy CreateNamingStrategyInstance(System.Type namingStrategyType, [Nullable(new byte[2] {2, 1 })] object[] args); // 0x000000018A8CFF1C-0x000000018A8CFFC4
+		public static NamingStrategy GetContainerNamingStrategy(JsonContainerAttribute containerAttribute); // 0x000000018A8CFFC4-0x000000018A8D006C
+		private static Func<object[], object> GetCreator(System.Type type); // 0x000000018496F210-0x000000018496F340
+		private static System.Type GetAssociatedMetadataType(System.Type type); // 0x000000018312C240-0x000000018312C660
+		private static System.Type GetAssociateMetadataTypeFromAttribute(System.Type type); // 0x00000001832B2B60-0x00000001832B2C30
 		private static T GetAttribute<T>(System.Type type)
-			where T : Attribute => default; // 0x000000018B402598-0x000000018B402658
+			where T : Attribute;
 		private static T GetAttribute<T>(MemberInfo memberInfo)
-			where T : Attribute => default; // 0x0000000184346440-0x00000001843464E0
-		public static bool IsNonSerializable(object provider) => default; // 0x0000000185A6F290-0x0000000185A6F420
-		public static bool IsSerializable(object provider) => default; // 0x000000018B4051DC-0x000000018B406304
+			where T : Attribute;
+		public static bool IsNonSerializable(object provider); // 0x00000001832B3450-0x00000001832B3490
+		public static bool IsSerializable(object provider); // 0x000000018A8D022C-0x000000018A8D0288
 		public static T GetAttribute<T>(object provider)
-			where T : Attribute => default; // 0x0000000185492010-0x0000000185492020
+			where T : Attribute;
 	}
 
-	public class KebabCaseNamingStrategy : NamingStrategy // TypeDefIndex: 52785
+	public class KebabCaseNamingStrategy : NamingStrategy // TypeDefIndex: 55467
 	{
 		// Constructors
-		public KebabCaseNamingStrategy(bool processDictionaryKeys, bool overrideSpecifiedNames) {} // 0x0000000185FD20F0-0x0000000185FD2100
-		public KebabCaseNamingStrategy(bool processDictionaryKeys, bool overrideSpecifiedNames, bool processExtensionDataNames) {} // 0x0000000185FD20E0-0x0000000185FD20F0
-		public KebabCaseNamingStrategy() {} // 0x0000000185492010-0x0000000185492020
+		public KebabCaseNamingStrategy(bool processDictionaryKeys, bool overrideSpecifiedNames); // 0x0000000184DA5CA0-0x0000000184DA5CB0
+		public KebabCaseNamingStrategy(bool processDictionaryKeys, bool overrideSpecifiedNames, bool processExtensionDataNames); // 0x0000000184DA5C90-0x0000000184DA5CA0
+		public KebabCaseNamingStrategy(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		protected override string ResolvePropertyName(string name) => default; // 0x000000018B402658-0x000000018B402664
+		[NullableContext(1)]
+		protected override string ResolvePropertyName(string name); // 0x000000018A8D0348-0x000000018A8D0354
 	}
 
-	public abstract class NamingStrategy // TypeDefIndex: 52786
+	[Nullable(0)]
+	[NullableContext(1)]
+	public abstract class NamingStrategy // TypeDefIndex: 55468
 	{
 		// Fields
+		[CompilerGenerated]
 		private bool _ProcessDictionaryKeys_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private bool _ProcessExtensionDataNames_k__BackingField; // 0x11
+		[CompilerGenerated]
 		private bool _OverrideSpecifiedNames_k__BackingField; // 0x12
 	
 		// Properties
-		public bool ProcessDictionaryKeys { get; set; } // 0x0000000181C2FD60-0x0000000181C2FD70 0x000000018184FBD0-0x000000018184FBE0
-		public bool ProcessExtensionDataNames { get; set; } // 0x0000000185FB22C0-0x0000000185FB22D0 0x0000000185FB2560-0x0000000185FB2570
-		public bool OverrideSpecifiedNames { get; set; } // 0x0000000185FB22D0-0x0000000185FB22E0 0x0000000183B7E590-0x0000000183B7E5A0
+		public bool ProcessDictionaryKeys { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001815EFCE0-0x00000001815EFCF0 0x0000000184D86130-0x0000000184D86140
+		public bool ProcessExtensionDataNames { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D88380-0x0000000184D88390 0x0000000184D88460-0x0000000184D88470
+		public bool OverrideSpecifiedNames { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D88390-0x0000000184D883A0 0x0000000184DA0900-0x0000000184DA0910
 	
 		// Constructors
-		protected NamingStrategy() {} // 0x0000000185492010-0x0000000185492020
+		protected NamingStrategy(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public virtual string GetPropertyName(string name, bool hasSpecifiedName) => default; // 0x000000018B402850-0x000000018B402874
-		public virtual string GetExtensionDataName(string name) => default; // 0x000000018B402778-0x000000018B4027A0
-		public virtual string GetDictionaryKey(string key) => default; // 0x000000018B402750-0x000000018B402778
+		public virtual string GetPropertyName(string name, bool hasSpecifiedName); // 0x000000018A8D0540-0x000000018A8D0564
+		public virtual string GetExtensionDataName(string name); // 0x000000018A8D0468-0x000000018A8D0490
+		public virtual string GetDictionaryKey(string key); // 0x000000018A8D0440-0x000000018A8D0468
 		protected abstract string ResolvePropertyName(string name);
-		public override int GetHashCode() => default; // 0x000000018B4027A0-0x000000018B402850
-		public override bool Equals(object obj) => default; // 0x000000018B4026FC-0x000000018B402750
-		protected bool Equals(NamingStrategy other) => default; // 0x000000018B402664-0x000000018B4026FC
+		public override int GetHashCode(); // 0x000000018A8D0490-0x000000018A8D0540
+		[NullableContext(2)]
+		public override bool Equals(object obj); // 0x000000018A8D03EC-0x000000018A8D0440
+		[NullableContext(2)]
+		protected bool Equals(NamingStrategy other); // 0x000000018A8D0354-0x000000018A8D03EC
 	}
 
-	public delegate object ObjectConstructor<T>(object[] args); // TypeDefIndex: 52787; 0x00000000-0x00000000
+	public delegate object ObjectConstructor<T>([Nullable(new byte[2] {1, 2 })] params object[] args); // TypeDefIndex: 55469; 0x00000000-0x00000000
 
-	public sealed class OnErrorAttribute : Attribute // TypeDefIndex: 52788
+	[AttributeUsage(AttributeTargets.Method, Inherited = false)]
+	public sealed class OnErrorAttribute : Attribute // TypeDefIndex: 55470
 	{
-		// Constructors
-		public OnErrorAttribute() {} // Dummy constructor
 	}
 
-	public class ReflectionAttributeProvider : IAttributeProvider // TypeDefIndex: 52789
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class ReflectionAttributeProvider : IAttributeProvider // TypeDefIndex: 55471
 	{
 		// Fields
 		private readonly object _attributeProvider; // 0x10
 	
 		// Constructors
-		public ReflectionAttributeProvider() {} // Dummy constructor
-		public ReflectionAttributeProvider(object attributeProvider) {} // 0x000000018407FF60-0x000000018407FFB0
+		public ReflectionAttributeProvider(object attributeProvider); // 0x0000000183220020-0x0000000183220040
 	}
 
-	public class ReflectionValueProvider : IValueProvider // TypeDefIndex: 52790
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class ReflectionValueProvider : IValueProvider // TypeDefIndex: 55472
 	{
 		// Fields
 		private readonly MemberInfo _memberInfo; // 0x10
 	
 		// Constructors
-		public ReflectionValueProvider() {} // Dummy constructor
-		public ReflectionValueProvider(MemberInfo memberInfo) {} // 0x000000018407FFB0-0x0000000184080000
+		public ReflectionValueProvider(MemberInfo memberInfo); // 0x0000000183220040-0x0000000183220060
 	
 		// Methods
-		public void SetValue(object target, object value) {} // 0x0000000184078540-0x0000000184078810
-		public object GetValue(object target) => default; // 0x00000001843A6DD0-0x00000001843A6E70
+		public void SetValue(object target, [Nullable(2)] object value); // 0x0000000182FB2C00-0x0000000182FB2E10
+		public object GetValue(object target); // 0x0000000183594940-0x00000001835949B0
 	}
 
-	public class SnakeCaseNamingStrategy : NamingStrategy // TypeDefIndex: 52791
+	public class SnakeCaseNamingStrategy : NamingStrategy // TypeDefIndex: 55473
 	{
 		// Constructors
-		public SnakeCaseNamingStrategy(bool processDictionaryKeys, bool overrideSpecifiedNames) {} // 0x0000000185FD20F0-0x0000000185FD2100
-		public SnakeCaseNamingStrategy(bool processDictionaryKeys, bool overrideSpecifiedNames, bool processExtensionDataNames) {} // 0x0000000185FD20E0-0x0000000185FD20F0
-		public SnakeCaseNamingStrategy() {} // 0x0000000185492010-0x0000000185492020
+		public SnakeCaseNamingStrategy(bool processDictionaryKeys, bool overrideSpecifiedNames); // 0x0000000184DA5CA0-0x0000000184DA5CB0
+		public SnakeCaseNamingStrategy(bool processDictionaryKeys, bool overrideSpecifiedNames, bool processExtensionDataNames); // 0x0000000184DA5C90-0x0000000184DA5CA0
+		public SnakeCaseNamingStrategy(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		protected override string ResolvePropertyName(string name) => default; // 0x000000018B402874-0x000000018B402880
+		[NullableContext(1)]
+		protected override string ResolvePropertyName(string name); // 0x000000018A8D0564-0x000000018A8D0570
 	}
 
-	internal class TraceJsonReader : JsonReader, IJsonLineInfo // TypeDefIndex: 52792
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class TraceJsonReader : JsonReader, IJsonLineInfo // TypeDefIndex: 55474
 	{
 		// Fields
 		private readonly JsonReader _innerReader; // 0x78
@@ -4196,35 +4915,40 @@ namespace Newtonsoft.Json.Serialization
 		private readonly StringWriter _sw; // 0x88
 	
 		// Properties
-		public override int Depth { get => default; } // 0x000000018B402DD8-0x000000018B402DFC 
-		public override string Path { get => default; } // 0x000000018B402DFC-0x000000018B402E20 
-		public override JsonToken TokenType { get => default; } // 0x000000018B402E20-0x000000018B402E44 
-		public override object Value { get => default; } // 0x000000018B402E68-0x000000018B402E8C 
-		public override System.Type ValueType { get => default; } // 0x000000018B402E44-0x000000018B402E68 
-		int IJsonLineInfo.LineNumber { get => default; } // 0x000000018B402918-0x000000018B402968 
-		int IJsonLineInfo.LinePosition { get => default; } // 0x000000018B402968-0x000000018B4029B8 
+		public override int Depth { get; } // 0x000000018A8D0AC8-0x000000018A8D0AEC 
+		public override string Path { get; } // 0x000000018A8D0AEC-0x000000018A8D0B10 
+		public override JsonToken TokenType { get; } // 0x000000018A8D0B10-0x000000018A8D0B34 
+		[Nullable(2)]
+		public override object Value { [NullableContext(2)] get; } // 0x000000018A8D0B58-0x000000018A8D0B7C 
+		[Nullable(2)]
+		public override System.Type ValueType { [NullableContext(2)] get; } // 0x000000018A8D0B34-0x000000018A8D0B58 
+		int IJsonLineInfo.LineNumber { get; } // 0x000000018A8D0608-0x000000018A8D0658 
+		int IJsonLineInfo.LinePosition { get; } // 0x000000018A8D0658-0x000000018A8D06A8 
 	
 		// Constructors
-		public TraceJsonReader() {} // Dummy constructor
-		public TraceJsonReader(JsonReader innerReader) {} // 0x000000018B402C80-0x000000018B402DD8
+		public TraceJsonReader(JsonReader innerReader); // 0x000000018A8D0970-0x000000018A8D0AC8
 	
 		// Methods
-		public string GetDeserializedJsonMessage() => default; // 0x000000018B4028A4-0x000000018B4028C8
-		public override bool Read() => default; // 0x000000018B402C08-0x000000018B402C4C
-		public override int? ReadAsInt32() => default; // 0x000000018B402B80-0x000000018B402BC4
-		public override string ReadAsString() => default; // 0x000000018B402BC4-0x000000018B402C08
-		public override byte[] ReadAsBytes() => default; // 0x000000018B4029FC-0x000000018B402A40
-		public override decimal? ReadAsDecimal() => default; // 0x000000018B402ADC-0x000000018B402B30
-		public override double? ReadAsDouble() => default; // 0x000000018B402B30-0x000000018B402B80
-		public override bool? ReadAsBoolean() => default; // 0x000000018B4029B8-0x000000018B4029FC
-		public override System.DateTime? ReadAsDateTime() => default; // 0x000000018B402A94-0x000000018B402ADC
-		public override DateTimeOffset? ReadAsDateTimeOffset() => default; // 0x000000018B402A40-0x000000018B402A94
-		public void WriteCurrentToken() {} // 0x000000018B402C4C-0x000000018B402C80
-		public override void Close() {} // 0x000000018B402880-0x000000018B4028A4
-		bool IJsonLineInfo.HasLineInfo() => default; // 0x000000018B4028C8-0x000000018B402918
+		public string GetDeserializedJsonMessage(); // 0x000000018A8D0594-0x000000018A8D05B8
+		public override bool Read(); // 0x000000018A8D08F8-0x000000018A8D093C
+		public override int? ReadAsInt32(); // 0x000000018A8D0870-0x000000018A8D08B4
+		[NullableContext(2)]
+		public override string ReadAsString(); // 0x000000018A8D08B4-0x000000018A8D08F8
+		[NullableContext(2)]
+		public override byte[] ReadAsBytes(); // 0x000000018A8D06EC-0x000000018A8D0730
+		public override decimal? ReadAsDecimal(); // 0x000000018A8D07CC-0x000000018A8D0820
+		public override double? ReadAsDouble(); // 0x000000018A8D0820-0x000000018A8D0870
+		public override bool? ReadAsBoolean(); // 0x000000018A8D06A8-0x000000018A8D06EC
+		public override System.DateTime? ReadAsDateTime(); // 0x000000018A8D0784-0x000000018A8D07CC
+		public override DateTimeOffset? ReadAsDateTimeOffset(); // 0x000000018A8D0730-0x000000018A8D0784
+		public void WriteCurrentToken(); // 0x000000018A8D093C-0x000000018A8D0970
+		public override void Close(); // 0x000000018A8D0570-0x000000018A8D0594
+		bool IJsonLineInfo.HasLineInfo(); // 0x000000018A8D05B8-0x000000018A8D0608
 	}
 
-	internal class TraceJsonWriter : JsonWriter // TypeDefIndex: 52793
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class TraceJsonWriter : JsonWriter // TypeDefIndex: 55475
 	{
 		// Fields
 		private readonly JsonWriter _innerWriter; // 0x60
@@ -4232,120 +4956,136 @@ namespace Newtonsoft.Json.Serialization
 		private readonly StringWriter _sw; // 0x70
 	
 		// Constructors
-		public TraceJsonWriter() {} // Dummy constructor
-		public TraceJsonWriter(JsonWriter innerWriter) {} // 0x000000018B4045FC-0x000000018B4047F4
+		public TraceJsonWriter(JsonWriter innerWriter); // 0x000000018A8D2300-0x000000018A8D24F8
 	
 		// Methods
-		public string GetSerializedJsonMessage() => default; // 0x000000018B402ED0-0x000000018B402EF4
-		public override void WriteValue(decimal value) {} // 0x000000018B403648-0x000000018B4036C4
-		public override void WriteValue(decimal? value) {} // 0x000000018B403898-0x000000018B403958
-		public override void WriteValue(bool value) {} // 0x000000018B40383C-0x000000018B403898
-		public override void WriteValue(bool? value) {} // 0x000000018B403A74-0x000000018B403B0C
-		public override void WriteValue(byte value) {} // 0x000000018B4033D8-0x000000018B403434
-		public override void WriteValue(byte? value) {} // 0x000000018B403D44-0x000000018B403DD4
-		public override void WriteValue(char value) {} // 0x000000018B403A18-0x000000018B403A74
-		public override void WriteValue(char? value) {} // 0x000000018B403DD4-0x000000018B403E60
-		public override void WriteValue(byte[] value) {} // 0x000000018B40449C-0x000000018B404508
-		public override void WriteValue(System.DateTime value) {} // 0x000000018B4042A4-0x000000018B404300
-		public override void WriteValue(System.DateTime? value) {} // 0x000000018B403434-0x000000018B4034D4
-		public override void WriteValue(DateTimeOffset value) {} // 0x000000018B4036C4-0x000000018B403738
-		public override void WriteValue(DateTimeOffset? value) {} // 0x000000018B403958-0x000000018B403A18
-		public override void WriteValue(double value) {} // 0x000000018B403738-0x000000018B403794
-		public override void WriteValue(double? value) {} // 0x000000018B403BF4-0x000000018B403CA0
-		public override void WriteUndefined() {} // 0x000000018B4032AC-0x000000018B4032F0
-		public override void WriteNull() {} // 0x000000018B40301C-0x000000018B403060
-		public override void WriteValue(float value) {} // 0x000000018B404008-0x000000018B404064
-		public override void WriteValue(float? value) {} // 0x000000018B4043A8-0x000000018B404440
-		public override void WriteValue(Guid value) {} // 0x000000018B403F00-0x000000018B403F74
-		public override void WriteValue(Guid? value) {} // 0x000000018B404064-0x000000018B40411C
-		public override void WriteValue(int value) {} // 0x000000018B4035F0-0x000000018B403648
-		public override void WriteValue(int? value) {} // 0x000000018B4032F0-0x000000018B403388
-		public override void WriteValue(long value) {} // 0x000000018B404174-0x000000018B4041D0
-		public override void WriteValue(long? value) {} // 0x000000018B403794-0x000000018B40383C
-		public override void WriteValue(object value) {} // 0x000000018B4041D0-0x000000018B4042A4
-		public override void WriteValue(sbyte value) {} // 0x000000018B403388-0x000000018B4033D8
-		public override void WriteValue(sbyte? value) {} // 0x000000018B4034D4-0x000000018B403564
-		public override void WriteValue(short value) {} // 0x000000018B404508-0x000000018B404564
-		public override void WriteValue(short? value) {} // 0x000000018B403564-0x000000018B4035F0
-		public override void WriteValue(string value) {} // 0x000000018B403B98-0x000000018B403BF4
-		public override void WriteValue(TimeSpan value) {} // 0x000000018B403CA0-0x000000018B403CF0
-		public override void WriteValue(TimeSpan? value) {} // 0x000000018B403E60-0x000000018B403F00
-		public override void WriteValue(uint value) {} // 0x000000018B40411C-0x000000018B404174
-		public override void WriteValue(uint? value) {} // 0x000000018B404564-0x000000018B4045FC
-		public override void WriteValue(ulong value) {} // 0x000000018B404440-0x000000018B40449C
-		public override void WriteValue(ulong? value) {} // 0x000000018B404300-0x000000018B4043A8
-		public override void WriteValue(System.Uri value) {} // 0x000000018B403F74-0x000000018B404008
-		public override void WriteValue(ushort value) {} // 0x000000018B403CF0-0x000000018B403D44
-		public override void WriteValue(ushort? value) {} // 0x000000018B403B0C-0x000000018B403B98
-		public override void WriteComment(string text) {} // 0x000000018B402EF4-0x000000018B402F50
-		public override void WriteStartArray() {} // 0x000000018B4031C8-0x000000018B40320C
-		public override void WriteEndArray() {} // 0x000000018B402F50-0x000000018B402F94
-		public override void WriteStartConstructor(string name) {} // 0x000000018B40320C-0x000000018B403268
-		public override void WriteEndConstructor() {} // 0x000000018B402F94-0x000000018B402FD8
-		public override void WritePropertyName(string name) {} // 0x000000018B403060-0x000000018B4030BC
-		public override void WritePropertyName(string name, bool escape) {} // 0x000000018B4030BC-0x000000018B403120
-		public override void WriteStartObject() {} // 0x000000018B403268-0x000000018B4032AC
-		public override void WriteEndObject() {} // 0x000000018B402FD8-0x000000018B40301C
-		public override void WriteRawValue(string json) {} // 0x000000018B403120-0x000000018B40317C
-		public override void WriteRaw(string json) {} // 0x000000018B40317C-0x000000018B4031C8
-		public override void Close() {} // 0x000000018B402E8C-0x000000018B402ED0
+		public string GetSerializedJsonMessage(); // 0x000000018A8D0BC0-0x000000018A8D0BE4
+		public override void WriteValue(decimal value); // 0x000000018A8D1344-0x000000018A8D13C0
+		public override void WriteValue(decimal? value); // 0x000000018A8D1594-0x000000018A8D1654
+		public override void WriteValue(bool value); // 0x000000018A8D1538-0x000000018A8D1594
+		public override void WriteValue(bool? value); // 0x000000018A8D1770-0x000000018A8D1808
+		public override void WriteValue(byte value); // 0x000000018A8D10D4-0x000000018A8D1130
+		public override void WriteValue(byte? value); // 0x000000018A8D1A48-0x000000018A8D1AD8
+		public override void WriteValue(char value); // 0x000000018A8D1714-0x000000018A8D1770
+		public override void WriteValue(char? value); // 0x000000018A8D1AD8-0x000000018A8D1B64
+		[NullableContext(2)]
+		public override void WriteValue(byte[] value); // 0x000000018A8D21A0-0x000000018A8D220C
+		public override void WriteValue(System.DateTime value); // 0x000000018A8D1FA8-0x000000018A8D2004
+		public override void WriteValue(System.DateTime? value); // 0x000000018A8D1130-0x000000018A8D11D0
+		public override void WriteValue(DateTimeOffset value); // 0x000000018A8D13C0-0x000000018A8D1434
+		public override void WriteValue(DateTimeOffset? value); // 0x000000018A8D1654-0x000000018A8D1714
+		public override void WriteValue(double value); // 0x000000018A8D1434-0x000000018A8D1490
+		public override void WriteValue(double? value); // 0x000000018A8D18F0-0x000000018A8D199C
+		public override void WriteUndefined(); // 0x000000018A8D0FA8-0x000000018A8D0FEC
+		public override void WriteNull(); // 0x000000018A8D0D0C-0x000000018A8D0D50
+		public override void WriteValue(float value); // 0x000000018A8D1D0C-0x000000018A8D1D68
+		public override void WriteValue(float? value); // 0x000000018A8D20AC-0x000000018A8D2144
+		public override void WriteValue(Guid value); // 0x000000018A8D1C04-0x000000018A8D1C78
+		public override void WriteValue(Guid? value); // 0x000000018A8D1D68-0x000000018A8D1E20
+		public override void WriteValue(int value); // 0x000000018A8D12EC-0x000000018A8D1344
+		public override void WriteValue(int? value); // 0x000000018A8D0FEC-0x000000018A8D1084
+		public override void WriteValue(long value); // 0x000000018A8D1E78-0x000000018A8D1ED4
+		public override void WriteValue(long? value); // 0x000000018A8D1490-0x000000018A8D1538
+		[NullableContext(2)]
+		public override void WriteValue(object value); // 0x000000018A8D1ED4-0x000000018A8D1FA8
+		public override void WriteValue(sbyte value); // 0x000000018A8D1084-0x000000018A8D10D4
+		public override void WriteValue(sbyte? value); // 0x000000018A8D11D0-0x000000018A8D1260
+		public override void WriteValue(short value); // 0x000000018A8D220C-0x000000018A8D2268
+		public override void WriteValue(short? value); // 0x000000018A8D1260-0x000000018A8D12EC
+		[NullableContext(2)]
+		public override void WriteValue(string value); // 0x000000018A8D1894-0x000000018A8D18F0
+		public override void WriteValue(TimeSpan value); // 0x000000018A8D199C-0x000000018A8D19EC
+		public override void WriteValue(TimeSpan? value); // 0x000000018A8D1B64-0x000000018A8D1C04
+		public override void WriteValue(uint value); // 0x000000018A8D1E20-0x000000018A8D1E78
+		public override void WriteValue(uint? value); // 0x000000018A8D2268-0x000000018A8D2300
+		public override void WriteValue(ulong value); // 0x000000018A8D2144-0x000000018A8D21A0
+		public override void WriteValue(ulong? value); // 0x000000018A8D2004-0x000000018A8D20AC
+		[NullableContext(2)]
+		public override void WriteValue(System.Uri value); // 0x000000018A8D1C78-0x000000018A8D1D0C
+		public override void WriteValue(ushort value); // 0x000000018A8D19EC-0x000000018A8D1A48
+		public override void WriteValue(ushort? value); // 0x000000018A8D1808-0x000000018A8D1894
+		[NullableContext(2)]
+		public override void WriteComment(string text); // 0x000000018A8D0BE4-0x000000018A8D0C40
+		public override void WriteStartArray(); // 0x000000018A8D0EC4-0x000000018A8D0F08
+		public override void WriteEndArray(); // 0x000000018A8D0C40-0x000000018A8D0C84
+		public override void WriteStartConstructor(string name); // 0x000000018A8D0F08-0x000000018A8D0F64
+		public override void WriteEndConstructor(); // 0x000000018A8D0C84-0x000000018A8D0CC8
+		public override void WritePropertyName(string name); // 0x000000018A8D0D50-0x000000018A8D0DAC
+		public override void WritePropertyName(string name, bool escape); // 0x000000018A8D0DAC-0x000000018A8D0E1C
+		public override void WriteStartObject(); // 0x000000018A8D0F64-0x000000018A8D0FA8
+		public override void WriteEndObject(); // 0x000000018A8D0CC8-0x000000018A8D0D0C
+		[NullableContext(2)]
+		public override void WriteRawValue(string json); // 0x000000018A8D0E1C-0x000000018A8D0E78
+		[NullableContext(2)]
+		public override void WriteRaw(string json); // 0x000000018A8D0E78-0x000000018A8D0EC4
+		public override void Close(); // 0x000000018A8D0B7C-0x000000018A8D0BC0
 	}
 }
 
 namespace Newtonsoft.Json.Utilities
 {
-	public static class AotHelper // TypeDefIndex: 52636
+	[Nullable(0)]
+	[NullableContext(2)]
+	public static class AotHelper // TypeDefIndex: 55318
 	{
 		// Fields
 		private static bool s_alwaysFalse; // 0x00
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c__2<T> // TypeDefIndex: 52635
+		[CompilerGenerated]
+		private sealed class __c__2<T> // TypeDefIndex: 55317
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c__2<T> __9;
+			[Nullable(0)]
 			public static Action __9__2_0;
 	
 			// Constructors
-			static __c__2() {} // 0x0000000185C2C050-0x0000000185C2C0E0
-			public __c__2() {}
+			static __c__2();
+			public __c__2();
 	
 			// Methods
-			internal void _EnsureList_b__2_0() {} // 0x000000018B3DE4F4-0x000000018B3DE544
+			internal void _EnsureList_b__2_0();
 		}
 	
 		// Constructors
-		static AotHelper() {}
+		static AotHelper(); // 0x0000000184D269F0-0x0000000184D26A80
 	
 		// Methods
-		public static void Ensure(Action action) {} // 0x0000000185F51ED0-0x0000000185F51F80
-		public static void EnsureList<T>() {}
-		public static bool IsFalse() => default;
+		[NullableContext(1)]
+		public static void Ensure(Action action); // 0x0000000184A25330-0x0000000184A25500
+		public static void EnsureList<T>();
+		public static bool IsFalse(); // 0x000000018A8AEC7C-0x000000018A8AECCC
 	}
 
-	internal class Base64Encoder // TypeDefIndex: 52637
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class Base64Encoder // TypeDefIndex: 55319
 	{
 		// Fields
 		private readonly char[] _charsLine; // 0x10
 		private readonly TextWriter _writer; // 0x18
+		[Nullable(2)]
 		private byte[] _leftOverBytes; // 0x20
 		private int _leftOverBytesCount; // 0x28
 	
 		// Constructors
-		public Base64Encoder() {} // Dummy constructor
-		public Base64Encoder(TextWriter writer) {} // 0x000000018B3DEA6C-0x000000018B3DEB30
+		public Base64Encoder(TextWriter writer); // 0x000000018A8AF1F4-0x000000018A8AF2B8
 	
 		// Methods
-		private void ValidateEncode(byte[] buffer, int index, int count) {} // 0x000000018B3DE8C4-0x000000018B3DEA3C
-		public void Encode(byte[] buffer, int index, int count) {} // 0x000000018B3DE544-0x000000018B3DE6B0
-		private void StoreLeftOverBytes(byte[] buffer, int index, ref int count) {} // 0x000000018B3DE7DC-0x000000018B3DE8C4
-		private bool FulfillFromLeftover(byte[] buffer, int index, ref int count) => default; // 0x000000018B3DE74C-0x000000018B3DE7DC
-		public void Flush() {} // 0x000000018B3DE6B0-0x000000018B3DE74C
-		private void WriteChars(char[] chars, int index, int count) {} // 0x000000018B3DEA3C-0x000000018B3DEA6C
+		private void ValidateEncode(byte[] buffer, int index, int count); // 0x000000018A8AF04C-0x000000018A8AF1C4
+		public void Encode(byte[] buffer, int index, int count); // 0x000000018A8AECCC-0x000000018A8AEE38
+		private void StoreLeftOverBytes(byte[] buffer, int index, ref int count); // 0x000000018A8AEF64-0x000000018A8AF04C
+		private bool FulfillFromLeftover(byte[] buffer, int index, ref int count); // 0x000000018A8AEED4-0x000000018A8AEF64
+		public void Flush(); // 0x000000018A8AEE38-0x000000018A8AEED4
+		private void WriteChars(char[] chars, int index, int count); // 0x000000018A8AF1C4-0x000000018A8AF1F4
 	}
 
-	internal class BidirectionalDictionary<TFirst, TSecond> // TypeDefIndex: 52638
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class BidirectionalDictionary<TFirst, TSecond> // TypeDefIndex: 55320
 	{
 		// Fields
 		private readonly IDictionary<TFirst, TSecond> _firstToSecond;
@@ -4354,22 +5094,17 @@ namespace Newtonsoft.Json.Utilities
 		private readonly string _duplicateSecondErrorMessage;
 	
 		// Constructors
-		public BidirectionalDictionary() {} // Dummy constructor
-		public BidirectionalDictionary(IEqualityComparer<TFirst> firstEqualityComparer, IEqualityComparer<TSecond> secondEqualityComparer, string duplicateFirstErrorMessage, string duplicateSecondErrorMessage) {}
+		public BidirectionalDictionary(IEqualityComparer<TFirst> firstEqualityComparer, IEqualityComparer<TSecond> secondEqualityComparer, string duplicateFirstErrorMessage, string duplicateSecondErrorMessage);
 	
 		// Methods
-		public void Set(TFirst first, TSecond second) {}
-		public bool TryGetByFirst(TFirst first, out ref TSecond second) {
-			second = default;
-			return default;
-		}
-		public bool TryGetBySecond(TSecond second, out ref TFirst first) {
-			first = default;
-			return default;
-		}
+		public void Set(TFirst first, TSecond second);
+		public bool TryGetByFirst(TFirst first, [NotNullWhen(true)] [Nullable(2)] out ref TSecond second);
+		public bool TryGetBySecond(TSecond second, [NotNullWhen(true)] [Nullable(2)] out ref TFirst first);
 	}
 
-	internal static class BoxedPrimitives // TypeDefIndex: 52639
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class BoxedPrimitives // TypeDefIndex: 55321
 	{
 		// Fields
 		internal static readonly object BooleanTrue; // 0x00
@@ -4401,92 +5136,111 @@ namespace Newtonsoft.Json.Utilities
 		internal static readonly object DoubleZero; // 0xD0
 	
 		// Constructors
-		static BoxedPrimitives() {} // 0x0000000184931B50-0x0000000184932300
+		static BoxedPrimitives(); // 0x0000000184305D50-0x00000001843064F0
 	
 		// Methods
-		internal static object Get(bool value) => default; // 0x00000001841D54F0-0x00000001841D5580
-		internal static object Get(int value) => default; // 0x0000000184B23B50-0x0000000184B23E30
-		internal static object Get(long value) => default; // 0x00000001845963D0-0x00000001845966C0
-		internal static object Get(decimal value) => default; // 0x000000018B3DF5F8-0x000000018B3DF6B0
-		internal static object Get(double value) => default; // 0x0000000184C75A80-0x0000000184C75D50
+		internal static object Get(bool value); // 0x0000000183429720-0x0000000183429790
+		internal static object Get(int value); // 0x0000000183B2F4D0-0x0000000183B2F8C0
+		internal static object Get(long value); // 0x0000000183428030-0x00000001834283F0
+		internal static object Get(decimal value); // 0x000000018A8AFD80-0x000000018A8AFE38
+		internal static object Get(double value); // 0x00000001839F6160-0x00000001839F6420
 	}
 
-	internal static class CollectionUtils // TypeDefIndex: 52641
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class CollectionUtils // TypeDefIndex: 55323
 	{
 		// Nested types
-		private static class EmptyArrayContainer<T> // TypeDefIndex: 52640
+		[NullableContext(0)]
+		private static class EmptyArrayContainer<T> // TypeDefIndex: 55322
 		{
 			// Fields
+			[Nullable(1)]
 			public static readonly T[] Empty;
 	
 			// Constructors
-			static EmptyArrayContainer() {}
+			static EmptyArrayContainer();
 		}
 	
 		// Methods
-		public static bool IsNullOrEmpty<T>(ICollection<T> collection) => default;
-		public static void AddRange<T>(IList<T> initial, IEnumerable<T> collection) {} // 0x0000000184347A30-0x0000000184347BE0
-		public static bool IsDictionaryType(System.Type type) => default; // 0x0000000184BBA9E0-0x0000000184BBAAE0
-		public static ConstructorInfo ResolveEnumerableCollectionConstructor(System.Type collectionType, System.Type collectionItemType) => default; // 0x0000000184BBA280-0x0000000184BBA4C0
-		public static ConstructorInfo ResolveEnumerableCollectionConstructor(System.Type collectionType, System.Type collectionItemType, System.Type constructorArgumentType) => default;
-		public static int IndexOf<T>(IEnumerable<T> collection, Func<T, bool> predicate) => default;
-		public static bool Contains<T>(List<T> list, T value, IEqualityComparer comparer) => default;
-		public static int IndexOfReference<T>(List<T> list, T item) => default;
-		public static void FastReverse<T>(List<T> list) {} // 0x000000018B3DF910-0x000000018B3DFA14
-		private static IList<int> GetDimensions(IList values, int dimensionsCount) => default; // 0x000000018B3DF73C-0x000000018B3DF910
-		private static void CopyFromJaggedToMultidimensionalArray(IList values, Array multidimensionalArray, int[] indices) {} // 0x000000018B3DFA14-0x000000018B3DFAB0
-		private static object JaggedArrayGetValue(IList values, int[] indices) => default; // 0x000000018B3DFAB0-0x000000018B3DFBA4
-		public static Array ToMultidimensionalArray(IList values, System.Type type, int rank) => default;
-		public static T[] ArrayEmpty<T>() => default;
+		public static bool IsNullOrEmpty<T>(ICollection<T> collection);
+		public static bool IsDictionaryType(System.Type type); // 0x00000001835CF890-0x00000001835CF9D0
+		public static ConstructorInfo ResolveEnumerableCollectionConstructor(System.Type collectionType, System.Type collectionItemType); // 0x0000000183FD8F30-0x0000000183FD9030
+		public static ConstructorInfo ResolveEnumerableCollectionConstructor(System.Type collectionType, System.Type collectionItemType, System.Type constructorArgumentType); // 0x0000000183FD9030-0x0000000183FD9200
+		private static IList<int> GetDimensions(IList values, int dimensionsCount); // 0x000000018A8B0098-0x000000018A8B019C
+		private static void CopyFromJaggedToMultidimensionalArray(IList values, Array multidimensionalArray, int[] indices); // 0x000000018A8AFEC4-0x000000018A8B0098
+		private static object JaggedArrayGetValue(IList values, int[] indices); // 0x000000018A8B019C-0x000000018A8B0238
+		public static Array ToMultidimensionalArray(IList values, System.Type type, int rank); // 0x000000018A8B0238-0x000000018A8B032C
+		public static T[] ArrayEmpty<T>();
+	
+		// Extension methods
+		public static void AddRange<T>(this IList<T> initial, IEnumerable<T> collection);
+		public static int IndexOf<T>(this IEnumerable<T> collection, Func<T, bool> predicate);
+		public static bool Contains<T>(this List<T> list, T value, IEqualityComparer comparer);
+		public static int IndexOfReference<T>(this List<T> list, T item);
+		public static void FastReverse<T>(this List<T> list);
 	}
 
-	internal interface IWrappedCollection : IList // TypeDefIndex: 52642
+	internal interface IWrappedCollection : IList // TypeDefIndex: 55324
 	{
 		// Properties
-		object UnderlyingCollection { get; }
+		[Nullable(1)]
+		object UnderlyingCollection { [NullableContext(1)] get; }
 	}
 
-	internal class CollectionWrapper<T> : ICollection<T>, IWrappedCollection // TypeDefIndex: 52643
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class CollectionWrapper<T> : ICollection<T>, IWrappedCollection // TypeDefIndex: 55325
 	{
 		// Fields
+		[Nullable(2)]
 		private readonly IList _list;
+		[Nullable(new byte[2] {2, 1 })]
 		private readonly ICollection<T> _genericCollection;
+		[Nullable(2)]
 		private object _syncRoot;
 	
 		// Properties
-		public virtual int Count { get => default; }
-		public virtual bool IsReadOnly { get => default; }
-		bool IList.IsFixedSize { get => default; }
-		object IList.this[int index] { get => default; set {} }
-		bool ICollection.IsSynchronized { get => default; }
-		object ICollection.SyncRoot { get => default; }
-		public object UnderlyingCollection { get => default; }
+		public virtual int Count { get; }
+		public virtual bool IsReadOnly { get; }
+		bool IList.IsFixedSize { get; }
+		[Nullable(2)]
+		object IList.this[int index] { [NullableContext(2)] get => default; [NullableContext(2)] set {} }
+		bool ICollection.IsSynchronized { get; }
+		object ICollection.SyncRoot { get; }
+		public object UnderlyingCollection { get; }
 	
 		// Constructors
-		public CollectionWrapper() {} // Dummy constructor
-		public CollectionWrapper(IList list) {}
-		public CollectionWrapper(ICollection<T> list) {}
+		public CollectionWrapper(IList list);
+		public CollectionWrapper(ICollection<T> list);
 	
 		// Methods
-		public virtual void Add(T item) {}
-		public virtual void Clear() {}
-		public virtual bool Contains(T item) => default;
-		public virtual void CopyTo(T[] array, int arrayIndex) {}
-		public virtual bool Remove(T item) => default;
-		public virtual IEnumerator<T> GetEnumerator() => default;
-		IEnumerator IEnumerable.GetEnumerator() => default;
-		int IList.Add(object value) => default;
-		bool IList.Contains(object value) => default;
-		int IList.IndexOf(object value) => default;
-		void IList.RemoveAt(int index) {}
-		void IList.Insert(int index, object value) {}
-		void IList.Remove(object value) {}
-		void ICollection.CopyTo(Array array, int arrayIndex) {}
-		private static void VerifyValueType(object value) {}
-		private static bool IsCompatibleObject(object value) => default;
+		public virtual void Add(T item);
+		public virtual void Clear();
+		public virtual bool Contains(T item);
+		public virtual void CopyTo(T[] array, int arrayIndex);
+		public virtual bool Remove(T item);
+		public virtual IEnumerator<T> GetEnumerator();
+		IEnumerator IEnumerable.GetEnumerator();
+		[NullableContext(2)]
+		int IList.Add(object value);
+		[NullableContext(2)]
+		bool IList.Contains(object value);
+		[NullableContext(2)]
+		int IList.IndexOf(object value);
+		void IList.RemoveAt(int index);
+		[NullableContext(2)]
+		void IList.Insert(int index, object value);
+		[NullableContext(2)]
+		void IList.Remove(object value);
+		void ICollection.CopyTo(Array array, int arrayIndex);
+		[NullableContext(2)]
+		private static void VerifyValueType(object value);
+		[NullableContext(2)]
+		private static bool IsCompatibleObject(object value);
 	}
 
-	internal enum PrimitiveTypeCode // TypeDefIndex: 52644
+	internal enum PrimitiveTypeCode // TypeDefIndex: 55326
 	{
 		Empty = 0,
 		Object = 1,
@@ -4532,22 +5286,25 @@ namespace Newtonsoft.Json.Utilities
 		DBNull = 41
 	}
 
-	internal class TypeInformation // TypeDefIndex: 52645
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class TypeInformation // TypeDefIndex: 55327
 	{
 		// Fields
+		[CompilerGenerated]
 		private readonly System.Type _Type_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private readonly PrimitiveTypeCode _TypeCode_k__BackingField; // 0x18
 	
 		// Properties
-		public System.Type Type { get; } // 0x000000018346D130-0x000000018346D140 
-		public PrimitiveTypeCode TypeCode { get; } // 0x00000001813AE560-0x00000001813AE570 
+		public System.Type Type { [CompilerGenerated] get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public PrimitiveTypeCode TypeCode { [CompilerGenerated] get; } // 0x00000001811EF5B0-0x00000001811EF5C0 
 	
 		// Constructors
-		public TypeInformation() {} // Dummy constructor
-		public TypeInformation(System.Type type, PrimitiveTypeCode typeCode) {} // 0x00000001845D7850-0x00000001845D7870
+		public TypeInformation(System.Type type, PrimitiveTypeCode typeCode); // 0x0000000183B46FF0-0x0000000183B47040
 	}
 
-	internal enum ParseResult // TypeDefIndex: 52646
+	internal enum ParseResult // TypeDefIndex: 55328
 	{
 		None = 0,
 		Success = 1,
@@ -4555,15 +5312,19 @@ namespace Newtonsoft.Json.Utilities
 		Invalid = 3
 	}
 
-	internal static class ConvertUtils // TypeDefIndex: 52649
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class ConvertUtils // TypeDefIndex: 55331
 	{
 		// Fields
 		private static readonly Dictionary<System.Type, PrimitiveTypeCode> TypeCodeMap; // 0x00
 		private static readonly TypeInformation[] PrimitiveTypeCodes; // 0x08
+		[Nullable(new byte[7] {1, 0, 1, 1, 2, 2, 2 })]
 		private static readonly ThreadSafeStore<StructMultiKey<System.Type, System.Type>, Func<object, object>> CastConverters; // 0x10
 	
 		// Nested types
-		internal enum ConvertResult // TypeDefIndex: 52647
+		[NullableContext(0)]
+		internal enum ConvertResult // TypeDefIndex: 55329
 		{
 			Success = 0,
 			CannotConvertNull = 1,
@@ -4571,72 +5332,49 @@ namespace Newtonsoft.Json.Utilities
 			NoValidConversion = 3
 		}
 	
-		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 52648
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 55330
 		{
 			// Fields
+			[Nullable(new byte[3] {0, 2, 2 })]
 			public MethodCall<object, object> call; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass8_0() {} // 0x0000000184346950-0x0000000184346BE0
+			public __c__DisplayClass8_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal object _CreateCastConverter_b__0(object o) => default; // 0x0000000184346BE0-0x0000000184346E30
+			[NullableContext(2)]
+			internal object _CreateCastConverter_b__0(object o); // 0x000000018A8BACF4-0x000000018A8BAD88
 		}
 	
 		// Constructors
-		static ConvertUtils() {} // 0x000000018B3EA474-0x000000018B3EA508
+		static ConvertUtils(); // 0x00000001844E2290-0x00000001844E32E0
 	
 		// Methods
-		public static PrimitiveTypeCode GetTypeCode(System.Type t) => default; // 0x000000018B3E0E58-0x000000018B3E0ED4
-		public static PrimitiveTypeCode GetTypeCode(System.Type t, out bool isEnum) {
-			isEnum = default;
-			return default;
-		} // 0x00000001843465E0-0x0000000184346670
-		public static TypeInformation GetTypeInformation(IConvertible convertable) => default; // 0x000000018B3E0ED4-0x000000018B3E0F44
-		public static bool IsConvertible(System.Type t) => default; // 0x000000018B3DFE5C-0x000000018B3E001C
-		public static TimeSpan ParseTimeSpan(string input) => default; // 0x000000018B3E0F44-0x000000018B3E12B4
-		private static Func<object, object> CreateCastConverter(StructMultiKey<System.Type, System.Type> t) => default; // 0x000000018B3E0A18-0x000000018B3E0E58
-		internal static BigInteger ToBigInteger(object value) => default; // 0x000000018B3DFBA4-0x000000018B3DFE5C
-		public static object FromBigInteger(BigInteger i, System.Type targetType) => default; // 0x000000018B3E1B24-0x000000018B3E1C24
-		public static object Convert(object initialValue, CultureInfo culture, System.Type targetType) => default; // 0x000000018B3E1300-0x000000018B3E1B24
-		private static bool TryConvert(object initialValue, CultureInfo culture, System.Type targetType, out object value) {
-			value = default;
-			return default;
-		} // 0x0000000185F49A60-0x0000000185F49B10
-		private static ConvertResult TryConvertInternal(object initialValue, CultureInfo culture, System.Type targetType, out object value) {
-			value = default;
-			return default;
-		} // 0x000000018B3E0808-0x000000018B3E0A18
-		public static object ConvertOrCast(object initialValue, CultureInfo culture, System.Type targetType) => default; // 0x000000018B3E1CBC-0x000000018B3E1CC4
-		private static object EnsureTypeAssignable(object value, System.Type initialType, System.Type targetType) => default; // 0x0000000184346880-0x0000000184346950
-		public static bool VersionTryParse(string input, out System.Version result) {
-			result = default;
-			return default;
-		} // 0x0000000184897090-0x0000000184897180
-		public static bool IsInteger(object value) => default; // 0x000000018484B520-0x000000018484B610
-		public static Newtonsoft.Json.Utilities.ParseResult Int32TryParse(char[] chars, int start, int length, out int value) {
-			value = default;
-			return default;
-		} // 0x000000018B3E001C-0x000000018B3E0808
-		public static Newtonsoft.Json.Utilities.ParseResult Int64TryParse(char[] chars, int start, int length, out long value) {
-			value = default;
-			return default;
-		} // 0x000000018B3E12B4-0x000000018B3E1300
-		public static Newtonsoft.Json.Utilities.ParseResult DecimalTryParse(char[] chars, int start, int length, out decimal value) {
-			value = default;
-			return default;
-		} // 0x000000018B3E1C24-0x000000018B3E1CBC
-		public static bool TryConvertGuid(string s, out Guid g) {
-			g = default;
-			return default;
-		} // 0x0000000185673AF0-0x0000000185674B40
-		public static bool TryHexTextToInt(char[] text, int start, int end, out int value) {
-			value = default;
-			return default;
-		} // 0x0000000185492010-0x0000000185492020
+		public static PrimitiveTypeCode GetTypeCode(System.Type t); // 0x00000001835D0DC0-0x00000001835D0F90
+		public static PrimitiveTypeCode GetTypeCode(System.Type t, out bool isEnum); // 0x00000001835D0F90-0x00000001835D1140
+		public static TypeInformation GetTypeInformation(IConvertible convertable); // 0x000000018A8B16FC-0x000000018A8B177C
+		public static bool IsConvertible(System.Type t); // 0x00000001835D0020-0x00000001835D0080
+		public static TimeSpan ParseTimeSpan(string input); // 0x000000018A8B177C-0x000000018A8B17EC
+		[NullableContext(2)]
+		private static Func<object, object> CreateCastConverter([Nullable(new byte[3] {0, 1, 1 })] StructMultiKey<System.Type, System.Type> t); // 0x000000018A8B0710-0x000000018A8B08D0
+		internal static BigInteger ToBigInteger(object value); // 0x000000018A8B17EC-0x000000018A8B1B5C
+		public static object FromBigInteger(BigInteger i, System.Type targetType); // 0x000000018A8B12CC-0x000000018A8B16FC
+		public static object Convert(object initialValue, CultureInfo culture, System.Type targetType); // 0x000000018A8B0458-0x000000018A8B0710
+		private static bool TryConvert([Nullable(2)] object initialValue, CultureInfo culture, System.Type targetType, [Nullable(2)] out object value); // 0x000000018A8B23CC-0x000000018A8B24CC
+		private static ConvertResult TryConvertInternal([Nullable(2)] object initialValue, CultureInfo culture, System.Type targetType, [Nullable(2)] out object value); // 0x000000018A8B1BA8-0x000000018A8B23CC
+		public static object ConvertOrCast([Nullable(2)] object initialValue, CultureInfo culture, System.Type targetType); // 0x000000018A8B032C-0x000000018A8B0458
+		private static object EnsureTypeAssignable([Nullable(2)] object value, System.Type initialType, System.Type targetType); // 0x000000018A8B10BC-0x000000018A8B12CC
+		public static bool VersionTryParse(string input, [NotNullWhen(true)] [Nullable(2)] out System.Version result); // 0x000000018A8B2564-0x000000018A8B256C
+		public static bool IsInteger(object value); // 0x00000001835D0D00-0x00000001835D0DC0
+		public static Newtonsoft.Json.Utilities.ParseResult Int32TryParse(char[] chars, int start, int length, out int value); // 0x00000001838C05A0-0x00000001838C0690
+		public static Newtonsoft.Json.Utilities.ParseResult Int64TryParse(char[] chars, int start, int length, out long value); // 0x0000000183824B40-0x0000000183824C30
+		public static Newtonsoft.Json.Utilities.ParseResult DecimalTryParse(char[] chars, int start, int length, out decimal value); // 0x000000018A8B08D0-0x000000018A8B10BC
+		public static bool TryConvertGuid(string s, out Guid g); // 0x000000018A8B1B5C-0x000000018A8B1BA8
+		public static bool TryHexTextToInt(char[] text, int start, int end, out int value); // 0x000000018A8B24CC-0x000000018A8B2564
 	}
 
-	internal enum ParserTimeZone // TypeDefIndex: 52650
+	internal enum ParserTimeZone // TypeDefIndex: 55332
 	{
 		Unspecified = 0,
 		Utc = 1,
@@ -4644,7 +5382,9 @@ namespace Newtonsoft.Json.Utilities
 		LocalEastOfUtc = 3
 	}
 
-	internal struct DateTimeParser // TypeDefIndex: 52651
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal struct DateTimeParser // TypeDefIndex: 55333
 	{
 		// Fields
 		public int Year; // 0x00
@@ -4675,41 +5415,22 @@ namespace Newtonsoft.Json.Utilities
 		private static readonly int Lz_zz; // 0x38
 	
 		// Constructors
-		static DateTimeParser() {
-			Power10 = default;
-			Lzyyyy = default;
-			Lzyyyy_ = default;
-			Lzyyyy_MM = default;
-			Lzyyyy_MM_ = default;
-			Lzyyyy_MM_dd = default;
-			Lzyyyy_MM_ddT = default;
-			LzHH = default;
-			LzHH_ = default;
-			LzHH_mm = default;
-			LzHH_mm_ = default;
-			LzHH_mm_ss = default;
-			Lz_ = default;
-			Lz_zz = default;
-		} // 0x000000018B3E2510-0x000000018B3E2808
+		static DateTimeParser(); // 0x000000018A8B2DB8-0x000000018A8B30B0
 	
 		// Methods
-		public bool Parse(char[] text, int startIndex, int length) => default; // 0x000000018B3E2424-0x000000018B3E2510
-		private bool ParseDate(int start) => default; // 0x000000018B3E1E38-0x000000018B3E1FC8
-		private bool ParseTimeAndZoneAndWhitespace(int start) => default; // 0x000000018B3E1FC8-0x000000018B3E2038
-		private bool ParseTime(ref int start) => default; // 0x000000018B3E2038-0x000000018B3E22B8
-		private bool ParseZone(int start) => default; // 0x000000018B3E22B8-0x000000018B3E2424
-		private bool Parse4Digit(int start, out int num) {
-			num = default;
-			return default;
-		} // 0x000000018B3E1D34-0x000000018B3E1E00
-		private bool Parse2Digit(int start, out int num) {
-			num = default;
-			return default;
-		} // 0x000000018B3E1CC4-0x000000018B3E1D34
-		private bool ParseChar(int start, char ch) => default; // 0x000000018B3E1E00-0x000000018B3E1E38
+		public bool Parse(char[] text, int startIndex, int length); // 0x000000018A8B2CCC-0x000000018A8B2DB8
+		private bool ParseDate(int start); // 0x000000018A8B26E0-0x000000018A8B2870
+		private bool ParseTimeAndZoneAndWhitespace(int start); // 0x000000018A8B2870-0x000000018A8B28E0
+		private bool ParseTime(ref int start); // 0x000000018A8B28E0-0x000000018A8B2B60
+		private bool ParseZone(int start); // 0x000000018A8B2B60-0x000000018A8B2CCC
+		private bool Parse4Digit(int start, out int num); // 0x000000018A8B25DC-0x000000018A8B26A8
+		private bool Parse2Digit(int start, out int num); // 0x000000018A8B256C-0x000000018A8B25DC
+		private bool ParseChar(int start, char ch); // 0x000000018A8B26A8-0x000000018A8B26E0
 	}
 
-	internal static class DateTimeUtils // TypeDefIndex: 52652
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class DateTimeUtils // TypeDefIndex: 55334
 	{
 		// Fields
 		internal static readonly long InitialJavaScriptDateTicks; // 0x00
@@ -4717,517 +5438,527 @@ namespace Newtonsoft.Json.Utilities
 		private static readonly int[] DaysToMonth366; // 0x10
 	
 		// Constructors
-		static DateTimeUtils() {} // 0x0000000185DB03D0-0x0000000185DB04E0
+		static DateTimeUtils(); // 0x0000000184B886C0-0x0000000184B887D0
 	
 		// Methods
-		public static TimeSpan GetUtcOffset(System.DateTime d) => default; // 0x000000018B3E2E58-0x000000018B3E2EB0
-		public static XmlDateTimeSerializationMode ToSerializationMode(DateTimeKind kind) => default; // 0x000000018B3E3008-0x000000018B3E30A4
-		internal static System.DateTime EnsureDateTime(System.DateTime value, DateTimeZoneHandling timeZone) => default; // 0x000000018B3E2B7C-0x000000018B3E2C9C
-		private static System.DateTime SwitchToLocalTime(System.DateTime value) => default; // 0x000000018B3E2EB0-0x000000018B3E2F5C
-		private static System.DateTime SwitchToUtcTime(System.DateTime value) => default; // 0x000000018B3E2F5C-0x000000018B3E3008
-		private static long ToUniversalTicks(System.DateTime dateTime) => default; // 0x000000018B3E31D0-0x000000018B3E326C
-		private static long ToUniversalTicks(System.DateTime dateTime, TimeSpan offset) => default; // 0x000000018B3E30A4-0x000000018B3E31D0
-		internal static long ConvertDateTimeToJavaScriptTicks(System.DateTime dateTime, TimeSpan offset) => default; // 0x000000018B3E2808-0x000000018B3E2864
-		internal static long ConvertDateTimeToJavaScriptTicks(System.DateTime dateTime) => default; // 0x000000018B3E2864-0x000000018B3E28B0
-		internal static long ConvertDateTimeToJavaScriptTicks(System.DateTime dateTime, bool convertToUtc) => default; // 0x000000018B3E28B0-0x000000018B3E2948
-		private static long UniversalTicksToJavaScriptTicks(long universalTicks) => default; // 0x000000018B3E4658-0x000000018B3E46BC
-		internal static System.DateTime ConvertJavaScriptTicksToDateTime(long javaScriptTicks) => default; // 0x000000018B3E2948-0x000000018B3E29B4
-		internal static bool TryParseDateTimeIso(StringReference text, DateTimeZoneHandling dateTimeZoneHandling, out System.DateTime dt) {
-			dt = default;
-			return default;
-		} // 0x000000018B3E3338-0x000000018B3E3748
-		internal static bool TryParseDateTimeOffsetIso(StringReference text, out DateTimeOffset dt) {
-			dt = default;
-			return default;
-		} // 0x000000018B3E3918-0x000000018B3E3B6C
-		private static System.DateTime CreateDateTime(DateTimeParser dateTimeParser) => default; // 0x000000018B3E2A40-0x000000018B3E2B7C
-		internal static bool TryParseDateTime(StringReference s, DateTimeZoneHandling dateTimeZoneHandling, string dateFormatString, CultureInfo culture, out System.DateTime dt) {
-			dt = default;
-			return default;
-		} // 0x00000001841D5F10-0x00000001841D6060
-		internal static bool TryParseDateTime(string s, DateTimeZoneHandling dateTimeZoneHandling, string dateFormatString, CultureInfo culture, out System.DateTime dt) {
-			dt = default;
-			return default;
-		} // 0x000000018B3E4120-0x000000018B3E43A4
-		internal static bool TryParseDateTimeOffset(StringReference s, string dateFormatString, CultureInfo culture, out DateTimeOffset dt) {
-			dt = default;
-			return default;
-		} // 0x000000018B3E3C94-0x000000018B3E3E78
-		internal static bool TryParseDateTimeOffset(string s, string dateFormatString, CultureInfo culture, out DateTimeOffset dt) {
-			dt = default;
-			return default;
-		} // 0x000000018B3E3E78-0x000000018B3E4120
-		private static bool TryParseMicrosoftDate(StringReference text, out long ticks, out TimeSpan offset, out DateTimeKind kind) {
-			ticks = default;
-			offset = default;
-			kind = default;
-			return default;
-		} // 0x000000018B3E43A4-0x000000018B3E4514
-		private static bool TryParseDateTimeMicrosoft(StringReference text, DateTimeZoneHandling dateTimeZoneHandling, out System.DateTime dt) {
-			dt = default;
-			return default;
-		} // 0x000000018B3E3748-0x000000018B3E3878
-		private static bool TryParseDateTimeExact(string text, DateTimeZoneHandling dateTimeZoneHandling, string dateFormatString, CultureInfo culture, out System.DateTime dt) {
-			dt = default;
-			return default;
-		} // 0x000000018B3E326C-0x000000018B3E3338
-		private static bool TryParseDateTimeOffsetMicrosoft(StringReference text, out DateTimeOffset dt) {
-			dt = default;
-			return default;
-		} // 0x000000018B3E3B6C-0x000000018B3E3C94
-		private static bool TryParseDateTimeOffsetExact(string text, string dateFormatString, CultureInfo culture, out DateTimeOffset dt) {
-			dt = default;
-			return default;
-		} // 0x000000018B3E3878-0x000000018B3E3918
-		private static bool TryReadOffset(StringReference offsetText, int startIndex, out TimeSpan offset) {
-			offset = default;
-			return default;
-		} // 0x000000018B3E4514-0x000000018B3E4658
-		internal static void WriteDateTimeString(TextWriter writer, System.DateTime value, DateFormatHandling format, string formatString, CultureInfo culture) {} // 0x000000018B3E4A20-0x000000018B3E4B74
-		internal static int WriteDateTimeString(char[] chars, int start, System.DateTime value, TimeSpan? offset, DateTimeKind kind, DateFormatHandling format) => default; // 0x000000018B3E4B74-0x000000018B3E4E64
-		internal static int WriteDefaultIsoDate(char[] chars, int start, System.DateTime dt) => default; // 0x000000018B3E4E64-0x000000018B3E50F8
-		private static void CopyIntToCharArray(char[] chars, int start, int value, int digits) {} // 0x000000018B3E29B4-0x000000018B3E2A40
-		internal static int WriteDateTimeOffset(char[] chars, int start, TimeSpan offset, DateFormatHandling format) => default; // 0x000000018B3E484C-0x000000018B3E4A20
-		internal static void WriteDateTimeOffsetString(TextWriter writer, DateTimeOffset value, DateFormatHandling format, string formatString, CultureInfo culture) {} // 0x000000018B3E46BC-0x000000018B3E484C
-		private static void GetDateValues(System.DateTime td, out int year, out int month, out int day) {
-			year = default;
-			month = default;
-			day = default;
-		} // 0x000000018B3E2C9C-0x000000018B3E2E58
+		public static XmlDateTimeSerializationMode ToSerializationMode(DateTimeKind kind); // 0x000000018A8B38B0-0x000000018A8B394C
+		internal static System.DateTime EnsureDateTime(System.DateTime value, DateTimeZoneHandling timeZone); // 0x000000018A8B3424-0x000000018A8B3544
+		private static System.DateTime SwitchToLocalTime(System.DateTime value); // 0x000000018A8B3758-0x000000018A8B3804
+		private static System.DateTime SwitchToUtcTime(System.DateTime value); // 0x000000018A8B3804-0x000000018A8B38B0
+		private static long ToUniversalTicks(System.DateTime dateTime); // 0x000000018A8B3A78-0x000000018A8B3B14
+		private static long ToUniversalTicks(System.DateTime dateTime, TimeSpan offset); // 0x000000018A8B394C-0x000000018A8B3A78
+		internal static long ConvertDateTimeToJavaScriptTicks(System.DateTime dateTime, TimeSpan offset); // 0x000000018A8B30B0-0x000000018A8B310C
+		internal static long ConvertDateTimeToJavaScriptTicks(System.DateTime dateTime); // 0x000000018A8B310C-0x000000018A8B3158
+		internal static long ConvertDateTimeToJavaScriptTicks(System.DateTime dateTime, bool convertToUtc); // 0x000000018A8B3158-0x000000018A8B31F0
+		private static long UniversalTicksToJavaScriptTicks(long universalTicks); // 0x000000018A8B4F00-0x000000018A8B4F64
+		internal static System.DateTime ConvertJavaScriptTicksToDateTime(long javaScriptTicks); // 0x000000018A8B31F0-0x000000018A8B325C
+		internal static bool TryParseDateTimeIso(StringReference text, DateTimeZoneHandling dateTimeZoneHandling, out System.DateTime dt); // 0x000000018A8B3BE0-0x000000018A8B3FF0
+		internal static bool TryParseDateTimeOffsetIso(StringReference text, out DateTimeOffset dt); // 0x000000018A8B41C0-0x000000018A8B4414
+		private static System.DateTime CreateDateTime(DateTimeParser dateTimeParser); // 0x000000018A8B32E8-0x000000018A8B3424
+		internal static bool TryParseDateTime(StringReference s, DateTimeZoneHandling dateTimeZoneHandling, [Nullable(2)] string dateFormatString, CultureInfo culture, out System.DateTime dt); // 0x0000000182FBB4D0-0x0000000182FBB5E0
+		internal static bool TryParseDateTime(string s, DateTimeZoneHandling dateTimeZoneHandling, [Nullable(2)] string dateFormatString, CultureInfo culture, out System.DateTime dt); // 0x000000018A8B49C8-0x000000018A8B4C4C
+		internal static bool TryParseDateTimeOffset(StringReference s, [Nullable(2)] string dateFormatString, CultureInfo culture, out DateTimeOffset dt); // 0x000000018A8B453C-0x000000018A8B4720
+		internal static bool TryParseDateTimeOffset(string s, [Nullable(2)] string dateFormatString, CultureInfo culture, out DateTimeOffset dt); // 0x000000018A8B4720-0x000000018A8B49C8
+		private static bool TryParseMicrosoftDate(StringReference text, out long ticks, out TimeSpan offset, out DateTimeKind kind); // 0x000000018A8B4C4C-0x000000018A8B4DBC
+		private static bool TryParseDateTimeMicrosoft(StringReference text, DateTimeZoneHandling dateTimeZoneHandling, out System.DateTime dt); // 0x000000018A8B3FF0-0x000000018A8B4120
+		private static bool TryParseDateTimeExact(string text, DateTimeZoneHandling dateTimeZoneHandling, string dateFormatString, CultureInfo culture, out System.DateTime dt); // 0x000000018A8B3B14-0x000000018A8B3BE0
+		private static bool TryParseDateTimeOffsetMicrosoft(StringReference text, out DateTimeOffset dt); // 0x000000018A8B4414-0x000000018A8B453C
+		private static bool TryParseDateTimeOffsetExact(string text, string dateFormatString, CultureInfo culture, out DateTimeOffset dt); // 0x000000018A8B4120-0x000000018A8B41C0
+		private static bool TryReadOffset(StringReference offsetText, int startIndex, out TimeSpan offset); // 0x000000018A8B4DBC-0x000000018A8B4F00
+		internal static void WriteDateTimeString(TextWriter writer, System.DateTime value, DateFormatHandling format, [Nullable(2)] string formatString, CultureInfo culture); // 0x000000018A8B52C8-0x000000018A8B541C
+		internal static int WriteDateTimeString(char[] chars, int start, System.DateTime value, TimeSpan? offset, DateTimeKind kind, DateFormatHandling format); // 0x000000018A8B541C-0x000000018A8B570C
+		internal static int WriteDefaultIsoDate(char[] chars, int start, System.DateTime dt); // 0x000000018A8B570C-0x000000018A8B59A0
+		private static void CopyIntToCharArray(char[] chars, int start, int value, int digits); // 0x000000018A8B325C-0x000000018A8B32E8
+		internal static int WriteDateTimeOffset(char[] chars, int start, TimeSpan offset, DateFormatHandling format); // 0x000000018A8B50F4-0x000000018A8B52C8
+		internal static void WriteDateTimeOffsetString(TextWriter writer, DateTimeOffset value, DateFormatHandling format, [Nullable(2)] string formatString, CultureInfo culture); // 0x000000018A8B4F64-0x000000018A8B50F4
+		private static void GetDateValues(System.DateTime td, out int year, out int month, out int day); // 0x000000018A8B3544-0x000000018A8B3700
+	
+		// Extension methods
+		public static TimeSpan GetUtcOffset(this System.DateTime d); // 0x000000018A8B3700-0x000000018A8B3758
 	}
 
-	internal interface IWrappedDictionary : IDictionary // TypeDefIndex: 52653
+	internal interface IWrappedDictionary : IDictionary // TypeDefIndex: 55335
 	{
 		// Properties
-		object UnderlyingDictionary { get; }
+		[Nullable(1)]
+		object UnderlyingDictionary { [NullableContext(1)] get; }
 	}
 
-	internal class DictionaryWrapper<TKey, TValue> : IDictionary<TKey, TValue>, IWrappedDictionary // TypeDefIndex: 52656
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class DictionaryWrapper<TKey, TValue> : IDictionary<TKey, TValue>, IWrappedDictionary // TypeDefIndex: 55338
 	{
 		// Fields
+		[Nullable(2)]
 		private readonly IDictionary _dictionary;
+		[Nullable(new byte[3] {2, 1, 1 })]
 		private readonly IDictionary<TKey, TValue> _genericDictionary;
+		[Nullable(new byte[3] {2, 1, 1 })]
 		private readonly IReadOnlyDictionary<TKey, TValue> _readOnlyDictionary;
+		[Nullable(2)]
 		private object _syncRoot;
 	
 		// Properties
-		internal IDictionary<TKey, TValue> GenericDictionary { get => default; }
-		public ICollection<TKey> Keys { get => default; }
-		public ICollection<TValue> Values { get => default; }
+		internal IDictionary<TKey, TValue> GenericDictionary { get; }
+		public ICollection<TKey> Keys { get; }
+		public ICollection<TValue> Values { get; }
 		public TValue this[TKey key] { get => default; set {} }
-		public int Count { get => default; }
-		public bool IsReadOnly { get => default; }
+		public int Count { get; }
+		public bool IsReadOnly { get; }
+		[Nullable(2)]
 		object IDictionary.this[object key] { get => default; set {} }
-		bool IDictionary.IsFixedSize { get => default; }
-		ICollection IDictionary.Keys { get => default; }
-		ICollection IDictionary.Values { get => default; }
-		bool ICollection.IsSynchronized { get => default; }
-		object ICollection.SyncRoot { get => default; }
-		public object UnderlyingDictionary { get => default; }
+		bool IDictionary.IsFixedSize { get; }
+		ICollection IDictionary.Keys { get; }
+		ICollection IDictionary.Values { get; }
+		bool ICollection.IsSynchronized { get; }
+		object ICollection.SyncRoot { get; }
+		public object UnderlyingDictionary { get; }
 	
 		// Nested types
-		private struct DictionaryEnumerator<TEnumeratorKey, TEnumeratorValue> : IDictionaryEnumerator // TypeDefIndex: 52654
+		[IsReadOnly]
+		[Nullable(0)]
+		private struct DictionaryEnumerator<TEnumeratorKey, TEnumeratorValue> : IDictionaryEnumerator // TypeDefIndex: 55336
 		{
 			// Fields
+			[Nullable(new byte[4] {1, 0, 1, 1 })]
 			private readonly IEnumerator<KeyValuePair<TEnumeratorKey, TEnumeratorValue>> _e;
 	
 			// Properties
-			public DictionaryEntry Entry { get => default; }
-			public object Key { get => default; }
-			public object Value { get => default; }
-			public object Current { get => default; }
+			public DictionaryEntry Entry { get; }
+			public object Key { get; }
+			[Nullable(2)]
+			public object Value { [NullableContext(2)] get; }
+			public object Current { get; }
 	
 			// Constructors
-			public DictionaryEnumerator(IEnumerator<KeyValuePair<TEnumeratorKey, TEnumeratorValue>> e) : this() {
-				_e = default;
-			}
+			public DictionaryEnumerator([Nullable(new byte[4] {1, 0, 1, 1 })] IEnumerator<KeyValuePair<TEnumeratorKey, TEnumeratorValue>> e);
 	
 			// Methods
-			public bool MoveNext() => default;
-			public void Reset() {}
+			public bool MoveNext();
+			public void Reset();
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 52655
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55337
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c<TKey, TValue> __9;
+			[Nullable(0)]
 			public static Func<DictionaryEntry, KeyValuePair<TKey, TValue>> __9__29_0;
 	
 			// Constructors
-			static __c() {}
-			public __c() {}
+			static __c();
+			public __c();
 	
 			// Methods
-			internal KeyValuePair<TKey, TValue> _GetEnumerator_b__29_0(DictionaryEntry de) => default;
+			[NullableContext(0)]
+			internal KeyValuePair<TKey, TValue> _GetEnumerator_b__29_0(DictionaryEntry de);
 		}
-	
-		// Constructors
-		public DictionaryWrapper() {} // Dummy constructor
 	
 		// Methods
-		public void Add(TKey key, TValue value) {}
-		public bool ContainsKey(TKey key) => default;
-		public bool Remove(TKey key) => default;
-		public bool TryGetValue(TKey key, out ref TValue value) {
-			value = default;
-			return default;
-		}
-		public void Add(KeyValuePair<TKey, TValue> item) {}
-		public void Clear() {}
-		public bool Contains(KeyValuePair<TKey, TValue> item) => default;
-		public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex) {}
-		public bool Remove(KeyValuePair<TKey, TValue> item) => default;
-		public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator() => default;
-		IEnumerator IEnumerable.GetEnumerator() => default;
-		void IDictionary.Add(object key, object value) {}
-		IDictionaryEnumerator IDictionary.GetEnumerator() => default;
-		bool IDictionary.Contains(object key) => default;
-		public void Remove(object key) {}
-		void ICollection.CopyTo(Array array, int index) {}
+		public void Add(TKey key, TValue value);
+		public bool ContainsKey(TKey key);
+		public bool Remove(TKey key);
+		public bool TryGetValue(TKey key, [Nullable(2)] out ref TValue value);
+		public void Add([Nullable(new byte[3] {0, 1, 1 })] KeyValuePair<TKey, TValue> item);
+		public void Clear();
+		public bool Contains([Nullable(new byte[3] {0, 1, 1 })] KeyValuePair<TKey, TValue> item);
+		public void CopyTo([Nullable(new byte[4] {1, 0, 1, 1 })] KeyValuePair<TKey, TValue>[] array, int arrayIndex);
+		public bool Remove([Nullable(new byte[3] {0, 1, 1 })] KeyValuePair<TKey, TValue> item);
+		public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator();
+		IEnumerator IEnumerable.GetEnumerator();
+		void IDictionary.Add(object key, [Nullable(2)] object value);
+		IDictionaryEnumerator IDictionary.GetEnumerator();
+		bool IDictionary.Contains(object key);
+		public void Remove(object key);
+		void ICollection.CopyTo(Array array, int index);
 	}
 
-	internal class DynamicProxy<T> // TypeDefIndex: 52657
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class DynamicProxy<T> // TypeDefIndex: 55339
 	{
 		// Constructors
-		public DynamicProxy() {}
+		public DynamicProxy();
 	
 		// Methods
-		public virtual IEnumerable<string> GetDynamicMemberNames(T instance) => default;
-		public virtual bool TryBinaryOperation(T instance, BinaryOperationBinder binder, object arg, out object result) {
-			result = default;
-			return default;
-		}
-		public virtual bool TryConvert(T instance, ConvertBinder binder, out object result) {
-			result = default;
-			return default;
-		}
-		public virtual bool TryCreateInstance(T instance, CreateInstanceBinder binder, object[] args, out object result) {
-			result = default;
-			return default;
-		}
-		public virtual bool TryDeleteIndex(T instance, DeleteIndexBinder binder, object[] indexes) => default;
-		public virtual bool TryDeleteMember(T instance, DeleteMemberBinder binder) => default;
-		public virtual bool TryGetIndex(T instance, GetIndexBinder binder, object[] indexes, out object result) {
-			result = default;
-			return default;
-		}
-		public virtual bool TryGetMember(T instance, GetMemberBinder binder, out object result) {
-			result = default;
-			return default;
-		}
-		public virtual bool TryInvoke(T instance, InvokeBinder binder, object[] args, out object result) {
-			result = default;
-			return default;
-		}
-		public virtual bool TryInvokeMember(T instance, InvokeMemberBinder binder, object[] args, out object result) {
-			result = default;
-			return default;
-		}
-		public virtual bool TrySetIndex(T instance, SetIndexBinder binder, object[] indexes, object value) => default;
-		public virtual bool TrySetMember(T instance, SetMemberBinder binder, object value) => default;
-		public virtual bool TryUnaryOperation(T instance, UnaryOperationBinder binder, out object result) {
-			result = default;
-			return default;
-		}
+		public virtual IEnumerable<string> GetDynamicMemberNames(T instance);
+		public virtual bool TryBinaryOperation(T instance, BinaryOperationBinder binder, object arg, [Nullable(2)] out object result);
+		public virtual bool TryConvert(T instance, ConvertBinder binder, [Nullable(2)] out object result);
+		public virtual bool TryCreateInstance(T instance, CreateInstanceBinder binder, object[] args, [Nullable(2)] out object result);
+		public virtual bool TryDeleteIndex(T instance, DeleteIndexBinder binder, object[] indexes);
+		public virtual bool TryDeleteMember(T instance, DeleteMemberBinder binder);
+		public virtual bool TryGetIndex(T instance, GetIndexBinder binder, object[] indexes, [Nullable(2)] out object result);
+		public virtual bool TryGetMember(T instance, GetMemberBinder binder, [Nullable(2)] out object result);
+		public virtual bool TryInvoke(T instance, InvokeBinder binder, object[] args, [Nullable(2)] out object result);
+		public virtual bool TryInvokeMember(T instance, InvokeMemberBinder binder, object[] args, [Nullable(2)] out object result);
+		public virtual bool TrySetIndex(T instance, SetIndexBinder binder, object[] indexes, object value);
+		public virtual bool TrySetMember(T instance, SetMemberBinder binder, object value);
+		public virtual bool TryUnaryOperation(T instance, UnaryOperationBinder binder, [Nullable(2)] out object result);
 	}
 
-	internal sealed class DynamicProxyMetaObject<T> : DynamicMetaObject // TypeDefIndex: 52673
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal sealed class DynamicProxyMetaObject<T> : DynamicMetaObject // TypeDefIndex: 55355
 	{
 		// Fields
 		private readonly DynamicProxy<T> _proxy;
 	
 		// Properties
-		private static Expression[] NoArgs { get => default; }
+		private static Expression[] NoArgs { get; }
 	
 		// Nested types
-		private delegate DynamicMetaObject Fallback(DynamicMetaObject errorSuggestion); // TypeDefIndex: 52658; 0x00000000-0x00000000
+		[NullableContext(0)]
+		private delegate DynamicMetaObject Fallback([Nullable(2)] DynamicMetaObject errorSuggestion); // TypeDefIndex: 55340; 0x00000000-0x00000000
 	
-		private sealed class GetBinderAdapter : GetMemberBinder // TypeDefIndex: 52659
+		[Nullable(0)]
+		private sealed class GetBinderAdapter : GetMemberBinder // TypeDefIndex: 55341
 		{
 			// Constructors
-			public GetBinderAdapter() {} // Dummy constructor
-			internal GetBinderAdapter(InvokeMemberBinder binder) {}
+			internal GetBinderAdapter(InvokeMemberBinder binder);
 	
 			// Methods
-			public override DynamicMetaObject FallbackGetMember(DynamicMetaObject target, DynamicMetaObject errorSuggestion) => default;
+			public override DynamicMetaObject FallbackGetMember(DynamicMetaObject target, [Nullable(2)] DynamicMetaObject errorSuggestion);
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 52660
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55342
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c<T> __9;
+			[Nullable(0)]
 			public static Func<DynamicMetaObject, Expression> __9__18_0;
 	
 			// Constructors
-			static __c() {}
-			public __c() {}
+			static __c();
+			public __c();
 	
 			// Methods
-			internal Expression _GetArgs_b__18_0(DynamicMetaObject arg) => default;
+			[NullableContext(0)]
+			internal Expression _GetArgs_b__18_0(DynamicMetaObject arg);
 		}
 	
-		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 52661
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 55343
 		{
 			// Fields
+			[Nullable(0)]
 			public BinaryOperationBinder binder;
+			[Nullable(0)]
 			public DynamicProxyMetaObject<T> __4__this;
+			[Nullable(0)]
 			public DynamicMetaObject arg;
 	
 			// Constructors
-			public __c__DisplayClass10_0() {}
+			public __c__DisplayClass10_0();
 	
 			// Methods
-			internal DynamicMetaObject _BindBinaryOperation_b__0(DynamicMetaObject e) => default;
+			internal DynamicMetaObject _BindBinaryOperation_b__0([Nullable(2)] DynamicMetaObject e);
 		}
 	
-		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 52662
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 55344
 		{
 			// Fields
+			[Nullable(0)]
 			public UnaryOperationBinder binder;
+			[Nullable(0)]
 			public DynamicProxyMetaObject<T> __4__this;
 	
 			// Constructors
-			public __c__DisplayClass11_0() {}
+			public __c__DisplayClass11_0();
 	
 			// Methods
-			internal DynamicMetaObject _BindUnaryOperation_b__0(DynamicMetaObject e) => default;
+			internal DynamicMetaObject _BindUnaryOperation_b__0([Nullable(2)] DynamicMetaObject e);
 		}
 	
-		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 52663
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 55345
 		{
 			// Fields
+			[Nullable(0)]
 			public GetIndexBinder binder;
+			[Nullable(0)]
 			public DynamicProxyMetaObject<T> __4__this;
+			[Nullable(new byte[2] {0, 1 })]
 			public DynamicMetaObject[] indexes;
 	
 			// Constructors
-			public __c__DisplayClass12_0() {}
+			public __c__DisplayClass12_0();
 	
 			// Methods
-			internal DynamicMetaObject _BindGetIndex_b__0(DynamicMetaObject e) => default;
+			internal DynamicMetaObject _BindGetIndex_b__0([Nullable(2)] DynamicMetaObject e);
 		}
 	
-		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 52664
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 55346
 		{
 			// Fields
+			[Nullable(0)]
 			public SetIndexBinder binder;
+			[Nullable(0)]
 			public DynamicProxyMetaObject<T> __4__this;
+			[Nullable(new byte[2] {0, 1 })]
 			public DynamicMetaObject[] indexes;
+			[Nullable(0)]
 			public DynamicMetaObject value;
 	
 			// Constructors
-			public __c__DisplayClass13_0() {}
+			public __c__DisplayClass13_0();
 	
 			// Methods
-			internal DynamicMetaObject _BindSetIndex_b__0(DynamicMetaObject e) => default;
+			internal DynamicMetaObject _BindSetIndex_b__0([Nullable(2)] DynamicMetaObject e);
 		}
 	
-		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 52665
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 55347
 		{
 			// Fields
+			[Nullable(0)]
 			public DeleteIndexBinder binder;
+			[Nullable(0)]
 			public DynamicProxyMetaObject<T> __4__this;
+			[Nullable(new byte[2] {0, 1 })]
 			public DynamicMetaObject[] indexes;
 	
 			// Constructors
-			public __c__DisplayClass14_0() {}
+			public __c__DisplayClass14_0();
 	
 			// Methods
-			internal DynamicMetaObject _BindDeleteIndex_b__0(DynamicMetaObject e) => default;
+			internal DynamicMetaObject _BindDeleteIndex_b__0([Nullable(2)] DynamicMetaObject e);
 		}
 	
-		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 52666
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 55348
 		{
 			// Fields
+			[Nullable(0)]
 			public GetMemberBinder binder;
+			[Nullable(0)]
 			public DynamicProxyMetaObject<T> __4__this;
 	
 			// Constructors
-			public __c__DisplayClass3_0() {}
+			public __c__DisplayClass3_0();
 	
 			// Methods
-			internal DynamicMetaObject _BindGetMember_b__0(DynamicMetaObject e) => default;
+			internal DynamicMetaObject _BindGetMember_b__0([Nullable(2)] DynamicMetaObject e);
 		}
 	
-		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 52667
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 55349
 		{
 			// Fields
+			[Nullable(0)]
 			public SetMemberBinder binder;
+			[Nullable(0)]
 			public DynamicProxyMetaObject<T> __4__this;
+			[Nullable(0)]
 			public DynamicMetaObject value;
 	
 			// Constructors
-			public __c__DisplayClass4_0() {}
+			public __c__DisplayClass4_0();
 	
 			// Methods
-			internal DynamicMetaObject _BindSetMember_b__0(DynamicMetaObject e) => default;
+			internal DynamicMetaObject _BindSetMember_b__0([Nullable(2)] DynamicMetaObject e);
 		}
 	
-		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 52668
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 55350
 		{
 			// Fields
+			[Nullable(0)]
 			public DeleteMemberBinder binder;
+			[Nullable(0)]
 			public DynamicProxyMetaObject<T> __4__this;
 	
 			// Constructors
-			public __c__DisplayClass5_0() {}
+			public __c__DisplayClass5_0();
 	
 			// Methods
-			internal DynamicMetaObject _BindDeleteMember_b__0(DynamicMetaObject e) => default;
+			internal DynamicMetaObject _BindDeleteMember_b__0([Nullable(2)] DynamicMetaObject e);
 		}
 	
-		private sealed class __c__DisplayClass6_0 // TypeDefIndex: 52669
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass6_0 // TypeDefIndex: 55351
 		{
 			// Fields
+			[Nullable(0)]
 			public ConvertBinder binder;
+			[Nullable(0)]
 			public DynamicProxyMetaObject<T> __4__this;
 	
 			// Constructors
-			public __c__DisplayClass6_0() {}
+			public __c__DisplayClass6_0();
 	
 			// Methods
-			internal DynamicMetaObject _BindConvert_b__0(DynamicMetaObject e) => default;
+			internal DynamicMetaObject _BindConvert_b__0([Nullable(2)] DynamicMetaObject e);
 		}
 	
-		private sealed class __c__DisplayClass7_0 // TypeDefIndex: 52670
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass7_0 // TypeDefIndex: 55352
 		{
 			// Fields
+			[Nullable(0)]
 			public InvokeMemberBinder binder;
+			[Nullable(0)]
 			public DynamicProxyMetaObject<T> __4__this;
+			[Nullable(new byte[2] {0, 1 })]
 			public DynamicMetaObject[] args;
 	
 			// Constructors
-			public __c__DisplayClass7_0() {}
+			public __c__DisplayClass7_0();
 	
 			// Methods
-			internal DynamicMetaObject _BindInvokeMember_b__0(DynamicMetaObject e) => default;
-			internal DynamicMetaObject _BindInvokeMember_b__1(DynamicMetaObject e) => default;
+			internal DynamicMetaObject _BindInvokeMember_b__0([Nullable(2)] DynamicMetaObject e);
+			internal DynamicMetaObject _BindInvokeMember_b__1([Nullable(2)] DynamicMetaObject e);
 		}
 	
-		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 52671
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 55353
 		{
 			// Fields
+			[Nullable(0)]
 			public CreateInstanceBinder binder;
+			[Nullable(0)]
 			public DynamicProxyMetaObject<T> __4__this;
+			[Nullable(new byte[2] {0, 1 })]
 			public DynamicMetaObject[] args;
 	
 			// Constructors
-			public __c__DisplayClass8_0() {}
+			public __c__DisplayClass8_0();
 	
 			// Methods
-			internal DynamicMetaObject _BindCreateInstance_b__0(DynamicMetaObject e) => default;
+			internal DynamicMetaObject _BindCreateInstance_b__0([Nullable(2)] DynamicMetaObject e);
 		}
 	
-		private sealed class __c__DisplayClass9_0 // TypeDefIndex: 52672
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass9_0 // TypeDefIndex: 55354
 		{
 			// Fields
+			[Nullable(0)]
 			public InvokeBinder binder;
+			[Nullable(0)]
 			public DynamicProxyMetaObject<T> __4__this;
+			[Nullable(new byte[2] {0, 1 })]
 			public DynamicMetaObject[] args;
 	
 			// Constructors
-			public __c__DisplayClass9_0() {}
+			public __c__DisplayClass9_0();
 	
 			// Methods
-			internal DynamicMetaObject _BindInvoke_b__0(DynamicMetaObject e) => default;
+			internal DynamicMetaObject _BindInvoke_b__0([Nullable(2)] DynamicMetaObject e);
 		}
 	
 		// Constructors
-		public DynamicProxyMetaObject() {} // Dummy constructor
-		internal DynamicProxyMetaObject(Expression expression, T value, DynamicProxy<T> proxy) {}
+		internal DynamicProxyMetaObject(Expression expression, T value, DynamicProxy<T> proxy);
 	
 		// Methods
-		private bool IsOverridden(string method) => default;
-		public override DynamicMetaObject BindGetMember(GetMemberBinder binder) => default;
-		public override DynamicMetaObject BindSetMember(SetMemberBinder binder, DynamicMetaObject value) => default;
-		public override DynamicMetaObject BindDeleteMember(DeleteMemberBinder binder) => default;
-		public override DynamicMetaObject BindConvert(ConvertBinder binder) => default;
-		public override DynamicMetaObject BindInvokeMember(InvokeMemberBinder binder, DynamicMetaObject[] args) => default;
-		public override DynamicMetaObject BindCreateInstance(CreateInstanceBinder binder, DynamicMetaObject[] args) => default;
-		public override DynamicMetaObject BindInvoke(InvokeBinder binder, DynamicMetaObject[] args) => default;
-		public override DynamicMetaObject BindBinaryOperation(BinaryOperationBinder binder, DynamicMetaObject arg) => default;
-		public override DynamicMetaObject BindUnaryOperation(UnaryOperationBinder binder) => default;
-		public override DynamicMetaObject BindGetIndex(GetIndexBinder binder, DynamicMetaObject[] indexes) => default;
-		public override DynamicMetaObject BindSetIndex(SetIndexBinder binder, DynamicMetaObject[] indexes, DynamicMetaObject value) => default;
-		public override DynamicMetaObject BindDeleteIndex(DeleteIndexBinder binder, DynamicMetaObject[] indexes) => default;
-		private static IEnumerable<Expression> GetArgs(DynamicMetaObject[] args) => default;
-		private static Expression[] GetArgArray(DynamicMetaObject[] args) => default;
-		private static Expression[] GetArgArray(DynamicMetaObject[] args, DynamicMetaObject value) => default;
-		private static ConstantExpression Constant(DynamicMetaObjectBinder binder) => default;
-		private DynamicMetaObject CallMethodWithResult(string methodName, DynamicMetaObjectBinder binder, IEnumerable<Expression> args, Fallback fallback, Fallback fallbackInvoke = null) => default;
-		private DynamicMetaObject BuildCallMethodWithResult(string methodName, DynamicMetaObjectBinder binder, IEnumerable<Expression> args, DynamicMetaObject fallbackResult, Fallback fallbackInvoke) => default;
-		private DynamicMetaObject CallMethodReturnLast(string methodName, DynamicMetaObjectBinder binder, IEnumerable<Expression> args, Fallback fallback) => default;
-		private DynamicMetaObject CallMethodNoResult(string methodName, DynamicMetaObjectBinder binder, Expression[] args, Fallback fallback) => default;
-		private BindingRestrictions GetRestrictions() => default;
-		public override IEnumerable<string> GetDynamicMemberNames() => default;
+		private bool IsOverridden(string method);
+		public override DynamicMetaObject BindGetMember(GetMemberBinder binder);
+		public override DynamicMetaObject BindSetMember(SetMemberBinder binder, DynamicMetaObject value);
+		public override DynamicMetaObject BindDeleteMember(DeleteMemberBinder binder);
+		public override DynamicMetaObject BindConvert(ConvertBinder binder);
+		public override DynamicMetaObject BindInvokeMember(InvokeMemberBinder binder, DynamicMetaObject[] args);
+		public override DynamicMetaObject BindCreateInstance(CreateInstanceBinder binder, DynamicMetaObject[] args);
+		public override DynamicMetaObject BindInvoke(InvokeBinder binder, DynamicMetaObject[] args);
+		public override DynamicMetaObject BindBinaryOperation(BinaryOperationBinder binder, DynamicMetaObject arg);
+		public override DynamicMetaObject BindUnaryOperation(UnaryOperationBinder binder);
+		public override DynamicMetaObject BindGetIndex(GetIndexBinder binder, DynamicMetaObject[] indexes);
+		public override DynamicMetaObject BindSetIndex(SetIndexBinder binder, DynamicMetaObject[] indexes, DynamicMetaObject value);
+		public override DynamicMetaObject BindDeleteIndex(DeleteIndexBinder binder, DynamicMetaObject[] indexes);
+		private static IEnumerable<Expression> GetArgs(params DynamicMetaObject[] args);
+		private static Expression[] GetArgArray(DynamicMetaObject[] args);
+		private static Expression[] GetArgArray(DynamicMetaObject[] args, DynamicMetaObject value);
+		private static ConstantExpression Constant(DynamicMetaObjectBinder binder);
+		private DynamicMetaObject CallMethodWithResult(string methodName, DynamicMetaObjectBinder binder, IEnumerable<Expression> args, [Nullable(new byte[2] {1, 0 })] Fallback fallback, [Nullable(new byte[2] {2, 0 })] Fallback fallbackInvoke = null);
+		private DynamicMetaObject BuildCallMethodWithResult(string methodName, DynamicMetaObjectBinder binder, IEnumerable<Expression> args, DynamicMetaObject fallbackResult, [Nullable(new byte[2] {2, 0 })] Fallback fallbackInvoke);
+		private DynamicMetaObject CallMethodReturnLast(string methodName, DynamicMetaObjectBinder binder, IEnumerable<Expression> args, [Nullable(new byte[2] {1, 0 })] Fallback fallback);
+		private DynamicMetaObject CallMethodNoResult(string methodName, DynamicMetaObjectBinder binder, Expression[] args, [Nullable(new byte[2] {1, 0 })] Fallback fallback);
+		private BindingRestrictions GetRestrictions();
+		public override IEnumerable<string> GetDynamicMemberNames();
 	}
 
-	internal static class DynamicUtils // TypeDefIndex: 52675
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class DynamicUtils // TypeDefIndex: 55357
 	{
 		// Nested types
-		internal static class BinderWrapper // TypeDefIndex: 52674
+		[Nullable(0)]
+		internal static class BinderWrapper // TypeDefIndex: 55356
 		{
 			// Fields
+			[Nullable(2)]
 			private static object _getCSharpArgumentInfoArray; // 0x00
+			[Nullable(2)]
 			private static object _setCSharpArgumentInfoArray; // 0x08
+			[Nullable(2)]
 			private static MethodCall<object, object> _getMemberCall; // 0x10
+			[Nullable(2)]
 			private static MethodCall<object, object> _setMemberCall; // 0x18
 			private static bool _init; // 0x20
 	
 			// Methods
-			private static void Init() {} // 0x000000018B3E5FA0-0x000000018B3E6008
-			private static object CreateSharpArgumentInfoArray(int[] values) => default; // 0x000000018B3DF298-0x000000018B3DF494
-			private static void CreateMemberCalls() {} // 0x000000018B3DEEFC-0x000000018B3DF138
-			public static CallSiteBinder GetMember(string name, System.Type context) => default; // 0x000000018B3DEB30-0x000000018B3DEEFC
-			public static CallSiteBinder SetMember(string name, System.Type context) => default; // 0x000000018B3DF138-0x000000018B3DF298
+			private static void Init(); // 0x000000018A8AFA20-0x000000018A8AFC1C
+			private static object CreateSharpArgumentInfoArray(params int[] values); // 0x000000018A8AF684-0x000000018A8AF8C0
+			private static void CreateMemberCalls(); // 0x000000018A8AF2B8-0x000000018A8AF684
+			public static CallSiteBinder GetMember(string name, System.Type context); // 0x000000018A8AF8C0-0x000000018A8AFA20
+			public static CallSiteBinder SetMember(string name, System.Type context); // 0x000000018A8AFC1C-0x000000018A8AFD80
 		}
 	
-		// Methods
-		public static IEnumerable<string> GetDynamicMemberNames(IDynamicMetaObjectProvider dynamicProvider) => default; // 0x000000018B3DF494-0x000000018B3DF5F8
+		// Extension methods
+		public static IEnumerable<string> GetDynamicMemberNames(this IDynamicMetaObjectProvider dynamicProvider); // 0x000000018A8B6848-0x000000018A8B68B0
 	}
 
-	internal class NoThrowGetBinderMember : GetMemberBinder // TypeDefIndex: 52676
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class NoThrowGetBinderMember : GetMemberBinder // TypeDefIndex: 55358
 	{
 		// Fields
 		private readonly GetMemberBinder _innerBinder; // 0x28
 	
 		// Constructors
-		public NoThrowGetBinderMember() {} // Dummy constructor
-		public NoThrowGetBinderMember(GetMemberBinder innerBinder) {} // 0x000000018B3E7C3C-0x000000018B3E7C80
+		public NoThrowGetBinderMember(GetMemberBinder innerBinder); // 0x000000018A8B84E4-0x000000018A8B8528
 	
 		// Methods
-		public override DynamicMetaObject FallbackGetMember(DynamicMetaObject target, DynamicMetaObject errorSuggestion) => default; // 0x000000018B3E7B60-0x000000018B3E7C3C
+		public override DynamicMetaObject FallbackGetMember(DynamicMetaObject target, [Nullable(2)] DynamicMetaObject errorSuggestion); // 0x000000018A8B8408-0x000000018A8B84E4
 	}
 
-	internal class NoThrowSetBinderMember : SetMemberBinder // TypeDefIndex: 52677
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class NoThrowSetBinderMember : SetMemberBinder // TypeDefIndex: 55359
 	{
 		// Fields
 		private readonly SetMemberBinder _innerBinder; // 0x28
 	
 		// Constructors
-		public NoThrowSetBinderMember() {} // Dummy constructor
-		public NoThrowSetBinderMember(SetMemberBinder innerBinder) {} // 0x000000018B3E7D90-0x000000018B3E7DD4
+		public NoThrowSetBinderMember(SetMemberBinder innerBinder); // 0x000000018A8B8638-0x000000018A8B867C
 	
 		// Methods
-		public override DynamicMetaObject FallbackSetMember(DynamicMetaObject target, DynamicMetaObject value, DynamicMetaObject errorSuggestion) => default; // 0x000000018B3E7C80-0x000000018B3E7D90
+		public override DynamicMetaObject FallbackSetMember(DynamicMetaObject target, DynamicMetaObject value, [Nullable(2)] DynamicMetaObject errorSuggestion); // 0x000000018A8B8528-0x000000018A8B8638
 	}
 
-	internal class NoThrowExpressionVisitor : ExpressionVisitor // TypeDefIndex: 52678
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class NoThrowExpressionVisitor : ExpressionVisitor // TypeDefIndex: 55360
 	{
 		// Fields
 		internal static readonly object ErrorResult; // 0x00
 	
 		// Constructors
-		public NoThrowExpressionVisitor() {} // 0x0000000185492010-0x0000000185492020
-		static NoThrowExpressionVisitor() {} // 0x000000018B3E7AF0-0x000000018B3E7B60
+		public NoThrowExpressionVisitor(); // 0x00000001841E1670-0x00000001841E1680
+		static NoThrowExpressionVisitor(); // 0x000000018A8B8398-0x000000018A8B8408
 	
 		// Methods
-		protected override Expression VisitConditional(ConditionalExpression node) => default; // 0x000000018B3E7A14-0x000000018B3E7AF0
+		protected override Expression VisitConditional(ConditionalExpression node); // 0x000000018A8B82BC-0x000000018A8B8398
 	}
 
-	internal class EnumInfo // TypeDefIndex: 52679
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class EnumInfo // TypeDefIndex: 55361
 	{
 		// Fields
 		public readonly bool IsFlags; // 0x10
@@ -5236,239 +5967,293 @@ namespace Newtonsoft.Json.Utilities
 		public readonly string[] ResolvedNames; // 0x28
 	
 		// Constructors
-		public EnumInfo() {} // Dummy constructor
-		public EnumInfo(bool isFlags, ulong[] values, string[] names, string[] resolvedNames) {} // 0x0000000184A81340-0x0000000184A81380
+		public EnumInfo(bool isFlags, ulong[] values, string[] names, string[] resolvedNames); // 0x000000018311D4E0-0x000000018311D520
 	}
 
-	internal static class EnumUtils // TypeDefIndex: 52681
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class EnumUtils // TypeDefIndex: 55363
 	{
 		// Fields
+		[Nullable(new byte[5] {1, 0, 1, 2, 1 })]
 		private static readonly ThreadSafeStore<StructMultiKey<System.Type, NamingStrategy>, EnumInfo> ValuesAndNamesPerEnum; // 0x00
 		private static CamelCaseNamingStrategy _camelCaseNamingStrategy; // 0x08
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 52680
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55362
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c __9; // 0x00
+			[Nullable(0)]
 			public static Func<EnumMemberAttribute, string> __9__3_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x0000000184A7FDE0-0x0000000184A80220
-			public __c() {} // 0x000000018B3E6244-0x000000018B3E63CC
+			static __c(); // 0x0000000184D4B250-0x0000000184D4B2B0
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal string _InitializeValuesAndNames_b__3_0(EnumMemberAttribute a) => default; // 0x000000018B3E6008-0x000000018B3E6180
+			[NullableContext(0)]
+			internal string _InitializeValuesAndNames_b__3_0(EnumMemberAttribute a); // 0x0000000186C08920-0x0000000186C08938
 		}
 	
 		// Constructors
-		static EnumUtils() {} // 0x0000000187AD0B8C-0x0000000187AD0BA4
+		static EnumUtils(); // 0x0000000184B445E0-0x0000000184B44700
 	
 		// Methods
-		private static EnumInfo InitializeValuesAndNames(StructMultiKey<System.Type, NamingStrategy> key) => default; // 0x0000000184695A50-0x0000000184695B10
-		public static bool TryToString(System.Type enumType, object value, NamingStrategy namingStrategy, out string name) {
-			name = default;
-			return default;
-		} // 0x0000000184A80220-0x0000000184A80350
-		private static string InternalFlagsFormat(EnumInfo entry, ulong result) => default; // 0x000000018435DD70-0x000000018435DFA0
-		public static EnumInfo GetEnumValuesAndNames(System.Type enumType) => default; // 0x000000018B3E6180-0x000000018B3E6244
-		private static ulong ToUInt64(object value) => default; // 0x000000018435D7E0-0x000000018435D8D0
-		public static object ParseEnum(System.Type enumType, NamingStrategy namingStrategy, string value, bool disallowNumber) => default; // 0x0000000185D69220-0x0000000185D69340
-		private static int? MatchName(string value, string[] enumNames, string[] resolvedNames, int valueIndex, int valueSubstringLength, StringComparison comparison) => default; // 0x0000000185F772F0-0x0000000185F77350
-		private static int? FindIndexByName(string[] enumNames, string value, int valueIndex, int valueSubstringLength, StringComparison comparison) => default; // 0x0000000185492010-0x0000000185492020
+		private static EnumInfo InitializeValuesAndNames([Nullable(new byte[3] {0, 1, 2 })] StructMultiKey<System.Type, NamingStrategy> key); // 0x00000001836FE560-0x00000001836FE9A0
+		public static bool TryToString(System.Type enumType, object value, [Nullable(2)] NamingStrategy namingStrategy, [Nullable(2)] [NotNullWhen(true)] out string name); // 0x000000018A8B6AEC-0x000000018A8B6C74
+		private static string InternalFlagsFormat(EnumInfo entry, ulong result); // 0x000000018A8B68B0-0x000000018A8B6A28
+		public static EnumInfo GetEnumValuesAndNames(System.Type enumType); // 0x00000001837D8AB0-0x00000001837D8B70
+		private static ulong ToUInt64(object value); // 0x00000001836FE9A0-0x00000001836FEAA0
+		public static object ParseEnum(System.Type enumType, [Nullable(2)] NamingStrategy namingStrategy, string value, bool disallowNumber); // 0x00000001835D1500-0x00000001835D16F0
+		private static int? MatchName(string value, string[] enumNames, string[] resolvedNames, int valueIndex, int valueSubstringLength, StringComparison comparison); // 0x000000018A8B6A28-0x000000018A8B6AEC
+		private static int? FindIndexByName(string[] enumNames, string value, int valueIndex, int valueSubstringLength, StringComparison comparison); // 0x00000001835D1180-0x00000001835D1240
 	}
 
-	internal class FSharpFunction // TypeDefIndex: 52682
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal class FSharpFunction // TypeDefIndex: 55364
 	{
 		// Fields
 		private readonly object _instance; // 0x10
+		[Nullable(new byte[3] {1, 2, 1 })]
 		private readonly MethodCall<object, object> _invoker; // 0x18
 	
 		// Constructors
-		public FSharpFunction() {} // Dummy constructor
-		public FSharpFunction(object instance, MethodCall<object, object> invoker) {} // 0x00000001841BC230-0x00000001841BC260
+		public FSharpFunction(object instance, [Nullable(new byte[3] {1, 2, 1 })] MethodCall<object, object> invoker); // 0x00000001832AF420-0x00000001832AF450
 	
 		// Methods
-		public object Invoke(object[] args) => default; // 0x000000018B3E63CC-0x000000018B3E63FC
+		[NullableContext(1)]
+		public object Invoke(params object[] args); // 0x000000018A8B6C74-0x000000018A8B6CA4
 	}
 
-	internal class FSharpUtils // TypeDefIndex: 52686
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class FSharpUtils // TypeDefIndex: 55368
 	{
 		// Fields
 		private static readonly object Lock; // 0x00
+		[Nullable(2)]
 		private static FSharpUtils _instance; // 0x08
 		private MethodInfo _ofSeq; // 0x10
 		private System.Type _mapType; // 0x18
+		[CompilerGenerated]
 		private Assembly _FSharpCoreAssembly_k__BackingField; // 0x20
+		[CompilerGenerated]
+		[Nullable(new byte[3] {1, 2, 1 })]
 		private MethodCall<object, object> _IsUnion_k__BackingField; // 0x28
+		[CompilerGenerated]
+		[Nullable(new byte[3] {1, 2, 1 })]
 		private MethodCall<object, object> _GetUnionCases_k__BackingField; // 0x30
+		[CompilerGenerated]
+		[Nullable(new byte[3] {1, 2, 1 })]
 		private MethodCall<object, object> _PreComputeUnionTagReader_k__BackingField; // 0x38
+		[CompilerGenerated]
+		[Nullable(new byte[3] {1, 2, 1 })]
 		private MethodCall<object, object> _PreComputeUnionReader_k__BackingField; // 0x40
+		[CompilerGenerated]
+		[Nullable(new byte[3] {1, 2, 1 })]
 		private MethodCall<object, object> _PreComputeUnionConstructor_k__BackingField; // 0x48
+		[CompilerGenerated]
 		private Func<object, object> _GetUnionCaseInfoDeclaringType_k__BackingField; // 0x50
+		[CompilerGenerated]
 		private Func<object, object> _GetUnionCaseInfoName_k__BackingField; // 0x58
+		[CompilerGenerated]
 		private Func<object, object> _GetUnionCaseInfoTag_k__BackingField; // 0x60
+		[CompilerGenerated]
+		[Nullable(new byte[3] {1, 1, 2 })]
 		private MethodCall<object, object> _GetUnionCaseInfoFields_k__BackingField; // 0x68
 	
 		// Properties
-		public static FSharpUtils Instance { get => default; } // 0x0000000185A16440-0x0000000185A16450 
-		private Assembly FSharpCoreAssembly { get; set; } // 0x00000001813FF010-0x00000001813FF020
-		public MethodCall<object, object> IsUnion { get; private set; } // 0x0000000185F05C80-0x0000000185F05C90 0x00000001813ECF20-0x00000001813ECF30
-		public MethodCall<object, object> GetUnionCases { get; private set; } // 0x000000018571FEC0-0x000000018571FED0 0x0000000181460F60-0x0000000181460F70
-		public MethodCall<object, object> PreComputeUnionTagReader { get; private set; } // 0x0000000184A4E570-0x0000000184A4E580 0x00000001813F1630-0x00000001813F1640
-		public MethodCall<object, object> PreComputeUnionReader { get; private set; } // 0x0000000186472DB0-0x0000000186472DC0 0x0000000185FB0530-0x0000000185FB0540
-		public MethodCall<object, object> PreComputeUnionConstructor { get; private set; } // 0x0000000185AE8FE0-0x0000000185AE8FF0 0x00000001813AC280-0x00000001813AC290
-		public Func<object, object> GetUnionCaseInfoDeclaringType { get; private set; } // 0x0000000185A62990-0x0000000185A629A0 0x000000018B3E678C-0x000000018B3E6940
-		public Func<object, object> GetUnionCaseInfoName { get; private set; } // 0x000000018B3E6940-0x000000018B3E699C 0x000000018B3E63FC-0x000000018B3E657C
-		public Func<object, object> GetUnionCaseInfoTag { get; private set; } // 0x000000018B3E66CC-0x000000018B3E678C 0x000000018B3E657C-0x000000018B3E66CC
-		public MethodCall<object, object> GetUnionCaseInfoFields { get; private set; } // 0x000000018B3E699C-0x000000018B3E6A0C
+		public static FSharpUtils Instance { get; } // 0x000000018A8B7694-0x000000018A8B76E4 
+		private Assembly FSharpCoreAssembly { [CompilerGenerated] set; } // 0x0000000185390F40-0x0000000185390F50
+		[Nullable(new byte[3] {1, 2, 1 })]
+		public MethodCall<object, object> IsUnion { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
+		[Nullable(new byte[3] {1, 2, 1 })]
+		public MethodCall<object, object> GetUnionCases { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
+		[Nullable(new byte[3] {1, 2, 1 })]
+		public MethodCall<object, object> PreComputeUnionTagReader { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85A50-0x0000000184D85A60 0x00000001846A91B0-0x00000001846A91C0
+		[Nullable(new byte[3] {1, 2, 1 })]
+		public MethodCall<object, object> PreComputeUnionReader { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001842B4AE0-0x00000001842B4AF0
+		[Nullable(new byte[3] {1, 2, 1 })]
+		public MethodCall<object, object> PreComputeUnionConstructor { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
+		public Func<object, object> GetUnionCaseInfoDeclaringType { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
+		public Func<object, object> GetUnionCaseInfoName { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182E56440-0x0000000182E56460 0x00000001836E5590-0x00000001836E55A0
+		public Func<object, object> GetUnionCaseInfoTag { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86280-0x0000000184D86290 0x00000001863CC164-0x00000001863CC174
+		[Nullable(new byte[3] {1, 1, 2 })]
+		public MethodCall<object, object> GetUnionCaseInfoFields { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86230-0x0000000184D86240 0x000000018485F170-0x000000018485F180
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c__55<TKey, TValue> // TypeDefIndex: 52683
+		[CompilerGenerated]
+		private sealed class __c__55<TKey, TValue> // TypeDefIndex: 55365
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c__55<TKey, TValue> __9;
+			[Nullable(0)]
 			public static Func<KeyValuePair<TKey, TValue>, Tuple<TKey, TValue>> __9__55_1;
 	
 			// Constructors
-			static __c__55() {} // 0x000000018B3E6A0C-0x000000018B3E6DEC
-			public __c__55() {}
+			static __c__55();
+			public __c__55();
 	
 			// Methods
-			internal Tuple<TKey, TValue> _BuildMapCreator_b__55_1(KeyValuePair<TKey, TValue> kv) => default; // 0x000000018646EE40-0x000000018646EE50
+			[NullableContext(0)]
+			internal Tuple<TKey, TValue> _BuildMapCreator_b__55_1(KeyValuePair<TKey, TValue> kv);
 		}
 	
-		private sealed class __c__DisplayClass52_0 // TypeDefIndex: 52684
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass52_0 // TypeDefIndex: 55366
 		{
 			// Fields
+			[Nullable(new byte[3] {0, 2, 2 })]
 			public MethodCall<object, object> call; // 0x10
+			[Nullable(new byte[3] {0, 2, 1 })]
 			public MethodCall<object, object> invoke; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass52_0() {} // 0x00000001813B8590-0x00000001813B85A0
+			public __c__DisplayClass52_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal object _CreateFSharpFuncCall_b__0(object target, object[] args) => default; // 0x0000000184A4EDC0-0x0000000184A4EDD0
+			internal object _CreateFSharpFuncCall_b__0([Nullable(2)] object target, [Nullable(new byte[2] {1, 2 })] object[] args); // 0x000000018A8BAC5C-0x000000018A8BACF4
 		}
 	
-		private sealed class __c__DisplayClass55_0<TKey, TValue> // TypeDefIndex: 52685
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass55_0<TKey, TValue> // TypeDefIndex: 55367
 		{
 			// Fields
+			[Nullable(new byte[2] {0, 1 })]
 			public ObjectConstructor<object> ctorDelegate;
 	
 			// Constructors
-			public __c__DisplayClass55_0() {} // 0x00000001813B51D0-0x00000001813B51E0
+			public __c__DisplayClass55_0();
 	
 			// Methods
-			internal object _BuildMapCreator_b__0(object[] args) => default; // 0x00000001864721F0-0x0000000186472200
+			internal object _BuildMapCreator_b__0([Nullable(new byte[2] {1, 2 })] object[] args);
 		}
 	
 		// Constructors
-		public FSharpUtils() {} // Dummy constructor
-		private FSharpUtils(Assembly fsharpCoreAssembly) {} // 0x00000001813ECBC0-0x00000001813ECBD0
-		static FSharpUtils() {}
+		private FSharpUtils(Assembly fsharpCoreAssembly); // 0x000000018A8B72B4-0x000000018A8B7694
+		static FSharpUtils(); // 0x000000018A8B7244-0x000000018A8B72B4
 	
 		// Methods
-		public static void EnsureInitialized(Assembly fsharpCoreAssembly) {}
-		private static MethodInfo GetMethodWithNonPublicFallback(System.Type type, string methodName, System.Reflection.BindingFlags bindingFlags) => default;
-		private static MethodCall<object, object> CreateFSharpFuncCall(System.Type type, string methodName) => default;
-		public ObjectConstructor<object> CreateSeq(System.Type t) => default; // 0x0000000185492010-0x0000000185492020
-		public ObjectConstructor<object> CreateMap(System.Type keyType, System.Type valueType) => default; // 0x000000018B3EA3DC-0x000000018B3EA474
-		public ObjectConstructor<object> BuildMapCreator<TKey, TValue>() => default;
+		public static void EnsureInitialized(Assembly fsharpCoreAssembly); // 0x000000018A8B7034-0x000000018A8B71E8
+		private static MethodInfo GetMethodWithNonPublicFallback(System.Type type, string methodName, System.Reflection.BindingFlags bindingFlags); // 0x000000018A8B71E8-0x000000018A8B7244
+		private static MethodCall<object, object> CreateFSharpFuncCall(System.Type type, string methodName); // 0x000000018A8B6CA4-0x000000018A8B6E24
+		public ObjectConstructor<object> CreateSeq(System.Type t); // 0x000000018A8B6F74-0x000000018A8B7034
+		public ObjectConstructor<object> CreateMap(System.Type keyType, System.Type valueType); // 0x000000018A8B6E24-0x000000018A8B6F74
+		[NullableContext(2)]
+		public ObjectConstructor<object> BuildMapCreator<TKey, TValue>();
 	}
 
-	internal static class ImmutableCollectionsUtils // TypeDefIndex: 52691
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class ImmutableCollectionsUtils // TypeDefIndex: 55373
 	{
 		// Fields
 		private static readonly IList<ImmutableCollectionTypeInfo> ArrayContractImmutableCollectionDefinitions; // 0x00
 		private static readonly IList<ImmutableCollectionTypeInfo> DictionaryContractImmutableCollectionDefinitions; // 0x08
 	
 		// Nested types
-		internal class ImmutableCollectionTypeInfo // TypeDefIndex: 52687
+		[Nullable(0)]
+		internal class ImmutableCollectionTypeInfo // TypeDefIndex: 55369
 		{
 			// Fields
+			[CompilerGenerated]
 			private string _ContractTypeName_k__BackingField; // 0x10
+			[CompilerGenerated]
 			private string _CreatedTypeName_k__BackingField; // 0x18
+			[CompilerGenerated]
 			private string _BuilderTypeName_k__BackingField; // 0x20
 	
 			// Properties
-			public string ContractTypeName { get; set; } // 0x0000000184BBA7E0-0x0000000184BBA9E0 0x00000001857FF730-0x00000001857FFCF0
-			public string CreatedTypeName { get; set; } // 0x000000018496F6A0-0x000000018496F6E0 0x000000018346D130-0x000000018346D140
-			public string BuilderTypeName { get; set; } // 0x0000000184096E30-0x0000000184096EF0 0x0000000181377E40-0x0000000181377E50
+			public string ContractTypeName { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+			public string CreatedTypeName { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+			public string BuilderTypeName { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
 	
 			// Constructors
-			public ImmutableCollectionTypeInfo() {} // Dummy constructor
-			public ImmutableCollectionTypeInfo(string contractTypeName, string createdTypeName, string builderTypeName) {} // 0x0000000184BBAC10-0x0000000184BBAE00
+			public ImmutableCollectionTypeInfo(string contractTypeName, string createdTypeName, string builderTypeName); // 0x00000001831D14F0-0x00000001831D1530
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 52688
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55370
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c __9; // 0x00
+			[Nullable(0)]
 			public static Func<MethodInfo, bool> __9__24_1; // 0x08
+			[Nullable(0)]
 			public static Func<MethodInfo, bool> __9__25_1; // 0x10
 	
 			// Constructors
-			static __c() {} // 0x0000000184088E70-0x0000000184088E80
-			public __c() {} // 0x00000001813B31A0-0x00000001813B31B0
+			static __c(); // 0x000000018A8BAD88-0x000000018A8BAEBC
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _TryBuildImmutableForArrayContract_b__24_1(MethodInfo m) => default; // 0x000000018646EE40-0x000000018646EE50
-			internal bool _TryBuildImmutableForDictionaryContract_b__25_1(MethodInfo m) => default; // 0x000000018B3EA508-0x000000018B3EA6B8
+			[NullableContext(0)]
+			internal bool _TryBuildImmutableForArrayContract_b__24_1(MethodInfo m); // 0x000000018A8BA8D8-0x000000018A8BA94C
+			[NullableContext(0)]
+			internal bool _TryBuildImmutableForDictionaryContract_b__25_1(MethodInfo m); // 0x000000018A8BA94C-0x000000018A8BAA50
 		}
 	
-		private sealed class __c__DisplayClass24_0 // TypeDefIndex: 52689
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass24_0 // TypeDefIndex: 55371
 		{
 			// Fields
+			[Nullable(0)]
 			public string name; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass24_0() {} // 0x0000000185492010-0x0000000185492020
+			public __c__DisplayClass24_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _TryBuildImmutableForArrayContract_b__0(ImmutableCollectionTypeInfo d) => default; // 0x000000018B3EA058-0x000000018B3EA0CC
+			[NullableContext(0)]
+			internal bool _TryBuildImmutableForArrayContract_b__0(ImmutableCollectionTypeInfo d); // 0x00000001842E3CE0-0x00000001842E3D10
 		}
 	
-		private sealed class __c__DisplayClass25_0 // TypeDefIndex: 52690
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass25_0 // TypeDefIndex: 55372
 		{
 			// Fields
+			[Nullable(0)]
 			public string name; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass25_0() {} // 0x000000018B3EA0CC-0x000000018B3EA1D0
+			public __c__DisplayClass25_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _TryBuildImmutableForDictionaryContract_b__0(ImmutableCollectionTypeInfo d) => default; // 0x0000000185492010-0x0000000185492020
+			[NullableContext(0)]
+			internal bool _TryBuildImmutableForDictionaryContract_b__0(ImmutableCollectionTypeInfo d); // 0x00000001842E3CE0-0x00000001842E3D10
 		}
 	
 		// Constructors
-		static ImmutableCollectionsUtils() {} // 0x000000018545DBB0-0x000000018545DC30
+		static ImmutableCollectionsUtils(); // 0x000000018464FD30-0x0000000184650490
 	
 		// Methods
-		internal static bool TryBuildImmutableForArrayContract(System.Type underlyingType, System.Type collectionItemType, out System.Type createdType, out ObjectConstructor<object> parameterizedCreator) {
-			createdType = default;
-			parameterizedCreator = default;
-			return default;
-		} // 0x000000018545DBB0-0x000000018545DC30
-		internal static bool TryBuildImmutableForDictionaryContract(System.Type underlyingType, System.Type keyItemType, System.Type valueItemType, out System.Type createdType, out ObjectConstructor<object> parameterizedCreator) {
-			createdType = default;
-			parameterizedCreator = default;
-			return default;
-		} // 0x0000000185492010-0x0000000185492020
+		internal static bool TryBuildImmutableForArrayContract(System.Type underlyingType, System.Type collectionItemType, [NotNullWhen(true)] [Nullable(2)] out System.Type createdType, [Nullable(new byte[2] {2, 1 })] [NotNullWhen(true)] out ObjectConstructor<object> parameterizedCreator); // 0x00000001842182D0-0x00000001842184C0
+		internal static bool TryBuildImmutableForDictionaryContract(System.Type underlyingType, System.Type keyItemType, System.Type valueItemType, [NotNullWhen(true)] [Nullable(2)] out System.Type createdType, [NotNullWhen(true)] [Nullable(new byte[2] {2, 1 })] out ObjectConstructor<object> parameterizedCreator); // 0x00000001842180D0-0x00000001842182D0
 	}
 
-	internal static class BufferUtils // TypeDefIndex: 52692
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal static class BufferUtils // TypeDefIndex: 55374
 	{
 		// Methods
-		public static char[] RentBuffer(IArrayPool<char> bufferPool, int minSize) => default; // 0x00000001846959F0-0x0000000184695A50
-		public static void ReturnBuffer(IArrayPool<char> bufferPool, char[] buffer) {} // 0x0000000184F704A0-0x0000000184F704F0
-		public static char[] EnsureBufferSize(IArrayPool<char> bufferPool, int size, char[] buffer) => default; // 0x000000018B3DF6B0-0x000000018B3DF730
+		[NullableContext(1)]
+		public static char[] RentBuffer([Nullable(2)] IArrayPool<char> bufferPool, int minSize); // 0x0000000183778910-0x0000000183778940
+		public static void ReturnBuffer(IArrayPool<char> bufferPool, char[] buffer); // 0x0000000183778690-0x00000001837786B0
+		public static char[] EnsureBufferSize(IArrayPool<char> bufferPool, int size, char[] buffer); // 0x000000018A8AFE38-0x000000018A8AFEB8
 	}
 
-	internal static class JavaScriptUtils // TypeDefIndex: 52693
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class JavaScriptUtils // TypeDefIndex: 55375
 	{
 		// Fields
 		internal static readonly bool[] SingleQuoteCharEscapeFlags; // 0x00
@@ -5476,181 +6261,203 @@ namespace Newtonsoft.Json.Utilities
 		internal static readonly bool[] HtmlCharEscapeFlags; // 0x10
 	
 		// Constructors
-		static JavaScriptUtils() {} // 0x0000000185175B90-0x00000001851767F0
+		static JavaScriptUtils(); // 0x0000000184063150-0x0000000184063BE0
 	
 		// Methods
-		public static bool[] GetCharEscapeFlags(StringEscapeHandling stringEscapeHandling, char quoteChar) => default; // 0x0000000184593210-0x0000000184593290
-		public static bool ShouldEscapeJavaScriptString(string s, bool[] charEscapeFlags) => default; // 0x000000018407F280-0x000000018407F2F0
-		public static void WriteEscapedJavaScriptString(TextWriter writer, string s, char delimiter, bool appendDelimiters, bool[] charEscapeFlags, StringEscapeHandling stringEscapeHandling, IArrayPool<char> bufferPool, ref char[] writeBuffer) {} // 0x0000000184694D60-0x0000000184694F20
-		public static string ToEscapedJavaScriptString(string value, char delimiter, bool appendDelimiters, StringEscapeHandling stringEscapeHandling) => default; // 0x000000018B3E6E3C-0x000000018B3E6FC4
-		private static int FirstCharToEscape(string s, bool[] charEscapeFlags, StringEscapeHandling stringEscapeHandling) => default; // 0x00000001846951A0-0x0000000184695220
-		public static bool TryGetDateFromConstructorJson(JsonReader reader, out System.DateTime dateTime, out string errorMessage) {
-			dateTime = default;
-			errorMessage = default;
-			return default;
-		} // 0x000000018B3E7120-0x000000018B3E7488
-		private static bool TryGetDateConstructorValue(JsonReader reader, out long? integer, out string errorMessage) {
-			integer = default;
-			errorMessage = default;
-			return default;
-		} // 0x000000018B3E6FC4-0x000000018B3E7120
+		public static bool[] GetCharEscapeFlags(StringEscapeHandling stringEscapeHandling, char quoteChar); // 0x0000000183425E70-0x0000000183425EF0
+		public static bool ShouldEscapeJavaScriptString([Nullable(2)] string s, bool[] charEscapeFlags); // 0x00000001830BCB50-0x00000001830BCBC0
+		[NullableContext(2)]
+		public static void WriteEscapedJavaScriptString([Nullable(1)] TextWriter writer, string s, char delimiter, bool appendDelimiters, [Nullable(1)] bool[] charEscapeFlags, StringEscapeHandling stringEscapeHandling, IArrayPool<char> bufferPool, ref char[] writeBuffer); // 0x0000000183778F00-0x0000000183779260
+		public static string ToEscapedJavaScriptString([Nullable(2)] string value, char delimiter, bool appendDelimiters, StringEscapeHandling stringEscapeHandling); // 0x000000018A8B76E4-0x000000018A8B786C
+		private static int FirstCharToEscape(string s, bool[] charEscapeFlags, StringEscapeHandling stringEscapeHandling); // 0x00000001837795A0-0x0000000183779620
+		public static bool TryGetDateFromConstructorJson(JsonReader reader, out System.DateTime dateTime, [Nullable(2)] [NotNullWhen(false)] out string errorMessage); // 0x000000018A8B79C8-0x000000018A8B7D30
+		private static bool TryGetDateConstructorValue(JsonReader reader, out long? integer, [Nullable(2)] [NotNullWhen(false)] out string errorMessage); // 0x000000018A8B786C-0x000000018A8B79C8
 	}
 
-	internal static class JsonTokenUtils // TypeDefIndex: 52694
+	internal static class JsonTokenUtils // TypeDefIndex: 55376
 	{
 		// Methods
-		internal static bool IsEndToken(JsonToken token) => default; // 0x0000000184595D40-0x0000000184595D50
-		internal static bool IsStartToken(JsonToken token) => default; // 0x0000000184596150-0x0000000184596160
-		internal static bool IsPrimitiveToken(JsonToken token) => default; // 0x000000018592E190-0x000000018592E1A0
+		internal static bool IsEndToken(JsonToken token); // 0x0000000183424FE0-0x0000000183424FF0
+		internal static bool IsStartToken(JsonToken token); // 0x0000000183425330-0x0000000183425340
+		internal static bool IsPrimitiveToken(JsonToken token); // 0x00000001845F7460-0x00000001845F7470
 	}
 
-	internal class LateBoundReflectionDelegateFactory : ReflectionDelegateFactory // TypeDefIndex: 52702
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class LateBoundReflectionDelegateFactory : ReflectionDelegateFactory // TypeDefIndex: 55384
 	{
 		// Fields
 		private static readonly LateBoundReflectionDelegateFactory _instance; // 0x00
 	
 		// Properties
-		internal static ReflectionDelegateFactory Instance { get => default; }
+		internal static ReflectionDelegateFactory Instance { get; } // 0x000000018A8B7E5C-0x000000018A8B7EAC 
 	
 		// Nested types
-		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 52695
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 55377
 		{
 			// Fields
+			[Nullable(0)]
 			public ConstructorInfo c; // 0x10
+			[Nullable(0)]
 			public MethodBase method; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass3_0() {} // 0x000000018B3E75B4-0x000000018B3E7604
+			public __c__DisplayClass3_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal object _CreateParameterizedConstructor_b__0(object[] a) => default; // 0x0000000185A80D20-0x0000000185A80E40
-			internal object _CreateParameterizedConstructor_b__1(object[] a) => default;
+			internal object _CreateParameterizedConstructor_b__0([Nullable(new byte[2] {1, 2 })] object[] a); // 0x0000000184295360-0x0000000184295380
+			internal object _CreateParameterizedConstructor_b__1([Nullable(new byte[2] {1, 2 })] object[] a); // 0x000000018A8BAB5C-0x000000018A8BAB80
 		}
 	
-		private sealed class __c__DisplayClass4_0<T> // TypeDefIndex: 52696
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass4_0<T> // TypeDefIndex: 55378
 		{
 			// Fields
+			[Nullable(0)]
 			public ConstructorInfo c;
+			[Nullable(0)]
 			public MethodBase method;
 	
 			// Constructors
-			public __c__DisplayClass4_0() {}
+			public __c__DisplayClass4_0();
 	
 			// Methods
-			internal object _CreateMethodCall_b__0(T o, object[] a) => default;
-			internal object _CreateMethodCall_b__1(T o, object[] a) => default;
+			[NullableContext(0)]
+			internal object _CreateMethodCall_b__0(T o, [Nullable(new byte[2] {1, 2 })] object[] a);
+			[NullableContext(0)]
+			internal object _CreateMethodCall_b__1(T o, [Nullable(new byte[2] {1, 2 })] object[] a);
 		}
 	
-		private sealed class __c__DisplayClass5_0<T> // TypeDefIndex: 52697
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass5_0<T> // TypeDefIndex: 55379
 		{
 			// Fields
+			[Nullable(0)]
 			public System.Type type;
+			[Nullable(0)]
 			public ConstructorInfo constructorInfo;
 	
 			// Constructors
-			public __c__DisplayClass5_0() {}
+			public __c__DisplayClass5_0();
 	
 			// Methods
-			internal T _CreateDefaultConstructor_b__0() => default;
-			internal T _CreateDefaultConstructor_b__1() => default; // 0x0000000185492010-0x0000000185492020
+			[NullableContext(0)]
+			internal T _CreateDefaultConstructor_b__0();
+			[NullableContext(0)]
+			internal T _CreateDefaultConstructor_b__1();
 		}
 	
-		private sealed class __c__DisplayClass6_0<T> // TypeDefIndex: 52698
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass6_0<T> // TypeDefIndex: 55380
 		{
 			// Fields
+			[Nullable(0)]
 			public PropertyInfo propertyInfo;
 	
 			// Constructors
-			public __c__DisplayClass6_0() {} // 0x0000000185F79F30-0x0000000185F79F90
+			public __c__DisplayClass6_0();
 	
 			// Methods
-			internal object _CreateGet_b__0(T o) => default; // 0x0000000185492010-0x0000000185492020
+			[NullableContext(0)]
+			internal object _CreateGet_b__0(T o);
 		}
 	
-		private sealed class __c__DisplayClass7_0<T> // TypeDefIndex: 52699
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass7_0<T> // TypeDefIndex: 55381
 		{
 			// Fields
+			[Nullable(0)]
 			public System.Reflection.FieldInfo fieldInfo;
 	
 			// Constructors
-			public __c__DisplayClass7_0() {} // 0x000000018546B810-0x000000018546B830
+			public __c__DisplayClass7_0();
 	
 			// Methods
-			internal object _CreateGet_b__0(T o) => default; // 0x000000018B3EA2DC-0x000000018B3EA300
+			[NullableContext(0)]
+			internal object _CreateGet_b__0(T o);
 		}
 	
-		private sealed class __c__DisplayClass8_0<T> // TypeDefIndex: 52700
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass8_0<T> // TypeDefIndex: 55382
 		{
 			// Fields
+			[Nullable(0)]
 			public System.Reflection.FieldInfo fieldInfo;
 	
 			// Constructors
-			public __c__DisplayClass8_0() {}
+			public __c__DisplayClass8_0();
 	
 			// Methods
-			internal void _CreateSet_b__0(T o, object v) {}
+			[NullableContext(0)]
+			internal void _CreateSet_b__0(T o, [Nullable(2)] object v);
 		}
 	
-		private sealed class __c__DisplayClass9_0<T> // TypeDefIndex: 52701
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass9_0<T> // TypeDefIndex: 55383
 		{
 			// Fields
+			[Nullable(0)]
 			public PropertyInfo propertyInfo;
 	
 			// Constructors
-			public __c__DisplayClass9_0() {}
+			public __c__DisplayClass9_0();
 	
 			// Methods
-			internal void _CreateSet_b__0(T o, object v) {}
+			[NullableContext(0)]
+			internal void _CreateSet_b__0(T o, [Nullable(2)] object v);
 		}
 	
 		// Constructors
-		public LateBoundReflectionDelegateFactory() {}
-		static LateBoundReflectionDelegateFactory() {}
+		public LateBoundReflectionDelegateFactory(); // 0x00000001841E1670-0x00000001841E1680
+		static LateBoundReflectionDelegateFactory(); // 0x0000000184D4E0D0-0x0000000184D4E130
 	
 		// Methods
-		public override ObjectConstructor<object> CreateParameterizedConstructor(MethodBase method) => default;
-		public override MethodCall<T, object> CreateMethodCall<T>(MethodBase method) => default;
-		public override Func<T> CreateDefaultConstructor<T>(System.Type type) => default;
-		public override Func<T, object> CreateGet<T>(PropertyInfo propertyInfo) => default;
-		public override Func<T, object> CreateGet<T>(System.Reflection.FieldInfo fieldInfo) => default;
-		public override Action<T, object> CreateSet<T>(System.Reflection.FieldInfo fieldInfo) => default;
-		public override Action<T, object> CreateSet<T>(PropertyInfo propertyInfo) => default;
+		public override ObjectConstructor<object> CreateParameterizedConstructor(MethodBase method); // 0x0000000184820B70-0x0000000184820C90
+		public override MethodCall<T, object> CreateMethodCall<T>(MethodBase method);
+		public override Func<T> CreateDefaultConstructor<T>(System.Type type);
+		public override Func<T, object> CreateGet<T>(PropertyInfo propertyInfo);
+		public override Func<T, object> CreateGet<T>(System.Reflection.FieldInfo fieldInfo);
+		public override Action<T, object> CreateSet<T>(System.Reflection.FieldInfo fieldInfo);
+		public override Action<T, object> CreateSet<T>(PropertyInfo propertyInfo);
 	}
 
-	internal static class MathUtils // TypeDefIndex: 52703
+	internal static class MathUtils // TypeDefIndex: 55385
 	{
 		// Methods
-		public static int IntLength(ulong i) => default; // 0x0000000184694890-0x00000001846948C0
-		public static char IntToHex(int n) => default; // 0x000000018B3E76A4-0x000000018B3E76B4
-		public static bool ApproxEquals(double d1, double d2) => default; // 0x000000018B3E7604-0x000000018B3E76A4
+		public static int IntLength(ulong i); // 0x0000000183778AC0-0x0000000183778AF0
+		public static char IntToHex(int n); // 0x000000018A8B7F4C-0x000000018A8B7F5C
+		public static bool ApproxEquals(double d1, double d2); // 0x000000018A8B7EAC-0x000000018A8B7F4C
 	}
 
-	internal delegate TResult MethodCall<T, TResult>(T target, object[] args); // TypeDefIndex: 52704; 0x00000000-0x00000000
+	internal delegate TResult MethodCall<T, TResult>(T target, params [Nullable(new byte[2] {1, 2 })] object[] args); // TypeDefIndex: 55386; 0x00000000-0x00000000
 
-	internal static class MiscellaneousUtils // TypeDefIndex: 52705
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class MiscellaneousUtils // TypeDefIndex: 55387
 	{
 		// Methods
-		public static bool ValueEquals(object objA, object objB) => default; // 0x000000018533BF10-0x000000018533C190
-		public static ArgumentOutOfRangeException CreateArgumentOutOfRangeException(string paramName, object actualValue, string message) => default; // 0x000000018B3E773C-0x000000018B3E7818
-		public static string ToString(object value) => default; // 0x000000018B3E7990-0x000000018B3E7A14
-		public static int ByteArrayCompare(byte[] a1, byte[] a2) => default; // 0x000000018B3E76B4-0x000000018B3E773C
-		public static string GetPrefix(string qualifiedName) => default; // 0x000000018B3E7844-0x000000018B3E7870
-		public static string GetLocalName(string qualifiedName) => default; // 0x000000018B3E7818-0x000000018B3E7844
-		public static void GetQualifiedNameParts(string qualifiedName, out string prefix, out string localName) {
-			prefix = default;
-			localName = default;
-		} // 0x000000018B3E7870-0x000000018B3E7914
-		internal static RegexOptions GetRegexOptions(string optionsText) => default; // 0x000000018B3E7914-0x000000018B3E7990
+		[NullableContext(2)]
+		public static bool ValueEquals(object objA, object objB); // 0x0000000184164380-0x00000001841645A0
+		public static ArgumentOutOfRangeException CreateArgumentOutOfRangeException(string paramName, object actualValue, string message); // 0x000000018A8B7FE4-0x000000018A8B80C0
+		public static string ToString([Nullable(2)] object value); // 0x000000018A8B8238-0x000000018A8B82BC
+		public static int ByteArrayCompare(byte[] a1, byte[] a2); // 0x000000018A8B7F5C-0x000000018A8B7FE4
+		public static string GetPrefix(string qualifiedName); // 0x000000018A8B80EC-0x000000018A8B8118
+		public static string GetLocalName(string qualifiedName); // 0x000000018A8B80C0-0x000000018A8B80EC
+		public static void GetQualifiedNameParts(string qualifiedName, [Nullable(2)] out string prefix, out string localName); // 0x000000018A8B8118-0x000000018A8B81BC
+		internal static RegexOptions GetRegexOptions(string optionsText); // 0x000000018A8B81BC-0x000000018A8B8238
 	}
 
-	internal abstract class ReflectionDelegateFactory // TypeDefIndex: 52706
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal abstract class ReflectionDelegateFactory // TypeDefIndex: 55388
 	{
 		// Constructors
-		protected ReflectionDelegateFactory() {} // 0x0000000185492010-0x0000000185492020
+		protected ReflectionDelegateFactory(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public Func<T, object> CreateGet<T>(MemberInfo memberInfo) => default;
-		public Action<T, object> CreateSet<T>(MemberInfo memberInfo) => default;
+		public Func<T, object> CreateGet<T>(MemberInfo memberInfo);
+		public Action<T, object> CreateSet<T>(MemberInfo memberInfo);
 		public abstract MethodCall<T, object> CreateMethodCall<T>(MethodBase method);
 		public abstract ObjectConstructor<object> CreateParameterizedConstructor(MethodBase method);
 		public abstract Func<T> CreateDefaultConstructor<T>(System.Type type);
@@ -5660,256 +6467,298 @@ namespace Newtonsoft.Json.Utilities
 		public abstract Action<T, object> CreateSet<T>(PropertyInfo propertyInfo);
 	}
 
-	internal class ReflectionMember // TypeDefIndex: 52707
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal class ReflectionMember // TypeDefIndex: 55389
 	{
 		// Fields
+		[CompilerGenerated]
 		private System.Type _MemberType_k__BackingField; // 0x10
+		[CompilerGenerated]
+		[Nullable(new byte[3] {2, 1, 2 })]
 		private Func<object, object> _Getter_k__BackingField; // 0x18
+		[CompilerGenerated]
+		[Nullable(new byte[3] {2, 1, 2 })]
 		private Action<object, object> _Setter_k__BackingField; // 0x20
 	
 		// Properties
-		public System.Type MemberType { get; set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public Func<object, object> Getter { get; set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-		public Action<object, object> Setter { get; set; } // 0x00000001813B31A0-0x00000001813B31B0 0x000000018646EE40-0x000000018646EE50
+		public System.Type MemberType { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		[Nullable(new byte[3] {2, 1, 2 })]
+		public Func<object, object> Getter { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		[Nullable(new byte[3] {2, 1, 2 })]
+		public Action<object, object> Setter { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
 	
 		// Constructors
-		public ReflectionMember() {} // 0x0000000185492010-0x0000000185492020
+		public ReflectionMember(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class ReflectionObject // TypeDefIndex: 52711
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class ReflectionObject // TypeDefIndex: 55393
 	{
 		// Fields
+		[CompilerGenerated]
+		[Nullable(new byte[2] {2, 1 })]
 		private readonly ObjectConstructor<object> _Creator_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private readonly IDictionary<string, ReflectionMember> _Members_k__BackingField; // 0x18
 	
 		// Properties
-		public ObjectConstructor<object> Creator { get; } // 0x000000018B3E7DD4-0x000000018B3E7DE4 
-		public IDictionary<string, ReflectionMember> Members { get; } // 0x000000018B3E7DE4-0x000000018B3E84E0 
+		[Nullable(new byte[2] {2, 1 })]
+		public ObjectConstructor<object> Creator { [CompilerGenerated] get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public IDictionary<string, ReflectionMember> Members { [CompilerGenerated] get; } // 0x000000018385B100-0x000000018385B110 
 	
 		// Nested types
-		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 52708
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass11_0 // TypeDefIndex: 55390
 		{
 			// Fields
+			[Nullable(new byte[2] {0, 1 })]
 			public Func<object> ctor; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass11_0() {} // 0x000000018346D130-0x000000018346D140
+			public __c__DisplayClass11_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal object _Create_b__0(object[] args) => default; // 0x0000000181377E40-0x0000000181377E50
+			internal object _Create_b__0([Nullable(new byte[2] {1, 2 })] object[] args); // 0x0000000189ADFE08-0x0000000189ADFE28
 		}
 	
-		private sealed class __c__DisplayClass11_1 // TypeDefIndex: 52709
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass11_1 // TypeDefIndex: 55391
 		{
 			// Fields
+			[Nullable(new byte[3] {0, 1, 2 })]
 			public MethodCall<object, object> call; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass11_1() {} // 0x000000018B3E8630-0x000000018B3E86C0
+			public __c__DisplayClass11_1(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal object _Create_b__1(object target) => default; // 0x000000018B3E8538-0x000000018B3E85AC
+			internal object _Create_b__1(object target); // 0x000000018A8BAA50-0x000000018A8BAAB8
 		}
 	
-		private sealed class __c__DisplayClass11_2 // TypeDefIndex: 52710
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass11_2 // TypeDefIndex: 55392
 		{
 			// Fields
+			[Nullable(new byte[3] {0, 1, 2 })]
 			public MethodCall<object, object> call; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass11_2() {} // 0x000000018B3E85AC-0x000000018B3E8630
+			public __c__DisplayClass11_2(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _Create_b__2(object target, object arg) {} // 0x000000018B3E84E0-0x000000018B3E8538
+			internal void _Create_b__2(object target, [Nullable(2)] object arg); // 0x000000018A8BAAB8-0x000000018A8BAB5C
 		}
 	
 		// Constructors
-		public ReflectionObject() {} // Dummy constructor
-		private ReflectionObject(ObjectConstructor<object> creator) {} // 0x0000000185492010-0x0000000185492020
+		private ReflectionObject([Nullable(new byte[2] {2, 1 })] ObjectConstructor<object> creator); // 0x000000018A8B8ECC-0x000000018A8B8F5C
 	
 		// Methods
-		public object GetValue(object target, string member) => default; // 0x000000018A67B5C4-0x000000018A67B5E4
-		public void SetValue(object target, string member, object value) {} // 0x0000000185492010-0x0000000185492020
-		public System.Type GetType(string member) => default; // 0x000000018B3EA1D0-0x000000018B3EA238
-		public static ReflectionObject Create(System.Type t, string[] memberNames) => default; // 0x0000000185492010-0x0000000185492020
-		public static ReflectionObject Create(System.Type t, MethodBase creator, string[] memberNames) => default; // 0x000000018B3EA238-0x000000018B3EA2DC
+		public object GetValue(object target, string member); // 0x000000018A8B8DD4-0x000000018A8B8E48
+		public void SetValue(object target, string member, [Nullable(2)] object value); // 0x000000018A8B8E48-0x000000018A8B8ECC
+		public System.Type GetType(string member); // 0x000000018A8B8D7C-0x000000018A8B8DD4
+		public static ReflectionObject Create(System.Type t, params string[] memberNames); // 0x000000018A8B867C-0x000000018A8B868C
+		public static ReflectionObject Create(System.Type t, [Nullable(2)] MethodBase creator, params string[] memberNames); // 0x000000018A8B868C-0x000000018A8B8D7C
 	}
 
-	internal static class ReflectionUtils // TypeDefIndex: 52717
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class ReflectionUtils // TypeDefIndex: 55399
 	{
 		// Fields
 		public static readonly System.Type[] EmptyTypes; // 0x00
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 52712
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55394
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c __9; // 0x00
+			[Nullable(0)]
 			public static Func<ConstructorInfo, bool> __9__11_0; // 0x08
+			[Nullable(0)]
 			public static Func<MemberInfo, string> __9__31_0; // 0x10
+			[Nullable(0)]
 			public static Func<ParameterInfo, System.Type> __9__39_0; // 0x18
+			[Nullable(0)]
 			public static Func<System.Reflection.FieldInfo, bool> __9__41_0; // 0x20
 	
 			// Constructors
-			static __c() {} // 0x0000000185F5DB80-0x0000000185F5DC00
-			public __c() {} // 0x000000018434B5B0-0x000000018434B860
+			static __c(); // 0x0000000184D4C210-0x0000000184D4C270
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetDefaultConstructor_b__11_0(ConstructorInfo c) => default; // 0x000000018434B460-0x000000018434B5B0
-			internal string _GetFieldsAndProperties_b__31_0(MemberInfo m) => default; // 0x000000018434A0D0-0x000000018434A140
-			internal System.Type _GetMemberInfoFromType_b__39_0(ParameterInfo p) => default; // 0x0000000184071C20-0x0000000184071FD0
-			internal bool _GetChildPrivateFields_b__41_0(System.Reflection.FieldInfo f) => default; // 0x000000018B3E8D7C-0x000000018B3E8E40
+			[NullableContext(0)]
+			internal bool _GetDefaultConstructor_b__11_0(ConstructorInfo c); // 0x0000000182F2EF10-0x0000000182F2EF40
+			[NullableContext(0)]
+			internal string _GetFieldsAndProperties_b__31_0(MemberInfo m); // 0x0000000183F48CC0-0x0000000183F48CE0
+			[NullableContext(0)]
+			internal System.Type _GetMemberInfoFromType_b__39_0(ParameterInfo p); // 0x0000000186C08908-0x0000000186C08920
+			[NullableContext(0)]
+			internal bool _GetChildPrivateFields_b__41_0(System.Reflection.FieldInfo f); // 0x0000000182F2E180-0x0000000182F2E1B0
 		}
 	
-		private sealed class __c__DisplayClass31_0 // TypeDefIndex: 52713
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass31_0 // TypeDefIndex: 55395
 		{
 			// Fields
+			[Nullable(0)]
 			public MemberInfo memberInfo; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass31_0() {} // 0x000000018B3E8C6C-0x000000018B3E8D7C
+			public __c__DisplayClass31_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetFieldsAndProperties_b__1(MemberInfo m) => default; // 0x000000018B3E8F38-0x000000018B3E9054
+			[NullableContext(0)]
+			internal bool _GetFieldsAndProperties_b__1(MemberInfo m); // 0x0000000184B87670-0x0000000184B87700
 		}
 	
-		private sealed class __c__DisplayClass44_0 // TypeDefIndex: 52714
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass44_0 // TypeDefIndex: 55396
 		{
 			// Fields
+			[Nullable(0)]
 			public PropertyInfo subTypeProperty; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass44_0() {} // 0x0000000184346100-0x0000000184346200
+			public __c__DisplayClass44_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetChildPrivateProperties_b__0(PropertyInfo p) => default; // 0x0000000184345A40-0x0000000184345A90
-			internal bool _GetChildPrivateProperties_b__1(PropertyInfo p) => default; // 0x0000000184345A90-0x0000000184345BF0
+			[NullableContext(0)]
+			internal bool _GetChildPrivateProperties_b__0(PropertyInfo p); // 0x00000001848F6D60-0x00000001848F6DB0
+			[NullableContext(0)]
+			internal bool _GetChildPrivateProperties_b__1(PropertyInfo p); // 0x0000000182F2F7C0-0x0000000182F2F8A0
 		}
 	
-		private sealed class __c__DisplayClass44_1 // TypeDefIndex: 52715
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass44_1 // TypeDefIndex: 55397
 		{
 			// Fields
+			[Nullable(0)]
 			public System.Type subTypePropertyDeclaringType; // 0x10
+			[Nullable(0)]
 			public __c__DisplayClass44_0 CS___8__locals1; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass44_1() {} // 0x0000000184346670-0x00000001843466F0
+			public __c__DisplayClass44_1(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetChildPrivateProperties_b__2(PropertyInfo p) => default; // 0x0000000184348140-0x00000001843481F0
+			[NullableContext(0)]
+			internal bool _GetChildPrivateProperties_b__2(PropertyInfo p); // 0x0000000182F2F690-0x0000000182F2F7C0
 		}
 	
-		private sealed class __c__DisplayClass45_0 // TypeDefIndex: 52716
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass45_0 // TypeDefIndex: 55398
 		{
 			// Fields
+			[Nullable(0)]
 			public string method; // 0x10
+			[Nullable(0)]
 			public System.Type methodDeclaringType; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass45_0() {} // 0x0000000184345C90-0x0000000184345CF0
+			public __c__DisplayClass45_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _IsMethodOverridden_b__0(MethodInfo info) => default; // 0x0000000184347420-0x0000000184347460
+			[NullableContext(0)]
+			internal bool _IsMethodOverridden_b__0(MethodInfo info); // 0x000000018A8BAB80-0x000000018A8BAC5C
 		}
 	
 		// Constructors
-		static ReflectionUtils() {} // 0x0000000184BBA750-0x0000000184BBA7E0
+		static ReflectionUtils(); // 0x0000000184D31570-0x0000000184D315F0
 	
 		// Methods
-		public static bool IsVirtual(PropertyInfo propertyInfo) => default; // 0x0000000184347BE0-0x0000000184347C50
-		public static MethodInfo GetBaseDefinition(PropertyInfo propertyInfo) => default; // 0x0000000184347FD0-0x0000000184348140
-		public static bool IsPublic(PropertyInfo property) => default; // 0x0000000184BBA4C0-0x0000000184BBA530
-		public static System.Type GetObjectType(object v) => default; // 0x0000000184BBA530-0x0000000184BBA5F0
-		public static string GetTypeName(System.Type t, TypeNameAssemblyFormatHandling assemblyFormat, ISerializationBinder binder) => default; // 0x0000000184BBA5F0-0x0000000184BBA6D0
-		private static string GetFullyQualifiedTypeName(System.Type t, ISerializationBinder binder) => default; // 0x0000000184BB9970-0x0000000184BB9A10
-		private static string RemoveAssemblyDetails(string fullyQualifiedTypeName) => default; // 0x000000018B3E8984-0x000000018B3E8C6C
-		public static bool HasDefaultConstructor(System.Type t, bool nonPublic) => default; // 0x00000001840804D0-0x0000000184080630
-		public static ConstructorInfo GetDefaultConstructor(System.Type t) => default; // 0x0000000184349F60-0x000000018434A070
-		public static ConstructorInfo GetDefaultConstructor(System.Type t, bool nonPublic) => default; // 0x000000018434A070-0x000000018434A0D0
-		public static bool IsNullable(System.Type t) => default; // 0x00000001843A6E70-0x00000001843A6F60
-		public static bool IsNullableType(System.Type t) => default; // 0x0000000183FA78D0-0x0000000183FA7B60
-		public static System.Type EnsureNotNullableType(System.Type t) => default; // 0x000000018407FDB0-0x000000018407FEE0
-		public static System.Type EnsureNotByRefType(System.Type t) => default; // 0x000000018407FC60-0x000000018407FDB0
-		public static bool IsGenericDefinition(System.Type type, System.Type genericInterfaceDefinition) => default; // 0x000000018439B320-0x000000018439BFB0
-		public static bool ImplementsGenericDefinition(System.Type type, System.Type genericInterfaceDefinition) => default; // 0x0000000185EC3840-0x0000000185EC38F0
-		public static bool ImplementsGenericDefinition(System.Type type, System.Type genericInterfaceDefinition, out System.Type implementingType) {
-			implementingType = default;
-			return default;
-		}
-		public static bool InheritsGenericDefinition(System.Type type, System.Type genericClassDefinition) => default;
-		public static bool InheritsGenericDefinition(System.Type type, System.Type genericClassDefinition, out System.Type implementingType) {
-			implementingType = default;
-			return default;
-		}
-		private static bool InheritsGenericDefinitionInternal(System.Type type, System.Type genericClassDefinition, out System.Type implementingType) {
-			implementingType = default;
-			return default;
-		} // 0x0000000184147BB0-0x0000000184148210
-		public static System.Type GetCollectionItemType(System.Type type) => default; // 0x000000018407D110-0x000000018407D2A0
-		public static void GetDictionaryKeyValueTypes(System.Type dictionaryType, out System.Type keyType, out System.Type valueType) {
-			keyType = default;
-			valueType = default;
-		} // 0x000000018407DD40-0x000000018407DDF0
-		public static System.Type GetMemberUnderlyingType(MemberInfo member) => default; // 0x00000001841498B0-0x0000000184149F20
-		public static bool IsByRefLikeType(System.Type type) => default; // 0x000000018439B210-0x000000018439B320
-		public static bool IsIndexedProperty(PropertyInfo property) => default; // 0x000000018439B010-0x000000018439B210
-		public static object GetMemberValue(MemberInfo member, object target) => default; // 0x0000000184348250-0x0000000184348490
-		public static void SetMemberValue(MemberInfo member, object target, object value) {} // 0x00000001855297C0-0x00000001855297E0
-		public static bool CanReadMemberValue(MemberInfo member, bool nonPublic) => default; // 0x000000018434B070-0x000000018434B460
-		public static bool CanSetMemberValue(MemberInfo member, bool nonPublic, bool canSetReadOnly) => default; // 0x000000018B3E8E40-0x000000018B3E8F38
-		public static List<MemberInfo> GetFieldsAndProperties(System.Type type, System.Reflection.BindingFlags bindingAttr) => default; // 0x000000018B3E86C0-0x000000018B3E8984
-		private static bool IsOverridenGenericMember(MemberInfo memberInfo, System.Reflection.BindingFlags bindingAttr) => default; // 0x0000000185F78070-0x0000000185F780D0
+		public static bool IsPublic(PropertyInfo property); // 0x0000000182F346B0-0x0000000182F34720
+		[NullableContext(2)]
+		public static System.Type GetObjectType(object v); // 0x0000000182FB2150-0x0000000182FB2480
+		public static string GetTypeName(System.Type t, TypeNameAssemblyFormatHandling assemblyFormat, [Nullable(2)] ISerializationBinder binder); // 0x000000018A8B95FC-0x000000018A8B96C0
+		private static string GetFullyQualifiedTypeName(System.Type t, [Nullable(2)] ISerializationBinder binder); // 0x000000018A8B9508-0x000000018A8B95FC
+		private static string RemoveAssemblyDetails(string fullyQualifiedTypeName); // 0x000000018A8B97B8-0x000000018A8B98D4
+		public static bool HasDefaultConstructor(System.Type t, bool nonPublic); // 0x00000001835CF460-0x00000001835CF4F0
+		public static ConstructorInfo GetDefaultConstructor(System.Type t); // 0x00000001835CEF40-0x00000001835CEF80
+		public static ConstructorInfo GetDefaultConstructor(System.Type t, bool nonPublic); // 0x00000001835CEF80-0x00000001835CF090
+		public static bool IsNullable(System.Type t); // 0x00000001835D0080-0x00000001835D00D0
+		public static bool IsNullableType(System.Type t); // 0x00000001835CFEC0-0x00000001835CFF40
+		public static System.Type EnsureNotNullableType(System.Type t); // 0x00000001835CF0F0-0x00000001835CF130
+		public static System.Type EnsureNotByRefType(System.Type t); // 0x00000001835D0C80-0x00000001835D0CC0
+		public static bool IsGenericDefinition(System.Type type, System.Type genericInterfaceDefinition); // 0x00000001844778A0-0x0000000184477930
+		public static bool ImplementsGenericDefinition(System.Type type, System.Type genericInterfaceDefinition); // 0x00000001835CF9D0-0x00000001835CFA20
+		public static bool ImplementsGenericDefinition(System.Type type, System.Type genericInterfaceDefinition, [Nullable(2)] [NotNullWhen(true)] out System.Type implementingType); // 0x00000001835CFD90-0x00000001835CFEC0
+		public static bool InheritsGenericDefinition(System.Type type, System.Type genericClassDefinition); // 0x00000001835CE250-0x00000001835CE2A0
+		public static bool InheritsGenericDefinition(System.Type type, System.Type genericClassDefinition, [Nullable(2)] out System.Type implementingType); // 0x00000001835CE2A0-0x00000001835CE330
+		private static bool InheritsGenericDefinitionInternal(System.Type type, System.Type genericClassDefinition, [Nullable(2)] out System.Type implementingType); // 0x00000001835CE350-0x00000001835CE410
+		public static System.Type GetCollectionItemType(System.Type type); // 0x00000001849E6300-0x00000001849E63A0
+		[NullableContext(2)]
+		public static void GetDictionaryKeyValueTypes([Nullable(1)] System.Type dictionaryType, out System.Type keyType, out System.Type valueType); // 0x000000018A8B9220-0x000000018A8B9508
+		public static System.Type GetMemberUnderlyingType(MemberInfo member); // 0x00000001832203F0-0x0000000183220500
+		public static bool IsByRefLikeType(System.Type type); // 0x00000001832B4820-0x00000001832B48F0
+		public static bool IsIndexedProperty(PropertyInfo property); // 0x0000000182F2EED0-0x0000000182F2EF10
+		public static object GetMemberValue(MemberInfo member, object target); // 0x00000001835949B0-0x0000000183594A60
+		public static void SetMemberValue(MemberInfo member, object target, [Nullable(2)] object value); // 0x0000000182FB2E10-0x0000000182FB3000
+		public static bool CanReadMemberValue(MemberInfo member, bool nonPublic); // 0x000000018321FED0-0x000000018321FFC0
+		public static bool CanSetMemberValue(MemberInfo member, bool nonPublic, bool canSetReadOnly); // 0x000000018321FDB0-0x000000018321FED0
+		public static List<MemberInfo> GetFieldsAndProperties(System.Type type, System.Reflection.BindingFlags bindingAttr); // 0x0000000182F32150-0x0000000182F32CC0
+		private static bool IsOverridenGenericMember(MemberInfo memberInfo, System.Reflection.BindingFlags bindingAttr); // 0x0000000184CB1A30-0x0000000184CB1AE0
 		public static T GetAttribute<T>(object attributeProvider)
-			where T : Attribute => default; // 0x0000000185492010-0x0000000185492020
+			where T : Attribute;
 		public static T GetAttribute<T>(object attributeProvider, bool inherit)
-			where T : Attribute => default; // 0x000000018434A140-0x000000018434AB10
+			where T : Attribute;
 		public static T[] GetAttributes<T>(object attributeProvider, bool inherit)
-			where T : Attribute => default; // 0x000000018509B4A0-0x000000018509B4C0
-		public static Attribute[] GetAttributes(object attributeProvider, System.Type attributeType, bool inherit) => default; // 0x0000000187AD0B74-0x0000000187AD0B8C
-		public static StructMultiKey<string, string> SplitFullyQualifiedTypeName(string fullyQualifiedTypeName) => default; // 0x0000000184349010-0x0000000184349040
-		private static int? GetAssemblyDelimiterIndex(string fullyQualifiedTypeName) => default; // 0x0000000185492010-0x0000000185492020
-		public static MemberInfo GetMemberInfoFromType(System.Type targetType, MemberInfo memberInfo) => default; // 0x0000000185DAE8C0-0x0000000185DAE950
-		public static IEnumerable<System.Reflection.FieldInfo> GetFields(System.Type targetType, System.Reflection.BindingFlags bindingAttr) => default; // 0x0000000185492010-0x0000000185492020
-		private static void GetChildPrivateFields(IList<MemberInfo> initialFields, System.Type type, System.Reflection.BindingFlags bindingAttr) {} // 0x0000000185AE8D50-0x0000000185AE8DA0
-		public static IEnumerable<PropertyInfo> GetProperties(System.Type targetType, System.Reflection.BindingFlags bindingAttr) => default; // 0x000000018434AC90-0x000000018434ADA0
-		public static System.Reflection.BindingFlags RemoveFlag(System.Reflection.BindingFlags bindingAttr, System.Reflection.BindingFlags flag) => default; // 0x0000000185492010-0x0000000185492020
-		private static void GetChildPrivateProperties(IList<PropertyInfo> initialProperties, System.Type type, System.Reflection.BindingFlags bindingAttr) {} // 0x000000018434AB10-0x000000018434AC90
-		public static bool IsMethodOverridden(System.Type currentType, System.Type methodDeclaringType, string method) => default; // 0x0000000185492010-0x0000000185492020
-		public static object GetDefaultValue(System.Type type) => default; // 0x000000018B3EA300-0x000000018B3EA3DC
+			where T : Attribute;
+		public static Attribute[] GetAttributes(object attributeProvider, [Nullable(2)] System.Type attributeType, bool inherit); // 0x000000018312C910-0x000000018312D140
+		public static StructMultiKey<string, string> SplitFullyQualifiedTypeName(string fullyQualifiedTypeName); // 0x0000000182FBD590-0x0000000182FBD6B0
+		private static int? GetAssemblyDelimiterIndex(string fullyQualifiedTypeName); // 0x0000000182FBEB90-0x0000000182FBEC20
+		public static MemberInfo GetMemberInfoFromType(System.Type targetType, MemberInfo memberInfo); // 0x000000018312D520-0x000000018312DC30
+		public static IEnumerable<System.Reflection.FieldInfo> GetFields(System.Type targetType, System.Reflection.BindingFlags bindingAttr); // 0x0000000182F32E60-0x0000000182F32F10
+		private static void GetChildPrivateFields(IList<MemberInfo> initialFields, System.Type type, System.Reflection.BindingFlags bindingAttr); // 0x00000001835D00D0-0x00000001835D06E0
+		public static IEnumerable<PropertyInfo> GetProperties(System.Type targetType, System.Reflection.BindingFlags bindingAttr); // 0x0000000182F32F10-0x0000000182F330C0
+		private static void GetChildPrivateProperties(IList<PropertyInfo> initialProperties, System.Type type, System.Reflection.BindingFlags bindingAttr); // 0x0000000182F347C0-0x0000000182F34B10
+		public static bool IsMethodOverridden(System.Type currentType, System.Type methodDeclaringType, string method); // 0x000000018A8B96C0-0x000000018A8B97B8
+		public static object GetDefaultValue(System.Type type); // 0x000000018A8B8F5C-0x000000018A8B9220
+	
+		// Extension methods
+		public static bool IsVirtual(this PropertyInfo propertyInfo); // 0x0000000182F34FC0-0x0000000182F35240
+		public static MethodInfo GetBaseDefinition(this PropertyInfo propertyInfo); // 0x0000000182F34B10-0x0000000182F34C40
+		public static System.Reflection.BindingFlags RemoveFlag(this System.Reflection.BindingFlags bindingAttr, System.Reflection.BindingFlags flag); // 0x00000001835CED60-0x00000001835CED80
 	}
 
-	internal struct StringBuffer // TypeDefIndex: 52718
+	[Nullable(0)]
+	[NullableContext(2)]
+	internal struct StringBuffer // TypeDefIndex: 55400
 	{
 		// Fields
 		private char[] _buffer; // 0x00
 		private int _position; // 0x08
 	
 		// Properties
-		public int Position { get => default; set {} } // 0x0000000181B7E450-0x0000000181B7E460 0x0000000185FB2B90-0x0000000185FB2BA0
-		public bool IsEmpty { get => default; } // 0x000000018402E460-0x000000018402E470 
-		public char[] InternalBuffer { get => default; } // 0x00000001834AFB60-0x00000001834AFB70 
+		public int Position { get; set; } // 0x0000000184D88B10-0x0000000184D88B20 0x0000000184D88B40-0x0000000184D88B50
+		public bool IsEmpty { get; } // 0x000000018314CD60-0x000000018314CD70 
+		public char[] InternalBuffer { get; } // 0x0000000182B76770-0x0000000182B76780 
 	
 		// Constructors
-		public StringBuffer(IArrayPool<char> bufferPool, int initalSize) : this() {
-			_buffer = default;
-			_position = default;
-		} // 0x00000001846946D0-0x0000000184694710
-		private StringBuffer(char[] buffer) : this() {
-			_buffer = default;
-			_position = default;
-		} // 0x000000018646FB84-0x000000018646FBA0
+		public StringBuffer(IArrayPool<char> bufferPool, int initalSize); // 0x00000001837787C0-0x0000000183778800
+		[NullableContext(1)]
+		private StringBuffer(char[] buffer); // 0x0000000185393828-0x0000000185393844
 	
 		// Methods
-		public void Append(IArrayPool<char> bufferPool, char value) {} // 0x000000018538EE70-0x000000018538EED0
-		public void Append(IArrayPool<char> bufferPool, char[] buffer, int startIndex, int count) {} // 0x000000018538EED0-0x000000018538EF50
-		public void Clear(IArrayPool<char> bufferPool) {} // 0x0000000184F704F0-0x0000000184F70540
-		private void EnsureSize(IArrayPool<char> bufferPool, int appendLength) {} // 0x000000018B3E9054-0x000000018B3E90C0
-		public override string ToString() => default; // 0x000000018B3E90C0-0x000000018B3E90D0
-		public string ToString(int start, int length) => default; // 0x000000018B3E90D0-0x000000018B3E90F4
+		public void Append(IArrayPool<char> bufferPool, char value); // 0x0000000184208C70-0x0000000184208CD0
+		[NullableContext(1)]
+		public void Append([Nullable(2)] IArrayPool<char> bufferPool, char[] buffer, int startIndex, int count); // 0x0000000184208CD0-0x0000000184208D50
+		public void Clear(IArrayPool<char> bufferPool); // 0x00000001837786D0-0x0000000183778720
+		private void EnsureSize(IArrayPool<char> bufferPool, int appendLength); // 0x000000018A8B98D4-0x000000018A8B9940
+		[NullableContext(1)]
+		public override string ToString(); // 0x000000018A8B9940-0x000000018A8B9950
+		[NullableContext(1)]
+		public string ToString(int start, int length); // 0x000000018A8B9950-0x000000018A8B9974
 	}
 
-	internal struct StringReference // TypeDefIndex: 52719
+	[IsReadOnly]
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal struct StringReference // TypeDefIndex: 55401
 	{
 		// Fields
 		private readonly char[] _chars; // 0x00
@@ -5917,34 +6766,35 @@ namespace Newtonsoft.Json.Utilities
 		private readonly int _length; // 0x0C
 	
 		// Properties
-		public char this[int i] { get => default; } // 0x00000001841D6060-0x00000001841D6090 
-		public char[] Chars { get => default; } // 0x00000001834AFB60-0x00000001834AFB70 
-		public int StartIndex { get => default; } // 0x0000000181B7E450-0x0000000181B7E460 
-		public int Length { get => default; } // 0x00000001834AFB70-0x00000001834AFB80 
+		public char this[int i] { get => default; } // 0x0000000182FBB5E0-0x0000000182FBB610 
+		public char[] Chars { get; } // 0x0000000182B76770-0x0000000182B76780 
+		public int StartIndex { get; } // 0x0000000184D88B10-0x0000000184D88B20 
+		public int Length { get; } // 0x0000000184D8CAD0-0x0000000184D8CAE0 
 	
 		// Constructors
-		public StringReference(char[] chars, int startIndex, int length) : this() {
-			_chars = default;
-			_startIndex = default;
-			_length = default;
-		} // 0x000000018646D7F4-0x000000018646D814
+		public StringReference(char[] chars, int startIndex, int length); // 0x0000000185390898-0x00000001853908B8
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018646E200-0x000000018646E224
+		public override string ToString(); // 0x0000000185390BC8-0x0000000185390BEC
 	}
 
-	internal static class StringReferenceExtensions // TypeDefIndex: 52720
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class StringReferenceExtensions // TypeDefIndex: 55402
 	{
-		// Methods
-		public static int IndexOf(StringReference s, char c, int startIndex, int length) => default; // 0x000000018B3E9180-0x000000018B3E9200
-		public static bool StartsWith(StringReference s, string text) => default; // 0x000000018B3E9200-0x000000018B3E9288
-		public static bool EndsWith(StringReference s, string text) => default; // 0x000000018B3E90F4-0x000000018B3E9180
+		// Extension methods
+		public static int IndexOf(this StringReference s, char c, int startIndex, int length); // 0x000000018A8B9A00-0x000000018A8B9A80
+		public static bool StartsWith(this StringReference s, string text); // 0x000000018A8B9A80-0x000000018A8B9B08
+		public static bool EndsWith(this StringReference s, string text); // 0x000000018A8B9974-0x000000018A8B9A00
 	}
 
-	internal static class StringUtils // TypeDefIndex: 52723
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class StringUtils // TypeDefIndex: 55405
 	{
 		// Nested types
-		private enum SeparatedCaseState // TypeDefIndex: 52721
+		[NullableContext(0)]
+		private enum SeparatedCaseState // TypeDefIndex: 55403
 		{
 			Start = 0,
 			Lower = 1,
@@ -5952,151 +6802,170 @@ namespace Newtonsoft.Json.Utilities
 			NewWord = 3
 		}
 	
-		private sealed class __c__DisplayClass14_0<TSource> // TypeDefIndex: 52722
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass14_0<TSource> // TypeDefIndex: 55404
 		{
 			// Fields
+			[Nullable(new byte[3] {0, 0, 1 })]
 			public Func<TSource, string> valueSelector;
+			[Nullable(0)]
 			public string testValue;
 	
 			// Constructors
-			public __c__DisplayClass14_0() {} // 0x000000018646D8B8-0x000000018646D8CC
+			public __c__DisplayClass14_0();
 	
 			// Methods
-			internal bool _ForgivingCaseSensitiveFind_b__0(TSource s) => default; // 0x000000018B3E9600-0x000000018B3E9698
-			internal bool _ForgivingCaseSensitiveFind_b__1(TSource s) => default; // 0x000000018B3E9698-0x000000018B3E9758
+			[NullableContext(0)]
+			internal bool _ForgivingCaseSensitiveFind_b__0(TSource s);
+			[NullableContext(0)]
+			internal bool _ForgivingCaseSensitiveFind_b__1(TSource s);
 		}
 	
 		// Methods
-		public static bool IsNullOrEmpty(string value) => default; // 0x000000018B3E9520-0x000000018B3E9600
-		public static string FormatWith(string format, IFormatProvider provider, object arg0) => default; // 0x000000018B3E9424-0x000000018B3E9520
-		public static string FormatWith(string format, IFormatProvider provider, object arg0, object arg1) => default; // 0x000000018B3E937C-0x000000018B3E9424
-		public static string FormatWith(string format, IFormatProvider provider, object arg0, object arg1, object arg2) => default; // 0x000000018B3E9288-0x000000018B3E9344
-		public static string FormatWith(string format, IFormatProvider provider, object arg0, object arg1, object arg2, object arg3) => default; // 0x000000018B3E99EC-0x000000018B3E9ABC
-		private static string FormatWith(string format, IFormatProvider provider, object[] args) => default;
-		public static StringWriter CreateStringWriter(int capacity) => default; // 0x000000018B3E9840-0x000000018B3E99EC
-		public static void ToCharAsUnicode(char c, char[] buffer) {} // 0x000000018B3E9ACC-0x000000018B3E9B3C
-		public static TSource ForgivingCaseSensitiveFind<TSource>(IEnumerable<TSource> source, Func<TSource, string> valueSelector, string testValue) => default; // 0x000000018B3E9D84-0x000000018B3E9D94
-		public static string ToCamelCase(string s) => default; // 0x000000018B3E9ABC-0x000000018B3E9ACC
-		private static char ToLower(char c) => default; // 0x000000018B3E9B3C-0x000000018B3E9D84
-		public static string ToSnakeCase(string s) => default; // 0x000000018B3E9774-0x000000018B3E97C0
-		public static string ToKebabCase(string s) => default; // 0x000000018B3E97C0-0x000000018B3E980C
-		private static string ToSeparatedCase(string s, char separator) => default; // 0x000000018B3E9758-0x000000018B3E9774
-		public static bool IsHighSurrogate(char c) => default; // 0x000000018B3E980C-0x000000018B3E9840
-		public static bool IsLowSurrogate(char c) => default; // 0x000000018B3E9344-0x000000018B3E937C
-		public static int IndexOf(string s, char c) => default; // 0x000000018407D2A0-0x000000018407DD40
-		public static bool StartsWith(string source, char value) => default;
-		public static bool EndsWith(string source, char value) => default;
-		public static string Trim(string s, int start, int length) => default;
+		[NullableContext(2)]
+		public static bool IsNullOrEmpty([NotNullWhen(false)] string value); // 0x0000000185390C14-0x0000000185390C28
+		public static StringWriter CreateStringWriter(int capacity); // 0x000000018A8B9B08-0x000000018A8B9BC4
+		public static void ToCharAsUnicode(char c, char[] buffer); // 0x000000018A8BA26C-0x000000018A8BA33C
+		public static string ToCamelCase(string s); // 0x000000018A8BA0C0-0x000000018A8BA26C
+		private static char ToLower(char c); // 0x000000018A8BA34C-0x000000018A8BA3BC
+		public static string ToSnakeCase(string s); // 0x000000018A8BA604-0x000000018A8BA614
+		public static string ToKebabCase(string s); // 0x000000018A8BA33C-0x000000018A8BA34C
+		private static string ToSeparatedCase(string s, char separator); // 0x000000018A8BA3BC-0x000000018A8BA604
+		public static bool IsHighSurrogate(char c); // 0x000000018A8B9FF4-0x000000018A8BA040
+		public static bool IsLowSurrogate(char c); // 0x000000018A8BA040-0x000000018A8BA08C
+		public static int IndexOf(string s, char c); // 0x000000018A8B9FD8-0x000000018A8B9FF4
+	
+		// Extension methods
+		public static string FormatWith(this string format, IFormatProvider provider, [Nullable(2)] object arg0); // 0x000000018A8B9E80-0x000000018A8B9F18
+		public static string FormatWith(this string format, IFormatProvider provider, [Nullable(2)] object arg0, [Nullable(2)] object arg1); // 0x000000018A8B9F18-0x000000018A8B9FD8
+		public static string FormatWith(this string format, IFormatProvider provider, [Nullable(2)] object arg0, [Nullable(2)] object arg1, [Nullable(2)] object arg2); // 0x000000018A8B9DA0-0x000000018A8B9E80
+		[NullableContext(2)]
+		public static string FormatWith([Nullable(1)] this string format, [Nullable(1)] IFormatProvider provider, object arg0, object arg1, object arg2, object arg3); // 0x000000018A8B9CA4-0x000000018A8B9DA0
+		private static string FormatWith(this string format, IFormatProvider provider, params [Nullable(new byte[2] {1, 2 })] object[] args); // 0x000000018A8B9BFC-0x000000018A8B9CA4
+		public static TSource ForgivingCaseSensitiveFind<TSource>(this IEnumerable<TSource> source, Func<TSource, string> valueSelector, string testValue);
+		public static bool StartsWith(this string source, char value); // 0x000000018A8BA08C-0x000000018A8BA0C0
+		public static bool EndsWith(this string source, char value); // 0x000000018A8B9BC4-0x000000018A8B9BFC
+		public static string Trim(this string s, int start, int length); // 0x0000000182FBD6B0-0x0000000182FBDED0
 	}
 
-	internal struct StructMultiKey<T1, T2> : IEquatable<StructMultiKey<T1, T2>> // TypeDefIndex: 52724
+	[IsReadOnly]
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal struct StructMultiKey<T1, T2> : IEquatable<StructMultiKey<T1, T2>> // TypeDefIndex: 55406
 	{
 		// Fields
 		public readonly T1 Value1;
 		public readonly T2 Value2;
 	
 		// Constructors
-		public StructMultiKey(T1 v1, T2 v2) {
-			Value1 = default;
-			Value2 = default;
-		}
+		public StructMultiKey(T1 v1, T2 v2);
 	
 		// Methods
-		public override int GetHashCode() => default;
-		public override bool Equals(object obj) => default;
-		public bool Equals(StructMultiKey<T1, T2> other) => default;
+		public override int GetHashCode();
+		[NullableContext(2)]
+		public override bool Equals(object obj);
+		public bool Equals([Nullable(new byte[3] {0, 1, 1 })] StructMultiKey<T1, T2> other);
 	}
 
-	internal class ThreadSafeStore<TKey, TValue> // TypeDefIndex: 52725
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class ThreadSafeStore<TKey, TValue> // TypeDefIndex: 55407
 	{
 		// Fields
 		private readonly ConcurrentDictionary<TKey, TValue> _concurrentStore;
 		private readonly Func<TKey, TValue> _creator;
 	
 		// Constructors
-		public ThreadSafeStore() {} // Dummy constructor
-		public ThreadSafeStore(Func<TKey, TValue> creator) {}
+		public ThreadSafeStore(Func<TKey, TValue> creator);
 	
 		// Methods
-		public TValue Get(TKey key) => default;
+		public TValue Get(TKey key);
 	}
 
-	internal static class TypeExtensions // TypeDefIndex: 52726
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal static class TypeExtensions // TypeDefIndex: 55408
 	{
-		// Methods
-		public static MemberTypes MemberType(MemberInfo memberInfo) => default; // 0x0000000184074340-0x0000000184074360
-		public static bool ContainsGenericParameters(System.Type type) => default; // 0x000000018B3E9DB4-0x000000018B3E9DD4
-		public static bool IsInterface(System.Type type) => default; // 0x0000000184348210-0x0000000184348230
-		public static bool IsGenericType(System.Type type) => default; // 0x00000001843481F0-0x0000000184348210
-		public static bool IsGenericTypeDefinition(System.Type type) => default; // 0x0000000184348230-0x0000000184348250
-		public static System.Type BaseType(System.Type type) => default; // 0x000000018407E180-0x000000018407EA00
-		public static Assembly Assembly(System.Type type) => default; // 0x000000018B3E9D94-0x000000018B3E9DB4
-		public static bool IsEnum(System.Type type) => default; // 0x0000000184344370-0x0000000184344390
-		public static bool IsClass(System.Type type) => default; // 0x00000001843A0250-0x00000001843A0270
-		public static bool IsSealed(System.Type type) => default; // 0x00000001843466F0-0x0000000184346720
-		public static bool IsAbstract(System.Type type) => default; // 0x0000000184346740-0x0000000184346770
-		public static bool IsVisible(System.Type type) => default; // 0x000000018B3EA03C-0x000000018B3EA058
-		public static bool IsValueType(System.Type type) => default; // 0x000000018414ED60-0x000000018414ED80
-		public static bool AssignableToTypeName(System.Type type, string fullTypeName, bool searchInterfaces, out System.Type match) {
-			match = default;
-			return default;
-		} // 0x000000018407E000-0x000000018407E0E0
-		public static bool AssignableToTypeName(System.Type type, string fullTypeName, bool searchInterfaces) => default; // 0x000000018647378C-0x00000001864737AC
-		public static bool ImplementInterface(System.Type type, System.Type interfaceType) => default; // 0x000000018B3E9DD4-0x000000018B3EA03C
+		// Extension methods
+		public static MemberTypes MemberType(this MemberInfo memberInfo); // 0x0000000182FB3040-0x0000000182FB3060
+		public static bool ContainsGenericParameters(this System.Type type); // 0x000000018A8BA634-0x000000018A8BA654
+		public static bool IsInterface(this System.Type type); // 0x00000001835CFF60-0x00000001835CFF80
+		public static bool IsGenericType(this System.Type type); // 0x00000001835CFF40-0x00000001835CFF60
+		public static bool IsGenericTypeDefinition(this System.Type type); // 0x00000001835CFF80-0x00000001835CFFA0
+		public static System.Type BaseType(this System.Type type); // 0x00000001832B4E20-0x00000001832B5510
+		public static Assembly Assembly(this System.Type type); // 0x000000018A8BA614-0x000000018A8BA634
+		public static bool IsEnum(this System.Type type); // 0x0000000182F3A240-0x0000000182F3A260
+		public static bool IsClass(this System.Type type); // 0x00000001835CE330-0x00000001835CE350
+		public static bool IsSealed(this System.Type type); // 0x00000001835CFFD0-0x00000001835D0000
+		public static bool IsAbstract(this System.Type type); // 0x00000001835CFFA0-0x00000001835CFFD0
+		public static bool IsVisible(this System.Type type); // 0x000000018A8BA8BC-0x000000018A8BA8D8
+		public static bool IsValueType(this System.Type type); // 0x0000000183131F30-0x0000000183131F50
+		public static bool AssignableToTypeName(this System.Type type, string fullTypeName, bool searchInterfaces, [Nullable(2)] [NotNullWhen(true)] out System.Type match); // 0x00000001832B4CF0-0x00000001832B4DB0
+		public static bool AssignableToTypeName(this System.Type type, string fullTypeName, bool searchInterfaces); // 0x0000000185396E6C-0x0000000185396E8C
+		public static bool ImplementInterface(this System.Type type, System.Type interfaceType); // 0x000000018A8BA654-0x000000018A8BA8BC
 	}
 
-	internal static class ValidationUtils // TypeDefIndex: 52727
+	internal static class ValidationUtils // TypeDefIndex: 55409
 	{
 		// Methods
-		public static void ArgumentNotNull(object value, string parameterName) {} // 0x0000000183FA7890-0x0000000183FA78D0
+		[NullableContext(1)]
+		public static void ArgumentNotNull([Nullable(2)] [NotNull] object value, string parameterName); // 0x0000000182FB3000-0x0000000182FB3040
 	}
 }
 
 namespace System.Diagnostics.CodeAnalysis
 {
-	internal sealed class NotNullAttribute : Attribute // TypeDefIndex: 52578
+	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue, AllowMultiple = true)]
+	internal sealed class NotNullAttribute : Attribute // TypeDefIndex: 55260
 	{
 		// Constructors
-		public NotNullAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public NotNullAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal sealed class NotNullWhenAttribute : Attribute // TypeDefIndex: 52579
+	[AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false)]
+	internal sealed class NotNullWhenAttribute : Attribute // TypeDefIndex: 55261
 	{
 		// Fields
+		[CompilerGenerated]
 		private readonly bool _ReturnValue_k__BackingField; // 0x10
 	
 		// Constructors
-		public NotNullWhenAttribute() {} // Dummy constructor
-		public NotNullWhenAttribute(bool returnValue) {} // 0x000000018184FBD0-0x000000018184FBE0
+		public NotNullWhenAttribute(bool returnValue); // 0x0000000184D86130-0x0000000184D86140
 	}
 }
 
 namespace System.Runtime.CompilerServices
 {
-	internal sealed class IsReadOnlyAttribute : Attribute // TypeDefIndex: 52575
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class IsReadOnlyAttribute : Attribute // TypeDefIndex: 55257
 	{
 		// Constructors
-		public IsReadOnlyAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public IsReadOnlyAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal sealed class NullableAttribute : Attribute // TypeDefIndex: 52576
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Parameter | AttributeTargets.ReturnValue | AttributeTargets.GenericParameter, AllowMultiple = false, Inherited = false)]
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class NullableAttribute : Attribute // TypeDefIndex: 55258
 	{
 		// Fields
 		public readonly byte[] NullableFlags; // 0x10
 	
 		// Constructors
-		public NullableAttribute() {} // Dummy constructor
-		public NullableAttribute(byte param_0006e4e7) {} // 0x000000018509B810-0x000000018509B890
-		public NullableAttribute(byte[] param_0006e4e8) {} // 0x0000000184096E30-0x0000000184096EF0
+		public NullableAttribute(byte param_00075d9a); // 0x0000000183F261D0-0x0000000183F26250
+		public NullableAttribute(byte[] param_00075d9b); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	internal sealed class NullableContextAttribute : Attribute // TypeDefIndex: 52577
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Method | AttributeTargets.Interface | AttributeTargets.Delegate, AllowMultiple = false, Inherited = false)]
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class NullableContextAttribute : Attribute // TypeDefIndex: 55259
 	{
 		// Fields
 		public readonly byte Flag; // 0x10
 	
 		// Constructors
-		public NullableContextAttribute() {} // Dummy constructor
-		public NullableContextAttribute(byte param_0006e4e9) {} // 0x000000018184FBD0-0x000000018184FBE0
+		public NullableContextAttribute(byte param_00075d9c); // 0x0000000184D86130-0x0000000184D86140
 	}
 }

@@ -4,12 +4,174 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using UnityEngine;
+using UnityEngine.Bindings;
+using UnityEngine.Scripting;
 
-// Image 110: UnityEngine.InputLegacyModule.dll - Assembly: UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60870-60883
+// Image 112: UnityEngine.InputLegacyModule.dll - Assembly: UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63496-63509
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAssetBundleModule")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.004")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.005")]
+[assembly: InternalsVisibleTo("Unity.Subsystem.Registration")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.005")]
+[assembly: InternalsVisibleTo("Unity.Timeline")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.004")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.002")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-firstpass-testable")]
+[assembly: InternalsVisibleTo("UnityEngine.SpatialTracking")]
+[assembly: InternalsVisibleTo("GoogleAR.UnityNative")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.003")]
+[assembly: InternalsVisibleTo("Unity.WindowsMRAutomation")]
+[assembly: InternalsVisibleTo("Unity.2D.Sprite.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.UI.Builder.Editor")]
+[assembly: InternalsVisibleTo("UnityEditor.UIBuilderModule")]
+[assembly: InternalsVisibleTo("Unity.UI.Builder.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.UIElements")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsGameObjectsModule")]
+[assembly: InternalsVisibleTo("Unity.UIElements.Editor")]
+[assembly: InternalsVisibleTo("Unity.UIElements.PlayModeTests")]
+[assembly: InternalsVisibleTo("Unity.UIElements.EditorTests")]
+[assembly: InternalsVisibleTo("UnityEngine.UI")]
+[assembly: InternalsVisibleTo("Unity.2D.Sprite.Editor")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.002")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridgeDev.001")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.024")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestWWWModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VFXModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PerformanceReportingModule")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.AllIn1Runner")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.006")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.007")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.008")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.009")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.010")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.011")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.012")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.013")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.014")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.015")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.016")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.017")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.018")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.019")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.020")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.021")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.022")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.023")]
+[assembly: InternalsVisibleTo("Unity.Networking.Transport")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestTextureModule")]
+[assembly: InternalsVisibleTo("Unity.ucg.QoS")]
+[assembly: InternalsVisibleTo("Unity.Logging")]
+[assembly: InternalsVisibleTo("UnityEngine.HotReloadModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AssetBundleModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AudioModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClothModule")]
+[assembly: InternalsVisibleTo("UnityEngine.InputLegacyModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextRenderingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGOcclusionCullingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsCPPModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GridModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.GameCenterModule")]
+[assembly: InternalsVisibleTo("UnityEngine.DSPGraphModule")]
+[assembly: InternalsVisibleTo("UnityEngine.CrashReportingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TLSModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommonModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityConnectModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClusterRendererModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ClusterInputModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ImageConversionModule")]
+[assembly: InternalsVisibleTo("UnityEngine")]
+[assembly: InternalsVisibleTo("UnityEngine.SharedInternalsModule")]
+[assembly: InternalsVisibleTo("Unity.Entities")]
+[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
+[assembly: InternalsVisibleTo("Unity.Collections")]
+[assembly: InternalsVisibleTo("Unity.Runtime")]
+[assembly: InternalsVisibleTo("Unity.Core")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.001")]
+[assembly: InternalsVisibleTo("Unity.InternalAPIEngineBridge.003")]
+[assembly: InternalsVisibleTo("UnityEngine.LocalizationModule")]
+[assembly: InternalsVisibleTo("UnityEngine.LiteSSLModule")]
+[assembly: InternalsVisibleTo("UnityEngine.IMGUIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ARModule")]
+[assembly: InternalsVisibleTo("UnityEngine.InputModule")]
+[assembly: InternalsVisibleTo("UnityEngine.JSONSerializeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PhysicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.HGGraphicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ParticleSystemModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TerrainModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AntiSDKModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AnimationModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AndroidJNIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.AccessibilityModule")]
+[assembly: InternalsVisibleTo("UnityEngine.CoreModule")]
+[assembly: InternalsVisibleTo("Unity.Services.QoS")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityWebRequestAudioModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityTestProtocolModule")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.Framework")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.Timeline")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests.UnityAnalytics")]
+[assembly: InternalsVisibleTo("Unity.IntegrationTests")]
+[assembly: InternalsVisibleTo("Unity.DeploymentTests.Services")]
+[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
+[assembly: InternalsVisibleTo("Unity.Burst")]
+[assembly: InternalsVisibleTo("Unity.Automation")]
+[assembly: InternalsVisibleTo("UnityEngine.TestRunner")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework")]
+[assembly: InternalsVisibleTo("UnityEngine.Purchasing")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityAnalyticsCommon")]
+[assembly: InternalsVisibleTo("UnityEngine.Analytics")]
+[assembly: InternalsVisibleTo("Unity.Analytics")]
+[assembly: InternalsVisibleTo("UnityEngine.Cloud.Service")]
+[assembly: InternalsVisibleTo("UnityEngine.Cloud")]
+[assembly: InternalsVisibleTo("UnityEngine.Networking")]
+[assembly: InternalsVisibleTo("UnityEngine.PS5VRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.PS5Module")]
+[assembly: InternalsVisibleTo("UnityEngine.WindModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VRModule")]
+[assembly: InternalsVisibleTo("UnityEngine.Advertisements")]
+[assembly: InternalsVisibleTo("UnityEngine.XRModule")]
+[assembly: InternalsVisibleTo("Unity.RuntimeTests.Framework.Tests")]
+[assembly: InternalsVisibleTo("Unity.PerformanceTests.RuntimeTestRunner.Tests")]
+[assembly: InternalsVisibleTo("UnityEngine.UnityCurlModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UNETModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UmbraModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIElementsNativeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.UIModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TilemapModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextCoreTextEngineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TextCoreFontEngineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.TerrainPhysicsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VirtualTexturingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SubsystemsModule")]
+[assembly: InternalsVisibleTo("UnityEngine.StreamLineModule")]
+[assembly: InternalsVisibleTo("UnityEngine.StreamingModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SpriteShapeModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SpriteMaskModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ScreenCaptureModule")]
+[assembly: InternalsVisibleTo("UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule")]
+[assembly: InternalsVisibleTo("UnityEngine.ProfilerModule")]
+[assembly: InternalsVisibleTo("UnityEngine.Physics2DModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VehiclesModule")]
+[assembly: InternalsVisibleTo("UnityEngine.VideoModule")]
+[assembly: InternalsVisibleTo("UnityEngine.SubstanceModule")]
+[assembly: InternalsVisibleTo("UnityEngine.DirectorModule")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: UnityEngineModuleAssembly]
 
 namespace UnityEngine
 {
-	public enum TouchPhase // TypeDefIndex: 60871
+	public enum TouchPhase // TypeDefIndex: 63497
 	{
 		Began = 0,
 		Moved = 1,
@@ -18,21 +180,22 @@ namespace UnityEngine
 		Canceled = 4
 	}
 
-	public enum IMECompositionMode // TypeDefIndex: 60872
+	public enum IMECompositionMode // TypeDefIndex: 63498
 	{
 		Auto = 0,
 		On = 1,
 		Off = 2
 	}
 
-	public enum TouchType // TypeDefIndex: 60873
+	public enum TouchType // TypeDefIndex: 63499
 	{
 		Direct = 0,
 		Indirect = 1,
 		Stylus = 2
 	}
 
-	public struct Touch // TypeDefIndex: 60874
+	[NativeHeader("Runtime/Input/InputBindings.h")]
+	public struct Touch // TypeDefIndex: 63500
 	{
 		// Fields
 		private int m_FingerId; // 0x00
@@ -51,23 +214,23 @@ namespace UnityEngine
 		private float m_AzimuthAngle; // 0x40
 	
 		// Properties
-		public int fingerId { get => default; } // 0x0000000185FE64F0-0x0000000185FE6500 
-		public Vector2 position { get => default; set {} } // 0x0000000185FE8D00-0x0000000185FE8D20 0x0000000185FB6E10-0x0000000185FB6E20
-		public Vector2 rawPosition { get => default; set {} } // 0x0000000185FE8D30-0x0000000185FE8D50 0x0000000185FE8D60-0x0000000185FE8D70
-		public Vector2 deltaPosition { get => default; set {} } // 0x0000000185FC3450-0x0000000185FC3470 0x0000000185FE8D50-0x0000000185FE8D60
-		public float deltaTime { get => default; } // 0x0000000185FE8CF0-0x0000000185FE8D00 
-		public int tapCount { get => default; } // 0x0000000185FE7AF0-0x0000000185FE7B00 
-		public TouchPhase phase { get => default; } // 0x0000000185FE6730-0x0000000185FE6740 
-		public float pressure { get => default; } // 0x0000000185FE8D20-0x0000000185FE8D30 
-		public float maximumPossiblePressure { get => default; } // 0x0000000185FE5830-0x0000000185FE5840 
-		public TouchType type { get => default; } // 0x0000000185FE7B60-0x0000000185FE7B70 
-		public float altitudeAngle { get => default; } // 0x000000018646D240-0x000000018646D248 
-		public float azimuthAngle { get => default; } // 0x000000018646D1F0-0x000000018646D200 
-		public float radius { get => default; } // 0x0000000186472350-0x0000000186472358 
-		public float radiusVariance { get => default; } // 0x000000018646D1E0-0x000000018646D1F0 
+		public int fingerId { get; } // 0x0000000184DBA750-0x0000000184DBA760 
+		public Vector2 position { get; set; } // 0x0000000184DBD190-0x0000000184DBD1B0 0x0000000184DBD1F0-0x0000000184DBD200
+		public Vector2 rawPosition { get; set; } // 0x0000000184DBD1C0-0x0000000184DBD1E0 0x0000000184DBD200-0x0000000184DBD210
+		public Vector2 deltaPosition { get; set; } // 0x0000000184D963F0-0x0000000184D96410 0x0000000184DBD1E0-0x0000000184DBD1F0
+		public float deltaTime { get; } // 0x0000000184DBD180-0x0000000184DBD190 
+		public int tapCount { get; } // 0x0000000184DBBE60-0x0000000184DBBE70 
+		public TouchPhase phase { get; } // 0x0000000184DBA990-0x0000000184DBA9A0 
+		public float pressure { get; } // 0x0000000184DBD1B0-0x0000000184DBD1C0 
+		public float maximumPossiblePressure { get; } // 0x0000000184DB9A40-0x0000000184DB9A50 
+		public TouchType type { get; } // 0x0000000184DBBEC0-0x0000000184DBBED0 
+		public float altitudeAngle { get; } // 0x0000000185391670-0x0000000185391678 
+		public float azimuthAngle { get; } // 0x0000000185391640-0x0000000185391650 
+		public float radius { get; } // 0x00000001853957B0-0x00000001853957C0 
+		public float radiusVariance { get; } // 0x0000000185391630-0x0000000185391640 
 	}
 
-	public enum DeviceOrientation // TypeDefIndex: 60875
+	public enum DeviceOrientation // TypeDefIndex: 63501
 	{
 		Unknown = 0,
 		Portrait = 1,
@@ -78,7 +241,7 @@ namespace UnityEngine
 		FaceDown = 6
 	}
 
-	public struct AccelerationEvent // TypeDefIndex: 60876
+	public struct AccelerationEvent // TypeDefIndex: 63502
 	{
 		// Fields
 		internal float x; // 0x00
@@ -87,41 +250,44 @@ namespace UnityEngine
 		internal float m_TimeDelta; // 0x0C
 	}
 
-	public class Gyroscope // TypeDefIndex: 60877
+	[NativeHeader("Runtime/Input/GetInput.h")]
+	public class Gyroscope // TypeDefIndex: 63503
 	{
 		// Fields
 		private int m_GyroIndex; // 0x10
 	
 		// Constructors
-		public Gyroscope() {} // Dummy constructor
-		internal Gyroscope(int index) {} // 0x0000000181378230-0x0000000181378240
+		internal Gyroscope(int index); // 0x00000001814F51F0-0x00000001814F5220
 	}
 
-	public class LocationService // TypeDefIndex: 60878
+	[NativeHeader("Runtime/Input/LocationService.h")]
+	[NativeHeader("Runtime/Input/InputBindings.h")]
+	public class LocationService // TypeDefIndex: 63504
 	{
 		// Constructors
-		public LocationService() {} // 0x0000000185492010-0x0000000185492020
+		public LocationService(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class Compass // TypeDefIndex: 60879
+	public class Compass // TypeDefIndex: 63505
 	{
 		// Constructors
-		public Compass() {} // 0x0000000185492010-0x0000000185492020
+		public Compass(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class CameraRaycastHelper // TypeDefIndex: 60880
+	[NativeHeader("Runtime/Camera/Camera.h")]
+	internal class CameraRaycastHelper // TypeDefIndex: 63506
 	{
-		// Constructors
-		public CameraRaycastHelper() {} // Dummy constructor
-	
 		// Methods
-		internal static GameObject RaycastTry(Camera cam, Ray ray, float distance, int layerMask) => default; // 0x000000018646E57C-0x000000018646E594
-		internal static GameObject RaycastTry2D(Camera cam, Ray ray, float distance, int layerMask) => default; // 0x000000018646E594-0x000000018646E5AC
-		private static GameObject RaycastTry_Injected(Camera cam, ref Ray ray, float distance, int layerMask) => default; // 0x0000000184F09BC0-0x0000000184F09C30
-		private static GameObject RaycastTry2D_Injected(Camera cam, ref Ray ray, float distance, int layerMask) => default; // 0x0000000184F09C30-0x0000000184F09CA0
+		[FreeFunction("CameraScripting::RaycastTry")]
+		internal static GameObject RaycastTry(Camera cam, Ray ray, float distance, int layerMask); // 0x0000000185391B2C-0x0000000185391B44
+		[FreeFunction("CameraScripting::RaycastTry2D")]
+		internal static GameObject RaycastTry2D(Camera cam, Ray ray, float distance, int layerMask); // 0x0000000185391B14-0x0000000185391B2C
+		private static GameObject RaycastTry_Injected(Camera cam, ref Ray ray, float distance, int layerMask); // 0x0000000183E00C70-0x0000000183E00CE0
+		private static GameObject RaycastTry2D_Injected(Camera cam, ref Ray ray, float distance, int layerMask); // 0x0000000183E00CE0-0x0000000183E00D50
 	}
 
-	public class Input // TypeDefIndex: 60881
+	[NativeHeader("Runtime/Input/InputBindings.h")]
+	public class Input // TypeDefIndex: 63507
 	{
 		// Fields
 		private static LocationService locationServiceInstance; // 0x00
@@ -129,90 +295,108 @@ namespace UnityEngine
 		private static Gyroscope s_MainGyro; // 0x10
 	
 		// Properties
-		public static bool simulateMouseWithTouches { get => default; set {} } // 0x000000018BF2C794-0x000000018BF2C7C0 0x0000000185DAF390-0x0000000185DAF3D0
-		public static bool anyKey { get => default; } // 0x000000018BF2C3A8-0x000000018BF2C3D4 
-		public static bool anyKeyDown { get => default; } // 0x0000000185292A00-0x0000000185292A40 
-		public static string inputString { get => default; } // 0x000000018BF2C67C-0x000000018BF2C6A8 
-		public static Vector3 mousePosition { get => default; } // 0x00000001842AC5E0-0x00000001842AC630 
-		public static Vector2 mouseScrollDelta { get => default; } // 0x00000001842AAFC0-0x00000001842AB010 
-		public static IMECompositionMode imeCompositionMode { get => default; set {} } // 0x000000018BF2C624-0x000000018BF2C650 0x0000000185FA7400-0x0000000185FA7440
-		public static string compositionString { get => default; } // 0x00000001857D81D0-0x00000001857D8210 
-		public static bool imeIsSelected { get => default; } // 0x000000018BF2C650-0x000000018BF2C67C 
-		public static Vector2 compositionCursorPos { get => default; set {} } // 0x000000018BF2C4FC-0x000000018BF2C520 0x000000018BF2C8AC-0x000000018BF2C8C8
-		public static bool eatKeyPressOnTextFieldFocus { get => default; set {} } // 0x000000018BF2C54C-0x000000018BF2C578 0x000000018BF2C8C8-0x000000018BF2C8FC
-		public static bool mousePresent { get => default; } // 0x00000001842A9F20-0x00000001842AAFB0 
-		public static int touchCount { get => default; } // 0x000000018457C9E0-0x000000018457CA20 
-		public static bool touchPressureSupported { get => default; } // 0x000000018BF2C7EC-0x000000018BF2C818 
-		public static bool stylusTouchSupported { get => default; } // 0x000000018BF2C7C0-0x000000018BF2C7EC 
-		public static bool touchSupported { get => default; } // 0x000000018BF2C818-0x000000018BF2C844 
-		public static bool multiTouchEnabled { get => default; set {} } // 0x000000018BF2C768-0x000000018BF2C794 0x0000000185DAF440-0x0000000185DAF480
-		public static bool isGyroAvailable { get => default; } // 0x000000018BF2C6A8-0x000000018BF2C6D4 
-		public static DeviceOrientation deviceOrientation { get => default; } // 0x000000018BF2C520-0x000000018BF2C54C 
-		public static Vector3 acceleration { get => default; } // 0x000000018BF2C384-0x000000018BF2C3A8 
-		public static bool compensateSensors { get => default; set {} } // 0x000000018BF2C49C-0x000000018BF2C4C8 0x000000018BF2C878-0x000000018BF2C8AC
-		public static int accelerationEventCount { get => default; } // 0x000000018BF2C288-0x000000018BF2C2B4 
-		public static bool backButtonLeavesApp { get => default; set {} } // 0x000000018BF2C3D4-0x000000018BF2C400 0x000000018BF2C844-0x000000018BF2C878
-		public static LocationService location { get => default; } // 0x000000018BF2C6D4-0x000000018BF2C768 
-		public static Compass compass { get => default; } // 0x000000018BF2C400-0x000000018BF2C49C 
-		public static Gyroscope gyro { get => default; } // 0x000000018BF2C578-0x000000018BF2C624 
-		public static Touch[] touches { get => default; } // 0x0000000184B48B30-0x0000000184B48BA0 
-		public static AccelerationEvent[] accelerationEvents { get => default; } // 0x000000018BF2C2B4-0x000000018BF2C350 
+		public static bool simulateMouseWithTouches { get; set; } // 0x000000018B417F6C-0x000000018B417F98 0x0000000184B87920-0x0000000184B87960
+		[NativeThrows]
+		public static bool anyKey { get; } // 0x000000018B417B80-0x000000018B417BAC 
+		[NativeThrows]
+		public static bool anyKeyDown { get; } // 0x00000001840C1FF0-0x00000001840C2030 
+		[NativeThrows]
+		public static string inputString { get; } // 0x000000018B417E54-0x000000018B417E80 
+		[NativeThrows]
+		public static Vector3 mousePosition { get; } // 0x0000000183400200-0x0000000183400250 
+		[NativeThrows]
+		public static Vector2 mouseScrollDelta { get; } // 0x00000001837CF7C0-0x00000001837CF810 
+		public static IMECompositionMode imeCompositionMode { get; set; } // 0x000000018B417DFC-0x000000018B417E28 0x0000000184D512B0-0x0000000184D512F0
+		public static string compositionString { get; } // 0x0000000184118270-0x00000001841182B0 
+		public static bool imeIsSelected { get; } // 0x000000018B417E28-0x000000018B417E54 
+		public static Vector2 compositionCursorPos { get; set; } // 0x000000018B417CD4-0x000000018B417CF8 0x000000018B418124-0x000000018B418140
+		[Obsolete("eatKeyPressOnTextFieldFocus property is deprecated, and only provided to support legacy behavior.")]
+		public static bool eatKeyPressOnTextFieldFocus { get; set; } // 0x000000018B417D24-0x000000018B417D50 0x000000018B418140-0x000000018B418174
+		public static bool mousePresent { [FreeFunction("GetMousePresent")] get; } // 0x0000000183F9BAB0-0x0000000183F9BAF0 
+		public static int touchCount { [FreeFunction("GetTouchCount")] get; } // 0x00000001837D6BE0-0x00000001837D6C20 
+		public static bool touchPressureSupported { [FreeFunction("IsTouchPressureSupported")] get; } // 0x000000018B417FC4-0x000000018B417FF0 
+		public static bool stylusTouchSupported { [FreeFunction("IsStylusTouchSupported")] get; } // 0x000000018B417F98-0x000000018B417FC4 
+		public static bool touchSupported { [FreeFunction("IsTouchSupported")] get; } // 0x000000018B417FF0-0x000000018B41801C 
+		public static bool multiTouchEnabled { [FreeFunction("IsMultiTouchEnabled")] get; [FreeFunction("SetMultiTouchEnabled")] set; } // 0x000000018B417F40-0x000000018B417F6C 0x0000000184B879D0-0x0000000184B87A10
+		[Obsolete("isGyroAvailable property is deprecated. Please use SystemInfo.supportsGyroscope instead.")]
+		public static bool isGyroAvailable { [FreeFunction("IsGyroAvailable")] get; } // 0x000000018B417E80-0x000000018B417EAC 
+		public static DeviceOrientation deviceOrientation { [FreeFunction("GetOrientation")] get; } // 0x000000018B417CF8-0x000000018B417D24 
+		public static Vector3 acceleration { [FreeFunction("GetAcceleration")] get; } // 0x000000018B417B5C-0x000000018B417B80 
+		public static bool compensateSensors { [FreeFunction("IsCompensatingSensors")] get; [FreeFunction("SetCompensatingSensors")] set; } // 0x000000018B417C74-0x000000018B417CA0 0x000000018B4180F0-0x000000018B418124
+		public static int accelerationEventCount { [FreeFunction("GetAccelerationCount")] get; } // 0x000000018B417A60-0x000000018B417A8C 
+		public static bool backButtonLeavesApp { [FreeFunction("GetBackButtonLeavesApp")] get; [FreeFunction("SetBackButtonLeavesApp")] set; } // 0x000000018B417BAC-0x000000018B417BD8 0x000000018B4180BC-0x000000018B4180F0
+		public static LocationService location { get; } // 0x000000018B417EAC-0x000000018B417F40 
+		public static Compass compass { get; } // 0x000000018B417BD8-0x000000018B417C74 
+		public static Gyroscope gyro { get; } // 0x000000018B417D50-0x000000018B417DFC 
+		public static Touch[] touches { get; } // 0x000000018B41801C-0x000000018B4180BC 
+		public static AccelerationEvent[] accelerationEvents { get; } // 0x000000018B417A8C-0x000000018B417B28 
 	
 		// Constructors
-		public Input() {} // 0x0000000185492010-0x0000000185492020
+		public Input(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		private static bool GetKeyInt(KeyCode key) => default; // 0x0000000184D32760-0x0000000184D327A0
-		private static bool GetKeyString(string name) => default; // 0x000000018BF2C10C-0x000000018BF2C140
-		private static bool GetKeyUpInt(KeyCode key) => default; // 0x0000000184DCDE50-0x0000000184DCDF10
-		private static bool GetKeyUpString(string name) => default; // 0x000000018BF2C140-0x000000018BF2C174
-		private static bool GetKeyDownInt(KeyCode key) => default; // 0x0000000184CEFE80-0x0000000184CEFEC0
-		private static bool GetKeyDownString(string name) => default; // 0x000000018BF2C0CC-0x000000018BF2C100
-		public static float GetAxis(string axisName) => default; // 0x000000018BF2BFD8-0x000000018BF2C00C
-		public static float GetAxisRaw(string axisName) => default; // 0x00000001842ABAD0-0x00000001842ABB10
-		public static bool GetButton(string buttonName) => default; // 0x00000001842AB9B0-0x00000001842AB9F0
-		public static bool GetButtonDown(string buttonName) => default; // 0x000000018BF2C00C-0x000000018BF2C040
-		public static bool GetButtonUp(string buttonName) => default; // 0x000000018BF2C040-0x000000018BF2C074
-		public static bool GetMouseButton(int button) => default; // 0x000000018457E950-0x000000018457E990
-		public static bool GetMouseButtonDown(int button) => default; // 0x00000001842AC6B0-0x00000001842AC6F0
-		public static bool GetMouseButtonUp(int button) => default; // 0x0000000184EC1060-0x0000000184EC10A0
-		public static void ResetInputAxes() {} // 0x000000018BF2C204-0x000000018BF2C230
-		public static string[] GetJoystickNames() => default; // 0x000000018BF2C0A0-0x000000018BF2C0CC
-		public static Touch GetTouch(int index) => default; // 0x000000018BF2C1CC-0x000000018BF2C204
-		public static AccelerationEvent GetAccelerationEvent(int index) => default; // 0x000000018BF2BFB0-0x000000018BF2BFD8
-		public static bool GetKey(KeyCode key) => default; // 0x000000018646E7D8-0x000000018646E7E4
-		public static bool GetKey(string name) => default; // 0x000000018BF2C180-0x000000018BF2C18C
-		public static bool GetKeyUp(KeyCode key) => default; // 0x000000018646E7F0-0x000000018646E7FC
-		public static bool GetKeyUp(string name) => default; // 0x000000018BF2C174-0x000000018BF2C180
-		public static bool GetKeyDown(KeyCode key) => default; // 0x000000018646E7E4-0x000000018646E7F0
-		public static bool GetKeyDown(string name) => default; // 0x000000018BF2C100-0x000000018BF2C10C
-		internal static void SimulateTouch(Touch touch) {} // 0x0000000185492010-0x0000000185492020
-		private static void SimulateTouchInternal(Touch touch, long timestamp) {} // 0x000000018BF2C274-0x000000018BF2C288
-		private static int GetGyroInternal() => default; // 0x000000018BF2C074-0x000000018BF2C0A0
-		internal static bool CheckDisabled() => default; // 0x00000001842AC670-0x00000001842AC6B0
-		private static void GetTouch_Injected(int index, out Touch ret) {
-			ret = default;
-		} // 0x000000018BF2C18C-0x000000018BF2C1CC
-		private static void GetAccelerationEvent_Injected(int index, out AccelerationEvent ret) {
-			ret = default;
-		} // 0x000000018BF2BF70-0x000000018BF2BFB0
-		private static void SimulateTouchInternal_Injected(ref Touch touch, long timestamp) {} // 0x000000018BF2C230-0x000000018BF2C274
-		private static void get_mousePosition_Injected(out Vector3 ret) {
-			ret = default;
-		} // 0x00000001842AC630-0x00000001842AC670
-		private static void get_mouseScrollDelta_Injected(out Vector2 ret) {
-			ret = default;
-		} // 0x00000001842AB010-0x00000001842AB050
-		private static void get_compositionCursorPos_Injected(out Vector2 ret) {
-			ret = default;
-		} // 0x000000018BF2C4C8-0x000000018BF2C4FC
-		private static void set_compositionCursorPos_Injected(ref Vector2 value) {} // 0x0000000185F7A5D0-0x0000000185F7A610
-		private static void get_acceleration_Injected(out Vector3 ret) {
-			ret = default;
-		} // 0x000000018BF2C350-0x000000018BF2C384
+		[NativeThrows]
+		private static bool GetKeyInt(KeyCode key); // 0x0000000183D9D9F0-0x0000000183D9DA30
+		[NativeThrows]
+		private static bool GetKeyString(string name); // 0x000000018B4178E4-0x000000018B417918
+		[NativeThrows]
+		private static bool GetKeyUpInt(KeyCode key); // 0x0000000183D536F0-0x0000000183D53730
+		[NativeThrows]
+		private static bool GetKeyUpString(string name); // 0x000000018B417918-0x000000018B41794C
+		[NativeThrows]
+		private static bool GetKeyDownInt(KeyCode key); // 0x0000000183D25200-0x0000000183D25240
+		[NativeThrows]
+		private static bool GetKeyDownString(string name); // 0x000000018B4178A4-0x000000018B4178D8
+		[NativeThrows]
+		public static float GetAxis(string axisName); // 0x000000018B4177B0-0x000000018B4177E4
+		[NativeThrows]
+		public static float GetAxisRaw(string axisName); // 0x00000001830BA490-0x00000001830BA4D0
+		[NativeThrows]
+		public static bool GetButton(string buttonName); // 0x00000001830BADB0-0x00000001830BAE90
+		[NativeThrows]
+		public static bool GetButtonDown(string buttonName); // 0x000000018B4177E4-0x000000018B417818
+		[NativeThrows]
+		public static bool GetButtonUp(string buttonName); // 0x000000018B417818-0x000000018B41784C
+		[NativeThrows]
+		public static bool GetMouseButton(int button); // 0x00000001833FE9D0-0x00000001833FEA10
+		[NativeThrows]
+		public static bool GetMouseButtonDown(int button); // 0x00000001834002D0-0x0000000183400310
+		[NativeThrows]
+		public static bool GetMouseButtonUp(int button); // 0x0000000183E2FA40-0x0000000183E2FA80
+		[FreeFunction("ResetInput")]
+		public static void ResetInputAxes(); // 0x000000018B4179DC-0x000000018B417A08
+		[NativeThrows]
+		public static string[] GetJoystickNames(); // 0x000000018B417878-0x000000018B4178A4
+		[NativeThrows]
+		public static Touch GetTouch(int index); // 0x000000018B4179A4-0x000000018B4179DC
+		[NativeThrows]
+		public static AccelerationEvent GetAccelerationEvent(int index); // 0x000000018B417788-0x000000018B4177B0
+		public static bool GetKey(KeyCode key); // 0x000000018539205C-0x0000000185392068
+		public static bool GetKey(string name); // 0x000000018B417958-0x000000018B417964
+		public static bool GetKeyUp(KeyCode key); // 0x0000000185392068-0x0000000185392074
+		public static bool GetKeyUp(string name); // 0x000000018B41794C-0x000000018B417958
+		public static bool GetKeyDown(KeyCode key); // 0x0000000185392074-0x0000000185392080
+		public static bool GetKeyDown(string name); // 0x000000018B4178D8-0x000000018B4178E4
+		[Conditional("UNITY_EDITOR")]
+		internal static void SimulateTouch(Touch touch); // 0x00000001841E1670-0x00000001841E1680
+		[Conditional("UNITY_EDITOR")]
+		[FreeFunction("SimulateTouch")]
+		[NativeConditional("UNITY_EDITOR")]
+		private static void SimulateTouchInternal(Touch touch, long timestamp); // 0x000000018B417A4C-0x000000018B417A60
+		[FreeFunction("GetGyro")]
+		private static int GetGyroInternal(); // 0x000000018B41784C-0x000000018B417878
+		internal static bool CheckDisabled(); // 0x0000000183400290-0x00000001834002D0
+		private static void GetTouch_Injected(int index, out Touch ret); // 0x000000018B417964-0x000000018B4179A4
+		private static void GetAccelerationEvent_Injected(int index, out AccelerationEvent ret); // 0x000000018B417748-0x000000018B417788
+		private static void SimulateTouchInternal_Injected(ref Touch touch, long timestamp); // 0x000000018B417A08-0x000000018B417A4C
+		private static void get_mousePosition_Injected(out Vector3 ret); // 0x0000000183400250-0x0000000183400290
+		private static void get_mouseScrollDelta_Injected(out Vector2 ret); // 0x00000001837CF810-0x00000001837CF850
+		private static void get_compositionCursorPos_Injected(out Vector2 ret); // 0x000000018B417CA0-0x000000018B417CD4
+		private static void set_compositionCursorPos_Injected(ref Vector2 value); // 0x0000000184A31690-0x0000000184A316D0
+		private static void get_acceleration_Injected(out Vector3 ret); // 0x000000018B417B28-0x000000018B417B5C
 	}
 
-	internal class SendMouseEvents // TypeDefIndex: 60883
+	internal class SendMouseEvents // TypeDefIndex: 63509
 	{
 		// Fields
 		private static bool s_MouseUsed; // 0x00
@@ -226,26 +410,27 @@ namespace UnityEngine
 		private static bool s_MouseButtonIsPressed; // 0x39
 	
 		// Nested types
-		private struct HitInfo // TypeDefIndex: 60882
+		private struct HitInfo // TypeDefIndex: 63508
 		{
 			// Fields
 			public GameObject target; // 0x00
 			public Camera camera; // 0x08
 	
 			// Methods
-			public void SendMessage(string name) {} // 0x00000001842AC450-0x00000001842AC5E0
-			public static implicit operator bool(HitInfo exists) => default; // 0x000000018BF2C8FC-0x000000018BF2C94C
-			public static bool Compare(HitInfo lhs, HitInfo rhs) => default; // 0x00000001842ADE30-0x00000001842AEE00
+			public void SendMessage(string name); // 0x0000000184525D60-0x0000000184525D90
+			public static implicit operator bool(HitInfo exists); // 0x0000000183251050-0x0000000183251120
+			public static bool Compare(HitInfo lhs, HitInfo rhs); // 0x0000000183251120-0x00000001832512C0
 		}
 	
 		// Constructors
-		public SendMouseEvents() {} // Dummy constructor
-		static SendMouseEvents() {} // 0x00000001842AF990-0x00000001842AFC20
+		static SendMouseEvents(); // 0x0000000184CB0CF0-0x0000000184CB0DE0
 	
 		// Methods
-		private static void UpdateMouse() {} // 0x00000001842AEEC0-0x00000001842AF860
-		private static void SetMouseMoved() {} // 0x0000000185EC2BD0-0x0000000185EC2CC0
-		private static void DoSendMouseEvents(int skipRTCameras) {} // 0x0000000185781940-0x0000000185781970
-		private static void SendEvents(int i, HitInfo hit) {} // 0x00000001842AF860-0x00000001842AF990
+		private static void UpdateMouse(); // 0x00000001834000D0-0x0000000183400200
+		[RequiredByNativeCode]
+		private static void SetMouseMoved(); // 0x000000018B418174-0x000000018B4181C4
+		[RequiredByNativeCode]
+		private static void DoSendMouseEvents(int skipRTCameras); // 0x000000018324FB30-0x00000001832507E0
+		private static void SendEvents(int i, HitInfo hit); // 0x0000000183250820-0x0000000183251050
 	}
 }

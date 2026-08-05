@@ -4,19 +4,37 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
-// Image 118: Sirenix.Utilities.dll - Assembly: Sirenix.Utilities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60971-60983
+// Image 121: Sirenix.Utilities.dll - Assembly: Sirenix.Utilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63614-63626
+[assembly: AssemblyCompany("Sirenix ApS")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCopyright("Copyright \u00A9 2022")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyProduct("Sirenix.Utilities")]
+[assembly: AssemblyTitle("Sirenix.Utilities")]
+[assembly: AssemblyTrademark("")]
+[assembly: CLSCompliant(false)]
+[assembly: CompilationRelaxations(8)]
+[assembly: ComVisible(false)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: Guid("22731b01-1f5d-477a-811c-df6f1e873a2a")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Sirenix.Utilities
 {
-	public static class LinqExtensions // TypeDefIndex: 60972
+	public static class LinqExtensions // TypeDefIndex: 63615
 	{
-		// Methods
-		public static void Sort<T>(IList<T> list, Comparison<T> comparison) {}
+		// Extension methods
+		public static void Sort<T>(this IList<T> list, Comparison<T> comparison);
 	}
 
-	public static class TypeExtensions // TypeDefIndex: 60973
+	public static class TypeExtensions // TypeDefIndex: 63616
 	{
 		// Fields
 		private static readonly Func<float, float, bool> FloatEqualityComparerFunc; // 0x00
@@ -45,41 +63,44 @@ namespace Sirenix.Utilities
 		private static readonly HashSet<System.Type> ExplicitCastIntegrals; // 0xB8
 	
 		// Constructors
-		static TypeExtensions() {} // 0x000000018B78E724-0x000000018B790E2C
+		static TypeExtensions(); // 0x000000018AC4813C-0x000000018AC4A844
 	
 		// Methods
-		private static string GetCachedNiceName(System.Type type) => default; // 0x000000018B78E2C8-0x000000018B78E470
-		private static string CreateNiceName(System.Type type) => default; // 0x000000018B78DF34-0x000000018B78E27C
-		private static bool FloatEqualityComparer(float a, float b) => default; // 0x000000018B78E2A4-0x000000018B78E2C8
-		private static bool DoubleEqualityComparer(double a, double b) => default; // 0x000000018B78E27C-0x000000018B78E2A4
-		private static bool QuaternionEqualityComparer(Quaternion a, Quaternion b) => default; // 0x0000000184A6EB60-0x0000000184A6EBA0
-		private static string GetMaybeSimplifiedTypeName(System.Type type) => default; // 0x000000018B78E470-0x000000018B78E50C
-		public static string GetNiceName(System.Type type) => default; // 0x000000018B78E50C-0x000000018B78E5D8
-		public static T GetCustomAttribute<T>(System.Type type, bool inherit)
-			where T : Attribute => default;
-		public static T GetCustomAttribute<T>(System.Type type)
-			where T : Attribute => default;
-		public static bool InheritsFrom(System.Type type, System.Type baseType) => default; // 0x000000018B78E5D8-0x000000018B78E724
+		private static string GetCachedNiceName(System.Type type); // 0x000000018AC47D40-0x000000018AC47EB4
+		private static string CreateNiceName(System.Type type); // 0x000000018AC479AC-0x000000018AC47CF4
+		private static bool FloatEqualityComparer(float a, float b); // 0x000000018AC47D1C-0x000000018AC47D40
+		private static bool DoubleEqualityComparer(double a, double b); // 0x000000018AC47CF4-0x000000018AC47D1C
+		private static bool QuaternionEqualityComparer(Quaternion a, Quaternion b); // 0x000000018415FC30-0x000000018415FC70
+	
+		// Extension methods
+		private static string GetMaybeSimplifiedTypeName(this System.Type type); // 0x000000018AC47EB4-0x000000018AC47F50
+		public static string GetNiceName(this System.Type type); // 0x000000018AC47F50-0x000000018AC47FF0
+		public static T GetCustomAttribute<T>(this System.Type type, bool inherit)
+			where T : Attribute;
+		public static T GetCustomAttribute<T>(this System.Type type)
+			where T : Attribute;
+		public static bool InheritsFrom(this System.Type type, System.Type baseType); // 0x000000018AC47FF0-0x000000018AC4813C
 	}
 
 	[Serializable]
-	public class DoubleLookupDictionary<TFirstKey, TSecondKey, TValue> : Dictionary<TFirstKey, Dictionary<TSecondKey, TValue>> // TypeDefIndex: 60974
+	[DefaultMember("Item")]
+	public class DoubleLookupDictionary<TFirstKey, TSecondKey, TValue> : Dictionary<TFirstKey, Dictionary<TSecondKey, TValue>> // TypeDefIndex: 63617
 	{
 		// Fields
 		private readonly IEqualityComparer<TSecondKey> secondKeyComparer;
 	
 		// Constructors
-		public DoubleLookupDictionary() {}
+		public DoubleLookupDictionary();
 	}
 
-	public interface IGlobalConfigEvents // TypeDefIndex: 60975
+	public interface IGlobalConfigEvents // TypeDefIndex: 63618
 	{
 		// Methods
 		void OnConfigAutoCreated();
 		void OnConfigInstanceFirstAccessed();
 	}
 
-	public abstract class GlobalConfig<T> : ScriptableObject, IGlobalConfigEvents // TypeDefIndex: 60976
+	public abstract class GlobalConfig<T> : ScriptableObject, IGlobalConfigEvents // TypeDefIndex: 63619
 		where T : GlobalConfig<T>, new()
 	{
 		// Fields
@@ -92,18 +113,18 @@ namespace Sirenix.Utilities
 		public static T Instance { get; }
 	
 		// Constructors
-		protected GlobalConfig() {}
+		protected GlobalConfig();
 	
 		// Methods
-		public static void LoadInstanceIfAssetExists() {}
-		public void OpenInEditor() {}
-		protected virtual void OnConfigInstanceFirstAccessed() {}
-		protected virtual void OnConfigAutoCreated() {}
-		void IGlobalConfigEvents.OnConfigAutoCreated() {}
-		void IGlobalConfigEvents.OnConfigInstanceFirstAccessed() {}
+		public static void LoadInstanceIfAssetExists();
+		public void OpenInEditor();
+		protected virtual void OnConfigInstanceFirstAccessed();
+		protected virtual void OnConfigAutoCreated();
+		void IGlobalConfigEvents.OnConfigAutoCreated();
+		void IGlobalConfigEvents.OnConfigInstanceFirstAccessed();
 	}
 
-	public static class GlobalConfigUtility<T> // TypeDefIndex: 60977
+	public static class GlobalConfigUtility<T> // TypeDefIndex: 63620
 		where T : ScriptableObject
 	{
 		// Fields
@@ -113,37 +134,39 @@ namespace Sirenix.Utilities
 		public static bool HasInstanceLoaded { get; }
 	
 		// Methods
-		public static T GetInstance(string defaultAssetFolderPath, string defaultFileNameWithoutExtension = null) => default;
-		internal static void LoadInstanceIfAssetExists(string assetPath, string defaultFileNameWithoutExtension = null) {}
+		public static T GetInstance(string defaultAssetFolderPath, string defaultFileNameWithoutExtension = null);
+		internal static void LoadInstanceIfAssetExists(string assetPath, string defaultFileNameWithoutExtension = null);
 	}
 
-	public class GlobalConfigAttribute : Attribute // TypeDefIndex: 60978
+	[AttributeUsage(AttributeTargets.Class)]
+	public class GlobalConfigAttribute : Attribute // TypeDefIndex: 63621
 	{
 		// Fields
 		private string assetPath; // 0x10
+		[CompilerGenerated]
 		private bool _UseAsset_k__BackingField; // 0x18
 	
 		// Properties
-		public string AssetPath { get => default; } // 0x000000018B78DB80-0x000000018B78DCA8 
+		public string AssetPath { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
 	
 		// Constructors
-		public GlobalConfigAttribute() {} // Dummy constructor
-		public GlobalConfigAttribute(string assetPath) {} // 0x0000000184096E30-0x0000000184096EF0
+		public GlobalConfigAttribute(string assetPath); // 0x000000018AC475D8-0x000000018AC47720
 	}
 
-	public class PersistentAssemblyAttribute : Attribute // TypeDefIndex: 60979
+	[AttributeUsage(AttributeTargets.Assembly)]
+	public class PersistentAssemblyAttribute : Attribute // TypeDefIndex: 63622
 	{
 		// Constructors
-		public PersistentAssemblyAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public PersistentAssemblyAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class ProjectPathFinder : ScriptableObject // TypeDefIndex: 60980
+	internal class ProjectPathFinder : ScriptableObject // TypeDefIndex: 63623
 	{
 		// Constructors
-		public ProjectPathFinder() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public ProjectPathFinder(); // 0x0000000183573370-0x0000000183573380
 	}
 
-	public static class SirenixAssetPaths // TypeDefIndex: 60981
+	public static class SirenixAssetPaths // TypeDefIndex: 63624
 	{
 		// Fields
 		public static readonly string OdinPath; // 0x00
@@ -155,25 +178,26 @@ namespace Sirenix.Utilities
 		public static readonly string OdinResourcesConfigsPath; // 0x30
 	
 		// Constructors
-		static SirenixAssetPaths() {} // 0x000000018B78DCA8-0x000000018B78DEE0
+		static SirenixAssetPaths(); // 0x000000018AC47720-0x000000018AC47958
 	}
 
-	public class SirenixGlobalConfigAttribute : GlobalConfigAttribute // TypeDefIndex: 60982
+	public class SirenixGlobalConfigAttribute : GlobalConfigAttribute // TypeDefIndex: 63625
 	{
 		// Constructors
-		public SirenixGlobalConfigAttribute() {} // 0x000000018B78DEE0-0x000000018B78DF34
+		public SirenixGlobalConfigAttribute(); // 0x000000018AC47958-0x000000018AC479AC
 	}
 
-	public static class UnityVersion // TypeDefIndex: 60983
+	public static class UnityVersion // TypeDefIndex: 63626
 	{
 		// Fields
 		public static readonly int Major; // 0x00
 		public static readonly int Minor; // 0x04
 	
 		// Constructors
-		static UnityVersion() {} // 0x0000000185D21530-0x0000000185D21660
+		static UnityVersion(); // 0x0000000183B0CEC0-0x0000000183B0CFF0
 	
 		// Methods
-		private static void EnsureLoaded() {} // 0x0000000185492010-0x0000000185492020
+		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+		private static void EnsureLoaded(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }

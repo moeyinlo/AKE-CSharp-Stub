@@ -3,56 +3,74 @@
  */
 
 using System;
+using System.Diagnostics;
 using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using AOT;
+using Microsoft.CodeAnalysis;
+using Unity.Burst;
+using Unity.Collections.LowLevel.Unsafe;
+using UnityEngine.Scripting;
 
-// Image 85: Unity.Burst.dll - Assembly: Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60198-60249
+// Image 88: Unity.Burst.dll - Assembly: Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 62813-62864
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("Unity.Burst.Benchmarks")]
+[assembly: InternalsVisibleTo("Unity.Burst.Tests.UnitTests")]
+[assembly: InternalsVisibleTo("Unity.Burst.Editor")]
+[assembly: InternalsVisibleTo("Unity.Burst.CodeGen")]
+[assembly: InternalsVisibleTo("Unity.Burst.Editor.Tests")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 60249
+[CompilerGenerated]
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 62864
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_256 _07DB995E8ED2CFB0AB71EBA69F3A3EC07D5C6AC10C0C64F33E94ED2949B348AA; // 0x00 // Static value (base64): AAABAQICAgIDAwMDAwMDAwQEBAQEBAQEBAQEBAQEBAQFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBw== - Metadata: 0x0208265C
-	internal static readonly __StaticArrayInitTypeSize_32 C69994AC61B52FBCEA582D6CCCD595C12E00BDB18F0C6F593FB6B393CAEDB08C; // 0x100 // Static value (base64): AQAAAAoAAABkAAAA6AMAABAnAACghgEAQEIPAICWmAA= - Metadata: 0x02082764
-	internal static readonly long D0067CAD9A63E0813759A2BB841051CA73570C0DA2E08E840A8EB45DB6A7A010; // 0x120 // Static value (base64): SW5maW5pdHk= - Metadata: 0x0208278C
-	internal static readonly __StaticArrayInitTypeSize_3 D5B592C05DC25B5032553F1B27F4139BE95E881F73DB33B02B05AB20C3F9981E; // 0x128 // Static value (base64): TmFO - Metadata: 0x0208279C
+	internal static readonly __StaticArrayInitTypeSize_256 _07DB995E8ED2CFB0AB71EBA69F3A3EC07D5C6AC10C0C64F33E94ED2949B348AA; // 0x00 // Static value (base64): AAABAQICAgIDAwMDAwMDAwQEBAQEBAQEBAQEBAQEBAQFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBw== - Metadata: 0x023521AC
+	internal static readonly __StaticArrayInitTypeSize_32 C69994AC61B52FBCEA582D6CCCD595C12E00BDB18F0C6F593FB6B393CAEDB08C; // 0x100 // Static value (base64): AQAAAAoAAABkAAAA6AMAABAnAACghgEAQEIPAICWmAA= - Metadata: 0x023522B4
+	internal static readonly long D0067CAD9A63E0813759A2BB841051CA73570C0DA2E08E840A8EB45DB6A7A010; // 0x120 // Static value (base64): SW5maW5pdHk= - Metadata: 0x023522DC
+	internal static readonly __StaticArrayInitTypeSize_3 D5B592C05DC25B5032553F1B27F4139BE95E881F73DB33B02B05AB20C3F9981E; // 0x128 // Static value (base64): TmFO - Metadata: 0x023522EC
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_3 // TypeDefIndex: 60246
+	private struct __StaticArrayInitTypeSize_3 // TypeDefIndex: 62861
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_32 // TypeDefIndex: 60247
+	private struct __StaticArrayInitTypeSize_32 // TypeDefIndex: 62862
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_256 // TypeDefIndex: 60248
+	private struct __StaticArrayInitTypeSize_256 // TypeDefIndex: 62863
 	{
 	}
-
-	// Constructors
-	public _PrivateImplementationDetails_() {} // Dummy constructor
 }
 
 namespace Microsoft.CodeAnalysis
 {
-	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 60199
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 62814
 	{
 		// Constructors
-		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public EmbeddedAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace System.Runtime.CompilerServices
 {
-	internal sealed class IsReadOnlyAttribute : Attribute // TypeDefIndex: 60200
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class IsReadOnlyAttribute : Attribute // TypeDefIndex: 62815
 	{
 		// Constructors
-		public IsReadOnlyAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public IsReadOnlyAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace Unity.Burst
 {
-	public enum OptimizeFor // TypeDefIndex: 60201
+	public enum OptimizeFor // TypeDefIndex: 62816
 	{
 		Default = 0,
 		Performance = 1,
@@ -61,7 +79,7 @@ namespace Unity.Burst
 		Balanced = 4
 	}
 
-	public enum FloatMode // TypeDefIndex: 60202
+	public enum FloatMode // TypeDefIndex: 62817
 	{
 		Default = 0,
 		Strict = 1,
@@ -69,7 +87,7 @@ namespace Unity.Burst
 		Fast = 3
 	}
 
-	public enum FloatPrecision // TypeDefIndex: 60203
+	public enum FloatPrecision // TypeDefIndex: 62818
 	{
 		Standard = 0,
 		High = 1,
@@ -77,30 +95,35 @@ namespace Unity.Burst
 		Low = 3
 	}
 
-	public class BurstCompileAttribute : Attribute // TypeDefIndex: 60204
+	[AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Method)]
+	public class BurstCompileAttribute : Attribute // TypeDefIndex: 62819
 	{
 		// Fields
+		[CompilerGenerated]
 		private FloatMode _FloatMode_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private FloatPrecision _FloatPrecision_k__BackingField; // 0x14
 		internal bool? _compileSynchronously; // 0x18
 		internal bool? _disableDirectCall; // 0x1A
+		[CompilerGenerated]
 		private OptimizeFor _OptimizeFor_k__BackingField; // 0x1C
+		[CompilerGenerated]
 		private string[] _Options_k__BackingField; // 0x20
 	
 		// Properties
-		public FloatMode FloatMode { get; set; } // 0x0000000181378230-0x0000000181378240
-		public FloatPrecision FloatPrecision { get; set; } // 0x0000000185FBB0B0-0x0000000185FBB0C0
-		public bool CompileSynchronously { set {} } // 0x000000018509B890-0x000000018509B8E0
-		public bool DisableDirectCall { set {} } // 0x000000018BC79380-0x000000018BC793CC
-		public OptimizeFor OptimizeFor { get; set; } // 0x00000001813AE9D0-0x00000001813AE9E0
-		internal string[] Options { get; set; } // 0x000000018646EE40-0x000000018646EE50
+		public FloatMode FloatMode { [CompilerGenerated] set; } // 0x00000001814F51F0-0x00000001814F5220
+		public FloatPrecision FloatPrecision { [CompilerGenerated] set; } // 0x0000000184D8F540-0x0000000184D8F550
+		public bool CompileSynchronously { set; } // 0x0000000183F26250-0x0000000183F262A0
+		public bool DisableDirectCall { set; } // 0x000000018B15C1EC-0x000000018B15C238
+		public OptimizeFor OptimizeFor { [CompilerGenerated] set; } // 0x0000000184D86320-0x0000000184D86330
+		internal string[] Options { [CompilerGenerated] set; } // 0x0000000185390F40-0x0000000185390F50
 	
 		// Constructors
-		public BurstCompileAttribute() {} // 0x0000000185492010-0x0000000185492020
-		public BurstCompileAttribute(FloatPrecision floatPrecision, FloatMode floatMode) {} // 0x0000000185FD7180-0x0000000185FD7190
+		public BurstCompileAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public BurstCompileAttribute(FloatPrecision floatPrecision, FloatMode floatMode); // 0x0000000184D85930-0x0000000184D85940
 	}
 
-	public static class BurstCompiler // TypeDefIndex: 60210
+	public static class BurstCompiler // TypeDefIndex: 62825
 	{
 		// Fields
 		internal static bool _IsEnabled; // 0x00
@@ -109,79 +132,86 @@ namespace Unity.Burst
 		private static readonly MethodInfo DummyMethodInfo; // 0x18
 	
 		// Properties
-		public static bool IsEnabled { get; } // 0x0000000185C24D00-0x0000000185C24DC0 
+		public static bool IsEnabled { get; } // 0x000000018307B8D0-0x000000018307B940 
 	
 		// Nested types
-		internal class StaticTypeReinitAttribute : Attribute // TypeDefIndex: 60205
+		[AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
+		internal class StaticTypeReinitAttribute : Attribute // TypeDefIndex: 62820
 		{
 			// Fields
 			public readonly System.Type reinitType; // 0x10
 	
 			// Constructors
-			public StaticTypeReinitAttribute() {} // Dummy constructor
-			public StaticTypeReinitAttribute(System.Type toReinit) {} // 0x00000001840C7590-0x00000001840C7620
+			public StaticTypeReinitAttribute(System.Type toReinit); // 0x00000001853908C0-0x00000001853908D0
 		}
 	
-		internal static class BurstCompilerHelper // TypeDefIndex: 60207
+		[BurstCompile]
+		internal static class BurstCompilerHelper // TypeDefIndex: 62822
 		{
 			// Fields
 			private static readonly IsBurstEnabledDelegate IsBurstEnabledImpl; // 0x00
 			public static readonly bool IsBurstGenerated; // 0x08
 	
 			// Nested types
-			private delegate bool IsBurstEnabledDelegate(); // TypeDefIndex: 60206; 0x0000000185958960-0x0000000185958990
+			[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+			private delegate bool IsBurstEnabledDelegate(); // TypeDefIndex: 62821; 0x0000000187378308-0x0000000187378318
 	
 			// Constructors
-			static BurstCompilerHelper() {} // 0x0000000185492010-0x0000000185492020
+			static BurstCompilerHelper(); // 0x0000000183FAEB30-0x0000000183FAEBF0
 	
 			// Methods
-			private static bool IsBurstEnabled() => default;
-			private static void DiscardedMethod(ref bool value) {} // 0x00000001859A7970-0x00000001859A7A40
-			private static bool IsCompiledByBurst(Delegate del) => default; // 0x000000018439E5A0-0x000000018439E8F0
+			[BurstCompile]
+			[AOT.MonoPInvokeCallback(typeof(IsBurstEnabledDelegate))]
+			private static bool IsBurstEnabled(); // 0x000000018B15C238-0x000000018B15C274
+			[BurstDiscard]
+			private static void DiscardedMethod(ref bool value); // 0x0000000184D87170-0x0000000184D87180
+			private static bool IsCompiledByBurst(Delegate del); // 0x0000000183FB0A20-0x0000000183FB0A80
 		}
 	
-		private class FakeDelegate // TypeDefIndex: 60208
+		private class FakeDelegate // TypeDefIndex: 62823
 		{
 			// Fields
+			[CompilerGenerated]
 			private readonly MethodInfo _Method_k__BackingField; // 0x10
 	
 			// Properties
-			public MethodInfo Method { get; } // 0x0000000184096E30-0x0000000184096EF0 
+			[UnityEngine.Scripting.Preserve]
+			public MethodInfo Method { [CompilerGenerated] get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
 	
 			// Constructors
-			public FakeDelegate() {} // Dummy constructor
-			public FakeDelegate(MethodInfo method) {} // 0x0000000185B3F410-0x0000000185B3F530
+			public FakeDelegate(MethodInfo method); // 0x00000001853908C0-0x00000001853908D0
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 60209
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 62824
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Func<Attribute, bool> __9__22_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x000000018BC793CC-0x000000018BC79408
-			public __c() {} // 0x0000000185FB0F50-0x0000000185FB0F60
+			static __c(); // 0x0000000184D45010-0x0000000184D45070
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _Compile_b__22_0(Attribute s) => default; // 0x0000000185C24DC0-0x0000000185C24E20
+			internal bool _Compile_b__22_0(Attribute s); // 0x0000000184843A60-0x0000000184843AD0
 		}
 	
 		// Constructors
-		static BurstCompiler() {} // 0x0000000185BA59D0-0x0000000185BA5A40
+		static BurstCompiler(); // 0x000000018495EE80-0x000000018495EFA0
 	
 		// Methods
-		public static IntPtr CompileILPPMethod2(RuntimeMethodHandle burstMethodHandle) => default; // 0x0000000185C24E20-0x0000000185C24EB0
-		public static unsafe void* GetILPPMethodFunctionPointer2(IntPtr ilppMethod, RuntimeMethodHandle managedMethodHandle, RuntimeTypeHandle delegateTypeHandle) => default; // 0x0000000183683B30-0x0000000183683B40
+		public static IntPtr CompileILPPMethod2(RuntimeMethodHandle burstMethodHandle); // 0x0000000183FB0BC0-0x0000000183FB0CA0
+		public static unsafe void* GetILPPMethodFunctionPointer2(IntPtr ilppMethod, RuntimeMethodHandle managedMethodHandle, RuntimeTypeHandle delegateTypeHandle); // 0x000000018474F6F0-0x000000018474F720
 		public static FunctionPointer<T> CompileFunctionPointer<T>(T delegateMethod)
-			where T : class => default; // 0x0000000184096E30-0x0000000184096EF0
-		private static unsafe void* Compile(object delegateObj, bool isFunctionPointer) => default; // 0x000000018346D130-0x000000018346D140
-		private static unsafe void* Compile(object delegateObj, MethodInfo methodInfo, bool isFunctionPointer, bool isILPostProcessing) => default; // 0x0000000185F71590-0x0000000185F715F0
-		private static void DummyMethod() {} // 0x0000000185492010-0x0000000185492020
+			where T : class;
+		private static unsafe void* Compile(object delegateObj, bool isFunctionPointer); // 0x0000000183FB0AF0-0x0000000183FB0BC0
+		private static unsafe void* Compile(object delegateObj, MethodInfo methodInfo, bool isFunctionPointer, bool isILPostProcessing); // 0x0000000183FB0D30-0x0000000183FB0FD0
+		private static void DummyMethod(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public sealed class BurstCompilerOptions // TypeDefIndex: 60211
+	public sealed class BurstCompilerOptions // TypeDefIndex: 62826
 	{
 		// Fields
 		internal static readonly bool ForceDisableBurstCompilation; // 0x00
@@ -189,60 +219,58 @@ namespace Unity.Burst
 		internal static readonly bool IsSecondaryUnityProcess; // 0x02
 		private bool _enableBurstCompilation; // 0x10
 		private bool _enableBurstSafetyChecks; // 0x11
+		[CompilerGenerated]
 		private readonly bool _IsGlobal_k__BackingField; // 0x12
+		[CompilerGenerated]
 		private Action _OptionsChanged_k__BackingField; // 0x18
 	
 		// Properties
-		private bool IsGlobal { get; } // 0x0000000185FB22D0-0x0000000185FB22E0 
-		public bool EnableBurstCompilation { get => default; set {} } // 0x0000000181C2FD60-0x0000000181C2FD70 0x0000000185B3F570-0x0000000185B3F660
-		public bool EnableBurstSafetyChecks { set {} } // 0x0000000185B3F660-0x0000000185B3F680
-		internal Action OptionsChanged { get; } // 0x0000000181377E40-0x0000000181377E50 
+		private bool IsGlobal { [CompilerGenerated] get; } // 0x0000000184D88390-0x0000000184D883A0 
+		public bool EnableBurstCompilation { get; set; } // 0x00000001815EFCE0-0x00000001815EFCF0 0x000000018495EFE0-0x000000018495F0D0
+		public bool EnableBurstSafetyChecks { set; } // 0x000000018495F0D0-0x000000018495F0F0
+		internal Action OptionsChanged { [CompilerGenerated] get; } // 0x000000018385B100-0x000000018385B110 
 	
 		// Constructors
-		public BurstCompilerOptions() {} // Dummy constructor
-		internal BurstCompilerOptions(bool isGlobal) {} // 0x0000000185B3F530-0x0000000185B3F570
-		static BurstCompilerOptions() {} // 0x0000000183FC2210-0x0000000183FC2300
+		internal BurstCompilerOptions(bool isGlobal); // 0x000000018495EFA0-0x000000018495EFE0
+		static BurstCompilerOptions(); // 0x00000001841A6310-0x00000001841A6400
 	
 		// Methods
-		private static bool TryGetAttribute(MemberInfo member, out BurstCompileAttribute attribute) {
-			attribute = default;
-			return default;
-		} // 0x000000018439EA00-0x000000018439EAA0
-		private static BurstCompileAttribute GetBurstCompileAttribute(MemberInfo memberInfo) => default; // 0x000000018439EAA0-0x000000018439ED30
-		internal static bool HasBurstCompileAttribute(MemberInfo member) => default; // 0x000000018439E980-0x000000018439EA00
-		private void OnOptionsChanged() {} // 0x0000000185B3F680-0x0000000185B3F6A0
-		private void MaybeTriggerRecompilation() {} // 0x0000000185492010-0x0000000185492020
-		private static bool CheckIsSecondaryUnityProcess() => default; // 0x00000001814A81B0-0x00000001814A81C0
+		private static bool TryGetAttribute(MemberInfo member, out BurstCompileAttribute attribute); // 0x0000000183FB10C0-0x0000000183FB1140
+		private static BurstCompileAttribute GetBurstCompileAttribute(MemberInfo memberInfo); // 0x0000000183FB1140-0x0000000183FB13D0
+		internal static bool HasBurstCompileAttribute(MemberInfo member); // 0x0000000183FB1060-0x0000000183FB10C0
+		private void OnOptionsChanged(); // 0x000000018495F0F0-0x000000018495F110
+		private void MaybeTriggerRecompilation(); // 0x00000001841E1670-0x00000001841E1680
+		private static bool CheckIsSecondaryUnityProcess(); // 0x00000001812081B0-0x0000000181208610
 	}
 
-	public static class BurstRuntime // TypeDefIndex: 60214
+	public static class BurstRuntime // TypeDefIndex: 62829
 	{
 		// Nested types
-		private struct HashCode64<T> // TypeDefIndex: 60212
+		private struct HashCode64<T> // TypeDefIndex: 62827
 		{
 			// Fields
 			public static readonly long Value;
 	
 			// Constructors
-			static HashCode64() {
-				Value = default;
-			}
+			static HashCode64();
 		}
 	
-		internal class PreserveAttribute : Attribute // TypeDefIndex: 60213
+		internal class PreserveAttribute : Attribute // TypeDefIndex: 62828
 		{
 			// Constructors
-			public PreserveAttribute() {} // 0x0000000184BD7D70-0x0000000184BD7DF0
+			public PreserveAttribute(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		// Methods
-		public static long GetHashCode64<T>() => default; // 0x000000018BC7942C-0x000000018BC79508
-		internal static long HashStringWithFNV1A64(string text) => default; // 0x000000018BC79408-0x000000018BC7942C
-		internal static void PreventRequiredAttributeStrip() {}
-		internal static unsafe void Log(byte* message, int logType, byte* fileName, int lineNumber) {} // 0x0000000185492010-0x0000000185492020
+		public static long GetHashCode64<T>();
+		internal static long HashStringWithFNV1A64(string text); // 0x0000000183B99BA0-0x0000000183B99C20
+		[Preserve]
+		internal static void PreventRequiredAttributeStrip(); // 0x000000018B15C298-0x000000018B15C374
+		[Preserve]
+		internal static unsafe void Log(byte* message, int logType, byte* fileName, int lineNumber); // 0x000000018B15C274-0x000000018B15C298
 	}
 
-	internal static class BurstString // TypeDefIndex: 60225
+	internal static class BurstString // TypeDefIndex: 62840
 	{
 		// Fields
 		private static readonly char[] SplitByColon; // 0x00
@@ -252,19 +280,19 @@ namespace Unity.Burst
 		private static readonly byte[] NanString; // 0x20
 	
 		// Nested types
-		internal class PreserveAttribute : Attribute // TypeDefIndex: 60215
+		internal class PreserveAttribute : Attribute // TypeDefIndex: 62830
 		{
 			// Constructors
-			public PreserveAttribute() {} // 0x000000018BC7A9D8-0x000000018BC7A9FC
+			public PreserveAttribute(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
-		private enum NumberBufferKind // TypeDefIndex: 60216
+		private enum NumberBufferKind // TypeDefIndex: 62831
 		{
 			Integer = 0,
 			Float = 1
 		}
 	
-		private struct NumberBuffer // TypeDefIndex: 60217
+		private struct NumberBuffer // TypeDefIndex: 62832
 		{
 			// Fields
 			private readonly unsafe byte* _buffer; // 0x00
@@ -274,19 +302,13 @@ namespace Unity.Burst
 			public readonly bool IsNegative; // 0x14
 	
 			// Constructors
-			public unsafe NumberBuffer(NumberBufferKind kind, byte* buffer, int digitsCount, int scale, bool isNegative) {
-				_buffer = default;
-				Kind = default;
-				DigitsCount = default;
-				Scale = default;
-				IsNegative = default;
-			} // 0x000000018BC7BB60-0x000000018BC7BC3C
+			public unsafe NumberBuffer(NumberBufferKind kind, byte* buffer, int digitsCount, int scale, bool isNegative); // 0x0000000184DAB260-0x0000000184DAB280
 	
 			// Methods
-			public unsafe byte* GetDigitsPointer() => default; // 0x000000018BC7BF14-0x000000018BC7BF90
+			public unsafe byte* GetDigitsPointer(); // 0x0000000182B76770-0x0000000182B76780
 		}
 	
-		public enum NumberFormatKind : byte // TypeDefIndex: 60218
+		public enum NumberFormatKind : byte // TypeDefIndex: 62833
 		{
 			General = 0,
 			Decimal = 1,
@@ -294,7 +316,7 @@ namespace Unity.Burst
 			Hexadecimal = 3
 		}
 	
-		public struct FormatOptions // TypeDefIndex: 60219
+		public struct FormatOptions // TypeDefIndex: 62834
 		{
 			// Fields
 			public NumberFormatKind Kind; // 0x00
@@ -303,253 +325,236 @@ namespace Unity.Burst
 			public bool Lowercase; // 0x03
 	
 			// Properties
-			public bool Uppercase { get => default; } // 0x000000018BC7BD34-0x000000018BC7BE80 
+			public bool Uppercase { get; } // 0x000000018AE38EF0-0x000000018AE38EF8 
 	
 			// Constructors
-			public FormatOptions(NumberFormatKind kind, sbyte alignAndSize, byte specifier, bool lowercase) : this() {
-				Kind = default;
-				AlignAndSize = default;
-				Specifier = default;
-				Lowercase = default;
-			} // 0x000000018BC7BCB8-0x000000018BC7BD34
+			public FormatOptions(NumberFormatKind kind, sbyte alignAndSize, byte specifier, bool lowercase); // 0x0000000184DAB240-0x0000000184DAB260
 	
 			// Methods
-			public int GetBase() => default; // 0x000000018BC7B6E0-0x000000018BC7B89C
-			public override string ToString() => default; // 0x000000018BC7BF90-0x000000018BC7C010
+			public int GetBase(); // 0x000000018B15F580-0x000000018B15F594
+			public override string ToString(); // 0x000000018B15F594-0x000000018B15F7D0
 		}
 	
-		public struct tBigInt // TypeDefIndex: 60221
+		public struct tBigInt // TypeDefIndex: 62836
 		{
 			// Fields
 			public int m_length; // 0x00
-			public _m_blocks_e__FixedBuffer m_blocks; // 0x04
+			public unsafe fixed /* 0x00000000-0x00000000 */ uint m_blocks[0]; // 0x04
 	
 			// Nested types
-			public struct _m_blocks_e__FixedBuffer // TypeDefIndex: 60220
+			[CompilerGenerated]
+			[UnsafeValueType]
+			public struct _m_blocks_e__FixedBuffer // TypeDefIndex: 62835
 			{
 				// Fields
 				public uint FixedElementField; // 0x00
 			}
 	
 			// Methods
-			public int GetLength() => default; // 0x000000018BC7B918-0x000000018BC7B998
-			public uint GetBlock(int idx) => default; // 0x000000018BC7BC3C-0x000000018BC7BCB8
-			public bool IsZero() => default; // 0x000000018BC7B89C-0x000000018BC7B918
-			public void SetU64(ulong val) {} // 0x000000018BC7B998-0x000000018BC7BA30
-			public void SetU32(uint val) {} // 0x000000018BC7BAC8-0x000000018BC7BB60
+			public int GetLength(); // 0x0000000182B77620-0x0000000182B77630
+			public uint GetBlock(int idx); // 0x0000000184DAB360-0x0000000184DAB370
+			public bool IsZero(); // 0x000000018426F6A0-0x000000018426F6B0
+			public void SetU64(ulong val); // 0x000000018B15F91C-0x000000018B15F94C
+			public void SetU32(uint val); // 0x000000018B15F908-0x000000018B15F91C
 		}
 	
-		public enum CutoffMode // TypeDefIndex: 60222
+		public enum CutoffMode // TypeDefIndex: 62837
 		{
 			Unique = 0,
 			TotalLength = 1,
 			FractionLength = 2
 		}
 	
-		public struct tFloatUnion32 // TypeDefIndex: 60223
+		public struct tFloatUnion32 // TypeDefIndex: 62838
 		{
 			// Fields
 			public float m_floatingPoint; // 0x00
 			public uint m_integer; // 0x00
 	
 			// Methods
-			public bool IsNegative() => default; // 0x000000018BC7BA30-0x000000018BC7BAC8
-			public uint GetExponent() => default; // 0x000000018BC7BE80-0x000000018BC7BF14
-			public uint GetMantissa() => default; // 0x000000018BC7A868-0x000000018BC7A9D8
+			public bool IsNegative(); // 0x000000018A879674-0x000000018A87967C
+			public uint GetExponent(); // 0x0000000184DAB370-0x0000000184DAB380
+			public uint GetMantissa(); // 0x0000000184DAB380-0x0000000184DAB390
 		}
 	
-		public struct tFloatUnion64 // TypeDefIndex: 60224
+		public struct tFloatUnion64 // TypeDefIndex: 62839
 		{
 			// Fields
 			public double m_floatingPoint; // 0x00
 			public ulong m_integer; // 0x00
 	
 			// Methods
-			public bool IsNegative() => default; // 0x000000018BC7C0E4-0x000000018BC7C110
-			public uint GetExponent() => default; // 0x000000018BC7A6D0-0x000000018BC7A868
-			public ulong GetMantissa() => default; // 0x000000018BC7B4E0-0x000000018BC7B6E0
+			public bool IsNegative(); // 0x000000018B15F94C-0x000000018B15F960
+			public uint GetExponent(); // 0x0000000184DAB390-0x0000000184DAB3A0
+			public ulong GetMantissa(); // 0x0000000184DAB3A0-0x0000000184DAB3C0
 		}
 	
 		// Constructors
-		static BurstString() {} // 0x0000000185FD7360-0x0000000185FD7380
+		static BurstString(); // 0x000000018B15F1B0-0x000000018B15F3BC
 	
 		// Methods
-		public static unsafe void CopyFixedString(byte* dest, int destLength, byte* src, int srcLength) {} // 0x000000018BC7B12C-0x000000018BC7B1CC
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, byte* src, int srcLength, int formatOptionsRaw) {} // 0x000000018BC7C31C-0x000000018BC7C344
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, float value, int formatOptionsRaw) {} // 0x000000018BC79538-0x000000018BC795C0
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, double value, int formatOptionsRaw) {} // 0x000000018BC79508-0x000000018BC79538
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, bool value, int formatOptionsRaw) {} // 0x000000018BC7C010-0x000000018BC7C0E4
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, char value, int formatOptionsRaw) {} // 0x000000018BC7B1CC-0x000000018BC7B344
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, byte value, int formatOptionsRaw) {} // 0x000000018BC7C204-0x000000018BC7C2F8
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, ushort value, int formatOptionsRaw) {} // 0x000000018BC7C2F8-0x000000018BC7C31C
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, uint value, int formatOptionsRaw) {} // 0x000000018BC7C110-0x000000018BC7C204
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, ulong value, int formatOptionsRaw) {} // 0x000000018BC796E0-0x000000018BC79734
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, sbyte value, int formatOptionsRaw) {} // 0x000000018BC7966C-0x000000018BC796E0
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, short value, int formatOptionsRaw) {} // 0x000000018BC795C0-0x000000018BC7966C
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, int value, int formatOptionsRaw) {} // 0x000000018BC79D80-0x000000018BC79DF4
-		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, long value, int formatOptionsRaw) {} // 0x000000018BC79C40-0x000000018BC79D18
-		private static unsafe void ConvertUnsignedIntegerToString(byte* dest, ref int destIndex, int destLength, ulong value, FormatOptions options) {} // 0x000000018BC79D18-0x000000018BC79D80
-		private static int GetLengthIntegerToString(long value, int basis, int zeroPadding) => default; // 0x000000018BC798D8-0x000000018BC79930
-		private static unsafe void ConvertIntegerToString(byte* dest, ref int destIndex, int destLength, long value, FormatOptions options) {} // 0x000000018BC79930-0x000000018BC7996C
-		private static unsafe void FormatNumber(byte* dest, ref int destIndex, int destLength, ref NumberBuffer number, int nMaxDigits, FormatOptions options) {} // 0x000000018BC7989C-0x000000018BC798D8
-		private static unsafe void FormatDecimalOrHexadecimal(byte* dest, ref int destIndex, int destLength, ref NumberBuffer number, int zeroPadding, bool outputPositiveSign) {} // 0x000000018BC7C550-0x000000018BC7C714
-		private static byte ValueToIntegerChar(int value, bool uppercase) => default; // 0x000000018BC79DF4-0x000000018BC7A060
-		private static unsafe bool AlignRight(byte* dest, ref int destIndex, int destLength, int align, int length) => default; // 0x000000018BC7996C-0x000000018BC79C40
-		private static unsafe bool AlignLeft(byte* dest, ref int destIndex, int destLength, int align, int length) => default; // 0x000000018BC7A060-0x000000018BC7A0A8
-		private static int GetLengthForFormatGeneral(ref NumberBuffer number, int nMaxDigits) => default; // 0x000000018BC79734-0x000000018BC7989C
-		private static unsafe void FormatGeneral(byte* dest, ref int destIndex, int destLength, ref NumberBuffer number, int nMaxDigits, byte expChar) {} // 0x000000018BC7A0A8-0x000000018BC7A1F4
-		private static void RoundNumber(ref NumberBuffer number, int pos, bool isCorrectlyRounded) {} // 0x000000018BC7A9FC-0x000000018BC7B12C
-		private static unsafe bool ShouldRoundUp(byte* dig, int i, bool isCorrectlyRounded) => default; // 0x000000018BC7B344-0x000000018BC7B4E0
-		private static uint LogBase2(uint val) => default; // 0x000000018BC7A474-0x000000018BC7A6D0
-		private static int BigInt_Compare(in tBigInt lhs, in tBigInt rhs) => default; // 0x000000018BC7A1F4-0x000000018BC7A474
-		private static void BigInt_Add(out tBigInt pResult, in tBigInt lhs, in tBigInt rhs) {
-			pResult = default;
-		} // 0x000000018BC7C344-0x000000018BC7C550
-		private static void BigInt_Add_internal(out tBigInt pResult, in tBigInt pLarge, in tBigInt pSmall) {
-			pResult = default;
-		} // 0x0000000185492010-0x0000000185492020
-		private static void BigInt_Multiply(out tBigInt pResult, in tBigInt lhs, in tBigInt rhs) {
-			pResult = default;
-		} // 0x0000000185FD7220-0x0000000185FD7240
-		private static void BigInt_Multiply_internal(out tBigInt pResult, in tBigInt pLarge, in tBigInt pSmall) {
-			pResult = default;
-		} // 0x00000001834AFB60-0x00000001834AFB70
-		private static void BigInt_Multiply(out tBigInt pResult, in tBigInt lhs, uint rhs) {
-			pResult = default;
-		} // 0x0000000185FD7200-0x0000000185FD7220
-		private static void BigInt_Multiply2(out tBigInt pResult, in tBigInt input) {
-			pResult = default;
-		} // 0x000000018B980158-0x000000018B980160
-		private static void BigInt_Multiply2(ref tBigInt pResult) {} // 0x000000018BC7C714-0x000000018BC7C728
-		private static void BigInt_Multiply10(ref tBigInt pResult) {} // 0x000000018BC7C728-0x000000018BC7C964
-		private static tBigInt g_PowerOf10_Big(int i) => default; // 0x00000001818226B0-0x00000001818226C0
-		private static void BigInt_Pow10(out tBigInt pResult, uint exponent) {
-			pResult = default;
-		} // 0x0000000185FD7320-0x0000000185FD7330
-		private static void BigInt_MultiplyPow10(out tBigInt pResult, in tBigInt input, uint exponent) {
-			pResult = default;
-		} // 0x00000001840066E0-0x00000001840066F0
-		private static void BigInt_Pow2(out tBigInt pResult, uint exponent) {
-			pResult = default;
-		} // 0x000000018BC7CAB0-0x000000018BC7CAE0
-		private static uint BigInt_DivideWithRemainder_MaxQuotient9(ref tBigInt pDividend, in tBigInt divisor) => default; // 0x000000018BC7CA9C-0x000000018BC7CAB0
-		private static void BigInt_ShiftLeft(ref tBigInt pResult, uint shift) {} // 0x000000018B3AF13C-0x000000018B3AF144
-		private static unsafe uint Dragon4(ulong mantissa, int exponent, uint mantissaHighBitIdx, bool hasUnequalMargins, CutoffMode cutoffMode, uint cutoffNumber, byte* pOutBuffer, uint bufferSize, out int pOutExponent) {
-			pOutExponent = default;
-			return default;
-		} // 0x0000000185FD7330-0x0000000185FD7340
-		private static unsafe void FormatInfinityNaN(byte* dest, ref int destIndex, int destLength, ulong mantissa, bool isNegative, FormatOptions formatOptions) {} // 0x0000000185FD7340-0x0000000185FD7350
-		private static unsafe void ConvertFloatToString(byte* dest, ref int destIndex, int destLength, float value, FormatOptions formatOptions) {} // 0x000000018BC7CAE0-0x000000018BC7CAF4
-		private static unsafe void ConvertDoubleToString(byte* dest, ref int destIndex, int destLength, double value, FormatOptions formatOptions) {} // 0x0000000185FD7350-0x0000000185FD7360
+		[Preserve]
+		public static unsafe void CopyFixedString(byte* dest, int destLength, byte* src, int srcLength); // 0x000000018B15D844-0x000000018B15D868
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, byte* src, int srcLength, int formatOptionsRaw); // 0x000000018B15E9CC-0x000000018B15EAA8
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, float value, int formatOptionsRaw); // 0x000000018B15ED80-0x000000018B15EDFC
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, double value, int formatOptionsRaw); // 0x000000018B15EB24-0x000000018B15EBA0
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, bool value, int formatOptionsRaw); // 0x000000018B15EBA0-0x000000018B15ECEC
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, char value, int formatOptionsRaw); // 0x000000018B15E54C-0x000000018B15E708
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, byte value, int formatOptionsRaw); // 0x000000018B15EDFC-0x000000018B15EE7C
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, ushort value, int formatOptionsRaw); // 0x000000018B15E784-0x000000018B15E804
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, uint value, int formatOptionsRaw); // 0x000000018B15EAA8-0x000000018B15EB24
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, ulong value, int formatOptionsRaw); // 0x000000018B15E708-0x000000018B15E784
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, sbyte value, int formatOptionsRaw); // 0x000000018B15E804-0x000000018B15E89C
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, short value, int formatOptionsRaw); // 0x000000018B15E934-0x000000018B15E9CC
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, int value, int formatOptionsRaw); // 0x000000018B15E89C-0x000000018B15E934
+		[Preserve]
+		public static unsafe void Format(byte* dest, ref int destIndex, int destLength, long value, int formatOptionsRaw); // 0x000000018B15ECEC-0x000000018B15ED80
+		private static unsafe void ConvertUnsignedIntegerToString(byte* dest, ref int destIndex, int destLength, ulong value, FormatOptions options); // 0x000000018B15D6D4-0x000000018B15D844
+		private static int GetLengthIntegerToString(long value, int basis, int zeroPadding); // 0x000000018B15EF50-0x000000018B15EF7C
+		private static unsafe void ConvertIntegerToString(byte* dest, ref int destIndex, int destLength, long value, FormatOptions options); // 0x000000018B15D53C-0x000000018B15D6D4
+		private static unsafe void FormatNumber(byte* dest, ref int destIndex, int destLength, ref NumberBuffer number, int nMaxDigits, FormatOptions options); // 0x000000018B15E34C-0x000000018B15E54C
+		private static unsafe void FormatDecimalOrHexadecimal(byte* dest, ref int destIndex, int destLength, ref NumberBuffer number, int zeroPadding, bool outputPositiveSign); // 0x000000018B15DF98-0x000000018B15E038
+		private static byte ValueToIntegerChar(int value, bool uppercase); // 0x000000018B15F188-0x000000018B15F1B0
+		private static unsafe bool AlignRight(byte* dest, ref int destIndex, int destLength, int align, int length); // 0x000000018B15C3A4-0x000000018B15C42C
+		private static unsafe bool AlignLeft(byte* dest, ref int destIndex, int destLength, int align, int length); // 0x000000018B15C374-0x000000018B15C3A4
+		private static int GetLengthForFormatGeneral(ref NumberBuffer number, int nMaxDigits); // 0x000000018B15EE7C-0x000000018B15EF50
+		private static unsafe void FormatGeneral(byte* dest, ref int destIndex, int destLength, ref NumberBuffer number, int nMaxDigits, byte expChar); // 0x000000018B15E038-0x000000018B15E1B0
+		private static void RoundNumber(ref NumberBuffer number, int pos, bool isCorrectlyRounded); // 0x000000018B15F070-0x000000018B15F164
+		private static unsafe bool ShouldRoundUp(byte* dig, int i, bool isCorrectlyRounded); // 0x000000018B15F164-0x000000018B15F188
+		private static uint LogBase2(uint val); // 0x000000018B15EF7C-0x000000018B15F070
+		private static int BigInt_Compare([IsReadOnly] in tBigInt lhs, [IsReadOnly] in tBigInt rhs); // 0x000000018B15C54C-0x000000018B15C5A0
+		private static void BigInt_Add(out tBigInt pResult, [IsReadOnly] in tBigInt lhs, [IsReadOnly] in tBigInt rhs); // 0x000000018B15C4D8-0x000000018B15C54C
+		private static void BigInt_Add_internal(out tBigInt pResult, [IsReadOnly] in tBigInt pLarge, [IsReadOnly] in tBigInt pSmall); // 0x000000018B15C42C-0x000000018B15C4D8
+		private static void BigInt_Multiply(out tBigInt pResult, [IsReadOnly] in tBigInt lhs, [IsReadOnly] in tBigInt rhs); // 0x000000018B15CBEC-0x000000018B15CC60
+		private static void BigInt_Multiply_internal(out tBigInt pResult, [IsReadOnly] in tBigInt pLarge, [IsReadOnly] in tBigInt pSmall); // 0x000000018B15CAAC-0x000000018B15CB84
+		private static void BigInt_Multiply(out tBigInt pResult, [IsReadOnly] in tBigInt lhs, uint rhs); // 0x000000018B15CB84-0x000000018B15CBEC
+		private static void BigInt_Multiply2(out tBigInt pResult, [IsReadOnly] in tBigInt input); // 0x000000018B15C744-0x000000018B15C79C
+		private static void BigInt_Multiply2(ref tBigInt pResult); // 0x000000018B15C79C-0x000000018B15C7D8
+		private static void BigInt_Multiply10(ref tBigInt pResult); // 0x000000018B15C708-0x000000018B15C744
+		private static tBigInt g_PowerOf10_Big(int i); // 0x000000018B15F3BC-0x000000018B15F580
+		private static void BigInt_Pow10(out tBigInt pResult, uint exponent); // 0x000000018B15CC60-0x000000018B15CECC
+		private static void BigInt_MultiplyPow10(out tBigInt pResult, [IsReadOnly] in tBigInt input, uint exponent); // 0x000000018B15C7D8-0x000000018B15CAAC
+		private static void BigInt_Pow2(out tBigInt pResult, uint exponent); // 0x000000018B15CECC-0x000000018B15CF14
+		private static uint BigInt_DivideWithRemainder_MaxQuotient9(ref tBigInt pDividend, [IsReadOnly] in tBigInt divisor); // 0x000000018B15C5A0-0x000000018B15C708
+		private static void BigInt_ShiftLeft(ref tBigInt pResult, uint shift); // 0x000000018B15CF14-0x000000018B15D060
+		private static unsafe uint Dragon4(ulong mantissa, int exponent, uint mantissaHighBitIdx, bool hasUnequalMargins, CutoffMode cutoffMode, uint cutoffNumber, byte* pOutBuffer, uint bufferSize, out int pOutExponent); // 0x000000018B15D868-0x000000018B15DF98
+		private static unsafe void FormatInfinityNaN(byte* dest, ref int destIndex, int destLength, ulong mantissa, bool isNegative, FormatOptions formatOptions); // 0x000000018B15E1B0-0x000000018B15E34C
+		private static unsafe void ConvertFloatToString(byte* dest, ref int destIndex, int destLength, float value, FormatOptions formatOptions); // 0x000000018B15D2E0-0x000000018B15D53C
+		private static unsafe void ConvertDoubleToString(byte* dest, ref int destIndex, int destLength, double value, FormatOptions formatOptions); // 0x000000018B15D060-0x000000018B15D2E0
 	}
 
-	public struct FunctionPointer<T> // TypeDefIndex: 60226
+	[IsReadOnly]
+	public struct FunctionPointer<T> // TypeDefIndex: 62841
 	{
 		// Fields
+		[NativeDisableUnsafePtrRestriction]
 		private readonly IntPtr _ptr;
 	
 		// Properties
-		public T Invoke { get => default; }
+		public T Invoke { get; }
 	
 		// Constructors
-		public FunctionPointer(IntPtr ptr) : this() {
-			_ptr = default;
-		}
+		public FunctionPointer(IntPtr ptr);
 	}
 
-	public class NoAliasAttribute : Attribute // TypeDefIndex: 60227
+	[AttributeUsage(AttributeTargets.Struct | AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.ReturnValue)]
+	public class NoAliasAttribute : Attribute // TypeDefIndex: 62842
 	{
 		// Constructors
-		public NoAliasAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public NoAliasAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public struct SharedStatic<T> // TypeDefIndex: 60228
+	[IsReadOnly]
+	public struct SharedStatic<T> // TypeDefIndex: 62843
 		where T : struct
 	{
 		// Fields
 		private readonly unsafe void* _buffer;
 	
 		// Properties
-		public ref T Data { get => default; }
-		public unsafe void* UnsafeDataPointer { get => default; }
+		public ref T Data { get; }
+		public unsafe void* UnsafeDataPointer { get; }
 	
 		// Constructors
-		private unsafe SharedStatic(void* buffer) : this() {
-			_buffer = default;
-		}
+		private unsafe SharedStatic(void* buffer);
 	
 		// Methods
-		public static SharedStatic<T> GetOrCreate<TContext>(uint alignment = 0 /* Metadata: 0x02082655 */) => default;
-		public static SharedStatic<T> GetOrCreate<TContext, TSubContext>(uint alignment = 0 /* Metadata: 0x02082656 */) => default;
-		public static SharedStatic<T> GetOrCreateUnsafe(uint alignment, long hashCode, long subHashCode) => default;
+		public static SharedStatic<T> GetOrCreate<TContext>(uint alignment = 0 /* Metadata: 0x023521A5 */);
+		public static SharedStatic<T> GetOrCreate<TContext, TSubContext>(uint alignment = 0 /* Metadata: 0x023521A6 */);
+		public static SharedStatic<T> GetOrCreateUnsafe(uint alignment, long hashCode, long subHashCode);
 	}
 
-	internal static class SharedStatic // TypeDefIndex: 60230
+	internal static class SharedStatic // TypeDefIndex: 62845
 	{
 		// Nested types
-		internal class PreserveAttribute : Attribute // TypeDefIndex: 60229
+		internal class PreserveAttribute : Attribute // TypeDefIndex: 62844
 		{
 			// Constructors
-			public PreserveAttribute() {} // 0x000000018534F7B0-0x000000018534F810
+			public PreserveAttribute(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		// Methods
-		public static unsafe void* GetOrCreateSharedStaticInternal(long getHashCode64, long getSubHashCode64, uint sizeOf, uint alignment) => default; // 0x0000000185492010-0x0000000185492020
+		[Preserve]
+		public static unsafe void* GetOrCreateSharedStaticInternal(long getHashCode64, long getSubHashCode64, uint sizeOf, uint alignment); // 0x00000001842094B0-0x0000000184209500
 	}
 }
 
 namespace Unity.Burst.CompilerServices
 {
-	public class AssumeRangeAttribute : Attribute // TypeDefIndex: 60244
+	[AttributeUsage(AttributeTargets.Parameter | AttributeTargets.ReturnValue)]
+	public class AssumeRangeAttribute : Attribute // TypeDefIndex: 62859
 	{
 		// Constructors
-		public AssumeRangeAttribute() {} // Dummy constructor
-		public AssumeRangeAttribute(long min, long max) {} // 0x0000000185492010-0x0000000185492020
+		public AssumeRangeAttribute(long min, long max); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public static class Hint // TypeDefIndex: 60245
+	public static class Hint // TypeDefIndex: 62860
 	{
 		// Methods
-		public static bool Likely(bool condition) => default; // 0x0000000185FD0F30-0x0000000185FD0F40
+		public static bool Likely(bool condition); // 0x0000000184D94BA0-0x0000000184D94BB0
 	}
 }
 
 namespace Unity.Burst.Intrinsics
 {
-	public static class Common // TypeDefIndex: 60231
+	public static class Common // TypeDefIndex: 62846
 	{
 		// Methods
-		public static ulong umul128(ulong x, ulong y, out ulong high) {
-			high = default;
-			return default;
-		} // 0x0000000185FD7190-0x0000000185FD7200
+		public static ulong umul128(ulong x, ulong y, out ulong high); // 0x0000000184DAB1D0-0x0000000184DAB240
 	}
 
-	internal sealed class BurstTargetCpuAttribute : Attribute // TypeDefIndex: 60232
+	[AttributeUsage(AttributeTargets.Method, Inherited = false)]
+	[Unity.Burst.BurstRuntime.Preserve]
+	internal sealed class BurstTargetCpuAttribute : Attribute // TypeDefIndex: 62847
 	{
-		// Constructors
-		public BurstTargetCpuAttribute() {} // Dummy constructor
 	}
 
-	internal class V64DebugView // TypeDefIndex: 60233
+	internal class V64DebugView // TypeDefIndex: 62848
 	{
-		// Constructors
-		public V64DebugView() {} // Dummy constructor
 	}
 
-	internal class V128DebugView // TypeDefIndex: 60234
+	internal class V128DebugView // TypeDefIndex: 62849
 	{
-		// Constructors
-		public V128DebugView() {} // Dummy constructor
 	}
 
-	internal class V256DebugView // TypeDefIndex: 60235
+	internal class V256DebugView // TypeDefIndex: 62850
 	{
-		// Constructors
-		public V256DebugView() {} // Dummy constructor
 	}
 
-	public struct v128 // TypeDefIndex: 60236
+	[DebuggerTypeProxy(typeof(V128DebugView))]
+	public struct v128 // TypeDefIndex: 62851
 	{
 		// Fields
 		public byte Byte0; // 0x00
@@ -622,7 +627,8 @@ namespace Unity.Burst.Intrinsics
 		public v64 Hi64; // 0x08
 	}
 
-	public struct v256 // TypeDefIndex: 60237
+	[DebuggerTypeProxy(typeof(V256DebugView))]
+	public struct v256 // TypeDefIndex: 62852
 	{
 		// Fields
 		public byte Byte0; // 0x00
@@ -761,281 +767,12 @@ namespace Unity.Burst.Intrinsics
 		public v128 Hi128; // 0x10
 	
 		// Constructors
-		public v256(int v) {
-			Byte0 = default;
-			Byte1 = default;
-			Byte2 = default;
-			Byte3 = default;
-			Byte4 = default;
-			Byte5 = default;
-			Byte6 = default;
-			Byte7 = default;
-			Byte8 = default;
-			Byte9 = default;
-			Byte10 = default;
-			Byte11 = default;
-			Byte12 = default;
-			Byte13 = default;
-			Byte14 = default;
-			Byte15 = default;
-			Byte16 = default;
-			Byte17 = default;
-			Byte18 = default;
-			Byte19 = default;
-			Byte20 = default;
-			Byte21 = default;
-			Byte22 = default;
-			Byte23 = default;
-			Byte24 = default;
-			Byte25 = default;
-			Byte26 = default;
-			Byte27 = default;
-			Byte28 = default;
-			Byte29 = default;
-			Byte30 = default;
-			Byte31 = default;
-			SByte0 = default;
-			SByte1 = default;
-			SByte2 = default;
-			SByte3 = default;
-			SByte4 = default;
-			SByte5 = default;
-			SByte6 = default;
-			SByte7 = default;
-			SByte8 = default;
-			SByte9 = default;
-			SByte10 = default;
-			SByte11 = default;
-			SByte12 = default;
-			SByte13 = default;
-			SByte14 = default;
-			SByte15 = default;
-			SByte16 = default;
-			SByte17 = default;
-			SByte18 = default;
-			SByte19 = default;
-			SByte20 = default;
-			SByte21 = default;
-			SByte22 = default;
-			SByte23 = default;
-			SByte24 = default;
-			SByte25 = default;
-			SByte26 = default;
-			SByte27 = default;
-			SByte28 = default;
-			SByte29 = default;
-			SByte30 = default;
-			SByte31 = default;
-			UShort0 = default;
-			UShort1 = default;
-			UShort2 = default;
-			UShort3 = default;
-			UShort4 = default;
-			UShort5 = default;
-			UShort6 = default;
-			UShort7 = default;
-			UShort8 = default;
-			UShort9 = default;
-			UShort10 = default;
-			UShort11 = default;
-			UShort12 = default;
-			UShort13 = default;
-			UShort14 = default;
-			UShort15 = default;
-			SShort0 = default;
-			SShort1 = default;
-			SShort2 = default;
-			SShort3 = default;
-			SShort4 = default;
-			SShort5 = default;
-			SShort6 = default;
-			SShort7 = default;
-			SShort8 = default;
-			SShort9 = default;
-			SShort10 = default;
-			SShort11 = default;
-			SShort12 = default;
-			SShort13 = default;
-			SShort14 = default;
-			SShort15 = default;
-			UInt0 = default;
-			UInt1 = default;
-			UInt2 = default;
-			UInt3 = default;
-			UInt4 = default;
-			UInt5 = default;
-			UInt6 = default;
-			UInt7 = default;
-			SInt0 = default;
-			SInt1 = default;
-			SInt2 = default;
-			SInt3 = default;
-			SInt4 = default;
-			SInt5 = default;
-			SInt6 = default;
-			SInt7 = default;
-			ULong0 = default;
-			ULong1 = default;
-			ULong2 = default;
-			ULong3 = default;
-			SLong0 = default;
-			SLong1 = default;
-			SLong2 = default;
-			SLong3 = default;
-			Float0 = default;
-			Float1 = default;
-			Float2 = default;
-			Float3 = default;
-			Float4 = default;
-			Float5 = default;
-			Float6 = default;
-			Float7 = default;
-			Double0 = default;
-			Double1 = default;
-			Double2 = default;
-			Double3 = default;
-			Lo128 = default;
-			Hi128 = default;
-		} // 0x0000000185FD7380-0x0000000185FD73A0
-		public v256(v128 lo, v128 hi) {
-			Byte0 = default;
-			Byte1 = default;
-			Byte2 = default;
-			Byte3 = default;
-			Byte4 = default;
-			Byte5 = default;
-			Byte6 = default;
-			Byte7 = default;
-			Byte8 = default;
-			Byte9 = default;
-			Byte10 = default;
-			Byte11 = default;
-			Byte12 = default;
-			Byte13 = default;
-			Byte14 = default;
-			Byte15 = default;
-			Byte16 = default;
-			Byte17 = default;
-			Byte18 = default;
-			Byte19 = default;
-			Byte20 = default;
-			Byte21 = default;
-			Byte22 = default;
-			Byte23 = default;
-			Byte24 = default;
-			Byte25 = default;
-			Byte26 = default;
-			Byte27 = default;
-			Byte28 = default;
-			Byte29 = default;
-			Byte30 = default;
-			Byte31 = default;
-			SByte0 = default;
-			SByte1 = default;
-			SByte2 = default;
-			SByte3 = default;
-			SByte4 = default;
-			SByte5 = default;
-			SByte6 = default;
-			SByte7 = default;
-			SByte8 = default;
-			SByte9 = default;
-			SByte10 = default;
-			SByte11 = default;
-			SByte12 = default;
-			SByte13 = default;
-			SByte14 = default;
-			SByte15 = default;
-			SByte16 = default;
-			SByte17 = default;
-			SByte18 = default;
-			SByte19 = default;
-			SByte20 = default;
-			SByte21 = default;
-			SByte22 = default;
-			SByte23 = default;
-			SByte24 = default;
-			SByte25 = default;
-			SByte26 = default;
-			SByte27 = default;
-			SByte28 = default;
-			SByte29 = default;
-			SByte30 = default;
-			SByte31 = default;
-			UShort0 = default;
-			UShort1 = default;
-			UShort2 = default;
-			UShort3 = default;
-			UShort4 = default;
-			UShort5 = default;
-			UShort6 = default;
-			UShort7 = default;
-			UShort8 = default;
-			UShort9 = default;
-			UShort10 = default;
-			UShort11 = default;
-			UShort12 = default;
-			UShort13 = default;
-			UShort14 = default;
-			UShort15 = default;
-			SShort0 = default;
-			SShort1 = default;
-			SShort2 = default;
-			SShort3 = default;
-			SShort4 = default;
-			SShort5 = default;
-			SShort6 = default;
-			SShort7 = default;
-			SShort8 = default;
-			SShort9 = default;
-			SShort10 = default;
-			SShort11 = default;
-			SShort12 = default;
-			SShort13 = default;
-			SShort14 = default;
-			SShort15 = default;
-			UInt0 = default;
-			UInt1 = default;
-			UInt2 = default;
-			UInt3 = default;
-			UInt4 = default;
-			UInt5 = default;
-			UInt6 = default;
-			UInt7 = default;
-			SInt0 = default;
-			SInt1 = default;
-			SInt2 = default;
-			SInt3 = default;
-			SInt4 = default;
-			SInt5 = default;
-			SInt6 = default;
-			SInt7 = default;
-			ULong0 = default;
-			ULong1 = default;
-			ULong2 = default;
-			ULong3 = default;
-			SLong0 = default;
-			SLong1 = default;
-			SLong2 = default;
-			SLong3 = default;
-			Float0 = default;
-			Float1 = default;
-			Float2 = default;
-			Float3 = default;
-			Float4 = default;
-			Float5 = default;
-			Float6 = default;
-			Float7 = default;
-			Double0 = default;
-			Double1 = default;
-			Double2 = default;
-			Double3 = default;
-			Lo128 = default;
-			Hi128 = default;
-		} // 0x0000000185FB6710-0x0000000185FB6720
+		public v256(int v); // 0x0000000184DAB3C0-0x0000000184DAB3E0
+		public v256(v128 lo, v128 hi); // 0x0000000184D8C810-0x0000000184D8C820
 	}
 
-	public struct v64 // TypeDefIndex: 60238
+	[DebuggerTypeProxy(typeof(V64DebugView))]
+	public struct v64 // TypeDefIndex: 62853
 	{
 		// Fields
 		public byte Byte0; // 0x00
@@ -1073,48 +810,66 @@ namespace Unity.Burst.Intrinsics
 		public double Double0; // 0x00
 	}
 
-	public static class X86 // TypeDefIndex: 60243
+	[BurstCompile]
+	public static class X86 // TypeDefIndex: 62858
 	{
 		// Nested types
-		public static class Avx // TypeDefIndex: 60239
+		public static class Avx // TypeDefIndex: 62854
 		{
 			// Methods
-			public static unsafe v256 mm256_load_ps(void* ptr) => default; // 0x0000000181EBB9F0-0x0000000181EBBA10
-			public static unsafe void mm256_store_ps(void* ptr, v256 val) {} // 0x0000000185FD7170-0x0000000185FD7180
-			public static unsafe v256 mm256_loadu_si256(void* ptr) => default; // 0x0000000181EBB9F0-0x0000000181EBBA10
-			public static unsafe void mm256_storeu_si256(void* ptr, v256 v) {} // 0x0000000185FD7170-0x0000000185FD7180
-			public static v256 mm256_set1_epi32(int a) => default; // 0x000000018BC7935C-0x000000018BC79380
+			[DebuggerStepThrough]
+			public static unsafe v256 mm256_load_ps(void* ptr); // 0x0000000184D91D40-0x0000000184D91D60
+			[DebuggerStepThrough]
+			public static unsafe void mm256_store_ps(void* ptr, v256 val); // 0x0000000184DAB1C0-0x0000000184DAB1D0
+			[DebuggerStepThrough]
+			public static unsafe v256 mm256_loadu_si256(void* ptr); // 0x0000000184D91D40-0x0000000184D91D60
+			[DebuggerStepThrough]
+			public static unsafe void mm256_storeu_si256(void* ptr, v256 v); // 0x0000000184DAB1C0-0x0000000184DAB1D0
+			[DebuggerStepThrough]
+			public static v256 mm256_set1_epi32(int a); // 0x000000018B15C1C8-0x000000018B15C1EC
 		}
 	
-		public static class Avx2 // TypeDefIndex: 60240
+		public static class Avx2 // TypeDefIndex: 62855
 		{
 			// Properties
-			public static bool IsAvx2Supported { get; } // 0x00000001814A81B0-0x00000001814A81C0 
+			public static bool IsAvx2Supported { get; } // 0x00000001812081B0-0x0000000181208610 
 	
 			// Methods
-			public static v256 mm256_xor_si256(v256 a, v256 b) => default; // 0x000000018BC792C0-0x000000018BC7935C
-			public static v256 mm256_add_epi64(v256 a, v256 b) => default; // 0x000000018BC79014-0x000000018BC790B0
-			public static v256 mm256_mul_epu32(v256 a, v256 b) => default; // 0x000000018BC790B0-0x000000018BC7914C
-			public static v256 mm256_slli_epi64(v256 a, int imm8) => default; // 0x000000018BC791C8-0x000000018BC79244
-			public static v256 mm256_srli_epi64(v256 a, int imm8) => default; // 0x000000018BC79244-0x000000018BC792C0
-			public static v256 mm256_shuffle_epi32(v256 a, int imm8) => default; // 0x000000018BC7914C-0x000000018BC791C8
+			[DebuggerStepThrough]
+			public static v256 mm256_xor_si256(v256 a, v256 b); // 0x000000018B15C12C-0x000000018B15C1C8
+			[DebuggerStepThrough]
+			public static v256 mm256_add_epi64(v256 a, v256 b); // 0x000000018B15BE80-0x000000018B15BF1C
+			[DebuggerStepThrough]
+			public static v256 mm256_mul_epu32(v256 a, v256 b); // 0x000000018B15BF1C-0x000000018B15BFB8
+			[DebuggerStepThrough]
+			public static v256 mm256_slli_epi64(v256 a, int imm8); // 0x000000018B15C034-0x000000018B15C0B0
+			[DebuggerStepThrough]
+			public static v256 mm256_srli_epi64(v256 a, int imm8); // 0x000000018B15C0B0-0x000000018B15C12C
+			[DebuggerStepThrough]
+			public static v256 mm256_shuffle_epi32(v256 a, int imm8); // 0x000000018B15BFB8-0x000000018B15C034
 		}
 	
-		public static class Sse // TypeDefIndex: 60241
+		public static class Sse // TypeDefIndex: 62856
 		{
 			// Methods
-			public static int SHUFFLE(int d, int c, int b, int a) => default; // 0x0000000185FD72F0-0x0000000185FD7320
+			public static int SHUFFLE(int d, int c, int b, int a); // 0x0000000184DAB330-0x0000000184DAB360
 		}
 	
-		public static class Sse2 // TypeDefIndex: 60242
+		public static class Sse2 // TypeDefIndex: 62857
 		{
 			// Methods
-			public static v128 add_epi64(v128 a, v128 b) => default; // 0x0000000185FD7240-0x0000000185FD7260
-			public static v128 mul_epu32(v128 a, v128 b) => default; // 0x0000000185FD7260-0x0000000185FD7280
-			public static v128 slli_epi64(v128 a, int imm8) => default; // 0x000000018BC7C964-0x000000018BC7CA00
-			public static v128 srli_epi64(v128 a, int imm8) => default; // 0x000000018BC7CA00-0x000000018BC7CA9C
-			public static v128 xor_si128(v128 a, v128 b) => default; // 0x0000000185FD72D0-0x0000000185FD72F0
-			public static v128 shuffle_epi32(v128 a, int imm8) => default; // 0x0000000185FD7280-0x0000000185FD72D0
+			[DebuggerStepThrough]
+			public static v128 add_epi64(v128 a, v128 b); // 0x0000000184DAB280-0x0000000184DAB2A0
+			[DebuggerStepThrough]
+			public static v128 mul_epu32(v128 a, v128 b); // 0x0000000184DAB2A0-0x0000000184DAB2C0
+			[DebuggerStepThrough]
+			public static v128 slli_epi64(v128 a, int imm8); // 0x000000018B15F7D0-0x000000018B15F86C
+			[DebuggerStepThrough]
+			public static v128 srli_epi64(v128 a, int imm8); // 0x000000018B15F86C-0x000000018B15F908
+			[DebuggerStepThrough]
+			public static v128 xor_si128(v128 a, v128 b); // 0x0000000184DAB310-0x0000000184DAB330
+			[DebuggerStepThrough]
+			public static v128 shuffle_epi32(v128 a, int imm8); // 0x0000000184DAB2C0-0x0000000184DAB310
 		}
 	}
 }

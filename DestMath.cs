@@ -5,87 +5,78 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Image 36: DestMath.dll - Assembly: DestMath, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 55819-55970
+// Image 37: DestMath.dll - Assembly: DestMath, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 58460-58611
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 55970
+[CompilerGenerated]
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 58611
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_20 _170A8789272DFBCBA0E6B7D2530CAA16D9199834934F442421DAB41C5EEA8C29; // 0x00 // Static value (base64): 9pxyPtEO9T60ohE/0Q71Pvaccj4= - Metadata: 0x0207C16C
-	internal static readonly __StaticArrayInitTypeSize_20 _92052E6D9D3C30FD20B710DFB226BEEA15F69C2188B5AA373563D6966493C59C; // 0x14 // Static value (base64): Z/tnvyDZCb8AAAAAINkJP2f7Zz8= - Metadata: 0x0207C184
+	internal static readonly __StaticArrayInitTypeSize_20 _170A8789272DFBCBA0E6B7D2530CAA16D9199834934F442421DAB41C5EEA8C29; // 0x00 // Static value (base64): 9pxyPtEO9T60ohE/0Q71Pvaccj4= - Metadata: 0x0234BE1C
+	internal static readonly __StaticArrayInitTypeSize_20 _92052E6D9D3C30FD20B710DFB226BEEA15F69C2188B5AA373563D6966493C59C; // 0x14 // Static value (base64): Z/tnvyDZCb8AAAAAINkJP2f7Zz8= - Metadata: 0x0234BE34
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_20 // TypeDefIndex: 55969
+	private struct __StaticArrayInitTypeSize_20 // TypeDefIndex: 58610
 	{
 	}
-
-	// Constructors
-	public _PrivateImplementationDetails_() {} // Dummy constructor
 }
 
 namespace Dest.Math
 {
-	public class Polynomial // TypeDefIndex: 55820
+	public class Polynomial // TypeDefIndex: 58461
 	{
 		// Fields
 		private int _degree; // 0x10
 		private float[] _coeffs; // 0x18
 	
 		// Properties
-		public int Degree { get => default; set {} } // 0x0000000181C0BBD0-0x0000000181C0BBE0 0x00000001878B60A4-0x00000001878B60F8
-		public float this[int index] { get => default; set {} } // 0x00000001878B6074-0x00000001878B60A4 0x00000001878B60F8-0x00000001878B6128
+		public int Degree { get; set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x0000000186920178-0x00000001869201CC
+		public float this[int index] { get => default; set {} } // 0x0000000186920148-0x0000000186920178 0x00000001869201CC-0x00000001869201FC
 	
 		// Constructors
-		public Polynomial() {} // Dummy constructor
-		public Polynomial(int degree) {} // 0x00000001878B606C-0x00000001878B6074
+		public Polynomial(int degree); // 0x0000000186920140-0x0000000186920148
 	
 		// Methods
-		public Polynomial DeepCopy() => default; // 0x00000001878B5F68-0x00000001878B6018
-		public Polynomial CalcDerivative() => default; // 0x00000001878B5CE4-0x00000001878B5DE8
-		public Polynomial CalcInversion() => default; // 0x00000001878B5DE8-0x00000001878B5E9C
-		public void Compress(float epsilon = 1E-05f /* Metadata: 0x0207BFC0 */) {} // 0x00000001878B5E9C-0x00000001878B5F68
-		public float Eval(float t) => default; // 0x00000001878B6018-0x00000001878B606C
+		public Polynomial DeepCopy(); // 0x000000018692003C-0x00000001869200EC
+		public Polynomial CalcDerivative(); // 0x000000018691FDB8-0x000000018691FEBC
+		public Polynomial CalcInversion(); // 0x000000018691FEBC-0x000000018691FF70
+		public void Compress(float epsilon = 1E-05f /* Metadata: 0x0234BC70 */); // 0x000000018691FF70-0x000000018692003C
+		public float Eval(float t); // 0x00000001869200EC-0x0000000186920140
 	}
 
-	public static class Approximation // TypeDefIndex: 55821
+	public static class Approximation // TypeDefIndex: 58462
 	{
 		// Methods
-		public static Box2 GaussPointsFit2(IList<Vector2> points) => default; // 0x00000001878A8510-0x00000001878A88BC
-		internal static bool HeightLineFit2(IList<Vector2> points, out float a, out float b) {
-			a = default;
-			b = default;
-			return default;
-		} // 0x00000001878A8DA0-0x00000001878A9070
-		public static Line2 LeastSquaresLineFit2(IList<Vector2> points) => default; // 0x00000001878A9508-0x00000001878A97F4
-		public static Box3 GaussPointsFit3(IList<Vector3> points) => default; // 0x00000001878A88BC-0x00000001878A8DA0
-		public static Line3 LeastsSquaresLineFit3(IList<Vector3> points) => default; // 0x00000001878A9BB0-0x00000001878A9FE4
-		internal static bool HeightPlaneFit3(IList<Vector3> points, out float a, out float b, out float c) {
-			a = default;
-			b = default;
-			c = default;
-			return default;
-		} // 0x00000001878A9070-0x00000001878A9508
-		public static Plane3 LeastSquaresPlaneFit3(IList<Vector3> points) => default; // 0x00000001878A97F4-0x00000001878A9BB0
+		public static Box2 GaussPointsFit2(IList<Vector2> points); // 0x00000001869126D0-0x0000000186912A7C
+		internal static bool HeightLineFit2(IList<Vector2> points, out float a, out float b); // 0x0000000186912F60-0x0000000186913230
+		public static Line2 LeastSquaresLineFit2(IList<Vector2> points); // 0x00000001869136C8-0x00000001869139B4
+		public static Box3 GaussPointsFit3(IList<Vector3> points); // 0x0000000186912A7C-0x0000000186912F60
+		public static Line3 LeastsSquaresLineFit3(IList<Vector3> points); // 0x0000000186913D70-0x00000001869141A4
+		internal static bool HeightPlaneFit3(IList<Vector3> points, out float a, out float b, out float c); // 0x0000000186913230-0x00000001869136C8
+		public static Plane3 LeastSquaresPlaneFit3(IList<Vector3> points); // 0x00000001869139B4-0x0000000186913D70
 	}
 
-	internal class ConcaveHull2 // TypeDefIndex: 55824
+	internal class ConcaveHull2 // TypeDefIndex: 58465
 	{
 		// Nested types
-		private struct Edge // TypeDefIndex: 55822
+		private struct Edge // TypeDefIndex: 58463
 		{
 			// Fields
 			public int V0; // 0x00
 			public int V1; // 0x04
 	
 			// Constructors
-			public Edge(int v0, int v1) {
-				V0 = default;
-				V1 = default;
-			} // 0x00000001878AAD70-0x00000001878AAE44
+			public Edge(int v0, int v1); // 0x0000000184D85C40-0x0000000184D85C50
 		}
 	
-		private struct InnerPoint // TypeDefIndex: 55823
+		private struct InnerPoint // TypeDefIndex: 58464
 		{
 			// Fields
 			public float AverageDistance; // 0x00
@@ -95,74 +86,62 @@ namespace Dest.Math
 		}
 	
 		// Constructors
-		public ConcaveHull2() {} // 0x000000018357CB90-0x000000018357CBA0
+		public ConcaveHull2(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		private static bool _TryFastSort(InnerPoint[] x, int first, int last) => default; // 0x00000001878AABCC-0x00000001878AAD70
-		private static void Quicksort(InnerPoint[] x, int first, int last) {} // 0x00000001878A9FE4-0x00000001878AA0F4
-		private static float CalcDistanceFromPointToEdge(ref Vector2 pointA, ref Vector2 v0, ref Vector2 v1) => default; // 0x00000001878AA0F4-0x00000001878AABCC
-		public static bool Create(Vector2[] points, out int[] concaveHull, int[] convexHull, float N, float epsilon = 1E-05f /* Metadata: 0x0207BFC4 */) {
-			concaveHull = default;
-			return default;
-		} // 0x0000000185492010-0x0000000185492020
+		private static bool _TryFastSort(InnerPoint[] x, int first, int last); // 0x0000000186914F30-0x0000000186915004
+		private static void Quicksort(InnerPoint[] x, int first, int last); // 0x0000000186914D8C-0x0000000186914F30
+		private static float CalcDistanceFromPointToEdge(ref Vector2 pointA, ref Vector2 v0, ref Vector2 v1); // 0x00000001869141A4-0x00000001869142B4
+		public static bool Create(Vector2[] points, out int[] concaveHull, int[] convexHull, float N, float epsilon = 1E-05f /* Metadata: 0x0234BC74 */); // 0x00000001869142B4-0x0000000186914D8C
 	}
 
-	public static class ConcaveHull // TypeDefIndex: 55825
+	public static class ConcaveHull // TypeDefIndex: 58466
 	{
 		// Methods
-		public static bool Create2D(Vector2[] points, out int[] concaveHull, out int[] convexHull, float algorithmThreshold, float epsilon = 1E-05f /* Metadata: 0x0207BFC8 */) {
-			concaveHull = default;
-			convexHull = default;
-			return default;
-		} // 0x00000001878AAE6C-0x00000001878AAFB8
-		public static bool Create2D(Vector2[] points, out int[] concaveHull, float algorithmThreshold, float epsilon = 1E-05f /* Metadata: 0x0207BFCC */) {
-			concaveHull = default;
-			return default;
-		} // 0x00000001878AAE44-0x00000001878AAE6C
+		public static bool Create2D(Vector2[] points, out int[] concaveHull, out int[] convexHull, float algorithmThreshold, float epsilon = 1E-05f /* Metadata: 0x0234BC78 */); // 0x000000018691502C-0x0000000186915178
+		public static bool Create2D(Vector2[] points, out int[] concaveHull, float algorithmThreshold, float epsilon = 1E-05f /* Metadata: 0x0234BC7C */); // 0x0000000186915004-0x000000018691502C
 	}
 
-	internal class ConvexHull1 // TypeDefIndex: 55828
+	internal class ConvexHull1 // TypeDefIndex: 58469
 	{
 		// Nested types
-		private class SortedVertex // TypeDefIndex: 55826
+		private class SortedVertex // TypeDefIndex: 58467
 		{
 			// Fields
 			public float Value; // 0x10
 			public int Index; // 0x14
 	
 			// Constructors
-			public SortedVertex() {} // 0x00000001878AAFB8-0x00000001878AB270
+			public SortedVertex(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 55827
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58468
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Comparison<SortedVertex> __9__1_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x0000000185492010-0x0000000185492020
-			public __c() {} // 0x0000000185492010-0x0000000185492020
+			static __c(); // 0x0000000186920418-0x000000018692047C
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _Create_b__1_0(SortedVertex e1, SortedVertex e2) => default; // 0x00000001878B6344-0x00000001878B63A8
+			internal int _Create_b__1_0(SortedVertex e1, SortedVertex e2); // 0x00000001869203AC-0x0000000186920418
 		}
 	
 		// Constructors
-		public ConvexHull1() {} // 0x00000001878B62D8-0x00000001878B6344
+		public ConvexHull1(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static void Create(float[] vertices, float epsilon, out int dimension, out int[] indices) {
-			dimension = default;
-			indices = default;
-		} // 0x0000000185492010-0x0000000185492020
+		public static void Create(float[] vertices, float epsilon, out int dimension, out int[] indices); // 0x0000000186915178-0x0000000186915430
 	}
 
-	internal class ConvexHull2 // TypeDefIndex: 55830
+	internal class ConvexHull2 // TypeDefIndex: 58471
 	{
 		// Nested types
-		private class Edge // TypeDefIndex: 55829
+		private class Edge // TypeDefIndex: 58470
 		{
 			// Fields
 			public int V0; // 0x10
@@ -173,34 +152,27 @@ namespace Dest.Math
 			public int Time; // 0x2C
 	
 			// Constructors
-			public Edge() {} // Dummy constructor
-			public Edge(int v0, int v1) {} // 0x00000001878AB270-0x00000001878AB724
+			public Edge(int v0, int v1); // 0x0000000184D898B0-0x0000000184D898C0
 	
 			// Methods
-			public int GetSign(int i, Query2 query) => default; // 0x00000001878AB724-0x00000001878AB8FC
-			public void Insert(Edge adj0, Edge adj1) {} // 0x0000000185492010-0x0000000185492020
-			public void DeleteSelf() {} // 0x0000000185FB3870-0x0000000185FB3880
-			public void GetIndices(out int[] indices) {
-				indices = default;
-			} // 0x00000001878B5C48-0x00000001878B5C8C
+			public int GetSign(int i, Query2 query); // 0x000000018691FD1C-0x000000018691FD60
+			public void Insert(Edge adj0, Edge adj1); // 0x000000018691FD60-0x000000018691FDB8
+			public void DeleteSelf(); // 0x000000018691FC38-0x000000018691FC78
+			public void GetIndices(out int[] indices); // 0x000000018691FC78-0x000000018691FD1C
 		}
 	
 		// Constructors
-		public ConvexHull2() {} // 0x00000001878B5BA4-0x00000001878B5C48
+		public ConvexHull2(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static bool Create(IList<Vector2> vertices, float epsilon, out int dimension, out int[] indices) {
-			dimension = default;
-			indices = default;
-			return default;
-		} // 0x00000001878B5C8C-0x00000001878B5CE4
-		private static bool Update(ref Edge hull, int i, Query2 query) => default; // 0x00000001878B5B64-0x00000001878B5BA4
+		public static bool Create(IList<Vector2> vertices, float epsilon, out int dimension, out int[] indices); // 0x0000000186915430-0x00000001869158E4
+		private static bool Update(ref Edge hull, int i, Query2 query); // 0x00000001869158E4-0x0000000186915ABC
 	}
 
-	internal class ConvexHull3 // TypeDefIndex: 55833
+	internal class ConvexHull3 // TypeDefIndex: 58474
 	{
 		// Nested types
-		private class Triangle // TypeDefIndex: 55831
+		private class Triangle // TypeDefIndex: 58472
 		{
 			// Fields
 			public int V0; // 0x10
@@ -214,19 +186,18 @@ namespace Dest.Math
 			public bool OnStack; // 0x40
 	
 			// Constructors
-			public Triangle() {} // Dummy constructor
-			public Triangle(int v0, int v1, int v2) {} // 0x00000001878AB8FC-0x00000001878AC0F0
+			public Triangle(int v0, int v1, int v2); // 0x0000000184D898C0-0x0000000184D898E0
 	
 			// Methods
-			public Triangle GetAdj(int index) => default; // 0x00000001878AC308-0x00000001878ACC90
-			public void SetAdj(int index, Triangle value) {} // 0x00000001878AC0F0-0x00000001878AC308
-			public int GetV(int index) => default; // 0x0000000185492010-0x0000000185492020
-			public int GetSign(int i, Query3 query) => default; // 0x0000000185FB3880-0x0000000185FB38A0
-			public void AttachTo(Triangle adj0, Triangle adj1, Triangle adj2) {} // 0x00000001878B6230-0x00000001878B6248
-			public int DetachFrom(int adjIndex, Triangle adj) => default; // 0x00000001878B62A8-0x00000001878B62D8
+			public Triangle GetAdj(int index); // 0x0000000186920304-0x000000018692031C
+			public void SetAdj(int index, Triangle value); // 0x000000018692037C-0x00000001869203AC
+			public int GetV(int index); // 0x0000000186920364-0x000000018692037C
+			public int GetSign(int i, Query3 query); // 0x000000018692031C-0x0000000186920364
+			public void AttachTo(Triangle adj0, Triangle adj1, Triangle adj2); // 0x0000000186920230-0x0000000186920268
+			public int DetachFrom(int adjIndex, Triangle adj); // 0x0000000186920268-0x0000000186920304
 		}
 	
-		private class TerminatorData // TypeDefIndex: 55832
+		private class TerminatorData // TypeDefIndex: 58473
 		{
 			// Fields
 			public int V0; // 0x10
@@ -235,377 +206,156 @@ namespace Dest.Math
 			public Triangle T; // 0x20
 	
 			// Constructors
-			public TerminatorData() {} // Dummy constructor
-			public TerminatorData(int v0 = -1 /* Metadata: 0x0207BFD0 */, int v1 = -1 /* Metadata: 0x0207BFD1 */, int nullIndex = -1 /* Metadata: 0x0207BFD2 */, Triangle tri = null) {} // 0x00000001878B6290-0x00000001878B62A8
+			public TerminatorData(int v0 = -1 /* Metadata: 0x0234BC80 */, int v1 = -1 /* Metadata: 0x0234BC81 */, int nullIndex = -1 /* Metadata: 0x0234BC82 */, Triangle tri = null); // 0x00000001869201FC-0x0000000186920230
 		}
 	
 		// Constructors
-		public ConvexHull3() {} // 0x00000001878B6128-0x00000001878B615C
+		public ConvexHull3(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static bool Create(IList<Vector3> vertices, float epsilon, out int dimension, out int[] indices) {
-			dimension = default;
-			indices = default;
-			return default;
-		} // 0x00000001878B6248-0x00000001878B6290
-		private static bool Update(HashSet<Triangle> hull, int i, Query3 query) => default; // 0x00000001878B615C-0x00000001878B6194
-		private static void ExtractIndices(HashSet<Triangle> hull, out int[] indices) {
-			indices = default;
-		} // 0x00000001878B6194-0x00000001878B6230
+		public static bool Create(IList<Vector3> vertices, float epsilon, out int dimension, out int[] indices); // 0x0000000186915ABC-0x00000001869162B0
+		private static bool Update(HashSet<Triangle> hull, int i, Query3 query); // 0x00000001869164C8-0x0000000186916D60
+		private static void ExtractIndices(HashSet<Triangle> hull, out int[] indices); // 0x00000001869162B0-0x00000001869164C8
 	}
 
-	public static class ConvexHull // TypeDefIndex: 55834
+	public static class ConvexHull // TypeDefIndex: 58475
 	{
 		// Methods
-		public static bool Create2D(IList<Vector2> points, out int[] indices, out int dimension, float epsilon = 1E-05f /* Metadata: 0x0207BFD3 */) {
-			indices = default;
-			dimension = default;
-			return default;
-		} // 0x00000001878ACC90-0x00000001878ACD30
-		public static bool Create3D(IList<Vector3> points, out int[] indices, out int dimension, float epsilon = 1E-05f /* Metadata: 0x0207BFD7 */) {
-			indices = default;
-			dimension = default;
-			return default;
-		} // 0x00000001878ACD30-0x00000001878ACDD0
+		public static bool Create2D(IList<Vector2> points, out int[] indices, out int dimension, float epsilon = 1E-05f /* Metadata: 0x0234BC83 */); // 0x0000000186916D60-0x0000000186916E00
+		public static bool Create3D(IList<Vector3> points, out int[] indices, out int dimension, float epsilon = 1E-05f /* Metadata: 0x0234BC87 */); // 0x0000000186916E00-0x0000000186916EA0
 	}
 
-	public static class Distance // TypeDefIndex: 55835
+	public static class Distance // TypeDefIndex: 58476
 	{
 		// Methods
-		public static float Line2Line2(ref Line2 line0, ref Line2 line1) => default; // 0x00000001878AE468-0x00000001878AE490
-		public static float Line2Line2(ref Line2 line0, ref Line2 line1, out Vector2 closestPoint0, out Vector2 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AE490-0x00000001878AE4C0
-		public static float SqrLine2Line2(ref Line2 line0, ref Line2 line1) => default; // 0x00000001878AF758-0x00000001878AF870
-		public static float SqrLine2Line2(ref Line2 line0, ref Line2 line1, out Vector2 closestPoint0, out Vector2 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AF870-0x00000001878AFA9C
-		public static float Line2Ray2(ref Line2 line, ref Ray2 ray) => default; // 0x00000001878AE4C0-0x00000001878AE4E8
-		public static float Line2Ray2(ref Line2 line, ref Ray2 ray, out Vector2 closestPoint0, out Vector2 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AE4E8-0x00000001878AE518
-		public static float SqrLine2Ray2(ref Line2 line, ref Ray2 ray) => default; // 0x00000001878AFA9C-0x00000001878AFC28
-		public static float SqrLine2Ray2(ref Line2 line, ref Ray2 ray, out Vector2 closestPoint0, out Vector2 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AFC28-0x00000001878AFE84
-		public static float Line2Segment2(ref Line2 line, ref Segment2 segment) => default; // 0x00000001878AE548-0x00000001878AE570
-		public static float Line2Segment2(ref Line2 line, ref Segment2 segment, out Vector2 closestPoint0, out Vector2 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AE518-0x00000001878AE548
-		public static float SqrLine2Segment2(ref Line2 line, ref Segment2 segment) => default; // 0x00000001878AFE84-0x00000001878B00B4
-		public static float SqrLine2Segment2(ref Line2 line, ref Segment2 segment, out Vector2 closestPoint0, out Vector2 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878B00B4-0x00000001878B0384
-		public static float Point2AAB2(ref Vector2 point, ref AAB2 box) => default; // 0x00000001878AE7C0-0x00000001878AE834
-		public static float Point2AAB2(ref Vector2 point, ref AAB2 box, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AE704-0x00000001878AE7C0
-		public static float SqrPoint2AAB2(ref Vector2 point, ref AAB2 box) => default; // 0x00000001878B145C-0x00000001878B14CC
-		public static float SqrPoint2AAB2(ref Vector2 point, ref AAB2 box, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B14CC-0x00000001878B1584
-		public static float Point2Box2(ref Vector2 point, ref Box2 box) => default; // 0x00000001878AE85C-0x00000001878AE884
-		public static float Point2Box2(ref Vector2 point, ref Box2 box, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AE834-0x00000001878AE85C
-		public static float SqrPoint2Box2(ref Vector2 point, ref Box2 box) => default; // 0x00000001878B1584-0x00000001878B169C
-		public static float SqrPoint2Box2(ref Vector2 point, ref Box2 box, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B169C-0x00000001878B185C
-		public static float Point2Circle2(ref Vector2 point, ref Circle2 circle) => default; // 0x00000001878AE934-0x00000001878AE970
-		public static float Point2Circle2(ref Vector2 point, ref Circle2 circle, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AE884-0x00000001878AE934
-		public static float SqrPoint2Circle2(ref Vector2 point, ref Circle2 circle) => default; // 0x00000001878B1910-0x00000001878B1950
-		public static float SqrPoint2Circle2(ref Vector2 point, ref Circle2 circle, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B185C-0x00000001878B1910
-		public static float Point2Line2(ref Vector2 point, ref Line2 line) => default; // 0x00000001878AE998-0x00000001878AE9C0
-		public static float Point2Line2(ref Vector2 point, ref Line2 line, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AE970-0x00000001878AE998
-		public static float SqrPoint2Line2(ref Vector2 point, ref Line2 line) => default; // 0x00000001878B1A34-0x00000001878B1B08
-		public static float SqrPoint2Line2(ref Vector2 point, ref Line2 line, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B1950-0x00000001878B1A34
-		public static float Point2Ray2(ref Vector2 point, ref Ray2 ray) => default; // 0x00000001878AE9C0-0x00000001878AE9E8
-		public static float Point2Ray2(ref Vector2 point, ref Ray2 ray, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AE9E8-0x00000001878AEA10
-		public static float SqrPoint2Ray2(ref Vector2 point, ref Ray2 ray) => default; // 0x00000001878B1C14-0x00000001878B1D00
-		public static float SqrPoint2Ray2(ref Vector2 point, ref Ray2 ray, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B1B08-0x00000001878B1C14
-		public static float Point2Segment2(ref Vector2 point, ref Segment2 segment) => default; // 0x00000001878AEA10-0x00000001878AEA38
-		public static float Point2Segment2(ref Vector2 point, ref Segment2 segment, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AEA38-0x00000001878AEA60
-		public static float SqrPoint2Segment2(ref Vector2 point, ref Segment2 segment) => default; // 0x00000001878B1E34-0x00000001878B1F5C
-		public static float SqrPoint2Segment2(ref Vector2 point, ref Segment2 segment, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B1D00-0x00000001878B1E34
-		public static float Point2Triangle2(ref Vector2 point, ref Triangle2 triangle) => default; // 0x00000001878AEA60-0x00000001878AEBC8
-		public static float Point2Triangle2(ref Vector2 point, ref Triangle2 triangle, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AEBC8-0x00000001878AED80
-		public static float SqrPoint2Triangle2(ref Vector2 point, ref Triangle2 triangle) => default; // 0x00000001878B1F5C-0x00000001878B20C4
-		public static float SqrPoint2Triangle2(ref Vector2 point, ref Triangle2 triangle, out Vector2 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B20C4-0x00000001878B227C
-		public static float Ray2Ray2(ref Ray2 ray0, ref Ray2 ray1) => default; // 0x00000001878AF4A8-0x00000001878AF4E8
-		public static float Ray2Ray2(ref Ray2 ray0, ref Ray2 ray1, out Vector2 closestPoint0, out Vector2 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AF478-0x00000001878AF4A8
-		public static float SqrRay2Ray2(ref Ray2 ray0, ref Ray2 ray1) => default; // 0x00000001878B4124-0x00000001878B4150
-		public static float SqrRay2Ray2(ref Ray2 ray0, ref Ray2 ray1, out Vector2 closestPoint0, out Vector2 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878B3E34-0x00000001878B4124
-		public static float Ray2Segment2(ref Ray2 ray, ref Segment2 segment) => default; // 0x00000001878AF4E8-0x00000001878AF528
-		public static float Ray2Segment2(ref Ray2 ray, ref Segment2 segment, out Vector2 closestPoint0, out Vector2 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AF528-0x00000001878AF558
-		public static float SqrRay2Segment2(ref Ray2 ray, ref Segment2 segment) => default; // 0x00000001878B44B4-0x00000001878B44E0
-		public static float SqrRay2Segment2(ref Ray2 ray, ref Segment2 segment, out Vector2 closestPoint0, out Vector2 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878B4150-0x00000001878B44B4
-		public static float Segment2Segment2(ref Segment2 segment0, ref Segment2 segment1) => default; // 0x00000001878AF650-0x00000001878AF690
-		public static float Segment2Segment2(ref Segment2 segment0, ref Segment2 segment1, out Vector2 closestPoint0, out Vector2 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AF620-0x00000001878AF650
-		public static float SqrSegment2Segment2(ref Segment2 segment0, ref Segment2 segment1) => default; // 0x00000001878B4DC0-0x00000001878B4DEC
-		public static float SqrSegment2Segment2(ref Segment2 segment0, ref Segment2 segment1, out Vector2 closestPoint0, out Vector2 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878B4DEC-0x00000001878B5370
-		private static void Face(ref Box3 mBox, ref float mLineParameter, int i0, int i1, int i2, ref Vector3 pnt, ref Vector3 dir, ref Vector3 PmE, ref float sqrDistance) {} // 0x00000001878AD63C-0x00000001878AE468
-		private static void CaseNoZeros(ref Box3 mBox, ref float mLineParameter, ref Vector3 pnt, ref Vector3 dir, ref float sqrDistance) {} // 0x00000001878AD55C-0x00000001878AD63C
-		private static void Case0(ref Box3 mBox, ref float mLineParameter, int i0, int i1, int i2, ref Vector3 pnt, ref Vector3 dir, ref float sqrDistance) {} // 0x00000001878AD0F8-0x00000001878AD55C
-		private static void Case00(ref Box3 mBox, ref float mLineParameter, int i0, int i1, int i2, ref Vector3 pnt, ref Vector3 dir, ref float sqrDistance) {} // 0x00000001878ACEE8-0x00000001878AD0F8
-		private static void Case000(ref Box3 mBox, ref float mLineParameter, ref Vector3 pnt, ref float sqrDistance) {} // 0x00000001878ACDD0-0x00000001878ACEE8
-		public static float Line3Box3(ref Line3 line, ref Box3 box, out Line3Box3Dist info) {
-			info = default;
-			return default;
-		} // 0x00000001878AE570-0x00000001878AE598
-		public static float Line3Box3(ref Line3 line, ref Box3 box) => default; // 0x00000001878AE598-0x00000001878AE5D8
-		public static float SqrLine3Box3(ref Line3 line, ref Box3 box, out Line3Box3Dist info) {
-			info = default;
-			return default;
-		} // 0x00000001878B0384-0x00000001878B093C
-		public static float SqrLine3Box3(ref Line3 line, ref Box3 box) => default; // 0x00000001878B093C-0x00000001878B0968
-		public static float Line3Line3(ref Line3 line0, ref Line3 line1) => default; // 0x00000001878AE5D8-0x00000001878AE60C
-		public static float Line3Line3(ref Line3 line0, ref Line3 line1, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AE60C-0x00000001878AE63C
-		public static float SqrLine3Line3(ref Line3 line0, ref Line3 line1) => default; // 0x00000001878B0968-0x00000001878B099C
-		public static float SqrLine3Line3(ref Line3 line0, ref Line3 line1, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878B099C-0x00000001878B0CEC
-		public static float Line3Ray3(ref Line3 line, ref Ray3 ray) => default; // 0x00000001878AE63C-0x00000001878AE670
-		public static float Line3Ray3(ref Line3 line, ref Ray3 ray, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AE670-0x00000001878AE6A0
-		public static float SqrLine3Ray3(ref Line3 line, ref Ray3 ray) => default; // 0x00000001878B102C-0x00000001878B1060
-		public static float SqrLine3Ray3(ref Line3 line, ref Ray3 ray, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878B0CEC-0x00000001878B102C
-		public static float Line3Segment3(ref Line3 line, ref Segment3 segment) => default; // 0x00000001878AE6A0-0x00000001878AE6D4
-		public static float Line3Segment3(ref Line3 line, ref Segment3 segment, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AE6D4-0x00000001878AE704
-		public static float SqrLine3Segment3(ref Line3 line, ref Segment3 segment) => default; // 0x00000001878B1060-0x00000001878B1094
-		public static float SqrLine3Segment3(ref Line3 line, ref Segment3 segment, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878B1094-0x00000001878B145C
-		public static float Point3AAB3(ref Vector3 point, ref AAB3 box) => default; // 0x00000001878AED80-0x00000001878AEE24
-		public static float Point3AAB3(ref Vector3 point, ref AAB3 box, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AEE24-0x00000001878AEF34
-		public static float SqrPoint3AAB3(ref Vector3 point, ref AAB3 box) => default; // 0x00000001878B2388-0x00000001878B2428
-		public static float SqrPoint3AAB3(ref Vector3 point, ref AAB3 box, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B227C-0x00000001878B2388
-		public static float Point3Box3(ref Vector3 point, ref Box3 box) => default; // 0x00000001878AEF5C-0x00000001878AEF84
-		public static float Point3Box3(ref Vector3 point, ref Box3 box, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AEF34-0x00000001878AEF5C
-		public static float SqrPoint3Box3(ref Vector3 point, ref Box3 box) => default; // 0x00000001878B2428-0x00000001878B2604
-		public static float SqrPoint3Box3(ref Vector3 point, ref Box3 box, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B2604-0x00000001878B2954
-		public static float Point3Circle3(ref Vector3 point, ref Circle3 circle, bool solid = true /* Metadata: 0x0207BFDB */) => default; // 0x00000001878AEFB4-0x00000001878AEFF4
-		public static float Point3Circle3(ref Vector3 point, ref Circle3 circle, out Vector3 closestPoint, bool solid = true /* Metadata: 0x0207BFDC */) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AEF84-0x00000001878AEFB4
-		public static float SqrPoint3Circle3(ref Vector3 point, ref Circle3 circle, bool solid = true /* Metadata: 0x0207BFDD */) => default; // 0x00000001878B2D4C-0x00000001878B2D74
-		public static float SqrPoint3Circle3(ref Vector3 point, ref Circle3 circle, out Vector3 closestPoint, bool solid = true /* Metadata: 0x0207BFDE */) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B2954-0x00000001878B2D4C
-		public static float Point3Line3(ref Vector3 point, ref Line3 line) => default; // 0x00000001878AEFF4-0x00000001878AF01C
-		public static float Point3Line3(ref Vector3 point, ref Line3 line, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AF01C-0x00000001878AF044
-		public static float SqrPoint3Line3(ref Vector3 point, ref Line3 line) => default; // 0x00000001878B2EF0-0x00000001878B3064
-		public static float SqrPoint3Line3(ref Vector3 point, ref Line3 line, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B2D74-0x00000001878B2EF0
-		public static float Point3Plane3(ref Vector3 point, ref Plane3 plane) => default; // 0x00000001878AF160-0x00000001878AF200
-		public static float Point3Plane3(ref Vector3 point, ref Plane3 plane, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AF044-0x00000001878AF160
-		public static float SqrPoint3Plane3(ref Vector3 point, ref Plane3 plane) => default; // 0x00000001878B317C-0x00000001878B321C
-		public static float SqrPoint3Plane3(ref Vector3 point, ref Plane3 plane, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B3064-0x00000001878B317C
-		public static float Point3Ray3(ref Vector3 point, ref Ray3 ray) => default; // 0x00000001878AF228-0x00000001878AF250
-		public static float Point3Ray3(ref Vector3 point, ref Ray3 ray, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AF200-0x00000001878AF228
-		public static float SqrPoint3Ray3(ref Vector3 point, ref Ray3 ray) => default; // 0x00000001878B33C0-0x00000001878B3540
-		public static float SqrPoint3Ray3(ref Vector3 point, ref Ray3 ray, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B321C-0x00000001878B33C0
-		public static float Point3Rectangle3(ref Vector3 point, ref Rectangle3 rectangle) => default; // 0x00000001878AF278-0x00000001878AF2A0
-		public static float Point3Rectangle3(ref Vector3 point, ref Rectangle3 rectangle, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AF250-0x00000001878AF278
-		public static float SqrPoint3Rectangle3(ref Vector3 point, ref Rectangle3 rectangle) => default; // 0x00000001878B37A4-0x00000001878B3944
-		public static float SqrPoint3Rectangle3(ref Vector3 point, ref Rectangle3 rectangle, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B3540-0x00000001878B37A4
-		public static float Point3Segment3(ref Vector3 point, ref Segment3 segment) => default; // 0x00000001878AF2C8-0x00000001878AF2F0
-		public static float Point3Segment3(ref Vector3 point, ref Segment3 segment, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AF2A0-0x00000001878AF2C8
-		public static float SqrPoint3Segment3(ref Vector3 point, ref Segment3 segment) => default; // 0x00000001878B3B04-0x00000001878B3CA4
-		public static float SqrPoint3Segment3(ref Vector3 point, ref Segment3 segment, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B3944-0x00000001878B3B04
-		public static float Point3Sphere3(ref Vector3 point, ref Sphere3 sphere) => default; // 0x00000001878AF404-0x00000001878AF478
-		public static float Point3Sphere3(ref Vector3 point, ref Sphere3 sphere, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878AF2F0-0x00000001878AF404
-		public static float SqrPoint3Sphere3(ref Vector3 point, ref Sphere3 sphere) => default; // 0x00000001878B3CA4-0x00000001878B3D1C
-		public static float SqrPoint3Sphere3(ref Vector3 point, ref Sphere3 sphere, out Vector3 closestPoint) {
-			closestPoint = default;
-			return default;
-		} // 0x00000001878B3D1C-0x00000001878B3E34
-		public static float Ray3Ray3(ref Ray3 ray0, ref Ray3 ray1) => default; // 0x00000001878AF588-0x00000001878AF5BC
-		public static float Ray3Ray3(ref Ray3 ray0, ref Ray3 ray1, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AF558-0x00000001878AF588
-		public static float SqrRay3Ray3(ref Ray3 ray0, ref Ray3 ray1) => default; // 0x00000001878B4910-0x00000001878B4944
-		public static float SqrRay3Ray3(ref Ray3 ray0, ref Ray3 ray1, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878B44E0-0x00000001878B4910
-		public static float Ray3Segment3(ref Ray3 ray, ref Segment3 segment) => default; // 0x00000001878AF5EC-0x00000001878AF620
-		public static float Ray3Segment3(ref Ray3 ray, ref Segment3 segment, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AF5BC-0x00000001878AF5EC
-		public static float SqrRay3Segment3(ref Ray3 ray, ref Segment3 segment) => default; // 0x00000001878B4D8C-0x00000001878B4DC0
-		public static float SqrRay3Segment3(ref Ray3 ray, ref Segment3 segment, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878B4944-0x00000001878B4D8C
-		public static float Segment3Box3(ref Segment3 segment, ref Box3 box, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AF690-0x00000001878AF6C0
-		public static float Segment3Box3(ref Segment3 segment, ref Box3 box) => default; // 0x00000001878AF6C0-0x00000001878AF6F4
-		public static float SqrSegment3Box3(ref Segment3 segment, ref Box3 box, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878B53A4-0x00000001878B54A8
-		public static float SqrSegment3Box3(ref Segment3 segment, ref Box3 box) => default; // 0x00000001878B5370-0x00000001878B53A4
-		public static float Segment3Segment3(ref Segment3 segment0, ref Segment3 segment1) => default; // 0x00000001878AF724-0x00000001878AF758
-		public static float Segment3Segment3(ref Segment3 segment0, ref Segment3 segment1, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878AF6F4-0x00000001878AF724
-		public static float SqrSegment3Segment3(ref Segment3 segment0, ref Segment3 segment1) => default; // 0x00000001878B54A8-0x00000001878B54DC
-		public static float SqrSegment3Segment3(ref Segment3 segment0, ref Segment3 segment1, out Vector3 closestPoint0, out Vector3 closestPoint1) {
-			closestPoint0 = default;
-			closestPoint1 = default;
-			return default;
-		} // 0x00000001878B54DC-0x00000001878B5B64
+		public static float Line2Line2(ref Line2 line0, ref Line2 line1); // 0x000000018691853C-0x0000000186918564
+		public static float Line2Line2(ref Line2 line0, ref Line2 line1, out Vector2 closestPoint0, out Vector2 closestPoint1); // 0x0000000186918564-0x0000000186918594
+		public static float SqrLine2Line2(ref Line2 line0, ref Line2 line1); // 0x000000018691982C-0x0000000186919944
+		public static float SqrLine2Line2(ref Line2 line0, ref Line2 line1, out Vector2 closestPoint0, out Vector2 closestPoint1); // 0x0000000186919944-0x0000000186919B70
+		public static float Line2Ray2(ref Line2 line, ref Ray2 ray); // 0x0000000186918594-0x00000001869185BC
+		public static float Line2Ray2(ref Line2 line, ref Ray2 ray, out Vector2 closestPoint0, out Vector2 closestPoint1); // 0x00000001869185BC-0x00000001869185EC
+		public static float SqrLine2Ray2(ref Line2 line, ref Ray2 ray); // 0x0000000186919B70-0x0000000186919CFC
+		public static float SqrLine2Ray2(ref Line2 line, ref Ray2 ray, out Vector2 closestPoint0, out Vector2 closestPoint1); // 0x0000000186919CFC-0x0000000186919F58
+		public static float Line2Segment2(ref Line2 line, ref Segment2 segment); // 0x000000018691861C-0x0000000186918644
+		public static float Line2Segment2(ref Line2 line, ref Segment2 segment, out Vector2 closestPoint0, out Vector2 closestPoint1); // 0x00000001869185EC-0x000000018691861C
+		public static float SqrLine2Segment2(ref Line2 line, ref Segment2 segment); // 0x0000000186919F58-0x000000018691A188
+		public static float SqrLine2Segment2(ref Line2 line, ref Segment2 segment, out Vector2 closestPoint0, out Vector2 closestPoint1); // 0x000000018691A188-0x000000018691A458
+		public static float Point2AAB2(ref Vector2 point, ref AAB2 box); // 0x0000000186918894-0x0000000186918908
+		public static float Point2AAB2(ref Vector2 point, ref AAB2 box, out Vector2 closestPoint); // 0x00000001869187D8-0x0000000186918894
+		public static float SqrPoint2AAB2(ref Vector2 point, ref AAB2 box); // 0x000000018691B530-0x000000018691B5A0
+		public static float SqrPoint2AAB2(ref Vector2 point, ref AAB2 box, out Vector2 closestPoint); // 0x000000018691B5A0-0x000000018691B658
+		public static float Point2Box2(ref Vector2 point, ref Box2 box); // 0x0000000186918930-0x0000000186918958
+		public static float Point2Box2(ref Vector2 point, ref Box2 box, out Vector2 closestPoint); // 0x0000000186918908-0x0000000186918930
+		public static float SqrPoint2Box2(ref Vector2 point, ref Box2 box); // 0x000000018691B658-0x000000018691B770
+		public static float SqrPoint2Box2(ref Vector2 point, ref Box2 box, out Vector2 closestPoint); // 0x000000018691B770-0x000000018691B930
+		public static float Point2Circle2(ref Vector2 point, ref Circle2 circle); // 0x0000000186918A08-0x0000000186918A44
+		public static float Point2Circle2(ref Vector2 point, ref Circle2 circle, out Vector2 closestPoint); // 0x0000000186918958-0x0000000186918A08
+		public static float SqrPoint2Circle2(ref Vector2 point, ref Circle2 circle); // 0x000000018691B9E4-0x000000018691BA24
+		public static float SqrPoint2Circle2(ref Vector2 point, ref Circle2 circle, out Vector2 closestPoint); // 0x000000018691B930-0x000000018691B9E4
+		public static float Point2Line2(ref Vector2 point, ref Line2 line); // 0x0000000186918A6C-0x0000000186918A94
+		public static float Point2Line2(ref Vector2 point, ref Line2 line, out Vector2 closestPoint); // 0x0000000186918A44-0x0000000186918A6C
+		public static float SqrPoint2Line2(ref Vector2 point, ref Line2 line); // 0x000000018691BB08-0x000000018691BBDC
+		public static float SqrPoint2Line2(ref Vector2 point, ref Line2 line, out Vector2 closestPoint); // 0x000000018691BA24-0x000000018691BB08
+		public static float Point2Ray2(ref Vector2 point, ref Ray2 ray); // 0x0000000186918A94-0x0000000186918ABC
+		public static float Point2Ray2(ref Vector2 point, ref Ray2 ray, out Vector2 closestPoint); // 0x0000000186918ABC-0x0000000186918AE4
+		public static float SqrPoint2Ray2(ref Vector2 point, ref Ray2 ray); // 0x000000018691BCE8-0x000000018691BDD4
+		public static float SqrPoint2Ray2(ref Vector2 point, ref Ray2 ray, out Vector2 closestPoint); // 0x000000018691BBDC-0x000000018691BCE8
+		public static float Point2Segment2(ref Vector2 point, ref Segment2 segment); // 0x0000000186918AE4-0x0000000186918B0C
+		public static float Point2Segment2(ref Vector2 point, ref Segment2 segment, out Vector2 closestPoint); // 0x0000000186918B0C-0x0000000186918B34
+		public static float SqrPoint2Segment2(ref Vector2 point, ref Segment2 segment); // 0x000000018691BF08-0x000000018691C030
+		public static float SqrPoint2Segment2(ref Vector2 point, ref Segment2 segment, out Vector2 closestPoint); // 0x000000018691BDD4-0x000000018691BF08
+		public static float Point2Triangle2(ref Vector2 point, ref Triangle2 triangle); // 0x0000000186918B34-0x0000000186918C9C
+		public static float Point2Triangle2(ref Vector2 point, ref Triangle2 triangle, out Vector2 closestPoint); // 0x0000000186918C9C-0x0000000186918E54
+		public static float SqrPoint2Triangle2(ref Vector2 point, ref Triangle2 triangle); // 0x000000018691C030-0x000000018691C198
+		public static float SqrPoint2Triangle2(ref Vector2 point, ref Triangle2 triangle, out Vector2 closestPoint); // 0x000000018691C198-0x000000018691C350
+		public static float Ray2Ray2(ref Ray2 ray0, ref Ray2 ray1); // 0x000000018691957C-0x00000001869195BC
+		public static float Ray2Ray2(ref Ray2 ray0, ref Ray2 ray1, out Vector2 closestPoint0, out Vector2 closestPoint1); // 0x000000018691954C-0x000000018691957C
+		public static float SqrRay2Ray2(ref Ray2 ray0, ref Ray2 ray1); // 0x000000018691E1F8-0x000000018691E224
+		public static float SqrRay2Ray2(ref Ray2 ray0, ref Ray2 ray1, out Vector2 closestPoint0, out Vector2 closestPoint1); // 0x000000018691DF08-0x000000018691E1F8
+		public static float Ray2Segment2(ref Ray2 ray, ref Segment2 segment); // 0x00000001869195BC-0x00000001869195FC
+		public static float Ray2Segment2(ref Ray2 ray, ref Segment2 segment, out Vector2 closestPoint0, out Vector2 closestPoint1); // 0x00000001869195FC-0x000000018691962C
+		public static float SqrRay2Segment2(ref Ray2 ray, ref Segment2 segment); // 0x000000018691E588-0x000000018691E5B4
+		public static float SqrRay2Segment2(ref Ray2 ray, ref Segment2 segment, out Vector2 closestPoint0, out Vector2 closestPoint1); // 0x000000018691E224-0x000000018691E588
+		public static float Segment2Segment2(ref Segment2 segment0, ref Segment2 segment1); // 0x0000000186919724-0x0000000186919764
+		public static float Segment2Segment2(ref Segment2 segment0, ref Segment2 segment1, out Vector2 closestPoint0, out Vector2 closestPoint1); // 0x00000001869196F4-0x0000000186919724
+		public static float SqrSegment2Segment2(ref Segment2 segment0, ref Segment2 segment1); // 0x000000018691EE94-0x000000018691EEC0
+		public static float SqrSegment2Segment2(ref Segment2 segment0, ref Segment2 segment1, out Vector2 closestPoint0, out Vector2 closestPoint1); // 0x000000018691EEC0-0x000000018691F444
+		private static void Face(ref Box3 mBox, ref float mLineParameter, int i0, int i1, int i2, ref Vector3 pnt, ref Vector3 dir, ref Vector3 PmE, ref float sqrDistance); // 0x0000000186917710-0x000000018691853C
+		private static void CaseNoZeros(ref Box3 mBox, ref float mLineParameter, ref Vector3 pnt, ref Vector3 dir, ref float sqrDistance); // 0x0000000186917630-0x0000000186917710
+		private static void Case0(ref Box3 mBox, ref float mLineParameter, int i0, int i1, int i2, ref Vector3 pnt, ref Vector3 dir, ref float sqrDistance); // 0x00000001869171CC-0x0000000186917630
+		private static void Case00(ref Box3 mBox, ref float mLineParameter, int i0, int i1, int i2, ref Vector3 pnt, ref Vector3 dir, ref float sqrDistance); // 0x0000000186916FBC-0x00000001869171CC
+		private static void Case000(ref Box3 mBox, ref float mLineParameter, ref Vector3 pnt, ref float sqrDistance); // 0x0000000186916EA0-0x0000000186916FBC
+		public static float Line3Box3(ref Line3 line, ref Box3 box, out Line3Box3Dist info); // 0x0000000186918644-0x000000018691866C
+		public static float Line3Box3(ref Line3 line, ref Box3 box); // 0x000000018691866C-0x00000001869186AC
+		public static float SqrLine3Box3(ref Line3 line, ref Box3 box, out Line3Box3Dist info); // 0x000000018691A458-0x000000018691AA10
+		public static float SqrLine3Box3(ref Line3 line, ref Box3 box); // 0x000000018691AA10-0x000000018691AA3C
+		public static float Line3Line3(ref Line3 line0, ref Line3 line1); // 0x00000001869186AC-0x00000001869186E0
+		public static float Line3Line3(ref Line3 line0, ref Line3 line1, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x00000001869186E0-0x0000000186918710
+		public static float SqrLine3Line3(ref Line3 line0, ref Line3 line1); // 0x000000018691AA3C-0x000000018691AA70
+		public static float SqrLine3Line3(ref Line3 line0, ref Line3 line1, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x000000018691AA70-0x000000018691ADC0
+		public static float Line3Ray3(ref Line3 line, ref Ray3 ray); // 0x0000000186918710-0x0000000186918744
+		public static float Line3Ray3(ref Line3 line, ref Ray3 ray, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x0000000186918744-0x0000000186918774
+		public static float SqrLine3Ray3(ref Line3 line, ref Ray3 ray); // 0x000000018691B100-0x000000018691B134
+		public static float SqrLine3Ray3(ref Line3 line, ref Ray3 ray, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x000000018691ADC0-0x000000018691B100
+		public static float Line3Segment3(ref Line3 line, ref Segment3 segment); // 0x0000000186918774-0x00000001869187A8
+		public static float Line3Segment3(ref Line3 line, ref Segment3 segment, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x00000001869187A8-0x00000001869187D8
+		public static float SqrLine3Segment3(ref Line3 line, ref Segment3 segment); // 0x000000018691B134-0x000000018691B168
+		public static float SqrLine3Segment3(ref Line3 line, ref Segment3 segment, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x000000018691B168-0x000000018691B530
+		public static float Point3AAB3(ref Vector3 point, ref AAB3 box); // 0x0000000186918E54-0x0000000186918EF8
+		public static float Point3AAB3(ref Vector3 point, ref AAB3 box, out Vector3 closestPoint); // 0x0000000186918EF8-0x0000000186919008
+		public static float SqrPoint3AAB3(ref Vector3 point, ref AAB3 box); // 0x000000018691C45C-0x000000018691C4FC
+		public static float SqrPoint3AAB3(ref Vector3 point, ref AAB3 box, out Vector3 closestPoint); // 0x000000018691C350-0x000000018691C45C
+		public static float Point3Box3(ref Vector3 point, ref Box3 box); // 0x0000000186919030-0x0000000186919058
+		public static float Point3Box3(ref Vector3 point, ref Box3 box, out Vector3 closestPoint); // 0x0000000186919008-0x0000000186919030
+		public static float SqrPoint3Box3(ref Vector3 point, ref Box3 box); // 0x000000018691C4FC-0x000000018691C6D8
+		public static float SqrPoint3Box3(ref Vector3 point, ref Box3 box, out Vector3 closestPoint); // 0x000000018691C6D8-0x000000018691CA28
+		public static float Point3Circle3(ref Vector3 point, ref Circle3 circle, bool solid = true /* Metadata: 0x0234BC8B */); // 0x0000000186919088-0x00000001869190C8
+		public static float Point3Circle3(ref Vector3 point, ref Circle3 circle, out Vector3 closestPoint, bool solid = true /* Metadata: 0x0234BC8C */); // 0x0000000186919058-0x0000000186919088
+		public static float SqrPoint3Circle3(ref Vector3 point, ref Circle3 circle, bool solid = true /* Metadata: 0x0234BC8D */); // 0x000000018691CE20-0x000000018691CE48
+		public static float SqrPoint3Circle3(ref Vector3 point, ref Circle3 circle, out Vector3 closestPoint, bool solid = true /* Metadata: 0x0234BC8E */); // 0x000000018691CA28-0x000000018691CE20
+		public static float Point3Line3(ref Vector3 point, ref Line3 line); // 0x00000001869190C8-0x00000001869190F0
+		public static float Point3Line3(ref Vector3 point, ref Line3 line, out Vector3 closestPoint); // 0x00000001869190F0-0x0000000186919118
+		public static float SqrPoint3Line3(ref Vector3 point, ref Line3 line); // 0x000000018691CFC4-0x000000018691D138
+		public static float SqrPoint3Line3(ref Vector3 point, ref Line3 line, out Vector3 closestPoint); // 0x000000018691CE48-0x000000018691CFC4
+		public static float Point3Plane3(ref Vector3 point, ref Plane3 plane); // 0x0000000186919234-0x00000001869192D4
+		public static float Point3Plane3(ref Vector3 point, ref Plane3 plane, out Vector3 closestPoint); // 0x0000000186919118-0x0000000186919234
+		public static float SqrPoint3Plane3(ref Vector3 point, ref Plane3 plane); // 0x000000018691D250-0x000000018691D2F0
+		public static float SqrPoint3Plane3(ref Vector3 point, ref Plane3 plane, out Vector3 closestPoint); // 0x000000018691D138-0x000000018691D250
+		public static float Point3Ray3(ref Vector3 point, ref Ray3 ray); // 0x00000001869192FC-0x0000000186919324
+		public static float Point3Ray3(ref Vector3 point, ref Ray3 ray, out Vector3 closestPoint); // 0x00000001869192D4-0x00000001869192FC
+		public static float SqrPoint3Ray3(ref Vector3 point, ref Ray3 ray); // 0x000000018691D494-0x000000018691D614
+		public static float SqrPoint3Ray3(ref Vector3 point, ref Ray3 ray, out Vector3 closestPoint); // 0x000000018691D2F0-0x000000018691D494
+		public static float Point3Rectangle3(ref Vector3 point, ref Rectangle3 rectangle); // 0x000000018691934C-0x0000000186919374
+		public static float Point3Rectangle3(ref Vector3 point, ref Rectangle3 rectangle, out Vector3 closestPoint); // 0x0000000186919324-0x000000018691934C
+		public static float SqrPoint3Rectangle3(ref Vector3 point, ref Rectangle3 rectangle); // 0x000000018691D878-0x000000018691DA18
+		public static float SqrPoint3Rectangle3(ref Vector3 point, ref Rectangle3 rectangle, out Vector3 closestPoint); // 0x000000018691D614-0x000000018691D878
+		public static float Point3Segment3(ref Vector3 point, ref Segment3 segment); // 0x000000018691939C-0x00000001869193C4
+		public static float Point3Segment3(ref Vector3 point, ref Segment3 segment, out Vector3 closestPoint); // 0x0000000186919374-0x000000018691939C
+		public static float SqrPoint3Segment3(ref Vector3 point, ref Segment3 segment); // 0x000000018691DBD8-0x000000018691DD78
+		public static float SqrPoint3Segment3(ref Vector3 point, ref Segment3 segment, out Vector3 closestPoint); // 0x000000018691DA18-0x000000018691DBD8
+		public static float Point3Sphere3(ref Vector3 point, ref Sphere3 sphere); // 0x00000001869194D8-0x000000018691954C
+		public static float Point3Sphere3(ref Vector3 point, ref Sphere3 sphere, out Vector3 closestPoint); // 0x00000001869193C4-0x00000001869194D8
+		public static float SqrPoint3Sphere3(ref Vector3 point, ref Sphere3 sphere); // 0x000000018691DD78-0x000000018691DDF0
+		public static float SqrPoint3Sphere3(ref Vector3 point, ref Sphere3 sphere, out Vector3 closestPoint); // 0x000000018691DDF0-0x000000018691DF08
+		public static float Ray3Ray3(ref Ray3 ray0, ref Ray3 ray1); // 0x000000018691965C-0x0000000186919690
+		public static float Ray3Ray3(ref Ray3 ray0, ref Ray3 ray1, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x000000018691962C-0x000000018691965C
+		public static float SqrRay3Ray3(ref Ray3 ray0, ref Ray3 ray1); // 0x000000018691E9E4-0x000000018691EA18
+		public static float SqrRay3Ray3(ref Ray3 ray0, ref Ray3 ray1, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x000000018691E5B4-0x000000018691E9E4
+		public static float Ray3Segment3(ref Ray3 ray, ref Segment3 segment); // 0x00000001869196C0-0x00000001869196F4
+		public static float Ray3Segment3(ref Ray3 ray, ref Segment3 segment, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x0000000186919690-0x00000001869196C0
+		public static float SqrRay3Segment3(ref Ray3 ray, ref Segment3 segment); // 0x000000018691EE60-0x000000018691EE94
+		public static float SqrRay3Segment3(ref Ray3 ray, ref Segment3 segment, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x000000018691EA18-0x000000018691EE60
+		public static float Segment3Box3(ref Segment3 segment, ref Box3 box, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x0000000186919764-0x0000000186919794
+		public static float Segment3Box3(ref Segment3 segment, ref Box3 box); // 0x0000000186919794-0x00000001869197C8
+		public static float SqrSegment3Box3(ref Segment3 segment, ref Box3 box, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x000000018691F478-0x000000018691F57C
+		public static float SqrSegment3Box3(ref Segment3 segment, ref Box3 box); // 0x000000018691F444-0x000000018691F478
+		public static float Segment3Segment3(ref Segment3 segment0, ref Segment3 segment1); // 0x00000001869197F8-0x000000018691982C
+		public static float Segment3Segment3(ref Segment3 segment0, ref Segment3 segment1, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x00000001869197C8-0x00000001869197F8
+		public static float SqrSegment3Segment3(ref Segment3 segment0, ref Segment3 segment1); // 0x000000018691F57C-0x000000018691F5B0
+		public static float SqrSegment3Segment3(ref Segment3 segment0, ref Segment3 segment1, out Vector3 closestPoint0, out Vector3 closestPoint1); // 0x000000018691F5B0-0x000000018691FC38
 	}
 
-	public struct Line3Box3Dist // TypeDefIndex: 55836
+	public struct Line3Box3Dist // TypeDefIndex: 58477
 	{
 		// Fields
 		public Vector3 ClosestPoint0; // 0x00
@@ -613,7 +363,7 @@ namespace Dest.Math
 		public float LineParameter; // 0x18
 	}
 
-	public static class Intersection // TypeDefIndex: 55837
+	public static class Intersection // TypeDefIndex: 58478
 	{
 		// Fields
 		private static float _intervalThreshold; // 0x00
@@ -621,549 +371,205 @@ namespace Dest.Math
 		private static float _distanceThreshold; // 0x08
 	
 		// Properties
-		public static float IntervalThreshold { get; set; } // 0x00000001878C9924-0x00000001878C9974 0x00000001878C9AA4-0x00000001878C9B38
-		public static float DotThreshold { get; set; } // 0x00000001878C98D4-0x00000001878C9924 0x00000001878C9A0C-0x00000001878C9AA4
-		public static float DistanceThreshold { get; set; } // 0x00000001878C9884-0x00000001878C98D4 0x00000001878C9974-0x00000001878C9A0C
+		public static float IntervalThreshold { get; set; } // 0x00000001869344B0-0x0000000186934500 0x0000000186934630-0x00000001869346C4
+		public static float DotThreshold { get; set; } // 0x0000000186934460-0x00000001869344B0 0x0000000186934598-0x0000000186934630
+		public static float DistanceThreshold { get; set; } // 0x0000000186934410-0x0000000186934460 0x0000000186934500-0x0000000186934598
 	
 		// Constructors
-		static Intersection() {} // 0x0000000185F7FDF0-0x0000000185F7FE60
+		static Intersection(); // 0x0000000184D532A0-0x0000000184D53310
 	
 		// Methods
-		public static bool TestAAB2AAB2(ref AAB2 box0, ref AAB2 box1) => default; // 0x00000001878C2434-0x00000001878C2464
-		public static bool FindAAB2AAB2(ref AAB2 box0, ref AAB2 box1, out AAB2 intersection) {
-			intersection = default;
-			return default;
-		} // 0x00000001878B8E08-0x00000001878B8E94
-		public static bool TestAAB2AAB2OverlapX(ref AAB2 box0, ref AAB2 box1) => default; // 0x00000001878C23FC-0x00000001878C2418
-		public static bool TestAAB2AAB2OverlapY(ref AAB2 box0, ref AAB2 box1) => default; // 0x00000001878C2418-0x00000001878C2434
-		public static bool TestAAB2Circle2(ref AAB2 box, ref Circle2 circle) => default; // 0x0000000184CFF330-0x0000000184CFF3A0
-		public static bool TestBox2Box2(ref Box2 box0, ref Box2 box1) => default; // 0x00000001878C2500-0x00000001878C27D0
-		public static bool TestBox2Circle2(ref Box2 box, ref Circle2 circle) => default; // 0x00000001878C27D0-0x00000001878C2908
-		public static bool TestCircle2Circle2(ref Circle2 circle0, ref Circle2 circle1) => default; // 0x00000001878C2B34-0x00000001878C2B84
-		public static bool FindCircle2Circle2(ref Circle2 circle0, ref Circle2 circle1, out Circle2Circle2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B8F80-0x00000001878B91D8
-		private static int WhichSide(Polygon2 V, Vector2 P, ref Vector2 D) => default; // 0x00000001878C9580-0x00000001878C96B0
-		public static bool TestConvexPolygon2ConvexPolygon2(Polygon2 convexPolygon0, Polygon2 convexPolygon1) => default; // 0x00000001878C2B84-0x00000001878C2D7C
-		private static bool DoClipping(float t0, float t1, ref Vector2 origin, ref Vector2 direction, ref AAB2 box, bool solid, out int quantity, out Vector2 point0, out Vector2 point1, out IntersectionTypes intrType) {
-			quantity = default;
-			point0 = default;
-			point1 = default;
-			intrType = default;
-			return default;
-		} // 0x00000001878B8B28-0x00000001878B8E08
-		public static bool TestLine2AAB2(ref Line2 line, ref AAB2 box) => default; // 0x00000001878C2D7C-0x00000001878C2ED4
-		public static bool FindLine2AAB2(ref Line2 line, ref AAB2 box, out Line2AAB2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B91D8-0x00000001878B9274
-		private static bool Clip(float denom, float numer, ref float t0, ref float t1) => default; // 0x00000001878B79DC-0x00000001878B7A3C
-		private static bool DoClipping(float t0, float t1, ref Vector2 origin, ref Vector2 direction, ref Box2 box, bool solid, out int quantity, out Vector2 point0, out Vector2 point1, out IntersectionTypes intrType) {
-			quantity = default;
-			point0 = default;
-			point1 = default;
-			intrType = default;
-			return default;
-		} // 0x00000001878B81CC-0x00000001878B8530
-		public static bool TestLine2Box2(ref Line2 line, ref Box2 box) => default; // 0x00000001878C2ED4-0x00000001878C2FC4
-		public static bool FindLine2Box2(ref Line2 line, ref Box2 box, out Line2Box2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B9274-0x00000001878B9310
-		private static bool Find(ref Vector2 origin, ref Vector2 direction, ref Vector2 center, float radius, out int rootCount, out float t0, out float t1) {
-			rootCount = default;
-			t0 = default;
-			t1 = default;
-			return default;
-		} // 0x00000001878C11B0-0x00000001878C1308
-		public static bool TestLine2Circle2(ref Line2 line, ref Circle2 circle) => default; // 0x00000001878C2FC4-0x00000001878C304C
-		public static bool FindLine2Circle2(ref Line2 line, ref Circle2 circle, out Line2Circle2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B9310-0x00000001878B94BC
-		public static bool TestLine2ConvexPolygon2(ref Line2 line, Polygon2 convexPolygon) => default; // 0x00000001878C304C-0x00000001878C3158
-		public static bool FindLine2ConvexPolygon2(ref Line2 line, Polygon2 convexPolygon, out Line2ConvexPolygon2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B94BC-0x00000001878B9808
-		private static IntersectionTypes Classify(ref Line2 line0, ref Line2 line1, out float s0) {
-			s0 = default;
-			return default;
-		} // 0x00000001878B65EC-0x00000001878B67B4
-		public static bool TestLine2Line2(ref Line2 line0, ref Line2 line1, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C31B4-0x00000001878C3224
-		public static bool TestLine2Line2(ref Line2 line0, ref Line2 line1) => default; // 0x00000001878C3158-0x00000001878C31B4
-		public static bool FindLine2Line2(ref Line2 line0, ref Line2 line1, out Line2Line2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B9808-0x00000001878B98DC
-		private static IntersectionTypes Classify(ref Line2 line, ref Ray2 ray, out float s0, out float s1) {
-			s0 = default;
-			s1 = default;
-			return default;
-		} // 0x00000001878B6D38-0x00000001878B6F40
-		public static bool TestLine2Ray2(ref Line2 line, ref Ray2 ray, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C3280-0x00000001878C3338
-		public static bool TestLine2Ray2(ref Line2 line, ref Ray2 ray) => default; // 0x00000001878C3224-0x00000001878C3280
-		public static bool FindLine2Ray2(ref Line2 line, ref Ray2 ray, out Line2Ray2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B98DC-0x00000001878B9A1C
-		private static IntersectionTypes Classify(ref Segment2 segment, ref Line2 line, out float s0, out float s1) {
-			s0 = default;
-			s1 = default;
-			return default;
-		} // 0x00000001878B6F40-0x00000001878B7158
-		public static bool TestLine2Segment2(ref Line2 line, ref Segment2 segment, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C3394-0x00000001878C3430
-		public static bool TestLine2Segment2(ref Line2 line, ref Segment2 segment) => default; // 0x00000001878C3338-0x00000001878C3394
-		public static bool FindLine2Segment2(ref Line2 line, ref Segment2 segment, out Line2Segment2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B9A1C-0x00000001878B9B40
-		private static void TriangleLineRelations(ref Vector2 origin, ref Vector2 direction, ref Triangle2 triangle, out float dist0, out float dist1, out float dist2, out int sign0, out int sign1, out int sign2, out int positive, out int negative, out int zero) {
-			dist0 = default;
-			dist1 = default;
-			dist2 = default;
-			sign0 = default;
-			sign1 = default;
-			sign2 = default;
-			positive = default;
-			negative = default;
-			zero = default;
-		} // 0x00000001878C90E8-0x00000001878C9370
-		private static bool GetInterval(ref Vector2 origin, ref Vector2 direction, ref Triangle2 triangle, float dist0, float dist1, float dist2, int sign0, int sign1, int sign2, out float param0, out float param1) {
-			param0 = default;
-			param1 = default;
-			return default;
-		} // 0x00000001878C1920-0x00000001878C1B8C
-		public static bool TestLine2Triangle2(ref Line2 line, ref Triangle2 triangle, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C3430-0x00000001878C35F8
-		public static bool TestLine2Triangle2(ref Line2 line, ref Triangle2 triangle) => default; // 0x00000001878C35F8-0x00000001878C3654
-		public static bool FindLine2Triangle2(ref Line2 line, ref Triangle2 triangle, out Line2Triangle2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B9B40-0x00000001878B9DE0
-		public static bool TestRay2AAB2(ref Ray2 ray, ref AAB2 box) => default; // 0x00000001878C497C-0x00000001878C4AA4
-		public static bool FindRay2AAB2(ref Ray2 ray, ref AAB2 box, out Ray2AAB2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BBA74-0x00000001878BBB0C
-		public static bool TestRay2Box2(ref Ray2 ray, ref Box2 box) => default; // 0x00000001878C4AA4-0x00000001878C4C90
-		public static bool FindRay2Box2(ref Ray2 ray, ref Box2 box, out Ray2Box2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BBB0C-0x00000001878BBBA4
-		public static bool TestRay2Circle2(ref Ray2 ray, ref Circle2 circle) => default; // 0x00000001878C4C90-0x00000001878C4D24
-		public static bool FindRay2Circle2(ref Ray2 ray, ref Circle2 circle, out Ray2Circle2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BBBA4-0x00000001878BBD80
-		public static bool TestRay2ConvexPolygon2(ref Ray2 ray, Polygon2 convexPolygon) => default; // 0x00000001878C4D24-0x00000001878C4E30
-		public static bool FindRay2ConvexPolygon2(ref Ray2 ray, Polygon2 convexPolygon, out Ray2ConvexPolygon2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BBD80-0x00000001878BC0C8
-		public static bool TestRay2Polygon2(ref Ray2 ray, Polygon2 polygon) => default; // 0x00000001878C4E30-0x00000001878C4F3C
-		public static bool TestRay2Polygon2(ref Ray2 ray, Segment2[] segments) => default; // 0x00000001878C4F3C-0x00000001878C4FDC
-		public static bool FindRay2Polygon2(ref Ray2 ray, Polygon2 polygon, out Ray2Polygon2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BC244-0x00000001878BC43C
-		public static bool FindRay2Polygon2(ref Ray2 ray, Segment2[] segments, out Ray2Polygon2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BC0C8-0x00000001878BC244
-		private static IntersectionTypes Classify(ref Ray2 ray0, ref Ray2 ray1, out float s0, out float s1) {
-			s0 = default;
-			s1 = default;
-			return default;
-		} // 0x00000001878B63A8-0x00000001878B65EC
-		public static bool TestRay2Ray2(ref Ray2 ray0, ref Ray2 ray1, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C4FDC-0x00000001878C5138
-		public static bool TestRay2Ray2(ref Ray2 ray0, ref Ray2 ray1) => default; // 0x00000001878C5138-0x00000001878C5194
-		public static bool FindRay2Ray2(ref Ray2 ray0, ref Ray2 ray1, out Ray2Ray2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BC43C-0x00000001878BC640
-		private static IntersectionTypes Classify(ref Ray2 ray, ref Segment2 segment, out float s0, out float s1) {
-			s0 = default;
-			s1 = default;
-			return default;
-		} // 0x00000001878B6A8C-0x00000001878B6D38
-		public static bool TestRay2Segment2(ref Ray2 ray, ref Segment2 segment, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C51F0-0x00000001878C533C
-		public static bool TestRay2Segment2(ref Ray2 ray, ref Segment2 segment) => default; // 0x00000001878C5194-0x00000001878C51F0
-		public static bool FindRay2Segment2(ref Ray2 ray, ref Segment2 segment, out Ray2Segment2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BC640-0x00000001878BC850
-		public static bool TestRay2Triangle2(ref Ray2 ray, ref Triangle2 triangle, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C533C-0x00000001878C5500
-		public static bool TestRay2Triangle2(ref Ray2 ray, ref Triangle2 triangle) => default; // 0x00000001878C5500-0x00000001878C555C
-		public static bool FindRay2Triangle2(ref Ray2 ray, ref Triangle2 triangle, out Ray2Triangle2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BC850-0x00000001878BCAEC
-		public static bool TestSegment2AAB2(ref Segment2 segment, ref AAB2 box) => default; // 0x00000001878C65C8-0x00000001878C6708
-		public static bool FindSegment2AAB2(ref Segment2 segment, ref AAB2 box, out Segment2AAB2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BDFF4-0x00000001878BE0B4
-		public static bool TestSegment2Box2(ref Segment2 segment, ref Box2 box) => default; // 0x00000001878C6708-0x00000001878C6908
-		public static bool FindSegment2Box2(ref Segment2 segment, ref Box2 box, out Segment2Box2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BE0B4-0x00000001878BE174
-		public static bool TestSegment2Circle2(ref Segment2 segment, ref Circle2 circle) => default; // 0x00000001878C6908-0x00000001878C69DC
-		public static bool FindSegment2Circle2(ref Segment2 segment, ref Circle2 circle, out Segment2Circle2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BE174-0x00000001878BE3DC
-		public static bool TestSegment2ConvexPolygon2(ref Segment2 segment, Polygon2 convexPolygon) => default; // 0x00000001878C69DC-0x00000001878C6A40
-		public static bool FindSegment2ConvexPolygon2(ref Segment2 segment, Polygon2 convexPolygon, out Segment2ConvexPolygon2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BE3DC-0x00000001878BE720
-		private static IntersectionTypes Classify(ref Segment2 segment0, ref Segment2 segment1, out float s0, out float s1) {
-			s0 = default;
-			s1 = default;
-			return default;
-		} // 0x00000001878B67B4-0x00000001878B6A8C
-		public static bool TestSegment2Segment2(ref Segment2 segment0, ref Segment2 segment1, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C6A9C-0x00000001878C6C00
-		public static bool TestSegment2Segment2(ref Segment2 segment0, ref Segment2 segment1) => default; // 0x00000001878C6A40-0x00000001878C6A9C
-		public static bool FindSegment2Segment2(ref Segment2 segment0, ref Segment2 segment1, out Segment2Segment2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BE720-0x00000001878BEA3C
-		public static bool TestSegment2Triangle2(ref Segment2 segment, ref Triangle2 triangle, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C6C5C-0x00000001878C6E44
-		public static bool TestSegment2Triangle2(ref Segment2 segment, ref Triangle2 triangle) => default; // 0x00000001878C6C00-0x00000001878C6C5C
-		public static bool FindSegment2Triangle2(ref Segment2 segment, ref Triangle2 triangle, out Segment2Triangle2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BEA3C-0x00000001878BED4C
-		private static int WhichSide(ref Triangle2 triangle, ref Vector2 P, ref Vector2 D) => default; // 0x00000001878C96B0-0x00000001878C9884
-		private static void ClipConvexPolygonAgainstLine(ref Vector2 edgeStart, ref Vector2 edgeEnd, ref int quantity, ref Triangle2Triangle2Intr info) {} // 0x00000001878B7158-0x00000001878B79DC
-		public static bool TestTriangle2Triangle2(ref Triangle2 triangle0, ref Triangle2 triangle1) => default; // 0x00000001878C7F8C-0x00000001878C81D8
-		public static bool FindTriangle2Triangle2(ref Triangle2 triangle0, ref Triangle2 triangle1, out Triangle2Triangle2Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878C0770-0x00000001878C08B8
-		public static bool TestAAB3AAB3(ref AAB3 box0, ref AAB3 box1) => default; // 0x00000001878C24B8-0x00000001878C2500
-		public static bool FindAAB3AAB3(ref AAB3 box0, ref AAB3 box1, out AAB3 intersection) {
-			intersection = default;
-			return default;
-		} // 0x00000001878B8E94-0x00000001878B8F80
-		public static bool TestAAB3AAB3OverlapX(ref AAB3 box0, ref AAB3 box1) => default; // 0x00000001878C2464-0x00000001878C2480
-		public static bool TestAAB3AAB3OverlapY(ref AAB3 box0, ref AAB3 box1) => default; // 0x00000001878C2480-0x00000001878C249C
-		public static bool TestAAB3AAB3OverlapZ(ref AAB3 box0, ref AAB3 box1) => default; // 0x00000001878C249C-0x00000001878C24B8
-		public static bool TestAAB3Sphere3(ref AAB3 box, ref Sphere3 sphere) => default; // 0x0000000184265F40-0x0000000184265FD0
-		public static bool TestBox3Box3(ref Box3 box0, ref Box3 box1) => default; // 0x0000000184402350-0x00000001844028C0
-		public static bool TestBox3Capsule3(ref Box3 box, ref Capsule3 capsule) => default; // 0x00000001878C2908-0x00000001878C2930
-		public static bool TestBox3Sphere3(ref Box3 box, ref Sphere3 sphere) => default; // 0x00000001878C2930-0x00000001878C2B34
-		private static bool DoClipping(float t0, float t1, ref Vector3 origin, ref Vector3 direction, ref AAB3 box, bool solid, out int quantity, out Vector3 point0, out Vector3 point1, out IntersectionTypes intrType) {
-			quantity = default;
-			point0 = default;
-			point1 = default;
-			intrType = default;
-			return default;
-		} // 0x00000001878B7D7C-0x00000001878B81CC
-		public static bool TestLine3AAB3(ref Line3 line, ref AAB3 box) => default; // 0x00000001878C3654-0x00000001878C37F0
-		public static bool FindLine3AAB3(ref Line3 line, ref AAB3 box, out Line3AAB3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B9DE0-0x00000001878B9E7C
-		private static bool DoClipping(float t0, float t1, ref Vector3 origin, ref Vector3 direction, ref Box3 box, bool solid, out int quantity, out Vector3 point0, out Vector3 point1, out IntersectionTypes intrType) {
-			quantity = default;
-			point0 = default;
-			point1 = default;
-			intrType = default;
-			return default;
-		} // 0x00000001878B8530-0x00000001878B8B28
-		public static bool TestLine3Box3(ref Line3 line, ref Box3 box) => default; // 0x00000001878C37F0-0x00000001878C3AB0
-		public static bool FindLine3Box3(ref Line3 line, ref Box3 box, out Line3Box3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B9E7C-0x00000001878B9F18
-		public static bool TestLine3Circle3(ref Line3 line, ref Circle3 circle) => default; // 0x00000001878C3AB0-0x00000001878C3B10
-		public static bool FindLine3Circle3(ref Line3 line, ref Circle3 circle, out Line3Circle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B9F18-0x00000001878BA12C
-		public static bool TestLine3Plane3(ref Line3 line, ref Plane3 plane, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C3B10-0x00000001878C3C48
-		public static bool TestLine3Plane3(ref Line3 line, ref Plane3 plane) => default; // 0x00000001878C3C48-0x00000001878C3CA4
-		public static bool FindLine3Plane3(ref Line3 line, ref Plane3 plane, out Line3Plane3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BA12C-0x00000001878BA2AC
-		public static bool TestLine3Polygon3(ref Line3 line, Polygon3 polygon) => default; // 0x00000001878C3CA4-0x00000001878C3D04
-		public static bool FindLine3Polygon3(ref Line3 line, Polygon3 polygon, out Line3Polygon3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BA2AC-0x00000001878BA48C
-		private static bool Point3InsideRectangle3(ref Vector3 point, ref Rectangle3 rectangle) => default; // 0x00000001878C203C-0x00000001878C2168
-		public static bool TestLine3Rectangle3(ref Line3 line, ref Rectangle3 rectangle) => default; // 0x00000001878C3D04-0x00000001878C3D64
-		public static bool FindLine3Rectangle3(ref Line3 line, ref Rectangle3 rectangle, out Line3Rectangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BA48C-0x00000001878BA674
-		public static bool TestLine3Sphere3(ref Line3 line, ref Sphere3 sphere) => default; // 0x00000001878C3D64-0x00000001878C3E78
-		public static bool FindLine3Sphere3(ref Line3 line, ref Sphere3 sphere, out Line3Sphere3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BA674-0x00000001878BA96C
-		public static bool TestLine3Triangle3(ref Line3 line, ref Triangle3 triangle, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C41DC-0x00000001878C450C
-		public static bool TestLine3Triangle3(ref Line3 line, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C4118-0x00000001878C41DC
-		public static bool TestLine3Triangle3(ref Line3 line, Vector3 v0, Vector3 v1, Vector3 v2, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C3F94-0x00000001878C4058
-		public static bool TestLine3Triangle3(ref Line3 line, ref Triangle3 triangle) => default; // 0x00000001878C3E78-0x00000001878C3ED4
-		public static bool TestLine3Triangle3(ref Line3 line, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2) => default; // 0x00000001878C4058-0x00000001878C4118
-		public static bool TestLine3Triangle3(ref Line3 line, Vector3 v0, Vector3 v1, Vector3 v2) => default; // 0x00000001878C3ED4-0x00000001878C3F94
-		public static bool FindLine3Triangle3(ref Line3 line, ref Triangle3 triangle, out Line3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BAAF4-0x00000001878BAEFC
-		public static bool FindLine3Triangle3(ref Line3 line, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out Line3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BA96C-0x00000001878BAA30
-		public static bool FindLine3Triangle3(ref Line3 line, Vector3 v0, Vector3 v1, Vector3 v2, out Line3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BAA30-0x00000001878BAAF4
-		public static bool TestPlane3AAB3(ref Plane3 plane, ref AAB3 box) => default; // 0x00000001878C450C-0x00000001878C45DC
-		public static bool TestPlane3Box3(ref Plane3 plane, ref Box3 box) => default; // 0x00000001878C45DC-0x00000001878C4748
-		public static bool TestPlane3Plane3(ref Plane3 plane0, ref Plane3 plane1) => default; // 0x00000001878C4748-0x00000001878C47E8
-		public static bool FindPlane3Plane3(ref Plane3 plane0, ref Plane3 plane1, out Plane3Plane3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BAEFC-0x00000001878BB138
-		public static bool TestPlane3Sphere3(ref Plane3 plane, ref Sphere3 sphere) => default; // 0x00000001878C47E8-0x00000001878C481C
-		public static bool FindPlane3Sphere3(ref Plane3 plane, ref Sphere3 sphere, out Plane3Sphere3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BB138-0x00000001878BB2B8
-		public static bool TestPlane3Triangle3(ref Plane3 plane, ref Triangle3 triangle) => default; // 0x00000001878C481C-0x00000001878C497C
-		public static bool FindPlane3Triangle3(ref Plane3 plane, ref Triangle3 triangle, out Plane3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BB2B8-0x00000001878BBA74
-		public static bool TestRay3AAB3(ref Ray3 ray, ref AAB3 box) => default; // 0x00000001878C555C-0x00000001878C57A8
-		public static bool FindRay3AAB3(ref Ray3 ray, ref AAB3 box, out Ray3AAB3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BCAEC-0x00000001878BCB84
-		public static bool TestRay3Box3(ref Ray3 ray, ref Box3 box) => default; // 0x00000001878C57A8-0x00000001878C5B70
-		public static bool FindRay3Box3(ref Ray3 ray, ref Box3 box, out Ray3Box3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BCB84-0x00000001878BCC1C
-		public static bool TestRay3Circle3(ref Ray3 ray, ref Circle3 circle) => default; // 0x00000001878C5B70-0x00000001878C5BD0
-		public static bool FindRay3Circle3(ref Ray3 ray, ref Circle3 circle, out Ray3Circle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BCC1C-0x00000001878BCEA4
-		public static bool TestRay3Plane3(ref Ray3 ray, ref Plane3 plane, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C5C34-0x00000001878C5CAC
-		public static bool TestRay3Plane3(ref Ray3 ray, ref Plane3 plane) => default; // 0x00000001878C5BD0-0x00000001878C5C34
-		public static bool FindRay3Plane3(ref Ray3 ray, ref Plane3 plane, out Ray3Plane3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BCEA4-0x00000001878BD0A8
-		public static bool TestRay3Polygon3(ref Ray3 ray, Polygon3 polygon) => default; // 0x00000001878C5CAC-0x00000001878C5D0C
-		public static bool FindRay3Polygon3(ref Ray3 ray, Polygon3 polygon, out Ray3Polygon3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BD0A8-0x00000001878BD300
-		public static bool TestRay3Rectangle3(ref Ray3 ray, ref Rectangle3 rectangle) => default; // 0x00000001878C5D0C-0x00000001878C5D6C
-		public static bool FindRay3Rectangle3(ref Ray3 ray, ref Rectangle3 rectangle, out Ray3Rectangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BD300-0x00000001878BD554
-		public static bool TestRay3Sphere3(ref Ray3 ray, ref Sphere3 sphere) => default; // 0x00000001878C5D6C-0x00000001878C5EB4
-		public static bool FindRay3Sphere3(ref Ray3 ray, ref Sphere3 sphere, out Ray3Sphere3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BD554-0x00000001878BD920
-		public static bool TestRay3Triangle3(ref Ray3 ray, ref Triangle3 triangle, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C6218-0x00000001878C65C8
-		public static bool TestRay3Triangle3(ref Ray3 ray, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C5EB4-0x00000001878C5F78
-		public static bool TestRay3Triangle3(ref Ray3 ray, Vector3 v0, Vector3 v1, Vector3 v2, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C5F78-0x00000001878C603C
-		public static bool TestRay3Triangle3(ref Ray3 ray, ref Triangle3 triangle) => default; // 0x00000001878C60FC-0x00000001878C6158
-		public static bool TestRay3Triangle3(ref Ray3 ray, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2) => default; // 0x00000001878C6158-0x00000001878C6218
-		public static bool TestRay3Triangle3(ref Ray3 ray, Vector3 v0, Vector3 v1, Vector3 v2) => default; // 0x00000001878C603C-0x00000001878C60FC
-		public static bool FindRay3Triangle3(ref Ray3 ray, ref Triangle3 triangle, out Ray3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BD9E4-0x00000001878BDE1C
-		public static bool FindRay3Triangle3(ref Ray3 ray, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out Ray3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BD920-0x00000001878BD9E4
-		public static bool FindRay3Triangle3(ref Ray3 ray, Vector3 v0, Vector3 v1, Vector3 v2, out Ray3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BDE1C-0x00000001878BDEE0
-		public static bool TestSegment3AAB3(ref Segment3 segment, ref AAB3 box) => default; // 0x00000001878C6E44-0x00000001878C7090
-		public static bool FindSegment3AAB3(ref Segment3 segment, ref AAB3 box, out Segment3AAB3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BED4C-0x00000001878BEE0C
-		public static bool TestSegment3Box3(ref Segment3 segment, ref Box3 box) => default; // 0x00000001878C7090-0x00000001878C7444
-		public static bool FindSegment3Box3(ref Segment3 segment, ref Box3 box, out Segment3Box3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BEE0C-0x00000001878BEECC
-		public static bool TestSegment3Circle3(ref Segment3 segment, ref Circle3 circle) => default; // 0x00000001878C7444-0x00000001878C74A4
-		public static bool FindSegment3Circle3(ref Segment3 segment, ref Circle3 circle, out Segment3Circle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BEECC-0x00000001878BF15C
-		public static bool TestSegment3Plane3(ref Segment3 segment, ref Plane3 plane, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C7500-0x00000001878C764C
-		public static bool TestSegment3Plane3(ref Segment3 segment, ref Plane3 plane) => default; // 0x00000001878C74A4-0x00000001878C7500
-		public static bool FindSegment3Plane3(ref Segment3 segment, ref Plane3 plane, out Segment3Plane3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BF15C-0x00000001878BF394
-		public static bool TestSegment3Polygon3(ref Segment3 segment, Polygon3 polygon) => default; // 0x00000001878C764C-0x00000001878C76AC
-		public static bool FindSegment3Polygon3(ref Segment3 segment, Polygon3 polygon, out Segment3Polygon3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BF394-0x00000001878BF5E8
-		public static bool TestSegment3Rectangle3(ref Segment3 segment, ref Rectangle3 rectangle) => default; // 0x00000001878C76AC-0x00000001878C770C
-		public static bool FindSegment3Rectangle3(ref Segment3 segment, ref Rectangle3 rectangle, out Segment3Rectangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BF5E8-0x00000001878BF848
-		public static bool TestSegment3Sphere3(ref Segment3 segment, ref Sphere3 sphere) => default; // 0x00000001878C770C-0x00000001878C7880
-		public static bool FindSegment3Sphere3(ref Segment3 segment, ref Sphere3 sphere, out Segment3Sphere3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BF848-0x00000001878BFCB4
-		public static bool TestSegment3Triangle3(ref Segment3 segment, ref Triangle3 triangle, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C7B88-0x00000001878C7F30
-		public static bool TestSegment3Triangle3(ref Segment3 segment, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C7AC4-0x00000001878C7B88
-		public static bool TestSegment3Triangle3(ref Segment3 segment, Vector3 v0, Vector3 v1, Vector3 v2, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C7940-0x00000001878C7A04
-		public static bool TestSegment3Triangle3(ref Segment3 segment, ref Triangle3 triangle) => default; // 0x00000001878C7F30-0x00000001878C7F8C
-		public static bool TestSegment3Triangle3(ref Segment3 segment, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2) => default; // 0x00000001878C7A04-0x00000001878C7AC4
-		public static bool TestSegment3Triangle3(ref Segment3 segment, Vector3 v0, Vector3 v1, Vector3 v2) => default; // 0x00000001878C7880-0x00000001878C7940
-		public static bool FindSegment3Triangle3(ref Segment3 segment, ref Triangle3 triangle, out Segment3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BFD78-0x00000001878C0200
-		public static bool FindSegment3Triangle3(ref Segment3 segment, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out Segment3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878C0200-0x00000001878C02C4
-		public static bool FindSegment3Triangle3(ref Segment3 segment, Vector3 v0, Vector3 v1, Vector3 v2, out Segment3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878BFCB4-0x00000001878BFD78
-		public static bool TestSphere3Sphere3(ref Sphere3 sphere0, ref Sphere3 sphere1) => default; // 0x0000000185F4CBB0-0x0000000185F4CC30
-		public static bool FindSphere3Sphere3(ref Sphere3 sphere0, ref Sphere3 sphere1, out Sphere3Sphere3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878C02C4-0x00000001878C0770
-		private static void ProjectOntoAxis(ref Triangle3 triangle, ref Vector3 axis, out float fmin, out float fmax) {
-			fmin = default;
-			fmax = default;
-		} // 0x00000001878C2168-0x00000001878C22CC
-		private static void TrianglePlaneRelations(ref Triangle3 triangle, ref Plane3 plane, out float dist0, out float dist1, out float dist2, out int sign0, out int sign1, out int sign2, out int positive, out int negative, out int zero) {
-			dist0 = default;
-			dist1 = default;
-			dist2 = default;
-			sign0 = default;
-			sign1 = default;
-			sign2 = default;
-			positive = default;
-			negative = default;
-			zero = default;
-		} // 0x00000001878C9424-0x00000001878C9580
-		private static bool TrianglePlaneRelationsQuick(ref Triangle3 triangle, ref Plane3 plane) => default; // 0x00000001878C9370-0x00000001878C9424
-		private static bool IntersectsSegment(ref Plane3 plane, ref Triangle3 triangle, ref Vector3 end0, ref Vector3 end1, bool grazing, out Triangle3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878C1B8C-0x00000001878C203C
-		private static int QueryToLine(ref Vector2 test, ref Vector2 vec0, ref Vector2 vec1) => default; // 0x00000001878C22CC-0x00000001878C2320
-		private static int QueryToTriangle(ref Vector2 test, ref Vector2 v0, ref Vector2 v1, ref Vector2 v2) => default; // 0x00000001878C2320-0x00000001878C23FC
-		private static bool ContainsPoint(ref Triangle3 triangle, ref Plane3 plane, ref Vector3 point, out Triangle3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878B7A3C-0x00000001878B7D7C
-		private static bool GetCoplanarIntersection(ref Plane3 plane, ref Triangle3 tri0, ref Triangle3 tri1, out Triangle3Triangle3Intr info) {
-			info = default;
-			return default;
-		} // 0x00000001878C1308-0x00000001878C1920
-		public static bool TestTriangle3Triangle3(ref Triangle3 triangle0, ref Triangle3 triangle1, out IntersectionTypes intersectionType) {
-			intersectionType = default;
-			return default;
-		} // 0x00000001878C81D8-0x00000001878C908C
-		public static bool TestTriangle3Triangle3(ref Triangle3 triangle0, ref Triangle3 triangle1) => default; // 0x00000001878C908C-0x00000001878C90E8
-		public static bool FindTriangle3Triangle3(ref Triangle3 triangle0, ref Triangle3 triangle1, out Triangle3Triangle3Intr info, bool reportCoplanarIntersections = false /* Metadata: 0x0207BFDF */) {
-			info = default;
-			return default;
-		} // 0x00000001878C08B8-0x00000001878C11B0
-		public static int FindSegment1Segment1(float seg0Start, float seg0End, float seg1Start, float seg1End, out float w0, out float w1) {
-			w0 = default;
-			w1 = default;
-			return default;
-		} // 0x00000001878BDEE0-0x00000001878BDFF4
+		public static bool TestAAB2AAB2(ref AAB2 box0, ref AAB2 box1); // 0x000000018692C508-0x000000018692C538
+		public static bool FindAAB2AAB2(ref AAB2 box0, ref AAB2 box1, out AAB2 intersection); // 0x0000000186922EDC-0x0000000186922F68
+		public static bool TestAAB2AAB2OverlapX(ref AAB2 box0, ref AAB2 box1); // 0x000000018692C4D0-0x000000018692C4EC
+		public static bool TestAAB2AAB2OverlapY(ref AAB2 box0, ref AAB2 box1); // 0x000000018692C4EC-0x000000018692C508
+		public static bool TestAAB2Circle2(ref AAB2 box, ref Circle2 circle); // 0x000000018355A4A0-0x000000018355A510
+		public static bool TestBox2Box2(ref Box2 box0, ref Box2 box1); // 0x000000018692C5D4-0x000000018692C8A4
+		public static bool TestBox2Circle2(ref Box2 box, ref Circle2 circle); // 0x000000018692C8A4-0x000000018692C9DC
+		public static bool TestCircle2Circle2(ref Circle2 circle0, ref Circle2 circle1); // 0x000000018692D6C0-0x000000018692D710
+		public static bool FindCircle2Circle2(ref Circle2 circle0, ref Circle2 circle1, out Circle2Circle2Intr info); // 0x0000000186923054-0x00000001869232AC
+		private static int WhichSide(Polygon2 V, Vector2 P, ref Vector2 D); // 0x000000018693410C-0x000000018693423C
+		public static bool TestConvexPolygon2ConvexPolygon2(Polygon2 convexPolygon0, Polygon2 convexPolygon1); // 0x000000018692D710-0x000000018692D908
+		private static bool DoClipping(float t0, float t1, ref Vector2 origin, ref Vector2 direction, ref AAB2 box, bool solid, out int quantity, out Vector2 point0, out Vector2 point1, out IntersectionTypes intrType); // 0x0000000186922BFC-0x0000000186922EDC
+		public static bool TestLine2AAB2(ref Line2 line, ref AAB2 box); // 0x000000018692D908-0x000000018692DA60
+		public static bool FindLine2AAB2(ref Line2 line, ref AAB2 box, out Line2AAB2Intr info); // 0x00000001869232AC-0x0000000186923348
+		private static bool Clip(float denom, float numer, ref float t0, ref float t1); // 0x0000000186921AB0-0x0000000186921B10
+		private static bool DoClipping(float t0, float t1, ref Vector2 origin, ref Vector2 direction, ref Box2 box, bool solid, out int quantity, out Vector2 point0, out Vector2 point1, out IntersectionTypes intrType); // 0x00000001869222A0-0x0000000186922604
+		public static bool TestLine2Box2(ref Line2 line, ref Box2 box); // 0x000000018692DA60-0x000000018692DB50
+		public static bool FindLine2Box2(ref Line2 line, ref Box2 box, out Line2Box2Intr info); // 0x0000000186923348-0x00000001869233E4
+		private static bool Find(ref Vector2 origin, ref Vector2 direction, ref Vector2 center, float radius, out int rootCount, out float t0, out float t1); // 0x000000018692B284-0x000000018692B3DC
+		public static bool TestLine2Circle2(ref Line2 line, ref Circle2 circle); // 0x000000018692DB50-0x000000018692DBD8
+		public static bool FindLine2Circle2(ref Line2 line, ref Circle2 circle, out Line2Circle2Intr info); // 0x00000001869233E4-0x0000000186923590
+		public static bool TestLine2ConvexPolygon2(ref Line2 line, Polygon2 convexPolygon); // 0x000000018692DBD8-0x000000018692DCE4
+		public static bool FindLine2ConvexPolygon2(ref Line2 line, Polygon2 convexPolygon, out Line2ConvexPolygon2Intr info); // 0x0000000186923590-0x00000001869238DC
+		private static IntersectionTypes Classify(ref Line2 line0, ref Line2 line1, out float s0); // 0x00000001869206C0-0x0000000186920888
+		public static bool TestLine2Line2(ref Line2 line0, ref Line2 line1, out IntersectionTypes intersectionType); // 0x000000018692DD40-0x000000018692DDB0
+		public static bool TestLine2Line2(ref Line2 line0, ref Line2 line1); // 0x000000018692DCE4-0x000000018692DD40
+		public static bool FindLine2Line2(ref Line2 line0, ref Line2 line1, out Line2Line2Intr info); // 0x00000001869238DC-0x00000001869239B0
+		private static IntersectionTypes Classify(ref Line2 line, ref Ray2 ray, out float s0, out float s1); // 0x0000000186920E0C-0x0000000186921014
+		public static bool TestLine2Ray2(ref Line2 line, ref Ray2 ray, out IntersectionTypes intersectionType); // 0x000000018692DE0C-0x000000018692DEC4
+		public static bool TestLine2Ray2(ref Line2 line, ref Ray2 ray); // 0x000000018692DDB0-0x000000018692DE0C
+		public static bool FindLine2Ray2(ref Line2 line, ref Ray2 ray, out Line2Ray2Intr info); // 0x00000001869239B0-0x0000000186923AF0
+		private static IntersectionTypes Classify(ref Segment2 segment, ref Line2 line, out float s0, out float s1); // 0x0000000186921014-0x000000018692122C
+		public static bool TestLine2Segment2(ref Line2 line, ref Segment2 segment, out IntersectionTypes intersectionType); // 0x000000018692DF20-0x000000018692DFBC
+		public static bool TestLine2Segment2(ref Line2 line, ref Segment2 segment); // 0x000000018692DEC4-0x000000018692DF20
+		public static bool FindLine2Segment2(ref Line2 line, ref Segment2 segment, out Line2Segment2Intr info); // 0x0000000186923AF0-0x0000000186923C14
+		private static void TriangleLineRelations(ref Vector2 origin, ref Vector2 direction, ref Triangle2 triangle, out float dist0, out float dist1, out float dist2, out int sign0, out int sign1, out int sign2, out int positive, out int negative, out int zero); // 0x0000000186933C74-0x0000000186933EFC
+		private static bool GetInterval(ref Vector2 origin, ref Vector2 direction, ref Triangle2 triangle, float dist0, float dist1, float dist2, int sign0, int sign1, int sign2, out float param0, out float param1); // 0x000000018692B9F4-0x000000018692BC60
+		public static bool TestLine2Triangle2(ref Line2 line, ref Triangle2 triangle, out IntersectionTypes intersectionType); // 0x000000018692DFBC-0x000000018692E184
+		public static bool TestLine2Triangle2(ref Line2 line, ref Triangle2 triangle); // 0x000000018692E184-0x000000018692E1E0
+		public static bool FindLine2Triangle2(ref Line2 line, ref Triangle2 triangle, out Line2Triangle2Intr info); // 0x0000000186923C14-0x0000000186923EB4
+		public static bool TestRay2AAB2(ref Ray2 ray, ref AAB2 box); // 0x000000018692F508-0x000000018692F630
+		public static bool FindRay2AAB2(ref Ray2 ray, ref AAB2 box, out Ray2AAB2Intr info); // 0x0000000186925B48-0x0000000186925BE0
+		public static bool TestRay2Box2(ref Ray2 ray, ref Box2 box); // 0x000000018692F630-0x000000018692F81C
+		public static bool FindRay2Box2(ref Ray2 ray, ref Box2 box, out Ray2Box2Intr info); // 0x0000000186925BE0-0x0000000186925C78
+		public static bool TestRay2Circle2(ref Ray2 ray, ref Circle2 circle); // 0x000000018692F81C-0x000000018692F8B0
+		public static bool FindRay2Circle2(ref Ray2 ray, ref Circle2 circle, out Ray2Circle2Intr info); // 0x0000000186925C78-0x0000000186925E54
+		public static bool TestRay2ConvexPolygon2(ref Ray2 ray, Polygon2 convexPolygon); // 0x000000018692F8B0-0x000000018692F9BC
+		public static bool FindRay2ConvexPolygon2(ref Ray2 ray, Polygon2 convexPolygon, out Ray2ConvexPolygon2Intr info); // 0x0000000186925E54-0x000000018692619C
+		public static bool TestRay2Polygon2(ref Ray2 ray, Polygon2 polygon); // 0x000000018692F9BC-0x000000018692FAC8
+		public static bool TestRay2Polygon2(ref Ray2 ray, Segment2[] segments); // 0x000000018692FAC8-0x000000018692FB68
+		public static bool FindRay2Polygon2(ref Ray2 ray, Polygon2 polygon, out Ray2Polygon2Intr info); // 0x0000000186926318-0x0000000186926510
+		public static bool FindRay2Polygon2(ref Ray2 ray, Segment2[] segments, out Ray2Polygon2Intr info); // 0x000000018692619C-0x0000000186926318
+		private static IntersectionTypes Classify(ref Ray2 ray0, ref Ray2 ray1, out float s0, out float s1); // 0x000000018692047C-0x00000001869206C0
+		public static bool TestRay2Ray2(ref Ray2 ray0, ref Ray2 ray1, out IntersectionTypes intersectionType); // 0x000000018692FB68-0x000000018692FCC4
+		public static bool TestRay2Ray2(ref Ray2 ray0, ref Ray2 ray1); // 0x000000018692FCC4-0x000000018692FD20
+		public static bool FindRay2Ray2(ref Ray2 ray0, ref Ray2 ray1, out Ray2Ray2Intr info); // 0x0000000186926510-0x0000000186926714
+		private static IntersectionTypes Classify(ref Ray2 ray, ref Segment2 segment, out float s0, out float s1); // 0x0000000186920B60-0x0000000186920E0C
+		public static bool TestRay2Segment2(ref Ray2 ray, ref Segment2 segment, out IntersectionTypes intersectionType); // 0x000000018692FD7C-0x000000018692FEC8
+		public static bool TestRay2Segment2(ref Ray2 ray, ref Segment2 segment); // 0x000000018692FD20-0x000000018692FD7C
+		public static bool FindRay2Segment2(ref Ray2 ray, ref Segment2 segment, out Ray2Segment2Intr info); // 0x0000000186926714-0x0000000186926924
+		public static bool TestRay2Triangle2(ref Ray2 ray, ref Triangle2 triangle, out IntersectionTypes intersectionType); // 0x000000018692FEC8-0x000000018693008C
+		public static bool TestRay2Triangle2(ref Ray2 ray, ref Triangle2 triangle); // 0x000000018693008C-0x00000001869300E8
+		public static bool FindRay2Triangle2(ref Ray2 ray, ref Triangle2 triangle, out Ray2Triangle2Intr info); // 0x0000000186926924-0x0000000186926BC0
+		public static bool TestSegment2AAB2(ref Segment2 segment, ref AAB2 box); // 0x0000000186931154-0x0000000186931294
+		public static bool FindSegment2AAB2(ref Segment2 segment, ref AAB2 box, out Segment2AAB2Intr info); // 0x00000001869280C8-0x0000000186928188
+		public static bool TestSegment2Box2(ref Segment2 segment, ref Box2 box); // 0x0000000186931294-0x0000000186931494
+		public static bool FindSegment2Box2(ref Segment2 segment, ref Box2 box, out Segment2Box2Intr info); // 0x0000000186928188-0x0000000186928248
+		public static bool TestSegment2Circle2(ref Segment2 segment, ref Circle2 circle); // 0x0000000186931494-0x0000000186931568
+		public static bool FindSegment2Circle2(ref Segment2 segment, ref Circle2 circle, out Segment2Circle2Intr info); // 0x0000000186928248-0x00000001869284B0
+		public static bool TestSegment2ConvexPolygon2(ref Segment2 segment, Polygon2 convexPolygon); // 0x0000000186931568-0x00000001869315CC
+		public static bool FindSegment2ConvexPolygon2(ref Segment2 segment, Polygon2 convexPolygon, out Segment2ConvexPolygon2Intr info); // 0x00000001869284B0-0x00000001869287F4
+		private static IntersectionTypes Classify(ref Segment2 segment0, ref Segment2 segment1, out float s0, out float s1); // 0x0000000186920888-0x0000000186920B60
+		public static bool TestSegment2Segment2(ref Segment2 segment0, ref Segment2 segment1, out IntersectionTypes intersectionType); // 0x0000000186931628-0x000000018693178C
+		public static bool TestSegment2Segment2(ref Segment2 segment0, ref Segment2 segment1); // 0x00000001869315CC-0x0000000186931628
+		public static bool FindSegment2Segment2(ref Segment2 segment0, ref Segment2 segment1, out Segment2Segment2Intr info); // 0x00000001869287F4-0x0000000186928B10
+		public static bool TestSegment2Triangle2(ref Segment2 segment, ref Triangle2 triangle, out IntersectionTypes intersectionType); // 0x00000001869317E8-0x00000001869319D0
+		public static bool TestSegment2Triangle2(ref Segment2 segment, ref Triangle2 triangle); // 0x000000018693178C-0x00000001869317E8
+		public static bool FindSegment2Triangle2(ref Segment2 segment, ref Triangle2 triangle, out Segment2Triangle2Intr info); // 0x0000000186928B10-0x0000000186928E20
+		private static int WhichSide(ref Triangle2 triangle, ref Vector2 P, ref Vector2 D); // 0x000000018693423C-0x0000000186934410
+		private static void ClipConvexPolygonAgainstLine(ref Vector2 edgeStart, ref Vector2 edgeEnd, ref int quantity, ref Triangle2Triangle2Intr info); // 0x000000018692122C-0x0000000186921AB0
+		public static bool TestTriangle2Triangle2(ref Triangle2 triangle0, ref Triangle2 triangle1); // 0x0000000186932B18-0x0000000186932D64
+		public static bool FindTriangle2Triangle2(ref Triangle2 triangle0, ref Triangle2 triangle1, out Triangle2Triangle2Intr info); // 0x000000018692A844-0x000000018692A98C
+		public static bool TestAAB3AAB3(ref AAB3 box0, ref AAB3 box1); // 0x000000018692C58C-0x000000018692C5D4
+		public static bool FindAAB3AAB3(ref AAB3 box0, ref AAB3 box1, out AAB3 intersection); // 0x0000000186922F68-0x0000000186923054
+		public static bool TestAAB3AAB3OverlapX(ref AAB3 box0, ref AAB3 box1); // 0x000000018692C538-0x000000018692C554
+		public static bool TestAAB3AAB3OverlapY(ref AAB3 box0, ref AAB3 box1); // 0x000000018692C554-0x000000018692C570
+		public static bool TestAAB3AAB3OverlapZ(ref AAB3 box0, ref AAB3 box1); // 0x000000018692C570-0x000000018692C58C
+		public static bool TestAAB3Sphere3(ref AAB3 box, ref Sphere3 sphere); // 0x00000001833A4D40-0x00000001833A4DD0
+		public static bool TestBox3Box3(ref Box3 box0, ref Box3 box1); // 0x000000018692C9DC-0x000000018692D494
+		public static bool TestBox3Capsule3(ref Box3 box, ref Capsule3 capsule); // 0x000000018692D494-0x000000018692D4BC
+		public static bool TestBox3Sphere3(ref Box3 box, ref Sphere3 sphere); // 0x000000018692D4BC-0x000000018692D6C0
+		private static bool DoClipping(float t0, float t1, ref Vector3 origin, ref Vector3 direction, ref AAB3 box, bool solid, out int quantity, out Vector3 point0, out Vector3 point1, out IntersectionTypes intrType); // 0x0000000186921E50-0x00000001869222A0
+		public static bool TestLine3AAB3(ref Line3 line, ref AAB3 box); // 0x000000018692E1E0-0x000000018692E37C
+		public static bool FindLine3AAB3(ref Line3 line, ref AAB3 box, out Line3AAB3Intr info); // 0x0000000186923EB4-0x0000000186923F50
+		private static bool DoClipping(float t0, float t1, ref Vector3 origin, ref Vector3 direction, ref Box3 box, bool solid, out int quantity, out Vector3 point0, out Vector3 point1, out IntersectionTypes intrType); // 0x0000000186922604-0x0000000186922BFC
+		public static bool TestLine3Box3(ref Line3 line, ref Box3 box); // 0x000000018692E37C-0x000000018692E63C
+		public static bool FindLine3Box3(ref Line3 line, ref Box3 box, out Line3Box3Intr info); // 0x0000000186923F50-0x0000000186923FEC
+		public static bool TestLine3Circle3(ref Line3 line, ref Circle3 circle); // 0x000000018692E63C-0x000000018692E69C
+		public static bool FindLine3Circle3(ref Line3 line, ref Circle3 circle, out Line3Circle3Intr info); // 0x0000000186923FEC-0x0000000186924200
+		public static bool TestLine3Plane3(ref Line3 line, ref Plane3 plane, out IntersectionTypes intersectionType); // 0x000000018692E69C-0x000000018692E7D4
+		public static bool TestLine3Plane3(ref Line3 line, ref Plane3 plane); // 0x000000018692E7D4-0x000000018692E830
+		public static bool FindLine3Plane3(ref Line3 line, ref Plane3 plane, out Line3Plane3Intr info); // 0x0000000186924200-0x0000000186924380
+		public static bool TestLine3Polygon3(ref Line3 line, Polygon3 polygon); // 0x000000018692E830-0x000000018692E890
+		public static bool FindLine3Polygon3(ref Line3 line, Polygon3 polygon, out Line3Polygon3Intr info); // 0x0000000186924380-0x0000000186924560
+		private static bool Point3InsideRectangle3(ref Vector3 point, ref Rectangle3 rectangle); // 0x000000018692C110-0x000000018692C23C
+		public static bool TestLine3Rectangle3(ref Line3 line, ref Rectangle3 rectangle); // 0x000000018692E890-0x000000018692E8F0
+		public static bool FindLine3Rectangle3(ref Line3 line, ref Rectangle3 rectangle, out Line3Rectangle3Intr info); // 0x0000000186924560-0x0000000186924748
+		public static bool TestLine3Sphere3(ref Line3 line, ref Sphere3 sphere); // 0x000000018692E8F0-0x000000018692EA04
+		public static bool FindLine3Sphere3(ref Line3 line, ref Sphere3 sphere, out Line3Sphere3Intr info); // 0x0000000186924748-0x0000000186924A40
+		public static bool TestLine3Triangle3(ref Line3 line, ref Triangle3 triangle, out IntersectionTypes intersectionType); // 0x000000018692ED68-0x000000018692F098
+		public static bool TestLine3Triangle3(ref Line3 line, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out IntersectionTypes intersectionType); // 0x000000018692ECA4-0x000000018692ED68
+		public static bool TestLine3Triangle3(ref Line3 line, Vector3 v0, Vector3 v1, Vector3 v2, out IntersectionTypes intersectionType); // 0x000000018692EB20-0x000000018692EBE4
+		public static bool TestLine3Triangle3(ref Line3 line, ref Triangle3 triangle); // 0x000000018692EA04-0x000000018692EA60
+		public static bool TestLine3Triangle3(ref Line3 line, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2); // 0x000000018692EBE4-0x000000018692ECA4
+		public static bool TestLine3Triangle3(ref Line3 line, Vector3 v0, Vector3 v1, Vector3 v2); // 0x000000018692EA60-0x000000018692EB20
+		public static bool FindLine3Triangle3(ref Line3 line, ref Triangle3 triangle, out Line3Triangle3Intr info); // 0x0000000186924BC8-0x0000000186924FD0
+		public static bool FindLine3Triangle3(ref Line3 line, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out Line3Triangle3Intr info); // 0x0000000186924A40-0x0000000186924B04
+		public static bool FindLine3Triangle3(ref Line3 line, Vector3 v0, Vector3 v1, Vector3 v2, out Line3Triangle3Intr info); // 0x0000000186924B04-0x0000000186924BC8
+		public static bool TestPlane3AAB3(ref Plane3 plane, ref AAB3 box); // 0x000000018692F098-0x000000018692F168
+		public static bool TestPlane3Box3(ref Plane3 plane, ref Box3 box); // 0x000000018692F168-0x000000018692F2D4
+		public static bool TestPlane3Plane3(ref Plane3 plane0, ref Plane3 plane1); // 0x000000018692F2D4-0x000000018692F374
+		public static bool FindPlane3Plane3(ref Plane3 plane0, ref Plane3 plane1, out Plane3Plane3Intr info); // 0x0000000186924FD0-0x000000018692520C
+		public static bool TestPlane3Sphere3(ref Plane3 plane, ref Sphere3 sphere); // 0x000000018692F374-0x000000018692F3A8
+		public static bool FindPlane3Sphere3(ref Plane3 plane, ref Sphere3 sphere, out Plane3Sphere3Intr info); // 0x000000018692520C-0x000000018692538C
+		public static bool TestPlane3Triangle3(ref Plane3 plane, ref Triangle3 triangle); // 0x000000018692F3A8-0x000000018692F508
+		public static bool FindPlane3Triangle3(ref Plane3 plane, ref Triangle3 triangle, out Plane3Triangle3Intr info); // 0x000000018692538C-0x0000000186925B48
+		public static bool TestRay3AAB3(ref Ray3 ray, ref AAB3 box); // 0x00000001869300E8-0x0000000186930334
+		public static bool FindRay3AAB3(ref Ray3 ray, ref AAB3 box, out Ray3AAB3Intr info); // 0x0000000186926BC0-0x0000000186926C58
+		public static bool TestRay3Box3(ref Ray3 ray, ref Box3 box); // 0x0000000186930334-0x00000001869306FC
+		public static bool FindRay3Box3(ref Ray3 ray, ref Box3 box, out Ray3Box3Intr info); // 0x0000000186926C58-0x0000000186926CF0
+		public static bool TestRay3Circle3(ref Ray3 ray, ref Circle3 circle); // 0x00000001869306FC-0x000000018693075C
+		public static bool FindRay3Circle3(ref Ray3 ray, ref Circle3 circle, out Ray3Circle3Intr info); // 0x0000000186926CF0-0x0000000186926F78
+		public static bool TestRay3Plane3(ref Ray3 ray, ref Plane3 plane, out IntersectionTypes intersectionType); // 0x00000001869307C0-0x0000000186930838
+		public static bool TestRay3Plane3(ref Ray3 ray, ref Plane3 plane); // 0x000000018693075C-0x00000001869307C0
+		public static bool FindRay3Plane3(ref Ray3 ray, ref Plane3 plane, out Ray3Plane3Intr info); // 0x0000000186926F78-0x000000018692717C
+		public static bool TestRay3Polygon3(ref Ray3 ray, Polygon3 polygon); // 0x0000000186930838-0x0000000186930898
+		public static bool FindRay3Polygon3(ref Ray3 ray, Polygon3 polygon, out Ray3Polygon3Intr info); // 0x000000018692717C-0x00000001869273D4
+		public static bool TestRay3Rectangle3(ref Ray3 ray, ref Rectangle3 rectangle); // 0x0000000186930898-0x00000001869308F8
+		public static bool FindRay3Rectangle3(ref Ray3 ray, ref Rectangle3 rectangle, out Ray3Rectangle3Intr info); // 0x00000001869273D4-0x0000000186927628
+		public static bool TestRay3Sphere3(ref Ray3 ray, ref Sphere3 sphere); // 0x00000001869308F8-0x0000000186930A40
+		public static bool FindRay3Sphere3(ref Ray3 ray, ref Sphere3 sphere, out Ray3Sphere3Intr info); // 0x0000000186927628-0x00000001869279F4
+		public static bool TestRay3Triangle3(ref Ray3 ray, ref Triangle3 triangle, out IntersectionTypes intersectionType); // 0x0000000186930DA4-0x0000000186931154
+		public static bool TestRay3Triangle3(ref Ray3 ray, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out IntersectionTypes intersectionType); // 0x0000000186930A40-0x0000000186930B04
+		public static bool TestRay3Triangle3(ref Ray3 ray, Vector3 v0, Vector3 v1, Vector3 v2, out IntersectionTypes intersectionType); // 0x0000000186930B04-0x0000000186930BC8
+		public static bool TestRay3Triangle3(ref Ray3 ray, ref Triangle3 triangle); // 0x0000000186930C88-0x0000000186930CE4
+		public static bool TestRay3Triangle3(ref Ray3 ray, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2); // 0x0000000186930CE4-0x0000000186930DA4
+		public static bool TestRay3Triangle3(ref Ray3 ray, Vector3 v0, Vector3 v1, Vector3 v2); // 0x0000000186930BC8-0x0000000186930C88
+		public static bool FindRay3Triangle3(ref Ray3 ray, ref Triangle3 triangle, out Ray3Triangle3Intr info); // 0x0000000186927AB8-0x0000000186927EF0
+		public static bool FindRay3Triangle3(ref Ray3 ray, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out Ray3Triangle3Intr info); // 0x00000001869279F4-0x0000000186927AB8
+		public static bool FindRay3Triangle3(ref Ray3 ray, Vector3 v0, Vector3 v1, Vector3 v2, out Ray3Triangle3Intr info); // 0x0000000186927EF0-0x0000000186927FB4
+		public static bool TestSegment3AAB3(ref Segment3 segment, ref AAB3 box); // 0x00000001869319D0-0x0000000186931C1C
+		public static bool FindSegment3AAB3(ref Segment3 segment, ref AAB3 box, out Segment3AAB3Intr info); // 0x0000000186928E20-0x0000000186928EE0
+		public static bool TestSegment3Box3(ref Segment3 segment, ref Box3 box); // 0x0000000186931C1C-0x0000000186931FD0
+		public static bool FindSegment3Box3(ref Segment3 segment, ref Box3 box, out Segment3Box3Intr info); // 0x0000000186928EE0-0x0000000186928FA0
+		public static bool TestSegment3Circle3(ref Segment3 segment, ref Circle3 circle); // 0x0000000186931FD0-0x0000000186932030
+		public static bool FindSegment3Circle3(ref Segment3 segment, ref Circle3 circle, out Segment3Circle3Intr info); // 0x0000000186928FA0-0x0000000186929230
+		public static bool TestSegment3Plane3(ref Segment3 segment, ref Plane3 plane, out IntersectionTypes intersectionType); // 0x000000018693208C-0x00000001869321D8
+		public static bool TestSegment3Plane3(ref Segment3 segment, ref Plane3 plane); // 0x0000000186932030-0x000000018693208C
+		public static bool FindSegment3Plane3(ref Segment3 segment, ref Plane3 plane, out Segment3Plane3Intr info); // 0x0000000186929230-0x0000000186929468
+		public static bool TestSegment3Polygon3(ref Segment3 segment, Polygon3 polygon); // 0x00000001869321D8-0x0000000186932238
+		public static bool FindSegment3Polygon3(ref Segment3 segment, Polygon3 polygon, out Segment3Polygon3Intr info); // 0x0000000186929468-0x00000001869296BC
+		public static bool TestSegment3Rectangle3(ref Segment3 segment, ref Rectangle3 rectangle); // 0x0000000186932238-0x0000000186932298
+		public static bool FindSegment3Rectangle3(ref Segment3 segment, ref Rectangle3 rectangle, out Segment3Rectangle3Intr info); // 0x00000001869296BC-0x000000018692991C
+		public static bool TestSegment3Sphere3(ref Segment3 segment, ref Sphere3 sphere); // 0x0000000186932298-0x000000018693240C
+		public static bool FindSegment3Sphere3(ref Segment3 segment, ref Sphere3 sphere, out Segment3Sphere3Intr info); // 0x000000018692991C-0x0000000186929D88
+		public static bool TestSegment3Triangle3(ref Segment3 segment, ref Triangle3 triangle, out IntersectionTypes intersectionType); // 0x0000000186932714-0x0000000186932ABC
+		public static bool TestSegment3Triangle3(ref Segment3 segment, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out IntersectionTypes intersectionType); // 0x0000000186932650-0x0000000186932714
+		public static bool TestSegment3Triangle3(ref Segment3 segment, Vector3 v0, Vector3 v1, Vector3 v2, out IntersectionTypes intersectionType); // 0x00000001869324CC-0x0000000186932590
+		public static bool TestSegment3Triangle3(ref Segment3 segment, ref Triangle3 triangle); // 0x0000000186932ABC-0x0000000186932B18
+		public static bool TestSegment3Triangle3(ref Segment3 segment, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2); // 0x0000000186932590-0x0000000186932650
+		public static bool TestSegment3Triangle3(ref Segment3 segment, Vector3 v0, Vector3 v1, Vector3 v2); // 0x000000018693240C-0x00000001869324CC
+		public static bool FindSegment3Triangle3(ref Segment3 segment, ref Triangle3 triangle, out Segment3Triangle3Intr info); // 0x0000000186929E4C-0x000000018692A2D4
+		public static bool FindSegment3Triangle3(ref Segment3 segment, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out Segment3Triangle3Intr info); // 0x000000018692A2D4-0x000000018692A398
+		public static bool FindSegment3Triangle3(ref Segment3 segment, Vector3 v0, Vector3 v1, Vector3 v2, out Segment3Triangle3Intr info); // 0x0000000186929D88-0x0000000186929E4C
+		public static bool TestSphere3Sphere3(ref Sphere3 sphere0, ref Sphere3 sphere1); // 0x00000001849E3D50-0x00000001849E3DD0
+		public static bool FindSphere3Sphere3(ref Sphere3 sphere0, ref Sphere3 sphere1, out Sphere3Sphere3Intr info); // 0x000000018692A398-0x000000018692A844
+		private static void ProjectOntoAxis(ref Triangle3 triangle, ref Vector3 axis, out float fmin, out float fmax); // 0x000000018692C23C-0x000000018692C3A0
+		private static void TrianglePlaneRelations(ref Triangle3 triangle, ref Plane3 plane, out float dist0, out float dist1, out float dist2, out int sign0, out int sign1, out int sign2, out int positive, out int negative, out int zero); // 0x0000000186933FB0-0x000000018693410C
+		private static bool TrianglePlaneRelationsQuick(ref Triangle3 triangle, ref Plane3 plane); // 0x0000000186933EFC-0x0000000186933FB0
+		private static bool IntersectsSegment(ref Plane3 plane, ref Triangle3 triangle, ref Vector3 end0, ref Vector3 end1, bool grazing, out Triangle3Triangle3Intr info); // 0x000000018692BC60-0x000000018692C110
+		private static int QueryToLine(ref Vector2 test, ref Vector2 vec0, ref Vector2 vec1); // 0x000000018692C3A0-0x000000018692C3F4
+		private static int QueryToTriangle(ref Vector2 test, ref Vector2 v0, ref Vector2 v1, ref Vector2 v2); // 0x000000018692C3F4-0x000000018692C4D0
+		private static bool ContainsPoint(ref Triangle3 triangle, ref Plane3 plane, ref Vector3 point, out Triangle3Triangle3Intr info); // 0x0000000186921B10-0x0000000186921E50
+		private static bool GetCoplanarIntersection(ref Plane3 plane, ref Triangle3 tri0, ref Triangle3 tri1, out Triangle3Triangle3Intr info); // 0x000000018692B3DC-0x000000018692B9F4
+		public static bool TestTriangle3Triangle3(ref Triangle3 triangle0, ref Triangle3 triangle1, out IntersectionTypes intersectionType); // 0x0000000186932D64-0x0000000186933C18
+		public static bool TestTriangle3Triangle3(ref Triangle3 triangle0, ref Triangle3 triangle1); // 0x0000000186933C18-0x0000000186933C74
+		public static bool FindTriangle3Triangle3(ref Triangle3 triangle0, ref Triangle3 triangle1, out Triangle3Triangle3Intr info, bool reportCoplanarIntersections = false /* Metadata: 0x0234BC8F */); // 0x000000018692A98C-0x000000018692B284
+		public static int FindSegment1Segment1(float seg0Start, float seg0End, float seg1Start, float seg1End, out float w0, out float w1); // 0x0000000186927FB4-0x00000001869280C8
 	}
 
-	public struct Circle2Circle2Intr // TypeDefIndex: 55838
+	public struct Circle2Circle2Intr // TypeDefIndex: 58479
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1172,7 +578,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x10
 	}
 
-	public struct Line2AAB2Intr // TypeDefIndex: 55839
+	public struct Line2AAB2Intr // TypeDefIndex: 58480
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1181,7 +587,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x10
 	}
 
-	public struct Line2Box2Intr // TypeDefIndex: 55840
+	public struct Line2Box2Intr // TypeDefIndex: 58481
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1190,7 +596,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x10
 	}
 
-	public struct Line2Circle2Intr // TypeDefIndex: 55841
+	public struct Line2Circle2Intr // TypeDefIndex: 58482
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1198,7 +604,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x0C
 	}
 
-	public struct Line2ConvexPolygon2Intr // TypeDefIndex: 55842
+	public struct Line2ConvexPolygon2Intr // TypeDefIndex: 58483
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1209,7 +615,7 @@ namespace Dest.Math
 		public float Parameter1; // 0x1C
 	}
 
-	public struct Line2Line2Intr // TypeDefIndex: 55843
+	public struct Line2Line2Intr // TypeDefIndex: 58484
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1217,7 +623,7 @@ namespace Dest.Math
 		public float Parameter; // 0x0C
 	}
 
-	public struct Line2Ray2Intr // TypeDefIndex: 55844
+	public struct Line2Ray2Intr // TypeDefIndex: 58485
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1225,7 +631,7 @@ namespace Dest.Math
 		public float Parameter; // 0x0C
 	}
 
-	public struct Line2Segment2Intr // TypeDefIndex: 55845
+	public struct Line2Segment2Intr // TypeDefIndex: 58486
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1233,7 +639,7 @@ namespace Dest.Math
 		public float Parameter; // 0x0C
 	}
 
-	public struct Line2Triangle2Intr // TypeDefIndex: 55846
+	public struct Line2Triangle2Intr // TypeDefIndex: 58487
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1242,7 +648,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x10
 	}
 
-	public struct Ray2AAB2Intr // TypeDefIndex: 55847
+	public struct Ray2AAB2Intr // TypeDefIndex: 58488
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1251,7 +657,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x10
 	}
 
-	public struct Ray2Box2Intr // TypeDefIndex: 55848
+	public struct Ray2Box2Intr // TypeDefIndex: 58489
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1260,7 +666,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x10
 	}
 
-	public struct Ray2Circle2Intr // TypeDefIndex: 55849
+	public struct Ray2Circle2Intr // TypeDefIndex: 58490
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1268,7 +674,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x0C
 	}
 
-	public struct Ray2ConvexPolygon2Intr // TypeDefIndex: 55850
+	public struct Ray2ConvexPolygon2Intr // TypeDefIndex: 58491
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1279,7 +685,7 @@ namespace Dest.Math
 		public float Parameter1; // 0x1C
 	}
 
-	public struct Ray2Polygon2Intr // TypeDefIndex: 55851
+	public struct Ray2Polygon2Intr // TypeDefIndex: 58492
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1289,7 +695,7 @@ namespace Dest.Math
 		public float Parameter1; // 0x18
 	}
 
-	public struct Ray2Ray2Intr // TypeDefIndex: 55852
+	public struct Ray2Ray2Intr // TypeDefIndex: 58493
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1297,7 +703,7 @@ namespace Dest.Math
 		public float Parameter; // 0x0C
 	}
 
-	public struct Ray2Segment2Intr // TypeDefIndex: 55853
+	public struct Ray2Segment2Intr // TypeDefIndex: 58494
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1307,7 +713,7 @@ namespace Dest.Math
 		public float Parameter1; // 0x18
 	}
 
-	public struct Ray2Triangle2Intr // TypeDefIndex: 55854
+	public struct Ray2Triangle2Intr // TypeDefIndex: 58495
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1316,7 +722,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x10
 	}
 
-	public struct Segment2AAB2Intr // TypeDefIndex: 55855
+	public struct Segment2AAB2Intr // TypeDefIndex: 58496
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1325,7 +731,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x10
 	}
 
-	public struct Segment2Box2Intr // TypeDefIndex: 55856
+	public struct Segment2Box2Intr // TypeDefIndex: 58497
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1334,7 +740,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x10
 	}
 
-	public struct Segment2Circle2Intr // TypeDefIndex: 55857
+	public struct Segment2Circle2Intr // TypeDefIndex: 58498
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1342,7 +748,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x0C
 	}
 
-	public struct Segment2ConvexPolygon2Intr // TypeDefIndex: 55858
+	public struct Segment2ConvexPolygon2Intr // TypeDefIndex: 58499
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1353,7 +759,7 @@ namespace Dest.Math
 		public float Parameter1; // 0x1C
 	}
 
-	public struct Segment2Segment2Intr // TypeDefIndex: 55859
+	public struct Segment2Segment2Intr // TypeDefIndex: 58500
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1363,7 +769,7 @@ namespace Dest.Math
 		public float Parameter1; // 0x18
 	}
 
-	public struct Segment2Triangle2Intr // TypeDefIndex: 55860
+	public struct Segment2Triangle2Intr // TypeDefIndex: 58501
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1372,7 +778,7 @@ namespace Dest.Math
 		public Vector2 Point1; // 0x10
 	}
 
-	public struct Triangle2Triangle2Intr // TypeDefIndex: 55861
+	public struct Triangle2Triangle2Intr // TypeDefIndex: 58502
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1385,10 +791,10 @@ namespace Dest.Math
 		public Vector2 Point5; // 0x30
 	
 		// Properties
-		public Vector2 this[int i] { get => default; internal set {} } // 0x00000001878CF58C-0x00000001878CF608 0x00000001878CF608-0x00000001878CF644
+		public Vector2 this[int i] { get => default; internal set {} } // 0x000000018693A094-0x000000018693A110 0x000000018693A110-0x000000018693A14C
 	}
 
-	internal struct Float6 // TypeDefIndex: 55862
+	internal struct Float6 // TypeDefIndex: 58503
 	{
 		// Fields
 		private float _0; // 0x00
@@ -1399,10 +805,10 @@ namespace Dest.Math
 		private float _5; // 0x14
 	
 		// Properties
-		public float this[int i] { get => default; set {} } // 0x00000001878C9C1C-0x00000001878C9C60 0x00000001878C9C60-0x00000001878C9CB8
+		public float this[int i] { get => default; set {} } // 0x00000001869347A8-0x00000001869347EC 0x00000001869347EC-0x0000000186934844
 	}
 
-	public struct Line3AAB3Intr // TypeDefIndex: 55863
+	public struct Line3AAB3Intr // TypeDefIndex: 58504
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1411,7 +817,7 @@ namespace Dest.Math
 		public Vector3 Point1; // 0x14
 	}
 
-	public struct Line3Box3Intr // TypeDefIndex: 55864
+	public struct Line3Box3Intr // TypeDefIndex: 58505
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1420,14 +826,14 @@ namespace Dest.Math
 		public Vector3 Point1; // 0x14
 	}
 
-	public struct Line3Circle3Intr // TypeDefIndex: 55865
+	public struct Line3Circle3Intr // TypeDefIndex: 58506
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
 		public Vector3 Point; // 0x04
 	}
 
-	public struct Line3Plane3Intr // TypeDefIndex: 55866
+	public struct Line3Plane3Intr // TypeDefIndex: 58507
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1435,21 +841,21 @@ namespace Dest.Math
 		public float LineParameter; // 0x10
 	}
 
-	public struct Line3Polygon3Intr // TypeDefIndex: 55867
+	public struct Line3Polygon3Intr // TypeDefIndex: 58508
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
 		public Vector3 Point; // 0x04
 	}
 
-	public struct Line3Rectangle3Intr // TypeDefIndex: 55868
+	public struct Line3Rectangle3Intr // TypeDefIndex: 58509
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
 		public Vector3 Point; // 0x04
 	}
 
-	public struct Line3Sphere3Intr // TypeDefIndex: 55869
+	public struct Line3Sphere3Intr // TypeDefIndex: 58510
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1460,7 +866,7 @@ namespace Dest.Math
 		public float LineParameter1; // 0x24
 	}
 
-	public struct Line3Triangle3Intr // TypeDefIndex: 55870
+	public struct Line3Triangle3Intr // TypeDefIndex: 58511
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1471,21 +877,21 @@ namespace Dest.Math
 		public float TriBary2; // 0x1C
 	}
 
-	public struct Plane3Plane3Intr // TypeDefIndex: 55871
+	public struct Plane3Plane3Intr // TypeDefIndex: 58512
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
 		public Line3 Line; // 0x04
 	}
 
-	public struct Plane3Sphere3Intr // TypeDefIndex: 55872
+	public struct Plane3Sphere3Intr // TypeDefIndex: 58513
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
 		public Circle3 Circle; // 0x04
 	}
 
-	public struct Plane3Triangle3Intr // TypeDefIndex: 55873
+	public struct Plane3Triangle3Intr // TypeDefIndex: 58514
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1495,7 +901,7 @@ namespace Dest.Math
 		public Vector3 Point2; // 0x20
 	}
 
-	public struct Ray3AAB3Intr // TypeDefIndex: 55874
+	public struct Ray3AAB3Intr // TypeDefIndex: 58515
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1504,7 +910,7 @@ namespace Dest.Math
 		public Vector3 Point1; // 0x14
 	}
 
-	public struct Ray3Box3Intr // TypeDefIndex: 55875
+	public struct Ray3Box3Intr // TypeDefIndex: 58516
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1513,14 +919,14 @@ namespace Dest.Math
 		public Vector3 Point1; // 0x14
 	}
 
-	public struct Ray3Circle3Intr // TypeDefIndex: 55876
+	public struct Ray3Circle3Intr // TypeDefIndex: 58517
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
 		public Vector3 Point; // 0x04
 	}
 
-	public struct Ray3Plane3Intr // TypeDefIndex: 55877
+	public struct Ray3Plane3Intr // TypeDefIndex: 58518
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1528,21 +934,21 @@ namespace Dest.Math
 		public float RayParameter; // 0x10
 	}
 
-	public struct Ray3Polygon3Intr // TypeDefIndex: 55878
+	public struct Ray3Polygon3Intr // TypeDefIndex: 58519
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
 		public Vector3 Point; // 0x04
 	}
 
-	public struct Ray3Rectangle3Intr // TypeDefIndex: 55879
+	public struct Ray3Rectangle3Intr // TypeDefIndex: 58520
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
 		public Vector3 Point; // 0x04
 	}
 
-	public struct Ray3Sphere3Intr // TypeDefIndex: 55880
+	public struct Ray3Sphere3Intr // TypeDefIndex: 58521
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1553,7 +959,7 @@ namespace Dest.Math
 		public float RayParameter1; // 0x24
 	}
 
-	public struct Ray3Triangle3Intr // TypeDefIndex: 55881
+	public struct Ray3Triangle3Intr // TypeDefIndex: 58522
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1564,7 +970,7 @@ namespace Dest.Math
 		public float TriBary2; // 0x1C
 	}
 
-	public struct Segment3AAB3Intr // TypeDefIndex: 55882
+	public struct Segment3AAB3Intr // TypeDefIndex: 58523
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1573,7 +979,7 @@ namespace Dest.Math
 		public Vector3 Point1; // 0x14
 	}
 
-	public struct Segment3Box3Intr // TypeDefIndex: 55883
+	public struct Segment3Box3Intr // TypeDefIndex: 58524
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1582,14 +988,14 @@ namespace Dest.Math
 		public Vector3 Point1; // 0x14
 	}
 
-	public struct Segment3Circle3Intr // TypeDefIndex: 55884
+	public struct Segment3Circle3Intr // TypeDefIndex: 58525
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
 		public Vector3 Point; // 0x04
 	}
 
-	public struct Segment3Plane3Intr // TypeDefIndex: 55885
+	public struct Segment3Plane3Intr // TypeDefIndex: 58526
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1597,21 +1003,21 @@ namespace Dest.Math
 		public float SegmentParameter; // 0x10
 	}
 
-	public struct Segment3Polygon3Intr // TypeDefIndex: 55886
+	public struct Segment3Polygon3Intr // TypeDefIndex: 58527
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
 		public Vector3 Point; // 0x04
 	}
 
-	public struct Segment3Rectangle3Intr // TypeDefIndex: 55887
+	public struct Segment3Rectangle3Intr // TypeDefIndex: 58528
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
 		public Vector3 Point; // 0x04
 	}
 
-	public struct Segment3Sphere3Intr // TypeDefIndex: 55888
+	public struct Segment3Sphere3Intr // TypeDefIndex: 58529
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1622,7 +1028,7 @@ namespace Dest.Math
 		public float SegmentParameter1; // 0x24
 	}
 
-	public struct Segment3Triangle3Intr // TypeDefIndex: 55889
+	public struct Segment3Triangle3Intr // TypeDefIndex: 58530
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1633,7 +1039,7 @@ namespace Dest.Math
 		public float TriBary2; // 0x1C
 	}
 
-	public enum Sphere3Sphere3IntrTypes // TypeDefIndex: 55890
+	public enum Sphere3Sphere3IntrTypes // TypeDefIndex: 58531
 	{
 		Empty = 0,
 		Point = 1,
@@ -1645,7 +1051,7 @@ namespace Dest.Math
 		Same = 7
 	}
 
-	public struct Sphere3Sphere3Intr // TypeDefIndex: 55891
+	public struct Sphere3Sphere3Intr // TypeDefIndex: 58532
 	{
 		// Fields
 		public Sphere3Sphere3IntrTypes IntersectionType; // 0x00
@@ -1653,7 +1059,7 @@ namespace Dest.Math
 		public Vector3 ContactPoint; // 0x38
 	}
 
-	public struct Triangle3Triangle3Intr // TypeDefIndex: 55892
+	public struct Triangle3Triangle3Intr // TypeDefIndex: 58533
 	{
 		// Fields
 		public IntersectionTypes IntersectionType; // 0x00
@@ -1668,10 +1074,10 @@ namespace Dest.Math
 		public Vector3 Point5; // 0x4C
 	
 		// Properties
-		public Vector3 this[int i] { get => default; internal set {} } // 0x00000001878CF644-0x00000001878CF6D4 0x00000001878CF6D4-0x00000001878CF760
+		public Vector3 this[int i] { get => default; internal set {} } // 0x000000018693A14C-0x000000018693A1DC 0x000000018693A1DC-0x000000018693A268
 	}
 
-	public enum IntersectionTypes // TypeDefIndex: 55893
+	public enum IntersectionTypes // TypeDefIndex: 58534
 	{
 		Empty = 0,
 		Point = 1,
@@ -1684,7 +1090,7 @@ namespace Dest.Math
 		Other = 8
 	}
 
-	public interface ILogger // TypeDefIndex: 55894
+	public interface ILogger // TypeDefIndex: 58535
 	{
 		// Methods
 		void LogInfo(object value);
@@ -1692,259 +1098,169 @@ namespace Dest.Math
 		void LogError(object value);
 	}
 
-	public class Logger // TypeDefIndex: 55895
+	public class Logger // TypeDefIndex: 58536
 	{
 		// Fields
 		private static ILogger _instance; // 0x00
 	
 		// Constructors
-		static Logger() {} // 0x00000001878CA04C-0x00000001878CA0BC
-		public Logger() {} // 0x0000000185492010-0x0000000185492020
+		static Logger(); // 0x0000000186934B70-0x0000000186934BE0
+		public Logger(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static void LogInfo(object value) {} // 0x00000001878C9E58-0x00000001878C9F0C
-		public static void LogWarning(object value) {} // 0x00000001878C9F0C-0x00000001878C9FC4
-		public static void LogError(object value) {} // 0x00000001878C9DA0-0x00000001878C9E58
-		public static void SetLogger(ILogger logger) {} // 0x00000001878C9FC4-0x00000001878CA04C
+		public static void LogInfo(object value); // 0x00000001869349C0-0x0000000186934A50
+		public static void LogWarning(object value); // 0x0000000186934A50-0x0000000186934AE8
+		public static void LogError(object value); // 0x000000018693492C-0x00000001869349C0
+		public static void SetLogger(ILogger logger); // 0x0000000186934AE8-0x0000000186934B70
 	}
 
-	public class DefaultLogger : ILogger // TypeDefIndex: 55896
+	public class DefaultLogger : ILogger // TypeDefIndex: 58537
 	{
 		// Constructors
-		public DefaultLogger() {} // 0x0000000185492010-0x0000000185492020
+		public DefaultLogger(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public void LogInfo(object value) {} // 0x00000001878C9B84-0x00000001878C9BD0
-		public void LogWarning(object value) {} // 0x00000001878C9BD0-0x00000001878C9C1C
-		public void LogError(object value) {} // 0x00000001878C9B38-0x00000001878C9B84
+		public void LogInfo(object value); // 0x0000000186934710-0x000000018693475C
+		public void LogWarning(object value); // 0x000000018693475C-0x00000001869347A8
+		public void LogError(object value); // 0x00000001869346C4-0x0000000186934710
 	}
 
-	public class EmptyLogger : ILogger // TypeDefIndex: 55897
+	public class EmptyLogger : ILogger // TypeDefIndex: 58538
 	{
 		// Constructors
-		public EmptyLogger() {} // 0x0000000185492010-0x0000000185492020
+		public EmptyLogger(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public void LogInfo(object value) {} // 0x0000000185492010-0x0000000185492020
-		public void LogWarning(object value) {} // 0x0000000185492010-0x0000000185492020
-		public void LogError(object value) {} // 0x0000000185492010-0x0000000185492020
+		public void LogInfo(object value); // 0x00000001841E1670-0x00000001841E1680
+		public void LogWarning(object value); // 0x00000001841E1670-0x00000001841E1680
+		public void LogError(object value); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public static class Mathfex // TypeDefIndex: 55898
+	public static class Mathfex // TypeDefIndex: 58539
 	{
 		// Fields
-		public const float ZeroTolerance = 1E-05f; // Metadata: 0x0207BFF9
-		public const float NegativeZeroTolerance = -1E-05f; // Metadata: 0x0207BFFD
-		public const float ZeroToleranceSqr = 9.9999994E-11f; // Metadata: 0x0207C001
-		public const float Pi = 3.1415927f; // Metadata: 0x0207C005
-		public const float HalfPi = 1.5707964f; // Metadata: 0x0207C009
-		public const float TwoPi = 6.2831855f; // Metadata: 0x0207C00D
+		public const float ZeroTolerance = 1E-05f; // Metadata: 0x0234BCA9
+		public const float NegativeZeroTolerance = -1E-05f; // Metadata: 0x0234BCAD
+		public const float ZeroToleranceSqr = 9.9999994E-11f; // Metadata: 0x0234BCB1
+		public const float Pi = 3.1415927f; // Metadata: 0x0234BCB5
+		public const float HalfPi = 1.5707964f; // Metadata: 0x0234BCB9
+		public const float TwoPi = 6.2831855f; // Metadata: 0x0234BCBD
 	
 		// Methods
-		public static float EvalSquared(float x) => default; // 0x0000000185FB2920-0x0000000185FB2930
-		public static float EvalInvSquared(float x) => default; // 0x0000000185FB2AC0-0x0000000185FB2AE0
-		public static float EvalCubic(float x) => default; // 0x0000000185FB38F0-0x0000000185FB3900
-		public static float EvalInvCubic(float x) => default; // 0x0000000185FB3960-0x0000000185FB3970
-		public static float EvalQuadratic(float x, float a, float b, float c) => default; // 0x0000000185FB3970-0x0000000185FB3990
-		public static float EvalSigmoid(float x) => default; // 0x0000000185FB3990-0x0000000185FB39B0
-		public static float EvalOverlappedStep(float x, float overlap, int objectIndex, int objectCount) => default; // 0x00000001878CA4BC-0x00000001878CA50C
-		public static float EvalSmoothOverlappedStep(float x, float overlap, int objectIndex, int objectCount) => default; // 0x00000001878CA50C-0x00000001878CA574
-		public static float EvalGaussian(float x, float a, float b, float c) => default; // 0x00000001878CA480-0x00000001878CA4BC
-		public static float EvalGaussian2D(float x, float y, float x0, float y0, float A, float a, float b, float c) => default; // 0x0000000185FB3900-0x0000000185FB3960
-		public static float Lerp(float value0, float value1, float factor) => default; // 0x00000001878CA624-0x00000001878CA654
-		public static float LerpUnclamped(float value0, float value1, float factor) => default; // 0x0000000185FB39B0-0x0000000185FB39C0
-		public static float SigmoidInterp(float value0, float value1, float factor) => default; // 0x00000001878CA678-0x00000001878CA6C4
-		public static float SinInterp(float value0, float value1, float factor) => default; // 0x00000001878CA6C4-0x00000001878CA720
-		public static float CosInterp(float value0, float value1, float factor) => default; // 0x00000001878CA3A4-0x00000001878CA418
-		public static float WobbleInterp(float value0, float value1, float factor) => default; // 0x00000001878CA720-0x00000001878CA804
-		public static float CurveInterp(float value0, float value1, float factor, AnimationCurve curve) => default; // 0x00000001878CA418-0x00000001878CA480
-		public static float FuncInterp(float value0, float value1, float factor, Func<float, float> func) => default; // 0x00000001878CA574-0x00000001878CA5F4
-		public static float InvSqrt(float value) => default; // 0x00000001878CA5F4-0x00000001878CA624
-		public static bool Near(float value0, float value1, float epsilon = 1E-05f /* Metadata: 0x0207BFF1 */) => default; // 0x00000001878CA664-0x00000001878CA678
-		public static bool NearZero(float value, float epsilon = 1E-05f /* Metadata: 0x0207BFF5 */) => default; // 0x00000001878CA654-0x00000001878CA664
-		public static Vector2 CartesianToPolar(Vector2 cartesianCoordinates) => default; // 0x00000001878CA1A4-0x00000001878CA288
-		public static Vector2 PolarToCartesian(Vector2 polarCoordinates) => default; // 0x0000000185FB39C0-0x0000000185FB3A10
-		public static Vector3 CartesianToSpherical(Vector3 cartesianCoordinates) => default; // 0x00000001878CA288-0x00000001878CA3A4
-		public static Vector3 SphericalToCartesian(Vector3 sphericalCoordinates) => default; // 0x0000000185FB3A10-0x0000000185FB3AB0
-		public static Vector3 CartesianToCylindrical(Vector3 cartesianCoordinates) => default; // 0x00000001878CA0BC-0x00000001878CA1A4
-		public static Vector3 CylindricalToCartesian(Vector3 cylindricalCoordinates) => default; // 0x0000000185FB38A0-0x0000000185FB38F0
+		public static float EvalSquared(float x); // 0x0000000184D886E0-0x0000000184D886F0
+		public static float EvalInvSquared(float x); // 0x0000000184D88670-0x0000000184D88690
+		public static float EvalCubic(float x); // 0x0000000184D89930-0x0000000184D89940
+		public static float EvalInvCubic(float x); // 0x0000000184D899A0-0x0000000184D899B0
+		public static float EvalQuadratic(float x, float a, float b, float c); // 0x0000000184D899B0-0x0000000184D899D0
+		public static float EvalSigmoid(float x); // 0x0000000184D899D0-0x0000000184D899F0
+		public static float EvalOverlappedStep(float x, float overlap, int objectIndex, int objectCount); // 0x0000000186934FE0-0x0000000186935030
+		public static float EvalSmoothOverlappedStep(float x, float overlap, int objectIndex, int objectCount); // 0x0000000186935030-0x0000000186935098
+		public static float EvalGaussian(float x, float a, float b, float c); // 0x0000000186934FA4-0x0000000186934FE0
+		public static float EvalGaussian2D(float x, float y, float x0, float y0, float A, float a, float b, float c); // 0x0000000184D89940-0x0000000184D899A0
+		public static float Lerp(float value0, float value1, float factor); // 0x0000000186935148-0x0000000186935178
+		public static float LerpUnclamped(float value0, float value1, float factor); // 0x0000000184D899F0-0x0000000184D89A00
+		public static float SigmoidInterp(float value0, float value1, float factor); // 0x000000018693519C-0x00000001869351E8
+		public static float SinInterp(float value0, float value1, float factor); // 0x00000001869351E8-0x0000000186935244
+		public static float CosInterp(float value0, float value1, float factor); // 0x0000000186934EC8-0x0000000186934F3C
+		public static float WobbleInterp(float value0, float value1, float factor); // 0x0000000186935244-0x0000000186935328
+		public static float CurveInterp(float value0, float value1, float factor, AnimationCurve curve); // 0x0000000186934F3C-0x0000000186934FA4
+		public static float FuncInterp(float value0, float value1, float factor, Func<float, float> func); // 0x0000000186935098-0x0000000186935118
+		public static float InvSqrt(float value); // 0x0000000186935118-0x0000000186935148
+		public static bool Near(float value0, float value1, float epsilon = 1E-05f /* Metadata: 0x0234BCA1 */); // 0x0000000186935188-0x000000018693519C
+		public static bool NearZero(float value, float epsilon = 1E-05f /* Metadata: 0x0234BCA5 */); // 0x0000000186935178-0x0000000186935188
+		public static Vector2 CartesianToPolar(Vector2 cartesianCoordinates); // 0x0000000186934CC8-0x0000000186934DAC
+		public static Vector2 PolarToCartesian(Vector2 polarCoordinates); // 0x0000000184D89A00-0x0000000184D89A50
+		public static Vector3 CartesianToSpherical(Vector3 cartesianCoordinates); // 0x0000000186934DAC-0x0000000186934EC8
+		public static Vector3 SphericalToCartesian(Vector3 sphericalCoordinates); // 0x0000000184D89A50-0x0000000184D89AF0
+		public static Vector3 CartesianToCylindrical(Vector3 cartesianCoordinates); // 0x0000000186934BE0-0x0000000186934CC8
+		public static Vector3 CylindricalToCartesian(Vector3 cylindricalCoordinates); // 0x0000000184D898E0-0x0000000184D89930
 	}
 
-	public static class Matrix4x4ex // TypeDefIndex: 55899
+	public static class Matrix4x4ex // TypeDefIndex: 58540
 	{
 		// Fields
 		public static readonly Matrix4x4 Identity; // 0x00
 	
 		// Constructors
-		static Matrix4x4ex() {} // 0x00000001878CD124-0x00000001878CD1AC
+		static Matrix4x4ex(); // 0x0000000186937C2C-0x0000000186937CB4
 	
 		// Methods
-		public static void RotationMatrixToQuaternion(ref Matrix4x4 matrix, out Quaternion quaternion) {
-			quaternion = default;
-		} // 0x00000001878CD05C-0x00000001878CD124
-		public static void QuaternionToRotationMatrix(Quaternion quaternion, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x0000000185FB5010-0x0000000185FB5190
-		public static void QuaternionToRotationMatrix(ref Quaternion quaternion, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x0000000185FB5190-0x0000000185FB5310
-		public static void CreateTranslation(Vector3 position, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x0000000185FB4980-0x0000000185FB49C0
-		public static void CreateTranslation(ref Vector3 position, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x0000000185FB4940-0x0000000185FB4980
-		public static void CreateScale(Vector3 scale, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x0000000185FB3FC0-0x0000000185FB4000
-		public static void CreateScale(ref Vector3 scale, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x0000000185FB4000-0x0000000185FB4040
-		public static void CreateScale(float scale, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x0000000185FB4040-0x0000000185FB4080
-		public static void CreateRotationEuler(float eulerX, float eulerY, float eulerZ, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x00000001878CAC98-0x00000001878CAD28
-		public static void CreateRotationEuler(Vector3 eulerAngles, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x00000001878CAD9C-0x00000001878CAE10
-		public static void CreateRotationEuler(ref Vector3 eulerAngles, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x00000001878CAD28-0x00000001878CAD9C
-		public static void CreateRotationX(float angleInDegrees, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x0000000185FB3DC0-0x0000000185FB3E50
-		public static void CreateRotationY(float angleInDegrees, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x0000000185FB3E50-0x0000000185FB3EE0
-		public static void CreateRotationZ(float angleInDegrees, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x0000000185FB3EE0-0x0000000185FB3F70
-		public static void CreateRotationAngleAxis(float angleInDegrees, Vector3 rotationAxis, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x00000001878CAB14-0x00000001878CAC98
-		public static void CreateRotationAngleUnitAxis(float angleInDegrees, Vector3 normalizedAxis, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x0000000185FB3C60-0x0000000185FB3DC0
-		public static void CreateRotation(Vector3 rotationOrigin, Quaternion rotation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CB13C-0x00000001878CB238
-		public static void CreateRotation(ref Vector3 rotationOrigin, ref Quaternion rotation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CB040-0x00000001878CB13C
-		public static void Transpose(ref Matrix4x4 matrix) {} // 0x0000000185FB5310-0x0000000185FB5380
-		public static void Transpose(ref Matrix4x4 matrix, out Matrix4x4 transpose) {
-			transpose = default;
-		} // 0x0000000185FB5380-0x0000000185FB53E0
-		public static float CalcDeterminant(ref Matrix4x4 matrix) => default; // 0x0000000185FB3AB0-0x0000000185FB3C00
-		public static void Inverse(ref Matrix4x4 matrix, float epsilon = 1E-05f /* Metadata: 0x0207C011 */) {} // 0x00000001878CC260-0x00000001878CC88C
-		public static void Inverse(ref Matrix4x4 matrix, out Matrix4x4 inverse, float epsilon = 1E-05f /* Metadata: 0x0207C015 */) {
-			inverse = default;
-		} // 0x00000001878CBC88-0x00000001878CC260
-		public static void CopyMatrix(ref Matrix4x4 source, out Matrix4x4 destination) {
-			destination = default;
-		} // 0x0000000185FB3C00-0x0000000185FB3C60
-		public static void Multiply(ref Matrix4x4 matrix0, ref Matrix4x4 matrix1, out Matrix4x4 result) {
-			result = default;
-		} // 0x0000000185FB4B90-0x0000000185FB4F30
-		public static void MultiplyRight(ref Matrix4x4 matrix0, ref Matrix4x4 matrix1) {} // 0x00000001878CCC74-0x00000001878CD05C
-		public static void MultiplyLeft(ref Matrix4x4 matrix1, ref Matrix4x4 matrix0) {} // 0x00000001878CC88C-0x00000001878CCC74
-		public static void Multiply(ref Matrix4x4 matrix, float scalar) {} // 0x0000000185FB49C0-0x0000000185FB4A90
-		public static void Multiply(ref Matrix4x4 matrix, float scalar, out Matrix4x4 result) {
-			result = default;
-		} // 0x0000000185FB4F30-0x0000000185FB5010
-		public static Vector4 Multiply(ref Matrix4x4 matrix, Vector4 vector) => default; // 0x0000000185FB4A90-0x0000000185FB4B90
-		public static Vector4 Multiply(ref Matrix4x4 matrix, ref Vector4 vector) => default; // 0x0000000185FB4A90-0x0000000185FB4B90
-		public static void CreateSRT(Vector3 scaling, Quaternion rotation, Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CB674-0x00000001878CB774
-		public static void CreateSRT(ref Vector3 scaling, ref Quaternion rotation, ref Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CB574-0x00000001878CB674
-		public static void CreateSRT(float scaling, Quaternion rotation, Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CBAB0-0x00000001878CBB9C
-		public static void CreateSRT(float scaling, ref Quaternion rotation, ref Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CBB9C-0x00000001878CBC88
-		public static void CreateSRT(Vector3 scaling, Vector3 rotationOrigin, Quaternion rotation, Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CB908-0x00000001878CBAB0
-		public static void CreateSRT(ref Vector3 scaling, ref Vector3 rotationOrigin, ref Quaternion rotation, ref Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CB3CC-0x00000001878CB574
-		public static void CreateSRT(float scaling, Vector3 rotationOrigin, Quaternion rotation, Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CB238-0x00000001878CB3CC
-		public static void CreateSRT(float scaling, ref Vector3 rotationOrigin, ref Quaternion rotation, ref Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CB774-0x00000001878CB908
-		public static void CreateRT(Quaternion rotation, Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CA91C-0x00000001878CA98C
-		public static void CreateRT(ref Quaternion rotation, ref Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CA98C-0x00000001878CA9FC
-		public static void CreateRT(Vector3 rotationOrigin, Quaternion rotation, Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CA804-0x00000001878CA91C
-		public static void CreateRT(ref Vector3 rotationOrigin, ref Quaternion rotation, ref Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x00000001878CA9FC-0x00000001878CAB14
-		public static void CreateST(Vector3 scaling, Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x0000000185FB3F70-0x0000000185FB3FC0
-		public static void CreateST(ref Vector3 scaling, ref Vector3 translation, out Matrix4x4 result) {
-			result = default;
-		} // 0x0000000185FB3F70-0x0000000185FB3FC0
-		public static void CreateRotationFromColumns(Vector3 column0, Vector3 column1, Vector3 column2, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x00000001878CAF28-0x00000001878CB040
-		public static void CreateRotationFromColumns(ref Vector3 column0, ref Vector3 column1, ref Vector3 column2, out Matrix4x4 matrix) {
-			matrix = default;
-		} // 0x00000001878CAE10-0x00000001878CAF28
-		public static void CreateShadowDirectional(Plane3 shadowPlane, Vector3 dirLightOppositeDirection, out Matrix4x4 result) {
-			result = default;
-		} // 0x0000000185FB4080-0x0000000185FB41E0
-		public static void CreateShadowDirectional(ref Plane3 shadowPlane, ref Vector3 dirLightOppositeDirection, out Matrix4x4 result) {
-			result = default;
-		} // 0x0000000185FB41E0-0x0000000185FB4340
-		public static void CreateShadowPoint(Plane3 shadowPlane, Vector3 pointLightPosition, out Matrix4x4 result) {
-			result = default;
-		} // 0x0000000185FB4340-0x0000000185FB44A0
-		public static void CreateShadowPoint(ref Plane3 shadowPlane, ref Vector3 pointLightPosition, out Matrix4x4 result) {
-			result = default;
-		} // 0x0000000185FB44A0-0x0000000185FB4600
-		public static void CreateShadow(Plane3 shadowPlane, Vector4 lightData, out Matrix4x4 result) {
-			result = default;
-		} // 0x0000000185FB47A0-0x0000000185FB4940
-		public static void CreateShadow(ref Plane3 shadowPlane, ref Vector4 lightData, out Matrix4x4 result) {
-			result = default;
-		} // 0x0000000185FB4600-0x0000000185FB47A0
+		public static void RotationMatrixToQuaternion(ref Matrix4x4 matrix, out Quaternion quaternion); // 0x0000000186937B64-0x0000000186937C2C
+		public static void QuaternionToRotationMatrix(Quaternion quaternion, out Matrix4x4 matrix); // 0x0000000184D8B050-0x0000000184D8B1D0
+		public static void QuaternionToRotationMatrix(ref Quaternion quaternion, out Matrix4x4 matrix); // 0x0000000184D8B1D0-0x0000000184D8B350
+		public static void CreateTranslation(Vector3 position, out Matrix4x4 matrix); // 0x0000000184D8A9C0-0x0000000184D8AA00
+		public static void CreateTranslation(ref Vector3 position, out Matrix4x4 matrix); // 0x0000000184D8A980-0x0000000184D8A9C0
+		public static void CreateScale(Vector3 scale, out Matrix4x4 matrix); // 0x0000000184D8A000-0x0000000184D8A040
+		public static void CreateScale(ref Vector3 scale, out Matrix4x4 matrix); // 0x0000000184D8A040-0x0000000184D8A080
+		public static void CreateScale(float scale, out Matrix4x4 matrix); // 0x0000000184D8A080-0x0000000184D8A0C0
+		public static void CreateRotationEuler(float eulerX, float eulerY, float eulerZ, out Matrix4x4 matrix); // 0x00000001869357BC-0x000000018693584C
+		public static void CreateRotationEuler(Vector3 eulerAngles, out Matrix4x4 matrix); // 0x00000001869358C0-0x0000000186935934
+		public static void CreateRotationEuler(ref Vector3 eulerAngles, out Matrix4x4 matrix); // 0x000000018693584C-0x00000001869358C0
+		public static void CreateRotationX(float angleInDegrees, out Matrix4x4 matrix); // 0x0000000184D89E00-0x0000000184D89E90
+		public static void CreateRotationY(float angleInDegrees, out Matrix4x4 matrix); // 0x0000000184D89E90-0x0000000184D89F20
+		public static void CreateRotationZ(float angleInDegrees, out Matrix4x4 matrix); // 0x0000000184D89F20-0x0000000184D89FB0
+		public static void CreateRotationAngleAxis(float angleInDegrees, Vector3 rotationAxis, out Matrix4x4 matrix); // 0x0000000186935638-0x00000001869357BC
+		public static void CreateRotationAngleUnitAxis(float angleInDegrees, Vector3 normalizedAxis, out Matrix4x4 matrix); // 0x0000000184D89CA0-0x0000000184D89E00
+		public static void CreateRotation(Vector3 rotationOrigin, Quaternion rotation, out Matrix4x4 result); // 0x0000000186935C50-0x0000000186935D4C
+		public static void CreateRotation(ref Vector3 rotationOrigin, ref Quaternion rotation, out Matrix4x4 result); // 0x0000000186935B54-0x0000000186935C50
+		public static void Transpose(ref Matrix4x4 matrix); // 0x0000000184D8B350-0x0000000184D8B3C0
+		public static void Transpose(ref Matrix4x4 matrix, out Matrix4x4 transpose); // 0x0000000184D8B3C0-0x0000000184D8B420
+		public static float CalcDeterminant(ref Matrix4x4 matrix); // 0x0000000184D89AF0-0x0000000184D89C40
+		public static void Inverse(ref Matrix4x4 matrix, float epsilon = 1E-05f /* Metadata: 0x0234BCC1 */); // 0x0000000186936D68-0x0000000186937394
+		public static void Inverse(ref Matrix4x4 matrix, out Matrix4x4 inverse, float epsilon = 1E-05f /* Metadata: 0x0234BCC5 */); // 0x000000018693679C-0x0000000186936D68
+		public static void CopyMatrix(ref Matrix4x4 source, out Matrix4x4 destination); // 0x0000000184D89C40-0x0000000184D89CA0
+		public static void Multiply(ref Matrix4x4 matrix0, ref Matrix4x4 matrix1, out Matrix4x4 result); // 0x0000000184D8ABD0-0x0000000184D8AF70
+		public static void MultiplyRight(ref Matrix4x4 matrix0, ref Matrix4x4 matrix1); // 0x000000018693777C-0x0000000186937B64
+		public static void MultiplyLeft(ref Matrix4x4 matrix1, ref Matrix4x4 matrix0); // 0x0000000186937394-0x000000018693777C
+		public static void Multiply(ref Matrix4x4 matrix, float scalar); // 0x0000000184D8AA00-0x0000000184D8AAD0
+		public static void Multiply(ref Matrix4x4 matrix, float scalar, out Matrix4x4 result); // 0x0000000184D8AF70-0x0000000184D8B050
+		public static Vector4 Multiply(ref Matrix4x4 matrix, Vector4 vector); // 0x0000000184D8AAD0-0x0000000184D8ABD0
+		public static Vector4 Multiply(ref Matrix4x4 matrix, ref Vector4 vector); // 0x0000000184D8AAD0-0x0000000184D8ABD0
+		public static void CreateSRT(Vector3 scaling, Quaternion rotation, Vector3 translation, out Matrix4x4 result); // 0x0000000186936188-0x0000000186936288
+		public static void CreateSRT(ref Vector3 scaling, ref Quaternion rotation, ref Vector3 translation, out Matrix4x4 result); // 0x0000000186936088-0x0000000186936188
+		public static void CreateSRT(float scaling, Quaternion rotation, Vector3 translation, out Matrix4x4 result); // 0x00000001869365C4-0x00000001869366B0
+		public static void CreateSRT(float scaling, ref Quaternion rotation, ref Vector3 translation, out Matrix4x4 result); // 0x00000001869366B0-0x000000018693679C
+		public static void CreateSRT(Vector3 scaling, Vector3 rotationOrigin, Quaternion rotation, Vector3 translation, out Matrix4x4 result); // 0x000000018693641C-0x00000001869365C4
+		public static void CreateSRT(ref Vector3 scaling, ref Vector3 rotationOrigin, ref Quaternion rotation, ref Vector3 translation, out Matrix4x4 result); // 0x0000000186935EE0-0x0000000186936088
+		public static void CreateSRT(float scaling, Vector3 rotationOrigin, Quaternion rotation, Vector3 translation, out Matrix4x4 result); // 0x0000000186935D4C-0x0000000186935EE0
+		public static void CreateSRT(float scaling, ref Vector3 rotationOrigin, ref Quaternion rotation, ref Vector3 translation, out Matrix4x4 result); // 0x0000000186936288-0x000000018693641C
+		public static void CreateRT(Quaternion rotation, Vector3 translation, out Matrix4x4 result); // 0x0000000186935440-0x00000001869354B0
+		public static void CreateRT(ref Quaternion rotation, ref Vector3 translation, out Matrix4x4 result); // 0x00000001869354B0-0x0000000186935520
+		public static void CreateRT(Vector3 rotationOrigin, Quaternion rotation, Vector3 translation, out Matrix4x4 result); // 0x0000000186935328-0x0000000186935440
+		public static void CreateRT(ref Vector3 rotationOrigin, ref Quaternion rotation, ref Vector3 translation, out Matrix4x4 result); // 0x0000000186935520-0x0000000186935638
+		public static void CreateST(Vector3 scaling, Vector3 translation, out Matrix4x4 result); // 0x0000000184D89FB0-0x0000000184D8A000
+		public static void CreateST(ref Vector3 scaling, ref Vector3 translation, out Matrix4x4 result); // 0x0000000184D89FB0-0x0000000184D8A000
+		public static void CreateRotationFromColumns(Vector3 column0, Vector3 column1, Vector3 column2, out Matrix4x4 matrix); // 0x0000000186935A44-0x0000000186935B54
+		public static void CreateRotationFromColumns(ref Vector3 column0, ref Vector3 column1, ref Vector3 column2, out Matrix4x4 matrix); // 0x0000000186935934-0x0000000186935A44
+		public static void CreateShadowDirectional(Plane3 shadowPlane, Vector3 dirLightOppositeDirection, out Matrix4x4 result); // 0x0000000184D8A0C0-0x0000000184D8A220
+		public static void CreateShadowDirectional(ref Plane3 shadowPlane, ref Vector3 dirLightOppositeDirection, out Matrix4x4 result); // 0x0000000184D8A220-0x0000000184D8A380
+		public static void CreateShadowPoint(Plane3 shadowPlane, Vector3 pointLightPosition, out Matrix4x4 result); // 0x0000000184D8A380-0x0000000184D8A4E0
+		public static void CreateShadowPoint(ref Plane3 shadowPlane, ref Vector3 pointLightPosition, out Matrix4x4 result); // 0x0000000184D8A4E0-0x0000000184D8A640
+		public static void CreateShadow(Plane3 shadowPlane, Vector4 lightData, out Matrix4x4 result); // 0x0000000184D8A7E0-0x0000000184D8A980
+		public static void CreateShadow(ref Plane3 shadowPlane, ref Vector4 lightData, out Matrix4x4 result); // 0x0000000184D8A640-0x0000000184D8A7E0
 	}
 
-	public static class Quaternionex // TypeDefIndex: 55900
+	public static class Quaternionex // TypeDefIndex: 58541
 	{
-		// Methods
-		public static Quaternion DeltaTo(Quaternion quat, Quaternion target) => default; // 0x00000001878CD1AC-0x00000001878CD214
-		public static string ToStringEx(Quaternion quat) => default; // 0x00000001878CD214-0x00000001878CD330
+		// Extension methods
+		public static Quaternion DeltaTo(this Quaternion quat, Quaternion target); // 0x0000000186937CB4-0x0000000186937D1C
+		public static string ToStringEx(this Quaternion quat); // 0x0000000186937D1C-0x0000000186937E38
 	}
 
-	public class Rand // TypeDefIndex: 55901
+	public class Rand // TypeDefIndex: 58542
 	{
 		// Fields
-		private const int a = 5; // Metadata: 0x0207C039
-		private const int b = 14; // Metadata: 0x0207C03A
-		private const int c = 1; // Metadata: 0x0207C03B
-		private const uint DefaultY = 273326509; // Metadata: 0x0207C03C
-		private const uint DefaultZ = 3579807591; // Metadata: 0x0207C040
-		private const uint DefaultW = 842502087; // Metadata: 0x0207C045
-		private const uint PositiveMask = 2147483647; // Metadata: 0x0207C04A
-		private const uint BoolModuloMask = 1; // Metadata: 0x0207C04F
-		private const uint ByteModuloMask = 255; // Metadata: 0x0207C050
-		private const double One_div_uintMaxValuePlusOne = 2.3283064365386963E-10; // Metadata: 0x0207C052
-		private const double TwoPi = 6.283185307179586; // Metadata: 0x0207C05A
+		private const int a = 5; // Metadata: 0x0234BCE9
+		private const int b = 14; // Metadata: 0x0234BCEA
+		private const int c = 1; // Metadata: 0x0234BCEB
+		private const uint DefaultY = 273326509; // Metadata: 0x0234BCEC
+		private const uint DefaultZ = 3579807591; // Metadata: 0x0234BCF0
+		private const uint DefaultW = 842502087; // Metadata: 0x0234BCF5
+		private const uint PositiveMask = 2147483647; // Metadata: 0x0234BCFA
+		private const uint BoolModuloMask = 1; // Metadata: 0x0234BCFF
+		private const uint ByteModuloMask = 255; // Metadata: 0x0234BD00
+		private const double One_div_uintMaxValuePlusOne = 2.3283064365386963E-10; // Metadata: 0x0234BD02
+		private const double TwoPi = 6.283185307179586; // Metadata: 0x0234BD0A
 		private static Rand _seedGenerator; // 0x00
 		private uint _x; // 0x10
 		private uint _y; // 0x14
@@ -1953,52 +1269,47 @@ namespace Dest.Math
 		public static Rand Instance; // 0x08
 	
 		// Constructors
-		static Rand() {} // 0x00000001878CE36C-0x00000001878CE43C
-		public Rand() {} // 0x00000001878CE43C-0x00000001878CE4B4
-		public Rand(int seed) {} // 0x0000000185FB5560-0x0000000185FB5580
+		static Rand(); // 0x0000000186938E74-0x0000000186938F44
+		public Rand(); // 0x0000000186938F44-0x0000000186938FBC
+		public Rand(int seed); // 0x0000000184D8B5A0-0x0000000184D8B5C0
 	
 		// Methods
-		public void ResetSeed(int seed) {} // 0x0000000185FB5560-0x0000000185FB5580
-		public void GetState(out uint x, out uint y, out uint z, out uint w) {
-			x = default;
-			y = default;
-			z = default;
-			w = default;
-		} // 0x0000000185FB53E0-0x0000000185FB5400
-		public void SetState(uint x, uint y, uint z, uint w) {} // 0x0000000185FB5580-0x0000000185FB55A0
-		public int NextInt() => default; // 0x0000000185FB5400-0x0000000185FB5430
-		public int NextInt(int max) => default; // 0x0000000185FB54C0-0x0000000185FB5520
-		public int NextInt(int min, int max) => default; // 0x00000001878CDB08-0x00000001878CDBE8
-		public int NextIntInclusive(int min, int max) => default; // 0x00000001878CDAFC-0x00000001878CDB08
-		public int NextPositiveInt() => default; // 0x0000000185FB5520-0x0000000185FB5560
-		public uint NextUInt() => default; // 0x0000000185FB5400-0x0000000185FB5430
-		public double NextDouble() => default; // 0x0000000185FB5430-0x0000000185FB5470
-		public double NextDouble(double min, double max) => default; // 0x00000001878CD978-0x00000001878CDA38
-		public float NextFloat() => default; // 0x0000000185FB5470-0x0000000185FB54C0
-		public float NextFloat(float min, float max) => default; // 0x00000001878CDA38-0x00000001878CDAFC
-		public bool NextBool() => default; // 0x00000001878CD944-0x00000001878CD978
-		public byte NextByte() => default; // 0x0000000185FB5400-0x0000000185FB5430
-		public UnityEngine.Color RandomColorOpaque() => default; // 0x00000001878CE150-0x00000001878CE1BC
-		public UnityEngine.Color RandomColorTransparent() => default; // 0x00000001878CE1BC-0x00000001878CE240
-		public Color32 RandomColor32Opaque() => default; // 0x00000001878CE0BC-0x00000001878CE0FC
-		public Color32 RandomColor32Transparent() => default; // 0x00000001878CE0FC-0x00000001878CE150
-		public float RandomAngleRadians() => default; // 0x00000001878CE0A4-0x00000001878CE0BC
-		public float RandomAngleDegrees() => default; // 0x00000001878CE08C-0x00000001878CE0A4
-		public Vector2 InSquare(float side = 1f /* Metadata: 0x0207C019 */) => default; // 0x00000001878CD5D8-0x00000001878CD64C
-		public Vector2 OnSquare(float side = 1f /* Metadata: 0x0207C01D */) => default; // 0x00000001878CDF54-0x00000001878CE08C
-		public Vector3 InCube(float side = 1f /* Metadata: 0x0207C021 */) => default; // 0x00000001878CD448-0x00000001878CD4F8
-		public Vector3 OnCube(float side = 1f /* Metadata: 0x0207C025 */) => default; // 0x00000001878CDC44-0x00000001878CDE88
-		public Vector2 InCircle(float radius = 1f /* Metadata: 0x0207C029 */) => default; // 0x00000001878CD3D0-0x00000001878CD448
-		public Vector2 InCircle(float radiusMin, float radiusMax) => default; // 0x00000001878CD330-0x00000001878CD3D0
-		public Vector2 OnCircle(float radius = 1f /* Metadata: 0x0207C02D */) => default; // 0x00000001878CDBE8-0x00000001878CDC44
-		public Vector3 InSphere(float radius = 1f /* Metadata: 0x0207C031 */) => default; // 0x00000001878CD4F8-0x00000001878CD5D8
-		public Vector3 OnSphere(float radius = 1f /* Metadata: 0x0207C035 */) => default; // 0x00000001878CDE88-0x00000001878CDF54
-		public Vector3 InTriangle(ref Vector3 v0, ref Vector3 v1, ref Vector3 v2) => default; // 0x00000001878CD7C8-0x00000001878CD944
-		public Vector3 InTriangle(Vector3 v0, Vector3 v1, Vector3 v2) => default; // 0x00000001878CD64C-0x00000001878CD7C8
-		public Quaternion RandomRotation() => default; // 0x00000001878CE240-0x00000001878CE36C
+		public void ResetSeed(int seed); // 0x0000000184D8B5A0-0x0000000184D8B5C0
+		public void GetState(out uint x, out uint y, out uint z, out uint w); // 0x0000000184D8B420-0x0000000184D8B440
+		public void SetState(uint x, uint y, uint z, uint w); // 0x0000000184D8B5C0-0x0000000184D8B5E0
+		public int NextInt(); // 0x0000000184D8B440-0x0000000184D8B470
+		public int NextInt(int max); // 0x0000000184D8B500-0x0000000184D8B560
+		public int NextInt(int min, int max); // 0x0000000186938610-0x00000001869386F0
+		public int NextIntInclusive(int min, int max); // 0x0000000186938604-0x0000000186938610
+		public int NextPositiveInt(); // 0x0000000184D8B560-0x0000000184D8B5A0
+		public uint NextUInt(); // 0x0000000184D8B440-0x0000000184D8B470
+		public double NextDouble(); // 0x0000000184D8B470-0x0000000184D8B4B0
+		public double NextDouble(double min, double max); // 0x0000000186938480-0x0000000186938540
+		public float NextFloat(); // 0x0000000184D8B4B0-0x0000000184D8B500
+		public float NextFloat(float min, float max); // 0x0000000186938540-0x0000000186938604
+		public bool NextBool(); // 0x000000018693844C-0x0000000186938480
+		public byte NextByte(); // 0x0000000184D8B440-0x0000000184D8B470
+		public UnityEngine.Color RandomColorOpaque(); // 0x0000000186938C58-0x0000000186938CC4
+		public UnityEngine.Color RandomColorTransparent(); // 0x0000000186938CC4-0x0000000186938D48
+		public Color32 RandomColor32Opaque(); // 0x0000000186938BC4-0x0000000186938C04
+		public Color32 RandomColor32Transparent(); // 0x0000000186938C04-0x0000000186938C58
+		public float RandomAngleRadians(); // 0x0000000186938BAC-0x0000000186938BC4
+		public float RandomAngleDegrees(); // 0x0000000186938B94-0x0000000186938BAC
+		public Vector2 InSquare(float side = 1f /* Metadata: 0x0234BCC9 */); // 0x00000001869380E0-0x0000000186938154
+		public Vector2 OnSquare(float side = 1f /* Metadata: 0x0234BCCD */); // 0x0000000186938A5C-0x0000000186938B94
+		public Vector3 InCube(float side = 1f /* Metadata: 0x0234BCD1 */); // 0x0000000186937F50-0x0000000186938000
+		public Vector3 OnCube(float side = 1f /* Metadata: 0x0234BCD5 */); // 0x000000018693874C-0x0000000186938990
+		public Vector2 InCircle(float radius = 1f /* Metadata: 0x0234BCD9 */); // 0x0000000186937ED8-0x0000000186937F50
+		public Vector2 InCircle(float radiusMin, float radiusMax); // 0x0000000186937E38-0x0000000186937ED8
+		public Vector2 OnCircle(float radius = 1f /* Metadata: 0x0234BCDD */); // 0x00000001869386F0-0x000000018693874C
+		public Vector3 InSphere(float radius = 1f /* Metadata: 0x0234BCE1 */); // 0x0000000186938000-0x00000001869380E0
+		public Vector3 OnSphere(float radius = 1f /* Metadata: 0x0234BCE5 */); // 0x0000000186938990-0x0000000186938A5C
+		public Vector3 InTriangle(ref Vector3 v0, ref Vector3 v1, ref Vector3 v2); // 0x00000001869382D0-0x000000018693844C
+		public Vector3 InTriangle(Vector3 v0, Vector3 v1, Vector3 v2); // 0x0000000186938154-0x00000001869382D0
+		public Quaternion RandomRotation(); // 0x0000000186938D48-0x0000000186938E74
 	}
 
-	public static class Vector2ex // TypeDefIndex: 55903
+	public static class Vector2ex // TypeDefIndex: 58544
 	{
 		// Fields
 		public static readonly Vector2 Zero; // 0x00
@@ -2009,7 +1320,7 @@ namespace Dest.Math
 		public static readonly Vector2 NegativeInfinity; // 0x28
 	
 		// Nested types
-		internal class Information // TypeDefIndex: 55902
+		internal class Information // TypeDefIndex: 58543
 		{
 			// Fields
 			public int Dimension; // 0x10
@@ -2022,43 +1333,45 @@ namespace Dest.Math
 			public bool ExtremeCCW; // 0x40
 	
 			// Constructors
-			public Information() {} // 0x00000001878CF8C0-0x00000001878CFEFC
+			public Information(); // 0x0000000186934844-0x00000001869348B8
 		}
 	
 		// Constructors
-		static Vector2ex() {} // 0x00000001878C9CB8-0x00000001878C9D2C
+		static Vector2ex(); // 0x000000018693ABBC-0x000000018693AC6C
 	
 		// Methods
-		internal static Information GetInformation(IList<Vector2> points, float epsilon) => default; // 0x0000000185FB5670-0x0000000185FB56B0
-		public static float Length(Vector2 vector) => default; // 0x0000000185FB5650-0x0000000185FB5670
-		public static float LengthSqr(Vector2 vector) => default; // 0x0000000185FB26D0-0x0000000185FB2700
-		public static float DotPerp(Vector2 vector, Vector2 value) => default; // 0x0000000185FB55A0-0x0000000185FB55C0
-		public static float DotPerp(Vector2 vector, ref Vector2 value) => default; // 0x0000000185FB55C0-0x0000000185FB55E0
-		public static float DotPerp(ref Vector2 vector, ref Vector2 value) => default; // 0x0000000185FB5600-0x0000000185FB5630
-		public static float Dot(Vector2 vector, Vector2 value) => default; // 0x0000000185FB55E0-0x0000000185FB5600
-		public static float Dot(Vector2 vector, ref Vector2 value) => default; // 0x0000000185FB5630-0x0000000185FB5650
-		public static float Dot(ref Vector2 vector, ref Vector2 value) => default; // 0x0000000185FB56B0-0x0000000185FB56E0
-		public static Vector2 Perp(Vector2 vector) => default; // 0x00000001878CF760-0x00000001878CF814
-		public static float AngleDeg(Vector2 vector, Vector2 target) => default; // 0x00000001878CF814-0x00000001878CF8C0
-		public static float AngleRad(Vector2 vector, Vector2 target) => default; // 0x00000001878CFF74-0x00000001878CFFE4
-		public static float Normalize(ref Vector2 vector, float epsilon = 1E-05f /* Metadata: 0x0207C062 */) => default; // 0x00000001878CFFE4-0x00000001878D0058
-		public static float SetLength(ref Vector2 vector, float lengthValue, float epsilon = 1E-05f /* Metadata: 0x0207C066 */) => default; // 0x00000001878CFEFC-0x00000001878CFF74
-		public static float GrowLength(ref Vector2 vector, float lengthDelta, float epsilon = 1E-05f /* Metadata: 0x0207C06A */) => default; // 0x0000000185FB56E0-0x0000000185FB56F0
-		public static Vector2 Replicate(float value) => default; // 0x0000000185FB29F0-0x0000000185FB2A20
-		public static Vector3 ToVector3XY(Vector2 vector) => default; // 0x0000000185FB2A40-0x0000000185FB2A70
-		public static Vector3 ToVector3XZ(Vector2 vector) => default; // 0x0000000185FB56F0-0x0000000185FB5720
-		public static Vector3 ToVector3YZ(Vector2 vector) => default; // 0x00000001878D0058-0x00000001878D00B4
-		public static string ToStringEx(Vector2 vector) => default; // 0x00000001878D00B4-0x00000001878D0164
+		internal static Information GetInformation(IList<Vector2> points, float epsilon); // 0x000000018693A3C8-0x000000018693AA04
+		public static float DotPerp(ref Vector2 vector, ref Vector2 value); // 0x0000000184D8B600-0x0000000184D8B620
+		public static float Dot(ref Vector2 vector, ref Vector2 value); // 0x0000000184D8B670-0x0000000184D8B690
+		public static float Normalize(ref Vector2 vector, float epsilon = 1E-05f /* Metadata: 0x0234BD12 */); // 0x000000018693AA7C-0x000000018693AAEC
+		public static float SetLength(ref Vector2 vector, float lengthValue, float epsilon = 1E-05f /* Metadata: 0x0234BD16 */); // 0x000000018693AAEC-0x000000018693AB60
+		public static float GrowLength(ref Vector2 vector, float lengthDelta, float epsilon = 1E-05f /* Metadata: 0x0234BD1A */); // 0x000000018693AA04-0x000000018693AA7C
+		public static Vector2 Replicate(float value); // 0x0000000184D8B720-0x0000000184D8B730
+	
+		// Extension methods
+		public static float Length(this Vector2 vector); // 0x0000000184D8B6B0-0x0000000184D8B6F0
+		public static float LengthSqr(this Vector2 vector); // 0x0000000184D8B690-0x0000000184D8B6B0
+		public static float DotPerp(this Vector2 vector, Vector2 value); // 0x0000000184D85F20-0x0000000184D85F50
+		public static float DotPerp(this Vector2 vector, ref Vector2 value); // 0x0000000184D8B5E0-0x0000000184D8B600
+		public static float Dot(this Vector2 vector, Vector2 value); // 0x0000000184D8B640-0x0000000184D8B670
+		public static float Dot(this Vector2 vector, ref Vector2 value); // 0x0000000184D8B620-0x0000000184D8B640
+		public static Vector2 Perp(this Vector2 vector); // 0x0000000184D8B6F0-0x0000000184D8B720
+		public static float AngleDeg(this Vector2 vector, Vector2 target); // 0x000000018693A268-0x000000018693A31C
+		public static float AngleRad(this Vector2 vector, Vector2 target); // 0x000000018693A31C-0x000000018693A3C8
+		public static Vector3 ToVector3XY(this Vector2 vector); // 0x0000000184D88A10-0x0000000184D88A40
+		public static Vector3 ToVector3XZ(this Vector2 vector); // 0x0000000184D88A60-0x0000000184D88A90
+		public static Vector3 ToVector3YZ(this Vector2 vector); // 0x0000000184D8B730-0x0000000184D8B760
+		public static string ToStringEx(this Vector2 vector); // 0x000000018693AB60-0x000000018693ABBC
 	}
 
-	public enum ProjectionPlanes // TypeDefIndex: 55904
+	public enum ProjectionPlanes // TypeDefIndex: 58545
 	{
 		XY = 0,
 		XZ = 1,
 		YZ = 2
 	}
 
-	public static class Vector3ex // TypeDefIndex: 55906
+	public static class Vector3ex // TypeDefIndex: 58547
 	{
 		// Fields
 		public static readonly Vector3 Zero; // 0x00
@@ -2070,7 +1383,7 @@ namespace Dest.Math
 		public static readonly Vector3 NegativeInfinity; // 0x48
 	
 		// Nested types
-		internal class Information // TypeDefIndex: 55905
+		internal class Information // TypeDefIndex: 58546
 		{
 			// Fields
 			public int Dimension; // 0x10
@@ -2083,47 +1396,46 @@ namespace Dest.Math
 			public bool ExtremeCCW; // 0x50
 	
 			// Constructors
-			public Information() {} // 0x00000001878D03FC-0x00000001878D0FB8
+			public Information(); // 0x00000001869348B8-0x000000018693492C
 		}
 	
 		// Constructors
-		static Vector3ex() {} // 0x00000001878C9D2C-0x00000001878C9DA0
+		static Vector3ex(); // 0x000000018693C2CC-0x000000018693C3E0
 	
 		// Methods
-		internal static Information GetInformation(IList<Vector3> points, float epsilon) => default; // 0x0000000185FB57E0-0x0000000185FB5820
-		public static float Length(Vector3 vector) => default; // 0x0000000185FB57B0-0x0000000185FB57E0
-		public static float LengthSqr(Vector3 vector) => default; // 0x0000000185FB5780-0x0000000185FB57B0
-		public static float Dot(Vector3 vector, Vector3 value) => default; // 0x0000000185FB5780-0x0000000185FB57B0
-		public static float Dot(Vector3 vector, ref Vector3 value) => default; // 0x0000000185FB5780-0x0000000185FB57B0
-		public static float Dot(ref Vector3 vector, ref Vector3 value) => default; // 0x00000001878D0164-0x00000001878D0220
-		public static float AngleDeg(Vector3 vector, Vector3 target) => default; // 0x00000001878D0220-0x00000001878D02D4
-		public static float AngleRad(Vector3 vector, Vector3 target) => default; // 0x00000001878D122C-0x00000001878D138C
-		public static float SignedAngleDeg(Vector3 vector, Vector3 target, Vector3 normal) => default; // 0x00000001878D138C-0x00000001878D14E4
-		public static float SignedAngleRad(Vector3 vector, Vector3 target, Vector3 normal) => default; // 0x0000000185FB5720-0x0000000185FB5780
-		public static Vector3 Cross(Vector3 vector, Vector3 value) => default; // 0x0000000185FB5720-0x0000000185FB5780
-		public static Vector3 Cross(Vector3 vector, ref Vector3 value) => default; // 0x0000000185FB5720-0x0000000185FB5780
-		public static Vector3 Cross(ref Vector3 vector, ref Vector3 value) => default; // 0x00000001878D164C-0x00000001878D1704
-		public static Vector3 UnitCross(Vector3 vector, Vector3 value) => default; // 0x00000001878D158C-0x00000001878D164C
-		public static Vector3 UnitCross(Vector3 vector, ref Vector3 value) => default; // 0x00000001878D1704-0x00000001878D17C4
-		public static Vector3 UnitCross(ref Vector3 vector, ref Vector3 value) => default; // 0x00000001878D108C-0x00000001878D1118
-		public static float Normalize(ref Vector3 vector, float epsilon = 1E-05f /* Metadata: 0x0207C071 */) => default; // 0x00000001878D119C-0x00000001878D122C
-		public static float SetLength(ref Vector3 vector, float lengthValue, float epsilon = 1E-05f /* Metadata: 0x0207C075 */) => default; // 0x00000001878D0FF8-0x00000001878D108C
-		public static float GrowLength(ref Vector3 vector, float lengthDelta, float epsilon = 1E-05f /* Metadata: 0x0207C079 */) => default; // 0x0000000185FB5820-0x0000000185FB5840
-		public static Vector3 Replicate(float value) => default; // 0x00000001878D02D4-0x00000001878D03FC
-		public static void CreateOrthonormalBasis(out Vector3 u, out Vector3 v, ref Vector3 w) {
-			u = default;
-			v = default;
-		} // 0x00000001878D1118-0x00000001878D119C
-		public static bool SameDirection(Vector3 value0, Vector3 value1) => default; // 0x0000000185FB29D0-0x0000000185FB29F0
-		public static Vector2 ToVector2XY(Vector3 vector) => default; // 0x0000000185FB2A20-0x0000000185FB2A40
-		public static Vector2 ToVector2XZ(Vector3 vector) => default; // 0x0000000185FB5840-0x0000000185FB5860
-		public static Vector2 ToVector2YZ(Vector3 vector) => default; // 0x00000001878D1564-0x00000001878D158C
-		public static Vector2 ToVector2(Vector3 vector, ProjectionPlanes projectionPlane) => default; // 0x00000001878D0FB8-0x00000001878D0FF8
-		public static ProjectionPlanes GetProjectionPlane(Vector3 vector) => default; // 0x00000001878D14E4-0x00000001878D1564
-		public static string ToStringEx(Vector3 vector) => default; // 0x000000018496CFA0-0x000000018496D0C0
+		internal static Information GetInformation(IList<Vector3> points, float epsilon); // 0x000000018693AF04-0x000000018693BAC0
+		public static float Dot(ref Vector3 vector, ref Vector3 value); // 0x0000000184D8B7C0-0x0000000184D8B7F0
+		public static Vector3 Cross(ref Vector3 vector, ref Vector3 value); // 0x0000000184D8B760-0x0000000184D8B7C0
+		public static Vector3 UnitCross(ref Vector3 vector, ref Vector3 value); // 0x000000018693C20C-0x000000018693C2CC
+		public static float Normalize(ref Vector3 vector, float epsilon = 1E-05f /* Metadata: 0x0234BD21 */); // 0x000000018693BB94-0x000000018693BC20
+		public static float SetLength(ref Vector3 vector, float lengthValue, float epsilon = 1E-05f /* Metadata: 0x0234BD25 */); // 0x000000018693BCA4-0x000000018693BD34
+		public static float GrowLength(ref Vector3 vector, float lengthDelta, float epsilon = 1E-05f /* Metadata: 0x0234BD29 */); // 0x000000018693BB00-0x000000018693BB94
+		public static Vector3 Replicate(float value); // 0x0000000184D8B860-0x0000000184D8B880
+		public static void CreateOrthonormalBasis(out Vector3 u, out Vector3 v, ref Vector3 w); // 0x000000018693ADDC-0x000000018693AF04
+		public static bool SameDirection(Vector3 value0, Vector3 value1); // 0x000000018693BC20-0x000000018693BCA4
+	
+		// Extension methods
+		public static float Length(this Vector3 vector); // 0x0000000184D8B820-0x0000000184D8B860
+		public static float LengthSqr(this Vector3 vector); // 0x0000000184D8B7F0-0x0000000184D8B820
+		public static float Dot(this Vector3 vector, Vector3 value); // 0x0000000184D8B7C0-0x0000000184D8B7F0
+		public static float Dot(this Vector3 vector, ref Vector3 value); // 0x0000000184D8B7C0-0x0000000184D8B7F0
+		public static float AngleDeg(this Vector3 vector, Vector3 target); // 0x000000018693AC6C-0x000000018693AD28
+		public static float AngleRad(this Vector3 vector, Vector3 target); // 0x000000018693AD28-0x000000018693ADDC
+		public static float SignedAngleDeg(this Vector3 vector, Vector3 target, Vector3 normal); // 0x000000018693BD34-0x000000018693BE94
+		public static float SignedAngleRad(this Vector3 vector, Vector3 target, Vector3 normal); // 0x000000018693BE94-0x000000018693BFEC
+		public static Vector3 Cross(this Vector3 vector, Vector3 value); // 0x0000000184D8B760-0x0000000184D8B7C0
+		public static Vector3 Cross(this Vector3 vector, ref Vector3 value); // 0x0000000184D8B760-0x0000000184D8B7C0
+		public static Vector3 UnitCross(this Vector3 vector, Vector3 value); // 0x000000018693C154-0x000000018693C20C
+		public static Vector3 UnitCross(this Vector3 vector, ref Vector3 value); // 0x000000018693C094-0x000000018693C154
+		public static Vector2 ToVector2XY(this Vector3 vector); // 0x0000000184D889F0-0x0000000184D88A10
+		public static Vector2 ToVector2XZ(this Vector3 vector); // 0x0000000184D88A40-0x0000000184D88A60
+		public static Vector2 ToVector2YZ(this Vector3 vector); // 0x0000000184D8B880-0x0000000184D8B8A0
+		public static Vector2 ToVector2(this Vector3 vector, ProjectionPlanes projectionPlane); // 0x000000018693C06C-0x000000018693C094
+		public static ProjectionPlanes GetProjectionPlane(this Vector3 vector); // 0x000000018693BAC0-0x000000018693BB00
+		public static string ToStringEx(this Vector3 vector); // 0x000000018693BFEC-0x000000018693C06C
 	}
 
-	public struct BrentsRoot // TypeDefIndex: 55907
+	public struct BrentsRoot // TypeDefIndex: 58548
 	{
 		// Fields
 		public float X; // 0x00
@@ -2131,15 +1443,15 @@ namespace Dest.Math
 		public bool ExceededMaxIterations; // 0x08
 	}
 
-	public static class RootFinder // TypeDefIndex: 55909
+	public static class RootFinder // TypeDefIndex: 58550
 	{
 		// Fields
-		private const float third = 0.33333334f; // Metadata: 0x0207C0AD
-		private const float twentySeventh = 0.037037037f; // Metadata: 0x0207C0B1
+		private const float third = 0.33333334f; // Metadata: 0x0234BD5D
+		private const float twentySeventh = 0.037037037f; // Metadata: 0x0234BD61
 		private static float sqrt3; // 0x00
 	
 		// Nested types
-		private class PolyRootFinder // TypeDefIndex: 55908
+		private class PolyRootFinder // TypeDefIndex: 58549
 		{
 			// Fields
 			private int _count; // 0x10
@@ -2148,56 +1460,31 @@ namespace Dest.Math
 			private float _epsilon; // 0x20
 	
 			// Properties
-			public float[] Roots { get => default; } // 0x00000001878CE4B4-0x00000001878CE88C 
+			public float[] Roots { get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public PolyRootFinder() {} // Dummy constructor
-			public PolyRootFinder(float epsilon) {} // 0x00000001878CEC48-0x00000001878CEC74
+			public PolyRootFinder(float epsilon); // 0x00000001869469A0-0x0000000186946A04
 	
 			// Methods
-			public bool Bisection(Polynomial poly, float xMin, float xMax, int digits, out float root) {
-				root = default;
-				return default;
-			} // 0x00000001878CEF0C-0x00000001878CF094
-			public bool Find(Polynomial poly, float xMin, float xMax, int digits) => default; // 0x00000001878CE88C-0x00000001878CEC48
+			public bool Bisection(Polynomial poly, float xMin, float xMax, int digits, out float root); // 0x00000001869463D0-0x0000000186946570
+			public bool Find(Polynomial poly, float xMin, float xMax, int digits); // 0x0000000186946570-0x00000001869469A0
 		}
 	
 		// Constructors
-		static RootFinder() {} // 0x00000001878DB8B4-0x00000001878DBCE4
+		static RootFinder(); // 0x000000018693A050-0x000000018693A094
 	
 		// Methods
-		public static bool BrentsMethod(Func<float, float> function, float x0, float x1, out BrentsRoot root, int maxIterations = 128 /* Metadata: 0x0207C07D */, float negativeTolerance = -1E-05f /* Metadata: 0x0207C07F */, float positiveTolerance = 1E-05f /* Metadata: 0x0207C083 */, float stepTolerance = 1E-05f /* Metadata: 0x0207C087 */, float segmentTolerance = 1E-05f /* Metadata: 0x0207C08B */) {
-			root = default;
-			return default;
-		} // 0x00000001878CF094-0x00000001878CF548
-		public static bool Linear(float c0, float c1, out float root, float epsilon = 1E-05f /* Metadata: 0x0207C08F */) {
-			root = default;
-			return default;
-		} // 0x00000001878CEC74-0x00000001878CED40
-		public static bool Quadratic(float c0, float c1, float c2, out QuadraticRoots roots, float epsilon = 1E-05f /* Metadata: 0x0207C093 */) {
-			roots = default;
-			return default;
-		} // 0x00000001878CEE24-0x00000001878CEF0C
-		public static bool Cubic(float c0, float c1, float c2, float c3, out CubicRoots roots, float epsilon = 1E-05f /* Metadata: 0x0207C097 */) {
-			roots = default;
-			return default;
-		} // 0x00000001878CED40-0x00000001878CEE24
-		public static bool Quartic(float c0, float c1, float c2, float c3, float c4, out QuarticRoots roots, float epsilon = 1E-05f /* Metadata: 0x0207C09B */) {
-			roots = default;
-			return default;
-		} // 0x00000001878CF548-0x00000001878CF58C
-		public static float PolynomialBound(Polynomial poly, float epsilon = 1E-05f /* Metadata: 0x0207C09F */) => default; // 0x0000000181377E40-0x0000000181377E50
-		public static bool Polynomial(Polynomial poly, float xMin, float xMax, out float[] roots, int digits = 6 /* Metadata: 0x0207C0A3 */, float epsilon = 1E-05f /* Metadata: 0x0207C0A4 */) {
-			roots = default;
-			return default;
-		} // 0x00000001878DBCE4-0x00000001878DBD48
-		public static bool Polynomial(Polynomial poly, out float[] roots, int digits = 6 /* Metadata: 0x0207C0A8 */, float epsilon = 1E-05f /* Metadata: 0x0207C0A9 */) {
-			roots = default;
-			return default;
-		} // 0x00000001878DB714-0x00000001878DB8B4
+		public static bool BrentsMethod(Func<float, float> function, float x0, float x1, out BrentsRoot root, int maxIterations = 128 /* Metadata: 0x0234BD2D */, float negativeTolerance = -1E-05f /* Metadata: 0x0234BD2F */, float positiveTolerance = 1E-05f /* Metadata: 0x0234BD33 */, float stepTolerance = 1E-05f /* Metadata: 0x0234BD37 */, float segmentTolerance = 1E-05f /* Metadata: 0x0234BD3B */); // 0x0000000186938FBC-0x0000000186939394
+		public static bool Linear(float c0, float c1, out float root, float epsilon = 1E-05f /* Metadata: 0x0234BD3F */); // 0x0000000186939750-0x000000018693977C
+		public static bool Quadratic(float c0, float c1, float c2, out QuadraticRoots roots, float epsilon = 1E-05f /* Metadata: 0x0234BD43 */); // 0x0000000186939A14-0x0000000186939B9C
+		public static bool Cubic(float c0, float c1, float c2, float c3, out CubicRoots roots, float epsilon = 1E-05f /* Metadata: 0x0234BD47 */); // 0x0000000186939394-0x0000000186939750
+		public static bool Quartic(float c0, float c1, float c2, float c3, float c4, out QuarticRoots roots, float epsilon = 1E-05f /* Metadata: 0x0234BD4B */); // 0x0000000186939B9C-0x000000018693A050
+		public static float PolynomialBound(Polynomial poly, float epsilon = 1E-05f /* Metadata: 0x0234BD4F */); // 0x000000018693977C-0x0000000186939848
+		public static bool Polynomial(Polynomial poly, float xMin, float xMax, out float[] roots, int digits = 6 /* Metadata: 0x0234BD53 */, float epsilon = 1E-05f /* Metadata: 0x0234BD54 */); // 0x000000018693992C-0x0000000186939A14
+		public static bool Polynomial(Polynomial poly, out float[] roots, int digits = 6 /* Metadata: 0x0234BD58 */, float epsilon = 1E-05f /* Metadata: 0x0234BD59 */); // 0x0000000186939848-0x000000018693992C
 	}
 
-	public class EigenData // TypeDefIndex: 55910
+	public class EigenData // TypeDefIndex: 58551
 	{
 		// Fields
 		private int _size; // 0x10
@@ -2205,92 +1492,64 @@ namespace Dest.Math
 		private float[,] _matrix; // 0x20
 	
 		// Properties
-		public int Size { get => default; } // 0x0000000181C0BBD0-0x0000000181C0BBE0 
+		public int Size { get; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 
 	
 		// Constructors
-		public EigenData() {} // Dummy constructor
-		internal EigenData(float[] diagonal, float[,] matrix) {} // 0x00000001878D6D94-0x00000001878D6DD0
+		internal EigenData(float[] diagonal, float[,] matrix); // 0x0000000186941A3C-0x0000000186941A78
 	
 		// Methods
-		public float GetEigenvalue(int index) => default; // 0x00000001878B6074-0x00000001878B60A4
-		public Vector2 GetEigenvector2(int index) => default; // 0x00000001878D6AF4-0x00000001878D6BAC
-		public Vector3 GetEigenvector3(int index) => default; // 0x00000001878D6BAC-0x00000001878D6C7C
-		public float[] GetEigenvector(int index) => default; // 0x00000001878D6C7C-0x00000001878D6D20
-		public void GetEigenvector(int index, float[] out_eigenvector) {} // 0x00000001878D6D20-0x00000001878D6D94
+		public float GetEigenvalue(int index); // 0x0000000186920148-0x0000000186920178
+		public Vector2 GetEigenvector2(int index); // 0x000000018694179C-0x0000000186941854
+		public Vector3 GetEigenvector3(int index); // 0x0000000186941854-0x0000000186941924
+		public float[] GetEigenvector(int index); // 0x0000000186941924-0x00000001869419C8
+		public void GetEigenvector(int index, float[] out_eigenvector); // 0x00000001869419C8-0x0000000186941A3C
 	}
 
-	public static class EigenDecomposition // TypeDefIndex: 55911
+	public static class EigenDecomposition // TypeDefIndex: 58552
 	{
 		// Methods
-		private static void Tridiagonal2(float[] diagonal, float[] subdiagonal, float[,] matrix, out bool isRotation) {
-			isRotation = default;
-		} // 0x00000001878D772C-0x00000001878D7840
-		private static void Tridiagonal3(float[] diagonal, float[] subdiagonal, float[,] matrix, out bool isRotation) {
-			isRotation = default;
-		} // 0x00000001878D7840-0x00000001878D7BB4
-		private static void TridiagonalN(float[] diagonal, float[] subdiagonal, float[,] matrix, out bool isRotation) {
-			isRotation = default;
-		} // 0x00000001878D7BB4-0x00000001878D8240
-		private static bool QLAlgorithm(float[] diagonal, float[] subdiagonal, float[,] matrix) => default; // 0x00000001878D710C-0x00000001878D757C
-		private static void IncreasingSort(float[] diagonal, float[] subdiagonal, float[,] matrix, ref bool isRotation) {} // 0x00000001878D6FA8-0x00000001878D710C
-		private static void DecreasingSort(float[] diagonal, float[] subdiagonal, float[,] matrix, ref bool isRotation) {} // 0x00000001878D6DD0-0x00000001878D6F38
-		private static void GuaranteeRotation(float[,] matrix, bool isRotation) {} // 0x00000001878D6F38-0x00000001878D6FA8
-		public static EigenData Solve(float[,] symmetricSquareMatrix, bool increasingSort) => default; // 0x00000001878D757C-0x00000001878D772C
+		private static void Tridiagonal2(float[] diagonal, float[] subdiagonal, float[,] matrix, out bool isRotation); // 0x00000001869423D4-0x00000001869424E8
+		private static void Tridiagonal3(float[] diagonal, float[] subdiagonal, float[,] matrix, out bool isRotation); // 0x00000001869424E8-0x000000018694285C
+		private static void TridiagonalN(float[] diagonal, float[] subdiagonal, float[,] matrix, out bool isRotation); // 0x000000018694285C-0x0000000186942EE8
+		private static bool QLAlgorithm(float[] diagonal, float[] subdiagonal, float[,] matrix); // 0x0000000186941DB4-0x0000000186942224
+		private static void IncreasingSort(float[] diagonal, float[] subdiagonal, float[,] matrix, ref bool isRotation); // 0x0000000186941C50-0x0000000186941DB4
+		private static void DecreasingSort(float[] diagonal, float[] subdiagonal, float[,] matrix, ref bool isRotation); // 0x0000000186941A78-0x0000000186941BE0
+		private static void GuaranteeRotation(float[,] matrix, bool isRotation); // 0x0000000186941BE0-0x0000000186941C50
+		public static EigenData Solve(float[,] symmetricSquareMatrix, bool increasingSort); // 0x0000000186942224-0x00000001869423D4
 	}
 
-	public static class Integrator // TypeDefIndex: 55912
+	public static class Integrator // TypeDefIndex: 58553
 	{
 		// Fields
-		private const int _degree = 5; // Metadata: 0x0207C0B5
+		private const int _degree = 5; // Metadata: 0x0234BD65
 		private static float[] root; // 0x00
 		private static float[] coeff; // 0x08
 	
 		// Constructors
-		static Integrator() {} // 0x00000001878D86CC-0x00000001878D87B0
+		static Integrator(); // 0x0000000186943374-0x0000000186943458
 	
 		// Methods
-		public static float TrapezoidRule(Func<float, float> function, float a, float b, int sampleCount) => default; // 0x00000001878D85C8-0x00000001878D86CC
-		public static float RombergIntegral(Func<float, float> function, float a, float b, int order) => default; // 0x00000001878D835C-0x00000001878D85C8
-		public static float GaussianQuadrature(Func<float, float> function, float a, float b) => default; // 0x00000001878D8240-0x00000001878D835C
+		public static float TrapezoidRule(Func<float, float> function, float a, float b, int sampleCount); // 0x0000000186943270-0x0000000186943374
+		public static float RombergIntegral(Func<float, float> function, float a, float b, int order); // 0x0000000186943004-0x0000000186943270
+		public static float GaussianQuadrature(Func<float, float> function, float a, float b); // 0x0000000186942EE8-0x0000000186943004
 	}
 
-	public static class LinearSystem // TypeDefIndex: 55913
+	public static class LinearSystem // TypeDefIndex: 58554
 	{
 		// Methods
-		public static bool Solve2(float[,] A, float[] B, out float[] X, float zeroTolerance = 1E-05f /* Metadata: 0x0207C0B6 */) {
-			X = default;
-			return default;
-		} // 0x00000001878D9B28-0x00000001878D9D30
-		public static bool Solve2(float[,] A, float[] B, out Vector2 X, float zeroTolerance = 1E-05f /* Metadata: 0x0207C0BA */) {
-			X = default;
-			return default;
-		} // 0x00000001878D9D30-0x00000001878D9E04
-		public static bool Solve3(float[,] A, float[] B, out float[] X, float zeroTolerance = 1E-05f /* Metadata: 0x0207C0BE */) {
-			X = default;
-			return default;
-		} // 0x00000001878D9EE4-0x00000001878DA5F8
-		public static bool Solve3(float[,] A, float[] B, out Vector3 X, float zeroTolerance = 1E-05f /* Metadata: 0x0207C0C2 */) {
-			X = default;
-			return default;
-		} // 0x00000001878D9E04-0x00000001878D9EE4
-		private static void SwapRows(float[,] matrix, int row0, int row1, int columnCount) {} // 0x00000001878DAD8C-0x00000001878DAE34
-		public static bool Solve(float[,] A, float[] B, out float[] X) {
-			X = default;
-			return default;
-		} // 0x00000001878DA8A0-0x00000001878DAD8C
-		public static bool SolveTridiagonal(float[] A, float[] B, float[] C, float[] R, out float[] U) {
-			U = default;
-			return default;
-		} // 0x00000001878DA5F8-0x00000001878DA8A0
-		public static bool Inverse(float[,] A, out float[,] invA) {
-			invA = default;
-			return default;
-		} // 0x00000001878D9660-0x00000001878D9B28
+		public static bool Solve2(float[,] A, float[] B, out float[] X, float zeroTolerance = 1E-05f /* Metadata: 0x0234BD66 */); // 0x00000001869447D0-0x00000001869449D8
+		public static bool Solve2(float[,] A, float[] B, out Vector2 X, float zeroTolerance = 1E-05f /* Metadata: 0x0234BD6A */); // 0x00000001869449D8-0x0000000186944AAC
+		public static bool Solve3(float[,] A, float[] B, out float[] X, float zeroTolerance = 1E-05f /* Metadata: 0x0234BD6E */); // 0x0000000186944B8C-0x00000001869452A0
+		public static bool Solve3(float[,] A, float[] B, out Vector3 X, float zeroTolerance = 1E-05f /* Metadata: 0x0234BD72 */); // 0x0000000186944AAC-0x0000000186944B8C
+		private static void SwapRows(float[,] matrix, int row0, int row1, int columnCount); // 0x0000000186945A34-0x0000000186945ADC
+		public static bool Solve(float[,] A, float[] B, out float[] X); // 0x0000000186945548-0x0000000186945A34
+		public static bool SolveTridiagonal(float[] A, float[] B, float[] C, float[] R, out float[] U); // 0x00000001869452A0-0x0000000186945548
+		public static bool Inverse(float[,] A, out float[,] invA); // 0x0000000186944308-0x00000001869447D0
 	}
 
-	public delegate void OdeFunction(float t, float[] y, float[] F); // TypeDefIndex: 55914; 0x0000000183688650-0x0000000183688670
+	public delegate void OdeFunction(float t, float[] y, float[] F); // TypeDefIndex: 58555; 0x0000000186945C38-0x0000000186945C4C
 
-	public abstract class OdeSolver // TypeDefIndex: 55915
+	public abstract class OdeSolver // TypeDefIndex: 58556
 	{
 		// Fields
 		protected int _dim; // 0x10
@@ -2299,44 +1558,41 @@ namespace Dest.Math
 		protected float[] _FValue; // 0x20
 	
 		// Properties
-		public virtual float Step { get; set; } // 0x0000000185FB2D80-0x0000000185FB2D90 0x0000000181A6E390-0x0000000181A6FA00
+		public virtual float Step { get; set; } // 0x0000000184D88D40-0x0000000184D88D50 0x0000000184D88D50-0x0000000184D88D60
 	
 		// Constructors
-		protected OdeSolver() {} // Dummy constructor
-		public OdeSolver(int dim, float step, OdeFunction function) {} // 0x00000001878DB694-0x00000001878DB714
+		public OdeSolver(int dim, float step, OdeFunction function); // 0x0000000186946350-0x00000001869463D0
 	
 		// Methods
 		public abstract void Update(float tIn, float[] yIn, ref float tOut, float[] yOut);
 	}
 
-	public class OdeEuler : OdeSolver // TypeDefIndex: 55916
+	public class OdeEuler : OdeSolver // TypeDefIndex: 58557
 	{
 		// Constructors
-		public OdeEuler() {} // Dummy constructor
-		public OdeEuler(int dim, float step, OdeFunction function) {} // 0x00000001878DAEF8-0x00000001878DAF08
+		public OdeEuler(int dim, float step, OdeFunction function); // 0x0000000186945BA0-0x0000000186945BB0
 	
 		// Methods
-		public override void Update(float tIn, float[] yIn, ref float tOut, float[] yOut) {} // 0x00000001878DAE34-0x00000001878DAEF8
+		public override void Update(float tIn, float[] yIn, ref float tOut, float[] yOut); // 0x0000000186945ADC-0x0000000186945BA0
 	}
 
-	public class OdeMidpoint : OdeSolver // TypeDefIndex: 55917
+	public class OdeMidpoint : OdeSolver // TypeDefIndex: 58558
 	{
 		// Fields
 		private float _halfStep; // 0x28
 		private float[] _yTemp; // 0x30
 	
 		// Properties
-		public override float Step { get => default; set {} } // 0x0000000185FB2D80-0x0000000185FB2D90 0x0000000185FB5E80-0x0000000185FB5EA0
+		public override float Step { get; set; } // 0x0000000184D88D40-0x0000000184D88D50 0x0000000184D8BF40-0x0000000184D8BF60
 	
 		// Constructors
-		public OdeMidpoint() {} // Dummy constructor
-		public OdeMidpoint(int dim, float step, OdeFunction function) {} // 0x00000001878DB1B8-0x00000001878DB24C
+		public OdeMidpoint(int dim, float step, OdeFunction function); // 0x0000000186945E74-0x0000000186945F08
 	
 		// Methods
-		public override void Update(float tIn, float[] yIn, ref float tOut, float[] yOut) {} // 0x00000001878DB058-0x00000001878DB1B8
+		public override void Update(float tIn, float[] yIn, ref float tOut, float[] yOut); // 0x0000000186945D14-0x0000000186945E74
 	}
 
-	public class OdeRungeKutta4 : OdeSolver // TypeDefIndex: 55918
+	public class OdeRungeKutta4 : OdeSolver // TypeDefIndex: 58559
 	{
 		// Fields
 		private float _halfStep; // 0x28
@@ -2348,17 +1604,16 @@ namespace Dest.Math
 		private float[] _yTemp; // 0x50
 	
 		// Properties
-		public override float Step { get => default; set {} } // 0x0000000185FB2D80-0x0000000185FB2D90 0x00000001878DB670-0x00000001878DB694
+		public override float Step { get; set; } // 0x0000000184D88D40-0x0000000184D88D50 0x000000018694632C-0x0000000186946350
 	
 		// Constructors
-		public OdeRungeKutta4() {} // Dummy constructor
-		public OdeRungeKutta4(int dim, float step, OdeFunction function) {} // 0x00000001878DB560-0x00000001878DB670
+		public OdeRungeKutta4(int dim, float step, OdeFunction function); // 0x000000018694621C-0x000000018694632C
 	
 		// Methods
-		public override void Update(float tIn, float[] yIn, ref float tOut, float[] yOut) {} // 0x00000001878DB24C-0x00000001878DB560
+		public override void Update(float tIn, float[] yIn, ref float tOut, float[] yOut); // 0x0000000186945F08-0x000000018694621C
 	}
 
-	public struct QuadraticRoots // TypeDefIndex: 55919
+	public struct QuadraticRoots // TypeDefIndex: 58560
 	{
 		// Fields
 		public float X0; // 0x00
@@ -2366,10 +1621,10 @@ namespace Dest.Math
 		public int RootCount; // 0x08
 	
 		// Properties
-		public float this[int rootIndex] { get => default; } // 0x00000001878DDC24-0x00000001878DDC44 
+		public float this[int rootIndex] { get => default; } // 0x00000001869488E0-0x0000000186948900 
 	}
 
-	public struct CubicRoots // TypeDefIndex: 55920
+	public struct CubicRoots // TypeDefIndex: 58561
 	{
 		// Fields
 		public float X0; // 0x00
@@ -2378,10 +1633,10 @@ namespace Dest.Math
 		public int RootCount; // 0x0C
 	
 		// Properties
-		public float this[int rootIndex] { get => default; } // 0x00000001878D6ACC-0x00000001878D6AF4 
+		public float this[int rootIndex] { get => default; } // 0x0000000186941774-0x000000018694179C 
 	}
 
-	public struct QuarticRoots // TypeDefIndex: 55921
+	public struct QuarticRoots // TypeDefIndex: 58562
 	{
 		// Fields
 		public float X0; // 0x00
@@ -2391,64 +1646,47 @@ namespace Dest.Math
 		public int RootCount; // 0x10
 	
 		// Properties
-		public float this[int rootIndex] { get => default; } // 0x00000001878DDC44-0x00000001878DDC78 
+		public float this[int rootIndex] { get => default; } // 0x0000000186948900-0x0000000186948934 
 	}
 
-	public struct AAB2 // TypeDefIndex: 55922
+	public struct AAB2 // TypeDefIndex: 58563
 	{
 		// Fields
 		public Vector2 Min; // 0x00
 		public Vector2 Max; // 0x08
 	
 		// Constructors
-		public AAB2(ref Vector2 min, ref Vector2 max) {
-			Min = default;
-			Max = default;
-		} // 0x0000000185FB5970-0x0000000185FB5990
-		public AAB2(Vector2 min, Vector2 max) {
-			Min = default;
-			Max = default;
-		} // 0x0000000183680100-0x0000000183680110
-		public AAB2(float xMin, float xMax, float yMin, float yMax) {
-			Min = default;
-			Max = default;
-		} // 0x0000000185FB5990-0x0000000185FB59B0
+		public AAB2(ref Vector2 min, ref Vector2 max); // 0x0000000184D8B9B0-0x0000000184D8B9D0
+		public AAB2(Vector2 min, Vector2 max); // 0x0000000184D861B0-0x0000000184D861C0
+		public AAB2(float xMin, float xMax, float yMin, float yMax); // 0x0000000184D8B9D0-0x0000000184D8B9F0
 	
 		// Methods
-		public static implicit operator Rect(AAB2 value) => default; // 0x00000001878D1EAC-0x00000001878D1EF0
-		public static implicit operator AAB2(Rect value) => default; // 0x0000000185FB59B0-0x0000000185FB59F0
-		public static AAB2 CreateFromPoint(ref Vector2 point) => default; // 0x0000000185FB5940-0x0000000185FB5970
-		public static AAB2 CreateFromPoint(Vector2 point) => default; // 0x0000000185FB5930-0x0000000185FB5940
-		public static AAB2 CreateFromTwoPoints(ref Vector2 point0, ref Vector2 point1) => default; // 0x00000001878D1C88-0x00000001878D1CD4
-		public static AAB2 CreateFromTwoPoints(Vector2 point0, Vector2 point1) => default; // 0x00000001878D1C4C-0x00000001878D1C88
-		public static AAB2 CreateFromPoints(IEnumerable<Vector2> points) => default; // 0x00000001878D1A08-0x00000001878D1B40
-		public static AAB2 CreateFromPoints(IList<Vector2> points) => default; // 0x00000001878D1B40-0x00000001878D1C4C
-		public static AAB2 CreateFromPoints(Vector2[] points) => default; // 0x00000001878D194C-0x00000001878D1A08
-		public void CalcCenterExtents(out Vector2 center, out Vector2 extents) {
-			center = default;
-			extents = default;
-		} // 0x0000000185FB5880-0x0000000185FB58E0
-		public void CalcVertices(out Vector2 vertex0, out Vector2 vertex1, out Vector2 vertex2, out Vector2 vertex3) {
-			vertex0 = default;
-			vertex1 = default;
-			vertex2 = default;
-			vertex3 = default;
-		} // 0x0000000185FB58E0-0x0000000185FB5930
-		public Vector2[] CalcVertices() => default; // 0x00000001878D17C4-0x00000001878D1884
-		public void CalcVertices(Vector2[] array) {} // 0x00000001878D1884-0x00000001878D1914
-		public float CalcArea() => default; // 0x0000000185FB5860-0x0000000185FB5880
-		public float DistanceTo(Vector2 point) => default; // 0x00000001878D1CD4-0x00000001878D1CF4
-		public Vector2 Project(Vector2 point) => default; // 0x00000001878D1DE4-0x00000001878D1E14
-		public bool Contains(ref Vector2 point) => default; // 0x000000018406A1E0-0x000000018406A210
-		public bool Contains(Vector2 point) => default; // 0x00000001878D1914-0x00000001878D194C
-		public void Include(ref Vector2 point) {} // 0x00000001878D1DA4-0x00000001878D1DE4
-		public void Include(Vector2 point) {} // 0x00000001878D1CF4-0x00000001878D1D3C
-		public void Include(ref AAB2 box) {} // 0x00000001878D1D70-0x00000001878D1DA4
-		public void Include(AAB2 box) {} // 0x00000001878D1D3C-0x00000001878D1D70
-		public override string ToString() => default; // 0x00000001878D1E14-0x00000001878D1EAC
+		public static implicit operator Rect(AAB2 value); // 0x000000018693CAC8-0x000000018693CB0C
+		public static implicit operator AAB2(Rect value); // 0x0000000184D8B9F0-0x0000000184D8BA30
+		public static AAB2 CreateFromPoint(ref Vector2 point); // 0x0000000184D8B980-0x0000000184D8B9B0
+		public static AAB2 CreateFromPoint(Vector2 point); // 0x0000000184D8B970-0x0000000184D8B980
+		public static AAB2 CreateFromTwoPoints(ref Vector2 point0, ref Vector2 point1); // 0x000000018693C8A4-0x000000018693C8F0
+		public static AAB2 CreateFromTwoPoints(Vector2 point0, Vector2 point1); // 0x000000018693C868-0x000000018693C8A4
+		public static AAB2 CreateFromPoints(IEnumerable<Vector2> points); // 0x000000018693C624-0x000000018693C75C
+		public static AAB2 CreateFromPoints(IList<Vector2> points); // 0x000000018693C75C-0x000000018693C868
+		public static AAB2 CreateFromPoints(Vector2[] points); // 0x000000018693C568-0x000000018693C624
+		public void CalcCenterExtents(out Vector2 center, out Vector2 extents); // 0x0000000184D8B8C0-0x0000000184D8B920
+		public void CalcVertices(out Vector2 vertex0, out Vector2 vertex1, out Vector2 vertex2, out Vector2 vertex3); // 0x0000000184D8B920-0x0000000184D8B970
+		public Vector2[] CalcVertices(); // 0x000000018693C3E0-0x000000018693C4A0
+		public void CalcVertices(Vector2[] array); // 0x000000018693C4A0-0x000000018693C530
+		public float CalcArea(); // 0x0000000184D8B8A0-0x0000000184D8B8C0
+		public float DistanceTo(Vector2 point); // 0x000000018693C8F0-0x000000018693C910
+		public Vector2 Project(Vector2 point); // 0x000000018693CA00-0x000000018693CA30
+		public bool Contains(ref Vector2 point); // 0x000000018355A9C0-0x000000018355A9F0
+		public bool Contains(Vector2 point); // 0x000000018693C530-0x000000018693C568
+		public void Include(ref Vector2 point); // 0x000000018693C9C0-0x000000018693CA00
+		public void Include(Vector2 point); // 0x000000018693C910-0x000000018693C958
+		public void Include(ref AAB2 box); // 0x000000018693C98C-0x000000018693C9C0
+		public void Include(AAB2 box); // 0x000000018693C958-0x000000018693C98C
+		public override string ToString(); // 0x000000018693CA30-0x000000018693CAC8
 	}
 
-	public struct Box2 // TypeDefIndex: 55923
+	public struct Box2 // TypeDefIndex: 58564
 	{
 		// Fields
 		public Vector2 Center; // 0x00
@@ -2457,137 +1695,94 @@ namespace Dest.Math
 		public Vector2 Extents; // 0x18
 	
 		// Constructors
-		public Box2(ref Vector2 center, ref Vector2 axis0, ref Vector2 axis1, ref Vector2 extents) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Extents = default;
-		} // 0x0000000185FB5BA0-0x0000000185FB5BF0
-		public Box2(Vector2 center, Vector2 axis0, Vector2 axis1, Vector2 extents) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Extents = default;
-		} // 0x0000000185FB5BF0-0x0000000185FB5C10
-		public Box2(ref AAB2 box) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Extents = default;
-		} // 0x00000001878D395C-0x00000001878D39F8
-		public Box2(AAB2 box) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Extents = default;
-		} // 0x00000001878D39F8-0x00000001878D3A94
+		public Box2(ref Vector2 center, ref Vector2 axis0, ref Vector2 axis1, ref Vector2 extents); // 0x0000000184D8BC60-0x0000000184D8BCB0
+		public Box2(Vector2 center, Vector2 axis0, Vector2 axis1, Vector2 extents); // 0x0000000184D8BCB0-0x0000000184D8BCD0
+		public Box2(ref AAB2 box); // 0x000000018693E578-0x000000018693E614
+		public Box2(AAB2 box); // 0x000000018693E614-0x000000018693E6B0
 	
 		// Methods
-		public static Box2 CreateFromPoints(IList<Vector2> points) => default; // 0x00000001878D2F18-0x00000001878D3294
-		public Vector2 GetAxis(int index) => default; // 0x00000001878D32B4-0x00000001878D3338
-		public void CalcVertices(out Vector2 vertex0, out Vector2 vertex1, out Vector2 vertex2, out Vector2 vertex3) {
-			vertex0 = default;
-			vertex1 = default;
-			vertex2 = default;
-			vertex3 = default;
-		} // 0x00000001878D294C-0x00000001878D2A20
-		public Vector2[] CalcVertices() => default; // 0x00000001878D2A20-0x00000001878D2BCC
-		public void CalcVertices(Vector2[] array) {} // 0x00000001878D2BCC-0x00000001878D2D34
-		public float CalcArea() => default; // 0x0000000185FB5B80-0x0000000185FB5BA0
-		public float DistanceTo(Vector2 point) => default; // 0x00000001878D3294-0x00000001878D32B4
-		public Vector2 Project(Vector2 point) => default; // 0x00000001878D37C0-0x00000001878D37F0
-		public bool Contains(ref Vector2 point) => default; // 0x00000001878D2D34-0x00000001878D2E28
-		public bool Contains(Vector2 point) => default; // 0x00000001878D2E28-0x00000001878D2F18
-		public void Include(ref Box2 box) {} // 0x00000001878D3338-0x00000001878D37AC
-		public void Include(Box2 box) {} // 0x00000001878D37AC-0x00000001878D37C0
-		public override string ToString() => default; // 0x00000001878D37F0-0x00000001878D395C
+		public static Box2 CreateFromPoints(IList<Vector2> points); // 0x000000018693DB34-0x000000018693DEB0
+		public Vector2 GetAxis(int index); // 0x000000018693DED0-0x000000018693DF54
+		public void CalcVertices(out Vector2 vertex0, out Vector2 vertex1, out Vector2 vertex2, out Vector2 vertex3); // 0x000000018693D568-0x000000018693D63C
+		public Vector2[] CalcVertices(); // 0x000000018693D63C-0x000000018693D7E8
+		public void CalcVertices(Vector2[] array); // 0x000000018693D7E8-0x000000018693D950
+		public float CalcArea(); // 0x0000000184D8BC40-0x0000000184D8BC60
+		public float DistanceTo(Vector2 point); // 0x000000018693DEB0-0x000000018693DED0
+		public Vector2 Project(Vector2 point); // 0x000000018693E3DC-0x000000018693E40C
+		public bool Contains(ref Vector2 point); // 0x000000018693D950-0x000000018693DA44
+		public bool Contains(Vector2 point); // 0x000000018693DA44-0x000000018693DB34
+		public void Include(ref Box2 box); // 0x000000018693DF54-0x000000018693E3C8
+		public void Include(Box2 box); // 0x000000018693E3C8-0x000000018693E3DC
+		public override string ToString(); // 0x000000018693E40C-0x000000018693E578
 	}
 
-	public struct Circle2 // TypeDefIndex: 55924
+	public struct Circle2 // TypeDefIndex: 58565
 	{
 		// Fields
 		public Vector2 Center; // 0x00
 		public float Radius; // 0x08
 	
 		// Constructors
-		public Circle2(ref Vector2 center, float radius) {
-			Center = default;
-			Radius = default;
-		} // 0x0000000185FB5DF0-0x0000000185FB5E00
-		public Circle2(Vector2 center, float radius) {
-			Center = default;
-			Radius = default;
-		} // 0x0000000185FB5E00-0x0000000185FB5E10
+		public Circle2(ref Vector2 center, float radius); // 0x0000000184D8BEB0-0x0000000184D8BEC0
+		public Circle2(Vector2 center, float radius); // 0x0000000184D8BEC0-0x0000000184D8BED0
 	
 		// Methods
-		public static Circle2 CreateFromPointsAAB(IEnumerable<Vector2> points) => default; // 0x00000001878D60D0-0x00000001878D61E0
-		public static Circle2 CreateFromPointsAAB(IList<Vector2> points) => default; // 0x00000001878D6008-0x00000001878D60D0
-		public static Circle2 CreateFromPointsAverage(IEnumerable<Vector2> points) => default; // 0x00000001878D63B4-0x00000001878D66E8
-		public static Circle2 CreateFromPointsAverage(IList<Vector2> points) => default; // 0x00000001878D61E0-0x00000001878D63B4
-		public static bool CreateCircumscribed(Vector2 v0, Vector2 v1, Vector2 v2, out Circle2 circle) {
-			circle = default;
-			return default;
-		} // 0x00000001878D5DEC-0x00000001878D6008
-		public static bool CreateInscribed(Vector2 v0, Vector2 v1, Vector2 v2, out Circle2 circle) {
-			circle = default;
-			return default;
-		} // 0x00000001878D66E8-0x00000001878D68F8
-		public float CalcPerimeter() => default; // 0x0000000185FB5D10-0x0000000185FB5D20
-		public float CalcArea() => default; // 0x0000000185FB5CF0-0x0000000185FB5D10
-		public Vector2 Eval(float t) => default; // 0x0000000185FB5D20-0x0000000185FB5D80
-		public Vector2 Eval(float t, float radius) => default; // 0x0000000185FB5D80-0x0000000185FB5DF0
-		public float DistanceTo(Vector2 point) => default; // 0x00000001878D68F8-0x00000001878D6918
-		public Vector2 Project(Vector2 point) => default; // 0x00000001878D6A14-0x00000001878D6A44
-		public bool Contains(ref Vector2 point) => default; // 0x00000001878D5DA4-0x00000001878D5DEC
-		public bool Contains(Vector2 point) => default; // 0x00000001878D5D58-0x00000001878D5DA4
-		public void Include(ref Circle2 circle) {} // 0x00000001878D692C-0x00000001878D6A14
-		public void Include(Circle2 circle) {} // 0x00000001878D6918-0x00000001878D692C
-		public override string ToString() => default; // 0x00000001878D6A44-0x00000001878D6ACC
+		public static Circle2 CreateFromPointsAAB(IEnumerable<Vector2> points); // 0x0000000186940D78-0x0000000186940E88
+		public static Circle2 CreateFromPointsAAB(IList<Vector2> points); // 0x0000000186940CB0-0x0000000186940D78
+		public static Circle2 CreateFromPointsAverage(IEnumerable<Vector2> points); // 0x000000018694105C-0x0000000186941390
+		public static Circle2 CreateFromPointsAverage(IList<Vector2> points); // 0x0000000186940E88-0x000000018694105C
+		public static bool CreateCircumscribed(Vector2 v0, Vector2 v1, Vector2 v2, out Circle2 circle); // 0x0000000186940A94-0x0000000186940CB0
+		public static bool CreateInscribed(Vector2 v0, Vector2 v1, Vector2 v2, out Circle2 circle); // 0x0000000186941390-0x00000001869415A0
+		public float CalcPerimeter(); // 0x0000000184D8BDD0-0x0000000184D8BDE0
+		public float CalcArea(); // 0x0000000184D8BDB0-0x0000000184D8BDD0
+		public Vector2 Eval(float t); // 0x0000000184D8BDE0-0x0000000184D8BE40
+		public Vector2 Eval(float t, float radius); // 0x0000000184D8BE40-0x0000000184D8BEB0
+		public float DistanceTo(Vector2 point); // 0x00000001869415A0-0x00000001869415C0
+		public Vector2 Project(Vector2 point); // 0x00000001869416BC-0x00000001869416EC
+		public bool Contains(ref Vector2 point); // 0x0000000186940A4C-0x0000000186940A94
+		public bool Contains(Vector2 point); // 0x0000000186940A00-0x0000000186940A4C
+		public void Include(ref Circle2 circle); // 0x00000001869415D4-0x00000001869416BC
+		public void Include(Circle2 circle); // 0x00000001869415C0-0x00000001869415D4
+		public override string ToString(); // 0x00000001869416EC-0x0000000186941774
 	}
 
-	public struct Line2 // TypeDefIndex: 55925
+	public struct Line2 // TypeDefIndex: 58566
 	{
 		// Fields
 		public Vector2 Center; // 0x00
 		public Vector2 Direction; // 0x08
 	
 		// Constructors
-		public Line2(ref Vector2 center, ref Vector2 direction) {
-			Center = default;
-			Direction = default;
-		} // 0x0000000185FB5970-0x0000000185FB5990
-		public Line2(Vector2 center, Vector2 direction) {
-			Center = default;
-			Direction = default;
-		} // 0x0000000183680100-0x0000000183680110
+		public Line2(ref Vector2 center, ref Vector2 direction); // 0x0000000184D8B9B0-0x0000000184D8B9D0
+		public Line2(Vector2 center, Vector2 direction); // 0x0000000184D861B0-0x0000000184D861C0
 	
 		// Methods
-		public static Line2 CreateFromTwoPoints(ref Vector2 p0, ref Vector2 p1) => default; // 0x00000001878D88C0-0x00000001878D892C
-		public static Line2 CreateFromTwoPoints(Vector2 p0, Vector2 p1) => default; // 0x00000001878D8874-0x00000001878D88C0
-		public static Line2 CreatePerpToLineTrhoughPoint(Line2 line, Vector2 point) => default; // 0x00000001878D8990-0x00000001878D8A14
-		public static Line2 CreateBetweenAndEquidistantToPoints(Vector2 point0, Vector2 point1) => default; // 0x0000000185FB5E10-0x0000000185FB5E80
-		public static Line2 CreateParallelToGivenLineAtGivenDistance(Line2 line, float distance) => default; // 0x00000001878D892C-0x00000001878D8990
-		public Vector2 Eval(float t) => default; // 0x00000001878D8A34-0x00000001878D8A64
-		public float SignedDistanceTo(Vector2 point) => default; // 0x00000001878D9544-0x00000001878D95C8
-		public float DistanceTo(Vector2 point) => default; // 0x00000001878D8A14-0x00000001878D8A34
-		public int QuerySide(Vector2 point, float epsilon = 1E-05f /* Metadata: 0x0207C0C6 */) => default; // 0x00000001878D9264-0x00000001878D9320
-		public bool QuerySideNegative(Vector2 point, float epsilon = 1E-05f /* Metadata: 0x0207C0CA */) => default; // 0x00000001878D8A94-0x00000001878D8B28
-		public bool QuerySidePositive(Vector2 point, float epsilon = 1E-05f /* Metadata: 0x0207C0CE */) => default; // 0x00000001878D8E68-0x00000001878D8F04
-		public int QuerySide(ref Box2 box, float epsilon = 1E-05f /* Metadata: 0x0207C0D2 */) => default; // 0x00000001878D93F4-0x00000001878D9544
-		public bool QuerySideNegative(ref Box2 box, float epsilon = 1E-05f /* Metadata: 0x0207C0D6 */) => default; // 0x00000001878D8BF0-0x00000001878D8D20
-		public bool QuerySidePositive(ref Box2 box, float epsilon = 1E-05f /* Metadata: 0x0207C0DA */) => default; // 0x00000001878D8F04-0x00000001878D902C
-		public int QuerySide(ref AAB2 box, float epsilon = 1E-05f /* Metadata: 0x0207C0DE */) => default; // 0x00000001878D90FC-0x00000001878D9264
-		public bool QuerySideNegative(ref AAB2 box, float epsilon = 1E-05f /* Metadata: 0x0207C0E2 */) => default; // 0x00000001878D8B28-0x00000001878D8BF0
-		public bool QuerySidePositive(ref AAB2 box, float epsilon = 1E-05f /* Metadata: 0x0207C0E6 */) => default; // 0x00000001878D902C-0x00000001878D90FC
-		public int QuerySide(ref Circle2 circle, float epsilon = 1E-05f /* Metadata: 0x0207C0EA */) => default; // 0x00000001878D9320-0x00000001878D93F4
-		public bool QuerySideNegative(ref Circle2 circle, float epsilon = 1E-05f /* Metadata: 0x0207C0EE */) => default; // 0x00000001878D8D20-0x00000001878D8DC8
-		public bool QuerySidePositive(ref Circle2 circle, float epsilon = 1E-05f /* Metadata: 0x0207C0F2 */) => default; // 0x00000001878D8DC8-0x00000001878D8E68
-		public Vector2 Project(Vector2 point) => default; // 0x00000001878D8A64-0x00000001878D8A94
-		public float AngleBetweenTwoLines(Line2 anotherLine, bool acuteAngleDesired = false /* Metadata: 0x0207C0F6 */) => default; // 0x00000001878D87B0-0x00000001878D8874
-		public override string ToString() => default; // 0x00000001878D95C8-0x00000001878D9660
+		public static Line2 CreateFromTwoPoints(ref Vector2 p0, ref Vector2 p1); // 0x0000000186943568-0x00000001869435D4
+		public static Line2 CreateFromTwoPoints(Vector2 p0, Vector2 p1); // 0x000000018694351C-0x0000000186943568
+		public static Line2 CreatePerpToLineTrhoughPoint(Line2 line, Vector2 point); // 0x0000000186943638-0x00000001869436BC
+		public static Line2 CreateBetweenAndEquidistantToPoints(Vector2 point0, Vector2 point1); // 0x0000000184D8BED0-0x0000000184D8BF40
+		public static Line2 CreateParallelToGivenLineAtGivenDistance(Line2 line, float distance); // 0x00000001869435D4-0x0000000186943638
+		public Vector2 Eval(float t); // 0x00000001869436DC-0x000000018694370C
+		public float SignedDistanceTo(Vector2 point); // 0x00000001869441EC-0x0000000186944270
+		public float DistanceTo(Vector2 point); // 0x00000001869436BC-0x00000001869436DC
+		public int QuerySide(Vector2 point, float epsilon = 1E-05f /* Metadata: 0x0234BD76 */); // 0x0000000186943F0C-0x0000000186943FC8
+		public bool QuerySideNegative(Vector2 point, float epsilon = 1E-05f /* Metadata: 0x0234BD7A */); // 0x000000018694373C-0x00000001869437D0
+		public bool QuerySidePositive(Vector2 point, float epsilon = 1E-05f /* Metadata: 0x0234BD7E */); // 0x0000000186943B10-0x0000000186943BAC
+		public int QuerySide(ref Box2 box, float epsilon = 1E-05f /* Metadata: 0x0234BD82 */); // 0x000000018694409C-0x00000001869441EC
+		public bool QuerySideNegative(ref Box2 box, float epsilon = 1E-05f /* Metadata: 0x0234BD86 */); // 0x0000000186943898-0x00000001869439C8
+		public bool QuerySidePositive(ref Box2 box, float epsilon = 1E-05f /* Metadata: 0x0234BD8A */); // 0x0000000186943BAC-0x0000000186943CD4
+		public int QuerySide(ref AAB2 box, float epsilon = 1E-05f /* Metadata: 0x0234BD8E */); // 0x0000000186943DA4-0x0000000186943F0C
+		public bool QuerySideNegative(ref AAB2 box, float epsilon = 1E-05f /* Metadata: 0x0234BD92 */); // 0x00000001869437D0-0x0000000186943898
+		public bool QuerySidePositive(ref AAB2 box, float epsilon = 1E-05f /* Metadata: 0x0234BD96 */); // 0x0000000186943CD4-0x0000000186943DA4
+		public int QuerySide(ref Circle2 circle, float epsilon = 1E-05f /* Metadata: 0x0234BD9A */); // 0x0000000186943FC8-0x000000018694409C
+		public bool QuerySideNegative(ref Circle2 circle, float epsilon = 1E-05f /* Metadata: 0x0234BD9E */); // 0x00000001869439C8-0x0000000186943A70
+		public bool QuerySidePositive(ref Circle2 circle, float epsilon = 1E-05f /* Metadata: 0x0234BDA2 */); // 0x0000000186943A70-0x0000000186943B10
+		public Vector2 Project(Vector2 point); // 0x000000018694370C-0x000000018694373C
+		public float AngleBetweenTwoLines(Line2 anotherLine, bool acuteAngleDesired = false /* Metadata: 0x0234BDA6 */); // 0x0000000186943458-0x000000018694351C
+		public override string ToString(); // 0x0000000186944270-0x0000000186944308
 	}
 
-	public struct Edge2 // TypeDefIndex: 55926
+	public struct Edge2 // TypeDefIndex: 58567
 	{
 		// Fields
 		public Vector2 Point0; // 0x00
@@ -2597,78 +1792,69 @@ namespace Dest.Math
 		public float Length; // 0x20
 	}
 
-	public class Polygon2 // TypeDefIndex: 55927
+	public class Polygon2 // TypeDefIndex: 58568
 	{
 		// Fields
 		private Vector2[] _vertices; // 0x10
 		private Edge2[] _edges; // 0x18
 	
 		// Properties
-		public Vector2[] Vertices { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public Edge2[] Edges { get => default; } // 0x0000000181377E40-0x0000000181377E50 
-		public int VertexCount { get => default; } // 0x00000001877752B4-0x00000001877752D0 
-		public Vector2 this[int vertexIndex] { get => default; set {} } // 0x00000001878DDBB0-0x00000001878DDBDC 0x00000001878DDBDC-0x00000001878DDC24
+		public Vector2[] Vertices { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public Edge2[] Edges { get; } // 0x000000018385B100-0x000000018385B110 
+		public int VertexCount { get; } // 0x00000001867B6CAC-0x00000001867B6CC8 
+		public Vector2 this[int vertexIndex] { get => default; set {} } // 0x000000018694886C-0x0000000186948898 0x0000000186948898-0x00000001869488E0
 	
 		// Constructors
-		private Polygon2() {} // 0x0000000185492010-0x0000000185492020
-		public Polygon2(Vector2[] vertices) {} // 0x00000001878DDA90-0x00000001878DDB34
-		public Polygon2(int vertexCount) {} // 0x00000001878DDB34-0x00000001878DDBB0
+		private Polygon2(); // 0x00000001841E1670-0x00000001841E1680
+		public Polygon2(Vector2[] vertices); // 0x000000018694874C-0x00000001869487F0
+		public Polygon2(int vertexCount); // 0x00000001869487F0-0x000000018694886C
 	
 		// Methods
-		public static Polygon2 CreateProjected(Polygon3 polygon, ProjectionPlanes projectionPlane) => default; // 0x00000001878DC9A8-0x00000001878DCBBC
-		public Edge2 GetEdge(int edgeIndex) => default; // 0x00000001878DCBBC-0x00000001878DCC0C
-		public void UpdateEdges() {} // 0x00000001878DD8D0-0x00000001878DDA90
-		public void UpdateEdge(int edgeIndex) {} // 0x00000001878DD730-0x00000001878DD8D0
-		public Vector2 CalcCenter() => default; // 0x00000001878DBED8-0x00000001878DBFA0
-		public float CalcPerimeter() => default; // 0x00000001878DBFA0-0x00000001878DC008
-		public float CalcArea() => default; // 0x00000001878DBD48-0x00000001878DBED8
-		public bool IsConvex(out Orientations orientation, float threshold = 1E-05f /* Metadata: 0x0207C0F7 */) {
-			orientation = default;
-			return default;
-		} // 0x00000001878DCCF8-0x00000001878DCE74
-		public bool IsConvex(float threshold = 1E-05f /* Metadata: 0x0207C0FB */) => default; // 0x00000001878DCCD0-0x00000001878DCCF8
-		public bool HasZeroCorners(float threshold = 1E-05f /* Metadata: 0x0207C0FF */) => default; // 0x00000001878DCC0C-0x00000001878DCCD0
-		public void ReverseVertices() {} // 0x00000001878DCE74-0x00000001878DCF68
-		public bool ContainsConvexQuadCCW(ref Vector2 point) => default; // 0x00000001878DC09C-0x00000001878DC47C
-		public bool ContainsConvexQuadCCW(Vector2 point) => default; // 0x00000001878DC080-0x00000001878DC09C
-		public bool ContainsConvexQuadCW(ref Vector2 point) => default; // 0x00000001878DC47C-0x00000001878DC85C
-		public bool ContainsConvexQuadCW(Vector2 point) => default; // 0x00000001878DC85C-0x00000001878DC878
-		public bool ContainsConvexCCW(ref Vector2 point) => default; // 0x00000001878DC008-0x00000001878DC028
-		public bool ContainsConvexCCW(Vector2 point) => default; // 0x00000001878DC028-0x00000001878DC044
-		private bool SubContainsPointCCW(ref Vector2 p, int i0, int i1) => default; // 0x00000001878DCF68-0x00000001878DD1E8
-		public bool ContainsConvexCW(ref Vector2 point) => default; // 0x00000001878DC044-0x00000001878DC064
-		public bool ContainsConvexCW(Vector2 point) => default; // 0x00000001878DC064-0x00000001878DC080
-		private bool SubContainsPointCW(ref Vector2 p, int i0, int i1) => default; // 0x00000001878DD1E8-0x00000001878DD468
-		public bool ContainsSimple(ref Vector2 point) => default; // 0x00000001878DC894-0x00000001878DC9A8
-		public bool ContainsSimple(Vector2 point) => default; // 0x00000001878DC878-0x00000001878DC894
-		public Segment2[] ToSegmentArray() => default; // 0x00000001878DD468-0x00000001878DD5AC
-		public override string ToString() => default; // 0x00000001878DD5AC-0x00000001878DD730
+		public static Polygon2 CreateProjected(Polygon3 polygon, ProjectionPlanes projectionPlane); // 0x0000000186947664-0x0000000186947878
+		public Edge2 GetEdge(int edgeIndex); // 0x0000000186947878-0x00000001869478C8
+		public void UpdateEdges(); // 0x000000018694858C-0x000000018694874C
+		public void UpdateEdge(int edgeIndex); // 0x00000001869483EC-0x000000018694858C
+		public Vector2 CalcCenter(); // 0x0000000186946B94-0x0000000186946C5C
+		public float CalcPerimeter(); // 0x0000000186946C5C-0x0000000186946CC4
+		public float CalcArea(); // 0x0000000186946A04-0x0000000186946B94
+		public bool IsConvex(out Orientations orientation, float threshold = 1E-05f /* Metadata: 0x0234BDA7 */); // 0x00000001869479B4-0x0000000186947B30
+		public bool IsConvex(float threshold = 1E-05f /* Metadata: 0x0234BDAB */); // 0x000000018694798C-0x00000001869479B4
+		public bool HasZeroCorners(float threshold = 1E-05f /* Metadata: 0x0234BDAF */); // 0x00000001869478C8-0x000000018694798C
+		public void ReverseVertices(); // 0x0000000186947B30-0x0000000186947C24
+		public bool ContainsConvexQuadCCW(ref Vector2 point); // 0x0000000186946D58-0x0000000186947138
+		public bool ContainsConvexQuadCCW(Vector2 point); // 0x0000000186946D3C-0x0000000186946D58
+		public bool ContainsConvexQuadCW(ref Vector2 point); // 0x0000000186947138-0x0000000186947518
+		public bool ContainsConvexQuadCW(Vector2 point); // 0x0000000186947518-0x0000000186947534
+		public bool ContainsConvexCCW(ref Vector2 point); // 0x0000000186946CC4-0x0000000186946CE4
+		public bool ContainsConvexCCW(Vector2 point); // 0x0000000186946CE4-0x0000000186946D00
+		private bool SubContainsPointCCW(ref Vector2 p, int i0, int i1); // 0x0000000186947C24-0x0000000186947EA4
+		public bool ContainsConvexCW(ref Vector2 point); // 0x0000000186946D00-0x0000000186946D20
+		public bool ContainsConvexCW(Vector2 point); // 0x0000000186946D20-0x0000000186946D3C
+		private bool SubContainsPointCW(ref Vector2 p, int i0, int i1); // 0x0000000186947EA4-0x0000000186948124
+		public bool ContainsSimple(ref Vector2 point); // 0x0000000186947550-0x0000000186947664
+		public bool ContainsSimple(Vector2 point); // 0x0000000186947534-0x0000000186947550
+		public Segment2[] ToSegmentArray(); // 0x0000000186948124-0x0000000186948268
+		public override string ToString(); // 0x0000000186948268-0x00000001869483EC
 	}
 
-	public struct Ray2 // TypeDefIndex: 55928
+	public struct Ray2 // TypeDefIndex: 58569
 	{
 		// Fields
 		public Vector2 Center; // 0x00
 		public Vector2 Direction; // 0x08
 	
 		// Constructors
-		public Ray2(ref Vector2 center, ref Vector2 direction) {
-			Center = default;
-			Direction = default;
-		} // 0x0000000185FB5970-0x0000000185FB5990
-		public Ray2(Vector2 center, Vector2 direction) {
-			Center = default;
-			Direction = default;
-		} // 0x0000000183680100-0x0000000183680110
+		public Ray2(ref Vector2 center, ref Vector2 direction); // 0x0000000184D8B9B0-0x0000000184D8B9D0
+		public Ray2(Vector2 center, Vector2 direction); // 0x0000000184D861B0-0x0000000184D861C0
 	
 		// Methods
-		public Vector2 Eval(float t) => default; // 0x00000001878D8A34-0x00000001878D8A64
-		public float DistanceTo(Vector2 point) => default; // 0x00000001878DDC78-0x00000001878DDC98
-		public Vector2 Project(Vector2 point) => default; // 0x00000001878DDC98-0x00000001878DDCC8
-		public override string ToString() => default; // 0x00000001878DDCC8-0x00000001878DDD60
+		public Vector2 Eval(float t); // 0x00000001869436DC-0x000000018694370C
+		public float DistanceTo(Vector2 point); // 0x0000000186948934-0x0000000186948954
+		public Vector2 Project(Vector2 point); // 0x0000000186948954-0x0000000186948984
+		public override string ToString(); // 0x0000000186948984-0x0000000186948A1C
 	}
 
-	public struct Segment2 // TypeDefIndex: 55929
+	public struct Segment2 // TypeDefIndex: 58570
 	{
 		// Fields
 		public Vector2 P0; // 0x00
@@ -2678,47 +1864,23 @@ namespace Dest.Math
 		public float Extent; // 0x20
 	
 		// Constructors
-		public Segment2(ref Vector2 p0, ref Vector2 p1) {
-			P0 = default;
-			P1 = default;
-			Center = default;
-			Direction = default;
-			Extent = default;
-		} // 0x00000001878DE174-0x00000001878DE1B4
-		public Segment2(Vector2 p0, Vector2 p1) {
-			P0 = default;
-			P1 = default;
-			Center = default;
-			Direction = default;
-			Extent = default;
-		} // 0x00000001878DE130-0x00000001878DE14C
-		public Segment2(ref Vector2 center, ref Vector2 direction, float extent) {
-			P0 = default;
-			P1 = default;
-			Center = default;
-			Direction = default;
-			Extent = default;
-		} // 0x00000001878DE1B4-0x00000001878DE218
-		public Segment2(Vector2 center, Vector2 direction, float extent) {
-			P0 = default;
-			P1 = default;
-			Center = default;
-			Direction = default;
-			Extent = default;
-		} // 0x00000001878DE14C-0x00000001878DE174
+		public Segment2(ref Vector2 p0, ref Vector2 p1); // 0x0000000186948E30-0x0000000186948E70
+		public Segment2(Vector2 p0, Vector2 p1); // 0x0000000186948DEC-0x0000000186948E08
+		public Segment2(ref Vector2 center, ref Vector2 direction, float extent); // 0x0000000186948E70-0x0000000186948ED4
+		public Segment2(Vector2 center, Vector2 direction, float extent); // 0x0000000186948E08-0x0000000186948E30
 	
 		// Methods
-		public void SetEndpoints(Vector2 p0, Vector2 p1) {} // 0x00000001878DDF88-0x00000001878DDF98
-		public void SetCenterDirectionExtent(Vector2 center, Vector2 direction, float extent) {} // 0x00000001878DDF74-0x00000001878DDF88
-		public void CalcCenterDirectionExtent() {} // 0x00000001878DDD60-0x00000001878DDE40
-		public void CalcEndPoints() {} // 0x00000001878DDE40-0x00000001878DDED8
-		public Vector2 Eval(float s) => default; // 0x00000001878DDEF8-0x00000001878DDF44
-		public float DistanceTo(Vector2 point) => default; // 0x00000001878DDED8-0x00000001878DDEF8
-		public Vector2 Project(Vector2 point) => default; // 0x00000001878DDF44-0x00000001878DDF74
-		public override string ToString() => default; // 0x00000001878DDF98-0x00000001878DE130
+		public void SetEndpoints(Vector2 p0, Vector2 p1); // 0x0000000186948C44-0x0000000186948C54
+		public void SetCenterDirectionExtent(Vector2 center, Vector2 direction, float extent); // 0x0000000186948C30-0x0000000186948C44
+		public void CalcCenterDirectionExtent(); // 0x0000000186948A1C-0x0000000186948AFC
+		public void CalcEndPoints(); // 0x0000000186948AFC-0x0000000186948B94
+		public Vector2 Eval(float s); // 0x0000000186948BB4-0x0000000186948C00
+		public float DistanceTo(Vector2 point); // 0x0000000186948B94-0x0000000186948BB4
+		public Vector2 Project(Vector2 point); // 0x0000000186948C00-0x0000000186948C30
+		public override string ToString(); // 0x0000000186948C54-0x0000000186948DEC
 	}
 
-	public struct Triangle2 // TypeDefIndex: 55930
+	public struct Triangle2 // TypeDefIndex: 58571
 	{
 		// Fields
 		public Vector2 V0; // 0x00
@@ -2726,113 +1888,82 @@ namespace Dest.Math
 		public Vector2 V2; // 0x10
 	
 		// Properties
-		public Vector2 this[int index] { get => default; set {} } // 0x00000001878DF130-0x00000001878DF170 0x00000001878DF170-0x00000001878DF18C
+		public Vector2 this[int index] { get => default; set {} } // 0x0000000186949DEC-0x0000000186949E2C 0x0000000186949E2C-0x0000000186949E48
 	
 		// Constructors
-		public Triangle2(ref Vector2 v0, ref Vector2 v1, ref Vector2 v2) : this() {
-			V0 = default;
-			V1 = default;
-			V2 = default;
-		} // 0x0000000185FB6020-0x0000000185FB6060
-		public Triangle2(Vector2 v0, Vector2 v1, Vector2 v2) : this() {
-			V0 = default;
-			V1 = default;
-			V2 = default;
-		} // 0x0000000185FB6010-0x0000000185FB6020
+		public Triangle2(ref Vector2 v0, ref Vector2 v1, ref Vector2 v2); // 0x0000000184D8C0E0-0x0000000184D8C120
+		public Triangle2(Vector2 v0, Vector2 v1, Vector2 v2); // 0x0000000184D8C0D0-0x0000000184D8C0E0
 	
 		// Methods
-		public Vector2 CalcEdge(int edgeIndex) => default; // 0x00000001878DE9EC-0x00000001878DEA60
-		public float CalcDeterminant() => default; // 0x0000000185FB5FB0-0x0000000185FB6010
-		public Orientations CalcOrientation(float threshold = 1E-05f /* Metadata: 0x0207C103 */) => default; // 0x00000001878DEA60-0x00000001878DEAA0
-		public float CalcArea() => default; // 0x00000001878DE7B0-0x00000001878DE7D0
-		public static float CalcArea(ref Vector2 v0, ref Vector2 v1, ref Vector2 v2) => default; // 0x0000000185FB5EA0-0x0000000185FB5F10
-		public static float CalcArea(Vector2 v0, Vector2 v1, Vector2 v2) => default; // 0x0000000185FB5F10-0x0000000185FB5FB0
-		public Vector3 CalcAnglesDeg() => default; // 0x00000001878DE36C-0x00000001878DE4C0
-		public static Vector3 CalcAnglesDeg(ref Vector2 v0, ref Vector2 v1, ref Vector2 v2) => default; // 0x00000001878DE218-0x00000001878DE36C
-		public static Vector3 CalcAnglesDeg(Vector2 v0, Vector2 v1, Vector2 v2) => default; // 0x00000001878DE4C0-0x00000001878DE508
-		public Vector3 CalcAnglesRad() => default; // 0x00000001878DE680-0x00000001878DE7B0
-		public static Vector3 CalcAnglesRad(ref Vector2 v0, ref Vector2 v1, ref Vector2 v2) => default; // 0x00000001878DE550-0x00000001878DE680
-		public static Vector3 CalcAnglesRad(Vector2 v0, Vector2 v1, Vector2 v2) => default; // 0x00000001878DE508-0x00000001878DE550
-		public Vector2 EvalBarycentric(float c0, float c1) => default; // 0x00000001878DED54-0x00000001878DEDEC
-		public Vector2 EvalBarycentric(ref Vector3 baryCoords) => default; // 0x00000001878DEDEC-0x00000001878DEE68
-		public Vector2 EvalBarycentric(Vector3 baryCoords) => default; // 0x00000001878DEDEC-0x00000001878DEE68
-		public static void CalcBarycentricCoords(ref Vector2 point, ref Vector2 v0, ref Vector2 v1, ref Vector2 v2, out Vector3 baryCoords) {
-			baryCoords = default;
-		} // 0x00000001878DE808-0x00000001878DE9B0
-		public Vector3 CalcBarycentricCoords(ref Vector2 point) => default; // 0x00000001878DE7D0-0x00000001878DE808
-		public Vector3 CalcBarycentricCoords(Vector2 point) => default; // 0x00000001878DE9B0-0x00000001878DE9EC
-		public float DistanceTo(Vector2 point) => default; // 0x00000001878DED34-0x00000001878DED54
-		public int QuerySideCCW(Vector2 point, float epsilon = 1E-05f /* Metadata: 0x0207C107 */) => default; // 0x00000001878DEE98-0x00000001878DEF7C
-		public int QuerySideCW(Vector2 point, float epsilon = 1E-05f /* Metadata: 0x0207C10B */) => default; // 0x00000001878DEF7C-0x00000001878DF06C
-		public Vector2 Project(Vector2 point) => default; // 0x00000001878DEE68-0x00000001878DEE98
-		public bool Contains(ref Vector2 point) => default; // 0x00000001878DEC38-0x00000001878DED18
-		public bool Contains(Vector2 point) => default; // 0x00000001878DED18-0x00000001878DED34
-		public bool ContainsCCW(ref Vector2 point) => default; // 0x00000001878DEABC-0x00000001878DEB6C
-		public bool ContainsCCW(Vector2 point) => default; // 0x00000001878DEAA0-0x00000001878DEABC
-		public bool ContainsCW(ref Vector2 point) => default; // 0x00000001878DEB88-0x00000001878DEC38
-		public bool ContainsCW(Vector2 point) => default; // 0x00000001878DEB6C-0x00000001878DEB88
-		public override string ToString() => default; // 0x00000001878DF06C-0x00000001878DF130
+		public Vector2 CalcEdge(int edgeIndex); // 0x00000001869496A8-0x000000018694971C
+		public float CalcDeterminant(); // 0x0000000184D8C070-0x0000000184D8C0D0
+		public Orientations CalcOrientation(float threshold = 1E-05f /* Metadata: 0x0234BDB3 */); // 0x000000018694971C-0x000000018694975C
+		public float CalcArea(); // 0x000000018694946C-0x000000018694948C
+		public static float CalcArea(ref Vector2 v0, ref Vector2 v1, ref Vector2 v2); // 0x0000000184D8BF60-0x0000000184D8BFD0
+		public static float CalcArea(Vector2 v0, Vector2 v1, Vector2 v2); // 0x0000000184D8BFD0-0x0000000184D8C070
+		public Vector3 CalcAnglesDeg(); // 0x0000000186949028-0x000000018694917C
+		public static Vector3 CalcAnglesDeg(ref Vector2 v0, ref Vector2 v1, ref Vector2 v2); // 0x0000000186948ED4-0x0000000186949028
+		public static Vector3 CalcAnglesDeg(Vector2 v0, Vector2 v1, Vector2 v2); // 0x000000018694917C-0x00000001869491C4
+		public Vector3 CalcAnglesRad(); // 0x000000018694933C-0x000000018694946C
+		public static Vector3 CalcAnglesRad(ref Vector2 v0, ref Vector2 v1, ref Vector2 v2); // 0x000000018694920C-0x000000018694933C
+		public static Vector3 CalcAnglesRad(Vector2 v0, Vector2 v1, Vector2 v2); // 0x00000001869491C4-0x000000018694920C
+		public Vector2 EvalBarycentric(float c0, float c1); // 0x0000000186949A10-0x0000000186949AA8
+		public Vector2 EvalBarycentric(ref Vector3 baryCoords); // 0x0000000186949AA8-0x0000000186949B24
+		public Vector2 EvalBarycentric(Vector3 baryCoords); // 0x0000000186949AA8-0x0000000186949B24
+		public static void CalcBarycentricCoords(ref Vector2 point, ref Vector2 v0, ref Vector2 v1, ref Vector2 v2, out Vector3 baryCoords); // 0x00000001869494C4-0x000000018694966C
+		public Vector3 CalcBarycentricCoords(ref Vector2 point); // 0x000000018694948C-0x00000001869494C4
+		public Vector3 CalcBarycentricCoords(Vector2 point); // 0x000000018694966C-0x00000001869496A8
+		public float DistanceTo(Vector2 point); // 0x00000001869499F0-0x0000000186949A10
+		public int QuerySideCCW(Vector2 point, float epsilon = 1E-05f /* Metadata: 0x0234BDB7 */); // 0x0000000186949B54-0x0000000186949C38
+		public int QuerySideCW(Vector2 point, float epsilon = 1E-05f /* Metadata: 0x0234BDBB */); // 0x0000000186949C38-0x0000000186949D28
+		public Vector2 Project(Vector2 point); // 0x0000000186949B24-0x0000000186949B54
+		public bool Contains(ref Vector2 point); // 0x00000001869498F4-0x00000001869499D4
+		public bool Contains(Vector2 point); // 0x00000001869499D4-0x00000001869499F0
+		public bool ContainsCCW(ref Vector2 point); // 0x0000000186949778-0x0000000186949828
+		public bool ContainsCCW(Vector2 point); // 0x000000018694975C-0x0000000186949778
+		public bool ContainsCW(ref Vector2 point); // 0x0000000186949844-0x00000001869498F4
+		public bool ContainsCW(Vector2 point); // 0x0000000186949828-0x0000000186949844
+		public override string ToString(); // 0x0000000186949D28-0x0000000186949DEC
 	}
 
-	public struct AAB3 // TypeDefIndex: 55931
+	public struct AAB3 // TypeDefIndex: 58572
 	{
 		// Fields
 		public Vector3 Min; // 0x00
 		public Vector3 Max; // 0x0C
 	
 		// Constructors
-		public AAB3(ref Vector3 min, ref Vector3 max) {
-			Min = default;
-			Max = default;
-		} // 0x0000000185FB5B30-0x0000000185FB5B50
-		public AAB3(Vector3 min, Vector3 max) {
-			Min = default;
-			Max = default;
-		} // 0x0000000185FB1480-0x0000000185FB14A0
-		public AAB3(float xMin, float xMax, float yMin, float yMax, float zMin, float zMax) {
-			Min = default;
-			Max = default;
-		} // 0x0000000185FB5B50-0x0000000185FB5B80
+		public AAB3(ref Vector3 min, ref Vector3 max); // 0x0000000184D8BBF0-0x0000000184D8BC10
+		public AAB3(Vector3 min, Vector3 max); // 0x0000000184D871E0-0x0000000184D87200
+		public AAB3(float xMin, float xMax, float yMin, float yMax, float zMin, float zMax); // 0x0000000184D8BC10-0x0000000184D8BC40
 	
 		// Methods
-		public static implicit operator Bounds(AAB3 value) => default; // 0x00000001878D28E0-0x00000001878D294C
-		public static implicit operator AAB3(Bounds value) => default; // 0x00000001878D287C-0x00000001878D28E0
-		public static AAB3 CreateFromPoint(ref Vector3 point) => default; // 0x0000000185FB5B10-0x0000000185FB5B30
-		public static AAB3 CreateFromPoint(Vector3 point) => default; // 0x0000000185FB5B10-0x0000000185FB5B30
-		public static AAB3 CreateFromTwoPoints(ref Vector3 point0, ref Vector3 point1) => default; // 0x00000001878D2644-0x00000001878D26BC
-		public static AAB3 CreateFromTwoPoints(Vector3 point0, Vector3 point1) => default; // 0x00000001878D2614-0x00000001878D2644
-		public static AAB3 CreateFromPoints(IEnumerable<Vector3> points) => default; // 0x00000001878D2260-0x00000001878D23D8
-		public static AAB3 CreateFromPoints(IList<Vector3> points) => default; // 0x00000001878D23D8-0x00000001878D2528
-		public static AAB3 CreateFromPoints(Vector3[] points) => default; // 0x00000001878D2528-0x00000001878D2614
-		public void CalcCenterExtents(out Vector3 center, out Vector3 extents) {
-			center = default;
-			extents = default;
-		} // 0x0000000184402A70-0x0000000184402AF0
-		public void CalcVertices(out Vector3 vertex0, out Vector3 vertex1, out Vector3 vertex2, out Vector3 vertex3, out Vector3 vertex4, out Vector3 vertex5, out Vector3 vertex6, out Vector3 vertex7) {
-			vertex0 = default;
-			vertex1 = default;
-			vertex2 = default;
-			vertex3 = default;
-			vertex4 = default;
-			vertex5 = default;
-			vertex6 = default;
-			vertex7 = default;
-		} // 0x0000000185FB59F0-0x0000000185FB5AE0
-		public Vector3[] CalcVertices() => default; // 0x00000001878D206C-0x00000001878D2218
-		public void CalcVertices(Vector3[] array) {} // 0x00000001878D1EF0-0x00000001878D206C
-		public float CalcVolume() => default; // 0x0000000185FB5AE0-0x0000000185FB5B10
-		public float DistanceTo(Vector3 point) => default; // 0x00000001878D26BC-0x00000001878D26D8
-		public Vector3 Project(Vector3 point) => default; // 0x00000001878D27A4-0x00000001878D27D0
-		public bool Contains(ref Vector3 point) => default; // 0x0000000184265EF0-0x0000000184265F40
-		public bool Contains(Vector3 point) => default; // 0x00000001878D2218-0x00000001878D2260
-		public void Include(ref Vector3 point) {} // 0x00000001878D26D8-0x00000001878D273C
-		public void Include(Vector3 point) {} // 0x00000001878D26D8-0x00000001878D273C
-		public void Include(ref AAB3 box) {} // 0x00000001878D273C-0x00000001878D2770
-		public void Include(AAB3 box) {} // 0x00000001878D2770-0x00000001878D27A4
-		public override string ToString() => default; // 0x00000001878D27D0-0x00000001878D287C
+		public static implicit operator Bounds(AAB3 value); // 0x000000018693D4FC-0x000000018693D568
+		public static implicit operator AAB3(Bounds value); // 0x000000018693D498-0x000000018693D4FC
+		public static AAB3 CreateFromPoint(ref Vector3 point); // 0x0000000184D8BBD0-0x0000000184D8BBF0
+		public static AAB3 CreateFromPoint(Vector3 point); // 0x0000000184D8BBD0-0x0000000184D8BBF0
+		public static AAB3 CreateFromTwoPoints(ref Vector3 point0, ref Vector3 point1); // 0x000000018693D260-0x000000018693D2D8
+		public static AAB3 CreateFromTwoPoints(Vector3 point0, Vector3 point1); // 0x000000018693D230-0x000000018693D260
+		public static AAB3 CreateFromPoints(IEnumerable<Vector3> points); // 0x000000018693CE7C-0x000000018693CFF4
+		public static AAB3 CreateFromPoints(IList<Vector3> points); // 0x000000018693CFF4-0x000000018693D144
+		public static AAB3 CreateFromPoints(Vector3[] points); // 0x000000018693D144-0x000000018693D230
+		public void CalcCenterExtents(out Vector3 center, out Vector3 extents); // 0x0000000184D8BA30-0x0000000184D8BAB0
+		public void CalcVertices(out Vector3 vertex0, out Vector3 vertex1, out Vector3 vertex2, out Vector3 vertex3, out Vector3 vertex4, out Vector3 vertex5, out Vector3 vertex6, out Vector3 vertex7); // 0x0000000184D8BAB0-0x0000000184D8BBA0
+		public Vector3[] CalcVertices(); // 0x000000018693CC88-0x000000018693CE34
+		public void CalcVertices(Vector3[] array); // 0x000000018693CB0C-0x000000018693CC88
+		public float CalcVolume(); // 0x0000000184D8BBA0-0x0000000184D8BBD0
+		public float DistanceTo(Vector3 point); // 0x000000018693D2D8-0x000000018693D2F4
+		public Vector3 Project(Vector3 point); // 0x000000018693D3C0-0x000000018693D3EC
+		public bool Contains(ref Vector3 point); // 0x00000001833A4CF0-0x00000001833A4D40
+		public bool Contains(Vector3 point); // 0x000000018693CE34-0x000000018693CE7C
+		public void Include(ref Vector3 point); // 0x000000018693D2F4-0x000000018693D358
+		public void Include(Vector3 point); // 0x000000018693D2F4-0x000000018693D358
+		public void Include(ref AAB3 box); // 0x000000018693D358-0x000000018693D38C
+		public void Include(AAB3 box); // 0x000000018693D38C-0x000000018693D3C0
+		public override string ToString(); // 0x000000018693D3EC-0x000000018693D498
 	}
 
-	public struct Box3 // TypeDefIndex: 55932
+	public struct Box3 // TypeDefIndex: 58573
 	{
 		// Fields
 		public Vector3 Center; // 0x00
@@ -2842,78 +1973,39 @@ namespace Dest.Math
 		public Vector3 Extents; // 0x30
 	
 		// Constructors
-		public Box3(ref Vector3 center, ref Vector3 axis0, ref Vector3 axis1, ref Vector3 axis2, ref Vector3 extents) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Axis2 = default;
-			Extents = default;
-		} // 0x0000000185FB5C30-0x0000000185FB5C90
-		public Box3(Vector3 center, Vector3 axis0, Vector3 axis1, Vector3 axis2, Vector3 extents) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Axis2 = default;
-			Extents = default;
-		} // 0x0000000185FB5C90-0x0000000185FB5CF0
-		public Box3(ref AAB3 box) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Axis2 = default;
-			Extents = default;
-		} // 0x00000001878D5CA8-0x00000001878D5D58
-		public Box3(AAB3 box) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Axis2 = default;
-			Extents = default;
-		} // 0x00000001844029A0-0x0000000184402A70
+		public Box3(ref Vector3 center, ref Vector3 axis0, ref Vector3 axis1, ref Vector3 axis2, ref Vector3 extents); // 0x0000000184D8BCF0-0x0000000184D8BD50
+		public Box3(Vector3 center, Vector3 axis0, Vector3 axis1, Vector3 axis2, Vector3 extents); // 0x0000000184D8BD50-0x0000000184D8BDB0
+		public Box3(ref AAB3 box); // 0x00000001869408C4-0x0000000186940974
+		public Box3(AAB3 box); // 0x0000000186940974-0x0000000186940A00
 	
 		// Methods
-		public static Box3 CreateFromPoints(IList<Vector3> points) => default; // 0x00000001878D4D30-0x00000001878D5290
-		public Vector3 GetAxis(int index) => default; // 0x00000001878D52AC-0x00000001878D5348
-		public void CalcVertices(out Vector3 vertex0, out Vector3 vertex1, out Vector3 vertex2, out Vector3 vertex3, out Vector3 vertex4, out Vector3 vertex5, out Vector3 vertex6, out Vector3 vertex7) {
-			vertex0 = default;
-			vertex1 = default;
-			vertex2 = default;
-			vertex3 = default;
-			vertex4 = default;
-			vertex5 = default;
-			vertex6 = default;
-			vertex7 = default;
-		} // 0x00000001878D463C-0x00000001878D4B84
-		public Vector3[] CalcVertices() => default; // 0x00000001878D3A94-0x00000001878D4080
-		public void CalcVertices(Vector3[] array) {} // 0x00000001878D4080-0x00000001878D463C
-		public float CalcVolume() => default; // 0x0000000185FB5C10-0x0000000185FB5C30
-		public float DistanceTo(Vector3 point) => default; // 0x00000001878D5290-0x00000001878D52AC
-		public Vector3 Project(Vector3 point) => default; // 0x00000001878D5AB8-0x00000001878D5AE4
-		public bool Contains(ref Vector3 point) => default; // 0x00000001878D4B84-0x00000001878D4D1C
-		public bool Contains(Vector3 point) => default; // 0x00000001878D4D1C-0x00000001878D4D30
-		public void Include(ref Box3 box) {} // 0x00000001878D5348-0x00000001878D5AA4
-		public void Include(Box3 box) {} // 0x00000001878D5AA4-0x00000001878D5AB8
-		public override string ToString() => default; // 0x00000001878D5AE4-0x00000001878D5CA8
+		public static Box3 CreateFromPoints(IList<Vector3> points); // 0x000000018693F94C-0x000000018693FEAC
+		public Vector3 GetAxis(int index); // 0x000000018693FEC8-0x000000018693FF64
+		public void CalcVertices(out Vector3 vertex0, out Vector3 vertex1, out Vector3 vertex2, out Vector3 vertex3, out Vector3 vertex4, out Vector3 vertex5, out Vector3 vertex6, out Vector3 vertex7); // 0x000000018693F258-0x000000018693F7A0
+		public Vector3[] CalcVertices(); // 0x000000018693E6B0-0x000000018693EC9C
+		public void CalcVertices(Vector3[] array); // 0x000000018693EC9C-0x000000018693F258
+		public float CalcVolume(); // 0x0000000184D8BCD0-0x0000000184D8BCF0
+		public float DistanceTo(Vector3 point); // 0x000000018693FEAC-0x000000018693FEC8
+		public Vector3 Project(Vector3 point); // 0x00000001869406D4-0x0000000186940700
+		public bool Contains(ref Vector3 point); // 0x000000018693F7A0-0x000000018693F938
+		public bool Contains(Vector3 point); // 0x000000018693F938-0x000000018693F94C
+		public void Include(ref Box3 box); // 0x000000018693FF64-0x00000001869406C0
+		public void Include(Box3 box); // 0x00000001869406C0-0x00000001869406D4
+		public override string ToString(); // 0x0000000186940700-0x00000001869408C4
 	}
 
-	public struct Capsule3 // TypeDefIndex: 55933
+	public struct Capsule3 // TypeDefIndex: 58574
 	{
 		// Fields
 		public Segment3 Segment; // 0x00
 		public float Radius; // 0x34
 	
 		// Constructors
-		public Capsule3(ref Segment3 segment, float radius) {
-			Segment = default;
-			Radius = default;
-		} // 0x0000000185FB6060-0x0000000185FB6090
-		public Capsule3(Segment3 segment, float radius) {
-			Segment = default;
-			Radius = default;
-		} // 0x0000000185FB6090-0x0000000185FB60C0
+		public Capsule3(ref Segment3 segment, float radius); // 0x0000000184D8C120-0x0000000184D8C150
+		public Capsule3(Segment3 segment, float radius); // 0x0000000184D8C150-0x0000000184D8C180
 	}
 
-	public struct Circle3 // TypeDefIndex: 55934
+	public struct Circle3 // TypeDefIndex: 58575
 	{
 		// Fields
 		public Vector3 Center; // 0x00
@@ -2923,148 +2015,90 @@ namespace Dest.Math
 		public float Radius; // 0x30
 	
 		// Constructors
-		public Circle3(ref Vector3 center, ref Vector3 axis0, ref Vector3 axis1, float radius) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Normal = default;
-			Radius = default;
-		} // 0x00000001878E0C9C-0x00000001878E0D90
-		public Circle3(Vector3 center, Vector3 axis0, Vector3 axis1, float radius) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Normal = default;
-			Radius = default;
-		} // 0x00000001878E0D90-0x00000001878E0E70
-		public Circle3(ref Vector3 center, ref Vector3 normal, float radius) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Normal = default;
-			Radius = default;
-		} // 0x00000001878E0C08-0x00000001878E0C9C
-		public Circle3(Vector3 center, Vector3 normal, float radius) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Normal = default;
-			Radius = default;
-		} // 0x00000001878E0E70-0x00000001878E0F04
+		public Circle3(ref Vector3 center, ref Vector3 axis0, ref Vector3 axis1, float radius); // 0x000000018694B958-0x000000018694BA4C
+		public Circle3(Vector3 center, Vector3 axis0, Vector3 axis1, float radius); // 0x000000018694BA4C-0x000000018694BB2C
+		public Circle3(ref Vector3 center, ref Vector3 normal, float radius); // 0x000000018694B8C4-0x000000018694B958
+		public Circle3(Vector3 center, Vector3 normal, float radius); // 0x000000018694BB2C-0x000000018694BBC0
 	
 		// Methods
-		public static bool CreateCircumscribed(Vector3 v0, Vector3 v1, Vector3 v2, out Circle3 circle) {
-			circle = default;
-			return default;
-		} // 0x00000001878DFF4C-0x00000001878E02EC
-		public static bool CreateInscribed(Vector3 v0, Vector3 v1, Vector3 v2, out Circle3 circle) {
-			circle = default;
-			return default;
-		} // 0x00000001878E02EC-0x00000001878E07CC
-		public float CalcPerimeter() => default; // 0x0000000185FB60E0-0x0000000185FB60F0
-		public float CalcArea() => default; // 0x0000000185FB60C0-0x0000000185FB60E0
-		public Vector3 Eval(float t) => default; // 0x00000001878E07E8-0x00000001878E0900
-		public Vector3 Eval(float t, float radius) => default; // 0x00000001878E0900-0x00000001878E0A24
-		public float DistanceTo(Vector3 point, bool solid = true /* Metadata: 0x0207C10F */) => default; // 0x00000001878E07CC-0x00000001878E07E8
-		public Vector3 Project(Vector3 point, bool solid = true /* Metadata: 0x0207C110 */) => default; // 0x00000001878E0A24-0x00000001878E0A54
-		public override string ToString() => default; // 0x00000001878E0A54-0x00000001878E0C08
+		public static bool CreateCircumscribed(Vector3 v0, Vector3 v1, Vector3 v2, out Circle3 circle); // 0x000000018694AC08-0x000000018694AFA8
+		public static bool CreateInscribed(Vector3 v0, Vector3 v1, Vector3 v2, out Circle3 circle); // 0x000000018694AFA8-0x000000018694B488
+		public float CalcPerimeter(); // 0x0000000184D8C1A0-0x0000000184D8C1B0
+		public float CalcArea(); // 0x0000000184D8C180-0x0000000184D8C1A0
+		public Vector3 Eval(float t); // 0x000000018694B4A4-0x000000018694B5BC
+		public Vector3 Eval(float t, float radius); // 0x000000018694B5BC-0x000000018694B6E0
+		public float DistanceTo(Vector3 point, bool solid = true /* Metadata: 0x0234BDBF */); // 0x000000018694B488-0x000000018694B4A4
+		public Vector3 Project(Vector3 point, bool solid = true /* Metadata: 0x0234BDC0 */); // 0x000000018694B6E0-0x000000018694B710
+		public override string ToString(); // 0x000000018694B710-0x000000018694B8C4
 	}
 
-	public struct Line3 // TypeDefIndex: 55935
+	public struct Line3 // TypeDefIndex: 58576
 	{
 		// Fields
 		public Vector3 Center; // 0x00
 		public Vector3 Direction; // 0x0C
 	
 		// Constructors
-		public Line3(ref Vector3 center, ref Vector3 direction) {
-			Center = default;
-			Direction = default;
-		} // 0x0000000185FB5B30-0x0000000185FB5B50
-		public Line3(Vector3 center, Vector3 direction) {
-			Center = default;
-			Direction = default;
-		} // 0x0000000185FB1480-0x0000000185FB14A0
+		public Line3(ref Vector3 center, ref Vector3 direction); // 0x0000000184D8BBF0-0x0000000184D8BC10
+		public Line3(Vector3 center, Vector3 direction); // 0x0000000184D871E0-0x0000000184D87200
 	
 		// Methods
-		public static Line3 CreateFromTwoPoints(ref Vector3 p0, ref Vector3 p1) => default; // 0x00000001878E4900-0x00000001878E498C
-		public static Line3 CreateFromTwoPoints(Vector3 p0, Vector3 p1) => default; // 0x00000001878E4900-0x00000001878E498C
-		public Vector3 Eval(float t) => default; // 0x00000001878E49A8-0x00000001878E4A24
-		public float DistanceTo(Vector3 point) => default; // 0x00000001878E498C-0x00000001878E49A8
-		public Vector3 Project(Vector3 point) => default; // 0x00000001878E4A24-0x00000001878E4A50
-		public float AngleBetweenTwoLines(Line3 anotherLine, bool acuteAngleDesired = false /* Metadata: 0x0207C111 */) => default; // 0x00000001878E4838-0x00000001878E4900
-		public override string ToString() => default; // 0x00000001878E4A50-0x00000001878E4AFC
+		public static Line3 CreateFromTwoPoints(ref Vector3 p0, ref Vector3 p1); // 0x000000018694F5BC-0x000000018694F648
+		public static Line3 CreateFromTwoPoints(Vector3 p0, Vector3 p1); // 0x000000018694F5BC-0x000000018694F648
+		public Vector3 Eval(float t); // 0x000000018694F664-0x000000018694F6E0
+		public float DistanceTo(Vector3 point); // 0x000000018694F648-0x000000018694F664
+		public Vector3 Project(Vector3 point); // 0x000000018694F6E0-0x000000018694F70C
+		public float AngleBetweenTwoLines(Line3 anotherLine, bool acuteAngleDesired = false /* Metadata: 0x0234BDC1 */); // 0x000000018694F4F4-0x000000018694F5BC
+		public override string ToString(); // 0x000000018694F70C-0x000000018694F7B8
 	}
 
 	[Serializable]
-	public struct Plane3 // TypeDefIndex: 55936
+	public struct Plane3 // TypeDefIndex: 58577
 	{
 		// Fields
 		public Vector3 Normal; // 0x00
 		public float Constant; // 0x0C
 	
 		// Constructors
-		public Plane3(ref Vector3 normal, float constant) {
-			Normal = default;
-			Constant = default;
-		} // 0x00000001836800E0-0x0000000183680100
-		public Plane3(Vector3 normal, float constant) {
-			Normal = default;
-			Constant = default;
-		} // 0x00000001836800E0-0x0000000183680100
-		public Plane3(ref Vector3 normal, ref Vector3 point) {
-			Normal = default;
-			Constant = default;
-		} // 0x00000001878E682C-0x00000001878E68D8
-		public Plane3(Vector3 normal, Vector3 point) {
-			Normal = default;
-			Constant = default;
-		} // 0x00000001878E6794-0x00000001878E682C
-		public Plane3(ref Vector3 p0, ref Vector3 p1, ref Vector3 p2) {
-			Normal = default;
-			Constant = default;
-		} // 0x00000001878E6A20-0x00000001878E6B68
-		public Plane3(Vector3 p0, Vector3 p1, Vector3 p2) {
-			Normal = default;
-			Constant = default;
-		} // 0x00000001878E68D8-0x00000001878E6A20
+		public Plane3(ref Vector3 normal, float constant); // 0x0000000184D8C1B0-0x0000000184D8C1D0
+		public Plane3(Vector3 normal, float constant); // 0x0000000184D8C1B0-0x0000000184D8C1D0
+		public Plane3(ref Vector3 normal, ref Vector3 point); // 0x00000001869514E8-0x0000000186951594
+		public Plane3(Vector3 normal, Vector3 point); // 0x0000000186951450-0x00000001869514E8
+		public Plane3(ref Vector3 p0, ref Vector3 p1, ref Vector3 p2); // 0x00000001869516DC-0x0000000186951824
+		public Plane3(Vector3 p0, Vector3 p1, Vector3 p2); // 0x0000000186951594-0x00000001869516DC
 	
 		// Methods
-		public static implicit operator Plane(Plane3 value) => default; // 0x00000001878E6B68-0x00000001878E6BAC
-		public static implicit operator Plane3(Plane value) => default; // 0x0000000185FB60F0-0x0000000185FB6120
-		public Vector3 CalcOrigin() => default; // 0x00000001878E5538-0x00000001878E557C
-		public void CreateOrthonormalBasis(out Vector3 u, out Vector3 v, out Vector3 n) {
-			u = default;
-			v = default;
-			n = default;
-		} // 0x00000001878E557C-0x00000001878E5684
-		internal float SignedDistanceTo(ref Vector3 point) => default; // 0x00000001878E6660-0x00000001878E66FC
-		public float SignedDistanceTo(Vector3 point) => default; // 0x00000001878E65D0-0x00000001878E6660
-		public float DistanceTo(Vector3 point) => default; // 0x00000001878E5684-0x00000001878E571C
-		public int QuerySide(Vector3 point, float epsilon = 1E-05f /* Metadata: 0x0207C112 */) => default; // 0x00000001878E6508-0x00000001878E65D0
-		public bool QuerySideNegative(Vector3 point, float epsilon = 1E-05f /* Metadata: 0x0207C116 */) => default; // 0x00000001878E5AFC-0x00000001878E5BA0
-		public bool QuerySidePositive(Vector3 point, float epsilon = 1E-05f /* Metadata: 0x0207C11A */) => default; // 0x00000001878E5E44-0x00000001878E5EF0
-		public int QuerySide(ref Box3 box, float epsilon = 1E-05f /* Metadata: 0x0207C11E */) => default; // 0x00000001878E6340-0x00000001878E6508
-		public bool QuerySideNegative(ref Box3 box, float epsilon = 1E-05f /* Metadata: 0x0207C122 */) => default; // 0x00000001878E5848-0x00000001878E59F0
-		public bool QuerySidePositive(ref Box3 box, float epsilon = 1E-05f /* Metadata: 0x0207C126 */) => default; // 0x00000001878E5EF0-0x00000001878E6090
-		public int QuerySide(ref AAB3 box, float epsilon = 1E-05f /* Metadata: 0x0207C12A */) => default; // 0x00000001878E6188-0x00000001878E6340
-		public bool QuerySideNegative(ref AAB3 box, float epsilon = 1E-05f /* Metadata: 0x0207C12E */) => default; // 0x00000001878E59F0-0x00000001878E5AFC
-		public bool QuerySidePositive(ref AAB3 box, float epsilon = 1E-05f /* Metadata: 0x0207C132 */) => default; // 0x00000001878E5D30-0x00000001878E5E44
-		public int QuerySide(ref Sphere3 sphere, float epsilon = 1E-05f /* Metadata: 0x0207C136 */) => default; // 0x00000001878E6090-0x00000001878E6188
-		public bool QuerySideNegative(ref Sphere3 sphere, float epsilon = 1E-05f /* Metadata: 0x0207C13A */) => default; // 0x00000001878E5BA0-0x00000001878E5C6C
-		public bool QuerySidePositive(ref Sphere3 sphere, float epsilon = 1E-05f /* Metadata: 0x0207C13E */) => default; // 0x00000001878E5C6C-0x00000001878E5D30
-		public Vector3 Project(Vector3 point) => default; // 0x00000001878E581C-0x00000001878E5848
-		public Vector3 ProjectVector(Vector3 vector) => default; // 0x00000001878E571C-0x00000001878E581C
-		public float AngleBetweenPlaneNormalAndLine(Line3 line) => default; // 0x00000001878E53DC-0x00000001878E5494
-		public float AngleBetweenPlaneNormalAndLine(Vector3 direction) => default; // 0x00000001878E5330-0x00000001878E53DC
-		public float AngleBetweenPlaneAndLine(Line3 line) => default; // 0x00000001878E5268-0x00000001878E5330
-		public float AngleBetweenPlaneAndLine(Vector3 direction) => default; // 0x00000001878E51AC-0x00000001878E5268
-		public float AngleBetweenTwoPlanes(Plane3 anotherPlane) => default; // 0x00000001878E5494-0x00000001878E5538
-		public override string ToString() => default; // 0x00000001878E66FC-0x00000001878E6794
+		public static implicit operator Plane(Plane3 value); // 0x0000000186951824-0x0000000186951868
+		public static implicit operator Plane3(Plane value); // 0x0000000184D8C1D0-0x0000000184D8C200
+		public Vector3 CalcOrigin(); // 0x00000001869501F4-0x0000000186950238
+		public void CreateOrthonormalBasis(out Vector3 u, out Vector3 v, out Vector3 n); // 0x0000000186950238-0x0000000186950340
+		internal float SignedDistanceTo(ref Vector3 point); // 0x000000018695131C-0x00000001869513B8
+		public float SignedDistanceTo(Vector3 point); // 0x000000018695128C-0x000000018695131C
+		public float DistanceTo(Vector3 point); // 0x0000000186950340-0x00000001869503D8
+		public int QuerySide(Vector3 point, float epsilon = 1E-05f /* Metadata: 0x0234BDC2 */); // 0x00000001869511C4-0x000000018695128C
+		public bool QuerySideNegative(Vector3 point, float epsilon = 1E-05f /* Metadata: 0x0234BDC6 */); // 0x00000001869507B8-0x000000018695085C
+		public bool QuerySidePositive(Vector3 point, float epsilon = 1E-05f /* Metadata: 0x0234BDCA */); // 0x0000000186950B00-0x0000000186950BAC
+		public int QuerySide(ref Box3 box, float epsilon = 1E-05f /* Metadata: 0x0234BDCE */); // 0x0000000186950FFC-0x00000001869511C4
+		public bool QuerySideNegative(ref Box3 box, float epsilon = 1E-05f /* Metadata: 0x0234BDD2 */); // 0x0000000186950504-0x00000001869506AC
+		public bool QuerySidePositive(ref Box3 box, float epsilon = 1E-05f /* Metadata: 0x0234BDD6 */); // 0x0000000186950BAC-0x0000000186950D4C
+		public int QuerySide(ref AAB3 box, float epsilon = 1E-05f /* Metadata: 0x0234BDDA */); // 0x0000000186950E44-0x0000000186950FFC
+		public bool QuerySideNegative(ref AAB3 box, float epsilon = 1E-05f /* Metadata: 0x0234BDDE */); // 0x00000001869506AC-0x00000001869507B8
+		public bool QuerySidePositive(ref AAB3 box, float epsilon = 1E-05f /* Metadata: 0x0234BDE2 */); // 0x00000001869509EC-0x0000000186950B00
+		public int QuerySide(ref Sphere3 sphere, float epsilon = 1E-05f /* Metadata: 0x0234BDE6 */); // 0x0000000186950D4C-0x0000000186950E44
+		public bool QuerySideNegative(ref Sphere3 sphere, float epsilon = 1E-05f /* Metadata: 0x0234BDEA */); // 0x000000018695085C-0x0000000186950928
+		public bool QuerySidePositive(ref Sphere3 sphere, float epsilon = 1E-05f /* Metadata: 0x0234BDEE */); // 0x0000000186950928-0x00000001869509EC
+		public Vector3 Project(Vector3 point); // 0x00000001869504D8-0x0000000186950504
+		public Vector3 ProjectVector(Vector3 vector); // 0x00000001869503D8-0x00000001869504D8
+		public float AngleBetweenPlaneNormalAndLine(Line3 line); // 0x0000000186950098-0x0000000186950150
+		public float AngleBetweenPlaneNormalAndLine(Vector3 direction); // 0x000000018694FFEC-0x0000000186950098
+		public float AngleBetweenPlaneAndLine(Line3 line); // 0x000000018694FF24-0x000000018694FFEC
+		public float AngleBetweenPlaneAndLine(Vector3 direction); // 0x000000018694FE68-0x000000018694FF24
+		public float AngleBetweenTwoPlanes(Plane3 anotherPlane); // 0x0000000186950150-0x00000001869501F4
+		public override string ToString(); // 0x00000001869513B8-0x0000000186951450
 	}
 
 	[Serializable]
-	public struct Edge3 // TypeDefIndex: 55937
+	public struct Edge3 // TypeDefIndex: 58578
 	{
 		// Fields
 		public Vector3 Point0; // 0x00
@@ -3075,65 +2109,62 @@ namespace Dest.Math
 	}
 
 	[Serializable]
-	public class Polygon3 // TypeDefIndex: 55938
+	public class Polygon3 // TypeDefIndex: 58579
 	{
 		// Fields
+		[SerializeField]
 		private Vector3[] _vertices; // 0x10
+		[SerializeField]
 		private Edge3[] _edges; // 0x18
+		[SerializeField]
 		private Plane3 _plane; // 0x20
 	
 		// Properties
-		public Vector3[] Vertices { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public Edge3[] Edges { get => default; } // 0x0000000181377E40-0x0000000181377E50 
-		public int VertexCount { get => default; } // 0x00000001877752B4-0x00000001877752D0 
-		public Vector3 this[int vertexIndex] { get => default; set {} } // 0x00000001878E84D8-0x00000001878E8504 0x00000001878E8504-0x00000001878E853C
-		public Plane3 Plane { get => default; set {} } // 0x0000000185FB6120-0x0000000185FB6130 0x0000000185FB6130-0x0000000185FB6140
+		public Vector3[] Vertices { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public Edge3[] Edges { get; } // 0x000000018385B100-0x000000018385B110 
+		public int VertexCount { get; } // 0x00000001867B6CAC-0x00000001867B6CC8 
+		public Vector3 this[int vertexIndex] { get => default; set {} } // 0x0000000186953194-0x00000001869531C0 0x00000001869531C0-0x00000001869531F8
+		public Plane3 Plane { get; set; } // 0x0000000184D8C200-0x0000000184D8C210 0x0000000184D8C210-0x0000000184D8C220
 	
 		// Constructors
-		private Polygon3() {} // 0x0000000185492010-0x0000000185492020
-		public Polygon3(Vector3[] vertices, Plane3 plane) {} // 0x00000001878E8420-0x00000001878E84D8
-		public Polygon3(int vertexCount, Plane3 plane) {} // 0x00000001878E8390-0x00000001878E8420
+		private Polygon3(); // 0x00000001841E1670-0x00000001841E1680
+		public Polygon3(Vector3[] vertices, Plane3 plane); // 0x00000001869530DC-0x0000000186953194
+		public Polygon3(int vertexCount, Plane3 plane); // 0x000000018695304C-0x00000001869530DC
 	
 		// Methods
-		public void SetVertexProjected(int vertexIndex, Vector3 vertex) {} // 0x00000001878E7B94-0x00000001878E7CB8
-		public void ProjectVertices() {} // 0x00000001878E7934-0x00000001878E7AA8
-		public Edge3 GetEdge(int edgeIndex) => default; // 0x00000001878E77D4-0x00000001878E7830
-		public void UpdateEdges() {} // 0x00000001878E8188-0x00000001878E8390
-		public void UpdateEdge(int edgeIndex) {} // 0x00000001878E7FB0-0x00000001878E8188
-		public Vector3 CalcCenter() => default; // 0x00000001878E763C-0x00000001878E776C
-		public float CalcPerimeter() => default; // 0x00000001878E776C-0x00000001878E77D4
-		public bool HasZeroCorners(float threshold = 1E-05f /* Metadata: 0x0207C142 */) => default; // 0x00000001878E7830-0x00000001878E7934
-		public void ReverseVertices() {} // 0x00000001878E7AA8-0x00000001878E7B94
-		public Segment3[] ToSegmentArray() => default; // 0x00000001878E7CB8-0x00000001878E7E10
-		public override string ToString() => default; // 0x00000001878E7E10-0x00000001878E7FB0
+		public void SetVertexProjected(int vertexIndex, Vector3 vertex); // 0x0000000186952850-0x0000000186952974
+		public void ProjectVertices(); // 0x00000001869525F0-0x0000000186952764
+		public Edge3 GetEdge(int edgeIndex); // 0x0000000186952490-0x00000001869524EC
+		public void UpdateEdges(); // 0x0000000186952E44-0x000000018695304C
+		public void UpdateEdge(int edgeIndex); // 0x0000000186952C6C-0x0000000186952E44
+		public Vector3 CalcCenter(); // 0x00000001869522F8-0x0000000186952428
+		public float CalcPerimeter(); // 0x0000000186952428-0x0000000186952490
+		public bool HasZeroCorners(float threshold = 1E-05f /* Metadata: 0x0234BDF2 */); // 0x00000001869524EC-0x00000001869525F0
+		public void ReverseVertices(); // 0x0000000186952764-0x0000000186952850
+		public Segment3[] ToSegmentArray(); // 0x0000000186952974-0x0000000186952ACC
+		public override string ToString(); // 0x0000000186952ACC-0x0000000186952C6C
 	}
 
-	public struct Ray3 // TypeDefIndex: 55939
+	public struct Ray3 // TypeDefIndex: 58580
 	{
 		// Fields
 		public Vector3 Center; // 0x00
 		public Vector3 Direction; // 0x0C
 	
 		// Constructors
-		public Ray3(ref Vector3 center, ref Vector3 direction) {
-			Center = default;
-			Direction = default;
-		} // 0x0000000185FB5B30-0x0000000185FB5B50
-		public Ray3(Vector3 center, Vector3 direction) {
-			Center = default;
-			Direction = default;
-		} // 0x0000000185FB1480-0x0000000185FB14A0
+		public Ray3(ref Vector3 center, ref Vector3 direction); // 0x0000000184D8BBF0-0x0000000184D8BC10
+		public Ray3(Vector3 center, Vector3 direction); // 0x0000000184D871E0-0x0000000184D87200
 	
 		// Methods
-		public static implicit operator Ray(Ray3 value) => default; // 0x00000001878E945C-0x00000001878E94B0
-		public static implicit operator Ray3(Ray value) => default; // 0x0000000185FB6480-0x0000000185FB64B0
-		public Vector3 Eval(float t) => default; // 0x00000001878E49A8-0x00000001878E4A24
-		public float DistanceTo(Vector3 point) => default; // 0x00000001878E9368-0x00000001878E9384
-		public Vector3 Project(Vector3 point) => default; // 0x00000001878E9384-0x00000001878E93B0
-		public override string ToString() => default; // 0x00000001878E93B0-0x00000001878E945C
+		public static implicit operator Ray(Ray3 value); // 0x0000000186954118-0x000000018695416C
+		public static implicit operator Ray3(Ray value); // 0x0000000184D8C560-0x0000000184D8C590
+		public Vector3 Eval(float t); // 0x000000018694F664-0x000000018694F6E0
+		public float DistanceTo(Vector3 point); // 0x0000000186954024-0x0000000186954040
+		public Vector3 Project(Vector3 point); // 0x0000000186954040-0x000000018695406C
+		public override string ToString(); // 0x000000018695406C-0x0000000186954118
 	}
 
-	public struct Rectangle3 // TypeDefIndex: 55940
+	public struct Rectangle3 // TypeDefIndex: 58581
 	{
 		// Fields
 		public Vector3 Center; // 0x00
@@ -3143,39 +2174,22 @@ namespace Dest.Math
 		public Vector2 Extents; // 0x30
 	
 		// Constructors
-		public Rectangle3(ref Vector3 center, ref Vector3 axis0, ref Vector3 axis1, ref Vector2 extents) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Normal = default;
-			Extents = default;
-		} // 0x00000001878EA2E0-0x00000001878EA3F8
-		public Rectangle3(Vector3 center, Vector3 axis0, Vector3 axis1, Vector2 extents) {
-			Center = default;
-			Axis0 = default;
-			Axis1 = default;
-			Normal = default;
-			Extents = default;
-		} // 0x00000001878EA200-0x00000001878EA2E0
+		public Rectangle3(ref Vector3 center, ref Vector3 axis0, ref Vector3 axis1, ref Vector2 extents); // 0x0000000186954F9C-0x00000001869550B4
+		public Rectangle3(Vector3 center, Vector3 axis0, Vector3 axis1, Vector2 extents); // 0x0000000186954EBC-0x0000000186954F9C
 	
 		// Methods
-		public static Rectangle3 CreateFromCCWPoints(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3) => default; // 0x00000001878E9BE8-0x00000001878E9DE0
-		public static Rectangle3 CreateFromCWPoints(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3) => default; // 0x00000001878E9DE0-0x00000001878E9FD8
-		public void CalcVertices(out Vector3 vertex0, out Vector3 vertex1, out Vector3 vertex2, out Vector3 vertex3) {
-			vertex0 = default;
-			vertex1 = default;
-			vertex2 = default;
-			vertex3 = default;
-		} // 0x00000001878E9724-0x00000001878E9944
-		public Vector3[] CalcVertices() => default; // 0x00000001878E9944-0x00000001878E9BE8
-		public void CalcVertices(Vector3[] array) {} // 0x00000001878E94B0-0x00000001878E9724
-		public float CalcArea() => default; // 0x0000000185FB64B0-0x0000000185FB64D0
-		public float DistanceTo(Vector3 point) => default; // 0x00000001878E9FD8-0x00000001878E9FF4
-		public Vector3 Project(Vector3 point) => default; // 0x00000001878E9FF4-0x00000001878EA020
-		public override string ToString() => default; // 0x00000001878EA020-0x00000001878EA200
+		public static Rectangle3 CreateFromCCWPoints(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3); // 0x00000001869548A4-0x0000000186954A9C
+		public static Rectangle3 CreateFromCWPoints(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3); // 0x0000000186954A9C-0x0000000186954C94
+		public void CalcVertices(out Vector3 vertex0, out Vector3 vertex1, out Vector3 vertex2, out Vector3 vertex3); // 0x00000001869543E0-0x0000000186954600
+		public Vector3[] CalcVertices(); // 0x0000000186954600-0x00000001869548A4
+		public void CalcVertices(Vector3[] array); // 0x000000018695416C-0x00000001869543E0
+		public float CalcArea(); // 0x0000000184D8C590-0x0000000184D8C5B0
+		public float DistanceTo(Vector3 point); // 0x0000000186954C94-0x0000000186954CB0
+		public Vector3 Project(Vector3 point); // 0x0000000186954CB0-0x0000000186954CDC
+		public override string ToString(); // 0x0000000186954CDC-0x0000000186954EBC
 	}
 
-	public struct Segment3 // TypeDefIndex: 55941
+	public struct Segment3 // TypeDefIndex: 58582
 	{
 		// Fields
 		public Vector3 P0; // 0x00
@@ -3185,89 +2199,53 @@ namespace Dest.Math
 		public float Extent; // 0x30
 	
 		// Constructors
-		public Segment3(ref Vector3 p0, ref Vector3 p1) {
-			P0 = default;
-			P1 = default;
-			Center = default;
-			Direction = default;
-			Extent = default;
-		} // 0x00000001878EA938-0x00000001878EA998
-		public Segment3(Vector3 p0, Vector3 p1) {
-			P0 = default;
-			P1 = default;
-			Center = default;
-			Direction = default;
-			Extent = default;
-		} // 0x00000001878EA8D8-0x00000001878EA938
-		public Segment3(ref Vector3 center, ref Vector3 direction, float extent) {
-			P0 = default;
-			P1 = default;
-			Center = default;
-			Direction = default;
-			Extent = default;
-		} // 0x00000001878EA9F8-0x00000001878EAA58
-		public Segment3(Vector3 center, Vector3 direction, float extent) {
-			P0 = default;
-			P1 = default;
-			Center = default;
-			Direction = default;
-			Extent = default;
-		} // 0x00000001878EA998-0x00000001878EA9F8
+		public Segment3(ref Vector3 p0, ref Vector3 p1); // 0x00000001869555F4-0x0000000186955654
+		public Segment3(Vector3 p0, Vector3 p1); // 0x0000000186955594-0x00000001869555F4
+		public Segment3(ref Vector3 center, ref Vector3 direction, float extent); // 0x00000001869556B4-0x0000000186955714
+		public Segment3(Vector3 center, Vector3 direction, float extent); // 0x0000000186955654-0x00000001869556B4
 	
 		// Methods
-		public void SetEndpoints(Vector3 p0, Vector3 p1) {} // 0x00000001878EA6FC-0x00000001878EA724
-		public void SetCenterDirectionExtent(Vector3 center, Vector3 direction, float extent) {} // 0x00000001878EA6D0-0x00000001878EA6FC
-		public void CalcCenterDirectionExtent() {} // 0x00000001878EA3F8-0x00000001878EA508
-		public void CalcEndPoints() {} // 0x00000001878EA508-0x00000001878EA5E8
-		public Vector3 Eval(float s) => default; // 0x00000001878EA604-0x00000001878EA6A4
-		public float DistanceTo(Vector3 point) => default; // 0x00000001878EA5E8-0x00000001878EA604
-		public Vector3 Project(Vector3 point) => default; // 0x00000001878EA6A4-0x00000001878EA6D0
-		public override string ToString() => default; // 0x00000001878EA724-0x00000001878EA8D8
+		public void SetEndpoints(Vector3 p0, Vector3 p1); // 0x00000001869553B8-0x00000001869553E0
+		public void SetCenterDirectionExtent(Vector3 center, Vector3 direction, float extent); // 0x000000018695538C-0x00000001869553B8
+		public void CalcCenterDirectionExtent(); // 0x00000001869550B4-0x00000001869551C4
+		public void CalcEndPoints(); // 0x00000001869551C4-0x00000001869552A4
+		public Vector3 Eval(float s); // 0x00000001869552C0-0x0000000186955360
+		public float DistanceTo(Vector3 point); // 0x00000001869552A4-0x00000001869552C0
+		public Vector3 Project(Vector3 point); // 0x0000000186955360-0x000000018695538C
+		public override string ToString(); // 0x00000001869553E0-0x0000000186955594
 	}
 
-	public struct Sphere3 // TypeDefIndex: 55942
+	public struct Sphere3 // TypeDefIndex: 58583
 	{
 		// Fields
-		private const float _4div3mulPi = 4.1887903f; // Metadata: 0x0207C146
+		private const float _4div3mulPi = 4.1887903f; // Metadata: 0x0234BDF6
 		public Vector3 Center; // 0x00
 		public float Radius; // 0x0C
 	
 		// Constructors
-		public Sphere3(ref Vector3 center, float radius) {
-			Center = default;
-			Radius = default;
-		} // 0x00000001836800E0-0x0000000183680100
-		public Sphere3(Vector3 center, float radius) {
-			Center = default;
-			Radius = default;
-		} // 0x00000001836800E0-0x0000000183680100
+		public Sphere3(ref Vector3 center, float radius); // 0x0000000184D8C1B0-0x0000000184D8C1D0
+		public Sphere3(Vector3 center, float radius); // 0x0000000184D8C1B0-0x0000000184D8C1D0
 	
 		// Methods
-		public static Sphere3 CreateFromPointsAAB(IEnumerable<Vector3> points) => default; // 0x00000001878EAEC4-0x00000001878EAFE8
-		public static Sphere3 CreateFromPointsAAB(IList<Vector3> points) => default; // 0x00000001878EADEC-0x00000001878EAEC4
-		public static Sphere3 CreateFromPointsAverage(IEnumerable<Vector3> points) => default; // 0x00000001878EAFE8-0x00000001878EB394
-		public static Sphere3 CreateFromPointsAverage(IList<Vector3> points) => default; // 0x00000001878EB394-0x00000001878EB588
-		public static bool CreateCircumscribed(Vector3 v0, Vector3 v1, Vector3 v2, Vector3 v3, out Sphere3 sphere) {
-			sphere = default;
-			return default;
-		} // 0x00000001878EAAC8-0x00000001878EADEC
-		public static bool CreateInscribed(Vector3 v0, Vector3 v1, Vector3 v2, Vector3 v3, out Sphere3 sphere) {
-			sphere = default;
-			return default;
-		} // 0x00000001878EB588-0x00000001878EBBB0
-		public float CalcArea() => default; // 0x0000000185FB64D0-0x0000000185FB64F0
-		public float CalcVolume() => default; // 0x0000000185FB64F0-0x0000000185FB6510
-		public Vector3 Eval(float theta, float phi) => default; // 0x0000000185FB6510-0x0000000185FB65B0
-		public float DistanceTo(Vector3 point) => default; // 0x00000001878EBBB0-0x00000001878EBBCC
-		public Vector3 Project(Vector3 point) => default; // 0x00000001878EBD28-0x00000001878EBD54
-		public bool Contains(ref Vector3 point) => default; // 0x00000001878EAA58-0x00000001878EAAC8
-		public bool Contains(Vector3 point) => default; // 0x00000001878EAA58-0x00000001878EAAC8
-		public void Include(ref Sphere3 sphere) {} // 0x00000001878EBBCC-0x00000001878EBD14
-		public void Include(Sphere3 sphere) {} // 0x00000001878EBD14-0x00000001878EBD28
-		public override string ToString() => default; // 0x00000001878EBD54-0x00000001878EBDEC
+		public static Sphere3 CreateFromPointsAAB(IEnumerable<Vector3> points); // 0x0000000186955B80-0x0000000186955CA4
+		public static Sphere3 CreateFromPointsAAB(IList<Vector3> points); // 0x0000000186955AA8-0x0000000186955B80
+		public static Sphere3 CreateFromPointsAverage(IEnumerable<Vector3> points); // 0x0000000186955CA4-0x0000000186956050
+		public static Sphere3 CreateFromPointsAverage(IList<Vector3> points); // 0x0000000186956050-0x0000000186956244
+		public static bool CreateCircumscribed(Vector3 v0, Vector3 v1, Vector3 v2, Vector3 v3, out Sphere3 sphere); // 0x0000000186955784-0x0000000186955AA8
+		public static bool CreateInscribed(Vector3 v0, Vector3 v1, Vector3 v2, Vector3 v3, out Sphere3 sphere); // 0x0000000186956244-0x000000018695686C
+		public float CalcArea(); // 0x0000000184D8C5B0-0x0000000184D8C5D0
+		public float CalcVolume(); // 0x0000000184D8C5D0-0x0000000184D8C5F0
+		public Vector3 Eval(float theta, float phi); // 0x0000000184D8C5F0-0x0000000184D8C690
+		public float DistanceTo(Vector3 point); // 0x000000018695686C-0x0000000186956888
+		public Vector3 Project(Vector3 point); // 0x00000001869569E4-0x0000000186956A10
+		public bool Contains(ref Vector3 point); // 0x0000000186955714-0x0000000186955784
+		public bool Contains(Vector3 point); // 0x0000000186955714-0x0000000186955784
+		public void Include(ref Sphere3 sphere); // 0x0000000186956888-0x00000001869569D0
+		public void Include(Sphere3 sphere); // 0x00000001869569D0-0x00000001869569E4
+		public override string ToString(); // 0x0000000186956A10-0x0000000186956AA8
 	}
 
-	public struct Triangle3 // TypeDefIndex: 55943
+	public struct Triangle3 // TypeDefIndex: 58584
 	{
 		// Fields
 		public Vector3 V0; // 0x00
@@ -3275,95 +2253,83 @@ namespace Dest.Math
 		public Vector3 V2; // 0x18
 	
 		// Properties
-		public Vector3 this[int index] { get => default; set {} } // 0x00000001878EEA78-0x00000001878EEAD8 0x00000001878EEAD8-0x00000001878EEB1C
+		public Vector3 this[int index] { get => default; set {} } // 0x0000000186959734-0x0000000186959794 0x0000000186959794-0x00000001869597D8
 	
 		// Constructors
-		public Triangle3(ref Vector3 v0, ref Vector3 v1, ref Vector3 v2) : this() {
-			V0 = default;
-			V1 = default;
-			V2 = default;
-		} // 0x0000000185FB65F0-0x0000000185FB6630
-		public Triangle3(Vector3 v0, Vector3 v1, Vector3 v2) : this() {
-			V0 = default;
-			V1 = default;
-			V2 = default;
-		} // 0x0000000185FB65B0-0x0000000185FB65F0
+		public Triangle3(ref Vector3 v0, ref Vector3 v1, ref Vector3 v2); // 0x0000000184D8C6D0-0x0000000184D8C710
+		public Triangle3(Vector3 v0, Vector3 v1, Vector3 v2); // 0x0000000184D8C690-0x0000000184D8C6D0
 	
 		// Methods
-		public Vector3 CalcEdge(int edgeIndex) => default; // 0x00000001878EE63C-0x00000001878EE700
-		public Vector3 CalcNormal() => default; // 0x00000001878EE700-0x00000001878EE7B4
-		public float CalcArea() => default; // 0x00000001878EE32C-0x00000001878EE3EC
-		public static float CalcArea(ref Vector3 v0, ref Vector3 v1, ref Vector3 v2) => default; // 0x00000001878EE26C-0x00000001878EE32C
-		public static float CalcArea(Vector3 v0, Vector3 v1, Vector3 v2) => default; // 0x00000001878EE26C-0x00000001878EE32C
-		public Vector3 CalcAnglesDeg() => default; // 0x00000001878EDDD8-0x00000001878EDF64
-		public static Vector3 CalcAnglesDeg(ref Vector3 v0, ref Vector3 v1, ref Vector3 v2) => default; // 0x00000001878EDC14-0x00000001878EDDA4
-		public static Vector3 CalcAnglesDeg(Vector3 v0, Vector3 v1, Vector3 v2) => default; // 0x00000001878EDDA4-0x00000001878EDDD8
-		public Vector3 CalcAnglesRad() => default; // 0x00000001878EE104-0x00000001878EE26C
-		public static Vector3 CalcAnglesRad(ref Vector3 v0, ref Vector3 v1, ref Vector3 v2) => default; // 0x00000001878EDF64-0x00000001878EE0D0
-		public static Vector3 CalcAnglesRad(Vector3 v0, Vector3 v1, Vector3 v2) => default; // 0x00000001878EE0D0-0x00000001878EE104
-		public Vector3 EvalBarycentric(float c0, float c1) => default; // 0x00000001878EE8A4-0x00000001878EE99C
-		public Vector3 EvalBarycentric(ref Vector3 baryCoords) => default; // 0x00000001878EE7B4-0x00000001878EE8A4
-		public Vector3 EvalBarycentric(Vector3 baryCoords) => default; // 0x00000001878EE7B4-0x00000001878EE8A4
-		public static void CalcBarycentricCoords(ref Vector3 point, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out Vector3 baryCoords) {
-			baryCoords = default;
-		} // 0x00000001878EE424-0x00000001878EE63C
-		public Vector3 CalcBarycentricCoords(ref Vector3 point) => default; // 0x00000001878EE3EC-0x00000001878EE424
-		public Vector3 CalcBarycentricCoords(Vector3 point) => default; // 0x00000001878EE3EC-0x00000001878EE424
-		public override string ToString() => default; // 0x00000001878EE99C-0x00000001878EEA78
+		public Vector3 CalcEdge(int edgeIndex); // 0x00000001869592F8-0x00000001869593BC
+		public Vector3 CalcNormal(); // 0x00000001869593BC-0x0000000186959470
+		public float CalcArea(); // 0x0000000186958FE8-0x00000001869590A8
+		public static float CalcArea(ref Vector3 v0, ref Vector3 v1, ref Vector3 v2); // 0x0000000186958F28-0x0000000186958FE8
+		public static float CalcArea(Vector3 v0, Vector3 v1, Vector3 v2); // 0x0000000186958F28-0x0000000186958FE8
+		public Vector3 CalcAnglesDeg(); // 0x0000000186958A94-0x0000000186958C20
+		public static Vector3 CalcAnglesDeg(ref Vector3 v0, ref Vector3 v1, ref Vector3 v2); // 0x00000001869588D0-0x0000000186958A60
+		public static Vector3 CalcAnglesDeg(Vector3 v0, Vector3 v1, Vector3 v2); // 0x0000000186958A60-0x0000000186958A94
+		public Vector3 CalcAnglesRad(); // 0x0000000186958DC0-0x0000000186958F28
+		public static Vector3 CalcAnglesRad(ref Vector3 v0, ref Vector3 v1, ref Vector3 v2); // 0x0000000186958C20-0x0000000186958D8C
+		public static Vector3 CalcAnglesRad(Vector3 v0, Vector3 v1, Vector3 v2); // 0x0000000186958D8C-0x0000000186958DC0
+		public Vector3 EvalBarycentric(float c0, float c1); // 0x0000000186959560-0x0000000186959658
+		public Vector3 EvalBarycentric(ref Vector3 baryCoords); // 0x0000000186959470-0x0000000186959560
+		public Vector3 EvalBarycentric(Vector3 baryCoords); // 0x0000000186959470-0x0000000186959560
+		public static void CalcBarycentricCoords(ref Vector3 point, ref Vector3 v0, ref Vector3 v1, ref Vector3 v2, out Vector3 baryCoords); // 0x00000001869590E0-0x00000001869592F8
+		public Vector3 CalcBarycentricCoords(ref Vector3 point); // 0x00000001869590A8-0x00000001869590E0
+		public Vector3 CalcBarycentricCoords(Vector3 point); // 0x00000001869590A8-0x00000001869590E0
+		public override string ToString(); // 0x0000000186959658-0x0000000186959734
 	}
 
-	public enum Orientations // TypeDefIndex: 55944
+	public enum Orientations // TypeDefIndex: 58585
 	{
 		CW = 0,
 		CCW = 1,
 		None = 2
 	}
 
-	internal class Query2 : Query // TypeDefIndex: 55945
+	internal class Query2 : Query // TypeDefIndex: 58586
 	{
 		// Fields
 		private static float Zero; // 0x00
 		private Vector2[] _vertices; // 0x10
 	
 		// Constructors
-		public Query2() {} // Dummy constructor
-		public Query2(Vector2[] vertices) {} // 0x0000000184096E30-0x0000000184096EF0
+		public Query2(Vector2[] vertices); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		public int ToLine(int i, int v0, int v1) => default; // 0x00000001878E8888-0x00000001878E88E0
-		public int ToLine(ref Vector2 test, int v0, int v1) => default; // 0x00000001878E8794-0x00000001878E8888
-		public int ToTriangle(int i, int v0, int v1, int v2) => default; // 0x00000001878E8988-0x00000001878E89E8
-		public int ToTriangle(ref Vector2 test, int v0, int v1, int v2) => default; // 0x00000001878E88E0-0x00000001878E8988
-		public int ToCircumcircle(int i, int v0, int v1, int v2) => default; // 0x00000001878E853C-0x00000001878E859C
-		public int ToCircumcircle(ref Vector2 test, int v0, int v1, int v2) => default; // 0x00000001878E859C-0x00000001878E8794
-		public float Dot(float x0, float y0, float x1, float y1) => default; // 0x0000000185FB6220-0x0000000185FB6240
-		public float Det2(float x0, float y0, float x1, float y1) => default; // 0x0000000185FB6140-0x0000000185FB6160
-		public float Det3(float x0, float y0, float z0, float x1, float y1, float z1, float x2, float y2, float z2) => default; // 0x0000000185FB6160-0x0000000185FB6220
+		public int ToLine(int i, int v0, int v1); // 0x0000000186953544-0x000000018695359C
+		public int ToLine(ref Vector2 test, int v0, int v1); // 0x0000000186953450-0x0000000186953544
+		public int ToTriangle(int i, int v0, int v1, int v2); // 0x0000000186953644-0x00000001869536A4
+		public int ToTriangle(ref Vector2 test, int v0, int v1, int v2); // 0x000000018695359C-0x0000000186953644
+		public int ToCircumcircle(int i, int v0, int v1, int v2); // 0x00000001869531F8-0x0000000186953258
+		public int ToCircumcircle(ref Vector2 test, int v0, int v1, int v2); // 0x0000000186953258-0x0000000186953450
+		public float Dot(float x0, float y0, float x1, float y1); // 0x0000000184D8C300-0x0000000184D8C320
+		public float Det2(float x0, float y0, float x1, float y1); // 0x0000000184D8C220-0x0000000184D8C240
+		public float Det3(float x0, float y0, float z0, float x1, float y1, float z1, float x2, float y2, float z2); // 0x0000000184D8C240-0x0000000184D8C300
 	}
 
-	internal class Query3 : Query // TypeDefIndex: 55946
+	internal class Query3 : Query // TypeDefIndex: 58587
 	{
 		// Fields
 		private static float Zero; // 0x00
 		private Vector3[] _vertices; // 0x10
 	
 		// Constructors
-		public Query3() {} // Dummy constructor
-		public Query3(Vector3[] vertices) {} // 0x0000000184096E30-0x0000000184096EF0
+		public Query3(Vector3[] vertices); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		public int ToPlane(int i, int v0, int v1, int v2) => default; // 0x00000001878E8DE4-0x00000001878E8E44
-		public int ToPlane(ref Vector3 test, int v0, int v1, int v2) => default; // 0x00000001878E8E44-0x00000001878E9000
-		public int ToTetrahedron(int i, int v0, int v1, int v2, int v3) => default; // 0x00000001878E9000-0x00000001878E9068
-		public int ToTetrahedron(ref Vector3 test, int v0, int v1, int v2, int v3) => default; // 0x00000001878E9068-0x00000001878E9154
-		public int ToCircumsphere(int i, int v0, int v1, int v2, int v3) => default; // 0x00000001878E8D7C-0x00000001878E8DE4
-		public int ToCircumsphere(ref Vector3 test, int v0, int v1, int v2, int v3) => default; // 0x00000001878E89E8-0x00000001878E8D7C
-		public float Dot(float x0, float y0, float z0, float x1, float y1, float z1) => default; // 0x0000000185FB6460-0x0000000185FB6480
-		public float Det3(float x0, float y0, float z0, float x1, float y1, float z1, float x2, float y2, float z2) => default; // 0x0000000185FB6160-0x0000000185FB6220
-		public float Det4(float x0, float y0, float z0, float w0, float x1, float y1, float z1, float w1, float x2, float y2, float z2, float w2, float x3, float y3, float z3, float w3) => default; // 0x0000000185FB6240-0x0000000185FB6460
+		public int ToPlane(int i, int v0, int v1, int v2); // 0x0000000186953AA0-0x0000000186953B00
+		public int ToPlane(ref Vector3 test, int v0, int v1, int v2); // 0x0000000186953B00-0x0000000186953CBC
+		public int ToTetrahedron(int i, int v0, int v1, int v2, int v3); // 0x0000000186953CBC-0x0000000186953D24
+		public int ToTetrahedron(ref Vector3 test, int v0, int v1, int v2, int v3); // 0x0000000186953D24-0x0000000186953E10
+		public int ToCircumsphere(int i, int v0, int v1, int v2, int v3); // 0x0000000186953A38-0x0000000186953AA0
+		public int ToCircumsphere(ref Vector3 test, int v0, int v1, int v2, int v3); // 0x00000001869536A4-0x0000000186953A38
+		public float Dot(float x0, float y0, float z0, float x1, float y1, float z1); // 0x0000000184D8C540-0x0000000184D8C560
+		public float Det3(float x0, float y0, float z0, float x1, float y1, float z1, float x2, float y2, float z2); // 0x0000000184D8C240-0x0000000184D8C300
+		public float Det4(float x0, float y0, float z0, float w0, float x1, float y1, float z1, float w1, float x2, float y2, float z2, float w2, float x3, float y3, float z3, float w3); // 0x0000000184D8C320-0x0000000184D8C540
 	}
 
-	internal enum QueryTypes // TypeDefIndex: 55947
+	internal enum QueryTypes // TypeDefIndex: 58588
 	{
 		Int64 = 0,
 		Integer = 1,
@@ -3372,85 +2338,85 @@ namespace Dest.Math
 		Filtered = 4
 	}
 
-	internal class Query // TypeDefIndex: 55948
+	internal class Query // TypeDefIndex: 58589
 	{
 		// Constructors
-		protected Query() {} // 0x0000000185492010-0x0000000185492020
+		protected Query(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static bool Sort(ref int v0, ref int v1) => default; // 0x00000001878E9354-0x00000001878E9368
-		public static bool Sort(ref int v0, ref int v1, ref int v2) => default; // 0x00000001878E9154-0x00000001878E91C4
-		public static bool Sort(ref int v0, ref int v1, ref int v2, ref int v3) => default; // 0x00000001878E91C4-0x00000001878E9354
+		public static bool Sort(ref int v0, ref int v1); // 0x0000000186954010-0x0000000186954024
+		public static bool Sort(ref int v0, ref int v1, ref int v2); // 0x0000000186953E10-0x0000000186953E80
+		public static bool Sort(ref int v0, ref int v1, ref int v2, ref int v3); // 0x0000000186953E80-0x0000000186954010
 	}
 
-	public class CatmullRomSpline3 : SplineBase // TypeDefIndex: 55949
-	{
-		// Properties
-		public override SplineTypes SplineType { get => default; set {} } // 0x0000000181C9AC80-0x0000000181C9AC90 0x00000001878DFEDC-0x00000001878DFF4C
-	
-		// Constructors
-		public CatmullRomSpline3() {} // 0x00000001878DFED4-0x00000001878DFEDC
-	
-		// Methods
-		public static CatmullRomSpline3 Create() => default; // 0x00000001878DF388-0x00000001878DF404
-		public static CatmullRomSpline3 Create(IList<Vector3> points, SplineTypes type) => default; // 0x00000001878DF404-0x00000001878DF614
-		private void UpdateSegment(int index) {} // 0x00000001878DF9F0-0x00000001878DFED4
-		private void UpdateAdjacentSegments(int vertexIndex) {} // 0x00000001878DF8C0-0x00000001878DF9F0
-		public override void AddVertexFirst(Vector3 position) {} // 0x00000001878DF25C-0x00000001878DF290
-		public override void AddVertexLast(Vector3 position) {} // 0x00000001878DF290-0x00000001878DF33C
-		public override void RemoveVertex(int index) {} // 0x00000001878DF7D0-0x00000001878DF838
-		public override void Clear() {} // 0x00000001878DF33C-0x00000001878DF388
-		public override void InsertBefore(int vertexIndex, Vector3 position) {} // 0x00000001878DF730-0x00000001878DF7D0
-		public override void InsertAfter(int vertexIndex, Vector3 position) {} // 0x00000001878DF68C-0x00000001878DF730
-		public override Vector3 GetVertex(int vertexIndex) => default; // 0x00000001878DF614-0x00000001878DF68C
-		public override void SetVertex(int vertexIndex, Vector3 position) {} // 0x00000001878DF838-0x00000001878DF8C0
-	}
-
-	public class CubicSpline3 : SplineBase // TypeDefIndex: 55950
+	public class CatmullRomSpline3 : SplineBase // TypeDefIndex: 58590
 	{
 		// Properties
-		public override SplineTypes SplineType { get => default; set {} } // 0x0000000181C9AC80-0x0000000181C9AC90 0x00000001878E2B88-0x00000001878E2B9C
+		public override SplineTypes SplineType { get; set; } // 0x00000001811F2A90-0x00000001811F2AA0 0x000000018694AB98-0x000000018694AC08
 	
 		// Constructors
-		public CubicSpline3() {} // 0x00000001878DFED4-0x00000001878DFEDC
+		public CatmullRomSpline3(); // 0x000000018694AB90-0x000000018694AB98
 	
 		// Methods
-		public static CubicSpline3 Create() => default; // 0x00000001878E2684-0x00000001878E2700
-		public static CubicSpline3 Create(IList<Vector3> points, SplineTypes type) => default; // 0x00000001878E2700-0x00000001878E28E8
-		private void BuildSpline() {} // 0x00000001878E1028-0x00000001878E1090
-		private void CreateOpenedSpline() {} // 0x00000001878E1EA0-0x00000001878E2684
-		private void CreateClosedSpline() {} // 0x00000001878E10DC-0x00000001878E1EA0
-		public override void AddVertexFirst(Vector3 position) {} // 0x00000001878E0F04-0x00000001878E0F98
-		public override void AddVertexLast(Vector3 position) {} // 0x00000001878E0F98-0x00000001878E1028
-		public override void RemoveVertex(int index) {} // 0x00000001878E2AA0-0x00000001878E2B04
-		public override void Clear() {} // 0x00000001878E1090-0x00000001878E10DC
-		public override void InsertBefore(int vertexIndex, Vector3 position) {} // 0x00000001878E2A00-0x00000001878E2AA0
-		public override void InsertAfter(int vertexIndex, Vector3 position) {} // 0x00000001878E2960-0x00000001878E2A00
-		public override Vector3 GetVertex(int vertexIndex) => default; // 0x00000001878E28E8-0x00000001878E2960
-		public override void SetVertex(int vertexIndex, Vector3 position) {} // 0x00000001878E2B04-0x00000001878E2B88
+		public static CatmullRomSpline3 Create(); // 0x000000018694A044-0x000000018694A0C0
+		public static CatmullRomSpline3 Create(IList<Vector3> points, SplineTypes type); // 0x000000018694A0C0-0x000000018694A2D0
+		private void UpdateSegment(int index); // 0x000000018694A6AC-0x000000018694AB90
+		private void UpdateAdjacentSegments(int vertexIndex); // 0x000000018694A57C-0x000000018694A6AC
+		public override void AddVertexFirst(Vector3 position); // 0x0000000186949F18-0x0000000186949F4C
+		public override void AddVertexLast(Vector3 position); // 0x0000000186949F4C-0x0000000186949FF8
+		public override void RemoveVertex(int index); // 0x000000018694A48C-0x000000018694A4F4
+		public override void Clear(); // 0x0000000186949FF8-0x000000018694A044
+		public override void InsertBefore(int vertexIndex, Vector3 position); // 0x000000018694A3EC-0x000000018694A48C
+		public override void InsertAfter(int vertexIndex, Vector3 position); // 0x000000018694A348-0x000000018694A3EC
+		public override Vector3 GetVertex(int vertexIndex); // 0x000000018694A2D0-0x000000018694A348
+		public override void SetVertex(int vertexIndex, Vector3 position); // 0x000000018694A4F4-0x000000018694A57C
 	}
 
-	public enum SplineTypes // TypeDefIndex: 55951
+	public class CubicSpline3 : SplineBase // TypeDefIndex: 58591
+	{
+		// Properties
+		public override SplineTypes SplineType { get; set; } // 0x00000001811F2A90-0x00000001811F2AA0 0x000000018694D844-0x000000018694D858
+	
+		// Constructors
+		public CubicSpline3(); // 0x000000018694AB90-0x000000018694AB98
+	
+		// Methods
+		public static CubicSpline3 Create(); // 0x000000018694D340-0x000000018694D3BC
+		public static CubicSpline3 Create(IList<Vector3> points, SplineTypes type); // 0x000000018694D3BC-0x000000018694D5A4
+		private void BuildSpline(); // 0x000000018694BCE4-0x000000018694BD4C
+		private void CreateOpenedSpline(); // 0x000000018694CB5C-0x000000018694D340
+		private void CreateClosedSpline(); // 0x000000018694BD98-0x000000018694CB5C
+		public override void AddVertexFirst(Vector3 position); // 0x000000018694BBC0-0x000000018694BC54
+		public override void AddVertexLast(Vector3 position); // 0x000000018694BC54-0x000000018694BCE4
+		public override void RemoveVertex(int index); // 0x000000018694D75C-0x000000018694D7C0
+		public override void Clear(); // 0x000000018694BD4C-0x000000018694BD98
+		public override void InsertBefore(int vertexIndex, Vector3 position); // 0x000000018694D6BC-0x000000018694D75C
+		public override void InsertAfter(int vertexIndex, Vector3 position); // 0x000000018694D61C-0x000000018694D6BC
+		public override Vector3 GetVertex(int vertexIndex); // 0x000000018694D5A4-0x000000018694D61C
+		public override void SetVertex(int vertexIndex, Vector3 position); // 0x000000018694D7C0-0x000000018694D844
+	}
+
+	public enum SplineTypes // TypeDefIndex: 58592
 	{
 		Open = 0,
 		Closed = 1
 	}
 
-	public enum SplinePlaneTypes // TypeDefIndex: 55952
+	public enum SplinePlaneTypes // TypeDefIndex: 58593
 	{
 		XZ = 0,
 		XY = 1,
 		YZ = 2
 	}
 
-	public struct PositionTangent // TypeDefIndex: 55953
+	public struct PositionTangent // TypeDefIndex: 58594
 	{
 		// Fields
 		public Vector3 Position; // 0x00
 		public Vector3 Tangent; // 0x0C
 	}
 
-	public struct CurveFrame // TypeDefIndex: 55954
+	public struct CurveFrame // TypeDefIndex: 58595
 	{
 		// Fields
 		public Vector3 Position; // 0x00
@@ -3459,25 +2425,30 @@ namespace Dest.Math
 		public Vector3 Binormal; // 0x24
 	}
 
-	public abstract class SplineBase : MonoBehaviour // TypeDefIndex: 55957
+	public abstract class SplineBase : MonoBehaviour // TypeDefIndex: 58598
 	{
 		// Fields
 		protected ArcLengthParametrization _parametrization; // 0x18
+		[SerializeField]
 		protected List<ItemData> _data; // 0x20
+		[SerializeField]
 		protected SplineTypes _type; // 0x28
+		[SerializeField]
 		protected bool _recalcSegmentsLength; // 0x2C
+		[SerializeField]
 		protected UnityEngine.Color _renderColor; // 0x30
+		[SerializeField]
 		protected SplinePlaneTypes _creationPlane; // 0x40
 	
 		// Properties
-		protected int SegmentCount { get; }
-		public int VertexCount { get; }
-		public bool Valid { get; }
-		public abstract SplineTypes SplineType { get; set; } // 0x00000001878ECC0C-0x00000001878ECCC0
+		protected int SegmentCount { get; } // 0x00000001869587FC-0x000000018695884C 
+		public int VertexCount { get; } // 0x0000000186958890-0x00000001869588D0 
+		public bool Valid { get; } // 0x000000018695884C-0x0000000186958890 
+		public abstract SplineTypes SplineType { get; set; }
 	
 		// Nested types
 		[Serializable]
-		protected class ItemData // TypeDefIndex: 55955
+		protected class ItemData // TypeDefIndex: 58596
 		{
 			// Fields
 			public Vector3 Position; // 0x10
@@ -3487,29 +2458,29 @@ namespace Dest.Math
 			public Vector3 D; // 0x40
 			public float Length; // 0x4C
 			public float AccumulatedLength; // 0x50
-			private const int SegmentCount = 10; // Metadata: 0x0207C157
-			private const int SegmentCountPlus1 = 11; // Metadata: 0x0207C158
-			private const float DeltaTime = 0.1f; // Metadata: 0x0207C159
+			private const int SegmentCount = 10; // Metadata: 0x0234BE07
+			private const int SegmentCountPlus1 = 11; // Metadata: 0x0234BE08
+			private const float DeltaTime = 0.1f; // Metadata: 0x0234BE09
 			public Vector3[] RenderPoints; // 0x58
 	
 			// Constructors
-			public ItemData() {}
+			public ItemData(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			public bool EnsureRenderPointsValidity() => default; // 0x00000001878EDB40-0x00000001878EDB90
-			public void UpdateRenderPoints() {} // 0x00000001878EDBD4-0x00000001878EDC14
-			public Vector3 EvalPosition(float t) => default; // 0x00000001878EDB90-0x00000001878EDBD4
-			public Vector3 EvalFirstDerivative(float t) => default;
-			public Vector3 EvalSecondDerivative(float t) => default;
-			public Vector3 EvalThirdDerivative(float t) => default; // 0x00000001878EBDEC-0x00000001878EBDF4
-			public float EvalSpeed(float t) => default; // 0x00000001878EDAA8-0x00000001878EDB40
-			public Vector3 EvalTangent(float t) => default; // 0x00000001878ED310-0x00000001878ED3A0
-			public float EvalLength() => default; // 0x00000001878ED940-0x00000001878ED9D4
-			public float EvalLength(float t0, float t1) => default; // 0x00000001878ED9D4-0x00000001878EDAA8
-			public float ProcessLength(float currentLength) => default;
+			public bool EnsureRenderPointsValidity(); // 0x000000018694ED80-0x000000018694EDE0
+			public void UpdateRenderPoints(); // 0x000000018694F47C-0x000000018694F4F4
+			public Vector3 EvalPosition(float t); // 0x000000018694F028-0x000000018694F148
+			public Vector3 EvalFirstDerivative(float t); // 0x000000018694EDE0-0x000000018694EED8
+			public Vector3 EvalSecondDerivative(float t); // 0x000000018694F148-0x000000018694F1EC
+			public Vector3 EvalThirdDerivative(float t); // 0x000000018694F400-0x000000018694F448
+			public float EvalSpeed(float t); // 0x000000018694F1EC-0x000000018694F2E8
+			public Vector3 EvalTangent(float t); // 0x000000018694F2E8-0x000000018694F400
+			public float EvalLength(); // 0x000000018694EED8-0x000000018694EF74
+			public float EvalLength(float t0, float t1); // 0x000000018694EF74-0x000000018694F028
+			public float ProcessLength(float currentLength); // 0x000000018694F448-0x000000018694F47C
 		}
 	
-		protected class ArcLengthParametrization // TypeDefIndex: 55956
+		protected class ArcLengthParametrization // TypeDefIndex: 58597
 		{
 			// Fields
 			public float[] sSample; // 0x10
@@ -3518,75 +2489,56 @@ namespace Dest.Math
 			public float L; // 0x28
 	
 			// Constructors
-			public ArcLengthParametrization() {}
+			public ArcLengthParametrization(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			public float GetApproximateTimeParameter(float s) => default;
+			public float GetApproximateTimeParameter(float s); // 0x0000000186949E48-0x0000000186949F18
 		}
 	
 		// Constructors
-		protected SplineBase() {} // 0x00000001878ECA70-0x00000001878ECB58
+		protected SplineBase(); // 0x0000000186958764-0x00000001869587FC
 	
 		// Methods
-		private void Awake() {} // 0x00000001878ECE50-0x00000001878ECF04
-		protected void GetSegmentIndexAndTime(float time, out int segmentIndex, out float segmentTime) {
-			segmentIndex = default;
-			segmentTime = default;
-		} // 0x00000001878ECB58-0x00000001878ECC0C
-		protected void PrepareForRuntime() {} // 0x00000001878ECF04-0x00000001878ECFB8
-		protected void RecalcSegmentsLength() {} // 0x00000001878EC994-0x00000001878ECA70
-		public abstract void AddVertexFirst(Vector3 position); // 0x00000001878EC3E8-0x00000001878EC610
-		public abstract void AddVertexLast(Vector3 position); // 0x00000001878EC024-0x00000001878EC1A8
-		public abstract void RemoveVertex(int index); // 0x00000001878ED170-0x00000001878ED310
-		public abstract void Clear(); // 0x00000001878EC610-0x00000001878EC6D8
-		public abstract void InsertBefore(int vertexIndex, Vector3 position); // 0x00000001878ECD88-0x00000001878ECE50
-		public abstract void InsertAfter(int vertexIndex, Vector3 position); // 0x00000001878EC7A0-0x00000001878EC8A0
-		public abstract Vector3 GetVertex(int vertexIndex); // 0x00000001878EC6D8-0x00000001878EC7A0
-		public abstract void SetVertex(int vertexIndex, Vector3 position); // 0x00000001878ECCC0-0x00000001878ECD88
-		public Vector3 EvalPosition(float time) => default; // 0x00000001878EC8A0-0x00000001878EC994
-		public Vector3 EvalTangent(float time) => default; // 0x00000001878EC1A8-0x00000001878EC3E8
-		public PositionTangent EvalPositionTangent(float time) => default; // 0x00000001878EBE88-0x00000001878EC024
-		public void EvalPosition(float time, out Vector3 position) {
-			position = default;
-		} // 0x00000001878ECFB8-0x00000001878ED170
-		public void EvalTangent(float time, out Vector3 tangent) {
-			tangent = default;
-		} // 0x00000001878EBDF4-0x00000001878EBE88
-		public void EvalPositionTangent(float time, out PositionTangent positionTangent) {
-			positionTangent = default;
-		} // 0x00000001878ED3C8-0x00000001878ED690
-		public void EvalFrame(float time, out CurveFrame frame) {
-			frame = default;
-		} // 0x00000001878ED3A0-0x00000001878ED3C8
-		public float EvalCurvature(float time) => default; // 0x00000001878ED690-0x00000001878ED940
-		public float EvalTorsion(float time) => default; // 0x00000001878E40C4-0x00000001878E4124
-		public Vector3 EvalPositionParametrized(float length) => default; // 0x00000001878E47C0-0x00000001878E4838
-		public Vector3 EvalTangentParametrized(float length) => default; // 0x00000001878E436C-0x00000001878E448C
-		public PositionTangent EvalPositionTangentParametrized(float length) => default; // 0x00000001878E4124-0x00000001878E421C
-		public void EvalPositionParametrized(float length, out Vector3 position) {
-			position = default;
-		} // 0x00000001878E448C-0x00000001878E4530
-		public void EvalTangentParametrized(float length, out Vector3 tangent) {
-			tangent = default;
-		} // 0x00000001878E4744-0x00000001878E478C
-		public void EvalPositionTangentParametrized(float length, out PositionTangent positionTangent) {
-			positionTangent = default;
-		} // 0x00000001878E4530-0x00000001878E462C
-		public void EvalFrameParametrized(float length, out CurveFrame frame) {
-			frame = default;
-		} // 0x00000001878E462C-0x00000001878E4744
-		public float EvalCurvatureParametrized(float length) => default; // 0x00000001878E421C-0x00000001878E42B8
-		public float EvalTorsionParametrized(float length) => default; // 0x00000001878E42B8-0x00000001878E436C
-		public float CalcTotalLength() => default; // 0x00000001878E478C-0x00000001878E47C0
-		public float LengthToTime(float length, int iterations, float tolerance) => default; // 0x0000000185492010-0x0000000185492020
-		public float LengthToTime(float length) => default; // 0x00000001878DF18C-0x00000001878DF25C
-		public float ParametrizeByArcLength(int pointCount) => default; // 0x0000000185492010-0x0000000185492020
+		private void Awake(); // 0x0000000186956AA8-0x0000000186956AB0
+		protected void GetSegmentIndexAndTime(float time, out int segmentIndex, out float segmentTime); // 0x0000000186957FCC-0x000000018695805C
+		protected void PrepareForRuntime(); // 0x00000001869585FC-0x0000000186958690
+		protected void RecalcSegmentsLength(); // 0x0000000186958690-0x0000000186958764
+		public abstract void AddVertexFirst(Vector3 position);
+		public abstract void AddVertexLast(Vector3 position);
+		public abstract void RemoveVertex(int index);
+		public abstract void Clear();
+		public abstract void InsertBefore(int vertexIndex, Vector3 position);
+		public abstract void InsertAfter(int vertexIndex, Vector3 position);
+		public abstract Vector3 GetVertex(int vertexIndex);
+		public abstract void SetVertex(int vertexIndex, Vector3 position);
+		public Vector3 EvalPosition(float time); // 0x00000001869578C8-0x000000018695797C
+		public Vector3 EvalTangent(float time); // 0x0000000186957B0C-0x0000000186957BC0
+		public PositionTangent EvalPositionTangent(float time); // 0x000000018695772C-0x0000000186957814
+		public void EvalPosition(float time, out Vector3 position); // 0x0000000186957814-0x00000001869578C8
+		public void EvalTangent(float time, out Vector3 tangent); // 0x0000000186957BC0-0x0000000186957C74
+		public void EvalPositionTangent(float time, out PositionTangent positionTangent); // 0x0000000186957650-0x000000018695772C
+		public void EvalFrame(float time, out CurveFrame frame); // 0x00000001869570A4-0x00000001869572CC
+		public float EvalCurvature(float time); // 0x0000000186956CE0-0x0000000186956E64
+		public float EvalTorsion(float time); // 0x0000000186957E2C-0x0000000186957FCC
+		public Vector3 EvalPositionParametrized(float length); // 0x00000001869572CC-0x0000000186957394
+		public Vector3 EvalTangentParametrized(float length); // 0x0000000186957A44-0x0000000186957B0C
+		public PositionTangent EvalPositionTangentParametrized(float length); // 0x000000018695745C-0x000000018695755C
+		public void EvalPositionParametrized(float length, out Vector3 position); // 0x0000000186957394-0x000000018695745C
+		public void EvalTangentParametrized(float length, out Vector3 tangent); // 0x000000018695797C-0x0000000186957A44
+		public void EvalPositionTangentParametrized(float length, out PositionTangent positionTangent); // 0x000000018695755C-0x0000000186957650
+		public void EvalFrameParametrized(float length, out CurveFrame frame); // 0x0000000186956E64-0x00000001869570A4
+		public float EvalCurvatureParametrized(float length); // 0x0000000186956B44-0x0000000186956CE0
+		public float EvalTorsionParametrized(float length); // 0x0000000186957C74-0x0000000186957E2C
+		public float CalcTotalLength(); // 0x0000000186956AB0-0x0000000186956B44
+		public float LengthToTime(float length, int iterations, float tolerance); // 0x0000000186958084-0x000000018695834C
+		public float LengthToTime(float length); // 0x000000018695805C-0x0000000186958084
+		public float ParametrizeByArcLength(int pointCount); // 0x000000018695834C-0x00000001869585FC
 	}
 
-	public static class PointsFilter // TypeDefIndex: 55959
+	public static class PointsFilter // TypeDefIndex: 58600
 	{
 		// Nested types
-		private class Data // TypeDefIndex: 55958
+		private class Data // TypeDefIndex: 58599
 		{
 			// Fields
 			private Vector3[] _points; // 0x10
@@ -3601,25 +2553,20 @@ namespace Dest.Math
 			private Rand _rand; // 0x50
 	
 			// Constructors
-			public Data() {} // Dummy constructor
-			public Data(Vector3[] points, float radius, Rand rand, AAB3 aab) {} // 0x00000001878E6D00-0x00000001878E6DB4
+			public Data(Vector3[] points, float radius, Rand rand, AAB3 aab); // 0x000000018694E0A8-0x000000018694E214
 	
 			// Methods
-			private static int BinarySearch(List<int> array, int value) => default; // 0x00000001878E33EC-0x00000001878E3558
-			private static int BinarySearch(int[] array, int length, int value) => default; // 0x00000001878E2C14-0x00000001878E2CD4
-			private void CalcGridIndices(ref Vector3 point, out int i, out int j, out int k) {
-				i = default;
-				j = default;
-				k = default;
-			} // 0x00000001878E2B9C-0x00000001878E2C14
-			public List<int> Filter() => default; // 0x00000001878E2CD4-0x00000001878E2D1C
+			private static int BinarySearch(List<int> array, int value); // 0x000000018694D8D0-0x000000018694D990
+			private static int BinarySearch(int[] array, int length, int value); // 0x000000018694D858-0x000000018694D8D0
+			private void CalcGridIndices(ref Vector3 point, out int i, out int j, out int k); // 0x000000018694D990-0x000000018694D9D8
+			public List<int> Filter(); // 0x000000018694D9D8-0x000000018694E0A8
 		}
 	
 		// Methods
-		public static List<int> DistanceFilter(Vector3[] points, AAB3 pointsAAB, float radius, Rand rand) => default; // 0x00000001878E2D1C-0x00000001878E33EC
+		public static List<int> DistanceFilter(Vector3[] points, AAB3 pointsAAB, float radius, Rand rand); // 0x00000001869519BC-0x0000000186951A70
 	}
 
-	public class PoissonDiskSampler // TypeDefIndex: 55961
+	public class PoissonDiskSampler // TypeDefIndex: 58602
 	{
 		// Fields
 		private static readonly float one_div_sqrtTwo; // 0x00
@@ -3639,30 +2586,27 @@ namespace Dest.Math
 		private int _cellsY; // 0x60
 		public PointDelegate DistanceFilter; // 0x68
 		public int PointsPerStep; // 0x70
+		[CompilerGenerated]
 		private int _MaxPoints_k__BackingField; // 0x74
 	
 		// Properties
-		public int MaxPoints { get; set; } // 0x00000001878E70DC-0x00000001878E7108 0x00000001878E7108-0x00000001878E71A0
+		public int MaxPoints { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D868B0-0x0000000184D868C0 0x0000000184D868E0-0x0000000184D868F0
 	
 		// Nested types
-		public delegate float PointDelegate(ref Vector2 point); // TypeDefIndex: 55960; 0x0000000185FB0840-0x0000000185FB0850
+		public delegate float PointDelegate(ref Vector2 point); // TypeDefIndex: 58601; 0x00000001814E2060-0x00000001814E2070
 	
 		// Constructors
-		public PoissonDiskSampler() {} // Dummy constructor
-		static PoissonDiskSampler() {} // 0x00000001878E6DB4-0x00000001878E70DC
-		public PoissonDiskSampler(Rand rand, Vector2 minCorner, Vector2 maxCorner, float minDistanceOuter, float minDistanceInner = 1f /* Metadata: 0x0207C15D */) {} // 0x00000001878E71A0-0x00000001878E73A4
+		static PoissonDiskSampler(); // 0x0000000186952060-0x00000001869520B0
+		public PoissonDiskSampler(Rand rand, Vector2 minCorner, Vector2 maxCorner, float minDistanceOuter, float minDistanceInner = 1f /* Metadata: 0x0234BE0D */); // 0x00000001869520B0-0x00000001869522F8
 	
 		// Methods
-		private void CalcGridIndices(ref Vector2 point, out int i, out int j) {
-			i = default;
-			j = default;
-		} // 0x00000001878E6C2C-0x00000001878E6D00
-		private void InsertIntoGrid(ref Vector2 point, int index) {} // 0x00000001817C2F70-0x00000001817C2F80
-		private bool AddPoint(ref Vector2 center) => default; // 0x00000001878E6BAC-0x00000001878E6C2C
-		public List<Vector2> Sample() => default; // 0x000000018720A634-0x000000018720A660
+		private void CalcGridIndices(ref Vector2 point, out int i, out int j); // 0x0000000186951D98-0x0000000186951DC4
+		private void InsertIntoGrid(ref Vector2 point, int index); // 0x0000000186951DC4-0x0000000186951E5C
+		private bool AddPoint(ref Vector2 center); // 0x0000000186951A70-0x0000000186951D98
+		public List<Vector2> Sample(); // 0x0000000186951E5C-0x0000000186952060
 	}
 
-	public class WeightedSampler // TypeDefIndex: 55962
+	public class WeightedSampler // TypeDefIndex: 58603
 	{
 		// Fields
 		protected float[] _accum; // 0x10
@@ -3670,65 +2614,61 @@ namespace Dest.Math
 		protected Rand _rand; // 0x20
 	
 		// Constructors
-		public WeightedSampler() {} // Dummy constructor
-		protected WeightedSampler(Rand rand) {} // 0x000000018646EE40-0x000000018646EE50
-		public WeightedSampler(float[] weights) {} // 0x00000001878EECF0-0x00000001878EED60
-		public WeightedSampler(float[] weights, Rand rand) {} // 0x00000001878EECC4-0x00000001878EECF0
+		protected WeightedSampler(Rand rand); // 0x0000000185390F40-0x0000000185390F50
+		public WeightedSampler(float[] weights); // 0x00000001869599AC-0x0000000186959A1C
+		public WeightedSampler(float[] weights, Rand rand); // 0x0000000186959980-0x00000001869599AC
 	
 		// Methods
-		protected static int BinarySearch(float[] array, float value) => default; // 0x00000001878EEB1C-0x00000001878EEB88
-		protected void Init(float[] weights) {} // 0x00000001878EEB88-0x00000001878EEC84
-		public int SampleIndex() => default; // 0x00000001878EEC84-0x00000001878EECC4
+		protected static int BinarySearch(float[] array, float value); // 0x00000001869597D8-0x0000000186959844
+		protected void Init(float[] weights); // 0x0000000186959844-0x0000000186959940
+		public int SampleIndex(); // 0x0000000186959940-0x0000000186959980
 	}
 
-	public class TrianglesSamplerBase : WeightedSampler // TypeDefIndex: 55963
+	public class TrianglesSamplerBase : WeightedSampler // TypeDefIndex: 58604
 	{
 		// Fields
 		protected Vector3[] _vertices; // 0x28
 	
 		// Constructors
-		public TrianglesSamplerBase() {} // Dummy constructor
-		protected TrianglesSamplerBase(Rand rand) {} // 0x000000018646EE40-0x000000018646EE50
+		protected TrianglesSamplerBase(Rand rand); // 0x0000000185390F40-0x0000000185390F50
 	
 		// Methods
-		protected float CalclTriangleArea(ref Vector3 e0, ref Vector3 e1) => default; // 0x0000000185FB6630-0x0000000185FB66D0
+		protected float CalclTriangleArea(ref Vector3 e0, ref Vector3 e1); // 0x0000000184D8C710-0x0000000184D8C7B0
 	}
 
-	public class IndexedTrianglesSampler : TrianglesSamplerBase // TypeDefIndex: 55964
+	public class IndexedTrianglesSampler : TrianglesSamplerBase // TypeDefIndex: 58605
 	{
 		// Fields
 		protected int[] _indices; // 0x30
 	
 		// Constructors
-		public IndexedTrianglesSampler() {} // Dummy constructor
-		public IndexedTrianglesSampler(Vector3[] vertices, int[] indices) {} // 0x00000001878E3EC4-0x00000001878E3F54
-		public IndexedTrianglesSampler(Vector3[] vertices, int[] indices, Rand rand) {} // 0x00000001878E3F54-0x00000001878E3FAC
-		public IndexedTrianglesSampler(Mesh mesh) {} // 0x00000001878E3FAC-0x00000001878E4054
-		public IndexedTrianglesSampler(Mesh mesh, Rand rand) {} // 0x00000001878E4054-0x00000001878E40C4
+		public IndexedTrianglesSampler(Vector3[] vertices, int[] indices); // 0x000000018694EB80-0x000000018694EC10
+		public IndexedTrianglesSampler(Vector3[] vertices, int[] indices, Rand rand); // 0x000000018694EC10-0x000000018694EC68
+		public IndexedTrianglesSampler(Mesh mesh); // 0x000000018694EC68-0x000000018694ED10
+		public IndexedTrianglesSampler(Mesh mesh, Rand rand); // 0x000000018694ED10-0x000000018694ED80
 	
 		// Methods
-		protected void Init() {} // 0x00000001878E3558-0x00000001878E3918
-		public Vector3 Sample() => default; // 0x00000001878E3DB8-0x00000001878E3EC4
-		public Vector3[] SampleArray(int count) => default; // 0x00000001878E3C50-0x00000001878E3DB8
-		public Vector3[] SampleArray(int count, Vector2[] uvs, Texture2D sampleMap, float min = 0f /* Metadata: 0x0207C161 */, float max = 1f /* Metadata: 0x0207C165 */) => default; // 0x00000001878E3918-0x00000001878E3C50
+		protected void Init(); // 0x000000018694E214-0x000000018694E5D4
+		public Vector3 Sample(); // 0x000000018694EA74-0x000000018694EB80
+		public Vector3[] SampleArray(int count); // 0x000000018694E90C-0x000000018694EA74
+		public Vector3[] SampleArray(int count, Vector2[] uvs, Texture2D sampleMap, float min = 0f /* Metadata: 0x0234BE11 */, float max = 1f /* Metadata: 0x0234BE15 */); // 0x000000018694E5D4-0x000000018694E90C
 	}
 
-	public class NonIndexedTrianglesSampler : TrianglesSamplerBase // TypeDefIndex: 55965
+	public class NonIndexedTrianglesSampler : TrianglesSamplerBase // TypeDefIndex: 58606
 	{
 		// Constructors
-		public NonIndexedTrianglesSampler() {} // Dummy constructor
-		public NonIndexedTrianglesSampler(Vector3[] vertices) {} // 0x00000001878E5134-0x00000001878E51AC
-		public NonIndexedTrianglesSampler(Vector3[] vertices, Rand rand) {} // 0x00000001878E5020-0x00000001878E5054
-		public NonIndexedTrianglesSampler(Mesh mesh) {} // 0x00000001878E5054-0x00000001878E50E0
-		public NonIndexedTrianglesSampler(Mesh mesh, Rand rand) {} // 0x00000001878E50E0-0x00000001878E5134
+		public NonIndexedTrianglesSampler(Vector3[] vertices); // 0x000000018694FDF0-0x000000018694FE68
+		public NonIndexedTrianglesSampler(Vector3[] vertices, Rand rand); // 0x000000018694FCDC-0x000000018694FD10
+		public NonIndexedTrianglesSampler(Mesh mesh); // 0x000000018694FD10-0x000000018694FD9C
+		public NonIndexedTrianglesSampler(Mesh mesh, Rand rand); // 0x000000018694FD9C-0x000000018694FDF0
 	
 		// Methods
-		protected void Init() {} // 0x00000001878E4AFC-0x00000001878E4E30
-		public Vector3 Sample() => default; // 0x00000001878E4F54-0x00000001878E5020
-		public Vector3[] SampleArray(int count) => default; // 0x00000001878E4E30-0x00000001878E4F54
+		protected void Init(); // 0x000000018694F7B8-0x000000018694FAEC
+		public Vector3 Sample(); // 0x000000018694FC10-0x000000018694FCDC
+		public Vector3[] SampleArray(int count); // 0x000000018694FAEC-0x000000018694FC10
 	}
 
-	public class ShuffleBag<T> : IEnumerable<T> // TypeDefIndex: 55967
+	public class ShuffleBag<T> : IEnumerable<T> // TypeDefIndex: 58608
 	{
 		// Fields
 		private Rand _rand;
@@ -3736,10 +2676,11 @@ namespace Dest.Math
 		private int _index;
 	
 		// Properties
-		public int Count { get => default; }
+		public int Count { get; }
 	
 		// Nested types
-		private sealed class _GetEnumerator_d__13 : IEnumerator<T> // TypeDefIndex: 55966
+		[CompilerGenerated]
+		private sealed class _GetEnumerator_d__13 : IEnumerator<T> // TypeDefIndex: 58607
 		{
 			// Fields
 			private int __1__state;
@@ -3749,40 +2690,43 @@ namespace Dest.Math
 			private int _len_5__3;
 	
 			// Properties
-			T IEnumerator<T>.Current { get => default; }
-			object IEnumerator.Current { get => default; }
+			T IEnumerator<T>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
 	
 			// Constructors
-			public _GetEnumerator_d__13() {} // Dummy constructor
-			public _GetEnumerator_d__13(int __1__state) {}
+			[DebuggerHidden]
+			public _GetEnumerator_d__13(int __1__state);
 	
 			// Methods
-			void IDisposable.Dispose() {}
-			private bool MoveNext() => default;
-			void IEnumerator.Reset() {}
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
 		}
 	
 		// Constructors
-		public ShuffleBag() {}
-		public ShuffleBag(int capacity) {}
-		public ShuffleBag(Rand rand) {}
-		public ShuffleBag(Rand rand, int capacity) {}
+		public ShuffleBag();
+		public ShuffleBag(int capacity);
+		public ShuffleBag(Rand rand);
+		public ShuffleBag(Rand rand, int capacity);
 	
 		// Methods
-		public void Add(T item, uint count = 1 /* Metadata: 0x0207C169 */) {}
-		public T NextItem() => default;
-		public void Reset() {}
-		public void Clear() {}
-		public IEnumerator<T> GetEnumerator() => default;
-		IEnumerator IEnumerable.GetEnumerator() => default;
+		public void Add(T item, uint count = 1 /* Metadata: 0x0234BE19 */);
+		public T NextItem();
+		public void Reset();
+		public void Clear();
+		[IteratorStateMachine(typeof(_GetEnumerator_d__13))]
+		public IEnumerator<T> GetEnumerator();
+		IEnumerator IEnumerable.GetEnumerator();
 	}
 
-	public static class Util // TypeDefIndex: 55968
+	public static class Util // TypeDefIndex: 58609
 	{
-		// Methods
-		public static void Shuffle<T>(IList<T> collection) {}
-		public static void Shuffle<T>(IList<T> collection, Rand rand) {}
-		public static void Shuffle<T>(T[] collection) {}
-		public static void Shuffle<T>(T[] collection, Rand rand) {}
+		// Extension methods
+		public static void Shuffle<T>(this IList<T> collection);
+		public static void Shuffle<T>(this IList<T> collection, Rand rand);
+		public static void Shuffle<T>(this T[] collection);
+		public static void Shuffle<T>(this T[] collection, Rand rand);
 	}
 }

@@ -7,53 +7,58 @@ using System.Buffers;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using Beyond;
 using IFix.Core;
+using Microsoft.CodeAnalysis;
 using Unity.Mathematics;
 
-// Image 69: ZString.dll - Assembly: ZString, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59626-59657
+// Image 70: ZString.dll - Assembly: ZString, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 62201-62232
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 59655
+[CompilerGenerated]
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 62230
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_256 _1861BF4EAE96D61721D493270BADE6B1F1FFEB0A6BCA271EE90DC9B33E918625; // 0x00 // Static value (base64): AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAfACAAIQAiACMAJAAlACYAJwAoACkAKgArACwALQAuAC8AMAAxADIAMwA0ADUANgA3ADgAOQA6ADsAPAA9AD4APwBAAEEAQgBDAEQARQBGAEcASABJAEoASwBMAE0ATgBPAFAAUQBSAFMAVABVAFYAVwBYAFkAWgBbAFwAXQBeAF8AYABBAEIAQwBEAEUARgBHAEgASQBKAEsATABNAE4ATwBQAFEAUgBTAFQAVQBWAFcAWABZAFoAewB8AH0AfgB/AA== - Metadata: 0x02080DC4
-	internal static readonly __StaticArrayInitTypeSize_32 _3BF63951626584EB1653F9B8DBB590A5EE1EAE1135A904B9317C3773896DF076; // 0x100 // Static value (base64): AAEcAh0OGAMeFhQPGREECB8bDRcVExAHGgwSBgsFCgk= - Metadata: 0x02080ECC
-	internal static readonly __StaticArrayInitTypeSize_32 _4BCD43D478B9229AB7A13406353712C7944B60348C36B4D0E6B789D10F697652; // 0x120 // Static value (base64): AAkBCg0VAh0LDhASFhkDHggMFBwPERgHExsXBhoFBB8= - Metadata: 0x02080EF4
-	internal static readonly __StaticArrayInitTypeSize_256 E14330899333C68046C96292E14EF1B988B41F2809D50D9C2D5A83F2E83BF2AA; // 0x140 // Static value (base64): AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAfACAAIQAiACMAJAAlACYAJwAoACkAKgArACwALQAuAC8AMAAxADIAMwA0ADUANgA3ADgAOQA6ADsAPAA9AD4APwBAAGEAYgBjAGQAZQBmAGcAaABpAGoAawBsAG0AbgBvAHAAcQByAHMAdAB1AHYAdwB4AHkAegBbAFwAXQBeAF8AYABhAGIAYwBkAGUAZgBnAGgAaQBqAGsAbABtAG4AbwBwAHEAcgBzAHQAdQB2AHcAeAB5AHoAewB8AH0AfgB/AA== - Metadata: 0x02080F1C
+	internal static readonly __StaticArrayInitTypeSize_256 _1861BF4EAE96D61721D493270BADE6B1F1FFEB0A6BCA271EE90DC9B33E918625; // 0x00 // Static value (base64): AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAfACAAIQAiACMAJAAlACYAJwAoACkAKgArACwALQAuAC8AMAAxADIAMwA0ADUANgA3ADgAOQA6ADsAPAA9AD4APwBAAEEAQgBDAEQARQBGAEcASABJAEoASwBMAE0ATgBPAFAAUQBSAFMAVABVAFYAVwBYAFkAWgBbAFwAXQBeAF8AYABBAEIAQwBEAEUARgBHAEgASQBKAEsATABNAE4ATwBQAFEAUgBTAFQAVQBWAFcAWABZAFoAewB8AH0AfgB/AA== - Metadata: 0x023507AC
+	internal static readonly __StaticArrayInitTypeSize_32 _3BF63951626584EB1653F9B8DBB590A5EE1EAE1135A904B9317C3773896DF076; // 0x100 // Static value (base64): AAEcAh0OGAMeFhQPGREECB8bDRcVExAHGgwSBgsFCgk= - Metadata: 0x023508B4
+	internal static readonly __StaticArrayInitTypeSize_32 _4BCD43D478B9229AB7A13406353712C7944B60348C36B4D0E6B789D10F697652; // 0x120 // Static value (base64): AAkBCg0VAh0LDhASFhkDHggMFBwPERgHExsXBhoFBB8= - Metadata: 0x023508DC
+	internal static readonly __StaticArrayInitTypeSize_256 E14330899333C68046C96292E14EF1B988B41F2809D50D9C2D5A83F2E83BF2AA; // 0x140 // Static value (base64): AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAfACAAIQAiACMAJAAlACYAJwAoACkAKgArACwALQAuAC8AMAAxADIAMwA0ADUANgA3ADgAOQA6ADsAPAA9AD4APwBAAGEAYgBjAGQAZQBmAGcAaABpAGoAawBsAG0AbgBvAHAAcQByAHMAdAB1AHYAdwB4AHkAegBbAFwAXQBeAF8AYABhAGIAYwBkAGUAZgBnAGgAaQBqAGsAbABtAG4AbwBwAHEAcgBzAHQAdQB2AHcAeAB5AHoAewB8AH0AfgB/AA== - Metadata: 0x02350904
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_32 // TypeDefIndex: 59653
+	private struct __StaticArrayInitTypeSize_32 // TypeDefIndex: 62228
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_256 // TypeDefIndex: 59654
+	private struct __StaticArrayInitTypeSize_256 // TypeDefIndex: 62229
 	{
 	}
-
-	// Constructors
-	public _PrivateImplementationDetails_() {} // Dummy constructor
 }
 
 namespace Beyond
 {
-	public struct MonoObject_64 // TypeDefIndex: 59630
+	public struct MonoObject_64 // TypeDefIndex: 62205
 	{
 		// Fields
 		public unsafe void* p1; // 0x00
 		public unsafe void* p2; // 0x08
 	}
 
-	public struct MonoObject_32 // TypeDefIndex: 59631
+	public struct MonoObject_32 // TypeDefIndex: 62206
 	{
 		// Fields
 		public unsafe void* p1; // 0x00
 		public unsafe void* p2; // 0x04
 	}
 
-	public struct MonoString_64 // TypeDefIndex: 59632
+	public struct MonoString_64 // TypeDefIndex: 62207
 	{
 		// Fields
 		public MonoObject_64 obj; // 0x00
@@ -61,7 +66,7 @@ namespace Beyond
 		public char firstChar; // 0x14
 	}
 
-	public struct MonoString_32 // TypeDefIndex: 59633
+	public struct MonoString_32 // TypeDefIndex: 62208
 	{
 		// Fields
 		public MonoObject_32 obj; // 0x00
@@ -69,11 +74,15 @@ namespace Beyond
 		public char firstChar; // 0x0C
 	}
 
-	public class UnSafeString // TypeDefIndex: 59638
+	[DefaultMember("Item")]
+	[Nullable(0)]
+	[NullableContext(1)]
+	public class UnSafeString // TypeDefIndex: 62213
 	{
 		// Fields
 		private static Stack<HgStringBlock> s_blocks; // 0x00
 		private static Stack<HgStringBlock> s_stackBlocks; // 0x08
+		[Nullable(2)]
 		private static HgStringBlock s_currentBlock; // 0x10
 		private static ThreadLocal<Stack<HgThreadStringBlock>> s_threadBlockPool; // 0x18
 		private static ThreadLocal<Stack<HgThreadStringBlock>> s_threadStackBlocks; // 0x20
@@ -83,6 +92,7 @@ namespace Beyond
 		private static readonly char[] LOW_TABLE; // 0x40
 		private string m_buffer; // 0x10
 		private ulong m_handler; // 0x18
+		[Nullable(0)]
 		private unsafe int* m_strCount; // 0x20
 		private int m_length; // 0x28
 		private bool m_resizeFlag; // 0x2C
@@ -93,154 +103,166 @@ namespace Beyond
 		private static Dictionary<uint2, string> s_sharedStringPool; // 0x68
 	
 		// Properties
-		public int Length { get => default; private set {} } // 0x000000018C3D8250-0x000000018C3D8338 0x000000018C3D7FC4-0x000000018C3D806C
+		public int Length { get; private set; } // 0x0000000182F7FE00-0x0000000182F7FE90 0x0000000182F7FBB0-0x0000000182F7FE00
 	
 		// Nested types
-		public class HgStringBlock : IDisposable // TypeDefIndex: 59634
+		[NullableContext(0)]
+		public class HgStringBlock : IDisposable // TypeDefIndex: 62209
 		{
 			// Fields
+			[Nullable(1)]
 			private readonly Stack<UnSafeString> m_stack; // 0x10
 	
 			// Constructors
-			public HgStringBlock() {} // Dummy constructor
-			internal HgStringBlock(int capacity) {} // 0x00000001840561F0-0x00000001840562E0
+			internal HgStringBlock(int capacity); // 0x0000000184A22950-0x0000000184A229E0
 	
 			// Methods
-			internal void Push(UnSafeString str) {} // 0x0000000184054590-0x0000000184054650
-			void IDisposable.Dispose() {} // 0x00000001847790C0-0x0000000184779210
+			[NullableContext(1)]
+			internal void Push(UnSafeString str); // 0x0000000182F82630-0x0000000182F827F0
+			void IDisposable.Dispose(); // 0x0000000182F81080-0x0000000182F814E0
 		}
 	
-		public class HgThreadStringBlock : IDisposable // TypeDefIndex: 59635
+		[NullableContext(0)]
+		public class HgThreadStringBlock : IDisposable // TypeDefIndex: 62210
 		{
 			// Fields
+			[Nullable(1)]
 			private readonly Stack<UnSafeString> m_stack; // 0x10
 	
-			// Constructors
-			public HgThreadStringBlock() {} // Dummy constructor
-	
 			// Methods
-			void IDisposable.Dispose() {} // 0x0000000184056D50-0x0000000184056EB0
+			void IDisposable.Dispose(); // 0x000000018B8BF30C-0x000000018B8BF53C
 		}
 	
-		public struct UnSafeStringHandle : IDisposable // TypeDefIndex: 59636
+		[Nullable(0)]
+		public struct UnSafeStringHandle : IDisposable // TypeDefIndex: 62211
 		{
 			// Fields
 			private GCHandle m_stringHandler; // 0x00
 	
 			// Constructors
-			private UnSafeStringHandle(UnSafeString unSafeString) {
-				m_stringHandler = default;
-			} // 0x000000018445F960-0x000000018445F9C0
+			private UnSafeStringHandle(UnSafeString unSafeString); // 0x0000000185397798-0x00000001853977B8
 	
 			// Methods
-			public static UnSafeStringHandle CreateHandle(int count = 64 /* Metadata: 0x02080DBC */) => default; // 0x00000001848B79F0-0x00000001848B7A70
-			public void Dispose() {} // 0x00000001844F3440-0x00000001844F35A0
-			public UnSafeString Get() => default; // 0x000000018C3D7C2C-0x000000018C3D7E94
+			public static UnSafeStringHandle CreateHandle(int count = 64 /* Metadata: 0x023507A7 */); // 0x00000001844F4D70-0x00000001844F4DF0
+			public void Dispose(); // 0x000000018B8C0844-0x000000018B8C08F4
+			public UnSafeString Get(); // 0x000000018B8C08F4-0x000000018B8C0964
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 59637
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 62212
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c __9; // 0x00
 	
 			// Constructors
-			static __c() {} // 0x000000018C3D81B8-0x000000018C3D8250
-			public __c() {} // 0x00000001840546B0-0x0000000184054A70
+			static __c(); // 0x0000000184D411D0-0x0000000184D41230
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal Stack<HgThreadStringBlock> _.cctor_b__43_0() => default;
-			internal Stack<HgThreadStringBlock> _.cctor_b__43_1() => default;
+			internal Stack<HgThreadStringBlock> _.cctor_b__43_0(); // 0x000000018B8C0784-0x000000018B8C07E4
+			internal Stack<HgThreadStringBlock> _.cctor_b__43_1(); // 0x000000018B8C07E4-0x000000018B8C0844
 		}
 	
 		// Constructors
-		public UnSafeString() {} // Dummy constructor
-		static UnSafeString() {} // 0x00000001844F4AA0-0x00000001844F4D20
-		private UnSafeString(int count = 256 /* Metadata: 0x02080DB5 */) {} // 0x000000018C3D813C-0x000000018C3D81B8
+		static UnSafeString(); // 0x00000001847A13D0-0x00000001847A1920
+		private UnSafeString(int count = 256 /* Metadata: 0x023507A0 */); // 0x0000000182F23970-0x0000000182F23A60
 	
 		// Methods
-		public void Append(char value) {}
-		public unsafe void Append(char* value, int count) {} // 0x0000000185FEB080-0x0000000185FEB090
-		public void Append(int value) {} // 0x0000000185FEB090-0x0000000185FEB0A0
-		public void Append(string value) {} // 0x0000000185962F10-0x0000000185963460
-		public void Append(Span<char> value) {} // 0x0000000184777A30-0x0000000184777AD0
-		public void Replace(char newChar, int Index) {} // 0x0000000184059160-0x0000000184059270
-		public void Append(UnSafeString value) {} // 0x00000001847779B0-0x0000000184777A30
-		public unsafe void Append(byte* value, int count) {} // 0x00000001847715B0-0x0000000184771600
-		private int _GetUTF8ByteCnt(byte bt) => default; // 0x00000001840581D0-0x0000000184058250
-		public static IDisposable Scope() => default; // 0x00000001840590C0-0x0000000184059160
-		public static UnSafeString Concat<T1, T2>(T1 arg1, T2 arg2) => default; // 0x00000001844D0DC0-0x00000001844D0E10
-		public static UnSafeString Concat<T1, T2, T3>(T1 arg1, T2 arg2, T3 arg3) => default; // 0x000000018C3D7E94-0x000000018C3D7FC4
-		public static UnSafeString Concat<T1, T2, T3, T4>(T1 arg1, T2 arg2, T3 arg3, T4 arg4) => default; // 0x0000000184057B70-0x0000000184057BF0
-		public static UnSafeString Create(int count = 256 /* Metadata: 0x02080DB7 */) => default; // 0x000000018C3D806C-0x000000018C3D813C
-		public static UnSafeString CreateRaw(int count = 256 /* Metadata: 0x02080DB9 */) => default;
-		public void Dispose() {}
-		public int GetStringBufferSize() => default;
-		public void Clear() {}
-		public string CloneString() => default;
-		public void CloneToBytes(Span<byte> bytes) {} // 0x0000000184255640-0x00000001842556D0
-		public override string ToString() => default; // 0x000000018C3D8338-0x000000018C3D83DC
-		private void _Resize(int size) {} // 0x0000000184058250-0x0000000184058EC0
-		public override int GetHashCode() => default; // 0x0000000184057BF0-0x00000001840581D0
-		public void ToLow() {} // 0x0000000184771330-0x00000001847715B0
-		public static unsafe UnSafeString GetUnsafeString(char* ptr, int length) => default; // 0x0000000184266B40-0x0000000184266D10
-		public static UnSafeString GetUnsafeStringUTF8(Span<byte> span) => default; // 0x0000000185C28D10-0x0000000185C28DA0
-		public static UnSafeString Format<T>(string formatString, T arg) => default; // 0x0000000184058EC0-0x00000001840590C0
-		public static UnSafeString Format<T1, T2>(string formatString, T1 arg, T2 arg1) => default; // 0x0000000184054A70-0x0000000184054F50
-		public static UnSafeString Format<T1, T2, T3>(string format, T1 arg1, T2 arg2, T3 arg3) => default; // 0x000000018C3D6400-0x000000018C3D6630
-		public static UnSafeString Format<T1, T2, T3, T4>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4) => default; // 0x0000000185729640-0x00000001857296C0
-		public static UnSafeString Format<T1, T2, T3, T4, T5>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5) => default; // 0x0000000186474374-0x0000000186474394
-		public static implicit operator string(UnSafeString value) => default; // 0x000000018C3D7B0C-0x000000018C3D7BBC
-		public static implicit operator UnSafeString(string value) => default; // 0x000000018C3D7BBC-0x000000018C3D7C2C
-		public static UnSafeString TryGetUnSafeStringFromPool(int requestStringLength, bool inScope = true /* Metadata: 0x02080DBB */) => default; // 0x0000000185F6D9F0-0x0000000185F6DA50
-		private static void _RecycleString(UnSafeString uString) {} // 0x0000000185492010-0x0000000185492020
-		public static void FreeCacheMemory() {} // 0x000000018C3D7A4C-0x000000018C3D7AAC
-		public void Split(char separator, ref List<UnSafeString> list) {} // 0x000000018C3D7AAC-0x000000018C3D7B0C
+		[IDTag(0)]
+		public void Append(char value); // 0x0000000182F7FA00-0x0000000182F7FBB0
+		[NullableContext(0)]
+		public unsafe void Append(char* value, int count); // 0x0000000182F7F7B0-0x0000000182F7FA00
+		[IDTag(2)]
+		public void Append(int value); // 0x00000001833319C0-0x0000000183331C90
+		[IDTag(3)]
+		public void Append(string value); // 0x0000000182F7E8F0-0x0000000182F7EBC0
+		[IDTag(5)]
+		[NullableContext(0)]
+		public void Append(Span<char> value); // 0x0000000183A756F0-0x0000000183A75750
+		public void Replace(char newChar, int Index); // 0x0000000183E22FF0-0x0000000183E23060
+		[IDTag(7)]
+		public void Append(UnSafeString value); // 0x0000000182F67C40-0x0000000182F67DA0
+		[NullableContext(0)]
+		public unsafe void Append(byte* value, int count); // 0x000000018B8C0964-0x000000018B8C0BDC
+		private int _GetUTF8ByteCnt(byte bt); // 0x000000018B8C0F20-0x000000018B8C0FB8
+		public static IDisposable Scope(); // 0x0000000182F80D20-0x0000000182F81080
+		public static UnSafeString Concat<T1, T2>(T1 arg1, T2 arg2);
+		public static UnSafeString Concat<T1, T2, T3>(T1 arg1, T2 arg2, T3 arg3);
+		public static UnSafeString Concat<T1, T2, T3, T4>(T1 arg1, T2 arg2, T3 arg3, T4 arg4);
+		public static UnSafeString Create(int count = 256 /* Metadata: 0x023507A2 */); // 0x0000000182F70F90-0x0000000182F71040
+		public static UnSafeString CreateRaw(int count = 256 /* Metadata: 0x023507A4 */); // 0x0000000182F238E0-0x0000000182F23970
+		public void Dispose(); // 0x0000000183C87890-0x0000000183C878E0
+		public int GetStringBufferSize(); // 0x0000000182F7E1C0-0x0000000182F7E220
+		public void Clear(); // 0x0000000182F7E6A0-0x0000000182F7E770
+		public string CloneString(); // 0x0000000183829930-0x0000000183829990
+		[IDTag(1)]
+		[NullableContext(0)]
+		public void CloneToBytes(Span<byte> bytes); // 0x000000018B8C0BDC-0x000000018B8C0D2C
+		public override string ToString(); // 0x0000000182F7E770-0x0000000182F7E7D0
+		private void _Resize(int size); // 0x000000018B8C0FB8-0x000000018B8C10D8
+		public override int GetHashCode(); // 0x000000018B8C0D2C-0x000000018B8C0DD4
+		public void ToLow(); // 0x000000018304A710-0x000000018304A850
+		[NullableContext(0)]
+		public static unsafe UnSafeString GetUnsafeString(char* ptr, int length); // 0x000000018B8C0EA4-0x000000018B8C0F20
+		[IDTag(0)]
+		[NullableContext(0)]
+		public static UnSafeString GetUnsafeStringUTF8(Span<byte> span); // 0x000000018B8C0DD4-0x000000018B8C0EA4
+		public static UnSafeString Format<T>(string formatString, T arg);
+		public static UnSafeString Format<T1, T2>(string formatString, T1 arg, T2 arg1);
+		public static UnSafeString Format<T1, T2, T3>(string format, T1 arg1, T2 arg2, T3 arg3);
+		public static UnSafeString Format<T1, T2, T3, T4>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4);
+		public static UnSafeString Format<T1, T2, T3, T4, T5>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);
+		[IDTag(0)]
+		public static implicit operator string(UnSafeString value); // 0x0000000182F814E0-0x0000000182F81560
+		[IDTag(1)]
+		public static implicit operator UnSafeString(string value); // 0x000000018B8C10D8-0x000000018B8C117C
+		public static UnSafeString TryGetUnSafeStringFromPool(int requestStringLength, bool inScope = true /* Metadata: 0x023507A6 */); // 0x0000000182F816F0-0x0000000182F81FF0
+		private static void _RecycleString(UnSafeString uString); // 0x0000000182F7DC70-0x0000000182F7E1C0
+		public static void FreeCacheMemory(); // 0x0000000183C87620-0x0000000183C87890
+		public void Split(char separator, ref List<UnSafeString> list); // 0x000000018333B880-0x000000018333B9B0
 	}
 }
 
 namespace Cysharp.Text
 {
-	internal static class EnumUtil<T> // TypeDefIndex: 59640
+	internal static class EnumUtil<T> // TypeDefIndex: 62215
 	{
 		// Fields
+		[Nullable(1)]
 		private static readonly Dictionary<T, string> names;
+		[Nullable(1)]
 		private static readonly Dictionary<T, byte[]> utf8names;
 	
 		// Constructors
-		static EnumUtil() {}
+		static EnumUtil();
 	
 		// Methods
-		public static bool TryFormatUtf16(T value, Span<char> dest, out int written, ReadOnlySpan<char> _) {
-			written = default;
-			return default;
-		}
+		public static bool TryFormatUtf16([Nullable(1)] T value, Span<char> dest, out int written, ReadOnlySpan<char> _);
 	}
 
-	internal static class ExceptionUtil // TypeDefIndex: 59641
+	internal static class ExceptionUtil // TypeDefIndex: 62216
 	{
 		// Methods
-		internal static void ThrowFormatException() {} // 0x000000018C3D6154-0x000000018C3D61B0
-		internal static void ThrowFormatError() {} // 0x000000018C3D60F8-0x000000018C3D6154
+		internal static void ThrowFormatException(); // 0x000000018B8BF060-0x000000018B8BF0BC
+		internal static void ThrowFormatError(); // 0x000000018B8BF004-0x000000018B8BF060
 	}
 
-	internal static class FastNumberWriter // TypeDefIndex: 59642
+	internal static class FastNumberWriter // TypeDefIndex: 62217
 	{
 		// Methods
-		public static bool TryWriteInt64(Span<char> buffer, out int charsWritten, long value) {
-			charsWritten = default;
-			return default;
-		} // 0x0000000184B224D0-0x0000000184B22AE0
-		public static bool TryWriteUInt64(Span<char> buffer, out int charsWritten, ulong value) {
-			charsWritten = default;
-			return default;
-		} // 0x0000000184C60EC0-0x0000000184C613F0
+		public static bool TryWriteInt64(Span<char> buffer, out int charsWritten, long value); // 0x00000001839AE2F0-0x00000001839AE9B0
+		public static bool TryWriteUInt64(Span<char> buffer, out int charsWritten, ulong value); // 0x0000000183C49A90-0x0000000183C49FD0
 	}
 
-	internal static class FormatParser // TypeDefIndex: 59644
+	internal static class FormatParser // TypeDefIndex: 62219
 	{
 		// Nested types
-		public struct ParseResult // TypeDefIndex: 59643
+		[IsByRefLike]
+		[IsReadOnly]
+		[Obsolete("Types with embedded references are not supported in this version of your compiler.", true)]
+		public struct ParseResult // TypeDefIndex: 62218
 		{
 			// Fields
 			public readonly int Index; // 0x00
@@ -249,324 +271,310 @@ namespace Cysharp.Text
 			public readonly int Alignment; // 0x1C
 	
 			// Constructors
-			public ParseResult(int index, ReadOnlySpan<char> formatString, int lastIndex, int alignment) {
-				Index = default;
-				FormatString = default;
-				LastIndex = default;
-				Alignment = default;
-			} // 0x000000018C3D61B0-0x000000018C3D61C8
+			public ParseResult(int index, ReadOnlySpan<char> formatString, int lastIndex, int alignment); // 0x0000000184DBF6D0-0x0000000184DBF6F0
 		}
 	
 		// Methods
-		private static bool IsDigit(char c) => default; // 0x000000018C3D61C8-0x000000018C3D6400
-		public static ParseResult Parse(string format, int i) => default; // 0x0000000185FEB060-0x0000000185FEB080
+		private static bool IsDigit(char c); // 0x000000018B8BF0BC-0x000000018B8BF0D4
+		[NullableContext(1)]
+		public static ParseResult Parse(string format, int i); // 0x000000018B8BF0D4-0x000000018B8BF30C
 	}
 
-	internal class NestedStringBuilderCreationException : InvalidOperationException // TypeDefIndex: 59645
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal class NestedStringBuilderCreationException : InvalidOperationException // TypeDefIndex: 62220
 	{
 		// Constructors
-		public NestedStringBuilderCreationException() {} // Dummy constructor
-		protected internal NestedStringBuilderCreationException(string typeName, string extraMessage = "" /* Metadata: 0x02080DBE */) {} // 0x000000018C3D73E0-0x000000018C3D745C
+		protected internal NestedStringBuilderCreationException(string typeName, string extraMessage = "" /* Metadata: 0x023507A9 */); // 0x000000018B8C0118-0x000000018B8C0194
 	}
 
-	internal struct ReadOnlyListAdaptor<T> : IReadOnlyList<T> // TypeDefIndex: 59646
+	[IsReadOnly]
+	[Nullable(0)]
+	[NullableContext(1)]
+	internal struct ReadOnlyListAdaptor<T> : IReadOnlyList<T> // TypeDefIndex: 62221
 	{
 		// Fields
 		private readonly IList<T> _list;
 	
 		// Properties
 		public T this[int index] { get => default; }
-		public int Count { get => default; }
+		public int Count { get; }
 	
 		// Constructors
-		public ReadOnlyListAdaptor(IList<T> list) : this() {
-			_list = default;
-		}
+		public ReadOnlyListAdaptor(IList<T> list);
 	
 		// Methods
-		public IEnumerator<T> GetEnumerator() => default;
-		IEnumerator IEnumerable.GetEnumerator() => default;
+		public IEnumerator<T> GetEnumerator();
+		IEnumerator IEnumerable.GetEnumerator();
 	}
 
-	public struct Utf16ValueStringBuilder : IDisposable, IBufferWriter<char> // TypeDefIndex: 59651
+	[Nullable(0)]
+	[NullableContext(1)]
+	public struct Utf16ValueStringBuilder : IDisposable, IBufferWriter<char> // TypeDefIndex: 62226
 	{
 		// Fields
 		private static char newLine1; // 0x00
 		private static char newLine2; // 0x02
 		private static bool crlf; // 0x04
+		[Nullable(2)]
+		[ThreadStatic]
 		private static char[] scratchBuffer; // 0x80000000
+		[ThreadStatic]
 		internal static bool scratchBufferUsed; // 0x80000008
+		[Nullable(2)]
 		private char[] buffer; // 0x00
 		private int index; // 0x08
 		private bool disposeImmediately; // 0x0C
 	
 		// Properties
-		public int Length { get => default; }
+		public int Length { get; } // 0x0000000184D88B10-0x0000000184D88B20 
 	
 		// Nested types
-		public delegate bool TryFormat<T>(T value, Span<char> destination, out int charsWritten, ReadOnlySpan<char> format); // TypeDefIndex: 59647; 0x00000000-0x00000000
+		[NullableContext(0)]
+		public delegate bool TryFormat<T>([Nullable(1)] T value, Span<char> destination, out int charsWritten, ReadOnlySpan<char> format); // TypeDefIndex: 62222; 0x00000000-0x00000000
 	
-		public static class FormatterCache<T> // TypeDefIndex: 59648
+		[NullableContext(0)]
+		public static class FormatterCache<T> // TypeDefIndex: 62223
 		{
 			// Fields
+			[Nullable(1)]
 			public static TryFormat<T> TryFormatDelegate;
 	
 			// Constructors
-			static FormatterCache() {}
+			static FormatterCache();
 	
 			// Methods
-			private static bool TryFormatString(T value, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			private static bool TryFormatUnsafeString(T value, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			private static bool TryFormatDefault(T value, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
+			private static bool TryFormatString([Nullable(1)] T value, Span<char> dest, out int written, ReadOnlySpan<char> format);
+			private static bool TryFormatUnsafeString([Nullable(1)] T value, Span<char> dest, out int written, ReadOnlySpan<char> format);
+			private static bool TryFormatDefault([Nullable(1)] T value, Span<char> dest, out int written, ReadOnlySpan<char> format);
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 59649
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 62224
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c __9; // 0x00
+			[Nullable(0)]
 			public static TryFormat<bool> __9__52_0; // 0x08
+			[Nullable(0)]
 			public static TryFormat<sbyte> __9__52_1; // 0x10
+			[Nullable(0)]
 			public static TryFormat<short> __9__52_2; // 0x18
+			[Nullable(0)]
 			public static TryFormat<int> __9__52_3; // 0x20
+			[Nullable(0)]
 			public static TryFormat<long> __9__52_4; // 0x28
+			[Nullable(0)]
 			public static TryFormat<byte> __9__52_5; // 0x30
+			[Nullable(0)]
 			public static TryFormat<ushort> __9__52_6; // 0x38
+			[Nullable(0)]
 			public static TryFormat<uint> __9__52_7; // 0x40
+			[Nullable(0)]
 			public static TryFormat<ulong> __9__52_8; // 0x48
+			[Nullable(0)]
 			public static TryFormat<float> __9__52_9; // 0x50
+			[Nullable(0)]
 			public static TryFormat<double> __9__52_10; // 0x58
+			[Nullable(0)]
 			public static TryFormat<TimeSpan> __9__52_11; // 0x60
+			[Nullable(0)]
 			public static TryFormat<System.DateTime> __9__52_12; // 0x68
+			[Nullable(0)]
 			public static TryFormat<DateTimeOffset> __9__52_13; // 0x70
+			[Nullable(0)]
 			public static TryFormat<decimal> __9__52_14; // 0x78
+			[Nullable(0)]
 			public static TryFormat<Guid> __9__52_15; // 0x80
+			[Nullable(0)]
 			public static TryFormat<IntPtr> __9__52_16; // 0x88
+			[Nullable(0)]
 			public static TryFormat<UIntPtr> __9__52_17; // 0x90
 	
 			// Constructors
-			static __c() {}
-			public __c() {}
+			static __c(); // 0x0000000184D3FDF0-0x0000000184D3FE50
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _CreateFormatter_b__52_0(bool x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			internal bool _CreateFormatter_b__52_1(sbyte x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			internal bool _CreateFormatter_b__52_2(short x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			internal bool _CreateFormatter_b__52_3(int x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			internal bool _CreateFormatter_b__52_4(long x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			internal bool _CreateFormatter_b__52_5(byte x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			internal bool _CreateFormatter_b__52_6(ushort x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			internal bool _CreateFormatter_b__52_7(uint x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			internal bool _CreateFormatter_b__52_8(ulong x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			internal bool _CreateFormatter_b__52_9(float x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			internal bool _CreateFormatter_b__52_10(double x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			}
-			internal bool _CreateFormatter_b__52_11(TimeSpan x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			} // 0x000000018529E260-0x000000018529F390
-			internal bool _CreateFormatter_b__52_12(System.DateTime x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			} // 0x000000018C3D8680-0x000000018C3D87AC
-			internal bool _CreateFormatter_b__52_13(DateTimeOffset x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			} // 0x00000001851675B0-0x0000000185167650
-			internal bool _CreateFormatter_b__52_14(decimal x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			} // 0x0000000181B7E450-0x0000000181B7E460
-			internal bool _CreateFormatter_b__52_15(Guid x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			} // 0x000000018C3D8AC4-0x000000018C3D8B54
-			internal bool _CreateFormatter_b__52_16(IntPtr x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			} // 0x000000018C3D8A64-0x000000018C3D8AC4
-			internal bool _CreateFormatter_b__52_17(UIntPtr x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			} // 0x000000018C3D8F9C-0x000000018C3D9120
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_0(bool x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018419D790-0x000000018419D840
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_1(sbyte x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018B8C04D4-0x000000018B8C0580
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_2(short x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018B8C0580-0x000000018B8C062C
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_3(int x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x00000001839AE240-0x00000001839AE2F0
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_4(long x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x00000001839AE1C0-0x00000001839AE240
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_5(byte x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018B8C062C-0x000000018B8C06D8
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_6(ushort x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018B8C06D8-0x000000018B8C0784
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_7(uint x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x0000000183C49A50-0x0000000183C49A90
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_8(ulong x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x0000000183C49A10-0x0000000183C49A50
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_9(float x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018382D410-0x000000018382D460
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_10(double x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018382D740-0x000000018382D7D0
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_11(TimeSpan x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018B8C0204-0x000000018B8C028C
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_12(System.DateTime x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x0000000183779680-0x0000000183779750
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_13(DateTimeOffset x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018B8C028C-0x000000018B8C0318
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_14(decimal x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018B8C0318-0x000000018B8C03A4
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_15(Guid x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018B8C03A4-0x000000018B8C03E8
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_16(IntPtr x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018B8C03E8-0x000000018B8C0434
+			[NullableContext(0)]
+			internal bool _CreateFormatter_b__52_17(UIntPtr x, Span<char> dest, out int written, ReadOnlySpan<char> format); // 0x000000018B8C0434-0x000000018B8C04D4
 		}
 	
 		[Serializable]
-		private sealed class __c__170<T> // TypeDefIndex: 59650
+		[CompilerGenerated]
+		private sealed class __c__170<T> // TypeDefIndex: 62225
 			where T : struct
 		{
 			// Fields
+			[Nullable(0)]
 			public static readonly __c__170<T> __9;
+			[Nullable(0)]
 			public static TryFormat<T?> __9__170_0;
 	
 			// Constructors
-			static __c__170() {} // 0x000000018C3D8B54-0x000000018C3D8C10
-			public __c__170() {}
+			static __c__170();
+			public __c__170();
 	
 			// Methods
-			internal bool _CreateNullableFormatter_b__170_0(T? x, Span<char> dest, out int written, ReadOnlySpan<char> format) {
-				written = default;
-				return default;
-			} // 0x000000018C3D8434-0x000000018C3D8598
+			[NullableContext(0)]
+			internal bool _CreateNullableFormatter_b__170_0(T? x, Span<char> dest, out int written, ReadOnlySpan<char> format);
 		}
 	
 		// Constructors
-		static Utf16ValueStringBuilder() {
-			newLine1 = default;
-			newLine2 = default;
-			crlf = default;
-			scratchBuffer = default;
-			scratchBufferUsed = default;
-		}
-		public Utf16ValueStringBuilder(bool disposeImmediately) : this() {
-			buffer = default;
-			index = default;
-			this.disposeImmediately = default;
-		} // 0x000000018510CE40-0x000000018510CEC0
+		static Utf16ValueStringBuilder(); // 0x000000018403C8B0-0x000000018403C950
+		public Utf16ValueStringBuilder(bool disposeImmediately); // 0x000000018B8C1BC8-0x000000018B8C1D4C
 	
 		// Methods
-		internal void AppendJoinInternal<T>(ReadOnlySpan<char> separator, IReadOnlyList<T> values) {} // 0x000000018C3D8874-0x000000018C3D8904
-		internal void AppendJoinInternal<T>(ReadOnlySpan<char> separator, ReadOnlySpan<T> values) {} // 0x000000018C3D8598-0x000000018C3D8680
-		internal void AppendJoinInternal<T>(ReadOnlySpan<char> separator, IEnumerable<T> values) {} // 0x000000018C3D8904-0x000000018C3D8974
-		public void AppendFormat<T1>(string format, T1 arg1) {} // 0x000000018C3D83DC-0x000000018C3D8434
-		public void AppendFormat<T1, T2>(string format, T1 arg1, T2 arg2) {} // 0x000000018C3D8974-0x000000018C3D8A64
-		public void AppendFormat<T1, T2, T3>(string format, T1 arg1, T2 arg2, T3 arg3) {} // 0x000000018C3D87AC-0x000000018C3D8874
-		public void AppendFormat<T1, T2, T3, T4>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4) {}
-		public void AppendFormat<T1, T2, T3, T4, T5>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5) {} // 0x000000018405BF10-0x000000018405C5E0
-		public void AppendFormat<T1, T2, T3, T4, T5, T6>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6) {} // 0x000000018C3D8C10-0x000000018C3D8CB8
-		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7) {} // 0x000000018C3D8CB8-0x000000018C3D8D54
-		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8) {} // 0x0000000185FCF250-0x0000000185FCF260
-		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9) {} // 0x000000018C3D8E6C-0x000000018C3D8ED0
-		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10) {} // 0x000000018C3D8ED0-0x000000018C3D8F2C
-		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11) {}
-		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12) {} // 0x000000018C3D8F2C-0x000000018C3D8F9C
-		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13) {}
-		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14) {} // 0x0000000184059B10-0x0000000184059FB0
-		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15) {}
-		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15, T16 arg16) {}
-		private static object CreateFormatter(System.Type type) => default;
-		public void Append(int value) {}
-		public ReadOnlySpan<char> AsSpan() => default; // 0x0000000185F6C670-0x0000000185F6C6D0
-		public ArraySegment<char> AsArraySegment() => default; // 0x0000000185492010-0x0000000185492020
-		public void Dispose() {} // 0x000000018C3D779C-0x000000018C3D7848
-		public void Grow(int sizeHint) {} // 0x000000018C3D7848-0x000000018C3D78F4
-		public void AppendLine() {} // 0x0000000184B22450-0x0000000184B224D0
-		public void Append(char value) {} // 0x0000000184B223D0-0x0000000184B22450
-		public void Append(char value, int repeatCount) {} // 0x000000018C3D78F4-0x000000018C3D79A0
-		public void Append(string value) {} // 0x000000018C3D79A0-0x000000018C3D7A4C
-		public void AppendLine(string value) {} // 0x0000000184C60E40-0x0000000184C60EC0
-		public void Append(string value, int startIndex, int count) {} // 0x0000000184C60DC0-0x0000000184C60E40
-		public void Append(ReadOnlySpan<char> value) {} // 0x0000000185A97F70-0x0000000185A97FC0
-		public void Append<T>(T value) {} // 0x00000001840063F0-0x00000001840064B0
-		public override string ToString() => default; // 0x000000018C3D74CC-0x000000018C3D7554
-		public Memory<char> GetMemory(int sizeHint) => default; // 0x00000001848B5F10-0x00000001848B5FF0
-		public Span<char> GetSpan(int sizeHint) => default; // 0x000000018C3D7554-0x000000018C3D75E0
-		public void Advance(int count) {} // 0x000000018C3D75E0-0x000000018C3D766C
-		private void ThrowArgumentException(string paramName) {} // 0x000000018C3D766C-0x000000018C3D76B0
-		private static void ThrowFormatException() {} // 0x000000018C3D76B0-0x000000018C3D76FC
-		private void AppendFormatInternal<T>(T arg, int width, ReadOnlySpan<char> format, string argName) {} // 0x000000018C3D76FC-0x000000018C3D779C
-		private static void ThrowNestedException() {}
+		[NullableContext(0)]
+		internal void AppendJoinInternal<T>(ReadOnlySpan<char> separator, [Nullable(1)] IReadOnlyList<T> values);
+		[NullableContext(0)]
+		internal void AppendJoinInternal<T>(ReadOnlySpan<char> separator, [Nullable(new byte[2] {0, 1 })] ReadOnlySpan<T> values);
+		[NullableContext(0)]
+		internal void AppendJoinInternal<T>(ReadOnlySpan<char> separator, [Nullable(1)] IEnumerable<T> values);
+		public void AppendFormat<T1>(string format, T1 arg1);
+		public void AppendFormat<T1, T2>(string format, T1 arg1, T2 arg2);
+		public void AppendFormat<T1, T2, T3>(string format, T1 arg1, T2 arg2, T3 arg3);
+		public void AppendFormat<T1, T2, T3, T4>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4);
+		public void AppendFormat<T1, T2, T3, T4, T5>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);
+		public void AppendFormat<T1, T2, T3, T4, T5, T6>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6);
+		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7);
+		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8);
+		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9);
+		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10);
+		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11);
+		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12);
+		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13);
+		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14);
+		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15);
+		public void AppendFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15, T16 arg16);
+		private static object CreateFormatter(System.Type type); // 0x000000018414FA30-0x0000000184150B60
+		public void Append(int value); // 0x000000018B8C1420-0x000000018B8C154C
+		[NullableContext(0)]
+		public ReadOnlySpan<char> AsSpan(); // 0x000000018B8C1864-0x000000018B8C18F4
+		[NullableContext(0)]
+		public ArraySegment<char> AsArraySegment(); // 0x000000018B8C1804-0x000000018B8C1864
+		public void Dispose(); // 0x000000018B8C18F4-0x000000018B8C19B0
+		public void Grow(int sizeHint); // 0x00000001832B1C70-0x00000001832B1DD0
+		public void AppendLine(); // 0x000000018B8C11D4-0x000000018B8C1338
+		public void Append(char value); // 0x000000018B8C1614-0x000000018B8C16A4
+		public void Append(char value, int repeatCount); // 0x000000018B8C1338-0x000000018B8C1420
+		public void Append(string value); // 0x000000018B8C16A4-0x000000018B8C1714
+		public void AppendLine(string value); // 0x000000018B8C117C-0x000000018B8C11D4
+		public void Append(string value, int startIndex, int count); // 0x000000018B8C1714-0x000000018B8C1804
+		[NullableContext(0)]
+		public void Append(ReadOnlySpan<char> value); // 0x000000018B8C154C-0x000000018B8C1614
+		public void Append<T>(T value);
+		public override string ToString(); // 0x0000000182F25CE0-0x0000000182F26090
+		[NullableContext(0)]
+		public Memory<char> GetMemory(int sizeHint); // 0x000000018B8C19B0-0x000000018B8C1A58
+		[NullableContext(0)]
+		public Span<char> GetSpan(int sizeHint); // 0x000000018B8C1A58-0x000000018B8C1AF4
+		public void Advance(int count); // 0x0000000184DA3A90-0x0000000184DA3AA0
+		private void ThrowArgumentException(string paramName); // 0x000000018B8C1AF4-0x000000018B8C1B58
+		private static void ThrowFormatException(); // 0x0000000183996AE0-0x0000000183996B50
+		private void AppendFormatInternal<T>(T arg, int width, [Nullable(0)] ReadOnlySpan<char> format, string argName);
+		private static void ThrowNestedException(); // 0x000000018B8C1B58-0x000000018B8C1BC8
+		[NullableContext(0)]
 		private static TryFormat<T?> CreateNullableFormatter<T>()
-			where T : struct => default;
-		public ref char GetPinnableReference() => ref _refReturnTypeForGetPinnableReference;
-		private ref char _refReturnTypeForGetPinnableReference; // Dummy field
+			where T : struct;
+		public ref char GetPinnableReference(); // 0x0000000182F26090-0x0000000182F26A30
 	}
 
-	public static class ZString // TypeDefIndex: 59652
+	[Nullable(0)]
+	[NullableContext(1)]
+	public static class ZString // TypeDefIndex: 62227
 	{
 		// Fields
 		private static Encoding UTF8NoBom; // 0x00
 	
 		// Constructors
-		static ZString() {} // 0x0000000185C2C950-0x0000000185C2C9E0
+		static ZString(); // 0x0000000184A25BD0-0x0000000184A25C60
 	
 		// Methods
-		public static string Concat<T1, T2>(T1 arg1, T2 arg2) => default;
-		public static string Concat<T1, T2, T3>(T1 arg1, T2 arg2, T3 arg3) => default;
-		public static string Concat<T1, T2, T3, T4>(T1 arg1, T2 arg2, T3 arg3, T4 arg4) => default;
-		public static string Concat<T1, T2, T3, T4, T5>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5) => default;
-		public static string Concat<T1, T2, T3, T4, T5, T6>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6) => default;
-		public static string Concat<T1, T2, T3, T4, T5, T6, T7>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7) => default;
-		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8) => default;
-		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9) => default;
-		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10) => default;
-		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11) => default;
-		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12) => default;
-		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13) => default;
-		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14) => default;
-		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15) => default;
-		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15, T16 arg16) => default;
-		public static Utf16ValueStringBuilder CreateStringBuilder() => default; // 0x0000000184FC1130-0x0000000184FC1150
-		public static string Join<T>(char separator, T[] values) => default;
-		public static string Join<T>(char separator, List<T> values) => default;
-		public static string Join<T>(char separator, IEnumerable<T> values) => default;
-		public static string Join<T>(char separator, ICollection<T> values) => default;
-		public static string Join<T>(char separator, IList<T> values) => default;
-		public static string Join<T>(char separator, IReadOnlyList<T> values) => default;
-		public static string Join<T>(char separator, IReadOnlyCollection<T> values) => default;
-		public static string Join<T>(string separator, List<T> values) => default;
-		public static string Join<T>(string separator, ICollection<T> values) => default;
-		public static string Join<T>(string separator, IList<T> values) => default;
-		public static string Join<T>(string separator, IReadOnlyList<T> values) => default;
-		public static string Join<T>(string separator, IReadOnlyCollection<T> values) => default;
-		public static string Join<T>(string separator, IEnumerable<T> values) => default;
-		private static string JoinInternal<T>(ReadOnlySpan<char> separator, IList<T> values) => default;
-		private static string JoinInternal<T>(ReadOnlySpan<char> separator, IReadOnlyList<T> values) => default;
-		private static string JoinInternal<T>(ReadOnlySpan<char> separator, ReadOnlySpan<T> values) => default;
-		private static string JoinInternal<T>(ReadOnlySpan<char> separator, IEnumerable<T> values) => default;
-		public static string Format<T1>(string format, T1 arg1) => default;
-		public static string Format<T1, T2>(string format, T1 arg1, T2 arg2) => default;
-		public static string Format<T1, T2, T3>(string format, T1 arg1, T2 arg2, T3 arg3) => default;
-		public static string Format<T1, T2, T3, T4>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4) => default;
-		public static string Format<T1, T2, T3, T4, T5>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5) => default;
-		public static string Format<T1, T2, T3, T4, T5, T6>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6) => default;
+		public static string Concat<T1, T2>(T1 arg1, T2 arg2);
+		public static string Concat<T1, T2, T3>(T1 arg1, T2 arg2, T3 arg3);
+		public static string Concat<T1, T2, T3, T4>(T1 arg1, T2 arg2, T3 arg3, T4 arg4);
+		public static string Concat<T1, T2, T3, T4, T5>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);
+		public static string Concat<T1, T2, T3, T4, T5, T6>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6);
+		public static string Concat<T1, T2, T3, T4, T5, T6, T7>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7);
+		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8);
+		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9);
+		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10);
+		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11);
+		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12);
+		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13);
+		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14);
+		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15);
+		public static string Concat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15, T16 arg16);
+		public static Utf16ValueStringBuilder CreateStringBuilder(); // 0x000000018379A620-0x000000018379A640
+		public static string Join<T>(char separator, params T[] values);
+		public static string Join<T>(char separator, List<T> values);
+		public static string Join<T>(char separator, IEnumerable<T> values);
+		public static string Join<T>(char separator, ICollection<T> values);
+		public static string Join<T>(char separator, IList<T> values);
+		public static string Join<T>(char separator, IReadOnlyList<T> values);
+		public static string Join<T>(char separator, IReadOnlyCollection<T> values);
+		public static string Join<T>(string separator, List<T> values);
+		public static string Join<T>(string separator, ICollection<T> values);
+		public static string Join<T>(string separator, IList<T> values);
+		public static string Join<T>(string separator, IReadOnlyList<T> values);
+		public static string Join<T>(string separator, IReadOnlyCollection<T> values);
+		public static string Join<T>(string separator, IEnumerable<T> values);
+		private static string JoinInternal<T>([Nullable(0)] ReadOnlySpan<char> separator, IList<T> values);
+		private static string JoinInternal<T>([Nullable(0)] ReadOnlySpan<char> separator, IReadOnlyList<T> values);
+		[NullableContext(0)]
+		private static string JoinInternal<T>(ReadOnlySpan<char> separator, [Nullable(new byte[2] {0, 1 })] ReadOnlySpan<T> values);
+		private static string JoinInternal<T>([Nullable(0)] ReadOnlySpan<char> separator, IEnumerable<T> values);
+		public static string Format<T1>(string format, T1 arg1);
+		public static string Format<T1, T2>(string format, T1 arg1, T2 arg2);
+		public static string Format<T1, T2, T3>(string format, T1 arg1, T2 arg2, T3 arg3);
+		public static string Format<T1, T2, T3, T4>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4);
+		public static string Format<T1, T2, T3, T4, T5>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);
+		public static string Format<T1, T2, T3, T4, T5, T6>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6);
+		public static string Format<T1, T2, T3, T4, T5, T6, T7>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7);
+		public static string Format<T1, T2, T3, T4, T5, T6, T7, T8>(string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8);
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 59656
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 62231
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -575,87 +583,93 @@ namespace IFix
 		public static ILFixDynamicMethodWrapper[] wrapperArray; // 0x00
 	
 		// Constructors
-		public ILFixDynamicMethodWrapper() {} // Dummy constructor
-		static ILFixDynamicMethodWrapper() {} // 0x0000000185F64470-0x0000000185F644E0
+		static ILFixDynamicMethodWrapper(); // 0x0000000184D374F0-0x0000000184D37560
 	
 		// Methods
-		public void __Gen_Wrap_0(object P0, char P1) {} // 0x000000018C3D6630-0x000000018C3D670C
-		public void __Gen_Wrap_2(object P0, int P1) {} // 0x000000018769E90C-0x000000018769E9E8
-		public void __Gen_Wrap_3(object P0, object P1) {} // 0x00000001873527E8-0x00000001873528C4
-		public void __Gen_Wrap_5(object P0, Span<char> P1) {} // 0x000000018C3D70FC-0x000000018C3D7210
-		public void __Gen_Wrap_6(object P0, char P1, int P2) {} // 0x000000018C3D7210-0x000000018C3D7308
-		public int __Gen_Wrap_8(object P0, byte P1) => default; // 0x000000018C3D7308-0x000000018C3D73E0
-		public void __Gen_Wrap_9(object P0) {} // 0x000000018646FFC0-0x0000000186470080
-		public void __Gen_Wrap_10() {} // 0x0000000187678160-0x00000001876781FC
-		public IDisposable __Gen_Wrap_11() => default; // 0x000000018C3D670C-0x000000018C3D67D8
-		public UnSafeString __Gen_Wrap_12(int P0, bool P1) => default; // 0x000000018C3D67D8-0x000000018C3D68E4
-		public UnSafeString __Gen_Wrap_13(int P0) => default; // 0x000000018C3D68E4-0x000000018C3D69D0
-		public int __Gen_Wrap_14(object P0) => default; // 0x00000001873408C8-0x0000000187340998
-		public string __Gen_Wrap_15(object P0) => default; // 0x000000018C3D69D0-0x000000018C3D6AC0
-		public void __Gen_Wrap_16(object P0, Span<byte> P1) {} // 0x000000018C3D6AC0-0x000000018C3D6BC0
-		public UnSafeString __Gen_Wrap_23(Span<byte> P0) => default; // 0x000000018C3D6BC0-0x000000018C3D6CC0
-		public UnSafeString __Gen_Wrap_24(object P0) => default; // 0x000000018C3D6CC0-0x000000018C3D6DB0
-		public void __Gen_Wrap_31(object P0, char P1, ref List<UnSafeString> P2) {} // 0x000000018C3D6DB0-0x000000018C3D6EF4
-		public UnSafeString.UnSafeStringHandle __Gen_Wrap_32(int P0) => default; // 0x000000018C3D6EF4-0x000000018C3D6FE0
-		public void __Gen_Wrap_33(ref UnSafeString.UnSafeStringHandle P0) {} // 0x000000018C3D6FE0-0x000000018C3D70FC
+		public int __Gen_Wrap_0(object P0); // 0x0000000186360E84-0x0000000186360F54
+		public void __Gen_Wrap_1(object P0, int P1); // 0x00000001866F3838-0x00000001866F3914
+		public void __Gen_Wrap_2(object P0, char P1); // 0x000000018698C880-0x000000018698C95C
+		public void __Gen_Wrap_4(object P0, object P1); // 0x0000000186377B18-0x0000000186377BF4
+		public void __Gen_Wrap_6(object P0, Span<char> P1); // 0x000000018B8BFF2C-0x000000018B8C0040
+		public void __Gen_Wrap_7(object P0, char P1, int P2); // 0x000000018698C95C-0x000000018698CA54
+		public int __Gen_Wrap_9(object P0, byte P1); // 0x000000018B8C0040-0x000000018B8C0118
+		public void __Gen_Wrap_10(object P0); // 0x00000001863633B4-0x0000000186363474
+		public void __Gen_Wrap_11(); // 0x00000001863625A4-0x0000000186362640
+		public IDisposable __Gen_Wrap_12(); // 0x000000018B8BF53C-0x000000018B8BF608
+		public UnSafeString __Gen_Wrap_13(int P0, bool P1); // 0x000000018B8BF608-0x000000018B8BF714
+		public UnSafeString __Gen_Wrap_14(int P0); // 0x000000018B8BF714-0x000000018B8BF800
+		public string __Gen_Wrap_15(object P0); // 0x000000018B8BF800-0x000000018B8BF8F0
+		public void __Gen_Wrap_16(object P0, Span<byte> P1); // 0x000000018B8BF8F0-0x000000018B8BF9F0
+		public UnSafeString __Gen_Wrap_23(Span<byte> P0); // 0x000000018B8BF9F0-0x000000018B8BFAF0
+		public UnSafeString __Gen_Wrap_24(object P0); // 0x000000018B8BFAF0-0x000000018B8BFBE0
+		public void __Gen_Wrap_31(object P0, char P1, ref List<UnSafeString> P2); // 0x000000018B8BFBE0-0x000000018B8BFD24
+		public UnSafeString.UnSafeStringHandle __Gen_Wrap_32(int P0); // 0x000000018B8BFD24-0x000000018B8BFE10
+		public void __Gen_Wrap_33(ref UnSafeString.UnSafeStringHandle P0); // 0x000000018B8BFE10-0x000000018B8BFF2C
 	}
 
-	public class WrappersManagerImpl // TypeDefIndex: 59657
+	public class WrappersManagerImpl // TypeDefIndex: 62232
 	{
-		// Constructors
-		public WrappersManagerImpl() {} // Dummy constructor
-	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x000000018C3D9120-0x000000018C3D9184
-		public static bool IsPatched(int id) => default; // 0x00000001840562E0-0x0000000184056480
+		public static ILFixDynamicMethodWrapper GetPatch(int id); // 0x000000018B8C1D4C-0x000000018B8C1DB0
+		public static bool IsPatched(int id); // 0x0000000182F7FE90-0x0000000182F7FF20
 	}
 }
 
 namespace Microsoft.CodeAnalysis
 {
-	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 59627
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 62202
 	{
 		// Constructors
-		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public EmbeddedAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace System.Numerics
 {
-	public static class BitOperations // TypeDefIndex: 59639
+	public static class BitOperations // TypeDefIndex: 62214
 	{
 		// Properties
-		private static ReadOnlySpan<byte> TrailingZeroCountDeBruijn { get; } // 0x000000018441BD30-0x000000018441BDB0 
-		private static ReadOnlySpan<byte> Log2DeBruijn { get; } // 0x000000018C3D609C-0x000000018C3D60F8 
+		private static ReadOnlySpan<byte> TrailingZeroCountDeBruijn { get; } // 0x0000000182FEC520-0x0000000182FEC570 
+		private static ReadOnlySpan<byte> Log2DeBruijn { get; } // 0x0000000182FEC570-0x0000000182FEC5F0 
 	
 		// Methods
-		public static int LeadingZeroCount(uint value) => default; // 0x0000000186936AC8-0x0000000186936AEC
-		private static int Log2SoftwareFallback(uint value) => default; // 0x000000018C3D5F8C-0x000000018C3D600C
-		public static int TrailingZeroCount(uint value) => default; // 0x000000018C3D600C-0x000000018C3D607C
-		public static int TrailingZeroCount(ulong value) => default; // 0x000000018C3D607C-0x000000018C3D609C
+		public static int LeadingZeroCount(uint value); // 0x000000018B8BEEC4-0x000000018B8BEEE8
+		public static int LeadingZeroCount(ulong value); // 0x000000018B8BEEE8-0x000000018B8BEF10
+		private static int Log2SoftwareFallback(uint value); // 0x0000000182FEA7D0-0x0000000182FEC520
+		public static int PopCount(uint value); // 0x0000000184DADFA0-0x0000000184DADFE0
+		public static int PopCount(ulong value); // 0x000000018B8BEF10-0x000000018B8BEF6C
+		public static int TrailingZeroCount(int value); // 0x000000018B8BEFDC-0x000000018B8BEFE4
+		public static int TrailingZeroCount(uint value); // 0x000000018B8BEF6C-0x000000018B8BEFDC
+		public static int TrailingZeroCount(ulong value); // 0x000000018B8BEFE4-0x000000018B8BF004
 	}
 }
 
 namespace System.Runtime.CompilerServices
 {
-	internal sealed class NullableAttribute : Attribute // TypeDefIndex: 59628
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Parameter | AttributeTargets.ReturnValue | AttributeTargets.GenericParameter, AllowMultiple = false, Inherited = false)]
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class NullableAttribute : Attribute // TypeDefIndex: 62203
 	{
 		// Fields
 		public readonly byte[] NullableFlags; // 0x10
 	
 		// Constructors
-		public NullableAttribute() {} // Dummy constructor
-		public NullableAttribute(byte param_0007d5c2) {} // 0x000000018C3D745C-0x000000018C3D74CC
-		public NullableAttribute(byte[] param_0007d5c3) {} // 0x0000000184096E30-0x0000000184096EF0
+		public NullableAttribute(byte param_00084da0); // 0x000000018B8C0194-0x000000018B8C0204
+		public NullableAttribute(byte[] param_00084da1); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	internal sealed class NullableContextAttribute : Attribute // TypeDefIndex: 59629
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Method | AttributeTargets.Interface | AttributeTargets.Delegate, AllowMultiple = false, Inherited = false)]
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class NullableContextAttribute : Attribute // TypeDefIndex: 62204
 	{
 		// Fields
 		public readonly byte Flag; // 0x10
 	
 		// Constructors
-		public NullableContextAttribute() {} // Dummy constructor
-		public NullableContextAttribute(byte param_0007d5c4) {} // 0x000000018184FBD0-0x000000018184FBE0
+		public NullableContextAttribute(byte param_00084da2); // 0x0000000184D86130-0x0000000184D86140
 	}
 }

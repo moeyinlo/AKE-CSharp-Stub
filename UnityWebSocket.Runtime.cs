@@ -4,38 +4,45 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net.WebSockets;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using UnityEngine;
 
-// Image 122: UnityWebSocket.Runtime.dll - Assembly: UnityWebSocket.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61050-61065
+// Image 124: UnityWebSocket.Runtime.dll - Assembly: UnityWebSocket.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63686-63701
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace UnityWebSocket
 {
-	public class CloseEventArgs : EventArgs // TypeDefIndex: 61051
+	public class CloseEventArgs : EventArgs // TypeDefIndex: 63687
 	{
 		// Fields
+		[CompilerGenerated]
 		private ushort _Code_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private string _Reason_k__BackingField; // 0x18
+		[CompilerGenerated]
 		private bool _WasClean_k__BackingField; // 0x20
 	
 		// Properties
-		public ushort Code { get; private set; } // 0x0000000185FC2810-0x0000000185FC2820 0x0000000185FC1C30-0x0000000185FC1C40
-		public string Reason { get; private set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-		public bool WasClean { get; internal set; } // 0x00000001813ECBF0-0x00000001813ECC00 0x00000001813EE9B0-0x00000001813EE9C0
-		public CloseStatusCode StatusCode { get => default; } // 0x000000018C0A4BAC-0x000000018C0A4C74 
+		public ushort Code { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D96190-0x0000000184D961A0 0x0000000184D94F60-0x0000000184D94F70
+		public string Reason { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public bool WasClean { [CompilerGenerated] get; [CompilerGenerated] internal set; } // 0x0000000184D866B0-0x0000000184D866C0 0x0000000184D866D0-0x0000000184D866E0
+		public CloseStatusCode StatusCode { get; } // 0x000000018B5915F8-0x000000018B5916C0 
 	
 		// Constructors
-		internal CloseEventArgs() {} // 0x000000018C0A4B6C-0x000000018C0A4BAC
-		internal CloseEventArgs(ushort code) {} // 0x000000018C0A4B58-0x000000018C0A4B64
-		internal CloseEventArgs(CloseStatusCode code) {} // 0x000000018C0A4B58-0x000000018C0A4B64
-		internal CloseEventArgs(CloseStatusCode code, string reason) {} // 0x000000018C0A4B64-0x000000018C0A4B6C
-		internal CloseEventArgs(ushort code, string reason) {} // 0x000000018C0A4AF8-0x000000018C0A4B58
+		internal CloseEventArgs(); // 0x000000018B5915B8-0x000000018B5915F8
+		internal CloseEventArgs(ushort code); // 0x000000018B5915A4-0x000000018B5915B0
+		internal CloseEventArgs(CloseStatusCode code); // 0x000000018B5915A4-0x000000018B5915B0
+		internal CloseEventArgs(CloseStatusCode code, string reason); // 0x000000018B5915B0-0x000000018B5915B8
+		internal CloseEventArgs(ushort code, string reason); // 0x000000018B591544-0x000000018B5915A4
 	}
 
-	public enum CloseStatusCode : ushort // TypeDefIndex: 61052
+	public enum CloseStatusCode : ushort // TypeDefIndex: 63688
 	{
 		Normal = 1000,
 		Away = 1001,
@@ -53,23 +60,24 @@ namespace UnityWebSocket
 		Unknown = 65534
 	}
 
-	public class ErrorEventArgs : EventArgs // TypeDefIndex: 61053
+	public class ErrorEventArgs : EventArgs // TypeDefIndex: 63689
 	{
 		// Fields
+		[CompilerGenerated]
 		private Exception _Exception_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private string _Message_k__BackingField; // 0x18
 	
 		// Properties
-		public Exception Exception { get; private set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public string Message { get; private set; } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
+		public Exception Exception { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public string Message { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
 	
 		// Constructors
-		public ErrorEventArgs() {} // Dummy constructor
-		internal ErrorEventArgs(string message) {} // 0x000000018C0A4CE0-0x000000018C0A4CEC
-		internal ErrorEventArgs(string message, Exception exception) {} // 0x000000018C0A4C74-0x000000018C0A4CE0
+		internal ErrorEventArgs(string message); // 0x000000018B59172C-0x000000018B591738
+		internal ErrorEventArgs(string message, Exception exception); // 0x000000018B5916C0-0x000000018B59172C
 	}
 
-	public interface IWebSocket // TypeDefIndex: 61054
+	public interface IWebSocket // TypeDefIndex: 63690
 	{
 		// Properties
 		string Address { get; }
@@ -78,10 +86,22 @@ namespace UnityWebSocket
 		string BinaryType { get; set; }
 	
 		// Events
-		event EventHandler<OpenEventArgs> OnOpen;
-		event EventHandler<CloseEventArgs> OnClose;
-		event EventHandler<ErrorEventArgs> OnError;
-		event EventHandler<MessageEventArgs> OnMessage;
+		event EventHandler<OpenEventArgs> OnOpen {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
+		event EventHandler<CloseEventArgs> OnClose {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
+		event EventHandler<ErrorEventArgs> OnError {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
+		event EventHandler<MessageEventArgs> OnMessage {
+			add; // 0x00000000-0x00000000
+			remove; // 0x00000000-0x00000000
+		}
 	
 		// Methods
 		void ConnectAsync();
@@ -90,55 +110,55 @@ namespace UnityWebSocket
 		void SendAsync(string text);
 	}
 
-	public class MessageEventArgs : EventArgs // TypeDefIndex: 61055
+	public class MessageEventArgs : EventArgs // TypeDefIndex: 63691
 	{
 		// Fields
 		private byte[] _rawData; // 0x10
 		private string _data; // 0x18
+		[CompilerGenerated]
 		private Opcode _Opcode_k__BackingField; // 0x20
 	
 		// Properties
-		internal Opcode Opcode { get; private set; } // 0x00000001813ECBF0-0x00000001813ECC00 0x00000001813EE9B0-0x00000001813EE9C0
-		public string Data { get => default; } // 0x000000018C0A4E64-0x000000018C0A4E80 
-		public byte[] RawData { get => default; } // 0x000000018C0A4E90-0x000000018C0A4EAC 
-		public bool IsBinary { get => default; } // 0x000000018C0A4E80-0x000000018C0A4E88 
-		public bool IsText { get => default; } // 0x000000018C0A4E88-0x000000018C0A4E90 
+		internal Opcode Opcode { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D866B0-0x0000000184D866C0 0x0000000184D866D0-0x0000000184D866E0
+		public string Data { get; } // 0x000000018B5918B0-0x000000018B5918CC 
+		public byte[] RawData { get; } // 0x000000018B5918DC-0x000000018B5918F8 
+		public bool IsBinary { get; } // 0x000000018B5918CC-0x000000018B5918D4 
+		public bool IsText { get; } // 0x000000018B5918D4-0x000000018B5918DC 
 	
 		// Constructors
-		public MessageEventArgs() {} // Dummy constructor
-		internal MessageEventArgs(Opcode opcode, byte[] rawData) {} // 0x000000018C0A4DA4-0x000000018C0A4E04
-		internal MessageEventArgs(Opcode opcode, string data) {} // 0x000000018C0A4E04-0x000000018C0A4E64
+		internal MessageEventArgs(Opcode opcode, byte[] rawData); // 0x000000018B5917F0-0x000000018B591850
+		internal MessageEventArgs(Opcode opcode, string data); // 0x000000018B591850-0x000000018B5918B0
 	
 		// Methods
-		private void SetData() {} // 0x000000018C0A4CEC-0x000000018C0A4D54
-		private void SetRawData() {} // 0x000000018C0A4D54-0x000000018C0A4DA4
+		private void SetData(); // 0x000000018B591738-0x000000018B5917A0
+		private void SetRawData(); // 0x000000018B5917A0-0x000000018B5917F0
 	}
 
-	public enum Opcode : byte // TypeDefIndex: 61056
+	public enum Opcode : byte // TypeDefIndex: 63692
 	{
 		Text = 1,
 		Binary = 2,
 		Close = 8
 	}
 
-	public class OpenEventArgs : EventArgs // TypeDefIndex: 61057
+	public class OpenEventArgs : EventArgs // TypeDefIndex: 63693
 	{
 		// Constructors
-		internal OpenEventArgs() {} // 0x000000018C0A4EAC-0x000000018C0A4EEC
+		internal OpenEventArgs(); // 0x000000018B5918F8-0x000000018B591938
 	}
 
-	public static class Settings // TypeDefIndex: 61058
+	public static class Settings // TypeDefIndex: 63694
 	{
 		// Fields
-		public const string GITHUB = "https://github.com/psygames/UnityWebSocket"; // Metadata: 0x02082DD0
-		public const string QQ_GROUP = "1126457634"; // Metadata: 0x02082DFB
-		public const string QQ_GROUP_LINK = "https://qm.qq.com/cgi-bin/qm/qr?k=KcexYJ9aYwogFXbj2aN0XHH5b2G7ICmd"; // Metadata: 0x02082E06
-		public const string EMAIL = "799329256@qq.com"; // Metadata: 0x02082E4A
-		public const string AUHTOR = "psygames"; // Metadata: 0x02082E5B
-		public const string VERSION = "2.7.0"; // Metadata: 0x02082E64
+		public const string GITHUB = "https://github.com/psygames/UnityWebSocket"; // Metadata: 0x02352A50
+		public const string QQ_GROUP = "1126457634"; // Metadata: 0x02352A7B
+		public const string QQ_GROUP_LINK = "https://qm.qq.com/cgi-bin/qm/qr?k=KcexYJ9aYwogFXbj2aN0XHH5b2G7ICmd"; // Metadata: 0x02352A86
+		public const string EMAIL = "799329256@qq.com"; // Metadata: 0x02352ACA
+		public const string AUHTOR = "psygames"; // Metadata: 0x02352ADB
+		public const string VERSION = "2.7.0"; // Metadata: 0x02352AE4
 	}
 
-	public enum WebSocketState : ushort // TypeDefIndex: 61059
+	public enum WebSocketState : ushort // TypeDefIndex: 63695
 	{
 		Connecting = 0,
 		Open = 1,
@@ -146,15 +166,22 @@ namespace UnityWebSocket
 		Closed = 3
 	}
 
-	public class WebSocket : IWebSocket // TypeDefIndex: 61064
+	public class WebSocket : IWebSocket // TypeDefIndex: 63700
 	{
 		// Fields
+		[CompilerGenerated]
 		private string _Address_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private string[] _SubProtocols_k__BackingField; // 0x18
+		[CompilerGenerated]
 		private string _BinaryType_k__BackingField; // 0x20
+		[CompilerGenerated]
 		private EventHandler<OpenEventArgs> OnOpen; // 0x28
+		[CompilerGenerated]
 		private EventHandler<CloseEventArgs> OnClose; // 0x30
+		[CompilerGenerated]
 		private EventHandler<ErrorEventArgs> OnError; // 0x38
+		[CompilerGenerated]
 		private EventHandler<MessageEventArgs> OnMessage; // 0x40
 		private ClientWebSocket socket; // 0x48
 		private object sendQueueLock; // 0x50
@@ -164,31 +191,43 @@ namespace UnityWebSocket
 		private readonly object eventQueueLock; // 0x70
 	
 		// Properties
-		public string Address { get; private set; } // 0x000000018C0A7F28-0x000000018C0A7FB4 0x000000018C0A81DC-0x000000018C0A8268
-		public string[] SubProtocols { get; private set; } // 0x000000018C0A7D84-0x000000018C0A7E10 0x000000018C0A8038-0x000000018C0A80C4
-		public WebSocketState ReadyState { get => default; } // 0x000000018C0A7E10-0x000000018C0A7E9C 
-		public string BinaryType { get; set; } // 0x000000018C0A80C4-0x000000018C0A8150 0x000000018C0A7E9C-0x000000018C0A7F28
-		private bool isOpening { get => default; } // 0x000000018C0A7224-0x000000018C0A72CC 
+		public string Address { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public string[] SubProtocols { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public WebSocketState ReadyState { get; } // 0x000000018B594828-0x000000018B594880 
+		public string BinaryType { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+		private bool isOpening { get; } // 0x000000018B594880-0x000000018B5948AC 
 	
 		// Events
-		public event EventHandler<OpenEventArgs> OnOpen;
-		public event EventHandler<CloseEventArgs> OnClose;
-		public event EventHandler<ErrorEventArgs> OnError;
-		public event EventHandler<MessageEventArgs> OnMessage;
+		public event EventHandler<OpenEventArgs> OnOpen {
+			add; // 0x000000018B59479C-0x000000018B594828
+			remove; // 0x000000018B594A50-0x000000018B594B48
+		}
+		public event EventHandler<CloseEventArgs> OnClose {
+			add; // 0x000000018B5945F8-0x000000018B594684
+			remove; // 0x000000018B5948AC-0x000000018B594938
+		}
+		public event EventHandler<ErrorEventArgs> OnError {
+			add; // 0x000000018B594684-0x000000018B594710
+			remove; // 0x000000018B594938-0x000000018B5949C4
+		}
+		public event EventHandler<MessageEventArgs> OnMessage {
+			add; // 0x000000018B594710-0x000000018B59479C
+			remove; // 0x000000018B5949C4-0x000000018B594A50
+		}
 	
 		// Nested types
-		private class SendBuffer // TypeDefIndex: 61060
+		private class SendBuffer // TypeDefIndex: 63696
 		{
 			// Fields
 			public byte[] data; // 0x10
 			public WebSocketMessageType type; // 0x18
 	
 			// Constructors
-			public SendBuffer() {} // Dummy constructor
-			public SendBuffer(byte[] data, WebSocketMessageType type) {} // 0x000000018346D130-0x000000018346D140
+			public SendBuffer(byte[] data, WebSocketMessageType type); // 0x0000000183B46FF0-0x0000000183B47040
 		}
 	
-		private struct _ConnectTask_d__36 : IAsyncStateMachine // TypeDefIndex: 61061
+		[CompilerGenerated]
+		private struct _ConnectTask_d__36 : IAsyncStateMachine // TypeDefIndex: 63697
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -197,11 +236,13 @@ namespace UnityWebSocket
 			private TaskAwaiter __u__1; // 0x28
 	
 			// Methods
-			private void MoveNext() {} // 0x0000000184096E30-0x0000000184096EF0
-			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x0000000181377E40-0x0000000181377E50
+			private void MoveNext(); // 0x000000018B591938-0x000000018B591D04
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018B591D04-0x000000018B591D60
 		}
 	
-		private struct _SendTask_d__42 : IAsyncStateMachine // TypeDefIndex: 61062
+		[CompilerGenerated]
+		private struct _SendTask_d__42 : IAsyncStateMachine // TypeDefIndex: 63698
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -210,11 +251,13 @@ namespace UnityWebSocket
 			private TaskAwaiter __u__1; // 0x28
 	
 			// Methods
-			private void MoveNext() {} // 0x0000000184088E70-0x0000000184088E80
-			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x000000018C0A7FB4-0x000000018C0A800C
+			private void MoveNext(); // 0x000000018B592760-0x000000018B592E38
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018B592E38-0x000000018B592E94
 		}
 	
-		private struct _ReceiveTask_d__43 : IAsyncStateMachine // TypeDefIndex: 61063
+		[CompilerGenerated]
+		private struct _ReceiveTask_d__43 : IAsyncStateMachine // TypeDefIndex: 63699
 		{
 			// Fields
 			public int __1__state; // 0x00
@@ -228,53 +271,55 @@ namespace UnityWebSocket
 			private TaskAwaiter<WebSocketReceiveResult> __u__1; // 0x50
 	
 			// Methods
-			private void MoveNext() {} // 0x00000001813B31A0-0x00000001813B31B0
-			private void SetStateMachine(IAsyncStateMachine stateMachine) {} // 0x000000018646EE40-0x000000018646EE50
+			private void MoveNext(); // 0x000000018B591D60-0x000000018B592704
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine); // 0x000000018B592704-0x000000018B592760
 		}
 	
 		// Constructors
-		public WebSocket() {} // Dummy constructor
-		public WebSocket(string address) {} // 0x000000018C0A6B80-0x000000018C0A6C30
-		public WebSocket(string address, string subProtocol) {} // 0x000000018C0A72CC-0x000000018C0A75AC
-		public WebSocket(string address, string[] subProtocols) {} // 0x000000018C0A75AC-0x000000018C0A765C
+		public WebSocket(string address); // 0x000000018B5944B0-0x000000018B5945F8
+		public WebSocket(string address, string subProtocol); // 0x000000018B5941B4-0x000000018B59434C
+		public WebSocket(string address, string[] subProtocols); // 0x000000018B59434C-0x000000018B5944B0
 	
 		// Methods
-		public void ConnectAsync() {} // 0x000000018C0A70DC-0x000000018C0A7198
-		public void CloseAsync() {} // 0x000000018C0A765C-0x000000018C0A76C4
-		public void SendAsync(byte[] data) {} // 0x000000018C0A6EB8-0x000000018C0A6F20
-		public void SendAsync(string text) {} // 0x000000018C0A6E30-0x000000018C0A6EB8
-		private System.Threading.Tasks.Task ConnectTask() => default; // 0x000000018C0A6C30-0x000000018C0A6CB8
-		private void SendBufferAsync(SendBuffer buffer) {} // 0x000000018C0A6CB8-0x000000018C0A6D48
-		private System.Threading.Tasks.Task SendTask() => default; // 0x000000018C0A6D48-0x000000018C0A6E30
-		private System.Threading.Tasks.Task ReceiveTask() => default; // 0x000000018C0A76C4-0x000000018C0A7940
-		private void SocketDispose() {} // 0x000000018C0A6F20-0x000000018C0A70DC
-		private void HandleOpen() {} // 0x00000001845D7850-0x00000001845D7870
-		private void HandleMessage(Opcode opcode, byte[] rawData) {} // 0x000000018C0A4EEC-0x000000018C0A5318
-		private void HandleClose(ushort code, string reason) {} // 0x000000018C0A5318-0x000000018C0A5374
-		private void HandleError(Exception exception) {} // 0x000000018C0A5DA8-0x000000018C0A64C4
-		private void HandleEventSync(EventArgs eventArgs) {} // 0x000000018C0A64C4-0x000000018C0A6520
-		internal void Update() {} // 0x000000018C0A5374-0x000000018C0A5D4C
-		private static void Log(string msg) {} // 0x000000018C0A5D4C-0x000000018C0A5DA8
+		public void ConnectAsync(); // 0x000000018B593354-0x000000018B5934F4
+		public void CloseAsync(); // 0x000000018B5932D8-0x000000018B593354
+		public void SendAsync(byte[] data); // 0x000000018B593B0C-0x000000018B593B98
+		public void SendAsync(string text); // 0x000000018B593B98-0x000000018B593C40
+		private async System.Threading.Tasks.Task ConnectTask(); // 0x000000018B5934F4-0x000000018B5935A4
+		private void SendBufferAsync(SendBuffer buffer); // 0x000000018B593C40-0x000000018B593E20
+		private async System.Threading.Tasks.Task SendTask(); // 0x000000018B593E20-0x000000018B593ED0
+		private async System.Threading.Tasks.Task ReceiveTask(); // 0x000000018B593A50-0x000000018B593B0C
+		private void SocketDispose(); // 0x000000018B593ED0-0x000000018B593F38
+		private void HandleOpen(); // 0x000000018B59382C-0x000000018B593894
+		private void HandleMessage(Opcode opcode, byte[] rawData); // 0x000000018B5937A4-0x000000018B59382C
+		private void HandleClose(ushort code, string reason); // 0x000000018B5935A4-0x000000018B59362C
+		private void HandleError(Exception exception); // 0x000000018B59362C-0x000000018B5936BC
+		private void HandleEventSync(EventArgs eventArgs); // 0x000000018B5936BC-0x000000018B5937A4
+		internal void Update(); // 0x000000018B593F38-0x000000018B5941B4
+		[Conditional("UNITY_WEB_SOCKET_LOG")]
+		private static void Log(string msg); // 0x000000018B593894-0x000000018B593A50
 	}
 
-	internal class WebSocketManager : MonoBehaviour // TypeDefIndex: 61065
+	[DefaultExecutionOrder(-10000)]
+	internal class WebSocketManager : MonoBehaviour // TypeDefIndex: 63701
 	{
 		// Fields
-		private const string rootName = "[UnityWebSocket]"; // Metadata: 0x02082E72
+		private const string rootName = "[UnityWebSocket]"; // Metadata: 0x02352AF2
 		private static WebSocketManager _instance; // 0x00
 		private readonly List<WebSocket> sockets; // 0x18
 	
 		// Properties
-		public static WebSocketManager Instance { get => default; } // 0x000000018C0A68EC-0x000000018C0A6964 
+		public static WebSocketManager Instance { get; } // 0x000000018B593260-0x000000018B5932D8 
 	
 		// Constructors
-		public WebSocketManager() {} // 0x000000018C0A686C-0x000000018C0A68EC
+		public WebSocketManager(); // 0x000000018B5931E0-0x000000018B593260
 	
 		// Methods
-		private void Awake() {} // 0x000000018C0A65A0-0x000000018C0A65F0
-		public static void CreateInstance() {} // 0x000000018C0A65F0-0x000000018C0A6764
-		public void Add(WebSocket socket) {} // 0x000000018C0A6520-0x000000018C0A65A0
-		public void Remove(WebSocket socket) {} // 0x000000018C0A6764-0x000000018C0A67E4
-		private void Update() {} // 0x000000018C0A67E4-0x000000018C0A686C
+		private void Awake(); // 0x000000018B592F14-0x000000018B592F64
+		public static void CreateInstance(); // 0x000000018B592F64-0x000000018B5930D8
+		public void Add(WebSocket socket); // 0x000000018B592E94-0x000000018B592F14
+		public void Remove(WebSocket socket); // 0x000000018B5930D8-0x000000018B593158
+		private void Update(); // 0x000000018B593158-0x000000018B5931E0
 	}
 }

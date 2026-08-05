@@ -5,68 +5,101 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using Beyond.Gameplay.Core;
 using Beyond.PackageBridge.Timeline;
 using Events;
 using ScriptAnimation;
+using Unity.Profiling;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Events;
 using UnityEngine.Playables;
+using UnityEngine.Scripting;
+using UnityEngine.Serialization;
 using UnityEngine.Timeline;
 
-// Image 46: Unity.Timeline.dll - Assembly: Unity.Timeline, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 57385-57577
+// Image 45: Unity.Timeline.dll - Assembly: Unity.Timeline, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59726-59921
+[assembly: AssemblyCompany("Unity Technologies")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCopyright("Copyright \uFFFD 2016")]
+[assembly: AssemblyDescription("Unity Timeline")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyProduct("UnityEngine.Timeline")]
+[assembly: AssemblyTitle("UnityEngine.Timeline")]
+[assembly: AssemblyTrademark("")]
+[assembly: CompilationRelaxations(8)]
+[assembly: ComVisible(false)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: Guid("6A10B290-9283-487F-913B-00D94CD3FAF5")]
+[assembly: InternalsVisibleTo("Unity.Timeline.Editor")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-testable")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-Editor-testable")]
+[assembly: InternalsVisibleTo("Unity.Timeline.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.Timeline.Tests")]
+[assembly: InternalsVisibleTo("Unity.Timeline.Tests.Common")]
+[assembly: InternalsVisibleTo("Unity.Timeline.Tests.Performance")]
+[assembly: InternalsVisibleTo("Unity.Timeline.Tests.Performance.Editor")]
+[assembly: UnityEngine.Scripting.Preserve]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 57577
+[CompilerGenerated]
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 59921
 {
-	// Constructors
-	public _PrivateImplementationDetails_() {} // Dummy constructor
-
 	// Methods
-	internal static uint ComputeStringHash(string s) => default; // 0x0000000187809354-0x00000001878093A8
+	internal static uint ComputeStringHash(string s); // 0x000000018687A850-0x000000018687A8A4
 }
 
 namespace Beyond.Gameplay.Core
 {
-	public class DontAutoBindAttribute : DontAutoBindRuntimeAttribute // TypeDefIndex: 57399
+	[AttributeUsage(AttributeTargets.Class)]
+	public class DontAutoBindAttribute : DontAutoBindRuntimeAttribute // TypeDefIndex: 59741
 	{
 		// Constructors
-		public DontAutoBindAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public DontAutoBindAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class DontAutoBindRuntimeAttribute : Attribute // TypeDefIndex: 57400
+	[AttributeUsage(AttributeTargets.Class)]
+	public class DontAutoBindRuntimeAttribute : Attribute // TypeDefIndex: 59742
 	{
 		// Constructors
-		public DontAutoBindRuntimeAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public DontAutoBindRuntimeAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class BeyondUseAutoBindingPlayableAsset : PlayableAsset // TypeDefIndex: 57401
+	public class BeyondUseAutoBindingPlayableAsset : PlayableAsset // TypeDefIndex: 59743
 	{
 		// Fields
+		[HideInInspector]
 		public bool useAutoBinding; // 0x18
+		[HideInInspector]
 		public string autoBindingPath; // 0x20
 		[NonSerialized]
 		protected GameObject m_bindingGo; // 0x28
 	
 		// Properties
-		public virtual GameObject bindingGameObject { get => default; set {} } // 0x00000001813B8590-0x00000001813B85A0 0x0000000184A4EDC0-0x0000000184A4EDD0
+		protected virtual bool showBaseParam { get; } // 0x0000000182FFF600-0x0000000182FFF610 
+		public virtual GameObject bindingGameObject { get; set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
 	
 		// Constructors
-		public BeyondUseAutoBindingPlayableAsset() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public BeyondUseAutoBindingPlayableAsset(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
-		public void SetBindingGameObject(GameObject tBindingGameObject) {} // 0x000000018BE3E6BC-0x000000018BE3E6E4
-		protected virtual void OnBindGoChanged() {} // 0x0000000185492010-0x0000000185492020
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x000000018BE3E670-0x000000018BE3E6BC
+		public void SetBindingGameObject(GameObject tBindingGameObject); // 0x000000018B33E76C-0x000000018B33E794
+		protected virtual void OnBindGoChanged(); // 0x00000001841E1670-0x00000001841E1680
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner); // 0x000000018B33E720-0x000000018B33E76C
 	}
 
-	public class RuntimeJumpBehaviour : PlayableBehaviour // TypeDefIndex: 57402
+	public class RuntimeJumpBehaviour : PlayableBehaviour // TypeDefIndex: 59744
 	{
 		// Constructors
-		public RuntimeJumpBehaviour() {} // 0x0000000185492010-0x0000000185492020
+		public RuntimeJumpBehaviour(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class RuntimeJumpClip : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 57403
+	public class RuntimeJumpClip : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 59745
 	{
 		// Fields
 		public bool isReverseJump; // 0x18
@@ -76,49 +109,58 @@ namespace Beyond.Gameplay.Core
 		public bool isJumpFirst; // 0x28
 	
 		// Properties
-		public ClipCaps clipCaps { get => default; } // 0x0000000185FBDF10-0x0000000185FBDF20 
+		public ClipCaps clipCaps { get; } // 0x0000000184DBA570-0x0000000184DBA580 
 	
 		// Constructors
-		public RuntimeJumpClip() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public RuntimeJumpClip(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x000000018BE41790-0x000000018BE41828
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner); // 0x000000018B33F664-0x000000018B33F6FC
 	}
 
-	public class RuntimeJumpTrack : TrackAsset // TypeDefIndex: 57404
+	[CombineToTopPlayable]
+	[System.ComponentModel.DisplayName("Beyond/RuntimeJumpTrack")]
+	[SupportsChildTracks(null, 2147483647)]
+	[TrackClipType(typeof(RuntimeJumpClip))]
+	public class RuntimeJumpTrack : TrackAsset // TypeDefIndex: 59746
 	{
 		// Constructors
-		public RuntimeJumpTrack() {} // 0x000000018BE41828-0x000000018BE41874
+		public RuntimeJumpTrack(); // 0x000000018B33F6FC-0x000000018B33F748
 	}
 
-	public class RuntimeLoopBehaviour : PlayableBehaviour // TypeDefIndex: 57405
+	public class RuntimeLoopBehaviour : PlayableBehaviour // TypeDefIndex: 59747
 	{
 		// Constructors
-		public RuntimeLoopBehaviour() {} // 0x0000000185492010-0x0000000185492020
+		public RuntimeLoopBehaviour(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class RuntimeLoopClip : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 57406
+	public class RuntimeLoopClip : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 59748
 	{
 		// Fields
 		public double crossFadeDuration; // 0x18
 	
 		// Properties
-		public ClipCaps clipCaps { get => default; } // 0x0000000185FB7DE0-0x0000000185FB7DF0 
+		public ClipCaps clipCaps { get; } // 0x0000000184DB8E50-0x0000000184DB8E60 
 	
 		// Constructors
-		public RuntimeLoopClip() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public RuntimeLoopClip(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x000000018BE41874-0x000000018BE4190C
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner); // 0x000000018B33F748-0x000000018B33F7E0
 	}
 
-	public class RuntimeLoopTrack : TrackAsset // TypeDefIndex: 57407
+	[CombineToTopPlayable]
+	[System.ComponentModel.DisplayName("Beyond/RuntimeLoopTrack")]
+	[SupportsChildTracks(null, 2147483647)]
+	[TrackClipType(typeof(RuntimeLoopClip))]
+	public class RuntimeLoopTrack : TrackAsset // TypeDefIndex: 59749
 	{
 		// Constructors
-		public RuntimeLoopTrack() {} // 0x000000018BE4190C-0x000000018BE41958
+		public RuntimeLoopTrack(); // 0x000000018B33F7E0-0x000000018B33F82C
 	}
 
-	public class TimelineNPCLookAtController : MonoBehaviour // TypeDefIndex: 57408
+	[ExecuteInEditMode]
+	public class TimelineNPCLookAtController : MonoBehaviour // TypeDefIndex: 59750
 	{
 		// Fields
 		private static readonly HashSet<TimelineNPCLookAtController> s_instances; // 0x00
@@ -126,76 +168,84 @@ namespace Beyond.Gameplay.Core
 		public bool m_lookAtDirty; // 0x18
 		public TimelineNPCLookAtTarget lookAtTarget; // 0x20
 		public TimelineNPCLookAtEyeTarget lookAtEyeTarget; // 0x28
+		public TimelineNPCLookAtTargetV2 lookAtTargetV2; // 0x30
 		[NonSerialized]
-		public bool lookAtEnabled; // 0x30
+		public bool lookAtEnabled; // 0x38
 		[NonSerialized]
-		public bool lookAtEyeEnabled; // 0x31
+		public bool lookAtEyeEnabled; // 0x39
 	
 		// Properties
-		public static IEnumerable<TimelineNPCLookAtController> Instances { get => default; } // 0x000000018BE458B0-0x000000018BE45900 
-		public bool lookAtDirty { get => default; set {} } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
-		public float lookAtWeight { get => default; set {} } // 0x000000018BE45E10-0x000000018BE45E84 0x000000018BE46404-0x000000018BE4647C
-		public float lookAtBodyWeight { get => default; set {} } // 0x000000018BE45A58-0x000000018BE45ACC 0x000000018BE4603C-0x000000018BE460B4
-		public float lookAtRoll { get => default; set {} } // 0x000000018BE45CAC-0x000000018BE45D20 0x000000018BE46298-0x000000018BE46310
-		public float lookAtHorizontal { get => default; set {} } // 0x000000018BE45C28-0x000000018BE45CAC 0x000000018BE4621C-0x000000018BE46298
-		public float lookAtVertical { get => default; set {} } // 0x000000018BE45D8C-0x000000018BE45E10 0x000000018BE46388-0x000000018BE46404
-		public float lookAtEyeWeight { get => default; set {} } // 0x000000018BE45BAC-0x000000018BE45C28 0x000000018BE461A4-0x000000018BE4621C
-		public bool lookAtUseDegree { get => default; set {} } // 0x000000018BE45D20-0x000000018BE45D8C 0x000000018BE46310-0x000000018BE46388
-		public bool EyeUseDegree { get => default; set {} } // 0x000000018BE45844-0x000000018BE458B0 0x000000018BE45E84-0x000000018BE45EFC
-		public float lookAtEyeUp { get => default; set {} } // 0x000000018BE45B3C-0x000000018BE45BAC 0x000000018BE4612C-0x000000018BE461A4
-		public float lookAtEyeDown { get => default; set {} } // 0x000000018BE45ACC-0x000000018BE45B3C 0x000000018BE460B4-0x000000018BE4612C
-		public Vector3 finalPosition { get => default; set {} } // 0x000000018BE459AC-0x000000018BE45A58 0x000000018BE45F9C-0x000000018BE4603C
-		public Vector3 finalEyePosition { get => default; set {} } // 0x000000018BE45900-0x000000018BE459AC 0x000000018BE45EFC-0x000000018BE45F9C
+		public static IEnumerable<TimelineNPCLookAtController> Instances { get; } // 0x000000018B342314-0x000000018B342364 
+		public bool lookAtDirty { get; set; } // 0x0000000184D86340-0x0000000184D86350 0x0000000184D86350-0x0000000184D86360
+		public float lookAtWeight { get; set; } // 0x000000018B342B08-0x000000018B342BA0 0x000000018B3432B8-0x000000018B343350
+		public float lookAtBodyWeight { get; set; } // 0x000000018B3425D8-0x000000018B342674 0x000000018B342E0C-0x000000018B342EAC
+		public float lookAtBlendWeight { get; set; } // 0x000000018B342564-0x000000018B3425D8 0x000000018B342D94-0x000000018B342E0C
+		public float lookAtOverrideWeight { get; } // 0x000000018B342888-0x000000018B342924 
+		public float lookAtAdditiveWeight { get; } // 0x000000018B3424E4-0x000000018B342564 
+		public float lookAtRoll { get; set; } // 0x000000018B342924-0x000000018B3429C0 0x000000018B3430C8-0x000000018B343168
+		public float lookAtHorizontal { get; set; } // 0x000000018B3427D0-0x000000018B342888 0x000000018B343014-0x000000018B3430C8
+		public float lookAtVertical { get; set; } // 0x000000018B342A50-0x000000018B342B08 0x000000018B343204-0x000000018B3432B8
+		public float lookAtEyeWeight { get; set; } // 0x000000018B342754-0x000000018B3427D0 0x000000018B342F9C-0x000000018B343014
+		public bool lookAtUseDegree { get; set; } // 0x000000018B3429C0-0x000000018B342A50 0x000000018B343168-0x000000018B343204
+		public bool EyeUseDegree { get; set; } // 0x000000018B3422A8-0x000000018B342314 0x000000018B342BA0-0x000000018B342C18
+		public float lookAtEyeUp { get; set; } // 0x000000018B3426E4-0x000000018B342754 0x000000018B342F24-0x000000018B342F9C
+		public float lookAtEyeDown { get; set; } // 0x000000018B342674-0x000000018B3426E4 0x000000018B342EAC-0x000000018B342F24
+		public Vector3 finalPosition { get; set; } // 0x000000018B342410-0x000000018B3424E4 0x000000018B342CB8-0x000000018B342D94
+		public Vector3 finalEyePosition { get; set; } // 0x000000018B342364-0x000000018B342410 0x000000018B342C18-0x000000018B342CB8
 	
 		// Constructors
-		public TimelineNPCLookAtController() {} // 0x000000018BE45834-0x000000018BE45844
-		static TimelineNPCLookAtController() {} // 0x000000018BE457A8-0x000000018BE45834
+		public TimelineNPCLookAtController(); // 0x000000018B34228C-0x000000018B3422A8
+		static TimelineNPCLookAtController(); // 0x000000018B342200-0x000000018B34228C
 	
 		// Methods
-		private void OnEnable() {} // 0x000000018BE45738-0x000000018BE457A8
-		private void OnDisable() {} // 0x000000018BE456C8-0x000000018BE45738
-		public void MarkLookAtDirty() {} // 0x0000000185492010-0x0000000185492020
+		private void OnEnable(); // 0x000000018B342190-0x000000018B342200
+		private void OnDisable(); // 0x000000018B342120-0x000000018B342190
+		public void MarkLookAtDirty(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace Beyond.SourceGenerator
 {
-	internal class DataNAttribute : Attribute // TypeDefIndex: 57394
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class DataNAttribute : Attribute // TypeDefIndex: 59736
 	{
 		// Constructors
-		public DataNAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public DataNAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 57395
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 59737
 	{
 		// Constructors
-		public ECSComponentAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public ECSComponentAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal static class AnimatorBlackboardUtility // TypeDefIndex: 57396
-	{
-	}
-
-	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 57397
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 59738
 	{
 		// Constructors
-		public AnimatorBlackboardAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public CameraControlConfigAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 57398
+	internal static class AnimatorBlackboardUtility // TypeDefIndex: 59739
+	{
+	}
+
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 59740
 	{
 		// Constructors
-		public CameraControlConfigAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public AnimatorBlackboardAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace Events
 {
-	public interface INotificationTrack // TypeDefIndex: 57392
+	public interface INotificationTrack // TypeDefIndex: 59734
 	{
 	}
 
-	public interface ITimelineNotification // TypeDefIndex: 57393
+	public interface ITimelineNotification // TypeDefIndex: 59735
 	{
 		// Methods
 		void OnNotify(ITimelineRootMarker root);
@@ -204,99 +254,135 @@ namespace Events
 
 namespace HG.Rendering.Runtime
 {
-	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 57386
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 59727
 	{
 		// Constructors
-		public HGConstantBufferLayoutAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public HGConstantBufferLayoutAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace ScriptAnimation
 {
-	public class TimelineNPCClothWeightController : MonoBehaviour // TypeDefIndex: 57387
+	[UseScriptDefaultValueWhenExport]
+	public class TimelineNPCClothWeightController : MonoBehaviour // TypeDefIndex: 59728
 	{
 		// Fields
 		public bool forceSetPhysicsClothWeight; // 0x18
+		[Range(0f, 1f)]
 		public float physicsClothWeight; // 0x1C
 		public bool forceSetPhysicsClothPart1Weight; // 0x20
+		[Range(0f, 1f)]
 		public float physicsClothPart1Weight; // 0x24
 		public bool forceSetPhysicsClothPart2Weight; // 0x28
+		[Range(0f, 1f)]
 		public float physicsClothPart2Weight; // 0x2C
 		public bool forceSetLoopBodyAddWeight; // 0x30
+		[Range(0f, 1f)]
 		public float loopBodyAddWeight; // 0x34
 	
 		// Constructors
-		public TimelineNPCClothWeightController() {} // 0x000000018BE456A4-0x000000018BE456C8
+		public TimelineNPCClothWeightController(); // 0x000000018B3420EC-0x000000018B342120
 	}
 
-	public class TimelineNPCLookAtEyeTarget : MonoBehaviour // TypeDefIndex: 57388
+	[UseScriptDefaultValueWhenExport]
+	public class TimelineNPCLookAtEyeTarget : MonoBehaviour // TypeDefIndex: 59729
 	{
 		// Fields
+		[Range(0f, 1f)]
 		public float lookAtWeight; // 0x18
+		[FormerlySerializedAs("lookAtUseDegree")]
 		public bool useDegree; // 0x1C
+		[Range(-1f, 1f)]
 		public float lookAtUp; // 0x20
+		[Range(-1f, 1f)]
 		public float lookAtDown; // 0x24
 	
 		// Constructors
-		public TimelineNPCLookAtEyeTarget() {} // 0x000000018646DB20-0x000000018646DB28
+		public TimelineNPCLookAtEyeTarget(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		public void ResetLookAtWeight() {} // 0x0000000185FC6B20-0x0000000185FC6B30
+		public void ResetLookAtWeight(); // 0x0000000184D9A6D0-0x0000000184D9A6E0
 	}
 
-	public class TimelineNPCLookAtTarget : MonoBehaviour // TypeDefIndex: 57389
+	[UseScriptDefaultValueWhenExport]
+	public class TimelineNPCLookAtTarget : MonoBehaviour // TypeDefIndex: 59730
 	{
 		// Fields
+		[Range(0f, 1f)]
 		public float lookAtWeight; // 0x18
+		[Range(0f, 1f)]
 		public float lookAtBodyWeight; // 0x1C
 		public bool useDegree; // 0x20
+		[Range(0f, 1f)]
 		public float lookAtHorizontal; // 0x24
+		[Range(-1f, 1f)]
 		public float lookAtVertical; // 0x28
+		[Range(0f, 1f)]
 		public float lookAtRoll; // 0x2C
 	
 		// Constructors
-		public TimelineNPCLookAtTarget() {} // 0x000000018BE4647C-0x000000018BE4649C
+		public TimelineNPCLookAtTarget(); // 0x000000018B343350-0x000000018B343380
+	}
+
+	[UseScriptDefaultValueWhenExport]
+	public class TimelineNPCLookAtTargetV2 : MonoBehaviour // TypeDefIndex: 59731
+	{
+		// Fields
+		[Range(-1f, 1f)]
+		public float lookAtBlendWeight; // 0x18
+		[Range(0f, 1f)]
+		public float lookAtBodyWeight; // 0x1C
+		public bool useDegree; // 0x20
+		[Range(0f, 1f)]
+		public float lookAtHorizontal; // 0x24
+		[Range(-1f, 1f)]
+		public float lookAtVertical; // 0x28
+		[Range(0f, 1f)]
+		public float lookAtRoll; // 0x2C
 	
-		// Methods
-		public void ResetLookAtWeight() {} // 0x0000000185FE62E0-0x0000000185FE62F0
+		// Constructors
+		public TimelineNPCLookAtTargetV2(); // 0x000000018B343350-0x000000018B343380
 	}
 }
 
 namespace ScriptAnimation.ScriptAnimationApply
 {
-	public class ScriptAnimationApplyBehaviour : PlayableBehaviour // TypeDefIndex: 57390
+	public class ScriptAnimationApplyBehaviour : PlayableBehaviour // TypeDefIndex: 59732
 	{
 		// Fields
+		private static readonly ProfilerMarker s_calcLayerMainStreamMarker; // 0x00
 		private IScriptAnimationJobSync m_JobSync; // 0x10
 	
 		// Constructors
-		public ScriptAnimationApplyBehaviour() {} // 0x0000000185492010-0x0000000185492020
+		public ScriptAnimationApplyBehaviour(); // 0x00000001841E1670-0x00000001841E1680
+		static ScriptAnimationApplyBehaviour(); // 0x0000000182EC7070-0x0000000182EC7680
 	
 		// Methods
-		public override void PrepareFrame(Playable playable, FrameData info) {} // 0x000000018BE41958-0x000000018BE419C8
-		public void InitBehaviour(IScriptAnimationJobSync jobSync) {} // 0x0000000184096E30-0x0000000184096EF0
+		public override void PrepareFrame(Playable playable, FrameData info); // 0x000000018B33F82C-0x000000018B33F980
+		public void InitBehaviour(IScriptAnimationJobSync jobSync); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	public class ScriptAnimationApplyPlayable : PlayableAsset // TypeDefIndex: 57391
+	public class ScriptAnimationApplyPlayable : PlayableAsset // TypeDefIndex: 59733
 	{
 		// Constructors
-		public ScriptAnimationApplyPlayable() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public ScriptAnimationApplyPlayable(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x000000018BE419C8-0x000000018BE41A60
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner); // 0x000000018B33F980-0x000000018B33FA18
 	}
 }
 
 namespace UnityEngine
 {
-	public static class PlayerLoopChecker // TypeDefIndex: 57409
+	public static class PlayerLoopChecker // TypeDefIndex: 59751
 	{
 	}
 }
 
 namespace UnityEngine.Timeline
 {
-	internal class ActivationMixerPlayable : PlayableBehaviour // TypeDefIndex: 57410
+	internal class ActivationMixerPlayable : PlayableBehaviour // TypeDefIndex: 59752
 	{
 		// Fields
 		private ActivationTrack.PostPlaybackState m_PostPlaybackState; // 0x10
@@ -308,46 +394,50 @@ namespace UnityEngine.Timeline
 		private GameObject m_BoundGameObject; // 0x30
 	
 		// Properties
-		public ActivationTrack.PostPlaybackState postPlaybackState { set {} } // 0x0000000181378230-0x0000000181378240
+		public ActivationTrack.PostPlaybackState postPlaybackState { set; } // 0x00000001814F51F0-0x00000001814F5220
 	
 		// Constructors
-		public ActivationMixerPlayable() {} // 0x0000000185492010-0x0000000185492020
+		public ActivationMixerPlayable(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static ScriptPlayable<ActivationMixerPlayable> Create(PlayableGraph graph, int inputCount) => default; // 0x000000018BE3637C-0x000000018BE36408
-		public void SetBoundGameObject(GameObject go) {} // 0x000000018BE36600-0x000000018BE36690
-		public void SetAutoBindingData(bool useAutoBinding, ITimelineRootMarker rootMarker, string uniqueId) {} // 0x0000000183F7EF60-0x0000000183F7F010
-		public override void OnPlayableDestroy(Playable playable) {} // 0x0000000185492010-0x0000000185492020
-		public override void OnBehaviourPause(Playable playable, FrameData info) {} // 0x000000018BE36408-0x000000018BE3644C
-		public override void ProcessFrame(Playable playable, FrameData info, object playerData) {} // 0x000000018BE36520-0x000000018BE36600
-		public override void PrepareFrame(Playable playable, FrameData info) {} // 0x000000018BE3644C-0x000000018BE36520
-		private void _DoSetActive(Playable playable, FrameData info, object playerData = null) {} // 0x000000018BE36690-0x000000018BE36944
+		public static ScriptPlayable<ActivationMixerPlayable> Create(PlayableGraph graph, int inputCount); // 0x000000018B33AA78-0x000000018B33AB04
+		public void SetBoundGameObject(GameObject go); // 0x000000018B33AD24-0x000000018B33ADB4
+		public void SetAutoBindingData(bool useAutoBinding, ITimelineRootMarker rootMarker, string uniqueId); // 0x000000018B33ACFC-0x000000018B33AD24
+		public override void OnPlayableDestroy(Playable playable); // 0x00000001841E1670-0x00000001841E1680
+		public override void OnBehaviourPause(Playable playable, FrameData info); // 0x000000018B33AB04-0x000000018B33AB48
+		public override void ProcessFrame(Playable playable, FrameData info, object playerData); // 0x000000018B33AC1C-0x000000018B33ACFC
+		public override void PrepareFrame(Playable playable, FrameData info); // 0x000000018B33AB48-0x000000018B33AC1C
+		private void _DoSetActive(Playable playable, FrameData info, object playerData = null); // 0x000000018B33ADB4-0x000000018B33B024
 	}
 
-	public class ActivationPlayableAsset : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 57411
+	public class ActivationPlayableAsset : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 59753
 	{
 		// Properties
-		public ClipCaps clipCaps { get => default; } // 0x00000001813AE580-0x00000001813AE590 
+		public ClipCaps clipCaps { get; } // 0x00000001811EC580-0x00000001811EC590 
 	
 		// Constructors
-		public ActivationPlayableAsset() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public ActivationPlayableAsset(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject go) => default; // 0x000000018BE36944-0x000000018BE369B0
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject go); // 0x000000018B33B024-0x000000018B33B090
 	}
 
 	[Serializable]
-	public class ActivationTrack : TrackAsset // TypeDefIndex: 57413
+	[ExcludeFromPreset]
+	[TrackBindingType(typeof(GameObject))]
+	[TrackClipType(typeof(ActivationPlayableAsset))]
+	public class ActivationTrack : TrackAsset // TypeDefIndex: 59755
 	{
 		// Fields
+		[SerializeField]
 		private PostPlaybackState m_PostPlaybackState; // 0xC0
 		private ActivationMixerPlayable m_ActivationMixer; // 0xC8
 	
 		// Properties
-		public PostPlaybackState postPlaybackState { get => default; set {} } // 0x0000000185FBE0C0-0x0000000185FBE0D0 0x000000018BE36DE4-0x000000018BE36DF4
+		public PostPlaybackState postPlaybackState { get; set; } // 0x0000000184DA4B70-0x0000000184DA4B80 0x000000018B33B540-0x000000018B33B550
 	
 		// Nested types
-		public enum PostPlaybackState // TypeDefIndex: 57412
+		public enum PostPlaybackState // TypeDefIndex: 59754
 		{
 			Active = 0,
 			Inactive = 1,
@@ -356,19 +446,19 @@ namespace UnityEngine.Timeline
 		}
 	
 		// Constructors
-		public ActivationTrack() {} // 0x00000001850B42B0-0x00000001850B4310
+		public ActivationTrack(); // 0x000000018B33B4EC-0x000000018B33B540
 	
 		// Methods
-		internal override bool CanCompileClips() => default; // 0x000000018BE369B0-0x000000018BE369E0
-		public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount) => default; // 0x000000018BE369E0-0x000000018BE36BD8
-		private void _BindUniqueId(PlayableGraph graph) {} // 0x0000000183F7F010-0x0000000183F7F120
-		internal GameObject GetBinding(PlayableDirector director) => default; // 0x000000018BE36C78-0x000000018BE36D78
-		internal void UpdateTrackMode() {} // 0x000000018BE36DC8-0x000000018BE36DE4
-		public override void GatherProperties(PlayableDirector director, IPropertyCollector driver) {} // 0x000000018BE36BD8-0x000000018BE36C78
-		protected override void OnCreateClip(TimelineClip clip) {} // 0x000000018BE36D78-0x000000018BE36DC8
+		internal override bool CanCompileClips(); // 0x000000018B33B090-0x000000018B33B0C0
+		public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount); // 0x000000018B33B0C0-0x000000018B33B28C
+		private void _BindUniqueId(PlayableGraph graph); // 0x000000018B33B498-0x000000018B33B4EC
+		internal GameObject GetBinding(PlayableDirector director); // 0x000000018B33B32C-0x000000018B33B42C
+		internal void UpdateTrackMode(); // 0x000000018B33B47C-0x000000018B33B498
+		public override void GatherProperties(PlayableDirector director, IPropertyCollector driver); // 0x000000018B33B28C-0x000000018B33B32C
+		protected override void OnCreateClip(TimelineClip clip); // 0x000000018B33B42C-0x000000018B33B47C
 	}
 
-	internal class AnimationOutputWeightProcessor : ITimelineEvaluateCallback // TypeDefIndex: 57415
+	internal class AnimationOutputWeightProcessor : ITimelineEvaluateCallback // TypeDefIndex: 59757
 	{
 		// Fields
 		private Animator m_outputAnimator; // 0x10
@@ -376,7 +466,7 @@ namespace UnityEngine.Timeline
 		private readonly List<WeightInfo> m_Mixers; // 0x28
 	
 		// Nested types
-		private struct WeightInfo // TypeDefIndex: 57414
+		private struct WeightInfo // TypeDefIndex: 59756
 		{
 			// Fields
 			public Playable mixer; // 0x00
@@ -385,84 +475,129 @@ namespace UnityEngine.Timeline
 		}
 	
 		// Constructors
-		public AnimationOutputWeightProcessor() {} // Dummy constructor
-		public AnimationOutputWeightProcessor(AnimationPlayableOutput output, Animator animator) {} // 0x000000018BE37C48-0x000000018BE37D18
+		public AnimationOutputWeightProcessor(AnimationPlayableOutput output, Animator animator); // 0x0000000183E117C0-0x0000000183E118A0
 	
 		// Methods
-		private void FindMixers() {} // 0x000000018BE37880-0x000000018BE37974
-		private void FindMixers(Playable parent, int port, Playable node) {} // 0x000000018BE37974-0x000000018BE37C48
-		public void Evaluate() {} // 0x000000018BE37684-0x000000018BE37880
+		private void FindMixers(); // 0x0000000183E10EA0-0x0000000183E10FB0
+		private void FindMixers(Playable parent, int port, Playable node); // 0x0000000183E0FE10-0x0000000183E10160
+		public void Evaluate(); // 0x0000000183E118A0-0x0000000183E11A60
 	}
 
 	[Serializable]
-	public class AnimationPlayableAsset : PlayableAsset, ITimelineClipAsset, IPropertyPreview, ICustomControlBehaviour, ISerializationCallbackReceiver // TypeDefIndex: 57423
+	[UnityEngine.Timeline.NotKeyable]
+	public class AnimationPlayableAsset : PlayableAsset, ITimelineClipAsset, IPropertyPreview, ICustomControlBehaviour, ISerializationCallbackReceiver // TypeDefIndex: 59765
 	{
 		// Fields
+		[SerializeField]
 		private AnimationClip m_Clip; // 0x18
+		[SerializeField]
 		private Vector3 m_Position; // 0x20
+		[SerializeField]
 		private Vector3 m_EulerAngles; // 0x2C
+		[SerializeField]
 		private bool m_UseTrackMatchFields; // 0x38
+		[SerializeField]
 		private MatchTargetFields m_MatchTargetFields; // 0x3C
+		[SerializeField]
 		private bool m_RemoveStartOffset; // 0x40
+		[SerializeField]
 		private bool m_ApplyFootIK; // 0x41
+		[SerializeField]
 		private LoopMode m_Loop; // 0x44
+		[SerializeField]
 		private bool m_IgniteOnce; // 0x48
+		[SerializeField]
 		private bool m_OnlyDeltaTime; // 0x49
+		[SerializeField]
 		private bool m_DynamicLink; // 0x4A
+		[SerializeField]
 		private ClothResetOption m_ClothResetOption; // 0x4C
+		[SerializeField]
 		private AnimationEventTriggerMode m_AnimationEventTriggerMode; // 0x50
+		[Range(0f, 1f)]
+		[SerializeField]
 		private float m_AnimationEventTriggerWeightThreshold; // 0x54
-		private ClipEndAudioBehaviour m_ClipEndAudioBehaviour; // 0x58
-		private int m_ClipEndAudioFadeOutTimeMs; // 0x5C
-		private bool m_MixWitherAnotherClip; // 0x60
-		private float m_MainClipMixWeight; // 0x64
-		private AnimationClip m_AnotherClip; // 0x68
-		private AnimationClip m_blendShapeControlClip; // 0x70
-		public bool DisableBlendShapeControl; // 0x78
-		private AppliedOffsetMode _appliedOffsetMode_k__BackingField; // 0x7C
-		private ITimelineAnimationEventContextBinding _TimelineAnimationEventContextBinding_k__BackingField; // 0x80
+		[SerializeField]
+		private AnimationEventTriggerMode m_CustomFootStepTriggerMode; // 0x58
+		[Range(0f, 1f)]
+		[SerializeField]
+		private float m_CustomFootStepTriggerWeightThreshold; // 0x5C
+		[SerializeField]
+		private ClipEndAudioBehaviour m_ClipEndAudioBehaviour; // 0x60
+		[SerializeField]
+		private int m_ClipEndAudioFadeOutTimeMs; // 0x64
+		[SerializeField]
+		private bool m_MixWitherAnotherClip; // 0x68
+		[Range(0f, 1f)]
+		[SerializeField]
+		private float m_MainClipMixWeight; // 0x6C
+		[SerializeField]
+		private AnimationClip m_AnotherClip; // 0x70
+		[SerializeField]
+		private AnimationClip m_blendShapeControlClip; // 0x78
+		[SerializeField]
+		private bool m_UseTimeRemapCurve; // 0x80
+		[SerializeField]
+		private AnimationCurve m_TimeRemapCurve; // 0x88
+		[CompilerGenerated]
+		private bool _useAnotherClipTimeAdapter_k__BackingField; // 0x90
+		public bool DisableBlendShapeControl; // 0x91
+		[CompilerGenerated]
+		private AppliedOffsetMode _appliedOffsetMode_k__BackingField; // 0x94
+		[CompilerGenerated]
+		private ITimelineAnimationEventContextBinding _TimelineAnimationEventContextBinding_k__BackingField; // 0x98
 		private static readonly int k_LatestVersion; // 0x00
-		private int m_Version; // 0x88
-		private Quaternion m_Rotation; // 0x8C
+		[HideInInspector]
+		[SerializeField]
+		private int m_Version; // 0xA0
+		[HideInInspector]
+		[Obsolete("Use m_RotationEuler Instead", false)]
+		[SerializeField]
+		private Quaternion m_Rotation; // 0xA4
 	
 		// Properties
-		public Vector3 position { get => default; set {} } // 0x0000000185FB07A0-0x0000000185FB07B0 0x0000000185FB0650-0x0000000185FB0660
-		public Quaternion rotation { get => default; set {} } // 0x0000000185FB0660-0x0000000185FB0670 0x0000000185FB0D70-0x0000000185FB0D80
-		public Vector3 eulerAngles { get => default; set {} } // 0x0000000185FB0D90-0x0000000185FB0DA0 0x0000000183908D10-0x0000000183908D20
-		public bool useTrackMatchFields { get => default; set {} } // 0x0000000183909010-0x0000000183909020 0x0000000185FB0750-0x0000000185FB0760
-		public MatchTargetFields matchTargetFields { get => default; set {} } // 0x0000000185FB0770-0x0000000185FB0780 0x0000000185FB0760-0x0000000185FB0770
-		public bool removeStartOffset { get => default; set {} } // 0x0000000185FB0780-0x0000000185FB0790 0x0000000185FB0D40-0x0000000185FB0D50
-		public bool applyFootIK { get => default; set {} } // 0x0000000185FB0D50-0x0000000185FB0D60 0x000000018386C570-0x000000018386C580
-		public LoopMode loop { get => default; set {} } // 0x000000018386C580-0x000000018386C590 0x00000001813AC280-0x00000001813AC290
-		public bool IgniteOnce { get => default; set {} } // 0x0000000185A62990-0x0000000185A629A0 0x0000000181460F70-0x0000000181460F80
-		public bool OnlyDeltaTime { get => default; set {} } // 0x0000000183F80470-0x0000000183F804D0 0x0000000185FB2210-0x0000000185FB2220
-		public bool DynamicLink { get => default; set {} } // 0x0000000185FB2220-0x0000000185FB2230 0x000000018BE39064-0x000000018BE390E4
-		public bool MixWithAnotherClip { get => default; set {} } // 0x0000000185FB05B0-0x0000000185FB05C0 0x0000000185FB0610-0x0000000185FB0620
-		public AnimationClip AnotherClip { get => default; set {} } // 0x000000018140CF50-0x000000018140CF60 0x00000001873CBE98-0x00000001873CBEA8
-		public AnimationClip BlendShapeControlClip { get => default; internal set {} } // 0x0000000181377E40-0x0000000181377E50 0x000000018BE39190-0x000000018BE3929C
-		public float MainClipMixWeight { get => default; set {} } // 0x000000018BE38FFC-0x000000018BE39064 0x0000000185FB06E0-0x0000000185FB06F0
-		internal bool hasRootTransforms { get => default; } // 0x0000000185FB06F0-0x0000000185FB0700 
-		internal AppliedOffsetMode appliedOffsetMode { get; set; } // 0x0000000185FB0680-0x0000000185FB0690 0x0000000185FB06B0-0x0000000185FB06C0
-		internal ITimelineAnimationEventContextBinding TimelineAnimationEventContextBinding { get; set; } // 0x0000000183F80440-0x0000000183F80450 0x0000000183F804D0-0x0000000183F804E0
-		public AnimationClip clip { get => default; set {} } // 0x0000000183F80450-0x0000000183F80460 0x0000000183F804E0-0x0000000183F804F0
-		public override double duration { get => default; } // 0x0000000183F80460-0x0000000183F80470 
-		public ClothResetOption clothResetOption { get => default; set {} } // 0x0000000183F804F0-0x0000000183F80500 0x000000018BE390E4-0x000000018BE39154
-		public AnimationEventTriggerMode animationEventTriggerMode { get => default; set {} } // 0x000000018BE388A0-0x000000018BE38918 0x000000018BE38588-0x000000018BE388A0
-		public float animationEventTriggerWeightThreshold { get => default; set {} } // 0x000000018BE37DF8-0x000000018BE38588 0x000000018BE37D74-0x000000018BE37DF8
-		public ClipEndAudioBehaviour clipEndAudioBehaviour { get => default; set {} } // 0x000000018BE38ABC-0x000000018BE38B18 0x000000018BE38A3C-0x000000018BE38ABC
-		public int clipEndAudioFadeOutTimeMs { get => default; set {} } // 0x000000018BE38B2C-0x000000018BE38D34 0x000000018BE38B18-0x000000018BE38B2C
-		public override IEnumerable<PlayableBinding> outputs { get => default; } // 0x000000018BE38EEC-0x000000018BE38FFC 
-		public ClipCaps clipCaps { get => default; } // 0x000000018BE38A08-0x000000018BE38A18 
+		internal bool useAnotherClipTimeAdapter { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182EC6590-0x0000000182EC65A0 0x0000000182EC65A0-0x0000000182EC65B0
+		public Vector3 position { get; set; } // 0x0000000184D90830-0x0000000184D90850 0x0000000184D90820-0x0000000184D90830
+		public Quaternion rotation { get; set; } // 0x000000018B33BE88-0x000000018B33BEC4 0x000000018B33BF94-0x000000018B33BFBC
+		public Vector3 eulerAngles { get; set; } // 0x0000000184D90540-0x0000000184D90560 0x0000000184D90510-0x0000000184D90520
+		public bool useTrackMatchFields { get; set; } // 0x00000001811F2A70-0x00000001811F2A80 0x00000001811F2A80-0x00000001811F2A90
+		public MatchTargetFields matchTargetFields { get; set; } // 0x0000000184D86640-0x0000000184D86650 0x0000000184D86670-0x0000000184D86680
+		public bool removeStartOffset { get; set; } // 0x0000000182D480A0-0x0000000182D480B0 0x0000000182D480B0-0x0000000182D480C0
+		public bool applyFootIK { get; set; } // 0x0000000184D86F40-0x0000000184D86F50 0x0000000184D86F60-0x0000000184D86F70
+		public LoopMode loop { get; set; } // 0x0000000184D86530-0x0000000184D86540 0x0000000184D86580-0x0000000184D86590
+		public bool IgniteOnce { get; set; } // 0x0000000184D867D0-0x0000000184D867E0 0x0000000184D86810-0x0000000184D86820
+		public bool OnlyDeltaTime { get; set; } // 0x0000000184D867E0-0x0000000184D867F0 0x0000000184D86820-0x0000000184D86830
+		public bool DynamicLink { get; set; } // 0x0000000184D86F10-0x0000000184D86F20 0x0000000184D86F20-0x0000000184D86F30
+		public bool MixWithAnotherClip { get; set; } // 0x0000000184D86B40-0x0000000184D86B50 0x0000000184D86BA0-0x0000000184D86BB0
+		public AnimationClip AnotherClip { get; set; } // 0x0000000184D862B0-0x0000000184D862C0 0x00000001863AD760-0x00000001863AD770
+		public AnimationClip BlendShapeControlClip { get; internal set; } // 0x0000000184D862A0-0x0000000184D862B0 0x0000000186402320-0x0000000186402330
+		public bool useTimeRemapCurve { get; set; } // 0x0000000184D8D1F0-0x0000000184D8D200 0x0000000184D8D200-0x0000000184D8D210
+		public AnimationCurve timeRemapCurve { get; set; } // 0x0000000184D861F0-0x0000000184D86200 0x0000000185395D30-0x0000000185395D44
+		public float MainClipMixWeight { get; set; } // 0x0000000184DA3230-0x0000000184DA3240 0x0000000184DA3330-0x0000000184DA3340
+		internal bool hasRootTransforms { get; } // 0x0000000183FA5BC0-0x0000000183FA5C80 
+		internal AppliedOffsetMode appliedOffsetMode { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86B20-0x0000000184D86B30 0x0000000184D86B80-0x0000000184D86B90
+		internal ITimelineAnimationEventContextBinding TimelineAnimationEventContextBinding { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D85EE0-0x0000000184D85EF0 0x0000000186352D0C-0x0000000186352D20
+		public AnimationClip clip { get; set; } // 0x000000018385B100-0x000000018385B110 0x000000018B33BEC4-0x000000018B33BF94
+		public override double duration { get; } // 0x000000018B33BDB0-0x000000018B33BE18 
+		public ClothResetOption clothResetOption { get; set; } // 0x0000000184D86600-0x0000000184D86610 0x0000000184D86630-0x0000000184D86640
+		public AnimationEventTriggerMode animationEventTriggerMode { get; set; } // 0x0000000184D86550-0x0000000184D86560 0x0000000184D865A0-0x0000000184D865B0
+		public float animationEventTriggerWeightThreshold { get; set; } // 0x0000000184D86E00-0x0000000184D86E10 0x0000000184D86E10-0x0000000184D86E20
+		public AnimationEventTriggerMode customFootStepTriggerMode { get; set; } // 0x0000000184D86570-0x0000000184D86580 0x0000000184D865D0-0x0000000184D865E0
+		public float customFootStepTriggerWeightThreshold { get; set; } // 0x0000000184D91500-0x0000000184D91510 0x0000000184D91510-0x0000000184D91520
+		public ClipEndAudioBehaviour clipEndAudioBehaviour { get; set; } // 0x0000000184D86790-0x0000000184D867A0 0x0000000184D86D50-0x0000000184D86D60
+		public int clipEndAudioFadeOutTimeMs { get; set; } // 0x0000000184D88110-0x0000000184D88120 0x0000000184D88120-0x0000000184D88130
+		public override IEnumerable<PlayableBinding> outputs { [IteratorStateMachine(typeof(_get_outputs_d__123))] get; } // 0x000000018B33BE18-0x000000018B33BE88 
+		public ClipCaps clipCaps { get; } // 0x00000001839F6DB0-0x00000001839F6F80 
 	
 		// Nested types
-		public enum LoopMode // TypeDefIndex: 57416
+		public enum LoopMode // TypeDefIndex: 59758
 		{
 			UseSourceAsset = 0,
 			On = 1,
 			Off = 2
 		}
 	
-		public enum ClothResetOption // TypeDefIndex: 57417
+		public enum ClothResetOption // TypeDefIndex: 59759
 		{
 			SoftReset = 0,
 			UseClothRelativeTeleport = 1,
@@ -470,32 +605,33 @@ namespace UnityEngine.Timeline
 			DisablePhysics = 3
 		}
 	
-		public enum AnimationEventTriggerMode // TypeDefIndex: 57418
+		public enum AnimationEventTriggerMode // TypeDefIndex: 59760
 		{
 			Default = 0,
 			MuteAllEvents = 1,
 			SeekAllEvents = 2
 		}
 	
-		public enum ClipEndAudioBehaviour // TypeDefIndex: 57419
+		public enum ClipEndAudioBehaviour // TypeDefIndex: 59761
 		{
 			Default = 0,
 			MuteAll = 1
 		}
 	
-		private enum Versions // TypeDefIndex: 57420
+		private enum Versions // TypeDefIndex: 59762
 		{
 			Initial = 0,
 			RotationAsEuler = 1
 		}
 	
-		private static class AnimationPlayableAssetUpgrade // TypeDefIndex: 57421
+		private static class AnimationPlayableAssetUpgrade // TypeDefIndex: 59763
 		{
 			// Methods
-			public static void ConvertRotationToEuler(AnimationPlayableAsset asset) {} // 0x0000000185FBAAA0-0x0000000185FBAAC0
+			public static void ConvertRotationToEuler(AnimationPlayableAsset asset); // 0x000000018B33B550-0x000000018B33B58C
 		}
 	
-		private sealed class _get_outputs_d__102 : IEnumerable<PlayableBinding>, IEnumerator<PlayableBinding> // TypeDefIndex: 57422
+		[CompilerGenerated]
+		private sealed class _get_outputs_d__123 : IEnumerable<PlayableBinding>, IEnumerator<PlayableBinding> // TypeDefIndex: 59764
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -504,52 +640,71 @@ namespace UnityEngine.Timeline
 			public AnimationPlayableAsset __4__this; // 0x40
 	
 			// Properties
-			PlayableBinding IEnumerator<UnityEngine.Playables.PlayableBinding>.Current { get => default; } // 0x0000000185FBAA80-0x0000000185FBAAA0 
-			object IEnumerator.Current { get => default; } // 0x0000000185FB0700-0x0000000185FB0710 
+			PlayableBinding IEnumerator<UnityEngine.Playables.PlayableBinding>.Current { [DebuggerHidden] get; } // 0x0000000182EC7B40-0x0000000182EC7B60 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x0000000182EC7BC0-0x0000000182EC7ED0 
 	
 			// Constructors
-			public _get_outputs_d__102() {} // Dummy constructor
-			public _get_outputs_d__102(int __1__state) {} // 0x0000000185FBC570-0x0000000185FBC580
+			[DebuggerHidden]
+			public _get_outputs_d__123(int __1__state); // 0x0000000183A10F90-0x0000000183A10FB0
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018BE39154-0x000000018BE39190
-			private bool MoveNext() => default; // 0x000000018BE3929C-0x000000018BE392C4
-			void IEnumerator.Reset() {} // 0x0000000185FBCE10-0x0000000185FBCE20
-			IEnumerator<PlayableBinding> IEnumerable<PlayableBinding>.GetEnumerator() => default; // 0x0000000185FAFE20-0x0000000185FAFE30
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000185FB0790-0x0000000185FB07A0
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x0000000182EC7680-0x0000000182EC77A0
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x0000000182EC7B70-0x0000000182EC7BC0
+			[DebuggerHidden]
+			IEnumerator<PlayableBinding> IEnumerable<PlayableBinding>.GetEnumerator(); // 0x0000000182EC77A0-0x0000000182EC7B40
+			[DebuggerHidden]
+			IEnumerator IEnumerable.GetEnumerator(); // 0x0000000182EC7B60-0x0000000182EC7B70
 		}
 	
 		// Constructors
-		public AnimationPlayableAsset() {} // 0x0000000183F80CE0-0x0000000183F81080
-		static AnimationPlayableAsset() {} // 0x0000000183F810A0-0x0000000183F810B0
+		public AnimationPlayableAsset(); // 0x00000001839F4BC0-0x00000001839F4CC0
+		static AnimationPlayableAsset(); // 0x0000000184D7AE50-0x0000000184D7AE90
 	
 		// Methods
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject go) => default; // 0x000000018BE38A18-0x000000018BE38A3C
-		internal static Playable CreatePlayable(PlayableGraph graph, AnimationClip clip, Vector3 positionOffset, Vector3 eulerOffset, bool removeStartOffset, AppliedOffsetMode mode, bool applyFootIK, LoopMode loop) => default; // 0x000000018BE38918-0x000000018BE38968
-		internal static Playable CreatePlayable(PlayableGraph graph, AnimationPlayableAsset playableAsset) => default; // 0x000000018BE38968-0x000000018BE38A08
-		internal static AnimationClipPlayable CreateAnimationClipPlayable(PlayableGraph graph, AnimationClip clip, bool removeStartOffset, bool applyFootIK, LoopMode loop) => default; // 0x000000018BE37D54-0x000000018BE37D74
-		private static bool ShouldApplyOffset(AppliedOffsetMode mode, AnimationClip clip) => default; // 0x0000000185492010-0x0000000185492020
-		private static bool ShouldApplyEventControl(AnimationPlayableAsset playableAsset) => default; // 0x0000000183F7F120-0x0000000183F80440
-		internal static Playable TryApplyAnimationEventControl(PlayableGraph graph, Playable root, AnimationPlayableAsset playableAsset) => default; // 0x000000018BE38DA0-0x000000018BE38DFC
-		private static bool ShouldApplyScaleRemove(AppliedOffsetMode mode) => default; // 0x000000018BE38D34-0x000000018BE38DA0
-		public void ResetOffsets() {} // 0x000000018BE38E38-0x000000018BE38EEC
-		public void GatherProperties(PlayableDirector director, IPropertyCollector driver) {} // 0x000000018BE38DFC-0x000000018BE38E38
-		internal static bool HasRootTransforms(AnimationClip clip) => default; // 0x000000018BE37D18-0x000000018BE37D54
-		public AnimationEvent[] CollectAnimationEvents() => default; // 0x0000000183F81410-0x0000000183F81430
-		public void OnClipEnable(Playable playable, FrameData info) {} // 0x0000000185492010-0x0000000185492020
-		public void OnClipDisable(Playable playable, FrameData info) {} // 0x0000000183F80C00-0x0000000183F80CE0
-		void ISerializationCallbackReceiver.OnBeforeSerialize() {} // 0x0000000183F81080-0x0000000183F810A0
-		void ISerializationCallbackReceiver.OnAfterDeserialize() {} // 0x0000000183F810B0-0x0000000183F81100
-		private void OnUpgradeFromVersion(int oldVersion) {} // 0x0000000183F81100-0x0000000183F81410
+		public float EvaluateTimeRemap(float normalizedTime); // 0x000000018B33B8C4-0x000000018B33B8FC
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject go); // 0x0000000183FC5360-0x0000000183FC53E0
+		internal static Playable CreatePlayable(PlayableGraph graph, AnimationClip clip, Vector3 positionOffset, Vector3 eulerOffset, bool removeStartOffset, AppliedOffsetMode mode, bool applyFootIK, LoopMode loop); // 0x000000018B33B5AC-0x000000018B33B8C4
+		internal static Playable CreatePlayable(PlayableGraph graph, AnimationPlayableAsset playableAsset); // 0x000000018315BC80-0x000000018315EF90
+		internal static AnimationClipPlayable CreateAnimationClipPlayable(PlayableGraph graph, AnimationClip clip, bool removeStartOffset, bool applyFootIK, LoopMode loop); // 0x0000000184CDB250-0x0000000184CDB2E0
+		private static bool ShouldApplyOffset(AppliedOffsetMode mode, AnimationClip clip); // 0x0000000183FA56B0-0x0000000183FA5720
+		private static bool ShouldApplyEventControl(AnimationPlayableAsset playableAsset); // 0x0000000184D2D300-0x0000000184D2D420
+		internal static Playable TryApplyAnimationEventControl(PlayableGraph graph, Playable root, AnimationPlayableAsset playableAsset); // 0x000000018B33BB38-0x000000018B33BD54
+		private static bool ShouldApplyScaleRemove(AppliedOffsetMode mode); // 0x0000000184D7F830-0x0000000184D7F850
+		public void ResetOffsets(); // 0x000000018B33BB14-0x000000018B33BB38
+		public void GatherProperties(PlayableDirector director, IPropertyCollector driver); // 0x000000018B33B8FC-0x000000018B33B94C
+		internal static bool HasRootTransforms(AnimationClip clip); // 0x0000000183FA5C80-0x0000000183FA5D50
+		public AnimationEvent[] CollectAnimationEvents(); // 0x000000018B33B58C-0x000000018B33B5AC
+		public void OnClipEnable(Playable playable, FrameData info); // 0x00000001841E1670-0x00000001841E1680
+		public void OnClipDisable(Playable playable, FrameData info); // 0x000000018B33B94C-0x000000018B33BB04
+		void ISerializationCallbackReceiver.OnBeforeSerialize(); // 0x000000018B33BD54-0x000000018B33BDB0
+		void ISerializationCallbackReceiver.OnAfterDeserialize(); // 0x0000000184A05920-0x0000000184A05990
+		private void OnUpgradeFromVersion(int oldVersion); // 0x000000018B33BB04-0x000000018B33BB14
 	}
 
-	internal class AnimationPreviewUpdateCallback // TypeDefIndex: 57424
+	internal class AnotherClipTimeAdapterBehaviour : PlayableBehaviour // TypeDefIndex: 59766
 	{
+		// Fields
+		private Playable m_AnotherClipPlayable; // 0x10
+		private bool m_Initialized; // 0x20
+		private double m_Time; // 0x28
+	
 		// Constructors
-		public AnimationPreviewUpdateCallback() {} // Dummy constructor
+		public AnotherClipTimeAdapterBehaviour(); // 0x00000001841E1670-0x00000001841E1680
+	
+		// Methods
+		public void Initialize(Playable anotherClipPlayable); // 0x0000000182EC65B0-0x0000000182EC65D0
+		public override void PrepareFrame(Playable playable, FrameData info); // 0x0000000182EC65D0-0x0000000182EC7070
 	}
 
-	public enum MatchTargetFields // TypeDefIndex: 57425
+	internal class AnimationPreviewUpdateCallback // TypeDefIndex: 59767
+	{
+	}
+
+	[Flags]
+	public enum MatchTargetFields // TypeDefIndex: 59768
 	{
 		PositionX = 1,
 		PositionY = 2,
@@ -559,14 +714,14 @@ namespace UnityEngine.Timeline
 		RotationZ = 32
 	}
 
-	public enum TrackOffset // TypeDefIndex: 57426
+	public enum TrackOffset // TypeDefIndex: 59769
 	{
 		ApplyTransformOffsets = 0,
 		ApplySceneOffsets = 1,
 		Auto = 2
 	}
 
-	internal enum AppliedOffsetMode // TypeDefIndex: 57427
+	internal enum AppliedOffsetMode // TypeDefIndex: 59770
 	{
 		NoRootTransform = 0,
 		TransformOffset = 1,
@@ -577,7 +732,7 @@ namespace UnityEngine.Timeline
 		SceneOffsetLegacyEditor = 6
 	}
 
-	internal static class MatchTargetFieldConstants // TypeDefIndex: 57428
+	internal static class MatchTargetFieldConstants // TypeDefIndex: 59771
 	{
 		// Fields
 		public static MatchTargetFields All; // 0x00
@@ -586,90 +741,150 @@ namespace UnityEngine.Timeline
 		public static MatchTargetFields Rotation; // 0x0C
 	
 		// Constructors
-		static MatchTargetFieldConstants() {} // 0x000000018BE41718-0x000000018BE41790
+		static MatchTargetFieldConstants(); // 0x0000000184D35AB0-0x0000000184D35B30
 	}
 
 	[Serializable]
-	public class AnimationTrack : TrackAsset, ILayerable // TypeDefIndex: 57431
+	[ExcludeFromPreset]
+	[TrackBindingType(typeof(Animator))]
+	[TrackClipType(typeof(AnimationPlayableAsset), false)]
+	public class AnimationTrack : TrackAsset, ILayerable // TypeDefIndex: 59774
 	{
 		// Fields
-		private const string k_DefaultInfiniteClipName = "Recorded"; // Metadata: 0x0207D90A
-		private const string k_DefaultRecordableClipName = "Recorded"; // Metadata: 0x0207D913
+		private const string k_DefaultInfiniteClipName = "Recorded"; // Metadata: 0x0234D156
+		private const string k_DefaultRecordableClipName = "Recorded"; // Metadata: 0x0234D15F
+		[FormerlySerializedAs("m_OpenClipPreExtrapolation")]
+		[SerializeField]
 		private TimelineClip.ClipExtrapolation m_InfiniteClipPreExtrapolation; // 0xC0
+		[FormerlySerializedAs("m_OpenClipPostExtrapolation")]
+		[SerializeField]
 		private TimelineClip.ClipExtrapolation m_InfiniteClipPostExtrapolation; // 0xC4
+		[FormerlySerializedAs("m_OpenClipOffsetPosition")]
+		[SerializeField]
 		private Vector3 m_InfiniteClipOffsetPosition; // 0xC8
+		[FormerlySerializedAs("m_OpenClipOffsetEulerAngles")]
+		[SerializeField]
 		private Vector3 m_InfiniteClipOffsetEulerAngles; // 0xD4
+		[FormerlySerializedAs("m_OpenClipTimeOffset")]
+		[SerializeField]
 		private double m_InfiniteClipTimeOffset; // 0xE0
+		[FormerlySerializedAs("m_OpenClipRemoveOffset")]
+		[SerializeField]
 		private bool m_InfiniteClipRemoveOffset; // 0xE8
+		[SerializeField]
 		private bool m_InfiniteClipApplyFootIK; // 0xE9
+		[HideInInspector]
+		[SerializeField]
 		private AnimationPlayableAsset.LoopMode mInfiniteClipLoop; // 0xEC
+		[SerializeField]
 		private MatchTargetFields m_MatchTargetFields; // 0xF0
+		[SerializeField]
 		private Vector3 m_Position; // 0xF4
+		[SerializeField]
 		private Vector3 m_EulerAngles; // 0x100
+		[SerializeField]
 		private AvatarMask m_AvatarMask; // 0x110
+		[SerializeField]
 		private bool m_ApplyAvatarMask; // 0x118
+		[SerializeField]
 		private bool m_DisableFloatCurveOnMask; // 0x119
+		[SerializeField]
 		private TrackOffset m_TrackOffset; // 0x11C
+		[HideInInspector]
+		[SerializeField]
 		private AnimationClip m_InfiniteClip; // 0x120
+		[SerializeField]
 		private bool m_IsAdditive; // 0x128
+		[SerializeField]
 		private bool m_IsAdditiveToLast; // 0x129
 		[NonSerialized]
 		public bool muteScriptAnimAddon; // 0x12A
+		[SerializeField]
 		private bool m_UseScriptAnimAddon; // 0x12B
+		[SerializeField]
 		private bool m_useTPoseAsDefaultPose; // 0x12C
+		[SerializeField]
 		private AnimationClip m_TPoseClip; // 0x130
+		[SerializeField]
 		private ScriptableObject m_TimelineNPCDescriptor; // 0x138
+		[SerializeField]
 		private string m_LookAtTargetPath; // 0x140
+		[SerializeField]
 		private bool m_LookAtUseAdditive; // 0x148
-		private bool m_WriteTransformDefAsPostProcess; // 0x149
+		[SerializeField]
+		private bool m_UseLookAtV2; // 0x149
+		[SerializeField]
+		private bool m_WriteTransformDefAsPostProcess; // 0x14A
 		private Transform m_LookAtTarget; // 0x150
 		[NonSerialized]
 		private HashSet<RuntimeElement> m_allRuntimeClipUnderTrack; // 0x158
 		private static readonly Queue<Transform> s_CachedQueue; // 0x00
+		[HideInInspector]
+		[Obsolete("Use m_InfiniteClipOffsetEulerAngles Instead", false)]
+		[SerializeField]
 		private Quaternion m_OpenClipOffsetRotation; // 0x160
+		[HideInInspector]
+		[Obsolete("Use m_RotationEuler Instead", false)]
+		[SerializeField]
 		private Quaternion m_Rotation; // 0x170
+		[HideInInspector]
+		[Obsolete("Use m_RootTransformOffsetMode", false)]
+		[SerializeField]
 		private bool m_ApplyOffsets; // 0x180
 	
 		// Properties
-		public Vector3 position { get => default; set {} } // 0x000000018BE3D834-0x000000018BE3D890 0x0000000185FB8700-0x0000000185FB8710
-		public Quaternion rotation { get => default; set {} } // 0x0000000186473590-0x00000001864735A4 0x0000000185FB67C0-0x0000000185FB67D0
-		public Vector3 eulerAngles { get => default; set {} } // 0x0000000185FB67F0-0x0000000185FB6800 0x0000000185FB8600-0x0000000185FB8610
-		public bool applyOffsets { get => default; set {} } // 0x00000001864735E0-0x00000001864735F4 0x0000000185FB9360-0x0000000185FB9370
-		public TrackOffset trackOffset { get => default; set {} } // 0x0000000185FBB950-0x0000000185FBB960 0x0000000185FE6140-0x0000000185FE6150
-		public MatchTargetFields matchTargetFields { get => default; set {} } // 0x0000000185FE61E0-0x0000000185FE61F0 0x0000000185FE61B0-0x0000000185FE61C0
-		public AnimationClip infiniteClip { get => default; internal set {} } // 0x0000000185FE6270-0x0000000185FE6280 0x0000000185FB9470-0x0000000185FB9480
-		internal bool infiniteClipRemoveOffset { get => default; set {} } // 0x0000000185FD5570-0x0000000185FD5580 0x000000018BE3CD20-0x000000018BE3CD7C
-		public AvatarMask avatarMask { get => default; set {} } // 0x000000018BE3A63C-0x000000018BE3A6F0 0x000000018BE3D754-0x000000018BE3D7C4
-		public bool applyAvatarMask { get => default; set {} } // 0x000000018BE3D6A4-0x000000018BE3D6EC 0x0000000185FE6190-0x0000000185FE61B0
-		public bool disableFloatCurveOnMask { get => default; set {} } // 0x0000000185FE6240-0x0000000185FE6260 0x000000018BE3D6EC-0x000000018BE3D72C
-		public bool isUsingScriptAnimAddon { get => default; set {} } // 0x000000018BE3D804-0x000000018BE3D834 0x0000000185FE6170-0x0000000185FE6190
-		public bool lookAtUseAdditive { get => default; set {} } // 0x0000000185FE6220-0x0000000185FE6240 0x0000000185FBA440-0x0000000185FBA450
-		public override IEnumerable<PlayableBinding> outputs { get => default; } // 0x0000000185FE6260-0x0000000185FE6270 
-		public bool inClipMode { get => default; } // 0x0000000185FBE0C0-0x0000000185FBE0D0 
-		public Vector3 infiniteClipOffsetPosition { get => default; set {} } // 0x0000000185FD2210-0x0000000185FD2220 0x0000000185FC9CD0-0x0000000185FC9CE0
-		public Quaternion infiniteClipOffsetRotation { get => default; set {} } // 0x0000000185FC9D40-0x0000000185FC9D50 0x0000000185FB9650-0x0000000185FB9660
-		public Vector3 infiniteClipOffsetEulerAngles { get => default; set {} } // 0x0000000185FB96B0-0x0000000185FB96C0 0x000000018BE3D184-0x000000018BE3D1B4
-		internal bool infiniteClipApplyFootIK { get => default; set {} } // 0x000000018BE3AF20-0x000000018BE3AFB4 0x000000018BE3B02C-0x000000018BE3B118
-		internal double infiniteClipTimeOffset { get => default; set {} } // 0x000000018BE3C1A4-0x000000018BE3C2B0 0x000000018BE3D028-0x000000018BE3D060
-		public TimelineClip.ClipExtrapolation infiniteClipPreExtrapolation { get => default; set {} } // 0x000000018BE3A5C8-0x000000018BE3A63C 0x0000000185492010-0x0000000185492020
-		public TimelineClip.ClipExtrapolation infiniteClipPostExtrapolation { get => default; set {} } // 0x000000018BE3D320-0x000000018BE3D48C 0x000000018BE3A6F0-0x000000018BE3AF20
-		internal AnimationPlayableAsset.LoopMode infiniteClipLoop { get => default; set {} } // 0x000000018BE3D1B4-0x000000018BE3D238 0x000000018BE39824-0x000000018BE39CD4
-		public Vector3 openClipOffsetPosition { get => default; set {} } // 0x000000018BE3D520-0x000000018BE3D6A4 0x000000018BE3D48C-0x000000018BE3D520
-		public Quaternion openClipOffsetRotation { get => default; set {} } // 0x000000018BE3936C-0x000000018BE393D4 0x000000018BE39304-0x000000018BE3936C
-		public Vector3 openClipOffsetEulerAngles { get => default; set {} } // 0x000000018BE392C4-0x000000018BE39304 0x0000000183F81410-0x0000000183F81430
-		public TimelineClip.ClipExtrapolation openClipPreExtrapolation { get => default; set {} } // 0x0000000185492010-0x0000000185492020 0x000000018BE4C1DC-0x000000018BE4C25C
-		public TimelineClip.ClipExtrapolation openClipPostExtrapolation { get => default; set {} } // 0x0000000183F81080-0x0000000183F810A0 0x000000018BE4C2F0-0x000000018BE4C33C
+		public Vector3 position { get; set; } // 0x0000000184DBA4A0-0x0000000184DBA4C0 0x0000000184DBA550-0x0000000184DBA570
+		public Quaternion rotation { get; set; } // 0x000000018B33D7C4-0x000000018B33D804 0x000000018B33D8B0-0x000000018B33D8E0
+		public Vector3 eulerAngles { get; set; } // 0x0000000184DBA430-0x0000000184DBA450 0x0000000184DBA4C0-0x0000000184DBA4E0
+		[Obsolete("applyOffset is deprecated. Use trackOffset instead", true)]
+		public bool applyOffsets { get; set; } // 0x00000001812081B0-0x0000000181208610 0x00000001841E1670-0x00000001841E1680
+		public TrackOffset trackOffset { get; set; } // 0x0000000184DB9B70-0x0000000184DB9B80 0x0000000184DB9C20-0x0000000184DB9C30
+		public MatchTargetFields matchTargetFields { get; set; } // 0x0000000184D885B0-0x0000000184D885C0 0x000000018B33D834-0x000000018B33D890
+		public AnimationClip infiniteClip { get; internal set; } // 0x0000000184D8DC70-0x0000000184D8DC80 0x00000001853971C0-0x00000001853971D4
+		internal bool infiniteClipRemoveOffset { get; set; } // 0x0000000184D8C8C0-0x0000000184D8C8D0 0x0000000184D8C8F0-0x0000000184D8C900
+		public AvatarMask avatarMask { get; set; } // 0x0000000184D8D1B0-0x0000000184D8D1C0 0x0000000185397170-0x0000000185397184
+		public bool applyAvatarMask { get; set; } // 0x0000000184D92E30-0x0000000184D92E40 0x0000000184D92E40-0x0000000184D92E50
+		public bool disableFloatCurveOnMask { get; set; } // 0x0000000184D8E510-0x0000000184D8E520 0x0000000184D8E540-0x0000000184D8E550
+		public bool isUsingScriptAnimAddon { get; set; } // 0x0000000184DBA490-0x0000000184DBA4A0 0x0000000184DBA540-0x0000000184DBA550
+		public bool lookAtUseAdditive { get; set; } // 0x0000000184D8FE60-0x0000000184D8FE70 0x0000000184D8FE90-0x0000000184D8FEA0
+		public bool useLookAtV2 { get; set; } // 0x0000000184D8FE50-0x0000000184D8FE60 0x0000000184D8FE80-0x0000000184D8FE90
+		public override IEnumerable<PlayableBinding> outputs { [IteratorStateMachine(typeof(_get_outputs_d__76))] get; } // 0x0000000184B87C60-0x0000000184B87CD0 
+		public bool inClipMode { get; } // 0x00000001839F4E60-0x00000001839F4EB0 
+		public Vector3 infiniteClipOffsetPosition { get; set; } // 0x0000000184DBA470-0x0000000184DBA490 0x0000000184DBA510-0x0000000184DBA530
+		public Quaternion infiniteClipOffsetRotation { get; set; } // 0x000000018B33D75C-0x000000018B33D79C 0x000000018B33D804-0x000000018B33D834
+		public Vector3 infiniteClipOffsetEulerAngles { get; set; } // 0x0000000184DBA450-0x0000000184DBA470 0x0000000184DBA4F0-0x0000000184DBA510
+		internal bool infiniteClipApplyFootIK { get; set; } // 0x0000000184DAA0F0-0x0000000184DAA100 0x0000000184DBA4E0-0x0000000184DBA4F0
+		internal double infiniteClipTimeOffset { get; set; } // 0x0000000184DA03A0-0x0000000184DA03B0 0x0000000184DBA530-0x0000000184DBA540
+		public TimelineClip.ClipExtrapolation infiniteClipPreExtrapolation { get; set; } // 0x0000000184DA4B70-0x0000000184DA4B80 0x0000000184DA5DC0-0x0000000184DA5DD0
+		public TimelineClip.ClipExtrapolation infiniteClipPostExtrapolation { get; set; } // 0x0000000184D9DF00-0x0000000184D9DF10 0x0000000184D9DFC0-0x0000000184D9DFD0
+		internal AnimationPlayableAsset.LoopMode infiniteClipLoop { get; set; } // 0x0000000184D9DF40-0x0000000184D9DF50 0x0000000184D9E020-0x0000000184D9E030
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		[Obsolete("openClipOffsetPosition has been deprecated. Use infiniteClipOffsetPosition instead. (UnityUpgradable) -> infiniteClipOffsetPosition", true)]
+		public Vector3 openClipOffsetPosition { get; set; } // 0x0000000184DBA470-0x0000000184DBA490 0x0000000184DBA510-0x0000000184DBA530
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		[Obsolete("openClipOffsetRotation has been deprecated. Use infiniteClipOffsetRotation instead. (UnityUpgradable) -> infiniteClipOffsetRotation", true)]
+		public Quaternion openClipOffsetRotation { get; set; } // 0x000000018B33D79C-0x000000018B33D7C4 0x000000018B33D890-0x000000018B33D8B0
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		[Obsolete("openClipOffsetEulerAngles has been deprecated. Use infiniteClipOffsetEulerAngles instead. (UnityUpgradable) -> infiniteClipOffsetEulerAngles", true)]
+		public Vector3 openClipOffsetEulerAngles { get; set; } // 0x0000000184DBA450-0x0000000184DBA470 0x0000000184DBA4F0-0x0000000184DBA510
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		[Obsolete("openClipPreExtrapolation has been deprecated. Use infiniteClipPreExtrapolation instead. (UnityUpgradable) -> infiniteClipPreExtrapolation", true)]
+		public TimelineClip.ClipExtrapolation openClipPreExtrapolation { get; set; } // 0x0000000184DA4B70-0x0000000184DA4B80 0x0000000184DA5DC0-0x0000000184DA5DD0
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		[Obsolete("openClipPostExtrapolation has been deprecated. Use infiniteClipPostExtrapolation instead. (UnityUpgradable) -> infiniteClipPostExtrapolation", true)]
+		public TimelineClip.ClipExtrapolation openClipPostExtrapolation { get; set; } // 0x0000000184D9DF00-0x0000000184D9DF10 0x0000000184D9DFC0-0x0000000184D9DFD0
 	
 		// Nested types
-		private static class AnimationTrackUpgrade // TypeDefIndex: 57429
+		private static class AnimationTrackUpgrade // TypeDefIndex: 59772
 		{
 			// Methods
-			public static void ConvertRotationsToEuler(AnimationTrack track) {} // 0x0000000185FE61C0-0x0000000185FE61E0
-			public static void ConvertRootMotion(AnimationTrack track) {} // 0x0000000185FE6280-0x0000000185FE62A0
-			public static void ConvertInfiniteTrack(AnimationTrack track) {} // 0x000000018BE3D7C4-0x000000018BE3D804
+			public static void ConvertRotationsToEuler(AnimationTrack track); // 0x000000018B33C064-0x000000018B33C0CC
+			public static void ConvertRootMotion(AnimationTrack track); // 0x000000018B33BFFC-0x000000018B33C064
+			public static void ConvertInfiniteTrack(AnimationTrack track); // 0x000000018B33BFBC-0x000000018B33BFFC
 		}
 	
-		private sealed class _get_outputs_d__72 : IEnumerable<PlayableBinding>, IEnumerator<PlayableBinding> // TypeDefIndex: 57430
+		[CompilerGenerated]
+		private sealed class _get_outputs_d__76 : IEnumerable<PlayableBinding>, IEnumerator<PlayableBinding> // TypeDefIndex: 59773
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -678,74 +893,73 @@ namespace UnityEngine.Timeline
 			public AnimationTrack __4__this; // 0x40
 	
 			// Properties
-			PlayableBinding IEnumerator<UnityEngine.Playables.PlayableBinding>.Current { get => default; } // 0x00000001814A81B0-0x00000001814A81C0 
-			object IEnumerator.Current { get => default; } // 0x0000000185FBC8D0-0x0000000185FBC8E0 
+			PlayableBinding IEnumerator<UnityEngine.Playables.PlayableBinding>.Current { [DebuggerHidden] get; } // 0x0000000182EC7B40-0x0000000182EC7B60 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018B345DE4-0x000000018B3465FC 
 	
 			// Constructors
-			public _get_outputs_d__72() {} // Dummy constructor
-			public _get_outputs_d__72(int __1__state) {} // 0x000000018BE3D8B0-0x000000018BE3D8E0
+			[DebuggerHidden]
+			public _get_outputs_d__76(int __1__state); // 0x0000000183A10F90-0x0000000183A10FB0
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x0000000185FE6150-0x0000000185FE6170
-			private bool MoveNext() => default; // 0x0000000185FE61F0-0x0000000185FE6210
-			void IEnumerator.Reset() {} // 0x0000000185492010-0x0000000185492020
-			IEnumerator<PlayableBinding> IEnumerable<PlayableBinding>.GetEnumerator() => default; // 0x0000000185FBC8E0-0x0000000185FBC8F0
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000185FB23C0-0x0000000185FB23D0
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018441D910-0x000000018441D9A0
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B345D98-0x000000018B345DE4
+			[DebuggerHidden]
+			IEnumerator<PlayableBinding> IEnumerable<PlayableBinding>.GetEnumerator(); // 0x0000000184CE4250-0x0000000184CE42B0
+			[DebuggerHidden]
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018B345D90-0x000000018B345D98
 		}
 	
 		// Constructors
-		public AnimationTrack() {} // 0x000000018BE4C25C-0x000000018BE4C2E8
-		static AnimationTrack() {} // 0x000000018BE4C2E8-0x000000018BE4C2F0
+		public AnimationTrack(); // 0x00000001839F4CC0-0x00000001839F4E60
+		static AnimationTrack(); // 0x0000000184D11C90-0x0000000184D11D50
 	
 		// Methods
-		public bool IsControlByThisTrack(RuntimeElement element) => default; // 0x0000000185FE6210-0x0000000185FE6220
-		internal override bool CanCompileClips() => default; // 0x0000000185FCBEF0-0x0000000185FCBF00
-		private void ResetOffsets() {} // 0x000000018BE3D238-0x000000018BE3D288
-		public TimelineClip CreateClip(AnimationClip clip) => default; // 0x000000018BE3B480-0x000000018BE3C1A4
-		public void CreateInfiniteClip(string infiniteClipName) {} // 0x0000000185492010-0x0000000185492020
-		public TimelineClip CreateRecordableClip(string animClipName) => default; // 0x000000018BE3A03C-0x000000018BE3A490
-		protected override void OnCreateClip(TimelineClip clip) {} // 0x0000000181B87DE0-0x0000000181B87DF0
-		protected internal override int CalculateItemsHash() => default; // 0x0000000185492010-0x0000000185492020
-		internal void UpdateClipOffsets() {} // 0x000000018BE3A490-0x000000018BE3A5C8
-		private Playable _CreatePlayableFromClip(TimelineClip c, PlayableGraph graph, GameObject go, AppliedOffsetMode mode, ITimelineAnimationEventContextBinding timelineAnimationEventContextBinding) => default; // 0x000000018BE3D0A0-0x000000018BE3D184
-		private Playable CompileTrackPlayable(PlayableGraph graph, AnimationTrack track, GameObject go, IntervalTree<RuntimeElement> tree, AppliedOffsetMode mode, ITimelineAnimationEventContextBinding timelineAnimationEventContextBinding) => default; // 0x000000018BE3D288-0x000000018BE3D298
-		private bool ShouldLinkWithMainTrackMixer(AnimationTrack animationTrack) => default; // 0x000000018BE3CC40-0x000000018BE3CD20
-		private Playable ApplyScriptAnimationPlayable(PlayableGraph graph, AnimationLayerMixerPlayable mixer, GameObject go) => default; // 0x000000018BE3C760-0x000000018BE3C8D8
-		Playable ILayerable.CreateLayerMixer(PlayableGraph graph, GameObject go, int inputCount) => default; // 0x000000018BE3AFB4-0x000000018BE3B02C
-		internal override Playable CreateMixerPlayableGraph(PlayableGraph graph, GameObject go, IntervalTree<RuntimeElement> tree) => default; // 0x000000018BE3B118-0x000000018BE3B480
-		private void AttachCustomBlend(PlayableGraph graph, AnimationLayerMixerPlayable layerMixer) {} // 0x000000018BE39CD4-0x000000018BE39E58
-		private void AttachLastAdditiveClip(PlayableGraph graph, AnimationLayerMixerPlayable layerMixer, GameObject go, IntervalTree<RuntimeElement> tree, List<AnimationTrack> flattenTracks, ITimelineAnimationEventContextBinding timelineAnimationEventContextBinding) {} // 0x000000018BE3D298-0x000000018BE3D320
-		private int GetDefaultBlendCount() => default; // 0x000000018BE3C8D8-0x000000018BE3C964
-		private void AttachDefaultBlend(PlayableGraph graph, AnimationLayerMixerPlayable mixer, bool requireOffset, Animator animator) {} // 0x000000018BE3CB70-0x000000018BE3CC40
-		private Playable AttachOffsetPlayable(PlayableGraph graph, Playable playable, Vector3 pos, Quaternion rot) => default; // 0x000000018BE39E58-0x000000018BE3A03C
-		private bool RequiresMotionXPlayable(AppliedOffsetMode mode, GameObject gameObject) => default; // 0x0000000185492010-0x0000000185492020
-		private static bool UsesAbsoluteMotion(AppliedOffsetMode mode) => default; // 0x000000018BE3C470-0x000000018BE3C760
-		private bool HasController(GameObject gameObject) => default; // 0x000000018BE3CB0C-0x000000018BE3CB70
-		internal Animator GetBinding(PlayableDirector director) => default; // 0x000000018BE3CD7C-0x000000018BE3D028
-		private static AnimationLayerMixerPlayable CreateGroupMixer(PlayableGraph graph, GameObject go, int inputCount) => default; // 0x000000018BE3C964-0x000000018BE3CB0C
-		private Playable CreateInfiniteTrackPlayable(PlayableGraph graph, GameObject go, IntervalTree<RuntimeElement> tree, AppliedOffsetMode mode) => default; // 0x000000018BE393D4-0x000000018BE39824
-		private Playable ApplyTrackOffset(PlayableGraph graph, Playable root, GameObject go, AppliedOffsetMode mode) => default; // 0x000000018BE3C2B0-0x000000018BE3C470
-		private void _AddClipIntoTree(IntervalTree<RuntimeElement> tree, RuntimeClip clip) {} // 0x0000000185FE6190-0x0000000185FE61B0
-		internal override void GetEvaluationTime(out double outStart, out double outDuration) {
-			outStart = default;
-			outDuration = default;
-		} // 0x0000000185FE6240-0x0000000185FE6260
-		internal override void GetSequenceTime(out double outStart, out double outDuration) {
-			outStart = default;
-			outDuration = default;
-		} // 0x000000018BE3D72C-0x000000018BE3D754
-		private void AssignAnimationClip(TimelineClip clip, AnimationClip animClip) {} // 0x000000018BE3D890-0x000000018BE3D8B0
-		public override void GatherProperties(PlayableDirector director, IPropertyCollector driver) {} // 0x0000000185FE6170-0x0000000185FE6190
-		private void GetAnimationClips(List<AnimationClip> animClips) {} // 0x0000000185FE6220-0x0000000185FE6240
-		private AppliedOffsetMode GetOffsetMode(GameObject go, bool animatesRootTransform) => default; // 0x0000000185FBE0C0-0x0000000185FBE0D0
-		private bool IsRootTransformDisabledByMask(GameObject gameObject, Transform genericRootNode) => default; // 0x0000000185FD2210-0x0000000185FD2220
-		private Transform GetGenericRootNode(GameObject gameObject) => default; // 0x0000000185FC9CD0-0x0000000185FC9CE0
-		internal bool AnimatesRootTransform() => default; // 0x0000000185FC9D40-0x0000000185FC9D50
-		private static Transform FindInHierarchyBreadthFirst(Transform t, string name) => default; // 0x000000018BE3D060-0x000000018BE3D0A0
-		internal override void OnUpgradeFromVersion(int oldVersion) {} // 0x000000018BE4C33C-0x000000018BE4CE68
+		public bool IsControlByThisTrack(RuntimeElement element); // 0x000000018B33D584-0x000000018B33D5E0
+		internal override bool CanCompileClips(); // 0x0000000184B30E40-0x0000000184B30EC0
+		[ContextMenu("Reset Offsets")]
+		private void ResetOffsets(); // 0x000000018B33D658-0x000000018B33D688
+		public TimelineClip CreateClip(AnimationClip clip); // 0x000000018B33CA00-0x000000018B33CA94
+		public void CreateInfiniteClip(string infiniteClipName); // 0x000000018B33CA94-0x000000018B33CB80
+		public TimelineClip CreateRecordableClip(string animClipName); // 0x000000018B33CEE8-0x000000018B33CFF4
+		protected override void OnCreateClip(TimelineClip clip); // 0x000000018B33D5E0-0x000000018B33D618
+		protected internal override int CalculateItemsHash(); // 0x0000000184970AF0-0x0000000184970B70
+		internal void UpdateClipOffsets(); // 0x00000001841E1670-0x00000001841E1680
+		private Playable _CreatePlayableFromClip(TimelineClip c, PlayableGraph graph, GameObject go, AppliedOffsetMode mode, ITimelineAnimationEventContextBinding timelineAnimationEventContextBinding); // 0x0000000183FC53E0-0x0000000183FC60A0
+		private Playable CompileTrackPlayable(PlayableGraph graph, AnimationTrack track, GameObject go, IntervalTree<RuntimeElement> tree, AppliedOffsetMode mode, ITimelineAnimationEventContextBinding timelineAnimationEventContextBinding); // 0x0000000183FA6280-0x0000000183FA6B30
+		private bool ShouldLinkWithMainTrackMixer(AnimationTrack animationTrack); // 0x000000018B33D688-0x000000018B33D70C
+		private Playable ApplyScriptAnimationPlayable(PlayableGraph graph, AnimationLayerMixerPlayable mixer, GameObject go); // 0x000000018B33C0CC-0x000000018B33C6E4
+		Playable ILayerable.CreateLayerMixer(PlayableGraph graph, GameObject go, int inputCount); // 0x000000018B33D70C-0x000000018B33D75C
+		internal override Playable CreateMixerPlayableGraph(PlayableGraph graph, GameObject go, IntervalTree<RuntimeElement> tree); // 0x0000000183FA7330-0x0000000183FA9170
+		private void AttachCustomBlend(PlayableGraph graph, AnimationLayerMixerPlayable layerMixer); // 0x00000001841E1670-0x00000001841E1680
+		private void AttachLastAdditiveClip(PlayableGraph graph, AnimationLayerMixerPlayable layerMixer, GameObject go, IntervalTree<RuntimeElement> tree, List<AnimationTrack> flattenTracks, ITimelineAnimationEventContextBinding timelineAnimationEventContextBinding); // 0x0000000184A1F7B0-0x0000000184A1FC60
+		private int GetDefaultBlendCount(); // 0x0000000184D85B80-0x0000000184D85B90
+		private void AttachDefaultBlend(PlayableGraph graph, AnimationLayerMixerPlayable mixer, bool requireOffset, Animator animator); // 0x00000001841E1670-0x00000001841E1680
+		private Playable AttachOffsetPlayable(PlayableGraph graph, Playable playable, Vector3 pos, Quaternion rot); // 0x000000018B33C8C8-0x000000018B33CA00
+		private bool RequiresMotionXPlayable(AppliedOffsetMode mode, GameObject gameObject); // 0x0000000183FA91A0-0x0000000183FA9210
+		private static bool UsesAbsoluteMotion(AppliedOffsetMode mode); // 0x0000000183FA6270-0x0000000183FA6280
+		private bool HasController(GameObject gameObject); // 0x000000018B33D4A4-0x000000018B33D584
+		internal Animator GetBinding(PlayableDirector director); // 0x0000000183FA6B90-0x0000000183FA6DB0
+		private static AnimationLayerMixerPlayable CreateGroupMixer(PlayableGraph graph, GameObject go, int inputCount); // 0x0000000183FA7170-0x0000000183FA7230
+		private Playable CreateInfiniteTrackPlayable(PlayableGraph graph, GameObject go, IntervalTree<RuntimeElement> tree, AppliedOffsetMode mode); // 0x000000018B33CB80-0x000000018B33CEE8
+		private Playable ApplyTrackOffset(PlayableGraph graph, Playable root, GameObject go, AppliedOffsetMode mode); // 0x000000018315B9B0-0x000000018315BC10
+		private void _AddClipIntoTree(IntervalTree<RuntimeElement> tree, RuntimeClip clip); // 0x0000000183FA5F20-0x0000000183FA5FB0
+		internal override void GetEvaluationTime(out double outStart, out double outDuration); // 0x0000000184D38A60-0x0000000184D38AD0
+		internal override void GetSequenceTime(out double outStart, out double outDuration); // 0x0000000184864F30-0x0000000184864FB0
+		private void AssignAnimationClip(TimelineClip clip, AnimationClip animClip); // 0x000000018B33C6E4-0x000000018B33C8C8
+		public override void GatherProperties(PlayableDirector director, IPropertyCollector driver); // 0x00000001841E1670-0x00000001841E1680
+		private void GetAnimationClips(List<AnimationClip> animClips); // 0x000000018B33D1B4-0x000000018B33D4A4
+		private AppliedOffsetMode GetOffsetMode(GameObject go, bool animatesRootTransform); // 0x0000000183FA9170-0x0000000183FA91A0
+		private bool IsRootTransformDisabledByMask(GameObject gameObject, Transform genericRootNode); // 0x0000000183FA9210-0x0000000183FA92E0
+		private Transform GetGenericRootNode(GameObject gameObject); // 0x0000000183FA6E00-0x0000000183FA6FB0
+		internal bool AnimatesRootTransform(); // 0x0000000183FA5720-0x0000000183FA5BC0
+		private static Transform FindInHierarchyBreadthFirst(Transform t, string name); // 0x000000018B33CFF4-0x000000018B33D1B4
+		internal override void OnUpgradeFromVersion(int oldVersion); // 0x000000018B33D618-0x000000018B33D658
 	}
 
-	internal interface ICurvesOwner // TypeDefIndex: 57432
+	internal interface ICurvesOwner // TypeDefIndex: 59775
 	{
 		// Properties
 		string defaultCurvesName { get; }
@@ -755,10 +969,12 @@ namespace UnityEngine.Timeline
 	}
 
 	[Serializable]
-	public class TimelineClip : ICurvesOwner, ISerializationCallbackReceiver // TypeDefIndex: 57437
+	public class TimelineClip : ICurvesOwner, ISerializationCallbackReceiver // TypeDefIndex: 59780
 	{
 		// Fields
-		private const int k_LatestVersion = 1; // Metadata: 0x0207D91C
+		private const int k_LatestVersion = 1; // Metadata: 0x0234D168
+		[HideInInspector]
+		[SerializeField]
 		private int m_Version; // 0x10
 		public static readonly ClipCaps kDefaultClipCaps; // 0x00
 		public static readonly float kDefaultClipDurationInSeconds; // 0x04
@@ -768,74 +984,97 @@ namespace UnityEngine.Timeline
 		internal static readonly double kMinDuration; // 0x20
 		internal static readonly double kMaxTimeValue; // 0x28
 		public int optionIndex; // 0x14
+		[SerializeField]
 		private double m_Start; // 0x18
+		[SerializeField]
 		private double m_ClipIn; // 0x20
+		[SerializeField]
 		private UnityEngine.Object m_Asset; // 0x28
+		[FormerlySerializedAs("m_HackDuration")]
+		[SerializeField]
 		private double m_Duration; // 0x30
+		[SerializeField]
 		private double m_TimeScale; // 0x38
+		[SerializeField]
 		private TrackAsset m_ParentTrack; // 0x40
+		[SerializeField]
 		private double m_EaseInDuration; // 0x48
+		[SerializeField]
 		private double m_EaseOutDuration; // 0x50
+		[SerializeField]
 		private double m_BlendInDuration; // 0x58
+		[SerializeField]
 		private double m_BlendOutDuration; // 0x60
+		[SerializeField]
 		private AnimationCurve m_MixInCurve; // 0x68
+		[SerializeField]
 		private AnimationCurve m_MixOutCurve; // 0x70
+		[SerializeField]
 		private BlendCurveMode m_BlendInCurveMode; // 0x78
+		[SerializeField]
 		private BlendCurveMode m_BlendOutCurveMode; // 0x7C
+		[SerializeField]
 		private List<string> m_ExposedParameterNames; // 0x80
+		[SerializeField]
 		private AnimationClip m_AnimationCurves; // 0x88
+		[SerializeField]
 		private bool m_Recordable; // 0x90
+		[SerializeField]
 		private ClipExtrapolation m_PostExtrapolationMode; // 0x94
+		[SerializeField]
 		private ClipExtrapolation m_PreExtrapolationMode; // 0x98
+		[SerializeField]
 		private double m_PostExtrapolationTime; // 0xA0
+		[SerializeField]
 		private double m_PreExtrapolationTime; // 0xA8
+		[SerializeField]
 		private string m_DisplayName; // 0xB0
 	
 		// Properties
-		public double timeScale { get => default; } // 0x0000000181C44EA0-0x0000000181C44EB0 
-		public double start { get => default; set {} } // 0x000000018BE455B8-0x000000018BE456A4 0x0000000181BD6170-0x0000000181BD61C0
-		public double duration { get => default; set {} } // 0x000000018BE452E4-0x000000018BE45378 0x0000000185FE62D0-0x0000000185FE62E0
-		public double end { get => default; } // 0x000000018BE44DEC-0x000000018BE44E10 
-		public double clipIn { get => default; } // 0x000000018346D8F0-0x000000018346D900 
-		public string displayName { get => default; set {} } // 0x0000000184784C70-0x0000000184784C90 0x000000018BE44D1C-0x000000018BE44D74
-		public double clipAssetDuration { get => default; } // 0x0000000185FB0510-0x0000000185FB0520 
-		public AnimationClip curves { get => default; } // 0x000000018BE44C4C-0x000000018BE44C9C 
-		string ICurvesOwner.defaultCurvesName { get => default; } // 0x00000001813B8590-0x00000001813B85A0 
-		public UnityEngine.Object asset { get => default; set {} } // 0x0000000184A4EDC0-0x0000000184A4EDD0 0x00000001813FF010-0x00000001813FF020
-		UnityEngine.Object ICurvesOwner.assetOwner { get => default; } // 0x00000001813FF010-0x00000001813FF020 
-		TrackAsset ICurvesOwner.targetTrack { get => default; } // 0x00000001813FF010-0x00000001813FF020 
-		public double easeInDuration { get => default; set {} } // 0x000000018BE45378-0x000000018BE4545C 0x000000018BE44EA4-0x000000018BE44F38
-		public double easeOutDuration { get => default; set {} } // 0x000000018BE4545C-0x000000018BE45540 0x000000018BE44CD4-0x000000018BE44CF8
-		public double blendInDuration { get => default; } // 0x000000018BE44CF8-0x000000018BE44D1C 
-		public double blendOutDuration { get => default; } // 0x000000018BE45014-0x000000018BE45044 
-		public bool hasBlendIn { get => default; } // 0x000000018BE45044-0x000000018BE45074 
-		public bool hasBlendOut { get => default; } // 0x000000018BE45074-0x000000018BE450DC 
-		public AnimationCurve mixInCurve { get => default; set {} } // 0x0000000185A62990-0x0000000185A629A0 0x000000018BE450DC-0x000000018BE4510C
-		public double mixInDuration { get => default; } // 0x000000018BE4510C-0x000000018BE45174 
-		public AnimationCurve mixOutCurve { get => default; set {} } // 0x00000001874BE90C-0x00000001874BE91C 0x000000018BE451A4-0x000000018BE451D8
-		public double mixOutTime { get => default; } // 0x000000018BE45174-0x000000018BE451A4 
-		public double mixOutDuration { get => default; } // 0x0000000185FB2250-0x0000000185FB2260 
-		public bool recordable { get => default; internal set {} } // 0x0000000185FB2260-0x0000000185FB2270 0x000000018BE44D74-0x000000018BE44DEC
-		public ClipCaps clipCaps { get => default; } // 0x000000018BE44698-0x000000018BE44744 
-		public ClipExtrapolation postExtrapolationMode { get => default; set {} } // 0x000000018BE45540-0x000000018BE4557C 0x000000018BE451FC-0x000000018BE45220
-		public ClipExtrapolation preExtrapolationMode { get => default; set {} } // 0x000000018BE4557C-0x000000018BE455B8 0x0000000185FE62B0-0x0000000185FE62C0
-		public double extrapolatedStart { get => default; } // 0x000000018BE44F38-0x000000018BE44FFC 
-		public double extrapolatedDuration { get => default; } // 0x000000018BE44558-0x000000018BE44698 
+		public double timeScale { get; } // 0x00000001839F6A20-0x00000001839F6B10 
+		public double start { get; set; } // 0x0000000184D86360-0x0000000184D86370 0x000000018B342000-0x000000018B3420EC
+		public double duration { get; set; } // 0x0000000184D86A10-0x0000000184D86A20 0x000000018B341D2C-0x000000018B341DC0
+		public double end { get; } // 0x0000000184DBA5B0-0x0000000184DBA5C0 
+		public double clipIn { get; } // 0x00000001839F6B10-0x00000001839F6B40 
+		public string displayName { get; set; } // 0x0000000184D86250-0x0000000184D86260 0x0000000184D84CE0-0x0000000184D84D00
+		public double clipAssetDuration { get; } // 0x000000018B341BD0-0x000000018B341C28 
+		public AnimationClip curves { get; } // 0x0000000184D861F0-0x0000000184D86200 
+		string ICurvesOwner.defaultCurvesName { get; } // 0x000000018B341B00-0x000000018B341B50 
+		public UnityEngine.Object asset { get; set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
+		UnityEngine.Object ICurvesOwner.assetOwner { get; } // 0x0000000184D85A60-0x0000000184D85A70 
+		TrackAsset ICurvesOwner.targetTrack { get; } // 0x0000000184D85A60-0x0000000184D85A70 
+		public double easeInDuration { get; set; } // 0x00000001847A2B30-0x00000001847A2BE0 0x000000018B341DC0-0x000000018B341EA4
+		public double easeOutDuration { get; set; } // 0x00000001847A2C40-0x00000001847A2CF0 0x000000018B341EA4-0x000000018B341F88
+		public double blendInDuration { get; } // 0x000000018B341B88-0x000000018B341BAC 
+		public double blendOutDuration { get; } // 0x000000018B341BAC-0x000000018B341BD0 
+		public bool hasBlendIn { get; } // 0x00000001847A2BE0-0x00000001847A2C10 
+		public bool hasBlendOut { get; } // 0x00000001847A2CF0-0x00000001847A2D20 
+		public AnimationCurve mixInCurve { get; set; } // 0x000000018B341C28-0x000000018B341C90 0x000000018485F170-0x000000018485F180
+		public double mixInDuration { get; } // 0x00000001847A2B00-0x00000001847A2B30 
+		public AnimationCurve mixOutCurve { get; set; } // 0x000000018B341C90-0x000000018B341CF8 0x00000001863AD760-0x00000001863AD770
+		public double mixOutTime { get; } // 0x000000018B341CF8-0x000000018B341D2C 
+		public double mixOutDuration { get; } // 0x00000001847A2C10-0x00000001847A2C40 
+		public bool recordable { get; internal set; } // 0x0000000182EC6590-0x0000000182EC65A0 0x0000000182EC65A0-0x0000000182EC65B0
+		public ClipCaps clipCaps { get; } // 0x00000001839F6B40-0x00000001839F6D70 
+		public ClipExtrapolation postExtrapolationMode { get; set; } // 0x00000001839F6630-0x00000001839F6660 0x000000018B341F88-0x000000018B341FC4
+		public ClipExtrapolation preExtrapolationMode { get; set; } // 0x00000001839F66A0-0x00000001839F66D0 0x000000018B341FC4-0x000000018B342000
+		public double extrapolatedStart { get; } // 0x0000000184891CD0-0x0000000184891CF0 
+		public double extrapolatedDuration { get; } // 0x00000001839F7450-0x00000001839F7540 
 	
 		// Nested types
-		private enum Versions // TypeDefIndex: 57433
+		private enum Versions // TypeDefIndex: 59776
 		{
 			Initial = 0,
 			ClipInFromGlobalToLocal = 1
 		}
 	
-		private static class TimelineClipUpgrade // TypeDefIndex: 57434
+		private static class TimelineClipUpgrade // TypeDefIndex: 59777
 		{
 			// Methods
-			public static void UpgradeClipInFromGlobalToLocal(TimelineClip clip) {} // 0x000000018BE44C9C-0x000000018BE44CAC
+			public static void UpgradeClipInFromGlobalToLocal(TimelineClip clip); // 0x000000018B341458-0x000000018B341494
 		}
 	
-		public enum ClipExtrapolation // TypeDefIndex: 57435
+		public enum ClipExtrapolation // TypeDefIndex: 59778
 		{
 			None = 0,
 			Hold = 1,
@@ -844,85 +1083,101 @@ namespace UnityEngine.Timeline
 			Continue = 4
 		}
 	
-		public enum BlendCurveMode // TypeDefIndex: 57436
+		public enum BlendCurveMode // TypeDefIndex: 59779
 		{
 			Auto = 0,
 			Manual = 1
 		}
 	
 		// Constructors
-		public TimelineClip() {} // Dummy constructor
-		internal TimelineClip(TrackAsset parent) {} // 0x000000018BE45220-0x000000018BE452E4
-		static TimelineClip() {} // 0x000000018BE44184-0x000000018BE441C0
+		internal TimelineClip(TrackAsset parent); // 0x000000018B341B60-0x000000018B341B88
+		static TimelineClip(); // 0x0000000184CC6370-0x0000000184CC6470
 	
 		// Methods
-		private void UpgradeToLatestVersion() {} // 0x000000018BE44CAC-0x000000018BE44CD4
-		public TrackAsset GetParentTrack() => default; // 0x000000018BE448DC-0x000000018BE449BC
-		internal void SetParentTrack_Internal(TrackAsset newParentTrack) {} // 0x000000018BE44E10-0x000000018BE44EA4
-		internal int Hash() => default; // 0x000000018BE44424-0x000000018BE44508
-		public float EvaluateMixOut(double time) => default; // 0x000000018BE44360-0x000000018BE44424
-		public float EvaluateMixOutAtGivenTime(double time, double mixOutTime, double mixOutDuration) => default; // 0x000000018BE44284-0x000000018BE44360
-		public float EvaluateMixIn(double time) => default; // 0x000000018BE441C0-0x000000018BE44284
-		public float EvaluateMixInAtGivenTime(double time, double runtimeMixInTime, double mixInDuration) => default; // 0x000000018BE44508-0x000000018BE44530
-		private static AnimationCurve GetDefaultMixInCurve() => default; // 0x000000018BE44530-0x000000018BE44558
-		private static AnimationCurve GetDefaultMixOutCurve() => default; // 0x000000018BE449BC-0x000000018BE44AD0
-		public double ToLocalTime(double time) => default; // 0x000000018BE447E4-0x000000018BE448DC
-		private static double SanitizeTimeValue(double value, double defaultValue) => default; // 0x000000018BE451D8-0x000000018BE451FC
-		internal void SetPostExtrapolationTime(double time) {} // 0x0000000185FE62C0-0x0000000185FE62D0
-		internal void SetPreExtrapolationTime(double time) {} // 0x000000018BE4479C-0x000000018BE447E4
-		public bool IsPreExtrapolatedTime(double sequenceTime) => default; // 0x000000018BE44744-0x000000018BE4479C
-		public bool IsPostExtrapolatedTime(double sequenceTime) => default; // 0x000000018BE44FFC-0x000000018BE45014
-		private static double GetExtrapolatedTime(double time, ClipExtrapolation mode, double duration) => default; // 0x00000001830836C0-0x00000001830836D0
-		void ISerializationCallbackReceiver.OnBeforeSerialize() {} // 0x000000018556CD60-0x000000018556CD80
-		void ISerializationCallbackReceiver.OnAfterDeserialize() {} // 0x000000018BE44AD0-0x000000018BE44C4C
-		public override string ToString() => default; // 0x0000000185492010-0x0000000185492020
-		private void UpdateDirty(double oldValue, double newValue) {} // 0x0000000185EDD080-0x0000000185EDD180
+		private void UpgradeToLatestVersion(); // 0x000000018B341B50-0x000000018B341B60
+		public TrackAsset GetParentTrack(); // 0x0000000184D85A60-0x0000000184D85A70
+		internal void SetParentTrack_Internal(TrackAsset newParentTrack); // 0x000000018B3418A4-0x000000018B341984
+		internal int Hash(); // 0x0000000183AC40C0-0x0000000183AC4200
+		public float EvaluateMixOut(double time); // 0x00000001839F75E0-0x00000001839F7660
+		public float EvaluateMixOutAtGivenTime(double time, double mixOutTime, double mixOutDuration); // 0x000000018B341558-0x000000018B34161C
+		public float EvaluateMixIn(double time); // 0x00000001839F76E0-0x00000001839F7760
+		public float EvaluateMixInAtGivenTime(double time, double runtimeMixInTime, double mixInDuration); // 0x000000018B341494-0x000000018B341558
+		private static AnimationCurve GetDefaultMixInCurve(); // 0x000000018B34161C-0x000000018B341644
+		private static AnimationCurve GetDefaultMixOutCurve(); // 0x000000018B341644-0x000000018B34166C
+		public double ToLocalTime(double time); // 0x00000001839F5D40-0x00000001839F5E10
+		private static double SanitizeTimeValue(double value, double defaultValue); // 0x000000018B3417AC-0x000000018B3418A4
+		internal void SetPostExtrapolationTime(double time); // 0x0000000184DBA590-0x0000000184DBA5A0
+		internal void SetPreExtrapolationTime(double time); // 0x0000000184DBA5A0-0x0000000184DBA5B0
+		public bool IsPreExtrapolatedTime(double sequenceTime); // 0x00000001839F6660-0x00000001839F66A0
+		public bool IsPostExtrapolatedTime(double sequenceTime); // 0x00000001839F65F0-0x00000001839F6630
+		private static double GetExtrapolatedTime(double time, ClipExtrapolation mode, double duration); // 0x000000018B34166C-0x000000018B3417AC
+		void ISerializationCallbackReceiver.OnBeforeSerialize(); // 0x0000000184D89110-0x0000000184D89120
+		void ISerializationCallbackReceiver.OnAfterDeserialize(); // 0x0000000184CC60D0-0x0000000184CC60F0
+		public override string ToString(); // 0x000000018B341984-0x000000018B341B00
+		private void UpdateDirty(double oldValue, double newValue); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class TimelineAsset : PlayableAsset, ISerializationCallbackReceiver, ITimelineClipAsset, IPropertyPreview // TypeDefIndex: 57444
+	[ExcludeFromPreset]
+	public class TimelineAsset : PlayableAsset, ISerializationCallbackReceiver, ITimelineClipAsset, IPropertyPreview // TypeDefIndex: 59787
 	{
 		// Fields
-		private const int k_LatestVersion = 0; // Metadata: 0x0207D926
+		private const int k_LatestVersion = 0; // Metadata: 0x0234D172
+		[HideInInspector]
+		[SerializeField]
 		private int m_Version; // 0x18
+		[HideInInspector]
+		[SerializeField]
 		private List<ScriptableObject> m_Tracks; // 0x20
+		[HideInInspector]
+		[SerializeField]
 		private double m_FixedDuration; // 0x28
 		[NonSerialized]
+		[HideInInspector]
 		private TrackAsset[] m_CacheOutputTracks; // 0x30
 		[NonSerialized]
+		[HideInInspector]
 		private GroupTrack[] m_CacheGroupTracks; // 0x38
 		[NonSerialized]
+		[HideInInspector]
 		private List<TrackAsset> m_CacheRootTracks; // 0x40
 		[NonSerialized]
+		[HideInInspector]
 		private TrackAsset[] m_CacheFlattenedTracks; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private EditorSettings m_EditorSettings; // 0x50
+		[SerializeField]
 		private DurationMode m_DurationMode; // 0x58
+		[HideInInspector]
+		[SerializeField]
 		private MarkerTrack m_MarkerTrack; // 0x60
 	
 		// Properties
-		public EditorSettings editorSettings { get => default; } // 0x000000018BE430A8-0x000000018BE430C4 
-		public override double duration { get => default; } // 0x000000018BE43048-0x000000018BE43064 
-		public double fixedDuration { get => default; set {} } // 0x000000018BE4313C-0x000000018BE431DC 0x000000018BE43938-0x000000018BE43BC0
-		public DurationMode durationMode { get => default; set {} } // 0x000000018BE436F0-0x000000018BE43938 0x000000018BE43ED4-0x000000018BE4402C
-		public override IEnumerable<PlayableBinding> outputs { get => default; } // 0x000000018BE43040-0x000000018BE43048 
-		public ClipCaps clipCaps { get => default; } // 0x0000000185FB0530-0x0000000185FB0540 
-		public int outputTrackCount { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
-		public int rootTrackCount { get => default; } // 0x000000018BE41C38-0x000000018BE41CA8 
-		internal TrackAsset[] flattenedTracks { get => default; } // 0x000000018BE41F04-0x000000018BE42038 
-		public MarkerTrack markerTrack { get => default; } // 0x000000018BE42414-0x000000018BE42730 
-		internal List<ScriptableObject> trackObjects { get => default; }
+		public EditorSettings editorSettings { get; } // 0x0000000184D86270-0x0000000184D86280 
+		public override double duration { get; } // 0x00000001839F2D40-0x00000001839F2DE0 
+		public double fixedDuration { get; set; } // 0x000000018B341310-0x000000018B341390 0x000000018B341400-0x000000018B341458
+		public DurationMode durationMode { get; set; } // 0x0000000184D86570-0x0000000184D86580 0x0000000184D865D0-0x0000000184D865E0
+		public override IEnumerable<PlayableBinding> outputs { [IteratorStateMachine(typeof(_get_outputs_d__28))] get; } // 0x00000001848FD6E0-0x00000001848FD760 
+		public ClipCaps clipCaps { get; } // 0x000000018B34105C-0x000000018B341310 
+		public int outputTrackCount { get; } // 0x000000018B341390-0x000000018B3413B8 
+		public int rootTrackCount { get; } // 0x000000018B3413B8-0x000000018B341400 
+		internal TrackAsset[] flattenedTracks { get; } // 0x00000001839F35B0-0x00000001839F3720 
+		public MarkerTrack markerTrack { get; } // 0x0000000184D86280-0x0000000184D86290 
+		internal List<ScriptableObject> trackObjects { get; } // 0x0000000184D862C0-0x0000000184D862D0 
 	
 		// Nested types
-		private enum Versions // TypeDefIndex: 57438
+		private enum Versions // TypeDefIndex: 59781
 		{
 			Initial = 0
 		}
 	
-		private static class TimelineAssetUpgrade // TypeDefIndex: 57439
+		private static class TimelineAssetUpgrade // TypeDefIndex: 59782
 		{
 		}
 	
-		public enum MediaType // TypeDefIndex: 57440
+		[Obsolete("MediaType has been deprecated. It is no longer required, and will be removed in a future release.", false)]
+		public enum MediaType // TypeDefIndex: 59783
 		{
 			Animation = 0,
 			Audio = 1,
@@ -933,31 +1188,37 @@ namespace UnityEngine.Timeline
 			Group = 5
 		}
 	
-		public enum DurationMode // TypeDefIndex: 57441
+		public enum DurationMode // TypeDefIndex: 59784
 		{
 			BasedOnClips = 0,
 			FixedLength = 1
 		}
 	
 		[Serializable]
-		public class EditorSettings // TypeDefIndex: 57442
+		public class EditorSettings // TypeDefIndex: 59785
 		{
 			// Fields
 			internal static readonly double kMinFrameRate; // 0x00
 			internal static readonly double kMaxFrameRate; // 0x08
 			internal static readonly double kDefaultFrameRate; // 0x10
+			[FrameRateField]
+			[HideInInspector]
+			[SerializeField]
 			private double m_Framerate; // 0x10
+			[HideInInspector]
+			[SerializeField]
 			private bool m_ScenePreview; // 0x18
 	
 			// Properties
-			public double frameRate { get => default; set {} } // 0x0000000185492010-0x0000000185492020 0x0000000181460F60-0x0000000181460F70
+			public double frameRate { get; set; } // 0x0000000184D96320-0x0000000184D96330 0x000000018B33F644-0x000000018B33F664
 	
 			// Constructors
-			public EditorSettings() {} // 0x000000018BE43DD4-0x000000018BE43E54
-			static EditorSettings() {} // 0x000000018BE43E54-0x000000018BE43ED4
+			public EditorSettings(); // 0x00000001839F4B00-0x00000001839F4B70
+			static EditorSettings(); // 0x0000000184D1DB60-0x0000000184D1DC10
 		}
 	
-		private sealed class _get_outputs_d__28 : IEnumerable<PlayableBinding>, IEnumerator<PlayableBinding> // TypeDefIndex: 57443
+		[CompilerGenerated]
+		private sealed class _get_outputs_d__28 : IEnumerable<PlayableBinding>, IEnumerator<PlayableBinding> // TypeDefIndex: 59786
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -968,87 +1229,113 @@ namespace UnityEngine.Timeline
 			private IEnumerator<PlayableBinding> __7__wrap2; // 0x50
 	
 			// Properties
-			PlayableBinding IEnumerator<UnityEngine.Playables.PlayableBinding>.Current { get => default; } // 0x000000018BE4402C-0x000000018BE44054 
-			object IEnumerator.Current { get => default; } // 0x000000018BE435A0-0x000000018BE435D4 
+			PlayableBinding IEnumerator<UnityEngine.Playables.PlayableBinding>.Current { [DebuggerHidden] get; } // 0x0000000182EC7B40-0x0000000182EC7B60 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018B345B6C-0x000000018B345BBC 
 	
 			// Constructors
-			public _get_outputs_d__28() {} // Dummy constructor
-			public _get_outputs_d__28(int __1__state) {} // 0x000000018BE4410C-0x000000018BE44164
+			[DebuggerHidden]
+			public _get_outputs_d__28(int __1__state); // 0x0000000183A10F90-0x0000000183A10FB0
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x0000000183F80450-0x0000000183F80460
-			private bool MoveNext() => default; // 0x0000000183F804E0-0x0000000183F804F0
-			private void __m__Finally1() {} // 0x000000018BE44054-0x000000018BE440C4
-			private void __m__Finally2() {} // 0x000000018BE43BC0-0x000000018BE43DD4
-			void IEnumerator.Reset() {} // 0x000000018BE440C4-0x000000018BE4410C
-			IEnumerator<PlayableBinding> IEnumerable<PlayableBinding>.GetEnumerator() => default; // 0x000000018BE430C4-0x000000018BE43120
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018BE43120-0x000000018BE4313C
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x0000000184CD8100-0x0000000184CD8180
+			private bool MoveNext(); // 0x0000000183FC8FA0-0x0000000183FC9770
+			private void __m__Finally1(); // 0x0000000183FC8DD0-0x0000000183FC8E30
+			private void __m__Finally2(); // 0x0000000183FC8F40-0x0000000183FC8FA0
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B345B20-0x000000018B345B6C
+			[DebuggerHidden]
+			IEnumerator<PlayableBinding> IEnumerable<PlayableBinding>.GetEnumerator(); // 0x0000000184A21450-0x0000000184A214B0
+			[DebuggerHidden]
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018B345B18-0x000000018B345B20
 		}
 	
 		// Constructors
-		public TimelineAsset() {} // 0x000000018BE4BE88-0x000000018BE4BE90
+		public TimelineAsset(); // 0x00000001839F4A90-0x00000001839F4B00
 	
 		// Methods
-		private void UpgradeToLatestVersion() {} // 0x000000018BE43064-0x000000018BE430A8
-		private void OnValidate() {} // 0x000000018BE435D4-0x000000018BE43694
-		public TrackAsset GetRootTrack(int index) => default; // 0x000000018BE4210C-0x000000018BE42414
-		public IEnumerable<TrackAsset> GetRootTracks() => default; // 0x0000000185FE62A0-0x0000000185FE62B0
-		public TrackAsset GetOutputTrack(int index) => default; // 0x000000018510A100-0x000000018510A110
-		public IEnumerable<TrackAsset> GetOutputTracks() => default; // 0x0000000185325A90-0x0000000185325BB0
-		public IEnumerable<GroupTrack> GetGroupTracks() => default; // 0x000000018BE42EDC-0x000000018BE43040
-		private static double GetValidFrameRate(double frameRate) => default; // 0x000000018BE42038-0x000000018BE4210C
-		private void UpdateRootTrackCache() {} // 0x000000018510A600-0x000000018510A640
-		private void UpdateOutputTrackCache() {} // 0x000000018BE43694-0x000000018BE436F0
-		public TrackAsset[] GetAllTracks() => default; // 0x000000018BE41A60-0x000000018BE41C38
-		internal void AddTrackInternal(TrackAsset track) {}
-		internal void RemoveTrack(TrackAsset track) {}
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject go) => default; // 0x000000018BE42730-0x000000018BE428CC
-		void ISerializationCallbackReceiver.OnBeforeSerialize() {} // 0x000000018BE42B50-0x000000018BE42EDC
-		void ISerializationCallbackReceiver.OnAfterDeserialize() {} // 0x000000018BE431DC-0x000000018BE43398
-		private void __internalAwake() {} // 0x000000018BE43398-0x000000018BE435A0
-		public void GatherProperties(PlayableDirector director, IPropertyCollector driver) {} // 0x000000018BE41CA8-0x000000018BE41F04
-		public void CreateMarkerTrack() {} // 0x000000018BE428CC-0x000000018BE429D0
-		internal void Invalidate() {} // 0x000000018BE429D0-0x000000018BE42B50
-		internal void UpdateFixedDurationWithItemsDuration() {} // 0x00000001850B4470-0x00000001850B44E0
-		private DiscreteTime CalculateItemsDuration() => default; // 0x0000000185FC3350-0x0000000185FC3360
-		private static void AddSubTracksRecursive(TrackAsset track, ref List<TrackAsset> allTracks) {} // 0x000000018BE416F8-0x000000018BE41718
-		public TrackAsset CreateTrack(System.Type type, TrackAsset parent, string name) => default; // 0x00000001850B49C0-0x00000001850B4A30
+		private void UpgradeToLatestVersion(); // 0x00000001841E1670-0x00000001841E1680
+		private void OnValidate(); // 0x000000018B340F0C-0x000000018B340F40
+		public TrackAsset GetRootTrack(int index); // 0x000000018B340A30-0x000000018B340A8C
+		public IEnumerable<TrackAsset> GetRootTracks(); // 0x000000018B340A8C-0x000000018B340AA8
+		public TrackAsset GetOutputTrack(int index); // 0x000000018B3409EC-0x000000018B340A30
+		public IEnumerable<TrackAsset> GetOutputTracks(); // 0x00000001853947BC-0x00000001853947D8
+		public IEnumerable<GroupTrack> GetGroupTracks(); // 0x0000000185396C14-0x0000000185396C30
+		private static double GetValidFrameRate(double frameRate); // 0x000000018B340AA8-0x000000018B340B48
+		private void UpdateRootTrackCache(); // 0x00000001839F3DE0-0x00000001839F40B0
+		private void UpdateOutputTrackCache(); // 0x00000001839F2A60-0x00000001839F2D40
+		public TrackAsset[] GetAllTracks(); // 0x000000018B3409E4-0x000000018B3409EC
+		internal void AddTrackInternal(TrackAsset track); // 0x000000018B33FA18-0x000000018B33FA88
+		internal void RemoveTrack(TrackAsset track); // 0x000000018B340F40-0x000000018B341000
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject go); // 0x0000000183FC6180-0x0000000183FC6800
+		void ISerializationCallbackReceiver.OnBeforeSerialize(); // 0x0000000184DBA580-0x0000000184DBA590
+		void ISerializationCallbackReceiver.OnAfterDeserialize(); // 0x00000001839ED100-0x00000001839ED110
+		private void __internalAwake(); // 0x00000001845A5340-0x00000001845A54A0
+		public void GatherProperties(PlayableDirector director, IPropertyCollector driver); // 0x000000018B340880-0x000000018B3409E4
+		public void CreateMarkerTrack(); // 0x000000018B33FCE4-0x000000018B33FDB8
+		internal void Invalidate(); // 0x00000001839ED6C0-0x00000001839ED700
+		internal void UpdateFixedDurationWithItemsDuration(); // 0x000000018B341000-0x000000018B34105C
+		private DiscreteTime CalculateItemsDuration(); // 0x00000001839F2E40-0x00000001839F2FC0
+		private static void AddSubTracksRecursive(TrackAsset track, ref List<TrackAsset> allTracks); // 0x00000001839F3730-0x00000001839F3990
+		public TrackAsset CreateTrack(System.Type type, TrackAsset parent, string name); // 0x000000018B33FDB8-0x000000018B3400D4
 		public T CreateTrack<T>(TrackAsset parent, string trackName)
-			where T : TrackAsset, new() => default; // 0x0000000185F4AD40-0x0000000185F4ADF0
+			where T : TrackAsset, new();
 		public T CreateTrack<T>(string trackName)
-			where T : TrackAsset, new() => default; // 0x0000000183F81410-0x0000000183F81430
+			where T : TrackAsset, new();
 		public T CreateTrack<T>()
-			where T : TrackAsset, new() => default; // 0x000000018BE4BF2C-0x000000018BE4C018
-		public bool DeleteClip(TimelineClip clip) => default; // 0x000000018BE4B978-0x000000018BE4BDFC
-		public bool DeleteTrack(TrackAsset track) => default; // 0x000000018BE4C018-0x000000018BE4C060
-		internal void MoveLastTrackBefore(TrackAsset asset) {} // 0x000000018BE4C060-0x000000018BE4C0AC
-		public void MoveTrackAfter(TrackAsset trackToMove, TrackAsset targetTrack) {} // 0x0000000183F81080-0x0000000183F810A0
-		private TrackAsset AllocateTrack(TrackAsset trackAssetParent, string trackName, System.Type trackType) => default; // 0x000000018BE4BE90-0x000000018BE4BEDC
-		private void DeleteRecordedAnimation(TrackAsset track) {} // 0x000000018BE4BEDC-0x000000018BE4BF2C
-		private void DeleteRecordedAnimation(TimelineClip clip) {} // 0x000000018BE4BDFC-0x000000018BE4BE88
+			where T : TrackAsset, new();
+		public bool DeleteClip(TimelineClip clip); // 0x000000018B3400D4-0x000000018B340270
+		public bool DeleteTrack(TrackAsset track); // 0x000000018B3404F4-0x000000018B340880
+		internal void MoveLastTrackBefore(TrackAsset asset); // 0x000000018B340B48-0x000000018B340D04
+		public void MoveTrackAfter(TrackAsset trackToMove, TrackAsset targetTrack); // 0x000000018B340D04-0x000000018B340F0C
+		private TrackAsset AllocateTrack(TrackAsset trackAssetParent, string trackName, System.Type trackType); // 0x000000018B33FA88-0x000000018B33FCE4
+		private void DeleteRecordedAnimation(TrackAsset track); // 0x000000018B340270-0x000000018B340374
+		private void DeleteRecordedAnimation(TimelineClip clip); // 0x000000018B340374-0x000000018B3404F4
 	}
 
 	[Serializable]
-	public abstract class TrackAsset : PlayableAsset, ISerializationCallbackReceiver, IPropertyPreview, ICurvesOwner, IDynamicBinding // TypeDefIndex: 57450
+	[IgnoreOnPlayableTrack]
+	[SupportsChildTracks(null, 2147483647)]
+	public abstract class TrackAsset : PlayableAsset, ISerializationCallbackReceiver, IPropertyPreview, ICurvesOwner, IDynamicBinding // TypeDefIndex: 59793
 	{
 		// Fields
-		private const int k_LatestVersion = 3; // Metadata: 0x0207D931
+		private const int k_LatestVersion = 3; // Metadata: 0x0234D17D
+		[HideInInspector]
+		[SerializeField]
 		private int m_Version; // 0x18
+		[FormerlySerializedAs("m_animClip")]
+		[HideInInspector]
+		[Obsolete("Please use m_InfiniteClip (on AnimationTrack) instead.", false)]
+		[SerializeField]
 		internal AnimationClip m_AnimClip; // 0x20
 		public bool useAutoBinding; // 0x28
 		public string autoBindingPath; // 0x30
 		public string uniqueId; // 0x38
 		public int uiBindingType; // 0x40
 		private static TransientBuildData s_BuildData; // 0x00
-		internal const string kDefaultCurvesName = "Track Parameters"; // Metadata: 0x0207D932
+		internal const string kDefaultCurvesName = "Track Parameters"; // Metadata: 0x0234D17E
+		[CompilerGenerated]
 		private static Action<TimelineClip, GameObject, Playable> OnClipPlayableCreate; // 0x18
+		[CompilerGenerated]
 		private static Action<TrackAsset, GameObject, Playable> OnTrackAnimationPlayableCreate; // 0x20
 		private bool m_RuntimeMuted; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private bool m_Locked; // 0x45
+		[HideInInspector]
+		[SerializeField]
 		private bool m_Muted; // 0x46
+		[HideInInspector]
+		[SerializeField]
 		private string m_CustomPlayableFullTypename; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private AnimationClip m_Curves; // 0x50
+		[HideInInspector]
+		[SerializeField]
 		private PlayableAsset m_Parent; // 0x58
+		[HideInInspector]
+		[SerializeField]
 		private List<ScriptableObject> m_Children; // 0x60
 		[NonSerialized]
 		private int m_ItemsHash; // 0x68
@@ -1061,44 +1348,54 @@ namespace UnityEngine.Timeline
 		private static TrackAsset[] s_EmptyCache; // 0x28
 		private IEnumerable<TrackAsset> m_ChildTrackCache; // 0x90
 		private static Dictionary<System.Type, TrackBindingTypeAttribute> s_TrackBindingTypeAttributeCache; // 0x30
+		[HideInInspector]
+		[SerializeField]
 		protected internal List<TimelineClip> m_Clips; // 0x98
+		[HideInInspector]
+		[SerializeField]
 		private MarkerList m_Markers; // 0xA0
 		public int OptionIndex; // 0xB8
 		[NonSerialized]
 		public bool useRuntimeMuted; // 0xBC
 	
 		// Properties
-		public double start { get; } // 0x000000018BE4AF0C-0x000000018BE4AF48 
-		public double end { get; } // 0x000000018BE4AE54-0x000000018BE4AE9C 
-		public sealed override double duration { get; } // 0x000000018BE4AE9C-0x000000018BE4AF0C 
-		public virtual bool muted { get; set; } // 0x000000018BE4AF48-0x000000018BE4B008 0x000000018BE4B1FC-0x000000018BE4B26C
-		public virtual bool runtimeMuted { get; set; } // 0x000000018BE49550-0x000000018BE49570 0x00000001813ECF20-0x00000001813ECF30
-		public bool mutedInHierarchy { get; } // 0x000000018571FEC0-0x000000018571FED0 
-		public TimelineAsset timelineAsset { get; } // 0x0000000181460F60-0x0000000181460F70 
-		public PlayableAsset parent { get; set; } // 0x0000000184A4E570-0x0000000184A4E580 0x000000018BE4A6B4-0x000000018BE4A6E0
-		internal TimelineClip[] clips { get; } // 0x000000018BE4A6AC-0x000000018BE4A6B4 
-		public virtual bool isEmpty { get; } // 0x0000000185779060-0x0000000185779070 
-		public bool hasClips { get; } // 0x0000000185FB0530-0x0000000185FB0540 
-		public bool hasCurves { get; } // 0x0000000185FB0D30-0x0000000185FB0D40 
-		public bool isSubTrack { get; } // 0x00000001817D3160-0x00000001817D3170 
-		public override IEnumerable<PlayableBinding> outputs { get; } // 0x000000018BE4B008-0x000000018BE4B0F4 
-		internal string customPlayableTypename { get; set; } // 0x0000000185549660-0x0000000185549750 0x000000018BE475CC-0x000000018BE4766C
-		public AnimationClip curves { get; internal set; } // 0x000000018BE48B88-0x000000018BE48BF8 0x000000018BE488CC-0x000000018BE4891C
-		string ICurvesOwner.defaultCurvesName { get; } // 0x000000018BE4766C-0x000000018BE4788C 
-		UnityEngine.Object ICurvesOwner.asset { get; }
-		UnityEngine.Object ICurvesOwner.assetOwner { get; } // 0x000000018BE48BF8-0x000000018BE48D08 
-		TrackAsset ICurvesOwner.targetTrack { get; } // 0x000000018BE479CC-0x000000018BE479F0 
-		internal List<ScriptableObject> subTracksObjects { get; }
-		public bool locked { get; set; } // 0x000000018BE48D48-0x000000018BE48D58 0x000000018510A390-0x000000018510A440
-		public bool lockedInHierarchy { get; } // 0x000000018BE49570-0x000000018BE4976C 
-		public bool supportsNotifications { get; } // 0x000000018BE49BD4-0x000000018BE49BE4 
+		public double start { get; } // 0x000000018B34574C-0x000000018B34579C 
+		public double end { get; } // 0x00000001839F2DE0-0x00000001839F2E40 
+		public sealed override double duration { get; } // 0x000000018B3455C0-0x000000018B345624 
+		public virtual bool muted { get; set; } // 0x00000001839F34A0-0x00000001839F34C0 0x0000000184D90900-0x0000000184D90910
+		public virtual bool runtimeMuted { get; set; } // 0x0000000184D86A30-0x0000000184D86A40 0x0000000184D86A40-0x0000000184D86A50
+		public bool mutedInHierarchy { get; } // 0x00000001839F33B0-0x00000001839F34A0 
+		public TimelineAsset timelineAsset { get; } // 0x00000001839ED500-0x00000001839ED6C0 
+		public PlayableAsset parent { get; set; } // 0x0000000182E56440-0x0000000182E56460 0x00000001836E5590-0x00000001836E55A0
+		internal TimelineClip[] clips { get; } // 0x00000001839F4650-0x00000001839F46F0 
+		public virtual bool isEmpty { get; } // 0x000000018B345624-0x000000018B345660 
+		public bool hasClips { get; } // 0x000000018468DAA0-0x000000018468DAF0 
+		public bool hasCurves { get; } // 0x0000000183E0E860-0x0000000183E0E900 
+		public bool isSubTrack { get; } // 0x00000001839F40B0-0x00000001839F4170 
+		public override IEnumerable<PlayableBinding> outputs { [IteratorStateMachine(typeof(_get_outputs_d__75))] get; } // 0x0000000183A10EB0-0x0000000183A10F30 
+		internal string customPlayableTypename { get; set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
+		public AnimationClip curves { get; internal set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
+		string ICurvesOwner.defaultCurvesName { get; } // 0x000000018B3451FC-0x000000018B345228 
+		UnityEngine.Object ICurvesOwner.asset { get; } // 0x000000018464E630-0x000000018464E640 
+		UnityEngine.Object ICurvesOwner.assetOwner { get; } // 0x000000018B3451F4-0x000000018B3451FC 
+		TrackAsset ICurvesOwner.targetTrack { get; } // 0x000000018464E630-0x000000018464E640 
+		internal List<ScriptableObject> subTracksObjects { get; } // 0x0000000184D86280-0x0000000184D86290 
+		public bool locked { get; set; } // 0x0000000184D86EF0-0x0000000184D86F00 0x0000000184D86F00-0x0000000184D86F10
+		public bool lockedInHierarchy { get; } // 0x000000018B345660-0x000000018B34574C 
+		public bool supportsNotifications { get; } // 0x00000001839EDE90-0x00000001839EDF20 
 	
 		// Events
-		internal static event Action<TimelineClip, GameObject, Playable> OnClipPlayableCreate;
-		internal static event Action<TrackAsset, GameObject, Playable> OnTrackAnimationPlayableCreate;
+		internal static event Action<TimelineClip, GameObject, Playable> OnClipPlayableCreate {
+			add; // 0x000000018B345430-0x000000018B3454F8
+			remove; // 0x000000018B34579C-0x000000018B345864
+		}
+		internal static event Action<TrackAsset, GameObject, Playable> OnTrackAnimationPlayableCreate {
+			add; // 0x000000018B3454F8-0x000000018B3455C0
+			remove; // 0x000000018B345864-0x000000018B34592C
+		}
 	
 		// Nested types
-		internal enum Versions // TypeDefIndex: 57445
+		internal enum Versions // TypeDefIndex: 59788
 		{
 			Initial = 0,
 			RotationAsEuler = 1,
@@ -1106,11 +1403,11 @@ namespace UnityEngine.Timeline
 			AnimatedTrackProperties = 3
 		}
 	
-		private static class TrackAssetUpgrade // TypeDefIndex: 57446
+		private static class TrackAssetUpgrade // TypeDefIndex: 59789
 		{
 		}
 	
-		private struct TransientBuildData // TypeDefIndex: 57447
+		private struct TransientBuildData // TypeDefIndex: 59790
 		{
 			// Fields
 			public List<TrackAsset> trackList; // 0x00
@@ -1118,11 +1415,12 @@ namespace UnityEngine.Timeline
 			public List<IMarker> markerList; // 0x10
 	
 			// Methods
-			public static TransientBuildData Create() => default; // 0x0000000185492010-0x0000000185492020
-			public void Clear() {} // 0x0000000185492010-0x0000000185492020
+			public static TransientBuildData Create(); // 0x00000001848BB060-0x00000001848BB190
+			public void Clear(); // 0x00000001839EDBA0-0x00000001839EDC30
 		}
 	
-		private sealed class _get_outputs_d__75 : IEnumerable<PlayableBinding>, IEnumerator<PlayableBinding> // TypeDefIndex: 57448
+		[CompilerGenerated]
+		private sealed class _get_outputs_d__75 : IEnumerable<PlayableBinding>, IEnumerator<PlayableBinding> // TypeDefIndex: 59791
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1131,195 +1429,206 @@ namespace UnityEngine.Timeline
 			public TrackAsset __4__this; // 0x40
 	
 			// Properties
-			PlayableBinding IEnumerator<UnityEngine.Playables.PlayableBinding>.Current { get => default; } // 0x0000000185492010-0x0000000185492020 
-			object IEnumerator.Current { get => default; } // 0x000000018BE4B344-0x000000018BE4B40C 
+			PlayableBinding IEnumerator<UnityEngine.Playables.PlayableBinding>.Current { [DebuggerHidden] get; } // 0x0000000182EC7B40-0x0000000182EC7B60 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018B345D40-0x000000018B345D90 
 	
 			// Constructors
-			public _get_outputs_d__75() {} // Dummy constructor
-			public _get_outputs_d__75(int __1__state) {} // 0x0000000185492010-0x0000000185492020
+			[DebuggerHidden]
+			public _get_outputs_d__75(int __1__state); // 0x0000000183A10F90-0x0000000183A10FB0
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018BE4A598-0x000000018BE4A6AC
-			private bool MoveNext() => default; // 0x000000018510A110-0x000000018510A390
-			void IEnumerator.Reset() {} // 0x000000018BE4AB40-0x000000018BE4AC08
-			IEnumerator<PlayableBinding> IEnumerable<PlayableBinding>.GetEnumerator() => default; // 0x000000018BE4AC08-0x000000018BE4ACD0
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018BE4B40C-0x000000018BE4B4D4
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018441DAE0-0x000000018441DD30
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B345CF4-0x000000018B345D40
+			[DebuggerHidden]
+			IEnumerator<PlayableBinding> IEnumerable<PlayableBinding>.GetEnumerator(); // 0x0000000183A10FB0-0x0000000183A11010
+			[DebuggerHidden]
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018B345CEC-0x000000018B345CF4
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 57449
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 59792
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Comparison<TimelineClip> __9__132_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x000000018BE4B26C-0x000000018BE4B2BC
-			public __c() {} // 0x000000018BE4AE00-0x000000018BE4AE54
+			static __c(); // 0x0000000184D489D0-0x0000000184D48A30
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _SortClips_b__132_0(TimelineClip clip1, TimelineClip clip2) => default; // 0x000000018BE4AD9C-0x000000018BE4AE00
+			internal int _SortClips_b__132_0(TimelineClip clip1, TimelineClip clip2); // 0x000000018B34592C-0x000000018B345968
 		}
 	
 		// Constructors
-		protected TrackAsset() {} // 0x0000000185492010-0x0000000185492020
-		static TrackAsset() {} // 0x0000000183F80B90-0x0000000183F80C00
+		protected TrackAsset(); // 0x00000001839F3990-0x00000001839F3AA0
+		static TrackAsset(); // 0x00000001848BAF40-0x00000001848BB060
 	
 		// Methods
-		protected virtual void OnBeforeTrackSerialize() {} // 0x000000018BE4B1E8-0x000000018BE4B1FC
-		protected virtual void OnAfterTrackDeserialize() {} // 0x0000000185FBC810-0x0000000185FBC820
-		internal virtual void OnUpgradeFromVersion(int oldVersion) {} // 0x0000000185FB08A0-0x0000000185FB08B0
-		void ISerializationCallbackReceiver.OnBeforeSerialize() {} // 0x0000000185FB08B0-0x0000000185FB08C0
-		void ISerializationCallbackReceiver.OnAfterDeserialize() {} // 0x000000018BE4B0F4-0x000000018BE4B1E8
-		private void UpgradeToLatestVersion() {} // 0x000000018510A4E0-0x000000018510A600
-		public IEnumerable<TimelineClip> GetClips() => default; // 0x0000000185779060-0x0000000185779070
-		public IEnumerable<TrackAsset> GetChildTracks() => default; // 0x000000018BE4B2BC-0x000000018BE4B344
-		private void __internalAwake() {} // 0x000000018BE49BE4-0x000000018BE49BF4
-		public void CreateCurves(string curvesClipName) {} // 0x000000018BE474B0-0x000000018BE475CC
-		public virtual Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount) => default; // 0x000000018BE46DFC-0x000000018BE46E30
-		public sealed override Playable CreatePlayable(PlayableGraph graph, GameObject go) => default; // 0x000000018BE47298-0x000000018BE474B0
-		public TimelineClip CreateDefaultClip() => default; // 0x000000018BE47054-0x000000018BE47298
+		protected virtual void OnBeforeTrackSerialize(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnAfterTrackDeserialize(); // 0x00000001841E1670-0x00000001841E1680
+		internal virtual void OnUpgradeFromVersion(int oldVersion); // 0x00000001841E1670-0x00000001841E1680
+		void ISerializationCallbackReceiver.OnBeforeSerialize(); // 0x000000018B3450E0-0x000000018B3451F4
+		void ISerializationCallbackReceiver.OnAfterDeserialize(); // 0x00000001839ED110-0x00000001839ED390
+		private void UpgradeToLatestVersion(); // 0x00000001841E1670-0x00000001841E1680
+		public IEnumerable<TimelineClip> GetClips(); // 0x00000001853947D8-0x00000001853947E0
+		public IEnumerable<TrackAsset> GetChildTracks(); // 0x00000001853947E0-0x0000000185394800
+		private void __internalAwake(); // 0x00000001847FDE30-0x00000001847FDEC0
+		public void CreateCurves(string curvesClipName); // 0x000000018B343DAC-0x000000018B343E4C
+		public virtual Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount); // 0x0000000183E0EB60-0x0000000183E0EC40
+		public sealed override Playable CreatePlayable(PlayableGraph graph, GameObject go); // 0x000000018B34440C-0x000000018B34445C
+		public TimelineClip CreateDefaultClip(); // 0x000000018B343E4C-0x000000018B34406C
 		public TimelineClip CreateClip<T>()
-			where T : ScriptableObject, IPlayableAsset => default; // 0x000000018BE46E30-0x000000018BE47054
-		public bool DeleteClip(TimelineClip clip) => default; // 0x0000000185FB0520-0x0000000185FB0530
-		public IMarker CreateMarker(System.Type type, double time) => default; // 0x000000018BE468D0-0x000000018BE468E0
+			where T : ScriptableObject, IPlayableAsset;
+		public bool DeleteClip(TimelineClip clip); // 0x000000018B34445C-0x000000018B34456C
+		public IMarker CreateMarker(System.Type type, double time); // 0x000000018B3441AC-0x000000018B3441D0
 		public T CreateMarker<T>(double time)
-			where T : ScriptableObject, IMarker => default; // 0x000000018BE465CC-0x000000018BE465DC
-		public bool DeleteMarker(IMarker marker) => default; // 0x000000018BE48D08-0x000000018BE48D48
-		public IEnumerable<IMarker> GetMarkers() => default; // 0x000000018BE49D60-0x000000018BE49EA8
-		public IEnumerable<IMarker> GetClipMarkers() => default; // 0x000000018BE46538-0x000000018BE465CC
-		public int GetMarkerCount() => default; // 0x000000018BE482C8-0x000000018BE48620
-		public IMarker GetMarker(int idx) => default; // 0x000000018BE48620-0x000000018BE488CC
-		internal TimelineClip CreateClip(System.Type requestedType) => default; // 0x000000018BE46960-0x000000018BE46CC4
-		internal TimelineClip CreateAndAddNewClipOfType(System.Type requestedType) => default; // 0x000000018BE48D58-0x000000018BE48F18
-		internal TimelineClip CreateClipOfType(System.Type requestedType) => default; // 0x000000018BE48F18-0x000000018BE49114
-		internal TimelineClip CreateClipFromPlayableAsset(IPlayableAsset asset) => default; // 0x000000018BE479F0-0x000000018BE4808C
-		private TimelineClip CreateClipFromAsset(ScriptableObject playableAsset) => default; // 0x000000018BE46CC4-0x000000018BE46DFC
-		internal IEnumerable<ScriptableObject> GetMarkersRaw() => default; // 0x000000018BE4A458-0x000000018BE4A598
-		internal void ClearMarkers() {} // 0x000000018BE46844-0x000000018BE468D0
-		internal void AddMarker(ScriptableObject e) {} // 0x000000018BE468E0-0x000000018BE46960
-		internal bool DeleteMarkerRaw(ScriptableObject marker) => default; // 0x0000000185FD2A50-0x0000000185FD2A60
-		private int GetTimeRangeHash() => default; // 0x000000018BE4808C-0x000000018BE482C8
-		internal void AddClip(TimelineClip newClip) {} // 0x000000018BE4649C-0x000000018BE46538
-		private Playable CreateNotificationsPlayable(PlayableGraph graph, Playable mixerPlayable, GameObject go, Playable timelinePlayable) => default; // 0x000000018BE4A1B8-0x000000018BE4A374
-		internal Playable CreatePlayableGraph(PlayableGraph graph, GameObject go, IntervalTree<RuntimeElement> tree, Playable timelinePlayable) => default; // 0x000000018BE4A3DC-0x000000018BE4A458
-		internal virtual Playable CompileClips(PlayableGraph graph, GameObject go, IList<TimelineClip> timelineClips, IntervalTree<RuntimeElement> tree) => default; // 0x000000018BE4A374-0x000000018BE4A3DC
-		private void GatherCompilableTracks(IList<TrackAsset> tracks) {} // 0x000000018BE498BC-0x000000018BE49AC8
-		private void GatherNotifications(List<IMarker> markers) {} // 0x000000018BE49D48-0x000000018BE49D60
-		internal virtual Playable CreateMixerPlayableGraph(PlayableGraph graph, GameObject go, IntervalTree<RuntimeElement> tree) => default; // 0x000000018BE49114-0x000000018BE49490
-		internal void ConfigureTrackAnimation(IntervalTree<RuntimeElement> tree, GameObject go, Playable blend) {} // 0x000000018BE49AC8-0x000000018BE49BD4
-		internal void SortClips() {} // 0x000000018BE4A938-0x000000018BE4AB40
-		internal void ClearClipsInternal() {} // 0x0000000185492010-0x0000000185492020
-		internal void ClearSubTracksInternal() {} // 0x000000018BE4A86C-0x000000018BE4A938
-		internal void OnClipMove() {} // 0x000000018BE465DC-0x000000018BE46674
-		internal TimelineClip CreateNewClipContainerInternal() => default; // 0x000000018BE4891C-0x000000018BE48B88
-		internal void AddChild(TrackAsset child) {} // 0x000000018510A440-0x000000018510A4E0
-		internal void MoveLastTrackBefore(TrackAsset asset) {} // 0x000000018BE49BF4-0x000000018BE49D48
-		internal bool RemoveSubTrack(TrackAsset child) => default; // 0x000000018BE46674-0x000000018BE466B0
-		internal void RemoveClip(TimelineClip clip) {} // 0x000000018BE49EA8-0x000000018BE49EF0
-		internal virtual void GetEvaluationTime(out double outStart, out double outDuration) {
-			outStart = default;
-			outDuration = default;
-		} // 0x000000018BE46834-0x000000018BE46844
-		internal virtual void GetSequenceTime(out double outStart, out double outDuration) {
-			outStart = default;
-			outDuration = default;
-		} // 0x000000018BE49FB8-0x000000018BE4A1B8
-		public virtual void GatherProperties(PlayableDirector director, IPropertyCollector driver) {} // 0x000000018BE4A6E0-0x000000018BE4A86C
-		internal GameObject GetGameObjectBinding(PlayableDirector director) => default; // 0x000000018BE49F74-0x000000018BE49FB8
-		internal bool ValidateClipType(System.Type clipType) => default; // 0x000000018BE4976C-0x000000018BE498B4
-		protected virtual void OnCreateClip(TimelineClip clip) {} // 0x000000018BE49490-0x000000018BE49550
-		private void UpdateDuration() {} // 0x000000018BE49EF0-0x000000018BE49F74
-		protected internal virtual int CalculateItemsHash() => default; // 0x000000018BE466B0-0x000000018BE466DC
-		protected virtual Playable CreatePlayable(PlayableGraph graph, GameObject gameObject, TimelineClip clip) => default; // 0x000000018BE466DC-0x000000018BE46834
-		internal void Invalidate() {} // 0x000000018BE4788C-0x000000018BE479CC
-		internal double GetNotificationDuration() => default; // 0x00000001850B44E0-0x00000001850B45F0
-		internal virtual bool CanCompileClips() => default; // 0x00000001850B4060-0x00000001850B4180
-		public bool HasChildTracks() => default; // 0x00000001850B4180-0x00000001850B42B0
-		public virtual bool CanCreateTrackMixer() => default; // 0x000000018BE4B4D4-0x000000018BE4B55C
-		internal bool IsCompilable() => default; // 0x0000000183F81410-0x0000000183F81430
-		private void UpdateChildTrackCache() {} // 0x0000000185492010-0x0000000185492020
-		internal virtual int Hash() => default; // 0x0000000183F81430-0x0000000183F82560
-		private int GetClipsHash() => default; // 0x0000000183F81080-0x0000000183F810A0
-		protected static int GetAnimationClipHash(AnimationClip clip) => default; // 0x0000000183F82910-0x0000000183F82960
-		private bool HasNotifications() => default; // 0x0000000183F82960-0x0000000183F833F0
-		private bool CanCompileNotifications() => default; // 0x0000000183F82560-0x0000000183F82900
-		private bool CanCreateMixerRecursive() => default; // 0x0000000183F82900-0x0000000183F82910
-		public Playable CreateLayerMixer(PlayableGraph graph, GameObject go, int inputCount) => default; // 0x000000018BE4B764-0x000000018BE4B7C8
+			where T : ScriptableObject, IMarker;
+		public bool DeleteMarker(IMarker marker); // 0x000000018B3445AC-0x000000018B3445BC
+		public IEnumerable<IMarker> GetMarkers(); // 0x00000001839ED390-0x00000001839ED440
+		public IEnumerable<IMarker> GetClipMarkers(); // 0x000000018B344938-0x000000018B344B34
+		public int GetMarkerCount(); // 0x000000018B344C40-0x000000018B344C50
+		public IMarker GetMarker(int idx); // 0x000000018B344C50-0x000000018B344C60
+		internal TimelineClip CreateClip(System.Type requestedType); // 0x000000018B343C90-0x000000018B343DAC
+		internal TimelineClip CreateAndAddNewClipOfType(System.Type requestedType); // 0x000000018B3435DC-0x000000018B343610
+		internal TimelineClip CreateClipOfType(System.Type requestedType); // 0x000000018B343A78-0x000000018B343C90
+		internal TimelineClip CreateClipFromPlayableAsset(IPlayableAsset asset); // 0x000000018B343834-0x000000018B343A78
+		private TimelineClip CreateClipFromAsset(ScriptableObject playableAsset); // 0x000000018B343610-0x000000018B343834
+		internal IEnumerable<ScriptableObject> GetMarkersRaw(); // 0x0000000184D86210-0x0000000184D86220
+		internal void ClearMarkers(); // 0x000000018B34354C-0x000000018B34355C
+		internal void AddMarker(ScriptableObject e); // 0x000000018B3434B0-0x000000018B3434C0
+		internal bool DeleteMarkerRaw(ScriptableObject marker); // 0x000000018B34456C-0x000000018B3445AC
+		private int GetTimeRangeHash(); // 0x0000000183AC3FA0-0x0000000183AC4070
+		internal void AddClip(TimelineClip newClip); // 0x000000018B34341C-0x000000018B3434B0
+		private Playable CreateNotificationsPlayable(PlayableGraph graph, Playable mixerPlayable, GameObject go, Playable timelinePlayable); // 0x00000001839ECE10-0x00000001839ED100
+		internal Playable CreatePlayableGraph(PlayableGraph graph, GameObject go, IntervalTree<RuntimeElement> tree, Playable timelinePlayable); // 0x0000000183433C20-0x0000000183433E70
+		internal virtual Playable CompileClips(PlayableGraph graph, GameObject go, IList<TimelineClip> timelineClips, IntervalTree<RuntimeElement> tree); // 0x0000000183E0DAE0-0x0000000183E0DEC0
+		private void GatherCompilableTracks(IList<TrackAsset> tracks); // 0x0000000184683BA0-0x0000000184683DB0
+		private void GatherNotifications(List<IMarker> markers); // 0x00000001839EDC30-0x00000001839EDE60
+		internal virtual Playable CreateMixerPlayableGraph(PlayableGraph graph, GameObject go, IntervalTree<RuntimeElement> tree); // 0x00000001839F4170-0x00000001839F4650
+		internal void ConfigureTrackAnimation(IntervalTree<RuntimeElement> tree, GameObject go, Playable blend); // 0x0000000183E0E7D0-0x0000000183E0E860
+		internal void SortClips(); // 0x00000001839F46F0-0x00000001839F4860
+		internal void ClearClipsInternal(); // 0x000000018B3434C0-0x000000018B34354C
+		internal void ClearSubTracksInternal(); // 0x000000018B34355C-0x000000018B3435DC
+		internal void OnClipMove(); // 0x0000000184DA66E0-0x0000000184DA66F0
+		internal TimelineClip CreateNewClipContainerInternal(); // 0x000000018B3441D0-0x000000018B34440C
+		internal void AddChild(TrackAsset child); // 0x000000018B343380-0x000000018B34341C
+		internal void MoveLastTrackBefore(TrackAsset asset); // 0x000000018B344E40-0x000000018B344FFC
+		internal bool RemoveSubTrack(TrackAsset child); // 0x000000018B345064-0x000000018B3450E0
+		internal void RemoveClip(TimelineClip clip); // 0x000000018B344FFC-0x000000018B345064
+		internal virtual void GetEvaluationTime(out double outStart, out double outDuration); // 0x00000001839F5F70-0x00000001839F6160
+		internal virtual void GetSequenceTime(out double outStart, out double outDuration); // 0x0000000184864FB0-0x0000000184864FD0
+		public virtual void GatherProperties(PlayableDirector director, IPropertyCollector driver); // 0x000000018B3445BC-0x000000018B344938
+		internal GameObject GetGameObjectBinding(PlayableDirector director); // 0x000000018B344B34-0x000000018B344C40
+		internal bool ValidateClipType(System.Type clipType); // 0x000000018B345228-0x000000018B345430
+		protected virtual void OnCreateClip(TimelineClip clip); // 0x00000001841E1670-0x00000001841E1680
+		private void UpdateDuration(); // 0x00000001839F34C0-0x00000001839F35B0
+		protected internal virtual int CalculateItemsHash(); // 0x0000000183AC2060-0x0000000183AC2110
+		protected virtual Playable CreatePlayable(PlayableGraph graph, GameObject gameObject, TimelineClip clip); // 0x0000000183E0DEC0-0x0000000183E0E2C0
+		internal void Invalidate(); // 0x00000001839ED440-0x00000001839ED500
+		internal double GetNotificationDuration(); // 0x000000018B344C60-0x000000018B344DB4
+		internal virtual bool CanCompileClips(); // 0x000000018468DA80-0x000000018468DAA0
+		public bool HasChildTracks(); // 0x000000018B344DB4-0x000000018B344DFC
+		public virtual bool CanCreateTrackMixer(); // 0x0000000185394800-0x0000000185394810
+		internal bool IsCompilable(); // 0x00000001839F4860-0x00000001839F4A90
+		private void UpdateChildTrackCache(); // 0x00000001845D14E0-0x00000001845D15D0
+		internal virtual int Hash(); // 0x000000018B344DFC-0x000000018B344E40
+		private int GetClipsHash(); // 0x0000000183AC42F0-0x0000000183AC44E0
+		protected static int GetAnimationClipHash(AnimationClip clip); // 0x0000000183AC2110-0x0000000183AC21A0
+		private bool HasNotifications(); // 0x00000001839EC510-0x00000001839EC5B0
+		private bool CanCompileNotifications(); // 0x00000001839EDE60-0x00000001839EDE90
+		private bool CanCreateMixerRecursive(); // 0x0000000184A28E30-0x0000000184A28F80
+		public Playable CreateLayerMixer(PlayableGraph graph, GameObject go, int inputCount); // 0x000000018B34406C-0x000000018B3441AC
 	}
 
-	public class ForbidScriptDefaultValueWhenExportAttribute : Attribute // TypeDefIndex: 57451
+	[AttributeUsage(AttributeTargets.Field)]
+	public class ForbidScriptDefaultValueWhenExportAttribute : Attribute // TypeDefIndex: 59794
 	{
 		// Constructors
-		public ForbidScriptDefaultValueWhenExportAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public ForbidScriptDefaultValueWhenExportAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class TimelineHelpURLAttribute : Attribute // TypeDefIndex: 57452
+	[Conditional("UNITY_EDITOR")]
+	internal class TimelineHelpURLAttribute : Attribute // TypeDefIndex: 59795
 	{
-		// Constructors
-		public TimelineHelpURLAttribute() {} // Dummy constructor
 	}
 
-	public class TrackColorAttribute : Attribute // TypeDefIndex: 57453
+	[AttributeUsage(AttributeTargets.Class)]
+	public class TrackColorAttribute : Attribute // TypeDefIndex: 59796
 	{
 		// Fields
 		private UnityEngine.Color m_Color; // 0x10
 	
 		// Constructors
-		public TrackColorAttribute() {} // Dummy constructor
-		public TrackColorAttribute(float r, float g, float b) {} // 0x00000001859EF100-0x00000001859EF140
+		public TrackColorAttribute(float r, float g, float b); // 0x00000001847F9F60-0x00000001847F9FA0
 	}
 
-	public class UseScriptDefaultValueWhenExportAttribute : Attribute // TypeDefIndex: 57454
+	[AttributeUsage(AttributeTargets.Class)]
+	public class UseScriptDefaultValueWhenExportAttribute : Attribute // TypeDefIndex: 59797
 	{
 		// Constructors
-		public UseScriptDefaultValueWhenExportAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public UseScriptDefaultValueWhenExportAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	internal class AudioClipProperties : PlayableBehaviour // TypeDefIndex: 57455
+	[UnityEngine.Timeline.NotKeyable]
+	internal class AudioClipProperties : PlayableBehaviour // TypeDefIndex: 59798
 	{
 		// Fields
+		[Range(0f, 1f)]
 		public float volume; // 0x10
 	
 		// Constructors
-		public AudioClipProperties() {} // 0x0000000185FB10F0-0x0000000185FB1100
+		public AudioClipProperties(); // 0x0000000184D87330-0x0000000184D87340
 	}
 
 	[Serializable]
-	internal class AudioMixerProperties : PlayableBehaviour // TypeDefIndex: 57456
+	internal class AudioMixerProperties : PlayableBehaviour // TypeDefIndex: 59799
 	{
 		// Fields
+		[Range(0f, 1f)]
 		public float volume; // 0x10
+		[Range(-1f, 1f)]
 		public float stereoPan; // 0x14
+		[Range(0f, 1f)]
 		public float spatialBlend; // 0x18
 	
 		// Constructors
-		public AudioMixerProperties() {} // 0x0000000185FB10F0-0x0000000185FB1100
+		public AudioMixerProperties(); // 0x0000000184D87330-0x0000000184D87340
 	
 		// Methods
-		public override void PrepareFrame(Playable playable, FrameData info) {} // 0x000000018BE3D8E0-0x000000018BE3DB70
+		public override void PrepareFrame(Playable playable, FrameData info); // 0x000000018B33D8E0-0x000000018B33DB70
 	}
 
 	[Serializable]
-	public class AudioPlayableAsset : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 57458
+	public class AudioPlayableAsset : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 59801
 	{
 		// Fields
+		[SerializeField]
 		private AudioClip m_Clip; // 0x18
+		[SerializeField]
 		private bool m_Loop; // 0x20
+		[HideInInspector]
+		[SerializeField]
 		private float m_bufferingTime; // 0x24
+		[SerializeField]
 		private AudioClipProperties m_ClipProperties; // 0x28
 	
 		// Properties
-		internal float bufferingTime { get => default; set {} } // 0x000000018BE3DB70-0x000000018BE3DC8C 0x000000018BE3DCF4-0x000000018BE3DD04
-		public AudioClip clip { get => default; set {} } // 0x000000018BE3DC8C-0x000000018BE3DCF4 0x0000000183F81410-0x0000000183F81430
-		public bool loop { get => default; set {} } // 0x0000000185492010-0x0000000185492020 0x000000018BE4B7C8-0x000000018BE4B848
-		public override double duration { get => default; } // 0x0000000183F81080-0x0000000183F810A0 
-		public override IEnumerable<PlayableBinding> outputs { get => default; } // 0x000000018BE4B8DC-0x000000018BE4B928 
-		public ClipCaps clipCaps { get => default; } // 0x000000018BE4B848-0x000000018BE4B8D4 
+		internal float bufferingTime { get; set; } // 0x0000000184D89850-0x0000000184D89860 0x0000000184D89860-0x0000000184D89870
+		public AudioClip clip { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public bool loop { get; set; } // 0x0000000184D866B0-0x0000000184D866C0 0x0000000184D866D0-0x0000000184D866E0
+		public override double duration { get; } // 0x000000018B33DD04-0x000000018B33DDAC 
+		public override IEnumerable<PlayableBinding> outputs { [IteratorStateMachine(typeof(_get_outputs_d__16))] get; } // 0x000000018B33DDAC-0x000000018B33DE1C 
+		public ClipCaps clipCaps { get; } // 0x000000018B33DCF4-0x000000018B33DD04 
 	
 		// Nested types
-		private sealed class _get_outputs_d__16 : IEnumerable<PlayableBinding>, IEnumerator<PlayableBinding> // TypeDefIndex: 57457
+		[CompilerGenerated]
+		private sealed class _get_outputs_d__16 : IEnumerable<PlayableBinding>, IEnumerator<PlayableBinding> // TypeDefIndex: 59800
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1328,39 +1637,48 @@ namespace UnityEngine.Timeline
 			public AudioPlayableAsset __4__this; // 0x40
 	
 			// Properties
-			PlayableBinding IEnumerator<UnityEngine.Playables.PlayableBinding>.Current { get => default; } // 0x0000000184088E70-0x0000000184088E80 
-			object IEnumerator.Current { get => default; } // 0x00000001813EE9B0-0x00000001813EE9C0 
+			PlayableBinding IEnumerator<UnityEngine.Playables.PlayableBinding>.Current { [DebuggerHidden] get; } // 0x0000000182EC7B40-0x0000000182EC7B60 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018B345AC8-0x000000018B345B18 
 	
 			// Constructors
-			public _get_outputs_d__16() {} // Dummy constructor
-			public _get_outputs_d__16(int __1__state) {} // 0x0000000185FB3810-0x0000000185FB3820
+			[DebuggerHidden]
+			public _get_outputs_d__16(int __1__state); // 0x0000000183A10F90-0x0000000183A10FB0
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x0000000185FB3820-0x0000000185FB3830
-			private bool MoveNext() => default; // 0x0000000181377E40-0x0000000181377E50
-			void IEnumerator.Reset() {} // 0x00000001813ECBF0-0x00000001813ECC00
-			IEnumerator<PlayableBinding> IEnumerable<PlayableBinding>.GetEnumerator() => default; // 0x000000018BE3DD04-0x000000018BE3DDAC
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018BE3DDAC-0x000000018BE3DE1C
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018B345968-0x000000018B3459E8
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B345A7C-0x000000018B345AC8
+			[DebuggerHidden]
+			IEnumerator<PlayableBinding> IEnumerable<PlayableBinding>.GetEnumerator(); // 0x000000018B3459E8-0x000000018B345A74
+			[DebuggerHidden]
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018B345A74-0x000000018B345A7C
 		}
 	
 		// Constructors
-		public AudioPlayableAsset() {} // 0x000000018BE4B8D4-0x000000018BE4B8DC
+		public AudioPlayableAsset(); // 0x000000018B33DC8C-0x000000018B33DCF4
 	
 		// Methods
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject go) => default; // 0x000000018BE4B928-0x000000018BE4B978
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject go); // 0x000000018B33DB70-0x000000018B33DC8C
 	}
 
 	[Serializable]
-	public class AudioTrack : TrackAsset // TypeDefIndex: 57460
+	[ExcludeFromPreset]
+	[TrackBindingType(typeof(AudioSource))]
+	[TrackClipType(typeof(AudioPlayableAsset), false)]
+	public class AudioTrack : TrackAsset // TypeDefIndex: 59803
 	{
 		// Fields
+		[SerializeField]
 		private AudioMixerProperties m_TrackProperties; // 0xC0
 	
 		// Properties
-		public override IEnumerable<PlayableBinding> outputs { get => default; } // 0x000000018BE4C18C-0x000000018BE4C1DC 
+		public override IEnumerable<PlayableBinding> outputs { [IteratorStateMachine(typeof(_get_outputs_d__4))] get; } // 0x000000018B33E550-0x000000018B33E5C0 
 	
 		// Nested types
-		private sealed class _get_outputs_d__4 : IEnumerable<PlayableBinding>, IEnumerator<PlayableBinding> // TypeDefIndex: 57459
+		[CompilerGenerated]
+		private sealed class _get_outputs_d__4 : IEnumerable<PlayableBinding>, IEnumerator<PlayableBinding> // TypeDefIndex: 59802
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1369,32 +1687,36 @@ namespace UnityEngine.Timeline
 			public AudioTrack __4__this; // 0x40
 	
 			// Properties
-			PlayableBinding IEnumerator<UnityEngine.Playables.PlayableBinding>.Current { get => default; } // 0x000000018BE3E464-0x000000018BE3E4D0 
-			object IEnumerator.Current { get => default; } // 0x0000000183F81410-0x0000000183F81430 
+			PlayableBinding IEnumerator<UnityEngine.Playables.PlayableBinding>.Current { [DebuggerHidden] get; } // 0x0000000182EC7B40-0x0000000182EC7B60 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018B345C9C-0x000000018B345CEC 
 	
 			// Constructors
-			public _get_outputs_d__4() {} // Dummy constructor
-			public _get_outputs_d__4(int __1__state) {} // 0x000000018BE3E350-0x000000018BE3E464
+			[DebuggerHidden]
+			public _get_outputs_d__4(int __1__state); // 0x0000000183A10F90-0x0000000183A10FB0
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018BE3DE1C-0x000000018BE3E350
-			private bool MoveNext() => default; // 0x000000018BE3E550-0x000000018BE3E5C0
-			void IEnumerator.Reset() {} // 0x000000018BE3E4D0-0x000000018BE3E550
-			IEnumerator<PlayableBinding> IEnumerable<PlayableBinding>.GetEnumerator() => default; // 0x0000000185492010-0x0000000185492020
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018BE4B7C8-0x000000018BE4B848
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018B345968-0x000000018B3459E8
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B345C50-0x000000018B345C9C
+			[DebuggerHidden]
+			IEnumerator<PlayableBinding> IEnumerable<PlayableBinding>.GetEnumerator(); // 0x000000018B345BBC-0x000000018B345C48
+			[DebuggerHidden]
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018B345C48-0x000000018B345C50
 		}
 	
 		// Constructors
-		public AudioTrack() {} // 0x000000018BE4C138-0x000000018BE4C140
+		public AudioTrack(); // 0x000000018B33E4D0-0x000000018B33E550
 	
 		// Methods
-		public TimelineClip CreateClip(AudioClip clip) => default; // 0x0000000183F81080-0x0000000183F810A0
-		internal override Playable CompileClips(PlayableGraph graph, GameObject go, IList<TimelineClip> timelineClips, IntervalTree<RuntimeElement> tree) => default; // 0x000000018BE4C140-0x000000018BE4C18C
-		private void OnValidate() {} // 0x000000018BE4C0AC-0x000000018BE4C138
+		public TimelineClip CreateClip(AudioClip clip); // 0x000000018B33E350-0x000000018B33E464
+		internal override Playable CompileClips(PlayableGraph graph, GameObject go, IList<TimelineClip> timelineClips, IntervalTree<RuntimeElement> tree); // 0x000000018B33DE1C-0x000000018B33E350
+		private void OnValidate(); // 0x000000018B33E464-0x000000018B33E4D0
 	}
 
 	[Serializable]
-	public struct ACConditionDescriptor // TypeDefIndex: 57461
+	public struct ACConditionDescriptor // TypeDefIndex: 59804
 	{
 		// Fields
 		private int m_ConditionMode; // 0x00
@@ -1402,13 +1724,13 @@ namespace UnityEngine.Timeline
 		private float m_EventTreshold; // 0x10
 	}
 
-	public class ACTransitionDescriptor // TypeDefIndex: 57462
+	public class ACTransitionDescriptor // TypeDefIndex: 59805
 	{
 		// Constructors
-		public ACTransitionDescriptor() {} // 0x0000000185492010-0x0000000185492020
+		public ACTransitionDescriptor(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public enum DialogTimelineTrackType // TypeDefIndex: 57463
+	public enum DialogTimelineTrackType // TypeDefIndex: 59806
 	{
 		Default = 0,
 		Morph = 1,
@@ -1417,23 +1739,25 @@ namespace UnityEngine.Timeline
 		LookAt = 4
 	}
 
-	public static class BeyondCommunicator // TypeDefIndex: 57464
+	public static class BeyondCommunicator // TypeDefIndex: 59807
 	{
 		// Fields
 		public static bool setAddonLayerAdditive; // 0x00
+		[CompilerGenerated]
 		private static Action<Animator, AnimationLayerMixerPlayable, AnimationTrack, ScriptableObject, Transform, CommunicatorParam> _ConnectToJobSync_k__BackingField; // 0x08
+		[CompilerGenerated]
 		private static Func<ITimelineRootMarker, GameObject, string, bool, bool> _TrySetTrackBindingEntityVisible_k__BackingField; // 0x10
 	
 		// Properties
-		public static Action<Animator, AnimationLayerMixerPlayable, AnimationTrack, ScriptableObject, Transform, CommunicatorParam> ConnectToJobSync { get; set; } // 0x000000018BE3E5C0-0x000000018BE3E610 0x000000018BE3E610-0x000000018BE3E670
-		public static Func<ITimelineRootMarker, GameObject, string, bool, bool> TrySetTrackBindingEntityVisible { get; set; } // 0x0000000183F80500-0x0000000183F80810 0x0000000183F80810-0x0000000183F80B90
+		public static Action<Animator, AnimationLayerMixerPlayable, AnimationTrack, ScriptableObject, Transform, CommunicatorParam> ConnectToJobSync { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018B33E5C0-0x000000018B33E610 0x000000018B33E660-0x000000018B33E6C0
+		public static Func<ITimelineRootMarker, GameObject, string, bool, bool> TrySetTrackBindingEntityVisible { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018B33E610-0x000000018B33E660 0x000000018B33E6C0-0x000000018B33E720
 	
 		// Constructors
-		static BeyondCommunicator() {} // 0x0000000185FA4FE0-0x0000000185FA5020
+		static BeyondCommunicator(); // 0x0000000184D7AC90-0x0000000184D7ACD0
 	}
 
 	[Serializable]
-	public class BlendMotionDescriptor // TypeDefIndex: 57465
+	public class BlendMotionDescriptor // TypeDefIndex: 59808
 	{
 		// Fields
 		public AnimationClip motion; // 0x10
@@ -1442,20 +1766,22 @@ namespace UnityEngine.Timeline
 		public float threshold; // 0x28
 	
 		// Constructors
-		public BlendMotionDescriptor() {} // 0x0000000185492010-0x0000000185492020
+		public BlendMotionDescriptor(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class BlendTreeDescriptor // TypeDefIndex: 57467
+	public class BlendTreeDescriptor // TypeDefIndex: 59810
 	{
 		// Fields
 		public DescriptorBlendTreeType blendType; // 0x10
 		public List<BlendMotionDescriptor> motionDescriptorList; // 0x18
+		[CompilerGenerated]
 		private string _speedParameter_k__BackingField; // 0x20
+		[CompilerGenerated]
 		private bool _speedParameterActive_k__BackingField; // 0x28
 	
 		// Nested types
-		public enum DescriptorBlendTreeType // TypeDefIndex: 57466
+		public enum DescriptorBlendTreeType // TypeDefIndex: 59809
 		{
 			Direct = 0,
 			Simple1D = 1,
@@ -1464,10 +1790,10 @@ namespace UnityEngine.Timeline
 		}
 	
 		// Constructors
-		public BlendTreeDescriptor() {} // 0x0000000185492010-0x0000000185492020
+		public BlendTreeDescriptor(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public interface ITimelineRootMarker // TypeDefIndex: 57468
+	public interface ITimelineRootMarker // TypeDefIndex: 59811
 	{
 		// Properties
 		PlayableDirector topDirector { get; }
@@ -1475,6 +1801,9 @@ namespace UnityEngine.Timeline
 		bool useEarlyUpdate { get; }
 		bool enableLoop { get; }
 		bool isOptimizingHolding { get; }
+		bool enableTimelineAsyncCompile { get; }
+		bool isTimelineAsyncCompiling { get; }
+		bool isTimelineAsyncCompileComplete { get; }
 		bool onlyEvaluateTopDirector { get; }
 		float fixedFrameRate { get; }
 		float manualTickDeltaTime { get; }
@@ -1484,10 +1813,11 @@ namespace UnityEngine.Timeline
 		// Methods
 		void RegisterLoopSegmentRuntimeClip(string key, RuntimeClip runtimeClip);
 		void UpdateAllVFXFollowBoneTools();
+		void RegisterAsyncScriptAnimationJobSyncInit(IAsyncScriptAnimationJobSyncInit sync);
 	}
 
 	[Serializable]
-	public class LayerDescriptor : ScriptableObject // TypeDefIndex: 57469
+	public class LayerDescriptor : ScriptableObject // TypeDefIndex: 59812
 	{
 		// Fields
 		public string layerName; // 0x18
@@ -1496,11 +1826,11 @@ namespace UnityEngine.Timeline
 		public List<StateDescriptor> stateDescriptors; // 0x30
 	
 		// Constructors
-		public LayerDescriptor() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public LayerDescriptor(); // 0x0000000183573370-0x0000000183573380
 	}
 
 	[Serializable]
-	public class MotionDescriptor // TypeDefIndex: 57470
+	public class MotionDescriptor // TypeDefIndex: 59813
 	{
 		// Fields
 		public string stateName; // 0x10
@@ -1514,11 +1844,11 @@ namespace UnityEngine.Timeline
 		public bool timeParameterActive; // 0x50
 	
 		// Constructors
-		public MotionDescriptor() {} // 0x0000000185492010-0x0000000185492020
+		public MotionDescriptor(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class StateDescriptor // TypeDefIndex: 57471
+	public class StateDescriptor // TypeDefIndex: 59814
 	{
 		// Fields
 		public string stateName; // 0x10
@@ -1530,10 +1860,11 @@ namespace UnityEngine.Timeline
 		public BlendTreeDescriptor blendTreeDescriptor; // 0x38
 	
 		// Constructors
-		public StateDescriptor() {} // 0x0000000185492010-0x0000000185492020
+		public StateDescriptor(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public enum ClipCaps // TypeDefIndex: 57472
+	[Flags]
+	public enum ClipCaps // TypeDefIndex: 59815
 	{
 		All = -1,
 		None = 0,
@@ -1554,53 +1885,70 @@ namespace UnityEngine.Timeline
 		ConditionBlend = 16385
 	}
 
-	internal static class TimelineClipCapsExtensions // TypeDefIndex: 57473
+	internal static class TimelineClipCapsExtensions // TypeDefIndex: 59816
 	{
-		// Methods
-		public static bool SupportsExtrapolation(TimelineClip clip) => default; // 0x000000018BE44164-0x000000018BE44184
-		public static bool HasAny(ClipCaps caps, ClipCaps flags) => default; // 0x0000000187F33660-0x0000000187F33668
+		// Extension methods
+		public static bool SupportsExtrapolation(this TimelineClip clip); // 0x0000000184B074C0-0x0000000184B074E0
+		public static bool HasAny(this ClipCaps caps, ClipCaps flags); // 0x00000001839F6DA0-0x00000001839F6DB0
 	}
 
 	[Serializable]
-	public class ControlPlayableAsset : BeyondUseAutoBindingPlayableAsset, IPropertyPreview, ITimelineClipAsset // TypeDefIndex: 57475
+	[UnityEngine.Timeline.NotKeyable]
+	public class ControlPlayableAsset : BeyondUseAutoBindingPlayableAsset, IPropertyPreview, ITimelineClipAsset // TypeDefIndex: 59818
 	{
 		// Fields
-		private const int k_MaxRandInt = 10000; // Metadata: 0x0207D970
+		private const int k_MaxRandInt = 10000; // Metadata: 0x0234D1BC
 		private static readonly List<PlayableDirector> k_EmptyDirectorsList; // 0x00
 		private static readonly List<ParticleSystem> k_EmptyParticlesList; // 0x08
 		private static readonly HashSet<ParticleSystem> s_SubEmitterCollector; // 0x10
+		[SerializeField]
 		public ExposedReference<GameObject> sourceGameObject; // 0x30
+		[SerializeField]
 		public GameObject prefabGameObject; // 0x40
+		[SerializeField]
 		public bool updateParticle; // 0x48
+		[SerializeField]
 		public uint particleRandomSeed; // 0x4C
+		[SerializeField]
 		public bool forceRuntimeSimulate; // 0x50
+		[SerializeField]
 		public bool updateDirector; // 0x51
-		public bool updateITimeControl; // 0x52
-		public bool searchHierarchy; // 0x53
-		public bool active; // 0x54
-		public ActivationControlPlayable.PostPlaybackState postPlayback; // 0x58
-		private bool m_OnlyDeltaTime; // 0x5C
-		private bool m_IgniteOnce; // 0x5D
-		private PlayableAsset m_ControlDirectorAsset; // 0x60
-		private double m_Duration; // 0x68
-		private bool m_SupportLoop; // 0x70
+		[SerializeField]
+		public string directorControlPath; // 0x58
+		[SerializeField]
+		public bool updateITimeControl; // 0x60
+		[SerializeField]
+		public bool searchHierarchy; // 0x61
+		[SerializeField]
+		public bool active; // 0x62
+		[SerializeField]
+		public ActivationControlPlayable.PostPlaybackState postPlayback; // 0x64
+		[SerializeField]
+		private bool m_OnlyDeltaTime; // 0x68
+		[SerializeField]
+		private bool m_IgniteOnce; // 0x69
+		private PlayableAsset m_ControlDirectorAsset; // 0x70
+		private double m_Duration; // 0x78
+		private bool m_SupportLoop; // 0x80
 		private static HashSet<PlayableDirector> s_ProcessedDirectors; // 0x18
 		private static HashSet<GameObject> s_CreatedPrefabs; // 0x20
-		private bool _controllingDirectors_k__BackingField; // 0x71
-		private bool _controllingParticles_k__BackingField; // 0x72
+		[CompilerGenerated]
+		private bool _controllingDirectors_k__BackingField; // 0x81
+		[CompilerGenerated]
+		private bool _controllingParticles_k__BackingField; // 0x82
 	
 		// Properties
-		public override GameObject bindingGameObject { get => default; } // 0x0000000185FD1FA0-0x0000000185FD1FB0 
-		protected virtual bool showBaseParam { get => default; } // 0x0000000185FD1FE0-0x0000000185FD1FF0 
-		internal bool controllingDirectors { get; private set; } // 0x000000018BE3FBE0-0x000000018BE3FC0C 0x0000000185FB0CD0-0x0000000185FB0CE0
-		public bool controllingParticles { get; protected set; } // 0x000000018BE4167C-0x000000018BE416AC 0x000000018BE3EAEC-0x000000018BE3F648
-		public bool OnlyDeltaTime { get => default; set {} } // 0x000000018BE3E87C-0x000000018BE3E9D8 0x000000018BE3E9D8-0x000000018BE3EAEC
-		public bool IgniteOnce { get => default; set {} } // 0x000000018BE40BE8-0x000000018BE40E50 0x000000018BE40954-0x000000018BE40BE8
-		public override double duration { get => default; } // 0x000000018BE3E7BC-0x000000018BE3E87C 
-		public virtual ClipCaps clipCaps { get => default; } // 0x000000018BE40600-0x000000018BE40754 
+		public override GameObject bindingGameObject { get; } // 0x0000000184A30BD0-0x0000000184A30C90 
+		internal bool controllingDirectors { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8FEE0-0x0000000184D8FEF0 0x0000000184D8FEF0-0x0000000184D8FF00
+		public bool controllingParticles { [CompilerGenerated] get; [CompilerGenerated] protected set; } // 0x0000000184DA5E30-0x0000000184DA5E40 0x0000000184DA5E60-0x0000000184DA5E70
+		public bool OnlyDeltaTime { get; set; } // 0x0000000184D86B40-0x0000000184D86B50 0x0000000184D86BA0-0x0000000184D86BB0
+		public bool IgniteOnce { get; set; } // 0x0000000184D86B10-0x0000000184D86B20 0x0000000184D86B70-0x0000000184D86B80
+		public override double duration { get; } // 0x0000000184D86E70-0x0000000184D86E80 
+		public virtual ClipCaps clipCaps { get; } // 0x00000001839F6D70-0x00000001839F6DA0 
 	
 		// Nested types
-		private sealed class _GetControlableScripts_d__53 : IEnumerable<MonoBehaviour>, IEnumerator<MonoBehaviour> // TypeDefIndex: 57474
+		[CompilerGenerated]
+		private sealed class _GetControlableScripts_d__53 : IEnumerable<MonoBehaviour>, IEnumerator<MonoBehaviour> // TypeDefIndex: 59817
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1612,56 +1960,66 @@ namespace UnityEngine.Timeline
 			private int __7__wrap2; // 0x40
 	
 			// Properties
-			MonoBehaviour IEnumerator<UnityEngine.MonoBehaviour>.Current { get => default; } // 0x0000000185FB3070-0x0000000185FB3080 
-			object IEnumerator.Current { get => default; } // 0x0000000185FBD4E0-0x0000000185FBD4F0 
+			MonoBehaviour IEnumerator<UnityEngine.MonoBehaviour>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _GetControlableScripts_d__53() {} // Dummy constructor
-			public _GetControlableScripts_d__53(int __1__state) {} // 0x000000018BE415EC-0x000000018BE4167C
+			[DebuggerHidden]
+			public _GetControlableScripts_d__53(int __1__state); // 0x0000000183A11010-0x0000000183A11030
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x00000001840A27C0-0x00000001840A27D0
-			private bool MoveNext() => default; // 0x0000000185FB3060-0x0000000185FB3070
-			void IEnumerator.Reset() {} // 0x0000000185FBD4B0-0x0000000185FBD4C0
-			IEnumerator<MonoBehaviour> IEnumerable<MonoBehaviour>.GetEnumerator() => default; // 0x0000000185FB0C10-0x0000000185FB0C20
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x0000000185FB0C30-0x0000000185FB0C40
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018470FB40-0x000000018470FCB0
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B3521C8-0x000000018B352214
+			[DebuggerHidden]
+			IEnumerator<MonoBehaviour> IEnumerable<MonoBehaviour>.GetEnumerator(); // 0x00000001849D6A30-0x00000001849D6AB0
+			[DebuggerHidden]
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018B3521C0-0x000000018B3521C8
 		}
 	
 		// Constructors
-		public ControlPlayableAsset() {} // 0x000000018BE4B67C-0x000000018BE4B710
-		static ControlPlayableAsset() {} // 0x000000018BE4B710-0x000000018BE4B718
+		public ControlPlayableAsset(); // 0x00000001847D9DB0-0x00000001847D9E60
+		static ControlPlayableAsset(); // 0x00000001849C5970-0x00000001849C5BA0
 	
 		// Methods
-		public void OnEnable() {} // 0x000000018BE40754-0x000000018BE40954
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject go) => default;
-		private static Playable ConnectPlayablesToMixer(PlayableGraph graph, List<Playable> playables) => default; // 0x000000018BE3F8D4-0x000000018BE3F944
-		private void CreateActivationPlayable(GameObject root, PlayableGraph graph, List<Playable> outplayables) {} // 0x000000018BE40E50-0x000000018BE4134C
-		protected virtual void SearchHierarchyAndConnectParticleSystem(IEnumerable<ParticleSystem> particleSystems, float clipIn, float speedMultiplier, PlayableGraph graph, List<Playable> outplayables) {} // 0x000000018BE3F944-0x000000018BE3FA90
-		private void SearchHierarchyAndConnectDirector(IEnumerable<PlayableDirector> directors, PlayableGraph graph, List<Playable> outplayables, bool disableSelfReferences) {} // 0x000000018BE3FA90-0x000000018BE3FBE0
-		private static void SearchHierarchyAndConnectControlableScripts(IEnumerable<MonoBehaviour> controlableScripts, PlayableGraph graph, List<Playable> outplayables) {} // 0x000000018BE3E6E4-0x000000018BE3E7BC
-		private static void ConnectMixerAndPlayable(PlayableGraph graph, Playable mixer, Playable playable, int portIndex) {} // 0x000000018BE3F648-0x000000018BE3F8D4
-		protected virtual GameObject ResolveSourceGameObject(IExposedPropertyTable resolver) => default; // 0x000000018BE3FF30-0x000000018BE3FF8C
-		internal IList<T> GetComponent<T>(GameObject gameObject) => default; // 0x000000018BE3FF8C-0x000000018BE40130
-		internal static IEnumerable<MonoBehaviour> GetControlableScripts(GameObject root) => default; // 0x000000018BE3FC0C-0x000000018BE3FD58
-		internal void UpdateDurationAndLoopFlag(IList<PlayableDirector> directors, IList<ParticleSystem> particleSystems) {} // 0x000000018BE40130-0x000000018BE40600
-		private IList<ParticleSystem> GetControllableParticleSystems(GameObject go) => default; // 0x000000018BE3FD58-0x000000018BE3FF30
-		private static void GetControllableParticleSystems(Transform t, ICollection<ParticleSystem> roots, HashSet<ParticleSystem> subEmitters) {} // 0x000000018BE41580-0x000000018BE415EC
-		private static void CacheSubEmitters(ParticleSystem ps, HashSet<ParticleSystem> subEmitters) {} // 0x000000018BE4134C-0x000000018BE41580
-		public void GatherProperties(PlayableDirector director, IPropertyCollector driver) {} // 0x0000000184775050-0x0000000184775070
-		internal void PreviewParticlesWithControlPlayableAsset(IPropertyCollector driver, IEnumerable<ParticleSystem> particles) {} // 0x0000000185492010-0x0000000185492020
-		internal static void PreviewParticles(IPropertyCollector driver, IEnumerable<ParticleSystem> particles) {} // 0x000000018BE4B55C-0x000000018BE4B67C
-		internal static void PreviewActivation(IPropertyCollector driver, IEnumerable<GameObject> objects) {} // 0x0000000181377E40-0x0000000181377E50
-		internal static void PreviewTimeControl(IPropertyCollector driver, PlayableDirector director, IEnumerable<MonoBehaviour> scripts) {} // 0x000000018BE4B718-0x000000018BE4B764
-		internal static void PreviewDirectors(IPropertyCollector driver, IEnumerable<PlayableDirector> directors) {} // 0x0000000181377E40-0x0000000181377E50
+		public void OnEnable(); // 0x0000000184CEBB80-0x0000000184CEBBA0
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject go); // 0x00000001839F0970-0x00000001839F2290
+		private static Playable ConnectPlayablesToMixer(PlayableGraph graph, List<Playable> playables); // 0x0000000183E0E320-0x0000000183E0E520
+		private void CreateActivationPlayable(GameObject root, PlayableGraph graph, List<Playable> outplayables); // 0x000000018450F390-0x000000018450F4F0
+		protected virtual void SearchHierarchyAndConnectParticleSystem(IEnumerable<ParticleSystem> particleSystems, float clipIn, float speedMultiplier, PlayableGraph graph, List<Playable> outplayables); // 0x00000001847C3FF0-0x00000001847C4430
+		private void SearchHierarchyAndConnectDirector(IEnumerable<PlayableDirector> directors, PlayableGraph graph, List<Playable> outplayables, bool disableSelfReferences); // 0x000000018450F680-0x000000018450FBA0
+		private static void SearchHierarchyAndConnectControlableScripts(IEnumerable<MonoBehaviour> controlableScripts, PlayableGraph graph, List<Playable> outplayables); // 0x00000001847DABD0-0x00000001847DAF10
+		private static void ConnectMixerAndPlayable(PlayableGraph graph, Playable mixer, Playable playable, int portIndex); // 0x0000000183E0E520-0x0000000183E0E630
+		protected virtual GameObject ResolveSourceGameObject(IExposedPropertyTable resolver); // 0x0000000184892110-0x0000000184892200
+		internal IList<T> GetComponent<T>(GameObject gameObject);
+		internal IList<PlayableDirector> GetControllableDirectors(GameObject gameObject); // 0x00000001849722F0-0x0000000184972400
+		[IteratorStateMachine(typeof(_GetControlableScripts_d__53))]
+		internal static IEnumerable<MonoBehaviour> GetControlableScripts(GameObject root); // 0x00000001849B3AA0-0x00000001849B3B20
+		internal void UpdateDurationAndLoopFlag(IList<PlayableDirector> directors, IList<ParticleSystem> particleSystems); // 0x00000001839EFB70-0x00000001839F07B0
+		private IList<ParticleSystem> GetControllableParticleSystems(GameObject go); // 0x0000000184898B60-0x0000000184898DC0
+		private static void GetControllableParticleSystems(Transform t, ICollection<ParticleSystem> roots, HashSet<ParticleSystem> subEmitters); // 0x000000018B33EAF8-0x000000018B33EC48
+		private static void CacheSubEmitters(ParticleSystem ps, HashSet<ParticleSystem> subEmitters); // 0x000000018B33E794-0x000000018B33E86C
+		public void GatherProperties(PlayableDirector director, IPropertyCollector driver); // 0x000000018B33E86C-0x000000018B33EAF8
+		internal void PreviewParticlesWithControlPlayableAsset(IPropertyCollector driver, IEnumerable<ParticleSystem> particles); // 0x000000018B33EF6C-0x000000018B33EFC8
+		internal static void PreviewParticles(IPropertyCollector driver, IEnumerable<ParticleSystem> particles); // 0x000000018B33EFC8-0x000000018B33F16C
+		internal static void PreviewActivation(IPropertyCollector driver, IEnumerable<GameObject> objects); // 0x000000018B33EC48-0x000000018B33ED94
+		internal static void PreviewTimeControl(IPropertyCollector driver, PlayableDirector director, IEnumerable<MonoBehaviour> scripts); // 0x000000018B33F16C-0x000000018B33F644
+		internal static void PreviewDirectors(IPropertyCollector driver, IEnumerable<PlayableDirector> directors); // 0x000000018B33ED94-0x000000018B33EF6C
 	}
 
-	public class ControlTrack : TrackAsset // TypeDefIndex: 57476
+	[ExcludeFromPreset]
+	[SupportsChildTracks(null, 2147483647)]
+	[TrackClipType(typeof(ControlPlayableAsset), false)]
+	public class ControlTrack : TrackAsset // TypeDefIndex: 59819
 	{
 		// Constructors
-		public ControlTrack() {} // 0x000000018BE416AC-0x000000018BE416F8
+		public ControlTrack(); // 0x00000001839F4B70-0x00000001839F4BC0
 	}
 
-	public class AdditiveAnimApplyMono : MonoBehaviour // TypeDefIndex: 57478
+	[ExecuteAlways]
+	public class AdditiveAnimApplyMono : MonoBehaviour // TypeDefIndex: 59821
 	{
 		// Fields
 		private Dictionary<Transform, TransformAdditive> pendingAdditives; // 0x18
@@ -1669,7 +2027,7 @@ namespace UnityEngine.Timeline
 		private ITimelineRootMarker _parentTimelineRoot; // 0x28
 	
 		// Nested types
-		public class TransformAdditive // TypeDefIndex: 57477
+		public class TransformAdditive // TypeDefIndex: 59820
 		{
 			// Fields
 			public Vector3 position; // 0x10
@@ -1677,26 +2035,26 @@ namespace UnityEngine.Timeline
 			public Vector3 scale; // 0x28
 	
 			// Constructors
-			public TransformAdditive() {} // 0x000000018BE371BC-0x000000018BE37234
+			public TransformAdditive(); // 0x000000018B3521B8-0x000000018B3521C0
 	
 			// Methods
-			public void Reset() {} // 0x000000018BE37428-0x000000018BE37584
+			public void Reset(); // 0x000000018B352158-0x000000018B3521B8
 		}
 	
 		// Constructors
-		public AdditiveAnimApplyMono() {} // 0x000000018BE5DE08-0x000000018BE5DE68
+		public AdditiveAnimApplyMono(); // 0x000000018B346F08-0x000000018B346F88
 	
 		// Methods
-		private void Awake() {} // 0x000000018BE37388-0x000000018BE373B4
-		public void RecordAdditiveTransform(Transform bone, Vector3 position, Vector3 rotationEuler, Vector3 scale) {} // 0x000000018BE36DF4-0x000000018BE371BC
-		private void LateUpdate() {} // 0x000000018BE37234-0x000000018BE37388
-		public void ApplyPendingTransforms() {} // 0x000000018BE373B4-0x000000018BE37428
-		public void ClearPendingTransforms() {} // 0x000000018BE37584-0x000000018BE37604
-		private void NotifyCutsceneRootToUpdateVFXTools() {} // 0x000000018BE37604-0x000000018BE37684
-		public void RegisterRootComponent() {} // 0x000000018BE5DE68-0x000000018BE5DE70
+		private void Awake(); // 0x000000018B346AF0-0x000000018B346B68
+		public void RecordAdditiveTransform(Transform bone, Vector3 position, Vector3 rotationEuler, Vector3 scale); // 0x000000018B346D2C-0x000000018B346E88
+		private void LateUpdate(); // 0x000000018B346CBC-0x000000018B346CE8
+		public void ApplyPendingTransforms(); // 0x000000018B34672C-0x000000018B346AF0
+		public void ClearPendingTransforms(); // 0x000000018B346B68-0x000000018B346CBC
+		private void NotifyCutsceneRootToUpdateVFXTools(); // 0x000000018B346CE8-0x000000018B346D2C
+		public void RegisterRootComponent(); // 0x000000018B346E88-0x000000018B346F08
 	}
 
-	public class AdditiveAnimMixer : PlayableBehaviour // TypeDefIndex: 57480
+	public class AdditiveAnimMixer : PlayableBehaviour // TypeDefIndex: 59823
 	{
 		// Fields
 		public AdditiveAnimTrack track; // 0x10
@@ -1708,7 +2066,7 @@ namespace UnityEngine.Timeline
 		private AdditiveAnimApplyMono cachedApplyMono; // 0x40
 	
 		// Nested types
-		private class TransformAdditive // TypeDefIndex: 57479
+		private class TransformAdditive // TypeDefIndex: 59822
 		{
 			// Fields
 			public Vector3 position; // 0x10
@@ -1716,56 +2074,59 @@ namespace UnityEngine.Timeline
 			public Vector3 scale; // 0x28
 	
 			// Constructors
-			public TransformAdditive() {} // 0x000000018BE4D228-0x000000018BE4D5D8
+			public TransformAdditive(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			public void Reset() {} // 0x0000000185FBCC40-0x0000000185FBCC50
+			public void Reset(); // 0x000000018B352158-0x000000018B3521B8
 		}
 	
 		// Constructors
-		public AdditiveAnimMixer() {} // 0x0000000185492010-0x0000000185492020
+		public AdditiveAnimMixer(); // 0x000000018B347D48-0x000000018B347E54
 	
 		// Methods
-		public override void PrepareFrame(Playable playable, FrameData info) {} // 0x000000018BE4D5D8-0x000000018BE4DD24
-		public override void ProcessFrame(Playable playable, FrameData info, object playerData) {} // 0x000000018BE4DD24-0x000000018BE4E02C
-		private void _AddToAdditiveCache(AdditiveAnimPlayable additiveAnimPlayable, float clipTime, float weight) {} // 0x000000018BE4E02C-0x000000018BE4E138
-		private void _ApplyAdditive() {} // 0x000000018BE5DE08-0x000000018BE5DE68
+		public override void PrepareFrame(Playable playable, FrameData info); // 0x0000000184D90CE0-0x0000000184D90CF0
+		public override void ProcessFrame(Playable playable, FrameData info, object playerData); // 0x000000018B346F88-0x000000018B347338
+		private void _AddToAdditiveCache(AdditiveAnimPlayable additiveAnimPlayable, float clipTime, float weight); // 0x000000018B347338-0x000000018B347A88
+		private void _ApplyAdditive(); // 0x000000018B347A88-0x000000018B347D48
 	}
 
-	public class AdditiveAnimPlayable : PlayableBehaviour // TypeDefIndex: 57481
+	public class AdditiveAnimPlayable : PlayableBehaviour // TypeDefIndex: 59824
 	{
 		// Fields
 		public List<AdditiveAnimPlayableAsset.AnimationCurveInfo> extractedCurves; // 0x10
 		private Dictionary<string, List<AdditiveAnimPlayableAsset.AnimationCurveInfo>> _curveCache; // 0x18
 	
 		// Constructors
-		public AdditiveAnimPlayable() {} // 0x000000018BE4E6B4-0x000000018BE4E72C
+		public AdditiveAnimPlayable(); // 0x000000018B3483D0-0x000000018B348448
 	
 		// Methods
-		public override void OnPlayableCreate(Playable playable) {} // 0x000000018BE4E63C-0x000000018BE4E6B4
-		public void InitializeCurveCache() {} // 0x000000018BE4E3AC-0x000000018BE4E63C
+		public override void OnPlayableCreate(Playable playable); // 0x000000018B348358-0x000000018B3483D0
+		public void InitializeCurveCache(); // 0x000000018B3480C8-0x000000018B348358
 	}
 
 	[Serializable]
-	public class AdditiveAnimPlayableAsset : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 57483
+	public class AdditiveAnimPlayableAsset : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 59826
 	{
 		// Fields
 		public AnimationClip additiveClip; // 0x18
 		private ScriptPlayable<AdditiveAnimPlayable> additiveAnimPlayable; // 0x20
+		[HideInInspector]
 		public List<AnimationCurveInfo> extractedCurves; // 0x30
+		[SerializeField]
 		private bool m_OnlyDeltaTime; // 0x38
+		[SerializeField]
 		private bool m_IgniteOnce; // 0x39
 		[NonSerialized]
 		private AnimationClip _lastProcessedClip; // 0x40
 	
 		// Properties
-		public bool OnlyDeltaTime { get => default; set {} } // 0x0000000185FAFE20-0x0000000185FAFE30 0x0000000185FB0710-0x0000000185FB0720
-		public bool IgniteOnce { get => default; set {} } // 0x0000000185FB0720-0x0000000185FB0730 0x000000018BE4E138-0x000000018BE4E264
-		public ClipCaps clipCaps { get => default; } // 0x000000018BE4E308-0x000000018BE4E388 
+		public bool OnlyDeltaTime { get; set; } // 0x00000001811F2A70-0x00000001811F2A80 0x00000001811F2A80-0x00000001811F2A90
+		public bool IgniteOnce { get; set; } // 0x0000000184D86650-0x0000000184D86660 0x0000000184D86680-0x0000000184D86690
+		public ClipCaps clipCaps { get; } // 0x000000018B3480A4-0x000000018B3480C8 
 	
 		// Nested types
 		[Serializable]
-		public class AnimationCurveInfo // TypeDefIndex: 57482
+		public class AnimationCurveInfo // TypeDefIndex: 59825
 		{
 			// Fields
 			public string path; // 0x10
@@ -1773,203 +2134,206 @@ namespace UnityEngine.Timeline
 			public AnimationCurve curve; // 0x20
 	
 			// Constructors
-			public AnimationCurveInfo() {} // 0x0000000185FB0700-0x0000000185FB0710
+			public AnimationCurveInfo(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		// Constructors
-		public AdditiveAnimPlayableAsset() {} // 0x0000000185492010-0x0000000185492020
+		public AdditiveAnimPlayableAsset(); // 0x000000018B348024-0x000000018B3480A4
 	
 		// Methods
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x000000018BE4E264-0x000000018BE4E308
-		private void _InitializeBehaviourCurveCache() {} // 0x000000018BE4E388-0x000000018BE4E3AC
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner); // 0x000000018B347E54-0x000000018B347F80
+		private void _InitializeBehaviourCurveCache(); // 0x000000018B347F80-0x000000018B348024
 	}
 
-	public class AdditiveAnimTrack : TrackAsset // TypeDefIndex: 57484
+	[System.ComponentModel.DisplayName("Beyond/AdditiveAnimationTrack")]
+	[TrackBindingType(typeof(GameObject))]
+	[TrackClipType(typeof(AdditiveAnimPlayableAsset))]
+	public class AdditiveAnimTrack : TrackAsset // TypeDefIndex: 59827
 	{
 		// Fields
-		private const string k_DefaultRecordableClipName = "Recorded Additive"; // Metadata: 0x0207D974
+		private const string k_DefaultRecordableClipName = "Recorded Additive"; // Metadata: 0x0234D1C0
+		[HideInInspector]
+		[SerializeField]
 		private bool m_InfiniteClip; // 0xC0
+		[HideInInspector]
+		[SerializeField]
 		private AnimationClip m_RecordableClip; // 0xC8
 	
 		// Constructors
-		public AdditiveAnimTrack() {} // 0x000000018BE4EA28-0x000000018BE4EA74
+		public AdditiveAnimTrack(); // 0x000000018B348744-0x000000018B348790
 	
 		// Methods
-		public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount) => default; // 0x000000018BE4E754-0x000000018BE4E850
-		public override void GatherProperties(PlayableDirector director, IPropertyCollector driver) {} // 0x000000018BE4E850-0x000000018BE4EA28
-		public TimelineClip CreateRecordableClip(string animClipName) => default; // 0x000000018BE4E72C-0x000000018BE4E754
+		public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount); // 0x000000018B348470-0x000000018B34856C
+		public override void GatherProperties(PlayableDirector director, IPropertyCollector driver); // 0x000000018B34856C-0x000000018B348744
+		public TimelineClip CreateRecordableClip(string animClipName); // 0x000000018B348448-0x000000018B348470
 	}
 
-	public class CombineToTopPlayableAttribute : Attribute // TypeDefIndex: 57485
+	[AttributeUsage(AttributeTargets.Class)]
+	public class CombineToTopPlayableAttribute : Attribute // TypeDefIndex: 59828
 	{
 		// Constructors
-		public CombineToTopPlayableAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public CombineToTopPlayableAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class CustomControlPlayableAsset : PlayableAsset, ITimelineClipAsset, ICustomControlBehaviour // TypeDefIndex: 57486
+	public class CustomControlPlayableAsset : PlayableAsset, ITimelineClipAsset, ICustomControlBehaviour // TypeDefIndex: 59829
 	{
 		// Fields
 		protected CustomControlPlayableBehaviour m_CustomControlBehaviour; // 0x18
 	
 		// Properties
-		public ClipCaps clipCaps { get => default; } // 0x000000018BE4EE3C-0x000000018BE4EE58 
-		protected virtual ClipCaps extraClipCaps { get => default; } // 0x00000001813AE580-0x00000001813AE590 
+		public ClipCaps clipCaps { get; } // 0x000000018B348E50-0x000000018B348E6C 
+		protected virtual ClipCaps extraClipCaps { get; } // 0x00000001811EC580-0x00000001811EC590 
 	
 		// Constructors
-		public CustomControlPlayableAsset() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public CustomControlPlayableAsset(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x000000018BE4ED34-0x000000018BE4ED84
-		public virtual void OnClipEnable(Playable playable, FrameData info) {} // 0x000000018BE4EDE0-0x000000018BE4EE3C
-		public virtual void OnClipDisable(Playable playable, FrameData info) {} // 0x000000018BE4ED84-0x000000018BE4EDE0
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner); // 0x000000018B348D48-0x000000018B348D98
+		public virtual void OnClipEnable(Playable playable, FrameData info); // 0x000000018B348DF4-0x000000018B348E50
+		public virtual void OnClipDisable(Playable playable, FrameData info); // 0x000000018B348D98-0x000000018B348DF4
 	}
 
-	public class CustomControlPlayableBehaviour : PlayableBehaviour, ICustomControlBehaviour // TypeDefIndex: 57487
+	public class CustomControlPlayableBehaviour : PlayableBehaviour, ICustomControlBehaviour // TypeDefIndex: 59830
 	{
 		// Constructors
-		public CustomControlPlayableBehaviour() {} // 0x0000000185492010-0x0000000185492020
+		public CustomControlPlayableBehaviour(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public virtual void OnClipEnable(Playable playable, FrameData info) {} // 0x0000000185492010-0x0000000185492020
-		public virtual void OnClipDisable(Playable playable, FrameData info) {} // 0x0000000185492010-0x0000000185492020
+		public virtual void OnClipEnable(Playable playable, FrameData info); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void OnClipDisable(Playable playable, FrameData info); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public interface ICustomControlBehaviour // TypeDefIndex: 57488
+	public interface ICustomControlBehaviour // TypeDefIndex: 59831
 	{
 		// Methods
 		void OnClipEnable(Playable playable, FrameData info);
 		void OnClipDisable(Playable playable, FrameData info);
 	}
 
-	public interface IDynamicBinding // TypeDefIndex: 57489
+	public interface IDynamicBinding // TypeDefIndex: 59832
 	{
 	}
 
-	public interface ITimelineAnimationEventContextBinding // TypeDefIndex: 57490
+	public interface ITimelineAnimationEventContextBinding // TypeDefIndex: 59833
 	{
 		// Methods
-		void RegisterAnimationEventRuntimeContext(int playableId, AnimationEvent[] animationEvents, AnimationPlayableAsset.AnimationEventTriggerMode triggerMode, float triggerThreshold, float curClipTime, float curWeight, AnimationPlayableAsset.ClipEndAudioBehaviour clipEndAudioBehaviour = AnimationPlayableAsset.ClipEndAudioBehaviour.Default /* Metadata: 0x0207D986 */);
+		void RegisterAnimationEventRuntimeContext(int playableId, AnimationEvent[] animationEvents, AnimationPlayableAsset.AnimationEventTriggerMode postAudioEventTriggerMode, float postAudioEventTriggerThreshold, AnimationPlayableAsset.AnimationEventTriggerMode customFootStepTriggerMode, float customFootStepTriggerThreshold, float curClipTime, float curWeight, AnimationPlayableAsset.ClipEndAudioBehaviour clipEndAudioBehaviour = AnimationPlayableAsset.ClipEndAudioBehaviour.Default /* Metadata: 0x0234D1D2 */);
 		void UnregisterAnimationEventRuntimeContext(int playableId, AnimationEvent[] animationEvents);
 		void UpdateClipInfo(int playableId, float curClipTime, float curClipWeight);
-		void StopAllAudioForPlayable(int playableId, int fadeOutTimeMs = 100 /* Metadata: 0x0207D987 */);
+		void StopAllAudioForPlayable(int playableId, int fadeOutTimeMs = 100 /* Metadata: 0x0234D1D3 */);
 	}
 
-	public class SegmentLoopPlayableBehaviour : PlayableBehaviour // TypeDefIndex: 57491
+	public class SegmentLoopPlayableBehaviour : PlayableBehaviour // TypeDefIndex: 59834
 	{
 		// Constructors
-		public SegmentLoopPlayableBehaviour() {} // 0x0000000185492010-0x0000000185492020
+		public SegmentLoopPlayableBehaviour(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class SegmentLoopPlayableClip : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 57492
+	public class SegmentLoopPlayableClip : PlayableAsset, ITimelineClipAsset // TypeDefIndex: 59835
 	{
 		// Fields
 		public string loopSegmentKey; // 0x18
 	
 		// Properties
-		public ClipCaps clipCaps { get => default; } // 0x0000000185FB7DE0-0x0000000185FB7DF0 
+		public ClipCaps clipCaps { get; } // 0x0000000184DB8E50-0x0000000184DB8E60 
 	
 		// Constructors
-		public SegmentLoopPlayableClip() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public SegmentLoopPlayableClip(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
-		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x000000018BE54828-0x000000018BE548D4
+		public override Playable CreatePlayable(PlayableGraph graph, GameObject owner); // 0x000000018B34BF90-0x000000018B34C03C
 	}
 
-	public class SegmentLoopTrack : TrackAsset // TypeDefIndex: 57493
+	[CombineToTopPlayable]
+	[System.ComponentModel.DisplayName("Beyond/SegmentLoopTrack")]
+	[TrackClipType(typeof(SegmentLoopPlayableClip))]
+	public class SegmentLoopTrack : TrackAsset // TypeDefIndex: 59836
 	{
 		// Constructors
-		public SegmentLoopTrack() {} // 0x000000018BE548D4-0x000000018BE54920
+		public SegmentLoopTrack(); // 0x000000018B34C03C-0x000000018B34C088
 	}
 
-	internal struct DiscreteTime : IComparable // TypeDefIndex: 57494
+	internal struct DiscreteTime : IComparable // TypeDefIndex: 59837
 	{
 		// Fields
-		private const double k_Tick = 1E-12; // Metadata: 0x0207D989
+		private const double k_Tick = 1E-12; // Metadata: 0x0234D1D5
 		public static readonly DiscreteTime kMaxTime; // 0x00
 		private readonly long m_DiscreteTime; // 0x00
 	
 		// Properties
-		public static double tickValue { get => default; } // 0x0000000185FE6340-0x0000000185FE6350 
+		public static double tickValue { get; } // 0x0000000184DBA600-0x0000000184DBA610 
 	
 		// Constructors
-		private DiscreteTime(long time) : this() {
-			m_DiscreteTime = default;
-		} // 0x0000000185FB2BB0-0x0000000185FB2BC0
-		public DiscreteTime(double time) : this() {
-			m_DiscreteTime = default;
-		} // 0x000000018BE4FC78-0x000000018BE4FCD4
-		public DiscreteTime(int time) : this() {
-			m_DiscreteTime = default;
-		} // 0x000000018BE4FC20-0x000000018BE4FC78
-		static DiscreteTime() {
-			kMaxTime = default;
-		} // 0x000000018BE4FBE0-0x000000018BE4FC20
+		private DiscreteTime(long time); // 0x0000000184D88B60-0x0000000184D88B70
+		public DiscreteTime(double time); // 0x00000001839F3020-0x00000001839F3080
+		public DiscreteTime(int time); // 0x00000001839F30E0-0x00000001839F3140
+		static DiscreteTime(); // 0x0000000184D75940-0x0000000184D75980
 	
 		// Methods
-		public DiscreteTime OneTickBefore() => default; // 0x0000000185FE6310-0x0000000185FE6320
-		public DiscreteTime OneTickAfter() => default; // 0x0000000185FE6300-0x0000000185FE6310
-		public static DiscreteTime FromTicks(long ticks) => default; // 0x0000000185779060-0x0000000185779070
-		public int CompareTo(object obj) => default; // 0x000000018BE4F958-0x000000018BE4F9C0
-		public bool Equals(DiscreteTime other) => default; // 0x0000000183FAA6F0-0x0000000183FAA700
-		public override bool Equals(object obj) => default; // 0x000000018BE4FA74-0x000000018BE4FAE0
-		private static long DoubleToDiscreteTime(double time) => default; // 0x000000018BE4F9C0-0x000000018BE4FA74
-		private static long IntToDiscreteTime(int time) => default; // 0x000000018BE4FB30-0x000000018BE4FB80
-		private static double ToDouble(long time) => default; // 0x0000000185FE6320-0x0000000185FE6340
-		public static explicit operator double(DiscreteTime b) => default; // 0x000000018BE4FCD4-0x000000018BE4FD24
-		public static explicit operator DiscreteTime(double time) => default; // 0x000000018BE4FD24-0x000000018BE4FD4C
-		public static implicit operator DiscreteTime(int time) => default; // 0x000000018BE4FD4C-0x000000018BE4FD74
-		public static bool operator ==(DiscreteTime lhs, DiscreteTime rhs) => default; // 0x000000018406FBE0-0x000000018406FBF0
-		public static bool operator !=(DiscreteTime lhs, DiscreteTime rhs) => default; // 0x000000018BE4FD74-0x000000018BE4FDC0
-		public static bool operator <=(DiscreteTime lhs, DiscreteTime rhs) => default; // 0x000000018B387334-0x000000018B38733C
-		public static bool operator >=(DiscreteTime lhs, DiscreteTime rhs) => default; // 0x0000000183FF1610-0x0000000183FF1620
-		public static DiscreteTime operator -(DiscreteTime lhs, DiscreteTime rhs) => default; // 0x0000000185FE6350-0x0000000185FE6360
-		public override string ToString() => default; // 0x000000018BE4FBD8-0x000000018BE4FBE0
-		public override int GetHashCode() => default; // 0x0000000185FD1580-0x0000000185FD1590
-		public static DiscreteTime Max(DiscreteTime lhs, DiscreteTime rhs) => default; // 0x000000018BE4FB80-0x000000018BE4FBD8
-		public static long GetNearestTick(double time) => default; // 0x000000018BE4FAE0-0x000000018BE4FB30
+		public DiscreteTime OneTickBefore(); // 0x0000000184DBA5D0-0x0000000184DBA5E0
+		public DiscreteTime OneTickAfter(); // 0x0000000184DBA5C0-0x0000000184DBA5D0
+		public static DiscreteTime FromTicks(long ticks); // 0x000000018464E630-0x000000018464E640
+		public int CompareTo(object obj); // 0x000000018B348FC0-0x000000018B349028
+		public bool Equals(DiscreteTime other); // 0x0000000182EECF30-0x0000000182EECF40
+		public override bool Equals(object obj); // 0x000000018B349028-0x000000018B349094
+		private static long DoubleToDiscreteTime(double time); // 0x00000001839F31A0-0x00000001839F3210
+		private static long IntToDiscreteTime(int time); // 0x00000001839F3140-0x00000001839F31A0
+		private static double ToDouble(long time); // 0x0000000184DBA5E0-0x0000000184DBA600
+		public static explicit operator double(DiscreteTime b); // 0x00000001839F3080-0x00000001839F30E0
+		public static explicit operator DiscreteTime(double time); // 0x00000001839F2FF0-0x00000001839F3020
+		public static implicit operator DiscreteTime(int time); // 0x00000001839F2FC0-0x00000001839F2FF0
+		public static bool operator ==(DiscreteTime lhs, DiscreteTime rhs); // 0x0000000182FB1840-0x0000000182FB1850
+		public static bool operator !=(DiscreteTime lhs, DiscreteTime rhs); // 0x000000018B34909C-0x000000018B3490E8
+		public static bool operator <=(DiscreteTime lhs, DiscreteTime rhs); // 0x00000001839F3720-0x00000001839F3730
+		public static bool operator >=(DiscreteTime lhs, DiscreteTime rhs); // 0x0000000182FCE050-0x0000000182FCE060
+		public static DiscreteTime operator -(DiscreteTime lhs, DiscreteTime rhs); // 0x0000000184DBA610-0x0000000184DBA620
+		public override string ToString(); // 0x000000018B349094-0x000000018B34909C
+		public override int GetHashCode(); // 0x0000000184DA4FD0-0x0000000184DA4FE0
+		public static DiscreteTime Max(DiscreteTime lhs, DiscreteTime rhs); // 0x00000001839F3210-0x00000001839F3270
+		public static long GetNearestTick(double time); // 0x00000001839F2A00-0x00000001839F2A60
 	}
 
-	internal class InfiniteRuntimeClip : RuntimeElement // TypeDefIndex: 57495
+	internal class InfiniteRuntimeClip : RuntimeElement // TypeDefIndex: 59838
 	{
 		// Fields
 		private Playable m_Playable; // 0x18
 		private static readonly long kIntervalEnd; // 0x00
+		[CompilerGenerated]
 		private int _optionIndex_k__BackingField; // 0x28
 	
 		// Properties
-		public override long intervalStart { get => default; } // 0x00000001813AE580-0x00000001813AE590 
-		public override long intervalEnd { get => default; } // 0x000000018BE508EC-0x000000018BE5093C 
-		public override int optionIndex { get; set; } // 0x0000000181C9AC80-0x0000000181C9AC90 0x0000000181C9A5C0-0x0000000181C9A5D0
-		public override bool enable { set {} } // 0x000000018BE5093C-0x000000018BE509A0
+		public override long intervalStart { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public override long intervalEnd { get; } // 0x000000018B349590-0x000000018B3495E0 
+		public override int optionIndex { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811F2A90-0x00000001811F2AA0 0x00000001811F2AA0-0x00000001811F2AB0
+		public override bool enable { set; } // 0x000000018B3495E0-0x000000018B349644
 	
 		// Constructors
-		public InfiniteRuntimeClip() {} // Dummy constructor
-		public InfiniteRuntimeClip(Playable playable) {} // 0x0000000185FB30E0-0x0000000185FB30F0
-		static InfiniteRuntimeClip() {} // 0x000000018BE5085C-0x000000018BE508EC
+		public InfiniteRuntimeClip(Playable playable); // 0x0000000184D890D0-0x0000000184D890E0
+		static InfiniteRuntimeClip(); // 0x000000018B349500-0x000000018B349590
 	
 		// Methods
-		public override void EvaluateAt(double localTime, FrameData frameData, ITimelineRootMarker timelineRoot = null) {} // 0x000000018BE50804-0x000000018BE5085C
-		public override void DisableAt(double localTime, double rootDuration, FrameData frameData) {} // 0x000000018BE507A4-0x000000018BE50804
+		public override void EvaluateAt(double localTime, FrameData frameData, ITimelineRootMarker timelineRoot = null); // 0x000000018B3494A8-0x000000018B349500
+		public override void DisableAt(double localTime, double rootDuration, FrameData frameData); // 0x000000018B349448-0x000000018B3494A8
 	}
 
-	internal interface IInterval // TypeDefIndex: 57496
+	internal interface IInterval // TypeDefIndex: 59839
 	{
 		// Properties
 		long intervalStart { get; }
 		long intervalEnd { get; }
 	}
 
-	internal interface IRuntimeReset // TypeDefIndex: 57497
+	internal interface IRuntimeReset // TypeDefIndex: 59840
 	{
 		// Methods
 		void RuntimeReset();
 	}
 
-	internal interface IOption // TypeDefIndex: 57498
+	internal interface IOption // TypeDefIndex: 59841
 	{
 	}
 
-	internal struct IntervalTreeNode // TypeDefIndex: 57499
+	internal struct IntervalTreeNode // TypeDefIndex: 59842
 	{
 		// Fields
 		public long center; // 0x00
@@ -1979,22 +2343,23 @@ namespace UnityEngine.Timeline
 		public int right; // 0x14
 	}
 
-	internal class IntervalTree<T> // TypeDefIndex: 57501
+	internal class IntervalTree<T> // TypeDefIndex: 59844
 		where T : IInterval, IRuntimeReset
 	{
 		// Fields
-		private const int kMinNodeSize = 10; // Metadata: 0x0207D991
-		private const int kInvalidNode = -1; // Metadata: 0x0207D992
-		private const long kCenterUnknown = 9223372036854775807; // Metadata: 0x0207D993
+		private const int kMinNodeSize = 10; // Metadata: 0x0234D1DD
+		private const int kInvalidNode = -1; // Metadata: 0x0234D1DE
+		private const long kCenterUnknown = 9223372036854775807; // Metadata: 0x0234D1DF
 		private readonly List<Entry> m_Entries;
 		private readonly List<IntervalTreeNode> m_Nodes;
+		[CompilerGenerated]
 		private bool _dirty_k__BackingField;
 	
 		// Properties
-		public bool dirty { get; internal set; }
+		public bool dirty { [CompilerGenerated] get; [CompilerGenerated] internal set; }
 	
 		// Nested types
-		internal struct Entry // TypeDefIndex: 57500
+		internal struct Entry // TypeDefIndex: 59843
 		{
 			// Fields
 			public long intervalStart;
@@ -2003,21 +2368,21 @@ namespace UnityEngine.Timeline
 		}
 	
 		// Constructors
-		public IntervalTree() {}
+		public IntervalTree();
 	
 		// Methods
-		public void Add(T item) {}
-		public void IntersectsWith(long value, List<T> results) {}
-		public void IntersectsWithRange(long start, long end, List<T> results) {}
-		public void UpdateIntervals() {}
-		public void RuntimeReset() {}
-		private void Query(IntervalTreeNode intervalTreeNode, long value, List<T> results) {}
-		private void QueryRange(IntervalTreeNode intervalTreeNode, long start, long end, List<T> results) {}
-		public void Rebuild() {}
-		private int Rebuild(int start, int end) => default;
+		public void Add(T item);
+		public void IntersectsWith(long value, List<T> results);
+		public void IntersectsWithRange(long start, long end, List<T> results);
+		public void UpdateIntervals();
+		public void RuntimeReset();
+		private void Query(IntervalTreeNode intervalTreeNode, long value, List<T> results);
+		private void QueryRange(IntervalTreeNode intervalTreeNode, long start, long end, List<T> results);
+		public void Rebuild();
+		private int Rebuild(int start, int end);
 	}
 
-	public class RuntimeClip : RuntimeClipBase // TypeDefIndex: 57502
+	public class RuntimeClip : RuntimeClipBase // TypeDefIndex: 59845
 	{
 		// Fields
 		public double runtimeLocalTimeOffset; // 0x20
@@ -2032,6 +2397,7 @@ namespace UnityEngine.Timeline
 		private bool _hadIgniteOnce; // 0x4C
 		private double lastTickTime; // 0x50
 		private bool _onlyDeltaTimeLooped; // 0x58
+		[CompilerGenerated]
 		private int _optionIndex_k__BackingField; // 0x5C
 		private int m_originalPort; // 0x60
 		private bool _hadClipEnabled; // 0x64
@@ -2043,117 +2409,95 @@ namespace UnityEngine.Timeline
 		private bool m_enabled; // 0xA0
 	
 		// Properties
-		public override int optionIndex { get; set; } // 0x0000000183F80460-0x0000000183F80470 0x0000000183F804F0-0x0000000183F80500
-		public bool dynamicLink { get => default; } // 0x000000018BE53EE4-0x000000018BE53F0C 
-		public bool customBehaviourControl { get => default; } // 0x000000018BE53E90-0x000000018BE53EB8 
-		public override double start { get => default; } // 0x000000018BE54038-0x000000018BE54064 
-		public override double end { get => default; } // 0x000000018BE53F0C-0x000000018BE53F64 
-		public override double duration { get => default; } // 0x000000018BE53EB8-0x000000018BE53EE4 
-		public TimelineClip clip { get => default; } // 0x00000001813AC280-0x00000001813AC290 
-		public Playable mixer { get => default; } // 0x0000000185FBC0B0-0x0000000185FBC0C0 
-		public Playable playable { get => default; } // 0x0000000185FBB870-0x0000000185FBB880 
-		public override long intervalStart { get => default; } // 0x000000018BE53FDC-0x000000018BE54038 
-		public override long intervalEnd { get => default; } // 0x000000018BE53F64-0x000000018BE53FDC 
-		public override bool enable { set {} } // 0x000000018BE54064-0x000000018BE542A0
-		public bool isEnabling { get => default; } // 0x000000018346D900-0x000000018346D910 
+		public override int optionIndex { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86560-0x0000000184D86570 0x0000000184D865C0-0x0000000184D865D0
+		public bool dynamicLink { get; } // 0x0000000184B09EB0-0x0000000184B09EE0 
+		public bool customBehaviourControl { get; } // 0x0000000184B09EE0-0x0000000184B09F10 
+		public override double start { get; } // 0x0000000184891CA0-0x0000000184891CD0 
+		public override double end { get; } // 0x000000018B34B9B0-0x000000018B34BA08 
+		public override double duration { get; } // 0x00000001839F7540-0x00000001839F7570 
+		public TimelineClip clip { get; } // 0x0000000184D86230-0x0000000184D86240 
+		public Playable mixer { get; } // 0x0000000184D90620-0x0000000184D90630 
+		public Playable playable { get; } // 0x0000000184D8FD40-0x0000000184D8FD50 
+		public override long intervalStart { get; } // 0x00000001845C5CC0-0x00000001845C5D30 
+		public override long intervalEnd { get; } // 0x00000001845C5D30-0x00000001845C5DC0 
+		public override bool enable { set; } // 0x00000001839F5E10-0x00000001839F5F70
+		public bool isEnabling { get; } // 0x0000000184D88020-0x0000000184D88030 
 	
 		// Constructors
-		public RuntimeClip() {} // Dummy constructor
-		public RuntimeClip(TimelineClip clip, Playable clipPlayable, Playable parentMixer, int originalPort) {} // 0x000000018BE53E38-0x000000018BE53E90
+		public RuntimeClip(TimelineClip clip, Playable clipPlayable, Playable parentMixer, int originalPort); // 0x0000000183E0E630-0x0000000183E0E690
 	
 		// Methods
-		private void Create(TimelineClip clip, Playable clipPlayable, Playable parentMixer, int originalPort) {} // 0x000000018BE52F48-0x000000018BE5305C
-		public void SetTime(double time) {} // 0x000000018BE53B90-0x000000018BE53BE8
-		public void SetDuration(double duration) {} // 0x000000018BE53B38-0x000000018BE53B90
-		public override void EvaluateAt(double localTime, FrameData frameData, ITimelineRootMarker timelineRoot = null) {} // 0x000000018BE531FC-0x000000018BE5354C
-		public float EvaluateMixIn(float localTime) => default; // 0x000000018BE5354C-0x000000018BE53608
-		public float EvaluateMixOut(float localTime) => default; // 0x000000018BE53608-0x000000018BE53698
-		public double ToLocalTime(double localTime, FrameData frameData, ITimelineRootMarker timelineRoot) => default; // 0x000000018BE53BE8-0x000000018BE53D70
-		public override void DisableAt(double localTime, double rootDuration, FrameData frameData) {} // 0x000000018BE5305C-0x000000018BE531FC
-		public override bool CheckIfRuntimeTimeLoop(out bool canSkip, out double reverseTime) {
-			canSkip = default;
-			reverseTime = default;
-			return default;
-		} // 0x000000018BE52EFC-0x000000018BE52F48
-		public override bool CheckIfRuntimeTimeJump(out double jumpTime, out bool isReverseJump) {
-			jumpTime = default;
-			isReverseJump = default;
-			return default;
-		} // 0x000000018BE52DD0-0x000000018BE52EFC
-		public override void RuntimeLoopOver() {} // 0x000000018BE538A8-0x000000018BE538D8
-		public override void RuntimeLoopOn() {} // 0x000000018BE53878-0x000000018BE538A8
-		public override void GetRuntimeCrossFadeDuration(out double duration, out double jumpTargetTime) {
-			duration = default;
-			jumpTargetTime = default;
-		} // 0x000000018BE53698-0x000000018BE537BC
-		public override void RecalculateRuntimeCrossFadeMixIn(double mixInTime, double mixInDuration) {} // 0x000000018BE537BC-0x000000018BE5380C
-		public override void RecalculateRuntimeCrossFadeMixOut(double curTime, double mixStartTime, double mixDuration) {} // 0x000000018BE5380C-0x000000018BE53878
-		public bool TryGetJumpClip(out RuntimeJumpClip jumpClip) {
-			jumpClip = default;
-			return default;
-		} // 0x000000018BE53D70-0x000000018BE53E38
-		public override void RuntimeReset() {} // 0x000000018BE538D8-0x000000018BE53B38
+		private void Create(TimelineClip clip, Playable clipPlayable, Playable parentMixer, int originalPort); // 0x0000000183E0E690-0x0000000183E0E7D0
+		public void SetTime(double time); // 0x00000001839F7020-0x00000001839F7080
+		public void SetDuration(double duration); // 0x0000000183E0E2C0-0x0000000183E0E320
+		public override void EvaluateAt(double localTime, FrameData frameData, ITimelineRootMarker timelineRoot = null); // 0x00000001839F7080-0x00000001839F72E0
+		public float EvaluateMixIn(float localTime); // 0x00000001839F7660-0x00000001839F76E0
+		public float EvaluateMixOut(float localTime); // 0x00000001839F7570-0x00000001839F75E0
+		public double ToLocalTime(double localTime, FrameData frameData, ITimelineRootMarker timelineRoot); // 0x00000001839F72E0-0x00000001839F73A0
+		private double ApplyTimeRemapCurve(double localTime, double clipTime); // 0x00000001839F73A0-0x00000001839F7450
+		public override void DisableAt(double localTime, double rootDuration, FrameData frameData); // 0x000000018B34B508-0x000000018B34B6A8
+		public override bool CheckIfRuntimeTimeLoop(out bool canSkip, out double reverseTime); // 0x000000018489D700-0x000000018489D750
+		public override bool CheckIfRuntimeTimeJump(out double jumpTime, out bool isReverseJump); // 0x000000018B34B3DC-0x000000018B34B508
+		public override void RuntimeLoopOver(); // 0x000000018B34B8B8-0x000000018B34B8E8
+		public override void RuntimeLoopOn(); // 0x000000018B34B888-0x000000018B34B8B8
+		public override void GetRuntimeCrossFadeDuration(out double duration, out double jumpTargetTime); // 0x000000018B34B6A8-0x000000018B34B7CC
+		public override void RecalculateRuntimeCrossFadeMixIn(double mixInTime, double mixInDuration); // 0x000000018B34B7CC-0x000000018B34B81C
+		public override void RecalculateRuntimeCrossFadeMixOut(double curTime, double mixStartTime, double mixDuration); // 0x000000018B34B81C-0x000000018B34B888
+		public bool TryGetJumpClip(out RuntimeJumpClip jumpClip); // 0x000000018B34B8E8-0x000000018B34B9B0
+		public override void RuntimeReset(); // 0x00000001839F66D0-0x00000001839F6A20
 	}
 
-	public abstract class RuntimeClipBase : RuntimeElement // TypeDefIndex: 57503
+	public abstract class RuntimeClipBase : RuntimeElement // TypeDefIndex: 59846
 	{
 		// Fields
+		[CompilerGenerated]
 		private int _optionIndex_k__BackingField; // 0x18
 	
 		// Properties
 		public abstract double start { get; }
 		public abstract double duration { get; }
 		public abstract double end { get; }
-		public override int optionIndex { get; set; } // 0x00000001813AE560-0x00000001813AE570 0x00000001813AE9C0-0x00000001813AE9D0
-		public override long intervalStart { get; } // 0x000000018BE52D74-0x000000018BE52DD0 
-		public override long intervalEnd { get; } // 0x000000018BE52CFC-0x000000018BE52D74 
+		public override int optionIndex { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811EF5B0-0x00000001811EF5C0 0x00000001811EF9B0-0x00000001811EF9C0
+		public override long intervalStart { get; } // 0x000000018B34B380-0x000000018B34B3DC 
+		public override long intervalEnd { get; } // 0x000000018B34B308-0x000000018B34B380 
 	
 		// Constructors
-		protected RuntimeClipBase() {} // 0x0000000185492010-0x0000000185492020
+		protected RuntimeClipBase(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public abstract class RuntimeElement : IInterval, IOption, IRuntimeReset // TypeDefIndex: 57504
+	public abstract class RuntimeElement : IInterval, IOption, IRuntimeReset // TypeDefIndex: 59847
 	{
 		// Fields
+		[CompilerGenerated]
 		private int _intervalBit_k__BackingField; // 0x10
+		[CompilerGenerated]
 		private bool _isLooping_k__BackingField; // 0x14
 	
 		// Properties
 		public abstract long intervalStart { get; }
 		public abstract long intervalEnd { get; }
 		public abstract int optionIndex { get; set; }
-		public int intervalBit { get; set; } // 0x0000000181C0BBD0-0x0000000181C0BBE0 0x0000000181378230-0x0000000181378240
-		public bool isLooping { get; set; } // 0x0000000185FBA190-0x0000000185FBA1A0 0x0000000185FBA1B0-0x0000000185FBA1C0
-		public abstract bool enable { get; set; }
+		public int intervalBit { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
+		public bool isLooping { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D8EE50-0x0000000184D8EE60 0x0000000184D8EE70-0x0000000184D8EE80
+		public abstract bool enable { set; }
 	
 		// Constructors
-		protected RuntimeElement() {} // 0x0000000185492010-0x0000000185492020
+		protected RuntimeElement(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
 		public abstract void EvaluateAt(double localTime, FrameData frameData, ITimelineRootMarker timelineRoot = null);
 		public abstract void DisableAt(double localTime, double rootDuration, FrameData frameData);
-		public virtual bool CheckIfRuntimeTimeLoop(out bool canSkip, out double reverseTime) {
-			canSkip = default;
-			reverseTime = default;
-			return default;
-		} // 0x0000000185FE6470-0x0000000185FE6480
-		public virtual bool CheckIfRuntimeTimeJump(out double jumpTime, out bool isReverseJump) {
-			jumpTime = default;
-			isReverseJump = default;
-			return default;
-		} // 0x0000000185FE6460-0x0000000185FE6470
-		public virtual void RuntimeLoopOver() {} // 0x0000000185492010-0x0000000185492020
-		public virtual void RuntimeLoopOn() {} // 0x0000000185492010-0x0000000185492020
-		public virtual void GetRuntimeCrossFadeDuration(out double duration, out double jumpTargetTime) {
-			duration = default;
-			jumpTargetTime = default;
-		} // 0x0000000185FE6480-0x0000000185FE6490
-		public virtual void RecalculateRuntimeCrossFadeMixIn(double mixInTime, double mixDuration) {} // 0x0000000185492010-0x0000000185492020
-		public virtual void RecalculateRuntimeCrossFadeMixOut(double curTime, double mixStartTime, double mixDuration) {} // 0x0000000185492010-0x0000000185492020
-		public virtual void RuntimeReset() {} // 0x0000000185492010-0x0000000185492020
+		public virtual bool CheckIfRuntimeTimeLoop(out bool canSkip, out double reverseTime); // 0x0000000184DBA6E0-0x0000000184DBA6F0
+		public virtual bool CheckIfRuntimeTimeJump(out double jumpTime, out bool isReverseJump); // 0x0000000184DBA6D0-0x0000000184DBA6E0
+		public virtual void RuntimeLoopOver(); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void RuntimeLoopOn(); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void GetRuntimeCrossFadeDuration(out double duration, out double jumpTargetTime); // 0x0000000184DBA6F0-0x0000000184DBA700
+		public virtual void RecalculateRuntimeCrossFadeMixIn(double mixInTime, double mixDuration); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void RecalculateRuntimeCrossFadeMixOut(double curTime, double mixStartTime, double mixDuration); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void RuntimeReset(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class ScheduleRuntimeClip : RuntimeClipBase // TypeDefIndex: 57505
+	internal class ScheduleRuntimeClip : RuntimeClipBase // TypeDefIndex: 59848
 	{
 		// Fields
 		private TimelineClip m_Clip; // 0x20
@@ -2164,25 +2508,24 @@ namespace UnityEngine.Timeline
 		private bool m_Started; // 0x58
 	
 		// Properties
-		public override double start { get => default; } // 0x000000018BE546B8-0x000000018BE54730 
-		public override double duration { get => default; } // 0x000000018BE54634-0x000000018BE5467C 
-		public override double end { get => default; } // 0x000000018BE5467C-0x000000018BE546B8 
-		public TimelineClip clip { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
-		public Playable mixer { get => default; } // 0x0000000185FBB850-0x0000000185FBB860 
-		public Playable playable { get => default; } // 0x0000000185FBB610-0x0000000185FBB620 
-		public override bool enable { set {} } // 0x000000018BE54730-0x000000018BE54828
+		public override double start { get; } // 0x000000018B34BE20-0x000000018B34BE98 
+		public override double duration { get; } // 0x000000018B34BD9C-0x000000018B34BDE4 
+		public override double end { get; } // 0x000000018B34BDE4-0x000000018B34BE20 
+		public TimelineClip clip { get; } // 0x0000000184D862C0-0x0000000184D862D0 
+		public Playable mixer { get; } // 0x0000000184D8FD20-0x0000000184D8FD30 
+		public Playable playable { get; } // 0x0000000184D8FAD0-0x0000000184D8FAE0 
+		public override bool enable { set; } // 0x000000018B34BE98-0x000000018B34BF90
 	
 		// Constructors
-		public ScheduleRuntimeClip() {} // Dummy constructor
-		public ScheduleRuntimeClip(TimelineClip clip, Playable clipPlayable, Playable parentMixer, double startDelay = 0.2 /* Metadata: 0x0207D99B */, double finishTail = 0.1 /* Metadata: 0x0207D9A3 */) {} // 0x000000018BE545E4-0x000000018BE54634
+		public ScheduleRuntimeClip(TimelineClip clip, Playable clipPlayable, Playable parentMixer, double startDelay = 0.2 /* Metadata: 0x0234D1E7 */, double finishTail = 0.1 /* Metadata: 0x0234D1EF */); // 0x000000018B34BD4C-0x000000018B34BD9C
 	
 		// Methods
-		private void Create(TimelineClip clip, Playable clipPlayable, Playable parentMixer, double startDelay, double finishTail) {} // 0x000000018BE542A0-0x000000018BE54338
-		public override void EvaluateAt(double localTime, FrameData frameData, ITimelineRootMarker timelineRoot = null) {} // 0x000000018BE54338-0x000000018BE545E4
-		public override void DisableAt(double localTime, double rootDuration, FrameData frameData) {} // 0x00000001879082B0-0x00000001879082C0
+		private void Create(TimelineClip clip, Playable clipPlayable, Playable parentMixer, double startDelay, double finishTail); // 0x000000018B34BA08-0x000000018B34BAA0
+		public override void EvaluateAt(double localTime, FrameData frameData, ITimelineRootMarker timelineRoot = null); // 0x000000018B34BAA0-0x000000018B34BD4C
+		public override void DisableAt(double localTime, double rootDuration, FrameData frameData); // 0x00000001869734E8-0x00000001869734F8
 	}
 
-	public interface IMarker // TypeDefIndex: 57506
+	public interface IMarker // TypeDefIndex: 59849
 	{
 		// Properties
 		double time { get; set; }
@@ -2192,207 +2535,229 @@ namespace UnityEngine.Timeline
 		void Initialize(TrackAsset parent);
 	}
 
-	public interface INotificationOptionProvider // TypeDefIndex: 57507
+	public interface INotificationOptionProvider // TypeDefIndex: 59850
 	{
 		// Properties
 		NotificationFlags flags { get; }
 	}
 
-	public abstract class Marker : ScriptableObject, IMarker // TypeDefIndex: 57508
+	public abstract class Marker : ScriptableObject, IMarker // TypeDefIndex: 59851
 	{
 		// Fields
+		[SerializeField]
+		[TimeField(TimeFieldAttribute.UseEditMode.ApplyEditMode)]
+		[Tooltip("Time for the marker")]
 		private double m_Time; // 0x18
+		[CompilerGenerated]
 		private TrackAsset _parent_k__BackingField; // 0x20
 	
 		// Properties
-		public TrackAsset parent { get; private set; } // 0x00000001813B31A0-0x00000001813B31B0 0x000000018646EE40-0x000000018646EE50
-		public double time { get; set; } // 0x0000000181C44EA0-0x0000000181C44EB0 0x000000018BE5120C-0x000000018BE51264
+		public TrackAsset parent { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+		public double time { get; set; } // 0x0000000184D86360-0x0000000184D86370 0x000000018B349E4C-0x000000018B349EA4
 	
 		// Constructors
-		protected Marker() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		protected Marker(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
-		void IMarker.Initialize(TrackAsset parentTrack) {} // 0x000000018BE510EC-0x000000018BE5120C
-		public virtual void OnInitialize(TrackAsset aPent) {} // 0x0000000185492010-0x0000000185492020
+		void IMarker.Initialize(TrackAsset parentTrack); // 0x000000018B349D2C-0x000000018B349E4C
+		public virtual void OnInitialize(TrackAsset aPent); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	internal struct MarkerList : ISerializationCallbackReceiver // TypeDefIndex: 57509
+	internal struct MarkerList : ISerializationCallbackReceiver // TypeDefIndex: 59852
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private List<ScriptableObject> m_Objects; // 0x00
 		[NonSerialized]
+		[HideInInspector]
 		private List<IMarker> m_Cache; // 0x08
 		private bool m_CacheDirty; // 0x10
 		private bool m_HasNotifications; // 0x11
 	
 		// Properties
-		public List<IMarker> markers { get => default; } // 0x00000001864733FC-0x0000000186473418 
-		public int Count { get => default; } // 0x000000018BE50EA0-0x000000018BE50EE8 
-		public IMarker this[int idx] { get => default; } // 0x000000018BE50EE8-0x000000018BE50F44 
+		public List<IMarker> markers { get; } // 0x0000000185394794-0x00000001853947B0 
+		public int Count { get; } // 0x0000000183AC4070-0x0000000183AC40C0 
+		public IMarker this[int idx] { get => default; } // 0x000000018B349B28-0x000000018B349B84 
 	
 		// Constructors
-		public MarkerList(int capacity) : this() {
-			m_Objects = default;
-			m_Cache = default;
-			m_CacheDirty = default;
-			m_HasNotifications = default;
-		} // 0x00000001850B4640-0x00000001850B4720
+		public MarkerList(int capacity); // 0x00000001839F3AA0-0x00000001839F3B80
 	
 		// Methods
-		public void Add(ScriptableObject item) {} // 0x000000018BE509A0-0x000000018BE50A24
-		public bool Remove(IMarker item) => default; // 0x000000018BE50CEC-0x000000018BE50DF0
-		public bool Remove(ScriptableObject item, TimelineAsset timelineAsset, PlayableAsset thingToDirty) => default; // 0x000000018BE50DF0-0x000000018BE50EA0
-		public void Clear() {} // 0x000000018BE50A24-0x000000018BE50A70
-		public IEnumerable<IMarker> GetMarkers() => default; // 0x00000001864733FC-0x0000000186473418
-		public List<ScriptableObject> GetRawMarkerList() => default; // 0x00000001834AFB60-0x00000001834AFB70
-		public IMarker CreateMarker(System.Type type, double time, TrackAsset owner) => default; // 0x000000018BE50A70-0x000000018BE50CD0
-		public bool HasNotifications() => default; // 0x000000018BE50CD0-0x000000018BE50CEC
-		void ISerializationCallbackReceiver.OnBeforeSerialize() {} // 0x0000000185492010-0x0000000185492020
-		void ISerializationCallbackReceiver.OnAfterDeserialize() {} // 0x0000000181B9A230-0x0000000181B9A240
-		private void BuildCache() {} // 0x00000001850B4720-0x00000001850B49C0
+		public void Add(ScriptableObject item); // 0x000000018B349644-0x000000018B3496C8
+		public bool Remove(IMarker item); // 0x000000018B349974-0x000000018B349A78
+		public bool Remove(ScriptableObject item, TimelineAsset timelineAsset, PlayableAsset thingToDirty); // 0x000000018B349A78-0x000000018B349B28
+		public void Clear(); // 0x000000018B3496C8-0x000000018B349714
+		public IEnumerable<IMarker> GetMarkers(); // 0x0000000185394794-0x00000001853947B0
+		public List<ScriptableObject> GetRawMarkerList(); // 0x0000000182B76770-0x0000000182B76780
+		public IMarker CreateMarker(System.Type type, double time, TrackAsset owner); // 0x000000018B349714-0x000000018B349974
+		public bool HasNotifications(); // 0x0000000185394778-0x0000000185394794
+		void ISerializationCallbackReceiver.OnBeforeSerialize(); // 0x00000001841E1670-0x00000001841E1680
+		void ISerializationCallbackReceiver.OnAfterDeserialize(); // 0x00000001815EFCD0-0x00000001815EFCE0
+		private void BuildCache(); // 0x00000001839F3B80-0x00000001839F3DE0
 	}
 
 	[Serializable]
-	public class MarkerTrack : TrackAsset, INotificationTrack // TypeDefIndex: 57510
+	[ExcludeFromPreset]
+	[HideInMenu]
+	[TrackBindingType(typeof(GameObject))]
+	public class MarkerTrack : TrackAsset, INotificationTrack // TypeDefIndex: 59853
 	{
 		// Properties
-		public override IEnumerable<PlayableBinding> outputs { get => default; } // 0x000000018BE50F90-0x000000018BE510EC 
+		public override IEnumerable<PlayableBinding> outputs { get; } // 0x000000018B349BD0-0x000000018B349D2C 
 	
 		// Constructors
-		public MarkerTrack() {} // 0x000000018BE50F44-0x000000018BE50F90
+		public MarkerTrack(); // 0x000000018B349B84-0x000000018B349BD0
 	}
 
-	internal class CustomSignalEventDrawer : PropertyAttribute // TypeDefIndex: 57511
+	internal class CustomSignalEventDrawer : PropertyAttribute // TypeDefIndex: 59854
 	{
 		// Constructors
-		public CustomSignalEventDrawer() {} // 0x0000000185492010-0x0000000185492020
+		public CustomSignalEventDrawer(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class SignalAsset : ScriptableObject // TypeDefIndex: 57512
+	[AssetFileNameExtension("signal", new string[0])]
+	public class SignalAsset : ScriptableObject // TypeDefIndex: 59855
 	{
 		// Fields
+		[CompilerGenerated]
 		private static Action<SignalAsset> OnEnableCallback; // 0x00
 	
 		// Events
-		internal static event Action<SignalAsset> OnEnableCallback;
+		internal static event Action<SignalAsset> OnEnableCallback {
+			add; // 0x000000018B34C0D8-0x000000018B34C174
+			remove; // 0x000000018B34C174-0x000000018B34C210
+		}
 	
 		// Constructors
-		public SignalAsset() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public SignalAsset(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
-		private void OnEnable() {} // 0x000000018BE54920-0x000000018BE54970
+		private void OnEnable(); // 0x000000018B34C088-0x000000018B34C0D8
 	}
 
 	[Serializable]
-	public class SignalEmitter : Marker, INotification, INotificationOptionProvider // TypeDefIndex: 57513
+	[CustomStyle("SignalEmitter")]
+	[ExcludeFromPreset]
+	public class SignalEmitter : Marker, INotification, INotificationOptionProvider // TypeDefIndex: 59856
 	{
 		// Fields
+		[SerializeField]
 		private bool m_Retroactive; // 0x28
+		[SerializeField]
 		private bool m_EmitOnce; // 0x29
+		[SerializeField]
 		private SignalAsset m_Asset; // 0x30
 	
 		// Properties
-		public bool retroactive { get => default; set {} } // 0x00000001813B31B0-0x00000001813B31C0 0x00000001813B4840-0x00000001813B4850
-		public bool emitOnce { get => default; set {} } // 0x00000001813B34D0-0x00000001813B34E0 0x00000001813B4850-0x00000001813B4860
-		public SignalAsset asset { get => default; set {} } // 0x00000001813B51D0-0x00000001813B51E0 0x00000001864721F0-0x0000000186472200
-		PropertyName INotification.id { get => default; } // 0x000000018BE54AA8-0x000000018BE54B4C 
-		NotificationFlags INotificationOptionProvider.flags { get => default; } // 0x000000018BE54B4C-0x000000018BE54B74 
+		public bool retroactive { get; set; } // 0x00000001811F33C0-0x00000001811F33D0 0x00000001811F33D0-0x00000001811F33E0
+		public bool emitOnce { get; set; } // 0x0000000184D867B0-0x0000000184D867C0 0x0000000184D867C0-0x0000000184D867D0
+		public SignalAsset asset { get; set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
+		PropertyName INotification.id { get; } // 0x000000018B34C210-0x000000018B34C2B4 
+		NotificationFlags INotificationOptionProvider.flags { get; } // 0x000000018B34C2B4-0x000000018B34C2DC 
 	
 		// Constructors
-		public SignalEmitter() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public SignalEmitter(); // 0x0000000183573370-0x0000000183573380
 	}
 
-	public class SignalReceiver : MonoBehaviour, INotificationReceiver // TypeDefIndex: 57515
+	public class SignalReceiver : MonoBehaviour, INotificationReceiver // TypeDefIndex: 59858
 	{
 		// Fields
+		[SerializeField]
 		private EventKeyValue m_Events; // 0x18
 	
 		// Nested types
 		[Serializable]
-		private class EventKeyValue // TypeDefIndex: 57514
+		private class EventKeyValue // TypeDefIndex: 59857
 		{
 			// Fields
+			[SerializeField]
 			private List<SignalAsset> m_Signals; // 0x10
+			[CustomSignalEventDrawer]
+			[SerializeField]
 			private List<UnityEvent> m_Events; // 0x18
 	
 			// Properties
-			public List<SignalAsset> signals { get => default; } // 0x000000018B40D310-0x000000018B40D32C 
-			public List<UnityEvent> events { get => default; } // 0x000000018BE55174-0x000000018BE551AC 
+			public List<SignalAsset> signals { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+			public List<UnityEvent> events { get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public EventKeyValue() {} // 0x000000018BE55070-0x000000018BE550B8
+			public EventKeyValue(); // 0x000000018B349338-0x000000018B3493F8
 	
 			// Methods
-			public bool TryGetValue(SignalAsset key, out UnityEvent value) {
-				value = default;
-				return default;
-			} // 0x000000018BE55268-0x000000018BE55348
-			public void Append(SignalAsset key, UnityEvent value) {} // 0x000000018BE54BE0-0x000000018BE54D3C
-			public void Remove(int idx) {} // 0x000000018BE54B74-0x000000018BE54BE0
-			public void Remove(SignalAsset key) {} // 0x000000018BE553F0-0x000000018BE554B8
+			public bool TryGetValue(SignalAsset key, out UnityEvent value); // 0x000000018B349290-0x000000018B349338
+			public void Append(SignalAsset key, UnityEvent value); // 0x000000018B3490E8-0x000000018B349170
+			public void Remove(int idx); // 0x000000018B349214-0x000000018B349290
+			public void Remove(SignalAsset key); // 0x000000018B349170-0x000000018B349214
 		}
 	
 		// Constructors
-		public SignalReceiver() {} // 0x000000018BE50010-0x000000018BE500D0
+		public SignalReceiver(); // 0x000000018B34CC20-0x000000018B34CC90
 	
 		// Methods
-		public void OnNotify(Playable origin, INotification notification, object context) {} // 0x000000018BE54E08-0x000000018BE55070
-		public void AddReaction(SignalAsset asset, UnityEvent reaction) {} // 0x000000018BE55348-0x000000018BE553F0
-		public int AddEmptyReaction(UnityEvent reaction) => default; // 0x000000018BE54D3C-0x000000018BE54E08
-		public void Remove(SignalAsset asset) {} // 0x000000018BE550B8-0x000000018BE55174
-		public IEnumerable<SignalAsset> GetRegisteredSignals() => default; // 0x000000018BE551AC-0x000000018BE55268
-		public UnityEvent GetReaction(SignalAsset key) => default; // 0x0000000185492010-0x0000000185492020
-		public int Count() => default; // 0x000000018BE554B8-0x000000018BE55528
-		public void ChangeSignalAtIndex(int idx, SignalAsset newKey) {} // 0x000000018BE4FF68-0x000000018BE50010
-		public void RemoveAtIndex(int idx) {} // 0x000000018BE4FDC0-0x000000018BE4FE48
-		public void ChangeReactionAtIndex(int idx, UnityEvent reaction) {} // 0x000000018BE4FEEC-0x000000018BE4FF68
-		public UnityEvent GetReactionAtIndex(int idx) => default; // 0x000000018BE4FE48-0x000000018BE4FEEC
-		public SignalAsset GetSignalAssetAtIndex(int idx) => default; // 0x000000018346D130-0x000000018346D140
-		private void OnEnable() {} // 0x0000000181377E40-0x0000000181377E50
+		public void OnNotify(Playable origin, INotification notification, object context); // 0x000000018B34C9D0-0x000000018B34CAB0
+		public void AddReaction(SignalAsset asset, UnityEvent reaction); // 0x000000018B34C348-0x000000018B34C4A4
+		public int AddEmptyReaction(UnityEvent reaction); // 0x000000018B34C2DC-0x000000018B34C348
+		public void Remove(SignalAsset asset); // 0x000000018B34CB58-0x000000018B34CC20
+		public IEnumerable<SignalAsset> GetRegisteredSignals(); // 0x000000018A8DA4D0-0x000000018A8DA4EC
+		public UnityEvent GetReaction(SignalAsset key); // 0x000000018B34C8DC-0x000000018B34C914
+		public int Count(); // 0x000000018B34C7D8-0x000000018B34C820
+		public void ChangeSignalAtIndex(int idx, SignalAsset newKey); // 0x000000018B34C570-0x000000018B34C7D8
+		public void RemoveAtIndex(int idx); // 0x000000018B34CAB0-0x000000018B34CB58
+		public void ChangeReactionAtIndex(int idx, UnityEvent reaction); // 0x000000018B34C4A4-0x000000018B34C570
+		public UnityEvent GetReactionAtIndex(int idx); // 0x000000018B34C820-0x000000018B34C8DC
+		public SignalAsset GetSignalAssetAtIndex(int idx); // 0x000000018B34C914-0x000000018B34C9D0
+		private void OnEnable(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class SignalTrack : MarkerTrack // TypeDefIndex: 57516
+	[ExcludeFromPreset]
+	[TrackBindingType(typeof(SignalReceiver))]
+	[TrackColor(0.25f, 0.25f, 0.25f)]
+	public class SignalTrack : MarkerTrack // TypeDefIndex: 59859
 	{
 		// Constructors
-		public SignalTrack() {} // 0x000000018BE55528-0x000000018BE55530
+		public SignalTrack(); // 0x000000018B34CC90-0x000000018B34CC98
 	}
 
-	public static class TrackAssetExtensions // TypeDefIndex: 57517
+	public static class TrackAssetExtensions // TypeDefIndex: 59860
 	{
 	}
 
 	[Serializable]
-	public class GroupTrack : TrackAsset // TypeDefIndex: 57518
+	[ExcludeFromPreset]
+	[SupportsChildTracks(null, 2147483647)]
+	[TrackClipType(typeof(TrackAsset))]
+	public class GroupTrack : TrackAsset // TypeDefIndex: 59861
 	{
 		// Fields
 		public TimelineConditionBase enableOnCondition; // 0xC0
 	
 		// Properties
-		public override IEnumerable<PlayableBinding> outputs { get => default; } // 0x000000018BE506C8-0x000000018BE50718 
+		public override IEnumerable<PlayableBinding> outputs { get; } // 0x000000018B3493F8-0x000000018B349448 
 	
 		// Constructors
-		public GroupTrack() {} // 0x00000001850B4360-0x00000001850B43B0
+		public GroupTrack(); // 0x0000000184D5DEB0-0x0000000184D5DF00
 	
 		// Methods
-		public void CalculateRuntimeMuted() {} // 0x000000018BE50640-0x000000018BE506C8
-		internal override bool CanCompileClips() => default; // 0x00000001814A81B0-0x00000001814A81C0
+		public void CalculateRuntimeMuted(); // 0x0000000184D35910-0x0000000184D359B0
+		internal override bool CanCompileClips(); // 0x00000001812081B0-0x0000000181208610
 	}
 
-	public interface ILayerable // TypeDefIndex: 57519
+	public interface ILayerable // TypeDefIndex: 59862
 	{
 		// Methods
 		Playable CreateLayerMixer(PlayableGraph graph, GameObject go, int inputCount);
 	}
 
-	public interface ITimeDilationListener // TypeDefIndex: 57520
+	public interface ITimeDilationListener // TypeDefIndex: 59863
 	{
 		// Methods
 		void OnTimeDilationChanged(float timeDilation);
 	}
 
-	public class ActivationControlPlayable : ControlPlayableBehaviour // TypeDefIndex: 57523
+	public class ActivationControlPlayable : ControlPlayableBehaviour // TypeDefIndex: 59866
 	{
 		// Fields
 		public GameObject gameObject; // 0x10
@@ -2400,14 +2765,14 @@ namespace UnityEngine.Timeline
 		private InitialState m_InitialState; // 0x1C
 	
 		// Nested types
-		public enum PostPlaybackState // TypeDefIndex: 57521
+		public enum PostPlaybackState // TypeDefIndex: 59864
 		{
 			Active = 0,
 			Inactive = 1,
 			Revert = 2
 		}
 	
-		private enum InitialState // TypeDefIndex: 57522
+		private enum InitialState // TypeDefIndex: 59865
 		{
 			Unset = 0,
 			Active = 1,
@@ -2415,98 +2780,101 @@ namespace UnityEngine.Timeline
 		}
 	
 		// Constructors
-		public ActivationControlPlayable() {} // 0x0000000185FB83D0-0x0000000185FB83E0
+		public ActivationControlPlayable(); // 0x0000000184D8D750-0x0000000184D8D760
 	
 		// Methods
-		public static ScriptPlayable<ActivationControlPlayable> Create(PlayableGraph graph, GameObject gameObject, PostPlaybackState postPlaybackState) => default; // 0x000000018BE4CE68-0x000000018BE4CF9C
-		public override void OnBehaviourPlay(Playable playable, FrameData info) {} // 0x000000018BE4D028-0x000000018BE4D098
-		public override void OnBehaviourPause(Playable playable, FrameData info) {} // 0x000000018BE4CF9C-0x000000018BE4D028
-		public override void ProcessFrame(Playable playable, FrameData info, object userData) {} // 0x000000018BE4D1B8-0x000000018BE4D228
-		public override void OnGraphStart(Playable playable) {} // 0x000000018BE4D098-0x000000018BE4D114
-		public override void OnPlayableDestroy(Playable playable) {} // 0x000000018BE4D114-0x000000018BE4D1B8
-		public override void RuntimeReset() {} // 0x0000000185492010-0x0000000185492020
+		public static ScriptPlayable<ActivationControlPlayable> Create(PlayableGraph graph, GameObject gameObject, PostPlaybackState postPlaybackState); // 0x000000018450F4F0-0x000000018450F680
+		public override void OnBehaviourPlay(Playable playable, FrameData info); // 0x0000000184A052D0-0x0000000184A05380
+		public override void OnBehaviourPause(Playable playable, FrameData info); // 0x000000018B3465FC-0x000000018B346688
+		public override void ProcessFrame(Playable playable, FrameData info, object userData); // 0x0000000184A05220-0x0000000184A052D0
+		public override void OnGraphStart(Playable playable); // 0x0000000184972880-0x0000000184972940
+		public override void OnPlayableDestroy(Playable playable); // 0x000000018B346688-0x000000018B34672C
+		public override void RuntimeReset(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class AnimationEventRuntimeContextPlayable : PlayableBehaviour // TypeDefIndex: 57524
+	public class AnimationEventRuntimeContextPlayable : PlayableBehaviour // TypeDefIndex: 59867
 	{
 		// Fields
 		private ITimelineAnimationEventContextBinding m_TimelineAnimationEventContextBinding; // 0x10
-		private AnimationPlayableAsset.AnimationEventTriggerMode m_TriggerMode; // 0x18
-		private AnimationPlayableAsset.ClipEndAudioBehaviour m_ClipEndAudioBehaviour; // 0x1C
-		private AnimationEvent[] m_CachedAnimationEvents; // 0x20
-		private float m_ClipDuration; // 0x28
-		private float m_TriggerThreshold; // 0x2C
-		private bool m_IsRegistered; // 0x30
-		private bool m_HasRegisteredOnce; // 0x31
+		private AnimationPlayableAsset.AnimationEventTriggerMode m_PostAudioEventTriggerMode; // 0x18
+		private AnimationPlayableAsset.AnimationEventTriggerMode m_CustomFootStepTriggerMode; // 0x1C
+		private AnimationPlayableAsset.ClipEndAudioBehaviour m_ClipEndAudioBehaviour; // 0x20
+		private AnimationEvent[] m_CachedAnimationEvents; // 0x28
+		private float m_ClipDuration; // 0x30
+		private float m_PostAudioEventTriggerThreshold; // 0x34
+		private float m_CustomFootStepTriggerThreshold; // 0x38
+		private bool m_IsRegistered; // 0x3C
+		private bool m_HasRegisteredOnce; // 0x3D
 	
 		// Constructors
-		public AnimationEventRuntimeContextPlayable() {} // 0x0000000185492010-0x0000000185492020
+		public AnimationEventRuntimeContextPlayable(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static ScriptPlayable<AnimationEventRuntimeContextPlayable> Create(PlayableGraph graph, ITimelineAnimationEventContextBinding timelineAnimationEventContextBinding, AnimationPlayableAsset.AnimationEventTriggerMode triggerMode, AnimationEvent[] cachedAnimationEvents, float clipDuration = 0f /* Metadata: 0x0207D9B1 */, float weightThreshold = 0f /* Metadata: 0x0207D9B5 */, AnimationPlayableAsset.ClipEndAudioBehaviour clipEndAudioBehaviour = AnimationPlayableAsset.ClipEndAudioBehaviour.Default /* Metadata: 0x0207D9B9 */, int inputCount = 1 /* Metadata: 0x0207D9BA */) => default; // 0x0000000183F833F0-0x0000000183F84340
-		public void Initialize(ITimelineAnimationEventContextBinding timelineAnimationEventContextBinding, AnimationPlayableAsset.AnimationEventTriggerMode triggerMode, AnimationEvent[] cachedAnimationEvents, float clipDuration, float weightThreshold = 0f /* Metadata: 0x0207D9BB */, AnimationPlayableAsset.ClipEndAudioBehaviour clipEndAudioBehaviour = AnimationPlayableAsset.ClipEndAudioBehaviour.Default /* Metadata: 0x0207D9BF */) {} // 0x0000000183F84340-0x0000000183F84420
-		public void ResetRegistration(Playable playable) {} // 0x0000000183F84420-0x0000000183F864C0
-		public override void PrepareFrame(Playable playable, FrameData info) {} // 0x000000018BE4EA74-0x000000018BE4EBD4
+		public static ScriptPlayable<AnimationEventRuntimeContextPlayable> Create(PlayableGraph graph, ITimelineAnimationEventContextBinding timelineAnimationEventContextBinding, AnimationPlayableAsset.AnimationEventTriggerMode postAudioEventTriggerMode, float postAudioEventTriggerThreshold, AnimationPlayableAsset.AnimationEventTriggerMode customFootStepTriggerMode, float customFootStepTriggerThreshold, AnimationEvent[] cachedAnimationEvents, float clipDuration = 0f /* Metadata: 0x0234D1FD */, AnimationPlayableAsset.ClipEndAudioBehaviour clipEndAudioBehaviour = AnimationPlayableAsset.ClipEndAudioBehaviour.Default /* Metadata: 0x0234D201 */, int inputCount = 1 /* Metadata: 0x0234D202 */); // 0x000000018B348790-0x000000018B348908
+		public void Initialize(ITimelineAnimationEventContextBinding timelineAnimationEventContextBinding, AnimationPlayableAsset.AnimationEventTriggerMode postAudioEventTriggerMode, float postAudioEventTriggerThreshold, AnimationPlayableAsset.AnimationEventTriggerMode customFootStepTriggerMode, float customFootStepTriggerThreshold, AnimationEvent[] cachedAnimationEvents, float clipDuration, AnimationPlayableAsset.ClipEndAudioBehaviour clipEndAudioBehaviour = AnimationPlayableAsset.ClipEndAudioBehaviour.Default /* Metadata: 0x0234D203 */); // 0x000000018B348908-0x000000018B348970
+		public void ResetRegistration(Playable playable); // 0x000000018B348B18-0x000000018B348BE8
+		public override void PrepareFrame(Playable playable, FrameData info); // 0x000000018B348970-0x000000018B348B18
 	}
 
 	[Serializable]
-	public class BasicPlayableBehaviour : ScriptableObject, IPlayableAsset, IPlayableBehaviour // TypeDefIndex: 57525
+	[Obsolete("For best performance use PlayableAsset and PlayableBehaviour.")]
+	public class BasicPlayableBehaviour : ScriptableObject, IPlayableAsset, IPlayableBehaviour // TypeDefIndex: 59868
 	{
 		// Properties
-		public virtual double duration { get => default; } // 0x000000018BE4EC94-0x000000018BE4ECE4 
-		public virtual IEnumerable<PlayableBinding> outputs { get => default; } // 0x000000018BE4ECE4-0x000000018BE4ED34 
+		public virtual double duration { get; } // 0x000000018B348CA8-0x000000018B348CF8 
+		public virtual IEnumerable<PlayableBinding> outputs { get; } // 0x000000018B348CF8-0x000000018B348D48 
 	
 		// Constructors
-		public BasicPlayableBehaviour() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		public BasicPlayableBehaviour(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
-		public virtual void OnGraphStart(Playable playable) {} // 0x0000000185492010-0x0000000185492020
-		public virtual void OnGraphStop(Playable playable) {} // 0x0000000185492010-0x0000000185492020
-		public virtual void OnPlayableCreate(Playable playable) {} // 0x0000000185492010-0x0000000185492020
-		public virtual void OnPlayableDestroy(Playable playable) {} // 0x0000000185492010-0x0000000185492020
-		public virtual void OnBehaviourPlay(Playable playable, FrameData info) {} // 0x0000000185492010-0x0000000185492020
-		public virtual void OnBehaviourPause(Playable playable, FrameData info) {} // 0x0000000185492010-0x0000000185492020
-		public virtual void PrepareFrame(Playable playable, FrameData info) {} // 0x0000000185492010-0x0000000185492020
-		public virtual void ProcessFrame(Playable playable, FrameData info, object playerData) {} // 0x0000000185492010-0x0000000185492020
-		public virtual Playable CreatePlayable(PlayableGraph graph, GameObject owner) => default; // 0x000000018BE4EBD4-0x000000018BE4EC94
+		public virtual void OnGraphStart(Playable playable); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void OnGraphStop(Playable playable); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void OnPlayableCreate(Playable playable); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void OnPlayableDestroy(Playable playable); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void OnBehaviourPlay(Playable playable, FrameData info); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void OnBehaviourPause(Playable playable, FrameData info); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void PrepareFrame(Playable playable, FrameData info); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void ProcessFrame(Playable playable, FrameData info, object playerData); // 0x00000001841E1670-0x00000001841E1680
+		public virtual Playable CreatePlayable(PlayableGraph graph, GameObject owner); // 0x000000018B348BE8-0x000000018B348CA8
 	}
 
-	public class ControlPlayableBehaviour : PlayableBehaviour, IBehaviourRuntimeReset // TypeDefIndex: 57526
+	public class ControlPlayableBehaviour : PlayableBehaviour, IBehaviourRuntimeReset // TypeDefIndex: 59869
 	{
 		// Constructors
-		public ControlPlayableBehaviour() {} // 0x0000000185492010-0x0000000185492020
+		public ControlPlayableBehaviour(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public virtual void RuntimeReset() {} // 0x0000000185492010-0x0000000185492020
+		public virtual void RuntimeReset(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class DirectorControlPlayable : ControlPlayableBehaviour // TypeDefIndex: 57527
+	public class DirectorControlPlayable : ControlPlayableBehaviour // TypeDefIndex: 59870
 	{
 		// Fields
 		public PlayableDirector director; // 0x10
 		public ITimelineRootMarker rootMarker; // 0x18
-		private const float SYNC_START_FORBID_THRESHOLD = 0.016666668f; // Metadata: 0x0207D9C0
+		private const float SYNC_START_FORBID_THRESHOLD = 0.016666668f; // Metadata: 0x0234D204
 		private bool m_SyncTime; // 0x20
 		private double m_AssetDuration; // 0x28
 		private TimelinePlayable m_TimelinePlayable; // 0x30
 	
 		// Constructors
-		public DirectorControlPlayable() {} // 0x0000000185FE62F0-0x0000000185FE6300
+		public DirectorControlPlayable(); // 0x0000000184D77940-0x0000000184D77950
 	
 		// Methods
-		public static ScriptPlayable<DirectorControlPlayable> Create(PlayableGraph graph, PlayableDirector director) => default; // 0x000000018BE4EE58-0x000000018BE4F0C0
-		public override void OnPlayableDestroy(Playable playable) {} // 0x000000018BE4F230-0x000000018BE4F2CC
-		public override void PrepareFrame(Playable playable, FrameData info) {} // 0x000000018BE4F2CC-0x000000018BE4F4F4
-		public override void OnBehaviourPlay(Playable playable, FrameData info) {} // 0x000000018BE4F178-0x000000018BE4F230
-		public override void OnBehaviourPause(Playable playable, FrameData info) {} // 0x000000018BE4F0C0-0x000000018BE4F178
-		public override void ProcessFrame(Playable playable, FrameData info, object playerData) {} // 0x000000018BE4F4F4-0x000000018BE4F624
-		private void SyncSpeed(double speed) {} // 0x000000018BE4F624-0x000000018BE4F770
-		private void SyncStart(PlayableGraph graph, double time) {} // 0x000000018BE4F770-0x000000018BE4F894
-		private void SyncStop(PlayableGraph graph, double time) {} // 0x000000018BE4F894-0x000000018BE4F958
-		public override void RuntimeReset() {} // 0x0000000185492010-0x0000000185492020
+		public static ScriptPlayable<DirectorControlPlayable> Create(PlayableGraph graph, PlayableDirector director); // 0x00000001839F7760-0x00000001839F7A20
+		public override void OnPlayableDestroy(Playable playable); // 0x000000018B348F24-0x000000018B348FC0
+		public override void PrepareFrame(Playable playable, FrameData info); // 0x0000000183E0D6A0-0x0000000183E0D8F0
+		public override void OnBehaviourPlay(Playable playable, FrameData info); // 0x00000001839EE7D0-0x00000001839EE930
+		public override void OnBehaviourPause(Playable playable, FrameData info); // 0x000000018B348E6C-0x000000018B348F24
+		public override void ProcessFrame(Playable playable, FrameData info, object playerData); // 0x0000000183E0D8F0-0x0000000183E0DAE0
+		private void SyncSpeed(double speed); // 0x0000000183E0E900-0x0000000183E0E9D0
+		private void SyncStart(PlayableGraph graph, double time); // 0x0000000183E0D590-0x0000000183E0D610
+		private void SyncStop(PlayableGraph graph, double time); // 0x0000000183E0D610-0x0000000183E0D660
+		public override void RuntimeReset(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public interface ITimeControl // TypeDefIndex: 57528
+	public interface ITimeControl // TypeDefIndex: 59871
 	{
 		// Methods
 		void SetTime(double time);
@@ -2515,14 +2883,15 @@ namespace UnityEngine.Timeline
 	}
 
 	[Serializable]
-	public enum NotificationFlags : short // TypeDefIndex: 57529
+	[Flags]
+	public enum NotificationFlags : short // TypeDefIndex: 59872
 	{
 		TriggerInEditMode = 1,
 		Retroactive = 2,
 		TriggerOnce = 4
 	}
 
-	public class ParticleControlPlayable : ControlPlayableBehaviour, ITimeDilationListener // TypeDefIndex: 57530
+	public class ParticleControlPlayable : ControlPlayableBehaviour, ITimeDilationListener // TypeDefIndex: 59873
 	{
 		// Fields
 		private float m_LastPlayableTime; // 0x10
@@ -2533,72 +2902,73 @@ namespace UnityEngine.Timeline
 		private bool m_hadInitialized; // 0x24
 		private float originalSimulateSpeed; // 0x28
 		private float simulateSpeedModifier; // 0x2C
+		[CompilerGenerated]
 		private ParticleSystem _particleSystem_k__BackingField; // 0x30
 		private bool m_hadIgnite; // 0x38
 		private bool m_hadSimulate; // 0x39
 		private bool m_hadPlayed; // 0x3A
 	
 		// Properties
-		public ParticleSystem particleSystem { get; private set; } // 0x00000001813B51D0-0x00000001813B51E0 0x00000001864721F0-0x0000000186472200
-		private bool shouldSimulate { get => default; } // 0x000000018BE521F4-0x000000018BE5221C 
+		public ParticleSystem particleSystem { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
+		private bool shouldSimulate { get; } // 0x000000018B34A95C-0x000000018B34A984 
 	
 		// Constructors
-		public ParticleControlPlayable() {} // 0x0000000185FE6430-0x0000000185FE6460
+		public ParticleControlPlayable(); // 0x0000000184DBA6A0-0x0000000184DBA6D0
 	
 		// Methods
-		public static ScriptPlayable<ParticleControlPlayable> Create(PlayableGraph graph, ParticleSystem component, uint randomSeed, float clipIn, float speedMultiplier, bool forceRuntimeSimulate) => default; // 0x000000018BE51764-0x000000018BE518F8
-		public void Initialize(ParticleSystem ps, uint randomSeed, float clipIn, float simulateSpeed, bool forceRuntimeSimulate) {} // 0x000000018BE518F8-0x000000018BE519B8
-		private void SetOriginalSimulateSpeed(ParticleSystem particleSystem, double simulateSpeed) {} // 0x000000018BE51C74-0x000000018BE51DAC
-		private static void SetRandomSeed(ParticleSystem particleSystem, uint randomSeed) {} // 0x000000018BE51DAC-0x000000018BE51EA8
-		public override void PrepareFrame(Playable playable, FrameData data) {} // 0x000000018BE51AD0-0x000000018BE51C74
-		private void _SimulateParticle(float time, float particleTime, bool previewMode) {} // 0x000000018BE52180-0x000000018BE521F4
-		public override void OnBehaviourPlay(Playable playable, FrameData info) {} // 0x0000000185FE6410-0x0000000185FE6420
-		private void _PlayOrQueuedParticleSystem() {} // 0x000000018BE52068-0x000000018BE52180
-		public override void OnBehaviourPause(Playable playable, FrameData info) {} // 0x000000018BE519B8-0x000000018BE51A74
-		private void Simulate(float time, bool restart) {} // 0x000000018BE51EA8-0x000000018BE52068
-		public override void RuntimeReset() {} // 0x0000000185FE6420-0x0000000185FE6430
-		public void OnTimeDilationChanged(float timeScale) {} // 0x000000018BE51A74-0x000000018BE51AD0
+		public static ScriptPlayable<ParticleControlPlayable> Create(PlayableGraph graph, ParticleSystem component, uint randomSeed, float clipIn, float speedMultiplier, bool forceRuntimeSimulate); // 0x000000018B349EB4-0x000000018B34A048
+		public void Initialize(ParticleSystem ps, uint randomSeed, float clipIn, float simulateSpeed, bool forceRuntimeSimulate); // 0x000000018B34A048-0x000000018B34A108
+		private void SetOriginalSimulateSpeed(ParticleSystem particleSystem, double simulateSpeed); // 0x000000018B34A3C4-0x000000018B34A4FC
+		private static void SetRandomSeed(ParticleSystem particleSystem, uint randomSeed); // 0x000000018B34A4FC-0x000000018B34A5F8
+		public override void PrepareFrame(Playable playable, FrameData data); // 0x000000018B34A220-0x000000018B34A3C4
+		private void _SimulateParticle(float time, float particleTime, bool previewMode); // 0x000000018B34A8D0-0x000000018B34A95C
+		public override void OnBehaviourPlay(Playable playable, FrameData info); // 0x0000000184DBA680-0x0000000184DBA690
+		private void _PlayOrQueuedParticleSystem(); // 0x000000018B34A7B8-0x000000018B34A8D0
+		public override void OnBehaviourPause(Playable playable, FrameData info); // 0x000000018B34A108-0x000000018B34A1C4
+		private void Simulate(float time, bool restart); // 0x000000018B34A5F8-0x000000018B34A7B8
+		public override void RuntimeReset(); // 0x0000000184DBA690-0x0000000184DBA6A0
+		public void OnTimeDilationChanged(float timeScale); // 0x000000018B34A1C4-0x000000018B34A220
 	}
 
-	public class PrefabControlPlayable : PlayableBehaviour // TypeDefIndex: 57531
+	public class PrefabControlPlayable : ControlPlayableBehaviour // TypeDefIndex: 59874
 	{
 		// Fields
 		private GameObject m_Instance; // 0x10
 	
 		// Properties
-		public GameObject prefabInstance { get => default; } // 0x000000018346D130-0x000000018346D140 
+		public GameObject prefabInstance { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
 	
 		// Constructors
-		public PrefabControlPlayable() {} // 0x0000000185492010-0x0000000185492020
+		public PrefabControlPlayable(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static ScriptPlayable<PrefabControlPlayable> Create(PlayableGraph graph, GameObject prefabGameObject, Transform parentTransform) => default; // 0x000000018BE525CC-0x000000018BE526FC
-		public GameObject Initialize(GameObject prefabGameObject, Transform parentTransform) => default; // 0x000000018BE526FC-0x000000018BE52950
-		public override void OnPlayableDestroy(Playable playable) {} // 0x000000018BE52A4C-0x000000018BE52AD4
-		public override void OnBehaviourPlay(Playable playable, FrameData info) {} // 0x000000018BE529DC-0x000000018BE52A4C
-		public override void OnBehaviourPause(Playable playable, FrameData info) {} // 0x000000018BE52950-0x000000018BE529DC
-		private static void SetHideFlagsRecursive(GameObject gameObject) {} // 0x000000018BE52AD4-0x000000018BE52CFC
+		public static ScriptPlayable<PrefabControlPlayable> Create(PlayableGraph graph, GameObject prefabGameObject, Transform parentTransform); // 0x000000018B34ABD8-0x000000018B34AD08
+		public GameObject Initialize(GameObject prefabGameObject, Transform parentTransform); // 0x000000018B34AD08-0x000000018B34AF5C
+		public override void OnPlayableDestroy(Playable playable); // 0x000000018B34B058-0x000000018B34B0E0
+		public override void OnBehaviourPlay(Playable playable, FrameData info); // 0x000000018B34AFE8-0x000000018B34B058
+		public override void OnBehaviourPause(Playable playable, FrameData info); // 0x000000018B34AF5C-0x000000018B34AFE8
+		private static void SetHideFlagsRecursive(GameObject gameObject); // 0x000000018B34B0E0-0x000000018B34B308
 	}
 
-	public class TimeControlPlayable : ControlPlayableBehaviour // TypeDefIndex: 57532
+	public class TimeControlPlayable : ControlPlayableBehaviour // TypeDefIndex: 59875
 	{
 		// Fields
 		private ITimeControl m_timeControl; // 0x10
 		private bool m_started; // 0x18
 	
 		// Constructors
-		public TimeControlPlayable() {} // 0x0000000185492010-0x0000000185492020
+		public TimeControlPlayable(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static ScriptPlayable<TimeControlPlayable> Create(PlayableGraph graph, ITimeControl timeControl) => default; // 0x000000018BE55530-0x000000018BE55620
-		public void Initialize(ITimeControl timeControl) {} // 0x0000000184096E30-0x0000000184096EF0
-		public override void PrepareFrame(Playable playable, FrameData info) {} // 0x000000018BE556C8-0x000000018BE55740
-		public override void OnBehaviourPlay(Playable playable, FrameData info) {} // 0x000000018BE55674-0x000000018BE556C8
-		public override void OnBehaviourPause(Playable playable, FrameData info) {} // 0x000000018BE55620-0x000000018BE55674
-		public override void RuntimeReset() {} // 0x0000000185492010-0x0000000185492020
+		public static ScriptPlayable<TimeControlPlayable> Create(PlayableGraph graph, ITimeControl timeControl); // 0x000000018B34CC98-0x000000018B34CD88
+		public void Initialize(ITimeControl timeControl); // 0x00000001853908C0-0x00000001853908D0
+		public override void PrepareFrame(Playable playable, FrameData info); // 0x000000018B34CE30-0x000000018B34CEA8
+		public override void OnBehaviourPlay(Playable playable, FrameData info); // 0x000000018B34CDDC-0x000000018B34CE30
+		public override void OnBehaviourPause(Playable playable, FrameData info); // 0x000000018B34CD88-0x000000018B34CDDC
+		public override void RuntimeReset(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class TimeNotificationBehaviour : PlayableBehaviour // TypeDefIndex: 57535
+	public class TimeNotificationBehaviour : PlayableBehaviour // TypeDefIndex: 59878
 	{
 		// Fields
 		private readonly List<NotificationEntry> m_Notifications; // 0x10
@@ -2608,11 +2978,11 @@ namespace UnityEngine.Timeline
 		private Playable m_TimeSource; // 0x28
 	
 		// Properties
-		public Playable timeSource { set {} } // 0x000000018BE55C7C-0x000000018BE56050
-		public bool isManualUpdate { set {} } // 0x000000018BE56050-0x000000018BE56178
+		public Playable timeSource { set; } // 0x0000000184D8FAE0-0x0000000184D8FAF0
+		public bool isManualUpdate { set; } // 0x0000000184D86860-0x0000000184D86870
 	
 		// Nested types
-		private struct NotificationEntry // TypeDefIndex: 57533
+		private struct NotificationEntry // TypeDefIndex: 59876
 		{
 			// Fields
 			public double time; // 0x00
@@ -2621,216 +2991,236 @@ namespace UnityEngine.Timeline
 			public NotificationFlags flags; // 0x12
 	
 			// Properties
-			public bool triggerInEditor { get => default; } // 0x0000000185FBB620-0x0000000185FBB630 
-			public bool prewarm { get => default; } // 0x00000001813EE990-0x00000001813EE9A0 
-			public bool triggerOnce { get => default; } // 0x000000018BE55824-0x000000018BE55934 
+			public bool triggerInEditor { get; } // 0x000000018AE0AE18-0x000000018AE0AE20 
+			public bool prewarm { get; } // 0x000000018B349EA4-0x000000018B349EAC 
+			public bool triggerOnce { get; } // 0x000000018B349EAC-0x000000018B349EB4 
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 57534
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 59877
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Comparison<NotificationEntry> __9__15_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x000000018BE55740-0x000000018BE557F4
-			public __c() {} // 0x000000018BE55ADC-0x000000018BE55C7C
+			static __c(); // 0x000000018B3522CC-0x000000018B352424
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _SortNotifications_b__15_0(NotificationEntry x, NotificationEntry y) => default; // 0x000000018BE55934-0x000000018BE55ADC
+			internal int _SortNotifications_b__15_0(NotificationEntry x, NotificationEntry y); // 0x000000018B352214-0x000000018B352230
 		}
 	
 		// Constructors
-		public TimeNotificationBehaviour() {} // 0x000000018BE5DEAC-0x000000018BE5DEC8
+		public TimeNotificationBehaviour(); // 0x000000018B34DD40-0x000000018B34DDB8
 	
 		// Methods
-		public static ScriptPlayable<TimeNotificationBehaviour> Create(PlayableGraph graph, double duration, DirectorWrapMode loopMode) => default; // 0x000000018BE557F4-0x000000018BE55824
-		public void AddNotification(double time, INotification payload, NotificationFlags flags = NotificationFlags.Retroactive /* Metadata: 0x0207D9CA */) {} // 0x000000018BE56258-0x000000018BE56438
-		public override void OnGraphStart(Playable playable) {} // 0x000000018BE56178-0x000000018BE56258
-		public override void OnBehaviourPause(Playable playable, FrameData info) {} // 0x000000018BE56438-0x000000018BE564B4
-		public override void PrepareFrame(Playable playable, FrameData info) {} // 0x0000000185FB6A70-0x0000000185FB6A80
-		private void SortNotifications() {} // 0x000000018BE564B4-0x000000018BE56578
-		private static bool CanRestoreNotification(NotificationEntry e, FrameData info, double currentTime, double previousTime) => default; // 0x000000018BE56578-0x000000018BE565F0
-		private void TriggerNotificationsInRange(double start, double end, FrameData info, Playable playable, bool checkState) {} // 0x000000018BE5126C-0x000000018BE51274
-		private void SyncDurationWithExternalSource(Playable playable) {} // 0x000000018BE51264-0x000000018BE5126C
-		private static void Trigger_internal(Playable playable, PlayableOutput output, ref NotificationEntry e) {} // 0x000000018BE51274-0x000000018BE5127C
-		private static void Restore_internal(ref NotificationEntry e) {} // 0x000000018BE5DF64-0x000000018BE5DFC8
-		private static double _GetPlayableTime(Playable playable) => default; // 0x0000000185492010-0x0000000185492020
+		public static ScriptPlayable<TimeNotificationBehaviour> Create(PlayableGraph graph, double duration, DirectorWrapMode loopMode); // 0x000000018B34CF8C-0x000000018B34D09C
+		public void AddNotification(double time, INotification payload, NotificationFlags flags = NotificationFlags.Retroactive /* Metadata: 0x0234D20E */); // 0x000000018B34CEA8-0x000000018B34CF5C
+		public override void OnGraphStart(Playable playable); // 0x000000018B34D244-0x000000018B34D3E4
+		public override void OnBehaviourPause(Playable playable, FrameData info); // 0x000000018B34D09C-0x000000018B34D244
+		public override void PrepareFrame(Playable playable, FrameData info); // 0x000000018B34D3E4-0x000000018B34D818
+		private void SortNotifications(); // 0x000000018B34D818-0x000000018B34D940
+		private static bool CanRestoreNotification(NotificationEntry e, FrameData info, double currentTime, double previousTime); // 0x000000018B34CF5C-0x000000018B34CF8C
+		private void TriggerNotificationsInRange(double start, double end, FrameData info, Playable playable, bool checkState); // 0x000000018B34DA20-0x000000018B34DC00
+		private void SyncDurationWithExternalSource(Playable playable); // 0x000000018B34D940-0x000000018B34DA20
+		private static void Trigger_internal(Playable playable, PlayableOutput output, ref NotificationEntry e); // 0x000000018B34DC00-0x000000018B34DC7C
+		private static void Restore_internal(ref NotificationEntry e); // 0x0000000184D8CCB0-0x0000000184D8CCC0
+		private static double _GetPlayableTime(Playable playable); // 0x000000018B34DC7C-0x000000018B34DD40
 	}
 
-	public class CommunicatorParam // TypeDefIndex: 57536
+	public interface IAsyncScriptAnimationJobSyncInit // TypeDefIndex: 59879
+	{
+		// Properties
+		bool isAsyncInitPending { get; }
+		bool isAsyncBindStreamPropertiesComplete { get; }
+		bool isAsyncBuildNecessaryLayersComplete { get; }
+	
+		// Methods
+		bool StepAsyncBindStreamProperties(ref int bindCountBudget);
+		bool StepAsyncBuildNecessaryLayers();
+		bool StepAsyncFinishInit();
+		void ClearAsyncInitState();
+	}
+
+	public class CommunicatorParam // TypeDefIndex: 59880
 	{
 		// Fields
 		public IScriptAnimationJobSync jobSync; // 0x10
-		public string uniqueId; // 0x18
-		public bool lookAtUseAdditive; // 0x20
+		public IAsyncScriptAnimationJobSyncInit asyncJobSyncInit; // 0x18
+		public string uniqueId; // 0x20
+		public bool lookAtUseAdditive; // 0x28
+		public bool useLookAtV2; // 0x29
+		public bool useAsyncJobSyncInit; // 0x2A
 	
 		// Constructors
-		public CommunicatorParam() {} // 0x0000000185492010-0x0000000185492020
+		public CommunicatorParam(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public interface IAutoGenMono // TypeDefIndex: 57537
+	public interface IAutoGenMono // TypeDefIndex: 59881
 	{
 	}
 
-	public interface IBehaviourRuntimeReset // TypeDefIndex: 57538
+	public interface IBehaviourRuntimeReset // TypeDefIndex: 59882
 	{
 	}
 
-	public interface IScriptAnimationJobSync : IAutoGenMono // TypeDefIndex: 57539
+	public interface IScriptAnimationJobSync : IAutoGenMono // TypeDefIndex: 59883
 	{
 		// Methods
 		void ProcessRootMotion(AnimationStream stream);
 		void CalcLayerMainStream(float deltaTime);
-		void ResetCloth(List<RuntimeElement> activeRuntimeElements, bool useSoftReset = true /* Metadata: 0x0207D9CC */, bool keepPose = false /* Metadata: 0x0207D9CD */, bool useRelativeTeleport = false /* Metadata: 0x0207D9CE */);
+		void ResetCloth(List<RuntimeElement> activeRuntimeElements, bool useSoftReset = true /* Metadata: 0x0234D210 */, bool keepPose = false /* Metadata: 0x0234D211 */, bool useRelativeTeleport = false /* Metadata: 0x0234D212 */);
 	}
 
-	public struct TimelineScriptAnimationJob : IAnimationJob // TypeDefIndex: 57540
+	public struct TimelineScriptAnimationJob : IAnimationJob // TypeDefIndex: 59884
 	{
 		// Fields
+		private static readonly ProfilerMarker s_processRootMotionMarker; // 0x00
 		public IScriptAnimationJobSync bindedScriptAnimationJobSync; // 0x00
 		public Animator bindedAnimator; // 0x08
 	
 		// Constructors
-		public TimelineScriptAnimationJob(IScriptAnimationJobSync job, Animator animator) {
-			bindedScriptAnimationJobSync = default;
-			bindedAnimator = default;
-		} // 0x000000018523F5B0-0x000000018523F5E0
+		public TimelineScriptAnimationJob(IScriptAnimationJobSync job, Animator animator); // 0x00000001839CF630-0x00000001839CF660
+		static TimelineScriptAnimationJob(); // 0x0000000182ED08A0-0x0000000182ED1AA0
 	
 		// Methods
-		public void ProcessAnimation(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x000000018BE5DD60-0x000000018BE5DDA8
+		public void ProcessAnimation(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessRootMotion(AnimationStream stream); // 0x000000018B351F80-0x000000018B3520F8
 	}
 
 	[Serializable]
-	public class PlayableTrack : TrackAsset // TypeDefIndex: 57541
+	public class PlayableTrack : TrackAsset // TypeDefIndex: 59885
 	{
 		// Constructors
-		public PlayableTrack() {} // 0x000000018BE52580-0x000000018BE525CC
+		public PlayableTrack(); // 0x000000018B34AB8C-0x000000018B34ABD8
 	
 		// Methods
-		protected override void OnCreateClip(TimelineClip clip) {} // 0x000000018BE524E8-0x000000018BE52580
+		protected override void OnCreateClip(TimelineClip clip); // 0x000000018B34AAF4-0x000000018B34AB8C
 	}
 
-	public class TrackMediaType : Attribute // TypeDefIndex: 57542
+	[AttributeUsage(AttributeTargets.Class)]
+	[Obsolete("TrackMediaType has been deprecated. It is no longer required, and will be removed in a future release.", false)]
+	public class TrackMediaType : Attribute // TypeDefIndex: 59886
 	{
-		// Constructors
-		public TrackMediaType() {} // Dummy constructor
 	}
 
-	public class TrackClipTypeAttribute : Attribute // TypeDefIndex: 57543
+	[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+	public class TrackClipTypeAttribute : Attribute // TypeDefIndex: 59887
 	{
 		// Fields
 		public readonly System.Type inspectedType; // 0x10
 		public readonly bool allowAutoCreate; // 0x18
 	
 		// Constructors
-		public TrackClipTypeAttribute() {} // Dummy constructor
-		public TrackClipTypeAttribute(System.Type clipClass) {} // 0x0000000185970F40-0x0000000185970F60
-		public TrackClipTypeAttribute(System.Type clipClass, bool allowAutoCreate) {} // 0x0000000185FAF340-0x0000000185FAF350
+		public TrackClipTypeAttribute(System.Type clipClass); // 0x0000000184774A10-0x0000000184774A30
+		public TrackClipTypeAttribute(System.Type clipClass, bool allowAutoCreate); // 0x0000000184D831B0-0x0000000184D831C0
 	}
 
-	public class NotKeyableAttribute : Attribute // TypeDefIndex: 57544
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Field)]
+	public class NotKeyableAttribute : Attribute // TypeDefIndex: 59888
 	{
 		// Constructors
-		public NotKeyableAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public NotKeyableAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public enum TrackBindingFlags // TypeDefIndex: 57545
+	[Flags]
+	public enum TrackBindingFlags // TypeDefIndex: 59889
 	{
 		None = 0,
 		AllowCreateComponent = 1,
 		All = 1
 	}
 
-	public class TrackBindingTypeAttribute : Attribute // TypeDefIndex: 57546
+	[AttributeUsage(AttributeTargets.Class)]
+	public class TrackBindingTypeAttribute : Attribute // TypeDefIndex: 59890
 	{
 		// Fields
 		public readonly System.Type type; // 0x10
 		public readonly TrackBindingFlags flags; // 0x18
 	
 		// Constructors
-		public TrackBindingTypeAttribute() {} // Dummy constructor
-		public TrackBindingTypeAttribute(System.Type type) {} // 0x0000000185A54930-0x0000000185A54960
-		public TrackBindingTypeAttribute(System.Type type, TrackBindingFlags flags) {} // 0x00000001845D7850-0x00000001845D7870
+		public TrackBindingTypeAttribute(System.Type type); // 0x0000000184824300-0x0000000184824330
+		public TrackBindingTypeAttribute(System.Type type, TrackBindingFlags flags); // 0x0000000183B46FF0-0x0000000183B47040
 	}
 
-	public class SupportsChildTracksAttribute : Attribute // TypeDefIndex: 57547
+	[AttributeUsage(AttributeTargets.Class, Inherited = false)]
+	public class SupportsChildTracksAttribute : Attribute // TypeDefIndex: 59891
 	{
 		// Fields
 		public readonly System.Type childType; // 0x10
 		public readonly int levels; // 0x18
 	
 		// Constructors
-		public SupportsChildTracksAttribute() {} // Dummy constructor
-		public SupportsChildTracksAttribute(System.Type childType = null, int levels = 2147483647 /* Metadata: 0x0207D9D2 */) {} // 0x0000000185F0F810-0x0000000185F0F830
+		public SupportsChildTracksAttribute(System.Type childType = null, int levels = 2147483647 /* Metadata: 0x0234D216 */); // 0x0000000183B46FF0-0x0000000183B47040
 	}
 
-	internal class IgnoreOnPlayableTrackAttribute : Attribute // TypeDefIndex: 57548
+	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
+	internal class IgnoreOnPlayableTrackAttribute : Attribute // TypeDefIndex: 59892
 	{
 		// Constructors
-		public IgnoreOnPlayableTrackAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public IgnoreOnPlayableTrackAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class TimeFieldAttribute : PropertyAttribute // TypeDefIndex: 57550
+	internal class TimeFieldAttribute : PropertyAttribute // TypeDefIndex: 59894
 	{
 		// Fields
+		[CompilerGenerated]
 		private readonly UseEditMode _useEditMode_k__BackingField; // 0x10
 	
 		// Nested types
-		public enum UseEditMode // TypeDefIndex: 57549
+		public enum UseEditMode // TypeDefIndex: 59893
 		{
 			None = 0,
 			ApplyEditMode = 1
 		}
 	
 		// Constructors
-		public TimeFieldAttribute() {} // Dummy constructor
-		public TimeFieldAttribute(UseEditMode useEditMode = UseEditMode.ApplyEditMode /* Metadata: 0x0207D9D3 */) {} // 0x0000000181378230-0x0000000181378240
+		public TimeFieldAttribute(UseEditMode useEditMode = UseEditMode.ApplyEditMode /* Metadata: 0x0234D217 */); // 0x00000001814F51F0-0x00000001814F5220
 	}
 
-	internal class FrameRateFieldAttribute : PropertyAttribute // TypeDefIndex: 57551
+	internal class FrameRateFieldAttribute : PropertyAttribute // TypeDefIndex: 59895
 	{
 		// Constructors
-		public FrameRateFieldAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public FrameRateFieldAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class HideInMenuAttribute : Attribute // TypeDefIndex: 57552
+	[AttributeUsage(AttributeTargets.Class, Inherited = false)]
+	public class HideInMenuAttribute : Attribute // TypeDefIndex: 59896
 	{
 		// Constructors
-		public HideInMenuAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public HideInMenuAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class CustomStyleAttribute : Attribute // TypeDefIndex: 57553
+	[AttributeUsage(AttributeTargets.Class)]
+	public class CustomStyleAttribute : Attribute // TypeDefIndex: 59897
 	{
 		// Fields
 		public readonly string ussStyle; // 0x10
 	
 		// Constructors
-		public CustomStyleAttribute() {} // Dummy constructor
-		public CustomStyleAttribute(string ussStyle) {} // 0x0000000184096E30-0x0000000184096EF0
+		public CustomStyleAttribute(string ussStyle); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	internal class MenuCategoryAttribute : Attribute // TypeDefIndex: 57554
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class MenuCategoryAttribute : Attribute // TypeDefIndex: 59898
 	{
-		// Constructors
-		public MenuCategoryAttribute() {} // Dummy constructor
 	}
 
-	public interface ITimelineClipAsset // TypeDefIndex: 57555
+	public interface ITimelineClipAsset // TypeDefIndex: 59899
 	{
 		// Properties
 		ClipCaps clipCaps { get; }
 	}
 
-	internal interface ITimelineEvaluateCallback // TypeDefIndex: 57556
+	public interface ITimelineEvaluateCallback // TypeDefIndex: 59900
 	{
 		// Methods
 		void Evaluate();
 	}
 
-	public class TimelinePlayable : PlayableBehaviour // TypeDefIndex: 57557
+	public class TimelinePlayable : PlayableBehaviour // TypeDefIndex: 59901
 	{
 		// Fields
 		public double timeOffset; // 0x10
@@ -2856,199 +3246,240 @@ namespace UnityEngine.Timeline
 		private ITimelineRootMarker m_RootMarker; // 0x90
 		private List<IScriptAnimationJobSync> m_ScriptAnimationJobSyncs; // 0x98
 		private HashSet<Playable> m_forbidPostProcessMixers; // 0xA0
-		internal static bool muteAudioScrubbing; // 0x00
-		private double m_timeForNextFrame; // 0xA8
+		private bool m_isAsyncCompileEnabled; // 0xA8
+		private bool m_isAsyncCompileComplete; // 0xA9
+		private bool m_isAsyncCompileFailed; // 0xAA
+		private PlayableGraph m_AsyncCompileGraph; // 0xB0
+		private Playable m_AsyncTimelinePlayable; // 0xC0
+		private List<TrackAsset> m_AsyncOutputTrackList; // 0xD0
+		private GameObject m_AsyncCompileGo; // 0xD8
+		private bool m_AsyncAutoRebalance; // 0xE0
+		private bool m_AsyncCreateOutputs; // 0xE1
+		private int m_AsyncOutputTrackIndex; // 0xE4
+		private bool m_AsyncCombineToTopCompiled; // 0xE8
+		private PlayableOutput m_AsyncCompileDummyOutput; // 0xF0
+		private static readonly ProfilerMarker s_compileSingleTrackMarker; // 0x00
+		private static readonly ProfilerMarker s_prepareFrameMarker; // 0x08
+		private static readonly ProfilerMarker s_evaluateMarker; // 0x10
+		private static readonly ProfilerMarker s_queryActiveClipsMarker; // 0x18
+		private static readonly ProfilerMarker s_filterActiveClipsMarker; // 0x20
+		private static readonly ProfilerMarker s_disableInactiveClipsMarker; // 0x28
+		private static readonly ProfilerMarker s_evaluateActiveClipsMarker; // 0x30
+		private static readonly ProfilerMarker s_evaluateCallbacksMarker; // 0x38
+		private static readonly ProfilerMarker s_resetScriptAnimationJobSyncsMarker; // 0x40
+		private static readonly ProfilerMarker s_evaluateTwiceMarker; // 0x48
+		internal static bool muteAudioScrubbing; // 0x50
+		private double m_timeForNextFrame; // 0x100
 	
 		// Properties
-		public double timeForNextFrame { get => default; } // 0x0000000185FE64A0-0x0000000185FE64B0 
-		public ITimelineRootMarker timelineRootMarker { get => default; } // 0x0000000181B5FFD0-0x0000000181B5FFE0 
-		public bool enableLoop { get => default; } // 0x000000018BE5B0A4-0x000000018BE5B118 
+		public double timeForNextFrame { get; } // 0x0000000184D925A0-0x0000000184D925B0 
+		public ITimelineRootMarker timelineRootMarker { get; } // 0x0000000184D86220-0x0000000184D86230 
+		public bool isAsyncCompileComplete { get; } // 0x0000000182ED0880-0x0000000182ED0890 
+		public bool isAsyncCompileFailed { get; } // 0x0000000182ED0890-0x0000000182ED08A0 
+		public bool enableLoop { get; } // 0x000000018B34F3AC-0x000000018B34F3F8 
 	
 		// Constructors
-		public TimelinePlayable() {} // 0x000000018BE5AD54-0x000000018BE5B0A4
-		static TimelinePlayable() {} // 0x000000018BE5AD1C-0x000000018BE5AD54
+		public TimelinePlayable(); // 0x0000000183FC8600-0x0000000183FC8960
+		static TimelinePlayable(); // 0x0000000184D77960-0x0000000184D79440
 	
 		// Methods
-		public static ScriptPlayable<TimelinePlayable> Create(PlayableGraph graph, IEnumerable<TrackAsset> tracks, GameObject go, bool autoRebalance, bool createOutputs) => default; // 0x000000018BE58BCC-0x000000018BE58E1C
-		public void Compile(PlayableGraph graph, Playable timelinePlayable, IEnumerable<TrackAsset> tracks, GameObject go, bool autoRebalance, bool createOutputs) {} // 0x000000018BE578B4-0x000000018BE57E34
-		public void MarkTimelineEnd() {} // 0x0000000185FE6490-0x0000000185FE64A0
-		public bool IsTimelineEnded() => default; // 0x0000000185FBDF90-0x0000000185FBDFA0
-		private void CompileCombineTopTopTrackList(PlayableGraph graph, Playable timelinePlayable, bool createOutputs) {} // 0x000000018BE57198-0x000000018BE57660
-		private static void CollectCombineToTopTracksRecursive(TrackAsset track, List<TrackAsset> combineTracks) {} // 0x000000018BE56FCC-0x000000018BE57198
-		private void CompileTrackList(PlayableGraph graph, Playable timelinePlayable, IEnumerable<TrackAsset> tracks, GameObject go, bool createOutputs, bool isCompilingCombineToTopTracks) {} // 0x000000018BE57660-0x000000018BE578B4
-		private void CreateTrackOutput(PlayableGraph graph, TrackAsset track, GameObject go, Playable playable, int port) {} // 0x000000018BE57E34-0x000000018BE58794
-		private void EvaluateWeightsForAnimationPlayableOutput(TrackAsset track, AnimationPlayableOutput animOutput, Animator animator) {} // 0x000000018BE59220-0x000000018BE592CC
-		private Playable CreateTrackPlayable(PlayableGraph graph, Playable timelinePlayable, TrackAsset track, GameObject go, bool createOutputs) => default; // 0x000000018BE58794-0x000000018BE58BCC
-		public void UpdateIntervalTree() {} // 0x000000018BE5A4B4-0x000000018BE5A4FC
-		public void RuntimeResetIntervalTree() {} // 0x000000018BE5A278-0x000000018BE5A2C0
-		public override void PrepareFrame(Playable playable, FrameData info) {} // 0x000000018BE59ED8-0x000000018BE5A224
-		private void _ResetScriptAnimationJobySyncs() {} // 0x000000018BE5ABA0-0x000000018BE5AD1C
-		private void _EvaluateTwice() {} // 0x000000018BE5A9D4-0x000000018BE5AA84
-		public List<RuntimeElement> GetCurrentActiveClips() => default; // 0x00000001813FF010-0x00000001813FF020
-		public List<RuntimeElement> GetActiveClipsAtGivenTime(double givenTime, List<RuntimeElement> activeClips = null) => default; // 0x000000018BE59DA4-0x000000018BE59E74
-		public List<RuntimeElement> GetActiveClipsAtGivenTimeRange(double startTime, double endTime, List<RuntimeElement> activeClips = null) => default; // 0x000000018BE59CA8-0x000000018BE59DA4
-		protected virtual void Evaluate(Playable playable, FrameData frameData) {} // 0x000000018BE592CC-0x000000018BE59CA8
-		private bool DoReverseLoop(double reverseTime) => default; // 0x000000018BE58FB0-0x000000018BE59220
-		private bool DoReverseJump(RuntimeClip runtimeClip, double jumpTime) => default; // 0x000000018BE58ED4-0x000000018BE58FB0
-		private bool DoJump(RuntimeClip runtimeClip, double localTime, double jumpTime) => default; // 0x000000018BE58E1C-0x000000018BE58ED4
-		private bool _CheckIfTimeJumping(FrameData frameData, double localTime) => default; // 0x000000018BE5A4FC-0x000000018BE5A9D4
-		private void CacheTrack(TrackAsset track, Playable playable, int port, Playable parent) {} // 0x000000018BE56EF8-0x000000018BE56F68
-		public void SetTimeForNextFrame(double newTime) {} // 0x0000000185FE62C0-0x0000000185FE62D0
-		public void RegisterTimeDilationListener(ITimeDilationListener listener) {} // 0x000000018BE5A224-0x000000018BE5A278
-		public void MarkMixerForbidPostProcess(Playable mixer) {} // 0x000000018BE59E74-0x000000018BE59ED8
-		public bool CheckIfMixerForbidPostProcess(Playable mixer) => default; // 0x000000018BE56F68-0x000000018BE56FCC
-		public void SetTimeScale(float usingTimeScale) {} // 0x000000018BE5A2C0-0x000000018BE5A4B4
-		private void _NotifyTimeScaleChanged(float usingTimeScale) {} // 0x000000018BE5AA84-0x000000018BE5ABA0
+		public static ScriptPlayable<TimelinePlayable> Create(PlayableGraph graph, IEnumerable<TrackAsset> tracks, GameObject go, bool autoRebalance, bool createOutputs); // 0x0000000183FC6800-0x0000000183FC7E20
+		public void Compile(PlayableGraph graph, Playable timelinePlayable, IEnumerable<TrackAsset> tracks, GameObject go, bool autoRebalance, bool createOutputs); // 0x0000000183FC7E20-0x0000000183FC7F60
+		public void BeginAsyncCompile(PlayableGraph graph, Playable timelinePlayable, IEnumerable<TrackAsset> tracks, GameObject go, bool autoRebalance, bool createOutputs); // 0x0000000182EC7ED0-0x0000000182EC7F90
+		public bool StepAsyncCompile(int outputGroupBudget, bool isInBurstMode = false /* Metadata: 0x0234D21A */); // 0x0000000182ECFD60-0x0000000182ED0880
+		private void InitializeCompileContext(PlayableGraph graph, Playable timelinePlayable, IEnumerable<TrackAsset> tracks, GameObject go, bool autoRebalance, bool createOutputs); // 0x0000000182ECCBB0-0x0000000182ECF130
+		private void FinalizeCompile(); // 0x00000001841E1670-0x00000001841E1680
+		private void CreateAsyncCompileDummyOutput(PlayableGraph graph); // 0x0000000182EC9CD0-0x0000000182ECA7B0
+		private void ClearAsyncCompileDummyOutput(); // 0x0000000182EC7F90-0x0000000182EC86D0
+		public void MarkTimelineEnd(); // 0x0000000184DBA700-0x0000000184DBA710
+		public bool IsTimelineEnded(); // 0x0000000184DAA1E0-0x0000000184DAA1F0
+		private void CompileCombineTopTopTrackList(PlayableGraph graph, Playable timelinePlayable, bool createOutputs); // 0x00000001839EF290-0x00000001839EFB40
+		private static void CollectCombineToTopTracksRecursive(TrackAsset track, List<TrackAsset> combineTracks); // 0x00000001839F4EB0-0x00000001839F5080
+		private void CompileTrackList(PlayableGraph graph, Playable timelinePlayable, IEnumerable<TrackAsset> tracks, GameObject go, bool createOutputs, bool isCompilingCombineToTopTracks); // 0x00000001839F5080-0x00000001839F5D40
+		private bool CompileSingleTrack(PlayableGraph graph, Playable timelinePlayable, TrackAsset track, GameObject go, bool createOutputs, bool isCompilingCombineToTopTracks); // 0x0000000182EC86D0-0x0000000182EC9CD0
+		private static bool IsAsyncCompileFrameBarrierTrack(TrackAsset track); // 0x0000000182ECF130-0x0000000182ECF440
+		private void CreateTrackOutput(PlayableGraph graph, TrackAsset track, GameObject go, Playable playable, int port); // 0x0000000183FC97E0-0x0000000183FCC860
+		private void EvaluateWeightsForAnimationPlayableOutput(TrackAsset track, AnimationPlayableOutput animOutput, Animator animator); // 0x0000000183E11710-0x0000000183E117C0
+		private Playable CreateTrackPlayable(PlayableGraph graph, Playable timelinePlayable, TrackAsset track, GameObject go, bool createOutputs); // 0x0000000183433E70-0x0000000183434290
+		public void UpdateIntervalTree(); // 0x000000018B34EEB4-0x000000018B34EEFC
+		public void RuntimeResetIntervalTree(); // 0x000000018B34EC78-0x000000018B34ECC0
+		public bool IsDynamicLinkAnimationOutput(PlayableOutput output); // 0x0000000182ECF440-0x0000000182ECFD60
+		private static bool HasDynamicLinkAnimationClip(TrackAsset track); // 0x0000000182ECA7B0-0x0000000182ECCBB0
+		public override void PrepareFrame(Playable playable, FrameData info); // 0x0000000183E0B9F0-0x0000000183E0D590
+		private void _ResetScriptAnimationJobySyncs(); // 0x000000018B34F1A4-0x000000018B34F3AC
+		private void _EvaluateTwice(); // 0x000000018B34EEFC-0x000000018B34F058
+		public List<RuntimeElement> GetCurrentActiveClips(); // 0x0000000184D85A60-0x0000000184D85A70
+		public List<RuntimeElement> GetActiveClipsAtGivenTime(double givenTime, List<RuntimeElement> activeClips = null); // 0x000000018489B450-0x000000018489B510
+		public List<RuntimeElement> GetActiveClipsAtGivenTimeRange(double startTime, double endTime, List<RuntimeElement> activeClips = null); // 0x000000018B34EAC4-0x000000018B34EBC0
+		protected virtual void Evaluate(Playable playable, FrameData frameData); // 0x00000001839F7A20-0x00000001839FB100
+		private bool DoReverseLoop(double reverseTime); // 0x000000018B34E854-0x000000018B34EAC4
+		private bool DoReverseJump(RuntimeClip runtimeClip, double jumpTime); // 0x000000018B34E778-0x000000018B34E854
+		private bool DoJump(RuntimeClip runtimeClip, double localTime, double jumpTime); // 0x000000018B34E6C0-0x000000018B34E778
+		private bool _CheckIfTimeJumping(FrameData frameData, double localTime); // 0x00000001839EC880-0x00000001839ECDF0
+		private void CacheTrack(TrackAsset track, Playable playable, int port, Playable parent); // 0x00000001849CB200-0x00000001849CB280
+		public void SetTimeForNextFrame(double newTime); // 0x0000000184D925E0-0x0000000184D925F0
+		public void RegisterTimeDilationListener(ITimeDilationListener listener); // 0x000000018B34EC24-0x000000018B34EC78
+		public void MarkMixerForbidPostProcess(Playable mixer); // 0x000000018B34EBC0-0x000000018B34EC24
+		public bool CheckIfMixerForbidPostProcess(Playable mixer); // 0x0000000183E10BF0-0x0000000183E10C60
+		public void SetTimeScale(float usingTimeScale); // 0x000000018B34ECC0-0x000000018B34EEB4
+		private void _NotifyTimeScaleChanged(float usingTimeScale); // 0x000000018B34F058-0x000000018B34F1A4
 	}
 
-	public static class AnimationPreviewUtilities // TypeDefIndex: 57558
+	public static class AnimationPreviewUtilities // TypeDefIndex: 59902
 	{
 	}
 
-	internal static class Extrapolation // TypeDefIndex: 57560
+	internal static class Extrapolation // TypeDefIndex: 59904
 	{
 		// Fields
 		internal static readonly double kMinExtrapolationTime; // 0x00
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 57559
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 59903
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Comparison<TimelineClip> __9__2_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x000000018BE500D0-0x000000018BE50490
-			public __c() {} // 0x000000018BE50490-0x000000018BE505D4
+			static __c(); // 0x0000000184D47230-0x0000000184D47290
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int _SortClipsByStartTime_b__2_0(TimelineClip clip1, TimelineClip clip2) => default; // 0x000000018BE505D4-0x000000018BE50640
+			internal int _SortClipsByStartTime_b__2_0(TimelineClip clip1, TimelineClip clip2); // 0x000000018B34592C-0x000000018B345968
 		}
 	
 		// Constructors
-		static Extrapolation() {} // 0x000000018BE5DE70-0x000000018BE5DEAC
+		static Extrapolation(); // 0x0000000183B0C320-0x0000000183B0C3A0
 	
 		// Methods
-		internal static void CalculateExtrapolationTimes(TrackAsset asset) {} // 0x000000018BE5DFC8-0x000000018BE5E02C
-		private static TimelineClip[] SortClipsByStartTime(TimelineClip[] clips) => default; // 0x0000000185492010-0x0000000185492020
+		private static TimelineClip[] SortClipsByStartTime(TimelineClip[] clips); // 0x0000000184B20B90-0x0000000184B20CF0
+	
+		// Extension methods
+		internal static void CalculateExtrapolationTimes(this TrackAsset asset); // 0x00000001839F6420-0x00000001839F65F0
 	}
 
-	internal static class HashUtility // TypeDefIndex: 57561
+	internal static class HashUtility // TypeDefIndex: 59905
 	{
 		// Methods
-		public static int CombineHash(int h1, int h2) => default; // 0x0000000185FE63F0-0x0000000185FE6410
-		public static int CombineHash(int h1, int h2, int h3) => default; // 0x0000000185FE63B0-0x0000000185FE63F0
-		public static int CombineHash(int h1, int h2, int h3, int h4) => default; // 0x0000000185FE6360-0x0000000185FE63B0
-		public static int CombineHash(int h1, int h2, int h3, int h4, int h5) => default; // 0x000000018BE50718-0x000000018BE50750
-		public static int CombineHash(int h1, int h2, int h3, int h4, int h5, int h6) => default; // 0x000000018BE50750-0x000000018BE507A4
+		public static int CombineHash(int h1, int h2, int h3); // 0x0000000184DBA620-0x0000000184DBA660
+		public static int CombineHash(int h1, int h2, int h3, int h4); // 0x0000000183AC42A0-0x0000000183AC42F0
+		public static int CombineHash(int h1, int h2, int h3, int h4, int h5); // 0x0000000183AC4260-0x0000000183AC42A0
+		public static int CombineHash(int h1, int h2, int h3, int h4, int h5, int h6); // 0x0000000183AC4200-0x0000000183AC4260
+	
+		// Extension methods
+		public static int CombineHash(this int h1, int h2); // 0x0000000184DBA660-0x0000000184DBA680
 	}
 
-	public interface IPropertyCollector // TypeDefIndex: 57562
+	public interface IPropertyCollector // TypeDefIndex: 59906
 	{
 		// Methods
 		void PushActiveGameObject(GameObject gameObject);
 		void PopActiveGameObject();
 		void AddFromClip(AnimationClip clip);
 		void AddFromName<T>(string name)
-			where T : Component;
+			where T : UnityEngine.Component;
 		void AddFromName<T>(GameObject obj, string name)
-			where T : Component;
+			where T : UnityEngine.Component;
 		void AddFromName(GameObject obj, string name);
-		void AddFromComponent(GameObject obj, Component component);
+		void AddFromComponent(GameObject obj, UnityEngine.Component component);
 		void AddObjectProperties(UnityEngine.Object obj, AnimationClip clip);
 	}
 
-	public interface IPropertyPreview // TypeDefIndex: 57563
+	public interface IPropertyPreview // TypeDefIndex: 59907
 	{
 		// Methods
 		void GatherProperties(PlayableDirector director, IPropertyCollector driver);
 	}
 
-	internal static class NotificationUtilities // TypeDefIndex: 57564
+	internal static class NotificationUtilities // TypeDefIndex: 59908
 	{
 		// Methods
-		public static ScriptPlayable<TimeNotificationBehaviour> CreateNotificationsPlayable(PlayableGraph graph, IEnumerable<IMarker> markers, double duration, DirectorWrapMode extrapolationMode) => default; // 0x000000018BE5127C-0x000000018BE51644
-		public static bool TrackTypeSupportsNotifications(System.Type type) => default; // 0x000000018BE51644-0x000000018BE51764
+		public static ScriptPlayable<TimeNotificationBehaviour> CreateNotificationsPlayable(PlayableGraph graph, IEnumerable<IMarker> markers, double duration, DirectorWrapMode extrapolationMode); // 0x00000001839ED700-0x00000001839EDB60
+		public static bool TrackTypeSupportsNotifications(System.Type type); // 0x00000001839EE2D0-0x00000001839EE3F0
 	}
 
-	public static class PlayableDirectorUtility // TypeDefIndex: 57565
+	public static class PlayableDirectorUtility // TypeDefIndex: 59909
 	{
 		// Methods
-		public static void SetOptionIndexSingleDirector(PlayableDirector director, int curOptionIndex, int lastOptionIndex) {} // 0x000000018BE524B8-0x000000018BE524E8
-		public static TimelinePlayable GetTimelinePlayable(PlayableDirector director) => default; // 0x000000018BE5243C-0x000000018BE524B8
-		public static TimelinePlayable GetTimelinePlayable(PlayableGraph graph) => default; // 0x000000018BE5238C-0x000000018BE5243C
-		public static TimelinePlayable GetTimelinePlayableFromChildPlayable(Playable playable) => default; // 0x000000018BE522E0-0x000000018BE5238C
-		public static bool CheckIfTimelineFunctional(Playable playable) => default; // 0x000000018BE5221C-0x000000018BE522E0
+		public static void SetOptionIndexSingleDirector(PlayableDirector director, int curOptionIndex, int lastOptionIndex); // 0x000000018B34AAC4-0x000000018B34AAF4
+		public static TimelinePlayable GetTimelinePlayable(PlayableDirector director); // 0x000000018B34AA48-0x000000018B34AAC4
+		public static TimelinePlayable GetTimelinePlayable(PlayableGraph graph); // 0x0000000183E10640-0x0000000183E10710
+		public static TimelinePlayable GetTimelinePlayableFromChildPlayable(Playable playable); // 0x0000000183E103D0-0x0000000183E10490
+		public static bool CheckIfTimelineFunctional(Playable playable); // 0x000000018B34A984-0x000000018B34AA48
 	}
 
-	public static class TimelineClipExtensions // TypeDefIndex: 57566
+	public static class TimelineClipExtensions // TypeDefIndex: 59910
 	{
 		// Fields
 		private static readonly string k_UndoSetParentTrackText; // 0x00
 	
 		// Constructors
-		static TimelineClipExtensions() {} // 0x000000018BE566C4-0x000000018BE56720
+		static TimelineClipExtensions(); // 0x000000018B34DE8C-0x000000018B34DEE8
 	}
 
-	public static class TimelineCreateUtilities // TypeDefIndex: 57569
+	public static class TimelineCreateUtilities // TypeDefIndex: 59913
 	{
 		// Nested types
-		private sealed class __c__DisplayClass0_0 // TypeDefIndex: 57567
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass0_0 // TypeDefIndex: 59911
 		{
 			// Fields
 			public string name; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass0_0() {} // 0x000000018BE56960-0x000000018BE56C14
+			public __c__DisplayClass0_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GenerateUniqueActorName_b__0(ScriptableObject x) => default; // 0x000000018BE56C14-0x000000018BE56CD4
+			internal bool _GenerateUniqueActorName_b__0(ScriptableObject x); // 0x000000018B352230-0x000000018B352268
 		}
 	
-		private sealed class __c__DisplayClass0_1 // TypeDefIndex: 57568
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass0_1 // TypeDefIndex: 59912
 		{
 			// Fields
 			public string result; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass0_1() {} // 0x000000018BE567BC-0x000000018BE56960
+			public __c__DisplayClass0_1(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GenerateUniqueActorName_b__1(ScriptableObject x) => default; // 0x000000018BE56CD4-0x000000018BE56EF8
+			internal bool _GenerateUniqueActorName_b__1(ScriptableObject x); // 0x000000018B352230-0x000000018B352268
 		}
 	
 		// Methods
-		public static string GenerateUniqueActorName(List<ScriptableObject> tracks, string name) => default; // 0x0000000185492010-0x0000000185492020
-		public static void SaveAssetIntoObject(UnityEngine.Object childAsset, UnityEngine.Object masterAsset) {} // 0x000000018BE5DEC8-0x000000018BE5DF00
-		public static AnimationClip CreateAnimationClipForTrack(string name, TrackAsset track, bool isLegacy) => default; // 0x0000000185492010-0x0000000185492020
-		public static bool ValidateParentTrack(TrackAsset parent, System.Type childType) => default; // 0x000000018BE5DEC8-0x000000018BE5DF00
+		public static string GenerateUniqueActorName(List<ScriptableObject> tracks, string name); // 0x000000018B34E128-0x000000018B34E3DC
+		public static void SaveAssetIntoObject(UnityEngine.Object childAsset, UnityEngine.Object masterAsset); // 0x000000018B34E3DC-0x000000018B34E49C
+		public static AnimationClip CreateAnimationClipForTrack(string name, TrackAsset track, bool isLegacy); // 0x000000018B34DF84-0x000000018B34E128
+		public static bool ValidateParentTrack(TrackAsset parent, System.Type childType); // 0x000000018B34E49C-0x000000018B34E6C0
 	}
 
-	public class TimelineRuntimeUtils // TypeDefIndex: 57570
+	public class TimelineRuntimeUtils // TypeDefIndex: 59914
 	{
 		// Constructors
-		public TimelineRuntimeUtils() {} // 0x0000000185492010-0x0000000185492020
+		public TimelineRuntimeUtils(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static double GetTimelineDeltaTime(Playable playable, FrameData frameData) => default; // 0x000000018BE5D7B8-0x000000018BE5D830
-		public static bool CheckWillRuntimeElementEnabled(RuntimeElement element, int curOptionIndex, int lastOptionIndex, long curDiscreteTime) => default; // 0x000000018BE5B118-0x000000018BE5B1BC
-		public static void DoReverseJump(RuntimeClip jumpClip, ITimelineRootMarker timelineRoot, double curTime, double jumpTime, double mixDuration, int curOptionIndex, int lastOptionIndex, bool needChangeOptionAfterJump, int newOptionIndex) {} // 0x000000018BE5C1C0-0x000000018BE5D1BC
-		public static void DoJump(RuntimeClip jumpClip, ITimelineRootMarker timelineRoot, double curTime, double jumpTime, double mixDuration, int curOptionIndex, int lastOptionIndex, bool needChangeOptionAfterJump, int optionIndexChangingTo) {} // 0x000000018BE5B1BC-0x000000018BE5C1C0
-		public static double GetSubDirectorTimeForDirectorControl(Playable playable, PlayableDirector director) => default; // 0x000000018BE5D660-0x000000018BE5D7B8
-		public static void SetNewTimeForCutsceneRoot(ITimelineRootMarker timelineRoot, double newTime, bool useThisTimeNextFrame = false /* Metadata: 0x0207D9D6 */) {} // 0x000000018BE5DAA0-0x000000018BE5DD60
-		public static AnimationClip FindTPoseClipFromLayerDescriptors(List<LayerDescriptor> layerDescriptors) => default; // 0x000000018BE5D1BC-0x000000018BE5D660
-		public static void LinkDefaultTPoseIfNeeded(AnimationLayerMixerPlayable mixer, List<LayerDescriptor> layerDescriptors, string gameObjectName, bool disableBaseTPoseClip = false /* Metadata: 0x0207D9D7 */) {} // 0x000000018BE5D9CC-0x000000018BE5DAA0
-		public static void LinkDefaultTPoseClip(AnimationLayerMixerPlayable mixer, AnimationClip tposeClip, string gameObjectName) {} // 0x000000018BE5D830-0x000000018BE5D9CC
+		public static double GetTimelineDeltaTime(Playable playable, FrameData frameData); // 0x0000000183E105E0-0x0000000183E10640
+		public static bool CheckWillRuntimeElementEnabled(RuntimeElement element, int curOptionIndex, int lastOptionIndex, long curDiscreteTime); // 0x000000018B34F3F8-0x000000018B34F49C
+		public static void DoReverseJump(RuntimeClip jumpClip, ITimelineRootMarker timelineRoot, double curTime, double jumpTime, double mixDuration, int curOptionIndex, int lastOptionIndex, bool needChangeOptionAfterJump, int newOptionIndex); // 0x000000018B3504A0-0x000000018B35149C
+		public static void DoJump(RuntimeClip jumpClip, ITimelineRootMarker timelineRoot, double curTime, double jumpTime, double mixDuration, int curOptionIndex, int lastOptionIndex, bool needChangeOptionAfterJump, int optionIndexChangingTo); // 0x000000018B34F49C-0x000000018B3504A0
+		public static double GetSubDirectorTimeForDirectorControl(Playable playable, PlayableDirector director); // 0x000000018B351940-0x000000018B351A98
+		public static void SetNewTimeForCutsceneRoot(ITimelineRootMarker timelineRoot, double newTime, bool useThisTimeNextFrame = false /* Metadata: 0x0234D21B */); // 0x000000018B351CC0-0x000000018B351F80
+		public static AnimationClip FindTPoseClipFromLayerDescriptors(List<LayerDescriptor> layerDescriptors); // 0x000000018B35149C-0x000000018B351940
+		public static void LinkDefaultTPoseIfNeeded(AnimationLayerMixerPlayable mixer, List<LayerDescriptor> layerDescriptors, string gameObjectName, bool disableBaseTPoseClip = false /* Metadata: 0x0234D21C */); // 0x000000018B351C34-0x000000018B351CC0
+		public static void LinkDefaultTPoseClip(AnimationLayerMixerPlayable mixer, AnimationClip tposeClip, string gameObjectName); // 0x000000018B351A98-0x000000018B351C34
 	}
 
-	internal static class TimelineUndo // TypeDefIndex: 57571
+	internal static class TimelineUndo // TypeDefIndex: 59915
 	{
 		// Methods
-		public static void PushDestroyUndo(TimelineAsset timeline, UnityEngine.Object thingToDirty, UnityEngine.Object objectToDestroy) {} // 0x000000018BE5DDA8-0x000000018BE5DE08
+		public static void PushDestroyUndo(TimelineAsset timeline, UnityEngine.Object thingToDirty, UnityEngine.Object objectToDestroy); // 0x000000018B3520F8-0x000000018B352158
 	}
 
-	public enum StandardFrameRates // TypeDefIndex: 57572
+	public enum StandardFrameRates // TypeDefIndex: 59916
 	{
 		Fps24 = 0,
 		Fps23_97 = 1,
@@ -3060,7 +3491,7 @@ namespace UnityEngine.Timeline
 		Fps59_94 = 7
 	}
 
-	internal static class TimeUtility // TypeDefIndex: 57574
+	internal static class TimeUtility // TypeDefIndex: 59918
 	{
 		// Fields
 		public static readonly double kTimeEpsilon; // 0x00
@@ -3070,41 +3501,43 @@ namespace UnityEngine.Timeline
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 57573
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 59917
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 	
 			// Constructors
-			static __c() {} // 0x000000018BE565F0-0x000000018BE566C4
-			public __c() {} // 0x0000000185F53CC0-0x0000000185F53D60
+			static __c(); // 0x000000018B352268-0x000000018B3522CC
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		// Constructors
-		static TimeUtility() {} // 0x0000000185492010-0x0000000185492020
+		static TimeUtility(); // 0x0000000184D27990-0x0000000184D27A30
 	
 		// Methods
-		public static double GetAnimationClipLength(AnimationClip clip) => default; // 0x000000018BE5DF00-0x000000018BE5DF64
+		public static double GetAnimationClipLength(AnimationClip clip); // 0x000000018B34DDB8-0x000000018B34DE8C
 	}
 
-	internal static class WeightUtility // TypeDefIndex: 57575
+	internal static class WeightUtility // TypeDefIndex: 59919
 	{
 		// Methods
-		public static float NormalizeMixer(Playable mixer) => default; // 0x000000018BE5E02C-0x000000018BE5E2B0
+		public static float NormalizeMixer(Playable mixer); // 0x0000000183E11A60-0x0000000183E11BE0
 	}
 }
 
 namespace UnityEngine.Timeline.Condition
 {
-	public class TimelineConditionControlMono : MonoBehaviour // TypeDefIndex: 57576
+	[ExecuteAlways]
+	public class TimelineConditionControlMono : MonoBehaviour // TypeDefIndex: 59920
 	{
 		// Fields
 		public TimelineConditionBase condition; // 0x18
 	
 		// Constructors
-		public TimelineConditionControlMono() {} // 0x000000018646DB20-0x000000018646DB28
+		public TimelineConditionControlMono(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		public void RefreshOnCondition() {} // 0x000000018BE56720-0x000000018BE567BC
+		public void RefreshOnCondition(); // 0x000000018B34DEE8-0x000000018B34DF84
 	}
 }

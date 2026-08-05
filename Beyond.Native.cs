@@ -3,28 +3,35 @@
  */
 
 using System;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using IFix.Core;
+using Microsoft.CodeAnalysis;
 using Unity.Collections;
 
-// Image 152: Beyond.Native.dll - Assembly: Beyond.Native, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61280-61287
+// Image 154: Beyond.Native.dll - Assembly: Beyond.Native, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63919-63926
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Beyond.Native
 {
-	public static class NativeHelper // TypeDefIndex: 61283
+	public static class NativeHelper // TypeDefIndex: 63922
 	{
 		// Methods
 		public static Span<T> CreateSpan<T>(NativeArray<T> arr)
-			where T : struct => default;
-		public static string ToStringUTF8(NativeArray<byte> arr) => default; // 0x000000018735AFC4-0x000000018735B088
-		public static ref ref T GetElementRef<T>(NativeArray<T> array, int idx)
-			where T : struct => ref _refReturnTypeForGetElementRef;
-		private ref T _refReturnTypeForGetElementRef; // Dummy field
+			where T : struct;
+		public static string ToStringUTF8(NativeArray<byte> arr); // 0x000000018637F984-0x000000018637FA48
+	
+		// Extension methods
+		public static ref ref T GetElementRef<T>(this NativeArray<T> array, int idx)
+			where T : struct;
 	}
 }
 
 namespace IFix
 {
-	public class ILFixDynamicMethodWrapper // TypeDefIndex: 61284
+	public class ILFixDynamicMethodWrapper // TypeDefIndex: 63923
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
@@ -33,43 +40,40 @@ namespace IFix
 		public static ILFixDynamicMethodWrapper[] wrapperArray; // 0x00
 	
 		// Constructors
-		public ILFixDynamicMethodWrapper() {} // Dummy constructor
-		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj) {} // 0x0000000184E6FCD0-0x0000000184E6FD00
-		static ILFixDynamicMethodWrapper() {} // 0x000000018735AECC-0x000000018735AF30
+		public ILFixDynamicMethodWrapper(VirtualMachine virtualMachine, int methodId, object anonObj); // 0x00000001832B2C30-0x00000001832B2C60
+		static ILFixDynamicMethodWrapper(); // 0x000000018637F88C-0x000000018637F8F0
 	
 		// Methods
-		public string __Gen_Wrap_0(NativeArray<byte> P0) => default; // 0x000000018735ADCC-0x000000018735AECC
+		public string __Gen_Wrap_0(NativeArray<byte> P0); // 0x000000018637F78C-0x000000018637F88C
 	}
 
-	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 61285
+	public class ILFixInterfaceBridge : AnonymousStorey // TypeDefIndex: 63924
 	{
 		// Constructors
-		public ILFixInterfaceBridge() {} // Dummy constructor
-		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine) {} // 0x000000018735AF30-0x000000018735AFC4
+		public ILFixInterfaceBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] methodIdArray, VirtualMachine virtualMachine); // 0x000000018637F8F0-0x000000018637F984
 	
 		// Methods
-		public void RefAsyncBuilderStartMethod() {} // 0x0000000185492010-0x0000000185492020
+		public void RefAsyncBuilderStartMethod(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 61286
+	public class WrappersManagerImpl : WrappersManager // TypeDefIndex: 63925
 	{
 		// Fields
 		private VirtualMachine virtualMachine; // 0x10
 	
 		// Constructors
-		public WrappersManagerImpl() {} // Dummy constructor
-		public WrappersManagerImpl(VirtualMachine virtualMachine) {} // 0x0000000184096E30-0x0000000184096EF0
+		public WrappersManagerImpl(VirtualMachine virtualMachine); // 0x00000001853908C0-0x00000001853908D0
 	
 		// Methods
-		public static ILFixDynamicMethodWrapper GetPatch(int id) => default; // 0x000000018735B270-0x000000018735B2D4
-		public static bool IsPatched(int id) => default; // 0x000000018735B360-0x000000018735B3F8
-		public Delegate CreateDelegate(System.Type type, int id, object anon) => default; // 0x000000018735B12C-0x000000018735B1F8
-		public object CreateWrapper(int id) => default; // 0x000000018735B1F8-0x000000018735B270
-		public object InitWrapperArray(int len) => default; // 0x000000018735B2D4-0x000000018735B360
-		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine) => default; // 0x000000018735B088-0x000000018735B12C
+		public static ILFixDynamicMethodWrapper GetPatch(int id); // 0x000000018637FC30-0x000000018637FC94
+		public static bool IsPatched(int id); // 0x000000018637FD20-0x000000018637FDB8
+		public Delegate CreateDelegate(System.Type type, int id, object anon); // 0x000000018637FAEC-0x000000018637FBB8
+		public object CreateWrapper(int id); // 0x000000018637FBB8-0x000000018637FC30
+		public object InitWrapperArray(int len); // 0x000000018637FC94-0x000000018637FD20
+		public AnonymousStorey CreateBridge(int fieldNum, int[] fieldTypes, int typeIndex, int[] vTable, int[] slots, VirtualMachine virtualMachine); // 0x000000018637FA48-0x000000018637FAEC
 	}
 
-	public enum IDMAP0 // TypeDefIndex: 61287
+	public enum IDMAP0 // TypeDefIndex: 63926
 	{
 		Beyond-Native-NativeHelper-ToStringUTF80 = 0
 	}
@@ -77,18 +81,22 @@ namespace IFix
 
 namespace Microsoft.CodeAnalysis
 {
-	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 61281
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 63920
 	{
 		// Constructors
-		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public EmbeddedAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace System.Runtime.CompilerServices
 {
-	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 61282
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 63921
 	{
 		// Constructors
-		public IsUnmanagedAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public IsUnmanagedAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }

@@ -5,123 +5,130 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using Unity.Profiling;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.TextCore;
 using UnityEngine.TextCore.LowLevel;
 using UnityEngine.UI;
 
-// Image 25: Unity.TextMeshPro.dll - Assembly: Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 53079-53264
+// Image 25: Unity.TextMeshPro.dll - Assembly: Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 55564-55749
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("Unity.FontEngine.Tests")]
+[assembly: InternalsVisibleTo("Unity.TextCore")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 53264
+[CompilerGenerated]
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 55749
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_12 _1C3635C112D556F4C11A4FE6BDE6ED3F126C4B2B546811BDB64DE7BDED3A05CB; // 0x00 // Static value (base64): IAAuACwACQANAAoA - Metadata: 0x0207801C
+	internal static readonly __StaticArrayInitTypeSize_12 _1C3635C112D556F4C11A4FE6BDE6ED3F126C4B2B546811BDB64DE7BDED3A05CB; // 0x00 // Static value (base64): IAAuACwACQANAAoA - Metadata: 0x0234761C
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_12 // TypeDefIndex: 53263
+	private struct __StaticArrayInitTypeSize_12 // TypeDefIndex: 55748
 	{
 	}
-
-	// Constructors
-	public _PrivateImplementationDetails_() {} // Dummy constructor
 }
 
 namespace TMPro
 {
-	public class FastAction // TypeDefIndex: 53080
+	public class FastAction // TypeDefIndex: 55565
 	{
 		// Fields
 		private LinkedList<Action> delegates; // 0x10
 		private Dictionary<Action, LinkedListNode<Action>> lookup; // 0x18
 	
 		// Constructors
-		public FastAction() {} // 0x000000018594A7B0-0x000000018594A860
+		public FastAction(); // 0x000000018478EC20-0x000000018478ECD0
 	
 		// Methods
-		public void Add(Action rhs) {} // 0x000000018BDFD3E8-0x000000018BDFD49C
-		public void Remove(Action rhs) {} // 0x000000018BDFD51C-0x000000018BDFD5CC
-		public void Call() {} // 0x000000018BDFD49C-0x000000018BDFD51C
+		public void Add(Action rhs); // 0x000000018B3008BC-0x000000018B300970
+		public void Remove(Action rhs); // 0x000000018B3009F0-0x000000018B300AA0
+		public void Call(); // 0x000000018B300970-0x000000018B3009F0
 	}
 
-	public class FastAction<A> // TypeDefIndex: 53081
+	public class FastAction<A> // TypeDefIndex: 55566
 	{
 		// Fields
 		private LinkedList<Action<A>> delegates;
 		private Dictionary<Action<A>, LinkedListNode<Action<A>>> lookup;
 	
 		// Constructors
-		public FastAction() {}
+		public FastAction();
 	
 		// Methods
-		public void Add(Action<A> rhs) {}
-		public void Remove(Action<A> rhs) {}
-		public void Call(A a) {}
+		public void Add(Action<A> rhs);
+		public void Remove(Action<A> rhs);
+		public void Call(A a);
 	}
 
-	public class FastAction<A, B> // TypeDefIndex: 53082
+	public class FastAction<A, B> // TypeDefIndex: 55567
 	{
 		// Fields
 		private LinkedList<Action<A, B>> delegates;
 		private Dictionary<Action<A, B>, LinkedListNode<Action<A, B>>> lookup;
 	
 		// Constructors
-		public FastAction() {}
+		public FastAction();
 	
 		// Methods
-		public void Add(Action<A, B> rhs) {}
-		public void Remove(Action<A, B> rhs) {}
-		public void Call(A a, B b) {}
+		public void Add(Action<A, B> rhs);
+		public void Remove(Action<A, B> rhs);
+		public void Call(A a, B b);
 	}
 
-	public class FastAction<A, B, C> // TypeDefIndex: 53083
+	public class FastAction<A, B, C> // TypeDefIndex: 55568
 	{
 		// Fields
 		private LinkedList<Action<A, B, C>> delegates;
 		private Dictionary<Action<A, B, C>, LinkedListNode<Action<A, B, C>>> lookup;
 	
 		// Constructors
-		public FastAction() {}
+		public FastAction();
 	
 		// Methods
-		public void Add(Action<A, B, C> rhs) {}
-		public void Remove(Action<A, B, C> rhs) {}
-		public void Call(A a, B b, C c) {}
+		public void Add(Action<A, B, C> rhs);
+		public void Remove(Action<A, B, C> rhs);
+		public void Call(A a, B b, C c);
 	}
 
-	public interface IFontAssetLoader // TypeDefIndex: 53084
+	public interface IFontAssetLoader // TypeDefIndex: 55569
 	{
 		// Methods
 		bool TryGetFontAsset(TMP_Text refText, uint unicode, out TMP_FontAsset fontAsset);
 		void TryRemoveRefText(TMP_Text refText);
 	}
 
-	public interface ITextPreprocessor // TypeDefIndex: 53085
+	public interface ITextPreprocessor // TypeDefIndex: 55570
 	{
 		// Methods
 		string PreprocessText(string text);
 	}
 
-	public class LocalizedTextPreprocessor : ITextPreprocessor // TypeDefIndex: 53086
+	public class LocalizedTextPreprocessor : ITextPreprocessor // TypeDefIndex: 55571
 	{
 		// Fields
 		private static LocalizedTextPreprocessor _instance; // 0x00
 	
 		// Properties
-		public static LocalizedTextPreprocessor Instance { get => default; } // 0x0000000183F78100-0x0000000183F78410 
+		public static LocalizedTextPreprocessor Instance { get; } // 0x000000018B300AA0-0x000000018B300AF0 
 	
 		// Constructors
-		public LocalizedTextPreprocessor() {} // 0x0000000185492010-0x0000000185492020
-		static LocalizedTextPreprocessor() {} // 0x0000000183F77DA0-0x0000000183F78100
+		public LocalizedTextPreprocessor(); // 0x00000001841E1670-0x00000001841E1680
+		static LocalizedTextPreprocessor(); // 0x0000000184D4E010-0x0000000184D4E070
 	
 		// Methods
-		public string PreprocessText(string text) => default; // 0x0000000183F76C70-0x0000000183F77DA0
+		public string PreprocessText(string text); // 0x000000018333C4E0-0x000000018333C560
 	}
 
-	public class MaterialReferenceManager // TypeDefIndex: 53087
+	public class MaterialReferenceManager // TypeDefIndex: 55572
 	{
 		// Fields
 		private static MaterialReferenceManager s_Instance; // 0x00
@@ -131,66 +138,42 @@ namespace TMPro
 		private Dictionary<int, TMP_ColorGradient> m_ColorGradientReferenceLookup; // 0x28
 	
 		// Properties
-		public static MaterialReferenceManager instance { get => default; } // 0x000000018BDFDEB0-0x000000018BDFDF40 
+		public static MaterialReferenceManager instance { get; } // 0x000000018B3013D4-0x000000018B301464 
 	
 		// Constructors
-		public MaterialReferenceManager() {} // 0x000000018BDFDD58-0x000000018BDFDEB0
+		public MaterialReferenceManager(); // 0x000000018B30127C-0x000000018B3013D4
 	
 		// Methods
-		public static void AddFontAsset(TMP_FontAsset fontAsset) {} // 0x000000018BDFD744-0x000000018BDFD774
-		private void AddFontAssetInternal(TMP_FontAsset fontAsset) {} // 0x000000018BDFD694-0x000000018BDFD744
-		public static void AddSpriteAsset(TMP_SpriteAsset spriteAsset) {} // 0x000000018BDFD984-0x000000018BDFD9B4
-		private void AddSpriteAssetInternal(TMP_SpriteAsset spriteAsset) {} // 0x000000018BDFD814-0x000000018BDFD8C4
-		public static void AddSpriteAsset(int hashCode, TMP_SpriteAsset spriteAsset) {} // 0x000000018BDFD9B4-0x000000018BDFD9F0
-		private void AddSpriteAssetInternal(int hashCode, TMP_SpriteAsset spriteAsset) {} // 0x000000018BDFD8C4-0x000000018BDFD984
-		public static void AddFontMaterial(int hashCode, Material material) {} // 0x000000018BDFD7D8-0x000000018BDFD814
-		private void AddFontMaterialInternal(int hashCode, Material material) {} // 0x000000018BDFD774-0x000000018BDFD7D8
-		public static void AddColorGradientPreset(int hashCode, TMP_ColorGradient spriteAsset) {} // 0x000000018BDFD658-0x000000018BDFD694
-		private void AddColorGradientPreset_Internal(int hashCode, TMP_ColorGradient spriteAsset) {} // 0x000000018BDFD5CC-0x000000018BDFD658
-		public bool Contains(TMP_FontAsset font) => default; // 0x000000018BDFD9F0-0x000000018BDFDA4C
-		public bool Contains(TMP_SpriteAsset sprite) => default; // 0x000000018BDFDA4C-0x000000018BDFDAA8
-		public static bool TryGetFontAsset(int hashCode, out TMP_FontAsset fontAsset) {
-			fontAsset = default;
-			return default;
-		} // 0x000000018BDFDBC4-0x000000018BDFDC00
-		private bool TryGetFontAssetInternal(int hashCode, out TMP_FontAsset fontAsset) {
-			fontAsset = default;
-			return default;
-		} // 0x000000018BDFDB54-0x000000018BDFDBC4
-		public static bool TryGetSpriteAsset(int hashCode, out TMP_SpriteAsset spriteAsset) {
-			spriteAsset = default;
-			return default;
-		} // 0x000000018BDFDD1C-0x000000018BDFDD58
-		private bool TryGetSpriteAssetInternal(int hashCode, out TMP_SpriteAsset spriteAsset) {
-			spriteAsset = default;
-			return default;
-		} // 0x000000018BDFDCAC-0x000000018BDFDD1C
-		public static bool TryGetColorGradientPreset(int hashCode, out TMP_ColorGradient gradientPreset) {
-			gradientPreset = default;
-			return default;
-		} // 0x000000018BDFDB18-0x000000018BDFDB54
-		private bool TryGetColorGradientPresetInternal(int hashCode, out TMP_ColorGradient gradientPreset) {
-			gradientPreset = default;
-			return default;
-		} // 0x000000018BDFDAA8-0x000000018BDFDB18
-		public static bool TryGetMaterial(int hashCode, out Material material) {
-			material = default;
-			return default;
-		} // 0x000000018BDFDC70-0x000000018BDFDCAC
-		private bool TryGetMaterialInternal(int hashCode, out Material material) {
-			material = default;
-			return default;
-		} // 0x000000018BDFDC00-0x000000018BDFDC70
+		public static void AddFontAsset(TMP_FontAsset fontAsset); // 0x000000018B300C68-0x000000018B300C98
+		private void AddFontAssetInternal(TMP_FontAsset fontAsset); // 0x000000018B300BB8-0x000000018B300C68
+		public static void AddSpriteAsset(TMP_SpriteAsset spriteAsset); // 0x000000018B300EA8-0x000000018B300ED8
+		private void AddSpriteAssetInternal(TMP_SpriteAsset spriteAsset); // 0x000000018B300D38-0x000000018B300DE8
+		public static void AddSpriteAsset(int hashCode, TMP_SpriteAsset spriteAsset); // 0x000000018B300ED8-0x000000018B300F14
+		private void AddSpriteAssetInternal(int hashCode, TMP_SpriteAsset spriteAsset); // 0x000000018B300DE8-0x000000018B300EA8
+		public static void AddFontMaterial(int hashCode, Material material); // 0x000000018B300CFC-0x000000018B300D38
+		private void AddFontMaterialInternal(int hashCode, Material material); // 0x000000018B300C98-0x000000018B300CFC
+		public static void AddColorGradientPreset(int hashCode, TMP_ColorGradient spriteAsset); // 0x000000018B300B7C-0x000000018B300BB8
+		private void AddColorGradientPreset_Internal(int hashCode, TMP_ColorGradient spriteAsset); // 0x000000018B300AF0-0x000000018B300B7C
+		public bool Contains(TMP_FontAsset font); // 0x000000018B300F14-0x000000018B300F70
+		public bool Contains(TMP_SpriteAsset sprite); // 0x000000018B300F70-0x000000018B300FCC
+		public static bool TryGetFontAsset(int hashCode, out TMP_FontAsset fontAsset); // 0x000000018B3010E8-0x000000018B301124
+		private bool TryGetFontAssetInternal(int hashCode, out TMP_FontAsset fontAsset); // 0x000000018B301078-0x000000018B3010E8
+		public static bool TryGetSpriteAsset(int hashCode, out TMP_SpriteAsset spriteAsset); // 0x000000018B301240-0x000000018B30127C
+		private bool TryGetSpriteAssetInternal(int hashCode, out TMP_SpriteAsset spriteAsset); // 0x000000018B3011D0-0x000000018B301240
+		public static bool TryGetColorGradientPreset(int hashCode, out TMP_ColorGradient gradientPreset); // 0x000000018B30103C-0x000000018B301078
+		private bool TryGetColorGradientPresetInternal(int hashCode, out TMP_ColorGradient gradientPreset); // 0x000000018B300FCC-0x000000018B30103C
+		public static bool TryGetMaterial(int hashCode, out Material material); // 0x000000018B301194-0x000000018B3011D0
+		private bool TryGetMaterialInternal(int hashCode, out Material material); // 0x000000018B301124-0x000000018B301194
 	}
 
-	public struct TMP_MaterialReference // TypeDefIndex: 53088
+	public struct TMP_MaterialReference // TypeDefIndex: 55573
 	{
 		// Fields
 		public Material material; // 0x00
 		public int referenceCount; // 0x08
 	}
 
-	public struct MaterialReference // TypeDefIndex: 53089
+	public struct MaterialReference // TypeDefIndex: 55574
 	{
 		// Fields
 		public int index; // 0x00
@@ -204,25 +187,15 @@ namespace TMPro
 		public int referenceCount; // 0x34
 	
 		// Constructors
-		public MaterialReference(int index, TMP_FontAsset fontAsset, TMP_SpriteAsset spriteAsset, Material material, float padding) {
-			this.index = default;
-			this.fontAsset = default;
-			this.spriteAsset = default;
-			this.material = default;
-			isDefaultMaterial = default;
-			isFallbackMaterial = default;
-			fallbackMaterial = default;
-			this.padding = default;
-			referenceCount = default;
-		} // 0x0000000184D66A00-0x0000000184D66BF0
+		public MaterialReference(int index, TMP_FontAsset fontAsset, TMP_SpriteAsset spriteAsset, Material material, float padding); // 0x000000018333BC80-0x000000018333BE20
 	
 		// Methods
-		public static bool Contains(MaterialReference[] materialReferences, TMP_FontAsset fontAsset) => default; // 0x000000018BDFE12C-0x000000018BDFE1F4
-		public static int AddMaterialReference(Material material, TMP_FontAsset fontAsset, ref MaterialReference[] materialReferences, Dictionary<int, int> materialReferenceIndexLookup) => default; // 0x0000000184264790-0x0000000184264A60
-		public static int AddMaterialReference(Material material, TMP_SpriteAsset spriteAsset, ref MaterialReference[] materialReferences, Dictionary<int, int> materialReferenceIndexLookup) => default; // 0x000000018BDFDF40-0x000000018BDFE12C
+		public static bool Contains(MaterialReference[] materialReferences, TMP_FontAsset fontAsset); // 0x000000018B301650-0x000000018B301718
+		public static int AddMaterialReference(Material material, TMP_FontAsset fontAsset, ref MaterialReference[] materialReferences, Dictionary<int, int> materialReferenceIndexLookup); // 0x000000018333CE80-0x000000018333D0F0
+		public static int AddMaterialReference(Material material, TMP_SpriteAsset spriteAsset, ref MaterialReference[] materialReferences, Dictionary<int, int> materialReferenceIndexLookup); // 0x000000018B301464-0x000000018B301650
 	}
 
-	public enum TextContainerAnchors // TypeDefIndex: 53090
+	public enum TextContainerAnchors // TypeDefIndex: 55575
 	{
 		TopLeft = 0,
 		Top = 1,
@@ -236,77 +209,94 @@ namespace TMPro
 		Custom = 9
 	}
 
-	public class TextContainer : UIBehaviour // TypeDefIndex: 53091
+	[RequireComponent(typeof(RectTransform))]
+	public class TextContainer : UIBehaviour // TypeDefIndex: 55576
 	{
 		// Fields
 		private bool m_hasChanged; // 0x18
+		[SerializeField]
 		private Vector2 m_pivot; // 0x1C
+		[SerializeField]
 		private TextContainerAnchors m_anchorPosition; // 0x24
+		[SerializeField]
 		private Rect m_rect; // 0x28
 		private bool m_isDefaultWidth; // 0x38
 		private bool m_isDefaultHeight; // 0x39
 		private bool m_isAutoFitting; // 0x3A
 		private Vector3[] m_corners; // 0x40
 		private Vector3[] m_worldCorners; // 0x48
+		[SerializeField]
 		private Vector4 m_margins; // 0x50
 		private RectTransform m_rectTransform; // 0x60
 		private static Vector2 k_defaultSize; // 0x00
 		private TextMeshPro m_textMeshPro; // 0x68
 	
 		// Properties
-		public bool hasChanged { get => default; set {} } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
-		public Vector2 pivot { get => default; set {} } // 0x0000000185FE57F0-0x0000000185FE5810 0x000000018BDFEB28-0x000000018BDFEB98
-		public TextContainerAnchors anchorPosition { get => default; set {} } // 0x0000000181424480-0x0000000181424490 0x000000018BDFEA48-0x000000018BDFEA90
-		public Rect rect { get => default; set {} } // 0x0000000185FBB610-0x0000000185FBB620 0x000000018BDFEB98-0x000000018BDFEBF0
-		public Vector2 size { get => default; set {} } // 0x0000000185FE5810-0x0000000185FE5830 0x000000018BDFEBF0-0x000000018BDFEC50
-		public float width { get => default; set {} } // 0x0000000185FE5830-0x0000000185FE5840 0x000000018BDFEC50-0x000000018BDFEC98
-		public float height { get => default; set {} } // 0x0000000186472350-0x0000000186472358 0x000000018BDFEA90-0x000000018BDFEAD8
-		public bool isDefaultWidth { get => default; } // 0x0000000185FB0700-0x0000000185FB0710 
-		public bool isDefaultHeight { get => default; } // 0x0000000185FB0710-0x0000000185FB0720 
-		public bool isAutoFitting { get => default; set {} } // 0x0000000185FB0B20-0x0000000185FB0B30 0x0000000185FB0B50-0x0000000185FB0B60
-		public Vector3[] corners { get => default; } // 0x00000001813FF010-0x00000001813FF020 
-		public Vector3[] worldCorners { get => default; } // 0x00000001813ECF20-0x00000001813ECF30 
-		public Vector4 margins { get => default; set {} } // 0x0000000185FB6BD0-0x0000000185FB6BE0 0x000000018BDFEAD8-0x000000018BDFEB28
-		public RectTransform rectTransform { get => default; } // 0x000000018BDFE940-0x000000018BDFE9C4 
-		public TextMeshPro textMeshPro { get => default; } // 0x000000018BDFE9C4-0x000000018BDFEA48 
+		public bool hasChanged { get; set; } // 0x0000000184D86340-0x0000000184D86350 0x0000000184D86350-0x0000000184D86360
+		public Vector2 pivot { get; set; } // 0x0000000184DB9A00-0x0000000184DB9A20 0x000000018B3020A8-0x000000018B302118
+		public TextContainerAnchors anchorPosition { get; set; } // 0x00000001811F0020-0x00000001811F0030 0x000000018B301FC8-0x000000018B302010
+		public Rect rect { get; set; } // 0x0000000184D8FAD0-0x0000000184D8FAE0 0x000000018B302118-0x000000018B302170
+		public Vector2 size { get; set; } // 0x0000000184DB9A20-0x0000000184DB9A40 0x000000018B302170-0x000000018B3021D0
+		public float width { get; set; } // 0x0000000184DB9A40-0x0000000184DB9A50 0x000000018B3021D0-0x000000018B302218
+		public float height { get; set; } // 0x00000001853957B0-0x00000001853957C0 0x000000018B302010-0x000000018B302058
+		public bool isDefaultWidth { get; } // 0x00000001811F2A70-0x00000001811F2A80 
+		public bool isDefaultHeight { get; } // 0x0000000184D86650-0x0000000184D86660 
+		public bool isAutoFitting { get; set; } // 0x0000000184D86660-0x0000000184D86670 0x0000000184D86690-0x0000000184D866A0
+		public Vector3[] corners { get; } // 0x0000000184D85A60-0x0000000184D85A70 
+		public Vector3[] worldCorners { get; } // 0x0000000184D86200-0x0000000184D86210 
+		public Vector4 margins { get; set; } // 0x0000000184D8CE10-0x0000000184D8CE20 0x000000018B302058-0x000000018B3020A8
+		public RectTransform rectTransform { get; } // 0x000000018B301EC0-0x000000018B301F44 
+		public TextMeshPro textMeshPro { get; } // 0x000000018B301F44-0x000000018B301FC8 
 	
 		// Constructors
-		public TextContainer() {} // 0x000000018BDFE8C8-0x000000018BDFE940
-		static TextContainer() {} // 0x000000018BDFE888-0x000000018BDFE8C8
+		public TextContainer(); // 0x000000018B301E48-0x000000018B301EC0
+		static TextContainer(); // 0x000000018B301E08-0x000000018B301E48
 	
 		// Methods
-		protected override void Awake() {} // 0x000000018BDFE1F4-0x000000018BDFE294
-		protected override void OnEnable() {} // 0x000000018BDFE568-0x000000018BDFE570
-		protected override void OnDisable() {} // 0x0000000185492010-0x0000000185492020
-		private void OnContainerChanged() {} // 0x000000018BDFE46C-0x000000018BDFE568
-		protected override void OnRectTransformDimensionsChange() {} // 0x000000018BDFE570-0x000000018BDFE6C8
-		private void SetRect(Vector2 size) {} // 0x0000000185FE57A0-0x0000000185FE57F0
-		private void UpdateCorners() {} // 0x000000018BDFE6C8-0x000000018BDFE888
-		private Vector2 GetPivot(TextContainerAnchors anchor) => default; // 0x000000018BDFE3E0-0x000000018BDFE46C
-		private TextContainerAnchors GetAnchorPosition(Vector2 pivot) => default; // 0x000000018BDFE294-0x000000018BDFE3E0
+		protected override void Awake(); // 0x000000018B301718-0x000000018B3017B8
+		protected override void OnEnable(); // 0x000000018B301AE8-0x000000018B301AF0
+		protected override void OnDisable(); // 0x00000001841E1670-0x00000001841E1680
+		private void OnContainerChanged(); // 0x000000018B3019EC-0x000000018B301AE8
+		protected override void OnRectTransformDimensionsChange(); // 0x000000018B301AF0-0x000000018B301C48
+		private void SetRect(Vector2 size); // 0x0000000184DB99B0-0x0000000184DB9A00
+		private void UpdateCorners(); // 0x000000018B301C48-0x000000018B301E08
+		private Vector2 GetPivot(TextContainerAnchors anchor); // 0x000000018B301960-0x000000018B3019EC
+		private TextContainerAnchors GetAnchorPosition(Vector2 pivot); // 0x000000018B3017B8-0x000000018B301960
 	}
 
-	public class TextMeshPro : TMP_Text, ILayoutElement // TypeDefIndex: 53092
+	[AddComponentMenu("Mesh/TextMeshPro - Text")]
+	[DisallowMultipleComponent]
+	[ExecuteAlways]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.0")]
+	[RequireComponent(typeof(MeshRenderer))]
+	public class TextMeshPro : TMP_Text, ILayoutElement // TypeDefIndex: 55577
 	{
 		// Fields
-		internal int _SortingLayer; // 0xAF0
-		internal int _SortingLayerID; // 0xAF4
-		internal int _SortingOrder; // 0xAF8
-		private Action<TMP_TextInfo> OnPreRenderText; // 0xB00
-		private bool m_currentAutoSizeMode; // 0xB08
-		private bool m_hasFontAssetChanged; // 0xB09
-		private float m_previousLossyScaleY; // 0xB0C
-		private Renderer m_renderer; // 0xB10
-		private MeshFilter m_meshFilter; // 0xB18
-		private bool m_isFirstAllocation; // 0xB20
-		private int m_max_characters; // 0xB24
-		private int m_max_numberOfLines; // 0xB28
-		private TMP_SubMesh[] m_subTextObjects; // 0xB30
-		private MaskingTypes m_maskType; // 0xB38
-		private Matrix4x4 m_EnvMapMatrix; // 0xB3C
-		private Vector3[] m_RectTransformCorners; // 0xB80
+		[SerializeField]
+		internal int _SortingLayer; // 0xAF8
+		[SerializeField]
+		internal int _SortingLayerID; // 0xAFC
+		[SerializeField]
+		internal int _SortingOrder; // 0xB00
+		[CompilerGenerated]
+		private Action<TMP_TextInfo> OnPreRenderText; // 0xB08
+		private bool m_currentAutoSizeMode; // 0xB10
+		[SerializeField]
+		private bool m_hasFontAssetChanged; // 0xB11
+		private float m_previousLossyScaleY; // 0xB14
+		[SerializeField]
+		private Renderer m_renderer; // 0xB18
+		private MeshFilter m_meshFilter; // 0xB20
+		private bool m_isFirstAllocation; // 0xB28
+		private int m_max_characters; // 0xB2C
+		private int m_max_numberOfLines; // 0xB30
+		private TMP_SubMesh[] m_subTextObjects; // 0xB38
+		[SerializeField]
+		private MaskingTypes m_maskType; // 0xB40
+		private Matrix4x4 m_EnvMapMatrix; // 0xB44
+		private Vector3[] m_RectTransformCorners; // 0xB88
 		[NonSerialized]
-		private bool m_isRegisteredForEvents; // 0xB88
+		private bool m_isRegisteredForEvents; // 0xB90
 		private static ProfilerMarker k_GenerateTextMarker; // 0x00
 		private static ProfilerMarker k_SetArraySizesMarker; // 0x08
 		private static ProfilerMarker k_GenerateTextPhaseIMarker; // 0x10
@@ -329,109 +319,123 @@ namespace TMPro
 		private static ProfilerMarker k_GenerateTextPhaseIIIMarker; // 0x98
 	
 		// Properties
-		public int sortingLayerID { get => default; set {} } // 0x000000018BE07D74-0x000000018BE07DF0 0x000000018BE0800C-0x000000018BE080A8
-		public int sortingOrder { get => default; set {} } // 0x000000018BE07DF0-0x000000018BE07E6C 0x000000018BE080A8-0x000000018BE08144
-		public override bool autoSizeTextContainer { get => default; set {} } // 0x0000000185FE5840-0x0000000185FE5850 0x000000018BE07F8C-0x000000018BE07FFC
-		public TextContainer textContainer { get => default; } // 0x00000001813AE580-0x00000001813AE590 
-		public new Transform transform { get => default; } // 0x000000018BE07E6C-0x000000018BE07EFC 
-		public Renderer renderer { get => default; } // 0x000000018BE07CE4-0x000000018BE07D74 
-		public override Mesh mesh { get => default; } // 0x000000018BE07C28-0x000000018BE07CE4 
-		public MeshFilter meshFilter { get => default; } // 0x000000018BE07B18-0x000000018BE07C28 
-		public MaskingTypes maskType { get => default; set {} } // 0x0000000185FE5870-0x0000000185FE5880 0x000000018BE07FFC-0x000000018BE0800C
+		public int sortingLayerID { get; set; } // 0x000000018B30B248-0x000000018B30B2C4 0x000000018B30B4E0-0x000000018B30B57C
+		public int sortingOrder { get; set; } // 0x000000018B30B2C4-0x000000018B30B340 0x000000018B30B57C-0x000000018B30B618
+		public override bool autoSizeTextContainer { get; set; } // 0x0000000184DB9A50-0x0000000184DB9A60 0x000000018B30B460-0x000000018B30B4D0
+		[Obsolete("The TextContainer is now obsolete. Use the RectTransform instead.")]
+		public TextContainer textContainer { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public new Transform transform { get; } // 0x000000018B30B340-0x000000018B30B3D0 
+		public Renderer renderer { get; } // 0x000000018B30B1B8-0x000000018B30B248 
+		public override Mesh mesh { get; } // 0x000000018B30B0FC-0x000000018B30B1B8 
+		public MeshFilter meshFilter { get; } // 0x000000018B30AFEC-0x000000018B30B0FC 
+		public MaskingTypes maskType { get; set; } // 0x0000000184DB9A80-0x0000000184DB9A90 0x000000018B30B4D0-0x000000018B30B4E0
 	
 		// Events
-		public override event Action<TMP_TextInfo> OnPreRenderText;
+		public override event Action<TMP_TextInfo> OnPreRenderText {
+			add; // 0x000000018B30AF5C-0x000000018B30AFEC
+			remove; // 0x000000018B30B3D0-0x000000018B30B460
+		}
 	
 		// Constructors
-		public TextMeshPro() {} // 0x000000018BE079CC-0x000000018BE07A88
-		static TextMeshPro() {} // 0x000000018BE07550-0x000000018BE079CC
+		public TextMeshPro(); // 0x000000018B30AEA0-0x000000018B30AF5C
+		static TextMeshPro(); // 0x000000018B30AA24-0x000000018B30AEA0
 	
 		// Methods
-		public void SetMask(MaskingTypes type, Vector4 maskCoords) {} // 0x000000018BE05C54-0x000000018BE05C90
-		public void SetMask(MaskingTypes type, Vector4 maskCoords, float softnessX, float softnessY) {} // 0x000000018BE05E18-0x000000018BE05E74
-		public override void SetVerticesDirty() {} // 0x000000018BE068B8-0x000000018BE06934
-		public override void SetLayoutDirty() {} // 0x000000018BE05A28-0x000000018BE05AD0
-		public override void SetMaterialDirty() {} // 0x000000018B4A7C74-0x000000018B4A7C84
-		public override void SetAllDirty() {} // 0x0000000185179950-0x0000000185179990
-		public override void Rebuild(CanvasUpdate update) {} // 0x000000018BE03180-0x000000018BE03244
-		protected override void UpdateMaterial() {} // 0x000000018BE06C00-0x000000018BE06D20
-		public override void UpdateMeshPadding() {} // 0x000000018BE06D20-0x000000018BE06E28
-		public override void ForceMeshUpdate(bool ignoreActiveState = false /* Metadata: 0x02077A94 */, bool forceTextReparsing = false /* Metadata: 0x02077A95 */) {} // 0x000000018BE01AC4-0x000000018BE01AD8
-		public override TMP_TextInfo GetTextInfo(string text) => default; // 0x000000018BE02300-0x000000018BE02358
-		public override void ClearMesh(bool updateMesh) {} // 0x000000018BE014C4-0x000000018BE015AC
-		public override void UpdateGeometry(Mesh mesh, int index) {} // 0x000000018BE06B70-0x000000018BE06B94
-		public override void UpdateVertexData(TMP_VertexDataUpdateFlags flags) {} // 0x000000018BE071BC-0x000000018BE07380
-		public override void UpdateVertexData() {} // 0x000000018BE07380-0x000000018BE07550
-		public void UpdateFontAsset() {} // 0x000000018BE005E0-0x000000018BE005F0
-		public void CalculateLayoutInputHorizontal() {} // 0x0000000185492010-0x0000000185492020
-		public void CalculateLayoutInputVertical() {} // 0x0000000185492010-0x0000000185492020
-		protected override void Awake() {} // 0x000000018BE0109C-0x000000018BE014C4
-		protected override void OnEnable() {} // 0x000000018BE02C88-0x000000018BE02D64
-		protected override void OnDisable() {} // 0x000000018BE02BEC-0x000000018BE02C88
-		protected override void OnDestroy() {} // 0x000000018BE02B28-0x000000018BE02BD0
-		protected override void LoadFontAsset() {} // 0x000000018BE02410-0x000000018BE02B28
-		private void UpdateEnvMapMatrix() {} // 0x000000018BE06934-0x000000018BE06B70
-		private void SetMask(MaskingTypes maskType) {} // 0x000000018BE05C90-0x000000018BE05E18
-		private void SetMaskCoordinates(Vector4 coords) {} // 0x000000018BE05BD0-0x000000018BE05C54
-		private void SetMaskCoordinates(Vector4 coords, float softX, float softY) {} // 0x000000018BE05AD0-0x000000018BE05BD0
-		private void EnableMasking() {} // 0x000000018BE019A8-0x000000018BE01AC4
-		private void DisableMasking() {} // 0x000000018BE0188C-0x000000018BE019A8
-		private void UpdateMask() {} // 0x000000018BE06B94-0x000000018BE06C00
-		protected override Material GetMaterial(Material mat) => default; // 0x000000018BE01E88-0x000000018BE01F94
-		protected override Material[] GetMaterials(Material[] mats) => default; // 0x000000018BE01F94-0x000000018BE02110
-		protected override void SetSharedMaterial(Material mat) {} // 0x000000018BDFFF20-0x000000018BDFFF60
-		protected override Material[] GetSharedMaterials() => default; // 0x000000018BE02110-0x000000018BE02260
-		protected override void SetSharedMaterials(Material[] materials) {} // 0x000000018BE0653C-0x000000018BE068B8
-		protected override void SetOutlineThickness(float thickness) {} // 0x000000018BE061AC-0x000000018BE0631C
-		protected override void SetFaceColor(Color32 color) {} // 0x000000018BE058E0-0x000000018BE05A28
-		protected override void SetOutlineColor(Color32 color) {} // 0x000000018BE06064-0x000000018BE061AC
-		private void CreateMaterialInstance() {} // 0x000000018BE016F4-0x000000018BE017CC
-		protected override void SetShaderDepth() {} // 0x000000018BE063BC-0x000000018BE0653C
-		protected override void SetCulling() {} // 0x000000018BE0558C-0x000000018BE058E0
-		private void SetPerspectiveCorrection() {} // 0x000000018BE0631C-0x000000018BE063BC
-		protected override int SetArraySizes(UnicodeChar[] unicodeChars) => default; // 0x000000018BE03454-0x000000018BE0558C
-		public override void ComputeMarginSize() {} // 0x000000018BE015AC-0x000000018BE016F4
-		protected override void OnDidApplyAnimationProperties() {} // 0x000000018BE02BD0-0x000000018BE02BEC
-		protected override void OnTransformParentChanged() {} // 0x000000018BE03158-0x000000018BE03180
-		protected override void OnRectTransformDimensionsChange() {} // 0x000000018BE02FD8-0x000000018BE03158
-		internal override void InternalUpdate() {} // 0x000000018BE02358-0x000000018BE02410
-		private void OnPreRenderObject() {} // 0x000000018BE02D64-0x000000018BE02FD8
-		protected virtual void GenerateTextMesh() {} // 0x000000018BDF1A98-0x000000018BDFD3E8
-		protected override Vector3[] GetTextContainerLocalCorners() => default; // 0x000000018BE02260-0x000000018BE02300
-		private void SetMeshFilters(bool state) {} // 0x000000018BE05E74-0x000000018BE06064
-		protected override void SetActiveSubMeshes(bool state) {} // 0x000000018BE03244-0x000000018BE03340
-		protected void SetActiveSubTextObjectRenderers(bool state) {} // 0x000000018BE03340-0x000000018BE03454
-		protected override void DestroySubMeshObjects() {} // 0x000000018BE017CC-0x000000018BE0188C
-		internal void UpdateSubMeshSortingLayerID(int id) {} // 0x000000018BE06FBC-0x000000018BE070BC
-		internal void UpdateSubMeshSortingOrder(int order) {} // 0x000000018BE070BC-0x000000018BE071BC
-		protected override Bounds GetCompoundBounds() => default; // 0x000000018BE01AD8-0x000000018BE01E88
-		private void UpdateSDFScale(float scaleDelta) {} // 0x000000018BE06E28-0x000000018BE06FBC
+		public void SetMask(MaskingTypes type, Vector4 maskCoords); // 0x000000018B309128-0x000000018B309164
+		public void SetMask(MaskingTypes type, Vector4 maskCoords, float softnessX, float softnessY); // 0x000000018B3092EC-0x000000018B309348
+		public override void SetVerticesDirty(); // 0x000000018B309D8C-0x000000018B309E08
+		public override void SetLayoutDirty(); // 0x000000018B308EFC-0x000000018B308FA4
+		public override void SetMaterialDirty(); // 0x000000018A973704-0x000000018A973714
+		public override void SetAllDirty(); // 0x0000000184056D70-0x0000000184056DB0
+		public override void Rebuild(CanvasUpdate update); // 0x000000018B306654-0x000000018B306718
+		protected override void UpdateMaterial(); // 0x000000018B30A0D4-0x000000018B30A1F4
+		public override void UpdateMeshPadding(); // 0x000000018B30A1F4-0x000000018B30A2FC
+		public override void ForceMeshUpdate(bool ignoreActiveState = false /* Metadata: 0x02347096 */, bool forceTextReparsing = false /* Metadata: 0x02347097 */); // 0x000000018B305044-0x000000018B305058
+		public override TMP_TextInfo GetTextInfo(string text); // 0x000000018B305880-0x000000018B3058D8
+		public override void ClearMesh(bool updateMesh); // 0x000000018B304A44-0x000000018B304B2C
+		public override void UpdateGeometry(Mesh mesh, int index); // 0x000000018B30A044-0x000000018B30A068
+		public override void UpdateVertexData(TMP_VertexDataUpdateFlags flags); // 0x000000018B30A690-0x000000018B30A854
+		public override void UpdateVertexData(); // 0x000000018B30A854-0x000000018B30AA24
+		public void UpdateFontAsset(); // 0x000000018B303B60-0x000000018B303B70
+		public void CalculateLayoutInputHorizontal(); // 0x00000001841E1670-0x00000001841E1680
+		public void CalculateLayoutInputVertical(); // 0x00000001841E1670-0x00000001841E1680
+		protected override void Awake(); // 0x000000018B30461C-0x000000018B304A44
+		protected override void OnEnable(); // 0x000000018B306178-0x000000018B306254
+		protected override void OnDisable(); // 0x000000018B3060DC-0x000000018B306178
+		protected override void OnDestroy(); // 0x000000018B306018-0x000000018B3060C0
+		protected override void LoadFontAsset(); // 0x000000018B305990-0x000000018B306018
+		private void UpdateEnvMapMatrix(); // 0x000000018B309E08-0x000000018B30A044
+		private void SetMask(MaskingTypes maskType); // 0x000000018B309164-0x000000018B3092EC
+		private void SetMaskCoordinates(Vector4 coords); // 0x000000018B3090A4-0x000000018B309128
+		private void SetMaskCoordinates(Vector4 coords, float softX, float softY); // 0x000000018B308FA4-0x000000018B3090A4
+		private void EnableMasking(); // 0x000000018B304F28-0x000000018B305044
+		private void DisableMasking(); // 0x000000018B304E0C-0x000000018B304F28
+		private void UpdateMask(); // 0x000000018B30A068-0x000000018B30A0D4
+		protected override Material GetMaterial(Material mat); // 0x000000018B305408-0x000000018B305514
+		protected override Material[] GetMaterials(Material[] mats); // 0x000000018B305514-0x000000018B305690
+		protected override void SetSharedMaterial(Material mat); // 0x000000018B3034A0-0x000000018B3034E0
+		protected override Material[] GetSharedMaterials(); // 0x000000018B305690-0x000000018B3057E0
+		protected override void SetSharedMaterials(Material[] materials); // 0x000000018B309A10-0x000000018B309D8C
+		protected override void SetOutlineThickness(float thickness); // 0x000000018B309680-0x000000018B3097F0
+		protected override void SetFaceColor(Color32 color); // 0x000000018B308DB4-0x000000018B308EFC
+		protected override void SetOutlineColor(Color32 color); // 0x000000018B309538-0x000000018B309680
+		private void CreateMaterialInstance(); // 0x000000018B304C74-0x000000018B304D4C
+		protected override void SetShaderDepth(); // 0x000000018B309890-0x000000018B309A10
+		protected override void SetCulling(); // 0x000000018B308A60-0x000000018B308DB4
+		private void SetPerspectiveCorrection(); // 0x000000018B3097F0-0x000000018B309890
+		protected override int SetArraySizes(UnicodeChar[] unicodeChars); // 0x000000018B306928-0x000000018B308A60
+		public override void ComputeMarginSize(); // 0x000000018B304B2C-0x000000018B304C74
+		protected override void OnDidApplyAnimationProperties(); // 0x000000018B3060C0-0x000000018B3060DC
+		protected override void OnTransformParentChanged(); // 0x000000018B30662C-0x000000018B306654
+		protected override void OnRectTransformDimensionsChange(); // 0x000000018B3064AC-0x000000018B30662C
+		internal override void InternalUpdate(); // 0x000000018B3058D8-0x000000018B305990
+		private void OnPreRenderObject(); // 0x000000018B306254-0x000000018B3064AC
+		protected virtual void GenerateTextMesh(); // 0x000000018B2F4F6C-0x000000018B3008BC
+		protected override Vector3[] GetTextContainerLocalCorners(); // 0x000000018B3057E0-0x000000018B305880
+		private void SetMeshFilters(bool state); // 0x000000018B309348-0x000000018B309538
+		protected override void SetActiveSubMeshes(bool state); // 0x000000018B306718-0x000000018B306814
+		protected void SetActiveSubTextObjectRenderers(bool state); // 0x000000018B306814-0x000000018B306928
+		protected override void DestroySubMeshObjects(); // 0x000000018B304D4C-0x000000018B304E0C
+		internal void UpdateSubMeshSortingLayerID(int id); // 0x000000018B30A490-0x000000018B30A590
+		internal void UpdateSubMeshSortingOrder(int order); // 0x000000018B30A590-0x000000018B30A690
+		protected override Bounds GetCompoundBounds(); // 0x000000018B305058-0x000000018B305408
+		private void UpdateSDFScale(float scaleDelta); // 0x000000018B30A2FC-0x000000018B30A490
 	}
 
-	public class TextMeshProUGUI : TMP_Text, ILayoutElement // TypeDefIndex: 53095
+	[AddComponentMenu("UI/TextMeshPro - Text (UI)", 11)]
+	[DisallowMultipleComponent]
+	[ExecuteAlways]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.0")]
+	[RequireComponent(typeof(CanvasRenderer))]
+	[RequireComponent(typeof(RectTransform))]
+	public class TextMeshProUGUI : TMP_Text, ILayoutElement // TypeDefIndex: 55580
 	{
 		// Fields
-		private bool m_isRebuildingLayout; // 0xAF0
-		private Coroutine m_DelayedGraphicRebuild; // 0xAF8
-		private Coroutine m_DelayedMaterialRebuild; // 0xB00
-		private Rect m_ClipRect; // 0xB08
-		private bool m_ValidRect; // 0xB18
-		private Action<TMP_TextInfo> OnPreRenderText; // 0xB20
-		private bool m_hasFontAssetChanged; // 0xB28
-		protected TMP_SubMeshUI[] m_subTextObjects; // 0xB30
-		protected Vector3[] m_RectTransformCorners; // 0xB38
-		protected CanvasRenderer m_canvasRenderer; // 0xB40
-		protected Canvas m_canvas; // 0xB48
-		protected float m_CanvasScaleFactor; // 0xB50
-		protected float m_previousLossyScaleY; // 0xB54
-		private bool m_isFirstAllocation; // 0xB58
-		private int m_max_characters; // 0xB5C
-		private Material m_baseMaterial; // 0xB60
-		private bool m_isScrollRegionSet; // 0xB68
-		private Vector4 m_maskOffset; // 0xB6C
-		private Matrix4x4 m_EnvMapMatrix; // 0xB7C
+		private bool m_isRebuildingLayout; // 0xAF8
+		private Coroutine m_DelayedGraphicRebuild; // 0xB00
+		private Coroutine m_DelayedMaterialRebuild; // 0xB08
+		private Rect m_ClipRect; // 0xB10
+		private bool m_ValidRect; // 0xB20
+		[CompilerGenerated]
+		private Action<TMP_TextInfo> OnPreRenderText; // 0xB28
+		[SerializeField]
+		private bool m_hasFontAssetChanged; // 0xB30
+		protected TMP_SubMeshUI[] m_subTextObjects; // 0xB38
+		protected Vector3[] m_RectTransformCorners; // 0xB40
+		protected CanvasRenderer m_canvasRenderer; // 0xB48
+		protected Canvas m_canvas; // 0xB50
+		protected float m_CanvasScaleFactor; // 0xB58
+		protected float m_previousLossyScaleY; // 0xB5C
+		private bool m_isFirstAllocation; // 0xB60
+		private int m_max_characters; // 0xB64
+		[SerializeField]
+		private Material m_baseMaterial; // 0xB68
+		private bool m_isScrollRegionSet; // 0xB70
+		[SerializeField]
+		private Vector4 m_maskOffset; // 0xB74
+		private Matrix4x4 m_EnvMapMatrix; // 0xB84
 		[NonSerialized]
-		private bool m_isRegisteredForEvents; // 0xBBC
+		private bool m_isRegisteredForEvents; // 0xBC4
 		private static ProfilerMarker k_GenerateTextMarker; // 0x00
 		private static ProfilerMarker k_SetArraySizesMarker; // 0x08
 		private static ProfilerMarker k_GenerateTextPhaseIMarker; // 0x10
@@ -454,17 +458,21 @@ namespace TMPro
 		private static ProfilerMarker k_GenerateTextPhaseIIIMarker; // 0x98
 	
 		// Properties
-		public override Material materialForRendering { get => default; } // 0x000000018BDFED38-0x000000018BDFED94 
-		public override bool autoSizeTextContainer { get => default; set {} } // 0x0000000184683470-0x00000001846835A0 0x00000001840E0B10-0x00000001840E0BF0
-		public override Mesh mesh { get => default; } // 0x0000000183FCB620-0x0000000183FCB6D0 
-		public new CanvasRenderer canvasRenderer { get => default; } // 0x0000000184F05270-0x0000000184F054B0 
-		public Vector4 maskOffset { get => default; set {} } // 0x00000001849D0AF0-0x00000001849D0B90 0x000000018BE005F0-0x000000018BE0067C
+		public override Material materialForRendering { get; } // 0x0000000183E32420-0x0000000183E32470 
+		public override bool autoSizeTextContainer { get; set; } // 0x0000000184DB9A50-0x0000000184DB9A60 0x000000018B304584-0x000000018B3045F4
+		public override Mesh mesh { get; } // 0x0000000184DB9A70-0x0000000184DB9A80 
+		public new CanvasRenderer canvasRenderer { get; } // 0x0000000183E57CB0-0x0000000183E57D50 
+		public Vector4 maskOffset { get; set; } // 0x0000000184DB9A60-0x0000000184DB9A70 0x000000018B3045F4-0x000000018B30461C
 	
 		// Events
-		public override event Action<TMP_TextInfo> OnPreRenderText;
+		public override event Action<TMP_TextInfo> OnPreRenderText {
+			add; // 0x000000018309B790-0x000000018309B800
+			remove; // 0x000000018309B800-0x000000018309B8C0
+		}
 	
 		// Nested types
-		private sealed class _DelayedGraphicRebuild_d__18 : IEnumerator<object> // TypeDefIndex: 53093
+		[CompilerGenerated]
+		private sealed class _DelayedGraphicRebuild_d__18 : IEnumerator<object> // TypeDefIndex: 55578
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -472,20 +480,23 @@ namespace TMPro
 			public TextMeshProUGUI __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000185FE5860-0x0000000185FE5870 
-			object IEnumerator.Current { get => default; } // 0x0000000185492010-0x0000000185492020 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _DelayedGraphicRebuild_d__18() {} // Dummy constructor
-			public _DelayedGraphicRebuild_d__18(int __1__state) {} // 0x0000000184EC2EE0-0x0000000184EC2F50
+			[DebuggerHidden]
+			public _DelayedGraphicRebuild_d__18(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x0000000185FE5840-0x0000000185FE5850
-			private bool MoveNext() => default; // 0x000000018BE01004-0x000000018BE01074
-			void IEnumerator.Reset() {} // 0x0000000184F054B0-0x0000000184F055F0
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018B30B618-0x000000018B30B6C4
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B30B6C4-0x000000018B30B760
 		}
 	
-		private sealed class _DelayedMaterialRebuild_d__19 : IEnumerator<object> // TypeDefIndex: 53094
+		[CompilerGenerated]
+		private sealed class _DelayedMaterialRebuild_d__19 : IEnumerator<object> // TypeDefIndex: 55579
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -493,96 +504,100 @@ namespace TMPro
 			public TextMeshProUGUI __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018423CAF0-0x000000018423CC70 
-			object IEnumerator.Current { get => default; } // 0x000000018BDFECDC-0x000000018BDFED38 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _DelayedMaterialRebuild_d__19() {} // Dummy constructor
-			public _DelayedMaterialRebuild_d__19(int __1__state) {} // 0x0000000185492010-0x0000000185492020
+			[DebuggerHidden]
+			public _DelayedMaterialRebuild_d__19(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018423FA70-0x000000018423FBE0
-			private bool MoveNext() => default; // 0x0000000184430ED0-0x0000000184431030
-			void IEnumerator.Reset() {} // 0x0000000185179950-0x0000000185179990
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018B319CF0-0x000000018B319DA4
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B319DA4-0x000000018B319DF0
 		}
 	
 		// Constructors
-		public TextMeshProUGUI() {} // 0x000000018BE15AB4-0x000000018BE15B00
-		static TextMeshProUGUI() {} // 0x0000000181377E40-0x0000000181377E50
+		public TextMeshProUGUI(); // 0x0000000183695970-0x0000000183695A00
+		static TextMeshProUGUI(); // 0x00000001847CE1A0-0x00000001847CE670
 	
 		// Methods
-		public void CalculateLayoutInputHorizontal() {} // 0x0000000185FE5850-0x0000000185FE5860
-		public void CalculateLayoutInputVertical() {} // 0x000000018BE01074-0x000000018BE0109C
-		public override void SetVerticesDirty() {} // 0x0000000183FCA880-0x0000000183FCA890
-		public override void SetLayoutDirty() {} // 0x00000001840E6520-0x00000001840E6840
-		public override void SetMaterialDirty() {} // 0x000000018422D2D0-0x000000018422D500
-		public override void SetAllDirty() {} // 0x000000018BE00ABC-0x000000018BE00BC4
-		private IEnumerator DelayedGraphicRebuild() => default; // 0x0000000185BC64C0-0x0000000185BC6520
-		private IEnumerator DelayedMaterialRebuild() => default; // 0x000000018BDFF528-0x000000018BDFF5D4
-		public override void Rebuild(CanvasUpdate update) {} // 0x0000000184682840-0x00000001846828F0
-		private void UpdateSubObjectPivot() {} // 0x000000018BDFF45C-0x000000018BDFF528
-		public override Material GetModifiedMaterial(Material baseMaterial) => default; // 0x000000018557C340-0x000000018557C400
-		protected override void UpdateMaterial() {} // 0x00000001849D0B90-0x00000001849D0C30
-		public override void RecalculateClipping() {} // 0x000000018BE00BC4-0x000000018BE00DDC
-		public override void Cull(Rect clipRect, bool validRect) {} // 0x000000018BE00DDC-0x000000018BE01004
-		internal override void UpdateCulling() {} // 0x000000018BE005E0-0x000000018BE005F0
-		public override void UpdateMeshPadding() {} // 0x00000001842450C0-0x0000000184245400
-		protected override void InternalCrossFadeColor(UnityEngine.Color targetColor, float duration, bool ignoreTimeScale, bool useAlpha) {} // 0x0000000184240AA0-0x0000000184240C40
-		protected override void InternalCrossFadeAlpha(float alpha, float duration, bool ignoreTimeScale) {} // 0x000000018423FBE0-0x000000018423FEC0
-		public override void ForceMeshUpdate(bool ignoreActiveState = false /* Metadata: 0x02077A96 */, bool forceTextReparsing = false /* Metadata: 0x02077A97 */) {} // 0x0000000184243140-0x00000001842432B0
-		public override TMP_TextInfo GetTextInfo(string text) => default; // 0x0000000184685000-0x00000001846853F0
-		public override void ClearMesh() {} // 0x0000000184240C40-0x0000000184240DF0
-		public override void UpdateGeometry(Mesh mesh, int index) {} // 0x0000000185492010-0x0000000185492020
-		public override void UpdateVertexData(TMP_VertexDataUpdateFlags flags) {} // 0x000000018BE0067C-0x000000018BE00ABC
-		public override void UpdateVertexData() {} // 0x000000018BDFF058-0x000000018BDFF188
-		public void UpdateFontAsset() {} // 0x000000018BDFF188-0x000000018BDFF308
-		protected override void Awake() {} // 0x000000018BDFFF20-0x000000018BDFFF60
-		protected override void OnEnable() {} // 0x000000018BDFF308-0x000000018BDFF45C
-		protected override void OnDisable() {} // 0x000000018BDFFF60-0x000000018BE003A4
-		protected override void OnDestroy() {} // 0x000000018BDFFB84-0x000000018BDFFD5C
-		protected override void LoadFontAsset() {} // 0x000000018BDFF898-0x000000018BDFF9B4
-		private Canvas GetCanvas() => default; // 0x000000018BDFFA68-0x000000018BDFFB84
-		private void UpdateEnvMapMatrix() {} // 0x000000018BDFFDFC-0x000000018BDFFF20
-		private void EnableMasking() {} // 0x000000018BDFF5D4-0x000000018BDFF898
-		private void DisableMasking() {} // 0x000000018BDFFD5C-0x000000018BDFFDFC
-		private void UpdateMask() {} // 0x000000018BDFF9B4-0x000000018BDFFA68
-		protected override Material GetMaterial(Material mat) => default; // 0x00000001842B24C0-0x00000001842B3EF0
-		protected override Material[] GetMaterials(Material[] mats) => default; // 0x0000000184430CC0-0x0000000184430ED0
-		protected override void SetSharedMaterial(Material mat) {} // 0x0000000185502350-0x0000000185502380
-		protected override Material[] GetSharedMaterials() => default; // 0x0000000183F91DD0-0x0000000183F91F40
-		protected override void SetSharedMaterials(Material[] materials) {} // 0x00000001850B7C50-0x00000001850B7CA0
-		protected override void SetOutlineThickness(float thickness) {} // 0x00000001840E0BF0-0x00000001840E0E90
-		protected override void SetFaceColor(Color32 color) {} // 0x00000001840E70A0-0x00000001840E71A0
-		protected override void SetOutlineColor(Color32 color) {} // 0x00000001846835A0-0x00000001846845B0
-		protected override void SetShaderDepth() {} // 0x000000018BDFEC98-0x000000018BDFECDC
-		protected override void SetCulling() {} // 0x00000001842B57E0-0x00000001842C4CC0
-		private void SetPerspectiveCorrection() {} // 0x0000000184FCC930-0x0000000184FCCA80
-		private void SetMeshArrays(int size) {} // 0x0000000184F3AE60-0x0000000184F3B000
-		protected override int SetArraySizes(UnicodeChar[] unicodeChars) => default; // 0x000000018BDFED94-0x000000018BDFEE54
-		public override void ComputeMarginSize() {} // 0x0000000184133CE0-0x0000000184134800
-		protected override void OnDidApplyAnimationProperties() {} // 0x00000001840E71A0-0x00000001840E7760
-		protected override void OnCanvasHierarchyChanged() {} // 0x000000018496D460-0x000000018496D620
-		protected override void OnTransformParentChanged() {} // 0x00000001848136E0-0x00000001848137B0
-		protected override void OnRectTransformDimensionsChange() {} // 0x00000001859928E0-0x0000000185992DB0
-		internal override void InternalUpdate() {} // 0x0000000181378230-0x0000000181378240
-		private void OnPreRenderCanvas() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual TMP_SubMeshUI AddSubTextObject(TextMeshProUGUI textComponent, MaterialReference materialReference) => default; // 0x000000018BE08144-0x000000018BE081F0
-		protected virtual void GenerateTextMesh() {} // 0x0000000181377E40-0x0000000181377E50
-		protected override Vector3[] GetTextContainerLocalCorners() => default; // 0x000000018BE081F0-0x000000018BE0828C
-		protected override void SetActiveSubMeshes(bool state) {} // 0x0000000181377E40-0x0000000181377E50
-		protected override void DestroySubMeshObjects() {} // 0x0000000181378230-0x0000000181378240
-		protected override Bounds GetCompoundBounds() => default; // 0x0000000185492010-0x0000000185492020
-		internal override Rect GetCanvasSpaceClippingRect() => default; // 0x000000018BE15A00-0x000000018BE15AB4
-		private void UpdateSDFScale(float scaleDelta) {} // 0x0000000181377E40-0x0000000181377E50
+		public void CalculateLayoutInputHorizontal(); // 0x00000001841E1670-0x00000001841E1680
+		public void CalculateLayoutInputVertical(); // 0x00000001841E1670-0x00000001841E1680
+		public override void SetVerticesDirty(); // 0x0000000183519FC0-0x000000018351A0A0
+		public override void SetLayoutDirty(); // 0x00000001831E8280-0x00000001831E83F0
+		public override void SetMaterialDirty(); // 0x000000018351A210-0x000000018351A2F0
+		public override void SetAllDirty(); // 0x0000000184056D70-0x0000000184056DB0
+		[IteratorStateMachine(typeof(_DelayedGraphicRebuild_d__18))]
+		private IEnumerator DelayedGraphicRebuild(); // 0x000000018B30225C-0x000000018B3022B8
+		[IteratorStateMachine(typeof(_DelayedMaterialRebuild_d__19))]
+		private IEnumerator DelayedMaterialRebuild(); // 0x000000018B3022B8-0x000000018B302314
+		public override void Rebuild(CanvasUpdate update); // 0x0000000183CF2490-0x0000000183CF2540
+		private void UpdateSubObjectPivot(); // 0x00000001831E7FA0-0x00000001831E8050
+		public override Material GetModifiedMaterial(Material baseMaterial); // 0x0000000182EDE7E0-0x0000000182EDE870
+		protected override void UpdateMaterial(); // 0x0000000183E57B40-0x0000000183E57CB0
+		public override void RecalculateClipping(); // 0x0000000183F59BE0-0x0000000183F59BF0
+		public override void Cull(Rect clipRect, bool validRect); // 0x000000018323F3B0-0x000000018323F6B0
+		internal override void UpdateCulling(); // 0x0000000183F28900-0x0000000183F28AA0
+		public override void UpdateMeshPadding(); // 0x000000018B30403C-0x000000018B304144
+		protected override void InternalCrossFadeColor(UnityEngine.Color targetColor, float duration, bool ignoreTimeScale, bool useAlpha); // 0x0000000184731510-0x0000000184731570
+		protected override void InternalCrossFadeAlpha(float alpha, float duration, bool ignoreTimeScale); // 0x000000018B302AA8-0x000000018B302B54
+		public override void ForceMeshUpdate(bool ignoreActiveState = false /* Metadata: 0x02347098 */, bool forceTextReparsing = false /* Metadata: 0x02347099 */); // 0x0000000183CF23E0-0x0000000183CF2490
+		public override TMP_TextInfo GetTextInfo(string text); // 0x000000018B3029DC-0x000000018B302AA8
+		public override void ClearMesh(); // 0x0000000184404550-0x0000000184404610
+		public override void UpdateGeometry(Mesh mesh, int index); // 0x000000018B303B70-0x000000018B303BFC
+		public override void UpdateVertexData(TMP_VertexDataUpdateFlags flags); // 0x000000018B304144-0x000000018B30435C
+		public override void UpdateVertexData(); // 0x000000018B30435C-0x000000018B304584
+		public void UpdateFontAsset(); // 0x000000018B303B60-0x000000018B303B70
+		protected override void Awake(); // 0x000000018351ED70-0x000000018351F170
+		protected override void OnEnable(); // 0x000000018351C480-0x000000018351C5B0
+		protected override void OnDisable(); // 0x0000000183519C60-0x0000000183519E20
+		protected override void OnDestroy(); // 0x0000000183519510-0x00000001835196C0
+		protected override void LoadFontAsset(); // 0x000000018333C620-0x000000018333CAC0
+		private Canvas GetCanvas(); // 0x000000018351C5B0-0x000000018351C6F0
+		private void UpdateEnvMapMatrix(); // 0x000000018B303924-0x000000018B303B60
+		private void EnableMasking(); // 0x000000018B3023D4-0x000000018B3025D8
+		private void DisableMasking(); // 0x00000001841E1670-0x00000001841E1680
+		private void UpdateMask(); // 0x000000018B303BFC-0x000000018B30403C
+		protected override Material GetMaterial(Material mat); // 0x000000018B3025D8-0x000000018B302708
+		protected override Material[] GetMaterials(Material[] mats); // 0x000000018B302708-0x000000018B302888
+		protected override void SetSharedMaterial(Material mat); // 0x000000018B3034A0-0x000000018B3034E0
+		protected override Material[] GetSharedMaterials(); // 0x000000018B302888-0x000000018B3029DC
+		protected override void SetSharedMaterials(Material[] materials); // 0x000000018B3034E0-0x000000018B303924
+		protected override void SetOutlineThickness(float thickness); // 0x000000018B303104-0x000000018B3032DC
+		protected override void SetFaceColor(Color32 color); // 0x000000018B302E18-0x000000018B302F34
+		protected override void SetOutlineColor(Color32 color); // 0x000000018B302FE8-0x000000018B303104
+		protected override void SetShaderDepth(); // 0x000000018B30337C-0x000000018B3034A0
+		protected override void SetCulling(); // 0x000000018B302B54-0x000000018B302E18
+		private void SetPerspectiveCorrection(); // 0x000000018B3032DC-0x000000018B30337C
+		private void SetMeshArrays(int size); // 0x000000018B302F34-0x000000018B302FE8
+		protected override int SetArraySizes(UnicodeChar[] unicodeChars); // 0x000000018333D430-0x000000018333E5E0
+		public override void ComputeMarginSize(); // 0x00000001831E8050-0x00000001831E8280
+		protected override void OnDidApplyAnimationProperties(); // 0x00000001843EE460-0x00000001843EE490
+		protected override void OnCanvasHierarchyChanged(); // 0x0000000183B914B0-0x0000000183B91630
+		protected override void OnTransformParentChanged(); // 0x0000000183F3AE50-0x0000000183F3AEA0
+		protected override void OnRectTransformDimensionsChange(); // 0x00000001831E7C60-0x00000001831E7FA0
+		internal override void InternalUpdate(); // 0x0000000182FAB6B0-0x0000000182FAB980
+		private void OnPreRenderCanvas(); // 0x0000000183CF2540-0x0000000183CF2860
+		protected virtual TMP_SubMeshUI AddSubTextObject(TextMeshProUGUI textComponent, MaterialReference materialReference); // 0x000000018B302218-0x000000018B30225C
+		protected virtual void GenerateTextMesh(); // 0x0000000183254CE0-0x000000018325B760
+		protected override Vector3[] GetTextContainerLocalCorners(); // 0x0000000183EADEF0-0x0000000183EADFB0
+		protected override void SetActiveSubMeshes(bool state); // 0x0000000183E996F0-0x0000000183E997B0
+		protected override void DestroySubMeshObjects(); // 0x000000018B302314-0x000000018B3023D4
+		protected override Bounds GetCompoundBounds(); // 0x000000018323FC30-0x000000018323FF50
+		internal override Rect GetCanvasSpaceClippingRect(); // 0x000000018323F6B0-0x000000018323FB20
+		private void UpdateSDFScale(float scaleDelta); // 0x00000001831CC750-0x00000001831CC8E0
 	}
 
-	public enum Compute_DistanceTransform_EventTypes // TypeDefIndex: 53096
+	public enum Compute_DistanceTransform_EventTypes // TypeDefIndex: 55581
 	{
 		Processing = 0,
 		Completed = 1
 	}
 
-	public static class TMPro_EventManager // TypeDefIndex: 53097
+	public static class TMPro_EventManager // TypeDefIndex: 55582
 	{
 		// Fields
 		public static readonly FastAction<object, Compute_DT_EventArgs> COMPUTE_DT_EVENT; // 0x00
@@ -599,24 +614,24 @@ namespace TMPro
 		public static readonly FastAction<UnityEngine.Object> TEXT_CHANGED_EVENT; // 0x58
 	
 		// Constructors
-		static TMPro_EventManager() {} // 0x000000018594A330-0x000000018594A7B0
+		static TMPro_EventManager(); // 0x000000018478E7A0-0x000000018478EC20
 	
 		// Methods
-		public static void ON_MATERIAL_PROPERTY_CHANGED(bool isChanged, Material mat) {} // 0x000000018BE14F14-0x000000018BE14F94
-		public static void ON_FONT_PROPERTY_CHANGED(bool isChanged, UnityEngine.Object obj) {} // 0x000000018BE14E94-0x000000018BE14F14
-		public static void ON_SPRITE_ASSET_PROPERTY_CHANGED(bool isChanged, UnityEngine.Object obj) {} // 0x000000018BE14FE8-0x000000018BE15068
-		public static void ON_TEXTMESHPRO_PROPERTY_CHANGED(bool isChanged, UnityEngine.Object obj) {} // 0x000000018BE15068-0x000000018BE150E8
-		public static void ON_DRAG_AND_DROP_MATERIAL_CHANGED(GameObject sender, Material currentMaterial, Material newMaterial) {} // 0x000000018BE14E00-0x000000018BE14E94
-		public static void ON_TEXT_STYLE_PROPERTY_CHANGED(bool isChanged) {} // 0x000000018BE15168-0x000000018BE151D4
-		public static void ON_COLOR_GRADIENT_PROPERTY_CHANGED(UnityEngine.Object obj) {} // 0x000000018BE14D14-0x000000018BE14D84
-		public static void ON_TEXT_CHANGED(UnityEngine.Object obj) {} // 0x000000018514C8C0-0x000000018514C940
-		public static void ON_TMP_SETTINGS_CHANGED() {} // 0x000000018BE151D4-0x000000018BE15228
-		public static void ON_RESOURCES_LOADED() {} // 0x000000018BE14F94-0x000000018BE14FE8
-		public static void ON_TEXTMESHPRO_UGUI_PROPERTY_CHANGED(bool isChanged, UnityEngine.Object obj) {} // 0x000000018BE150E8-0x000000018BE15168
-		public static void ON_COMPUTE_DT_EVENT(object Sender, Compute_DT_EventArgs e) {} // 0x000000018BE14D84-0x000000018BE14E00
+		public static void ON_MATERIAL_PROPERTY_CHANGED(bool isChanged, Material mat); // 0x000000018B31923C-0x000000018B3192BC
+		public static void ON_FONT_PROPERTY_CHANGED(bool isChanged, UnityEngine.Object obj); // 0x000000018B3191BC-0x000000018B31923C
+		public static void ON_SPRITE_ASSET_PROPERTY_CHANGED(bool isChanged, UnityEngine.Object obj); // 0x000000018B319310-0x000000018B319390
+		public static void ON_TEXTMESHPRO_PROPERTY_CHANGED(bool isChanged, UnityEngine.Object obj); // 0x000000018B319390-0x000000018B319410
+		public static void ON_DRAG_AND_DROP_MATERIAL_CHANGED(GameObject sender, Material currentMaterial, Material newMaterial); // 0x000000018B319128-0x000000018B3191BC
+		public static void ON_TEXT_STYLE_PROPERTY_CHANGED(bool isChanged); // 0x000000018B319490-0x000000018B3194FC
+		public static void ON_COLOR_GRADIENT_PROPERTY_CHANGED(UnityEngine.Object obj); // 0x000000018B31903C-0x000000018B3190AC
+		public static void ON_TEXT_CHANGED(UnityEngine.Object obj); // 0x00000001840736F0-0x0000000184073750
+		public static void ON_TMP_SETTINGS_CHANGED(); // 0x000000018B3194FC-0x000000018B319550
+		public static void ON_RESOURCES_LOADED(); // 0x000000018B3192BC-0x000000018B319310
+		public static void ON_TEXTMESHPRO_UGUI_PROPERTY_CHANGED(bool isChanged, UnityEngine.Object obj); // 0x000000018B319410-0x000000018B319490
+		public static void ON_COMPUTE_DT_EVENT(object Sender, Compute_DT_EventArgs e); // 0x000000018B3190AC-0x000000018B319128
 	}
 
-	public class Compute_DT_EventArgs // TypeDefIndex: 53098
+	public class Compute_DT_EventArgs // TypeDefIndex: 55583
 	{
 		// Fields
 		public Compute_DistanceTransform_EventTypes EventType; // 0x10
@@ -624,54 +639,53 @@ namespace TMPro
 		public UnityEngine.Color[] Colors; // 0x18
 	
 		// Constructors
-		public Compute_DT_EventArgs() {} // Dummy constructor
-		public Compute_DT_EventArgs(Compute_DistanceTransform_EventTypes type, float progress) {} // 0x0000000185FE5880-0x0000000185FE5890
-		public Compute_DT_EventArgs(Compute_DistanceTransform_EventTypes type, UnityEngine.Color[] colors) {} // 0x000000018646E950-0x000000018646E960
+		public Compute_DT_EventArgs(Compute_DistanceTransform_EventTypes type, float progress); // 0x0000000184DB9A90-0x0000000184DB9AA0
+		public Compute_DT_EventArgs(Compute_DistanceTransform_EventTypes type, UnityEngine.Color[] colors); // 0x0000000185391D70-0x0000000185391D80
 	}
 
-	public static class TMPro_ExtensionMethods // TypeDefIndex: 53099
+	public static class TMPro_ExtensionMethods // TypeDefIndex: 55584
 	{
-		// Methods
-		public static int[] ToIntArray(string text) => default; // 0x000000018BE157D8-0x000000018BE15868
-		public static string ArrayToString(char[] chars) => default; // 0x000000018BE15228-0x000000018BE152EC
-		public static string IntToString(int[] unicodes) => default; // 0x000000018BE1549C-0x000000018BE1551C
-		internal static string UintToString(List<uint> unicodes) => default; // 0x000000018BE15868-0x000000018BE15918
-		public static string IntToString(int[] unicodes, int start, int length) => default; // 0x000000018BE1551C-0x000000018BE155F0
-		public static int FindInstanceID<T>(List<T> list, T target)
-			where T : UnityEngine.Object => default;
-		public static bool Compare(Color32 a, Color32 b) => default; // 0x000000018BE15310-0x000000018BE15348
-		public static bool CompareRGB(Color32 a, Color32 b) => default; // 0x000000018BE152EC-0x000000018BE15310
-		public static bool Compare(UnityEngine.Color a, UnityEngine.Color b) => default; // 0x0000000184A6EB60-0x0000000184A6EBA0
-		public static bool CompareRGB(UnityEngine.Color a, UnityEngine.Color b) => default; // 0x00000001843884A0-0x00000001843884D0
-		public static Color32 Multiply(Color32 c1, Color32 c2) => default; // 0x000000018BE15618-0x000000018BE156F8
-		public static Color32 Tint(Color32 c1, Color32 c2) => default; // 0x000000018BE15618-0x000000018BE156F8
-		public static Color32 Tint(Color32 c1, float tint) => default; // 0x000000018BE156F8-0x000000018BE157D8
-		public static UnityEngine.Color MinAlpha(UnityEngine.Color c1, UnityEngine.Color c2) => default; // 0x000000018BE155F0-0x000000018BE15618
-		public static bool Compare(Vector3 v1, Vector3 v2, int accuracy) => default; // 0x000000018BE1540C-0x000000018BE1549C
-		public static bool Compare(Quaternion q1, Quaternion q2, int accuracy) => default; // 0x000000018BE15348-0x000000018BE1540C
+		// Extension methods
+		public static int[] ToIntArray(this string text); // 0x000000018B319AC8-0x000000018B319B58
+		public static string ArrayToString(this char[] chars); // 0x000000018B319550-0x000000018B319614
+		public static string IntToString(this int[] unicodes); // 0x000000018B31978C-0x000000018B31980C
+		internal static string UintToString(this List<uint> unicodes); // 0x000000018B319B58-0x000000018B319C08
+		public static string IntToString(this int[] unicodes, int start, int length); // 0x000000018B31980C-0x000000018B3198E0
+		public static int FindInstanceID<T>(this List<T> list, T target)
+			where T : UnityEngine.Object;
+		public static bool Compare(this Color32 a, Color32 b); // 0x0000000184D333E0-0x0000000184D33420
+		public static bool CompareRGB(this Color32 a, Color32 b); // 0x000000018B319614-0x000000018B319638
+		public static bool Compare(this UnityEngine.Color a, UnityEngine.Color b); // 0x000000018415FC30-0x000000018415FC70
+		public static bool CompareRGB(this UnityEngine.Color a, UnityEngine.Color b); // 0x00000001830F9620-0x00000001830F9650
+		public static Color32 Multiply(this Color32 c1, Color32 c2); // 0x000000018B319908-0x000000018B3199E8
+		public static Color32 Tint(this Color32 c1, Color32 c2); // 0x000000018B319908-0x000000018B3199E8
+		public static Color32 Tint(this Color32 c1, float tint); // 0x000000018B3199E8-0x000000018B319AC8
+		public static UnityEngine.Color MinAlpha(this UnityEngine.Color c1, UnityEngine.Color c2); // 0x000000018B3198E0-0x000000018B319908
+		public static bool Compare(this Vector3 v1, Vector3 v2, int accuracy); // 0x000000018B3196FC-0x000000018B31978C
+		public static bool Compare(this Quaternion q1, Quaternion q2, int accuracy); // 0x000000018B319638-0x000000018B3196FC
 	}
 
-	public static class TMP_Math // TypeDefIndex: 53100
+	public static class TMP_Math // TypeDefIndex: 55585
 	{
 		// Fields
-		public const float FLOAT_MAX = 32767f; // Metadata: 0x02077A9A
-		public const float FLOAT_MIN = -32767f; // Metadata: 0x02077A9E
-		public const int INT_MAX = 2147483647; // Metadata: 0x02077AA2
-		public const int INT_MIN = -2147483647; // Metadata: 0x02077AA3
-		public const float FLOAT_UNSET = -32767f; // Metadata: 0x02077AA8
-		public const int INT_UNSET = -32767; // Metadata: 0x02077AAC
+		public const float FLOAT_MAX = 32767f; // Metadata: 0x0234709C
+		public const float FLOAT_MIN = -32767f; // Metadata: 0x023470A0
+		public const int INT_MAX = 2147483647; // Metadata: 0x023470A4
+		public const int INT_MIN = -2147483647; // Metadata: 0x023470A5
+		public const float FLOAT_UNSET = -32767f; // Metadata: 0x023470AA
+		public const int INT_UNSET = -32767; // Metadata: 0x023470AE
 		public static Vector2 MAX_16BIT; // 0x00
 		public static Vector2 MIN_16BIT; // 0x08
 	
 		// Constructors
-		static TMP_Math() {} // 0x000000018BE14980-0x000000018BE149DC
+		static TMP_Math(); // 0x000000018B318CC4-0x000000018B318D20
 	
 		// Methods
-		public static bool Approximately(float a, float b) => default; // 0x000000018BE14944-0x000000018BE14968
-		public static int Mod(int a, int b) => default; // 0x000000018BE14968-0x000000018BE14980
+		public static bool Approximately(float a, float b); // 0x000000018B318C88-0x000000018B318CAC
+		public static int Mod(int a, int b); // 0x000000018B318CAC-0x000000018B318CC4
 	}
 
-	public enum TMP_VertexDataUpdateFlags // TypeDefIndex: 53101
+	public enum TMP_VertexDataUpdateFlags // TypeDefIndex: 55586
 	{
 		None = 0,
 		Vertices = 1,
@@ -683,7 +697,7 @@ namespace TMPro
 	}
 
 	[Serializable]
-	public struct VertexGradient // TypeDefIndex: 53102
+	public struct VertexGradient // TypeDefIndex: 55587
 	{
 		// Fields
 		public UnityEngine.Color topLeft; // 0x00
@@ -692,21 +706,11 @@ namespace TMPro
 		public UnityEngine.Color bottomRight; // 0x30
 	
 		// Constructors
-		public VertexGradient(UnityEngine.Color color) {
-			topLeft = default;
-			topRight = default;
-			bottomLeft = default;
-			bottomRight = default;
-		} // 0x0000000185FE5A40-0x0000000185FE5A60
-		public VertexGradient(UnityEngine.Color color0, UnityEngine.Color color1, UnityEngine.Color color2, UnityEngine.Color color3) {
-			topLeft = default;
-			topRight = default;
-			bottomLeft = default;
-			bottomRight = default;
-		} // 0x0000000185FDF130-0x0000000185FDF160
+		public VertexGradient(UnityEngine.Color color); // 0x0000000184DB9C80-0x0000000184DB9CA0
+		public VertexGradient(UnityEngine.Color color0, UnityEngine.Color color1, UnityEngine.Color color2, UnityEngine.Color color3); // 0x0000000184DB3220-0x0000000184DB3250
 	}
 
-	public struct TMP_PageInfo // TypeDefIndex: 53103
+	public struct TMP_PageInfo // TypeDefIndex: 55588
 	{
 		// Fields
 		public int firstCharacterIndex; // 0x00
@@ -716,7 +720,7 @@ namespace TMPro
 		public float descender; // 0x10
 	}
 
-	public struct TMP_LinkInfo // TypeDefIndex: 53104
+	public struct TMP_LinkInfo // TypeDefIndex: 55589
 	{
 		// Fields
 		public TMP_Text textComponent; // 0x00
@@ -728,12 +732,12 @@ namespace TMPro
 		internal char[] linkID; // 0x20
 	
 		// Methods
-		internal void SetLinkID(char[] text, int startIndex, int length) {} // 0x000000018BE14880-0x000000018BE14944
-		public string GetLinkText() => default; // 0x000000018BE147A0-0x000000018BE14880
-		public string GetLinkID() => default; // 0x000000018BE14714-0x000000018BE147A0
+		internal void SetLinkID(char[] text, int startIndex, int length); // 0x000000018B318BC4-0x000000018B318C88
+		public string GetLinkText(); // 0x000000018B318AE4-0x000000018B318BC4
+		public string GetLinkID(); // 0x000000018B318A58-0x000000018B318AE4
 	}
 
-	public struct TMP_WordInfo // TypeDefIndex: 53105
+	public struct TMP_WordInfo // TypeDefIndex: 55590
 	{
 		// Fields
 		public TMP_Text textComponent; // 0x00
@@ -742,10 +746,10 @@ namespace TMPro
 		public int characterCount; // 0x10
 	
 		// Methods
-		public string GetWord() => default; // 0x000000018BE14C30-0x000000018BE14D14
+		public string GetWord(); // 0x000000018B318F58-0x000000018B31903C
 	}
 
-	public struct TMP_SpriteInfo // TypeDefIndex: 53106
+	public struct TMP_SpriteInfo // TypeDefIndex: 55591
 	{
 		// Fields
 		public int spriteIndex; // 0x00
@@ -753,7 +757,7 @@ namespace TMPro
 		public int vertexIndex; // 0x08
 	}
 
-	public struct Extents // TypeDefIndex: 53107
+	public struct Extents // TypeDefIndex: 55592
 	{
 		// Fields
 		internal static Extents zero; // 0x00
@@ -762,37 +766,28 @@ namespace TMPro
 		public Vector2 max; // 0x08
 	
 		// Constructors
-		public Extents(Vector2 min, Vector2 max) {
-			this.min = default;
-			this.max = default;
-		} // 0x0000000183680100-0x0000000183680110
-		static Extents() {
-			zero = default;
-			uninitialized = default;
-		} // 0x000000018BE086DC-0x000000018BE08734
+		public Extents(Vector2 min, Vector2 max); // 0x0000000184D861B0-0x0000000184D861C0
+		static Extents(); // 0x000000018B30BBB0-0x000000018B30BC08
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018BE08558-0x000000018BE086DC
+		public override string ToString(); // 0x000000018B30BA2C-0x000000018B30BBB0
 	}
 
 	[Serializable]
-	public struct Mesh_Extents // TypeDefIndex: 53108
+	public struct Mesh_Extents // TypeDefIndex: 55593
 	{
 		// Fields
 		public Vector2 min; // 0x00
 		public Vector2 max; // 0x08
 	
 		// Constructors
-		public Mesh_Extents(Vector2 min, Vector2 max) {
-			this.min = default;
-			this.max = default;
-		} // 0x0000000183680100-0x0000000183680110
+		public Mesh_Extents(Vector2 min, Vector2 max); // 0x0000000184D861B0-0x0000000184D861C0
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018BE09314-0x000000018BE09498
+		public override string ToString(); // 0x000000018B30C7E8-0x000000018B30C96C
 	}
 
-	public struct WordWrapState // TypeDefIndex: 53109
+	public struct WordWrapState // TypeDefIndex: 55594
 	{
 		// Fields
 		public int previous_WordBreak; // 0x00
@@ -864,7 +859,7 @@ namespace TMPro
 		public bool isNonBreakingSpace; // 0x395
 	}
 
-	public struct TagAttribute // TypeDefIndex: 53110
+	public struct TagAttribute // TypeDefIndex: 55595
 	{
 		// Fields
 		public int startIndex; // 0x00
@@ -872,7 +867,7 @@ namespace TMPro
 		public int hashCode; // 0x08
 	}
 
-	public struct RichTextTagAttribute // TypeDefIndex: 53111
+	public struct RichTextTagAttribute // TypeDefIndex: 55596
 	{
 		// Fields
 		public int nameHashCode; // 0x00
@@ -883,7 +878,7 @@ namespace TMPro
 		public TagUnitType unitType; // 0x14
 	}
 
-	internal class TMP_ArrayObjectPool<T> // TypeDefIndex: 53113
+	internal class TMP_ArrayObjectPool<T> // TypeDefIndex: 55598
 	{
 		// Fields
 		private readonly Dictionary<int, Stack<T[]>> m_StackDic;
@@ -891,15 +886,17 @@ namespace TMPro
 		private readonly UnityAction<T[]> m_ActionOnRelease;
 		private readonly PoolOptions m_Options;
 		private int m_TotalCachedCount;
+		[CompilerGenerated]
 		private int _countAll_k__BackingField;
 	
 		// Properties
-		public int countAll { get; private set; }
-		public int countActive { get => default; }
-		public int countInactive { get => default; }
+		public int countAll { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public int countActive { get; }
+		public int countInactive { get; }
 	
 		// Nested types
-		internal struct PoolOptions // TypeDefIndex: 53112
+		[IsReadOnly]
+		internal struct PoolOptions // TypeDefIndex: 55597
 		{
 			// Fields
 			public static readonly PoolOptions<T> Default;
@@ -908,28 +905,21 @@ namespace TMPro
 			public readonly int maxTotalCachedCount;
 	
 			// Constructors
-			public PoolOptions(bool restrictArraySize, IReadOnlyList<int> allowedSizes, int maxTotalCachedCount) {
-				this.restrictArraySize = default;
-				this.allowedSizes = default;
-				this.maxTotalCachedCount = default;
-			}
-			static PoolOptions() {
-				Default = default;
-			}
+			public PoolOptions(bool restrictArraySize, IReadOnlyList<int> allowedSizes, int maxTotalCachedCount);
+			static PoolOptions();
 		}
 	
 		// Constructors
-		public TMP_ArrayObjectPool() {} // Dummy constructor
-		public TMP_ArrayObjectPool(UnityAction<T[]> actionOnGet, UnityAction<T[]> actionOnRelease, PoolOptions options = default) {}
+		public TMP_ArrayObjectPool(UnityAction<T[]> actionOnGet, UnityAction<T[]> actionOnRelease, PoolOptions options = default);
 	
 		// Methods
-		public T[] Get(int count) => default;
-		public void Release(int count, T[] element) {}
-		public void Shrink() {}
-		private bool _CanUsePool(int count) => default;
+		public T[] Get(int count);
+		public void Release(int count, T[] element);
+		public void Shrink();
+		private bool _CanUsePool(int count);
 	}
 
-	internal static class TMP_ArrayPool<T> // TypeDefIndex: 53115
+	internal static class TMP_ArrayPool<T> // TypeDefIndex: 55600
 	{
 		// Fields
 		private static readonly TMP_ArrayObjectPool<T> s_ArrayPool;
@@ -937,66 +927,67 @@ namespace TMPro
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 53114
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55599
 		{
 			// Fields
 			public static readonly __c<T> __9;
 	
 			// Constructors
-			static __c() {}
-			public __c() {}
+			static __c();
+			public __c();
 	
 			// Methods
-			internal void _.cctor_b__2_0(T[] arr) {}
+			internal void _.cctor_b__2_0(T[] arr);
 		}
 	
 		// Constructors
-		static TMP_ArrayPool() {}
+		static TMP_ArrayPool();
 	
 		// Methods
-		private static TMP_ArrayObjectPool<T> _CreateOptions() => default;
-		public static T[] Get(int count) => default;
-		public static void Release(T[] toRelease) {}
-		public static void Resize(ref ref T[] array, int newCount) {}
-		public static void Shrink() {}
+		private static TMP_ArrayObjectPool<T> _CreateOptions();
+		public static T[] Get(int count);
+		public static void Release(T[] toRelease);
+		public static void Resize(ref ref T[] array, int newCount);
+		public static void Shrink();
 	}
 
-	public interface IPoolClearable // TypeDefIndex: 53116
+	public interface IPoolClearable // TypeDefIndex: 55601
 	{
 		// Methods
 		void Clear();
 	}
 
-	internal interface ITMPArrayPoolRegistryItem // TypeDefIndex: 53117
+	internal interface ITMPArrayPoolRegistryItem // TypeDefIndex: 55602
 	{
 		// Methods
 		void Shrink();
 	}
 
-	public static class TMP_ArrayPoolRegistry // TypeDefIndex: 53118
+	public static class TMP_ArrayPoolRegistry // TypeDefIndex: 55603
 	{
 		// Fields
 		private static readonly List<ITMPArrayPoolRegistryItem> registeredPools; // 0x00
 	
 		// Constructors
-		static TMP_ArrayPoolRegistry() {} // 0x0000000183F795C0-0x0000000183F79E80
+		static TMP_ArrayPoolRegistry(); // 0x0000000184D16B00-0x0000000184D16B90
 	
 		// Methods
-		internal static void Register(ITMPArrayPoolRegistryItem pool) {} // 0x0000000183F78410-0x0000000183F78CE0
-		public static void ShrinkAll() {} // 0x0000000183F78CE0-0x0000000183F795C0
+		internal static void Register(ITMPArrayPoolRegistryItem pool); // 0x0000000184390C40-0x0000000184390D20
+		public static void ShrinkAll(); // 0x000000018458CE10-0x000000018458CF30
 	}
 
-	internal class TMP_ArrayPoolWrapper<T> : ITMPArrayPoolRegistryItem // TypeDefIndex: 53119
+	internal class TMP_ArrayPoolWrapper<T> : ITMPArrayPoolRegistryItem // TypeDefIndex: 55604
 	{
 		// Constructors
-		public TMP_ArrayPoolWrapper() {}
+		public TMP_ArrayPoolWrapper();
 	
 		// Methods
-		public void Shrink() {}
+		public void Shrink();
 	}
 
 	[Serializable]
-	public abstract class TMP_Asset : ScriptableObject // TypeDefIndex: 53120
+	public abstract class TMP_Asset : ScriptableObject // TypeDefIndex: 55605
 	{
 		// Fields
 		private int m_InstanceID; // 0x18
@@ -1005,23 +996,23 @@ namespace TMPro
 		public int materialHashCode; // 0x28
 	
 		// Properties
-		public int instanceID { get; } // 0x00000001842B3EF0-0x00000001842B3F20 
+		public int instanceID { get; } // 0x000000018333E5E0-0x000000018333E610 
 	
 		// Constructors
-		protected TMP_Asset() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		protected TMP_Asset(); // 0x0000000183573370-0x0000000183573380
 	}
 
 	[Serializable]
-	public class TMP_Character : TMP_TextElement // TypeDefIndex: 53121
+	public class TMP_Character : TMP_TextElement // TypeDefIndex: 55606
 	{
 		// Constructors
-		public TMP_Character() {} // 0x0000000185FE5930-0x0000000185FE5940
-		public TMP_Character(uint unicode, Glyph glyph) {} // 0x000000018BE09550-0x000000018BE0959C
-		public TMP_Character(uint unicode, TMP_FontAsset fontAsset, Glyph glyph) {} // 0x0000000184012AA0-0x0000000184012AF0
-		internal TMP_Character(uint unicode, uint glyphIndex) {} // 0x000000018BE09510-0x000000018BE09550
+		public TMP_Character(); // 0x0000000184DB9B40-0x0000000184DB9B50
+		public TMP_Character(uint unicode, Glyph glyph); // 0x000000018B30CA24-0x000000018B30CA70
+		public TMP_Character(uint unicode, TMP_FontAsset fontAsset, Glyph glyph); // 0x000000018393F5A0-0x000000018393F5F0
+		internal TMP_Character(uint unicode, uint glyphIndex); // 0x000000018B30C9E4-0x000000018B30CA24
 	}
 
-	public struct TMP_Vertex // TypeDefIndex: 53122
+	public struct TMP_Vertex // TypeDefIndex: 55607
 	{
 		// Fields
 		public Vector3 position; // 0x00
@@ -1032,15 +1023,13 @@ namespace TMPro
 		private static readonly TMP_Vertex k_Zero; // 0x00
 	
 		// Properties
-		public static TMP_Vertex zero { get => default; } // 0x000000018BE14BD0-0x000000018BE14C30 
+		public static TMP_Vertex zero { get; } // 0x000000018B318EF8-0x000000018B318F58 
 	
 		// Constructors
-		static TMP_Vertex() {
-			k_Zero = default;
-		} // 0x0000000185492010-0x0000000185492020
+		static TMP_Vertex(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public struct TMP_Offset // TypeDefIndex: 53123
+	public struct TMP_Offset // TypeDefIndex: 55608
 	{
 		// Fields
 		private float m_Left; // 0x00
@@ -1050,61 +1039,47 @@ namespace TMPro
 		private static readonly TMP_Offset k_ZeroOffset; // 0x00
 	
 		// Properties
-		public float left { get => default; set {} } // 0x0000000185FB0F90-0x0000000185FB0FA0 0x0000000185FBA160-0x0000000185FBA170
-		public float right { get => default; set {} } // 0x0000000185FBA150-0x0000000185FBA160 0x0000000185FBA180-0x0000000185FBA190
-		public float top { get => default; set {} } // 0x0000000185FBA140-0x0000000185FBA150 0x0000000185FBA170-0x0000000185FBA180
-		public float bottom { get => default; set {} } // 0x0000000185FBF760-0x0000000185FBF770 0x0000000185FBF770-0x0000000185FBF780
-		public float horizontal { get => default; set {} } // 0x0000000185FB0F90-0x0000000185FB0FA0 0x0000000185FE0550-0x0000000185FE0560
-		public float vertical { get => default; set {} } // 0x0000000185FBA140-0x0000000185FBA150 0x0000000185FE5A30-0x0000000185FE5A40
-		public static TMP_Offset zero { get => default; } // 0x000000018BE14B08-0x000000018BE14B64 
+		public float left { get; set; } // 0x0000000184D871D0-0x0000000184D871E0 0x0000000184D932C0-0x0000000184D932D0
+		public float right { get; set; } // 0x0000000184D9C560-0x0000000184D9C570 0x0000000184DAB920-0x0000000184DAB930
+		public float top { get; set; } // 0x0000000184D9C280-0x0000000184D9C290 0x0000000184DAC1D0-0x0000000184DAC1E0
+		public float bottom { get; set; } // 0x0000000184D9CC80-0x0000000184D9CC90 0x0000000184DACD70-0x0000000184DACD80
+		public float horizontal { get; set; } // 0x0000000184D871D0-0x0000000184D871E0 0x0000000184DB4640-0x0000000184DB4650
+		public float vertical { get; set; } // 0x0000000184D9C280-0x0000000184D9C290 0x0000000184DB9C70-0x0000000184DB9C80
+		public static TMP_Offset zero { get; } // 0x000000018B318E4C-0x000000018B318E8C 
 	
 		// Constructors
-		public TMP_Offset(float left, float right, float top, float bottom) : this() {
-			m_Left = default;
-			m_Right = default;
-			m_Top = default;
-			m_Bottom = default;
-		} // 0x0000000185FB2B40-0x0000000185FB2B60
-		public TMP_Offset(float horizontal, float vertical) : this() {
-			m_Left = default;
-			m_Right = default;
-			m_Top = default;
-			m_Bottom = default;
-		} // 0x0000000185FE5A10-0x0000000185FE5A30
-		static TMP_Offset() {
-			k_ZeroOffset = default;
-		} // 0x0000000185F9B5F0-0x0000000185F9B630
+		public TMP_Offset(float left, float right, float top, float bottom); // 0x0000000184D88AD0-0x0000000184D88AF0
+		public TMP_Offset(float horizontal, float vertical); // 0x0000000184DB9C50-0x0000000184DB9C70
+		static TMP_Offset(); // 0x0000000184D6F380-0x0000000184D6F3C0
 	
 		// Methods
-		public static bool operator ==(TMP_Offset lhs, TMP_Offset rhs) => default; // 0x0000000184A6EB60-0x0000000184A6EBA0
-		public static bool operator !=(TMP_Offset lhs, TMP_Offset rhs) => default; // 0x000000018BE14B64-0x000000018BE14BD0
-		public static TMP_Offset operator *(TMP_Offset a, float b) => default; // 0x00000001840DD310-0x00000001840DD330
-		public override int GetHashCode() => default; // 0x000000018BE14AB8-0x000000018BE14B08
-		public override bool Equals(object obj) => default; // 0x000000018BE14A58-0x000000018BE14AB8
-		public bool Equals(TMP_Offset other) => default; // 0x000000018BE149DC-0x000000018BE14A58
+		public static bool operator ==(TMP_Offset lhs, TMP_Offset rhs); // 0x000000018415FC30-0x000000018415FC70
+		public static bool operator !=(TMP_Offset lhs, TMP_Offset rhs); // 0x000000018B318E8C-0x000000018B318EF8
+		public static TMP_Offset operator *(TMP_Offset a, float b); // 0x000000018308B480-0x000000018308B4A0
+		public override int GetHashCode(); // 0x000000018B318DFC-0x000000018B318E4C
+		public override bool Equals(object obj); // 0x000000018B318D9C-0x000000018B318DFC
+		public bool Equals(TMP_Offset other); // 0x000000018B318D20-0x000000018B318D9C
 	}
 
-	public struct HighlightState // TypeDefIndex: 53124
+	public struct HighlightState // TypeDefIndex: 55609
 	{
 		// Fields
 		public Color32 color; // 0x00
 		public TMP_Offset padding; // 0x04
 	
 		// Constructors
-		public HighlightState(Color32 color, TMP_Offset padding) {
-			this.color = default;
-			this.padding = default;
-		} // 0x0000000185FC8390-0x0000000185FC83A0
+		public HighlightState(Color32 color, TMP_Offset padding); // 0x0000000184D9C150-0x0000000184D9C160
 	
 		// Methods
-		public static bool operator ==(HighlightState lhs, HighlightState rhs) => default; // 0x000000018BE08AB8-0x000000018BE08B7C
-		public static bool operator !=(HighlightState lhs, HighlightState rhs) => default; // 0x000000018BE08B7C-0x000000018BE08BB8
-		public override int GetHashCode() => default; // 0x000000018BE08A64-0x000000018BE08AB8
-		public override bool Equals(object obj) => default; // 0x000000018BE08978-0x000000018BE089DC
-		public bool Equals(HighlightState other) => default; // 0x000000018BE089DC-0x000000018BE08A64
+		public static bool operator ==(HighlightState lhs, HighlightState rhs); // 0x000000018B30BF8C-0x000000018B30C050
+		public static bool operator !=(HighlightState lhs, HighlightState rhs); // 0x000000018B30C050-0x000000018B30C08C
+		public override int GetHashCode(); // 0x000000018B30BF38-0x000000018B30BF8C
+		public override bool Equals(object obj); // 0x000000018B30BE4C-0x000000018B30BEB0
+		public bool Equals(HighlightState other); // 0x000000018B30BEB0-0x000000018B30BF38
 	}
 
-	public struct TMP_CharacterInfo : IPoolClearable // TypeDefIndex: 53125
+	[DebuggerDisplay("Unicode \'{character}\'  ({((uint)character).ToString(\"X\")})")]
+	public struct TMP_CharacterInfo : IPoolClearable // TypeDefIndex: 55610
 	{
 		// Fields
 		public char character; // 0x00
@@ -1150,10 +1125,10 @@ namespace TMPro
 		public bool isVisible; // 0x174
 	
 		// Methods
-		public void Clear() {} // 0x0000000184244BA0-0x0000000184244BF0
+		public void Clear(); // 0x0000000183518F50-0x00000001835190A0
 	}
 
-	public enum ColorMode // TypeDefIndex: 53126
+	public enum ColorMode // TypeDefIndex: 55611
 	{
 		Single = 0,
 		HorizontalGradient = 1,
@@ -1162,7 +1137,8 @@ namespace TMPro
 	}
 
 	[Serializable]
-	public class TMP_ColorGradient : ScriptableObject // TypeDefIndex: 53127
+	[ExcludeFromPreset]
+	public class TMP_ColorGradient : ScriptableObject // TypeDefIndex: 55612
 	{
 		// Fields
 		public ColorMode colorMode; // 0x18
@@ -1170,20 +1146,20 @@ namespace TMPro
 		public UnityEngine.Color topRight; // 0x2C
 		public UnityEngine.Color bottomLeft; // 0x3C
 		public UnityEngine.Color bottomRight; // 0x4C
-		private const ColorMode k_DefaultColorMode = ColorMode.FourCornersGradient; // Metadata: 0x02077ABC
+		private const ColorMode k_DefaultColorMode = ColorMode.FourCornersGradient; // Metadata: 0x023470BE
 		private static readonly UnityEngine.Color k_DefaultColor; // 0x00
 	
 		// Constructors
-		public TMP_ColorGradient() {} // 0x000000018BE095E0-0x000000018BE0968C
-		public TMP_ColorGradient(UnityEngine.Color color) {} // 0x000000018BE0968C-0x000000018BE096D0
-		public TMP_ColorGradient(UnityEngine.Color color0, UnityEngine.Color color1, UnityEngine.Color color2, UnityEngine.Color color3) {} // 0x000000018BE096D0-0x000000018BE09740
-		static TMP_ColorGradient() {} // 0x000000018BE0959C-0x000000018BE095E0
+		public TMP_ColorGradient(); // 0x000000018B30CAB4-0x000000018B30CB60
+		public TMP_ColorGradient(UnityEngine.Color color); // 0x000000018B30CB60-0x000000018B30CBA4
+		public TMP_ColorGradient(UnityEngine.Color color0, UnityEngine.Color color1, UnityEngine.Color color2, UnityEngine.Color color3); // 0x000000018B30CBA4-0x000000018B30CC14
+		static TMP_ColorGradient(); // 0x000000018B30CA70-0x000000018B30CAB4
 	}
 
-	public static class TMP_Compatibility // TypeDefIndex: 53129
+	public static class TMP_Compatibility // TypeDefIndex: 55614
 	{
 		// Nested types
-		public enum AnchorPositions // TypeDefIndex: 53128
+		public enum AnchorPositions // TypeDefIndex: 55613
 		{
 			TopLeft = 0,
 			Top = 1,
@@ -1199,10 +1175,10 @@ namespace TMPro
 		}
 	
 		// Methods
-		public static TextAlignmentOptions ConvertTextAlignmentEnumValues(TextAlignmentOptions oldValue) => default; // 0x000000018BE09740-0x000000018BE0985C
+		public static TextAlignmentOptions ConvertTextAlignmentEnumValues(TextAlignmentOptions oldValue); // 0x000000018B30CC14-0x000000018B30CD30
 	}
 
-	internal interface ITweenValue // TypeDefIndex: 53130
+	internal interface ITweenValue // TypeDefIndex: 55615
 	{
 		// Properties
 		bool ignoreTimeScale { get; }
@@ -1213,7 +1189,7 @@ namespace TMPro
 		bool ValidTarget();
 	}
 
-	internal struct ColorTween : ITweenValue // TypeDefIndex: 53133
+	internal struct ColorTween : ITweenValue // TypeDefIndex: 55618
 	{
 		// Fields
 		private ColorTweenCallback m_Target; // 0x00
@@ -1224,35 +1200,35 @@ namespace TMPro
 		private bool m_IgnoreTimeScale; // 0x30
 	
 		// Properties
-		public UnityEngine.Color startColor { get => default; set {} } // 0x0000000185FD13F0-0x0000000185FD1400 0x0000000185FB30D0-0x0000000185FB30E0
-		public UnityEngine.Color targetColor { get => default; set {} } // 0x0000000185FB30E0-0x0000000185FB30F0 0x0000000181C9AC80-0x0000000181C9AC90
-		public ColorTweenMode tweenMode { get => default; set {} } // 0x0000000181C9A5C0-0x0000000181C9A5D0 0x0000000185FB09A0-0x0000000185FB09B0
-		public float duration { get => default; set {} } // 0x0000000185FB09B0-0x0000000185FB09C0 0x00000001814294C0-0x00000001814294D0
-		public bool ignoreTimeScale { get => default; set {} } // 0x000000018142A360-0x000000018142A370 0x000000018BE08360-0x000000018BE08438
+		public UnityEngine.Color startColor { get; set; } // 0x00000001815AD730-0x00000001815AD740 0x0000000184DA4E20-0x0000000184DA4E30
+		public UnityEngine.Color targetColor { get; set; } // 0x0000000184D890C0-0x0000000184D890D0 0x0000000184D890D0-0x0000000184D890E0
+		public ColorTweenMode tweenMode { get; set; } // 0x00000001811F2A90-0x00000001811F2AA0 0x00000001811F2AA0-0x00000001811F2AB0
+		public float duration { get; set; } // 0x0000000184D86AF0-0x0000000184D86B00 0x0000000184D86B00-0x0000000184D86B10
+		public bool ignoreTimeScale { get; set; } // 0x0000000184D865F0-0x0000000184D86600 0x0000000184D86620-0x0000000184D86630
 	
 		// Nested types
-		public enum ColorTweenMode // TypeDefIndex: 53131
+		public enum ColorTweenMode // TypeDefIndex: 55616
 		{
 			All = 0,
 			RGB = 1,
 			Alpha = 2
 		}
 	
-		public class ColorTweenCallback : UnityEvent<UnityEngine.Color> // TypeDefIndex: 53132
+		public class ColorTweenCallback : UnityEvent<UnityEngine.Color> // TypeDefIndex: 55617
 		{
 			// Constructors
-			public ColorTweenCallback() {} // 0x0000000183577F20-0x0000000183577F30
+			public ColorTweenCallback(); // 0x000000018B30B760-0x000000018B30B79C
 		}
 	
 		// Methods
-		public void TweenValue(float floatPercentage) {} // 0x000000018BE082C8-0x000000018BE08360
-		public void AddOnChangedCallback(UnityAction<UnityEngine.Color> callback) {} // 0x00000001814294C0-0x00000001814294D0
-		public bool GetIgnoreTimescale() => default; // 0x0000000185FB09A0-0x0000000185FB09B0
-		public float GetDuration() => default; // 0x0000000183FB53F0-0x0000000183FB5400
-		public bool ValidTarget() => default; // 0x000000018BE0828C-0x000000018BE082C8
+		public void TweenValue(float floatPercentage); // 0x000000018B30B834-0x000000018B30B90C
+		public void AddOnChangedCallback(UnityAction<UnityEngine.Color> callback); // 0x000000018B30B79C-0x000000018B30B834
+		public bool GetIgnoreTimescale(); // 0x0000000184D865F0-0x0000000184D86600
+		public float GetDuration(); // 0x0000000184D86AF0-0x0000000184D86B00
+		public bool ValidTarget(); // 0x0000000183A7A090-0x0000000183A7A0A0
 	}
 
-	internal struct FloatTween : ITweenValue // TypeDefIndex: 53135
+	internal struct FloatTween : ITweenValue // TypeDefIndex: 55620
 	{
 		// Fields
 		private FloatTweenCallback m_Target; // 0x00
@@ -1262,27 +1238,27 @@ namespace TMPro
 		private bool m_IgnoreTimeScale; // 0x14
 	
 		// Properties
-		public float startValue { get => default; set {} } // 0x0000000185FBA170-0x0000000185FBA180 0x0000000185FBF760-0x0000000185FBF770
-		public float targetValue { get => default; set {} } // 0x0000000185FBF770-0x0000000185FBF780 0x0000000181DCCCE0-0x0000000181DCCCF0
-		public float duration { get => default; set {} } // 0x0000000181A6E380-0x0000000181A6E390 0x0000000185FBA190-0x0000000185FBA1A0
-		public bool ignoreTimeScale { get => default; set {} } // 0x0000000185FBA1B0-0x0000000185FBA1C0 0x000000018BE08808-0x000000018BE0886C
+		public float startValue { get; set; } // 0x0000000184D9C280-0x0000000184D9C290 0x0000000184DAC1D0-0x0000000184DAC1E0
+		public float targetValue { get; set; } // 0x0000000184D9CC80-0x0000000184D9CC90 0x0000000184DACD70-0x0000000184DACD80
+		public float duration { get; set; } // 0x0000000184D85F70-0x0000000184D85F80 0x0000000184D88280-0x0000000184D88290
+		public bool ignoreTimeScale { get; set; } // 0x0000000184D8EE50-0x0000000184D8EE60 0x0000000184D8EE70-0x0000000184D8EE80
 	
 		// Nested types
-		public class FloatTweenCallback : UnityEvent<float> // TypeDefIndex: 53134
+		public class FloatTweenCallback : UnityEvent<float> // TypeDefIndex: 55619
 		{
 			// Constructors
-			public FloatTweenCallback() {} // 0x0000000185FBA140-0x0000000185FBA150
+			public FloatTweenCallback(); // 0x000000018B30BC08-0x000000018B30BC44
 		}
 	
 		// Methods
-		public void TweenValue(float floatPercentage) {} // 0x000000018BE08770-0x000000018BE08808
-		public void AddOnChangedCallback(UnityAction<float> callback) {} // 0x0000000185FBA190-0x0000000185FBA1A0
-		public bool GetIgnoreTimescale() => default; // 0x0000000181DCCCE0-0x0000000181DCCCF0
-		public float GetDuration() => default; // 0x0000000183FB53F0-0x0000000183FB5400
-		public bool ValidTarget() => default; // 0x000000018BE08734-0x000000018BE08770
+		public void TweenValue(float floatPercentage); // 0x000000018B30BCDC-0x000000018B30BD40
+		public void AddOnChangedCallback(UnityAction<float> callback); // 0x000000018B30BC44-0x000000018B30BCDC
+		public bool GetIgnoreTimescale(); // 0x0000000184D8EE50-0x0000000184D8EE60
+		public float GetDuration(); // 0x0000000184D85F70-0x0000000184D85F80
+		public bool ValidTarget(); // 0x0000000183A7A090-0x0000000183A7A0A0
 	}
 
-	internal class TweenRunner<T> // TypeDefIndex: 53137
+	internal class TweenRunner<T> // TypeDefIndex: 55622
 		where T : struct, ITweenValue
 	{
 		// Fields
@@ -1290,7 +1266,8 @@ namespace TMPro
 		protected IEnumerator m_Tween;
 	
 		// Nested types
-		private sealed class _Start_d__2 : IEnumerator<object> // TypeDefIndex: 53136
+		[CompilerGenerated]
+		private sealed class _Start_d__2 : IEnumerator<object> // TypeDefIndex: 55621
 		{
 			// Fields
 			private int __1__state;
@@ -1299,35 +1276,38 @@ namespace TMPro
 			private float _elapsedTime_5__2;
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; }
-			object IEnumerator.Current { get => default; }
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; }
+			object IEnumerator.Current { [DebuggerHidden] get; }
 	
 			// Constructors
-			public _Start_d__2() {} // Dummy constructor
-			public _Start_d__2(int __1__state) {}
+			[DebuggerHidden]
+			public _Start_d__2(int __1__state);
 	
 			// Methods
-			void IDisposable.Dispose() {}
-			private bool MoveNext() => default;
-			void IEnumerator.Reset() {}
+			[DebuggerHidden]
+			void IDisposable.Dispose();
+			private bool MoveNext();
+			[DebuggerHidden]
+			void IEnumerator.Reset();
 		}
 	
 		// Constructors
-		public TweenRunner() {}
+		public TweenRunner();
 	
 		// Methods
-		private static IEnumerator Start(T tweenInfo) => default;
-		public void Init(MonoBehaviour coroutineContainer) {}
-		public void StartTween(T info) {}
-		public void StopTween() {}
+		[IteratorStateMachine(typeof(_Start_d__2))]
+		private static IEnumerator Start(T tweenInfo);
+		public void Init(MonoBehaviour coroutineContainer);
+		public void StartTween(T info);
+		public void StopTween();
 	}
 
-	public static class TMP_DefaultControls // TypeDefIndex: 53139
+	public static class TMP_DefaultControls // TypeDefIndex: 55624
 	{
 		// Fields
-		private const float kWidth = 160f; // Metadata: 0x02077ACB
-		private const float kThickHeight = 30f; // Metadata: 0x02077ACF
-		private const float kThinHeight = 20f; // Metadata: 0x02077AD3
+		private const float kWidth = 160f; // Metadata: 0x023470CD
+		private const float kThickHeight = 30f; // Metadata: 0x023470D1
+		private const float kThinHeight = 20f; // Metadata: 0x023470D5
 		private static Vector2 s_TextElementSize; // 0x00
 		private static Vector2 s_ThickElementSize; // 0x08
 		private static Vector2 s_ThinElementSize; // 0x10
@@ -1335,7 +1315,7 @@ namespace TMPro
 		private static UnityEngine.Color s_TextColor; // 0x28
 	
 		// Nested types
-		public struct Resources // TypeDefIndex: 53138
+		public struct Resources // TypeDefIndex: 55623
 		{
 			// Fields
 			public Sprite standard; // 0x00
@@ -1348,131 +1328,156 @@ namespace TMPro
 		}
 	
 		// Constructors
-		static TMP_DefaultControls() {} // 0x000000018BE0B54C-0x000000018BE0B5F4
+		static TMP_DefaultControls(); // 0x000000018B30EA20-0x000000018B30EAC8
 	
 		// Methods
-		private static GameObject CreateUIElementRoot(string name, Vector2 size) => default; // 0x000000018BE0B1A0-0x000000018BE0B240
-		private static GameObject CreateUIObject(string name, GameObject parent) => default; // 0x000000018BE0B240-0x000000018BE0B2F0
-		private static void SetDefaultTextValues(TMP_Text lbl) {} // 0x000000018BE0B340-0x000000018BE0B3C0
-		private static void SetDefaultColorTransitionValues(Selectable slider) {} // 0x000000018BE0B2F0-0x000000018BE0B340
-		private static void SetParentAndAlign(GameObject child, GameObject parent) {} // 0x000000018BE0B480-0x000000018BE0B54C
-		private static void SetLayerRecursively(GameObject go, int layer) {} // 0x000000018BE0B3C0-0x000000018BE0B480
-		public static GameObject CreateScrollbar(Resources resources) => default; // 0x000000018BE0AE28-0x000000018BE0B104
-		public static GameObject CreateButton(Resources resources) => default; // 0x000000018BE0985C-0x000000018BE09AD8
-		public static GameObject CreateText(Resources resources) => default; // 0x000000018BE0B104-0x000000018BE0B1A0
-		public static GameObject CreateInputField(Resources resources) => default; // 0x000000018BE0A880-0x000000018BE0AE28
-		public static GameObject CreateDropdown(Resources resources) => default; // 0x000000018BE09AD8-0x000000018BE0A880
+		private static GameObject CreateUIElementRoot(string name, Vector2 size); // 0x000000018B30E674-0x000000018B30E714
+		private static GameObject CreateUIObject(string name, GameObject parent); // 0x000000018B30E714-0x000000018B30E7C4
+		private static void SetDefaultTextValues(TMP_Text lbl); // 0x000000018B30E814-0x000000018B30E894
+		private static void SetDefaultColorTransitionValues(Selectable slider); // 0x000000018B30E7C4-0x000000018B30E814
+		private static void SetParentAndAlign(GameObject child, GameObject parent); // 0x000000018B30E954-0x000000018B30EA20
+		private static void SetLayerRecursively(GameObject go, int layer); // 0x000000018B30E894-0x000000018B30E954
+		public static GameObject CreateScrollbar(Resources resources); // 0x000000018B30E2FC-0x000000018B30E5D8
+		public static GameObject CreateButton(Resources resources); // 0x000000018B30CD30-0x000000018B30CFAC
+		public static GameObject CreateText(Resources resources); // 0x000000018B30E5D8-0x000000018B30E674
+		public static GameObject CreateInputField(Resources resources); // 0x000000018B30DD54-0x000000018B30E2FC
+		public static GameObject CreateDropdown(Resources resources); // 0x000000018B30CFAC-0x000000018B30DD54
 	}
 
-	public class TMP_Dropdown : Selectable, IPointerClickHandler, ISubmitHandler, ICancelHandler // TypeDefIndex: 53146
+	[AddComponentMenu("UI/Dropdown - TextMeshPro", 35)]
+	[RequireComponent(typeof(RectTransform))]
+	public class TMP_Dropdown : Selectable, IPointerClickHandler, ISubmitHandler, ICancelHandler // TypeDefIndex: 55631
 	{
 		// Fields
-		private RectTransform m_Template; // 0x180
-		private TMP_Text m_CaptionText; // 0x188
-		private Image m_CaptionImage; // 0x190
-		private Graphic m_Placeholder; // 0x198
-		private TMP_Text m_ItemText; // 0x1A0
-		private Image m_ItemImage; // 0x1A8
-		private int m_Value; // 0x1B0
-		private OptionDataList m_Options; // 0x1B8
-		private DropdownEvent m_OnValueChanged; // 0x1C0
-		private float m_AlphaFadeSpeed; // 0x1C8
-		private GameObject m_Dropdown; // 0x1D0
-		private GameObject m_Blocker; // 0x1D8
-		private List<DropdownItem> m_Items; // 0x1E0
-		private TweenRunner<FloatTween> m_AlphaTweenRunner; // 0x1E8
-		private bool validTemplate; // 0x1F0
-		private Coroutine m_Coroutine; // 0x1F8
+		[SerializeField]
+		private RectTransform m_Template; // 0x188
+		[SerializeField]
+		private TMP_Text m_CaptionText; // 0x190
+		[SerializeField]
+		private Image m_CaptionImage; // 0x198
+		[SerializeField]
+		private Graphic m_Placeholder; // 0x1A0
+		[SerializeField]
+		[Space]
+		private TMP_Text m_ItemText; // 0x1A8
+		[SerializeField]
+		private Image m_ItemImage; // 0x1B0
+		[SerializeField]
+		[Space]
+		private int m_Value; // 0x1B8
+		[SerializeField]
+		[Space]
+		private OptionDataList m_Options; // 0x1C0
+		[SerializeField]
+		[Space]
+		private DropdownEvent m_OnValueChanged; // 0x1C8
+		[SerializeField]
+		private float m_AlphaFadeSpeed; // 0x1D0
+		private GameObject m_Dropdown; // 0x1D8
+		private GameObject m_Blocker; // 0x1E0
+		private List<DropdownItem> m_Items; // 0x1E8
+		private TweenRunner<FloatTween> m_AlphaTweenRunner; // 0x1F0
+		private bool validTemplate; // 0x1F8
+		private Coroutine m_Coroutine; // 0x200
 		private static OptionData s_NoOptionData; // 0x00
 	
 		// Properties
-		public RectTransform template { get => default; set {} } // 0x000000018BE0BDB8-0x000000018BE0BE50 0x000000018BE0CCA0-0x000000018BE0D2A4
-		public TMP_Text captionText { get => default; set {} } // 0x000000018BE0C748-0x000000018BE0C750
-		public Image captionImage { get => default; set {} } // 0x000000018BE0C748-0x000000018BE0C750 0x000000018BE0C6AC-0x000000018BE0C6B4
-		public Graphic placeholder { get => default; set {} } // 0x000000018BE0D2A4-0x000000018BE0E07C 0x000000018BE0BE50-0x000000018BE0C284
-		public TMP_Text itemText { get => default; set {} } // 0x000000018BE0C398-0x000000018BE0C3E4 0x000000018BE0C284-0x000000018BE0C2D8
-		public Image itemImage { get => default; set {} } // 0x000000018BE0C3E4-0x000000018BE0C430 0x000000018BE0C2D8-0x000000018BE0C32C
-		public List<OptionData> options { get => default; set {} } // 0x0000000185492010-0x0000000185492020 0x000000018BE0B5F4-0x000000018BE0B880
-		public DropdownEvent onValueChanged { get => default; set {} } // 0x000000018BE0BC44-0x000000018BE0BCD0 0x000000018BE0BAC8-0x000000018BE0BC44
-		public float alphaFadeSpeed { get => default; set {} } // 0x000000018BE0CABC-0x000000018BE0CB5C 0x000000018BE0C430-0x000000018BE0C548
-		public int value { get => default; set {} } // 0x000000018BE0C32C-0x000000018BE0C398 0x000000018BE0C548-0x000000018BE0C6AC
-		public bool IsExpanded { get => default; } // 0x0000000181377E40-0x0000000181377E50 
+		public RectTransform template { get; set; } // 0x0000000184D8DA20-0x0000000184D8DA30 0x000000018B311974-0x000000018B31199C
+		public TMP_Text captionText { get; set; } // 0x0000000184D8DD50-0x0000000184D8DD60 0x000000018B3118A0-0x000000018B3118C8
+		public Image captionImage { get; set; } // 0x0000000184D8DED0-0x0000000184D8DEE0 0x000000018B311878-0x000000018B3118A0
+		public Graphic placeholder { get; set; } // 0x0000000184D8DA10-0x0000000184D8DA20 0x000000018B31194C-0x000000018B311974
+		public TMP_Text itemText { get; set; } // 0x0000000184D8D9C0-0x0000000184D8D9D0 0x000000018B3118F0-0x000000018B311918
+		public Image itemImage { get; set; } // 0x0000000184D8D960-0x0000000184D8D970 0x000000018B3118C8-0x000000018B3118F0
+		public List<OptionData> options { get; set; } // 0x000000018B311858-0x000000018B311878 0x000000018B311918-0x000000018B31194C
+		public DropdownEvent onValueChanged { get; set; } // 0x0000000184D8D790-0x0000000184D8D7A0 0x0000000186B8B0D0-0x0000000186B8B0E4
+		public float alphaFadeSpeed { get; set; } // 0x0000000184DB9B50-0x0000000184DB9B60 0x0000000184DB9B60-0x0000000184DB9B70
+		public int value { get; set; } // 0x0000000184D8EAC0-0x0000000184D8EAD0 0x000000018B31199C-0x000000018B3119A8
+		public bool IsExpanded { get; } // 0x000000018B311804-0x000000018B311858 
 	
 		// Nested types
-		protected internal class DropdownItem : MonoBehaviour, IPointerEnterHandler, ICancelHandler // TypeDefIndex: 53140
+		protected internal class DropdownItem : MonoBehaviour, IPointerEnterHandler, ICancelHandler // TypeDefIndex: 55625
 		{
 			// Fields
+			[SerializeField]
 			private TMP_Text m_Text; // 0x18
+			[SerializeField]
 			private Image m_Image; // 0x20
+			[SerializeField]
 			private RectTransform m_RectTransform; // 0x28
+			[SerializeField]
 			private Toggle m_Toggle; // 0x30
 	
 			// Properties
-			public TMP_Text text { get => default; set {} } // 0x0000000185FB8280-0x0000000185FB8290 0x000000018BE0E414-0x000000018BE0E43C
-			public Image image { get => default; set {} } // 0x0000000185FB8360-0x0000000185FB8370 0x000000018BE0E340-0x000000018BE0E368
-			public RectTransform rectTransform { get => default; set {} } // 0x0000000181B44930-0x0000000181B44940 0x000000018BE0E318-0x000000018BE0E340
-			public Toggle toggle { get => default; set {} } // 0x0000000185FB88A0-0x0000000185FB88B0 0x000000018BE0E3EC-0x000000018BE0E414
+			public TMP_Text text { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+			public Image image { get; set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+			public RectTransform rectTransform { get; set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
+			public Toggle toggle { get; set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
 	
 			// Constructors
-			public DropdownItem() {} // 0x0000000185FB82E0-0x0000000185FB82F0
+			public DropdownItem(); // 0x0000000185393520-0x0000000185393538
 	
 			// Methods
-			public virtual void OnPointerEnter(PointerEventData eventData) {} // 0x0000000185FB82F0-0x0000000185FB8300
-			public virtual void OnCancel(BaseEventData eventData) {} // 0x000000018BE0E390-0x000000018BE0E3B8
+			public virtual void OnPointerEnter(PointerEventData eventData); // 0x000000018B30B9C0-0x000000018B30BA2C
+			public virtual void OnCancel(BaseEventData eventData); // 0x000000018B30B948-0x000000018B30B9C0
 		}
 	
 		[Serializable]
-		public class OptionData // TypeDefIndex: 53141
+		public class OptionData // TypeDefIndex: 55626
 		{
 			// Fields
+			[SerializeField]
 			private string m_Text; // 0x10
+			[SerializeField]
 			private Sprite m_Image; // 0x18
 	
 			// Properties
-			public string text { get => default; set {} } // 0x000000018BE0E368-0x000000018BE0E390 0x000000018BE0E2F8-0x000000018BE0E318
-			public Sprite image { get => default; set {} } // 0x000000018BE0E3B8-0x000000018BE0E3EC 0x0000000185FB7F50-0x0000000185FB7F60
+			public string text { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+			public Sprite image { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
 	
 			// Constructors
-			public OptionData() {} // 0x0000000186473554-0x0000000186473568
-			public OptionData(string text) {} // 0x0000000185FB9D00-0x0000000185FB9D10
-			public OptionData(Sprite image) {} // 0x0000000185FB9E10-0x0000000185FB9E20
-			public OptionData(string text, Sprite image) {} // 0x0000000185FB9BD0-0x0000000185FB9BE0
+			public OptionData(); // 0x00000001841E1670-0x00000001841E1680
+			public OptionData(string text); // 0x00000001853908C0-0x00000001853908D0
+			public OptionData(Sprite image); // 0x0000000185392C40-0x0000000185392C50
+			public OptionData(string text, Sprite image); // 0x00000001832AF420-0x00000001832AF450
 		}
 	
 		[Serializable]
-		public class OptionDataList // TypeDefIndex: 53142
+		public class OptionDataList // TypeDefIndex: 55627
 		{
 			// Fields
+			[SerializeField]
 			private List<OptionData> m_Options; // 0x10
 	
 			// Properties
-			public List<OptionData> options { get => default; set {} } // 0x000000018BE0E43C-0x000000018BE0E448 0x000000018BE0CB5C-0x000000018BE0CB68
+			public List<OptionData> options { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
 	
 			// Constructors
-			public OptionDataList() {} // 0x000000018BE0CB68-0x000000018BE0CCA0
+			public OptionDataList(); // 0x000000018B30C96C-0x000000018B30C9E4
 		}
 	
 		[Serializable]
-		public class DropdownEvent : UnityEvent<int> // TypeDefIndex: 53143
+		public class DropdownEvent : UnityEvent<int> // TypeDefIndex: 55628
 		{
 			// Constructors
-			public DropdownEvent() {} // 0x000000018BE0E2A4-0x000000018BE0E2F8
+			public DropdownEvent(); // 0x000000018B30B90C-0x000000018B30B948
 		}
 	
-		private sealed class __c__DisplayClass69_0 // TypeDefIndex: 53144
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass69_0 // TypeDefIndex: 55629
 		{
 			// Fields
 			public DropdownItem item; // 0x10
 			public TMP_Dropdown __4__this; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass69_0() {} // 0x000000018BE0E17C-0x000000018BE0E2A4
+			public __c__DisplayClass69_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _Show_b__0(bool x) {} // 0x000000018BE0BCD0-0x000000018BE0BDB8
+			internal void _Show_b__0(bool x); // 0x000000018B319E80-0x000000018B319EB0
 		}
 	
-		private sealed class _DelayedDestroyDropdownList_d__81 : IEnumerator<object> // TypeDefIndex: 53145
+		[CompilerGenerated]
+		private sealed class _DelayedDestroyDropdownList_d__81 : IEnumerator<object> // TypeDefIndex: 55630
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1481,98 +1486,133 @@ namespace TMPro
 			public TMP_Dropdown __4__this; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018BE0B880-0x000000018BE0B8E8 
-			object IEnumerator.Current { get => default; } // 0x000000018BE0B9D8-0x000000018BE0BAC8 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _DelayedDestroyDropdownList_d__81() {} // Dummy constructor
-			public _DelayedDestroyDropdownList_d__81(int __1__state) {} // 0x000000018BE0E07C-0x000000018BE0E10C
+			[DebuggerHidden]
+			public _DelayedDestroyDropdownList_d__81(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018BE0C6B4-0x000000018BE0C748
-			private bool MoveNext() => default; // 0x000000018BE0C858-0x000000018BE0CABC
-			void IEnumerator.Reset() {} // 0x000000018BE0B8E8-0x000000018BE0B9D8
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018B319C08-0x000000018B319CA4
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B319CA4-0x000000018B319CF0
 		}
 	
 		// Constructors
-		protected TMP_Dropdown() {} // 0x0000000184088E70-0x0000000184088E80
-		static TMP_Dropdown() {} // 0x0000000181377E40-0x0000000181377E50
+		protected TMP_Dropdown(); // 0x000000018B3116DC-0x000000018B311804
+		static TMP_Dropdown(); // 0x000000018B31166C-0x000000018B3116DC
 	
 		// Methods
-		public void SetValueWithoutNotify(int input) {} // 0x000000018BE0C750-0x000000018BE0C858
-		private void SetValue(int value, bool sendCallback = true /* Metadata: 0x02077AD7 */) {} // 0x000000018BE0E10C-0x000000018BE0E17C
-		protected override void Awake() {} // 0x00000001813B31A0-0x00000001813B31B0
-		protected override void Start() {} // 0x000000018646EE40-0x000000018646EE50
-		protected override void OnDisable() {} // 0x00000001813B8590-0x00000001813B85A0
-		public void RefreshShownValue() {} // 0x0000000184A4EDC0-0x0000000184A4EDD0
-		public void AddOptions(List<OptionData> options) {} // 0x00000001813B51D0-0x00000001813B51E0
-		public void AddOptions(List<string> options) {} // 0x00000001864721F0-0x0000000186472200
-		public void AddOptions(List<Sprite> options) {} // 0x000000018BE084EC-0x000000018BE08558
-		public void ClearOptions() {} // 0x000000018BE08474-0x000000018BE084EC
-		private void SetupTemplate() {} // 0x000000018646DB20-0x000000018646DB28
+		public void SetValueWithoutNotify(int input); // 0x000000018B310030-0x000000018B31003C
+		private void SetValue(int value, bool sendCallback = true /* Metadata: 0x023470D9 */); // 0x000000018B31003C-0x000000018B310174
+		protected override void Awake(); // 0x000000018B30F1A4-0x000000018B30F28C
+		protected override void Start(); // 0x000000018B3115DC-0x000000018B31166C
+		protected override void OnDisable(); // 0x000000018B30FB88-0x000000018B30FC1C
+		public void RefreshShownValue(); // 0x000000018B30FD2C-0x000000018B30FF90
+		public void AddOptions(List<OptionData> options); // 0x000000018B30ED54-0x000000018B30EDBC
+		public void AddOptions(List<string> options); // 0x000000018B30EDBC-0x000000018B30EEAC
+		public void AddOptions(List<Sprite> options); // 0x000000018B30EEAC-0x000000018B30EF9C
+		public void ClearOptions(); // 0x000000018B30F28C-0x000000018B30F324
+		private void SetupTemplate(); // 0x000000018B310174-0x000000018B310778
 		private static T GetOrAddComponent<T>(GameObject go)
-			where T : Component => default; // 0x000000018346D130-0x000000018346D140
-		public virtual void OnPointerClick(PointerEventData eventData) {} // 0x0000000184096E30-0x0000000184096EF0
-		public virtual void OnSubmit(BaseEventData eventData) {} // 0x0000000181377E40-0x0000000181377E50
-		public virtual void OnCancel(BaseEventData eventData) {} // 0x0000000184088E70-0x0000000184088E80
-		public void Show() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual GameObject CreateBlocker(Canvas rootCanvas) => default; // 0x0000000184096E30-0x0000000184096EF0
-		protected virtual void DestroyBlocker(GameObject blocker) {} // 0x0000000184088E70-0x0000000184088E80
-		protected virtual GameObject CreateDropdownList(GameObject template) => default; // 0x00000001841BC230-0x00000001841BC260
-		protected virtual void DestroyDropdownList(GameObject dropdownList) {} // 0x000000018346D130-0x000000018346D140
-		protected virtual DropdownItem CreateItem(DropdownItem itemTemplate) => default; // 0x0000000184096E30-0x0000000184096EF0
-		protected virtual void DestroyItem(DropdownItem item) {} // 0x000000018BE09498-0x000000018BE09510
-		private DropdownItem AddItem(OptionData data, bool selected, DropdownItem itemTemplate, List<DropdownItem> items) => default; // 0x000000018BE08438-0x000000018BE08474
-		private void AlphaFadeList(float duration, float alpha) {} // 0x0000000185492010-0x0000000185492020
-		private void AlphaFadeList(float duration, float start, float end) {} // 0x000000018BE15B90-0x000000018BE15BC0
-		private void SetAlpha(float alpha) {} // 0x0000000181378230-0x0000000181378240
-		public void Hide() {} // 0x0000000185492010-0x0000000185492020
-		private IEnumerator DelayedDestroyDropdownList(float delay) => default; // 0x000000018BE15918-0x000000018BE159B4
-		private void ImmediateDestroyDropdownList() {} // 0x0000000181377E40-0x0000000181377E50
-		private void OnSelectItem(Toggle toggle) {} // 0x000000018BE159B4-0x000000018BE15A00
+			where T : Component;
+		public virtual void OnPointerClick(PointerEventData eventData); // 0x000000018B30FC1C-0x000000018B30FC24
+		public virtual void OnSubmit(BaseEventData eventData); // 0x000000018B30FC1C-0x000000018B30FC24
+		public virtual void OnCancel(BaseEventData eventData); // 0x000000018B30FB80-0x000000018B30FB88
+		public void Show(); // 0x000000018B310778-0x000000018B3115DC
+		protected virtual GameObject CreateBlocker(Canvas rootCanvas); // 0x000000018B30F324-0x000000018B30F758
+		protected virtual void DestroyBlocker(GameObject blocker); // 0x000000018B30F86C-0x000000018B30F8B8
+		protected virtual GameObject CreateDropdownList(GameObject template); // 0x000000018B30F758-0x000000018B30F7AC
+		protected virtual void DestroyDropdownList(GameObject dropdownList); // 0x000000018B30F8B8-0x000000018B30F904
+		protected virtual DropdownItem CreateItem(DropdownItem itemTemplate); // 0x000000018B30F7AC-0x000000018B30F800
+		protected virtual void DestroyItem(DropdownItem item); // 0x00000001841E1670-0x00000001841E1680
+		private DropdownItem AddItem(OptionData data, bool selected, DropdownItem itemTemplate, List<DropdownItem> items); // 0x000000018B30EAC8-0x000000018B30ED54
+		private void AlphaFadeList(float duration, float alpha); // 0x000000018B30F118-0x000000018B30F1A4
+		private void AlphaFadeList(float duration, float start, float end); // 0x000000018B30EF9C-0x000000018B30F118
+		private void SetAlpha(float alpha); // 0x000000018B30FF90-0x000000018B310030
+		public void Hide(); // 0x000000018B30F904-0x000000018B30FA1C
+		[IteratorStateMachine(typeof(_DelayedDestroyDropdownList_d__81))]
+		private IEnumerator DelayedDestroyDropdownList(float delay); // 0x000000018B30F800-0x000000018B30F86C
+		private void ImmediateDestroyDropdownList(); // 0x000000018B30FA1C-0x000000018B30FB80
+		private void OnSelectItem(Toggle toggle); // 0x000000018B30FC24-0x000000018B30FD2C
 	}
 
-	public enum AtlasPopulationMode // TypeDefIndex: 53147
+	public enum AtlasPopulationMode // TypeDefIndex: 55632
 	{
 		Static = 0,
 		Dynamic = 1
 	}
 
 	[Serializable]
-	public class TMP_FontAsset : TMP_Asset // TypeDefIndex: 53149
+	[ExcludeFromPreset]
+	public class TMP_FontAsset : TMP_Asset // TypeDefIndex: 55634
 	{
 		// Fields
+		[SerializeField]
 		private string m_Version; // 0x30
+		[SerializeField]
 		internal string m_SourceFontFileGUID; // 0x38
+		[SerializeField]
 		private Font m_SourceFontFile; // 0x40
+		[SerializeField]
 		private float m_ThaiBiasConsonantsValue; // 0x48
+		[Header("\u4FDD\u5B58\u7684\u65F6\u5019\u540C\u6B65\u4FEE\u6539\u7684\u6750\u8D28\u524D\u7F00\uFF0C\u4E0D\u586B\u641CFontAsset\u540D\u5B57")]
+		[SerializeField]
 		private string m_prefixMaterialSearchPatternValue; // 0x50
+		[SerializeField]
 		private AtlasPopulationMode m_AtlasPopulationMode; // 0x58
+		[SerializeField]
 		public FaceInfo m_FaceInfo; // 0x60
+		[SerializeField]
 		internal List<Glyph> m_GlyphTable; // 0xC0
 		internal Dictionary<uint, Glyph> m_GlyphLookupDictionary; // 0xC8
+		[SerializeField]
 		internal List<TMP_Character> m_CharacterTable; // 0xD0
 		public Dictionary<uint, TMP_Character> m_CharacterLookupDictionary; // 0xD8
 		internal Texture2D m_AtlasTexture; // 0xE0
+		[SerializeField]
 		internal Texture2D[] m_AtlasTextures; // 0xE8
+		[SerializeField]
 		internal int m_AtlasTextureIndex; // 0xF0
+		[SerializeField]
 		private bool m_IsMultiAtlasTexturesEnabled; // 0xF4
+		[SerializeField]
 		private bool m_ClearDynamicDataOnBuild; // 0xF5
+		[SerializeField]
 		private List<GlyphRect> m_UsedGlyphRects; // 0xF8
+		[SerializeField]
 		private List<GlyphRect> m_FreeGlyphRects; // 0x100
+		[SerializeField]
 		private FaceInfo_Legacy m_fontInfo; // 0x108
+		[SerializeField]
 		public Texture2D atlas; // 0x110
+		[SerializeField]
 		internal int m_AtlasWidth; // 0x118
+		[SerializeField]
 		internal int m_AtlasHeight; // 0x11C
+		[SerializeField]
 		internal int m_AtlasPadding; // 0x120
+		[SerializeField]
 		internal GlyphRenderMode m_AtlasRenderMode; // 0x124
+		[SerializeField]
 		internal List<TMP_Glyph> m_glyphInfoList; // 0x128
+		[FormerlySerializedAs("m_kerningInfo")]
+		[SerializeField]
 		internal KerningTable m_KerningTable; // 0x130
+		[SerializeField]
 		public TMP_FontFeatureTable m_FontFeatureTable; // 0x138
+		[SerializeField]
 		private List<TMP_FontAsset> fallbackFontAssets; // 0x140
+		[SerializeField]
 		internal List<TMP_FontAsset> m_FallbackFontAssetTable; // 0x148
+		[SerializeField]
 		internal FontAssetCreationSettings m_CreationSettings; // 0x150
+		[SerializeField]
 		private TMP_FontWeightPair[] m_FontWeightTable; // 0x1A8
+		[SerializeField]
 		private TMP_FontWeightPair[] fontWeights; // 0x1B0
 		public float normalStyle; // 0x1B8
 		public float normalSpacingOffset; // 0x1BC
@@ -1610,37 +1650,39 @@ namespace TMPro
 		private RenderTexture[] m_DynamicRenderTextures; // 0x228
 	
 		// Properties
-		public string version { get => default; internal set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public Font sourceFontFile { get => default; internal set {} } // 0x0000000181460F60-0x0000000181460F70 0x0000000184A4E570-0x0000000184A4E580
-		public float thaiBiasConsonantsValue { get => default; set {} } // 0x0000000183F80450-0x0000000183F80460 0x0000000183F804E0-0x0000000183F804F0
-		public string prefixMaterialSearchPatternValue { get => default; set {} } // 0x0000000185FE59A0-0x0000000185FE59E0 0x000000018BE14220-0x000000018BE14264
-		public AtlasPopulationMode atlasPopulationMode { get => default; set {} } // 0x0000000181B388F0-0x0000000181B38900 0x0000000187A47C1C-0x0000000187A47C30
-		public FaceInfo faceInfo { get => default; set {} } // 0x000000018BE141A0-0x000000018BE141D0 0x0000000185FB15A0-0x0000000185FB15B0
-		public List<Glyph> glyphTable { get => default; internal set {} } // 0x000000018774BD78-0x000000018774BD8C 0x00000001842B1910-0x00000001842B1950
-		public Dictionary<uint, Glyph> glyphLookupTable { get => default; } // 0x0000000184246260-0x00000001842463B0 
-		public List<TMP_Character> characterTable { get => default; internal set {} } // 0x0000000185FB2360-0x0000000185FB2370 0x0000000187A47730-0x0000000187A47744
-		public Dictionary<uint, TMP_Character> characterLookupTable { get => default; } // 0x0000000185FE5940-0x0000000185FE5950 
-		public Texture2D atlasTexture { get => default; } // 0x0000000185FB9640-0x0000000185FB9650 
-		public Texture2D[] atlasTextures { get => default; set {} } // 0x0000000185FB96A0-0x0000000185FB96B0 0x0000000185FD3770-0x0000000185FD3780
-		public int atlasTextureCount { get => default; } // 0x0000000185FD3780-0x0000000185FD3790 
-		public bool isMultiAtlasTexturesEnabled { get => default; set {} } // 0x0000000185FB16B0-0x0000000185FB16C0 0x000000018774E878-0x000000018774E88C
-		internal bool clearDynamicDataOnBuild { get => default; set {} } // 0x0000000185FB1CB0-0x0000000185FB1CC0 0x0000000187764794-0x00000001877647A8
-		internal List<GlyphRect> usedGlyphRects { get => default; set {} } // 0x0000000181ABEDF0-0x0000000181ABEE00 0x0000000185FB1F40-0x0000000185FB1F50
-		internal List<GlyphRect> freeGlyphRects { get => default; set {} } // 0x0000000185FB1F50-0x0000000185FB1F60 0x0000000185FBC8D0-0x0000000185FBC8E0
-		public FaceInfo_Legacy fontInfo { get => default; } // 0x0000000185FBC8E0-0x0000000185FBC8F0 
-		public int atlasWidth { get => default; internal set {} } // 0x0000000185FBED30-0x0000000185FBED40 0x0000000185FE59E0-0x0000000185FE59F0
-		public int atlasHeight { get => default; internal set {} } // 0x0000000185FCEAF0-0x0000000185FCEB00 0x0000000185FD4F30-0x0000000185FD4F40
-		public int atlasPadding { get => default; internal set {} } // 0x0000000185FB8720-0x0000000185FB8730 0x00000001864735CC-0x00000001864735E0
-		public GlyphRenderMode atlasRenderMode { get => default; internal set {} } // 0x0000000185FB8610-0x0000000185FB8620 0x0000000187A47780-0x0000000187A47794
-		public TMP_FontFeatureTable fontFeatureTable { get => default; internal set {} } // 0x0000000185FE5950-0x0000000185FE59A0 0x000000018BE141D0-0x000000018BE14220
-		public List<TMP_FontAsset> fallbackFontAssetTable { get => default; set {} } // 0x0000000185FB82E0-0x0000000185FB82F0 0x00000001864734D4-0x00000001864734E8
-		public FontAssetCreationSettings creationSettings { get => default; set {} } // 0x000000018BE0F310-0x000000018BE0F380 0x000000018BE0F380-0x000000018BE0F8D0
-		public TMP_FontWeightPair[] fontWeightTable { get => default; internal set {} } // 0x0000000185CA4BE0-0x0000000185CA4C60 0x0000000184011D90-0x0000000184012770
-		public RenderTexture[] dynamicRenderTextures { get => default; } // 0x000000018BE15BC0-0x000000018BE15C24 
+		public string version { get; internal set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
+		public Font sourceFontFile { get; internal set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001842B4AE0-0x00000001842B4AF0
+		public float thaiBiasConsonantsValue { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public string prefixMaterialSearchPatternValue { get; set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
+		public AtlasPopulationMode atlasPopulationMode { get; set; } // 0x0000000184D86570-0x0000000184D86580 0x0000000184D865D0-0x0000000184D865E0
+		public FaceInfo faceInfo { get; set; } // 0x0000000184DB9BE0-0x0000000184DB9C20 0x000000018B318564-0x000000018B3185A8
+		public List<Glyph> glyphTable { get; internal set; } // 0x0000000184D892F0-0x0000000184D89300 0x0000000186AC5ACC-0x0000000186AC5AE0
+		public Dictionary<uint, Glyph> glyphLookupTable { get; } // 0x000000018B3184E4-0x000000018B318514 
+		public List<TMP_Character> characterTable { get; internal set; } // 0x0000000184D876B0-0x0000000184D876C0 0x000000018678D7BC-0x000000018678D7D0
+		public Dictionary<uint, TMP_Character> characterLookupTable { get; } // 0x000000018333EEE0-0x000000018333EF20 
+		public Texture2D atlasTexture { get; } // 0x000000018351ECB0-0x000000018351ED70 
+		public Texture2D[] atlasTextures { get; set; } // 0x0000000184D88590-0x0000000184D885A0 0x0000000186AC5B1C-0x0000000186AC5B30
+		public int atlasTextureCount { get; } // 0x0000000184DB9B80-0x0000000184DB9B90 
+		public bool isMultiAtlasTexturesEnabled { get; set; } // 0x0000000184DA7520-0x0000000184DA7530 0x0000000184DA7530-0x0000000184DA7540
+		internal bool clearDynamicDataOnBuild { get; set; } // 0x0000000184DA7540-0x0000000184DA7550 0x0000000184DA7550-0x0000000184DA7560
+		internal List<GlyphRect> usedGlyphRects { get; set; } // 0x0000000184D877C0-0x0000000184D877D0 0x0000000186790298-0x00000001867902AC
+		internal List<GlyphRect> freeGlyphRects { get; set; } // 0x0000000184D87D50-0x0000000184D87D60 0x00000001867A5EA0-0x00000001867A5EB4
+		[Obsolete("The fontInfo property and underlying type is now obsolete. Please use the faceInfo property and FaceInfo type instead.")]
+		public FaceInfo_Legacy fontInfo { get; } // 0x0000000184D85F90-0x0000000184D85FA0 
+		public int atlasWidth { get; internal set; } // 0x0000000184D87FF0-0x0000000184D88000 0x0000000184D88000-0x0000000184D88010
+		public int atlasHeight { get; internal set; } // 0x0000000184DB9B70-0x0000000184DB9B80 0x0000000184DB9C20-0x0000000184DB9C30
+		public int atlasPadding { get; internal set; } // 0x0000000184D90A90-0x0000000184D90AA0 0x0000000184D90AC0-0x0000000184D90AD0
+		public GlyphRenderMode atlasRenderMode { get; internal set; } // 0x0000000184D90A80-0x0000000184D90A90 0x0000000184D90AB0-0x0000000184D90AC0
+		public TMP_FontFeatureTable fontFeatureTable { get; internal set; } // 0x0000000184D8DC90-0x0000000184D8DCA0 0x0000000185397184-0x0000000185397198
+		public List<TMP_FontAsset> fallbackFontAssetTable { get; set; } // 0x0000000184D8DAC0-0x0000000184D8DAD0 0x0000000186B8B468-0x0000000186B8B47C
+		public FontAssetCreationSettings creationSettings { get; set; } // 0x0000000184DB9B90-0x0000000184DB9BE0 0x000000018B318514-0x000000018B318564
+		public TMP_FontWeightPair[] fontWeightTable { get; internal set; } // 0x0000000184D8D9C0-0x0000000184D8D9D0 0x00000001853971F0-0x0000000185397204
+		public RenderTexture[] dynamicRenderTextures { get; } // 0x0000000184D8D440-0x0000000184D8D450 
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 53148
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55633
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -1648,94 +1690,76 @@ namespace TMPro
 			public static Func<Glyph, uint> __9__134_0; // 0x10
 	
 			// Constructors
-			static __c() {} // 0x00000001813B51D0-0x00000001813B51E0
-			public __c() {} // 0x00000001864721F0-0x0000000186472200
+			static __c(); // 0x000000018B319EB0-0x000000018B319F14
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal uint _SortCharacterTable_b__133_0(TMP_Character c) => default; // 0x00000001813FF010-0x00000001813FF020
-			internal uint _SortGlyphTable_b__134_0(Glyph c) => default; // 0x0000000185F05C80-0x0000000185F05C90
+			internal uint _SortCharacterTable_b__133_0(TMP_Character c); // 0x000000018B319DF0-0x000000018B319E08
+			internal uint _SortGlyphTable_b__134_0(Glyph c); // 0x000000018AA421AC-0x000000018AA421C4
 		}
 	
 		// Constructors
-		public TMP_FontAsset() {} // 0x000000018BE15B00-0x000000018BE15B18
-		static TMP_FontAsset() {} // 0x000000018B584038-0x000000018B584050
+		public TMP_FontAsset(); // 0x000000018450C370-0x000000018450C7F0
+		static TMP_FontAsset(); // 0x0000000184880740-0x0000000184880AB0
 	
 		// Methods
-		public static TMP_FontAsset CreateFontAsset(Font font) => default; // 0x00000001840127D0-0x0000000184012800
-		public static TMP_FontAsset CreateFontAsset(Font font, int samplingPointSize, int atlasPadding, GlyphRenderMode renderMode, int atlasWidth, int atlasHeight, AtlasPopulationMode atlasPopulationMode = AtlasPopulationMode.Dynamic /* Metadata: 0x02077ADA */, bool enableMultiAtlasSupport = true /* Metadata: 0x02077ADB */) => default; // 0x00000001840131A0-0x00000001840133B0
-		private void Awake() {} // 0x0000000184012EE0-0x00000001840130F0
-		public void ReadFontAssetDefinition() {} // 0x0000000184012970-0x0000000184012AA0
-		internal void InitializeDictionaryLookupTables() {} // 0x0000000184012AF0-0x0000000184012D10
-		internal void InitializeGlyphLookupDictionary() {} // 0x0000000184012D10-0x0000000184012EE0
-		internal void InitializeCharacterLookupDictionary() {} // 0x000000018BE0E93C-0x000000018BE0E9E0
-		internal void InitializeGlyphPaidAdjustmentRecordsLookupDictionary() {} // 0x000000018BE10F50-0x000000018BE110BC
-		internal void AddSynthesizedCharactersAndFaceMetrics() {} // 0x000000018BE110E0-0x000000018BE1124C
-		private void AddSynthesizedCharacter(uint unicode, bool isFontFaceLoaded, bool addImmediately = false /* Metadata: 0x02077ADC */) {} // 0x000000018BE110BC-0x000000018BE110E0
-		internal void AddCharacterToLookupCache(uint unicode, TMP_Character character) {} // 0x000000018BE10F24-0x000000018BE10F50
-		internal void SortCharacterTable() {} // 0x000000018BE0FD78-0x000000018BE0FDD4
-		internal void SortGlyphTable() {} // 0x000000018BE0FDD4-0x000000018BE102B4
-		internal void SortFontFeatureTable() {} // 0x000000018BE0FB60-0x000000018BE0FD78
-		internal void SortAllTables() {} // 0x000000018BE102B4-0x000000018BE10408
-		public bool HasCharacter(int character) => default; // 0x000000018BE10408-0x000000018BE109D4
-		public bool HasCharacter(char character, bool searchFallbacks = false /* Metadata: 0x02077ADD */, bool tryAddCharacter = false /* Metadata: 0x02077ADE */) => default; // 0x000000018BE109D4-0x000000018BE10A74
-		private bool HasCharacter_Internal(uint character, bool searchFallbacks = false /* Metadata: 0x02077ADF */, bool tryAddCharacter = false /* Metadata: 0x02077AE0 */) => default; // 0x000000018BE0F99C-0x000000018BE0FA7C
-		public bool HasCharacters(string text, out List<char> missingCharacters) {
-			missingCharacters = default;
-			return default;
-		} // 0x000000018BE0F8D0-0x000000018BE0F99C
-		public bool HasCharacters(string text, out uint[] missingCharacters, bool searchFallbacks = false /* Metadata: 0x02077AE1 */, bool tryAddCharacter = false /* Metadata: 0x02077AE2 */) {
-			missingCharacters = default;
-			return default;
-		} // 0x000000018BE0FA7C-0x000000018BE0FB60
-		public bool HasCharacters(string text) => default; // 0x00000001840116B0-0x0000000184011790
-		public static string GetCharacters(TMP_FontAsset fontAsset) => default; // 0x0000000184683160-0x00000001846832D0
-		public static int[] GetCharactersArray(TMP_FontAsset fontAsset) => default; // 0x000000018BE10AC4-0x000000018BE10B90
-		internal uint GetGlyphIndex(uint unicode) => default; // 0x000000018BE12FA8-0x000000018BE130CC
-		internal static void RegisterFontAssetForFontFeatureUpdate(TMP_FontAsset fontAsset) {} // 0x000000018BE12678-0x000000018BE1269C
-		internal static void UpdateFontFeaturesForFontAssetsInQueue() {} // 0x000000018BE1124C-0x000000018BE11C64
-		internal static void RegisterFontAssetForAtlasTextureUpdate(TMP_FontAsset fontAsset) {} // 0x000000018BE11C64-0x000000018BE11C88
-		internal static void UpdateAtlasTexturesForFontAssetsInQueue() {} // 0x000000018BE11C88-0x000000018BE12678
-		public bool TryAddCharacters(uint[] unicodes, bool includeFontFeatures = false /* Metadata: 0x02077AE3 */) => default; // 0x000000018BE0E9E0-0x000000018BE0EA90
-		public bool TryAddCharacters(uint[] unicodes, out uint[] missingUnicodes, bool includeFontFeatures = false /* Metadata: 0x02077AE4 */) {
-			missingUnicodes = default;
-			return default;
-		} // 0x0000000184011990-0x0000000184011D90
-		public bool TryAddCharacters(string characters, bool includeFontFeatures = false /* Metadata: 0x02077AE5 */) => default; // 0x000000018BE12A14-0x000000018BE12E24
-		public bool TryAddCharacters(string characters, out string missingCharacters, bool includeFontFeatures = false /* Metadata: 0x02077AE6 */) {
-			missingCharacters = default;
-			return default;
-		} // 0x0000000185492010-0x0000000185492020
-		public void AddCharacters(string characters) {} // 0x000000018BE1269C-0x000000018BE12A14
-		internal bool TryAddCharacterInternal(uint unicode, out TMP_Character character) {
-			character = default;
-			return default;
-		} // 0x000000018BE10B90-0x000000018BE10F24
-		internal bool TryGetCharacter_and_QueueRenderToTexture(uint unicode, out TMP_Character character) {
-			character = default;
-			return default;
-		} // 0x000000018BE12E24-0x000000018BE12FA8
-		internal void TryAddGlyphsToAtlasTextures() {} // 0x0000000184682370-0x0000000184682470
-		private bool TryAddGlyphsToNewAtlasTexture() => default; // 0x000000018BE131D4-0x000000018BE13400
-		private void SetupNewAtlasTexture() {} // 0x0000000185492010-0x0000000185492020
-		internal void UpdateAtlasTexture() {} // 0x0000000185492010-0x0000000185492020
-		internal void UpdateGlyphAdjustmentRecords() {}
-		internal void UpdateGlyphAdjustmentRecords(uint[] glyphIndexes) {} // 0x000000018BE0F14C-0x000000018BE0F188
-		internal void UpdateGlyphAdjustmentRecords(List<uint> glyphIndexes) {} // 0x000000018BE0F144-0x000000018BE0F14C
-		internal void UpdateGlyphAdjustmentRecords(List<uint> newGlyphIndexes, List<uint> allGlyphIndexes) {} // 0x000000018BE0F120-0x000000018BE0F144
-		private void CopyListDataToArray<T>(List<T> srcList, ref ref T[] dstArray) {} // 0x000000018BE130CC-0x000000018BE131D4
-		public void ClearFontAssetData(bool setAtlasSizeToZero = false /* Metadata: 0x02077AE7 */) {} // 0x000000018BE0F188-0x000000018BE0F310
-		public void ClearFontAssetData() {} // 0x000000018BE0EA90-0x000000018BE0F120
-		internal void ClearFontAssetDataInternal() {} // 0x000000018BE13400-0x000000018BE13E08
-		internal void UpdateFontAssetData() {} // 0x000000018BE13E08-0x000000018BE141A0
-		internal void ClearFontAssetTables() {} // 0x0000000185FB8620-0x0000000185FB8630
-		internal void ClearAtlasTextures(bool setAtlasSizeToZero = false /* Metadata: 0x02077AE8 */) {} // 0x000000018BE10A74-0x000000018BE10AC4
-		internal void UpgradeFontAsset() {} // 0x00000001856F6C10-0x00000001856F7090
-		private void UpgradeGlyphAdjustmentTableToFontFeatureTable() {} // 0x0000000185A58DA0-0x0000000185A59110
-		private void OnDestroy() {} // 0x0000000185492010-0x0000000185492020
+		public static TMP_FontAsset CreateFontAsset(Font font); // 0x000000018B312AC8-0x000000018B312B38
+		public static TMP_FontAsset CreateFontAsset(Font font, int samplingPointSize, int atlasPadding, GlyphRenderMode renderMode, int atlasWidth, int atlasHeight, AtlasPopulationMode atlasPopulationMode = AtlasPopulationMode.Dynamic /* Metadata: 0x023470DC */, bool enableMultiAtlasSupport = true /* Metadata: 0x023470DD */); // 0x000000018B312B38-0x000000018B313088
+		private void Awake(); // 0x0000000184A1E700-0x0000000184A1E7B0
+		public void ReadFontAssetDefinition(); // 0x000000018393FB50-0x00000001839403C0
+		internal void InitializeDictionaryLookupTables(); // 0x000000018393FB20-0x000000018393FB50
+		internal void InitializeGlyphLookupDictionary(); // 0x000000018338C0B0-0x000000018338C2F0
+		internal void InitializeCharacterLookupDictionary(); // 0x000000018393F800-0x000000018393FA00
+		internal void InitializeGlyphPaidAdjustmentRecordsLookupDictionary(); // 0x000000018393FA00-0x000000018393FB20
+		internal void AddSynthesizedCharactersAndFaceMetrics(); // 0x000000018393F3D0-0x000000018393F5A0
+		private void AddSynthesizedCharacter(uint unicode, bool isFontFaceLoaded, bool addImmediately = false /* Metadata: 0x023470DE */); // 0x000000018393F5F0-0x000000018393F790
+		internal void AddCharacterToLookupCache(uint unicode, TMP_Character character); // 0x000000018B3120F4-0x000000018B312198
+		internal void SortCharacterTable(); // 0x000000018B3147CC-0x000000018B314938
+		internal void SortGlyphTable(); // 0x000000018B31495C-0x000000018B314AC8
+		internal void SortFontFeatureTable(); // 0x000000018B314938-0x000000018B31495C
+		internal void SortAllTables(); // 0x000000018B3147A0-0x000000018B3147CC
+		public bool HasCharacter(int character); // 0x000000018B313530-0x000000018B31358C
+		public bool HasCharacter(char character, bool searchFallbacks = false /* Metadata: 0x023470DF */, bool tryAddCharacter = false /* Metadata: 0x023470E0 */); // 0x000000018B31358C-0x000000018B313A6C
+		private bool HasCharacter_Internal(uint character, bool searchFallbacks = false /* Metadata: 0x023470E1 */, bool tryAddCharacter = false /* Metadata: 0x023470E2 */); // 0x000000018B313318-0x000000018B313530
+		public bool HasCharacters(string text, out List<char> missingCharacters); // 0x000000018B313A6C-0x000000018B313BC0
+		public bool HasCharacters(string text, out uint[] missingCharacters, bool searchFallbacks = false /* Metadata: 0x023470E3 */, bool tryAddCharacter = false /* Metadata: 0x023470E4 */); // 0x000000018B313BC0-0x000000018B31418C
+		public bool HasCharacters(string text); // 0x000000018B31418C-0x000000018B31422C
+		public static string GetCharacters(TMP_FontAsset fontAsset); // 0x000000018B313154-0x000000018B313234
+		public static int[] GetCharactersArray(TMP_FontAsset fontAsset); // 0x000000018B313088-0x000000018B313154
+		internal uint GetGlyphIndex(uint unicode); // 0x000000018B313234-0x000000018B313318
+		internal static void RegisterFontAssetForFontFeatureUpdate(TMP_FontAsset fontAsset); // 0x000000018B314348-0x000000018B314414
+		internal static void UpdateFontFeaturesForFontAssetsInQueue(); // 0x0000000183CF2860-0x0000000183CF28D0
+		internal static void RegisterFontAssetForAtlasTextureUpdate(TMP_FontAsset fontAsset); // 0x000000018B31427C-0x000000018B314348
+		internal static void UpdateAtlasTexturesForFontAssetsInQueue(); // 0x000000018B31708C-0x000000018B3171B0
+		public bool TryAddCharacters(uint[] unicodes, bool includeFontFeatures = false /* Metadata: 0x023470E5 */); // 0x000000018B31675C-0x000000018B316780
+		public bool TryAddCharacters(uint[] unicodes, out uint[] missingUnicodes, bool includeFontFeatures = false /* Metadata: 0x023470E6 */); // 0x000000018B315330-0x000000018B315D48
+		public bool TryAddCharacters(string characters, bool includeFontFeatures = false /* Metadata: 0x023470E7 */); // 0x000000018B315D48-0x000000018B315D6C
+		public bool TryAddCharacters(string characters, out string missingCharacters, bool includeFontFeatures = false /* Metadata: 0x023470E8 */); // 0x000000018B315D6C-0x000000018B31675C
+		public void AddCharacters(string characters); // 0x000000018B312198-0x000000018B312248
+		internal bool TryAddCharacterInternal(uint unicode, out TMP_Character character); // 0x000000018B314AC8-0x000000018B315330
+		internal bool TryGetCharacter_and_QueueRenderToTexture(uint unicode, out TMP_Character character); // 0x000000018B316AF8-0x000000018B316F08
+		internal void TryAddGlyphsToAtlasTextures(); // 0x00000001841E1670-0x00000001841E1680
+		private bool TryAddGlyphsToNewAtlasTexture(); // 0x000000018B316780-0x000000018B316AF8
+		private void SetupNewAtlasTexture(); // 0x000000018B314414-0x000000018B3147A0
+		internal void UpdateAtlasTexture(); // 0x000000018B316F08-0x000000018B31708C
+		internal void UpdateGlyphAdjustmentRecords(); // 0x000000018B3172B8-0x000000018B317518
+		internal void UpdateGlyphAdjustmentRecords(uint[] glyphIndexes); // 0x000000018B317518-0x000000018B317744
+		internal void UpdateGlyphAdjustmentRecords(List<uint> glyphIndexes); // 0x00000001841E1670-0x00000001841E1680
+		internal void UpdateGlyphAdjustmentRecords(List<uint> newGlyphIndexes, List<uint> allGlyphIndexes); // 0x00000001841E1670-0x00000001841E1680
+		private void CopyListDataToArray<T>(List<T> srcList, ref ref T[] dstArray);
+		public void ClearFontAssetData(bool setAtlasSizeToZero = false /* Metadata: 0x023470E9 */); // 0x000000018B312904-0x000000018B312940
+		public void ClearFontAssetData(); // 0x000000018B3128FC-0x000000018B312904
+		internal void ClearFontAssetDataInternal(); // 0x000000018B3128D8-0x000000018B3128FC
+		internal void UpdateFontAssetData(); // 0x000000018B3171B0-0x000000018B3172B8
+		internal void ClearFontAssetTables(); // 0x000000018B312940-0x000000018B312AC8
+		internal void ClearAtlasTextures(bool setAtlasSizeToZero = false /* Metadata: 0x023470EA */); // 0x000000018B312248-0x000000018B3128D8
+		internal void UpgradeFontAsset(); // 0x000000018B317744-0x000000018B31814C
+		private void UpgradeGlyphAdjustmentTableToFontFeatureTable(); // 0x000000018B31814C-0x000000018B3184E4
+		private void OnDestroy(); // 0x000000018B31422C-0x000000018B31427C
 	}
 
 	[Serializable]
-	public class FaceInfo_Legacy // TypeDefIndex: 53150
+	public class FaceInfo_Legacy // TypeDefIndex: 55635
 	{
 		// Fields
 		public string Name; // 0x10
@@ -1761,21 +1785,21 @@ namespace TMPro
 		public float AtlasHeight; // 0x64
 	
 		// Constructors
-		public FaceInfo_Legacy() {} // 0x0000000185492010-0x0000000185492020
+		public FaceInfo_Legacy(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class TMP_Glyph : TMP_TextElement_Legacy // TypeDefIndex: 53151
+	public class TMP_Glyph : TMP_TextElement_Legacy // TypeDefIndex: 55636
 	{
 		// Constructors
-		public TMP_Glyph() {} // 0x0000000185492010-0x0000000185492020
+		public TMP_Glyph(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static TMP_Glyph Clone(TMP_Glyph source) => default; // 0x000000018BE14674-0x000000018BE14714
+		public static TMP_Glyph Clone(TMP_Glyph source); // 0x000000018B3189B8-0x000000018B318A58
 	}
 
 	[Serializable]
-	public struct FontAssetCreationSettings // TypeDefIndex: 53152
+	public struct FontAssetCreationSettings // TypeDefIndex: 55637
 	{
 		// Fields
 		public string sourceFontFileName; // 0x00
@@ -1796,35 +1820,18 @@ namespace TMPro
 		public bool includeFontFeatures; // 0x54
 	
 		// Constructors
-		internal FontAssetCreationSettings(string sourceFontFileGUID, int pointSize, int pointSizeSamplingMode, int padding, int packingMode, int atlasWidth, int atlasHeight, int characterSelectionMode, string characterSet, int renderMode) {
-			sourceFontFileName = default;
-			this.sourceFontFileGUID = default;
-			this.pointSizeSamplingMode = default;
-			this.pointSize = default;
-			this.padding = default;
-			this.packingMode = default;
-			this.atlasWidth = default;
-			this.atlasHeight = default;
-			characterSetSelectionMode = default;
-			characterSequence = default;
-			referencedFontAssetGUID = default;
-			referencedTextAssetGUID = default;
-			fontStyle = default;
-			fontStyleModifier = default;
-			this.renderMode = default;
-			includeFontFeatures = default;
-		} // 0x000000018BE0886C-0x000000018BE08978
+		internal FontAssetCreationSettings(string sourceFontFileGUID, int pointSize, int pointSizeSamplingMode, int padding, int packingMode, int atlasWidth, int atlasHeight, int characterSelectionMode, string characterSet, int renderMode); // 0x000000018B30BD40-0x000000018B30BE4C
 	}
 
 	[Serializable]
-	public struct TMP_FontWeightPair // TypeDefIndex: 53153
+	public struct TMP_FontWeightPair // TypeDefIndex: 55638
 	{
 		// Fields
 		public TMP_FontAsset regularTypeface; // 0x00
 		public TMP_FontAsset italicTypeface; // 0x08
 	}
 
-	public struct KerningPairKey // TypeDefIndex: 53154
+	public struct KerningPairKey // TypeDefIndex: 55639
 	{
 		// Fields
 		public uint ascii_Left; // 0x00
@@ -1832,15 +1839,11 @@ namespace TMPro
 		public uint key; // 0x08
 	
 		// Constructors
-		public KerningPairKey(uint ascii_left, uint ascii_right) {
-			ascii_Left = default;
-			ascii_Right = default;
-			key = default;
-		} // 0x0000000185FE58B0-0x0000000185FE58D0
+		public KerningPairKey(uint ascii_left, uint ascii_right); // 0x0000000184DB9AC0-0x0000000184DB9AE0
 	}
 
 	[Serializable]
-	public struct GlyphValueRecord_Legacy // TypeDefIndex: 53155
+	public struct GlyphValueRecord_Legacy // TypeDefIndex: 55640
 	{
 		// Fields
 		public float xPlacement; // 0x00
@@ -1849,94 +1852,101 @@ namespace TMPro
 		public float yAdvance; // 0x0C
 	
 		// Constructors
-		internal GlyphValueRecord_Legacy(GlyphValueRecord valueRecord) {
-			xPlacement = default;
-			yPlacement = default;
-			xAdvance = default;
-			yAdvance = default;
-		} // 0x0000000185FE5890-0x0000000185FE58B0
+		internal GlyphValueRecord_Legacy(GlyphValueRecord valueRecord); // 0x0000000184DB9AA0-0x0000000184DB9AC0
 	
 		// Methods
-		public static GlyphValueRecord_Legacy operator +(GlyphValueRecord_Legacy a, GlyphValueRecord_Legacy b) => default; // 0x00000001845B9D50-0x00000001845B9DA0
+		public static GlyphValueRecord_Legacy operator +(GlyphValueRecord_Legacy a, GlyphValueRecord_Legacy b); // 0x00000001830E87A0-0x00000001830E87F0
 	}
 
 	[Serializable]
-	public class KerningPair // TypeDefIndex: 53156
+	public class KerningPair // TypeDefIndex: 55641
 	{
 		// Fields
+		[FormerlySerializedAs("AscII_Left")]
+		[SerializeField]
 		private uint m_FirstGlyph; // 0x10
+		[SerializeField]
 		private GlyphValueRecord_Legacy m_FirstGlyphAdjustments; // 0x14
+		[FormerlySerializedAs("AscII_Right")]
+		[SerializeField]
 		private uint m_SecondGlyph; // 0x24
+		[SerializeField]
 		private GlyphValueRecord_Legacy m_SecondGlyphAdjustments; // 0x28
+		[FormerlySerializedAs("XadvanceOffset")]
 		public float xOffset; // 0x38
 		internal static KerningPair empty; // 0x00
+		[SerializeField]
 		private bool m_IgnoreSpacingAdjustments; // 0x3C
 	
 		// Properties
-		public uint firstGlyph { get => default; set {} } // 0x0000000181C0BBD0-0x0000000181C0BBE0 0x0000000181378230-0x0000000181378240
-		public GlyphValueRecord_Legacy firstGlyphAdjustments { get => default; } // 0x0000000185FC2240-0x0000000185FC2250 
-		public uint secondGlyph { get => default; set {} } // 0x0000000181424480-0x0000000181424490 0x0000000181424940-0x0000000181424950
-		public GlyphValueRecord_Legacy secondGlyphAdjustments { get => default; } // 0x0000000185FBB610-0x0000000185FBB620 
-		public bool ignoreSpacingAdjustments { get => default; } // 0x0000000185FB0A40-0x0000000185FB0A50 
+		public uint firstGlyph { get; set; } // 0x0000000182B2E2D0-0x0000000182B2E2E0 0x00000001814F51F0-0x00000001814F5220
+		public GlyphValueRecord_Legacy firstGlyphAdjustments { get; } // 0x0000000184D95480-0x0000000184D95490 
+		public uint secondGlyph { get; set; } // 0x00000001811F0020-0x00000001811F0030 0x00000001811F0030-0x00000001811F0040
+		public GlyphValueRecord_Legacy secondGlyphAdjustments { get; } // 0x0000000184D8FAD0-0x0000000184D8FAE0 
+		public bool ignoreSpacingAdjustments { get; } // 0x0000000184D86BD0-0x0000000184D86BE0 
 	
 		// Constructors
-		public KerningPair() {} // 0x0000000185FE5910-0x0000000185FE5930
-		public KerningPair(uint left, uint right, float offset) {} // 0x0000000185FE58E0-0x0000000185FE58F0
-		public KerningPair(uint firstGlyph, GlyphValueRecord_Legacy firstGlyphAdjustments, uint secondGlyph, GlyphValueRecord_Legacy secondGlyphAdjustments) {} // 0x0000000185FE58F0-0x0000000185FE5910
-		static KerningPair() {} // 0x0000000185F4ED30-0x0000000185F4EDB0
+		public KerningPair(); // 0x0000000184DB9B20-0x0000000184DB9B40
+		public KerningPair(uint left, uint right, float offset); // 0x0000000184DB9AF0-0x0000000184DB9B00
+		public KerningPair(uint firstGlyph, GlyphValueRecord_Legacy firstGlyphAdjustments, uint secondGlyph, GlyphValueRecord_Legacy secondGlyphAdjustments); // 0x0000000184DB9B00-0x0000000184DB9B20
+		static KerningPair(); // 0x0000000184D22C20-0x0000000184D22CA0
 	
 		// Methods
-		internal void ConvertLegacyKerningData() {} // 0x0000000185FE58D0-0x0000000185FE58E0
+		internal void ConvertLegacyKerningData(); // 0x0000000184DB9AE0-0x0000000184DB9AF0
 	}
 
 	[Serializable]
-	public class KerningTable // TypeDefIndex: 53161
+	public class KerningTable // TypeDefIndex: 55646
 	{
 		// Fields
 		public List<KerningPair> kerningPairs; // 0x10
 	
 		// Nested types
-		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 53157
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 55642
 		{
 			// Fields
 			public uint first; // 0x10
 			public uint second; // 0x14
 	
 			// Constructors
-			public __c__DisplayClass3_0() {} // 0x00000001856F7090-0x00000001856F7110
+			public __c__DisplayClass3_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _AddKerningPair_b__0(KerningPair item) => default; // 0x000000018BE08E68-0x000000018BE08FA0
+			internal bool _AddKerningPair_b__0(KerningPair item); // 0x000000018B319E20-0x000000018B319E4C
 		}
 	
-		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 53158
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass4_0 // TypeDefIndex: 55643
 		{
 			// Fields
 			public uint first; // 0x10
 			public uint second; // 0x14
 	
 			// Constructors
-			public __c__DisplayClass4_0() {} // 0x000000018BE08D1C-0x000000018BE08E68
+			public __c__DisplayClass4_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _AddGlyphPairAdjustmentRecord_b__0(KerningPair item) => default; // 0x000000018BE08BB8-0x000000018BE08D1C
+			internal bool _AddGlyphPairAdjustmentRecord_b__0(KerningPair item); // 0x000000018B319E20-0x000000018B319E4C
 		}
 	
-		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 53159
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass5_0 // TypeDefIndex: 55644
 		{
 			// Fields
 			public int left; // 0x10
 			public int right; // 0x14
 	
 			// Constructors
-			public __c__DisplayClass5_0() {} // 0x000000018BE08FA0-0x000000018BE090A0
+			public __c__DisplayClass5_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _RemoveKerningPair_b__0(KerningPair item) => default; // 0x000000018BE090A0-0x000000018BE090F4
+			internal bool _RemoveKerningPair_b__0(KerningPair item); // 0x000000018B319E4C-0x000000018B319E80
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 53160
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55645
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -1944,51 +1954,39 @@ namespace TMPro
 			public static Func<KerningPair, uint> __9__7_1; // 0x10
 	
 			// Constructors
-			static __c() {} // 0x000000018BE090F4-0x000000018BE09314
-			public __c() {} // 0x0000000185492010-0x0000000185492020
+			static __c(); // 0x000000018B319F14-0x000000018B31A044
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal uint _SortKerningPairs_b__7_0(KerningPair s) => default; // 0x000000018BE15B30-0x000000018BE15B5C
-			internal uint _SortKerningPairs_b__7_1(KerningPair s) => default; // 0x0000000185492010-0x0000000185492020
+			internal uint _SortKerningPairs_b__7_0(KerningPair s); // 0x000000018AA421AC-0x000000018AA421C4
+			internal uint _SortKerningPairs_b__7_1(KerningPair s); // 0x000000018B319E08-0x000000018B319E20
 		}
 	
 		// Constructors
-		public KerningTable() {} // 0x000000018BE15B30-0x000000018BE15B5C
+		public KerningTable(); // 0x000000018450C7F0-0x000000018450C870
 	
 		// Methods
-		public void AddKerningPair() {} // 0x0000000185492010-0x0000000185492020
-		public int AddKerningPair(uint first, uint second, float offset) => default; // 0x000000018BE15B5C-0x000000018BE15B90
-		public int AddGlyphPairAdjustmentRecord(uint first, GlyphValueRecord_Legacy firstAdjustments, uint second, GlyphValueRecord_Legacy secondAdjustments) => default; // 0x000000018BE15C24-0x000000018BE15C88
-		public void RemoveKerningPair(int left, int right) {} // 0x0000000185492010-0x0000000185492020
-		public void RemoveKerningPair(int index) {} // 0x000000018B584038-0x000000018B584050
-		public void SortKerningPairs() {} // 0x000000018BE15B18-0x000000018BE15B30
+		public void AddKerningPair(); // 0x000000018B30C33C-0x000000018B30C474
+		public int AddKerningPair(uint first, uint second, float offset); // 0x000000018B30C1F0-0x000000018B30C33C
+		public int AddGlyphPairAdjustmentRecord(uint first, GlyphValueRecord_Legacy firstAdjustments, uint second, GlyphValueRecord_Legacy secondAdjustments); // 0x000000018B30C08C-0x000000018B30C1F0
+		public void RemoveKerningPair(int left, int right); // 0x000000018B30C474-0x000000018B30C574
+		public void RemoveKerningPair(int index); // 0x000000018B30C574-0x000000018B30C5C8
+		public void SortKerningPairs(); // 0x000000018B30C5C8-0x000000018B30C7E8
 	}
 
-	public static class TMP_FontUtilities // TypeDefIndex: 53162
+	public static class TMP_FontUtilities // TypeDefIndex: 55647
 	{
 		// Fields
 		private static List<int> k_searchedFontAssets; // 0x00
 	
 		// Methods
-		public static TMP_FontAsset SearchForCharacter(TMP_FontAsset font, uint unicode, out TMP_Character character) {
-			character = default;
-			return default;
-		} // 0x000000018BE14574-0x000000018BE14674
-		public static TMP_FontAsset SearchForCharacter(List<TMP_FontAsset> fonts, uint unicode, out TMP_Character character) {
-			character = default;
-			return default;
-		} // 0x000000018BE1456C-0x000000018BE14574
-		private static TMP_FontAsset SearchForCharacterInternal(TMP_FontAsset font, uint unicode, out TMP_Character character) {
-			character = default;
-			return default;
-		} // 0x000000018BE14264-0x000000018BE14490
-		private static TMP_FontAsset SearchForCharacterInternal(List<TMP_FontAsset> fonts, uint unicode, out TMP_Character character) {
-			character = default;
-			return default;
-		} // 0x000000018BE14490-0x000000018BE1456C
+		public static TMP_FontAsset SearchForCharacter(TMP_FontAsset font, uint unicode, out TMP_Character character); // 0x000000018B3188B8-0x000000018B3189B8
+		public static TMP_FontAsset SearchForCharacter(List<TMP_FontAsset> fonts, uint unicode, out TMP_Character character); // 0x000000018B3188B0-0x000000018B3188B8
+		private static TMP_FontAsset SearchForCharacterInternal(TMP_FontAsset font, uint unicode, out TMP_Character character); // 0x000000018B3185A8-0x000000018B3187D4
+		private static TMP_FontAsset SearchForCharacterInternal(List<TMP_FontAsset> fonts, uint unicode, out TMP_Character character); // 0x000000018B3187D4-0x000000018B3188B0
 	}
 
-	public class TMP_FontAssetUtilities // TypeDefIndex: 53163
+	public class TMP_FontAssetUtilities // TypeDefIndex: 55648
 	{
 		// Fields
 		private static readonly TMP_FontAssetUtilities s_Instance; // 0x00
@@ -1996,30 +1994,22 @@ namespace TMPro
 		private static bool k_IsFontEngineInitialized; // 0x10
 	
 		// Properties
-		public static TMP_FontAssetUtilities instance { get => default; } // 0x000000018BE0E8EC-0x000000018BE0E93C 
+		public static TMP_FontAssetUtilities instance { get; } // 0x000000018B3120A4-0x000000018B3120F4 
 	
 		// Constructors
-		static TMP_FontAssetUtilities() {} // 0x0000000185F797B0-0x0000000185F79810
-		public TMP_FontAssetUtilities() {} // 0x0000000185492010-0x0000000185492020
+		static TMP_FontAssetUtilities(); // 0x0000000184D4DA10-0x0000000184D4DA70
+		public TMP_FontAssetUtilities(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static TMP_Character GetCharacterFromFontAsset(uint unicode, TMP_FontAsset sourceFontAsset, bool includeFallbacks, FontStyles fontStyle, FontWeight fontWeight, out bool isAlternativeTypeface) {
-			isAlternativeTypeface = default;
-			return default;
-		} // 0x00000001842B0FC0-0x00000001842B1080
-		private static TMP_Character GetCharacterFromFontAsset_Internal(uint unicode, TMP_FontAsset sourceFontAsset, bool includeFallbacks, FontStyles fontStyle, FontWeight fontWeight, out bool isAlternativeTypeface) {
-			isAlternativeTypeface = default;
-			return default;
-		} // 0x00000001842B1080-0x00000001842B1910
-		public static TMP_Character GetCharacterFromFontAssets(uint unicode, TMP_FontAsset sourceFontAsset, List<TMP_FontAsset> fontAssets, bool includeFallbacks, FontStyles fontStyle, FontWeight fontWeight, out bool isAlternativeTypeface) {
-			isAlternativeTypeface = default;
-			return default;
-		} // 0x0000000184682570-0x0000000184682840
-		public static TMP_SpriteCharacter GetSpriteCharacterFromSpriteAsset(uint unicode, TMP_SpriteAsset spriteAsset, bool includeFallbacks) => default; // 0x000000018BE0E600-0x000000018BE0E8EC
-		private static TMP_SpriteCharacter GetSpriteCharacterFromSpriteAsset_Internal(uint unicode, TMP_SpriteAsset spriteAsset, bool includeFallbacks) => default; // 0x000000018BE0E448-0x000000018BE0E600
+		public static TMP_Character GetCharacterFromFontAsset(uint unicode, TMP_FontAsset sourceFontAsset, bool includeFallbacks, FontStyles fontStyle, FontWeight fontWeight, out bool isAlternativeTypeface); // 0x000000018333E700-0x000000018333E780
+		private static TMP_Character GetCharacterFromFontAsset_Internal(uint unicode, TMP_FontAsset sourceFontAsset, bool includeFallbacks, FontStyles fontStyle, FontWeight fontWeight, out bool isAlternativeTypeface); // 0x000000018333E780-0x000000018333EEE0
+		public static TMP_Character GetCharacterFromFontAssets(uint unicode, TMP_FontAsset sourceFontAsset, List<TMP_FontAsset> fontAssets, bool includeFallbacks, FontStyles fontStyle, FontWeight fontWeight, out bool isAlternativeTypeface); // 0x000000018B3119A8-0x000000018B311C00
+		public static TMP_SpriteCharacter GetSpriteCharacterFromSpriteAsset(uint unicode, TMP_SpriteAsset spriteAsset, bool includeFallbacks); // 0x000000018B311DB8-0x000000018B3120A4
+		private static TMP_SpriteCharacter GetSpriteCharacterFromSpriteAsset_Internal(uint unicode, TMP_SpriteAsset spriteAsset, bool includeFallbacks); // 0x000000018B311C00-0x000000018B311DB8
 	}
 
-	public enum FontFeatureLookupFlags // TypeDefIndex: 53164
+	[Flags]
+	public enum FontFeatureLookupFlags // TypeDefIndex: 55649
 	{
 		None = 0,
 		IgnoreLigatures = 4,
@@ -2027,86 +2017,73 @@ namespace TMPro
 	}
 
 	[Serializable]
-	public struct TMP_GlyphValueRecord // TypeDefIndex: 53165
+	public struct TMP_GlyphValueRecord // TypeDefIndex: 55650
 	{
 		// Fields
+		[SerializeField]
 		internal float m_XPlacement; // 0x00
+		[SerializeField]
 		internal float m_YPlacement; // 0x04
+		[SerializeField]
 		internal float m_XAdvance; // 0x08
+		[SerializeField]
 		internal float m_YAdvance; // 0x0C
 	
 		// Properties
-		public float xPlacement { get => default; set {} } // 0x0000000185FB0F90-0x0000000185FB0FA0 0x0000000185FBA160-0x0000000185FBA170
-		public float yPlacement { get => default; set {} } // 0x0000000185FBA150-0x0000000185FBA160 0x0000000185FBA180-0x0000000185FBA190
-		public float xAdvance { get => default; set {} } // 0x0000000185FBA140-0x0000000185FBA150 0x0000000185FBA170-0x0000000185FBA180
-		public float yAdvance { get => default; set {} } // 0x0000000185FBF760-0x0000000185FBF770 0x0000000185FBF770-0x0000000185FBF780
+		public float xPlacement { get; set; } // 0x0000000184D871D0-0x0000000184D871E0 0x0000000184D932C0-0x0000000184D932D0
+		public float yPlacement { get; set; } // 0x0000000184D9C560-0x0000000184D9C570 0x0000000184DAB920-0x0000000184DAB930
+		public float xAdvance { get; set; } // 0x0000000184D9C280-0x0000000184D9C290 0x0000000184DAC1D0-0x0000000184DAC1E0
+		public float yAdvance { get; set; } // 0x0000000184D9CC80-0x0000000184D9CC90 0x0000000184DACD70-0x0000000184DACD80
 	
 		// Constructors
-		public TMP_GlyphValueRecord(float xPlacement, float yPlacement, float xAdvance, float yAdvance) : this() {
-			m_XPlacement = default;
-			m_YPlacement = default;
-			m_XAdvance = default;
-			m_YAdvance = default;
-		} // 0x0000000185FB2B40-0x0000000185FB2B60
-		internal TMP_GlyphValueRecord(GlyphValueRecord_Legacy valueRecord) : this() {
-			m_XPlacement = default;
-			m_YPlacement = default;
-			m_XAdvance = default;
-			m_YAdvance = default;
-		} // 0x0000000185FBF140-0x0000000185FBF160
-		internal TMP_GlyphValueRecord(GlyphValueRecord valueRecord) : this() {
-			m_XPlacement = default;
-			m_YPlacement = default;
-			m_XAdvance = default;
-			m_YAdvance = default;
-		} // 0x0000000185FE5890-0x0000000185FE58B0
+		public TMP_GlyphValueRecord(float xPlacement, float yPlacement, float xAdvance, float yAdvance); // 0x0000000184D88AD0-0x0000000184D88AF0
+		internal TMP_GlyphValueRecord(GlyphValueRecord_Legacy valueRecord); // 0x0000000184D92B90-0x0000000184D92BB0
+		internal TMP_GlyphValueRecord(GlyphValueRecord valueRecord); // 0x0000000184DB9AA0-0x0000000184DB9AC0
 	
 		// Methods
-		public static TMP_GlyphValueRecord operator +(TMP_GlyphValueRecord a, TMP_GlyphValueRecord b) => default; // 0x0000000185FE59F0-0x0000000185FE5A10
+		public static TMP_GlyphValueRecord operator +(TMP_GlyphValueRecord a, TMP_GlyphValueRecord b); // 0x0000000184DB9C30-0x0000000184DB9C50
 	}
 
 	[Serializable]
-	public struct TMP_GlyphAdjustmentRecord // TypeDefIndex: 53166
+	public struct TMP_GlyphAdjustmentRecord // TypeDefIndex: 55651
 	{
 		// Fields
+		[SerializeField]
 		internal uint m_GlyphIndex; // 0x00
+		[SerializeField]
 		internal TMP_GlyphValueRecord m_GlyphValueRecord; // 0x04
 	
 		// Properties
-		public uint glyphIndex { get => default; set {} } // 0x00000001818226B0-0x00000001818226C0 0x00000001818AA390-0x00000001818AA3A0
-		public TMP_GlyphValueRecord glyphValueRecord { get => default; set {} } // 0x0000000185FC8490-0x0000000185FC84A0 0x0000000185FE5A80-0x0000000185FE5A90
+		public uint glyphIndex { get; set; } // 0x0000000182B77620-0x0000000182B77630 0x0000000184D86140-0x0000000184D86150
+		public TMP_GlyphValueRecord glyphValueRecord { get; set; } // 0x0000000184D9C2B0-0x0000000184D9C2C0 0x0000000184DB9CC0-0x0000000184DB9CD0
 	
 		// Constructors
-		public TMP_GlyphAdjustmentRecord(uint glyphIndex, TMP_GlyphValueRecord glyphValueRecord) : this() {
-			m_GlyphIndex = default;
-			m_GlyphValueRecord = default;
-		} // 0x0000000185FC8390-0x0000000185FC83A0
-		internal TMP_GlyphAdjustmentRecord(GlyphAdjustmentRecord adjustmentRecord) : this() {
-			m_GlyphIndex = default;
-			m_GlyphValueRecord = default;
-		} // 0x000000018BE16088-0x000000018BE160D0
+		public TMP_GlyphAdjustmentRecord(uint glyphIndex, TMP_GlyphValueRecord glyphValueRecord); // 0x0000000184D9C150-0x0000000184D9C160
+		internal TMP_GlyphAdjustmentRecord(GlyphAdjustmentRecord adjustmentRecord); // 0x000000018B31A444-0x000000018B31A48C
 	}
 
 	[Serializable]
-	public class TMP_GlyphPairAdjustmentRecord // TypeDefIndex: 53167
+	public class TMP_GlyphPairAdjustmentRecord // TypeDefIndex: 55652
 	{
 		// Fields
+		[SerializeField]
 		public TMP_GlyphAdjustmentRecord m_FirstAdjustmentRecord; // 0x10
+		[SerializeField]
 		public TMP_GlyphAdjustmentRecord m_SecondAdjustmentRecord; // 0x24
+		[SerializeField]
 		public FontFeatureLookupFlags m_FeatureLookupFlags; // 0x38
 	
 		// Properties
-		public TMP_GlyphAdjustmentRecord firstAdjustmentRecord { get => default; set {} } // 0x00000001834A7280-0x00000001834A72A0 0x0000000185FCF1E0-0x0000000185FCF1F0
-		public TMP_GlyphAdjustmentRecord secondAdjustmentRecord { get => default; set {} } // 0x0000000185FE5AC0-0x0000000185FE5AE0 0x0000000185FE5AE0-0x0000000185FE5AF0
-		public FontFeatureLookupFlags featureLookupFlags { get => default; set {} } // 0x00000001813E5E30-0x00000001813E5E40 0x00000001813E6F50-0x00000001813E6F60
+		public TMP_GlyphAdjustmentRecord firstAdjustmentRecord { get; set; } // 0x0000000184D8FE30-0x0000000184D8FE50 0x0000000184DA39A0-0x0000000184DA39B0
+		public TMP_GlyphAdjustmentRecord secondAdjustmentRecord { get; set; } // 0x0000000184DB9D00-0x0000000184DB9D20 0x0000000184DB9D20-0x0000000184DB9D30
+		public FontFeatureLookupFlags featureLookupFlags { get; set; } // 0x0000000184D863B0-0x0000000184D863C0 0x0000000184D86430-0x0000000184D86440
 	
 		// Constructors
-		public TMP_GlyphPairAdjustmentRecord() {} // Dummy constructor
-		public TMP_GlyphPairAdjustmentRecord(TMP_GlyphAdjustmentRecord firstAdjustmentRecord, TMP_GlyphAdjustmentRecord secondAdjustmentRecord) {} // 0x0000000185FE5A90-0x0000000185FE5AC0
-		internal TMP_GlyphPairAdjustmentRecord(GlyphPairAdjustmentRecord glyphPairAdjustmentRecord) {} // 0x000000018BE160D0-0x000000018BE161A0
+		public TMP_GlyphPairAdjustmentRecord(TMP_GlyphAdjustmentRecord firstAdjustmentRecord, TMP_GlyphAdjustmentRecord secondAdjustmentRecord); // 0x0000000184DB9CD0-0x0000000184DB9D00
+		internal TMP_GlyphPairAdjustmentRecord(GlyphPairAdjustmentRecord glyphPairAdjustmentRecord); // 0x000000018B31A48C-0x000000018B31A55C
 	}
 
-	public struct GlyphPairKey // TypeDefIndex: 53168
+	public struct GlyphPairKey // TypeDefIndex: 55653
 	{
 		// Fields
 		public uint firstGlyphIndex; // 0x00
@@ -2114,31 +2091,25 @@ namespace TMPro
 		public uint key; // 0x08
 	
 		// Constructors
-		public GlyphPairKey(uint firstGlyphIndex, uint secondGlyphIndex) {
-			this.firstGlyphIndex = default;
-			this.secondGlyphIndex = default;
-			key = default;
-		} // 0x0000000185FE5A60-0x0000000185FE5A80
-		internal GlyphPairKey(TMP_GlyphPairAdjustmentRecord record) {
-			firstGlyphIndex = default;
-			secondGlyphIndex = default;
-			key = default;
-		} // 0x000000018BE15C88-0x000000018BE15CB8
+		public GlyphPairKey(uint firstGlyphIndex, uint secondGlyphIndex); // 0x0000000184DB9CA0-0x0000000184DB9CC0
+		internal GlyphPairKey(TMP_GlyphPairAdjustmentRecord record); // 0x000000018B31A044-0x000000018B31A074
 	}
 
 	[Serializable]
-	public class TMP_FontFeatureTable // TypeDefIndex: 53170
+	public class TMP_FontFeatureTable // TypeDefIndex: 55655
 	{
 		// Fields
+		[SerializeField]
 		internal List<TMP_GlyphPairAdjustmentRecord> m_GlyphPairAdjustmentRecords; // 0x10
 		public Dictionary<uint, TMP_GlyphPairAdjustmentRecord> m_GlyphPairAdjustmentRecordLookupDictionary; // 0x18
 	
 		// Properties
-		public List<TMP_GlyphPairAdjustmentRecord> glyphPairAdjustmentRecords { get => default; set {} } // 0x000000018BE1CF4C-0x000000018BE1D0A4 0x0000000185492010-0x0000000185492020
+		public List<TMP_GlyphPairAdjustmentRecord> glyphPairAdjustmentRecords { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 53169
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55654
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -2146,200 +2117,249 @@ namespace TMPro
 			public static Func<TMP_GlyphPairAdjustmentRecord, uint> __9__6_1; // 0x10
 	
 			// Constructors
-			static __c() {} // 0x000000018346D130-0x000000018346D140
-			public __c() {} // 0x0000000184096E30-0x0000000184096EF0
+			static __c(); // 0x000000018B321904-0x000000018B321968
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal uint _SortGlyphPairAdjustmentRecords_b__6_0(TMP_GlyphPairAdjustmentRecord s) => default; // 0x00000001856F7110-0x00000001856F71E0
-			internal uint _SortGlyphPairAdjustmentRecords_b__6_1(TMP_GlyphPairAdjustmentRecord s) => default; // 0x000000018BE15E68-0x000000018BE16088
+			internal uint _SortGlyphPairAdjustmentRecords_b__6_0(TMP_GlyphPairAdjustmentRecord s); // 0x000000018B3218D4-0x000000018B3218EC
+			internal uint _SortGlyphPairAdjustmentRecords_b__6_1(TMP_GlyphPairAdjustmentRecord s); // 0x000000018B3218EC-0x000000018B321904
 		}
 	
 		// Constructors
-		public TMP_FontFeatureTable() {} // 0x000000018BE1CF1C-0x000000018BE1CF34
+		public TMP_FontFeatureTable(); // 0x000000018450C870-0x000000018450C940
 	
 		// Methods
-		public void SortGlyphPairAdjustmentRecords() {} // 0x000000018BE1CF34-0x000000018BE1CF4C
+		public void SortGlyphPairAdjustmentRecords(); // 0x000000018B31A224-0x000000018B31A444
 	}
 
-	public class TMP_InputField : Selectable, IUpdateSelectedHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler, ISubmitHandler, ICanvasElement, ILayoutElement, UnityEngine.EventSystems.IScrollHandler // TypeDefIndex: 53184
+	[AddComponentMenu("UI/TextMeshPro - Input Field", 11)]
+	public class TMP_InputField : Selectable, IUpdateSelectedHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler, ISubmitHandler, ICanvasElement, ILayoutElement, UnityEngine.EventSystems.IScrollHandler // TypeDefIndex: 55669
 	{
 		// Fields
-		protected TouchScreenKeyboard m_SoftKeyboard; // 0x180
+		protected TouchScreenKeyboard m_SoftKeyboard; // 0x188
 		private static readonly char[] kSeparators; // 0x00
-		protected RectTransform m_RectTransform; // 0x188
-		protected RectTransform m_TextViewport; // 0x190
-		protected RectMask2D m_TextComponentRectMask; // 0x198
-		protected RectMask2D m_TextViewportRectMask; // 0x1A0
-		private Rect m_CachedViewportRect; // 0x1A8
-		protected TMP_Text m_TextComponent; // 0x1B8
-		protected RectTransform m_TextComponentRectTransform; // 0x1C0
-		protected Graphic m_Placeholder; // 0x1C8
-		protected Scrollbar m_VerticalScrollbar; // 0x1D0
-		protected TMP_ScrollbarEventHandler m_VerticalScrollbarEventHandler; // 0x1D8
-		private bool m_IsDrivenByLayoutComponents; // 0x1E0
-		private LayoutGroup m_LayoutGroup; // 0x1E8
-		private UnityEngine.EventSystems.IScrollHandler m_IScrollHandlerParent; // 0x1F0
-		private float m_ScrollPosition; // 0x1F8
-		protected float m_ScrollSensitivity; // 0x1FC
-		private ContentType m_ContentType; // 0x200
-		private InputType m_InputType; // 0x204
-		private char m_AsteriskChar; // 0x208
-		private TouchScreenKeyboardType m_KeyboardType; // 0x20C
-		private LineType m_LineType; // 0x210
-		private bool m_HideMobileInput; // 0x214
-		private bool m_HideSoftKeyboard; // 0x215
-		private CharacterValidation m_CharacterValidation; // 0x218
-		private string m_RegexValue; // 0x220
-		private float m_GlobalPointSize; // 0x228
-		private int m_CharacterLimit; // 0x22C
-		private SubmitEvent m_OnEndEdit; // 0x230
-		private SubmitEvent m_OnSubmit; // 0x238
-		private SelectionEvent m_OnSelect; // 0x240
-		private SelectionEvent m_OnDeselect; // 0x248
-		private TextSelectionEvent m_OnTextSelection; // 0x250
-		private TextSelectionEvent m_OnEndTextSelection; // 0x258
-		private OnChangeEvent m_OnValueChanged; // 0x260
-		private TouchScreenKeyboardEvent m_OnTouchScreenKeyboardStatusChanged; // 0x268
-		private OnValidateInput m_OnValidateInput; // 0x270
-		private UnityEvent m_OnFocused; // 0x278
-		private UnityEngine.Color m_CaretColor; // 0x280
-		private bool m_CustomCaretColor; // 0x290
-		private UnityEngine.Color m_SelectionColor; // 0x294
-		protected string m_Text; // 0x2A8
-		private float m_CaretBlinkRate; // 0x2B0
-		private int m_CaretWidth; // 0x2B4
-		private bool m_ReadOnly; // 0x2B8
-		private bool m_RichText; // 0x2B9
-		private bool m_disableUpDownArrowKeyMovingCaret; // 0x2BA
-		private bool m_disableLeftRightArrowKeyMovingCaret; // 0x2BB
-		protected int m_StringPosition; // 0x2BC
-		protected int m_StringSelectPosition; // 0x2C0
-		protected int m_CaretPosition; // 0x2C4
-		protected int m_CaretSelectPosition; // 0x2C8
-		private RectTransform caretRectTrans; // 0x2D0
-		protected UIVertex[] m_CursorVerts; // 0x2D8
-		private CanvasRenderer m_CachedInputRenderer; // 0x2E0
-		private Vector2 m_LastPosition; // 0x2E8
+		protected RectTransform m_RectTransform; // 0x190
+		[SerializeField]
+		protected RectTransform m_TextViewport; // 0x198
+		protected RectMask2D m_TextComponentRectMask; // 0x1A0
+		protected RectMask2D m_TextViewportRectMask; // 0x1A8
+		private Rect m_CachedViewportRect; // 0x1B0
+		[SerializeField]
+		protected TMP_Text m_TextComponent; // 0x1C0
+		protected RectTransform m_TextComponentRectTransform; // 0x1C8
+		[SerializeField]
+		protected Graphic m_Placeholder; // 0x1D0
+		[SerializeField]
+		protected Scrollbar m_VerticalScrollbar; // 0x1D8
+		[SerializeField]
+		protected TMP_ScrollbarEventHandler m_VerticalScrollbarEventHandler; // 0x1E0
+		private bool m_IsDrivenByLayoutComponents; // 0x1E8
+		[SerializeField]
+		private LayoutGroup m_LayoutGroup; // 0x1F0
+		private UnityEngine.EventSystems.IScrollHandler m_IScrollHandlerParent; // 0x1F8
+		private float m_ScrollPosition; // 0x200
+		[SerializeField]
+		protected float m_ScrollSensitivity; // 0x204
+		[SerializeField]
+		private ContentType m_ContentType; // 0x208
+		[SerializeField]
+		private InputType m_InputType; // 0x20C
+		[SerializeField]
+		private char m_AsteriskChar; // 0x210
+		[SerializeField]
+		private TouchScreenKeyboardType m_KeyboardType; // 0x214
+		[SerializeField]
+		private LineType m_LineType; // 0x218
+		[SerializeField]
+		private bool m_HideMobileInput; // 0x21C
+		[SerializeField]
+		private bool m_HideSoftKeyboard; // 0x21D
+		[SerializeField]
+		private CharacterValidation m_CharacterValidation; // 0x220
+		[SerializeField]
+		private string m_RegexValue; // 0x228
+		[SerializeField]
+		private float m_GlobalPointSize; // 0x230
+		[SerializeField]
+		private int m_CharacterLimit; // 0x234
+		[SerializeField]
+		private SubmitEvent m_OnEndEdit; // 0x238
+		[SerializeField]
+		private SubmitEvent m_OnSubmit; // 0x240
+		[SerializeField]
+		private SelectionEvent m_OnSelect; // 0x248
+		[SerializeField]
+		private SelectionEvent m_OnDeselect; // 0x250
+		[SerializeField]
+		private TextSelectionEvent m_OnTextSelection; // 0x258
+		[SerializeField]
+		private TextSelectionEvent m_OnEndTextSelection; // 0x260
+		[SerializeField]
+		private OnChangeEvent m_OnValueChanged; // 0x268
+		[SerializeField]
+		private TouchScreenKeyboardEvent m_OnTouchScreenKeyboardStatusChanged; // 0x270
+		[SerializeField]
+		private OnValidateInput m_OnValidateInput; // 0x278
+		[SerializeField]
+		private UnityEvent m_OnFocused; // 0x280
+		[SerializeField]
+		private UnityEngine.Color m_CaretColor; // 0x288
+		[SerializeField]
+		private bool m_CustomCaretColor; // 0x298
+		[SerializeField]
+		private UnityEngine.Color m_SelectionColor; // 0x29C
+		[SerializeField]
+		[TextArea(5, 10)]
+		protected string m_Text; // 0x2B0
+		[Range(0f, 4f)]
+		[SerializeField]
+		private float m_CaretBlinkRate; // 0x2B8
+		[Range(1f, 5f)]
+		[SerializeField]
+		private int m_CaretWidth; // 0x2BC
+		[SerializeField]
+		private bool m_ReadOnly; // 0x2C0
+		[SerializeField]
+		private bool m_RichText; // 0x2C1
+		[SerializeField]
+		private bool m_disableUpDownArrowKeyMovingCaret; // 0x2C2
+		[SerializeField]
+		private bool m_disableLeftRightArrowKeyMovingCaret; // 0x2C3
+		protected int m_StringPosition; // 0x2C4
+		protected int m_StringSelectPosition; // 0x2C8
+		protected int m_CaretPosition; // 0x2CC
+		protected int m_CaretSelectPosition; // 0x2D0
+		private RectTransform caretRectTrans; // 0x2D8
+		protected UIVertex[] m_CursorVerts; // 0x2E0
+		private CanvasRenderer m_CachedInputRenderer; // 0x2E8
+		private Vector2 m_LastPosition; // 0x2F0
 		[NonSerialized]
-		protected Mesh m_Mesh; // 0x2F0
-		private bool m_AllowInput; // 0x2F8
-		private bool m_ShouldActivateNextUpdate; // 0x2F9
-		private bool m_UpdateDrag; // 0x2FA
-		private bool m_DragPositionOutOfBounds; // 0x2FB
-		private const float kHScrollSpeed = 0.05f; // Metadata: 0x02077AEF
-		private const float kVScrollSpeed = 0.1f; // Metadata: 0x02077AF3
-		protected bool m_CaretVisible; // 0x2FC
-		private Coroutine m_BlinkCoroutine; // 0x300
-		private float m_BlinkStartTime; // 0x308
-		private Coroutine m_DragCoroutine; // 0x310
-		private string m_OriginalText; // 0x318
-		private bool m_WasCanceled; // 0x320
-		private bool m_HasDoneFocusTransition; // 0x321
-		private WaitForSecondsRealtime m_WaitForSecondsRealtime; // 0x328
-		private bool m_PreventCallback; // 0x330
-		private bool m_TouchKeyboardAllowsInPlaceEditing; // 0x331
-		private bool m_IsTextComponentUpdateRequired; // 0x332
-		private bool m_isLastKeyBackspace; // 0x333
-		private float m_PointerDownClickStartTime; // 0x334
-		private float m_KeyDownStartTime; // 0x338
-		private float m_DoubleClickDelay; // 0x33C
-		private const string kEmailSpecialCharacters = "!#$%&\'*+-/=?^_`{|}~"; // Metadata: 0x02077AF7
-		private bool m_IsCompositionActive; // 0x340
-		private bool m_ShouldUpdateIMEWindowPosition; // 0x341
-		private int m_PreviousIMEInsertionLine; // 0x344
-		public Func<string, int, string> onValidateCharacterLimit; // 0x348
-		public Func<string, int> onGetTextLength; // 0x350
-		protected bool m_OnFocusSelectAll; // 0x358
-		protected bool m_isSelectAll; // 0x359
-		protected bool m_ResetOnDeActivation; // 0x35A
-		private bool m_SelectionStillActive; // 0x35B
-		private bool m_ReleaseSelection; // 0x35C
-		private GameObject m_PreviouslySelectedObject; // 0x360
-		private bool m_RestoreOriginalTextOnEscape; // 0x368
-		private bool m_WontReleaseSelectionOnEscape; // 0x369
-		private bool m_tempClearCompositionString; // 0x36A
-		protected bool m_isRichTextEditingAllowed; // 0x36B
-		protected int m_LineLimit; // 0x36C
-		protected TMP_InputValidator m_InputValidator; // 0x370
-		private bool m_isSelected; // 0x378
-		private bool m_IsStringPositionDirty; // 0x379
-		private bool m_IsCaretPositionDirty; // 0x37A
-		private bool m_forceRectTransformAdjustment; // 0x37B
-		private UnityEngine.Event m_ProcessingEvent; // 0x380
+		protected Mesh m_Mesh; // 0x2F8
+		private bool m_AllowInput; // 0x300
+		private bool m_ShouldActivateNextUpdate; // 0x301
+		private bool m_UpdateDrag; // 0x302
+		private bool m_DragPositionOutOfBounds; // 0x303
+		private const float kHScrollSpeed = 0.05f; // Metadata: 0x023470F1
+		private const float kVScrollSpeed = 0.1f; // Metadata: 0x023470F5
+		protected bool m_CaretVisible; // 0x304
+		private Coroutine m_BlinkCoroutine; // 0x308
+		private float m_BlinkStartTime; // 0x310
+		private Coroutine m_DragCoroutine; // 0x318
+		private string m_OriginalText; // 0x320
+		private bool m_WasCanceled; // 0x328
+		private bool m_HasDoneFocusTransition; // 0x329
+		private WaitForSecondsRealtime m_WaitForSecondsRealtime; // 0x330
+		private bool m_PreventCallback; // 0x338
+		private bool m_TouchKeyboardAllowsInPlaceEditing; // 0x339
+		private bool m_IsTextComponentUpdateRequired; // 0x33A
+		private bool m_isLastKeyBackspace; // 0x33B
+		private float m_PointerDownClickStartTime; // 0x33C
+		private float m_KeyDownStartTime; // 0x340
+		private float m_DoubleClickDelay; // 0x344
+		private const string kEmailSpecialCharacters = "!#$%&\'*+-/=?^_`{|}~"; // Metadata: 0x023470F9
+		private bool m_IsCompositionActive; // 0x348
+		private bool m_ShouldUpdateIMEWindowPosition; // 0x349
+		private int m_PreviousIMEInsertionLine; // 0x34C
+		public Func<string, int, string> onValidateCharacterLimit; // 0x350
+		public Func<string, int> onGetTextLength; // 0x358
+		[SerializeField]
+		protected bool m_OnFocusSelectAll; // 0x360
+		protected bool m_isSelectAll; // 0x361
+		[SerializeField]
+		protected bool m_ResetOnDeActivation; // 0x362
+		private bool m_SelectionStillActive; // 0x363
+		private bool m_ReleaseSelection; // 0x364
+		private GameObject m_PreviouslySelectedObject; // 0x368
+		[SerializeField]
+		private bool m_RestoreOriginalTextOnEscape; // 0x370
+		[SerializeField]
+		private bool m_WontReleaseSelectionOnEscape; // 0x371
+		private bool m_tempClearCompositionString; // 0x372
+		[SerializeField]
+		protected bool m_isRichTextEditingAllowed; // 0x373
+		[SerializeField]
+		protected int m_LineLimit; // 0x374
+		[SerializeField]
+		protected TMP_InputValidator m_InputValidator; // 0x378
+		private bool m_isSelected; // 0x380
+		private bool m_IsStringPositionDirty; // 0x381
+		private bool m_IsCaretPositionDirty; // 0x382
+		private bool m_forceRectTransformAdjustment; // 0x383
+		private UnityEngine.Event m_ProcessingEvent; // 0x388
 	
 		// Properties
-		public bool isLastKeyBackspace { get => default; set {} } // 0x0000000181B44930-0x0000000181B44940 0x000000018BE1ADC4-0x000000018BE1AE10
-		private BaseInput inputSystem { get => default; } // 0x0000000181BE0A10-0x0000000181BE0A20 
-		private string compositionString { get => default; } // 0x000000018BE1AD68-0x000000018BE1ADC4 
-		private int compositionLength { get => default; } // 0x0000000185FB8420-0x0000000185FB8430 
-		protected Mesh mesh { get => default; } // 0x0000000185FB8030-0x0000000185FB8040 
-		public bool shouldHideMobileInput { get => default; set {} } // 0x000000018BE1AE10-0x000000018BE1AFAC 0x0000000185FBACC0-0x0000000185FBACD0
-		public bool shouldHideSoftKeyboard { get => default; set {} } // 0x000000018BE1AA24-0x000000018BE1AA80 0x0000000184A18A10-0x0000000184A18A60
-		public string text { get => default; set {} } // 0x0000000185FE5B30-0x0000000185FE5B40 0x000000018BE1A450-0x000000018BE1A468
-		public bool isFocused { get => default; } // 0x0000000185FB8310-0x0000000185FB8320 
-		public float caretBlinkRate { get => default; set {} } // 0x000000018BE1A6D0-0x000000018BE1A71C 0x0000000185FB8850-0x0000000185FB8860
-		public int caretWidth { get => default; set {} } // 0x000000018BE1A800-0x000000018BE1A84C 0x0000000185FB8770-0x0000000185FB8780
-		public RectTransform textViewport { get => default; set {} } // 0x000000018BE1A7B4-0x000000018BE1A800 0x0000000185FB8840-0x0000000185FB8850
-		public TMP_Text textComponent { get => default; set {} } // 0x000000018BE1A684-0x000000018BE1A6D0 0x0000000185FB8470-0x0000000185FB8480
-		public Graphic placeholder { get => default; set {} } // 0x000000018BE1A84C-0x000000018BE1A898 0x0000000185FB8860-0x0000000185FB8870
-		public Scrollbar verticalScrollbar { get => default; set {} } // 0x000000018BE1A71C-0x000000018BE1A768 0x0000000185FB88E0-0x0000000185FB88F0
-		public float scrollSensitivity { get => default; set {} } // 0x000000018BE1A8E4-0x000000018BE1A930 0x0000000185FB8680-0x0000000185FB8690
-		public UnityEngine.Color caretColor { get => default; set {} } // 0x000000018BE1A898-0x000000018BE1A8E4 0x0000000185FB87D0-0x0000000185FB87E0
-		public bool customCaretColor { get => default; set {} } // 0x0000000185F37370-0x0000000185F373C0 0x0000000185FB8480-0x0000000185FB8490
-		public UnityEngine.Color selectionColor { get => default; set {} } // 0x000000018BE1A768-0x000000018BE1A7B4 0x0000000185FE5B20-0x0000000185FE5B30
-		public SubmitEvent onEndEdit { get => default; set {} } // 0x0000000184A148E0-0x0000000184A14980 0x0000000185FD6C50-0x0000000185FD6C60
-		public SubmitEvent onSubmit { get => default; set {} } // 0x000000018BE1A97C-0x000000018BE1AA14 0x0000000185FE5BC0-0x0000000185FE5BD0
-		public SelectionEvent onSelect { get => default; set {} } // 0x0000000185FE5C50-0x0000000185FE5C60 0x0000000185FE5BD0-0x0000000185FE5BE0
-		public SelectionEvent onDeselect { get => default; set {} } // 0x0000000185FE5C70-0x0000000185FE5C80 0x0000000185FBD140-0x0000000185FBD150
-		public TextSelectionEvent onTextSelection { get => default; set {} } // 0x0000000185FBD240-0x0000000185FBD250 0x0000000185FE5C10-0x0000000185FE5C20
-		public TextSelectionEvent onEndTextSelection { get => default; set {} } // 0x0000000185FE5C80-0x0000000185FE5C90 0x0000000185FE5B40-0x0000000185FE5B50
-		public OnChangeEvent onValueChanged { get => default; set {} } // 0x0000000185FE5C20-0x0000000185FE5C30 0x0000000185FE5B80-0x0000000185FE5B90
-		public TouchScreenKeyboardEvent onTouchScreenKeyboardStatusChanged { get => default; set {} } // 0x0000000185FE5C40-0x0000000185FE5C50 0x0000000185FCDD10-0x0000000185FCDD20
-		public OnValidateInput onValidateInput { get => default; set {} } // 0x000000018BE1A3F4-0x000000018BE1A450 0x0000000185FE5BB0-0x0000000185FE5BC0
-		public UnityEvent onFocused { get => default; set {} } // 0x000000018BE1A5E0-0x000000018BE1A684 0x0000000185FE5BA0-0x0000000185FE5BB0
-		public int characterLimit { get => default; set {} } // 0x000000018BE1A580-0x000000018BE1A5E0 0x0000000185FE5B50-0x0000000185FE5B60
-		public float pointSize { get => default; set {} } // 0x000000018BE1A468-0x000000018BE1A4C4 0x0000000185FE5B90-0x0000000185FE5BA0
-		public bool onFocusSelectAll { get => default; set {} } // 0x000000018BE1A524-0x000000018BE1A580 0x0000000181CE76D0-0x0000000181CE76E0
-		public bool resetOnDeActivation { get => default; set {} } // 0x000000018BE1A390-0x000000018BE1A3EC 0x0000000185FB7030-0x0000000185FB7040
-		public bool restoreOriginalTextOnEscape { get => default; set {} } // 0x000000018BE1A4C4-0x000000018BE1A524 0x0000000185FB9200-0x0000000185FB9210
-		public bool wontReleaseSelectionOnEscape { get => default; set {} } // 0x0000000185FE5C60-0x0000000185FE5C70 0x0000000185FE5BE0-0x0000000185FE5BF0
-		public bool disableArrowKeyMoveCaret { get => default; set {} } // 0x000000018BE1AA14-0x000000018BE1AA24 0x0000000184A15A30-0x0000000184A15A50
-		public bool isRichTextEditingAllowed { get => default; set {} } // 0x0000000185FE5AF0-0x0000000185FE5B00 0x000000018BE1A1F8-0x000000018BE1A254
-		public ContentType contentType { get => default; set {} } // 0x0000000185FE5C00-0x0000000185FE5C10 0x0000000185F9B630-0x0000000185F9B670
-		public LineType lineType { get => default; set {} } // 0x00000001859C7540-0x00000001859C7590 0x0000000184A189F0-0x0000000184A18A10
-		public int lineLimit { get => default; set {} } // 0x000000018647174C-0x0000000186471764 0x0000000184A17E90-0x0000000184A17EB0
-		public InputType inputType { get => default; set {} } // 0x00000001864743AC-0x00000001864743C4 0x0000000185FA29C0-0x0000000185FA29E0
-		public TouchScreenKeyboardType keyboardType { get => default; set {} } // 0x0000000186471734-0x000000018647174C 0x0000000184A17E70-0x0000000184A17E90
-		public CharacterValidation characterValidation { get => default; set {} } // 0x0000000186474394-0x00000001864743AC 0x0000000184A17C90-0x0000000184A17CC0
-		public TMP_InputValidator inputValidator { get => default; set {} } // 0x000000018647172C-0x0000000186471734 0x000000018BE1A2FC-0x000000018BE1A334
-		public bool readOnly { get => default; set {} } // 0x0000000186471724-0x000000018647172C 0x000000018BE1AA80-0x000000018BE1AABC
-		public bool richText { get => default; set {} } // 0x000000018647172C-0x0000000186471734 0x000000018BE1AAFC-0x000000018BE1AB38
-		public bool multiLine { get => default; } // 0x000000018BE1A16C-0x000000018BE1A174 
-		public char asteriskChar { get => default; set {} } // 0x000000018BE1AD30-0x000000018BE1AD68 0x000000018BE1A164-0x000000018BE1A16C
-		public bool wasCanceled { get => default; } // 0x000000018BE1AB38-0x000000018BE1AB74 
-		protected int caretPositionInternal { get => default; set {} } // 0x0000000184A13EF0-0x0000000184A145F0 0x0000000184A139C0-0x0000000184A13D30
-		protected int stringPositionInternal { get => default; set {} } // 0x0000000184A17CC0-0x0000000184A17DE0 0x0000000185FA2D00-0x0000000185FA2D60
-		protected int caretSelectPositionInternal { get => default; set {} } // 0x0000000184A156E0-0x0000000184A15720 0x0000000184A15720-0x0000000184A15790
-		protected int stringSelectPositionInternal { get => default; set {} } // 0x000000018572FFB0-0x000000018572FFF0 0x000000018572FF60-0x000000018572FFB0
-		private new bool hasSelection { get => default; } // 0x000000018BE18148-0x000000018BE18218 
-		public int caretPosition { get => default; set {} } // 0x000000018BE18218-0x000000018BE182BC 0x000000018BE182BC-0x000000018BE18414
-		public int selectionAnchorPosition { get => default; set {} } // 0x000000018BE18414-0x000000018BE18598 0x000000018BE19EE4-0x000000018BE19EEC
-		public int selectionFocusPosition { get => default; set {} } // 0x000000018BE1A3EC-0x000000018BE1A3F4 0x0000000184A17830-0x0000000184A17890
-		public int stringPosition { get => default; set {} } // 0x000000018BE196C8-0x000000018BE197C0 0x0000000184A15F70-0x0000000184A177D0
-		public int selectionStringAnchorPosition { get => default; set {} } // 0x00000001845E23A0-0x00000001845E2450 0x000000018BE186C8-0x000000018BE186EC
-		public int selectionStringFocusPosition { get => default; set {} } // 0x000000018BE186EC-0x000000018BE18A44 0x000000018BE1742C-0x000000018BE174A0
-		private static string clipboard { get => default; set {} } // 0x000000018BE175F8-0x000000018BE1789C 0x000000018BE171D8-0x000000018BE1742C
-		public virtual float minWidth { get => default; } // 0x0000000185492010-0x0000000185492020 
-		public virtual float preferredWidth { get => default; } // 0x0000000185682EE0-0x0000000185683030 
-		public virtual float flexibleWidth { get => default; } // 0x0000000181377E40-0x0000000181377E50 
-		public virtual float minHeight { get => default; } // 0x000000018BE1CC28-0x000000018BE1CC74 
-		public virtual float preferredHeight { get => default; } // 0x0000000181377E40-0x0000000181377E50 
-		public virtual float flexibleHeight { get => default; } // 0x0000000181378230-0x0000000181378240 
-		public virtual int layoutPriority { get => default; } // 0x0000000185492010-0x0000000185492020 
-		Transform ICanvasElement.transform { get => default; } // 0x0000000181377E40-0x0000000181377E50 
+		public bool isLastKeyBackspace { get; set; } // 0x0000000184DB9DA0-0x0000000184DB9DB0 0x0000000184DB9E70-0x0000000184DB9E80
+		private BaseInput inputSystem { get; } // 0x0000000183795980-0x0000000183795B00 
+		private string compositionString { get; } // 0x0000000183795240-0x00000001837952F0 
+		private int compositionLength { get; } // 0x0000000183794E90-0x0000000183794EC0 
+		protected Mesh mesh { get; } // 0x0000000183797620-0x00000001837976E0 
+		public bool shouldHideMobileInput { get; set; } // 0x000000018B31E21C-0x000000018B31E24C 0x000000018B31EC58-0x000000018B31ECC4
+		public bool shouldHideSoftKeyboard { get; set; } // 0x000000018B31E24C-0x000000018B31E2A0 0x000000018B31ECC4-0x000000018B31EDD8
+		public string text { get; set; } // 0x0000000184D8DEA0-0x0000000184D8DEB0 0x000000018B31EEB8-0x000000018B31EEC4
+		public bool isFocused { get; } // 0x0000000184D92940-0x0000000184D92950 
+		public float caretBlinkRate { get; set; } // 0x0000000184DB9D40-0x0000000184DB9D50 0x000000018B31E2FC-0x000000018B31E364
+		public int caretWidth { get; set; } // 0x0000000184DB9D50-0x0000000184DB9D60 0x000000018B31E3DC-0x000000018B31E438
+		public RectTransform textViewport { get; set; } // 0x0000000184D8DED0-0x0000000184D8DEE0 0x000000018B31EE6C-0x000000018B31EEB8
+		public TMP_Text textComponent { get; set; } // 0x0000000184D8DA80-0x0000000184D8DA90 0x000000018B31EE10-0x000000018B31EE6C
+		public Graphic placeholder { get; set; } // 0x0000000184D8D7B0-0x0000000184D8D7C0 0x000000018B31E9D8-0x000000018B31EA24
+		public Scrollbar verticalScrollbar { get; set; } // 0x0000000184D87870-0x0000000184D87880 0x000000018B31EEC4-0x000000018B31F060
+		public float scrollSensitivity { get; set; } // 0x0000000184DA2420-0x0000000184DA2430 0x000000018B31EACC-0x000000018B31EB28
+		public UnityEngine.Color caretColor { get; set; } // 0x0000000183797430-0x00000001837974A0 0x000000018B31E364-0x000000018B31E3A4
+		public bool customCaretColor { get; set; } // 0x0000000184D90190-0x0000000184D901A0 0x000000018B31E4F8-0x000000018B31E510
+		public UnityEngine.Color selectionColor { get; set; } // 0x0000000184DB9E30-0x0000000184DB9E40 0x000000018B31EB64-0x000000018B31EBA4
+		public SubmitEvent onEndEdit { get; set; } // 0x0000000184D8DAD0-0x0000000184D8DAE0 0x000000018B31E778-0x000000018B31E7C4
+		public SubmitEvent onSubmit { get; set; } // 0x0000000184D8DE80-0x0000000184D8DE90 0x000000018B31E8A8-0x000000018B31E8F4
+		public SelectionEvent onSelect { get; set; } // 0x0000000184D8D840-0x0000000184D8D850 0x000000018B31E85C-0x000000018B31E8A8
+		public SelectionEvent onDeselect { get; set; } // 0x0000000184D8DCE0-0x0000000184D8DCF0 0x000000018B31E72C-0x000000018B31E778
+		public TextSelectionEvent onTextSelection { get; set; } // 0x0000000184D8DE70-0x0000000184D8DE80 0x000000018B31E8F4-0x000000018B31E940
+		public TextSelectionEvent onEndTextSelection { get; set; } // 0x0000000184D8D810-0x0000000184D8D820 0x000000018B31E7C4-0x000000018B31E810
+		public OnChangeEvent onValueChanged { get; set; } // 0x0000000184D8DE90-0x0000000184D8DEA0 0x000000018B31E98C-0x000000018B31E9D8
+		public TouchScreenKeyboardEvent onTouchScreenKeyboardStatusChanged { get; set; } // 0x0000000184D8DF10-0x0000000184D8DF20 0x000000018B31E940-0x000000018B31E98C
+		public OnValidateInput onValidateInput { get; set; } // 0x0000000184D8DB90-0x0000000184D8DBA0 0x00000001847A98F0-0x00000001847A9940
+		public UnityEvent onFocused { get; set; } // 0x0000000184D8DD90-0x0000000184D8DDA0 0x000000018B31E810-0x000000018B31E85C
+		public int characterLimit { get; set; } // 0x0000000184DB9D60-0x0000000184DB9D70 0x000000018461D360-0x000000018461D400
+		public float pointSize { get; set; } // 0x0000000184DB9DF0-0x0000000184DB9E00 0x000000018B31EA24-0x000000018B31EABC
+		public bool onFocusSelectAll { get; set; } // 0x0000000184DB9DE0-0x0000000184DB9DF0 0x0000000184DB9E90-0x0000000184DB9EA0
+		public bool resetOnDeActivation { get; set; } // 0x0000000184DB9E10-0x0000000184DB9E20 0x0000000184DB9EB0-0x0000000184DB9EC0
+		public bool restoreOriginalTextOnEscape { get; set; } // 0x0000000184DB9E20-0x0000000184DB9E30 0x0000000184DB9EC0-0x0000000184DB9ED0
+		public bool wontReleaseSelectionOnEscape { get; set; } // 0x0000000184DB9E50-0x0000000184DB9E60 0x0000000184DB9ED0-0x0000000184DB9EE0
+		public bool disableArrowKeyMoveCaret { get; set; } // 0x0000000184DB9D80-0x0000000184DB9D90 0x0000000184DB9E60-0x0000000184DB9E70
+		public bool isRichTextEditingAllowed { get; set; } // 0x0000000184DB9DB0-0x0000000184DB9DC0 0x0000000184DB9E80-0x0000000184DB9E90
+		public ContentType contentType { get; set; } // 0x0000000184DB9D70-0x0000000184DB9D80 0x000000018B31E49C-0x000000018B31E4F8
+		public LineType lineType { get; set; } // 0x0000000184DAA150-0x0000000184DAA160 0x000000018B31E688-0x000000018B31E72C
+		public int lineLimit { get; set; } // 0x0000000184DB9DD0-0x0000000184DB9DE0 0x000000018B31E628-0x000000018B31E688
+		public InputType inputType { get; set; } // 0x0000000184DB9D90-0x0000000184DB9DA0 0x000000018B31E510-0x000000018B31E56C
+		public TouchScreenKeyboardType keyboardType { get; set; } // 0x0000000184DB9DC0-0x0000000184DB9DD0 0x000000018B31E5CC-0x000000018B31E628
+		public CharacterValidation characterValidation { get; set; } // 0x0000000184D902A0-0x0000000184D902B0 0x000000018B31E438-0x000000018B31E494
+		public TMP_InputValidator inputValidator { get; set; } // 0x0000000184D8DD00-0x0000000184D8DD10 0x000000018B31E56C-0x000000018B31E5CC
+		public bool readOnly { get; set; } // 0x0000000184DB9E00-0x0000000184DB9E10 0x0000000184DB9EA0-0x0000000184DB9EB0
+		public bool richText { get; set; } // 0x0000000184D8FB10-0x0000000184D8FB20 0x000000018B31EABC-0x000000018B31EACC
+		public bool multiLine { get; } // 0x0000000183798D60-0x0000000183798D80 
+		public char asteriskChar { get; set; } // 0x0000000184DB9D30-0x0000000184DB9D40 0x000000018B31E2A0-0x000000018B31E2FC
+		public bool wasCanceled { get; } // 0x0000000184DB9E40-0x0000000184DB9E50 
+		protected int caretPositionInternal { get; set; } // 0x0000000183796960-0x00000001837969A0 0x000000018539550C-0x0000000185395524
+		protected int stringPositionInternal { get; set; } // 0x00000001837969E0-0x0000000183796A20 0x0000000185395524-0x000000018539553C
+		protected int caretSelectPositionInternal { get; set; } // 0x0000000184CD9910-0x0000000184CD9930 0x00000001853954F4-0x000000018539550C
+		protected int stringSelectPositionInternal { get; set; } // 0x00000001837969A0-0x00000001837969E0 0x00000001853954DC-0x00000001853954F4
+		private new bool hasSelection { get; } // 0x00000001837974A0-0x00000001837974D0 
+		public int caretPosition { get; set; } // 0x00000001853954D4-0x00000001853954DC 0x000000018B31E3A4-0x000000018B31E3DC
+		public int selectionAnchorPosition { get; set; } // 0x00000001853954CC-0x00000001853954D4 0x000000018B31EB28-0x000000018B31EB64
+		public int selectionFocusPosition { get; set; } // 0x00000001853954D4-0x00000001853954DC 0x000000018B31EBA4-0x000000018B31EBE0
+		public int stringPosition { get; set; } // 0x000000018B31E214-0x000000018B31E21C 0x000000018B31EDD8-0x000000018B31EE10
+		public int selectionStringAnchorPosition { get; set; } // 0x000000018B31E20C-0x000000018B31E214 0x000000018B31EBE0-0x000000018B31EC1C
+		public int selectionStringFocusPosition { get; set; } // 0x000000018B31E214-0x000000018B31E21C 0x000000018B31EC1C-0x000000018B31EC58
+		private static string clipboard { get; set; } // 0x000000018B31DF8C-0x000000018B31DF94 0x000000018B31E494-0x000000018B31E49C
+		public virtual float minWidth { get; } // 0x0000000184D879D0-0x0000000184D879E0 
+		public virtual float preferredWidth { get; } // 0x000000018B31E0D0-0x000000018B31E20C 
+		public virtual float flexibleWidth { get; } // 0x0000000184DA9E10-0x0000000184DA9E20 
+		public virtual float minHeight { get; } // 0x0000000184D879D0-0x0000000184D879E0 
+		public virtual float preferredHeight { get; } // 0x000000018B31DF94-0x000000018B31E0D0 
+		public virtual float flexibleHeight { get; } // 0x0000000184DA9E10-0x0000000184DA9E20 
+		public virtual int layoutPriority { get; } // 0x0000000184D85B80-0x0000000184D85B90 
+		Transform ICanvasElement.transform { get; } // 0x00000001853953F4-0x00000001853953FC 
 	
 		// Nested types
-		public enum ContentType // TypeDefIndex: 53171
+		public enum ContentType // TypeDefIndex: 55656
 		{
 			Standard = 0,
 			Autocorrected = 1,
@@ -2353,14 +2373,14 @@ namespace TMPro
 			Custom = 9
 		}
 	
-		public enum InputType // TypeDefIndex: 53172
+		public enum InputType // TypeDefIndex: 55657
 		{
 			Standard = 0,
 			AutoCorrect = 1,
 			Password = 2
 		}
 	
-		public enum CharacterValidation // TypeDefIndex: 53173
+		public enum CharacterValidation // TypeDefIndex: 55658
 		{
 			None = 0,
 			Digit = 1,
@@ -2373,57 +2393,58 @@ namespace TMPro
 			CustomValidator = 8
 		}
 	
-		public enum LineType // TypeDefIndex: 53174
+		public enum LineType // TypeDefIndex: 55659
 		{
 			SingleLine = 0,
 			MultiLineSubmit = 1,
 			MultiLineNewline = 2
 		}
 	
-		public delegate char OnValidateInput(string text, int charIndex, char addedChar); // TypeDefIndex: 53175; 0x0000000185FE5C30-0x0000000185FE5C40
+		public delegate char OnValidateInput(string text, int charIndex, char addedChar); // TypeDefIndex: 55660; 0x00000001814F3120-0x00000001814F3140
 	
 		[Serializable]
-		public class SubmitEvent : UnityEvent<string> // TypeDefIndex: 53176
+		public class SubmitEvent : UnityEvent<string> // TypeDefIndex: 55661
 		{
 			// Constructors
-			public SubmitEvent() {} // 0x0000000183FB50C0-0x0000000183FB50F0
+			public SubmitEvent(); // 0x000000018405B7E0-0x000000018405B820
 		}
 	
 		[Serializable]
-		public class OnChangeEvent : UnityEvent<string> // TypeDefIndex: 53177
+		public class OnChangeEvent : UnityEvent<string> // TypeDefIndex: 55662
 		{
 			// Constructors
-			public OnChangeEvent() {} // 0x0000000184D70FD0-0x0000000184D713A0
+			public OnChangeEvent(); // 0x000000018405B3D0-0x000000018405B410
 		}
 	
 		[Serializable]
-		public class SelectionEvent : UnityEvent<string> // TypeDefIndex: 53178
+		public class SelectionEvent : UnityEvent<string> // TypeDefIndex: 55663
 		{
 			// Constructors
-			public SelectionEvent() {} // 0x0000000184A15D20-0x0000000184A15DE0
+			public SelectionEvent(); // 0x000000018405B820-0x000000018405B860
 		}
 	
 		[Serializable]
-		public class TextSelectionEvent : UnityEvent<string, int, int> // TypeDefIndex: 53179
+		public class TextSelectionEvent : UnityEvent<string, int, int> // TypeDefIndex: 55664
 		{
 			// Constructors
-			public TextSelectionEvent() {} // 0x000000018BE1A174-0x000000018BE1A1A4
+			public TextSelectionEvent(); // 0x000000018405B860-0x000000018405B8A0
 		}
 	
 		[Serializable]
-		public class TouchScreenKeyboardEvent : UnityEvent<TouchScreenKeyboard.Status> // TypeDefIndex: 53180
+		public class TouchScreenKeyboardEvent : UnityEvent<TouchScreenKeyboard.Status> // TypeDefIndex: 55665
 		{
 			// Constructors
-			public TouchScreenKeyboardEvent() {} // 0x000000018BE1ABB0-0x000000018BE1AC1C
+			public TouchScreenKeyboardEvent(); // 0x000000018405B900-0x000000018405B940
 		}
 	
-		protected enum EditState // TypeDefIndex: 53181
+		protected enum EditState // TypeDefIndex: 55666
 		{
 			Continue = 0,
 			Finish = 1
 		}
 	
-		private sealed class _CaretBlink_d__291 : IEnumerator<object> // TypeDefIndex: 53182
+		[CompilerGenerated]
+		private sealed class _CaretBlink_d__291 : IEnumerator<object> // TypeDefIndex: 55667
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -2431,20 +2452,23 @@ namespace TMPro
 			public TMP_InputField __4__this; // 0x20
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000185FB8650-0x0000000185FB8660 
-			object IEnumerator.Current { get => default; } // 0x000000018BE19578-0x000000018BE19584 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _CaretBlink_d__291() {} // Dummy constructor
-			public _CaretBlink_d__291(int __1__state) {} // 0x000000018BE1A1A4-0x000000018BE1A1F8
+			[DebuggerHidden]
+			public _CaretBlink_d__291(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018BE1AC1C-0x000000018BE1AD30
-			private bool MoveNext() => default; // 0x0000000184A177D0-0x0000000184A17800
-			void IEnumerator.Reset() {} // 0x0000000186473118-0x0000000186473124
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x0000000183797D20-0x0000000183797E70
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B3215E0-0x000000018B32162C
 		}
 	
-		private sealed class _MouseDragOutsideRect_d__309 : IEnumerator<object> // TypeDefIndex: 53183
+		[CompilerGenerated]
+		private sealed class _MouseDragOutsideRect_d__309 : IEnumerator<object> // TypeDefIndex: 55668
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -2453,158 +2477,162 @@ namespace TMPro
 			public PointerEventData eventData; // 0x28
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018BE1A254-0x000000018BE1A2BC 
-			object IEnumerator.Current { get => default; } // 0x000000018BE1A334-0x000000018BE1A390 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _MouseDragOutsideRect_d__309() {} // Dummy constructor
-			public _MouseDragOutsideRect_d__309(int __1__state) {} // 0x000000018504C6B0-0x000000018504C7E0
+			[DebuggerHidden]
+			public _MouseDragOutsideRect_d__309(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x0000000185FE5B60-0x0000000185FE5B70
-			private bool MoveNext() => default; // 0x0000000185FE5B00-0x0000000185FE5B10
-			void IEnumerator.Reset() {} // 0x0000000185FE5B10-0x0000000185FE5B20
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018B32162C-0x000000018B321888
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B321888-0x000000018B3218D4
 		}
 	
 		// Constructors
-		protected TMP_InputField() {} // 0x000000018BE1A930-0x000000018BE1A97C
-		static TMP_InputField() {} // 0x000000018BE1CED0-0x000000018BE1CF1C
+		protected TMP_InputField(); // 0x000000018405B410-0x000000018405B7E0
+		static TMP_InputField(); // 0x0000000184D16A70-0x0000000184D16B00
 	
 		// Methods
-		private bool isKeyboardUsingEvents() => default; // 0x000000018BE1A2BC-0x000000018BE1A2FC
-		public void SetTextWithoutNotify(string input) {} // 0x0000000185FE5BF0-0x0000000185FE5C00
-		private void SetText(string value, bool sendCallback = true /* Metadata: 0x02077AED */) {} // 0x000000018BE1AABC-0x000000018BE1AAFC
-		protected void ClampStringPos(ref int pos) {} // 0x000000018BE1A16C-0x000000018BE1A174
-		protected void ClampCaretPos(ref int pos) {} // 0x000000018BE1AB74-0x000000018BE1ABB0
-		protected override void OnEnable() {} // 0x000000018BE18A44-0x000000018BE18A68
-		protected override void OnDisable() {} // 0x00000001845E21D0-0x00000001845E23A0
-		private void ON_TEXT_CHANGED(UnityEngine.Object obj) {} // 0x0000000184A15790-0x0000000184A15950
-		private IEnumerator CaretBlink() => default; // 0x0000000184A15A10-0x0000000184A15A30
-		private void SetCaretVisible() {} // 0x000000018BE192B8-0x000000018BE192C0
-		private void SetCaretActive() {} // 0x0000000184A151C0-0x0000000184A152D0
-		protected void OnFocus() {} // 0x000000018BE18A68-0x000000018BE18BE8
-		protected void SelectAll() {} // 0x000000018BE16D78-0x000000018BE16E80
-		public void MoveTextEnd(bool shift) {} // 0x000000018BE16E80-0x000000018BE16F0C
-		public void MoveTextStart(bool shift) {} // 0x000000018BE16A9C-0x000000018BE16B58
-		public void MoveToEndOfLine(bool shift, bool ctrl) {} // 0x000000018BE17E3C-0x000000018BE18148
-		public void MoveToStartOfLine(bool shift, bool ctrl) {} // 0x000000018BE16B58-0x000000018BE16C0C
-		private bool InPlaceEditing() => default; // 0x000000018BE16F60-0x000000018BE171D8
-		private void UpdateStringPositionFromKeyboard() {} // 0x000000018BE18FB0-0x000000018BE192B8
-		protected virtual void LateUpdate() {} // 0x000000018BE18C70-0x000000018BE18FB0
-		private bool MayDrag(PointerEventData eventData) => default; // 0x000000018BE175EC-0x000000018BE175F8
-		public virtual void OnBeginDrag(PointerEventData eventData) {} // 0x000000018BE174A0-0x000000018BE175EC
-		public virtual void OnDrag(PointerEventData eventData) {} // 0x000000018BE18598-0x000000018BE185A4
-		private IEnumerator MouseDragOutsideRect(PointerEventData eventData) => default; // 0x000000018BE185A4-0x000000018BE186C8
-		public virtual void OnEndDrag(PointerEventData eventData) {} // 0x000000018BE17E30-0x000000018BE17E3C
-		public override void OnPointerDown(PointerEventData eventData) {} // 0x000000018BE17B78-0x000000018BE17E30
-		protected EditState KeyPressed(UnityEngine.Event evt) => default; // 0x000000018BE17B6C-0x000000018BE17B78
-		protected virtual bool IsValidChar(char c) => default; // 0x000000018BE1789C-0x000000018BE17B6C
-		public void ProcessEvent(UnityEngine.Event e) {} // 0x000000018504E080-0x000000018504E140
-		public virtual void OnUpdateSelected(BaseEventData eventData) {} // 0x000000018BE16744-0x000000018BE16968
-		public virtual void OnScroll(PointerEventData eventData) {} // 0x000000018BE16450-0x000000018BE16744
-		private float GetScrollPositionRelativeToViewport() => default; // 0x000000018BE163C8-0x000000018BE16450
-		private string GetSelectedString() => default; // 0x0000000184A15A90-0x0000000184A15BB0
-		private int FindNextWordBegin() => default; // 0x000000018504DD20-0x000000018504DE70
-		private void MoveRight(bool shift, bool ctrl) {} // 0x000000018504E000-0x000000018504E020
-		private int FindPrevWordBegin() => default; // 0x000000018BE19310-0x000000018BE19330
-		private void MoveLeft(bool shift, bool ctrl) {} // 0x000000018504E020-0x000000018504E080
-		private int LineUpCharacterPosition(int originalPos, bool goToFirstChar) => default; // 0x0000000185734C40-0x0000000185734CA0
-		private int LineDownCharacterPosition(int originalPos, bool goToLastChar) => default; // 0x000000018BE192C0-0x000000018BE19310
-		private int PageUpCharacterPosition(int originalPos, bool goToFirstChar) => default; // 0x0000000185F1D720-0x0000000185F1D780
-		private int PageDownCharacterPosition(int originalPos, bool goToLastChar) => default; // 0x0000000185F57670-0x0000000185F576D0
-		private void MoveDown(bool shift) {} // 0x0000000185F82D70-0x0000000185F82E10
-		private void MoveDown(bool shift, bool goToLastChar) {} // 0x0000000184A17EB0-0x0000000184A17F60
-		private void MoveUp(bool shift) {} // 0x000000018BE19330-0x000000018BE193A0
-		private void MoveUp(bool shift, bool goToFirstChar) {} // 0x0000000184A15350-0x0000000184A15690
-		private void MovePageUp(bool shift) {} // 0x000000018BE195EC-0x000000018BE196C8
-		private void MovePageUp(bool shift, bool goToFirstChar) {} // 0x000000018BE18BE8-0x000000018BE18C28
-		private void MovePageDown(bool shift) {} // 0x0000000185492010-0x0000000185492020
-		private void MovePageDown(bool shift, bool goToLastChar) {} // 0x000000018BE161A0-0x000000018BE163C8
-		private void Delete() {} // 0x0000000184A17DE0-0x0000000184A17E70
-		private void DeleteKey() {} // 0x000000018BE16CA4-0x000000018BE16D78
-		private void Backspace() {} // 0x000000018BE16C14-0x000000018BE16CA4
-		protected virtual void Append(string input) {} // 0x000000018BE16F0C-0x000000018BE16F60
-		protected virtual void Append(char input) {} // 0x000000018BE16C0C-0x000000018BE16C14
-		private void Insert(char c) {} // 0x0000000184A15690-0x0000000184A156E0
-		private void UpdateTouchKeyboardFromEditChanges() {} // 0x0000000184A15C50-0x0000000184A15C60
-		private void SendOnValueChangedAndUpdateLabel() {} // 0x0000000185492010-0x0000000185492020
-		private void SendOnValueChanged() {} // 0x0000000185492010-0x0000000185492020
-		protected void SendOnEndEdit() {} // 0x0000000184A15C60-0x0000000184A15D20
-		protected void SendOnSubmit() {} // 0x0000000184A121A0-0x0000000184A12610
-		protected virtual void SendOnFocus() {} // 0x0000000184A178D0-0x0000000184A17C90
-		protected virtual void SendOnFocusLost() {} // 0x0000000184A17F60-0x0000000184A18830
-		protected void SendOnTextSelection() {} // 0x0000000185A946D0-0x0000000185A94870
-		protected void SendOnEndTextSelection() {} // 0x0000000185785B00-0x00000001857861A0
-		protected void SendTouchScreenKeyboardStatusChanged() {} // 0x0000000185786250-0x00000001857865E0
-		protected void UpdateLabel() {} // 0x000000018BE197C0-0x000000018BE19EE4
-		private void UpdateScrollbar() {} // 0x0000000185734960-0x0000000185734A50
-		private void OnScrollbarValueChange(float value) {} // 0x00000001814A81B0-0x00000001814A81C0
-		private void UpdateMaskRegions() {} // 0x0000000183F79E80-0x0000000183F7A420
-		private void AdjustTextPositionRelativeToViewport(float relativePosition) {} // 0x000000018572FFF0-0x00000001857313D0
-		private int GetCaretPositionFromStringIndex(int stringIndex) => default; // 0x0000000185F388C0-0x0000000185F38900
-		private int GetMinCaretPositionFromStringIndex(int stringIndex) => default; // 0x0000000185FAE070-0x0000000185FAE0B0
-		private int GetMaxCaretPositionFromStringIndex(int stringIndex) => default; // 0x0000000185492010-0x0000000185492020
-		private int GetStringIndexFromCaretPosition(int caretPosition) => default; // 0x0000000185734BF0-0x0000000185734C40
-		public void ForceLabelUpdate() {} // 0x0000000185732D40-0x0000000185733040
-		private void MarkGeometryAsDirty() {} // 0x0000000185F10A00-0x0000000185F10A40
-		public virtual void Rebuild(CanvasUpdate update) {} // 0x000000018BE18C28-0x000000018BE18C70
-		public virtual void LayoutComplete() {} // 0x000000018BE16968-0x000000018BE16A9C
-		public virtual void GraphicUpdateComplete() {} // 0x0000000184D71500-0x0000000184D71570
-		private void UpdateGeometry() {} // 0x000000018BE19500-0x000000018BE19578
-		private void AssignPositioningIfNeeded() {} // 0x000000018BE19584-0x000000018BE195D4
-		private void OnFillVBO(Mesh vbo) {} // 0x000000018BE195D4-0x000000018BE195EC
-		private void GenerateCaret(VertexHelper vbo, Vector2 roundingOffset) {} // 0x000000018BE195D4-0x000000018BE195EC
-		private void CreateCursorVerts() {} // 0x0000000185EC28F0-0x0000000185EC2920
-		private void GenerateHightlight(VertexHelper vbo, Vector2 roundingOffset) {} // 0x0000000185492010-0x0000000185492020
-		private void AdjustRectTransformRelativeToViewport(Vector2 startPosition, float height, bool isCharVisible) {} // 0x0000000185492010-0x0000000185492020
-		protected char Validate(string text, int pos, char ch) => default; // 0x0000000183908D00-0x0000000183908D10
-		public virtual void ActivateInputField() {} // 0x000000018BE1A028-0x000000018BE1A164
-		protected virtual bool TryActivateInputFieldCustom() => default; // 0x0000000185FD5E00-0x0000000185FD5E10
-		protected void CompleteActivation() {} // 0x0000000183908D00-0x0000000183908D10
-		private void ActivateInputFieldInternal() {} // 0x000000018BE19EEC-0x000000018BE1A028
-		public override void OnSelect(BaseEventData eventData) {} // 0x0000000185FD5E00-0x0000000185FD5E10
-		public virtual void OnPointerClick(PointerEventData eventData) {} // 0x0000000181B87DE0-0x0000000181B87DF0
-		public void OnControlClick() {} // 0x000000018BE19450-0x000000018BE19500
-		public void ReleaseSelection() {} // 0x000000018BE193A0-0x000000018BE19450
-		public virtual void DeactivateInputField(bool clearSelection = false /* Metadata: 0x02077AEE */) {} // 0x0000000185F3E9E0-0x0000000185F3EA70
-		public override void OnDeselect(BaseEventData eventData) {} // 0x000000018646DBCC-0x000000018646DBD4
-		public virtual void OnSubmit(BaseEventData eventData) {} // 0x000000018BE15D54-0x000000018BE15E28
-		private void EnforceContentType() {} // 0x00000001817E31E0-0x00000001817E3200
-		private void SetTextComponentWrapMode() {} // 0x000000018BE15CB8-0x000000018BE15D54
-		private void SetTextComponentRichTextMode() {} // 0x000000018A1CE150-0x000000018A1CE280
-		private void SetToCustomIfContentTypeIsNot(ContentType[] allowedContentTypes) {} // 0x0000000184D713A0-0x0000000184D713E0
-		private void SetToCustom() {} // 0x0000000184D70F90-0x0000000184D70FD0
-		private void SetToCustom(CharacterValidation characterValidation) {} // 0x0000000184D713E0-0x0000000184D71420
-		protected override void DoStateTransition(SelectionState state, bool instant) {} // 0x0000000184D71420-0x0000000184D71460
-		public virtual void CalculateLayoutInputHorizontal() {} // 0x0000000184D714C0-0x0000000184D71500
-		public virtual void CalculateLayoutInputVertical() {} // 0x0000000181378230-0x0000000181378240
-		public void SetGlobalPointSize(float pointSize) {} // 0x000000018BE1CC74-0x000000018BE1CED0
-		public void SetGlobalFontAsset(TMP_FontAsset fontAsset) {} // 0x0000000181377E40-0x0000000181377E50
+		private bool isKeyboardUsingEvents(); // 0x00000001837977F0-0x0000000183797820
+		public void SetTextWithoutNotify(string input); // 0x000000018B31D620-0x000000018B31D62C
+		private void SetText(string value, bool sendCallback = true /* Metadata: 0x023470EF */); // 0x0000000184B387E0-0x0000000184B38910
+		protected void ClampStringPos(ref int pos); // 0x00000001849B1550-0x00000001849B1590
+		protected void ClampCaretPos(ref int pos); // 0x000000018456AF70-0x000000018456AFC0
+		protected override void OnEnable(); // 0x0000000182EDD330-0x0000000182EDDB70
+		protected override void OnDisable(); // 0x0000000182EDCD20-0x0000000182EDD170
+		private void ON_TEXT_CHANGED(UnityEngine.Object obj); // 0x0000000183BA6410-0x0000000183BA6510
+		[IteratorStateMachine(typeof(_CaretBlink_d__291))]
+		private IEnumerator CaretBlink(); // 0x0000000184D35060-0x0000000184D350C0
+		private void SetCaretVisible(); // 0x00000001837986B0-0x00000001837986F0
+		private void SetCaretActive(); // 0x00000001837986F0-0x0000000183798760
+		protected void OnFocus(); // 0x0000000183BA8AB0-0x0000000183BA8AF0
+		protected void SelectAll(); // 0x0000000183BA7DF0-0x0000000183BA7E40
+		public void MoveTextEnd(bool shift); // 0x000000018B31C210-0x000000018B31C2E0
+		public void MoveTextStart(bool shift); // 0x000000018B31C2E0-0x000000018B31C384
+		public void MoveToEndOfLine(bool shift, bool ctrl); // 0x000000018B31C384-0x000000018B31C4DC
+		public void MoveToStartOfLine(bool shift, bool ctrl); // 0x000000018B31C4DC-0x000000018B31C660
+		private bool InPlaceEditing(); // 0x0000000183797860-0x00000001837978C0
+		private void UpdateStringPositionFromKeyboard(); // 0x000000018B31D770-0x000000018B31D868
+		protected virtual void LateUpdate(); // 0x00000001837976E0-0x00000001837977F0
+		private bool MayDrag(PointerEventData eventData); // 0x0000000183E9A110-0x0000000183E9A200
+		public virtual void OnBeginDrag(PointerEventData eventData); // 0x000000018B31C790-0x000000018B31C7B4
+		public virtual void OnDrag(PointerEventData eventData); // 0x000000018B31C7B4-0x000000018B31CB0C
+		[IteratorStateMachine(typeof(_MouseDragOutsideRect_d__309))]
+		private IEnumerator MouseDragOutsideRect(PointerEventData eventData); // 0x000000018B31B4F4-0x000000018B31B568
+		public virtual void OnEndDrag(PointerEventData eventData); // 0x000000018B31CB0C-0x000000018B31CB30
+		public override void OnPointerDown(PointerEventData eventData); // 0x0000000183E99F40-0x0000000183E9A110
+		protected EditState KeyPressed(UnityEngine.Event evt); // 0x0000000183798A90-0x0000000183798C20
+		protected virtual bool IsValidChar(char c); // 0x0000000183798D40-0x0000000183798D60
+		public void ProcessEvent(UnityEngine.Event e); // 0x000000018B31D380-0x000000018B31D388
+		public virtual void OnUpdateSelected(BaseEventData eventData); // 0x0000000183798820-0x0000000183798960
+		public virtual void OnScroll(PointerEventData eventData); // 0x000000018B31CB30-0x000000018B31CCB0
+		private float GetScrollPositionRelativeToViewport(); // 0x000000018B31AE40-0x000000018B31AF48
+		private string GetSelectedString(); // 0x000000018B31AF48-0x000000018B31AFD4
+		private int FindNextWordBegin(); // 0x000000018B31AB64-0x000000018B31AC20
+		private void MoveRight(bool shift, bool ctrl); // 0x000000018B31BF04-0x000000018B31C210
+		private int FindPrevWordBegin(); // 0x000000018B31AC20-0x000000018B31ACD4
+		private void MoveLeft(bool shift, bool ctrl); // 0x000000018B31B6C0-0x000000018B31B964
+		private int LineUpCharacterPosition(int originalPos, bool goToFirstChar); // 0x000000018B31B2A0-0x000000018B31B4F4
+		private int LineDownCharacterPosition(int originalPos, bool goToLastChar); // 0x000000018B31B028-0x000000018B31B2A0
+		private int PageUpCharacterPosition(int originalPos, bool goToFirstChar); // 0x000000018B31D078-0x000000018B31D380
+		private int PageDownCharacterPosition(int originalPos, bool goToLastChar); // 0x000000018B31CD38-0x000000018B31D078
+		private void MoveDown(bool shift); // 0x000000018B31B6B4-0x000000018B31B6C0
+		private void MoveDown(bool shift, bool goToLastChar); // 0x000000018B31B568-0x000000018B31B6B4
+		private void MoveUp(bool shift); // 0x000000018B31C660-0x000000018B31C66C
+		private void MoveUp(bool shift, bool goToFirstChar); // 0x000000018B31C66C-0x000000018B31C790
+		private void MovePageUp(bool shift); // 0x000000018B31BEF8-0x000000018B31BF04
+		private void MovePageUp(bool shift, bool goToFirstChar); // 0x000000018B31BC40-0x000000018B31BEF8
+		private void MovePageDown(bool shift); // 0x000000018B31BC34-0x000000018B31BC40
+		private void MovePageDown(bool shift, bool goToLastChar); // 0x000000018B31B964-0x000000018B31BC34
+		private void Delete(); // 0x0000000183BA5E90-0x0000000183BA5F50
+		private void DeleteKey(); // 0x000000018B31A80C-0x000000018B31AA30
+		private void Backspace(); // 0x0000000183BA6110-0x0000000183BA6320
+		protected virtual void Append(string input); // 0x000000018B31A784-0x000000018B31A80C
+		protected virtual void Append(char input); // 0x0000000183BA5F50-0x0000000183BA6070
+		private void Insert(char c); // 0x0000000183BA5BB0-0x0000000183BA5D20
+		private void UpdateTouchKeyboardFromEditChanges(); // 0x0000000183BA5E10-0x0000000183BA5E30
+		private void SendOnValueChangedAndUpdateLabel(); // 0x0000000183BA63F0-0x0000000183BA6410
+		private void SendOnValueChanged(); // 0x0000000183BA5E30-0x0000000183BA5E90
+		protected void SendOnEndEdit(); // 0x0000000183BA8B90-0x0000000183BA8BF0
+		protected void SendOnSubmit(); // 0x000000018B31D388-0x000000018B31D3D8
+		protected virtual void SendOnFocus(); // 0x0000000184B47D60-0x0000000184B47DC0
+		protected virtual void SendOnFocusLost(); // 0x0000000184CB19D0-0x0000000184CB1A30
+		protected void SendOnTextSelection(); // 0x0000000184CECD70-0x0000000184CECE10
+		protected void SendOnEndTextSelection(); // 0x0000000183797C90-0x0000000183797D20
+		protected void SendTouchScreenKeyboardStatusChanged(); // 0x000000018B31D3D8-0x000000018B31D448
+		protected void UpdateLabel(); // 0x0000000183798250-0x00000001837986A0
+		private void UpdateScrollbar(); // 0x000000018B31D694-0x000000018B31D770
+		private void OnScrollbarValueChange(float value); // 0x000000018B31CCB0-0x000000018B31CCF0
+		private void UpdateMaskRegions(); // 0x00000001841E1670-0x00000001841E1680
+		private void AdjustTextPositionRelativeToViewport(float relativePosition); // 0x000000018B31A55C-0x000000018B31A784
+		private int GetCaretPositionFromStringIndex(int stringIndex); // 0x0000000183BA6510-0x0000000183BA65A0
+		private int GetMinCaretPositionFromStringIndex(int stringIndex); // 0x000000018B31AD6C-0x000000018B31AE40
+		private int GetMaxCaretPositionFromStringIndex(int stringIndex); // 0x000000018B31ACDC-0x000000018B31AD6C
+		private int GetStringIndexFromCaretPosition(int caretPosition); // 0x000000018B31AFD4-0x000000018B31B028
+		public void ForceLabelUpdate(); // 0x000000018B31ACD4-0x000000018B31ACDC
+		private void MarkGeometryAsDirty(); // 0x0000000183797E70-0x0000000183797EA0
+		public virtual void Rebuild(CanvasUpdate update); // 0x0000000183797540-0x0000000183797550
+		public virtual void LayoutComplete(); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void GraphicUpdateComplete(); // 0x00000001841E1670-0x00000001841E1680
+		private void UpdateGeometry(); // 0x0000000183797550-0x0000000183797620
+		private void AssignPositioningIfNeeded(); // 0x00000001836CD400-0x00000001836CD8A0
+		private void OnFillVBO(Mesh vbo); // 0x0000000183797900-0x0000000183797C90
+		private void GenerateCaret(VertexHelper vbo, Vector2 roundingOffset); // 0x0000000183796A20-0x00000001837972C0
+		private void CreateCursorVerts(); // 0x0000000184753660-0x0000000184753800
+		private void GenerateHightlight(VertexHelper vbo, Vector2 roundingOffset); // 0x0000000183BA6900-0x0000000183BA6F90
+		private void AdjustRectTransformRelativeToViewport(Vector2 startPosition, float height, bool isCharVisible); // 0x0000000184419E00-0x000000018441A2B0
+		protected char Validate(string text, int pos, char ch); // 0x000000018B31D868-0x000000018B31DF8C
+		public virtual void ActivateInputField(); // 0x0000000183BA85A0-0x0000000183BA86F0
+		protected virtual bool TryActivateInputFieldCustom(); // 0x00000001812081B0-0x0000000181208610
+		protected void CompleteActivation(); // 0x0000000183BA8AF0-0x0000000183BA8B40
+		private void ActivateInputFieldInternal(); // 0x0000000183BA88C0-0x0000000183BA8AB0
+		public override void OnSelect(BaseEventData eventData); // 0x0000000184CA2AE0-0x0000000184CA2B20
+		public virtual void OnPointerClick(PointerEventData eventData); // 0x0000000184D799D0-0x0000000184D79A10
+		public void OnControlClick(); // 0x00000001841E1670-0x00000001841E1680
+		public void ReleaseSelection(); // 0x0000000183BA8B40-0x0000000183BA8B90
+		public virtual void DeactivateInputField(bool clearSelection = false /* Metadata: 0x023470F0 */); // 0x0000000183BA81C0-0x0000000183BA85A0
+		public override void OnDeselect(BaseEventData eventData); // 0x0000000184B6C940-0x0000000184B6C980
+		public virtual void OnSubmit(BaseEventData eventData); // 0x000000018B31CCF0-0x000000018B31CD38
+		private void EnforceContentType(); // 0x000000018B31AA30-0x000000018B31AB64
+		private void SetTextComponentWrapMode(); // 0x000000018405B940-0x000000018405B9E0
+		private void SetTextComponentRichTextMode(); // 0x000000018B31D5A8-0x000000018B31D620
+		private void SetToCustomIfContentTypeIsNot(params ContentType[] allowedContentTypes); // 0x000000018B31D62C-0x000000018B31D67C
+		private void SetToCustom(); // 0x000000018B31D67C-0x000000018B31D694
+		private void SetToCustom(CharacterValidation characterValidation); // 0x000000018B31D67C-0x000000018B31D694
+		protected override void DoStateTransition(SelectionState state, bool instant); // 0x00000001849E42C0-0x00000001849E42F0
+		public virtual void CalculateLayoutInputHorizontal(); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void CalculateLayoutInputVertical(); // 0x00000001841E1670-0x00000001841E1680
+		public void SetGlobalPointSize(float pointSize); // 0x000000018B31D4F8-0x000000018B31D5A8
+		public void SetGlobalFontAsset(TMP_FontAsset fontAsset); // 0x000000018B31D448-0x000000018B31D4F8
 	}
 
-	internal static class SetPropertyUtility // TypeDefIndex: 53185
+	internal static class SetPropertyUtility // TypeDefIndex: 55670
 	{
 		// Methods
-		public static bool SetColor(ref UnityEngine.Color currentValue, UnityEngine.Color newValue) => default; // 0x000000018BE15E28-0x000000018BE15E68
+		public static bool SetColor(ref UnityEngine.Color currentValue, UnityEngine.Color newValue); // 0x000000018B31A1E4-0x000000018B31A224
 		public static bool SetEquatableStruct<T>(ref ref T currentValue, T newValue)
-			where T : IEquatable<T> => default;
+			where T : IEquatable<T>;
 		public static bool SetStruct<T>(ref ref T currentValue, T newValue)
-			where T : struct => default;
+			where T : struct;
 		public static bool SetClass<T>(ref ref T currentValue, T newValue)
-			where T : class => default;
+			where T : class;
 	}
 
 	[Serializable]
-	public abstract class TMP_InputValidator : ScriptableObject // TypeDefIndex: 53186
+	public abstract class TMP_InputValidator : ScriptableObject // TypeDefIndex: 55671
 	{
 		// Constructors
-		protected TMP_InputValidator() {} // 0x0000000184BBD7B0-0x0000000184BBD7C0
+		protected TMP_InputValidator(); // 0x0000000183573370-0x0000000183573380
 	
 		// Methods
 		public abstract char Validate(ref string text, ref int pos, char ch);
 	}
 
-	public struct TMP_LineInfo // TypeDefIndex: 53187
+	public struct TMP_LineInfo // TypeDefIndex: 55672
 	{
 		// Fields
 		public int controlCharacterCount; // 0x00
@@ -2629,35 +2657,36 @@ namespace TMPro
 		public Extents lineExtents; // 0x4C
 	}
 
-	internal static class TMP_ListPool<T> // TypeDefIndex: 53189
+	internal static class TMP_ListPool<T> // TypeDefIndex: 55674
 	{
 		// Fields
 		private static readonly TMP_ObjectPool<List<T>> s_ListPool;
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 53188
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55673
 		{
 			// Fields
 			public static readonly __c<T> __9;
 	
 			// Constructors
-			static __c() {}
-			public __c() {}
+			static __c();
+			public __c();
 	
 			// Methods
-			internal void _.cctor_b__3_0(List<T> l) {}
+			internal void _.cctor_b__3_0(List<T> l);
 		}
 	
 		// Constructors
-		static TMP_ListPool() {}
+		static TMP_ListPool();
 	
 		// Methods
-		public static List<T> Get() => default;
-		public static void Release(List<T> toRelease) {}
+		public static List<T> Get();
+		public static void Release(List<T> toRelease);
 	}
 
-	public static class TMP_MaterialManager // TypeDefIndex: 53196
+	public static class TMP_MaterialManager // TypeDefIndex: 55681
 	{
 		// Fields
 		private static List<MaskingMaterial> m_materialList; // 0x00
@@ -2668,10 +2697,10 @@ namespace TMPro
 		private static string s_overlayShaderKeyword; // 0x28
 	
 		// Properties
-		public static string overlayShaderKeyword { get; set; } // 0x000000018BE1BBA8-0x000000018BE1BDFC 0x0000000184EC2F50-0x0000000184EC3180
+		public static string overlayShaderKeyword { get; set; } // 0x000000018B321530-0x000000018B321580 0x000000018B321580-0x000000018B3215E0
 	
 		// Nested types
-		private class FallbackMaterial // TypeDefIndex: 53190
+		private class FallbackMaterial // TypeDefIndex: 55675
 		{
 			// Fields
 			public long fallbackID; // 0x10
@@ -2681,10 +2710,10 @@ namespace TMPro
 			public int count; // 0x30
 	
 			// Constructors
-			public FallbackMaterial() {} // 0x00000001845A1EF0-0x00000001845A2140
+			public FallbackMaterial(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
-		private class MaskingMaterial // TypeDefIndex: 53191
+		private class MaskingMaterial // TypeDefIndex: 55676
 		{
 			// Fields
 			public Material baseMaterial; // 0x10
@@ -2693,89 +2722,93 @@ namespace TMPro
 			public int stencilID; // 0x24
 	
 			// Constructors
-			public MaskingMaterial() {} // 0x000000018515E420-0x000000018515E4A0
+			public MaskingMaterial(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
-		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 53192
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass13_0 // TypeDefIndex: 55677
 		{
 			// Fields
 			public Material stencilMaterial; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass13_0() {} // 0x000000018BE1CB78-0x000000018BE1CBC8
+			public __c__DisplayClass13_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetBaseMaterial_b__0(MaskingMaterial item) => default; // 0x000000018BE1CBC8-0x000000018BE1CC28
+			internal bool _GetBaseMaterial_b__0(MaskingMaterial item); // 0x000000018B339194-0x000000018B3391F8
 		}
 	
-		private sealed class __c__DisplayClass15_0 // TypeDefIndex: 53193
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass15_0 // TypeDefIndex: 55678
 		{
 			// Fields
 			public Material stencilMaterial; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass15_0() {} // 0x000000018BE1BDFC-0x000000018BE1C174
+			public __c__DisplayClass15_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _AddMaskingMaterial_b__0(MaskingMaterial item) => default; // 0x000000018BE1C618-0x000000018BE1C80C
+			internal bool _AddMaskingMaterial_b__0(MaskingMaterial item); // 0x000000018B3391F8-0x000000018B33925C
 		}
 	
-		private sealed class __c__DisplayClass16_0 // TypeDefIndex: 53194
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass16_0 // TypeDefIndex: 55679
 		{
 			// Fields
 			public Material stencilMaterial; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass16_0() {} // 0x000000018BE1B73C-0x000000018BE1B888
+			public __c__DisplayClass16_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _RemoveStencilMaterial_b__0(MaskingMaterial item) => default; // 0x000000018BE1CAC0-0x000000018BE1CB78
+			internal bool _RemoveStencilMaterial_b__0(MaskingMaterial item); // 0x000000018B33925C-0x000000018B3392C0
 		}
 	
-		private sealed class __c__DisplayClass17_0 // TypeDefIndex: 53195
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass17_0 // TypeDefIndex: 55680
 		{
 			// Fields
 			public Material baseMaterial; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass17_0() {} // 0x000000018BE1AFAC-0x000000018BE1B1E8
+			public __c__DisplayClass17_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _ReleaseBaseMaterial_b__0(MaskingMaterial item) => default; // 0x000000018BE1C984-0x000000018BE1CAC0
+			internal bool _ReleaseBaseMaterial_b__0(MaskingMaterial item); // 0x000000018B3392C0-0x000000018B339324
 		}
 	
 		// Constructors
-		static TMP_MaterialManager() {} // 0x000000018BE1C174-0x000000018BE1C618
+		static TMP_MaterialManager(); // 0x00000001849B2240-0x00000001849B2490
 	
 		// Methods
-		private static void OnPreRender() {} // 0x000000018BE1B1E8-0x000000018BE1B358
-		public static Material GetStencilMaterial(Material baseMaterial, int stencilID) => default; // 0x000000018BE1B5F0-0x000000018BE1B73C
-		public static void ReleaseStencilMaterial(Material stencilMaterial) {} // 0x000000018BE1B888-0x000000018BE1BBA8
-		public static Material GetBaseMaterial(Material stencilMaterial) => default; // 0x00000001845138C0-0x0000000184513D40
-		public static Material SetStencil(Material material, int stencilID) => default; // 0x00000001845135A0-0x00000001845136E0
-		public static void AddMaskingMaterial(Material baseMaterial, Material stencilMaterial, int stencilID) {} // 0x000000018BE1C80C-0x000000018BE1C984
-		public static void RemoveStencilMaterial(Material stencilMaterial) {} // 0x000000018515E4A0-0x000000018515E6E0
-		public static void ReleaseBaseMaterial(Material baseMaterial) {} // 0x00000001845136E0-0x00000001845138C0
-		public static void ClearMaterials() {} // 0x000000018BE1B358-0x000000018BE1B5F0
-		public static int GetStencilID(GameObject obj) => default; // 0x0000000185492010-0x0000000185492020
-		public static Material GetMaterialForRendering(MaskableGraphic graphic, Material baseMaterial) => default; // 0x0000000185492010-0x0000000185492020
-		private static Transform FindRootSortOverrideCanvas(Transform start) => default; // 0x0000000185492010-0x0000000185492020
-		internal static Material GetFallbackMaterial(TMP_FontAsset fontAsset, Material sourceMaterial, int atlasIndex) => default; // 0x000000018BE33454-0x000000018BE334B8
-		public static Material GetFallbackMaterial(Material sourceMaterial, Material targetMaterial) => default; // 0x0000000185492010-0x0000000185492020
-		public static void AddFallbackMaterialReference(Material targetMaterial) {} // 0x000000018BE334B8-0x000000018BE3351C
-		public static void RemoveFallbackMaterialReference(Material targetMaterial) {} // 0x0000000185492010-0x0000000185492020
-		public static void CleanupFallbackMaterials() {} // 0x000000018BE3351C-0x000000018BE33580
-		public static void ReleaseFallbackMaterial(Material fallbackMaterial) {} // 0x0000000185492010-0x0000000185492020
-		public static void CopyMaterialPresetProperties(Material source, Material destination) {} // 0x000000018BE33580-0x000000018BE335E4
+		private static void OnPreRender(); // 0x0000000183F64E20-0x0000000183F64E60
+		public static Material GetStencilMaterial(Material baseMaterial, int stencilID); // 0x000000018B32061C-0x000000018B320994
+		public static void ReleaseStencilMaterial(Material stencilMaterial); // 0x000000018B320FD0-0x000000018B3211C4
+		public static Material GetBaseMaterial(Material stencilMaterial); // 0x000000018B31FAF4-0x000000018B31FC40
+		public static Material SetStencil(Material material, int stencilID); // 0x000000018B321478-0x000000018B321530
+		public static void AddMaskingMaterial(Material baseMaterial, Material stencilMaterial, int stencilID); // 0x000000018B31F17C-0x000000018B31F3B8
+		public static void RemoveStencilMaterial(Material stencilMaterial); // 0x000000018B32133C-0x000000018B321478
+		public static void ReleaseBaseMaterial(Material baseMaterial); // 0x000000018B320994-0x000000018B320E38
+		public static void ClearMaterials(); // 0x000000018B31F5A0-0x000000018B31F710
+		public static int GetStencilID(GameObject obj); // 0x000000018B3203C8-0x000000018B32061C
+		public static Material GetMaterialForRendering(MaskableGraphic graphic, Material baseMaterial); // 0x0000000183E32470-0x0000000183E325D0
+		private static Transform FindRootSortOverrideCanvas(Transform start); // 0x000000018B31F9A8-0x000000018B31FAF4
+		internal static Material GetFallbackMaterial(TMP_FontAsset fontAsset, Material sourceMaterial, int atlasIndex); // 0x000000018B3200A8-0x000000018B3203C8
+		public static Material GetFallbackMaterial(Material sourceMaterial, Material targetMaterial); // 0x000000018B31FC40-0x000000018B3200A8
+		public static void AddFallbackMaterialReference(Material targetMaterial); // 0x000000018B31F060-0x000000018B31F17C
+		public static void RemoveFallbackMaterialReference(Material targetMaterial); // 0x000000018B3211C4-0x000000018B32133C
+		public static void CleanupFallbackMaterials(); // 0x000000018B31F3B8-0x000000018B31F5A0
+		public static void ReleaseFallbackMaterial(Material fallbackMaterial); // 0x000000018B320E38-0x000000018B320FD0
+		public static void CopyMaterialPresetProperties(Material source, Material destination); // 0x000000018B31F710-0x000000018B31F9A8
 	}
 
-	public enum VertexSortingOrder // TypeDefIndex: 53197
+	public enum VertexSortingOrder // TypeDefIndex: 55682
 	{
 		Normal = 0,
 		Reverse = 1
 	}
 
-	public struct TMP_MeshInfo : IDisposable // TypeDefIndex: 53198
+	public struct TMP_MeshInfo : IDisposable // TypeDefIndex: 55683
 	{
 		// Fields
 		private static readonly Color32 s_DefaultColor; // 0x00
@@ -2794,75 +2827,48 @@ namespace TMPro
 		public Material material; // 0x48
 	
 		// Constructors
-		public TMP_MeshInfo(Mesh mesh, int size) {
-			this.mesh = default;
-			vertexCount = default;
-			vertices = default;
-			normals = default;
-			tangents = default;
-			uvs0 = default;
-			uvs2 = default;
-			colors32 = default;
-			triangles = default;
-			material = default;
-		} // 0x00000001842B3F20-0x00000001842B4550
-		public TMP_MeshInfo(Mesh mesh, int size, bool isVolumetric) {
-			this.mesh = default;
-			vertexCount = default;
-			vertices = default;
-			normals = default;
-			tangents = default;
-			uvs0 = default;
-			uvs2 = default;
-			colors32 = default;
-			triangles = default;
-			material = default;
-		} // 0x000000018BE28E3C-0x000000018BE29804
-		static TMP_MeshInfo() {
-			s_DefaultColor = default;
-			s_DefaultNormal = default;
-			s_DefaultTangent = default;
-			s_DefaultBounds = default;
-		} // 0x0000000185EFA110-0x0000000185EFA1B0
+		public TMP_MeshInfo(Mesh mesh, int size); // 0x00000001832537A0-0x0000000183253E80
+		public TMP_MeshInfo(Mesh mesh, int size, bool isVolumetric); // 0x000000018B32DC78-0x000000018B32E640
+		static TMP_MeshInfo(); // 0x0000000184B529D0-0x0000000184B52A70
 	
 		// Methods
-		public void ResizeMeshInfo(int size) {} // 0x0000000184970230-0x00000001849707B0
-		public void ResizeMeshInfo(int size, bool isVolumetric) {} // 0x000000018BE278E8-0x000000018BE2844C
-		public void Clear() {} // 0x000000018BE27858-0x000000018BE278E8
-		public void Clear(bool uploadChanges) {} // 0x0000000183FE2360-0x0000000183FE2530
-		public void ClearUnusedVertices() {} // 0x0000000185D4BCA0-0x0000000185D4BCE0
-		public void ClearUnusedVertices(int startIndex) {} // 0x000000018BE2777C-0x000000018BE277B0
-		public void ClearUnusedVertices(int startIndex, bool updateMesh) {} // 0x000000018BE277B0-0x000000018BE27858
-		public void SortGeometry(VertexSortingOrder order) {} // 0x000000018BE2844C-0x000000018BE284F0
-		public void SortGeometry(IList<int> sortingOrder) {} // 0x000000018BE284F0-0x000000018BE285EC
-		public void SwapVertexData(int src, int dst) {} // 0x000000018BE285EC-0x000000018BE28E3C
-		public void Dispose() {} // 0x0000000184244BF0-0x0000000184244E10
+		public void ResizeMeshInfo(int size); // 0x00000001831CF8D0-0x00000001831CFE50
+		public void ResizeMeshInfo(int size, bool isVolumetric); // 0x000000018B32C724-0x000000018B32D288
+		public void Clear(); // 0x000000018B32C694-0x000000018B32C724
+		public void Clear(bool uploadChanges); // 0x0000000183BEB310-0x0000000183BEB450
+		public void ClearUnusedVertices(); // 0x000000018B32C65C-0x000000018B32C694
+		public void ClearUnusedVertices(int startIndex); // 0x000000018B32C580-0x000000018B32C5B4
+		public void ClearUnusedVertices(int startIndex, bool updateMesh); // 0x000000018B32C5B4-0x000000018B32C65C
+		public void SortGeometry(VertexSortingOrder order); // 0x000000018B32D288-0x000000018B32D32C
+		public void SortGeometry(IList<int> sortingOrder); // 0x000000018B32D32C-0x000000018B32D428
+		public void SwapVertexData(int src, int dst); // 0x000000018B32D428-0x000000018B32DC78
+		public void Dispose(); // 0x00000001835190A0-0x0000000183519220
 	}
 
-	internal class TMP_ObjectPool<T> // TypeDefIndex: 53199
+	internal class TMP_ObjectPool<T> // TypeDefIndex: 55684
 		where T : new()
 	{
 		// Fields
 		private readonly Stack<T> m_Stack;
 		private readonly UnityAction<T> m_ActionOnGet;
 		private readonly UnityAction<T> m_ActionOnRelease;
+		[CompilerGenerated]
 		private int _countAll_k__BackingField;
 	
 		// Properties
-		public int countAll { get; private set; }
-		public int countActive { get => default; }
-		public int countInactive { get => default; }
+		public int countAll { [CompilerGenerated] get; [CompilerGenerated] private set; }
+		public int countActive { get; }
+		public int countInactive { get; }
 	
 		// Constructors
-		public TMP_ObjectPool() {} // Dummy constructor
-		public TMP_ObjectPool(UnityAction<T> actionOnGet, UnityAction<T> actionOnRelease) {}
+		public TMP_ObjectPool(UnityAction<T> actionOnGet, UnityAction<T> actionOnRelease);
 	
 		// Methods
-		public T Get() => default;
-		public void Release(T element) {}
+		public T Get();
+		public void Release(T element);
 	}
 
-	public class TMP_ResourceManager // TypeDefIndex: 53200
+	public class TMP_ResourceManager // TypeDefIndex: 55685
 	{
 		// Fields
 		private static readonly TMP_ResourceManager s_instance; // 0x00
@@ -2871,20 +2877,17 @@ namespace TMPro
 		private static readonly Dictionary<int, TMP_FontAsset> s_FontAssetReferenceLookup; // 0x18
 	
 		// Constructors
-		static TMP_ResourceManager() {} // 0x000000018BE29B6C-0x000000018BE29CA0
-		public TMP_ResourceManager() {} // 0x0000000185492010-0x0000000185492020
+		static TMP_ResourceManager(); // 0x000000018B32E9A8-0x000000018B32EADC
+		public TMP_ResourceManager(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		internal static TMP_Settings GetTextSettings() => default; // 0x000000018BE29900-0x000000018BE299F0
-		public static void AddFontAsset(TMP_FontAsset fontAsset) {} // 0x000000018BE29804-0x000000018BE29900
-		public static bool TryGetFontAsset(int hashcode, out TMP_FontAsset fontAsset) {
-			fontAsset = default;
-			return default;
-		} // 0x000000018BE29AE4-0x000000018BE29B6C
-		internal static void RebuildFontAssetCache(int instanceID) {} // 0x000000018BE299F0-0x000000018BE29AE4
+		internal static TMP_Settings GetTextSettings(); // 0x000000018B32E73C-0x000000018B32E82C
+		public static void AddFontAsset(TMP_FontAsset fontAsset); // 0x000000018B32E640-0x000000018B32E73C
+		public static bool TryGetFontAsset(int hashcode, out TMP_FontAsset fontAsset); // 0x000000018B32E920-0x000000018B32E9A8
+		internal static void RebuildFontAssetCache(int instanceID); // 0x000000018B32E82C-0x000000018B32E920
 	}
 
-	internal enum MarkupTag // TypeDefIndex: 53201
+	internal enum MarkupTag // TypeDefIndex: 55686
 	{
 		GRADIENT = -1999759898,
 		FONT_WEIGHT = -1889896162,
@@ -3014,7 +3017,7 @@ namespace TMPro
 		VERTICAL_OFFSET = 1952379995
 	}
 
-	public enum TagValueType // TypeDefIndex: 53202
+	public enum TagValueType // TypeDefIndex: 55687
 	{
 		None = 0,
 		NumericalValue = 1,
@@ -3022,162 +3025,195 @@ namespace TMPro
 		ColorValue = 4
 	}
 
-	public enum TagUnitType // TypeDefIndex: 53203
+	public enum TagUnitType // TypeDefIndex: 55688
 	{
 		Pixels = 0,
 		FontUnits = 1,
 		Percentage = 2
 	}
 
-	internal static class CodePoint // TypeDefIndex: 53204
+	internal static class CodePoint // TypeDefIndex: 55689
 	{
 		// Fields
-		public const uint SPACE = 32; // Metadata: 0x02077D2E
-		public const uint DOUBLE_QUOTE = 34; // Metadata: 0x02077D2F
-		public const uint NUMBER_SIGN = 35; // Metadata: 0x02077D30
-		public const uint PERCENTAGE = 37; // Metadata: 0x02077D31
-		public const uint PLUS = 43; // Metadata: 0x02077D32
-		public const uint MINUS = 45; // Metadata: 0x02077D33
-		public const uint PERIOD = 46; // Metadata: 0x02077D34
-		public const uint HYPHEN_MINUS = 45; // Metadata: 0x02077D35
-		public const uint SOFT_HYPHEN = 173; // Metadata: 0x02077D36
-		public const uint HYPHEN = 8208; // Metadata: 0x02077D38
-		public const uint NON_BREAKING_HYPHEN = 8209; // Metadata: 0x02077D3A
-		public const uint ZERO_WIDTH_SPACE = 8203; // Metadata: 0x02077D3C
-		public const uint RIGHT_SINGLE_QUOTATION = 8217; // Metadata: 0x02077D3E
-		public const uint APOSTROPHE = 39; // Metadata: 0x02077D40
-		public const uint WORD_JOINER = 8288; // Metadata: 0x02077D41
-		public const uint HIGH_SURROGATE_START = 55296; // Metadata: 0x02077D43
-		public const uint HIGH_SURROGATE_END = 56319; // Metadata: 0x02077D47
-		public const uint LOW_SURROGATE_START = 56320; // Metadata: 0x02077D4B
-		public const uint LOW_SURROGATE_END = 57343; // Metadata: 0x02077D4F
-		public const uint UNICODE_PLANE01_START = 65536; // Metadata: 0x02077D53
+		public const uint SPACE = 32; // Metadata: 0x02347330
+		public const uint DOUBLE_QUOTE = 34; // Metadata: 0x02347331
+		public const uint NUMBER_SIGN = 35; // Metadata: 0x02347332
+		public const uint PERCENTAGE = 37; // Metadata: 0x02347333
+		public const uint PLUS = 43; // Metadata: 0x02347334
+		public const uint MINUS = 45; // Metadata: 0x02347335
+		public const uint PERIOD = 46; // Metadata: 0x02347336
+		public const uint HYPHEN_MINUS = 45; // Metadata: 0x02347337
+		public const uint SOFT_HYPHEN = 173; // Metadata: 0x02347338
+		public const uint HYPHEN = 8208; // Metadata: 0x0234733A
+		public const uint NON_BREAKING_HYPHEN = 8209; // Metadata: 0x0234733C
+		public const uint ZERO_WIDTH_SPACE = 8203; // Metadata: 0x0234733E
+		public const uint RIGHT_SINGLE_QUOTATION = 8217; // Metadata: 0x02347340
+		public const uint APOSTROPHE = 39; // Metadata: 0x02347342
+		public const uint WORD_JOINER = 8288; // Metadata: 0x02347343
+		public const uint HIGH_SURROGATE_START = 55296; // Metadata: 0x02347345
+		public const uint HIGH_SURROGATE_END = 56319; // Metadata: 0x02347349
+		public const uint LOW_SURROGATE_START = 56320; // Metadata: 0x0234734D
+		public const uint LOW_SURROGATE_END = 57343; // Metadata: 0x02347351
+		public const uint UNICODE_PLANE01_START = 65536; // Metadata: 0x02347355
 	}
 
-	public class TMP_ScrollbarEventHandler : MonoBehaviour, IPointerClickHandler, ISelectHandler, IDeselectHandler // TypeDefIndex: 53205
+	public class TMP_ScrollbarEventHandler : MonoBehaviour, IPointerClickHandler, ISelectHandler, IDeselectHandler // TypeDefIndex: 55690
 	{
 		// Fields
 		public bool isSelected; // 0x18
 	
 		// Constructors
-		public TMP_ScrollbarEventHandler() {} // 0x000000018646DB20-0x000000018646DB28
+		public TMP_ScrollbarEventHandler(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		public void OnPointerClick(PointerEventData eventData) {} // 0x000000018BE29CF8-0x000000018BE29D4C
-		public void OnSelect(BaseEventData eventData) {} // 0x000000018BE29D4C-0x000000018BE29DA4
-		public void OnDeselect(BaseEventData eventData) {} // 0x000000018BE29CA0-0x000000018BE29CF8
+		public void OnPointerClick(PointerEventData eventData); // 0x000000018B32EB34-0x000000018B32EB88
+		public void OnSelect(BaseEventData eventData); // 0x000000018B32EB88-0x000000018B32EBE0
+		public void OnDeselect(BaseEventData eventData); // 0x000000018B32EADC-0x000000018B32EB34
 	}
 
-	public class TMP_SelectionCaret : MaskableGraphic // TypeDefIndex: 53206
+	[RequireComponent(typeof(CanvasRenderer))]
+	public class TMP_SelectionCaret : MaskableGraphic // TypeDefIndex: 55691
 	{
 		// Constructors
-		public TMP_SelectionCaret() {} // 0x0000000185FADBF0-0x0000000185FADC00
+		public TMP_SelectionCaret(); // 0x0000000184D84AE0-0x0000000184D84AF0
 	
 		// Methods
-		public override void Cull(Rect clipRect, bool validRect) {} // 0x000000018422D230-0x000000018422D2D0
-		protected override void UpdateGeometry() {} // 0x0000000185492010-0x0000000185492020
+		public override void Cull(Rect clipRect, bool validRect); // 0x0000000183519EE0-0x0000000183519F70
+		protected override void UpdateGeometry(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class TMP_Settings : ScriptableObject // TypeDefIndex: 53208
+	[ExcludeFromPreset]
+	public class TMP_Settings : ScriptableObject // TypeDefIndex: 55693
 	{
 		// Fields
 		private static TMP_Settings s_Instance; // 0x00
+		[SerializeField]
 		private bool m_enableWordWrapping; // 0x18
+		[SerializeField]
 		private bool m_enableKerning; // 0x19
+		[SerializeField]
 		private bool m_enableExtraPadding; // 0x1A
+		[SerializeField]
 		private bool m_enableTintAllSprites; // 0x1B
+		[SerializeField]
 		private bool m_enableParseEscapeCharacters; // 0x1C
+		[SerializeField]
 		private bool m_EnableRaycastTarget; // 0x1D
+		[SerializeField]
 		private bool m_GetFontFeaturesAtRuntime; // 0x1E
+		[SerializeField]
 		private int m_missingGlyphCharacter; // 0x20
+		[SerializeField]
 		private bool m_warningsDisabled; // 0x24
+		[SerializeField]
 		private TMP_FontAsset m_defaultFontAsset; // 0x28
+		[SerializeField]
 		private string m_defaultFontAssetPath; // 0x30
+		[SerializeField]
 		private float m_defaultFontSize; // 0x38
+		[SerializeField]
 		private float m_defaultAutoSizeMinRatio; // 0x3C
+		[SerializeField]
 		private float m_defaultAutoSizeMaxRatio; // 0x40
+		[SerializeField]
 		private Vector2 m_defaultTextMeshProTextContainerSize; // 0x44
+		[SerializeField]
 		private Vector2 m_defaultTextMeshProUITextContainerSize; // 0x4C
+		[SerializeField]
 		private bool m_autoSizeTextContainer; // 0x54
+		[SerializeField]
 		private bool m_IsTextObjectScaleStatic; // 0x55
+		[SerializeField]
 		private List<TMP_FontAsset> m_fallbackFontAssets; // 0x58
+		[SerializeField]
 		private bool m_matchMaterialPreset; // 0x60
+		[SerializeField]
 		private TMP_SpriteAsset m_defaultSpriteAsset; // 0x68
+		[SerializeField]
 		private string m_defaultSpriteAssetPath; // 0x70
+		[SerializeField]
 		private bool m_enableEmojiSupport; // 0x78
+		[SerializeField]
 		private uint m_MissingCharacterSpriteUnicode; // 0x7C
+		[SerializeField]
 		private string m_defaultColorGradientPresetsPath; // 0x80
+		[SerializeField]
 		private TMP_StyleSheet m_defaultStyleSheet; // 0x88
+		[SerializeField]
 		private string m_StyleSheetsResourcePath; // 0x90
+		[SerializeField]
 		private TextAsset m_leadingCharacters; // 0x98
+		[SerializeField]
 		private TextAsset m_followingCharacters; // 0xA0
+		[SerializeField]
 		private LineBreakingTable m_linebreakingRules; // 0xA8
+		[SerializeField]
 		private bool m_UseModernHangulLineBreakingRules; // 0xB0
 		public IFontAssetLoader dynamicFontAssetLoader; // 0xB8
 	
 		// Properties
-		public static string version { get => default; } // 0x000000018BE2A378-0x000000018BE2A398 
-		public static bool enableWordWrapping { get => default; } // 0x000000018BE2A2F8-0x000000018BE2A318 
-		public static bool enableKerning { get => default; } // 0x000000018BE2A2D8-0x000000018BE2A2F8 
-		public static bool enableExtraPadding { get => default; } // 0x000000018BE2A358-0x000000018BE2A378 
-		public static bool enableTintAllSprites { get => default; } // 0x000000018BE2A318-0x000000018BE2A338 
-		public static bool enableParseEscapeCharacters { get => default; } // 0x000000018BE2A338-0x000000018BE2A358 
-		public static bool enableRaycastTarget { get => default; } // 0x0000000184011790-0x00000001840117B0 
-		public static bool getFontFeaturesAtRuntime { get => default; } // 0x000000018BE2A440-0x000000018BE2A460 
-		public static int missingGlyphCharacter { get => default; set {} } // 0x000000018BE2A560-0x000000018BE2A584 0x000000018BE2A4D4-0x000000018BE2A4F4
-		public static bool warningsDisabled { get => default; } // 0x000000018BE2A198-0x000000018BE2A1B8 
-		public static TMP_FontAsset defaultFontAsset { get => default; } // 0x000000018BE2A178-0x000000018BE2A198 
-		public static string defaultFontAssetPath { get => default; } // 0x000000018BE2A1B8-0x000000018BE2A1D8 
-		public static float defaultFontSize { get => default; } // 0x000000018BE2A238-0x000000018BE2A258 
-		public static float defaultTextAutoSizingMinRatio { get => default; } // 0x000000018BE2A218-0x000000018BE2A238 
-		public static float defaultTextAutoSizingMaxRatio { get => default; } // 0x000000018BE2A258-0x000000018BE2A288 
-		public static Vector2 defaultTextMeshProTextContainerSize { get => default; } // 0x000000018BE2A288-0x000000018BE2A2B8 
-		public static Vector2 defaultTextMeshProUITextContainerSize { get => default; } // 0x000000018BE2A134-0x000000018BE2A154 
-		public static bool autoSizeTextContainer { get => default; } // 0x000000018BE2A3DC-0x000000018BE2A3FC 
-		public static bool isTextObjectScaleStatic { get => default; set {} } // 0x000000018BE2A518-0x000000018BE2A53C 0x000000018BE2A398-0x000000018BE2A3B8
-		public static List<TMP_FontAsset> fallbackFontAssets { get => default; } // 0x0000000185BB3820-0x0000000185BB3840 
-		public static bool matchMaterialPreset { get => default; } // 0x000000018BE2A1F8-0x000000018BE2A218 
-		public static TMP_SpriteAsset defaultSpriteAsset { get => default; } // 0x000000018BE2A1D8-0x000000018BE2A1F8 
-		public static string defaultSpriteAssetPath { get => default; } // 0x000000018BE2A2B8-0x000000018BE2A2D8 
-		public static bool enableEmojiSupport { get => default; set {} } // 0x000000018BE2A4F4-0x000000018BE2A518 0x000000018BE2A420-0x000000018BE2A440
-		public static uint missingCharacterSpriteUnicode { get => default; set {} } // 0x000000018BE2A53C-0x000000018BE2A560 0x000000018BE2A154-0x000000018BE2A178
-		public static string defaultColorGradientPresetsPath { get => default; } // 0x0000000184685740-0x0000000184685770 
-		public static TMP_StyleSheet defaultStyleSheet { get => default; } // 0x000000018BE2A460-0x000000018BE2A484 
-		public static string styleSheetsResourcePath { get => default; } // 0x000000018BE2A3FC-0x000000018BE2A420 
-		public static TextAsset leadingCharacters { get => default; } // 0x000000018BE2A3B8-0x000000018BE2A3DC 
-		public static TextAsset followingCharacters { get => default; } // 0x0000000184685770-0x00000001846857C0 
-		public static LineBreakingTable linebreakingRules { get => default; } // 0x000000018BE2A484-0x000000018BE2A4A8 
-		public static bool useModernHangulLineBreakingRules { get => default; set {} } // 0x000000018BE2A584-0x000000018BE2A5AC 0x00000001846857C0-0x0000000184685930
-		public static TMP_Settings instance { get => default; } // 0x000000018BE2A050-0x000000018BE2A134 
+		public static string version { get; } // 0x000000018B32F324-0x000000018B32F350 
+		public static bool enableWordWrapping { get; } // 0x000000018B32F1B4-0x000000018B32F1D4 
+		public static bool enableKerning { get; } // 0x000000018B32F134-0x000000018B32F154 
+		public static bool enableExtraPadding { get; } // 0x000000018B32F114-0x000000018B32F134 
+		public static bool enableTintAllSprites { get; } // 0x000000018B32F194-0x000000018B32F1B4 
+		public static bool enableParseEscapeCharacters { get; } // 0x000000018B32F154-0x000000018B32F174 
+		public static bool enableRaycastTarget { get; } // 0x000000018B32F174-0x000000018B32F194 
+		public static bool getFontFeaturesAtRuntime { get; } // 0x000000018B32F218-0x000000018B32F238 
+		public static int missingGlyphCharacter { get; set; } // 0x000000018B32F2BC-0x000000018B32F2DC 0x000000018B32F3DC-0x000000018B32F400
+		public static bool warningsDisabled { get; } // 0x000000018B32F350-0x000000018B32F370 
+		public static TMP_FontAsset defaultFontAsset { get; } // 0x000000018B32EFD4-0x000000018B32EFF4 
+		public static string defaultFontAssetPath { get; } // 0x000000018B32EFB4-0x000000018B32EFD4 
+		public static float defaultFontSize { get; } // 0x000000018B32EFF4-0x000000018B32F014 
+		public static float defaultTextAutoSizingMinRatio { get; } // 0x000000018B32F074-0x000000018B32F094 
+		public static float defaultTextAutoSizingMaxRatio { get; } // 0x000000018B32F054-0x000000018B32F074 
+		public static Vector2 defaultTextMeshProTextContainerSize { get; } // 0x000000018B32F094-0x000000018B32F0C4 
+		public static Vector2 defaultTextMeshProUITextContainerSize { get; } // 0x000000018B32F0C4-0x000000018B32F0F4 
+		public static bool autoSizeTextContainer { get; } // 0x000000018B32EF70-0x000000018B32EF90 
+		public static bool isTextObjectScaleStatic { get; set; } // 0x000000018B32F238-0x000000018B32F258 0x000000018B32F394-0x000000018B32F3B8
+		public static List<TMP_FontAsset> fallbackFontAssets { get; } // 0x000000018B32F1D4-0x000000018B32F1F4 
+		public static bool matchMaterialPreset { get; } // 0x000000018B32F27C-0x000000018B32F29C 
+		public static TMP_SpriteAsset defaultSpriteAsset { get; } // 0x000000018B32F034-0x000000018B32F054 
+		public static string defaultSpriteAssetPath { get; } // 0x000000018B32F014-0x000000018B32F034 
+		public static bool enableEmojiSupport { get; set; } // 0x000000018B32F0F4-0x000000018B32F114 0x000000018B32F370-0x000000018B32F394
+		public static uint missingCharacterSpriteUnicode { get; set; } // 0x000000018B32F29C-0x000000018B32F2BC 0x000000018B32F3B8-0x000000018B32F3DC
+		public static string defaultColorGradientPresetsPath { get; } // 0x000000018B32EF90-0x000000018B32EFB4 
+		public static TMP_StyleSheet defaultStyleSheet { get; } // 0x000000018333CC00-0x000000018333CC30 
+		public static string styleSheetsResourcePath { get; } // 0x000000018B32F2DC-0x000000018B32F300 
+		public static TextAsset leadingCharacters { get; } // 0x000000018B32F258-0x000000018B32F27C 
+		public static TextAsset followingCharacters { get; } // 0x000000018B32F1F4-0x000000018B32F218 
+		public static LineBreakingTable linebreakingRules { get; } // 0x000000018333CC30-0x000000018333CC80 
+		public static bool useModernHangulLineBreakingRules { get; set; } // 0x000000018B32F300-0x000000018B32F324 0x000000018B32F400-0x000000018B32F428
+		public static TMP_Settings instance { get; } // 0x000000018333CC80-0x000000018333CD60 
 	
 		// Nested types
-		public class LineBreakingTable // TypeDefIndex: 53207
+		public class LineBreakingTable // TypeDefIndex: 55692
 		{
 			// Fields
 			public Dictionary<int, char> leadingCharacters; // 0x10
 			public Dictionary<int, char> followingCharacters; // 0x18
 	
 			// Constructors
-			public LineBreakingTable() {} // 0x000000018BE2A4A8-0x000000018BE2A4D4
+			public LineBreakingTable(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		// Constructors
-		public TMP_Settings() {} // 0x0000000185492010-0x0000000185492020
+		public TMP_Settings(); // 0x0000000184D84AD0-0x0000000184D84AE0
 	
 		// Methods
-		public static TMP_Settings LoadDefaultSettings() => default; // 0x000000018BE29F18-0x000000018BE29F78
-		public static TMP_Settings GetSettings() => default; // 0x000000018BE29EAC-0x000000018BE29F18
-		public static TMP_FontAsset GetFontAsset() => default; // 0x000000018BE29DA4-0x000000018BE29E40
-		public static void ClearDefaultFontAsset() {} // 0x000000018BE29F78-0x000000018BE29FE4
-		public static TMP_SpriteAsset GetSpriteAsset() => default; // 0x000000018BE29FE4-0x000000018BE2A050
-		public static TMP_StyleSheet GetStyleSheet() => default; // 0x00000001854A8F40-0x00000001854A9090
-		public static void LoadLinebreakingRules() {} // 0x000000018BE29E40-0x000000018BE29EAC
-		public static IFontAssetLoader GetDynamicFallbackFontAssetLoader() => default; // 0x00000001854A9090-0x00000001854A9190
-		private static Dictionary<int, char> GetCharacters(TextAsset file) => default; // 0x0000000185FAE7E0-0x0000000185FAE7F0
+		public static TMP_Settings LoadDefaultSettings(); // 0x000000018B32EE8C-0x000000018B32EF70
+		public static TMP_Settings GetSettings(); // 0x000000018B32ED54-0x000000018B32EDB4
+		public static TMP_FontAsset GetFontAsset(); // 0x000000018B32ECE8-0x000000018B32ED54
+		public static void ClearDefaultFontAsset(); // 0x000000018B32EBE0-0x000000018B32EC7C
+		public static TMP_SpriteAsset GetSpriteAsset(); // 0x000000018B32EDB4-0x000000018B32EE20
+		public static TMP_StyleSheet GetStyleSheet(); // 0x000000018B32EE20-0x000000018B32EE8C
+		public static void LoadLinebreakingRules(); // 0x0000000184378C70-0x0000000184378DF0
+		public static IFontAssetLoader GetDynamicFallbackFontAssetLoader(); // 0x000000018B32EC7C-0x000000018B32ECE8
+		private static Dictionary<int, char> GetCharacters(TextAsset file); // 0x0000000184378DF0-0x0000000184378EF0
 	}
 
-	public static class ShaderUtilities // TypeDefIndex: 53209
+	public static class ShaderUtilities // TypeDefIndex: 55694
 	{
 		// Fields
 		public static int ID_MainTex; // 0x00
@@ -3254,23 +3290,23 @@ namespace TMPro
 		private static Shader k_ShaderRef_MobileBitmap; // 0x150
 	
 		// Properties
-		internal static Shader ShaderRef_MobileSDF { get; } // 0x000000018BE274F4-0x000000018BE275E0 
-		internal static Shader ShaderRef_MobileBitmap { get; } // 0x000000018BE27408-0x000000018BE274F4 
+		internal static Shader ShaderRef_MobileSDF { get; } // 0x000000018B32C494-0x000000018B32C580 
+		internal static Shader ShaderRef_MobileBitmap { get; } // 0x000000018B32C3A8-0x000000018B32C494 
 	
 		// Constructors
-		static ShaderUtilities() {} // 0x0000000185AD6F20-0x0000000185AD72A0
+		static ShaderUtilities(); // 0x00000001848E34D0-0x00000001848E3850
 	
 		// Methods
-		public static void GetShaderPropertyIDs() {} // 0x00000001845E7650-0x00000001845E8200
-		public static void UpdateShaderRatios(Material mat) {} // 0x00000001845E9900-0x00000001845E9F70
-		public static Vector4 GetFontExtent(Material material) => default; // 0x000000018BE2695C-0x000000018BE2697C
-		public static bool IsMaskingEnabled(Material material) => default; // 0x00000001845E8360-0x00000001845E8570
-		public static float GetPadding(Material material, bool enableExtraPadding, bool isBold) => default; // 0x00000001845E8C30-0x00000001845E94A0
-		public static float GetPadding(Material[] materials, bool enableExtraPadding, bool isBold) => default; // 0x000000018BE2697C-0x000000018BE27408
+		public static void GetShaderPropertyIDs(); // 0x000000018333A000-0x000000018333A910
+		public static void UpdateShaderRatios(Material mat); // 0x000000018339F6A0-0x000000018339FDF0
+		public static Vector4 GetFontExtent(Material material); // 0x000000018B32B8FC-0x000000018B32B91C
+		public static bool IsMaskingEnabled(Material material); // 0x000000018333A910-0x000000018333AB20
+		public static float GetPadding(Material material, bool enableExtraPadding, bool isBold); // 0x000000018339E950-0x000000018339F260
+		public static float GetPadding(Material[] materials, bool enableExtraPadding, bool isBold); // 0x000000018B32B91C-0x000000018B32C3A8
 	}
 
 	[Serializable]
-	public class TMP_Sprite : TMP_TextElement_Legacy // TypeDefIndex: 53210
+	public class TMP_Sprite : TMP_TextElement_Legacy // TypeDefIndex: 55695
 	{
 		// Fields
 		public string name; // 0x38
@@ -3280,17 +3316,19 @@ namespace TMPro
 		public Sprite sprite; // 0x50
 	
 		// Constructors
-		public TMP_Sprite() {} // 0x0000000185492010-0x0000000185492020
+		public TMP_Sprite(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class TMP_SpriteAnimator : MonoBehaviour // TypeDefIndex: 53212
+	[DisallowMultipleComponent]
+	public class TMP_SpriteAnimator : MonoBehaviour // TypeDefIndex: 55697
 	{
 		// Fields
 		private Dictionary<int, bool> m_animations; // 0x18
 		private TMP_Text m_TextComponent; // 0x20
 	
 		// Nested types
-		private sealed class _DoSpriteAnimationInternal_d__7 : IEnumerator<object> // TypeDefIndex: 53211
+		[CompilerGenerated]
+		private sealed class _DoSpriteAnimationInternal_d__7 : IEnumerator<object> // TypeDefIndex: 55696
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -3311,58 +3349,68 @@ namespace TMPro
 			private float _targetTime_5__9; // 0x220
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x000000018BE2A770-0x000000018BE2A7C0 
-			object IEnumerator.Current { get => default; } // 0x000000018BE2A5F4-0x000000018BE2A698 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _DoSpriteAnimationInternal_d__7() {} // Dummy constructor
-			public _DoSpriteAnimationInternal_d__7(int __1__state) {} // 0x000000018BE2A5AC-0x000000018BE2A5F4
+			[DebuggerHidden]
+			public _DoSpriteAnimationInternal_d__7(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x0000000185492010-0x0000000185492020
-			private bool MoveNext() => default; // 0x0000000185492010-0x0000000185492020
-			void IEnumerator.Reset() {} // 0x000000018BE2A698-0x000000018BE2A770
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018B33883C-0x000000018B339148
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018B339148-0x000000018B339194
 		}
 	
 		// Constructors
-		public TMP_SpriteAnimator() {} // 0x0000000181377E40-0x0000000181377E50
+		public TMP_SpriteAnimator(); // 0x000000018B32F63C-0x000000018B32F6C0
 	
 		// Methods
-		private void Awake() {} // 0x000000018BE2A7C0-0x000000018BE2A844
-		private void OnEnable() {} // 0x0000000181378230-0x0000000181378240
-		private void OnDisable() {} // 0x0000000185492010-0x0000000185492020
-		public void StopAllAnimations() {} // 0x000000018BE32AFC-0x000000018BE33408
-		public void DoSpriteAnimation(int currentCharacter, TMP_SpriteAsset spriteAsset, int start, int end, int framerate) {} // 0x0000000181377E40-0x0000000181377E50
-		private IEnumerator DoSpriteAnimationInternal(int currentCharacter, TMP_SpriteAsset spriteAsset, int start, int end, int framerate) => default; // 0x000000018BE33408-0x000000018BE33454
+		private void Awake(); // 0x000000018B32F428-0x000000018B32F470
+		private void OnEnable(); // 0x00000001841E1670-0x00000001841E1680
+		private void OnDisable(); // 0x00000001841E1670-0x00000001841E1680
+		public void StopAllAnimations(); // 0x000000018B32F5EC-0x000000018B32F63C
+		public void DoSpriteAnimation(int currentCharacter, TMP_SpriteAsset spriteAsset, int start, int end, int framerate); // 0x000000018B32F514-0x000000018B32F5EC
+		[IteratorStateMachine(typeof(_DoSpriteAnimationInternal_d__7))]
+		private IEnumerator DoSpriteAnimationInternal(int currentCharacter, TMP_SpriteAsset spriteAsset, int start, int end, int framerate); // 0x000000018B32F470-0x000000018B32F514
 	}
 
-	public class TMP_SpriteAsset : TMP_Asset // TypeDefIndex: 53214
+	[ExcludeFromPreset]
+	public class TMP_SpriteAsset : TMP_Asset // TypeDefIndex: 55699
 	{
 		// Fields
 		internal Dictionary<int, int> m_NameLookup; // 0x30
 		internal Dictionary<uint, int> m_GlyphIndexLookup; // 0x38
+		[SerializeField]
 		private string m_Version; // 0x40
+		[SerializeField]
 		internal FaceInfo m_FaceInfo; // 0x48
 		public Texture spriteSheet; // 0xA8
+		[SerializeField]
 		private List<TMP_SpriteCharacter> m_SpriteCharacterTable; // 0xB0
 		internal Dictionary<uint, TMP_SpriteCharacter> m_SpriteCharacterLookup; // 0xB8
+		[SerializeField]
 		private List<TMP_SpriteGlyph> m_SpriteGlyphTable; // 0xC0
 		internal Dictionary<uint, TMP_SpriteGlyph> m_SpriteGlyphLookup; // 0xC8
 		public List<TMP_Sprite> spriteInfoList; // 0xD0
+		[SerializeField]
 		public List<TMP_SpriteAsset> fallbackSpriteAssets; // 0xD8
 		internal bool m_IsSpriteAssetLookupTablesDirty; // 0xE0
 		private static HashSet<int> k_searchedSpriteAssets; // 0x00
 	
 		// Properties
-		public string version { get => default; internal set {} } // 0x000000018BE2C0A4-0x000000018BE2C0D4 0x0000000184784C70-0x0000000184784C90
-		public FaceInfo faceInfo { get => default; internal set {} } // 0x000000018BE2C074-0x000000018BE2C0A4 0x0000000187A47500-0x0000000187A47514
-		public List<TMP_SpriteCharacter> spriteCharacterTable { get => default; internal set {} } // 0x0000000181B388F0-0x0000000181B38900 0x0000000187A47C1C-0x0000000187A47C30
-		public Dictionary<uint, TMP_SpriteCharacter> spriteCharacterLookupTable { get => default; internal set {} } // 0x000000018BE2A844-0x000000018BE2A8B4 0x000000018BE2A8B4-0x000000018BE2A98C
-		public List<TMP_SpriteGlyph> spriteGlyphTable { get => default; internal set {} } // 0x000000018BE2B734-0x000000018BE2BC70 0x000000018BE2A98C-0x000000018BE2AA08
+		public string version { get; internal set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001842B4AE0-0x00000001842B4AF0
+		public FaceInfo faceInfo { get; internal set; } // 0x0000000184DBA360-0x0000000184DBA3A0 0x000000018B330F50-0x000000018B330F90
+		public List<TMP_SpriteCharacter> spriteCharacterTable { get; internal set; } // 0x000000018B330F20-0x000000018B330F50 0x0000000184D84CE0-0x0000000184D84D00
+		public Dictionary<uint, TMP_SpriteCharacter> spriteCharacterLookupTable { get; internal set; } // 0x000000018B330EF0-0x000000018B330F20 0x0000000186AC5AF4-0x0000000186AC5B08
+		public List<TMP_SpriteGlyph> spriteGlyphTable { get; internal set; } // 0x0000000184D892F0-0x0000000184D89300 0x0000000186AC5ACC-0x0000000186AC5AE0
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 53213
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55698
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -3370,254 +3418,267 @@ namespace TMPro
 			public static Func<TMP_SpriteCharacter, uint> __9__41_0; // 0x10
 	
 			// Constructors
-			static __c() {} // 0x00000001813FF010-0x00000001813FF020
-			public __c() {} // 0x0000000185F05C80-0x0000000185F05C90
+			static __c(); // 0x000000018B339324-0x000000018B339388
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal uint _SortGlyphTable_b__40_0(TMP_SpriteGlyph item) => default; // 0x0000000185FE60D0-0x0000000185FE6110
-			internal uint _SortCharacterTable_b__41_0(TMP_SpriteCharacter c) => default; // 0x000000018BE2C0D4-0x000000018BE2C114
+			internal uint _SortGlyphTable_b__40_0(TMP_SpriteGlyph item); // 0x000000018AA421AC-0x000000018AA421C4
+			internal uint _SortCharacterTable_b__41_0(TMP_SpriteCharacter c); // 0x000000018B319DF0-0x000000018B319E08
 		}
 	
 		// Constructors
-		public TMP_SpriteAsset() {} // 0x000000018BE15B00-0x000000018BE15B18
+		public TMP_SpriteAsset(); // 0x000000018B330E1C-0x000000018B330EF0
 	
 		// Methods
-		private void Awake() {} // 0x000000018BE2AA74-0x000000018BE2AB00
-		private Material GetDefaultSpriteMaterial() => default; // 0x000000018BE2AA08-0x000000018BE2AA74
-		public void UpdateLookupTables() {} // 0x000000018BE2B224-0x000000018BE2B43C
-		public int GetSpriteIndexFromHashcode(int hashCode) => default; // 0x000000018BE2B01C-0x000000018BE2B174
-		public int GetSpriteIndexFromUnicode(uint unicode) => default; // 0x000000018BE2B174-0x000000018BE2B224
-		public int GetSpriteIndexFromName(string name) => default; // 0x000000018BE2AD08-0x000000018BE2B01C
-		public static TMP_SpriteAsset SearchForSpriteByUnicode(TMP_SpriteAsset spriteAsset, uint unicode, bool includeFallbacks, out int spriteIndex) {
-			spriteIndex = default;
-			return default;
-		} // 0x000000018BE2ABB0-0x000000018BE2AD08
-		private static TMP_SpriteAsset SearchForSpriteByUnicodeInternal(List<TMP_SpriteAsset> spriteAssets, uint unicode, bool includeFallbacks, out int spriteIndex) {
-			spriteIndex = default;
-			return default;
-		} // 0x000000018BE2AB00-0x000000018BE2ABB0
-		private static TMP_SpriteAsset SearchForSpriteByUnicodeInternal(TMP_SpriteAsset spriteAsset, uint unicode, bool includeFallbacks, out int spriteIndex) {
-			spriteIndex = default;
-			return default;
-		} // 0x000000018BE2B5C8-0x000000018BE2B734
-		public static TMP_SpriteAsset SearchForSpriteByHashCode(TMP_SpriteAsset spriteAsset, int hashCode, bool includeFallbacks, out int spriteIndex) {
-			spriteIndex = default;
-			return default;
-		} // 0x000000018BE2B43C-0x000000018BE2B5A8
-		private static TMP_SpriteAsset SearchForSpriteByHashCodeInternal(List<TMP_SpriteAsset> spriteAssets, int hashCode, bool searchFallbacks, out int spriteIndex) {
-			spriteIndex = default;
-			return default;
-		} // 0x000000018BE2B5A8-0x000000018BE2B5C8
-		private static TMP_SpriteAsset SearchForSpriteByHashCodeInternal(TMP_SpriteAsset spriteAsset, int hashCode, bool searchFallbacks, out int spriteIndex) {
-			spriteIndex = default;
-			return default;
-		} // 0x000000018BE2BC70-0x000000018BE2BFA0
-		public void SortGlyphTable() {} // 0x000000018BE2BFA0-0x000000018BE2C074
-		internal void SortCharacterTable() {} // 0x000000018BE335E4-0x000000018BE33648
-		internal void SortGlyphAndCharacterTables() {} // 0x0000000185492010-0x0000000185492020
-		private void UpgradeSpriteAsset() {} // 0x000000018B584038-0x000000018B584050
+		private void Awake(); // 0x000000018B32F6C0-0x000000018B32F730
+		private Material GetDefaultSpriteMaterial(); // 0x000000018B32F730-0x000000018B32F808
+		public void UpdateLookupTables(); // 0x000000018B3305B0-0x000000018B330AEC
+		public int GetSpriteIndexFromHashcode(int hashCode); // 0x000000018B32F808-0x000000018B32F884
+		public int GetSpriteIndexFromUnicode(uint unicode); // 0x000000018B32F8F0-0x000000018B32F97C
+		public int GetSpriteIndexFromName(string name); // 0x000000018B32F884-0x000000018B32F8F0
+		public static TMP_SpriteAsset SearchForSpriteByUnicode(TMP_SpriteAsset spriteAsset, uint unicode, bool includeFallbacks, out int spriteIndex); // 0x000000018B3300A0-0x000000018B3302B8
+		private static TMP_SpriteAsset SearchForSpriteByUnicodeInternal(List<TMP_SpriteAsset> spriteAssets, uint unicode, bool includeFallbacks, out int spriteIndex); // 0x000000018B32FE98-0x000000018B32FFF0
+		private static TMP_SpriteAsset SearchForSpriteByUnicodeInternal(TMP_SpriteAsset spriteAsset, uint unicode, bool includeFallbacks, out int spriteIndex); // 0x000000018B32FFF0-0x000000018B3300A0
+		public static TMP_SpriteAsset SearchForSpriteByHashCode(TMP_SpriteAsset spriteAsset, int hashCode, bool includeFallbacks, out int spriteIndex); // 0x000000018B32FB84-0x000000018B32FE98
+		private static TMP_SpriteAsset SearchForSpriteByHashCodeInternal(List<TMP_SpriteAsset> spriteAssets, int hashCode, bool searchFallbacks, out int spriteIndex); // 0x000000018B32FA2C-0x000000018B32FB84
+		private static TMP_SpriteAsset SearchForSpriteByHashCodeInternal(TMP_SpriteAsset spriteAsset, int hashCode, bool searchFallbacks, out int spriteIndex); // 0x000000018B32F97C-0x000000018B32FA2C
+		public void SortGlyphTable(); // 0x000000018B330444-0x000000018B3305B0
+		internal void SortCharacterTable(); // 0x000000018B3302B8-0x000000018B330424
+		internal void SortGlyphAndCharacterTables(); // 0x000000018B330424-0x000000018B330444
+		private void UpgradeSpriteAsset(); // 0x000000018B330AEC-0x000000018B330E1C
 	}
 
 	[Serializable]
-	public class TMP_SpriteCharacter : TMP_TextElement // TypeDefIndex: 53215
+	public class TMP_SpriteCharacter : TMP_TextElement // TypeDefIndex: 55700
 	{
 		// Fields
+		[SerializeField]
 		private string m_Name; // 0x30
+		[SerializeField]
 		private int m_HashCode; // 0x38
 	
 		// Properties
-		public string name { get => default; set {} } // 0x00000001813B51D0-0x00000001813B51E0 0x000000018BE2C1D8-0x000000018BE2C24C
-		public int hashCode { get => default; } // 0x00000001813E5E30-0x00000001813E5E40 
+		public string name { get; set; } // 0x00000001811F36E0-0x00000001811F36F0 0x000000018B331054-0x000000018B3310C8
+		public int hashCode { get; } // 0x0000000184D863B0-0x0000000184D863C0 
 	
 		// Constructors
-		public TMP_SpriteCharacter() {} // 0x0000000185FE6110-0x0000000185FE6120
-		public TMP_SpriteCharacter(uint unicode, TMP_SpriteGlyph glyph) {} // 0x000000018BE2C154-0x000000018BE2C190
-		public TMP_SpriteCharacter(uint unicode, TMP_SpriteAsset spriteAsset, TMP_SpriteGlyph glyph) {} // 0x000000018BE2C190-0x000000018BE2C1D8
-		internal TMP_SpriteCharacter(uint unicode, uint glyphIndex) {} // 0x000000018BE2C114-0x000000018BE2C154
+		public TMP_SpriteCharacter(); // 0x0000000184DBA3A0-0x0000000184DBA3B0
+		public TMP_SpriteCharacter(uint unicode, TMP_SpriteGlyph glyph); // 0x000000018B330FD0-0x000000018B33100C
+		public TMP_SpriteCharacter(uint unicode, TMP_SpriteAsset spriteAsset, TMP_SpriteGlyph glyph); // 0x000000018B33100C-0x000000018B331054
+		internal TMP_SpriteCharacter(uint unicode, uint glyphIndex); // 0x000000018B330F90-0x000000018B330FD0
 	}
 
 	[Serializable]
-	public class TMP_SpriteGlyph : Glyph // TypeDefIndex: 53216
+	public class TMP_SpriteGlyph : Glyph // TypeDefIndex: 55701
 	{
 		// Fields
 		public Sprite sprite; // 0x48
 	
 		// Constructors
-		public TMP_SpriteGlyph() {} // 0x000000018BE2C32C-0x000000018BE2C334
-		public TMP_SpriteGlyph(uint index, GlyphMetrics metrics, GlyphRect glyphRect, float scale, int atlasIndex) {} // 0x000000018BE2C2C4-0x000000018BE2C32C
-		public TMP_SpriteGlyph(uint index, GlyphMetrics metrics, GlyphRect glyphRect, float scale, int atlasIndex, Sprite sprite) {} // 0x000000018BE2C24C-0x000000018BE2C2C4
+		public TMP_SpriteGlyph(); // 0x000000018B3311A8-0x000000018B3311B0
+		public TMP_SpriteGlyph(uint index, GlyphMetrics metrics, GlyphRect glyphRect, float scale, int atlasIndex); // 0x000000018B331140-0x000000018B3311A8
+		public TMP_SpriteGlyph(uint index, GlyphMetrics metrics, GlyphRect glyphRect, float scale, int atlasIndex, Sprite sprite); // 0x000000018B3310C8-0x000000018B331140
 	}
 
 	[Serializable]
-	public class TMP_Style // TypeDefIndex: 53217
+	public class TMP_Style // TypeDefIndex: 55702
 	{
 		// Fields
 		internal static TMP_Style k_NormalStyle; // 0x00
+		[SerializeField]
 		private string m_Name; // 0x10
+		[SerializeField]
 		private int m_HashCode; // 0x18
+		[SerializeField]
 		private string m_OpeningDefinition; // 0x20
+		[SerializeField]
 		private string m_ClosingDefinition; // 0x28
+		[SerializeField]
 		private int[] m_OpeningTagArray; // 0x30
+		[SerializeField]
 		private int[] m_ClosingTagArray; // 0x38
+		[SerializeField]
 		internal uint[] m_OpeningTagUnicodeArray; // 0x40
+		[SerializeField]
 		internal uint[] m_ClosingTagUnicodeArray; // 0x48
 	
 		// Properties
-		public static TMP_Style NormalStyle { get => default; } // 0x000000018BE2C3D8-0x000000018BE2C4B4 
-		public string name { get => default; set {} } // 0x000000018346D130-0x000000018346D140 0x000000018BE2C4C0-0x000000018BE2C4FC
-		public int hashCode { get => default; set {} } // 0x00000001813AE560-0x00000001813AE570 0x000000018BE2C4B4-0x000000018BE2C4C0
-		public string styleOpeningDefinition { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
-		public string styleClosingDefinition { get => default; } // 0x00000001813B8590-0x00000001813B85A0 
-		public int[] styleOpeningTagArray { get => default; } // 0x00000001813B51D0-0x00000001813B51E0 
-		public int[] styleClosingTagArray { get => default; } // 0x00000001813ECBC0-0x00000001813ECBD0 
+		public static TMP_Style NormalStyle { get; } // 0x000000018B331254-0x000000018B331330 
+		public string name { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x000000018B33133C-0x000000018B331378
+		public int hashCode { get; set; } // 0x00000001811EF5B0-0x00000001811EF5C0 0x000000018B331330-0x000000018B33133C
+		public string styleOpeningDefinition { get; } // 0x0000000184D862C0-0x0000000184D862D0 
+		public string styleClosingDefinition { get; } // 0x0000000184D86240-0x0000000184D86250 
+		public int[] styleOpeningTagArray { get; } // 0x00000001811F36E0-0x00000001811F36F0 
+		public int[] styleClosingTagArray { get; } // 0x0000000184D85A50-0x0000000184D85A60 
 	
 		// Constructors
-		public TMP_Style() {} // Dummy constructor
-		internal TMP_Style(string styleName, string styleOpeningDefinition, string styleClosingDefinition) {} // 0x00000001852634D0-0x0000000185263580
+		internal TMP_Style(string styleName, string styleOpeningDefinition, string styleClosingDefinition); // 0x0000000184139E70-0x0000000184139F20
 	
 		// Methods
-		public void RefreshStyle() {} // 0x0000000185263850-0x0000000185263A80
+		public void RefreshStyle(); // 0x000000018413A1E0-0x000000018413A410
 	}
 
 	[Serializable]
-	public class TMP_StyleSheet : ScriptableObject // TypeDefIndex: 53218
+	[ExcludeFromPreset]
+	public class TMP_StyleSheet : ScriptableObject // TypeDefIndex: 55703
 	{
 		// Fields
+		[SerializeField]
 		private List<TMP_Style> m_StyleList; // 0x18
 		private Dictionary<int, TMP_Style> m_StyleLookupDictionary; // 0x20
 	
 		// Properties
-		internal List<TMP_Style> styles { get => default; } // 0x0000000181377E40-0x0000000181377E50 
+		internal List<TMP_Style> styles { get; } // 0x000000018385B100-0x000000018385B110 
 	
 		// Constructors
-		public TMP_StyleSheet() {} // 0x0000000185F4B690-0x0000000185F4B720
+		public TMP_StyleSheet(); // 0x0000000184D1E550-0x0000000184D1E5E0
 	
 		// Methods
-		private void Reset() {} // 0x000000018BE2C3D0-0x000000018BE2C3D8
-		public TMP_Style GetStyle(int hashCode) => default; // 0x0000000184685930-0x0000000184685A30
-		public TMP_Style GetStyle(string name) => default; // 0x000000018BE2C334-0x000000018BE2C3D0
-		public void RefreshStyles() {} // 0x000000018BE2C3D0-0x000000018BE2C3D8
-		private void LoadStyleDictionaryInternal() {} // 0x0000000185263580-0x0000000185263850
+		private void Reset(); // 0x000000018B33124C-0x000000018B331254
+		public TMP_Style GetStyle(int hashCode); // 0x000000018333CD60-0x000000018333CE30
+		public TMP_Style GetStyle(string name); // 0x000000018B3311B0-0x000000018B33124C
+		public void RefreshStyles(); // 0x000000018B33124C-0x000000018B331254
+		private void LoadStyleDictionaryInternal(); // 0x0000000184139F20-0x000000018413A1E0
 	}
 
-	public class TMP_SubMesh : MonoBehaviour // TypeDefIndex: 53219
+	[ExecuteAlways]
+	[RequireComponent(typeof(MeshRenderer))]
+	public class TMP_SubMesh : MonoBehaviour // TypeDefIndex: 55704
 	{
 		// Fields
+		[SerializeField]
 		private TMP_FontAsset m_fontAsset; // 0x18
+		[SerializeField]
 		private TMP_SpriteAsset m_spriteAsset; // 0x20
+		[SerializeField]
 		private Material m_material; // 0x28
+		[SerializeField]
 		private Material m_sharedMaterial; // 0x30
 		private Material m_fallbackMaterial; // 0x38
 		private Material m_fallbackSourceMaterial; // 0x40
+		[SerializeField]
 		private bool m_isDefaultMaterial; // 0x48
+		[SerializeField]
 		private float m_padding; // 0x4C
+		[SerializeField]
 		private Renderer m_renderer; // 0x50
 		private MeshFilter m_meshFilter; // 0x58
 		private Mesh m_mesh; // 0x60
+		[SerializeField]
 		private TextMeshPro m_TextComponent; // 0x68
 		[NonSerialized]
 		private bool m_isRegisteredForEvents; // 0x70
 	
 		// Properties
-		public TMP_FontAsset fontAsset { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-		public TMP_SpriteAsset spriteAsset { get => default; set {} } // 0x00000001813B31A0-0x00000001813B31B0 0x000000018646EE40-0x000000018646EE50
-		public Material material { get => default; set {} } // 0x000000018BE2D6BC-0x000000018BE2D6C8 0x000000018BE2DA78-0x000000018BE2DB08
-		public Material sharedMaterial { get => default; set {} } // 0x00000001813B51D0-0x00000001813B51E0 0x000000018BE2DB08-0x000000018BE2DB10
-		public Material fallbackMaterial { get => default; set {} } // 0x00000001813ECBC0-0x00000001813ECBD0 0x000000018BE2D970-0x000000018BE2DA78
-		public Material fallbackSourceMaterial { get => default; set {} } // 0x00000001813FF010-0x00000001813FF020 0x0000000185F05C80-0x0000000185F05C90
-		public bool isDefaultMaterial { get => default; set {} } // 0x0000000185FB0750-0x0000000185FB0760 0x0000000185FB0770-0x0000000185FB0780
-		public float padding { get => default; set {} } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public Renderer renderer { get => default; } // 0x000000018BE2D868-0x000000018BE2D8EC 
-		public MeshFilter meshFilter { get => default; } // 0x000000018BE2D6C8-0x000000018BE2D7BC 
-		public Mesh mesh { get => default; set {} } // 0x000000018BE2D7BC-0x000000018BE2D868 0x0000000185AE8FE0-0x0000000185AE8FF0
-		public TMP_Text textComponent { get => default; } // 0x000000018BE2D8EC-0x000000018BE2D970 
+		public TMP_FontAsset fontAsset { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public TMP_SpriteAsset spriteAsset { get; set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+		public Material material { get; set; } // 0x000000018B333250-0x000000018B33325C 0x000000018B33360C-0x000000018B33369C
+		public Material sharedMaterial { get; set; } // 0x00000001811F36E0-0x00000001811F36F0 0x000000018B33369C-0x000000018B3336A4
+		public Material fallbackMaterial { get; set; } // 0x0000000184D85A50-0x0000000184D85A60 0x000000018B333504-0x000000018B33360C
+		public Material fallbackSourceMaterial { get; set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001842B4AE0-0x00000001842B4AF0
+		public bool isDefaultMaterial { get; set; } // 0x0000000184D867D0-0x0000000184D867E0 0x0000000184D86810-0x0000000184D86820
+		public float padding { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public Renderer renderer { get; } // 0x000000018B3333FC-0x000000018B333480 
+		public MeshFilter meshFilter { get; } // 0x000000018B33325C-0x000000018B333350 
+		public Mesh mesh { get; set; } // 0x000000018B333350-0x000000018B3333FC 0x00000001863CC164-0x00000001863CC174
+		public TMP_Text textComponent { get; } // 0x000000018B333480-0x000000018B333504 
 	
 		// Constructors
-		public TMP_SubMesh() {} // 0x000000018646DB20-0x000000018646DB28
+		public TMP_SubMesh(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		public static TMP_SubMesh AddSubTextObject(TextMeshPro textComponent, MaterialReference materialReference) => default; // 0x000000018BE2CAA8-0x000000018BE2CE08
-		private void OnEnable() {} // 0x000000018BE2D310-0x000000018BE2D414
-		private void OnDisable() {} // 0x000000018BE2D26C-0x000000018BE2D310
-		private void OnDestroy() {} // 0x000000018BE2D154-0x000000018BE2D26C
-		public void DestroySelf() {} // 0x000000018BE2CEBC-0x000000018BE2CF14
-		private Material GetMaterial(Material mat) => default; // 0x000000018BE2CF14-0x000000018BE2D040
-		private Material CreateMaterialInstance(Material source) => default; // 0x000000018BE2CE08-0x000000018BE2CEBC
-		private Material GetSharedMaterial() => default; // 0x000000018BE2D0C0-0x000000018BE2D154
-		private void SetSharedMaterial(Material mat) {} // 0x000000018BE2D41C-0x000000018BE2D450
-		public float GetPaddingForMaterial() => default; // 0x000000018BE2D040-0x000000018BE2D0C0
-		public void UpdateMeshPadding(bool isExtraPadding, bool isUsingBold) {} // 0x000000018BE2D648-0x000000018BE2D6BC
-		public void SetVerticesDirty() {} // 0x000000018BE2D450-0x000000018BE2D4E0
-		public void SetMaterialDirty() {} // 0x000000018BE2D414-0x000000018BE2D41C
-		protected void UpdateMaterial() {} // 0x000000018BE2D4E0-0x000000018BE2D648
+		public static TMP_SubMesh AddSubTextObject(TextMeshPro textComponent, MaterialReference materialReference); // 0x000000018B33263C-0x000000018B33299C
+		private void OnEnable(); // 0x000000018B332EA4-0x000000018B332FA8
+		private void OnDisable(); // 0x000000018B332E00-0x000000018B332EA4
+		private void OnDestroy(); // 0x000000018B332CE8-0x000000018B332E00
+		public void DestroySelf(); // 0x000000018B332A50-0x000000018B332AA8
+		private Material GetMaterial(Material mat); // 0x000000018B332AA8-0x000000018B332BD4
+		private Material CreateMaterialInstance(Material source); // 0x000000018B33299C-0x000000018B332A50
+		private Material GetSharedMaterial(); // 0x000000018B332C54-0x000000018B332CE8
+		private void SetSharedMaterial(Material mat); // 0x000000018B332FB0-0x000000018B332FE4
+		public float GetPaddingForMaterial(); // 0x000000018B332BD4-0x000000018B332C54
+		public void UpdateMeshPadding(bool isExtraPadding, bool isUsingBold); // 0x000000018B3331DC-0x000000018B333250
+		public void SetVerticesDirty(); // 0x000000018B332FE4-0x000000018B333074
+		public void SetMaterialDirty(); // 0x000000018B332FA8-0x000000018B332FB0
+		protected void UpdateMaterial(); // 0x000000018B333074-0x000000018B3331DC
 	}
 
-	public class TMP_SubMeshUI : MaskableGraphic // TypeDefIndex: 53220
+	[ExecuteAlways]
+	[RequireComponent(typeof(CanvasRenderer))]
+	public class TMP_SubMeshUI : MaskableGraphic // TypeDefIndex: 55705
 	{
 		// Fields
+		[SerializeField]
 		private TMP_FontAsset m_fontAsset; // 0xE8
+		[SerializeField]
 		private TMP_SpriteAsset m_spriteAsset; // 0xF0
+		[SerializeField]
 		private Material m_material; // 0xF8
+		[SerializeField]
 		private Material m_sharedMaterial; // 0x100
 		private Material m_fallbackMaterial; // 0x108
 		private Material m_fallbackSourceMaterial; // 0x110
+		[SerializeField]
 		private bool m_isDefaultMaterial; // 0x118
+		[SerializeField]
 		private float m_padding; // 0x11C
 		private Mesh m_mesh; // 0x120
+		[SerializeField]
 		private TextMeshProUGUI m_TextComponent; // 0x128
 		[NonSerialized]
 		private bool m_isRegisteredForEvents; // 0x130
 		private bool m_materialDirty; // 0x131
+		[SerializeField]
 		private int m_materialReferenceIndex; // 0x134
 		private Transform m_RootCanvasTransform; // 0x138
 	
 		// Properties
-		public TMP_FontAsset fontAsset { get => default; set {} } // 0x0000000185FB2360-0x0000000185FB2370 0x0000000187A47730-0x0000000187A47744
-		public TMP_SpriteAsset spriteAsset { get => default; set {} } // 0x0000000185FB87A0-0x0000000185FB87B0 0x0000000187A47A14-0x0000000187A47A28
-		public override Texture mainTexture { get => default; } // 0x000000018BE2C904-0x000000018BE2C9A8 
-		public override Material material { get => default; set {} } // 0x000000018BE2C9A8-0x000000018BE2C9B8 0x000000018BE2C9B8-0x000000018BE2CAA0
-		public Material sharedMaterial { get => default; set {} } // 0x0000000185FB1CB0-0x0000000185FB1CC0 0x000000018BE2CAA0-0x000000018BE2CAA8
-		public Material fallbackMaterial { get => default; set {} } // 0x0000000181ABEDF0-0x0000000181ABEE00 0x0000000183FCA1E0-0x0000000183FCA2F0
-		public Material fallbackSourceMaterial { get => default; set {} } // 0x0000000185FB8600-0x0000000185FB8610 0x00000001864735E0-0x00000001864735F4
-		public override Material materialForRendering { get => default; } // 0x0000000184EC2E70-0x0000000184EC2EE0 
-		public bool isDefaultMaterial { get => default; set {} } // 0x0000000185FB9360-0x0000000185FB9370 0x0000000185FBB950-0x0000000185FBB960
-		public float padding { get => default; set {} } // 0x0000000185FB1080-0x0000000185FB1090 0x0000000185FE6120-0x0000000185FE6130
-		public Mesh mesh { get => default; set {} } // 0x0000000184132A70-0x0000000184132B60 0x0000000186473590-0x00000001864735A4
-		public TMP_Text textComponent { get => default; } // 0x00000001858C35C0-0x00000001858C3640 
+		public TMP_FontAsset fontAsset { get; set; } // 0x0000000184D88590-0x0000000184D885A0 0x0000000186AC5B1C-0x0000000186AC5B30
+		public TMP_SpriteAsset spriteAsset { get; set; } // 0x0000000184D8D1A0-0x0000000184D8D1B0 0x0000000186AC5AE0-0x0000000186AC5AF4
+		public override Texture mainTexture { get; } // 0x000000018B3321F4-0x000000018B332298 
+		public override Material material { get; set; } // 0x000000018B3322F8-0x000000018B332308 0x000000018B33254C-0x000000018B332634
+		public Material sharedMaterial { get; set; } // 0x0000000184D87D50-0x0000000184D87D60 0x000000018B332634-0x000000018B33263C
+		public Material fallbackMaterial { get; set; } // 0x0000000184D85F90-0x0000000184D85FA0 0x000000018B33242C-0x000000018B33254C
+		public Material fallbackSourceMaterial { get; set; } // 0x0000000184D8D1B0-0x0000000184D8D1C0 0x0000000185397170-0x0000000185397184
+		public override Material materialForRendering { get; } // 0x000000018B332298-0x000000018B3322F8 
+		public bool isDefaultMaterial { get; set; } // 0x0000000184D92E30-0x0000000184D92E40 0x0000000184D92E40-0x0000000184D92E50
+		public float padding { get; set; } // 0x0000000184DBA3B0-0x0000000184DBA3C0 0x0000000184DBA3C0-0x0000000184DBA3D0
+		public Mesh mesh { get; set; } // 0x000000018B332308-0x000000018B33239C 0x00000001853971C0-0x00000001853971D4
+		public TMP_Text textComponent { get; } // 0x000000018B33239C-0x000000018B33242C 
 	
 		// Constructors
-		public TMP_SubMeshUI() {} // 0x0000000185FADBF0-0x0000000185FADC00
+		public TMP_SubMeshUI(); // 0x0000000184D84AE0-0x0000000184D84AF0
 	
 		// Methods
-		public static TMP_SubMeshUI AddSubTextObject(TextMeshProUGUI textComponent, MaterialReference materialReference) => default; // 0x0000000183FCA4D0-0x0000000183FCA840
-		protected override void OnEnable() {} // 0x0000000185F820A0-0x0000000185F820F0
-		protected override void OnDisable() {} // 0x0000000184512F30-0x0000000184512FF0
-		protected override void OnDestroy() {} // 0x000000018588CEA0-0x000000018588D010
-		protected override void OnTransformParentChanged() {} // 0x000000018BE2C814-0x000000018BE2C858
-		public override Material GetModifiedMaterial(Material baseMaterial) => default; // 0x0000000183FCA890-0x0000000183FCA940
-		public float GetPaddingForMaterial() => default; // 0x0000000183FCA350-0x0000000183FCA3E0
-		public float GetPaddingForMaterial(Material mat) => default; // 0x000000018BE2C6BC-0x000000018BE2C740
-		public void UpdateMeshPadding(bool isExtraPadding, bool isUsingBold) {} // 0x000000018BE2C888-0x000000018BE2C904
-		public override void SetAllDirty() {} // 0x0000000185492010-0x0000000185492020
-		public override void SetVerticesDirty() {} // 0x000000018588D010-0x000000018588D0D0
-		public override void SetLayoutDirty() {} // 0x0000000185492010-0x0000000185492020
-		public override void SetMaterialDirty() {} // 0x0000000185F377C0-0x0000000185F377F0
-		public void SetPivotDirty() {} // 0x00000001845A83B0-0x00000001845A8430
-		private Transform GetRootCanvasTransform() => default; // 0x000000018BE2C740-0x000000018BE2C7EC
-		public override void Cull(Rect clipRect, bool validRect) {} // 0x0000000185492010-0x0000000185492020
-		protected override void UpdateGeometry() {} // 0x0000000185492010-0x0000000185492020
-		public override void Rebuild(CanvasUpdate update) {} // 0x000000018BE2C858-0x000000018BE2C888
-		public void RefreshMaterial() {} // 0x000000018B4A7C74-0x000000018B4A7C84
-		protected override void UpdateMaterial() {} // 0x00000001858C33F0-0x00000001858C35C0
-		public override void RecalculateClipping() {} // 0x0000000183FCA880-0x0000000183FCA890
-		private Material GetMaterial() => default; // 0x0000000185FB1CB0-0x0000000185FB1CC0
-		private Material GetMaterial(Material mat) => default; // 0x000000018BE2C5B0-0x000000018BE2C6BC
-		private Material CreateMaterialInstance(Material source) => default; // 0x000000018BE2C4FC-0x000000018BE2C5B0
-		private Material GetSharedMaterial() => default; // 0x000000018BE2C7EC-0x000000018BE2C814
-		private void SetSharedMaterial(Material mat) {} // 0x0000000183FCA2F0-0x0000000183FCA350
+		public static TMP_SubMeshUI AddSubTextObject(TextMeshProUGUI textComponent, MaterialReference materialReference); // 0x000000018B331378-0x000000018B3316BC
+		protected override void OnEnable(); // 0x000000018B331DB4-0x000000018B331E0C
+		protected override void OnDisable(); // 0x000000018B331D14-0x000000018B331DB4
+		protected override void OnDestroy(); // 0x000000018B331B90-0x000000018B331D14
+		protected override void OnTransformParentChanged(); // 0x000000018B331E0C-0x000000018B331E50
+		public override Material GetModifiedMaterial(Material baseMaterial); // 0x000000018B33187C-0x000000018B3319B0
+		public float GetPaddingForMaterial(); // 0x000000018B331A34-0x000000018B331ABC
+		public float GetPaddingForMaterial(Material mat); // 0x000000018B3319B0-0x000000018B331A34
+		public void UpdateMeshPadding(bool isExtraPadding, bool isUsingBold); // 0x000000018B332178-0x000000018B3321F4
+		public override void SetAllDirty(); // 0x00000001841E1670-0x00000001841E1680
+		public override void SetVerticesDirty(); // 0x000000018B331F80-0x000000018B33201C
+		public override void SetLayoutDirty(); // 0x00000001841E1670-0x00000001841E1680
+		public override void SetMaterialDirty(); // 0x000000018B331E80-0x000000018B331EB8
+		public void SetPivotDirty(); // 0x000000018B331EB8-0x000000018B331F2C
+		private Transform GetRootCanvasTransform(); // 0x000000018B331ABC-0x000000018B331B68
+		public override void Cull(Rect clipRect, bool validRect); // 0x00000001841E1670-0x00000001841E1680
+		protected override void UpdateGeometry(); // 0x00000001841E1670-0x00000001841E1680
+		public override void Rebuild(CanvasUpdate update); // 0x000000018B331E50-0x000000018B331E80
+		public void RefreshMaterial(); // 0x000000018A973704-0x000000018A973714
+		protected override void UpdateMaterial(); // 0x000000018B33201C-0x000000018B332178
+		public override void RecalculateClipping(); // 0x0000000183F59BE0-0x0000000183F59BF0
+		private Material GetMaterial(); // 0x0000000184D87D50-0x0000000184D87D60
+		private Material GetMaterial(Material mat); // 0x000000018B331770-0x000000018B33187C
+		private Material CreateMaterialInstance(Material source); // 0x000000018B3316BC-0x000000018B331770
+		private Material GetSharedMaterial(); // 0x000000018B331B68-0x000000018B331B90
+		private void SetSharedMaterial(Material mat); // 0x000000018B331F2C-0x000000018B331F80
 	}
 
-	public interface ITextElement // TypeDefIndex: 53221
+	public interface ITextElement // TypeDefIndex: 55706
 	{
 		// Properties
 		Material sharedMaterial { get; }
@@ -3627,7 +3688,7 @@ namespace TMPro
 		int GetInstanceID();
 	}
 
-	public enum TextAlignmentOptions // TypeDefIndex: 53222
+	public enum TextAlignmentOptions // TypeDefIndex: 55707
 	{
 		TopLeft = 257,
 		Top = 258,
@@ -3668,7 +3729,7 @@ namespace TMPro
 		Converted = 65535
 	}
 
-	public enum HorizontalAlignmentOptions // TypeDefIndex: 53223
+	public enum HorizontalAlignmentOptions // TypeDefIndex: 55708
 	{
 		Left = 1,
 		Center = 2,
@@ -3678,7 +3739,7 @@ namespace TMPro
 		Geometry = 32
 	}
 
-	public enum VerticalAlignmentOptions // TypeDefIndex: 53224
+	public enum VerticalAlignmentOptions // TypeDefIndex: 55709
 	{
 		Top = 256,
 		Middle = 512,
@@ -3688,27 +3749,27 @@ namespace TMPro
 		Capline = 8192
 	}
 
-	public enum TextRenderFlags // TypeDefIndex: 53225
+	public enum TextRenderFlags // TypeDefIndex: 55710
 	{
 		DontRender = 0,
 		Render = 255
 	}
 
-	public enum TMP_TextElementType // TypeDefIndex: 53226
+	public enum TMP_TextElementType // TypeDefIndex: 55711
 	{
 		Character = 0,
 		Sprite = 1,
 		Image = 2
 	}
 
-	public enum MaskingTypes // TypeDefIndex: 53227
+	public enum MaskingTypes // TypeDefIndex: 55712
 	{
 		MaskOff = 0,
 		MaskHard = 1,
 		MaskSoft = 2
 	}
 
-	public enum TextOverflowModes // TypeDefIndex: 53228
+	public enum TextOverflowModes // TypeDefIndex: 55713
 	{
 		Overflow = 0,
 		Ellipsis = 1,
@@ -3719,13 +3780,13 @@ namespace TMPro
 		Linked = 6
 	}
 
-	public enum MaskingOffsetMode // TypeDefIndex: 53229
+	public enum MaskingOffsetMode // TypeDefIndex: 55714
 	{
 		Percentage = 0,
 		Pixel = 1
 	}
 
-	public enum TextureMappingOptions // TypeDefIndex: 53230
+	public enum TextureMappingOptions // TypeDefIndex: 55715
 	{
 		Character = 0,
 		Line = 1,
@@ -3733,7 +3794,8 @@ namespace TMPro
 		MatchAspect = 3
 	}
 
-	public enum FontStyles // TypeDefIndex: 53231
+	[Flags]
+	public enum FontStyles // TypeDefIndex: 55716
 	{
 		Normal = 0,
 		Bold = 1,
@@ -3749,7 +3811,7 @@ namespace TMPro
 		Phonetic = 1024
 	}
 
-	public enum FontWeight // TypeDefIndex: 53232
+	public enum FontWeight // TypeDefIndex: 55717
 	{
 		Thin = 100,
 		ExtraLight = 200,
@@ -3762,7 +3824,7 @@ namespace TMPro
 		Black = 900
 	}
 
-	public struct PhoneticCharSlot // TypeDefIndex: 53233
+	public struct PhoneticCharSlot // TypeDefIndex: 55718
 	{
 		// Fields
 		public TMP_FontAsset fontAsset; // 0x00
@@ -3770,7 +3832,7 @@ namespace TMPro
 		public Glyph glyph; // 0x10
 	}
 
-	public class PhoneticData // TypeDefIndex: 53234
+	public class PhoneticData // TypeDefIndex: 55719
 	{
 		// Fields
 		public static PhoneticData Default; // 0x00
@@ -3783,59 +3845,84 @@ namespace TMPro
 		public PhoneticCharSlot?[] m_charSlots; // 0x28
 	
 		// Constructors
-		public PhoneticData() {} // 0x0000000185EEA980-0x0000000185EEA9E0
-		static PhoneticData() {} // 0x0000000185EEA910-0x0000000185EEA980
+		public PhoneticData(); // 0x0000000184CD06D0-0x0000000184CD0730
+		static PhoneticData(); // 0x0000000184CD0660-0x0000000184CD06D0
 	}
 
-	public abstract class TMP_Text : MaskableGraphic // TypeDefIndex: 53241
+	public abstract class TMP_Text : MaskableGraphic // TypeDefIndex: 55726
 	{
 		// Fields
 		protected string m_textForPopulate; // 0xE8
+		[SerializeField]
+		[TextArea(5, 10)]
 		protected string m_text; // 0xF0
 		private bool m_IsTextBackingStringDirty; // 0xF8
+		[SerializeField]
 		protected ITextPreprocessor m_TextPreprocessor; // 0x100
+		[SerializeField]
 		protected bool m_isRightToLeft; // 0x108
+		[FormerlySerializedAs("m_fontAsset")]
+		[SerializeField]
 		protected TMP_FontAsset m_serializedFontAsset; // 0x110
 		protected TMP_FontAsset m_currentFontAsset; // 0x118
 		protected bool m_isSDFShader; // 0x120
+		[FormerlySerializedAs("m_sharedMaterial")]
+		[SerializeField]
 		protected Material m_serializedSharedMaterial; // 0x128
 		protected Material m_currentMaterial; // 0x130
 		protected static MaterialReference[] m_materialReferences; // 0x00
 		protected static Dictionary<int, int> m_materialReferenceIndexLookup; // 0x08
 		protected static TMP_TextProcessingStack<MaterialReference> m_materialReferenceStack; // 0x10
 		protected int m_currentMaterialIndex; // 0x138
+		[SerializeField]
 		protected Material[] m_fontSharedMaterials; // 0x140
+		[SerializeField]
 		protected Material m_fontMaterial; // 0x148
+		[SerializeField]
 		protected Material[] m_fontMaterials; // 0x150
 		protected bool m_isMaterialDirty; // 0x158
+		[SerializeField]
 		protected Color32 m_fontColor32; // 0x15C
+		[SerializeField]
 		protected UnityEngine.Color m_fontColor; // 0x160
 		protected static Color32 s_colorWhite; // 0x68
 		protected Color32 m_underlineColor; // 0x170
 		protected Color32 m_strikethroughColor; // 0x174
+		[SerializeField]
 		protected bool m_enableVertexGradient; // 0x178
+		[SerializeField]
 		protected ColorMode m_colorMode; // 0x17C
+		[SerializeField]
 		protected VertexGradient m_fontColorGradient; // 0x180
+		[SerializeField]
 		protected TMP_ColorGradient m_fontColorGradientPreset; // 0x1C0
+		[SerializeField]
 		protected TMP_SpriteAsset m_spriteAsset; // 0x1C8
+		[SerializeField]
 		protected bool m_tintAllSprites; // 0x1D0
 		protected bool m_tintSprite; // 0x1D1
 		protected Color32 m_spriteColor; // 0x1D4
+		[SerializeField]
 		protected TMP_StyleSheet m_StyleSheet; // 0x1D8
 		internal TMP_Style m_TextStyle; // 0x1E0
+		[SerializeField]
 		protected int m_TextStyleHashCode; // 0x1E8
+		[SerializeField]
 		protected bool m_overrideHtmlColors; // 0x1EC
+		[SerializeField]
 		protected Color32 m_faceColor; // 0x1F0
 		protected Color32 m_outlineColor; // 0x1F4
 		protected float m_outlineWidth; // 0x1F8
+		[SerializeField]
 		protected float m_fontSize; // 0x1FC
 		protected float m_currentFontSize; // 0x200
+		[SerializeField]
 		protected float m_fontSizeBase; // 0x204
 		protected TMP_TextProcessingStack<float> m_sizeStack; // 0x208
 		protected float m_imageWidth; // 0x228
 		protected float m_imageHeight; // 0x22C
 		protected float m_maxLineAscenderWithImage; // 0x230
-		protected const float m_basePhoneticElementScale = 0.5f; // Metadata: 0x02077DFF
+		protected const float m_basePhoneticElementScale = 0.5f; // Metadata: 0x02347401
 		protected FontStyles m_phoneticFontStyle; // 0x234
 		protected FontWeight m_phoneticFontWeight; // 0x238
 		protected WordWrapState m_phoneticWordWarpState; // 0x240
@@ -3847,333 +3934,389 @@ namespace TMPro
 		protected PhoneticData m_currentPhoneticData; // 0x608
 		protected int m_phoneticCount; // 0x610
 		protected float m_phoneticFontSize; // 0x614
+		[SerializeField]
 		protected bool m_showPhonetic; // 0x618
 		protected int m_phoneticIndex; // 0x61C
 		[NonSerialized]
 		protected bool m_isInSetArraySizes; // 0x620
+		[SerializeField]
 		protected bool m_needParseActionId; // 0x621
+		[SerializeField]
 		protected FontWeight m_fontWeight; // 0x624
 		protected FontWeight m_FontWeightInternal; // 0x628
 		protected TMP_TextProcessingStack<FontWeight> m_FontWeightStack; // 0x630
+		[SerializeField]
 		protected bool m_enableAutoSizing; // 0x650
 		protected float m_maxFontSize; // 0x654
 		protected float m_minFontSize; // 0x658
 		protected int m_AutoSizeIterationCount; // 0x65C
 		protected int m_AutoSizeMaxIterationCount; // 0x660
 		protected bool m_IsAutoSizePointSizeSet; // 0x664
+		[SerializeField]
 		protected float m_fontSizeMin; // 0x668
+		[SerializeField]
 		protected float m_fontSizeMax; // 0x66C
+		[SerializeField]
 		protected FontStyles m_fontStyle; // 0x670
 		protected FontStyles m_FontStyleInternal; // 0x674
 		protected TMP_FontStyleStack m_fontStyleStack; // 0x678
 		protected bool m_isUsingBold; // 0x682
+		[SerializeField]
 		protected HorizontalAlignmentOptions m_HorizontalAlignment; // 0x684
+		[SerializeField]
 		protected VerticalAlignmentOptions m_VerticalAlignment; // 0x688
+		[FormerlySerializedAs("m_lineJustification")]
+		[SerializeField]
 		protected TextAlignmentOptions m_textAlignment; // 0x68C
 		protected HorizontalAlignmentOptions m_lineJustification; // 0x690
 		protected TMP_TextProcessingStack<HorizontalAlignmentOptions> m_lineJustificationStack; // 0x698
 		protected Vector3[] m_textContainerLocalCorners; // 0x6B8
+		[SerializeField]
 		protected float m_characterSpacing; // 0x6C0
 		protected float m_cSpacing; // 0x6C4
 		protected float m_monoSpacing; // 0x6C8
+		[SerializeField]
 		protected float m_wordSpacing; // 0x6CC
+		[SerializeField]
 		protected float m_lineSpacing; // 0x6D0
 		protected float m_lineSpacingDelta; // 0x6D4
 		protected float m_lineHeight; // 0x6D8
 		protected bool m_IsDrivenLineSpacing; // 0x6DC
+		[SerializeField]
 		protected float m_lineSpacingMax; // 0x6E0
+		[SerializeField]
 		protected float m_paragraphSpacing; // 0x6E4
+		[SerializeField]
 		protected float m_charWidthMaxAdj; // 0x6E8
 		protected float m_charWidthAdjDelta; // 0x6EC
+		[SerializeField]
 		protected bool m_enableWordWrapping; // 0x6F0
 		protected bool m_isCharacterWrappingEnabled; // 0x6F1
 		protected bool m_isNonBreakingSpace; // 0x6F2
 		protected bool m_isIgnoringAlignment; // 0x6F3
+		[SerializeField]
 		protected float m_wordWrappingRatios; // 0x6F4
+		[SerializeField]
 		protected TextOverflowModes m_overflowMode; // 0x6F8
 		protected int m_firstOverflowCharacterIndex; // 0x6FC
+		[SerializeField]
 		protected TMP_Text m_linkedTextComponent; // 0x700
+		[SerializeField]
 		internal TMP_Text parentLinkedComponent; // 0x708
 		protected bool m_isTextTruncated; // 0x710
+		[SerializeField]
 		protected bool m_enableKerning; // 0x711
 		protected float m_GlyphHorizontalAdvanceAdjustment; // 0x714
+		[SerializeField]
 		protected bool m_enableExtraPadding; // 0x718
+		[SerializeField]
 		protected bool checkPaddingRequired; // 0x719
+		[SerializeField]
 		protected bool m_isRichText; // 0x71A
+		[SerializeField]
 		protected bool m_enableHyperlink; // 0x71B
-		protected float m_richTextColorBlend; // 0x71C
-		protected bool m_parseCtrlCharacters; // 0x720
-		protected bool m_isOverlay; // 0x721
-		protected bool m_isOrthographic; // 0x722
-		protected bool m_isCullingEnabled; // 0x723
-		protected bool m_isMaskingEnabled; // 0x724
-		protected bool isMaskUpdateRequired; // 0x725
-		protected bool m_ignoreCulling; // 0x726
-		protected TextureMappingOptions m_horizontalMapping; // 0x728
-		protected TextureMappingOptions m_verticalMapping; // 0x72C
-		protected float m_uvLineOffset; // 0x730
-		protected TextRenderFlags m_renderMode; // 0x734
-		protected VertexSortingOrder m_geometrySortingOrder; // 0x738
-		protected bool m_IsTextObjectScaleStatic; // 0x73C
-		protected bool m_VertexBufferAutoSizeReduction; // 0x73D
-		protected int m_firstVisibleCharacter; // 0x740
-		protected int m_maxVisibleCharacters; // 0x744
-		protected int m_maxVisibleWords; // 0x748
-		protected int m_maxVisibleLines; // 0x74C
-		protected bool m_useMaxVisibleDescender; // 0x750
-		protected int m_pageToDisplay; // 0x754
-		protected bool m_isNewPage; // 0x758
-		protected Vector4 m_margin; // 0x75C
-		protected float m_marginLeft; // 0x76C
-		protected float m_marginRight; // 0x770
-		protected float m_marginWidth; // 0x774
-		protected float m_marginHeight; // 0x778
-		protected float m_width; // 0x77C
-		protected TMP_TextInfo m_textInfo; // 0x780
-		protected bool m_havePropertiesChanged; // 0x788
-		protected bool m_isUsingLegacyAnimationComponent; // 0x789
-		protected Transform m_transform; // 0x790
-		protected RectTransform m_rectTransform; // 0x798
-		protected Vector2 m_PreviousRectTransformSize; // 0x7A0
-		protected Vector2 m_PreviousPivotPosition; // 0x7A8
-		private bool _autoSizeTextContainer_k__BackingField; // 0x7B0
-		protected bool m_autoSizeTextContainer; // 0x7B1
-		protected Mesh m_mesh; // 0x7B8
-		protected bool m_isVolumetricText; // 0x7C0
+		[SerializeField]
+		protected Vector2 m_linkExtraPadding; // 0x71C
+		[Range(0f, 1f)]
+		[SerializeField]
+		protected float m_richTextColorBlend; // 0x724
+		[SerializeField]
+		protected bool m_parseCtrlCharacters; // 0x728
+		protected bool m_isOverlay; // 0x729
+		[SerializeField]
+		protected bool m_isOrthographic; // 0x72A
+		[SerializeField]
+		protected bool m_isCullingEnabled; // 0x72B
+		protected bool m_isMaskingEnabled; // 0x72C
+		protected bool isMaskUpdateRequired; // 0x72D
+		protected bool m_ignoreCulling; // 0x72E
+		[SerializeField]
+		protected TextureMappingOptions m_horizontalMapping; // 0x730
+		[SerializeField]
+		protected TextureMappingOptions m_verticalMapping; // 0x734
+		[SerializeField]
+		protected float m_uvLineOffset; // 0x738
+		protected TextRenderFlags m_renderMode; // 0x73C
+		[SerializeField]
+		protected VertexSortingOrder m_geometrySortingOrder; // 0x740
+		[SerializeField]
+		protected bool m_IsTextObjectScaleStatic; // 0x744
+		[SerializeField]
+		protected bool m_VertexBufferAutoSizeReduction; // 0x745
+		protected int m_firstVisibleCharacter; // 0x748
+		protected int m_maxVisibleCharacters; // 0x74C
+		protected int m_maxVisibleWords; // 0x750
+		protected int m_maxVisibleLines; // 0x754
+		[SerializeField]
+		protected bool m_useMaxVisibleDescender; // 0x758
+		[SerializeField]
+		protected int m_pageToDisplay; // 0x75C
+		protected bool m_isNewPage; // 0x760
+		[SerializeField]
+		protected Vector4 m_margin; // 0x764
+		protected float m_marginLeft; // 0x774
+		protected float m_marginRight; // 0x778
+		protected float m_marginWidth; // 0x77C
+		protected float m_marginHeight; // 0x780
+		protected float m_width; // 0x784
+		protected TMP_TextInfo m_textInfo; // 0x788
+		protected bool m_havePropertiesChanged; // 0x790
+		[SerializeField]
+		protected bool m_isUsingLegacyAnimationComponent; // 0x791
+		protected Transform m_transform; // 0x798
+		protected RectTransform m_rectTransform; // 0x7A0
+		protected Vector2 m_PreviousRectTransformSize; // 0x7A8
+		protected Vector2 m_PreviousPivotPosition; // 0x7B0
+		[CompilerGenerated]
+		private bool _autoSizeTextContainer_k__BackingField; // 0x7B8
+		protected bool m_autoSizeTextContainer; // 0x7B9
+		protected Mesh m_mesh; // 0x7C0
+		[SerializeField]
+		protected bool m_isVolumetricText; // 0x7C8
+		[CompilerGenerated]
 		private static Func<int, string, TMP_FontAsset> OnFontAssetRequest; // 0x70
+		[CompilerGenerated]
 		private static Func<int, string, TMP_SpriteAsset> OnSpriteAssetRequest; // 0x78
-		private Action<TMP_TextInfo> OnPreRenderText; // 0x7C8
-		protected TMP_SpriteAnimator m_spriteAnimator; // 0x7D0
-		protected float m_flexibleHeight; // 0x7D8
-		protected float m_flexibleWidth; // 0x7DC
-		protected float m_minWidth; // 0x7E0
-		protected float m_minHeight; // 0x7E4
-		protected float m_maxWidth; // 0x7E8
-		protected float m_maxHeight; // 0x7EC
-		protected LayoutElement m_LayoutElement; // 0x7F0
-		protected float m_preferredWidth; // 0x7F8
-		protected float m_renderedWidth; // 0x7FC
-		protected bool m_isPreferredWidthDirty; // 0x800
-		protected float m_preferredHeight; // 0x804
-		protected float m_renderedHeight; // 0x808
-		protected bool m_isPreferredHeightDirty; // 0x80C
-		protected bool m_isCalculatingPreferredValues; // 0x80D
-		protected int m_layoutPriority; // 0x810
-		protected bool m_isLayoutDirty; // 0x814
+		[CompilerGenerated]
+		private Action<TMP_TextInfo> OnPreRenderText; // 0x7D0
+		protected TMP_SpriteAnimator m_spriteAnimator; // 0x7D8
+		protected float m_flexibleHeight; // 0x7E0
+		protected float m_flexibleWidth; // 0x7E4
+		protected float m_minWidth; // 0x7E8
+		protected float m_minHeight; // 0x7EC
+		protected float m_maxWidth; // 0x7F0
+		protected float m_maxHeight; // 0x7F4
+		protected LayoutElement m_LayoutElement; // 0x7F8
+		protected float m_preferredWidth; // 0x800
+		protected float m_renderedWidth; // 0x804
+		protected bool m_isPreferredWidthDirty; // 0x808
+		protected float m_preferredHeight; // 0x80C
+		protected float m_renderedHeight; // 0x810
+		protected bool m_isPreferredHeightDirty; // 0x814
+		protected bool m_isCalculatingPreferredValues; // 0x815
+		protected int m_layoutPriority; // 0x818
+		protected bool m_isLayoutDirty; // 0x81C
 		[NonSerialized]
-		protected bool m_isAwake; // 0x815
-		internal bool m_isWaitingOnResourceLoad; // 0x816
+		protected bool m_isAwake; // 0x81D
+		internal bool m_isWaitingOnResourceLoad; // 0x81E
 		[NonSerialized]
-		protected bool m_isInit; // 0x817
-		internal TextInputSources m_inputSource; // 0x818
-		protected float m_fontScaleMultiplier; // 0x81C
+		protected bool m_isInit; // 0x81F
+		internal TextInputSources m_inputSource; // 0x820
+		protected float m_fontScaleMultiplier; // 0x824
 		private static char[] m_htmlTag; // 0x80
 		protected static RichTextTagAttribute[] m_xmlAttribute; // 0x88
 		private static float[] m_attributeParameterValues; // 0x90
-		protected float tag_LineIndent; // 0x820
-		protected float tag_Indent; // 0x824
-		protected TMP_TextProcessingStack<float> m_indentStack; // 0x828
-		protected bool tag_NoParsing; // 0x848
-		protected bool m_isParsingText; // 0x849
-		protected Matrix4x4 m_FXMatrix; // 0x84C
-		protected bool m_isFXMatrixSet; // 0x88C
-		protected UnicodeChar[] m_TextProcessingArray; // 0x890
-		internal int m_InternalTextProcessingArraySize; // 0x898
-		private TMP_CharacterInfo[] m_internalCharacterInfo; // 0x8A0
-		protected int m_totalCharacterCount; // 0x8A8
+		protected float tag_LineIndent; // 0x828
+		protected float tag_Indent; // 0x82C
+		protected TMP_TextProcessingStack<float> m_indentStack; // 0x830
+		protected bool tag_NoParsing; // 0x850
+		protected bool m_isParsingText; // 0x851
+		protected Matrix4x4 m_FXMatrix; // 0x854
+		protected bool m_isFXMatrixSet; // 0x894
+		protected UnicodeChar[] m_TextProcessingArray; // 0x898
+		internal int m_InternalTextProcessingArraySize; // 0x8A0
+		private TMP_CharacterInfo[] m_internalCharacterInfo; // 0x8A8
+		protected int m_totalCharacterCount; // 0x8B0
 		protected static WordWrapState m_SavedWordWrapState; // 0x98
 		protected static WordWrapState m_SavedLineState; // 0x430
 		protected static WordWrapState m_SavedEllipsisState; // 0x7C8
 		protected static WordWrapState m_SavedLastValidState; // 0xB60
 		protected static WordWrapState m_SavedSoftLineBreakState; // 0xEF8
 		protected static TMP_TextProcessingStack<WordWrapState> m_EllipsisInsertionCandidateStack; // 0x1290
-		protected int m_characterCount; // 0x8AC
-		protected int m_firstCharacterOfLine; // 0x8B0
-		protected int m_firstVisibleCharacterOfLine; // 0x8B4
-		protected int m_lastCharacterOfLine; // 0x8B8
-		protected int m_lastVisibleCharacterOfLine; // 0x8BC
-		protected int m_lineNumber; // 0x8C0
-		protected int m_lineVisibleCharacterCount; // 0x8C4
-		protected int m_pageNumber; // 0x8C8
-		protected float m_PageAscender; // 0x8CC
-		protected float m_maxTextAscender; // 0x8D0
-		protected float m_maxCapHeight; // 0x8D4
-		protected float m_ElementAscender; // 0x8D8
-		protected float m_ElementDescender; // 0x8DC
-		protected float m_maxLineAscender; // 0x8E0
-		protected float m_maxLineDescender; // 0x8E4
-		protected float m_startOfLineAscender; // 0x8E8
-		protected float m_startOfLineDescender; // 0x8EC
-		protected float m_lineOffset; // 0x8F0
-		protected Extents m_meshExtents; // 0x8F4
-		protected Color32 m_htmlColor; // 0x904
-		protected TMP_TextProcessingStack<Color32> m_colorStack; // 0x908
-		protected TMP_TextProcessingStack<Color32> m_underlineColorStack; // 0x928
-		protected TMP_TextProcessingStack<Color32> m_strikethroughColorStack; // 0x948
-		protected TMP_TextProcessingStack<HighlightState> m_HighlightStateStack; // 0x968
-		protected TMP_TextProcessingStack<TMP_ColorGradient> m_colorGradientStack; // 0x998
-		protected TMP_ColorGradient m_colorGradientPreset; // 0x9C0
-		protected bool m_colorGradientPresetIsTinted; // 0x9C8
-		protected float m_tabSpacing; // 0x9CC
-		protected float m_spacing; // 0x9D0
-		protected TMP_TextProcessingStack<int>[] m_TextStyleStacks; // 0x9D8
-		protected TMP_TextProcessingStack<int> m_ItalicAngleStack; // 0x9E0
-		protected TMP_TextProcessingStack<int> m_actionStack; // 0xA00
-		protected TMP_TextProcessingStack<float> m_baselineOffsetStack; // 0xA20
-		protected int m_TextStyleStackDepth; // 0xA40
-		protected int m_ItalicAngle; // 0xA44
-		protected float m_padding; // 0xA48
-		protected float m_baselineOffset; // 0xA4C
-		protected float m_xAdvance; // 0xA50
-		protected float m_lastCharAdvance; // 0xA54
-		protected bool m_lastIsUpVowels; // 0xA58
-		protected bool m_lastIsAscender; // 0xA59
-		protected bool m_lastIsDescender; // 0xA5A
-		protected float m_lastHeight; // 0xA5C
+		protected int m_characterCount; // 0x8B4
+		protected int m_firstCharacterOfLine; // 0x8B8
+		protected int m_firstVisibleCharacterOfLine; // 0x8BC
+		protected int m_lastCharacterOfLine; // 0x8C0
+		protected int m_lastVisibleCharacterOfLine; // 0x8C4
+		protected int m_lineNumber; // 0x8C8
+		protected int m_lineVisibleCharacterCount; // 0x8CC
+		protected int m_pageNumber; // 0x8D0
+		protected float m_PageAscender; // 0x8D4
+		protected float m_maxTextAscender; // 0x8D8
+		protected float m_maxCapHeight; // 0x8DC
+		protected float m_ElementAscender; // 0x8E0
+		protected float m_ElementDescender; // 0x8E4
+		protected float m_maxLineAscender; // 0x8E8
+		protected float m_maxLineDescender; // 0x8EC
+		protected float m_startOfLineAscender; // 0x8F0
+		protected float m_startOfLineDescender; // 0x8F4
+		protected float m_lineOffset; // 0x8F8
+		protected Extents m_meshExtents; // 0x8FC
+		protected Color32 m_htmlColor; // 0x90C
+		protected TMP_TextProcessingStack<Color32> m_colorStack; // 0x910
+		protected TMP_TextProcessingStack<Color32> m_underlineColorStack; // 0x930
+		protected TMP_TextProcessingStack<Color32> m_strikethroughColorStack; // 0x950
+		protected TMP_TextProcessingStack<HighlightState> m_HighlightStateStack; // 0x970
+		protected TMP_TextProcessingStack<TMP_ColorGradient> m_colorGradientStack; // 0x9A0
+		protected TMP_ColorGradient m_colorGradientPreset; // 0x9C8
+		protected bool m_colorGradientPresetIsTinted; // 0x9D0
+		protected float m_tabSpacing; // 0x9D4
+		protected float m_spacing; // 0x9D8
+		protected TMP_TextProcessingStack<int>[] m_TextStyleStacks; // 0x9E0
+		protected TMP_TextProcessingStack<int> m_ItalicAngleStack; // 0x9E8
+		protected TMP_TextProcessingStack<int> m_actionStack; // 0xA08
+		protected TMP_TextProcessingStack<float> m_baselineOffsetStack; // 0xA28
+		protected int m_TextStyleStackDepth; // 0xA48
+		protected int m_ItalicAngle; // 0xA4C
+		protected float m_padding; // 0xA50
+		protected float m_baselineOffset; // 0xA54
+		protected float m_xAdvance; // 0xA58
+		protected float m_lastCharAdvance; // 0xA5C
+		protected bool m_lastIsUpVowels; // 0xA60
+		protected bool m_lastIsAscender; // 0xA61
+		protected bool m_lastIsDescender; // 0xA62
+		protected float m_lastHeight; // 0xA64
 		protected static bool s_forceLeftAlign; // 0x1648
-		protected TMP_TextElementType m_textElementType; // 0xA60
-		protected TMP_TextElement m_cached_TextElement; // 0xA68
-		protected SpecialCharacter m_Ellipsis; // 0xA70
-		protected SpecialCharacter m_Underline; // 0xA90
-		protected TMP_SpriteAsset m_defaultSpriteAsset; // 0xAB0
-		protected TMP_SpriteAsset m_currentSpriteAsset; // 0xAB8
-		protected int m_spriteCount; // 0xAC0
-		protected int m_spriteIndex; // 0xAC4
-		protected int m_spriteAnimationID; // 0xAC8
+		protected TMP_TextElementType m_textElementType; // 0xA68
+		protected TMP_TextElement m_cached_TextElement; // 0xA70
+		protected SpecialCharacter m_Ellipsis; // 0xA78
+		protected SpecialCharacter m_Underline; // 0xA98
+		protected TMP_SpriteAsset m_defaultSpriteAsset; // 0xAB8
+		protected TMP_SpriteAsset m_currentSpriteAsset; // 0xAC0
+		protected int m_spriteCount; // 0xAC8
+		protected int m_spriteIndex; // 0xACC
+		protected int m_spriteAnimationID; // 0xAD0
 		private static ProfilerMarker k_ParseTextMarker; // 0x1650
 		private static ProfilerMarker k_InsertNewLineMarker; // 0x1658
-		protected bool m_ignoreActiveState; // 0xACC
-		private TextBackingContainer m_TextBackingArray; // 0xAD0
-		private readonly decimal[] k_Power; // 0xAE0
+		protected bool m_ignoreActiveState; // 0xAD4
+		private TextBackingContainer m_TextBackingArray; // 0xAD8
+		private readonly decimal[] k_Power; // 0xAE8
 		protected static Vector2 k_LargePositiveVector2; // 0x1660
 		protected static Vector2 k_LargeNegativeVector2; // 0x1668
 		protected static float k_LargePositiveFloat; // 0x1670
 		protected static float k_LargeNegativeFloat; // 0x1674
 		protected static int k_LargePositiveInt; // 0x1678
 		protected static int k_LargeNegativeInt; // 0x167C
-		private bool m_dynamicFontAssetUsed; // 0xAE8
+		private bool m_dynamicFontAssetUsed; // 0xAF0
 	
 		// Properties
-		public virtual string text { get; set; } // 0x00000001864735E0-0x00000001864735F4 0x0000000185FB8550-0x0000000185FB8560
-		public virtual string textForPopulate { get; } // 0x000000018BE25E24-0x000000018BE25EBC 
-		public ITextPreprocessor textPreprocessor { get; set; } // 0x000000018BE251F8-0x000000018BE25228 0x000000018BE25DE8-0x000000018BE25E24
-		public bool isRightToLeftText { get; set; } // 0x000000018BE251A4-0x000000018BE251B8 0x000000018BE25D0C-0x000000018BE25DE8
-		public TMP_FontAsset font { get; set; } // 0x000000018BE251B8-0x000000018BE251F8 0x000000018BE25DE8-0x000000018BE25E24
-		public virtual TMP_FontAsset m_fontAsset { get; set; } // 0x0000000185A83380-0x0000000185A833E0 0x0000000185FB9AD0-0x0000000185FB9AE0
-		public virtual Material fontSharedMaterial { get; set; } // 0x000000018BE259C8-0x000000018BE259F4 0x0000000185FB9410-0x0000000185FB9420
-		protected virtual Material m_sharedMaterial { get; set; } // 0x000000018BE25BD0-0x000000018BE25BF8 0x0000000185FE5D50-0x0000000185FE5D80
-		public virtual Material[] fontSharedMaterials { get; set; } // 0x000000018BE25AC0-0x000000018BE25B04 0x0000000185FB7F50-0x0000000185FB7F60
-		public Material fontMaterial { get; set; } // 0x000000018BE25A8C-0x000000018BE25AC0 0x0000000185FB8420-0x0000000185FB8430
-		public virtual Material[] fontMaterials { get; set; } // 0x000000018BE2671C-0x000000018BE26760 0x0000000185FB92D0-0x0000000185FB92E0
-		public override UnityEngine.Color color { get; set; } // 0x000000018BE26804-0x000000018BE2682C 0x0000000185FB1760-0x0000000185FB1770
-		public float alpha { get; set; } // 0x000000018BE26760-0x000000018BE267A4 0x00000001846853F0-0x0000000184685440
-		public bool enableVertexGradient { get; set; } // 0x000000018BE267A4-0x000000018BE26804 0x0000000185FCEB50-0x0000000185FCEB60
-		public VertexGradient colorGradient { get; set; } // 0x000000018BE265C0-0x000000018BE265E8 0x000000018BE250DC-0x000000018BE251A4
-		public TMP_ColorGradient colorGradientPreset { get; set; } // 0x000000018BE25C80-0x000000018BE25CE4 0x000000018BE2538C-0x000000018BE25454
-		public TMP_SpriteAsset spriteAsset { get; set; } // 0x000000018BE264CC-0x000000018BE26524 0x000000018BE25454-0x000000018BE25504
-		public bool tintAllSprites { get; set; } // 0x000000018BE26524-0x000000018BE2657C 0x0000000185FBACC0-0x0000000185FBACD0
-		public TMP_StyleSheet styleSheet { get; set; } // 0x00000001845A2D40-0x00000001845A2D70 0x000000018BE25018-0x000000018BE25038
-		public TMP_Style textStyle { get; set; } // 0x000000018BE25328-0x000000018BE2538C 0x0000000185D45B70-0x0000000185D45BF0
-		public bool overrideColorTags { get; set; } // 0x000000018BE252C4-0x000000018BE25328 0x0000000185FE5E40-0x0000000185FE5E50
-		public Color32 faceColor { get; set; } // 0x000000018BE25F48-0x000000018BE25F8C 0x000000018BE25504-0x000000018BE25624
-		public Color32 outlineColor { get; set; } // 0x0000000185FE5D80-0x0000000185FE5D90 0x000000018BE25B04-0x000000018BE25B40
-		public float outlineWidth { get; set; } // 0x0000000185FE5E30-0x0000000185FE5E40 0x000000018BE25EBC-0x000000018BE25F04
-		public float fontSize { get; set; } // 0x0000000185FE5E20-0x0000000185FE5E30 0x00000001845A3990-0x00000001845A39C0
-		protected float PhoneticElementScale { get; } // 0x0000000185FCD000-0x0000000185FCD010 
-		protected string m_currentPhonetic { get; } // 0x000000018BE25F04-0x000000018BE25F48 
-		protected bool m_currentEnablePhoneticAutoPadding { get; } // 0x0000000185FE5EE0-0x0000000185FE5EF0 
-		protected bool m_currentEnablePhoneticAutoJustify { get; } // 0x0000000185FE5E70-0x0000000185FE5E80 
-		public FontWeight fontWeight { get; set; } // 0x000000018BE26050-0x000000018BE26078 0x0000000185FCD0B0-0x0000000185FCD0C0
-		public float pixelsPerUnit { get; } // 0x000000018BE26874-0x000000018BE2689C 
-		public bool enableAutoSizing { get; set; } // 0x0000000185FE5D10-0x0000000185FE5D20 0x000000018BE2598C-0x000000018BE259C8
-		public float fontSizeMin { get; set; } // 0x0000000185FE5D30-0x0000000185FE5D40 0x000000018BE259F4-0x000000018BE25A40
-		public float fontSizeMax { get; set; } // 0x0000000185FE6090-0x0000000185FE60A0 0x000000018BE268C4-0x000000018BE26910
-		public FontStyles fontStyle { get; set; } // 0x0000000185FE5F30-0x0000000185FE5F40 0x000000018BE26268-0x000000018BE262B4
-		public bool isUsingBold { get; } // 0x0000000185FE5F20-0x0000000185FE5F30 
-		public HorizontalAlignmentOptions horizontalAlignment { get; set; } // 0x000000018BE2621C-0x000000018BE26268 0x0000000185FE6000-0x0000000185FE6010
-		public VerticalAlignmentOptions verticalAlignment { get; set; } // 0x000000018BE26610-0x000000018BE2665C 0x0000000185FE5D40-0x0000000185FE5D50
-		public TextAlignmentOptions alignment { get; set; } // 0x000000018BE25A40-0x000000018BE25A8C 0x0000000185FE5DC0-0x0000000185FE5DD0
-		public float characterSpacing { get; set; } // 0x000000018BE25BF8-0x000000018BE25C3C 0x0000000185FE60A0-0x0000000185FE60B0
-		public float wordSpacing { get; set; } // 0x000000018BE26910-0x000000018BE2695C 0x0000000185FE5FE0-0x0000000185FE5FF0
-		public float lineSpacing { get; set; } // 0x000000018BE2657C-0x000000018BE265C0 0x000000018BE25228-0x000000018BE25234
-		public float lineSpacingAdjustment { get; set; } // 0x0000000185FE5DE0-0x0000000185FE5DF0 0x0000000185FE5F40-0x0000000185FE5F50
-		public float paragraphSpacing { get; set; } // 0x000000018BE262B4-0x000000018BE263A8 0x0000000185FE5ED0-0x0000000185FE5EE0
-		public float characterWidthAdjustment { get; set; } // 0x0000000185FE5DB0-0x0000000185FE5DC0 0x000000018BE25B8C-0x000000018BE25BD0
-		public bool enableWordWrapping { get; set; } // 0x0000000185FE5DD0-0x0000000185FE5DE0 0x000000018BE25C3C-0x000000018BE25C80
-		public float wordWrappingRatios { get; set; } // 0x0000000185FE6040-0x0000000185FE6050 0x000000018BE266D8-0x000000018BE2671C
-		public TextOverflowModes overflowMode { get; set; } // 0x0000000185FE5DA0-0x0000000185FE5DB0 0x000000018BE25B74-0x000000018BE25B8C
-		public bool isTextOverflowing { get; } // 0x0000000185FE6030-0x0000000185FE6040 
-		public int firstOverflowCharacterIndex { get; } // 0x000000018BE266B8-0x000000018BE266D8 
-		public TMP_Text linkedTextComponent { get; set; } // 0x0000000185FE6010-0x0000000185FE6020 0x000000018BE2665C-0x000000018BE266A0
-		public bool isTextTruncated { get; } // 0x0000000185FE5EB0-0x0000000185FE5EC0 
-		public bool enableKerning { get; set; } // 0x000000018BE260E0-0x000000018BE26124 0x0000000185FE5EA0-0x0000000185FE5EB0
-		public bool extraPadding { get; set; } // 0x000000018BE260B8-0x000000018BE260E0 0x0000000185FE5D90-0x0000000185FE5DA0
-		public bool richText { get; set; } // 0x000000018BE25B40-0x000000018BE25B74 0x0000000185FE5E90-0x0000000185FE5EA0
-		public bool enableHyperlink { get; set; } // 0x000000018BE260A0-0x000000018BE260B8 0x0000000185FE5E80-0x0000000185FE5E90
-		public float richTextColorBlend { get; set; } // 0x000000018BE26078-0x000000018BE260A0 0x0000000185FE6080-0x0000000185FE6090
-		public bool parseCtrlCharacters { get; set; } // 0x000000018BE2689C-0x000000018BE268C4 0x0000000185FE5F50-0x0000000185FE5F60
-		public bool isOverlay { get; set; } // 0x000000018BE263A8-0x000000018BE263D4 0x0000000185FE6020-0x0000000185FE6030
-		public bool isOrthographic { get; set; } // 0x000000018BE266A0-0x000000018BE266B8 0x0000000185FE5E50-0x0000000185FE5E60
-		public bool enableCulling { get; set; } // 0x000000018BE26030-0x000000018BE26050 0x0000000185FE5EC0-0x0000000185FE5ED0
-		public bool ignoreVisibility { get; set; } // 0x000000018BE26168-0x000000018BE261C8 0x0000000185FE6070-0x0000000185FE6080
-		public TextureMappingOptions horizontalMapping { get; set; } // 0x000000018BE26854-0x000000018BE26874 0x0000000185FE5DF0-0x0000000185FE5E00
-		public TextureMappingOptions verticalMapping { get; set; } // 0x000000018BE25CE4-0x000000018BE25D0C 0x0000000185FE5F80-0x0000000185FE5F90
-		public float mappingUvLineOffset { get; set; } // 0x0000000185D6F430-0x0000000185D6F460 0x0000000185FE5FA0-0x0000000185FE5FB0
-		public TextRenderFlags renderMode { get; set; } // 0x000000018BE264A4-0x000000018BE264CC 0x0000000185FE5F90-0x0000000185FE5FA0
-		public VertexSortingOrder geometrySortingOrder { get; set; } // 0x000000018BE2647C-0x000000018BE264A4 0x0000000185FE6060-0x0000000185FE6070
-		public bool isTextObjectScaleStatic { get; set; } // 0x000000018BE2682C-0x000000018BE26854 0x0000000185FE5FF0-0x0000000185FE6000
-		public bool vertexBufferAutoSizeReduction { get; set; } // 0x000000018BE265E8-0x000000018BE26610 0x0000000185FE5F60-0x0000000185FE5F70
-		public int firstVisibleCharacter { get; set; } // 0x000000018BE263D4-0x000000018BE2647C 0x0000000185FE6050-0x0000000185FE6060
-		public int maxVisibleCharacters { get; set; } // 0x0000000185FE5E60-0x0000000185FE5E70 0x000000018588D0D0-0x000000018588D260
-		public int maxVisibleWords { get; set; } // 0x0000000185FE5EF0-0x0000000185FE5F00 0x0000000185FE60C0-0x0000000185FE60D0
-		public int maxVisibleLines { get; set; } // 0x0000000183FCB6D0-0x0000000183FCB810 0x0000000184431030-0x0000000184431170
-		public bool useMaxVisibleDescender { get; set; } // 0x0000000185FE5D20-0x0000000185FE5D30 0x0000000185FE60B0-0x0000000185FE60C0
-		public int pageToDisplay { get; set; } // 0x0000000185FE5860-0x0000000185FE5870 0x0000000185FE5F00-0x0000000185FE5F10
-		public virtual Vector4 margin { get; set; } // 0x000000018BE261C8-0x000000018BE2621C 0x000000018BE25038-0x000000018BE250DC
-		public TMP_TextInfo textInfo { get; } // 0x000000018BE25718-0x000000018BE2576C 
-		public bool havePropertiesChanged { get; set; } // 0x000000018BE24DF8-0x000000018BE24EC0 0x000000018BE2576C-0x000000018BE25834
-		public bool isUsingLegacyAnimationComponent { get; set; } // 0x000000018BE24F50-0x000000018BE25018 0x000000018BE258C4-0x000000018BE2598C
-		public new Transform transform { get; } // 0x000000018BE24EC0-0x000000018BE24F50 
-		public new RectTransform rectTransform { get; } // 0x000000018BE25834-0x000000018BE258C4 
-		public virtual bool autoSizeTextContainer { get; set; } // 0x000000018BE25624-0x000000018BE25718 0x0000000185FE5E00-0x0000000185FE5E10
-		public virtual Mesh mesh { get; } // 0x0000000185FE5E10-0x0000000185FE5E20 
-		public bool isVolumetricText { get; set; } // 0x0000000185FE5FD0-0x0000000185FE5FE0 0x0000000185FE5FC0-0x0000000185FE5FD0
-		public Bounds bounds { get; } // 0x0000000185FE5FB0-0x0000000185FE5FC0 
-		public Bounds textBounds { get; } // 0x0000000185FE5F70-0x0000000185FE5F80 
-		protected TMP_SpriteAnimator spriteAnimator { get; } // 0x000000018646E430-0x000000018646E438 
-		public float flexibleHeight { get; } // 0x00000001842437C0-0x0000000184243D70 
-		public float flexibleWidth { get; } // 0x0000000184243350-0x00000001842435F0 
-		public float minWidth { get; } // 0x0000000185492010-0x0000000185492020 
-		public float minHeight { get; } // 0x0000000185492010-0x0000000185492020 
-		public float maxWidth { get; } // 0x00000001813AE580-0x00000001813AE590 
-		public float maxHeight { get; } // 0x0000000185492010-0x0000000185492020 
-		protected LayoutElement layoutElement { get; } // 0x00000001813AE580-0x00000001813AE590 
-		public virtual float preferredWidth { get; } // 0x0000000185492010-0x0000000185492020 
-		public virtual float preferredHeight { get; } // 0x00000001813AE580-0x00000001813AE590 
-		public virtual float renderedWidth { get; } // 0x000000018BE1DB70-0x000000018BE1DC24 
-		public virtual float renderedHeight { get; } // 0x000000018BE24D58-0x000000018BE24DF8 
-		public int layoutPriority { get; } // 0x0000000185492010-0x0000000185492020 
+		public virtual string text { get; set; } // 0x0000000183E60F20-0x0000000183E60FC0 0x0000000183E86700-0x0000000183E867B0
+		public virtual string textForPopulate { get; } // 0x000000018333C4A0-0x000000018333C4E0 
+		public ITextPreprocessor textPreprocessor { get; set; } // 0x0000000184D87D50-0x0000000184D87D60 0x00000001867A5EA0-0x00000001867A5EB4
+		public bool isRightToLeftText { get; set; } // 0x0000000184DBA120-0x0000000184DBA130 0x000000018B32B074-0x000000018B32B0B8
+		public TMP_FontAsset font { get; set; } // 0x0000000185393890-0x00000001853938A0 0x000000018B32AEBC-0x000000018B32AF60
+		public virtual TMP_FontAsset m_fontAsset { get; set; } // 0x0000000184D8D1B0-0x0000000184D8D1C0 0x0000000185397170-0x0000000185397184
+		public virtual Material fontSharedMaterial { get; set; } // 0x0000000184D8D910-0x0000000184D8D920 0x000000018B32AD0C-0x000000018B32ADA4
+		protected virtual Material m_sharedMaterial { get; set; } // 0x0000000184D8D910-0x0000000184D8D920 0x00000001853971AC-0x00000001853971C0
+		public virtual Material[] fontSharedMaterials { get; set; } // 0x000000018B32A0DC-0x000000018B32A10C 0x000000018B32ACD0-0x000000018B32AD0C
+		public Material fontMaterial { get; set; } // 0x000000018B32A088-0x000000018B32A09C 0x000000018B32ABF4-0x000000018B32ACD0
+		public virtual Material[] fontMaterials { get; set; } // 0x000000018B32A09C-0x000000018B32A0DC 0x000000018B32ACD0-0x000000018B32AD0C
+		public override UnityEngine.Color color { get; set; } // 0x00000001843E92E0-0x00000001843E93B0 0x0000000184369F20-0x0000000184369F60
+		public float alpha { get; set; } // 0x0000000184DA7C50-0x0000000184DA7C60 0x000000018B32A8B0-0x000000018B32A8DC
+		public bool enableVertexGradient { get; set; } // 0x0000000184D8FF90-0x0000000184D8FFA0 0x000000018B32AAB8-0x000000018B32AAE0
+		public VertexGradient colorGradient { get; set; } // 0x0000000184DB9FA0-0x0000000184DB9FD0 0x000000018B32A9A8-0x000000018B32A9EC
+		public TMP_ColorGradient colorGradientPreset { get; set; } // 0x0000000184D8DA80-0x0000000184D8DA90 0x000000018B32A974-0x000000018B32A9A8
+		public TMP_SpriteAsset spriteAsset { get; set; } // 0x0000000184D8D790-0x0000000184D8D7A0 0x000000018B32B6BC-0x000000018B32B700
+		public bool tintAllSprites { get; set; } // 0x0000000184D900F0-0x0000000184D90100 0x000000018B32B7A4-0x000000018B32B7CC
+		public TMP_StyleSheet styleSheet { get; set; } // 0x0000000184D87870-0x0000000184D87880 0x000000018B32B700-0x000000018B32B744
+		public TMP_Style textStyle { get; set; } // 0x000000018333CE30-0x000000018333CE80 0x000000018B32B744-0x000000018B32B7A4
+		public bool overrideColorTags { get; set; } // 0x0000000184D90680-0x0000000184D90690 0x000000018B32B560-0x000000018B32B588
+		public Color32 faceColor { get; set; } // 0x000000018B329FC0-0x000000018B32A088 0x000000018B32AB68-0x000000018B32ABCC
+		public Color32 outlineColor { get; set; } // 0x000000018B32A270-0x000000018B32A338 0x000000018B32B46C-0x000000018B32B4C4
+		public float outlineWidth { get; set; } // 0x000000018B32A338-0x000000018B32A3E8 0x000000018B32B4C4-0x000000018B32B51C
+		public float fontSize { get; set; } // 0x0000000184DBA090-0x0000000184DBA0A0 0x0000000184D83710-0x0000000184D83740
+		protected float PhoneticElementScale { get; } // 0x000000018B329EFC-0x000000018B329F1C 
+		protected string m_currentPhonetic { get; } // 0x000000018B32A20C-0x000000018B32A270 
+		protected bool m_currentEnablePhoneticAutoPadding { get; } // 0x000000018496E820-0x000000018496E870 
+		protected bool m_currentEnablePhoneticAutoJustify { get; } // 0x000000018B32A1A8-0x000000018B32A20C 
+		public FontWeight fontWeight { get; set; } // 0x0000000184DBA0A0-0x0000000184DBA0B0 0x000000018B32AE78-0x000000018B32AEBC
+		public float pixelsPerUnit { get; } // 0x000000018B32A3E8-0x000000018B32A50C 
+		public bool enableAutoSizing { get; set; } // 0x0000000184DB9FD0-0x0000000184DB9FE0 0x000000018B32A9EC-0x000000018B32AA28
+		public float fontSizeMin { get; set; } // 0x0000000184DBA080-0x0000000184DBA090 0x000000018B32ADEC-0x000000018B32AE34
+		public float fontSizeMax { get; set; } // 0x0000000184DBA070-0x0000000184DBA080 0x000000018B32ADA4-0x000000018B32ADEC
+		public FontStyles fontStyle { get; set; } // 0x0000000184DA15F0-0x0000000184DA1600 0x000000018B32AE34-0x000000018B32AE78
+		public bool isUsingBold { get; } // 0x0000000184DBA150-0x0000000184DBA160 
+		public HorizontalAlignmentOptions horizontalAlignment { get; set; } // 0x0000000184DBA0D0-0x0000000184DBA0E0 0x000000018B32AFA0-0x000000018B32AFC8
+		public VerticalAlignmentOptions verticalAlignment { get; set; } // 0x0000000184DA1650-0x0000000184DA1660 0x000000018B32B814-0x000000018B32B83C
+		public TextAlignmentOptions alignment { get; set; } // 0x0000000184DB9F60-0x0000000184DB9F70 0x000000018B32A874-0x000000018B32A8B0
+		public float characterSpacing { get; set; } // 0x0000000184DB9F80-0x0000000184DB9F90 0x000000018B32A8DC-0x000000018B32A928
+		public float wordSpacing { get; set; } // 0x0000000184DBA320-0x0000000184DBA330 0x000000018B32B864-0x000000018B32B8B0
+		public float lineSpacing { get; set; } // 0x0000000184DBA1A0-0x0000000184DBA1B0 0x000000018B32B1B8-0x000000018B32B204
+		public float lineSpacingAdjustment { get; set; } // 0x0000000184DBA190-0x0000000184DBA1A0 0x000000018B32B16C-0x000000018B32B1B8
+		public float paragraphSpacing { get; set; } // 0x0000000184DBA290-0x0000000184DBA2A0 0x000000018B32B5B0-0x000000018B32B5FC
+		public float characterWidthAdjustment { get; set; } // 0x0000000184DB9F90-0x0000000184DB9FA0 0x000000018B32A928-0x000000018B32A974
+		public bool enableWordWrapping { get; set; } // 0x0000000184DBA010-0x0000000184DBA020 0x000000018B32AAE0-0x000000018B32AB24
+		public float wordWrappingRatios { get; set; } // 0x0000000184DBA330-0x0000000184DBA340 0x000000018B32B8B0-0x000000018B32B8FC
+		public TextOverflowModes overflowMode { get; set; } // 0x0000000184DBA270-0x0000000184DBA280 0x000000018B32B51C-0x000000018B32B560
+		public bool isTextOverflowing { get; } // 0x000000018B32A10C-0x000000018B32A118 
+		public int firstOverflowCharacterIndex { get; } // 0x0000000184DBA030-0x0000000184DBA040 
+		public TMP_Text linkedTextComponent { get; set; } // 0x0000000184DBA1D0-0x0000000184DBA1E0 0x000000018B32B254-0x000000018B32B348
+		public bool isTextTruncated { get; } // 0x0000000184DBA140-0x0000000184DBA150 
+		public bool enableKerning { get; set; } // 0x0000000184DBA000-0x0000000184DBA010 0x000000018B32AA74-0x000000018B32AAB8
+		public bool extraPadding { get; set; } // 0x0000000184DBA020-0x0000000184DBA030 0x000000018B32AB24-0x000000018B32AB68
+		public bool richText { get; set; } // 0x0000000184DBA2D0-0x0000000184DBA2E0 0x000000018B32B678-0x000000018B32B6BC
+		public bool enableHyperlink { get; set; } // 0x0000000184DB9FF0-0x0000000184DBA000 0x000000018B32AA5C-0x000000018B32AA74
+		public Vector2 linkExtraPadding { get; set; } // 0x0000000184DBA1B0-0x0000000184DBA1D0 0x000000018B32B204-0x000000018B32B254
+		public float richTextColorBlend { get; set; } // 0x0000000184DBA2C0-0x0000000184DBA2D0 0x000000018B32B658-0x000000018B32B678
+		public bool parseCtrlCharacters { get; set; } // 0x0000000184DBA2A0-0x0000000184DBA2B0 0x000000018B32B5FC-0x000000018B32B640
+		public bool isOverlay { get; set; } // 0x0000000184DBA110-0x0000000184DBA120 0x000000018B32B030-0x000000018B32B074
+		public bool isOrthographic { get; set; } // 0x0000000184DBA100-0x0000000184DBA110 0x000000018B32B008-0x000000018B32B030
+		public bool enableCulling { get; set; } // 0x0000000184DB9FE0-0x0000000184DB9FF0 0x000000018B32AA28-0x000000018B32AA5C
+		public bool ignoreVisibility { get; set; } // 0x0000000184DBA0F0-0x0000000184DBA100 0x000000018B32AFF0-0x000000018B32B008
+		public TextureMappingOptions horizontalMapping { get; set; } // 0x0000000184DBA0E0-0x0000000184DBA0F0 0x000000018B32AFC8-0x000000018B32AFF0
+		public TextureMappingOptions verticalMapping { get; set; } // 0x0000000184DBA310-0x0000000184DBA320 0x000000018B32B83C-0x000000018B32B864
+		public float mappingUvLineOffset { get; set; } // 0x0000000184DBA1E0-0x0000000184DBA1F0 0x000000018B32B348-0x000000018B32B374
+		public TextRenderFlags renderMode { get; set; } // 0x0000000184DBA2B0-0x0000000184DBA2C0 0x000000018B32B640-0x000000018B32B658
+		public VertexSortingOrder geometrySortingOrder { get; set; } // 0x0000000184DBA0B0-0x0000000184DBA0C0 0x000000018B32AF60-0x000000018B32AF80
+		public bool isTextObjectScaleStatic { get; set; } // 0x0000000184DBA130-0x0000000184DBA140 0x000000018B32B0B8-0x000000018B32B118
+		public bool vertexBufferAutoSizeReduction { get; set; } // 0x0000000184DBA300-0x0000000184DBA310 0x000000018B32B7F4-0x000000018B32B814
+		public int firstVisibleCharacter { get; set; } // 0x0000000184DBA040-0x0000000184DBA050 0x000000018B32ABCC-0x000000018B32ABF4
+		public int maxVisibleCharacters { get; set; } // 0x0000000184DBA210-0x0000000184DBA220 0x0000000184B4A810-0x0000000184B4A840
+		public int maxVisibleWords { get; set; } // 0x0000000184DBA230-0x0000000184DBA240 0x000000018B32B444-0x000000018B32B46C
+		public int maxVisibleLines { get; set; } // 0x0000000184DBA220-0x0000000184DBA230 0x000000018B32B41C-0x000000018B32B444
+		public bool useMaxVisibleDescender { get; set; } // 0x0000000184DBA2F0-0x0000000184DBA300 0x000000018B32B7CC-0x000000018B32B7F4
+		public int pageToDisplay { get; set; } // 0x0000000184DBA280-0x0000000184DBA290 0x000000018B32B588-0x000000018B32B5B0
+		public virtual Vector4 margin { get; set; } // 0x0000000184DBA1F0-0x0000000184DBA200 0x000000018B32B374-0x000000018B32B41C
+		public TMP_TextInfo textInfo { get; } // 0x0000000184DBA2E0-0x0000000184DBA2F0 
+		public bool havePropertiesChanged { get; set; } // 0x0000000184DBA0C0-0x0000000184DBA0D0 0x000000018B32AF80-0x000000018B32AFA0
+		public bool isUsingLegacyAnimationComponent { get; set; } // 0x0000000184DBA160-0x0000000184DBA170 0x0000000184DBA350-0x0000000184DBA360
+		public new Transform transform { get; } // 0x0000000182EDE870-0x0000000182EDE910 
+		public new RectTransform rectTransform { get; } // 0x00000001831E83F0-0x00000001831E8490 
+		public virtual bool autoSizeTextContainer { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DB9F70-0x0000000184DB9F80 0x0000000184DBA340-0x0000000184DBA350
+		public virtual Mesh mesh { get; } // 0x0000000184DB9A70-0x0000000184DB9A80 
+		public bool isVolumetricText { get; set; } // 0x0000000184DBA170-0x0000000184DBA180 0x000000018B32B118-0x000000018B32B16C
+		public Bounds bounds { get; } // 0x000000018B329F1C-0x000000018B329FC0 
+		public Bounds textBounds { get; } // 0x000000018B32A600-0x000000018B32A654 
+		protected TMP_SpriteAnimator spriteAnimator { get; } // 0x000000018B32A50C-0x000000018B32A600 
+		public float flexibleHeight { get; } // 0x0000000184DBA050-0x0000000184DBA060 
+		public float flexibleWidth { get; } // 0x0000000184DBA060-0x0000000184DBA070 
+		public float minWidth { get; } // 0x0000000184DBA260-0x0000000184DBA270 
+		public float minHeight { get; } // 0x0000000184DBA250-0x0000000184DBA260 
+		public float maxWidth { get; } // 0x0000000184DBA240-0x0000000184DBA250 
+		public float maxHeight { get; } // 0x0000000184DBA200-0x0000000184DBA210 
+		protected LayoutElement layoutElement { get; } // 0x000000018B32A118-0x000000018B32A1A8 
+		public virtual float preferredWidth { get; } // 0x0000000185391678-0x0000000185391698 
+		public virtual float preferredHeight { get; } // 0x000000018539160C-0x0000000185391630 
+		public virtual float renderedWidth { get; } // 0x000000018B325694-0x000000018B3256B0 
+		public virtual float renderedHeight { get; } // 0x000000018B3255A4-0x000000018B3255C0 
+		public int layoutPriority { get; } // 0x0000000184DBA180-0x0000000184DBA190 
 	
 		// Events
-		public static event Func<int, string, TMP_FontAsset> OnFontAssetRequest;
-		public static event Func<int, string, TMP_SpriteAsset> OnSpriteAssetRequest;
-		public virtual event Action<TMP_TextInfo> OnPreRenderText;
+		public static event Func<int, string, TMP_FontAsset> OnFontAssetRequest {
+			add; // 0x000000018B329CDC-0x000000018B329DA4
+			remove; // 0x000000018B32A654-0x000000018B32A71C
+		}
+		public static event Func<int, string, TMP_SpriteAsset> OnSpriteAssetRequest {
+			add; // 0x000000018B329E34-0x000000018B329EFC
+			remove; // 0x000000018B32A7AC-0x000000018B32A874
+		}
+		public virtual event Action<TMP_TextInfo> OnPreRenderText {
+			add; // 0x000000018B329DA4-0x000000018B329E34
+			remove; // 0x000000018B32A71C-0x000000018B32A7AC
+		}
 	
 		// Nested types
-		protected struct CharacterSubstitution // TypeDefIndex: 53235
+		protected struct CharacterSubstitution // TypeDefIndex: 55720
 		{
 			// Fields
 			public int index; // 0x00
 			public uint unicode; // 0x04
 	
 			// Constructors
-			public CharacterSubstitution(int index, uint unicode) {
-				this.index = default;
-				this.unicode = default;
-			} // 0x000000018515D230-0x000000018515D250
+			public CharacterSubstitution(int index, uint unicode); // 0x0000000184D85C40-0x0000000184D85C50
 		}
 	
-		internal enum TextInputSources // TypeDefIndex: 53236
+		internal enum TextInputSources // TypeDefIndex: 55721
 		{
 			TextInputBox = 0,
 			SetText = 1,
@@ -4181,7 +4324,8 @@ namespace TMPro
 			TextString = 3
 		}
 	
-		protected struct UnicodeChar // TypeDefIndex: 53237
+		[DebuggerDisplay("Unicode ({unicode})  \'{(char)unicode}\'")]
+		protected struct UnicodeChar // TypeDefIndex: 55722
 		{
 			// Fields
 			public int unicode; // 0x00
@@ -4189,7 +4333,7 @@ namespace TMPro
 			public int length; // 0x08
 		}
 	
-		protected struct SpecialCharacter // TypeDefIndex: 53238
+		protected struct SpecialCharacter // TypeDefIndex: 55723
 		{
 			// Fields
 			public TMP_Character character; // 0x00
@@ -4198,257 +4342,233 @@ namespace TMPro
 			public int materialIndex; // 0x18
 	
 			// Constructors
-			public SpecialCharacter(TMP_Character character, int materialIndex) {
-				this.character = default;
-				fontAsset = default;
-				material = default;
-				this.materialIndex = default;
-			} // 0x0000000184FB78D0-0x0000000184FB7980
+			public SpecialCharacter(TMP_Character character, int materialIndex); // 0x000000018333AD10-0x000000018333AE40
 		}
 	
-		private struct TextBackingContainer : IDisposable // TypeDefIndex: 53239
+		private struct TextBackingContainer : IDisposable // TypeDefIndex: 55724
 		{
 			// Fields
 			private uint[] m_Array; // 0x00
 			private int m_Count; // 0x08
 	
 			// Properties
-			public int Capacity { get => default; } // 0x0000000184683400-0x0000000184683440 
-			public int Count { get => default; set {} } // 0x000000018BE23C78-0x000000018BE23C88 0x000000018BE22C88-0x000000018BE22CB8
-			public uint this[int index] { get => default; set {} } // 0x0000000185FB1CB0-0x0000000185FB1CC0 0x0000000187764794-0x00000001877647A8
+			public int Capacity { get; } // 0x000000018539210C-0x0000000185392128 
+			public int Count { get; set; } // 0x0000000184D88B10-0x0000000184D88B20 0x0000000184D88B40-0x0000000184D88B50
+			public uint this[int index] { get => default; set {} } // 0x000000018333E610-0x000000018333E640 0x000000018333BC20-0x000000018333BC80
 	
 			// Constructors
-			public TextBackingContainer(int size) : this() {
-				m_Array = default;
-				m_Count = default;
-			} // 0x0000000185FB9370-0x0000000185FB9380
+			public TextBackingContainer(int size); // 0x0000000183518980-0x00000001835189E0
 	
 			// Methods
-			public void Resize(int size) {} // 0x000000018BE26124-0x000000018BE26168
-			public void Dispose() {} // 0x0000000186471710-0x0000000186471718
+			public void Resize(int size); // 0x0000000183339F40-0x0000000183339FA0
+			public void Dispose(); // 0x00000001835194D0-0x0000000183519510
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 53240
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 55725
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
-			public static Action<TMP_TextInfo> __9__685_0; // 0x08
+			public static Action<TMP_TextInfo> __9__689_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x000000018BE25F8C-0x000000018BE26030
-			public __c() {} // 0x00000001813AE580-0x00000001813AE590
+			static __c(); // 0x0000000184D49A50-0x0000000184D49AB0
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _.ctor_b__685_0(TMP_TextInfo _p0_) {} // 0x0000000185FB8600-0x0000000185FB8610
+			internal void _.ctor_b__689_0(TMP_TextInfo _p0_); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		// Constructors
-		protected TMP_Text() {} // 0x0000000185492010-0x0000000185492020
-		static TMP_Text() {} // 0x0000000185492010-0x0000000185492020
+		protected TMP_Text(); // 0x0000000183695A00-0x0000000183695EB0
+		static TMP_Text(); // 0x000000018478E1B0-0x000000018478E7A0
 	
 		// Methods
-		public void ResetTextForPopulate() {} // 0x0000000185FB8550-0x0000000185FB8560
-		public virtual void RefreshPopulateText() {} // 0x00000001864735A4-0x00000001864735B8
-		protected virtual Material LoadMaterial(string path) => default; // 0x0000000185EF5F40-0x0000000185EF5F50
-		protected override void Awake() {} // 0x0000000185492010-0x0000000185492020
-		protected void InitDataFromPool() {} // 0x0000000185492010-0x0000000185492020
-		protected override void OnDestroy() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void LoadFontAsset() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void SetSharedMaterial(Material mat) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual Material GetMaterial(Material mat) => default; // 0x0000000185492010-0x0000000185492020
-		protected virtual void SetFontBaseMaterial(Material mat) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual Material[] GetSharedMaterials() => default; // 0x00000001845E8200-0x00000001845E8360
-		protected virtual void SetSharedMaterials(Material[] materials) {} // 0x000000018BE205D0-0x000000018BE206C4
-		protected virtual Material[] GetMaterials(Material[] mats) => default; // 0x00000001813AE580-0x00000001813AE590
-		protected virtual Material CreateMaterialInstance(Material source) => default; // 0x0000000185492010-0x0000000185492020
-		protected void SetVertexColorGradient(TMP_ColorGradient gradient) {} // 0x0000000185492010-0x0000000185492020
-		protected void SetTextSortingOrder(VertexSortingOrder order) {} // 0x0000000185492010-0x0000000185492020
-		protected void SetTextSortingOrder(int[] order) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void SetFaceColor(Color32 color) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void SetOutlineColor(Color32 color) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void SetOutlineThickness(float thickness) {} // 0x00000001859EACD0-0x00000001859EAD60
-		protected virtual void SetShaderDepth() {} // 0x000000018BE1DC24-0x000000018BE1DC84
-		protected virtual void SetCulling() {} // 0x0000000185492010-0x0000000185492020
-		internal virtual void UpdateCulling() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual float GetPaddingForMaterial() => default; // 0x00000001846832D0-0x0000000184683400
-		protected virtual float GetPaddingForMaterial(Material mat) => default; // 0x0000000184683440-0x0000000184683470
-		protected virtual Vector3[] GetTextContainerLocalCorners() => default; // 0x0000000184297BA0-0x0000000184297D50
-		public virtual void ForceMeshUpdate(bool ignoreActiveState = false /* Metadata: 0x02077DFC */, bool forceTextReparsing = false /* Metadata: 0x02077DFD */) {} // 0x000000018BE22A8C-0x000000018BE22B8C
-		public virtual void UpdateGeometry(Mesh mesh, int index) {} // 0x000000018BE22B8C-0x000000018BE22C88
-		public virtual void UpdateVertexData(TMP_VertexDataUpdateFlags flags) {} // 0x00000001842B2130-0x00000001842B24C0
-		public virtual void UpdateVertexData() {} // 0x000000018BE247FC-0x000000018BE24850
-		public virtual void SetVertices(Vector3[] vertices) {} // 0x0000000185DB1B30-0x0000000185DB1BF0
-		public virtual void UpdateMeshPadding() {} // 0x000000018BE24CB4-0x000000018BE24CF0
-		public override void CrossFadeColor(UnityEngine.Color targetColor, float duration, bool ignoreTimeScale, bool useAlpha) {} // 0x000000018BE24850-0x000000018BE2488C
-		public override void CrossFadeAlpha(float alpha, float duration, bool ignoreTimeScale) {} // 0x000000018BE24C24-0x000000018BE24C68
-		protected virtual void InternalCrossFadeColor(UnityEngine.Color targetColor, float duration, bool ignoreTimeScale, bool useAlpha) {} // 0x000000018BE24C68-0x000000018BE24CB4
-		protected virtual void InternalCrossFadeAlpha(float alpha, float duration, bool ignoreTimeScale) {} // 0x000000018BE24BCC-0x000000018BE24C24
-		protected void ParseInputText() {} // 0x000000018BE24B04-0x000000018BE24B64
-		private void PopulateTextBackingArray(string sourceText) {} // 0x000000018BE24B64-0x000000018BE24BCC
-		private void PopulateTextBackingArray(string sourceText, int start, int length) {} // 0x000000018BE248B8-0x000000018BE24B04
-		private void PopulateTextBackingArray(StringBuilder sourceText, int start, int length) {} // 0x000000018BE2488C-0x000000018BE248B8
-		private void PopulateTextBackingArray(char[] sourceText, int start, int length) {} // 0x000000018BE24D00-0x000000018BE24D58
-		private void PopulateTextProcessingArray() {} // 0x000000018BE247D4-0x000000018BE247FC
-		private void SetTextInternal(string sourceText) {} // 0x000000018BE24CF0-0x000000018BE24D00
-		public void SetText(string sourceText, bool syncTextInputBox = true /* Metadata: 0x02077DFE */) {} // 0x000000018BE247D4-0x000000018BE247FC
-		public void SetText(string sourceText, float arg0) {} // 0x000000018BE2477C-0x000000018BE247D4
-		public void SetText(string sourceText, float arg0, float arg1) {} // 0x0000000184685440-0x0000000184685740
-		public void SetText(string sourceText, float arg0, float arg1, float arg2) {} // 0x000000018BE234B0-0x000000018BE23878
-		public void SetText(string sourceText, float arg0, float arg1, float arg2, float arg3) {} // 0x000000018BE23878-0x000000018BE23C20
-		public void SetText(string sourceText, float arg0, float arg1, float arg2, float arg3, float arg4) {} // 0x000000018BE22DB0-0x000000018BE23138
-		public void SetText(string sourceText, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5) {} // 0x000000018BE23138-0x000000018BE234B0
-		public void SetText(string sourceText, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6) {} // 0x000000018BE22570-0x000000018BE228EC
-		public void SetText(string sourceText, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6, float arg7) {} // 0x000000018BE221F4-0x000000018BE22570
-		public void SetText(StringBuilder sourceText) {} // 0x000000018BE2051C-0x000000018BE205D0
-		private void SetText(StringBuilder sourceText, int start, int length) {} // 0x00000001854CC7F0-0x00000001854CC8B0
-		public void SetText(char[] sourceText) {} // 0x000000018BE20BFC-0x000000018BE20CBC
-		public void SetText(char[] sourceText, int start, int length) {} // 0x000000018BE20CBC-0x000000018BE20D84
-		public void SetCharArray(char[] sourceText) {}
-		public void SetCharArray(char[] sourceText, int start, int length) {}
-		private TMP_Style GetStyle(int hashCode) => default; // 0x000000018BE1D0A4-0x000000018BE1D388
-		private bool ReplaceOpeningStyleTag(ref TextBackingContainer sourceText, int srcIndex, out int srcOffset, ref UnicodeChar[] charBuffer, ref int writeIndex) {
-			srcOffset = default;
-			return default;
-		} // 0x000000018BE1D388-0x000000018BE1D4A0
-		private bool ReplaceOpeningStyleTag(ref int[] sourceText, int srcIndex, out int srcOffset, ref UnicodeChar[] charBuffer, ref int writeIndex) {
-			srcOffset = default;
-			return default;
-		} // 0x000000018BE228EC-0x000000018BE229C4
-		private void ReplaceClosingStyleTag(ref TextBackingContainer sourceText, int srcIndex, ref UnicodeChar[] charBuffer, ref int writeIndex) {} // 0x00000001813AE580-0x00000001813AE590
-		private void ReplaceClosingStyleTag(ref int[] sourceText, int srcIndex, ref UnicodeChar[] charBuffer, ref int writeIndex) {} // 0x000000018BE20A04-0x000000018BE20A58
-		private bool InsertOpeningStyleTag(TMP_Style style, int srcIndex, ref UnicodeChar[] charBuffer, ref int writeIndex) => default; // 0x000000018BE2085C-0x000000018BE208C4
-		private void InsertClosingStyleTag(ref UnicodeChar[] charBuffer, ref int writeIndex) {} // 0x000000018BE208C4-0x000000018BE2098C
-		private int GetMarkupTagHashCode(int[] tagDefinition, int readIndex) => default; // 0x000000018BE2098C-0x000000018BE20A04
-		private int GetMarkupTagHashCode(TextBackingContainer tagDefinition, int readIndex) => default; // 0x0000000184682AE0-0x0000000184682C70
-		private int GetStyleHashCode(ref int[] text, int index, out int closeIndex) {
-			closeIndex = default;
-			return default;
-		} // 0x000000018BE20A58-0x000000018BE20AD4
-		private int GetStyleHashCode(ref TextBackingContainer text, int index, out int closeIndex) {
-			closeIndex = default;
-			return default;
-		} // 0x00000001846828F0-0x0000000184682AE0
-		private void ResizeInternalArray<T>(ref ref T[] array) {} // 0x000000018BE207AC-0x000000018BE2085C
-		private void ResizeInternalArray<T>(ref ref T[] array, int size) {} // 0x000000018BE20B68-0x000000018BE20BC4
-		private void AddFloatToInternalTextBackingArray(float value, int padding, int precision, ref int writeIndex) {} // 0x000000018BE20B0C-0x000000018BE20B68
-		private void AddIntegerToInternalTextBackingArray(double number, int padding, ref int writeIndex) {} // 0x000000018BE20BE0-0x000000018BE20BFC
-		private string InternalTextBackingArrayToString() => default; // 0x000000018BE20BC4-0x000000018BE20BE0
-		protected virtual int SetArraySizes(UnicodeChar[] unicodeChars) => default; // 0x000000018BE20AF0-0x000000018BE20B0C
-		public Vector2 GetPreferredValues() => default; // 0x000000018BE20AD4-0x000000018BE20AF0
-		public Vector2 GetPreferredValues(float width, float height) => default; // 0x0000000184685A30-0x000000018468B4A0
-		public Vector2 GetPreferredValues(string text) => default; // 0x0000000185FBB100-0x0000000185FBB110
-		public Vector2 GetPreferredValues(string text, float width, float height) => default; // 0x000000018361A650-0x000000018361A660
-		protected float GetPreferredWidth() => default; // 0x000000018BE210BC-0x000000018BE213CC
-		private float GetPreferredWidth(Vector2 margin) => default; // 0x000000018BE20D84-0x000000018BE210BC
-		protected float GetPreferredHeight() => default; // 0x000000018BE1D4A0-0x000000018BE1D984
-		private float GetPreferredHeight(Vector2 margin) => default; // 0x000000018BE23C88-0x000000018BE23F10
-		public Vector2 GetRenderedValues() => default; // 0x00000001813AE580-0x00000001813AE590
-		public Vector2 GetRenderedValues(bool onlyVisibleCharacters) => default; // 0x0000000185492010-0x0000000185492020
-		private float GetRenderedWidth() => default; // 0x0000000184243DF0-0x00000001842447C0
-		protected float GetRenderedWidth(bool onlyVisibleCharacters) => default; // 0x00000001846845B0-0x0000000184685000
-		private float GetRenderedHeight() => default; // 0x00000001850A53F0-0x00000001850A5C20
-		protected float GetRenderedHeight(bool onlyVisibleCharacters) => default; // 0x00000001842B48B0-0x00000001842B4F40
-		protected virtual Vector2 CalculatePreferredValues(ref float fontSize, Vector2 marginSize, bool isTextAutoSizingEnabled, bool isWordWrappingEnabled) => default; // 0x000000018BE23F10-0x000000018BE2477C
-		protected virtual Bounds GetCompoundBounds() => default; // 0x00000001842B4F40-0x00000001842B57E0
-		internal virtual Rect GetCanvasSpaceClippingRect() => default; // 0x000000018BE1F050-0x000000018BE1FC3C
-		protected Bounds GetTextBounds() => default; // 0x000000018BE1FC3C-0x000000018BE203EC
-		protected Bounds GetTextBounds(bool onlyVisibleCharacters) => default; // 0x000000018BE1E160-0x000000018BE1F050
-		protected void AdjustLineOffset(int startIndex, int endIndex, float offset) {} // 0x0000000183F7D540-0x0000000183F7EF60
-		protected void ResizeLineExtents(int size) {} // 0x0000000183F7CEC0-0x0000000183F7D540
-		public virtual TMP_TextInfo GetTextInfo(string text) => default; // 0x0000000183F7A420-0x0000000183F7CEC0
-		public virtual void ComputeMarginSize() {} // 0x000000018BE1DC84-0x000000018BE1E160
-		protected void InsertNewLine(int i, float baseScale, float currentElementScale, float currentEmScale, float glyphAdjustment, float boldSpacingAdjustment, float characterSpacingAdjustment, float width, float lineGap, ref bool isMaxVisibleDescenderSet, ref float maxVisibleDescender) {} // 0x0000000184245510-0x00000001842455A0
-		protected void SaveWordWrappingState(ref WordWrapState state, int index, int count) {} // 0x0000000184683130-0x0000000184683160
-		protected int RestoreWordWrappingState(ref WordWrapState state) => default; // 0x0000000184682C70-0x0000000184682E00
-		protected virtual void SaveGlyphVertexInfo(float padding, float style_padding, Color32 vertexColor) {} // 0x0000000184682FC0-0x0000000184683130
-		protected virtual void SaveSpriteVertexInfo(Color32 vertexColor) {} // 0x000000018BE23C20-0x000000018BE23C78
-		protected virtual void FillCharacterVertexBuffers(int i, int index_X4) {} // 0x000000018BE20498-0x000000018BE2051C
-		protected virtual void FillCharacterVertexBuffers(int i, int index_X4, bool isVolumetric) {} // 0x00000001842B0DE0-0x00000001842B0FC0
-		protected virtual void FillSpriteVertexBuffers(int i, int index_X4) {} // 0x000000018423FEC0-0x000000018423FEE0
-		protected virtual void DrawUnderlineMesh(Vector3 start, Vector3 end, ref int index, float startScale, float endScale, float maxScale, float sdfScale, Color32 underlineColor) {} // 0x0000000185492010-0x0000000185492020
-		protected void PrepareCharSlots(PhoneticData data) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual float PhoneticWidth(PhoneticData data) => default; // 0x0000000185492010-0x0000000185492020
-		protected virtual void DrawPhoneticMesh(Rect rect, PhoneticData data, float padding, float style_padding, bool justify, float lossyScale) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void DrawTextHighlight(Vector3 start, Vector3 end, ref int index, Color32 highlightColor) {} // 0x000000018BE206C4-0x000000018BE207AC
-		protected void LoadDefaultSettings() {} // 0x000000018BE229C4-0x000000018BE22A8C
-		protected void GetSpecialCharacters(TMP_FontAsset fontAsset) {} // 0x000000018BE22CB8-0x000000018BE22DB0
-		protected void GetEllipsisSpecialCharacter(TMP_FontAsset fontAsset) {} // 0x0000000185FE5CD0-0x0000000185FE5D10
-		protected void GetUnderlineSpecialCharacter(TMP_FontAsset fontAsset) {} // 0x0000000185FE5C90-0x0000000185FE5CD0
-		protected void ReplaceTagWithCharacter(int[] chars, int insertionIndex, int tagLength, char c) {} // 0x0000000185492010-0x0000000185492020
-		protected TMP_FontAsset GetFontAssetForWeight(int fontWeight) => default; // 0x0000000184FD8BA0-0x0000000184FD8D40
-		internal TMP_TextElement GetTextElement(uint unicode, TMP_FontAsset fontAsset, FontStyles fontStyle, FontWeight fontWeight, out bool isUsingAlternativeTypeface) {
-			isUsingAlternativeTypeface = default;
-			return default;
-		} // 0x000000018BE21594-0x000000018BE2167C
-		public void TryRemoveDynamicFallbackFontAssetTextRef() {} // 0x000000018BE214B4-0x000000018BE21594
-		protected virtual void SetActiveSubMeshes(bool state) {} // 0x000000018BE21754-0x000000018BE21834
-		protected virtual void DestroySubMeshObjects() {} // 0x000000018BE213CC-0x000000018BE214B4
-		public virtual void ClearMesh() {} // 0x000000018BE2167C-0x000000018BE21754
-		public virtual void ClearMesh(bool uploadGeometry) {} // 0x000000018BE21834-0x000000018BE219AC
-		public virtual string GetParsedText() => default; // 0x000000018BE21B20-0x000000018BE21C94
-		internal bool IsSelfOrLinkedAncestor(TMP_Text targetTextComponent) => default; // 0x000000018BE219AC-0x000000018BE21B20
-		internal void ReleaseLinkedTextComponent(TMP_Text targetTextComponent) {} // 0x000000018BE21DF4-0x000000018BE21F6C
-		protected Vector2 PackUV(float x, float y, float scale) => default; // 0x000000018BE21C94-0x000000018BE21DF4
-		protected float PackUV(float x, float y) => default; // 0x0000000184FD8990-0x0000000184FD8BA0
-		internal virtual void InternalUpdate() {} // 0x000000018BE21F6C-0x000000018BE221F4
-		protected static int HexToInt(char hex) => default; // 0x000000018BE203EC-0x000000018BE20498
-		protected int GetUTF16(string text, int i) => default; // 0x000000018BE1DB4C-0x000000018BE1DB70
-		protected int GetUTF16(int[] text, int i) => default; // 0x000000018BE1DA0C-0x000000018BE1DB4C
-		internal int GetUTF16(uint[] text, int i) => default; // 0x000000018BE1D984-0x000000018BE1DA0C
-		protected int GetUTF16(StringBuilder text, int i) => default; // 0x0000000184FD8D40-0x0000000184FE0BB0
-		private int GetUTF16(TextBackingContainer text, int i) => default; // 0x00000001848137B0-0x0000000184814A90
-		protected int GetUTF32(string text, int i) => default; // 0x0000000185949D40-0x000000018594A330
-		protected int GetUTF32(int[] text, int i) => default; // 0x000000018357CB90-0x000000018357CBA0
-		internal int GetUTF32(uint[] text, int i) => default; // 0x0000000184682E00-0x0000000184682FC0
-		protected int GetUTF32(StringBuilder text, int i) => default; // 0x0000000186473EAC-0x0000000186473EC8
-		private int GetUTF32(TextBackingContainer text, int i) => default; // 0x0000000181B7E450-0x0000000181B7E460
-		protected static Color32 HexCharsToColor(ReadOnlySpan<char> hexChars, int tagCount) => default; // 0x0000000185FB2B90-0x0000000185FB2BA0
-		protected static Color32 HexCharsToColor(ReadOnlySpan<char> hexChars, int startIndex, int length) => default; // 0x00000001842B1950-0x00000001842B1980
-		private int GetAttributeParameters(char[] chars, int startIndex, int length, ref float[] parameters) => default; // 0x0000000184297D50-0x0000000184297DB0
-		protected float ConvertToFloat(char[] chars, int startIndex, int length) => default; // 0x0000000184243D70-0x0000000184243DF0
-		protected float ConvertToFloat(char[] chars, int startIndex, int length, out int lastIndex) {
-			lastIndex = default;
-			return default;
-		} // 0x0000000184402EA0-0x0000000184402F20
-		protected bool CheckIfEndPhonetic(UnicodeChar[] chars, int startIndex) => default; // 0x0000000184243680-0x00000001842436F0
-		protected bool ValidateHtmlTag(UnicodeChar[] chars, int startIndex, out int endIndex) {
-			endIndex = default;
-			return default;
-		} // 0x0000000185F75DF0-0x0000000185F75E50
+		public void ResetTextForPopulate(); // 0x000000018B328DA4-0x000000018B328DB4
+		public virtual void RefreshPopulateText(); // 0x000000018B327DB4-0x000000018B327DE4
+		protected virtual Material LoadMaterial(string path); // 0x00000001811EC580-0x00000001811EC590
+		protected override void Awake(); // 0x0000000185392D94-0x0000000185392D9C
+		public void InitDataFromPool(); // 0x00000001835181E0-0x0000000183518980
+		protected override void OnDestroy(); // 0x0000000183519220-0x0000000183519440
+		protected virtual void LoadFontAsset(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void SetSharedMaterial(Material mat); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual Material GetMaterial(Material mat); // 0x00000001811EC580-0x00000001811EC590
+		protected virtual void SetFontBaseMaterial(Material mat); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual Material[] GetSharedMaterials(); // 0x00000001811EC580-0x00000001811EC590
+		protected virtual void SetSharedMaterials(Material[] materials); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual Material[] GetMaterials(Material[] mats); // 0x00000001811EC580-0x00000001811EC590
+		protected virtual Material CreateMaterialInstance(Material source); // 0x000000018B3222D0-0x000000018B322384
+		protected void SetVertexColorGradient(TMP_ColorGradient gradient); // 0x000000018B329C3C-0x000000018B329CDC
+		protected void SetTextSortingOrder(VertexSortingOrder order); // 0x00000001841E1670-0x00000001841E1680
+		protected void SetTextSortingOrder(int[] order); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void SetFaceColor(Color32 color); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void SetOutlineColor(Color32 color); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void SetOutlineThickness(float thickness); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void SetShaderDepth(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void SetCulling(); // 0x00000001841E1670-0x00000001841E1680
+		internal virtual void UpdateCulling(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual float GetPaddingForMaterial(); // 0x000000018333AE70-0x000000018333B000
+		protected virtual float GetPaddingForMaterial(Material mat); // 0x000000018B325078-0x000000018B32516C
+		protected virtual Vector3[] GetTextContainerLocalCorners(); // 0x00000001811EC580-0x00000001811EC590
+		public virtual void ForceMeshUpdate(bool ignoreActiveState = false /* Metadata: 0x023473FE */, bool forceTextReparsing = false /* Metadata: 0x023473FF */); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void UpdateGeometry(Mesh mesh, int index); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void UpdateVertexData(TMP_VertexDataUpdateFlags flags); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void UpdateVertexData(); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void SetVertices(Vector3[] vertices); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void UpdateMeshPadding(); // 0x00000001841E1670-0x00000001841E1680
+		public override void CrossFadeColor(UnityEngine.Color targetColor, float duration, bool ignoreTimeScale, bool useAlpha); // 0x00000001845F3E40-0x00000001845F3ED0
+		public override void CrossFadeAlpha(float alpha, float duration, bool ignoreTimeScale); // 0x000000018B322384-0x000000018B3223E4
+		protected virtual void InternalCrossFadeColor(UnityEngine.Color targetColor, float duration, bool ignoreTimeScale, bool useAlpha); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void InternalCrossFadeAlpha(float alpha, float duration, bool ignoreTimeScale); // 0x00000001841E1670-0x00000001841E1680
+		protected void ParseInputText(); // 0x000000018333C3B0-0x000000018333C4A0
+		private void PopulateTextBackingArray(string sourceText); // 0x000000018333BE20-0x000000018333BE50
+		private void PopulateTextBackingArray(string sourceText, int start, int length); // 0x000000018333BA70-0x000000018333BC20
+		private void PopulateTextBackingArray(StringBuilder sourceText, int start, int length); // 0x000000018B327668-0x000000018B327768
+		private void PopulateTextBackingArray(char[] sourceText, int start, int length); // 0x000000018B327768-0x000000018B327864
+		private void PopulateTextProcessingArray(); // 0x000000018333D0F0-0x000000018333D430
+		private void SetTextInternal(string sourceText); // 0x000000018B3296E0-0x000000018B329734
+		public void SetText(string sourceText, bool syncTextInputBox = true /* Metadata: 0x02347400 */); // 0x0000000183639B30-0x0000000183639BF0
+		public void SetText(string sourceText, float arg0); // 0x000000018B329B98-0x000000018B329BD4
+		public void SetText(string sourceText, float arg0, float arg1); // 0x000000018B329734-0x000000018B329770
+		public void SetText(string sourceText, float arg0, float arg1, float arg2); // 0x000000018B329B08-0x000000018B329B4C
+		public void SetText(string sourceText, float arg0, float arg1, float arg2, float arg3); // 0x000000018B329B4C-0x000000018B329B98
+		public void SetText(string sourceText, float arg0, float arg1, float arg2, float arg3, float arg4); // 0x000000018B329AB0-0x000000018B329B08
+		public void SetText(string sourceText, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5); // 0x000000018B3299E8-0x000000018B329A48
+		public void SetText(string sourceText, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6); // 0x000000018B329A48-0x000000018B329AB0
+		public void SetText(string sourceText, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6, float arg7); // 0x000000018B32979C-0x000000018B3299E8
+		public void SetText(StringBuilder sourceText); // 0x000000018B329770-0x000000018B32979C
+		private void SetText(StringBuilder sourceText, int start, int length); // 0x000000018B329BE4-0x000000018B329C3C
+		public void SetText(char[] sourceText); // 0x000000018B3296B8-0x000000018B3296E0
+		public void SetText(char[] sourceText, int start, int length); // 0x000000018B329BD4-0x000000018B329BE4
+		public void SetCharArray(char[] sourceText); // 0x000000018B3296B8-0x000000018B3296E0
+		public void SetCharArray(char[] sourceText, int start, int length); // 0x000000018B329620-0x000000018B3296B8
+		private TMP_Style GetStyle(int hashCode); // 0x000000018333CAC0-0x000000018333CC00
+		private bool ReplaceOpeningStyleTag(ref TextBackingContainer sourceText, int srcIndex, out int srcOffset, ref UnicodeChar[] charBuffer, ref int writeIndex); // 0x000000018B3285DC-0x000000018B3289A4
+		private bool ReplaceOpeningStyleTag(ref int[] sourceText, int srcIndex, out int srcOffset, ref UnicodeChar[] charBuffer, ref int writeIndex); // 0x000000018B3289A4-0x000000018B328D4C
+		private void ReplaceClosingStyleTag(ref TextBackingContainer sourceText, int srcIndex, ref UnicodeChar[] charBuffer, ref int writeIndex); // 0x000000018B327EDC-0x000000018B328264
+		private void ReplaceClosingStyleTag(ref int[] sourceText, int srcIndex, ref UnicodeChar[] charBuffer, ref int writeIndex); // 0x000000018B328264-0x000000018B3285DC
+		private bool InsertOpeningStyleTag(TMP_Style style, int srcIndex, ref UnicodeChar[] charBuffer, ref int writeIndex); // 0x000000018B327024-0x000000018B3273A0
+		private void InsertClosingStyleTag(ref UnicodeChar[] charBuffer, ref int writeIndex); // 0x000000018B326CA8-0x000000018B327024
+		private int GetMarkupTagHashCode(int[] tagDefinition, int readIndex); // 0x000000018B324FC4-0x000000018B325078
+		private int GetMarkupTagHashCode(TextBackingContainer tagDefinition, int readIndex); // 0x0000000184111440-0x00000001841114E0
+		private int GetStyleHashCode(ref int[] text, int index, out int closeIndex); // 0x000000018B3256B0-0x000000018B325770
+		private int GetStyleHashCode(ref TextBackingContainer text, int index, out int closeIndex); // 0x000000018B325770-0x000000018B325838
+		private void ResizeInternalArray<T>(ref ref T[] array);
+		private void ResizeInternalArray<T>(ref ref T[] array, int size);
+		private void AddFloatToInternalTextBackingArray(float value, int padding, int precision, ref int writeIndex); // 0x000000018B321968-0x000000018B321C4C
+		private void AddIntegerToInternalTextBackingArray(double number, int padding, ref int writeIndex); // 0x000000018B321C4C-0x000000018B321D64
+		private string InternalTextBackingArrayToString(); // 0x000000018B3273A0-0x000000018B327478
+		protected virtual int SetArraySizes(UnicodeChar[] unicodeChars); // 0x00000001811EC580-0x00000001811EC590
+		public Vector2 GetPreferredValues(); // 0x000000018B3254B0-0x000000018B325504
+		public Vector2 GetPreferredValues(float width, float height); // 0x000000018B325308-0x000000018B325370
+		public Vector2 GetPreferredValues(string text); // 0x000000018B325370-0x000000018B325438
+		public Vector2 GetPreferredValues(string text, float width, float height); // 0x000000018B325438-0x000000018B3254B0
+		protected float GetPreferredWidth(); // 0x0000000183E641C0-0x0000000183E64370
+		private float GetPreferredWidth(Vector2 margin); // 0x000000018B325504-0x000000018B325588
+		protected float GetPreferredHeight(); // 0x0000000183E63FA0-0x0000000183E641C0
+		private float GetPreferredHeight(Vector2 margin); // 0x000000018B325254-0x000000018B325308
+		public Vector2 GetRenderedValues(); // 0x000000018B32561C-0x000000018B325678
+		public Vector2 GetRenderedValues(bool onlyVisibleCharacters); // 0x000000018B3255C0-0x000000018B32561C
+		private float GetRenderedWidth(); // 0x000000018B325694-0x000000018B3256B0
+		protected float GetRenderedWidth(bool onlyVisibleCharacters); // 0x000000018B325678-0x000000018B325694
+		private float GetRenderedHeight(); // 0x000000018B3255A4-0x000000018B3255C0
+		protected float GetRenderedHeight(bool onlyVisibleCharacters); // 0x000000018B325588-0x000000018B3255A4
+		protected virtual Vector2 CalculatePreferredValues(ref float fontSize, Vector2 marginSize, bool isTextAutoSizingEnabled, bool isWordWrappingEnabled); // 0x000000018333EF20-0x0000000183341030
+		protected virtual Bounds GetCompoundBounds(); // 0x0000000184D8F590-0x0000000184D8F5A0
+		internal virtual Rect GetCanvasSpaceClippingRect(); // 0x0000000184D94BD0-0x0000000184D94BE0
+		protected Bounds GetTextBounds(); // 0x000000018B325B70-0x000000018B325E80
+		protected Bounds GetTextBounds(bool onlyVisibleCharacters); // 0x000000018B325838-0x000000018B325B70
+		protected void AdjustLineOffset(int startIndex, int endIndex, float offset); // 0x000000018B321D64-0x000000018B322248
+		protected void ResizeLineExtents(int size); // 0x0000000183516A20-0x0000000183516D20
+		public virtual TMP_TextInfo GetTextInfo(string text); // 0x00000001811EC580-0x00000001811EC590
+		public virtual void ComputeMarginSize(); // 0x00000001841E1670-0x00000001841E1680
+		protected void InsertNewLine(int i, float baseScale, float currentElementScale, float currentEmScale, float glyphAdjustment, float boldSpacingAdjustment, float characterSpacingAdjustment, float width, float lineGap, ref bool isMaxVisibleDescenderSet, ref float maxVisibleDescender); // 0x0000000183517750-0x0000000183518110
+		protected void SaveWordWrappingState(ref WordWrapState state, int index, int count); // 0x0000000183516D20-0x0000000183517750
+		protected int RestoreWordWrappingState(ref WordWrapState state); // 0x0000000183516280-0x0000000183516A20
+		protected virtual void SaveGlyphVertexInfo(float padding, float style_padding, Color32 vertexColor); // 0x00000001832546F0-0x0000000183254CE0
+		protected virtual void SaveSpriteVertexInfo(Color32 vertexColor); // 0x000000018B328DB4-0x000000018B329620
+		protected virtual void FillCharacterVertexBuffers(int i, int index_X4); // 0x0000000183253E80-0x00000001832546F0
+		protected virtual void FillCharacterVertexBuffers(int i, int index_X4, bool isVolumetric); // 0x000000018B323AF8-0x000000018B3246E4
+		protected virtual void FillSpriteVertexBuffers(int i, int index_X4); // 0x000000018B3246E4-0x000000018B324E94
+		protected virtual void DrawUnderlineMesh(Vector3 start, Vector3 end, ref int index, float startScale, float endScale, float maxScale, float sdfScale, Color32 underlineColor); // 0x00000001843C9F40-0x00000001843CADF0
+		protected void PrepareCharSlots(PhoneticData data); // 0x000000018B327864-0x000000018B327DB4
+		protected virtual float PhoneticWidth(PhoneticData data); // 0x000000018B327540-0x000000018B327668
+		protected virtual void DrawPhoneticMesh(Rect rect, PhoneticData data, float padding, float style_padding, bool justify, float lossyScale); // 0x000000018B3223E4-0x000000018B323618
+		protected virtual void DrawTextHighlight(Vector3 start, Vector3 end, ref int index, Color32 highlightColor); // 0x000000018B323618-0x000000018B323AF8
+		protected void LoadDefaultSettings(); // 0x000000018351F1C0-0x000000018351F220
+		protected void GetSpecialCharacters(TMP_FontAsset fontAsset); // 0x000000018333AE40-0x000000018333AE70
+		protected void GetEllipsisSpecialCharacter(TMP_FontAsset fontAsset); // 0x000000018333AC00-0x000000018333AD10
+		protected void GetUnderlineSpecialCharacter(TMP_FontAsset fontAsset); // 0x000000018333AB20-0x000000018333AC00
+		protected void ReplaceTagWithCharacter(int[] chars, int insertionIndex, int tagLength, char c); // 0x000000018B328D4C-0x000000018B328DA4
+		protected TMP_FontAsset GetFontAssetForWeight(int fontWeight); // 0x000000018B324F40-0x000000018B324FC4
+		internal TMP_TextElement GetTextElement(uint unicode, TMP_FontAsset fontAsset, FontStyles fontStyle, FontWeight fontWeight, out bool isUsingAlternativeTypeface); // 0x000000018333E640-0x000000018333E700
+		public void TryRemoveDynamicFallbackFontAssetTextRef(); // 0x0000000183519E20-0x0000000183519E40
+		protected virtual void SetActiveSubMeshes(bool state); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void DestroySubMeshObjects(); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void ClearMesh(); // 0x00000001841E1670-0x00000001841E1680
+		public virtual void ClearMesh(bool uploadGeometry); // 0x00000001841E1670-0x00000001841E1680
+		public virtual string GetParsedText(); // 0x000000018B32516C-0x000000018B325254
+		internal bool IsSelfOrLinkedAncestor(TMP_Text targetTextComponent); // 0x000000018B327478-0x000000018B327540
+		internal void ReleaseLinkedTextComponent(TMP_Text targetTextComponent); // 0x000000018B327DE4-0x000000018B327EDC
+		protected Vector2 PackUV(float x, float y, float scale); // 0x0000000184DB9F20-0x0000000184DB9F60
+		protected float PackUV(float x, float y); // 0x0000000184DB9EE0-0x0000000184DB9F20
+		internal virtual void InternalUpdate(); // 0x00000001841E1670-0x00000001841E1680
+		protected static int HexToInt(char hex); // 0x0000000183A278A0-0x0000000183A27970
+		protected int GetUTF16(string text, int i); // 0x000000018B326048-0x000000018B326130
+		protected int GetUTF16(int[] text, int i); // 0x000000018B325F68-0x000000018B326048
+		internal int GetUTF16(uint[] text, int i); // 0x000000018B326208-0x000000018B3262E8
+		protected int GetUTF16(StringBuilder text, int i); // 0x000000018B325E80-0x000000018B325F68
+		private int GetUTF16(TextBackingContainer text, int i); // 0x000000018B326130-0x000000018B326208
+		protected int GetUTF32(string text, int i); // 0x000000018B3262E8-0x000000018B326460
+		protected int GetUTF32(int[] text, int i); // 0x000000018B3265D4-0x000000018B326748
+		internal int GetUTF32(uint[] text, int i); // 0x000000018B326460-0x000000018B3265D4
+		protected int GetUTF32(StringBuilder text, int i); // 0x000000018B3268A8-0x000000018B326A20
+		private int GetUTF32(TextBackingContainer text, int i); // 0x000000018B326748-0x000000018B3268A8
+		protected static Color32 HexCharsToColor(ReadOnlySpan<char> hexChars, int tagCount); // 0x0000000183A276C0-0x0000000183A278A0
+		protected static Color32 HexCharsToColor(ReadOnlySpan<char> hexChars, int startIndex, int length); // 0x000000018B326A20-0x000000018B326CA8
+		private int GetAttributeParameters(char[] chars, int startIndex, int length, ref float[] parameters); // 0x000000018B324E94-0x000000018B324F40
+		protected float ConvertToFloat(char[] chars, int startIndex, int length); // 0x00000001853948A0-0x00000001853948C4
+		protected float ConvertToFloat(char[] chars, int startIndex, int length, out int lastIndex); // 0x00000001844F4280-0x00000001844F4360
+		protected bool CheckIfEndPhonetic(UnicodeChar[] chars, int startIndex); // 0x000000018B322248-0x000000018B3222D0
+		protected bool ValidateHtmlTag(UnicodeChar[] chars, int startIndex, out int endIndex); // 0x0000000183A26780-0x0000000183A276C0
 	}
 
-	public enum TextElementType : byte // TypeDefIndex: 53242
+	public enum TextElementType : byte // TypeDefIndex: 55727
 	{
 		Character = 1,
 		Sprite = 2
 	}
 
 	[Serializable]
-	public class TMP_TextElement // TypeDefIndex: 53243
+	public class TMP_TextElement // TypeDefIndex: 55728
 	{
 		// Fields
+		[SerializeField]
 		protected TextElementType m_ElementType; // 0x10
+		[SerializeField]
 		internal uint m_Unicode; // 0x14
 		internal TMP_Asset m_TextAsset; // 0x18
 		internal Glyph m_Glyph; // 0x20
+		[SerializeField]
 		internal uint m_GlyphIndex; // 0x28
+		[SerializeField]
 		internal float m_Scale; // 0x2C
 	
 		// Properties
-		public TextElementType elementType { get => default; } // 0x0000000181C2FD60-0x0000000181C2FD70 
-		public uint unicode { get => default; set {} } // 0x0000000185FB21A0-0x0000000185FB21B0 0x0000000185FBB0B0-0x0000000185FBB0C0
-		public TMP_Asset textAsset { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-		public Glyph glyph { get => default; set {} } // 0x00000001813B31A0-0x00000001813B31B0 0x000000018646EE40-0x000000018646EE50
-		public uint glyphIndex { get => default; set {} } // 0x0000000181C9AC80-0x0000000181C9AC90 0x0000000181C9A5C0-0x0000000181C9A5D0
-		public float scale { get => default; set {} } // 0x0000000185FB09A0-0x0000000185FB09B0 0x0000000185FB09B0-0x0000000185FB09C0
+		public TextElementType elementType { get; } // 0x00000001815EFCE0-0x00000001815EFCF0 
+		public uint unicode { get; set; } // 0x0000000184D882A0-0x0000000184D882B0 0x0000000184D8F540-0x0000000184D8F550
+		public TMP_Asset textAsset { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public Glyph glyph { get; set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+		public uint glyphIndex { get; set; } // 0x00000001811F2A90-0x00000001811F2AA0 0x00000001811F2AA0-0x00000001811F2AB0
+		public float scale { get; set; } // 0x0000000184D86AF0-0x0000000184D86B00 0x0000000184D86B00-0x0000000184D86B10
 	
 		// Constructors
-		public TMP_TextElement() {} // 0x0000000185492010-0x0000000185492020
+		public TMP_TextElement(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class TMP_TextElement_Legacy // TypeDefIndex: 53244
+	public class TMP_TextElement_Legacy // TypeDefIndex: 55729
 	{
 		// Fields
 		public int id; // 0x10
@@ -4462,11 +4582,11 @@ namespace TMPro
 		public float scale; // 0x30
 	
 		// Constructors
-		public TMP_TextElement_Legacy() {} // 0x0000000185492010-0x0000000185492020
+		public TMP_TextElement_Legacy(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
 	[Serializable]
-	public class TMP_TextInfo : IDisposable // TypeDefIndex: 53245
+	public class TMP_TextInfo : IDisposable // TypeDefIndex: 55730
 	{
 		// Fields
 		internal static Vector2 k_InfinityVectorPositive; // 0x00
@@ -4490,53 +4610,53 @@ namespace TMPro
 		private TMP_MeshInfo[] m_CachedMeshInfo; // 0x70
 	
 		// Constructors
-		public TMP_TextInfo() {} // 0x000000018BE2E358-0x000000018BE2E508
-		internal TMP_TextInfo(int characterCount) {} // 0x000000018BE2E508-0x000000018BE2E6C0
-		public TMP_TextInfo(TMP_Text textComponent) {} // 0x0000000184245A80-0x0000000184245D10
-		static TMP_TextInfo() {} // 0x0000000185F85CD0-0x0000000185F85D30
+		public TMP_TextInfo(); // 0x000000018B333EEC-0x000000018B33409C
+		internal TMP_TextInfo(int characterCount); // 0x000000018B33409C-0x000000018B334254
+		public TMP_TextInfo(TMP_Text textComponent); // 0x000000018351F3D0-0x000000018351F5B0
+		static TMP_TextInfo(); // 0x0000000184D561D0-0x0000000184D56230
 	
 		// Methods
-		public void Clear() {} // 0x0000000184FCC400-0x0000000184FCC460
-		internal void ClearAllData() {} // 0x000000018BE2DB10-0x000000018BE2DC50
-		public void ClearMeshInfo(bool updateMesh) {} // 0x000000018BE2DCD0-0x000000018BE2DD60
-		public void ClearAllMeshInfo() {} // 0x000000018BE2DC50-0x000000018BE2DCD0
-		public void ResetVertexLayout(bool isVolumetric) {} // 0x000000018BE2E2C8-0x000000018BE2E358
-		public void ClearUnusedVertices(MaterialReference[] materials) {} // 0x000000018BE2DD60-0x000000018BE2DDE0
-		public void ClearLineInfo() {} // 0x00000001842B4550-0x00000001842B48B0
-		public void ClearPageInfo() {} // 0x0000000184BE8320-0x0000000184BE8440
-		public TMP_MeshInfo[] CopyMeshInfoVertexData() => default; // 0x000000018BE2DDE0-0x000000018BE2E2C8
-		public static void Resize<T>(ref ref T[] array, int size) {}
-		public static void Resize<T>(ref ref T[] array, int size, bool isBlockAllocated) {}
-		public void Dispose() {} // 0x00000001842447C0-0x0000000184244BA0
+		public void Clear(); // 0x0000000183EE0820-0x0000000183EE0880
+		internal void ClearAllData(); // 0x000000018B3336A4-0x000000018B3337E4
+		public void ClearMeshInfo(bool updateMesh); // 0x000000018B333864-0x000000018B3338F4
+		public void ClearAllMeshInfo(); // 0x000000018B3337E4-0x000000018B333864
+		public void ResetVertexLayout(bool isVolumetric); // 0x000000018B333E5C-0x000000018B333EEC
+		public void ClearUnusedVertices(MaterialReference[] materials); // 0x000000018B3338F4-0x000000018B333974
+		public void ClearLineInfo(); // 0x00000001832527E0-0x0000000183252BD0
+		public void ClearPageInfo(); // 0x0000000183BB6530-0x0000000183BB6620
+		public TMP_MeshInfo[] CopyMeshInfoVertexData(); // 0x000000018B333974-0x000000018B333E5C
+		public static void Resize<T>(ref ref T[] array, int size);
+		public static void Resize<T>(ref ref T[] array, int size, bool isBlockAllocated);
+		public void Dispose(); // 0x0000000183518C30-0x0000000183518F50
 	}
 
-	public class TMP_TextParsingUtilities // TypeDefIndex: 53246
+	public class TMP_TextParsingUtilities // TypeDefIndex: 55731
 	{
 		// Fields
 		private static readonly TMP_TextParsingUtilities s_Instance; // 0x00
-		private const string k_LookupStringL = "-------------------------------- !-#$%&-()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[-]^_`abcdefghijklmnopqrstuvwxyz{|}~-"; // Metadata: 0x02077E09
-		private const string k_LookupStringU = "-------------------------------- !-#$%&-()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[-]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~-"; // Metadata: 0x02077E8B
+		private const string k_LookupStringL = "-------------------------------- !-#$%&-()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[-]^_`abcdefghijklmnopqrstuvwxyz{|}~-"; // Metadata: 0x0234740B
+		private const string k_LookupStringU = "-------------------------------- !-#$%&-()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[-]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~-"; // Metadata: 0x0234748D
 	
 		// Properties
-		public static TMP_TextParsingUtilities instance { get => default; } // 0x000000018BE2E854-0x000000018BE2E8A4 
+		public static TMP_TextParsingUtilities instance { get; } // 0x000000018B3343E8-0x000000018B334438 
 	
 		// Constructors
-		static TMP_TextParsingUtilities() {} // 0x0000000185F79750-0x0000000185F797B0
-		public TMP_TextParsingUtilities() {} // 0x0000000185492010-0x0000000185492020
+		static TMP_TextParsingUtilities(); // 0x0000000184D4D9B0-0x0000000184D4DA10
+		public TMP_TextParsingUtilities(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static int GetHashCode(string s) => default; // 0x0000000185263A80-0x0000000185263B30
-		public static int GetHashCodeCaseSensitive(string s) => default; // 0x000000018BE2E6C0-0x000000018BE2E714
-		public static char ToLowerASCIIFast(char c) => default; // 0x000000018BE2E744-0x000000018BE2E79C
-		public static char ToUpperASCIIFast(char c) => default; // 0x0000000185263B30-0x0000000185263B90
-		public static uint ToUpperASCIIFast(uint c) => default; // 0x000000018BE2E7F8-0x000000018BE2E854
-		public static uint ToLowerASCIIFast(uint c) => default; // 0x000000018BE2E79C-0x000000018BE2E7F8
-		public static bool IsHighSurrogate(uint c) => default; // 0x000000018BE2E714-0x000000018BE2E72C
-		public static bool IsLowSurrogate(uint c) => default; // 0x000000018BE2E72C-0x000000018BE2E744
-		internal static uint ConvertToUTF32(uint highSurrogate, uint lowSurrogate) => default; // 0x0000000185FE6130-0x0000000185FE6140
+		public static int GetHashCode(string s); // 0x000000018413A410-0x000000018413A4C0
+		public static int GetHashCodeCaseSensitive(string s); // 0x000000018B334254-0x000000018B3342A8
+		public static char ToLowerASCIIFast(char c); // 0x000000018B3342D8-0x000000018B334330
+		public static char ToUpperASCIIFast(char c); // 0x000000018413A4C0-0x000000018413A520
+		public static uint ToUpperASCIIFast(uint c); // 0x000000018B33438C-0x000000018B3343E8
+		public static uint ToLowerASCIIFast(uint c); // 0x000000018B334330-0x000000018B33438C
+		public static bool IsHighSurrogate(uint c); // 0x000000018B3342A8-0x000000018B3342C0
+		public static bool IsLowSurrogate(uint c); // 0x000000018B3342C0-0x000000018B3342D8
+		internal static uint ConvertToUTF32(uint highSurrogate, uint lowSurrogate); // 0x0000000184DBA3D0-0x0000000184DBA3E0
 	}
 
-	public struct TMP_FontStyleStack // TypeDefIndex: 53247
+	public struct TMP_FontStyleStack // TypeDefIndex: 55732
 	{
 		// Fields
 		public byte bold; // 0x00
@@ -4551,12 +4671,13 @@ namespace TMPro
 		public byte smallcaps; // 0x09
 	
 		// Methods
-		public void Clear() {} // 0x0000000185073880-0x0000000185073890
-		public byte Add(FontStyles style) => default; // 0x000000018BE275E0-0x000000018BE27680
-		public byte Remove(FontStyles style) => default; // 0x000000018BE27680-0x000000018BE2777C
+		public void Clear(); // 0x000000018333C3A0-0x000000018333C3B0
+		public byte Add(FontStyles style); // 0x0000000183A279C0-0x0000000183A279F0
+		public byte Remove(FontStyles style); // 0x0000000183A279F0-0x0000000183A27A20
 	}
 
-	public struct TMP_TextProcessingStack<T> : IDisposable // TypeDefIndex: 53248
+	[DebuggerDisplay("Item count = {m_Count}")]
+	public struct TMP_TextProcessingStack<T> : IDisposable // TypeDefIndex: 55733
 	{
 		// Fields
 		public T[] itemStack;
@@ -4565,55 +4686,35 @@ namespace TMPro
 		private int m_Capacity;
 		private int m_RolloverSize;
 		private int m_Count;
-		private const int k_DefaultCapacity = 4; // Metadata: 0x02077F0D
+		private const int k_DefaultCapacity = 4; // Metadata: 0x0234750F
 	
 		// Properties
-		public int Count { get => default; }
-		public T current { get => default; }
-		public int rolloverSize { get => default; set {} }
+		public int Count { get; }
+		public T current { get; }
+		public int rolloverSize { get; set; }
 	
 		// Constructors
-		public TMP_TextProcessingStack(T[] stack) : this() {
-			itemStack = default;
-			index = default;
-			m_DefaultItem = default;
-			m_Capacity = default;
-			m_RolloverSize = default;
-			m_Count = default;
-		}
-		public TMP_TextProcessingStack(int capacity) : this() {
-			itemStack = default;
-			index = default;
-			m_DefaultItem = default;
-			m_Capacity = default;
-			m_RolloverSize = default;
-			m_Count = default;
-		}
-		public TMP_TextProcessingStack(int capacity, int rolloverSize) : this() {
-			itemStack = default;
-			index = default;
-			m_DefaultItem = default;
-			m_Capacity = default;
-			m_RolloverSize = default;
-			m_Count = default;
-		}
+		public TMP_TextProcessingStack(T[] stack);
+		public TMP_TextProcessingStack(int capacity);
+		public TMP_TextProcessingStack(int capacity, int rolloverSize);
 	
 		// Methods
-		internal static void SetDefault(TMP_TextProcessingStack<T>[] stack, T item) {}
-		public void Clear() {}
-		public void SetDefault(T item) {}
-		public void Add(T item) {}
-		public T Remove() => default;
-		public void Push(T item) {}
-		public T Pop() => default;
-		public T Peek() => default;
-		public T CurrentItem() => default;
-		public T PreviousItem() => default;
-		public void RestoreFrom(TMP_TextProcessingStack<T> other) {}
-		public void Dispose() {}
+		internal static void SetDefault(TMP_TextProcessingStack<T>[] stack, T item);
+		public void Clear();
+		public void SetDefault(T item);
+		public void Add(T item);
+		public T Remove();
+		public void Push(T item);
+		public T Pop();
+		public T Peek();
+		public T CurrentItem();
+		public T PreviousItem();
+		public void RestoreFrom(TMP_TextProcessingStack<T> other);
+		public void Dispose();
 	}
 
-	public struct TMP_TextProcessingQueue<T> : IDisposable // TypeDefIndex: 53249
+	[DebuggerDisplay("Item count = {m_Count}")]
+	public struct TMP_TextProcessingQueue<T> : IDisposable // TypeDefIndex: 55734
 	{
 		// Fields
 		public T[] itemQueue;
@@ -4622,127 +4723,100 @@ namespace TMPro
 		private int m_Capacity;
 		private int m_Count;
 		private T m_DefaultItem;
-		private const int k_DefaultCapacity = 4; // Metadata: 0x02077F0E
+		private const int k_DefaultCapacity = 4; // Metadata: 0x02347510
 	
 		// Properties
-		public int Count { get => default; }
+		public int Count { get; }
 	
 		// Constructors
-		public TMP_TextProcessingQueue(T[] queue) : this() {
-			itemQueue = default;
-			m_Head = default;
-			m_Tail = default;
-			m_Capacity = default;
-			m_Count = default;
-			m_DefaultItem = default;
-		}
-		public TMP_TextProcessingQueue(int capacity) : this() {
-			itemQueue = default;
-			m_Head = default;
-			m_Tail = default;
-			m_Capacity = default;
-			m_Count = default;
-			m_DefaultItem = default;
-		}
+		public TMP_TextProcessingQueue(T[] queue);
+		public TMP_TextProcessingQueue(int capacity);
 	
 		// Methods
-		public void Clear() {}
-		public void SetDefault(T item) {}
-		public void Enqueue(T item) {}
-		public T Dequeue() => default;
-		public T Peek() => default;
-		private void Resize(int newCapacity) {}
-		public void RestoreFrom(TMP_TextProcessingQueue<T> other) {}
-		public void Dispose() {}
+		public void Clear();
+		public void SetDefault(T item);
+		public void Enqueue(T item);
+		public T Dequeue();
+		public T Peek();
+		private void Resize(int newCapacity);
+		public void RestoreFrom(TMP_TextProcessingQueue<T> other);
+		public void Dispose();
 	}
 
-	public enum CaretPosition // TypeDefIndex: 53250
+	public enum CaretPosition // TypeDefIndex: 55735
 	{
 		None = 0,
 		Left = 1,
 		Right = 2
 	}
 
-	public struct CaretInfo // TypeDefIndex: 53251
+	public struct CaretInfo // TypeDefIndex: 55736
 	{
 		// Fields
 		public int index; // 0x00
 		public CaretPosition position; // 0x04
 	
 		// Constructors
-		public CaretInfo(int index, CaretPosition position) {
-			this.index = default;
-			this.position = default;
-		} // 0x000000018357CB90-0x000000018357CBA0
+		public CaretInfo(int index, CaretPosition position); // 0x0000000184D85C40-0x0000000184D85C50
 	}
 
-	public static class TMP_TextUtilities // TypeDefIndex: 53253
+	public static class TMP_TextUtilities // TypeDefIndex: 55738
 	{
 		// Fields
 		private static Vector3[] m_rectWorldCorners; // 0x00
-		private const string k_lookupStringL = "-------------------------------- !-#$%&-()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[-]^_`abcdefghijklmnopqrstuvwxyz{|}~-"; // Metadata: 0x02077F12
-		private const string k_lookupStringU = "-------------------------------- !-#$%&-()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[-]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~-"; // Metadata: 0x02077F94
+		private const string k_lookupStringL = "-------------------------------- !-#$%&-()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[-]^_`abcdefghijklmnopqrstuvwxyz{|}~-"; // Metadata: 0x02347514
+		private const string k_lookupStringU = "-------------------------------- !-#$%&-()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[-]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~-"; // Metadata: 0x02347596
 	
 		// Nested types
-		private struct LineSegment // TypeDefIndex: 53252
+		private struct LineSegment // TypeDefIndex: 55737
 		{
 			// Fields
 			public Vector3 Point1; // 0x00
 			public Vector3 Point2; // 0x0C
 	
 			// Constructors
-			public LineSegment(Vector3 p1, Vector3 p2) {
-				Point1 = default;
-				Point2 = default;
-			} // 0x000000018BE31BF4-0x000000018BE31DA8
+			public LineSegment(Vector3 p1, Vector3 p2); // 0x0000000184D871E0-0x0000000184D87200
 		}
 	
 		// Constructors
-		static TMP_TextUtilities() {} // 0x0000000185FB1480-0x0000000185FB14A0
+		static TMP_TextUtilities(); // 0x0000000184D36370-0x0000000184D363E0
 	
 		// Methods
-		public static int GetCursorIndexFromPosition(TMP_Text textComponent, Vector3 position, Camera camera) => default; // 0x000000018BE31DA8-0x000000018BE31FE8
-		public static int GetCursorIndexFromPosition(TMP_Text textComponent, Vector3 position, Camera camera, out CaretPosition cursor) {
-			cursor = default;
-			return default;
-		} // 0x000000018BE304A8-0x000000018BE306A4
-		public static int FindNearestLine(TMP_Text text, Vector3 position, Camera camera) => default; // 0x000000018BE2FBC0-0x000000018BE3005C
-		public static int FindNearestCharacterOnLine(TMP_Text text, Vector3 position, int line, Camera camera, bool visibleOnly) => default; // 0x000000018BE32424-0x000000018BE3260C
-		public static bool IsIntersectingRectTransform(RectTransform rectTransform, Vector3 position, Camera camera) => default; // 0x000000018BE2EA7C-0x000000018BE2ED4C
-		public static int FindIntersectingCharacter(TMP_Text text, Vector3 position, Camera camera, bool visibleOnly) => default; // 0x000000018BE3005C-0x000000018BE304A8
-		public static int FindNearestCharacter(TMP_Text text, Vector3 position, Camera camera, bool visibleOnly) => default; // 0x000000018BE2F49C-0x000000018BE2FBC0
-		public static int FindIntersectingWord(TMP_Text text, Vector3 position, Camera camera) => default; // 0x000000018BE31148-0x000000018BE31BF4
-		public static int FindNearestWord(TMP_Text text, Vector3 position, Camera camera) => default; // 0x000000018BE2ED4C-0x000000018BE2EEDC
-		public static int FindIntersectingLine(TMP_Text text, Vector3 position, Camera camera) => default; // 0x000000018BE2EEDC-0x000000018BE2F49C
-		public static int FindIntersectingLink(TMP_Text text, Vector3 position, Camera camera) => default; // 0x000000018BE306A4-0x000000018BE31148
-		public static int FindNearestLink(TMP_Text text, Vector3 position, Camera camera) => default; // 0x000000018BE3260C-0x000000018BE327D8
-		private static bool PointIntersectRectangle(Vector3 m, Vector3 a, Vector3 b, Vector3 c, Vector3 d) => default; // 0x000000018BE327D8-0x000000018BE3299C
-		public static bool ScreenPointToWorldPointInRectangle(Transform transform, Vector2 screenPoint, Camera cam, out Vector3 worldPoint) {
-			worldPoint = default;
-			return default;
-		} // 0x000000018BE32200-0x000000018BE32424
-		private static bool IntersectLinePlane(LineSegment line, Vector3 point, Vector3 normal, out Vector3 intersectingPoint) {
-			intersectingPoint = default;
-			return default;
-		} // 0x000000018BE2E8A4-0x000000018BE2EA7C
-		public static float DistanceToLine(Vector3 a, Vector3 b, Vector3 point) => default; // 0x000000018BE32A4C-0x000000018BE32AA4
-		public static char ToLowerFast(char c) => default; // 0x000000018BE32AA4-0x000000018BE32AFC
-		public static char ToUpperFast(char c) => default; // 0x00000001854CC8B0-0x00000001854CC910
-		internal static uint ToUpperASCIIFast(uint c) => default; // 0x000000018BE31FE8-0x000000018BE32078
-		public static int GetHashCode(string s) => default; // 0x0000000184012770-0x00000001840127D0
-		public static int GetSimpleHashCode(string s) => default; // 0x000000018BE32078-0x000000018BE3210C
-		public static uint GetSimpleHashCodeLowercase(string s) => default; // 0x000000018BE3210C-0x000000018BE32200
-		public static int HexToInt(char hex) => default; // 0x000000018BE3299C-0x000000018BE32A4C
-		public static int StringHexToInt(string s) => default; // 0x00000001849AA570-0x00000001849AA620
-		public static bool IsThaiZeroWidthCharacter(char c) => default; // 0x00000001849AA680-0x00000001849AA6B0
-		public static bool IsUpVowel(char c) => default; // 0x00000001849AA620-0x00000001849AA650
-		public static bool IsLowVowel(char c) => default; // 0x00000001849AA650-0x00000001849AA680
-		public static bool IsToneMark(char c) => default; // 0x0000000184CFF420-0x0000000184CFF450
-		public static bool IsAscenderThai(char c) => default; // 0x0000000184E57530-0x0000000184E57550
-		public static bool IsDescenderThai(char c) => default; // 0x0000000185F63620-0x0000000185F63690
+		public static int GetCursorIndexFromPosition(TMP_Text textComponent, Vector3 position, Camera camera); // 0x000000018B337934-0x000000018B337AE8
+		public static int GetCursorIndexFromPosition(TMP_Text textComponent, Vector3 position, Camera camera, out CaretPosition cursor); // 0x000000018B337AE8-0x000000018B337D28
+		public static int FindNearestLine(TMP_Text text, Vector3 position, Camera camera); // 0x000000018B3361E8-0x000000018B3363E4
+		public static int FindNearestCharacterOnLine(TMP_Text text, Vector3 position, int line, Camera camera, bool visibleOnly); // 0x000000018B335900-0x000000018B335D9C
+		public static bool IsIntersectingRectTransform(RectTransform rectTransform, Vector3 position, Camera camera); // 0x000000018B338164-0x000000018B33834C
+		public static int FindIntersectingCharacter(TMP_Text text, Vector3 position, Camera camera, bool visibleOnly); // 0x000000018B334610-0x000000018B3348E0
+		public static int FindNearestCharacter(TMP_Text text, Vector3 position, Camera camera, bool visibleOnly); // 0x000000018B335D9C-0x000000018B3361E8
+		public static int FindIntersectingWord(TMP_Text text, Vector3 position, Camera camera); // 0x000000018B3351DC-0x000000018B335900
+		public static int FindNearestWord(TMP_Text text, Vector3 position, Camera camera); // 0x000000018B336E88-0x000000018B337934
+		public static int FindIntersectingLine(TMP_Text text, Vector3 position, Camera camera); // 0x000000018B3348E0-0x000000018B334A70
+		public static int FindIntersectingLink(TMP_Text text, Vector3 position, Camera camera); // 0x000000018B33514C-0x000000018B3351DC
+		public static int FindIntersectingLink(TMP_Text text, Vector3 position, Camera camera, Vector2 linkExtraPadding); // 0x000000018B334A70-0x000000018B33514C
+		private static float CalculateTouchLinkDistanceScore(Vector2 touchPos, Vector2 linkCenter); // 0x0000000184DBA3E0-0x0000000184DBA430
+		public static int FindNearestLink(TMP_Text text, Vector3 position, Camera camera); // 0x000000018B3363E4-0x000000018B336E88
+		private static bool PointIntersectRectangle(Vector3 m, Vector3 a, Vector3 b, Vector3 c, Vector3 d); // 0x000000018B33834C-0x000000018B338518
+		public static bool ScreenPointToWorldPointInRectangle(Transform transform, Vector2 screenPoint, Camera cam, out Vector3 worldPoint); // 0x000000018B338518-0x000000018B3386DC
+		private static bool IntersectLinePlane(LineSegment line, Vector3 point, Vector3 normal, out Vector3 intersectingPoint); // 0x000000018B337F40-0x000000018B338164
+		public static float DistanceToLine(Vector3 a, Vector3 b, Vector3 point); // 0x000000018B334438-0x000000018B334610
+		public static char ToLowerFast(char c); // 0x000000018B33878C-0x000000018B3387E4
+		public static char ToUpperFast(char c); // 0x000000018B3387E4-0x000000018B33883C
+		internal static uint ToUpperASCIIFast(uint c); // 0x00000001841114E0-0x0000000184111520
+		public static int GetHashCode(string s); // 0x000000018B337D28-0x000000018B337DB8
+		public static int GetSimpleHashCode(string s); // 0x00000001839403C0-0x0000000183940420
+		public static uint GetSimpleHashCodeLowercase(string s); // 0x000000018B337DB8-0x000000018B337E4C
+		public static int HexToInt(char hex); // 0x000000018B337E4C-0x000000018B337F40
+		public static int StringHexToInt(string s); // 0x000000018B3386DC-0x000000018B33878C
+		public static bool IsThaiZeroWidthCharacter(char c); // 0x0000000183A22940-0x0000000183A229D0
+		public static bool IsUpVowel(char c); // 0x0000000183A22A30-0x0000000183A22A60
+		public static bool IsLowVowel(char c); // 0x0000000183A229D0-0x0000000183A22A00
+		public static bool IsToneMark(char c); // 0x0000000183A22A00-0x0000000183A22A30
+		public static bool IsAscenderThai(char c); // 0x0000000183CF12C0-0x0000000183CF12F0
+		public static bool IsDescenderThai(char c); // 0x0000000183E14980-0x0000000183E149A0
 	}
 
-	public class TMP_UpdateManager // TypeDefIndex: 53254
+	public class TMP_UpdateManager // TypeDefIndex: 55739
 	{
 		// Fields
 		private static TMP_UpdateManager s_Instance; // 0x00
@@ -4761,31 +4835,31 @@ namespace TMPro
 		private static ProfilerMarker k_UnregisterTextElementForGraphicRebuildMarker; // 0x28
 	
 		// Properties
-		private static TMP_UpdateManager instance { get => default; } // 0x0000000184240ED0-0x0000000184240FD0 
+		private static TMP_UpdateManager instance { get; } // 0x000000018351C7D0-0x000000018351C8B0 
 	
 		// Constructors
-		private TMP_UpdateManager() {} // 0x00000001845A2800-0x00000001845A2A40
-		static TMP_UpdateManager() {} // 0x0000000185D444B0-0x0000000185D44600
+		private TMP_UpdateManager(); // 0x0000000184992D70-0x0000000184992FB0
+		static TMP_UpdateManager(); // 0x0000000184B1D650-0x0000000184B1D7A0
 	
 		// Methods
-		internal static void RegisterTextObjectForUpdate(TMP_Text textObject) {} // 0x0000000184240DF0-0x0000000184240E60
-		private void InternalRegisterTextObjectForUpdate(TMP_Text textObject) {} // 0x0000000184241070-0x0000000184241190
-		public static void RegisterTextElementForLayoutRebuild(TMP_Text element) {} // 0x000000018BE33B4C-0x000000018BE33BA4
-		private void InternalRegisterTextElementForLayoutRebuild(TMP_Text element) {} // 0x000000018BE33908-0x000000018BE339C4
-		public static void RegisterTextElementForGraphicRebuild(TMP_Text element) {} // 0x000000018BE33AF4-0x000000018BE33B4C
-		private void InternalRegisterTextElementForGraphicRebuild(TMP_Text element) {} // 0x000000018BE3384C-0x000000018BE33908
-		public static void RegisterTextElementForCullingUpdate(TMP_Text element) {} // 0x00000001842417C0-0x0000000184241830
-		private void InternalRegisterTextElementForCullingUpdate(TMP_Text element) {} // 0x0000000184241830-0x00000001842418F0
-		private void OnCameraPreCull() {} // 0x000000018BE33AEC-0x000000018BE33AF4
-		private void DoRebuilds() {} // 0x00000001840E6EF0-0x00000001840E70A0
-		internal static void UnRegisterTextObjectForUpdate(TMP_Text textObject) {} // 0x0000000184240E60-0x0000000184240ED0
-		public static void UnRegisterTextElementForRebuild(TMP_Text element) {} // 0x000000018BE33BA4-0x000000018BE33C30
-		private void InternalUnRegisterTextElementForGraphicRebuild(TMP_Text element) {} // 0x000000018BE339C4-0x000000018BE33A58
-		private void InternalUnRegisterTextElementForLayoutRebuild(TMP_Text element) {} // 0x000000018BE33A58-0x000000018BE33AEC
-		private void InternalUnRegisterTextObjectForUpdate(TMP_Text textObject) {} // 0x0000000184240FD0-0x0000000184241070
+		internal static void RegisterTextObjectForUpdate(TMP_Text textObject); // 0x000000018351C6F0-0x000000018351C740
+		private void InternalRegisterTextObjectForUpdate(TMP_Text textObject); // 0x000000018351C920-0x000000018351C9B0
+		public static void RegisterTextElementForLayoutRebuild(TMP_Text element); // 0x000000018B33988C-0x000000018B3398E4
+		private void InternalRegisterTextElementForLayoutRebuild(TMP_Text element); // 0x000000018B339648-0x000000018B339704
+		public static void RegisterTextElementForGraphicRebuild(TMP_Text element); // 0x000000018B339834-0x000000018B33988C
+		private void InternalRegisterTextElementForGraphicRebuild(TMP_Text element); // 0x000000018B33958C-0x000000018B339648
+		public static void RegisterTextElementForCullingUpdate(TMP_Text element); // 0x0000000183EFA6E0-0x0000000183EFA730
+		private void InternalRegisterTextElementForCullingUpdate(TMP_Text element); // 0x0000000183EFA730-0x0000000183EFA7C0
+		private void OnCameraPreCull(); // 0x000000018B33982C-0x000000018B339834
+		private void DoRebuilds(); // 0x00000001831BC2C0-0x00000001831BC430
+		internal static void UnRegisterTextObjectForUpdate(TMP_Text textObject); // 0x000000018351C740-0x000000018351C7D0
+		public static void UnRegisterTextElementForRebuild(TMP_Text element); // 0x000000018B3398E4-0x000000018B339970
+		private void InternalUnRegisterTextElementForGraphicRebuild(TMP_Text element); // 0x000000018B339704-0x000000018B339798
+		private void InternalUnRegisterTextElementForLayoutRebuild(TMP_Text element); // 0x000000018B339798-0x000000018B33982C
+		private void InternalUnRegisterTextObjectForUpdate(TMP_Text textObject); // 0x000000018351C8B0-0x000000018351C920
 	}
 
-	public class TMP_UpdateRegistry // TypeDefIndex: 53255
+	public class TMP_UpdateRegistry // TypeDefIndex: 55740
 	{
 		// Fields
 		private static TMP_UpdateRegistry s_Instance; // 0x00
@@ -4795,37 +4869,37 @@ namespace TMPro
 		private HashSet<int> m_GraphicQueueLookup; // 0x28
 	
 		// Properties
-		public static TMP_UpdateRegistry instance { get => default; } // 0x000000018BE3436C-0x000000018BE3637C 
+		public static TMP_UpdateRegistry instance { get; } // 0x000000018B33A0AC-0x000000018B33AA78 
 	
 		// Constructors
-		protected TMP_UpdateRegistry() {} // 0x000000018BE341F8-0x000000018BE3436C
+		protected TMP_UpdateRegistry(); // 0x000000018B339F38-0x000000018B33A0AC
 	
 		// Methods
-		public static void RegisterCanvasElementForLayoutRebuild(ICanvasElement element) {} // 0x000000018BE34180-0x000000018BE341B0
-		private bool InternalRegisterCanvasElementForLayoutRebuild(ICanvasElement element) => default; // 0x000000018BE33D1C-0x000000018BE33E08
-		public static void RegisterCanvasElementForGraphicRebuild(ICanvasElement element) {} // 0x000000018BE34150-0x000000018BE34180
-		private bool InternalRegisterCanvasElementForGraphicRebuild(ICanvasElement element) => default; // 0x000000018BE33C30-0x000000018BE33D1C
-		private void PerformUpdateForCanvasRendererObjects() {} // 0x000000018BE33F98-0x000000018BE340FC
-		private void PerformUpdateForMeshRendererObjects() {} // 0x000000018BE340FC-0x000000018BE34150
-		public static void UnRegisterCanvasElementForRebuild(ICanvasElement element) {} // 0x000000018BE341B0-0x000000018BE341F8
-		private void InternalUnRegisterCanvasElementForLayoutRebuild(ICanvasElement element) {} // 0x000000018BE33ED0-0x000000018BE33F98
-		private void InternalUnRegisterCanvasElementForGraphicRebuild(ICanvasElement element) {} // 0x000000018BE33E08-0x000000018BE33ED0
+		public static void RegisterCanvasElementForLayoutRebuild(ICanvasElement element); // 0x000000018B339EC0-0x000000018B339EF0
+		private bool InternalRegisterCanvasElementForLayoutRebuild(ICanvasElement element); // 0x000000018B339A5C-0x000000018B339B48
+		public static void RegisterCanvasElementForGraphicRebuild(ICanvasElement element); // 0x000000018B339E90-0x000000018B339EC0
+		private bool InternalRegisterCanvasElementForGraphicRebuild(ICanvasElement element); // 0x000000018B339970-0x000000018B339A5C
+		private void PerformUpdateForCanvasRendererObjects(); // 0x000000018B339CD8-0x000000018B339E3C
+		private void PerformUpdateForMeshRendererObjects(); // 0x000000018B339E3C-0x000000018B339E90
+		public static void UnRegisterCanvasElementForRebuild(ICanvasElement element); // 0x000000018B339EF0-0x000000018B339F38
+		private void InternalUnRegisterCanvasElementForLayoutRebuild(ICanvasElement element); // 0x000000018B339C10-0x000000018B339CD8
+		private void InternalUnRegisterCanvasElementForGraphicRebuild(ICanvasElement element); // 0x000000018B339B48-0x000000018B339C10
 	}
 }
 
 namespace TMPro.SpriteAssetUtilities
 {
-	public enum SpriteAssetImportFormats // TypeDefIndex: 53256
+	public enum SpriteAssetImportFormats // TypeDefIndex: 55741
 	{
 		None = 0,
 		TexturePackerJsonArray = 1
 	}
 
-	public class TexturePacker_JsonArray // TypeDefIndex: 53262
+	public class TexturePacker_JsonArray // TypeDefIndex: 55747
 	{
 		// Nested types
 		[Serializable]
-		public struct SpriteFrame // TypeDefIndex: 53257
+		public struct SpriteFrame // TypeDefIndex: 55742
 		{
 			// Fields
 			public float x; // 0x00
@@ -4834,22 +4908,22 @@ namespace TMPro.SpriteAssetUtilities
 			public float h; // 0x0C
 	
 			// Methods
-			public override string ToString() => default; // 0x0000000185492010-0x0000000185492020
+			public override string ToString(); // 0x000000018B339388-0x000000018B3394F8
 		}
 	
 		[Serializable]
-		public struct SpriteSize // TypeDefIndex: 53258
+		public struct SpriteSize // TypeDefIndex: 55743
 		{
 			// Fields
 			public float w; // 0x00
 			public float h; // 0x04
 	
 			// Methods
-			public override string ToString() => default; // 0x000000018BE33648-0x000000018BE337B8
+			public override string ToString(); // 0x000000018B3394F8-0x000000018B33958C
 		}
 	
 		[Serializable]
-		public struct Frame // TypeDefIndex: 53259
+		public struct Frame // TypeDefIndex: 55744
 		{
 			// Fields
 			public string filename; // 0x00
@@ -4862,7 +4936,7 @@ namespace TMPro.SpriteAssetUtilities
 		}
 	
 		[Serializable]
-		public struct Meta // TypeDefIndex: 53260
+		public struct Meta // TypeDefIndex: 55745
 		{
 			// Fields
 			public string app; // 0x00
@@ -4875,17 +4949,17 @@ namespace TMPro.SpriteAssetUtilities
 		}
 	
 		[Serializable]
-		public class SpriteDataObject // TypeDefIndex: 53261
+		public class SpriteDataObject // TypeDefIndex: 55746
 		{
 			// Fields
 			public List<Frame> frames; // 0x10
 			public Meta meta; // 0x18
 	
 			// Constructors
-			public SpriteDataObject() {} // 0x000000018BE337B8-0x000000018BE3384C
+			public SpriteDataObject(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		// Constructors
-		public TexturePacker_JsonArray() {} // 0x0000000185492010-0x0000000185492020
+		public TexturePacker_JsonArray(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }

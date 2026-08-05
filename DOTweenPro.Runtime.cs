@@ -4,16 +4,23 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using DG.Tweening.Core;
 using UnityEngine;
 
-// Image 113: DOTweenPro.Runtime.dll - Assembly: DOTweenPro.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60908-60914
+// Image 116: DOTweenPro.Runtime.dll - Assembly: DOTweenPro.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63559-63565
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace DG.Tweening
 {
-	public class DOTweenAnimation : ABSAnimationComponent // TypeDefIndex: 60911
+	[AddComponentMenu("DOTween/DOTween Animation")]
+	public class DOTweenAnimation : ABSAnimationComponent // TypeDefIndex: 63562
 	{
 		// Fields
+		[CompilerGenerated]
 		private static Action<DOTweenAnimation> OnReset; // 0x00
 		public bool targetIsSelf; // 0x68
 		public GameObject targetGO; // 0x70
@@ -57,10 +64,13 @@ namespace DG.Tweening
 		private int _playCount; // 0x12C
 	
 		// Events
-		public static event Action<DOTweenAnimation> OnReset;
+		public static event Action<DOTweenAnimation> OnReset {
+			add; // 0x0000000186977254-0x00000001869772F0
+			remove; // 0x00000001869772F0-0x000000018697738C
+		}
 	
 		// Nested types
-		public enum AnimationType // TypeDefIndex: 60909
+		public enum AnimationType // TypeDefIndex: 63560
 		{
 			None = 0,
 			Move = 1,
@@ -86,7 +96,7 @@ namespace DG.Tweening
 			UIWidthHeight = 21
 		}
 	
-		public enum TargetType // TypeDefIndex: 60910
+		public enum TargetType // TypeDefIndex: 63561
 		{
 			Unset = 0,
 			Camera = 1,
@@ -107,79 +117,81 @@ namespace DG.Tweening
 		}
 	
 		// Constructors
-		public DOTweenAnimation() {} // 0x000000018790BDA4-0x000000018790BF6C
+		public DOTweenAnimation(); // 0x000000018697708C-0x0000000186977254
 	
 		// Methods
-		private static void Dispatch_OnReset(DOTweenAnimation anim) {} // 0x000000018790B68C-0x000000018790B6DC
-		private void Awake() {} // 0x0000000187909574-0x00000001879095C0
-		private void Start() {} // 0x000000018790BBB0-0x000000018790BBF4
-		private void Reset() {} // 0x000000018790BA58-0x000000018790BA60
-		private void OnDestroy() {} // 0x00000001879085D8-0x0000000187908618
-		public void RewindThenRecreateTween() {} // 0x000000018790BAA0-0x000000018790BAE0
-		public void RewindThenRecreateTweenAndPlay() {} // 0x000000018790BA60-0x000000018790BAA0
-		public void RecreateTween() {} // 0x000000018790BA48-0x000000018790BA58
-		public void RecreateTweenAndPlay() {} // 0x000000018790BA38-0x000000018790BA48
-		public void CreateTween(bool regenerateIfExists = false /* Metadata: 0x02082B8F */, bool andPlay = true /* Metadata: 0x02082B90 */) {} // 0x00000001879095F8-0x000000018790AD44
-		public List<Tween> GetTweens() => default; // 0x000000018790B714-0x000000018790B800
-		public void SetAnimationTarget(Component tweenTarget, bool useTweenTargetGameObjectForGroupOperations = true /* Metadata: 0x02082B91 */) {} // 0x000000018790BAE0-0x000000018790BBB0
-		public override void DOPlay() {} // 0x000000018790B2F0-0x000000018790B340
-		public override void DOPlayBackwards() {} // 0x000000018790B03C-0x000000018790B08C
-		public override void DOPlayForward() {} // 0x000000018790B198-0x000000018790B1E8
-		public override void DOPause() {} // 0x000000018790AEF4-0x000000018790AF44
-		public override void DOTogglePause() {} // 0x000000018790B63C-0x000000018790B68C
-		public override void DORewind() {} // 0x000000018790B57C-0x000000018790B63C
-		public override void DORestart() {} // 0x00000001879082B0-0x00000001879082C0
-		public override void DORestart(bool fromHere) {} // 0x000000018790B414-0x000000018790B4B8
-		public override void DOComplete() {} // 0x000000018790AD44-0x000000018790AD94
-		public override void DOKill() {} // 0x000000018790AE40-0x000000018790AEA8
-		public void DOPlayById(string id) {} // 0x000000018790B08C-0x000000018790B0EC
-		public void DOPlayAllById(string id) {} // 0x000000018790AF44-0x000000018790AF90
-		public void DOPauseAllById(string id) {} // 0x000000018790AEA8-0x000000018790AEF4
-		public void DOPlayBackwardsById(string id) {} // 0x000000018790AFDC-0x000000018790B03C
-		public void DOPlayBackwardsAllById(string id) {} // 0x000000018790AF90-0x000000018790AFDC
-		public void DOPlayForwardById(string id) {} // 0x000000018790B138-0x000000018790B198
-		public void DOPlayForwardAllById(string id) {} // 0x000000018790B0EC-0x000000018790B138
-		public void DOPlayNext() {} // 0x000000018790B1E8-0x000000018790B2F0
-		public void DORewindAndPlayNext() {} // 0x000000018790B510-0x000000018790B57C
-		public void DORewindAllById(string id) {} // 0x000000018790B4B8-0x000000018790B510
-		public void DORestartById(string id) {} // 0x000000018790B3A0-0x000000018790B414
-		public void DORestartAllById(string id) {} // 0x000000018790B340-0x000000018790B3A0
-		public void DOKillById(string id) {} // 0x000000018790ADE0-0x000000018790AE40
-		public void DOKillAllById(string id) {} // 0x000000018790AD94-0x000000018790ADE0
-		public static TargetType TypeToDOTargetType(System.Type t) => default; // 0x000000018790BBF4-0x000000018790BDA4
-		public Tween CreateEditorPreview() => default; // 0x00000001879095C0-0x00000001879095F8
-		private GameObject GetTweenGO() => default; // 0x000000018790B6DC-0x000000018790B6F8
-		private GameObject GetTweenTarget() => default; // 0x000000018790B6F8-0x000000018790B714
-		private void ReEvaluateRelativeTween() {} // 0x000000018790B800-0x000000018790BA38
-		private void _CreateTween_b__54_0() {} // 0x0000000187908A08-0x0000000187908A1C
+		private static void Dispatch_OnReset(DOTweenAnimation anim); // 0x0000000186976974-0x00000001869769C4
+		private void Awake(); // 0x00000001869747AC-0x00000001869747F8
+		private void Start(); // 0x0000000186976E98-0x0000000186976EDC
+		private void Reset(); // 0x0000000186976D40-0x0000000186976D48
+		private void OnDestroy(); // 0x0000000186973810-0x0000000186973850
+		public void RewindThenRecreateTween(); // 0x0000000186976D88-0x0000000186976DC8
+		public void RewindThenRecreateTweenAndPlay(); // 0x0000000186976D48-0x0000000186976D88
+		public void RecreateTween(); // 0x0000000186976D30-0x0000000186976D40
+		public void RecreateTweenAndPlay(); // 0x0000000186976D20-0x0000000186976D30
+		public void CreateTween(bool regenerateIfExists = false /* Metadata: 0x02352877 */, bool andPlay = true /* Metadata: 0x02352878 */); // 0x0000000186974830-0x000000018697602C
+		public List<Tween> GetTweens(); // 0x00000001869769FC-0x0000000186976AE8
+		public void SetAnimationTarget(Component tweenTarget, bool useTweenTargetGameObjectForGroupOperations = true /* Metadata: 0x02352879 */); // 0x0000000186976DC8-0x0000000186976E98
+		public override void DOPlay(); // 0x00000001869765D8-0x0000000186976628
+		public override void DOPlayBackwards(); // 0x0000000186976324-0x0000000186976374
+		public override void DOPlayForward(); // 0x0000000186976480-0x00000001869764D0
+		public override void DOPause(); // 0x00000001869761DC-0x000000018697622C
+		public override void DOTogglePause(); // 0x0000000186976924-0x0000000186976974
+		public override void DORewind(); // 0x0000000186976864-0x0000000186976924
+		public override void DORestart(); // 0x00000001869734E8-0x00000001869734F8
+		public override void DORestart(bool fromHere); // 0x00000001869766FC-0x00000001869767A0
+		public override void DOComplete(); // 0x000000018697602C-0x000000018697607C
+		public override void DOKill(); // 0x0000000186976128-0x0000000186976190
+		public void DOPlayById(string id); // 0x0000000186976374-0x00000001869763D4
+		public void DOPlayAllById(string id); // 0x000000018697622C-0x0000000186976278
+		public void DOPauseAllById(string id); // 0x0000000186976190-0x00000001869761DC
+		public void DOPlayBackwardsById(string id); // 0x00000001869762C4-0x0000000186976324
+		public void DOPlayBackwardsAllById(string id); // 0x0000000186976278-0x00000001869762C4
+		public void DOPlayForwardById(string id); // 0x0000000186976420-0x0000000186976480
+		public void DOPlayForwardAllById(string id); // 0x00000001869763D4-0x0000000186976420
+		public void DOPlayNext(); // 0x00000001869764D0-0x00000001869765D8
+		public void DORewindAndPlayNext(); // 0x00000001869767F8-0x0000000186976864
+		public void DORewindAllById(string id); // 0x00000001869767A0-0x00000001869767F8
+		public void DORestartById(string id); // 0x0000000186976688-0x00000001869766FC
+		public void DORestartAllById(string id); // 0x0000000186976628-0x0000000186976688
+		public void DOKillById(string id); // 0x00000001869760C8-0x0000000186976128
+		public void DOKillAllById(string id); // 0x000000018697607C-0x00000001869760C8
+		public static TargetType TypeToDOTargetType(System.Type t); // 0x0000000186976EDC-0x000000018697708C
+		public Tween CreateEditorPreview(); // 0x00000001869747F8-0x0000000186974830
+		private GameObject GetTweenGO(); // 0x00000001869769C4-0x00000001869769E0
+		private GameObject GetTweenTarget(); // 0x00000001869769E0-0x00000001869769FC
+		private void ReEvaluateRelativeTween(); // 0x0000000186976AE8-0x0000000186976D20
+		[CompilerGenerated]
+		private void _CreateTween_b__54_0(); // 0x0000000186973C40-0x0000000186973C54
 	}
 
-	public static class DOTweenAnimationExtensions // TypeDefIndex: 60912
+	public static class DOTweenAnimationExtensions // TypeDefIndex: 63563
 	{
-		// Methods
-		public static bool IsSameOrSubclassOf<T>(Component t) => default;
+		// Extension methods
+		public static bool IsSameOrSubclassOf<T>(this Component t);
 	}
 
-	public static class DOTweenProShortcuts // TypeDefIndex: 60914
+	public static class DOTweenProShortcuts // TypeDefIndex: 63565
 	{
 		// Nested types
-		private sealed class __c__DisplayClass1_0 // TypeDefIndex: 60913
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass1_0 // TypeDefIndex: 63564
 		{
 			// Fields
 			public Transform target; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass1_0() {} // 0x000000018790C39C-0x000000018790C3E4
+			public __c__DisplayClass1_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal Vector3 _DOSpiral_b__0() => default; // 0x000000018790C0A4-0x000000018790C39C
-			internal void _DOSpiral_b__1(Vector3 x) {} // 0x0000000185492010-0x0000000185492020
+			internal Vector3 _DOSpiral_b__0(); // 0x000000018696AF74-0x000000018696AFB0
+			internal void _DOSpiral_b__1(Vector3 x); // 0x000000018696AFB0-0x000000018696AFE8
 		}
 	
 		// Constructors
-		static DOTweenProShortcuts() {} // 0x00000001878FFF2C-0x00000001878FFF68
+		static DOTweenProShortcuts(); // 0x00000001869776C0-0x0000000186977708
 	
-		// Methods
-		public static Tweener DOSpiral(Transform target, float duration, Vector3? axis = default, SpiralMode mode = SpiralMode.Expand /* Metadata: 0x02082BB8 */, float speed = 1f /* Metadata: 0x02082BB9 */, float frequency = 10f /* Metadata: 0x02082BBD */, float depth = 0f /* Metadata: 0x02082BC1 */, bool snapping = false /* Metadata: 0x02082BC5 */) => default; // 0x00000001878FFF68-0x00000001878FFFA0
+		// Extension methods
+		public static Tweener DOSpiral(this Transform target, float duration, Vector3? axis = default, SpiralMode mode = SpiralMode.Expand /* Metadata: 0x023528A0 */, float speed = 1f /* Metadata: 0x023528A1 */, float frequency = 10f /* Metadata: 0x023528A5 */, float depth = 0f /* Metadata: 0x023528A9 */, bool snapping = false /* Metadata: 0x023528AD */); // 0x000000018697738C-0x00000001869776C0
 	}
 }

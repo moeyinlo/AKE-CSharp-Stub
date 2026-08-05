@@ -5,87 +5,101 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Reflection;
+using System.Runtime.CompilerServices;
+using Microsoft.CodeAnalysis;
+using Unity.Burst;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Playables;
+using UnityEngine.Serialization;
 
-// Image 58: Unity.Animation.Rigging.dll - Assembly: Unity.Animation.Rigging, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 58798-58933
+// Image 59: Unity.Animation.Rigging.dll - Assembly: Unity.Animation.Rigging, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61402-61537
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: InternalsVisibleTo("Unity.Animation.Rigging.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.Animation.Rigging.Editor")]
+[assembly: InternalsVisibleTo("Unity.Animation.Rigging.Tests")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Microsoft.CodeAnalysis
 {
-	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 58799
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class EmbeddedAttribute : Attribute // TypeDefIndex: 61403
 	{
 		// Constructors
-		public EmbeddedAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public EmbeddedAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace System.Runtime.CompilerServices
 {
-	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 58800
+	[CompilerGenerated]
+	[Embedded]
+	internal sealed class IsUnmanagedAttribute : Attribute // TypeDefIndex: 61404
 	{
 		// Constructors
-		public IsUnmanagedAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public IsUnmanagedAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace UnityEngine.Animations.Rigging
 {
-	public struct CacheIndex // TypeDefIndex: 58801
+	public struct CacheIndex // TypeDefIndex: 61405
 	{
 		// Fields
 		internal int idx; // 0x00
 	}
 
-	public struct AnimationJobCache : IDisposable // TypeDefIndex: 58802
+	public struct AnimationJobCache : IDisposable // TypeDefIndex: 61406
 	{
 		// Fields
 		private NativeArray<float> m_Data; // 0x00
 	
 		// Constructors
-		internal AnimationJobCache(float[] data) {
-			m_Data = default;
-		} // 0x000000018BC65B90-0x000000018BC65BF4
+		internal AnimationJobCache(float[] data); // 0x000000018B14850C-0x000000018B148570
 	
 		// Methods
-		public void Dispose() {} // 0x000000018BC65B54-0x000000018BC65B90
-		public float GetRaw(CacheIndex index, int offset = 0 /* Metadata: 0x0207FF11 */) => default; // 0x0000000185FD6F80-0x0000000185FD6F90
-		public void SetRaw(float val, CacheIndex index, int offset = 0 /* Metadata: 0x0207FF12 */) {} // 0x0000000185FD6F90-0x0000000185FD6FA0
-		public T Get<T>(CacheIndex index, int offset = 0 /* Metadata: 0x0207FF13 */)
-			where T : struct => default;
-		public void Set<T>(T val, CacheIndex index, int offset = 0 /* Metadata: 0x0207FF14 */)
-			where T : struct {}
-		public void SetArray<T>(T[] v, CacheIndex index, int offset = 0 /* Metadata: 0x0207FF15 */)
-			where T : struct {}
+		public void Dispose(); // 0x000000018B1484D0-0x000000018B14850C
+		public float GetRaw(CacheIndex index, int offset = 0 /* Metadata: 0x0234FC1E */); // 0x0000000184DAB030-0x0000000184DAB040
+		public void SetRaw(float val, CacheIndex index, int offset = 0 /* Metadata: 0x0234FC1F */); // 0x0000000184DAB040-0x0000000184DAB050
+		public T Get<T>(CacheIndex index, int offset = 0 /* Metadata: 0x0234FC20 */)
+			where T : struct;
+		public void Set<T>(T val, CacheIndex index, int offset = 0 /* Metadata: 0x0234FC21 */)
+			where T : struct;
+		public void SetArray<T>(T[] v, CacheIndex index, int offset = 0 /* Metadata: 0x0234FC22 */)
+			where T : struct;
 	}
 
-	public class AnimationJobCacheBuilder // TypeDefIndex: 58803
+	public class AnimationJobCacheBuilder // TypeDefIndex: 61407
 	{
 		// Fields
 		private List<float> m_Data; // 0x10
 	
 		// Constructors
-		public AnimationJobCacheBuilder() {} // 0x000000018BC65ADC-0x000000018BC65B54
+		public AnimationJobCacheBuilder(); // 0x000000018B148458-0x000000018B1484D0
 	
 		// Methods
-		public CacheIndex Add(float v) => default; // 0x000000018BC65854-0x000000018BC658C4
-		public CacheIndex Add(Vector2 v) => default; // 0x000000018BC658C4-0x000000018BC6594C
-		public CacheIndex Add(Vector3 v) => default; // 0x000000018BC656D4-0x000000018BC6577C
-		public CacheIndex Add(Vector4 v) => default; // 0x000000018BC65614-0x000000018BC656D4
-		public CacheIndex Add(Quaternion v) => default; // 0x000000018BC65834-0x000000018BC65854
-		public CacheIndex Add(AffineTransform tx) => default; // 0x000000018BC6577C-0x000000018BC65834
-		public CacheIndex AllocateChunk(int size) => default; // 0x000000018BC6594C-0x000000018BC659E4
-		public void SetValue(CacheIndex index, int offset, float value) {} // 0x000000018BC65A50-0x000000018BC65ADC
-		public AnimationJobCache Build() => default; // 0x000000018BC659E4-0x000000018BC65A50
+		public CacheIndex Add(float v); // 0x000000018B1481D0-0x000000018B148240
+		public CacheIndex Add(Vector2 v); // 0x000000018B148240-0x000000018B1482C8
+		public CacheIndex Add(Vector3 v); // 0x000000018B148050-0x000000018B1480F8
+		public CacheIndex Add(Vector4 v); // 0x000000018B147F90-0x000000018B148050
+		public CacheIndex Add(Quaternion v); // 0x000000018B1481B0-0x000000018B1481D0
+		public CacheIndex Add(AffineTransform tx); // 0x000000018B1480F8-0x000000018B1481B0
+		public CacheIndex AllocateChunk(int size); // 0x000000018B1482C8-0x000000018B148360
+		public void SetValue(CacheIndex index, int offset, float value); // 0x000000018B1483CC-0x000000018B148458
+		public AnimationJobCache Build(); // 0x000000018B148360-0x000000018B1483CC
 	}
 
-	public struct BlendConstraintJob : IWeightedAnimationJob // TypeDefIndex: 58804
+	[BurstCompile]
+	public struct BlendConstraintJob : IWeightedAnimationJob // TypeDefIndex: 61408
 	{
 		// Fields
-		private const int k_BlendTranslationMask = 1; // Metadata: 0x0207FF16
-		private const int k_BlendRotationMask = 2; // Metadata: 0x0207FF17
+		private const int k_BlendTranslationMask = 1; // Metadata: 0x0234FC23
+		private const int k_BlendRotationMask = 2; // Metadata: 0x0234FC24
 		public ReadWriteTransformHandle driven; // 0x00
 		public ReadOnlyTransformHandle sourceA; // 0x0C
 		public ReadOnlyTransformHandle sourceB; // 0x24
@@ -95,17 +109,18 @@ namespace UnityEngine.Animations.Rigging
 		public BoolProperty blendRotation; // 0x84
 		public FloatProperty positionWeight; // 0x94
 		public FloatProperty rotationWeight; // 0xA4
+		[CompilerGenerated]
 		private FloatProperty _jobWeight_k__BackingField; // 0xB4
 	
 		// Properties
-		public FloatProperty jobWeight { get; set; } // 0x0000000185FD6FA0-0x0000000185FD6FB0 0x0000000185FD6FB0-0x0000000185FD6FC0
+		public FloatProperty jobWeight { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] set; } // 0x0000000184DAB050-0x0000000184DAB060 0x0000000184DAB060-0x0000000184DAB070
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC67374-0x000000018BC678F8
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B149CF0-0x000000018B14A274
 	}
 
-	public interface IBlendConstraintData // TypeDefIndex: 58805
+	public interface IBlendConstraintData // TypeDefIndex: 61409
 	{
 		// Properties
 		Transform constrainedObject { get; }
@@ -119,18 +134,19 @@ namespace UnityEngine.Animations.Rigging
 		string rotationWeightFloatProperty { get; }
 	}
 
-	public class BlendConstraintJobBinder<T> : AnimationJobBinder<BlendConstraintJob, T> // TypeDefIndex: 58806
+	public class BlendConstraintJobBinder<T> : AnimationJobBinder<BlendConstraintJob, T> // TypeDefIndex: 61410
 		where T : struct, IAnimationJobData, IBlendConstraintData
 	{
 		// Constructors
-		public BlendConstraintJobBinder() {}
+		public BlendConstraintJobBinder();
 	
 		// Methods
-		public override BlendConstraintJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(BlendConstraintJob job) {}
+		public override BlendConstraintJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(BlendConstraintJob job);
 	}
 
-	public struct ChainIKConstraintJob : IWeightedAnimationJob // TypeDefIndex: 58807
+	[BurstCompile]
+	public struct ChainIKConstraintJob : IWeightedAnimationJob // TypeDefIndex: 61411
 	{
 		// Fields
 		public NativeArray<ReadWriteTransformHandle> chain; // 0x00
@@ -144,17 +160,18 @@ namespace UnityEngine.Animations.Rigging
 		public CacheIndex maxIterationsIdx; // 0x8C
 		public AnimationJobCache cache; // 0x90
 		public float maxReach; // 0xA0
+		[CompilerGenerated]
 		private FloatProperty _jobWeight_k__BackingField; // 0xA4
 	
 		// Properties
-		public FloatProperty jobWeight { get; set; } // 0x0000000185FD6FC0-0x0000000185FD6FD0 0x0000000185FD6FD0-0x0000000185FD6FE0
+		public FloatProperty jobWeight { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] set; } // 0x0000000184DAB070-0x0000000184DAB080 0x0000000184DAB080-0x0000000184DAB090
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC67D60-0x000000018BC68474
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B14A6EC-0x000000018B14AE00
 	}
 
-	public interface IChainIKConstraintData // TypeDefIndex: 58808
+	public interface IChainIKConstraintData // TypeDefIndex: 61412
 	{
 		// Properties
 		Transform root { get; }
@@ -168,23 +185,24 @@ namespace UnityEngine.Animations.Rigging
 		string tipRotationWeightFloatProperty { get; }
 	}
 
-	public class ChainIKConstraintJobBinder<T> : AnimationJobBinder<ChainIKConstraintJob, T> // TypeDefIndex: 58809
+	public class ChainIKConstraintJobBinder<T> : AnimationJobBinder<ChainIKConstraintJob, T> // TypeDefIndex: 61413
 		where T : struct, IAnimationJobData, IChainIKConstraintData
 	{
 		// Constructors
-		public ChainIKConstraintJobBinder() {}
+		public ChainIKConstraintJobBinder();
 	
 		// Methods
-		public override ChainIKConstraintJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(ChainIKConstraintJob job) {}
-		public override void Update(ChainIKConstraintJob job, ref ref T data) {}
+		public override ChainIKConstraintJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(ChainIKConstraintJob job);
+		public override void Update(ChainIKConstraintJob job, ref ref T data);
 	}
 
-	public struct DampedTransformJob : IWeightedAnimationJob // TypeDefIndex: 58810
+	[BurstCompile]
+	public struct DampedTransformJob : IWeightedAnimationJob // TypeDefIndex: 61414
 	{
 		// Fields
-		private const float k_FixedDt = 0.01667f; // Metadata: 0x0207FF18
-		private const float k_DampFactor = 40f; // Metadata: 0x0207FF1C
+		private const float k_FixedDt = 0.01667f; // Metadata: 0x0234FC25
+		private const float k_DampFactor = 40f; // Metadata: 0x0234FC29
 		public ReadWriteTransformHandle driven; // 0x00
 		public ReadOnlyTransformHandle source; // 0x0C
 		public AffineTransform localBindTx; // 0x24
@@ -192,17 +210,18 @@ namespace UnityEngine.Animations.Rigging
 		public AffineTransform prevDrivenTx; // 0x4C
 		public FloatProperty dampPosition; // 0x68
 		public FloatProperty dampRotation; // 0x78
+		[CompilerGenerated]
 		private FloatProperty _jobWeight_k__BackingField; // 0x88
 	
 		// Properties
-		public FloatProperty jobWeight { get; set; } // 0x0000000185FBDE50-0x0000000185FBDE60 0x0000000185FD6FE0-0x0000000185FD6FF0
+		public FloatProperty jobWeight { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] set; } // 0x0000000184DAB090-0x0000000184DAB0A0 0x0000000184DAB0A0-0x0000000184DAB0B0
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC68BDC-0x000000018BC69384
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B14B568-0x000000018B14BD10
 	}
 
-	public interface IDampedTransformData // TypeDefIndex: 58811
+	public interface IDampedTransformData // TypeDefIndex: 61415
 	{
 		// Properties
 		Transform constrainedObject { get; }
@@ -212,74 +231,74 @@ namespace UnityEngine.Animations.Rigging
 		string dampRotationFloatProperty { get; }
 	}
 
-	public class DampedTransformJobBinder<T> : AnimationJobBinder<DampedTransformJob, T> // TypeDefIndex: 58812
+	public class DampedTransformJobBinder<T> : AnimationJobBinder<DampedTransformJob, T> // TypeDefIndex: 61416
 		where T : struct, IAnimationJobData, IDampedTransformData
 	{
 		// Constructors
-		public DampedTransformJobBinder() {}
+		public DampedTransformJobBinder();
 	
 		// Methods
-		public override DampedTransformJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(DampedTransformJob job) {}
+		public override DampedTransformJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(DampedTransformJob job);
 	}
 
-	public interface IAnimatableProperty<T> // TypeDefIndex: 58813
+	public interface IAnimatableProperty<T> // TypeDefIndex: 61417
 	{
 		// Methods
 		T Get(AnimationStream stream);
 		void Set(AnimationStream stream, T value);
 	}
 
-	public struct BoolProperty : IAnimatableProperty<bool> // TypeDefIndex: 58814
+	public struct BoolProperty : IAnimatableProperty<bool> // TypeDefIndex: 61418
 	{
 		// Fields
 		public PropertyStreamHandle value; // 0x00
 	
 		// Methods
-		public static BoolProperty Bind(Animator animator, Component component, string name) => default; // 0x000000018BC67A14-0x000000018BC67AA4
-		public static BoolProperty BindCustom(Animator animator, string property) => default; // 0x000000018BC679DC-0x000000018BC67A14
-		public bool Get(AnimationStream stream) => default; // 0x000000018BC67AA4-0x000000018BC67AE0
-		public void Set(AnimationStream stream, bool v) {} // 0x000000018BC67AE0-0x000000018BC67B1C
+		public static BoolProperty Bind(Animator animator, Component component, string name); // 0x000000018B14A3A0-0x000000018B14A430
+		public static BoolProperty BindCustom(Animator animator, string property); // 0x000000018B14A368-0x000000018B14A3A0
+		public bool Get(AnimationStream stream); // 0x000000018B14A430-0x000000018B14A46C
+		public void Set(AnimationStream stream, bool v); // 0x000000018B14A46C-0x000000018B14A4A8
 	}
 
-	public struct IntProperty : IAnimatableProperty<int> // TypeDefIndex: 58815
+	public struct IntProperty : IAnimatableProperty<int> // TypeDefIndex: 61419
 	{
 		// Fields
 		public PropertyStreamHandle value; // 0x00
 	
 		// Methods
-		public static IntProperty Bind(Animator animator, Component component, string name) => default; // 0x000000018BC67A14-0x000000018BC67AA4
-		public static IntProperty BindCustom(Animator animator, string property) => default; // 0x000000018BC696D4-0x000000018BC6970C
-		public int Get(AnimationStream stream) => default; // 0x000000018BC6970C-0x000000018BC69748
-		public void Set(AnimationStream stream, int v) {} // 0x000000018BC69748-0x000000018BC69784
+		public static IntProperty Bind(Animator animator, Component component, string name); // 0x000000018B14A3A0-0x000000018B14A430
+		public static IntProperty BindCustom(Animator animator, string property); // 0x000000018B14C060-0x000000018B14C098
+		public int Get(AnimationStream stream); // 0x000000018B14C098-0x000000018B14C0D4
+		public void Set(AnimationStream stream, int v); // 0x000000018B14C0D4-0x000000018B14C110
 	}
 
-	public struct FloatProperty : IAnimatableProperty<float> // TypeDefIndex: 58816
+	public struct FloatProperty : IAnimatableProperty<float> // TypeDefIndex: 61420
 	{
 		// Fields
 		public PropertyStreamHandle value; // 0x00
 	
 		// Methods
-		public static FloatProperty Bind(Animator animator, Component component, string name) => default; // 0x000000018BC67A14-0x000000018BC67AA4
-		public static FloatProperty BindCustom(Animator animator, string property) => default; // 0x000000018BC69624-0x000000018BC6965C
-		public float Get(AnimationStream stream) => default; // 0x000000018BC6965C-0x000000018BC69698
-		public void Set(AnimationStream stream, float v) {} // 0x000000018BC69698-0x000000018BC696D4
+		public static FloatProperty Bind(Animator animator, Component component, string name); // 0x000000018B14A3A0-0x000000018B14A430
+		public static FloatProperty BindCustom(Animator animator, string property); // 0x000000018B14BFB0-0x000000018B14BFE8
+		public float Get(AnimationStream stream); // 0x000000018B14BFE8-0x000000018B14C024
+		public void Set(AnimationStream stream, float v); // 0x000000018B14C024-0x000000018B14C060
 	}
 
-	public struct Vector2Property : IAnimatableProperty<Vector2> // TypeDefIndex: 58817
+	public struct Vector2Property : IAnimatableProperty<Vector2> // TypeDefIndex: 61421
 	{
 		// Fields
 		public PropertyStreamHandle x; // 0x00
 		public PropertyStreamHandle y; // 0x10
 	
 		// Methods
-		public static Vector2Property Bind(Animator animator, Component component, string name) => default; // 0x000000018BC760D8-0x000000018BC761F8
-		public static Vector2Property BindCustom(Animator animator, string name) => default; // 0x000000018BC76010-0x000000018BC760D8
-		public Vector2 Get(AnimationStream stream) => default; // 0x000000018BC761F8-0x000000018BC762A0
-		public void Set(AnimationStream stream, Vector2 value) {} // 0x000000018BC762A0-0x000000018BC7634C
+		public static Vector2Property Bind(Animator animator, Component component, string name); // 0x000000018B158F44-0x000000018B159064
+		public static Vector2Property BindCustom(Animator animator, string name); // 0x000000018B158E7C-0x000000018B158F44
+		public Vector2 Get(AnimationStream stream); // 0x000000018B159064-0x000000018B15910C
+		public void Set(AnimationStream stream, Vector2 value); // 0x000000018B15910C-0x000000018B1591B8
 	}
 
-	public struct Vector3Property : IAnimatableProperty<Vector3> // TypeDefIndex: 58818
+	public struct Vector3Property : IAnimatableProperty<Vector3> // TypeDefIndex: 61422
 	{
 		// Fields
 		public PropertyStreamHandle x; // 0x00
@@ -287,13 +306,13 @@ namespace UnityEngine.Animations.Rigging
 		public PropertyStreamHandle z; // 0x20
 	
 		// Methods
-		public static Vector3Property Bind(Animator animator, Component component, string name) => default; // 0x000000018BC76CFC-0x000000018BC76E74
-		public static Vector3Property BindCustom(Animator animator, string name) => default; // 0x000000018BC76BEC-0x000000018BC76CFC
-		public Vector3 Get(AnimationStream stream) => default; // 0x000000018BC76E74-0x000000018BC76F74
-		public void Set(AnimationStream stream, Vector3 value) {} // 0x000000018BC76F74-0x000000018BC77050
+		public static Vector3Property Bind(Animator animator, Component component, string name); // 0x000000018B159B68-0x000000018B159CE0
+		public static Vector3Property BindCustom(Animator animator, string name); // 0x000000018B159A58-0x000000018B159B68
+		public Vector3 Get(AnimationStream stream); // 0x000000018B159CE0-0x000000018B159DE0
+		public void Set(AnimationStream stream, Vector3 value); // 0x000000018B159DE0-0x000000018B159EBC
 	}
 
-	public struct Vector3IntProperty : IAnimatableProperty<Vector3Int> // TypeDefIndex: 58819
+	public struct Vector3IntProperty : IAnimatableProperty<Vector3Int> // TypeDefIndex: 61423
 	{
 		// Fields
 		public PropertyStreamHandle x; // 0x00
@@ -301,13 +320,13 @@ namespace UnityEngine.Animations.Rigging
 		public PropertyStreamHandle z; // 0x20
 	
 		// Methods
-		public static Vector3IntProperty Bind(Animator animator, Component component, string name) => default; // 0x000000018BC768AC-0x000000018BC76A24
-		public static Vector3IntProperty BindCustom(Animator animator, string name) => default; // 0x000000018BC7679C-0x000000018BC768AC
-		public Vector3Int Get(AnimationStream stream) => default; // 0x000000018BC76A24-0x000000018BC76B14
-		public void Set(AnimationStream stream, Vector3Int value) {} // 0x000000018BC76B14-0x000000018BC76BEC
+		public static Vector3IntProperty Bind(Animator animator, Component component, string name); // 0x000000018B159718-0x000000018B159890
+		public static Vector3IntProperty BindCustom(Animator animator, string name); // 0x000000018B159608-0x000000018B159718
+		public Vector3Int Get(AnimationStream stream); // 0x000000018B159890-0x000000018B159980
+		public void Set(AnimationStream stream, Vector3Int value); // 0x000000018B159980-0x000000018B159A58
 	}
 
-	public struct Vector3BoolProperty : IAnimatableProperty<Vector3Bool> // TypeDefIndex: 58820
+	public struct Vector3BoolProperty : IAnimatableProperty<Vector3Bool> // TypeDefIndex: 61424
 	{
 		// Fields
 		public PropertyStreamHandle x; // 0x00
@@ -315,13 +334,13 @@ namespace UnityEngine.Animations.Rigging
 		public PropertyStreamHandle z; // 0x20
 	
 		// Methods
-		public static Vector3BoolProperty Bind(Animator animator, Component component, string name) => default; // 0x000000018BC7645C-0x000000018BC765D4
-		public static Vector3BoolProperty BindCustom(Animator animator, string name) => default; // 0x000000018BC7634C-0x000000018BC7645C
-		public Vector3Bool Get(AnimationStream stream) => default; // 0x000000018BC765D4-0x000000018BC766C4
-		public void Set(AnimationStream stream, Vector3Bool value) {} // 0x000000018BC766C4-0x000000018BC7679C
+		public static Vector3BoolProperty Bind(Animator animator, Component component, string name); // 0x000000018B1592C8-0x000000018B159440
+		public static Vector3BoolProperty BindCustom(Animator animator, string name); // 0x000000018B1591B8-0x000000018B1592C8
+		public Vector3Bool Get(AnimationStream stream); // 0x000000018B159440-0x000000018B159530
+		public void Set(AnimationStream stream, Vector3Bool value); // 0x000000018B159530-0x000000018B159608
 	}
 
-	public struct Vector4Property : IAnimatableProperty<Vector4> // TypeDefIndex: 58821
+	public struct Vector4Property : IAnimatableProperty<Vector4> // TypeDefIndex: 61425
 	{
 		// Fields
 		public PropertyStreamHandle x; // 0x00
@@ -330,13 +349,13 @@ namespace UnityEngine.Animations.Rigging
 		public PropertyStreamHandle w; // 0x30
 	
 		// Methods
-		public static Vector4Property Bind(Animator animator, Component component, string name) => default; // 0x000000018BC771A0-0x000000018BC7736C
-		public static Vector4Property BindCustom(Animator animator, string name) => default; // 0x000000018BC77050-0x000000018BC771A0
-		public Vector4 Get(AnimationStream stream) => default; // 0x000000018BC7736C-0x000000018BC774B8
-		public void Set(AnimationStream stream, Vector4 value) {} // 0x000000018BC774B8-0x000000018BC775D4
+		public static Vector4Property Bind(Animator animator, Component component, string name); // 0x000000018B15A00C-0x000000018B15A1D8
+		public static Vector4Property BindCustom(Animator animator, string name); // 0x000000018B159EBC-0x000000018B15A00C
+		public Vector4 Get(AnimationStream stream); // 0x000000018B15A1D8-0x000000018B15A324
+		public void Set(AnimationStream stream, Vector4 value); // 0x000000018B15A324-0x000000018B15A440
 	}
 
-	public interface IAnimationJobBinder // TypeDefIndex: 58822
+	public interface IAnimationJobBinder // TypeDefIndex: 61426
 	{
 		// Methods
 		IAnimationJob Create(Animator animator, IAnimationJobData data, Component component = null);
@@ -345,40 +364,41 @@ namespace UnityEngine.Animations.Rigging
 		AnimationScriptPlayable CreatePlayable(PlayableGraph graph, IAnimationJob job);
 	}
 
-	public abstract class AnimationJobBinder<TJob, TData> : IAnimationJobBinder // TypeDefIndex: 58823
+	public abstract class AnimationJobBinder<TJob, TData> : IAnimationJobBinder // TypeDefIndex: 61427
 		where TJob : struct, IAnimationJob
 		where TData : struct, IAnimationJobData
 	{
 		// Constructors
-		protected AnimationJobBinder() {}
+		protected AnimationJobBinder();
 	
 		// Methods
 		public abstract TJob Create(Animator animator, ref ref TData data, Component component);
 		public abstract void Destroy(TJob job);
-		public virtual void Update(TJob job, ref ref TData data) {}
-		IAnimationJob IAnimationJobBinder.Create(Animator animator, IAnimationJobData data, Component component) => default;
-		void IAnimationJobBinder.Destroy(IAnimationJob job) {}
-		void IAnimationJobBinder.Update(IAnimationJob job, IAnimationJobData data) {}
-		AnimationScriptPlayable IAnimationJobBinder.CreatePlayable(PlayableGraph graph, IAnimationJob job) => default;
+		public virtual void Update(TJob job, ref ref TData data);
+		IAnimationJob IAnimationJobBinder.Create(Animator animator, IAnimationJobData data, Component component);
+		void IAnimationJobBinder.Destroy(IAnimationJob job);
+		void IAnimationJobBinder.Update(IAnimationJob job, IAnimationJobData data);
+		AnimationScriptPlayable IAnimationJobBinder.CreatePlayable(PlayableGraph graph, IAnimationJob job);
 	}
 
-	public interface IAnimationJobData // TypeDefIndex: 58824
+	public interface IAnimationJobData // TypeDefIndex: 61428
 	{
 		// Methods
 		bool IsValid();
 		void SetDefaultValues();
 	}
 
-	public interface IWeightedAnimationJob : IAnimationJob // TypeDefIndex: 58825
+	public interface IWeightedAnimationJob : IAnimationJob // TypeDefIndex: 61429
 	{
 		// Properties
 		FloatProperty jobWeight { get; set; }
 	}
 
-	public struct MultiAimConstraintJob : IWeightedAnimationJob // TypeDefIndex: 58827
+	[BurstCompile]
+	public struct MultiAimConstraintJob : IWeightedAnimationJob // TypeDefIndex: 61431
 	{
 		// Fields
-		private const float k_Epsilon = 1E-05f; // Metadata: 0x0207FF20
+		private const float k_Epsilon = 1E-05f; // Metadata: 0x0234FC2D
 		public ReadWriteTransformHandle driven; // 0x00
 		public ReadOnlyTransformHandle drivenParent; // 0x0C
 		public Vector3Property drivenOffset; // 0x24
@@ -394,13 +414,14 @@ namespace UnityEngine.Animations.Rigging
 		public Vector3 axesMask; // 0xD8
 		public FloatProperty minLimit; // 0xE4
 		public FloatProperty maxLimit; // 0xF4
+		[CompilerGenerated]
 		private FloatProperty _jobWeight_k__BackingField; // 0x104
 	
 		// Properties
-		public FloatProperty jobWeight { get; set; } // 0x0000000185FD70C0-0x0000000185FD70D0 0x0000000185FD70D0-0x0000000185FD70E0
+		public FloatProperty jobWeight { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DAB120-0x0000000184DAB130 0x0000000184DAB130-0x0000000184DAB140
 	
 		// Nested types
-		public enum WorldUpType // TypeDefIndex: 58826
+		public enum WorldUpType // TypeDefIndex: 61430
 		{
 			None = 0,
 			SceneUp = 1,
@@ -410,12 +431,12 @@ namespace UnityEngine.Animations.Rigging
 		}
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC69EF8-0x000000018BC6AE48
-		private Vector3 ComputeWorldUpVector(AnimationStream stream) => default; // 0x000000018BC69C78-0x000000018BC69EF8
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B14C910-0x000000018B14D860
+		private Vector3 ComputeWorldUpVector(AnimationStream stream); // 0x000000018B14C690-0x000000018B14C910
 	}
 
-	public interface IMultiAimConstraintData // TypeDefIndex: 58828
+	public interface IMultiAimConstraintData // TypeDefIndex: 61432
 	{
 		// Properties
 		Transform constrainedObject { get; }
@@ -435,21 +456,22 @@ namespace UnityEngine.Animations.Rigging
 		string sourceObjectsProperty { get; }
 	}
 
-	public class MultiAimConstraintJobBinder<T> : AnimationJobBinder<MultiAimConstraintJob, T> // TypeDefIndex: 58829
+	public class MultiAimConstraintJobBinder<T> : AnimationJobBinder<MultiAimConstraintJob, T> // TypeDefIndex: 61433
 		where T : struct, IAnimationJobData, IMultiAimConstraintData
 	{
 		// Constructors
-		public MultiAimConstraintJobBinder() {}
+		public MultiAimConstraintJobBinder();
 	
 		// Methods
-		public override MultiAimConstraintJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(MultiAimConstraintJob job) {}
+		public override MultiAimConstraintJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(MultiAimConstraintJob job);
 	}
 
-	public struct MultiParentConstraintJob : IWeightedAnimationJob // TypeDefIndex: 58830
+	[BurstCompile]
+	public struct MultiParentConstraintJob : IWeightedAnimationJob // TypeDefIndex: 61434
 	{
 		// Fields
-		private const float k_Epsilon = 1E-05f; // Metadata: 0x0207FF29
+		private const float k_Epsilon = 1E-05f; // Metadata: 0x0234FC36
 		public ReadWriteTransformHandle driven; // 0x00
 		public ReadOnlyTransformHandle drivenParent; // 0x0C
 		public NativeArray<ReadOnlyTransformHandle> sourceTransforms; // 0x28
@@ -458,17 +480,18 @@ namespace UnityEngine.Animations.Rigging
 		public NativeArray<float> weightBuffer; // 0x58
 		public Vector3 positionAxesMask; // 0x68
 		public Vector3 rotationAxesMask; // 0x74
+		[CompilerGenerated]
 		private FloatProperty _jobWeight_k__BackingField; // 0x80
 	
 		// Properties
-		public FloatProperty jobWeight { get; set; } // 0x0000000185FBC0B0-0x0000000185FBC0C0 0x0000000185FC9CB0-0x0000000185FC9CC0
+		public FloatProperty jobWeight { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] set; } // 0x0000000184D90620-0x0000000184D90630 0x0000000184D9DEE0-0x0000000184D9DEF0
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC6B27C-0x000000018BC6BD48
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B14DD20-0x000000018B14E7EC
 	}
 
-	public interface IMultiParentConstraintData // TypeDefIndex: 58831
+	public interface IMultiParentConstraintData // TypeDefIndex: 61435
 	{
 		// Properties
 		Transform constrainedObject { get; }
@@ -484,21 +507,22 @@ namespace UnityEngine.Animations.Rigging
 		string sourceObjectsProperty { get; }
 	}
 
-	public class MultiParentConstraintJobBinder<T> : AnimationJobBinder<MultiParentConstraintJob, T> // TypeDefIndex: 58832
+	public class MultiParentConstraintJobBinder<T> : AnimationJobBinder<MultiParentConstraintJob, T> // TypeDefIndex: 61436
 		where T : struct, IAnimationJobData, IMultiParentConstraintData
 	{
 		// Constructors
-		public MultiParentConstraintJobBinder() {}
+		public MultiParentConstraintJobBinder();
 	
 		// Methods
-		public override MultiParentConstraintJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(MultiParentConstraintJob job) {}
+		public override MultiParentConstraintJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(MultiParentConstraintJob job);
 	}
 
-	public struct MultiPositionConstraintJob : IWeightedAnimationJob // TypeDefIndex: 58833
+	[BurstCompile]
+	public struct MultiPositionConstraintJob : IWeightedAnimationJob // TypeDefIndex: 61437
 	{
 		// Fields
-		private const float k_Epsilon = 1E-05f; // Metadata: 0x0207FF2D
+		private const float k_Epsilon = 1E-05f; // Metadata: 0x0234FC3A
 		public ReadWriteTransformHandle driven; // 0x00
 		public ReadOnlyTransformHandle drivenParent; // 0x0C
 		public Vector3Property drivenOffset; // 0x24
@@ -507,17 +531,18 @@ namespace UnityEngine.Animations.Rigging
 		public NativeArray<Vector3> sourceOffsets; // 0x78
 		public NativeArray<float> weightBuffer; // 0x88
 		public Vector3 axesMask; // 0x98
+		[CompilerGenerated]
 		private FloatProperty _jobWeight_k__BackingField; // 0xA4
 	
 		// Properties
-		public FloatProperty jobWeight { get; set; } // 0x0000000185FD6FC0-0x0000000185FD6FD0 0x0000000185FD6FD0-0x0000000185FD6FE0
+		public FloatProperty jobWeight { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DAB070-0x0000000184DAB080 0x0000000184DAB080-0x0000000184DAB090
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC6C14C-0x000000018BC6C848
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B14EC7C-0x000000018B14F378
 	}
 
-	public interface IMultiPositionConstraintData // TypeDefIndex: 58834
+	public interface IMultiPositionConstraintData // TypeDefIndex: 61438
 	{
 		// Properties
 		Transform constrainedObject { get; }
@@ -530,18 +555,19 @@ namespace UnityEngine.Animations.Rigging
 		bool constrainedZAxis { get; }
 	}
 
-	public class MultiPositionConstraintJobBinder<T> : AnimationJobBinder<MultiPositionConstraintJob, T> // TypeDefIndex: 58835
+	public class MultiPositionConstraintJobBinder<T> : AnimationJobBinder<MultiPositionConstraintJob, T> // TypeDefIndex: 61439
 		where T : struct, IAnimationJobData, IMultiPositionConstraintData
 	{
 		// Constructors
-		public MultiPositionConstraintJobBinder() {}
+		public MultiPositionConstraintJobBinder();
 	
 		// Methods
-		public override MultiPositionConstraintJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(MultiPositionConstraintJob job) {}
+		public override MultiPositionConstraintJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(MultiPositionConstraintJob job);
 	}
 
-	public struct MultiReferentialConstraintJob : IWeightedAnimationJob // TypeDefIndex: 58836
+	[BurstCompile]
+	public struct MultiReferentialConstraintJob : IWeightedAnimationJob // TypeDefIndex: 61440
 	{
 		// Fields
 		public IntProperty driver; // 0x00
@@ -549,18 +575,19 @@ namespace UnityEngine.Animations.Rigging
 		public NativeArray<AffineTransform> sourceBindTx; // 0x20
 		public NativeArray<AffineTransform> offsetTx; // 0x30
 		private int m_PrevDriverIdx; // 0x40
+		[CompilerGenerated]
 		private FloatProperty _jobWeight_k__BackingField; // 0x44
 	
 		// Properties
-		public FloatProperty jobWeight { get; set; } // 0x0000000185FD6DB0-0x0000000185FD6DC0 0x0000000185FD6DC0-0x0000000185FD6DD0
+		public FloatProperty jobWeight { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DAAF10-0x0000000184DAAF20 0x0000000184DAAF20-0x0000000184DAAF30
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC6CDD0-0x000000018BC6D288
-		internal void UpdateOffsets(int driver) {} // 0x000000018BC6D288-0x000000018BC6D420
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B14F900-0x000000018B14FDB8
+		internal void UpdateOffsets(int driver); // 0x000000018B14FDB8-0x000000018B14FF50
 	}
 
-	public interface IMultiReferentialConstraintData // TypeDefIndex: 58837
+	public interface IMultiReferentialConstraintData // TypeDefIndex: 61441
 	{
 		// Properties
 		int driverValue { get; }
@@ -568,21 +595,22 @@ namespace UnityEngine.Animations.Rigging
 		Transform[] sourceObjects { get; }
 	}
 
-	public class MultiReferentialConstraintJobBinder<T> : AnimationJobBinder<MultiReferentialConstraintJob, T> // TypeDefIndex: 58838
+	public class MultiReferentialConstraintJobBinder<T> : AnimationJobBinder<MultiReferentialConstraintJob, T> // TypeDefIndex: 61442
 		where T : struct, IAnimationJobData, IMultiReferentialConstraintData
 	{
 		// Constructors
-		public MultiReferentialConstraintJobBinder() {}
+		public MultiReferentialConstraintJobBinder();
 	
 		// Methods
-		public override MultiReferentialConstraintJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(MultiReferentialConstraintJob job) {}
+		public override MultiReferentialConstraintJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(MultiReferentialConstraintJob job);
 	}
 
-	public struct MultiRotationConstraintJob : IWeightedAnimationJob // TypeDefIndex: 58839
+	[BurstCompile]
+	public struct MultiRotationConstraintJob : IWeightedAnimationJob // TypeDefIndex: 61443
 	{
 		// Fields
-		private const float k_Epsilon = 1E-05f; // Metadata: 0x0207FF31
+		private const float k_Epsilon = 1E-05f; // Metadata: 0x0234FC3E
 		public ReadWriteTransformHandle driven; // 0x00
 		public ReadOnlyTransformHandle drivenParent; // 0x0C
 		public Vector3Property drivenOffset; // 0x24
@@ -591,17 +619,18 @@ namespace UnityEngine.Animations.Rigging
 		public NativeArray<Quaternion> sourceOffsets; // 0x78
 		public NativeArray<float> weightBuffer; // 0x88
 		public Vector3 axesMask; // 0x98
+		[CompilerGenerated]
 		private FloatProperty _jobWeight_k__BackingField; // 0xA4
 	
 		// Properties
-		public FloatProperty jobWeight { get; set; } // 0x0000000185FD6FC0-0x0000000185FD6FD0 0x0000000185FD6FD0-0x0000000185FD6FE0
+		public FloatProperty jobWeight { [IsReadOnly] [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184DAB070-0x0000000184DAB080 0x0000000184DAB080-0x0000000184DAB090
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC6D72C-0x000000018BC6DE1C
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B1502E8-0x000000018B1509D8
 	}
 
-	public interface IMultiRotationConstraintData // TypeDefIndex: 58840
+	public interface IMultiRotationConstraintData // TypeDefIndex: 61444
 	{
 		// Properties
 		Transform constrainedObject { get; }
@@ -614,18 +643,19 @@ namespace UnityEngine.Animations.Rigging
 		bool constrainedZAxis { get; }
 	}
 
-	public class MultiRotationConstraintJobBinder<T> : AnimationJobBinder<MultiRotationConstraintJob, T> // TypeDefIndex: 58841
+	public class MultiRotationConstraintJobBinder<T> : AnimationJobBinder<MultiRotationConstraintJob, T> // TypeDefIndex: 61445
 		where T : struct, IAnimationJobData, IMultiRotationConstraintData
 	{
 		// Constructors
-		public MultiRotationConstraintJobBinder() {}
+		public MultiRotationConstraintJobBinder();
 	
 		// Methods
-		public override MultiRotationConstraintJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(MultiRotationConstraintJob job) {}
+		public override MultiRotationConstraintJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(MultiRotationConstraintJob job);
 	}
 
-	public struct OverrideTransformJob : IWeightedAnimationJob // TypeDefIndex: 58843
+	[BurstCompile]
+	public struct OverrideTransformJob : IWeightedAnimationJob // TypeDefIndex: 61447
 	{
 		// Fields
 		public ReadWriteTransformHandle driven; // 0x00
@@ -641,13 +671,14 @@ namespace UnityEngine.Animations.Rigging
 		public FloatProperty positionWeight; // 0xD8
 		public FloatProperty rotationWeight; // 0xE8
 		public AnimationJobCache cache; // 0xF8
+		[CompilerGenerated]
 		private FloatProperty _jobWeight_k__BackingField; // 0x108
 	
 		// Properties
-		public FloatProperty jobWeight { get; set; } // 0x0000000185FD60A0-0x0000000185FD60B0 0x0000000185FD6100-0x0000000185FD6110
+		public FloatProperty jobWeight { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] set; } // 0x0000000184DAA110-0x0000000184DAA120 0x0000000184DAA170-0x0000000184DAA180
 	
 		// Nested types
-		public enum Space // TypeDefIndex: 58842
+		public enum Space // TypeDefIndex: 61446
 		{
 			World = 0,
 			Local = 1,
@@ -655,12 +686,12 @@ namespace UnityEngine.Animations.Rigging
 		}
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC6E4E8-0x000000018BC6ED44
-		internal void UpdateSpace(int space) {} // 0x000000018BC6ED44-0x000000018BC6EDE4
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B1510A4-0x000000018B151900
+		internal void UpdateSpace(int space); // 0x000000018B151900-0x000000018B1519A0
 	}
 
-	public interface IOverrideTransformData // TypeDefIndex: 58844
+	public interface IOverrideTransformData // TypeDefIndex: 61448
 	{
 		// Properties
 		Transform constrainedObject { get; }
@@ -672,19 +703,20 @@ namespace UnityEngine.Animations.Rigging
 		string rotationVector3Property { get; }
 	}
 
-	public class OverrideTransformJobBinder<T> : AnimationJobBinder<OverrideTransformJob, T> // TypeDefIndex: 58845
+	public class OverrideTransformJobBinder<T> : AnimationJobBinder<OverrideTransformJob, T> // TypeDefIndex: 61449
 		where T : struct, IAnimationJobData, IOverrideTransformData
 	{
 		// Constructors
-		public OverrideTransformJobBinder() {}
+		public OverrideTransformJobBinder();
 	
 		// Methods
-		public override OverrideTransformJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(OverrideTransformJob job) {}
-		public override void Update(OverrideTransformJob job, ref ref T data) {}
+		public override OverrideTransformJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(OverrideTransformJob job);
+		public override void Update(OverrideTransformJob job, ref ref T data);
 	}
 
-	internal struct RigSyncSceneToStreamJob : IAnimationJob // TypeDefIndex: 58848
+	[BurstCompile]
+	internal struct RigSyncSceneToStreamJob : IAnimationJob // TypeDefIndex: 61452
 	{
 		// Fields
 		public TransformSyncer transformSyncer; // 0x00
@@ -696,20 +728,20 @@ namespace UnityEngine.Animations.Rigging
 		public NativeArray<PropertyStreamHandle> modulatedConstraintWeights; // 0xD0
 	
 		// Nested types
-		public struct TransformSyncer : IDisposable // TypeDefIndex: 58846
+		public struct TransformSyncer : IDisposable // TypeDefIndex: 61450
 		{
 			// Fields
 			public NativeArray<TransformSceneHandle> sceneHandles; // 0x00
 			public NativeArray<TransformStreamHandle> streamHandles; // 0x10
 	
 			// Methods
-			public static TransformSyncer Create(int size) => default; // 0x0000000185492010-0x0000000185492020
-			public void Dispose() {} // 0x000000018BC71DB4-0x000000018BC71F00
-			public void BindAt(int index, Animator animator, Transform transform) {} // 0x000000018BC74808-0x000000018BC748B8
-			public void Sync(ref AnimationStream stream) {} // 0x000000018BC748B8-0x000000018BC74934
+			public static TransformSyncer Create(int size); // 0x000000018B157674-0x000000018B157724
+			public void Dispose(); // 0x000000018B157724-0x000000018B1577A0
+			public void BindAt(int index, Animator animator, Transform transform); // 0x000000018B1575F8-0x000000018B157674
+			public void Sync(ref AnimationStream stream); // 0x000000018B1577A0-0x000000018B15796C
 		}
 	
-		internal struct PropertySyncer : IDisposable // TypeDefIndex: 58847
+		internal struct PropertySyncer : IDisposable // TypeDefIndex: 61451
 		{
 			// Fields
 			public NativeArray<PropertySceneHandle> sceneHandles; // 0x00
@@ -717,26 +749,26 @@ namespace UnityEngine.Animations.Rigging
 			public NativeArray<float> buffer; // 0x20
 	
 			// Methods
-			public static PropertySyncer Create(int size) => default; // 0x000000018BC7478C-0x000000018BC74808
-			public void Dispose() {} // 0x000000018BC74934-0x000000018BC74B00
-			public void BindAt(int index, Animator animator, Component component, string property) {} // 0x000000018BC6EF80-0x000000018BC6F070
-			public void Sync(ref AnimationStream stream) {} // 0x000000018BC6F070-0x000000018BC6F11C
-			public NativeArray<float> StreamValues(ref AnimationStream stream) => default; // 0x000000018BC6EEB4-0x000000018BC6EF80
+			public static PropertySyncer Create(int size); // 0x000000018B151B3C-0x000000018B151C2C
+			public void Dispose(); // 0x000000018B151C2C-0x000000018B151CD8
+			public void BindAt(int index, Animator animator, Component component, string property); // 0x000000018B151A70-0x000000018B151B3C
+			public void Sync(ref AnimationStream stream); // 0x000000018B151D54-0x000000018B151E1C
+			public NativeArray<float> StreamValues(ref AnimationStream stream); // 0x000000018B151CD8-0x000000018B151D54
 		}
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x000000018BC6F198-0x000000018BC6F260
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC6F11C-0x000000018BC6F198
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B154A50-0x000000018B154B9C
 	}
 
-	internal struct SyncableProperties // TypeDefIndex: 58849
+	internal struct SyncableProperties // TypeDefIndex: 61453
 	{
 		// Fields
 		public RigProperties rig; // 0x00
 		public ConstraintProperties[] constraints; // 0x08
 	}
 
-	internal interface IRigSyncSceneToStreamData // TypeDefIndex: 58850
+	internal interface IRigSyncSceneToStreamData // TypeDefIndex: 61454
 	{
 		// Properties
 		Transform[] syncableTransforms { get; }
@@ -744,56 +776,49 @@ namespace UnityEngine.Animations.Rigging
 		bool[] rigStates { get; }
 	}
 
-	internal class RigSyncSceneToStreamJobBinder<T> : AnimationJobBinder<RigSyncSceneToStreamJob, T> // TypeDefIndex: 58851
+	internal class RigSyncSceneToStreamJobBinder<T> : AnimationJobBinder<RigSyncSceneToStreamJob, T> // TypeDefIndex: 61455
 		where T : struct, IAnimationJobData, IRigSyncSceneToStreamData
 	{
 		// Fields
 		internal static string[] s_PropertyElementNames;
 	
 		// Constructors
-		public RigSyncSceneToStreamJobBinder() {}
-		static RigSyncSceneToStreamJobBinder() {}
+		public RigSyncSceneToStreamJobBinder();
+		static RigSyncSceneToStreamJobBinder();
 	
 		// Methods
-		public override RigSyncSceneToStreamJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(RigSyncSceneToStreamJob job) {}
-		public override void Update(RigSyncSceneToStreamJob job, ref ref T data) {}
+		public override RigSyncSceneToStreamJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(RigSyncSceneToStreamJob job);
+		public override void Update(RigSyncSceneToStreamJob job, ref ref T data);
 	}
 
-	public struct ReadWriteTransformHandle // TypeDefIndex: 58852
+	public struct ReadWriteTransformHandle // TypeDefIndex: 61456
 	{
 		// Fields
 		private TransformStreamHandle m_Handle; // 0x00
 	
 		// Methods
-		public Vector3 GetLocalPosition(AnimationStream stream) => default; // 0x000000018BC6FC80-0x000000018BC6FCD8
-		public Quaternion GetLocalRotation(AnimationStream stream) => default; // 0x000000018BC6FCD8-0x000000018BC6FD28
-		public Vector3 GetLocalScale(AnimationStream stream) => default; // 0x000000018BC6FD28-0x000000018BC6FD80
-		public void GetLocalTRS(AnimationStream stream, out Vector3 position, out Quaternion rotation, out Vector3 scale) {
-			position = default;
-			rotation = default;
-			scale = default;
-		} // 0x000000018BC6FD80-0x000000018BC6FDD0
-		public void SetLocalPosition(AnimationStream stream, Vector3 position) {} // 0x000000018BC6FFA4-0x000000018BC6FFF8
-		public void SetLocalRotation(AnimationStream stream, Quaternion rotation) {} // 0x000000018BC6FFF8-0x000000018BC70040
-		public void SetLocalScale(AnimationStream stream, Vector3 scale) {} // 0x000000018BC70040-0x000000018BC70094
-		public void SetLocalTRS(AnimationStream stream, Vector3 position, Quaternion rotation, Vector3 scale, bool useMask = false /* Metadata: 0x0207FF38 */) {} // 0x000000018BC70094-0x000000018BC70120
-		public Vector3 GetPosition(AnimationStream stream) => default; // 0x000000018BC6FDD0-0x000000018BC6FE28
-		public Quaternion GetRotation(AnimationStream stream) => default; // 0x000000018BC6FE28-0x000000018BC6FE78
-		public void GetGlobalTR(AnimationStream stream, out Vector3 position, out Quaternion rotation) {
-			position = default;
-			rotation = default;
-		} // 0x000000018BC6FC3C-0x000000018BC6FC80
-		public void SetPosition(AnimationStream stream, Vector3 position) {} // 0x000000018BC70120-0x000000018BC70174
-		public void SetRotation(AnimationStream stream, Quaternion rotation) {} // 0x000000018BC70174-0x000000018BC701BC
-		public void SetGlobalTR(AnimationStream stream, Vector3 position, Quaternion rotation, bool useMask = false /* Metadata: 0x0207FF39 */) {} // 0x000000018BC6FF2C-0x000000018BC6FFA4
-		public bool IsResolved(AnimationStream stream) => default; // 0x000000018BC6FE78-0x000000018BC6FEB4
-		public bool IsValid(AnimationStream stream) => default; // 0x000000018BC6FEB4-0x000000018BC6FEF0
-		public void Resolve(AnimationStream stream) {} // 0x000000018BC6FEF0-0x000000018BC6FF2C
-		public static ReadWriteTransformHandle Bind(Animator animator, Transform transform) => default; // 0x000000018BC6FAA8-0x000000018BC6FC3C
+		public Vector3 GetLocalPosition(AnimationStream stream); // 0x000000018B15283C-0x000000018B152894
+		public Quaternion GetLocalRotation(AnimationStream stream); // 0x000000018B152894-0x000000018B1528E4
+		public Vector3 GetLocalScale(AnimationStream stream); // 0x000000018B1528E4-0x000000018B15293C
+		public void GetLocalTRS(AnimationStream stream, out Vector3 position, out Quaternion rotation, out Vector3 scale); // 0x000000018B15293C-0x000000018B15298C
+		public void SetLocalPosition(AnimationStream stream, Vector3 position); // 0x000000018B152B60-0x000000018B152BB4
+		public void SetLocalRotation(AnimationStream stream, Quaternion rotation); // 0x000000018B152BB4-0x000000018B152BFC
+		public void SetLocalScale(AnimationStream stream, Vector3 scale); // 0x000000018B152BFC-0x000000018B152C50
+		public void SetLocalTRS(AnimationStream stream, Vector3 position, Quaternion rotation, Vector3 scale, bool useMask = false /* Metadata: 0x0234FC45 */); // 0x000000018B152C50-0x000000018B152CDC
+		public Vector3 GetPosition(AnimationStream stream); // 0x000000018B15298C-0x000000018B1529E4
+		public Quaternion GetRotation(AnimationStream stream); // 0x000000018B1529E4-0x000000018B152A34
+		public void GetGlobalTR(AnimationStream stream, out Vector3 position, out Quaternion rotation); // 0x000000018B1527F8-0x000000018B15283C
+		public void SetPosition(AnimationStream stream, Vector3 position); // 0x000000018B152CDC-0x000000018B152D30
+		public void SetRotation(AnimationStream stream, Quaternion rotation); // 0x000000018B152D30-0x000000018B152D78
+		public void SetGlobalTR(AnimationStream stream, Vector3 position, Quaternion rotation, bool useMask = false /* Metadata: 0x0234FC46 */); // 0x000000018B152AE8-0x000000018B152B60
+		public bool IsResolved(AnimationStream stream); // 0x000000018B152A34-0x000000018B152A70
+		public bool IsValid(AnimationStream stream); // 0x000000018B152A70-0x000000018B152AAC
+		public void Resolve(AnimationStream stream); // 0x000000018B152AAC-0x000000018B152AE8
+		public static ReadWriteTransformHandle Bind(Animator animator, Transform transform); // 0x000000018B152664-0x000000018B1527F8
 	}
 
-	public struct ReadOnlyTransformHandle // TypeDefIndex: 58853
+	public struct ReadOnlyTransformHandle // TypeDefIndex: 61457
 	{
 		// Fields
 		private TransformStreamHandle m_StreamHandle; // 0x00
@@ -801,27 +826,21 @@ namespace UnityEngine.Animations.Rigging
 		private byte m_InStream; // 0x14
 	
 		// Methods
-		public Vector3 GetLocalPosition(AnimationStream stream) => default; // 0x000000018BC6F730-0x000000018BC6F7A8
-		public Quaternion GetLocalRotation(AnimationStream stream) => default; // 0x000000018BC6F7A8-0x000000018BC6F818
-		public Vector3 GetLocalScale(AnimationStream stream) => default; // 0x000000018BC6F818-0x000000018BC6F890
-		public void GetLocalTRS(AnimationStream stream, out Vector3 position, out Quaternion rotation, out Vector3 scale) {
-			position = default;
-			rotation = default;
-			scale = default;
-		} // 0x000000018BC6F890-0x000000018BC6F8EC
-		public Vector3 GetPosition(AnimationStream stream) => default; // 0x000000018BC6F8EC-0x000000018BC6F964
-		public Quaternion GetRotation(AnimationStream stream) => default; // 0x000000018BC6F964-0x000000018BC6F9D4
-		public void GetGlobalTR(AnimationStream stream, out Vector3 position, out Quaternion rotation) {
-			position = default;
-			rotation = default;
-		} // 0x000000018BC6F6E4-0x000000018BC6F730
-		public bool IsResolved(AnimationStream stream) => default; // 0x000000018BC6F9D4-0x000000018BC6FA18
-		public bool IsValid(AnimationStream stream) => default; // 0x000000018BC6FA18-0x000000018BC6FA64
-		public void Resolve(AnimationStream stream) {} // 0x000000018BC6FA64-0x000000018BC6FAA8
-		public static ReadOnlyTransformHandle Bind(Animator animator, Transform transform) => default; // 0x000000018BC6F598-0x000000018BC6F6E4
+		public Vector3 GetLocalPosition(AnimationStream stream); // 0x000000018B1522EC-0x000000018B152364
+		public Quaternion GetLocalRotation(AnimationStream stream); // 0x000000018B152364-0x000000018B1523D4
+		public Vector3 GetLocalScale(AnimationStream stream); // 0x000000018B1523D4-0x000000018B15244C
+		public void GetLocalTRS(AnimationStream stream, out Vector3 position, out Quaternion rotation, out Vector3 scale); // 0x000000018B15244C-0x000000018B1524A8
+		public Vector3 GetPosition(AnimationStream stream); // 0x000000018B1524A8-0x000000018B152520
+		public Quaternion GetRotation(AnimationStream stream); // 0x000000018B152520-0x000000018B152590
+		public void GetGlobalTR(AnimationStream stream, out Vector3 position, out Quaternion rotation); // 0x000000018B1522A0-0x000000018B1522EC
+		public bool IsResolved(AnimationStream stream); // 0x000000018B152590-0x000000018B1525D4
+		public bool IsValid(AnimationStream stream); // 0x000000018B1525D4-0x000000018B152620
+		public void Resolve(AnimationStream stream); // 0x000000018B152620-0x000000018B152664
+		public static ReadOnlyTransformHandle Bind(Animator animator, Transform transform); // 0x000000018B152154-0x000000018B1522A0
 	}
 
-	public struct TwistChainConstraintJob : IWeightedAnimationJob // TypeDefIndex: 58854
+	[BurstCompile]
+	public struct TwistChainConstraintJob : IWeightedAnimationJob // TypeDefIndex: 61458
 	{
 		// Fields
 		public ReadWriteTransformHandle rootTarget; // 0x00
@@ -830,17 +849,18 @@ namespace UnityEngine.Animations.Rigging
 		public NativeArray<float> steps; // 0x28
 		public NativeArray<float> weights; // 0x38
 		public NativeArray<Quaternion> rotations; // 0x48
+		[CompilerGenerated]
 		private FloatProperty _jobWeight_k__BackingField; // 0x58
 	
 		// Properties
-		public FloatProperty jobWeight { get; set; } // 0x0000000185FB1D60-0x0000000185FB1D70 0x0000000185FD25E0-0x0000000185FD25F0
+		public FloatProperty jobWeight { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] set; } // 0x0000000184D87E00-0x0000000184D87E10 0x0000000184DA61E0-0x0000000184DA61F0
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC74C54-0x000000018BC7514C
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B157AC0-0x000000018B157FB8
 	}
 
-	public interface ITwistChainConstraintData // TypeDefIndex: 58855
+	public interface ITwistChainConstraintData // TypeDefIndex: 61459
 	{
 		// Properties
 		Transform root { get; }
@@ -850,18 +870,19 @@ namespace UnityEngine.Animations.Rigging
 		AnimationCurve curve { get; }
 	}
 
-	public class TwistChainConstraintJobBinder<T> : AnimationJobBinder<TwistChainConstraintJob, T> // TypeDefIndex: 58856
+	public class TwistChainConstraintJobBinder<T> : AnimationJobBinder<TwistChainConstraintJob, T> // TypeDefIndex: 61460
 		where T : struct, IAnimationJobData, ITwistChainConstraintData
 	{
 		// Constructors
-		public TwistChainConstraintJobBinder() {}
+		public TwistChainConstraintJobBinder();
 	
 		// Methods
-		public override TwistChainConstraintJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(TwistChainConstraintJob job) {}
+		public override TwistChainConstraintJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(TwistChainConstraintJob job);
 	}
 
-	public struct TwistCorrectionJob : IWeightedAnimationJob // TypeDefIndex: 58857
+	[BurstCompile]
+	public struct TwistCorrectionJob : IWeightedAnimationJob // TypeDefIndex: 61461
 	{
 		// Fields
 		public ReadOnlyTransformHandle source; // 0x00
@@ -871,18 +892,19 @@ namespace UnityEngine.Animations.Rigging
 		public NativeArray<PropertyStreamHandle> twistWeights; // 0x48
 		public NativeArray<Quaternion> twistBindRotations; // 0x58
 		public NativeArray<float> weightBuffer; // 0x68
+		[CompilerGenerated]
 		private FloatProperty _jobWeight_k__BackingField; // 0x78
 	
 		// Properties
-		public FloatProperty jobWeight { get; set; } // 0x0000000185FB9E60-0x0000000185FB9E70 0x0000000185FCD380-0x0000000185FCD390
+		public FloatProperty jobWeight { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] set; } // 0x0000000184D8E8F0-0x0000000184D8E900 0x0000000184DA96F0-0x0000000184DA9700
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC753A0-0x000000018BC7575C
-		private static Quaternion TwistRotation(Vector3 axis, Quaternion rot) => default; // 0x0000000185FD7110-0x0000000185FD7150
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B15820C-0x000000018B1585C8
+		private static Quaternion TwistRotation(Vector3 axis, Quaternion rot); // 0x0000000184DAB160-0x0000000184DAB1A0
 	}
 
-	public interface ITwistCorrectionData // TypeDefIndex: 58858
+	public interface ITwistCorrectionData // TypeDefIndex: 61462
 	{
 		// Properties
 		Transform source { get; }
@@ -891,18 +913,19 @@ namespace UnityEngine.Animations.Rigging
 		string twistNodesProperty { get; }
 	}
 
-	public class TwistCorrectionJobBinder<T> : AnimationJobBinder<TwistCorrectionJob, T> // TypeDefIndex: 58859
+	public class TwistCorrectionJobBinder<T> : AnimationJobBinder<TwistCorrectionJob, T> // TypeDefIndex: 61463
 		where T : struct, IAnimationJobData, ITwistCorrectionData
 	{
 		// Constructors
-		public TwistCorrectionJobBinder() {}
+		public TwistCorrectionJobBinder();
 	
 		// Methods
-		public override TwistCorrectionJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(TwistCorrectionJob job) {}
+		public override TwistCorrectionJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(TwistCorrectionJob job);
 	}
 
-	public struct TwoBoneIKConstraintJob : IWeightedAnimationJob // TypeDefIndex: 58860
+	[BurstCompile]
+	public struct TwoBoneIKConstraintJob : IWeightedAnimationJob // TypeDefIndex: 61464
 	{
 		// Fields
 		public ReadWriteTransformHandle root; // 0x00
@@ -914,17 +937,18 @@ namespace UnityEngine.Animations.Rigging
 		public FloatProperty targetPositionWeight; // 0x70
 		public FloatProperty targetRotationWeight; // 0x80
 		public FloatProperty hintWeight; // 0x90
+		[CompilerGenerated]
 		private FloatProperty _jobWeight_k__BackingField; // 0xA0
 	
 		// Properties
-		public FloatProperty jobWeight { get; set; } // 0x0000000185FCCCE0-0x0000000185FCCCF0 0x0000000185FCCD70-0x0000000185FCCD80
+		public FloatProperty jobWeight { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] set; } // 0x0000000184DA1260-0x0000000184DA1270 0x0000000184DA1300-0x0000000184DA1310
 	
 		// Methods
-		public void ProcessRootMotion(AnimationStream stream) {} // 0x0000000185492010-0x0000000185492020
-		public void ProcessAnimation(AnimationStream stream) {} // 0x000000018BC75B00-0x000000018BC75EA0
+		public void ProcessRootMotion(AnimationStream stream); // 0x00000001841E1670-0x00000001841E1680
+		public void ProcessAnimation(AnimationStream stream); // 0x000000018B15896C-0x000000018B158D0C
 	}
 
-	public interface ITwoBoneIKConstraintData // TypeDefIndex: 58861
+	public interface ITwoBoneIKConstraintData // TypeDefIndex: 61465
 	{
 		// Properties
 		Transform root { get; }
@@ -939,199 +963,278 @@ namespace UnityEngine.Animations.Rigging
 		string hintWeightFloatProperty { get; }
 	}
 
-	public class TwoBoneIKConstraintJobBinder<T> : AnimationJobBinder<TwoBoneIKConstraintJob, T> // TypeDefIndex: 58862
+	public class TwoBoneIKConstraintJobBinder<T> : AnimationJobBinder<TwoBoneIKConstraintJob, T> // TypeDefIndex: 61466
 		where T : struct, IAnimationJobData, ITwoBoneIKConstraintData
 	{
 		// Constructors
-		public TwoBoneIKConstraintJobBinder() {}
+		public TwoBoneIKConstraintJobBinder();
 	
 		// Methods
-		public override TwoBoneIKConstraintJob Create(Animator animator, ref ref T data, Component component) => default;
-		public override void Destroy(TwoBoneIKConstraintJob job) {}
+		public override TwoBoneIKConstraintJob Create(Animator animator, ref ref T data, Component component);
+		public override void Destroy(TwoBoneIKConstraintJob job);
 	}
 
-	public class WeightedTransformArrayBinder // TypeDefIndex: 58863
+	public class WeightedTransformArrayBinder // TypeDefIndex: 61467
 	{
 		// Constructors
-		public WeightedTransformArrayBinder() {} // 0x0000000185492010-0x0000000185492020
+		public WeightedTransformArrayBinder(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static void BindReadOnlyTransforms(Animator animator, Component component, WeightedTransformArray weightedTransformArray, out NativeArray<ReadOnlyTransformHandle> transforms) {
-			transforms = default;
-		} // 0x000000018BC775D4-0x000000018BC776E8
-		public static void BindReadWriteTransforms(Animator animator, Component component, WeightedTransformArray weightedTransformArray, out NativeArray<ReadWriteTransformHandle> transforms) {
-			transforms = default;
-		} // 0x000000018BC776E8-0x000000018BC777F8
-		public static void BindWeights(Animator animator, Component component, WeightedTransformArray weightedTransformArray, string name, out NativeArray<PropertyStreamHandle> weights) {
-			weights = default;
-		} // 0x000000018BC777F8-0x000000018BC77988
+		public static void BindReadOnlyTransforms(Animator animator, Component component, WeightedTransformArray weightedTransformArray, out NativeArray<ReadOnlyTransformHandle> transforms); // 0x000000018B15A440-0x000000018B15A554
+		public static void BindReadWriteTransforms(Animator animator, Component component, WeightedTransformArray weightedTransformArray, out NativeArray<ReadWriteTransformHandle> transforms); // 0x000000018B15A554-0x000000018B15A664
+		public static void BindWeights(Animator animator, Component component, WeightedTransformArray weightedTransformArray, string name, out NativeArray<PropertyStreamHandle> weights); // 0x000000018B15A664-0x000000018B15A7F4
 	}
 
 	[Serializable]
-	public struct BlendConstraintData : IAnimationJobData, IBlendConstraintData // TypeDefIndex: 58864
+	public struct BlendConstraintData : IAnimationJobData, IBlendConstraintData // TypeDefIndex: 61468
 	{
 		// Fields
+		[SerializeField]
 		private Transform m_ConstrainedObject; // 0x00
+		[SerializeField]
+		[SyncSceneToStream]
 		private Transform m_SourceA; // 0x08
+		[SerializeField]
+		[SyncSceneToStream]
 		private Transform m_SourceB; // 0x10
+		[SerializeField]
+		[SyncSceneToStream]
 		private bool m_BlendPosition; // 0x18
+		[SerializeField]
+		[SyncSceneToStream]
 		private bool m_BlendRotation; // 0x19
+		[Range(0f, 1f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_PositionWeight; // 0x1C
+		[Range(0f, 1f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_RotationWeight; // 0x20
+		[NotKeyable]
+		[SerializeField]
 		private bool m_MaintainPositionOffsets; // 0x24
+		[NotKeyable]
+		[SerializeField]
 		private bool m_MaintainRotationOffsets; // 0x25
 	
 		// Properties
-		public Transform constrainedObject { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public Transform sourceObjectA { get => default; set {} } // 0x000000018357A260-0x000000018357A270 0x00000001877900A4-0x00000001877900B4
-		public Transform sourceObjectB { get => default; set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public bool blendPosition { get => default; set {} } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
-		public bool blendRotation { get => default; set {} } // 0x0000000181A73E90-0x0000000181A73EA0 0x0000000181A73EB0-0x0000000181A73EC0
-		public float positionWeight { get => default; set {} } // 0x0000000185FB0850-0x0000000185FB0860 0x0000000186470D94-0x0000000186470DAC
-		public float rotationWeight { get => default; set {} } // 0x0000000181C9AC70-0x0000000181C9AC80 0x000000018AAE677C-0x000000018AAE6794
-		public bool maintainPositionOffsets { get => default; set {} } // 0x0000000185FB0810-0x0000000185FB0820 0x0000000185FB0820-0x0000000185FB0830
-		public bool maintainRotationOffsets { get => default; set {} } // 0x0000000185FB0860-0x0000000185FB0870 0x0000000185FB0880-0x0000000185FB0890
-		string IBlendConstraintData.blendPositionBoolProperty { get => default; } // 0x000000018BC672A4-0x000000018BC672D8 
-		string IBlendConstraintData.blendRotationBoolProperty { get => default; } // 0x000000018BC672D8-0x000000018BC6730C 
-		string IBlendConstraintData.positionWeightFloatProperty { get => default; } // 0x000000018BC6730C-0x000000018BC67340 
-		string IBlendConstraintData.rotationWeightFloatProperty { get => default; } // 0x000000018BC67340-0x000000018BC67374 
+		public Transform constrainedObject { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public Transform sourceObjectA { get; set; } // 0x0000000184D88320-0x0000000184D88330 0x00000001867D5E9C-0x00000001867D5EAC
+		public Transform sourceObjectB { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public bool blendPosition { get; set; } // 0x0000000184D86340-0x0000000184D86350 0x0000000184D86350-0x0000000184D86360
+		public bool blendRotation { get; set; } // 0x0000000184D866A0-0x0000000184D866B0 0x0000000184D866C0-0x0000000184D866D0
+		public float positionWeight { get; set; } // 0x0000000184D868F0-0x0000000184D86900 0x0000000189F4C9E8-0x0000000189F4CA00
+		public float rotationWeight { get; set; } // 0x00000001811EC8A0-0x00000001811EC8B0 0x0000000189F4C9D0-0x0000000189F4C9E8
+		public bool maintainPositionOffsets { get; set; } // 0x0000000184D86870-0x0000000184D86880 0x0000000184D86880-0x0000000184D86890
+		public bool maintainRotationOffsets { get; set; } // 0x0000000184D86930-0x0000000184D86940 0x0000000184D86950-0x0000000184D86960
+		string IBlendConstraintData.blendPositionBoolProperty { get; } // 0x000000018B149C20-0x000000018B149C54 
+		string IBlendConstraintData.blendRotationBoolProperty { get; } // 0x000000018B149C54-0x000000018B149C88 
+		string IBlendConstraintData.positionWeightFloatProperty { get; } // 0x000000018B149C88-0x000000018B149CBC 
+		string IBlendConstraintData.rotationWeightFloatProperty { get; } // 0x000000018B149CBC-0x000000018B149CF0 
 	
 		// Methods
-		bool IAnimationJobData.IsValid() => default; // 0x000000018BC671C0-0x000000018BC67258
-		void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC67258-0x000000018BC672A4
+		bool IAnimationJobData.IsValid(); // 0x000000018B149B3C-0x000000018B149BD4
+		void IAnimationJobData.SetDefaultValues(); // 0x000000018B149BD4-0x000000018B149C20
 	}
 
-	public class BlendConstraint : RigConstraint<BlendConstraintJob, BlendConstraintData, BlendConstraintJobBinder<BlendConstraintData>> // TypeDefIndex: 58865
+	[AddComponentMenu("Animation Rigging/Blend Constraint")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/constraints/BlendConstraint.html")]
+	public class BlendConstraint : RigConstraint<BlendConstraintJob, BlendConstraintData, BlendConstraintJobBinder<BlendConstraintData>> // TypeDefIndex: 61469
 	{
 		// Constructors
-		public BlendConstraint() {} // 0x000000018BC6795C-0x000000018BC679B0
+		public BlendConstraint(); // 0x000000018B14A2D8-0x000000018B14A32C
 	
 		// Methods
-		protected override void OnValidate() {} // 0x000000018BC678F8-0x000000018BC6795C
+		protected override void OnValidate(); // 0x000000018B14A274-0x000000018B14A2D8
 	}
 
 	[Serializable]
-	public struct ChainIKConstraintData : IAnimationJobData, IChainIKConstraintData // TypeDefIndex: 58866
+	public struct ChainIKConstraintData : IAnimationJobData, IChainIKConstraintData // TypeDefIndex: 61470
 	{
 		// Fields
-		internal const int k_MinIterations = 1; // Metadata: 0x0207FF3A
-		internal const int k_MaxIterations = 50; // Metadata: 0x0207FF3B
-		internal const float k_MinTolerance = 0f; // Metadata: 0x0207FF3C
-		internal const float k_MaxTolerance = 0.01f; // Metadata: 0x0207FF40
+		internal const int k_MinIterations = 1; // Metadata: 0x0234FC47
+		internal const int k_MaxIterations = 50; // Metadata: 0x0234FC48
+		internal const float k_MinTolerance = 0f; // Metadata: 0x0234FC49
+		internal const float k_MaxTolerance = 0.01f; // Metadata: 0x0234FC4D
+		[SerializeField]
 		private Transform m_Root; // 0x00
+		[SerializeField]
 		private Transform m_Tip; // 0x08
+		[SerializeField]
+		[SyncSceneToStream]
 		private Transform m_Target; // 0x10
+		[Range(0f, 1f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_ChainRotationWeight; // 0x18
+		[Range(0f, 1f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_TipRotationWeight; // 0x1C
+		[NotKeyable]
+		[Range(1f, 50f)]
+		[SerializeField]
 		private int m_MaxIterations; // 0x20
+		[NotKeyable]
+		[Range(0f, 0.01f)]
+		[SerializeField]
 		private float m_Tolerance; // 0x24
+		[NotKeyable]
+		[SerializeField]
 		private bool m_MaintainTargetPositionOffset; // 0x28
+		[NotKeyable]
+		[SerializeField]
 		private bool m_MaintainTargetRotationOffset; // 0x29
 	
 		// Properties
-		public Transform root { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public Transform tip { get => default; set {} } // 0x000000018357A260-0x000000018357A270 0x00000001877900A4-0x00000001877900B4
-		public Transform target { get => default; set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public float chainRotationWeight { get => default; set {} } // 0x0000000181C9AC50-0x0000000181C9AC60 0x0000000189CBA374-0x0000000189CBA38C
-		public float tipRotationWeight { get => default; set {} } // 0x0000000185FB0850-0x0000000185FB0860 0x0000000186470D94-0x0000000186470DAC
-		public int maxIterations { get => default; set {} } // 0x00000001813B88B0-0x00000001813B88C0 0x000000018BC67D1C-0x000000018BC67D3C
-		public float tolerance { get => default; set {} } // 0x0000000185FB3810-0x0000000185FB3820 0x000000018BC67D3C-0x000000018BC67D60
-		public bool maintainTargetPositionOffset { get => default; set {} } // 0x00000001813B31B0-0x00000001813B31C0 0x00000001813B4840-0x00000001813B4850
-		public bool maintainTargetRotationOffset { get => default; set {} } // 0x00000001813B34D0-0x00000001813B34E0 0x00000001813B4850-0x00000001813B4860
-		string IChainIKConstraintData.chainRotationWeightFloatProperty { get => default; } // 0x000000018BC67CB4-0x000000018BC67CE8 
-		string IChainIKConstraintData.tipRotationWeightFloatProperty { get => default; } // 0x000000018BC67CE8-0x000000018BC67D1C 
+		public Transform root { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public Transform tip { get; set; } // 0x0000000184D88320-0x0000000184D88330 0x00000001867D5E9C-0x00000001867D5EAC
+		public Transform target { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public float chainRotationWeight { get; set; } // 0x0000000184D86380-0x0000000184D86390 0x00000001890D4BA8-0x00000001890D4BC0
+		public float tipRotationWeight { get; set; } // 0x0000000184D868F0-0x0000000184D86900 0x0000000189F4C9E8-0x0000000189F4CA00
+		public int maxIterations { get; set; } // 0x0000000182B70F90-0x0000000182B70FA0 0x000000018B14A6A8-0x000000018B14A6C8
+		public float tolerance { get; set; } // 0x0000000184D89850-0x0000000184D89860 0x000000018B14A6C8-0x000000018B14A6EC
+		public bool maintainTargetPositionOffset { get; set; } // 0x00000001811F33C0-0x00000001811F33D0 0x00000001811F33D0-0x00000001811F33E0
+		public bool maintainTargetRotationOffset { get; set; } // 0x0000000184D867B0-0x0000000184D867C0 0x0000000184D867C0-0x0000000184D867D0
+		string IChainIKConstraintData.chainRotationWeightFloatProperty { get; } // 0x000000018B14A640-0x000000018B14A674 
+		string IChainIKConstraintData.tipRotationWeightFloatProperty { get; } // 0x000000018B14A674-0x000000018B14A6A8 
 	
 		// Methods
-		bool IAnimationJobData.IsValid() => default; // 0x000000018BC67B1C-0x000000018BC67C60
-		void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC67C60-0x000000018BC67CB4
+		bool IAnimationJobData.IsValid(); // 0x000000018B14A4A8-0x000000018B14A5EC
+		void IAnimationJobData.SetDefaultValues(); // 0x000000018B14A5EC-0x000000018B14A640
 	}
 
-	public class ChainIKConstraint : RigConstraint<ChainIKConstraintJob, ChainIKConstraintData, ChainIKConstraintJobBinder<ChainIKConstraintData>> // TypeDefIndex: 58867
+	[AddComponentMenu("Animation Rigging/Chain IK Constraint")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/constraints/ChainIKConstraint.html")]
+	public class ChainIKConstraint : RigConstraint<ChainIKConstraintJob, ChainIKConstraintData, ChainIKConstraintJobBinder<ChainIKConstraintData>> // TypeDefIndex: 61471
 	{
 		// Constructors
-		public ChainIKConstraint() {} // 0x000000018BC68528-0x000000018BC6857C
+		public ChainIKConstraint(); // 0x000000018B14AEB4-0x000000018B14AF08
 	
 		// Methods
-		protected override void OnValidate() {} // 0x000000018BC68474-0x000000018BC68528
+		protected override void OnValidate(); // 0x000000018B14AE00-0x000000018B14AEB4
 	}
 
 	[Serializable]
-	public struct DampedTransformData : IAnimationJobData, IDampedTransformData // TypeDefIndex: 58868
+	public struct DampedTransformData : IAnimationJobData, IDampedTransformData // TypeDefIndex: 61472
 	{
 		// Fields
+		[SerializeField]
 		private Transform m_ConstrainedObject; // 0x00
+		[SerializeField]
+		[SyncSceneToStream]
 		private Transform m_Source; // 0x08
+		[Range(0f, 1f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_DampPosition; // 0x10
+		[Range(0f, 1f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_DampRotation; // 0x14
+		[NotKeyable]
+		[SerializeField]
 		private bool m_MaintainAim; // 0x18
 	
 		// Properties
-		public Transform constrainedObject { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public Transform sourceObject { get => default; set {} } // 0x000000018357A260-0x000000018357A270 0x00000001877900A4-0x00000001877900B4
-		public float dampPosition { get => default; set {} } // 0x0000000181DCCCE0-0x0000000181DCCCF0 0x000000018BC68BAC-0x000000018BC68BC4
-		public float dampRotation { get => default; set {} } // 0x0000000185FB2D80-0x0000000185FB2D90 0x000000018BC68BC4-0x000000018BC68BDC
-		public bool maintainAim { get => default; set {} } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
-		string IDampedTransformData.dampPositionFloatProperty { get => default; } // 0x000000018BC68B44-0x000000018BC68B78 
-		string IDampedTransformData.dampRotationFloatProperty { get => default; } // 0x000000018BC68B78-0x000000018BC68BAC 
+		public Transform constrainedObject { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public Transform sourceObject { get; set; } // 0x0000000184D88320-0x0000000184D88330 0x00000001867D5E9C-0x00000001867D5EAC
+		public float dampPosition { get; set; } // 0x0000000184D85F70-0x0000000184D85F80 0x000000018B14B538-0x000000018B14B550
+		public float dampRotation { get; set; } // 0x0000000184D88D40-0x0000000184D88D50 0x000000018B14B550-0x000000018B14B568
+		public bool maintainAim { get; set; } // 0x0000000184D86340-0x0000000184D86350 0x0000000184D86350-0x0000000184D86360
+		string IDampedTransformData.dampPositionFloatProperty { get; } // 0x000000018B14B4D0-0x000000018B14B504 
+		string IDampedTransformData.dampRotationFloatProperty { get; } // 0x000000018B14B504-0x000000018B14B538 
 	
 		// Methods
-		bool IAnimationJobData.IsValid() => default; // 0x000000018BC68A90-0x000000018BC68B08
-		void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC68B08-0x000000018BC68B44
+		bool IAnimationJobData.IsValid(); // 0x000000018B14B41C-0x000000018B14B494
+		void IAnimationJobData.SetDefaultValues(); // 0x000000018B14B494-0x000000018B14B4D0
 	}
 
-	public class DampedTransform : RigConstraint<DampedTransformJob, DampedTransformData, DampedTransformJobBinder<DampedTransformData>> // TypeDefIndex: 58869
+	[AddComponentMenu("Animation Rigging/Damped Transform")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/constraints/DampedTransform.html")]
+	public class DampedTransform : RigConstraint<DampedTransformJob, DampedTransformData, DampedTransformJobBinder<DampedTransformData>> // TypeDefIndex: 61473
 	{
 		// Constructors
-		public DampedTransform() {} // 0x000000018BC693E8-0x000000018BC6943C
+		public DampedTransform(); // 0x000000018B14BD74-0x000000018B14BDC8
 	
 		// Methods
-		protected override void OnValidate() {} // 0x000000018BC69384-0x000000018BC693E8
+		protected override void OnValidate(); // 0x000000018B14BD10-0x000000018B14BD74
 	}
 
 	[Serializable]
-	public struct MultiAimConstraintData : IAnimationJobData, IMultiAimConstraintData // TypeDefIndex: 58872
+	public struct MultiAimConstraintData : IAnimationJobData, IMultiAimConstraintData // TypeDefIndex: 61476
 	{
 		// Fields
-		internal const float k_MinAngularLimit = -180f; // Metadata: 0x0207FF44
-		internal const float k_MaxAngularLimit = 180f; // Metadata: 0x0207FF48
+		internal const float k_MinAngularLimit = -180f; // Metadata: 0x0234FC51
+		internal const float k_MaxAngularLimit = 180f; // Metadata: 0x0234FC55
+		[SerializeField]
 		private Transform m_ConstrainedObject; // 0x00
+		[SerializeField]
+		[SyncSceneToStream]
+		[WeightRange(0f, 1f)]
 		private WeightedTransformArray m_SourceObjects; // 0x08
+		[SerializeField]
+		[SyncSceneToStream]
 		private Vector3 m_Offset; // 0x90
+		[Range(-180f, 180f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_MinLimit; // 0x9C
+		[Range(-180f, 180f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_MaxLimit; // 0xA0
+		[NotKeyable]
+		[SerializeField]
 		private Axis m_AimAxis; // 0xA4
+		[NotKeyable]
+		[SerializeField]
 		private Axis m_UpAxis; // 0xA8
+		[NotKeyable]
+		[SerializeField]
 		private WorldUpType m_WorldUpType; // 0xAC
+		[SerializeField]
+		[SyncSceneToStream]
 		private Transform m_WorldUpObject; // 0xB0
+		[NotKeyable]
+		[SerializeField]
 		private Axis m_WorldUpAxis; // 0xB8
+		[NotKeyable]
+		[SerializeField]
 		private bool m_MaintainOffset; // 0xBC
+		[NotKeyable]
+		[SerializeField]
 		private Vector3Bool m_ConstrainedAxes; // 0xBD
 	
 		// Properties
-		public Transform constrainedObject { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public WeightedTransformArray sourceObjects { get => default; set {} } // 0x0000000185FD7030-0x0000000185FD7090 0x000000018BC69C14-0x000000018BC69C78
-		public bool maintainOffset { get => default; set {} } // 0x0000000185FD6F30-0x0000000185FD6F40 0x0000000185FD6F40-0x0000000185FD6F50
-		public Vector3 offset { get => default; set {} } // 0x0000000185FBCED0-0x0000000185FBCEF0 0x0000000185FBF7F0-0x0000000185FBF810
-		public Vector2 limits { get => default; set {} } // 0x0000000185FD4540-0x0000000185FD4560 0x000000018BC69BB4-0x000000018BC69C14
-		public Axis aimAxis { get => default; set {} } // 0x0000000185FB2CE0-0x0000000185FB2CF0 0x0000000185FB2D20-0x0000000185FB2D30
-		public Axis upAxis { get => default; set {} } // 0x0000000185FB2CD0-0x0000000185FB2CE0 0x0000000185FB2D10-0x0000000185FB2D20
-		public WorldUpType worldUpType { get => default; set {} } // 0x0000000185FB2CF0-0x0000000185FB2D00 0x0000000185FB2D30-0x0000000185FB2D40
-		public Axis worldUpAxis { get => default; set {} } // 0x0000000185FB9570-0x0000000185FB9580 0x0000000185FB9590-0x0000000185FB95A0
-		public Transform worldUpObject { get => default; set {} } // 0x000000018346D8F0-0x000000018346D900 0x0000000184784C70-0x0000000184784C90
-		public bool constrainedXAxis { get => default; set {} } // 0x0000000185FD7000-0x0000000185FD7010 0x0000000185FD7090-0x0000000185FD70A0
-		public bool constrainedYAxis { get => default; set {} } // 0x0000000185FD7010-0x0000000185FD7020 0x0000000185FD70A0-0x0000000185FD70B0
-		public bool constrainedZAxis { get => default; set {} } // 0x0000000185FD7020-0x0000000185FD7030 0x0000000185FD70B0-0x0000000185FD70C0
-		Vector3 IMultiAimConstraintData.aimAxis { get => default; } // 0x000000018BC69A48-0x000000018BC69A7C 
-		Vector3 IMultiAimConstraintData.upAxis { get => default; } // 0x000000018BC69B4C-0x000000018BC69B80 
-		int IMultiAimConstraintData.worldUpType { get => default; } // 0x0000000185FB2CF0-0x0000000185FB2D00 
-		Vector3 IMultiAimConstraintData.worldUpAxis { get => default; } // 0x000000018BC69B80-0x000000018BC69BB4 
-		string IMultiAimConstraintData.offsetVector3Property { get => default; } // 0x000000018BC69AE4-0x000000018BC69B18 
-		string IMultiAimConstraintData.minLimitFloatProperty { get => default; } // 0x000000018BC69AB0-0x000000018BC69AE4 
-		string IMultiAimConstraintData.maxLimitFloatProperty { get => default; } // 0x000000018BC69A7C-0x000000018BC69AB0 
-		string IMultiAimConstraintData.sourceObjectsProperty { get => default; } // 0x000000018BC69B18-0x000000018BC69B4C 
+		public Transform constrainedObject { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public WeightedTransformArray sourceObjects { get; set; } // 0x0000000184D9C2C0-0x0000000184D9C320 0x000000018B14C62C-0x000000018B14C690
+		public bool maintainOffset { get; set; } // 0x0000000184D8E640-0x0000000184D8E650 0x0000000184D8E670-0x0000000184D8E680
+		public Vector3 offset { get; set; } // 0x0000000184D90DD0-0x0000000184D90DF0 0x0000000184D90E30-0x0000000184D90E50
+		public Vector2 limits { get; set; } // 0x0000000184DA84B0-0x0000000184DA84D0 0x000000018B14C5CC-0x000000018B14C62C
+		public Axis aimAxis { get; set; } // 0x0000000184D88C90-0x0000000184D88CA0 0x0000000184D88CF0-0x0000000184D88D00
+		public Axis upAxis { get; set; } // 0x0000000184D88C80-0x0000000184D88C90 0x0000000184D88CE0-0x0000000184D88CF0
+		public WorldUpType worldUpType { get; set; } // 0x0000000184D88CA0-0x0000000184D88CB0 0x0000000184D88D00-0x0000000184D88D10
+		public Axis worldUpAxis { get; set; } // 0x0000000184D8E580-0x0000000184D8E590 0x0000000184D8E5A0-0x0000000184D8E5B0
+		public Transform worldUpObject { get; set; } // 0x0000000184D86250-0x0000000184D86260 0x0000000184D84CE0-0x0000000184D84D00
+		public bool constrainedXAxis { get; set; } // 0x0000000184DAB0C0-0x0000000184DAB0D0 0x0000000184DAB0F0-0x0000000184DAB100
+		public bool constrainedYAxis { get; set; } // 0x0000000184DAB0D0-0x0000000184DAB0E0 0x0000000184DAB100-0x0000000184DAB110
+		public bool constrainedZAxis { get; set; } // 0x0000000184DAB0E0-0x0000000184DAB0F0 0x0000000184DAB110-0x0000000184DAB120
+		Vector3 IMultiAimConstraintData.aimAxis { get; } // 0x000000018B14C460-0x000000018B14C494 
+		Vector3 IMultiAimConstraintData.upAxis { get; } // 0x000000018B14C564-0x000000018B14C598 
+		int IMultiAimConstraintData.worldUpType { get; } // 0x0000000184D88CA0-0x0000000184D88CB0 
+		Vector3 IMultiAimConstraintData.worldUpAxis { get; } // 0x000000018B14C598-0x000000018B14C5CC 
+		string IMultiAimConstraintData.offsetVector3Property { get; } // 0x000000018B14C4FC-0x000000018B14C530 
+		string IMultiAimConstraintData.minLimitFloatProperty { get; } // 0x000000018B14C4C8-0x000000018B14C4FC 
+		string IMultiAimConstraintData.maxLimitFloatProperty { get; } // 0x000000018B14C494-0x000000018B14C4C8 
+		string IMultiAimConstraintData.sourceObjectsProperty { get; } // 0x000000018B14C530-0x000000018B14C564 
 	
 		// Nested types
-		public enum Axis // TypeDefIndex: 58870
+		public enum Axis // TypeDefIndex: 61474
 		{
 			X = 0,
 			X_NEG = 1,
@@ -1141,7 +1244,7 @@ namespace UnityEngine.Animations.Rigging
 			Z_NEG = 5
 		}
 	
-		public enum WorldUpType // TypeDefIndex: 58871
+		public enum WorldUpType // TypeDefIndex: 61475
 		{
 			None = 0,
 			SceneUp = 1,
@@ -1151,186 +1254,252 @@ namespace UnityEngine.Animations.Rigging
 		}
 	
 		// Methods
-		bool IAnimationJobData.IsValid() => default; // 0x000000018BC697F0-0x000000018BC69974
-		void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC69974-0x000000018BC69A48
-		private static Vector3 Convert(Axis axis) => default; // 0x000000018BC69784-0x000000018BC697F0
+		bool IAnimationJobData.IsValid(); // 0x000000018B14C17C-0x000000018B14C38C
+		void IAnimationJobData.SetDefaultValues(); // 0x000000018B14C38C-0x000000018B14C460
+		private static Vector3 Convert(Axis axis); // 0x000000018B14C110-0x000000018B14C17C
 	}
 
-	public class MultiAimConstraint : RigConstraint<MultiAimConstraintJob, MultiAimConstraintData, MultiAimConstraintJobBinder<MultiAimConstraintData>> // TypeDefIndex: 58873
+	[AddComponentMenu("Animation Rigging/Multi-Aim Constraint")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/constraints/MultiAimConstraint.html")]
+	public class MultiAimConstraint : RigConstraint<MultiAimConstraintJob, MultiAimConstraintData, MultiAimConstraintJobBinder<MultiAimConstraintData>> // TypeDefIndex: 61477
 	{
 		// Constructors
-		public MultiAimConstraint() {} // 0x000000018BC6AFEC-0x000000018BC6B040
+		public MultiAimConstraint(); // 0x000000018B14DA04-0x000000018B14DA58
 	
 		// Methods
-		protected override void OnValidate() {} // 0x000000018BC6AE48-0x000000018BC6AFEC
+		protected override void OnValidate(); // 0x000000018B14D860-0x000000018B14DA04
 	}
 
 	[Serializable]
-	public struct MultiParentConstraintData : IAnimationJobData, IMultiParentConstraintData // TypeDefIndex: 58874
+	public struct MultiParentConstraintData : IAnimationJobData, IMultiParentConstraintData // TypeDefIndex: 61478
 	{
 		// Fields
+		[SerializeField]
 		private Transform m_ConstrainedObject; // 0x00
+		[SerializeField]
+		[SyncSceneToStream]
+		[WeightRange(0f, 1f)]
 		private WeightedTransformArray m_SourceObjects; // 0x08
+		[NotKeyable]
+		[SerializeField]
 		private Vector3Bool m_ConstrainedPositionAxes; // 0x90
+		[NotKeyable]
+		[SerializeField]
 		private Vector3Bool m_ConstrainedRotationAxes; // 0x93
+		[NotKeyable]
+		[SerializeField]
 		private bool m_MaintainPositionOffset; // 0x96
+		[NotKeyable]
+		[SerializeField]
 		private bool m_MaintainRotationOffset; // 0x97
 	
 		// Properties
-		public Transform constrainedObject { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public WeightedTransformArray sourceObjects { get => default; set {} } // 0x0000000185FD7030-0x0000000185FD7090 0x000000018BC69C14-0x000000018BC69C78
-		public bool maintainPositionOffset { get => default; set {} } // 0x0000000185FB3360-0x0000000185FB3370 0x0000000185FCD260-0x0000000185FCD270
-		public bool maintainRotationOffset { get => default; set {} } // 0x0000000185FD70E0-0x0000000185FD70F0 0x0000000185FD7100-0x0000000185FD7110
-		public bool constrainedPositionXAxis { get => default; set {} } // 0x0000000185FB2250-0x0000000185FB2260 0x0000000185FB2260-0x0000000185FB2270
-		public bool constrainedPositionYAxis { get => default; set {} } // 0x0000000185FB2070-0x0000000185FB2080 0x0000000185FB2090-0x0000000185FB20A0
-		public bool constrainedPositionZAxis { get => default; set {} } // 0x0000000185FB2080-0x0000000185FB2090 0x0000000185FB20A0-0x0000000185FB20B0
-		public bool constrainedRotationXAxis { get => default; set {} } // 0x0000000185FD6080-0x0000000185FD6090 0x0000000185FD6850-0x0000000185FD6860
-		public bool constrainedRotationYAxis { get => default; set {} } // 0x0000000185FCD9D0-0x0000000185FCD9E0 0x0000000185FCD9E0-0x0000000185FCD9F0
-		public bool constrainedRotationZAxis { get => default; set {} } // 0x0000000185FB3370-0x0000000185FB3380 0x0000000185FD70F0-0x0000000185FD7100
-		string IMultiParentConstraintData.sourceObjectsProperty { get => default; } // 0x000000018BC6B248-0x000000018BC6B27C 
+		public Transform constrainedObject { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public WeightedTransformArray sourceObjects { get; set; } // 0x0000000184D9C2C0-0x0000000184D9C320 0x000000018B14C62C-0x000000018B14C690
+		public bool maintainPositionOffset { get; set; } // 0x0000000184D893A0-0x0000000184D893B0 0x0000000184D91BE0-0x0000000184D91BF0
+		public bool maintainRotationOffset { get; set; } // 0x0000000184DAB140-0x0000000184DAB150 0x0000000184DAB150-0x0000000184DAB160
+		public bool constrainedPositionXAxis { get; set; } // 0x0000000182EC6590-0x0000000182EC65A0 0x0000000182EC65A0-0x0000000182EC65B0
+		public bool constrainedPositionYAxis { get; set; } // 0x0000000184D88160-0x0000000184D88170 0x0000000184D88180-0x0000000184D88190
+		public bool constrainedPositionZAxis { get; set; } // 0x0000000184D88170-0x0000000184D88180 0x0000000184D88190-0x0000000184D881A0
+		public bool constrainedRotationXAxis { get; set; } // 0x0000000184DAA1C0-0x0000000184DAA1D0 0x0000000184DAA980-0x0000000184DAA990
+		public bool constrainedRotationYAxis { get; set; } // 0x0000000184D91BC0-0x0000000184D91BD0 0x0000000184D91BD0-0x0000000184D91BE0
+		public bool constrainedRotationZAxis { get; set; } // 0x0000000184D893B0-0x0000000184D893C0 0x0000000184D91BF0-0x0000000184D91C00
+		string IMultiParentConstraintData.sourceObjectsProperty { get; } // 0x000000018B14DCEC-0x000000018B14DD20 
 	
 		// Methods
-		bool IAnimationJobData.IsValid() => default; // 0x000000018BC6B040-0x000000018BC6B1C4
-		void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC6B1C4-0x000000018BC6B248
+		bool IAnimationJobData.IsValid(); // 0x000000018B14DA58-0x000000018B14DC68
+		void IAnimationJobData.SetDefaultValues(); // 0x000000018B14DC68-0x000000018B14DCEC
 	}
 
-	public class MultiParentConstraint : RigConstraint<MultiParentConstraintJob, MultiParentConstraintData, MultiParentConstraintJobBinder<MultiParentConstraintData>> // TypeDefIndex: 58875
+	[AddComponentMenu("Animation Rigging/Multi-Parent Constraint")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/constraints/MultiParentConstraint.html")]
+	public class MultiParentConstraint : RigConstraint<MultiParentConstraintJob, MultiParentConstraintData, MultiParentConstraintJobBinder<MultiParentConstraintData>> // TypeDefIndex: 61479
 	{
 		// Constructors
-		public MultiParentConstraint() {} // 0x000000018BC6BE84-0x000000018BC6BED8
+		public MultiParentConstraint(); // 0x000000018B14E928-0x000000018B14E97C
 	
 		// Methods
-		protected override void OnValidate() {} // 0x000000018BC6BD48-0x000000018BC6BE84
+		protected override void OnValidate(); // 0x000000018B14E7EC-0x000000018B14E928
 	}
 
 	[Serializable]
-	public struct MultiPositionConstraintData : IAnimationJobData, IMultiPositionConstraintData // TypeDefIndex: 58876
+	public struct MultiPositionConstraintData : IAnimationJobData, IMultiPositionConstraintData // TypeDefIndex: 61480
 	{
 		// Fields
+		[SerializeField]
 		private Transform m_ConstrainedObject; // 0x00
+		[SerializeField]
+		[SyncSceneToStream]
+		[WeightRange(0f, 1f)]
 		private WeightedTransformArray m_SourceObjects; // 0x08
+		[SerializeField]
+		[SyncSceneToStream]
 		private Vector3 m_Offset; // 0x90
+		[NotKeyable]
+		[SerializeField]
 		private Vector3Bool m_ConstrainedAxes; // 0x9C
+		[NotKeyable]
+		[SerializeField]
 		private bool m_MaintainOffset; // 0x9F
 	
 		// Properties
-		public Transform constrainedObject { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public WeightedTransformArray sourceObjects { get => default; set {} } // 0x0000000185FD7030-0x0000000185FD7090 0x000000018BC69C14-0x000000018BC69C78
-		public bool maintainOffset { get => default; set {} } // 0x0000000185FCECD0-0x0000000185FCECE0 0x0000000185FCED20-0x0000000185FCED30
-		public Vector3 offset { get => default; set {} } // 0x0000000185FBCED0-0x0000000185FBCEF0 0x0000000185FBF7F0-0x0000000185FBF810
-		public bool constrainedXAxis { get => default; set {} } // 0x0000000185FBF7D0-0x0000000185FBF7E0 0x0000000185FBF810-0x0000000185FBF820
-		public bool constrainedYAxis { get => default; set {} } // 0x0000000185FCECC0-0x0000000185FCECD0 0x0000000185FCED10-0x0000000185FCED20
-		public bool constrainedZAxis { get => default; set {} } // 0x0000000185FCECE0-0x0000000185FCECF0 0x0000000185FCED30-0x0000000185FCED40
-		string IMultiPositionConstraintData.offsetVector3Property { get => default; } // 0x000000018BC6C0E4-0x000000018BC6C118 
-		string IMultiPositionConstraintData.sourceObjectsProperty { get => default; } // 0x000000018BC6C118-0x000000018BC6C14C 
+		public Transform constrainedObject { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public WeightedTransformArray sourceObjects { get; set; } // 0x0000000184D9C2C0-0x0000000184D9C320 0x000000018B14C62C-0x000000018B14C690
+		public bool maintainOffset { get; set; } // 0x0000000184DA34E0-0x0000000184DA34F0 0x0000000184DA3530-0x0000000184DA3540
+		public Vector3 offset { get; set; } // 0x0000000184D90DD0-0x0000000184D90DF0 0x0000000184D90E30-0x0000000184D90E50
+		public bool constrainedXAxis { get; set; } // 0x0000000184D92ED0-0x0000000184D92EE0 0x0000000184D92F60-0x0000000184D92F70
+		public bool constrainedYAxis { get; set; } // 0x0000000184DA34D0-0x0000000184DA34E0 0x0000000184DA3520-0x0000000184DA3530
+		public bool constrainedZAxis { get; set; } // 0x0000000184DA34F0-0x0000000184DA3500 0x0000000184DA3540-0x0000000184DA3550
+		string IMultiPositionConstraintData.offsetVector3Property { get; } // 0x000000018B14EC14-0x000000018B14EC48 
+		string IMultiPositionConstraintData.sourceObjectsProperty { get; } // 0x000000018B14EC48-0x000000018B14EC7C 
 	
 		// Methods
-		bool IAnimationJobData.IsValid() => default; // 0x000000018BC6BED8-0x000000018BC6C05C
-		void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC6C05C-0x000000018BC6C0E4
+		bool IAnimationJobData.IsValid(); // 0x000000018B14E97C-0x000000018B14EB8C
+		void IAnimationJobData.SetDefaultValues(); // 0x000000018B14EB8C-0x000000018B14EC14
 	}
 
-	public class MultiPositionConstraint : RigConstraint<MultiPositionConstraintJob, MultiPositionConstraintData, MultiPositionConstraintJobBinder<MultiPositionConstraintData>> // TypeDefIndex: 58877
+	[AddComponentMenu("Animation Rigging/Multi-Position Constraint")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/constraints/MultiPositionConstraint.html")]
+	public class MultiPositionConstraint : RigConstraint<MultiPositionConstraintJob, MultiPositionConstraintData, MultiPositionConstraintJobBinder<MultiPositionConstraintData>> // TypeDefIndex: 61481
 	{
 		// Constructors
-		public MultiPositionConstraint() {} // 0x000000018BC6C984-0x000000018BC6C9D8
+		public MultiPositionConstraint(); // 0x000000018B14F4B4-0x000000018B14F508
 	
 		// Methods
-		protected override void OnValidate() {} // 0x000000018BC6C848-0x000000018BC6C984
+		protected override void OnValidate(); // 0x000000018B14F378-0x000000018B14F4B4
 	}
 
 	[Serializable]
-	public struct MultiReferentialConstraintData : IAnimationJobData, IMultiReferentialConstraintData // TypeDefIndex: 58878
+	public struct MultiReferentialConstraintData : IAnimationJobData, IMultiReferentialConstraintData // TypeDefIndex: 61482
 	{
 		// Fields
+		[SerializeField]
+		[SyncSceneToStream]
 		private int m_Driver; // 0x00
+		[SerializeField]
+		[SyncSceneToStream]
 		private List<Transform> m_SourceObjects; // 0x08
 	
 		// Properties
-		public int driver { get => default; set {} } // 0x00000001818226B0-0x00000001818226C0 0x000000018BC6CD04-0x000000018BC6CD60
-		public List<Transform> sourceObjects { get => default; set {} } // 0x000000018BC6CC80-0x000000018BC6CD04 0x000000018BC6CD60-0x000000018BC6CDD0
-		Transform[] IMultiReferentialConstraintData.sourceObjects { get => default; } // 0x000000018BC6CBE8-0x000000018BC6CC30 
-		int IMultiReferentialConstraintData.driverValue { get => default; } // 0x00000001818226B0-0x00000001818226C0 
-		string IMultiReferentialConstraintData.driverIntProperty { get => default; } // 0x000000018BC6CBB4-0x000000018BC6CBE8 
+		public int driver { get; set; } // 0x0000000182B77620-0x0000000182B77630 0x000000018B14F834-0x000000018B14F890
+		public List<Transform> sourceObjects { get; set; } // 0x000000018B14F7B0-0x000000018B14F834 0x000000018B14F890-0x000000018B14F900
+		Transform[] IMultiReferentialConstraintData.sourceObjects { get; } // 0x000000018B14F718-0x000000018B14F760 
+		int IMultiReferentialConstraintData.driverValue { get; } // 0x0000000182B77620-0x0000000182B77630 
+		string IMultiReferentialConstraintData.driverIntProperty { get; } // 0x000000018B14F6E4-0x000000018B14F718 
 	
 		// Methods
-		bool IAnimationJobData.IsValid() => default; // 0x000000018BC6C9D8-0x000000018BC6CB3C
-		void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC6CB3C-0x000000018BC6CBB4
-		public void UpdateDriver() {} // 0x000000018BC6CC30-0x000000018BC6CC80
+		bool IAnimationJobData.IsValid(); // 0x000000018B14F508-0x000000018B14F66C
+		void IAnimationJobData.SetDefaultValues(); // 0x000000018B14F66C-0x000000018B14F6E4
+		public void UpdateDriver(); // 0x000000018B14F760-0x000000018B14F7B0
 	}
 
-	public class MultiReferentialConstraint : RigConstraint<MultiReferentialConstraintJob, MultiReferentialConstraintData, MultiReferentialConstraintJobBinder<MultiReferentialConstraintData>> // TypeDefIndex: 58879
+	[AddComponentMenu("Animation Rigging/Multi-Referential Constraint")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/constraints/MultiReferentialConstraint.html")]
+	public class MultiReferentialConstraint : RigConstraint<MultiReferentialConstraintJob, MultiReferentialConstraintData, MultiReferentialConstraintJobBinder<MultiReferentialConstraintData>> // TypeDefIndex: 61483
 	{
 		// Constructors
-		public MultiReferentialConstraint() {} // 0x000000018BC6D464-0x000000018BC6D4B8
+		public MultiReferentialConstraint(); // 0x000000018B14FF94-0x000000018B14FFE8
 	
 		// Methods
-		protected override void OnValidate() {} // 0x000000018BC6D420-0x000000018BC6D464
+		protected override void OnValidate(); // 0x000000018B14FF50-0x000000018B14FF94
 	}
 
 	[Serializable]
-	public struct MultiRotationConstraintData : IAnimationJobData, IMultiRotationConstraintData // TypeDefIndex: 58880
+	public struct MultiRotationConstraintData : IAnimationJobData, IMultiRotationConstraintData // TypeDefIndex: 61484
 	{
 		// Fields
+		[SerializeField]
 		private Transform m_ConstrainedObject; // 0x00
+		[SerializeField]
+		[SyncSceneToStream]
+		[WeightRange(0f, 1f)]
 		private WeightedTransformArray m_SourceObjects; // 0x08
+		[SerializeField]
+		[SyncSceneToStream]
 		private Vector3 m_Offset; // 0x90
+		[NotKeyable]
+		[SerializeField]
 		private Vector3Bool m_ConstrainedAxes; // 0x9C
+		[NotKeyable]
+		[SerializeField]
 		private bool m_MaintainOffset; // 0x9F
 	
 		// Properties
-		public Transform constrainedObject { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public WeightedTransformArray sourceObjects { get => default; set {} } // 0x0000000185FD7030-0x0000000185FD7090 0x000000018BC69C14-0x000000018BC69C78
-		public bool maintainOffset { get => default; set {} } // 0x0000000185FCECD0-0x0000000185FCECE0 0x0000000185FCED20-0x0000000185FCED30
-		public Vector3 offset { get => default; set {} } // 0x0000000185FBCED0-0x0000000185FBCEF0 0x0000000185FBF7F0-0x0000000185FBF810
-		public bool constrainedXAxis { get => default; set {} } // 0x0000000185FBF7D0-0x0000000185FBF7E0 0x0000000185FBF810-0x0000000185FBF820
-		public bool constrainedYAxis { get => default; set {} } // 0x0000000185FCECC0-0x0000000185FCECD0 0x0000000185FCED10-0x0000000185FCED20
-		public bool constrainedZAxis { get => default; set {} } // 0x0000000185FCECE0-0x0000000185FCECF0 0x0000000185FCED30-0x0000000185FCED40
-		string IMultiRotationConstraintData.offsetVector3Property { get => default; } // 0x000000018BC6D6C4-0x000000018BC6D6F8 
-		string IMultiRotationConstraintData.sourceObjectsProperty { get => default; } // 0x000000018BC6D6F8-0x000000018BC6D72C 
+		public Transform constrainedObject { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public WeightedTransformArray sourceObjects { get; set; } // 0x0000000184D9C2C0-0x0000000184D9C320 0x000000018B14C62C-0x000000018B14C690
+		public bool maintainOffset { get; set; } // 0x0000000184DA34E0-0x0000000184DA34F0 0x0000000184DA3530-0x0000000184DA3540
+		public Vector3 offset { get; set; } // 0x0000000184D90DD0-0x0000000184D90DF0 0x0000000184D90E30-0x0000000184D90E50
+		public bool constrainedXAxis { get; set; } // 0x0000000184D92ED0-0x0000000184D92EE0 0x0000000184D92F60-0x0000000184D92F70
+		public bool constrainedYAxis { get; set; } // 0x0000000184DA34D0-0x0000000184DA34E0 0x0000000184DA3520-0x0000000184DA3530
+		public bool constrainedZAxis { get; set; } // 0x0000000184DA34F0-0x0000000184DA3500 0x0000000184DA3540-0x0000000184DA3550
+		string IMultiRotationConstraintData.offsetVector3Property { get; } // 0x000000018B150280-0x000000018B1502B4 
+		string IMultiRotationConstraintData.sourceObjectsProperty { get; } // 0x000000018B1502B4-0x000000018B1502E8 
 	
 		// Methods
-		bool IAnimationJobData.IsValid() => default; // 0x000000018BC6D4B8-0x000000018BC6D63C
-		void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC6D63C-0x000000018BC6D6C4
+		bool IAnimationJobData.IsValid(); // 0x000000018B14FFE8-0x000000018B1501F8
+		void IAnimationJobData.SetDefaultValues(); // 0x000000018B1501F8-0x000000018B150280
 	}
 
-	public class MultiRotationConstraint : RigConstraint<MultiRotationConstraintJob, MultiRotationConstraintData, MultiRotationConstraintJobBinder<MultiRotationConstraintData>> // TypeDefIndex: 58881
+	[AddComponentMenu("Animation Rigging/Multi-Rotation Constraint")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/constraints/MultiRotationConstraint.html")]
+	public class MultiRotationConstraint : RigConstraint<MultiRotationConstraintJob, MultiRotationConstraintData, MultiRotationConstraintJobBinder<MultiRotationConstraintData>> // TypeDefIndex: 61485
 	{
 		// Constructors
-		public MultiRotationConstraint() {} // 0x000000018BC6DF58-0x000000018BC6DFAC
+		public MultiRotationConstraint(); // 0x000000018B150B14-0x000000018B150B68
 	
 		// Methods
-		protected override void OnValidate() {} // 0x000000018BC6DE1C-0x000000018BC6DF58
+		protected override void OnValidate(); // 0x000000018B1509D8-0x000000018B150B14
 	}
 
 	[Serializable]
-	public struct OverrideTransformData : IAnimationJobData, IOverrideTransformData // TypeDefIndex: 58883
+	public struct OverrideTransformData : IAnimationJobData, IOverrideTransformData // TypeDefIndex: 61487
 	{
 		// Fields
+		[SerializeField]
 		private Transform m_ConstrainedObject; // 0x00
+		[SerializeField]
+		[SyncSceneToStream]
 		private Transform m_OverrideSource; // 0x08
+		[SerializeField]
+		[SyncSceneToStream]
 		private Vector3 m_OverridePosition; // 0x10
+		[SerializeField]
+		[SyncSceneToStream]
 		private Vector3 m_OverrideRotation; // 0x1C
+		[Range(0f, 1f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_PositionWeight; // 0x28
+		[Range(0f, 1f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_RotationWeight; // 0x2C
+		[NotKeyable]
+		[SerializeField]
 		private Space m_Space; // 0x30
 	
 		// Properties
-		public Transform constrainedObject { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public Transform sourceObject { get => default; set {} } // 0x000000018357A260-0x000000018357A270 0x00000001877900A4-0x00000001877900B4
-		public Space space { get => default; set {} } // 0x00000001813CFF60-0x00000001813CFF70 0x00000001813D0A90-0x00000001813D0AA0
-		public Vector3 position { get => default; set {} } // 0x00000001834AE2B0-0x00000001834AE2D0 0x0000000185FB6850-0x0000000185FB6860
-		public Vector3 rotation { get => default; set {} } // 0x0000000185FBE120-0x0000000185FBE140 0x0000000185FBE140-0x0000000185FBE150
-		public float positionWeight { get => default; set {} } // 0x0000000185FB0A50-0x0000000185FB0A60 0x000000018BC6E4B8-0x000000018BC6E4D0
-		public float rotationWeight { get => default; set {} } // 0x0000000185FB09A0-0x0000000185FB09B0 0x000000018BC6E4D0-0x000000018BC6E4E8
-		int IOverrideTransformData.space { get => default; } // 0x00000001813CFF60-0x00000001813CFF70 
-		string IOverrideTransformData.positionWeightFloatProperty { get => default; } // 0x000000018BC6E41C-0x000000018BC6E450 
-		string IOverrideTransformData.rotationWeightFloatProperty { get => default; } // 0x000000018BC6E484-0x000000018BC6E4B8 
-		string IOverrideTransformData.positionVector3Property { get => default; } // 0x000000018BC6E3E8-0x000000018BC6E41C 
-		string IOverrideTransformData.rotationVector3Property { get => default; } // 0x000000018BC6E450-0x000000018BC6E484 
+		public Transform constrainedObject { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public Transform sourceObject { get; set; } // 0x0000000184D88320-0x0000000184D88330 0x00000001867D5E9C-0x00000001867D5EAC
+		public Space space { get; set; } // 0x0000000184D864F0-0x0000000184D86500 0x0000000184D86740-0x0000000184D86750
+		public Vector3 position { get; set; } // 0x0000000184D8C950-0x0000000184D8C970 0x0000000184D8C970-0x0000000184D8C980
+		public Vector3 rotation { get; set; } // 0x0000000184D90520-0x0000000184D90540 0x0000000184D90500-0x0000000184D90510
+		public float positionWeight { get; set; } // 0x0000000184D86BF0-0x0000000184D86C00 0x000000018B151074-0x000000018B15108C
+		public float rotationWeight { get; set; } // 0x0000000184D86AF0-0x0000000184D86B00 0x000000018B15108C-0x000000018B1510A4
+		int IOverrideTransformData.space { get; } // 0x0000000184D864F0-0x0000000184D86500 
+		string IOverrideTransformData.positionWeightFloatProperty { get; } // 0x000000018B150FD8-0x000000018B15100C 
+		string IOverrideTransformData.rotationWeightFloatProperty { get; } // 0x000000018B151040-0x000000018B151074 
+		string IOverrideTransformData.positionVector3Property { get; } // 0x000000018B150FA4-0x000000018B150FD8 
+		string IOverrideTransformData.rotationVector3Property { get; } // 0x000000018B15100C-0x000000018B151040 
 	
 		// Nested types
 		[Serializable]
-		public enum Space // TypeDefIndex: 58882
+		public enum Space // TypeDefIndex: 61486
 		{
 			World = 0,
 			Local = 1,
@@ -1338,65 +1507,85 @@ namespace UnityEngine.Animations.Rigging
 		}
 	
 		// Methods
-		bool IAnimationJobData.IsValid() => default; // 0x000000018BC6E328-0x000000018BC6E378
-		void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC6E378-0x000000018BC6E3E8
+		bool IAnimationJobData.IsValid(); // 0x000000018B150EE4-0x000000018B150F34
+		void IAnimationJobData.SetDefaultValues(); // 0x000000018B150F34-0x000000018B150FA4
 	}
 
-	public class OverrideTransform : RigConstraint<OverrideTransformJob, OverrideTransformData, OverrideTransformJobBinder<OverrideTransformData>> // TypeDefIndex: 58884
+	[AddComponentMenu("Animation Rigging/Override Transform")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/constraints/OverrideTransform.html")]
+	public class OverrideTransform : RigConstraint<OverrideTransformJob, OverrideTransformData, OverrideTransformJobBinder<OverrideTransformData>> // TypeDefIndex: 61488
 	{
 		// Constructors
-		public OverrideTransform() {} // 0x000000018BC6EE48-0x000000018BC6EE9C
+		public OverrideTransform(); // 0x000000018B151A04-0x000000018B151A58
 	
 		// Methods
-		protected override void OnValidate() {} // 0x000000018BC6EDE4-0x000000018BC6EE48
+		protected override void OnValidate(); // 0x000000018B1519A0-0x000000018B151A04
 	}
 
 	[Serializable]
-	public struct TwistChainConstraintData : IAnimationJobData, ITwistChainConstraintData // TypeDefIndex: 58885
+	public struct TwistChainConstraintData : IAnimationJobData, ITwistChainConstraintData // TypeDefIndex: 61489
 	{
 		// Fields
+		[SerializeField]
 		private Transform m_Root; // 0x00
+		[SerializeField]
 		private Transform m_Tip; // 0x08
+		[SerializeField]
+		[SyncSceneToStream]
 		private Transform m_RootTarget; // 0x10
+		[SerializeField]
+		[SyncSceneToStream]
 		private Transform m_TipTarget; // 0x18
+		[SerializeField]
 		private AnimationCurve m_Curve; // 0x20
 	
 		// Properties
-		public Transform root { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public Transform tip { get => default; set {} } // 0x000000018357A260-0x000000018357A270 0x00000001877900A4-0x00000001877900B4
-		public Transform rootTarget { get => default; set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public Transform tipTarget { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-		public AnimationCurve curve { get => default; set {} } // 0x00000001813B31A0-0x00000001813B31B0 0x000000018646EE40-0x000000018646EE50
+		public Transform root { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public Transform tip { get; set; } // 0x0000000184D88320-0x0000000184D88330 0x00000001867D5E9C-0x00000001867D5EAC
+		public Transform rootTarget { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public Transform tipTarget { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public AnimationCurve curve { get; set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
 	
 		// Methods
-		bool IAnimationJobData.IsValid() => default; // 0x000000018BC74B00-0x000000018BC74BE8
-		void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC74BE8-0x000000018BC74C54
+		bool IAnimationJobData.IsValid(); // 0x000000018B15796C-0x000000018B157A54
+		void IAnimationJobData.SetDefaultValues(); // 0x000000018B157A54-0x000000018B157AC0
 	}
 
-	public class TwistChainConstraint : RigConstraint<TwistChainConstraintJob, TwistChainConstraintData, TwistChainConstraintJobBinder<TwistChainConstraintData>> // TypeDefIndex: 58886
+	[AddComponentMenu("Animation Rigging/Twist Chain Constraint")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/constraints/TwistChainConstraint.html")]
+	public class TwistChainConstraint : RigConstraint<TwistChainConstraintJob, TwistChainConstraintData, TwistChainConstraintJobBinder<TwistChainConstraintData>> // TypeDefIndex: 61490
 	{
 		// Constructors
-		public TwistChainConstraint() {} // 0x000000018BC7514C-0x000000018BC751A0
+		public TwistChainConstraint(); // 0x000000018B157FB8-0x000000018B15800C
 	}
 
 	[Serializable]
-	public struct TwistCorrectionData : IAnimationJobData, ITwistCorrectionData // TypeDefIndex: 58888
+	public struct TwistCorrectionData : IAnimationJobData, ITwistCorrectionData // TypeDefIndex: 61492
 	{
 		// Fields
+		[SerializeField]
+		[SyncSceneToStream]
 		private Transform m_Source; // 0x00
+		[NotKeyable]
+		[SerializeField]
 		private Axis m_TwistAxis; // 0x08
+		[SerializeField]
+		[SyncSceneToStream]
+		[WeightRange(-1f, 1f)]
 		private WeightedTransformArray m_TwistNodes; // 0x10
 	
 		// Properties
-		public Transform sourceObject { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public WeightedTransformArray twistNodes { get => default; set {} } // 0x00000001834A5DF0-0x00000001834A5E50 0x000000018BC7533C-0x000000018BC753A0
-		public Axis twistAxis { get => default; set {} } // 0x0000000181B7E450-0x0000000181B7E460 0x0000000185FB2B90-0x0000000185FB2BA0
-		Transform ITwistCorrectionData.source { get => default; } // 0x00000001834AFB60-0x00000001834AFB70 
-		Vector3 ITwistCorrectionData.twistAxis { get => default; } // 0x000000018BC752D8-0x000000018BC75308 
-		string ITwistCorrectionData.twistNodesProperty { get => default; } // 0x000000018BC75308-0x000000018BC7533C 
+		public Transform sourceObject { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public WeightedTransformArray twistNodes { get; set; } // 0x0000000184D97660-0x0000000184D976C0 0x000000018B1581A8-0x000000018B15820C
+		public Axis twistAxis { get; set; } // 0x0000000184D88B10-0x0000000184D88B20 0x0000000184D88B40-0x0000000184D88B50
+		Transform ITwistCorrectionData.source { get; } // 0x0000000182B76770-0x0000000182B76780 
+		Vector3 ITwistCorrectionData.twistAxis { get; } // 0x000000018B158144-0x000000018B158174 
+		string ITwistCorrectionData.twistNodesProperty { get; } // 0x000000018B158174-0x000000018B1581A8 
 	
 		// Nested types
-		public enum Axis // TypeDefIndex: 58887
+		public enum Axis // TypeDefIndex: 61491
 		{
 			X = 0,
 			Y = 1,
@@ -1404,65 +1593,91 @@ namespace UnityEngine.Animations.Rigging
 		}
 	
 		// Methods
-		private static Vector3 Convert(Axis axis) => default; // 0x000000018B71BC7C-0x000000018B71BCBC
-		bool IAnimationJobData.IsValid() => default; // 0x000000018BC751A0-0x000000018BC75278
-		void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC75278-0x000000018BC752D8
+		private static Vector3 Convert(Axis axis); // 0x000000018ABD4DF4-0x000000018ABD4E34
+		bool IAnimationJobData.IsValid(); // 0x000000018B15800C-0x000000018B1580E4
+		void IAnimationJobData.SetDefaultValues(); // 0x000000018B1580E4-0x000000018B158144
 	}
 
-	public class TwistCorrection : RigConstraint<TwistCorrectionJob, TwistCorrectionData, TwistCorrectionJobBinder<TwistCorrectionData>> // TypeDefIndex: 58889
+	[AddComponentMenu("Animation Rigging/Twist Correction")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/constraints/TwistCorrection.html")]
+	public class TwistCorrection : RigConstraint<TwistCorrectionJob, TwistCorrectionData, TwistCorrectionJobBinder<TwistCorrectionData>> // TypeDefIndex: 61493
 	{
 		// Constructors
-		public TwistCorrection() {} // 0x000000018BC758A0-0x000000018BC758F4
+		public TwistCorrection(); // 0x000000018B15870C-0x000000018B158760
 	
 		// Methods
-		protected override void OnValidate() {} // 0x000000018BC7575C-0x000000018BC758A0
+		protected override void OnValidate(); // 0x000000018B1585C8-0x000000018B15870C
 	}
 
 	[Serializable]
-	public struct TwoBoneIKConstraintData : IAnimationJobData, ITwoBoneIKConstraintData // TypeDefIndex: 58890
+	public struct TwoBoneIKConstraintData : IAnimationJobData, ITwoBoneIKConstraintData // TypeDefIndex: 61494
 	{
 		// Fields
+		[SerializeField]
 		private Transform m_Root; // 0x00
+		[SerializeField]
 		private Transform m_Mid; // 0x08
+		[SerializeField]
 		private Transform m_Tip; // 0x10
+		[SerializeField]
+		[SyncSceneToStream]
 		private Transform m_Target; // 0x18
+		[SerializeField]
+		[SyncSceneToStream]
 		private Transform m_Hint; // 0x20
+		[Range(0f, 1f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_TargetPositionWeight; // 0x28
+		[Range(0f, 1f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_TargetRotationWeight; // 0x2C
+		[Range(0f, 1f)]
+		[SerializeField]
+		[SyncSceneToStream]
 		private float m_HintWeight; // 0x30
+		[NotKeyable]
+		[SerializeField]
 		private bool m_MaintainTargetPositionOffset; // 0x34
+		[NotKeyable]
+		[SerializeField]
 		private bool m_MaintainTargetRotationOffset; // 0x35
 	
 		// Properties
-		public Transform root { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public Transform mid { get => default; set {} } // 0x000000018357A260-0x000000018357A270 0x00000001877900A4-0x00000001877900B4
-		public Transform tip { get => default; set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public Transform target { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-		public Transform hint { get => default; set {} } // 0x00000001813B31A0-0x00000001813B31B0 0x000000018646EE40-0x000000018646EE50
-		public float targetPositionWeight { get => default; set {} } // 0x0000000185FB0A50-0x0000000185FB0A60 0x000000018BC6E4B8-0x000000018BC6E4D0
-		public float targetRotationWeight { get => default; set {} } // 0x0000000185FB09A0-0x0000000185FB09B0 0x000000018BC6E4D0-0x000000018BC6E4E8
-		public float hintWeight { get => default; set {} } // 0x0000000185FB0BE0-0x0000000185FB0BF0 0x000000018BC75AE8-0x000000018BC75B00
-		public bool maintainTargetPositionOffset { get => default; set {} } // 0x0000000185FB0B90-0x0000000185FB0BA0 0x0000000185FB0BB0-0x0000000185FB0BC0
-		public bool maintainTargetRotationOffset { get => default; set {} } // 0x0000000185FB0B80-0x0000000185FB0B90 0x0000000185FB0BA0-0x0000000185FB0BB0
-		string ITwoBoneIKConstraintData.targetPositionWeightFloatProperty { get => default; } // 0x000000018BC75A80-0x000000018BC75AB4 
-		string ITwoBoneIKConstraintData.targetRotationWeightFloatProperty { get => default; } // 0x000000018BC75AB4-0x000000018BC75AE8 
-		string ITwoBoneIKConstraintData.hintWeightFloatProperty { get => default; } // 0x000000018BC75A4C-0x000000018BC75A80 
+		public Transform root { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public Transform mid { get; set; } // 0x0000000184D88320-0x0000000184D88330 0x00000001867D5E9C-0x00000001867D5EAC
+		public Transform tip { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public Transform target { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public Transform hint { get; set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+		public float targetPositionWeight { get; set; } // 0x0000000184D86BF0-0x0000000184D86C00 0x000000018B151074-0x000000018B15108C
+		public float targetRotationWeight { get; set; } // 0x0000000184D86AF0-0x0000000184D86B00 0x000000018B15108C-0x000000018B1510A4
+		public float hintWeight { get; set; } // 0x0000000184D86E20-0x0000000184D86E30 0x000000018B158954-0x000000018B15896C
+		public bool maintainTargetPositionOffset { get; set; } // 0x0000000184D86A90-0x0000000184D86AA0 0x0000000184D86AA0-0x0000000184D86AB0
+		public bool maintainTargetRotationOffset { get; set; } // 0x0000000184D86D30-0x0000000184D86D40 0x0000000184D86D40-0x0000000184D86D50
+		string ITwoBoneIKConstraintData.targetPositionWeightFloatProperty { get; } // 0x000000018B1588EC-0x000000018B158920 
+		string ITwoBoneIKConstraintData.targetRotationWeightFloatProperty { get; } // 0x000000018B158920-0x000000018B158954 
+		string ITwoBoneIKConstraintData.hintWeightFloatProperty { get; } // 0x000000018B1588B8-0x000000018B1588EC 
 	
 		// Methods
-		bool IAnimationJobData.IsValid() => default; // 0x000000018BC758F4-0x000000018BC759E8
-		void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC759E8-0x000000018BC75A4C
+		bool IAnimationJobData.IsValid(); // 0x000000018B158760-0x000000018B158854
+		void IAnimationJobData.SetDefaultValues(); // 0x000000018B158854-0x000000018B1588B8
 	}
 
-	public class TwoBoneIKConstraint : RigConstraint<TwoBoneIKConstraintJob, TwoBoneIKConstraintData, TwoBoneIKConstraintJobBinder<TwoBoneIKConstraintData>> // TypeDefIndex: 58891
+	[AddComponentMenu("Animation Rigging/Two Bone IK Constraint")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/constraints/TwoBoneIKConstraint.html")]
+	public class TwoBoneIKConstraint : RigConstraint<TwoBoneIKConstraintJob, TwoBoneIKConstraintData, TwoBoneIKConstraintJobBinder<TwoBoneIKConstraintData>> // TypeDefIndex: 61495
 	{
 		// Constructors
-		public TwoBoneIKConstraint() {} // 0x000000018BC75F18-0x000000018BC75F6C
+		public TwoBoneIKConstraint(); // 0x000000018B158D84-0x000000018B158DD8
 	
 		// Methods
-		protected override void OnValidate() {} // 0x000000018BC75EA0-0x000000018BC75F18
+		protected override void OnValidate(); // 0x000000018B158D0C-0x000000018B158D84
 	}
 
-	public interface IRigConstraint // TypeDefIndex: 58892
+	public interface IRigConstraint // TypeDefIndex: 61496
 	{
 		// Properties
 		IAnimationJobData data { get; }
@@ -1477,7 +1692,7 @@ namespace UnityEngine.Animations.Rigging
 		void DestroyJob(IAnimationJob job);
 	}
 
-	public interface IRigLayer // TypeDefIndex: 58893
+	public interface IRigLayer // TypeDefIndex: 61497
 	{
 		// Properties
 		Rig rig { get; }
@@ -1493,467 +1708,485 @@ namespace UnityEngine.Animations.Rigging
 		bool IsValid();
 	}
 
-	public class OverrideRigConstraint<TConstraint, TJob, TData, TBinder> : IRigConstraint // TypeDefIndex: 58894
+	public class OverrideRigConstraint<TConstraint, TJob, TData, TBinder> : IRigConstraint // TypeDefIndex: 61498
 		where TConstraint : MonoBehaviour, IRigConstraint
 		where TJob : struct, IWeightedAnimationJob
 		where TData : struct, IAnimationJobData
 		where TBinder : AnimationJobBinder<TJob, TData>, new()
 	{
 		// Fields
+		[SerializeField]
 		protected TConstraint m_Constraint;
 		private static readonly TBinder s_Binder;
 	
 		// Properties
-		IAnimationJobBinder IRigConstraint.binder { get => default; }
-		IAnimationJobData IRigConstraint.data { get => default; }
-		Component IRigConstraint.component { get => default; }
-		public float weight { get => default; set {} }
+		IAnimationJobBinder IRigConstraint.binder { get; }
+		IAnimationJobData IRigConstraint.data { get; }
+		Component IRigConstraint.component { get; }
+		public float weight { get; set; }
 	
 		// Constructors
-		public OverrideRigConstraint() {} // Dummy constructor
-		public OverrideRigConstraint(TConstraint baseConstraint) {}
-		static OverrideRigConstraint() {}
+		public OverrideRigConstraint(TConstraint baseConstraint);
+		static OverrideRigConstraint();
 	
 		// Methods
-		public IAnimationJob CreateJob(Animator animator) => default;
-		public void DestroyJob(IAnimationJob job) {}
-		public void UpdateJob(IAnimationJob job) {}
-		public bool IsValid() => default;
+		public IAnimationJob CreateJob(Animator animator);
+		public void DestroyJob(IAnimationJob job);
+		public void UpdateJob(IAnimationJob job);
+		public bool IsValid();
 	}
 
 	[Serializable]
-	public class OverrideRigLayer : IRigLayer // TypeDefIndex: 58895
+	public class OverrideRigLayer : IRigLayer // TypeDefIndex: 61499
 	{
 		// Fields
+		[FormerlySerializedAs("rig")]
+		[SerializeField]
 		private Rig m_Rig; // 0x10
+		[FormerlySerializedAs("active")]
+		[SerializeField]
 		private bool m_Active; // 0x18
 		private IRigConstraint[] m_Constraints; // 0x20
 		private IAnimationJob[] m_Jobs; // 0x28
+		[CompilerGenerated]
 		private bool _isInitialized_k__BackingField; // 0x30
 	
 		// Properties
-		public Rig rig { get => default; private set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public bool active { get => default; set {} } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
-		public string name { get => default; } // 0x000000018BC6E298-0x000000018BC6E328 
-		public IRigConstraint[] constraints { get => default; } // 0x000000018BC6E278-0x000000018BC6E288 
-		public IAnimationJob[] jobs { get => default; } // 0x000000018BC6E288-0x000000018BC6E298 
-		public bool isInitialized { get; private set; } // 0x00000001814294C0-0x00000001814294D0 0x000000018142A360-0x000000018142A370
+		public Rig rig { get; private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public bool active { get; set; } // 0x0000000184D86340-0x0000000184D86350 0x0000000184D86350-0x0000000184D86360
+		public string name { get; } // 0x000000018B150E54-0x000000018B150EE4 
+		public IRigConstraint[] constraints { get; } // 0x000000018B150E34-0x000000018B150E44 
+		public IAnimationJob[] jobs { get; } // 0x000000018B150E44-0x000000018B150E54 
+		public bool isInitialized { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D865F0-0x0000000184D86600 0x0000000184D86620-0x0000000184D86630
 	
 		// Constructors
-		public OverrideRigLayer() {} // Dummy constructor
-		public OverrideRigLayer(Rig rig, IRigConstraint[] constraints, bool active = true /* Metadata: 0x0207FF5D */) {} // 0x000000018BC6E248-0x000000018BC6E278
+		public OverrideRigLayer(Rig rig, IRigConstraint[] constraints, bool active = true /* Metadata: 0x0234FC6A */); // 0x000000018B150E04-0x000000018B150E34
 	
 		// Methods
-		public bool Initialize(Animator animator) => default; // 0x000000018BC6DFAC-0x000000018BC6E0DC
-		public void Update() {} // 0x000000018BC6E1DC-0x000000018BC6E248
-		public void Reset() {} // 0x000000018BC6E138-0x000000018BC6E1DC
-		public bool IsValid() => default; // 0x000000018BC6E0DC-0x000000018BC6E138
+		public bool Initialize(Animator animator); // 0x000000018B150B68-0x000000018B150C98
+		public void Update(); // 0x000000018B150D98-0x000000018B150E04
+		public void Reset(); // 0x000000018B150CF4-0x000000018B150D98
+		public bool IsValid(); // 0x000000018B150C98-0x000000018B150CF4
 	}
 
-	public class Rig : MonoBehaviour, IRigEffectorHolder // TypeDefIndex: 58896
+	[AddComponentMenu("Animation Rigging/Setup/Rig")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/RiggingWorkflow.html#rig-component")]
+	public class Rig : MonoBehaviour, IRigEffectorHolder // TypeDefIndex: 61500
 	{
 		// Fields
+		[Range(0f, 1f)]
+		[SerializeField]
 		private float m_Weight; // 0x18
+		[SerializeField]
 		private List<RigEffectorData> m_Effectors; // 0x20
 	
 		// Properties
-		public float weight { get => default; set {} } // 0x0000000181C9AC50-0x0000000181C9AC60 0x0000000189CBA374-0x0000000189CBA38C
+		public float weight { get; set; } // 0x0000000184D86380-0x0000000184D86390 0x00000001890D4BA8-0x00000001890D4BC0
 	
 		// Constructors
-		public Rig() {} // 0x000000018BC74248-0x000000018BC742D0
+		public Rig(); // 0x000000018B1571A0-0x000000018B157228
 	}
 
-	public class RigBuilder : MonoBehaviour, IAnimationWindowPreview, IRigEffectorHolder // TypeDefIndex: 58899
+	[AddComponentMenu("Animation Rigging/Setup/Rig Builder")]
+	[DisallowMultipleComponent]
+	[ExecuteInEditMode]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/RiggingWorkflow.html#rig-builder-component")]
+	[RequireComponent(typeof(Animator))]
+	public class RigBuilder : MonoBehaviour, IAnimationWindowPreview, IRigEffectorHolder // TypeDefIndex: 61503
 	{
 		// Fields
+		[SerializeField]
 		private List<RigLayer> m_RigLayers; // 0x18
 		private IRigLayer[] m_RuntimeRigLayers; // 0x20
 		private SyncSceneToStreamLayer m_SyncSceneToStreamLayer; // 0x28
+		[SerializeField]
 		private List<RigEffectorData> m_Effectors; // 0x30
 		public static OnAddRigBuilderCallback onAddRigBuilder; // 0x00
 		public static OnRemoveRigBuilderCallback onRemoveRigBuilder; // 0x08
+		[CompilerGenerated]
 		private PlayableGraph _graph_k__BackingField; // 0x38
 	
 		// Properties
-		public List<RigLayer> layers { get => default; set {} } // 0x00000001833EEC70-0x00000001833EEC80 0x0000000185A264E0-0x0000000185A26510
-		private SyncSceneToStreamLayer syncSceneToStreamLayer { get => default; set {} } // 0x00000001864BB614-0x00000001864BB734 0x00000001882A83C4-0x00000001882A84E8
-		public PlayableGraph graph { get; private set; } // 0x00000001833EEC70-0x00000001833EEC80 0x0000000185A264E0-0x0000000185A26510
+		public List<RigLayer> layers { get; set; } // 0x000000018B154304-0x000000018B154388 0x0000000185392C40-0x0000000185392C50
+		private SyncSceneToStreamLayer syncSceneToStreamLayer { get; set; } // 0x000000018B154388-0x000000018B1543C8 0x0000000182FDB880-0x0000000182FDB890
+		public PlayableGraph graph { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D8FD20-0x0000000184D8FD30 0x0000000184D91AB0-0x0000000184D91AC0
 	
 		// Nested types
-		public delegate void OnAddRigBuilderCallback(RigBuilder rigBuilder); // TypeDefIndex: 58897; 0x000000018BC71218-0x000000018BC71280
+		public delegate void OnAddRigBuilderCallback(RigBuilder rigBuilder); // TypeDefIndex: 61501; 0x0000000182B46B90-0x0000000182B46BA0
 	
-		public delegate void OnRemoveRigBuilderCallback(RigBuilder rigBuilder); // TypeDefIndex: 58898; 0x000000018BC710F8-0x000000018BC71210
+		public delegate void OnRemoveRigBuilderCallback(RigBuilder rigBuilder); // TypeDefIndex: 61502; 0x0000000182B46B90-0x0000000182B46BA0
 	
 		// Constructors
-		public RigBuilder() {} // 0x00000001864BB614-0x00000001864BB734
+		public RigBuilder(); // 0x000000018B154284-0x000000018B154304
 	
 		// Methods
-		private void OnEnable() {} // 0x000000018BC71418-0x000000018BC714C4
-		private void OnDisable() {} // 0x000000018BC70CC4-0x000000018BC70F80
-		private void OnDestroy() {} // 0x000000018BC71638-0x000000018BC716BC
-		private void Update() {} // 0x0000000184088E70-0x0000000184088E80
-		public bool Build() => default; // 0x000000018BC716BC-0x000000018BC71718
-		public void Clear() {} // 0x0000000184A4EDC0-0x0000000184A4EDD0
-		public void StartPreview() {} // 0x0000000185FBB850-0x0000000185FBB860
-		public void StopPreview() {} // 0x0000000185FBD980-0x0000000185FBD990
-		public void UpdatePreviewGraph(PlayableGraph graph) {} // 0x000000018BC715B8-0x000000018BC71638
-		public Playable BuildPreviewGraph(PlayableGraph graph, Playable inputPlayable) => default; // 0x00000001882A83C4-0x00000001882A84E8
+		private void OnEnable(); // 0x000000018B153F4C-0x000000018B153FB0
+		private void OnDisable(); // 0x000000018B153EE4-0x000000018B153F4C
+		private void OnDestroy(); // 0x000000018B153EDC-0x000000018B153EE4
+		private void Update(); // 0x000000018B154190-0x000000018B154284
+		public bool Build(); // 0x000000018B153C7C-0x000000018B153DF4
+		public void Clear(); // 0x000000018B153DF4-0x000000018B153EDC
+		public void StartPreview(); // 0x000000018B153FB0-0x000000018B1540B0
+		public void StopPreview(); // 0x000000018B1540B0-0x000000018B1540E4
+		public void UpdatePreviewGraph(PlayableGraph graph); // 0x000000018B1540E4-0x000000018B154190
+		public Playable BuildPreviewGraph(PlayableGraph graph, Playable inputPlayable); // 0x000000018B1539C0-0x000000018B153C7C
 	}
 
-	internal static class RigBuilderUtils // TypeDefIndex: 58901
+	internal static class RigBuilderUtils // TypeDefIndex: 61505
 	{
 		// Fields
 		private static readonly ushort k_AnimationOutputPriority; // 0x00
 	
 		// Nested types
-		public struct PlayableChain // TypeDefIndex: 58900
+		public struct PlayableChain // TypeDefIndex: 61504
 		{
 			// Fields
 			public string name; // 0x00
 			public Playable[] playables; // 0x08
 	
 			// Methods
-			public bool IsValid() => default; // 0x000000018BC70A64-0x000000018BC70C8C
+			public bool IsValid(); // 0x000000018B151A58-0x000000018B151A70
 		}
 	
 		// Constructors
-		static RigBuilderUtils() {} // 0x000000018BC6EE9C-0x000000018BC6EEB4
+		static RigBuilderUtils(); // 0x000000018B153988-0x000000018B1539C0
 	
 		// Methods
-		public static Playable[] BuildRigPlayables(PlayableGraph graph, IRigLayer layer) => default; // 0x000000018BC7050C-0x000000018BC70A64
-		public static IEnumerable<PlayableChain> BuildPlayables(Animator animator, PlayableGraph graph, IList<IRigLayer> layers, SyncSceneToStreamLayer syncSceneToStreamLayer) => default; // 0x000000018BC701BC-0x000000018BC7050C
-		public static PlayableGraph BuildPlayableGraph(Animator animator, IList<IRigLayer> layers, SyncSceneToStreamLayer syncSceneToStreamLayer) => default; // 0x000000018BC70C8C-0x000000018BC70CC4
+		public static Playable[] BuildRigPlayables(PlayableGraph graph, IRigLayer layer); // 0x000000018B153760-0x000000018B153988
+		public static IEnumerable<PlayableChain> BuildPlayables(Animator animator, PlayableGraph graph, IList<IRigLayer> layers, SyncSceneToStreamLayer syncSceneToStreamLayer); // 0x000000018B153148-0x000000018B153760
+		public static PlayableGraph BuildPlayableGraph(Animator animator, IList<IRigLayer> layers, SyncSceneToStreamLayer syncSceneToStreamLayer); // 0x000000018B152D78-0x000000018B153148
 	}
 
-	public class RigConstraint<TJob, TData, TBinder> : MonoBehaviour, IRigConstraint // TypeDefIndex: 58902
+	public class RigConstraint<TJob, TData, TBinder> : MonoBehaviour, IRigConstraint // TypeDefIndex: 61506
 		where TJob : struct, IWeightedAnimationJob
 		where TData : struct, IAnimationJobData
 		where TBinder : AnimationJobBinder<TJob, TData>, new()
 	{
 		// Fields
+		[Range(0f, 1f)]
+		[SerializeField]
 		protected float m_Weight;
+		[ExpandChildren]
+		[SerializeField]
 		protected TData m_Data;
 		private static readonly TBinder s_Binder;
 	
 		// Properties
-		public ref TData data { get => default; }
-		public float weight { get => default; set {} }
-		IAnimationJobBinder IRigConstraint.binder { get => default; }
-		IAnimationJobData IRigConstraint.data { get => default; }
-		Component IRigConstraint.component { get => default; }
+		public ref TData data { get; }
+		public float weight { get; set; }
+		IAnimationJobBinder IRigConstraint.binder { get; }
+		IAnimationJobData IRigConstraint.data { get; }
+		Component IRigConstraint.component { get; }
 	
 		// Constructors
-		public RigConstraint() {}
-		static RigConstraint() {}
+		public RigConstraint();
+		static RigConstraint();
 	
 		// Methods
-		public void Reset() {}
-		public bool IsValid() => default;
-		protected virtual void OnValidate() {}
-		public IAnimationJob CreateJob(Animator animator) => default;
-		public void DestroyJob(IAnimationJob job) {}
-		public void UpdateJob(IAnimationJob job) {}
+		public void Reset();
+		public bool IsValid();
+		protected virtual void OnValidate();
+		public IAnimationJob CreateJob(Animator animator);
+		public void DestroyJob(IAnimationJob job);
+		public void UpdateJob(IAnimationJob job);
 	}
 
 	[Serializable]
-	public class RigLayer : IRigLayer // TypeDefIndex: 58903
+	public class RigLayer : IRigLayer // TypeDefIndex: 61507
 	{
 		// Fields
+		[FormerlySerializedAs("rig")]
+		[SerializeField]
 		private Rig m_Rig; // 0x10
+		[FormerlySerializedAs("active")]
+		[SerializeField]
 		private bool m_Active; // 0x18
 		private IRigConstraint[] m_Constraints; // 0x20
 		private IAnimationJob[] m_Jobs; // 0x28
+		[CompilerGenerated]
 		private bool _isInitialized_k__BackingField; // 0x30
 	
 		// Properties
-		public Rig rig { get => default; private set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public bool active { get => default; set {} } // 0x00000001813C0430-0x00000001813C0440 0x00000001813C0520-0x00000001813C0530
-		public string name { get => default; } // 0x000000018BC719B8-0x000000018BC71A48 
-		public IRigConstraint[] constraints { get => default; } // 0x000000018BC6E278-0x000000018BC6E288 
-		public IAnimationJob[] jobs { get => default; } // 0x000000018BC6E288-0x000000018BC6E298 
-		public bool isInitialized { get; private set; } // 0x00000001814294C0-0x00000001814294D0 0x000000018142A360-0x000000018142A370
+		public Rig rig { get; private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public bool active { get; set; } // 0x0000000184D86340-0x0000000184D86350 0x0000000184D86350-0x0000000184D86360
+		public string name { get; } // 0x000000018B154654-0x000000018B1546E4 
+		public IRigConstraint[] constraints { get; } // 0x000000018B150E34-0x000000018B150E44 
+		public IAnimationJob[] jobs { get; } // 0x000000018B150E44-0x000000018B150E54 
+		public bool isInitialized { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D865F0-0x0000000184D86600 0x0000000184D86620-0x0000000184D86630
 	
 		// Constructors
-		public RigLayer() {} // Dummy constructor
-		public RigLayer(Rig rig, bool active = true /* Metadata: 0x0207FF5E */) {} // 0x000000018B40BBB8-0x000000018B40BBE0
+		public RigLayer(Rig rig, bool active = true /* Metadata: 0x0234FC6B */); // 0x000000018A8D8D40-0x000000018A8D8D68
 	
 		// Methods
-		public bool Initialize(Animator animator) => default; // 0x000000018BC71768-0x000000018BC71850
-		public void Update() {} // 0x000000018BC71934-0x000000018BC719B8
-		public void Reset() {} // 0x000000018BC718AC-0x000000018BC71934
-		public bool IsValid() => default; // 0x000000018BC71850-0x000000018BC718AC
+		public bool Initialize(Animator animator); // 0x000000018B154418-0x000000018B154500
+		public void Update(); // 0x000000018B1545D0-0x000000018B154654
+		public void Reset(); // 0x000000018B154548-0x000000018B1545D0
+		public bool IsValid(); // 0x000000018B154500-0x000000018B154548
 	}
 
-	public class RigTransform : MonoBehaviour // TypeDefIndex: 58904
+	[AddComponentMenu("Animation Rigging/Setup/Rig Transform")]
+	[DisallowMultipleComponent]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/RiggingWorkflow.html#rig-transform")]
+	public class RigTransform : MonoBehaviour // TypeDefIndex: 61508
 	{
 		// Constructors
-		public RigTransform() {} // 0x000000018646DB20-0x000000018646DB28
+		public RigTransform(); // 0x0000000185393520-0x0000000185393538
 	}
 
-	internal static class RigUtils // TypeDefIndex: 58907
+	internal static class RigUtils // TypeDefIndex: 61511
 	{
 		// Fields
 		internal static readonly Dictionary<System.Type, PropertyDescriptor> s_SupportedPropertyTypeToDescriptor; // 0x00
+		[CompilerGenerated]
 		private static readonly IAnimationJobBinder _syncSceneToStreamBinder_k__BackingField; // 0x08
 	
 		// Properties
-		public static IAnimationJobBinder syncSceneToStreamBinder { get; } // 0x0000000185492010-0x0000000185492020 
+		public static IAnimationJobBinder syncSceneToStreamBinder { [CompilerGenerated] get; } // 0x000000018B157150-0x000000018B1571A0 
 	
 		// Nested types
-		private struct RigSyncSceneToStreamData : IAnimationJobData, IRigSyncSceneToStreamData // TypeDefIndex: 58905
+		private struct RigSyncSceneToStreamData : IAnimationJobData, IRigSyncSceneToStreamData // TypeDefIndex: 61509
 		{
 			// Fields
+			[CompilerGenerated]
 			private Transform[] _syncableTransforms_k__BackingField; // 0x00
+			[CompilerGenerated]
 			private SyncableProperties[] _syncableProperties_k__BackingField; // 0x08
+			[CompilerGenerated]
 			private bool[] _rigStates_k__BackingField; // 0x10
 			private readonly bool m_IsValid; // 0x18
 	
 			// Properties
-			public Transform[] syncableTransforms { get; private set; } // 0x000000018BC7328C-0x000000018BC7363C 0x000000018BC7314C-0x000000018BC7328C
-			public SyncableProperties[] syncableProperties { get; private set; } // 0x000000018BC7363C-0x000000018BC73C4C 0x000000018BC72C00-0x000000018BC7314C
-			public bool[] rigStates { get; set; } // 0x000000018BC72170-0x000000018BC72C00 0x000000018BC71F00-0x000000018BC71FCC
+			public Transform[] syncableTransforms { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] private set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+			public SyncableProperties[] syncableProperties { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] private set; } // 0x0000000184D88320-0x0000000184D88330 0x00000001867D5E9C-0x00000001867D5EAC
+			public bool[] rigStates { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
 	
 			// Constructors
-			public RigSyncSceneToStreamData(Transform[] transforms, SyncableProperties[] properties, int rigCount) : this() {
-				<syncableTransforms>k__BackingField = default;
-				<syncableProperties>k__BackingField = default;
-				<rigStates>k__BackingField = default;
-				m_IsValid = default;
-			} // 0x000000018BC73C4C-0x000000018BC73D80
+			public RigSyncSceneToStreamData(Transform[] transforms, SyncableProperties[] properties, int rigCount); // 0x000000018B1548C8-0x000000018B154A50
 	
 			// Methods
-			private static int[] UniqueTransformIndices(Transform[] transforms) => default; // 0x000000018BC73D80-0x000000018BC73E6C
-			bool IAnimationJobData.IsValid() => default; // 0x000000018BC72100-0x000000018BC72170
-			void IAnimationJobData.SetDefaultValues() {} // 0x000000018BC71FCC-0x000000018BC72100
+			private static int[] UniqueTransformIndices(Transform[] transforms); // 0x000000018B154740-0x000000018B154898
+			bool IAnimationJobData.IsValid(); // 0x0000000184D86340-0x0000000184D86350
+			void IAnimationJobData.SetDefaultValues(); // 0x000000018B154898-0x000000018B1548C8
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 58906
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 61510
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Func<System.Reflection.FieldInfo, bool> __9__6_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x000000018BC741F8-0x000000018BC74248
-			public __c() {} // 0x000000018BC73E6C-0x000000018BC741F8
+			static __c(); // 0x000000018B158E18-0x000000018B158E7C
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _ExtractNestedPropertyType_b__6_0(System.Reflection.FieldInfo info) => default; // 0x000000018BC71C2C-0x000000018BC71DB4
+			internal bool _ExtractNestedPropertyType_b__6_0(System.Reflection.FieldInfo info); // 0x000000018B158DD8-0x000000018B158E18
 		}
 	
 		// Constructors
-		static RigUtils() {} // 0x000000018BC75F6C-0x000000018BC75FAC
+		static RigUtils(); // 0x000000018B156DC4-0x000000018B157150
 	
 		// Methods
-		public static IRigConstraint[] GetConstraints(Rig rig) => default; // 0x000000018BC71AA4-0x000000018BC71BFC
-		private static Transform[] GetSyncableRigTransforms(Animator animator) => default; // 0x00000001834AFB60-0x00000001834AFB70
-		private static bool ExtractTransformType(Animator animator, System.Reflection.FieldInfo field, object data, List<Transform> syncableTransforms) => default; // 0x000000018646FE2C-0x000000018646FE34
-		private static bool ExtractPropertyType(System.Reflection.FieldInfo field, object data, List<Property> syncableProperties, string namePrefix = "" /* Metadata: 0x0207FF5F */) => default; // 0x000000018357A260-0x000000018357A270
-		private static bool ExtractWeightedTransforms(Animator animator, System.Reflection.FieldInfo field, object data, List<Transform> syncableTransforms, List<Property> syncableProperties) => default; // 0x00000001877900A4-0x00000001877900B4
-		private static bool ExtractNestedPropertyType(Animator animator, System.Reflection.FieldInfo field, object data, List<Transform> syncableTransforms, List<Property> syncableProperties, string namePrefix = "" /* Metadata: 0x0207FF60 */) => default; // 0x000000018346D130-0x000000018346D140
-		private static void ExtractAllSyncableData(Animator animator, IList<IRigLayer> layers, out List<Transform> syncableTransforms, out List<SyncableProperties> syncableProperties) {
-			syncableTransforms = default;
-			syncableProperties = default;
-		} // 0x0000000184096E30-0x0000000184096EF0
-		public static IAnimationJob[] CreateAnimationJobs(Animator animator, IRigConstraint[] constraints) => default; // 0x00000001813C0430-0x00000001813C0440
-		public static void DestroyAnimationJobs(IRigConstraint[] constraints, IAnimationJob[] jobs) {} // 0x000000018BC71BFC-0x000000018BC71C2C
-		internal static IAnimationJobData CreateSyncSceneToStreamData(Animator animator, IList<IRigLayer> layers) => default; // 0x000000018BC75FAC-0x000000018BC76010
+		public static IRigConstraint[] GetConstraints(Rig rig); // 0x000000018B156BA4-0x000000018B156CD8
+		private static Transform[] GetSyncableRigTransforms(Animator animator); // 0x000000018B156CD8-0x000000018B156DC4
+		private static bool ExtractTransformType(Animator animator, System.Reflection.FieldInfo field, object data, List<Transform> syncableTransforms); // 0x000000018B1560D0-0x000000018B156508
+		private static bool ExtractPropertyType(System.Reflection.FieldInfo field, object data, List<Property> syncableProperties, string namePrefix = "" /* Metadata: 0x0234FC6C */); // 0x000000018B155F90-0x000000018B1560D0
+		private static bool ExtractWeightedTransforms(Animator animator, System.Reflection.FieldInfo field, object data, List<Transform> syncableTransforms, List<Property> syncableProperties); // 0x000000018B156508-0x000000018B156BA4
+		private static bool ExtractNestedPropertyType(Animator animator, System.Reflection.FieldInfo field, object data, List<Transform> syncableTransforms, List<Property> syncableProperties, string namePrefix = "" /* Metadata: 0x0234FC6D */); // 0x000000018B155980-0x000000018B155F90
+		private static void ExtractAllSyncableData(Animator animator, IList<IRigLayer> layers, out List<Transform> syncableTransforms, out List<SyncableProperties> syncableProperties); // 0x000000018B154E0C-0x000000018B155980
+		public static IAnimationJob[] CreateAnimationJobs(Animator animator, IRigConstraint[] constraints); // 0x000000018B154B9C-0x000000018B154C68
+		public static void DestroyAnimationJobs(IRigConstraint[] constraints, IAnimationJob[] jobs); // 0x000000018B154D9C-0x000000018B154E0C
+		internal static IAnimationJobData CreateSyncSceneToStreamData(Animator animator, IList<IRigLayer> layers); // 0x000000018B154C68-0x000000018B154D9C
 	}
 
-	internal class SyncSceneToStreamLayer // TypeDefIndex: 58908
+	internal class SyncSceneToStreamLayer // TypeDefIndex: 61512
 	{
 		// Fields
+		[CompilerGenerated]
 		private bool _isInitialized_k__BackingField; // 0x10
 		public IAnimationJob job; // 0x18
 		private IAnimationJobData m_Data; // 0x20
 		private List<int> m_RigIndices; // 0x28
 	
 		// Properties
-		public bool isInitialized { get; private set; } // 0x0000000181C2FD60-0x0000000181C2FD70 0x000000018184FBD0-0x000000018184FBE0
+		public bool isInitialized { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001815EFCE0-0x00000001815EFCF0 0x0000000184D86130-0x0000000184D86140
 	
 		// Constructors
-		public SyncSceneToStreamLayer() {} // 0x0000000185492010-0x0000000185492020
+		public SyncSceneToStreamLayer(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public bool Initialize(Animator animator, IList<IRigLayer> layers) => default; // 0x000000018BC742D0-0x000000018BC744C4
-		public void Update(IList<IRigLayer> layers) {} // 0x000000018BC74598-0x000000018BC7478C
-		public void Reset() {} // 0x000000018BC744D8-0x000000018BC74598
-		public bool IsValid() => default; // 0x000000018BC744C4-0x000000018BC744D8
+		public bool Initialize(Animator animator, IList<IRigLayer> layers); // 0x000000018B157228-0x000000018B1573F8
+		public void Update(IList<IRigLayer> layers); // 0x000000018B157498-0x000000018B1575F8
+		public void Reset(); // 0x000000018B15740C-0x000000018B157498
+		public bool IsValid(); // 0x000000018B1573F8-0x000000018B15740C
 	}
 
-	public interface ITransformProvider // TypeDefIndex: 58909
+	public interface ITransformProvider // TypeDefIndex: 61513
 	{
 		// Properties
 		Transform transform { get; set; }
 	}
 
-	public interface IWeightProvider // TypeDefIndex: 58910
+	public interface IWeightProvider // TypeDefIndex: 61514
 	{
 		// Properties
 		float weight { get; set; }
 	}
 
 	[Serializable]
-	public struct WeightedTransform : ITransformProvider, IWeightProvider, IEquatable<WeightedTransform> // TypeDefIndex: 58911
+	public struct WeightedTransform : ITransformProvider, IWeightProvider, IEquatable<WeightedTransform> // TypeDefIndex: 61515
 	{
 		// Fields
 		public Transform transform; // 0x00
 		public float weight; // 0x08
 	
 		// Properties
-		Transform ITransformProvider.transform { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		float IWeightProvider.weight { get => default; set {} } // 0x0000000185FBA140-0x0000000185FBA150 0x000000018BC78FD8-0x000000018BC78FF0
+		Transform ITransformProvider.transform { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		float IWeightProvider.weight { get; set; } // 0x0000000184D9C280-0x0000000184D9C290 0x000000018B15BE44-0x000000018B15BE5C
 	
 		// Constructors
-		public WeightedTransform(Transform transform, float weight) : this() {
-			this.transform = default;
-			this.weight = default;
-		} // 0x000000018BC78FF0-0x000000018BC79014
+		public WeightedTransform(Transform transform, float weight); // 0x000000018B15BE5C-0x000000018B15BE80
 	
 		// Methods
-		public static WeightedTransform Default(float weight) => default; // 0x000000018BC78F38-0x000000018BC78F60
-		public bool Equals(WeightedTransform other) => default; // 0x000000018BC78F60-0x000000018BC78FD8
+		public static WeightedTransform Default(float weight); // 0x000000018B15BDA4-0x000000018B15BDCC
+		public bool Equals(WeightedTransform other); // 0x000000018B15BDCC-0x000000018B15BE44
 	}
 
 	[Serializable]
-	public struct WeightedTransformArray : IList<WeightedTransform>, IList // TypeDefIndex: 58913
+	public struct WeightedTransformArray : IList<WeightedTransform>, IList // TypeDefIndex: 61517
 	{
 		// Fields
 		public static readonly int k_MaxLength; // 0x00
+		[NotKeyable]
+		[SerializeField]
 		private int m_Length; // 0x00
+		[SerializeField]
 		private WeightedTransform m_Item0; // 0x08
+		[SerializeField]
 		private WeightedTransform m_Item1; // 0x18
+		[SerializeField]
 		private WeightedTransform m_Item2; // 0x28
+		[SerializeField]
 		private WeightedTransform m_Item3; // 0x38
+		[SerializeField]
 		private WeightedTransform m_Item4; // 0x48
+		[SerializeField]
 		private WeightedTransform m_Item5; // 0x58
+		[SerializeField]
 		private WeightedTransform m_Item6; // 0x68
+		[SerializeField]
 		private WeightedTransform m_Item7; // 0x78
 	
 		// Properties
-		object IList.this[int index] { get => default; set {} } // 0x00000001814A81B0-0x00000001814A81C0 0x00000001840A27C0-0x00000001840A27D0
-		public WeightedTransform this[int index] { get => default; set {} } // 0x00000001813AE580-0x00000001813AE590 0x000000018BC78DAC-0x000000018BC78DE8
-		public int Count { get => default; } // 0x000000018BC694E8-0x000000018BC695B4 
-		public bool IsReadOnly { get => default; } // 0x000000018BC6943C-0x000000018BC69490 
-		public bool IsFixedSize { get => default; } // 0x0000000185FD6FF0-0x0000000185FD7000 
-		bool ICollection.IsSynchronized { get => default; } // 0x0000000185492010-0x0000000185492020 
-		object ICollection.SyncRoot { get => default; } // 0x000000018BC695B4-0x000000018BC69624 
+		object IList.this[int index] { get => default; set {} } // 0x000000018B15BB14-0x000000018B15BB90 0x000000018B15BB90-0x000000018B15BC18
+		public WeightedTransform this[int index] { get => default; set {} } // 0x000000018B15BCC8-0x000000018B15BD38 0x000000018B15BD38-0x000000018B15BDA4
+		public int Count { get; } // 0x0000000182B77620-0x0000000182B77630 
+		public bool IsReadOnly { get; } // 0x00000001812081B0-0x0000000181208610 
+		public bool IsFixedSize { get; } // 0x00000001812081B0-0x0000000181208610 
+		bool ICollection.IsSynchronized { get; } // 0x0000000182FFF600-0x0000000182FFF610 
+		object ICollection.SyncRoot { get; } // 0x00000001811EC580-0x00000001811EC590 
 	
 		// Nested types
 		[Serializable]
-		private struct Enumerator : IEnumerator<WeightedTransform> // TypeDefIndex: 58912
+		private struct Enumerator : IEnumerator<WeightedTransform> // TypeDefIndex: 61516
 		{
 			// Fields
 			private WeightedTransformArray m_Array; // 0x00
 			private int m_Index; // 0x88
 	
 			// Properties
-			public WeightedTransform Current { get => default; } // 0x000000018BC77988-0x000000018BC77ABC 
-			object IEnumerator.Current { get => default; } // 0x0000000185FBD010-0x0000000185FBD020 
+			public WeightedTransform Current { get; } // 0x000000018B14BF40-0x000000018B14BFB0 
+			object IEnumerator.Current { get; } // 0x000000018B14BE1C-0x000000018B14BE74 
 	
 			// Constructors
-			public Enumerator(ref WeightedTransformArray array) : this() {
-				m_Array = default;
-				m_Index = default;
-			} // 0x000000018BC78DE8-0x000000018BC78E5C
+			public Enumerator(ref WeightedTransformArray array); // 0x000000018B14BE74-0x000000018B14BF40
 	
 			// Methods
-			public bool MoveNext() => default; // 0x000000018BC77E84-0x000000018BC77F44
-			public void Reset() {} // 0x000000018BC7897C-0x000000018BC78A3C
-			void IDisposable.Dispose() {} // 0x000000018BC78A3C-0x000000018BC78AB8
+			public bool MoveNext(); // 0x000000018B14BDC8-0x000000018B14BE1C
+			public void Reset(); // 0x0000000184DAB0B0-0x0000000184DAB0C0
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		// Constructors
-		public WeightedTransformArray(int size) : this() {
-			m_Length = default;
-			m_Item0 = default;
-			m_Item1 = default;
-			m_Item2 = default;
-			m_Item3 = default;
-			m_Item4 = default;
-			m_Item5 = default;
-			m_Item6 = default;
-			m_Item7 = default;
-		} // 0x000000018BC78B30-0x000000018BC78BA8
-		static WeightedTransformArray() {
-			k_MaxLength = default;
-		} // 0x000000018BC69490-0x000000018BC694E8
+		public WeightedTransformArray(int size); // 0x000000018B15BC54-0x000000018B15BCC8
+		static WeightedTransformArray(); // 0x000000018B15BC18-0x000000018B15BC54
 	
 		// Methods
-		public IEnumerator<WeightedTransform> GetEnumerator() => default; // 0x000000018BC780B4-0x000000018BC78150
-		IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018BC78AB8-0x000000018BC78B30
-		int IList.Add(object value) => default; // 0x000000018BC77C20-0x000000018BC77CBC
-		public void Add(WeightedTransform value) {} // 0x000000018BC78794-0x000000018BC7897C
-		public void Clear() {} // 0x000000018BC77CBC-0x000000018BC77E84
-		int IList.IndexOf(object value) => default; // 0x000000018BC78C30-0x000000018BC78CA8
-		public int IndexOf(WeightedTransform value) => default; // 0x000000018BC7847C-0x000000018BC78568
-		bool IList.Contains(object value) => default; // 0x000000018BC783E4-0x000000018BC7847C
-		public bool Contains(WeightedTransform value) => default; // 0x000000018BC78BA8-0x000000018BC78C30
-		void ICollection.CopyTo(Array array, int arrayIndex) {} // 0x000000018BC78150-0x000000018BC78320
-		public void CopyTo(WeightedTransform[] array, int arrayIndex) {} // 0x000000018BC77BCC-0x000000018BC77C20
-		void IList.Remove(object value) {} // 0x000000018BC77ABC-0x000000018BC77BCC
-		public bool Remove(WeightedTransform value) => default; // 0x000000018BC77FF8-0x000000018BC780B4
-		public void RemoveAt(int index) {} // 0x000000018BC78698-0x000000018BC78794
-		void IList.Insert(int index, object value) {} // 0x000000018BC78608-0x000000018BC78698
-		public void Insert(int index, WeightedTransform value) {} // 0x000000018BC77F9C-0x000000018BC77FF8
-		private static int ClampSize(int size) => default; // 0x000000018BC78568-0x000000018BC78608
-		private void CheckOutOfRangeIndex(int index) {} // 0x000000018BC77F44-0x000000018BC77F9C
-		private WeightedTransform Get(int index) => default; // 0x000000018BC78320-0x000000018BC783E4
-		private void Set(int index, WeightedTransform value) {} // 0x000000018BC78CA8-0x000000018BC78D24
-		public void SetWeight(int index, float weight) {} // 0x000000018BC78D24-0x000000018BC78DAC
-		public float GetWeight(int index) => default; // 0x000000018BC78E5C-0x000000018BC78ECC
-		public void SetTransform(int index, Transform transform) {} // 0x000000018BC78ECC-0x000000018BC78F38
-		public Transform GetTransform(int index) => default; // 0x00000001818226B0-0x00000001818226C0
-		public static void OnValidate(ref WeightedTransformArray array, float min = 0f /* Metadata: 0x0207FF61 */, float max = 1f /* Metadata: 0x0207FF65 */) {} // 0x00000001814A81B0-0x00000001814A81C0
+		public IEnumerator<WeightedTransform> GetEnumerator(); // 0x000000018B15ACF0-0x000000018B15ADB0
+		IEnumerator IEnumerable.GetEnumerator(); // 0x000000018B15B7E8-0x000000018B15B8A8
+		int IList.Add(object value); // 0x000000018B15B8A8-0x000000018B15B924
+		public void Add(WeightedTransform value); // 0x000000018B15A7F4-0x000000018B15A928
+		public void Clear(); // 0x0000000184D910C0-0x0000000184D910D0
+		int IList.IndexOf(object value); // 0x000000018B15B99C-0x000000018B15BA14
+		public int IndexOf(WeightedTransform value); // 0x000000018B15AF20-0x000000018B15AFBC
+		bool IList.Contains(object value); // 0x000000018B15B924-0x000000018B15B99C
+		public bool Contains(WeightedTransform value); // 0x000000018B15AA8C-0x000000018B15AB28
+		void ICollection.CopyTo(Array array, int arrayIndex); // 0x000000018B15B600-0x000000018B15B7E8
+		public void CopyTo(WeightedTransform[] array, int arrayIndex); // 0x000000018B15AB28-0x000000018B15ACF0
+		void IList.Remove(object value); // 0x000000018B15BA9C-0x000000018B15BB14
+		public bool Remove(WeightedTransform value); // 0x000000018B15B2E8-0x000000018B15B3D4
+		public void RemoveAt(int index); // 0x000000018B15B250-0x000000018B15B2E8
+		void IList.Insert(int index, object value); // 0x000000018B15BA14-0x000000018B15BA9C
+		public void Insert(int index, WeightedTransform value); // 0x000000018B15AFBC-0x000000018B15B18C
+		private static int ClampSize(int size); // 0x000000018B15AA38-0x000000018B15AA8C
+		private void CheckOutOfRangeIndex(int index); // 0x000000018B15A928-0x000000018B15AA38
+		private WeightedTransform Get(int index); // 0x000000018B15AE64-0x000000018B15AF20
+		private void Set(int index, WeightedTransform value); // 0x000000018B15B504-0x000000018B15B600
+		public void SetWeight(int index, float weight); // 0x000000018B15B474-0x000000018B15B504
+		public float GetWeight(int index); // 0x000000018B15AE08-0x000000018B15AE64
+		public void SetTransform(int index, Transform transform); // 0x000000018B15B3D4-0x000000018B15B474
+		public Transform GetTransform(int index); // 0x000000018B15ADB0-0x000000018B15AE08
+		public static void OnValidate(ref WeightedTransformArray array, float min = 0f /* Metadata: 0x0234FC6E */, float max = 1f /* Metadata: 0x0234FC72 */); // 0x000000018B15B18C-0x000000018B15B250
 	}
 
-	internal sealed class ExpandChildrenAttribute : PropertyAttribute // TypeDefIndex: 58914
+	internal sealed class ExpandChildrenAttribute : PropertyAttribute // TypeDefIndex: 61518
 	{
 		// Constructors
-		public ExpandChildrenAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public ExpandChildrenAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public sealed class SyncSceneToStreamAttribute : Attribute // TypeDefIndex: 58915
+	[AttributeUsage(AttributeTargets.Field, Inherited = false, AllowMultiple = false)]
+	public sealed class SyncSceneToStreamAttribute : Attribute // TypeDefIndex: 61519
 	{
 		// Constructors
-		public SyncSceneToStreamAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public SyncSceneToStreamAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal enum PropertyType : byte // TypeDefIndex: 58916
+	internal enum PropertyType : byte // TypeDefIndex: 61520
 	{
 		Bool = 0,
 		Int = 1,
 		Float = 2
 	}
 
-	internal struct PropertyDescriptor // TypeDefIndex: 58917
+	internal struct PropertyDescriptor // TypeDefIndex: 61521
 	{
 		// Fields
 		public int size; // 0x00
 		public PropertyType type; // 0x04
 	}
 
-	internal struct Property // TypeDefIndex: 58918
+	internal struct Property // TypeDefIndex: 61522
 	{
 		// Fields
 		public string name; // 0x00
 		public PropertyDescriptor descriptor; // 0x08
 	}
 
-	internal struct RigProperties // TypeDefIndex: 58919
+	internal struct RigProperties // TypeDefIndex: 61523
 	{
 		// Fields
 		public static string s_Weight; // 0x00
 		public Component component; // 0x00
 	
 		// Constructors
-		static RigProperties() {
-			s_Weight = default;
-		} // 0x000000018BC71A48-0x000000018BC71AA4
+		static RigProperties(); // 0x000000018B1546E4-0x000000018B154740
 	}
 
-	internal struct ConstraintProperties // TypeDefIndex: 58920
+	internal struct ConstraintProperties // TypeDefIndex: 61524
 	{
 		// Fields
 		public static string s_Weight; // 0x00
@@ -1961,49 +2194,53 @@ namespace UnityEngine.Animations.Rigging
 		public Property[] properties; // 0x08
 	
 		// Constructors
-		static ConstraintProperties() {
-			s_Weight = default;
-		} // 0x000000018BC6857C-0x000000018BC685D8
+		static ConstraintProperties(); // 0x000000018B14AF08-0x000000018B14AF64
 	}
 
-	public static class PropertyUtils // TypeDefIndex: 58921
+	[Obsolete("PropertyUtils is deprecated. Use ConstraintsUtils instead. (UnityUpgradable) -> ConstraintsUtils")]
+	public static class PropertyUtils // TypeDefIndex: 61525
 	{
 		// Methods
-		public static string ConstructConstraintDataPropertyName(string property) => default; // 0x000000018BC6F260-0x000000018BC6F268
-		public static string ConstructCustomPropertyName(Component component, string property) => default; // 0x000000018BC6F268-0x000000018BC6F270
+		[Obsolete("ConstructConstraintDataPropertyName is deprecated. Use ConstraintsUtils.ConstructConstraintDataPropertyName instead.")]
+		public static string ConstructConstraintDataPropertyName(string property); // 0x000000018B151E1C-0x000000018B151E24
+		[Obsolete("ConstructCustomPropertyName is deprecated. Use ConstraintsUtils.ConstructCustomPropertyName instead.")]
+		public static string ConstructCustomPropertyName(Component component, string property); // 0x000000018B151E24-0x000000018B151E2C
 	}
 
-	public sealed class WeightRangeAttribute : PropertyAttribute // TypeDefIndex: 58922
+	[AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
+	public sealed class WeightRangeAttribute : PropertyAttribute // TypeDefIndex: 61526
 	{
 		// Fields
 		public readonly float min; // 0x10
 		public readonly float max; // 0x14
 	
 		// Constructors
-		public WeightRangeAttribute() {} // Dummy constructor
-		public WeightRangeAttribute(float min, float max) {} // 0x0000000185FBF890-0x0000000185FBF8A0
+		public WeightRangeAttribute(float min, float max); // 0x0000000184D8D120-0x0000000184D8D130
 	}
 
-	public interface IRigEffectorHolder // TypeDefIndex: 58923
+	public interface IRigEffectorHolder // TypeDefIndex: 61527
 	{
 	}
 
 	[Serializable]
-	public class RigEffectorData // TypeDefIndex: 58925
+	public class RigEffectorData // TypeDefIndex: 61529
 	{
 		// Fields
+		[SerializeField]
 		private Transform m_Transform; // 0x10
+		[SerializeField]
 		private Style m_Style; // 0x18
+		[SerializeField]
 		private bool m_Visible; // 0x50
 	
 		// Properties
-		public Transform transform { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public Style style { get => default; } // 0x0000000185FC4040-0x0000000185FC4070 
-		public bool visible { get => default; set {} } // 0x00000001813ECBE0-0x00000001813ECBF0 0x00000001813EE9A0-0x00000001813EE9B0
+		public Transform transform { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public Style style { get; } // 0x0000000184D98300-0x0000000184D98330 
+		public bool visible { get; set; } // 0x0000000184D86800-0x0000000184D86810 0x0000000184D86840-0x0000000184D86850
 	
 		// Nested types
 		[Serializable]
-		public struct Style // TypeDefIndex: 58924
+		public struct Style // TypeDefIndex: 61528
 		{
 			// Fields
 			public Mesh shape; // 0x00
@@ -2014,80 +2251,82 @@ namespace UnityEngine.Animations.Rigging
 		}
 	
 		// Constructors
-		public RigEffectorData() {} // 0x0000000185FD5DD0-0x0000000185FD5DE0
+		public RigEffectorData(); // 0x0000000184DA9DE0-0x0000000184DA9DF0
 	
 		// Methods
-		public void Initialize(Transform transform, Style style) {} // 0x000000018BC71718-0x000000018BC71768
+		public void Initialize(Transform transform, Style style); // 0x000000018B1543C8-0x000000018B154418
 	}
 
 	[Serializable]
-	public struct AffineTransform // TypeDefIndex: 58926
+	public struct AffineTransform // TypeDefIndex: 61530
 	{
 		// Fields
 		public Vector3 translation; // 0x00
 		public Quaternion rotation; // 0x0C
+		[CompilerGenerated]
 		private static readonly AffineTransform _identity_k__BackingField; // 0x00
 	
 		// Properties
-		public static AffineTransform identity { get; } // 0x000000018BC654A0-0x000000018BC65500 
+		public static AffineTransform identity { [CompilerGenerated] get; } // 0x000000018B147E1C-0x000000018B147E7C 
 	
 		// Constructors
-		public AffineTransform(Vector3 t, Quaternion r) : this() {
-			translation = default;
-			rotation = default;
-		} // 0x0000000185FBDA20-0x0000000185FBDA40
-		static AffineTransform() {
-			<identity>k__BackingField = default;
-		} // 0x000000018BC65414-0x000000018BC654A0
+		public AffineTransform(Vector3 t, Quaternion r); // 0x0000000184D91FA0-0x0000000184D91FC0
+		static AffineTransform(); // 0x000000018B147D90-0x000000018B147E1C
 	
 		// Methods
-		public void Set(Vector3 t, Quaternion r) {} // 0x0000000185FBDA20-0x0000000185FBDA40
-		public Vector3 Transform(Vector3 p) => default; // 0x0000000187F81278-0x0000000187F81304
-		public Vector3 InverseTransform(Vector3 p) => default; // 0x0000000187F81108-0x0000000187F811C8
-		public AffineTransform Inverse() => default; // 0x0000000187F811C8-0x0000000187F81278
-		public AffineTransform InverseMul(AffineTransform transform) => default; // 0x0000000187F80FE0-0x0000000187F81108
-		public static Vector3 operator *(AffineTransform lhs, Vector3 rhs) => default; // 0x0000000187F81278-0x0000000187F81304
-		public static AffineTransform operator *(AffineTransform lhs, AffineTransform rhs) => default; // 0x000000018BC65500-0x000000018BC65614
-		public static AffineTransform operator *(Quaternion lhs, AffineTransform rhs) => default; // 0x0000000187F81504-0x0000000187F815A4
-		public static AffineTransform operator *(AffineTransform lhs, Quaternion rhs) => default; // 0x0000000187F815A4-0x0000000187F815F8
+		public void Set(Vector3 t, Quaternion r); // 0x0000000184D91FA0-0x0000000184D91FC0
+		public Vector3 Transform(Vector3 p); // 0x000000018722ACFC-0x000000018722AD88
+		public Vector3 InverseTransform(Vector3 p); // 0x000000018722AB8C-0x000000018722AC4C
+		public AffineTransform Inverse(); // 0x000000018722AC4C-0x000000018722ACFC
+		public AffineTransform InverseMul(AffineTransform transform); // 0x000000018722AA64-0x000000018722AB8C
+		public static Vector3 operator *(AffineTransform lhs, Vector3 rhs); // 0x000000018722ACFC-0x000000018722AD88
+		public static AffineTransform operator *(AffineTransform lhs, AffineTransform rhs); // 0x000000018B147E7C-0x000000018B147F90
+		public static AffineTransform operator *(Quaternion lhs, AffineTransform rhs); // 0x000000018722AF88-0x000000018722B028
+		public static AffineTransform operator *(AffineTransform lhs, Quaternion rhs); // 0x000000018722B028-0x000000018722B07C
 	}
 
-	public static class AnimationRuntimeUtils // TypeDefIndex: 58927
+	public static class AnimationRuntimeUtils // TypeDefIndex: 61531
 	{
 		// Fields
-		private const float k_SqrEpsilon = 1E-08f; // Metadata: 0x0207FF6C
+		private const float k_SqrEpsilon = 1E-08f; // Metadata: 0x0234FC79
 	
 		// Methods
-		public static void SolveTwoBoneIK(AnimationStream stream, ReadWriteTransformHandle root, ReadWriteTransformHandle mid, ReadWriteTransformHandle tip, ReadOnlyTransformHandle target, ReadOnlyTransformHandle hint, float posWeight, float rotWeight, float hintWeight, AffineTransform targetOffset) {} // 0x000000018BC663CC-0x000000018BC67120
-		private static float TriangleAngle(float aLen, float aLen1, float aLen2) => default; // 0x000000018BC67170-0x000000018BC671C0
-		public static bool SolveFABRIK(ref NativeArray<Vector3> linkPositions, ref NativeArray<float> linkLengths, Vector3 target, float tolerance, float maxReach, int maxIterations) => default; // 0x000000018BC65F20-0x000000018BC663CC
-		public static float SqrDistance(Vector3 lhs, Vector3 rhs) => default; // 0x0000000187829F18-0x0000000187829F74
-		public static float Square(float value) => default; // 0x0000000185FB2920-0x0000000185FB2930
-		public static Vector3 Lerp(Vector3 a, Vector3 b, Vector3 t) => default; // 0x000000018BC65BF4-0x000000018BC65CF8
-		public static float Select(float a, float b, float c) => default; // 0x000000018BC65F14-0x000000018BC65F20
-		public static Vector3 Select(Vector3 a, Vector3 b, Vector3 c) => default; // 0x000000018BC65EB8-0x000000018BC65F14
-		public static Vector3 ProjectOnPlane(Vector3 vector, Vector3 planeNormal) => default; // 0x000000018BC65DF8-0x000000018BC65EB8
-		internal static float Sum(AnimationJobCache cache, CacheIndex index, int count) => default; // 0x000000018BC67148-0x000000018BC67170
-		public static float Sum(NativeArray<float> floatBuffer) => default; // 0x000000018BC67120-0x000000018BC67148
-		public static void PassThrough(AnimationStream stream, ReadWriteTransformHandle handle) {} // 0x000000018BC65CF8-0x000000018BC65DF8
+		public static void SolveTwoBoneIK(AnimationStream stream, ReadWriteTransformHandle root, ReadWriteTransformHandle mid, ReadWriteTransformHandle tip, ReadOnlyTransformHandle target, ReadOnlyTransformHandle hint, float posWeight, float rotWeight, float hintWeight, AffineTransform targetOffset); // 0x000000018B148D48-0x000000018B149A9C
+		private static float TriangleAngle(float aLen, float aLen1, float aLen2); // 0x000000018B149AEC-0x000000018B149B3C
+		public static bool SolveFABRIK(ref NativeArray<Vector3> linkPositions, ref NativeArray<float> linkLengths, Vector3 target, float tolerance, float maxReach, int maxIterations); // 0x000000018B14889C-0x000000018B148D48
+		public static float SqrDistance(Vector3 lhs, Vector3 rhs); // 0x0000000186888FD0-0x000000018688902C
+		public static float Square(float value); // 0x0000000184D886E0-0x0000000184D886F0
+		public static Vector3 Lerp(Vector3 a, Vector3 b, Vector3 t); // 0x000000018B148570-0x000000018B148674
+		public static float Select(float a, float b, float c); // 0x000000018B148890-0x000000018B14889C
+		public static Vector3 Select(Vector3 a, Vector3 b, Vector3 c); // 0x000000018B148834-0x000000018B148890
+		public static Vector3 ProjectOnPlane(Vector3 vector, Vector3 planeNormal); // 0x000000018B148774-0x000000018B148834
+		internal static float Sum(AnimationJobCache cache, CacheIndex index, int count); // 0x000000018B149AC4-0x000000018B149AEC
+		public static float Sum(NativeArray<float> floatBuffer); // 0x000000018B149A9C-0x000000018B149AC4
+		public static void PassThrough(AnimationStream stream, ReadWriteTransformHandle handle); // 0x000000018B148674-0x000000018B148774
 	}
 
-	public class BoneRenderer : MonoBehaviour // TypeDefIndex: 58929
+	[AddComponentMenu("Animation Rigging/Setup/Bone Renderer")]
+	[ExecuteInEditMode]
+	[HelpURL("https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/RiggingWorkflow.html#bone-renderer-component")]
+	public class BoneRenderer : MonoBehaviour // TypeDefIndex: 61533
 	{
 		// Fields
 		public BoneShape boneShape; // 0x18
 		public bool drawBones; // 0x1C
 		public bool drawTripods; // 0x1D
+		[Range(0.01f, 5f)]
 		public float boneSize; // 0x20
+		[Range(0.01f, 5f)]
 		public float tripodSize; // 0x24
 		public UnityEngine.Color boneColor; // 0x28
+		[SerializeField]
 		private Transform[] m_Transforms; // 0x38
 	
 		// Properties
-		public Transform[] transforms { get => default; } // 0x00000001813ECBC0-0x00000001813ECBD0 
+		public Transform[] transforms { get; } // 0x0000000184D85A50-0x0000000184D85A60 
 	
 		// Nested types
-		public enum BoneShape // TypeDefIndex: 58928
+		public enum BoneShape // TypeDefIndex: 61532
 		{
 			Line = 0,
 			Pyramid = 1,
@@ -2095,50 +2334,51 @@ namespace UnityEngine.Animations.Rigging
 		}
 	
 		// Constructors
-		public BoneRenderer() {} // 0x000000018BC679B0-0x000000018BC679DC
+		public BoneRenderer(); // 0x000000018B14A32C-0x000000018B14A368
 	}
 
-	public static class ConstraintsUtils // TypeDefIndex: 58931
+	public static class ConstraintsUtils // TypeDefIndex: 61535
 	{
 		// Nested types
-		private sealed class __c__DisplayClass2_0 // TypeDefIndex: 58930
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass2_0 // TypeDefIndex: 61534
 		{
 			// Fields
 			public float totalLength; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass2_0() {} // 0x000000018BC68744-0x000000018BC68894
+			public __c__DisplayClass2_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _ExtractSteps_b__0(float length) {} // 0x000000018BC68894-0x000000018BC68960
+			internal void _ExtractSteps_b__0(float length); // 0x0000000184DAB1A0-0x0000000184DAB1B0
 		}
 	
 		// Methods
-		public static Transform[] ExtractChain(Transform root, Transform tip) => default; // 0x000000018BC68960-0x000000018BC68A90
-		public static float[] ExtractLengths(Transform[] chain) => default; // 0x000000018BC685D8-0x000000018BC68614
-		public static float[] ExtractSteps(Transform[] chain) => default; // 0x000000018BC68614-0x000000018BC68744
-		public static string ConstructConstraintDataPropertyName(string property) => default; // 0x0000000185492010-0x0000000185492020
-		public static string ConstructCustomPropertyName(Component component, string property) => default; // 0x0000000185FD7150-0x0000000185FD7160
+		public static Transform[] ExtractChain(Transform root, Transform tip); // 0x000000018B14B0D0-0x000000018B14B220
+		public static float[] ExtractLengths(Transform[] chain); // 0x000000018B14B220-0x000000018B14B2EC
+		public static float[] ExtractSteps(Transform[] chain); // 0x000000018B14B2EC-0x000000018B14B41C
+		public static string ConstructConstraintDataPropertyName(string property); // 0x000000018B14AF64-0x000000018B14AFA0
+		public static string ConstructCustomPropertyName(Component component, string property); // 0x000000018B14AFA0-0x000000018B14B0D0
 	}
 
-	public static class QuaternionExt // TypeDefIndex: 58932
+	public static class QuaternionExt // TypeDefIndex: 61536
 	{
 		// Fields
-		private const float k_FloatMin = 1E-10f; // Metadata: 0x0207FF73
+		private const float k_FloatMin = 1E-10f; // Metadata: 0x0234FC80
 		public static readonly Quaternion zero; // 0x00
 	
 		// Constructors
-		static QuaternionExt() {} // 0x000000018BC6F55C-0x000000018BC6F598
+		static QuaternionExt(); // 0x000000018B152118-0x000000018B152154
 	
 		// Methods
-		public static Quaternion FromToRotation(Vector3 from, Vector3 to) => default; // 0x000000018BC6F2F4-0x000000018BC6F4E8
-		public static Quaternion Add(Quaternion rhs, Quaternion lhs) => default; // 0x000000018BC6F270-0x000000018BC6F2F4
-		public static Quaternion Scale(Quaternion q, float scale) => default; // 0x00000001840DD310-0x00000001840DD330
-		public static Quaternion NormalizeSafe(Quaternion q) => default; // 0x000000018BC6F4E8-0x000000018BC6F55C
+		public static Quaternion FromToRotation(Vector3 from, Vector3 to); // 0x000000018B151EB0-0x000000018B1520A4
+		public static Quaternion Add(Quaternion rhs, Quaternion lhs); // 0x000000018B151E2C-0x000000018B151EB0
+		public static Quaternion Scale(Quaternion q, float scale); // 0x000000018308B480-0x000000018308B4A0
+		public static Quaternion NormalizeSafe(Quaternion q); // 0x000000018B1520A4-0x000000018B152118
 	}
 
 	[Serializable]
-	public struct Vector3Bool // TypeDefIndex: 58933
+	public struct Vector3Bool // TypeDefIndex: 61537
 	{
 		// Fields
 		public bool x; // 0x00
@@ -2146,15 +2386,7 @@ namespace UnityEngine.Animations.Rigging
 		public bool z; // 0x02
 	
 		// Constructors
-		public Vector3Bool(bool val) {
-			x = default;
-			y = default;
-			z = default;
-		} // 0x0000000185FD7160-0x0000000185FD7170
-		public Vector3Bool(bool x, bool y, bool z) {
-			this.x = default;
-			this.y = default;
-			this.z = default;
-		} // 0x0000000185FCC280-0x0000000185FCC290
+		public Vector3Bool(bool val); // 0x0000000184DAB1B0-0x0000000184DAB1C0
+		public Vector3Bool(bool x, bool y, bool z); // 0x0000000184DA0780-0x0000000184DA0790
 	}
 }

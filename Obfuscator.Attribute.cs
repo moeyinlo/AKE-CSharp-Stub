@@ -3,20 +3,27 @@
  */
 
 using System;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
-// Image 159: Obfuscator.Attribute.dll - Assembly: Obfuscator.Attribute, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 61320-61322
+// Image 163: Obfuscator.Attribute.dll - Assembly: Obfuscator.Attribute, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63969-63971
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Beebyte.Obfuscator
 {
-	public class SkipAttribute : Attribute // TypeDefIndex: 61321
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Parameter | AttributeTargets.Delegate)]
+	public class SkipAttribute : Attribute // TypeDefIndex: 63970
 	{
 		// Constructors
-		public SkipAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public SkipAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class SkipRenameAttribute : Attribute // TypeDefIndex: 61322
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Parameter | AttributeTargets.Delegate)]
+	public class SkipRenameAttribute : Attribute // TypeDefIndex: 63971
 	{
 		// Constructors
-		public SkipRenameAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public SkipRenameAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }

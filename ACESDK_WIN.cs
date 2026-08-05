@@ -4,40 +4,43 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using AceSdk;
 
-// Image 120: ACESDK_WIN.dll - Assembly: ACESDK_WIN, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60991-61020
+// Image 122: ACESDK_WIN.dll - Assembly: ACESDK_WIN, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 63627-63656
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
-internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 61020
+[CompilerGenerated]
+internal sealed class _PrivateImplementationDetails_ // TypeDefIndex: 63656
 {
 	// Fields
-	internal static readonly __StaticArrayInitTypeSize_33 _069D1FC04DF5D3A97841869D60961B287D2BF035BAE96ED2B8B31CDC3A9084AF; // 0x00 // Static value (base64): 9vbrxN7D6cLPy97v0trP2N729uvp74foy9nPnJ6EzsbG - Metadata: 0x02082D34
-	internal static readonly __StaticArrayInitTypeSize_14 A79B64018AA2094EC519F1C00795ED3CD8C3F6B942D7CA802FF2B45B51A55B9C; // 0x21 // Static value (base64): 48TD3uvJz+nGw8/E3p8= - Metadata: 0x02082D5C
-	internal static readonly __StaticArrayInitTypeSize_38 EF03B53ABC241FB166156A9BAB8EB62CCE1FD43274D0BAF46A38C9FED67CCB00; // 0x2F // Static value (base64): 9vbrxN7D6cLPy97v0trP2N729tKSnPb26+nvh+jL2c+ZmITOxsY= - Metadata: 0x02082D6C
+	internal static readonly __StaticArrayInitTypeSize_33 _069D1FC04DF5D3A97841869D60961B287D2BF035BAE96ED2B8B31CDC3A9084AF; // 0x00 // Static value (base64): 9vbrxN7D6cLPy97v0trP2N729uvp74foy9nPnJ6EzsbG - Metadata: 0x023529B4
+	internal static readonly __StaticArrayInitTypeSize_14 A79B64018AA2094EC519F1C00795ED3CD8C3F6B942D7CA802FF2B45B51A55B9C; // 0x21 // Static value (base64): 48TD3uvJz+nGw8/E3p8= - Metadata: 0x023529DC
+	internal static readonly __StaticArrayInitTypeSize_38 EF03B53ABC241FB166156A9BAB8EB62CCE1FD43274D0BAF46A38C9FED67CCB00; // 0x2F // Static value (base64): 9vbrxN7D6cLPy97v0trP2N729tKSnPb26+nvh+jL2c+ZmITOxsY= - Metadata: 0x023529EC
 
 	// Nested types
-	private struct __StaticArrayInitTypeSize_14 // TypeDefIndex: 61017
+	private struct __StaticArrayInitTypeSize_14 // TypeDefIndex: 63653
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_33 // TypeDefIndex: 61018
+	private struct __StaticArrayInitTypeSize_33 // TypeDefIndex: 63654
 	{
 	}
 
-	private struct __StaticArrayInitTypeSize_38 // TypeDefIndex: 61019
+	private struct __StaticArrayInitTypeSize_38 // TypeDefIndex: 63655
 	{
 	}
-
-	// Constructors
-	public _PrivateImplementationDetails_() {} // Dummy constructor
 }
 
 namespace AceSdk
 {
-	public enum AceSdkAccountType : uint // TypeDefIndex: 60993
+	public enum AceSdkAccountType : uint // TypeDefIndex: 63629
 	{
 		ACE_SDK_ACCOUNT_TYPE_QQ = 1,
 		ACE_SDK_ACCOUNT_TYPE_WECHAT = 2,
@@ -65,7 +68,7 @@ namespace AceSdk
 		ACE_SDK_ACCOUNT_TYPE_APPLE = 1020
 	}
 
-	public enum AceSdkAccountPlatID : uint // TypeDefIndex: 60994
+	public enum AceSdkAccountPlatID : uint // TypeDefIndex: 63630
 	{
 		ACE_SDK_PLAT_ID_IOS = 0,
 		ACE_SDK_PLAT_ID_ANDROID = 1,
@@ -81,10 +84,10 @@ namespace AceSdk
 		ACE_SDK_PLAT_ID_UNKNOWN = 99
 	}
 
-	public class AceSdkAccount // TypeDefIndex: 60995
+	public class AceSdkAccount // TypeDefIndex: 63631
 	{
 		// Fields
-		public const int ACE_SDK_MAX_ACCOUNT_LEN = 65; // Metadata: 0x02082C92
+		public const int ACE_SDK_MAX_ACCOUNT_LEN = 65; // Metadata: 0x02352911
 		public StringBuilder account_; // 0x10
 		public AceSdkAccountType account_type_; // 0x18
 		public AceSdkAccountPlatID plat_id_; // 0x1C
@@ -92,34 +95,44 @@ namespace AceSdk
 		public uint world_id_; // 0x24
 	
 		// Constructors
-		public AceSdkAccount() {} // 0x0000000185492010-0x0000000185492020
+		public AceSdkAccount(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class AceSdkClient // TypeDefIndex: 61008
+	public class AceSdkClient // TypeDefIndex: 63644
 	{
 		// Fields
 		private AceSdkClientObject client_obj_; // 0x10
+		[ThreadStatic]
 		private byte[] get_packet_buffer_; // 0x58
+		[ThreadStatic]
 		private byte[] get_light_feature_packet_buffer_; // 0x60
 	
 		// Nested types
-		private delegate AceSdkResult InitAceClient5Routine(uint ver, IntPtr opt, out IntPtr client_obj_ptr); // TypeDefIndex: 60996; 0x00000001864776B8-0x00000001864776E4
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		private delegate AceSdkResult InitAceClient5Routine(uint ver, IntPtr opt, out IntPtr client_obj_ptr); // TypeDefIndex: 63632; 0x00000001814F3120-0x00000001814F3140
 	
-		private delegate AceSdkResult LogInRoutine(IntPtr handle, string account, uint account_type, uint world_id, string login_ticket); // TypeDefIndex: 60997; 0x0000000186477C94-0x0000000186477CD0
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		private delegate AceSdkResult LogInRoutine(IntPtr handle, string account, uint account_type, uint world_id, string login_ticket); // TypeDefIndex: 63633; 0x00000001814D3FD0-0x00000001814D3FF0
 	
-		private delegate AceSdkResult LogOutRoutine(IntPtr handle); // TypeDefIndex: 60998; 0x0000000186477CD0-0x0000000186477D50
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		private delegate AceSdkResult LogOutRoutine(IntPtr handle); // TypeDefIndex: 63634; 0x00000001814E2060-0x00000001814E2070
 	
-		private delegate AceSdkResult DeinitRoutine(IntPtr handle); // TypeDefIndex: 60999; 0x0000000186477420-0x000000018647749C
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		private delegate AceSdkResult DeinitRoutine(IntPtr handle); // TypeDefIndex: 63635; 0x00000001814E2060-0x00000001814E2070
 	
-		private delegate AceSdkResult GetPacketRoutine(IntPtr handle, ref AceSdkClientPacket packet); // TypeDefIndex: 61000; 0x0000000186478278-0x0000000186478324
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		private delegate AceSdkResult GetPacketRoutine(IntPtr handle, ref AceSdkClientPacket packet); // TypeDefIndex: 63636; 0x00000001815802E0-0x00000001815802F0
 	
-		private delegate AceSdkResult OnPacketReceivedRoutine(IntPtr handle, byte[] data, uint len); // TypeDefIndex: 61001; 0x00000001864783EC-0x00000001864784A8
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		private delegate AceSdkResult OnPacketReceivedRoutine(IntPtr handle, byte[] data, uint len); // TypeDefIndex: 63637; 0x00000001814F3120-0x00000001814F3140
 	
-		private delegate AceSdkResult GetLightFeaturePacketRoutine(IntPtr handle, ref AceSdkClientLightFeaturePacket packet); // TypeDefIndex: 61002; 0x0000000186478570-0x00000001864785E8
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		private delegate AceSdkResult GetLightFeaturePacketRoutine(IntPtr handle, ref AceSdkClientLightFeaturePacket packet); // TypeDefIndex: 63638; 0x00000001815802E0-0x00000001815802F0
 	
-		private delegate AceSdkResult OnLightFeaturePacketReceivedRoutine(IntPtr handle, ref AceSdkClientLightFeature data); // TypeDefIndex: 61003; 0x0000000186477DDC-0x0000000186477E54
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		private delegate AceSdkResult OnLightFeaturePacketReceivedRoutine(IntPtr handle, ref AceSdkClientLightFeature data); // TypeDefIndex: 63639; 0x00000001815802E0-0x00000001815802F0
 	
-		private struct AceSdkClientObject // TypeDefIndex: 61004
+		private struct AceSdkClientObject // TypeDefIndex: 63640
 		{
 			// Fields
 			public IntPtr handle_; // 0x00
@@ -133,21 +146,21 @@ namespace AceSdk
 			public OnLightFeaturePacketReceivedRoutine on_light_feature_packet_received_; // 0x40
 		}
 	
-		private struct AceSdkClientPacket // TypeDefIndex: 61005
+		private struct AceSdkClientPacket // TypeDefIndex: 63641
 		{
 			// Fields
 			public byte[] buffer_; // 0x00
 			public uint len_; // 0x08
 		}
 	
-		private struct AceSdkClientLightFeaturePacket // TypeDefIndex: 61006
+		private struct AceSdkClientLightFeaturePacket // TypeDefIndex: 63642
 		{
 			// Fields
 			public byte[] buffer_; // 0x00
 			public uint len_; // 0x08
 		}
 	
-		private struct AceSdkClientLightFeature // TypeDefIndex: 61007
+		private struct AceSdkClientLightFeature // TypeDefIndex: 63643
 		{
 			// Fields
 			public string name_; // 0x00
@@ -157,36 +170,26 @@ namespace AceSdk
 		}
 	
 		// Constructors
-		public AceSdkClient() {} // Dummy constructor
-		private AceSdkClient(IntPtr client_obj_ptr) {} // 0x0000000181B59400-0x0000000181B59410
+		private AceSdkClient(IntPtr client_obj_ptr); // 0x000000018539A2D0-0x000000018539A3C8
 	
 		// Methods
-		public static AceSdkResult ace_sdk_client_init(out AceSdkClient ace_client) {
-			ace_client = default;
-			return default;
-		} // 0x0000000181B59400-0x0000000181B59410
-		public AceSdkResult ace_sdk_client_deinit() => default; // 0x00000001864781DC-0x0000000186478278
-		public AceSdkResult ace_sdk_client_log_in(string account_id, AceSdkAccountType account_type, uint world_id, string login_ticket) => default; // 0x00000001864780E8-0x0000000186478114
-		public AceSdkResult ace_sdk_client_log_out() => default; // 0x0000000186478720-0x00000001864787E8
-		public AceSdkResult ace_sdk_client_get_packet(out byte[] packet) {
-			packet = default;
-			return default;
-		} // 0x00000001817E31E0-0x00000001817E3200
-		public AceSdkResult ace_sdk_client_on_packet_received(byte[] packet) => default; // 0x0000000186478684-0x0000000186478720
-		public AceSdkResult ace_sdk_client_get_light_feature_packet(out byte[] packet) {
-			packet = default;
-			return default;
-		} // 0x0000000186477E54-0x0000000186477F84
-		public AceSdkResult ace_sdk_client_on_light_feature_packet_received(byte[] lf_data, string name, uint crc) => default; // 0x0000000186478114-0x00000001864781DC
-		private static int get_exe_module_path(StringBuilder path, int len) => default; // 0x000000018647804C-0x00000001864780E8
-		private static string DecryptString(byte[] encrypted, byte key) => default; // 0x00000001864780E8-0x0000000186478114
-		private static extern IntPtr LoadLibrary(string lpLibFileName); // 0x0000000186478114-0x00000001864781DC
-		private static extern IntPtr GetProcAddress(IntPtr hModule, string lpProcName); // 0x0000000181B59400-0x0000000181B59410
-		private static extern IntPtr GetProcAddressByOrdinal(IntPtr hModule, int nOrdinal); // 0x00000001864785E8-0x0000000186478684
-		private static extern uint GetModuleFileName(IntPtr hModule, StringBuilder lpFilename, int nSize); // 0x00000001864780E8-0x0000000186478114
+		public static AceSdkResult ace_sdk_client_init(out AceSdkClient ace_client); // 0x000000018539A5CC-0x000000018539A844
+		public AceSdkResult ace_sdk_client_deinit(); // 0x000000018539A3C8-0x000000018539A3F4
+		public AceSdkResult ace_sdk_client_log_in(string account_id, AceSdkAccountType account_type, uint world_id, string login_ticket); // 0x000000018539A844-0x000000018539A88C
+		public AceSdkResult ace_sdk_client_log_out(); // 0x000000018539A88C-0x000000018539A8B8
+		public AceSdkResult ace_sdk_client_get_packet(out byte[] packet); // 0x000000018539A4E0-0x000000018539A5CC
+		public AceSdkResult ace_sdk_client_on_packet_received(byte[] packet); // 0x000000018539A9A4-0x000000018539A9E0
+		public AceSdkResult ace_sdk_client_get_light_feature_packet(out byte[] packet); // 0x000000018539A3F4-0x000000018539A4E0
+		public AceSdkResult ace_sdk_client_on_light_feature_packet_received(byte[] lf_data, string name, uint crc); // 0x000000018539A8B8-0x000000018539A9A4
+		private static int get_exe_module_path(StringBuilder path, int len); // 0x000000018539A9E0-0x000000018539AA60
+		private static string DecryptString(byte[] encrypted, byte key); // 0x0000000185399FD4-0x000000018539A068
+		private static extern IntPtr LoadLibrary(string lpLibFileName); // 0x000000018539A258-0x000000018539A2D0
+		private static extern IntPtr GetProcAddress(IntPtr hModule, string lpProcName); // 0x000000018539A1AC-0x000000018539A258
+		private static extern IntPtr GetProcAddressByOrdinal(IntPtr hModule, int nOrdinal); // 0x000000018539A130-0x000000018539A1AC
+		private static extern uint GetModuleFileName(IntPtr hModule, StringBuilder lpFilename, int nSize); // 0x000000018539A068-0x000000018539A130
 	}
 
-	public enum AceSdkResult // TypeDefIndex: 61009
+	public enum AceSdkResult // TypeDefIndex: 63645
 	{
 		ACE_SDK_RESULT_OK = 0,
 		ACE_SDK_RESULT_NOT_SUPPORTED = 1,
@@ -239,19 +242,19 @@ namespace AceSdk
 		ACE_SDK_RESULT_MAX_INT32 = 2147483647
 	}
 
-	public class AceSdkTool // TypeDefIndex: 61010
+	public class AceSdkTool // TypeDefIndex: 63646
 	{
 		// Constructors
-		public AceSdkTool() {} // 0x0000000185492010-0x0000000185492020
+		public AceSdkTool(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public static string get_string_from_bytearray_until_zero(byte[] input_bytes) => default; // 0x0000000186477D50-0x0000000186477DDC
+		public static string get_string_from_bytearray_until_zero(byte[] input_bytes); // 0x000000018539AA60-0x000000018539AAEC
 	}
 }
 
 namespace Beyond.AceSdk
 {
-	public class AceSDKInterfaceWin // TypeDefIndex: 61016
+	public class AceSDKInterfaceWin // TypeDefIndex: 63652
 	{
 		// Fields
 		private static AceSDKInterfaceWin instance; // 0x00
@@ -263,29 +266,42 @@ namespace Beyond.AceSdk
 		private bool isGamePaused; // 0x38
 	
 		// Properties
-		public static AceSDKInterfaceWin Instance { get => default; } // 0x0000000186477234-0x00000001864772C4 
+		public static AceSDKInterfaceWin Instance { get; } // 0x0000000185399F44-0x0000000185399FD4 
 	
 		// Constructors
-		public AceSDKInterfaceWin() {} // 0x0000000186477104-0x0000000186477234
+		public AceSDKInterfaceWin(); // 0x0000000185399E14-0x0000000185399F44
 	
 		// Methods
-		~AceSDKInterfaceWin() {} // 0x0000000186476BE0-0x0000000186476D88
-		public void InitACESDK() {} // 0x0000000186476D88-0x0000000186476E00
-		public void DeinitACESDK() {} // 0x0000000186476B78-0x0000000186476BE0
-		public void OnApplicationPause(bool pause) {} // 0x0000000185FAFE20-0x0000000185FAFE30
-		public void AceSdkClientLogIn(string account_id, string ticket, uint world_id = 0 /* Metadata: 0x02082D2E */) {} // 0x00000001864769D4-0x0000000186476AFC
-		public void AceSdkClientLogOut() {} // 0x0000000186476AFC-0x0000000186476B78
-		public void StartNetThread() {} // 0x0000000186476FDC-0x00000001864770F8
-		private void NetworkThread(AceSdkClient ace_client) {} // 0x0000000186476E00-0x0000000186476EF8
-		private static void SendPktToGameServer(byte[] pkg) {} // 0x0000000186476F0C-0x0000000186476FDC
-		public void OnAceSdkPacketReceived(byte[] pkt) {} // 0x0000000186476EF8-0x0000000186476F0C
-		private void _StartNetThread_b__16_0() {} // 0x00000001864770F8-0x0000000186477104
+		~AceSDKInterfaceWin(); // 0x00000001853999CC-0x0000000185399A98
+		public void InitACESDK(); // 0x0000000185399A98-0x0000000185399B10
+		public void DeinitACESDK(); // 0x0000000185399964-0x00000001853999CC
+		public void OnApplicationPause(bool pause); // 0x00000001811F2A80-0x00000001811F2A90
+		public void AceSdkClientLogIn(string account_id, string ticket, uint world_id = 0 /* Metadata: 0x023529AD */); // 0x00000001853997C0-0x00000001853998E8
+		public void AceSdkClientLogOut(); // 0x00000001853998E8-0x0000000185399964
+		public void StartNetThread(); // 0x0000000185399CEC-0x0000000185399E08
+		private void NetworkThread(AceSdkClient ace_client); // 0x0000000185399B10-0x0000000185399C08
+		private static void SendPktToGameServer(byte[] pkg); // 0x0000000185399C1C-0x0000000185399CEC
+		public void OnAceSdkPacketReceived(byte[] pkt); // 0x0000000185399C08-0x0000000185399C1C
+		[CompilerGenerated]
+		private void _StartNetThread_b__16_0(); // 0x0000000185399E08-0x0000000185399E14
 	}
 }
 
 namespace Beyond.SourceGenerator
 {
-	internal class DataNAttribute : Attribute // TypeDefIndex: 61011
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 63647
+	{
+		// Fields
+		public LayoutKind layoutKind; // 0x10
+		public bool isTag; // 0x14
+	
+		// Constructors
+		public ECSComponentAttribute(); // 0x00000001841E1670-0x00000001841E1680
+	}
+
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class DataNAttribute : Attribute // TypeDefIndex: 63648
 	{
 		// Fields
 		public int capacity; // 0x10
@@ -293,46 +309,39 @@ namespace Beyond.SourceGenerator
 		public bool ring; // 0x18
 	
 		// Constructors
-		public DataNAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public DataNAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal static class AnimatorBlackboardUtility // TypeDefIndex: 61012
+	internal static class AnimatorBlackboardUtility // TypeDefIndex: 63649
 	{
 		// Fields
 		internal static bool s_enableFastPathBuffer; // 0x00
 	
 		// Methods
-		internal static void ClearAndEnsureDictionaryCapacity<TKey, TValue>(ref Dictionary<TKey, TValue> dict, int capacity) {}
+		internal static void ClearAndEnsureDictionaryCapacity<TKey, TValue>(ref Dictionary<TKey, TValue> dict, int capacity);
 	}
 
-	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 61013
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class AnimatorBlackboardAttribute : Attribute // TypeDefIndex: 63650
 	{
 		// Constructors
-		public AnimatorBlackboardAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public AnimatorBlackboardAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	internal class ECSComponentAttribute : Attribute // TypeDefIndex: 61014
-	{
-		// Fields
-		public LayoutKind layoutKind; // 0x10
-		public bool isTag; // 0x14
-	
-		// Constructors
-		public ECSComponentAttribute() {} // 0x0000000185492010-0x0000000185492020
-	}
-
-	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 61015
+	[AttributeUsage(AttributeTargets.Class)]
+	internal class CameraControlConfigAttribute : Attribute // TypeDefIndex: 63651
 	{
 		// Constructors
-		public CameraControlConfigAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public CameraControlConfigAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace HG.Rendering.Runtime
 {
-	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 60992
+	[AttributeUsage(AttributeTargets.Struct)]
+	internal class HGConstantBufferLayoutAttribute : Attribute // TypeDefIndex: 63628
 	{
 		// Constructors
-		public HGConstantBufferLayoutAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public HGConstantBufferLayoutAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }

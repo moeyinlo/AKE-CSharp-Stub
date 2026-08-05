@@ -5,66 +5,86 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 
-// Image 83: System.Xml.Linq.dll - Assembly: System.Xml.Linq, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 60106-60143
+// Image 86: System.Xml.Linq.dll - Assembly: System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35 - Types 62721-62758
+[assembly: AssemblyCompany("Mono development team")]
+[assembly: AssemblyCopyright("(c) Various Mono authors")]
+[assembly: AssemblyDefaultAlias("System.Xml.Linq.dll")]
+[assembly: AssemblyDelaySign(true)]
+[assembly: AssemblyDescription("System.Xml.Linq.dll")]
+[assembly: AssemblyFileVersion("4.0.30319.17020")]
+[assembly: AssemblyInformationalVersion("4.0.30319.17020")]
+[assembly: AssemblyKeyFile("../winfx.pub")]
+[assembly: AssemblyProduct("Mono Common Language Infrastructure")]
+[assembly: AssemblyTitle("System.Xml.Linq.dll")]
+[assembly: CLSCompliant(true)]
+[assembly: CompilationRelaxations(CompilationRelaxations.NoStringInterning)]
+[assembly: ComVisible(false)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: NeutralResourcesLanguage("en-US")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: SatelliteContractVersion("4.0.0.0")]
 
-internal static class SR // TypeDefIndex: 60107
+internal static class SR // TypeDefIndex: 62722
 {
 	// Methods
-	internal static string Format(string resourceFormat, object p1) => default; // 0x000000018B98EAF4-0x000000018B98EB50
-	internal static string Format(string resourceFormat, object p1, object p2) => default; // 0x000000018B98EA84-0x000000018B98EAF4
+	internal static string Format(string resourceFormat, object p1); // 0x000000018AE476F8-0x000000018AE47754
+	internal static string Format(string resourceFormat, object p1, object p2); // 0x000000018AE47688-0x000000018AE476F8
 }
 
 namespace System.Text
 {
-	internal static class StringBuilderCache // TypeDefIndex: 60142
+	internal static class StringBuilderCache // TypeDefIndex: 62757
 	{
 		// Fields
+		[ThreadStatic]
 		private static StringBuilder t_cachedInstance; // 0x80000000
 	
 		// Methods
-		public static StringBuilder Acquire(int capacity = 16 /* Metadata: 0x0208263E */) => default; // 0x000000018B98EB50-0x000000018B98EC28
-		public static void Release(StringBuilder sb) {} // 0x000000018B98EC6C-0x000000018B98ECE4
-		public static string GetStringAndRelease(StringBuilder sb) => default; // 0x000000018B98EC28-0x000000018B98EC6C
+		public static StringBuilder Acquire(int capacity = 16 /* Metadata: 0x0235218E */); // 0x000000018AE47754-0x000000018AE4782C
+		public static void Release(StringBuilder sb); // 0x000000018AE47870-0x000000018AE478E8
+		public static string GetStringAndRelease(StringBuilder sb); // 0x000000018AE4782C-0x000000018AE47870
 	}
 }
 
 namespace System.Xml.Linq
 {
-	internal class BaseUriAnnotation // TypeDefIndex: 60108
+	internal class BaseUriAnnotation // TypeDefIndex: 62723
 	{
 		// Fields
 		internal string baseUri; // 0x10
 	
 		// Constructors
-		public BaseUriAnnotation() {} // Dummy constructor
-		public BaseUriAnnotation(string baseUri) {} // 0x0000000184096E30-0x0000000184096EF0
+		public BaseUriAnnotation(string baseUri); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	internal class LineInfoAnnotation // TypeDefIndex: 60109
+	internal class LineInfoAnnotation // TypeDefIndex: 62724
 	{
 		// Fields
 		internal int lineNumber; // 0x10
 		internal int linePosition; // 0x14
 	
 		// Constructors
-		public LineInfoAnnotation() {} // Dummy constructor
-		public LineInfoAnnotation(int lineNumber, int linePosition) {} // 0x0000000185FB2190-0x0000000185FB21A0
+		public LineInfoAnnotation(int lineNumber, int linePosition); // 0x0000000184D88290-0x0000000184D882A0
 	}
 
-	internal class LineInfoEndElementAnnotation : LineInfoAnnotation // TypeDefIndex: 60110
+	internal class LineInfoEndElementAnnotation : LineInfoAnnotation // TypeDefIndex: 62725
 	{
 		// Constructors
-		public LineInfoEndElementAnnotation() {} // Dummy constructor
-		public LineInfoEndElementAnnotation(int lineNumber, int linePosition) {} // 0x0000000185FB2190-0x0000000185FB21A0
+		public LineInfoEndElementAnnotation(int lineNumber, int linePosition); // 0x0000000184D88290-0x0000000184D882A0
 	}
 
-	public class XAttribute : XObject // TypeDefIndex: 60111
+	public class XAttribute : XObject // TypeDefIndex: 62726
 	{
 		// Fields
 		internal XAttribute next; // 0x20
@@ -72,66 +92,63 @@ namespace System.Xml.Linq
 		internal string value; // 0x30
 	
 		// Properties
-		public bool IsNamespaceDeclaration { get => default; } // 0x000000018B98F970-0x000000018B98F9F4 
-		public XName Name { get => default; } // 0x00000001813B8590-0x00000001813B85A0 
-		public override XmlNodeType NodeType { get => default; } // 0x0000000181C6A970-0x0000000181C6A980 
-		public string Value { get => default; } // 0x00000001813B51D0-0x00000001813B51E0 
+		public bool IsNamespaceDeclaration { get; } // 0x000000018AE48574-0x000000018AE485F8 
+		public XName Name { get; } // 0x0000000184D86240-0x0000000184D86250 
+		public override XmlNodeType NodeType { get; } // 0x0000000182BBE540-0x0000000182BBE550 
+		public string Value { get; } // 0x00000001811F36E0-0x00000001811F36F0 
 	
 		// Constructors
-		public XAttribute() {} // Dummy constructor
-		public XAttribute(XName name, object value) {} // 0x000000018B98F7D8-0x000000018B98F8E4
-		public XAttribute(XAttribute other) {} // 0x000000018B98F8E4-0x000000018B98F970
+		public XAttribute(XName name, object value); // 0x000000018AE483DC-0x000000018AE484E8
+		public XAttribute(XAttribute other); // 0x000000018AE484E8-0x000000018AE48574
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018B98F184-0x000000018B98F414
-		internal string GetPrefixOfNamespace(XNamespace ns) => default; // 0x000000018B98F070-0x000000018B98F184
-		private static void ValidateAttribute(XName name, string value) {} // 0x000000018B98F414-0x000000018B98F7D8
+		public override string ToString(); // 0x000000018AE47D88-0x000000018AE48018
+		internal string GetPrefixOfNamespace(XNamespace ns); // 0x000000018AE47C74-0x000000018AE47D88
+		private static void ValidateAttribute(XName name, string value); // 0x000000018AE48018-0x000000018AE483DC
 	}
 
-	public class XCData : XText // TypeDefIndex: 60112
+	public class XCData : XText // TypeDefIndex: 62727
 	{
 		// Properties
-		public override XmlNodeType NodeType { get => default; } // 0x0000000181C44E90-0x0000000181C44EA0 
+		public override XmlNodeType NodeType { get; } // 0x0000000184D882B0-0x0000000184D882C0 
 	
 		// Constructors
-		public XCData() {} // Dummy constructor
-		public XCData(string value) {} // 0x000000018B98FACC-0x000000018B98FAD4
-		public XCData(XCData other) {} // 0x000000018B98FAD4-0x000000018B98FADC
+		public XCData(string value); // 0x000000018AE486D0-0x000000018AE486D8
+		public XCData(XCData other); // 0x000000018AE486D8-0x000000018AE486E0
 	
 		// Methods
-		public override void WriteTo(XmlWriter writer) {} // 0x000000018B98FA54-0x000000018B98FACC
-		internal override XNode CloneNode() => default; // 0x000000018B98F9F4-0x000000018B98FA54
+		public override void WriteTo(XmlWriter writer); // 0x000000018AE48658-0x000000018AE486D0
+		internal override XNode CloneNode(); // 0x000000018AE485F8-0x000000018AE48658
 	}
 
-	public class XComment : XNode // TypeDefIndex: 60113
+	public class XComment : XNode // TypeDefIndex: 62728
 	{
 		// Fields
 		internal string value; // 0x28
 	
 		// Properties
-		public override XmlNodeType NodeType { get => default; } // 0x0000000181E1B510-0x0000000181E1B520 
-		public string Value { get => default; } // 0x00000001813B8590-0x00000001813B85A0 
+		public override XmlNodeType NodeType { get; } // 0x0000000184D8D060-0x0000000184D8D070 
+		public string Value { get; } // 0x0000000184D86240-0x0000000184D86250 
 	
 		// Constructors
-		public XComment() {} // Dummy constructor
-		public XComment(string value) {} // 0x000000018B98FC2C-0x000000018B98FCA0
-		public XComment(XComment other) {} // 0x000000018B98FBB4-0x000000018B98FC2C
+		public XComment(string value); // 0x000000018AE48830-0x000000018AE488A4
+		public XComment(XComment other); // 0x000000018AE487B8-0x000000018AE48830
 	
 		// Methods
-		public override void WriteTo(XmlWriter writer) {} // 0x000000018B98FB3C-0x000000018B98FBB4
-		internal override XNode CloneNode() => default; // 0x000000018B98FADC-0x000000018B98FB3C
+		public override void WriteTo(XmlWriter writer); // 0x000000018AE48740-0x000000018AE487B8
+		internal override XNode CloneNode(); // 0x000000018AE486E0-0x000000018AE48740
 	}
 
-	public abstract class XContainer : XNode // TypeDefIndex: 60116
+	public abstract class XContainer : XNode // TypeDefIndex: 62731
 	{
 		// Fields
 		internal object content; // 0x28
 	
 		// Properties
-		public XNode LastNode { get; } // 0x000000018B990868-0x000000018B99091C 
+		public XNode LastNode { get; } // 0x000000018AE49F10-0x000000018AE4A00C 
 	
 		// Nested types
-		private sealed class ContentReader // TypeDefIndex: 60114
+		private sealed class ContentReader // TypeDefIndex: 62729
 		{
 			// Fields
 			private readonly NamespaceCache _eCache; // 0x10
@@ -141,16 +158,16 @@ namespace System.Xml.Linq
 			private string _baseUri; // 0x40
 	
 			// Constructors
-			public ContentReader() {} // Dummy constructor
-			public ContentReader(XContainer rootContainer) {} // 0x0000000185492010-0x0000000185492020
-			public ContentReader(XContainer rootContainer, XmlReader r, LoadOptions o) {} // 0x000000018B991208-0x000000018B99130C
+			public ContentReader(XContainer rootContainer); // 0x00000001846A91B0-0x00000001846A91C0
+			public ContentReader(XContainer rootContainer, XmlReader r, LoadOptions o); // 0x000000018AE46C14-0x000000018AE46CD4
 	
 			// Methods
-			public bool ReadContentFrom(XContainer rootContainer, XmlReader r) => default; // 0x000000018B99130C-0x000000018B991408
-			public bool ReadContentFrom(XContainer rootContainer, XmlReader r, LoadOptions o) => default; // 0x000000018B990390-0x000000018B990698
+			public bool ReadContentFrom(XContainer rootContainer, XmlReader r); // 0x000000018AE46604-0x000000018AE46C14
+			public bool ReadContentFrom(XContainer rootContainer, XmlReader r, LoadOptions o); // 0x000000018AE45DA0-0x000000018AE46604
 		}
 	
-		private sealed class _Nodes_d__18 : IEnumerable<XNode>, IEnumerator<XNode> // TypeDefIndex: 60115
+		[CompilerGenerated]
+		private sealed class _Nodes_d__18 : IEnumerable<XNode>, IEnumerator<XNode> // TypeDefIndex: 62730
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -160,49 +177,54 @@ namespace System.Xml.Linq
 			private XNode _n_5__2; // 0x30
 	
 			// Properties
-			XNode IEnumerator<System.Xml.Linq.XNode>.Current { get => default; } // 0x000000018B98FCA0-0x000000018B98FF68 
-			object IEnumerator.Current { get => default; } // 0x000000018B98FF68-0x000000018B98FFE0 
+			XNode IEnumerator<System.Xml.Linq.XNode>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _Nodes_d__18() {} // Dummy constructor
-			public _Nodes_d__18(int __1__state) {} // 0x000000018B990CF8-0x000000018B990D68
+			[DebuggerHidden]
+			public _Nodes_d__18(int __1__state); // 0x0000000183A11010-0x0000000183A11030
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x0000000185492010-0x0000000185492020
-			private bool MoveNext() => default; // 0x0000000185492010-0x0000000185492020
-			void IEnumerator.Reset() {} // 0x000000018B98FFE0-0x000000018B990058
-			IEnumerator<XNode> IEnumerable<XNode>.GetEnumerator() => default; // 0x000000018B990188-0x000000018B990390
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018B990058-0x000000018B990188
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018AE47AEC-0x000000018AE47B94
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018AE47C28-0x000000018AE47C74
+			[DebuggerHidden]
+			IEnumerator<XNode> IEnumerable<XNode>.GetEnumerator(); // 0x000000018AE47B94-0x000000018AE47C20
+			[DebuggerHidden]
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018AE47C20-0x000000018AE47C28
 		}
 	
 		// Constructors
-		internal XContainer() {} // 0x000000018B990754-0x000000018B990868
-		internal XContainer(XContainer other) {} // 0x000000018B990698-0x000000018B990754
+		internal XContainer(); // 0x00000001841E1670-0x00000001841E1680
+		internal XContainer(XContainer other); // 0x000000018AE49E0C-0x000000018AE49F10
 	
 		// Methods
-		public void Add(object content) {} // 0x000000018B99091C-0x000000018B9909D0
-		public IEnumerable<XNode> Nodes() => default; // 0x000000018B9909D0-0x000000018B990CF8
-		internal virtual void AddAttribute(XAttribute a) {} // 0x000000018B990D68-0x000000018B990E64
-		internal virtual void AddAttributeSkipNotify(XAttribute a) {} // 0x000000018B990E64-0x000000018B990F98
-		internal void AddContentSkipNotify(object content) {} // 0x000000018B990F98-0x000000018B991124
-		internal void AddNode(XNode n) {} // 0x0000000185492010-0x0000000185492020
-		internal void AddNodeSkipNotify(XNode n) {} // 0x0000000185492010-0x0000000185492020
-		internal void AddString(string s) {} // 0x000000018B991124-0x000000018B991208
-		internal void AddStringSkipNotify(string s) {} // 0x0000000185A16440-0x0000000185A16450
-		internal void AppendNode(XNode n) {} // 0x000000018B98E010-0x000000018B98E0D0
-		internal void AppendNodeSkipNotify(XNode n) {} // 0x000000018B98DA00-0x000000018B98E010
-		internal override void AppendText(StringBuilder sb) {} // 0x000000018B98D19C-0x000000018B98DA00
-		internal void ConvertTextToNode() {} // 0x0000000184775050-0x0000000184775070
-		internal static string GetStringValue(object value) => default; // 0x0000000185492010-0x0000000185492020
-		internal void ReadContentFrom(XmlReader r) {} // 0x000000018B98EEE8-0x000000018B98EF90
-		internal void ReadContentFrom(XmlReader r, LoadOptions o) {} // 0x0000000181377E40-0x0000000181377E50
-		internal void RemoveNode(XNode n) {} // 0x000000018B98F024-0x000000018B98F070
-		internal virtual void ValidateNode(XNode node, XNode previous) {} // 0x0000000181377E40-0x0000000181377E50
-		internal virtual void ValidateString(string s) {} // 0x000000018B98EF90-0x000000018B98F01C
-		internal void WriteContentTo(XmlWriter writer) {} // 0x000000018B98F01C-0x000000018B98F024
+		public void Add(object content); // 0x000000018AE48F94-0x000000018AE4929C
+		[IteratorStateMachine(typeof(_Nodes_d__18))]
+		public IEnumerable<XNode> Nodes(); // 0x000000018AE498FC-0x000000018AE4996C
+		internal virtual void AddAttribute(XAttribute a); // 0x00000001841E1670-0x00000001841E1680
+		internal virtual void AddAttributeSkipNotify(XAttribute a); // 0x00000001841E1670-0x00000001841E1680
+		internal void AddContentSkipNotify(object content); // 0x000000018AE488A4-0x000000018AE48B6C
+		internal void AddNode(XNode n); // 0x000000018AE48BE4-0x000000018AE48C5C
+		internal void AddNodeSkipNotify(XNode n); // 0x000000018AE48B6C-0x000000018AE48BE4
+		internal void AddString(string s); // 0x000000018AE48D8C-0x000000018AE48F94
+		internal void AddStringSkipNotify(string s); // 0x000000018AE48C5C-0x000000018AE48D8C
+		internal void AppendNode(XNode n); // 0x000000018AE49358-0x000000018AE4946C
+		internal void AppendNodeSkipNotify(XNode n); // 0x000000018AE4929C-0x000000018AE49358
+		internal override void AppendText(StringBuilder sb); // 0x000000018AE4946C-0x000000018AE49520
+		internal void ConvertTextToNode(); // 0x000000018AE49520-0x000000018AE495D4
+		internal static string GetStringValue(object value); // 0x000000018AE495D4-0x000000018AE498FC
+		internal void ReadContentFrom(XmlReader r); // 0x000000018AE4996C-0x000000018AE49A68
+		internal void ReadContentFrom(XmlReader r, LoadOptions o); // 0x000000018AE49A68-0x000000018AE49B9C
+		internal void RemoveNode(XNode n); // 0x000000018AE49B9C-0x000000018AE49D28
+		internal virtual void ValidateNode(XNode node, XNode previous); // 0x00000001841E1670-0x00000001841E1680
+		internal virtual void ValidateString(string s); // 0x00000001841E1670-0x00000001841E1680
+		internal void WriteContentTo(XmlWriter writer); // 0x000000018AE49D28-0x000000018AE49E0C
 	}
 
-	public class XDeclaration // TypeDefIndex: 60117
+	public class XDeclaration // TypeDefIndex: 62732
 	{
 		// Fields
 		private string _version; // 0x10
@@ -210,47 +232,46 @@ namespace System.Xml.Linq
 		private string _standalone; // 0x20
 	
 		// Properties
-		public string Encoding { get => default; } // 0x0000000181377E40-0x0000000181377E50 
-		public string Standalone { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
-		public string Version { get => default; } // 0x000000018346D130-0x000000018346D140 
+		public string Encoding { get; } // 0x000000018385B100-0x000000018385B110 
+		public string Standalone { get; } // 0x0000000184D862C0-0x0000000184D862D0 
+		public string Version { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
 	
 		// Constructors
-		public XDeclaration() {} // Dummy constructor
-		public XDeclaration(string version, string encoding, string standalone) {} // 0x000000018496F6A0-0x000000018496F6E0
-		public XDeclaration(XDeclaration other) {} // 0x000000018B99155C-0x000000018B9915FC
+		public XDeclaration(string version, string encoding, string standalone); // 0x00000001831D14F0-0x00000001831D1530
+		public XDeclaration(XDeclaration other); // 0x000000018AE4A160-0x000000018AE4A200
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018B991408-0x000000018B99155C
+		public override string ToString(); // 0x000000018AE4A00C-0x000000018AE4A160
 	}
 
-	public class XDocument : XContainer // TypeDefIndex: 60118
+	public class XDocument : XContainer // TypeDefIndex: 62733
 	{
 		// Fields
 		private XDeclaration _declaration; // 0x30
 	
 		// Properties
-		public XDeclaration Declaration { get => default; set {} } // 0x00000001813B51D0-0x00000001813B51E0 0x00000001864721F0-0x0000000186472200
-		public override XmlNodeType NodeType { get => default; } // 0x0000000183056920-0x0000000183056930 
-		public XElement Root { get => default; } // 0x000000018B991ED4-0x000000018B991F10 
+		public XDeclaration Declaration { get; set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
+		public override XmlNodeType NodeType { get; } // 0x0000000184DA4FC0-0x0000000184DA4FD0 
+		public XElement Root { get; } // 0x000000018AE4AAD8-0x000000018AE4AB14 
 	
 		// Constructors
-		public XDocument() {} // 0x0000000185492010-0x0000000185492020
-		public XDocument(XDocument other) {} // 0x000000018B991E40-0x000000018B991ED4
+		public XDocument(); // 0x00000001841E1670-0x00000001841E1680
+		public XDocument(XDocument other); // 0x000000018AE4AA44-0x000000018AE4AAD8
 	
 		// Methods
-		public override void WriteTo(XmlWriter writer) {} // 0x000000018B991D1C-0x000000018B991E40
-		internal override void AddAttribute(XAttribute a) {} // 0x000000018B991894-0x000000018B9918F0
-		internal override void AddAttributeSkipNotify(XAttribute a) {} // 0x000000018B991838-0x000000018B991894
-		internal override XNode CloneNode() => default; // 0x000000018B9918F0-0x000000018B991950
+		public override void WriteTo(XmlWriter writer); // 0x000000018AE4A920-0x000000018AE4AA44
+		internal override void AddAttribute(XAttribute a); // 0x000000018AE4A498-0x000000018AE4A4F4
+		internal override void AddAttributeSkipNotify(XAttribute a); // 0x000000018AE4A43C-0x000000018AE4A498
+		internal override XNode CloneNode(); // 0x000000018AE4A4F4-0x000000018AE4A554
 		private T GetFirstNode<T>()
-			where T : XNode => default;
-		internal static bool IsWhitespace(string s) => default; // 0x000000018B991950-0x000000018B9919A8
-		internal override void ValidateNode(XNode node, XNode previous) {} // 0x000000018B991AAC-0x000000018B991CAC
-		private void ValidateDocument(XNode previous, XmlNodeType allowBefore, XmlNodeType allowAfter) {} // 0x000000018B9919A8-0x000000018B991AAC
-		internal override void ValidateString(string s) {} // 0x000000018B991CAC-0x000000018B991D1C
+			where T : XNode;
+		internal static bool IsWhitespace(string s); // 0x000000018AE4A554-0x000000018AE4A5AC
+		internal override void ValidateNode(XNode node, XNode previous); // 0x000000018AE4A6B0-0x000000018AE4A8B0
+		private void ValidateDocument(XNode previous, XmlNodeType allowBefore, XmlNodeType allowAfter); // 0x000000018AE4A5AC-0x000000018AE4A6B0
+		internal override void ValidateString(string s); // 0x000000018AE4A8B0-0x000000018AE4A920
 	}
 
-	public class XDocumentType : XNode // TypeDefIndex: 60119
+	public class XDocumentType : XNode // TypeDefIndex: 62734
 	{
 		// Fields
 		private string _name; // 0x28
@@ -259,37 +280,39 @@ namespace System.Xml.Linq
 		private string _internalSubset; // 0x40
 	
 		// Properties
-		public string InternalSubset { get => default; } // 0x00000001813FF010-0x00000001813FF020 
-		public string Name { get => default; } // 0x00000001813B8590-0x00000001813B85A0 
-		public override XmlNodeType NodeType { get => default; } // 0x0000000185FB6A00-0x0000000185FB6A10 
-		public string PublicId { get => default; } // 0x00000001813B51D0-0x00000001813B51E0 
-		public string SystemId { get => default; } // 0x00000001813ECBC0-0x00000001813ECBD0 
+		public string InternalSubset { get; } // 0x0000000184D85A60-0x0000000184D85A70 
+		public string Name { get; } // 0x0000000184D86240-0x0000000184D86250 
+		public override XmlNodeType NodeType { get; } // 0x0000000184DA5360-0x0000000184DA5370 
+		public string PublicId { get; } // 0x00000001811F36E0-0x00000001811F36F0 
+		public string SystemId { get; } // 0x0000000184D85A50-0x0000000184D85A60 
 	
 		// Constructors
-		public XDocumentType() {} // Dummy constructor
-		public XDocumentType(string name, string publicId, string systemId, string internalSubset) {} // 0x000000018B991798-0x000000018B991838
-		public XDocumentType(XDocumentType other) {} // 0x000000018B9916E8-0x000000018B991798
+		public XDocumentType(string name, string publicId, string systemId, string internalSubset); // 0x000000018AE4A39C-0x000000018AE4A43C
+		public XDocumentType(XDocumentType other); // 0x000000018AE4A2EC-0x000000018AE4A39C
 	
 		// Methods
-		public override void WriteTo(XmlWriter writer) {} // 0x000000018B99165C-0x000000018B9916E8
-		internal override XNode CloneNode() => default; // 0x000000018B9915FC-0x000000018B99165C
+		public override void WriteTo(XmlWriter writer); // 0x000000018AE4A260-0x000000018AE4A2EC
+		internal override XNode CloneNode(); // 0x000000018AE4A200-0x000000018AE4A260
 	}
 
-	public class XElement : XContainer, IXmlSerializable // TypeDefIndex: 60121
+	[XmlSchemaProvider(null, IsAny = true)]
+	[XmlTypeConvertor("ConvertForAssignment")]
+	public class XElement : XContainer, IXmlSerializable // TypeDefIndex: 62736
 	{
 		// Fields
 		internal XName name; // 0x30
 		internal XAttribute lastAttr; // 0x38
 	
 		// Properties
-		public bool HasAttributes { get => default; } // 0x000000018B992D70-0x000000018B992E18 
-		public bool IsEmpty { get => default; } // 0x00000001813AE580-0x00000001813AE590 
-		public XName Name { get => default; } // 0x000000018B992A08-0x000000018B992BDC 
-		public override XmlNodeType NodeType { get => default; } // 0x000000018B992BDC-0x000000018B992BF0 
-		public string Value { get => default; } // 0x000000018B991FFC-0x000000018B9920E8 
+		public bool HasAttributes { get; } // 0x0000000189B0008C-0x0000000189B00098 
+		public bool IsEmpty { get; } // 0x000000018AE4BBDC-0x000000018AE4BBE8 
+		public XName Name { get; } // 0x00000001811F36E0-0x00000001811F36F0 
+		public override XmlNodeType NodeType { get; } // 0x0000000184D85B80-0x0000000184D85B90 
+		public string Value { get; } // 0x000000018AE4BBE8-0x000000018AE4BC70 
 	
 		// Nested types
-		private sealed class _GetAttributes_d__116 : IEnumerable<XAttribute>, IEnumerator<XAttribute> // TypeDefIndex: 60120
+		[CompilerGenerated]
+		private sealed class _GetAttributes_d__116 : IEnumerable<XAttribute>, IEnumerator<XAttribute> // TypeDefIndex: 62735
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -301,57 +324,61 @@ namespace System.Xml.Linq
 			private XAttribute _a_5__2; // 0x40
 	
 			// Properties
-			XAttribute IEnumerator<System.Xml.Linq.XAttribute>.Current { get => default; } // 0x0000000188251750-0x000000018825175C 
-			object IEnumerator.Current { get => default; } // 0x00000001813B51D0-0x00000001813B51E0 
+			XAttribute IEnumerator<System.Xml.Linq.XAttribute>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _GetAttributes_d__116() {} // Dummy constructor
-			public _GetAttributes_d__116(int __1__state) {} // 0x000000018B992F64-0x000000018B992FD8
+			[DebuggerHidden]
+			public _GetAttributes_d__116(int __1__state); // 0x0000000183A11010-0x0000000183A11030
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x000000018B992E18-0x000000018B992ED8
-			private bool MoveNext() => default; // 0x000000018B992ED8-0x000000018B992F64
-			void IEnumerator.Reset() {} // 0x000000018B992FD8-0x000000018B992FE4
-			IEnumerator<XAttribute> IEnumerable<XAttribute>.GetEnumerator() => default; // 0x0000000181B87DE0-0x0000000181B87DF0
-			IEnumerator IEnumerable.GetEnumerator() => default; // 0x000000018B992FE4-0x000000018B99306C
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018AE47934-0x000000018AE479F4
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018AE47AA0-0x000000018AE47AEC
+			[DebuggerHidden]
+			IEnumerator<XAttribute> IEnumerable<XAttribute>.GetEnumerator(); // 0x000000018AE479F4-0x000000018AE47A98
+			[DebuggerHidden]
+			IEnumerator IEnumerable.GetEnumerator(); // 0x000000018AE47A98-0x000000018AE47AA0
 		}
 	
 		// Constructors
-		public XElement() {} // Dummy constructor
-		public XElement(XName name) {} // 0x000000018B99226C-0x000000018B9922A0
-		public XElement(XElement other) {} // 0x000000018B9922A0-0x000000018B9922AC
-		public XElement(XStreamingElement other) {} // 0x000000018B992454-0x000000018B99265C
+		public XElement(XName name); // 0x000000018AE4BB68-0x000000018AE4BBDC
+		public XElement(XElement other); // 0x000000018AE4BA1C-0x000000018AE4BADC
+		public XElement(XStreamingElement other); // 0x000000018AE4BADC-0x000000018AE4BB68
 	
 		// Methods
-		public XAttribute Attribute(XName name) => default; // 0x000000018B991F10-0x000000018B991FFC
-		public IEnumerable<XAttribute> Attributes() => default; // 0x000000018B992158-0x000000018B99226C
-		public string GetPrefixOfNamespace(XNamespace ns) => default; // 0x000000018B9920E8-0x000000018B992158
-		public override void WriteTo(XmlWriter writer) {} // 0x000000018B9922AC-0x000000018B99230C
-		XmlSchema IXmlSerializable.GetSchema() => default; // 0x000000018B99230C-0x000000018B992394
-		void IXmlSerializable.ReadXml(XmlReader reader) {} // 0x000000018B992394-0x000000018B992454
-		void IXmlSerializable.WriteXml(XmlWriter writer) {} // 0x000000018B992920-0x000000018B992998
-		internal override void AddAttribute(XAttribute a) {} // 0x000000018B99265C-0x000000018B992920
-		internal override void AddAttributeSkipNotify(XAttribute a) {} // 0x000000018B992998-0x000000018B992A08
-		internal void AppendAttribute(XAttribute a) {} // 0x000000018B992BF0-0x000000018B992D70
-		internal void AppendAttributeSkipNotify(XAttribute a) {} // 0x0000000184775050-0x0000000184775070
-		internal override XNode CloneNode() => default; // 0x0000000185492010-0x0000000185492020
-		private IEnumerable<XAttribute> GetAttributes(XName name) => default; // 0x000000018B98ED30-0x000000018B98EDF0
-		private string GetNamespaceOfPrefixInScope(string prefix, XElement outOfScope) => default; // 0x0000000181377E40-0x0000000181377E50
-		private void ReadElementFrom(XmlReader r, LoadOptions o) {} // 0x000000018B98EE9C-0x000000018B98EEE8
-		private void ReadElementFromImpl(XmlReader r, LoadOptions o) {} // 0x0000000181377E40-0x0000000181377E50
-		internal void SetEndElementLineInfo(int lineNumber, int linePosition) {} // 0x000000018B98EDF0-0x000000018B98EE94
-		internal override void ValidateNode(XNode node, XNode previous) {} // 0x000000018B98EE94-0x000000018B98EE9C
+		public XAttribute Attribute(XName name); // 0x000000018AE4AE70-0x000000018AE4AEA4
+		public IEnumerable<XAttribute> Attributes(); // 0x000000018AE4AEA4-0x000000018AE4AEB0
+		public string GetPrefixOfNamespace(XNamespace ns); // 0x000000018AE4B058-0x000000018AE4B260
+		public override void WriteTo(XmlWriter writer); // 0x000000018AE4B974-0x000000018AE4BA1C
+		XmlSchema IXmlSerializable.GetSchema(); // 0x00000001811EC580-0x00000001811EC590
+		void IXmlSerializable.ReadXml(XmlReader reader); // 0x000000018AE4B60C-0x000000018AE4B7E0
+		void IXmlSerializable.WriteXml(XmlWriter writer); // 0x000000018AE4B7E0-0x000000018AE4B7F4
+		internal override void AddAttribute(XAttribute a); // 0x000000018AE4AC00-0x000000018AE4ACEC
+		internal override void AddAttributeSkipNotify(XAttribute a); // 0x000000018AE4AB14-0x000000018AE4AC00
+		internal void AppendAttribute(XAttribute a); // 0x000000018AE4AD5C-0x000000018AE4AE70
+		internal void AppendAttributeSkipNotify(XAttribute a); // 0x000000018AE4ACEC-0x000000018AE4AD5C
+		internal override XNode CloneNode(); // 0x000000018AE4AEB0-0x000000018AE4AF10
+		[IteratorStateMachine(typeof(_GetAttributes_d__116))]
+		private IEnumerable<XAttribute> GetAttributes(XName name); // 0x000000018AE4AF10-0x000000018AE4AF98
+		private string GetNamespaceOfPrefixInScope(string prefix, XElement outOfScope); // 0x000000018AE4AF98-0x000000018AE4B058
+		private void ReadElementFrom(XmlReader r, LoadOptions o); // 0x000000018AE4B524-0x000000018AE4B59C
+		private void ReadElementFromImpl(XmlReader r, LoadOptions o); // 0x000000018AE4B260-0x000000018AE4B524
+		internal void SetEndElementLineInfo(int lineNumber, int linePosition); // 0x000000018AE4B59C-0x000000018AE4B60C
+		internal override void ValidateNode(XNode node, XNode previous); // 0x000000018AE4B7F4-0x000000018AE4B974
 	}
 
-	internal sealed class XHashtable<TValue> // TypeDefIndex: 60125
+	internal sealed class XHashtable<TValue> // TypeDefIndex: 62740
 	{
 		// Fields
 		private XHashtableState _state;
 	
 		// Nested types
-		public delegate string ExtractKeyDelegate(TValue value); // TypeDefIndex: 60122; 0x00000000-0x00000000
+		public delegate string ExtractKeyDelegate(TValue value); // TypeDefIndex: 62737; 0x00000000-0x00000000
 	
-		private sealed class XHashtableState // TypeDefIndex: 60124
+		private sealed class XHashtableState // TypeDefIndex: 62739
 		{
 			// Fields
 			private int[] _buckets;
@@ -360,7 +387,7 @@ namespace System.Xml.Linq
 			private ExtractKeyDelegate<TValue> _extractKey;
 	
 			// Nested types
-			private struct Entry // TypeDefIndex: 60123
+			private struct Entry // TypeDefIndex: 62738
 			{
 				// Fields
 				public TValue Value;
@@ -369,68 +396,54 @@ namespace System.Xml.Linq
 			}
 	
 			// Constructors
-			public XHashtableState() {} // Dummy constructor
-			public XHashtableState(ExtractKeyDelegate<TValue> extractKey, int capacity) {}
+			public XHashtableState(ExtractKeyDelegate<TValue> extractKey, int capacity);
 	
 			// Methods
-			public XHashtableState<TValue> Resize() => default;
-			public bool TryGetValue(string key, int index, int count, out ref TValue value) {
-				value = default;
-				return default;
-			}
-			public bool TryAdd(TValue value, out ref TValue newValue) {
-				newValue = default;
-				return default;
-			}
-			private bool FindEntry(int hashCode, string key, int index, int count, ref int entryIndex) => default;
-			private static int ComputeHashCode(string key, int index, int count) => default;
+			public XHashtableState<TValue> Resize();
+			public bool TryGetValue(string key, int index, int count, out ref TValue value);
+			public bool TryAdd(TValue value, out ref TValue newValue);
+			private bool FindEntry(int hashCode, string key, int index, int count, ref int entryIndex);
+			private static int ComputeHashCode(string key, int index, int count);
 		}
 	
 		// Constructors
-		public XHashtable() {} // Dummy constructor
-		public XHashtable(ExtractKeyDelegate extractKey, int capacity) {}
+		public XHashtable(ExtractKeyDelegate extractKey, int capacity);
 	
 		// Methods
-		public bool TryGetValue(string key, int index, int count, out ref TValue value) {
-			value = default;
-			return default;
-		}
-		public TValue Add(TValue value) => default;
+		public bool TryGetValue(string key, int index, int count, out ref TValue value);
+		public TValue Add(TValue value);
 	}
 
-	internal struct NamespaceCache // TypeDefIndex: 60126
+	internal struct NamespaceCache // TypeDefIndex: 62741
 	{
 		// Fields
 		private XNamespace _ns; // 0x00
 		private string _namespaceName; // 0x08
 	
 		// Methods
-		public XNamespace Get(string namespaceName) => default; // 0x000000018B98E734-0x000000018B98E778
+		public XNamespace Get(string namespaceName); // 0x000000018AE47338-0x000000018AE4737C
 	}
 
-	internal struct ElementWriter // TypeDefIndex: 60127
+	internal struct ElementWriter // TypeDefIndex: 62742
 	{
 		// Fields
 		private XmlWriter _writer; // 0x00
 		private NamespaceResolver _resolver; // 0x08
 	
 		// Constructors
-		public ElementWriter(XmlWriter writer) {
-			_writer = default;
-			_resolver = default;
-		} // 0x000000018B98E710-0x000000018B98E734
+		public ElementWriter(XmlWriter writer); // 0x000000018AE47314-0x000000018AE47338
 	
 		// Methods
-		public void WriteElement(XElement e) {} // 0x000000018B98E3B0-0x000000018B98E518
-		private string GetPrefixOfNamespace(XNamespace ns, bool allowDefaultNamespace) => default; // 0x000000018B98E0D0-0x000000018B98E1C4
-		private void PushAncestors(XElement e) {} // 0x000000018B98E1C4-0x000000018B98E2CC
-		private void PushElement(XElement e) {} // 0x000000018B98E2CC-0x000000018B98E3B0
-		private void WriteEndElement() {} // 0x000000018B98E518-0x000000018B98E54C
-		private void WriteFullEndElement() {} // 0x000000018B98E54C-0x000000018B98E580
-		private void WriteStartElement(XElement e) {} // 0x000000018B98E580-0x000000018B98E710
+		public void WriteElement(XElement e); // 0x000000018AE46FB4-0x000000018AE4711C
+		private string GetPrefixOfNamespace(XNamespace ns, bool allowDefaultNamespace); // 0x000000018AE46CD4-0x000000018AE46DC8
+		private void PushAncestors(XElement e); // 0x000000018AE46DC8-0x000000018AE46ED0
+		private void PushElement(XElement e); // 0x000000018AE46ED0-0x000000018AE46FB4
+		private void WriteEndElement(); // 0x000000018AE4711C-0x000000018AE47150
+		private void WriteFullEndElement(); // 0x000000018AE47150-0x000000018AE47184
+		private void WriteStartElement(XElement e); // 0x000000018AE47184-0x000000018AE47314
 	}
 
-	internal struct NamespaceResolver // TypeDefIndex: 60129
+	internal struct NamespaceResolver // TypeDefIndex: 62744
 	{
 		// Fields
 		private int _scope; // 0x00
@@ -438,7 +451,7 @@ namespace System.Xml.Linq
 		private NamespaceDeclaration _rover; // 0x10
 	
 		// Nested types
-		private class NamespaceDeclaration // TypeDefIndex: 60128
+		private class NamespaceDeclaration // TypeDefIndex: 62743
 		{
 			// Fields
 			public string prefix; // 0x10
@@ -447,18 +460,18 @@ namespace System.Xml.Linq
 			public NamespaceDeclaration prev; // 0x28
 	
 			// Constructors
-			public NamespaceDeclaration() {} // 0x0000000185FD6390-0x0000000185FD63A0
+			public NamespaceDeclaration(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		// Methods
-		public void PushScope() {} // 0x000000018B98EA10-0x000000018B98EA84
-		public void PopScope() {} // 0x000000018B98E850-0x000000018B98E918
-		public void Add(string prefix, XNamespace ns) {} // 0x000000018B98E778-0x000000018B98E850
-		public void AddFirst(string prefix, XNamespace ns) {} // 0x000000018B98E918-0x000000018B98EA10
-		public string GetPrefixOfNamespace(XNamespace ns, bool allowDefaultNamespace) => default; // 0x0000000185492010-0x0000000185492020
+		public void PushScope(); // 0x0000000184DAA480-0x0000000184DAA490
+		public void PopScope(); // 0x000000018AE47614-0x000000018AE47688
+		public void Add(string prefix, XNamespace ns); // 0x000000018AE47454-0x000000018AE4751C
+		public void AddFirst(string prefix, XNamespace ns); // 0x000000018AE4737C-0x000000018AE47454
+		public string GetPrefixOfNamespace(XNamespace ns, bool allowDefaultNamespace); // 0x000000018AE4751C-0x000000018AE47614
 	}
 
-	public enum XObjectChange // TypeDefIndex: 60130
+	public enum XObjectChange // TypeDefIndex: 62745
 	{
 		Add = 0,
 		Remove = 1,
@@ -466,7 +479,8 @@ namespace System.Xml.Linq
 		Value = 3
 	}
 
-	public enum LoadOptions // TypeDefIndex: 60131
+	[Flags]
+	public enum LoadOptions // TypeDefIndex: 62746
 	{
 		None = 0,
 		PreserveWhitespace = 1,
@@ -474,7 +488,8 @@ namespace System.Xml.Linq
 		SetLineInfo = 4
 	}
 
-	public enum SaveOptions // TypeDefIndex: 60132
+	[Flags]
+	public enum SaveOptions // TypeDefIndex: 62747
 	{
 		None = 0,
 		DisableFormatting = 1,
@@ -482,7 +497,7 @@ namespace System.Xml.Linq
 	}
 
 	[Serializable]
-	public sealed class XName : IEquatable<XName>, ISerializable // TypeDefIndex: 60133
+	public sealed class XName : IEquatable<XName>, ISerializable // TypeDefIndex: 62748
 	{
 		// Fields
 		private XNamespace _ns; // 0x10
@@ -490,27 +505,28 @@ namespace System.Xml.Linq
 		private int _hashCode; // 0x20
 	
 		// Properties
-		public string LocalName { get => default; } // 0x0000000181377E40-0x0000000181377E50 
-		public XNamespace Namespace { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public string NamespaceName { get => default; } // 0x000000018646E720-0x000000018646E73C 
+		public string LocalName { get; } // 0x000000018385B100-0x000000018385B110 
+		public XNamespace Namespace { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public string NamespaceName { get; } // 0x000000018AE4C010-0x000000018AE4C02C 
 	
 		// Constructors
-		internal XName(XNamespace ns, string localName) {} // 0x000000018B993334-0x000000018B9933DC
-		internal XName() {} // 0x000000018B9933DC-0x000000018B99340C
+		internal XName(XNamespace ns, string localName); // 0x000000018AE4BF38-0x000000018AE4BFE0
+		internal XName(); // 0x000000018AE4BFE0-0x000000018AE4C010
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018B9932B8-0x000000018B993334
-		public static XName Get(string expandedName) => default; // 0x000000018B99306C-0x000000018B993238
-		public static XName Get(string localName, string namespaceName) => default; // 0x000000018B993238-0x000000018B99326C
-		public static implicit operator XName(string expandedName) => default; // 0x000000018B99340C-0x000000018B993428
-		public override bool Equals(object obj) => default; // 0x000000018406FBE0-0x000000018406FBF0
-		public override int GetHashCode() => default; // 0x00000001813B88B0-0x00000001813B88C0
-		public static bool operator ==(XName left, XName right) => default; // 0x000000018406FBE0-0x000000018406FBF0
-		bool IEquatable<XName>.Equals(XName other) => default; // 0x000000018406FBE0-0x000000018406FBF0
-		void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context) {} // 0x000000018B99326C-0x000000018B9932B8
+		public override string ToString(); // 0x000000018AE4BEBC-0x000000018AE4BF38
+		public static XName Get(string expandedName); // 0x000000018AE4BC70-0x000000018AE4BE3C
+		public static XName Get(string localName, string namespaceName); // 0x000000018AE4BE3C-0x000000018AE4BE70
+		[CLSCompliant(false)]
+		public static implicit operator XName(string expandedName); // 0x000000018AE4C02C-0x000000018AE4C048
+		public override bool Equals(object obj); // 0x0000000182FB1840-0x0000000182FB1850
+		public override int GetHashCode(); // 0x0000000182B70F90-0x0000000182B70FA0
+		public static bool operator ==(XName left, XName right); // 0x0000000182FB1840-0x0000000182FB1850
+		bool IEquatable<XName>.Equals(XName other); // 0x0000000182FB1840-0x0000000182FB1850
+		void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context); // 0x000000018AE4BE70-0x000000018AE4BEBC
 	}
 
-	public sealed class XNamespace // TypeDefIndex: 60134
+	public sealed class XNamespace // TypeDefIndex: 62749
 	{
 		// Fields
 		private static XHashtable<WeakReference> s_namespaces; // 0x00
@@ -522,90 +538,87 @@ namespace System.Xml.Linq
 		private XHashtable<XName> _names; // 0x20
 	
 		// Properties
-		public string NamespaceName { get => default; } // 0x000000018346D130-0x000000018346D140 
-		public static XNamespace None { get => default; } // 0x000000018B993B60-0x000000018B993BBC 
-		public static XNamespace Xml { get => default; } // 0x000000018B993BBC-0x000000018B993C10 
-		public static XNamespace Xmlns { get => default; } // 0x000000018B993C10-0x000000018B993C64 
+		public string NamespaceName { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public static XNamespace None { get; } // 0x000000018AE4C780-0x000000018AE4C7DC 
+		public static XNamespace Xml { get; } // 0x000000018AE4C7DC-0x000000018AE4C830 
+		public static XNamespace Xmlns { get; } // 0x000000018AE4C830-0x000000018AE4C884 
 	
 		// Constructors
-		public XNamespace() {} // Dummy constructor
-		internal XNamespace(string namespaceName) {} // 0x000000018B993A6C-0x000000018B993B60
+		internal XNamespace(string namespaceName); // 0x000000018AE4C68C-0x000000018AE4C780
 	
 		// Methods
-		public XName GetName(string localName) => default; // 0x000000018B993680-0x000000018B9936F8
-		public override string ToString() => default; // 0x000000018346D130-0x000000018346D140
-		public static XNamespace Get(string namespaceName) => default; // 0x000000018B9939F8-0x000000018B993A6C
-		public static implicit operator XNamespace(string namespaceName) => default; // 0x000000018B993C64-0x000000018B993C80
-		public override bool Equals(object obj) => default; // 0x000000018406FBE0-0x000000018406FBF0
-		public override int GetHashCode() => default; // 0x00000001813AE560-0x00000001813AE570
-		public static bool operator ==(XNamespace left, XNamespace right) => default; // 0x000000018406FBE0-0x000000018406FBF0
-		public static bool operator !=(XNamespace left, XNamespace right) => default; // 0x0000000183FA9580-0x0000000183FA9590
-		internal XName GetName(string localName, int index, int count) => default; // 0x000000018B993578-0x000000018B993680
-		internal static XNamespace Get(string namespaceName, int index, int count) => default; // 0x000000018B9936F8-0x000000018B9939F8
-		private static string ExtractLocalName(XName n) => default; // 0x00000001864C22B8-0x00000001864C22D0
-		private static string ExtractNamespace(WeakReference r) => default; // 0x000000018B99351C-0x000000018B993578
-		private static XNamespace EnsureNamespace(ref WeakReference refNmsp, string namespaceName) => default; // 0x000000018B993428-0x000000018B99351C
+		public XName GetName(string localName); // 0x000000018AE4C2A0-0x000000018AE4C318
+		public override string ToString(); // 0x0000000182B2ECC0-0x0000000182B2ECD0
+		public static XNamespace Get(string namespaceName); // 0x000000018AE4C618-0x000000018AE4C68C
+		[CLSCompliant(false)]
+		public static implicit operator XNamespace(string namespaceName); // 0x000000018AE4C884-0x000000018AE4C8A0
+		public override bool Equals(object obj); // 0x0000000182FB1840-0x0000000182FB1850
+		public override int GetHashCode(); // 0x00000001811EF5B0-0x00000001811EF5C0
+		public static bool operator ==(XNamespace left, XNamespace right); // 0x0000000182FB1840-0x0000000182FB1850
+		public static bool operator !=(XNamespace left, XNamespace right); // 0x0000000182F019D0-0x0000000182F01A10
+		internal XName GetName(string localName, int index, int count); // 0x000000018AE4C198-0x000000018AE4C2A0
+		internal static XNamespace Get(string namespaceName, int index, int count); // 0x000000018AE4C318-0x000000018AE4C618
+		private static string ExtractLocalName(XName n); // 0x00000001853E4DA0-0x00000001853E4DB8
+		private static string ExtractNamespace(WeakReference r); // 0x000000018AE4C13C-0x000000018AE4C198
+		private static XNamespace EnsureNamespace(ref WeakReference refNmsp, string namespaceName); // 0x000000018AE4C048-0x000000018AE4C13C
 	}
 
-	public abstract class XNode : XObject // TypeDefIndex: 60135
+	public abstract class XNode : XObject // TypeDefIndex: 62750
 	{
 		// Fields
 		internal XNode next; // 0x20
 	
 		// Constructors
-		internal XNode() {} // 0x0000000185492010-0x0000000185492020
+		internal XNode(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public void Remove() {} // 0x000000018B993F20-0x000000018B993F98
-		public override string ToString() => default; // 0x000000018B993F98-0x000000018B993FBC
+		public void Remove(); // 0x000000018AE4CB40-0x000000018AE4CBB8
+		public override string ToString(); // 0x000000018AE4CBB8-0x000000018AE4CBDC
 		public abstract void WriteTo(XmlWriter writer);
-		internal virtual void AppendText(StringBuilder sb) {} // 0x0000000185492010-0x0000000185492020
+		internal virtual void AppendText(StringBuilder sb); // 0x00000001841E1670-0x00000001841E1680
 		internal abstract XNode CloneNode();
-		private string GetXmlString(SaveOptions o) => default; // 0x000000018B993C80-0x000000018B993F20
+		private string GetXmlString(SaveOptions o); // 0x000000018AE4C8A0-0x000000018AE4CB40
 	}
 
-	public abstract class XObject : IXmlLineInfo // TypeDefIndex: 60136
+	public abstract class XObject : IXmlLineInfo // TypeDefIndex: 62751
 	{
 		// Fields
 		internal XContainer parent; // 0x10
 		internal object annotations; // 0x18
 	
 		// Properties
-		public string BaseUri { get; } // 0x000000018B994840-0x000000018B9948B4 
+		public string BaseUri { get; } // 0x000000018AE4D460-0x000000018AE4D4D4 
 		public abstract XmlNodeType NodeType { get; }
-		public XElement Parent { get; } // 0x000000018B9948F4-0x000000018B994930 
-		int IXmlLineInfo.LineNumber { get; } // 0x000000018B9947B8-0x000000018B9947FC 
-		int IXmlLineInfo.LinePosition { get; } // 0x000000018B9947FC-0x000000018B994840 
-		internal bool HasBaseUri { get; } // 0x000000018B9948B4-0x000000018B9948F4 
+		public XElement Parent { get; } // 0x000000018AE4D514-0x000000018AE4D550 
+		int IXmlLineInfo.LineNumber { get; } // 0x000000018AE4D3D8-0x000000018AE4D41C 
+		int IXmlLineInfo.LinePosition { get; } // 0x000000018AE4D41C-0x000000018AE4D460 
+		internal bool HasBaseUri { get; } // 0x000000018AE4D4D4-0x000000018AE4D514 
 	
 		// Constructors
-		internal XObject() {} // 0x0000000185492010-0x0000000185492020
+		internal XObject(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public void AddAnnotation(object annotation) {} // 0x000000018B994170-0x000000018B994360
-		private object AnnotationForSealedType(System.Type type) => default; // 0x000000018B994360-0x000000018B99445C
+		public void AddAnnotation(object annotation); // 0x000000018AE4CD90-0x000000018AE4CF80
+		private object AnnotationForSealedType(System.Type type); // 0x000000018AE4CF80-0x000000018AE4D07C
 		public T Annotation<T>()
-			where T : class => default;
-		bool IXmlLineInfo.HasLineInfo() => default; // 0x000000018B994778-0x000000018B9947B8
-		internal bool NotifyChanged(object sender, XObjectChangeEventArgs e) => default; // 0x000000018B994500-0x000000018B99459C
-		internal bool NotifyChanging(object sender, XObjectChangeEventArgs e) => default; // 0x000000018B99459C-0x000000018B994638
-		internal void SetBaseUri(string baseUri) {} // 0x000000018B994638-0x000000018B9946B0
-		internal void SetLineInfo(int lineNumber, int linePosition) {} // 0x000000018B9946B0-0x000000018B994720
-		internal bool SkipNotify() => default; // 0x000000018B994720-0x000000018B994778
-		internal SaveOptions GetSaveOptionsFromAnnotations() => default; // 0x000000018B99445C-0x000000018B994500
+			where T : class;
+		bool IXmlLineInfo.HasLineInfo(); // 0x000000018AE4D398-0x000000018AE4D3D8
+		internal bool NotifyChanged(object sender, XObjectChangeEventArgs e); // 0x000000018AE4D120-0x000000018AE4D1BC
+		internal bool NotifyChanging(object sender, XObjectChangeEventArgs e); // 0x000000018AE4D1BC-0x000000018AE4D258
+		internal void SetBaseUri(string baseUri); // 0x000000018AE4D258-0x000000018AE4D2D0
+		internal void SetLineInfo(int lineNumber, int linePosition); // 0x000000018AE4D2D0-0x000000018AE4D340
+		internal bool SkipNotify(); // 0x000000018AE4D340-0x000000018AE4D398
+		internal SaveOptions GetSaveOptionsFromAnnotations(); // 0x000000018AE4D07C-0x000000018AE4D120
 	}
 
-	internal class XObjectChangeAnnotation // TypeDefIndex: 60137
+	internal class XObjectChangeAnnotation // TypeDefIndex: 62752
 	{
 		// Fields
 		internal EventHandler<XObjectChangeEventArgs> changing; // 0x10
 		internal EventHandler<XObjectChangeEventArgs> changed; // 0x18
-	
-		// Constructors
-		public XObjectChangeAnnotation() {} // Dummy constructor
 	}
 
-	public class XObjectChangeEventArgs : EventArgs // TypeDefIndex: 60138
+	public class XObjectChangeEventArgs : EventArgs // TypeDefIndex: 62753
 	{
 		// Fields
 		private XObjectChange _objectChange; // 0x10
@@ -615,72 +628,63 @@ namespace System.Xml.Linq
 		public static readonly XObjectChangeEventArgs Value; // 0x18
 	
 		// Constructors
-		public XObjectChangeEventArgs() {} // Dummy constructor
-		public XObjectChangeEventArgs(XObjectChange objectChange) {} // 0x000000018B994120-0x000000018B994170
-		static XObjectChangeEventArgs() {} // 0x000000018B993FBC-0x000000018B994120
+		public XObjectChangeEventArgs(XObjectChange objectChange); // 0x000000018AE4CD40-0x000000018AE4CD90
+		static XObjectChangeEventArgs(); // 0x000000018AE4CBDC-0x000000018AE4CD40
 	}
 
-	public class XProcessingInstruction : XNode // TypeDefIndex: 60139
+	public class XProcessingInstruction : XNode // TypeDefIndex: 62754
 	{
 		// Fields
 		internal string target; // 0x28
 		internal string data; // 0x30
 	
 		// Properties
-		public string Data { get => default; } // 0x00000001813B51D0-0x00000001813B51E0 
-		public override XmlNodeType NodeType { get => default; } // 0x0000000181B9FE80-0x0000000181B9FE90 
-		public string Target { get => default; } // 0x00000001813B8590-0x00000001813B85A0 
+		public string Data { get; } // 0x00000001811F36E0-0x00000001811F36F0 
+		public override XmlNodeType NodeType { get; } // 0x0000000184D9BE00-0x0000000184D9BE10 
+		public string Target { get; } // 0x0000000184D86240-0x0000000184D86250 
 	
 		// Constructors
-		public XProcessingInstruction() {} // Dummy constructor
-		public XProcessingInstruction(string target, string data) {} // 0x000000018B994AE4-0x000000018B994B88
-		public XProcessingInstruction(XProcessingInstruction other) {} // 0x000000018B994B88-0x000000018B994C14
+		public XProcessingInstruction(string target, string data); // 0x000000018AE4D704-0x000000018AE4D7A8
+		public XProcessingInstruction(XProcessingInstruction other); // 0x000000018AE4D7A8-0x000000018AE4D834
 	
 		// Methods
-		public override void WriteTo(XmlWriter writer) {} // 0x000000018B994A68-0x000000018B994AE4
-		internal override XNode CloneNode() => default; // 0x000000018B994930-0x000000018B994990
-		private static void ValidateName(string name) {} // 0x000000018B994990-0x000000018B994A68
+		public override void WriteTo(XmlWriter writer); // 0x000000018AE4D688-0x000000018AE4D704
+		internal override XNode CloneNode(); // 0x000000018AE4D550-0x000000018AE4D5B0
+		private static void ValidateName(string name); // 0x000000018AE4D5B0-0x000000018AE4D688
 	}
 
-	public class XStreamingElement // TypeDefIndex: 60140
+	public class XStreamingElement // TypeDefIndex: 62755
 	{
 		// Fields
 		internal XName name; // 0x10
 		internal object content; // 0x18
-	
-		// Constructors
-		public XStreamingElement() {} // Dummy constructor
 	}
 
-	public class XText : XNode // TypeDefIndex: 60141
+	public class XText : XNode // TypeDefIndex: 62756
 	{
 		// Fields
 		internal string text; // 0x28
 	
 		// Properties
-		public override XmlNodeType NodeType { get => default; } // 0x0000000181D1CE70-0x0000000181D1CE80 
-		public string Value { get => default; set {} } // 0x00000001813B8590-0x00000001813B85A0 0x000000018B994E44-0x000000018B995588
+		public override XmlNodeType NodeType { get; } // 0x0000000184D8C9E0-0x0000000184D8C9F0 
+		public string Value { get; set; } // 0x0000000184D86240-0x0000000184D86250 0x000000018AE4DA64-0x000000018AE4DF5C
 	
 		// Constructors
-		public XText() {} // Dummy constructor
-		public XText(string value) {} // 0x000000018B994D58-0x000000018B994DCC
-		public XText(XText other) {} // 0x000000018B994DCC-0x000000018B994E44
+		public XText(string value); // 0x000000018AE4D978-0x000000018AE4D9EC
+		public XText(XText other); // 0x000000018AE4D9EC-0x000000018AE4DA64
 	
 		// Methods
-		public override void WriteTo(XmlWriter writer) {} // 0x000000018B994C9C-0x000000018B994D58
-		internal override void AppendText(StringBuilder sb) {} // 0x000000018B994C14-0x000000018B994C3C
-		internal override XNode CloneNode() => default; // 0x000000018B994C3C-0x000000018B994C9C
+		public override void WriteTo(XmlWriter writer); // 0x000000018AE4D8BC-0x000000018AE4D978
+		internal override void AppendText(StringBuilder sb); // 0x000000018AE4D834-0x000000018AE4D85C
+		internal override XNode CloneNode(); // 0x000000018AE4D85C-0x000000018AE4D8BC
 	}
 }
 
 namespace Unity
 {
-	internal sealed class ThrowStub : ObjectDisposedException // TypeDefIndex: 60143
+	internal sealed class ThrowStub : ObjectDisposedException // TypeDefIndex: 62758
 	{
-		// Constructors
-		public ThrowStub() {} // Dummy constructor
-	
 		// Methods
-		public static void ThrowNotSupportedException() {} // 0x000000018B98ECE4-0x000000018B98ED30
+		public static void ThrowNotSupportedException(); // 0x000000018AE478E8-0x000000018AE47934
 	}
 }

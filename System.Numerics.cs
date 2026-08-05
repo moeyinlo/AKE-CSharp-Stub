@@ -3,23 +3,44 @@
  */
 
 using System;
+using System.Diagnostics;
 using System.Globalization;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 
-// Image 78: System.Numerics.dll - Assembly: System.Numerics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 59957-59979
+// Image 81: System.Numerics.dll - Assembly: System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 - Types 62572-62594
+[assembly: AssemblyCompany("Mono development team")]
+[assembly: AssemblyCopyright("(c) Various Mono authors")]
+[assembly: AssemblyDefaultAlias("System.Numerics.dll")]
+[assembly: AssemblyDelaySign(true)]
+[assembly: AssemblyDescription("System.Numerics.dll")]
+[assembly: AssemblyFileVersion("4.0.30319.17020")]
+[assembly: AssemblyInformationalVersion("4.0.30319.17020")]
+[assembly: AssemblyProduct("Mono Common Language Infrastructure")]
+[assembly: AssemblyTitle("System.Numerics.dll")]
+[assembly: CLSCompliant(true)]
+[assembly: CompilationRelaxations(8)]
+[assembly: ComVisible(false)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: NeutralResourcesLanguage("en-US")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
+[assembly: SatelliteContractVersion("4.0.0.0")]
 
-internal static class SR // TypeDefIndex: 59958
+internal static class SR // TypeDefIndex: 62573
 {
 	// Methods
-	internal static string Format(string resourceFormat, object p1) => default; // 0x000000018B97AEBC-0x000000018B97AF18
+	internal static string Format(string resourceFormat, object p1); // 0x000000018AE33D18-0x000000018AE33D74
 }
 
 namespace System.Globalization
 {
-	internal class FormatProvider // TypeDefIndex: 59977
+	internal class FormatProvider // TypeDefIndex: 62592
 	{
 		// Nested types
-		private class Number // TypeDefIndex: 59976
+		private class Number // TypeDefIndex: 62591
 		{
 			// Fields
 			private static string[] s_posCurrencyFormats; // 0x00
@@ -30,7 +51,7 @@ namespace System.Globalization
 			private static string s_posNumberFormat; // 0x28
 	
 			// Nested types
-			internal struct NumberBuffer // TypeDefIndex: 59975
+			internal struct NumberBuffer // TypeDefIndex: 62590
 			{
 				// Fields
 				public int precision; // 0x00
@@ -39,56 +60,44 @@ namespace System.Globalization
 				public unsafe char* overrideDigits; // 0x10
 	
 				// Properties
-				public unsafe char* digits { get => default; } // 0x000000018B976BD8-0x000000018B976D0C 
+				public unsafe char* digits { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
 			}
 	
 			// Constructors
-			public Number() {} // Dummy constructor
-			static Number() {} // 0x000000018B9787CC-0x000000018B97938C
+			static Number(); // 0x000000018AE330D8-0x000000018AE3379C
 	
 			// Methods
-			private static bool IsWhite(char ch) => default; // 0x000000018B976D0C-0x000000018B976E04
-			private static unsafe char* MatchChars(char* p, char* pEnd, string str) => default; // 0x000000018B9786FC-0x000000018B978718
-			private static unsafe char* MatchChars(char* p, char* pEnd, char* str) => default; // 0x000000018B978764-0x000000018B9787CC
-			private static unsafe bool ParseNumber(ref char* str, char* strEnd, NumberStyles options, ref NumberBuffer number, StringBuilder sb, NumberFormatInfo numfmt, bool parseDecimal) => default; // 0x000000018B978718-0x000000018B978764
-			private static bool TrailingZeros(ReadOnlySpan<char> s, int index) => default; // 0x000000018B9798D4-0x000000018B97A020
-			internal static bool TryStringToNumber(ReadOnlySpan<char> str, NumberStyles options, ref NumberBuffer number, StringBuilder sb, NumberFormatInfo numfmt, bool parseDecimal) => default; // 0x000000018B97A0E4-0x000000018B97A148
-			internal static unsafe void Int32ToDecChars(char* buffer, ref int index, uint value, int digits) {} // 0x000000018B97A148-0x000000018B97A27C
-			internal static char ParseFormatSpecifier(ReadOnlySpan<char> format, out int digits) {
-				digits = default;
-				return default;
-			} // 0x000000018B978694-0x000000018B9786FC
-			internal static void NumberToString(ref ValueStringBuilder sb, ref NumberBuffer number, char format, int nMaxDigits, NumberFormatInfo info, bool isDecimal) {} // 0x000000018B979770-0x000000018B9798D4
-			private static void FormatCurrency(ref ValueStringBuilder sb, ref NumberBuffer number, int nMinDigits, int nMaxDigits, NumberFormatInfo info) {} // 0x000000018B97938C-0x000000018B979770
-			private static unsafe int wcslen(char* s) => default; // 0x000000018B977A74-0x000000018B977C18
-			private static void FormatFixed(ref ValueStringBuilder sb, ref NumberBuffer number, int nMinDigits, int nMaxDigits, NumberFormatInfo info, int[] groupDigits, string sDecimal, string sGroup) {} // 0x000000018B97A940-0x000000018B97A960
-			private static void FormatNumber(ref ValueStringBuilder sb, ref NumberBuffer number, int nMinDigits, int nMaxDigits, NumberFormatInfo info) {} // 0x000000018B977D1C-0x000000018B9780F4
-			private static void FormatScientific(ref ValueStringBuilder sb, ref NumberBuffer number, int nMinDigits, int nMaxDigits, NumberFormatInfo info, char expChar) {} // 0x000000018B978250-0x000000018B9783D4
-			private static void FormatExponent(ref ValueStringBuilder sb, NumberFormatInfo info, int value, char expChar, int minDigits, bool positiveSign) {} // 0x000000018B978580-0x000000018B978694
-			private static void FormatGeneral(ref ValueStringBuilder sb, ref NumberBuffer number, int nMinDigits, int nMaxDigits, NumberFormatInfo info, char expChar, bool bSuppressScientific) {} // 0x000000018B977C18-0x000000018B977D1C
-			private static void FormatPercent(ref ValueStringBuilder sb, ref NumberBuffer number, int nMinDigits, int nMaxDigits, NumberFormatInfo info) {} // 0x000000018B9780F4-0x000000018B978250
-			private static void RoundNumber(ref NumberBuffer number, int pos) {} // 0x000000018B9783D4-0x000000018B978580
-			private static int FindSection(ReadOnlySpan<char> format, int section) => default; // 0x000000018B97A020-0x000000018B97A0E4
-			internal static void NumberToStringFormat(ref ValueStringBuilder sb, ref NumberBuffer number, ReadOnlySpan<char> format, NumberFormatInfo info) {} // 0x000000018B977968-0x000000018B977A74
+			private static bool IsWhite(char ch); // 0x000000018AE31558-0x000000018AE31574
+			private static unsafe char* MatchChars(char* p, char* pEnd, string str); // 0x000000018AE315C0-0x000000018AE31628
+			private static unsafe char* MatchChars(char* p, char* pEnd, char* str); // 0x000000018AE31574-0x000000018AE315C0
+			private static unsafe bool ParseNumber(ref char* str, char* strEnd, NumberStyles options, ref NumberBuffer number, StringBuilder sb, NumberFormatInfo numfmt, bool parseDecimal); // 0x000000018AE32730-0x000000018AE32E7C
+			private static bool TrailingZeros(ReadOnlySpan<char> s, int index); // 0x000000018AE32F40-0x000000018AE32FA4
+			internal static bool TryStringToNumber(ReadOnlySpan<char> str, NumberStyles options, ref NumberBuffer number, StringBuilder sb, NumberFormatInfo numfmt, bool parseDecimal); // 0x000000018AE32FA4-0x000000018AE330D8
+			internal static unsafe void Int32ToDecChars(char* buffer, ref int index, uint value, int digits); // 0x000000018AE314F0-0x000000018AE31558
+			internal static char ParseFormatSpecifier(ReadOnlySpan<char> format, out int digits); // 0x000000018AE325CC-0x000000018AE32730
+			internal static void NumberToString(ref ValueStringBuilder sb, ref NumberBuffer number, char format, int nMaxDigits, NumberFormatInfo info, bool isDecimal); // 0x000000018AE321E8-0x000000018AE325CC
+			private static void FormatCurrency(ref ValueStringBuilder sb, ref NumberBuffer number, int nMinDigits, int nMaxDigits, NumberFormatInfo info); // 0x000000018AE308D0-0x000000018AE30A74
+			private static unsafe int wcslen(char* s); // 0x000000018AE3379C-0x000000018AE337BC
+			private static void FormatFixed(ref ValueStringBuilder sb, ref NumberBuffer number, int nMinDigits, int nMaxDigits, NumberFormatInfo info, int[] groupDigits, string sDecimal, string sGroup); // 0x000000018AE30B78-0x000000018AE30F50
+			private static void FormatNumber(ref ValueStringBuilder sb, ref NumberBuffer number, int nMinDigits, int nMaxDigits, NumberFormatInfo info); // 0x000000018AE310AC-0x000000018AE31230
+			private static void FormatScientific(ref ValueStringBuilder sb, ref NumberBuffer number, int nMinDigits, int nMaxDigits, NumberFormatInfo info, char expChar); // 0x000000018AE313DC-0x000000018AE314F0
+			private static void FormatExponent(ref ValueStringBuilder sb, NumberFormatInfo info, int value, char expChar, int minDigits, bool positiveSign); // 0x000000018AE30A74-0x000000018AE30B78
+			private static void FormatGeneral(ref ValueStringBuilder sb, ref NumberBuffer number, int nMinDigits, int nMaxDigits, NumberFormatInfo info, char expChar, bool bSuppressScientific); // 0x000000018AE30F50-0x000000018AE310AC
+			private static void FormatPercent(ref ValueStringBuilder sb, ref NumberBuffer number, int nMinDigits, int nMaxDigits, NumberFormatInfo info); // 0x000000018AE31230-0x000000018AE313DC
+			private static void RoundNumber(ref NumberBuffer number, int pos); // 0x000000018AE32E7C-0x000000018AE32F40
+			private static int FindSection(ReadOnlySpan<char> format, int section); // 0x000000018AE307C4-0x000000018AE308D0
+			internal static void NumberToStringFormat(ref ValueStringBuilder sb, ref NumberBuffer number, ReadOnlySpan<char> format, NumberFormatInfo info); // 0x000000018AE31628-0x000000018AE321E8
 		}
 	
-		// Constructors
-		public FormatProvider() {} // Dummy constructor
-	
 		// Methods
-		internal static void FormatBigInteger(ref ValueStringBuilder sb, int precision, int scale, bool sign, ReadOnlySpan<char> format, NumberFormatInfo numberFormatInfo, char[] digits, int startIndex) {} // 0x000000018B97A27C-0x000000018B97A940
-		internal static bool TryStringToBigInteger(ReadOnlySpan<char> s, NumberStyles styles, NumberFormatInfo numberFormatInfo, StringBuilder receiver, out int precision, out int scale, out bool sign) {
-			precision = default;
-			scale = default;
-			sign = default;
-			return default;
-		} // 0x000000018346D130-0x000000018346D140
+		internal static void FormatBigInteger(ref ValueStringBuilder sb, int precision, int scale, bool sign, ReadOnlySpan<char> format, NumberFormatInfo numberFormatInfo, char[] digits, int startIndex); // 0x000000018AE2FA34-0x000000018AE2FB68
+		internal static bool TryStringToBigInteger(ReadOnlySpan<char> s, NumberStyles styles, NumberFormatInfo numberFormatInfo, StringBuilder receiver, out int precision, out int scale, out bool sign); // 0x000000018AE2FB68-0x000000018AE2FC60
 	}
 }
 
 namespace System.Numerics
 {
-	public struct Matrix3x2 : IEquatable<Matrix3x2> // TypeDefIndex: 59959
+	public struct Matrix3x2 : IEquatable<Matrix3x2> // TypeDefIndex: 62574
 	{
 		// Fields
 		public float M11; // 0x00
@@ -100,26 +109,17 @@ namespace System.Numerics
 		private static readonly Matrix3x2 _identity; // 0x00
 	
 		// Constructors
-		public Matrix3x2(float m11, float m12, float m21, float m22, float m31, float m32) {
-			M11 = default;
-			M12 = default;
-			M21 = default;
-			M22 = default;
-			M31 = default;
-			M32 = default;
-		} // 0x0000000185FD6260-0x0000000185FD6290
-		static Matrix3x2() {
-			_identity = default;
-		} // 0x000000018B9771A8-0x000000018B9771F4
+		public Matrix3x2(float m11, float m12, float m21, float m22, float m31, float m32); // 0x0000000184DAA360-0x0000000184DAA390
+		static Matrix3x2(); // 0x000000018AE30004-0x000000018AE30050
 	
 		// Methods
-		public bool Equals(Matrix3x2 other) => default; // 0x000000018B976EE8-0x000000018B976F68
-		public override bool Equals(object obj) => default; // 0x000000018B976E64-0x000000018B976EE8
-		public override string ToString() => default; // 0x000000018B976FF4-0x000000018B9771A8
-		public override int GetHashCode() => default; // 0x000000018B976F68-0x000000018B976FF4
+		public bool Equals(Matrix3x2 other); // 0x000000018AE2FD44-0x000000018AE2FDC4
+		public override bool Equals(object obj); // 0x000000018AE2FCC0-0x000000018AE2FD44
+		public override string ToString(); // 0x000000018AE2FE50-0x000000018AE30004
+		public override int GetHashCode(); // 0x000000018AE2FDC4-0x000000018AE2FE50
 	}
 
-	public struct Matrix4x4 : IEquatable<Matrix4x4> // TypeDefIndex: 59960
+	public struct Matrix4x4 : IEquatable<Matrix4x4> // TypeDefIndex: 62575
 	{
 		// Fields
 		public float M11; // 0x00
@@ -141,49 +141,30 @@ namespace System.Numerics
 		private static readonly Matrix4x4 _identity; // 0x00
 	
 		// Constructors
-		public Matrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44) {
-			M11 = default;
-			M12 = default;
-			M13 = default;
-			M14 = default;
-			M21 = default;
-			M22 = default;
-			M23 = default;
-			M24 = default;
-			M31 = default;
-			M32 = default;
-			M33 = default;
-			M34 = default;
-			M41 = default;
-			M42 = default;
-			M43 = default;
-			M44 = default;
-		} // 0x0000000185FD6290-0x0000000185FD6340
-		static Matrix4x4() {
-			_identity = default;
-		} // 0x000000018B977878-0x000000018B977968
+		public Matrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44); // 0x0000000184DAA390-0x0000000184DAA440
+		static Matrix4x4(); // 0x000000018AE306D4-0x000000018AE307C4
 	
 		// Methods
-		public bool Equals(Matrix4x4 other) => default; // 0x000000018B9771F4-0x000000018B977318
-		public override bool Equals(object obj) => default; // 0x000000018B977318-0x000000018B9773AC
-		public override string ToString() => default; // 0x000000018B977500-0x000000018B977878
-		public override int GetHashCode() => default; // 0x000000018B9773AC-0x000000018B977500
+		public bool Equals(Matrix4x4 other); // 0x000000018AE30050-0x000000018AE30174
+		public override bool Equals(object obj); // 0x000000018AE30174-0x000000018AE30208
+		public override string ToString(); // 0x000000018AE3035C-0x000000018AE306D4
+		public override int GetHashCode(); // 0x000000018AE30208-0x000000018AE3035C
 	}
 
-	public struct Plane : IEquatable<Plane> // TypeDefIndex: 59961
+	public struct Plane : IEquatable<Plane> // TypeDefIndex: 62576
 	{
 		// Fields
 		public Vector3 Normal; // 0x00
 		public float D; // 0x0C
 	
 		// Methods
-		public bool Equals(Plane other) => default; // 0x00000001841EEC50-0x00000001841EEC90
-		public override bool Equals(object obj) => default; // 0x000000018B97AB5C-0x000000018B97ABC8
-		public override string ToString() => default; // 0x000000018B97ABF8-0x000000018B97AC90
-		public override int GetHashCode() => default; // 0x000000018B97ABC8-0x000000018B97ABF8
+		public bool Equals(Plane other); // 0x00000001831C3A00-0x00000001831C3A40
+		public override bool Equals(object obj); // 0x000000018AE339B8-0x000000018AE33A24
+		public override string ToString(); // 0x000000018AE33A54-0x000000018AE33AEC
+		public override int GetHashCode(); // 0x000000018AE33A24-0x000000018AE33A54
 	}
 
-	public struct Quaternion : IEquatable<Quaternion> // TypeDefIndex: 59962
+	public struct Quaternion : IEquatable<Quaternion> // TypeDefIndex: 62577
 	{
 		// Fields
 		public float X; // 0x00
@@ -192,27 +173,28 @@ namespace System.Numerics
 		public float W; // 0x0C
 	
 		// Methods
-		public bool Equals(Quaternion other) => default; // 0x0000000184A6EB60-0x0000000184A6EBA0
-		public override bool Equals(object obj) => default; // 0x000000018B97AC90-0x000000018B97AD00
-		public override string ToString() => default; // 0x000000018B97AD60-0x000000018B97AEBC
-		public override int GetHashCode() => default; // 0x000000018B97AD00-0x000000018B97AD60
+		public bool Equals(Quaternion other); // 0x000000018415FC30-0x000000018415FC70
+		public override bool Equals(object obj); // 0x000000018AE33AEC-0x000000018AE33B5C
+		public override string ToString(); // 0x000000018AE33BBC-0x000000018AE33D18
+		public override int GetHashCode(); // 0x000000018AE33B5C-0x000000018AE33BBC
 	}
 
-	public struct Vector2 : IEquatable<Vector2>, IFormattable // TypeDefIndex: 59963
+	public struct Vector2 : IEquatable<Vector2>, IFormattable // TypeDefIndex: 62578
 	{
 		// Fields
 		public float X; // 0x00
 		public float Y; // 0x04
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x000000018B97B828-0x000000018B97B894
-		public override bool Equals(object obj) => default; // 0x000000018B97B7C4-0x000000018B97B828
-		public override string ToString() => default; // 0x000000018B97B894-0x000000018B97B8F4
-		public string ToString(string format, IFormatProvider formatProvider) => default; // 0x000000018B97B8F4-0x000000018B97BA18
-		public bool Equals(Vector2 other) => default; // 0x000000018B631440-0x000000018B631468
+		public override int GetHashCode(); // 0x000000018AE34684-0x000000018AE346F0
+		public override bool Equals(object obj); // 0x000000018AE34620-0x000000018AE34684
+		public override string ToString(); // 0x000000018AE346F0-0x000000018AE34750
+		public string ToString(string format, IFormatProvider formatProvider); // 0x000000018AE34750-0x000000018AE34874
+		[Intrinsic]
+		public bool Equals(Vector2 other); // 0x000000018AAEC490-0x000000018AAEC4B8
 	}
 
-	public struct Vector3 : IEquatable<Vector3>, IFormattable // TypeDefIndex: 59964
+	public struct Vector3 : IEquatable<Vector3>, IFormattable // TypeDefIndex: 62579
 	{
 		// Fields
 		public float X; // 0x00
@@ -220,14 +202,15 @@ namespace System.Numerics
 		public float Z; // 0x08
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x000000018B97BA90-0x000000018B97BB28
-		public override bool Equals(object obj) => default; // 0x000000018B97BA18-0x000000018B97BA90
-		public override string ToString() => default; // 0x000000018B97BD18-0x000000018B97BD78
-		public string ToString(string format, IFormatProvider formatProvider) => default; // 0x000000018B97BB28-0x000000018B97BD18
-		public bool Equals(Vector3 other) => default; // 0x00000001843884A0-0x00000001843884D0
+		public override int GetHashCode(); // 0x000000018AE348EC-0x000000018AE34984
+		public override bool Equals(object obj); // 0x000000018AE34874-0x000000018AE348EC
+		public override string ToString(); // 0x000000018AE34B70-0x000000018AE34BD0
+		public string ToString(string format, IFormatProvider formatProvider); // 0x000000018AE34984-0x000000018AE34B70
+		[Intrinsic]
+		public bool Equals(Vector3 other); // 0x00000001830F9620-0x00000001830F9650
 	}
 
-	public struct Vector4 : IEquatable<Vector4>, IFormattable // TypeDefIndex: 59965
+	public struct Vector4 : IEquatable<Vector4>, IFormattable // TypeDefIndex: 62580
 	{
 		// Fields
 		public float X; // 0x00
@@ -236,15 +219,17 @@ namespace System.Numerics
 		public float W; // 0x0C
 	
 		// Methods
-		public override int GetHashCode() => default; // 0x000000018B97BDE8-0x000000018B97BEA0
-		public override bool Equals(object obj) => default; // 0x000000018B97BD78-0x000000018B97BDE8
-		public override string ToString() => default; // 0x000000018B97C040-0x000000018B97C3EC
-		public string ToString(string format, IFormatProvider formatProvider) => default; // 0x000000018B97BEA0-0x000000018B97C040
-		public bool Equals(Vector4 other) => default; // 0x0000000184A6EB60-0x0000000184A6EBA0
+		public override int GetHashCode(); // 0x000000018AE34C40-0x000000018AE34CF8
+		public override bool Equals(object obj); // 0x000000018AE34BD0-0x000000018AE34C40
+		public override string ToString(); // 0x000000018AE34E98-0x000000018AE35184
+		public string ToString(string format, IFormatProvider formatProvider); // 0x000000018AE34CF8-0x000000018AE34E98
+		[Intrinsic]
+		public bool Equals(Vector4 other); // 0x000000018415FC30-0x000000018415FC70
 	}
 
 	[Serializable]
-	public struct BigInteger : IFormattable, IComparable, IComparable<BigInteger>, IEquatable<BigInteger> // TypeDefIndex: 59967
+	[IsReadOnly]
+	public struct BigInteger : IFormattable, IComparable, IComparable<BigInteger>, IEquatable<BigInteger> // TypeDefIndex: 62582
 	{
 		// Fields
 		internal readonly int _sign; // 0x00
@@ -256,12 +241,12 @@ namespace System.Numerics
 		private static readonly byte[] s_success; // 0x40
 	
 		// Properties
-		public static BigInteger Zero { get => default; } // 0x000000018B973834-0x000000018B973890 
-		public static BigInteger MinusOne { get => default; } // 0x000000018B9737D8-0x000000018B973834 
-		public bool IsZero { get => default; } // 0x00000001840066E0-0x00000001840066F0 
+		public static BigInteger Zero { get; } // 0x000000018AE2C744-0x000000018AE2C7A0 
+		public static BigInteger MinusOne { get; } // 0x000000018AE2C6E8-0x000000018AE2C744 
+		public bool IsZero { get; } // 0x000000018426F6A0-0x000000018426F6B0 
 	
 		// Nested types
-		private enum GetBytesMode // TypeDefIndex: 59966
+		private enum GetBytesMode // TypeDefIndex: 62581
 		{
 			AllocateArray = 0,
 			Count = 1,
@@ -269,125 +254,87 @@ namespace System.Numerics
 		}
 	
 		// Constructors
-		public BigInteger(int value) : this() {
-			_sign = default;
-			_bits = default;
-		} // 0x000000018B97375C-0x000000018B9737D8
-		public BigInteger(uint value) : this() {
-			_sign = default;
-			_bits = default;
-		} // 0x000000018B973138-0x000000018B9731D8
-		public BigInteger(long value) : this() {
-			_sign = default;
-			_bits = default;
-		} // 0x000000018B972FDC-0x000000018B973138
-		public BigInteger(ulong value) : this() {
-			_sign = default;
-			_bits = default;
-		} // 0x000000018B9729D8-0x000000018B972ACC
-		public BigInteger(float value) : this() {
-			_sign = default;
-			_bits = default;
-		} // 0x000000018B972F84-0x000000018B972FDC
-		public BigInteger(double value) : this() {
-			_sign = default;
-			_bits = default;
-		} // 0x000000018B972ACC-0x000000018B972DA8
-		public BigInteger(decimal value) : this() {
-			_sign = default;
-			_bits = default;
-		} // 0x000000018B972DA8-0x000000018B972F84
-		public BigInteger(byte[] value) : this() {
-			_sign = default;
-			_bits = default;
-		} // 0x000000018B9728F4-0x000000018B9729D8
-		public BigInteger(ReadOnlySpan<byte> value, bool isUnsigned = false /* Metadata: 0x020824E0 */, bool isBigEndian = false /* Metadata: 0x020824E1 */) : this() {
-			_sign = default;
-			_bits = default;
-		} // 0x000000018B9731D8-0x000000018B97375C
-		internal BigInteger(int n, uint[] rgu) : this() {
-			_sign = default;
-			_bits = default;
-		} // 0x0000000189317CA8-0x0000000189317CB8
-		internal BigInteger(uint[] value, bool negative) : this() {
-			_sign = default;
-			_bits = default;
-		} // 0x000000018B972748-0x000000018B9728F4
-		static BigInteger() {
-			s_bnMinInt = default;
-			s_bnOneInt = default;
-			s_bnZeroInt = default;
-			s_bnMinusOneInt = default;
-			s_success = default;
-		} // 0x000000018B972590-0x000000018B972748
+		public BigInteger(int value); // 0x000000018AE2C694-0x000000018AE2C6E8
+		[CLSCompliant(false)]
+		public BigInteger(uint value); // 0x000000018AE2C070-0x000000018AE2C110
+		public BigInteger(long value); // 0x000000018AE2BF40-0x000000018AE2C070
+		[CLSCompliant(false)]
+		public BigInteger(ulong value); // 0x000000018AE2B93C-0x000000018AE2BA30
+		public BigInteger(float value); // 0x000000018AE2BEE8-0x000000018AE2BF40
+		public BigInteger(double value); // 0x000000018AE2BA30-0x000000018AE2BD0C
+		public BigInteger(decimal value); // 0x000000018AE2BD0C-0x000000018AE2BEE8
+		[CLSCompliant(false)]
+		public BigInteger(byte[] value); // 0x000000018AE2B858-0x000000018AE2B93C
+		public BigInteger(ReadOnlySpan<byte> value, bool isUnsigned = false /* Metadata: 0x02352030 */, bool isBigEndian = false /* Metadata: 0x02352031 */); // 0x000000018AE2C110-0x000000018AE2C694
+		internal BigInteger(int n, uint[] rgu); // 0x0000000186B17430-0x0000000186B17440
+		internal BigInteger(uint[] value, bool negative); // 0x000000018AE2B6E0-0x000000018AE2B858
+		static BigInteger(); // 0x000000018AE2B528-0x000000018AE2B6E0
 	
 		// Methods
-		public static BigInteger Parse(string value, IFormatProvider provider) => default; // 0x000000018B971C90-0x000000018B971D14
-		public static BigInteger Parse(string value, NumberStyles style, IFormatProvider provider) => default; // 0x000000018B971D14-0x000000018B971D6C
-		public override int GetHashCode() => default; // 0x000000018B971B74-0x000000018B971BC4
-		public override bool Equals(object obj) => default; // 0x000000018B971AA4-0x000000018B971B20
-		public bool Equals(long other) => default; // 0x000000018B971A3C-0x000000018B971AA4
-		public bool Equals(BigInteger other) => default; // 0x000000018B97199C-0x000000018B971A3C
-		public int CompareTo(long other) => default; // 0x000000018B971824-0x000000018B9718B4
-		public int CompareTo(BigInteger other) => default; // 0x000000018B9716F0-0x000000018B971824
-		public int CompareTo(object obj) => default; // 0x000000018B9718B4-0x000000018B97199C
-		public bool TryWriteBytes(Span<byte> destination, out int bytesWritten, bool isUnsigned = false /* Metadata: 0x020824E2 */, bool isBigEndian = false /* Metadata: 0x020824E3 */) {
-			bytesWritten = default;
-			return default;
-		} // 0x000000018B972450-0x000000018B9724F4
-		internal bool TryWriteOrCountBytes(Span<byte> destination, out int bytesWritten, bool isUnsigned = false /* Metadata: 0x020824E4 */, bool isBigEndian = false /* Metadata: 0x020824E5 */) {
-			bytesWritten = default;
-			return default;
-		} // 0x000000018B9724F4-0x000000018B972590
-		private byte[] TryGetBytes(GetBytesMode mode, Span<byte> destination, bool isUnsigned, bool isBigEndian, ref int bytesWritten) => default; // 0x000000018B971F8C-0x000000018B972450
-		public override string ToString() => default; // 0x000000018B971ED8-0x000000018B971F10
-		public string ToString(IFormatProvider provider) => default; // 0x000000018B971F10-0x000000018B971F4C
-		public string ToString(string format, IFormatProvider provider) => default; // 0x000000018B971F4C-0x000000018B971F8C
-		private static BigInteger Add(uint[] leftBits, int leftSign, uint[] rightBits, int rightSign) => default; // 0x000000018B9715BC-0x000000018B9716F0
-		public static BigInteger operator -(BigInteger left, BigInteger right) => default; // 0x000000018B974D5C-0x000000018B974E10
-		private static BigInteger Subtract(uint[] leftBits, int leftSign, uint[] rightBits, int rightSign) => default; // 0x000000018B971D6C-0x000000018B971ED8
-		public static implicit operator BigInteger(byte value) => default; // 0x000000018B9743C8-0x000000018B9743EC
-		public static implicit operator BigInteger(sbyte value) => default; // 0x000000018B974340-0x000000018B974364
-		public static implicit operator BigInteger(short value) => default; // 0x000000018B9743A4-0x000000018B9743C8
-		public static implicit operator BigInteger(ushort value) => default; // 0x000000018B97440C-0x000000018B974430
-		public static implicit operator BigInteger(int value) => default; // 0x000000018B974320-0x000000018B974340
-		public static implicit operator BigInteger(uint value) => default; // 0x000000018B974384-0x000000018B9743A4
-		public static implicit operator BigInteger(long value) => default; // 0x000000018B9743EC-0x000000018B97440C
-		public static implicit operator BigInteger(ulong value) => default; // 0x000000018B974364-0x000000018B974384
-		public static explicit operator byte(BigInteger value) => default; // 0x000000018B974180-0x000000018B9741F8
-		public static explicit operator sbyte(BigInteger value) => default; // 0x000000018B973DDC-0x000000018B973E54
-		public static explicit operator short(BigInteger value) => default; // 0x000000018B973AEC-0x000000018B973B64
-		public static explicit operator ushort(BigInteger value) => default; // 0x000000018B974108-0x000000018B974180
-		public static explicit operator int(BigInteger value) => default; // 0x000000018B973CA8-0x000000018B973DDC
-		public static explicit operator uint(BigInteger value) => default; // 0x000000018B973EA4-0x000000018B973F4C
-		public static explicit operator long(BigInteger value) => default; // 0x000000018B9741F8-0x000000018B974320
-		public static explicit operator ulong(BigInteger value) => default; // 0x000000018B974044-0x000000018B974108
-		public static explicit operator float(BigInteger value) => default; // 0x000000018B973E54-0x000000018B973EA4
-		public static explicit operator double(BigInteger value) => default; // 0x000000018B973F4C-0x000000018B974044
-		public static explicit operator decimal(BigInteger value) => default; // 0x000000018B973B64-0x000000018B973CA8
-		public static BigInteger operator <<(BigInteger value, int shift) => default; // 0x000000018B9744E4-0x000000018B974718
-		public static BigInteger operator >>(BigInteger value, int shift) => default; // 0x000000018B974A54-0x000000018B974D5C
-		public static BigInteger operator -(BigInteger value) => default; // 0x000000018B974E10-0x000000018B974E40
-		public static BigInteger operator +(BigInteger left, BigInteger right) => default; // 0x000000018B973890-0x000000018B973944
-		public static BigInteger operator *(BigInteger left, BigInteger right) => default; // 0x000000018B9748D8-0x000000018B974A54
-		public static BigInteger operator /(BigInteger dividend, BigInteger divisor) => default; // 0x000000018B973944-0x000000018B973A90
-		public static bool operator <=(BigInteger left, BigInteger right) => default; // 0x000000018B974718-0x000000018B97477C
-		public static bool operator !=(BigInteger left, BigInteger right) => default; // 0x000000018B974484-0x000000018B9744E4
-		public static bool operator <(BigInteger left, long right) => default; // 0x000000018B974884-0x000000018B9748D8
-		public static bool operator <=(BigInteger left, long right) => default; // 0x000000018B97477C-0x000000018B9747D4
-		public static bool operator ==(BigInteger left, long right) => default; // 0x000000018B973A90-0x000000018B973AEC
-		public static bool operator !=(BigInteger left, long right) => default; // 0x000000018B974430-0x000000018B974484
-		public static bool operator <(long left, BigInteger right) => default; // 0x000000018B97482C-0x000000018B974884
-		public static bool operator <=(long left, BigInteger right) => default; // 0x000000018B9747D4-0x000000018B97482C
-		private static bool GetPartsForBitManipulation(ref BigInteger x, out uint[] xd, out int xl) {
-			xd = default;
-			xl = default;
-			return default;
-		} // 0x000000018B971BC4-0x000000018B971C90
-		internal static int GetDiffLength(uint[] rgu1, uint[] rgu2, int cu) => default; // 0x000000018B971B20-0x000000018B971B74
+		public static BigInteger Parse(string value, IFormatProvider provider); // 0x000000018AE2AC28-0x000000018AE2ACAC
+		public static BigInteger Parse(string value, NumberStyles style, IFormatProvider provider); // 0x000000018AE2ACAC-0x000000018AE2AD04
+		public override int GetHashCode(); // 0x000000018AE2AB28-0x000000018AE2AB78
+		public override bool Equals(object obj); // 0x000000018AE2AA58-0x000000018AE2AAD4
+		public bool Equals(long other); // 0x000000018AE2A9F0-0x000000018AE2AA58
+		public bool Equals(BigInteger other); // 0x000000018AE2A950-0x000000018AE2A9F0
+		public int CompareTo(long other); // 0x000000018AE2A7D8-0x000000018AE2A868
+		public int CompareTo(BigInteger other); // 0x000000018AE2A6A4-0x000000018AE2A7D8
+		public int CompareTo(object obj); // 0x000000018AE2A868-0x000000018AE2A950
+		public bool TryWriteBytes(Span<byte> destination, out int bytesWritten, bool isUnsigned = false /* Metadata: 0x02352032 */, bool isBigEndian = false /* Metadata: 0x02352033 */); // 0x000000018AE2B3E8-0x000000018AE2B48C
+		internal bool TryWriteOrCountBytes(Span<byte> destination, out int bytesWritten, bool isUnsigned = false /* Metadata: 0x02352034 */, bool isBigEndian = false /* Metadata: 0x02352035 */); // 0x000000018AE2B48C-0x000000018AE2B528
+		private byte[] TryGetBytes(GetBytesMode mode, Span<byte> destination, bool isUnsigned, bool isBigEndian, ref int bytesWritten); // 0x000000018AE2AF24-0x000000018AE2B3E8
+		public override string ToString(); // 0x000000018AE2AE70-0x000000018AE2AEA8
+		public string ToString(IFormatProvider provider); // 0x000000018AE2AEA8-0x000000018AE2AEE4
+		public string ToString(string format, IFormatProvider provider); // 0x000000018AE2AEE4-0x000000018AE2AF24
+		private static BigInteger Add(uint[] leftBits, int leftSign, uint[] rightBits, int rightSign); // 0x000000018AE2A594-0x000000018AE2A6A4
+		public static BigInteger operator -(BigInteger left, BigInteger right); // 0x000000018AE2DC48-0x000000018AE2DCFC
+		private static BigInteger Subtract(uint[] leftBits, int leftSign, uint[] rightBits, int rightSign); // 0x000000018AE2AD04-0x000000018AE2AE70
+		public static implicit operator BigInteger(byte value); // 0x000000018AE2D2D8-0x000000018AE2D2FC
+		[CLSCompliant(false)]
+		public static implicit operator BigInteger(sbyte value); // 0x000000018AE2D250-0x000000018AE2D274
+		public static implicit operator BigInteger(short value); // 0x000000018AE2D2B4-0x000000018AE2D2D8
+		[CLSCompliant(false)]
+		public static implicit operator BigInteger(ushort value); // 0x000000018AE2D31C-0x000000018AE2D340
+		public static implicit operator BigInteger(int value); // 0x000000018AE2D230-0x000000018AE2D250
+		[CLSCompliant(false)]
+		public static implicit operator BigInteger(uint value); // 0x000000018AE2D294-0x000000018AE2D2B4
+		public static implicit operator BigInteger(long value); // 0x000000018AE2D2FC-0x000000018AE2D31C
+		[CLSCompliant(false)]
+		public static implicit operator BigInteger(ulong value); // 0x000000018AE2D274-0x000000018AE2D294
+		public static explicit operator byte(BigInteger value); // 0x000000018AE2D090-0x000000018AE2D108
+		[CLSCompliant(false)]
+		public static explicit operator sbyte(BigInteger value); // 0x000000018AE2CCEC-0x000000018AE2CD64
+		public static explicit operator short(BigInteger value); // 0x000000018AE2C9EC-0x000000018AE2CA64
+		[CLSCompliant(false)]
+		public static explicit operator ushort(BigInteger value); // 0x000000018AE2D018-0x000000018AE2D090
+		public static explicit operator int(BigInteger value); // 0x000000018AE2CBB8-0x000000018AE2CCEC
+		[CLSCompliant(false)]
+		public static explicit operator uint(BigInteger value); // 0x000000018AE2CDB4-0x000000018AE2CE5C
+		public static explicit operator long(BigInteger value); // 0x000000018AE2D108-0x000000018AE2D230
+		[CLSCompliant(false)]
+		public static explicit operator ulong(BigInteger value); // 0x000000018AE2CF54-0x000000018AE2D018
+		public static explicit operator float(BigInteger value); // 0x000000018AE2CD64-0x000000018AE2CDB4
+		public static explicit operator double(BigInteger value); // 0x000000018AE2CE5C-0x000000018AE2CF54
+		public static explicit operator decimal(BigInteger value); // 0x000000018AE2CA64-0x000000018AE2CBB8
+		public static BigInteger operator <<(BigInteger value, int shift); // 0x000000018AE2D3F4-0x000000018AE2D604
+		public static BigInteger operator >>(BigInteger value, int shift); // 0x000000018AE2D940-0x000000018AE2DC48
+		public static BigInteger operator -(BigInteger value); // 0x000000018AE2DCFC-0x000000018AE2DD2C
+		public static BigInteger operator +(BigInteger left, BigInteger right); // 0x000000018AE2C7A0-0x000000018AE2C844
+		public static BigInteger operator *(BigInteger left, BigInteger right); // 0x000000018AE2D7C4-0x000000018AE2D940
+		public static BigInteger operator /(BigInteger dividend, BigInteger divisor); // 0x000000018AE2C844-0x000000018AE2C990
+		public static bool operator <=(BigInteger left, BigInteger right); // 0x000000018AE2D604-0x000000018AE2D668
+		public static bool operator !=(BigInteger left, BigInteger right); // 0x000000018AE2D394-0x000000018AE2D3F4
+		public static bool operator <(BigInteger left, long right); // 0x000000018AE2D770-0x000000018AE2D7C4
+		public static bool operator <=(BigInteger left, long right); // 0x000000018AE2D668-0x000000018AE2D6C0
+		public static bool operator ==(BigInteger left, long right); // 0x000000018AE2C990-0x000000018AE2C9EC
+		public static bool operator !=(BigInteger left, long right); // 0x000000018AE2D340-0x000000018AE2D394
+		public static bool operator <(long left, BigInteger right); // 0x000000018AE2D718-0x000000018AE2D770
+		public static bool operator <=(long left, BigInteger right); // 0x000000018AE2D6C0-0x000000018AE2D718
+		private static bool GetPartsForBitManipulation(ref BigInteger x, out uint[] xd, out int xl); // 0x000000018AE2AB78-0x000000018AE2AC28
+		internal static int GetDiffLength(uint[] rgu1, uint[] rgu2, int cu); // 0x000000018AE2AAD4-0x000000018AE2AB28
 	}
 
-	internal static class BigIntegerCalculator // TypeDefIndex: 59968
+	internal static class BigIntegerCalculator // TypeDefIndex: 62583
 	{
 		// Fields
 		private static int ReducerThreshold; // 0x00
@@ -396,37 +343,37 @@ namespace System.Numerics
 		private static int MultiplyThreshold; // 0x0C
 	
 		// Constructors
-		static BigIntegerCalculator() {} // 0x000000018B971548-0x000000018B9715BC
+		static BigIntegerCalculator(); // 0x000000018AE2A520-0x000000018AE2A594
 	
 		// Methods
-		public static uint[] Add(uint[] left, uint right) => default; // 0x000000018B96FF94-0x000000018B970050
-		public static uint[] Add(uint[] left, uint[] right) => default; // 0x000000018B970050-0x000000018B970150
-		private static unsafe void Add(uint* left, int leftLength, uint* right, int rightLength, uint* bits, int bitsLength) {} // 0x000000018B96FEE8-0x000000018B96FF94
-		private static unsafe void AddSelf(uint* left, int leftLength, uint* right, int rightLength) {} // 0x000000018B96FE78-0x000000018B96FEE8
-		public static uint[] Subtract(uint[] left, uint right) => default; // 0x000000018B9714A0-0x000000018B971548
-		public static uint[] Subtract(uint[] left, uint[] right) => default; // 0x000000018B9712EC-0x000000018B9713FC
-		private static unsafe void Subtract(uint* left, int leftLength, uint* right, int rightLength, uint* bits, int bitsLength) {} // 0x000000018B9713FC-0x000000018B9714A0
-		public static int Compare(uint[] left, uint[] right) => default; // 0x000000018B970150-0x000000018B9701CC
-		public static uint[] Divide(uint[] left, uint right) => default; // 0x000000018B9705C0-0x000000018B970664
-		public static uint[] Divide(uint[] left, uint[] right) => default; // 0x000000018B970664-0x000000018B970764
-		private static unsafe void Divide(uint* left, int leftLength, uint* right, int rightLength, uint* bits, int bitsLength) {} // 0x000000018B970280-0x000000018B9705C0
-		private static unsafe uint AddDivisor(uint* left, int leftLength, uint* right, int rightLength) => default; // 0x000000018B96FE44-0x000000018B96FE78
-		private static unsafe uint SubtractDivisor(uint* left, int leftLength, uint* right, int rightLength, ulong q) => default; // 0x000000018B9712AC-0x000000018B9712EC
-		private static bool DivideGuessTooBig(ulong q, ulong valHi, uint valLo, uint divHi, uint divLo) => default; // 0x000000018B970244-0x000000018B970280
-		private static uint[] CreateCopy(uint[] value) => default; // 0x000000018B9701CC-0x000000018B970244
-		private static int LeadingZeros(uint value) => default; // 0x000000018B970764-0x000000018B9707CC
-		public static uint[] Square(uint[] value) => default; // 0x000000018B9710F0-0x000000018B9711C8
-		private static unsafe void Square(uint* value, int valueLength, uint* bits, int bitsLength) {} // 0x000000018B970E04-0x000000018B9710F0
-		public static uint[] Multiply(uint[] left, uint right) => default; // 0x000000018B970D50-0x000000018B970E04
-		public static uint[] Multiply(uint[] left, uint[] right) => default; // 0x000000018B9707CC-0x000000018B9708DC
-		private static unsafe void Multiply(uint* left, int leftLength, uint* right, int rightLength, uint* bits, int bitsLength) {} // 0x000000018B9708DC-0x000000018B970D50
-		private static unsafe void SubtractCore(uint* left, int leftLength, uint* right, int rightLength, uint* core, int coreLength) {} // 0x000000018B9711C8-0x000000018B9712AC
+		public static uint[] Add(uint[] left, uint right); // 0x000000018AE28F6C-0x000000018AE29028
+		public static uint[] Add(uint[] left, uint[] right); // 0x000000018AE29028-0x000000018AE29128
+		private static unsafe void Add(uint* left, int leftLength, uint* right, int rightLength, uint* bits, int bitsLength); // 0x000000018AE28EC0-0x000000018AE28F6C
+		private static unsafe void AddSelf(uint* left, int leftLength, uint* right, int rightLength); // 0x000000018AE28E50-0x000000018AE28EC0
+		public static uint[] Subtract(uint[] left, uint right); // 0x000000018AE2A478-0x000000018AE2A520
+		public static uint[] Subtract(uint[] left, uint[] right); // 0x000000018AE2A2C4-0x000000018AE2A3D4
+		private static unsafe void Subtract(uint* left, int leftLength, uint* right, int rightLength, uint* bits, int bitsLength); // 0x000000018AE2A3D4-0x000000018AE2A478
+		public static int Compare(uint[] left, uint[] right); // 0x000000018AE29128-0x000000018AE291A4
+		public static uint[] Divide(uint[] left, uint right); // 0x000000018AE29598-0x000000018AE2963C
+		public static uint[] Divide(uint[] left, uint[] right); // 0x000000018AE2963C-0x000000018AE2973C
+		private static unsafe void Divide(uint* left, int leftLength, uint* right, int rightLength, uint* bits, int bitsLength); // 0x000000018AE29258-0x000000018AE29598
+		private static unsafe uint AddDivisor(uint* left, int leftLength, uint* right, int rightLength); // 0x000000018AE28E1C-0x000000018AE28E50
+		private static unsafe uint SubtractDivisor(uint* left, int leftLength, uint* right, int rightLength, ulong q); // 0x000000018AE2A284-0x000000018AE2A2C4
+		private static bool DivideGuessTooBig(ulong q, ulong valHi, uint valLo, uint divHi, uint divLo); // 0x000000018AE2921C-0x000000018AE29258
+		private static uint[] CreateCopy(uint[] value); // 0x000000018AE291A4-0x000000018AE2921C
+		private static int LeadingZeros(uint value); // 0x000000018AE2973C-0x000000018AE297A4
+		public static uint[] Square(uint[] value); // 0x000000018AE2A0C8-0x000000018AE2A1A0
+		private static unsafe void Square(uint* value, int valueLength, uint* bits, int bitsLength); // 0x000000018AE29DDC-0x000000018AE2A0C8
+		public static uint[] Multiply(uint[] left, uint right); // 0x000000018AE29D28-0x000000018AE29DDC
+		public static uint[] Multiply(uint[] left, uint[] right); // 0x000000018AE297A4-0x000000018AE298B4
+		private static unsafe void Multiply(uint* left, int leftLength, uint* right, int rightLength, uint* bits, int bitsLength); // 0x000000018AE298B4-0x000000018AE29D28
+		private static unsafe void SubtractCore(uint* left, int leftLength, uint* right, int rightLength, uint* core, int coreLength); // 0x000000018AE2A1A0-0x000000018AE2A284
 	}
 
-	internal static class BigNumber // TypeDefIndex: 59970
+	internal static class BigNumber // TypeDefIndex: 62585
 	{
 		// Nested types
-		private struct BigNumberBuffer // TypeDefIndex: 59969
+		private struct BigNumberBuffer // TypeDefIndex: 62584
 		{
 			// Fields
 			public StringBuilder digits; // 0x00
@@ -435,41 +382,24 @@ namespace System.Numerics
 			public bool sign; // 0x10
 	
 			// Methods
-			public static BigNumberBuffer Create() => default; // 0x000000018B976778-0x000000018B976874
+			public static BigNumberBuffer Create(); // 0x000000018AE2DD2C-0x000000018AE2DDA0
 		}
 	
 		// Methods
-		internal static bool TryValidateParseStyleInteger(NumberStyles style, out ArgumentException e) {
-			e = default;
-			return default;
-		} // 0x000000018B97663C-0x000000018B976778
-		internal static bool TryParseBigInteger(ReadOnlySpan<char> value, NumberStyles style, NumberFormatInfo info, out BigInteger result) {
-			result = default;
-			return default;
-		} // 0x000000018B976334-0x000000018B9763F0
-		internal static BigInteger ParseBigInteger(string value, NumberStyles style, NumberFormatInfo info) => default; // 0x000000018B9763F0-0x000000018B97651C
-		internal static BigInteger ParseBigInteger(ReadOnlySpan<char> value, NumberStyles style, NumberFormatInfo info) => default; // 0x000000018B975F98-0x000000018B97611C
-		private static bool HexNumberToBigInteger(ref BigNumberBuffer number, ref BigInteger value) => default; // 0x000000018B97611C-0x000000018B976334
-		private static bool NumberToBigInteger(ref BigNumberBuffer number, ref BigInteger value) => default; // 0x000000018B97651C-0x000000018B97663C
-		internal static char ParseFormatSpecifier(ReadOnlySpan<char> format, out int digits) {
-			digits = default;
-			return default;
-		} // 0x000000018B974EB4-0x000000018B975314
-		private static string FormatBigIntegerToHex(bool targetSpan, BigInteger value, char format, int digits, NumberFormatInfo info, Span<char> destination, out int charsWritten, out bool spanSuccess) {
-			charsWritten = default;
-			spanSuccess = default;
-			return default;
-		} // 0x000000018B975314-0x000000018B9753B4
-		internal static string FormatBigInteger(BigInteger value, string format, NumberFormatInfo info) => default; // 0x000000018B9753B4-0x000000018B975F98
-		private static string FormatBigInteger(bool targetSpan, BigInteger value, string formatString, ReadOnlySpan<char> formatSpan, NumberFormatInfo info, Span<char> destination, out int charsWritten, out bool spanSuccess) {
-			charsWritten = default;
-			spanSuccess = default;
-			return default;
-		} // 0x000000018B974E40-0x000000018B974EB4
+		internal static bool TryValidateParseStyleInteger(NumberStyles style, out ArgumentException e); // 0x000000018AE2F5D4-0x000000018AE2F6D0
+		internal static bool TryParseBigInteger(ReadOnlySpan<char> value, NumberStyles style, NumberFormatInfo info, out BigInteger result); // 0x000000018AE2F498-0x000000018AE2F5D4
+		internal static BigInteger ParseBigInteger(string value, NumberStyles style, NumberFormatInfo info); // 0x000000018AE2F1A4-0x000000018AE2F260
+		internal static BigInteger ParseBigInteger(ReadOnlySpan<char> value, NumberStyles style, NumberFormatInfo info); // 0x000000018AE2F260-0x000000018AE2F38C
+		private static bool HexNumberToBigInteger(ref BigNumberBuffer number, ref BigInteger value); // 0x000000018AE2EE08-0x000000018AE2EF8C
+		private static bool NumberToBigInteger(ref BigNumberBuffer number, ref BigInteger value); // 0x000000018AE2EF8C-0x000000018AE2F1A4
+		internal static char ParseFormatSpecifier(ReadOnlySpan<char> format, out int digits); // 0x000000018AE2F38C-0x000000018AE2F498
+		private static string FormatBigIntegerToHex(bool targetSpan, BigInteger value, char format, int digits, NumberFormatInfo info, Span<char> destination, out int charsWritten, out bool spanSuccess); // 0x000000018AE2DDA0-0x000000018AE2E200
+		internal static string FormatBigInteger(BigInteger value, string format, NumberFormatInfo info); // 0x000000018AE2E200-0x000000018AE2E2A0
+		private static string FormatBigInteger(bool targetSpan, BigInteger value, string formatString, ReadOnlySpan<char> formatSpan, NumberFormatInfo info, Span<char> destination, out int charsWritten, out bool spanSuccess); // 0x000000018AE2E2A0-0x000000018AE2EE08
 	}
 
 	[Serializable]
-	public struct Complex : IEquatable<Complex>, IFormattable // TypeDefIndex: 59971
+	public struct Complex : IEquatable<Complex>, IFormattable // TypeDefIndex: 62586
 	{
 		// Fields
 		public static readonly Complex Zero; // 0x00
@@ -482,81 +412,70 @@ namespace System.Numerics
 		private double m_imaginary; // 0x08
 	
 		// Constructors
-		public Complex(double real, double imaginary) {
-			m_real = default;
-			m_imaginary = default;
-		} // 0x0000000185FB20C0-0x0000000185FB20D0
-		static Complex() {
-			Zero = default;
-			One = default;
-			ImaginaryOne = default;
-			s_sqrtRescaleThreshold = default;
-			s_asinOverflowThreshold = default;
-			s_log2 = default;
-		} // 0x000000018B976AD0-0x000000018B976BD8
+		public Complex(double real, double imaginary); // 0x0000000184D881B0-0x0000000184D881C0
+		static Complex(); // 0x000000018AE2F92C-0x000000018AE2FA34
 	
 		// Methods
-		public override bool Equals(object obj) => default; // 0x000000018B9768B4-0x000000018B976930
-		public bool Equals(Complex value) => default; // 0x000000018B976874-0x000000018B9768B4
-		public override int GetHashCode() => default; // 0x000000018B976930-0x000000018B97697C
-		public override string ToString() => default; // 0x000000018B976A0C-0x000000018B976AD0
-		public string ToString(string format, IFormatProvider provider) => default; // 0x000000018B97697C-0x000000018B976A0C
+		public override bool Equals(object obj); // 0x000000018AE2F710-0x000000018AE2F78C
+		public bool Equals(Complex value); // 0x000000018AE2F6D0-0x000000018AE2F710
+		public override int GetHashCode(); // 0x000000018AE2F78C-0x000000018AE2F7D8
+		public override string ToString(); // 0x000000018AE2F868-0x000000018AE2F92C
+		public string ToString(string format, IFormatProvider provider); // 0x000000018AE2F7D8-0x000000018AE2F868
 	}
 
-	internal struct DoubleUlong // TypeDefIndex: 59972
+	internal struct DoubleUlong // TypeDefIndex: 62587
 	{
 		// Fields
 		public double dbl; // 0x00
 		public ulong uu; // 0x00
 	}
 
-	internal static class NumericsHelpers // TypeDefIndex: 59973
+	internal static class NumericsHelpers // TypeDefIndex: 62588
 	{
 		// Methods
-		public static void GetDoubleParts(double dbl, out int sign, out int exp, out ulong man, out bool fFinite) {
-			sign = default;
-			exp = default;
-			man = default;
-			fFinite = default;
-		} // 0x000000018B97AAD4-0x000000018B97AB5C
-		public static double GetDoubleFromParts(int sign, int exp, ulong man) => default; // 0x000000018B97AA10-0x000000018B97AAD4
-		public static void DangerousMakeTwosComplement(uint[] d) {} // 0x000000018B97A990-0x000000018B97AA10
-		public static ulong MakeUlong(uint uHi, uint uLo) => default; // 0x0000000185FBDD90-0x0000000185FBDDA0
-		public static uint Abs(int a) => default; // 0x0000000185FD6340-0x0000000185FD6350
-		public static uint CombineHash(uint u1, uint u2) => default; // 0x0000000185FD6350-0x0000000185FD6360
-		public static int CombineHash(int n1, int n2) => default; // 0x0000000185FD6350-0x0000000185FD6360
-		public static int CbitHighZero(uint u) => default; // 0x000000018B970764-0x000000018B9707CC
-		public static int CbitHighZero(ulong uu) => default; // 0x000000018B97A960-0x000000018B97A990
+		public static void GetDoubleParts(double dbl, out int sign, out int exp, out ulong man, out bool fFinite); // 0x000000018AE33930-0x000000018AE339B8
+		public static double GetDoubleFromParts(int sign, int exp, ulong man); // 0x000000018AE3386C-0x000000018AE33930
+		public static void DangerousMakeTwosComplement(uint[] d); // 0x000000018AE337EC-0x000000018AE3386C
+		public static ulong MakeUlong(uint uHi, uint uLo); // 0x0000000184D91D20-0x0000000184D91D30
+		public static uint Abs(int a); // 0x0000000184DAA440-0x0000000184DAA450
+		public static uint CombineHash(uint u1, uint u2); // 0x0000000184DAA450-0x0000000184DAA460
+		public static int CombineHash(int n1, int n2); // 0x0000000184DAA450-0x0000000184DAA460
+		public static int CbitHighZero(uint u); // 0x000000018AE2973C-0x000000018AE297A4
+		public static int CbitHighZero(ulong uu); // 0x000000018AE337BC-0x000000018AE337EC
 	}
 }
 
 namespace System.Numerics.Hashing
 {
-	internal static class HashHelpers // TypeDefIndex: 59974
+	internal static class HashHelpers // TypeDefIndex: 62589
 	{
 		// Fields
 		public static readonly int RandomSeed; // 0x00
 	
 		// Constructors
-		static HashHelpers() {} // 0x000000018B976E04-0x000000018B976E64
+		static HashHelpers(); // 0x000000018AE2FC60-0x000000018AE2FCC0
 	
 		// Methods
-		public static int Combine(int h1, int h2) => default; // 0x0000000185FCFBB0-0x0000000185FCFBD0
+		public static int Combine(int h1, int h2); // 0x0000000184DA4450-0x0000000184DA4470
 	}
 }
 
 namespace System.Runtime.CompilerServices
 {
-	internal sealed class IntrinsicAttribute : Attribute // TypeDefIndex: 59979
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Field, Inherited = false)]
+	internal sealed class IntrinsicAttribute : Attribute // TypeDefIndex: 62594
 	{
 		// Constructors
-		public IntrinsicAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public IntrinsicAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 }
 
 namespace System.Text
 {
-	internal struct ValueStringBuilder // TypeDefIndex: 59978
+	[DefaultMember("Item")]
+	[IsByRefLike]
+	[Obsolete("Types with embedded references are not supported in this version of your compiler.", true)]
+	internal struct ValueStringBuilder // TypeDefIndex: 62593
 	{
 		// Fields
 		private char[] _arrayToReturnToPool; // 0x00
@@ -564,30 +483,23 @@ namespace System.Text
 		private int _pos; // 0x18
 	
 		// Properties
-		public int Length { get => default; } // 0x00000001813AE560-0x00000001813AE570 
+		public int Length { get; } // 0x00000001811EF5B0-0x00000001811EF5C0 
 	
 		// Constructors
-		public ValueStringBuilder(Span<char> initialBuffer) : this() {
-			_arrayToReturnToPool = default;
-			_chars = default;
-			_pos = default;
-		} // 0x0000000185FCF8C0-0x0000000185FCF8D0
+		public ValueStringBuilder(Span<char> initialBuffer); // 0x0000000184DA4110-0x0000000184DA4120
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018B97B664-0x000000018B97B70C
-		public bool TryCopyTo(Span<char> destination, out int charsWritten) {
-			charsWritten = default;
-			return default;
-		} // 0x000000018B97B70C-0x000000018B97B7C4
-		public void Insert(int index, char value, int count) {} // 0x000000018B97B524-0x000000018B97B664
-		public void Append(char c) {} // 0x000000018B97B2B0-0x000000018B97B318
-		public void Append(string s) {} // 0x000000018B97B150-0x000000018B97B1EC
-		private void AppendSlow(string s) {} // 0x000000018B97AF18-0x000000018B97AFEC
-		public void Append(char c, int count) {} // 0x000000018B97B094-0x000000018B97B150
-		public unsafe void Append(char* value, int length) {} // 0x000000018B97B1EC-0x000000018B97B2B0
-		public Span<char> AppendSpan(int length) => default; // 0x000000018B97AFEC-0x000000018B97B094
-		private void GrowAndAppend(char c) {} // 0x000000018B97B398-0x000000018B97B3D0
-		private void Grow(int requiredAdditionalCapacity) {} // 0x000000018B97B3D0-0x000000018B97B524
-		public void Dispose() {} // 0x000000018B97B318-0x000000018B97B398
+		public override string ToString(); // 0x000000018AE344C0-0x000000018AE34568
+		public bool TryCopyTo(Span<char> destination, out int charsWritten); // 0x000000018AE34568-0x000000018AE34620
+		public void Insert(int index, char value, int count); // 0x000000018AE34380-0x000000018AE344C0
+		public void Append(char c); // 0x000000018AE3410C-0x000000018AE34174
+		public void Append(string s); // 0x000000018AE33FAC-0x000000018AE34048
+		private void AppendSlow(string s); // 0x000000018AE33D74-0x000000018AE33E48
+		public void Append(char c, int count); // 0x000000018AE33EF0-0x000000018AE33FAC
+		public unsafe void Append(char* value, int length); // 0x000000018AE34048-0x000000018AE3410C
+		public Span<char> AppendSpan(int length); // 0x000000018AE33E48-0x000000018AE33EF0
+		private void GrowAndAppend(char c); // 0x000000018AE341F4-0x000000018AE3422C
+		private void Grow(int requiredAdditionalCapacity); // 0x000000018AE3422C-0x000000018AE34380
+		public void Dispose(); // 0x000000018AE34174-0x000000018AE341F4
 	}
 }

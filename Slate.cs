@@ -5,42 +5,67 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using Slate;
 using Slate.ActionClips;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Animations;
 using UnityEngine.Audio;
 using UnityEngine.Events;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-// Image 35: Slate.dll - Assembly: Slate, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 55546-55818
+// Image 36: Slate.dll - Assembly: Slate, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null - Types 58187-58459
+[assembly: CompilationRelaxations(8)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.None | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 
 namespace Slate
 {
-	public class DirectorCamera : MonoBehaviour, IDirectableCamera // TypeDefIndex: 55547
+	public class DirectorCamera : MonoBehaviour, IDirectableCamera // TypeDefIndex: 58188
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private bool _matchMainWhenActive; // 0x18
+		[HideInInspector]
+		[SerializeField]
 		private bool _setMainWhenActive; // 0x19
+		[HideInInspector]
+		[SerializeField]
 		private bool _autoHandleActiveState; // 0x1A
+		[HideInInspector]
+		[SerializeField]
 		private bool _ignoreFOVChanges; // 0x1B
+		[HideInInspector]
+		[SerializeField]
 		private bool _dontDestroyOnLoad; // 0x1C
-		public const float MAX_DAMP = 3f; // Metadata: 0x0207BF0C
+		public const float MAX_DAMP = 3f; // Metadata: 0x0234BBBC
+		[CompilerGenerated]
 		private static Action<IDirectableCamera> onCut; // 0x00
+		[CompilerGenerated]
 		private static Action onActivate; // 0x08
+		[CompilerGenerated]
 		private static Action onDeactivate; // 0x10
 		private static DirectorCamera _current; // 0x18
 		private static Camera _cam; // 0x20
 		private static IDirectableCamera lastTargetShot; // 0x28
+		[CompilerGenerated]
 		private float _focalDistance_k__BackingField; // 0x20
+		[CompilerGenerated]
 		private float _focalLength_k__BackingField; // 0x24
+		[CompilerGenerated]
 		private float _focalAperture_k__BackingField; // 0x28
+		[CompilerGenerated]
 		private static GameCamera _gameCamera_k__BackingField; // 0x30
+		[CompilerGenerated]
 		private static bool _isEnabled_k__BackingField; // 0x38
 		private static float noiseTimer; // 0x3C
 		private static Vector3 noisePosOffset; // 0x40
@@ -51,201 +76,265 @@ namespace Slate
 		private static Vector3 noiseCamRotVel; // 0x7C
 	
 		// Properties
-		public static DirectorCamera current { get => default; } // 0x000000018B7A9F68-0x000000018B7AA14C 
-		public Camera cam { get => default; } // 0x000000018B7A9E38-0x000000018B7A9F68 
-		public Vector3 position { get => default; set {} } // 0x000000018B7AA27C-0x000000018B7AA2D0 0x000000018B7AA6E4-0x000000018B7AA738
-		public Quaternion rotation { get => default; set {} } // 0x000000018B7AA2F4-0x000000018B7AA340 0x000000018B7AA738-0x000000018B7AA784
-		public float fieldOfView { get => default; set {} } // 0x000000018B7AA16C-0x000000018B7AA1CC 0x000000018B7AA5A4-0x000000018B7AA60C
-		public float focalDistance { get; set; } // 0x0000000181C9AC70-0x0000000181C9AC80 0x0000000181C9A5B0-0x0000000181C9A5C0
-		public float focalLength { get; set; } // 0x0000000185FB3810-0x0000000185FB3820 0x0000000185FB3820-0x0000000185FB3830
-		public float focalAperture { get; set; } // 0x0000000185FB0A50-0x0000000185FB0A60 0x0000000185FB0A60-0x0000000185FB0A70
-		public static bool matchMainWhenActive { get => default; set {} } // 0x000000018B7AA25C-0x000000018B7AA27C 0x000000018B7AA6C0-0x000000018B7AA6E4
-		public static bool setMainWhenActive { get => default; set {} } // 0x000000018B7AA340-0x000000018B7AA360 0x000000018B7AA784-0x000000018B7AA7A8
-		public static bool autoHandleActiveState { get => default; set {} } // 0x000000018B7A9E18-0x000000018B7A9E38 0x000000018B7AA55C-0x000000018B7AA580
-		public static bool ignoreFOVChanges { get => default; set {} } // 0x000000018B7AA204-0x000000018B7AA224 0x000000018B7AA660-0x000000018B7AA684
-		public static bool dontDestroyOnLoad { get => default; set {} } // 0x000000018B7AA14C-0x000000018B7AA16C 0x000000018B7AA580-0x000000018B7AA5A4
-		public static Camera renderCamera { get => default; } // 0x000000018B7AA2D0-0x000000018B7AA2F4 
-		public static GameCamera gameCamera { get; set; } // 0x000000018B7AA1CC-0x000000018B7AA204 0x000000018B7AA60C-0x000000018B7AA660
-		public static bool isEnabled { get; private set; } // 0x000000018B7AA224-0x000000018B7AA25C 0x000000018B7AA684-0x000000018B7AA6C0
-		GameObject IDirectableCamera.gameObject { get => default; } // 0x000000018646E428-0x000000018646E430 
+		public static DirectorCamera current { get; } // 0x000000018AC62EEC-0x000000018AC630D0 
+		public Camera cam { get; } // 0x000000018AC62DBC-0x000000018AC62EEC 
+		public Vector3 position { get; set; } // 0x000000018AC63200-0x000000018AC63254 0x000000018AC63668-0x000000018AC636BC
+		public Quaternion rotation { get; set; } // 0x000000018AC63278-0x000000018AC632C4 0x000000018AC636BC-0x000000018AC63708
+		public float fieldOfView { get; set; } // 0x000000018AC630F0-0x000000018AC63150 0x000000018AC63528-0x000000018AC63590
+		public float focalDistance { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811EC8A0-0x00000001811EC8B0 0x00000001811EC9E0-0x00000001811EC9F0
+		public float focalLength { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D89850-0x0000000184D89860 0x0000000184D89860-0x0000000184D89870
+		public float focalAperture { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86BF0-0x0000000184D86C00 0x0000000184D86C00-0x0000000184D86C10
+		public static bool matchMainWhenActive { get; set; } // 0x000000018AC631E0-0x000000018AC63200 0x000000018AC63644-0x000000018AC63668
+		public static bool setMainWhenActive { get; set; } // 0x000000018AC632C4-0x000000018AC632E4 0x000000018AC63708-0x000000018AC6372C
+		public static bool autoHandleActiveState { get; set; } // 0x000000018AC62D9C-0x000000018AC62DBC 0x000000018AC634E0-0x000000018AC63504
+		public static bool ignoreFOVChanges { get; set; } // 0x000000018AC63188-0x000000018AC631A8 0x000000018AC635E4-0x000000018AC63608
+		public static bool dontDestroyOnLoad { get; set; } // 0x000000018AC630D0-0x000000018AC630F0 0x000000018AC63504-0x000000018AC63528
+		public static Camera renderCamera { get; } // 0x000000018AC63254-0x000000018AC63278 
+		public static GameCamera gameCamera { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x000000018AC63150-0x000000018AC63188 0x000000018AC63590-0x000000018AC635E4
+		public static bool isEnabled { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018AC631A8-0x000000018AC631E0 0x000000018AC63608-0x000000018AC63644
+		GameObject IDirectableCamera.gameObject { get; } // 0x00000001853916BC-0x00000001853916C4 
 	
 		// Events
-		public static event Action<IDirectableCamera> onCut;
-		public static event Action onActivate;
-		public static event Action onDeactivate;
+		public static event Action<IDirectableCamera> onCut {
+			add; // 0x000000018AC62C50-0x000000018AC62CEC
+			remove; // 0x000000018AC63394-0x000000018AC63430
+		}
+		public static event Action onActivate {
+			add; // 0x000000018AC62BA0-0x000000018AC62C50
+			remove; // 0x000000018AC632E4-0x000000018AC63394
+		}
+		public static event Action onDeactivate {
+			add; // 0x000000018AC62CEC-0x000000018AC62D9C
+			remove; // 0x000000018AC63430-0x000000018AC634E0
+		}
 	
 		// Constructors
-		public DirectorCamera() {} // 0x0000000185FA29A0-0x0000000185FA29C0
+		public DirectorCamera(); // 0x0000000184D77850-0x0000000184D77870
 	
 		// Methods
-		private void Awake() {} // 0x000000018B7A8D44-0x000000018B7A8E68
-		private Camera CreateRenderCamera() => default; // 0x000000018B7A8E68-0x000000018B7A9000
-		public static void Enable() {} // 0x000000018B7A9128-0x000000018B7A9544
-		public static void Disable() {} // 0x000000018B7A9000-0x000000018B7A9128
-		public static void Update(IDirectableCamera source, IDirectableCamera target, Slate.EaseType interpolation, float weight, float damping = 0f /* Metadata: 0x0207BF08 */) {} // 0x000000018B7A9544-0x000000018B7A9C1C
-		public static void ApplyNoise(float magnitude, float weight) {} // 0x000000018B7A8958-0x000000018B7A8D44
+		private void Awake(); // 0x000000018AC61CC8-0x000000018AC61DEC
+		private Camera CreateRenderCamera(); // 0x000000018AC61DEC-0x000000018AC61F84
+		public static void Enable(); // 0x000000018AC620AC-0x000000018AC624C8
+		public static void Disable(); // 0x000000018AC61F84-0x000000018AC620AC
+		public static void Update(IDirectableCamera source, IDirectableCamera target, Slate.EaseType interpolation, float weight, float damping = 0f /* Metadata: 0x0234BBB8 */); // 0x000000018AC624C8-0x000000018AC62BA0
+		public static void ApplyNoise(float magnitude, float weight); // 0x000000018AC618DC-0x000000018AC61CC8
 	}
 
-	public class DirectorGUI : MonoBehaviour // TypeDefIndex: 55554
+	[ExecuteInEditMode]
+	public class DirectorGUI : MonoBehaviour // TypeDefIndex: 58195
 	{
 		// Fields
+		[CompilerGenerated]
 		private static SubtitlesGUIDelegate OnSubtitlesGUI; // 0x00
+		[CompilerGenerated]
 		private static TextOverlayGUIDelegate OnTextOverlayGUI; // 0x08
+		[CompilerGenerated]
 		private static ImageOverlayGUIDelegate OnImageOverlayGUI; // 0x10
+		[CompilerGenerated]
 		private static ScreenFadeGUIDelegate OnScreenFadeGUI; // 0x18
+		[CompilerGenerated]
 		private static LetterboxGUIDelegate OnLetterboxGUI; // 0x20
+		[CompilerGenerated]
 		private static CameraDissolveDelegate OnCameraDissolve; // 0x28
+		[CompilerGenerated]
 		private static Action OnGUIEnable; // 0x30
+		[CompilerGenerated]
 		private static Action OnGUIDisable; // 0x38
 		[NonSerialized]
 		private static DirectorGUI _current; // 0x40
+		[CompilerGenerated]
 		private static UnityEngine.Color _lastFadeColor_k__BackingField; // 0x48
 	
 		// Properties
-		public static DirectorGUI current { get => default; } // 0x00000001864BB614-0x00000001864BB734 
-		public static UnityEngine.Color lastFadeColor { get; private set; } // 0x00000001833EEC70-0x00000001833EEC80 0x000000018B7ACAB8-0x000000018B7ACB34
+		public static DirectorGUI current { get; } // 0x000000018AC641D8-0x000000018AC64364 
+		public static UnityEngine.Color lastFadeColor { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x000000018AC64364-0x000000018AC643A8 0x000000018AC64920-0x000000018AC64960
 	
 		// Events
-		public static event SubtitlesGUIDelegate OnSubtitlesGUI;
-		public static event TextOverlayGUIDelegate OnTextOverlayGUI;
-		public static event ImageOverlayGUIDelegate OnImageOverlayGUI;
-		public static event ScreenFadeGUIDelegate OnScreenFadeGUI;
-		public static event LetterboxGUIDelegate OnLetterboxGUI;
-		public static event CameraDissolveDelegate OnCameraDissolve;
-		public static event Action OnGUIEnable;
-		public static event Action OnGUIDisable;
+		public static event SubtitlesGUIDelegate OnSubtitlesGUI {
+			add; // 0x000000018AC64080-0x000000018AC64128
+			remove; // 0x000000018AC647C8-0x000000018AC64870
+		}
+		public static event TextOverlayGUIDelegate OnTextOverlayGUI {
+			add; // 0x000000018AC64128-0x000000018AC641D8
+			remove; // 0x000000018AC64870-0x000000018AC64920
+		}
+		public static event ImageOverlayGUIDelegate OnImageOverlayGUI {
+			add; // 0x000000018AC63E70-0x000000018AC63F20
+			remove; // 0x000000018AC645B8-0x000000018AC64668
+		}
+		public static event ScreenFadeGUIDelegate OnScreenFadeGUI {
+			add; // 0x000000018AC63FD0-0x000000018AC64080
+			remove; // 0x000000018AC64718-0x000000018AC647C8
+		}
+		public static event LetterboxGUIDelegate OnLetterboxGUI {
+			add; // 0x000000018AC63F20-0x000000018AC63FD0
+			remove; // 0x000000018AC64668-0x000000018AC64718
+		}
+		public static event CameraDissolveDelegate OnCameraDissolve {
+			add; // 0x000000018AC63C60-0x000000018AC63D10
+			remove; // 0x000000018AC643A8-0x000000018AC64458
+		}
+		public static event Action OnGUIEnable {
+			add; // 0x000000018AC63DC0-0x000000018AC63E70
+			remove; // 0x000000018AC64508-0x000000018AC645B8
+		}
+		public static event Action OnGUIDisable {
+			add; // 0x000000018AC63D10-0x000000018AC63DC0
+			remove; // 0x000000018AC64458-0x000000018AC64508
+		}
 	
 		// Nested types
-		public delegate void SubtitlesGUIDelegate(string text, UnityEngine.Color color); // TypeDefIndex: 55548; 0x000000018B7AB844-0x000000018B7AB8EC
+		public delegate void SubtitlesGUIDelegate(string text, UnityEngine.Color color); // TypeDefIndex: 58189; 0x0000000183A1B910-0x0000000183A1B940
 	
-		public delegate void TextOverlayGUIDelegate(string text, UnityEngine.Color color, float size, TextAnchor alignment, Vector2 position); // TypeDefIndex: 55549; 0x000000018B7AB634-0x000000018B7AB6E4
+		public delegate void TextOverlayGUIDelegate(string text, UnityEngine.Color color, float size, TextAnchor alignment, Vector2 position); // TypeDefIndex: 58190; 0x000000018AC670AC-0x000000018AC670F4
 	
-		public delegate void ImageOverlayGUIDelegate(Texture texture, UnityEngine.Color color, Vector2 scale, Vector2 position); // TypeDefIndex: 55550; 0x000000018B7AB6E4-0x000000018B7AB794
+		public delegate void ImageOverlayGUIDelegate(Texture texture, UnityEngine.Color color, Vector2 scale, Vector2 position); // TypeDefIndex: 58191; 0x000000018AC659B0-0x000000018AC659E8
 	
-		public delegate void ScreenFadeGUIDelegate(UnityEngine.Color color); // TypeDefIndex: 55551; 0x000000018B7AB584-0x000000018B7AB634
+		public delegate void ScreenFadeGUIDelegate(UnityEngine.Color color); // TypeDefIndex: 58192; 0x0000000182B0B020-0x0000000182B0B050
 	
-		public delegate void LetterboxGUIDelegate(float completion); // TypeDefIndex: 55552; 0x000000018B7AA7A8-0x000000018B7AA888
+		public delegate void LetterboxGUIDelegate(float completion); // TypeDefIndex: 58193; 0x0000000182B46B90-0x0000000182B46BA0
 	
-		public delegate void CameraDissolveDelegate(Texture texture, float completion); // TypeDefIndex: 55553; 0x000000018B7AA9E0-0x000000018B7AAA44
+		public delegate void CameraDissolveDelegate(Texture texture, float completion); // TypeDefIndex: 58194; 0x00000001838E1420-0x00000001838E1430
 	
 		// Constructors
-		public DirectorGUI() {} // 0x00000001864BB614-0x00000001864BB734
+		public DirectorGUI(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void Awake() {} // 0x00000001889CC0A8-0x00000001889CC170
-		private void OnEnable() {} // 0x0000000185FA9450-0x0000000185FA9480
-		private void OnDisable() {} // 0x000000018B7AD16C-0x000000018B7AD1EC
-		public static void UpdateLetterbox(float completion) {} // 0x00000001864BB614-0x00000001864BB734
-		public static void UpdateDissolve(Texture texture, float completion) {} // 0x0000000189EDDCC4-0x0000000189EDDD8C
-		public static void UpdateFade(UnityEngine.Color color) {} // 0x00000001864BB614-0x00000001864BB734
-		public static void UpdateSubtitles(string text, UnityEngine.Color color) {} // 0x000000018B7A1934-0x000000018B7A1A5C
-		public static void UpdateOverlayText(string text, UnityEngine.Color color, float size, TextAnchor anchor, Vector2 pos) {} // 0x00000001831C5680-0x00000001831C5690
-		public static void UpdateOverlayImage(Texture texture, UnityEngine.Color color, Vector2 scale, Vector2 positionOffset) {} // 0x000000018B7A18B4-0x000000018B7A1934
+		private void Awake(); // 0x000000018AC6372C-0x000000018AC6380C
+		private void OnEnable(); // 0x000000018AC63920-0x000000018AC63964
+		private void OnDisable(); // 0x000000018AC6380C-0x000000018AC63920
+		public static void UpdateLetterbox(float completion); // 0x000000018AC63A58-0x000000018AC63AB4
+		public static void UpdateDissolve(Texture texture, float completion); // 0x000000018AC63964-0x000000018AC639C8
+		public static void UpdateFade(UnityEngine.Color color); // 0x000000018AC639C8-0x000000018AC63A58
+		public static void UpdateSubtitles(string text, UnityEngine.Color color); // 0x000000018AC63BF4-0x000000018AC63C60
+		public static void UpdateOverlayText(string text, UnityEngine.Color color, float size, TextAnchor anchor, Vector2 pos); // 0x000000018AC63B50-0x000000018AC63BF4
+		public static void UpdateOverlayImage(Texture texture, UnityEngine.Color color, Vector2 scale, Vector2 positionOffset); // 0x000000018AC63AB4-0x000000018AC63B50
 	}
 
 	[Serializable]
-	public class DynamicCameraController // TypeDefIndex: 55560
+	public class DynamicCameraController // TypeDefIndex: 58201
 	{
 		// Fields
-		private const float MIN_DAMP = 0.5f; // Metadata: 0x0207BF10
-		private const float MAX_DAMP = 10f; // Metadata: 0x0207BF14
+		private const float MIN_DAMP = 0.5f; // Metadata: 0x0234BBC0
+		private const float MAX_DAMP = 10f; // Metadata: 0x0234BBC4
+		[SerializeField]
 		private Transposer _transposer; // 0x10
+		[SerializeField]
 		private Composer _composer; // 0x18
 		private int lastUpdateFrame; // 0x20
 	
 		// Properties
-		public Transposer transposer { get => default; } // 0x000000018B7AC77C-0x000000018B7AC794 
-		public Composer composer { get => default; } // 0x000000018B7AC794-0x000000018B7AC7AC 
-		public bool controlsPosition { get => default; } // 0x000000018B7AC760-0x000000018B7AC77C 
-		public bool controlsRotation { get => default; } // 0x000000018B7ABA54-0x000000018B7ABA70 
-		public bool controlsFieldOfView { get => default; } // 0x000000018B7ABA70-0x000000018B7ABA8C 
+		public Transposer transposer { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public Composer composer { get; } // 0x000000018385B100-0x000000018385B110 
+		public bool controlsPosition { get; } // 0x000000018AC65748-0x000000018AC65760 
+		public bool controlsRotation { get; } // 0x000000018AC65760-0x000000018AC65778 
+		public bool controlsFieldOfView { get; } // 0x000000018AC6572C-0x000000018AC65748 
 	
 		// Nested types
 		[Serializable]
-		public class Transposer // TypeDefIndex: 55557
+		public class Transposer // TypeDefIndex: 58198
 		{
 			// Fields
 			public TrackingMode trackingMode; // 0x10
+			[Tooltip("The Target from which an offset will be applied.")]
 			public Transform target; // 0x18
+			[Tooltip("The offset from the target to mount the camera to.")]
 			public Vector3 targetOffset; // 0x20
+			[Tooltip("Is the offset relative to the target\'s Local or World Space?")]
 			public OffsetMode offsetMode; // 0x2C
+			[Tooltip("The starting point of the rail")]
 			public Vector3 railStart; // 0x30
+			[Tooltip("The end point of the rail")]
 			public Vector3 railEnd; // 0x3C
+			[Tooltip("Optional forwards/backwards offset on the rail")]
 			public float railOffset; // 0x48
+			[Range(0.5f, 10f)]
+			[Tooltip("The smoothness to be applied.")]
 			public float smoothDamping; // 0x4C
 	
 			// Nested types
-			public enum TrackingMode // TypeDefIndex: 55555
+			public enum TrackingMode // TypeDefIndex: 58196
 			{
 				None = 0,
 				OffsetTracking = 1,
 				RailTracking = 2
 			}
 	
-			public enum OffsetMode // TypeDefIndex: 55556
+			public enum OffsetMode // TypeDefIndex: 58197
 			{
 				LocalSpace = 0,
 				WorldSpace = 1
 			}
 	
 			// Constructors
-			public Transposer() {} // 0x000000018346D130-0x000000018346D140
+			public Transposer(); // 0x0000000184DA9C30-0x0000000184DA9C90
 		}
 	
 		[Serializable]
-		public class Composer // TypeDefIndex: 55559
+		public class Composer // TypeDefIndex: 58200
 		{
 			// Fields
 			public TrackingMode trackingMode; // 0x10
+			[Tooltip("The target subject we want to stay within the composition frame.")]
 			public Transform target; // 0x18
+			[Tooltip("The point of interest offset from the target in it\'s local space we actually care about to stay within the composition frame.")]
 			public Vector3 targetOffset; // 0x20
+			[Slate.Min(0f)]
+			[Tooltip("The point of interest area size to stay within the composition frame.")]
 			public float targetSize; // 0x2C
+			[Tooltip("The center of the view frame")]
 			public Vector2 frameCenter; // 0x30
+			[Tooltip("The extends/size of the view frame")]
 			public Vector2 frameExtends; // 0x38
+			[Range(-80f, 80f)]
+			[Tooltip("Tilt camera angles")]
 			public float dutchTilt; // 0x40
+			[Tooltip("Will try zoom to match view frame with target interest frame")]
 			public bool zoomAtTargetFrame; // 0x44
+			[Range(0.5f, 10f)]
+			[Tooltip("The smoothness to be applied.")]
 			public float smoothDamping; // 0x48
 	
 			// Nested types
-			public enum TrackingMode // TypeDefIndex: 55558
+			public enum TrackingMode // TypeDefIndex: 58199
 			{
 				None = 0,
 				FrameComposition = 1
 			}
 	
 			// Constructors
-			public Composer() {} // 0x0000000181377E40-0x0000000181377E50
+			public Composer(); // 0x0000000184DA9B90-0x0000000184DA9BB0
 		}
 	
 		// Constructors
-		public DynamicCameraController() {} // 0x0000000185FD5BA0-0x0000000185FD5BC0
+		public DynamicCameraController(); // 0x000000018AC65680-0x000000018AC6572C
 	
 		// Methods
-		public void UpdateControllerHard(IDirectableCamera directableCamera, IDirectable directable) {} // 0x000000018B7ABA8C-0x000000018B7AC6B4
-		public void UpdateControllerSoft(IDirectableCamera directableCamera, IDirectable directable) {} // 0x000000018B7AC6B4-0x000000018B7AC760
-		private void UpdateController(IDirectableCamera directableCamera, IDirectable directable, bool isHard) {} // 0x0000000185FD5C20-0x0000000185FD5C80
+		public void UpdateControllerHard(IDirectableCamera directableCamera, IDirectable directable); // 0x000000018AC649FC-0x000000018AC64A18
+		public void UpdateControllerSoft(IDirectableCamera directableCamera, IDirectable directable); // 0x000000018AC64A18-0x000000018AC64A34
+		private void UpdateController(IDirectableCamera directableCamera, IDirectable directable, bool isHard); // 0x000000018AC64A34-0x000000018AC65680
 	}
 
-	public class GameCamera : MonoBehaviour, IDirectableCamera // TypeDefIndex: 55561
+	public class GameCamera : MonoBehaviour, IDirectableCamera // TypeDefIndex: 58202
 	{
 		// Fields
 		private Camera _cam; // 0x18
 	
 		// Properties
-		public Camera cam { get => default; } // 0x000000018B7AC7AC-0x000000018B7AC838 
-		public Vector3 position { get => default; set {} } // 0x000000018A6E8BAC-0x000000018A6E8BF4 0x0000000185492010-0x0000000185492020
-		public Quaternion rotation { get => default; set {} } // 0x000000018A6E8BF4-0x000000018A6E8C38 0x0000000185492010-0x0000000185492020
-		public float fieldOfView { get => default; set {} } // 0x000000018B7AC838-0x000000018B7AC898 0x0000000185492010-0x0000000185492020
-		public float focalDistance { get => default; set {} } // 0x0000000185FBF670-0x0000000185FBF680 0x0000000185492010-0x0000000185492020
-		public float focalLength { get => default; set {} } // 0x0000000185FD5C10-0x0000000185FD5C20 0x0000000185492010-0x0000000185492020
-		public float focalAperture { get => default; set {} } // 0x00000001831FB170-0x00000001831FB180 0x0000000185492010-0x0000000185492020
-		GameObject IDirectableCamera.gameObject { get => default; } // 0x000000018646E428-0x000000018646E430 
+		public Camera cam { get; } // 0x000000018AC65778-0x000000018AC65804 
+		public Vector3 position { get; set; } // 0x000000018AC65864-0x000000018AC658AC 0x00000001841E1670-0x00000001841E1680
+		public Quaternion rotation { get; set; } // 0x000000018AC658AC-0x000000018AC658F0 0x00000001841E1670-0x00000001841E1680
+		public float fieldOfView { get; set; } // 0x000000018AC65804-0x000000018AC65864 0x00000001841E1670-0x00000001841E1680
+		public float focalDistance { get; set; } // 0x0000000184DA9C10-0x0000000184DA9C20 0x00000001841E1670-0x00000001841E1680
+		public float focalLength { get; set; } // 0x0000000184DA9C20-0x0000000184DA9C30 0x00000001841E1670-0x00000001841E1680
+		public float focalAperture { get; set; } // 0x0000000184DA9C00-0x0000000184DA9C10 0x00000001841E1670-0x00000001841E1680
+		GameObject IDirectableCamera.gameObject { get; } // 0x00000001853916BC-0x00000001853916C4 
 	
 		// Constructors
-		public GameCamera() {} // 0x000000018646DB20-0x000000018646DB28
+		public GameCamera(); // 0x0000000185393520-0x0000000185393538
 	}
 
-	public interface IDirectableCamera // TypeDefIndex: 55562
+	public interface IDirectableCamera // TypeDefIndex: 58203
 	{
 		// Properties
 		GameObject gameObject { get; }
@@ -258,236 +347,264 @@ namespace Slate
 		float focalAperture { get; set; }
 	}
 
-	public class ShotCamera : MonoBehaviour, IDirectableCamera // TypeDefIndex: 55564
+	[AddComponentMenu("SLATE/Shot Camera")]
+	[RequireComponent(typeof(Camera))]
+	public class ShotCamera : MonoBehaviour, IDirectableCamera // TypeDefIndex: 58205
 	{
 		// Fields
-		public const string DEFAULT_NAME = "Shot Camera"; // Metadata: 0x0207BF1F
+		public const string DEFAULT_NAME = "Shot Camera"; // Metadata: 0x0234BBCF
+		[SerializeField]
 		private DynamicCameraController _dynamicController; // 0x18
+		[FormerlySerializedAs("_focalPoint")]
+		[SerializeField]
 		private float _focalDistance; // 0x20
+		[FormerlySerializedAs("_focalRange")]
+		[SerializeField]
 		private float _focalLength; // 0x24
+		[SerializeField]
 		private float _focalAperture; // 0x28
 		private Camera _cam; // 0x30
 	
 		// Properties
-		public Camera cam { get => default; } // 0x0000000187AF3598-0x0000000187AF35DC 
-		public Vector3 position { get => default; set {} } // 0x000000018A6E8BF4-0x000000018A6E8C38 0x0000000187AF117C-0x0000000187AF11B8
-		public Quaternion rotation { get => default; set {} } // 0x000000018B7ADC58-0x000000018B7ADCA0 0x000000018B7ADD6C-0x000000018B7ADDB0
-		public Vector3 localPosition { get => default; set {} } // 0x000000018B7ADBE4-0x000000018B7ADC58 0x000000018B7ADCF8-0x000000018B7ADD6C
-		public Vector3 localEulerAngles { get => default; set {} } // 0x000000018B7ADB84-0x000000018B7ADBE4 0x000000018B7ADCA0-0x000000018B7ADCF8
-		public float fieldOfView { get => default; set {} } // 0x0000000181C9AC70-0x0000000181C9AC80 0x0000000181C9A5B0-0x0000000181C9A5C0
-		public float focalDistance { get => default; set {} } // 0x0000000185FB3810-0x0000000185FB3820 0x0000000185FB3820-0x0000000185FB3830
-		public float focalLength { get => default; set {} } // 0x0000000185FB0A50-0x0000000185FB0A60 0x0000000185FB0A60-0x0000000185FB0A70
-		public float focalAperture { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x000000018B7ADB54-0x000000018B7ADB6C
-		public DynamicCameraController dynamicController { get => default; } // 0x000000018B7ADB6C-0x000000018B7ADB84 
-		public bool dynamicControlledPosition { get => default; } // 0x000000018B7ADB3C-0x000000018B7ADB54 
-		public bool dynamicControlledRotation { get => default; } // 0x000000018B7AD364-0x000000018B7AD458 
-		public bool dynamicControlledFieldOfView { get => default; } // 0x000000018B7AD9DC-0x000000018B7ADA04 
-		GameObject IDirectableCamera.gameObject { get => default; } // 0x000000018B7AE2E0-0x000000018B7AE318 
+		public Camera cam { get; } // 0x000000018AC66B18-0x000000018AC66BA4 
+		public Vector3 position { get; set; } // 0x000000018AC65864-0x000000018AC658AC 0x000000018AC66E18-0x000000018AC66E5C
+		public Quaternion rotation { get; set; } // 0x000000018AC658AC-0x000000018AC658F0 0x0000000186C5993C-0x0000000186C59978
+		public Vector3 localPosition { get; set; } // 0x000000018AC66CC0-0x000000018AC66D08 0x000000018AC66DD4-0x000000018AC66E18
+		public Vector3 localEulerAngles { get; set; } // 0x000000018AC66C4C-0x000000018AC66CC0 0x000000018AC66D60-0x000000018AC66DD4
+		public float fieldOfView { get; set; } // 0x000000018AC66BEC-0x000000018AC66C4C 0x000000018AC66D08-0x000000018AC66D60
+		public float focalDistance { get; set; } // 0x00000001811EC8A0-0x00000001811EC8B0 0x00000001811EC9E0-0x00000001811EC9F0
+		public float focalLength { get; set; } // 0x0000000184D89850-0x0000000184D89860 0x0000000184D89860-0x0000000184D89870
+		public float focalAperture { get; set; } // 0x0000000184D86BF0-0x0000000184D86C00 0x0000000184D86C00-0x0000000184D86C10
+		public DynamicCameraController dynamicController { get; } // 0x000000018385B100-0x000000018385B110 
+		public bool dynamicControlledPosition { get; } // 0x000000018AC66BBC-0x000000018AC66BD4 
+		public bool dynamicControlledRotation { get; } // 0x000000018AC66BD4-0x000000018AC66BEC 
+		public bool dynamicControlledFieldOfView { get; } // 0x000000018AC66BA4-0x000000018AC66BBC 
+		GameObject IDirectableCamera.gameObject { get; } // 0x00000001853916BC-0x00000001853916C4 
 	
 		// Nested types
-		private sealed class __c__DisplayClass47_0 // TypeDefIndex: 55563
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass47_0 // TypeDefIndex: 58204
 		{
 			// Fields
 			public string shotName; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass47_0() {} // 0x000000018B7ADAB0-0x000000018B7ADB3C
+			public __c__DisplayClass47_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _Find_b__0(ShotCamera s) => default; // 0x000000018A6E8BAC-0x000000018A6E8BF4
+			internal bool _Find_b__0(ShotCamera s); // 0x000000018AC6738C-0x000000018AC673C4
 		}
 	
 		// Constructors
-		public ShotCamera() {} // 0x0000000185492010-0x0000000185492020
+		public ShotCamera(); // 0x000000018AC66A94-0x000000018AC66B18
 	
 		// Methods
-		private void Awake() {} // 0x000000018B7ADA04-0x000000018B7ADA2C
-		public void UpdateDynamicControllerHard(IDirectable directable) {} // 0x000000018B7AD9D0-0x000000018B7AD9DC
-		public void UpdateDynamicControllerSoft(IDirectable directable) {} // 0x000000018B7AD97C-0x000000018B7AD9D0
-		public void SetDynamicControllerTargets(Transform target) {} // 0x000000018B7AD7D8-0x000000018B7AD97C
-		public void SetDynamicControllerTargets(Transform transposerTarget, Transform composerTarget) {} // 0x000000018B7AD458-0x000000018B7AD6E0
-		public RenderTexture GetRenderTexture(int width, int height) => default; // 0x000000018B7AD6E0-0x000000018B7AD7D8
-		public static ShotCamera Create(Transform targetParent = null) => default; // 0x000000018B7ADA2C-0x000000018B7ADAB0
-		public static ShotCamera Find(string shotName) => default; // 0x000000018646E428-0x000000018646E430
+		private void Awake(); // 0x000000018AC663CC-0x000000018AC664C0
+		public void UpdateDynamicControllerHard(IDirectable directable); // 0x000000018AC66A44-0x000000018AC66A6C
+		public void UpdateDynamicControllerSoft(IDirectable directable); // 0x000000018AC66A6C-0x000000018AC66A94
+		public void SetDynamicControllerTargets(Transform target); // 0x000000018AC66A38-0x000000018AC66A44
+		public void SetDynamicControllerTargets(Transform transposerTarget, Transform composerTarget); // 0x000000018AC669E4-0x000000018AC66A38
+		public RenderTexture GetRenderTexture(int width, int height); // 0x000000018AC66840-0x000000018AC669E4
+		public static ShotCamera Create(Transform targetParent = null); // 0x000000018AC664C0-0x000000018AC66748
+		public static ShotCamera Find(string shotName); // 0x000000018AC66748-0x000000018AC66840
 	}
 
 	[Serializable]
-	public class BlendShape // TypeDefIndex: 55565
+	public class BlendShape // TypeDefIndex: 58206
 	{
 		// Fields
+		[SerializeField]
 		private SkinnedMeshRenderer _skin; // 0x10
+		[SerializeField]
 		private string _name; // 0x18
+		[SerializeField]
 		private float _weight; // 0x20
 	
 		// Properties
-		public SkinnedMeshRenderer skin { get => default; set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public string name { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-		public float weight { get => default; set {} } // 0x0000000181C9AC70-0x0000000181C9AC80 0x0000000181C9A5B0-0x0000000181C9A5C0
+		public SkinnedMeshRenderer skin { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public string name { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public float weight { get; set; } // 0x00000001811EC8A0-0x00000001811EC8B0 0x00000001811EC9E0-0x00000001811EC9F0
 	
 		// Constructors
-		public BlendShape() {} // 0x0000000185492010-0x0000000185492020
+		public BlendShape(); // 0x00000001841E1670-0x00000001841E1680
 	
 		// Methods
-		public void SetRealWeight(float modWeight) {} // 0x000000018B7A17E8-0x000000018B7A18B4
-		public override string ToString() => default; // 0x0000000181377E40-0x0000000181377E50
+		public void SetRealWeight(float modWeight); // 0x000000018AC5A754-0x000000018AC5A820
+		public override string ToString(); // 0x000000018385B100-0x000000018385B110
 	}
 
 	[Serializable]
-	public class BlendShapeGroup // TypeDefIndex: 55566
+	public class BlendShapeGroup // TypeDefIndex: 58207
 	{
 		// Fields
+		[SerializeField]
 		private string _UID; // 0x10
+		[SerializeField]
 		private string _name; // 0x18
+		[SerializeField]
 		private float _weight; // 0x20
+		[SerializeField]
 		private List<BlendShape> _blendShapes; // 0x28
 	
 		// Properties
-		public string UID { get => default; private set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public string name { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-		public float weight { get => default; set {} } // 0x0000000181C9AC70-0x0000000181C9AC80 0x000000018B7A17DC-0x000000018B7A17E8
-		public List<BlendShape> blendShapes { get => default; } // 0x00000001813B8590-0x00000001813B85A0 
+		public string UID { get; private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public string name { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public float weight { get; set; } // 0x00000001811EC8A0-0x00000001811EC8B0 0x000000018AC5A748-0x000000018AC5A754
+		public List<BlendShape> blendShapes { get; } // 0x0000000184D86240-0x0000000184D86250 
 	
 		// Constructors
-		public BlendShapeGroup() {} // 0x000000018B7A1710-0x000000018B7A17DC
+		public BlendShapeGroup(); // 0x000000018AC5A67C-0x000000018AC5A748
 	
 		// Methods
-		private void SetBlendWeights() {} // 0x000000018B7A1690-0x000000018B7A1710
-		public override string ToString() => default; // 0x0000000181377E40-0x0000000181377E50
+		private void SetBlendWeights(); // 0x000000018AC5A5FC-0x000000018AC5A67C
+		public override string ToString(); // 0x000000018385B100-0x000000018385B110
 	}
 
-	public class Character : MonoBehaviour // TypeDefIndex: 55569
+	[AddComponentMenu("SLATE/Character")]
+	public class Character : MonoBehaviour // TypeDefIndex: 58210
 	{
 		// Fields
+		[SerializeField]
 		private List<BlendShapeGroup> _expressions; // 0x18
+		[SerializeField]
 		private Transform _neckTransform; // 0x20
+		[SerializeField]
 		private Transform _headTransform; // 0x28
+		[SerializeField]
 		private Vector3 _upVector; // 0x30
+		[SerializeField]
 		private Vector3 _rotationOffset; // 0x3C
 	
 		// Properties
-		public Transform neck { get => default; set {} } // 0x0000000185FB2EF0-0x0000000185FB2F10 0x0000000185FB2F20-0x0000000185FB2F30
-		public Transform head { get => default; set {} } // 0x0000000185FB2ED0-0x0000000185FB2EF0 0x0000000185FB2F10-0x0000000185FB2F20
-		public Vector3 upVector { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x000000018B7A37AC-0x000000018B7A387C
-		public Vector3 rotationOffset { get => default; set {} } // 0x000000018B7A387C-0x000000018B7A394C 0x000000018B7A39CC-0x000000018B7A3A00
-		public List<BlendShapeGroup> expressions { get => default; } // 0x000000018B7A3A00-0x000000018B7A3A34 
+		public Transform neck { get; set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+		public Transform head { get; set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
+		public Vector3 upVector { get; set; } // 0x0000000184D88ED0-0x0000000184D88EF0 0x0000000184D88F10-0x0000000184D88F20
+		public Vector3 rotationOffset { get; set; } // 0x0000000184D88EB0-0x0000000184D88ED0 0x0000000184D88F00-0x0000000184D88F10
+		public List<BlendShapeGroup> expressions { get; } // 0x000000018385B100-0x000000018385B110 
 	
 		// Nested types
-		private sealed class __c__DisplayClass19_0 // TypeDefIndex: 55567
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass19_0 // TypeDefIndex: 58208
 		{
 			// Fields
 			public string name; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass19_0() {} // 0x00000001813B31A0-0x00000001813B31B0
+			public __c__DisplayClass19_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _FindExpressionByName_b__0(BlendShapeGroup x) => default; // 0x000000018646EE40-0x000000018646EE50
+			internal bool _FindExpressionByName_b__0(BlendShapeGroup x); // 0x000000018AC672D4-0x000000018AC672F0
 		}
 	
-		private sealed class __c__DisplayClass20_0 // TypeDefIndex: 55568
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass20_0 // TypeDefIndex: 58209
 		{
 			// Fields
 			public string UID; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass20_0() {} // 0x00000001813B8590-0x00000001813B85A0
+			public __c__DisplayClass20_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _FindExpressionByUID_b__0(BlendShapeGroup x) => default; // 0x0000000184A4EDC0-0x0000000184A4EDD0
+			internal bool _FindExpressionByUID_b__0(BlendShapeGroup x); // 0x000000018AC672F0-0x000000018AC6730C
 		}
 	
 		// Constructors
-		public Character() {} // 0x000000018B7AE244-0x000000018B7AE260
+		public Character(); // 0x000000018AC5C9B8-0x000000018AC5CA64
 	
 		// Methods
-		public BlendShapeGroup FindExpressionByName(string name) => default; // 0x000000018B7A394C-0x000000018B7A39CC
-		public BlendShapeGroup FindExpressionByUID(string UID) => default; // 0x000000018B7A3A34-0x000000018B7A3AE0
-		public void SetExpressionWeightByName(string name, float weight) {} // 0x0000000185492010-0x0000000185492020
-		public void SetExpressionWeightByUID(string UID, float weight) {} // 0x000000018B7AE228-0x000000018B7AE244
-		public void ResetExpressions() {} // 0x0000000185492010-0x0000000185492020
+		public BlendShapeGroup FindExpressionByName(string name); // 0x000000018AC5C730-0x000000018AC5C800
+		public BlendShapeGroup FindExpressionByUID(string UID); // 0x000000018AC5C800-0x000000018AC5C8D0
+		public void SetExpressionWeightByName(string name, float weight); // 0x000000018AC5C950-0x000000018AC5C984
+		public void SetExpressionWeightByUID(string UID, float weight); // 0x000000018AC5C984-0x000000018AC5C9B8
+		public void ResetExpressions(); // 0x000000018AC5C8D0-0x000000018AC5C950
 	}
 
-	public class NameAttribute : Attribute // TypeDefIndex: 55570
+	[AttributeUsage(AttributeTargets.Class)]
+	public class NameAttribute : Attribute // TypeDefIndex: 58211
 	{
 		// Fields
 		public readonly string name; // 0x10
 	
 		// Constructors
-		public NameAttribute() {} // Dummy constructor
-		public NameAttribute(string name) {} // 0x0000000184096E30-0x0000000184096EF0
+		public NameAttribute(string name); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	public class CategoryAttribute : Attribute // TypeDefIndex: 55571
+	[AttributeUsage(AttributeTargets.Class)]
+	public class CategoryAttribute : Attribute // TypeDefIndex: 58212
 	{
 		// Fields
 		public readonly string category; // 0x10
 	
 		// Constructors
-		public CategoryAttribute() {} // Dummy constructor
-		public CategoryAttribute(string category) {} // 0x0000000184096E30-0x0000000184096EF0
+		public CategoryAttribute(string category); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	public class DescriptionAttribute : Attribute // TypeDefIndex: 55572
+	[AttributeUsage(AttributeTargets.Class)]
+	public class DescriptionAttribute : Attribute // TypeDefIndex: 58213
 	{
 		// Fields
 		public readonly string description; // 0x10
 	
 		// Constructors
-		public DescriptionAttribute() {} // Dummy constructor
-		public DescriptionAttribute(string description) {} // 0x0000000184096E30-0x0000000184096EF0
+		public DescriptionAttribute(string description); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	public class IconAttribute : Attribute // TypeDefIndex: 55573
+	[AttributeUsage(AttributeTargets.Class)]
+	public class IconAttribute : Attribute // TypeDefIndex: 58214
 	{
 		// Fields
 		public readonly string iconName; // 0x10
 		public readonly System.Type fromType; // 0x18
 	
 		// Constructors
-		public IconAttribute() {} // Dummy constructor
-		public IconAttribute(string iconName) {} // 0x0000000184096E30-0x0000000184096EF0
-		public IconAttribute(System.Type fromType) {} // 0x0000000184088E70-0x0000000184088E80
+		public IconAttribute(string iconName); // 0x00000001853908C0-0x00000001853908D0
+		public IconAttribute(System.Type fromType); // 0x0000000185392C40-0x0000000185392C50
 	}
 
-	public class AttachableAttribute : Attribute // TypeDefIndex: 55574
+	[AttributeUsage(AttributeTargets.Class)]
+	public class AttachableAttribute : Attribute // TypeDefIndex: 58215
 	{
 		// Fields
 		public readonly System.Type[] types; // 0x10
 	
 		// Constructors
-		public AttachableAttribute() {} // Dummy constructor
-		public AttachableAttribute(System.Type[] types) {} // 0x0000000184096E30-0x0000000184096EF0
+		public AttachableAttribute(params System.Type[] types); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	public class UniqueElementAttribute : Attribute // TypeDefIndex: 55575
+	[AttributeUsage(AttributeTargets.Class)]
+	public class UniqueElementAttribute : Attribute // TypeDefIndex: 58216
 	{
 		// Constructors
-		public UniqueElementAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public UniqueElementAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class ShowTrajectoryAttribute : Attribute // TypeDefIndex: 55576
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
+	public class ShowTrajectoryAttribute : Attribute // TypeDefIndex: 58217
 	{
 		// Constructors
-		public ShowTrajectoryAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public ShowTrajectoryAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class PositionHandleAttribute : Attribute // TypeDefIndex: 55577
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
+	public class PositionHandleAttribute : Attribute // TypeDefIndex: 58218
 	{
 		// Constructors
-		public PositionHandleAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public PositionHandleAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class RotationHandleAttribute : Attribute // TypeDefIndex: 55578
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
+	public class RotationHandleAttribute : Attribute // TypeDefIndex: 58219
 	{
 		// Fields
 		public readonly string positionPropertyName; // 0x10
 	
 		// Constructors
-		public RotationHandleAttribute() {} // Dummy constructor
-		public RotationHandleAttribute(string positionPropertyName) {} // 0x0000000184096E30-0x0000000184096EF0
+		public RotationHandleAttribute(string positionPropertyName); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	public class AnimatableParameterAttribute : PropertyAttribute // TypeDefIndex: 55579
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
+	public class AnimatableParameterAttribute : PropertyAttribute // TypeDefIndex: 58220
 	{
 		// Fields
 		public string link; // 0x10
@@ -496,133 +613,142 @@ namespace Slate
 		public readonly string customName; // 0x28
 	
 		// Constructors
-		public AnimatableParameterAttribute() {} // 0x0000000185492010-0x0000000185492020
-		public AnimatableParameterAttribute(string customName) {} // 0x0000000184A4EDC0-0x0000000184A4EDD0
-		public AnimatableParameterAttribute(string customName, float min, float max) {} // 0x000000018B798350-0x000000018B7983E4
-		public AnimatableParameterAttribute(float min, float max) {} // 0x000000018B7983E4-0x000000018B798460
+		public AnimatableParameterAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public AnimatableParameterAttribute(string customName); // 0x0000000182FDB880-0x0000000182FDB890
+		public AnimatableParameterAttribute(string customName, float min, float max); // 0x000000018AC51244-0x000000018AC512D8
+		public AnimatableParameterAttribute(float min, float max); // 0x000000018AC512D8-0x000000018AC51354
 	}
 
-	public class ParseAnimatableParametersAttribute : PropertyAttribute // TypeDefIndex: 55580
+	[AttributeUsage(AttributeTargets.Class)]
+	public class ParseAnimatableParametersAttribute : PropertyAttribute // TypeDefIndex: 58221
 	{
 		// Constructors
-		public ParseAnimatableParametersAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public ParseAnimatableParametersAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class ShaderPropertyPopupAttribute : PropertyAttribute // TypeDefIndex: 55581
+	[AttributeUsage(AttributeTargets.Field)]
+	public class ShaderPropertyPopupAttribute : PropertyAttribute // TypeDefIndex: 58222
 	{
 		// Fields
 		public readonly System.Type propertyType; // 0x10
 	
 		// Constructors
-		public ShaderPropertyPopupAttribute() {} // 0x0000000185492010-0x0000000185492020
-		public ShaderPropertyPopupAttribute(System.Type propertyType) {} // 0x0000000184096E30-0x0000000184096EF0
+		public ShaderPropertyPopupAttribute(); // 0x00000001841E1670-0x00000001841E1680
+		public ShaderPropertyPopupAttribute(System.Type propertyType); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	internal class LeftToggleAttribute : PropertyAttribute // TypeDefIndex: 55582
+	[AttributeUsage(AttributeTargets.Field)]
+	internal class LeftToggleAttribute : PropertyAttribute // TypeDefIndex: 58223
 	{
 		// Constructors
-		public LeftToggleAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public LeftToggleAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class MinAttribute : PropertyAttribute // TypeDefIndex: 55583
+	[AttributeUsage(AttributeTargets.Field)]
+	public class MinAttribute : PropertyAttribute // TypeDefIndex: 58224
 	{
 		// Fields
 		public readonly float min; // 0x10
 	
 		// Constructors
-		public MinAttribute() {} // Dummy constructor
-		public MinAttribute(float min) {} // 0x0000000181A6E380-0x0000000181A6E390
+		public MinAttribute(float min); // 0x0000000184D88280-0x0000000184D88290
 	}
 
-	public class ExampleTextAttribute : PropertyAttribute // TypeDefIndex: 55584
+	[AttributeUsage(AttributeTargets.Field)]
+	public class ExampleTextAttribute : PropertyAttribute // TypeDefIndex: 58225
 	{
 		// Fields
 		public readonly string text; // 0x10
 	
 		// Constructors
-		public ExampleTextAttribute() {} // Dummy constructor
-		public ExampleTextAttribute(string text) {} // 0x0000000184096E30-0x0000000184096EF0
+		public ExampleTextAttribute(string text); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	public class HelpBoxAttribute : PropertyAttribute // TypeDefIndex: 55585
+	[AttributeUsage(AttributeTargets.Field)]
+	public class HelpBoxAttribute : PropertyAttribute // TypeDefIndex: 58226
 	{
 		// Fields
 		public readonly string text; // 0x10
 	
 		// Constructors
-		public HelpBoxAttribute() {} // Dummy constructor
-		public HelpBoxAttribute(string text) {} // 0x0000000184096E30-0x0000000184096EF0
+		public HelpBoxAttribute(string text); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	public class ShowIfAttribute : PropertyAttribute // TypeDefIndex: 55586
+	[AttributeUsage(AttributeTargets.Field)]
+	public class ShowIfAttribute : PropertyAttribute // TypeDefIndex: 58227
 	{
 		// Fields
 		public readonly string propertyName; // 0x10
 		public readonly int value; // 0x18
 	
 		// Constructors
-		public ShowIfAttribute() {} // Dummy constructor
-		public ShowIfAttribute(string propertyName, int value) {} // 0x00000001845D7850-0x00000001845D7870
+		public ShowIfAttribute(string propertyName, int value); // 0x0000000183B46FF0-0x0000000183B47040
 	}
 
-	public class EnabledIfAttribute : PropertyAttribute // TypeDefIndex: 55587
+	[AttributeUsage(AttributeTargets.Field)]
+	public class EnabledIfAttribute : PropertyAttribute // TypeDefIndex: 58228
 	{
 		// Fields
 		public readonly string propertyName; // 0x10
 		public readonly int value; // 0x18
 	
 		// Constructors
-		public EnabledIfAttribute() {} // Dummy constructor
-		public EnabledIfAttribute(string propertyName, int value) {} // 0x00000001845D7850-0x00000001845D7870
+		public EnabledIfAttribute(string propertyName, int value); // 0x0000000183B46FF0-0x0000000183B47040
 	}
 
-	public class CallbackAttribute : PropertyAttribute // TypeDefIndex: 55588
+	[AttributeUsage(AttributeTargets.Field)]
+	public class CallbackAttribute : PropertyAttribute // TypeDefIndex: 58229
 	{
 		// Fields
 		public readonly string methodName; // 0x10
 	
 		// Constructors
-		public CallbackAttribute() {} // Dummy constructor
-		public CallbackAttribute(string methodName) {} // 0x0000000184096E30-0x0000000184096EF0
+		public CallbackAttribute(string methodName); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	public class RequiredAttribute : PropertyAttribute // TypeDefIndex: 55589
+	[AttributeUsage(AttributeTargets.Field)]
+	public class RequiredAttribute : PropertyAttribute // TypeDefIndex: 58230
 	{
 		// Constructors
-		public RequiredAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public RequiredAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class PlaybackProtectedAttribute : PropertyAttribute // TypeDefIndex: 55590
+	[AttributeUsage(AttributeTargets.Field)]
+	public class PlaybackProtectedAttribute : PropertyAttribute // TypeDefIndex: 58231
 	{
 		// Constructors
-		public PlaybackProtectedAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public PlaybackProtectedAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class ReadOnlyAttribute : PropertyAttribute // TypeDefIndex: 55591
+	[AttributeUsage(AttributeTargets.Field)]
+	public class ReadOnlyAttribute : PropertyAttribute // TypeDefIndex: 58232
 	{
 		// Constructors
-		public ReadOnlyAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public ReadOnlyAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class SortingLayerAttribute : PropertyAttribute // TypeDefIndex: 55592
+	[AttributeUsage(AttributeTargets.Field)]
+	public class SortingLayerAttribute : PropertyAttribute // TypeDefIndex: 58233
 	{
 		// Constructors
-		public SortingLayerAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public SortingLayerAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public class ActorGroupPopupAttribute : PropertyAttribute // TypeDefIndex: 55593
+	[AttributeUsage(AttributeTargets.Field)]
+	public class ActorGroupPopupAttribute : PropertyAttribute // TypeDefIndex: 58234
 	{
 		// Constructors
-		public ActorGroupPopupAttribute() {} // 0x0000000185492010-0x0000000185492020
+		public ActorGroupPopupAttribute(); // 0x00000001841E1670-0x00000001841E1680
 	}
 
-	public abstract class DirectorActionClip : ActionClip // TypeDefIndex: 55594
+	[Attachable(new System.Type[1] {typeof(DirectorActionTrack) })]
+	public abstract class DirectorActionClip : ActionClip // TypeDefIndex: 58235
 	{
 		// Constructors
-		protected DirectorActionClip() {} // 0x000000018646DB20-0x000000018646DB28
+		protected DirectorActionClip(); // 0x0000000185393520-0x0000000185393538
 	}
 
-	public interface IEvent // TypeDefIndex: 55595
+	public interface IEvent // TypeDefIndex: 58236
 	{
 		// Properties
 		string name { get; }
@@ -631,7 +757,7 @@ namespace Slate
 		void Invoke();
 	}
 
-	public enum TransformSpace // TypeDefIndex: 55596
+	public enum TransformSpace // TypeDefIndex: 58237
 	{
 		CutsceneSpace = 0,
 		ActorSpace = 1,
@@ -639,56 +765,81 @@ namespace Slate
 		ParentSpace = 3
 	}
 
-	public enum MiniTransformSpace // TypeDefIndex: 55597
+	public enum MiniTransformSpace // TypeDefIndex: 58238
 	{
 		CutsceneSpace = 0,
 		WorldSpace = 2,
 		ParentSpace = 3
 	}
 
-	public enum ActiveState // TypeDefIndex: 55598
+	public enum ActiveState // TypeDefIndex: 58239
 	{
 		Disable = 0,
 		Enable = 1,
 		Toggle = 2
 	}
 
-	public class CameraShot : DirectorActionClip // TypeDefIndex: 55602
+	[Attachable(new System.Type[1] {typeof(CameraTrack) })]
+	[Description("Camera Shots can be animated directly within this clip. You don\'t need to create an Actor Group to animate the shot (even though you can if desired).")]
+	public class CameraShot : DirectorActionClip // TypeDefIndex: 58243
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private ShotCamera _targetShot; // 0x50
+		[HideInInspector]
 		public BlendInEffectType blendInEffect; // 0x58
+		[HideInInspector]
 		public BlendOutEffectType blendOutEffect; // 0x5C
+		[HideInInspector]
+		[Range(0f, 1f)]
 		public float steadyCamEffect; // 0x60
+		[HideInInspector]
 		public UnityEngine.Color fadeToColor; // 0x64
+		[HideInInspector]
 		public UnityEngine.Color fadeFromColor; // 0x74
+		[ActorGroupPopup]
+		[HideInInspector]
 		public ActorGroup overrideShotTargetActorGroup; // 0x88
 		private UnityEngine.Color lastFadeColor; // 0x90
+		[CompilerGenerated]
 		private CameraShot _previousShot_k__BackingField; // 0xA0
 	
 		// Properties
-		public override string info { get => default; } // 0x0000000185FB0590-0x0000000185FB05A0 
-		public override bool isValid { get => default; } // 0x0000000185FB05F0-0x0000000185FB0600 
-		public override float length { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendIn { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override float blendOut { get => default; set {} } // 0x0000000187E75D4C-0x0000000187E75D54 0x000000018B7A252C-0x000000018B7A25A0
-		public override bool canCrossBlend { get => default; } // 0x0000000185FB0520-0x0000000185FB0530 
-		public new GameObject actor { get => default; } // 0x000000018646EBCC-0x000000018646EBE0 
-		public CameraShot previousShot { get; private set; } // 0x0000000181460F60-0x0000000181460F70 0x000000018B7A2CC4-0x000000018B7A2D40
-		public ShotCamera targetShot { get => default; set {} } // 0x000000018B7A2964-0x000000018B7A29A0 0x000000018B7A2834-0x000000018B7A28CC
-		private CameraTrack track { get => default; } // 0x000000018B7A2BA4-0x000000018B7A2C34 
-		public Vector3 position { get => default; set {} } // 0x000000018B7A28CC-0x000000018B7A2964 0x000000018B7A2C34-0x000000018B7A2CC4
-		public Vector3 rotation { get => default; set {} } // 0x000000018B7A25A0-0x000000018B7A2614 0x000000018B7A29A0-0x000000018B7A2A3C
-		public float fieldOfView { get => default; set {} } // 0x000000018B7A2684-0x000000018B7A26F4 0x000000018B7A2AB4-0x000000018B7A2B2C
-		public float focalPoint { get => default; set {} } // 0x000000018B7A26F4-0x000000018B7A2764 0x000000018B7A2B2C-0x000000018B7A2BA4
-		public float focalRange { get => default; set {} } // 0x000000018B7A2614-0x000000018B7A2684 0x000000018B7A2A3C-0x000000018B7A2AB4
-		public float focalAperture { get => default; set {} } // 0x000000018B7A1A5C-0x000000018B7A1E40 0x000000018B7A2030-0x000000018B7A20BC
+		public override string info { get; } // 0x000000018AC5B6E8-0x000000018AC5B768 
+		public override bool isValid { get; } // 0x000000018AC5B768-0x000000018AC5B7B8 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override bool canCrossBlend { get; } // 0x000000018AC5B51C-0x000000018AC5B524 
+		public new GameObject actor { get; } // 0x000000018AC5B4A8-0x000000018AC5B51C 
+		public CameraShot previousShot { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86210-0x0000000184D86220 0x0000000185391334-0x0000000185391348
+		public ShotCamera targetShot { get; set; } // 0x0000000184D86270-0x0000000184D86280 0x000000018AC5BC48-0x000000018AC5BCC4
+		private CameraTrack track { get; } // 0x000000018AC5B8E8-0x000000018AC5B924 
+		[AnimatableParameter]
+		public Vector3 position { get; set; } // 0x000000018AC5B7B8-0x000000018AC5B850 0x000000018AC5BB28-0x000000018AC5BBB8
+		[AnimatableParameter]
+		public Vector3 rotation { get; set; } // 0x000000018AC5B850-0x000000018AC5B8E8 0x000000018AC5BBB8-0x000000018AC5BC48
+		[AnimatableParameter(0.01f, 170f)]
+		public float fieldOfView { get; set; } // 0x000000018AC5B524-0x000000018AC5B598 0x000000018AC5B924-0x000000018AC5B9C0
+		[AnimatableParameter("Focal Distance")]
+		public float focalPoint { get; set; } // 0x000000018AC5B608-0x000000018AC5B678 0x000000018AC5BA38-0x000000018AC5BAB0
+		[AnimatableParameter("Focal Length", 1f, 300f)]
+		public float focalRange { get; set; } // 0x000000018AC5B678-0x000000018AC5B6E8 0x000000018AC5BAB0-0x000000018AC5BB28
+		[AnimatableParameter(0.1f, 32f)]
+		public float focalAperture { get; set; } // 0x000000018AC5B598-0x000000018AC5B608 0x000000018AC5B9C0-0x000000018AC5BA38
 	
 		// Nested types
-		public enum BlendInEffectType // TypeDefIndex: 55599
+		public enum BlendInEffectType // TypeDefIndex: 58240
 		{
 			None = 0,
 			FadeFromColor = 1,
@@ -696,184 +847,239 @@ namespace Slate
 			EaseIn = 3
 		}
 	
-		public enum BlendOutEffectType // TypeDefIndex: 55600
+		public enum BlendOutEffectType // TypeDefIndex: 58241
 		{
 			None = 0,
 			FadeToColor = 1
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 55601
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58242
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 	
 			// Constructors
-			static __c() {} // 0x000000018B7A2764-0x000000018B7A27E4
-			public __c() {} // 0x000000018B7A27E4-0x000000018B7A2834
+			static __c(); // 0x000000018AC67428-0x000000018AC6748C
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		// Constructors
-		public CameraShot() {} // 0x0000000185492010-0x0000000185492020
+		public CameraShot(); // 0x000000018AC5B458-0x000000018AC5B4A8
 	
 		// Methods
-		protected override void OnAfterValidate() {} // 0x000000018B7A1FA4-0x000000018B7A2030
-		protected override void OnRootEnabled() {} // 0x000000018B7A20BC-0x000000018B7A2148
-		protected override void OnRootDisabled() {} // 0x000000018B7A2418-0x000000018B7A24EC
-		protected override void OnRootUpdated(float time, float previousTime) {} // 0x000000018B7A1F2C-0x000000018B7A1F40
-		public void TryUpdateShotTargetOverride() {} // 0x000000018B7A1E40-0x000000018B7A1F2C
-		protected override bool OnInitialize() => default; // 0x000000018B7A2148-0x000000018B7A2418
-		protected override void OnEnter() {} // 0x000000018B7A1F40-0x000000018B7A1FA4
-		protected override void OnUpdate(float time, float previousTime) {} // 0x000000018B7A24EC-0x000000018B7A252C
-		protected override void OnReverse() {} // 0x000000018B7AE37C-0x000000018B7AE3E0
+		protected override void OnAfterValidate(); // 0x000000018AC5A9C8-0x000000018AC5ADAC
+		protected override void OnRootEnabled(); // 0x000000018AC5AF9C-0x000000018AC5B028
+		protected override void OnRootDisabled(); // 0x000000018AC5AF10-0x000000018AC5AF9C
+		protected override void OnRootUpdated(float time, float previousTime); // 0x000000018AC5B028-0x000000018AC5B0B4
+		public void TryUpdateShotTargetOverride(); // 0x000000018AC5B384-0x000000018AC5B458
+		protected override bool OnInitialize(); // 0x000000018AC5AE98-0x000000018AC5AEAC
+		protected override void OnEnter(); // 0x000000018AC5ADAC-0x000000018AC5AE98
+		protected override void OnUpdate(float time, float previousTime); // 0x000000018AC5B0B4-0x000000018AC5B384
+		protected override void OnReverse(); // 0x000000018AC5AEAC-0x000000018AC5AF10
 	}
 
-	public class PlayVideo : ActionClip // TypeDefIndex: 55603
+	[Attachable(new System.Type[1] {typeof(VideoTrack) })]
+	[Description("Play an imported Video Clip on the render camera.")]
+	[Name("Video Clip")]
+	public class PlayVideo : ActionClip // TypeDefIndex: 58244
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[Required]
 		public VideoClip videoClip; // 0x50
 		private VideoSampler.SampleSettings settings; // 0x58
 	
 		// Properties
-		public override bool isValid { get => default; } // 0x000000018B7ACF8C-0x000000018B7ACFDC 
-		public override string info { get => default; } // 0x000000018B7ACF0C-0x000000018B7ACF8C 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		private VideoTrack track { get => default; } // 0x000000018B7ACFDC-0x000000018B7AD018 
+		public override bool isValid { get; } // 0x000000018AC65FF4-0x000000018AC66044 
+		public override string info { get; } // 0x000000018AC65F74-0x000000018AC65FF4 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		private VideoTrack track { get; } // 0x000000018AC66044-0x000000018AC66080 
 	
 		// Constructors
-		public PlayVideo() {} // 0x000000018B7ACEF0-0x000000018B7ACF0C
+		public PlayVideo(); // 0x000000018AC65F48-0x000000018AC65F74
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7ACDE0-0x000000018B7ACDE8
-		protected override void OnReverseEnter() {} // 0x000000018B7ACDE0-0x000000018B7ACDE8
-		protected override void OnReverse() {} // 0x000000018B7ACDE8-0x000000018B7ACDF0
-		protected override void OnExit() {} // 0x000000018B7ACDE8-0x000000018B7ACDF0
-		private void Enable() {} // 0x000000018B7ACD68-0x000000018B7ACDE0
-		protected override void OnUpdate(float time, float previousTime) {} // 0x000000018B7ACDF0-0x000000018B7ACEF0
-		private void Disable() {} // 0x000000018B7ACD3C-0x000000018B7ACD68
+		protected override void OnEnter(); // 0x000000018AC65E38-0x000000018AC65E40
+		protected override void OnReverseEnter(); // 0x000000018AC65E38-0x000000018AC65E40
+		protected override void OnReverse(); // 0x000000018AC65E40-0x000000018AC65E48
+		protected override void OnExit(); // 0x000000018AC65E40-0x000000018AC65E48
+		private void Enable(); // 0x000000018AC65DC0-0x000000018AC65E38
+		protected override void OnUpdate(float time, float previousTime); // 0x000000018AC65E48-0x000000018AC65F48
+		private void Disable(); // 0x000000018AC65D94-0x000000018AC65DC0
 	}
 
-	public class ActorGroup : CutsceneGroup // TypeDefIndex: 55604
+	[Description("All tracks of an Actor Group affect a specific actor GameObject or one of it\'s Components. Specifying a name manually comes in handy if you want to set the target actor of this group via scripting. The ReferenceMode along with InitialCoordinates are essential when you are working with prefab actors.")]
+	public class ActorGroup : CutsceneGroup // TypeDefIndex: 58245
 	{
 		// Fields
+		[SerializeField]
 		private string _name; // 0x70
+		[SerializeField]
 		private GameObject _actor; // 0x78
+		[SerializeField]
 		private ActorReferenceMode _referenceMode; // 0x80
+		[FormerlySerializedAs("_initialTransformation")]
+		[SerializeField]
 		private ActorInitialTransformation _initialCoordinates; // 0x84
+		[SerializeField]
+		[ShowIf("_initialCoordinates", 1)]
 		private Vector3 _initialLocalPosition; // 0x88
+		[SerializeField]
+		[ShowIf("_initialCoordinates", 1)]
 		private Vector3 _initialLocalRotation; // 0x94
+		[SerializeField]
+		[ShowIf("_initialCoordinates", 1)]
 		private bool _displayVirtualMeshGizmo; // 0xA0
 	
 		// Properties
-		public override string name { get => default; set {} } // 0x000000018B798030-0x000000018B7980C8 0x00000001874BE90C-0x00000001874BE91C
-		public override GameObject actor { get => default; set {} } // 0x000000018B798024-0x000000018B798030 0x000000018B7980C8-0x000000018B798138
-		public override ActorReferenceMode referenceMode { get => default; set {} } // 0x000000018140C930-0x000000018140C940 0x000000018140C940-0x000000018140C950
-		public override ActorInitialTransformation initialTransformation { get => default; set {} } // 0x0000000182FB0000-0x0000000182FB0010 0x0000000185FBB860-0x0000000185FBB870
-		public override Vector3 initialLocalPosition { get => default; set {} } // 0x0000000185FD5B20-0x0000000185FD5B40 0x0000000185FD5B40-0x0000000185FD5B60
-		public override Vector3 initialLocalRotation { get => default; set {} } // 0x0000000185FBC980-0x0000000185FBC9A0 0x0000000185FBC9A0-0x0000000185FBC9C0
-		public override bool displayVirtualMeshGizmo { get => default; set {} } // 0x000000018346D900-0x000000018346D910 0x00000001834A2240-0x00000001834A2250
+		public override string name { get; set; } // 0x000000018AC50F24-0x000000018AC50FBC 0x00000001863AD760-0x00000001863AD770
+		public override GameObject actor { get; set; } // 0x000000018AC50F18-0x000000018AC50F24 0x000000018AC50FBC-0x000000018AC5102C
+		public override ActorReferenceMode referenceMode { get; set; } // 0x0000000184D863A0-0x0000000184D863B0 0x0000000184D86420-0x0000000184D86430
+		public override ActorInitialTransformation initialTransformation { get; set; } // 0x0000000184D8FCE0-0x0000000184D8FCF0 0x0000000184D8FCF0-0x0000000184D8FD00
+		public override Vector3 initialLocalPosition { get; set; } // 0x0000000184DA9AD0-0x0000000184DA9AF0 0x0000000184DA9B10-0x0000000184DA9B30
+		public override Vector3 initialLocalRotation { get; set; } // 0x0000000184DA9AF0-0x0000000184DA9B10 0x0000000184DA9B30-0x0000000184DA9B50
+		public override bool displayVirtualMeshGizmo { get; set; } // 0x0000000184D88020-0x0000000184D88030 0x0000000184D88040-0x0000000184D88050
 	
 		// Constructors
-		public ActorGroup() {} // 0x000000018B797FD4-0x000000018B798024
+		public ActorGroup(); // 0x000000018AC50EC8-0x000000018AC50F18
 	}
 
-	public class DirectorGroup : CutsceneGroup // TypeDefIndex: 55605
+	[Description("The DirectorGroup is the master group of the Cutscene. There is always one and can\'t be removed. The target actor of this group is always the \'Director Camera\', thus it\'s possible to add a PropertiesTrack to animate any of the components attached on the DirectorCamera game object. Usualy Image Effects.")]
+	public class DirectorGroup : CutsceneGroup // TypeDefIndex: 58246
 	{
 		// Properties
-		public override string name { get => default; set {} } // 0x000000018B7ABA28-0x000000018B7ABA54 0x0000000185492010-0x0000000185492020
-		public override GameObject actor { get => default; set {} } // 0x0000000187F717D8-0x0000000187F717FC 0x0000000185492010-0x0000000185492020
-		public override ActorReferenceMode referenceMode { get => default; set {} } // 0x00000001813AE580-0x00000001813AE590 0x0000000185492010-0x0000000185492020
-		public override ActorInitialTransformation initialTransformation { get => default; set {} } // 0x00000001813AE580-0x00000001813AE590 0x0000000185492010-0x0000000185492020
-		public override Vector3 initialLocalPosition { get => default; set {} } // 0x0000000186472A7C-0x0000000186472A94 0x0000000185492010-0x0000000185492020
-		public override Vector3 initialLocalRotation { get => default; set {} } // 0x0000000186472A7C-0x0000000186472A94 0x0000000185492010-0x0000000185492020
-		public override bool displayVirtualMeshGizmo { get => default; set {} } // 0x00000001814A81B0-0x00000001814A81C0 0x0000000185492010-0x0000000185492020
+		public override string name { get; set; } // 0x000000018AC649D0-0x000000018AC649FC 0x00000001841E1670-0x00000001841E1680
+		public override GameObject actor { get; set; } // 0x000000018AC649AC-0x000000018AC649D0 0x00000001841E1670-0x00000001841E1680
+		public override ActorReferenceMode referenceMode { get; set; } // 0x00000001811EC580-0x00000001811EC590 0x00000001841E1670-0x00000001841E1680
+		public override ActorInitialTransformation initialTransformation { get; set; } // 0x00000001811EC580-0x00000001811EC590 0x00000001841E1670-0x00000001841E1680
+		public override Vector3 initialLocalPosition { get; set; } // 0x0000000189D954F8-0x0000000189D95510 0x00000001841E1670-0x00000001841E1680
+		public override Vector3 initialLocalRotation { get; set; } // 0x0000000189D954F8-0x0000000189D95510 0x00000001841E1670-0x00000001841E1680
+		public override bool displayVirtualMeshGizmo { get; set; } // 0x00000001812081B0-0x0000000181208610 0x00000001841E1670-0x00000001841E1680
 	
 		// Constructors
-		public DirectorGroup() {} // 0x000000018B7AB9DC-0x000000018B7ABA28
+		public DirectorGroup(); // 0x000000018AC64960-0x000000018AC649AC
 	}
 
-	public abstract class ActionTrack : CutsceneTrack // TypeDefIndex: 55606
+	[Description("Action Tracks are generic purpose tracks. Once an Action Clip has been placed, the Action Track will lock to accept only clips of the same category.")]
+	[Icon(typeof(CircleCollider2D))]
+	[Name("Action Track")]
+	public abstract class ActionTrack : CutsceneTrack // TypeDefIndex: 58247
 	{
 		// Constructors
-		protected ActionTrack() {} // 0x000000018B797FB4-0x000000018B797FBC
+		protected ActionTrack(); // 0x000000018AC50EA8-0x000000018AC50EB0
 	}
 
-	public class ActorActionTrack : ActionTrack // TypeDefIndex: 55607
+	[Attachable(new System.Type[1] {typeof(ActorGroup) })]
+	public class ActorActionTrack : ActionTrack // TypeDefIndex: 58248
 	{
 		// Constructors
-		public ActorActionTrack() {} // 0x000000018B797FB4-0x000000018B797FBC
+		public ActorActionTrack(); // 0x000000018AC50EA8-0x000000018AC50EB0
 	}
 
-	public class ActorAudioTrack : Slate.AudioTrack // TypeDefIndex: 55608
+	[Attachable(new System.Type[1] {typeof(ActorGroup) })]
+	public class ActorAudioTrack : Slate.AudioTrack // TypeDefIndex: 58249
 	{
 		// Fields
+		[SerializeField]
 		protected bool _useAudioSourceOnActor; // 0x90
 	
 		// Properties
-		public override bool useAudioSourceOnActor { get => default; } // 0x0000000185FB2250-0x0000000185FB2260 
+		public override bool useAudioSourceOnActor { get; } // 0x0000000182EC6590-0x0000000182EC65A0 
 	
 		// Constructors
-		public ActorAudioTrack() {} // 0x000000018B797FBC-0x000000018B797FD4
+		public ActorAudioTrack(); // 0x000000018AC50EB0-0x000000018AC50EC8
 	}
 
-	public class ActorPropertiesTrack : PropertiesTrack // TypeDefIndex: 55609
+	[Attachable(new System.Type[1] {typeof(ActorGroup) })]
+	public class ActorPropertiesTrack : PropertiesTrack // TypeDefIndex: 58250
 	{
 		// Constructors
-		public ActorPropertiesTrack() {} // 0x000000018B798220-0x000000018B798228
+		public ActorPropertiesTrack(); // 0x000000018AC51114-0x000000018AC5111C
 	
 		// Methods
-		protected override void OnCreate() {} // 0x000000018B798138-0x000000018B798220
+		protected override void OnCreate(); // 0x000000018AC5102C-0x000000018AC51114
 	}
 
-	public class AnimationTrack : CutsceneTrack // TypeDefIndex: 55610
+	[Attachable(new System.Type[1] {typeof(ActorGroup) })]
+	[Category("Legacy")]
+	[Description("The Animation Track works with the legacy \'Animation\' Component. Each Animation Track represents a different layer of the animation system. The zero layered track (bottom) will blend in/out with the default animation clip set on the Animation Component of the actor if any, while all other Animation Tracks will play above.")]
+	[Icon(typeof(NavMeshAgent))]
+	public class AnimationTrack : CutsceneTrack // TypeDefIndex: 58251
 	{
 		// Fields
+		[Range(0f, 1f)]
+		[SerializeField]
 		private float _weight; // 0x50
+		[Range(0f, 1f)]
+		[SerializeField]
 		private float _blendIn; // 0x54
+		[Range(0f, 1f)]
+		[SerializeField]
 		private float _blendOut; // 0x58
+		[SerializeField]
 		private AnimationBlendMode _animationBlendMode; // 0x5C
+		[SerializeField]
 		private string _mixTransformName; // 0x60
 		private Animation anim; // 0x68
 		private UnityEngine.AnimationState state; // 0x70
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B79F154-0x000000018B79F254 
-		public override float blendIn { get => default; } // 0x0000000183F80440-0x0000000183F80450 
-		public override float blendOut { get => default; } // 0x0000000181DE2580-0x0000000181DE2590 
-		public float weight { get => default; } // 0x0000000185FB3000-0x0000000185FB3010 
-		public AnimationBlendMode animationBlendMode { get => default; private set {} } // 0x0000000183F80460-0x0000000183F80470 0x0000000183F804F0-0x0000000183F80500
-		public string mixTransformName { get => default; private set {} } // 0x0000000185FB0530-0x0000000185FB0540 0x0000000185AE8FE0-0x0000000185AE8FF0
+		public override string info { get; } // 0x000000018AC580C0-0x000000018AC581C0 
+		public override float blendIn { get; } // 0x0000000184D86E00-0x0000000184D86E10 
+		public override float blendOut { get; } // 0x0000000184D88400-0x0000000184D88410 
+		public float weight { get; } // 0x0000000184D885A0-0x0000000184D885B0 
+		public AnimationBlendMode animationBlendMode { get; private set; } // 0x0000000184D86560-0x0000000184D86570 0x0000000184D865C0-0x0000000184D865D0
+		public string mixTransformName { get; private set; } // 0x0000000184D86280-0x0000000184D86290 0x00000001863CC164-0x00000001863CC174
 	
 		// Constructors
-		public AnimationTrack() {} // 0x000000018B79F0F0-0x000000018B79F154
+		public AnimationTrack(); // 0x000000018AC5805C-0x000000018AC580C0
 	
 		// Methods
-		protected override bool OnInitialize() => default; // 0x000000018B79EEFC-0x000000018B79EFD8
-		protected override void OnEnter() {} // 0x000000018B79ECE8-0x000000018B79EEBC
-		protected override void OnUpdate(float time, float previousTime) {} // 0x000000018B79F018-0x000000018B79F0B8
-		protected override void OnExit() {} // 0x000000018B79EEBC-0x000000018B79EEFC
-		protected override void OnReverseEnter() {} // 0x000000018B79EFD8-0x000000018B79F018
-		protected override void OnReverse() {} // 0x000000018B79EEBC-0x000000018B79EEFC
-		public Transform GetMixTransform() => default; // 0x000000018B79EB68-0x000000018B79ECE8
-		private bool _GetMixTransform_b__27_0(Transform t) => default; // 0x000000018B79F0B8-0x000000018B79F0F0
+		protected override bool OnInitialize(); // 0x000000018AC57E68-0x000000018AC57F44
+		protected override void OnEnter(); // 0x000000018AC57C54-0x000000018AC57E28
+		protected override void OnUpdate(float time, float previousTime); // 0x000000018AC57F84-0x000000018AC58024
+		protected override void OnExit(); // 0x000000018AC57E28-0x000000018AC57E68
+		protected override void OnReverseEnter(); // 0x000000018AC57F44-0x000000018AC57F84
+		protected override void OnReverse(); // 0x000000018AC57E28-0x000000018AC57E68
+		public Transform GetMixTransform(); // 0x000000018AC57AD4-0x000000018AC57C54
+		[CompilerGenerated]
+		private bool _GetMixTransform_b__27_0(Transform t); // 0x000000018AC58024-0x000000018AC5805C
 	}
 
-	public class AnimatorTrack : CutsceneTrack // TypeDefIndex: 55612
+	[Attachable(new System.Type[1] {typeof(ActorGroup) })]
+	[Description("The Animator Track works with an \'Animator\' Component attached on the actor, but does not require or use the Controller assigned. Instead animation clips can be played directly.\n\nMultiple Animator Tracks can also be added each representing a different animation layer. Root Motion will only be used in Animator Track of Layer 0 (if enabled), which is always the first (bottom) Track.")]
+	[Icon(typeof(Animator))]
+	public class AnimatorTrack : CutsceneTrack // TypeDefIndex: 58253
 	{
 		// Fields
-		private const int ROOTMOTION_FRAMERATE = 30; // Metadata: 0x0207BF3B
+		private const int ROOTMOTION_FRAMERATE = 30; // Metadata: 0x0234BBEB
 		public AvatarMask mask; // 0x50
 		public AnimationBlendMode blendMode; // 0x58
+		[Range(0f, 1f)]
 		public float weight; // 0x5C
 		public bool useRootMotion; // 0x60
+		[ShowIf("isMasterTrack", 1)]
 		public bool applyFootIK; // 0x61
+		[HideInInspector]
+		[SerializeField]
 		public bool isRootMotionPreBaked; // 0x62
+		[HideInInspector]
+		[SerializeField]
 		private List<Vector3> rmPositions; // 0x68
+		[HideInInspector]
+		[SerializeField]
 		private List<Quaternion> rmRotations; // 0x70
 		private int activeClips; // 0x78
 		private float activeClipsWeight; // 0x7C
@@ -890,329 +1096,403 @@ namespace Slate
 		private Animator _animator; // 0xF0
 	
 		// Properties
-		public Animator animator { get => default; } // 0x000000018B7A1278-0x000000018B7A12C4 
-		public override string info { get => default; } // 0x000000018B7A1270-0x000000018B7A1278 
-		public override bool isLocked { get => default; } // 0x000000018B7A11F8-0x000000018B7A1240 
-		public AnimatorTrack masterTrack { get => default; } // 0x000000018B7A10B0-0x000000018B7A10C8 
-		public bool isMasterTrack { get => default; } // 0x000000018B7A0774-0x000000018B7A0984 
-		public bool isLastTrack { get => default; } // 0x000000018B7A05DC-0x000000018B7A0734 
-		public float compoundTrackWeight { get => default; } // 0x000000018B7A0AAC-0x000000018B7A0BAC 
+		public Animator animator { get; } // 0x000000018AC59F28-0x000000018AC5A01C 
+		public override string info { get; } // 0x000000018AC5A034-0x000000018AC5A164 
+		public override bool isLocked { get; } // 0x000000018AC5A1AC-0x000000018AC5A1DC 
+		public AnimatorTrack masterTrack { get; } // 0x000000018AC5A1E4-0x000000018AC5A230 
+		public bool isMasterTrack { get; } // 0x000000018AC5A1DC-0x000000018AC5A1E4 
+		public bool isLastTrack { get; } // 0x000000018AC5A164-0x000000018AC5A1AC 
+		public float compoundTrackWeight { get; } // 0x000000018AC5A01C-0x000000018AC5A034 
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 55611
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58252
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 			public static Func<AnimatorTrack, bool> __9__36_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x000000018B7A0FBC-0x000000018B7A10B0
-			public __c() {} // 0x000000018B7A10C8-0x000000018B7A11F8
+			static __c(); // 0x000000018AC6748C-0x000000018AC674F0
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _OnInitialize_b__36_0(AnimatorTrack t) => default; // 0x000000018B7A1240-0x000000018B7A1270
+			internal bool _OnInitialize_b__36_0(AnimatorTrack t); // 0x000000018AC671C8-0x000000018AC671E8
 		}
 	
 		// Constructors
-		public AnimatorTrack() {} // 0x000000018B7AE11C-0x000000018B7AE13C
+		public AnimatorTrack(); // 0x000000018AC59F14-0x000000018AC59F28
 	
 		// Methods
-		protected override bool OnInitialize() => default; // 0x000000018B7A0C64-0x000000018B7A0E4C
-		protected override void OnEnter() {} // 0x000000018B7A0984-0x000000018B7A0A20
-		protected override void OnUpdate(float time, float previousTime) {} // 0x000000018B7A0734-0x000000018B7A0774
-		private void PostUpdateMasterTrack(float time, float previousTime) {} // 0x000000018B7A0BAC-0x000000018B7A0C64
-		protected override void OnReverseEnter() {} // 0x000000018B7A0A20-0x000000018B7A0AAC
-		protected override void OnExit() {} // 0x000000018B7A01D4-0x000000018B7A0290
-		private void PostExitMasterTrack() {} // 0x000000018B7A0E9C-0x000000018B7A0FA8
-		protected override void OnReverse() {} // 0x000000018B7A012C-0x000000018B7A01D4
-		public void EnableClip(PlayAnimatorClip playAnimClip, float blendWeight, float subClipWeight) {} // 0x000000018B79FAAC-0x000000018B79FE58
-		public void UpdateClip(PlayAnimatorClip playAnimClip, float clipTime, float clipPrevious, float blendWeight, float subClipWeight) {} // 0x000000018B79FE58-0x000000018B7A012C
-		public void DisableClip(PlayAnimatorClip playAnimClip, float blendWeight, float subClipWeight) {} // 0x000000018B7A0E4C-0x000000018B7A0E9C
-		private void CreateAndPlayTree() {} // 0x000000018B79F9E8-0x000000018B79FAAC
-		private Playable CreateClipsMixer(PlayableGraph graph) => default; // 0x000000018B79F524-0x000000018B79F9E8
-		public void PreBakeRootMotion() {} // 0x000000018B7A0290-0x000000018B7A05DC
-		public void ClearPreBakeRootMotion() {} // 0x000000018B79F254-0x000000018B79F524
-		private void BakeRootMotion() {} // 0x000000018B7A0FA8-0x000000018B7A0FBC
-		private void EvaluateTrackClips(float time, float previousTime, ref int tempActiveClips) {} // 0x000000018B7AE3E0-0x000000018B7AE444
-		private void ApplyBakedRootMotion(float time) {} // 0x0000000185492010-0x0000000185492020
+		protected override bool OnInitialize(); // 0x000000018AC596E0-0x000000018AC598F0
+		protected override void OnEnter(); // 0x000000018AC59548-0x000000018AC596A0
+		protected override void OnUpdate(float time, float previousTime); // 0x000000018AC59A18-0x000000018AC59B18
+		private void PostUpdateMasterTrack(float time, float previousTime); // 0x000000018AC59BD0-0x000000018AC59DB8
+		protected override void OnReverseEnter(); // 0x000000018AC598F0-0x000000018AC5998C
+		protected override void OnExit(); // 0x000000018AC596A0-0x000000018AC596E0
+		private void PostExitMasterTrack(); // 0x000000018AC59B18-0x000000018AC59BD0
+		protected override void OnReverse(); // 0x000000018AC5998C-0x000000018AC59A18
+		public void EnableClip(PlayAnimatorClip playAnimClip, float blendWeight, float subClipWeight); // 0x000000018AC59140-0x000000018AC591FC
+		public void UpdateClip(PlayAnimatorClip playAnimClip, float clipTime, float clipPrevious, float blendWeight, float subClipWeight); // 0x000000018AC59E08-0x000000018AC59F14
+		public void DisableClip(PlayAnimatorClip playAnimClip, float blendWeight, float subClipWeight); // 0x000000018AC59098-0x000000018AC59140
+		private void CreateAndPlayTree(); // 0x000000018AC58A18-0x000000018AC58DC4
+		private Playable CreateClipsMixer(PlayableGraph graph); // 0x000000018AC58DC4-0x000000018AC59098
+		public void PreBakeRootMotion(); // 0x000000018AC59DB8-0x000000018AC59E08
+		public void ClearPreBakeRootMotion(); // 0x000000018AC58954-0x000000018AC58A18
+		private void BakeRootMotion(); // 0x000000018AC58490-0x000000018AC58954
+		private void EvaluateTrackClips(float time, float previousTime, ref int tempActiveClips); // 0x000000018AC591FC-0x000000018AC59548
+		private void ApplyBakedRootMotion(float time); // 0x000000018AC581C0-0x000000018AC58490
 	}
 
-	public class MecanimTrack : CutsceneTrack // TypeDefIndex: 55613
+	[Attachable(new System.Type[1] {typeof(ActorGroup) })]
+	[Category("Legacy")]
+	[Description("** This Track is deprecated. Please use Animator Track instead. **\n\nThe Mecanim Track works with an \'Animator\' component attached on the actor and with it\'s assigned Controller by modifying the Controller\'s parameters.\n\nConsider working with the new Animator Track instead to playback animation clips directly without the need of a Controller, which is more intuitive for animations.")]
+	[Icon(typeof(Animator))]
+	public class MecanimTrack : CutsceneTrack // TypeDefIndex: 58254
 	{
 		// Fields
 		private Animator animator; // 0x50
 	
 		// Constructors
-		public MecanimTrack() {} // 0x000000018B797FB4-0x000000018B797FBC
+		public MecanimTrack(); // 0x000000018AC50EA8-0x000000018AC50EB0
 	
 		// Methods
-		protected override bool OnInitialize() => default; // 0x000000018B7ACBD0-0x000000018B7ACD3C
-		protected override void OnReverse() {} // 0x000000018B7ACBC8-0x000000018B7ACBD0
-		protected override void OnExit() {} // 0x000000018B7ACBC8-0x000000018B7ACBD0
-		private void DestroyDispatcher() {} // 0x000000018B7ACB34-0x000000018B7ACBC8
+		protected override bool OnInitialize(); // 0x000000018AC65C28-0x000000018AC65D94
+		protected override void OnReverse(); // 0x000000018AC65C20-0x000000018AC65C28
+		protected override void OnExit(); // 0x000000018AC65C20-0x000000018AC65C28
+		private void DestroyDispatcher(); // 0x000000018AC65B8C-0x000000018AC65C20
 	}
 
-	public abstract class AudioTrack : CutsceneTrack // TypeDefIndex: 55614
+	[Description("All audio clips played by this track will be send to the selected AudioMixer if any.")]
+	[Icon(typeof(AudioClip))]
+	[Name("Audio Track")]
+	public abstract class AudioTrack : CutsceneTrack // TypeDefIndex: 58255
 	{
 		// Fields
+		[SerializeField]
 		protected AudioMixerGroup _outputMixer; // 0x50
+		[Range(0f, 1f)]
+		[SerializeField]
 		protected float _masterVolume; // 0x58
+		[Range(-3f, 3f)]
+		[SerializeField]
 		protected float _masterPitch; // 0x5C
+		[Range(-1f, 1f)]
+		[SerializeField]
 		protected float _masterStereoPan; // 0x60
+		[Range(0f, 1f)]
+		[SerializeField]
 		protected float _masterSpatialBlend; // 0x64
+		[SerializeField]
 		protected bool _ignoreTimeScale; // 0x68
+		[SerializeField]
 		protected bool _bypassReverb; // 0x69
+		[CompilerGenerated]
 		private AudioSource _source_k__BackingField; // 0x70
+		[CompilerGenerated]
 		private AudioSampler.SampleSettings _sampleSettings_k__BackingField; // 0x78
 	
 		// Properties
-		public override string info { get; } // 0x000000018B7A15C0-0x000000018B7A1690 
-		public AudioSource source { get; private set; } // 0x0000000181460F70-0x0000000181460F80 0x00000001874BE90C-0x00000001874BE91C
-		public AudioSampler.SampleSettings sampleSettings { get; private set; } // 0x0000000185FD5B60-0x0000000185FD5B80 0x0000000185FD5B80-0x0000000185FD5BA0
-		public AudioMixerGroup mixer { get; } // 0x0000000181460F60-0x0000000181460F70 
-		public virtual bool useAudioSourceOnActor { get; } // 0x00000001814A81B0-0x00000001814A81C0 
+		public override string info { get; } // 0x000000018AC5A52C-0x000000018AC5A5FC 
+		public AudioSource source { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D862B0-0x0000000184D862C0 0x00000001863AD760-0x00000001863AD770
+		public AudioSampler.SampleSettings sampleSettings { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA9B50-0x0000000184DA9B70 0x0000000184DA9B70-0x0000000184DA9B90
+		public AudioMixerGroup mixer { get; } // 0x0000000184D86270-0x0000000184D86280 
+		public virtual bool useAudioSourceOnActor { get; } // 0x00000001812081B0-0x0000000181208610 
 	
 		// Constructors
-		protected AudioTrack() {} // 0x000000018B797FBC-0x000000018B797FD4
+		protected AudioTrack(); // 0x000000018AC50EB0-0x000000018AC50EC8
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7A1400-0x000000018B7A1408
-		protected override void OnReverseEnter() {} // 0x000000018B7A1400-0x000000018B7A1408
-		protected override void OnUpdate(float time, float previousTime) {} // 0x000000018B7A1410-0x000000018B7A1514
-		protected override void OnExit() {} // 0x000000018B7A1408-0x000000018B7A1410
-		protected override void OnReverse() {} // 0x000000018B7A1408-0x000000018B7A1410
-		private void Enable() {} // 0x000000018B7A1324-0x000000018B7A1400
-		private void Disable() {} // 0x000000018B7A12C4-0x000000018B7A1324
-		private void SetAndApplySettings() {} // 0x000000018B7A1514-0x000000018B7A15B4
-		public void SetVolume(float volume) {} // 0x000000018B7A15B4-0x000000018B7A15C0
+		protected override void OnEnter(); // 0x000000018AC5A36C-0x000000018AC5A374
+		protected override void OnReverseEnter(); // 0x000000018AC5A36C-0x000000018AC5A374
+		protected override void OnUpdate(float time, float previousTime); // 0x000000018AC5A37C-0x000000018AC5A480
+		protected override void OnExit(); // 0x000000018AC5A374-0x000000018AC5A37C
+		protected override void OnReverse(); // 0x000000018AC5A374-0x000000018AC5A37C
+		private void Enable(); // 0x000000018AC5A290-0x000000018AC5A36C
+		private void Disable(); // 0x000000018AC5A230-0x000000018AC5A290
+		private void SetAndApplySettings(); // 0x000000018AC5A480-0x000000018AC5A520
+		public void SetVolume(float volume); // 0x000000018AC5A520-0x000000018AC5A52C
 	}
 
-	public class CameraTrack : CutsceneTrack // TypeDefIndex: 55615
+	[Attachable(new System.Type[1] {typeof(DirectorGroup) })]
+	[Description("The Camera Track is the track within wich you create your camera shots and moves. Once the Camera Track becomes active, the Director Camera will be enabled. You can control when the Director Camera takes effect by setting the \'Active Time Offset\', while the Blend In/Out parameters control the ammount of blending there will be from the game camera to the first and the last shot of the track.\nIf you don\'t want a cinematic letterbox effect, you can set CineBox Fade Time to 0.\nIf you don\'t want to use Slate Camera features, you can simply disable or delete this track.")]
+	[Icon(typeof(Camera))]
+	[UniqueElement]
+	public class CameraTrack : CutsceneTrack // TypeDefIndex: 58256
 	{
 		// Fields
 		private static CameraTrack activeCameraTrack; // 0x00
+		[HideInInspector]
+		[SerializeField]
 		private float _startTimeOffset; // 0x50
+		[HideInInspector]
+		[SerializeField]
 		private float _endTimeOffset; // 0x54
+		[HideInInspector]
+		[Slate.Min(0f)]
 		public float _blendIn; // 0x58
+		[HideInInspector]
+		[Slate.Min(0f)]
 		public float _blendOut; // 0x5C
+		[HideInInspector]
 		public Slate.EaseType interpolation; // 0x60
+		[HideInInspector]
+		[Range(0f, 1f)]
 		public float cineBoxFadeTime; // 0x64
+		[HideInInspector]
 		public float appliedSmoothing; // 0x68
+		[HideInInspector]
 		public Camera exitCameraOverride; // 0x70
 		private GameCamera entryCamera; // 0x78
+		[CompilerGenerated]
 		private CameraShot _firstShot_k__BackingField; // 0x80
+		[CompilerGenerated]
 		private CameraShot _lastShot_k__BackingField; // 0x88
+		[CompilerGenerated]
 		private CameraShot _currentShot_k__BackingField; // 0x90
 	
 		// Properties
-		public CameraShot firstShot { get; private set; } // 0x000000018140CF50-0x000000018140CF60 0x00000001873CBE98-0x00000001873CBEA8
-		public CameraShot lastShot { get; private set; } // 0x0000000185FB0510-0x0000000185FB0520 0x0000000186472AA8-0x0000000186472ABC
-		public CameraShot currentShot { get; set; } // 0x0000000181B5FFD0-0x0000000181B5FFE0 0x00000001873CBEA8-0x00000001873CBEBC
-		public override string info { get => default; } // 0x000000018B7A3680-0x000000018B7A36E4 
-		public override float startTime { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x000000018B7A3758-0x000000018B7A37AC
-		public override float endTime { get => default; set {} } // 0x000000018B7A3654-0x000000018B7A3680 0x000000018B7A36E4-0x000000018B7A3758
-		public override float blendIn { get => default; set {} } // 0x000000018B7A3500-0x000000018B7A35A8 0x0000000181DE28C0-0x0000000181DE28D0
-		public override float blendOut { get => default; set {} } // 0x000000018B7A35A8-0x000000018B7A3654 0x0000000185FBD3C0-0x0000000185FBD3D0
+		public CameraShot firstShot { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86260-0x0000000184D86270 0x0000000184CD9970-0x0000000184CD9980
+		public CameraShot lastShot { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D861F0-0x0000000184D86200 0x0000000185395D30-0x0000000185395D44
+		public CameraShot currentShot { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86220-0x0000000184D86230 0x0000000186402330-0x0000000186402344
+		public override string info { get; } // 0x000000018AC5C604-0x000000018AC5C668 
+		public override float startTime { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x000000018AC5C6DC-0x000000018AC5C730
+		public override float endTime { get; set; } // 0x000000018AC5C5D8-0x000000018AC5C604 0x000000018AC5C668-0x000000018AC5C6DC
+		public override float blendIn { get; set; } // 0x000000018AC5C484-0x000000018AC5C52C 0x0000000184D88430-0x0000000184D88440
+		public override float blendOut { get; set; } // 0x000000018AC5C52C-0x000000018AC5C5D8 0x0000000184D91510-0x0000000184D91520
 	
 		// Constructors
-		public CameraTrack() {} // 0x000000018B7A34E8-0x000000018B7A3500
+		public CameraTrack(); // 0x000000018AC5C46C-0x000000018AC5C484
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7A2D40-0x000000018B7A2F5C
-		protected override void OnUpdate(float time, float previousTime) {} // 0x000000018B7A3130-0x000000018B7A3468
-		protected override void OnExit() {} // 0x000000018B7A2F5C-0x000000018B7A2FF8
-		protected override void OnReverseEnter() {} // 0x000000018B7A2FF8-0x000000018B7A3094
-		protected override void OnReverse() {} // 0x000000018B7A3094-0x000000018B7A3130
-		private bool _OnEnter_b__36_0(ActionClip s) => default; // 0x000000018B7A3468-0x000000018B7A34A0
-		private bool _OnEnter_b__36_1(ActionClip s) => default; // 0x000000018B7A34A0-0x000000018B7A34E8
+		protected override void OnEnter(); // 0x000000018AC5BCC4-0x000000018AC5BEE0
+		protected override void OnUpdate(float time, float previousTime); // 0x000000018AC5C0B4-0x000000018AC5C3EC
+		protected override void OnExit(); // 0x000000018AC5BEE0-0x000000018AC5BF7C
+		protected override void OnReverseEnter(); // 0x000000018AC5BF7C-0x000000018AC5C018
+		protected override void OnReverse(); // 0x000000018AC5C018-0x000000018AC5C0B4
+		[CompilerGenerated]
+		private bool _OnEnter_b__36_0(ActionClip s); // 0x000000018AC5C3EC-0x000000018AC5C424
+		[CompilerGenerated]
+		private bool _OnEnter_b__36_1(ActionClip s); // 0x000000018AC5C424-0x000000018AC5C46C
 	}
 
-	public class DirectorActionTrack : ActionTrack // TypeDefIndex: 55616
+	[Attachable(new System.Type[1] {typeof(DirectorGroup) })]
+	public class DirectorActionTrack : ActionTrack // TypeDefIndex: 58257
 	{
 		// Constructors
-		public DirectorActionTrack() {} // 0x000000018B797FB4-0x000000018B797FBC
+		public DirectorActionTrack(); // 0x000000018AC50EA8-0x000000018AC50EB0
 	}
 
-	public class DirectorAudioTrack : Slate.AudioTrack // TypeDefIndex: 55617
+	[Attachable(new System.Type[1] {typeof(DirectorGroup) })]
+	public class DirectorAudioTrack : Slate.AudioTrack // TypeDefIndex: 58258
 	{
 		// Constructors
-		public DirectorAudioTrack() {} // 0x000000018B797FBC-0x000000018B797FD4
+		public DirectorAudioTrack(); // 0x000000018AC50EB0-0x000000018AC50EC8
 	}
 
-	public class DirectorPropertiesTrack : PropertiesTrack // TypeDefIndex: 55618
+	[Attachable(new System.Type[1] {typeof(DirectorGroup) })]
+	[Description("Use the Director Properties Track to animate any component property of the Director Camera. This is particularly useful to animate image effects rather than transforms, since transforms are handled by the CameraTrack and it\'s Shot Clips. You can still animate transforms if you are after a one-take, by having a CameraTrack without shot clips.")]
+	public class DirectorPropertiesTrack : PropertiesTrack // TypeDefIndex: 58259
 	{
 		// Constructors
-		public DirectorPropertiesTrack() {} // 0x000000018B798220-0x000000018B798228
+		public DirectorPropertiesTrack(); // 0x000000018AC51114-0x000000018AC5111C
 	}
 
-	public class VideoTrack : CutsceneTrack // TypeDefIndex: 55619
+	[Attachable(new System.Type[1] {typeof(DirectorGroup) })]
+	[Description("Plays video clips on the render camera. Please note that scrubbing might be choppy, but playing is not.")]
+	[Icon(typeof(VideoPlayer))]
+	[UniqueElement]
+	public class VideoTrack : CutsceneTrack // TypeDefIndex: 58260
 	{
 		// Fields
 		public VideoSampler.VideoRenderTarget renderTarget; // 0x50
 		public VideoAspectRatio aspectRatio; // 0x54
+		[CompilerGenerated]
 		private VideoPlayer _source_k__BackingField; // 0x58
 	
 		// Properties
-		public VideoPlayer source { get; private set; } // 0x00000001813F1630-0x00000001813F1640 0x0000000186472DB0-0x0000000186472DC0
-		public override string info { get => default; } // 0x000000018B7AE514-0x000000018B7AF0E8 
+		public VideoPlayer source { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000182E56440-0x0000000182E56460 0x00000001836E5590-0x00000001836E55A0
+		public override string info { get; } // 0x000000018AC675C0-0x000000018AC67E58 
 	
 		// Constructors
-		public VideoTrack() {} // 0x000000018B7AE504-0x000000018B7AE514
+		public VideoTrack(); // 0x000000018AC675B0-0x000000018AC675C0
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7AE4F4-0x000000018B7AE4FC
-		protected override void OnReverseEnter() {} // 0x000000018B7AE4F4-0x000000018B7AE4FC
-		protected override void OnReverse() {} // 0x000000018B7AE4FC-0x000000018B7AE504
-		protected override void OnExit() {} // 0x000000018B7AE4FC-0x000000018B7AE504
-		private void Enable() {} // 0x000000018B7AE490-0x000000018B7AE4F4
-		private void Disable() {} // 0x000000018B7AE444-0x000000018B7AE490
+		protected override void OnEnter(); // 0x000000018AC675A0-0x000000018AC675A8
+		protected override void OnReverseEnter(); // 0x000000018AC675A0-0x000000018AC675A8
+		protected override void OnReverse(); // 0x000000018AC675A8-0x000000018AC675B0
+		protected override void OnExit(); // 0x000000018AC675A8-0x000000018AC675B0
+		private void Enable(); // 0x000000018AC6753C-0x000000018AC675A0
+		private void Disable(); // 0x000000018AC674F0-0x000000018AC6753C
 	}
 
-	public abstract class PropertiesTrack : CutsceneTrack, IKeyable // TypeDefIndex: 55620
+	[Category("Legacy")]
+	[Description("With the Properties Track, you can select to animate any supported type property or field on any component on the actor, or within it\'s whole transform hierarchy.\n\nNote, that you can do exactly the same, by using the \'Animate Properties\' ActionClip added in an \'Action Track\'.")]
+	[Name("Properties Track")]
+	[UniqueElement]
+	public abstract class PropertiesTrack : CutsceneTrack, IKeyable // TypeDefIndex: 58261
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private AnimationDataCollection _animationData; // 0x50
 	
 		// Properties
-		public AnimationDataCollection animationData { get; } // 0x0000000181460F60-0x0000000181460F70 
-		public object animatedParametersTarget { get; } // 0x000000018B7AD164-0x000000018B7AD16C 
+		public AnimationDataCollection animationData { get; } // 0x0000000184D86270-0x0000000184D86280 
+		public object animatedParametersTarget { get; } // 0x000000018AC661CC-0x000000018AC661D4 
 	
 		// Constructors
-		protected PropertiesTrack() {} // 0x000000018B7AD10C-0x000000018B7AD164
+		protected PropertiesTrack(); // 0x000000018AC66174-0x000000018AC661CC
 	
 		// Methods
-		protected override void OnAfterValidate() {} // 0x000000018B7AD018-0x000000018B7AD040
-		protected override void OnEnter() {} // 0x000000018B7AD040-0x000000018B7AD094
-		protected override void OnUpdate(float time, float previousTime) {} // 0x000000018B7AD0B4-0x000000018B7AD10C
-		protected override void OnReverse() {} // 0x000000018B7AD094-0x000000018B7AD0B4
+		protected override void OnAfterValidate(); // 0x000000018AC66080-0x000000018AC660A8
+		protected override void OnEnter(); // 0x000000018AC660A8-0x000000018AC660FC
+		protected override void OnUpdate(float time, float previousTime); // 0x000000018AC6611C-0x000000018AC66174
+		protected override void OnReverse(); // 0x000000018AC660FC-0x000000018AC6611C
 	}
 
-	public abstract class ActionClip : MonoBehaviour, IKeyable // TypeDefIndex: 55621
+	[Attachable(new System.Type[1] {typeof(ActionTrack) })]
+	public abstract class ActionClip : MonoBehaviour, IKeyable // TypeDefIndex: 58262
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _startTime; // 0x18
+		[HideInInspector]
+		[SerializeField]
 		private AnimationDataCollection _animationData; // 0x20
+		[CompilerGenerated]
 		private IDirectable _parent_k__BackingField; // 0x28
+		[CompilerGenerated]
 		private bool _isHighlight_k__BackingField; // 0x30
 		[NonSerialized]
 		private string[] _cachedAnimParamPaths; // 0x38
 	
 		// Properties
-		public IDirector root { get; } // 0x000000018B797CBC-0x000000018B797CDC 
-		public IDirectable parent { get; private set; } // 0x00000001813B8590-0x00000001813B85A0 0x0000000184A4EDC0-0x0000000184A4EDD0
-		public GameObject actor { get; } // 0x000000018B7979A8-0x000000018B7979C8 
-		IEnumerable<IDirectable> IDirectable.children { get; } // 0x00000001813AE580-0x00000001813AE590 
-		public AnimationDataCollection animationData { get; private set; } // 0x00000001813B31A0-0x00000001813B31B0 0x000000018646EE40-0x000000018646EE50
-		public float startTime { get; set; } // 0x0000000181C9AC50-0x0000000181C9AC60 0x000000018B797EB8-0x000000018B797FB4
-		public float endTime { get; set; } // 0x000000018B797A00-0x000000018B797A2C 0x000000018B797D9C-0x000000018B797EB8
-		public bool isActive { get; } // 0x000000018B797BB0-0x000000018B797BEC 
-		public bool isCollapsed { get; } // 0x000000018B797BEC-0x000000018B797C0C 
-		public bool isLocked { get; } // 0x000000018B797C0C-0x000000018B797C2C 
-		public virtual float length { get; set; } // 0x0000000183908D00-0x0000000183908D10 0x0000000185492010-0x0000000185492020
-		public virtual float blendIn { get; set; } // 0x0000000183908D00-0x0000000183908D10 0x0000000185492010-0x0000000185492020
-		public virtual float blendOut { get; set; } // 0x0000000183908D00-0x0000000183908D10 0x0000000185492010-0x0000000185492020
-		public virtual bool canCrossBlend { get; } // 0x00000001814A81B0-0x00000001814A81C0 
-		public virtual string info { get; } // 0x000000018B797B0C-0x000000018B797BB0 
-		public virtual bool isValid { get; } // 0x000000018B797C4C-0x000000018B797C9C 
-		public virtual UnityEngine.Color color { get; } // 0x00000001880C4FCC-0x00000001880C4FEC 
-		public virtual UnityEngine.Color textColor { get; } // 0x000000018646DC68-0x000000018646DC88 
-		public virtual int textSizeInner { get; } // 0x0000000185FB6A00-0x0000000185FB6A10 
-		public virtual int textSizeOuter { get; } // 0x0000000183056920-0x0000000183056930 
-		public virtual float interval { get; } // 0x0000000183908D00-0x0000000183908D10 
-		public virtual string url { get; } // 0x000000018B797CDC-0x000000018B797D9C 
-		public virtual bool isHighlight { get; set; } // 0x00000001814294C0-0x00000001814294D0 0x000000018142A360-0x000000018142A370
-		public bool isReadOnly { get; } // 0x000000018B797C2C-0x000000018B797C4C 
-		public virtual TransformSpace defaultTransformSpace { get; } // 0x00000001813AE580-0x00000001813AE590 
-		private string[] animatedParameterPaths { get; } // 0x000000018B7979C8-0x000000018B797A00 
-		private bool handleParametersRegistrationManually { get; } // 0x000000018B797A2C-0x000000018B797A50 
-		public virtual object animatedParametersTarget { get; } // 0x0000000185779060-0x0000000185779070 
-		public virtual Slate.EaseType animatedParametersInterpolation { get; } // 0x00000001813AE580-0x00000001813AE590 
-		public virtual bool useWeightInParameters { get; } // 0x00000001814A81B0-0x00000001814A81C0 
-		public bool hasParameters { get; } // 0x000000018B797AF4-0x000000018B797B0C 
-		public bool hasActiveParameters { get; } // 0x000000018B797A50-0x000000018B797AF4 
-		public virtual bool needActor { get; } // 0x000000018B797C9C-0x000000018B797CBC 
-		public virtual bool canSample { get; } // 0x00000001840A27C0-0x00000001840A27D0 
-		public virtual int updateOrder { get; } // 0x0000000185FBBF90-0x0000000185FBBFA0 
-		string IDirectable.name { get; } // 0x00000001864746E4-0x00000001864746EC 
+		public IDirector root { get; } // 0x000000018AC50B90-0x000000018AC50BB0 
+		public IDirectable parent { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
+		public GameObject actor { get; } // 0x000000018AC5087C-0x000000018AC5089C 
+		IEnumerable<IDirectable> IDirectable.children { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public AnimationDataCollection animationData { get; private set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+		public float startTime { get; set; } // 0x0000000184D86380-0x0000000184D86390 0x000000018AC50DAC-0x000000018AC50EA8
+		public float endTime { get; set; } // 0x000000018AC508D4-0x000000018AC50900 0x000000018AC50C90-0x000000018AC50DAC
+		public bool isActive { get; } // 0x000000018AC50A84-0x000000018AC50AC0 
+		public bool isCollapsed { get; } // 0x000000018AC50AC0-0x000000018AC50AE0 
+		public bool isLocked { get; } // 0x000000018AC50AE0-0x000000018AC50B00 
+		public virtual float length { get; set; } // 0x0000000184D879D0-0x0000000184D879E0 0x00000001841E1670-0x00000001841E1680
+		public virtual float blendIn { get; set; } // 0x0000000184D879D0-0x0000000184D879E0 0x00000001841E1670-0x00000001841E1680
+		public virtual float blendOut { get; set; } // 0x0000000184D879D0-0x0000000184D879E0 0x00000001841E1670-0x00000001841E1680
+		public virtual bool canCrossBlend { get; } // 0x00000001812081B0-0x0000000181208610 
+		public virtual string info { get; } // 0x000000018AC509E0-0x000000018AC50A84 
+		public virtual bool isValid { get; } // 0x000000018AC50B20-0x000000018AC50B70 
+		public virtual UnityEngine.Color color { get; } // 0x000000018A96C614-0x000000018A96C634 
+		public virtual UnityEngine.Color textColor { get; } // 0x000000018AC50BB0-0x000000018AC50BD0 
+		public virtual int textSizeInner { get; } // 0x0000000184DA5360-0x0000000184DA5370 
+		public virtual int textSizeOuter { get; } // 0x0000000184DA4FC0-0x0000000184DA4FD0 
+		public virtual float interval { get; } // 0x0000000184D879D0-0x0000000184D879E0 
+		public virtual string url { get; } // 0x000000018AC50BD0-0x000000018AC50C90 
+		public virtual bool isHighlight { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D865F0-0x0000000184D86600 0x0000000184D86620-0x0000000184D86630
+		public bool isReadOnly { get; } // 0x000000018AC50B00-0x000000018AC50B20 
+		public virtual TransformSpace defaultTransformSpace { get; } // 0x00000001811EC580-0x00000001811EC590 
+		private string[] animatedParameterPaths { get; } // 0x000000018AC5089C-0x000000018AC508D4 
+		private bool handleParametersRegistrationManually { get; } // 0x000000018AC50900-0x000000018AC50924 
+		public virtual object animatedParametersTarget { get; } // 0x000000018464E630-0x000000018464E640 
+		public virtual Slate.EaseType animatedParametersInterpolation { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public virtual bool useWeightInParameters { get; } // 0x00000001812081B0-0x0000000181208610 
+		public bool hasParameters { get; } // 0x000000018AC509C8-0x000000018AC509E0 
+		public bool hasActiveParameters { get; } // 0x000000018AC50924-0x000000018AC509C8 
+		public virtual bool needActor { get; } // 0x000000018AC50B70-0x000000018AC50B90 
+		public virtual bool canSample { get; } // 0x0000000182FFF600-0x0000000182FFF610 
+		public virtual int updateOrder { get; } // 0x0000000184DA3400-0x0000000184DA3410 
+		string IDirectable.name { get; } // 0x0000000185396F58-0x0000000185396F60 
 	
 		// Constructors
-		protected ActionClip() {} // 0x000000018646DB20-0x000000018646DB28
+		protected ActionClip(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		bool IDirectable.Initialize() => default; // 0x000000018B797320-0x000000018B797330
-		void IDirectable.Enter() {} // 0x000000018B7972EC-0x000000018B797310
-		void IDirectable.Update(float time, float previousTime) {} // 0x000000018B7973B0-0x000000018B7973F4
-		void IDirectable.Exit() {} // 0x000000018B797310-0x000000018B797320
-		void IDirectable.ReverseEnter() {} // 0x000000018B797330-0x000000018B797340
-		void IDirectable.Reverse() {} // 0x000000018B797340-0x000000018B797364
-		void IDirectable.RootEnabled() {} // 0x000000018B79737C-0x000000018B797394
-		void IDirectable.RootDisabled() {} // 0x000000018B797364-0x000000018B79737C
-		void IDirectable.RootUpdated(float time, float previousTime) {} // 0x000000018B797394-0x000000018B7973B0
-		void IDirectable.RootDestroyed() {} // 0x0000000185FACE20-0x0000000185FACE30
-		public void PostCreate(IDirectable parent) {} // 0x000000018B79719C-0x000000018B7971D0
-		public void Validate() {} // 0x000000018B797954-0x000000018B797964
-		public void Validate(IDirector root, IDirectable parent) {} // 0x000000018B797964-0x000000018B7979A8
-		protected virtual bool OnInitialize() => default; // 0x00000001840A27C0-0x00000001840A27D0
-		protected virtual void OnEnter() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnUpdate(float time, float previousTime) {} // 0x000000018B79718C-0x000000018B79719C
-		protected virtual void OnUpdate(float time) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnExit() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnReverse() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnReverseEnter() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnDrawGizmosSelected() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnSceneGUI() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnCreate() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnAfterValidate() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnRootEnabled() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnRootDisabled() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnRootUpdated(float time, float previousTime) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnRootDestroyed() {} // 0x0000000185492010-0x0000000185492020
-		public bool RootTimeWithinRange() => default; // 0x000000018B79721C-0x000000018B797224
-		public Vector3 TransformPosition(Vector3 point, TransformSpace space) => default; // 0x000000018B7973F4-0x000000018B797440
-		public Vector3 InverseTransformPosition(Vector3 point, TransformSpace space) => default; // 0x000000018B7970FC-0x000000018B797148
-		public Quaternion TransformRotation(Vector3 euler, TransformSpace space) => default; // 0x000000018B797440-0x000000018B797484
-		public Vector3 InverseTransformRotation(Quaternion rot, TransformSpace space) => default; // 0x000000018B797148-0x000000018B79718C
-		public Vector3 ActorPositionInSpace(TransformSpace space) => default; // 0x000000018B796E8C-0x000000018B796EBC
-		public Transform GetSpaceTransform(TransformSpace space, GameObject actorOverride = null) => default; // 0x000000018B7970F4-0x000000018B7970FC
-		public ActionClip GetPreviousClip() => default; // 0x000000018B7970B8-0x000000018B7970F4
-		public ActionClip GetNextClip() => default; // 0x000000018B79705C-0x000000018B797098
-		public float GetClipWeight() => default; // 0x000000018B796F98-0x000000018B796FD4
-		public float GetClipWeight(float time) => default; // 0x000000018B797000-0x000000018B79705C
-		public float GetClipWeight(float time, float blendInOut) => default; // 0x000000018B796FD4-0x000000018B796FF0
-		public float GetClipWeight(float time, float blendIn, float blendOut) => default; // 0x000000018B796FF0-0x000000018B797000
-		public void TryMatchSubClipLength() {} // 0x000000018B7975C0-0x000000018B79767C
-		public void TryMatchPreviousSubClipLoop() {} // 0x000000018B797558-0x000000018B7975C0
-		public void TryMatchNexSubClipLoop() {} // 0x000000018B797484-0x000000018B797558
-		private string GetParameterName<T, TResult>(Expression<Func<T, TResult>> func) => default;
-		public AnimatedParameter GetParameter<T, TResult>(Expression<Func<T, TResult>> func) => default;
-		public AnimatedParameter GetParameter(string paramName) => default; // 0x000000018B797098-0x000000018B7970B8
-		public void SetParameterEnabled<T, TResult>(Expression<Func<T, TResult>> func, bool enabled) {}
-		public void SetParameterEnabled(string paramName, bool enabled) {} // 0x000000018B797284-0x000000018B7972EC
-		public void ResetAnimatedParameters() {} // 0x000000018B7971D0-0x000000018B7971E4
-		private void CreateAnimationDataCollection() {} // 0x000000018B796EBC-0x000000018B796F98
-		private void ValidateAnimParams() {} // 0x000000018B797758-0x000000018B797954
-		private void SetAnimParamsSnapshot() {} // 0x000000018B797224-0x000000018B797284
-		private void UpdateAnimParams(float time, float previousTime) {} // 0x000000018B79767C-0x000000018B797758
-		private void RestoreAnimParamsSnapshot() {} // 0x000000018B7971E4-0x000000018B79721C
+		bool IDirectable.Initialize(); // 0x000000018AC501F4-0x000000018AC50204
+		void IDirectable.Enter(); // 0x000000018AC501C0-0x000000018AC501E4
+		void IDirectable.Update(float time, float previousTime); // 0x000000018AC50284-0x000000018AC502C8
+		void IDirectable.Exit(); // 0x000000018AC501E4-0x000000018AC501F4
+		void IDirectable.ReverseEnter(); // 0x000000018AC50204-0x000000018AC50214
+		void IDirectable.Reverse(); // 0x000000018AC50214-0x000000018AC50238
+		void IDirectable.RootEnabled(); // 0x000000018AC50250-0x000000018AC50268
+		void IDirectable.RootDisabled(); // 0x000000018AC50238-0x000000018AC50250
+		void IDirectable.RootUpdated(float time, float previousTime); // 0x000000018AC50268-0x000000018AC50284
+		void IDirectable.RootDestroyed(); // 0x0000000184D83230-0x0000000184D83240
+		public void PostCreate(IDirectable parent); // 0x000000018AC50070-0x000000018AC500A4
+		public void Validate(); // 0x000000018AC50828-0x000000018AC50838
+		public void Validate(IDirector root, IDirectable parent); // 0x000000018AC50838-0x000000018AC5087C
+		protected virtual bool OnInitialize(); // 0x0000000182FFF600-0x0000000182FFF610
+		protected virtual void OnEnter(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnUpdate(float time, float previousTime); // 0x000000018AC50060-0x000000018AC50070
+		protected virtual void OnUpdate(float time); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnExit(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnReverse(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnReverseEnter(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnDrawGizmosSelected(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnSceneGUI(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnCreate(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnAfterValidate(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnRootEnabled(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnRootDisabled(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnRootUpdated(float time, float previousTime); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnRootDestroyed(); // 0x00000001841E1670-0x00000001841E1680
+		public bool RootTimeWithinRange(); // 0x000000018AC500F0-0x000000018AC500F8
+		public Vector3 TransformPosition(Vector3 point, TransformSpace space); // 0x000000018AC502C8-0x000000018AC50314
+		public Vector3 InverseTransformPosition(Vector3 point, TransformSpace space); // 0x000000018AC4FFD0-0x000000018AC5001C
+		public Quaternion TransformRotation(Vector3 euler, TransformSpace space); // 0x000000018AC50314-0x000000018AC50358
+		public Vector3 InverseTransformRotation(Quaternion rot, TransformSpace space); // 0x000000018AC5001C-0x000000018AC50060
+		public Vector3 ActorPositionInSpace(TransformSpace space); // 0x000000018AC4FD60-0x000000018AC4FD90
+		public Transform GetSpaceTransform(TransformSpace space, GameObject actorOverride = null); // 0x000000018AC4FFC8-0x000000018AC4FFD0
+		public ActionClip GetPreviousClip(); // 0x000000018AC4FF8C-0x000000018AC4FFC8
+		public ActionClip GetNextClip(); // 0x000000018AC4FF30-0x000000018AC4FF6C
+		public float GetClipWeight(); // 0x000000018AC4FE6C-0x000000018AC4FEA8
+		public float GetClipWeight(float time); // 0x000000018AC4FED4-0x000000018AC4FF30
+		public float GetClipWeight(float time, float blendInOut); // 0x000000018AC4FEA8-0x000000018AC4FEC4
+		public float GetClipWeight(float time, float blendIn, float blendOut); // 0x000000018AC4FEC4-0x000000018AC4FED4
+		public void TryMatchSubClipLength(); // 0x000000018AC50494-0x000000018AC50550
+		public void TryMatchPreviousSubClipLoop(); // 0x000000018AC5042C-0x000000018AC50494
+		public void TryMatchNexSubClipLoop(); // 0x000000018AC50358-0x000000018AC5042C
+		private string GetParameterName<T, TResult>(Expression<Func<T, TResult>> func);
+		public AnimatedParameter GetParameter<T, TResult>(Expression<Func<T, TResult>> func);
+		public AnimatedParameter GetParameter(string paramName); // 0x000000018AC4FF6C-0x000000018AC4FF8C
+		public void SetParameterEnabled<T, TResult>(Expression<Func<T, TResult>> func, bool enabled);
+		public void SetParameterEnabled(string paramName, bool enabled); // 0x000000018AC50158-0x000000018AC501C0
+		public void ResetAnimatedParameters(); // 0x000000018AC500A4-0x000000018AC500B8
+		private void CreateAnimationDataCollection(); // 0x000000018AC4FD90-0x000000018AC4FE6C
+		private void ValidateAnimParams(); // 0x000000018AC5062C-0x000000018AC50828
+		private void SetAnimParamsSnapshot(); // 0x000000018AC500F8-0x000000018AC50158
+		private void UpdateAnimParams(float time, float previousTime); // 0x000000018AC50550-0x000000018AC5062C
+		private void RestoreAnimParamsSnapshot(); // 0x000000018AC500B8-0x000000018AC500F0
 	}
 
 	[Serializable]
-	public class AnimatedParameter : IAnimatableData, ISerializationCallbackReceiver // TypeDefIndex: 55625
+	public class AnimatedParameter : IAnimatableData, ISerializationCallbackReceiver // TypeDefIndex: 58266
 	{
 		// Fields
+		[CompilerGenerated]
 		private static Action<IAnimatableData> onParameterChanged; // 0x00
+		[SerializeField]
 		private string _serializedData; // 0x10
+		[SerializeField]
 		private bool _isDisabled; // 0x18
+		[SerializeField]
 		private AnimationCurve[] _curves; // 0x20
+		[SerializeField]
 		private string _scriptExpression; // 0x28
 		[NonSerialized]
 		private SerializationMetaData _data; // 0x30
 		[NonSerialized]
 		private IAnimatedParameterModel _parameterModel; // 0x38
+		[CompilerGenerated]
 		private IKeyable _keyable_k__BackingField; // 0x40
+		[CompilerGenerated]
 		private float[] _snapshot_k__BackingField; // 0x48
+		[CompilerGenerated]
 		private float[] _lastEval_k__BackingField; // 0x50
+		[CompilerGenerated]
 		private Transform _virtualTransformParent_k__BackingField; // 0x58
 		private static Dictionary<System.Type, System.Type> parameterModelsMap; // 0x08
 		public static readonly System.Type[] supportedTypes; // 0x10
@@ -1222,319 +1502,339 @@ namespace Slate
 		private object _resolvedMemberObject; // 0x68
 	
 		// Properties
-		public bool enabled { get => default; } // 0x000000018B79A658-0x000000018B79A678 
-		private string serializedData { get => default; set {} } // 0x000000018B79A948-0x000000018B79A968 0x000000018B79A6E4-0x000000018B79A704
-		private SerializationMetaData data { get => default; } // 0x000000018B79A908-0x000000018B79A928 
-		public IAnimatedParameterModel parameterModel { get => default; } // 0x000000018B79A704-0x000000018B79A724 
-		public AnimationCurve[] curves { get => default; private set {} } // 0x000000018B79A754-0x000000018B79A76C 0x00000001813FF010-0x00000001813FF020
-		public string scriptExpression { get => default; set {} } // 0x0000000185F05C80-0x0000000185F05C90 0x00000001813ECF20-0x00000001813ECF30
-		public bool hasActiveExpression { get => default; } // 0x000000018571FEC0-0x000000018571FED0 
-		public string parameterName { get => default; } // 0x0000000181460F60-0x0000000181460F70 
-		public System.Type animatedType { get => default; } // 0x0000000184A4E570-0x0000000184A4E580 
-		public ParameterType parameterType { get => default; } // 0x00000001813F1630-0x00000001813F1640 
-		public string transformHierarchyPath { get => default; } // 0x0000000186472DB0-0x0000000186472DC0 
-		public System.Type declaringType { get => default; } // 0x000000018B79A928-0x000000018B79A948 
-		public PropertyInfo property { get => default; } // 0x000000018B79A580-0x000000018B79A658 
-		public System.Reflection.FieldInfo field { get => default; } // 0x000000018B79A73C-0x000000018B79A754 
-		public bool isProperty { get => default; } // 0x000000018B79A76C-0x000000018B79A7DC 
-		public IKeyable keyable { get; private set; } // 0x000000018B79A0FC-0x000000018B79A36C 0x000000018B79A36C-0x000000018B79A4BC
-		private float[] snapshot { get; set; } // 0x000000018B798594-0x000000018B798764 0x000000018B798764-0x000000018B7989A8
-		private float[] lastEval { get; set; } // 0x000000018B7993EC-0x000000018B799430 0x00000001813B31A0-0x00000001813B31B0
-		private Transform virtualTransformParent { get; set; } // 0x000000018B7984C0-0x000000018B798594 0x000000018B7994C4-0x000000018B7995A0
-		public object targetObject { get => default; } // 0x0000000185F05C80-0x0000000185F05C90 
-		public AnimatableParameterAttribute animatableAttribute { get => default; } // 0x0000000186472DB0-0x0000000186472DC0 
-		public bool isExternal { get => default; } // 0x000000018B799FB8-0x000000018B79A028 
-		public bool isValid { get => default; } // 0x000000018B79A030-0x000000018B79A090 
+		public bool enabled { get; } // 0x000000018AA1EEF0-0x000000018AA1EEF8 
+		private string serializedData { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		private SerializationMetaData data { get; } // 0x000000018AC535E4-0x000000018AC53650 
+		public IAnimatedParameterModel parameterModel { get; } // 0x000000018AC53748-0x000000018AC53834 
+		public AnimationCurve[] curves { get; private set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+		public string scriptExpression { get; set; } // 0x0000000184D86240-0x0000000184D86250 0x000000018AC53998-0x000000018AC539D0
+		public bool hasActiveExpression { get; } // 0x000000018AC53690-0x000000018AC536A8 
+		public string parameterName { get; } // 0x000000018AC53834-0x000000018AC53854 
+		public System.Type animatedType { get; } // 0x000000018AC535C4-0x000000018AC535E4 
+		public ParameterType parameterType { get; } // 0x000000018AC53854-0x000000018AC53874 
+		public string transformHierarchyPath { get; } // 0x000000018AC538B4-0x000000018AC538D4 
+		public System.Type declaringType { get; } // 0x000000018AC53650-0x000000018AC53670 
+		public PropertyInfo property { get; } // 0x000000018AC53874-0x000000018AC53894 
+		public System.Reflection.FieldInfo field { get; } // 0x000000018AC53670-0x000000018AC53690 
+		public bool isProperty { get; } // 0x000000018AC536C0-0x000000018AC536D8 
+		public IKeyable keyable { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001842B4AE0-0x00000001842B4AF0
+		private float[] snapshot { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
+		private float[] lastEval { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86270-0x0000000184D86280 0x0000000182FDAEA0-0x0000000182FDAEB0
+		private Transform virtualTransformParent { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000182E56440-0x0000000182E56460 0x00000001836E5590-0x00000001836E55A0
+		public object targetObject { get; } // 0x000000018AC53894-0x000000018AC538B4 
+		public AnimatableParameterAttribute animatableAttribute { get; } // 0x000000018AC534EC-0x000000018AC535C4 
+		public bool isExternal { get; } // 0x000000018AC536A8-0x000000018AC536C0 
+		public bool isValid { get; } // 0x000000018AC536D8-0x000000018AC53748 
 	
 		// Events
-		public static event Action<IAnimatableData> onParameterChanged;
+		public static event Action<IAnimatableData> onParameterChanged {
+			add; // 0x000000018AC53428-0x000000018AC534EC
+			remove; // 0x000000018AC538D4-0x000000018AC53998
+		}
 	
 		// Nested types
 		[Serializable]
-		private class SerializationMetaData // TypeDefIndex: 55622
+		private class SerializationMetaData // TypeDefIndex: 58263
 		{
 			// Fields
 			public string parameterName; // 0x10
 			public string declaringTypeName; // 0x18
 			public string transformHierarchyPath; // 0x20
 			public ParameterType parameterType; // 0x28
+			[CompilerGenerated]
 			private System.Type _declaringType_k__BackingField; // 0x30
+			[CompilerGenerated]
 			private PropertyInfo _property_k__BackingField; // 0x38
+			[CompilerGenerated]
 			private System.Reflection.FieldInfo _field_k__BackingField; // 0x40
+			[CompilerGenerated]
 			private System.Type _animatedType_k__BackingField; // 0x48
 	
 			// Properties
-			public System.Type declaringType { get; private set; } // 0x000000018B79A0CC-0x000000018B79A0FC 0x000000018B79A090-0x000000018B79A0CC
-			public PropertyInfo property { get; private set; } // 0x000000018B79A4BC-0x000000018B79A580 0x000000018B79A968-0x000000018B79AA2C
-			public System.Reflection.FieldInfo field { get; private set; } // 0x0000000185F61D60-0x0000000185F61D70 0x000000018B799E6C-0x000000018B799ED8
-			public System.Type animatedType { get; private set; } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
+			public System.Type declaringType { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x00000001811F36E0-0x00000001811F36F0 0x0000000185396200-0x0000000185396210
+			public PropertyInfo property { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85A50-0x0000000184D85A60 0x00000001846A91B0-0x00000001846A91C0
+			public System.Reflection.FieldInfo field { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85A60-0x0000000184D85A70 0x00000001842B4AE0-0x00000001842B4AF0
+			public System.Type animatedType { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
 	
 			// Constructors
-			public SerializationMetaData() {} // 0x000000018B79A7DC-0x000000018B79A8C8
+			public SerializationMetaData(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			public void Deserialize() {} // 0x000000018B79A678-0x000000018B79A6E4
+			public void Deserialize(); // 0x000000018AC66254-0x000000018AC663CC
 		}
 	
-		public enum ParameterType // TypeDefIndex: 55623
+		public enum ParameterType // TypeDefIndex: 58264
 		{
 			NotSet = 0,
 			Property = 1,
 			Field = 2
 		}
 	
-		private sealed class __c__DisplayClass112_0 // TypeDefIndex: 55624
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass112_0 // TypeDefIndex: 58265
 		{
 			// Fields
 			public float time; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass112_0() {} // 0x00000001813B31A0-0x00000001813B31B0
+			public __c__DisplayClass112_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal float _GetKeyLabel_b__0(AnimationCurve c) => default; // 0x000000018646EE40-0x000000018646EE50
+			internal float _GetKeyLabel_b__0(AnimationCurve c); // 0x000000018AC67228-0x000000018AC6724C
 		}
 	
 		// Constructors
-		public AnimatedParameter() {} // Dummy constructor
-		static AnimatedParameter() {} // 0x000000018B798A94-0x000000018B798B20
-		public AnimatedParameter(IKeyable keyable, System.Type type, string memberPath, string transformPath) {} // 0x000000018B7989A8-0x000000018B798A94
+		static AnimatedParameter(); // 0x000000018AC53068-0x000000018AC532D8
+		public AnimatedParameter(IKeyable keyable, System.Type type, string memberPath, string transformPath); // 0x000000018AC532D8-0x000000018AC53428
 	
 		// Methods
-		void ISerializationCallbackReceiver.OnBeforeSerialize() {} // 0x00000001813B8590-0x00000001813B85A0
-		void ISerializationCallbackReceiver.OnAfterDeserialize() {} // 0x000000018B79AA2C-0x000000018B79AA64
-		public void SetEnabled(bool value, float time) {} // 0x000000018B79A8E8-0x000000018B79A908
-		private void ConstructWithField(System.Reflection.FieldInfo targetField, System.Type type, string memberPath, string transformPath) {} // 0x00000001814A81B0-0x00000001814A81C0
-		private void ConstructWithProperty(PropertyInfo targetProperty, System.Type type, string memberPath, string transformPath) {} // 0x000000018B7999A4-0x000000018B799A04
-		public MemberInfo GetMemberInfo() => default; // 0x000000018B7991E4-0x000000018B7992B8
-		public AnimationCurve[] GetCurves() => default; // 0x000000018B799770-0x000000018B7999A4
-		public bool CompareTo(AnimatedParameter other) => default; // 0x000000018B7991A0-0x000000018B7991E4
-		private void InitializeCurves() {} // 0x000000018B798DA0-0x000000018B7991A0
-		public void Validate(IKeyable keyable) {} // 0x000000018B799A04-0x000000018B799A4C
-		public void SetVirtualTransformParent(Transform virtualTransformParent) {} // 0x000000018B799A4C-0x000000018B799E6C
-		public void SetSnapshot() {} // 0x000000018B79943C-0x000000018B7994B4
-		public bool TryAutoKey(float time) => default; // 0x000000018B799430-0x000000018B79943C
-		public void Evaluate(float time, float previousTime, float weight = 1f /* Metadata: 0x0207BF3C */) {} // 0x000000018B7994B4-0x000000018B7994C4
-		private void Evaluate_1_Curves(float time, float previousTime, float weight = 1f /* Metadata: 0x0207BF40 */) {} // 0x000000018B7993CC-0x000000018B7993DC
-		private bool Evaluate_2_Expression(float time, float previousTime, float weight = 1f /* Metadata: 0x0207BF44 */) => default; // 0x000000018B7993DC-0x000000018B7993EC
-		public void RestoreSnapshot() {} // 0x00000001814A81B0-0x00000001814A81C0
-		public object GetEvalValue(float time) => default; // 0x0000000185492010-0x0000000185492020
-		public object ResolvedMemberObject() => default; // 0x0000000185492010-0x0000000185492020
-		public object GetCurrentValueAsObject() => default; // 0x000000018B799F48-0x000000018B799FB8
-		private float[] GetCurrentValueAsFloats() => default; // 0x000000018B799ED8-0x000000018B799F48
-		public void SetCurrentValue(object value) {} // 0x000000018B799618-0x000000018B7996A8
-		private void SetCurrentValue(float[] floats) {} // 0x000000018B7996A8-0x000000018B799770
-		public bool HasChanged() => default; // 0x000000018B798460-0x000000018B7984C0
-		public bool HasAnyKey() => default; // 0x000000018B79A028-0x000000018B79A030
-		public bool HasKey(float time) => default; // 0x000000018B798B20-0x000000018B798DA0
-		public float GetKeyNext(float time) => default; // 0x000000018B7992B8-0x000000018B7993CC
-		public float GetKeyPrevious(float time) => default; // 0x0000000185492010-0x0000000185492020
-		public bool TryKeyIdentity(float time) => default; // 0x000000018B7995A0-0x000000018B799618
-		public void SetKeyCurrent(float time) {} // 0x00000001813B51D0-0x00000001813B51E0
-		public void RemoveKey(float time) {} // 0x00000001864721F0-0x0000000186472200
-		public void SetPreWrapMode(UnityEngine.WrapMode mode) {} // 0x00000001813ECBC0-0x00000001813ECBD0
-		public void SetPostWrapMode(UnityEngine.WrapMode mode) {} // 0x0000000185A16440-0x0000000185A16450
-		public void OffsetValue(object deltaValue) {} // 0x00000001813FF010-0x00000001813FF020
-		public void Reset() {} // 0x0000000185F05C80-0x0000000185F05C90
-		public void ChangeMemberType(ParameterType newType) {} // 0x00000001813ECF20-0x00000001813ECF30
-		public override string ToString() => default; // 0x000000018571FEC0-0x000000018571FED0
-		public string FriendlyName() => default; // 0x000000018B7AD1EC-0x000000018B7AD364
-		public string GetKeyLabel(float time) => default; // 0x0000000185492010-0x0000000185492020
-		private void RecordUndo() {} // 0x0000000185492010-0x0000000185492020
-		private void NotifyChange() {} // 0x000000018B7AE17C-0x000000018B7AE1A0
+		void ISerializationCallbackReceiver.OnBeforeSerialize(); // 0x000000018AC53038-0x000000018AC53068
+		void ISerializationCallbackReceiver.OnAfterDeserialize(); // 0x000000018AC52FFC-0x000000018AC53038
+		public void SetEnabled(bool value, float time); // 0x000000018AC52DD8-0x000000018AC52E44
+		private void ConstructWithField(System.Reflection.FieldInfo targetField, System.Type type, string memberPath, string transformPath); // 0x000000018AC51488-0x000000018AC51658
+		private void ConstructWithProperty(PropertyInfo targetProperty, System.Type type, string memberPath, string transformPath); // 0x000000018AC51658-0x000000018AC5189C
+		public MemberInfo GetMemberInfo(); // 0x000000018AC522E0-0x000000018AC52324
+		public AnimationCurve[] GetCurves(); // 0x0000000184D862C0-0x0000000184D862D0
+		public bool CompareTo(AnimatedParameter other); // 0x000000018AC513B4-0x000000018AC51488
+		private void InitializeCurves(); // 0x000000018AC523B8-0x000000018AC5250C
+		public void Validate(IKeyable keyable); // 0x00000001842B4AE0-0x00000001842B4AF0
+		public void SetVirtualTransformParent(Transform virtualTransformParent); // 0x00000001836E5590-0x00000001836E55A0
+		public void SetSnapshot(); // 0x000000018AC52F24-0x000000018AC52F94
+		public bool TryAutoKey(float time); // 0x000000018AC52F9C-0x000000018AC52FFC
+		public void Evaluate(float time, float previousTime, float weight = 1f /* Metadata: 0x0234BBEC */); // 0x000000018AC51988-0x000000018AC51A14
+		private void Evaluate_1_Curves(float time, float previousTime, float weight = 1f /* Metadata: 0x0234BBF0 */); // 0x000000018AC5189C-0x000000018AC51988
+		private bool Evaluate_2_Expression(float time, float previousTime, float weight = 1f /* Metadata: 0x0234BBF4 */); // 0x00000001812081B0-0x0000000181208610
+		public void RestoreSnapshot(); // 0x000000018AC52910-0x000000018AC52970
+		public object GetEvalValue(float time); // 0x000000018AC520D8-0x000000018AC521AC
+		public object ResolvedMemberObject(); // 0x000000018AC526DC-0x000000018AC52910
+		public object GetCurrentValueAsObject(); // 0x000000018AC52094-0x000000018AC520D8
+		private float[] GetCurrentValueAsFloats(); // 0x000000018AC51C94-0x000000018AC52094
+		public void SetCurrentValue(object value); // 0x000000018AC52970-0x000000018AC529B8
+		private void SetCurrentValue(float[] floats); // 0x000000018AC529B8-0x000000018AC52DD8
+		public bool HasChanged(); // 0x000000018AC52330-0x000000018AC523A8
+		public bool HasAnyKey(); // 0x000000018AC52324-0x000000018AC52330
+		public bool HasKey(float time); // 0x000000018AC523A8-0x000000018AC523B8
+		public float GetKeyNext(float time); // 0x000000018AC522C0-0x000000018AC522D0
+		public float GetKeyPrevious(float time); // 0x000000018AC522D0-0x000000018AC522E0
+		public bool TryKeyIdentity(float time); // 0x00000001812081B0-0x0000000181208610
+		public void SetKeyCurrent(float time); // 0x00000001841E1670-0x00000001841E1680
+		public void RemoveKey(float time); // 0x00000001841E1670-0x00000001841E1680
+		public void SetPreWrapMode(UnityEngine.WrapMode mode); // 0x000000018AC52EB4-0x000000018AC52F24
+		public void SetPostWrapMode(UnityEngine.WrapMode mode); // 0x000000018AC52E44-0x000000018AC52EB4
+		public void OffsetValue(object deltaValue); // 0x000000018AC52584-0x000000018AC52614
+		public void Reset(); // 0x000000018AC52614-0x000000018AC526DC
+		public void ChangeMemberType(ParameterType newType); // 0x000000018AC51354-0x000000018AC513B4
+		public override string ToString(); // 0x000000018AC52F94-0x000000018AC52F9C
+		public string FriendlyName(); // 0x000000018AC51A14-0x000000018AC51C94
+		public string GetKeyLabel(float time); // 0x000000018AC521AC-0x000000018AC522C0
+		private void RecordUndo(); // 0x00000001841E1670-0x00000001841E1680
+		private void NotifyChange(); // 0x000000018AC5250C-0x000000018AC52584
 	}
 
-	public interface IAnimatedParameterModel // TypeDefIndex: 55626
+	public interface IAnimatedParameterModel // TypeDefIndex: 58267
 	{
 		// Methods
 		bool ForceStepMode();
 		int RequiredCurvesCount();
-		object ConvertToObject(float[] floats);
+		object ConvertToObject(params float[] floats);
 		float[] ConvertToFloats(object value);
-		string GetKeyLabel(float[] floats);
-		void SetDirect(object target, MemberInfo info, float[] floats);
+		string GetKeyLabel(params float[] floats);
+		void SetDirect(object target, MemberInfo info, params float[] floats);
 		float[] GetDirect(object target, MemberInfo info);
 	}
 
-	public struct Animated_Bool : IAnimatedParameterModel // TypeDefIndex: 55627
+	[Decorator(typeof(bool))]
+	public struct Animated_Bool : IAnimatedParameterModel // TypeDefIndex: 58268
 	{
 		// Fields
 		private Action<object, bool> setter; // 0x00
 	
 		// Methods
-		public bool ForceStepMode() => default; // 0x00000001840A27C0-0x00000001840A27D0
-		public int RequiredCurvesCount() => default; // 0x0000000181B87DE0-0x0000000181B87DF0
-		public object ConvertToObject(float[] floats) => default; // 0x000000018B79AB00-0x000000018B79AB64
-		public float[] ConvertToFloats(object value) => default; // 0x000000018B79AA64-0x000000018B79AB00
-		public string GetKeyLabel(float[] floats) => default; // 0x000000018B79AC38-0x000000018B79ACBC
-		public void SetDirect(object target, MemberInfo info, float[] floats) {} // 0x000000018B79ACBC-0x000000018B79AD80
-		public float[] GetDirect(object target, MemberInfo info) => default; // 0x000000018B79AB64-0x000000018B79AC38
+		public bool ForceStepMode(); // 0x0000000182FFF600-0x0000000182FFF610
+		public int RequiredCurvesCount(); // 0x0000000184D85B80-0x0000000184D85B90
+		public object ConvertToObject(params float[] floats); // 0x000000018AC53A6C-0x000000018AC53AD0
+		public float[] ConvertToFloats(object value); // 0x000000018AC539D0-0x000000018AC53A6C
+		public string GetKeyLabel(params float[] floats); // 0x000000018AC53BA4-0x000000018AC53C28
+		public void SetDirect(object target, MemberInfo info, params float[] floats); // 0x000000018AC53C28-0x000000018AC53CEC
+		public float[] GetDirect(object target, MemberInfo info); // 0x000000018AC53AD0-0x000000018AC53BA4
 	}
 
-	public struct Animated_Int : IAnimatedParameterModel // TypeDefIndex: 55628
+	[Decorator(typeof(int))]
+	public struct Animated_Int : IAnimatedParameterModel // TypeDefIndex: 58269
 	{
 		// Fields
 		private Action<object, int> setter; // 0x00
 	
 		// Methods
-		public bool ForceStepMode() => default; // 0x00000001840A27C0-0x00000001840A27D0
-		public int RequiredCurvesCount() => default; // 0x0000000181B87DE0-0x0000000181B87DF0
-		public object ConvertToObject(float[] floats) => default; // 0x000000018B79BC74-0x000000018B79BCD0
-		public float[] ConvertToFloats(object value) => default; // 0x000000018B79BBE8-0x000000018B79BC74
-		public string GetKeyLabel(float[] floats) => default; // 0x000000018B79BD90-0x000000018B79BE0C
-		public void SetDirect(object target, MemberInfo info, float[] floats) {} // 0x000000018B79BE0C-0x000000018B79BEC4
-		public float[] GetDirect(object target, MemberInfo info) => default; // 0x000000018B79BCD0-0x000000018B79BD90
+		public bool ForceStepMode(); // 0x0000000182FFF600-0x0000000182FFF610
+		public int RequiredCurvesCount(); // 0x0000000184D85B80-0x0000000184D85B90
+		public object ConvertToObject(params float[] floats); // 0x000000018AC54BE0-0x000000018AC54C3C
+		public float[] ConvertToFloats(object value); // 0x000000018AC54B54-0x000000018AC54BE0
+		public string GetKeyLabel(params float[] floats); // 0x000000018AC54CFC-0x000000018AC54D78
+		public void SetDirect(object target, MemberInfo info, params float[] floats); // 0x000000018AC54D78-0x000000018AC54E30
+		public float[] GetDirect(object target, MemberInfo info); // 0x000000018AC54C3C-0x000000018AC54CFC
 	}
 
-	public struct Animated_Float : IAnimatedParameterModel // TypeDefIndex: 55629
+	[Decorator(typeof(float))]
+	public struct Animated_Float : IAnimatedParameterModel // TypeDefIndex: 58270
 	{
 		// Fields
 		private Action<object, float> setter; // 0x00
 	
 		// Methods
-		public bool ForceStepMode() => default; // 0x00000001814A81B0-0x00000001814A81C0
-		public int RequiredCurvesCount() => default; // 0x0000000181B87DE0-0x0000000181B87DF0
-		public object ConvertToObject(float[] floats) => default; // 0x000000018B79B994-0x000000018B79B9F4
-		public float[] ConvertToFloats(object value) => default; // 0x000000018B79B90C-0x000000018B79B994
-		public string GetKeyLabel(float[] floats) => default; // 0x000000018B79BAB4-0x000000018B79BB30
-		public void SetDirect(object target, MemberInfo info, float[] floats) {} // 0x000000018B79BB30-0x000000018B79BBE8
-		public float[] GetDirect(object target, MemberInfo info) => default; // 0x000000018B79B9F4-0x000000018B79BAB4
+		public bool ForceStepMode(); // 0x00000001812081B0-0x0000000181208610
+		public int RequiredCurvesCount(); // 0x0000000184D85B80-0x0000000184D85B90
+		public object ConvertToObject(params float[] floats); // 0x000000018AC54900-0x000000018AC54960
+		public float[] ConvertToFloats(object value); // 0x000000018AC54878-0x000000018AC54900
+		public string GetKeyLabel(params float[] floats); // 0x000000018AC54A20-0x000000018AC54A9C
+		public void SetDirect(object target, MemberInfo info, params float[] floats); // 0x000000018AC54A9C-0x000000018AC54B54
+		public float[] GetDirect(object target, MemberInfo info); // 0x000000018AC54960-0x000000018AC54A20
 	}
 
-	public struct Animated_Vector2 : IAnimatedParameterModel // TypeDefIndex: 55630
+	[Decorator(typeof(Vector2))]
+	public struct Animated_Vector2 : IAnimatedParameterModel // TypeDefIndex: 58271
 	{
 		// Fields
 		private Action<object, Vector2> setter; // 0x00
 	
 		// Methods
-		public bool ForceStepMode() => default; // 0x00000001814A81B0-0x00000001814A81C0
-		public int RequiredCurvesCount() => default; // 0x0000000181C6A970-0x0000000181C6A980
-		public object ConvertToObject(float[] floats) => default; // 0x000000018B79C908-0x000000018B79C974
-		public float[] ConvertToFloats(object value) => default; // 0x000000018B79C86C-0x000000018B79C908
-		public string GetKeyLabel(float[] floats) => default; // 0x000000018B79CA48-0x000000018B79CAF8
-		public void SetDirect(object target, MemberInfo info, float[] floats) {} // 0x000000018B79CAF8-0x000000018B79CBC4
-		public float[] GetDirect(object target, MemberInfo info) => default; // 0x000000018B79C974-0x000000018B79CA48
+		public bool ForceStepMode(); // 0x00000001812081B0-0x0000000181208610
+		public int RequiredCurvesCount(); // 0x0000000182BBE540-0x0000000182BBE550
+		public object ConvertToObject(params float[] floats); // 0x000000018AC55874-0x000000018AC558E0
+		public float[] ConvertToFloats(object value); // 0x000000018AC557D8-0x000000018AC55874
+		public string GetKeyLabel(params float[] floats); // 0x000000018AC559B4-0x000000018AC55A64
+		public void SetDirect(object target, MemberInfo info, params float[] floats); // 0x000000018AC55A64-0x000000018AC55B30
+		public float[] GetDirect(object target, MemberInfo info); // 0x000000018AC558E0-0x000000018AC559B4
 	}
 
-	public struct Animated_Vector3 : IAnimatedParameterModel // TypeDefIndex: 55631
+	[Decorator(typeof(Vector3))]
+	public struct Animated_Vector3 : IAnimatedParameterModel // TypeDefIndex: 58272
 	{
 		// Fields
 		private Action<object, Vector3> setter; // 0x00
 	
 		// Methods
-		public bool ForceStepMode() => default; // 0x00000001814A81B0-0x00000001814A81C0
-		public int RequiredCurvesCount() => default; // 0x0000000181D1CE70-0x0000000181D1CE80
-		public object ConvertToObject(float[] floats) => default; // 0x000000018B79CC64-0x000000018B79CCE4
-		public float[] ConvertToFloats(object value) => default; // 0x000000018B79CBC4-0x000000018B79CC64
-		public string GetKeyLabel(float[] floats) => default; // 0x000000018B79CDBC-0x000000018B79CEA0
-		public void SetDirect(object target, MemberInfo info, float[] floats) {} // 0x000000018B79CEA0-0x000000018B79CF80
-		public float[] GetDirect(object target, MemberInfo info) => default; // 0x000000018B79CCE4-0x000000018B79CDBC
+		public bool ForceStepMode(); // 0x00000001812081B0-0x0000000181208610
+		public int RequiredCurvesCount(); // 0x0000000184D8C9E0-0x0000000184D8C9F0
+		public object ConvertToObject(params float[] floats); // 0x000000018AC55BD0-0x000000018AC55C50
+		public float[] ConvertToFloats(object value); // 0x000000018AC55B30-0x000000018AC55BD0
+		public string GetKeyLabel(params float[] floats); // 0x000000018AC55D28-0x000000018AC55E0C
+		public void SetDirect(object target, MemberInfo info, params float[] floats); // 0x000000018AC55E0C-0x000000018AC55EEC
+		public float[] GetDirect(object target, MemberInfo info); // 0x000000018AC55C50-0x000000018AC55D28
 	}
 
-	public struct Animated_Color : IAnimatedParameterModel // TypeDefIndex: 55632
+	[Decorator(typeof(UnityEngine.Color))]
+	public struct Animated_Color : IAnimatedParameterModel // TypeDefIndex: 58273
 	{
 		// Fields
 		private Action<object, UnityEngine.Color> setter; // 0x00
 	
 		// Methods
-		public bool ForceStepMode() => default; // 0x00000001814A81B0-0x00000001814A81C0
-		public int RequiredCurvesCount() => default; // 0x0000000181C44E90-0x0000000181C44EA0
-		public object ConvertToObject(float[] floats) => default; // 0x000000018B79B538-0x000000018B79B5D4
-		public float[] ConvertToFloats(object value) => default; // 0x000000018B79B484-0x000000018B79B538
-		public string GetKeyLabel(float[] floats) => default; // 0x000000018B79B6C0-0x000000018B79B80C
-		public void SetDirect(object target, MemberInfo info, float[] floats) {} // 0x000000018B79B80C-0x000000018B79B90C
-		public float[] GetDirect(object target, MemberInfo info) => default; // 0x000000018B79B5D4-0x000000018B79B6C0
+		public bool ForceStepMode(); // 0x00000001812081B0-0x0000000181208610
+		public int RequiredCurvesCount(); // 0x0000000184D882B0-0x0000000184D882C0
+		public object ConvertToObject(params float[] floats); // 0x000000018AC544A4-0x000000018AC54540
+		public float[] ConvertToFloats(object value); // 0x000000018AC543F0-0x000000018AC544A4
+		public string GetKeyLabel(params float[] floats); // 0x000000018AC5462C-0x000000018AC54778
+		public void SetDirect(object target, MemberInfo info, params float[] floats); // 0x000000018AC54778-0x000000018AC54878
+		public float[] GetDirect(object target, MemberInfo info); // 0x000000018AC54540-0x000000018AC5462C
 	}
 
-	public struct Animated_Vector4 : IAnimatedParameterModel // TypeDefIndex: 55633
+	[Decorator(typeof(Vector4))]
+	public struct Animated_Vector4 : IAnimatedParameterModel // TypeDefIndex: 58274
 	{
 		// Fields
 		private Action<object, Vector4> setter; // 0x00
 	
 		// Methods
-		public bool ForceStepMode() => default; // 0x00000001814A81B0-0x00000001814A81C0
-		public int RequiredCurvesCount() => default; // 0x0000000181C44E90-0x0000000181C44EA0
-		public object ConvertToObject(float[] floats) => default; // 0x000000018B79D034-0x000000018B79D0D0
-		public float[] ConvertToFloats(object value) => default; // 0x000000018B79CF80-0x000000018B79D034
-		public string GetKeyLabel(float[] floats) => default; // 0x000000018B79D1BC-0x000000018B79D354
-		public void SetDirect(object target, MemberInfo info, float[] floats) {} // 0x000000018B79D354-0x000000018B79D454
-		public float[] GetDirect(object target, MemberInfo info) => default; // 0x000000018B79D0D0-0x000000018B79D1BC
+		public bool ForceStepMode(); // 0x00000001812081B0-0x0000000181208610
+		public int RequiredCurvesCount(); // 0x0000000184D882B0-0x0000000184D882C0
+		public object ConvertToObject(params float[] floats); // 0x000000018AC55FA0-0x000000018AC5603C
+		public float[] ConvertToFloats(object value); // 0x000000018AC55EEC-0x000000018AC55FA0
+		public string GetKeyLabel(params float[] floats); // 0x000000018AC56128-0x000000018AC562C0
+		public void SetDirect(object target, MemberInfo info, params float[] floats); // 0x000000018AC562C0-0x000000018AC563C0
+		public float[] GetDirect(object target, MemberInfo info); // 0x000000018AC5603C-0x000000018AC56128
 	}
 
-	public struct Animated_Quaternion : IAnimatedParameterModel // TypeDefIndex: 55634
+	[Decorator(typeof(Quaternion))]
+	public struct Animated_Quaternion : IAnimatedParameterModel // TypeDefIndex: 58275
 	{
 		// Fields
 		private Action<object, Quaternion> setter; // 0x00
 	
 		// Methods
-		public bool ForceStepMode() => default; // 0x00000001814A81B0-0x00000001814A81C0
-		public int RequiredCurvesCount() => default; // 0x0000000181C44E90-0x0000000181C44EA0
-		public object ConvertToObject(float[] floats) => default; // 0x000000018B79BF78-0x000000018B79C014
-		public float[] ConvertToFloats(object value) => default; // 0x000000018B79BEC4-0x000000018B79BF78
-		public string GetKeyLabel(float[] floats) => default; // 0x000000018B79C100-0x000000018B79C298
-		public void SetDirect(object target, MemberInfo info, float[] floats) {} // 0x000000018B79C298-0x000000018B79C398
-		public float[] GetDirect(object target, MemberInfo info) => default; // 0x000000018B79C014-0x000000018B79C100
+		public bool ForceStepMode(); // 0x00000001812081B0-0x0000000181208610
+		public int RequiredCurvesCount(); // 0x0000000184D882B0-0x0000000184D882C0
+		public object ConvertToObject(params float[] floats); // 0x000000018AC54EE4-0x000000018AC54F80
+		public float[] ConvertToFloats(object value); // 0x000000018AC54E30-0x000000018AC54EE4
+		public string GetKeyLabel(params float[] floats); // 0x000000018AC5506C-0x000000018AC55204
+		public void SetDirect(object target, MemberInfo info, params float[] floats); // 0x000000018AC55204-0x000000018AC55304
+		public float[] GetDirect(object target, MemberInfo info); // 0x000000018AC54F80-0x000000018AC5506C
 	}
 
-	public struct Animated_Rect : IAnimatedParameterModel // TypeDefIndex: 55635
+	[Decorator(typeof(Rect))]
+	public struct Animated_Rect : IAnimatedParameterModel // TypeDefIndex: 58276
 	{
 		// Fields
 		private Action<object, Rect> setter; // 0x00
 	
 		// Methods
-		public bool ForceStepMode() => default; // 0x00000001814A81B0-0x00000001814A81C0
-		public int RequiredCurvesCount() => default; // 0x0000000181C44E90-0x0000000181C44EA0
-		public object ConvertToObject(float[] floats) => default; // 0x000000018B79C44C-0x000000018B79C4E8
-		public float[] ConvertToFloats(object value) => default; // 0x000000018B79C398-0x000000018B79C44C
-		public string GetKeyLabel(float[] floats) => default; // 0x000000018B79C5D4-0x000000018B79C76C
-		public void SetDirect(object target, MemberInfo info, float[] floats) {} // 0x000000018B79C76C-0x000000018B79C86C
-		public float[] GetDirect(object target, MemberInfo info) => default; // 0x000000018B79C4E8-0x000000018B79C5D4
+		public bool ForceStepMode(); // 0x00000001812081B0-0x0000000181208610
+		public int RequiredCurvesCount(); // 0x0000000184D882B0-0x0000000184D882C0
+		public object ConvertToObject(params float[] floats); // 0x000000018AC553B8-0x000000018AC55454
+		public float[] ConvertToFloats(object value); // 0x000000018AC55304-0x000000018AC553B8
+		public string GetKeyLabel(params float[] floats); // 0x000000018AC55540-0x000000018AC556D8
+		public void SetDirect(object target, MemberInfo info, params float[] floats); // 0x000000018AC556D8-0x000000018AC557D8
+		public float[] GetDirect(object target, MemberInfo info); // 0x000000018AC55454-0x000000018AC55540
 	}
 
-	public struct Animated_Bounds : IAnimatedParameterModel // TypeDefIndex: 55636
+	[Decorator(typeof(Bounds))]
+	public struct Animated_Bounds : IAnimatedParameterModel // TypeDefIndex: 58277
 	{
 		// Fields
 		private Action<object, Bounds> setter; // 0x00
 	
 		// Methods
-		public bool ForceStepMode() => default; // 0x00000001814A81B0-0x00000001814A81C0
-		public int RequiredCurvesCount() => default; // 0x0000000181D409B0-0x0000000181D40CF0
-		public object ConvertToObject(float[] floats) => default; // 0x000000018B79AEA4-0x000000018B79AFA4
-		public float[] ConvertToFloats(object value) => default; // 0x000000018B79AD80-0x000000018B79AEA4
-		public string GetKeyLabel(float[] floats) => default; // 0x000000018B79B104-0x000000018B79B318
-		public void SetDirect(object target, MemberInfo info, float[] floats) {} // 0x000000018B79B318-0x000000018B79B484
-		public float[] GetDirect(object target, MemberInfo info) => default; // 0x000000018B79AFA4-0x000000018B79B104
+		public bool ForceStepMode(); // 0x00000001812081B0-0x0000000181208610
+		public int RequiredCurvesCount(); // 0x0000000184D9EC60-0x0000000184D9EC70
+		public object ConvertToObject(params float[] floats); // 0x000000018AC53E10-0x000000018AC53F10
+		public float[] ConvertToFloats(object value); // 0x000000018AC53CEC-0x000000018AC53E10
+		public string GetKeyLabel(params float[] floats); // 0x000000018AC54070-0x000000018AC54284
+		public void SetDirect(object target, MemberInfo info, params float[] floats); // 0x000000018AC54284-0x000000018AC543F0
+		public float[] GetDirect(object target, MemberInfo info); // 0x000000018AC53F10-0x000000018AC54070
 	}
 
 	[Serializable]
-	public class AnimationDataCollection : IAnimatableData // TypeDefIndex: 55644
+	public class AnimationDataCollection : IAnimatableData // TypeDefIndex: 58285
 	{
 		// Fields
+		[SerializeField]
 		private List<AnimatedParameter> _animatedParameters; // 0x10
 	
 		// Properties
-		public List<AnimatedParameter> animatedParameters { get => default; } // 0x000000018B79DD1C-0x000000018B79DDB8 
-		public bool isValid { get => default; } // 0x000000018B79DC04-0x000000018B79DC90 
-		public AnimatedParameter this[int i] { get => default; } // 0x000000018B79E2D4-0x000000018B79E34C 
-		public AnimatedParameter this[string name] { get => default; } // 0x000000018B79D6D4-0x000000018B79D900 
+		public List<AnimatedParameter> animatedParameters { get; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 
+		public bool isValid { get; } // 0x000000018AC57A90-0x000000018AC57AD4 
+		public AnimatedParameter this[int i] { get => default; } // 0x000000018AC57A20-0x000000018AC57A88 
+		public AnimatedParameter this[string name] { get => default; } // 0x000000018AC57A88-0x000000018AC57A90 
 	
 		// Nested types
-		public delegate bool AddParameterDelegate(System.Type type, string memberPath, string transformPath); // TypeDefIndex: 55637; 0x000000018B79EB24-0x000000018B79EB68
+		public delegate bool AddParameterDelegate(System.Type type, string memberPath, string transformPath); // TypeDefIndex: 58278; 0x00000001814F3120-0x00000001814F3140
 	
-		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 55638
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 58279
 		{
 			// Fields
 			public AnimatedParameter newParam; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass12_0() {} // 0x0000000185492010-0x0000000185492020
+			public __c__DisplayClass12_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _TryAddParameter_b__0(AnimatedParameter p) => default; // 0x000000018B79EA30-0x000000018B79EAB4
+			internal bool _TryAddParameter_b__0(AnimatedParameter p); // 0x000000018AC6724C-0x000000018AC67274
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 55639
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58280
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -1544,118 +1844,150 @@ namespace Slate
 			public static Func<float, float> __9__32_1; // 0x20
 	
 			// Constructors
-			static __c() {} // 0x000000018B79E628-0x000000018B79E864
-			public __c() {} // 0x000000018B79E178-0x000000018B79E1CC
+			static __c(); // 0x000000018AC673C4-0x000000018AC67428
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal string _ReOrderParameters_b__14_0(AnimatedParameter p) => default; // 0x000000018B79DF0C-0x000000018B79E100
-			internal string _ReOrderParameters_b__14_1(AnimatedParameter p) => default; // 0x000000018B79DB2C-0x000000018B79DC04
-			internal float _GetKeyNext_b__31_1(float t) => default; // 0x000000018B79D518-0x000000018B79D524
-			internal float _GetKeyPrevious_b__32_1(float t) => default; // 0x000000018B79D50C-0x000000018B79D518
+			internal string _ReOrderParameters_b__14_0(AnimatedParameter p); // 0x000000018AC671E8-0x000000018AC67208
+			internal string _ReOrderParameters_b__14_1(AnimatedParameter p); // 0x000000018AC67208-0x000000018AC67228
+			internal float _GetKeyNext_b__31_1(float t); // 0x0000000184D9A920-0x0000000184D9A930
+			internal float _GetKeyPrevious_b__32_1(float t); // 0x0000000184D9A920-0x0000000184D9A930
 		}
 	
-		private sealed class __c__DisplayClass15_0 // TypeDefIndex: 55640
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass15_0 // TypeDefIndex: 58281
 		{
 			// Fields
 			public string name; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass15_0() {} // 0x000000018B79DDB8-0x000000018B79DF0C
+			public __c__DisplayClass15_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetParameterOfName_b__0(AnimatedParameter d) => default; // 0x000000018B79E99C-0x000000018B79EA30
+			internal bool _GetParameterOfName_b__0(AnimatedParameter d); // 0x000000018AC67274-0x000000018AC672D4
 		}
 	
-		private sealed class __c__DisplayClass31_0 // TypeDefIndex: 55641
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass31_0 // TypeDefIndex: 58282
 		{
 			// Fields
 			public float time; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass31_0() {} // 0x000000018B79E4F0-0x000000018B79E584
+			public __c__DisplayClass31_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal float _GetKeyNext_b__0(AnimatedParameter p) => default; // 0x000000018B79E46C-0x000000018B79E4F0
-			internal bool _GetKeyNext_b__2(float t) => default; // 0x000000018B79E864-0x000000018B79E920
+			internal float _GetKeyNext_b__0(AnimatedParameter p); // 0x000000018AC6730C-0x000000018AC67330
+			internal bool _GetKeyNext_b__2(float t); // 0x000000018AC67330-0x000000018AC67338
 		}
 	
-		private sealed class __c__DisplayClass32_0 // TypeDefIndex: 55642
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass32_0 // TypeDefIndex: 58283
 		{
 			// Fields
 			public float time; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass32_0() {} // 0x000000018B79D454-0x000000018B79D50C
+			public __c__DisplayClass32_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal float _GetKeyPrevious_b__0(AnimatedParameter p) => default; // 0x000000018B79E250-0x000000018B79E2D4
-			internal bool _GetKeyPrevious_b__2(float t) => default; // 0x000000018B79E920-0x000000018B79E99C
+			internal float _GetKeyPrevious_b__0(AnimatedParameter p); // 0x000000018AC67338-0x000000018AC6735C
+			internal bool _GetKeyPrevious_b__2(float t); // 0x000000018AC6735C-0x000000018AC67368
 		}
 	
-		private sealed class __c__DisplayClass33_0 // TypeDefIndex: 55643
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass33_0 // TypeDefIndex: 58284
 		{
 			// Fields
 			public float time; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass33_0() {} // 0x000000018B79E100-0x000000018B79E178
+			public __c__DisplayClass33_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetKeyLabel_b__0(AnimatedParameter p) => default; // 0x000000018B79DC90-0x000000018B79DD1C
+			internal bool _GetKeyLabel_b__0(AnimatedParameter p); // 0x000000018AC67368-0x000000018AC6738C
 		}
 	
 		// Constructors
-		public AnimationDataCollection() {} // 0x000000018B79D900-0x000000018B79DB2C
-		public AnimationDataCollection(IKeyable keyable, System.Type type, string[] memberPaths, string transformPath) {} // 0x000000018B79D524-0x000000018B79D6D4
+		public AnimationDataCollection(); // 0x00000001841E1670-0x00000001841E1680
+		public AnimationDataCollection(IKeyable keyable, System.Type type, string[] memberPaths, string transformPath); // 0x000000018AC5799C-0x000000018AC57A20
 	
 		// Methods
-		public bool TryAddParameter(IKeyable keyable, System.Type type, string memberPath, string transformPath) => default; // 0x000000018B79E3DC-0x000000018B79E46C
-		public void RemoveParameter(AnimatedParameter animParam) {} // 0x000000018B79E34C-0x000000018B79E3DC
-		public void ReOrderParameters() {} // 0x000000018B79E1CC-0x000000018B79E250
-		public AnimatedParameter GetParameterOfName(string name) => default; // 0x000000018B79E584-0x000000018B79E628
-		public AnimationCurve[] GetCurves() => default; // 0x000000018B798228-0x000000018B798350
-		public AnimationCurve[] GetCurvesAll() => default; // 0x00000001817E31E0-0x00000001817E3200
-		private AnimationCurve[] Internal_GetCurves(bool enabledParamsOnly) => default; // 0x0000000187206B7C-0x0000000187206BB4
-		public void Validate(IKeyable keyable) {} // 0x00000001864BBBD0-0x00000001864BBD00
-		public void SetVirtualTransformParent(Transform virtualTransformParent) {} // 0x0000000185492010-0x0000000185492020
-		public void SetSnapshot() {} // 0x000000018B7AE1A0-0x000000018B7AE1C8
-		public bool TryAutoKey(float time) => default; // 0x000000018B7AE318-0x000000018B7AE37C
-		public void Evaluate(float time, float previousTime, float weight = 1f /* Metadata: 0x0207BF4B */) {} // 0x0000000185492010-0x0000000185492020
-		public void RestoreSnapshot() {} // 0x000000018B7AE13C-0x000000018B7AE15C
-		public bool TryKeyIdentity(float time) => default; // 0x000000018B7AE15C-0x000000018B7AE17C
-		public void RemoveKey(float time) {} // 0x0000000183667B80-0x0000000183667B90
-		public bool HasChanged() => default; // 0x0000000183667B80-0x0000000183667B90
-		public bool HasKey(float time) => default; // 0x0000000185492010-0x0000000185492020
-		public bool HasAnyKey() => default; // 0x000000018B7AE1C8-0x000000018B7AE228
-		public void SetKeyCurrent(float time) {} // 0x0000000185492010-0x0000000185492020
-		public float GetKeyNext(float time) => default; // 0x000000018B7AE260-0x000000018B7AE284
-		public float GetKeyPrevious(float time) => default; // 0x000000018B7AE284-0x000000018B7AE28C
-		public string GetKeyLabel(float time) => default; // 0x0000000185492010-0x0000000185492020
-		public void SetPreWrapMode(UnityEngine.WrapMode mode) {} // 0x000000018B7AE28C-0x000000018B7AE2B0
-		public void SetPostWrapMode(UnityEngine.WrapMode mode) {} // 0x000000018B7AE2B0-0x000000018B7AE2BC
-		public void Reset() {} // 0x0000000185492010-0x0000000185492020
-		public override string ToString() => default; // 0x000000018B7AE2BC-0x000000018B7AE2E0
+		public bool TryAddParameter(IKeyable keyable, System.Type type, string memberPath, string transformPath); // 0x000000018AC57594-0x000000018AC577D0
+		public void RemoveParameter(AnimatedParameter animParam); // 0x000000018AC570E4-0x000000018AC57138
+		public void ReOrderParameters(); // 0x000000018AC56E78-0x000000018AC5706C
+		public AnimatedParameter GetParameterOfName(string name); // 0x000000018AC56A98-0x000000018AC56B70
+		public AnimationCurve[] GetCurves(); // 0x000000018AC56484-0x000000018AC56490
+		public AnimationCurve[] GetCurvesAll(); // 0x000000018AC56478-0x000000018AC56484
+		private AnimationCurve[] Internal_GetCurves(bool enabledParamsOnly); // 0x000000018AC56D24-0x000000018AC56E78
+		public void Validate(IKeyable keyable); // 0x000000018AC57908-0x000000018AC5799C
+		public void SetVirtualTransformParent(Transform virtualTransformParent); // 0x000000018AC5745C-0x000000018AC574F0
+		public void SetSnapshot(); // 0x000000018AC573D8-0x000000018AC5745C
+		public bool TryAutoKey(float time); // 0x000000018AC577D0-0x000000018AC5788C
+		public void Evaluate(float time, float previousTime, float weight = 1f /* Metadata: 0x0234BBFB */); // 0x000000018AC563C0-0x000000018AC56478
+		public void RestoreSnapshot(); // 0x000000018AC571BC-0x000000018AC57240
+		public bool TryKeyIdentity(float time); // 0x000000018AC5788C-0x000000018AC57908
+		public void RemoveKey(float time); // 0x000000018AC5706C-0x000000018AC570E4
+		public bool HasChanged(); // 0x000000018AC56BFC-0x000000018AC56C88
+		public bool HasKey(float time); // 0x000000018AC56C88-0x000000018AC56D24
+		public bool HasAnyKey(); // 0x000000018AC56B70-0x000000018AC56BFC
+		public void SetKeyCurrent(float time); // 0x000000018AC57240-0x000000018AC572B8
+		public float GetKeyNext(float time); // 0x000000018AC56640-0x000000018AC5686C
+		public float GetKeyPrevious(float time); // 0x000000018AC5686C-0x000000018AC56A98
+		public string GetKeyLabel(float time); // 0x000000018AC56490-0x000000018AC56640
+		public void SetPreWrapMode(UnityEngine.WrapMode mode); // 0x000000018AC57348-0x000000018AC573D8
+		public void SetPostWrapMode(UnityEngine.WrapMode mode); // 0x000000018AC572B8-0x000000018AC57348
+		public void Reset(); // 0x000000018AC57138-0x000000018AC571BC
+		public override string ToString(); // 0x000000018AC574F0-0x000000018AC57594
 	}
 
-	public class Cutscene : MonoBehaviour, IDirector // TypeDefIndex: 55654
+	[DisallowMultipleComponent]
+	public class Cutscene : MonoBehaviour, IDirector // TypeDefIndex: 58295
 	{
 		// Fields
-		public const float VERSION_NUMBER = 2.15f; // Metadata: 0x0207BF52
+		public const float VERSION_NUMBER = 2.15f; // Metadata: 0x0234BC02
+		[CompilerGenerated]
 		private static Action<Cutscene> OnCutsceneStarted; // 0x00
+		[CompilerGenerated]
 		private static Action<Cutscene> OnCutsceneStopped; // 0x08
+		[CompilerGenerated]
 		private Action<Section> OnSectionReached; // 0x18
+		[CompilerGenerated]
 		private Action<string, object> OnGlobalMessageSend; // 0x20
+		[CompilerGenerated]
 		private Action OnStop; // 0x28
+		[HideInInspector]
+		[SerializeField]
 		private UpdateMode _updateMode; // 0x30
+		[HideInInspector]
+		[SerializeField]
 		private WrapMode _defaultWrapMode; // 0x34
+		[HideInInspector]
+		[SerializeField]
 		private StopMode _defaultStopMode; // 0x38
+		[HideInInspector]
+		[SerializeField]
 		private float _playbackSpeed; // 0x3C
+		[HideInInspector]
+		[SerializeField]
 		private bool _playOnStart; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private bool _explicitActiveLayers; // 0x41
+		[HideInInspector]
+		[SerializeField]
 		private LayerMask _activeLayers; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		public List<CutsceneGroup> groups; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x50
+		[HideInInspector]
+		[SerializeField]
 		private float _viewTimeMin; // 0x54
+		[HideInInspector]
+		[SerializeField]
 		private float _viewTimeMax; // 0x58
 		[NonSerialized]
 		private float _currentTime; // 0x5C
@@ -1677,62 +2009,84 @@ namespace Slate
 		private bool preInitialized; // 0x88
 		[NonSerialized]
 		private bool _isReSampleFrame; // 0x89
+		[CompilerGenerated]
 		private bool _isBakingRootMotion_k__BackingField; // 0x8A
+		[CompilerGenerated]
 		private PlayingDirection _playingDirection_k__BackingField; // 0x8C
+		[CompilerGenerated]
 		private WrapMode _playingWrapMode_k__BackingField; // 0x90
+		[CompilerGenerated]
 		private List<IDirectable> _directables_k__BackingField; // 0x98
+		[CompilerGenerated]
 		private bool _isActive_k__BackingField; // 0xA0
+		[CompilerGenerated]
 		private bool _isPaused_k__BackingField; // 0xA1
+		[CompilerGenerated]
 		private float _previousTime_k__BackingField; // 0xA4
 	
 		// Properties
-		public Transform groupsRoot { get => default; } // 0x0000000185FB3000-0x0000000185FB3010 
-		public UpdateMode updateMode { get => default; set {} } // 0x000000018B7A884C-0x000000018B7A885C 0x0000000183F80440-0x0000000183F80450
-		public WrapMode defaultWrapMode { get => default; set {} } // 0x000000018B7A8934-0x000000018B7A8958 0x0000000181DE2580-0x0000000181DE2590
-		public StopMode defaultStopMode { get => default; set {} } // 0x000000018B7A88A8-0x000000018B7A8934 0x0000000185FB2200-0x0000000185FB2210
-		public bool playOnStart { get => default; set {} } // 0x000000018B7A8884-0x000000018B7A88A8 0x0000000185FB2210-0x0000000185FB2220
-		public bool explicitActiveLayers { get => default; set {} } // 0x000000018B7A885C-0x000000018B7A8884 0x0000000185FB0580-0x0000000185FB0590
-		public LayerMask activeLayers { get => default; set {} } // 0x0000000185FB05E0-0x0000000185FB05F0 0x000000018349D720-0x000000018349D730
-		public DirectorGroup directorGroup { get => default; } // 0x00000001834A21B0-0x00000001834A21C0 
-		public ActorGroup actorGroup { get => default; } // 0x00000001834A0D50-0x00000001834A0D60 
-		public virtual bool abortDirectorCamera { get => default; } // 0x00000001834A2260-0x00000001834A2270 
-		public virtual bool multiSelectOverlapCheck { get => default; } // 0x0000000181E336C0-0x0000000181E336D0 
-		public bool isBakingRootMotion { get; set; } // 0x00000001873350D4-0x00000001873350E8 0x000000018346D900-0x000000018346D910
-		public CameraTrack cameraTrack { get => default; } // 0x00000001834A2240-0x00000001834A2250 
-		public float currentTime { get => default; set {} } // 0x000000018349D660-0x000000018349D670 0x00000001834A2080-0x00000001834A2090
-		public virtual float length { get => default; set {} } // 0x0000000185FB8C30-0x0000000185FB8C40 0x0000000185FD5C00-0x0000000185FD5C10
-		public float viewTimeMin { get => default; set {} } // 0x0000000185FB3080-0x0000000185FB3090 0x000000018B7A6E8C-0x000000018B7A6EE8
-		public float viewTimeMax { get => default; set {} } // 0x000000018B7A6E50-0x000000018B7A6E8C 0x000000018B7A84C4-0x000000018B7A84F0
-		public float playTimeMin { get => default; set {} } // 0x000000018B7A3AE0-0x000000018B7A3C18 0x000000018B7A6EE8-0x000000018B7A6EFC
-		public float playTimeMax { get => default; set {} } // 0x000000018B7A56F0-0x000000018B7A57EC 0x000000018B7A56BC-0x000000018B7A56F0
-		public float playbackSpeed { get => default; set {} } // 0x000000018B7A5658-0x000000018B7A56BC 0x000000018B7A40D8-0x000000018B7A4120
-		public PlayingDirection playingDirection { get; set; } // 0x000000018B7A3C70-0x000000018B7A3D40 0x000000018B7A4120-0x000000018B7A4248
-		public WrapMode playingWrapMode { get; set; } // 0x000000018B7A438C-0x000000018B7A44C0 0x000000018B7A63AC-0x000000018B7A63B8
-		public List<IDirectable> directables { get; private set; } // 0x000000018B7A6118-0x000000018B7A6128 0x000000018B7A6128-0x000000018B7A6150
-		public bool isActive { get; private set; } // 0x000000018B7A5F10-0x000000018B7A5F38 0x000000018B7A6150-0x000000018B7A63AC
-		public bool isPaused { get; private set; } // 0x000000018B7A70C0-0x000000018B7A70CC 0x000000018B7A6F94-0x000000018B7A70C0
-		public float previousTime { get; private set; } // 0x000000018B7A5D08-0x000000018B7A5D18 0x000000018B7A5D18-0x000000018B7A5D40
-		bool IDirector.isReSampleFrame { get => default; } // 0x0000000185FD5BD0-0x0000000185FD5BE0 
-		GameObject IDirector.context { get => default; } // 0x0000000185FD5BE0-0x0000000185FD5BF0 
-		IEnumerable<IDirectable> IDirector.children { get => default; } // 0x000000018B7A6D90-0x000000018B7A6DBC 
-		public float remainingTime { get => default; } // 0x000000018B7A6710-0x000000018B7A6740 
+		public Transform groupsRoot { get; } // 0x000000018AC61294-0x000000018AC61448 
+		public UpdateMode updateMode { get; set; } // 0x0000000184D864F0-0x0000000184D86500 0x0000000184D86740-0x0000000184D86750
+		public WrapMode defaultWrapMode { get; set; } // 0x0000000184D86730-0x0000000184D86740 0x0000000184D86760-0x0000000184D86770
+		public StopMode defaultStopMode { get; set; } // 0x0000000184D863B0-0x0000000184D863C0 0x0000000184D86430-0x0000000184D86440
+		public bool playOnStart { get; set; } // 0x0000000182D480A0-0x0000000182D480B0 0x0000000182D480B0-0x0000000182D480C0
+		public bool explicitActiveLayers { get; set; } // 0x0000000184D86F40-0x0000000184D86F50 0x0000000184D86F60-0x0000000184D86F70
+		public LayerMask activeLayers { get; set; } // 0x0000000184D86530-0x0000000184D86540 0x0000000184D86580-0x0000000184D86590
+		public DirectorGroup directorGroup { get; } // 0x000000018AC610EC-0x000000018AC61294 
+		public ActorGroup actorGroup { get; } // 0x000000018AC60E88-0x000000018AC60FB0 
+		public virtual bool abortDirectorCamera { get; } // 0x00000001812081B0-0x0000000181208610 
+		public virtual bool multiSelectOverlapCheck { get; } // 0x00000001812081B0-0x0000000181208610 
+		public bool isBakingRootMotion { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D890B0-0x0000000184D890C0 0x0000000184DA9BE0-0x0000000184DA9BF0
+		public CameraTrack cameraTrack { get; } // 0x000000018AC60FB0-0x000000018AC610EC 
+		public float currentTime { get; set; } // 0x0000000184D91500-0x0000000184D91510 0x000000018AC617AC-0x000000018AC617D0
+		public virtual float length { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x000000018AC617D0-0x000000018AC617E0
+		public float viewTimeMin { get; set; } // 0x0000000184D86E00-0x0000000184D86E10 0x000000018AC618B8-0x000000018AC618DC
+		public float viewTimeMax { get; set; } // 0x0000000184D88400-0x0000000184D88410 0x000000018AC6182C-0x000000018AC618B8
+		public float playTimeMin { get; set; } // 0x0000000184D88480-0x0000000184D88490 0x000000018AC61808-0x000000018AC6182C
+		public float playTimeMax { get; set; } // 0x0000000184D88470-0x0000000184D88480 0x000000018AC617E0-0x000000018AC61808
+		public float playbackSpeed { get; set; } // 0x0000000184D863E0-0x0000000184D863F0 0x0000000184D86460-0x0000000184D86470
+		public PlayingDirection playingDirection { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D90C40-0x0000000184D90C50 0x0000000184D90C60-0x0000000184D90C70
+		public WrapMode playingWrapMode { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86B60-0x0000000184D86B70 0x0000000184D86BC0-0x0000000184D86BD0
+		public List<IDirectable> directables { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D85EE0-0x0000000184D85EF0 0x0000000186352D0C-0x0000000186352D20
+		public bool isActive { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D88020-0x0000000184D88030 0x0000000184D88040-0x0000000184D88050
+		public bool isPaused { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D88030-0x0000000184D88040 0x0000000184D88050-0x0000000184D88060
+		public float previousTime { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184DA94B0-0x0000000184DA94C0 0x0000000184DA9BF0-0x0000000184DA9C00
+		bool IDirector.isReSampleFrame { get; } // 0x0000000184D89060-0x0000000184D89070 
+		GameObject IDirector.context { get; } // 0x000000018AC5FE10-0x000000018AC5FE6C 
+		IEnumerable<IDirectable> IDirector.children { get; } // 0x000000018AC5FDD4-0x000000018AC5FE10 
+		public float remainingTime { get; } // 0x000000018AC61448-0x000000018AC61474 
 	
 		// Events
-		public static event Action<Cutscene> OnCutsceneStarted;
-		public static event Action<Cutscene> OnCutsceneStopped;
-		public event Action<Section> OnSectionReached;
-		public event Action<string, object> OnGlobalMessageSend;
-		public event Action OnStop;
+		public static event Action<Cutscene> OnCutsceneStarted {
+			add; // 0x000000018AC60B50-0x000000018AC60C14
+			remove; // 0x000000018AC61474-0x000000018AC61538
+		}
+		public static event Action<Cutscene> OnCutsceneStopped {
+			add; // 0x000000018AC60C14-0x000000018AC60CDC
+			remove; // 0x000000018AC61538-0x000000018AC61600
+		}
+		public event Action<Section> OnSectionReached {
+			add; // 0x000000018AC60D68-0x000000018AC60DF4
+			remove; // 0x000000018AC6168C-0x000000018AC61718
+		}
+		public event Action<string, object> OnGlobalMessageSend {
+			add; // 0x000000018AC60CDC-0x000000018AC60D68
+			remove; // 0x000000018AC61600-0x000000018AC6168C
+		}
+		public event Action OnStop {
+			add; // 0x000000018AC60DF4-0x000000018AC60E88
+			remove; // 0x000000018AC61718-0x000000018AC617AC
+		}
 	
 		// Nested types
-		public enum WrapMode // TypeDefIndex: 55645
+		public enum WrapMode // TypeDefIndex: 58286
 		{
 			Once = 0,
 			Loop = 1,
 			PingPong = 2
 		}
 	
-		public enum StopMode // TypeDefIndex: 55646
+		public enum StopMode // TypeDefIndex: 58287
 		{
 			Skip = 0,
 			Rewind = 1,
@@ -1740,7 +2094,7 @@ namespace Slate
 			SkipRewindNoUndo = 3
 		}
 	
-		public enum UpdateMode // TypeDefIndex: 55647
+		public enum UpdateMode // TypeDefIndex: 58288
 		{
 			Normal = 0,
 			AnimatePhysics = 1,
@@ -1748,14 +2102,15 @@ namespace Slate
 			Manual = 3
 		}
 	
-		public enum PlayingDirection // TypeDefIndex: 55648
+		public enum PlayingDirection // TypeDefIndex: 58289
 		{
 			Forwards = 0,
 			Backwards = 1
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 55649
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58290
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -1769,58 +2124,62 @@ namespace Slate
 			public static Func<IEvent, string> __9__191_0; // 0x40
 	
 			// Constructors
-			static __c() {} // 0x000000018B7A7BCC-0x000000018B7A7C90
-			public __c() {} // 0x000000018B7A84F0-0x000000018B7A85B4
+			static __c(); // 0x000000018AC79E58-0x000000018AC79EBC
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _get_directorGroup_b__62_0(CutsceneGroup g) => default; // 0x000000018B7A7C90-0x000000018B7A7D58
-			internal bool _get_actorGroup_b__64_0(CutsceneGroup g) => default; // 0x000000018B7A85B4-0x000000018B7A867C
-			internal bool _get_cameraTrack_b__74_0(CutsceneTrack t) => default; // 0x000000018B7A7DE4-0x000000018B7A7E70
-			internal GameObject _GetAffectedActors_b__135_0(ActorGroup g) => default; // 0x000000018B7A8708-0x000000018B7A8794
-			internal float _GetPointerTimes_b__136_0(IDirectableTimePointer t) => default; // 0x000000018B7A7D58-0x000000018B7A7DE4
-			internal int _InitializeTimePointers_b__170_0(IDirectableTimePointer a, IDirectableTimePointer b) => default; // 0x000000018B7A867C-0x000000018B7A8708
-			internal string _GetSectionNames_b__190_0(Section s) => default; // 0x000000018B7A7E70-0x000000018B7A7F04
-			internal string _GetDefinedEventNames_b__191_0(IEvent d) => default; // 0x000000018B7A8794-0x000000018B7A8828
+			internal bool _get_directorGroup_b__62_0(CutsceneGroup g); // 0x000000018AC79954-0x000000018AC79994
+			internal bool _get_actorGroup_b__64_0(CutsceneGroup g); // 0x000000018AC798D4-0x000000018AC79914
+			internal bool _get_cameraTrack_b__74_0(CutsceneTrack t); // 0x000000018AC79914-0x000000018AC79954
+			internal GameObject _GetAffectedActors_b__135_0(ActorGroup g); // 0x000000018AC796DC-0x000000018AC796FC
+			internal float _GetPointerTimes_b__136_0(IDirectableTimePointer t); // 0x000000018AC79738-0x000000018AC79754
+			internal int _InitializeTimePointers_b__170_0(IDirectableTimePointer a, IDirectableTimePointer b); // 0x000000018AC79754-0x000000018AC79850
+			internal string _GetSectionNames_b__190_0(Section s); // 0x0000000186C08908-0x0000000186C08920
+			internal string _GetDefinedEventNames_b__191_0(IEvent d); // 0x000000018AC796FC-0x000000018AC79738
 		}
 	
-		private sealed class __c__DisplayClass177_0 // TypeDefIndex: 55650
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass177_0 // TypeDefIndex: 58291
 		{
 			// Fields
 			public Action callback; // 0x10
 			public Cutscene instance; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass177_0() {} // 0x000000018B7A8310-0x000000018B7A84C4
+			public __c__DisplayClass177_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal void _Play_b__0() {} // 0x00000001813CFF60-0x00000001813CFF70
+			internal void _Play_b__0(); // 0x000000018AC79AF0-0x000000018AC79B98
 		}
 	
-		private sealed class __c__DisplayClass182_0 // TypeDefIndex: 55651
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass182_0 // TypeDefIndex: 58292
 		{
 			// Fields
 			public string groupName; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass182_0() {} // 0x00000001813D0A90-0x00000001813D0AA0
+			public __c__DisplayClass182_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _SetGroupActorOfName_b__0(ActorGroup g) => default; // 0x0000000185FB07C0-0x0000000185FB07D0
+			internal bool _SetGroupActorOfName_b__0(ActorGroup g); // 0x000000018AC79B98-0x000000018AC79BF4
 		}
 	
-		private sealed class __c__DisplayClass184_0 // TypeDefIndex: 55652
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass184_0 // TypeDefIndex: 58293
 		{
 			// Fields
 			public string[] split; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass184_0() {} // 0x0000000185FB07E0-0x0000000185FB07F0
+			public __c__DisplayClass184_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _FindElement_b__0(CutsceneGroup g) => default; // 0x00000001813E5E30-0x00000001813E5E40
+			internal bool _FindElement_b__0(CutsceneGroup g); // 0x000000018AC79BF4-0x000000018AC79C68
 		}
 	
-		private sealed class _Internal_RenderCutscene_d__194 : IEnumerator<object> // TypeDefIndex: 55653
+		[CompilerGenerated]
+		private sealed class _Internal_RenderCutscene_d__194 : IEnumerator<object> // TypeDefIndex: 58294
 		{
 			// Fields
 			private int __1__state; // 0x10
@@ -1835,182 +2194,206 @@ namespace Slate
 			private float _i_5__4; // 0x4C
 	
 			// Properties
-			object IEnumerator<System.Object>.Current { get => default; } // 0x0000000185FB0D70-0x0000000185FB0D80 
-			object IEnumerator.Current { get => default; } // 0x0000000183908D10-0x0000000183908D20 
+			object IEnumerator<System.Object>.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
+			object IEnumerator.Current { [DebuggerHidden] get; } // 0x000000018385B100-0x000000018385B110 
 	
 			// Constructors
-			public _Internal_RenderCutscene_d__194() {} // Dummy constructor
-			public _Internal_RenderCutscene_d__194(int __1__state) {} // 0x00000001813E6F50-0x00000001813E6F60
+			[DebuggerHidden]
+			public _Internal_RenderCutscene_d__194(int __1__state); // 0x00000001814F51F0-0x00000001814F5220
 	
 			// Methods
-			void IDisposable.Dispose() {} // 0x0000000185FB0650-0x0000000185FB0660
-			private bool MoveNext() => default; // 0x0000000185FB0660-0x0000000185FB0670
-			void IEnumerator.Reset() {} // 0x0000000185FB0D90-0x0000000185FB0DA0
+			[DebuggerHidden]
+			void IDisposable.Dispose(); // 0x00000001841E1670-0x00000001841E1680
+			private bool MoveNext(); // 0x000000018AC79450-0x000000018AC79690
+			[DebuggerHidden]
+			void IEnumerator.Reset(); // 0x000000018AC79690-0x000000018AC796DC
 		}
 	
 		// Constructors
-		public Cutscene() {} // 0x000000018B7C09CC-0x000000018B7C0A18
-		static Cutscene() {} // 0x0000000181377E40-0x0000000181377E50
+		public Cutscene(); // 0x000000018AC60AB8-0x000000018AC60B50
+		static Cutscene(); // 0x000000018AC60A24-0x000000018AC60AB8
 	
 		// Methods
-		protected void Awake() {} // 0x000000018B7A66CC-0x000000018B7A6710
-		protected void Start() {} // 0x0000000185FD5BC0-0x0000000185FD5BD0
-		protected void OnDestroy() {} // 0x000000018B7A3C18-0x000000018B7A3C70
-		public void ManualUpdate(float deltaTime) {} // 0x000000018B7A6E48-0x000000018B7A6E50
-		protected void LateUpdate() {} // 0x000000018B7A6DBC-0x000000018B7A6E48
-		protected void FixedUpdate() {} // 0x000000018B7A5634-0x000000018B7A5658
-		private void DirectorSectionReached(Section section) {} // 0x000000018B7A55AC-0x000000018B7A5634
-		public IEnumerable<GameObject> GetAffectedActors() => default; // 0x000000018B7A5BC4-0x000000018B7A5BE4
-		public float[] GetPointerTimes() => default; // 0x000000018B7A5C04-0x000000018B7A5C50
-		public void Play() {} // 0x000000018B7A5BE4-0x000000018B7A5C04
-		public void Play(Action callback) {} // 0x000000018B7A5C50-0x000000018B7A5D08
-		public void Play(float startTime) {} // 0x000000018B7A5E90-0x000000018B7A5EC4
-		public void Play(float startTime, Action callback) {} // 0x000000018B7A5E24-0x000000018B7A5E70
-		public void Play(float startTime, float endTime, WrapMode wrapMode = WrapMode.Once /* Metadata: 0x0207BF4F */, Action callback = null, PlayingDirection playDirection = PlayingDirection.Forwards /* Metadata: 0x0207BF50 */) {} // 0x000000018B7A5E70-0x000000018B7A5E90
-		public void Stop() {} // 0x000000018B7A5D40-0x000000018B7A5E24
-		public void Stop(StopMode stopMode) {} // 0x000000018B7A6740-0x000000018B7A6750
-		public void PlayReverse() {} // 0x000000018B7A6750-0x000000018B7A6860
-		public void PlayReverse(float startTime, float endTime) {} // 0x000000018B7A51B4-0x000000018B7A55AC
-		public void Pause() {} // 0x000000018B7A63D8-0x000000018B7A6448
-		public void Resume() {} // 0x000000018B7A72B4-0x000000018B7A7AA0
-		public void SkipAll() {} // 0x000000018B7A4730-0x000000018B7A5118
-		public void Rewind() {} // 0x000000018B7A59AC-0x000000018B7A5BC4
-		public void RewindNoUndo() {} // 0x000000018B7A57EC-0x000000018B7A59AC
-		public void BreakCutsceneLoop() {} // 0x000000018B7A6C40-0x000000018B7A6D90
-		public void BreakSectionLoop(bool alsoSkip = false /* Metadata: 0x0207BF51 */) {} // 0x000000018B7A6540-0x000000018B7A66CC
-		public void Skip() {} // 0x000000018B7A7114-0x000000018B7A72B4
-		public void SkipCurrentSection() {} // 0x000000018B7A5EC4-0x000000018B7A5F10
-		public bool JumpToSection(string name) => default; // 0x000000018B7A5F38-0x000000018B7A6118
-		public bool JumpToSection(Section section) => default; // 0x000000018B7A3EC4-0x000000018B7A400C
-		public bool PlayFromSection(string name) => default; // 0x000000018B7A400C-0x000000018B7A40D8
-		public bool PlayFromSection(string name, WrapMode wrap, Action callback = null) => default; // 0x000000018B7A6EFC-0x000000018B7A6F94
-		public bool PlayFromSection(Section section) => default; // 0x000000018B7A6860-0x000000018B7A6A5C
-		public bool PlayFromSection(Section section, WrapMode wrap, Action callback = null) => default; // 0x000000018B7A6A5C-0x000000018B7A6C40
-		public bool PlaySection(string name) => default;
-		public bool PlaySection(string name, WrapMode wrap, Action callback = null) => default; // 0x000000018B7A3D40-0x000000018B7A3EC4
-		public bool PlaySection(Section section) => default; // 0x000000018B7A70CC-0x000000018B7A7114
-		public bool PlaySection(Section section, WrapMode wrap, Action callback = null) => default; // 0x000000018B7A44C0-0x000000018B7A44F0
-		public void Sample() {} // 0x000000018B7A44F0-0x000000018B7A4520
-		public void Sample(float time) {} // 0x000000018B7A46DC-0x000000018B7A4730
-		private void Internal_SamplePointers(float currentTime, float previousTime) {} // 0x000000018B7A4520-0x000000018B7A45A4
-		public void ReSample() {} // 0x000000018B7A45A4-0x000000018B7A46DC
-		public void Validate() {} // 0x000000018B7A4248-0x000000018B7A438C
-		private void InitializeTimePointers() {} // 0x000000018B7A63B8-0x000000018B7A63D8
-		private void OnSampleStarted() {} // 0x000000018B7A6448-0x000000018B7A6540
-		private void OnSampleEnded() {} // 0x000000018B7A5118-0x000000018B7A51B4
-		private void SetLayersActive() {} // 0x000000018B7A7B34-0x000000018B7A7BCC
-		private void RestoreLayersActive() {} // 0x000000018B7A7AA0-0x000000018B7A7B34
-		private void UpdateCutscene(float delta) {} // 0x000000018B7C117C-0x000000018B7C11E0
-		public static Cutscene Play(string name) => default; // 0x0000000185492010-0x0000000185492020
-		public static Cutscene Play(string name, Action callback) => default; // 0x000000018B7C0C78-0x000000018B7C0CB8
-		public static Cutscene FindFromResources(string name) => default; // 0x000000018B7C0BF8-0x000000018B7C0C38
-		public static Cutscene Find(string name) => default; // 0x000000018B7C0C38-0x000000018B7C0C78
-		public static void StopAllCutscenes() {} // 0x000000018B7C0A18-0x000000018B7C0A38
-		public void SendGlobalMessage(string message, object value = null) {} // 0x000000018B7C0A94-0x000000018B7C0AB0
-		public void SetGroupActorOfName(string groupName, GameObject newActor) {} // 0x000000018B7C0AB0-0x000000018B7C0B74
+		protected void Awake(); // 0x000000018AC5CA64-0x000000018AC5CB9C
+		protected void Start(); // 0x000000018AC5FE6C-0x000000018AC5FE80
+		protected void OnDestroy(); // 0x000000018AC5E674-0x000000018AC5E770
+		public void ManualUpdate(float deltaTime); // 0x000000018AC5E640-0x000000018AC5E674
+		protected void LateUpdate(); // 0x000000018AC5E5DC-0x000000018AC5E640
+		protected void FixedUpdate(); // 0x000000018AC5D05C-0x000000018AC5D0A4
+		private void DirectorSectionReached(Section section); // 0x000000018AC5CBF4-0x000000018AC5CCC4
+		public IEnumerable<GameObject> GetAffectedActors(); // 0x000000018AC5D0A4-0x000000018AC5D1CC
+		public float[] GetPointerTimes(); // 0x000000018AC5D310-0x000000018AC5D444
+		public void Play(); // 0x000000018AC5F330-0x000000018AC5F33C
+		public void Play(Action callback); // 0x000000018AC5F09C-0x000000018AC5F0AC
+		public void Play(float startTime); // 0x000000018AC5F0AC-0x000000018AC5F0D4
+		public void Play(float startTime, Action callback); // 0x000000018AC5EE94-0x000000018AC5EEBC
+		public void Play(float startTime, float endTime, WrapMode wrapMode = WrapMode.Once /* Metadata: 0x0234BBFF */, Action callback = null, PlayingDirection playDirection = PlayingDirection.Forwards /* Metadata: 0x0234BC00 */); // 0x000000018AC5F0D4-0x000000018AC5F330
+		public void Stop(); // 0x000000018AC60044-0x000000018AC60050
+		public void Stop(StopMode stopMode); // 0x000000018AC5FF18-0x000000018AC60044
+		public void PlayReverse(); // 0x000000018AC5EC8C-0x000000018AC5EC9C
+		public void PlayReverse(float startTime, float endTime); // 0x000000018AC5EC9C-0x000000018AC5ECC4
+		public void Pause(); // 0x0000000184DA9BC0-0x0000000184DA9BD0
+		public void Resume(); // 0x0000000184DA9BD0-0x0000000184DA9BE0
+		public void SkipAll(); // 0x000000018AC5FD14-0x000000018AC5FD40
+		public void Rewind(); // 0x000000018AC5F694-0x000000018AC5F6C4
+		public void RewindNoUndo(); // 0x000000018AC5F650-0x000000018AC5F694
+		public void BreakCutsceneLoop(); // 0x0000000184DA9BB0-0x0000000184DA9BC0
+		public void BreakSectionLoop(bool alsoSkip = false /* Metadata: 0x0234BC01 */); // 0x000000018AC5CB9C-0x000000018AC5CBF4
+		[Obsolete("Use \'SkipCurrentSection\' instead")]
+		public void Skip(); // 0x000000018AC5FDCC-0x000000018AC5FDD4
+		public void SkipCurrentSection(); // 0x000000018AC5FD40-0x000000018AC5FDCC
+		public bool JumpToSection(string name); // 0x000000018AC5E5B8-0x000000018AC5E5DC
+		public bool JumpToSection(Section section); // 0x000000018AC5E530-0x000000018AC5E5B8
+		public bool PlayFromSection(string name); // 0x000000018AC5EB48-0x000000018AC5EB68
+		public bool PlayFromSection(string name, WrapMode wrap, Action callback = null); // 0x000000018AC5EB88-0x000000018AC5EBD4
+		public bool PlayFromSection(Section section); // 0x000000018AC5EB68-0x000000018AC5EB88
+		public bool PlayFromSection(Section section, WrapMode wrap, Action callback = null); // 0x000000018AC5EBD4-0x000000018AC5EC8C
+		public bool PlaySection(string name); // 0x000000018AC5EE14-0x000000018AC5EE48
+		public bool PlaySection(string name, WrapMode wrap, Action callback = null); // 0x000000018AC5EDA8-0x000000018AC5EDF4
+		public bool PlaySection(Section section); // 0x000000018AC5EDF4-0x000000018AC5EE14
+		public bool PlaySection(Section section, WrapMode wrap, Action callback = null); // 0x000000018AC5ECC4-0x000000018AC5EDA8
+		public void Sample(); // 0x000000018AC5F6C4-0x000000018AC5F6D4
+		public void Sample(float time); // 0x000000018AC5F6D4-0x000000018AC5F7E4
+		private void Internal_SamplePointers(float currentTime, float previousTime); // 0x000000018AC5E138-0x000000018AC5E530
+		public void ReSample(); // 0x000000018AC5F35C-0x000000018AC5F3CC
+		public void Validate(); // 0x000000018AC60238-0x000000018AC60A24
+		private void InitializeTimePointers(); // 0x000000018AC5D6B4-0x000000018AC5E09C
+		private void OnSampleStarted(); // 0x000000018AC5E930-0x000000018AC5EB48
+		private void OnSampleEnded(); // 0x000000018AC5E770-0x000000018AC5E930
+		private void SetLayersActive(); // 0x000000018AC5FBC4-0x000000018AC5FD14
+		private void RestoreLayersActive(); // 0x000000018AC5F4C4-0x000000018AC5F650
+		private void UpdateCutscene(float delta); // 0x000000018AC60098-0x000000018AC60238
+		public static Cutscene Play(string name); // 0x000000018AC5EE48-0x000000018AC5EE94
+		public static Cutscene Play(string name, Action callback); // 0x000000018AC5EEBC-0x000000018AC5F09C
+		public static Cutscene FindFromResources(string name); // 0x000000018AC5CE48-0x000000018AC5CF90
+		public static Cutscene Find(string name); // 0x000000018AC5CF90-0x000000018AC5D05C
+		public static void StopAllCutscenes(); // 0x000000018AC5FE80-0x000000018AC5FF18
+		public void SendGlobalMessage(string message, object value = null); // 0x000000018AC5F7E4-0x000000018AC5F9E0
+		public void SetGroupActorOfName(string groupName, GameObject newActor); // 0x000000018AC5F9E0-0x000000018AC5FBC4
 		public T FindElement<T>(string path)
-			where T : IDirectable => default; // 0x0000000187AD0B74-0x0000000187AD0B8C
-		public IDirectable FindElement(string path) => default; // 0x000000018B7C0A38-0x000000018B7C0A94
-		public override string ToString() => default; // 0x0000000185492010-0x0000000185492020
-		public Section GetSectionByName(string name) => default; // 0x000000018B7C0E14-0x000000018B7C0EBC
-		public Section GetSectionByUID(string UID) => default; // 0x0000000185492010-0x0000000185492020
-		public Section[] GetSections() => default; // 0x000000018B7C0EBC-0x000000018B7C0F18
-		public float GetSectionLength(string name) => default; // 0x0000000185492010-0x0000000185492020
-		public string[] GetSectionNames() => default; // 0x000000018B7C0F18-0x000000018B7C0F8C
-		public string[] GetDefinedEventNames() => default; // 0x0000000181378230-0x0000000181378240
-		public void PreInitialize() {} // 0x0000000185492010-0x0000000185492020
-		public void RenderCutscene(int width, int height, int frameRate, Action<Texture2D[]> callback) {} // 0x000000018B7C078C-0x000000018B7C09CC
-		private IEnumerator Internal_RenderCutscene(int width, int height, int frameRate, Action<Texture2D[]> callback) => default; // 0x0000000181377E40-0x0000000181377E50
+			where T : IDirectable;
+		public IDirectable FindElement(string path); // 0x000000018AC5CCC4-0x000000018AC5CE48
+		public override string ToString(); // 0x000000018AC60050-0x000000018AC60098
+		public Section GetSectionByName(string name); // 0x000000018AC5D444-0x000000018AC5D474
+		public Section GetSectionByUID(string UID); // 0x000000018AC5D474-0x000000018AC5D4A4
+		public Section[] GetSections(); // 0x000000018AC5D660-0x000000018AC5D6B4
+		public float GetSectionLength(string name); // 0x000000018AC5D4A4-0x000000018AC5D528
+		public string[] GetSectionNames(); // 0x000000018AC5D528-0x000000018AC5D660
+		public string[] GetDefinedEventNames(); // 0x000000018AC5D1CC-0x000000018AC5D310
+		public void PreInitialize(); // 0x000000018AC5F33C-0x000000018AC5F35C
+		public void RenderCutscene(int width, int height, int frameRate, Action<Texture2D[]> callback); // 0x000000018AC5F3CC-0x000000018AC5F4C4
+		[IteratorStateMachine(typeof(_Internal_RenderCutscene_d__194))]
+		private IEnumerator Internal_RenderCutscene(int width, int height, int frameRate, Action<Texture2D[]> callback); // 0x000000018AC5E09C-0x000000018AC5E138
 	}
 
-	public abstract class CutsceneGroup : MonoBehaviour, IDirectable // TypeDefIndex: 55663
+	public abstract class CutsceneGroup : MonoBehaviour, IDirectable // TypeDefIndex: 58304
 	{
 		// Fields
+		[CompilerGenerated]
 		private Action<Section> OnSectionReached; // 0x18
+		[HideInInspector]
+		[SerializeField]
 		private List<CutsceneTrack> _tracks; // 0x20
+		[HideInInspector]
+		[SerializeField]
 		private List<Section> _sections; // 0x28
+		[HideInInspector]
+		[SerializeField]
 		private bool _isCollapsed; // 0x30
+		[HideInInspector]
+		[SerializeField]
 		private bool _active; // 0x31
+		[HideInInspector]
+		[SerializeField]
 		private bool _isLocked; // 0x32
 		private bool _isReadOnly; // 0x33
 		private TransformSnapshot transformSnapshot; // 0x38
 		private ObjectSnapshot objectSnapshot; // 0x40
 		private GameObject refDuplicateActor; // 0x48
 		private static int totalCustomToggleNum; // 0x00
+		[HideInInspector]
+		[SerializeField]
 		public List<CustomToggleInfo> customToggle; // 0x50
 		private bool m_customToggleValid; // 0x58
 		private bool m_customToggleCheckDirty; // 0x59
 		[NonSerialized]
 		public Dictionary<int, CustomToggleInfo> customInfoCache; // 0x60
+		[CompilerGenerated]
 		private IDirector _root_k__BackingField; // 0x68
 	
 		// Properties
-		public abstract new string name { get; set; } // 0x000000018B7B4994-0x000000018B7B503C 0x00000001813B31A0-0x00000001813B31B0
-		public abstract GameObject actor { get; set; } // 0x000000018646EE40-0x000000018646EE50 0x00000001813B8590-0x00000001813B85A0
-		public abstract ActorReferenceMode referenceMode { get; set; } // 0x0000000184A4EDC0-0x0000000184A4EDD0 0x000000018B7B4280-0x000000018B7B42BC
-		public abstract ActorInitialTransformation initialTransformation { get; set; } // 0x0000000183908D00-0x0000000183908D10 0x000000018B7B42BC-0x000000018B7B42D8
-		public abstract Vector3 initialLocalPosition { get; set; } // 0x0000000183908D00-0x0000000183908D10 0x0000000183908D00-0x0000000183908D10
-		public abstract Vector3 initialLocalRotation { get; set; } // 0x00000001814A81B0-0x00000001814A81C0 0x00000001813AE580-0x00000001813AE590
-		public abstract bool displayVirtualMeshGizmo { get; set; } // 0x00000001813AC280-0x00000001813AC290 0x0000000185A62990-0x0000000185A629A0
-		public virtual bool needActor { get; } // 0x0000000185FB0980-0x0000000185FB0990 
-		public virtual int updateOrder { get; } // 0x000000018B7B53BC-0x000000018B7B53D8 
-		public bool customToggleValid { get; } // 0x000000018142A360-0x000000018142A370 
-		public List<CutsceneTrack> tracks { get; set; } // 0x0000000185FD5CA0-0x0000000185FD5CB0 0x000000018B7B43C4-0x000000018B7B43D4
-		public List<Section> sections { get; set; } // 0x000000018B7B4544-0x000000018B7B4838 0x000000018B7B3A18-0x000000018B7B3B68
-		IEnumerable<IDirectable> IDirectable.children { get; } // 0x000000018B7B3B68-0x000000018B7B3C38 
-		float IDirectable.startTime { get; } // 0x000000018B7B3880-0x000000018B7B394C 
-		float IDirectable.endTime { get; } // 0x000000018B7B394C-0x000000018B7B3A18 
-		float IDirectable.blendIn { get; } // 0x000000018B7B3FA4-0x000000018B7B4088 
-		float IDirectable.blendOut { get; } // 0x000000018B7B3ED0-0x000000018B7B3F44 
-		bool IDirectable.canCrossBlend { get; } // 0x000000018B7B40E8-0x000000018B7B4148 
-		IDirectable IDirectable.parent { get; } // 0x000000018B7B4148-0x000000018B7B4280 
-		public IDirector root { get; private set; } // 0x000000018B7B3F44-0x000000018B7B3FA4 0x000000018B7B4088-0x000000018B7B40E8
-		public bool isActive { get; set; } // 0x0000000185492010-0x0000000185492020 0x0000000185492010-0x0000000185492020
-		public bool isCollapsed { get; set; } // 0x0000000185492010-0x0000000185492020 0x0000000185492010-0x0000000185492020
-		public bool isLocked { get; set; } // 0x000000018B7B42D8-0x000000018B7B43C4 0x000000018B7B3D48-0x000000018B7B3D98
-		public bool isReadOnly { get; set; } // 0x000000018B7B43D4-0x000000018B7B4544 0x000000018B7B3C38-0x000000018B7B3CDC
+		public abstract new string name { get; set; }
+		public abstract GameObject actor { get; set; }
+		public abstract ActorReferenceMode referenceMode { get; set; }
+		public abstract ActorInitialTransformation initialTransformation { get; set; }
+		public abstract Vector3 initialLocalPosition { get; set; }
+		public abstract Vector3 initialLocalRotation { get; set; }
+		public abstract bool displayVirtualMeshGizmo { get; set; }
+		public virtual bool needActor { get; } // 0x0000000182FFF600-0x0000000182FFF610 
+		public virtual int updateOrder { get; } // 0x0000000184DA3400-0x0000000184DA3410 
+		public bool customToggleValid { get; } // 0x000000018AC6E080-0x000000018AC6E0EC 
+		public List<CutsceneTrack> tracks { get; set; } // 0x0000000184D862C0-0x0000000184D862D0 0x0000000185390F40-0x0000000185390F50
+		public List<Section> sections { get; set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
+		IEnumerable<IDirectable> IDirectable.children { get; } // 0x000000018AC6D04C-0x000000018AC6D088 
+		float IDirectable.startTime { get; } // 0x0000000184D879D0-0x0000000184D879E0 
+		float IDirectable.endTime { get; } // 0x000000018AC6D088-0x000000018AC6D0A4 
+		float IDirectable.blendIn { get; } // 0x0000000184D879D0-0x0000000184D879E0 
+		float IDirectable.blendOut { get; } // 0x0000000184D879D0-0x0000000184D879E0 
+		bool IDirectable.canCrossBlend { get; } // 0x00000001812081B0-0x0000000181208610 
+		IDirectable IDirectable.parent { get; } // 0x00000001811EC580-0x00000001811EC590 
+		public IDirector root { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86230-0x0000000184D86240 0x000000018485F170-0x000000018485F180
+		public bool isActive { get; set; } // 0x0000000184D86AB0-0x0000000184D86AC0 0x000000018AC6E188-0x000000018AC6E1A4
+		public bool isCollapsed { get; set; } // 0x0000000184D865F0-0x0000000184D86600 0x0000000184D86620-0x0000000184D86630
+		public bool isLocked { get; set; } // 0x000000018AC6E0EC-0x000000018AC6E0FC 0x0000000184D86DD0-0x0000000184D86DE0
+		public bool isReadOnly { get; set; } // 0x0000000184DA9CA0-0x0000000184DA9CB0 0x0000000184DA9CB0-0x0000000184DA9CC0
 	
 		// Events
-		public event Action<Section> OnSectionReached;
+		public event Action<Section> OnSectionReached {
+			add; // 0x000000018AC6DFF4-0x000000018AC6E080
+			remove; // 0x000000018AC6E0FC-0x000000018AC6E188
+		}
 	
 		// Nested types
-		public enum ActorReferenceMode // TypeDefIndex: 55655
+		public enum ActorReferenceMode // TypeDefIndex: 58296
 		{
 			UseOriginal = 0,
 			UseInstanceHideOriginal = 1
 		}
 	
-		public enum ActorInitialTransformation // TypeDefIndex: 55656
+		public enum ActorInitialTransformation // TypeDefIndex: 58297
 		{
 			UseOriginal = 0,
 			UseLocal = 1
 		}
 	
 		[Serializable]
-		public class CustomToggleInfo // TypeDefIndex: 55657
+		public class CustomToggleInfo // TypeDefIndex: 58298
 		{
 			// Fields
 			public int startIndex; // 0x10
 			public int endIndex; // 0x14
 			public string desc; // 0x18
 			public bool isCollapsed; // 0x20
+			[CompilerGenerated]
 			private int _index_k__BackingField; // 0x24
+			[CompilerGenerated]
 			private CutsceneGroup _group_k__BackingField; // 0x28
 	
 			// Properties
-			public int index { get; set; } // 0x000000018B7B5228-0x000000018B7B52B4 0x000000018B7B5330-0x000000018B7B53BC
-			public CutsceneGroup group { get; set; }
+			public int index { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x00000001811F0020-0x00000001811F0030 0x00000001811F0030-0x00000001811F0040
+			public CutsceneGroup group { [CompilerGenerated] get; [CompilerGenerated] set; } // 0x0000000184D86240-0x0000000184D86250 0x0000000182FDB880-0x0000000182FDB890
 	
 			// Constructors
-			public CustomToggleInfo() {}
+			public CustomToggleInfo(); // 0x0000000184D9E080-0x0000000184D9E090
 	
 			// Methods
-			private void _OnToggleChanged() {}
-			public IEnumerable _GetAllTrackNames() => default;
+			private void _OnToggleChanged(); // 0x000000018AC6C4A4-0x000000018AC6C4BC
+			public IEnumerable _GetAllTrackNames(); // 0x000000018AC6C354-0x000000018AC6C4A4
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 55658
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58299
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -2019,199 +2402,218 @@ namespace Slate
 			public static Func<Section, float> __9__88_1; // 0x18
 	
 			// Constructors
-			static __c() {}
-			public __c() {}
+			static __c(); // 0x000000018AC79F20-0x000000018AC79F84
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal int __OnCustomToggleValueChanged_b__48_0(CustomToggleInfo t) => default;
-			internal bool _Validate_b__88_0(CutsceneTrack t) => default;
-			internal float _Validate_b__88_1(Section s) => default;
+			internal int __OnCustomToggleValueChanged_b__48_0(CustomToggleInfo t); // 0x000000018AA421AC-0x000000018AA421C4
+			internal bool _Validate_b__88_0(CutsceneTrack t); // 0x000000018AC7986C-0x000000018AC798B8
+			internal float _Validate_b__88_1(Section s); // 0x000000018AC798B8-0x000000018AC798D4
 		}
 	
-		private sealed class __c__DisplayClass89_0 // TypeDefIndex: 55659
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass89_0 // TypeDefIndex: 58300
 		{
 			// Fields
 			public string name; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass89_0() {}
+			public __c__DisplayClass89_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetSectionByName_b__0(Section s) => default;
+			internal bool _GetSectionByName_b__0(Section s); // 0x000000018AC79CC0-0x000000018AC79D14
 		}
 	
-		private sealed class __c__DisplayClass90_0 // TypeDefIndex: 55660
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass90_0 // TypeDefIndex: 58301
 		{
 			// Fields
 			public string UID; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass90_0() {}
+			public __c__DisplayClass90_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetSectionByUID_b__0(Section s) => default;
+			internal bool _GetSectionByUID_b__0(Section s); // 0x0000000186CC7538-0x0000000186CC7560
 		}
 	
-		private sealed class __c__DisplayClass91_0 // TypeDefIndex: 55661
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass91_0 // TypeDefIndex: 58302
 		{
 			// Fields
 			public float time; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass91_0() {} // 0x00000001840A27C0-0x00000001840A27D0
+			public __c__DisplayClass91_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetSectionAfter_b__0(Section s) => default; // 0x0000000185FBBF90-0x0000000185FBBFA0
+			internal bool _GetSectionAfter_b__0(Section s); // 0x000000018AC79D88-0x000000018AC79DA8
 		}
 	
-		private sealed class __c__DisplayClass92_0 // TypeDefIndex: 55662
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass92_0 // TypeDefIndex: 58303
 		{
 			// Fields
 			public float time; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass92_0() {} // 0x000000018B7B3EC4-0x000000018B7B3ED0
+			public __c__DisplayClass92_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetSectionBefore_b__0(Section s) => default; // 0x000000018B7B52B4-0x000000018B7B5320
+			internal bool _GetSectionBefore_b__0(Section s); // 0x000000018AC79DD4-0x000000018AC79DF4
 		}
 	
 		// Constructors
-		protected CutsceneGroup() {} // 0x0000000185492010-0x0000000185492020
-		static CutsceneGroup() {} // 0x000000018B7C10F8-0x000000018B7C1118
+		protected CutsceneGroup(); // 0x000000018AC6DE44-0x000000018AC6DFF4
+		static CutsceneGroup(); // 0x000000018AC6DE08-0x000000018AC6DE44
 	
 		// Methods
-		public void SetCustomToggleDirty() {} // 0x00000001814294C0-0x00000001814294D0
-		private void _OnCustomToggleValueChanged() {} // 0x000000018B7B5320-0x000000018B7B5330
-		public bool CheckCustomCollapsed(int index) => default; // 0x0000000185FB0C50-0x0000000185FB0C60
-		private void _TryRefreshCustomToggleInfo() {} // 0x0000000185FD5C90-0x0000000185FD5CA0
-		public override string ToString() => default; // 0x000000018B7B3D98-0x000000018B7B3EC4
-		public void Validate(IDirector root, IDirectable parent) {} // 0x000000018B7B3CDC-0x000000018B7B3D48
-		public Section GetSectionByName(string name) => default; // 0x000000018B7B5078-0x000000018B7B5228
-		public Section GetSectionByUID(string UID) => default; // 0x000000018B7B503C-0x000000018B7B5078
-		public Section GetSectionAfter(float time) => default; // 0x0000000181424480-0x0000000181424490
-		public Section GetSectionBefore(float time) => default; // 0x0000000181424940-0x0000000181424950
-		bool IDirectable.Initialize() => default; // 0x00000001813B8590-0x00000001813B85A0
-		void IDirectable.Enter() {} // 0x0000000184A4EDC0-0x0000000184A4EDD0
-		void IDirectable.Reverse() {} // 0x000000018B7B36D8-0x000000018B7B36F0
-		void IDirectable.Update(float time, float previousTime) {} // 0x000000018B7B3588-0x000000018B7B36D8
-		void IDirectable.Exit() {} // 0x0000000185FC9DC0-0x0000000185FC9DD0
-		void IDirectable.ReverseEnter() {} // 0x000000018B7C1244-0x000000018B7C12A8
-		void IDirectable.RootEnabled() {} // 0x0000000185492010-0x0000000185492020
-		void IDirectable.RootDisabled() {} // 0x000000018B584038-0x000000018B584050
-		void IDirectable.RootUpdated(float time, float previousTime) {} // 0x000000018B7C0B90-0x000000018B7C0BDC
-		void IDirectable.RootDestroyed() {} // 0x000000018B7C0BDC-0x000000018B7C0BF8
-		private void StoreActorState() {} // 0x0000000185492010-0x0000000185492020
-		private void RestoreActorState() {} // 0x000000018B7C0FE4-0x000000018B7C1038
-		private void TryInstantiateLocalActor() {} // 0x0000000185492010-0x0000000185492020
-		private void ReleaseLocalActorInstance() {} // 0x0000000187C26954-0x0000000187C2697C
-		private void SetActorLocalCoords() {} // 0x0000000185492010-0x0000000185492020
-		protected GameObject ResolveActor(GameObject original) => default; // 0x000000018B7C10D8-0x000000018B7C10F8
+		public void SetCustomToggleDirty(); // 0x000000018AC6CC90-0x000000018AC6CC9C
+		private void _OnCustomToggleValueChanged(); // 0x000000018AC6D604-0x000000018AC6D760
+		public bool CheckCustomCollapsed(int index); // 0x000000018AC6C4BC-0x000000018AC6C64C
+		private void _TryRefreshCustomToggleInfo(); // 0x000000018AC6D760-0x000000018AC6DE08
+		public override string ToString(); // 0x000000018AC6D190-0x000000018AC6D1A0
+		public void Validate(IDirector root, IDirectable parent); // 0x000000018AC6D310-0x000000018AC6D604
+		public Section GetSectionByName(string name); // 0x000000018AC6C7E4-0x000000018AC6C934
+		public Section GetSectionByUID(string UID); // 0x000000018AC6C934-0x000000018AC6CA04
+		public Section GetSectionAfter(float time); // 0x000000018AC6C64C-0x000000018AC6C718
+		public Section GetSectionBefore(float time); // 0x000000018AC6C718-0x000000018AC6C7E4
+		bool IDirectable.Initialize(); // 0x000000018AC6CD70-0x000000018AC6CE54
+		void IDirectable.Enter(); // 0x000000018AC6CC9C-0x000000018AC6CD10
+		void IDirectable.Reverse(); // 0x000000018AC6CEB4-0x000000018AC6CF14
+		void IDirectable.Update(float time, float previousTime); // 0x000000018AC6CF14-0x000000018AC6D04C
+		void IDirectable.Exit(); // 0x000000018AC6CD10-0x000000018AC6CD70
+		void IDirectable.ReverseEnter(); // 0x000000018AC6CE54-0x000000018AC6CEB4
+		void IDirectable.RootEnabled(); // 0x00000001841E1670-0x00000001841E1680
+		void IDirectable.RootDisabled(); // 0x00000001841E1670-0x00000001841E1680
+		void IDirectable.RootUpdated(float time, float previousTime); // 0x00000001841E1670-0x00000001841E1680
+		void IDirectable.RootDestroyed(); // 0x00000001841E1670-0x00000001841E1680
+		private void StoreActorState(); // 0x000000018AC6D0A4-0x000000018AC6D190
+		private void RestoreActorState(); // 0x000000018AC6CB14-0x000000018AC6CB64
+		private void TryInstantiateLocalActor(); // 0x000000018AC6D1A0-0x000000018AC6D310
+		private void ReleaseLocalActorInstance(); // 0x000000018AC6CA04-0x000000018AC6CAA8
+		private void SetActorLocalCoords(); // 0x000000018AC6CB64-0x000000018AC6CC90
+		protected GameObject ResolveActor(GameObject original); // 0x000000018AC6CAA8-0x000000018AC6CB14
 	}
 
-	public abstract class CutsceneTrack : MonoBehaviour, IDirectable // TypeDefIndex: 55666
+	public abstract class CutsceneTrack : MonoBehaviour, IDirectable // TypeDefIndex: 58307
 	{
 		// Fields
+		[SerializeField]
 		private string _name; // 0x18
+		[HideInInspector]
+		[SerializeField]
 		private UnityEngine.Color _color; // 0x20
+		[HideInInspector]
+		[SerializeField]
 		private bool _active; // 0x30
+		[HideInInspector]
+		[SerializeField]
 		private bool _isLocked; // 0x31
+		[HideInInspector]
+		[SerializeField]
 		private List<ActionClip> _actionClips; // 0x38
 		private bool _isReadOnly; // 0x40
+		[CompilerGenerated]
 		private int _layerOrder_k__BackingField; // 0x44
+		[CompilerGenerated]
 		private IDirectable _parent_k__BackingField; // 0x48
 	
 		// Properties
-		public GameObject actor { get; } // 0x0000000185A16440-0x0000000185A16450 
-		public new string name { get; set; } // 0x000000018B7B5F9C-0x000000018B7B5FD4 0x000000018B7B5B70-0x000000018B7B5BAC
-		public UnityEngine.Color color { get; } // 0x0000000183908D10-0x0000000183908D20 
-		public List<ActionClip> clips { get; set; } // 0x0000000183909010-0x0000000183909020 0x000000018B7B60E8-0x000000018B7B6108
-		public virtual string info { get; } // 0x00000001813ECF20-0x00000001813ECF30 
-		IEnumerable<IDirectable> IDirectable.children { get; } // 0x000000018571FEC0-0x000000018571FED0 
-		public int layerOrder { get; private set; } // 0x000000018B7B6000-0x000000018B7B6020 0x000000018B7B5FD4-0x000000018B7B6000
-		public IDirector root { get; } // 0x000000018B7B6128-0x000000018B7B6168 
-		public IDirectable parent { get; private set; } // 0x000000018B7B6020-0x000000018B7B6054 0x0000000185FB0990-0x0000000185FB09A0
-		public virtual bool isCollapsed { get; } // 0x000000018B7B6108-0x000000018B7B6128 
-		public virtual bool isActive { get; set; } // 0x0000000185492010-0x0000000185492020 0x000000018B7B5F7C-0x000000018B7B5F9C
-		public virtual bool isLocked { get; set; } // 0x0000000185492010-0x0000000185492020 0x0000000183908D00-0x0000000183908D10
-		public virtual float startTime { get; set; } // 0x0000000185492010-0x0000000185492020 0x0000000183908D00-0x0000000183908D10
-		public virtual float endTime { get; set; } // 0x0000000185492010-0x0000000185492020 0x00000001814A81B0-0x00000001814A81C0
-		public virtual float blendIn { get; set; } // 0x000000018B7B60C8-0x000000018B7B60E8 0x0000000185FBBF90-0x0000000185FBBFA0
-		public virtual float blendOut { get; set; } // 0x000000018B7B6054-0x000000018B7B6084 0x0000000185FB0660-0x0000000185FB0670
-		public bool canCrossBlend { get; } // 0x000000018B7B5B2C-0x000000018B7B5B3C 
-		public virtual bool needActor { get; } // 0x000000018B7B5B0C-0x000000018B7B5B1C 
-		public virtual int updateOrder { get; } // 0x000000018B7B5B5C-0x000000018B7B5B70 
-		public bool isReadOnly { get; set; } // 0x000000018B7B5B1C-0x000000018B7B5B2C 0x000000018B7B5B3C-0x000000018B7B5B4C
+		public GameObject actor { get; } // 0x000000018AC6ECE0-0x000000018AC6ED00 
+		public new string name { get; set; } // 0x000000018AC6EE48-0x000000018AC6EE8C 0x000000018AC6EF2C-0x000000018AC6EF74
+		public UnityEngine.Color color { get; } // 0x000000018AC6ED08-0x000000018AC6ED40 
+		public List<ActionClip> clips { get; set; } // 0x0000000184D85A50-0x0000000184D85A60 0x00000001846A91B0-0x00000001846A91C0
+		public virtual string info { get; } // 0x000000018AC6ED60-0x000000018AC6ED98 
+		IEnumerable<IDirectable> IDirectable.children { get; } // 0x000000018AC6E92C-0x000000018AC6E968 
+		public int layerOrder { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86530-0x0000000184D86540 0x0000000184D86580-0x0000000184D86590
+		public IDirector root { get; } // 0x000000018AC6EEAC-0x000000018AC6EECC 
+		public IDirectable parent { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D86200-0x0000000184D86210 0x00000001835A41A0-0x00000001835A41B0
+		public virtual bool isCollapsed { get; } // 0x000000018AC6EDC4-0x000000018AC6EDE4 
+		public virtual bool isActive { get; set; } // 0x000000018AC6ED98-0x000000018AC6EDC4 0x000000018AC6EEEC-0x000000018AC6EF2C
+		public virtual bool isLocked { get; set; } // 0x000000018AC6EDE4-0x000000018AC6EE18 0x0000000184D86AC0-0x0000000184D86AD0
+		public virtual float startTime { get; set; } // 0x000000018AC6EECC-0x000000018AC6EEEC 0x00000001841E1670-0x00000001841E1680
+		public virtual float endTime { get; set; } // 0x000000018AC6ED40-0x000000018AC6ED60 0x00000001841E1670-0x00000001841E1680
+		public virtual float blendIn { get; set; } // 0x0000000184D879D0-0x0000000184D879E0 0x00000001841E1670-0x00000001841E1680
+		public virtual float blendOut { get; set; } // 0x0000000184D879D0-0x0000000184D879E0 0x00000001841E1670-0x00000001841E1680
+		public bool canCrossBlend { get; } // 0x00000001812081B0-0x0000000181208610 
+		public virtual bool needActor { get; } // 0x000000018AC6EE8C-0x000000018AC6EEAC 
+		public virtual int updateOrder { get; } // 0x0000000184DA3400-0x0000000184DA3410 
+		public bool isReadOnly { get; set; } // 0x000000018AC6EE18-0x000000018AC6EE48 0x0000000182D480B0-0x0000000182D480C0
+		public virtual bool canDelete { get; } // 0x000000018AC6ED00-0x000000018AC6ED08 
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 55664
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58305
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
-			public static Func<ActionClip, float> __9__70_0; // 0x08
+			public static Func<ActionClip, float> __9__72_0; // 0x08
 	
 			// Constructors
-			static __c() {} // 0x000000018B7B5F24-0x000000018B7B5F44
-			public __c() {} // 0x000000018B7B6084-0x000000018B7B60C8
+			static __c(); // 0x000000018AC79EBC-0x000000018AC79F20
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal float _Validate_b__70_0(ActionClip a) => default; // 0x000000018B7B6168-0x000000018B7B61B0
+			internal float _Validate_b__72_0(ActionClip a); // 0x000000018AC79850-0x000000018AC7986C
 		}
 	
-		private sealed class __c__DisplayClass90_0 // TypeDefIndex: 55665
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass92_0 // TypeDefIndex: 58306
 		{
 			// Fields
 			public ActionClip newAction; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass90_0() {} // 0x000000018B7B5F44-0x000000018B7B5F7C
+			public __c__DisplayClass92_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _AddAction_b__0(ActionClip a) => default; // 0x00000001813ECBC0-0x00000001813ECBD0
+			internal bool _AddAction_b__0(ActionClip a); // 0x000000018AC79DA8-0x000000018AC79DD4
 		}
 	
 		// Constructors
-		protected CutsceneTrack() {} // 0x0000000185492010-0x0000000185492020
+		protected CutsceneTrack(); // 0x000000018AC6EC48-0x000000018AC6ECE0
 	
 		// Methods
-		bool IDirectable.Initialize() => default; // 0x000000018B7B5B4C-0x000000018B7B5B5C
-		void IDirectable.Enter() {} // 0x0000000185492010-0x0000000185492020
-		void IDirectable.Update(float time, float previousTime) {} // 0x0000000185492010-0x0000000185492020
-		void IDirectable.Exit() {} // 0x0000000185492010-0x0000000185492020
-		void IDirectable.ReverseEnter() {} // 0x0000000185492010-0x0000000185492020
-		void IDirectable.Reverse() {} // 0x000000018B7B5AE4-0x000000018B7B5B0C
-		void IDirectable.RootEnabled() {} // 0x000000018B7B5C30-0x000000018B7B5E8C
-		void IDirectable.RootDisabled() {} // 0x0000000185492010-0x0000000185492020
-		void IDirectable.RootUpdated(float time, float previousTime) {} // 0x0000000185492010-0x0000000185492020
-		void IDirectable.RootDestroyed() {} // 0x00000001840A27C0-0x00000001840A27D0
-		public void PostCreate(IDirectable parent) {} // 0x0000000185492010-0x0000000185492020
-		public void Validate(IDirector root, IDirectable parent) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnCreate() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnAfterValidate() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual bool OnInitialize() => default; // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnEnter() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnUpdate(float time, float previousTime) {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnExit() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnReverseEnter() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnReverse() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnDrawGizmosSelected() {} // 0x0000000185492010-0x0000000185492020
-		protected virtual void OnSceneGUI() {} // 0x000000018B7B5A4C-0x000000018B7B5AE4
-		protected virtual void OnRootEnabled() {} // 0x000000018B7B59F0-0x000000018B7B5A4C
-		protected virtual void OnRootDisabled() {} // 0x000000018B796FD4-0x000000018B796FF0
-		protected virtual void OnRootUpdated(float time, float previousTime) {} // 0x000000018B796FF0-0x000000018B797000
-		protected virtual void OnRootDestroyed() {}
-		public float GetTrackWeight() => default; // 0x000000018B7B5710-0x000000018B7B59F0
-		public float GetTrackWeight(float time) => default; // 0x000000018B7B5E8C-0x000000018B7B5F24
-		public float GetTrackWeight(float time, float blendInOut) => default; // 0x000000018B7B5BAC-0x000000018B7B5C30
-		public float GetTrackWeight(float time, float blendIn, float blendOut) => default; // 0x000000018B7C11E0-0x000000018B7C1244
+		bool IDirectable.Initialize(); // 0x000000018AC6E8F8-0x000000018AC6E908
+		void IDirectable.Enter(); // 0x000000018AC6E8D8-0x000000018AC6E8E8
+		void IDirectable.Update(float time, float previousTime); // 0x000000018AC6E918-0x000000018AC6E92C
+		void IDirectable.Exit(); // 0x000000018AC6E8E8-0x000000018AC6E8F8
+		void IDirectable.ReverseEnter(); // 0x000000018AC6E908-0x000000018AC6E918
+		void IDirectable.Reverse(); // 0x00000001885D1220-0x00000001885D1230
+		void IDirectable.RootEnabled(); // 0x00000001841E1670-0x00000001841E1680
+		void IDirectable.RootDisabled(); // 0x00000001841E1670-0x00000001841E1680
+		void IDirectable.RootUpdated(float time, float previousTime); // 0x00000001841E1670-0x00000001841E1680
+		void IDirectable.RootDestroyed(); // 0x00000001841E1670-0x00000001841E1680
+		public void PostCreate(IDirectable parent); // 0x000000018AC6E8B0-0x000000018AC6E8D8
+		public void Validate(IDirector root, IDirectable parent); // 0x000000018AC6E9EC-0x000000018AC6EC48
+		protected virtual void OnCreate(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnAfterValidate(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual bool OnInitialize(); // 0x0000000182FFF600-0x0000000182FFF610
+		protected virtual void OnEnter(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnUpdate(float time, float previousTime); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnExit(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnReverseEnter(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnReverse(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnDrawGizmosSelected(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnSceneGUI(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnRootEnabled(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnRootDisabled(); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnRootUpdated(float time, float previousTime); // 0x00000001841E1670-0x00000001841E1680
+		protected virtual void OnRootDestroyed(); // 0x00000001841E1670-0x00000001841E1680
+		public float GetTrackWeight(); // 0x000000018AC6E818-0x000000018AC6E8B0
+		public float GetTrackWeight(float time); // 0x000000018AC6E7BC-0x000000018AC6E818
+		public float GetTrackWeight(float time, float blendInOut); // 0x000000018AC4FEA8-0x000000018AC4FEC4
+		public float GetTrackWeight(float time, float blendIn, float blendOut); // 0x000000018AC4FEC4-0x000000018AC4FED4
 		public T AddAction<T>(float time)
-			where T : ActionClip => default; // 0x0000000185492010-0x0000000185492020
-		public ActionClip AddAction(System.Type type, float time) => default; // 0x000000018B7C0B74-0x000000018B7C0B90
-		private bool _Validate_b__70_1(IDirectable t) => default; // 0x000000018B7C10AC-0x000000018B7C10D8
+			where T : ActionClip;
+		public ActionClip AddAction(System.Type type, float time); // 0x000000018AC6E4DC-0x000000018AC6E7BC
+		[CompilerGenerated]
+		private bool _Validate_b__72_1(IDirectable t); // 0x000000018AC6E968-0x000000018AC6E9EC
 	}
 
-	public interface IAnimatableData // TypeDefIndex: 55667
+	public interface IAnimatableData // TypeDefIndex: 58308
 	{
 		// Properties
 		bool isValid { get; }
@@ -2238,7 +2640,7 @@ namespace Slate
 		void Reset();
 	}
 
-	public interface IDirectable // TypeDefIndex: 55668
+	public interface IDirectable // TypeDefIndex: 58309
 	{
 		// Properties
 		IDirector root { get; }
@@ -2272,14 +2674,14 @@ namespace Slate
 		void RootDestroyed();
 	}
 
-	public interface IKeyable : IDirectable // TypeDefIndex: 55669
+	public interface IKeyable : IDirectable // TypeDefIndex: 58310
 	{
 		// Properties
 		AnimationDataCollection animationData { get; }
 		object animatedParametersTarget { get; }
 	}
 
-	public interface ISubClipContainable : IDirectable // TypeDefIndex: 55670
+	public interface ISubClipContainable : IDirectable // TypeDefIndex: 58311
 	{
 		// Properties
 		float subClipOffset { get; set; }
@@ -2287,83 +2689,86 @@ namespace Slate
 		float subClipLength { get; }
 	}
 
-	public static class IDirectableExtensions // TypeDefIndex: 55674
+	public static class IDirectableExtensions // TypeDefIndex: 58315
 	{
 		// Nested types
-		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 55671
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass12_0 // TypeDefIndex: 58312
 		{
 			// Fields
 			public string name; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass12_0() {} // 0x000000018B7B872C-0x000000018B7B8768
+			public __c__DisplayClass12_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _FindChild_b__0(IDirectable d) => default; // 0x000000018B7B8F80-0x000000018B7B8FBC
+			internal bool _FindChild_b__0(IDirectable d); // 0x000000018AC799F4-0x000000018AC79A50
 		}
 	
-		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 55672
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass14_0 // TypeDefIndex: 58313
 		{
 			// Fields
 			public IDirectable directable; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass14_0() {} // 0x000000018B7B8F44-0x000000018B7B8F80
+			public __c__DisplayClass14_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetPreviousSibling_b__0(IDirectable d) => default; // 0x000000018B7B8EBC-0x000000018B7B8EF8
+			internal bool _GetPreviousSibling_b__0(IDirectable d); // 0x000000018AC79A50-0x000000018AC79AA0
 		}
 	
-		private sealed class __c__DisplayClass16_0 // TypeDefIndex: 55673
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass16_0 // TypeDefIndex: 58314
 		{
 			// Fields
 			public IDirectable directable; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass16_0() {} // 0x000000018B7B8FEC-0x000000018B7B904C
+			public __c__DisplayClass16_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetNextSibling_b__0(IDirectable d) => default; // 0x000000018B7B8FBC-0x000000018B7B8FEC
+			internal bool _GetNextSibling_b__0(IDirectable d); // 0x000000018AC79AA0-0x000000018AC79AF0
 		}
 	
-		// Methods
-		public static float GetLength(IDirectable directable) => default; // 0x000000018B7B8EF8-0x000000018B7B8F44
-		public static float RootTimeToLocalTime(IDirectable directable) => default; // 0x000000018B7B8444-0x000000018B7B84D0
-		public static float RootTimeToLocalTimeUnclamped(IDirectable directable) => default; // 0x000000018B7B8254-0x000000018B7B834C
-		public static bool IsRootTimeWithinClip(IDirectable directable) => default; // 0x000000018B7B834C-0x000000018B7B8444
-		public static float ToLocalTime(IDirectable directable, float time) => default; // 0x000000018B7B84D0-0x000000018B7B85B8
-		public static float ToLocalTimeUnclamped(IDirectable directable, float time) => default; // 0x000000018B7B9230-0x000000018B7B92C0
-		public static bool IsTimeWithinClip(IDirectable directable, float time) => default; // 0x000000018B7B85B8-0x000000018B7B86A0
-		public static bool CanCrossBlend(IDirectable directable, IDirectable other) => default;
-		public static bool CanBlendIn(IDirectable directable) => default; // 0x000000018B7B8994-0x000000018B7B8A90
-		public static bool CanBlendOut(IDirectable directable) => default;
-		public static bool CanScale(IDirectable directable) => default; // 0x000000018B7B8808-0x000000018B7B8904
-		public static bool WithinBufferTriggerRange(IDirectable directable, float time, float previousTime, bool bypass = false /* Metadata: 0x0207BF67 */) => default;
-		public static IDirectable FindChild(IDirectable directable, string name) => default; // 0x000000018B7B8CC0-0x000000018B7B8CE4
-		public static T GetPreviousSibling<T>(IDirectable directable)
-			where T : IDirectable => default; // 0x000000018B7B8BD4-0x000000018B7B8C2C
-		public static IDirectable GetPreviousSibling(IDirectable directable) => default; // 0x000000018B796FD4-0x000000018B796FF0
-		public static T GetNextSibling<T>(IDirectable directable)
-			where T : IDirectable => default; // 0x000000018B7B8C2C-0x000000018B7B8CC0
-		public static IDirectable GetNextSibling(IDirectable directable) => default; // 0x000000018B7B8A90-0x000000018B7B8BD4
-		public static T GetFirstParentOfType<T>(IDirectable directable)
-			where T : IDirectable => default; // 0x000000018B7B904C-0x000000018B7B9118
-		public static float GetWeight(IDirectable directable) => default; // 0x000000018B7B8CE4-0x000000018B7B8DB0
-		public static float GetWeight(IDirectable directable, float time) => default; // 0x000000018B7B9118-0x000000018B7B9230
-		public static float GetWeight(IDirectable directable, float time, float blendInOut) => default; // 0x000000018B7B8DB0-0x000000018B7B8EBC
-		public static float GetWeight(IDirectable directable, float time, float blendIn, float blendOut) => default; // 0x000000018B7B8120-0x000000018B7B8254
-		public static Transform GetSpaceTransform(IDirectable directable, TransformSpace space, GameObject actorOverride = null) => default; // 0x000000018B7B8904-0x000000018B7B8994
-		public static Vector3 TransformPosition(IDirectable directable, Vector3 point, TransformSpace space) => default; // 0x000000018B7B8768-0x000000018B7B8808
-		public static Vector3 InverseTransformPosition(IDirectable directable, Vector3 point, TransformSpace space) => default; // 0x000000018B7B86A0-0x000000018B7B872C
-		public static Quaternion TransformRotation(IDirectable directable, Vector3 euler, TransformSpace space) => default; // 0x0000000185492010-0x0000000185492020
-		public static Vector3 InverseTransformRotation(IDirectable directable, Quaternion rot, TransformSpace space) => default; // 0x000000018B7C0D18-0x000000018B7C0D74
-		public static Vector3 ActorPositionInSpace(IDirectable directable, TransformSpace space) => default; // 0x0000000185492010-0x0000000185492020
-		public static float GetPreviousLoopLocalTime(ISubClipContainable clip) => default; // 0x000000018B7C0D74-0x000000018B7C0DC4
-		public static float GetNextLoopLocalTime(ISubClipContainable clip) => default; // 0x0000000185492010-0x0000000185492020
-		public static AnimationCurve[] GetCurvesAll(IKeyable keyable) => default; // 0x000000018B7C0DC4-0x000000018B7C0E14
+		// Extension methods
+		public static float GetLength(this IDirectable directable); // 0x000000018AC71500-0x000000018AC7153C
+		public static float RootTimeToLocalTime(this IDirectable directable); // 0x000000018AC71D54-0x000000018AC71D90
+		public static float RootTimeToLocalTimeUnclamped(this IDirectable directable); // 0x000000018AC71D18-0x000000018AC71D54
+		public static bool IsRootTimeWithinClip(this IDirectable directable); // 0x000000018AC71C90-0x000000018AC71CCC
+		public static float ToLocalTime(this IDirectable directable, float time); // 0x000000018AC71DC0-0x000000018AC71E20
+		public static float ToLocalTimeUnclamped(this IDirectable directable, float time); // 0x000000018AC71D90-0x000000018AC71DC0
+		public static bool IsTimeWithinClip(this IDirectable directable, float time); // 0x000000018AC71CCC-0x000000018AC71D18
+		public static bool CanCrossBlend(this IDirectable directable, IDirectable other); // 0x000000018AC71218-0x000000018AC712A4
+		public static bool CanBlendIn(this IDirectable directable); // 0x000000018AC71028-0x000000018AC71120
+		public static bool CanBlendOut(this IDirectable directable); // 0x000000018AC71120-0x000000018AC71218
+		public static bool CanScale(this IDirectable directable); // 0x000000018AC712A4-0x000000018AC7138C
+		public static bool WithinBufferTriggerRange(this IDirectable directable, float time, float previousTime, bool bypass = false /* Metadata: 0x0234BC17 */); // 0x000000018AC72004-0x000000018AC72094
+		public static IDirectable FindChild(this IDirectable directable, string name); // 0x000000018AC7138C-0x000000018AC71474
+		public static T GetPreviousSibling<T>(this IDirectable directable)
+			where T : IDirectable;
+		public static IDirectable GetPreviousSibling(this IDirectable directable); // 0x000000018AC71768-0x000000018AC71864
+		public static T GetNextSibling<T>(this IDirectable directable)
+			where T : IDirectable;
+		public static IDirectable GetNextSibling(this IDirectable directable); // 0x000000018AC715DC-0x000000018AC716D8
+		public static T GetFirstParentOfType<T>(this IDirectable directable)
+			where T : IDirectable;
+		public static float GetWeight(this IDirectable directable); // 0x000000018AC71A94-0x000000018AC71AB8
+		public static float GetWeight(this IDirectable directable, float time); // 0x000000018AC719A8-0x000000018AC71A00
+		public static float GetWeight(this IDirectable directable, float time, float blendInOut); // 0x000000018AC4FEA8-0x000000018AC4FEC4
+		public static float GetWeight(this IDirectable directable, float time, float blendIn, float blendOut); // 0x000000018AC71A00-0x000000018AC71A94
+		public static Transform GetSpaceTransform(this IDirectable directable, TransformSpace space, GameObject actorOverride = null); // 0x000000018AC71864-0x000000018AC719A8
+		public static Vector3 TransformPosition(this IDirectable directable, Vector3 point, TransformSpace space); // 0x000000018AC71E20-0x000000018AC71EEC
+		public static Vector3 InverseTransformPosition(this IDirectable directable, Vector3 point, TransformSpace space); // 0x000000018AC71AB8-0x000000018AC71B84
+		public static Quaternion TransformRotation(this IDirectable directable, Vector3 euler, TransformSpace space); // 0x000000018AC71EEC-0x000000018AC72004
+		public static Vector3 InverseTransformRotation(this IDirectable directable, Quaternion rot, TransformSpace space); // 0x000000018AC71B84-0x000000018AC71C90
+		public static Vector3 ActorPositionInSpace(this IDirectable directable, TransformSpace space); // 0x000000018AC70EF4-0x000000018AC71028
+		public static float GetPreviousLoopLocalTime(this ISubClipContainable clip); // 0x000000018AC716D8-0x000000018AC71768
+		public static float GetNextLoopLocalTime(this ISubClipContainable clip); // 0x000000018AC7153C-0x000000018AC715DC
+		public static AnimationCurve[] GetCurvesAll(this IKeyable keyable); // 0x000000018AC71474-0x000000018AC71500
 	}
 
-	public interface IDirector // TypeDefIndex: 55675
+	public interface IDirector // TypeDefIndex: 58316
 	{
 		// Properties
 		IEnumerable<IDirectable> children { get; }
@@ -2388,49 +2793,56 @@ namespace Slate
 	}
 
 	[Serializable]
-	public class Section // TypeDefIndex: 55677
+	public class Section // TypeDefIndex: 58318
 	{
 		// Fields
 		public static readonly UnityEngine.Color DEFAULT_COLOR; // 0x00
+		[SerializeField]
 		private string _UID; // 0x10
+		[SerializeField]
 		private string _name; // 0x18
+		[SerializeField]
 		private float _time; // 0x20
+		[SerializeField]
 		private ExitMode _exitMode; // 0x24
+		[SerializeField]
 		private int _loopCount; // 0x28
+		[SerializeField]
 		private UnityEngine.Color _color; // 0x2C
+		[SerializeField]
 		private bool _colorizeBackground; // 0x3C
+		[CompilerGenerated]
 		private int _currentLoopIteration_k__BackingField; // 0x40
 	
 		// Properties
-		public int currentLoopIteration { get; private set; } // 0x00000001813ECF10-0x00000001813ECF20 0x00000001813EE9C0-0x00000001813EE9D0
-		public string UID { get => default; private set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public string name { get => default; set {} } // 0x0000000181377E40-0x0000000181377E50 0x0000000184088E70-0x0000000184088E80
-		public float time { get => default; set {} } // 0x0000000181C9AC70-0x0000000181C9AC80 0x0000000181C9A5B0-0x0000000181C9A5C0
-		public ExitMode exitMode { get => default; set {} } // 0x0000000181424480-0x0000000181424490 0x0000000181424940-0x0000000181424950
-		public int loopCount { get => default; set {} } // 0x0000000181C9AC80-0x0000000181C9AC90 0x0000000181C9A5C0-0x0000000181C9A5D0
-		public UnityEngine.Color color { get => default; set {} } // 0x000000018B7BE3AC-0x000000018B7BE41C 0x0000000185FB8CB0-0x0000000185FB8CC0
-		public bool colorizeBackground { get => default; set {} } // 0x0000000185FB0A40-0x0000000185FB0A50 0x0000000183AC91F0-0x0000000183AC9200
+		public int currentLoopIteration { [CompilerGenerated] get; [CompilerGenerated] private set; } // 0x0000000184D865E0-0x0000000184D865F0 0x0000000184D86610-0x0000000184D86620
+		public string UID { get; private set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public string name { get; set; } // 0x000000018385B100-0x000000018385B110 0x0000000185392C40-0x0000000185392C50
+		public float time { get; set; } // 0x00000001811EC8A0-0x00000001811EC8B0 0x00000001811EC9E0-0x00000001811EC9F0
+		public ExitMode exitMode { get; set; } // 0x00000001811F0020-0x00000001811F0030 0x00000001811F0030-0x00000001811F0040
+		public int loopCount { get; set; } // 0x00000001811F2A90-0x00000001811F2AA0 0x00000001811F2AA0-0x00000001811F2AB0
+		public UnityEngine.Color color { get; set; } // 0x000000018AC77064-0x000000018AC770D4 0x0000000184D8D3A0-0x0000000184D8D3B0
+		public bool colorizeBackground { get; set; } // 0x0000000184D86BD0-0x0000000184D86BE0 0x0000000184D86BE0-0x0000000184D86BF0
 	
 		// Nested types
-		public enum ExitMode // TypeDefIndex: 55676
+		public enum ExitMode // TypeDefIndex: 58317
 		{
 			Continue = 0,
 			Loop = 1
 		}
 	
 		// Constructors
-		public Section() {} // Dummy constructor
-		public Section(string name, float time) {} // 0x000000018B7BE2FC-0x000000018B7BE3AC
-		static Section() {} // 0x000000018B7BE290-0x000000018B7BE2FC
+		public Section(string name, float time); // 0x000000018AC76FB4-0x000000018AC77064
+		static Section(); // 0x000000018AC76F48-0x000000018AC76FB4
 	
 		// Methods
-		public void ResetLoops() {} // 0x0000000185FD5D10-0x0000000185FD5D20
-		public void BreakLoop() {} // 0x0000000185FD5D00-0x0000000185FD5D10
-		public bool TryUpdateLoop() => default; // 0x000000018B7BE270-0x000000018B7BE290
-		public override string ToString() => default; // 0x000000018B7BE1FC-0x000000018B7BE270
+		public void ResetLoops(); // 0x0000000184DA9D20-0x0000000184DA9D30
+		public void BreakLoop(); // 0x0000000184DA9D10-0x0000000184DA9D20
+		public bool TryUpdateLoop(); // 0x000000018AC76F28-0x000000018AC76F48
+		public override string ToString(); // 0x000000018AC76EB4-0x000000018AC76F28
 	}
 
-	public interface IDirectableTimePointer // TypeDefIndex: 55678
+	public interface IDirectableTimePointer // TypeDefIndex: 58319
 	{
 		// Properties
 		IDirectable target { get; }
@@ -2442,168 +2854,176 @@ namespace Slate
 		void Update(float currentTime, float previousTime);
 	}
 
-	public struct StartTimePointer : IDirectableTimePointer // TypeDefIndex: 55679
+	public struct StartTimePointer : IDirectableTimePointer // TypeDefIndex: 58320
 	{
 		// Fields
 		private bool triggered; // 0x00
 		private float lastTargetStartTime; // 0x04
+		[CompilerGenerated]
 		private IDirectable _target_k__BackingField; // 0x08
 	
 		// Properties
-		public IDirectable target { get; private set; } // 0x000000018357A260-0x000000018357A270 0x00000001877900A4-0x00000001877900B4
-		float IDirectableTimePointer.time { get => default; } // 0x000000018B7BF6C4-0x000000018B7BF6E0 
+		public IDirectable target { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] private set; } // 0x0000000184D88320-0x0000000184D88330 0x00000001867D5E9C-0x00000001867D5EAC
+		float IDirectableTimePointer.time { get; } // 0x000000018AC78388-0x000000018AC783A4 
 	
 		// Constructors
-		public StartTimePointer(IDirectable target) : this() {
-			triggered = default;
-			lastTargetStartTime = default;
-			<target>k__BackingField = default;
-		} // 0x000000018B7BF6E0-0x000000018B7BF71C
+		public StartTimePointer(IDirectable target); // 0x000000018AC783A4-0x000000018AC783E0
 	
 		// Methods
-		void IDirectableTimePointer.TriggerForward(float currentTime, float previousTime) {} // 0x000000018B7BF4F8-0x000000018B7BF574
-		void IDirectableTimePointer.Update(float currentTime, float previousTime) {} // 0x000000018B7BF574-0x000000018B7BF6C4
-		void IDirectableTimePointer.TriggerBackward(float currentTime, float previousTime) {} // 0x000000018B7BF45C-0x000000018B7BF4F8
+		void IDirectableTimePointer.TriggerForward(float currentTime, float previousTime); // 0x000000018AC781BC-0x000000018AC78238
+		void IDirectableTimePointer.Update(float currentTime, float previousTime); // 0x000000018AC78238-0x000000018AC78388
+		void IDirectableTimePointer.TriggerBackward(float currentTime, float previousTime); // 0x000000018AC78120-0x000000018AC781BC
 	}
 
-	public struct EndTimePointer : IDirectableTimePointer // TypeDefIndex: 55680
+	public struct EndTimePointer : IDirectableTimePointer // TypeDefIndex: 58321
 	{
 		// Fields
 		private bool triggered; // 0x00
+		[CompilerGenerated]
 		private IDirectable _target_k__BackingField; // 0x08
 	
 		// Properties
-		public IDirectable target { get; private set; } // 0x000000018357A260-0x000000018357A270 0x00000001877900A4-0x00000001877900B4
-		float IDirectableTimePointer.time { get => default; } // 0x000000018B7B7AB0-0x000000018B7B7ACC 
+		public IDirectable target { [CompilerGenerated] [IsReadOnly] get; [CompilerGenerated] private set; } // 0x0000000184D88320-0x0000000184D88330 0x00000001867D5E9C-0x00000001867D5EAC
+		float IDirectableTimePointer.time { get; } // 0x000000018AC70874-0x000000018AC70890 
 	
 		// Constructors
-		public EndTimePointer(IDirectable target) : this() {
-			triggered = default;
-			<target>k__BackingField = default;
-		} // 0x000000018B7B7ACC-0x000000018B7B7AEC
+		public EndTimePointer(IDirectable target); // 0x000000018AC70890-0x000000018AC708B0
 	
 		// Methods
-		void IDirectableTimePointer.TriggerForward(float currentTime, float previousTime) {} // 0x000000018B7B79D0-0x000000018B7B7A64
-		void IDirectableTimePointer.Update(float currentTime, float previousTime) {} // 0x000000018B7B7A64-0x000000018B7B7AB0
-		void IDirectableTimePointer.TriggerBackward(float currentTime, float previousTime) {} // 0x000000018B7B7948-0x000000018B7B79D0
+		void IDirectableTimePointer.TriggerForward(float currentTime, float previousTime); // 0x000000018AC70794-0x000000018AC70828
+		void IDirectableTimePointer.Update(float currentTime, float previousTime); // 0x000000018AC70828-0x000000018AC70874
+		void IDirectableTimePointer.TriggerBackward(float currentTime, float previousTime); // 0x000000018AC7070C-0x000000018AC70794
 	}
 
-	public class BezierPath : Path // TypeDefIndex: 55681
+	[AddComponentMenu("SLATE/Path")]
+	public class BezierPath : Path // TypeDefIndex: 58322
 	{
 		// Fields
+		[Range(0f, 100f)]
 		public int resolution; // 0x18
+		[SerializeField]
 		private List<Slate.BezierPoint> _points; // 0x20
 		private Vector3[] _sampledPathPoints; // 0x28
 		private float _length; // 0x30
 	
 		// Properties
-		public List<Slate.BezierPoint> points { get => default; } // 0x00000001813B31A0-0x00000001813B31B0 
-		public Slate.BezierPoint this[int index] { get => default; } // 0x000000018B7B1B28-0x000000018B7B1B7C 
-		public int pointCount { get => default; } // 0x000000018B7B1B7C-0x000000018B7B1BBC 
-		public override float length { get => default; } // 0x0000000185FB0BE0-0x0000000185FB0BF0 
+		public List<Slate.BezierPoint> points { get; } // 0x0000000184D862C0-0x0000000184D862D0 
+		public Slate.BezierPoint this[int index] { get => default; } // 0x000000018AC6A8DC-0x000000018AC6A930 
+		public int pointCount { get; } // 0x000000018AC6A930-0x000000018AC6A970 
+		public override float length { get; } // 0x0000000184D86E20-0x0000000184D86E30 
 	
 		// Constructors
-		public BezierPath() {} // 0x000000018B7B1AA0-0x000000018B7B1B28
+		public BezierPath(); // 0x000000018AC6A854-0x000000018AC6A8DC
 	
 		// Methods
-		private void Awake() {} // 0x00000001839CCD40-0x00000001839CCD50
-		private void OnValidate() {} // 0x00000001839CCD40-0x00000001839CCD50
-		public override void Compute() {} // 0x000000018B7B13E8-0x000000018B7B1410
-		public void SetDirty() {} // 0x00000001839CCD40-0x00000001839CCD50
-		private void ComputeLength() {} // 0x000000018B7B125C-0x000000018B7B127C
-		private void ComputeSampledPathPoints() {} // 0x000000018B7B127C-0x000000018B7B13E8
-		public static BezierPath Create(Transform targetParent = null) => default; // 0x000000018B7B1410-0x000000018B7B16D8
-		public Slate.BezierPoint AddPointAt(Vector3 position, int index = -1 /* Metadata: 0x0207BF6A */) => default; // 0x000000018B7B1174-0x000000018B7B125C
-		public void RemovePoint(Slate.BezierPoint point) {} // 0x000000018B7B1A40-0x000000018B7B1AA0
-		public int GetPointIndex(Slate.BezierPoint point) => default; // 0x000000018B7B16D8-0x000000018B7B175C
-		public static Vector3[] GetSampledPathPositions(Slate.BezierPoint p1, Slate.BezierPoint p2, int resolution) => default; // 0x000000018B7B1934-0x000000018B7B1A40
-		public override Vector3 GetPositionAt(float t) => default; // 0x000000018B7B1864-0x000000018B7B1934
-		public static Vector3 GetPositionAt(Slate.BezierPoint p1, Slate.BezierPoint p2, float t) => default; // 0x000000018B7B175C-0x000000018B7B1864
+		private void Awake(); // 0x0000000189DEBAEC-0x0000000189DEBAFC
+		private void OnValidate(); // 0x0000000189DEBAEC-0x0000000189DEBAFC
+		public override void Compute(); // 0x000000018AC6A19C-0x000000018AC6A1C4
+		public void SetDirty(); // 0x0000000189DEBAEC-0x0000000189DEBAFC
+		private void ComputeLength(); // 0x000000018AC6A010-0x000000018AC6A030
+		private void ComputeSampledPathPoints(); // 0x000000018AC6A030-0x000000018AC6A19C
+		public static BezierPath Create(Transform targetParent = null); // 0x000000018AC6A1C4-0x000000018AC6A48C
+		public Slate.BezierPoint AddPointAt(Vector3 position, int index = -1 /* Metadata: 0x0234BC1A */); // 0x000000018AC69F28-0x000000018AC6A010
+		public void RemovePoint(Slate.BezierPoint point); // 0x000000018AC6A7F4-0x000000018AC6A854
+		public int GetPointIndex(Slate.BezierPoint point); // 0x000000018AC6A48C-0x000000018AC6A510
+		public static Vector3[] GetSampledPathPositions(Slate.BezierPoint p1, Slate.BezierPoint p2, int resolution); // 0x000000018AC6A6E8-0x000000018AC6A7F4
+		public override Vector3 GetPositionAt(float t); // 0x000000018AC6A618-0x000000018AC6A6E8
+		public static Vector3 GetPositionAt(Slate.BezierPoint p1, Slate.BezierPoint p2, float t); // 0x000000018AC6A510-0x000000018AC6A618
 	}
 
 	[Serializable]
-	public class BezierPoint // TypeDefIndex: 55683
+	public class BezierPoint // TypeDefIndex: 58324
 	{
 		// Fields
+		[ReadOnly]
+		[SerializeField]
 		private BezierPath _path; // 0x10
+		[SerializeField]
 		public Vector3 _position; // 0x18
+		[SerializeField]
 		private Vector3 _handle1; // 0x24
+		[SerializeField]
 		private Vector3 _handle2; // 0x30
+		[SerializeField]
 		private HandleStyle _handleStyle; // 0x3C
 	
 		// Properties
-		public HandleStyle handleStyle { get => default; set {} } // 0x0000000185FB0790-0x0000000185FB07A0 0x0000000185FB07A0-0x0000000185FB07B0
-		public BezierPath path { get => default; set {} } // 0x000000018346D130-0x000000018346D140 0x0000000184096E30-0x0000000184096EF0
-		public Vector3 position { get => default; set {} } // 0x000000018B7B1D54-0x000000018B7B1DC4 0x000000018B7B20AC-0x000000018B7B2118
-		public Vector3 handle1LocalPosition { get => default; private set {} } // 0x0000000185FB8980-0x0000000185FB89A0 0x000000018B7B1DC4-0x000000018B7B1E7C
-		public Vector3 handle2LocalPosition { get => default; private set {} } // 0x0000000185FB2EF0-0x0000000185FB2F10 0x000000018B7B1F38-0x000000018B7B1FF0
-		public Vector3 handle1Position { get => default; set {} } // 0x000000018B7B1BFC-0x000000018B7B1CA8 0x000000018B7B1E7C-0x000000018B7B1F38
-		public Vector3 handle2Position { get => default; set {} } // 0x000000018B7B1CA8-0x000000018B7B1D54 0x000000018B7B1FF0-0x000000018B7B20AC
+		public HandleStyle handleStyle { get; set; } // 0x0000000184D86640-0x0000000184D86650 0x0000000184D86670-0x0000000184D86680
+		public BezierPath path { get; set; } // 0x0000000182B2ECC0-0x0000000182B2ECD0 0x00000001853908C0-0x00000001853908D0
+		public Vector3 position { get; set; } // 0x000000018AC6AB08-0x000000018AC6AB78 0x000000018AC6AE60-0x000000018AC6AECC
+		public Vector3 handle1LocalPosition { get; private set; } // 0x0000000184D905E0-0x0000000184D90600 0x000000018AC6AB78-0x000000018AC6AC30
+		public Vector3 handle2LocalPosition { get; private set; } // 0x0000000184D88ED0-0x0000000184D88EF0 0x000000018AC6ACEC-0x000000018AC6ADA4
+		public Vector3 handle1Position { get; set; } // 0x000000018AC6A9B0-0x000000018AC6AA5C 0x000000018AC6AC30-0x000000018AC6ACEC
+		public Vector3 handle2Position { get; set; } // 0x000000018AC6AA5C-0x000000018AC6AB08 0x000000018AC6ADA4-0x000000018AC6AE60
 	
 		// Nested types
-		public enum HandleStyle // TypeDefIndex: 55682
+		public enum HandleStyle // TypeDefIndex: 58323
 		{
 			Connected = 0,
 			Broken = 1
 		}
 	
 		// Constructors
-		public BezierPoint() {} // Dummy constructor
-		public BezierPoint(BezierPath path, Vector3 position) {} // 0x000000018B7B1BBC-0x000000018B7B1BFC
+		public BezierPoint(BezierPath path, Vector3 position); // 0x000000018AC6A970-0x000000018AC6A9B0
 	}
 
-	public abstract class Path : MonoBehaviour // TypeDefIndex: 55684
+	public abstract class Path : MonoBehaviour // TypeDefIndex: 58325
 	{
 		// Properties
 		public abstract float length { get; }
 	
 		// Constructors
-		protected Path() {} // 0x000000018646DB20-0x000000018646DB28
+		protected Path(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
 		public abstract Vector3 GetPositionAt(float t);
 		public abstract void Compute();
-		public static Vector3 GetPositionAlongCurve(Vector3 from, Vector3 to, Vector3 fromTangent, Vector3 toTangent, float t) => default; // 0x000000018B7B9D00-0x000000018B7B9EF8
-		public static Vector3 GetPosition(float t, Vector3[] path) => default; // 0x000000018B7B9EF8-0x000000018B7BA0FC
-		public static float GetLength(Vector3[] path) => default; // 0x000000018B7B9C54-0x000000018B7B9D00
+		public static Vector3 GetPositionAlongCurve(Vector3 from, Vector3 to, Vector3 fromTangent, Vector3 toTangent, float t); // 0x000000018AC72AE0-0x000000018AC72CD8
+		public static Vector3 GetPosition(float t, params Vector3[] path); // 0x000000018AC72CD8-0x000000018AC72EDC
+		public static float GetLength(Vector3[] path); // 0x000000018AC72A34-0x000000018AC72AE0
 	}
 
-	public static class AnimationDataUtility // TypeDefIndex: 55685
+	public static class AnimationDataUtility // TypeDefIndex: 58326
 	{
 		// Methods
-		public static string[] GetAnimatableMemberPaths(object root) => default; // 0x000000018B7B0294-0x000000018B7B02F0
-		private static string[] Internal_GetAnimatableMemberPaths(System.Type type, string path) => default; // 0x000000018B7B02F0-0x000000018B7B0668
+		public static string[] GetAnimatableMemberPaths(object root); // 0x000000018AC69048-0x000000018AC690A4
+		private static string[] Internal_GetAnimatableMemberPaths(System.Type type, string path); // 0x000000018AC690A4-0x000000018AC6941C
 	}
 
-	public class AnimatorDispatcher : MonoBehaviour // TypeDefIndex: 55686
+	[ExecuteInEditMode]
+	public class AnimatorDispatcher : MonoBehaviour // TypeDefIndex: 58327
 	{
 		// Fields
+		[CompilerGenerated]
 		private Action<int> onAnimatorIK; // 0x18
 		private Animator _animator; // 0x20
 	
 		// Properties
-		private Animator animator { get => default; } // 0x000000018B7B0708-0x000000018B7B0794 
+		private Animator animator { get; } // 0x000000018AC694BC-0x000000018AC69548 
 	
 		// Events
-		public event Action<int> onAnimatorIK;
+		public event Action<int> onAnimatorIK {
+			add; // 0x000000018AC69430-0x000000018AC694BC
+			remove; // 0x000000018AC69548-0x000000018AC695D4
+		}
 	
 		// Constructors
-		public AnimatorDispatcher() {} // 0x000000018646DB20-0x000000018646DB28
+		public AnimatorDispatcher(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void OnAnimatorIK(int index) {} // 0x000000018B7B0668-0x000000018B7B067C
+		private void OnAnimatorIK(int index); // 0x000000018AC6941C-0x000000018AC69430
 	}
 
-	public static class AudioSampler // TypeDefIndex: 55688
+	public static class AudioSampler // TypeDefIndex: 58329
 	{
 		// Fields
-		private const string ROOT_NAME = "_AudioSources"; // Metadata: 0x0207BF6D
+		private const string ROOT_NAME = "_AudioSources"; // Metadata: 0x0234BC1D
 		private static GameObject root; // 0x00
 		private static Dictionary<object, AudioSource> sources; // 0x08
 	
 		// Nested types
 		[Serializable]
-		public struct SampleSettings // TypeDefIndex: 55687
+		public struct SampleSettings // TypeDefIndex: 58328
 		{
 			// Fields
 			public float volume; // 0x00
@@ -2614,29 +3034,31 @@ namespace Slate
 			public bool bypassReverb; // 0x11
 	
 			// Methods
-			public static SampleSettings Default() => default; // 0x000000018B7B0820-0x000000018B7B0AFC
+			public static SampleSettings Default(); // 0x0000000184DA9CC0-0x0000000184DA9CE0
 		}
 	
 		// Constructors
-		static AudioSampler() {} // 0x0000000185FD5CB0-0x0000000185FD5CD0
+		static AudioSampler(); // 0x000000018AC69E94-0x000000018AC69F28
 	
 		// Methods
-		public static AudioSource GetSourceForID(object keyID) => default; // 0x000000018B7B0AFC-0x000000018B7B0C88
-		public static void ReleaseSourceForID(object keyID) {} // 0x000000018B7B0C88-0x000000018B7B0D4C
-		public static void SampleForID(object keyID, AudioClip clip, float time, float previousTime, float volume) {} // 0x000000018B7B0D4C-0x000000018B7B0DF0
-		public static void SampleForID(object keyID, AudioClip clip, float time, float previousTime, SampleSettings settings) {} // 0x000000018B7B0DF0-0x000000018B7B0EB4
-		public static void Sample(AudioSource source, AudioClip clip, float time, float previousTime, float volume) {} // 0x000000018B7B0EB4-0x000000018B7B10E0
-		public static void Sample(AudioSource source, AudioClip clip, float time, float previousTime, SampleSettings settings) {} // 0x000000018B7B10E0-0x000000018B7B1174
+		public static AudioSource GetSourceForID(object keyID); // 0x000000018AC695D4-0x000000018AC698B0
+		public static void ReleaseSourceForID(object keyID); // 0x000000018AC698B0-0x000000018AC69A3C
+		public static void SampleForID(object keyID, AudioClip clip, float time, float previousTime, float volume); // 0x000000018AC69A3C-0x000000018AC69B00
+		public static void SampleForID(object keyID, AudioClip clip, float time, float previousTime, SampleSettings settings); // 0x000000018AC69B00-0x000000018AC69BA4
+		public static void Sample(AudioSource source, AudioClip clip, float time, float previousTime, float volume); // 0x000000018AC69BA4-0x000000018AC69C68
+		public static void Sample(AudioSource source, AudioClip clip, float time, float previousTime, SampleSettings settings); // 0x000000018AC69C68-0x000000018AC69E94
 	}
 
-	public static class ColorUtility // TypeDefIndex: 55689
+	public static class ColorUtility // TypeDefIndex: 58330
 	{
 		// Methods
-		public static UnityEngine.Color Grey(float value) => default; // 0x0000000185FD2BE0-0x0000000185FD2C00
-		public static UnityEngine.Color WithAlpha(UnityEngine.Color color, float alpha) => default; // 0x0000000185FD2C00-0x0000000185FD2C20
+		public static UnityEngine.Color Grey(float value); // 0x0000000184DA6870-0x0000000184DA6890
+	
+		// Extension methods
+		public static UnityEngine.Color WithAlpha(this UnityEngine.Color color, float alpha); // 0x0000000184DA6890-0x0000000184DA68B0
 	}
 
-	public enum TangentMode // TypeDefIndex: 55690
+	public enum TangentMode // TypeDefIndex: 58331
 	{
 		Editable = 0,
 		Smooth = 1,
@@ -2644,26 +3066,28 @@ namespace Slate
 		Constant = 3
 	}
 
-	public static class CurveUtility // TypeDefIndex: 55695
+	public static class CurveUtility // TypeDefIndex: 58336
 	{
 		// Fields
-		private const float KEY_PROXIMITY_TOLERANCE = 0.001f; // Metadata: 0x0207BF7F
+		private const float KEY_PROXIMITY_TOLERANCE = 0.001f; // Metadata: 0x0234BC2F
 	
 		// Nested types
-		private sealed class __c__DisplayClass1_0 // TypeDefIndex: 55691
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass1_0 // TypeDefIndex: 58332
 		{
 			// Fields
 			public float time; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass1_0() {} // 0x000000018B7B2C58-0x000000018B7B2EA4
+			public __c__DisplayClass1_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetKeyNext_b__1(Keyframe k) => default; // 0x000000018B7B2EA4-0x000000018B7B310C
+			internal bool _GetKeyNext_b__1(Keyframe k); // 0x000000018AC79C68-0x000000018AC79C84
 		}
 	
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 55692
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58333
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
@@ -2671,85 +3095,90 @@ namespace Slate
 			public static Func<Keyframe, float> __9__2_0; // 0x10
 	
 			// Constructors
-			static __c() {} // 0x000000018B7B3160-0x000000018B7B32A4
-			public __c() {} // 0x000000018B7B310C-0x000000018B7B3160
+			static __c(); // 0x000000018AC79DF4-0x000000018AC79E58
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal float _GetKeyNext_b__1_0(Keyframe k) => default; // 0x000000018B7B3394-0x000000018B7B3434
-			internal float _GetKeyPrevious_b__2_0(Keyframe k) => default; // 0x000000018B7B32A4-0x000000018B7B3394
+			internal float _GetKeyNext_b__1_0(Keyframe k); // 0x0000000184DA9D30-0x0000000184DA9D40
+			internal float _GetKeyPrevious_b__2_0(Keyframe k); // 0x0000000184DA9D30-0x0000000184DA9D40
 		}
 	
-		private sealed class __c__DisplayClass2_0 // TypeDefIndex: 55693
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass2_0 // TypeDefIndex: 58334
 		{
 			// Fields
 			public float time; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass2_0() {} // 0x000000018B7B3574-0x000000018B7B3588
+			public __c__DisplayClass2_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetKeyPrevious_b__1(Keyframe k) => default; // 0x000000018B7B3434-0x000000018B7B3574
+			internal bool _GetKeyPrevious_b__1(Keyframe k); // 0x000000018AC79C84-0x000000018AC79C9C
 		}
 	
-		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 55694
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass3_0 // TypeDefIndex: 58335
 		{
 			// Fields
 			public float time; // 0x10
 			public Func<Keyframe, bool> __9__0; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass3_0() {} // 0x0000000185492010-0x0000000185492020
+			public __c__DisplayClass3_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _HasKey_b__0(Keyframe k) => default; // 0x000000018B7C0F8C-0x000000018B7C0FA8
+			internal bool _HasKey_b__0(Keyframe k); // 0x000000018AC79C9C-0x000000018AC79CC0
 		}
 	
 		// Methods
-		public static float GetKeyNext(float time, AnimationCurve[] curves) => default; // 0x000000018B7C1118-0x000000018B7C117C
-		public static float GetKeyPrevious(float time, AnimationCurve[] curves) => default; // 0x0000000185492010-0x0000000185492020
-		public static bool HasKey(float time, AnimationCurve[] curves) => default; // 0x0000000185FD5D20-0x0000000185FD5D30
-		public static bool HasAnyKey(AnimationCurve[] curves) => default; // 0x0000000185FD5D20-0x0000000185FD5D30
-		public static void OffsetCurveValue(AnimationCurve curve, float deltaValue) {} // 0x0000000185492010-0x0000000185492020
-		public static void OffsetCurveTime(AnimationCurve curve, float deltaTime) {} // 0x000000018B7C0FA8-0x000000018B7C0FC0
-		public static void RemoveNegativeKeys(AnimationCurve curve) {} // 0x0000000185492010-0x0000000185492020
-		public static void RemoveKeysOffRange(AnimationCurve curve, float min, float max) {} // 0x000000018B7C0FC0-0x000000018B7C0FE4
+		public static float GetKeyNext(float time, params AnimationCurve[] curves); // 0x000000018AC6BA24-0x000000018AC6BC70
+		public static float GetKeyPrevious(float time, params AnimationCurve[] curves); // 0x000000018AC6BC70-0x000000018AC6BED8
+		public static bool HasKey(float time, params AnimationCurve[] curves); // 0x000000018AC6BF2C-0x000000018AC6C070
+		public static bool HasAnyKey(params AnimationCurve[] curves); // 0x000000018AC6BED8-0x000000018AC6BF2C
+	
+		// Extension methods
+		public static void OffsetCurveValue(this AnimationCurve curve, float deltaValue); // 0x000000018AC6C160-0x000000018AC6C200
+		public static void OffsetCurveTime(this AnimationCurve curve, float deltaTime); // 0x000000018AC6C070-0x000000018AC6C160
+		public static void RemoveNegativeKeys(this AnimationCurve curve); // 0x000000018AC6C340-0x000000018AC6C354
+		public static void RemoveKeysOffRange(this AnimationCurve curve, float min, float max); // 0x000000018AC6C200-0x000000018AC6C340
 	}
 
-	public class DecoratorAttribute : Attribute // TypeDefIndex: 55696
+	public class DecoratorAttribute : Attribute // TypeDefIndex: 58337
 	{
 		// Fields
 		public readonly System.Type targetType; // 0x10
 	
 		// Constructors
-		public DecoratorAttribute() {} // Dummy constructor
-		public DecoratorAttribute(System.Type targetType) {} // 0x0000000184096E30-0x0000000184096EF0
+		public DecoratorAttribute(System.Type targetType); // 0x00000001853908C0-0x00000001853908D0
 	}
 
-	public interface IDecorator // TypeDefIndex: 55697
+	public interface IDecorator // TypeDefIndex: 58338
 	{
 		// Properties
 		object Target { get; set; }
 	}
 
-	public static class DecoratorFactory // TypeDefIndex: 55698
+	public static class DecoratorFactory // TypeDefIndex: 58339
 	{
 		// Fields
 		private static Dictionary<System.Type, System.Type> decoratorsTypeMap; // 0x00
 		private static Dictionary<object, IDecorator> decoratorsInstanceMap; // 0x08
 	
 		// Constructors
-		static DecoratorFactory() {} // 0x000000018B7B61B0-0x000000018B7B62A4
+		static DecoratorFactory(); // 0x000000018AC6EF74-0x000000018AC6F068
 	
 		// Methods
-		public static T Decorator<T>(object target)
-			where T : IDecorator => default;
 		public static T GetDecorator<T>(object target)
-			where T : IDecorator => default;
+			where T : IDecorator;
 		private static T CreateDecorator<T>(System.Type targetType)
-			where T : IDecorator => default;
+			where T : IDecorator;
+	
+		// Extension methods
+		public static T Decorator<T>(this object target)
+			where T : IDecorator;
 	}
 
-	public enum EaseType // TypeDefIndex: 55699
+	public enum EaseType // TypeDefIndex: 58340
 	{
 		Linear = 0,
 		QuadraticIn = 1,
@@ -2784,48 +3213,48 @@ namespace Slate
 		BackInOut = 30
 	}
 
-	public static class Easing // TypeDefIndex: 55700
+	public static class Easing // TypeDefIndex: 58341
 	{
 		// Methods
-		public static float Ease(Slate.EaseType type, float from, float to, float t) => default; // 0x000000018B7B6F30-0x000000018B7B6FB4
-		public static Vector3 Ease(Slate.EaseType type, Vector3 from, Vector3 to, float t) => default; // 0x000000018B7B7134-0x000000018B7B7218
-		public static Quaternion Ease(Slate.EaseType type, Quaternion from, Quaternion to, float t) => default; // 0x000000018B7B6FB4-0x000000018B7B7078
-		public static UnityEngine.Color Ease(Slate.EaseType type, UnityEngine.Color from, UnityEngine.Color to, float t) => default; // 0x000000018B7B7078-0x000000018B7B7134
-		public static Func<float, float> Function(Slate.EaseType type) => default; // 0x000000018B7B7218-0x000000018B7B7948
-		public static float Linear(float t) => default; // 0x0000000185492010-0x0000000185492020
-		public static float QuadraticIn(float t) => default; // 0x0000000185FB2920-0x0000000185FB2930
-		public static float QuadraticOut(float t) => default; // 0x0000000185FD2E20-0x0000000185FD2E40
-		public static float QuadraticInOut(float t) => default; // 0x000000018B4E14BC-0x000000018B4E1518
-		public static float QuarticIn(float t) => default; // 0x0000000185FD2E40-0x0000000185FD2E50
-		public static float QuarticOut(float t) => default; // 0x0000000185FD2E50-0x0000000185FD2E80
-		public static float QuarticInOut(float t) => default; // 0x000000018B4E1518-0x000000018B4E156C
-		public static float QuinticIn(float t) => default; // 0x0000000185FD2E80-0x0000000185FD2EA0
-		public static float QuinticOut(float t) => default; // 0x0000000185FD2EA0-0x0000000185FD2ED0
-		public static float QuinticInOut(float t) => default; // 0x000000018B4E156C-0x000000018B4E15C8
-		public static float CubicIn(float t) => default; // 0x0000000185FB38F0-0x0000000185FB3900
-		public static float CubicOut(float t) => default; // 0x0000000185FD2D10-0x0000000185FD2D30
-		public static float CubicInOut(float t) => default; // 0x000000018B4E086C-0x000000018B4E08D4
-		public static float SinusoidalIn(float t) => default; // 0x000000018B4E15C8-0x000000018B4E15F8
-		public static float SinusoidalOut(float t) => default; // 0x000000018B4E15F8-0x000000018B4E1610
-		public static float SinusoidalInOut(float t) => default; // 0x0000000185FD2ED0-0x0000000185FD2F00
-		public static float ExponentialIn(float t) => default; // 0x000000018B4E0D1C-0x000000018B4E0D48
-		public static float ExponentialOut(float t) => default; // 0x000000018B4E0D48-0x000000018B4E0D8C
-		public static float ExponentialInOut(float t) => default; // 0x000000018B4E0C9C-0x000000018B4E0D1C
-		public static float CircularIn(float t) => default; // 0x0000000185FD2C80-0x0000000185FD2CE0
-		public static float CircularOut(float t) => default; // 0x0000000185FD2CE0-0x0000000185FD2D10
-		public static float CircularInOut(float t) => default; // 0x000000018B4E0808-0x000000018B4E086C
-		public static float ElasticIn(float t) => default; // 0x0000000185FD2D30-0x0000000185FD2DB0
-		public static float ElasticOut(float t) => default; // 0x0000000185FD2DB0-0x0000000185FD2E20
-		public static float ElasticInOut(float t) => default; // 0x000000018B4E0BBC-0x000000018B4E0C9C
-		public static float BounceIn(float t) => default; // 0x000000018B4E073C-0x000000018B4E0770
-		public static float BounceOut(float t) => default; // 0x000000018B4E0770-0x000000018B4E0808
-		public static float BounceInOut(float t) => default; // 0x000000018B4E06D0-0x000000018B4E073C
-		public static float BackIn(float t) => default; // 0x0000000185FD2C30-0x0000000185FD2C50
-		public static float BackOut(float t) => default; // 0x0000000185FD2C50-0x0000000185FD2C80
-		public static float BackInOut(float t) => default; // 0x000000018B4E0668-0x000000018B4E06D0
+		public static float Ease(Slate.EaseType type, float from, float to, float t); // 0x000000018AC6FCF4-0x000000018AC6FD78
+		public static Vector3 Ease(Slate.EaseType type, Vector3 from, Vector3 to, float t); // 0x000000018AC6FEF8-0x000000018AC6FFDC
+		public static Quaternion Ease(Slate.EaseType type, Quaternion from, Quaternion to, float t); // 0x000000018AC6FD78-0x000000018AC6FE3C
+		public static UnityEngine.Color Ease(Slate.EaseType type, UnityEngine.Color from, UnityEngine.Color to, float t); // 0x000000018AC6FE3C-0x000000018AC6FEF8
+		public static Func<float, float> Function(Slate.EaseType type); // 0x000000018AC6FFDC-0x000000018AC7070C
+		public static float Linear(float t); // 0x00000001841E1670-0x00000001841E1680
+		public static float QuadraticIn(float t); // 0x0000000184D886E0-0x0000000184D886F0
+		public static float QuadraticOut(float t); // 0x0000000184DA6AB0-0x0000000184DA6AD0
+		public static float QuadraticInOut(float t); // 0x000000018A9A0E30-0x000000018A9A0E8C
+		public static float QuarticIn(float t); // 0x0000000184DA6AD0-0x0000000184DA6AE0
+		public static float QuarticOut(float t); // 0x0000000184DA6AE0-0x0000000184DA6B10
+		public static float QuarticInOut(float t); // 0x000000018A9A0E8C-0x000000018A9A0EE0
+		public static float QuinticIn(float t); // 0x0000000184DA6B10-0x0000000184DA6B30
+		public static float QuinticOut(float t); // 0x0000000184DA6B30-0x0000000184DA6B60
+		public static float QuinticInOut(float t); // 0x000000018A9A0EE0-0x000000018A9A0F3C
+		public static float CubicIn(float t); // 0x0000000184D89930-0x0000000184D89940
+		public static float CubicOut(float t); // 0x0000000184DA69A0-0x0000000184DA69C0
+		public static float CubicInOut(float t); // 0x000000018A9A01E0-0x000000018A9A0248
+		public static float SinusoidalIn(float t); // 0x000000018A9A0F3C-0x000000018A9A0F6C
+		public static float SinusoidalOut(float t); // 0x000000018A9A0F6C-0x000000018A9A0F84
+		public static float SinusoidalInOut(float t); // 0x0000000184DA6B60-0x0000000184DA6B90
+		public static float ExponentialIn(float t); // 0x000000018A9A0690-0x000000018A9A06BC
+		public static float ExponentialOut(float t); // 0x000000018A9A06BC-0x000000018A9A0700
+		public static float ExponentialInOut(float t); // 0x000000018A9A0610-0x000000018A9A0690
+		public static float CircularIn(float t); // 0x0000000184DA6910-0x0000000184DA6970
+		public static float CircularOut(float t); // 0x0000000184DA6970-0x0000000184DA69A0
+		public static float CircularInOut(float t); // 0x000000018A9A017C-0x000000018A9A01E0
+		public static float ElasticIn(float t); // 0x0000000184DA69C0-0x0000000184DA6A40
+		public static float ElasticOut(float t); // 0x0000000184DA6A40-0x0000000184DA6AB0
+		public static float ElasticInOut(float t); // 0x000000018A9A0530-0x000000018A9A0610
+		public static float BounceIn(float t); // 0x000000018A9A00B0-0x000000018A9A00E4
+		public static float BounceOut(float t); // 0x000000018A9A00E4-0x000000018A9A017C
+		public static float BounceInOut(float t); // 0x000000018A9A0044-0x000000018A9A00B0
+		public static float BackIn(float t); // 0x0000000184DA68C0-0x0000000184DA68E0
+		public static float BackOut(float t); // 0x0000000184DA68E0-0x0000000184DA6910
+		public static float BackInOut(float t); // 0x000000018A99FFDC-0x000000018A9A0044
 	}
 
-	public interface ITransformRefParameter // TypeDefIndex: 55701
+	public interface ITransformRefParameter // TypeDefIndex: 58342
 	{
 		// Properties
 		Transform transform { get; }
@@ -2833,177 +3262,197 @@ namespace Slate
 		bool useAnimation { get; }
 	}
 
-	public class ObjectSnapshot // TypeDefIndex: 55702
+	public class ObjectSnapshot // TypeDefIndex: 58343
 	{
 		// Fields
 		private static List<System.Type> ignoreTypes; // 0x00
 		private Dictionary<UnityEngine.Object, string> serialized; // 0x10
 	
 		// Constructors
-		public ObjectSnapshot() {} // Dummy constructor
-		public ObjectSnapshot(UnityEngine.Object target, bool fullObjectHierarchy = false /* Metadata: 0x0207BFA2 */) {} // 0x000000018B7B9BB4-0x000000018B7B9C54
-		static ObjectSnapshot() {} // 0x000000018B7B9B28-0x000000018B7B9BB4
+		public ObjectSnapshot(UnityEngine.Object target, bool fullObjectHierarchy = false /* Metadata: 0x0234BC52 */); // 0x000000018AC72994-0x000000018AC72A34
+		static ObjectSnapshot(); // 0x000000018AC72908-0x000000018AC72994
 	
 		// Methods
-		public static void AppendIgnoreType(System.Type type) {} // 0x000000018B7B957C-0x000000018B7B962C
-		public void Store(UnityEngine.Object target, bool fullObjectHierarchy = false /* Metadata: 0x0207BFA3 */) {} // 0x000000018B7B986C-0x000000018B7B9B28
-		public void Restore() {} // 0x000000018B7B962C-0x000000018B7B986C
+		public static void AppendIgnoreType(System.Type type); // 0x000000018AC7235C-0x000000018AC7240C
+		public void Store(UnityEngine.Object target, bool fullObjectHierarchy = false /* Metadata: 0x0234BC53 */); // 0x000000018AC7264C-0x000000018AC72908
+		public void Restore(); // 0x000000018AC7240C-0x000000018AC7264C
 	}
 
-	public static class RectUtility // TypeDefIndex: 55703
+	public static class RectUtility // TypeDefIndex: 58344
 	{
 		// Methods
-		public static Rect GetBoundRect(Rect[] rects) => default; // 0x000000018B4D1494-0x000000018B4D15B4
-		public static Rect GetBoundRect(Vector2[] positions) => default; // 0x000000018B4D15B4-0x000000018B4D16C4
-		public static bool Encapsulates(Rect a, Rect b) => default; // 0x000000018B7BBB8C-0x000000018B7BBC44
-		public static Rect ExpandBy(Rect rect, float margin) => default; // 0x000000018B7BBCA8-0x000000018B7BBCE4
-		public static Rect ExpandBy(Rect rect, float xMargin, float yMargin) => default; // 0x000000018B7BBC44-0x000000018B7BBCA8
-		public static Rect TransformSpace(Rect rect, Rect oldContainer, Rect newContainer) => default; // 0x000000018B4D1744-0x000000018B4D187C
-		public static Rect ToViewRect(Bounds b, Camera cam) => default; // 0x000000018B7BBCE4-0x000000018B7BC458
+		public static Rect GetBoundRect(params Rect[] rects); // 0x000000018A996768-0x000000018A996888
+		public static Rect GetBoundRect(params Vector2[] positions); // 0x000000018A996888-0x000000018A996998
+	
+		// Extension methods
+		public static bool Encapsulates(this Rect a, Rect b); // 0x000000018AC74978-0x000000018AC74A30
+		public static Rect ExpandBy(this Rect rect, float margin); // 0x000000018AC74A94-0x000000018AC74AD0
+		public static Rect ExpandBy(this Rect rect, float xMargin, float yMargin); // 0x000000018AC74A30-0x000000018AC74A94
+		public static Rect TransformSpace(this Rect rect, Rect oldContainer, Rect newContainer); // 0x000000018A996A18-0x000000018A996B50
+		public static Rect ToViewRect(this Bounds b, Camera cam); // 0x000000018AC74AD0-0x000000018AC75244
 	}
 
-	public static class ReflectionTools // TypeDefIndex: 55706
+	public static class ReflectionTools // TypeDefIndex: 58347
 	{
 		// Fields
-		private const System.Reflection.BindingFlags flagsEverything = (System.Reflection.BindingFlags) 60; // Metadata: 0x0207BFA7
+		private const System.Reflection.BindingFlags flagsEverything = System.Reflection.BindingFlags.Default | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic; // Metadata: 0x0234BC57
 		private static List<Assembly> _loadedAssemblies; // 0x00
 		private static Dictionary<string, System.Type> typeMap; // 0x08
 		private static Dictionary<System.Type, System.Type[]> subTypesMap; // 0x10
 	
 		// Properties
-		private static List<Assembly> loadedAssemblies { get; } // 0x000000018B7BD974-0x000000018B7BD994 
+		private static List<Assembly> loadedAssemblies { get; } // 0x000000018AC76DE4-0x000000018AC76EB4 
 	
 		// Nested types
-		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 55704
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass8_0 // TypeDefIndex: 58345
 		{
 			// Fields
 			public System.Type type; // 0x10
 			public Func<System.Type, bool> __9__0; // 0x18
 	
 			// Constructors
-			public __c__DisplayClass8_0() {} // 0x000000018B7BE12C-0x000000018B7BE1FC
+			public __c__DisplayClass8_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _GetImplementationsOf_b__0(System.Type t) => default; // 0x000000018B7BD398-0x000000018B7BD974
+			internal bool _GetImplementationsOf_b__0(System.Type t); // 0x000000018AC79D14-0x000000018AC79D88
 		}
 	
-		private sealed class __c__DisplayClass28_0<T, TValue> // TypeDefIndex: 55705
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass28_0<T, TValue> // TypeDefIndex: 58346
 		{
 			// Fields
 			public MemberInfo info;
 	
 			// Constructors
-			public __c__DisplayClass28_0() {} // 0x000000018B7BC548-0x000000018B7BC798
+			public __c__DisplayClass28_0();
 	
 			// Methods
-			internal void _GetFieldOrPropSetter_b__0(T x, TValue v) {} // 0x000000018B7BC798-0x000000018B7BCC48
+			internal void _GetFieldOrPropSetter_b__0(T x, TValue v);
 		}
 	
 		// Constructors
-		static ReflectionTools() {}
+		static ReflectionTools(); // 0x000000018AC76CE8-0x000000018AC76DE4
 	
 		// Methods
-		public static System.Type GetType(string typeName) => default; // 0x000000018B7BC458-0x000000018B7BC548
-		public static System.Type[] GetAllTypes() => default; // 0x000000018B7BDDFC-0x000000018B7BDEAC
-		public static System.Type[] GetImplementationsOf(System.Type type) => default; // 0x000000018B4C1954-0x000000018B4C1970
-		private static System.Type[] RTGetExportedTypes(Assembly asm) => default; // 0x000000018B4C1BB0-0x000000018B4C1BD4
-		public static string FriendlyName(System.Type type) => default; // 0x000000018B7BDDD8-0x000000018B7BDDFC
-		public static bool RTIsStatic(PropertyInfo propertyInfo) => default; // 0x000000018B7BDC44-0x000000018B7BDC68
-		public static bool RTIsAbstract(System.Type type) => default; // 0x000000018B7BDDB4-0x000000018B7BDDD8
-		public static bool RTIsSubclassOf(System.Type type, System.Type other) => default; // 0x000000018B7BDD6C-0x000000018B7BDD90
-		public static bool RTIsAssignableFrom(System.Type type, System.Type second) => default; // 0x000000018B7BDD48-0x000000018B7BDD6C
-		public static System.Reflection.FieldInfo RTGetField(System.Type type, string name) => default; // 0x000000018B7BDD90-0x000000018B7BDDB4
-		public static PropertyInfo RTGetProperty(System.Type type, string name) => default; // 0x000000018B4C13A4-0x000000018B4C13C0
-		public static MethodInfo RTGetMethod(System.Type type, string name) => default; // 0x000000018B4C1938-0x000000018B4C1954
-		public static System.Reflection.FieldInfo[] RTGetFields(System.Type type) => default; // 0x000000018B7BDEAC-0x000000018B7BDECC
-		public static PropertyInfo[] RTGetProperties(System.Type type) => default; // 0x000000018B7BDEAC-0x000000018B7BDECC
-		public static MethodInfo RTGetGetMethod(PropertyInfo prop) => default;
-		public static MethodInfo RTGetSetMethod(PropertyInfo prop) => default;
-		public static System.Type RTReflectedType(System.Type type) => default;
-		public static System.Type RTReflectedType(MemberInfo member) => default;
-		public static T RTGetAttribute<T>(System.Type type, bool inherited)
-			where T : Attribute => default;
-		public static T RTGetAttribute<T>(MemberInfo member, bool inherited)
-			where T : Attribute => default; // 0x000000018B7BDC68-0x000000018B7BDD48
-		public static bool RTIsDefined<T>(MemberInfo member, bool inherited)
-			where T : Attribute => default; // 0x000000018B7BDBB4-0x000000018B7BDC44
-		public static T RTCreateDelegate<T>(MethodInfo method, object instance) => default; // 0x000000018B7BDA58-0x000000018B7BDBB4
-		public static Action<T, TValue> GetFieldOrPropSetter<T, TValue>(MemberInfo info) => default; // 0x000000018B7BDECC-0x000000018B7BE030
-		public static MemberInfo[] RTGetFieldsAndProps(System.Type type) => default; // 0x000000018B7BD994-0x000000018B7BDA58
-		public static MemberInfo RTGetFieldOrProp(System.Type type, string name) => default; // 0x000000018B7BD324-0x000000018B7BD398
-		public static object RTGetFieldOrPropValue(MemberInfo member, object instance, int index = -1 /* Metadata: 0x0207BFA4 */) => default; // 0x000000018B7BD1D0-0x000000018B7BD324
-		public static void RTSetFieldOrPropValue(MemberInfo member, object instance, object value, int index = -1 /* Metadata: 0x0207BFA5 */) {} // 0x000000018B7BD08C-0x000000018B7BD1D0
-		public static System.Type RTGetFieldOrPropType(MemberInfo member) => default;
-		public static MemberInfo GetRelativeMember(object root, string path) => default; // 0x000000018B7BCC48-0x000000018B7BD08C
-		public static MemberInfo GetRelativeMember(System.Type type, string path) => default; // 0x000000018B7BE030-0x000000018B7BE12C
-		public static object GetRelativeMemberParent(object root, string path) => default; // 0x0000000185492010-0x0000000185492020
-		public static string GetMemberPath<T, TResult>(Expression<Func<T, TResult>> func) => default; // 0x000000018B7C1038-0x000000018B7C10AC
-		public static string[] GetMemberPaths(System.Type type, Predicate<System.Type> shouldInclude, Predicate<System.Type> shouldContinue, string currentPath = "" /* Metadata: 0x0207BFA6 */, List<System.Type> recursionCheck = null) => default;
+		public static System.Type GetType(string typeName); // 0x000000018AC76184-0x000000018AC7662C
+		public static System.Type[] GetAllTypes(); // 0x000000018AC75334-0x000000018AC75584
+		public static System.Type[] GetImplementationsOf(System.Type type); // 0x000000018AC75584-0x000000018AC75A34
+		public static Action<T, TValue> GetFieldOrPropSetter<T, TValue>(MemberInfo info);
+		public static MemberInfo GetRelativeMember(object root, string path); // 0x000000018AC76110-0x000000018AC76184
+		public static MemberInfo GetRelativeMember(System.Type type, string path); // 0x000000018AC75FBC-0x000000018AC76110
+		public static object GetRelativeMemberParent(object root, string path); // 0x000000018AC75E78-0x000000018AC75FBC
+		public static string GetMemberPath<T, TResult>(Expression<Func<T, TResult>> func);
+		public static string[] GetMemberPaths(System.Type type, Predicate<System.Type> shouldInclude, Predicate<System.Type> shouldContinue, string currentPath = "" /* Metadata: 0x0234BC56 */, List<System.Type> recursionCheck = null); // 0x000000018AC75A34-0x000000018AC75E78
+	
+		// Extension methods
+		private static System.Type[] RTGetExportedTypes(this Assembly asm); // 0x000000018AC7662C-0x000000018AC7664C
+		public static string FriendlyName(this System.Type type); // 0x000000018AC75244-0x000000018AC75334
+		public static bool RTIsStatic(this PropertyInfo propertyInfo); // 0x000000018AC76AB4-0x000000018AC76B64
+		public static bool RTIsAbstract(this System.Type type); // 0x000000018A989920-0x000000018A98993C
+		public static bool RTIsSubclassOf(this System.Type type, System.Type other); // 0x000000018A9899E8-0x000000018A989A0C
+		public static bool RTIsAssignableFrom(this System.Type type, System.Type second); // 0x000000018AC76A90-0x000000018AC76AB4
+		public static System.Reflection.FieldInfo RTGetField(this System.Type type, string name); // 0x000000018AC768FC-0x000000018AC76920
+		public static PropertyInfo RTGetProperty(this System.Type type, string name); // 0x000000018AC76A6C-0x000000018AC76A90
+		public static MethodInfo RTGetMethod(this System.Type type, string name); // 0x000000018AC76A24-0x000000018AC76A48
+		public static System.Reflection.FieldInfo[] RTGetFields(this System.Type type); // 0x000000018AC76A00-0x000000018AC76A24
+		public static PropertyInfo[] RTGetProperties(this System.Type type); // 0x000000018AC76A48-0x000000018AC76A6C
+		public static MethodInfo RTGetGetMethod(this PropertyInfo prop); // 0x000000018A989524-0x000000018A989540
+		public static MethodInfo RTGetSetMethod(this PropertyInfo prop); // 0x000000018A989904-0x000000018A989920
+		public static System.Type RTReflectedType(this System.Type type); // 0x000000018AC76B64-0x000000018AC76B84
+		public static System.Type RTReflectedType(this MemberInfo member); // 0x000000018AC76B64-0x000000018AC76B84
+		public static T RTGetAttribute<T>(this System.Type type, bool inherited)
+			where T : Attribute;
+		public static T RTGetAttribute<T>(this MemberInfo member, bool inherited)
+			where T : Attribute;
+		public static bool RTIsDefined<T>(this MemberInfo member, bool inherited)
+			where T : Attribute;
+		public static T RTCreateDelegate<T>(this MethodInfo method, object instance);
+		public static MemberInfo[] RTGetFieldsAndProps(this System.Type type); // 0x000000018AC76920-0x000000018AC76A00
+		public static MemberInfo RTGetFieldOrProp(this System.Type type, string name); // 0x000000018AC7686C-0x000000018AC768FC
+		public static object RTGetFieldOrPropValue(this MemberInfo member, object instance, int index = -1 /* Metadata: 0x0234BC54 */); // 0x000000018AC76710-0x000000018AC7686C
+		public static void RTSetFieldOrPropValue(this MemberInfo member, object instance, object value, int index = -1 /* Metadata: 0x0234BC55 */); // 0x000000018AC76B84-0x000000018AC76CE8
+		public static System.Type RTGetFieldOrPropType(this MemberInfo member); // 0x000000018AC7664C-0x000000018AC76710
 	}
 
-	public static class StringUtility // TypeDefIndex: 55707
+	public static class StringUtility // TypeDefIndex: 58348
 	{
 		// Methods
-		public static string SplitCamelCase(string s) => default; // 0x000000018B7BFAE4-0x000000018B7BFBE8
-		public static string AbsToRelativePath(string absolutepath) => default; // 0x000000018B7BFA08-0x000000018B7BFAE4
+		public static string AbsToRelativePath(string absolutepath); // 0x000000018AC786CC-0x000000018AC787A8
+	
+		// Extension methods
+		public static string SplitCamelCase(this string s); // 0x000000018AC787A8-0x000000018AC788AC
 	}
 
 	[Serializable]
-	public struct TransformRefPosition : ITransformRefParameter // TypeDefIndex: 55708
+	public struct TransformRefPosition : ITransformRefParameter // TypeDefIndex: 58349
 	{
 		// Fields
+		[ActorGroupPopup]
+		[SerializeField]
 		private CutsceneGroup _group; // 0x00
+		[FormerlySerializedAs("transform")]
+		[SerializeField]
 		private Transform _transform; // 0x08
+		[FormerlySerializedAs("vector")]
+		[SerializeField]
 		private Vector3 _vector; // 0x10
+		[SerializeField]
 		private TransformSpace _space; // 0x1C
 	
 		// Properties
-		public bool useAnimation { get => default; } // 0x000000018B7C00C0-0x000000018B7C016C 
-		public CutsceneGroup group { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public Transform transform { get => default; set {} } // 0x000000018B7C0008-0x000000018B7C00C0 0x00000001877900A4-0x00000001877900B4
-		public Vector3 value { get => default; set {} } // 0x000000018B7C016C-0x000000018B7C01D8 0x0000000185FB6850-0x0000000185FB6860
-		public TransformSpace space { get => default; private set {} } // 0x000000018B7BFFE4-0x000000018B7C0008 0x00000001813AE9D0-0x00000001813AE9E0
+		public bool useAnimation { get; } // 0x000000018AC78D84-0x000000018AC78E30 
+		public CutsceneGroup group { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public Transform transform { get; set; } // 0x000000018AC78CCC-0x000000018AC78D84 0x00000001867D5E9C-0x00000001867D5EAC
+		public Vector3 value { get; set; } // 0x000000018AC78E30-0x000000018AC78E9C 0x0000000184D8C970-0x0000000184D8C980
+		public TransformSpace space { get; private set; } // 0x000000018AC78CA8-0x000000018AC78CCC 0x0000000184D86320-0x0000000184D86330
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018B7BFF5C-0x000000018B7BFFE4
+		public override string ToString(); // 0x000000018AC78C20-0x000000018AC78CA8
 	}
 
 	[Serializable]
-	public struct TransformRefPositionRotation : ITransformRefParameter // TypeDefIndex: 55709
+	public struct TransformRefPositionRotation : ITransformRefParameter // TypeDefIndex: 58350
 	{
 		// Fields
+		[ActorGroupPopup]
+		[SerializeField]
 		private CutsceneGroup _group; // 0x00
+		[SerializeField]
 		private Transform _transform; // 0x08
+		[SerializeField]
 		private Vector3 _position; // 0x10
+		[SerializeField]
 		private Vector3 _rotation; // 0x1C
+		[SerializeField]
 		private TransformSpace _space; // 0x28
 	
 		// Properties
-		public bool useAnimation { get => default; } // 0x000000018B7BFEB0-0x000000018B7BFF5C 
-		public CutsceneGroup group { get => default; set {} } // 0x00000001834AFB60-0x00000001834AFB70 0x000000018646FE2C-0x000000018646FE34
-		public Transform transform { get => default; set {} } // 0x000000018B7BFDF8-0x000000018B7BFEB0 0x00000001877900A4-0x00000001877900B4
-		public Vector3 position { get => default; set {} } // 0x000000018B7BFCFC-0x000000018B7BFD68 0x0000000185FB6850-0x0000000185FB6860
-		public Vector3 rotation { get => default; set {} } // 0x000000018B7BFD68-0x000000018B7BFDD4 0x0000000185FBE140-0x0000000185FBE150
-		public TransformSpace space { get => default; private set {} } // 0x000000018B7BFDD4-0x000000018B7BFDF8 0x0000000181C9A5C0-0x0000000181C9A5D0
+		public bool useAnimation { get; } // 0x000000018AC78B74-0x000000018AC78C20 
+		public CutsceneGroup group { get; set; } // 0x0000000182B76770-0x0000000182B76780 0x0000000185392320-0x0000000185392328
+		public Transform transform { get; set; } // 0x000000018AC78ABC-0x000000018AC78B74 0x00000001867D5E9C-0x00000001867D5EAC
+		public Vector3 position { get; set; } // 0x000000018AC789C0-0x000000018AC78A2C 0x0000000184D8C970-0x0000000184D8C980
+		public Vector3 rotation { get; set; } // 0x000000018AC78A2C-0x000000018AC78A98 0x0000000184D90500-0x0000000184D90510
+		public TransformSpace space { get; private set; } // 0x000000018AC78A98-0x000000018AC78ABC 0x00000001811F2AA0-0x00000001811F2AB0
 	
 		// Methods
-		public override string ToString() => default; // 0x000000018B7BFC44-0x000000018B7BFCFC
+		public override string ToString(); // 0x000000018AC78908-0x000000018AC789C0
 	}
 
-	public class TransformSnapshot // TypeDefIndex: 55712
+	public class TransformSnapshot // TypeDefIndex: 58353
 	{
 		// Fields
 		private List<TransformData> data; // 0x10
 	
 		// Nested types
-		public enum StoreMode // TypeDefIndex: 55710
+		public enum StoreMode // TypeDefIndex: 58351
 		{
 			All = 0,
 			RootOnly = 1,
 			ChildrenOnly = 2
 		}
 	
-		private struct TransformData // TypeDefIndex: 55711
+		private struct TransformData // TypeDefIndex: 58352
 		{
 			// Fields
 			public Transform transform; // 0x00
@@ -3013,25 +3462,18 @@ namespace Slate
 			public Vector3 scale; // 0x2C
 	
 			// Constructors
-			public TransformData(Transform transform, Transform parent, Vector3 pos, Quaternion rot, Vector3 scale) {
-				this.transform = default;
-				this.parent = default;
-				this.pos = default;
-				this.rot = default;
-				this.scale = default;
-			} // 0x000000018B7C06EC-0x000000018B7C078C
+			public TransformData(Transform transform, Transform parent, Vector3 pos, Quaternion rot, Vector3 scale); // 0x000000018AC788AC-0x000000018AC78908
 		}
 	
 		// Constructors
-		public TransformSnapshot() {} // Dummy constructor
-		public TransformSnapshot(GameObject root, StoreMode mode) {} // 0x000000018B7C0348-0x000000018B7C06EC
+		public TransformSnapshot(GameObject root, StoreMode mode); // 0x000000018AC793B0-0x000000018AC79450
 	
 		// Methods
-		public void Store(GameObject root, StoreMode mode) {} // 0x000000018B7C01D8-0x000000018B7C0348
-		public void Restore() {} // 0x000000018B7BFBE8-0x000000018B7BFC44
+		public void Store(GameObject root, StoreMode mode); // 0x000000018AC7900C-0x000000018AC793B0
+		public void Restore(); // 0x000000018AC78E9C-0x000000018AC7900C
 	}
 
-	public static class UnityObjectUtility // TypeDefIndex: 55714
+	public static class UnityObjectUtility // TypeDefIndex: 58355
 	{
 		// Fields
 		private static MethodInfo _getLocalEulerAngles; // 0x00
@@ -3041,55 +3483,56 @@ namespace Slate
 		private static object[] _rotationOrderArgSet; // 0x20
 	
 		// Nested types
-		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 55713
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass10_0 // TypeDefIndex: 58354
 		{
 			// Fields
 			public string name; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass10_0() {} // 0x000000018B7C1DD0-0x000000018B7C1F98
+			public __c__DisplayClass10_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _FindInChildren_b__0(Transform t) => default; // 0x000000018B7C17F4-0x000000018B7C1914
+			internal bool _FindInChildren_b__0(Transform t); // 0x000000018AC79994-0x000000018AC799F4
 		}
 	
 		// Constructors
-		static UnityObjectUtility() {} // 0x000000018B7C1C70-0x000000018B7C1DD0
+		static UnityObjectUtility(); // 0x000000018AC7AAAC-0x000000018AC7AC74
 	
-		// Methods
-		public static Vector3 GetLocalEulerAngles(Transform transform) => default; // 0x000000018B7C12A8-0x000000018B7C145C
-		public static void SetLocalEulerAngles(Transform transform, Vector3 value) {} // 0x000000018B7C1A90-0x000000018B7C1BB4
-		public static string CalculateTransformPath(Transform root, Transform child) => default; // 0x000000018B7C145C-0x000000018B7C1598
-		public static Transform ResolveTransformPath(Transform root, string path) => default; // 0x000000018B7C19EC-0x000000018B7C1A90
-		public static Transform FindInChildren(Transform root, string name, bool includeHidden) => default; // 0x000000018B7C1BB4-0x000000018B7C1C70
-		public static void ResetLocalCoords(Transform transform, bool includeScale = true /* Metadata: 0x0207BFAB */) {} // 0x000000018B7C1914-0x000000018B7C19EC
-		public static void SetLocalCoordsFrom(Transform transform, Transform source) {}
-		public static Transform InsertParentInChain(Transform transform, string name) => default;
-		public static T GetAddComponent<T>(GameObject go)
-			where T : Component => default; // 0x000000018B7C1598-0x000000018B7C1628
-		public static T GetAddComponent<T>(Component comp)
-			where T : Component => default; // 0x000000018B7C16EC-0x000000018B7C17F4
-		public static Component GetAddComponent(GameObject go, System.Type type) => default; // 0x000000018B7C1628-0x000000018B7C16EC
-		public static List<string> GetBlendShapeNames(SkinnedMeshRenderer skinnedMesh) => default; // 0x0000000185492010-0x0000000185492020
-		public static int GetBlendShapeIndex(SkinnedMeshRenderer skinnedMesh, string shapeName) => default; // 0x000000018B7C0CB8-0x000000018B7C0D18
+		// Extension methods
+		public static Vector3 GetLocalEulerAngles(this Transform transform); // 0x000000018AC7A4D0-0x000000018AC7A5F0
+		public static void SetLocalEulerAngles(this Transform transform, Vector3 value); // 0x000000018AC7A94C-0x000000018AC7AAAC
+		public static string CalculateTransformPath(this Transform root, Transform child); // 0x000000018AC79F84-0x000000018AC7A138
+		public static Transform ResolveTransformPath(this Transform root, string path); // 0x000000018AC7A76C-0x000000018AC7A890
+		public static Transform FindInChildren(this Transform root, string name, bool includeHidden); // 0x000000018AC7A138-0x000000018AC7A274
+		public static void ResetLocalCoords(this Transform transform, bool includeScale = true /* Metadata: 0x0234BC5B */); // 0x000000018AC7A6C8-0x000000018AC7A76C
+		public static void SetLocalCoordsFrom(this Transform transform, Transform source); // 0x000000018AC7A890-0x000000018AC7A94C
+		public static Transform InsertParentInChain(this Transform transform, string name); // 0x000000018AC7A5F0-0x000000018AC7A6C8
+		public static T GetAddComponent<T>(this GameObject go)
+			where T : Component;
+		public static T GetAddComponent<T>(this Component comp)
+			where T : Component;
+		public static Component GetAddComponent(this GameObject go, System.Type type); // 0x000000018AC7A274-0x000000018AC7A304
+		public static List<string> GetBlendShapeNames(this SkinnedMeshRenderer skinnedMesh); // 0x000000018AC7A3C8-0x000000018AC7A4D0
+		public static int GetBlendShapeIndex(this SkinnedMeshRenderer skinnedMesh, string shapeName); // 0x000000018AC7A304-0x000000018AC7A3C8
 	}
 
-	public static class VideoSampler // TypeDefIndex: 55717
+	public static class VideoSampler // TypeDefIndex: 58358
 	{
 		// Fields
-		private const string ROOT_NAME = "_VideoSources"; // Metadata: 0x0207BFAC
+		private const string ROOT_NAME = "_VideoSources"; // Metadata: 0x0234BC5C
 		private static GameObject root; // 0x00
 		private static Dictionary<object, VideoPlayer> sources; // 0x08
 	
 		// Nested types
-		public enum VideoRenderTarget // TypeDefIndex: 55715
+		public enum VideoRenderTarget // TypeDefIndex: 58356
 		{
 			CameraBackground = 0,
 			CameraForeground = 1
 		}
 	
 		[Serializable]
-		public struct SampleSettings // TypeDefIndex: 55716
+		public struct SampleSettings // TypeDefIndex: 58357
 		{
 			// Fields
 			public VideoRenderTarget renderTarget; // 0x00
@@ -3099,20 +3542,20 @@ namespace Slate
 			public float audioVolume; // 0x10
 	
 			// Methods
-			public static SampleSettings Default() => default; // 0x000000018B7C1F98-0x000000018B7C22E0
+			public static SampleSettings Default(); // 0x0000000184DA9CE0-0x0000000184DA9D10
 		}
 	
 		// Constructors
-		static VideoSampler() {} // 0x0000000185FD5CD0-0x0000000185FD5D00
+		static VideoSampler(); // 0x000000018AC7B414-0x000000018AC7B4E4
 	
 		// Methods
-		public static VideoPlayer GetSourceForID(object keyID) => default; // 0x000000018B7C22E0-0x000000018B7C2494
-		public static void ReleaseSourceForID(object keyID) {} // 0x000000018B7C2494-0x000000018B7C2538
-		public static void SampleForID(object keyID, VideoClip clip, float time, float previousTime, SampleSettings settings) {} // 0x000000018B7C2538-0x000000018B7C2738
-		public static void Sample(VideoPlayer source, VideoClip clip, float time, float previousTime, SampleSettings settings) {} // 0x000000018B7C2738-0x000000018B7C2890
+		public static VideoPlayer GetSourceForID(object keyID); // 0x000000018AC7AC74-0x000000018AC7AFBC
+		public static void ReleaseSourceForID(object keyID); // 0x000000018AC7AFBC-0x000000018AC7B170
+		public static void SampleForID(object keyID, VideoClip clip, float time, float previousTime, SampleSettings settings); // 0x000000018AC7B170-0x000000018AC7B214
+		public static void Sample(VideoPlayer source, VideoClip clip, float time, float previousTime, SampleSettings settings); // 0x000000018AC7B214-0x000000018AC7B414
 	}
 
-	public class CutsceneSequencePlayer : MonoBehaviour // TypeDefIndex: 55718
+	public class CutsceneSequencePlayer : MonoBehaviour // TypeDefIndex: 58359
 	{
 		// Fields
 		public bool playOnStart; // 0x18
@@ -3122,18 +3565,20 @@ namespace Slate
 		private bool isPlaying; // 0x34
 	
 		// Constructors
-		public CutsceneSequencePlayer() {} // 0x00000001864717D0-0x00000001864717DC
+		public CutsceneSequencePlayer(); // 0x0000000185394740-0x000000018539475C
 	
 		// Methods
-		private void Start() {} // 0x000000018B7B5690-0x000000018B7B56A0
-		public void Play() {} // 0x000000018B7B55BC-0x000000018B7B5690
-		public void Stop() {} // 0x000000018B7B56A0-0x000000018B7B5708
-		private void MoveNext() {} // 0x000000018B7B5458-0x000000018B7B55BC
-		public static GameObject Create() => default; // 0x000000018B7B53D8-0x000000018B7B5458
-		private void _MoveNext_b__8_0() {} // 0x000000018B7B5708-0x000000018B7B5710
+		private void Start(); // 0x000000018AC6E45C-0x000000018AC6E46C
+		public void Play(); // 0x000000018AC6E388-0x000000018AC6E45C
+		public void Stop(); // 0x000000018AC6E46C-0x000000018AC6E4D4
+		private void MoveNext(); // 0x000000018AC6E224-0x000000018AC6E388
+		public static GameObject Create(); // 0x000000018AC6E1A4-0x000000018AC6E224
+		[CompilerGenerated]
+		private void _MoveNext_b__8_0(); // 0x000000018AC6E4D4-0x000000018AC6E4DC
 	}
 
-	public class DirectorGUITemplate : MonoBehaviour // TypeDefIndex: 55719
+	[ExecuteInEditMode]
+	public class DirectorGUITemplate : MonoBehaviour // TypeDefIndex: 58360
 	{
 		// Fields
 		public bool dontDestroyOnLoad; // 0x18
@@ -3155,24 +3600,27 @@ namespace Slate
 		private static DirectorGUITemplate _current; // 0x00
 	
 		// Constructors
-		public DirectorGUITemplate() {} // 0x00000001864717D0-0x00000001864717DC
+		public DirectorGUITemplate(); // 0x0000000185394740-0x000000018539475C
 	
 		// Methods
-		private void Awake() {} // 0x000000018B7B62A4-0x000000018B7B63C4
-		private void ShowAll() {} // 0x000000018B7B6E34-0x000000018B7B6EDC
-		private void HideAll() {} // 0x000000018B7B63C4-0x000000018B7B6454
-		private void OnEnable() {} // 0x000000018B7B6758-0x000000018B7B6974
-		private void OnDisable() {} // 0x000000018B7B653C-0x000000018B7B6758
-		private void Update() {} // 0x000000018B7B6EDC-0x000000018B7B6F30
-		private void OnCameraDissolve(Texture texture, float completion) {} // 0x000000018B7B6454-0x000000018B7B653C
-		private void OnImageOverlayGUI(Texture texture, UnityEngine.Color color, Vector2 scale, Vector2 position) {} // 0x000000018B7B6974-0x000000018B7B6ADC
-		private void OnLetterboxGUI(float completion) {} // 0x000000018B7B6ADC-0x000000018B7B6C6C
-		private void OnScreenFadeGUI(UnityEngine.Color color) {} // 0x000000018B7B6C6C-0x000000018B7B6CC4
-		private void OnTextOverlayGUI(string text, UnityEngine.Color color, float size, TextAnchor anchor, Vector2 position) {} // 0x000000018B7B6D48-0x000000018B7B6E34
-		private void OnSubtitlesGUI(string text, UnityEngine.Color color) {} // 0x000000018B7B6CC4-0x000000018B7B6D48
+		private void Awake(); // 0x000000018AC6F068-0x000000018AC6F188
+		[ContextMenu("Show All")]
+		private void ShowAll(); // 0x000000018AC6FBF8-0x000000018AC6FCA0
+		[ContextMenu("Hide All")]
+		private void HideAll(); // 0x000000018AC6F188-0x000000018AC6F218
+		private void OnEnable(); // 0x000000018AC6F51C-0x000000018AC6F738
+		private void OnDisable(); // 0x000000018AC6F300-0x000000018AC6F51C
+		private void Update(); // 0x000000018AC6FCA0-0x000000018AC6FCF4
+		private void OnCameraDissolve(Texture texture, float completion); // 0x000000018AC6F218-0x000000018AC6F300
+		private void OnImageOverlayGUI(Texture texture, UnityEngine.Color color, Vector2 scale, Vector2 position); // 0x000000018AC6F738-0x000000018AC6F8A0
+		private void OnLetterboxGUI(float completion); // 0x000000018AC6F8A0-0x000000018AC6FA30
+		private void OnScreenFadeGUI(UnityEngine.Color color); // 0x000000018AC6FA30-0x000000018AC6FA88
+		private void OnTextOverlayGUI(string text, UnityEngine.Color color, float size, TextAnchor anchor, Vector2 position); // 0x000000018AC6FB0C-0x000000018AC6FBF8
+		private void OnSubtitlesGUI(string text, UnityEngine.Color color); // 0x000000018AC6FA88-0x000000018AC6FB0C
 	}
 
-	public class PlayCutsceneOnClick : MonoBehaviour // TypeDefIndex: 55720
+	[AddComponentMenu("SLATE/Play Cutscene On Click")]
+	public class PlayCutsceneOnClick : MonoBehaviour // TypeDefIndex: 58361
 	{
 		// Fields
 		public Cutscene cutscene; // 0x18
@@ -3180,16 +3628,18 @@ namespace Slate
 		public UnityEvent onFinish; // 0x28
 	
 		// Constructors
-		public PlayCutsceneOnClick() {} // 0x000000018646DB20-0x000000018646DB28
+		public PlayCutsceneOnClick(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void OnMouseDown() {} // 0x000000018B7BB4D8-0x000000018B7BB5EC
-		private void Reset() {} // 0x000000018B7BB5EC-0x000000018B7BB68C
-		public static GameObject Create() => default; // 0x000000018B7BB468-0x000000018B7BB4D8
-		private void _OnMouseDown_b__3_0() {} // 0x000000018B7BB68C-0x000000018B7BB6AC
+		private void OnMouseDown(); // 0x000000018AC742C4-0x000000018AC743D8
+		private void Reset(); // 0x000000018AC743D8-0x000000018AC74478
+		public static GameObject Create(); // 0x000000018AC74254-0x000000018AC742C4
+		[CompilerGenerated]
+		private void _OnMouseDown_b__3_0(); // 0x000000018AC74478-0x000000018AC74498
 	}
 
-	public class PlayCutsceneOnStart : MonoBehaviour // TypeDefIndex: 55721
+	[AddComponentMenu("SLATE/Play Cutscene On Start")]
+	public class PlayCutsceneOnStart : MonoBehaviour // TypeDefIndex: 58362
 	{
 		// Fields
 		public Cutscene cutscene; // 0x18
@@ -3197,15 +3647,17 @@ namespace Slate
 		public UnityEvent onFinish; // 0x28
 	
 		// Constructors
-		public PlayCutsceneOnStart() {} // 0x000000018646DB20-0x000000018646DB28
+		public PlayCutsceneOnStart(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void Start() {} // 0x000000018B7BB738-0x000000018B7BB84C
-		public static GameObject Create() => default; // 0x000000018B7BB6AC-0x000000018B7BB738
-		private void _Start_b__3_0() {} // 0x000000018B7BB68C-0x000000018B7BB6AC
+		private void Start(); // 0x000000018AC74524-0x000000018AC74638
+		public static GameObject Create(); // 0x000000018AC74498-0x000000018AC74524
+		[CompilerGenerated]
+		private void _Start_b__3_0(); // 0x000000018AC74478-0x000000018AC74498
 	}
 
-	public class PlayCutsceneOnTrigger : MonoBehaviour // TypeDefIndex: 55722
+	[AddComponentMenu("SLATE/Play Cutscene On Trigger")]
+	public class PlayCutsceneOnTrigger : MonoBehaviour // TypeDefIndex: 58363
 	{
 		// Fields
 		public Cutscene cutscene; // 0x18
@@ -3216,30 +3668,33 @@ namespace Slate
 		public UnityEvent onFinish; // 0x38
 	
 		// Constructors
-		public PlayCutsceneOnTrigger() {} // 0x000000018B7BBB40-0x000000018B7BBB8C
+		public PlayCutsceneOnTrigger(); // 0x000000018AC7492C-0x000000018AC74978
 	
 		// Methods
-		private void OnTriggerEnter(Collider other) {} // 0x000000018B7BB8D8-0x000000018B7BBA50
-		private void Reset() {} // 0x000000018B7BBA50-0x000000018B7BBAC8
-		public static GameObject Create() => default; // 0x000000018B7BB84C-0x000000018B7BB8D8
-		private void _OnTriggerEnter_b__6_0() {} // 0x000000018B7BBAC8-0x000000018B7BBB40
+		private void OnTriggerEnter(Collider other); // 0x000000018AC746C4-0x000000018AC7483C
+		private void Reset(); // 0x000000018AC7483C-0x000000018AC748B4
+		public static GameObject Create(); // 0x000000018AC74638-0x000000018AC746C4
+		[CompilerGenerated]
+		private void _OnTriggerEnter_b__6_0(); // 0x000000018AC748B4-0x000000018AC7492C
 	}
 
-	public class StopCutsceneOnClick : MonoBehaviour // TypeDefIndex: 55723
+	[AddComponentMenu("SLATE/Stop Cutscene On Click")]
+	public class StopCutsceneOnClick : MonoBehaviour // TypeDefIndex: 58364
 	{
 		// Fields
 		public Cutscene cutscene; // 0x18
 		public Cutscene.StopMode stopMode; // 0x20
 	
 		// Constructors
-		public StopCutsceneOnClick() {} // 0x000000018646DB20-0x000000018646DB28
+		public StopCutsceneOnClick(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		private void OnMouseDown() {} // 0x000000018B7BF71C-0x000000018B7BF7D0
-		private void Reset() {} // 0x000000018B7BF7D0-0x000000018B7BF830
+		private void OnMouseDown(); // 0x000000018AC783E0-0x000000018AC78494
+		private void Reset(); // 0x000000018AC78494-0x000000018AC784F4
 	}
 
-	public class StopCutsceneOnTrigger : MonoBehaviour // TypeDefIndex: 55724
+	[AddComponentMenu("SLATE/Stop Cutscene On Trigger")]
+	public class StopCutsceneOnTrigger : MonoBehaviour // TypeDefIndex: 58365
 	{
 		// Fields
 		public Cutscene cutscene; // 0x18
@@ -3248,23 +3703,25 @@ namespace Slate
 		public Cutscene.StopMode stopMode; // 0x30
 	
 		// Constructors
-		public StopCutsceneOnTrigger() {} // 0x000000018B7BF9BC-0x000000018B7BFA08
+		public StopCutsceneOnTrigger(); // 0x000000018AC78680-0x000000018AC786CC
 	
 		// Methods
-		private void OnTriggerEnter(Collider other) {} // 0x000000018B7BF830-0x000000018B7BF944
-		private void Reset() {} // 0x000000018B7BF944-0x000000018B7BF9BC
+		private void OnTriggerEnter(Collider other); // 0x000000018AC784F4-0x000000018AC78608
+		private void Reset(); // 0x000000018AC78608-0x000000018AC78680
 	}
 }
 
 namespace Slate.ActionClips
 {
-	public abstract class ActorActionClip : ActionClip // TypeDefIndex: 55725
+	[Attachable(new System.Type[1] {typeof(ActorActionTrack) })]
+	public abstract class ActorActionClip : ActionClip // TypeDefIndex: 58366
 	{
 		// Constructors
-		protected ActorActionClip() {} // 0x000000018646DB20-0x000000018646DB28
+		protected ActorActionClip(); // 0x0000000185393520-0x0000000185393538
 	}
 
-	public abstract class ActorActionClip<T> : ActionClip // TypeDefIndex: 55726
+	[Attachable(new System.Type[1] {typeof(ActorActionTrack) })]
+	public abstract class ActorActionClip<T> : ActionClip // TypeDefIndex: 58367
 		where T : Component
 	{
 		// Fields
@@ -3276,130 +3733,178 @@ namespace Slate.ActionClips
 		public override bool isValid { get; }
 	
 		// Constructors
-		protected ActorActionClip() {}
+		protected ActorActionClip();
 	}
 
-	public class AnimateProperties : ActionClip // TypeDefIndex: 55727
+	[Attachable(new System.Type[2] {typeof(ActorActionTrack), typeof(DirectorActionTrack) })]
+	[Description("Animate any number of properties on any component of the actor, or within it\'s hierarchy.\nThis is identical to using a Properties Track, but instead the animated properties are stored within the clip and thus can be moved around as a group easier.\nYou can also use the Clip\'s Blend In/Out to optionally smooth blend from current property values over to the keyframed ones and back.")]
+	public class AnimateProperties : ActionClip // TypeDefIndex: 58368
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[SerializeField]
 		protected string _name; // 0x50
 		public Slate.EaseType interpolation; // 0x58
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override bool isValid { get => default; } // 0x000000018B797AF4-0x000000018B797B0C 
-		public override string info { get => default; } // 0x000000018B7B0224-0x000000018B7B0294 
-		public override object animatedParametersTarget { get => default; } // 0x000000018B7B021C-0x000000018B7B0224 
-		public override Slate.EaseType animatedParametersInterpolation { get => default; } // 0x0000000183F80450-0x0000000183F80460 
-		public override bool useWeightInParameters { get => default; } // 0x00000001840A27C0-0x00000001840A27D0 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override bool isValid { get; } // 0x000000018AC509C8-0x000000018AC509E0 
+		public override string info { get; } // 0x000000018AC68FD8-0x000000018AC69048 
+		public override object animatedParametersTarget { get; } // 0x000000018AC68FD0-0x000000018AC68FD8 
+		public override Slate.EaseType animatedParametersInterpolation { get; } // 0x0000000184D86570-0x0000000184D86580 
+		public override bool useWeightInParameters { get; } // 0x0000000182FFF600-0x0000000182FFF610 
 	
 		// Constructors
-		public AnimateProperties() {} // 0x000000018B7B0204-0x000000018B7B021C
+		public AnimateProperties(); // 0x000000018AC68FAC-0x000000018AC68FD0
 	}
 
-	public class AnimateBlendShape : ActorActionClip // TypeDefIndex: 55728
+	[Category("Character")]
+	[Description("Animates a single blend shape chosen from within the whole actor gameobject hierarchy.")]
+	public class AnimateBlendShape : ActorActionClip // TypeDefIndex: 58369
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private string _skinName; // 0x50
+		[HideInInspector]
+		[SerializeField]
 		private string _shapeName; // 0x58
+		[AnimatableParameter(-1f, 2f)]
 		public float weight; // 0x60
 		private float originalWeight; // 0x64
 		private int index; // 0x68
 		private SkinnedMeshRenderer _skinnedMesh; // 0x70
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7AF3BC-0x000000018B7AF3FC 
-		public override bool isValid { get => default; } // 0x000000018B7AF3FC-0x000000018B7AF4A4 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override bool canCrossBlend { get => default; } // 0x00000001840A27C0-0x00000001840A27D0 
-		public string skinName { get => default; set {} } // 0x0000000181460F60-0x0000000181460F70 0x000000018B7AF5FC-0x000000018B7AF628
-		public string shapeName { get => default; set {} } // 0x00000001813F1630-0x00000001813F1640 0x0000000186472DB0-0x0000000186472DC0
-		private SkinnedMeshRenderer skinnedMesh { get => default; } // 0x000000018B7AF4A4-0x000000018B7AF5FC 
+		public override string info { get; } // 0x000000018AC68148-0x000000018AC68188 
+		public override bool isValid { get; } // 0x000000018AC68188-0x000000018AC68230 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override bool canCrossBlend { get; } // 0x0000000182FFF600-0x0000000182FFF610 
+		public string skinName { get; set; } // 0x0000000184D86270-0x0000000184D86280 0x000000018AC68388-0x000000018AC683B4
+		public string shapeName { get; set; } // 0x0000000182E56440-0x0000000182E56460 0x00000001836E5590-0x00000001836E55A0
+		private SkinnedMeshRenderer skinnedMesh { get; } // 0x000000018AC68230-0x000000018AC68388 
 	
 		// Constructors
-		public AnimateBlendShape() {} // 0x000000018B7AF398-0x000000018B7AF3BC
+		public AnimateBlendShape(); // 0x000000018AC68114-0x000000018AC68148
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7AF1B8-0x000000018B7AF29C
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7AF2D8-0x000000018B7AF360
-		protected override void OnReverse() {} // 0x000000018B7AF29C-0x000000018B7AF2D8
-		private bool _get_skinnedMesh_b__31_0(SkinnedMeshRenderer s) => default; // 0x000000018B7AF360-0x000000018B7AF398
+		protected override void OnEnter(); // 0x000000018AC67F34-0x000000018AC68018
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC68054-0x000000018AC680DC
+		protected override void OnReverse(); // 0x000000018AC68018-0x000000018AC68054
+		[CompilerGenerated]
+		private bool _get_skinnedMesh_b__31_0(SkinnedMeshRenderer s); // 0x000000018AC680DC-0x000000018AC68114
 	}
 
-	public class CharacterExpression : ActorActionClip<Slate.Character> // TypeDefIndex: 55729
+	[Category("Character")]
+	[Description("Sets a collection of BlendShapes (an expression), which you can create in the Character Component Inspector of the actor.")]
+	public class CharacterExpression : ActorActionClip<Slate.Character> // TypeDefIndex: 58370
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x4C
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x50
+		[HideInInspector]
 		public string expressionName; // 0x58
+		[HideInInspector]
 		public string expressionUID; // 0x60
+		[AnimatableParameter(0f, 1f)]
 		public float weight; // 0x68
 		private float originalWeight; // 0x6C
 		private BlendShapeGroup expression; // 0x70
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7B22DC-0x000000018B7B2390 
-		public override bool isValid { get => default; } // 0x000000018B7B2390-0x000000018B7B23F4 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override float blendIn { get => default; set {} } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public override float blendOut { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
-		public override bool canCrossBlend { get => default; } // 0x00000001840A27C0-0x00000001840A27D0 
+		public override string info { get; } // 0x000000018AC6B0A4-0x000000018AC6B158 
+		public override bool isValid { get; } // 0x000000018AC6B158-0x000000018AC6B1BC 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public override float blendOut { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
+		public override bool canCrossBlend { get; } // 0x0000000182FFF600-0x0000000182FFF610 
 	
 		// Constructors
-		public CharacterExpression() {} // 0x000000018B7B228C-0x000000018B7B22DC
+		public CharacterExpression(); // 0x000000018AC6B040-0x000000018AC6B0A4
 	
 		// Methods
-		private BlendShapeGroup ResolveExpression() => default; // 0x000000018B7B2200-0x000000018B7B228C
-		protected override void OnEnter() {} // 0x000000018B7B2118-0x000000018B7B214C
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7B2190-0x000000018B7B2200
-		protected override void OnReverse() {} // 0x000000018B7B214C-0x000000018B7B2190
+		private BlendShapeGroup ResolveExpression(); // 0x000000018AC6AFB4-0x000000018AC6B040
+		protected override void OnEnter(); // 0x000000018AC6AECC-0x000000018AC6AF00
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC6AF44-0x000000018AC6AFB4
+		protected override void OnReverse(); // 0x000000018AC6AF00-0x000000018AC6AF44
 	}
 
-	public class CharacterLookAt : ActorActionClip<Slate.Character> // TypeDefIndex: 55730
+	[Category("Character")]
+	[Description("This ActionClip is recommended to be used above an animation track.")]
+	[Name("Character Head Look At")]
+	public class CharacterLookAt : ActorActionClip<Slate.Character> // TypeDefIndex: 58371
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x4C
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x50
 		public Slate.EaseType interpolation; // 0x54
+		[AnimatableParameter(0f, 1f)]
 		public float weight; // 0x58
 		public TransformRefPosition targetPosition; // 0x60
 		private Quaternion wasNeckRot; // 0x80
 		private Quaternion wasHeadRot; // 0x90
 	
 		// Properties
-		public Vector3 targetPositionVector { get => default; set {} } // 0x000000018B7B2C24-0x000000018B7B2C58 0x0000000185FD5C80-0x0000000185FD5C90
-		public override string info { get => default; } // 0x000000018B7B2ACC-0x000000018B7B2B44 
-		public override bool isValid { get => default; } // 0x000000018B7B2B44-0x000000018B7B2C24 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override float blendIn { get => default; set {} } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public override float blendOut { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
+		[AnimatableParameter(link = "targetPosition")]
+		[PositionHandle]
+		[ShowTrajectory]
+		public Vector3 targetPositionVector { get; set; } // 0x000000018AC6B9F0-0x000000018AC6BA24 0x0000000184DA9C90-0x0000000184DA9CA0
+		public override string info { get; } // 0x000000018AC6B898-0x000000018AC6B910 
+		public override bool isValid { get; } // 0x000000018AC6B910-0x000000018AC6B9F0 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public override float blendOut { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
 	
 		// Constructors
-		public CharacterLookAt() {} // 0x000000018B7B2A78-0x000000018B7B2ACC
+		public CharacterLookAt(); // 0x000000018AC6B840-0x000000018AC6B898
 	
 		// Methods
-		protected override void OnCreate() {} // 0x000000018B7B2440-0x000000018B7B2508
-		protected override void OnAfterValidate() {} // 0x000000018B7B23F4-0x000000018B7B2440
-		protected override void OnEnter() {} // 0x000000018B7B2508-0x000000018B7B25A8
-		protected override void OnUpdate(float time) {} // 0x000000018B7B2648-0x000000018B7B2A78
-		protected override void OnReverse() {} // 0x000000018B7B25A8-0x000000018B7B2648
+		protected override void OnCreate(); // 0x000000018AC6B208-0x000000018AC6B2D0
+		protected override void OnAfterValidate(); // 0x000000018AC6B1BC-0x000000018AC6B208
+		protected override void OnEnter(); // 0x000000018AC6B2D0-0x000000018AC6B370
+		protected override void OnUpdate(float time); // 0x000000018AC6B410-0x000000018AC6B840
+		protected override void OnReverse(); // 0x000000018AC6B370-0x000000018AC6B410
 	}
 
-	public abstract class SendMessage<T> : SendMessage // TypeDefIndex: 55731
+	public abstract class SendMessage<T> : SendMessage // TypeDefIndex: 58372
 	{
 		// Fields
+		[Tooltip("The parameter value to use when calling the method")]
 		public T value;
 	
 		// Properties
@@ -3408,81 +3913,93 @@ namespace Slate.ActionClips
 		public override System.Type parameterType { get; }
 	
 		// Constructors
-		protected SendMessage() {}
+		protected SendMessage();
 	
 		// Methods
-		protected override void OnEnter() {}
+		protected override void OnEnter();
 	}
 
-	public class SendMessage : ActorActionClip // TypeDefIndex: 55732
+	[Category("Events")]
+	[Description("Send a Unity Message to the actor")]
+	public class SendMessage : ActorActionClip // TypeDefIndex: 58373
 	{
 		// Fields
+		[Required]
+		[Tooltip("The method name to call")]
 		public string message; // 0x40
+		[Tooltip("If multiple components of the same type exist on gameobject you can specify the index of the component to use here. Leave at -1 to call all found instances")]
 		public int componentIndex; // 0x48
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7BE7FC-0x000000018B7BE83C 
-		public override bool isValid { get => default; } // 0x0000000189D8F4C0-0x0000000189D8F4D8 
-		public virtual System.Type parameterType { get => default; } // 0x00000001813AE580-0x00000001813AE590 
+		public override string info { get; } // 0x000000018AC774A8-0x000000018AC774E8 
+		public override bool isValid { get; } // 0x00000001891DE054-0x00000001891DE06C 
+		public virtual System.Type parameterType { get; } // 0x00000001811EC580-0x00000001811EC590 
 	
 		// Constructors
-		public SendMessage() {} // 0x0000000189D8E5EC-0x0000000189D8E5FC
+		public SendMessage(); // 0x000000018AC7748C-0x000000018AC774A8
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7BE548-0x000000018B7BE7FC
+		protected override void OnEnter(); // 0x000000018AC771D8-0x000000018AC7748C
 	}
 
-	public class SendMessageBoolean : SendMessage<bool> // TypeDefIndex: 55733
+	public class SendMessageBoolean : SendMessage<bool> // TypeDefIndex: 58374
 	{
 		// Constructors
-		public SendMessageBoolean() {} // 0x000000018B7BE41C-0x000000018B7BE458
+		public SendMessageBoolean(); // 0x000000018AC770D4-0x000000018AC77108
 	}
 
-	public class SendMessageFloat : SendMessage<float> // TypeDefIndex: 55734
+	public class SendMessageFloat : SendMessage<float> // TypeDefIndex: 58375
 	{
 		// Constructors
-		public SendMessageFloat() {} // 0x000000018B7BE458-0x000000018B7BE494
+		public SendMessageFloat(); // 0x000000018AC77108-0x000000018AC7713C
 	}
 
-	public class SendMessageInteger : SendMessage<int> // TypeDefIndex: 55735
+	public class SendMessageInteger : SendMessage<int> // TypeDefIndex: 58376
 	{
 		// Constructors
-		public SendMessageInteger() {} // 0x000000018B7BE494-0x000000018B7BE4D0
+		public SendMessageInteger(); // 0x000000018AC7713C-0x000000018AC77170
 	}
 
-	public class SendMessageObject : SendMessage<UnityEngine.Object> // TypeDefIndex: 55736
+	public class SendMessageObject : SendMessage<UnityEngine.Object> // TypeDefIndex: 58377
 	{
 		// Constructors
-		public SendMessageObject() {} // 0x000000018B7BE4D0-0x000000018B7BE50C
+		public SendMessageObject(); // 0x000000018AC77170-0x000000018AC771A4
 	}
 
-	public class SendMessageString : SendMessage<string> // TypeDefIndex: 55737
+	public class SendMessageString : SendMessage<string> // TypeDefIndex: 58378
 	{
 		// Constructors
-		public SendMessageString() {} // 0x000000018B7BE50C-0x000000018B7BE548
+		public SendMessageString(); // 0x000000018AC771A4-0x000000018AC771D8
 	}
 
-	public class AnimateActorVisibility : ActorActionClip // TypeDefIndex: 55738
+	[Category("GameObject")]
+	[Description("Set or animate the actor gameobject visibility.")]
+	public class AnimateActorVisibility : ActorActionClip // TypeDefIndex: 58379
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[AnimatableParameter]
 		public bool visible; // 0x44
 		private bool wasVisible; // 0x45
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
 	
 		// Constructors
-		public AnimateActorVisibility() {} // 0x000000018B7AF1A8-0x000000018B7AF1B8
+		public AnimateActorVisibility(); // 0x000000018AC67F18-0x000000018AC67F34
 	
 		// Methods
-		protected override void OnCreate() {} // 0x000000018B7AF0E8-0x000000018B7AF118
-		protected override void OnEnter() {} // 0x000000018B7AF118-0x000000018B7AF148
-		protected override void OnUpdate(float time) {} // 0x000000018B7AF178-0x000000018B7AF1A8
-		protected override void OnReverse() {} // 0x000000018B7AF148-0x000000018B7AF178
+		protected override void OnCreate(); // 0x000000018AC67E58-0x000000018AC67E88
+		protected override void OnEnter(); // 0x000000018AC67E88-0x000000018AC67EB8
+		protected override void OnUpdate(float time); // 0x000000018AC67EE8-0x000000018AC67F18
+		protected override void OnReverse(); // 0x000000018AC67EB8-0x000000018AC67EE8
 	}
 
-	public class MakeCameraTarget : ActorActionClip // TypeDefIndex: 55739
+	[Category("GameObject")]
+	[Description("Make the actor target for the currently active Dynamic Shot Controller (if used by the current active Camera Shot in the cutscene).")]
+	public class MakeCameraTarget : ActorActionClip // TypeDefIndex: 58380
 	{
 		// Fields
 		public bool setTransposerTarget; // 0x40
@@ -3491,16 +4008,20 @@ namespace Slate.ActionClips
 		private Transform wasComposerTarget; // 0x50
 	
 		// Constructors
-		public MakeCameraTarget() {} // 0x000000018B7B956C-0x000000018B7B957C
+		public MakeCameraTarget(); // 0x000000018AC72340-0x000000018AC7235C
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7B92C0-0x000000018B7B944C
-		protected override void OnReverse() {} // 0x000000018B7B944C-0x000000018B7B956C
+		protected override void OnEnter(); // 0x000000018AC72094-0x000000018AC72220
+		protected override void OnReverse(); // 0x000000018AC72220-0x000000018AC72340
 	}
 
-	public class SetActorActiveState : ActorActionClip // TypeDefIndex: 55740
+	[Category("GameObject")]
+	[Description("Set the actor active state (visibility) for a period of time or permantentely if length is zero.")]
+	public class SetActorActiveState : ActorActionClip // TypeDefIndex: 58381
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
 		public ActiveState activeState; // 0x44
 		private bool lastState; // 0x48
@@ -3508,22 +4029,26 @@ namespace Slate.ActionClips
 		private bool temporary; // 0x4A
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override string info { get => default; } // 0x000000018B7BE9BC-0x000000018B7BEA1C 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override string info { get; } // 0x000000018AC77674-0x000000018AC776D4 
 	
 		// Constructors
-		public SetActorActiveState() {} // 0x000000018B7BE9AC-0x000000018B7BE9BC
+		public SetActorActiveState(); // 0x000000018AC77658-0x000000018AC77674
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7BE83C-0x000000018B7BE904
-		protected override void OnExit() {} // 0x000000018B7BE904-0x000000018B7BE940
-		protected override void OnReverseEnter() {} // 0x000000018B7BE940-0x000000018B7BE97C
-		protected override void OnReverse() {} // 0x000000018B7BE97C-0x000000018B7BE9AC
+		protected override void OnEnter(); // 0x000000018AC774E8-0x000000018AC775B0
+		protected override void OnExit(); // 0x000000018AC775B0-0x000000018AC775EC
+		protected override void OnReverseEnter(); // 0x000000018AC775EC-0x000000018AC77628
+		protected override void OnReverse(); // 0x000000018AC77628-0x000000018AC77658
 	}
 
-	public class SetActorVisibilityTemporary : ActorActionClip // TypeDefIndex: 55741
+	[Category("GameObject")]
+	[Obsolete("Use \'Set Actor Visibility\'")]
+	public class SetActorVisibilityTemporary : ActorActionClip // TypeDefIndex: 58382
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
 		public ActiveState activeState; // 0x44
 		private bool lastState; // 0x48
@@ -3531,23 +4056,28 @@ namespace Slate.ActionClips
 		private bool temporary; // 0x4A
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override string info { get => default; } // 0x000000018B7BEA34-0x000000018B7BEA94 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override string info { get; } // 0x000000018AC776F8-0x000000018AC77758 
 	
 		// Constructors
-		public SetActorVisibilityTemporary() {} // 0x000000018B7BEA1C-0x000000018B7BEA34
+		public SetActorVisibilityTemporary(); // 0x000000018AC776D4-0x000000018AC776F8
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7BE83C-0x000000018B7BE904
-		protected override void OnExit() {} // 0x000000018B7BE904-0x000000018B7BE940
-		protected override void OnReverseEnter() {} // 0x000000018B7BE940-0x000000018B7BE97C
-		protected override void OnReverse() {} // 0x000000018B7BE97C-0x000000018B7BE9AC
+		protected override void OnEnter(); // 0x000000018AC774E8-0x000000018AC775B0
+		protected override void OnExit(); // 0x000000018AC775B0-0x000000018AC775EC
+		protected override void OnReverseEnter(); // 0x000000018AC775EC-0x000000018AC77628
+		protected override void OnReverse(); // 0x000000018AC77628-0x000000018AC77658
 	}
 
-	public class SetBehavioursActiveState : ActorActionClip // TypeDefIndex: 55742
+	[Category("GameObject")]
+	[Description("The selected Behaviours will be Enabled or Disable (based on state option) on the actor if they are not already")]
+	public class SetBehavioursActiveState : ActorActionClip // TypeDefIndex: 58383
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
 		public List<string> behaviourNames; // 0x48
 		public ActiveState activeState; // 0x50
 		private Dictionary<UnityEngine.Behaviour, bool> originalStates; // 0x58
@@ -3555,56 +4085,79 @@ namespace Slate.ActionClips
 		private bool temporary; // 0x68
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7BF3A0-0x000000018B7BF45C 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
+		public override string info { get; } // 0x000000018AC78064-0x000000018AC78120 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
 	
 		// Constructors
-		public SetBehavioursActiveState() {} // 0x000000018B7BF318-0x000000018B7BF3A0
+		public SetBehavioursActiveState(); // 0x000000018AC77FDC-0x000000018AC78064
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7BEA94-0x000000018B7BEDB4
-		protected override void OnExit() {} // 0x000000018B7BEDB4-0x000000018B7BEF68
-		protected override void OnReverseEnter() {} // 0x000000018B7BEF68-0x000000018B7BF118
-		protected override void OnReverse() {} // 0x000000018B7BF118-0x000000018B7BF2A0
-		private bool _OnEnter_b__11_0(UnityEngine.Behaviour c) => default; // 0x000000018B7BF2A0-0x000000018B7BF318
+		protected override void OnEnter(); // 0x000000018AC77758-0x000000018AC77A78
+		protected override void OnExit(); // 0x000000018AC77A78-0x000000018AC77C2C
+		protected override void OnReverseEnter(); // 0x000000018AC77C2C-0x000000018AC77DDC
+		protected override void OnReverse(); // 0x000000018AC77DDC-0x000000018AC77F64
+		[CompilerGenerated]
+		private bool _OnEnter_b__11_0(UnityEngine.Behaviour c); // 0x000000018AC77F64-0x000000018AC77FDC
 	}
 
-	public class AnimateOnPath : ActorActionClip // TypeDefIndex: 55743
+	[Category("Paths")]
+	[Description("Animate the actor\'s position and look at target position on a Path. For example, a \'PositionOnPath\' value of 0 means start of path, while a value of 1 means end of path.")]
+	public class AnimateOnPath : ActorActionClip // TypeDefIndex: 58384
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[Required]
 		public Path path; // 0x48
+		[AnimatableParameter(0f, 1f)]
 		public float positionOnPath; // 0x50
+		[AnimatableParameter]
+		[PositionHandle]
+		[ShowTrajectory]
 		public Vector3 lookAtTargetPosition; // 0x54
 		public Slate.EaseType blendInterpolation; // 0x60
 		private Vector3 wasPosition; // 0x64
 		private Quaternion wasRotation; // 0x70
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7B0114-0x000000018B7B01B4 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override bool isValid { get => default; } // 0x000000018B7B01B4-0x000000018B7B0204 
+		public override string info { get; } // 0x000000018AC68EBC-0x000000018AC68F5C 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override bool isValid { get; } // 0x000000018AC68F5C-0x000000018AC68FAC 
 	
 		// Constructors
-		public AnimateOnPath() {} // 0x000000018B7B00FC-0x000000018B7B0114
+		public AnimateOnPath(); // 0x000000018AC68E98-0x000000018AC68EBC
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7AFCD4-0x000000018B7AFD74
-		protected override void OnUpdate(float time) {} // 0x000000018B7AFE00-0x000000018B7B00FC
-		protected override void OnReverse() {} // 0x000000018B7AFD74-0x000000018B7AFE00
+		protected override void OnEnter(); // 0x000000018AC68A70-0x000000018AC68B10
+		protected override void OnUpdate(float time); // 0x000000018AC68B9C-0x000000018AC68E98
+		protected override void OnReverse(); // 0x000000018AC68B10-0x000000018AC68B9C
 	}
 
-	public class FollowPath : ActorActionClip // TypeDefIndex: 55744
+	[Category("Paths")]
+	[Description("Put the actor on a path to follow for the duration of the clip from path start to path end, or by using speed if \'Use Speed\' is true. If you want the actor to look ahead of the path, set \'Look Ahead\' to any value other than 0.")]
+	public class FollowPath : ActorActionClip // TypeDefIndex: 58385
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[Required]
 		public Path path; // 0x50
 		public bool useSpeed; // 0x58
+		[ShowIf("useSpeed", 1)]
 		public float speed; // 0x5C
+		[Range(0f, 1f)]
 		public float lookAhead; // 0x60
 		public Vector3 upVector; // 0x64
 		public Slate.EaseType blendInterpolation; // 0x70
@@ -3612,25 +4165,30 @@ namespace Slate.ActionClips
 		private Quaternion lastRot; // 0x80
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7B7FA4-0x000000018B7B8044 
-		public override float length { get => default; set {} } // 0x000000018B7B8094-0x000000018B7B8120 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override bool isValid { get => default; } // 0x000000018B7B8044-0x000000018B7B8094 
+		public override string info { get; } // 0x000000018AC70D78-0x000000018AC70E18 
+		public override float length { get; set; } // 0x000000018AC70E68-0x000000018AC70EF4 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override bool isValid { get; } // 0x000000018AC70E18-0x000000018AC70E68 
 	
 		// Constructors
-		public FollowPath() {} // 0x000000018B7B7F6C-0x000000018B7B7FA4
+		public FollowPath(); // 0x000000018AC70D30-0x000000018AC70D78
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7B7AEC-0x000000018B7B7B90
-		protected override void OnUpdate(float time) {} // 0x000000018B7B7C20-0x000000018B7B7F6C
-		protected override void OnReverse() {} // 0x000000018B7B7B90-0x000000018B7B7C20
+		protected override void OnEnter(); // 0x000000018AC708B0-0x000000018AC70954
+		protected override void OnUpdate(float time); // 0x000000018AC709E4-0x000000018AC70D30
+		protected override void OnReverse(); // 0x000000018AC70954-0x000000018AC709E4
 	}
 
-	public class PathfindFromTo : ActorActionClip // TypeDefIndex: 55745
+	[Category("Paths")]
+	[Description("For this clip to work you only need to have a baked NavMesh. The actor does NOT need, or use a NavMeshAgent Component. The length of the clip is determined by the path\'s length and the speed parameter set, while the Blend In parameter is used only for the initial look ahead blending")]
+	public class PathfindFromTo : ActorActionClip // TypeDefIndex: 58386
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x40
+		[Slate.Min(0.01f)]
 		public float speed; // 0x44
 		public TransformRefPosition sourcePosition; // 0x48
 		public TransformRefPosition targetPosition; // 0x68
@@ -3641,24 +4199,29 @@ namespace Slate.ActionClips
 		private Vector3 lastTo; // 0xB8
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7BAA3C-0x000000018B7BAA84 
-		public override float length { get => default; } // 0x000000018B7BAA84-0x000000018B7BAAC8 
-		public override float blendIn { get => default; set {} } // 0x000000018B7BAA0C-0x000000018B7BAA3C 0x0000000185FB05F0-0x0000000185FB0600
+		public override string info { get; } // 0x000000018AC73828-0x000000018AC73870 
+		public override float length { get; } // 0x000000018AC73870-0x000000018AC738B4 
+		public override float blendIn { get; set; } // 0x000000018AC737F8-0x000000018AC73828 0x0000000184D86470-0x0000000184D86480
 	
 		// Constructors
-		public PathfindFromTo() {} // 0x000000018B7BA9F4-0x000000018B7BAA0C
+		public PathfindFromTo(); // 0x000000018AC737D4-0x000000018AC737F8
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7BA0FC-0x000000018B7BA2B0
-		protected override void OnUpdate(float time) {} // 0x000000018B7BA35C-0x000000018B7BA798
-		protected override void OnReverse() {} // 0x000000018B7BA2B0-0x000000018B7BA35C
-		private void TryCalculatePath() {} // 0x000000018B7BA798-0x000000018B7BA9F4
+		protected override void OnEnter(); // 0x000000018AC72EDC-0x000000018AC73090
+		protected override void OnUpdate(float time); // 0x000000018AC7313C-0x000000018AC73578
+		protected override void OnReverse(); // 0x000000018AC73090-0x000000018AC7313C
+		private void TryCalculatePath(); // 0x000000018AC73578-0x000000018AC737D4
 	}
 
-	public class PathfindTo : ActorActionClip // TypeDefIndex: 55746
+	[Category("Paths")]
+	[Description("For this clip to work you only need to have a baked NavMesh. The actor does NOT need, or use a NavMeshAgent Component. The length of the clip is determined by the path\'s length and the speed parameter set, while the Blend In parameter is used only for the initial look ahead blending")]
+	public class PathfindTo : ActorActionClip // TypeDefIndex: 58387
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x40
+		[Slate.Min(0.01f)]
 		public float speed; // 0x44
 		public TransformRefPosition targetPosition; // 0x48
 		private Vector3[] pathPoints; // 0x68
@@ -3668,221 +4231,269 @@ namespace Slate.ActionClips
 		private Vector3 lastTo; // 0x98
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7BB3E0-0x000000018B7BB428 
-		public override float length { get => default; } // 0x000000018B7BB428-0x000000018B7BB468 
-		public override float blendIn { get => default; set {} } // 0x000000018B7BAA0C-0x000000018B7BAA3C 0x0000000185FB05F0-0x0000000185FB0600
+		public override string info { get; } // 0x000000018AC741CC-0x000000018AC74214 
+		public override float length { get; } // 0x000000018AC74214-0x000000018AC74254 
+		public override float blendIn { get; set; } // 0x000000018AC737F8-0x000000018AC73828 0x0000000184D86470-0x0000000184D86480
 	
 		// Constructors
-		public PathfindTo() {} // 0x000000018B7BA9F4-0x000000018B7BAA0C
+		public PathfindTo(); // 0x000000018AC737D4-0x000000018AC737F8
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7BAAC8-0x000000018B7BAC68
-		protected override void OnUpdate(float time) {} // 0x000000018B7BAD00-0x000000018B7BB124
-		protected override void OnReverse() {} // 0x000000018B7BAC68-0x000000018B7BAD00
-		private void TryCalculatePath() {} // 0x000000018B7BB124-0x000000018B7BB3E0
+		protected override void OnEnter(); // 0x000000018AC738B4-0x000000018AC73A54
+		protected override void OnUpdate(float time); // 0x000000018AC73AEC-0x000000018AC73F10
+		protected override void OnReverse(); // 0x000000018AC73A54-0x000000018AC73AEC
+		private void TryCalculatePath(); // 0x000000018AC73F10-0x000000018AC741CC
 	}
 
-	public class AnimateMaterialColor : ActorActionClip<Renderer> // TypeDefIndex: 55747
+	[Category("Renderer")]
+	public class AnimateMaterialColor : ActorActionClip<Renderer> // TypeDefIndex: 58388
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x4C
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x50
+		[ShaderPropertyPopup(typeof(UnityEngine.Color))]
 		public string propertyName; // 0x58
+		[AnimatableParameter]
 		public UnityEngine.Color color; // 0x60
 		public Slate.EaseType interpolation; // 0x70
 		private UnityEngine.Color originalColor; // 0x74
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7AF7E0-0x000000018B7AF820 
-		public override bool isValid { get => default; } // 0x000000018B7AF820-0x000000018B7AF90C 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override float blendIn { get => default; set {} } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public override float blendOut { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
-		private Material targetMaterial { get => default; } // 0x000000018B7AF90C-0x000000018B7AF9B4 
+		public override string info { get; } // 0x000000018AC68568-0x000000018AC685A8 
+		public override bool isValid { get; } // 0x000000018AC685A8-0x000000018AC68694 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public override float blendOut { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
+		private Material targetMaterial { get; } // 0x000000018AC68694-0x000000018AC6873C 
 	
 		// Constructors
-		public AnimateMaterialColor() {} // 0x000000018B7AF760-0x000000018B7AF7E0
+		public AnimateMaterialColor(); // 0x000000018AC684EC-0x000000018AC68568
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7AF6A4-0x000000018B7AF6AC
-		protected override void OnReverseEnter() {} // 0x000000018B7AF6A4-0x000000018B7AF6AC
-		protected override void OnUpdate(float time) {} // 0x000000018B7AF6B4-0x000000018B7AF760
-		protected override void OnReverse() {} // 0x000000018B7AF6AC-0x000000018B7AF6B4
-		protected override void OnExit() {} // 0x000000018B7AF6AC-0x000000018B7AF6B4
-		private void DoSet() {} // 0x000000018B7AF668-0x000000018B7AF6A4
-		private void DoReset() {} // 0x000000018B7AF628-0x000000018B7AF668
+		protected override void OnEnter(); // 0x000000018AC68430-0x000000018AC68438
+		protected override void OnReverseEnter(); // 0x000000018AC68430-0x000000018AC68438
+		protected override void OnUpdate(float time); // 0x000000018AC68440-0x000000018AC684EC
+		protected override void OnReverse(); // 0x000000018AC68438-0x000000018AC68440
+		protected override void OnExit(); // 0x000000018AC68438-0x000000018AC68440
+		private void DoSet(); // 0x000000018AC683F4-0x000000018AC68430
+		private void DoReset(); // 0x000000018AC683B4-0x000000018AC683F4
 	}
 
-	public class AnimateMaterialFloat : ActorActionClip<Renderer> // TypeDefIndex: 55748
+	[Category("Renderer")]
+	public class AnimateMaterialFloat : ActorActionClip<Renderer> // TypeDefIndex: 58389
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x4C
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x50
+		[ShaderPropertyPopup(typeof(float))]
 		public string propertyName; // 0x58
+		[AnimatableParameter]
 		public float value; // 0x60
 		public Slate.EaseType interpolation; // 0x64
 		private float originalValue; // 0x68
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7AFB00-0x000000018B7AFB40 
-		public override bool isValid { get => default; } // 0x000000018B7AFB40-0x000000018B7AFC2C 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override float blendIn { get => default; set {} } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public override float blendOut { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
-		private Material targetMaterial { get => default; } // 0x000000018B7AFC2C-0x000000018B7AFCD4 
+		public override string info { get; } // 0x000000018AC6889C-0x000000018AC688DC 
+		public override bool isValid { get; } // 0x000000018AC688DC-0x000000018AC689C8 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public override float blendOut { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
+		private Material targetMaterial { get; } // 0x000000018AC689C8-0x000000018AC68A70 
 	
 		// Constructors
-		public AnimateMaterialFloat() {} // 0x000000018B7AFAB0-0x000000018B7AFB00
+		public AnimateMaterialFloat(); // 0x000000018AC68838-0x000000018AC6889C
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7AFA20-0x000000018B7AFA28
-		protected override void OnReverseEnter() {} // 0x000000018B7AFA20-0x000000018B7AFA28
-		protected override void OnUpdate(float time) {} // 0x000000018B7AFA30-0x000000018B7AFAB0
-		protected override void OnReverse() {} // 0x000000018B7AFA28-0x000000018B7AFA30
-		protected override void OnExit() {} // 0x000000018B7AFA28-0x000000018B7AFA30
-		private void DoSet() {} // 0x000000018B7AF9E8-0x000000018B7AFA20
-		private void DoReset() {} // 0x000000018B7AF9B4-0x000000018B7AF9E8
+		protected override void OnEnter(); // 0x000000018AC687A8-0x000000018AC687B0
+		protected override void OnReverseEnter(); // 0x000000018AC687A8-0x000000018AC687B0
+		protected override void OnUpdate(float time); // 0x000000018AC687B8-0x000000018AC68838
+		protected override void OnReverse(); // 0x000000018AC687B0-0x000000018AC687B8
+		protected override void OnExit(); // 0x000000018AC687B0-0x000000018AC687B8
+		private void DoSet(); // 0x000000018AC68770-0x000000018AC687A8
+		private void DoReset(); // 0x000000018AC6873C-0x000000018AC68770
 	}
 
-	public class AnimateMaterialTexture : ActorActionClip<Renderer> // TypeDefIndex: 55749
+	[Category("Renderer")]
+	[Description("Animate a material\'s texture offset and scale over time")]
+	public class AnimateMaterialTexture : ActorActionClip<Renderer> // TypeDefIndex: 58390
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x4C
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x50
+		[ShaderPropertyPopup(typeof(Texture))]
 		public string propertyName; // 0x58
+		[AnimatableParameter]
 		public Vector2 offset; // 0x60
+		[AnimatableParameter]
 		public Vector2 scale; // 0x68
 		public Slate.EaseType interpolation; // 0x70
 		private Vector2 originalOffset; // 0x74
 		private Vector2 originalScale; // 0x7C
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7C5110-0x000000018B7C5150 
-		public override bool isValid { get => default; } // 0x000000018B7C5150-0x000000018B7C523C 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override float blendIn { get => default; set {} } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public override float blendOut { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
-		private Material targetMaterial { get => default; } // 0x000000018B7C523C-0x000000018B7C52E4 
+		public override string info { get; } // 0x000000018AC7DD38-0x000000018AC7DD78 
+		public override bool isValid { get; } // 0x000000018AC7DD78-0x000000018AC7DE64 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public override float blendOut { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
+		private Material targetMaterial { get; } // 0x000000018AC7DE64-0x000000018AC7DF0C 
 	
 		// Constructors
-		public AnimateMaterialTexture() {} // 0x000000018B7C5098-0x000000018B7C5110
+		public AnimateMaterialTexture(); // 0x000000018AC7DCC4-0x000000018AC7DD38
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C4ECC-0x000000018B7C4ED4
-		protected override void OnReverseEnter() {} // 0x000000018B7C4ECC-0x000000018B7C4ED4
-		protected override void OnUpdate(float time) {} // 0x000000018B7C4EDC-0x000000018B7C5098
-		protected override void OnReverse() {} // 0x000000018B7C4ED4-0x000000018B7C4EDC
-		protected override void OnExit() {} // 0x000000018B7C4ED4-0x000000018B7C4EDC
-		private void DoSet() {} // 0x000000018B7C4E44-0x000000018B7C4ECC
-		private void DoReset() {} // 0x000000018B7C4DD0-0x000000018B7C4E44
+		protected override void OnEnter(); // 0x000000018AC7DAF8-0x000000018AC7DB00
+		protected override void OnReverseEnter(); // 0x000000018AC7DAF8-0x000000018AC7DB00
+		protected override void OnUpdate(float time); // 0x000000018AC7DB08-0x000000018AC7DCC4
+		protected override void OnReverse(); // 0x000000018AC7DB00-0x000000018AC7DB08
+		protected override void OnExit(); // 0x000000018AC7DB00-0x000000018AC7DB08
+		private void DoSet(); // 0x000000018AC7DA70-0x000000018AC7DAF8
+		private void DoReset(); // 0x000000018AC7D9FC-0x000000018AC7DA70
 	}
 
-	public class ScrollMaterialTexture : ActorActionClip<Renderer> // TypeDefIndex: 55750
+	[Category("Renderer")]
+	[Description("Scroll/Offset the material texture. Usefull for scrolling backgrounds, screens, or other similar effects.")]
+	public class ScrollMaterialTexture : ActorActionClip<Renderer> // TypeDefIndex: 58391
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[ShaderPropertyPopup(typeof(Texture))]
 		public string propertyName; // 0x50
 		public Vector2 speed; // 0x58
 		public Slate.EaseType interpolation; // 0x60
 		private Vector2 originalOffset; // 0x64
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CBE00-0x000000018B7CBE64 
-		public override bool isValid { get => default; } // 0x000000018B7CBE64-0x000000018B7CBF10 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override float blendIn { get => default; } // 0x000000018B7C5E1C-0x000000018B7C5E2C 
-		private Material targetMaterial { get => default; } // 0x000000018B7CBF10-0x000000018B7CBFB8 
+		public override string info { get; } // 0x000000018AC84B3C-0x000000018AC84BA0 
+		public override bool isValid { get; } // 0x000000018AC84BA0-0x000000018AC84C4C 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; } // 0x000000018AC7EA6C-0x000000018AC7EA7C 
+		private Material targetMaterial { get; } // 0x000000018AC84C4C-0x000000018AC84CF4 
 	
 		// Constructors
-		public ScrollMaterialTexture() {} // 0x000000018B7CBD90-0x000000018B7CBE00
+		public ScrollMaterialTexture(); // 0x000000018AC84AD4-0x000000018AC84B3C
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CBB84-0x000000018B7CBBD0
-		protected override void OnUpdate(float time) {} // 0x000000018B7CBC14-0x000000018B7CBD90
-		protected override void OnReverse() {} // 0x000000018B7CBBD0-0x000000018B7CBC14
+		protected override void OnEnter(); // 0x000000018AC848C8-0x000000018AC84914
+		protected override void OnUpdate(float time); // 0x000000018AC84958-0x000000018AC84AD4
+		protected override void OnReverse(); // 0x000000018AC84914-0x000000018AC84958
 	}
 
-	public class SetMaterial : ActorActionClip<Renderer> // TypeDefIndex: 55751
+	[Category("Renderer")]
+	public class SetMaterial : ActorActionClip<Renderer> // TypeDefIndex: 58392
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
 		public Material material; // 0x50
 		private Material sharedMat; // 0x58
 		private bool temporary; // 0x60
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CC618-0x000000018B7CC6B8 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override string info { get; } // 0x000000018AC853A8-0x000000018AC85448 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public SetMaterial() {} // 0x000000018B7CC5E4-0x000000018B7CC618
+		public SetMaterial(); // 0x000000018AC85368-0x000000018AC853A8
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CC588-0x000000018B7CC5BC
-		protected override void OnReverseEnter() {} // 0x000000018B7CC5CC-0x000000018B7CC5DC
-		protected override void OnReverse() {} // 0x000000018B7CC5DC-0x000000018B7CC5E4
-		protected override void OnExit() {} // 0x000000018B7CC5BC-0x000000018B7CC5CC
-		private void DoSet() {} // 0x000000018B7CC508-0x000000018B7CC588
-		private void DoReset() {} // 0x000000018B7CC4B4-0x000000018B7CC508
+		protected override void OnEnter(); // 0x000000018AC8530C-0x000000018AC85340
+		protected override void OnReverseEnter(); // 0x000000018AC85350-0x000000018AC85360
+		protected override void OnReverse(); // 0x000000018AC85360-0x000000018AC85368
+		protected override void OnExit(); // 0x000000018AC85340-0x000000018AC85350
+		private void DoSet(); // 0x000000018AC8528C-0x000000018AC8530C
+		private void DoReset(); // 0x000000018AC85238-0x000000018AC8528C
 	}
 
-	public class SetMaterialTexture : ActorActionClip<Renderer> // TypeDefIndex: 55752
+	[Category("Renderer")]
+	public class SetMaterialTexture : ActorActionClip<Renderer> // TypeDefIndex: 58393
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[ShaderPropertyPopup(typeof(Texture))]
 		public string propertyName; // 0x50
 		public Texture texture; // 0x58
 		private Texture originalTexture; // 0x60
 		private bool temporary; // 0x68
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CC280-0x000000018B7CC320 
-		public override bool isValid { get => default; } // 0x000000018B7CC320-0x000000018B7CC40C 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		private Material targetMaterial { get => default; } // 0x000000018B7CC40C-0x000000018B7CC4B4 
+		public override string info { get; } // 0x000000018AC85004-0x000000018AC850A4 
+		public override bool isValid { get; } // 0x000000018AC850A4-0x000000018AC85190 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		private Material targetMaterial { get; } // 0x000000018AC85190-0x000000018AC85238 
 	
 		// Constructors
-		public SetMaterialTexture() {} // 0x000000018B7CC22C-0x000000018B7CC280
+		public SetMaterialTexture(); // 0x000000018AC84FB4-0x000000018AC85004
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CC1D0-0x000000018B7CC204
-		protected override void OnReverseEnter() {} // 0x000000018B7CC214-0x000000018B7CC224
-		protected override void OnReverse() {} // 0x000000018B7CC224-0x000000018B7CC22C
-		protected override void OnExit() {} // 0x000000018B7CC204-0x000000018B7CC214
-		private void DoSet() {} // 0x000000018B7CC170-0x000000018B7CC1D0
-		private void DoReset() {} // 0x000000018B7CC13C-0x000000018B7CC170
+		protected override void OnEnter(); // 0x000000018AC84F58-0x000000018AC84F8C
+		protected override void OnReverseEnter(); // 0x000000018AC84F9C-0x000000018AC84FAC
+		protected override void OnReverse(); // 0x000000018AC84FAC-0x000000018AC84FB4
+		protected override void OnExit(); // 0x000000018AC84F8C-0x000000018AC84F9C
+		private void DoSet(); // 0x000000018AC84EF8-0x000000018AC84F58
+		private void DoReset(); // 0x000000018AC84EC4-0x000000018AC84EF8
 	}
 
-	public class SetSortingLayer : ActorActionClip<SpriteRenderer> // TypeDefIndex: 55753
+	[Category("Sprites")]
+	[Description("Change sorting layer and order for sprite renderer.")]
+	public class SetSortingLayer : ActorActionClip<SpriteRenderer> // TypeDefIndex: 58394
 	{
 		// Fields
 		public int sortingOrder; // 0x48
+		[SortingLayer]
 		public int sortingLayerID; // 0x4C
 		private string _lastLayer; // 0x50
 		private int _lastOrder; // 0x58
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CCC98-0x000000018B7CCD50 
+		public override string info { get; } // 0x000000018AC85A34-0x000000018AC85AEC 
 	
 		// Constructors
-		public SetSortingLayer() {} // 0x000000018B7CCC64-0x000000018B7CCC98
+		public SetSortingLayer(); // 0x000000018AC859F4-0x000000018AC85A34
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CCB28-0x000000018B7CCBEC
-		protected override void OnReverse() {} // 0x000000018B7CCBEC-0x000000018B7CCC64
+		protected override void OnEnter(); // 0x000000018AC858B8-0x000000018AC8597C
+		protected override void OnReverse(); // 0x000000018AC8597C-0x000000018AC859F4
 	}
 
-	public class SetSprite : ActorActionClip<SpriteRenderer> // TypeDefIndex: 55754
+	[Category("Sprites")]
+	public class SetSprite : ActorActionClip<SpriteRenderer> // TypeDefIndex: 58395
 	{
 		// Fields
+		[Header("Basic")]
 		public Sprite sprite; // 0x48
 		public UnityEngine.Color color; // 0x50
 		public bool flipX; // 0x60
 		public bool flipY; // 0x61
+		[Header("Sorting")]
 		public bool changeSorting; // 0x62
+		[SortingLayer]
 		public int sortingLayerID; // 0x64
 		public int sortingOrder; // 0x68
 		private Sprite lastSprite; // 0x70
@@ -3893,44 +4504,54 @@ namespace Slate.ActionClips
 		private int lastSortingOrder; // 0x90
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CD0E0-0x000000018B7CD160 
+		public override string info { get; } // 0x000000018AC85E8C-0x000000018AC85F0C 
 	
 		// Constructors
-		public SetSprite() {} // 0x000000018B7CD098-0x000000018B7CD0E0
+		public SetSprite(); // 0x000000018AC85E34-0x000000018AC85E8C
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CCD50-0x000000018B7CCF74
-		protected override void OnReverse() {} // 0x000000018B7CCF74-0x000000018B7CD098
+		protected override void OnEnter(); // 0x000000018AC85AEC-0x000000018AC85D10
+		protected override void OnReverse(); // 0x000000018AC85D10-0x000000018AC85E34
 	}
 
-	public class SpriteFlipbook : ActorActionClip<SpriteRenderer> // TypeDefIndex: 55755
+	[Category("Sprites")]
+	[Description("Animate a sprite object by altering between different sprites in order")]
+	public class SpriteFlipbook : ActorActionClip<SpriteRenderer> // TypeDefIndex: 58396
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[Slate.Min(1f)]
 		public int loops; // 0x4C
 		public List<Sprite> sprites; // 0x50
 		public bool endWithPrevious; // 0x58
 		private Sprite lastSprite; // 0x60
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CDD14-0x000000018B7CDDD4 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override bool isValid { get => default; } // 0x000000018B7CDDD4-0x000000018B7CDE68 
+		public override string info { get; } // 0x000000018AC86AD8-0x000000018AC86B98 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override bool isValid { get; } // 0x000000018AC86B98-0x000000018AC86C2C 
 	
 		// Constructors
-		public SpriteFlipbook() {} // 0x000000018B7CDC74-0x000000018B7CDD14
+		public SpriteFlipbook(); // 0x000000018AC86A40-0x000000018AC86AD8
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CDA0C-0x000000018B7CDA68
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7CDB18-0x000000018B7CDC74
-		protected override void OnExit() {} // 0x000000018B7CDA68-0x000000018B7CDAC4
-		protected override void OnReverse() {} // 0x000000018B7CDAC4-0x000000018B7CDB18
+		protected override void OnEnter(); // 0x000000018AC867D8-0x000000018AC86834
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC868E4-0x000000018AC86A40
+		protected override void OnExit(); // 0x000000018AC86834-0x000000018AC86890
+		protected override void OnReverse(); // 0x000000018AC86890-0x000000018AC868E4
 	}
 
-	public class AttachObject : ActorActionClip // TypeDefIndex: 55756
+	[Category("Transform")]
+	[Description("Attach an object to a child transform of the actor (or the actor itself) either permantentely or temporary if length is greater than zero.")]
+	public class AttachObject : ActorActionClip // TypeDefIndex: 58397
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[Required]
 		public Transform targetObject; // 0x48
 		public string childTransformName; // 0x50
 		public Vector3 localPosition; // 0x58
@@ -3940,25 +4561,30 @@ namespace Slate.ActionClips
 		private bool temporary; // 0x88
 	
 		// Properties
-		public override bool isValid { get => default; } // 0x000000018B7C5BDC-0x000000018B7C5C2C 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
+		public override bool isValid { get; } // 0x000000018AC7E81C-0x000000018AC7E86C 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
 	
 		// Constructors
-		public AttachObject() {} // 0x000000018B7C58B0-0x000000018B7C58D8
+		public AttachObject(); // 0x000000018AC7E4E4-0x000000018AC7E518
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C5B54-0x000000018B7C5B88
-		protected override void OnReverseEnter() {} // 0x000000018B7C5B9C-0x000000018B7C5BB0
-		protected override void OnExit() {} // 0x000000018B7C5B88-0x000000018B7C5B9C
-		protected override void OnReverse() {} // 0x000000018B7C5BB0-0x000000018B7C5BB8
-		private void Do() {} // 0x000000018B7C5928-0x000000018B7C5B54
-		private void UnDo() {} // 0x000000018B7C5BB8-0x000000018B7C5BDC
+		protected override void OnEnter(); // 0x000000018AC7E794-0x000000018AC7E7C8
+		protected override void OnReverseEnter(); // 0x000000018AC7E7DC-0x000000018AC7E7F0
+		protected override void OnExit(); // 0x000000018AC7E7C8-0x000000018AC7E7DC
+		protected override void OnReverse(); // 0x000000018AC7E7F0-0x000000018AC7E7F8
+		private void Do(); // 0x000000018AC7E568-0x000000018AC7E794
+		private void UnDo(); // 0x000000018AC7E7F8-0x000000018AC7E81C
 	}
 
-	public class AttachObjectPrefab : ActorActionClip // TypeDefIndex: 55757
+	[Category("Transform")]
+	[Description("Instantiate and attach a prefab object to a child transform of the actor (or the actor itself) either permantentely or temporary if length is greater than zero.")]
+	public class AttachObjectPrefab : ActorActionClip // TypeDefIndex: 58398
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[Required]
 		public Transform targetPrefab; // 0x48
 		public string childTransformName; // 0x50
 		public Vector3 localPosition; // 0x58
@@ -3969,26 +4595,34 @@ namespace Slate.ActionClips
 		private bool temporary; // 0x90
 	
 		// Properties
-		public override bool isValid { get => default; } // 0x000000018B7C58D8-0x000000018B7C5928 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
+		public override bool isValid { get; } // 0x000000018AC7E518-0x000000018AC7E568 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
 	
 		// Constructors
-		public AttachObjectPrefab() {} // 0x000000018B7C58B0-0x000000018B7C58D8
+		public AttachObjectPrefab(); // 0x000000018AC7E4E4-0x000000018AC7E518
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C57AC-0x000000018B7C57E0
-		protected override void OnReverseEnter() {} // 0x000000018B7C57F4-0x000000018B7C5808
-		protected override void OnExit() {} // 0x000000018B7C57E0-0x000000018B7C57F4
-		protected override void OnReverse() {} // 0x000000018B7C5808-0x000000018B7C5810
-		private void Do() {} // 0x000000018B7C55A0-0x000000018B7C57AC
-		private void UnDo() {} // 0x000000018B7C5810-0x000000018B7C58B0
+		protected override void OnEnter(); // 0x000000018AC7E3E0-0x000000018AC7E414
+		protected override void OnReverseEnter(); // 0x000000018AC7E428-0x000000018AC7E43C
+		protected override void OnExit(); // 0x000000018AC7E414-0x000000018AC7E428
+		protected override void OnReverse(); // 0x000000018AC7E43C-0x000000018AC7E444
+		private void Do(); // 0x000000018AC7E1D4-0x000000018AC7E3E0
+		private void UnDo(); // 0x000000018AC7E444-0x000000018AC7E4E4
 	}
 
-	public class LookAt : ActorActionClip // TypeDefIndex: 55758
+	[Category("Transform")]
+	[Description("Rotate actor transform to look at specified target position for a period of time or permanentely if blend out is zero")]
+	public class LookAt : ActorActionClip // TypeDefIndex: 58399
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
 		public bool verticalOnly; // 0x4C
 		public Slate.EaseType interpolation; // 0x50
@@ -3996,29 +4630,41 @@ namespace Slate.ActionClips
 		private Quaternion wasRotation; // 0x78
 	
 		// Properties
-		public Vector3 targetPositionVector { get => default; set {} } // 0x000000018B7C7558-0x000000018B7C758C 0x0000000185FD28A0-0x0000000185FD28B0
-		public override string info { get => default; } // 0x000000018B7C74E0-0x000000018B7C7558 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		[AnimatableParameter(link = "targetPosition")]
+		[PositionHandle]
+		[ShowTrajectory]
+		public Vector3 targetPositionVector { get; set; } // 0x000000018AC801D0-0x000000018AC80204 0x0000000184D91E40-0x0000000184D91E50
+		public override string info { get; } // 0x000000018AC80158-0x000000018AC801D0 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public LookAt() {} // 0x000000018B7C74BC-0x000000018B7C74E0
+		public LookAt(); // 0x000000018AC80124-0x000000018AC80158
 	
 		// Methods
-		protected override void OnCreate() {} // 0x000000018B7C71D0-0x000000018B7C720C
-		protected override void OnAfterValidate() {} // 0x000000018B7C7184-0x000000018B7C71D0
-		protected override void OnEnter() {} // 0x000000018B7C720C-0x000000018B7C7258
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7C72A4-0x000000018B7C74BC
-		protected override void OnReverse() {} // 0x000000018B7C7258-0x000000018B7C72A4
+		protected override void OnCreate(); // 0x000000018AC7FE38-0x000000018AC7FE74
+		protected override void OnAfterValidate(); // 0x000000018AC7FDEC-0x000000018AC7FE38
+		protected override void OnEnter(); // 0x000000018AC7FE74-0x000000018AC7FEC0
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC7FF0C-0x000000018AC80124
+		protected override void OnReverse(); // 0x000000018AC7FEC0-0x000000018AC7FF0C
 	}
 
-	public class MatchTransformsToTarget : ActorActionClip // TypeDefIndex: 55759
+	[Category("Transform")]
+	[Description("Smoothly match the selected transforms of the actor and to the target for a period of time and then back again to their original values. If you don\'t want to smooth back to the original values, set BlendOut to 0.")]
+	public class MatchTransformsToTarget : ActorActionClip // TypeDefIndex: 58400
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[Required]
 		public Transform targetObject; // 0x50
 		public Slate.EaseType interpolation; // 0x58
 		public bool matchPosition; // 0x5C
@@ -4032,26 +4678,33 @@ namespace Slate.ActionClips
 		private Vector3 lastScale; // 0xA8
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7C7C80-0x000000018B7C7D20 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override bool isValid { get => default; } // 0x000000018B7C7D20-0x000000018B7C7D70 
+		public override string info { get; } // 0x000000018AC80908-0x000000018AC809A8 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override bool isValid { get; } // 0x000000018AC809A8-0x000000018AC809F8 
 	
 		// Constructors
-		public MatchTransformsToTarget() {} // 0x000000018B7C7C54-0x000000018B7C7C80
+		public MatchTransformsToTarget(); // 0x000000018AC808CC-0x000000018AC80908
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C758C-0x000000018B7C7668
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7C774C-0x000000018B7C7C54
-		protected override void OnReverse() {} // 0x000000018B7C7668-0x000000018B7C774C
+		protected override void OnEnter(); // 0x000000018AC80204-0x000000018AC802E0
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC803C4-0x000000018AC808CC
+		protected override void OnReverse(); // 0x000000018AC802E0-0x000000018AC803C4
 	}
 
-	public class Noise : ActorActionClip // TypeDefIndex: 55760
+	[Category("Transform")]
+	public class Noise : ActorActionClip // TypeDefIndex: 58401
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
 		public Vector3 seed; // 0x4C
 		public Vector3 amplitude; // 0x58
@@ -4059,22 +4712,26 @@ namespace Slate.ActionClips
 		private Vector3 wasPosition; // 0x68
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public Noise() {} // 0x000000018B7C83A4-0x000000018B7C83E0
+		public Noise(); // 0x000000018AC81038-0x000000018AC81084
 	
 		// Methods
-		protected override void OnCreate() {} // 0x000000018B7C8104-0x000000018B7C817C
-		protected override void OnEnter() {} // 0x000000018B7C817C-0x000000018B7C81CC
-		protected override void OnUpdate(float time, float previousTime) {} // 0x000000018B7C81CC-0x000000018B7C83A4
+		protected override void OnCreate(); // 0x000000018AC80D98-0x000000018AC80E10
+		protected override void OnEnter(); // 0x000000018AC80E10-0x000000018AC80E60
+		protected override void OnUpdate(float time, float previousTime); // 0x000000018AC80E60-0x000000018AC81038
 	}
 
-	public class RotateAround : ActorActionClip // TypeDefIndex: 55761
+	[Category("Transform")]
+	[Description("Rotate the actor around target position or object by specified degrees and optionaly per second.")]
+	public class RotateAround : ActorActionClip // TypeDefIndex: 58402
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
 		public Vector3 rotation; // 0x44
 		public bool perSecond; // 0x50
@@ -4086,24 +4743,31 @@ namespace Slate.ActionClips
 		private Vector3 targetWasPosition; // 0x94
 	
 		// Properties
-		public Vector3 targetPositionVector { get => default; set {} } // 0x000000018B7C7558-0x000000018B7C758C 0x0000000185FD28A0-0x0000000185FD28B0
-		public override string info { get => default; } // 0x000000018B7CA87C-0x000000018B7CA964 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; } // 0x000000018B7C5E1C-0x000000018B7C5E2C 
+		[AnimatableParameter(link = "targetPosition")]
+		[PositionHandle]
+		[ShowTrajectory]
+		public Vector3 targetPositionVector { get; set; } // 0x000000018AC801D0-0x000000018AC80204 0x0000000184D91E40-0x0000000184D91E50
+		public override string info { get; } // 0x000000018AC83588-0x000000018AC83670 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; } // 0x000000018AC7EA6C-0x000000018AC7EA7C 
 	
 		// Constructors
-		public RotateAround() {} // 0x000000018B7CA84C-0x000000018B7CA87C
+		public RotateAround(); // 0x000000018AC83548-0x000000018AC83588
 	
 		// Methods
-		protected override void OnAfterValidate() {} // 0x000000018B7CA290-0x000000018B7CA2DC
-		protected override void OnEnter() {} // 0x000000018B7CA2DC-0x000000018B7CA3E8
-		protected override void OnUpdate(float time) {} // 0x000000018B7CA478-0x000000018B7CA84C
-		protected override void OnReverse() {} // 0x000000018B7CA3E8-0x000000018B7CA478
+		protected override void OnAfterValidate(); // 0x000000018AC82F8C-0x000000018AC82FD8
+		protected override void OnEnter(); // 0x000000018AC82FD8-0x000000018AC830E4
+		protected override void OnUpdate(float time); // 0x000000018AC83174-0x000000018AC83548
+		protected override void OnReverse(); // 0x000000018AC830E4-0x000000018AC83174
 	}
 
-	public class RotateBy : ActorActionClip // TypeDefIndex: 55762
+	[Category("Transform")]
+	[Description("Rotate the actor by specified degrees and optionaly per second")]
+	public class RotateBy : ActorActionClip // TypeDefIndex: 58403
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
 		public Vector3 rotation; // 0x44
 		public bool perSecond; // 0x50
@@ -4111,44 +4775,51 @@ namespace Slate.ActionClips
 		private Vector3 originalRot; // 0x58
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CAC48-0x000000018B7CACF8 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; } // 0x000000018B7C5E1C-0x000000018B7C5E2C 
+		public override string info { get; } // 0x000000018AC83964-0x000000018AC83A14 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; } // 0x000000018AC7EA6C-0x000000018AC7EA7C 
 	
 		// Constructors
-		public RotateBy() {} // 0x000000018B7CAC18-0x000000018B7CAC48
+		public RotateBy(); // 0x000000018AC83924-0x000000018AC83964
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CA964-0x000000018B7CA9E8
-		protected override void OnUpdate(float time) {} // 0x000000018B7CAA78-0x000000018B7CAC18
-		protected override void OnReverse() {} // 0x000000018B7CA9E8-0x000000018B7CAA78
+		protected override void OnEnter(); // 0x000000018AC83670-0x000000018AC836F4
+		protected override void OnUpdate(float time); // 0x000000018AC83784-0x000000018AC83924
+		protected override void OnReverse(); // 0x000000018AC836F4-0x000000018AC83784
 	}
 
-	public class RotateTo : ActorActionClip // TypeDefIndex: 55763
+	[Category("Transform")]
+	public class RotateTo : ActorActionClip // TypeDefIndex: 58404
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
 		public Vector3 targetRotation; // 0x44
 		public Slate.EaseType interpolation; // 0x50
 		private Vector3 originalRot; // 0x54
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CAEFC-0x000000018B7CAF68 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; } // 0x000000018B7C5E1C-0x000000018B7C5E2C 
+		public override string info { get; } // 0x000000018AC83C18-0x000000018AC83C84 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; } // 0x000000018AC7EA6C-0x000000018AC7EA7C 
 	
 		// Constructors
-		public RotateTo() {} // 0x000000018B7C540C-0x000000018B7C5424
+		public RotateTo(); // 0x000000018AC7E034-0x000000018AC7E058
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CACF8-0x000000018B7CAD48
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7CAD9C-0x000000018B7CAEFC
-		protected override void OnReverse() {} // 0x000000018B7CAD48-0x000000018B7CAD9C
+		protected override void OnEnter(); // 0x000000018AC83A14-0x000000018AC83A64
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC83AB8-0x000000018AC83C18
+		protected override void OnReverse(); // 0x000000018AC83A64-0x000000018AC83AB8
 	}
 
-	public class ScaleBy : ActorActionClip // TypeDefIndex: 55764
+	[Category("Transform")]
+	[Description("Scale the actor by specified value and optionlay per second")]
+	public class ScaleBy : ActorActionClip // TypeDefIndex: 58405
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
 		public Vector3 scale; // 0x44
 		public bool perSecond; // 0x50
@@ -4156,42 +4827,47 @@ namespace Slate.ActionClips
 		private Vector3 originalScale; // 0x58
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CB76C-0x000000018B7CB81C 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; } // 0x000000018B7C5E1C-0x000000018B7C5E2C 
+		public override string info { get; } // 0x000000018AC844A0-0x000000018AC84550 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; } // 0x000000018AC7EA6C-0x000000018AC7EA7C 
 	
 		// Constructors
-		public ScaleBy() {} // 0x000000018B7CB73C-0x000000018B7CB76C
+		public ScaleBy(); // 0x000000018AC84464-0x000000018AC844A0
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CB518-0x000000018B7CB568
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7CB5BC-0x000000018B7CB73C
-		protected override void OnReverse() {} // 0x000000018B7CB568-0x000000018B7CB5BC
+		protected override void OnEnter(); // 0x000000018AC84240-0x000000018AC84290
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC842E4-0x000000018AC84464
+		protected override void OnReverse(); // 0x000000018AC84290-0x000000018AC842E4
 	}
 
-	public class ScaleTo : ActorActionClip // TypeDefIndex: 55765
+	[Category("Transform")]
+	public class ScaleTo : ActorActionClip // TypeDefIndex: 58406
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
 		public Vector3 targetScale; // 0x44
 		public Slate.EaseType interpolation; // 0x50
 		private Vector3 originalPos; // 0x54
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CBA20-0x000000018B7CBA8C 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; } // 0x000000018B7C5E1C-0x000000018B7C5E2C 
+		public override string info { get; } // 0x000000018AC84754-0x000000018AC847C0 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; } // 0x000000018AC7EA6C-0x000000018AC7EA7C 
 	
 		// Constructors
-		public ScaleTo() {} // 0x000000018B7C540C-0x000000018B7C5424
+		public ScaleTo(); // 0x000000018AC7E034-0x000000018AC7E058
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CB81C-0x000000018B7CB86C
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7CB8C0-0x000000018B7CBA20
-		protected override void OnReverse() {} // 0x000000018B7CB86C-0x000000018B7CB8C0
+		protected override void OnEnter(); // 0x000000018AC84550-0x000000018AC845A0
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC845F4-0x000000018AC84754
+		protected override void OnReverse(); // 0x000000018AC845A0-0x000000018AC845F4
 	}
 
-	public class SetParentTemporary : ActorActionClip // TypeDefIndex: 55766
+	[Category("Transform")]
+	[Obsolete("Use Set Parent")]
+	public class SetParentTemporary : ActorActionClip // TypeDefIndex: 58407
 	{
 		// Fields
 		public float _length; // 0x40
@@ -4205,21 +4881,25 @@ namespace Slate.ActionClips
 		private Vector3 originalScale; // 0x7C
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CCA88-0x000000018B7CCB28 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
+		public override string info { get; } // 0x000000018AC85818-0x000000018AC858B8 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
 	
 		// Constructors
-		public SetParentTemporary() {} // 0x000000018B7AF1A8-0x000000018B7AF1B8
+		public SetParentTemporary(); // 0x000000018AC67F18-0x000000018AC67F34
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CC6B8-0x000000018B7CC7C4
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7CC8D4-0x000000018B7CCA88
-		protected override void OnReverse() {} // 0x000000018B7CC7C4-0x000000018B7CC8D4
+		protected override void OnEnter(); // 0x000000018AC85448-0x000000018AC85554
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC85664-0x000000018AC85818
+		protected override void OnReverse(); // 0x000000018AC85554-0x000000018AC85664
 	}
 
-	public class SetTransformParent : ActorActionClip // TypeDefIndex: 55767
+	[Category("Transform")]
+	[Description("Set the parent of the actor gameobject temporarily, or permanently if length is zero")]
+	public class SetTransformParent : ActorActionClip // TypeDefIndex: 58408
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
 		public Transform newParent; // 0x48
 		public bool resetPosition; // 0x50
@@ -4232,24 +4912,27 @@ namespace Slate.ActionClips
 		private bool temporary; // 0x88
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CD420-0x000000018B7CD4C0 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
+		public override string info { get; } // 0x000000018AC861CC-0x000000018AC8626C 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
 	
 		// Constructors
-		public SetTransformParent() {} // 0x000000018646DB20-0x000000018646DB28
+		public SetTransformParent(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CD3BC-0x000000018B7CD3F0
-		protected override void OnReverseEnter() {} // 0x000000018B7CD404-0x000000018B7CD418
-		protected override void OnExit() {} // 0x000000018B7CD3F0-0x000000018B7CD404
-		protected override void OnReverse() {} // 0x000000018B7CD418-0x000000018B7CD420
-		private void Do() {} // 0x000000018B7CD160-0x000000018B7CD3BC
-		private void UnDo() {} // 0x000000018B7CC7C4-0x000000018B7CC8D4
+		protected override void OnEnter(); // 0x000000018AC86168-0x000000018AC8619C
+		protected override void OnReverseEnter(); // 0x000000018AC861B0-0x000000018AC861C4
+		protected override void OnExit(); // 0x000000018AC8619C-0x000000018AC861B0
+		protected override void OnReverse(); // 0x000000018AC861C4-0x000000018AC861CC
+		private void Do(); // 0x000000018AC85F0C-0x000000018AC86168
+		private void UnDo(); // 0x000000018AC85554-0x000000018AC85664
 	}
 
-	public class SetTransformValues : ActorActionClip // TypeDefIndex: 55768
+	[Category("Transform")]
+	[Description("Instantely set the transforms of the actor.")]
+	public class SetTransformValues : ActorActionClip // TypeDefIndex: 58409
 	{
 		// Fields
+		[HelpBox("Transform Space affects both Position and Rotation, but not Scale")]
 		public MiniTransformSpace space; // 0x40
 		public bool setPosition; // 0x44
 		public Vector3 position; // 0x48
@@ -4260,37 +4943,47 @@ namespace Slate.ActionClips
 		private TransformSnapshot undo; // 0x78
 	
 		// Constructors
-		public SetTransformValues() {} // 0x000000018B7CD6AC-0x000000018B7CD6D0
+		public SetTransformValues(); // 0x000000018AC86458-0x000000018AC8648C
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CD4C0-0x000000018B7CD68C
-		protected override void OnReverse() {} // 0x000000018B7CD68C-0x000000018B7CD6AC
+		protected override void OnEnter(); // 0x000000018AC8626C-0x000000018AC86438
+		protected override void OnReverse(); // 0x000000018AC86438-0x000000018AC86458
 	}
 
-	public class SimpleGrounder : ActorActionClip // TypeDefIndex: 55769
+	[Category("Transform")]
+	[Description("Grounds the actor gameobject to the nearest collider object beneath it up to the set Max Distance")]
+	public class SimpleGrounder : ActorActionClip // TypeDefIndex: 58410
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[Range(1f, 100f)]
 		public float maxCheckDistance; // 0x44
+		[Slate.Min(0f)]
 		public float offset; // 0x48
 		private RaycastHit hit; // 0x50
 		private Vector3 lastPos; // 0x90
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
 	
 		// Constructors
-		public SimpleGrounder() {} // 0x000000018B7CD9F0-0x000000018B7CDA0C
+		public SimpleGrounder(); // 0x000000018AC867AC-0x000000018AC867D8
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CD6D0-0x000000018B7CD728
-		protected override void OnUpdate(float time) {} // 0x000000018B7CD780-0x000000018B7CD9F0
-		protected override void OnReverse() {} // 0x000000018B7CD728-0x000000018B7CD780
+		protected override void OnEnter(); // 0x000000018AC8648C-0x000000018AC864E4
+		protected override void OnUpdate(float time); // 0x000000018AC8653C-0x000000018AC867AC
+		protected override void OnReverse(); // 0x000000018AC864E4-0x000000018AC8653C
 	}
 
-	public class TranslateBy : ActorActionClip // TypeDefIndex: 55770
+	[Category("Transform")]
+	[Description("Translate the actor by specified value and optionaly per second")]
+	public class TranslateBy : ActorActionClip // TypeDefIndex: 58411
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
 		public Vector3 translation; // 0x44
 		public bool perSecond; // 0x50
@@ -4298,22 +4991,25 @@ namespace Slate.ActionClips
 		private Vector3 originalPos; // 0x58
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CE6BC-0x000000018B7CE76C 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; } // 0x000000018B7C5E1C-0x000000018B7C5E2C 
+		public override string info { get; } // 0x000000018AC87490-0x000000018AC87540 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; } // 0x000000018AC7EA6C-0x000000018AC7EA7C 
 	
 		// Constructors
-		public TranslateBy() {} // 0x000000018B7CE68C-0x000000018B7CE6BC
+		public TranslateBy(); // 0x000000018AC87450-0x000000018AC87490
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CE468-0x000000018B7CE4B8
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7CE50C-0x000000018B7CE68C
-		protected override void OnReverse() {} // 0x000000018B7CE4B8-0x000000018B7CE50C
+		protected override void OnEnter(); // 0x000000018AC8722C-0x000000018AC8727C
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC872D0-0x000000018AC87450
+		protected override void OnReverse(); // 0x000000018AC8727C-0x000000018AC872D0
 	}
 
-	public class TranslateTo : ActorActionClip // TypeDefIndex: 55771
+	[Category("Transform")]
+	public class TranslateTo : ActorActionClip // TypeDefIndex: 58412
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
 		public Vector3 targetPosition; // 0x44
 		public MiniTransformSpace space; // 0x50
@@ -4321,28 +5017,40 @@ namespace Slate.ActionClips
 		private Vector3 wasPosition; // 0x58
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CE9A4-0x000000018B7CEA10 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; } // 0x000000018B7C5E1C-0x000000018B7C5E2C 
+		public override string info { get; } // 0x000000018AC87784-0x000000018AC877F0 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; } // 0x000000018AC7EA6C-0x000000018AC7EA7C 
 	
 		// Constructors
-		public TranslateTo() {} // 0x000000018B7CE98C-0x000000018B7CE9A4
+		public TranslateTo(); // 0x000000018AC87760-0x000000018AC87784
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CE76C-0x000000018B7CE7BC
-		protected override void OnUpdate(float time) {} // 0x000000018B7CE810-0x000000018B7CE98C
-		protected override void OnReverse() {} // 0x000000018B7CE7BC-0x000000018B7CE810
+		protected override void OnEnter(); // 0x000000018AC87540-0x000000018AC87590
+		protected override void OnUpdate(float time); // 0x000000018AC875E4-0x000000018AC87760
+		protected override void OnReverse(); // 0x000000018AC87590-0x000000018AC875E4
 	}
 
-	public class AdditiveScene : DirectorActionClip, ISubClipContainable // TypeDefIndex: 55772
+	[Category("Composition")]
+	[Description("Additive load a Scene for a duration of time, or permanentely if length is zero.\n\nIf \'Update Root Cutscenes\' is true, all root cutscenes objects of that scene will also be updated for the duration of the clip with an optional time offset provided.")]
+	public class AdditiveScene : DirectorActionClip, ISubClipContainable // TypeDefIndex: 58413
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		protected string _scenePath; // 0x48
+		[Tooltip("The position to spawn the SubScene at")]
 		public Vector3 scenePosition; // 0x50
+		[Tooltip("The rotation to spawn the SubScene at")]
 		public Vector3 sceneRotation; // 0x5C
+		[Tooltip("The Space used for ScenePosition and SceneRotation")]
 		public MiniTransformSpace space; // 0x68
+		[Tooltip("Should root cutscenes found be updated?")]
 		public bool updateRootCutscenes; // 0x6C
+		[ShowIf("updateRootCutscenes", 1)]
+		[Tooltip("Update offset of root cutscenes")]
 		public float timeOffset; // 0x70
 		private Scene subScene; // 0x74
 		private List<Cutscene> rootCutscenes; // 0x78
@@ -4350,113 +5058,137 @@ namespace Slate.ActionClips
 		private bool waitLoad; // 0x81
 	
 		// Properties
-		float ISubClipContainable.subClipOffset { get => default; set {} } // 0x0000000185FB89C0-0x0000000185FB89D0 0x0000000185FBD310-0x0000000185FBD320
-		float ISubClipContainable.subClipLength { get => default; } // 0x0000000183908D00-0x0000000183908D10 
-		float ISubClipContainable.subClipSpeed { get => default; } // 0x0000000183908D00-0x0000000183908D10 
-		public override bool isValid { get => default; } // 0x000000018B7C3110-0x000000018B7C3128 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		new string IDirectable.name { get => default; } // 0x00000001864746E4-0x00000001864746EC 
+		float ISubClipContainable.subClipOffset { get; set; } // 0x0000000184D90610-0x0000000184D90620 0x0000000184D90600-0x0000000184D90610
+		float ISubClipContainable.subClipLength { get; } // 0x0000000184D879D0-0x0000000184D879E0 
+		float ISubClipContainable.subClipSpeed { get; } // 0x0000000184D879D0-0x0000000184D879E0 
+		public override bool isValid { get; } // 0x000000018AC7BD48-0x000000018AC7BD60 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		new string IDirectable.name { get; } // 0x0000000185396F58-0x0000000185396F60 
 	
 		// Constructors
-		public AdditiveScene() {} // 0x000000018B7C30FC-0x000000018B7C3110
+		public AdditiveScene(); // 0x000000018AC7BD28-0x000000018AC7BD48
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C2F80-0x000000018B7C2FB4
-		protected override void OnReverseEnter() {} // 0x000000018B7C2FE8-0x000000018B7C2FFC
-		protected override void OnUpdate(float time) {} // 0x000000018B7C3020-0x000000018B7C30FC
-		protected override void OnExit() {} // 0x000000018B7C2FB4-0x000000018B7C2FE8
-		protected override void OnReverse() {} // 0x000000018B7C2FFC-0x000000018B7C3020
-		private void Activate() {} // 0x000000018B7C2890-0x000000018B7C2924
-		private void Deactivate() {} // 0x000000018B7C29A8-0x000000018B7C2A1C
-		private string CleanPath(string path) => default; // 0x000000018B7C2924-0x000000018B7C29A8
-		private void InitializeSubSceneCutscenes() {} // 0x000000018B7C2BE8-0x000000018B7C2F80
-		private void DenitializeSubSceneCutscenes(bool forward) {} // 0x000000018B7C2A1C-0x000000018B7C2BE8
+		protected override void OnEnter(); // 0x000000018AC7BBAC-0x000000018AC7BBE0
+		protected override void OnReverseEnter(); // 0x000000018AC7BC14-0x000000018AC7BC28
+		protected override void OnUpdate(float time); // 0x000000018AC7BC4C-0x000000018AC7BD28
+		protected override void OnExit(); // 0x000000018AC7BBE0-0x000000018AC7BC14
+		protected override void OnReverse(); // 0x000000018AC7BC28-0x000000018AC7BC4C
+		private void Activate(); // 0x000000018AC7B4E4-0x000000018AC7B578
+		private void Deactivate(); // 0x000000018AC7B5FC-0x000000018AC7B670
+		private string CleanPath(string path); // 0x000000018AC7B578-0x000000018AC7B5FC
+		private void InitializeSubSceneCutscenes(); // 0x000000018AC7B83C-0x000000018AC7BBAC
+		private void DenitializeSubSceneCutscenes(bool forward); // 0x000000018AC7B670-0x000000018AC7B83C
 	}
 
-	public class SubCutscene : DirectorActionClip, ISubClipContainable // TypeDefIndex: 55773
+	[Category("Composition")]
+	[Description("SubCutscenes are used for organization. Notice that the CameraTrack of the SubCutscene is ignored if this Cutscene already has an active CameraTrack.")]
+	public class SubCutscene : DirectorActionClip, ISubClipContainable // TypeDefIndex: 58414
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[FormerlySerializedAs("cutscene")]
+		[Required]
 		public Cutscene subCutscene; // 0x48
 		public float subCutsceneTimeOffset; // 0x50
 		private bool wasCamTrackActive; // 0x54
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CE24C-0x000000018B7CE314 
-		public override bool isValid { get => default; } // 0x000000018B7CE314-0x000000018B7CE380 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public new GameObject actor { get => default; } // 0x000000018B7CE208-0x000000018B7CE24C 
-		float ISubClipContainable.subClipOffset { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
-		float ISubClipContainable.subClipLength { get => default; } // 0x000000018B7CE190-0x000000018B7CE1CC 
-		float ISubClipContainable.subClipSpeed { get => default; } // 0x000000018B7CE1CC-0x000000018B7CE208 
-		new string IDirectable.name { get => default; } // 0x00000001864746E4-0x00000001864746EC 
+		public override string info { get; } // 0x000000018AC87010-0x000000018AC870D8 
+		public override bool isValid { get; } // 0x000000018AC870D8-0x000000018AC87144 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public new GameObject actor { get; } // 0x000000018AC86FCC-0x000000018AC87010 
+		float ISubClipContainable.subClipOffset { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
+		float ISubClipContainable.subClipLength { get; } // 0x000000018AC86F54-0x000000018AC86F90 
+		float ISubClipContainable.subClipSpeed { get; } // 0x000000018AC86F90-0x000000018AC86FCC 
+		new string IDirectable.name { get; } // 0x0000000185396F58-0x0000000185396F60 
 	
 		// Constructors
-		public SubCutscene() {} // 0x000000018B7AF1A8-0x000000018B7AF1B8
+		public SubCutscene(); // 0x000000018AC67F18-0x000000018AC67F34
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CDE68-0x000000018B7CDF30
-		protected override void OnReverseEnter() {} // 0x000000018B7CDFD8-0x000000018B7CE0A4
-		protected override void OnExit() {} // 0x000000018B7CDF30-0x000000018B7CDFD8
-		protected override void OnReverse() {} // 0x000000018B7CE0A4-0x000000018B7CE144
-		protected override void OnUpdate(float time, float previousTime) {} // 0x000000018B7CE144-0x000000018B7CE190
+		protected override void OnEnter(); // 0x000000018AC86C2C-0x000000018AC86CF4
+		protected override void OnReverseEnter(); // 0x000000018AC86D9C-0x000000018AC86E68
+		protected override void OnExit(); // 0x000000018AC86CF4-0x000000018AC86D9C
+		protected override void OnReverse(); // 0x000000018AC86E68-0x000000018AC86F08
+		protected override void OnUpdate(float time, float previousTime); // 0x000000018AC86F08-0x000000018AC86F54
 	}
 
-	public class DestroyGameObjects : DirectorActionClip // TypeDefIndex: 55774
+	[Category("Control")]
+	[Description("Destroy all gameobjects in the list (PlayMode only).\nYou should NOT use this clip to destroy actors.")]
+	public class DestroyGameObjects : DirectorActionClip // TypeDefIndex: 58415
 	{
 		// Fields
 		public List<GameObject> targetObjects; // 0x40
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7C6120-0x000000018B7C619C 
+		public override string info { get; } // 0x000000018AC7ED70-0x000000018AC7EDEC 
 	
 		// Constructors
-		public DestroyGameObjects() {} // 0x000000018B7C60A0-0x000000018B7C6120
+		public DestroyGameObjects(); // 0x000000018AC7ECF0-0x000000018AC7ED70
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C5F4C-0x000000018B7C60A0
+		protected override void OnEnter(); // 0x000000018AC7EB9C-0x000000018AC7ECF0
 	}
 
-	public class DirectorDisableGameObjects : DirectorActionClip // TypeDefIndex: 55775
-	{
-		// Fields
-		public List<GameObject> targetObjects; // 0x40
-		private Dictionary<GameObject, bool> states; // 0x48
-	
-		// Properties
-		public override string info { get => default; } // 0x000000018B7C6570-0x000000018B7C65EC 
-	
-		// Constructors
-		public DirectorDisableGameObjects() {} // 0x000000018B7C64F0-0x000000018B7C6570
-	
-		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C619C-0x000000018B7C6364
-		protected override void OnReverse() {} // 0x000000018B7C6364-0x000000018B7C64F0
-	}
-
-	public class DirectorEnableGameObjects : DirectorActionClip // TypeDefIndex: 55776
+	[Category("Control")]
+	[Description("All gameobjects in the list will be disabled if not already")]
+	[Name("Disable Game Objects")]
+	public class DirectorDisableGameObjects : DirectorActionClip // TypeDefIndex: 58416
 	{
 		// Fields
 		public List<GameObject> targetObjects; // 0x40
 		private Dictionary<GameObject, bool> states; // 0x48
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7C69C0-0x000000018B7C6A3C 
+		public override string info { get; } // 0x000000018AC7F1C0-0x000000018AC7F23C 
 	
 		// Constructors
-		public DirectorEnableGameObjects() {} // 0x000000018B7C6940-0x000000018B7C69C0
+		public DirectorDisableGameObjects(); // 0x000000018AC7F140-0x000000018AC7F1C0
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C65EC-0x000000018B7C67B4
-		protected override void OnReverse() {} // 0x000000018B7C67B4-0x000000018B7C6940
+		protected override void OnEnter(); // 0x000000018AC7EDEC-0x000000018AC7EFB4
+		protected override void OnReverse(); // 0x000000018AC7EFB4-0x000000018AC7F140
 	}
 
-	public class InstantiateObject : DirectorActionClip // TypeDefIndex: 55777
+	[Category("Control")]
+	[Description("All gameobjects in the list will be enabled if not already")]
+	[Name("Enable Game Objects")]
+	public class DirectorEnableGameObjects : DirectorActionClip // TypeDefIndex: 58417
 	{
 		// Fields
+		public List<GameObject> targetObjects; // 0x40
+		private Dictionary<GameObject, bool> states; // 0x48
+	
+		// Properties
+		public override string info { get; } // 0x000000018AC7F610-0x000000018AC7F68C 
+	
+		// Constructors
+		public DirectorEnableGameObjects(); // 0x000000018AC7F590-0x000000018AC7F610
+	
+		// Methods
+		protected override void OnEnter(); // 0x000000018AC7F23C-0x000000018AC7F404
+		protected override void OnReverse(); // 0x000000018AC7F404-0x000000018AC7F590
+	}
+
+	[Category("Control")]
+	[Description("Instantiates an object with optional popup animation if BlendIn is higher than zero. You can optionaly \'popdown\' and destroy the object after a period of time, if you also set a BlendOut value higher than zero.")]
+	public class InstantiateObject : DirectorActionClip // TypeDefIndex: 58418
+	{
+		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[PlaybackProtected]
+		[Required]
 		public GameObject targetObject; // 0x50
 		public Transform optionalParent; // 0x58
 		public Vector3 targetPosition; // 0x60
@@ -4467,113 +5199,142 @@ namespace Slate.ActionClips
 		private Vector3 wasScale; // 0x88
 	
 		// Properties
-		public override bool isValid { get => default; } // 0x000000018B7C7134-0x000000018B7C7184 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override string info { get => default; } // 0x000000018B7C7094-0x000000018B7C7134 
-		private new GameObject actor { get => default; } // 0x000000018140CF50-0x000000018140CF60 
+		public override bool isValid { get; } // 0x000000018AC7FD9C-0x000000018AC7FDEC 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override string info { get; } // 0x000000018AC7FCFC-0x000000018AC7FD9C 
+		private new GameObject actor { get; } // 0x0000000184D86260-0x0000000184D86270 
 	
 		// Constructors
-		public InstantiateObject() {} // 0x000000018B7C707C-0x000000018B7C7094
+		public InstantiateObject(); // 0x000000018AC7FCD8-0x000000018AC7FCFC
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C6B2C-0x000000018B7C6E3C
-		protected override void OnUpdate(float time) {} // 0x000000018B7C6F2C-0x000000018B7C707C
-		protected override void OnExit() {} // 0x000000018B7C6E3C-0x000000018B7C6EA0
-		protected override void OnReverseEnter() {} // 0x000000018B7C6EA0-0x000000018B7C6ED8
-		protected override void OnReverse() {} // 0x000000018B7C6ED8-0x000000018B7C6F2C
+		protected override void OnEnter(); // 0x000000018AC7F788-0x000000018AC7FA98
+		protected override void OnUpdate(float time); // 0x000000018AC7FB88-0x000000018AC7FCD8
+		protected override void OnExit(); // 0x000000018AC7FA98-0x000000018AC7FAFC
+		protected override void OnReverseEnter(); // 0x000000018AC7FAFC-0x000000018AC7FB34
+		protected override void OnReverse(); // 0x000000018AC7FB34-0x000000018AC7FB88
 	}
 
-	public class SampleParticleSystem : DirectorActionClip // TypeDefIndex: 55778
+	[Category("Control")]
+	public class SampleParticleSystem : DirectorActionClip // TypeDefIndex: 58419
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[Required]
 		public ParticleSystem particles; // 0x48
+		[Tooltip("If true, then particles simulation will be time synced with the cutscene, otherwise simulation will take place independently")]
 		public bool simulationSync; // 0x50
 		private ParticleSystem.EmissionModule em; // 0x58
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CB21C-0x000000018B7CB334 
-		public override bool isValid { get => default; } // 0x000000018B7CB334-0x000000018B7CB384 
-		public override float length { get => default; set {} } // 0x000000018B7CB384-0x000000018B7CB414 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendOut { get => default; } // 0x000000018B7CB150-0x000000018B7CB198 
-		private bool loop { get => default; } // 0x000000018B7CB414-0x000000018B7CB494 
-		private float duration { get => default; } // 0x000000018B7CB198-0x000000018B7CB21C 
-		private float startLifetime { get => default; } // 0x000000018B7CB494-0x000000018B7CB518 
+		public override string info { get; } // 0x000000018AC83F44-0x000000018AC8405C 
+		public override bool isValid { get; } // 0x000000018AC8405C-0x000000018AC840AC 
+		public override float length { get; set; } // 0x000000018AC840AC-0x000000018AC8413C 0x0000000184D86470-0x0000000184D86480
+		public override float blendOut { get; } // 0x000000018AC83E78-0x000000018AC83EC0 
+		private bool loop { get; } // 0x000000018AC8413C-0x000000018AC841BC 
+		private float duration { get; } // 0x000000018AC83EC0-0x000000018AC83F44 
+		private float startLifetime { get; } // 0x000000018AC841BC-0x000000018AC84240 
 	
 		// Constructors
-		public SampleParticleSystem() {} // 0x000000018B7CB13C-0x000000018B7CB150
+		public SampleParticleSystem(); // 0x000000018AC83E58-0x000000018AC83E78
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CAF68-0x000000018B7CAF70
-		protected override void OnReverseEnter() {} // 0x000000018B7CAF68-0x000000018B7CAF70
-		protected override void OnExit() {} // 0x000000018B7CAF70-0x000000018B7CAF78
-		protected override void OnReverse() {} // 0x000000018B7CAF70-0x000000018B7CAF78
-		protected override void OnRootEnabled() {} // 0x000000018B7CAFC4-0x000000018B7CB014
-		protected override void OnRootDisabled() {} // 0x000000018B7CAF78-0x000000018B7CAFC4
-		private void Play() {} // 0x000000018B7CB080-0x000000018B7CB0FC
-		protected override void OnUpdate(float time) {} // 0x000000018B7CB014-0x000000018B7CB080
-		private void Stop() {} // 0x000000018B7CB0FC-0x000000018B7CB13C
+		protected override void OnEnter(); // 0x000000018AC83C84-0x000000018AC83C8C
+		protected override void OnReverseEnter(); // 0x000000018AC83C84-0x000000018AC83C8C
+		protected override void OnExit(); // 0x000000018AC83C8C-0x000000018AC83C94
+		protected override void OnReverse(); // 0x000000018AC83C8C-0x000000018AC83C94
+		protected override void OnRootEnabled(); // 0x000000018AC83CE0-0x000000018AC83D30
+		protected override void OnRootDisabled(); // 0x000000018AC83C94-0x000000018AC83CE0
+		private void Play(); // 0x000000018AC83D9C-0x000000018AC83E18
+		protected override void OnUpdate(float time); // 0x000000018AC83D30-0x000000018AC83D9C
+		private void Stop(); // 0x000000018AC83E18-0x000000018AC83E58
 	}
 
-	public class TransitAudioMixerSnapshot : DirectorActionClip // TypeDefIndex: 55779
+	[Category("Control")]
+	[Description("Will transit the given audio mixer to the given snapshot")]
+	public class TransitAudioMixerSnapshot : DirectorActionClip // TypeDefIndex: 58420
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
 		public AudioMixer audioMixer; // 0x48
 		public string snapshotName; // 0x50
 		private AudioMixerSnapshot snapshot; // 0x58
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; } // 0x000000018B7C5E1C-0x000000018B7C5E2C 
-		public override bool isValid { get => default; } // 0x000000018B7CE418-0x000000018B7CE468 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; } // 0x000000018AC7EA6C-0x000000018AC7EA7C 
+		public override bool isValid { get; } // 0x000000018AC871DC-0x000000018AC8722C 
 	
 		// Constructors
-		public TransitAudioMixerSnapshot() {} // 0x000000018B7AF1A8-0x000000018B7AF1B8
+		public TransitAudioMixerSnapshot(); // 0x000000018AC67F18-0x000000018AC67F34
 	
 		// Methods
-		protected override void OnReverseEnter() {} // 0x000000018B7CE410-0x000000018B7CE418
-		protected override void OnEnter() {} // 0x000000018B7CE410-0x000000018B7CE418
-		private void Do() {} // 0x000000018B7CE380-0x000000018B7CE410
+		protected override void OnReverseEnter(); // 0x000000018AC871D4-0x000000018AC871DC
+		protected override void OnEnter(); // 0x000000018AC871D4-0x000000018AC871DC
+		private void Do(); // 0x000000018AC87144-0x000000018AC871D4
 	}
 
-	public class AnimateAmbientLighting : DirectorActionClip // TypeDefIndex: 55780
+	[Category("Environment")]
+	public class AnimateAmbientLighting : DirectorActionClip // TypeDefIndex: 58421
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[AnimatableParameter(0f, 10f)]
 		public float ambientIntensity; // 0x4C
+		[AnimatableParameter]
 		public UnityEngine.Color ambientColor; // 0x50
 		private float wasIntensity; // 0x60
 		private UnityEngine.Color wasColor; // 0x64
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public AnimateAmbientLighting() {} // 0x000000018B7AF1A8-0x000000018B7AF1B8
+		public AnimateAmbientLighting(); // 0x000000018AC67F18-0x000000018AC67F34
 	
 		// Methods
-		protected override void OnCreate() {} // 0x000000018B7C3128-0x000000018B7C3158
-		protected override void OnEnter() {} // 0x000000018B7C3158-0x000000018B7C3188
-		protected override void OnUpdate(float time) {} // 0x000000018B7C31B8-0x000000018B7C3238
-		protected override void OnReverse() {} // 0x000000018B7C3188-0x000000018B7C31B8
+		protected override void OnCreate(); // 0x000000018AC7BD60-0x000000018AC7BD90
+		protected override void OnEnter(); // 0x000000018AC7BD90-0x000000018AC7BDC0
+		protected override void OnUpdate(float time); // 0x000000018AC7BDF0-0x000000018AC7BE70
+		protected override void OnReverse(); // 0x000000018AC7BDC0-0x000000018AC7BDF0
 	}
 
-	public class AnimateFog : DirectorActionClip // TypeDefIndex: 55781
+	[Category("Environment")]
+	public class AnimateFog : DirectorActionClip // TypeDefIndex: 58422
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[AnimatableParameter]
 		public UnityEngine.Color fogColor; // 0x4C
+		[AnimatableParameter]
 		public float fogDensity; // 0x5C
+		[AnimatableParameter]
 		public float linearFogStartDistance; // 0x60
+		[AnimatableParameter]
 		public float linearFogEndDistance; // 0x64
 		private UnityEngine.Color wasColor; // 0x68
 		private float wasDensity; // 0x78
@@ -4581,95 +5342,124 @@ namespace Slate.ActionClips
 		private float wasEndDistance; // 0x80
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public AnimateFog() {} // 0x000000018B7AF1A8-0x000000018B7AF1B8
+		public AnimateFog(); // 0x000000018AC67F18-0x000000018AC67F34
 	
 		// Methods
-		protected override void OnCreate() {} // 0x000000018B7C364C-0x000000018B7C3694
-		protected override void OnEnter() {} // 0x000000018B7C3694-0x000000018B7C36E0
-		protected override void OnUpdate(float time) {} // 0x000000018B7C372C-0x000000018B7C37E0
-		protected override void OnReverse() {} // 0x000000018B7C36E0-0x000000018B7C372C
+		protected override void OnCreate(); // 0x000000018AC7C284-0x000000018AC7C2CC
+		protected override void OnEnter(); // 0x000000018AC7C2CC-0x000000018AC7C318
+		protected override void OnUpdate(float time); // 0x000000018AC7C364-0x000000018AC7C418
+		protected override void OnReverse(); // 0x000000018AC7C318-0x000000018AC7C364
 	}
 
-	public class AnimateGravity : DirectorActionClip // TypeDefIndex: 55782
+	[Category("Environment")]
+	[Description("Animate the gravity physics are using for Rigidbodies. This applies to both 2D and 3D Physics.")]
+	public class AnimateGravity : DirectorActionClip // TypeDefIndex: 58423
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[AnimatableParameter]
 		public Vector3 gravity; // 0x4C
 		private Vector3 wasGravity; // 0x58
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public AnimateGravity() {} // 0x000000018B7AF1A8-0x000000018B7AF1B8
+		public AnimateGravity(); // 0x000000018AC67F18-0x000000018AC67F34
 	
 		// Methods
-		protected override void OnCreate() {} // 0x000000018B7C37E0-0x000000018B7C380C
-		protected override void OnEnter() {} // 0x000000018B7C380C-0x000000018B7C3838
-		protected override void OnUpdate(float time) {} // 0x000000018B7C38C4-0x000000018B7C39A8
-		protected override void OnReverse() {} // 0x000000018B7C3838-0x000000018B7C38C4
+		protected override void OnCreate(); // 0x000000018AC7C418-0x000000018AC7C444
+		protected override void OnEnter(); // 0x000000018AC7C444-0x000000018AC7C470
+		protected override void OnUpdate(float time); // 0x000000018AC7C4FC-0x000000018AC7C5E0
+		protected override void OnReverse(); // 0x000000018AC7C470-0x000000018AC7C4FC
 	}
 
-	public class AnimateTimeScale : DirectorActionClip // TypeDefIndex: 55783
+	[Category("Environment")]
+	public class AnimateTimeScale : DirectorActionClip // TypeDefIndex: 58424
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[AnimatableParameter(0.01f, 10f)]
 		public float timeScale; // 0x4C
 		public Slate.EaseType interpolation; // 0x50
 		private float wasScale; // 0x54
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public AnimateTimeScale() {} // 0x000000018B7C540C-0x000000018B7C5424
+		public AnimateTimeScale(); // 0x000000018AC7E034-0x000000018AC7E058
 	
 		// Methods
-		protected override void OnCreate() {} // 0x000000018B7C5424-0x000000018B7C5440
-		protected override void OnEnter() {} // 0x000000018B7C5440-0x000000018B7C545C
-		protected override void OnUpdate(float time) {} // 0x000000018B7C5468-0x000000018B7C54D8
-		protected override void OnReverse() {} // 0x000000018B7C545C-0x000000018B7C5468
+		protected override void OnCreate(); // 0x000000018AC7E058-0x000000018AC7E074
+		protected override void OnEnter(); // 0x000000018AC7E074-0x000000018AC7E090
+		protected override void OnUpdate(float time); // 0x000000018AC7E09C-0x000000018AC7E10C
+		protected override void OnReverse(); // 0x000000018AC7E090-0x000000018AC7E09C
 	}
 
-	public class EasySlowMotion : DirectorActionClip // TypeDefIndex: 55784
+	[Category("Environment")]
+	[Description("A quick way to create a slow-motion time effect.")]
+	[Obsolete]
+	public class EasySlowMotion : DirectorActionClip // TypeDefIndex: 58425
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[Range(0.05f, 1f)]
 		public float timeScale; // 0x4C
 		public Slate.EaseType interpolation; // 0x50
 		private float lastTimeScale; // 0x54
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override string info { get => default; } // 0x000000018B7C6AD0-0x000000018B7C6B2C 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override string info { get; } // 0x000000018AC7F72C-0x000000018AC7F788 
 	
 		// Constructors
-		public EasySlowMotion() {} // 0x000000018B7C6AA4-0x000000018B7C6AD0
+		public EasySlowMotion(); // 0x000000018AC7F6F4-0x000000018AC7F72C
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C5440-0x000000018B7C545C
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7C6A3C-0x000000018B7C6AA4
-		protected override void OnReverse() {} // 0x000000018B7C545C-0x000000018B7C5468
+		protected override void OnEnter(); // 0x000000018AC7E074-0x000000018AC7E090
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC7F68C-0x000000018AC7F6F4
+		protected override void OnReverse(); // 0x000000018AC7E090-0x000000018AC7E09C
 	}
 
-	public class RaiseUnityEvent : DirectorActionClip // TypeDefIndex: 55785
+	[Category("Events")]
+	[Description("Raise a Unity Event when the time is moving forwards and another when the time is moving backwards. This is helpfull if you want to use these events with UI to reverse their state, both in runtime and in editor.")]
+	public class RaiseUnityEvent : DirectorActionClip // TypeDefIndex: 58426
 	{
 		// Fields
 		public string customLabel; // 0x40
@@ -4677,17 +5467,17 @@ namespace Slate.ActionClips
 		public UnityEvent reverseEvent; // 0x50
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CA06C-0x000000018B7CA290 
+		public override string info { get; } // 0x000000018AC82D68-0x000000018AC82F8C 
 	
 		// Constructors
-		public RaiseUnityEvent() {} // 0x000000018B7C9FD0-0x000000018B7CA06C
+		public RaiseUnityEvent(); // 0x000000018AC82CCC-0x000000018AC82D68
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C9F90-0x000000018B7C9FB0
-		protected override void OnReverse() {} // 0x000000018B7C9FB0-0x000000018B7C9FD0
+		protected override void OnEnter(); // 0x000000018AC82C8C-0x000000018AC82CAC
+		protected override void OnReverse(); // 0x000000018AC82CAC-0x000000018AC82CCC
 	}
 
-	public abstract class SendGlobalMessage<T> : SendGlobalMessage // TypeDefIndex: 55786
+	public abstract class SendGlobalMessage<T> : SendGlobalMessage // TypeDefIndex: 58427
 	{
 		// Fields
 		public T value;
@@ -4696,242 +5486,322 @@ namespace Slate.ActionClips
 		public override string info { get; }
 	
 		// Constructors
-		protected SendGlobalMessage() {}
+		protected SendGlobalMessage();
 	
 		// Methods
-		protected override void OnEnter() {}
+		protected override void OnEnter();
 	}
 
-	public class SendGlobalMessage : DirectorActionClip, IEvent // TypeDefIndex: 55787
+	[Category("Events")]
+	[Description("Send a Unity Message to all actors of this Cutscene, including the Director Camera, as well as the Cutscene itself.")]
+	public class SendGlobalMessage : DirectorActionClip, IEvent // TypeDefIndex: 58428
 	{
 		// Fields
+		[Required]
 		public string message; // 0x40
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7CC0FC-0x000000018B7CC13C 
-		public override bool isValid { get => default; } // 0x0000000189D8F4C0-0x0000000189D8F4D8 
-		string IEvent.name { get => default; } // 0x00000001813FF010-0x00000001813FF020 
+		public override string info { get; } // 0x000000018AC84E84-0x000000018AC84EC4 
+		public override bool isValid { get; } // 0x00000001891DE054-0x00000001891DE06C 
+		string IEvent.name { get; } // 0x0000000184D85A60-0x0000000184D85A70 
 	
 		// Constructors
-		public SendGlobalMessage() {} // 0x000000018646DB20-0x000000018646DB28
+		public SendGlobalMessage(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		void IEvent.Invoke() {} // 0x000000018B3F462C-0x000000018B3F463C
-		protected override void OnEnter() {} // 0x000000018B7CC0BC-0x000000018B7CC0FC
+		void IEvent.Invoke(); // 0x000000018AC84E74-0x000000018AC84E84
+		protected override void OnEnter(); // 0x000000018AC84E34-0x000000018AC84E74
 	}
 
-	public class SendGlobalMessageBoolean : SendGlobalMessage<bool> // TypeDefIndex: 55788
+	public class SendGlobalMessageBoolean : SendGlobalMessage<bool> // TypeDefIndex: 58429
 	{
 		// Constructors
-		public SendGlobalMessageBoolean() {} // 0x000000018B7CBFB8-0x000000018B7CBFEC
+		public SendGlobalMessageBoolean(); // 0x000000018AC84CF4-0x000000018AC84D34
 	}
 
-	public class SendGlobalMessageFloat : SendGlobalMessage<float> // TypeDefIndex: 55789
+	public class SendGlobalMessageFloat : SendGlobalMessage<float> // TypeDefIndex: 58430
 	{
 		// Constructors
-		public SendGlobalMessageFloat() {} // 0x000000018B7CBFEC-0x000000018B7CC020
+		public SendGlobalMessageFloat(); // 0x000000018AC84D34-0x000000018AC84D74
 	}
 
-	public class SendGlobalMessageInteger : SendGlobalMessage<int> // TypeDefIndex: 55790
+	public class SendGlobalMessageInteger : SendGlobalMessage<int> // TypeDefIndex: 58431
 	{
 		// Constructors
-		public SendGlobalMessageInteger() {} // 0x000000018B7CC020-0x000000018B7CC054
+		public SendGlobalMessageInteger(); // 0x000000018AC84D74-0x000000018AC84DB4
 	}
 
-	public class SendGlobalMessageObject : SendGlobalMessage<UnityEngine.Object> // TypeDefIndex: 55791
+	public class SendGlobalMessageObject : SendGlobalMessage<UnityEngine.Object> // TypeDefIndex: 58432
 	{
 		// Constructors
-		public SendGlobalMessageObject() {} // 0x000000018B7CC054-0x000000018B7CC088
+		public SendGlobalMessageObject(); // 0x000000018AC84DB4-0x000000018AC84DF4
 	}
 
-	public class SendGlobalMessageString : SendGlobalMessage<string> // TypeDefIndex: 55792
+	public class SendGlobalMessageString : SendGlobalMessage<string> // TypeDefIndex: 58433
 	{
 		// Constructors
-		public SendGlobalMessageString() {} // 0x000000018B7CC088-0x000000018B7CC0BC
+		public SendGlobalMessageString(); // 0x000000018AC84DF4-0x000000018AC84E34
 	}
 
-	public class Captions : DirectorActionClip // TypeDefIndex: 55793
+	[Category("Rendering")]
+	[Description("Shows closed captions at the bottom of the screen. Note that the Play Audio clips of the Audio Track are also able to show subtitles in sync with the audio. Use this for non audible subtitles or captions.")]
+	public class Captions : DirectorActionClip // TypeDefIndex: 58434
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[Multiline(5)]
 		public string text; // 0x50
 		public UnityEngine.Color color; // 0x58
 		public Slate.EaseType interpolation; // 0x68
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7C5D14-0x000000018B7C5D54 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override string info { get; } // 0x000000018AC7E954-0x000000018AC7E994 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public Captions() {} // 0x000000018B7C5CA0-0x000000018B7C5D14
+		public Captions(); // 0x000000018AC7E8E0-0x000000018AC7E954
 	
 		// Methods
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7C5C2C-0x000000018B7C5CA0
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC7E86C-0x000000018AC7E8E0
 	}
 
-	public class CineBox : DirectorActionClip // TypeDefIndex: 55794
+	[Category("Rendering")]
+	[Description("Controls the visibility of the Cinematic Letterbox. This is only usefull if you want a Cinematic Letterbox only in some parts of your cutscene. For this to work correctly, you should set the CineBox effect in the Cutscene CameraTrack to 0, so that the effect is not overriden.")]
+	public class CineBox : DirectorActionClip // TypeDefIndex: 58435
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public CineBox() {} // 0x000000018B7C5D6C-0x000000018B7C5D88
+		public CineBox(); // 0x000000018AC7E9AC-0x000000018AC7E9D8
 	
 		// Methods
-		protected override void OnUpdate(float time) {} // 0x000000018B7C5D54-0x000000018B7C5D6C
+		protected override void OnUpdate(float time); // 0x000000018AC7E994-0x000000018AC7E9AC
 	}
 
-	public class OverlayText : DirectorActionClip // TypeDefIndex: 55795
+	[Category("Rendering")]
+	[Description("Show text on screen")]
+	public class OverlayText : DirectorActionClip // TypeDefIndex: 58436
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[Multiline(5)]
 		public string text; // 0x50
 		public TextAnchor anchor; // 0x58
 		public Slate.EaseType interpolation; // 0x5C
+		[AnimatableParameter]
 		public UnityEngine.Color color; // 0x60
+		[AnimatableParameter]
 		public float size; // 0x70
+		[AnimatableParameter]
 		public Vector2 position; // 0x74
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7C84F8-0x000000018B7C8538 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override string info { get; } // 0x000000018AC8119C-0x000000018AC811DC 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public OverlayText() {} // 0x000000018B7C8474-0x000000018B7C84F8
+		public OverlayText(); // 0x000000018AC81118-0x000000018AC8119C
 	
 		// Methods
-		protected override void OnUpdate(float time) {} // 0x000000018B7C83E0-0x000000018B7C8474
+		protected override void OnUpdate(float time); // 0x000000018AC81084-0x000000018AC81118
 	}
 
-	public class OverlayTexture : DirectorActionClip // TypeDefIndex: 55796
+	[Category("Rendering")]
+	[Description("Displays a texture overlay")]
+	public class OverlayTexture : DirectorActionClip // TypeDefIndex: 58437
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
 		public Texture texture; // 0x50
+		[AnimatableParameter]
 		public UnityEngine.Color color; // 0x58
+		[AnimatableParameter]
 		public Vector2 scale; // 0x68
+		[AnimatableParameter]
 		public Vector2 position; // 0x70
 		public Slate.EaseType interpolation; // 0x78
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7C8624-0x000000018B7C86C4 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override string info { get; } // 0x000000018AC812C8-0x000000018AC81368 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public OverlayTexture() {} // 0x000000018B7C85D4-0x000000018B7C8624
+		public OverlayTexture(); // 0x000000018AC81278-0x000000018AC812C8
 	
 		// Methods
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7C8538-0x000000018B7C85D4
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC811DC-0x000000018AC81278
 	}
 
-	public class ScreenFader : DirectorActionClip // TypeDefIndex: 55797
+	[Category("Rendering")]
+	[Description("An alternative way to fade the screen. Fade out/in can also be done through the Camera Shot clip in the Camera Track, but with this clip, more effects can be achieved.")]
+	public class ScreenFader : DirectorActionClip // TypeDefIndex: 58438
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[AnimatableParameter(0f, 1f)]
 		public float fade; // 0x4C
+		[AnimatableParameter("Color")]
 		public UnityEngine.Color outColor; // 0x50
 		public Slate.EaseType interpolation; // 0x60
 		private UnityEngine.Color lastColor; // 0x64
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public ScreenFader() {} // 0x000000018B7CBB38-0x000000018B7CBB84
+		public ScreenFader(); // 0x000000018AC8486C-0x000000018AC848C8
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7CBA8C-0x000000018B7CBAAC
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7CBACC-0x000000018B7CBB38
-		protected override void OnReverse() {} // 0x000000018B7CBAAC-0x000000018B7CBACC
+		protected override void OnEnter(); // 0x000000018AC847C0-0x000000018AC847E0
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC84800-0x000000018AC8486C
+		protected override void OnReverse(); // 0x000000018AC847E0-0x000000018AC84800
 	}
 
-	public class AnimatePlaybackSpeed : DirectorActionClip // TypeDefIndex: 55798
+	[Category("Utility")]
+	[Description("Animates the playback speed of the cutscene")]
+	public class AnimatePlaybackSpeed : DirectorActionClip // TypeDefIndex: 58439
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[AnimatableParameter(0.01f, 10f)]
 		public float speed; // 0x4C
 		public Slate.EaseType interpolation; // 0x50
 		private float wasSpeed; // 0x54
 	
 		// Properties
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public AnimatePlaybackSpeed() {} // 0x000000018B7C540C-0x000000018B7C5424
+		public AnimatePlaybackSpeed(); // 0x000000018AC7E034-0x000000018AC7E058
 	
 		// Methods
-		protected override void OnCreate() {} // 0x000000018B7C52E4-0x000000018B7C5314
-		protected override void OnEnter() {} // 0x000000018B7C5314-0x000000018B7C5344
-		protected override void OnUpdate(float time) {} // 0x000000018B7C5374-0x000000018B7C540C
-		protected override void OnReverse() {} // 0x000000018B7C5344-0x000000018B7C5374
+		protected override void OnCreate(); // 0x000000018AC7DF0C-0x000000018AC7DF3C
+		protected override void OnEnter(); // 0x000000018AC7DF3C-0x000000018AC7DF6C
+		protected override void OnUpdate(float time); // 0x000000018AC7DF9C-0x000000018AC7E034
+		protected override void OnReverse(); // 0x000000018AC7DF6C-0x000000018AC7DF9C
 	}
 
-	public class DebugLog : DirectorActionClip // TypeDefIndex: 55799
+	[Category("Utility")]
+	public class DebugLog : DirectorActionClip // TypeDefIndex: 58440
 	{
 		// Fields
+		[LeftToggle]
 		public bool neverSkip; // 0x40
 		public string text; // 0x48
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7C5F0C-0x000000018B7C5F4C 
+		public override string info { get; } // 0x000000018AC7EB5C-0x000000018AC7EB9C 
 	
 		// Constructors
-		public DebugLog() {} // 0x000000018646DB20-0x000000018646DB28
-	
-		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C5E6C-0x000000018B7C5F0C
-	}
-
-	public class PauseCutscene : DirectorActionClip // TypeDefIndex: 55800
-	{
-		// Constructors
-		public PauseCutscene() {} // 0x000000018646DB20-0x000000018646DB28
+		public DebugLog(); // 0x0000000185393520-0x0000000185393538
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C86C4-0x000000018B7C8790
+		protected override void OnEnter(); // 0x000000018AC7EABC-0x000000018AC7EB5C
 	}
 
-	public class ScreenCapture : DirectorActionClip // TypeDefIndex: 55801
+	[Category("Utility")]
+	[Description("Pauses the Cutscene (PlayMode Only). It\'s up to other scripts to resume it.")]
+	public class PauseCutscene : DirectorActionClip // TypeDefIndex: 58441
 	{
 		// Constructors
-		public ScreenCapture() {} // 0x000000018646DB20-0x000000018646DB28
+		public PauseCutscene(); // 0x0000000185393520-0x0000000185393538
+	
+		// Methods
+		protected override void OnEnter(); // 0x000000018AC81368-0x000000018AC8145C
 	}
 
-	public class PlayAnimationClip : ActorActionClip<Animation>, ISubClipContainable // TypeDefIndex: 55802
+	[Category("Utilities")]
+	[Description("Render the cutscene in an image-sequence for the selected duration of the clip. Rendering is done in playmode only.")]
+	[Obsolete("Use the new \'Render\' feature")]
+	public class ScreenCapture : DirectorActionClip // TypeDefIndex: 58442
+	{
+		// Constructors
+		public ScreenCapture(); // 0x0000000185393520-0x0000000185393538
+	}
+
+	[Attachable(new System.Type[1] {typeof(AnimationTrack) })]
+	[Description("All animation clips in the same track, will play at an animation layer equal to their track layer order. Thus, animations in tracks on top will play over animations in tracks bellow. You can trim or loop the animation by scaling the clip.")]
+	[Name("Animation Clip")]
+	public class PlayAnimationClip : ActorActionClip<Animation>, ISubClipContainable // TypeDefIndex: 58443
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x4C
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x50
+		[Required]
 		public AnimationClip animationClip; // 0x58
 		public float clipOffset; // 0x60
+		[Range(0.1f, 5f)]
 		public float playbackSpeed; // 0x64
 		private TransformSnapshot snapShot; // 0x68
 		private Transform mixTransform; // 0x70
@@ -4939,378 +5809,483 @@ namespace Slate.ActionClips
 		private bool isListClip; // 0x80
 	
 		// Properties
-		float ISubClipContainable.subClipOffset { get => default; set {} } // 0x0000000185FB2200-0x0000000185FB2210 0x0000000185FB2230-0x0000000185FB2240
-		float ISubClipContainable.subClipLength { get => default; } // 0x000000018B7C8D80-0x000000018B7C8DF0 
-		float ISubClipContainable.subClipSpeed { get => default; } // 0x0000000185FB2210-0x0000000185FB2220 
-		public override string info { get => default; } // 0x000000018B7C8E34-0x000000018B7C8EA8 
-		public override bool isValid { get => default; } // 0x000000018B7C8EA8-0x000000018B7C8F38 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override float blendIn { get => default; set {} } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public override float blendOut { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
-		public override bool canCrossBlend { get => default; } // 0x00000001840A27C0-0x00000001840A27D0 
-		private AnimationTrack track { get => default; } // 0x000000018B7C8F38-0x000000018B7C8F74 
-		new string IDirectable.name { get => default; } // 0x00000001864746E4-0x00000001864746EC 
+		float ISubClipContainable.subClipOffset { get; set; } // 0x0000000184D88480-0x0000000184D88490 0x0000000184D884A0-0x0000000184D884B0
+		float ISubClipContainable.subClipLength { get; } // 0x000000018AC81A4C-0x000000018AC81ABC 
+		float ISubClipContainable.subClipSpeed { get; } // 0x0000000184D88470-0x0000000184D88480 
+		public override string info { get; } // 0x000000018AC81B10-0x000000018AC81B84 
+		public override bool isValid { get; } // 0x000000018AC81B84-0x000000018AC81C14 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public override float blendOut { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
+		public override bool canCrossBlend { get; } // 0x0000000182FFF600-0x0000000182FFF610 
+		private AnimationTrack track { get; } // 0x000000018AC81C14-0x000000018AC81C50 
+		new string IDirectable.name { get; } // 0x0000000185396F58-0x0000000185396F60 
 	
 		// Constructors
-		public PlayAnimationClip() {} // 0x000000018B7C8DF0-0x000000018B7C8E34
+		public PlayAnimationClip(); // 0x000000018AC81ABC-0x000000018AC81B10
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C8790-0x000000018B7C8978
-		protected override void OnUpdate(float time) {} // 0x000000018B7C8A40-0x000000018B7C8D80
-		protected override void OnReverse() {} // 0x000000018B7C89C0-0x000000018B7C8A40
-		protected override void OnExit() {} // 0x000000018B7C8978-0x000000018B7C899C
-		protected override void OnReverseEnter() {} // 0x000000018B7C899C-0x000000018B7C89C0
+		protected override void OnEnter(); // 0x000000018AC8145C-0x000000018AC81644
+		protected override void OnUpdate(float time); // 0x000000018AC8170C-0x000000018AC81A4C
+		protected override void OnReverse(); // 0x000000018AC8168C-0x000000018AC8170C
+		protected override void OnExit(); // 0x000000018AC81644-0x000000018AC81668
+		protected override void OnReverseEnter(); // 0x000000018AC81668-0x000000018AC8168C
 	}
 
-	public class PlayAnimatorClip : ActorActionClip, ISubClipContainable // TypeDefIndex: 55805
+	[Attachable(new System.Type[1] {typeof(AnimatorTrack) })]
+	[Description("Play an Animation Clip on target actor with Animator component attached.\nIf this is the Layer 0 Animator Track, you can choose to explicitely set a \'Starting Position\' and a \'Starting Rotation\' for when the clip starts. This also takes into account Root Motion if enabled in the Animator Track.")]
+	[Name("Animation Clip")]
+	public class PlayAnimatorClip : ActorActionClip, ISubClipContainable // TypeDefIndex: 58446
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[Header("Animation Clip Settings")]
+		[Required]
 		public AnimationClip animationClip; // 0x50
 		public float clipOffset; // 0x58
 		public ClipWrapMode clipWrapMode; // 0x5C
+		[Range(0f, 1f)]
 		public float clipWeight; // 0x60
+		[Range(-5f, 5f)]
 		public float playbackSpeed; // 0x64
+		[EnabledIf("isMasterTrack", 1)]
+		[Header("Starting Transforms Settings")]
 		public StartingTransformsMode startingTransformsMode; // 0x68
+		[EnabledIf("isMasterAndManualSet", 1)]
 		public MiniTransformSpace transformSpace; // 0x6C
+		[EnabledIf("isMasterAndManualSet", 1)]
 		public Vector3 startingPosition; // 0x70
+		[EnabledIf("isMasterAndManualSet", 1)]
 		public Vector3 startingRotation; // 0x7C
+		[AnimatableParameter("Local Rotation Offset")]
+		[Header("---")]
+		[HelpBox("\'Local Rotation Offset\' is only used if this clip is part of the Layer 0 Track and RootMotion is enabled in that Track.\nYou can animate this parameter to rotate the actor while using it\'s RootMotion within the Animation Clip.\nThis can be very useful for animations like Walk or Run. Most of the times, simply animating \'Y\' will suffice.")]
 		public Vector2 steerLocalRotation; // 0x88
 		protected Vector3 wasPosition; // 0x90
 		protected Quaternion wasRotation; // 0x9C
 	
 		// Properties
-		private bool isMasterAndManualSet { get => default; } // 0x000000018B7C988C-0x000000018B7C98B0 
-		float ISubClipContainable.subClipOffset { get => default; set {} } // 0x0000000181DE2580-0x0000000181DE2590 0x0000000181DE28C0-0x0000000181DE28D0
-		float ISubClipContainable.subClipLength { get => default; } // 0x000000018B7C9764-0x000000018B7C97D4 
-		float ISubClipContainable.subClipSpeed { get => default; } // 0x0000000185FB2210-0x0000000185FB2220 
-		public override string info { get => default; } // 0x000000018B7C9814-0x000000018B7C988C 
-		public override bool isValid { get => default; } // 0x000000018B7C98D4-0x000000018B7C9980 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override bool canCrossBlend { get => default; } // 0x00000001840A27C0-0x00000001840A27D0 
-		protected AnimatorTrack track { get => default; } // 0x000000018B7C9980-0x000000018B7C99BC 
-		protected Animator animator { get => default; } // 0x000000018B7C97F0-0x000000018B7C9814 
-		protected bool isMasterTrack { get => default; } // 0x000000018B7C98B0-0x000000018B7C98D4 
-		new string IDirectable.name { get => default; } // 0x00000001864746E4-0x00000001864746EC 
+		private bool isMasterAndManualSet { get; } // 0x000000018AC82578-0x000000018AC8259C 
+		float ISubClipContainable.subClipOffset { get; set; } // 0x0000000184D88400-0x0000000184D88410 0x0000000184D88430-0x0000000184D88440
+		float ISubClipContainable.subClipLength { get; } // 0x000000018AC82440-0x000000018AC824B0 
+		float ISubClipContainable.subClipSpeed { get; } // 0x0000000184D88470-0x0000000184D88480 
+		public override string info { get; } // 0x000000018AC82500-0x000000018AC82578 
+		public override bool isValid { get; } // 0x000000018AC825C0-0x000000018AC8266C 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override bool canCrossBlend { get; } // 0x0000000182FFF600-0x0000000182FFF610 
+		protected AnimatorTrack track { get; } // 0x000000018AC8266C-0x000000018AC826A8 
+		protected Animator animator { get; } // 0x000000018AC824DC-0x000000018AC82500 
+		protected bool isMasterTrack { get; } // 0x000000018AC8259C-0x000000018AC825C0 
+		new string IDirectable.name { get; } // 0x0000000185396F58-0x0000000185396F60 
 	
 		// Nested types
-		public enum StartingTransformsMode // TypeDefIndex: 55803
+		public enum StartingTransformsMode // TypeDefIndex: 58444
 		{
 			AutoMatchTransforms = 0,
 			ManualSetTransforms = 1
 		}
 	
-		public enum ClipWrapMode // TypeDefIndex: 55804
+		public enum ClipWrapMode // TypeDefIndex: 58445
 		{
 			Loop = 0,
 			PingPong = 1
 		}
 	
 		// Constructors
-		public PlayAnimatorClip() {} // 0x000000018B7C97D4-0x000000018B7C97F0
+		public PlayAnimatorClip(); // 0x000000018AC824B0-0x000000018AC824DC
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C8F74-0x000000018B7C9198
-		protected override void OnReverseEnter() {} // 0x000000018B7C91FC-0x000000018B7C9260
-		protected override void OnUpdate(float time, float previousTime) {} // 0x000000018B7C9340-0x000000018B7C9764
-		protected override void OnExit() {} // 0x000000018B7C9198-0x000000018B7C91FC
-		protected override void OnReverse() {} // 0x000000018B7C9260-0x000000018B7C9340
+		protected override void OnEnter(); // 0x000000018AC81C50-0x000000018AC81E74
+		protected override void OnReverseEnter(); // 0x000000018AC81ED8-0x000000018AC81F3C
+		protected override void OnUpdate(float time, float previousTime); // 0x000000018AC8201C-0x000000018AC82440
+		protected override void OnExit(); // 0x000000018AC81E74-0x000000018AC81ED8
+		protected override void OnReverse(); // 0x000000018AC81F3C-0x000000018AC8201C
 	}
 
-	public class PlayAudio : ActionClip, ISubClipContainable // TypeDefIndex: 55806
+	[Attachable(new System.Type[2] {typeof(ActorAudioTrack), typeof(DirectorAudioTrack) })]
+	[Description("The audio clip will be send to the AudioMixer selected in it\'s track if any. You can trim or loop the audio by scaling the clip and you can optionaly show subtitles as well.")]
+	[Name("Audio Clip")]
+	public class PlayAudio : ActionClip, ISubClipContainable // TypeDefIndex: 58447
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x40
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x44
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x48
+		[Required]
 		public AudioClip audioClip; // 0x50
+		[AnimatableParameter(0f, 1f)]
 		public float volume; // 0x58
+		[AnimatableParameter(-3f, 3f)]
 		public float pitch; // 0x5C
+		[AnimatableParameter(-1f, 1f)]
 		public float stereoPan; // 0x60
 		public float clipOffset; // 0x64
+		[Multiline(5)]
 		public string subtitlesText; // 0x68
 		public UnityEngine.Color subtitlesColor; // 0x70
 	
 		// Properties
-		float ISubClipContainable.subClipOffset { get => default; set {} } // 0x0000000185FB2210-0x0000000185FB2220 0x0000000185FB2220-0x0000000185FB2230
-		float ISubClipContainable.subClipLength { get => default; } // 0x000000018B7C9D20-0x000000018B7C9D90 
-		float ISubClipContainable.subClipSpeed { get => default; } // 0x0000000185FB2DD0-0x0000000185FB2DE0 
-		public override float length { get => default; set {} } // 0x0000000185FB0590-0x0000000185FB05A0 0x0000000185FB05F0-0x0000000185FB0600
-		public override float blendIn { get => default; set {} } // 0x0000000185FB05A0-0x0000000185FB05B0 0x0000000185FB0600-0x0000000185FB0610
-		public override float blendOut { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override bool isValid { get => default; } // 0x000000018B7C9EE4-0x000000018B7C9F34 
-		public override string info { get => default; } // 0x000000018B7C9E5C-0x000000018B7C9EE4 
-		private Slate.AudioTrack track { get => default; } // 0x000000018B7C9F54-0x000000018B7C9F90 
-		private AudioSource source { get => default; } // 0x000000018B7C9F34-0x000000018B7C9F54 
-		new string IDirectable.name { get => default; } // 0x00000001864746E4-0x00000001864746EC 
+		float ISubClipContainable.subClipOffset { get; set; } // 0x0000000184D88470-0x0000000184D88480 0x0000000184D88490-0x0000000184D884A0
+		float ISubClipContainable.subClipLength { get; } // 0x000000018AC82A0C-0x000000018AC82A7C 
+		float ISubClipContainable.subClipSpeed { get; } // 0x0000000184D88DD0-0x0000000184D88DE0 
+		public override float length { get; set; } // 0x0000000184D863F0-0x0000000184D86400 0x0000000184D86470-0x0000000184D86480
+		public override float blendIn { get; set; } // 0x0000000184D86400-0x0000000184D86410 0x0000000184D86480-0x0000000184D86490
+		public override float blendOut { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override bool isValid { get; } // 0x000000018AC82BE0-0x000000018AC82C30 
+		public override string info { get; } // 0x000000018AC82B58-0x000000018AC82BE0 
+		private Slate.AudioTrack track { get; } // 0x000000018AC82C50-0x000000018AC82C8C 
+		private AudioSource source { get; } // 0x000000018AC82C30-0x000000018AC82C50 
+		new string IDirectable.name { get; } // 0x0000000185396F58-0x0000000185396F60 
 	
 		// Constructors
-		public PlayAudio() {} // 0x000000018B7C9E10-0x000000018B7C9E5C
+		public PlayAudio(); // 0x000000018AC82AFC-0x000000018AC82B58
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C9A40-0x000000018B7C9A48
-		protected override void OnReverseEnter() {} // 0x000000018B7C9A40-0x000000018B7C9A48
-		protected override void OnExit() {} // 0x000000018B7C9A48-0x000000018B7C9A50
-		protected override void OnReverse() {} // 0x000000018B7C9A48-0x000000018B7C9A50
-		private void Do() {} // 0x000000018B7C99BC-0x000000018B7C9A40
-		protected override void OnUpdate(float time, float previousTime) {} // 0x000000018B7C9A50-0x000000018B7C9D20
-		private void Undo() {} // 0x000000018B7C9D90-0x000000018B7C9E10
+		protected override void OnEnter(); // 0x000000018AC8272C-0x000000018AC82734
+		protected override void OnReverseEnter(); // 0x000000018AC8272C-0x000000018AC82734
+		protected override void OnExit(); // 0x000000018AC82734-0x000000018AC8273C
+		protected override void OnReverse(); // 0x000000018AC82734-0x000000018AC8273C
+		private void Do(); // 0x000000018AC826A8-0x000000018AC8272C
+		protected override void OnUpdate(float time, float previousTime); // 0x000000018AC8273C-0x000000018AC82A0C
+		private void Undo(); // 0x000000018AC82A7C-0x000000018AC82AFC
 	}
 
-	public class AnimateBoolParameter : MecanimBaseClip // TypeDefIndex: 55807
+	[Description("Animate a bool Animator parameter and reset it back to previous value after a period of time.")]
+	public class AnimateBoolParameter : MecanimBaseClip // TypeDefIndex: 58448
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
 		public string parameterName; // 0x50
+		[AnimatableParameter]
 		public bool value; // 0x58
 		private bool lastValue; // 0x59
 	
 		// Properties
-		public override bool isValid { get => default; } // 0x000000018B7C3410-0x000000018B7C3440 
-		public override string info { get => default; } // 0x000000018B7C33D0-0x000000018B7C3410 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override bool isValid { get; } // 0x000000018AC7C048-0x000000018AC7C078 
+		public override string info { get; } // 0x000000018AC7C008-0x000000018AC7C048 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public AnimateBoolParameter() {} // 0x000000018B7C33BC-0x000000018B7C33D0
+		public AnimateBoolParameter(); // 0x000000018AC7BFF4-0x000000018AC7C008
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C3238-0x000000018B7C3290
-		protected override void OnUpdate(float time) {} // 0x000000018B7C3364-0x000000018B7C33BC
-		protected override void OnExit() {} // 0x000000018B7C3290-0x000000018B7C3300
-		protected override void OnReverse() {} // 0x000000018B7C3300-0x000000018B7C3364
+		protected override void OnEnter(); // 0x000000018AC7BE70-0x000000018AC7BEC8
+		protected override void OnUpdate(float time); // 0x000000018AC7BF9C-0x000000018AC7BFF4
+		protected override void OnExit(); // 0x000000018AC7BEC8-0x000000018AC7BF38
+		protected override void OnReverse(); // 0x000000018AC7BF38-0x000000018AC7BF9C
 	}
 
-	public class AnimateFloatParameter : MecanimBaseClip // TypeDefIndex: 55808
+	[Description("Animate a float Animator parameter to a value and back to previous value gradualy over a period of time.")]
+	public class AnimateFloatParameter : MecanimBaseClip // TypeDefIndex: 58449
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x4C
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x50
 		public string parameterName; // 0x58
+		[AnimatableParameter]
 		public float value; // 0x60
 		private float lastValue; // 0x64
 	
 		// Properties
-		public override bool isValid { get => default; } // 0x000000018B7C361C-0x000000018B7C364C 
-		public override string info { get => default; } // 0x000000018B7C35DC-0x000000018B7C361C 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override float blendIn { get => default; set {} } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public override float blendOut { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
+		public override bool isValid { get; } // 0x000000018AC7C254-0x000000018AC7C284 
+		public override string info { get; } // 0x000000018AC7C214-0x000000018AC7C254 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public override float blendOut { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
 	
 		// Constructors
-		public AnimateFloatParameter() {} // 0x000000018B7C35B8-0x000000018B7C35DC
+		public AnimateFloatParameter(); // 0x000000018AC7C1F0-0x000000018AC7C214
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C3440-0x000000018B7C349C
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7C3500-0x000000018B7C35B8
-		protected override void OnReverse() {} // 0x000000018B7C349C-0x000000018B7C3500
+		protected override void OnEnter(); // 0x000000018AC7C078-0x000000018AC7C0D4
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC7C138-0x000000018AC7C1F0
+		protected override void OnReverse(); // 0x000000018AC7C0D4-0x000000018AC7C138
 	}
 
-	public class AnimateIntegerParameter : MecanimBaseClip // TypeDefIndex: 55809
+	[Description("Animate an integer Animator parameter to a value and back to previous value gradualy over a period of time.")]
+	public class AnimateIntegerParameter : MecanimBaseClip // TypeDefIndex: 58450
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x4C
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x50
 		public string parameterName; // 0x58
+		[AnimatableParameter]
 		public int value; // 0x60
 		private int lastValue; // 0x64
 	
 		// Properties
-		public override bool isValid { get => default; } // 0x000000018B7C361C-0x000000018B7C364C 
-		public override string info { get => default; } // 0x000000018B7C3B3C-0x000000018B7C3B7C 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override float blendIn { get => default; set {} } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public override float blendOut { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
+		public override bool isValid { get; } // 0x000000018AC7C254-0x000000018AC7C284 
+		public override string info { get; } // 0x000000018AC7C774-0x000000018AC7C7B4 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public override float blendOut { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
 	
 		// Constructors
-		public AnimateIntegerParameter() {} // 0x000000018B7C3B20-0x000000018B7C3B3C
+		public AnimateIntegerParameter(); // 0x000000018AC7C758-0x000000018AC7C774
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C39A8-0x000000018B7C3A00
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7C3A64-0x000000018B7C3B20
-		protected override void OnReverse() {} // 0x000000018B7C3A00-0x000000018B7C3A64
+		protected override void OnEnter(); // 0x000000018AC7C5E0-0x000000018AC7C638
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC7C69C-0x000000018AC7C758
+		protected override void OnReverse(); // 0x000000018AC7C638-0x000000018AC7C69C
 	}
 
-	public class AnimateLayerWeight : MecanimBaseClip // TypeDefIndex: 55810
+	[Description("Animate an Animator layer weight to a value and back to previous value gradualy over a period of time.")]
+	public class AnimateLayerWeight : MecanimBaseClip // TypeDefIndex: 58451
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x4C
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x50
 		public int layerIndex; // 0x54
+		[AnimatableParameter(0f, 1f)]
 		public float weight; // 0x58
 		private float lastValue; // 0x5C
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7C3D14-0x000000018B7C3D74 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override float blendIn { get => default; set {} } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public override float blendOut { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
+		public override string info { get; } // 0x000000018AC7C94C-0x000000018AC7C9AC 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public override float blendOut { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
 	
 		// Constructors
-		public AnimateLayerWeight() {} // 0x000000018B7C3CF0-0x000000018B7C3D14
+		public AnimateLayerWeight(); // 0x000000018AC7C928-0x000000018AC7C94C
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C3B7C-0x000000018B7C3BD4
-		protected override void OnUpdate(float deltaTime) {} // 0x000000018B7C3C38-0x000000018B7C3CF0
-		protected override void OnReverse() {} // 0x000000018B7C3BD4-0x000000018B7C3C38
+		protected override void OnEnter(); // 0x000000018AC7C7B4-0x000000018AC7C80C
+		protected override void OnUpdate(float deltaTime); // 0x000000018AC7C870-0x000000018AC7C928
+		protected override void OnReverse(); // 0x000000018AC7C80C-0x000000018AC7C870
 	}
 
-	public class AnimateLimbIK : ActorActionClip<Animator> // TypeDefIndex: 55812
+	[Attachable(new System.Type[1] {typeof(ActorActionTrack) })]
+	[Category("Animator IK Control")]
+	[Description("Animate an actor IK Goal. Please note that the Animator needs to have a Controller assigned and \'IK Pass\' must be enabled in that Controller.")]
+	public class AnimateLimbIK : ActorActionClip<Animator> // TypeDefIndex: 58453
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x4C
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x50
 		public AvatarIKGoal IKGoal; // 0x54
+		[AnimatableParameter(0f, 1f)]
 		public float weight; // 0x58
 		public TransformRefPositionRotation IKTarget; // 0x60
 		private AnimatorDispatcher dispatcher; // 0x90
 	
 		// Properties
-		public Vector3 targetPosition { get => default; set {} } // 0x000000018B7C4648-0x000000018B7C467C 0x0000000185FD5D30-0x0000000185FD5D50
-		public Vector3 targetRotation { get => default; set {} } // 0x000000018B7C45A4-0x000000018B7C4614 0x0000000185FB80E0-0x0000000185FB80F0
-		public override string info { get => default; } // 0x0000000185FBCE20-0x0000000185FBCE30 
-		public override float length { get => default; set {} } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public override float blendIn { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
-		public override float blendOut { get => default; set {} } // 0x000000018B7C4184-0x000000018B7C41C0 0x000000018B7C3D74-0x000000018B7C3FC0
+		[AnimatableParameter(link = "IKTarget")]
+		[PositionHandle]
+		[ShowTrajectory]
+		public Vector3 targetPosition { get; set; } // 0x000000018AC7D244-0x000000018AC7D278 0x0000000184DA9C90-0x0000000184DA9CA0
+		[AnimatableParameter(link = "IKTarget")]
+		[RotationHandle("targetPosition")]
+		public Vector3 targetRotation { get; set; } // 0x000000018AC7D278-0x000000018AC7D2AC 0x0000000184DA9D40-0x0000000184DA9D60
+		public override string info { get; } // 0x000000018AC7D1D4-0x000000018AC7D244 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public override float blendOut { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 55811
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58452
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 	
 			// Constructors
-			static __c() {} // 0x000000018B7C4614-0x000000018B7C4648
-			public __c() {} // 0x0000000185FD5C80-0x0000000185FD5C90
+			static __c(); // 0x000000018AC87854-0x000000018AC878B8
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		// Constructors
-		public AnimateLimbIK() {} // 0x0000000185492010-0x0000000185492020
+		public AnimateLimbIK(); // 0x000000018AC7D188-0x000000018AC7D1D4
 	
 		// Methods
-		protected override void OnCreate() {} // 0x000000018B7C41C0-0x000000018B7C42B8
-		protected override void OnAfterValidate() {} // 0x000000018B7C434C-0x000000018B7C4444
-		protected override void OnEnter() {} // 0x000000018B7C4444-0x000000018B7C44D8
-		protected override void OnReverseEnter() {} // 0x000000018B7C42B8-0x000000018B7C434C
-		protected override void OnReverse() {} // 0x000000018B7C44D8-0x000000018B7C4550
-		protected override void OnExit() {} // 0x000000018B7C3FC0-0x000000018B7C4184
-		protected override void OnRootDisabled() {} // 0x000000018B7C4550-0x000000018B7C45A4
-		private void OnAnimatorIK(int index) {} // 0x000000018B7CEA74-0x000000018B7CEAD8
+		protected override void OnCreate(); // 0x000000018AC7CDBC-0x000000018AC7CDF8
+		protected override void OnAfterValidate(); // 0x000000018AC7C9AC-0x000000018AC7CBF8
+		protected override void OnEnter(); // 0x000000018AC7CDF8-0x000000018AC7CEF0
+		protected override void OnReverseEnter(); // 0x000000018AC7CF84-0x000000018AC7D07C
+		protected override void OnReverse(); // 0x000000018AC7D07C-0x000000018AC7D110
+		protected override void OnExit(); // 0x000000018AC7CEF0-0x000000018AC7CF84
+		protected override void OnRootDisabled(); // 0x000000018AC7D110-0x000000018AC7D188
+		private void OnAnimatorIK(int index); // 0x000000018AC7CBF8-0x000000018AC7CDBC
 	}
 
-	public class AnimateLookAtIK : ActorActionClip<Animator> // TypeDefIndex: 55814
+	[Attachable(new System.Type[1] {typeof(ActorActionTrack) })]
+	[Category("Animator IK Control")]
+	[Description("Make the actor look at target position. Please note that the Animator needs to have a Controller assigned and \'IK Pass\' must be enabled in that Controller.")]
+	public class AnimateLookAtIK : ActorActionClip<Animator> // TypeDefIndex: 58455
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[HideInInspector]
+		[SerializeField]
 		private float _blendIn; // 0x4C
+		[HideInInspector]
+		[SerializeField]
 		private float _blendOut; // 0x50
+		[AnimatableParameter(0f, 1f)]
 		public float weight; // 0x54
+		[AnimatableParameter(0f, 1f)]
 		public float bodyWeight; // 0x58
+		[AnimatableParameter(0f, 1f)]
 		public float headWeight; // 0x5C
+		[AnimatableParameter(0f, 1f)]
 		public float eyesWeight; // 0x60
 		public TransformRefPosition targetPosition; // 0x68
 		private AnimatorDispatcher dispatcher; // 0x88
 	
 		// Properties
-		public Vector3 targetPositionVector { get => default; set {} } // 0x000000018B7C4D70-0x000000018B7C4D9C 0x0000000185FB80E0-0x0000000185FB80F0
-		public override string info { get => default; } // 0x0000000185FBCE20-0x0000000185FBCE30 
-		public override float length { get => default; set {} } // 0x0000000185FB1750-0x0000000185FB1760 0x0000000185FBFAC0-0x0000000185FBFAD0
-		public override float blendIn { get => default; set {} } // 0x0000000185FB3000-0x0000000185FB3010 0x0000000185FB3010-0x0000000185FB3020
-		public override float blendOut { get => default; set {} } // 0x000000018B7C4944-0x000000018B7C4984 0x000000018B7C467C-0x000000018B7C4800
+		[AnimatableParameter(link = "targetPosition")]
+		[PositionHandle]
+		[ShowTrajectory]
+		public Vector3 targetPositionVector { get; set; } // 0x000000018AC7D9C8-0x000000018AC7D9FC 0x0000000184DA9D60-0x0000000184DA9D80
+		public override string info { get; } // 0x000000018AC7D99C-0x000000018AC7D9C8 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; set; } // 0x0000000184D87860-0x0000000184D87870 0x0000000184D91480-0x0000000184D91490
+		public override float blendOut { get; set; } // 0x0000000184D885A0-0x0000000184D885B0 0x0000000184D88FF0-0x0000000184D89000
 	
 		// Nested types
 		[Serializable]
-		private sealed class __c // TypeDefIndex: 55813
+		[CompilerGenerated]
+		private sealed class __c // TypeDefIndex: 58454
 		{
 			// Fields
 			public static readonly __c __9; // 0x00
 	
 			// Constructors
-			static __c() {} // 0x000000018B7C4D9C-0x000000018B7C4DD0
-			public __c() {} // 0x0000000185FD5D50-0x0000000185FD5D70
+			static __c(); // 0x000000018AC877F0-0x000000018AC87854
+			public __c(); // 0x00000001841E1670-0x00000001841E1680
 		}
 	
 		// Constructors
-		public AnimateLookAtIK() {} // 0x0000000185492010-0x0000000185492020
+		public AnimateLookAtIK(); // 0x000000018AC7D944-0x000000018AC7D99C
 	
 		// Methods
-		protected override void OnCreate() {} // 0x000000018B7C4984-0x000000018B7C4A7C
-		protected override void OnAfterValidate() {} // 0x000000018B7C4B10-0x000000018B7C4C08
-		protected override void OnEnter() {} // 0x000000018B7C4C08-0x000000018B7C4C9C
-		protected override void OnReverseEnter() {} // 0x000000018B7C4A7C-0x000000018B7C4B10
-		protected override void OnReverse() {} // 0x000000018B7C4C9C-0x000000018B7C4D14
-		protected override void OnExit() {} // 0x000000018B7C4800-0x000000018B7C4944
-		protected override void OnRootDisabled() {} // 0x000000018B7C4D14-0x000000018B7C4D70
-		private void OnAnimatorIK(int index) {} // 0x000000018B7CEA10-0x000000018B7CEA74
+		protected override void OnCreate(); // 0x000000018AC7D574-0x000000018AC7D5B4
+		protected override void OnAfterValidate(); // 0x000000018AC7D2AC-0x000000018AC7D430
+		protected override void OnEnter(); // 0x000000018AC7D5B4-0x000000018AC7D6AC
+		protected override void OnReverseEnter(); // 0x000000018AC7D740-0x000000018AC7D838
+		protected override void OnReverse(); // 0x000000018AC7D838-0x000000018AC7D8CC
+		protected override void OnExit(); // 0x000000018AC7D6AC-0x000000018AC7D740
+		protected override void OnRootDisabled(); // 0x000000018AC7D8CC-0x000000018AC7D944
+		private void OnAnimatorIK(int index); // 0x000000018AC7D430-0x000000018AC7D574
 	}
 
-	public class AnimateTrigger : MecanimBaseClip // TypeDefIndex: 55815
+	public class AnimateTrigger : MecanimBaseClip // TypeDefIndex: 58456
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
 		public string triggerName; // 0x50
+		[AnimatableParameter]
 		public bool value; // 0x58
 	
 		// Properties
-		public override bool isValid { get => default; } // 0x000000018B7C3410-0x000000018B7C3440 
-		public override string info { get => default; } // 0x000000018B7C5560-0x000000018B7C55A0 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
+		public override bool isValid { get; } // 0x000000018AC7C048-0x000000018AC7C078 
+		public override string info { get; } // 0x000000018AC7E194-0x000000018AC7E1D4 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
 	
 		// Constructors
-		public AnimateTrigger() {} // 0x000000018B7C5550-0x000000018B7C5560
+		public AnimateTrigger(); // 0x000000018AC7E184-0x000000018AC7E194
 	
 		// Methods
-		protected override void OnUpdate(float time) {} // 0x000000018B7C54D8-0x000000018B7C5550
+		protected override void OnUpdate(float time); // 0x000000018AC7E10C-0x000000018AC7E184
 	}
 
-	public class CrossFadeState : MecanimBaseClip // TypeDefIndex: 55816
+	[Description("CrossFades to an Animator state within a period of time.")]
+	public class CrossFadeState : MecanimBaseClip // TypeDefIndex: 58457
 	{
 		// Fields
+		[HideInInspector]
+		[SerializeField]
 		private float _length; // 0x48
+		[Required]
 		public string stateName; // 0x50
 	
 		// Properties
-		public override string info { get => default; } // 0x000000018B7C5E2C-0x000000018B7C5E6C 
-		public override float length { get => default; set {} } // 0x0000000185FB80E0-0x0000000185FB80F0 0x0000000185FBCE20-0x0000000185FBCE30
-		public override float blendIn { get => default; } // 0x000000018B7C5E1C-0x000000018B7C5E2C 
+		public override string info { get; } // 0x000000018AC7EA7C-0x000000018AC7EABC 
+		public override float length { get; set; } // 0x0000000184D8D350-0x0000000184D8D360 0x0000000184D8D380-0x0000000184D8D390
+		public override float blendIn { get; } // 0x000000018AC7EA6C-0x000000018AC7EA7C 
 	
 		// Constructors
-		public CrossFadeState() {} // 0x000000018B7C5550-0x000000018B7C5560
+		public CrossFadeState(); // 0x000000018AC7E184-0x000000018AC7E194
 	
 		// Methods
-		protected override void OnEnter() {} // 0x000000018B7C5D88-0x000000018B7C5E1C
+		protected override void OnEnter(); // 0x000000018AC7E9D8-0x000000018AC7EA6C
 	}
 
-	public abstract class MecanimBaseClip : ActorActionClip<Animator> // TypeDefIndex: 55818
+	[Attachable(new System.Type[1] {typeof(MecanimTrack) })]
+	public abstract class MecanimBaseClip : ActorActionClip<Animator> // TypeDefIndex: 58459
 	{
 		// Properties
-		public override bool isValid { get; } // 0x000000018B7C801C-0x000000018B7C8050 
+		public override bool isValid { get; } // 0x000000018AC80CE4-0x000000018AC80D98 
 	
 		// Nested types
-		private sealed class __c__DisplayClass2_0 // TypeDefIndex: 55817
+		[CompilerGenerated]
+		private sealed class __c__DisplayClass2_0 // TypeDefIndex: 58458
 		{
 			// Fields
 			public string name; // 0x10
 	
 			// Constructors
-			public __c__DisplayClass2_0() {} // 0x000000018B7C8050-0x000000018B7C8104
+			public __c__DisplayClass2_0(); // 0x00000001841E1670-0x00000001841E1680
 	
 			// Methods
-			internal bool _HasParameter_b__0(AnimatorControllerParameter p) => default; // 0x000000018B7C7D70-0x000000018B7C801C
+			internal bool _HasParameter_b__0(AnimatorControllerParameter p); // 0x0000000186CC7538-0x0000000186CC7560
 		}
 	
 		// Constructors
-		protected MecanimBaseClip() {} // 0x0000000187C26954-0x0000000187C2697C
+		protected MecanimBaseClip(); // 0x000000018AC80CA4-0x000000018AC80CE4
 	
 		// Methods
-		protected bool HasParameter(string name) => default; // 0x0000000185492010-0x0000000185492020
+		protected bool HasParameter(string name); // 0x000000018AC809F8-0x000000018AC80CA4
 	}
 }
